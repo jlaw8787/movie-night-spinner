@@ -1,0 +1,314 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Dinglehopper garlic bread",
+   "course": "s",
+   "prep_min": 11,
+   "cook_min": 12,
+   "make_ahead": "Wrap up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mash the butter with crushed garlic and chopped parsley.",
+     "min": 6
+    },
+    {
+     "text": "Split the baguette, spread, and wrap in foil.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C, then cut into chunks and stick a fork in each.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Seashell pasta salad",
+   "course": "s",
+   "prep_min": 11,
+   "cook_min": 12,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "pasta shells",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the pasta shells al dente, drain and cool.",
+     "min": 12
+    },
+    {
+     "text": "Blanch the peas and halve the tomatoes.",
+     "min": 6
+    },
+    {
+     "text": "Toss everything with torn basil, lemon juice and olive oil. Season and serve cold.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Eric's castle dinner",
+   "course": "m",
+   "prep_min": 8,
+   "cook_min": 44,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "chicken breasts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "shallot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped tarragon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "new potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the chicken and chop the shallot.",
+     "min": 8
+    },
+    {
+     "text": "Sear the chicken in oil, then finish in a 200C oven and rest.",
+     "min": 14
+    },
+    {
+     "text": "In the same pan cook the shallot in some of the butter, add the stock and lemon juice and reduce by half.",
+     "min": 8
+    },
+    {
+     "text": "Add the cream and tarragon and simmer.",
+     "min": 2
+    },
+    {
+     "text": "Boil the potatoes and toss in the rest of the butter. Steam the beans.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Sea-glass jelly cups",
+   "course": "w",
+   "prep_min": 18,
+   "cook_min": 180,
+   "make_ahead": "Up to 1 day, add toppings just before serving",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "packets blue jelly crystals",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag gummy fish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet shortbread",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Make the jelly as the packet says and pour half into four glasses.",
+     "min": 8
+    },
+    {
+     "text": "Chill until just setting, push in gummy fish, add the rest and set.",
+     "min": 180
+    },
+    {
+     "text": "Whip the cream and crush the shortbread.",
+     "min": 6
+    },
+    {
+     "text": "Top with cream, shortbread for sand and a white chocolate shell.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Lagoon punch",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "coconut water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "blue curaçao syrup",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice, to serve",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the pineapple juice and coconut water in a jug with ice.",
+     "min": 3
+    },
+    {
+     "text": "Top with lemonade and swirl in the curaçao syrup. Pour into four glasses.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

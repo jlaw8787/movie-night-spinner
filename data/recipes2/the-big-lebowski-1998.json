@@ -1,0 +1,414 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "League night chilli con queso nachos",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Queso up to 1 day, reheat gently",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green chilli, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tomato, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "evaporated milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "corn chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "pickled jalapenos",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the onion in the oil for 5 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Add the chilli, cumin and tomato and cook 3 minutes.",
+     "min": 3
+    },
+    {
+     "text": "Add the evaporated milk and bring to a simmer, then take off the heat and stir in the cheddar until smooth.",
+     "min": 4
+    },
+    {
+     "text": "Divide the corn chips between 4 cardboard trays, pour over the queso and top with jalapenos, sour cream and coriander. Serve straight away.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Rug-pattern paprika lavash crackers",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Up to 2 days, airtight container",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "lavash sheets",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 10,
+     "u": "g",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the lavash into 12 rectangles and brush with some of the oil.",
+     "min": 8
+    },
+    {
+     "text": "Sprinkle with paprika, cumin and sesame seeds in alternating stripes.",
+     "min": 4
+    },
+    {
+     "text": "Bake at 180C until crisp, then cool.",
+     "min": 10
+    },
+    {
+     "text": "Blitz the feta, yoghurt, lemon zest and remaining oil until smooth for dipping.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Bowling alley burgers",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 30,
+   "make_ahead": "Burger sauce up to 3 days ahead",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "neutral oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 700,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "American-style cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 10,
+     "u": "g",
+     "item": "mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "dill pickles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into chips, rinse and dry thoroughly.",
+     "min": 10
+    },
+    {
+     "text": "Blanch in oil at 140C for 5 minutes and drain.",
+     "min": 5
+    },
+    {
+     "text": "Cool the chips for 15 minutes (included in cook time).",
+     "min": 15
+    },
+    {
+     "text": "Fry again at 185C until crisp and season with salt.",
+     "min": 3
+    },
+    {
+     "text": "Divide the mince into 8 loose balls and smash thin on a hot griddle. Season.",
+     "min": 5
+    },
+    {
+     "text": "Cook 2 minutes per side until cooked through, then melt the cheese over the patties.",
+     "min": 4
+    },
+    {
+     "text": "Toast the buns, mix the mayonnaise, tomato sauce and mustard for the sauce, and fill each bun with two patties, onion, pickles and sauce. Serve the chips alongside.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Coffee liqueur ice cream cookie sandwiches",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 760,
+   "make_ahead": "Make completely up to 1 week ahead, keep frozen",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "choc chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "coffee liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "chocolate-coated coffee beans, crushed",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the butter, cool, then beat with the sugar and egg.",
+     "min": 10
+    },
+    {
+     "text": "Mix in the flour, bicarb soda and choc chips.",
+     "min": 10
+    },
+    {
+     "text": "Chill the dough overnight (included in cook time).",
+     "min": 480
+    },
+    {
+     "text": "Bake 16 small balls at 180C until golden and cool.",
+     "min": 10
+    },
+    {
+     "text": "Soften the ice cream and ripple through the coffee liqueur.",
+     "min": 10
+    },
+    {
+     "text": "Refreeze for 1 hour.",
+     "min": 60
+    },
+    {
+     "text": "Sandwich scoops between the cookies and roll the edges in the crushed coffee beans.",
+     "min": 10
+    },
+    {
+     "text": "Freeze for 30 minutes before serving.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "White Russian",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "coffee liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Divide the ice among four rocks glasses. Add vodka and coffee liqueur to each, float the cream on top and stir lazily. One prepared drink per person.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

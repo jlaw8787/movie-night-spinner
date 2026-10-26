@@ -1,0 +1,344 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Húsavík hot dogs",
+   "course": "s",
+   "prep_min": 6,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "frankfurts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "crispy fried onions",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar sweet mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "tartare sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grill the frankfurts.",
+     "min": 8
+    },
+    {
+     "text": "Put in the hot dog buns with diced raw onion, the crispy fried onions, sweet mustard and the remoulade or tartare.",
+     "min": 4
+    },
+    {
+     "text": "Serve straight away on a big platter in the middle of the table.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Lars's dad's smoked trout",
+   "course": "s",
+   "prep_min": 7,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "rye crispbreads",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "crème fraîche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "smoked trout",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar pickled cucumbers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch dill",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the rye crispbreads with the crème fraîche.",
+     "min": 3
+    },
+    {
+     "text": "Top with the flaked smoked trout, thin pickled cucumber and dill.",
+     "min": 2
+    },
+    {
+     "text": "Serve straight away on a big platter in the middle of the table.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Erick's lamb with caramelised potatoes",
+   "course": "m",
+   "prep_min": 13,
+   "cook_min": 220,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "lamb shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "baby potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 160C.",
+     "min": 3
+    },
+    {
+     "text": "Rub the lamb shoulder with salt, pepper, thyme and the crushed garlic cloves and roast covered for 3 hours, uncovering for the last 30 minutes.",
+     "min": 210
+    },
+    {
+     "text": "Boil the baby potatoes until tender and peel.",
+     "min": 10
+    },
+    {
+     "text": "Melt the sugar in a pan until golden, add the butter and the potatoes and toss 5 minutes until glazed.",
+     "min": 5
+    },
+    {
+     "text": "Make gravy from the pan juices, the flour, the red wine and the stock.",
+     "min": 3
+    },
+    {
+     "text": "Serve with buttered peas.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Elf house skyr cheesecake pots",
+   "course": "w",
+   "prep_min": 6,
+   "cook_min": 80,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "skyr or Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the rolled oats, the plain flour, the brown sugar and the melted butter, spread on a tray and bake at 180C for 15 minutes until golden.",
+     "min": 15
+    },
+    {
+     "text": "Cool and crumble.",
+     "min": 3
+    },
+    {
+     "text": "Beat the skyr or thick Greek yoghurt with the cream cheese and the honey until smooth.",
+     "min": 3
+    },
+    {
+     "text": "Simmer the blueberries with the sugar and lemon juice for 5 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Layer crumble, skyr and compote in the glasses and chill 1 hour.",
+     "min": 60
+    }
+   ]
+  },
+  {
+   "n": "Edinburgh after-party fizz",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 20,
+     "u": "ml",
+     "item": "elderflower cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "sparkling wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the elderflower cordial into each of the flutes and top with chilled sparkling wine.",
+     "min": 2
+    },
+    {
+     "text": "Elderflower and soda water for the kids.",
+     "min": 3
+    },
+    {
+     "text": "Make it just before the film starts and keep the jug cold.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

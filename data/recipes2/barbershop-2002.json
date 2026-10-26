@@ -1,0 +1,362 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Stolen ATM hot links",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot smoked sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small jar pickled jalapenos",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grill the sausages slowly over medium coals, turning often, until the skins blister and they are hot right through.",
+     "min": 20
+    },
+    {
+     "text": "Slice thickly on an angle and spear each piece with a toothpick.",
+     "min": 3
+    },
+    {
+     "text": "Serve with mustard and pickled jalapenos.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Chicago tamales",
+   "course": "s",
+   "prep_min": 45,
+   "cook_min": 67,
+   "make_ahead": "Make a day ahead, steam to reheat",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "masa harina",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "lard",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "warm beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "corn husks",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot sauce, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the corn husks in hot water.",
+     "min": 15
+    },
+    {
+     "text": "Brown the mince with the diced onion, chilli powder and cumin.",
+     "min": 10
+    },
+    {
+     "text": "Beat the masa harina with lard, baking powder and warm stock to a soft dough.",
+     "min": 10
+    },
+    {
+     "text": "Spread the dough on the husks, add the beef, and roll up.",
+     "min": 15
+    },
+    {
+     "text": "Steam the tamales until the dough pulls away from the husk.",
+     "min": 60
+    },
+    {
+     "text": "Serve with hot sauce.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Calvin's barbershop rib tips",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 175,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "pork ribs, cut into short pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the ribs with paprika, brown sugar, crushed garlic and salt.",
+     "min": 10
+    },
+    {
+     "text": "Cover and roast at 150C until tender.",
+     "min": 150
+    },
+    {
+     "text": "Cut the potatoes into fries, toss in oil and bake at 220C until crisp.",
+     "min": 20
+    },
+    {
+     "text": "Uncover the ribs, brush with barbecue sauce and roast hot until sticky.",
+     "min": 15
+    },
+    {
+     "text": "Pile the ribs over slices of white bread with the oven fries.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Sweet potato pie",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 143,
+   "make_ahead": "Up to 2 days chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "sweet potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "evaporated milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roast the sweet potatoes until soft.",
+     "min": 45
+    },
+    {
+     "text": "Line a tin with the pastry and blind bake until pale golden.",
+     "min": 10
+    },
+    {
+     "text": "Mash the sweet potato with butter, sugar, eggs, evaporated milk, cinnamon and nutmeg.",
+     "min": 8
+    },
+    {
+     "text": "Pour into the case and bake at 170C until just set.",
+     "min": 50
+    },
+    {
+     "text": "Cool completely before slicing.",
+     "min": 60
+    }
+   ]
+  },
+  {
+   "n": "Terri's apple ginger cooler",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "cm knob of ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grate the ginger and squeeze the juice into a big jug through a sieve.",
+     "min": 4
+    },
+    {
+     "text": "Add the apple juice and lime juice and stir.",
+     "min": 2
+    },
+    {
+     "text": "Pour into four bottles and add ice.",
+     "min": 3
+    },
+    {
+     "text": "Top each with soda water, write a name on each bottle in marker and serve with lime wedges.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

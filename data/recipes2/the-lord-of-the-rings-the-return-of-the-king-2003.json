@@ -1,0 +1,364 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Steward's table platter",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "Best served warm",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "chicken drumsticks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried thyme",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "red grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf of crusty bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Rub the drumsticks with butter, thyme and salt.",
+     "min": 8
+    },
+    {
+     "text": "Roast until cooked through.",
+     "min": 40
+    },
+    {
+     "text": "Lay on a long board with the tomatoes, grapes and torn bread.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Shire strawberries with honey cream",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Berries and cream up to 2 hours ahead",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "butter shortbread biscuits",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Halve the strawberries and toss with the sugar and lemon juice.",
+     "min": 3
+    },
+    {
+     "text": "Leave to go juicy.",
+     "min": 20
+    },
+    {
+     "text": "Whip the cream with the honey and vanilla to soft peaks.",
+     "min": 5
+    },
+    {
+     "text": "Crumble the shortbread roughly.",
+     "min": 2
+    },
+    {
+     "text": "Layer the strawberries, cream and shortbread in glasses and finish with a few whole berries.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "The king's feast",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 140,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "beef sirloin",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, peeled and halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots, cut in batons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "parsnips, cut in batons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Season the beef and roast until 52C in the middle.",
+     "min": 60
+    },
+    {
+     "text": "Rest the beef under foil.",
+     "min": 20
+    },
+    {
+     "text": "Roast the potatoes in oil.",
+     "min": 45
+    },
+    {
+     "text": "Toss the carrots and parsnips with honey and roast.",
+     "min": 35
+    },
+    {
+     "text": "Reduce the red wine with the pan juices for gravy.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Sam's wedding cake",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 110,
+   "make_ahead": "Up to 1 week, wrapped",
+   "ingredients": [
+    {
+     "q": 175,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 175,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 225,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "mixed dried fruit",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "almonds, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "apricot jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "white icing",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 160C and line a cake tin.",
+     "min": 5
+    },
+    {
+     "text": "Beat the butter and sugar, add the eggs, then fold in the flour, fruit and almonds.",
+     "min": 15
+    },
+    {
+     "text": "Bake until a skewer comes out clean.",
+     "min": 90
+    },
+    {
+     "text": "Cool, split and fill with apricot jam.",
+     "min": 10
+    },
+    {
+     "text": "Cover with white icing and add small flowers.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Green Dragon honey and ginger ale cup",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Syrup up to 1 week, chilled",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "piece of fresh ginger, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "English bitter or pale ale",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the honey, water and ginger, then cool and strain.",
+     "min": 10
+    },
+    {
+     "text": "Put some syrup and a squeeze of lemon in each of 4 pint glasses with ice.",
+     "min": 3
+    },
+    {
+     "text": "Pour in the ale, tilting the glass.",
+     "min": 2
+    },
+    {
+     "text": "Stir once and add a lemon wheel. Use ginger beer for the non drinkers.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

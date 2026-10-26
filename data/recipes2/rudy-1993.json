@@ -1,0 +1,464 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Joliet steel mill meatloaf sandwiches",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 94,
+   "make_ahead": "Meatloaf up to 2 days ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar of dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar of tomato relish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince, grated onion, egg, breadcrumbs, Worcestershire and salt.",
+     "min": 10
+    },
+    {
+     "text": "Press into a lined loaf tin and spread with tomato sauce mixed with brown sugar.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 180C.",
+     "min": 50
+    },
+    {
+     "text": "Cool completely, then slice thickly.",
+     "min": 40
+    },
+    {
+     "text": "Toast the bread.",
+     "min": 4
+    },
+    {
+     "text": "Fill with the meatloaf, cheddar, pickles and tomato relish and cut in half.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Notre Dame tailgate beer brats",
+   "course": "s",
+   "prep_min": 8,
+   "cook_min": 32,
+   "make_ahead": "Up to 1 day, reheat gently",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "bratwurst",
+     "aisle": "Meat"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "bread rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar of wholegrain mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the onions.",
+     "min": 5
+    },
+    {
+     "text": "Simmer the bratwurst in lager with the onions and butter.",
+     "min": 15
+    },
+    {
+     "text": "Lift out the brats and grill, turning, until charred.",
+     "min": 6
+    },
+    {
+     "text": "Keep boiling the onions until the liquid reduces and they turn sticky.",
+     "min": 8
+    },
+    {
+     "text": "Toast the rolls.",
+     "min": 3
+    },
+    {
+     "text": "Fill with a brat and a pile of beer onions and finish with wholegrain mustard.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Ruettiger family Sunday pot roast",
+   "course": "m",
+   "prep_min": 24,
+   "cook_min": 200,
+   "make_ahead": "Up to 2 days, reheat gently",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "chuck roast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "horseradish cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the chuck roast and quarter the onions, peel the carrots and halve the potatoes.",
+     "min": 15
+    },
+    {
+     "text": "Brown the roast all over in oil in a heavy pot.",
+     "min": 15
+    },
+    {
+     "text": "Add the onions, garlic, tomato paste, stock, Worcestershire, thyme and bay leaves.",
+     "min": 3
+    },
+    {
+     "text": "Cover and cook at 160C.",
+     "min": 120
+    },
+    {
+     "text": "Add the carrots and potatoes.",
+     "min": 3
+    },
+    {
+     "text": "Cook for another hour.",
+     "min": 60
+    },
+    {
+     "text": "Thicken the juices with cornflour.",
+     "min": 5
+    },
+    {
+     "text": "Mix the sour cream with horseradish cream.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "South Bend apple crumble",
+   "course": "w",
+   "prep_min": 27,
+   "cook_min": 45,
+   "make_ahead": "Up to 2 days, reheat to serve",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "Granny Smith apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "pecans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "vanilla custard",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and slice the apples and toss with sugar, cinnamon and lemon juice.",
+     "min": 15
+    },
+    {
+     "text": "Tip into a baking dish.",
+     "min": 2
+    },
+    {
+     "text": "Rub the cold butter into the flour, then stir in the oats, brown sugar and chopped pecans.",
+     "min": 8
+    },
+    {
+     "text": "Scatter over the apples.",
+     "min": 2
+    },
+    {
+     "text": "Bake at 180C until golden.",
+     "min": 40
+    },
+    {
+     "text": "Warm the custard and serve alongside.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Golden Dome hot spiced cider",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day, reheat gently",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "star anise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the apple juice into a saucepan with maple syrup, cinnamon sticks, cloves, star anise and sliced orange.",
+     "min": 3
+    },
+    {
+     "text": "Heat gently without boiling.",
+     "min": 15
+    },
+    {
+     "text": "Strain into mugs and add a cinnamon stick and orange slice to each.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,434 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Frat party pork and fennel sausage rolls",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pork sausage mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "apple, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "fennel seeds, crushed",
+     "aisle": "Spices"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "tomato relish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the sausage mince with the apple, onion, fennel, breadcrumbs and pepper.",
+     "min": 6
+    },
+    {
+     "text": "Cut the pastry in half. Lay a log of filling along each strip, roll up and seal underneath.",
+     "min": 8
+    },
+    {
+     "text": "Brush with egg, sprinkle with sesame seeds and cut each roll into pieces.",
+     "min": 4
+    },
+    {
+     "text": "Bake at 200C until golden.",
+     "min": 25
+    },
+    {
+     "text": "Stir the paprika into the relish and serve alongside.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Baby Stella date night baked brie",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brie wheel",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "walnuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette, sliced thinly",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "grapes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Score the top of the brie in a criss-cross and sit it in a small ovenproof dish.",
+     "min": 2
+    },
+    {
+     "text": "Brush the baguette slices with oil and bake at 180C alongside the brie until crisp. Remove the toasts first.",
+     "min": 12
+    },
+    {
+     "text": "Toast the walnuts in a dry pan, then warm with the honey and thyme leaves.",
+     "min": 5
+    },
+    {
+     "text": "Spoon the nuts over the hot brie and serve with the toasts and grapes.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Backyard barbecue steak with chimichurri",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 17,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "pork sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "rump steak",
+     "aisle": "Meat"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "apple, julienned",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the parsley, garlic, oregano, chilli, vinegar and oil into chimichurri.",
+     "min": 5
+    },
+    {
+     "text": "Grill the corn, turning.",
+     "min": 10
+    },
+    {
+     "text": "Grill the sausages.",
+     "min": 12
+    },
+    {
+     "text": "Season the steak and grill over high heat, then rest and slice.",
+     "min": 13
+    },
+    {
+     "text": "Toss the cabbage and apple with the mayonnaise and lemon juice.",
+     "min": 5
+    },
+    {
+     "text": "Spoon the chimichurri over the steak and serve with corn, sausages and slaw.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Teddy and Pete's funfetti sheet cake",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 45,
+   "make_ahead": "Up to 2 days, keep covered",
+   "ingredients": [
+    {
+     "q": 280,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rainbow sprinkles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat most of the butter with the sugar until pale. Beat in the eggs and vanilla, then fold in the flour and milk.",
+     "min": 10
+    },
+    {
+     "text": "Fold through some of the sprinkles and spread into a lined 23 x 33cm tin.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 180C and cool completely.",
+     "min": 55
+    },
+    {
+     "text": "Beat the cream cheese with the remaining butter and icing sugar until fluffy.",
+     "min": 5
+    },
+    {
+     "text": "Spread over the cake and finish with more sprinkles.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Delta Psi tropical rum punch",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "white rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the pineapple juice, passionfruit pulp, lime juice and rum in a big jug or bowl.",
+     "min": 5
+    },
+    {
+     "text": "Chill.",
+     "min": 30
+    },
+    {
+     "text": "Just before serving, add the lemonade, orange slices and plenty of ice. Stir gently and scatter with mint.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

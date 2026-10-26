@@ -1,0 +1,460 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Market stall fruit skewers with honey dip",
+   "course": "s",
+   "prep_min": 28,
+   "cook_min": 2,
+   "make_ahead": "Skewers up to 4 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "rockmelon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "kiwi fruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "shredded coconut",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Hull the strawberries, cube the rockmelon, peel and cube the kiwi fruit and pick the grapes.",
+     "min": 15
+    },
+    {
+     "text": "Thread onto skewers in rainbow order.",
+     "min": 8
+    },
+    {
+     "text": "Mix the yoghurt with honey and vanilla.",
+     "min": 3
+    },
+    {
+     "text": "Toast the coconut in a dry pan until golden.",
+     "min": 2
+    },
+    {
+     "text": "Serve the skewers with the yoghurt dip and the coconut for dipping and rolling.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Barnabas's honey crunch heist mix",
+   "course": "s",
+   "prep_min": 16,
+   "cook_min": 40,
+   "make_ahead": "Up to 1 week, keep airtight",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "pumpkin seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "dried apricots",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "dried apple",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "dried cranberries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the oats, almonds and pumpkin seeds with honey, oil and cinnamon.",
+     "min": 8
+    },
+    {
+     "text": "Spread on a lined tray and press flat.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 160C, stirring once.",
+     "min": 20
+    },
+    {
+     "text": "Cool completely so it clusters.",
+     "min": 20
+    },
+    {
+     "text": "Break up and toss with chopped dried apricots, dried apple and dried cranberries.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Gloucester chicken, leek and bacon pie",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 59,
+   "make_ahead": "Up to 1 day, bake the pastry fresh",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "leeks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the bacon, chicken, leeks and carrots.",
+     "min": 15
+    },
+    {
+     "text": "Fry the bacon, then add the chicken and brown.",
+     "min": 8
+    },
+    {
+     "text": "Add the leeks and carrots and cook.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the flour.",
+     "min": 2
+    },
+    {
+     "text": "Add the stock, cream and thyme and simmer.",
+     "min": 15
+    },
+    {
+     "text": "Pour into a pie dish, top with the pastry and brush with egg.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C until golden.",
+     "min": 25
+    },
+    {
+     "text": "Toss the peas in butter and serve alongside.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Peter's cream cheese carrot cake",
+   "course": "w",
+   "prep_min": 36,
+   "cook_min": 75,
+   "make_ahead": "Up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "walnuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle of orange food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, bicarb, cinnamon, brown sugar, eggs, oil, grated carrot and walnuts.",
+     "min": 15
+    },
+    {
+     "text": "Pour into a lined 20cm square tin.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 170C.",
+     "min": 45
+    },
+    {
+     "text": "Cool completely.",
+     "min": 30
+    },
+    {
+     "text": "Beat the cream cheese with butter and icing sugar and spread on top.",
+     "min": 8
+    },
+    {
+     "text": "Tint a little icing orange to pipe small carrots and scatter with walnuts.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Orchard apple and pear sparkler",
+   "course": "d",
+   "prep_min": 9,
+   "cook_min": 20,
+   "make_ahead": "Juice mix up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "pear juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "knob ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "apple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag of ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "In a jug, mix the apple juice, pear juice, lemon juice and grated ginger.",
+     "min": 4
+    },
+    {
+     "text": "Chill for 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Fill glasses with ice and thin apple slices, pour in the juice to two-thirds and top up with soda water.",
+     "min": 4
+    },
+    {
+     "text": "Stir and serve.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

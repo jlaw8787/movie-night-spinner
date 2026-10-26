@@ -1,0 +1,446 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Agamemnon's whipped feta feast platter",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 5,
+   "make_ahead": "Dip up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pita breads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "kalamata olives",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the feta with yoghurt and olive oil until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Spread in a shallow bowl, drizzle with honey and sprinkle with oregano.",
+     "min": 3
+    },
+    {
+     "text": "Cut the cucumber into batons and halve the tomatoes.",
+     "min": 8
+    },
+    {
+     "text": "Warm the pita, brush with oil and cut into wedges.",
+     "min": 5
+    },
+    {
+     "text": "Arrange everything on a big platter with the olives.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Robin Hood's Sherwood ploughman's board",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "Chutney up to 1 week ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cider vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "mixed spice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "vintage cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar of pickled onions",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the apple and onion.",
+     "min": 10
+    },
+    {
+     "text": "Simmer with brown sugar, cider vinegar and mixed spice until thick and sticky, then cool.",
+     "min": 20
+    },
+    {
+     "text": "Slice the loaf and cut the cheddar into wedges.",
+     "min": 5
+    },
+    {
+     "text": "Slice the remaining apples.",
+     "min": 5
+    },
+    {
+     "text": "Arrange on a board with the sliced ham, pickled onions and chutney.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Winston the ogre's beef and barley stew",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 140,
+   "make_ahead": "Up to 2 days, keep chilled and reheat",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chuck steak",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pearl barley",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "horseradish cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the beef, onion, carrots and mushrooms and toss the beef in flour.",
+     "min": 15
+    },
+    {
+     "text": "Brown the beef in batches in oil.",
+     "min": 15
+    },
+    {
+     "text": "Add the onion, carrots, mushrooms and garlic and cook.",
+     "min": 5
+    },
+    {
+     "text": "Add tomato paste, stock, barley and bay leaves.",
+     "min": 3
+    },
+    {
+     "text": "Simmer covered until the beef is tender.",
+     "min": 120
+    },
+    {
+     "text": "Mash the butter with horseradish cream.",
+     "min": 5
+    },
+    {
+     "text": "Serve with the horseradish butter and a crusty loaf.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Napoleon's little custard tarts",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 39,
+   "make_ahead": "Best the day they are made",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the pastry into a tight log and cut into rounds.",
+     "min": 10
+    },
+    {
+     "text": "Press each round into a greased mini muffin tin.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the egg yolks, sugar, cornflour, milk and vanilla in a pan and stir over medium heat until thick.",
+     "min": 10
+    },
+    {
+     "text": "Spoon the custard into the cases.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 230C until the tops blister.",
+     "min": 14
+    },
+    {
+     "text": "Cool, then dust with cinnamon.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Titanic iceberg ginger fizz",
+   "course": "d",
+   "prep_min": 12,
+   "cook_min": 205,
+   "make_ahead": "Syrup up to 1 week ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "knob ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag of ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the ginger.",
+     "min": 5
+    },
+    {
+     "text": "Simmer the sugar, water and ginger for 5 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Cool and strain the syrup.",
+     "min": 20
+    },
+    {
+     "text": "Freeze water in a small container to make big ice blocks, or use large ice cubes.",
+     "min": 180
+    },
+    {
+     "text": "Put a block in each glass, add ginger syrup and lemon juice, then top with soda water.",
+     "min": 5
+    },
+    {
+     "text": "Garnish with mint and a lemon wheel.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

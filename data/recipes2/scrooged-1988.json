@@ -1,0 +1,330 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "TV studio canapés",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Up to 4 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "blinis",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "crème fraîche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch basil",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Top the blinis with crème fraîche and smoked salmon.",
+     "min": 8
+    },
+    {
+     "text": "Slice and toast the baguette, then rub with garlic.",
+     "min": 10
+    },
+    {
+     "text": "Dice the tomatoes, mix with torn basil and pile on the toasts.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Toaster fairy toast soldiers",
+   "course": "s",
+   "prep_min": 8,
+   "cook_min": 6,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices thick white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs for a soft yolk.",
+     "min": 6
+    },
+    {
+     "text": "Toast the bread golden, butter it and cut into soldiers.",
+     "min": 6
+    },
+    {
+     "text": "Put each egg in a cup, take the top off and dip away.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Claire's soup kitchen stew",
+   "course": "m",
+   "prep_min": 22,
+   "cook_min": 200,
+   "make_ahead": "Up to 3 days, better the next day",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Italian loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the beef, onions, carrots and potatoes.",
+     "min": 20
+    },
+    {
+     "text": "Brown the beef in batches, then soften the onion and carrot.",
+     "min": 20
+    },
+    {
+     "text": "Add the potatoes, stock and thyme, cover and braise at 160C until the meat falls apart.",
+     "min": 180
+    },
+    {
+     "text": "Serve with crusty bread.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Christmas pudding",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 720,
+   "make_ahead": "Up to 2 weeks, keep wrapped and reheat by steaming",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "mixed dried fruit",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "mixed spice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brandy, to flame",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "custard",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the dried fruit in the brandy overnight.",
+     "min": 480
+    },
+    {
+     "text": "Beat the butter and sugar, beat in the eggs, then mix in the breadcrumbs, flour, spice and the soaked fruit.",
+     "min": 20
+    },
+    {
+     "text": "Pack into a greased pudding basin, cover and steam.",
+     "min": 240
+    },
+    {
+     "text": "Warm the extra brandy, light it and pour over at the table. Serve with warm custard.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Eggnog",
+   "course": "d",
+   "prep_min": 7,
+   "cook_min": 130,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "fresh nutmeg, to grate",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg yolks with the sugar.",
+     "min": 5
+    },
+    {
+     "text": "Heat the milk and cream, pour over the yolks and stir over low heat to 75C.",
+     "min": 10
+    },
+    {
+     "text": "Chill well.",
+     "min": 120
+    },
+    {
+     "text": "Stir in the brandy and grate fresh nutmeg on top.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

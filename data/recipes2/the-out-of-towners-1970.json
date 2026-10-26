@@ -1,0 +1,874 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Handbag shortbread fingers with jam",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 70,
+   "make_ahead": "Up to 4 days, airtight",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "icing sugar, plus extra to dust",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "raspberry jam",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and icing sugar until pale. Mix in the flour and cornflour to a soft dough.",
+     "min": 12
+    },
+    {
+     "text": "Press into a lined 20 x 30cm tin and prick all over.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 160C until pale golden.",
+     "min": 28
+    },
+    {
+     "text": "Cut into 24 fingers while warm and cool in the tin.",
+     "min": 20
+    },
+    {
+     "text": "Sandwich pairs with jam and dust with icing sugar.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Diverted flight cocktail franks",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 12,
+   "make_ahead": "Up to 1 day, reheat gently",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "cocktail franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar cocktail onions",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the franks in water, then drain.",
+     "min": 4
+    },
+    {
+     "text": "Melt the butter with the honey, Dijon, sugar and Worcestershire in a frying pan.",
+     "min": 2
+    },
+    {
+     "text": "Add the franks and toss over medium heat until sticky and glazed.",
+     "min": 5
+    },
+    {
+     "text": "Serve on toothpicks with cocktail onions.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Hotel rib eye breakfast",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "fine salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "rib eye steak, in four pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices sourdough",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grate the potatoes and squeeze dry in a tea towel. Season and shape into 4 hash browns.",
+     "min": 10
+    },
+    {
+     "text": "Fry the hash browns in some of the butter over medium heat, turning once.",
+     "min": 12
+    },
+    {
+     "text": "Sear the steaks in a very hot pan with the oil to about 54C, then rest.",
+     "min": 12
+    },
+    {
+     "text": "Fry the eggs in butter.",
+     "min": 3
+    },
+    {
+     "text": "Toast the sourdough and butter it. Serve a steak, two eggs, a hash brown and a toast each.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Waldorf cheesecake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 1500,
+   "make_ahead": "Make the day before, keep chilled",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "g",
+     "item": "digestive biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "strawberries, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the biscuits, mix with the butter and press into a lined 18cm springform tin.",
+     "min": 10
+    },
+    {
+     "text": "Beat the cream cheese and sugar, then mix in the sour cream, eggs and vanilla. Pour over the base.",
+     "min": 10
+    },
+    {
+     "text": "Wrap the tin in two layers of foil and stand in a roasting dish with hot water halfway up its sides.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 150C until the centre gently wobbles.",
+     "min": 70
+    },
+    {
+     "text": "Cool, then refrigerate overnight.",
+     "min": 1380
+    },
+    {
+     "text": "Top with strawberries and cut into portions.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Hotel bar martini",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "dry vermouth",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "green olives",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Freeze the martini glasses.",
+     "min": 5
+    },
+    {
+     "text": "Stir the gin and vermouth over ice in batches, then strain into the glasses.",
+     "min": 4
+    },
+    {
+     "text": "Garnish each with an olive.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Rib Eye Steak and Eggs",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 30,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "fine salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "rib eye steak, in four pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grate the potatoes, squeeze dry and shape into hash browns.",
+     "min": 10
+    },
+    {
+     "text": "Fry the hash browns in butter until crisp.",
+     "min": 12
+    },
+    {
+     "text": "Sear the steaks to order and rest.",
+     "min": 12
+    },
+    {
+     "text": "Fry the eggs. Toast and butter the bread.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "The Continental",
+   "course": "m",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 480,
+     "u": "ml",
+     "item": "chilled orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "croissants",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "sweet butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "fruit preserves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cups coffee, brewed",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the croissants in a hot oven.",
+     "min": 5
+    },
+    {
+     "text": "Serve with juice, butter, preserves and a pot of coffee.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Buttermilk Griddle Cakes",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 350,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted, plus extra for the pan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "whipped butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "country sausages",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the dry ingredients. Whisk the buttermilk, eggs and melted butter and fold in.",
+     "min": 6
+    },
+    {
+     "text": "Cook the sausages.",
+     "min": 12
+    },
+    {
+     "text": "Cook ladlefuls of batter on a buttered griddle until bubbles show, flip and cook through.",
+     "min": 15
+    },
+    {
+     "text": "Stack tall with whipped butter and warm maple syrup.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Eggs Benedict",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "English muffins",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices Canadian bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white vinegar for poaching",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the yolks and lemon juice over barely simmering water, then slowly whisk in the butter for the hollandaise.",
+     "min": 10
+    },
+    {
+     "text": "Poach the eggs in gently simmering water with the vinegar.",
+     "min": 8
+    },
+    {
+     "text": "Toast the muffins and warm the bacon.",
+     "min": 5
+    },
+    {
+     "text": "Stack muffin, bacon and egg, then spoon over the hollandaise.",
+     "min": 3
+    },
+    {
+     "text": "Keep the hollandaise warm, not hot.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Waldorf Salad",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours, keep chilled",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "crisp apples, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "celery sticks, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "green grapes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "walnuts, toasted",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "butter lettuce",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the walnuts in a dry pan.",
+     "min": 4
+    },
+    {
+     "text": "Stir the mayonnaise with the lemon juice.",
+     "min": 2
+    },
+    {
+     "text": "Toss the apple, celery, grapes and walnuts in the dressing.",
+     "min": 5
+    },
+    {
+     "text": "Spoon onto lettuce leaves.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Club Sandwich",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "slices bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sliced turkey",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "lettuce leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the bacon until crisp.",
+     "min": 10
+    },
+    {
+     "text": "Toast the bread and spread with mayo.",
+     "min": 5
+    },
+    {
+     "text": "Build three decks with turkey, bacon, lettuce and tomato.",
+     "min": 12
+    },
+    {
+     "text": "Cut into quarters and pin with picks.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Cocktail Franks",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 12,
+   "make_ahead": "Up to 1 day, reheat gently",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "cocktail franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar pearl onions",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the franks, then drain.",
+     "min": 4
+    },
+    {
+     "text": "Melt the butter with honey, mustard, sugar and Worcestershire.",
+     "min": 2
+    },
+    {
+     "text": "Toss the franks in the glaze until sticky.",
+     "min": 5
+    },
+    {
+     "text": "Serve on picks with pearl onions.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Manhattan",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "rye whiskey",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "sweet vermouth",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dashes aromatic bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cocktail cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the rye, vermouth and bitters over ice.",
+     "min": 3
+    },
+    {
+     "text": "Strain into chilled glasses and add a cherry.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

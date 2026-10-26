@@ -1,0 +1,326 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Babysitter's popcorn",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 60,
+   "make_ahead": "Up to 2 days in an airtight tin",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "g",
+     "item": "popcorn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pop the kernels in a covered pot and tip into a bowl",
+     "min": 8
+    },
+    {
+     "text": "Toss half with the melted butter portion and salt",
+     "min": 3
+    },
+    {
+     "text": "Boil the sugar, remaining butter and golden syrup for 4 minutes and pour over the other half",
+     "min": 7
+    },
+    {
+     "text": "Bake that half at 120C, stirring every 15 minutes",
+     "min": 45
+    },
+    {
+     "text": "Mix both halves together",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Jack-o'-lantern cheese ball",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 day chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sharp cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the cheddar with the cream cheese, half the paprika and the Worcestershire",
+     "min": 8
+    },
+    {
+     "text": "Shape into a ball and chill",
+     "min": 60
+    },
+    {
+     "text": "Score lines like a pumpkin and roll in the remaining paprika",
+     "min": 8
+    },
+    {
+     "text": "Push a capsicum stem on top and serve with crackers",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Haddonfield chilli in a pumpkin",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 125,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "crushed tomatoes (2 tins)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "kidney beans (2 tins), drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "small pumpkins",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the mince with the onion and chilli powder",
+     "min": 12
+    },
+    {
+     "text": "Add the tomatoes and beans and simmer",
+     "min": 90
+    },
+    {
+     "text": "Hollow the pumpkins",
+     "min": 15
+    },
+    {
+     "text": "Roast the pumpkins at 200C",
+     "min": 30
+    },
+    {
+     "text": "Fill with chilli, sour cream and cheddar",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Pumpkin pie",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 140,
+   "make_ahead": "Up to 1 day chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "pumpkin",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "mixed spice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roast the pumpkin until soft and puree",
+     "min": 35
+    },
+    {
+     "text": "Line a pie dish with the pastry and blind-bake",
+     "min": 20
+    },
+    {
+     "text": "Whisk the puree with eggs, sugar, half the cream and the spice",
+     "min": 8
+    },
+    {
+     "text": "Pour into the case and bake at 170C",
+     "min": 50
+    },
+    {
+     "text": "Cool completely",
+     "min": 30
+    },
+    {
+     "text": "Whip the remaining cream and pipe a pale mask on top",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Hot apple cider",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "strips orange peel",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Combine the juice, cinnamon, cloves and orange peel in a saucepan",
+     "min": 3
+    },
+    {
+     "text": "Simmer gently",
+     "min": 15
+    },
+    {
+     "text": "Strain and ladle into four mugs while hot. Keep the porch light on",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

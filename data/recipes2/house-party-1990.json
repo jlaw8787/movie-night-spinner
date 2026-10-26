@@ -1,0 +1,386 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "House party chicken wings",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 758,
+   "make_ahead": "Dry the wings the day before",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "blue cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dry the wings uncovered in the fridge overnight.",
+     "min": 720
+    },
+    {
+     "text": "Bake at 220C until crisp.",
+     "min": 45
+    },
+    {
+     "text": "Melt the hot sauce with the butter and honey.",
+     "min": 5
+    },
+    {
+     "text": "Mash the blue cheese into the sour cream for the dip.",
+     "min": 5
+    },
+    {
+     "text": "Toss the wings in the sauce and serve with celery sticks and the dip.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Kick step party sub",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 7,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "long Italian loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "salami",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "provolone",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the loaf lengthways.",
+     "min": 5
+    },
+    {
+     "text": "Layer with salami, ham, provolone, shredded lettuce, sliced tomato and onion.",
+     "min": 10
+    },
+    {
+     "text": "Drizzle with oil and vinegar and season.",
+     "min": 2
+    },
+    {
+     "text": "Press under a board, then cut into thick slices.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Bilal's DJ booth pizza",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pepperoni",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stretch the dough into 2 thin bases.",
+     "min": 10
+    },
+    {
+     "text": "Spread with sauce, then add mozzarella, pepperoni and oregano.",
+     "min": 5
+    },
+    {
+     "text": "Bake on a hot steel at maximum heat.",
+     "min": 7
+    },
+    {
+     "text": "Cut into squares and leave in the box on the bench.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Party sheet cake",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 26,
+   "make_ahead": "Up to 2 days airtight",
+   "ingredients": [
+    {
+     "q": 350,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 90,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat part of the butter with the sugar until pale and add the eggs.",
+     "min": 10
+    },
+    {
+     "text": "Fold in the flour, some of the cocoa and the milk.",
+     "min": 5
+    },
+    {
+     "text": "Bake in a tray at 175C and cool.",
+     "min": 30
+    },
+    {
+     "text": "Beat the remaining butter with the icing sugar and remaining cocoa.",
+     "min": 8
+    },
+    {
+     "text": "Spread over the cake and cover with sprinkles.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Pineapple passionfruit party punch",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 120,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pineapple chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pineapple chunks and freeze on a tray.",
+     "min": 5
+    },
+    {
+     "text": "Freeze for 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Mix the pineapple juice, orange juice, passionfruit pulp and lime juice in a big bowl.",
+     "min": 5
+    },
+    {
+     "text": "Add ice and the frozen pineapple.",
+     "min": 3
+    },
+    {
+     "text": "Just before serving top with cold lemonade and float sliced orange and torn mint.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

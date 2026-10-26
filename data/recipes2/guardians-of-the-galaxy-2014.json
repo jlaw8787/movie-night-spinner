@@ -1,0 +1,342 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Awesome Mix pepperoni pizza rolls",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 18,
+   "make_ahead": "Rolls can be filled a day ahead, bake fresh",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets of puff pastry",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "tsp",
+     "item": "pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "slices of pepperoni",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "napoli sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of chilli flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C and line trays. Cut each pastry sheet into 8 rectangles.",
+     "min": 8
+    },
+    {
+     "text": "Top each with pizza sauce, pepperoni, mozzarella and oregano.",
+     "min": 8
+    },
+    {
+     "text": "Roll up, pinch the ends closed and lay seam down on the trays.",
+     "min": 6
+    },
+    {
+     "text": "Brush with egg, scatter with parmesan and bake until puffed and golden.",
+     "min": 18
+    },
+    {
+     "text": "Warm the napoli sauce with the honey and chilli flakes for dipping.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Knowhere bar wings",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 55,
+   "make_ahead": "Wings can dry in the fridge overnight",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "blackberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "clove of garlic, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of chilli flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dry the wings uncovered in the fridge overnight.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 220C until crisp.",
+     "min": 45
+    },
+    {
+     "text": "Simmer the blackberries with the soy, honey, garlic and chilli until sticky, then strain.",
+     "min": 12
+    },
+    {
+     "text": "Toss the wings through the glaze.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Ravager barbecue",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 170,
+   "make_ahead": "Ribs can be baked a day ahead, glaze to serve",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "pork ribs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "coleslaw mix",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the ribs with paprika and sugar and wrap tightly in foil.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 150C until tender.",
+     "min": 150
+    },
+    {
+     "text": "Unwrap, brush with barbecue sauce and glaze under the grill.",
+     "min": 10
+    },
+    {
+     "text": "Grill the corn until charred.",
+     "min": 10
+    },
+    {
+     "text": "Toss the slaw mix with mayonnaise and serve.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Dance-off sundaes",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Fudge sauce up to 3 days, chilled",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "whipped cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "rainbow sprinkles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sparklers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate into the cream for the hot fudge.",
+     "min": 8
+    },
+    {
+     "text": "Scoop the ice cream into tall glasses.",
+     "min": 4
+    },
+    {
+     "text": "Pour over the fudge and add whipped cream and sprinkles.",
+     "min": 3
+    },
+    {
+     "text": "Light a sparkler for the final move.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Galaxy punch",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tsp",
+     "item": "grenadine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "blue raspberry cordial",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put a spoon of grenadine in the bottom of each of four glasses.",
+     "min": 2
+    },
+    {
+     "text": "Fill with ice and lemonade.",
+     "min": 1
+    },
+    {
+     "text": "Pour the cordial slowly down a spoon so it layers like a nebula.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

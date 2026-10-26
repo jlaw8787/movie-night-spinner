@@ -1,0 +1,314 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Strength and honour bread and olives",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "mixed olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil, plus extra for dipping",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, peel in strips",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "fennel seeds",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "rustic loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the olives gently in the oil with the orange peel, fennel seeds and garlic for 5 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Tear the loaf into chunks.",
+     "min": 3
+    },
+    {
+     "text": "Serve with the olives and a bowl of oil and salt for dipping.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Figs with honey and walnuts",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "ripe figs, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "goat's cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "walnuts, toasted",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put a small spoon of goat's cheese on each fig half.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C for 8 minutes.",
+     "min": 8
+    },
+    {
+     "text": "Drizzle with honey and scatter with walnuts and thyme leaves. Serve warm.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Colosseum lamb",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 105,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "lamb leg",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, slivered",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sprigs rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "anchovies",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tins chickpeas, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "baby spinach",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stud the lamb with garlic, rosemary and anchovies.",
+     "min": 10
+    },
+    {
+     "text": "Roast at 180C until 58C inside, about 90 minutes.",
+     "min": 90
+    },
+    {
+     "text": "Rest the lamb for 20 minutes. Meanwhile simmer the chickpeas with the tomatoes, then stir through the spinach.",
+     "min": 20
+    },
+    {
+     "text": "Carve and serve with the chickpeas.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Roman honey cakes",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Best eaten the day they are baked",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey, warmed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "poppy seeds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the ricotta, flour and egg into a soft dough.",
+     "min": 8
+    },
+    {
+     "text": "Shape into small rounds and set each on a bay leaf.",
+     "min": 12
+    },
+    {
+     "text": "Bake at 200C for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Pour over the warm honey and sprinkle with poppy seeds.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Are you not entertained honey conditum",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "black peppercorns",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch saffron",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, peel in strips",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the wine into a pot with the honey, peppercorns, bay leaves, saffron and orange peel.",
+     "min": 5
+    },
+    {
+     "text": "Warm gently for 15 minutes without boiling.",
+     "min": 15
+    },
+    {
+     "text": "Strain into cups and serve warm.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

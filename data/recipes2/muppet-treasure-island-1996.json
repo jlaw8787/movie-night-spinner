@@ -1,0 +1,402 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Admiral Benbow honey mustard sausages",
+   "course": "s",
+   "prep_min": 16,
+   "cook_min": 23,
+   "make_ahead": "Up to 1 day, reheat in a hot oven",
+   "ingredients": [
+    {
+     "q": 20,
+     "u": "",
+     "item": "chipolatas",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "wholegrain mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of thyme",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Twist each chipolata in half and snip apart into little sausages.",
+     "min": 10
+    },
+    {
+     "text": "Roast on a lined tray at 200C.",
+     "min": 15
+    },
+    {
+     "text": "Mix the honey, wholegrain mustard and soy sauce.",
+     "min": 3
+    },
+    {
+     "text": "Pour over the sausages, toss and roast until sticky and glazed.",
+     "min": 8
+    },
+    {
+     "text": "Scatter with thyme leaves and serve on toothpicks.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Hispaniola cheddar ship's biscuits",
+   "course": "s",
+   "prep_min": 28,
+   "cook_min": 44,
+   "make_ahead": "Biscuits up to 3 days, keep airtight",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "vintage cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar of pickled onions",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the cold butter into the flour, then stir in the grated cheddar, pepper and salt.",
+     "min": 10
+    },
+    {
+     "text": "Add cold water and press into a dough.",
+     "min": 3
+    },
+    {
+     "text": "Chill the dough for 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Roll to 3mm, cut into 5cm squares and prick with a fork.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 180C until golden.",
+     "min": 14
+    },
+    {
+     "text": "Cool on a rack.",
+     "min": 10
+    },
+    {
+     "text": "Serve with sliced apples and pickled onions.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Long John Silver's galley fish stew",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Stew up to 1 day, add the seafood when reheating",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "fish stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "firm white fish fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sourdough loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the onion, capsicum and potatoes and crush the garlic.",
+     "min": 10
+    },
+    {
+     "text": "Fry the onion, capsicum and garlic in oil.",
+     "min": 5
+    },
+    {
+     "text": "Add smoked paprika, crushed tomatoes, fish stock and potatoes.",
+     "min": 2
+    },
+    {
+     "text": "Simmer until the potato is nearly tender.",
+     "min": 15
+    },
+    {
+     "text": "Add the fish chunks and prawns and simmer until just cooked.",
+     "min": 5
+    },
+    {
+     "text": "Stir in parsley.",
+     "min": 3
+    },
+    {
+     "text": "Toast the sourdough, rub with garlic and serve alongside.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Treasure Island chocolate coin brownies",
+   "course": "w",
+   "prep_min": 31,
+   "cook_min": 55,
+   "make_ahead": "Up to 3 days, keep airtight",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "plain sweet biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "gold chocolate coins",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar of gold sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with the butter and let it cool slightly.",
+     "min": 10
+    },
+    {
+     "text": "Whisk in the sugar, then the eggs.",
+     "min": 5
+    },
+    {
+     "text": "Fold in the flour and cocoa.",
+     "min": 3
+    },
+    {
+     "text": "Spread into a lined 20cm square tin.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 170C until just set.",
+     "min": 25
+    },
+    {
+     "text": "Cool completely in the tin.",
+     "min": 30
+    },
+    {
+     "text": "Crush the biscuits and sprinkle over like sand.",
+     "min": 5
+    },
+    {
+     "text": "Cut into squares and top each with a gold chocolate coin and gold sprinkles.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Captain Smollett's ginger beer grog",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Mix up to 2 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "ginger beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag of ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "In a jug, mix the ginger beer, pineapple juice and lime and orange juice.",
+     "min": 5
+    },
+    {
+     "text": "Fill tall glasses or tin mugs with ice and pour over.",
+     "min": 3
+    },
+    {
+     "text": "Garnish with lime wedges and orange slices.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

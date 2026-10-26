@@ -1,0 +1,384 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Lagos market suya",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Spice mix up to 1 week, store airtight",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef rump, cut into thin strips",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "peanuts, finely ground",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground ginger",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the ground peanuts with the paprika, ginger, chilli flakes and salt.",
+     "min": 5
+    },
+    {
+     "text": "Thread the beef onto soaked skewers and coat all over in the spice.",
+     "min": 10
+    },
+    {
+     "text": "Grill on high heat until charred.",
+     "min": 8
+    },
+    {
+     "text": "Serve with sliced onion and tomato, sprinkled with more spice.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Berlin airport currywurst",
+   "course": "s",
+   "prep_min": 22,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "bratwurst",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "curry powder, plus extra for dusting",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into fries, toss in oil and spread on trays.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 220C, turning once, until crisp.",
+     "min": 30
+    },
+    {
+     "text": "Grill the bratwurst until browned, then slice into rounds.",
+     "min": 12
+    },
+    {
+     "text": "Warm the tomato sauce with the curry powder and paprika.",
+     "min": 5
+    },
+    {
+     "text": "Pour over the sausage, dust with curry powder and serve with the fries.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Siberian winter goulash",
+   "course": "m",
+   "prep_min": 5,
+   "cook_min": 185,
+   "make_ahead": "Up to 2 days, reheats well",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "egg noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in batches in a heavy pot.",
+     "min": 10
+    },
+    {
+     "text": "Add the onions and paprika and stir until fragrant.",
+     "min": 5
+    },
+    {
+     "text": "Add the tomatoes and enough water to cover.",
+     "min": 3
+    },
+    {
+     "text": "Cover and simmer gently, stirring now and then, until the beef is very tender and the sauce is thick.",
+     "min": 160
+    },
+    {
+     "text": "Cook the noodles and toss with butter.",
+     "min": 10
+    },
+    {
+     "text": "Serve the goulash over the noodles with sour cream.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Aunt May's walnut date loaf",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 55,
+   "make_ahead": "Up to 2 days, keep airtight",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "pitted dates, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, plus extra for serving",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "walnuts, chopped",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the boiling water over the dates and bicarb soda and leave to soften.",
+     "min": 10
+    },
+    {
+     "text": "Beat in the butter, sugar and egg, then fold in the flour and walnuts.",
+     "min": 5
+    },
+    {
+     "text": "Pour into a lined loaf tin and bake at 175C until a skewer comes out clean.",
+     "min": 50
+    },
+    {
+     "text": "Slice and serve buttered.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Team Cap and Team Iron Man fizz",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "Cap's side up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "cranberry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "dried butterfly pea flowers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Team Iron Man: muddle the raspberries with the sugar, add the cranberry juice and lime juice, then strain.",
+     "min": 5
+    },
+    {
+     "text": "Pour over two glasses of ice and top with soda water.",
+     "min": 0
+    },
+    {
+     "text": "Team Cap: steep the butterfly pea flowers in the boiling water, strain and chill.",
+     "min": 10
+    },
+    {
+     "text": "Pour into two glasses of ice and top with lemonade.",
+     "min": 0
+    },
+    {
+     "text": "Line them up and let everyone choose.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

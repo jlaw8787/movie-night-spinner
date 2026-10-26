@@ -1,0 +1,300 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Ben's Famous pizza bites",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "slices pepperoni",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour, for dusting",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 230C with a tray inside.",
+     "min": 5
+    },
+    {
+     "text": "Roll out the dough on a floured bench and cut into rounds.",
+     "min": 10
+    },
+    {
+     "text": "Spread each round with sauce, then add mozzarella and a slice of pepperoni.",
+     "min": 10
+    },
+    {
+     "text": "Bake on the hot tray until the bases are crisp and the cheese bubbles.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Pug cookies",
+   "course": "s",
+   "prep_min": 35,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the butter in a pan and leave to cool.",
+     "min": 20
+    },
+    {
+     "text": "Beat the cooled butter with the sugar and egg, then mix in the flour and bicarb.",
+     "min": 8
+    },
+    {
+     "text": "Roll into balls and place on lined trays.",
+     "min": 7
+    },
+    {
+     "text": "Bake at 180C until set.",
+     "min": 10
+    },
+    {
+     "text": "Cool the cookies on a rack.",
+     "min": 15
+    },
+    {
+     "text": "Melt the chocolate and pipe pug faces on each cookie.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Ben's Famous pizza",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough, cold-fermented",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "crushed tomato",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "low-moisture mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "Italian sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to its highest setting with a steel or tray inside.",
+     "min": 10
+    },
+    {
+     "text": "Stretch the dough thin into two bases and spread with salted crushed tomato.",
+     "min": 10
+    },
+    {
+     "text": "Top with mozzarella and crumbled sausage meat, skins removed.",
+     "min": 5
+    },
+    {
+     "text": "Bake each pizza at max heat until the crust blisters.",
+     "min": 14
+    }
+   ]
+  },
+  {
+   "n": "Worm guys' coffee break doughnuts",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "strong espresso",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 10,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "plain cake doughnuts",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the icing sugar, espresso and melted butter until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Dip the top of each doughnut in the icing.",
+     "min": 5
+    },
+    {
+     "text": "Leave to set.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Worm guys' iced espresso shakes",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "espressos (about 120 ml)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "tbsp",
+     "item": "caramel sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "gummy worms",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the espressos and cool.",
+     "min": 10
+    },
+    {
+     "text": "Blend with the ice cream, milk and some of the caramel until thick and smooth.",
+     "min": 3
+    },
+    {
+     "text": "Whip the cream to soft peaks.",
+     "min": 3
+    },
+    {
+     "text": "Pour into tall glasses, top with cream, drizzle with caramel and hang gummy worms over each rim.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

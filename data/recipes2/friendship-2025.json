@@ -1,0 +1,384 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Neighbour's hot honey grilled haloumi",
+   "course": "s",
+   "prep_min": 11,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "haloumi",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "chilli flakes, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cider vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "vegetable oil, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "sesame seeds, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the blocks of haloumi 1cm thick and pat dry.",
+     "min": 3
+    },
+    {
+     "text": "Warm the honey with the chilli flakes and the cider vinegar for 2 minutes.",
+     "min": 2
+    },
+    {
+     "text": "Heat a heavy pan over medium-high heat with the oil and sear the haloumi 1 to 2 minutes a side until deep golden.",
+     "min": 3
+    },
+    {
+     "text": "Arrange on a platter, drizzle with the hot honey and a squeeze of lemon, and scatter with torn mint and toasted sesame seeds.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "From-scratch French onion dip and chips",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 85,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "garlic powder, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "Worcestershire sauce, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "thick-cut potato chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slowly cook the thinly sliced onions in the butter for 25 minutes until deep golden.",
+     "min": 25
+    },
+    {
+     "text": "Cool and chop.",
+     "min": 3
+    },
+    {
+     "text": "Mix with the sour cream, the mayo, half a tsp garlic powder, the Worcestershire, the chopped chives, salt and pepper.",
+     "min": 6
+    },
+    {
+     "text": "Chill 1 hour so the flavours settle.",
+     "min": 60
+    },
+    {
+     "text": "Serve with the thick-cut salted potato chips.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Dinner party rump with chimichurri",
+   "course": "m",
+   "prep_min": 7,
+   "cook_min": 61,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "rump steak",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "baby potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "olive oil, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "red wine vinegar, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "dried oregano, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag mixed salad leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the baby potatoes 15 minutes, smash on an oiled tray and roast at 220C for 30 minutes.",
+     "min": 45
+    },
+    {
+     "text": "Chop a bunch of parsley, the garlic cloves and the red chilli and mix with the olive oil, the red wine vinegar and dried oregano.",
+     "min": 5
+    },
+    {
+     "text": "Season the rump steak and grill on a very hot barbecue 4 minutes a side for medium rare.",
+     "min": 8
+    },
+    {
+     "text": "Rest 8 minutes, slice and spoon the chimichurri over.",
+     "min": 8
+    },
+    {
+     "text": "Serve with the potatoes and a dressed green salad.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Weatherman's cumulus cloud pavlovas",
+   "course": "w",
+   "prep_min": 11,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "cornflour, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "white vinegar, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mixed berries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "lemon curd",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 120C.",
+     "min": 3
+    },
+    {
+     "text": "Whisk the egg whites to stiff peaks, then add the caster sugar a spoon at a time until glossy.",
+     "min": 2
+    },
+    {
+     "text": "Fold in the cornflour and the white vinegar.",
+     "min": 3
+    },
+    {
+     "text": "Spoon the tall cloud shapes onto lined trays and bake 50 minutes, then cool in the turned-off oven.",
+     "min": 50
+    },
+    {
+     "text": "Top with the whipped cream, the berries, the pulp of the passionfruit and a drizzle of lemon curd.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Grapefruit pale ale radler",
+   "course": "d",
+   "prep_min": 9,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "375ml cans pale ale",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pink grapefruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the pint glasses in the freezer for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Mix the juice of the pink grapefruit with the sugar syrup and the cold soda water.",
+     "min": 2
+    },
+    {
+     "text": "Pour the cold pale ale into each glass, then top with the grapefruit soda.",
+     "min": 2
+    },
+    {
+     "text": "Add a squeeze of lime and a grapefruit wedge.",
+     "min": 2
+    },
+    {
+     "text": "For non-drinkers, use ginger beer in place of the ale.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

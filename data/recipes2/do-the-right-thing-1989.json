@@ -1,0 +1,356 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Sal's garlic knots",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 42,
+   "make_ahead": "Best eaten warm, same day",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "grated parmesan",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the dough into 12 strips and tie each into a knot.",
+     "min": 10
+    },
+    {
+     "text": "Rest the knots on a tray to prove until puffy.",
+     "min": 30
+    },
+    {
+     "text": "Bake at 230C until golden.",
+     "min": 12
+    },
+    {
+     "text": "Melt the butter with the garlic and chopped parsley, toss the hot knots through and shower with parmesan.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Chilli-lime watermelon and feta skewers",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "Cube up to 4 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "seedless watermelon, chilled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "firm feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "flaky sea salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "skewers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the watermelon into 3cm cubes and the feta into 2cm cubes.",
+     "min": 8
+    },
+    {
+     "text": "Thread onto the skewers, alternating with small mint leaves.",
+     "min": 8
+    },
+    {
+     "text": "Mix the salt, chilli flakes and lime zest, squeeze the lime juice over the skewers and sprinkle with the chilli salt. Serve straight from the fridge.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Sal's Famous slice",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 70,
+   "make_ahead": "Dough can be made a day ahead",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "grated low-moisture mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pepperoni",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rest the dough at room temperature for an hour. Season the tomatoes with salt.",
+     "min": 60
+    },
+    {
+     "text": "Stretch the bases thin and spread with the sauce. Top with the mozzarella and pepperoni.",
+     "min": 10
+    },
+    {
+     "text": "Bake on a preheated tray at the oven's highest setting until bubbling and charred in spots. Sprinkle with oregano and cut big.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Cherry shaved ice",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 70,
+   "make_ahead": "Syrup up to 3 days ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "cherries, pitted",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pit the cherries.",
+     "min": 5
+    },
+    {
+     "text": "Simmer the cherries with the sugar, water and lemon juice, then strain.",
+     "min": 10
+    },
+    {
+     "text": "Cool and chill the syrup until cold.",
+     "min": 60
+    },
+    {
+     "text": "Shave or crush the ice into four cups and pour the syrup over just before serving.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Heatwave lager and lemonade shandy",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "Lemonade up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "bottles lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Juice the lemons and stir the juice with the sugar and cold water until dissolved. Keep a few lemon wheels for the glasses.",
+     "min": 5
+    },
+    {
+     "text": "Chill 4 tall glasses in the freezer.",
+     "min": 20
+    },
+    {
+     "text": "Half-fill each glass with ice-cold lager, top with lemonade, then add ice and a lemon wheel. Serve straight away.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Whole pie, 18 in.",
+   "course": "m",
+   "extra": true,
+   "prep_min": 25,
+   "cook_min": 70,
+   "make_ahead": "Dough can be made a day ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "grated low-moisture mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pepperoni",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rest the dough at room temperature until relaxed. Season the tomatoes with salt.",
+     "min": 60
+    },
+    {
+     "text": "Stretch the dough thin into a large round and spread with sauce, mozzarella and pepperoni (leave the pepperoni off for a plain pie).",
+     "min": 10
+    },
+    {
+     "text": "Bake on a preheated tray at the oven's highest setting until bubbling and charred in spots. Sprinkle with oregano and cut into 8 big slices.",
+     "min": 10
+    }
+   ]
+  }
+ ]
+}

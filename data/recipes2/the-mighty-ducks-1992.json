@@ -1,0 +1,280 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Flying V fried cheese bites",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Cubes can be coated and frozen, fry fresh",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "firm mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "tsp",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "ranch dressing",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the mozzarella into 2cm cubes. Whisk the flour, milk and salt into a batter.",
+     "min": 10
+    },
+    {
+     "text": "Dip the cubes in the batter and chill briefly so they hold their shape.",
+     "min": 15
+    },
+    {
+     "text": "Fry in 5cm of hot oil for 1 to 2 minutes until golden.",
+     "min": 10
+    },
+    {
+     "text": "Drain and serve with ranch dressing.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Juicy Lucy sliders",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Shape up to 4 hours ahead, cook fresh",
+   "ingredients": [
+    {
+     "q": 700,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices American cheese, halved",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slider buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dill pickles, sliced",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Divide the mince into 16 thin patties. Sandwich half a slice of cheese between 2 patties and pinch the edges sealed to make 8.",
+     "min": 20
+    },
+    {
+     "text": "Griddle 4 minutes a side, then rest 2 minutes so the cheese doesn't burst.",
+     "min": 10
+    },
+    {
+     "text": "Serve in the slider buns with pickles.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Minnesota hotdish",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 50,
+   "make_ahead": "Up to 1 day, bake fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "corn kernels",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "green beans, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "frozen potato gems",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the mince with the onion and mushrooms.",
+     "min": 15
+    },
+    {
+     "text": "Stir in the corn, beans and cream. Tip into a baking dish and cover with potato gems.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C for 35 minutes until golden.",
+     "min": 35
+    }
+   ]
+  },
+  {
+   "n": "Hans' frozen pond brownies",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the dark chocolate and butter. Whisk in the sugar and eggs and fold in the flour.",
+     "min": 15
+    },
+    {
+     "text": "Bake in a lined tin at 170C for 25 minutes. Cool.",
+     "min": 25
+    },
+    {
+     "text": "Melt the white chocolate, spread it smooth over the top like ice, set, then cut into squares.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "District 5 rinkside hot chocolate",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "marshmallows",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk until steaming.",
+     "min": 6
+    },
+    {
+     "text": "Whisk in the chocolate until frothy.",
+     "min": 4
+    },
+    {
+     "text": "Pour into big mugs and pile marshmallows on top. Ducks fly together.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

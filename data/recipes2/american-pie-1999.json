@@ -1,0 +1,320 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Stifler's party wings",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 45,
+   "make_ahead": "Wings can be dried a day ahead, bake fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "blue cheese",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pat the wings dry and leave them uncovered in the fridge, ideally overnight. Season with salt.",
+     "min": 5
+    },
+    {
+     "text": "Bake on a rack at 220C until crisp and golden.",
+     "min": 45
+    },
+    {
+     "text": "Melt the butter with the hot sauce and toss the wings through it.",
+     "min": 3
+    },
+    {
+     "text": "Mash the blue cheese into the sour cream for the dip. Serve with celery sticks.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Band camp grilled corn",
+   "course": "s",
+   "prep_min": 8,
+   "cook_min": 10,
+   "make_ahead": "Boil ahead, char fresh",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "tsp",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut each cob into thirds and boil for 4 minutes. Drain well.",
+     "min": 7
+    },
+    {
+     "text": "Char on a hot grill pan, turning, until blistered.",
+     "min": 8
+    },
+    {
+     "text": "Melt the butter with the paprika and salt, brush over the corn and squeeze over the lime.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Prom night dinner",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 35,
+   "make_ahead": "Crumb up to 4 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "chicken breasts, halved through the middle",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "napoli sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut into chips",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "salad leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crumb the chicken in flour, egg then panko. Soak the cut chips in cold water, then dry well.",
+     "min": 15
+    },
+    {
+     "text": "Fry the chips at a low heat until soft, drain, then fry again at a high heat until golden.",
+     "min": 15
+    },
+    {
+     "text": "Shallow fry the chicken until golden and cooked through.",
+     "min": 8
+    },
+    {
+     "text": "Top each piece with napoli sauce, ham and mozzarella and grill until bubbling. Serve with the chips and salad.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Warm apple pie",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 55,
+   "make_ahead": "Up to 1 day, reheat to serve warm",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "green apples, peeled and sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the apples with the butter, sugar and cinnamon until just soft. Cool.",
+     "min": 10
+    },
+    {
+     "text": "Line a pie dish with 2 sheets of pastry and fill. Cut the other 2 sheets into strips and weave a lattice on top.",
+     "min": 15
+    },
+    {
+     "text": "Bake at 190C until golden. Serve warm with ice cream.",
+     "min": 45
+    }
+   ]
+  },
+  {
+   "n": "Finch's mochaccino",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 72,
+     "u": "g",
+     "item": "ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "dark chocolate, grated",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the coffee into four mugs, about one espresso each.",
+     "min": 5
+    },
+    {
+     "text": "Heat the milk and whisk in the cocoa until frothy.",
+     "min": 3
+    },
+    {
+     "text": "Pour the chocolate milk over the coffee and top with whipped cream and grated chocolate.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

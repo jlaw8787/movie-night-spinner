@@ -1,0 +1,378 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Pit stop corn dogs",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the cornmeal, flour, sugar, baking powder, egg and buttermilk into a thick batter.",
+     "min": 5
+    },
+    {
+     "text": "Pat the franks dry and push onto sticks.",
+     "min": 5
+    },
+    {
+     "text": "Heat the oil to 180C. Dip each frank in batter and fry until deep golden.",
+     "min": 15
+    },
+    {
+     "text": "Serve with mustard.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Jean Girard's crêpes",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 75,
+   "make_ahead": "Batter up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "gruyere",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the flour, eggs and milk to a smooth batter and rest.",
+     "min": 60
+    },
+    {
+     "text": "Cook thin crepes in a buttered pan.",
+     "min": 15
+    },
+    {
+     "text": "Fold half around the ham and gruyere and warm until melted.",
+     "min": 10
+    },
+    {
+     "text": "Sprinkle the rest with sugar and lemon juice.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "The Bobby family dinner",
+   "course": "m",
+   "prep_min": 40,
+   "cook_min": 60,
+   "make_ahead": "Chicken can be brined the day before",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "taco shells",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brine the chicken in the buttermilk.",
+     "min": 15
+    },
+    {
+     "text": "Dredge in seasoned flour and fry at 165C until cooked through and crisp.",
+     "min": 25
+    },
+    {
+     "text": "Stretch the dough, top with sauce and mozzarella and bake at 230C until bubbling.",
+     "min": 15
+    },
+    {
+     "text": "Brown the beef mince with the cumin and taco spices.",
+     "min": 10
+    },
+    {
+     "text": "Fill the taco shells and put everything out together.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Chequered flag brownies",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 55,
+   "make_ahead": "Keeps 4 days in an airtight tin",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate and butter together. Whisk in the sugar and eggs, then fold in the flour.",
+     "min": 15
+    },
+    {
+     "text": "Bake in a lined tin at 170C.",
+     "min": 25
+    },
+    {
+     "text": "Cool completely, then cut into squares.",
+     "min": 30
+    },
+    {
+     "text": "Dust every second square with icing sugar like a chequered flag.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Jean Girard's iced caramel macchiato",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Caramel up to 1 week ahead",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "double espressos",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the sugar in a pan until amber, then carefully whisk in the cream, butter and a pinch of salt. Cool.",
+     "min": 15
+    },
+    {
+     "text": "Spoon caramel into four glasses, fill with ice and add cold milk.",
+     "min": 5
+    },
+    {
+     "text": "Brew the espressos and pour slowly over the back of a spoon so it layers.",
+     "min": 5
+    },
+    {
+     "text": "Drizzle with more caramel.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

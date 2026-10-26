@@ -1,0 +1,322 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Lou's Cafe fries",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Cut up to 4 hours ahead, keep in cold water then dry well",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "vegetable oil, for deep frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "fine salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into chips, rinse in cold water and dry thoroughly with a clean tea towel.",
+     "min": 10
+    },
+    {
+     "text": "Heat the oil in a sturdy deep pan to 140C and blanch the chips in batches for 5 minutes without browning.",
+     "min": 5
+    },
+    {
+     "text": "Drain and cool the chips for 15 minutes (this rest is part of the cook time).",
+     "min": 15
+    },
+    {
+     "text": "Raise the oil to 185C and fry in batches until crisp, drain, season with salt and serve in paper boats.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Clock tower cheese straws",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 12,
+   "make_ahead": "Up to 1 day, keep in an airtight tin",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.125,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the egg and brush half of it over the pastry sheet.",
+     "min": 5
+    },
+    {
+     "text": "Scatter over the cheddar, parmesan and cayenne, fold in half and press lightly.",
+     "min": 5
+    },
+    {
+     "text": "Cut into 8 tall strips, twist each one and place on a lined tray. Brush with the remaining egg.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 220C conventional until puffed and golden.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Lou's malt shop cheeseburger",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Shape the patties up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "American-style cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "dill pickles, sliced",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Divide the mince into four loose balls and slice the onion very thin.",
+     "min": 5
+    },
+    {
+     "text": "Heat a griddle until very hot. Put the beef balls on it, top with onion and press firmly into thin patties. Season with salt and pepper.",
+     "min": 10
+    },
+    {
+     "text": "Cook 3 minutes, flip and cook a further 2 to 3 minutes until the centre reaches 75C. Lay the cheese on top to melt.",
+     "min": 5
+    },
+    {
+     "text": "Toast the buns and fill with the patties, pickles and mustard.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Enchantment Under the Sea cupcakes",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 18,
+   "make_ahead": "Bake up to 1 day ahead, ice on the day",
+   "ingredients": [
+    {
+     "q": 140,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 45,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "blue food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 10,
+     "u": "g",
+     "item": "sugar pearls",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "fish-shaped gummy sweets",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat about half the butter with the caster sugar until pale, then beat in the egg and vanilla.",
+     "min": 10
+    },
+    {
+     "text": "Fold in the flour and most of the milk. Divide among 8 cupcake cases.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 180C conventional until a skewer comes out clean, then cool completely.",
+     "min": 18
+    },
+    {
+     "text": "Beat the remaining butter with the icing sugar and a splash of milk until fluffy and tint blue.",
+     "min": 10
+    },
+    {
+     "text": "Pipe onto the cakes and top with sugar pearls and gummy fish. Serve two small cupcakes each.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Lou's Cafe two-straw chocolate malt",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cold full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "tbsp",
+     "item": "chocolate syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "tbsp",
+     "item": "malted milk powder, plus extra to sprinkle",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "whipped cream, to top",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the ice cream, milk, chocolate syrup and malted milk powder for 30 seconds, in two batches if needed, until thick but pourable.",
+     "min": 8
+    },
+    {
+     "text": "Pour into tall chilled glasses, top with whipped cream and a sprinkle of malted milk powder, and serve each with two straws.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

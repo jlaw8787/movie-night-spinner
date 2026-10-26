@@ -1,0 +1,201 @@
+{
+ "kind": "lib",
+ "films": [
+  {
+   "film": "Shrek 2 (2004)",
+   "slug": "shrek-2-2004"
+  },
+  {
+   "film": "Despicable Me (2010)",
+   "slug": "despicable-me-2010"
+  },
+  {
+   "film": "Wallace & Gromit: The Curse of the Were-Rabbit (2005)",
+   "slug": "wallace-gromit-the-curse-of-the-were-rabbit-2005"
+  },
+  {
+   "film": "Wall-E (2008)",
+   "slug": "wall-e-2008"
+  },
+  {
+   "film": "Harry Potter and the Philosopher's Stone (2001)",
+   "slug": "harry-potter-and-the-philosopher-s-stone-2001"
+  },
+  {
+   "film": "Harry Potter and the Chamber of Secrets (2002)",
+   "slug": "harry-potter-and-the-chamber-of-secrets-2002"
+  },
+  {
+   "film": "Harry Potter and the Prisoner of Azkaban (2004)",
+   "slug": "harry-potter-and-the-prisoner-of-azkaban-2004"
+  },
+  {
+   "film": "Harry Potter and the Goblet of Fire (2005)",
+   "slug": "harry-potter-and-the-goblet-of-fire-2005"
+  },
+  {
+   "film": "The Lord of the Rings: The Fellowship of the Ring (2001)",
+   "slug": "the-lord-of-the-rings-the-fellowship-of-the-ring-2001"
+  },
+  {
+   "film": "The Lord of the Rings: The Two Towers (2002)",
+   "slug": "the-lord-of-the-rings-the-two-towers-2002"
+  },
+  {
+   "film": "The Lord of the Rings: The Return of the King (2003)",
+   "slug": "the-lord-of-the-rings-the-return-of-the-king-2003"
+  },
+  {
+   "film": "Pirates of the Caribbean: The Curse of the Black Pearl (2003)",
+   "slug": "pirates-of-the-caribbean-the-curse-of-the-black-pearl-2003"
+  },
+  {
+   "film": "The Dark Knight (2008)",
+   "slug": "the-dark-knight-2008"
+  },
+  {
+   "film": "Batman Begins (2005)",
+   "slug": "batman-begins-2005"
+  },
+  {
+   "film": "Black Panther (2018)",
+   "slug": "black-panther-2018"
+  },
+  {
+   "film": "Guardians of the Galaxy (2014)",
+   "slug": "guardians-of-the-galaxy-2014"
+  },
+  {
+   "film": "Thor: Ragnarok (2017)",
+   "slug": "thor-ragnarok-2017"
+  },
+  {
+   "film": "Deadpool (2016)",
+   "slug": "deadpool-2016"
+  },
+  {
+   "film": "Logan (2017)",
+   "slug": "logan-2017"
+  },
+  {
+   "film": "Wonder Woman (2017)",
+   "slug": "wonder-woman-2017"
+  },
+  {
+   "film": "Avengers: Endgame (2019)",
+   "slug": "avengers-endgame-2019"
+  },
+  {
+   "film": "Ant-Man (2015)",
+   "slug": "ant-man-2015"
+  },
+  {
+   "film": "The Sapphires (2012)",
+   "slug": "the-sapphires-2012"
+  },
+  {
+   "film": "Animal Kingdom (2010)",
+   "slug": "animal-kingdom-2010"
+  },
+  {
+   "film": "Wolf Creek (2005)",
+   "slug": "wolf-creek-2005"
+  },
+  {
+   "film": "Lion (2016)",
+   "slug": "lion-2016"
+  },
+  {
+   "film": "Australia (2008)",
+   "slug": "australia-2008"
+  },
+  {
+   "film": "Moulin Rouge! (2001)",
+   "slug": "moulin-rouge-2001"
+  },
+  {
+   "film": "The Wog Boy (2000)",
+   "slug": "the-wog-boy-2000"
+  },
+  {
+   "film": "Kenny (2006)",
+   "slug": "kenny-2006"
+  },
+  {
+   "film": "Red Dog (2011)",
+   "slug": "red-dog-2011"
+  },
+  {
+   "film": "Two Hands (1999)",
+   "slug": "two-hands-1999"
+  },
+  {
+   "film": "Django Unchained (2012)",
+   "slug": "django-unchained-2012"
+  },
+  {
+   "film": "True Grit (2010)",
+   "slug": "true-grit-2010"
+  },
+  {
+   "film": "The Good, the Bad and the Ugly (1966)",
+   "slug": "the-good-the-bad-and-the-ugly-1966"
+  },
+  {
+   "film": "Butch Cassidy and the Sundance Kid (1969)",
+   "slug": "butch-cassidy-and-the-sundance-kid-1969"
+  },
+  {
+   "film": "Encino Man (1992)",
+   "slug": "encino-man-1992"
+  },
+  {
+   "film": "Jingle All the Way (1996)",
+   "slug": "jingle-all-the-way-1996"
+  },
+  {
+   "film": "Miracle on 34th Street (1947)",
+   "slug": "miracle-on-34th-street-1947"
+  },
+  {
+   "film": "The Polar Express (2004)",
+   "slug": "the-polar-express-2004"
+  },
+  {
+   "film": "How the Grinch Stole Christmas (2000)",
+   "slug": "how-the-grinch-stole-christmas-2000"
+  },
+  {
+   "film": "The Nightmare Before Christmas (1993)",
+   "slug": "the-nightmare-before-christmas-1993"
+  },
+  {
+   "film": "Bad Santa (2003)",
+   "slug": "bad-santa-2003"
+  },
+  {
+   "film": "Mamma Mia! (2008)",
+   "slug": "mamma-mia-2008"
+  },
+  {
+   "film": "The Greatest Showman (2017)",
+   "slug": "the-greatest-showman-2017"
+  },
+  {
+   "film": "La La Land (2016)",
+   "slug": "la-la-land-2016"
+  },
+  {
+   "film": "Hairspray (2007)",
+   "slug": "hairspray-2007"
+  },
+  {
+   "film": "Chicago (2002)",
+   "slug": "chicago-2002"
+  },
+  {
+   "film": "Nacho Libre (2006)",
+   "slug": "nacho-libre-2006"
+  }
+ ]
+}

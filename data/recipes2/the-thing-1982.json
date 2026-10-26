@@ -1,0 +1,302 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Outpost 31 rec room nachos",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "corn chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "black beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "jalapenos, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "salsa",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the corn chips over a large oven tray",
+     "min": 2
+    },
+    {
+     "text": "Scatter over the beans, cheddar and jalapenos",
+     "min": 5
+    },
+    {
+     "text": "Bake at 200C until the cheese melts",
+     "min": 8
+    },
+    {
+     "text": "Top with sour cream and salsa and serve straight from the tray",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Hot buttered toast",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices thick white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "salted butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the bread until deep golden",
+     "min": 5
+    },
+    {
+     "text": "Spread each slice right away with butter to the crusts so it melts in",
+     "min": 2
+    },
+    {
+     "text": "Cut into soldiers and pile on a warm plate",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Antarctic base chilli",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 165,
+   "make_ahead": "Better the next day, keeps 3 days",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, in chunks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chipotle in adobo",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "kidney beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "cornbread mix",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the beef and brown in batches in oil",
+     "min": 15
+    },
+    {
+     "text": "Soften the onions and garlic",
+     "min": 8
+    },
+    {
+     "text": "Add the chipotle, cumin, tomatoes, beans and beef",
+     "min": 5
+    },
+    {
+     "text": "Cover and braise at 160C",
+     "min": 150
+    },
+    {
+     "text": "Bake the cornbread as the packet says and serve alongside",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Petri dish jelly",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 255,
+   "make_ahead": "Make a day ahead",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "gelatine leaves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 425,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the gelatine leaves in cold water",
+     "min": 5
+    },
+    {
+     "text": "Blitz most of the raspberries with the sugar and water, warm until steaming and strain",
+     "min": 10
+    },
+    {
+     "text": "Squeeze the gelatine dry and stir into the hot puree with the lemon juice",
+     "min": 3
+    },
+    {
+     "text": "Pour into four shallow glass dishes and set in the fridge",
+     "min": 240
+    },
+    {
+     "text": "Top with the remaining fresh raspberries",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "MacReady's Rob Roy",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "blended Scotch",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "sweet red vermouth",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dashes aromatic bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cocktail cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill four coupe or rocks glasses",
+     "min": 2
+    },
+    {
+     "text": "Stir the Scotch, vermouth and bitters with plenty of ice in a jug (do it in two rounds)",
+     "min": 3
+    },
+    {
+     "text": "Strain into the glasses and drop in a cherry. Serve over one big ice block for anyone who likes it on the rocks",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,380 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Reno lounge stuffed mushrooms",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 9,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 20,
+     "u": "",
+     "item": "button mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "clove garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Remove the stems from the mushrooms and chop the stems.",
+     "min": 5
+    },
+    {
+     "text": "Fry the stems with diced bacon and crushed garlic.",
+     "min": 6
+    },
+    {
+     "text": "Mix with breadcrumbs and parmesan.",
+     "min": 4
+    },
+    {
+     "text": "Fill the caps.",
+     "min": 4
+    },
+    {
+     "text": "Bake at 200C until golden.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Choir practice cheese scones",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 7,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 450,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, plus extra to serve",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "vintage cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the butter into the flour, then stir in cheddar, chives and cayenne.",
+     "min": 8
+    },
+    {
+     "text": "Mix in the milk to a soft dough.",
+     "min": 5
+    },
+    {
+     "text": "Pat out and cut into rounds.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 220C until risen and golden.",
+     "min": 12
+    },
+    {
+     "text": "Serve warm with butter.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Mary Clarence's convent stew, spiced up",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 185,
+   "make_ahead": "Better the next day, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried thyme",
+     "aisle": "Spices"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "can tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in batches.",
+     "min": 10
+    },
+    {
+     "text": "Add the onions, garlic, paprika and thyme and cook until soft.",
+     "min": 10
+    },
+    {
+     "text": "Pour in the stock, tomatoes and hot sauce.",
+     "min": 5
+    },
+    {
+     "text": "Braise covered at 150C.",
+     "min": 120
+    },
+    {
+     "text": "Chop the potatoes and carrots.",
+     "min": 10
+    },
+    {
+     "text": "Add the potatoes and carrots and braise until tender.",
+     "min": 60
+    }
+   ]
+  },
+  {
+   "n": "St Katherine's bread and butter pudding",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 55,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "sultanas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 70,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground nutmeg",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter the bread, cut into triangles and layer in a dish with sultanas.",
+     "min": 8
+    },
+    {
+     "text": "Whisk the eggs, milk, cream, sugar and vanilla and pour over.",
+     "min": 5
+    },
+    {
+     "text": "Soak for 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Sprinkle with nutmeg.",
+     "min": 2
+    },
+    {
+     "text": "Bake at 170C until puffed and golden.",
+     "min": 40
+    }
+   ]
+  },
+  {
+   "n": "Choir practice honey ginger lemon tea",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "cm knob of ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the ginger.",
+     "min": 3
+    },
+    {
+     "text": "Simmer the ginger in water with the cinnamon stick.",
+     "min": 10
+    },
+    {
+     "text": "Turn off the heat, add the tea bags and steep, then remove the bags.",
+     "min": 4
+    },
+    {
+     "text": "Stir in the lemon juice and honey.",
+     "min": 2
+    },
+    {
+     "text": "Pour into white cups and float a thin lemon slice in each.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

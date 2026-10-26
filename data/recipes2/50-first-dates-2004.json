@@ -1,0 +1,318 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Hukilau Café waffle houses",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Batter up to 1 day, cook waffles fresh",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, for the iron and serving",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the flour, baking powder, eggs, buttermilk and melted butter into a batter.",
+     "min": 8
+    },
+    {
+     "text": "Cook in a hot waffle iron until golden, in batches.",
+     "min": 20
+    },
+    {
+     "text": "Cut into squares and stack into little houses, then drizzle with maple syrup.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Hawaiian poke cups",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Best made fresh, keep chilled up to 2 hours",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sashimi tuna",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "sushi rice, uncooked",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rinse and cook the sushi rice, then cool.",
+     "min": 20
+    },
+    {
+     "text": "Cube the tuna and toss with soy sauce, sesame oil and sliced spring onion.",
+     "min": 10
+    },
+    {
+     "text": "Spoon the rice into small cups and top with the tuna. Serve chilled.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Loco moco",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "Gravy up to 2 days, cook patties fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice, uncooked",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shape the mince into 4 patties and season.",
+     "min": 8
+    },
+    {
+     "text": "Cook the rice.",
+     "min": 15
+    },
+    {
+     "text": "Sear the patties until cooked through and set aside.",
+     "min": 10
+    },
+    {
+     "text": "Soften the sliced onion in the pan, stir in the flour and stock and simmer.",
+     "min": 17
+    },
+    {
+     "text": "Fry the eggs. Serve the patties on rice, topped with a fried egg and the gravy.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Coconut haupia",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 190,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "shredded coconut",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the shredded coconut in a dry pan.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the coconut milk, sugar and cornflour over low heat until very thick.",
+     "min": 10
+    },
+    {
+     "text": "Pour into a lined tray and chill for the setting time until firm.",
+     "min": 180
+    },
+    {
+     "text": "Cut into squares and scatter with the toasted coconut.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Sue's Hukilau pineapple ginger cooler",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Up to 1 day, keep chilled without the soda",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "fresh pineapple chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "ginger, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 330,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the pineapple, ginger, lime juice, mint and water until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Strain through a sieve into a jug, pressing on the pulp.",
+     "min": 5
+    },
+    {
+     "text": "Fill 4 glasses with ice, divide the juice between them, and top each with a splash of soda water and a pineapple wedge.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

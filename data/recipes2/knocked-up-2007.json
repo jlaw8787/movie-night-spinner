@@ -1,0 +1,438 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Fantasy baseball draft nachos",
+   "course": "s",
+   "prep_min": 13,
+   "cook_min": 16,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "chorizo sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin refried beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ground cumin, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "corn chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "avocados",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar pickled jalapeños",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the diced chorizo until crisp.",
+     "min": 6
+    },
+    {
+     "text": "Warm the refried beans with the cumin.",
+     "min": 3
+    },
+    {
+     "text": "Spread the corn chips on a big tray, spoon over the beans and chorizo and cover with the grated cheddar.",
+     "min": 4
+    },
+    {
+     "text": "Bake at 200C for 10 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Mash the avocados with lime, salt and coriander.",
+     "min": 3
+    },
+    {
+     "text": "Top the nachos with guacamole, the sour cream, pickled jalapeños and spring onion.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Craving pickle-brined popcorn chicken",
+   "course": "s",
+   "prep_min": 8,
+   "cook_min": 124,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar dill pickles",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "paprika, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "dried dill, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the chicken thigh into bite-sized pieces and soak in the dill pickle brine for 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Drain, dip in the beaten egg with the buttermilk, then the plain flour mixed with the paprika and salt.",
+     "min": 4
+    },
+    {
+     "text": "Fry at 175C for 4 to 5 minutes until crisp and toss with dried dill and salt.",
+     "min": 4
+    },
+    {
+     "text": "Mix the sour cream, the mayo, the chopped pickles and dill for dipping.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "LA Thai green chicken curry",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 26,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "cup",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "green curry paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "makrut lime leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "fish sauce, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "palm sugar, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "snake beans",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch Thai basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the jasmine rice.",
+     "min": 8
+    },
+    {
+     "text": "Fry the green curry paste in the thick top of the coconut milk until fragrant.",
+     "min": 6
+    },
+    {
+     "text": "Add the sliced chicken thigh and stir 3 minutes.",
+     "min": 3
+    },
+    {
+     "text": "Pour in the rest of the coconut milk, the stock, the torn makrut lime leaves, the fish sauce and the palm sugar.",
+     "min": 3
+    },
+    {
+     "text": "Simmer 12 minutes, adding the snake beans for the last 5.",
+     "min": 12
+    },
+    {
+     "text": "Stir in Thai basil and serve with rice and sliced chilli.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Pastel lemon and raspberry cupcakes",
+   "course": "w",
+   "prep_min": 12,
+   "cook_min": 138,
+   "make_ahead": "Up to 1 week, keep frozen",
+   "ingredients": [
+    {
+     "q": 325,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "raspberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pink and blue food colouring, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "freeze-dried raspberries, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "cupcake cases",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 175C.",
+     "min": 3
+    },
+    {
+     "text": "Beat the butter and the caster sugar with lemon zest, add the eggs, then the self-raising flour and the milk.",
+     "min": 3
+    },
+    {
+     "text": "Bake in the cases for 18 minutes and cool.",
+     "min": 18
+    },
+    {
+     "text": "Fill each centre with raspberry jam.",
+     "min": 3
+    },
+    {
+     "text": "Beat the butter with the icing sugar and the milk, split in two and tint pale pink and pale blue.",
+     "min": 3
+    },
+    {
+     "text": "Pipe on and crumble over freeze-dried raspberries.",
+     "min": 120
+    }
+   ]
+  },
+  {
+   "n": "Club door knock-back mocktail",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "grape juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill the glasses with ice, add the grape juice and a squeeze of lime to each and top with soda water and mint.",
+     "min": 5
+    },
+    {
+     "text": "Make it just before the film starts and keep the jug cold.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

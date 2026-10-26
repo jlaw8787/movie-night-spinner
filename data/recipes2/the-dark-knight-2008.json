@@ -1,0 +1,392 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Penthouse fundraiser canapés",
+   "course": "s",
+   "prep_min": 35,
+   "cook_min": 10,
+   "make_ahead": "Best made fresh, assemble just before serving",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "eye fillet",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette, sliced",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "horseradish cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "blinis",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "creme fraiche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chives, snipped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Sear the eye fillet in a hot oiled pan to rare, then rest and slice thin.",
+     "min": 15
+    },
+    {
+     "text": "Toast the baguette slices.",
+     "min": 5
+    },
+    {
+     "text": "Top the toast with beef and horseradish cream.",
+     "min": 5
+    },
+    {
+     "text": "Top the blinis with creme fraiche, smoked salmon and chives.",
+     "min": 8
+    },
+    {
+     "text": "Serve on black trays.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Hong Kong night market bites",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "pork belly, cubed",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "hoisin sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "five spice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cucumber, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "rice vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "toothpicks",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Toss the pork in the hoisin, honey and five spice.",
+     "min": 8
+    },
+    {
+     "text": "Roast, glazing twice, until sticky and cooked through.",
+     "min": 40
+    },
+    {
+     "text": "Quick pickle the cucumber in the vinegar.",
+     "min": 10
+    },
+    {
+     "text": "Serve the pork on toothpicks with the cucumber.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Joined-tables salmon with caper butter",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Best served hot",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "baby potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "salmon fillets, skin on",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rocket",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, shaved",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes until tender, drain and crush with oil and salt.",
+     "min": 17
+    },
+    {
+     "text": "Season the salmon and cook skin side down in a hot oiled pan, then flip.",
+     "min": 7
+    },
+    {
+     "text": "Wipe the pan, melt the butter until it foams brown, then add the capers, lemon juice and parsley.",
+     "min": 4
+    },
+    {
+     "text": "Toss the rocket with parmesan, oil and lemon.",
+     "min": 3
+    },
+    {
+     "text": "Plate the salmon on the potatoes and spoon over the butter.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Penthouse fundraiser lemon tart",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 90,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet of sweet shortcrust pastry, for a 23cm tart",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C. Line a 23cm tart tin and blind bake.",
+     "min": 25
+    },
+    {
+     "text": "Whisk the eggs, sugar, lemon juice, zest and cream.",
+     "min": 5
+    },
+    {
+     "text": "Pour in and bake at 150C until just set.",
+     "min": 30
+    },
+    {
+     "text": "Chill the tart well.",
+     "min": 30
+    },
+    {
+     "text": "Dust with icing sugar to serve.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Alfred's smoky Scotch and ginger sour",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Syrup up to 1 week, chilled",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "piece of fresh ginger, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "blended Scotch whisky",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "ml",
+     "item": "smoky Islay whisky",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pieces candied ginger",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the honey, water and ginger, then cool and strain.",
+     "min": 8
+    },
+    {
+     "text": "For each drink shake Scotch, lemon juice and syrup hard over ice.",
+     "min": 4
+    },
+    {
+     "text": "Strain over a large ice cube in a tumbler.",
+     "min": 2
+    },
+    {
+     "text": "Float the smoky whisky on top and garnish with candied ginger.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

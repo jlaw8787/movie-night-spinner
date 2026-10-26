@@ -1,0 +1,386 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Grandmaster's party platter",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "Up to 3 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "watermelon, cubed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "kiwifruit, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "pineapple, cubed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "dragonfruit, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "bamboo skewers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the fruit into chunks.",
+     "min": 12
+    },
+    {
+     "text": "Thread onto skewers in a rainbow.",
+     "min": 10
+    },
+    {
+     "text": "Drizzle with lime juice, honey and chilli.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Korg's Kiwi sausage rolls",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "Up to 1 day, reheat to crisp",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pork sausage mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "mixed dried herbs",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets of puff pastry",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "tomato sauce, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C and line a tray.",
+     "min": 3
+    },
+    {
+     "text": "Mix the sausage mince with the onion, carrot and herbs.",
+     "min": 5
+    },
+    {
+     "text": "Roll in the pastry sheets, egg wash and sprinkle with sesame.",
+     "min": 10
+    },
+    {
+     "text": "Cut into 16 pieces.",
+     "min": 7
+    },
+    {
+     "text": "Bake until golden and serve warm with tomato sauce.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Contest of Champions roast",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 300,
+   "make_ahead": "Can rest, covered, for 30 minutes",
+   "ingredients": [
+    {
+     "q": 1.8,
+     "u": "kg",
+     "item": "lamb shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cloves of garlic, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "fresh rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zest and juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, peeled and halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful of mint, chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut slits in the lamb and push in the garlic, rosemary and lemon.",
+     "min": 15
+    },
+    {
+     "text": "Roast covered at 150C until the lamb pulls apart.",
+     "min": 240
+    },
+    {
+     "text": "Roast the potatoes in oil alongside for the last hour.",
+     "min": 60
+    },
+    {
+     "text": "Mix the yoghurt with the mint.",
+     "min": 3
+    },
+    {
+     "text": "Rest the lamb and pull apart to serve.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Korg's Kiwi afghan biscuits",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 14,
+   "make_ahead": "Up to 4 days, airtight",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "cornflakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cocoa, for the icing",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "walnut halves",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C and line a tray.",
+     "min": 3
+    },
+    {
+     "text": "Beat the butter and sugar, then mix in the flour, cocoa and cornflakes.",
+     "min": 8
+    },
+    {
+     "text": "Spoon 16 mounds onto the tray and bake.",
+     "min": 14
+    },
+    {
+     "text": "Cool, then mix the icing sugar and cocoa with a little water.",
+     "min": 6
+    },
+    {
+     "text": "Ice each biscuit and top with half a walnut.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Never-empty mug of honey lager punch",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "Syrup up to 1 week, chilled",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "piece of fresh ginger, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "bottles cold lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, cut into wheels",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the honey, water and ginger, then cool and strain.",
+     "min": 10
+    },
+    {
+     "text": "Chill a large jug.",
+     "min": 60
+    },
+    {
+     "text": "Mix the syrup, lemon juice and apple juice in the jug.",
+     "min": 2
+    },
+    {
+     "text": "Slowly pour in the lager and stir gently once.",
+     "min": 2
+    },
+    {
+     "text": "Pour into big mugs with a lemon wheel and keep a second jug ready.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

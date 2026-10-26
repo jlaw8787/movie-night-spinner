@@ -1,0 +1,324 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Harbour prawns with lemon",
+   "course": "s",
+   "prep_min": 7,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "cooked king prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "horseradish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pile the cooked king prawns on crushed ice with lemon wedges.",
+     "min": 3
+    },
+    {
+     "text": "Mix the tomato sauce with the horseradish and a squeeze of lemon.",
+     "min": 2
+    },
+    {
+     "text": "Serve with buttered white bread, the way you would on the harbour.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Metalstorm crew catering snags",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 39,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "thick beef sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "balsamic vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "can lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "mustard, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "tomato sauce, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slowly cook the sliced onions in the butter for 20 minutes until soft and golden.",
+     "min": 20
+    },
+    {
+     "text": "Add the brown sugar, the balsamic and the beer and simmer 5 minutes until jammy.",
+     "min": 5
+    },
+    {
+     "text": "Grill the thick beef sausages on a medium barbecue for 12 to 15 minutes, turning, until browned and cooked through.",
+     "min": 14
+    },
+    {
+     "text": "Butter the slices of white bread, wrap each round a sausage and top with the onion relish, mustard and tomato sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Jean-Claude's Bondi fish and chips",
+   "course": "m",
+   "prep_min": 5,
+   "cook_min": 13,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "flathead fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "dill pickles",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into chips and fry at 150C for 6 minutes, then 190C for 3 minutes.",
+     "min": 9
+    },
+    {
+     "text": "Whisk the flour with the cold lager into a batter, dip the flathead fillets and fry at 180C for 4 minutes.",
+     "min": 4
+    },
+    {
+     "text": "Mix the mayonnaise with chopped pickles for tartare and serve with lemon.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Pavlova",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 90,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg whites to stiff peaks, then add the caster sugar a spoon at a time until glossy.",
+     "min": 2
+    },
+    {
+     "text": "Fold in the cornflour and the vinegar, shape into a round and bake at 120C for 90 minutes, then cool in the oven.",
+     "min": 90
+    },
+    {
+     "text": "Top with the whipped cream, the passionfruit and the strawberries.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Colt Seavers stunt iced coffee",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 50,
+     "u": "g",
+     "item": "ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the strong coffee from the ground coffee and chill.",
+     "min": 3
+    },
+    {
+     "text": "Pour into tall glasses with ice and the cold milk, then top each with a scoop of vanilla ice cream and a spoon of whipped cream.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

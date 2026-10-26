@@ -1,0 +1,354 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Wensleydale cheese and chutney toasts",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices thick white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Wensleydale cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "apple chutney",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green apple",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the slices of thick white bread on one side under the grill.",
+     "min": 4
+    },
+    {
+     "text": "Turn and spread the untoasted sides lightly with butter.",
+     "min": 3
+    },
+    {
+     "text": "Crumble over the Wensleydale mixed with the grated cheddar, pressing it to the edges.",
+     "min": 3
+    },
+    {
+     "text": "Grill 3 to 4 minutes until bubbling and golden in spots.",
+     "min": 4
+    },
+    {
+     "text": "Top each with a spoon of apple chutney and a few thin slices of green apple.",
+     "min": 3
+    },
+    {
+     "text": "Cut into triangles.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Breakfast machine French toast fingers",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 4,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "vanilla extract, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "slices thick white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ground cinnamon, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "strawberry jam",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the eggs with the milk, the caster sugar and the vanilla.",
+     "min": 2
+    },
+    {
+     "text": "Cut the thick slices of white bread into fingers.",
+     "min": 3
+    },
+    {
+     "text": "Dip each finger in the egg for a few seconds a side.",
+     "min": 3
+    },
+    {
+     "text": "Fry in batches in the butter over medium heat for 2 minutes a side until golden.",
+     "min": 4
+    },
+    {
+     "text": "Toss straight away in the caster sugar mixed with the cinnamon.",
+     "min": 2
+    },
+    {
+     "text": "Serve warm with the strawberry jam.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Bangers and mash",
+   "course": "m",
+   "prep_min": 5,
+   "cook_min": 31,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "pork sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the pork sausages slowly in a pan for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Boil the potatoes and mash with the butter and the milk.",
+     "min": 10
+    },
+    {
+     "text": "Fry the sliced onions in the sausage pan until soft, stir in the flour and the beef stock and simmer until thick.",
+     "min": 6
+    },
+    {
+     "text": "Serve the sausages on mash with gravy.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Jam roly-poly with custard",
+   "course": "w",
+   "prep_min": 7,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 650,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "strawberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "custard powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the cold butter into the self-raising flour, add the milk to make a soft dough and roll into a rectangle.",
+     "min": 4
+    },
+    {
+     "text": "Spread with the strawberry jam, roll up and bake on a lined tray at 190C for 35 minutes.",
+     "min": 35
+    },
+    {
+     "text": "Serve in slices with the custard made from custard powder and milk.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Gromit's malted hot chocolate",
+   "course": "d",
+   "prep_min": 16,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "milk chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk in a saucepan until steaming.",
+     "min": 3
+    },
+    {
+     "text": "Whisk in the chopped milk chocolate, the cocoa, the malted milk powder and the sugar until smooth and frothy, about 3 minutes.",
+     "min": 3
+    },
+    {
+     "text": "Do not let it boil.",
+     "min": 3
+    },
+    {
+     "text": "Whip the cream to soft peaks.",
+     "min": 3
+    },
+    {
+     "text": "Pour into big mugs, spoon the cream on top and grate over a little more chocolate.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

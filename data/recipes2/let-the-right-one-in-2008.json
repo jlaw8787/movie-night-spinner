@@ -1,0 +1,410 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Swedish meatballs",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 50,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground allspice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "lingonberry jam",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the breadcrumbs in the milk, then mix with both minces, the onion, allspice and egg",
+     "min": 12
+    },
+    {
+     "text": "Roll small",
+     "min": 10
+    },
+    {
+     "text": "Brown in butter",
+     "min": 10
+    },
+    {
+     "text": "Simmer in the stock and cream",
+     "min": 10
+    },
+    {
+     "text": "Serve with lingonberry jam",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Swedish crispbread",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "rye crispbreads",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, cold",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "aged hard cheese, shaved",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "white pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "dill",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shave the cheese and slice the cucumber paper thin",
+     "min": 8
+    },
+    {
+     "text": "Spread the crispbreads with cold butter",
+     "min": 3
+    },
+    {
+     "text": "Top with cheese and cucumber, finish with white pepper and dill",
+     "min": 3
+    },
+    {
+     "text": "Build just before serving so they stay crisp",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Toast Skagen",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "cooked prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "creme fraiche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "dill, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "horseradish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the prawns",
+     "min": 7
+    },
+    {
+     "text": "Fold with the mayo, creme fraiche, dill, lemon juice and horseradish",
+     "min": 5
+    },
+    {
+     "text": "Fry the bread in butter until golden",
+     "min": 8
+    },
+    {
+     "text": "Pile the prawns on top and add a little roe if you have it",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Jungle gym cinnamon buns",
+   "course": "w",
+   "prep_min": 45,
+   "cook_min": 100,
+   "make_ahead": "Dough can prove overnight in the fridge",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cardamom",
+     "aisle": "Spices"
+    },
+    {
+     "q": 155,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "warm milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 175,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "pearl sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, cardamom, 75g of the sugar, warm milk and 75g of the butter into a dough and knead",
+     "min": 15
+    },
+    {
+     "text": "Prove until doubled",
+     "min": 60
+    },
+    {
+     "text": "Roll out and spread with the remaining butter, sugar and cinnamon",
+     "min": 10
+    },
+    {
+     "text": "Cut into strips and knot",
+     "min": 15
+    },
+    {
+     "text": "Prove again",
+     "min": 30
+    },
+    {
+     "text": "Brush with egg, add pearl sugar and bake at 220C",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Morse code blackcurrant glögg",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "blackcurrant juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "cardamom pods, crushed",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "strips orange peel",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "raisins",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "blanched almonds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put the juices, cinnamon, cardamom, cloves, peel and sugar in a saucepan",
+     "min": 5
+    },
+    {
+     "text": "Heat gently to just below a simmer and hold",
+     "min": 15
+    },
+    {
+     "text": "Strain",
+     "min": 2
+    },
+    {
+     "text": "Put raisins and almonds in four heatproof glasses and pour over the hot glogg",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

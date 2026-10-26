@@ -1,0 +1,324 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Rinkside soft pretzels",
+   "course": "s",
+   "prep_min": 6,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheese sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the pizza dough into ropes and twist into pretzels.",
+     "min": 3
+    },
+    {
+     "text": "Dip each in the water simmering with the bicarb soda for 20 seconds, sprinkle with salt flakes and bake at 220C for 12 minutes.",
+     "min": 12
+    },
+    {
+     "text": "Brush with the melted butter and serve with mustard and the cheese sauce.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Fire and Ice prawns",
+   "course": "s",
+   "prep_min": 7,
+   "cook_min": 4,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the peeled green prawns with the olive oil, the garlic cloves, the chopped red chilli and salt.",
+     "min": 4
+    },
+    {
+     "text": "Grill on high for 2 minutes a side.",
+     "min": 4
+    },
+    {
+     "text": "Pile over a platter of crushed ice and serve with lime wedges.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Championship chicken parmigiana",
+   "course": "m",
+   "prep_min": 9,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "chicken breasts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "frozen chips",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag salad leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Halve the large chicken breasts into thin fillets.",
+     "min": 3
+    },
+    {
+     "text": "Crumb in flour, the eggs and the breadcrumbs and pan-fry until golden.",
+     "min": 4
+    },
+    {
+     "text": "Top with the passata, the ham and the grated mozzarella and bake at 200C for 12 minutes.",
+     "min": 12
+    },
+    {
+     "text": "Serve with chips and salad.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Iron Lotus snowballs",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 180,
+   "make_ahead": "Up to 1 week, keep frozen",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "coconut oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Scoop the vanilla ice cream into balls and freeze for 1 hour.",
+     "min": 60
+    },
+    {
+     "text": "Melt the white chocolate with the coconut oil, dip each ball and roll straight away in the desiccated coconut.",
+     "min": 3
+    },
+    {
+     "text": "Freeze until serving.",
+     "min": 120
+    }
+   ]
+  },
+  {
+   "n": "Rinkside peppermint hot chocolate",
+   "course": "d",
+   "prep_min": 12,
+   "cook_min": 4,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "peppermint essence, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "candy canes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk in a saucepan until steaming.",
+     "min": 3
+    },
+    {
+     "text": "Whisk in the chopped dark chocolate, the cocoa and the sugar until smooth and thick, about 4 minutes without boiling.",
+     "min": 4
+    },
+    {
+     "text": "Stir in half a tsp peppermint essence.",
+     "min": 2
+    },
+    {
+     "text": "Whip the cream to soft peaks.",
+     "min": 3
+    },
+    {
+     "text": "Pour the chocolate into mugs, top with the cream and scatter with the crushed candy canes.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,402 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Tour bus breakfast tacos",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 3,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "chorizo",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small red chilli",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the potatoes and fry in oil until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Add the sliced chorizo and cook through.",
+     "min": 4
+    },
+    {
+     "text": "Scramble the eggs softly and fold through.",
+     "min": 4
+    },
+    {
+     "text": "Chop tomato, onion and chilli for a quick red salsa.",
+     "min": 4
+    },
+    {
+     "text": "Warm the tortillas, fill with the mix and cheddar and top with the salsa.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Corpus Christi shrimp cocktail",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 32,
+   "make_ahead": "Chill up to 4 hours",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "cooked prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cold tomato juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "avocados",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "white onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "box crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the prawns and dice the avocado and onion.",
+     "min": 10
+    },
+    {
+     "text": "Mix with tomato juice, lime juice, coriander and hot sauce.",
+     "min": 5
+    },
+    {
+     "text": "Chill for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Spoon into glasses with crackers on the side.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Los Dinos Tex-Mex cheese enchiladas",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 23,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the flour in oil, then stir in the chilli powder and cumin.",
+     "min": 5
+    },
+    {
+     "text": "Add the stock gradually and simmer until thick.",
+     "min": 10
+    },
+    {
+     "text": "Roll the tortillas around cheese and diced onion and lay in a dish.",
+     "min": 10
+    },
+    {
+     "text": "Pour over the gravy and scatter with more cheese.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 190C until bubbling.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Tres leches cake",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 740,
+   "make_ahead": "Make the day before, keep chilled",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 395,
+     "u": "g",
+     "item": "can sweetened condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "can evaporated milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the eggs with the sugar until thick and fold in the flour.",
+     "min": 12
+    },
+    {
+     "text": "Bake in a lined tin at 175C.",
+     "min": 25
+    },
+    {
+     "text": "Prick all over and pour over the condensed milk, evaporated milk and milk mixed together.",
+     "min": 5
+    },
+    {
+     "text": "Soak overnight in the fridge.",
+     "min": 720
+    },
+    {
+     "text": "Whip the cream and top the cake with cream and strawberries.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Astrodome watermelon agua fresca",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 58,
+   "make_ahead": "Up to 1 day chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "watermelon flesh",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the watermelon with lime juice, sugar and water until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Strain into a big jug.",
+     "min": 3
+    },
+    {
+     "text": "Chill for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Mix the salt with chilli powder and rim four tall glasses with lime and the chilli salt.",
+     "min": 3
+    },
+    {
+     "text": "Fill with crushed ice, pour in the agua fresca and top with torn mint.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

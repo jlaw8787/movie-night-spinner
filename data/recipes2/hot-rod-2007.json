@@ -1,0 +1,442 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Cool beans loaded black bean dip",
+   "course": "s",
+   "prep_min": 6,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ground cumin, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "smoked paprika, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "400g tins black beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fresh salsa",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jalapeño",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "corn chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the diced onion and the garlic cloves in oil for 5 minutes, add the cumin and the smoked paprika, then the drained tins black beans and the water.",
+     "min": 5
+    },
+    {
+     "text": "Simmer 5 minutes and mash roughly with lime juice and salt.",
+     "min": 5
+    },
+    {
+     "text": "Spread in a baking dish, cover with the grated cheddar and bake at 200C for 10 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Top with the salsa, the sour cream, sliced jalapeño and coriander.",
+     "min": 4
+    },
+    {
+     "text": "Serve with the corn chips.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Stunt crew chilli cheese dogs",
+   "course": "s",
+   "prep_min": 7,
+   "cook_min": 24,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "chilli powder, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ground cumin, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "frankfurts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "white onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "yellow mustard, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef mince with the diced onion.",
+     "min": 3
+    },
+    {
+     "text": "Add the chilli powder, the cumin, the tomato paste, the passata and the water and simmer 15 minutes until thick.",
+     "min": 15
+    },
+    {
+     "text": "Grill the frankfurts until blistered.",
+     "min": 8
+    },
+    {
+     "text": "Toast the hot dog buns, add the franks, spoon over the chilli and top with the grated cheddar.",
+     "min": 4
+    },
+    {
+     "text": "Grill 1 minute to melt, then finish with diced white onion and yellow mustard.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Public pool jump cheeseburgers",
+   "course": "m",
+   "prep_min": 11,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "tomato sauce, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "mustard, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar dill pickles",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sesame burger buns",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shape the beef mince into patties slightly wider than the buns and season well.",
+     "min": 3
+    },
+    {
+     "text": "Grill on a hot barbecue 4 minutes a side, adding the slices of American cheese each for the last minute.",
+     "min": 8
+    },
+    {
+     "text": "Mix the mayo, the tomato sauce, the mustard and the chopped dill pickles.",
+     "min": 4
+    },
+    {
+     "text": "Toast the sesame buns, spread with sauce, add shredded lettuce, the patty and sliced pickles.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Fifteen bus jump choc chip cookies",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "vanilla extract, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "bicarb soda, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "sea salt flakes, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C.",
+     "min": 3
+    },
+    {
+     "text": "Beat the soft butter with the brown sugar and the caster sugar, then the egg and the vanilla.",
+     "min": 3
+    },
+    {
+     "text": "Stir in the plain flour, half a tsp bicarb, a pinch of salt and the chopped dark chocolate.",
+     "min": 4
+    },
+    {
+     "text": "Roll into balls and bake on lined trays for 10 to 11 minutes until golden at the edges but soft in the middle.",
+     "min": 10
+    },
+    {
+     "text": "Sprinkle with flaky salt and cool on the trays.",
+     "min": 2
+    },
+    {
+     "text": "Line up in a row to serve.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Stunt day cherry lime soda",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "frozen pitted cherries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "crushed ice, as needed",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the pitted frozen cherries with the sugar and the water for 10 minutes, mashing them.",
+     "min": 10
+    },
+    {
+     "text": "Strain and cool.",
+     "min": 3
+    },
+    {
+     "text": "Fill the tall glasses with crushed ice.",
+     "min": 3
+    },
+    {
+     "text": "Add the cherry syrup and the lime juice to each and top with the cold soda water.",
+     "min": 2
+    },
+    {
+     "text": "Stir and garnish with a cherry and a lime wedge.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

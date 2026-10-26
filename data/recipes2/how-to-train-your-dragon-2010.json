@@ -1,0 +1,304 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Toothless's fish bites",
+   "course": "s",
+   "prep_min": 7,
+   "cook_min": 3,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "white fish fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the white fish fillets into strips.",
+     "min": 3
+    },
+    {
+     "text": "Dip in the flour, the beaten eggs and the panko, and fry at 180C for 3 minutes until golden.",
+     "min": 3
+    },
+    {
+     "text": "Mix the Greek yoghurt with lemon and chopped dill and serve with lemon wedges.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Gobber's smoked sausages",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "smoked sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "wholegrain mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the thick smoked sausages over high heat for 8 minutes, turning, until charred and split.",
+     "min": 8
+    },
+    {
+     "text": "Cut into chunks and serve on a board with the wholegrain mustard for dipping.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Viking lamb stew",
+   "course": "m",
+   "prep_min": 8,
+   "cook_min": 120,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "lamb shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "parsnips",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pearl barley",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.25,
+     "u": "l",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the diced lamb shoulder, then add the onion, the carrots and the parsnips in chunks, the pearl barley, thyme and the beef stock.",
+     "min": 6
+    },
+    {
+     "text": "Cover and simmer 2 hours until the lamb is tender and the barley is plump.",
+     "min": 120
+    },
+    {
+     "text": "Serve in big bowls with bread.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Honey cakes",
+   "course": "w",
+   "prep_min": 8,
+   "cook_min": 18,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 170,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with the honey, add the eggs, then fold in the self-raising flour, the cinnamon and the milk.",
+     "min": 5
+    },
+    {
+     "text": "Spoon into muffin cases and bake at 175C for 18 minutes.",
+     "min": 18
+    },
+    {
+     "text": "Brush with the warm honey while hot.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Berk hot spiced berry punch",
+   "course": "d",
+   "prep_min": 12,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen mixed berries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "star anise",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "punnet blueberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put the frozen mixed berries, the cloudy apple juice, the cinnamon stick, the star anise, the strips of orange peel and the honey in a saucepan.",
+     "min": 5
+    },
+    {
+     "text": "Bring to a gentle simmer and cook 10 minutes, pressing the berries.",
+     "min": 10
+    },
+    {
+     "text": "Strain through a sieve into a jug.",
+     "min": 3
+    },
+    {
+     "text": "Pour into mugs and drop in a few fresh blueberries.",
+     "min": 2
+    },
+    {
+     "text": "Serve hot, or chill and pour over ice in summer.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

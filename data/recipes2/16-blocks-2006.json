@@ -1,0 +1,532 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Salt and vinegar pork crackling",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 745,
+   "make_ahead": "Up to 1 day, re-crisp in a hot oven",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "boneless pork belly, skin on",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "malt vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "flaky sea salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "malt vinegar, extra splash",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar pickled onions",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "hot English mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Score the skin, pat dry and refrigerate uncovered overnight to dry it out.",
+     "min": 600
+    },
+    {
+     "text": "Rub the skin with vinegar, then salt.",
+     "min": 5
+    },
+    {
+     "text": "Roast skin up at 160C.",
+     "min": 90
+    },
+    {
+     "text": "Raise to 240C and roast until puffed and crackling.",
+     "min": 25
+    },
+    {
+     "text": "Rest, then cut into bite-sized pieces.",
+     "min": 10
+    },
+    {
+     "text": "Sprinkle with flaky salt mixed with a splash of malt vinegar. Serve with pickled onions and hot mustard.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Chinatown dumplings",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 24,
+     "u": "",
+     "item": "frozen pork dumplings",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "black vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "ginger, cut into fine matchsticks",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the soy, black vinegar and ginger for dipping.",
+     "min": 5
+    },
+    {
+     "text": "Fry the dumplings flat side down in oil.",
+     "min": 2
+    },
+    {
+     "text": "Add the water, cover and steam.",
+     "min": 4
+    },
+    {
+     "text": "Uncover and fry again until crisp underneath.",
+     "min": 4
+    },
+    {
+     "text": "Serve straight from the pan with the dip.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Chopped cheese",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "hero rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "iceberg lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the onion on a hot griddle until soft.",
+     "min": 5
+    },
+    {
+     "text": "Add the mince and chop it up with a spatula as it browns, seasoning well.",
+     "min": 8
+    },
+    {
+     "text": "Lay the cheese on top and chop through until melted.",
+     "min": 2
+    },
+    {
+     "text": "Toast the rolls. Pile in the meat with lettuce, tomato and mayo.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Eddie's birthday cake",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 65,
+   "make_ahead": "Up to 1 day, keep covered",
+   "ingredients": [
+    {
+     "q": 350,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pack birthday candles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C and line two 20cm tins.",
+     "min": 5
+    },
+    {
+     "text": "Beat the first batch of butter with the caster sugar, add the eggs, then fold in the flour, half the cocoa and the milk.",
+     "min": 15
+    },
+    {
+     "text": "Bake in the two tins.",
+     "min": 25
+    },
+    {
+     "text": "Cool the cakes completely.",
+     "min": 20
+    },
+    {
+     "text": "Beat the remaining butter with the icing sugar and remaining cocoa.",
+     "min": 10
+    },
+    {
+     "text": "Sandwich and cover the cakes with the buttercream and add candles.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Bodega iced coffee with condensed milk",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Coffee up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "water, boiling",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "tbsp",
+     "item": "sweetened condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ground cinnamon, to dust",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the coffee strong and let it cool.",
+     "min": 10
+    },
+    {
+     "text": "Spoon condensed milk into each of 4 glasses.",
+     "min": 2
+    },
+    {
+     "text": "Fill with ice and pour the coffee over.",
+     "min": 2
+    },
+    {
+     "text": "Stir well until creamy and dust with cinnamon.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Bacon, Egg & Cheese",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "kaiser rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the bacon on a flat top or pan until crisp.",
+     "min": 6
+    },
+    {
+     "text": "Scramble the eggs with milk until just set.",
+     "min": 4
+    },
+    {
+     "text": "Toast the rolls with butter, then layer bacon, egg and cheese so it melts.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Buttered Roll",
+   "course": "s",
+   "prep_min": 3,
+   "cook_min": 4,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "kaiser rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the rolls and spread generously with butter.",
+     "min": 3
+    },
+    {
+     "text": "Press on a hot grill or pan until crisp outside.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Cheeseburger Deluxe",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "",
+   "extra": true,
+   "ingredients": [
+    {
+     "q": 680,
+     "u": "g",
+     "item": "beef chuck mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lettuce leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "frozen fries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Form the mince into four patties of equal size.",
+     "min": 8
+    },
+    {
+     "text": "Bake the fries as the pack directs.",
+     "min": 15
+    },
+    {
+     "text": "Sear the patties on a hot griddle, topping with cheese for the last minute.",
+     "min": 8
+    },
+    {
+     "text": "Toast the buns. Build with lettuce, tomato and patty and serve with the fries.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

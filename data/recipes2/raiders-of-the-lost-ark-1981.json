@@ -1,0 +1,388 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Good dates",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "medjool dates",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "goat's cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "almonds, toasted",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "prosciutto",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the dates and stuff each with goat's cheese and an almond.",
+     "min": 8
+    },
+    {
+     "text": "Wrap each in a piece of prosciutto.",
+     "min": 7
+    },
+    {
+     "text": "Bake at 200C for 8 minutes and drizzle with honey.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Cairo market falafel",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 15,
+   "make_ahead": "Mix up to 1 day ahead, soak chickpeas overnight",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "dried chickpeas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "L vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tahini",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the chickpeas in cold water overnight, then drain well.",
+     "min": 480
+    },
+    {
+     "text": "Blitz the raw chickpeas with the onion, garlic, herbs, cumin and salt.",
+     "min": 10
+    },
+    {
+     "text": "Shape into balls and flatten slightly.",
+     "min": 10
+    },
+    {
+     "text": "Fry at 175C until deep brown.",
+     "min": 10
+    },
+    {
+     "text": "Thin the tahini with lemon juice and water for the sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Sallah's koshari",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brown lentils",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "macaroni",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin chickpeas, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the rice, lentils and macaroni separately.",
+     "min": 30
+    },
+    {
+     "text": "Simmer the tomatoes with the garlic, cumin and chilli into a sauce.",
+     "min": 20
+    },
+    {
+     "text": "Fry the onions in oil until crisp.",
+     "min": 15
+    },
+    {
+     "text": "Layer rice, lentils and macaroni, then top with the sauce, chickpeas and onions.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Basbousa",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Keeps 3 days, covered",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "fine semolina",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "rosewater",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the semolina, coconut, yoghurt, half the sugar and baking powder.",
+     "min": 8
+    },
+    {
+     "text": "Spread in a tin, score into squares and press an almond into each.",
+     "min": 7
+    },
+    {
+     "text": "Bake at 180C for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Simmer the remaining sugar with the water and lemon juice for 5 minutes, add the rosewater and pour the hot syrup over.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "The Raven bar masala chai",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "piece ginger, 4cm, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "cardamom pods, crushed",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "whole cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the water with the ginger, cardamom, cinnamon and cloves for 5 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Add the tea bags and milk and simmer 3 minutes more.",
+     "min": 3
+    },
+    {
+     "text": "Stir in the sugar and strain into four mugs.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

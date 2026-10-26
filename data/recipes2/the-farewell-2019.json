@@ -1,0 +1,436 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Nai Nai's pan-fried pork dumplings",
+   "course": "s",
+   "prep_min": 48,
+   "cook_min": 18,
+   "make_ahead": "Filling up to 1 day ahead, fill and fry fresh",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "wombok",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "knob ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "",
+     "item": "round dumpling wrappers",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "black vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chilli oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Finely chop the wombok and salt it.",
+     "min": 10
+    },
+    {
+     "text": "Leave the wombok for 10 minutes, then squeeze dry.",
+     "min": 10
+    },
+    {
+     "text": "Mix with the pork mince, ginger, spring onions, soy and sesame oil.",
+     "min": 10
+    },
+    {
+     "text": "Fill the dumpling wrappers, wet the edges and pleat closed.",
+     "min": 25
+    },
+    {
+     "text": "Fry in oil until golden underneath.",
+     "min": 2
+    },
+    {
+     "text": "Add water, cover and steam until dry.",
+     "min": 6
+    },
+    {
+     "text": "Mix the black vinegar, soy and chilli oil for dipping.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Changchun smashed cucumber with chilli oil",
+   "course": "s",
+   "prep_min": 14,
+   "cook_min": 15,
+   "make_ahead": "Up to 4 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "Lebanese cucumbers",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "black vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chilli oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Smash the cucumbers with the flat of a knife until they split, then cut into bite-size chunks.",
+     "min": 5
+    },
+    {
+     "text": "Toss with salt and sugar.",
+     "min": 2
+    },
+    {
+     "text": "Drain in a sieve for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Mix the crushed garlic, black vinegar, soy, sesame oil and chilli oil.",
+     "min": 4
+    },
+    {
+     "text": "Toss the cucumbers in the dressing and top with toasted sesame seeds and coriander.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Wedding banquet crispy sweet and sour pork",
+   "course": "m",
+   "prep_min": 23,
+   "cook_min": 24,
+   "make_ahead": "Eat straight away for the best crunch",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "pork scotch fillet",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "potato starch",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pineapple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "rice vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the pork thinly, season and toss in egg white, then potato starch.",
+     "min": 12
+    },
+    {
+     "text": "Fry at 180C, then rest.",
+     "min": 3
+    },
+    {
+     "text": "Fry again until very crisp.",
+     "min": 1
+    },
+    {
+     "text": "Julienne the carrot and slice the capsicum and garlic.",
+     "min": 6
+    },
+    {
+     "text": "Stir-fry the capsicum, carrot, garlic and pineapple.",
+     "min": 2
+    },
+    {
+     "text": "Mix the rice vinegar, sugar, tomato sauce, soy and cornflour with water.",
+     "min": 3
+    },
+    {
+     "text": "Add the sauce and bubble until glossy.",
+     "min": 3
+    },
+    {
+     "text": "Cook the rice.",
+     "min": 15
+    },
+    {
+     "text": "Toss in the pork and serve with rice.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Banquet red bean sesame balls",
+   "course": "w",
+   "prep_min": 35,
+   "cook_min": 8,
+   "make_ahead": "Dough up to 2 hours ahead, fry fresh",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "glutinous rice flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "tin red bean paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "white sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the rice flour with sugar, stir in hot water and knead to a smooth, soft dough.",
+     "min": 10
+    },
+    {
+     "text": "Divide into balls, flatten each, fill with red bean paste and roll closed.",
+     "min": 20
+    },
+    {
+     "text": "Wet lightly and roll in sesame seeds.",
+     "min": 5
+    },
+    {
+     "text": "Fry in oil at 160C, pressing gently against the side of the pot so they puff, until golden.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Nai Nai's iced jasmine lychee tea",
+   "course": "d",
+   "prep_min": 11,
+   "cook_min": 63,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "jasmine tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "565g tin lychees",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag of ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the jasmine tea bags in water just off the boil.",
+     "min": 3
+    },
+    {
+     "text": "Leave for 3 minutes, then remove the bags and cool.",
+     "min": 3
+    },
+    {
+     "text": "Drain the lychees, keeping some syrup.",
+     "min": 3
+    },
+    {
+     "text": "Stir the syrup and lime juice into the tea.",
+     "min": 2
+    },
+    {
+     "text": "Chill until cold.",
+     "min": 60
+    },
+    {
+     "text": "Fill glasses with ice and a few lychees and pour over the tea.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,334 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Choirboy's talent show wings",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 762,
+   "make_ahead": "Dry the wings the day before",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Leave the wings uncovered in the fridge overnight.",
+     "min": 720
+    },
+    {
+     "text": "Toss with garlic powder and salt.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 220C until crisp.",
+     "min": 45
+    },
+    {
+     "text": "Melt the butter with honey and hot sauce.",
+     "min": 4
+    },
+    {
+     "text": "Toss the wings through until glossy.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Deviled eggs",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 28,
+   "make_ahead": "Up to 1 day chilled",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sweet relish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "smoked paprika, to dust",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs, cool and peel.",
+     "min": 10
+    },
+    {
+     "text": "Halve and whip the yolks with mayonnaise, mustard, relish and hot sauce.",
+     "min": 3
+    },
+    {
+     "text": "Pipe back into the whites and dust with smoked paprika.",
+     "min": 5
+    },
+    {
+     "text": "Keep chilled until the show starts.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Baked macaroni and cheese",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "macaroni",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "vintage cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "can evaporated milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "mustard powder",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the macaroni for 2 minutes less than the packet says and drain.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the eggs with evaporated milk, melted butter and mustard powder.",
+     "min": 5
+    },
+    {
+     "text": "Mix with the pasta and most of the cheddar.",
+     "min": 5
+    },
+    {
+     "text": "Top with more cheese and bake at 180C until golden.",
+     "min": 40
+    }
+   ]
+  },
+  {
+   "n": "Jimmy Potter's lemon pound cake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 63,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar until pale.",
+     "min": 10
+    },
+    {
+     "text": "Add the eggs one at a time with the lemon zest.",
+     "min": 6
+    },
+    {
+     "text": "Fold in the flour and baking powder and spoon into a lined loaf tin.",
+     "min": 4
+    },
+    {
+     "text": "Bake at 160C until a skewer comes out clean.",
+     "min": 60
+    },
+    {
+     "text": "Mix the icing sugar with lemon juice and pour over the warm cake.",
+     "min": 3
+    },
+    {
+     "text": "Whip the cream and serve with slices.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Backstage cherry limeade",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "tbsp",
+     "item": "maraschino cherry syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill four glasses with crushed ice.",
+     "min": 2
+    },
+    {
+     "text": "Add lime juice and cherry syrup to each.",
+     "min": 2
+    },
+    {
+     "text": "Top with lemonade and add a cherry.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

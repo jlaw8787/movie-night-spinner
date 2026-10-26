@@ -1,0 +1,404 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Minion banana bites",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 120,
+   "make_ahead": "Up to 2 days, frozen",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "roasted peanuts, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "yellow sprinkles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a tray with baking paper and slice the bananas into thick coins.",
+     "min": 4
+    },
+    {
+     "text": "Mix the yoghurt and honey.",
+     "min": 2
+    },
+    {
+     "text": "Dip each coin, then roll half in crushed peanuts and half in sprinkles.",
+     "min": 12
+    },
+    {
+     "text": "Freeze on the tray until firm.",
+     "min": 120
+    },
+    {
+     "text": "Serve straight from the freezer.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Theme park corn dogs",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Batter can be made 1 hour ahead",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "beef frankfurts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "wooden sticks",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "mustard, to serve",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "tomato sauce, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the cornmeal, flour, sugar, baking powder, egg and buttermilk into a thick batter in a tall glass.",
+     "min": 5
+    },
+    {
+     "text": "Pat the franks dry and push each onto a stick.",
+     "min": 5
+    },
+    {
+     "text": "Heat the oil to 180C in a deep pot.",
+     "min": 10
+    },
+    {
+     "text": "Dip each frank in batter and fry a few at a time until golden.",
+     "min": 12
+    },
+    {
+     "text": "Drain and serve with mustard and tomato sauce.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Gru's dinner for the girls",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 50,
+   "make_ahead": "Sauce up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "breadcrumbs, soaked in milk",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful of parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tins of crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "cloves of garlic, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful of basil leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, extra to serve",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix both minces with the soaked breadcrumbs, parmesan, parsley and seasoning.",
+     "min": 8
+    },
+    {
+     "text": "Roll into balls and brown in the oil in batches.",
+     "min": 12
+    },
+    {
+     "text": "Add the garlic, tomatoes and basil to the pan and simmer the meatballs gently.",
+     "min": 40
+    },
+    {
+     "text": "Cook the spaghetti in salted water while the sauce finishes.",
+     "min": 10
+    },
+    {
+     "text": "Toss the pasta with the sauce and serve with extra parmesan.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "It's so fluffy unicorn cake",
+   "course": "w",
+   "prep_min": 50,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 day, undecorated layers can be made earlier",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, softened, for the icing",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 450,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pastel food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "piece of gold fondant",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 175C and line two cake tins.",
+     "min": 5
+    },
+    {
+     "text": "Beat the butter and sugar until pale, add the eggs one at a time, then fold in the flour and milk.",
+     "min": 12
+    },
+    {
+     "text": "Divide between the tins and bake until a skewer comes out clean.",
+     "min": 25
+    },
+    {
+     "text": "Cool the cakes completely.",
+     "min": 30
+    },
+    {
+     "text": "Beat the icing butter with the icing sugar and vanilla, split and colour in pastel shades.",
+     "min": 10
+    },
+    {
+     "text": "Sandwich and cover the cake, pipe a mane down one side and add a fondant horn.",
+     "min": 18
+    }
+   ]
+  },
+  {
+   "n": "Moon milk",
+   "course": "d",
+   "prep_min": 3,
+   "cook_min": 10,
+   "make_ahead": "Best served fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the milk gently with the honey, cinnamon stick and vanilla until steaming, never boiling.",
+     "min": 10
+    },
+    {
+     "text": "Remove the cinnamon and pour into four mugs.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

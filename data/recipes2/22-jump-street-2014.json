@@ -1,0 +1,436 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "My name is Jeff crab cakes",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "crab meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 7,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "chipotle in adobo, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the crab with some of the mayonnaise, egg, spring onions, lemon zest, mustard and half the panko.",
+     "min": 5
+    },
+    {
+     "text": "Shape into small cakes and chill.",
+     "min": 30
+    },
+    {
+     "text": "Roll the cakes in the remaining panko.",
+     "min": 3
+    },
+    {
+     "text": "Fry in oil over medium heat until golden on both sides.",
+     "min": 6
+    },
+    {
+     "text": "Mix the remaining mayonnaise with the chipotle and a squeeze of lime. Serve with lime wedges.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Frat house sticky barbecue wings",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cider vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds, toasted",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the wings with the baking powder, paprika and salt.",
+     "min": 4
+    },
+    {
+     "text": "Bake on a rack at 220C, turning once.",
+     "min": 40
+    },
+    {
+     "text": "Simmer the barbecue sauce with the honey, soy and vinegar until sticky.",
+     "min": 4
+    },
+    {
+     "text": "Toss the hot wings in the glaze and return to the oven.",
+     "min": 5
+    },
+    {
+     "text": "Scatter with sesame seeds and spring onion.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Captain Dickson's fish tacos",
+   "course": "m",
+   "prep_min": 35,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cold lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "flathead fillets, cut into strips",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "cabbage, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chipotle sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "small flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the onion in the juice of two limes with a pinch of salt.",
+     "min": 20
+    },
+    {
+     "text": "Whisk the flour, baking powder and lager to a batter.",
+     "min": 3
+    },
+    {
+     "text": "Dip the fish in batter and fry at 180C until golden, working in batches.",
+     "min": 12
+    },
+    {
+     "text": "Toss the cabbage with lime juice and salt. Mix the sour cream with the chipotle sauce.",
+     "min": 5
+    },
+    {
+     "text": "Warm the tortillas and fill with slaw, fish, crema, onion and coriander.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Dining hall skillet choc chip cookie",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "chocolate chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle chocolate sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with both sugars, the egg and vanilla. Stir in the flour, bicarb, a pinch of salt and chocolate chips.",
+     "min": 8
+    },
+    {
+     "text": "Press into a greased 25cm ovenproof frying pan.",
+     "min": 2
+    },
+    {
+     "text": "Bake at 180C until golden at the edges but still soft in the centre.",
+     "min": 20
+    },
+    {
+     "text": "Rest, then top with ice cream and drizzle with chocolate sauce. Serve with spoons.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Spring break frozen mango margarita",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "frozen mango",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "tequila",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "orange liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub a lime wedge around the rims of the glasses and dip in sea salt flakes.",
+     "min": 3
+    },
+    {
+     "text": "Blend the mango, tequila, orange liqueur, lime juice, sugar syrup and ice until thick and smooth.",
+     "min": 3
+    },
+    {
+     "text": "Pour into the glasses and garnish with lime wheels.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

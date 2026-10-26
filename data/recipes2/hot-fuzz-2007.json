@@ -1,0 +1,356 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "The Crown pub ploughman's",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 60,
+   "make_ahead": "Assemble up to 2 hours ahead",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "vintage cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pork pie",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar pickled onions",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar tomato chutney",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "apple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "salted butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Take the cheddar out of the fridge an hour ahead so it comes up to room temperature.",
+     "min": 60
+    },
+    {
+     "text": "Cut the cheddar into thick slices and the pork pie into wedges.",
+     "min": 5
+    },
+    {
+     "text": "Arrange on a board with pickled onions, chutney, sliced apple and bread, with a dish of butter.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Village of the Year fete scotch eggs",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 20,
+   "make_ahead": "Up to 1 day ahead, serve cold or reheat at 180C",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "pork sausage mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar English mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil four of the eggs for 6 minutes, cool in iced water and peel.",
+     "min": 10
+    },
+    {
+     "text": "Wrap each egg in seasoned sausage mince, pressing it smooth and even.",
+     "min": 10
+    },
+    {
+     "text": "Roll in flour, the remaining beaten egg, then panko.",
+     "min": 10
+    },
+    {
+     "text": "Fry at 170C until deep golden and cooked through, then halve.",
+     "min": 10
+    },
+    {
+     "text": "Serve with English mustard.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Greater good steak and ale pie",
+   "course": "m",
+   "prep_min": 40,
+   "cook_min": 195,
+   "make_ahead": "Filling up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "English ale",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in batches and soften the sliced onions.",
+     "min": 20
+    },
+    {
+     "text": "Add thyme, ale and Worcestershire sauce. Cover and braise gently until the beef is tender.",
+     "min": 150
+    },
+    {
+     "text": "Thicken the sauce with the flour mixed to a paste, simmer, then tip into a pie dish and cool slightly.",
+     "min": 15
+    },
+    {
+     "text": "Top with puff pastry, brush with beaten egg and bake at 200C until puffed and golden.",
+     "min": 25
+    },
+    {
+     "text": "Cut the potatoes into chips, fry until golden, and boil the peas. Serve alongside.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Strawberry ice cream cones",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 245,
+   "make_ahead": "Make the day before, keep frozen",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "waffle cones",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "chopped peanuts",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the strawberries with the sugar to a sauce.",
+     "min": 5
+    },
+    {
+     "text": "Soften the ice cream, ripple the sauce through and refreeze until firm.",
+     "min": 180
+    },
+    {
+     "text": "Melt the chocolate and dip the rims of the cones, then dip in chopped peanuts.",
+     "min": 10
+    },
+    {
+     "text": "Fill with scoops and freeze until serving.",
+     "min": 60
+    }
+   ]
+  },
+  {
+   "n": "Angel's cranberry lime cooler, no ice",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 190,
+   "make_ahead": "Syrup up to 3 days ahead",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cranberry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "piece fresh ginger, 3cm",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the cranberry juice and four pint glasses in the fridge.",
+     "min": 180
+    },
+    {
+     "text": "Simmer the sugar, water and sliced ginger for 5 minutes and cool.",
+     "min": 10
+    },
+    {
+     "text": "Shake the cranberry juice with lime juice and ginger syrup, pour into cold glasses and top with soda water. No ice.",
+     "min": 10
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,332 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Reception hall pigs in blankets",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day uncooked, keep chilled",
+   "ingredients": [
+    {
+     "q": 24,
+     "u": "",
+     "item": "cocktail franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the franks briefly and drain well.",
+     "min": 5
+    },
+    {
+     "text": "Cut the pastry into strips and roll one around each frank.",
+     "min": 15
+    },
+    {
+     "text": "Brush with beaten egg and bake at 200C until golden.",
+     "min": 15
+    },
+    {
+     "text": "Serve with mustard and tomato sauce.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Eighties cheese ball",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 62,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "walnuts, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "box water crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cheddar, cream cheese and sliced spring onion.",
+     "min": 8
+    },
+    {
+     "text": "Shape into one big ball and roll in the walnuts.",
+     "min": 4
+    },
+    {
+     "text": "Chill until firm.",
+     "min": 60
+    },
+    {
+     "text": "Serve with crackers.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Grandma Rosie's meatballs",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 55,
+   "make_ahead": "Up to 2 days, reheat gently",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cans crushed tomatoes (400 g each)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince with the parmesan, parsley, breadcrumbs and egg. Roll into balls.",
+     "min": 15
+    },
+    {
+     "text": "Brown the meatballs in the oil.",
+     "min": 8
+    },
+    {
+     "text": "Add the tomatoes and simmer.",
+     "min": 40
+    },
+    {
+     "text": "Cook the spaghetti and serve with the meatballs on top.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Julia Gulia's jam and buttercream sponge",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 70,
+   "make_ahead": "Bake up to 1 day ahead, ice on the day",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "strawberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter, softened, for the buttercream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "silver cachous",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar, add the eggs, then fold in the flour. Divide between 2 tins.",
+     "min": 20
+    },
+    {
+     "text": "Bake at 175C until golden and springy.",
+     "min": 25
+    },
+    {
+     "text": "Cool completely.",
+     "min": 40
+    },
+    {
+     "text": "Beat the buttercream butter with the icing sugar until pale.",
+     "min": 8
+    },
+    {
+     "text": "Sandwich the cakes with jam, ice white with buttercream and scatter silver cachous over the top.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Reception pineapple sherbet punch",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Up to 2 hours, keep cold",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1.25,
+     "u": "l",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "lime sherbet or orange sherbet",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill everything well.",
+     "min": 5
+    },
+    {
+     "text": "Pour the pineapple and orange juice into a big punch bowl and slice the orange.",
+     "min": 5
+    },
+    {
+     "text": "Just before serving, top with the cold lemonade and add the sliced orange. Float scoops of sherbet on top and ladle into cups.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

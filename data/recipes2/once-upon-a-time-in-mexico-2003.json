@@ -1,0 +1,366 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Cantina chips and salsa roja",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "Salsa up to 3 days chilled",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "dried chillies",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "white onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the dried chillies in hot water and cut the tortillas into wedges.",
+     "min": 5
+    },
+    {
+     "text": "Fry the wedges in oil at 180C in batches until crisp, drain and salt.",
+     "min": 10
+    },
+    {
+     "text": "Char the tomatoes, chillies, garlic and onion in a dry pan.",
+     "min": 8
+    },
+    {
+     "text": "Blitz the charred mix rough with salt and serve with the chips.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Plaza elote with chipotle mayo",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 6,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "chipotle in adobo, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small handful coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the corn cobs.",
+     "min": 5
+    },
+    {
+     "text": "Grill over high heat, turning, until charred all over.",
+     "min": 8
+    },
+    {
+     "text": "Mix the mayonnaise with the chipotle and the juice of one lime.",
+     "min": 3
+    },
+    {
+     "text": "Brush the hot corn with the mayo, roll in crumbled feta and dust with chilli powder and coriander.",
+     "min": 4
+    },
+    {
+     "text": "Serve with lime wedges.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Puerco pibil",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 980,
+   "make_ahead": "Cooks well a day ahead, reheat gently",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "pork shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "achiote paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet banana leaves",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "corn tortillas",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the achiote with orange and lime juice, garlic, cumin and oregano and coat the pork.",
+     "min": 15
+    },
+    {
+     "text": "Marinate overnight in the fridge.",
+     "min": 720
+    },
+    {
+     "text": "Wrap the pork in banana leaves and then foil.",
+     "min": 10
+    },
+    {
+     "text": "Roast at 160C until it falls apart.",
+     "min": 240
+    },
+    {
+     "text": "Slice the red onion and quick pickle it in lime juice and salt while the pork rests.",
+     "min": 15
+    },
+    {
+     "text": "Shred the pork and serve with the pickled onion and warm tortillas.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Mexican chocolate flan",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 280,
+   "make_ahead": "Make the day before, keep chilled",
+   "ingredients": [
+    {
+     "q": 230,
+     "u": "g",
+     "item": "caster sugar, divided",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt most of the sugar to a golden caramel and pour into four ramekins.",
+     "min": 8
+    },
+    {
+     "text": "Warm the milk and cream with the chocolate and cinnamon until smooth.",
+     "min": 7
+    },
+    {
+     "text": "Whisk the eggs with the remaining sugar and whisk in the warm milk.",
+     "min": 5
+    },
+    {
+     "text": "Strain over the caramel and set the ramekins in a deep tray with hot water.",
+     "min": 5
+    },
+    {
+     "text": "Bake in the water bath at 150C until just set with a slight wobble.",
+     "min": 40
+    },
+    {
+     "text": "Chill, then run a knife around the edge and turn out.",
+     "min": 240
+    }
+   ]
+  },
+  {
+   "n": "Day of the Dead tequila and sangrita",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 2,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "blanco tequila",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "tomato juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch chilli powder",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the orange juice, lime juice, tomato juice and chilli powder for the sangrita.",
+     "min": 4
+    },
+    {
+     "text": "Pour the tequila into four glasses.",
+     "min": 2
+    },
+    {
+     "text": "Serve each with a sangrita chaser alongside.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

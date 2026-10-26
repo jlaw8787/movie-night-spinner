@@ -1,0 +1,310 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Green Place garden veg with whipped feta",
+   "course": "s",
+   "prep_min": 9,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "olive oil, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch radishes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch baby carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "snow peas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "continental cucumber",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the feta with the Greek yoghurt, the olive oil, the zest and juice of half a lemon and a handful each of mint and dill until smooth and green flecked.",
+     "min": 2
+    },
+    {
+     "text": "Spread into a bowl and drizzle with oil.",
+     "min": 3
+    },
+    {
+     "text": "Trim the radishes and the baby carrots, string the snow peas and cut the cucumber into spears.",
+     "min": 4
+    },
+    {
+     "text": "Soak the vegetables in iced water 10 minutes, drain and arrange around the dip.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Bullet Farm chorizo with smoky honey",
+   "course": "s",
+   "prep_min": 6,
+   "cook_min": 12,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "chorizo sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "smoked paprika, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sherry vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices sourdough",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the chorizo sausages into 1.5cm coins.",
+     "min": 3
+    },
+    {
+     "text": "Heat a heavy pan over high heat and fry without oil for 4 minutes, turning, until blistered and the fat runs.",
+     "min": 4
+    },
+    {
+     "text": "Add the honey, the smoked paprika and the sherry vinegar and toss for 1 minute until sticky.",
+     "min": 1
+    },
+    {
+     "text": "Grill the slices of sourdough until charred.",
+     "min": 8
+    },
+    {
+     "text": "Serve the chorizo on toothpicks with the bread to mop up the pan juices.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "War Rig barbecue lamb",
+   "course": "m",
+   "prep_min": 5,
+   "cook_min": 76,
+   "make_ahead": "Marinate up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "lamb chops",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic bulb",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the lamb chops for 1 hour with the chopped rosemary, the garlic cloves, the juice of the lemon and the oil.",
+     "min": 60
+    },
+    {
+     "text": "Grill over high heat 3 minutes a side.",
+     "min": 6
+    },
+    {
+     "text": "Grill the corn cobs for 10 minutes alongside and brush with butter.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Grilled Green Place peaches",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 4,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "peaches",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Halve and stone the peaches.",
+     "min": 3
+    },
+    {
+     "text": "Brush the cut sides with a little oil and grill cut side down for 4 minutes until charred and soft.",
+     "min": 4
+    },
+    {
+     "text": "Drizzle with the honey warmed with thyme and serve with the vanilla ice cream.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Citadel honey malt milkshakes",
+   "course": "d",
+   "prep_min": 7,
+   "cook_min": 60,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 5,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the tall glasses.",
+     "min": 60
+    },
+    {
+     "text": "Blend the vanilla ice cream, the cold milk, the malted milk powder and the honey until thick and smooth.",
+     "min": 3
+    },
+    {
+     "text": "Drizzle a little honey down the inside of each glass, pour in the shake and sprinkle with more malt powder.",
+     "min": 2
+    },
+    {
+     "text": "Serve straight away with straws.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

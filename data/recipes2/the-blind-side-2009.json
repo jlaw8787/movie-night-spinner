@@ -1,0 +1,454 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Memphis dry rub barbecue wings",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 45,
+   "make_ahead": "Rub up to 1 day ahead, cook fresh",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "smoked paprika",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "onion powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cider vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the paprika, brown sugar, garlic powder, onion powder, cayenne and salt.",
+     "min": 5
+    },
+    {
+     "text": "Toss the wings with baking powder and the rub.",
+     "min": 5
+    },
+    {
+     "text": "Bake on a rack at 220C, turning once.",
+     "min": 45
+    },
+    {
+     "text": "Mix the barbecue sauce, mustard and vinegar for dipping.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "98th percentile devilled eggs",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 20,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar of dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the eggs in boiling water.",
+     "min": 10
+    },
+    {
+     "text": "Cool in iced water, then peel.",
+     "min": 5
+    },
+    {
+     "text": "Halve the eggs and scoop the yolks into a bowl.",
+     "min": 5
+    },
+    {
+     "text": "Mash with mayonnaise, mustard, chopped pickles and salt.",
+     "min": 5
+    },
+    {
+     "text": "Pipe back into the whites.",
+     "min": 6
+    },
+    {
+     "text": "Grill the bacon until crisp and crumble.",
+     "min": 5
+    },
+    {
+     "text": "Top the eggs with bacon, a dusting of smoked paprika and chives.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Tuohy Thanksgiving turkey at the table",
+   "course": "m",
+   "prep_min": 37,
+   "cook_min": 143,
+   "make_ahead": "Gravy and sides up to 1 day ahead, roast the turkey fresh",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "turkey breast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of sage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "cornbread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 450,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar of cranberry sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Push the herb butter under the skin of the turkey breast.",
+     "min": 10
+    },
+    {
+     "text": "Roast at 180C until cooked through, then rest.",
+     "min": 80
+    },
+    {
+     "text": "Crumble the cornbread with the fried onion, celery, chopped sage, egg and stock.",
+     "min": 15
+    },
+    {
+     "text": "Bake the stuffing until golden.",
+     "min": 30
+    },
+    {
+     "text": "Peel and chop the potatoes.",
+     "min": 10
+    },
+    {
+     "text": "Boil the potatoes until tender and mash with butter and milk.",
+     "min": 20
+    },
+    {
+     "text": "Blanch the green beans and toss in butter.",
+     "min": 5
+    },
+    {
+     "text": "Make gravy from the pan juices with flour and stock.",
+     "min": 8
+    },
+    {
+     "text": "Serve with cranberry sauce.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Ferdinand the Bull pecan pie",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 112,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "pecans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a 23cm pie dish with the pastry.",
+     "min": 15
+    },
+    {
+     "text": "Bake blind at 190C.",
+     "min": 12
+    },
+    {
+     "text": "Whisk the eggs, brown sugar, golden syrup, melted butter, vanilla and salt, then stir in the pecans.",
+     "min": 8
+    },
+    {
+     "text": "Pour into the case.",
+     "min": 2
+    },
+    {
+     "text": "Bake at 170C until just set with a slight wobble.",
+     "min": 40
+    },
+    {
+     "text": "Cool for 1 hour and serve with ice cream.",
+     "min": 60
+    }
+   ]
+  },
+  {
+   "n": "Memphis peach sweet tea",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 65,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "peach nectar",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "peach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag of ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in boiling water with the sugar.",
+     "min": 3
+    },
+    {
+     "text": "Leave to steep, then remove the bags.",
+     "min": 5
+    },
+    {
+     "text": "Cool, then chill until cold.",
+     "min": 60
+    },
+    {
+     "text": "Stir in the peach nectar and lemon juice.",
+     "min": 3
+    },
+    {
+     "text": "Fill glasses with ice and peach slices, pour over the tea and finish with mint and lemon wheels.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

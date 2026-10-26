@@ -1,0 +1,368 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Composure office crostini",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Components up to 1 day, assemble fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "basil leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the baguette, brush with oil and toast at 200C.",
+     "min": 8
+    },
+    {
+     "text": "Roast the tomatoes with oil and salt.",
+     "min": 15
+    },
+    {
+     "text": "Whip the ricotta with lemon zest and pepper.",
+     "min": 2
+    },
+    {
+     "text": "Spread on the toasts and top with tomatoes, basil and a little honey.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Staten Island arancini",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 35,
+   "make_ahead": "Up to 1 day uncooked, or freeze",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "arborio rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "chicken stock, hot",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "leg ham, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "marinara sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the rice with the hot stock, added a ladle at a time, into a firm risotto.",
+     "min": 25
+    },
+    {
+     "text": "Stir through the peas, ham and parmesan, then spread out and cool.",
+     "min": 20
+    },
+    {
+     "text": "Roll into 16 balls and crumb in flour, egg and breadcrumbs.",
+     "min": 15
+    },
+    {
+     "text": "Fry at 180C in batches until golden.",
+     "min": 11
+    },
+    {
+     "text": "Warm the marinara and serve alongside.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Staten Island family dinner",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 55,
+   "make_ahead": "Up to 2 days, reheat gently",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cans crushed tomatoes (400 g each)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "basil leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "rigatoni, cooked weight",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince with the breadcrumbs and egg, season and roll into balls.",
+     "min": 12
+    },
+    {
+     "text": "Brown the meatballs in the oil.",
+     "min": 8
+    },
+    {
+     "text": "Add the tomatoes and torn basil and simmer.",
+     "min": 40
+    },
+    {
+     "text": "Cook the rigatoni, toss through the sauce with plenty of parmesan.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Yellow dress lemon tart",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 45,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream, whipped to serve",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Press the pastry into a tart tin and blind bake.",
+     "min": 20
+    },
+    {
+     "text": "Whisk the juice and zest of the lemons with the eggs, sugar and cream.",
+     "min": 10
+    },
+    {
+     "text": "Pour into the case and bake at 150C until just set.",
+     "min": 20
+    },
+    {
+     "text": "Chill until firm, then serve with whipped cream.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Courtside ginger lime shandy",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours, keep cold",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "lager",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "ginger beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs mint",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill 4 tall cups or glasses.",
+     "min": 3
+    },
+    {
+     "text": "Squeeze a quarter of a lime into each, then pour in the lager, tilting the cup.",
+     "min": 3
+    },
+    {
+     "text": "Top with the ginger beer, drop in a lime wedge and mint sprig and serve straight away.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

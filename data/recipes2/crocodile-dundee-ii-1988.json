@@ -1,0 +1,314 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bush damper with golden syrup",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, cold",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 450,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, to serve",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Rub the butter into the flour and salt.",
+     "min": 5
+    },
+    {
+     "text": "Mix in the milk to a soft dough, shape into a round and score a cross.",
+     "min": 10
+    },
+    {
+     "text": "Bake until it sounds hollow when tapped.",
+     "min": 30
+    },
+    {
+     "text": "Serve warm with butter and golden syrup.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Wally's Walkabout Creek snags",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "thick beef sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "neutral oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the onions.",
+     "min": 5
+    },
+    {
+     "text": "Grill the sausages slowly over medium heat, turning often, and fry the onions in oil until soft and golden at the same time.",
+     "min": 15
+    },
+    {
+     "text": "Wrap each sausage in a slice of bread with onions and a squeeze of tomato sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Dynamite-caught campfire barra",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "whole barramundi, cleaned",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stuff the fish with lemon slices, sliced ginger and the coriander.",
+     "min": 10
+    },
+    {
+     "text": "Dot with butter and wrap well in foil.",
+     "min": 5
+    },
+    {
+     "text": "Cook over hot coals or a hot grill, turning once.",
+     "min": 20
+    },
+    {
+     "text": "Rest briefly before opening the parcel.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Pavlova",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 150,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "mango",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whip the egg whites to soft peaks.",
+     "min": 8
+    },
+    {
+     "text": "Add the sugar gradually until glossy, then fold in the cornflour and vinegar.",
+     "min": 7
+    },
+    {
+     "text": "Pile onto a lined tray and shape into a round.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 120C.",
+     "min": 90
+    },
+    {
+     "text": "Turn the oven off and leave the pavlova to cool inside.",
+     "min": 60
+    },
+    {
+     "text": "Top with whipped cream, passionfruit and sliced mango.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Top End lemon myrtle gin and tonic",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground lemon myrtle",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tray ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "tonic water",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the sugar and lemon myrtle on a plate. Run a lime around each glass rim and dip.",
+     "min": 4
+    },
+    {
+     "text": "Fill the glasses with ice, add gin and lime juice.",
+     "min": 3
+    },
+    {
+     "text": "Top with tonic and add a lime wheel.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

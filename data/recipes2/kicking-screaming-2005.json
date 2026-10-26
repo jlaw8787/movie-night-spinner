@@ -1,0 +1,380 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Halftime crispy orange chicken bites",
+   "course": "s",
+   "prep_min": 6,
+   "cook_min": 9,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "soy sauce, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 70,
+     "u": "g",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "rice vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "knob ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "sesame seeds, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the chicken thigh into bite-sized pieces, toss with the soy, then in the cornflour.",
+     "min": 4
+    },
+    {
+     "text": "Fry in batches in oil at 180C for 4 to 5 minutes until crisp.",
+     "min": 4
+    },
+    {
+     "text": "Simmer the juice of the oranges with the zest of 1, the soy, the honey, the rice vinegar, the grated ginger and the garlic clove for 5 minutes, then thicken with the cornflour in water.",
+     "min": 5
+    },
+    {
+     "text": "Toss the chicken through and top with sesame and spring onion.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Phil's vitamin shop granola bars",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "pepitas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "dried cranberries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 170C.",
+     "min": 3
+    },
+    {
+     "text": "Toast the rolled oats, the chopped almonds and the pepitas on a tray for 10 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Warm the honey, the peanut butter, the butter and the brown sugar until smooth.",
+     "min": 3
+    },
+    {
+     "text": "Stir into the oats with the dried cranberries and a pinch of salt.",
+     "min": 2
+    },
+    {
+     "text": "Press firmly into a lined 20 x 30cm tin and bake 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Cool, scatter with the melted dark chocolate and cut into bars once set.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Butcher shop Italian sausage rolls",
+   "course": "m",
+   "prep_min": 8,
+   "cook_min": 26,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "Italian fennel sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red capsicums",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "vegetable oil, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "long rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices provolone",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar hot giardiniera",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the red capsicums and the onions and cook in the oil over medium-high heat for 12 minutes until soft and charred.",
+     "min": 12
+    },
+    {
+     "text": "Grill the Italian fennel sausages on a medium barbecue for 12 to 15 minutes, turning, until cooked through.",
+     "min": 14
+    },
+    {
+     "text": "Split the long rolls, toast, and lay a slice of provolone in.",
+     "min": 4
+    },
+    {
+     "text": "Add a sausage, the capsicum and onion and a spoon of chopped hot giardiniera or pickled chillies.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Coffee shop biscotti",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 45,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "almonds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the plain flour, the sugar, the baking powder, the eggs and the whole almonds into a dough.",
+     "min": 3
+    },
+    {
+     "text": "Shape the logs and bake at 180C for 25 minutes.",
+     "min": 25
+    },
+    {
+     "text": "Cool 10 minutes, slice thinly and bake 10 minutes more until crisp.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Phil's quadruple-shot mocha",
+   "course": "d",
+   "prep_min": 17,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "espresso coffee beans, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "chocolate-coated coffee beans, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chopped dark chocolate with the sugar in a saucepan with the milk, whisking until smooth.",
+     "min": 3
+    },
+    {
+     "text": "Add more milk and heat until steaming, whisking until frothy.",
+     "min": 2
+    },
+    {
+     "text": "Pull the shots of espresso.",
+     "min": 3
+    },
+    {
+     "text": "Pour the shots into each of the big mugs and top with the chocolate milk.",
+     "min": 2
+    },
+    {
+     "text": "Whip the cream and spoon on, then add chocolate shavings and the chocolate-coated coffee beans.",
+     "min": 4
+    },
+    {
+     "text": "Decaf is allowed.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

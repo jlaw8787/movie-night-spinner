@@ -1,0 +1,330 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Groundhog festival doughnuts",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "small cake doughnuts",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the doughnuts at 160C",
+     "min": 2
+    },
+    {
+     "text": "Put the sugar and cinnamon in a clean food-safe paper bag",
+     "min": 1
+    },
+    {
+     "text": "Add the warm doughnuts and shake gently until coated",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Ned Ryerson's eggs",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs, cool in iced water and peel",
+     "min": 20
+    },
+    {
+     "text": "Halve and remove the yolks",
+     "min": 3
+    },
+    {
+     "text": "Whip the yolks with the mayonnaise, mustard, hot sauce and paprika until smooth",
+     "min": 5
+    },
+    {
+     "text": "Pipe back into the white halves and refrigerate until serving",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Phil's diner feast",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 45,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 15,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "ready-baked pie",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, baking powder, sugar, one egg and buttermilk into a batter and rest",
+     "min": 15
+    },
+    {
+     "text": "Render the bacon slowly over medium heat until crisp and keep warm",
+     "min": 10
+    },
+    {
+     "text": "Cook small pancakes in half the butter until bubbles set and both sides are golden",
+     "min": 16
+    },
+    {
+     "text": "Fry four eggs in the bacon pan until the whites are set",
+     "min": 3
+    },
+    {
+     "text": "Toast the bread and butter with the remaining butter",
+     "min": 4
+    },
+    {
+     "text": "Warm small slices of pie at 180C",
+     "min": 10
+    },
+    {
+     "text": "Bring everything to the table at once, with maple syrup for the pancakes",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Angel food cake",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 100,
+   "make_ahead": "Up to 1 day",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "cream of tartar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cake flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "berries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg whites with the cream of tartar to soft peaks",
+     "min": 8
+    },
+    {
+     "text": "Add the caster sugar gradually and whisk until glossy",
+     "min": 5
+    },
+    {
+     "text": "Sift the flour with the icing sugar and fold gently into the whites in three additions",
+     "min": 10
+    },
+    {
+     "text": "Spoon into an ungreased 16cm tube pan",
+     "min": 3
+    },
+    {
+     "text": "Bake at 175C until golden and springy",
+     "min": 40
+    },
+    {
+     "text": "Invert the tin and cool upside down completely",
+     "min": 60
+    },
+    {
+     "text": "Slice and serve with berries and softly whipped cream",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Rita's sweet vermouth on the rocks",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "sweet red vermouth",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dashes aromatic bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large ice blocks",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put a large ice block in each rocks glass",
+     "min": 1
+    },
+    {
+     "text": "Pour over the vermouth and add a dash of bitters",
+     "min": 2
+    },
+    {
+     "text": "Peel long strips of orange zest, twist over the glass, rub round the rim and drop in. Stir twice",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

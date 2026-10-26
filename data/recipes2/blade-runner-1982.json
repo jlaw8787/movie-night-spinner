@@ -1,0 +1,332 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Noodle bar gyoza",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 12,
+   "make_ahead": "Fill and pleat up to 4 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "finely shredded cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "knob ginger, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "",
+     "item": "gyoza wrappers",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "rice vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chilli oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Salt the cabbage, let it sit, then squeeze dry.",
+     "min": 10
+    },
+    {
+     "text": "Mix with the pork, soy and ginger.",
+     "min": 5
+    },
+    {
+     "text": "Fill the wrappers and pleat the edges.",
+     "min": 25
+    },
+    {
+     "text": "Fry in oil until crisp underneath, then add water and steam with a lid.",
+     "min": 8
+    },
+    {
+     "text": "Mix soy, rice vinegar and chilli oil for dipping.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Origami crackers",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 10,
+     "u": "",
+     "item": "rice paper sheets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "shichimi togarashi",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the rice paper into small triangles with scissors.",
+     "min": 8
+    },
+    {
+     "text": "Fry a few at a time at 180C for a few seconds until they puff and turn white.",
+     "min": 10
+    },
+    {
+     "text": "Drain and toss with flaky salt and shichimi togarashi.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Rain-soaked ramen",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 140,
+   "make_ahead": "Pork and eggs up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "pork belly",
+     "aisle": "Meat"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "mirin",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "sake",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "ramen noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet nori",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Braise the pork belly in the soy, mirin, sake and water, covered, on a low simmer.",
+     "min": 120
+    },
+    {
+     "text": "Soft-boil the eggs, peel and marinate in some of the braising liquid.",
+     "min": 15
+    },
+    {
+     "text": "Slice the pork. Heat the stock and season with a little soy.",
+     "min": 10
+    },
+    {
+     "text": "Cook the noodles and divide between bowls.",
+     "min": 5
+    },
+    {
+     "text": "Top with pork, halved egg, nori and spring onion.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Origami cookies",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C. Whisk the egg whites with the sugar, then stir in the flour, melted butter and sesame seeds.",
+     "min": 8
+    },
+    {
+     "text": "Spread thin circles on a lined tray.",
+     "min": 5
+    },
+    {
+     "text": "Bake until golden at the edges.",
+     "min": 6
+    },
+    {
+     "text": "Fold or twist into shapes while still hot and soft.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Deckard's Japanese whisky highball",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "Japanese whisky",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bags ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pack four tall glasses with ice, stir to chill, then pour off any water.",
+     "min": 2
+    },
+    {
+     "text": "Add the whisky to each and stir.",
+     "min": 1
+    },
+    {
+     "text": "Top slowly with very cold soda water down the spoon. Squeeze a strip of lemon peel over each.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

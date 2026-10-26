@@ -1,0 +1,298 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Food court pretzels",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 100,
+   "make_ahead": "Best eaten the day they are made",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese, sweetened to taste",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast and warm water to a dough and knead briefly.",
+     "min": 10
+    },
+    {
+     "text": "Rest the dough for an hour until puffy.",
+     "min": 60
+    },
+    {
+     "text": "Cut into bites and boil briefly in water with the bicarb soda.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 220C for 12 minutes until deep golden.",
+     "min": 12
+    },
+    {
+     "text": "Brush with butter and roll in cinnamon sugar. Serve with the sweetened cream cheese.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Comic store popcorn",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "popping corn",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pop the corn and toss straight away with the melted butter.",
+     "min": 5
+    },
+    {
+     "text": "Sprinkle with parmesan and garlic powder, tossing until every piece is coated. Pour into paper bags.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Eden Prairie food court teriyaki chicken",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Glaze up to 3 days ahead",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "mirin",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "grated ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "heads broccoli, cut into florets",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the soy sauce, mirin, sugar and ginger until syrupy.",
+     "min": 10
+    },
+    {
+     "text": "Steam the rice. Grill the chicken, brushing with the glaze, until sticky and charred.",
+     "min": 20
+    },
+    {
+     "text": "Stir-fry the broccoli quickly. Slice the chicken over the rice and spoon over the extra sauce.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Sailboat poster cookies",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Dough up to 2 days chilled, bake fresh",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 225,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter, sugar and egg until creamy. Mix in the flour and chocolate chips.",
+     "min": 10
+    },
+    {
+     "text": "Roll into big balls and bake at 180C so the centres stay gooey.",
+     "min": 10
+    },
+    {
+     "text": "Cool for 5 minutes and serve warm.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Truth or Date lemonade",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Muddle the strawberries in the bottom of a big jug.",
+     "min": 5
+    },
+    {
+     "text": "Add the lemon juice and sugar to taste, then top with soda water.",
+     "min": 5
+    },
+    {
+     "text": "Pour into big cups packed with ice and add a straw to each.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

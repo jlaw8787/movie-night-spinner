@@ -1,0 +1,334 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Tractor chicken bites",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 250,
+   "make_ahead": "Marinate up to 1 day ahead, fry fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thighs, cut into pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey, for dipping",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the chicken in the buttermilk in the fridge, at least 4 hours or overnight.",
+     "min": 240
+    },
+    {
+     "text": "Mix the flour, paprika and salt. Lift the chicken out of the buttermilk and dredge in the flour.",
+     "min": 10
+    },
+    {
+     "text": "Fry in the oil at 180C in batches until crisp and cooked through. Drain on paper and serve hot with the honey.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Grain mill corn fritters",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "corn kernels, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the corn, flour, eggs, spring onions and paprika into a thick batter.",
+     "min": 8
+    },
+    {
+     "text": "Fry spoonfuls in a little oil until golden on both sides.",
+     "min": 10
+    },
+    {
+     "text": "Stir the chives through the sour cream for the dip and serve the fritters warm.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Preacher's Sunday roast",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 180,
+   "make_ahead": "Up to 1 day, reheat gently",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "beef blade",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "carrots, cut into chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the beef with the garlic, thyme and salt.",
+     "min": 10
+    },
+    {
+     "text": "Roast covered at 160C for 2 hours, then add the potatoes and carrots to the tray.",
+     "min": 120
+    },
+    {
+     "text": "Roast for another hour until the beef is tender.",
+     "min": 60
+    },
+    {
+     "text": "Lift out the beef and vegetables to rest. Whisk the flour into the pan juices, add the stock and simmer into gravy. Serve after church.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Church social caramel popcorn balls",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 25,
+   "make_ahead": "Up to 2 days, wrapped",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "popcorn kernels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, plus extra for your hands",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "tsp",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pop the kernels in the oil and tip into a large buttered bowl.",
+     "min": 10
+    },
+    {
+     "text": "Boil the sugar, golden syrup and butter for 3 minutes, then stir in the salt and vanilla.",
+     "min": 5
+    },
+    {
+     "text": "Pour over the popcorn and toss with two spoons. Cool for 3 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Butter your hands and press into 12 balls. Set on baking paper until firm, then wrap.",
+     "min": 35
+    }
+   ]
+  },
+  {
+   "n": "Prom punch",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Make just before serving",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "lemon sorbet",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the pineapple and orange juice into a big punch bowl and add the sliced oranges.",
+     "min": 3
+    },
+    {
+     "text": "Top with the lemonade and float big scoops of sorbet on top so it foams.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

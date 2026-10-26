@@ -1,0 +1,320 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Mr Tumnus's tea and toast",
+   "course": "s",
+   "prep_min": 14,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "can sardines",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the bread and butter it while hot.",
+     "min": 6
+    },
+    {
+     "text": "Mash the sardines with a squeeze of lemon and spread on half the toast.",
+     "min": 4
+    },
+    {
+     "text": "Drizzle honey over the rest.",
+     "min": 1
+    },
+    {
+     "text": "Cut into fingers and serve with a pot of tea.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Professor's house scones",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 15,
+   "make_ahead": "Same day, best warm",
+   "ingredients": [
+    {
+     "q": 450,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar strawberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream, whipped, to serve",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 220C and flour a tray.",
+     "min": 3
+    },
+    {
+     "text": "Mix the flour, cream and lemonade with a knife until just combined.",
+     "min": 5
+    },
+    {
+     "text": "Pat out the dough, cut into rounds and place them close together on the tray.",
+     "min": 7
+    },
+    {
+     "text": "Bake until risen and golden.",
+     "min": 15
+    },
+    {
+     "text": "Serve warm with jam and whipped cream.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Mrs Beaver's fish dinner",
+   "course": "m",
+   "prep_min": 12,
+   "cook_min": 32,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "flathead fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and cut the potatoes, chop the parsley and pat the fish dry.",
+     "min": 10
+    },
+    {
+     "text": "Boil the potatoes until tender, drain and toss with some of the butter and the parsley.",
+     "min": 20
+    },
+    {
+     "text": "Pan-fry the fish in butter until golden on both sides.",
+     "min": 8
+    },
+    {
+     "text": "Cook the peas, then toss with butter and a squeeze of lemon.",
+     "min": 4
+    },
+    {
+     "text": "Serve everything together.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Turkish delight",
+   "course": "w",
+   "prep_min": 18,
+   "cook_min": 540,
+   "make_ahead": "Up to 1 week, airtight",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "rosewater",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pink food colouring, a few drops",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a tin with baking paper. Juice the lemon.",
+     "min": 5
+    },
+    {
+     "text": "Stir the sugar, cornflour, water and lemon juice in a pot over low heat for an hour until very thick.",
+     "min": 60
+    },
+    {
+     "text": "Stir in the rosewater and a few drops of pink colouring, then pour into the tin.",
+     "min": 3
+    },
+    {
+     "text": "Leave to set overnight.",
+     "min": 480
+    },
+    {
+     "text": "Cut into cubes and roll in icing sugar.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Father Christmas cocoa",
+   "course": "d",
+   "prep_min": 7,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the chocolate and whip the cream to soft peaks.",
+     "min": 5
+    },
+    {
+     "text": "Heat the milk until steaming.",
+     "min": 5
+    },
+    {
+     "text": "Whisk in the chocolate and cinnamon until frothy.",
+     "min": 3
+    },
+    {
+     "text": "Pour into mugs and top with whipped cream.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

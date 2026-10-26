@@ -1,0 +1,348 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Times Square knishes",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 31,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes until tender.",
+     "min": 20
+    },
+    {
+     "text": "Fry the onion soft in butter.",
+     "min": 8
+    },
+    {
+     "text": "Mash the potatoes with the onion, salt and pepper.",
+     "min": 5
+    },
+    {
+     "text": "Cut the pastry into 12 squares, add a spoon of filling to each and fold into parcels.",
+     "min": 8
+    },
+    {
+     "text": "Brush with beaten egg and bake at 200C until golden.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Androzzi's Village bar snacks",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 4,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "mixed nuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sprig rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the nuts with melted butter, chopped rosemary and salt.",
+     "min": 4
+    },
+    {
+     "text": "Roast at 170C.",
+     "min": 12
+    },
+    {
+     "text": "Warm the olives in olive oil with strips of orange peel.",
+     "min": 6
+    },
+    {
+     "text": "Serve both in bowls.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Harlem smothered chicken",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour, divided",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch kale",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Flour the chicken and brown in batches.",
+     "min": 10
+    },
+    {
+     "text": "Make a dark roux in the pan with butter and flour.",
+     "min": 8
+    },
+    {
+     "text": "Add the sliced onions and stock.",
+     "min": 5
+    },
+    {
+     "text": "Simmer the chicken in the gravy.",
+     "min": 40
+    },
+    {
+     "text": "Cook the rice and braise the kale with garlic.",
+     "min": 15
+    },
+    {
+     "text": "Serve the chicken and gravy over the rice with the kale.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "New York cheesecake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 838,
+   "make_ahead": "Make the day before, keep chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "digestive biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 750,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the biscuits, mix with melted butter and press into a tin.",
+     "min": 8
+    },
+    {
+     "text": "Beat the cream cheese with sugar, eggs and sour cream.",
+     "min": 10
+    },
+    {
+     "text": "Pour over the base and set the tin in a water bath.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 150C.",
+     "min": 60
+    },
+    {
+     "text": "Cool in the oven.",
+     "min": 60
+    },
+    {
+     "text": "Chill overnight.",
+     "min": 720
+    }
+   ]
+  },
+  {
+   "n": "Bumpy Jonas whisky sour",
+   "course": "d",
+   "prep_min": 9,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "bourbon",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "sugar syrup (made from caster sugar)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "maraschino cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Juice the lemons.",
+     "min": 3
+    },
+    {
+     "text": "Shake the bourbon, lemon juice and sugar syrup with ice, in batches.",
+     "min": 4
+    },
+    {
+     "text": "Strain over fresh ice and top each with a cherry.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

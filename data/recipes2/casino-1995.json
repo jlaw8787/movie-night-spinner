@@ -1,0 +1,512 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Clams casino",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "Stuff up to 3 hours ahead, keep chilled; grill just before serving",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "clams",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, minced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red capsicum, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "rashers bacon, cut into small pieces",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steam the clams in a covered pot until they open, discarding any that stay shut. Remove the top shells.",
+     "min": 8
+    },
+    {
+     "text": "Mix the butter with the garlic, capsicum, parsley and breadcrumbs.",
+     "min": 7
+    },
+    {
+     "text": "Top each clam with a spoon of the mix and a piece of bacon.",
+     "min": 5
+    },
+    {
+     "text": "Grill for 4 minutes until crisp.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Oysters Rockefeller",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 5,
+   "make_ahead": "Make the butter up to 1 day ahead; grill just before serving",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "aniseed liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "oysters, freshly shucked",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "rock salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, cut in wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the spinach, parsley, spring onions, butter, breadcrumbs and liqueur.",
+     "min": 8
+    },
+    {
+     "text": "Settle the oysters on a tray of rock salt and spoon over the butter.",
+     "min": 10
+    },
+    {
+     "text": "Grill on high for 3 minutes until bubbling and serve hot with lemon.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Tangiers rib eye",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 730,
+   "make_ahead": "Salt the steaks the day before",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "rib eye steaks, about 400g each",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground nutmeg",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Salt the steaks and leave uncovered on a rack in the fridge overnight.",
+     "min": 720
+    },
+    {
+     "text": "Sear in a smoking pan for 3 minutes a side, then add the butter, thyme and garlic and baste until 54C inside.",
+     "min": 10
+    },
+    {
+     "text": "Rest for 8 minutes while you wilt the spinach, squeeze it dry and simmer with the cream and nutmeg.",
+     "min": 10
+    },
+    {
+     "text": "Slice the steaks and serve with the creamed spinach.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Equal-blueberry muffins",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 22,
+   "make_ahead": "Up to 1 day airtight",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 90,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "",
+     "item": "blueberries (10 per muffin)",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the flour, sugar and baking powder.",
+     "min": 3
+    },
+    {
+     "text": "Mix the eggs, buttermilk and butter and fold into the dry mix until just combined.",
+     "min": 4
+    },
+    {
+     "text": "Spoon into 12 lined muffin cases and press exactly 10 blueberries into the top of each.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 190C for 20 minutes.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Dry martini",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "dry vermouth",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "green olives on picks",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Freeze four martini glasses for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "For each drink stir gin and vermouth over plenty of ice for 30 seconds and strain into a frozen glass.",
+     "min": 6
+    },
+    {
+     "text": "Garnish with an olive on a pick.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Steak and eggs",
+   "course": "m",
+   "extra": true,
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "sirloin steak, 2 pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "neutral oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Squeeze the grated potato and onion dry and season. Fry in oil and butter, pressed flat, until crisp on both sides to make hash browns.",
+     "min": 12
+    },
+    {
+     "text": "Sear the steaks to your liking and rest briefly.",
+     "min": 8
+    },
+    {
+     "text": "Fry the eggs any style in butter.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Short stack",
+   "course": "m",
+   "extra": true,
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "whipped butter, to serve",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "maple syrup, warmed",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the dry ingredients, then the egg, milk and melted butter, and combine until just mixed.",
+     "min": 5
+    },
+    {
+     "text": "Cook ladles of batter in a buttered pan until bubbles form, flip and cook through. Stack three per plate.",
+     "min": 12
+    },
+    {
+     "text": "Serve with whipped butter and warm syrup.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Hot coffee",
+   "course": "d",
+   "extra": true,
+   "prep_min": 2,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 40,
+     "u": "g",
+     "item": "ground coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "milk, to serve",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew a pot of filter coffee for four.",
+     "min": 5
+    },
+    {
+     "text": "Serve hot with refills.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

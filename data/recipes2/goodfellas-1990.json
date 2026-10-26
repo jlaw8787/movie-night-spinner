@@ -1,0 +1,380 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Razor-thin garlic bruschetta",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices ciabatta",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the garlic paper thin on a mandoline.",
+     "min": 5
+    },
+    {
+     "text": "Cook the garlic in the olive oil over low heat until soft and barely golden.",
+     "min": 5
+    },
+    {
+     "text": "Grill the ciabatta, rub with the cut side of the tomatoes and season with salt.",
+     "min": 8
+    },
+    {
+     "text": "Spoon over the garlic and its oil and finish with torn basil.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Copacabana prawn cocktail",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "Sauce up to 1 day ahead; assemble just before serving",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "peeled green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, half sliced, half in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "hot sauce, a few drops",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "paprika, to dust",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Poach the prawns in salted water with a slice of lemon for 2 minutes, then chill in iced water.",
+     "min": 8
+    },
+    {
+     "text": "Mix the mayonnaise, tomato sauce, Worcestershire, hot sauce and brandy.",
+     "min": 3
+    },
+    {
+     "text": "Shred the lettuce into four coupes and add the prawns.",
+     "min": 4
+    },
+    {
+     "text": "Spoon over the sauce, dust with paprika and serve with lemon wedges.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Prison gravy with three-meat meatballs",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 105,
+   "make_ahead": "Sauce up to 2 days ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "slices bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "veal mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "pecorino, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chopped parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "San Marzano tomatoes, tinned",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the bread in the milk, then mix with the minces, egg, pecorino, parsley and 1 crushed garlic clove.",
+     "min": 10
+    },
+    {
+     "text": "Roll into 16 balls and brown in olive oil.",
+     "min": 12
+    },
+    {
+     "text": "In the same pot gently cook the remaining garlic sliced razor thin and the onion, add the tomatoes and the meatballs, and simmer.",
+     "min": 93
+    },
+    {
+     "text": "Cook the spaghetti and serve with the sauce and meatballs.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Lemon ice",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 195,
+   "make_ahead": "Up to 1 day ahead, keep frozen; scrape before serving",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "lemon juice (about 6 lemons)",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the sugar, water and zest for 5 minutes, then cool.",
+     "min": 15
+    },
+    {
+     "text": "Stir in the lemon juice and pour into a shallow tray.",
+     "min": 3
+    },
+    {
+     "text": "Freeze, scraping with a fork every 30 minutes for 3 hours until light and fluffy.",
+     "min": 180
+    },
+    {
+     "text": "Serve in paper cups.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Bamboo Lounge Scotch and ginger highball",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 10,
+   "make_ahead": "Syrup up to 1 week ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "ginger, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "blended Scotch",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 480,
+     "u": "ml",
+     "item": "soda water, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag large ice cubes",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the honey, water and ginger for 5 minutes, then cool and strain.",
+     "min": 12
+    },
+    {
+     "text": "Fill four highball glasses with large ice cubes.",
+     "min": 1
+    },
+    {
+     "text": "Add Scotch, ginger syrup and lemon juice to each and stir for 10 seconds.",
+     "min": 2
+    },
+    {
+     "text": "Top with soda, stir once and finish with a curl of lemon peel.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

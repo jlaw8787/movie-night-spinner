@@ -1,0 +1,326 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Dinosaur bone breadsticks",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "Bake the day you serve",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the dough into ropes and knot both ends into bone shapes.",
+     "min": 15
+    },
+    {
+     "text": "Brush with garlic butter and sprinkle with grated parmesan.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 220C until golden.",
+     "min": 12
+    },
+    {
+     "text": "Simmer the crushed tomatoes to dip.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Gum gum watermelon, feta and mint skewers",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Assemble up to 2 hours ahead",
+   "ingredients": [
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "watermelon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "box sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the watermelon and feta into cubes.",
+     "min": 8
+    },
+    {
+     "text": "Thread onto short skewers with a mint leaf between each.",
+     "min": 10
+    },
+    {
+     "text": "Chill on a platter.",
+     "min": 30
+    },
+    {
+     "text": "Just before serving, squeeze over lime juice, drizzle with honey and add flaky salt and chilli flakes.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Manhattan hot dog cart",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sauerkraut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the sliced onions in oil.",
+     "min": 15
+    },
+    {
+     "text": "Add the tomato paste and a splash of water and cook down.",
+     "min": 8
+    },
+    {
+     "text": "Simmer the franks in water.",
+     "min": 5
+    },
+    {
+     "text": "Warm the sauerkraut and steam the buns.",
+     "min": 5
+    },
+    {
+     "text": "Fill the buns with franks, mustard, sauerkraut and onions.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Dexter's banana bread",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 70,
+   "make_ahead": "Keeps 3 days",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "ripe bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 140,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mash the bananas with 100g of the melted butter, the sugar and eggs.",
+     "min": 8
+    },
+    {
+     "text": "Fold in the flour and bicarb, then pour into a lined loaf tin.",
+     "min": 7
+    },
+    {
+     "text": "Bake at 170C.",
+     "min": 60
+    },
+    {
+     "text": "Cool, slice thick, toast and spread with the remaining butter.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Night guard thermos hot chocolate",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag marshmallows",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the milk until steaming.",
+     "min": 5
+    },
+    {
+     "text": "Whisk in the chopped chocolate, cocoa, sugar and cinnamon until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Pour into a warmed thermos to keep hot, then serve in mugs topped with marshmallows.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

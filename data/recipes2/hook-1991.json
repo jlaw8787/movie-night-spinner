@@ -1,0 +1,290 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Neverland rainbow fruit",
+   "course": "s",
+   "prep_min": 22,
+   "cook_min": 0,
+   "make_ahead": "Up to 3 hours, keep chilled",
+   "ingredients": [
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "watermelon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "rockmelon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "kiwifruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "pineapple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the watermelon, rockmelon, kiwifruit and pineapple into chunks.",
+     "min": 15
+    },
+    {
+     "text": "Arrange in rainbow rows with the blueberries.",
+     "min": 5
+    },
+    {
+     "text": "Drizzle with lime juice mixed with honey.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Tinkerbell fairy bread",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 0,
+   "make_ahead": "Make just before serving",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "hundreds and thousands",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "edible glitter, to dust",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the bread with butter right to the edges.",
+     "min": 5
+    },
+    {
+     "text": "Press face down into the hundreds and thousands and dust with edible glitter.",
+     "min": 4
+    },
+    {
+     "text": "Trim the crusts and cut into triangles.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Lost Boys feast",
+   "course": "m",
+   "prep_min": 23,
+   "cook_min": 57,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.8,
+     "u": "kg",
+     "item": "whole chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spatchcock the chicken and rub with crushed garlic, lemon zest and paprika. Chop the potatoes.",
+     "min": 20
+    },
+    {
+     "text": "Roast at 220C with the potatoes in the tray.",
+     "min": 45
+    },
+    {
+     "text": "Grill the corn cobs, turning until charred.",
+     "min": 12
+    },
+    {
+     "text": "Pile it all in the middle and eat with your hands. Bangarang.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Tick-tock crocodile cake",
+   "course": "w",
+   "prep_min": 35,
+   "cook_min": 60,
+   "make_ahead": "Up to 2 days",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 210,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "pandan extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the eggs with the sugar until thick, then fold in the flour, 60g melted butter and half the pandan.",
+     "min": 15
+    },
+    {
+     "text": "Bake in a lined tin at 175C.",
+     "min": 30
+    },
+    {
+     "text": "Cool the cake.",
+     "min": 30
+    },
+    {
+     "text": "Beat the remaining butter with the icing sugar and rest of the pandan, then cover the cake.",
+     "min": 12
+    },
+    {
+     "text": "Pipe a clock face with melted dark chocolate.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Pixie dust lemonade",
+   "course": "d",
+   "prep_min": 4,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.25,
+     "u": "l",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch edible glitter",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour the cold lemonade into a jug with the lime juice.",
+     "min": 2
+    },
+    {
+     "text": "Stir in the glitter and pour into four glasses straight away.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

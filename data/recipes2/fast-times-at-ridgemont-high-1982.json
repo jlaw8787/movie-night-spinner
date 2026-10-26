@@ -1,0 +1,352 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Spicoli's pizza bites",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "slices pepperoni",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll out the dough and cut into 16 rounds",
+     "min": 10
+    },
+    {
+     "text": "Spread with sauce and top with mozzarella and a slice of pepperoni",
+     "min": 10
+    },
+    {
+     "text": "Bake at 230C until bubbling and golden. Serve in a pizza box",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Food court pretzels with cheddar sauce",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft pretzels",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "rock salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "evaporated milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "mustard powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "American mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brush the pretzels with butter and sprinkle with salt",
+     "min": 3
+    },
+    {
+     "text": "Warm in the oven at 200C",
+     "min": 5
+    },
+    {
+     "text": "Heat the evaporated milk until steaming, take off the heat and stir in the cheddar and mustard powder until smooth",
+     "min": 7
+    },
+    {
+     "text": "Pour into paper cups and serve with the pretzels and a squeeze of mustard",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "All-American Burger",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef chuck mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sesame burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into fries and dry well",
+     "min": 10
+    },
+    {
+     "text": "Shape the mince into patties and salt them",
+     "min": 10
+    },
+    {
+     "text": "Fry the fries once at a lower heat, then again at a higher heat until golden. Salt well",
+     "min": 20
+    },
+    {
+     "text": "Grill the patties to medium and melt the cheddar on top",
+     "min": 8
+    },
+    {
+     "text": "Toast the buns and build with lettuce, tomato, onion and pickles",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Food court brown butter choc chip cookies",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 750,
+   "make_ahead": "Dough rests overnight. Baked cookies keep 3 days",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark choc chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the butter until nutty and golden, then cool",
+     "min": 15
+    },
+    {
+     "text": "Beat with the sugar, egg and vanilla",
+     "min": 5
+    },
+    {
+     "text": "Mix in the flour, bicarb, salt and choc chips",
+     "min": 5
+    },
+    {
+     "text": "Cover and chill overnight",
+     "min": 660
+    },
+    {
+     "text": "Scoop big balls onto lined trays",
+     "min": 5
+    },
+    {
+     "text": "Bake at 180C",
+     "min": 11
+    },
+    {
+     "text": "Cool on the tray",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Mall strawberry frosty",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries, hulled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Hull the strawberries",
+     "min": 5
+    },
+    {
+     "text": "Blend with the milk, sugar, vanilla and ice until frothy and thick",
+     "min": 3
+    },
+    {
+     "text": "Pour into tall glasses straight away",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

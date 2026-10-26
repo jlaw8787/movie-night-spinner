@@ -1,0 +1,360 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Strangé's cocktail meatballs",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 13,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pork and beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "clove garlic, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "grape jelly",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mince with the egg, breadcrumbs, garlic and salt.",
+     "min": 10
+    },
+    {
+     "text": "Roll into 30 small balls.",
+     "min": 10
+    },
+    {
+     "text": "Bake on a lined tray at 200C until browned.",
+     "min": 15
+    },
+    {
+     "text": "Simmer the sweet chilli sauce with the grape jelly in a wide pan until glossy.",
+     "min": 5
+    },
+    {
+     "text": "Add the meatballs and turn until coated, then serve hot on toothpicks.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Marcus's smoked salmon pinwheels",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 58,
+   "make_ahead": "Up to 1 day chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cream cheese with chopped dill and lemon zest and spread over the tortillas.",
+     "min": 8
+    },
+    {
+     "text": "Lay the smoked salmon over and roll up tightly.",
+     "min": 5
+    },
+    {
+     "text": "Wrap and chill for 1 hour.",
+     "min": 60
+    },
+    {
+     "text": "Slice into 2cm pinwheels.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Date night steak",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 74,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eye fillet steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches asparagus",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the potatoes thinly.",
+     "min": 15
+    },
+    {
+     "text": "Layer with cream in a dish and bake at 180C until tender.",
+     "min": 60
+    },
+    {
+     "text": "Sear the steaks hard in butter.",
+     "min": 6
+    },
+    {
+     "text": "Roast at 200C until the centre reaches 54C, then rest.",
+     "min": 10
+    },
+    {
+     "text": "Deglaze the pan with red wine and stock and reduce until glossy.",
+     "min": 8
+    },
+    {
+     "text": "Char the asparagus and serve with the steak and sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Sweet potato pie",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 133,
+   "make_ahead": "Up to 2 days chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "sweet potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "evaporated milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roast the sweet potatoes until soft.",
+     "min": 45
+    },
+    {
+     "text": "Line a tin with the pastry and blind bake until pale golden.",
+     "min": 10
+    },
+    {
+     "text": "Mash the sweet potato with butter, sugar, eggs, evaporated milk, nutmeg and vanilla.",
+     "min": 8
+    },
+    {
+     "text": "Pour into the case and bake at 170C.",
+     "min": 50
+    },
+    {
+     "text": "Cool.",
+     "min": 45
+    },
+    {
+     "text": "Whip the cream and spoon on top.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Strangé's French 75",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 4,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 360,
+     "u": "ml",
+     "item": "cold sparkling wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in a little warm water for a quick sugar syrup and cool, and juice the lemons.",
+     "min": 4
+    },
+    {
+     "text": "Shake the gin, lemon juice and sugar syrup with ice and strain into four flutes.",
+     "min": 3
+    },
+    {
+     "text": "Top each with cold sparkling wine and add a lemon twist.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

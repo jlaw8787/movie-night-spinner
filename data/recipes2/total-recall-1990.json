@@ -1,0 +1,346 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Mars red rock dip",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "red capsicums",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "walnuts, toasted",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "pomegranate molasses",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pinch of chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "flatbreads",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roast the capsicums over a flame or under a hot grill until black.",
+     "min": 20
+    },
+    {
+     "text": "Rest in a covered bowl, then peel and seed.",
+     "min": 10
+    },
+    {
+     "text": "Blitz with the walnuts, pomegranate molasses, garlic, cumin and chilli.",
+     "min": 3
+    },
+    {
+     "text": "Spoon into a bowl, drizzle with oil and serve with warm flatbread.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Rekall memory chips",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vinegar powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "fine salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the potatoes thin on a mandoline, rinse and dry well.",
+     "min": 13
+    },
+    {
+     "text": "Fry at 170C in batches until crisp.",
+     "min": 14
+    },
+    {
+     "text": "Toss straight away with the vinegar powder, paprika and salt so they turn red like Mars dust.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Mars colony stew",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "Up to 3 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red capsicums, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "red lentils",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "crushed tomatoes (1 tin)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "vegetable stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the onion, garlic and capsicums in the oil.",
+     "min": 10
+    },
+    {
+     "text": "Add the paprika, lentils, tomatoes and stock.",
+     "min": 3
+    },
+    {
+     "text": "Simmer until thick.",
+     "min": 25
+    },
+    {
+     "text": "Serve in bowls with yoghurt on top.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Red planet raspberry pavlova",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 150,
+   "make_ahead": "Meringue up to 1 day, top just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "frozen raspberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "fresh raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 150C. Whisk the egg whites to stiff peaks, then add 220g of the sugar a spoon at a time until glossy. Fold in the cornflour and vinegar.",
+     "min": 15
+    },
+    {
+     "text": "Spread into a 20cm round on baking paper.",
+     "min": 5
+    },
+    {
+     "text": "Drop the oven to 120C and bake, then cool in the oven.",
+     "min": 120
+    },
+    {
+     "text": "Simmer the frozen raspberries with the rest of the sugar and cool for a sauce.",
+     "min": 8
+    },
+    {
+     "text": "Top the pavlova with whipped cream, fresh raspberries, the sauce and mint.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Mars red blood orange martini",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "If blood oranges are out of season, use orange juice and a splash of grenadine",
+   "ingredients": [
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "orange liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "blood oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill four coupes. Squeeze three blood oranges for about 160ml juice and juice the lime.",
+     "min": 6
+    },
+    {
+     "text": "Shake the vodka, blood orange juice, orange liqueur and 20ml lime juice with ice.",
+     "min": 2
+    },
+    {
+     "text": "Strain into the coupes and garnish with a thin blood orange wheel.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

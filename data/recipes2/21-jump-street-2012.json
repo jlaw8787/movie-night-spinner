@@ -1,0 +1,342 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Cafeteria pizza squares",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Reheat in the oven, up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pepperoni",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Press the dough into an oiled tray right to the edges.",
+     "min": 10
+    },
+    {
+     "text": "Spread with crushed tomatoes mixed with oregano and top with mozzarella and pepperoni.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 240C until bubbling and golden.",
+     "min": 15
+    },
+    {
+     "text": "Cut into squares.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Peter Pan rehearsal quesadillas",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "large flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "pickled jalapenos",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tomato salsa",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grate the cheddar and slice the spring onions.",
+     "min": 4
+    },
+    {
+     "text": "Cover half of each tortilla with cheddar, spring onion and jalapenos, then fold over.",
+     "min": 4
+    },
+    {
+     "text": "Cook in a dry pan until crisp and melted.",
+     "min": 10
+    },
+    {
+     "text": "Cut into wedges and serve with salsa.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Prom night chicken",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 80,
+   "make_ahead": "Gratin can be made 1 day ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 450,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "chicken breasts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the potatoes thin, layer in a dish with part of the cream and the garlic, and bake at 160C.",
+     "min": 75
+    },
+    {
+     "text": "Pan-roast the chicken in the butter with thyme until cooked through.",
+     "min": 15
+    },
+    {
+     "text": "Fry the mushrooms in the same pan and add the remaining cream to make a sauce.",
+     "min": 8
+    },
+    {
+     "text": "Steam the beans and serve everything together.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Graduation cupcakes",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 45,
+   "make_ahead": "Bake a day ahead, frost on the day",
+   "ingredients": [
+    {
+     "q": 275,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 175,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "lolly buttons",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat 125g of the butter and the sugar, add the eggs, then fold in the flour, cocoa and milk.",
+     "min": 15
+    },
+    {
+     "text": "Bake 12 at 175C until springy.",
+     "min": 18
+    },
+    {
+     "text": "Cool completely.",
+     "min": 20
+    },
+    {
+     "text": "Beat the remaining butter with the icing sugar into vanilla buttercream and pipe on.",
+     "min": 10
+    },
+    {
+     "text": "Top with a square of chocolate and a lolly button.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Jenko's AP chem malt thickshake",
+   "course": "d",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "scoops chocolate ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "malted milk powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet malt balls",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate and drizzle it inside four tall glasses, then chill.",
+     "min": 15
+    },
+    {
+     "text": "Blend the milk, ice cream and malted milk powder until thick.",
+     "min": 5
+    },
+    {
+     "text": "Whip the cream.",
+     "min": 5
+    },
+    {
+     "text": "Pour into the glasses, top with whipped cream and a few crushed malt balls.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

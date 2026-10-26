@@ -1,0 +1,366 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Walley World corn dogs",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog franks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the cornmeal, flour, sugar, baking powder, egg and buttermilk into a batter",
+     "min": 8
+    },
+    {
+     "text": "Pat the franks dry and push onto sticks",
+     "min": 5
+    },
+    {
+     "text": "Heat the oil to 180C",
+     "min": 7
+    },
+    {
+     "text": "Dip the franks in batter and fry until deep golden",
+     "min": 8
+    },
+    {
+     "text": "Serve with mustard",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Family Truckster sweet and salty trail mix",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Up to 5 days in an airtight container",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "roasted peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pretzel twists",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cornflakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "chocolate buttons",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dried cranberries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter with the sugar and honey",
+     "min": 5
+    },
+    {
+     "text": "Toss with the peanuts, pretzels, cornflakes and salt on a lined tray",
+     "min": 5
+    },
+    {
+     "text": "Bake at 160C, stirring halfway",
+     "min": 15
+    },
+    {
+     "text": "Cool completely, then toss through the chocolate buttons and cranberries",
+     "min": 10
+    },
+    {
+     "text": "Pack into paper bags or a lidded box",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Cousin Eddie's Kansas barbecue",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 230,
+   "make_ahead": "Up to 2 days, reheat covered",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "beef brisket point",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the brisket into 4cm cubes",
+     "min": 10
+    },
+    {
+     "text": "Rub with smoked paprika and salt",
+     "min": 5
+    },
+    {
+     "text": "Roast at 140C",
+     "min": 180
+    },
+    {
+     "text": "Toss with barbecue sauce and brown sugar",
+     "min": 5
+    },
+    {
+     "text": "Return to the oven until sticky",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "Walley World toffee apples",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "drops red food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag fairy floss",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Push sticks into the apples",
+     "min": 3
+    },
+    {
+     "text": "Boil the sugar, water and vinegar without stirring to 150C",
+     "min": 15
+    },
+    {
+     "text": "Add the red colouring",
+     "min": 1
+    },
+    {
+     "text": "Dip and twirl each apple, then set on baking paper",
+     "min": 8
+    },
+    {
+     "text": "Serve with fairy floss",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Family Truckster strawberry lemonade",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Juice the lemons and blend most of the strawberries with the juice and syrup until smooth",
+     "min": 8
+    },
+    {
+     "text": "Strain into a jug",
+     "min": 3
+    },
+    {
+     "text": "Add the cold water and soda water and stir",
+     "min": 2
+    },
+    {
+     "text": "Pour over ice with sliced strawberries and lemon",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

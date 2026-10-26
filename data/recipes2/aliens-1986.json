@@ -1,0 +1,360 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Sulaco mess hall cornbread",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "Best warm, up to 1 day airtight",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pinch of salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C with a 20cm ovenproof skillet inside. Mix the cornmeal, flour, sugar, baking powder and salt.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the buttermilk, egg and melted butter, then stir into the dry mix.",
+     "min": 5
+    },
+    {
+     "text": "Carefully butter the hot skillet, pour in the batter and bake until golden and a skewer comes out clean.",
+     "min": 20
+    },
+    {
+     "text": "Cool briefly and cut into squares.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Bishop's knife trick breadsticks",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 12,
+   "make_ahead": "Up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 15,
+     "u": "g",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 220C and line a tray. Roll the dough into long thin sticks.",
+     "min": 15
+    },
+    {
+     "text": "Brush with oil and roll in the sesame seeds and salt.",
+     "min": 5
+    },
+    {
+     "text": "Bake until crisp and golden, then cool slightly.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Sulaco mess hall meatloaf",
+   "course": "m",
+   "prep_min": 35,
+   "cook_min": 70,
+   "make_ahead": "Loaf up to 1 day, keep chilled and reheat",
+   "ingredients": [
+    {
+     "q": 50,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 260,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "anchovy-free Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C. Soak the breadcrumbs in some of the milk.",
+     "min": 5
+    },
+    {
+     "text": "Mix with the beef and pork mince, egg, onion, Worcestershire, salt and pepper, and shape into a loaf on a lined tray.",
+     "min": 10
+    },
+    {
+     "text": "Glaze with the tomato sauce and bake until at least 75C in the centre.",
+     "min": 60
+    },
+    {
+     "text": "Meanwhile peel and chop the potatoes, boil until tender, then mash with the butter and warm milk.",
+     "min": 10
+    },
+    {
+     "text": "Rest the loaf, slice and serve with the mash.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Facehugger panna cotta",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 250,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "g",
+     "item": "gelatine leaves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "vanilla bean",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "candied orange peel strips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "neutral oil, for the moulds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the gelatine leaves in cold water and lightly oil four small round moulds.",
+     "min": 5
+    },
+    {
+     "text": "Warm the cream, milk, sugar and vanilla seeds until steaming, without boiling.",
+     "min": 8
+    },
+    {
+     "text": "Squeeze the gelatine dry and stir in until dissolved, then divide between the moulds.",
+     "min": 5
+    },
+    {
+     "text": "Refrigerate until set.",
+     "min": 240
+    },
+    {
+     "text": "Dip each mould briefly in warm water, turn out and fan the orange peel around as legs.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Sulaco condensed milk iced coffee",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 960,
+   "make_ahead": "Cold brew keeps 3 days in the fridge",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "coarsely ground dark roast coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin sweetened condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ground cinnamon, a pinch",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "The night before, stir the coffee into the cold water, cover and refrigerate for 12 to 16 hours.",
+     "min": 960
+    },
+    {
+     "text": "Strain through a paper filter.",
+     "min": 10
+    },
+    {
+     "text": "Spoon condensed milk into four tall glasses, fill with ice, pour in the cold brew and stir until creamy.",
+     "min": 4
+    },
+    {
+     "text": "Dust with cinnamon.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

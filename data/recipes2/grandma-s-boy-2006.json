@@ -1,0 +1,422 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Grandma's cheddar and chive cheese ball",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 55,
+   "make_ahead": "Up to 2 days, keep wrapped and chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "vintage cheddar, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "pecans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "water crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "celery sticks, cut into batons",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the cream cheese, cheddar, Worcestershire, garlic powder and most of the chives until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Shape into a ball and wrap in cling film. Chill until firm.",
+     "min": 60
+    },
+    {
+     "text": "Toast the pecans in a dry pan, chop finely and mix with the remaining chives.",
+     "min": 8
+    },
+    {
+     "text": "Roll the cheese ball in the nuts and serve with crackers and celery.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Brainasium game tester pizza scrolls",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sliced pepperoni",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "marinara sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the dough on a floured bench into a large rectangle.",
+     "min": 5
+    },
+    {
+     "text": "Spread with pizza sauce and scatter with pepperoni, mozzarella and oregano.",
+     "min": 4
+    },
+    {
+     "text": "Roll up tightly from the long side and cut into 12 slices. Pack into a greased 24cm tin.",
+     "min": 8
+    },
+    {
+     "text": "Brush with the melted butter and garlic, then bake at 200C until golden.",
+     "min": 20
+    },
+    {
+     "text": "Warm the marinara and serve for dunking.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Grandma's glazed meatloaf with mash",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 76,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cider vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the breadcrumbs in some of the milk, then mix with the minces, onion, egg, Worcestershire, salt and pepper.",
+     "min": 8
+    },
+    {
+     "text": "Press into a lined loaf tin. Mix the tomato sauce, sugar and vinegar and spread over the top.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 180C, then rest.",
+     "min": 60
+    },
+    {
+     "text": "Boil the potatoes until tender, then mash with most of the butter and the rest of the milk.",
+     "min": 20
+    },
+    {
+     "text": "Cook the peas and toss with the remaining butter. Slice the meatloaf and serve with mash and peas.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Grandma's cinnamon tea cake",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream, whipped",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat most of the butter and most of the sugar until pale, then beat in the eggs and vanilla.",
+     "min": 8
+    },
+    {
+     "text": "Fold in the flour alternately with the milk and spread into a lined 20cm round tin.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 180C until a skewer comes out clean.",
+     "min": 32
+    },
+    {
+     "text": "While hot, brush with the remaining melted butter and sprinkle with the remaining sugar mixed with cinnamon.",
+     "min": 3
+    },
+    {
+     "text": "Serve warm in wedges with whipped cream.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Lilly, Bea and Grace's peach iced tea",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "peach nectar",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, 1 juiced and 1 sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "peach, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags with the sugar in boiling water.",
+     "min": 5
+    },
+    {
+     "text": "Remove the bags, cool, then chill.",
+     "min": 60
+    },
+    {
+     "text": "Stir in the peach nectar and lemon juice.",
+     "min": 2
+    },
+    {
+     "text": "Fill glasses with ice and peach slices, pour over the tea and garnish with mint and lemon wheels.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

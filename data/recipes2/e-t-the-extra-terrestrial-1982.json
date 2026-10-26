@@ -1,0 +1,262 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Peanut butter candy trail",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 45,
+   "make_ahead": "Up to 3 days, airtight in the fridge",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "coloured candy melts",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the peanut butter, icing sugar and soft butter until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Roll into small discs and chill until firm.",
+     "min": 30
+    },
+    {
+     "text": "Melt the candy melts gently, dip each disc and set on baking paper.",
+     "min": 15
+    },
+    {
+     "text": "Lay them in a trail across the table.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Alphabet crackers",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cold butter, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pinch of salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cold water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C. Pulse the cheddar, butter, flour and salt until it looks like crumbs.",
+     "min": 5
+    },
+    {
+     "text": "Add a splash of water and pulse until it forms a dough.",
+     "min": 2
+    },
+    {
+     "text": "Roll thin and cut into letters with small cutters.",
+     "min": 13
+    },
+    {
+     "text": "Bake on lined trays until crisp and golden.",
+     "min": 12
+    },
+    {
+     "text": "Cool on the trays so they crisp up.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Family pizza night",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pepperoni",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to its highest setting with a steel or tray inside.",
+     "min": 15
+    },
+    {
+     "text": "Stretch the dough into two thin bases.",
+     "min": 5
+    },
+    {
+     "text": "Spread with pizza sauce and top with the mozzarella and pepperoni.",
+     "min": 5
+    },
+    {
+     "text": "Bake until the crust is blistered and the cheese is bubbling.",
+     "min": 8
+    },
+    {
+     "text": "Cut into squares for the whole family.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Homemade peanut butter cups",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 90,
+   "make_ahead": "Up to 5 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "milk chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate gently.",
+     "min": 5
+    },
+    {
+     "text": "Spoon a little into 12 cupcake liners, spreading up the sides, and chill until set.",
+     "min": 30
+    },
+    {
+     "text": "Mix the peanut butter with the icing sugar and put a spoon in each cup.",
+     "min": 8
+    },
+    {
+     "text": "Cover with the rest of the chocolate and chill until set.",
+     "min": 60
+    }
+   ]
+  },
+  {
+   "n": "Fridge raid root beer floats",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Chill the glasses first, assemble at serving",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "root beer",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chocolate syrup",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill four tall glasses in the freezer.",
+     "min": 10
+    },
+    {
+     "text": "Add two scoops of ice cream to each glass.",
+     "min": 3
+    },
+    {
+     "text": "Pour the cold root beer slowly down the side so the foam rises without spilling over.",
+     "min": 2
+    },
+    {
+     "text": "Drizzle with chocolate syrup and serve with long spoons and straws.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

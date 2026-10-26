@@ -1,0 +1,338 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Talokan seafood tostadas",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 25,
+   "make_ahead": "Up to 1 day, but add the prawns to the lime juice fresh",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "green prawns, peeled and diced",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "coriander leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "avocados",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "corn tostadas",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cover the prawns with lime juice.",
+     "min": 5
+    },
+    {
+     "text": "Leave until opaque, then drain and toss with the onion and coriander.",
+     "min": 20
+    },
+    {
+     "text": "Spread smashed avocado on the tostadas and pile the prawns on top just before serving.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Heart-shaped herb plantain chips",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "green plantains",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "lime juice",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the plantains and slice very thin.",
+     "min": 10
+    },
+    {
+     "text": "Fry at 180C in batches until crisp and golden, then salt well.",
+     "min": 12
+    },
+    {
+     "text": "Whisk the peanut butter with warm water, chilli and lime to a smooth dip and serve alongside.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Mayan pibil pork",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 250,
+   "make_ahead": "Up to 1 day, pibil reheats well",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "pork shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "achiote paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "banana leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the achiote paste with the orange and two limes' juice and rub over the pork.",
+     "min": 10
+    },
+    {
+     "text": "Wrap the pork in banana leaves.",
+     "min": 5
+    },
+    {
+     "text": "Roast covered at 150C until it falls apart.",
+     "min": 240
+    },
+    {
+     "text": "Pickle the onion in lime juice while the pork cooks.",
+     "min": 10
+    },
+    {
+     "text": "Shred the pork and serve in warm tortillas with the pickled onion.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "K'uk'ulkan coconut flan",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 700,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 395,
+     "u": "g",
+     "item": "condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "toasted coconut flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, zested",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the sugar in a pan until deep amber and pour into a 20cm round dish.",
+     "min": 8
+    },
+    {
+     "text": "Whisk the eggs, coconut milk, condensed milk and vanilla and pour over the caramel.",
+     "min": 5
+    },
+    {
+     "text": "Sit the dish in a roasting tin of hot water and bake at 160C until just set.",
+     "min": 50
+    },
+    {
+     "text": "Cool, then chill overnight.",
+     "min": 640
+    },
+    {
+     "text": "Run a knife round the edge, turn out and top with toasted coconut and lime zest.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Talokan coconut and lime agua fresca",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "coconut water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the coconut water, coconut, lime juice and sugar until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Strain through a fine sieve, pressing hard.",
+     "min": 5
+    },
+    {
+     "text": "Chill for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Pour into glasses of ice and garnish with lime wheels and mint.",
+     "min": 0
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,352 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Green Place seed crackers",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 90,
+   "make_ahead": "Keeps 1 week airtight",
+   "ingredients": [
+    {
+     "q": 50,
+     "u": "g",
+     "item": "sunflower seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "pumpkin seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "linseeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "chia seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix all the seeds, oats and salt with the water.",
+     "min": 5
+    },
+    {
+     "text": "Rest for 30 minutes so the chia and linseeds thicken it.",
+     "min": 30
+    },
+    {
+     "text": "Spread thin on a lined tray.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 160C for 1 hour, until crisp. Break into shards.",
+     "min": 60
+    }
+   ]
+  },
+  {
+   "n": "Wasteland lizard skewers",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Chicken can marinate up to 1 day",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the chicken into strips and rub with the paprika, cumin and chilli. Thread onto skewers.",
+     "min": 15
+    },
+    {
+     "text": "Grill hot until blackened at the edges.",
+     "min": 10
+    },
+    {
+     "text": "Mix the yoghurt with the garlic and salt for a dip.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Citadel desert flatbread feast",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 315,
+   "make_ahead": "Lamb up to 1 day ahead, reheat covered",
+   "ingredients": [
+    {
+     "q": 1.8,
+     "u": "kg",
+     "item": "lamb shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "harissa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin chickpeas, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tahini",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red capsicums",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "flatbreads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the lamb with the harissa, garlic and cumin.",
+     "min": 10
+    },
+    {
+     "text": "Roast covered at 150C for 5 hours until it pulls apart.",
+     "min": 300
+    },
+    {
+     "text": "Blitz the chickpeas with the tahini, a splash of water and salt into hummus.",
+     "min": 8
+    },
+    {
+     "text": "Char the capsicums over a flame, peel and slice.",
+     "min": 10
+    },
+    {
+     "text": "Blister the flatbreads in a hot pan and serve everything together.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Desert date bars",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 60,
+   "make_ahead": "Keeps 1 week chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "medjool dates, pitted",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch sea salt flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the dates, oats, almonds and honey until sticky.",
+     "min": 5
+    },
+    {
+     "text": "Press firmly into a lined tray.",
+     "min": 5
+    },
+    {
+     "text": "Melt the chocolate and pour over. Sprinkle with sea salt.",
+     "min": 5
+    },
+    {
+     "text": "Chill until set, then cut into bars.",
+     "min": 60
+    }
+   ]
+  },
+  {
+   "n": "Aqua Cola cucumber lime cooler",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Muddle the cucumber, limes, mint and sugar in two big jugs until fragrant.",
+     "min": 8
+    },
+    {
+     "text": "Fill with ice and top with cold sparkling water.",
+     "min": 3
+    },
+    {
+     "text": "Stir and pour freely for everyone.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

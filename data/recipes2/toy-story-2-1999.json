@@ -1,0 +1,320 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Al's cheese puffs",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 28,
+   "make_ahead": "Up to 1 day, reheat to crisp",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "vintage cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "gruyère",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the water with the butter, beat in the flour and cook a minute.",
+     "min": 8
+    },
+    {
+     "text": "Cool, beat in the eggs, then the grated cheeses.",
+     "min": 10
+    },
+    {
+     "text": "Pipe small rounds and bake at 200C until puffed.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Bullseye's caramel apple wedges",
+   "course": "s",
+   "prep_min": 8,
+   "cook_min": 26,
+   "make_ahead": "Up to 3 hours",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caramels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "roasted peanuts",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the caramels with the cream until smooth.",
+     "min": 6
+    },
+    {
+     "text": "Cut the apples into wedges and pat dry. Crush the peanuts.",
+     "min": 8
+    },
+    {
+     "text": "Dip the wedges halfway and roll in peanuts, then set on baking paper in the fridge.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Prospector's chilli",
+   "course": "m",
+   "prep_min": 17,
+   "cook_min": 220,
+   "make_ahead": "Up to 3 days, better the next day",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "beef chuck",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "chipotles in adobo",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tins crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tins kidney beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet cornbread mix",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the beef, onion and garlic.",
+     "min": 15
+    },
+    {
+     "text": "Brown the beef in batches.",
+     "min": 15
+    },
+    {
+     "text": "Add the onion, garlic, chipotles and cumin, then the tomatoes and drained beans. Braise until tender.",
+     "min": 180
+    },
+    {
+     "text": "Bake the cornbread as the packet says.",
+     "min": 25
+    },
+    {
+     "text": "Serve with sour cream and squares of cornbread.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Jessie's yodelling cookies",
+   "course": "w",
+   "prep_min": 37,
+   "cook_min": 38,
+   "make_ahead": "Dough up to 2 days",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg white",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "red food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar with the egg, then mix in the flour.",
+     "min": 10
+    },
+    {
+     "text": "Chill the dough.",
+     "min": 30
+    },
+    {
+     "text": "Roll and cut into cowboy hats and boots.",
+     "min": 12
+    },
+    {
+     "text": "Bake at 180C.",
+     "min": 8
+    },
+    {
+     "text": "Mix the icing sugar with the egg white, tint some red and ice the cooled cookies in cowgirl colours.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Jessie's yee-haw sarsaparilla float",
+   "course": "d",
+   "prep_min": 9,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "caramel sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1.25,
+     "u": "l",
+     "item": "sarsaparilla",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "hat-shaped biscuits",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill four tall glasses.",
+     "min": 15
+    },
+    {
+     "text": "Drizzle caramel sauce down the inside of each glass and add ice cream.",
+     "min": 4
+    },
+    {
+     "text": "Pour sarsaparilla slowly down the side, letting the foam settle before topping up.",
+     "min": 3
+    },
+    {
+     "text": "Perch a biscuit on each rim and serve with long spoons and straws.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

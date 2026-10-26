@@ -1,0 +1,378 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Shagadelic devilled eggs with bacon",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lower the eggs into boiling water and cook, then cool in iced water and peel.",
+     "min": 15
+    },
+    {
+     "text": "Halve the eggs and scoop out the yolks. Mash with the mayonnaise, mustard, vinegar and salt until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Grill the bacon until crisp and crumble finely.",
+     "min": 5
+    },
+    {
+     "text": "Spoon the yolk mix back into the whites, dust with paprika and top with bacon and chives.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Sixties cheese and pineapple hedgehog",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "rockmelon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "vintage cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "pineapple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cabana",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar cocktail onions",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "box toothpicks",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the rockmelon into pieces and place one piece cut-side down on a platter as the body, with cloves for eyes.",
+     "min": 5
+    },
+    {
+     "text": "Cut the cheddar and pineapple into cubes and slice the cabana into rounds.",
+     "min": 10
+    },
+    {
+     "text": "Thread toothpicks with cheese, pineapple and either a cocktail onion or cabana.",
+     "min": 7
+    },
+    {
+     "text": "Push them all over the rockmelon until covered in spikes.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Dr. Evil's one million dollar steak Diane",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 16,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "frozen shoestring fries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sirloin steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "button mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "shallot, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch watercress",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the fries at 220C until crisp.",
+     "min": 20
+    },
+    {
+     "text": "Bat out the steaks to about 1cm thick, season and sear in a very hot oiled pan, then rest on a plate.",
+     "min": 8
+    },
+    {
+     "text": "In the same pan melt the butter and fry the mushrooms and shallot.",
+     "min": 3
+    },
+    {
+     "text": "Add the brandy and let it bubble off, then add the Worcestershire, mustard and cream and simmer.",
+     "min": 3
+    },
+    {
+     "text": "Pour the sauce over the steaks and serve with the fries and watercress.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Union Jack berry trifle",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 60,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jam rollette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "sweet sherry",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "thick vanilla custard",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the jam rollette and line a large glass bowl. Drizzle with the sherry.",
+     "min": 5
+    },
+    {
+     "text": "Scatter over the raspberries and pour over the custard.",
+     "min": 3
+    },
+    {
+     "text": "Chill until the custard firms up.",
+     "min": 60
+    },
+    {
+     "text": "Whip the cream with the icing sugar to soft peaks and spread over the top.",
+     "min": 5
+    },
+    {
+     "text": "Lay strawberries in a cross and diagonals, then fill the gaps with blueberries to make a Union Jack.",
+     "min": 12
+    }
+   ]
+  },
+  {
+   "n": "Groovy baby gin martini",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "dry vermouth",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar green olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the martini glasses in the freezer.",
+     "min": 20
+    },
+    {
+     "text": "Fill a jug with ice, add the gin and vermouth and stir steadily until very cold.",
+     "min": 1
+    },
+    {
+     "text": "Strain into the glasses. Twist a strip of lemon zest over each, or add an olive on a pick.",
+     "min": 4
+    }
+   ]
+  }
+ ]
+}

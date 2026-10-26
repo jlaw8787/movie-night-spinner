@@ -1,0 +1,356 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Alpa Chino's peanut bars",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 55,
+   "make_ahead": "Keeps 1 week in the fridge",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "roasted peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "milk chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the sugar, golden syrup and butter together for 3 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the peanuts and press into a lined tray.",
+     "min": 5
+    },
+    {
+     "text": "Pour over the melted milk chocolate.",
+     "min": 5
+    },
+    {
+     "text": "Chill until firm, then cut into bars.",
+     "min": 45
+    }
+   ]
+  },
+  {
+   "n": "Four Leaf's jungle banh mi bites",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 20,
+   "make_ahead": "Pickles up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "daikon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "small baguettes",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pork pate",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "char siu pork",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the carrot and daikon into matchsticks and quick-pickle in the vinegar and sugar.",
+     "min": 20
+    },
+    {
+     "text": "Split the baguettes and spread with pate.",
+     "min": 5
+    },
+    {
+     "text": "Fill with char siu, drained pickles, cucumber, coriander and chilli.",
+     "min": 10
+    },
+    {
+     "text": "Cut into bites.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Flaming Dragon green curry",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Curry up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "green curry paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thighs, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "fish sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "palm sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Thai eggplant",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch Thai basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the curry paste in the thick top of the coconut milk until it splits.",
+     "min": 5
+    },
+    {
+     "text": "Add the chicken, the rest of the coconut milk, fish sauce, palm sugar and eggplant. Simmer.",
+     "min": 15
+    },
+    {
+     "text": "Cook the rice by the absorption method.",
+     "min": 15
+    },
+    {
+     "text": "Stir through the Thai basil and serve over rice.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Mango sticky rice",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 735,
+   "make_ahead": "Rice soaks overnight",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "glutinous rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the rice overnight in cold water.",
+     "min": 600
+    },
+    {
+     "text": "Drain and steam until tender and glossy.",
+     "min": 25
+    },
+    {
+     "text": "Stir in warm sweetened coconut milk with a pinch of salt and rest.",
+     "min": 20
+    },
+    {
+     "text": "Slice the mangoes, spoon a little salty coconut cream alongside and scatter with sesame seeds.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Booty Sweat passionfruit ginger fizz",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 25,
+   "make_ahead": "Syrup up to 1 week ahead",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "piece fresh ginger, 5cm",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the sugar, water and sliced ginger for 5 minutes and cool.",
+     "min": 25
+    },
+    {
+     "text": "Mix the syrup with passionfruit pulp and lime juice.",
+     "min": 5
+    },
+    {
+     "text": "Fill four tall glasses with ice, divide the mix between them and top with soda water.",
+     "min": 3
+    },
+    {
+     "text": "Stir and add a mint sprig.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

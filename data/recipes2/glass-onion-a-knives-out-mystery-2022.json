@@ -1,0 +1,374 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Greek island mezze",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "chickpeas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tahini",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic bulb",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "kalamata olives",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pita breads",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the drained chickpeas with the tahini, the garlic clove, lemon and ice water until smooth.",
+     "min": 2
+    },
+    {
+     "text": "Mix the Greek yoghurt with half a grated cucumber, garlic and salt for tzatziki.",
+     "min": 4
+    },
+    {
+     "text": "Lay both out with the kalamata olives, cherry tomatoes and the warm pita breads.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Disruptors' hot sauce wings",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "red chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch celery",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "blue cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the chicken wings with the baking powder and salt and bake at 220C for 45 minutes, turning once.",
+     "min": 45
+    },
+    {
+     "text": "Blitz the red chillies with the garlic cloves, the vinegar and the honey, simmer 5 minutes and toss through the wings.",
+     "min": 5
+    },
+    {
+     "text": "Serve with celery and the blue cheese stirred into the sour cream.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Puzzle box lamb souvlaki",
+   "course": "m",
+   "prep_min": 5,
+   "cook_min": 128,
+   "make_ahead": "Marinate up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "lamb leg",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic bulb",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pita breads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the lamb leg into cubes and marinate 2 hours with the juice of the lemon, the garlic cloves, the dried oregano and the oil.",
+     "min": 120
+    },
+    {
+     "text": "Thread onto skewers and grill 8 minutes, turning.",
+     "min": 8
+    },
+    {
+     "text": "Serve in the warm pitas with the Greek yoghurt mixed with grated cucumber, plus tomato and onion.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Duke's pineapple upside-down cake",
+   "course": "w",
+   "prep_min": 11,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 185,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 440,
+     "u": "g",
+     "item": "tin pineapple rings",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "glacé cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "vanilla extract, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C.",
+     "min": 3
+    },
+    {
+     "text": "Melt the butter with the brown sugar in a 23cm cake tin and lay the pineapple rings on top with a glacé cherry in.",
+     "min": 3
+    },
+    {
+     "text": "Beat the soft butter with the caster sugar, add the eggs and the vanilla, then fold in the self-raising flour and the milk.",
+     "min": 5
+    },
+    {
+     "text": "Spread over the fruit and bake 45 minutes.",
+     "min": 45
+    },
+    {
+     "text": "Rest 5 minutes, turn out and serve warm with whipped cream.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Alpha poolside spiked kombucha",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "l",
+     "item": "ginger kombucha",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill the tall glasses with ice, mint leaves and a squeeze of lime.",
+     "min": 4
+    },
+    {
+     "text": "Pour the cold ginger kombucha into each and add the vodka to the glasses of anyone who wants it spiked.",
+     "min": 2
+    },
+    {
+     "text": "Stir once and serve straight away.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

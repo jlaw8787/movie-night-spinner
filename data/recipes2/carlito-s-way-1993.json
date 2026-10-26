@@ -1,0 +1,718 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bacalaitos",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 1470,
+   "make_ahead": "Soak the cod 1 day ahead; fry just before serving",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "salt cod",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful coriander, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "neutral oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "flaky salt, to finish",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the salt cod in cold water for 24 hours, changing the water three times, then drain and flake.",
+     "min": 1440
+    },
+    {
+     "text": "Whisk the flour, baking powder, water, garlic and coriander into a loose batter and fold in the cod.",
+     "min": 8
+    },
+    {
+     "text": "Fry wide flat spoonfuls in 180C oil in batches until golden and lacy.",
+     "min": 15
+    },
+    {
+     "text": "Drain and salt.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Tostones",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Fry once up to 2 hours ahead; second fry just before serving",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "green plantains",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "neutral oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "flaky salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the plantains and cut into 3cm chunks.",
+     "min": 8
+    },
+    {
+     "text": "Fry at 160C for 4 minutes until soft.",
+     "min": 6
+    },
+    {
+     "text": "Smash flat with a heavy glass and fry again at 190C until crisp. Salt well.",
+     "min": 8
+    },
+    {
+     "text": "Mix the garlic, lime juice and olive oil and spoon over.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Pernil",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 360,
+   "make_ahead": "Marinate overnight; cooked pork reheats well",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "pork shoulder, skin on",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin pigeon peas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "onion, finely diced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stab the pork all over and rub with garlic, oregano, salt and vinegar. Marinate overnight in the fridge.",
+     "min": 15
+    },
+    {
+     "text": "Roast skin up at 160C for 5 hours.",
+     "min": 300
+    },
+    {
+     "text": "Raise the oven to 230C for 20 minutes to crackle the skin.",
+     "min": 20
+    },
+    {
+     "text": "Cook the rice with the drained pigeon peas, stock and onion until tender, and serve alongside the sliced pork.",
+     "min": 25
+    }
+   ]
+  },
+  {
+   "n": "Paradise flan",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 640,
+   "make_ahead": "Make 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 395,
+     "u": "g",
+     "item": "tin condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 270,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "evaporated milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the sugar in a pan until deep amber and pour into a ring tin.",
+     "min": 8
+    },
+    {
+     "text": "Blend the condensed milk, coconut milk, evaporated milk and eggs and pour over the caramel.",
+     "min": 7
+    },
+    {
+     "text": "Bake in a water bath at 160C for 50 minutes until just set.",
+     "min": 50
+    },
+    {
+     "text": "Chill overnight, run a knife around the edge and turn out onto a plate.",
+     "min": 600
+    }
+   ]
+  },
+  {
+   "n": "El Paraiso dark rum pineapple punch",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 5,
+   "make_ahead": "Syrup up to 1 week ahead",
+   "ingredients": [
+    {
+     "q": 50,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "dark rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 360,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "lime juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "aromatic bitters, 4 dashes",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "nutmeg, to grate",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, in wheels",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the sugar, water and cinnamon for 3 minutes, then cool.",
+     "min": 8
+    },
+    {
+     "text": "In a jug, stir the rum, pineapple juice, lime juice, 40ml of the syrup and bitters.",
+     "min": 2
+    },
+    {
+     "text": "Pour over ice into four tall glasses, grate nutmeg on top and garnish with a lime wheel.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Empanadillas",
+   "course": "s",
+   "extra": true,
+   "prep_min": 35,
+   "cook_min": 20,
+   "make_ahead": "Fill and fold up to 1 day ahead; bake or fry on the day",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, minced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "green olives, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "raisins",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the mince with the onion and garlic in the olive oil, add tomato paste, olives, raisins and cumin, and cook until thick. Cool.",
+     "min": 18
+    },
+    {
+     "text": "Cut 12 rounds from the pastry and spoon in the picadillo.",
+     "min": 10
+    },
+    {
+     "text": "Fold into half moons, crimp with a fork and brush with egg.",
+     "min": 7
+    },
+    {
+     "text": "Bake at 200C until golden.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Arroz con pollo",
+   "course": "m",
+   "extra": true,
+   "prep_min": 20,
+   "cook_min": 33,
+   "make_ahead": "Best made on the day; leftovers keep 2 days chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thigh fillets, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, minced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "sofrito",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "green olives",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken in the olive oil and set aside.",
+     "min": 10
+    },
+    {
+     "text": "Soften the onion, capsicum and garlic, then stir in the sofrito, turmeric and rice.",
+     "min": 8
+    },
+    {
+     "text": "Add the stock, olives and chicken, cover and cook gently until the rice is tender.",
+     "min": 25
+    },
+    {
+     "text": "Rest covered for 10 minutes and fluff with a fork.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Bistec encebollado",
+   "course": "m",
+   "extra": true,
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Onions up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "thin sirloin steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin red beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the steaks in garlic, vinegar, salt and pepper for 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Cook the rice and warm the red beans.",
+     "min": 20
+    },
+    {
+     "text": "Soften the onions in some of the oil with a splash of vinegar.",
+     "min": 12
+    },
+    {
+     "text": "Sear the steaks in a hot pan for 1 to 2 minutes a side and serve under the onions.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Piña colada",
+   "course": "d",
+   "extra": true,
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "white rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "cream of coconut",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 480,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cups crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the rum, cream of coconut, pineapple juice and ice until smooth.",
+     "min": 3
+    },
+    {
+     "text": "Pour into tall glasses.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Tembleque",
+   "course": "w",
+   "extra": true,
+   "prep_min": 10,
+   "cook_min": 255,
+   "make_ahead": "Make up to 2 days ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ground cinnamon, to dust",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the coconut milk, cornflour, sugar and salt in a pot.",
+     "min": 3
+    },
+    {
+     "text": "Cook over medium heat, stirring, until it thickens and boils.",
+     "min": 10
+    },
+    {
+     "text": "Pour into a wetted mould and chill until set, at least 4 hours.",
+     "min": 240
+    },
+    {
+     "text": "Turn out and dust with cinnamon.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

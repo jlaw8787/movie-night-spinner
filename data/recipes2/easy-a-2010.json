@@ -1,0 +1,380 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Scarlet A pita crisps",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Dip up to 2 days, crisps up to 1 day",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "pita breads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "sumac",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "beetroot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Greek yoghurt, plus extra to swirl",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roast the whole beetroot at 200C until tender, then cool and peel.",
+     "min": 30
+    },
+    {
+     "text": "Cut the pita into A shapes, brush with oil and dust with sumac. Bake at 200C until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Blend the beetroot with the garlic and yoghurt. Swirl a little extra yoghurt through the top and serve with the crisps.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Ojai citrus olives",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "Up to 3 days, keep chilled and warm to serve",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "green olives",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "kalamata olives",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, peeled into strips",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, peeled into strips",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "fennel seeds",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the garlic and peel the citrus into strips.",
+     "min": 10
+    },
+    {
+     "text": "Warm the olives gently in the oil with the peel, garlic, chilli and fennel seeds. Tip into a bowl and serve warm with toothpicks.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Penderghast takeaway pad thai",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Make fresh",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "flat rice noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "firm tofu, cubed",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tamarind paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "fish sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bean sprouts",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "roasted peanuts, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, cut into wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the noodles in warm water until pliable, then drain.",
+     "min": 10
+    },
+    {
+     "text": "Fry the tofu and garlic in the oil, push aside and scramble the eggs.",
+     "min": 6
+    },
+    {
+     "text": "Add the noodles, tamarind, fish sauce and brown sugar and toss until the noodles are tender.",
+     "min": 6
+    },
+    {
+     "text": "Finish with bean sprouts, peanuts and a squeeze of lime.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Red velvet whoopie pies",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Up to 2 days, filled the day you serve",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "red food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the dry ingredients, then the egg, oil, buttermilk and colouring into a thick batter.",
+     "min": 10
+    },
+    {
+     "text": "Pipe rounds onto lined trays and bake at 180C. Cool completely.",
+     "min": 12
+    },
+    {
+     "text": "Beat the cream cheese with the icing sugar until smooth.",
+     "min": 8
+    },
+    {
+     "text": "Sandwich the cooled rounds with the filling.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Sunshine strawberry lemonade",
+   "course": "d",
+   "prep_min": 7,
+   "cook_min": 15,
+   "make_ahead": "Syrup up to 3 days, mix fresh",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "strawberries, hulled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in the hot water and cool the syrup.",
+     "min": 15
+    },
+    {
+     "text": "Blitz most of the strawberries with the syrup and strain into a jug.",
+     "min": 3
+    },
+    {
+     "text": "Add the lemon juice and sparkling water and stir.",
+     "min": 2
+    },
+    {
+     "text": "Fill tall glasses with ice, sliced strawberries and mint, then pour in the lemonade.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

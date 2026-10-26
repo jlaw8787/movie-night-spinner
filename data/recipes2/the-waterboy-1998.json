@@ -1,0 +1,434 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bayou hush puppies with Cajun remoulade",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "wholegrain mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Cajun seasoning",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cornmeal, flour, baking powder, salt and cayenne. Whisk in the egg and buttermilk, then fold in the spring onions.",
+     "min": 5
+    },
+    {
+     "text": "Rest the batter.",
+     "min": 10
+    },
+    {
+     "text": "Stir together the mayonnaise, mustard, pickles, Cajun seasoning and lemon juice for the remoulade.",
+     "min": 3
+    },
+    {
+     "text": "Heat the oil to 180C and drop in heaped teaspoons of batter. Fry, turning, until deep golden, working in batches.",
+     "min": 10
+    },
+    {
+     "text": "Drain on paper towel and serve hot with the remoulade.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Bourbon Bowl Cajun butter prawns",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "Cajun seasoning",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette, sliced",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and devein the prawns, leaving the tails on, and toss with the Cajun seasoning.",
+     "min": 12
+    },
+    {
+     "text": "Sear the prawns in a very hot pan with oil in a single layer, turning once.",
+     "min": 4
+    },
+    {
+     "text": "Drop the heat, add the butter and garlic and swirl until foaming.",
+     "min": 2
+    },
+    {
+     "text": "Squeeze over the lemon, scatter with parsley and serve from the pan with the baguette.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Mama Boucher's chicken and sausage gumbo",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 75,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green capsicum, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thigh fillets, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "smoked sausage, sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "Cajun seasoning",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "okra, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "hot sauce, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the flour into the oil in a heavy pot over medium-low heat until the roux turns dark brown like chocolate.",
+     "min": 20
+    },
+    {
+     "text": "Add the onion, celery and capsicum and cook until soft.",
+     "min": 5
+    },
+    {
+     "text": "Add the chicken, sausage, Cajun seasoning and stock. Simmer.",
+     "min": 60
+    },
+    {
+     "text": "Add the okra and cook until tender. Meanwhile steam the rice.",
+     "min": 10
+    },
+    {
+     "text": "Serve over rice with spring onion and hot sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Bourbon Bowl pecan pralines",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "Up to 5 days, keep in an airtight container",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "pecans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the pecans in a dry pan.",
+     "min": 4
+    },
+    {
+     "text": "Combine the sugars, cream and butter in a heavy saucepan and stir over medium heat until boiling.",
+     "min": 5
+    },
+    {
+     "text": "Cook without stirring to 115C on a sugar thermometer.",
+     "min": 8
+    },
+    {
+     "text": "Off the heat, add the vanilla and pecans and beat with a wooden spoon until thick and cloudy.",
+     "min": 3
+    },
+    {
+     "text": "Quickly spoon rounds onto baking paper and leave to set.",
+     "min": 30
+    }
+   ]
+  },
+  {
+   "n": "High quality H2O cucumber lime cooler",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes, juiced, plus extra for wheels",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "sparkling water, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the honey into hot water until dissolved, then cool.",
+     "min": 8
+    },
+    {
+     "text": "Peel the cucumber into thin ribbons.",
+     "min": 2
+    },
+    {
+     "text": "Muddle the lime juice, mint and honey syrup in a jug.",
+     "min": 2
+    },
+    {
+     "text": "Fill glasses with ice and cucumber, add the sparkling water to the jug, stir gently and pour over. Garnish with lime wheels and mint.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

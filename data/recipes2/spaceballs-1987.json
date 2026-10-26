@@ -1,0 +1,306 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Ludicrous speed pretzels",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 30,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "",
+     "item": "pretzel rods",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "coloured candy melts",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the dark chocolate.",
+     "min": 5
+    },
+    {
+     "text": "Dip each pretzel two-thirds of the way and set on baking paper.",
+     "min": 10
+    },
+    {
+     "text": "Melt the candy melts and pipe stripes across in two directions for plaid.",
+     "min": 10
+    },
+    {
+     "text": "Let set.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Merchandising snack mix",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 40,
+   "make_ahead": "Up to 5 days, airtight",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cereal squares",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pretzels",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mini marshmallows",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 140C. Melt the butter with the honey.",
+     "min": 3
+    },
+    {
+     "text": "Toss the cereal, pretzels and peanuts with the honey butter.",
+     "min": 4
+    },
+    {
+     "text": "Bake, stirring once.",
+     "min": 20
+    },
+    {
+     "text": "Cool completely, then toss through the marshmallows.",
+     "min": 13
+    }
+   ]
+  },
+  {
+   "n": "Pizza the Hutt",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "provolone",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pepperoni",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Oil a deep tray and press the dough in.",
+     "min": 5
+    },
+    {
+     "text": "Cover and prove until puffy.",
+     "min": 30
+    },
+    {
+     "text": "Spread with sauce and pile on all four cheeses and the pepperoni.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 220C until molten and golden.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Yogurt parfait",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Make just before serving so the granola stays crunchy",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "granola",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mixed berries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whip the yoghurt with the honey and vanilla.",
+     "min": 3
+    },
+    {
+     "text": "Layer in four tall glasses with the granola and berries.",
+     "min": 5
+    },
+    {
+     "text": "Finish with berries on top and serve straight away.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Perri-Air sparkling lime and mint cooler",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "sparkling water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "mint sprigs, to garnish",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Muddle the mint, cucumber and sugar syrup in a jug.",
+     "min": 4
+    },
+    {
+     "text": "Add the juice of three limes and stir. Slice the last lime into wheels.",
+     "min": 3
+    },
+    {
+     "text": "Fill four tall glasses with ice, divide the mix between them and top with cold sparkling water.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

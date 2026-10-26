@@ -1,0 +1,316 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Toothpick cheese cubes",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "salami",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "",
+     "item": "toothpicks",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the cheddar into 20 even cubes",
+     "min": 7
+    },
+    {
+     "text": "Thread each onto a toothpick with a fold of salami and a cherry tomato",
+     "min": 6
+    },
+    {
+     "text": "Lay out in two neat rows of exactly ten",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Vegas buffet prawns",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 5,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "horseradish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Poach the prawns in salted water for 2 minutes, plunge into iced water and peel",
+     "min": 12
+    },
+    {
+     "text": "Mix the tomato sauce with horseradish and a squeeze of lemon",
+     "min": 3
+    },
+    {
+     "text": "Pile the prawns on crushed ice with the sauce and lemon wedges",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Pancakes, syrup first",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 35,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put the maple syrup on the table before anything else",
+     "min": 1
+    },
+    {
+     "text": "Whisk the flour, baking powder, sugar, buttermilk and eggs and rest",
+     "min": 15
+    },
+    {
+     "text": "Cook in butter until bubbles set, then flip",
+     "min": 17
+    },
+    {
+     "text": "Stack high",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Fresh strawberry jelly with vanilla cream",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 250,
+   "make_ahead": "Set up to 1 day ahead, whip cream on the day",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "strawberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "gelatine leaves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla bean paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "shortbread fingers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Hull and blend most of the strawberries with the sugar and lemon juice, then strain",
+     "min": 10
+    },
+    {
+     "text": "Soak the gelatine leaves in cold water, squeeze and dissolve in a portion of the warmed puree",
+     "min": 10
+    },
+    {
+     "text": "Stir into the rest of the puree and pour into four glasses over sliced strawberries",
+     "min": 5
+    },
+    {
+     "text": "Chill until set",
+     "min": 240
+    },
+    {
+     "text": "Whip the cream with vanilla paste and icing sugar, spoon on and crumble over the shortbread",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Maple syrup bourbon smash",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "bourbon",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 32,
+     "u": "",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green apple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Juice the lemons and slice the apple thinly",
+     "min": 5
+    },
+    {
+     "text": "Press the mint gently with the syrup and lemon juice in a shaker, one drink at a time",
+     "min": 3
+    },
+    {
+     "text": "Add bourbon and ice, shake hard, and strain into rocks glasses packed with crushed ice",
+     "min": 4
+    },
+    {
+     "text": "Garnish with a mint sprig and an apple slice",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

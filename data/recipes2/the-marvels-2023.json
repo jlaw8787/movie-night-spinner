@@ -1,0 +1,364 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Khan family samosas",
+   "course": "s",
+   "prep_min": 28,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "garam masala",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet spring roll pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes, then crush them with the peas.",
+     "min": 20
+    },
+    {
+     "text": "Fry the onion and garam masala and mix into the potato.",
+     "min": 10
+    },
+    {
+     "text": "Cut the pastry into strips, fill and fold into triangles.",
+     "min": 15
+    },
+    {
+     "text": "Fry at 180C in batches until crisp.",
+     "min": 10
+    },
+    {
+     "text": "Blend the mint into the yoghurt for dipping.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Space station popcorn",
+   "course": "s",
+   "prep_min": 6,
+   "cook_min": 6,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "popping corn",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch chilli flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Zest the limes and melt the butter with the zest and chilli.",
+     "min": 4
+    },
+    {
+     "text": "Heat the oil in a large lidded pot and pop the corn, shaking now and then.",
+     "min": 6
+    },
+    {
+     "text": "Toss the butter through, add a squeeze of lime juice and serve in silver bowls.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Jersey City chicken biryani",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 170,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "garam masala",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "basmati rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch saffron",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the chicken in the yoghurt and garam masala for 2 hours.",
+     "min": 10
+    },
+    {
+     "text": "Rest the chicken in the fridge.",
+     "min": 120
+    },
+    {
+     "text": "Slice the onions and fry until crisp, soak the saffron in warm milk.",
+     "min": 5
+    },
+    {
+     "text": "Par-cook the rice in boiling water.",
+     "min": 5
+    },
+    {
+     "text": "Layer chicken, rice and onions in an ovenproof pot, drizzle with saffron milk and seal tightly.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 170C.",
+     "min": 45
+    }
+   ]
+  },
+  {
+   "n": "Kamala's fan art cupcakes",
+   "course": "w",
+   "prep_min": 29,
+   "cook_min": 38,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, softened, for buttercream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "red, blue and gold food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 175C and line a muffin tin.",
+     "min": 4
+    },
+    {
+     "text": "Beat the butter and sugar, beat in the eggs, then fold in flour and milk.",
+     "min": 10
+    },
+    {
+     "text": "Bake until golden.",
+     "min": 18
+    },
+    {
+     "text": "Cool completely.",
+     "min": 20
+    },
+    {
+     "text": "Beat the buttercream, split into three colours and pipe swirls on top with a little star on each.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Mango lassi",
+   "course": "d",
+   "prep_min": 7,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground cardamom",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and slice the mangoes.",
+     "min": 4
+    },
+    {
+     "text": "Blend with the yoghurt, milk, sugar and cardamom until smooth.",
+     "min": 2
+    },
+    {
+     "text": "Pour over ice in tall glasses.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

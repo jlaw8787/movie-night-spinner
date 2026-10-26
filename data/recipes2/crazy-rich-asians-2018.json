@@ -1,0 +1,360 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Newton Circus chicken satay",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 123,
+   "make_ahead": "Marinate up to 1 day, grill fresh",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thigh fillets, cut into strips",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "stalks lemongrass",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "coconut milk, extra for the sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "bamboo skewers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the lemongrass finely and mix with the coconut milk and turmeric. Add the chicken, which is the start of the marinating.",
+     "min": 10
+    },
+    {
+     "text": "Marinate in the fridge.",
+     "min": 120
+    },
+    {
+     "text": "Soak the skewers in water, then thread on the chicken.",
+     "min": 5
+    },
+    {
+     "text": "Grill until charred and cooked through.",
+     "min": 8
+    },
+    {
+     "text": "Warm the peanut butter with the extra coconut milk, lime juice and sugar into a thick dipping sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Family dumpling making",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 10,
+   "make_ahead": "Up to 1 day, freeze uncooked",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "wombok (Chinese cabbage), shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "ginger, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 30,
+     "u": "",
+     "item": "dumpling wrappers",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "black vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Salt the wombok, squeeze out the water, then mix with the pork, ginger, sliced spring onion and salt.",
+     "min": 15
+    },
+    {
+     "text": "Fold spoonfuls of filling into the wrappers around the table together.",
+     "min": 25
+    },
+    {
+     "text": "Boil in batches until they float, then a minute more.",
+     "min": 10
+    },
+    {
+     "text": "Serve with black vinegar for dipping.",
+     "min": 0
+    }
+   ]
+  },
+  {
+   "n": "Singapore chilli crab",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Sauce up to 1 day, add prawns just before serving",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "ginger, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "soft buns",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush the garlic, grate the ginger and chop the chillies.",
+     "min": 8
+    },
+    {
+     "text": "Fry the aromatics in the oil until fragrant.",
+     "min": 3
+    },
+    {
+     "text": "Add the tomato sauce, sugar and water and simmer.",
+     "min": 5
+    },
+    {
+     "text": "Add the prawns and cook until pink.",
+     "min": 4
+    },
+    {
+     "text": "Swirl in the beaten eggs and serve with soft buns to mop up the sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Mahjong showdown pandan chiffon",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 85,
+   "make_ahead": "Up to 1 day, keep covered at room temperature",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "eggs, separated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar, for the yolks",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar, for the whites",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "pandan paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the yolks with the smaller amount of sugar, the coconut milk, oil and pandan paste, then fold in the flour.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the whites with the larger amount of sugar to stiff peaks and fold in gently.",
+     "min": 15
+    },
+    {
+     "text": "Pour into an ungreased tube tin and bake at 170C.",
+     "min": 45
+    },
+    {
+     "text": "Cool upside down in the tin before turning out.",
+     "min": 40
+    }
+   ]
+  },
+  {
+   "n": "Goh family gold mansion iced kopi",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "Coffee up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "ground coffee",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew strong coffee.",
+     "min": 5
+    },
+    {
+     "text": "Stir the condensed milk into each cup of hot coffee until dissolved. Cool slightly.",
+     "min": 3
+    },
+    {
+     "text": "Pour over glasses packed with ice, stir well and serve.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

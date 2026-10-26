@@ -1,0 +1,422 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Boston clam chowder with oyster crackers",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "rashers bacon, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "fish stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "potatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "clams or vongole, cleaned",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "box oyster crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the bacon until crisp, then add the onion and celery and cook until soft.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the flour, then the fish stock and potato. Simmer until the potato is tender.",
+     "min": 12
+    },
+    {
+     "text": "Add the clams, cover and cook until open, then pick out the empty shells.",
+     "min": 6
+    },
+    {
+     "text": "Stir in the cream and heat through. Season with pepper and serve with oyster crackers and chives.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Watermelon toss buffalo wings",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 42,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "blue cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch celery, cut into sticks",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pat the wings dry and toss with the baking powder and salt.",
+     "min": 5
+    },
+    {
+     "text": "Bake on a rack at 220C, turning once, until crisp.",
+     "min": 45
+    },
+    {
+     "text": "Mash the blue cheese with the sour cream, mayonnaise and a squeeze of lemon for the dip.",
+     "min": 4
+    },
+    {
+     "text": "Melt the butter with the hot sauce and toss the wings through it. Serve with the dip and celery.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Mullins family roast beef and gravy",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 73,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "beef topside",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 5,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "potatoes, quartered",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "carrots, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the beef with the mustard, garlic, a little oil and salt.",
+     "min": 5
+    },
+    {
+     "text": "Parboil the potatoes, drain, rough up and toss in oil.",
+     "min": 12
+    },
+    {
+     "text": "Roast the beef at 200C for medium rare, with the potatoes on a separate tray.",
+     "min": 60
+    },
+    {
+     "text": "Toss the carrots in the honey and add for the last part of the roasting.",
+     "min": 3
+    },
+    {
+     "text": "Rest the beef.",
+     "min": 15
+    },
+    {
+     "text": "Whisk the flour into the pan juices, add the stock and simmer to a gravy.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Boston cream pie",
+   "course": "w",
+   "prep_min": 45,
+   "cook_min": 50,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "eggs (3 yolks for the custard, 2 whole for the cake)",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 210,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 420,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the yolks, some of the sugar and the cornflour, then whisk in hot milk. Return to the pan and stir until thick. Add the vanilla.",
+     "min": 10
+    },
+    {
+     "text": "Chill the custard.",
+     "min": 40
+    },
+    {
+     "text": "Beat the butter and remaining sugar, add the whole eggs, then fold in the flour and milk.",
+     "min": 8
+    },
+    {
+     "text": "Bake in a 20cm tin at 180C, then cool.",
+     "min": 30
+    },
+    {
+     "text": "Split the cake and fill with custard.",
+     "min": 3
+    },
+    {
+     "text": "Melt the chocolate with the cream and pour over the top.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Ashburn and Mullins whiskey sour",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "Irish whiskey",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites (from 4 eggs)",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle aromatic bitters",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar cocktail cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shake the whiskey, lemon juice, sugar syrup and egg white hard without ice in a jar or shaker. Repeat for each drink.",
+     "min": 6
+    },
+    {
+     "text": "Add ice and shake again, then strain into short glasses over fresh ice.",
+     "min": 3
+    },
+    {
+     "text": "Top the foam with a couple of dashes of bitters and drop in a cherry.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

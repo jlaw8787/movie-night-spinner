@@ -1,0 +1,386 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Hong Kong harbour dim sum",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "green prawns, chopped",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "grated ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "shiitake mushrooms, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "wonton wrappers",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chilli oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the pork, prawns, ginger, shiitake and soy.",
+     "min": 15
+    },
+    {
+     "text": "Spoon into the wonton wrappers and pinch up the sides.",
+     "min": 15
+    },
+    {
+     "text": "Steam until cooked through.",
+     "min": 8
+    },
+    {
+     "text": "Serve with chilli oil.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Han's island tournament spring rolls",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 14,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "cups shredded wombok",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "shiitake mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "glass noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "spring roll wrappers",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the glass noodles and prepare the vegetables.",
+     "min": 10
+    },
+    {
+     "text": "Stir-fry the wombok, carrot and shiitake.",
+     "min": 8
+    },
+    {
+     "text": "Add the noodles and soy.",
+     "min": 3
+    },
+    {
+     "text": "Cool the filling.",
+     "min": 15
+    },
+    {
+     "text": "Roll tight in the wrappers.",
+     "min": 10
+    },
+    {
+     "text": "Fry at 180C until golden.",
+     "min": 8
+    }
+   ]
+  },
+  {
+   "n": "Mirror room char siu with fried rice",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 756,
+   "make_ahead": "Marinate a day ahead",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "pork neck",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "hoisin sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "five spice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Shaoxing wine",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "cooked jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the hoisin, soy, honey, five spice and Shaoxing and coat the pork.",
+     "min": 10
+    },
+    {
+     "text": "Marinate overnight.",
+     "min": 720
+    },
+    {
+     "text": "Roast at 200C, glazing twice.",
+     "min": 35
+    },
+    {
+     "text": "Rest the pork.",
+     "min": 10
+    },
+    {
+     "text": "Fry the rice with the eggs and spring onion.",
+     "min": 8
+    },
+    {
+     "text": "Slice the pork over the rice.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Mango pancakes",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 55,
+   "make_ahead": "Up to 1 day chilled",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "mangoes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the flour, eggs, milk and sugar and rest.",
+     "min": 5
+    },
+    {
+     "text": "Cook 8 thin crepes in a non-stick pan and cool.",
+     "min": 20
+    },
+    {
+     "text": "Whip the cream and slice the mango.",
+     "min": 5
+    },
+    {
+     "text": "Wrap each crepe around cream and a thick slice of mango.",
+     "min": 5
+    },
+    {
+     "text": "Fold into parcels and chill for an hour.",
+     "min": 60
+    }
+   ]
+  },
+  {
+   "n": "Iced chrysanthemum and goji honey tea",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 69,
+   "make_ahead": "Up to 1 day chilled",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 15,
+     "u": "g",
+     "item": "dried chrysanthemum flowers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "goji berries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "rock sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bring the water to the boil and take off the heat.",
+     "min": 8
+    },
+    {
+     "text": "Add the chrysanthemum, goji and rock sugar and steep, stirring until the sugar melts.",
+     "min": 6
+    },
+    {
+     "text": "Strain, keeping the goji berries, and stir in the honey.",
+     "min": 3
+    },
+    {
+     "text": "Cool, then chill for an hour.",
+     "min": 60
+    },
+    {
+     "text": "Pour over ice in four glasses, drop in a few goji berries and add a squeeze of lemon.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,310 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Chicago seafood restaurant oysters",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Shuck just before serving",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "oysters, freshly shucked",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eschalots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "black peppercorns, cracked",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "crushed ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Finely dice the eschalots and stir into the vinegar with the cracked pepper.",
+     "min": 8
+    },
+    {
+     "text": "Lay the oysters on crushed ice.",
+     "min": 4
+    },
+    {
+     "text": "Spoon a little dressing over each and serve with lemon wedges.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Karaoke bar wings",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 45,
+   "make_ahead": "Up to 1 day, reheat in a hot oven",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wings",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the wings with salt and bake at 220C until crisp.",
+     "min": 45
+    },
+    {
+     "text": "Warm the honey, soy sauce and crushed garlic until sticky.",
+     "min": 5
+    },
+    {
+     "text": "Toss the wings through the glaze and scatter with sesame seeds.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Food critic's steak",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Up to 1 day for the sauce, fry chips fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sirloin steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "black peppercorns, cracked",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag mixed salad leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into thin fries.",
+     "min": 10
+    },
+    {
+     "text": "Fry the fries twice until crisp.",
+     "min": 18
+    },
+    {
+     "text": "Sear the steaks to your liking and rest.",
+     "min": 12
+    },
+    {
+     "text": "Toast the cracked peppercorns in the pan, add the cream and simmer until thick.",
+     "min": 5
+    },
+    {
+     "text": "Serve the steak with the fries, sauce and a green salad.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Crème brûlée and jelly",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 305,
+   "make_ahead": "Up to 1 day, torch just before serving",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet raspberry jelly crystals",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar, for the top",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Make up the jelly as the packet says and set in small cups.",
+     "min": 150
+    },
+    {
+     "text": "Heat the cream with the split vanilla bean, whisk into the yolks and sugar, then strain into ramekins.",
+     "min": 15
+    },
+    {
+     "text": "Bake in a water bath at 150C until just set.",
+     "min": 35
+    },
+    {
+     "text": "Chill the custards until firm.",
+     "min": 120
+    },
+    {
+     "text": "Sprinkle with sugar, torch and serve with the jelly.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "River boat raspberry sparkler",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Purée up to 1 day, top with sparkling wine just before serving",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "sparkling wine, cold",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Crush most of the raspberries with the sugar and lemon juice and push through a sieve.",
+     "min": 6
+    },
+    {
+     "text": "Spoon a spoonful of purée into each of 4 flutes.",
+     "min": 2
+    },
+    {
+     "text": "Slowly top with cold sparkling wine and drop a whole raspberry in each.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

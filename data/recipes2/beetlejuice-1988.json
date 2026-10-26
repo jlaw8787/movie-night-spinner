@@ -1,0 +1,818 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Banana Boat prawn cocktail",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "Sauce up to 2 days, prawns poached up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "peeled green prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "horseradish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, squeezed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Poach the prawns in salted simmering water for 2 minutes until just cooked.",
+     "min": 3
+    },
+    {
+     "text": "Chill in iced water, then drain well.",
+     "min": 5
+    },
+    {
+     "text": "Mix the mayonnaise, tomato sauce, horseradish, lemon and hot sauce.",
+     "min": 5
+    },
+    {
+     "text": "Shred half the lettuce into four glasses, pile in the prawns and spoon the sauce over.",
+     "min": 7
+    }
+   ]
+  },
+  {
+   "n": "Model town cheese bites",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "Up to 4 hours ahead, covered in the fridge",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "gouda",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "pepper jack",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cornichons",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the three cheeses into cubes.",
+     "min": 10
+    },
+    {
+     "text": "Stack the cubes into tiny houses on a long board.",
+     "min": 10
+    },
+    {
+     "text": "Thread the tomatoes and cornichons onto toothpicks as trees and stand them between the houses, like Adam's model town.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Dinner party lobster",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 10,
+   "make_ahead": "Butter up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "lobster tails",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested and juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "salad leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the lobster tails lengthways. Mash the butter with the garlic, lemon zest and parsley and brush over the flesh.",
+     "min": 10
+    },
+    {
+     "text": "Cut the potatoes into shoestrings, rinse and dry well.",
+     "min": 10
+    },
+    {
+     "text": "Fry the potatoes in batches at 180C until crisp, drain and salt.",
+     "min": 10
+    },
+    {
+     "text": "Grill the lobster flesh side up until just opaque.",
+     "min": 6
+    },
+    {
+     "text": "Dress the salad leaves in lemon juice and serve with the lobster and fries.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Striped suit cake",
+   "course": "w",
+   "prep_min": 35,
+   "cook_min": 80,
+   "make_ahead": "Up to 2 days, airtight tin",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar until pale, add the eggs one at a time and fold in the flour and milk.",
+     "min": 15
+    },
+    {
+     "text": "Stir the cocoa into half the batter.",
+     "min": 5
+    },
+    {
+     "text": "Pipe or spoon alternating stripes into a lined loaf tin.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 170C until a skewer comes out clean.",
+     "min": 50
+    },
+    {
+     "text": "Cool the cake in the tin (included in cook time).",
+     "min": 20
+    },
+    {
+     "text": "Melt the white chocolate with the cream and pour over the cake. Pipe stripes with the melted dark chocolate.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Banana daiquiri",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Syrup up to 1 week ahead",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "white rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes, juiced to give 80ml",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "ripe bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in the hot water.",
+     "min": 5
+    },
+    {
+     "text": "Cool the syrup for 10 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Blend the rum, lime juice, syrup, bananas and ice until smooth and pour into chilled glasses.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Shrimp cocktail",
+   "course": "s",
+   "extra": true,
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Sauce up to 2 days, prawns poached up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "cooked peeled prawns",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "iceberg lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "prepared horseradish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pat the prawns dry and chill.",
+     "min": 5
+    },
+    {
+     "text": "Mix the mayonnaise, tomato sauce, horseradish and lemon juice into a lively sauce.",
+     "min": 5
+    },
+    {
+     "text": "Pile the lettuce into bowls, top with the prawns and spoon over the sauce.",
+     "min": 5
+    },
+    {
+     "text": "Serve cold and keep your face clear of the bowl.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Otho’s spiral breadsticks",
+   "course": "s",
+   "extra": true,
+   "prep_min": 30,
+   "cook_min": 40,
+   "make_ahead": "Up to 1 day, airtight tin",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "white sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "black sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "sea salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pastry into long strips and brush with egg.",
+     "min": 10
+    },
+    {
+     "text": "Press white sesame onto half the strips and black sesame onto the rest, with a little salt.",
+     "min": 5
+    },
+    {
+     "text": "Twist each strip into a spiral and lay on lined trays.",
+     "min": 10
+    },
+    {
+     "text": "Chill the twists for 15 minutes (included in cook time).",
+     "min": 15
+    },
+    {
+     "text": "Bake at 200C until crisp and golden.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Model town cheeses",
+   "course": "s",
+   "extra": true,
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "Up to 4 hours ahead, covered in the fridge",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "gouda",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "tasty cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cornichons",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the cheeses into cubes.",
+     "min": 10
+    },
+    {
+     "text": "Stack into small houses on a board.",
+     "min": 10
+    },
+    {
+     "text": "Thread tomatoes and cornichons on toothpicks as trees and set between the houses.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Grilled lobster tails",
+   "course": "m",
+   "extra": true,
+   "prep_min": 25,
+   "cook_min": 5,
+   "make_ahead": "Butter up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "lobster tails",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "salad leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the lobster tails and brush with the garlic and parsley butter.",
+     "min": 8
+    },
+    {
+     "text": "Cut the potatoes into shoestrings, rinse and dry, then fry in batches at 180C until crisp and salt.",
+     "min": 10
+    },
+    {
+     "text": "Grill the lobster flesh side up until just opaque.",
+     "min": 6
+    },
+    {
+     "text": "Dress the salad leaves with lemon juice and serve with the lobster and fries.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Black and white cake",
+   "course": "w",
+   "extra": true,
+   "prep_min": 30,
+   "cook_min": 80,
+   "make_ahead": "Up to 2 days, airtight tin",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter and sugar until pale, add the eggs and vanilla, then fold in the flour and milk.",
+     "min": 15
+    },
+    {
+     "text": "Stir the cocoa into half the batter and layer or swirl both batters in a lined 20cm tin.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 170C until a skewer comes out clean.",
+     "min": 45
+    },
+    {
+     "text": "Cool completely in the tin (included in cook time).",
+     "min": 20
+    },
+    {
+     "text": "Melt the white chocolate with the cream, cool slightly and pour over for the ganache.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Delia’s meringue sculpture",
+   "course": "w",
+   "extra": true,
+   "prep_min": 30,
+   "cook_min": 140,
+   "make_ahead": "Meringues up to 3 days ahead, assemble on the day",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "blackberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the egg whites to soft peaks, add the sugar a spoonful at a time until stiff and glossy, then fold in the vinegar.",
+     "min": 15
+    },
+    {
+     "text": "Pipe tall spires onto lined trays.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 110C until crisp, then leave to dry in the switched-off oven (included in cook time).",
+     "min": 90
+    },
+    {
+     "text": "Crush half the blackberries with icing sugar for the swirl and whip the cream.",
+     "min": 10
+    },
+    {
+     "text": "Build the sculpture with meringue spires, cream and blackberry swirl, finishing with whole berries.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Sparkling lemonade",
+   "course": "d",
+   "extra": true,
+   "prep_min": 10,
+   "cook_min": 10,
+   "make_ahead": "Syrup up to 3 days ahead",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Press the lemons for juice.",
+     "min": 5
+    },
+    {
+     "text": "Heat the sugar with the water until dissolved and cool.",
+     "min": 10
+    },
+    {
+     "text": "Mix the juice and syrup in a jug, top with soda water and pour over ice.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

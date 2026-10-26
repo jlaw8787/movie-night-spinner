@@ -1,0 +1,480 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Gettysburg training camp hoagies",
+   "course": "s",
+   "prep_min": 23,
+   "cook_min": 10,
+   "make_ahead": "Up to 4 hours, keep wrapped and chilled",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "long baguettes",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "salami",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "provolone",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar of pickled peppers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the olive oil, red wine vinegar, oregano and pepper into a dressing.",
+     "min": 4
+    },
+    {
+     "text": "Split the baguettes and drizzle the insides with half the dressing.",
+     "min": 3
+    },
+    {
+     "text": "Layer with sliced ham, salami and provolone.",
+     "min": 6
+    },
+    {
+     "text": "Top with shredded iceberg, sliced tomato, thin red onion and pickled peppers, then the rest of the dressing.",
+     "min": 6
+    },
+    {
+     "text": "Press closed and wrap tightly.",
+     "min": 2
+    },
+    {
+     "text": "Rest wrapped for 10 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Cut each baguette into pieces.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Titans game day chilli dogs",
+   "course": "s",
+   "prep_min": 7,
+   "cook_min": 34,
+   "make_ahead": "Chilli up to 2 days ahead, grill fresh",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "tomato passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "frankfurts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle of American mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the onions.",
+     "min": 5
+    },
+    {
+     "text": "Brown the mince with the onion.",
+     "min": 8
+    },
+    {
+     "text": "Add the cumin, paprika, chilli powder, passata and water and simmer until thick.",
+     "min": 15
+    },
+    {
+     "text": "Grill the frankfurts.",
+     "min": 6
+    },
+    {
+     "text": "Toast the hot dog buns.",
+     "min": 3
+    },
+    {
+     "text": "Fill each with a frankfurt, spoon over the chilli, scatter with grated cheddar and grill to melt.",
+     "min": 2
+    },
+    {
+     "text": "Top with diced white onion and mustard.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Strong side Virginia fried chicken",
+   "course": "m",
+   "prep_min": 23,
+   "cook_min": 165,
+   "make_ahead": "Marinate up to 1 day ahead, fry fresh",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "chicken pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle of hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 230,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "paprika",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 90,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Combine the chicken, buttermilk, salt and hot sauce in a bowl.",
+     "min": 5
+    },
+    {
+     "text": "Soak in the fridge for at least 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Toss the chicken in flour mixed with paprika, garlic powder and salt.",
+     "min": 8
+    },
+    {
+     "text": "Fry at 165C in batches until golden and cooked through.",
+     "min": 15
+    },
+    {
+     "text": "Peel and chop the potatoes.",
+     "min": 10
+    },
+    {
+     "text": "Boil the potatoes until tender and mash with butter and milk.",
+     "min": 20
+    },
+    {
+     "text": "Make gravy with butter, flour, milk and lots of pepper.",
+     "min": 8
+    },
+    {
+     "text": "Warm the honey with chilli flakes to drizzle over the chicken.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Alexandria peach cobbler",
+   "course": "w",
+   "prep_min": 22,
+   "cook_min": 40,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "820g tins sliced peaches",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drain the peaches and toss with brown sugar, cinnamon, cornflour and lemon juice.",
+     "min": 8
+    },
+    {
+     "text": "Tip into a baking dish.",
+     "min": 2
+    },
+    {
+     "text": "Rub the cold butter into the flour and sugar, then stir in the buttermilk.",
+     "min": 8
+    },
+    {
+     "text": "Drop spoonfuls over the peaches and sprinkle with sugar mixed with cinnamon.",
+     "min": 4
+    },
+    {
+     "text": "Bake at 190C until golden.",
+     "min": 30
+    },
+    {
+     "text": "Cool slightly and serve warm with ice cream.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Sunshine's sweet tea lemonade",
+   "course": "d",
+   "prep_min": 13,
+   "cook_min": 65,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 160,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag of ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in boiling water with the sugar.",
+     "min": 5
+    },
+    {
+     "text": "Remove the bags and chill until cold.",
+     "min": 60
+    },
+    {
+     "text": "Squeeze the lemons and stir the sugar into the lemon juice and cold water until dissolved.",
+     "min": 8
+    },
+    {
+     "text": "Fill tall glasses with ice, pour in the tea to halfway and top with the lemonade.",
+     "min": 4
+    },
+    {
+     "text": "Garnish with lemon wheels and mint.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

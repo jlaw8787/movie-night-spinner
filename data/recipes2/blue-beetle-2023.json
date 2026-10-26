@@ -1,0 +1,376 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Palmera City street corn",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mayonnaise with some lime juice and crumble the feta.",
+     "min": 5
+    },
+    {
+     "text": "Grill the corn over high heat until charred all over.",
+     "min": 15
+    },
+    {
+     "text": "Brush with the lime mayonnaise, roll in feta and sprinkle with chilli flakes.",
+     "min": 4
+    },
+    {
+     "text": "Serve hot with lime wedges.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Uncle Rudy's chicharrones",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 555,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "pork belly",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "sea salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle hot sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Score the skin and rub with salt.",
+     "min": 10
+    },
+    {
+     "text": "Dry uncovered in the fridge overnight.",
+     "min": 480
+    },
+    {
+     "text": "Roast at 240C.",
+     "min": 30
+    },
+    {
+     "text": "Drop to 180C and roast until puffed and crackling.",
+     "min": 45
+    },
+    {
+     "text": "Cut into bites and serve with lime wedges and hot sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Nana's pozole rojo",
+   "course": "m",
+   "prep_min": 18,
+   "cook_min": 150,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "pork shoulder, cut into pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dried guajillo chillies",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "tinned hominy",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "radishes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the chillies in hot water. Halve the onion and peel the garlic.",
+     "min": 8
+    },
+    {
+     "text": "Simmer the pork with onion and garlic in the water.",
+     "min": 120
+    },
+    {
+     "text": "Blend the chillies with garlic, stir in with the hominy and simmer.",
+     "min": 30
+    },
+    {
+     "text": "Shred the cabbage and slice the radishes.",
+     "min": 8
+    },
+    {
+     "text": "Serve topped with cabbage, radish, oregano and lime.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Pan dulce",
+   "course": "w",
+   "prep_min": 35,
+   "cook_min": 110,
+   "make_ahead": "Up to 2 days, airtight",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "warm milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, for the topping",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "plain flour, for the topping",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar, for the topping",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the dough ingredients and knead until soft.",
+     "min": 15
+    },
+    {
+     "text": "Prove the dough.",
+     "min": 60
+    },
+    {
+     "text": "Shape into buns.",
+     "min": 10
+    },
+    {
+     "text": "Mix the topping into a paste, press a round on each bun and score the top.",
+     "min": 10
+    },
+    {
+     "text": "Prove the buns again.",
+     "min": 30
+    },
+    {
+     "text": "Bake at 180C.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Horchata",
+   "course": "d",
+   "prep_min": 13,
+   "cook_min": 600,
+   "make_ahead": "Up to 2 days, keep chilled",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the rice and cinnamon sticks in the water overnight.",
+     "min": 3
+    },
+    {
+     "text": "Soak.",
+     "min": 480
+    },
+    {
+     "text": "Blend until smooth and strain through a fine cloth.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the sugar and milk and chill.",
+     "min": 120
+    },
+    {
+     "text": "Pour over ice and top with ground cinnamon.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

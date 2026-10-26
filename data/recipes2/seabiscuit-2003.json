@@ -1,0 +1,408 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Tick Tock's spiced racetrack peanuts",
+   "course": "s",
+   "prep_min": 9,
+   "cook_min": 27,
+   "make_ahead": "Up to 5 days, keep airtight",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "raw peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the peanuts with melted butter, brown sugar, paprika, cayenne and salt.",
+     "min": 5
+    },
+    {
+     "text": "Spread on a lined tray.",
+     "min": 2
+    },
+    {
+     "text": "Roast at 170C, stirring every 5 minutes, until deep golden.",
+     "min": 17
+    },
+    {
+     "text": "Cool so the coating crisps.",
+     "min": 10
+    },
+    {
+     "text": "Serve in paper bags.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Seabiscuit's apple and cheddar hand pies",
+   "course": "s",
+   "prep_min": 31,
+   "cook_min": 26,
+   "make_ahead": "Assemble up to 1 day ahead, bake fresh",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "vintage cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and dice the apples.",
+     "min": 8
+    },
+    {
+     "text": "Cook the apples with butter, brown sugar and cinnamon until soft, then cool.",
+     "min": 6
+    },
+    {
+     "text": "Cut rounds from the pastry.",
+     "min": 10
+    },
+    {
+     "text": "Put a spoon of apple and a few cubes of cheddar on each, fold over and crimp with a fork.",
+     "min": 10
+    },
+    {
+     "text": "Brush with beaten egg and sprinkle with sugar.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 200C until golden.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Pimlico match race crab cakes",
+   "course": "m",
+   "prep_min": 24,
+   "cook_min": 61,
+   "make_ahead": "Cakes up to 1 day ahead, fry fresh",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "crab meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 6,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "celery salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "paprika",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "frozen chips",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the crab with mayonnaise, egg, Dijon, Worcestershire, celery salt, paprika, parsley and panko.",
+     "min": 10
+    },
+    {
+     "text": "Shape into cakes.",
+     "min": 6
+    },
+    {
+     "text": "Chill for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Fry in oil over medium heat until golden each side.",
+     "min": 6
+    },
+    {
+     "text": "Bake the chips and toss with paprika salt.",
+     "min": 25
+    },
+    {
+     "text": "Toss shredded cabbage with mayonnaise and vinegar.",
+     "min": 6
+    },
+    {
+     "text": "Serve with lemon wedges.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Santa Anita cinnamon apple pie",
+   "course": "w",
+   "prep_min": 29,
+   "cook_min": 65,
+   "make_ahead": "Up to 2 days, warm to serve",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "Granny Smith apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and slice the apples and toss with sugar, cinnamon and cornflour.",
+     "min": 15
+    },
+    {
+     "text": "Line a 23cm pie dish with pastry and fill.",
+     "min": 8
+    },
+    {
+     "text": "Rub the butter into the flour and brown sugar and scatter over the top.",
+     "min": 6
+    },
+    {
+     "text": "Bake at 190C until golden and bubbling.",
+     "min": 45
+    },
+    {
+     "text": "Cool, then serve with ice cream.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "The Iceman's orange iced tea",
+   "course": "d",
+   "prep_min": 9,
+   "cook_min": 65,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 5,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "oranges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch of mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag of ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in boiling water with the honey and strips of orange peel.",
+     "min": 5
+    },
+    {
+     "text": "Remove the bags and peel, then chill for 1 hour.",
+     "min": 60
+    },
+    {
+     "text": "Juice the oranges and stir the juice in.",
+     "min": 6
+    },
+    {
+     "text": "Fill tall glasses with ice, pour over the tea and garnish with orange slices and mint.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

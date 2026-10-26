@@ -1,0 +1,444 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Murder consultant loaded beef nachos",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin black beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "corn chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "avocados",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "tomato salsa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar pickled jalapenos",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the mince with the onion. Add the spices, tomato paste and a splash of water and simmer. Stir in the black beans.",
+     "min": 12
+    },
+    {
+     "text": "Layer the corn chips in a baking dish with the beef and cheddar.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 200C until the cheese melts.",
+     "min": 10
+    },
+    {
+     "text": "Mash the avocados with lime and salt.",
+     "min": 3
+    },
+    {
+     "text": "Top with guacamole, sour cream, salsa and jalapenos.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Break room cinnamon jam doughnuts",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 80,
+   "make_ahead": "Best eaten the same day",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 140,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "warm milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "raspberry jam, warmed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, some of the sugar and a pinch of salt. Add the milk, egg and butter and knead.",
+     "min": 12
+    },
+    {
+     "text": "Prove until doubled.",
+     "min": 60
+    },
+    {
+     "text": "Roll into balls and prove again.",
+     "min": 30
+    },
+    {
+     "text": "Fry at 170C, turning once, then drain.",
+     "min": 12
+    },
+    {
+     "text": "Toss in the remaining sugar mixed with cinnamon.",
+     "min": 2
+    },
+    {
+     "text": "Poke a hole in each and pipe in the jam.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Swap your boss double bacon cheeseburgers",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "frozen fries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped dill pickles, plus slices to serve",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "milk buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the fries at 220C until crisp.",
+     "min": 25
+    },
+    {
+     "text": "Grill the bacon until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Mix the mayonnaise, tomato sauce, mustard and chopped pickles into a sauce.",
+     "min": 3
+    },
+    {
+     "text": "Roll the mince into balls and smash each flat onto a very hot greased pan. Season and cook, flip, top with cheese and cook briefly.",
+     "min": 8
+    },
+    {
+     "text": "Stack two patties in each toasted bun with bacon, pickles, onion and sauce.",
+     "min": 6
+    }
+   ]
+  },
+  {
+   "n": "Bad plan salted caramel brownies",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 46,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "tbsp",
+     "item": "thick caramel sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vanilla ice cream, to serve",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate with the butter. Whisk in the sugar, then the eggs one at a time. Fold in the flour, cocoa and a pinch of salt.",
+     "min": 12
+    },
+    {
+     "text": "Spread into a lined 20cm square tin. Drop the caramel over the top and swirl with a knife. Sprinkle with sea salt.",
+     "min": 6
+    },
+    {
+     "text": "Bake at 170C until just set.",
+     "min": 28
+    },
+    {
+     "text": "Cool, then serve warm with ice cream.",
+     "min": 20
+    }
+   ]
+  },
+  {
+   "n": "Glengoolie Blue whisky sour",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 1,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "scotch whisky",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites (from 4 eggs)",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the honey into hot water and cool to make a syrup.",
+     "min": 3
+    },
+    {
+     "text": "Shake the whisky, lemon juice, honey syrup and egg white in a jar without ice. Repeat for each drink.",
+     "min": 5
+    },
+    {
+     "text": "Add ice and shake hard again, then strain into short glasses over a large ice cube.",
+     "min": 2
+    },
+    {
+     "text": "Twist a strip of orange peel over the top and drop it in.",
+     "min": 1
+    }
+   ]
+  }
+ ]
+}

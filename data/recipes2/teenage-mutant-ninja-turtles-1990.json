@@ -1,0 +1,512 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Sewer pizza rolls",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Roll up to 4 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "sliced pepperoni",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "grated mozzarella",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the dough into a thin rectangle and spread with the sauce.",
+     "min": 10
+    },
+    {
+     "text": "Cover with the pepperoni and mozzarella, roll up tightly from the long side, slice into 12 rounds and place cut side up on a lined tray.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 220C until golden.",
+     "min": 15
+    }
+   ]
+  },
+  {
+   "n": "Splinter's cheese plate",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 60,
+   "make_ahead": "Up to 4 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "aged cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brie",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "gouda",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "grapes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Take the cheeses out of the fridge an hour before serving to come to room temperature.",
+     "min": 60
+    },
+    {
+     "text": "Arrange on a board with the crackers and grapes, and drizzle the honey over the brie just before it goes to the table.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Cowabunga four-pie pizza night",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 40,
+   "make_ahead": "Toppings can be prepped a day ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "pizza sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "grated mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "pepperoni",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "button mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "capsicum, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the mushrooms and capsicum and divide the dough into 4 balls.",
+     "min": 10
+    },
+    {
+     "text": "Stretch each ball thin and top with sauce and mozzarella.",
+     "min": 10
+    },
+    {
+     "text": "Top one pizza with pepperoni, one with mushrooms, one with pepperoni, mushroom and capsicum, and one with whatever is left in the fridge.",
+     "min": 10
+    },
+    {
+     "text": "Bake each pizza on a preheated tray at the oven's highest setting until golden and bubbling, one or two at a time.",
+     "min": 32
+    }
+   ]
+  },
+  {
+   "n": "Pizza cookie",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Up to 1 day, keep covered",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "soft butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "choc chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "lollies",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter, sugar and egg together, then mix in the flour, bicarb and choc chips.",
+     "min": 10
+    },
+    {
+     "text": "Press into a greased pizza tray.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 180C until golden, then cool a little.",
+     "min": 15
+    },
+    {
+     "text": "Melt the chocolate, drizzle over the cookie, scatter with lollies and cut into wedges.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Channel 3 green apple soda",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Best made fresh",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "green apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the apples with the lime juice and water, then strain.",
+     "min": 6
+    },
+    {
+     "text": "Divide over ice in 4 glasses and top with soda water.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Plain Cheese Pie",
+   "course": "m",
+   "extra": true,
+   "prep_min": 25,
+   "cook_min": 70,
+   "make_ahead": "Dough can be made a day ahead",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "grated whole milk mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rest the dough at room temperature until relaxed. Season the tomatoes with salt.",
+     "min": 60
+    },
+    {
+     "text": "Hand-toss or stretch the dough thin and spread with the sauce, then scatter over the mozzarella.",
+     "min": 10
+    },
+    {
+     "text": "Bake on a preheated tray at the oven's highest setting until golden and bubbling. Finish with oregano and slice.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Pepperoni Pie",
+   "course": "m",
+   "extra": true,
+   "prep_min": 25,
+   "cook_min": 70,
+   "make_ahead": "Dough can be made a day ahead",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "grated whole milk mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "spicy salami or cup-style pepperoni",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rest the dough at room temperature until relaxed. Season the tomatoes with salt.",
+     "min": 60
+    },
+    {
+     "text": "Stretch the dough thin, spread with sauce, scatter over the mozzarella and top with the pepperoni.",
+     "min": 10
+    },
+    {
+     "text": "Bake on a preheated tray at the oven's highest setting until the edges of the pepperoni crisp and curl. Finish with oregano and slice.",
+     "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Garlic Knots",
+   "course": "s",
+   "extra": true,
+   "prep_min": 20,
+   "cook_min": 42,
+   "make_ahead": "Best eaten warm, same day",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "grated parmesan",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the dough into 12 strips and tie each into a knot.",
+     "min": 10
+    },
+    {
+     "text": "Rest the knots on a tray to prove until puffy.",
+     "min": 30
+    },
+    {
+     "text": "Bake at 230C until golden.",
+     "min": 12
+    },
+    {
+     "text": "Melt the butter with the garlic and chopped parsley, brush or toss over the hot knots and finish with parmesan.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Lemon Ice",
+   "course": "w",
+   "extra": true,
+   "prep_min": 15,
+   "cook_min": 240,
+   "make_ahead": "Make up to 2 days ahead, keep frozen",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dissolve the sugar in the water over low heat, then cool.",
+     "min": 5
+    },
+    {
+     "text": "Juice the lemons and stir into the syrup.",
+     "min": 5
+    },
+    {
+     "text": "Freeze in a shallow tray, scraping with a fork every hour, until a fine shaved ice forms.",
+     "min": 240
+    },
+    {
+     "text": "Scoop into paper cups to serve.",
+     "min": 5
+    }
+   ]
+  }
+ ]
+}

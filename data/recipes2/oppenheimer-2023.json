@@ -1,0 +1,320 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Blue corn chips with red chile salsa",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 15,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "dried red chillies",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic bulb",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 230,
+     "u": "g",
+     "item": "blue corn chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toast the dried red chillies in a dry pan, soak in hot water 15 minutes and drain.",
+     "min": 15
+    },
+    {
+     "text": "Blitz with the tomatoes, the garlic cloves, the juice of the lime and salt until smooth.",
+     "min": 2
+    },
+    {
+     "text": "Serve with the blue corn chips.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Los Alamos green chile cheeseburger sliders",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 2,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "long green chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tin chipotle in adobo",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slider buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar dill pickles",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Char the long green chillies over a flame or under a grill until blackened, sweat in a bowl, peel, seed and chop.",
+     "min": 5
+    },
+    {
+     "text": "Roll the beef mince into balls.",
+     "min": 3
+    },
+    {
+     "text": "Smash flat in a very hot pan, season and cook 2 minutes.",
+     "min": 2
+    },
+    {
+     "text": "Flip, top with the chillies and a slice of cheddar each, cover 1 minute.",
+     "min": 1
+    },
+    {
+     "text": "Mix the mayo with the chipotle in adobo.",
+     "min": 2
+    },
+    {
+     "text": "Toast the slider buns and build with mayo, patties and pickles.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Trinity test green chile stew",
+   "course": "m",
+   "prep_min": 11,
+   "cook_min": 90,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "pork shoulder",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic bulb",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "green chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "flour tortillas",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the diced pork shoulder, then soften the onion and the garlic cloves.",
+     "min": 4
+    },
+    {
+     "text": "Char the large green chillies, peel, chop and add with the diced potatoes and the chicken stock.",
+     "min": 5
+    },
+    {
+     "text": "Simmer 90 minutes until the pork is tender.",
+     "min": 90
+    },
+    {
+     "text": "Serve with the warm flour tortillas.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Sopaipillas with honey",
+   "course": "w",
+   "prep_min": 6,
+   "cook_min": 22,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, the baking powder, the salt and the butter, then add the warm water to a soft dough.",
+     "min": 3
+    },
+    {
+     "text": "Rest 20 minutes, roll 5mm thick and cut into squares.",
+     "min": 20
+    },
+    {
+     "text": "Fry at 185C for 1 minute a side until puffed.",
+     "min": 2
+    },
+    {
+     "text": "Tear open and fill with honey.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Oppie's very dry martini",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 20,
+     "u": "ml",
+     "item": "dry vermouth",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Touch the rim of the chilled glasses with a little honey and lime.",
+     "min": 3
+    },
+    {
+     "text": "For each drink, stir the gin with a splash of dry vermouth over ice and strain in.",
+     "min": 3
+    },
+    {
+     "text": "Serve iced lime soda the same way for anyone off the gin.",
+     "min": 2
+    }
+   ]
+  }
+ ]
+}

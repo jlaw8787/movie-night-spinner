@@ -1,0 +1,320 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Magda's continental platter",
+   "course": "s",
+   "prep_min": 8,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "salami",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "kabana",
+     "aisle": "Meat"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "dill pickles",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "dark rye loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the salami and the kabana and lay them out on a big board.",
+     "min": 4
+    },
+    {
+     "text": "Add the dill pickles cut into spears, the cream cheese in a bowl and a sliced dark rye loaf, the way Magda would set out a New Year's Eve spread.",
+     "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Goodes tearoom egg sandwiches",
+   "course": "s",
+   "prep_min": 7,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "punnet cress",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs for 10 minutes, cool, peel and mash with the mayonnaise, salt and pepper.",
+     "min": 10
+    },
+    {
+     "text": "Spread over the white bread, scatter with cress and top with more slices.",
+     "min": 4
+    },
+    {
+     "text": "Trim the crusts and cut into fingers.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Rudi's chicken paprikash",
+   "course": "m",
+   "prep_min": 5,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "egg noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken thighs, then soften the onions and the red capsicum in the pan.",
+     "min": 3
+    },
+    {
+     "text": "Stir in the sweet paprika, add the chicken stock and the chicken, and simmer 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Stir the sour cream through off the heat and serve over the buttered egg noodles.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Model Gowns poppy seed cake",
+   "course": "w",
+   "prep_min": 8,
+   "cook_min": 50,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "poppy seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the butter with the sugar, add the eggs and the zest of the lemons, then fold in the self-raising flour, the poppy seeds and the milk.",
+     "min": 5
+    },
+    {
+     "text": "Bake in a loaf tin at 170C for 50 minutes.",
+     "min": 50
+    },
+    {
+     "text": "Ice with the icing sugar mixed with lemon juice.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Magda's New Year's Eve champagne punch",
+   "course": "d",
+   "prep_min": 16,
+   "cook_min": 60,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "peach liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "ripe peaches",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "sparkling wine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag block ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "In a large punch bowl, mix the brandy, the peach liqueur, the fresh orange juice and the sliced ripe peaches.",
+     "min": 5
+    },
+    {
+     "text": "Chill 1 hour.",
+     "min": 60
+    },
+    {
+     "text": "Just before serving add a big block of ice and pour in a chilled the bottle of sparkling wine and the soda water.",
+     "min": 3
+    },
+    {
+     "text": "Stir once gently.",
+     "min": 2
+    },
+    {
+     "text": "Ladle into coupes with a slice of peach in.",
+     "min": 3
+    },
+    {
+     "text": "For non-drinkers, use peach nectar and sparkling apple juice.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

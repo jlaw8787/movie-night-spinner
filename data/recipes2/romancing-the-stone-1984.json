@@ -1,0 +1,424 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Colombian arepas con queso",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 10,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pre-cooked white cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cornmeal, warm water and salt into a soft dough and rest.",
+     "min": 5
+    },
+    {
+     "text": "Shape 8 patties about 1.5cm thick.",
+     "min": 5
+    },
+    {
+     "text": "Cook in a buttered pan over medium heat until golden on both sides.",
+     "min": 10
+    },
+    {
+     "text": "Fry diced tomatoes and sliced spring onions in oil to make the hogao.",
+     "min": 10
+    },
+    {
+     "text": "Split the arepas and stuff with sliced mozzarella and a knob of butter.",
+     "min": 3
+    },
+    {
+     "text": "Serve with the hogao.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Cartagena empanadas",
+   "course": "s",
+   "prep_min": 45,
+   "cook_min": 15,
+   "make_ahead": "Fill a day ahead, fry fresh",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "potato, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "arepa flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 350,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green chilli",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the mince with the potato and cumin until cooked through.",
+     "min": 10
+    },
+    {
+     "text": "Cool the filling completely.",
+     "min": 20
+    },
+    {
+     "text": "Mix the arepa flour with warm water and salt to a dough.",
+     "min": 5
+    },
+    {
+     "text": "Flatten balls of dough, fill, fold and crimp the edges.",
+     "min": 10
+    },
+    {
+     "text": "Fry at 180C until crisp and golden.",
+     "min": 10
+    },
+    {
+     "text": "Blitz coriander, chilli, lime and a little oil for the sauce.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Colombian sancocho",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 95,
+   "make_ahead": "Better the next day, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2.5,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "cassava",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green plantain",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "avocados",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and chop the onion, garlic, potatoes, cassava and plantain, and cut the corn into chunks.",
+     "min": 15
+    },
+    {
+     "text": "Simmer the chicken in water with the onion and garlic.",
+     "min": 30
+    },
+    {
+     "text": "Add the corn, potatoes, cassava and plantain and simmer until thick.",
+     "min": 60
+    },
+    {
+     "text": "Cook the rice while the soup simmers.",
+     "min": 15
+    },
+    {
+     "text": "Finish with coriander and serve with rice and sliced avocado.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "El Corazón emerald jelly",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 243,
+   "make_ahead": "Make the day before, keep chilled",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "gelatine leaves",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "fresh lime juice (about 10 limes)",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "coconut cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch mint",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the gelatine leaves in cold water.",
+     "min": 5
+    },
+    {
+     "text": "Heat the water with the sugar until dissolved.",
+     "min": 5
+    },
+    {
+     "text": "Squeeze the gelatine and stir it in, then add the lime juice.",
+     "min": 5
+    },
+    {
+     "text": "Pour into a mould.",
+     "min": 5
+    },
+    {
+     "text": "Set in the fridge.",
+     "min": 240
+    },
+    {
+     "text": "Turn out and serve with chilled coconut cream and mint.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Joan Wilder's iced coffee with panela cream",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Coffee up to 1 day chilled",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "ground Colombian coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "panela or dark brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ground cinnamon, to dust",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the coffee strong with the hot water.",
+     "min": 5
+    },
+    {
+     "text": "While hot, stir in most of the panela and the cinnamon stick.",
+     "min": 3
+    },
+    {
+     "text": "Cool for 30 minutes and remove the cinnamon stick.",
+     "min": 30
+    },
+    {
+     "text": "Lightly whip the cream with a spoonful of the panela until just thick.",
+     "min": 4
+    },
+    {
+     "text": "Fill four glasses with ice, pour in the coffee, float the cream on top and dust with cinnamon.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

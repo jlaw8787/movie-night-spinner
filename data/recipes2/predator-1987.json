@@ -1,0 +1,344 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Mud-camo bean dip",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 0,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "black beans (2 tins), drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "feta, crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green chilli, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag corn chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the beans with the garlic, cumin and lime juice until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Spread in a bowl and top with the feta, coriander and green chilli.",
+     "min": 4
+    },
+    {
+     "text": "Serve with the corn chips.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Billy's plantain chips",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Up to 1 day, airtight",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "green plantains",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the plantains and slice very thin on a mandoline.",
+     "min": 12
+    },
+    {
+     "text": "Fry at 175C in batches until crisp, about 2 minutes each.",
+     "min": 12
+    },
+    {
+     "text": "Mix the flaky salt with the lime zest and toss through the hot chips.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Chopper pad steak",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Chimichurri up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "rump steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the steaks with salt, pepper and smoked paprika.",
+     "min": 3
+    },
+    {
+     "text": "Chop the parsley and garlic and mix with the vinegar, oil and chilli flakes.",
+     "min": 10
+    },
+    {
+     "text": "Grill over high heat, turning once.",
+     "min": 8
+    },
+    {
+     "text": "Rest the steaks, then spoon over the chimichurri.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Mud cake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 95,
+   "make_ahead": "Up to 3 days, airtight",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 160C and line a cake tin. Melt 250g of the chocolate with the butter and let it cool slightly.",
+     "min": 12
+    },
+    {
+     "text": "Whisk in the eggs and sugar, then fold in the flour and cocoa.",
+     "min": 8
+    },
+    {
+     "text": "Bake until a skewer comes out with just a few crumbs, then cool in the tin.",
+     "min": 70
+    },
+    {
+     "text": "Heat the cream, melt in the remaining chocolate, pour over the cake and drag with a fork.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Val Verde jungle rum punch",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "dark rum",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes (60ml juice)",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "ml",
+     "item": "grenadine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small pineapple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "whole nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag crushed ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice, for shaking",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Juice the limes and scoop out the passionfruit pulp. Cut pineapple wedges for garnish.",
+     "min": 5
+    },
+    {
+     "text": "Shake the rum, pineapple juice, passionfruit, lime juice and grenadine with ice for 15 seconds.",
+     "min": 2
+    },
+    {
+     "text": "Strain into tumblers packed with crushed ice, grate nutmeg on top and garnish with a pineapple wedge.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}

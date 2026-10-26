@@ -1,0 +1,320 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Nate's grilled cheese",
+   "course": "s",
+   "prep_min": 5,
+   "cook_min": 10,
+   "make_ahead": "Best fresh",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices sourdough bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "gruyere, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter the outside of the sourdough slices.",
+     "min": 5
+    },
+    {
+     "text": "Fill with the gruyere and cheddar.",
+     "min": 2
+    },
+    {
+     "text": "Cook in a pan over medium heat, pressing down, until golden and melting.",
+     "min": 6
+    },
+    {
+     "text": "Cut into fingers and serve.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Paris fashion week canapés",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "Up to 2 hours, keep covered and chilled",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "blinis",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "smoked salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "creme fraiche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "fresh figs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "goat's cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Top the blinis with creme fraiche, smoked salmon and snipped chives.",
+     "min": 10
+    },
+    {
+     "text": "Halve the figs and top each with goat's cheese and a drizzle of honey.",
+     "min": 7
+    },
+    {
+     "text": "Arrange both in neat rows on a platter.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Miranda's steak",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 50,
+   "make_ahead": "Sauce up to 1 day, cook steak fresh",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sirloin steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cloves garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "baby spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into chunks and roast at 220C until crisp.",
+     "min": 45
+    },
+    {
+     "text": "Sear the steaks in a smoking pan, baste with butter and garlic, then rest.",
+     "min": 10
+    },
+    {
+     "text": "Wilt the spinach and simmer with the cream until thick.",
+     "min": 8
+    },
+    {
+     "text": "Slice the steak and serve with the potatoes and creamed spinach.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Cerulean blueberry tart",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets sweet shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "thick custard",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "apricot jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Press the pastry into a tart tin and blind bake.",
+     "min": 20
+    },
+    {
+     "text": "Cool the case fully.",
+     "min": 20
+    },
+    {
+     "text": "Fill with custard and pile the blueberries on top.",
+     "min": 8
+    },
+    {
+     "text": "Warm the apricot jam with the water and brush over to glaze.",
+     "min": 5
+    },
+    {
+     "text": "Dust the edge with icing sugar.",
+     "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Miranda's espresso martini",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 8,
+   "make_ahead": "Mix and shake fresh",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "coffee liqueur",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "espresso, cooled (4 shots)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "coffee beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill 4 coupe glasses in the freezer.",
+     "min": 5
+    },
+    {
+     "text": "Pull the espresso and let it cool.",
+     "min": 5
+    },
+    {
+     "text": "Shake the vodka, liqueur, espresso and syrup hard over ice so it foams, one drink at a time.",
+     "min": 5
+    },
+    {
+     "text": "Strain into a chilled coupe and float 3 coffee beans on the crema.",
+     "min": 3
+    }
+   ]
+  }
+ ]
+}
