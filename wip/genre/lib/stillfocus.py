@@ -32,6 +32,10 @@ def faces(im, det):
         if sc >= 0.8 and fw * fh >= 0.004 * w * h: out.append((x, y, fw, fh))
     return out
 
+def tight(fs, w, h):
+    """head cut off by the top or side of the frame, or a face so big it is an extreme close-up"""
+    return any(fw > 0.42 * w or (fw > 0.15 * w and (y < 0.01 * h or x < -0.02 * w or x + fw > 1.02 * w)) for x, y, fw, fh in fs)
+
 def focus(fs, w, h):
     if not fs: return None
     a = sum(fw * fh for _, _, fw, fh in fs)
@@ -41,7 +45,7 @@ def focus(fs, w, h):
     return [round(float(min(max(cx / w, 0), 1)), 2), round(float(min(max(cy / h, 0), 1)), 2)]
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("--write", action="store_true"); ap.add_argument("--film", action="append")
+    ap = argparse.ArgumentParser(); ap.add_argument("--write", action="store_true"); ap.add_argument("--tight", action="store_true", help="also block big cut-off faces (about half are good close-ups, so review before writing)"); ap.add_argument("--film", action="append")
     a = ap.parse_args()
     det = cv2.FaceDetectorYN.create(YUNET, "", (320, 320), 0.8)
     st = json.load(open("data/film-stills.json")); fm = json.load(open("data/film-format.json"))
@@ -59,9 +63,13 @@ def main():
             g = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
             if g.mean() < DARK_MEAN and np.percentile(g, 90) < DARK_P90:
                 dark.setdefault(f, []).append(p); print(f"DARK {g.mean():5.1f} {f}  {p}"); continue
-            fc = focus(faces(im, det), im.shape[1], im.shape[0])
+            fs = faces(im, det)
+            left = len(picked(st[f], block.get(f, []) + dark.get(f, []))) - 1
+            if a.tight and fs and tight(fs, im.shape[1], im.shape[0]) and left >= 4:
+                dark.setdefault(f, []).append(p); print(f"TIGHT {f}  {p}"); continue
+            fc = focus(fs, im.shape[1], im.shape[0])
             if fc: foc[p] = fc
-    print(f"{sum(map(len, dark.values()))} dark stills in {len(dark)} films, {len(foc)} stills with faces", file=sys.stderr)
+    print(f"{sum(map(len, dark.values()))} dark or tight stills in {len(dark)} films, {len(foc)} stills with faces", file=sys.stderr)
     json.dump(dark, open(os.path.join(CACHE, "_dark.json"), "w"), indent=1)
     if a.write:
         for f, ps in dark.items(): block.setdefault(f, []).extend(p for p in ps if p not in block[f])

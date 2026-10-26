@@ -43,7 +43,7 @@ for (const f of films) {
     o.lf = a.format;
     out.lib = { fmt: a.format, era: a.era, tone: a.tone, flavour: LIB.fl[id] || null, palette: LIB.pal[id] || null, logo: LIB.block[id] ? null : (LIB.logo[id] || null),
       stills: (() => { const sb = LIB.sblock[id] || [], all = (LIB.st[id] || []).filter(x => x[1] >= 1280 && !sb.includes(x[0])), clean = all.filter(x => !x[3]); return (clean.length >= 2 ? clean : all).map(x => x[0]).slice(0, 8); })() };
-    { const fo = {}; for (const p of out.lib.stills) if (LIB.sfoc[p]) fo[p] = LIB.sfoc[p]; if (Object.keys(fo).length) out.lib.focus = fo; }
+    { const fo = {}, ar = Object.fromEntries((LIB.st[id] || []).map(x => [x[0], +(x[1] / x[2]).toFixed(3)])); for (const p of out.lib.stills) if (LIB.sfoc[p]) fo[p] = LIB.sfoc[p].concat(ar[p] || 1.778); if (Object.keys(fo).length) out.lib.focus = fo; }
   }
   { const r2p = path.join(root, 'data/recipes2', s + '.json'); if (fs.existsSync(r2p)) out.r2 = JSON.parse(fs.readFileSync(r2p, 'utf8')); }
   if (EDITIONS[id]) out.edition = EDITIONS[id];
