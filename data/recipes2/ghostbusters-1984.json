@@ -2,28 +2,28 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Slimer's green dip",
+   "n": "Slimer's slime dip",
    "course": "s",
-   "prep_min": 15,
-   "cook_min": 25,
+   "prep_min": 17,
+   "cook_min": 20,
    "make_ahead": "Mix up to 1 day ahead, bake just before serving",
    "ingredients": [
     {
-     "q": 150,
+     "q": 250,
      "u": "g",
-     "item": "frozen spinach",
-     "aisle": "Frozen"
+     "item": "spinach",
+     "aisle": "Produce"
     },
     {
      "q": 150,
      "u": "g",
-     "item": "drained marinated artichokes",
-     "aisle": "Pantry"
+     "item": "marinated artichokes, drained",
+     "aisle": "Deli"
     },
     {
      "q": 150,
      "u": "g",
-     "item": "cream cheese",
+     "item": "cream cheese, softened",
      "aisle": "Dairy"
     },
     {
@@ -36,6 +36,12 @@
      "q": 100,
      "u": "g",
      "item": "grated mozzarella",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "grated parmesan",
      "aisle": "Dairy"
     },
     {
@@ -53,114 +59,264 @@
    ],
    "steps": [
     {
-     "text": "Thaw the spinach and squeeze it very dry. Chop the artichokes.",
+     "text": "Wilt the spinach in a dry pan, cool, then squeeze very dry and chop with the artichokes.",
      "min": 10
     },
     {
-     "text": "Mix the spinach, artichokes, cream cheese, sour cream, most of the mozzarella and the garlic. Spoon into a small baking dish and top with the rest of the mozzarella.",
+     "text": "Mix the spinach and artichokes with the cream cheese, sour cream, most of the mozzarella, the parmesan and the garlic.",
      "min": 5
     },
     {
-     "text": "Bake at 190C until bubbling. Serve with the corn chips.",
-     "min": 25
+     "text": "Spoon into a small baking dish, top with the rest of the mozzarella and bake at 190C for 20 minutes until bubbling.",
+     "min": 20
+    },
+    {
+     "text": "Serve hot with the corn chips for scooping.",
+     "min": 2
     }
    ]
   },
   {
-   "n": "Firehouse wings",
+   "n": "Dana's fridge devilled eggs",
    "course": "s",
-   "prep_min": 10,
-   "cook_min": 50,
-   "make_ahead": "Sauce just before serving",
+   "prep_min": 25,
+   "cook_min": 10,
+   "make_ahead": "Up to 1 day ahead, keep chilled",
    "ingredients": [
     {
-     "q": 800,
-     "u": "g",
-     "item": "chicken wings, separated",
-     "aisle": "Meat"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "baking powder",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 0.5,
-     "u": "tsp",
-     "item": "salt",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "smoked paprika",
-     "aisle": "Spices"
-    },
-    {
-     "q": 40,
-     "u": "ml",
-     "item": "hot sauce",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 30,
-     "u": "g",
-     "item": "butter",
+     "q": 6,
+     "u": "",
+     "item": "eggs",
      "aisle": "Dairy"
     },
     {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "green food colouring, a drop",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "snipped chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs for 10 minutes, then cool in iced water and peel.",
+     "min": 20
+    },
+    {
+     "text": "Halve the eggs and scoop the yolks into a bowl.",
+     "min": 5
+    },
+    {
+     "text": "Whip the yolks with the mayonnaise, Dijon mustard, a pinch of salt and a drop of green food colouring until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Pipe back into the whites and scatter the chives on top.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Toasted marshmallow skewers",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 8,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "large marshmallows",
+     "aisle": "Pantry"
+    },
+    {
      "q": 100,
-     "u": "ml",
-     "item": "ranch dressing",
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "digestive biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "bamboo skewers",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Pat the wings dry and toss with baking powder, salt and paprika. Spread on a rack over a lined tray.",
+     "text": "Melt the dark chocolate in a bowl over simmering water and crush the digestive biscuits in a bag with a rolling pin.",
      "min": 8
     },
     {
-     "text": "Roast at 220C, turning halfway, until browned and at least 74C in the thickest part.",
-     "min": 42
+     "text": "Push 2 marshmallows onto each bamboo skewer.",
+     "min": 3
     },
     {
-     "text": "Melt the butter with the hot sauce and toss with most of the wings. Leave some plain for a milder option. Serve with ranch.",
-     "min": 3
+     "text": "Toast over a gas flame or under a hot grill, turning often, until the outside blisters.",
+     "min": 5
+    },
+    {
+     "text": "Dip in the melted chocolate, then in the crushed biscuits, and eat while warm.",
+     "min": 4
     }
    ]
   },
   {
-   "n": "New York sesame chicken",
+   "n": "Firehouse meatball sub",
    "course": "m",
-   "prep_min": 15,
-   "cook_min": 25,
-   "make_ahead": "Rice can be cooked a day ahead and chilled",
+   "prep_min": 17,
+   "cook_min": 33,
+   "make_ahead": "Meatballs and sauce up to 2 days ahead, keep chilled",
    "ingredients": [
     {
-     "q": 600,
+     "q": 250,
      "u": "g",
-     "item": "boneless chicken thighs",
+     "item": "pork mince",
      "aisle": "Meat"
     },
     {
-     "q": 3,
-     "u": "tbsp",
-     "item": "cornflour, for coating",
+     "q": 250,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "grated parmesan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 700,
+     "u": "ml",
+     "item": "passata",
      "aisle": "Pantry"
     },
     {
      "q": 1,
      "u": "tsp",
-     "item": "cornflour, for sauce",
+     "item": "dried oregano",
      "aisle": "Pantry"
     },
     {
-     "q": 1,
+     "q": 4,
      "u": "",
-     "item": "neutral oil, for frying",
+     "item": "long rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices provolone",
+     "aisle": "Deli"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the pork and beef mince with the egg, parmesan, breadcrumbs, garlic, salt and pepper and roll into 16 meatballs.",
+     "min": 12
+    },
+    {
+     "text": "Bake the meatballs on a lined tray at 200C for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Simmer the passata with the oregano, add the meatballs and simmer for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Split the long rolls, pack in the meatballs and sauce and lay the provolone on top.",
+     "min": 5
+    },
+    {
+     "text": "Grill for 2 to 3 minutes until the cheese has melted.",
+     "min": 3
+    }
+   ]
+  },
+  {
+   "n": "Chinese takeaway at the firehouse",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Cook the rice a day ahead and chill",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
      "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lap cheong sausages",
+     "aisle": "Deli"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
     },
     {
      "q": 3,
@@ -171,217 +327,135 @@
     {
      "q": 2,
      "u": "tbsp",
-     "item": "honey",
+     "item": "vegetable oil",
      "aisle": "Pantry"
     },
     {
-     "q": 1,
-     "u": "tbsp",
-     "item": "rice vinegar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "sesame oil",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
+     "q": 24,
      "u": "",
-     "item": "garlic cloves, crushed",
-     "aisle": "Produce"
+     "item": "frozen pork dumplings",
+     "aisle": "Frozen"
     },
     {
-     "q": 60,
+     "q": 80,
      "u": "ml",
      "item": "water",
      "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "sesame seeds",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "eggs",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 500,
-     "u": "g",
-     "item": "chilled cooked rice",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "spring onions, sliced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "head broccoli",
-     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Cut the chicken into bite-size pieces and toss with the coating cornflour. Slice the spring onions and cut the broccoli into florets.",
+     "text": "Cook the jasmine rice the day before, spread it on a tray and chill overnight.",
+     "min": 25
+    },
+    {
+     "text": "Slice the lap cheong and spring onions and beat the eggs.",
+     "min": 5
+    },
+    {
+     "text": "Heat a wok until smoking with half the oil, scramble the eggs, then add the lap cheong, rice and 2 tbsp soy sauce and toss for 4 minutes until hot. Stir through the spring onions.",
+     "min": 8
+    },
+    {
+     "text": "Fry the frozen pork dumplings in the rest of the oil in a frying pan for 2 minutes until the bases brown, add the water, cover and steam for 6 minutes.",
      "min": 10
     },
     {
-     "text": "Shallow-fry the chicken in batches until crisp and at least 74C inside. Drain.",
-     "min": 12
-    },
-    {
-     "text": "Simmer the soy, honey, vinegar, sesame oil, garlic and water. Thicken with the sauce cornflour mixed with a little water, then toss through the chicken with the sesame seeds.",
-     "min": 5
-    },
-    {
-     "text": "Fry the beaten eggs in a little oil, add the rice, spring onions and a splash of soy, and stir-fry until piping hot.",
-     "min": 8
-    },
-    {
-     "text": "Char the broccoli in a hot pan with oil and a splash of water. Divide everything into 4 takeaway boxes.",
-     "min": 5
+     "text": "Serve out of takeaway boxes with the rest of the soy sauce on the side.",
+     "min": 2
     }
    ]
   },
   {
-   "n": "Stay Puft brownie skillet",
+   "n": "Stay Puft s'mores",
    "course": "w",
-   "prep_min": 15,
-   "cook_min": 30,
-   "make_ahead": "Bake just before serving",
+   "prep_min": 5,
+   "cook_min": 4,
+   "make_ahead": "",
    "ingredients": [
     {
-     "q": 100,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "dark chocolate",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 120,
-     "u": "g",
-     "item": "caster sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
+     "q": 8,
      "u": "",
-     "item": "eggs",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 60,
-     "u": "g",
-     "item": "plain flour",
+     "item": "large marshmallows",
      "aisle": "Pantry"
     },
     {
-     "q": 15,
-     "u": "g",
-     "item": "cocoa powder",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
+     "q": 16,
      "u": "",
-     "item": "pinch salt",
-     "aisle": "Spices"
+     "item": "digestive biscuits",
+     "aisle": "Pantry"
     },
     {
      "q": 100,
      "u": "g",
-     "item": "marshmallows",
+     "item": "milk chocolate",
      "aisle": "Pantry"
-    },
-    {
-     "q": 400,
-     "u": "ml",
-     "item": "vanilla ice cream",
-     "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Melt the butter and chocolate together and cool slightly.",
-     "min": 5
-    },
-    {
-     "text": "Whisk in the sugar and eggs, then fold in the flour, cocoa and salt. Pour into a buttered 20cm ovenproof skillet.",
-     "min": 8
-    },
-    {
-     "text": "Bake at 180C until the edges are set and the centre is fudgy.",
-     "min": 22
-    },
-    {
-     "text": "Top with the marshmallows and grill briefly until golden, watching closely. Serve with the ice cream.",
+     "text": "Lay 8 digestive biscuits on a tray and put a square of milk chocolate on each.",
      "min": 3
+    },
+    {
+     "text": "Toast the marshmallows over a flame until golden and melting, or sit one on each chocolate square and put the tray under a hot grill for 30 seconds.",
+     "min": 4
+    },
+    {
+     "text": "Press the remaining biscuits on top and eat straight away.",
+     "min": 2
     }
    ]
   },
   {
-   "n": "Green citrus slush",
+   "n": "Ectoplasm slushie",
    "course": "d",
-   "prep_min": 10,
+   "prep_min": 6,
    "cook_min": 0,
-   "make_ahead": "Best made fresh",
+   "make_ahead": "",
    "ingredients": [
     {
-     "q": 300,
-     "u": "ml",
-     "item": "orange juice",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "limes",
-     "aisle": "Produce"
-    },
-    {
-     "q": 300,
-     "u": "ml",
-     "item": "lemonade",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 400,
+     "q": 600,
      "u": "g",
      "item": "ice",
      "aisle": "Frozen"
     },
     {
+     "q": 150,
+     "u": "ml",
+     "item": "lime cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "lemonade, chilled",
+     "aisle": "Drinks"
+    },
+    {
      "q": null,
      "u": "",
-     "item": "green food colouring, optional",
+     "item": "green food colouring, a drop",
      "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Juice the limes.",
-     "min": 4
+     "text": "Blitz the ice with the lime cordial and lemonade until slushy.",
+     "min": 3
     },
     {
-     "text": "Blend the orange juice, lime juice, lemonade and ice until slushy. Add a tiny drop of green food colouring if wanted.",
-     "min": 4
+     "text": "Add a drop of green food colouring and blitz again.",
+     "min": 1
     },
     {
-     "text": "Divide into 4 glasses and serve immediately.",
+     "text": "Pour into 4 glasses and add a slice of lime to each.",
      "min": 2
     }
    ]

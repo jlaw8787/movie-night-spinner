@@ -1,8 +1,10 @@
 """Clean screenshots of named library menus: python3 wip/genre/lib/shotlist.py OUTDIR "Film (Year)" ..."""
-import asyncio,os,re,sys
+import asyncio,os,re,sys,json
 from urllib.parse import quote
 from playwright.async_api import async_playwright
-out=sys.argv[1];fs=sys.argv[2:];os.makedirs(out,exist_ok=True)
+out=sys.argv[1];fs=sys.argv[2:]
+if len(fs)==1 and fs[0].startswith('@'):fs=json.load(open(fs[0][1:]))
+os.makedirs(out,exist_ok=True)
 slug=lambda s:re.sub(r'[^a-z0-9]+','-',s.lower()).strip('-')
 async def main():
   async with async_playwright() as p:

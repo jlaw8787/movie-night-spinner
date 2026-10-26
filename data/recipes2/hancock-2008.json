@@ -246,7 +246,7 @@
   {
    "n": "Hancock's whisky sour",
    "course": "d",
-   "prep_min": 5,
+   "prep_min": 7,
    "cook_min": 5,
    "make_ahead": "",
    "ingredients": [
@@ -288,6 +288,10 @@
     }
    ],
    "steps": [
+    {
+     "text": "For each drink, measure 50ml whisky, the juice of 1 lemon, 15ml sugar syrup, 1 egg white and 1 dash bitters into a shaker.",
+     "min": 2
+    },
     {
      "text": "Shake each drink without ice for 10 seconds.",
      "min": 5

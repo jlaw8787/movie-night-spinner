@@ -65,8 +65,105 @@
      "min": 2
     },
     {
-     "text": "Fill soft buns with the patties, onion, pickle, mustard and a dab of mayo, the way they do it in Amsterdam.",
+     "text": "Fill soft buns with the patties, onion, pickle, mustard and a dab of mayonnaise, the way they do it in Amsterdam.",
      "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Big Kahuna burger bites",
+   "course": "s",
+   "prep_min": 16,
+   "cook_min": 18,
+   "make_ahead": "Teriyaki glaze up to 3 days ahead",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "mirin",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "tinned pineapple rings",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "slices cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sriracha",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slider buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "toothpicks",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the soy sauce, mirin and brown sugar for 5 minutes until syrupy.",
+     "min": 6
+    },
+    {
+     "text": "Shape the beef mince into 12 small patties and season with salt and pepper.",
+     "min": 8
+    },
+    {
+     "text": "Grill the pineapple rings until charred and cut each into 3.",
+     "min": 6
+    },
+    {
+     "text": "Cook the patties on a hot griddle for 2 minutes a side, brush with the teriyaki and top each with a small square of cheddar.",
+     "min": 6
+    },
+    {
+     "text": "Mix the mayonnaise with the sriracha. Fill the slider buns with the patties, pineapple and sriracha mayonnaise and hold each together with a toothpick.",
+     "min": 8
     }
    ]
   },
@@ -127,6 +224,103 @@
     },
     {
      "text": "Fry again at 190C until crisp, salt and serve in red-checked paper boats with tomato sauce and mustard.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Douglas Sirk steak",
+   "course": "m",
+   "prep_min": 70,
+   "cook_min": 35,
+   "make_ahead": "Season the steaks an hour ahead",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sirloin steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "frozen skin-on fries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "shallot, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "black peppercorns, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "ml",
+     "item": "brandy",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "blue cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the sirloin steaks with salt an hour ahead and leave them out of the fridge.",
+     "min": 60
+    },
+    {
+     "text": "Bake the frozen skin-on fries at 220C for 25 minutes until crisp.",
+     "min": 25
+    },
+    {
+     "text": "Heat the oil in a pan until smoking and sear the steaks for 2 minutes a side until 48C inside, then rest them for 5 minutes.",
+     "min": 10
+    },
+    {
+     "text": "In the same pan cook the shallot and crushed peppercorns for 1 minute, add the brandy and cream and simmer for 2 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Cut the iceberg lettuce into wedges and spoon over the blue cheese mashed with the sour cream. Serve with the steaks, fries and peppercorn sauce.",
      "min": 5
     }
    ]
@@ -325,6 +519,47 @@
     {
      "text": "Pour into chilled glasses, top with whipped cream and a cherry.",
      "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Vanilla Coke",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "vanilla syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.25,
+     "u": "l",
+     "item": "cola, chilled",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill four tall glasses with ice.",
+     "min": 1
+    },
+    {
+     "text": "Add 15ml vanilla syrup to each glass, or half a teaspoon of vanilla extract with a teaspoon of sugar syrup.",
+     "min": 2
+    },
+    {
+     "text": "Top each with 300ml cold cola and stir once.",
+     "min": 2
     }
    ]
   }

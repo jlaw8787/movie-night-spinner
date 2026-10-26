@@ -48,7 +48,7 @@
      "q": 1,
      "u": "tsp",
      "item": "lemon myrtle",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 8,
@@ -152,7 +152,7 @@
    ]
   },
   {
-   "n": "Barbecued barra with lemon myrtle butter",
+   "n": "That's-a-knife barbecued barra",
    "course": "m",
    "prep_min": 10,
    "cook_min": 10,
@@ -165,6 +165,12 @@
      "aisle": "Seafood"
     },
     {
+     "q": 1,
+     "u": "tbsp",
+     "item": "neutral oil",
+     "aisle": "Pantry"
+    },
+    {
      "q": 80,
      "u": "g",
      "item": "butter",
@@ -173,33 +179,33 @@
     {
      "q": 2,
      "u": "",
-     "item": "garlic cloves",
+     "item": "garlic cloves, crushed",
      "aisle": "Produce"
     },
     {
      "q": 1,
      "u": "tsp",
      "item": "lemon myrtle",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
-     "q": 1,
-     "u": "tbsp",
-     "item": "neutral oil",
-     "aisle": "Pantry"
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Score the skin and pat the fillets very dry.",
+     "text": "Score the skin of the barramundi fillets, pat very dry and brush with the oil.",
      "min": 5
     },
     {
-     "text": "Grill skin down over high heat until crisp, then flip briefly.",
+     "text": "Grill skin down over high heat for about 4 minutes until crisp, then flip for 1 minute.",
      "min": 5
     },
     {
-     "text": "Melt the butter with crushed garlic and lemon myrtle and spoon over the fish.",
+     "text": "Melt the butter with the garlic and lemon myrtle, spoon over the fish and serve with the lemons cut into wedges.",
      "min": 5
     }
    ]
@@ -296,7 +302,7 @@
      "q": 180,
      "u": "ml",
      "item": "dark rum",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 4,

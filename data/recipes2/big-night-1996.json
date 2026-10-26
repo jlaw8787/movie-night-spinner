@@ -2,160 +2,200 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Arancini",
+   "n": "Seafood risotto",
    "course": "s",
-   "prep_min": 40,
-   "cook_min": 20,
-   "make_ahead": "Rice up to 1 day ahead; fry just before serving",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "",
    "ingredients": [
     {
+     "q": 1.2,
+     "u": "l",
+     "item": "fish stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "carnaroli rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "white wine",
+     "aisle": "Bottle shop"
+    },
+    {
      "q": 300,
+     "u": "g",
+     "item": "green prawns, peeled",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "squid rings",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "mussels, cleaned",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the prawns, scrub and debeard the mussels, dice the onion, chop the garlic and chop the parsley.",
+     "min": 15
+    },
+    {
+     "text": "Warm the fish stock in a saucepan. Soften the onion and garlic in the olive oil over medium heat for 5 minutes.",
+     "min": 7
+    },
+    {
+     "text": "Add the carnaroli rice and toast for 2 minutes, then pour in the white wine and stir until it is absorbed.",
+     "min": 3
+    },
+    {
+     "text": "Add the hot stock a ladle at a time, stirring, for 16 minutes until the rice is nearly tender.",
+     "min": 16
+    },
+    {
+     "text": "Stir in the prawns, squid rings and mussels, cover and cook for 4 minutes until the mussels open. Throw out any that stay shut.",
+     "min": 4
+    },
+    {
+     "text": "Take off the heat and stir through the butter, the parsley and a squeeze of lemon. Serve straight away, no cheese.",
+     "min": 1
+    }
+   ]
+  },
+  {
+   "n": "Risotto three ways",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 70,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
      "u": "g",
      "item": "arborio rice",
      "aisle": "Pantry"
     },
     {
-     "q": 900,
+     "q": 125,
      "u": "ml",
+     "item": "white wine",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 1.4,
+     "u": "l",
      "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "baby spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tomato passata",
      "aisle": "Pantry"
     },
     {
      "q": 1,
      "u": "",
      "item": "pinch saffron threads",
-     "aisle": "Spices"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "mozzarella, cubed",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 50,
-     "u": "g",
-     "item": "frozen peas",
-     "aisle": "Frozen"
-    },
-    {
-     "q": 40,
-     "u": "g",
-     "item": "plain flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "eggs, beaten",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "breadcrumbs",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 500,
-     "u": "ml",
-     "item": "neutral oil, for frying",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Cook the rice in the stock with the saffron until thick and chill on a tray, ideally overnight.",
-     "min": 25
+     "text": "Heat the chicken stock in a saucepan. Soak the saffron in 2 tbsp of hot water. Blitz the baby spinach and basil leaves with a splash of the stock to a smooth paste.",
+     "min": 10
     },
     {
-     "text": "Wrap golf-ball portions of rice around a cube of mozzarella and a few peas.",
-     "min": 15
+     "text": "Soften the onion in 40g of the butter for 5 minutes, add the arborio rice and toast for 2 minutes, then add the white wine and stir until absorbed.",
+     "min": 9
     },
     {
-     "text": "Roll in flour, egg and breadcrumbs.",
-     "min": 8
+     "text": "Add the hot stock a ladle at a time, stirring, for 17 minutes until the rice is just tender.",
+     "min": 17
     },
     {
-     "text": "Fry at 175C in batches until deep gold.",
-     "min": 12
-    }
-   ]
-  },
-  {
-   "n": "Antipasto board",
-   "course": "s",
-   "prep_min": 15,
-   "cook_min": 0,
-   "make_ahead": "Up to 3 hours, serve at room temperature",
-   "ingredients": [
-    {
-     "q": 100,
-     "u": "g",
-     "item": "prosciutto",
-     "aisle": "Meat"
+     "text": "Split the risotto into three pans over low heat. Stir the spinach and basil paste into the first, the parmesan and the last 30g butter into the second, and the passata with the saffron and its water into the third.",
+     "min": 5
     },
     {
-     "q": 100,
-     "u": "g",
-     "item": "bresaola",
-     "aisle": "Meat"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "lemon, juiced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "olive oil",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "handful rocket",
-     "aisle": "Produce"
-    },
-    {
-     "q": 150,
-     "u": "g",
-     "item": "marinated eggplant",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "roasted red capsicums, peeled and sliced",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 150,
-     "u": "g",
-     "item": "mixed olives",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "Italian loaf, warmed",
-     "aisle": "Bakery"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Lay the prosciutto flat on a board.",
+     "text": "Spoon the green, white and red risotto side by side on each plate.",
      "min": 3
-    },
-    {
-     "text": "Dress the bresaola with lemon juice, olive oil and rocket.",
-     "min": 4
-    },
-    {
-     "text": "Add the eggplant, capsicum and olives and a warm loaf of bread.",
-     "min": 8
     }
    ]
   },
@@ -255,116 +295,114 @@
    ]
   },
   {
-   "n": "Panna cotta",
-   "course": "w",
-   "prep_min": 15,
-   "cook_min": 375,
-   "make_ahead": "Up to 2 days, keep chilled in moulds",
+   "n": "Roast suckling pig",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 885,
+   "make_ahead": "Season and dry the pork in the fridge the night before",
    "ingredients": [
     {
+     "q": 1.5,
+     "u": "kg",
+     "item": "boned pork belly",
+     "aisle": "Meat"
+    },
+    {
      "q": 2,
-     "u": "",
-     "item": "gelatine leaves",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 500,
-     "u": "ml",
-     "item": "thickened cream",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 100,
-     "u": "ml",
-     "item": "milk",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 80,
-     "u": "g",
-     "item": "caster sugar",
+     "u": "tsp",
+     "item": "salt",
      "aisle": "Pantry"
     },
     {
      "q": 1,
-     "u": "",
-     "item": "vanilla bean, split",
+     "u": "tbsp",
+     "item": "fennel seeds",
      "aisle": "Pantry"
     },
     {
-     "q": 250,
-     "u": "g",
-     "item": "mixed berries",
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch rosemary",
      "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Soak the gelatine leaves in cold water.",
-     "min": 5
+     "text": "Score the skin of the pork belly with a sharp knife. Turn it over and rub the flesh side with the fennel seeds, crushed garlic and chopped rosemary.",
+     "min": 15
     },
     {
-     "text": "Heat the cream, milk, sugar and vanilla until steaming.",
-     "min": 8
+     "text": "Rub the skin with the salt, roll the pork belly up and tie with string every 3cm.",
+     "min": 10
     },
     {
-     "text": "Squeeze the gelatine and whisk it in, strain, and pour into four moulds.",
-     "min": 5
+     "text": "Sit it on a rack and dry uncovered in the fridge overnight.",
+     "min": 720
     },
     {
-     "text": "Set for 6 hours in the fridge.",
-     "min": 360
+     "text": "Roast at 240C for 30 minutes until the skin starts to blister.",
+     "min": 30
     },
     {
-     "text": "Dip the moulds in hot water, turn out and serve with berries.",
-     "min": 5
+     "text": "Turn the oven down to 160C and roast for 2 hours until tender with crisp crackling.",
+     "min": 120
+    },
+    {
+     "text": "Rest for 15 minutes, cut off the string and carve thick.",
+     "min": 15
     }
    ]
   },
   {
-   "n": "Primo's caffè corretto with grappa",
-   "course": "d",
+   "n": "Secondo's omelette",
+   "course": "m",
    "prep_min": 5,
    "cook_min": 5,
    "make_ahead": "",
    "ingredients": [
     {
-     "q": 72,
-     "u": "g",
-     "item": "finely ground coffee",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 4,
-     "u": "tsp",
-     "item": "caster sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 80,
-     "u": "ml",
-     "item": "grappa",
-     "aisle": "Drinks"
-    },
-    {
-     "q": 4,
+     "q": 8,
      "u": "",
-     "item": "amaretti biscuits",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf crusty bread",
      "aisle": "Bakery"
     }
    ],
    "steps": [
     {
-     "text": "Make four short espressos, or brew very strong stovetop coffee.",
-     "min": 5
-    },
-    {
-     "text": "Stir sugar into each cup and add a splash of grappa.",
+     "text": "Beat the eggs with a pinch of salt.",
      "min": 3
     },
     {
-     "text": "Serve each on a saucer with an amaretti biscuit.",
-     "min": 2
+     "text": "Heat the olive oil in a non-stick pan over medium heat, pour in the eggs and stir gently for about 3 minutes until just set underneath and soft on top.",
+     "min": 4
+    },
+    {
+     "text": "Fold the omelette, slide it onto a plate and cut into four. Serve with the crusty bread torn into pieces.",
+     "min": 3
     }
    ]
   }

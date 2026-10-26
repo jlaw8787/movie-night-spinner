@@ -116,6 +116,73 @@
    ]
   },
   {
+   "n": "Chilli-lime grilled pineapple spears",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 28,
+   "make_ahead": "Up to 4 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "large pineapple",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "skewers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and core the pineapple and cut into 12 long spears.",
+     "min": 10
+    },
+    {
+     "text": "Heat a grill pan until smoking and char the spears for 2 minutes a side until marked.",
+     "min": 8
+    },
+    {
+     "text": "Mix the chilli powder, salt, caster sugar and the zest of the lime.",
+     "min": 2
+    },
+    {
+     "text": "Squeeze the lime over the warm pineapple, sprinkle with the chilli mix and push a skewer into each spear.",
+     "min": 3
+    },
+    {
+     "text": "Chill for 20 minutes before serving.",
+     "min": 20
+    }
+   ]
+  },
+  {
    "n": "Porch day barbecue plate",
    "course": "m",
    "prep_min": 15,
@@ -138,13 +205,13 @@
      "q": 0.5,
      "u": "tsp",
      "item": "black pepper",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 2,
      "u": "tsp",
      "item": "smoked paprika",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 250,

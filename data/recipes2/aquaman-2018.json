@@ -272,7 +272,7 @@
   {
    "n": "Blue Hawaiian with rum and pineapple",
    "course": "d",
-   "prep_min": 10,
+   "prep_min": 12,
    "cook_min": 0,
    "make_ahead": "",
    "ingredients": [
@@ -320,6 +320,10 @@
     }
    ],
    "steps": [
+    {
+     "text": "For each drink, measure 30ml white rum, 20ml blue curacao, 90ml pineapple juice and 30ml coconut cream into a shaker.",
+     "min": 2
+    },
     {
      "text": "Shake each drink hard with ice until frothy.",
      "min": 8

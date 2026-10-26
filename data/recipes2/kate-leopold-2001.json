@@ -61,10 +61,10 @@
    ]
   },
   {
-   "n": "Three butters with sourdough and radishes",
+   "n": "Butter tasting",
    "course": "s",
    "prep_min": 17,
-   "cook_min": 40,
+   "cook_min": 35,
    "make_ahead": "Butters up to 2 days, keep chilled",
    "ingredients": [
     {
@@ -112,7 +112,7 @@
    ],
    "steps": [
     {
-     "text": "Brown the third butter in a pan.",
+     "text": "Brown 100g of the butter in a pan until nutty.",
      "min": 6
     },
     {
@@ -120,17 +120,21 @@
      "min": 30
     },
     {
-     "text": "Warm the loaf at 180C and slice.",
+     "text": "Set out the cultured butter, salted Irish butter and whipped brown butter in small dishes.",
+     "min": 3
+    },
+    {
+     "text": "Warm the sourdough loaf at 180C for 8 minutes and slice.",
      "min": 8
     },
     {
-     "text": "Halve the radishes and serve with flaky salt for dipping, alongside the three butters.",
+     "text": "Halve the radishes and serve with the flaky salt for dipping, alongside the three butters and bread.",
      "min": 5
     }
    ]
   },
   {
-   "n": "Whole roast snapper with beurre blanc",
+   "n": "Leopold's rooftop dinner",
    "course": "m",
    "prep_min": 20,
    "cook_min": 35,
@@ -143,15 +147,15 @@
      "aisle": "Seafood"
     },
     {
-     "q": 1,
+     "q": 2,
      "u": "",
-     "item": "lemon",
+     "item": "lemons, sliced",
      "aisle": "Produce"
     },
     {
      "q": 1,
      "u": "",
-     "item": "fennel bulb",
+     "item": "fennel bulb, sliced",
      "aisle": "Produce"
     },
     {
@@ -169,14 +173,14 @@
     {
      "q": 1,
      "u": "",
-     "item": "shallot",
+     "item": "shallot, finely chopped",
      "aisle": "Produce"
     },
     {
      "q": 100,
      "u": "ml",
      "item": "white wine",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 2,
@@ -199,27 +203,27 @@
    ],
    "steps": [
     {
-     "text": "Score the fish and stuff with lemon slices, sliced fennel and dill.",
+     "text": "Score the snapper on both sides, season with salt and stuff with the lemon slices, sliced fennel and dill.",
      "min": 12
     },
     {
-     "text": "Roast at 220C.",
+     "text": "Roast the fish at 220C for 25 minutes.",
      "min": 25
     },
     {
-     "text": "Boil the potatoes while the fish roasts.",
+     "text": "While the fish roasts, boil the new potatoes in salted water until tender, about 20 minutes, then drain.",
      "min": 0
     },
     {
-     "text": "Reduce the chopped shallot with the wine and vinegar.",
+     "text": "Reduce the shallot with the white wine and white wine vinegar until about 2 tbsp is left.",
      "min": 8
     },
     {
-     "text": "Whisk in the cold butter cube by cube.",
+     "text": "Take off the heat and whisk in the cold butter cube by cube until thick and glossy.",
      "min": 5
     },
     {
-     "text": "Rest the fish briefly and serve with the potatoes and sauce.",
+     "text": "Serve the fish with the potatoes and the sauce.",
      "min": 5
     }
    ]
@@ -268,11 +272,11 @@
      "min": 8
     },
     {
-     "text": "Whisk in the yolks.",
+     "text": "Separate the eggs and whisk the yolks into the chocolate.",
      "min": 3
     },
     {
-     "text": "Whip the whites to soft peaks with the sugar.",
+     "text": "Whip the egg whites to soft peaks with the sugar.",
      "min": 7
     },
     {

@@ -65,11 +65,11 @@
    ]
   },
   {
-   "n": "Spiced pretzel and peanut mix",
+   "n": "Subway train snacks",
    "course": "s",
    "prep_min": 5,
-   "cook_min": 17,
-   "make_ahead": "",
+   "cook_min": 20,
+   "make_ahead": "Up to 3 days ahead in an airtight container",
    "ingredients": [
     {
      "q": 200,
@@ -86,28 +86,32 @@
     {
      "q": 50,
      "u": "g",
-     "item": "butter, melted",
+     "item": "butter",
      "aisle": "Dairy"
     },
     {
      "q": 1,
      "u": "tsp",
      "item": "smoked paprika",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Toss the pretzels and peanuts with the butter and paprika.",
+     "text": "Heat the oven to 160C. Melt the butter and stir in the smoked paprika.",
      "min": 5
     },
     {
-     "text": "Spread on a tray and bake at 160C, stirring once.",
+     "text": "Toss the pretzels and peanuts in the paprika butter and spread on a lined tray.",
+     "min": 3
+    },
+    {
+     "text": "Bake for 15 minutes, stirring once halfway.",
      "min": 15
     },
     {
-     "text": "Cool and tip into paper bags.",
-     "min": 5
+     "text": "Cool on the tray and tip into paper bags.",
+     "min": 3
     }
    ]
   },
@@ -146,7 +150,7 @@
      "q": 1,
      "u": "tsp",
      "item": "ground cumin",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 16,
@@ -175,7 +179,7 @@
    ],
    "steps": [
     {
-     "text": "Mix the citrus juice, crushed garlic and cumin and marinate the steak.",
+     "text": "Juice the limes and orange, mix with the crushed garlic and cumin and marinate the steak.",
      "min": 8
     },
     {

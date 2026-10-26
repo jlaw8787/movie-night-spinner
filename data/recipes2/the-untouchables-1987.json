@@ -145,7 +145,7 @@
      "q": null,
      "u": "",
      "item": "salt and pepper, to taste",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     }
    ],
    "steps": [
@@ -180,7 +180,7 @@
      "q": 2,
      "u": "tsp",
      "item": "dried oregano, plus 1 tsp for the jus",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 2,
@@ -192,7 +192,7 @@
      "q": 1,
      "u": "tsp",
      "item": "black pepper, plus more for the jus",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 750,
@@ -306,6 +306,78 @@
     {
      "text": "Drain and toss in icing sugar.",
      "min": 2
+    }
+   ]
+  },
+  {
+   "n": "Bootleg lager",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 180,
+   "make_ahead": "Chill the bottles at least 3 hours ahead",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "bottles crisp lager",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the bottles of lager in the fridge for at least 3 hours, then keep them cold in a tub of ice.",
+     "min": 180
+    },
+    {
+     "text": "Pour the lager into heavy glass steins straight down the middle so each gets a proper head.",
+     "min": 5
+    }
+   ]
+  },
+  {
+   "n": "Canadian rye",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "Canadian rye whisky",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large ice cubes",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put one large ice cube in each of 4 short glasses.",
+     "min": 2
+    },
+    {
+     "text": "Pour 30ml Canadian rye whisky over the ice in each glass.",
+     "min": 2
+    },
+    {
+     "text": "Add a small splash of cold water to each to open up the whisky and serve.",
+     "min": 1
     }
    ]
   },

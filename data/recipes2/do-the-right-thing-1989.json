@@ -291,66 +291,6 @@
      "min": 5
     }
    ]
-  },
-  {
-   "n": "Whole pie, 18 in.",
-   "course": "m",
-   "extra": true,
-   "prep_min": 25,
-   "cook_min": 70,
-   "make_ahead": "Dough can be made a day ahead",
-   "ingredients": [
-    {
-     "q": 1,
-     "u": "kg",
-     "item": "pizza dough",
-     "aisle": "Bakery"
-    },
-    {
-     "q": 600,
-     "u": "g",
-     "item": "crushed tomatoes",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 400,
-     "u": "g",
-     "item": "grated low-moisture mozzarella",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 150,
-     "u": "g",
-     "item": "pepperoni",
-     "aisle": "Meat"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "dried oregano",
-     "aisle": "Spices"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "salt",
-     "aisle": "Spices"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Rest the dough at room temperature until relaxed. Season the tomatoes with salt.",
-     "min": 60
-    },
-    {
-     "text": "Stretch the dough thin into a large round and spread with sauce, mozzarella and pepperoni (leave the pepperoni off for a plain pie).",
-     "min": 10
-    },
-    {
-     "text": "Bake on a preheated tray at the oven's highest setting until bubbling and charred in spots. Sprinkle with oregano and cut into 8 big slices.",
-     "min": 10
-    }
-   ]
   }
  ]
 }

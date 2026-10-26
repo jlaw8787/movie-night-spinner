@@ -12,7 +12,7 @@
      "q": 250,
      "u": "g",
      "item": "goat's cheese log",
-     "aisle": "Meat"
+     "aisle": "Dairy"
     },
     {
      "q": 1,
@@ -294,7 +294,7 @@
   {
    "n": "Midnight margaritas",
    "course": "d",
-   "prep_min": 5,
+   "prep_min": 7,
    "cook_min": 0,
    "make_ahead": "",
    "ingredients": [
@@ -333,6 +333,10 @@
     {
      "text": "Juice the limes and rim four glasses with flaky salt",
      "min": 3
+    },
+    {
+     "text": "For each drink, measure 45ml tequila, 20ml orange liqueur and the juice of 1 lime into a shaker.",
+     "min": 2
     },
     {
      "text": "Shake each drink hard with ice",

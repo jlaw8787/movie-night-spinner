@@ -105,7 +105,7 @@
      "q": 0.25,
      "u": "tsp",
      "item": "ground cinnamon",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 40,
@@ -126,6 +126,89 @@
     {
      "text": "Whip the ricotta with a spoon of honey and the cinnamon, then serve with the peaches, more honey and the almonds.",
      "min": 4
+    }
+   ]
+  },
+  {
+   "n": "Mr Ping's red bean steamed buns",
+   "course": "s",
+   "prep_min": 113,
+   "cook_min": 12,
+   "make_ahead": "Up to 1 day, keep chilled and re-steam 5 minutes before serving",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, a pinch",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "milk, warm",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "red bean paste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, caster sugar, baking powder and salt in a bowl, then add the warm milk and oil and bring together into a dough.",
+     "min": 10
+    },
+    {
+     "text": "Knead for 8 minutes until smooth.",
+     "min": 8
+    },
+    {
+     "text": "Cover and prove in a warm spot for 1 hour.",
+     "min": 60
+    },
+    {
+     "text": "Divide into 12, flatten each piece, fill with a tablespoon of red bean paste and pinch closed. Sit each bun on a square of baking paper in a bamboo steamer.",
+     "min": 15
+    },
+    {
+     "text": "Cover and prove the buns for another 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Steam over boiling water for 12 minutes and serve hot, stacked in the steamer.",
+     "min": 12
     }
    ]
   },
@@ -176,7 +259,7 @@
      "q": 0.5,
      "u": "tsp",
      "item": "white pepper",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 400,
@@ -213,6 +296,121 @@
     {
      "text": "Cook the noodles and bok choy briefly, then pour the hot stock over them with the chicken. The secret is there isn't one.",
      "min": 10
+    }
+   ]
+  },
+  {
+   "n": "Valley of Peace kung pao chicken",
+   "course": "m",
+   "prep_min": 14,
+   "cook_min": 27,
+   "make_ahead": "",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thigh fillets, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cornflour, extra for the sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "black vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dried chillies",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Sichuan peppercorns",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "roasted peanuts",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rinse the jasmine rice, then simmer covered in 450ml water on low for 15 minutes and rest off the heat.",
+     "min": 18
+    },
+    {
+     "text": "Toss the chicken with 1 tbsp of the soy sauce and the 1 tbsp cornflour. Mix the remaining 3 tbsp soy, the black vinegar, sugar, extra cornflour and 60ml water for the sauce.",
+     "min": 8
+    },
+    {
+     "text": "Slice the garlic, grate the ginger and cut the spring onions into 3cm lengths.",
+     "min": 6
+    },
+    {
+     "text": "Heat the oil in a wok until very hot, stir-fry the dried chillies and Sichuan peppercorns for 20 seconds, then add the chicken and cook for 5 minutes.",
+     "min": 6
+    },
+    {
+     "text": "Add the garlic, ginger and spring onion, then the sauce, and toss until glossy. Stir in the peanuts and serve with the rice.",
+     "min": 3
     }
    ]
   },

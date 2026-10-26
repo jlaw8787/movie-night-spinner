@@ -18,7 +18,7 @@
      "q": 2,
      "u": "tsp",
      "item": "smoked paprika",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 1,
@@ -59,11 +59,11 @@
    ]
   },
   {
-   "n": "Salt and vinegar potato chips",
+   "n": "Corner shop crisps",
    "course": "s",
-   "prep_min": 25,
-   "cook_min": 30,
-   "make_ahead": "",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Fry up to 4 hours ahead and keep uncovered",
    "ingredients": [
     {
      "q": 600,
@@ -74,7 +74,7 @@
     {
      "q": 1.5,
      "u": "l",
-     "item": "vegetable oil",
+     "item": "vegetable oil, for frying",
      "aisle": "Pantry"
     },
     {
@@ -92,19 +92,15 @@
    ],
    "steps": [
     {
-     "text": "Slice the potatoes paper thin on a mandoline, rinse well and dry completely",
-     "min": 15
-    },
-    {
-     "text": "Heat the oil to 170C",
-     "min": 8
-    },
-    {
-     "text": "Fry in small batches until golden and crisp",
+     "text": "Slice the potatoes paper thin on a mandoline, rinse well in cold water and dry completely on tea towels.",
      "min": 20
     },
     {
-     "text": "Drain, sprinkle with sea salt flakes and splash with vinegar",
+     "text": "Heat the oil to 170C and fry the potato slices in small batches for 3 to 4 minutes until golden and crisp.",
+     "min": 22
+    },
+    {
+     "text": "Drain on paper towel, sprinkle with the sea salt flakes and splash with the malt vinegar.",
      "min": 3
     }
    ]
@@ -132,7 +128,7 @@
      "q": 330,
      "u": "ml",
      "item": "English ale",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 300,
@@ -189,7 +185,7 @@
      "min": 25
     },
     {
-     "text": "Fry the chips twice",
+     "text": "Cut the potatoes into chips and fry them twice in the vegetable oil",
      "min": 25
     },
     {
@@ -278,37 +274,33 @@
    ]
   },
   {
-   "n": "Pint of English ale",
+   "n": "Pint at the Winchester",
    "course": "d",
-   "prep_min": 5,
-   "cook_min": 0,
-   "make_ahead": "",
+   "prep_min": 2,
+   "cook_min": 180,
+   "make_ahead": "Chill the cans or bottles for at least 3 hours",
    "ingredients": [
     {
      "q": 1,
      "u": "l",
      "item": "English ale",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     },
     {
      "q": 1,
      "u": "l",
      "item": "lager",
-     "aisle": "Drinks"
+     "aisle": "Bottle shop"
     }
    ],
    "steps": [
     {
-     "text": "Chill four cans or bottles of English ale, or lager for anyone who prefers it",
-     "min": 3
+     "text": "Chill the English ale and the lager in the fridge for at least 3 hours.",
+     "min": 180
     },
     {
-     "text": "Pour into pint glasses at a tilt so the head settles",
+     "text": "Pour the ale, or the lager for anyone who prefers it, into pint glasses at a tilt so the head settles, and raise them to the Winchester.",
      "min": 2
-    },
-    {
-     "text": "Raise them to the Winchester",
-     "min": 1
     }
    ]
   }

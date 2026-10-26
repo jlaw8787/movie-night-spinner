@@ -2,7 +2,7 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Cheese, grape and onion picks",
+   "n": "Flight deck snack tray",
    "course": "s",
    "prep_min": 20,
    "cook_min": 0,
@@ -15,7 +15,7 @@
      "aisle": "Dairy"
     },
     {
-     "q": 150,
+     "q": 300,
      "u": "g",
      "item": "green grapes",
      "aisle": "Produce"
@@ -45,20 +45,20 @@
      "min": 6
     },
     {
-     "text": "Thread onto toothpicks with a grape and a cocktail onion.",
+     "text": "Thread each cube onto a toothpick with a green grape and a cocktail onion.",
      "min": 10
     },
     {
-     "text": "Lay out in neat rows beside a row of crackers.",
+     "text": "Lay the picks out in neat rows on a tray beside a row of crackers.",
      "min": 4
     }
    ]
   },
   {
-   "n": "Airline salted peanuts and almonds",
+   "n": "Airline peanuts",
    "course": "s",
-   "prep_min": 5,
-   "cook_min": 10,
+   "prep_min": 7,
+   "cook_min": 5,
    "make_ahead": "",
    "ingredients": [
     {
@@ -94,7 +94,7 @@
    ],
    "steps": [
     {
-     "text": "Mix the nuts with the sugar and salt.",
+     "text": "Mix the peanuts and almonds with the sugar and salt.",
      "min": 2
     },
     {
@@ -102,7 +102,7 @@
      "min": 5
     },
     {
-     "text": "Cool slightly and divide into packets.",
+     "text": "Cool slightly and divide into the paper packets, one for each passenger.",
      "min": 5
     }
    ]
@@ -130,7 +130,7 @@
      "q": 1,
      "u": "tbsp",
      "item": "black peppercorns",
-     "aisle": "Spices"
+     "aisle": "Pantry"
     },
     {
      "q": 250,
