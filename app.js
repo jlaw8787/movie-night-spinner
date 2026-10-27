@@ -675,6 +675,7 @@ function fit(el){
 }
 function fitPrep(el){
   const inner=el.querySelector(".mc-in"),cols=el.querySelector(".pp-cols");
+  if(!inner||!cols)return;
   let fs=16;cols.style.fontSize=fs+"px";
   while(inner.scrollHeight>inner.clientHeight+1&&fs>9.5){fs-=0.5;cols.style.fontSize=fs+"px"}
 }
@@ -684,7 +685,7 @@ const card=document.createElement("div");card.className="mcard";preview.appendCh
 const prep=document.createElement("div");prep.className="mcard";prep.hidden=true;preview.appendChild(prep);
 function scalePreview(){const pw=preview.clientWidth;if(!pw)return;const land=card.classList.contains("fmt"),cw=+card.dataset.w||(land?1123:794),ch=+card.dataset.h||(land?794:1123),kc=pw/cw,kp=pw/794;card.style.transform=`scale(${kc})`;prep.style.transform=`scale(${kp})`;preview.style.height=(tab==="prep"?1123*kp:ch*kc)+"px"}
 let tab="menu";
-function setTab(t){tab=t;{const pb=$("planner");if(pb)pb.hidden=!(pb.dataset.has&&t==="prep")}if(t==="menu")phoneOn=true;card.hidden=t!=="menu";prep.hidden=t!=="prep";$("tabMenu").classList.toggle("on",t==="menu");$("tabPrep").classList.toggle("on",t==="prep");$("tabMenu").setAttribute("aria-selected",t==="menu");$("tabPrep").setAttribute("aria-selected",t==="prep");if(t==="prep"&&current)fitPrep(prep);scalePreview();applyPhone()}
+function setTab(t){tab=t;{const pb=$("planner");if(pb)pb.hidden=!(pb.dataset.has&&t==="prep")}if(t==="menu")phoneOn=true;card.hidden=t!=="menu";prep.hidden=t!=="prep";$("tabMenu").classList.toggle("on",t==="menu");$("tabPrep").classList.toggle("on",t==="prep");$("tabMenu").setAttribute("aria-selected",t==="menu");$("tabPrep").setAttribute("aria-selected",t==="prep");if(t==="prep"&&current){if(!prep.querySelector(".pp-cols")&&current.menu){try{styleCard(prep,current);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(current,current.menu)}catch(e){}}fitPrep(prep)}scalePreview();applyPhone()}
 $("tabMenu").addEventListener("click",()=>setTab("menu"));
 $("tabPrep").addEventListener("click",()=>setTab("prep"));
 window.addEventListener("resize",()=>{scalePreview();applyPhone()});

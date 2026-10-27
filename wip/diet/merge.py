@@ -75,3 +75,5 @@ def main():
     json.dump(bad, open("wip/diet/problems.json", "w"), indent=1, ensure_ascii=False)
 if __name__ == "__main__":
     main()
+    if "--check" not in sys.argv:
+        import fixups; fixups.main()
