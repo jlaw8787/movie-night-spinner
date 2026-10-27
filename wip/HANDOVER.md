@@ -1,7 +1,7 @@
 # Handover (Oct 26, 21:00): read this first in a new chat
 
 Repo jlaw8787/movie-night-spinner (GitHub Pages). Work in a worktree on branch wip/menu-polish. Live = main.
-Live as of commit becb7538 (service worker version mns-bc419dd2).
+Live as of commit 4605515e (service worker version mns-d60f2755).
 
 ## Owner rules (non-negotiable)
 - Nothing goes live without the owner's approval. Ask with tappable options.
@@ -44,7 +44,7 @@ Audit small fixes (live in 9ad982db): offline spins only land on saved menus (SA
   Diet: data/recipes2 dishes carry veg/af flags and alt.af (527), alt.veg (825), alt.veg_af (106), built by wip/diet/merge.py from wip/diet/out (briefs AF-BRIEF.md, VEG-BRIEF.md; checker wip/genre/lib/dietclass.py). app.js DIET (mns-diet), dietDish swaps in the version; drinks become a mocktail. Kids mode always alcohol-free (was letting 64 PG films plan alcohol).
   Ease: quick find on the front (#findFilm, arrows, Enter, Esc), Saved menus shelf (FAV, mns-fav, max 30, also fetched for offline, synced), usual guests (USUAL, mns-guests), Clear link on ticket stubs, one Settings drawer (#settings, data-keep so closing does not delete it) holding kids mode, sound, streaming service, guests, vegetarian, no alcohol, clear stubs, clear saved, reset everything (two taps; keeps mns-welcome).
   Checks: wip/genre/lib/frontcheck.py OUTDIR [base_url], 68 steps phone and desktop, 0 faults.
-- Oct 27 (on wip, NOT live yet): vegetarian snacks, sweets and drinks. 876 meat or fish non-mains got alt.veg (and alt.veg_af for the 44 boozy ones) via wip/diet/VEGS-BRIEF.md, jobs vegs01-12. Totals now alt.veg 1688, alt.veg_af 148, alt.af 527; with vegetarian, no alcohol or both on, no dish on any film is blocked.
+- Oct 27 (live in 4605515e): vegetarian snacks, sweets and drinks. 876 meat or fish non-mains got alt.veg (and alt.veg_af for the 44 boozy ones) via wip/diet/VEGS-BRIEF.md, jobs vegs01-12. Totals now alt.veg 1688, alt.veg_af 148, alt.af 527; with vegetarian, no alcohol or both on, no dish on any film is blocked.
   wip/diet/fixups.py runs after merge.py (and is called by it): vegetarian parmesan, pecorino, gruyere, manchego, comte; leftover alcohol wording; non-meat items (pickles, olives, hummus, kimchi, sauerkraut, ricotta, pizza dough, dumpling wrappers, tofu, blinis) moved out of the Meat aisle. Run fixups.py BEFORE merge.py too, so the veg flags see the right aisles.
   Checks: wip/diet/deepcheck.py (coverage per mode plus swap quality), wip/diet/dietsweep.py OUT.json [@list.json] (browser, every film in veg, af, veg+af; server on 8795).
   app.js: tapping Prep before a new film's menu finishes drawing now builds the prep sheet (was a page error and a blank sheet).
