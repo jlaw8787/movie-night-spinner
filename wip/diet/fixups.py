@@ -6,12 +6,24 @@ CHEESE = [(re.compile(r"^(grated )?(parmesan|parmigiano|grana padano)", re.I), "
 STEP = [("Flying noodle", "and wine and", "and chicken stock and"),
         ("boilermaker", "chase it with the beer, or drop the shot glass carefully into the beer", "chase it with the lager, or drop the shot glass carefully into the lager"),
         ("hot buttered rum cider", "Strain the cider into mugs", "Strain the spiced apple juice into mugs")]
+AISLE_FIX = [(re.compile(r"pickle|cornichon|olives|artichoke|hummus|kimchi|sauerkraut|giardiniera|salsa|potato salad|roasted red capsicum", re.I), "Deli"),
+             (re.compile(r"emmental|ricotta", re.I), "Dairy"),
+             (re.compile(r"pizza dough|dumpling wrappers", re.I), "Deli"),
+             (re.compile(r"tofu", re.I), "Produce"),
+             (re.compile(r"blinis", re.I), "Bakery")]
+def aisle_fix(ings):
+    for i in ings:
+        if i.get("aisle") in ("Meat", "Seafood"):
+            for rx, a in AISLE_FIX:
+                if rx.search(i["item"]): i["aisle"] = a; break
 def main():
     n = 0
     for p in sorted(glob.glob("data/recipes2/*.json")):
         r = json.load(open(p)); before = json.dumps(r, ensure_ascii=False)
         for d in r["dishes"]:
+            aisle_fix(d["ingredients"])
             for k, x in (d.get("alt") or {}).items():
+                aisle_fix(x["ingredients"])
                 if k in ("veg", "veg_af"):
                     for i in x["ingredients"]:
                         if re.search(r"vegetarian|-style", i["item"], re.I): continue
