@@ -62,7 +62,9 @@
      "text": "Serve with soy and Chinkiang vinegar, and pour the tea carefully.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Training camp edamame",
@@ -115,7 +117,9 @@
      "text": "Finish with plenty of flaky salt and serve in a big bowl.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mushu's breakfast congee",
@@ -180,7 +184,82 @@
      "text": "Top each bowl with an egg and bacon smile, spring onion and soy.",
      "min": 13
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mushu's breakfast congee (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 100,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "piece ginger, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "shiitake mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the rice in the stock with the ginger for 90 minutes, stirring often, until silky.",
+       "min": 90
+      },
+      {
+       "text": "Fry the shiitake in the oil until crisp at the edges, then fry the eggs in the same pan.",
+       "min": 12
+      },
+      {
+       "text": "Top each bowl with an egg and a mushroom smile, spring onion and soy.",
+       "min": 13
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mooncakes",
@@ -243,7 +322,9 @@
      "text": "Bake at 180C for 10 minutes, egg wash, then bake 10 minutes more.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Family temple iced jasmine lychee tea",
@@ -302,7 +383,9 @@
      "text": "Pour over ice in glasses with lychees and a few mint leaves.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

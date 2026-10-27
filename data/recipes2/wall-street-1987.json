@@ -76,7 +76,9 @@
      "text": "Toast the brioche slices and serve alongside.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Gekko's oysters on ice",
@@ -135,7 +137,9 @@
      "text": "Cut the lemon into wedges and serve with the dressing on the side.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Raider's rib eye",
@@ -224,7 +228,270 @@
      "text": "Pour the sauce over the rested steaks.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Raider's rib eye",
+     "prep_min": 10,
+     "cook_min": 25,
+     "make_ahead": "Dry-brine the steaks the night before",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "rib eye steaks",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "flaky salt, for dry-brining",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 185,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "The night before, salt the rib eyes and leave uncovered in the fridge to dry-brine. Bring to room temperature 30 minutes before cooking.",
+       "min": 5
+      },
+      {
+       "text": "Sear the steaks hard in a very hot oiled pan on both sides.",
+       "min": 8
+      },
+      {
+       "text": "Add the butter and rosemary and baste the steaks. Rest on a plate for 8 minutes.",
+       "min": 8
+      },
+      {
+       "text": "In the same pan, crush in the peppercorns, add a splash of the stock and scrape up the browned bits.",
+       "min": 3
+      },
+      {
+       "text": "Add the rest of the stock and the cream and reduce until the sauce coats a spoon.",
+       "min": 8
+      },
+      {
+       "text": "Pour the sauce over the rested steaks.",
+       "min": 3
+      }
+     ]
+    },
+    "veg": {
+     "n": "Raider's portobello steak",
+     "prep_min": 10,
+     "cook_min": 24,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "flaky salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "brandy",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Wipe the mushrooms, trim the stalks flush and season with the salt.",
+       "min": 5
+      },
+      {
+       "text": "Sear the mushrooms hard in a very hot oiled pan, gill side up first, then turn and cook until tender.",
+       "min": 10
+      },
+      {
+       "text": "Add the butter and rosemary and baste the mushrooms. Lift onto a warm plate.",
+       "min": 5
+      },
+      {
+       "text": "In the same pan, crush in the peppercorns, add the brandy and flame it carefully.",
+       "min": 3
+      },
+      {
+       "text": "Add the stock and cream and reduce until the sauce coats a spoon.",
+       "min": 8
+      },
+      {
+       "text": "Pour the sauce over the mushrooms.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Raider's portobello steak",
+     "prep_min": 10,
+     "cook_min": 24,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "flaky salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "apple cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 185,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Wipe the mushrooms, trim the stalks flush and season with the salt.",
+       "min": 5
+      },
+      {
+       "text": "Sear the mushrooms hard in a very hot oiled pan, gill side up first, then turn and cook until tender.",
+       "min": 10
+      },
+      {
+       "text": "Add the butter and rosemary and baste the mushrooms. Lift onto a warm plate.",
+       "min": 5
+      },
+      {
+       "text": "In the same pan, crush in the peppercorns, add the vinegar and let it bubble away for a few seconds.",
+       "min": 3
+      },
+      {
+       "text": "Add the stock and cream and reduce until the sauce coats a spoon.",
+       "min": 8
+      },
+      {
+       "text": "Pour the sauce over the mushrooms.",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Cheesecake",
@@ -297,7 +564,9 @@
      "text": "Cool, then chill overnight before slicing. Chilling counts as part of the cooking time.",
      "min": 360
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Old fashioned",
@@ -352,7 +621,75 @@
      "text": "Strain over one big ice cube in a short glass and twist a strip of orange peel over the top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Old fashioned (alcohol-free)",
+     "prep_min": 6,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "smoky black tea bags (lapsang souchong)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "demerara syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large ice cubes",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice, for stirring",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, squeeze them out and cool the tea completely.",
+       "min": 15
+      },
+      {
+       "text": "For each drink, stir 60ml of the cold tea, 10ml demerara syrup, a drop of vanilla and a strip of orange zest over ice for about 30 seconds.",
+       "min": 4
+      },
+      {
+       "text": "Strain over one big ice cube in a short glass and twist a fresh strip of orange peel over the top.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

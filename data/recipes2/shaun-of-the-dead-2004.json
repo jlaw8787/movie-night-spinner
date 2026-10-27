@@ -56,7 +56,9 @@
      "text": "Cool and serve in small bowls",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Corner shop crisps",
@@ -103,7 +105,9 @@
      "text": "Drain on paper towel, sprinkle with the sea salt flakes and splash with the malt vinegar.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pub pie and chips",
@@ -192,7 +196,306 @@
      "text": "Cook and crush the peas",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Pub pie and chips",
+     "prep_min": 40,
+     "cook_min": 195,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "beef chuck, diced",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 330,
+       "u": "ml",
+       "item": "alcohol-free dark ale",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the beef in batches, then soften the onions",
+       "min": 20
+      },
+      {
+       "text": "Stir in the flour first, then add the alcohol-free ale and stock, cover and braise at 160C",
+       "min": 150
+      },
+      {
+       "text": "Cool slightly, tip into a pie dish and cover with puff pastry",
+       "min": 10
+      },
+      {
+       "text": "Bake at 200C",
+       "min": 25
+      },
+      {
+       "text": "Cut the potatoes into chips and fry them twice in the vegetable oil",
+       "min": 25
+      },
+      {
+       "text": "Cook and crush the peas",
+       "min": 10
+      }
+     ]
+    },
+    "veg": {
+     "n": "Pub pie and chips (vegetarian)",
+     "prep_min": 40,
+     "cook_min": 75,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "mixed mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 330,
+       "u": "ml",
+       "item": "English ale",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the olive oil in batches, then soften the onions.",
+       "min": 20
+      },
+      {
+       "text": "Stir in the flour first, then add the ale, stock and soy sauce and simmer for 25 minutes until thick.",
+       "min": 25
+      },
+      {
+       "text": "Cool slightly, tip into a pie dish and cover with the puff pastry.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 200C until puffed and golden.",
+       "min": 25
+      },
+      {
+       "text": "Cut the potatoes into chips and fry them twice in the vegetable oil.",
+       "min": 25
+      },
+      {
+       "text": "Cook and crush the peas.",
+       "min": 10
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Pub pie and chips (vegetarian, alcohol free)",
+     "prep_min": 40,
+     "cook_min": 75,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "mixed mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 330,
+       "u": "ml",
+       "item": "extra vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the olive oil in batches, then soften the onions.",
+       "min": 20
+      },
+      {
+       "text": "Stir in the flour first, then add the extra stock, malt vinegar, stock and soy sauce and simmer for 25 minutes until thick.",
+       "min": 25
+      },
+      {
+       "text": "Cool slightly, tip into a pie dish and cover with the puff pastry.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 200C until puffed and golden.",
+       "min": 25
+      },
+      {
+       "text": "Cut the potatoes into chips and fry them twice in the vegetable oil.",
+       "min": 25
+      },
+      {
+       "text": "Cook and crush the peas.",
+       "min": 10
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Sticky toffee pudding",
@@ -271,7 +574,9 @@
      "text": "Pour the sauce over and serve with the remaining cream",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pint at the Winchester",
@@ -302,7 +607,41 @@
      "text": "Pour the ale, or the lager for anyone who prefers it, into pint glasses at a tilt so the head settles, and raise them to the Winchester.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Pint at the Winchester (alcohol-free)",
+     "prep_min": 2,
+     "cook_min": 180,
+     "make_ahead": "Chill the cans or bottles for at least 3 hours",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "alcohol-free English ale",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "alcohol-free lager",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill the alcohol-free ale and lager in the fridge for at least 3 hours.",
+       "min": 180
+      },
+      {
+       "text": "Pour the ale, or the lager for anyone who prefers it, into pint glasses at a tilt so the head settles, and raise them to the Winchester.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

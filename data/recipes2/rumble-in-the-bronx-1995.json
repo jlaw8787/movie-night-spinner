@@ -84,7 +84,9 @@
      "text": "Dab on each bite and spear with a slice of dill pickle.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pork and chive dumplings",
@@ -157,7 +159,9 @@
      "text": "Serve with black vinegar.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hovercraft sweet and sour pork",
@@ -248,7 +252,102 @@
      "text": "Toss the pork through and serve with the rice.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hovercraft sweet and sour tofu",
+     "prep_min": 35,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 700,
+       "u": "g",
+       "item": "extra firm tofu, cubed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "pineapple",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "white vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the pineapple and capsicum into chunks. Pat the tofu dry and toss in the beaten egg, then the cornflour.",
+       "min": 10
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 15
+      },
+      {
+       "text": "Fry the tofu in batches at 180C until crisp.",
+       "min": 12
+      },
+      {
+       "text": "Simmer the pineapple and capsicum with the vinegar, sugar and tomato sauce, then thicken with a spoon of the leftover cornflour mixed with water.",
+       "min": 8
+      },
+      {
+       "text": "Toss the tofu through and serve with the rice.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Almond jelly with fruit",
@@ -315,7 +414,9 @@
      "text": "Serve in bowls with lychees and mandarin segments in their syrup.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Uncle Bill's wedding iced jasmine tea",
@@ -376,7 +477,9 @@
      "text": "Fill four tall glasses with ice and a few lychees, pour in the tea and finish with a twist of lime peel.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

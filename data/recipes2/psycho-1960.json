@@ -56,7 +56,9 @@
      "text": "Serve on a plate with a glass of milk alongside",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mother's pickled onions",
@@ -113,7 +115,9 @@
      "text": "Pour over hot, seal, and leave a week before eating",
      "min": 9360
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Fairvale chicken and dumplings",
@@ -204,7 +208,114 @@
      "text": "Drop spoonfuls on top, cover and cook",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fairvale mushroom, chickpea and dumplings",
+     "prep_min": 25,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins chickpeas (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the vegetables and slice the mushrooms.",
+       "min": 12
+      },
+      {
+       "text": "Fry the mushrooms in the oil, then add the vegetables, stock and chickpeas and simmer.",
+       "min": 25
+      },
+      {
+       "text": "Stir the cream through.",
+       "min": 5
+      },
+      {
+       "text": "Rub the butter into the flour, then mix in the parsley and milk.",
+       "min": 8
+      },
+      {
+       "text": "Drop spoonfuls on top, cover and cook.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Shower cap swirled meringues",
@@ -265,7 +376,9 @@
      "text": "Blitz the raspberries with lemon juice and extra sugar and drizzle over",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Parlour brandy milk punch",
@@ -324,7 +437,69 @@
      "text": "Grate nutmeg over the top. Leave the brandy out for a plain vanilla milk",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Parlour brandy milk punch (alcohol-free)",
+     "prep_min": 12,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "full cream milk, cold",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch ground cinnamon",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "nutmeg, freshly grated",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Shake each drink with milk, syrup, vanilla, cinnamon and ice for 15 seconds",
+       "min": 8
+      },
+      {
+       "text": "Strain into small glasses over a large ice cube",
+       "min": 2
+      },
+      {
+       "text": "Grate nutmeg over the top",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

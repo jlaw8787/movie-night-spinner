@@ -36,7 +36,9 @@
      "text": "Toss straight away with salt and cayenne. Tip into a bucket and put out a bowl for the shells.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "San Francisco sourdough",
@@ -81,7 +83,9 @@
      "text": "Tear into chunks and serve with the butter.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "San Francisco cioppino",
@@ -184,7 +188,332 @@
      "text": "Serve with sliced sourdough.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "San Francisco cioppino",
+     "prep_min": 15,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin chopped tomatoes (400g)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 650,
+       "u": "ml",
+       "item": "fish stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cooked crab",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "clams and mussels, scrubbed",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "raw prawns",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "firm white fish fillet",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sourdough loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the fennel and onion and crush the garlic.",
+       "min": 10
+      },
+      {
+       "text": "Soften in oil.",
+       "min": 8
+      },
+      {
+       "text": "Add the tomatoes, verjuice and stock and simmer.",
+       "min": 20
+      },
+      {
+       "text": "Add the crab, then the clams and mussels, then the prawns and fish, cooking until the shells open.",
+       "min": 12
+      },
+      {
+       "text": "Serve with sliced sourdough.",
+       "min": 3
+      }
+     ]
+    },
+    "veg": {
+     "n": "San Francisco cioppino (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 36,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin chopped tomatoes (400g)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "nori sheet, crumbled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin cannellini beans (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sourdough loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the fennel and onion, crush the garlic, cut the king oyster mushrooms into thick coins and the zucchini into chunks.",
+       "min": 12
+      },
+      {
+       "text": "Sear the mushroom coins in 1 tbsp of the olive oil until golden on both sides, then set aside.",
+       "min": 8
+      },
+      {
+       "text": "Soften the fennel, onion and garlic in the rest of the oil.",
+       "min": 8
+      },
+      {
+       "text": "Add the tomatoes, white wine, vegetable stock and crumbled nori and simmer.",
+       "min": 20
+      },
+      {
+       "text": "Add the zucchini and cannellini beans for 8 minutes, then return the mushrooms to warm through.",
+       "min": 10
+      },
+      {
+       "text": "Serve with sliced sourdough.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "San Francisco cioppino (vegetarian, alcohol free)",
+     "prep_min": 25,
+     "cook_min": 36,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin chopped tomatoes (400g)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "extra vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "nori sheet, crumbled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin cannellini beans (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sourdough loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the fennel and onion, crush the garlic, cut the king oyster mushrooms into thick coins and the zucchini into chunks.",
+       "min": 12
+      },
+      {
+       "text": "Sear the mushroom coins in 1 tbsp of the olive oil until golden on both sides, then set aside.",
+       "min": 8
+      },
+      {
+       "text": "Soften the fennel, onion and garlic in the rest of the oil.",
+       "min": 8
+      },
+      {
+       "text": "Add the tomatoes, vegetable stock, extra stock, white wine vinegar and crumbled nori and simmer.",
+       "min": 20
+      },
+      {
+       "text": "Add the zucchini and cannellini beans for 8 minutes, then return the mushrooms to warm through.",
+       "min": 10
+      },
+      {
+       "text": "Serve with sliced sourdough.",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Jailhouse chocolate cake",
@@ -291,7 +620,9 @@
      "text": "Ice the cake.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Torchy's bourbon boilermaker",
@@ -338,7 +669,73 @@
      "text": "Twist a small strip of orange peel over each and serve with a cold beer.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Torchy's bourbon boilermaker (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift them out and stir in the maple syrup and vanilla.",
+       "min": 5
+      },
+      {
+       "text": "Chill the lagers and the tea until icy.",
+       "min": 30
+      },
+      {
+       "text": "Pour the tea into shot glasses.",
+       "min": 3
+      },
+      {
+       "text": "Twist a small strip of orange peel over each and serve with a cold alcohol-free lager.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

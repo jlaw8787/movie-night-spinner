@@ -62,7 +62,9 @@
      "text": "Serve with lime wedges.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bodhi's surf shack fish tacos",
@@ -159,7 +161,107 @@
      "text": "Warm the tortillas and fill with slaw, fish, chipotle mayo and coriander.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Bodhi's surf shack fish tacos",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "firm white fish fillets",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cups shredded green cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chipotle in adobo",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch coriander",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the fish into strips. Whisk the flour, soda water and salt into a batter.",
+       "min": 8
+      },
+      {
+       "text": "Toss the cabbage with lime juice and salt.",
+       "min": 5
+      },
+      {
+       "text": "Mix the mayonnaise with the chipotle.",
+       "min": 3
+      },
+      {
+       "text": "Dip the fish in batter and fry in 180C oil until golden, in batches.",
+       "min": 12
+      },
+      {
+       "text": "Warm the tortillas and fill with slaw, fish, chipotle mayo and coriander.",
+       "min": 7
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Utah's two meatball subs",
@@ -252,7 +354,108 @@
      "text": "Pack into the rolls, top with provolone and grill until melted.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Utah's mushroom and ricotta meatball subs",
+     "prep_min": 28,
+     "cook_min": 51,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 700,
+       "u": "ml",
+       "item": "passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "long rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices provolone",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in a little of the oil until dry and cool.",
+       "min": 12
+      },
+      {
+       "text": "Mix with the ricotta, egg, breadcrumbs, cheese and salt, roll into meatballs and chill.",
+       "min": 20
+      },
+      {
+       "text": "Brown the meatballs gently in the rest of the oil.",
+       "min": 12
+      },
+      {
+       "text": "Simmer in the passata with crushed garlic.",
+       "min": 25
+      },
+      {
+       "text": "Pack into the rolls, top with provolone and grill until melted.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Banana split",
@@ -333,7 +536,9 @@
      "text": "Top with fudge, strawberries, whipped cream, nuts and a cherry.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bonfire tequila and lime margaritas",
@@ -398,7 +603,85 @@
      "text": "Strain over the ice and garnish with a lime wheel.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Bonfire tequila and lime margaritas (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 10,
+     "make_ahead": "Jug can be mixed ahead for the esky",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "green tea bag",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "flaky salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 90,
+       "u": "ml",
+       "item": "fresh lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "agave syrup",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the green tea in the boiling water for 3 minutes, lift out and cool over a few ice cubes.",
+       "min": 10
+      },
+      {
+       "text": "Rub the tumbler rims with lime and dip in flaky salt. Fill with ice.",
+       "min": 3
+      },
+      {
+       "text": "Shake the cold tea, lime juice, orange juice and agave with ice.",
+       "min": 2
+      },
+      {
+       "text": "Strain over the ice and garnish with a lime wheel.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -56,7 +56,9 @@
      "text": "Serve with lime wedges and eat it like a cob.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Caviar on crackers",
@@ -103,7 +105,9 @@
      "text": "Assemble just before serving so the crackers stay crisp.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Street cart hot dog",
@@ -178,7 +182,86 @@
      "text": "Fill with franks, mustard, sauerkraut and onions.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Street cart hot dog (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "Onions up to 2 days, reheat gently",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian hot dog franks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "brown onions, one halved and two sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "hot dog buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar sauerkraut",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the franks in barely simmering water with the halved onion for 3 minutes, then griddle until blistered.",
+       "min": 10
+      },
+      {
+       "text": "Soften the sliced onions in the oil, then add the tomato paste, vinegar and a splash of water.",
+       "min": 15
+      },
+      {
+       "text": "Steam the buns.",
+       "min": 3
+      },
+      {
+       "text": "Fill with franks, mustard, sauerkraut and onions.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Giant choc chip cookie",
@@ -257,7 +340,9 @@
      "text": "Mix the icing sugar with the water, then pipe piano keys across the cookie.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chocolate egg cream",
@@ -298,7 +383,9 @@
      "text": "Serve with a straw straight away.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

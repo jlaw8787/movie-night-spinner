@@ -96,7 +96,9 @@
      "text": "Drop in teaspoons of batter and fry until golden, turning once. Drain on paper and serve hot with the honey butter.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Tribeca loft crostini",
@@ -159,7 +161,9 @@
      "text": "Spoon the tomato onto the toasts just before serving so they stay crisp.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sam's Tribeca loft pasta",
@@ -238,7 +242,270 @@
      "text": "Toss the rigatoni through the sauce with the grated parmesan.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Sam's Tribeca loft pasta",
+     "prep_min": 15,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "Italian sausages",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "rigatoni",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "parmesan",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the rigatoni in salted water until just tender, then drain.",
+       "min": 12
+      },
+      {
+       "text": "Meanwhile, remove the sausage skins, crumble the meat and brown it in a large pan.",
+       "min": 7
+      },
+      {
+       "text": "Add the sliced fennel and crushed garlic and cook until soft.",
+       "min": 8
+      },
+      {
+       "text": "Pour in the stock and lemon juice and let it bubble down, then stir in the cream.",
+       "min": 3
+      },
+      {
+       "text": "Toss the rigatoni through the sauce with the grated parmesan.",
+       "min": 3
+      }
+     ]
+    },
+    "veg": {
+     "n": "Sam's Tribeca loft pasta (vegetarian)",
+     "prep_min": 12,
+     "cook_min": 22,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "rigatoni",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the rigatoni in salted water until just tender, then drain.",
+       "min": 12
+      },
+      {
+       "text": "Meanwhile, slice the sausages and brown them in the oil in a large pan.",
+       "min": 7
+      },
+      {
+       "text": "Add the sliced fennel and crushed garlic and cook until soft.",
+       "min": 8
+      },
+      {
+       "text": "Pour in the wine and let it bubble down, then stir in the cream.",
+       "min": 3
+      },
+      {
+       "text": "Toss the rigatoni through the sauce with the grated vegetarian parmesan-style cheese.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Sam's Tribeca loft pasta (vegetarian, alcohol-free)",
+     "prep_min": 12,
+     "cook_min": 22,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "rigatoni",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the rigatoni in salted water until just tender, then drain.",
+       "min": 12
+      },
+      {
+       "text": "Meanwhile, slice the sausages and brown them in the oil in a large pan.",
+       "min": 7
+      },
+      {
+       "text": "Add the sliced fennel and crushed garlic and cook until soft.",
+       "min": 8
+      },
+      {
+       "text": "Pour in the stock and lemon juice and let it bubble down, then stir in the cream.",
+       "min": 3
+      },
+      {
+       "text": "Toss the rigatoni through the sauce with the grated vegetarian parmesan-style cheese.",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Pottery wheel pie",
@@ -293,7 +560,9 @@
      "text": "Bake until golden. Cool a little before slicing.",
      "min": 40
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Molly's studio mulled pinot noir",
@@ -358,7 +627,91 @@
      "text": "Strain into mugs and add a thin orange slice to each.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Molly's studio mulled pinot noir (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 17,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "strips orange peel",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "star anise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, then remove.",
+       "min": 5
+      },
+      {
+       "text": "Pour the grape juice and tea into a saucepan with the orange peel, the juice of half the orange, cinnamon, star anise, cloves and honey.",
+       "min": 3
+      },
+      {
+       "text": "Warm over low heat without boiling.",
+       "min": 12
+      },
+      {
+       "text": "Strain into mugs and add a thin slice from the rest of the orange to each.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -74,7 +74,9 @@
      "text": "Cut off the crusts and cut each into 4 triangles.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Babs's knitted cheese straws",
@@ -121,7 +123,9 @@
      "text": "Bake at 200C until golden and crisp.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pie machine beef and onion pies",
@@ -228,7 +232,130 @@
      "text": "Simmer the peas with the butter and mash roughly.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pie machine mushroom and onion pies",
+     "prep_min": 35,
+     "cook_min": 103,
+     "make_ahead": "Filling up to 2 days, bake fresh",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets shortcrust pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the mushrooms and slice the onions.",
+       "min": 15
+      },
+      {
+       "text": "Brown the mushrooms in the oil, add the onions, thyme, tomato paste, soy sauce, lentils and stock, cover and simmer.",
+       "min": 40
+      },
+      {
+       "text": "Thicken with cornflour mixed in water, then cool.",
+       "min": 25
+      },
+      {
+       "text": "Line four pie tins with shortcrust, fill, top with puff and egg wash.",
+       "min": 20
+      },
+      {
+       "text": "Bake at 200C.",
+       "min": 30
+      },
+      {
+       "text": "Simmer the peas with the butter and mash roughly.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Escape plane jam roly-poly",
@@ -285,7 +412,9 @@
      "text": "Heat the custard and serve with slices.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Coop meeting honey malt hot chocolate",
@@ -344,7 +473,9 @@
      "text": "Pour into four mugs, top with cream and grate dark chocolate over.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -58,7 +58,9 @@
      "text": "Serve with buttered white bread, the way you would on the harbour.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Beef sausages with beer onions",
@@ -139,7 +141,91 @@
      "text": "Butter the slices of white bread, wrap each round a sausage and top with the onion relish, mustard and tomato sauce.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Beef sausages with beer onions",
+     "prep_min": 12,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "thick beef sausages",
+       "aisle": "Meat"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can alcohol-free beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "mustard, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "tomato sauce, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slowly cook the sliced onions in the butter for 20 minutes until soft and golden.",
+       "min": 22
+      },
+      {
+       "text": "Add the brown sugar, the balsamic and the alcohol-free beer and simmer 5 minutes until jammy.",
+       "min": 9
+      },
+      {
+       "text": "Grill the thick beef sausages on a medium barbecue for 12 to 15 minutes, turning, until browned and cooked through.",
+       "min": 16
+      },
+      {
+       "text": "Butter the slices of white bread, wrap each round a sausage and top with the onion relish, mustard and tomato sauce.",
+       "min": 4
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Jean-Claude's Bondi fish and chips",
@@ -210,7 +296,222 @@
      "text": "Mix the mayonnaise with chopped pickles for tartare and serve with lemon.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Jean-Claude's Bondi fish and chips",
+     "prep_min": 25,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "alcohol-free beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "flathead fillets",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into chips and fry at 150C for 6 minutes, then 190C for 3 minutes.",
+       "min": 29
+      },
+      {
+       "text": "Whisk the flour with the cold alcohol-free beer into a batter, dip the flathead fillets and fry at 180C for 4 minutes.",
+       "min": 18
+      },
+      {
+       "text": "Mix the mayonnaise with chopped pickles for tartare and serve with lemon.",
+       "min": 8
+      }
+     ]
+    },
+    "veg": {
+     "n": "Jean-Claude's Bondi battered haloumi and chips",
+     "prep_min": 25,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "lager",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into thick fingers",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into chips and fry in the oil at 150C for 6 minutes, then 190C for 3 minutes.",
+       "min": 29
+      },
+      {
+       "text": "Whisk the flour with the cold lager into a batter, dip the haloumi fingers and fry at 180C for 3 minutes until golden.",
+       "min": 18
+      },
+      {
+       "text": "Mix the mayonnaise with chopped pickles for tartare and serve with lemon.",
+       "min": 8
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Jean-Claude's Bondi battered haloumi and chips (alcohol-free)",
+     "prep_min": 25,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "cold soda water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into thick fingers",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into chips and fry in the oil at 150C for 6 minutes, then 190C for 3 minutes.",
+       "min": 29
+      },
+      {
+       "text": "Whisk the flour with the cold soda water into a batter, dip the haloumi fingers and fry at 180C for 3 minutes until golden.",
+       "min": 18
+      },
+      {
+       "text": "Mix the mayonnaise with chopped pickles for tartare and serve with lemon.",
+       "min": 8
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Pavlova",
@@ -275,7 +576,9 @@
      "text": "Top with the whipped cream, the passionfruit and the strawberries.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Colt Seavers stunt iced coffee",
@@ -318,7 +621,9 @@
      "text": "Pour into tall glasses with ice and the cold milk, then top each with a scoop of vanilla ice cream and a spoon of whipped cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

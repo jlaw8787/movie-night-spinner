@@ -68,7 +68,9 @@
      "text": "Pipe or spoon the yolk mix back into the whites. Finish with smoked paprika and chopped chives.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Green chile queso",
@@ -127,7 +129,9 @@
      "text": "Stir in the chiles, garlic and cumin and simmer, then pour into a warm bowl. Serve straight away with the corn chips.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Patty melt",
@@ -190,7 +194,74 @@
      "text": "Griddle the sandwiches in a pan over medium heat, turning once, until crisp and the cheese has melted.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Patty melt (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Onions can be cooked 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices Swiss cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the onions in a little of the butter over low heat until soft and golden.",
+       "min": 25
+      },
+      {
+       "text": "Shape the plant-based mince into 4 thin oval patties, season, and sear in a hot pan until browned on both sides.",
+       "min": 5
+      },
+      {
+       "text": "Butter the bread on the outside. Build each sandwich with a patty, onions and two slices of Swiss cheese.",
+       "min": 5
+      },
+      {
+       "text": "Griddle the sandwiches in a pan over medium heat, turning once, until crisp and the cheese has melted.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mile-high sopapillas",
@@ -269,7 +340,9 @@
      "text": "Drizzle with honey and dust with cinnamon.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Boat drink piña coladas",
@@ -344,7 +417,85 @@
      "text": "Pour into the glasses and finish with a pineapple wedge and a cocktail umbrella.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Boat drink piña coladas (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "Toast the coconut up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 30,
+       "u": "g",
+       "item": "desiccated coconut",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "coconut water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 160,
+       "u": "ml",
+       "item": "coconut cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small pineapple",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail umbrellas",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toast the coconut in a dry pan until golden, then cool on a plate.",
+       "min": 2
+      },
+      {
+       "text": "Wet the rims of 4 glasses with a lime wedge and dip in the toasted coconut. Juice the limes and cut the pineapple into wedges.",
+       "min": 5
+      },
+      {
+       "text": "Blend the coconut water, pineapple juice, coconut cream, lime juice and ice until thick and smooth.",
+       "min": 3
+      },
+      {
+       "text": "Pour into the glasses and finish with a pineapple wedge and a cocktail umbrella.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

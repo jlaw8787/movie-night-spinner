@@ -84,7 +84,101 @@
      "text": "Toast the rye and serve with the pâté.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "What's-the-rumpus liver pâté toasts",
+     "prep_min": 25,
+     "cook_min": 255,
+     "make_ahead": "Pâté up to 3 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "chicken livers",
+       "aisle": "Meat"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter, for searing",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sprigs thyme, leaves picked",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "soft butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "clarified butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Trim the livers and sear in butter for 2 minutes a side until still pink.",
+       "min": 8
+      },
+      {
+       "text": "Add the shallots and thyme, then the apple juice and vinegar, and let it bubble off.",
+       "min": 4
+      },
+      {
+       "text": "Blitz with the soft butter until silky, season and press into a dish.",
+       "min": 5
+      },
+      {
+       "text": "Pour over the clarified butter and chill for 4 hours.",
+       "min": 240
+      },
+      {
+       "text": "Toast the rye and serve with the pâté.",
+       "min": 6
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Johnny Caspar's cheese straws",
@@ -137,7 +231,9 @@
      "text": "Bake at 220C for 12 minutes until puffed and golden.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Leo's Danny Boy Irish stew",
@@ -212,7 +308,246 @@
      "text": "Finish with parsley.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Leo's Danny Boy Irish stew",
+     "prep_min": 30,
+     "cook_min": 130,
+     "make_ahead": "Up to 2 days ahead, better the next day",
+     "ingredients": [
+      {
+       "q": 1.2,
+       "u": "kg",
+       "item": "lamb neck chops",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes, in thick slices",
+       "aisle": "Produce"
+      },
+      {
+       "q": 675,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "molasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the lamb in batches in oil.",
+       "min": 15
+      },
+      {
+       "text": "Layer in a heavy pot with the onions, carrots and potatoes.",
+       "min": 10
+      },
+      {
+       "text": "Pour over the stock and molasses, cover and braise at 160C for 2 hours until tender.",
+       "min": 120
+      },
+      {
+       "text": "Finish with parsley.",
+       "min": 1
+      }
+     ]
+    },
+    "veg": {
+     "n": "Leo's Danny Boy Irish stew (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 88,
+     "make_ahead": "Up to 2 days ahead, better the next day",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "field mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes, in thick slices",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "pearl barley",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "stout",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in batches in oil.",
+       "min": 12
+      },
+      {
+       "text": "Layer in a heavy pot with the onions, carrots, potatoes and barley.",
+       "min": 10
+      },
+      {
+       "text": "Pour over the stout and stock, cover and braise at 160C for 1 and a half hours until tender.",
+       "min": 90
+      },
+      {
+       "text": "Finish with parsley.",
+       "min": 1
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Leo's Danny Boy Irish stew (vegetarian, alcohol-free)",
+     "prep_min": 25,
+     "cook_min": 88,
+     "make_ahead": "Up to 2 days ahead, better the next day",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "field mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes, in thick slices",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "pearl barley",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 975,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in batches in oil.",
+       "min": 12
+      },
+      {
+       "text": "Layer in a heavy pot with the onions, carrots, potatoes and barley.",
+       "min": 10
+      },
+      {
+       "text": "Pour over the stock and malt vinegar, cover and braise at 160C for 1 and a half hours until tender.",
+       "min": 90
+      },
+      {
+       "text": "Finish with parsley.",
+       "min": 1
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Whisky bread pudding",
@@ -291,7 +626,95 @@
      "text": "Bake at 170C until puffed and golden.",
      "min": 40
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Whisky bread pudding",
+     "prep_min": 25,
+     "cook_min": 87,
+     "make_ahead": "Assemble up to 1 day ahead, keep chilled; bake to serve",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "g",
+       "item": "raisins",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices stale brioche",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter, soft",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the raisins in the orange juice and vanilla for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Butter the brioche and layer in a dish with the raisins.",
+       "min": 8
+      },
+      {
+       "text": "Whisk the eggs, milk, cream and sugar and pour over.",
+       "min": 4
+      },
+      {
+       "text": "Rest for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Bake at 170C until puffed and golden.",
+       "min": 40
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Tom Reagan's hot Irish whiskey toddy",
@@ -354,7 +777,77 @@
      "text": "Float a studded wheel on top, add a cinnamon stick and serve hot.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Tom Reagan's hot Irish whiskey toddy (alcohol-free)",
+     "prep_min": 7,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "smoked black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "whole cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cinnamon sticks",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the water and steep the tea bags in it for 4 minutes, then lift them out.",
+       "min": 5
+      },
+      {
+       "text": "Cut four lemon wheels and stud each with cloves.",
+       "min": 3
+      },
+      {
+       "text": "Into four heatproof glasses put honey and the juice of the remaining lemons.",
+       "min": 2
+      },
+      {
+       "text": "Top with the hot smoky tea and stir until the honey dissolves.",
+       "min": 1
+      },
+      {
+       "text": "Float a studded wheel on top, add a cinnamon stick and serve hot.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

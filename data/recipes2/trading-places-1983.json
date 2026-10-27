@@ -44,7 +44,9 @@
      "text": "Serve warm.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Frozen orange juice shots",
@@ -81,7 +83,41 @@
      "text": "Pour into shot glasses and serve straight away. Leave out the vodka for anyone not drinking.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Frozen orange juice shots",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blend the juice and ice until slushy.",
+       "min": 3
+      },
+      {
+       "text": "Pour into shot glasses and serve straight away.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Billy Ray's club dinner",
@@ -156,7 +192,100 @@
      "text": "Carve and serve with horseradish cream, potatoes and jus.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Billy Ray's club dinner, roast celeriac",
+     "prep_min": 20,
+     "cook_min": 120,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "medium celeriac",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, in chunks",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the celeriac, rub with 1 tbsp of the oil, the salt and thyme, and sit in a roasting tin.",
+       "min": 15
+      },
+      {
+       "text": "Roast the celeriac at 180C for 50 minutes, basting with the tin juices.",
+       "min": 50
+      },
+      {
+       "text": "Toss the potatoes in the rest of the oil and roast on another shelf with the celeriac for 45 minutes more.",
+       "min": 45
+      },
+      {
+       "text": "Brush the celeriac with the butter, turn the oven to 230C and roast 10 minutes for a crust.",
+       "min": 10
+      },
+      {
+       "text": "Pour the tin juices into a small pan with the stock and soy sauce and simmer for jus.",
+       "min": 10
+      },
+      {
+       "text": "Carve the celeriac into thick slices and serve with horseradish cream, potatoes and jus.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Orange cake",
@@ -225,7 +354,9 @@
      "text": "Boil the concentrate with the remaining sugar and brush over the warm cake.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mimosa",
@@ -256,7 +387,41 @@
      "text": "Fill four flutes halfway with juice and gently top with sparkling wine, pouring slowly.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Mimosa (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "oranges, about 300ml juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "chilled alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Squeeze the oranges and chill the juice well.",
+       "min": 15
+      },
+      {
+       "text": "Fill four flutes halfway with juice and gently top with the alcohol-free sparkling wine, pouring slowly.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

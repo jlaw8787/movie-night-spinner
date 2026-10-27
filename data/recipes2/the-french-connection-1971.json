@@ -72,7 +72,83 @@
      "text": "Serve with cornichons and warm baguette.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Frog One's bistro pâté",
+     "prep_min": 20,
+     "cook_min": 240,
+     "make_ahead": "Up to 3 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "chicken livers, trimmed",
+       "aisle": "Meat"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar cornichons",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the shallot in a little butter, then sear the livers until just pink.",
+       "min": 12
+      },
+      {
+       "text": "Add the apple juice and let it bubble away.",
+       "min": 2
+      },
+      {
+       "text": "Blitz the livers, shallot and thyme with soft butter until smooth, then pack into a dish.",
+       "min": 6
+      },
+      {
+       "text": "Pour melted butter over the top and chill until set.",
+       "min": 240
+      },
+      {
+       "text": "Serve with cornichons and warm baguette.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Stakeout coffee and doughnuts",
@@ -125,7 +201,9 @@
      "text": "Brew the coffee and pour into paper cups.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Charnier's steak frites",
@@ -210,7 +288,108 @@
      "text": "Fry the chips again until crisp and serve with the steaks and sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Charnier's portobello steak frites",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Sauce best made just before serving",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "egg yolks",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "butter, clarified and warm",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into chips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Reduce the vinegar with half the tarragon and the chopped shallot until almost dry. Cut and dry the chips.",
+       "min": 10
+      },
+      {
+       "text": "Fry the chips in the vegetable oil at 140C, then drain.",
+       "min": 10
+      },
+      {
+       "text": "Whisk the yolks with the strained reduction over low heat until thick, then drizzle in the warm butter and stir through the rest of the tarragon, chopped.",
+       "min": 8
+      },
+      {
+       "text": "Brush the mushrooms with the olive oil and garlic, season with salt and pepper and sear in a hot heavy pan, pressed under a weight, for 5 minutes a side until tender.",
+       "min": 12
+      },
+      {
+       "text": "Fry the chips again until crisp and serve with the mushrooms and sauce.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Crème caramel",
@@ -261,7 +440,9 @@
      "text": "Chill overnight, then run a knife around the edge and turn out.",
      "min": 520
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Marseille mauresque",
@@ -300,7 +481,69 @@
      "text": "Put pastis and orgeat in each of 4 tall glasses, add ice, then pour in chilled water slowly and watch it cloud. Stir once and serve a jug of cold water on the side.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Marseille mauresque (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 30,
+     "make_ahead": "Anise tea up to 2 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "star anise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fennel seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "orgeat syrup",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "ice cubes",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "chilled water",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pour the boiling water over the star anise and fennel seeds, steep for 10 minutes and strain.",
+       "min": 10
+      },
+      {
+       "text": "Chill the anise tea until cold.",
+       "min": 20
+      },
+      {
+       "text": "Put anise tea and orgeat in each of 4 tall glasses, add ice, then pour in chilled water slowly so the orgeat clouds it. Stir once and serve a jug of cold water on the side.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

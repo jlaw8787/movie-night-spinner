@@ -92,7 +92,9 @@
      "text": "Top a third with the cod spread and parsley, a third with prosciutto and fig, and the rest with sardines, onion and raisins.",
      "min": 23
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Austrian castle pretzels",
@@ -177,7 +179,9 @@
      "text": "Mash the camembert with the butter, paprika and onion for obatzda.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Zeppelin dining room schnitzel",
@@ -270,7 +274,110 @@
      "text": "Serve with the potato salad, sliced cucumber and lemon.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Zeppelin dining room eggplant schnitzel",
+     "prep_min": 35,
+     "cook_min": 22,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants, sliced lengthways 1.5cm thick",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, cut into wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until tender, slice and toss while warm with vinegar, 2 tbsp of the oil and onion.",
+       "min": 20
+      },
+      {
+       "text": "Sprinkle the eggplant with salt and leave 10 minutes, pat dry, then crumb in flour, egg and panko.",
+       "min": 20
+      },
+      {
+       "text": "Fry in the butter and remaining oil in batches until golden and soft inside.",
+       "min": 12
+      },
+      {
+       "text": "Serve with the potato salad, sliced cucumber and lemon.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Petra rose and pistachio cake",
@@ -339,7 +446,9 @@
      "text": "Top with crushed pistachios and rose petals.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chose-wisely pomegranate red wine cup",
@@ -420,7 +529,101 @@
      "text": "Pour over ice into cups and scatter pomegranate seeds on top.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Chose-wisely pomegranate red wine cup (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 130,
+     "make_ahead": "Chill up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "pomegranate juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "whole cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pomegranate, seeds only",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Warm half the pomegranate juice with the sugar, cinnamon and cloves until the sugar dissolves, then cool.",
+       "min": 10
+      },
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, then lift them out.",
+       "min": 5
+      },
+      {
+       "text": "Pour into a jug with the grape juice, the rest of the pomegranate juice and the orange slices.",
+       "min": 5
+      },
+      {
+       "text": "Chill for at least 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Pour over ice into cups and scatter pomegranate seeds on top.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

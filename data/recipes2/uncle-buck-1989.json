@@ -66,7 +66,9 @@
      "text": "Set on baking paper.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bowling night cheesy gravy chips",
@@ -141,7 +143,9 @@
      "text": "Finish with chives.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Buck's big breakfast for dinner",
@@ -230,7 +234,118 @@
      "text": "Toast and butter the bread. Pile everything onto big plates with tomato sauce.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Buck's big breakfast for dinner (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 32,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "frozen hash browns",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 420,
+       "u": "g",
+       "item": "tin baked beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle tomato sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the hash browns at 220C until crisp.",
+       "min": 20
+      },
+      {
+       "text": "Fry the sausages in half the oil over medium heat, turning.",
+       "min": 10
+      },
+      {
+       "text": "Fry the mushrooms in the remaining oil with the smoked paprika until dark and crisp at the edges.",
+       "min": 8
+      },
+      {
+       "text": "Warm the baked beans.",
+       "min": 4
+      },
+      {
+       "text": "Whisk the eggs with the milk and salt and cook in some of the butter over low heat, stirring gently, until just set.",
+       "min": 6
+      },
+      {
+       "text": "Toast and butter the bread. Pile everything onto big plates with tomato sauce.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Uncle Buck's giant buttermilk pancake",
@@ -309,7 +424,9 @@
      "text": "Top with butter, maple syrup, banana and crumbled bacon.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Buck's chocolate malted milk",
@@ -362,7 +479,9 @@
      "text": "Pour into big glasses, sprinkle malt powder over the froth and serve with straws.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

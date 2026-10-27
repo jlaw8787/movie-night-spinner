@@ -68,7 +68,9 @@
      "text": "Keep a sprig of rosemary on the board for luck",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lavender shortbread",
@@ -127,7 +129,9 @@
      "text": "Cool in the tray",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Aunts' roast chicken",
@@ -200,7 +204,96 @@
      "text": "Make a quick gravy from the juices with flour and lemon",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Aunts' roast cauliflower",
+     "prep_min": 20,
+     "cook_min": 75,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large whole cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "rosemary sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the cauliflower with 2 tbsp of the oil, lemon zest, crushed garlic and chopped rosemary.",
+       "min": 8
+      },
+      {
+       "text": "Cut the potatoes and carrots, toss with the remaining oil and put them in the tray around the cauliflower.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 200C until the cauliflower is golden and tender to the centre.",
+       "min": 65
+      },
+      {
+       "text": "Rest the cauliflower.",
+       "min": 5
+      },
+      {
+       "text": "Make a quick gravy from the tray juices with flour, the stock and a squeeze of lemon.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chocolate cake for breakfast",
@@ -289,7 +382,9 @@
      "text": "Beat the icing sugar with the cocoa and remaining butter and frost",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Midnight margaritas",
@@ -346,7 +441,73 @@
      "text": "Strain into the glasses. Best after midnight in the kitchen",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Midnight margaritas (alcohol-free)",
+     "prep_min": 7,
+     "cook_min": 1,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "agave syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "soda water, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Juice the limes and rim four glasses with flaky salt",
+       "min": 3
+      },
+      {
+       "text": "For each drink, measure the juice of 1 lime, 30ml orange juice and 2 tsp agave syrup into a shaker.",
+       "min": 2
+      },
+      {
+       "text": "Shake each drink hard with ice",
+       "min": 2
+      },
+      {
+       "text": "Strain into the glasses and top with soda water. Best after midnight in the kitchen",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

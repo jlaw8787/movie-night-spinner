@@ -96,7 +96,9 @@
      "text": "Cut into fingers and serve with cups of soup.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Rinkside pretzel bun hot dogs",
@@ -165,7 +167,9 @@
      "text": "Split the buns, add a frankfurt to each and top with onions, mustard, pickles and cheddar.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Frost family roast beef and Yorkshires",
@@ -262,7 +266,144 @@
      "text": "Make gravy from the juices with a spoon of the flour and the stock.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Frost family nut roast and Yorkshires",
+     "prep_min": 25,
+     "cook_min": 78,
+     "make_ahead": "Nut roast mix up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mixed nuts, roughly chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "fresh breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sprig rosemary, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.2,
+       "u": "kg",
+       "item": "potatoes, parboiled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 110,
+       "u": "g",
+       "item": "plain flour, plus 1 tbsp for the gravy",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion and mushrooms in the olive oil until dry. Mix with the nuts, breadcrumbs, cheddar, 2 of the eggs, the mustard, rosemary and salt and press into a lined loaf tin.",
+       "min": 20
+      },
+      {
+       "text": "Toss the potatoes in 2 tbsp of the vegetable oil. Roast the nut roast at 200C with the potatoes and the honey-tossed carrots on another tray.",
+       "min": 45
+      },
+      {
+       "text": "Rest the nut roast in its tin and turn the oven to 220C. Whisk the other 2 eggs, the flour and milk into a batter.",
+       "min": 10
+      },
+      {
+       "text": "Heat the remaining vegetable oil in the holes of a muffin tin, pour in the batter and bake without opening the oven.",
+       "min": 20
+      },
+      {
+       "text": "Cook the spoon of flour in a little fat from the potato tray, then whisk in the stock and soy and simmer into gravy.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Snowman coconut cupcakes",
@@ -353,7 +494,9 @@
      "text": "Dome onto each cupcake and roll in coconut. Press in chocolate chips for eyes and a lolly for a nose.",
      "min": 14
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Harmonica night white hot chocolate",
@@ -412,7 +555,9 @@
      "text": "Pour into mugs, top with whipped cream and sprinkle with coconut like fresh snow.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

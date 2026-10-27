@@ -44,7 +44,9 @@
      "text": "Pile into paper bags like peanuts sold under the big top.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Big top popcorn",
@@ -97,7 +99,9 @@
      "text": "Spread out to cool, then pour into striped paper cones.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ringmaster's roast",
@@ -178,7 +182,98 @@
      "text": "Slice the pork and spoon over the gravy.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ringmaster's fennel roast pumpkin",
+     "prep_min": 20,
+     "cook_min": 70,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large butternut pumpkin",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "fennel seeds, crushed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "green apples, in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the pumpkin lengthways, scoop out the seeds and score the flesh. Rub with 2 tbsp of the oil, the fennel, garlic and salt.",
+       "min": 15
+      },
+      {
+       "text": "Roast at 200C with apple and onion around it and the potatoes tossed in the remaining oil alongside.",
+       "min": 60
+      },
+      {
+       "text": "Tip the pan juices into a small pan, stir in the flour, whisk in the stock and simmer into gravy.",
+       "min": 10
+      },
+      {
+       "text": "Cut the pumpkin into thick slices and spoon over the gravy.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pink elephant marshmallow slice",
@@ -247,7 +342,9 @@
      "text": "Spread over the base, dust with coconut and set overnight.",
      "min": 360
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mrs Jumbo's pink lemonade",
@@ -306,7 +403,9 @@
      "text": "Pour over ice in tall glasses.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

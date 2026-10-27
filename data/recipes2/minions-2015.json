@@ -84,7 +84,9 @@
      "text": "Drain, drizzle with honey and scatter with peanuts.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Queen's crown cheese straws",
@@ -135,7 +137,9 @@
      "text": "Bake on lined trays until golden.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Queen's coronation chicken",
@@ -214,7 +218,92 @@
      "text": "Serve with rice and salad leaves.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Queen's coronation chickpeas",
+     "prep_min": 12,
+     "cook_min": 32,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "canned chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "curry powder, divided",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "apricot jam",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "sultanas",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "cooked rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag salad leaves",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the chickpeas dry, toss with the oil and 1 tsp of the curry powder and roast at 200C for 15 minutes until firm.",
+       "min": 20
+      },
+      {
+       "text": "Cool.",
+       "min": 15
+      },
+      {
+       "text": "Mix the mayonnaise, yoghurt, remaining curry powder, jam and sultanas and fold through the chickpeas.",
+       "min": 6
+      },
+      {
+       "text": "Serve with rice and salad leaves.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Minion hot fudge banana split",
@@ -277,7 +366,9 @@
      "text": "Add three scoops of ice cream to each, pour over the fudge and top with cream and a cherry.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bob's banana caramel thickshake",
@@ -330,7 +421,9 @@
      "text": "Top with whipped cream, a banana slice and a final drizzle of caramel.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

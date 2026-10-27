@@ -54,7 +54,9 @@
      "text": "Freeze until firm.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "King Louie's fruit platter",
@@ -129,7 +131,9 @@
      "text": "Squeeze over lime juice and sprinkle with salt mixed with a pinch of chilli.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Man village chicken curry",
@@ -218,7 +222,106 @@
      "text": "Warm the naan and serve with the curry and rice.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Man village paneer and chickpea curry",
+     "prep_min": 15,
+     "cook_min": 40,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "paneer, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "ginger, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "garam masala",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can crushed tomatoes (400g)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "basmati rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "naan breads",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cube the paneer and grate the ginger and garlic.",
+       "min": 10
+      },
+      {
+       "text": "Soften the ginger and garlic in the oil.",
+       "min": 4
+      },
+      {
+       "text": "Add the garam masala and fry for a minute.",
+       "min": 1
+      },
+      {
+       "text": "Add the tomatoes, coconut milk and chickpeas and simmer for 15 minutes, then add the paneer for 5 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Cook the basmati rice according to the packet.",
+       "min": 15
+      },
+      {
+       "text": "Warm the naan and serve with the curry and rice.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Coconut mango pudding",
@@ -283,7 +386,9 @@
      "text": "Dice the mango and top the puddings with mango and toasted coconut.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Colonel Hathi's dawn patrol mango lassi",
@@ -342,7 +447,9 @@
      "text": "Pour over ice in tall glasses.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -98,7 +98,9 @@
      "text": "Top with the sour cream, sliced jalapeños and spring onion.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Amish farm soft pretzels with apple butter",
@@ -189,7 +191,9 @@
      "text": "Serve with American mustard.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Amish chicken and noodles over mash",
@@ -284,7 +288,118 @@
      "text": "Ladle the chicken and noodles over the mash and scatter with chopped parsley.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Amish mushroom and noodles over mash",
+     "prep_min": 20,
+     "cook_min": 60,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "wide egg noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 90,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and white pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in 30 g of the butter in a large pot.",
+       "min": 8
+      },
+      {
+       "text": "Add the vegetable stock with the diced onion, the diced carrots and the celery sticks and simmer for 20 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Add the butter beans and the wide egg noodles and simmer 8 minutes until the broth thickens.",
+       "min": 13
+      },
+      {
+       "text": "Season well with salt and plenty of white pepper.",
+       "min": 4
+      },
+      {
+       "text": "Meanwhile boil the peeled potatoes for 20 minutes and mash with the rest of the butter and the milk.",
+       "min": 26
+      },
+      {
+       "text": "Ladle the mushrooms and noodles over the mash and scatter with chopped parsley.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Shoofly molasses crumb pie",
@@ -373,7 +488,9 @@
      "text": "Cool 30 minutes and serve with the whipped cream.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Farmyard vanilla malt milkshake",
@@ -434,7 +551,9 @@
      "text": "Serve straight away with thick straws.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

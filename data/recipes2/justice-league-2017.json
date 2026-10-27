@@ -68,7 +68,9 @@
      "text": "Stack the pancakes with bacon between and pour over maple syrup.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Icelandic village smoked salmon",
@@ -125,7 +127,9 @@
      "text": "Serve cold on a slate.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Themyscira lemon lamb",
@@ -210,7 +214,102 @@
      "text": "Slice the lamb and serve with the salad.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Themyscira lemon roast eggplant",
+     "prep_min": 25,
+     "cook_min": 47,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "small eggplants, halved lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "feta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the eggplant flesh and rub with the juice of 2 lemons, crushed garlic, oregano, 4 tbsp of the oil and salt.",
+       "min": 12
+      },
+      {
+       "text": "Roast cut side up at 200C with the chickpeas scattered around until soft and golden.",
+       "min": 40
+      },
+      {
+       "text": "Rest for 5 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Chop the tomatoes and cucumber and toss with feta, the rest of the oil and the last lemon.",
+       "min": 10
+      },
+      {
+       "text": "Serve the eggplant and chickpeas with the salad.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Speed force sundae",
@@ -273,7 +372,9 @@
      "text": "Scatter popping candy on just before serving.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Arthur's whisky ginger highball",
@@ -342,7 +443,89 @@
      "text": "Top with ginger ale, stir once and garnish with a lime wedge.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Arthur's whisky ginger highball (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 31,
+     "make_ahead": "Syrup and tea up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoky black tea leaves, such as lapsang souchong",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "ginger ale",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the honey, water and ginger for 2 minutes, then cool and strain.",
+       "min": 12
+      },
+      {
+       "text": "Steep the tea leaves in the boiling water for 4 minutes, strain and chill.",
+       "min": 19
+      },
+      {
+       "text": "Fill four tall glasses with ice.",
+       "min": 2
+      },
+      {
+       "text": "Add the smoky tea, ginger syrup and lime juice to each.",
+       "min": 4
+      },
+      {
+       "text": "Top with ginger ale, stir once and garnish with a lime wedge.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

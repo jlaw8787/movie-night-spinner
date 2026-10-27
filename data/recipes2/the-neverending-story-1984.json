@@ -64,7 +64,9 @@
      "text": "Pack it all together like a lunch hidden away in a school attic.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Rockbiter's chocolate almond rocks",
@@ -117,7 +119,9 @@
      "text": "Smash into rough chunky rocks with the handle of a knife.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Urgl's healing soup",
@@ -194,7 +198,98 @@
      "text": "Shred the chicken back into the pot, then stir through the parsley and lemon juice. Serve with brown bread.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Urgl's healing soup (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 60,
+     "make_ahead": "Up to 3 days, reheats well",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "pearl barley",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "leek, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices brown bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the vegetables.",
+       "min": 15
+      },
+      {
+       "text": "Simmer the barley, carrots, leek and celery in the stock for 50 minutes.",
+       "min": 50
+      },
+      {
+       "text": "Add the chickpeas and simmer 10 minutes more.",
+       "min": 10
+      },
+      {
+       "text": "Stir through the parsley and lemon juice, season with salt and serve with the brown bread.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Falkor cloud meringues",
@@ -241,7 +336,9 @@
      "text": "Serve with whipped cream and strawberries.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Southern Oracle tea",
@@ -290,7 +387,9 @@
      "text": "Stir in the honey. Serve warm in small cups, or cool it and mix half and half with apple juice over ice.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

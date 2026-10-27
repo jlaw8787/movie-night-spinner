@@ -30,7 +30,9 @@
      "text": "Toss with salt while still hot and divide between paper bags. Leave a bowl for the shells.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Umpire's hot dogs",
@@ -77,7 +79,9 @@
      "text": "Load each with a frank, mustard and relish and wrap in paper.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ballpark chilli dogs",
@@ -150,7 +154,96 @@
      "text": "Fill the buns, spoon over chilli and top with cheddar and the diced raw onion.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ballpark chilli dogs (vegetarian)",
+     "prep_min": 13,
+     "cook_min": 48,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "cans black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin chopped tomatoes (400g)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian hot dogs",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "hot dog buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onions.",
+       "min": 8
+      },
+      {
+       "text": "Fry the mushrooms with one onion and the chilli powder in the oil until browned. Add the tomatoes and beans.",
+       "min": 10
+      },
+      {
+       "text": "Simmer, mashing some of the beans, until thick.",
+       "min": 30
+      },
+      {
+       "text": "Griddle the vegetarian hot dogs and steam the buns.",
+       "min": 8
+      },
+      {
+       "text": "Fill the buns, spoon over chilli and top with cheddar and the diced raw onion.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ninth inning malt and fudge ice cream cups",
@@ -227,7 +320,9 @@
      "text": "Scoop into cups, warm the rest of the fudge, spoon over and scatter with peanuts.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Seventh inning spiked frozen lemonade",
@@ -292,7 +387,69 @@
      "text": "Pour into cups, garnish with lemon wheels and serve with straws.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Seventh inning spiked frozen lemonade (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 100,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 360,
+       "u": "ml",
+       "item": "cold water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dissolve the sugar in the hot water and cool.",
+       "min": 15
+      },
+      {
+       "text": "Blend the syrup with the lemon juice, cold water and ice until slushy.",
+       "min": 2
+      },
+      {
+       "text": "Pour into cups, garnish with lemon wheels and serve with straws.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

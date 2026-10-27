@@ -58,7 +58,9 @@
      "text": "Egg wash and bake at 200C.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Waco Kid's whiskey nuts",
@@ -121,7 +123,73 @@
      "text": "Cool on the tray.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Waco Kid's whiskey nuts",
+     "prep_min": 7,
+     "cook_min": 35,
+     "make_ahead": "Up to 5 days in a tin",
+     "ingredients": [
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "peanuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "pecans",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt the butter with the sugar, paprika and vanilla.",
+       "min": 4
+      },
+      {
+       "text": "Toss with the peanuts and pecans on a tray.",
+       "min": 3
+      },
+      {
+       "text": "Roast at 160C, stirring once.",
+       "min": 20
+      },
+      {
+       "text": "Cool on the tray.",
+       "min": 15
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Campfire smoky bacon baked beans",
@@ -236,7 +304,138 @@
      "text": "Pour into a hot buttered pan and bake at 220C.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Campfire smoky baked beans (vegetarian)",
+     "prep_min": 16,
+     "cook_min": 70,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "field mushrooms, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins pinto beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "molasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "American mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cornmeal",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the mushrooms and onion. Drain the beans.",
+       "min": 8
+      },
+      {
+       "text": "Fry the mushrooms and onion in the oil in a heavy pot until dark golden, then stir in the soy sauce.",
+       "min": 10
+      },
+      {
+       "text": "Add the beans, tomatoes, molasses, mustard, paprika and water and simmer until thick.",
+       "min": 40
+      },
+      {
+       "text": "For the cornbread, mix the cornmeal, flour, baking powder, buttermilk, egg and melted butter.",
+       "min": 8
+      },
+      {
+       "text": "Pour into a hot buttered pan and bake at 220C.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Frontier cobbler",
@@ -317,7 +516,9 @@
      "text": "Serve with cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Saloon sarsaparilla spider float",
@@ -368,7 +569,55 @@
      "text": "Add a dash of bitters to each. For the cowboys, add bourbon before pouring. Serve with long spoons and straws.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Saloon sarsaparilla spider float",
+     "prep_min": 8,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "x 375ml cans sarsaparilla",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "big scoops vanilla ice cream",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill the sarsaparilla.",
+       "min": 30
+      },
+      {
+       "text": "Put a big scoop of ice cream into each of four tall glasses.",
+       "min": 3
+      },
+      {
+       "text": "Pour the sarsaparilla slowly down the side so it foams up over the ice cream.",
+       "min": 3
+      },
+      {
+       "text": "Twist a strip of orange zest over each. Serve with long spoons and straws.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

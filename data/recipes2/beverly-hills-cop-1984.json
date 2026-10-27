@@ -78,7 +78,9 @@
      "text": "Cut thick slices, halve into bites and toast in a pan with butter on both sides.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Detroit coney sliders",
@@ -163,7 +165,9 @@
      "text": "Fill the buns with franks, chilli, mustard and the raw onion.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Beverly Palm room service",
@@ -262,7 +266,110 @@
      "text": "Serve with the fries alongside.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Beverly Palm room service (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 37,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil, for the fries",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "horseradish",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil, for the mushrooms",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "brioche rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "Swiss cheese",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into fries, toss with oil and bake at 220C, turning halfway.",
+       "min": 38
+      },
+      {
+       "text": "While the fries bake, slowly cook the sliced onions in butter until caramelised.",
+       "min": 0
+      },
+      {
+       "text": "Mix the mayonnaise with the horseradish.",
+       "min": 2
+      },
+      {
+       "text": "Brush the mushrooms with oil, season and sear hard in a hot pan until tender.",
+       "min": 8
+      },
+      {
+       "text": "Slice the mushrooms thickly.",
+       "min": 2
+      },
+      {
+       "text": "Toast the rolls and fill with mushrooms, onions, Swiss cheese and horseradish mayo.",
+       "min": 5
+      },
+      {
+       "text": "Serve with the fries alongside.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Banana split",
@@ -349,7 +456,9 @@
      "text": "Add the pineapple, strawberry sauce, hot fudge and whipped cream, then finish with nuts and a cherry. Serve immediately.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Axel's Beverly Palm piña colada",
@@ -414,7 +523,69 @@
      "text": "Garnish with a pineapple wedge and a cherry.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Axel's Beverly Palm piña colada (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 480,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "coconut cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pineapple wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail cherries",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blend the pineapple juice, coconut cream, lime juice and ice until thick and smooth.",
+       "min": 3
+      },
+      {
+       "text": "Pour into tall glasses.",
+       "min": 2
+      },
+      {
+       "text": "Garnish with a pineapple wedge and a cherry.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

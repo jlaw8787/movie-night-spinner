@@ -72,7 +72,9 @@
      "text": "Dust with icing sugar.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Warm olives, almonds and parmesan crisps",
@@ -147,7 +149,9 @@
      "text": "Serve in little bowls.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Paris bistro chicken",
@@ -232,7 +236,108 @@
      "text": "Whisk the oil, mustard and vinegar and toss through the leaves.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Paris bistro roast celeriac",
+     "prep_min": 25,
+     "cook_min": 105,
+     "make_ahead": "Rest 10 minutes before carving",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "fresh tarragon, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "large celeriac (about 1kg)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil, for the celeriac",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter, for the mash",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag of salad leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil, for the dressing",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the celeriac, rub with the oil and salt, then spread with the softened butter mixed with the tarragon.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 220C for 20 minutes, then drop to 180C and roast until tender, basting with the butter.",
+       "min": 80
+      },
+      {
+       "text": "Rest and carve into thick slices.",
+       "min": 10
+      },
+      {
+       "text": "Boil the potatoes and mash with the butter until silky.",
+       "min": 25
+      },
+      {
+       "text": "Whisk the dressing oil, mustard and vinegar and toss through the leaves.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Observatory starry chocolate tart",
@@ -289,7 +394,9 @@
      "text": "Finish with flaky salt and gold stars.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jazz club old fashioned",
@@ -346,7 +453,77 @@
      "text": "Twist orange peel over the top.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Jazz club old fashioned (alcohol-free)",
+     "prep_min": 6,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "smoky black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sugar cubes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, peel only",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the tea bags in the boiling water for 5 minutes, remove them and cool the tea.",
+       "min": 15
+      },
+      {
+       "text": "Muddle the sugar cubes with a splash of the tea, a strip of orange zest and the vanilla in a mixing glass.",
+       "min": 2
+      },
+      {
+       "text": "Add 240ml of the tea and ice and stir.",
+       "min": 2
+      },
+      {
+       "text": "Strain over a big cube in each glass.",
+       "min": 1
+      },
+      {
+       "text": "Twist orange peel over the top.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

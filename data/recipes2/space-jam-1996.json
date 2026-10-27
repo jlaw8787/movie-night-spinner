@@ -64,7 +64,9 @@
      "text": "Stand the carrots and cucumber sticks upright in each cup so everyone gets their own serve.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Basketball cheese balls",
@@ -123,7 +125,9 @@
      "text": "Mark basketball lines with a chive or skewer. Chill and serve with water crackers.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Courtside meatball subs",
@@ -192,7 +196,108 @@
      "text": "Pile into split rolls, cover with mozzarella and grill until bubbly. Finish with basil.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Courtside mushroom and ricotta meatball subs",
+     "prep_min": 25,
+     "cook_min": 34,
+     "make_ahead": "Meatballs up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "dried breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long bread rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella, sliced or grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "basil leaves, torn",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in the oil until dry and browned, then cool.",
+       "min": 12
+      },
+      {
+       "text": "Mix the mushrooms with the ricotta, egg, breadcrumbs, cheese and salt and roll into 16 balls.",
+       "min": 12
+      },
+      {
+       "text": "Bake on an oiled tray at 200C until browned.",
+       "min": 18
+      },
+      {
+       "text": "Simmer the meatballs gently in the crushed tomatoes.",
+       "min": 12
+      },
+      {
+       "text": "Pile into split rolls, cover with mozzarella and grill until bubbly. Finish with basil.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Monstars chocolate pudding",
@@ -251,7 +356,9 @@
      "text": "Top with crushed biscuits and push in gummy worms so they look like they are crawling out.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Michael's secret stuff orange cooler",
@@ -306,7 +413,9 @@
      "text": "Divide between four sports bottles, add ice and top up with sparkling water. Shake gently.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

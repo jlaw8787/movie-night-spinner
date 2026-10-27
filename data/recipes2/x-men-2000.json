@@ -56,7 +56,9 @@
      "text": "Chill, then cut into bars.",
      "min": 120
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Iceman frozen grapes",
@@ -103,7 +105,9 @@
      "text": "Spread on a tray and freeze until solid. Serve straight from the freezer.",
      "min": 180
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Logan's poutine",
@@ -170,7 +174,90 @@
      "text": "Pile chips into bowls, scatter the cheese curds and pour the hot gravy over.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Logan's poutine with mushroom gravy",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mushrooms, very finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cheese curds",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into chips.",
+       "min": 10
+      },
+      {
+       "text": "Fry at 140C in the oil until soft and pale.",
+       "min": 12
+      },
+      {
+       "text": "Cook the mushrooms in the butter until browned, stir in the flour for 2 minutes, then whisk in the stock and soy sauce and simmer until thick.",
+       "min": 12
+      },
+      {
+       "text": "Fry the chips again at 185C until crisp.",
+       "min": 8
+      },
+      {
+       "text": "Pile chips into bowls, scatter the cheese curds and pour the hot gravy over.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Frozen ice cream",
@@ -211,7 +298,9 @@
      "text": "Melt the chocolate with the coconut oil and pour over at the table so it sets into a shell in seconds.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Logan's rye and maple old fashioned",
@@ -270,7 +359,79 @@
      "text": "Squeeze a strip of orange peel over each glass, rub the rim and drop it in.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Logan's rye and maple old fashioned (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "smoky black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large ice cubes",
+       "aisle": "Frozen"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice, for stirring",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the tea bags in the boiling water for 5 minutes, remove them and chill the tea.",
+       "min": 15
+      },
+      {
+       "text": "Stir 240ml of the tea with the maple syrup, vanilla and a strip of orange zest over ice in a jug until very cold.",
+       "min": 1
+      },
+      {
+       "text": "Strain into four heavy tumblers over one large ice cube each.",
+       "min": 2
+      },
+      {
+       "text": "Squeeze a strip of orange peel over each glass, rub the rim and drop it in.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

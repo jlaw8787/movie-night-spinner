@@ -40,7 +40,51 @@
      "text": "Open a very cold bottle of sparkling wine alongside.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Strawberries and champagne",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Up to 2 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "strawberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Wash and properly dry the ripest strawberries and chill.",
+       "min": 6
+      },
+      {
+       "text": "Pile them into a glass bowl with a tiny dish of caster sugar for dipping.",
+       "min": 3
+      },
+      {
+       "text": "Open a very cold bottle of alcohol-free sparkling wine alongside.",
+       "min": 1
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Garlic butter escargot or mushrooms",
@@ -105,7 +149,75 @@
      "text": "Bake at 200C until sizzling. Serve with baguette.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Garlic butter escargot or mushrooms",
+     "prep_min": 13,
+     "cook_min": 10,
+     "make_ahead": "Assemble up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 20,
+       "u": "",
+       "item": "escargot",
+       "aisle": "Meat"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mash the butter with crushed garlic, chopped parsley, finely chopped shallot and a splash of verjuice.",
+       "min": 8
+      },
+      {
+       "text": "Put the escargot in a baking dish and cover each one with the butter.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 200C until sizzling. Serve with baguette.",
+       "min": 10
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Business dinner eye fillet and red wine jus",
@@ -200,7 +312,322 @@
      "text": "Steam the beans and toss with the remaining butter.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Business dinner eye fillet and red wine jus",
+     "prep_min": 15,
+     "cook_min": 125,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "eye fillet",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the potatoes thin and prepare the shallots and beans.",
+       "min": 15
+      },
+      {
+       "text": "Layer the potatoes with the cream, crushed garlic and salt, and bake at 160C.",
+       "min": 75
+      },
+      {
+       "text": "Sear the eye fillet on all sides, then roast at 200C to 54C inside.",
+       "min": 20
+      },
+      {
+       "text": "Rest the beef. Chop the shallots and soften in the pan.",
+       "min": 12
+      },
+      {
+       "text": "Add the grape juice and balsamic and reduce by half, then add the stock and reduce until glossy. Whisk in some of the butter.",
+       "min": 12
+      },
+      {
+       "text": "Steam the beans and toss with the remaining butter.",
+       "min": 6
+      }
+     ]
+    },
+    "veg": {
+     "n": "Business dinner portobello steak and red wine jus",
+     "prep_min": 15,
+     "cook_min": 114,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the potatoes thin, chop the shallots and trim the beans.",
+       "min": 15
+      },
+      {
+       "text": "Layer the potatoes with the cream, crushed garlic and salt, and bake at 160C.",
+       "min": 75
+      },
+      {
+       "text": "Brush the portobello mushrooms with the oil, season, sear on both sides, then roast at 200C for 15 minutes.",
+       "min": 18
+      },
+      {
+       "text": "Soften the shallots in a little of the butter in the pan. Add the wine and reduce by half, then add the stock and soy sauce and reduce until glossy. Whisk in some more butter.",
+       "min": 15
+      },
+      {
+       "text": "Steam the beans and toss with the remaining butter.",
+       "min": 6
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Business dinner portobello steak and balsamic jus",
+     "prep_min": 15,
+     "cook_min": 114,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "extra vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the potatoes thin, chop the shallots and trim the beans.",
+       "min": 15
+      },
+      {
+       "text": "Layer the potatoes with the cream, crushed garlic and salt, and bake at 160C.",
+       "min": 75
+      },
+      {
+       "text": "Brush the portobello mushrooms with the oil, season, sear on both sides, then roast at 200C for 15 minutes.",
+       "min": 18
+      },
+      {
+       "text": "Soften the shallots in a little of the butter in the pan. Add the extra stock and balsamic vinegar and reduce by half, then add the stock and soy sauce and reduce until glossy. Whisk in some more butter.",
+       "min": 15
+      },
+      {
+       "text": "Steam the beans and toss with the remaining butter.",
+       "min": 6
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Chocolate-dipped strawberries",
@@ -241,7 +668,9 @@
      "text": "Melt the white chocolate and drizzle thin lines across them. Chill until set.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Penthouse champagne cocktail",
@@ -298,7 +727,73 @@
      "text": "Twist a strip of orange peel over each glass and drop it in.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Penthouse champagne cocktail (alcohol-free)",
+     "prep_min": 6,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sugar cubes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "strong black tea, cooled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill the bottle in an ice bucket. Brew the tea strong and let it cool.",
+       "min": 30
+      },
+      {
+       "text": "Drop a sugar cube into each of four flutes and soak with a teaspoon of the tea and a drop of vanilla.",
+       "min": 3
+      },
+      {
+       "text": "Add the apple juice, then slowly top with the alcohol-free sparkling wine.",
+       "min": 2
+      },
+      {
+       "text": "Twist a strip of orange peel over each glass and drop it in.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

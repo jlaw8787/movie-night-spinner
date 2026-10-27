@@ -70,7 +70,9 @@
      "text": "Tear the hollowed bread into chunks for dipping.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Blues bar wings",
@@ -137,7 +139,9 @@
      "text": "Serve with celery sticks.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Shermer house party pizza",
@@ -194,7 +198,68 @@
      "text": "Slice and leave in a box on the bench.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Shermer house party pizza (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plant-based pepperoni",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stretch the dough thin on a floured tray.",
+       "min": 8
+      },
+      {
+       "text": "Spread with sauce and scatter with mozzarella, plant-based pepperoni and mushrooms.",
+       "min": 5
+      },
+      {
+       "text": "Bake on a hot steel or tray at the highest oven heat.",
+       "min": 9
+      },
+      {
+       "text": "Slice and leave in a box on the bench.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Big brother Chet's party sheet cake",
@@ -273,7 +338,9 @@
      "text": "Spread on the cake and cover with sprinkles.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Blues bar bourbon lemon smash",
@@ -340,7 +407,83 @@
      "text": "Garnish with a mint sprig.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Blues bar bourbon lemon smash (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "smoked black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "mint leaves, plus sprigs to garnish",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag crushed ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift out and chill.",
+       "min": 15
+      },
+      {
+       "text": "Dissolve the sugar in hot water and cool.",
+       "min": 3
+      },
+      {
+       "text": "For each drink, muddle lemon wedges with mint leaves and syrup in a shaker.",
+       "min": 8
+      },
+      {
+       "text": "Add 50ml of the tea and ice and shake hard for 10 seconds.",
+       "min": 4
+      },
+      {
+       "text": "Pour into a short glass, top with crushed ice and garnish with a mint sprig.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

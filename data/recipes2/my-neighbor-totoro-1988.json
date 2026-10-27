@@ -46,7 +46,9 @@
      "text": "Mix the white miso with the honey and the water and serve in a little dish for dipping.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Grilled corn with soy butter",
@@ -89,7 +91,9 @@
      "text": "Melt the butter with the soy sauce and the sugar and brush all over the corn while it's hot.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Satsuki's chicken and egg bento",
@@ -158,7 +162,86 @@
      "text": "Pack each box with rice topped with peas, sliced chicken, omelette and pickled ginger.",
      "min": 9
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Satsuki's tofu and egg bento",
+     "prep_min": 23,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "sushi rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 450,
+       "u": "g",
+       "item": "firm tofu, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pickled ginger",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the sushi rice.",
+       "min": 21
+      },
+      {
+       "text": "Fry the tofu in the oil until golden, then glaze with the soy and most of the sugar until sticky.",
+       "min": 14
+      },
+      {
+       "text": "Whisk the eggs with the last pinch of sugar and roll into a thin omelette in a pan.",
+       "min": 9
+      },
+      {
+       "text": "Cook the peas. Pack each box with rice topped with peas, tofu, sliced omelette and pickled ginger.",
+       "min": 9
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Red bean dorayaki pancakes",
@@ -223,7 +306,9 @@
      "text": "Sandwich in pairs with the red bean paste.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Catbus iced barley tea with honey",
@@ -280,7 +365,9 @@
      "text": "Fill the tall glasses with ice, add the thin lemon slices to each and pour in the tea.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

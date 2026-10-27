@@ -66,7 +66,9 @@
      "text": "Cool and break up.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Spider Rider midway corn dogs",
@@ -157,7 +159,9 @@
      "text": "Serve with mustard.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Uncle Dave's theme park turkey legs",
@@ -214,7 +218,80 @@
      "text": "Roast at 150C until the meat pulls easily from the bone.",
      "min": 120
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Uncle Dave's theme park smoky mushroom legs",
+     "prep_min": 10,
+     "cook_min": 90,
+     "make_ahead": "Brine up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 40,
+       "u": "g",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large king brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "wooden skewers",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dissolve the salt and sugar in the water with some of the paprika.",
+       "min": 5
+      },
+      {
+       "text": "Brine the mushrooms for 1 hour.",
+       "min": 60
+      },
+      {
+       "text": "Pat dry, push a skewer up through each stem and rub with the oil and the rest of the paprika.",
+       "min": 5
+      },
+      {
+       "text": "Roast at 200C, turning once, until deeply browned and tender.",
+       "min": 30
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Fairy floss and toffee apples",
@@ -287,7 +364,9 @@
      "text": "Leave to set. Serve with a bag of fairy floss.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wonder World blue raspberry slushie",
@@ -340,7 +419,9 @@
      "text": "Pour the slushie over and serve with straws straight away.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

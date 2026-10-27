@@ -52,7 +52,9 @@
      "text": "Butter generously and cut into fingers. Serve with milk on the side, like a guest in a burrow.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bog of Eternal Stench garlic dip",
@@ -111,7 +113,9 @@
      "text": "Serve with torn baguette for dipping.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hoggle's beef and mushroom stew",
@@ -220,7 +224,126 @@
      "text": "Serve the stew over the mash with chopped parsley.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hoggle's mushroom and lentil stew",
+     "prep_min": 15,
+     "cook_min": 103,
+     "make_ahead": "Up to 3 days",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "g",
+       "item": "mixed mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "dried brown lentils, rinsed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "white miso",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onion and carrots and quarter the mushrooms.",
+       "min": 15
+      },
+      {
+       "text": "Brown the mushrooms in batches in the oil, then soften the onion and carrots in the same pot.",
+       "min": 20
+      },
+      {
+       "text": "Stir in the tomato paste, soy sauce, miso, thyme, lentils and stock. Cover and braise at 160C for 1 hour until the lentils are soft and the gravy is thick.",
+       "min": 60
+      },
+      {
+       "text": "Peel and boil the potatoes and mash with the butter and milk.",
+       "min": 20
+      },
+      {
+       "text": "Serve the stew over the mash with chopped parsley.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Vanilla poached peaches with mascarpone",
@@ -305,7 +428,9 @@
      "text": "Serve two halves each with mascarpone, a little syrup and crumbled almond biscuits.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Goblin King's spiced apple and pear punch",
@@ -364,7 +489,9 @@
      "text": "Serve warm in mugs with a cinnamon stick, or cool it and pour over ice, topping each glass with sparkling water.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

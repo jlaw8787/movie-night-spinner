@@ -82,7 +82,9 @@
      "text": "Cool on the trays to crisp.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Charters Towers corned beef rolls",
@@ -151,7 +153,9 @@
      "text": "Add thinly sliced tomato and a crack of pepper, close and cut in half.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Messines trench corned beef hash",
@@ -244,7 +248,104 @@
      "text": "Fry the eggs and sit one on each serve with brown sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Messines trench smoked tofu hash",
+     "prep_min": 12,
+     "cook_min": 30,
+     "make_ahead": "Up to 1 day, reheat in a hot pan",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle of brown sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the potatoes, onion and smoked tofu.",
+       "min": 10
+      },
+      {
+       "text": "Boil the potatoes, then drain well.",
+       "min": 8
+      },
+      {
+       "text": "Fry the onion in butter and oil.",
+       "min": 5
+      },
+      {
+       "text": "Add the potatoes and tofu and press flat.",
+       "min": 2
+      },
+      {
+       "text": "Cook over medium-high heat, turning in sections, until crusty.",
+       "min": 10
+      },
+      {
+       "text": "Splash with soy sauce and add chopped parsley.",
+       "min": 2
+      },
+      {
+       "text": "Fry the eggs and sit one on each serve with brown sauce.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Fruit cake from home with brandy butter",
@@ -305,7 +406,77 @@
      "text": "Cut into thick slices and serve with the brandy butter and cheddar wedges.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Fruit cake from home with brandy butter",
+     "prep_min": 16,
+     "cook_min": 35,
+     "make_ahead": "Orange butter up to 3 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "icing sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "fruit cake",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "vintage cheddar",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Beat the soft butter with icing sugar until pale, then beat in the orange juice and vanilla a little at a time until fluffy.",
+       "min": 8
+      },
+      {
+       "text": "Chill the orange butter for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Wrap the fruit cake in foil.",
+       "min": 3
+      },
+      {
+       "text": "Warm at 160C.",
+       "min": 15
+      },
+      {
+       "text": "Cut into thick slices and serve with the orange butter and cheddar wedges.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Dugout cocoa with condensed milk",
@@ -356,7 +527,9 @@
      "text": "Pour into enamel mugs and serve straight away while piping hot.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

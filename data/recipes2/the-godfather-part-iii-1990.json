@@ -72,7 +72,9 @@
      "text": "Drain, salt and serve with lemon wedges.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Prosciutto and melon",
@@ -119,7 +121,9 @@
      "text": "Drape each wedge with prosciutto, add pepper and a drizzle of olive oil just before serving.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pasta alla Norma",
@@ -194,7 +198,9 @@
      "text": "Toss the pasta with the sauce, eggplant and a splash of pasta water. Grate ricotta salata heavily over the top.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Opera night cannoli",
@@ -257,7 +263,9 @@
      "text": "Dip each end in pistachios and dust with icing sugar.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Teatro Massimo limoncello spritz",
@@ -316,7 +324,79 @@
      "text": "Peel a wide strip of lemon zest per glass, twist over the drink and drop in. Finish with mint.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Teatro Massimo limoncello spritz (alcohol-free)",
+     "prep_min": 13,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 360,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the sugar and water with the zest of two lemons until dissolved, cool, then stir in the juice of two lemons.",
+       "min": 5
+      },
+      {
+       "text": "Fill four large wine glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Pour the lemon syrup into each, top with sparkling wine and soda and stir once gently.",
+       "min": 3
+      },
+      {
+       "text": "Peel a wide strip of zest from the last lemon for each glass, twist over the drink and drop in. Finish with mint.",
+       "min": 4
+      }
+     ]
+    }
+   }
   }
  ]
 }

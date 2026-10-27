@@ -88,7 +88,99 @@
      "text": "Mix the mayonnaise with garlic and lemon juice for dipping",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Beer-battered Tassie chips",
+     "prep_min": 5,
+     "cook_min": 50,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "alcohol-free beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "chicken salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into thick chips and parboil, then drain and steam dry",
+       "min": 20
+      },
+      {
+       "text": "Whisk the flour with the cold alcohol-free beer and salt",
+       "min": 5
+      },
+      {
+       "text": "Dip the chips in the batter",
+       "min": 5
+      },
+      {
+       "text": "Fry in batches at 180C until golden",
+       "min": 20
+      },
+      {
+       "text": "Drain and toss with chicken salt",
+       "min": 2
+      },
+      {
+       "text": "Mix the mayonnaise with garlic and lemon juice for dipping",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Rock and roll scallop pies",
@@ -165,7 +257,9 @@
      "text": "Bake at 200C",
      "min": 25
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Apple cider pork",
@@ -240,7 +334,246 @@
      "text": "Boil the potatoes and mash with butter",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Apple cider pork",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "pork chops",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "apples, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sage leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 330,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "apple cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the chops in oil and set aside",
+       "min": 10
+      },
+      {
+       "text": "Soften the onion and apples with sage",
+       "min": 8
+      },
+      {
+       "text": "Pour in the apple juice and vinegar, return the chops and simmer until the sauce reduces",
+       "min": 20
+      },
+      {
+       "text": "Boil the potatoes and mash with butter",
+       "min": 20
+      }
+     ]
+    },
+    "veg": {
+     "n": "Apple cider smoked tofu",
+     "prep_min": 15,
+     "cook_min": 36,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "smoked tofu, cut into 8 thick slabs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "apples, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sage leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "apple cider",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the tofu in the oil and set aside.",
+       "min": 8
+      },
+      {
+       "text": "Soften the onion and apples with the sage.",
+       "min": 8
+      },
+      {
+       "text": "Pour in the cider, return the tofu and simmer until the sauce reduces.",
+       "min": 15
+      },
+      {
+       "text": "Boil the potatoes and mash with butter.",
+       "min": 20
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Apple cider smoked tofu (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 36,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "smoked tofu, cut into 8 thick slabs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "apples, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sage leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "apple cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the tofu in the oil and set aside.",
+       "min": 8
+      },
+      {
+       "text": "Soften the onion and apples with the sage.",
+       "min": 8
+      },
+      {
+       "text": "Pour in the apple juice and vinegar, return the tofu and simmer until the sauce reduces.",
+       "min": 15
+      },
+      {
+       "text": "Boil the potatoes and mash with butter.",
+       "min": 20
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Apple pie",
@@ -301,7 +634,9 @@
      "text": "Cool slightly, then serve warm with cream",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "E=mc2 lager and cider snakebite",
@@ -346,7 +681,55 @@
      "text": "Serve straight away",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "E=mc2 lager and cider snakebite (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "sparkling cloudy apple juice, cold",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "alcohol-free lager, cold",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "blackcurrant cordial",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill four pint glasses in the freezer",
+       "min": 15
+      },
+      {
+       "text": "Add cordial to each glass",
+       "min": 1
+      },
+      {
+       "text": "Pour in the sparkling apple juice down the side, then top slowly with alcohol-free lager so it layers and foams",
+       "min": 3
+      },
+      {
+       "text": "Serve straight away",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

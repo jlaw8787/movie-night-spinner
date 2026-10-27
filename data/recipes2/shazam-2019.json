@@ -56,7 +56,9 @@
      "text": "Toast the buns and pile the filling on.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Garlic parmesan potato gems",
@@ -103,7 +105,9 @@
      "text": "Serve with tomato sauce.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rosa's arroz con pollo",
@@ -188,7 +192,104 @@
      "text": "Stir through the peas and olives.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rosa's arroz con garbanzos",
+     "prep_min": 15,
+     "cook_min": 43,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins chickpeas (400 g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 280,
+       "u": "g",
+       "item": "jar marinated artichoke hearts, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "saffron threads",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "green olives",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the onion and capsicum in the oil in an ovenproof pan.",
+       "min": 13
+      },
+      {
+       "text": "Add the rice, saffron, paprika and stock and stir in the chickpeas and artichokes.",
+       "min": 5
+      },
+      {
+       "text": "Cover and bake at 180C.",
+       "min": 35
+      },
+      {
+       "text": "Stir through the peas and olives.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Dark chocolate rocky road",
@@ -241,7 +342,9 @@
      "text": "Press into a lined tin, chill until set and cut into chunks.",
      "min": 120
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Cinnamon vanilla eggnog",
@@ -320,7 +423,9 @@
      "text": "Pour into glasses, top with whipped cream and grate over nutmeg.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

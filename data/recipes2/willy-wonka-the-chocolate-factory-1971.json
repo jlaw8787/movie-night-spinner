@@ -56,7 +56,9 @@
      "text": "Pipe dark chocolate handles and stick them on. Eat the whole thing.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Snozzberry crackers",
@@ -115,7 +117,9 @@
      "text": "Spread on the crackers and top with the berries. Taste them and decide what a snozzberry is.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bucket house stew",
@@ -184,7 +188,92 @@
      "text": "Serve with bread to stretch it further.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bucket house stew (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 62,
+     "make_ahead": "Better the next day",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, chunked",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "pearl barley",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.2,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Italian loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil.",
+       "min": 12
+      },
+      {
+       "text": "Soften the onions, then add the carrots, potatoes, pearl barley, beans and stock.",
+       "min": 15
+      },
+      {
+       "text": "Cover and simmer gently until the barley is tender and the stew is thick.",
+       "min": 60
+      },
+      {
+       "text": "Serve with bread to stretch it further.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Gobstopper truffles",
@@ -255,7 +344,9 @@
      "text": "Roll in cocoa and coloured sugar. Bite to see the layers.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Fizzy lifting raspberry lemon soda",
@@ -308,7 +399,9 @@
      "text": "Top with very cold soda water and drop in a scoop of lemon sorbet so it fizzes up. Don't burp.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

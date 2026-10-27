@@ -58,7 +58,9 @@
      "text": "Leave out for a few minutes so it comes to room temperature before serving.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Golden arancini",
@@ -127,7 +129,9 @@
      "text": "Heat the oil to 170C and fry in batches until golden and hot through, about 4 to 5 minutes. Drain and finish with sea salt.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Clemenza's Sunday sauce",
@@ -236,7 +240,130 @@
      "text": "Boil the rigatoni, toss with the sauce and serve with the meat and the rest of the pecorino.",
      "min": 13
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Clemenza's Sunday sauce with mushroom meatballs",
+     "prep_min": 30,
+     "cook_min": 87,
+     "make_ahead": "Sauce is better made 1 day ahead, keeps 3 days chilled. Add the meatballs on the day",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "vegetarian Italian-style sausages",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tinned tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "rigatoni",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in 1 tbsp of the olive oil until dry and browned, then cool.",
+       "min": 12
+      },
+      {
+       "text": "Mix the mushrooms with the ricotta, egg, breadcrumbs, a share of the cheese and the salt. Form 12 meatballs and chill.",
+       "min": 12
+      },
+      {
+       "text": "Brown the meatballs gently in the rest of the oil with the sausages cut into chunks, then set aside.",
+       "min": 12
+      },
+      {
+       "text": "Soften the onion in the same pot, add the garlic and tomato paste, then stir in the tomatoes and water. Cover partly and simmer gently for 45 minutes, stirring and adding water if needed.",
+       "min": 53
+      },
+      {
+       "text": "Return the meatballs and sausages and simmer for 15 minutes without stirring hard.",
+       "min": 15
+      },
+      {
+       "text": "Boil the rigatoni, toss with the sauce and serve with the meatballs and the rest of the cheese.",
+       "min": 13
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ricotta & pistachio cannoli",
@@ -299,7 +426,9 @@
      "text": "Dip the ends in crushed pistachios and dust lightly with icing sugar.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Blood orange Italian soda",
@@ -346,7 +475,9 @@
      "text": "Finish each with a thin twist of orange.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

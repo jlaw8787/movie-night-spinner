@@ -92,7 +92,9 @@
      "text": "Mix the icing sugar with water, pipe shaggy white fur on the yetis and tint a little red for the elves' hats.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sandy's golden dream honeycomb",
@@ -157,7 +159,9 @@
      "text": "Dip half of each chunk in melted milk chocolate and dust with edible gold glitter.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "North's beef stroganoff and noodles",
@@ -258,7 +262,106 @@
      "text": "Cook the egg noodles, toss in butter and dill and serve under the beef.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "North's mushroom stroganoff and noodles",
+     "prep_min": 12,
+     "cook_min": 24,
+     "make_ahead": "Up to 1 day, reheat gently",
+     "ingredients": [
+      {
+       "q": 900,
+       "u": "g",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "egg noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of dill",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the onion.",
+       "min": 4
+      },
+      {
+       "text": "Sear the mushrooms in batches in a hot pan with the oil, then remove.",
+       "min": 12
+      },
+      {
+       "text": "Fry the onion in half the butter.",
+       "min": 6
+      },
+      {
+       "text": "Add the paprika, Dijon and stock and simmer.",
+       "min": 3
+      },
+      {
+       "text": "Stir in the sour cream and the mushrooms and warm through without boiling.",
+       "min": 3
+      },
+      {
+       "text": "Cook the egg noodles, toss in the rest of the butter and dill and serve under the mushrooms.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bunnymund's hot cross bun egg pudding",
@@ -347,7 +450,9 @@
      "text": "Dust with icing sugar and serve warm with cream and a few more mini eggs.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jack Frost's frosty blue slushie",
@@ -414,7 +519,9 @@
      "text": "Pour into the frosted glasses and garnish with a mint sprig.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

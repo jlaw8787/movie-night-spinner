@@ -64,7 +64,9 @@
      "text": "Steam in batches until cooked through.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Leo's wonton crisps",
@@ -117,7 +119,9 @@
      "text": "Drain and toss with salt and five spice. Serve with sweet chilli sauce.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Uncle Benny's roast duck",
@@ -206,7 +210,98 @@
      "text": "Slice the cucumber and spring onions. Serve with pancakes and hoisin.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Uncle Benny's five spice roast mushrooms",
+     "prep_min": 20,
+     "cook_min": 33,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "oyster mushrooms, torn into strips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "Chinese five spice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "",
+       "item": "mandarin pancakes",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "hoisin sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the mushrooms with the oil, five spice and salt and spread on a lined tray.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 220C, turning once, until crisp and browned.",
+       "min": 25
+      },
+      {
+       "text": "Brush with the honey and soy and roast for the last stretch until sticky.",
+       "min": 8
+      },
+      {
+       "text": "Slice the cucumber and spring onions and warm the pancakes. Serve with the mushrooms and hoisin.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Fortune cookies",
@@ -273,7 +368,9 @@
      "text": "Working fast, fold each warm cookie around a fortune.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Uncle Benny's lychee ginger highball",
@@ -336,7 +433,73 @@
      "text": "Thread a lychee onto a cocktail pick with a thin slice of ginger and lay it across each glass.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Uncle Benny's lychee ginger highball (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin lychees (565g)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "ginger ale, cold",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "knob fresh ginger",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Drain the lychees, keeping the syrup.",
+       "min": 2
+      },
+      {
+       "text": "Fill glasses with ice, add the non-alcoholic gin, some lychee syrup and a squeeze of lime to each.",
+       "min": 4
+      },
+      {
+       "text": "Top with ginger ale and stir once.",
+       "min": 1
+      },
+      {
+       "text": "Thread a lychee onto a cocktail pick with a thin slice of ginger and lay it across each glass.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

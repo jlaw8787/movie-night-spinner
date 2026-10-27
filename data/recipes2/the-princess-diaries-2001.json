@@ -74,7 +74,9 @@
      "text": "Serve with mustard.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Genovian pear crostini",
@@ -127,7 +129,9 @@
      "text": "Drizzle with honey and scatter with chopped walnuts.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "State dinner chicken",
@@ -218,7 +222,108 @@
      "text": "Melt the butter, whisk in lemon juice and spoon over the chicken.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "State dinner spinach and ricotta parcels",
+     "prep_min": 25,
+     "cook_min": 47,
+     "make_ahead": "Make the filling up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "feta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "sheets filo pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 130,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "clove garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Wilt the spinach, squeeze dry and mix with the ricotta, crumbled feta, egg and the zest of 1 lemon.",
+       "min": 10
+      },
+      {
+       "text": "Slice the potatoes, layer in a dish with the cream, crushed garlic and seasoning, and bake at 200C.",
+       "min": 15
+      },
+      {
+       "text": "Melt 50g of the butter. Brush 2 filo sheets at a time, fold into a square, add a quarter of the filling and wrap into a parcel.",
+       "min": 12
+      },
+      {
+       "text": "Bake the parcels on a tray alongside the gratin until crisp and golden.",
+       "min": 30
+      },
+      {
+       "text": "Melt the remaining butter, whisk in the lemon juice and spoon over the parcels.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Palate cleanser sorbet",
@@ -271,7 +376,9 @@
      "text": "Add a few pear slices and a mint leaf.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Genovian pear fizz",
@@ -318,7 +425,9 @@
      "text": "Squeeze in a little lemon and stir once.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -74,7 +74,9 @@
      "text": "Tuck into the rolls with beans, tomato, onion, mustard and salsa.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Party potato skins",
@@ -141,7 +143,9 @@
      "text": "Top with sour cream and chives.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Tucson red chilli enchiladas",
@@ -202,7 +206,88 @@
      "text": "Scatter with coriander.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Tucson red chilli enchiladas (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 39,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "sweet potato, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin black beans (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "red enchilada sauce, divided",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cheddar, grated, divided",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch coriander",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the sweet potato in the oil and roast at 200C until tender.",
+       "min": 25
+      },
+      {
+       "text": "Simmer the sweet potato and black beans in some of the sauce.",
+       "min": 5
+      },
+      {
+       "text": "Fill the warmed tortillas with the sweet potato mix and cheddar, roll and lay in a baking dish.",
+       "min": 5
+      },
+      {
+       "text": "Pour over the remaining sauce and top with cheddar.",
+       "min": 3
+      },
+      {
+       "text": "Bake at 190C.",
+       "min": 20
+      },
+      {
+       "text": "Scatter with coriander.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Thousand-dollar date night sundae",
@@ -259,7 +344,9 @@
      "text": "Pipe whipped cream high and top with chopped peanuts and a cherry.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Red wine spill punch",
@@ -302,7 +389,9 @@
      "text": "Stir gently and pour carefully into glasses.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

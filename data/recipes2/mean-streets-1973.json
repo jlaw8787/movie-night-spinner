@@ -56,7 +56,9 @@
      "text": "Serve with the hot mustard.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Fried calamari",
@@ -129,7 +131,9 @@
      "text": "Salt and serve with lemon wedges.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Penne arrabbiata",
@@ -204,7 +208,9 @@
      "text": "Finish with the pecorino.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Zeppole",
@@ -273,7 +279,9 @@
      "text": "Drain, tip into a paper bag with icing sugar, shake and eat hot.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "San Gennaro red wine with white peaches",
@@ -314,7 +322,73 @@
      "text": "Serve in tumblers with a spoonful of peach in each. Eat the peaches last.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "San Gennaro red wine with white peaches (alcohol-free)",
+     "prep_min": 20,
+     "cook_min": 60,
+     "make_ahead": "Up to 4 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "black tea bag",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "ripe white peaches",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the tea bag in the boiling water for 4 minutes, remove it and cool.",
+       "min": 10
+      },
+      {
+       "text": "Halve, stone and thinly slice the peaches into a large jug. Sprinkle with the sugar and leave for 10 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Pour over the grape juice, cooled tea and lemon juice and refrigerate for at least 1 hour.",
+       "min": 60
+      },
+      {
+       "text": "Serve in tumblers with a spoonful of peach in each. Eat the peaches last.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

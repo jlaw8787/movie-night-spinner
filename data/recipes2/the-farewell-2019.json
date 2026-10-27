@@ -98,7 +98,9 @@
      "text": "Mix the black vinegar, soy and chilli oil for dipping.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Changchun smashed cucumber with chilli oil",
@@ -183,7 +185,9 @@
      "text": "Toss the cucumbers in the dressing and top with toasted sesame seeds and coriander.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wedding banquet crispy sweet and sour pork",
@@ -314,7 +318,136 @@
      "text": "Toss in the pork and serve with rice.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Wedding banquet crispy sweet and sour tofu",
+     "prep_min": 23,
+     "cook_min": 24,
+     "make_ahead": "Eat straight away for the best crunch",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "potato starch",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "pineapple",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the tofu dry, cut into bite size pieces and toss in the egg white, then the potato starch.",
+       "min": 10
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 15
+      },
+      {
+       "text": "Fry the tofu in the oil at 180C, rest it, then fry again until very crisp.",
+       "min": 8
+      },
+      {
+       "text": "Julienne the carrot, slice the capsicum and garlic and stir-fry with the pineapple in 1 tbsp of the oil.",
+       "min": 8
+      },
+      {
+       "text": "Mix the rice vinegar, sugar, tomato sauce, soy and cornflour with the water, add to the wok and bubble until glossy.",
+       "min": 4
+      },
+      {
+       "text": "Toss in the tofu and serve with the rice.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Banquet red bean sesame balls",
@@ -371,7 +504,9 @@
      "text": "Fry in oil at 160C, pressing gently against the side of the pot so they puff, until golden.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Nai Nai's iced jasmine lychee tea",
@@ -430,7 +565,9 @@
      "text": "Fill glasses with ice and a few lychees and pour over the tea.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

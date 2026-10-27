@@ -76,7 +76,9 @@
      "text": "Cool before serving.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Death Star meatballs",
@@ -145,7 +147,9 @@
      "text": "Add the meatballs and simmer through.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ronto wrap",
@@ -236,7 +240,114 @@
      "text": "Fill the pitas with sausage, pork, slaw and sauce and wrap tightly.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ronto wrap (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "cracked black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thick pita breads",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Grill the sausages until cooked through.",
+       "min": 12
+      },
+      {
+       "text": "Toss the cabbage and carrot with the mayo and plenty of the black pepper.",
+       "min": 8
+      },
+      {
+       "text": "Reduce the shallot, stock, cream and the rest of the cracked pepper into a sauce.",
+       "min": 12
+      },
+      {
+       "text": "Shred the mushrooms with a fork and fry in the oil with the paprika until crisp. Warm the pitas.",
+       "min": 8
+      },
+      {
+       "text": "Fill the pitas with sausage, mushrooms, slaw and sauce and wrap tightly.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Aunt Beru's blue milk pudding",
@@ -303,7 +414,9 @@
      "text": "Top with crushed shortbread.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Blue pineapple lime milk",
@@ -352,7 +465,9 @@
      "text": "Add a little honey if you like it sweeter and pour straight away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

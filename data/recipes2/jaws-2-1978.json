@@ -58,7 +58,9 @@
      "text": "Wrap tight in paper for the boat.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Amity Island fried clams",
@@ -127,7 +129,9 @@
      "text": "Serve with tartare and lemon wedges.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Cable Junction clambake",
@@ -190,7 +194,78 @@
      "text": "Tip it all onto the table.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cable Junction clambake (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 19,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "new potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "vegetarian sausages, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes for 10 minutes in a big pot. Meanwhile halve the mushrooms lengthwise and cut the haloumi into thick slices.",
+       "min": 10
+      },
+      {
+       "text": "Add the corn, vegetarian sausages, butter and a splash of water.",
+       "min": 5
+      },
+      {
+       "text": "Add the mushrooms, cover and steam for 8 minutes.",
+       "min": 8
+      },
+      {
+       "text": "Sear the haloumi in a dry pan until golden on both sides.",
+       "min": 4
+      },
+      {
+       "text": "Tip it all onto the table with the haloumi on top.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Blueberry cobbler",
@@ -255,7 +330,9 @@
      "text": "Bake at 190C for 40 minutes.",
      "min": 40
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Amity sailing day rum punch",
@@ -342,7 +419,97 @@
      "text": "For the younger crew, make a second jug without the rum and top it with soda water.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Amity sailing day rum punch (alcohol-free)",
+     "prep_min": 11,
+     "cook_min": 60,
+     "make_ahead": "Jug up to 4 hours ahead, add the soda water just before serving",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "grenadine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "whole nutmeg",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pineapple wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "maraschino cherries",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir the juices, grenadine and vanilla in a large jug.",
+       "min": 5
+      },
+      {
+       "text": "Chill for an hour.",
+       "min": 60
+      },
+      {
+       "text": "Top the jug with the soda water and stir once.",
+       "min": 1
+      },
+      {
+       "text": "Fill tall glasses with ice, pour in the punch and finish with grated nutmeg, a pineapple wedge and a cherry.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

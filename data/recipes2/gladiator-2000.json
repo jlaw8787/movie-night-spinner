@@ -64,7 +64,9 @@
      "text": "Serve with the olives and a bowl of oil and salt for dipping.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Figs with honey and walnuts",
@@ -117,7 +119,9 @@
      "text": "Drizzle with honey and scatter with walnuts and thyme leaves. Serve warm.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Colosseum lamb",
@@ -186,7 +190,98 @@
      "text": "Carve and serve with the chickpeas.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Colosseum roast eggplant",
+     "prep_min": 20,
+     "cook_min": 50,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, slivered",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sprigs rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "feta, crumbled",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the eggplants lengthways, score the flesh deeply and stud the cuts with garlic, rosemary and capers. Brush with the oil and season with salt.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 200C until soft and collapsing.",
+       "min": 40
+      },
+      {
+       "text": "Meanwhile simmer the chickpeas with the tomatoes, then stir through the spinach.",
+       "min": 15
+      },
+      {
+       "text": "Serve the eggplant on the chickpeas with the feta crumbled over.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Roman honey cakes",
@@ -249,7 +344,9 @@
      "text": "Pour over the warm honey and sprinkle with poppy seeds.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Are you not entertained spiced honey wine",
@@ -308,7 +405,91 @@
      "text": "Strain into cups and serve warm.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Are you not entertained spiced honey wine (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "black tea bag",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch saffron",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, peel in strips",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bag in the boiling water for 5 minutes and lift out.",
+       "min": 5
+      },
+      {
+       "text": "Pour the grape juice and tea into a pot with the honey, lemon juice, peppercorns, bay leaves, saffron and orange peel.",
+       "min": 5
+      },
+      {
+       "text": "Warm gently for 15 minutes without boiling.",
+       "min": 15
+      },
+      {
+       "text": "Strain into cups and serve warm.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

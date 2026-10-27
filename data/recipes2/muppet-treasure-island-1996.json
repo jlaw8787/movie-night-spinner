@@ -60,7 +60,9 @@
      "text": "Scatter with thyme leaves and serve on toothpicks.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hispaniola cheddar ship's biscuits",
@@ -135,7 +137,9 @@
      "text": "Serve with sliced apples and pickled onions.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Long John Silver's galley fish stew",
@@ -246,7 +250,124 @@
      "text": "Toast the sourdough, rub with garlic and serve alongside.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Long John Silver's galley stew (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "Stew up to 1 day, add the haloumi when reheating",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "crushed tomatoes (tin)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "white miso",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "haloumi, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sourdough loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onion, capsicum and potatoes and crush the garlic.",
+       "min": 10
+      },
+      {
+       "text": "Fry the onion, capsicum and garlic in oil.",
+       "min": 5
+      },
+      {
+       "text": "Add smoked paprika, crushed tomatoes, stock, miso and potatoes and simmer until the potato is nearly tender.",
+       "min": 17
+      },
+      {
+       "text": "Add the beans and haloumi and simmer until warmed through.",
+       "min": 5
+      },
+      {
+       "text": "Stir in parsley.",
+       "min": 3
+      },
+      {
+       "text": "Toast the sourdough, rub with garlic and serve alongside.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Treasure Island chocolate coin brownies",
@@ -343,7 +464,9 @@
      "text": "Cut into squares and top each with a gold chocolate coin and gold sprinkles.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Captain Smollett's ginger beer grog",
@@ -396,7 +519,9 @@
      "text": "Garnish with lime wedges and orange slices.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

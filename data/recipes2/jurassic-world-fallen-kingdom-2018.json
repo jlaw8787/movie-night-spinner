@@ -52,7 +52,9 @@
      "text": "Slice thickly, spear on toothpicks and serve with the onions and mustard.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Dino egg scotch eggs",
@@ -115,7 +117,9 @@
      "text": "Halve to serve.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Isla Nublar chilli lime chicken and beans",
@@ -220,7 +224,116 @@
      "text": "Mix the tomatoes, onion, coriander and a squeeze of lime for the salsa. Serve the chicken over rice and beans with the salsa.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Isla Nublar chilli lime haloumi and beans",
+     "prep_min": 30,
+     "cook_min": 25,
+     "make_ahead": "Marinate up to 4 hours, grill fresh",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, sliced thick",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes, 2 for the marinade and 1 for the salsa",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "tomatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "red onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped coriander",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Marinate the haloumi in the juice of 2 limes, the garlic, chilli and oil for 20 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Grill the haloumi over high heat until charred on both sides. Cook the rice at the same time.",
+       "min": 15
+      },
+      {
+       "text": "Warm the beans with the cumin, paprika and salt.",
+       "min": 5
+      },
+      {
+       "text": "Mix the tomatoes, onion, coriander and a squeeze of the last lime for the salsa. Serve the haloumi over rice and beans with the salsa.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Owen's campfire banana boats",
@@ -271,7 +384,9 @@
      "text": "Open the foil, scatter with crushed biscuits and eat with spoons.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Blue's butterfly pea lime fizz",
@@ -330,7 +445,9 @@
      "text": "Top each with lemonade. Serve with lime wedges and let everyone squeeze in the lime to watch the colour change.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

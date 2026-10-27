@@ -74,7 +74,9 @@
      "text": "Serve in the tortillas with onion, coriander and lime.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Farm corn fritters",
@@ -149,7 +151,9 @@
      "text": "Serve with sour cream.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Munson farm pork chops",
@@ -240,7 +244,102 @@
      "text": "Serve the chops with the sauce, mash and beans.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Munson farm cauliflower steaks",
+     "prep_min": 20,
+     "cook_min": 45,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers, cut into 4 thick steaks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "apple, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Season the cauliflower steaks, brown in the oil on each side, then roast at 200C until tender.",
+       "min": 20
+      },
+      {
+       "text": "Fry the onion and apple in the pan, add the stock and mustard and reduce.",
+       "min": 12
+      },
+      {
+       "text": "Boil the potatoes and mash with the butter.",
+       "min": 22
+      },
+      {
+       "text": "Steam the green beans.",
+       "min": 8
+      },
+      {
+       "text": "Serve the cauliflower steaks with the sauce, mash and beans.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Farmhouse peach pie",
@@ -307,7 +406,9 @@
      "text": "Serve with ice cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Logan's limo bourbon and maple sour",
@@ -376,7 +477,95 @@
      "text": "Add a tiny pinch of smoked salt on the foam and twist orange peel over the top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Logan's limo bourbon and maple sour (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "smoky black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "egg whites",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch of smoked salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, peel only",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the tea bags in the boiling water for 5 minutes, remove them and chill the tea.",
+       "min": 15
+      },
+      {
+       "text": "Dry shake 200ml of the tea, the vanilla, lemon juice, maple syrup and egg whites for a few seconds.",
+       "min": 3
+      },
+      {
+       "text": "Add ice and shake hard.",
+       "min": 3
+      },
+      {
+       "text": "Strain over a large ice cube in a heavy glass.",
+       "min": 2
+      },
+      {
+       "text": "Add a tiny pinch of smoked salt on the foam and twist orange peel over the top.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

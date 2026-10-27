@@ -58,7 +58,9 @@
      "text": "Mix the mayonnaise with lemon zest and juice. Spear the chicken on toothpicks and serve with the sauce.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Silence Dogood soft pretzels",
@@ -133,7 +135,9 @@
      "text": "Bake at 220C for 12 minutes. Brush with butter and serve with mustard.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "2:22 Independence Hall cheesesteaks",
@@ -190,7 +194,80 @@
      "text": "Lay the provolone over the top to melt and pile into split rolls.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "2:22 Independence Hall mushroom cheesesteaks",
+     "prep_min": 8,
+     "cook_min": 19,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "portobello mushrooms, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "provolone, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long bread rolls",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms as thin as you can.",
+       "min": 8
+      },
+      {
+       "text": "Fry the onions in 1 tbsp of the oil until soft, then push to the side.",
+       "min": 8
+      },
+      {
+       "text": "Add the rest of the oil and the mushrooms and cook fast on high heat until browned, then add the soy sauce, salt and pepper and toss with the onions.",
+       "min": 8
+      },
+      {
+       "text": "Lay the provolone over the top to melt and pile into split rolls.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Philly lemon water ice",
@@ -243,7 +320,9 @@
      "text": "Blitz briefly in a food processor just before serving, scoop into cups and top with raspberries.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Invisible ink lemon, ginger and mint fizz",
@@ -312,7 +391,9 @@
      "text": "Garnish with lemon wheels and mint sprigs.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

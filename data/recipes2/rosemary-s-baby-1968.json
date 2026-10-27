@@ -52,7 +52,9 @@
      "text": "Strain and pour into shot glasses. No tannis root",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bramford welcome canapés",
@@ -119,7 +121,77 @@
      "text": "Slice and toast the baguette and spread with pate and a little fig jam",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Bramford welcome canapés",
+     "prep_min": 25,
+     "cook_min": 250,
+     "make_ahead": "Pate sets 4 hours, keeps 2 days chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "chicken livers, trimmed",
+       "aisle": "Meat"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "fig jam",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Sear the livers in some butter until pink inside",
+       "min": 8
+      },
+      {
+       "text": "Pour in the apple juice and let it bubble away",
+       "min": 2
+      },
+      {
+       "text": "Blitz with the soft butter and thyme",
+       "min": 5
+      },
+      {
+       "text": "Set in a dish and chill",
+       "min": 240
+      },
+      {
+       "text": "Slice and toast the baguette and spread with pate and a little fig jam",
+       "min": 10
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Chicken club sandwich",
@@ -188,7 +260,92 @@
      "text": "Pin with toothpicks, cut into triangles and serve with potato chips",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Haloumi club sandwich",
+     "prep_min": 25,
+     "cook_min": 7,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "haloumi, thinly sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "swiss brown mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "slices sliced bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "iceberg lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag potato chips",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in the oil with the paprika until crisp, then fry the haloumi until golden.",
+       "min": 12
+      },
+      {
+       "text": "Toast the bread.",
+       "min": 5
+      },
+      {
+       "text": "Layer the haloumi, mushrooms, lettuce and tomato with mayo across three slices per sandwich.",
+       "min": 10
+      },
+      {
+       "text": "Pin with toothpicks, cut into triangles and serve with potato chips.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Minnie's chocolate mousse",
@@ -253,7 +410,9 @@
      "text": "Spoon into small cups and set. Unlike Minnie's, nothing chalky in it",
      "min": 240
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Tannis root tea",
@@ -306,7 +465,9 @@
      "text": "Strain, sweeten with honey and lemon juice and pour into four cups",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

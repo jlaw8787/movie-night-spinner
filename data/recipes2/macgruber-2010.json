@@ -74,7 +74,9 @@
      "text": "Serve in a bowl next to the sliced jerky.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Emergency celery with blue cheese dip",
@@ -155,7 +157,9 @@
      "text": "Spoon the dip into a bowl, drizzle with hot sauce and serve with the drained sticks.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Action hero rib eye with onion rings",
@@ -246,7 +250,118 @@
      "text": "Rest the steaks, top with the garlic butter and serve with the onion rings and rocket.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Action hero eggplant steak with onion rings",
+     "prep_min": 25,
+     "cook_min": 12,
+     "make_ahead": "Garlic butter up to 3 days ahead",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, soft",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mash the butter with the garlic and parsley.",
+       "min": 3
+      },
+      {
+       "text": "Cut each eggplant lengthways into 2 thick steaks, score the flesh, brush with the olive oil and season with the salt.",
+       "min": 5
+      },
+      {
+       "text": "Grill the eggplant over high heat until charred outside and soft right through.",
+       "min": 15
+      },
+      {
+       "text": "Whisk the flour, baking powder and soda water into a batter.",
+       "min": 3
+      },
+      {
+       "text": "Slice the onions into thick rings, dip in batter and fry in the vegetable oil at 180C until golden. Drain.",
+       "min": 8
+      },
+      {
+       "text": "Top the eggplant steaks with the garlic butter and serve with the onion rings and rocket.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "X-5 warhead countdown chocolate pots",
@@ -315,7 +430,9 @@
      "text": "Whip the remaining cream and top each pot with cream, sea salt and crushed honeycomb.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Vicki St. Elmo's debrief michelada",
@@ -386,7 +503,81 @@
      "text": "Top each with a bottle of cold lager, stir gently and serve with a lime wedge.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Vicki St. Elmo's debrief michelada (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sea salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle Worcestershire sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles cold alcohol-free lager (330ml each)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt and chilli powder on a saucer. Rub a lime wedge around each glass rim and dip into the salt.",
+       "min": 3
+      },
+      {
+       "text": "Fill the glasses with ice. Add lime juice, tomato juice, a couple of dashes of hot sauce and a dash of Worcestershire to each.",
+       "min": 4
+      },
+      {
+       "text": "Top each with a bottle of cold alcohol-free lager, stir gently and serve with a lime wedge.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

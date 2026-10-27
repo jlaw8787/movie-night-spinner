@@ -70,7 +70,9 @@
      "text": "Stand the sticks in a glass on ice and serve with the dip.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Day spa cucumber bites",
@@ -127,7 +129,9 @@
      "text": "Chill until serving.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mugatu's vodka pasta",
@@ -212,7 +216,95 @@
      "text": "Toss the pasta through the sauce with the parmesan and basil.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Mugatu's vodka pasta",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "rigatoni",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "parmesan",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch basil",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the rigatoni 2 minutes short of done, keeping a cup of the cooking water.",
+       "min": 12
+      },
+      {
+       "text": "Saute the garlic and chilli in the butter.",
+       "min": 3
+      },
+      {
+       "text": "Fry the tomato paste until brick red.",
+       "min": 5
+      },
+      {
+       "text": "Add the lemon juice and a splash of the pasta water, then the cream.",
+       "min": 3
+      },
+      {
+       "text": "Toss the pasta through the sauce with the parmesan and basil.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Centre for ants cake",
@@ -275,7 +367,9 @@
      "text": "Beat the remaining butter with the icing sugar and cover both cakes.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Orange mocha iced coffee",
@@ -332,7 +426,9 @@
      "text": "Strain over more ice in four tall glasses.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

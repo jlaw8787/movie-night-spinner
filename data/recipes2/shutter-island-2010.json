@@ -56,7 +56,9 @@
      "text": "Bake at 200C",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ashecliffe baked beans on toast",
@@ -129,7 +131,9 @@
      "text": "Spoon the beans over the toast",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chuck and Teddy's storm chowder",
@@ -210,7 +214,338 @@
      "text": "Stir in the cream, clams and thyme",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Chuck and Teddy's storm chowder",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "clams",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "fish stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "bacon, diced",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "potatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steam the clams open in the fish stock, then strain the liquid.",
+       "min": 10
+      },
+      {
+       "text": "Render the bacon, then add the onion, celery and potato.",
+       "min": 10
+      },
+      {
+       "text": "Add the clam liquid and milk and simmer.",
+       "min": 15
+      },
+      {
+       "text": "Stir in the cream, clams and thyme.",
+       "min": 5
+      }
+     ]
+    },
+    "veg": {
+     "n": "Chuck and Teddy's storm chowder (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 26,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "swiss brown mushrooms, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "oyster mushrooms, torn",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "potatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet nori, crumbled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "frozen corn kernels",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the swiss brown mushrooms in the oil with the paprika until dark and crisp, then set aside.",
+       "min": 10
+      },
+      {
+       "text": "Fry the oyster mushrooms in the butter until golden, add the wine, reduce by half and tip into a bowl.",
+       "min": 6
+      },
+      {
+       "text": "Soften the onion, celery and potato in the same pot.",
+       "min": 10
+      },
+      {
+       "text": "Add the stock, nori and milk and simmer until the potato is tender.",
+       "min": 15
+      },
+      {
+       "text": "Stir in the cream, corn, oyster mushrooms and thyme and heat through. Serve topped with the crisp mushrooms.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Chuck and Teddy's storm chowder (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 26,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "swiss brown mushrooms, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "oyster mushrooms, torn",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "vegetable stock, extra",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "potatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet nori, crumbled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "frozen corn kernels",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the swiss brown mushrooms in the oil with the paprika until dark and crisp, then set aside.",
+       "min": 10
+      },
+      {
+       "text": "Fry the oyster mushrooms in the butter until golden, add the extra stock and lemon juice, reduce by half and tip into a bowl.",
+       "min": 6
+      },
+      {
+       "text": "Soften the onion, celery and potato in the same pot.",
+       "min": 10
+      },
+      {
+       "text": "Add the stock, nori and milk and simmer until the potato is tender.",
+       "min": 15
+      },
+      {
+       "text": "Stir in the cream, corn, oyster mushrooms and thyme and heat through. Serve topped with the crisp mushrooms.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Law of 4 Boston cream pie",
@@ -287,7 +622,9 @@
      "text": "Melt the chocolate with the cream and pour over",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dr Cawley's brandy Alexander",
@@ -344,7 +681,83 @@
      "text": "Strain into the coupes and grate nutmeg over the top. Serve a strong coffee alongside for anyone who would rather not",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Dr Cawley's brandy Alexander (alcohol-free)",
+     "prep_min": 7,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "chocolate syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 160,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "nutmeg, freshly grated",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+       "min": 10
+      },
+      {
+       "text": "Chill four coupe glasses.",
+       "min": 2
+      },
+      {
+       "text": "For each drink, measure 30ml cold tea, 15ml chocolate syrup, 40ml thickened cream and a drop of vanilla extract into a shaker.",
+       "min": 2
+      },
+      {
+       "text": "Shake each drink with ice for 15 seconds.",
+       "min": 2
+      },
+      {
+       "text": "Strain into the coupes and grate nutmeg over the top.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

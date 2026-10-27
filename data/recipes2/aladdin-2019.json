@@ -52,7 +52,9 @@
      "text": "Tear into pieces and serve with hummus and labneh drizzled with more oil.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Almond butter stuffed dates",
@@ -107,7 +109,9 @@
      "text": "Set in the fridge.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Prince Ali's parade lamb",
@@ -196,7 +200,112 @@
      "text": "Pile the lamb over the rice and scatter with almonds.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Prince Ali's parade roast cauliflower",
+     "prep_min": 20,
+     "cook_min": 80,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "whole cauliflowers, leaves trimmed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cinnamon",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "basmati rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "pinch of saffron",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "almonds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the whole cauliflowers in salted water for 8 minutes, then drain well.",
+       "min": 15
+      },
+      {
+       "text": "Mix the garlic, cumin, cinnamon, salt and oil and rub all over the cauliflowers.",
+       "min": 5
+      },
+      {
+       "text": "Sit them in a deep dish with the stock and roast at 200C, basting twice, until charred and tender to a knife.",
+       "min": 55
+      },
+      {
+       "text": "Toast the almonds in a dry pan.",
+       "min": 5
+      },
+      {
+       "text": "Cook the basmati with the saffron.",
+       "min": 15
+      },
+      {
+       "text": "Cut the cauliflowers into thick wedges, pile over the rice with the pan juices, scatter with almonds and serve with the yoghurt.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Magic carpet baklava",
@@ -273,7 +382,9 @@
      "text": "Leave to soak.",
      "min": 180
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Genie's blue mint iced tea",
@@ -340,7 +451,9 @@
      "text": "Pour in the blue tea and serve with lemon wedges to squeeze in and change the colour.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

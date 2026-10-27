@@ -84,7 +84,9 @@
      "text": "Serve with lemon.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Sailing trip prawn rolls",
@@ -149,7 +151,9 @@
      "text": "Pile the prawns in.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Tarragon cream chicken with potato gratin",
@@ -228,7 +232,294 @@
      "text": "Serve together.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Tarragon cream chicken with potato gratin",
+     "prep_min": 30,
+     "cook_min": 85,
+     "make_ahead": "Gratin can be made 1 day ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 450,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "chicken breasts",
+       "aisle": "Meat"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the potatoes thin, layer with part of the cream and the garlic and bake at 160C.",
+       "min": 75
+      },
+      {
+       "text": "Pan-roast the chicken breasts until cooked through.",
+       "min": 20
+      },
+      {
+       "text": "Add the stock, lemon juice, Dijon and tarragon to the pan, then the remaining cream, and simmer.",
+       "min": 10
+      },
+      {
+       "text": "Steam the beans.",
+       "min": 7
+      },
+      {
+       "text": "Serve together.",
+       "min": 3
+      }
+     ]
+    },
+    "veg": {
+     "n": "Tarragon cream mushrooms with potato gratin",
+     "prep_min": 30,
+     "cook_min": 78,
+     "make_ahead": "Gratin can be made 1 day ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 450,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 700,
+       "u": "g",
+       "item": "mixed mushrooms, king oyster and swiss brown, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the potatoes thin, layer with 300ml of the cream, the crushed garlic and the salt and bake at 160C.",
+       "min": 75
+      },
+      {
+       "text": "Pan-roast the mushrooms in the butter and oil in batches until deep golden.",
+       "min": 15
+      },
+      {
+       "text": "Add the wine to the pan and bubble for 2 minutes, then the Dijon, chopped tarragon and remaining cream, and simmer.",
+       "min": 8
+      },
+      {
+       "text": "Steam the beans.",
+       "min": 7
+      },
+      {
+       "text": "Serve together.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Tarragon cream mushrooms with potato gratin",
+     "prep_min": 30,
+     "cook_min": 78,
+     "make_ahead": "Gratin can be made 1 day ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 450,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 700,
+       "u": "g",
+       "item": "mixed mushrooms, king oyster and swiss brown, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 130,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the potatoes thin, layer with 300ml of the cream, the crushed garlic and the salt and bake at 160C.",
+       "min": 75
+      },
+      {
+       "text": "Pan-roast the mushrooms in the butter and oil in batches until deep golden.",
+       "min": 15
+      },
+      {
+       "text": "Add the stock and verjuice to the pan and bubble for 2 minutes, then the Dijon, chopped tarragon and remaining cream, and simmer.",
+       "min": 8
+      },
+      {
+       "text": "Steam the beans.",
+       "min": 7
+      },
+      {
+       "text": "Serve together.",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Rule 76 wedding cake",
@@ -289,7 +580,9 @@
      "text": "Layer with raspberry jam and buttercream and cut into fingers.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Reception French 75",
@@ -340,7 +633,67 @@
      "text": "Add a long twist of lemon peel and raise them high while someone gives a speech.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Reception French 75 (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 180,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill the alcohol-free sparkling wine for three hours.",
+       "min": 180
+      },
+      {
+       "text": "Shake the non-alcoholic gin, lemon juice and sugar syrup with ice, one drink at a time.",
+       "min": 5
+      },
+      {
+       "text": "Strain into flutes and top slowly with the sparkling wine.",
+       "min": 3
+      },
+      {
+       "text": "Add a long twist of lemon peel and raise them high while someone gives a speech.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

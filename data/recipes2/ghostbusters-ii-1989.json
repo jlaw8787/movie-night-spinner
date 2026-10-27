@@ -64,7 +64,9 @@
      "text": "Blitz the beetroot with the feta, yoghurt, garlic, lemon juice and a little dill until bright pink and smooth. Warm the flatbreads, cut into wedges and serve for scooping.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dancing toaster crumpets",
@@ -111,7 +113,9 @@
      "text": "Spread with the honey butter while hot so it runs into the holes, then cut into quarters.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Vigo's goulash",
@@ -202,7 +206,114 @@
      "text": "Boil the noodles and serve the goulash over them with the sour cream.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Vigo's goulash (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 70,
+     "make_ahead": "Up to 2 days, keep chilled and reheat",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch hot paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "caraway seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "egg noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "oil, for browning",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in batches in a hot pan with oil.",
+       "min": 12
+      },
+      {
+       "text": "Cook the onions slowly in the same pot until soft.",
+       "min": 20
+      },
+      {
+       "text": "Stir in the sweet paprika, hot paprika and caraway, then add the tomatoes, stock, potatoes, capsicum and mushrooms.",
+       "min": 5
+      },
+      {
+       "text": "Cover and simmer gently until the potatoes are very tender and the sauce is thick.",
+       "min": 50
+      },
+      {
+       "text": "Boil the noodles and serve the goulash over them with the sour cream.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pink lemonade jelly",
@@ -251,7 +362,9 @@
      "text": "Dip the mould in hot water, turn out and put on something upbeat.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pink lemonade with sherbet",
@@ -282,7 +395,9 @@
      "text": "Pour chilled pink lemonade slowly over the top so it fizzes up pink. Serve with a spoon and a straw.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -84,7 +84,9 @@
      "text": "Serve with lemon and tartare.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Record shop deviled eggs",
@@ -147,7 +149,9 @@
      "text": "Dust with paprika and finish with chives.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Baltimore pit beef sandwiches",
@@ -222,7 +226,92 @@
      "text": "Pile onto rolls with raw onion and horseradish sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Baltimore pit mushroom sandwiches",
+     "prep_min": 20,
+     "cook_min": 11,
+     "make_ahead": "Spice rub up to 1 week ahead",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "garlic powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bread rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "horseradish sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brush the mushrooms with the oil and rub with the salt, pepper, garlic powder and paprika.",
+       "min": 8
+      },
+      {
+       "text": "Grill over high heat, pressing down and turning, until charred outside and tender inside.",
+       "min": 12
+      },
+      {
+       "text": "Rest for 3 minutes, then slice as thin as you can.",
+       "min": 6
+      },
+      {
+       "text": "Pile onto the rolls with raw onion and horseradish sauce.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Beehive cupcakes",
@@ -307,7 +396,9 @@
      "text": "Pipe tall beehive swirls on top and finish with sprinkles.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Har-De-Har Hut black and white malts",
@@ -370,7 +461,9 @@
      "text": "Finish with whipped cream and a cherry.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

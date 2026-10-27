@@ -60,7 +60,9 @@
      "text": "Serve on toothpicks with a small bowl of horseradish.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ozarks cornbread",
@@ -129,7 +131,9 @@
      "text": "Serve with warm wedges.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Diner steak and eggs",
@@ -200,7 +204,84 @@
      "text": "Serve each steak with two eggs, hash browns and buttered toast.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Diner portobello steak and eggs",
+     "prep_min": 25,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Grate the potatoes and squeeze dry.",
+       "min": 8
+      },
+      {
+       "text": "Fry as hash brown cakes in half the butter until crisp.",
+       "min": 10
+      },
+      {
+       "text": "Season the portobellos with cracked pepper and sear in the oil until browned and tender.",
+       "min": 10
+      },
+      {
+       "text": "Fry the eggs in the rest of the butter and toast the bread.",
+       "min": 6
+      },
+      {
+       "text": "Serve two mushrooms each with two eggs, hash browns and buttered toast.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Lemon meringue pie",
@@ -271,7 +352,9 @@
      "text": "Cool before slicing.",
      "min": 60
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Diner coffee float with vanilla ice cream",
@@ -332,7 +415,9 @@
      "text": "Top with whipped cream and a dusting of cocoa.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -74,7 +74,9 @@
      "text": "Stand the grissini in a tall glass and serve with the olives and cheese.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Rusty's diner gravy fries",
@@ -143,7 +145,9 @@
      "text": "Strain into a jug. Serve the chips in a big basket with the gravy for pouring.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ransom night meat lovers pizza",
@@ -224,7 +228,96 @@
      "text": "Bake at 240C until the crust is golden and the meat is crisp.",
      "min": 13
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ransom night veggie lovers pizza",
+     "prep_min": 25,
+     "cook_min": 13,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "smoked tofu, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stretch the dough into two rounds on trays oiled with half the oil.",
+       "min": 10
+      },
+      {
+       "text": "Fry the mushrooms in the rest of the oil with the smoked paprika until browned.",
+       "min": 5
+      },
+      {
+       "text": "Mix the pizza sauce with the barbecue sauce and spread over the bases. Scatter with mozzarella.",
+       "min": 5
+      },
+      {
+       "text": "Top with the mushrooms, smoked tofu and vegetarian sausages cut into small pieces.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 240C until the crust is golden and the toppings are crisp.",
+       "min": 13
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Miss Crock's cookies",
@@ -277,7 +370,9 @@
      "text": "Bake at 180C until golden at the edges.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Crock cookie milkshake",
@@ -328,7 +423,9 @@
      "text": "Sit a whole cookie on the rim of each glass.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

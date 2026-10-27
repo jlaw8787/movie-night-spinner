@@ -88,7 +88,9 @@
      "text": "Brew a pot of black tea for 4 minutes and serve alongside with milk.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Salami, cheddar and pickle toasties",
@@ -151,7 +153,9 @@
      "text": "Cut into fingers and serve with hot English mustard.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Detroit-style pizza",
@@ -224,7 +228,84 @@
      "text": "Stripe the tomato sauce on top.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Detroit-style pizza (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 57,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil, for the tin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mozzarella, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plant-based pepperoni",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Press the dough into an oiled rectangular tin and prove for 30 minutes.",
+       "min": 35
+      },
+      {
+       "text": "Simmer the tomatoes with the garlic into a sauce.",
+       "min": 15
+      },
+      {
+       "text": "Cover the dough right to the edges with the cheeses and plant-based pepperoni.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 250C for 15 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Stripe the tomato sauce on top.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sticky date pudding",
@@ -299,7 +380,9 @@
      "text": "Simmer the rest of the butter, sugar and the cream into a sauce and pour over.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Barbary Street red wine sangria",
@@ -370,7 +453,81 @@
      "text": "Just before serving, add plenty of ice and top with lemonade. Pour into glasses with some of the fruit in each.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Barbary Street red wine sangria (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 120,
+     "make_ahead": "Chill up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "strong black tea, cooled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "apple, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "lemonade",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Combine the grape juice, cold tea, sugar, orange, apple and cinnamon in a large jug. Stir to dissolve the sugar.",
+       "min": 8
+      },
+      {
+       "text": "Chill for at least 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Just before serving, add plenty of ice and top with lemonade. Pour into glasses with some of the fruit in each.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

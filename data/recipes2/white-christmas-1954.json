@@ -68,7 +68,9 @@
      "text": "Pour the buttermilk into small glasses and serve together.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Columbia Inn cheese puffs",
@@ -119,7 +121,9 @@
      "text": "Bake at 200C until puffed and golden.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Vermont inn roast turkey",
@@ -204,7 +208,96 @@
      "text": "Rest the turkey and serve with stuffing, cranberry sauce and potatoes.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Vermont inn roast celeriac",
+     "prep_min": 30,
+     "cook_min": 93,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large celeriac, about 1.2kg",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "mixed dried herbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch sage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar cranberry sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Scrub the celeriac, trim the root and rub with 20g of the butter, softened, and the herbs.",
+       "min": 8
+      },
+      {
+       "text": "Wrap loosely in foil and roast at 180C, then unwrap for the last 20 minutes until golden and tender to a skewer.",
+       "min": 90
+      },
+      {
+       "text": "Mix the breadcrumbs with the onion, chopped sage and the remaining butter, melted, and bake the stuffing alongside for the last 25 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Toss the potatoes in the oil and roast on another tray.",
+       "min": 5
+      },
+      {
+       "text": "Rest the celeriac for 10 minutes, cut into wedges and serve with the stuffing, cranberry sauce and potatoes.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Snowy coconut cake",
@@ -283,7 +376,9 @@
      "text": "Roll the sides in the rest of the coconut.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Eggnog by the fire",
@@ -356,7 +451,83 @@
      "text": "Serve with grated nutmeg and brandy on the side.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Eggnog by the fire",
+     "prep_min": 15,
+     "cook_min": 123,
+     "make_ahead": "Up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs (yolks only)",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "whole nutmeg",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the yolks with the sugar.",
+       "min": 3
+      },
+      {
+       "text": "Heat the milk, cream, cinnamon stick and vanilla until steaming, whisk into the yolks and return to the pan.",
+       "min": 7
+      },
+      {
+       "text": "Stir over low heat until it coats a spoon.",
+       "min": 5
+      },
+      {
+       "text": "Chill.",
+       "min": 120
+      },
+      {
+       "text": "Serve with grated nutmeg.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

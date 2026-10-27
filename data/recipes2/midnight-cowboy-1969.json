@@ -52,7 +52,9 @@
      "text": "Cut off the crusts, cut into quarters and wrap in wax paper.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Cinnamon doughnut holes, coffee custard",
@@ -139,7 +141,9 @@
      "text": "Warm the custard with the coffee dissolved in a little hot water and serve for dipping.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Florida coconut prawns",
@@ -210,7 +214,82 @@
      "text": "Fry in oil at 180C in batches until golden. Serve with sweet chilli sauce and lime wedges.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Florida coconut cauliflower",
+     "prep_min": 20,
+     "cook_min": 12,
+     "make_ahead": "Crumb up to 2 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "shredded coconut",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "sweet chilli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cauliflower into bite-sized florets, steam for 3 minutes and dry well.",
+       "min": 10
+      },
+      {
+       "text": "Dust in flour, dip in beaten egg, then press into the panko mixed with coconut.",
+       "min": 10
+      },
+      {
+       "text": "Fry in oil at 180C in batches until golden. Serve with sweet chilli sauce and lime wedges.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Florida orange cake",
@@ -267,7 +346,9 @@
      "text": "Bake at 180C until set and golden. Cool in the tin.",
      "min": 60
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ratso's Florida coconut pineapple cooler",
@@ -328,7 +409,65 @@
      "text": "Shake the coconut water, pineapple juice, lime juice and coconut cream with ice until frothy. Strain into 4 ice-filled glasses, add rum on the side if you like, and garnish with pineapple and a lime wheel.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Ratso's Florida coconut pineapple cooler",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Mix a jug without ice up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "coconut water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "coconut cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small pineapple",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Juice the limes and cut a pineapple wedge for each glass.",
+       "min": 5
+      },
+      {
+       "text": "Shake the coconut water, pineapple juice, lime juice and coconut cream with ice until frothy. Strain into 4 ice-filled glasses and garnish with pineapple and a lime wheel.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

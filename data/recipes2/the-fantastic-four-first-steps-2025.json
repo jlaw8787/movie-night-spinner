@@ -58,7 +58,9 @@
      "text": "Thread cheddar and pineapple onto toothpicks and stick them into the grapefruit, cut side down.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Silver Surfer foil potatoes",
@@ -117,7 +119,9 @@
      "text": "Open at the table and add a spoon of sour cream.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Retro roast chicken with glazed carrots",
@@ -202,7 +206,102 @@
      "text": "Serve everything on one big platter like a sixties advertisement.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Retro roast cauliflower with glazed carrots",
+     "prep_min": 25,
+     "cook_min": 65,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large whole cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "carrots, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter for mash",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the whole cauliflower for 8 minutes, drain well and let it steam dry.",
+       "min": 12
+      },
+      {
+       "text": "Rub most of the softened butter with lemon zest and juice, thyme and salt over the cauliflower and roast at 200C until golden, basting once.",
+       "min": 50
+      },
+      {
+       "text": "Glaze the carrots in the rest of the softened butter and the sugar.",
+       "min": 10
+      },
+      {
+       "text": "Boil and mash the potatoes with the butter for mash and cook the peas.",
+       "min": 15
+      },
+      {
+       "text": "Serve everything on one big platter like a sixties advertisement.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Galactus-sized jelly mould",
@@ -257,7 +356,9 @@
      "text": "Turn out and serve with whipped cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Space race orange cream shake",
@@ -312,7 +413,9 @@
      "text": "Pour into tall glasses and top with whipped cream and an orange slice.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -46,7 +46,9 @@
      "text": "Divide between four people for the motel snack break",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Shower curtain ring onion rings",
@@ -113,7 +115,77 @@
      "text": "Drain and serve hot",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Shower curtain ring onion rings",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "neutral oil, for frying",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the onions into thick rings and soak in the buttermilk",
+       "min": 30
+      },
+      {
+       "text": "Whisk the flour, alcohol-free lager and salt into a batter",
+       "min": 5
+      },
+      {
+       "text": "Heat the oil to 185C",
+       "min": 10
+      },
+      {
+       "text": "Drain the rings, dip in the batter and fry in small batches until puffed and golden",
+       "min": 10
+      },
+      {
+       "text": "Drain and serve hot",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Thanksgiving turkey sliders",
@@ -202,7 +274,98 @@
      "text": "Fill the buns with turkey, cranberry sauce, stuffing squares and a spoonful of gravy",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Thanksgiving pumpkin and stuffing sliders",
+     "prep_min": 20,
+     "cook_min": 55,
+     "make_ahead": "Pumpkin and stuffing up to 1 day ahead, reheat to serve",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "butternut pumpkin, peeled and cut into 1cm rounds",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried sage",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "stuffing mix",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "soft slider buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "cranberry sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the pumpkin with the oil, salt and sage and roast at 200C until golden and tender.",
+       "min": 30
+      },
+      {
+       "text": "Make the stuffing mix with the packet water amount, spread in a small dish and bake beside the pumpkin, then cut into squares.",
+       "min": 25
+      },
+      {
+       "text": "Melt the butter, stir in the flour for a minute, whisk in the stock and simmer for gravy.",
+       "min": 10
+      },
+      {
+       "text": "Fill the buns with pumpkin, cranberry sauce, stuffing squares and a spoonful of gravy.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Thanksgiving pumpkin pie",
@@ -281,7 +444,9 @@
      "text": "Cool, whip the remaining cream softly and serve",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Home for Thanksgiving apple cider punch",
@@ -344,7 +509,79 @@
      "text": "Add bourbon to each adult mug and serve with a fresh cinnamon stick",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Home for Thanksgiving apple cider punch",
+     "prep_min": 10,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "cinnamon sticks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Put the apple juice, two cinnamon sticks, cloves, orange and sugar in a saucepan",
+       "min": 3
+      },
+      {
+       "text": "Simmer gently for 15 minutes without boiling",
+       "min": 15
+      },
+      {
+       "text": "Take off the heat and stir in the vanilla and lemon juice",
+       "min": 1
+      },
+      {
+       "text": "Strain into a jug, pour into four mugs and serve with a fresh cinnamon stick",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

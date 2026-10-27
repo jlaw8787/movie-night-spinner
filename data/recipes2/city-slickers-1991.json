@@ -94,7 +94,9 @@
      "text": "Fill the buns with brisket and slaw.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "New York bagel bites",
@@ -153,7 +155,9 @@
      "text": "Top with smoked salmon, capers, thin red onion and dill.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chuckwagon chilli",
@@ -226,7 +230,108 @@
      "text": "Bake the cornbread in a skillet and serve with the chilli.",
      "min": 30
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chuckwagon mushroom and bean chilli",
+     "prep_min": 20,
+     "cook_min": 82,
+     "make_ahead": "Better the next day, keep chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mushrooms, roughly chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "dried chillies",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can kidney beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet cornbread mix",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the dried chillies in hot water and blitz.",
+       "min": 10
+      },
+      {
+       "text": "Brown the mushrooms in the oil until dark and dry.",
+       "min": 12
+      },
+      {
+       "text": "Add the chillies, cumin, garlic, tomatoes, both beans, soy sauce and water.",
+       "min": 5
+      },
+      {
+       "text": "Simmer gently for 45 minutes until thick.",
+       "min": 45
+      },
+      {
+       "text": "Bake the cornbread in a skillet and serve with the chilli.",
+       "min": 30
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Norman's campfire s'mores",
@@ -263,7 +368,9 @@
      "text": "Sandwich each with a square of milk chocolate between 2 biscuits and press so it melts.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chuckwagon coffee with cinnamon cream",
@@ -336,7 +443,9 @@
      "text": "Top each with a spoon of the cream.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -60,7 +60,9 @@
      "text": "Bake at 200C until golden.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Choir practice cheese scones",
@@ -127,7 +129,9 @@
      "text": "Serve warm with butter.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mary Clarence's convent stew, spiced up",
@@ -222,7 +226,114 @@
      "text": "Add the potatoes and carrots and braise until tender.",
      "min": 60
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mary Clarence's convent stew, spiced up (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 55,
+     "make_ahead": "Better the next day, keep chilled",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches.",
+       "min": 10
+      },
+      {
+       "text": "Add the onions, garlic, paprika and thyme and cook until soft.",
+       "min": 10
+      },
+      {
+       "text": "Chop the potatoes and carrots.",
+       "min": 10
+      },
+      {
+       "text": "Add the stock, tomatoes, hot sauce, potatoes and carrots, cover and simmer until tender.",
+       "min": 40
+      },
+      {
+       "text": "Stir in the butter beans and simmer uncovered until thick.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "St Katherine's bread and butter pudding",
@@ -307,7 +418,9 @@
      "text": "Bake at 170C until puffed and golden.",
      "min": 40
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Choir practice honey ginger lemon tea",
@@ -374,7 +487,9 @@
      "text": "Pour into white cups and float a thin lemon slice in each.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

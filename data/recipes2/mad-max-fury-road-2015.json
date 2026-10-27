@@ -74,7 +74,9 @@
      "text": "Bake at 160C for 1 hour, until crisp. Break into shards.",
      "min": 60
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wasteland lizard skewers",
@@ -139,7 +141,9 @@
      "text": "Mix the yoghurt with the garlic and salt for a dip.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Harissa lamb shoulder with hummus",
@@ -224,7 +228,102 @@
      "text": "Blister the flatbreads in a hot pan and serve everything together.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Harissa eggplant with hummus",
+     "prep_min": 30,
+     "cook_min": 70,
+     "make_ahead": "Hummus up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "harissa",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tahini",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red capsicums",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "flatbreads",
+       "aisle": "Bakery"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the eggplants deeply and rub with the harissa, crushed garlic, cumin and oil.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 200C, covered for 30 minutes then uncovered for 30 minutes, until collapsing and soft.",
+       "min": 60
+      },
+      {
+       "text": "Blitz the chickpeas with the tahini, a splash of water and salt into hummus.",
+       "min": 8
+      },
+      {
+       "text": "Char the capsicums over a flame, peel and slice.",
+       "min": 10
+      },
+      {
+       "text": "Blister the flatbreads in a hot pan, pull the eggplant apart and serve everything together.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Desert date bars",
@@ -287,7 +386,9 @@
      "text": "Chill until set, then cut into bars.",
      "min": 60
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Aqua Cola cucumber lime cooler",
@@ -346,7 +447,9 @@
      "text": "Stir and pour freely for everyone.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

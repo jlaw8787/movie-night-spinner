@@ -74,7 +74,9 @@
      "text": "Sprinkle with salt mixed with chilli.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mosasaur ocean prawns",
@@ -131,7 +133,9 @@
      "text": "Pile onto a platter with lime wedges and pour over the pan butter.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "ParkerGenix expedition grilled fish",
@@ -204,7 +208,90 @@
      "text": "Serve the fish in its leaf on the rice.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "ParkerGenix expedition grilled tofu",
+     "prep_min": 17,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red chillies",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "banana leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the banana leaves in hot water. Cut the tofu into 4 slabs and rub with lime juice, chopped chilli, soy sauce and salt.",
+       "min": 10
+      },
+      {
+       "text": "Wrap each slab in a leaf.",
+       "min": 5
+      },
+      {
+       "text": "Cook the rice in the coconut milk with a pinch of salt and a splash of water.",
+       "min": 18
+      },
+      {
+       "text": "Grill the parcels.",
+       "min": 12
+      },
+      {
+       "text": "Serve the tofu in its leaf on the rice.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Quetzalcoatlus nest egg mousse",
@@ -265,7 +352,9 @@
      "text": "Top with crushed biscuits and a speckled egg.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jungle coconut cooler",
@@ -318,7 +407,9 @@
      "text": "Squeeze in a wedge of lime, stir and serve cold.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

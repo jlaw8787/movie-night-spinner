@@ -68,7 +68,9 @@
      "text": "Cut in half and serve on a board.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Elaine's crostini",
@@ -153,7 +155,9 @@
      "text": "Pile the mushrooms on the other 10 with parmesan.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chinese takeaway in bed",
@@ -256,7 +260,332 @@
      "text": "Add the peanuts and spring onions and serve with rice.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Chinese takeaway in bed",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 700,
+       "u": "g",
+       "item": "chicken thigh, diced",
+       "aisle": "Meat"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 10,
+       "u": "",
+       "item": "dried chillies",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Sichuan pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "black vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "roasted peanuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Marinate the chicken in some of the soy and the cornflour.",
+       "min": 10
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 15
+      },
+      {
+       "text": "Fry the chillies and Sichuan pepper in hot oil, then add the chicken and stir-fry.",
+       "min": 8
+      },
+      {
+       "text": "Add the vinegar, remaining soy, sugar and Shaoxing and toss until glossy.",
+       "min": 3
+      },
+      {
+       "text": "Add the peanuts and spring onions and serve with rice.",
+       "min": 4
+      }
+     ]
+    },
+    "veg": {
+     "n": "Chinese takeaway in bed (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 22,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu, pressed and cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 10,
+       "u": "",
+       "item": "dried chillies",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Sichuan pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "black vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Shaoxing wine",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "roasted peanuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the tofu in 1 tbsp of the soy sauce, then the cornflour.",
+       "min": 8
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 15
+      },
+      {
+       "text": "Fry the tofu in 3 tbsp of the oil until crisp and set aside.",
+       "min": 10
+      },
+      {
+       "text": "Fry the chillies and Sichuan pepper in the remaining oil, then return the tofu and toss.",
+       "min": 3
+      },
+      {
+       "text": "Add the vinegar, remaining soy, sugar and Shaoxing and toss until glossy.",
+       "min": 3
+      },
+      {
+       "text": "Add the peanuts and spring onions and serve with the rice.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Chinese takeaway in bed (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 22,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu, pressed and cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 10,
+       "u": "",
+       "item": "dried chillies",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Sichuan pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "black vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "roasted peanuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the tofu in 1 tbsp of the soy sauce, then the cornflour.",
+       "min": 8
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 15
+      },
+      {
+       "text": "Fry the tofu in 3 tbsp of the oil until crisp and set aside.",
+       "min": 10
+      },
+      {
+       "text": "Fry the chillies and Sichuan pepper in the remaining oil, then return the tofu and toss.",
+       "min": 3
+      },
+      {
+       "text": "Add the vinegar, remaining soy, sugar, stock and rice vinegar and toss until glossy.",
+       "min": 3
+      },
+      {
+       "text": "Add the peanuts and spring onions and serve with the rice.",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Worth-living-for cheesecake",
@@ -335,7 +664,9 @@
      "text": "Chill overnight.",
      "min": 1300
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Manhattan cocktail",
@@ -388,7 +719,97 @@
      "text": "Strain into the coupes and drop in a cherry.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Manhattan cocktail (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "whole cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail cherries",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags and cloves in the boiling water for 5 minutes, lift them out and stir in the maple syrup and vanilla.",
+       "min": 5
+      },
+      {
+       "text": "Chill the tea and four coupes for 15 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Stir 240ml of the tea with the grape juice and balsamic over plenty of ice, one or two at a time.",
+       "min": 3
+      },
+      {
+       "text": "Strain into the coupes, squeeze a strip of orange peel over each and discard it, and drop in a cherry.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

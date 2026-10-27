@@ -62,7 +62,9 @@
      "text": "Top with crushed chocolate biscuits, gummy worms and a mint leaf.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rafiki's fruit",
@@ -127,7 +129,9 @@
      "text": "Squeeze over lime and sprinkle with chilli salt and torn mint.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bobotie",
@@ -208,7 +212,104 @@
      "text": "Beat the eggs with the remaining milk and pour over. Add bay leaves and bake at 180C.",
      "min": 35
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lentil bobotie",
+     "prep_min": 13,
+     "cook_min": 47,
+     "make_ahead": "Up to 1 day, bake fresh",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins brown lentils (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "curry powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground turmeric",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "mango chutney",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the bread in some of the milk and chop the onion.",
+       "min": 8
+      },
+      {
+       "text": "Fry the onion and mushrooms in the oil with the curry powder and turmeric.",
+       "min": 12
+      },
+      {
+       "text": "Stir in the lentils, chutney and the squeezed bread, then press into a dish.",
+       "min": 5
+      },
+      {
+       "text": "Beat the eggs with the remaining milk and pour over. Add the bay leaves and bake at 180C.",
+       "min": 35
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mandazi",
@@ -281,7 +382,9 @@
      "text": "Dust with icing sugar.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pride Rock punch",
@@ -336,7 +439,9 @@
      "text": "Pour over crushed ice in four glasses, top with lemonade and squeeze in some lime.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

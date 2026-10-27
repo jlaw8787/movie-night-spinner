@@ -58,7 +58,9 @@
      "text": "Pipe back into the whites and finish with paprika and chives.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Brie, pear and honey baguette toasts",
@@ -111,7 +113,9 @@
      "text": "Top with sliced brie and a thin slice of pear, return briefly to warm, and drizzle with honey.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gaston's tavern roast chicken",
@@ -174,7 +178,82 @@
      "text": "Make gravy with the pan juices, thyme and stock. Tear the chicken apart at the table.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Gaston's tavern roast mushrooms",
+     "prep_min": 15,
+     "cook_min": 70,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the potatoes into a roasting tray, toss with the oil and salt and roast at 220C.",
+       "min": 15
+      },
+      {
+       "text": "After 30 minutes, push the potatoes aside, add the mushrooms cap side down, dot with the butter, season with salt and scatter with half the thyme. Roast at 200C until the mushrooms are tender and the potatoes crisp.",
+       "min": 55
+      },
+      {
+       "text": "Make gravy in a pan with the mushroom juices from the tray, flour, the rest of the thyme and the stock. Tear the mushrooms apart at the table.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Enchanted rose panna cotta",
@@ -237,7 +316,9 @@
      "text": "Crush the raspberries with the remaining sugar and spoon on top with a rose petal.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "LeFou's apple slush",
@@ -294,7 +375,9 @@
      "text": "Spoon the slush into glasses and top with the cream. Brew a pot of English breakfast tea for the grown-ups.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   }
  ]
 }

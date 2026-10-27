@@ -66,7 +66,9 @@
      "text": "Top with sour cream and chives.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Red planet hummus",
@@ -141,7 +143,9 @@
      "text": "Serve with warm flatbread.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sol 100 potato and leek soup",
@@ -230,7 +234,108 @@
      "text": "Top with bacon and chives and serve with crusty bread.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sol 100 potato and leek soup (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 32,
+     "make_ahead": "Up to 3 days chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "leeks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.2,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, finely sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the leeks and onion in butter.",
+       "min": 8
+      },
+      {
+       "text": "Add the potatoes and stock and simmer until tender.",
+       "min": 28
+      },
+      {
+       "text": "Fry the mushrooms in the oil until crisp, then toss with the smoked paprika and a pinch of salt.",
+       "min": 10
+      },
+      {
+       "text": "Blend the soup with the cream until silky.",
+       "min": 4
+      },
+      {
+       "text": "Top with the smoky mushrooms and chives and serve with crusty bread.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rich Purnell manoeuvre sundae",
@@ -281,7 +386,9 @@
      "text": "Pipe whipped cream into a tall rocket shape and scatter crushed honeycomb at the base for flames.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lewis's disco condensed milk iced coffee",
@@ -332,7 +439,9 @@
      "text": "Add plenty of ice, top with a splash of cold milk and stir once.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

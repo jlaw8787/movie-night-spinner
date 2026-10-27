@@ -96,7 +96,9 @@
      "text": "Serve with lingonberry jam",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Swedish crispbread",
@@ -159,7 +161,9 @@
      "text": "Build just before serving so they stay crisp",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Toast Skagen",
@@ -234,7 +238,98 @@
      "text": "Pile the prawns on top and add a little roe if you have it",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Toast Skagen (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 2,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin hearts of palm, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "hard-boiled eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "dill, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "horseradish",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the hearts of palm and eggs into small pieces.",
+       "min": 7
+      },
+      {
+       "text": "Fold with the mayo, creme fraiche, dill, lemon juice, horseradish and capers.",
+       "min": 5
+      },
+      {
+       "text": "Fry the bread in butter until golden.",
+       "min": 8
+      },
+      {
+       "text": "Pile the mixture on top and finish with extra dill.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Jungle gym cinnamon buns",
@@ -323,7 +418,9 @@
      "text": "Brush with egg, add pearl sugar and bake at 220C",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hot spiced blackcurrant glögg",
@@ -404,7 +501,9 @@
      "text": "Put raisins and almonds in four heatproof glasses and pour over the hot glogg",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

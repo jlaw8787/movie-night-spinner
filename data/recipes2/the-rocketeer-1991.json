@@ -62,7 +62,73 @@
      "text": "Salt and serve hot.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Bulldog Cafe onion rings",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the onions into thick rings and soak in the buttermilk.",
+       "min": 30
+      },
+      {
+       "text": "Whisk the flour with the cold soda water.",
+       "min": 3
+      },
+      {
+       "text": "Dip the rings in the batter and fry at 185C in batches until puffed and golden.",
+       "min": 10
+      },
+      {
+       "text": "Salt and serve hot.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "South Seas Club canapés",
@@ -149,7 +215,9 @@
      "text": "Serve together.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "South Seas Club tiki chicken",
@@ -228,7 +296,96 @@
      "text": "Serve the chicken over the rice.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "South Seas Club tiki tofu",
+     "prep_min": 20,
+     "cook_min": 82,
+     "make_ahead": "Marinate up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 900,
+       "u": "g",
+       "item": "extra firm tofu, cut into thick slabs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "knob ginger, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Marinate the tofu in the pineapple juice, soy, ginger and garlic.",
+       "min": 60
+      },
+      {
+       "text": "Grill the tofu in the oil until golden, turning.",
+       "min": 12
+      },
+      {
+       "text": "Simmer the marinade until reduced to a glaze and brush over.",
+       "min": 8
+      },
+      {
+       "text": "Cook the rice in the coconut milk and water.",
+       "min": 20
+      },
+      {
+       "text": "Serve the tofu over the rice.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rocket sundae",
@@ -285,7 +442,9 @@
      "text": "Top with whipped cream and a cherry. Push a sparkler into each and light it at the table.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bulldog Cafe root beer malt float",
@@ -326,7 +485,9 @@
      "text": "Pour the cold root beer slowly down the side so the foam rises without spilling. Serve with long spoons and straws.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

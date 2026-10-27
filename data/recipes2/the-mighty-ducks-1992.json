@@ -62,7 +62,9 @@
      "text": "Drain and serve with ranch dressing.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Juicy Lucy sliders",
@@ -109,7 +111,9 @@
      "text": "Serve in the slider buns with pickles.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Minnesota hotdish",
@@ -174,7 +178,82 @@
      "text": "Bake at 200C for 35 minutes until golden.",
      "min": 35
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Minnesota hotdish (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "Up to 1 day, bake fresh",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "corn kernels",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "green beans, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "frozen potato gems",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the plant-based mince in the oil with the onion and mushrooms.",
+       "min": 15
+      },
+      {
+       "text": "Stir in the corn, beans and cream. Tip into a baking dish and cover with potato gems.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 200C for 35 minutes until golden.",
+       "min": 35
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hans' frozen pond brownies",
@@ -233,7 +312,9 @@
      "text": "Melt the white chocolate, spread it smooth over the top like ice, set, then cut into squares.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "District 5 rinkside hot chocolate",
@@ -274,7 +355,9 @@
      "text": "Pour into big mugs and pile marshmallows on top. Ducks fly together.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   }
  ]
 }

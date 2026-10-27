@@ -72,7 +72,9 @@
      "text": "Leave in the brine 30 minutes more, then drain and serve warm in paper cones.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wrong kid died cheese fries",
@@ -131,7 +133,9 @@
      "text": "Pour over the fries and scatter with sliced spring onion.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mama Cox's buttermilk fried chicken",
@@ -228,7 +232,114 @@
      "text": "For gravy, whisk the frying oil with the flour, then the milk, simmer until thick and season with lots of pepper.",
      "min": 21
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mama Cox's buttermilk fried mushrooms",
+     "prep_min": 30,
+     "cook_min": 60,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "oyster mushrooms, in large clusters",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "hot sauce, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "paprika, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "garlic powder, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "black pepper",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the mushrooms in the buttermilk with the hot sauce and the salt.",
+       "min": 30
+      },
+      {
+       "text": "Dredge in the plain flour mixed with the paprika, the garlic powder and the pepper.",
+       "min": 10
+      },
+      {
+       "text": "Fry at 180C until deep golden and crisp.",
+       "min": 15
+      },
+      {
+       "text": "Boil the potatoes and mash with the butter and some of the milk.",
+       "min": 25
+      },
+      {
+       "text": "For gravy, whisk a little of the frying oil with some flour, then the rest of the milk, simmer until thick and season with lots of pepper.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mama Cox's sweet potato meringue pie",
@@ -317,7 +428,9 @@
      "text": "Whisk the egg whites with the caster sugar until glossy, pile on top and torch or grill until golden.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dewey Cox Show peach sweet tea",
@@ -386,7 +499,9 @@
      "text": "Fill the tall glasses with ice, add fresh peach slices and a lemon wedge, pour in the tea and top with mint.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

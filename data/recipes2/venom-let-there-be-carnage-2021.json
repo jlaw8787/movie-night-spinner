@@ -66,7 +66,9 @@
      "text": "Smash or cut into chunks and pile in a bowl.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Sonny and Cher's chicken bites",
@@ -129,7 +131,9 @@
      "text": "Mix the honey and mustard for dipping.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bacon and scrambled eggs on toast",
@@ -192,7 +196,98 @@
      "text": "Pile everything onto plates with a square of dark chocolate on the side.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Smoky mushrooms and scrambled eggs on toast",
+     "prep_min": 7,
+     "cook_min": 16,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices thick white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "dark chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in the oil over high heat until browned, then add the smoked paprika, soy sauce and maple syrup and cook until sticky.",
+       "min": 8
+      },
+      {
+       "text": "Whisk the eggs with salt and scramble slowly in some of the butter until soft.",
+       "min": 8
+      },
+      {
+       "text": "Toast and butter the bread.",
+       "min": 5
+      },
+      {
+       "text": "Pile everything onto plates with a square of dark chocolate on the side.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Red velvet cake",
@@ -283,7 +378,9 @@
      "text": "Beat the cream cheese with icing sugar, then stack the cakes and cover the whole cake.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Venom's triple chocolate thickshake",
@@ -346,7 +443,9 @@
      "text": "Pour into the glasses, drizzle with the rest of the sauce and crumble a brownie over each.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

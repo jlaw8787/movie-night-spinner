@@ -68,7 +68,9 @@
      "text": "Serve with tomato sauce stirred with a pinch more smoked paprika.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Grill-line jalapeño poppers",
@@ -119,7 +121,9 @@
      "text": "Bake at 200C until the bacon is crisp.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mooby's double cheeseburger",
@@ -190,7 +194,82 @@
      "text": "Stack 2 per toasted bun with pickles, diced onion and sauce.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mooby's double cheeseburger (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 5,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sesame burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roll the plant-based mince into 8 balls. Mix the mayonnaise with tomato sauce.",
+       "min": 8
+      },
+      {
+       "text": "Smash each flat on a smoking griddle, season with salt and cook, then flip and add cheese.",
+       "min": 8
+      },
+      {
+       "text": "Stack 2 per toasted bun with pickles, diced onion and sauce.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Farewell party sheet cake",
@@ -259,7 +338,9 @@
      "text": "Beat the butter with the icing sugar for buttercream, spread over and pipe a goodbye message across the top.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mooby's chocolate shake",
@@ -296,7 +377,9 @@
      "text": "Pour into 4 tall paper cups and serve with straws.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

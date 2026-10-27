@@ -78,7 +78,9 @@
      "text": "Stir the wholegrain mustard into the honey and the mayonnaise for dipping and serve warm.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Washington apple and cheddar crostini",
@@ -151,7 +153,9 @@
      "text": "Scatter with walnuts, drizzle with the honey and finish with cracked pepper.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hideout cabin salmon with dill butter",
@@ -230,7 +234,96 @@
      "text": "Fry the green beans in a hot pan with a splash of oil for 4 minutes until charred.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hideout cabin haloumi with dill butter",
+     "prep_min": 15,
+     "cook_min": 34,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into 4 slabs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mash the soft butter with the chopped dill, the zest of a lemon and the crushed garlic clove.",
+       "min": 5
+      },
+      {
+       "text": "Boil the baby potatoes for 15 minutes, drain, crush lightly and toss with 2 tbsp of the olive oil and salt.",
+       "min": 16
+      },
+      {
+       "text": "Halve the zucchini lengthways and lay on squares of foil, top each with a haloumi slab, a slice of the butter and a lemon slice, then seal.",
+       "min": 6
+      },
+      {
+       "text": "Bake at 200C for 15 minutes.",
+       "min": 16
+      },
+      {
+       "text": "Fry the green beans in a hot pan with the rest of the oil for 4 minutes until charred.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Small-town apple crumble with oat crunch",
@@ -319,7 +412,9 @@
      "text": "Warm the ready-made custard and pour over each bowl.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Seattle cold brew with maple cream",
@@ -376,7 +471,9 @@
      "text": "Fill the glasses with ice, pour in the cold brew and slowly pour the maple cream over the back of a spoon so it floats.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -78,7 +78,9 @@
      "text": "Serve with lime.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Tropical fruit skewers",
@@ -143,7 +145,9 @@
      "text": "Brush with lime juice mixed with honey and sprinkle with salt and chilli flakes.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Cuban sandwich",
@@ -240,7 +244,114 @@
      "text": "Press in a buttered pan until crisp.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cuban sandwich (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 160,
+     "make_ahead": "Marinate the mushrooms up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "Swiss cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the orange and lime juice, crushed garlic, oregano and olive oil and toss through the portobello mushrooms.",
+       "min": 10
+      },
+      {
+       "text": "Marinate in the fridge for at least 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Roast the mushrooms at 200C for 25 minutes, then slice. Slice the smoked tofu thinly.",
+       "min": 30
+      },
+      {
+       "text": "Spread the rolls with mustard and layer with the mushrooms, smoked tofu, Swiss cheese and sliced pickles.",
+       "min": 10
+      },
+      {
+       "text": "Press in a pan with the butter until crisp on both sides.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Snowflake's key lime pie",
@@ -307,7 +418,9 @@
      "text": "Top with whipped cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Alrighty then mojito",
@@ -370,7 +483,73 @@
      "text": "Top with soda water and stir from the bottom.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Alrighty then mojito (alcohol-free)",
+     "prep_min": 11,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "mint sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "tsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "crushed ice, to serve",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the limes into wedges.",
+       "min": 3
+      },
+      {
+       "text": "Gently muddle the mint, lime and sugar in each glass.",
+       "min": 4
+      },
+      {
+       "text": "Add 30ml apple juice to each and fill with crushed ice.",
+       "min": 2
+      },
+      {
+       "text": "Top with soda water and stir from the bottom.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -74,7 +74,9 @@
      "text": "Spoon into a bowl, drizzle with oil and serve with warm flatbread.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rekall memory chips",
@@ -127,7 +129,9 @@
      "text": "Toss straight away with the vinegar powder, paprika and salt so they turn red like Mars dust.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mars colony stew",
@@ -208,7 +212,9 @@
      "text": "Serve in bowls with yoghurt on top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Red planet raspberry pavlova",
@@ -287,7 +293,9 @@
      "text": "Top the pavlova with whipped cream, fresh raspberries, the sauce and mint.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mars red blood orange martini",
@@ -340,7 +348,63 @@
      "text": "Strain into the coupes and garnish with a thin blood orange wheel.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Mars red blood orange martini (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "If blood oranges are out of season, use orange juice and a splash of grenadine",
+     "ingredients": [
+      {
+       "q": 5,
+       "u": "",
+       "item": "blood oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "white grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill four coupes. Squeeze four blood oranges for juice, grate a little zest from one, and juice the lime.",
+       "min": 6
+      },
+      {
+       "text": "Shake the blood orange juice and zest, grape juice, sugar syrup and a little lime juice with ice.",
+       "min": 2
+      },
+      {
+       "text": "Strain into the coupes and garnish with a thin wheel cut from the last blood orange.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

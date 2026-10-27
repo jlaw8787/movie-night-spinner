@@ -96,7 +96,9 @@
      "text": "Serve with tomato sauce.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Strapper's apple and cheddar crostini",
@@ -169,7 +171,9 @@
      "text": "Finish with thyme leaves and cracked pepper.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Big Red's Cup day roast beef rolls",
@@ -266,7 +270,106 @@
      "text": "Split the rolls, spread with horseradish cream and fill with beef, onions, rocket and sliced pickled beetroot.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Big Red's Cup day roast mushroom rolls",
+     "prep_min": 20,
+     "cook_min": 51,
+     "make_ahead": "Mushrooms up to 1 day ahead, assemble fresh",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "large field mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar of sliced beetroot",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the mushrooms with the oil, soy sauce, salt and pepper.",
+       "min": 5
+      },
+      {
+       "text": "Roast at 200C until tender and juicy, then cool and slice.",
+       "min": 30
+      },
+      {
+       "text": "Slice the onions.",
+       "min": 5
+      },
+      {
+       "text": "Slowly fry the onions in butter.",
+       "min": 20
+      },
+      {
+       "text": "Mix the sour cream with horseradish cream.",
+       "min": 3
+      },
+      {
+       "text": "Split the rolls, spread with horseradish cream and fill with mushrooms, onions, rocket and sliced pickled beetroot.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Big Red jam lamingtons",
@@ -347,7 +450,9 @@
      "text": "Split each in half and fill with raspberry jam and whipped cream.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Agua Caliente grapefruit paloma",
@@ -420,7 +525,83 @@
      "text": "Garnish with a grapefruit wedge.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Agua Caliente grapefruit paloma (alcohol-free)",
+     "prep_min": 13,
+     "cook_min": 0,
+     "make_ahead": "Assemble just before serving",
+     "ingredients": [
+      {
+       "q": 480,
+       "u": "ml",
+       "item": "pink grapefruit juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "agave syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 320,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sea salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "grapefruit",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag of ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub a lime wedge around the rims of tall glasses and dip in sea salt.",
+       "min": 4
+      },
+      {
+       "text": "Fill the glasses with ice.",
+       "min": 2
+      },
+      {
+       "text": "Add grapefruit juice, lime juice and agave to each glass and stir.",
+       "min": 4
+      },
+      {
+       "text": "Top with soda water and stir gently.",
+       "min": 2
+      },
+      {
+       "text": "Garnish with a grapefruit wedge.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

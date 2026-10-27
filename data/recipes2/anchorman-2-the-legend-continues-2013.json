@@ -70,7 +70,9 @@
      "text": "Simmer the honey, the sriracha and the soy until glossy and toss the wings through.",
      "min": 16
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Doby's lighthouse fish bites",
@@ -135,7 +137,9 @@
      "text": "Serve with lemon wedges and the tartare sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "GNN late shift steak",
@@ -194,7 +198,80 @@
      "text": "Serve with the oven fries and the spinach wilted with the cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "GNN late shift cauliflower steak",
+     "prep_min": 10,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "frozen chips",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the frozen chips following the packet.",
+       "min": 5
+      },
+      {
+       "text": "Cut two thick steaks from the middle of each cauliflower, season and sear in the oil in a very hot pan for 4 minutes a side, then baste with the butter and the crushed garlic cloves.",
+       "min": 21
+      },
+      {
+       "text": "Finish in the oven at 200C until tender.",
+       "min": 10
+      },
+      {
+       "text": "Serve with the oven fries and the spinach wilted with the cream.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Linda's chocolate fondue",
@@ -243,7 +320,9 @@
      "text": "Pour into a warm bowl and serve with the strawberries, the marshmallows and a cut-up sponge cake for dipping.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ron's Scotch Rob Roy",
@@ -310,7 +389,83 @@
      "text": "Twist a strip of orange peel over the top and discard it.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Ron's Scotch Rob Roy (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "smoky black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "maraschino cherries",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice, as needed",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the tea bags in the boiling water for 5 minutes, remove them and cool. Chill the coupes in the freezer while it cools.",
+       "min": 20
+      },
+      {
+       "text": "For each drink, fill a mixing glass with ice and add 60ml of the tea, 25ml of the grape juice, a drop of vanilla and a strip of orange zest.",
+       "min": 1
+      },
+      {
+       "text": "Stir for 30 seconds until very cold.",
+       "min": 2
+      },
+      {
+       "text": "Strain into the chilled coupe and drop in a maraschino cherry.",
+       "min": 1
+      },
+      {
+       "text": "Twist a strip of orange peel over the top and discard it.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

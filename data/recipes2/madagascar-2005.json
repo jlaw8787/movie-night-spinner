@@ -74,7 +74,9 @@
      "text": "Serve with soy and pickled ginger. Smile and wave, boys.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Marty's birthday zebra brownies",
@@ -137,7 +139,9 @@
      "text": "Bake at 170C for 30 minutes.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Alex's steak",
@@ -210,7 +214,84 @@
      "text": "Rest for 8 minutes and top with the garlic butter.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Alex's cauliflower steak",
+     "prep_min": 20,
+     "cook_min": 43,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into shoestrings",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Cut two thick steaks from the centre of each cauliflower and season with the salt.",
+       "min": 10
+      },
+      {
+       "text": "Mash the butter with the garlic and parsley.",
+       "min": 5
+      },
+      {
+       "text": "Fry the shoestring potatoes in the oil until golden and crisp.",
+       "min": 20
+      },
+      {
+       "text": "Sear the cauliflower in a smoking cast iron pan with 1 tbsp of the oil for 4 minutes a side, then roast until tender in the middle.",
+       "min": 25
+      },
+      {
+       "text": "Top with the garlic butter and let it melt over.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "King Julien's caramel grilled pineapple",
@@ -279,7 +360,9 @@
      "text": "Serve warm with scoops of coconut ice cream and toasted coconut flakes.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "King Julien's mango passionfruit punch",
@@ -344,7 +427,9 @@
      "text": "Top with lemonade just before serving and pour into tall glasses with a lime wedge.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

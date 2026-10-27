@@ -48,7 +48,9 @@
      "text": "Arrange on a board with crackers and pickled onions. Don't swallow any of the diamonds.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Caravan site sausages",
@@ -89,7 +91,9 @@
      "text": "Spear on toothpicks and serve hot. Do you like dags?",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Turkish's full English fry-up",
@@ -170,7 +174,98 @@
      "text": "Make buttered toast and serve everything together.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Turkish's full English fry-up (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 25,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 180,
+       "u": "g",
+       "item": "haloumi, in 4 slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin baked beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Grill the vegetarian sausages.",
+       "min": 15
+      },
+      {
+       "text": "Grill the halved tomatoes alongside and warm the beans.",
+       "min": 5
+      },
+      {
+       "text": "Fry the sliced mushrooms in the oil until crisp at the edges and stir through the smoked paprika. Fry the haloumi, then the eggs.",
+       "min": 15
+      },
+      {
+       "text": "Make buttered toast and serve everything together.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bullet Tooth Tony's banoffee pie",
@@ -237,7 +332,9 @@
      "text": "Chill to set, then grate the chocolate over.",
      "min": 80
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mickey's caravan whiskey ginger",
@@ -290,7 +387,73 @@
      "text": "Garnish with a lime wedge and a thin slice of fresh ginger.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Mickey's caravan whiskey ginger (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "smoked black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "ginger beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "piece fresh ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift out and chill.",
+       "min": 15
+      },
+      {
+       "text": "Fill four tall glasses with ice and add 30ml of the tea and some lime juice to each.",
+       "min": 3
+      },
+      {
+       "text": "Top with cold ginger beer and stir once.",
+       "min": 1
+      },
+      {
+       "text": "Garnish with a lime wedge and a thin slice of fresh ginger.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

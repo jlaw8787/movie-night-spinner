@@ -72,7 +72,9 @@
      "text": "Serve from the boat with the dipping sauce.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Talon night market spring rolls",
@@ -147,7 +149,9 @@
      "text": "Soak the rice paper sheets one at a time, fill with prawns, vermicelli, herbs and lettuce and roll tightly.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Benja's shrimp congee",
@@ -226,7 +230,102 @@
      "text": "Top with chilli and a pinch of sugar.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Benja's mushroom and tofu congee",
+     "prep_min": 20,
+     "cook_min": 62,
+     "make_ahead": "Congee up to 2 days, add mushrooms and tofu when reheating",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemongrass stalks, bruised",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "piece ginger (4cm), sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "shiitake mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can sliced bamboo shoots, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bruise the lemongrass and slice the ginger.",
+       "min": 6
+      },
+      {
+       "text": "Simmer the rice in the stock with the lemongrass and ginger, stirring often, until creamy.",
+       "min": 60
+      },
+      {
+       "text": "Slice the shiitake mushrooms and cut the tofu into cubes.",
+       "min": 8
+      },
+      {
+       "text": "Add the mushrooms, tofu, bamboo shoots and soy sauce for the last few minutes.",
+       "min": 5
+      },
+      {
+       "text": "Top with chilli and a pinch of sugar.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sisu's mango sticky rice",
@@ -297,7 +396,9 @@
      "text": "Serve with the remaining coconut milk and sesame seeds.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Tuk Tuk's lemongrass lime iced tea",
@@ -366,7 +467,9 @@
      "text": "Pour over ice with lime juice and a mint sprig.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

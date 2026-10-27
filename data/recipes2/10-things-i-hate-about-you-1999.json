@@ -64,7 +64,9 @@
      "text": "Serve the dip hot with the toasted baguette.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Cameron's croque monsieur squares",
@@ -129,7 +131,9 @@
      "text": "Top with bechamel and the rest of the cheese. Grill until bubbling and golden, then cut into small squares.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Prom night pasta",
@@ -206,7 +210,93 @@
      "text": "Toss the pasta through the sauce and finish with parmesan and basil.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Prom night pasta",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "Sauce up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "penne",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "basil leaves, torn",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the garlic and chilli in the oil. Add the tomatoes, water and lemon juice and simmer.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the cream until the sauce turns rosy. Meanwhile cook the penne in salted water until al dente.",
+       "min": 10
+      },
+      {
+       "text": "Toss the pasta through the sauce and finish with parmesan and basil.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Ten things brownies",
@@ -277,7 +367,9 @@
      "text": "Cut into ten squares and top each differently with raspberries, nuts, salt flakes or anything you like.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Club Skunk iced vanilla latte",
@@ -340,7 +432,9 @@
      "text": "Fill four tall glasses with ice and the cold milk, then pour the frothy coffee slowly over the top so it sits in layers.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

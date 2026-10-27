@@ -48,7 +48,9 @@
      "text": "Drizzle with honey and lime and arrange on a long platter so they look like they're hovering.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Geonosis arena wings",
@@ -107,7 +109,9 @@
      "text": "Scatter with sesame seeds and spring onion.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Dex's Diner patty melts and fries",
@@ -182,7 +186,108 @@
      "text": "Fry the chips on a low heat until soft, then again on a high heat until golden. Serve with pickles.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dex's Diner mushroom patty melts and fries",
+     "prep_min": 25,
+     "cook_min": 40,
+     "make_ahead": "Onions and patty mix up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices Swiss cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into crinkle chips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "dill pickles",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the onions slowly in a little of the butter until golden.",
+       "min": 25
+      },
+      {
+       "text": "Fry the mushrooms until dry, then mash with the black beans, breadcrumbs and egg.",
+       "min": 10
+      },
+      {
+       "text": "Shape into 4 thin patties and sear in a little oil. Layer on rye with the onions and Swiss.",
+       "min": 10
+      },
+      {
+       "text": "Butter the outside of the bread and grill until melted.",
+       "min": 8
+      },
+      {
+       "text": "Fry the chips in the oil on a low heat until soft, then again on a high heat until golden. Serve with pickles.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Clone trooper white chocolate mousse",
@@ -239,7 +344,9 @@
      "text": "Top with whipped cream and a thin square of dark chocolate.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dex's diner coffee",
@@ -282,7 +389,9 @@
      "text": "Pour into thick diner mugs and serve with hot milk and raw sugar on the side.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

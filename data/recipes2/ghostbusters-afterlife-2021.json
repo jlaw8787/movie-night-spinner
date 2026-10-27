@@ -40,7 +40,9 @@
      "text": "Toast half of them with a blowtorch for the full effect.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Summerville fried okra",
@@ -109,7 +111,9 @@
      "text": "Serve with hot sauce.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Roller diner burgers",
@@ -190,7 +194,102 @@
      "text": "Stack two patties per bun with pickles, onion and sauce.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Roller diner mushroom and haloumi burgers",
+     "prep_min": 25,
+     "cook_min": 35,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "haloumi, in 4 slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sweet relish",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "crinkle-cut potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the potatoes once at a gentle heat until soft, drain, then fry again at a higher heat until crisp.",
+       "min": 35
+      },
+      {
+       "text": "Mix the mayo and relish for burger sauce.",
+       "min": 5
+      },
+      {
+       "text": "Brush the mushrooms with a little of the oil and cook on a smoking griddle, pressing them flat with a spatula, until tender. Add cheese to melt.",
+       "min": 8
+      },
+      {
+       "text": "Sear the haloumi on the griddle until golden on both sides.",
+       "min": 4
+      },
+      {
+       "text": "Stack a mushroom and a slice of haloumi in each bun with pickles, onion and sauce.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Toasted marshmallow pie",
@@ -253,7 +352,9 @@
      "text": "Pile tall and torch until blistered.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Roller diner chocolate malt shakes",
@@ -318,7 +419,9 @@
      "text": "Pour in the shakes and top with whipped cream and a cherry.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

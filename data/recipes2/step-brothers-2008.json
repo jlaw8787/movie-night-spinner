@@ -80,7 +80,9 @@
      "text": "Serve on silver trays.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bunk bed parmesan garlic butter popcorn",
@@ -139,7 +141,9 @@
      "text": "Toss the popcorn with the garlic butter, finely grated parmesan, pepper, salt and chopped parsley. Split between two big bowls.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Robert's lemon caper roast snapper",
@@ -242,7 +246,126 @@
      "text": "Serve the fish with the potatoes and salad.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Robert's lemon caper roast eggplant",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "new potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants, halved lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "tbsp",
+       "item": "extra virgin olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "feta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag mixed salad leaves",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the eggplant flesh, brush with 4 tbsp of the oil and the salt and roast cut side up at 220C for 20 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Top with lemon slices, sliced garlic, capers and 1 tbsp of the oil and roast 10 minutes more.",
+       "min": 12
+      },
+      {
+       "text": "Boil the potatoes until tender, drain and toss with the butter, parsley and dill.",
+       "min": 15
+      },
+      {
+       "text": "Whisk the Dijon, vinegar and remaining oil and toss through the leaves.",
+       "min": 5
+      },
+      {
+       "text": "Crumble the feta over the eggplant and serve with the potatoes and salad.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ice cream sundae bar",
@@ -307,7 +430,9 @@
      "text": "Put the ice cream tubs on ice and set out the fudge, whipped cream, sprinkles and cherries so everyone builds their own.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Catalina Wine Mixer strawberry rosé spritz",
@@ -370,7 +495,73 @@
      "text": "Stir gently and add a lemon wheel.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Catalina Wine Mixer strawberry rosé spritz (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "strawberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "elderflower cordial",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 480,
+       "u": "ml",
+       "item": "alcohol-free rosé",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the strawberries and divide between four large wine glasses.",
+       "min": 3
+      },
+      {
+       "text": "Add elderflower cordial and a squeeze of lemon to each and press lightly.",
+       "min": 2
+      },
+      {
+       "text": "Fill with ice, pour in the cold alcohol-free rosé and top with soda water.",
+       "min": 3
+      },
+      {
+       "text": "Stir gently and add a lemon wheel.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

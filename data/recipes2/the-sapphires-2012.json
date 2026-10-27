@@ -90,7 +90,9 @@
      "text": "Bake until golden and serve hot with tomato sauce.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Damper with golden syrup",
@@ -153,7 +155,9 @@
      "text": "Serve warm with butter and golden syrup.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Army mess roast",
@@ -226,7 +230,132 @@
      "text": "Stir the flour into the roasting tin, add the stock and simmer into gravy.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Army mess lentil and mushroom roast",
+     "prep_min": 25,
+     "cook_min": 70,
+     "make_ahead": "Rest 10 minutes before slicing",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "fresh breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes, peeled and halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "pumpkin, cut in pieces",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion, mushrooms and carrot in 1 tbsp of the oil until dry. Mix with the mashed lentils, breadcrumbs, eggs, cheddar, tomato paste, soy and salt and press into a lined loaf tin.",
+       "min": 20
+      },
+      {
+       "text": "Heat the oven to 200C. Roast the loaf with the potatoes and pumpkin tossed in the rest of the oil.",
+       "min": 50
+      },
+      {
+       "text": "Rest the loaf in its tin.",
+       "min": 10
+      },
+      {
+       "text": "Cook the peas.",
+       "min": 5
+      },
+      {
+       "text": "Stir the flour into the oil left in the roasting tin, add the stock and simmer into gravy.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Cummeragunja lamingtons",
@@ -309,7 +438,9 @@
      "text": "Set on a rack.",
      "min": 17
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dave Lovelace's Saigon iced coffee",
@@ -356,7 +487,9 @@
      "text": "Fill with ice and serve straight away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

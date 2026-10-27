@@ -90,7 +90,9 @@
      "text": "Stir the paprika into the relish and serve alongside.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Baby Stella date night baked brie",
@@ -159,7 +161,9 @@
      "text": "Spoon the nuts over the hot brie and serve with the toasts and grapes.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Backyard barbecue steak with chimichurri",
@@ -272,7 +276,124 @@
      "text": "Spoon the chimichurri over the steak and serve with corn, sausages and slaw.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Backyard barbecue haloumi with chimichurri",
+     "prep_min": 20,
+     "cook_min": 19,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "apple, julienned",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blitz the parsley, garlic, oregano, chilli, vinegar and oil into chimichurri.",
+       "min": 5
+      },
+      {
+       "text": "Grill the corn, turning.",
+       "min": 10
+      },
+      {
+       "text": "Grill the vegetarian sausages, turning, until browned.",
+       "min": 12
+      },
+      {
+       "text": "Grill the haloumi over high heat until charred on both sides.",
+       "min": 5
+      },
+      {
+       "text": "Toss the cabbage and apple with the mayonnaise and lemon juice.",
+       "min": 5
+      },
+      {
+       "text": "Spoon the chimichurri over the haloumi and serve with the corn, vegetarian sausages and slaw.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Teddy and Pete's funfetti sheet cake",
@@ -357,7 +478,9 @@
      "text": "Spread over the cake and finish with more sprinkles.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Delta Psi tropical rum punch",
@@ -428,7 +551,81 @@
      "text": "Just before serving, add the lemonade, orange slices and plenty of ice. Stir gently and scatter with mint.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Delta Psi tropical rum punch (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "passionfruit",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "coconut water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "cold lemonade",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the pineapple juice, passionfruit pulp, lime juice and coconut water in a big jug or bowl.",
+       "min": 5
+      },
+      {
+       "text": "Chill.",
+       "min": 30
+      },
+      {
+       "text": "Just before serving, add the lemonade, orange slices and plenty of ice. Stir gently and scatter with mint.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

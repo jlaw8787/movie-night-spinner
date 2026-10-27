@@ -90,7 +90,9 @@
      "text": "Mix the remaining mayonnaise with the chipotle and a squeeze of lime. Serve with lime wedges.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Frat house sticky barbecue wings",
@@ -175,7 +177,9 @@
      "text": "Scatter with sesame seeds and spring onion.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Captain Dickson's fish tacos",
@@ -278,7 +282,338 @@
      "text": "Warm the tortillas and fill with slaw, fish, crema, onion and coriander.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Captain Dickson's fish tacos",
+     "prep_min": 35,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "ice-cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "flathead fillets, cut into strips",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chipotle sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch coriander",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the onion in the juice of two limes with a pinch of salt.",
+       "min": 20
+      },
+      {
+       "text": "Whisk the flour, baking powder and ice-cold soda water to a batter.",
+       "min": 3
+      },
+      {
+       "text": "Dip the fish in batter and fry in the oil at 180C until golden, working in batches.",
+       "min": 12
+      },
+      {
+       "text": "Toss the cabbage with lime juice and salt. Mix the sour cream with the chipotle sauce.",
+       "min": 5
+      },
+      {
+       "text": "Warm the tortillas and fill with slaw, fish, crema, onion and coriander.",
+       "min": 5
+      }
+     ]
+    },
+    "veg": {
+     "n": "Captain Dickson's banana blossom tacos",
+     "prep_min": 35,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "cold lager",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "banana blossom in brine (2 tins), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "nori sheet",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chipotle sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch coriander",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the onion in the juice of two limes with a pinch of salt.",
+       "min": 20
+      },
+      {
+       "text": "Pat the banana blossom dry and pull into bite-sized pieces. Crumble the nori.",
+       "min": 5
+      },
+      {
+       "text": "Whisk most of the flour, the nori, baking powder and lager to a batter.",
+       "min": 3
+      },
+      {
+       "text": "Dust the banana blossom in the rest of the flour, dip in batter and fry in the oil at 180C until golden, working in batches.",
+       "min": 12
+      },
+      {
+       "text": "Toss the cabbage with lime juice and salt. Mix the sour cream with the chipotle sauce.",
+       "min": 5
+      },
+      {
+       "text": "Warm the tortillas and fill with slaw, banana blossom, crema, onion and coriander.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Captain Dickson's banana blossom tacos",
+     "prep_min": 35,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "cold sparkling water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "banana blossom in brine (2 tins), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "nori sheet",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chipotle sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch coriander",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the onion in the juice of two limes with a pinch of salt.",
+       "min": 20
+      },
+      {
+       "text": "Pat the banana blossom dry and pull into bite-sized pieces. Crumble the nori.",
+       "min": 5
+      },
+      {
+       "text": "Whisk most of the flour, the nori, baking powder and sparkling water to a batter.",
+       "min": 3
+      },
+      {
+       "text": "Dust the banana blossom in the rest of the flour, dip in batter and fry in the oil at 180C until golden, working in batches.",
+       "min": 12
+      },
+      {
+       "text": "Toss the cabbage with lime juice and salt. Mix the sour cream with the chipotle sauce.",
+       "min": 5
+      },
+      {
+       "text": "Warm the tortillas and fill with slaw, banana blossom, crema, onion and coriander.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Dining hall skillet choc chip cookie",
@@ -365,7 +700,9 @@
      "text": "Rest, then top with ice cream and drizzle with chocolate sauce. Serve with spoons.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Spring break frozen mango margarita",
@@ -430,7 +767,73 @@
      "text": "Pour into the glasses and garnish with lime wheels.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Spring break frozen mango margarita (alcohol-free)",
+     "prep_min": 11,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 5,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "frozen mango",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub a lime wedge around the rims of the glasses and dip in sea salt flakes.",
+       "min": 3
+      },
+      {
+       "text": "Finely zest one orange, then juice both oranges and four of the limes.",
+       "min": 3
+      },
+      {
+       "text": "Blend the mango, orange juice and zest, lime juice, sugar syrup and ice until thick and smooth.",
+       "min": 3
+      },
+      {
+       "text": "Pour into the glasses and garnish with wheels cut from the last lime.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

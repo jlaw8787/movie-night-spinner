@@ -84,7 +84,9 @@
      "text": "Mix the sour cream with chives, garlic powder and lemon juice for a dip.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Farm loft pickles",
@@ -159,7 +161,9 @@
      "text": "Serve with sliced cheddar.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Missouri barbecue ribs",
@@ -232,7 +236,96 @@
      "text": "Unwrap, brush on the glaze and glaze under the grill.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Missouri barbecue corn ribs",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch cayenne pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "molasses",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut each corn cob in half crossways, then carefully quarter each piece lengthways with a heavy knife.",
+       "min": 12
+      },
+      {
+       "text": "Rub with the oil, paprika, brown sugar, crushed garlic, cayenne and salt.",
+       "min": 5
+      },
+      {
+       "text": "Roast at 220C on a lined tray until curled and golden.",
+       "min": 25
+      },
+      {
+       "text": "Simmer the tomato sauce with the molasses.",
+       "min": 7
+      },
+      {
+       "text": "Brush on the glaze and glaze under the grill.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Missouri gooey butter cake",
@@ -299,7 +392,9 @@
      "text": "Dust with icing sugar.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Double Deuce bourbon and ginger",
@@ -356,7 +451,77 @@
      "text": "Top with ginger beer, stir gently once and garnish with a fresh lime wedge.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Double Deuce bourbon and ginger (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "ginger beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, remove and cool.",
+       "min": 12
+      },
+      {
+       "text": "Fill four tall glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Pour the cold tea into each and squeeze in a lime wedge.",
+       "min": 2
+      },
+      {
+       "text": "Add a drop of vanilla extract to each glass.",
+       "min": 1
+      },
+      {
+       "text": "Top with ginger beer, stir gently once and garnish with a fresh lime wedge.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

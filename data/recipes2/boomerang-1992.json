@@ -72,7 +72,9 @@
      "text": "Add the meatballs and turn until coated, then serve hot on toothpicks.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Marcus's smoked salmon pinwheels",
@@ -129,7 +131,9 @@
      "text": "Slice into 2cm pinwheels.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Date night steak",
@@ -212,7 +216,276 @@
      "text": "Char the asparagus and serve with the steak and sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Date night steak",
+     "prep_min": 30,
+     "cook_min": 74,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "eye fillet steaks",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches asparagus",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the potatoes thinly.",
+       "min": 15
+      },
+      {
+       "text": "Layer with cream in a dish, season with salt and pepper and bake at 180C until tender.",
+       "min": 60
+      },
+      {
+       "text": "Season the steaks and sear hard in butter.",
+       "min": 6
+      },
+      {
+       "text": "Roast at 200C until the centre reaches 54C, then rest.",
+       "min": 10
+      },
+      {
+       "text": "Deglaze the pan with the stock and vinegar and reduce until glossy.",
+       "min": 8
+      },
+      {
+       "text": "Char the asparagus and serve with the steak and sauce.",
+       "min": 5
+      }
+     ]
+    },
+    "veg": {
+     "n": "Date night portobello steak",
+     "prep_min": 30,
+     "cook_min": 74,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches asparagus",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the potatoes thinly.",
+       "min": 15
+      },
+      {
+       "text": "Layer with cream, salt and pepper in a dish and bake at 180C until tender.",
+       "min": 60
+      },
+      {
+       "text": "Season the portobellos and sear hard in the oil and 40 g of the butter.",
+       "min": 8
+      },
+      {
+       "text": "Roast at 200C for 8 minutes until tender.",
+       "min": 8
+      },
+      {
+       "text": "Deglaze the pan with red wine and stock, reduce until glossy and whisk in the rest of the butter.",
+       "min": 8
+      },
+      {
+       "text": "Char the asparagus and serve with the portobellos and sauce.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Date night portobello steak (alcohol-free)",
+     "prep_min": 30,
+     "cook_min": 74,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches asparagus",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the potatoes thinly.",
+       "min": 15
+      },
+      {
+       "text": "Layer with cream, salt and pepper in a dish and bake at 180C until tender.",
+       "min": 60
+      },
+      {
+       "text": "Season the portobellos and sear hard in the oil and 40 g of the butter.",
+       "min": 8
+      },
+      {
+       "text": "Roast at 200C for 8 minutes until tender.",
+       "min": 8
+      },
+      {
+       "text": "Deglaze the pan with the water, red wine vinegar and stock, reduce until glossy and whisk in the rest of the butter.",
+       "min": 8
+      },
+      {
+       "text": "Char the asparagus and serve with the portobellos and sauce.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Sweet potato pie",
@@ -301,7 +574,9 @@
      "text": "Whip the cream and spoon on top.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Strangé's French 75",
@@ -354,7 +629,63 @@
      "text": "Top each with cold sparkling wine and add a lemon twist.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Strangé's French 75 (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 4,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 360,
+       "u": "ml",
+       "item": "cold alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dissolve the sugar in a little warm water for a quick sugar syrup and cool, and juice the lemons.",
+       "min": 4
+      },
+      {
+       "text": "Shake the non-alcoholic gin, lemon juice and sugar syrup with ice and strain into four flutes.",
+       "min": 3
+      },
+      {
+       "text": "Top each with cold alcohol-free sparkling wine and add a lemon twist.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

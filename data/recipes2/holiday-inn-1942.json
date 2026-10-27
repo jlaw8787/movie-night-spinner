@@ -56,7 +56,9 @@
      "text": "Grill until the cheese is melted and bubbling with brown spots. Finish with cracked pepper and serve hot.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Firecracker smoked paprika corn",
@@ -131,7 +133,9 @@
      "text": "Scatter with coriander and serve with lime wedges.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Calendar-hopping turkey dinner",
@@ -232,7 +236,114 @@
      "text": "Blanch the beans and toss with garlic butter. Serve with cranberry sauce.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Calendar-hopping roast pumpkin dinner",
+     "prep_min": 35,
+     "cook_min": 63,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large butternut pumpkin (about 2 kg)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 140,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch sage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar cranberry sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mash some of the butter with the chopped sage, thyme and one garlic clove. Halve and seed the pumpkin, score the flesh and spread the butter over.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 200C until soft and browned.",
+       "min": 50
+      },
+      {
+       "text": "Boil the potatoes and mash with some of the butter and the milk.",
+       "min": 20
+      },
+      {
+       "text": "Melt a little butter, whisk in the flour, add the stock and soy sauce and simmer to a gravy.",
+       "min": 8
+      },
+      {
+       "text": "Blanch the beans and toss with the last of the butter and the other garlic clove. Serve with the cranberry sauce.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Christmas plum pudding with brandy custard",
@@ -311,7 +422,89 @@
      "text": "Turn out the pudding and pour over the custard.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Christmas plum pudding with brandy custard",
+     "prep_min": 20,
+     "cook_min": 60,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "alcohol-free Christmas pudding",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "egg yolks",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, zested",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steam the pudding in its basin over simmering water, or follow the packet.",
+       "min": 60
+      },
+      {
+       "text": "Warm the milk and cream until steaming.",
+       "min": 5
+      },
+      {
+       "text": "Whisk the yolks with the sugar and cornflour, pour in the hot milk while whisking, then return to the pan.",
+       "min": 5
+      },
+      {
+       "text": "Stir over low heat until it thickens, then stir in the orange zest and vanilla.",
+       "min": 5
+      },
+      {
+       "text": "Turn out the pudding and pour over the custard.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Connecticut inn hot buttered rum cider",
@@ -388,7 +581,93 @@
      "text": "Strain the cider into mugs, add the rum and drop in a teaspoon of spiced butter to melt on top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Connecticut inn hot buttered rum cider (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1.2,
+       "u": "l",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cinnamon sticks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange (peel in strips)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "knob ginger, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter, soft",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "molasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch ground nutmeg",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the apple juice with the cinnamon, cloves, orange peel and ginger without boiling.",
+       "min": 15
+      },
+      {
+       "text": "Mash the butter with the sugar, molasses, vanilla and nutmeg.",
+       "min": 3
+      },
+      {
+       "text": "Strain the cider into mugs and drop in a teaspoon of spiced butter to melt on top.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

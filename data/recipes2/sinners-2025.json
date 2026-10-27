@@ -86,7 +86,9 @@
      "text": "Melt the butter with the hot sauce to dip",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Garlic toast",
@@ -143,7 +145,9 @@
      "text": "Toast at 200C until crisp at the edges",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Delta Slim's smothered pork chops",
@@ -228,7 +232,102 @@
      "text": "Cook the rice and serve the chops over it",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Delta Slim's smothered cauliflower steaks",
+     "prep_min": 25,
+     "cook_min": 35,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "heads cauliflower, cut into 4 thick steaks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "plain flour, for the roux",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Season the cauliflower steaks with the salt, dust in flour and brown on both sides in the oil.",
+       "min": 12
+      },
+      {
+       "text": "Make a dark roux with the butter and flour.",
+       "min": 6
+      },
+      {
+       "text": "Add the onions, then the stock and thyme.",
+       "min": 7
+      },
+      {
+       "text": "Lay the steaks in the gravy, cover and simmer gently until tender.",
+       "min": 20
+      },
+      {
+       "text": "Cook the rice and serve the steaks over it with the gravy.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sweet potato pie",
@@ -303,7 +402,9 @@
      "text": "Pour in the filling and bake at 170C",
      "min": 50
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Smoke and Stack's Irish stout",
@@ -328,7 +429,35 @@
      "text": "Let it settle for a minute, then top up slowly for a tight head. Allow 2 cans per person",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Smoke and Stack's Irish stout (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "440 ml cans alcohol-free stout",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Tilt each glass and pour the stout three-quarters full",
+       "min": 2
+      },
+      {
+       "text": "Let it settle for a minute, then top up slowly for a tight head. Allow 2 cans per person",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

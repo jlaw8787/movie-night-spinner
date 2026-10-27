@@ -84,7 +84,9 @@
      "text": "Spoon rice into small bowls, arrange the beef and vegetables on top with an egg and a dot of gochujang. Mix it all up before eating.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hello Peril band wings",
@@ -147,7 +149,9 @@
      "text": "Toss the wings through and scatter with sesame seeds.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Kimchi jjigae",
@@ -222,7 +226,98 @@
      "text": "Add sliced tofu and spring onion and simmer for the last few minutes. Serve with rice.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Kimchi jjigae (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 30,
+     "make_ahead": "Up to 2 days, reheat gently",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "shiitake mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "vegetarian kimchi, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "gochugaru",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "short grain rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms and chop the kimchi. Put the rice on to cook.",
+       "min": 8
+      },
+      {
+       "text": "Fry the mushrooms in the oil until browned, then add the kimchi, garlic and gochugaru.",
+       "min": 7
+      },
+      {
+       "text": "Pour in the water and soy sauce and simmer.",
+       "min": 15
+      },
+      {
+       "text": "Add sliced tofu and spring onion and simmer for the last few minutes. Serve with the rice.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sweet red bean pancakes",
@@ -279,7 +374,9 @@
      "text": "Fry again in butter until golden on both sides and serve warm.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Roasted barley tea",
@@ -316,7 +413,9 @@
      "text": "Strain and serve hot in small cups, or cool and pour over ice in tall glasses.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

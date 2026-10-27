@@ -58,7 +58,9 @@
      "text": "Squeeze over a little lemon just before serving.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Welcome party crab dip",
@@ -111,7 +113,9 @@
      "text": "Serve hot with water crackers.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Alaskan salmon dinner",
@@ -180,7 +184,86 @@
      "text": "Serve everything together.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Alaskan maple mustard tofu dinner",
+     "prep_min": 10,
+     "cook_min": 22,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu, cut into 4 slabs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "wholegrain mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the tofu dry, brush with the oil and season with salt and pepper. Mix the maple syrup and mustard and brush over the tofu.",
+       "min": 5
+      },
+      {
+       "text": "Roast the tofu at 200C until golden at the edges. While it roasts, boil the potatoes.",
+       "min": 20
+      },
+      {
+       "text": "Steam the green beans, then toss with the potatoes and butter.",
+       "min": 5
+      },
+      {
+       "text": "Serve everything together.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Barn wedding cake",
@@ -265,7 +348,9 @@
      "text": "Top with fresh flowers.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Margaret's iced vanilla latte",
@@ -328,7 +413,9 @@
      "text": "Pour the espresso over the top, stir and serve with lids and straws.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

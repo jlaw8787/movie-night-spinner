@@ -94,7 +94,9 @@
      "text": "Arrange the vegetables on ice around the bowl of dip.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pierogi",
@@ -155,7 +157,9 @@
      "text": "Serve with sour cream and chopped dill.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Grilled rib eye with chimichurri and corn",
@@ -252,7 +256,120 @@
      "text": "Rest the steaks briefly and serve with chimichurri.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Grilled cauliflower steak with chimichurri and corn",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil, for brushing",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blitz the parsley, oregano, garlic, chilli, vinegar and 125ml oil for the chimichurri.",
+       "min": 10
+      },
+      {
+       "text": "Boil the potatoes until tender and drain.",
+       "min": 20
+      },
+      {
+       "text": "Dress the potatoes with mayonnaise and sliced spring onion.",
+       "min": 5
+      },
+      {
+       "text": "Cut each cauliflower into 2 thick steaks through the stem, brush with the oil for brushing, season with salt and grill with the corn over hot coals until charred and tender.",
+       "min": 18
+      },
+      {
+       "text": "Serve the cauliflower steaks with chimichurri, corn and potato salad.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Banana split",
@@ -327,7 +444,9 @@
      "text": "Top with whipped cream, nuts and a cherry.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rosewood's tequila sunrise",
@@ -386,7 +505,69 @@
      "text": "Garnish with an orange wheel and a cherry.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Rosewood's tequila sunrise (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 720,
+       "u": "ml",
+       "item": "fresh orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "grenadine",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail cherries",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill tall glasses with ice. Add orange juice and a squeeze of lime to each and stir.",
+       "min": 3
+      },
+      {
+       "text": "Slowly pour grenadine down the inside of each glass so it sinks. Do not stir again.",
+       "min": 2
+      },
+      {
+       "text": "Garnish with an orange wheel and a cherry.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

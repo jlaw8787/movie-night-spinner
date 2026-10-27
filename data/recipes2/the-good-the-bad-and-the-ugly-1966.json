@@ -72,7 +72,9 @@
      "text": "Serve with the chips.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gold coin potato rounds",
@@ -129,7 +131,9 @@
      "text": "Pile the coins beside the aioli.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Farmhouse bean stew",
@@ -208,7 +212,102 @@
      "text": "Shred the ham back in and serve with bread.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Farmhouse bean stew (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 843,
+     "make_ahead": "Soak beans overnight",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "dried borlotti beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "cloves of garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "smoked tofu, diced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin of crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs of rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf of Italian bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the beans overnight and drain.",
+       "min": 720
+      },
+      {
+       "text": "Fry the smoked tofu in 1 tbsp of the oil until crisp and set aside.",
+       "min": 8
+      },
+      {
+       "text": "Soften the onion and garlic in the remaining oil with the paprika.",
+       "min": 10
+      },
+      {
+       "text": "Add the beans, tomatoes, rosemary and stock to cover, and simmer until the beans are soft and the stew is thick.",
+       "min": 120
+      },
+      {
+       "text": "Stir the smoked tofu back in and serve with the bread.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sad Hill chocolate mousse cups",
@@ -273,7 +372,9 @@
      "text": "Top with crushed biscuits.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Blondie's rye old fashioned",
@@ -336,7 +437,83 @@
      "text": "Twist orange peel over the top and drop it in.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Blondie's rye old fashioned (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "smoked black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "demerara sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, peel only",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, remove and cool.",
+       "min": 12
+      },
+      {
+       "text": "Stir the sugar with the hot water until dissolved, then cool.",
+       "min": 5
+      },
+      {
+       "text": "Stir 240ml of the smoked tea with the syrup, vanilla and a little grated orange zest over ice.",
+       "min": 3
+      },
+      {
+       "text": "Strain over a large ice cube in a heavy glass.",
+       "min": 1
+      },
+      {
+       "text": "Twist orange peel over the top and drop it in.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

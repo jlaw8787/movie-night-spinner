@@ -62,7 +62,9 @@
      "text": "Wrap each spear in half a slice of prosciutto.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Yellow coat cheese puffs",
@@ -125,7 +127,9 @@
      "text": "Bake at 200C until puffed and golden.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Big Boy's spaghetti",
@@ -210,7 +214,106 @@
      "text": "Toss with the sauce and serve with the rest of the parmesan.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Big Boy's spaghetti with mushroom and ricotta meatballs",
+     "prep_min": 30,
+     "cook_min": 55,
+     "make_ahead": "Sauce and meatballs up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "San Marzano tomatoes (2 tins)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch basil",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "spaghetti",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the mushrooms in 1 tbsp of the oil until dry and cool slightly.",
+       "min": 12
+      },
+      {
+       "text": "Soak the bread in the milk, squeeze and mix with the mushrooms, ricotta, egg and half the parmesan. Roll into balls and chill for 15 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Brown the meatballs gently in the remaining oil.",
+       "min": 10
+      },
+      {
+       "text": "Add the tomatoes and basil and simmer gently.",
+       "min": 30
+      },
+      {
+       "text": "Cook the spaghetti.",
+       "min": 10
+      },
+      {
+       "text": "Toss with the sauce and serve with the rest of the parmesan.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Lemon meringue pie",
@@ -287,7 +390,9 @@
      "text": "Chill to set.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Breathless Mahoney's gin gimlet",
@@ -334,7 +439,57 @@
      "text": "Strain into the coupes and float a thin lime wheel on each.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Breathless Mahoney's gin gimlet (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "lime cordial",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill four coupes in the freezer.",
+       "min": 15
+      },
+      {
+       "text": "Shake the non-alcoholic gin, fresh lime juice and lime cordial with plenty of ice until the shaker frosts over.",
+       "min": 2
+      },
+      {
+       "text": "Strain into the coupes and float a thin lime wheel on each.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

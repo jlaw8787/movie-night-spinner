@@ -72,7 +72,9 @@
      "text": "Serve with the hot mustard.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bagel crisps with schmear",
@@ -135,7 +137,9 @@
      "text": "Serve the crisps with the schmear and smoked salmon on the side.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Fat Moe's back room brisket",
@@ -202,7 +206,90 @@
      "text": "Boil the juices for 10 minutes to make gravy.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fat Moe's back room braised mushrooms",
+     "prep_min": 20,
+     "cook_min": 75,
+     "make_ahead": "Cook up to 2 days ahead and reheat in the gravy",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Season the mushrooms and sear hard in the oil on both sides.",
+       "min": 12
+      },
+      {
+       "text": "Spread the onions in a roasting dish and sit the mushrooms on top. Pour over the stock whisked with tomato paste, paprika and soy sauce.",
+       "min": 8
+      },
+      {
+       "text": "Cover and braise at 170C until the onions are jammy.",
+       "min": 60
+      },
+      {
+       "text": "Lift out the mushrooms and slice thickly.",
+       "min": 5
+      },
+      {
+       "text": "Boil the juices for 10 minutes to make gravy and pour over.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Patsy's charlotte russe",
@@ -271,7 +358,9 @@
      "text": "Chill for 30 minutes before serving.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Fat Moe's rye whiskey sour in teacups",
@@ -336,7 +425,85 @@
      "text": "Strain into four china teacups, dot the foam with bitters and serve straight away.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Fat Moe's rye whiskey sour in teacups (alcohol-free)",
+     "prep_min": 11,
+     "cook_min": 10,
+     "make_ahead": "Syrup up to 1 week ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 50,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "ml",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg white",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "pomegranate molasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dissolve the sugar in the hot water and cool to make syrup.",
+       "min": 6
+      },
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift them out and chill.",
+       "min": 10
+      },
+      {
+       "text": "Shake 120ml of the tea, the lemon juice, 40ml of the syrup and egg white without ice for 15 seconds, then with ice for 15 seconds.",
+       "min": 2
+      },
+      {
+       "text": "Strain into four china teacups, dot the foam with drops of pomegranate molasses and serve straight away.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

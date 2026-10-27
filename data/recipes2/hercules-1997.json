@@ -68,7 +68,9 @@
      "text": "Bake at 190C for 25 minutes.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hydra heads haloumi",
@@ -121,7 +123,9 @@
      "text": "Cook more as fast as it disappears.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Phil's training island souvlaki",
@@ -212,7 +216,114 @@
      "text": "Serve in warm pita with tomato and red onion.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Phil's training island haloumi souvlaki",
+     "prep_min": 45,
+     "cook_min": 13,
+     "make_ahead": "Thread the skewers up to 4 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, 3 for the marinade and 1 for the sauce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "extra virgin olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pita breads",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the haloumi, zucchini and capsicum in the lemon juice, 3 crushed garlic cloves, oregano and oil.",
+       "min": 10
+      },
+      {
+       "text": "Leave to marinate for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Thread onto skewers and grill hot until charred.",
+       "min": 10
+      },
+      {
+       "text": "Mix the yoghurt with the grated cucumber and the last garlic clove, crushed.",
+       "min": 5
+      },
+      {
+       "text": "Serve in warm pita with tomato and red onion.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ambrosia loukoumades (honey puffs)",
@@ -287,7 +398,9 @@
      "text": "Toss in warm honey with cinnamon and scatter over the walnuts.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Olympus golden peach and honey fizz",
@@ -364,7 +477,9 @@
      "text": "Fill glasses with ice and peach slices, pour in the nectar to two thirds and top with sparkling water. Add a mint sprig.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

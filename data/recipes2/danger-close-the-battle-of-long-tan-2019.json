@@ -106,7 +106,9 @@
      "text": "Serve with cucumber and lime wedges.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Phuoc Tuy prawn rice paper rolls",
@@ -213,7 +215,9 @@
      "text": "Mix the fish sauce, lime juice, sugar, water, garlic and chilli for dipping.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "D Company field kitchen beef and beans",
@@ -330,7 +334,128 @@
      "text": "Serve with sliced pickled chilli.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "D Company field kitchen mushrooms and beans",
+     "prep_min": 17,
+     "cook_min": 60,
+     "make_ahead": "Up to 2 days, keep chilled and reheat",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "Swiss brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "crushed tomatoes (tin)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins cannellini beans (400g)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar of pickled chillies",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Quarter the mushrooms and dice the onion, capsicum and garlic.",
+       "min": 12
+      },
+      {
+       "text": "Brown the mushrooms in batches in the oil.",
+       "min": 10
+      },
+      {
+       "text": "Add the onion, garlic and capsicum and cook.",
+       "min": 5
+      },
+      {
+       "text": "Stir in the paprika, cumin, crushed tomatoes, stock and drained cannellini beans.",
+       "min": 3
+      },
+      {
+       "text": "Cover and simmer until thick.",
+       "min": 30
+      },
+      {
+       "text": "Cook the rice and stir through the butter.",
+       "min": 15
+      },
+      {
+       "text": "Serve with sliced pickled chilli.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ration pack chocolate orange pots",
@@ -399,7 +524,9 @@
      "text": "Top the pots with whipped cream, the candied zest and crumbled shortbread.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Nui Dat Vietnamese iced coffee",
@@ -444,7 +571,9 @@
      "text": "Fill with ice and stir again until cold.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

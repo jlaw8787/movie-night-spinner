@@ -46,7 +46,9 @@
      "text": "Wrap each in paper, slipping a gold foil ticket under one wrapper.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Nut room spiced roasted nuts",
@@ -109,7 +111,9 @@
      "text": "Cool and break apart.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Augustus Gloop's bratwurst and pretzels",
@@ -178,7 +182,80 @@
      "text": "Serve together with plenty of wholegrain mustard.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Augustus Gloop's vegetarian bratwurst and pretzels",
+     "prep_min": 15,
+     "cook_min": 27,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar sauerkraut, 500g",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green apple",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "caraway seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian bratwurst-style sausages",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft pretzels",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar wholegrain mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the sauerkraut with the grated apple, apple juice and caraway.",
+       "min": 20
+      },
+      {
+       "text": "Grill the vegetarian sausages over medium heat, turning, until browned all over.",
+       "min": 12
+      },
+      {
+       "text": "Warm the pretzels at 180C.",
+       "min": 5
+      },
+      {
+       "text": "Serve together with plenty of wholegrain mustard.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Blueberry pie and ice cream",
@@ -245,7 +322,9 @@
      "text": "Cool before slicing, then serve with ice cream.",
      "min": 180
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chocolate river hot chocolate",
@@ -292,7 +371,9 @@
      "text": "Pour into four mugs.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -86,7 +86,9 @@
      "text": "Stir in the cream and heat through. Season with pepper and serve with oyster crackers and chives.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Watermelon toss buffalo wings",
@@ -173,7 +175,9 @@
      "text": "Melt the butter with the hot sauce and toss the wings through it. Serve with the dip and celery.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mullins family roast beef and gravy",
@@ -262,7 +266,158 @@
      "text": "Whisk the flour into the pan juices, add the stock and simmer to a gravy.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mullins family nut roast and gravy",
+     "prep_min": 30,
+     "cook_min": 73,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "walnuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.2,
+       "u": "kg",
+       "item": "potatoes, quartered",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "carrots, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the onion, garlic and mushrooms in a little of the oil until soft and dry.",
+       "min": 10
+      },
+      {
+       "text": "Chop the walnuts fine and mix with the mushrooms, lentils, breadcrumbs, eggs, cheddar, thyme and mustard. Press into a lined loaf tin.",
+       "min": 10
+      },
+      {
+       "text": "Parboil the potatoes, drain, rough up and toss in the rest of the oil.",
+       "min": 12
+      },
+      {
+       "text": "Roast the nut roast and the potatoes at 200C.",
+       "min": 50
+      },
+      {
+       "text": "Toss the carrots in the honey and add for the last 25 minutes of roasting.",
+       "min": 3
+      },
+      {
+       "text": "Rest the nut roast in the tin before turning out and slicing.",
+       "min": 10
+      },
+      {
+       "text": "Melt the butter, whisk in the flour, add the stock and soy sauce and simmer to a gravy.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Boston cream pie",
@@ -351,7 +506,9 @@
      "text": "Melt the chocolate with the cream and pour over the top.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ashburn and Mullins whiskey sour",
@@ -416,7 +573,85 @@
      "text": "Top the foam with a couple of dashes of bitters and drop in a cherry.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Ashburn and Mullins whiskey sour (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "egg whites (from 4 eggs)",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar cocktail cherries",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the tea bags in the boiling water for 5 minutes, remove them and chill the tea.",
+       "min": 15
+      },
+      {
+       "text": "Shake 60ml of the tea, a drop of vanilla, the lemon juice, sugar syrup and egg white hard without ice in a jar or shaker. Repeat for each drink.",
+       "min": 6
+      },
+      {
+       "text": "Add ice and shake again, then strain into short glasses over fresh ice.",
+       "min": 3
+      },
+      {
+       "text": "Dot the foam with a few drops of syrup from the cherry jar and drop in a cherry.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -102,7 +102,9 @@
      "text": "Serve the samosas hot with the mint yoghurt.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Monastery momos with chilli tomato sauce",
@@ -195,7 +197,9 @@
      "text": "Blitz the tomatoes, chillies, remaining garlic, salt and vinegar, then simmer to make the sauce.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Safari grilled chicken with chapati",
@@ -302,7 +306,118 @@
      "text": "Toss the tomatoes, onion, coriander and lime juice for the kachumbari and serve with the chicken and chapati.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Safari grilled haloumi with chapati",
+     "prep_min": 25,
+     "cook_min": 34,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "tomatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime, juiced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the lemon juice, garlic, chilli flakes, paprika and some of the oil and coat the haloumi.",
+       "min": 5
+      },
+      {
+       "text": "Leave the haloumi to marinate while you make the chapati.",
+       "min": 15
+      },
+      {
+       "text": "Mix the flour, salt, remaining oil and warm water into a dough, knead, then rest.",
+       "min": 20
+      },
+      {
+       "text": "Roll the dough into rounds and dry-fry each side in a hot pan.",
+       "min": 10
+      },
+      {
+       "text": "Grill the haloumi, turning once, until golden and charred.",
+       "min": 6
+      },
+      {
+       "text": "Toss the tomatoes, onion, coriander and lime juice for the kachumbari and serve with the haloumi and chapati.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Coconut and cardamom mandazi",
@@ -375,7 +490,9 @@
      "text": "Serve warm with honey.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Shikaka passionfruit lime cooler",
@@ -444,7 +561,9 @@
      "text": "Stir and finish with mint.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

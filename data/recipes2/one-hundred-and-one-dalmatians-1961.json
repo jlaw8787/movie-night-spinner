@@ -66,7 +66,9 @@
      "text": "Bake at 200C until golden and crisp.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Barn honey shortbread with warm milk dip",
@@ -143,7 +145,9 @@
      "text": "Warm the milk with the remaining honey and the vanilla. Serve in small cups for dunking.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Roger and Anita's shepherd's pie",
@@ -238,7 +242,118 @@
      "text": "Bake at 200C until golden.",
      "min": 25
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Roger and Anita's shepherdess pie",
+     "prep_min": 25,
+     "cook_min": 63,
+     "make_ahead": "Up to 1 day, assemble and bake when needed",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "cans brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onion and grate the carrots.",
+       "min": 8
+      },
+      {
+       "text": "Brown the mushrooms with the onion and carrot in the oil, then stir in the tomato paste.",
+       "min": 10
+      },
+      {
+       "text": "Add the lentils, peas and stock and simmer until thick. Season with salt and pepper.",
+       "min": 20
+      },
+      {
+       "text": "Peel and chop the potatoes, boil until tender, then mash with butter and milk.",
+       "min": 20
+      },
+      {
+       "text": "Spread the lentils in a dish and top with the mash.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 200C until golden.",
+       "min": 25
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Black and white cookies",
@@ -331,7 +446,9 @@
      "text": "Leave to set.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Thunderbolt black and white shake",
@@ -400,7 +517,9 @@
      "text": "Top with whipped cream and chocolate drops for spots.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

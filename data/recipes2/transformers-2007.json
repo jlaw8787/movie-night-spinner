@@ -72,7 +72,9 @@
      "text": "Add sour cream and spring onion.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mission City loaded chicken nachos",
@@ -135,7 +137,9 @@
      "text": "Finish with salsa and sour cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ron's backyard ribs",
@@ -210,7 +214,92 @@
      "text": "Shred the cabbage, grate the carrot and toss with mayonnaise for coleslaw.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ron's backyard barbecue cauliflower",
+     "prep_min": 20,
+     "cook_min": 37,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "small cauliflowers, cut into thick wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "small cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the cauliflower with the oil, paprika, sugar and salt and wrap in foil.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 180C until just tender.",
+       "min": 25
+      },
+      {
+       "text": "Brush with barbecue sauce and char over hot coals.",
+       "min": 12
+      },
+      {
+       "text": "Shred the cabbage, grate the carrot and toss with mayonnaise for coleslaw.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "AllSpark cube brownies",
@@ -277,7 +366,9 @@
      "text": "Cut into neat cubes and dust with glitter.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Motor oil chocolate shakes",
@@ -324,7 +415,9 @@
      "text": "Drizzle with chocolate topping and serve straight away.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

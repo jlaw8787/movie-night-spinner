@@ -56,7 +56,9 @@
      "text": "Spread the toasts with ricotta and spoon the cherries on top.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Falcon wings",
@@ -119,7 +121,9 @@
      "text": "Toss the wings through the glaze and serve with napkins.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Sam's Louisiana gumbo",
@@ -210,7 +214,118 @@
      "text": "Cook the rice and serve the gumbo over it.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sam's Louisiana gumbo (vegetarian)",
+     "prep_min": 18,
+     "cook_min": 81,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 75,
+       "u": "ml",
+       "item": "vegetable oil, divided",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery stalks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "vegetarian sausages",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can red kidney beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "okra",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onion, capsicum and celery and slice the sausages, mushrooms and okra.",
+       "min": 15
+      },
+      {
+       "text": "Brown the sausages and mushrooms in 1 tbsp of the oil, then lift out.",
+       "min": 8
+      },
+      {
+       "text": "Cook the flour in the remaining oil, stirring, until dark brown.",
+       "min": 20
+      },
+      {
+       "text": "Add the onion, capsicum and celery and soften them.",
+       "min": 8
+      },
+      {
+       "text": "Add the okra, beans, paprika and stock and simmer, cooking the rice while it bubbles.",
+       "min": 40
+      },
+      {
+       "text": "Return the sausages and mushrooms, simmer 5 minutes and serve over the rice.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Cherry blossom pavlova",
@@ -277,7 +392,9 @@
      "text": "Top the pavlova with cream, cherries and rose petals.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ponchatoula strawberry lemon fizz",
@@ -334,7 +451,9 @@
      "text": "Top with soda water, stir gently, and finish with a halved strawberry and lemon peel.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

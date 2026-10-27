@@ -84,7 +84,9 @@
      "text": "Stir the mustard into the chutney and serve alongside.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Brown butter roast chestnuts",
@@ -139,7 +141,9 @@
      "text": "Melt the butter until golden brown, add the rosemary and toss the chestnuts through with sea salt. Serve in paper cones.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Scrooge's prize turkey with sage stuffing",
@@ -242,7 +246,130 @@
      "text": "Rest the turkey. Make gravy from the pan juices with the flour and stock.",
      "min": 13
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Scrooge's prize mushroom wellington with sage stuffing",
+     "prep_min": 35,
+     "cook_min": 70,
+     "make_ahead": "Wellington can be assembled up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 70,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch sage, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "apples, peeled and diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the mushrooms in 20g of the butter until all the liquid is gone. Cool.",
+       "min": 15
+      },
+      {
+       "text": "Fry the onion in 30g of the butter, then mix with the breadcrumbs, sage and 1 egg for the stuffing.",
+       "min": 8
+      },
+      {
+       "text": "Overlap the pastry sheets, spread with the stuffing, spoon the mushrooms down the middle, roll up, seal and brush with the other egg, beaten.",
+       "min": 12
+      },
+      {
+       "text": "Roast the chopped potatoes in the oil at 200C. After 10 minutes, add the wellington on a lined tray and bake 40 minutes until deep golden.",
+       "min": 50
+      },
+      {
+       "text": "Meanwhile simmer the apples with the sugar and a splash of water until soft.",
+       "min": 10
+      },
+      {
+       "text": "Rest the wellington. Melt the remaining butter, stir in the flour, then whisk in the stock and soy sauce for a gravy.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Cratchit Christmas pudding with custard",
@@ -327,7 +454,9 @@
      "text": "Turn out the pudding, top with a holly sprig and serve with both.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Smoking bishop spiced orange punch",
@@ -396,7 +525,9 @@
      "text": "Ladle into heatproof glasses with an orange slice in each.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -50,7 +50,9 @@
      "text": "Lay out on a plastic platter with crackers. It is the vibe",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pool room prawns",
@@ -113,7 +115,9 @@
      "text": "Serve with lemon wedges, and put the platter in the pool room after",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Sal's rissoles",
@@ -214,7 +218,124 @@
      "text": "Boil and mash the potatoes with butter, and cook the peas",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sal's lentil rissoles",
+     "prep_min": 30,
+     "cook_min": 50,
+     "make_ahead": "Rissoles up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins brown lentils (400g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roughly mash the lentils and mix with one grated onion, the carrot, egg, breadcrumbs, cheddar and 1 tbsp of the soy sauce.",
+       "min": 10
+      },
+      {
+       "text": "Shape into eight rissoles and chill for 15 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Fry in 2 tbsp of the oil until browned on both sides, then set aside.",
+       "min": 10
+      },
+      {
+       "text": "Fry the other onion, sliced, in the remaining oil, stir in the flour, then the stock and remaining soy sauce to make a gravy.",
+       "min": 10
+      },
+      {
+       "text": "Return the rissoles and simmer gently in the gravy.",
+       "min": 10
+      },
+      {
+       "text": "Boil and mash the potatoes with the butter, and cook the peas.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sal's sponge cake",
@@ -297,7 +418,9 @@
      "text": "Dust with icing sugar",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bonnie Doon lager and lime shandy",
@@ -342,7 +465,55 @@
      "text": "Stir once gently and add a lime wedge. Make lemon, lime and lemonade ones for the kids and the driver",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Bonnie Doon lager and lime shandy (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "alcohol-free lager (4 stubbies of 375 ml)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "lemonade, cold",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill four pot glasses in the freezer",
+       "min": 15
+      },
+      {
+       "text": "Squeeze lime juice into each",
+       "min": 2
+      },
+      {
+       "text": "Pour in cold alcohol-free lager, tilting the glass, then top with cold lemonade",
+       "min": 2
+      },
+      {
+       "text": "Stir once gently and add a lime wedge",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

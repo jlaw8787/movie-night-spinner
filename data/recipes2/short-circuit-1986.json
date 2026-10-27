@@ -62,7 +62,9 @@
      "text": "Toss the other half with the parmesan and cracked pepper.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Stephanie's food truck egg rolls",
@@ -135,7 +137,9 @@
      "text": "Drain on paper towel.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Food truck double burger",
@@ -202,7 +206,78 @@
      "text": "Stack two patties per bun with pickles and mustard.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Food truck double burger (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle yellow mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roll the plant-based mince into eight balls and slice the onion very thinly.",
+       "min": 10
+      },
+      {
+       "text": "Heat a griddle until very hot. Put a few onion slices on each ball and smash flat, onion side down.",
+       "min": 3
+      },
+      {
+       "text": "Flip after 90 seconds, add a slice of cheese and cook briefly.",
+       "min": 4
+      },
+      {
+       "text": "Toast the buns.",
+       "min": 3
+      },
+      {
+       "text": "Stack two patties per bun with pickles and mustard.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Blackberry cobbler",
@@ -281,7 +356,9 @@
      "text": "Serve warm with vanilla ice cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Stephanie's raspberry lemon crush",
@@ -350,7 +427,9 @@
      "text": "Top with cold soda water, stir gently and garnish with a lemon wheel and mint.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -74,7 +74,9 @@
      "text": "Dip the tomatoes in buttermilk then seasoned cornmeal and fry in the bacon fat until golden, turning once.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Honeycomb and biscuits",
@@ -137,7 +139,9 @@
      "text": "Serve warm with the remaining butter, honey and a chunk of honeycomb.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Whistle Stop barbecue",
@@ -218,7 +222,104 @@
      "text": "Dress the pork with the sauce. Toss the cabbage with mayonnaise for slaw and serve with white bread. The secret's in the sauce.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Whistle Stop barbecue (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "Cook the mushrooms up to 2 days ahead, reheat in the sauce",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "king brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf white bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Shred the mushrooms lengthways with a fork and toss with the oil, paprika, brown sugar, garlic and salt.",
+       "min": 10
+      },
+      {
+       "text": "Roast on a lined tray at 200C, turning once, until browned and crisp at the edges.",
+       "min": 25
+      },
+      {
+       "text": "Simmer the tomato sauce with the vinegar until slightly thick.",
+       "min": 10
+      },
+      {
+       "text": "Toss the mushrooms through the sauce. Toss the cabbage with mayonnaise for slaw and serve with white bread. The secret's in the sauce.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pecan pie",
@@ -285,7 +386,9 @@
      "text": "Cool before slicing.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Whistle Stop peach sweet tea",
@@ -354,7 +457,9 @@
      "text": "Pour over ice in tall glasses with lemon, fresh peach slices and mint.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -58,7 +58,9 @@
      "text": "Bake at 200C until golden and bubbling.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pastoral grape platter",
@@ -111,7 +113,9 @@
      "text": "Set a little pot of honey in the middle for drizzling.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lamb moussaka",
@@ -202,7 +206,108 @@
      "text": "Bake at 180C until golden.",
      "min": 40
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lentil and mushroom moussaka",
+     "prep_min": 35,
+     "cook_min": 95,
+     "make_ahead": "Up to 1 day, reheats well",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins brown lentils (400g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cinnamon",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "diced tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the eggplants 1cm thick, brush with most of the oil and grill or fry until golden.",
+       "min": 25
+      },
+      {
+       "text": "Fry the onion and mushrooms in the rest of the oil with the cinnamon until browned, add the lentils and tomatoes and simmer.",
+       "min": 25
+      },
+      {
+       "text": "Melt the butter, stir in the flour, whisk in the milk until thick and beat in the egg off the heat.",
+       "min": 20
+      },
+      {
+       "text": "Layer eggplant and lentil mix in a dish and pour over the bechamel.",
+       "min": 20
+      },
+      {
+       "text": "Bake at 180C until golden.",
+       "min": 40
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Meringue kisses",
@@ -257,7 +362,9 @@
      "text": "Dust with edible glitter and serve with raspberries.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bacchus grape and rosemary spritz",
@@ -326,7 +433,9 @@
      "text": "Pour into goblets over the frozen grapes, top with sparkling water and garnish with rosemary.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

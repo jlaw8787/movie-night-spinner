@@ -80,7 +80,9 @@
      "text": "Serve with the tartare and lemon wedges.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Powerline concert nachos",
@@ -179,7 +181,9 @@
      "text": "Mash the avocados with lime and salt, dice the tomatoes with coriander, and top the nachos with guacamole, salsa and sour cream.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pete's RV barbecue sausages",
@@ -254,7 +258,86 @@
      "text": "Serve the sausages in rolls with the onions, mustard and tomato sauce.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pete's RV barbecue sausages (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "Onions up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "thick vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "long rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brush the vegetarian sausages with half the oil and grill over medium coals or a barbecue, turning often, until browned and hot through.",
+       "min": 12
+      },
+      {
+       "text": "Fry the onions in the rest of the oil until soft and sweet.",
+       "min": 10
+      },
+      {
+       "text": "Grill the corn and brush with butter.",
+       "min": 10
+      },
+      {
+       "text": "Serve the sausages in the rolls with the onions, mustard and tomato sauce.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bigfoot campsite s'mores",
@@ -291,7 +374,9 @@
      "text": "Squash each between two biscuits with a square of milk chocolate and leave 30 seconds so the chocolate starts to melt.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Concert night cherry slushie",
@@ -334,7 +419,9 @@
      "text": "Pour into tall cups and serve with straws before it melts.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -68,7 +68,9 @@
      "text": "Serve with lemon and tartare sauce.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hide and clap cornmeal johnnycakes",
@@ -127,7 +129,9 @@
      "text": "Serve with butter and maple syrup.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Warrens' New England fish bake",
@@ -192,7 +196,86 @@
      "text": "Boil the potatoes until tender and cook the peas. Toss both with butter.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Warrens' New England banana blossom bake",
+     "prep_min": 20,
+     "cook_min": 33,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cans banana blossom in brine (about 510 g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zested and juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "crackers, crushed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter, divided",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the banana blossom dry, pull into chunky flakes, toss with the lemon juice and salt and lay in a baking dish.",
+       "min": 8
+      },
+      {
+       "text": "Melt 80 g of the butter and mix with the crackers, lemon zest and parsley, then press on top.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 200C until the crust is golden.",
+       "min": 20
+      },
+      {
+       "text": "Boil the potatoes until tender and cook the peas. Toss both with the remaining butter.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Harrisville farmhouse apple crisp",
@@ -273,7 +356,9 @@
      "text": "Serve with pouring cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rhode Island coffee cabinet",
@@ -332,7 +417,9 @@
      "text": "Pour into chilled glasses, top with whipped cream and grate chocolate over each.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

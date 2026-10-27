@@ -68,7 +68,9 @@
      "text": "Mix the honey with the Dijon for dipping and pile the footballs on a platter.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hawkmen sky city wings",
@@ -127,7 +129,9 @@
      "text": "Toss the wings through the glaze and scatter with sesame seeds.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Zarkov's rocket fuel curry",
@@ -192,7 +196,86 @@
      "text": "Cook the rice. Stir the Thai basil through the curry and serve with the rice.",
      "min": 22
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Zarkov's rocket fuel tofu curry",
+     "prep_min": 15,
+     "cook_min": 32,
+     "make_ahead": "Curry up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "firm tofu, cubed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetarian red curry paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "Thai basil leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the tofu in the oil until golden, then lift out.",
+       "min": 8
+      },
+      {
+       "text": "Fry the curry paste in the same pan until fragrant.",
+       "min": 2
+      },
+      {
+       "text": "Pour in the coconut milk and soy sauce and simmer, adding the tofu and capsicum for the last 5 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Cook the rice. Stir the Thai basil through the curry and serve with the rice.",
+       "min": 22
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mongo red and gold trifle",
@@ -255,7 +338,9 @@
      "text": "Finish with gold sprinkles just before serving.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Princess Aura's red punch",
@@ -304,7 +389,9 @@
      "text": "Top with soda water, squeeze in a wedge of lime and stir once. Serve straight away.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

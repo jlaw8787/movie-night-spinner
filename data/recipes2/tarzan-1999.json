@@ -60,7 +60,9 @@
      "text": "Pile on banana leaves with the passionfruit pulp, a squeeze of lime and a pinch of chilli salt.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Terk's camp raid crackers",
@@ -113,7 +115,9 @@
      "text": "Tip out messily on a board.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Professor Porter's expedition curry",
@@ -200,7 +204,104 @@
      "text": "Cook the rice and serve with mango chutney.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Professor Porter's expedition curry (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 43,
+     "make_ahead": "Keeps 3 days chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "piece ginger, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "curry powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "sweet potato, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins chickpeas (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "basmati rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mango chutney",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the onion in oil with the ginger, garlic and curry powder.",
+       "min": 10
+      },
+      {
+       "text": "Add the sweet potato, chickpeas, tomatoes and coconut milk.",
+       "min": 8
+      },
+      {
+       "text": "Simmer for 30 minutes until the sweet potato is tender.",
+       "min": 30
+      },
+      {
+       "text": "Cook the rice and serve with mango chutney.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Banana fritters",
@@ -265,7 +366,9 @@
      "text": "Roll in cinnamon sugar and drizzle with honey.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jane's peach iced tea",
@@ -340,7 +443,9 @@
      "text": "Serve over ice with fresh peach slices and mint.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

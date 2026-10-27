@@ -48,7 +48,9 @@
      "text": "Pile up like a vault full of gold and serve with fig jam.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dragon escape chilli wings",
@@ -115,7 +117,9 @@
      "text": "Scatter with sesame seeds.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Lamb and stout stew over mash",
@@ -210,7 +214,342 @@
      "text": "Serve over the mash with crusty bread on the side.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Lamb and stout stew over mash",
+     "prep_min": 25,
+     "cook_min": 213,
+     "make_ahead": "Stew up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "lamb shoulder, diced",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "instant coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the onions and carrots.",
+       "min": 15
+      },
+      {
+       "text": "Brown the lamb in batches in the oil.",
+       "min": 12
+      },
+      {
+       "text": "Add the onions, carrots, stock, coffee and water.",
+       "min": 3
+      },
+      {
+       "text": "Simmer until tender.",
+       "min": 180
+      },
+      {
+       "text": "Peel and boil the potatoes, then mash with butter and milk.",
+       "min": 25
+      },
+      {
+       "text": "Serve over the mash with crusty bread on the side.",
+       "min": 3
+      }
+     ]
+    },
+    "veg": {
+     "n": "Mushroom and stout stew over mash",
+     "prep_min": 25,
+     "cook_min": 83,
+     "make_ahead": "Stew up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "field and Swiss brown mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "stout",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the onions and carrots.",
+       "min": 15
+      },
+      {
+       "text": "Brown the mushrooms in the oil in batches.",
+       "min": 12
+      },
+      {
+       "text": "Soften the onions and carrots in the same pot, then stir in the flour.",
+       "min": 8
+      },
+      {
+       "text": "Add the mushrooms, stout, stock, soy and lentils and simmer until thick.",
+       "min": 45
+      },
+      {
+       "text": "Peel and boil the potatoes, then mash with butter and milk.",
+       "min": 25
+      },
+      {
+       "text": "Serve over the mash with crusty bread on the side.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Mushroom and stout stew over mash",
+     "prep_min": 25,
+     "cook_min": 83,
+     "make_ahead": "Stew up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "field and Swiss brown mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "extra vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the onions and carrots.",
+       "min": 15
+      },
+      {
+       "text": "Brown the mushrooms in the oil in batches.",
+       "min": 12
+      },
+      {
+       "text": "Soften the onions and carrots in the same pot, then stir in the flour.",
+       "min": 8
+      },
+      {
+       "text": "Add the mushrooms, all the stock, malt vinegar, soy and lentils and simmer until thick.",
+       "min": 45
+      },
+      {
+       "text": "Peel and boil the potatoes, then mash with butter and milk.",
+       "min": 25
+      },
+      {
+       "text": "Serve over the mash with crusty bread on the side.",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Platform nine and three-quarters treacle tart",
@@ -279,7 +618,9 @@
      "text": "Serve warm with a pour of cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Victory pumpkin juice",
@@ -344,7 +685,9 @@
      "text": "Pour over ice.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

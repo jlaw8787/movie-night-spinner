@@ -62,7 +62,9 @@
      "text": "Serve on a dark board under low light.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hallelujah Mountains bao",
@@ -141,7 +143,9 @@
      "text": "Fill with pork, pickled cucumber, coriander and crushed peanuts.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hometree hunter's spit-roast",
@@ -214,7 +218,102 @@
      "text": "Serve with warm flatbreads and the salad.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hometree hunter's whole roast cauliflower",
+     "prep_min": 20,
+     "cook_min": 75,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "whole cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "flatbreads",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Crush the garlic and mix with the chopped rosemary, paprika, oil and salt. Trim the cauliflowers and rub them all over.",
+       "min": 10
+      },
+      {
+       "text": "Roast covered at 200C for 30 minutes, then uncovered for 40 minutes until charred and tender.",
+       "min": 70
+      },
+      {
+       "text": "Tear the cauliflower into big chunks.",
+       "min": 5
+      },
+      {
+       "text": "Pick the mint and parsley leaves and toss with the lemon juice into a salad.",
+       "min": 6
+      },
+      {
+       "text": "Serve with warm flatbreads and the salad.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Tree of Souls pudding",
@@ -283,7 +382,9 @@
      "text": "Top with toasted coconut.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pandora blue lagoon",
@@ -340,7 +441,67 @@
      "text": "Garnish with a pineapple wedge.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Pandora blue lagoon",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "coconut water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "non-alcoholic blue curacao syrup",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pineapple wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill four glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Pour in coconut water and pineapple juice.",
+       "min": 2
+      },
+      {
+       "text": "Add a splash of blue curacao syrup to each.",
+       "min": 1
+      },
+      {
+       "text": "Garnish with a pineapple wedge.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

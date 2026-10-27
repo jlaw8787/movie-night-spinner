@@ -62,7 +62,9 @@
      "text": "Unwrap and rewrap in baking paper with a paper ticket tucked in.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Golden ticket shortbread",
@@ -123,7 +125,9 @@
      "text": "Sprinkle with caster sugar and gold sprinkles while warm.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "North Pole chicken pot pie",
@@ -220,7 +224,114 @@
      "text": "Bake at 200C until puffed and golden.",
      "min": 30
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "North Pole mushroom pot pie",
+     "prep_min": 25,
+     "cook_min": 40,
+     "make_ahead": "Up to 1 day, reheat to serve",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mushrooms, quartered",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet of puff pastry",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil.",
+       "min": 8
+      },
+      {
+       "text": "Add the onion, carrots and celery and soften.",
+       "min": 8
+      },
+      {
+       "text": "Stir in the flour, cream, thyme, peas and cannellini beans and simmer until thick.",
+       "min": 12
+      },
+      {
+       "text": "Pour into a pie dish, top with pastry and egg wash.",
+       "min": 7
+      },
+      {
+       "text": "Bake at 200C until puffed and golden.",
+       "min": 30
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sleigh bell sugar cookies",
@@ -287,7 +398,9 @@
      "text": "Press in cachous and pipe a red ribbon with tinted icing.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "The hot chocolate",
@@ -344,7 +457,9 @@
      "text": "Top each with whipped cream.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -72,7 +72,9 @@
      "text": "Salt and serve with lemon wedges.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mozzarella in carrozza",
@@ -131,7 +133,9 @@
      "text": "Shallow-fry in 1cm of oil for 2 minutes a side until golden and the cheese melts.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Paul Vitti's veal parm",
@@ -212,7 +216,98 @@
      "text": "Cook the spaghetti and toss in the rest of the passata, heated.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Paul Vitti's eggplant parm",
+     "prep_min": 30,
+     "cook_min": 18,
+     "make_ahead": "Crumb up to 3 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "neutral oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 700,
+       "u": "ml",
+       "item": "passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mozzarella, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "spaghetti",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the eggplants lengthways 1 cm thick, salt and leave 10 minutes, then pat dry. Dust in the flour, dip in the egg and coat in the breadcrumbs.",
+       "min": 18
+      },
+      {
+       "text": "Shallow-fry in the oil for 2 to 3 minutes a side until golden.",
+       "min": 10
+      },
+      {
+       "text": "Warm about half the passata, top each cutlet with sauce, mozzarella and parmesan and grill until bubbling.",
+       "min": 8
+      },
+      {
+       "text": "Cook the spaghetti and toss in the rest of the passata, heated.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "You're good, you cannoli",
@@ -265,7 +360,9 @@
      "text": "Pipe the filling in just before serving.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dr. Sobel's calming Negroni",
@@ -320,7 +417,71 @@
      "text": "Strain over a big ice cube in a tumbler and add a slice of orange.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Dr. Sobel's calming Negroni (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "non-alcoholic bitter red aperitif",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large ice cubes",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "For each drink, stir equal parts non-alcoholic gin, aperitif and grape juice with a drop of balsamic over ice for 20 seconds.",
+       "min": 3
+      },
+      {
+       "text": "Strain over a big ice cube in a tumbler and add a slice of orange.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

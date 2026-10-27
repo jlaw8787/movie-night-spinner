@@ -80,7 +80,9 @@
      "text": "Slice with a wet knife and serve with soy and pickled ginger.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Yeti's lemon snow cones",
@@ -127,7 +129,9 @@
      "text": "Crush or shave the ice, pack into four cups and pour the syrup over. Eat fast before it melts.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Teriyaki chicken",
@@ -196,7 +200,92 @@
      "text": "Reduce the marinade to a glaze and brush over. Cook the rice and steam the bok choy.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Teriyaki tofu",
+     "prep_min": 10,
+     "cook_min": 57,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu (2 blocks)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch bok choy",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Press the tofu between paper towel and cut into thick slabs. Mix the soy, honey, vegetable stock and sugar and pour over the tofu.",
+       "min": 10
+      },
+      {
+       "text": "Marinate in the fridge.",
+       "min": 30
+      },
+      {
+       "text": "Lift out the tofu, dust with cornflour and grill or pan fry in the oil until charred and crisp.",
+       "min": 12
+      },
+      {
+       "text": "Reduce the marinade to a glaze and brush over. Cook the rice and steam the bok choy.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Boo's raspberry jam thumbprint cookies",
@@ -265,7 +354,9 @@
      "text": "Cool on the tray and dust with icing sugar.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Scream canister pineapple slushie",
@@ -318,7 +409,9 @@
      "text": "Pour into four clear glasses and sprinkle sherbet over each so it fizzes. Serve straight away with spoon straws.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

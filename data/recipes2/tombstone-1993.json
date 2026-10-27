@@ -62,7 +62,9 @@
      "text": "Drain and halve to serve.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Faro night cornbread",
@@ -131,7 +133,9 @@
      "text": "Beat softened butter with the honey and serve alongside.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Earp brothers' chilli",
@@ -194,7 +198,110 @@
      "text": "Braise covered until tender. Serve with the cornbread.",
      "min": 180
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Earp brothers' bean and mushroom chilli",
+     "prep_min": 20,
+     "cook_min": 78,
+     "make_ahead": "Up to 3 days, better the next day",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "sweet potato",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "dried chillies",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins black beans (400g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin kidney beans (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the dried chillies in hot water, then blitz. Cut the mushrooms and sweet potato into chunks and dice the onion and garlic.",
+       "min": 20
+      },
+      {
+       "text": "Brown the mushrooms in batches in the oil.",
+       "min": 10
+      },
+      {
+       "text": "Soften the onion and garlic, add the chillies, cumin and tomatoes.",
+       "min": 8
+      },
+      {
+       "text": "Add the sweet potato, black beans, kidney beans, mushrooms, water and salt and simmer covered until thick. Serve with the cornbread.",
+       "min": 60
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Josephine's peach pie",
@@ -257,7 +364,9 @@
      "text": "Cool slightly and serve with cream.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "\"I'm your huckleberry\" rye old fashioned",
@@ -314,7 +423,79 @@
      "text": "Squeeze a strip of orange peel over the glass near a lit match so the oil flares, then drop it in.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "\"I'm your huckleberry\" rye old fashioned (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "smoky black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "demerara sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice, for stirring",
+       "aisle": "Frozen"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "large ice cubes, to serve",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the tea bags in the boiling water for 5 minutes, remove them, stir in the demerara sugar until dissolved and cool.",
+       "min": 15
+      },
+      {
+       "text": "Stir 60ml of the sweet tea with a drop of vanilla and a strip of orange zest over ice, one drink at a time.",
+       "min": 6
+      },
+      {
+       "text": "Strain over one large ice cube in a tumbler.",
+       "min": 2
+      },
+      {
+       "text": "Squeeze a strip of orange peel over the glass near a lit match so the oil flares, then drop it in.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

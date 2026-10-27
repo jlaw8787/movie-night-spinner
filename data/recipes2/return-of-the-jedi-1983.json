@@ -68,7 +68,9 @@
      "text": "Drain and serve hot with sweet chilli sauce and lime wedges.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Endor forest berries",
@@ -127,7 +129,9 @@
      "text": "Serve the fruit in a bowl with the mascarpone alongside.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ewok honey roast chicken",
@@ -206,7 +210,100 @@
      "text": "Rest and pull apart to share.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ewok honey roast haloumi",
+     "prep_min": 20,
+     "cook_min": 52,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin chickpeas (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes and carrots into chunks and the haloumi into 8 slabs.",
+       "min": 12
+      },
+      {
+       "text": "Toss the potatoes, carrots and chickpeas with the oil and season.",
+       "min": 5
+      },
+      {
+       "text": "Roast at 220C for 35 minutes.",
+       "min": 35
+      },
+      {
+       "text": "Lay the haloumi on top and roast 10 minutes more.",
+       "min": 10
+      },
+      {
+       "text": "Warm the honey with the garlic and thyme, brush over the haloumi and roast until glossy.",
+       "min": 7
+      },
+      {
+       "text": "Pile onto a board to share.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ewok forest berry crumble",
@@ -287,7 +384,9 @@
      "text": "Rest, then serve warm with vanilla ice cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Blue pineapple lime milk",
@@ -330,7 +429,9 @@
      "text": "Pour into four glasses and drink straight away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

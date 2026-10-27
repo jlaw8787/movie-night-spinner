@@ -70,7 +70,9 @@
      "text": "Cut off the crusts and cut each into 3 fingers.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Kansas City Mickey's fried ravioli",
@@ -145,7 +147,9 @@
      "text": "Shower the ravioli with parmesan and serve.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Frank Vitale's linguine with clams",
@@ -210,7 +214,230 @@
      "text": "Cook the linguine 1 minute short, finish it in the pan juices and toss with parsley and more olive oil.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Frank Vitale's linguine with clams",
+     "prep_min": 15,
+     "cook_min": 37,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "clams",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "linguine",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the clams in salted water for 30 minutes to purge, then rinse.",
+       "min": 32
+      },
+      {
+       "text": "Gently fry the garlic and chilli in some of the olive oil, add the clams, verjuice and water, cover and steam for 4 minutes until open.",
+       "min": 8
+      },
+      {
+       "text": "Cook the linguine 1 minute short, finish it in the pan juices and toss with parsley and more olive oil.",
+       "min": 12
+      }
+     ]
+    },
+    "veg": {
+     "n": "Frank Vitale's linguine with oyster mushrooms",
+     "prep_min": 15,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "oyster mushrooms, torn",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "linguine",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zested and juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Tear the mushrooms into strips and slice the garlic.",
+       "min": 8
+      },
+      {
+       "text": "Fry the mushrooms in half the olive oil over high heat until golden at the edges.",
+       "min": 8
+      },
+      {
+       "text": "Add the garlic and chilli for 1 minute, then the wine, and simmer for 3 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Cook the linguine 1 minute short, finish it in the pan with a splash of pasta water, then toss with the lemon, parsley and more olive oil.",
+       "min": 12
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Frank Vitale's linguine with oyster mushrooms",
+     "prep_min": 15,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "oyster mushrooms, torn",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "linguine",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zested and juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Tear the mushrooms into strips and slice the garlic.",
+       "min": 8
+      },
+      {
+       "text": "Fry the mushrooms in half the olive oil over high heat until golden at the edges.",
+       "min": 8
+      },
+      {
+       "text": "Add the garlic and chilli for 1 minute, then the stock, and simmer for 3 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Cook the linguine 1 minute short, finish it in the pan with a splash of pasta water, then toss with the lemon, parsley and more olive oil.",
+       "min": 12
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Fuhgeddaboudit tiramisu",
@@ -285,7 +512,85 @@
      "text": "Dust with cocoa and chill overnight.",
      "min": 480
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Fuhgeddaboudit tiramisu",
+     "prep_min": 30,
+     "cook_min": 480,
+     "make_ahead": "Make 1 day ahead, keep chilled; best overnight",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "egg yolks",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mascarpone",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "egg whites",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "strong espresso, cooled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 24,
+       "u": "",
+       "item": "savoiardi biscuits",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cocoa powder",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the yolks and sugar until pale, then fold in the mascarpone.",
+       "min": 10
+      },
+      {
+       "text": "Whip the egg whites stiff and fold into the cream.",
+       "min": 8
+      },
+      {
+       "text": "Mix the espresso with the vanilla extract, dip the biscuits quickly and layer with the cream in a dish.",
+       "min": 12
+      },
+      {
+       "text": "Dust with cocoa and chill overnight.",
+       "min": 480
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Auction house gin and elderflower collins",
@@ -350,7 +655,75 @@
      "text": "Strain over the glasses, top with soda and add a sprig of mint.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Auction house gin and elderflower collins (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 160,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "elderflower cordial",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel 8 long ribbons from the cucumber and curl two into each of four tall glasses, then fill with ice.",
+       "min": 4
+      },
+      {
+       "text": "Shake the non-alcoholic gin, cordial and lemon juice with ice for 10 seconds.",
+       "min": 2
+      },
+      {
+       "text": "Strain over the glasses, top with soda and add a sprig of mint.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

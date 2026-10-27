@@ -58,7 +58,9 @@
      "text": "Tear warm and serve with butter and honey.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Niima Outpost dates",
@@ -117,7 +119,9 @@
      "text": "Drizzle with honey and arrange on a board with the dried apricots and figs.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Maz Kanata's slow-roast lamb feast",
@@ -200,7 +204,108 @@
      "text": "Roast the vegetables alongside for the last 40 minutes. Stir the garlic into the yoghurt.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Maz Kanata's slow-roast cauliflower feast",
+     "prep_min": 15,
+     "cook_min": 90,
+     "make_ahead": "Rub the cauliflowers up to 1 day ahead, roast fresh",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "flatbreads",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed, for the yoghurt",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mixed vegetables for roasting (pumpkin, zucchini, red onion)",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Trim the cauliflowers, keeping them whole, and rub with the garlic, rosemary, paprika, most of the oil and the salt.",
+       "min": 10
+      },
+      {
+       "text": "Roast covered at 200C until a knife goes in with little resistance.",
+       "min": 45
+      },
+      {
+       "text": "Uncover, add the vegetables and chickpeas tossed in the rest of the oil, and roast until the cauliflower is charred and the chickpeas are crisp.",
+       "min": 40
+      },
+      {
+       "text": "Stir the garlic into the yoghurt.",
+       "min": 5
+      },
+      {
+       "text": "Warm the flatbreads and pull the cauliflower apart at the table.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ahch-To island scones",
@@ -253,7 +358,9 @@
      "text": "Serve warm with strawberry jam and whipped cream.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Millennium Falcon spiced mocha",
@@ -312,7 +419,9 @@
      "text": "Divide the coffee between four metal mugs and pour in the hot chocolate milk. Top with whipped cream and dust with cocoa.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

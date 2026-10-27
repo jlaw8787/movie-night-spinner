@@ -96,7 +96,9 @@
      "text": "Fill each with rice, chicken, cucumber, mint and coriander, spoon over the dressing and finish with peanuts",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Silent soft pretzels",
@@ -153,7 +155,9 @@
      "text": "Serve warm, and dip quietly",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Foil baked trout with lemon and dill",
@@ -220,7 +224,84 @@
      "text": "Toss with the remaining butter",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Foil baked haloumi with lemon and dill",
+     "prep_min": 14,
+     "cook_min": 36,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 70,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "new potatoes",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the zucchini and haloumi and lay them on four sheets of foil with the lemon slices, dill and garlic.",
+       "min": 8
+      },
+      {
+       "text": "Dot with some of the butter and wrap each into a parcel.",
+       "min": 4
+      },
+      {
+       "text": "Bake at 200C and open at the table.",
+       "min": 18
+      },
+      {
+       "text": "Boil the potatoes until tender.",
+       "min": 18
+      },
+      {
+       "text": "Toss with the remaining butter.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Soft vanilla custard",
@@ -309,7 +390,9 @@
      "text": "Top with the sliced pears",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Waterfall cucumber and mint spritz",
@@ -372,7 +455,9 @@
      "text": "Fill glasses with crushed ice rather than cubes so they stay quiet, pour over and top with a mint sprig",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

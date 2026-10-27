@@ -68,7 +68,9 @@
      "text": "Serve topped with chives and white pepper. Anyone can cook.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Remy's lightning mushroom and cheese",
@@ -125,7 +127,9 @@
      "text": "Rest a few minutes before serving.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Paris market jambon-beurre and brie",
@@ -176,7 +180,9 @@
      "text": "Fill with folds of the ham and slices of brie, close and cut into short lengths to share.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ratatouille",
@@ -261,7 +267,9 @@
      "text": "Rest briefly before serving.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sweetbreads à la Gusteau",
@@ -328,7 +336,70 @@
      "text": "Deglaze the pan with the chicken stock and lemon juice, reduce by half, then swirl in the remaining 20g cold butter and spoon the sauce over the sweetbreads.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "King oyster mushrooms à la Gusteau",
+     "prep_min": 20,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms lengthways 2cm thick, score both sides in a crosshatch and season with salt.",
+       "min": 10
+      },
+      {
+       "text": "Dust with the flour and pan-fry in 30g of the butter for 4 minutes a side until deep golden.",
+       "min": 12
+      },
+      {
+       "text": "Deglaze the pan with the stock and lemon juice, reduce by half, then swirl in the remaining 20g cold butter and spoon the sauce over the mushrooms.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ego's fresh perspective grape spritz",
@@ -397,7 +468,9 @@
      "text": "Pour into wine glasses over ice, top with sparkling water and garnish with thyme and a blackberry.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

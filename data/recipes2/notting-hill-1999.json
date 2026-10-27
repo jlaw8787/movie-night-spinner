@@ -52,7 +52,9 @@
      "text": "Serve on a board with a bowl of green olives.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Spike's sandwich",
@@ -109,7 +111,9 @@
      "text": "Cut into quarters.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Creamy tarragon chicken",
@@ -198,7 +202,280 @@
      "text": "Boil and mash the potatoes with butter and steam the beans.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Creamy tarragon chicken",
+     "prep_min": 14,
+     "cook_min": 60,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "chicken thighs",
+       "aisle": "Meat"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the potatoes, slice the mushrooms and chop the tarragon.",
+       "min": 12
+      },
+      {
+       "text": "Brown the chicken in oil.",
+       "min": 12
+      },
+      {
+       "text": "Add the mushrooms and cook until golden.",
+       "min": 8
+      },
+      {
+       "text": "Pour in the stock and verjuice and simmer.",
+       "min": 20
+      },
+      {
+       "text": "Stir in the cream and tarragon.",
+       "min": 2
+      },
+      {
+       "text": "Boil and mash the potatoes with butter and steam the beans.",
+       "min": 20
+      }
+     ]
+    },
+    "veg": {
+     "n": "Creamy tarragon mushrooms and butter beans",
+     "prep_min": 14,
+     "cook_min": 42,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the potatoes, thickly slice the mushrooms and chop the tarragon.",
+       "min": 12
+      },
+      {
+       "text": "Brown the mushrooms in the oil in batches until golden.",
+       "min": 12
+      },
+      {
+       "text": "Pour in the wine, add the butter beans and simmer until reduced by half.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the cream and tarragon.",
+       "min": 2
+      },
+      {
+       "text": "Boil and mash the potatoes with butter and steam the beans.",
+       "min": 20
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Creamy tarragon mushrooms and butter beans (alcohol-free)",
+     "prep_min": 14,
+     "cook_min": 42,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the potatoes, thickly slice the mushrooms and chop the tarragon.",
+       "min": 12
+      },
+      {
+       "text": "Brown the mushrooms in the oil in batches until golden.",
+       "min": 12
+      },
+      {
+       "text": "Pour in the stock and vinegar, add the butter beans and simmer until reduced by half.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the cream and tarragon.",
+       "min": 2
+      },
+      {
+       "text": "Boil and mash the potatoes with butter and steam the beans.",
+       "min": 20
+      }
+     ]
+    }
+   }
   },
   {
    "n": "The last brownie",
@@ -261,7 +538,9 @@
      "text": "Cool and cut into squares.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Spilled orange juice mimosas",
@@ -306,7 +585,49 @@
      "text": "Twist a strip of orange peel over each and hang on the rim. For non-drinkers, top with sparkling water.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Spilled orange juice mimosas (alcohol-free)",
+     "prep_min": 13,
+     "cook_min": 60,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Squeeze the oranges and strain the juice.",
+       "min": 8
+      },
+      {
+       "text": "Chill the juice and the alcohol-free sparkling wine.",
+       "min": 60
+      },
+      {
+       "text": "Pour orange juice into each of four flutes, then slowly top with the alcohol-free sparkling wine.",
+       "min": 3
+      },
+      {
+       "text": "Twist a strip of orange peel over each and hang on the rim.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

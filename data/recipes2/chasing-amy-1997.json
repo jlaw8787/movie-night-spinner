@@ -62,7 +62,9 @@
      "text": "Pile the chips on a tray, pour over the gravy, cover with mozzarella and grill until melted.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Comic strip pizza bagels",
@@ -109,7 +111,9 @@
      "text": "Grill until bubbling. Cut into halves to share.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Jersey Italian hot dogs",
@@ -178,7 +182,80 @@
      "text": "Split the pizza bread rounds, fill with franks and the potato and pepper mix and finish with mustard.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jersey Italian hot dogs (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 25,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "green capsicums",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pizza bread rounds",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the potatoes and slice the capsicums and onions.",
+       "min": 12
+      },
+      {
+       "text": "Fry the potatoes in oil until golden, then add the capsicums and onions and cook until soft.",
+       "min": 20
+      },
+      {
+       "text": "Fry the vegetarian sausages until blistered.",
+       "min": 6
+      },
+      {
+       "text": "Split the pizza bread rounds, fill with sausages and the potato and pepper mix and finish with mustard.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Diner rice pudding",
@@ -235,7 +312,9 @@
      "text": "Dust with cinnamon before serving.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jersey diner root beer float",
@@ -282,7 +361,9 @@
      "text": "Whip the cream and finish each with a swirl of cream and a cherry. Serve with a long spoon and a straw.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

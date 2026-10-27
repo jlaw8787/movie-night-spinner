@@ -90,7 +90,9 @@
      "text": "Fry over medium heat until golden on both sides. Cut into fingers and serve with the pickles.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wake table soda bread",
@@ -149,7 +151,9 @@
      "text": "Reduce the oven to 200C and bake until golden and hollow when tapped. Serve warm with the butter and cheddar.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Corned beef and cabbage",
@@ -238,7 +242,146 @@
      "text": "Slice the beef thick and serve with the vegetables, butter and mustard.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Corned celeriac and cabbage",
+     "prep_min": 20,
+     "cook_min": 68,
+     "make_ahead": "Celeriac can be simmered 1 day ahead, keep chilled in its liquid",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "celeriacs (about 800g each)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "whole cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar hot English mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the onion, celeriacs, potatoes and carrots. Cut each celeriac into 4 thick slabs, cut the potatoes and carrots into chunks and quarter the cabbage.",
+       "min": 15
+      },
+      {
+       "text": "Fill a large pot with water and add the onion, bay leaves, peppercorns, cloves, brown sugar, malt vinegar and salt. Bring to a gentle simmer.",
+       "min": 5
+      },
+      {
+       "text": "Add the celeriac and simmer gently.",
+       "min": 20
+      },
+      {
+       "text": "Add the potatoes and carrots and keep simmering, adding the cabbage for the last 10 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Melt half the butter, stir in the flour, whisk in the milk and simmer until thick. Stir in the parsley.",
+       "min": 10
+      },
+      {
+       "text": "Lift out the celeriac and brown it in the rest of the butter in a hot pan.",
+       "min": 8
+      },
+      {
+       "text": "Serve the celeriac with the vegetables, parsley sauce and mustard.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Apple pie with cheddar",
@@ -295,7 +438,9 @@
      "text": "Lay the cheddar on top for the last stretch of baking so it melts.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rooney wake Irish coffee",
@@ -346,7 +491,61 @@
      "text": "Float the cream on top over the back of a spoon. Do not stir.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Rooney wake Irish coffee (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 5,
+     "make_ahead": "Whip the cream up to 2 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 700,
+       "u": "ml",
+       "item": "strong brewed coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "tsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whip the cream to soft ribbons so it just holds its shape. Brew the coffee.",
+       "min": 4
+      },
+      {
+       "text": "Warm 4 heatproof glasses with hot water and tip it out.",
+       "min": 3
+      },
+      {
+       "text": "Add brown sugar, a few drops of vanilla and coffee to each glass and stir until dissolved.",
+       "min": 3
+      },
+      {
+       "text": "Float the cream on top over the back of a spoon. Do not stir.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

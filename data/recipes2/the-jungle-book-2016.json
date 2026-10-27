@@ -46,7 +46,9 @@
      "text": "Spread with ricotta, drizzle with more honey and scatter with walnuts.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "King Louie's fruit",
@@ -111,7 +113,9 @@
      "text": "Sprinkle with salt mixed with chilli flakes.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wolf pack lamb",
@@ -180,7 +184,86 @@
      "text": "Pull the lamb apart and serve on a board with warm flatbread and garlic yoghurt.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Wolf pack cumin roast pumpkin",
+     "prep_min": 18,
+     "cook_min": 60,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "kg",
+       "item": "butternut pumpkin, in thick wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet flatbread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the pumpkin with the cumin, 3 crushed garlic cloves, oil and salt and lay in a roasting tray.",
+       "min": 10
+      },
+      {
+       "text": "Roast covered at 200C for 20 minutes, then uncover, add the chickpeas and roast until the pumpkin is soft and charred at the edges.",
+       "min": 60
+      },
+      {
+       "text": "Crush the last garlic clove and stir it through the yoghurt.",
+       "min": 3
+      },
+      {
+       "text": "Pile the pumpkin and chickpeas on a board and serve with warm flatbread and garlic yoghurt.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Honeycomb crunch",
@@ -241,7 +324,9 @@
      "text": "Break into chunks and dip half of each in melted dark chocolate.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mango lassi",
@@ -294,7 +379,9 @@
      "text": "Pour over ice in tall glasses.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

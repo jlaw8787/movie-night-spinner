@@ -56,7 +56,9 @@
      "text": "Put an egg and a bit of bacon on each round and sprinkle with chives.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Dead Meat's last chips",
@@ -129,7 +131,9 @@
      "text": "Salt the chips and serve with the aioli.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Airbase rib eye, corn and slaw",
@@ -200,7 +204,98 @@
      "text": "Rest the steaks and serve with corn and slaw.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Airbase cauliflower steak, corn and slaw",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large heads cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Shred the cabbage and carrots and toss with the mayonnaise, vinegar, sugar and salt.",
+       "min": 10
+      },
+      {
+       "text": "Cut two thick steaks from the middle of each cauliflower and brush with the olive oil, smoked paprika and salt.",
+       "min": 5
+      },
+      {
+       "text": "Grill the cauliflower steaks and corn over medium high heat, turning, until charred and tender.",
+       "min": 18
+      },
+      {
+       "text": "Serve the cauliflower steaks with corn and slaw.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Custard tarts",
@@ -271,7 +366,9 @@
      "text": "Cool before serving.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Officers' club Moscow mule",
@@ -340,7 +437,79 @@
      "text": "Garnish with a lime wheel and a slapped mint sprig.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Officers' club Moscow mule (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "copper or steel mugs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "piece fresh ginger, 3cm, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 720,
+       "u": "ml",
+       "item": "spicy ginger beer, cold",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "mint sprigs",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill the mugs in the freezer, then fill with ice.",
+       "min": 15
+      },
+      {
+       "text": "Muddle a few slices of ginger with the lime juice and divide between the mugs.",
+       "min": 2
+      },
+      {
+       "text": "Top with ginger beer and stir once from the bottom.",
+       "min": 1
+      },
+      {
+       "text": "Garnish with a lime wheel and a slapped mint sprig.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

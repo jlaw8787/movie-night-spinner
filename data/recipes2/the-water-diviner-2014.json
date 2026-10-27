@@ -104,7 +104,9 @@
      "text": "Serve with hummus, olives and feta.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gallipoli Anzac biscuits",
@@ -181,7 +183,9 @@
      "text": "Cool on the trays to crisp up.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Major Hasan's lamb kofte",
@@ -304,7 +308,158 @@
      "text": "Serve on warm flatbread with yoghurt, salad and chilli butter.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Major Hasan's chickpea and haloumi kofte",
+     "prep_min": 40,
+     "cook_min": 13,
+     "make_ahead": "Mix up to 1 day ahead, cook fresh",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins chickpeas (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "haloumi, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sumac",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "flatbreads",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mash the chickpeas and mix with the haloumi, grated onion, 2 crushed garlic cloves, cumin, sumac, paprika, half the chopped parsley, breadcrumbs and egg. Chill for 15 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Shape into 12 long kofte.",
+       "min": 6
+      },
+      {
+       "text": "Fry in the oil over medium heat, turning, until crisp all over.",
+       "min": 10
+      },
+      {
+       "text": "Mix the yoghurt with the last crushed garlic clove.",
+       "min": 3
+      },
+      {
+       "text": "Toss the diced tomatoes and sliced red onion with the rest of the parsley and the lemon juice.",
+       "min": 8
+      },
+      {
+       "text": "Melt the butter with the chilli flakes.",
+       "min": 3
+      },
+      {
+       "text": "Serve on warm flatbread with the yoghurt, salad and chilli butter.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Istanbul pistachio and walnut baklava",
@@ -391,7 +546,9 @@
      "text": "Pour the syrup over the hot baklava and leave to soak and cool.",
      "min": 180
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Divining rod spiced apple tea",
@@ -464,7 +621,9 @@
      "text": "Pour into small heatproof glasses and serve hot with a thin apple slice.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

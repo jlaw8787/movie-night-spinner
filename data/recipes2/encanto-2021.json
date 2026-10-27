@@ -52,7 +52,9 @@
      "text": "Cook on a griddle for 5 minutes a side until golden and crisp.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pandebono cheese bread",
@@ -105,7 +107,9 @@
      "text": "Bake at 200C for 15 minutes until puffed and golden. Eat warm.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Shredded beef, rice, beans and plantains",
@@ -190,7 +194,100 @@
      "text": "Serve it all on one plate.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Shredded mushroom, rice, beans and plantains",
+     "prep_min": 30,
+     "cook_min": 55,
+     "make_ahead": "Mushroom braise up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tin black beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "green plantains, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "oil, for frying",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Shred the king oyster mushrooms lengthways with a fork.",
+       "min": 10
+      },
+      {
+       "text": "Fry the mushrooms in 2 tbsp of the oil until golden, add the onions and cumin, then the tomatoes and simmer for 25 minutes until thick.",
+       "min": 35
+      },
+      {
+       "text": "Cook the rice and warm the black beans.",
+       "min": 20
+      },
+      {
+       "text": "Fry the plantain slices in 2 tbsp of the oil until golden.",
+       "min": 10
+      },
+      {
+       "text": "Fry the eggs in the last of the oil.",
+       "min": 5
+      },
+      {
+       "text": "Serve it all on one plate.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Colombian cheese buñuelos",
@@ -253,7 +350,9 @@
      "text": "Drain and serve warm.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Colombian hot chocolate",
@@ -300,7 +399,9 @@
      "text": "Fish it out with a spoon.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

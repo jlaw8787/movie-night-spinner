@@ -80,7 +80,9 @@
      "text": "Roll tight and slice into spirals.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Candy cane gram peppermint bark",
@@ -141,7 +143,9 @@
      "text": "Tie the remaining candy canes in bundles of four with ribbon.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Halloween party tacos",
@@ -240,7 +244,122 @@
      "text": "Spoon into shells with toppings and sour cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Halloween party lentil tacos",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "400g cans brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "walnuts, finely chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "taco shells",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "iceberg lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the diced onion, garlic and walnuts in the oil until browned, then add the lentils and fry hard.",
+       "min": 12
+      },
+      {
+       "text": "Stir in cumin, paprika and tomato paste, then loosen with stock and simmer.",
+       "min": 10
+      },
+      {
+       "text": "Warm the taco shells and prepare grated cheddar, lettuce and tomato.",
+       "min": 8
+      },
+      {
+       "text": "Spoon into shells with toppings and sour cream.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pink frosted cupcakes",
@@ -319,7 +438,9 @@
      "text": "Pipe on top and add sprinkles.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wednesday raspberry pink lemonade",
@@ -382,7 +503,9 @@
      "text": "Add lemon wheels and a few whole raspberries and pour into four glasses.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -80,7 +80,9 @@
      "text": "Serve with mustard.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mirror image cheese stacks",
@@ -123,7 +125,9 @@
      "text": "Put two identical stacks on each side of every plate, mirrored exactly.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Beach house barbecue chicken and corn",
@@ -186,7 +190,84 @@
      "text": "Serve with soft rolls.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Beach house barbecue tofu and corn",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetarian barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft rolls",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Press the tofu dry, cut into thick slabs and brush with the oil.",
+       "min": 5
+      },
+      {
+       "text": "Grill the tofu and corn over coals until charred.",
+       "min": 20
+      },
+      {
+       "text": "Brush the tofu with barbecue sauce in the last minutes.",
+       "min": 5
+      },
+      {
+       "text": "Mix the cabbage with the mayo for slaw.",
+       "min": 8
+      },
+      {
+       "text": "Serve with soft rolls.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rabbit-free carrot cake",
@@ -275,7 +356,9 @@
      "text": "Beat the cream cheese with the icing sugar and lemon zest and frost the cake.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Holding hands punch",
@@ -334,7 +417,9 @@
      "text": "Float orange slices on top and hold hands while you drink it.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

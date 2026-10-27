@@ -66,7 +66,9 @@
      "text": "Mix with the pretzels.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Duckie's dance-off popcorn",
@@ -121,7 +123,9 @@
      "text": "Leave to set.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Andie's dad's pot roast",
@@ -202,7 +206,104 @@
      "text": "Rest the beef, slice or pull apart and serve with the vegetables and stock.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Andie's dad's pot roast cauliflower",
+     "prep_min": 20,
+     "cook_min": 90,
+     "make_ahead": "Vegetables and stock up to 1 day ahead, cook the cauliflower fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large whole cauliflower, leaves trimmed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, quartered",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes, peeled and chunked",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 180C. Rub the cauliflower with the oil, salt and pepper and brown it all over in a heavy casserole.",
+       "min": 12
+      },
+      {
+       "text": "Tuck the onions, carrots, garlic and potatoes around it. Whisk the tomato paste and soy into the stock, pour in, cover and braise.",
+       "min": 60
+      },
+      {
+       "text": "Uncover, baste the cauliflower with the stock and roast until golden and a knife slides in easily.",
+       "min": 30
+      },
+      {
+       "text": "Cut the cauliflower into wedges and serve with the vegetables and stock.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Two-dress prom cake",
@@ -291,7 +392,9 @@
      "text": "Cut both cakes in half and join one vanilla and one strawberry half with buttercream. Cover half pink and half white and pipe a seam. Cut into four portions.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Prom punch",
@@ -350,7 +453,9 @@
      "text": "Ladle into glasses over ice.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

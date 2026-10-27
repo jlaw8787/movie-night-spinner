@@ -86,7 +86,9 @@
      "text": "Mix the barbecue sauce, mustard and vinegar for dipping.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "98th percentile devilled eggs",
@@ -167,7 +169,9 @@
      "text": "Top the eggs with bacon, a dusting of smoked paprika and chives.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Tuohy Thanksgiving turkey at the table",
@@ -292,7 +296,134 @@
      "text": "Serve with cranberry sauce.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Tuohy Thanksgiving sage butter pumpkin at the table",
+     "prep_min": 37,
+     "cook_min": 108,
+     "make_ahead": "Gravy and sides up to 1 day ahead, roast the pumpkin fresh",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "kg",
+       "item": "Kent pumpkin, cut into 8 wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of sage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "cornbread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 450,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar of cranberry sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop half the sage, mix with a third of the butter and rub over the pumpkin wedges.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 200C until tender and caramelised at the edges.",
+       "min": 45
+      },
+      {
+       "text": "Fry the diced onion and celery in a little butter, then mix with the crumbled cornbread, remaining chopped sage, egg and 250ml of the stock. Bake until golden.",
+       "min": 45
+      },
+      {
+       "text": "Peel, chop and boil the potatoes until tender and mash with butter and milk.",
+       "min": 30
+      },
+      {
+       "text": "Blanch the green beans and toss in butter.",
+       "min": 5
+      },
+      {
+       "text": "Melt the last of the butter, stir in the flour, then whisk in the rest of the stock and the soy sauce and simmer for gravy.",
+       "min": 8
+      },
+      {
+       "text": "Serve with cranberry sauce.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ferdinand the Bull pecan pie",
@@ -375,7 +506,9 @@
      "text": "Cool for 1 hour and serve with ice cream.",
      "min": 60
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Memphis peach sweet tea",
@@ -448,7 +581,9 @@
      "text": "Fill glasses with ice and peach slices, pour over the tea and finish with mint and lemon wheels.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

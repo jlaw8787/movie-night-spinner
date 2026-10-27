@@ -68,7 +68,9 @@
      "text": "Warm the tortillas and pile in the steak with diced onion, coriander and salsa.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "1950s soda fountain fries",
@@ -123,7 +125,9 @@
      "text": "Toss with fine salt and serve in paper boats with tomato sauce.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mum's red chili pork pozole",
@@ -212,7 +216,114 @@
      "text": "Serve with cabbage, radish, oregano and lime.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mum's red chilli pozole (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 40,
+     "make_ahead": "Better the next day, keep chilled",
+     "ingredients": [
+      {
+       "q": 5,
+       "u": "",
+       "item": "dried chillies",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "oyster mushrooms, torn",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "can hominy, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can pinto beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "small cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "radishes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toast the dried chillies and soak in hot water.",
+       "min": 10
+      },
+      {
+       "text": "Blend the chillies with garlic and a little of the soaking water.",
+       "min": 5
+      },
+      {
+       "text": "Fry the mushrooms and onion in the oil until browned.",
+       "min": 10
+      },
+      {
+       "text": "Add the stock, chilli sauce, hominy and beans and simmer.",
+       "min": 40
+      },
+      {
+       "text": "Serve with cabbage, radish, oregano and lime.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Donna's arroz con leche",
@@ -281,7 +392,9 @@
      "text": "Dust with ground cinnamon.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Del-Fi Records malted shakes",
@@ -322,7 +435,9 @@
      "text": "Pour into the glasses, add a straw to each and serve straight away.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

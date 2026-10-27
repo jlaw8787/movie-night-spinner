@@ -74,7 +74,9 @@
      "text": "Spread on the toasts and top with tomatoes, basil and a little honey.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ham and pea arancini",
@@ -165,7 +167,9 @@
      "text": "Warm the marinara and serve alongside.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Meatballs and rigatoni",
@@ -246,7 +250,92 @@
      "text": "Cook the rigatoni, toss through the sauce with plenty of parmesan.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lentil meatballs and rigatoni",
+     "prep_min": 20,
+     "cook_min": 42,
+     "make_ahead": "Up to 2 days, reheat gently",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins brown lentils (400g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cans crushed tomatoes (400 g each)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "basil leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "rigatoni, cooked weight",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mash the lentils and mix with the breadcrumbs, egg, 50g of the parmesan and the salt, then roll into balls.",
+       "min": 12
+      },
+      {
+       "text": "Brown the meatballs gently in the oil.",
+       "min": 10
+      },
+      {
+       "text": "Add the tomatoes and torn basil and simmer gently.",
+       "min": 25
+      },
+      {
+       "text": "Cook the rigatoni and toss through the sauce with the remaining parmesan.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Yellow dress lemon tart",
@@ -315,7 +404,9 @@
      "text": "Chill until firm, then serve with whipped cream.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Courtside ginger lime shandy",
@@ -362,7 +453,57 @@
      "text": "Top with the ginger beer, drop in a lime wedge and mint sprig and serve straight away.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Courtside ginger lime shandy (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Up to 2 hours, keep cold",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "ginger beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs mint",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill 4 tall cups or glasses.",
+       "min": 3
+      },
+      {
+       "text": "Squeeze a quarter of a lime into each, then pour in the alcohol-free lager, tilting the cup.",
+       "min": 3
+      },
+      {
+       "text": "Top with the ginger beer, drop in a lime wedge and mint sprig and serve straight away.",
+       "min": 4
+      }
+     ]
+    }
+   }
   }
  ]
 }

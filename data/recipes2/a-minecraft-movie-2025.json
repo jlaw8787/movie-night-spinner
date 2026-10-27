@@ -76,7 +76,9 @@
      "text": "Finish with bacon, the sour cream and chives.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pixel chocolate cookies",
@@ -135,7 +137,9 @@
      "text": "Cut into neat squares while warm.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chicken jockey drumsticks",
@@ -178,7 +182,70 @@
      "text": "Roast at 200C for 45 minutes, turning and basting twice, until sticky and charred at the edges.",
      "min": 48
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cauliflower jockey drumsticks",
+     "prep_min": 8,
+     "cook_min": 35,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, cut into big florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the cauliflower florets with the honey, the chilli flakes, the smoked paprika, the oil and salt.",
+       "min": 7
+      },
+      {
+       "text": "Roast at 220C for 35 minutes, turning and basting twice, until sticky and charred at the edges.",
+       "min": 36
+      },
+      {
+       "text": "Pile onto a platter with the sticky pan juices spooned over.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pumpkin pie",
@@ -241,7 +308,9 @@
      "text": "Cool and serve with the whipped cream.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Milk bucket chocolate malt shake",
@@ -302,7 +371,9 @@
      "text": "Serve with straws.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

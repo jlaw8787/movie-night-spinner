@@ -84,7 +84,9 @@
      "text": "Blitz parsley, garlic, vinegar and oil for chimichurri.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Polka-Dot Man's spotty skewers",
@@ -141,7 +143,9 @@
      "text": "Dot the balsamic all over the plate.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jungle mission chicken",
@@ -226,7 +230,102 @@
      "text": "Make a salsa of diced tomato, red onion and lime.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jungle mission chilli lime haloumi",
+     "prep_min": 16,
+     "cook_min": 41,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red chillies",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can black beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the haloumi in the oil, the juice of two limes, crushed garlic and chopped chilli.",
+       "min": 8
+      },
+      {
+       "text": "Leave to marinate.",
+       "min": 15
+      },
+      {
+       "text": "Cook the rice and warm the drained beans.",
+       "min": 20
+      },
+      {
+       "text": "Grill the haloumi until charred on both sides.",
+       "min": 6
+      },
+      {
+       "text": "Make a salsa of diced tomato, red onion, the last lime and salt.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Starro starfish cookies",
@@ -287,7 +386,9 @@
      "text": "Ice pink and blue with icing sugar, colouring and a little water, and pipe white dots along each arm.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Corto Maltese mango batida",
@@ -346,7 +447,69 @@
      "text": "Pour into four glasses and add a measure of rum to the adult glasses only.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Corto Maltese mango batida (alcohol-free)",
+     "prep_min": 11,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "mangoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cups ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the mangoes and juice the limes.",
+       "min": 6
+      },
+      {
+       "text": "Blend the mango, coconut milk, lime juice, sugar, vanilla and ice until smooth.",
+       "min": 3
+      },
+      {
+       "text": "Pour into four glasses.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

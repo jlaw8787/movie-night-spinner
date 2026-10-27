@@ -58,7 +58,9 @@
      "text": "Pipe small rounds and bake at 200C until puffed.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bullseye's caramel apple wedges",
@@ -105,7 +107,9 @@
      "text": "Dip the wedges halfway and roll in peanuts, then set on baking paper in the fridge.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Prospector's chilli",
@@ -190,7 +194,114 @@
      "text": "Serve with sour cream and squares of cornbread.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Prospector's sweet potato and bean chilli",
+     "prep_min": 17,
+     "cook_min": 75,
+     "make_ahead": "Up to 3 days, better the next day",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "sweet potato, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "chipotles in adobo",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins kidney beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin black beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet cornbread mix",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the sweet potato, onion and garlic.",
+       "min": 12
+      },
+      {
+       "text": "Soften the onion and garlic in the oil, then add the chopped chipotles and cumin.",
+       "min": 8
+      },
+      {
+       "text": "Add the sweet potato, tomatoes, drained beans and water and simmer until thick and the sweet potato is tender.",
+       "min": 45
+      },
+      {
+       "text": "Meanwhile bake the cornbread as the packet says.",
+       "min": 25
+      },
+      {
+       "text": "Serve with sour cream and squares of cornbread.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Jessie's yodelling cookies",
@@ -263,7 +374,9 @@
      "text": "Mix the icing sugar with the egg white, tint some red and ice the cooled cookies in cowgirl colours.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jessie's yee-haw sarsaparilla float",
@@ -314,7 +427,9 @@
      "text": "Perch a biscuit on each rim and serve with long spoons and straws.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

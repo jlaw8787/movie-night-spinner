@@ -86,7 +86,9 @@
      "text": "Top each crisp with avocado, a prawn, a few onion slivers and a coriander leaf.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Times Square halal cart chicken skewers",
@@ -203,7 +205,9 @@
      "text": "Serve the skewers on pita with white sauce, chilli sauce and lettuce.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Midnight garlic prawn linguine",
@@ -306,7 +310,312 @@
      "text": "Top with the crumbs.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Midnight garlic prawn linguine",
+     "prep_min": 12,
+     "cook_min": 18,
+     "make_ahead": "Eat straight away",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "linguine",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "green prawns",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "fish stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the garlic and chop the parsley.",
+       "min": 8
+      },
+      {
+       "text": "Cook the linguine in salted water until al dente.",
+       "min": 10
+      },
+      {
+       "text": "Toast the panko in oil until golden.",
+       "min": 4
+      },
+      {
+       "text": "Heat the butter and oil, add the garlic and chilli flakes and cook briefly.",
+       "min": 1
+      },
+      {
+       "text": "Add the prawns and cook until pink, then add the fish stock and bubble.",
+       "min": 3
+      },
+      {
+       "text": "Toss in the drained pasta with a splash of pasta water, lemon zest and juice and the parsley.",
+       "min": 3
+      },
+      {
+       "text": "Top with the crumbs.",
+       "min": 1
+      }
+     ]
+    },
+    "veg": {
+     "n": "Midnight garlic mushroom linguine",
+     "prep_min": 12,
+     "cook_min": 21,
+     "make_ahead": "Eat straight away",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "linguine",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mixed mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the garlic and mushrooms and chop the parsley.",
+       "min": 8
+      },
+      {
+       "text": "Cook the linguine in salted water until al dente.",
+       "min": 10
+      },
+      {
+       "text": "Toast the panko in a spoon of the oil until golden.",
+       "min": 4
+      },
+      {
+       "text": "Heat the butter and the rest of the oil, fry the mushrooms until golden, then add the garlic and chilli flakes for a minute.",
+       "min": 6
+      },
+      {
+       "text": "Add the wine and bubble.",
+       "min": 1
+      },
+      {
+       "text": "Toss in the drained pasta with a splash of pasta water, lemon zest and juice and the parsley.",
+       "min": 3
+      },
+      {
+       "text": "Top with the crumbs.",
+       "min": 1
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Midnight garlic mushroom linguine (alcohol free)",
+     "prep_min": 12,
+     "cook_min": 21,
+     "make_ahead": "Eat straight away",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "linguine",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mixed mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the garlic and mushrooms and chop the parsley.",
+       "min": 8
+      },
+      {
+       "text": "Cook the linguine in salted water until al dente.",
+       "min": 10
+      },
+      {
+       "text": "Toast the panko in a spoon of the oil until golden.",
+       "min": 4
+      },
+      {
+       "text": "Heat the butter and the rest of the oil, fry the mushrooms until golden, then add the garlic and chilli flakes for a minute.",
+       "min": 6
+      },
+      {
+       "text": "Add the stock and vinegar and bubble.",
+       "min": 1
+      },
+      {
+       "text": "Toss in the drained pasta with a splash of pasta water, lemon zest and juice and the parsley.",
+       "min": 3
+      },
+      {
+       "text": "Top with the crumbs.",
+       "min": 1
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Ingrid's resolutions chocolate fondue",
@@ -383,7 +692,9 @@
      "text": "Serve with strawberries, marshmallows, brownie cubes and pretzels on skewers.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Gin French 75 with champagne",
@@ -446,7 +757,63 @@
      "text": "For anyone not drinking, mix lemon juice and syrup with sparkling white grape juice.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Gin French 75 with champagne (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "Syrup up to 1 week ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag of ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill the flutes. Shake the non-alcoholic gin, lemon juice and sugar syrup with ice and strain into each flute.",
+       "min": 10
+      },
+      {
+       "text": "Top slowly with the chilled alcohol-free sparkling wine.",
+       "min": 3
+      },
+      {
+       "text": "Add a long twist of lemon peel.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

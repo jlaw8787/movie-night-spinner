@@ -52,7 +52,9 @@
      "text": "Put in the slider buns with pickles and sauce.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Fake plant shop crudités",
@@ -119,7 +121,9 @@
      "text": "Blitz the sour cream with parsley, chives and a squeeze of lemon for the dip.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sunset Strip chipotle chicken tacos",
@@ -214,7 +218,112 @@
      "text": "Warm the small tortillas and fill with avocado, chicken, onion and coriander.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sunset Strip chipotle cauliflower tacos",
+     "prep_min": 20,
+     "cook_min": 57,
+     "make_ahead": "Marinate up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, in small florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin chipotle in adobo",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "avocados",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch coriander",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the chipotle in adobo, crushed garlic, the juice of 2 limes, the cumin, oil and half the salt.",
+       "min": 5
+      },
+      {
+       "text": "Toss the cauliflower in the marinade and leave for 15 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Slice the red onion thin and soak in the juice of 1 lime and a pinch of the salt for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Roast the cauliflower at 230C until charred at the edges.",
+       "min": 25
+      },
+      {
+       "text": "Mash the avocados with the last lime and the rest of the salt.",
+       "min": 5
+      },
+      {
+       "text": "Warm the tortillas and fill with avocado, cauliflower, onion and coriander.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Neon pink raspberry cheesecake cups",
@@ -301,7 +410,9 @@
      "text": "Finish with raspberries and grated white chocolate.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Club cosmopolitan",
@@ -348,7 +459,57 @@
      "text": "Make it just before the film starts and keep the jug cold.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Club cosmopolitan (alcohol-free)",
+     "prep_min": 4,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "cranberry juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Shake the cranberry juice, orange juice and lime juice hard with ice for each glass.",
+       "min": 2
+      },
+      {
+       "text": "Strain into chilled glasses.",
+       "min": 1
+      },
+      {
+       "text": "Make it just before the film starts and keep the jug cold.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

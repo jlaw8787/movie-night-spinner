@@ -76,7 +76,9 @@
      "text": "Wrap in wax paper for a 1968-style picnic",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Black and white popcorn",
@@ -139,7 +141,9 @@
      "text": "Arrange side by side in a shared bowl",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Cellar or upstairs farmhouse stew",
@@ -230,7 +234,108 @@
      "text": "Serve with crusty bread for soaking up the stock",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cellar or upstairs farmhouse stew (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 90,
+     "make_ahead": "Better the next day, keeps 3 days",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "field mushrooms, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "potatoes, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "crusty Italian bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the mushrooms and season them",
+       "min": 7
+      },
+      {
+       "text": "Brown in batches in the oil in a heavy casserole",
+       "min": 10
+      },
+      {
+       "text": "Add the onion, carrots, potatoes, butter beans, stock and thyme",
+       "min": 5
+      },
+      {
+       "text": "Cover and braise at 170C, stirring once, until the potatoes are tender",
+       "min": 85
+      },
+      {
+       "text": "Serve with crusty bread for soaking up the stock",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pantry peach cobbler with cream",
@@ -315,7 +420,9 @@
      "text": "Serve warm with cream",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Long night spiked percolator coffee",
@@ -366,7 +473,61 @@
      "text": "Whip the cream until just pourable and float over the back of a spoon. Skip the whiskey for anyone who wants it plain",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Long night spiked percolator coffee (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 3,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "strong brewed coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the coffee in a stovetop pot or plunger",
+       "min": 6
+      },
+      {
+       "text": "Warm four heatproof glasses with hot water and tip it out",
+       "min": 2
+      },
+      {
+       "text": "Put sugar and a drop of vanilla in each glass, add hot coffee and stir",
+       "min": 2
+      },
+      {
+       "text": "Whip the cream until just pourable and float over the back of a spoon",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

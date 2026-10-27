@@ -64,7 +64,9 @@
      "text": "Arrange the cheeses on a wooden board with grapes, fig jam, walnuts and crackers.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "London afternoon tea scones",
@@ -125,7 +127,9 @@
      "text": "Serve warm with jam and clotted cream.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Beef fillet with potato gratin",
@@ -216,7 +220,112 @@
      "text": "Serve by candlelight on a boat.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Whole roast cauliflower with potato gratin",
+     "prep_min": 25,
+     "cook_min": 81,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the potatoes thinly and layer with the cream, crushed garlic and salt in a dish.",
+       "min": 15
+      },
+      {
+       "text": "Bake the potatoes at 180C.",
+       "min": 60
+      },
+      {
+       "text": "Rub the whole cauliflower with the oil, salt and pepper and roast alongside the potatoes for the last 50 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Melt the butter in a pan, stir in the flour, then whisk in the stock and soy sauce and reduce until glossy.",
+       "min": 10
+      },
+      {
+       "text": "Cook the green beans.",
+       "min": 5
+      },
+      {
+       "text": "Carve the cauliflower into thick wedges and serve with the gratin, gravy and beans by candlelight.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Eton mess",
@@ -271,7 +380,9 @@
      "text": "Spoon into glasses and drizzle with the sauce.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Napa Valley grape and rosemary spritz",
@@ -344,7 +455,9 @@
      "text": "Drop frozen grapes into wine glasses, pour in the juice and top with sparkling water. Finish with a small rosemary sprig.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

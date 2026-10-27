@@ -62,7 +62,9 @@
      "text": "Cool, then drizzle with the icing sugar mixed with lemon juice.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Transit office jam doughnuts",
@@ -93,7 +95,9 @@
      "text": "Roll each straight away in the sugar so it sticks and serve on a plate in the middle of the table.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Transit authority hero",
@@ -158,7 +162,76 @@
      "text": "Close, wrap tightly in paper and cut in half.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Transit authority hero (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "Up to 4 hours ahead, wrapped and chilled",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "long rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices Swiss cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "iceberg lettuce, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the smoked tofu as thin as you can. Split the rolls and spread with mayonnaise.",
+       "min": 5
+      },
+      {
+       "text": "Layer with the tofu, Swiss cheese, lettuce and tomato. Season with salt and pepper.",
+       "min": 6
+      },
+      {
+       "text": "Close, wrap tightly in paper and cut in half.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Transit authority rugelach",
@@ -227,7 +300,9 @@
      "text": "Bake at 180C until golden.",
      "min": 22
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mr Green's honey lemon whisky toddy",
@@ -282,7 +357,69 @@
      "text": "Into each of 4 heatproof glasses put whisky, honey, lemon juice and ginger slices, top with boiling water and stir until the honey dissolves. Add a lemon wheel and a cinnamon stick.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Mr Green's honey lemon whisky toddy (alcohol-free)",
+     "prep_min": 7,
+     "cook_min": 3,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "piece ginger, about 3cm",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cinnamon sticks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "just-boiled water",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Thinly slice the ginger and juice the lemons, keeping a few wheels.",
+       "min": 5
+      },
+      {
+       "text": "Steep a tea bag in each of 4 heatproof glasses of just-boiled water for 3 minutes, then remove.",
+       "min": 3
+      },
+      {
+       "text": "Stir in honey, lemon juice and ginger slices until the honey dissolves. Add a lemon wheel and a cinnamon stick.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

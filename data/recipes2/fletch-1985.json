@@ -92,7 +92,9 @@
      "text": "Hang the prawns around the rim, dust with paprika and serve with lemon wedges and a celery stick.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Beach kiosk fish bites with lime aioli",
@@ -189,7 +191,9 @@
      "text": "Sprinkle the fish with sea salt and chilli flakes and serve with the aioli.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Steak sandwich and a steak sandwich",
@@ -280,7 +284,108 @@
      "text": "Build each roll with mayo, rocket, tomato, steak and onions. Make two each.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mushroom steak sandwich and a mushroom steak sandwich",
+     "prep_min": 20,
+     "cook_min": 19,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices Swiss cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "Turkish rolls, halved",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "hot English mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slowly fry the onions in the butter and sugar until jammy.",
+       "min": 20
+      },
+      {
+       "text": "Season the mushrooms, brush with the oil and sear in a very hot pan, pressing down, until tender.",
+       "min": 8
+      },
+      {
+       "text": "Lay the cheese on the mushrooms and cover briefly to melt.",
+       "min": 1
+      },
+      {
+       "text": "Toast the rolls. Mix the mayonnaise with the mustard.",
+       "min": 3
+      },
+      {
+       "text": "Build each roll with mayo, rocket, tomato, mushrooms and onions, then cut in half so everyone has two.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Country club hot fudge sundaes",
@@ -349,7 +454,9 @@
      "text": "Scoop ice cream into tall glasses, pour over the warm fudge and top with whipped cream, peanuts and a cherry.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Underhills' tab Bloody Mary",
@@ -436,7 +543,97 @@
      "text": "Pour into the glasses and add a celery stick and a lemon wedge.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Underhills' tab Bloody Mary (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "celery salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 900,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "pickle brine",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "Worcestershire sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "hot sauce, several dashes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the celery salt and pepper on a saucer, wet the rims of tall glasses with lemon and dip.",
+       "min": 3
+      },
+      {
+       "text": "Fill the glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Stir the tomato juice, pickle brine, juice of one lemon, horseradish, Worcestershire and hot sauce in a jug.",
+       "min": 3
+      },
+      {
+       "text": "Pour into the glasses and add a celery stick and a lemon wedge.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

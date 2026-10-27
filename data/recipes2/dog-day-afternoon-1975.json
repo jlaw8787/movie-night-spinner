@@ -64,7 +64,9 @@
      "text": "Stir into the sour cream and cream cheese with the chives and salt. Serve with the chips.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Deli hero wedges",
@@ -151,7 +153,9 @@
      "text": "Press down firmly, then cut each hero into 6 wedges.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hostage pizza",
@@ -210,7 +214,70 @@
      "text": "Bake on a preheated tray at the oven's highest setting until bubbling and golden.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hostage pizza (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 58,
+     "make_ahead": "Dough can be made a day ahead",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "grated low-moisture mozzarella",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plant-based pepperoni",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rest the dough at room temperature so it relaxes. Season the tomatoes with salt and oregano.",
+       "min": 60
+      },
+      {
+       "text": "Stretch the bases thin, spread with sauce and top with the mozzarella and plant-based pepperoni.",
+       "min": 10
+      },
+      {
+       "text": "Bake on a preheated tray at the oven's highest setting until bubbling and golden.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Italian ice",
@@ -255,7 +322,9 @@
      "text": "Serve in paper cups.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Heatwave lager with lime and chilli salt",
@@ -304,7 +373,59 @@
      "text": "Squeeze lime juice into each glass, add ice, then pour in the cold lager slowly.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Heatwave lager with lime and chilli salt (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Rim the glasses up to 1 hour ahead",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "flaky sea salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "ice cubes",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt, chilli powder and lime zest on a plate. Run a lime wedge around the rims of 4 chilled glasses and dip in the chilli salt.",
+       "min": 5
+      },
+      {
+       "text": "Squeeze lime juice into each glass, add ice, then pour in the cold alcohol-free lager slowly.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

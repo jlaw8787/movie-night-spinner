@@ -80,7 +80,9 @@
      "text": "Tuck the franks into split mini rolls, spoon over chilli, add mustard and diced onion",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Above-ground pool chips and dip",
@@ -159,7 +161,9 @@
      "text": "Serve with a big bag of ridged potato chips",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Late-night Greek diner gyros",
@@ -252,7 +256,104 @@
      "text": "Warm the pitas and wrap the pork with tzatziki, tomato and red onion",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Late-night Greek diner mushroom gyros",
+     "prep_min": 30,
+     "cook_min": 22,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "cucumber, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed, extra",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pita breads",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms lengthways, toss with the garlic, oregano, lemon juice and oil and marinate for 20 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Griddle the mushrooms, turning once, until charred and tender, then slice thin.",
+       "min": 12
+      },
+      {
+       "text": "Mix the yoghurt with the cucumber and extra garlic for tzatziki.",
+       "min": 8
+      },
+      {
+       "text": "Warm the pitas and wrap the mushrooms with tzatziki, tomato and red onion.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ice cream sandwiches",
@@ -329,7 +430,9 @@
      "text": "Freeze",
      "min": 60
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hairdryer plan poolside lemonade",
@@ -382,7 +485,9 @@
      "text": "Add sliced lemon and plenty of ice, pour into four glasses",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

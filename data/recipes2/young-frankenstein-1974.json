@@ -58,7 +58,9 @@
      "text": "Leave out so the cheese softens before serving",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Abby Normal brain dip",
@@ -127,7 +129,9 @@
      "text": "Swirl into a bowl and serve with crackers",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Transylvanian goulash",
@@ -222,7 +226,118 @@
      "text": "Serve over the noodles with sour cream",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Transylvanian mushroom goulash",
+     "prep_min": 20,
+     "cook_min": 70,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "g",
+       "item": "mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red capsicums, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "caraway seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "egg noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in batches in the oil and set aside.",
+       "min": 12
+      },
+      {
+       "text": "Cook the onions slowly in the same pot until soft.",
+       "min": 20
+      },
+      {
+       "text": "Stir in the paprika and caraway, then add the tomatoes, stock, capsicum, butter beans and mushrooms.",
+       "min": 5
+      },
+      {
+       "text": "Cover and simmer gently until thick and rich.",
+       "min": 40
+      },
+      {
+       "text": "Boil the noodles and toss with butter.",
+       "min": 10
+      },
+      {
+       "text": "Serve over the noodles with sour cream.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Top hat cupcakes",
@@ -305,7 +420,9 @@
      "text": "Pipe a tall swirl on each and sit a disc under each as a hat brim",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Frau Blücher's brandy milk punch",
@@ -368,7 +485,67 @@
      "text": "Pour into mugs, add brandy to each and grate over a little nutmeg. Leave out the brandy for the warm milk crowd",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Frau Blücher's brandy milk punch (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "nutmeg, freshly grated",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Warm the milk with the honey, cinnamon and vanilla until steaming without boiling",
+       "min": 5
+      },
+      {
+       "text": "Rest and remove the cinnamon",
+       "min": 5
+      },
+      {
+       "text": "Whisk hard until frothy",
+       "min": 3
+      },
+      {
+       "text": "Pour into mugs and grate over a little nutmeg",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

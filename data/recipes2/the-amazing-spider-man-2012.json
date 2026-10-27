@@ -56,7 +56,9 @@
      "text": "Serve warm.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Midtown Science pepperoni pizza rolls",
@@ -129,7 +131,9 @@
      "text": "Warm the passata and serve for dipping.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Captain Stacy's red wine brisket",
@@ -196,7 +200,246 @@
      "text": "Slice the meat across the grain.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Captain Stacy's red wine brisket",
+     "prep_min": 30,
+     "cook_min": 215,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "kg",
+       "item": "beef brisket",
+       "aisle": "Meat"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the brisket and soften the onions.",
+       "min": 15
+      },
+      {
+       "text": "Add the grape juice, vinegar, stock and tomato paste.",
+       "min": 10
+      },
+      {
+       "text": "Braise covered at 160C.",
+       "min": 170
+      },
+      {
+       "text": "Add the carrots and roast for the last 40 minutes.",
+       "min": 40
+      },
+      {
+       "text": "Slice the meat across the grain.",
+       "min": 10
+      }
+     ]
+    },
+    "veg": {
+     "n": "Captain Stacy's red wine braised mushrooms",
+     "prep_min": 25,
+     "cook_min": 55,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "French-style green lentils, rinsed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the portobellos in the oil and lift out, then soften the onions in the same pot.",
+       "min": 15
+      },
+      {
+       "text": "Add the lentils, wine, stock and tomato paste.",
+       "min": 5
+      },
+      {
+       "text": "Braise covered at 160C for 25 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Halve the carrots, sit them and the portobellos on top of the lentils, cover and braise another 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Slice the portobellos thick and serve over the lentils and carrots.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Captain Stacy's braised mushrooms (alcohol-free)",
+     "prep_min": 25,
+     "cook_min": 55,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "French-style green lentils, rinsed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the portobellos in the oil and lift out, then soften the onions in the same pot.",
+       "min": 15
+      },
+      {
+       "text": "Add the lentils, water, red wine vinegar, stock and tomato paste.",
+       "min": 5
+      },
+      {
+       "text": "Braise covered at 160C for 25 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Halve the carrots, sit them and the portobellos on top of the lentils, cover and braise another 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Slice the portobellos thick and serve over the lentils and carrots.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Gwen's black and white cookies",
@@ -277,7 +520,9 @@
      "text": "Ice half of each with white icing and half with icing mixed with cocoa.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gwen's dark hot chocolate with marshmallow",
@@ -342,7 +587,9 @@
      "text": "Pour into mugs, top with marshmallows and toast with a blowtorch or under a hot grill.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   }
  ]
 }

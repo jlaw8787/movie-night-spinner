@@ -62,7 +62,9 @@
      "text": "Serve over shredded iceberg in martini glasses with lemon wedges.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "High roller chips",
@@ -113,7 +115,9 @@
      "text": "Serve in a silver bowl.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Benedict's casino rib eye with béarnaise",
@@ -202,7 +206,108 @@
      "text": "Sear the steaks, pull at 54C and rest.",
      "min": 14
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Benedict's casino portobello with béarnaise",
+     "prep_min": 20,
+     "cook_min": 38,
+     "make_ahead": "Reduce the vinegar up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "egg yolks",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "frozen shoestring fries",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the fries at 220C.",
+       "min": 20
+      },
+      {
+       "text": "Reduce the vinegar with tarragon and the chopped shallot to a spoonful.",
+       "min": 8
+      },
+      {
+       "text": "Whisk with the yolks over simmering water and drizzle in 170g of the butter, melted and warm.",
+       "min": 10
+      },
+      {
+       "text": "Wilt the spinach, squeeze and simmer in the cream.",
+       "min": 8
+      },
+      {
+       "text": "Brush the mushrooms with the oil and garlic, season and sear in a very hot pan with the rest of the butter, 4 minutes a side.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Fountain show sundae",
@@ -253,7 +358,9 @@
      "text": "Pipe whipped cream high and scatter gold sprinkles so they catch the light.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Casino martini",
@@ -296,7 +403,53 @@
      "text": "Strain into chilled martini glasses and add a green olive on a pick.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Casino martini (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 30,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar green olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir the non-alcoholic gin and verjuice over plenty of ice until very cold, one drink at a time.",
+       "min": 4
+      },
+      {
+       "text": "Strain into chilled martini glasses and add a green olive on a pick.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

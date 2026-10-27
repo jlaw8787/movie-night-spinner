@@ -46,7 +46,9 @@
      "text": "Spread thickly on each half and shower generously with the everything bagel seasoning.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chinese New Year dumplings",
@@ -121,7 +123,9 @@
      "text": "Serve with black vinegar and chilli oil.",
      "min": 13
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hibachi steak and prawn fried rice",
@@ -202,7 +206,92 @@
      "text": "Fry the rice with the eggs, butter and soy alongside, and serve everything together.",
      "min": 17
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hibachi tofu and mushroom fried rice",
+     "prep_min": 25,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "extra firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "king brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the rice the day before.",
+       "min": 11
+      },
+      {
+       "text": "Sear the sliced tofu and mushrooms on a smoking plate with the garlic butter made from half the butter and the crushed garlic, and half the soy.",
+       "min": 15
+      },
+      {
+       "text": "Add sliced zucchini and onion.",
+       "min": 11
+      },
+      {
+       "text": "Fry the rice with the eggs, remaining butter and soy alongside, and serve everything together.",
+       "min": 17
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sesame balls",
@@ -261,7 +350,9 @@
      "text": "Fry at 160C for 6 minutes, pressing gently, until puffed and golden.",
      "min": 26
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bubble tea",
@@ -314,7 +405,9 @@
      "text": "Spoon pearls into glasses, add ice, the tea and the milk, and serve with wide straws.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

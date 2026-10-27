@@ -64,7 +64,9 @@
      "text": "Dry in the oven at 75C until chewy.",
      "min": 240
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Canary seed crackers",
@@ -137,7 +139,9 @@
      "text": "Break into shards and serve with goat's cheese.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Abbott and Costello camp chilli",
@@ -204,7 +208,96 @@
      "text": "Ladle into bowls with cheddar.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Abbott and Costello camp chilli (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 64,
+     "make_ahead": "Better the next day, keep chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "field mushrooms, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "sweet potato, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "chipotles in adobo, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "cans kidney beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches until they lose their water.",
+       "min": 12
+      },
+      {
+       "text": "Add the sweet potato, tomatoes, cumin, chipotles and stock.",
+       "min": 5
+      },
+      {
+       "text": "Simmer until the sweet potato starts to break down and thicken the pot.",
+       "min": 40
+      },
+      {
+       "text": "Add the kidney beans and simmer until thick.",
+       "min": 25
+      },
+      {
+       "text": "Ladle into bowls with cheddar.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Circle in time pavlova",
@@ -269,7 +362,9 @@
      "text": "Fill with cream and blackberries and drizzle chocolate around the edge.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Long night tea",
@@ -320,7 +415,9 @@
      "text": "Serve hot in big mugs, or chill and pour over ice.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -58,7 +58,9 @@
      "text": "Grill until golden at the edges. Serve hot.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Baked meatballs with sweet tomato sauce",
@@ -133,7 +135,9 @@
      "text": "Serve on toothpicks.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Philly cheesesteaks",
@@ -200,7 +204,78 @@
      "text": "Lay the provolone on top to melt and pile into the rolls.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Philly mushroom cheesesteaks",
+     "prep_min": 20,
+     "cook_min": 13,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "provolone, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long bread rolls",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms thinly.",
+       "min": 8
+      },
+      {
+       "text": "Slice the onions and capsicum.",
+       "min": 5
+      },
+      {
+       "text": "Fry the onion and capsicum on a hot plate in 1 tbsp of the oil until soft.",
+       "min": 7
+      },
+      {
+       "text": "Add the mushrooms with the rest of the oil and sear fast until browned.",
+       "min": 8
+      },
+      {
+       "text": "Lay the provolone on top to melt and pile into the rolls.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Diner date raisin bran muffins",
@@ -275,7 +350,9 @@
      "text": "Cool slightly and serve warm with butter.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Eagles green apple shandy",
@@ -322,7 +399,57 @@
      "text": "Pour lager into each glass, top with apple juice and a squeeze of lime, then float apple slices. For non-drinkers, use ginger beer in place of the lager.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Eagles green apple shandy (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 30,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "cans alcohol-free lager (375 ml each), cold",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "cloudy apple juice, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green apple",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Put 4 pint glasses in the freezer for the chilling time.",
+       "min": 30
+      },
+      {
+       "text": "Juice the limes and slice the apple very thin.",
+       "min": 5
+      },
+      {
+       "text": "Pour the alcohol-free lager into each glass, top with apple juice and a squeeze of lime, then float apple slices.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

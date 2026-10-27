@@ -58,7 +58,9 @@
      "text": "Serve in a big bowl.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "OCP boardroom canapés",
@@ -133,7 +135,9 @@
      "text": "Arrange on a platter.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Detroit coney dog",
@@ -212,7 +216,96 @@
      "text": "Fill the buns with franks and top with chilli, mustard and diced raw onion.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Detroit coney dog (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "Chilli up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian hot dogs",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "hot dog buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle yellow mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onions, keeping half for topping.",
+       "min": 7
+      },
+      {
+       "text": "Brown the plant-based mince in the oil with half the onion, chilli powder and cumin.",
+       "min": 8
+      },
+      {
+       "text": "Add the water and simmer until loose and saucy.",
+       "min": 20
+      },
+      {
+       "text": "Griddle the vegetarian hot dogs and steam the buns.",
+       "min": 5
+      },
+      {
+       "text": "Fill the buns with hot dogs and top with chilli, mustard and diced raw onion.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Nukem cupcakes",
@@ -279,7 +372,9 @@
      "text": "Pipe tall on each cupcake and torch the tops.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Boddicker's gas station boilermaker",
@@ -326,7 +421,63 @@
      "text": "Serve each shot alongside a cold lager poured into a chilled glass.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Boddicker's gas station boilermaker (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "alcohol-free lagers (375ml)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "smoky black tea bag",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the tea bag in the boiling water for 5 minutes, remove it and stir in the honey. Chill it with the lagers and four shot glasses in the freezer.",
+       "min": 15
+      },
+      {
+       "text": "Pour the tea into the shot glasses with a small lemon twist.",
+       "min": 3
+      },
+      {
+       "text": "Serve each shot alongside a cold alcohol-free lager poured into a chilled glass.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

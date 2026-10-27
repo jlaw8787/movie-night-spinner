@@ -108,7 +108,9 @@
      "text": "Serve with the corn chips.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Stunt crew chilli cheese dogs",
@@ -211,7 +213,9 @@
      "text": "Grill 1 minute to melt, then finish with diced white onion and yellow mustard.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Public pool jump cheeseburgers",
@@ -286,7 +290,92 @@
      "text": "Toast the sesame buns, spread with sauce, add shredded lettuce, the patty and sliced pickles.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Public pool jump cheeseburgers (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "tomato sauce, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "mustard, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "iceberg lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sesame burger buns",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Shape the plant-based mince into patties slightly wider than the buns, season well and brush with the oil.",
+       "min": 7
+      },
+      {
+       "text": "Grill on a hot barbecue 4 minutes a side, adding the slices of American cheese for the last minute.",
+       "min": 10
+      },
+      {
+       "text": "Mix the mayo, the tomato sauce, the mustard and the chopped dill pickles.",
+       "min": 7
+      },
+      {
+       "text": "Toast the sesame buns, spread with sauce, add shredded lettuce, the patty and sliced pickles.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Fifteen bus jump choc chip cookies",
@@ -375,7 +464,9 @@
      "text": "Line up in a row to serve.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Stunt day cherry lime soda",
@@ -436,7 +527,9 @@
      "text": "Stir and garnish with a cherry and a lime wedge.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -70,7 +70,9 @@
      "text": "Mix the sour cream, mayonnaise and herbs into a ranch dip. Serve with celery sticks.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ohio buckeye peanut butter chocolates",
@@ -117,7 +119,9 @@
      "text": "Dip each ball in melted chocolate, leaving a round of peanut butter showing on top, then chill until set.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Urbania Cincinnati chilli spaghetti",
@@ -204,7 +208,110 @@
      "text": "Pile into bowls, ladle over the chilli and top with cheddar and finely diced onion.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Urbania Cincinnati chilli spaghetti (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "Chilli up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "canned brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions, one diced and one finely diced to serve",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cinnamon",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "mild chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cocoa",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "diced tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "spaghetti",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms and diced onion in the oil until browned.",
+       "min": 10
+      },
+      {
+       "text": "Add the lentils, spices, cocoa, tomatoes and stock and simmer until thick.",
+       "min": 25
+      },
+      {
+       "text": "Cook the spaghetti.",
+       "min": 10
+      },
+      {
+       "text": "Pile into bowls, ladle over the chilli and top with cheddar and finely diced onion.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Icebox football cookies",
@@ -263,7 +370,9 @@
      "text": "Mix the icing sugar with a little water and pipe white laces across the top. Let set.",
      "min": 18
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sideline orange honey cooler",
@@ -322,7 +431,9 @@
      "text": "Pour into paper cups and serve with orange wedges.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

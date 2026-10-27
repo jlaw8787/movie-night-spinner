@@ -66,7 +66,9 @@
      "text": "Toss the wings through the sauce and serve with plenty of napkins.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Front porch devilled eggs",
@@ -129,7 +131,9 @@
      "text": "Chill, then dust with smoked paprika.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Furious Styles' backyard ribs",
@@ -220,7 +224,108 @@
      "text": "Unwrap the ribs, brush with barbecue sauce and finish over hot coals until sticky.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Furious Styles' backyard barbecue cauliflower",
+     "prep_min": 20,
+     "cook_min": 55,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "heads cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "garlic powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "cayenne pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "small cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut each cauliflower into 4 thick wedges through the stem. Brush with the olive oil and rub with the paprika, brown sugar, garlic powder, cayenne and salt.",
+       "min": 10
+      },
+      {
+       "text": "Wrap the wedges in foil in two parcels.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 180C for 40 minutes until a knife slides into the stem easily.",
+       "min": 40
+      },
+      {
+       "text": "Shred the cabbage and carrot and toss with mayonnaise for a crunchy coleslaw.",
+       "min": 5
+      },
+      {
+       "text": "Unwrap the cauliflower, brush with barbecue sauce and finish over hot coals until sticky and charred.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sweet potato pie",
@@ -299,7 +404,9 @@
      "text": "Cool before slicing.",
      "min": 60
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Red cordial punch",
@@ -350,7 +457,9 @@
      "text": "Set out cups and let people help themselves.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

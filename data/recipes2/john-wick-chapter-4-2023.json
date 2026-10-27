@@ -80,7 +80,9 @@
      "text": "Pour over the sausage and dust with curry powder. Serve with the chips.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Paris cheese puffs (gougères)",
@@ -143,7 +145,9 @@
      "text": "Bake at 200C.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Paris steak frites",
@@ -216,7 +220,250 @@
      "text": "Finish with the butter and serve.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Paris steak frites",
+     "prep_min": 25,
+     "cook_min": 750,
+     "make_ahead": "Salt the steaks the night before",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "sirloin steaks",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dry-brine the steaks overnight.",
+       "min": 720
+      },
+      {
+       "text": "Cut the potatoes thin and fry at 140C, drain, then fry at 185C until crisp.",
+       "min": 20
+      },
+      {
+       "text": "Sear the steaks hard in cast iron, pull at 54C and rest.",
+       "min": 15
+      },
+      {
+       "text": "Crush the peppercorns in the pan, add the stock and let it bubble, then add the cream and reduce until it coats a spoon.",
+       "min": 10
+      },
+      {
+       "text": "Finish with the butter and serve.",
+       "min": 5
+      }
+     ]
+    },
+    "veg": {
+     "n": "Paris portobello steak frites",
+     "prep_min": 15,
+     "cook_min": 37,
+     "make_ahead": "Cut the potatoes up to 4 hours ahead and keep in cold water",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "brandy",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes thin and fry in the vegetable oil at 140C, drain, then fry at 185C until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Season the portobellos with salt and pepper and sear hard in the olive oil in cast iron, pressing down, until browned and tender.",
+       "min": 12
+      },
+      {
+       "text": "Crush the peppercorns in the pan, flame the brandy, add the cream and reduce until it coats a spoon.",
+       "min": 10
+      },
+      {
+       "text": "Finish with the butter and serve over the mushrooms with the frites.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Paris portobello steak frites (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 37,
+     "make_ahead": "Cut the potatoes up to 4 hours ahead and keep in cold water",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "apple cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes thin and fry in the vegetable oil at 140C, drain, then fry at 185C until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Season the portobellos with salt and pepper and sear hard in the olive oil in cast iron, pressing down, until browned and tender.",
+       "min": 12
+      },
+      {
+       "text": "Crush the peppercorns in the pan, add the stock and vinegar and bubble for a minute, add the cream and reduce until it coats a spoon.",
+       "min": 10
+      },
+      {
+       "text": "Finish with the butter and serve over the mushrooms with the frites.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Paris croissant pudding",
@@ -279,7 +526,9 @@
      "text": "Bake at 170C until puffed and just set.",
      "min": 35
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sacré-Cœur steps cognac sidecar",
@@ -338,7 +587,91 @@
      "text": "Strain into the coupes and twist orange peel over the top.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Sacré-Cœur steps cognac sidecar (alcohol-free)",
+     "prep_min": 18,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "fresh orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, then lift out and cool the tea over a few cubes of ice.",
+       "min": 8
+      },
+      {
+       "text": "Chill four coupes. Rub the rims with lemon and dip in sugar.",
+       "min": 5
+      },
+      {
+       "text": "Shake the cold tea, orange juice, fresh lemon juice, sugar syrup and a drop of vanilla hard with ice for 15 seconds, one drink at a time.",
+       "min": 4
+      },
+      {
+       "text": "Strain into the coupes and twist orange peel over the top.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

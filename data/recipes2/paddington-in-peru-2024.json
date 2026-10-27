@@ -60,7 +60,9 @@
      "text": "Cut into squares.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Peruvian chicken causa bites",
@@ -119,7 +121,9 @@
      "text": "Layer potato, chicken, sliced avocado and more potato in a tin, chill 1 hour and cut into squares.",
      "min": 83
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Beef lomo saltado with fries",
@@ -184,7 +188,86 @@
      "text": "Toss through the chips and serve with the cooked rice.",
      "min": 11
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mushroom lomo saltado with fries",
+     "prep_min": 20,
+     "cook_min": 36,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "frozen fries",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the frozen fries until crisp.",
+       "min": 29
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 15
+      },
+      {
+       "text": "Sear the thickly sliced mushrooms in the oil in a smoking wok, add the sliced red onion and the tomatoes in wedges, then the soy and the vinegar.",
+       "min": 9
+      },
+      {
+       "text": "Toss through the chips and serve with the rice.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Alfajores",
@@ -243,7 +326,9 @@
      "text": "Sandwich in pairs with the dulce de leche and roll the edges in coconut.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chicha morada",
@@ -308,7 +393,9 @@
      "text": "Serve over ice.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -50,7 +50,9 @@
      "text": "Drain and serve warm in paper cups.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sheriff Justice's pickled okra",
@@ -125,7 +127,9 @@
      "text": "Serve cold with the cheddar cut into chunks.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Truck stop chicken fried steak",
@@ -220,7 +224,106 @@
      "text": "Serve the steaks over the mash with the gravy.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Truck stop chicken fried mushrooms",
+     "prep_min": 25,
+     "cook_min": 27,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "oyster mushrooms, in large clusters",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour for the gravy",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel and boil the potatoes until soft, then mash with the butter and some of the milk. Keep warm.",
+       "min": 25
+      },
+      {
+       "text": "Press the mushroom clusters flat with your hand and season the flour with salt and plenty of cracked peppercorns.",
+       "min": 5
+      },
+      {
+       "text": "Dredge each cluster in flour, then buttermilk, then flour again.",
+       "min": 5
+      },
+      {
+       "text": "Shallow fry in hot oil until deep golden and crisp, then keep warm on a rack.",
+       "min": 12
+      },
+      {
+       "text": "Whisk the gravy flour into a little of the pan oil, add the remaining milk and lots of cracked pepper and simmer until thick.",
+       "min": 3
+      },
+      {
+       "text": "Serve the mushrooms over the mash with the gravy.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Georgia peach cobbler",
@@ -295,7 +398,9 @@
      "text": "Serve warm with scoops of ice cream.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bandit's bourbon peach sweet tea",
@@ -370,7 +475,85 @@
      "text": "Top with tea and finish with a squeeze of lemon, a peach slice and a sprig of mint.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Bandit's bourbon peach sweet tea (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 190,
+     "make_ahead": "Tea base up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 5,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "peaches",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water with the sliced peaches and sugar for 6 minutes, then remove the bags and stir in the vanilla.",
+       "min": 10
+      },
+      {
+       "text": "Chill the tea with the peaches in it until very cold.",
+       "min": 180
+      },
+      {
+       "text": "Fill four tall glasses with ice.",
+       "min": 5
+      },
+      {
+       "text": "Top with tea and finish with a squeeze of lemon, a peach slice and a sprig of mint.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -52,7 +52,9 @@
      "text": "Pack each lunch box with cheese, crackers, apple and tomatoes.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ferret-free fruit cups",
@@ -111,7 +113,9 @@
      "text": "Spoon into cups, top with mint and keep cold until serving.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Astoria school lunch fish fingers",
@@ -196,7 +200,96 @@
      "text": "Serve with tartare sauce.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Astoria school lunch haloumi fingers",
+     "prep_min": 25,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "tartare sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into chips, toss in the olive oil and roast at 220C.",
+       "min": 38
+      },
+      {
+       "text": "Cut the haloumi into fingers and crumb in the flour, beaten egg and panko.",
+       "min": 12
+      },
+      {
+       "text": "Shallow-fry the haloumi in the vegetable oil in batches until golden.",
+       "min": 8
+      },
+      {
+       "text": "Cook the peas.",
+       "min": 5
+      },
+      {
+       "text": "Serve with the tartare sauce.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Who's-your-daddy cupcakes",
@@ -281,7 +374,9 @@
      "text": "Swirl on the icing and add sprinkles.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Snack time chocolate malt milkshake",
@@ -346,7 +441,9 @@
      "text": "Pour into glasses, top with whipped cream and sprinkles, and serve with straws.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

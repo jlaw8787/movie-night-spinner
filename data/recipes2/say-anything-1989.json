@@ -84,7 +84,9 @@
      "text": "Serve hot with tomato relish.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Seattle smoked salmon bites",
@@ -147,7 +149,9 @@
      "text": "Finish each with a squeeze of lemon.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Dijon crusted salmon, crushed potatoes",
@@ -228,7 +232,102 @@
      "text": "Steam the green beans and toss with butter.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dijon crusted eggplant, crushed potatoes",
+     "prep_min": 20,
+     "cook_min": 38,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, divided",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the eggplants lengthways into thick slabs, brush with the olive oil, salt and roast at 220C for 15 minutes.",
+       "min": 18
+      },
+      {
+       "text": "Spread the eggplant with Dijon and press on breadcrumbs mixed with chopped parsley and lemon zest.",
+       "min": 5
+      },
+      {
+       "text": "Roast until the crumbs are golden.",
+       "min": 10
+      },
+      {
+       "text": "Boil the potatoes, then crush with half the butter and salt.",
+       "min": 20
+      },
+      {
+       "text": "Steam the green beans and toss with the rest of the butter.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Kickboxer's summer berry crumble",
@@ -297,7 +396,9 @@
      "text": "Serve with vanilla ice cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Boombox Seattle mocha with whipped cream",
@@ -358,7 +459,9 @@
      "text": "Top with whipped cream and shave a little chocolate over the top.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

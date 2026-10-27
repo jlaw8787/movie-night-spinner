@@ -88,7 +88,9 @@
      "text": "Bury under icing sugar and serve hot.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Muffuletta cob loaf sandwich",
@@ -155,7 +157,9 @@
      "text": "Cut into small wedges.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Tiana's Palace shrimp and grits",
@@ -238,7 +242,106 @@
      "text": "Spoon over the polenta and scatter with spring onion.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Tiana's Palace Cajun mushrooms and grits",
+     "prep_min": 15,
+     "cook_min": 31,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "polenta",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "king brown mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "Cajun seasoning",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms and spring onions.",
+       "min": 10
+      },
+      {
+       "text": "Simmer the polenta in the water, stirring, until thick.",
+       "min": 20
+      },
+      {
+       "text": "Beat the cheddar and butter into the polenta.",
+       "min": 3
+      },
+      {
+       "text": "Fry the mushrooms in the oil with the smoked paprika until browned and crisp at the edges.",
+       "min": 8
+      },
+      {
+       "text": "Add the garlic and Cajun seasoning and cook for a minute.",
+       "min": 2
+      },
+      {
+       "text": "Spoon over the polenta and scatter with spring onion.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Tiana's Palace bananas foster",
@@ -317,7 +420,9 @@
      "text": "Spoon over scoops of ice cream and scatter with the pecans.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Iced chicory coffee with milk",
@@ -392,7 +497,9 @@
      "text": "Fill glasses with ice, add syrup and cold milk, then pour over the coffee. For the kids, use decaf or just milk and syrup.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

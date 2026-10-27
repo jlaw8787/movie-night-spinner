@@ -60,7 +60,9 @@
      "text": "Add thick slices of crusty bread and a dish of butter.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ham and béchamel croquettes",
@@ -133,7 +135,9 @@
      "text": "Fry until golden.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hellfire Club pepper steak",
@@ -216,7 +220,264 @@
      "text": "Slice and spoon the sauce over.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Hellfire Club pepper steak",
+     "prep_min": 15,
+     "cook_min": 70,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "rib eye steaks, about 500g each",
+       "aisle": "Meat"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "crushed peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Worcestershire sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Parboil the potatoes, then shake to rough up.",
+       "min": 17
+      },
+      {
+       "text": "Roast in hot oil at 220C until crisp.",
+       "min": 45
+      },
+      {
+       "text": "Season the steaks and sear in a very hot pan, basting with butter for the last minute.",
+       "min": 8
+      },
+      {
+       "text": "Rest the steaks.",
+       "min": 5
+      },
+      {
+       "text": "In the same pan add the peppercorns and Worcestershire, then cream and stock, and simmer until thick.",
+       "min": 8
+      },
+      {
+       "text": "Slice and spoon the sauce over.",
+       "min": 2
+      }
+     ]
+    },
+    "veg": {
+     "n": "Hellfire Club pepper cauliflower steak",
+     "prep_min": 15,
+     "cook_min": 68,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "crushed peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "brandy",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Parboil the potatoes, then shake to rough up.",
+       "min": 17
+      },
+      {
+       "text": "Roast in 3 tbsp of hot oil at 220C until crisp.",
+       "min": 45
+      },
+      {
+       "text": "Cut 2 thick steaks from the centre of each cauliflower, brush with the rest of the oil, season and roast on a second tray for 25 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Sear the cauliflower steaks in a very hot pan, basting with butter, until charred.",
+       "min": 6
+      },
+      {
+       "text": "In the same pan add the peppercorns and brandy, then cream and stock, and simmer until thick.",
+       "min": 8
+      },
+      {
+       "text": "Spoon the sauce over the steaks.",
+       "min": 2
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Hellfire Club pepper cauliflower steak (alcohol free)",
+     "prep_min": 15,
+     "cook_min": 68,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "crushed peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Parboil the potatoes, then shake to rough up.",
+       "min": 17
+      },
+      {
+       "text": "Roast in 3 tbsp of hot oil at 220C until crisp.",
+       "min": 45
+      },
+      {
+       "text": "Cut 2 thick steaks from the centre of each cauliflower, brush with the rest of the oil, season and roast on a second tray for 25 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Sear the cauliflower steaks in a very hot pan, basting with butter, until charred.",
+       "min": 6
+      },
+      {
+       "text": "In the same pan add the peppercorns, apple juice and cider vinegar, then cream and stock, and simmer until thick.",
+       "min": 8
+      },
+      {
+       "text": "Spoon the sauce over the steaks.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Chess game chocolate squares",
@@ -267,7 +528,9 @@
      "text": "Cut into squares and arrange like a chess board.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sixties gin martini with olives",
@@ -314,7 +577,57 @@
      "text": "Strain into the frozen glasses and add a toothpick with two olives to each.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Sixties gin martini with olives (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 26,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 30,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "green olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Put the martini glasses in the freezer.",
+       "min": 30
+      },
+      {
+       "text": "Fill a jug with ice, add the non-alcoholic gin and verjuice and stir steadily until very cold.",
+       "min": 1
+      },
+      {
+       "text": "Strain into the frozen glasses and add a toothpick with two olives to each.",
+       "min": 0
+      }
+     ]
+    }
+   }
   }
  ]
 }

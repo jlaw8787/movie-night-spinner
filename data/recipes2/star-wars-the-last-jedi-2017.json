@@ -52,7 +52,9 @@
      "text": "Stir more dill and lemon through the yoghurt for a dip.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Crait red salt chips",
@@ -99,7 +101,9 @@
      "text": "Toss straight away with salt and smoked paprika so the red shows through like the salt flats.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Resistance chicken rice bowls",
@@ -180,7 +184,92 @@
      "text": "Build bowls of rice with the chicken, capsicum, cucumber and feta and drizzle with tahini.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Resistance tofu rice bowls",
+     "prep_min": 20,
+     "cook_min": 50,
+     "make_ahead": "Tofu can marinate up to 1 day",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "extra firm tofu, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red capsicums",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "feta, crumbled",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "tahini",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the tofu dry and marinate in the lemon juice, oregano and oil while the oven heats.",
+       "min": 10
+      },
+      {
+       "text": "Roast the capsicums at 220C until soft and blistered, then peel and slice into strips.",
+       "min": 25
+      },
+      {
+       "text": "Cook the rice. Grill the tofu until golden on both sides.",
+       "min": 20
+      },
+      {
+       "text": "Build bowls of rice with the tofu, capsicum, cucumber and feta and drizzle with tahini.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Green pistachio milk panna cotta",
@@ -243,7 +332,9 @@
      "text": "Top with crushed pistachios and a drizzle of honey.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Throne room red punch",
@@ -296,7 +387,9 @@
      "text": "Stir once so it swirls deep red.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

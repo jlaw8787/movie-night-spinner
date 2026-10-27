@@ -60,7 +60,9 @@
      "text": "Sandwich pairs with jam and dust with icing sugar.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Diverted flight cocktail franks",
@@ -129,7 +131,9 @@
      "text": "Serve on toothpicks with cocktail onions.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hotel rib eye breakfast",
@@ -202,7 +206,90 @@
      "text": "Toast the sourdough and butter it. Serve a steak, two eggs, a hash brown and a toast each.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hotel portobello breakfast",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "fine salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices sourdough",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Grate the potatoes and squeeze dry in a tea towel. Season with some of the salt and shape into 4 hash browns.",
+       "min": 10
+      },
+      {
+       "text": "Fry the hash browns in some of the butter over medium heat, turning once.",
+       "min": 12
+      },
+      {
+       "text": "Fry the mushrooms in the oil with a knob of the butter, the garlic and the remaining salt until tender and browned.",
+       "min": 10
+      },
+      {
+       "text": "Fry the eggs in butter.",
+       "min": 3
+      },
+      {
+       "text": "Toast the sourdough and butter it. Serve two mushrooms, two eggs, a hash brown and a toast each.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Waldorf cheesecake",
@@ -285,7 +372,9 @@
      "text": "Top with strawberries and cut into portions.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hotel bar martini",
@@ -332,7 +421,57 @@
      "text": "Garnish each with an olive.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Hotel bar martini (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "green olives",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Freeze the martini glasses.",
+       "min": 5
+      },
+      {
+       "text": "Stir the non-alcoholic gin and verjuice over ice in batches, then strain into the glasses.",
+       "min": 4
+      },
+      {
+       "text": "Garnish each with an olive.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

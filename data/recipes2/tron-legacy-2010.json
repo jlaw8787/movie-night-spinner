@@ -50,7 +50,9 @@
      "text": "Let set.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "End of Line Club canapés",
@@ -107,7 +109,9 @@
      "text": "Lay out in sharp rows on black slate.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Grid neon noodles",
@@ -180,7 +184,84 @@
      "text": "Toss in the noodles with soy and honey until sticky and glossy.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Grid neon noodles (vegetarian)",
+     "prep_min": 8,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "egg noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 450,
+       "u": "g",
+       "item": "firm tofu, cubed and patted dry",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "head broccoli",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the capsicum and cut the broccoli into florets.",
+       "min": 8
+      },
+      {
+       "text": "Cook the noodles and drain.",
+       "min": 6
+      },
+      {
+       "text": "Stir-fry the tofu in the oil in a hot wok until golden.",
+       "min": 8
+      },
+      {
+       "text": "Add the capsicum and broccoli and cook.",
+       "min": 3
+      },
+      {
+       "text": "Toss in the noodles with soy and honey until sticky and glossy.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "End of Line Club neon cookies",
@@ -247,7 +328,9 @@
      "text": "Mix the icing sugar with water and colouring and ice in straight lines.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Flynn's zen iced matcha with honey",
@@ -304,7 +387,9 @@
      "text": "Slowly pour the matcha over the top to form a green layer. Stir before drinking.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

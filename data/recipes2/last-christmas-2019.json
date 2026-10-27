@@ -96,7 +96,9 @@
      "text": "Add cevapi to each and top with sour cream, onion and parsley.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Santa's shop mince pies with orange cream",
@@ -169,7 +171,77 @@
      "text": "Dust the warm pies with icing sugar and serve with the orange cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Santa's shop mince pies with orange cream",
+     "prep_min": 35,
+     "cook_min": 8,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "sheets shortcrust pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar fruit mince (400g)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "icing sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, zested and juiced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut rounds from two pastry sheets and press into a greased patty pan tin.",
+       "min": 8
+      },
+      {
+       "text": "Fill each with fruit mince. Cut stars from the third sheet and lay on top.",
+       "min": 10
+      },
+      {
+       "text": "Brush with egg and bake at 190C until golden.",
+       "min": 18
+      },
+      {
+       "text": "Whip the cream with some of the icing sugar, the orange zest and a tablespoon of the orange juice.",
+       "min": 5
+      },
+      {
+       "text": "Dust the warm pies with icing sugar and serve with the orange cream.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Petra's stuffed capsicums with yoghurt",
@@ -260,7 +332,120 @@
      "text": "Mix the yoghurt with the remaining crushed garlic. Serve with crusty bread.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Petra's stuffed capsicums with yoghurt (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 50,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves (2 for the filling, 1 for the yoghurt)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large red capsicums",
+       "aisle": "Produce"
+      },
+      {
+       "q": 700,
+       "u": "g",
+       "item": "passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf crusty bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion and two of the garlic cloves in the oil, add the mushrooms and brown.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the lentils, rice, both paprikas, salt and a little water and cook briefly.",
+       "min": 5
+      },
+      {
+       "text": "Cut the tops off the capsicums, remove the seeds and fill.",
+       "min": 8
+      },
+      {
+       "text": "Stand in a dish, pour around the passata mixed with water and bake covered at 180C.",
+       "min": 50
+      },
+      {
+       "text": "Mix the yoghurt with the remaining crushed garlic. Serve with crusty bread.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Year-round Christmas shop gingerbread",
@@ -351,7 +536,9 @@
      "text": "Mix the icing sugar with lemon juice and pipe on snowflake patterns.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Covent Garden mulled wine",
@@ -426,7 +613,97 @@
      "text": "For anyone not drinking, warm the apple juice with the remaining spices.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Covent Garden mulled wine (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cinnamon sticks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "star anise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, then remove.",
+       "min": 5
+      },
+      {
+       "text": "Pour the grape juice, apple juice and tea into a saucepan with the orange juice, sugar, cinnamon, cloves, star anise and one sliced orange.",
+       "min": 3
+      },
+      {
+       "text": "Warm gently, keeping it under a simmer.",
+       "min": 15
+      },
+      {
+       "text": "Ladle into heatproof glasses with a wheel cut from the second orange.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

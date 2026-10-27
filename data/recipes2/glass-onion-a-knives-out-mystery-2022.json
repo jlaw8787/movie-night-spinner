@@ -76,7 +76,9 @@
      "text": "Lay both out with the kalamata olives, cherry tomatoes and the warm pita breads.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Disruptors' hot sauce wings",
@@ -153,7 +155,9 @@
      "text": "Serve with celery and the blue cheese stirred into the sour cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Puzzle box lamb souvlaki",
@@ -230,7 +234,106 @@
      "text": "Serve in the warm pitas with the Greek yoghurt mixed with grated cucumber, plus tomato and onion.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Puzzle box haloumi and mushroom souvlaki",
+     "prep_min": 25,
+     "cook_min": 60,
+     "make_ahead": "Marinate up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum, cut in squares",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pita breads",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Marinate the haloumi, mushrooms and capsicum for 1 hour with the juice of the lemon, the crushed garlic cloves, the dried oregano and the oil.",
+       "min": 65
+      },
+      {
+       "text": "Thread onto skewers and grill 6 minutes, turning.",
+       "min": 12
+      },
+      {
+       "text": "Serve in the warm pitas with the Greek yoghurt mixed with grated cucumber, plus tomato and onion.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Duke's pineapple upside-down cake",
@@ -321,7 +424,9 @@
      "text": "Rest 5 minutes, turn out and serve warm with whipped cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Alpha poolside spiked kombucha",
@@ -368,7 +473,63 @@
      "text": "Stir once and serve straight away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Alpha poolside kombucha (alcohol-free)",
+     "prep_min": 6,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "ginger kombucha",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "ginger beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill the tall glasses with ice, mint leaves and a squeeze of lime.",
+       "min": 2
+      },
+      {
+       "text": "Pour the cold ginger kombucha into each and top with a splash of ginger beer for extra bite.",
+       "min": 2
+      },
+      {
+       "text": "Stir once and serve straight away.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

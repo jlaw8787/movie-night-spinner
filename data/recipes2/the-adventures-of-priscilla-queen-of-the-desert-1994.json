@@ -70,7 +70,9 @@
      "text": "Cut into 16 pieces and bake at 200C until puffed and golden. Serve with tomato sauce.",
      "min": 25
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Alice Springs damper",
@@ -127,7 +129,9 @@
      "text": "Serve warm with the rest of the butter and golden syrup.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pepperberry kangaroo with sweet potato",
@@ -194,7 +198,90 @@
      "text": "Rest the fillet, then slice. Warm the plum sauce and serve alongside.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pepperberry roast eggplant with sweet potato",
+     "prep_min": 15,
+     "cook_min": 41,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground pepperberry",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "extra virgin olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "sweet potato",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "feta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "plum sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the sweet potato into wedges, toss in half the oil and roast at 200C.",
+       "min": 10
+      },
+      {
+       "text": "Halve the eggplants lengthways, score the flesh deeply and rub with the pepperberry, crushed garlic, salt and remaining oil.",
+       "min": 5
+      },
+      {
+       "text": "Roast the eggplant cut side up alongside the wedges until soft and golden.",
+       "min": 35
+      },
+      {
+       "text": "Warm the plum sauce.",
+       "min": 3
+      },
+      {
+       "text": "Crumble the feta over the eggplant and serve with the wedges and plum sauce.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Kings Canyon summit pavlova",
@@ -263,7 +350,9 @@
      "text": "Whip the cream and top the pavlova with cream, passionfruit and sliced strawberries.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bernadette's pink champagne bellini",
@@ -310,7 +399,57 @@
      "text": "Top slowly with cold sparkling rosé, stir once gently and drop in a raspberry. Use sparkling grape juice for an alcohol-free version.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Bernadette's pink champagne bellini (alcohol-free)",
+     "prep_min": 13,
+     "cook_min": 0,
+     "make_ahead": "Purée up to 1 day, top with sparkling just before serving",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "raspberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "ripe peach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 450,
+       "u": "ml",
+       "item": "alcohol-free sparkling rosé",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blend most of the raspberries with the peach and sugar syrup until smooth, then strain.",
+       "min": 8
+      },
+      {
+       "text": "Spoon the purée into four chilled flutes.",
+       "min": 2
+      },
+      {
+       "text": "Top slowly with cold alcohol-free sparkling rosé, stir once gently and drop in a raspberry.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

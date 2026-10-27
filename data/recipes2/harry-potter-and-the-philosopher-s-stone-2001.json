@@ -68,7 +68,9 @@
      "text": "Drop in rough piles on the tray and bake until golden.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pumpkin pasties",
@@ -137,7 +139,9 @@
      "text": "Brush with egg and bake until golden.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Great Hall honey chicken and Yorkshires",
@@ -244,7 +248,118 @@
      "text": "Serve everything together.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Great Hall honey haloumi and Yorkshires",
+     "prep_min": 25,
+     "cook_min": 52,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, in thick slabs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "wholegrain mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "vegetarian gravy",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Toss the potatoes in the olive oil and roast until golden.",
+       "min": 40
+      },
+      {
+       "text": "Whisk the flour, eggs and milk into a batter and rest.",
+       "min": 10
+      },
+      {
+       "text": "Heat the vegetable oil in muffin tins, pour in the batter and bake until puffed.",
+       "min": 12
+      },
+      {
+       "text": "Mix the honey and mustard, coat the haloumi and roast on a lined tray for the last 10 minutes until golden and sticky.",
+       "min": 5
+      },
+      {
+       "text": "Cook the peas with the butter and warm the gravy.",
+       "min": 5
+      },
+      {
+       "text": "Serve everything together.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Treacle tart",
@@ -305,7 +420,9 @@
      "text": "Cool slightly and serve each slice with clotted cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pumpkin juice",
@@ -352,7 +469,9 @@
      "text": "Strain through a sieve into a jug and chill well.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

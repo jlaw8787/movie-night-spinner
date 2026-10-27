@@ -54,7 +54,9 @@
      "text": "Toss with salt and serve in paper bags.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Consulate biltong",
@@ -101,7 +103,9 @@
      "text": "Pile on a board with the dried peaches and macadamias in little bowls.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Boerewors rolls",
@@ -164,7 +168,92 @@
      "text": "Cut the boerewors and serve in rolls with relish.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Boerewors rolls (vegetarian)",
+     "prep_min": 13,
+     "cook_min": 35,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground coriander",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "ground nutmeg",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long bread rolls",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the onions, chop the tomatoes and chilli.",
+       "min": 10
+      },
+      {
+       "text": "Simmer with the sugar into a relish.",
+       "min": 20
+      },
+      {
+       "text": "Brush the vegetarian sausages with the oil mixed with the coriander and nutmeg, then grill over coals or a hot grill, turning, until browned.",
+       "min": 12
+      },
+      {
+       "text": "Serve two sausages in each roll with relish.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "TV ad cupcakes",
@@ -249,7 +338,9 @@
      "text": "Swirl on the icing and add sprinkles.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Roger's ginger and lime lager shandy",
@@ -302,7 +393,63 @@
      "text": "Garnish with a lime wheel and mint and serve straight away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Roger's ginger and lime lager shandy (alcohol-free)",
+     "prep_min": 6,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "cold alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "ginger beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs mint",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill tall glasses with ice and squeeze lime into each.",
+       "min": 2
+      },
+      {
+       "text": "Pour in the alcohol-free lager, top with ginger beer and stir gently once.",
+       "min": 2
+      },
+      {
+       "text": "Garnish with a lime wheel and mint and serve straight away.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

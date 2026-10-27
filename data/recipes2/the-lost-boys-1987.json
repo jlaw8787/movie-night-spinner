@@ -56,7 +56,9 @@
      "text": "Toss with salt, garlic powder and parsley and serve in paper cones",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Garlic bread",
@@ -109,7 +111,9 @@
      "text": "Bake at 200C, then open the foil and bake again to crisp the top",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chinese takeaway noodles",
@@ -202,7 +206,104 @@
      "text": "Scramble the eggs in a second pan, add the rice and spring onion and fry until hot, then serve alongside",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chinese takeaway noodles (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "bean sprouts",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "fresh egg noodles",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetarian mushroom oyster sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "cooked jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the tofu dry and slice, shred the cabbage and slice the spring onions.",
+       "min": 15
+      },
+      {
+       "text": "Stir-fry the tofu in a smoking wok with most of the vegetable oil until browned.",
+       "min": 5
+      },
+      {
+       "text": "Add the cabbage, bean sprouts and noodles and toss with the mushroom oyster sauce, soy and sesame oil.",
+       "min": 5
+      },
+      {
+       "text": "Scramble the eggs in a second pan with the rest of the oil, add the rice and spring onion and fry until hot, then serve alongside.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Boardwalk caramel popcorn",
@@ -259,7 +360,9 @@
      "text": "Cool on the tray and break up",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Holy water cucumber and lime fizz",
@@ -318,7 +421,9 @@
      "text": "Top with chilled soda water and a thin cucumber ribbon. Tie paper cross tags round the necks",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

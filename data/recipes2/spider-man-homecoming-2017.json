@@ -84,7 +84,9 @@
      "text": "Cool and break up.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Liz's party buffalo cauliflower",
@@ -153,7 +155,9 @@
      "text": "Bake again until sticky and serve with blue cheese dressing.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Delmar's pressed Italian deli sandwich",
@@ -216,7 +220,84 @@
      "text": "Cut in half to serve.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Delmar's pressed Italian deli sandwich (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "long bread rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "eggplant, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "chargrilled capsicum, drained",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "provolone, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "dill pickles, sliced",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brush the eggplant with the oil and fry until soft and browned.",
+       "min": 8
+      },
+      {
+       "text": "Split the rolls and spread with mustard.",
+       "min": 2
+      },
+      {
+       "text": "Layer with eggplant, capsicum, provolone and pickles.",
+       "min": 5
+      },
+      {
+       "text": "Press hard in a sandwich press or heavy pan with a weight on top until flat, crisp and melted.",
+       "min": 5
+      },
+      {
+       "text": "Cut in half to serve.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Homecoming dance cupcakes",
@@ -303,7 +384,9 @@
      "text": "Pipe swirls on top and draw a little white icing web over each.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Decathlon team bubble tea",
@@ -382,7 +465,9 @@
      "text": "Shake the tea with the milk and sugar until frothy and pour over.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

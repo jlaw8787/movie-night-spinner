@@ -40,7 +40,9 @@
      "text": "Freeze for 30 minutes until set. Serve straight from the freezer.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jungle fruit cups",
@@ -105,7 +107,9 @@
      "text": "Finish each cup with a pinch of salt mixed with chilli for a little kick.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mountain fortress goulash",
@@ -180,7 +184,98 @@
      "text": "Cook the noodles, toss with butter and serve the goulash over the top.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mountain fortress mushroom goulash",
+     "prep_min": 20,
+     "cook_min": 50,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "egg noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches. Add the onions and paprika and stir for a minute.",
+       "min": 15
+      },
+      {
+       "text": "Add the tomatoes, capsicum, butter beans and stock.",
+       "min": 5
+      },
+      {
+       "text": "Simmer until thick and rich.",
+       "min": 40
+      },
+      {
+       "text": "Cook the noodles, toss with butter and serve the goulash over the top.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Falcon jewel jelly",
@@ -231,7 +326,9 @@
      "text": "Top with whipped cream and finish each glass with one perfect grape like a jewel.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Desert oasis cooler",
@@ -278,7 +375,9 @@
      "text": "Pour over ice in tall glasses with a fresh mint sprig on top.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

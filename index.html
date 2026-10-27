@@ -19,6 +19,33 @@
 .pl-c{border:0;padding:0;margin:0 0 6px}.pl-c legend{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#e7c069;padding:0}
 .pl-d{display:flex;align-items:center;gap:8px;padding:5px 0;cursor:pointer}.pl-d input{width:20px;height:20px;accent-color:#e7c069}.pl-d span{flex:1}.pl-d small{opacity:.7;font-size:12px}
 .pp-time{display:block;font-size:.8em;opacity:.75;margin:1px 0 2px}
+.pl-diet{flex-wrap:wrap;gap:8px 16px}.pl-t{display:inline-flex;align-items:center;gap:8px;min-height:36px;cursor:pointer;font-size:14px}.pl-t input{width:20px;height:20px;accent-color:#e7c069}
+.pl-tag{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:9px;font-style:normal;font-size:11px;letter-spacing:.04em;background:rgba(231,192,105,.18);color:#e7c069;vertical-align:1px}.pl-no{background:rgba(255,255,255,.08);color:#cdbfa6}
+
+/* quick find, saved shelf, settings */
+.field.find{position:relative}
+.field.find input{width:100%;box-sizing:border-box;min-height:44px;padding:8px 12px;border-radius:8px;border:1px solid rgba(231,192,105,.45);background:rgba(18,6,10,.7);color:#f4e6c8;font:inherit;font-size:16px}
+.find-list{position:absolute;left:0;right:0;top:100%;z-index:30;margin-top:4px;background:#1b0a0f;border:1px solid rgba(231,192,105,.45);border-radius:8px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.55)}
+.find-list button{display:flex;justify-content:space-between;gap:10px;width:100%;min-height:44px;padding:8px 12px;border:0;border-bottom:1px solid rgba(231,192,105,.15);background:none;color:#f4e6c8;font:inherit;text-align:left;cursor:pointer}
+.find-list button:last-child{border-bottom:0}.find-list button small{opacity:.65}
+.find-list button:hover,.find-list button[aria-selected=true]{background:rgba(231,192,105,.16)}
+.find-list .none{padding:10px 12px;opacity:.75}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.hist-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.hist-clear{background:none;border:0;color:var(--soft,#cdbfa6);font:500 12px var(--f-body);letter-spacing:.1em;text-transform:uppercase;text-decoration:underline;cursor:pointer;min-height:36px;padding:0 4px}
+#favBtn[aria-pressed=true]{background:var(--brass,#e7c069);color:var(--night,#140608);border-color:var(--brass,#e7c069)}
+.settings .set-top{display:flex;align-items:center;justify-content:space-between}
+.settings .x{width:44px;height:44px;border:0;background:none;font-size:28px;line-height:1;color:var(--velvet,#7a1022);cursor:pointer}
+.settings .set-row{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;border-bottom:1px solid #e6dccb;font-size:16px}
+.settings .set-row select{min-height:40px;font:inherit;font-size:15px;border-radius:6px;border:1px solid #c9bba4;background:#fff;color:#221e19;max-width:60%}
+.settings .set-row .toggle{min-height:40px;padding:6px 14px;border-radius:99px;border:1px solid var(--velvet-2,#a3182f);background:#fff;color:var(--velvet-2,#a3182f);font:600 14px var(--f-body);cursor:pointer}
+.settings .set-row .toggle[aria-pressed=true]{background:var(--velvet-2,#a3182f);color:#fff}
+.settings .set-chk input{width:24px;height:24px;accent-color:var(--velvet-2,#a3182f)}
+.settings .set-g{display:inline-flex;align-items:center;gap:10px}.settings .set-g output{min-width:2ch;text-align:center;font-weight:700;font-size:18px}
+.settings .set-g .pl-b{border-color:var(--velvet-2,#a3182f);color:var(--velvet-2,#a3182f)}
+.settings .set-acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.settings .set-acts button{min-height:44px;padding:8px 14px;border-radius:8px;border:1px solid #c9bba4;background:#fff;color:#221e19;font:600 14px var(--f-body);cursor:pointer}
+.settings .set-acts .danger{border-color:#b3261e;color:#b3261e}.settings .set-acts .danger.arm{background:#b3261e;color:#fff}
 </style>
 </head>
 <body>
@@ -1513,13 +1540,14 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
           <label for="themeSel">Tonight's programme</label>
           <select id="themeSel"></select>
         </div>
-        <div class="field">
-          <label for="svcSel">Streaming on</label>
-          <select id="svcSel"><option value="">Any film</option></select>
+        <div class="field find">
+          <label for="findFilm">Find a film</label>
+          <input type="search" id="findFilm" placeholder="Type a title" autocomplete="off" aria-controls="findList" aria-describedby="findHint">
+          <div class="find-list" id="findList" role="listbox" aria-label="Matching films" hidden></div>
+          <span class="sr" id="findHint">Pick a match to open its menu</span>
         </div>
-        <button class="toggle" id="sound" type="button" aria-pressed="false">Sound off</button>
-        <button class="toggle kids" id="kidsBtn" type="button" aria-pressed="false">Kids mode off</button>
         <button class="toggle df-btn" id="dfBtn" type="button">Double feature</button>
+        <button class="toggle set-btn" id="setBtn" type="button" aria-haspopup="dialog">Settings</button>
       </div>
       <div class="count" id="count"></div>
       <details class="watch-panel" id="watchPanel">
@@ -1534,8 +1562,12 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
         <div class="watch-list" id="watchList"></div>
         <p class="watch-save" id="watchSave" role="status"></p>
       </details>
+      <div class="history saved-shelf" id="savedShelf" hidden>
+        <h2>Your saved menus</h2>
+        <div class="chips" id="savedChips"></div>
+      </div>
       <div class="history">
-        <h2>Your ticket stubs</h2>
+        <div class="hist-head"><h2>Your ticket stubs</h2><button type="button" class="hist-clear" id="histClear" hidden>Clear</button></div>
         <div class="chips" id="chips"><span class="empty">Nothing yet. Your picks land here.</span></div>
       </div>
     </section>
@@ -1555,6 +1587,7 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
       </div>
       <div class="actions">
         <button class="btn primary" id="pdf" type="button">Save PDF (menu + prep)</button>
+        <button class="btn" id="favBtn" type="button" aria-pressed="false">Save this menu</button>
         <button class="btn" id="weekSet" type="button" disabled>Lock in for this week</button>
         <button class="btn" id="watchCurrent" type="button" aria-pressed="false" disabled>Mark as watched</button>
         <button class="btn" id="lazyBtn" type="button" aria-pressed="false">Lazy night: off</button>
@@ -1582,7 +1615,28 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 <script src="providers.js?v=1403fceb" defer></script>
 <script src="films.js?v=74deedef" defer></script>
 <script src="formats-core.js?v=a8dfd3e7" defer></script>
-<script src="app.js?v=4d3ae66b" defer></script>
+<script src="app.js?v=c762384e" defer></script>
 
+<dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
+  <div class="trolley-in">
+    <div class="set-top"><h3>Settings</h3><button type="button" class="x" id="setClose" aria-label="Close settings">×</button></div>
+    <h4>Watching</h4>
+    <div class="set-row"><span>Kids mode</span><button class="toggle kids" id="kidsBtn" type="button" aria-pressed="false">Kids mode off</button></div>
+    <div class="set-row"><span>Sound</span><button class="toggle" id="sound" type="button" aria-pressed="false">Sound off</button></div>
+    <div class="set-row"><label for="svcSel">Streaming on</label><select id="svcSel"><option value="">Any film</option></select></div>
+    <h4>Dinner</h4>
+    <div class="set-row"><span>Usual guests</span><span class="set-g"><button type="button" class="pl-b" data-sg="-" aria-label="Fewer guests">-</button><output id="setGuests">4</output><button type="button" class="pl-b" data-sg="+" aria-label="More guests">+</button></span></div>
+    <label class="set-row set-chk"><span>Vegetarian</span><input type="checkbox" id="setVeg"></label>
+    <label class="set-row set-chk"><span>No alcohol</span><input type="checkbox" id="setAf"></label>
+    <p class="tp">Every film's prep sheet and shopping list start from these. You can still change them on the Prep tab.</p>
+    <h4>Your stuff</h4>
+    <div class="set-acts">
+      <button type="button" id="setClearStubs">Clear ticket stubs</button>
+      <button type="button" id="setClearSaved">Clear saved menus</button>
+      <button type="button" class="danger" id="setReset">Reset everything</button>
+    </div>
+    <p class="tp" id="setMsg" role="status" aria-live="polite">Saved on this device. Reset clears stubs, saved menus, watched films, this week's film, rentals and settings.</p>
+  </div>
+</dialog>
 </body>
 </html>

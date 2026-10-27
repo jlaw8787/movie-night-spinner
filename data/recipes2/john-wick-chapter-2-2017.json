@@ -102,7 +102,9 @@
      "text": "Lay it all out in neat rows on a long board.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Rome supplì rice balls",
@@ -181,7 +183,9 @@
      "text": "Fry at 180C until golden.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Cacio e pepe",
@@ -222,7 +226,9 @@
      "text": "Off the heat, toss with finely grated pecorino, the pepper and ladles of starchy pasta water until creamy, never stringy.",
      "min": 11
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Tiramisu",
@@ -301,7 +307,95 @@
      "text": "Sift cocoa on top.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Tiramisu",
+     "prep_min": 30,
+     "cook_min": 480,
+     "make_ahead": "Make the day before",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "strong brewed coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "egg yolks",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mascarpone",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 24,
+       "u": "",
+       "item": "savoiardi biscuits",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cocoa powder",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the coffee, stir in the brown sugar and vanilla and cool.",
+       "min": 8
+      },
+      {
+       "text": "Whisk the yolks with the sugar, then fold in the mascarpone and whipped cream.",
+       "min": 12
+      },
+      {
+       "text": "Dip the savoiardi quickly and layer with the cream in a dish.",
+       "min": 10
+      },
+      {
+       "text": "Set overnight in the fridge.",
+       "min": 480
+      },
+      {
+       "text": "Sift cocoa on top.",
+       "min": 0
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Negroni",
@@ -350,7 +444,69 @@
      "text": "Strain over a big cube and twist orange peel over the top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Negroni (alcohol-free)",
+     "prep_min": 6,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "alcohol-free red bitter aperitif",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the grape juice with the balsamic.",
+       "min": 1
+      },
+      {
+       "text": "Stir the non-alcoholic gin, aperitif and grape mix over ice for 20 seconds, one drink at a time.",
+       "min": 3
+      },
+      {
+       "text": "Strain over a big cube and twist orange peel over the top.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

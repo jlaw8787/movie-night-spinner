@@ -80,7 +80,9 @@
      "text": "Cool on the tray so it crisps, then tip into a very big bowl.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Future cheese fries with chicken salt",
@@ -165,7 +167,9 @@
      "text": "Pile the chips on a platter, pour over the cheese sauce and scatter with bacon and spring onion.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Plants-crave-water chicken salad bowl",
@@ -280,7 +284,126 @@
      "text": "Toss the lettuce, tomatoes, cucumber and avocado, then top with chicken and corn and drizzle with dressing.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Plants-crave-water haloumi salad bowl",
+     "prep_min": 15,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch chives, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch dill, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cos lettuces, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cherry tomatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "avocado",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the oil, lemon zest and juice, garlic and oregano. Slice the haloumi thick.",
+       "min": 5
+      },
+      {
+       "text": "Grill the corn and cut off the kernels.",
+       "min": 8
+      },
+      {
+       "text": "Grill the haloumi for 1 to 2 minutes a side and spoon the lemon mix over.",
+       "min": 6
+      },
+      {
+       "text": "Whisk the buttermilk, mayonnaise, chives and dill into a dressing.",
+       "min": 3
+      },
+      {
+       "text": "Toss the lettuce, tomatoes, cucumber and sliced avocado, then top with the haloumi and corn and drizzle with the dressing.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Year 2505 blue raspberry cupcakes",
@@ -375,7 +498,9 @@
      "text": "Pipe on top and finish with silver sprinkles.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Brawndo electrolyte lime cooler",
@@ -444,7 +569,9 @@
      "text": "Stir and garnish with lime wheels.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

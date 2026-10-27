@@ -66,7 +66,9 @@
      "text": "Melt the butter with crushed garlic and brush over the balls. Warm the sauce for dipping.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chicken momo dumplings",
@@ -141,7 +143,9 @@
      "text": "Char the tomatoes in a dry pan, then blitz with chilli flakes, salt and garlic for the achar.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Multiverse noodle bowls",
@@ -220,7 +224,114 @@
      "text": "Cook the noodles and build each bowl differently with pork, eggs, corn and nori.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Multiverse noodle bowls (vegetarian)",
+     "prep_min": 16,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "firm tofu, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "shiitake mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "portions ramen noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "white miso",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can corn kernels",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sheets nori",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the tofu in the oil until golden on both sides.",
+       "min": 10
+      },
+      {
+       "text": "Add the shiitake, soy sauce, sugar and water and simmer, turning, until sticky.",
+       "min": 15
+      },
+      {
+       "text": "Soft-boil the eggs, cool and halve.",
+       "min": 8
+      },
+      {
+       "text": "Heat the stock and whisk in the miso.",
+       "min": 5
+      },
+      {
+       "text": "Cook the noodles and build each bowl differently with tofu, shiitake, eggs, corn and nori.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Kamar-Taj sel roti",
@@ -279,7 +390,9 @@
      "text": "Pour rings of batter into oil at 175C and fry until golden on both sides.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Kamar-Taj masala chai",
@@ -354,7 +467,9 @@
      "text": "Strain into cups.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

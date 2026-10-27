@@ -58,7 +58,9 @@
      "text": "Add a bowl of sour cream with chives and thinly sliced red onion.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hårga flower crown crudités",
@@ -123,7 +125,9 @@
      "text": "Mix the sour cream with dill and salt for the dip in the middle.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ninety-year feast dill gravlax",
@@ -204,7 +208,92 @@
      "text": "Mix the Dijon, remaining sugar, vinegar, oil and dill for the sauce. Serve with rye bread.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ninety-year feast dill-cured carrots",
+     "prep_min": 25,
+     "cook_min": 1515,
+     "make_ahead": "Needs 24 hours marinating, keeps 4 days chilled",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "large carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "rock salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "caster sugar, 30g for the cure and the rest for the sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "white pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf rye bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bury the whole carrots in the rock salt in a baking dish and bake at 190C until tender.",
+       "min": 80
+      },
+      {
+       "text": "Crack off the salt, peel the carrots and slice into long thin ribbons with a peeler.",
+       "min": 15
+      },
+      {
+       "text": "Toss the ribbons with 2 tbsp of the oil, 1 tbsp of the vinegar, 30g of the sugar, half the chopped dill and the white pepper. Cover and marinate in the fridge for 24 hours.",
+       "min": 1440
+      },
+      {
+       "text": "Mix the Dijon, remaining sugar, vinegar, oil and dill for the sauce. Serve with rye bread.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Strawberry midsummer cake",
@@ -283,7 +372,9 @@
      "text": "Top with whole berries.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Elderflower and strawberry gin punch",
@@ -354,7 +445,81 @@
      "text": "Fill the jug with ice and top with sparkling water. Pour into glasses with a few edible flowers on top.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Elderflower and strawberry gin punch (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "strawberries, hulled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "elderflower cordial",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "chilled sparkling water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "punnet edible flowers",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Crush the strawberries with the sugar in a jug and leave for 15 minutes.",
+       "min": 18
+      },
+      {
+       "text": "Add the non-alcoholic gin, cordial and lemon juice and stir.",
+       "min": 2
+      },
+      {
+       "text": "Fill the jug with ice and top with sparkling water. Pour into glasses with a few edible flowers on top.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

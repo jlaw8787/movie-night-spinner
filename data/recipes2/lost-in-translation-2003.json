@@ -52,7 +52,9 @@
      "text": "Serve in small bowls with rice crackers and wasabi peas.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Karaoke night karaage",
@@ -137,7 +139,95 @@
      "text": "Serve with mayonnaise and lemon.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Karaoke night karaage",
+     "prep_min": 14,
+     "cook_min": 77,
+     "make_ahead": "Marinate a few hours ahead",
+     "ingredients": [
+      {
+       "q": 700,
+       "u": "g",
+       "item": "chicken thighs",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "potato starch",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the chicken into pieces and mix with the soy, stock, ginger and crushed garlic.",
+       "min": 12
+      },
+      {
+       "text": "Marinate in the fridge.",
+       "min": 60
+      },
+      {
+       "text": "Coat in potato starch and fry at 160C, then rest.",
+       "min": 12
+      },
+      {
+       "text": "Fry again at 190C until crisp.",
+       "min": 5
+      },
+      {
+       "text": "Serve with mayonnaise and lemon.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Shabu-shabu",
@@ -218,7 +308,120 @@
      "text": "Bring the broth to a simmer at the table. Swish the beef, tofu and vegetables through the broth and dip in ponzu.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Shabu-shabu (vegetarian)",
+     "prep_min": 18,
+     "cook_min": 70,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "piece kombu",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "dried shiitake mushrooms",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "fried tofu puffs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "wombok",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "enoki mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "short grain rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the kombu and dried shiitake in the water.",
+       "min": 30
+      },
+      {
+       "text": "Slice the firm tofu, tofu puffs, king oyster mushrooms thinly lengthways, wombok, enoki and spring onions and arrange on platters.",
+       "min": 15
+      },
+      {
+       "text": "Mix the soy, lemon juice and rice vinegar into a ponzu.",
+       "min": 3
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 20
+      },
+      {
+       "text": "Bring the broth to a simmer at the table. Swish the tofu, mushrooms and vegetables through the broth and dip in the ponzu.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Matcha soft serve",
@@ -269,7 +472,9 @@
      "text": "Scoop soft into waffle cones.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Japanese whisky highball",
@@ -316,7 +521,73 @@
      "text": "Stir once and add a twist of lemon. Sip it slowly, jet-lagged, at the hotel bar.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Japanese whisky highball (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 22,
+     "make_ahead": "Tea up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "roasted barley tea bags (mugicha)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice, to serve",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the barley tea in the boiling water for 5 minutes, stir in the honey and chill until very cold.",
+       "min": 25
+      },
+      {
+       "text": "Pack four tall glasses with ice.",
+       "min": 2
+      },
+      {
+       "text": "Add 120ml of the cold tea to each and top with very cold soda water.",
+       "min": 2
+      },
+      {
+       "text": "Stir once and add a twist of lemon. Sip it slowly, jet-lagged, at the hotel bar.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

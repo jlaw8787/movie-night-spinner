@@ -52,7 +52,9 @@
      "text": "Split the baguette, spread thickly and bake at 200C until crisp.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Blood rave beetroot dip",
@@ -111,7 +113,9 @@
      "text": "Cut the pita into wedges and bake crisp.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Garlic-heavy steak",
@@ -174,7 +178,80 @@
      "text": "Rest the steaks and steam the broccolini.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Garlic-heavy cauliflower steak",
+     "prep_min": 15,
+     "cook_min": 70,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers, cut into 4 thick steaks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "head garlic, cloves separated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter for mash",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches broccolini",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Wrap half the garlic cloves, unpeeled, in foil and roast at 200C until soft.",
+       "min": 30
+      },
+      {
+       "text": "Boil the potatoes and mash with the butter for mash and the squeezed roasted garlic.",
+       "min": 30
+      },
+      {
+       "text": "Sear the cauliflower steaks in the oil until deep golden on both sides, add the butter and the rest of the garlic, crushed, baste well and finish in the oven for 10 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Steam the broccolini.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Blood orange tart",
@@ -243,7 +320,9 @@
      "text": "Simmer blood orange slices in a sugar syrup and arrange on top.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Blood rave pomegranate sangria",
@@ -324,7 +403,91 @@
      "text": "Add plenty of ice and top with soda water just before serving.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Blood rave pomegranate sangria (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 120,
+     "make_ahead": "Up to 1 day, add ice at serving",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "strong black tea, cooled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "pomegranate juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "blood oranges, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "pomegranate, seeds only",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the grape juice, cold tea, pomegranate juice, sugar and cinnamon in a big jug.",
+       "min": 8
+      },
+      {
+       "text": "Add the oranges and pomegranate seeds.",
+       "min": 2
+      },
+      {
+       "text": "Chill for at least two hours.",
+       "min": 120
+      },
+      {
+       "text": "Add plenty of ice and top with soda water just before serving.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

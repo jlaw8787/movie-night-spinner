@@ -56,7 +56,9 @@
      "text": "Chill until firm, then cut into bars.",
      "min": 45
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Four Leaf's jungle banh mi bites",
@@ -143,7 +145,9 @@
      "text": "Cut into bites.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Flaming Dragon green curry",
@@ -218,7 +222,96 @@
      "text": "Stir through the Thai basil and serve over rice.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Flaming Dragon green curry with tofu",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Curry up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetarian green curry paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 450,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "palm sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Thai eggplant",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "green beans, trimmed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch Thai basil",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the tofu dry and cut into 2cm cubes.",
+       "min": 5
+      },
+      {
+       "text": "Fry the curry paste in the thick top of the coconut milk until it splits.",
+       "min": 5
+      },
+      {
+       "text": "Add the tofu, the rest of the coconut milk, soy sauce, palm sugar, eggplant and beans. Simmer for 12 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Cook the rice by the absorption method.",
+       "min": 15
+      },
+      {
+       "text": "Stir through the Thai basil and serve over rice.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mango sticky rice",
@@ -275,7 +368,9 @@
      "text": "Slice the mangoes, spoon a little salty coconut cream alongside and scatter with sesame seeds.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Booty Sweat passionfruit ginger fizz",
@@ -350,7 +445,9 @@
      "text": "Stir and add a mint sprig.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

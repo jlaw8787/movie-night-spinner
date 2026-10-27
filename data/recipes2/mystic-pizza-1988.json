@@ -62,7 +62,9 @@
      "text": "Drizzle with olive oil.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pizza parlour garlic knots",
@@ -115,7 +117,9 @@
      "text": "Toss straight away in melted garlic butter with parsley and parmesan.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Leona's secret sauce pizza",
@@ -196,7 +200,9 @@
      "text": "Bake on a hot steel at maximum heat.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Portuguese custard tarts",
@@ -259,7 +265,9 @@
      "text": "Cool slightly and dust with cinnamon.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jojo's wedding day sangria",
@@ -340,7 +348,101 @@
      "text": "Fill four glasses with ice, pour in the sangria with some fruit and top with a splash of lemonade.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Jojo's wedding day sangria (alcohol-free)",
+     "prep_min": 30,
+     "cook_min": 60,
+     "make_ahead": "Make up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red apple",
+       "aisle": "Produce"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "lemonade",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bag in the boiling water for 4 minutes, lift out and cool.",
+       "min": 15
+      },
+      {
+       "text": "Slice the orange, lemon and apple into a big jug.",
+       "min": 8
+      },
+      {
+       "text": "Add the grape juice, cooled tea, sugar and cinnamon stick and stir until the sugar dissolves.",
+       "min": 5
+      },
+      {
+       "text": "Chill for an hour.",
+       "min": 60
+      },
+      {
+       "text": "Fill four glasses with ice, pour in the sangria with some fruit and top with a splash of lemonade.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

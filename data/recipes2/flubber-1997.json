@@ -70,7 +70,9 @@
      "text": "Serve the goo with the crisps and sugar snap peas.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Medfield basketball cheese puffs",
@@ -133,7 +135,9 @@
      "text": "Cool for a few minutes before serving.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lemon thyme chicken with baby potatoes",
@@ -204,7 +208,86 @@
      "text": "Steam the beans and toss everything with butter.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lemon thyme haloumi with baby potatoes",
+     "prep_min": 10,
+     "cook_min": 45,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, sliced thick",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "baby potatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans, trimmed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the potatoes with half the olive oil and the salt and roast at 200C for 35 minutes.",
+       "min": 37
+      },
+      {
+       "text": "Toss the haloumi with the lemon juice, thyme and the rest of the oil.",
+       "min": 5
+      },
+      {
+       "text": "Fry the haloumi in a hot pan until golden on both sides.",
+       "min": 6
+      },
+      {
+       "text": "Steam the beans and toss with the potatoes, haloumi and butter.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Flubber jelly",
@@ -249,7 +332,9 @@
      "text": "Fill the centre with cream and sliced kiwifruit.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Weebo's lime ice cream float",
@@ -286,7 +371,9 @@
      "text": "Gently add a scoop of ice cream so it floats and foams up green. Serve straight away with a long spoon and a straw.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

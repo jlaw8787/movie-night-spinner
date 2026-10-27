@@ -70,7 +70,9 @@
      "text": "Cut into triangles.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Shenanigans loaded cheese fries",
@@ -155,7 +157,9 @@
      "text": "Serve with the sour cream.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Farva's double bacon cheeseburgers",
@@ -240,7 +244,108 @@
      "text": "Toast the burger buns, spread with sauce and stack the patties, bacon, pickles and diced onion in.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Farva's double cheeseburgers with smoky mushrooms",
+     "prep_min": 20,
+     "cook_min": 14,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "tomato sauce, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "mustard, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "white onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "burger buns",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in half the oil with the smoked paprika until crisp at the edges.",
+       "min": 10
+      },
+      {
+       "text": "Roll the plant-based mince into balls and smash flat on a very hot plate oiled with the rest of the oil, season and cook 2 minutes.",
+       "min": 7
+      },
+      {
+       "text": "Flip, top each with cheddar and cook 1 minute.",
+       "min": 6
+      },
+      {
+       "text": "Mix the mayo, the tomato sauce, the mustard and the chopped pickles.",
+       "min": 5
+      },
+      {
+       "text": "Toast the burger buns, spread with sauce and stack the patties, mushrooms, pickles and diced onion in.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Syrup-chug maple bacon pancakes",
@@ -313,7 +418,9 @@
      "text": "Stack the pancakes per plate with bacon and a spoon of butter, and pour over warm maple syrup.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Homemade spiced cola",
@@ -408,7 +515,9 @@
      "text": "Mix the syrup with the soda water in a 1 litre jug full of ice.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

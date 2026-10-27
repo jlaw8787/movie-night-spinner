@@ -72,7 +72,9 @@
      "text": "Grill the frankfurts and put in the hot dog buns with mustard, the coney sauce and diced onion.",
      "min": 13
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Flint Tropics coconut prawns",
@@ -163,7 +165,9 @@
      "text": "Serve the prawns hot with the sauce.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Jackie Moon's barbecue pork ribs",
@@ -228,7 +232,90 @@
      "text": "Serve with the buttered corn cobs and the coleslaw mixed with mayonnaise.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jackie Moon's barbecue mushroom ribs",
+     "prep_min": 15,
+     "cook_min": 43,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag coleslaw mix",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the king oyster mushrooms lengthways and score the cut sides. Rub with the oil, salt, pepper and smoked paprika.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 200C until browned and tender.",
+       "min": 25
+      },
+      {
+       "text": "Brush with the barbecue sauce and grill until sticky.",
+       "min": 8
+      },
+      {
+       "text": "Boil the corn cobs and toss in the butter.",
+       "min": 10
+      },
+      {
+       "text": "Serve with the buttered corn and the coleslaw mixed with mayonnaise.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Seventies orange creamsicle cake",
@@ -317,7 +404,9 @@
      "text": "Sandwich and top the cakes with the cream and drizzle over the icing sugar mixed with the orange juice.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Coffee Black's espresso martini",
@@ -384,7 +473,73 @@
      "text": "For non-drinkers, shake the espresso with syrup, milk and ice instead.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Coffee Black's espresso martini (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 25,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": null,
+       "u": "",
+       "item": "espresso coffee beans, enough for 4 double shots",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "cold brew coffee",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "brown sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice, as needed",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill the coupes.",
+       "min": 20
+      },
+      {
+       "text": "Pull four double shots of espresso from the beans and cool for 5 minutes.",
+       "min": 6
+      },
+      {
+       "text": "For each drink, shake the espresso, cold brew, brown sugar syrup and vanilla hard with lots of ice for 15 seconds until foamy.",
+       "min": 3
+      },
+      {
+       "text": "Strain into the glass and twist a strip of orange peel over the top.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

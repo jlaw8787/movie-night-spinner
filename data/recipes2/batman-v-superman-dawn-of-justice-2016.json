@@ -62,7 +62,9 @@
      "text": "Arrange both on silver trays.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Smoked trout crispbreads",
@@ -119,7 +121,9 @@
      "text": "Serve cold on a slate.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Metropolis gala beef Wellington",
@@ -208,7 +212,110 @@
      "text": "Rest before slicing.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Metropolis gala mushroom Wellington",
+     "prep_min": 40,
+     "cook_min": 72,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the button mushrooms very fine and crush the garlic.",
+       "min": 10
+      },
+      {
+       "text": "Brush the portobello mushrooms with some of the olive oil, season with salt and pepper and roast at 200C for 15 minutes, then brush with the mustard and cool.",
+       "min": 25
+      },
+      {
+       "text": "Cook the chopped mushrooms with the garlic and thyme in the rest of the oil until dry.",
+       "min": 12
+      },
+      {
+       "text": "Wilt the spinach in the same pan and squeeze out the water.",
+       "min": 5
+      },
+      {
+       "text": "Lay the spinach on a pastry sheet, spread with the mushroom mix and stack the portobellos in a log on top. Wrap, seal with the second sheet and brush with egg.",
+       "min": 15
+      },
+      {
+       "text": "Bake at 210C until deep golden.",
+       "min": 35
+      },
+      {
+       "text": "Rest before slicing.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Wayne gala chocolate soufflé",
@@ -269,7 +376,9 @@
      "text": "Serve straight away with cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "LexCorp gala pear and ginger fizz",
@@ -342,7 +451,83 @@
      "text": "Thread candied ginger onto picks and rest across each glass.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "LexCorp gala pear and ginger fizz",
+     "prep_min": 11,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 100,
+       "u": "g",
+       "item": "fresh ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "pear nectar",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "candied ginger",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the ginger and simmer with the sugar and water, then strain and cool.",
+       "min": 10
+      },
+      {
+       "text": "Chill four flutes. Juice the lemon.",
+       "min": 3
+      },
+      {
+       "text": "Pour pear nectar, ginger syrup and lemon juice into each flute.",
+       "min": 4
+      },
+      {
+       "text": "Top with alcohol-free sparkling wine and stir once gently.",
+       "min": 2
+      },
+      {
+       "text": "Thread candied ginger onto picks and rest across each glass.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

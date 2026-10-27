@@ -44,7 +44,9 @@
      "text": "Raise the oil to 185C and fry in batches until crisp, drain, season with salt and serve in paper boats.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lou's malt shop cheeseburger",
@@ -119,7 +121,86 @@
      "text": "Toast the buns and fill with the patties, pickles and mustard.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lou's malt shop cheeseburger (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 5,
+     "make_ahead": "Shape the patties up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "American-style cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "dill pickles, sliced",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Divide the plant-based mince into four loose balls and slice the onion very thin.",
+       "min": 5
+      },
+      {
+       "text": "Heat a griddle until very hot. Put the mince balls on it, top with onion and press firmly into thin patties. Season with salt and pepper.",
+       "min": 5
+      },
+      {
+       "text": "Cook 2 to 3 minutes until well browned, flip and cook a further 2 minutes. Lay the cheese on top to melt.",
+       "min": 5
+      },
+      {
+       "text": "Toast the buns and fill with the patties, pickles and mustard.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Doc's breakfast machine fry-up",
@@ -170,7 +251,80 @@
      "text": "Plate the eggs with the bacon and buttered toast.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Doc's breakfast machine fry-up (vegetarian)",
+     "prep_min": 5,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "field mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in the olive oil over high heat for 8 to 10 minutes, turning, until browned and crisp at the edges. Stir through the smoked paprika and soy sauce and lift out onto a plate.",
+       "min": 10
+      },
+      {
+       "text": "Melt a little of the butter in the same pan and fry the eggs, spooning the butter over the yolks until the whites are set.",
+       "min": 4
+      },
+      {
+       "text": "Meanwhile toast the white bread and spread with the rest of the butter.",
+       "min": 4
+      },
+      {
+       "text": "Plate the eggs with the smoky mushrooms and buttered toast.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Uncle Joey's welcome home cake",
@@ -249,7 +403,9 @@
      "text": "Pipe WELCOME HOME JOEY across the cake with the blue writing icing.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chocolate milk",
@@ -296,7 +452,9 @@
      "text": "Stir again and pour into four tall glasses with a straw each.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Coffee, no sugar",
@@ -327,7 +485,9 @@
      "text": "Pour the coffee black into four mugs. No sugar.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

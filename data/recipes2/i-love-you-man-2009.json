@@ -106,7 +106,117 @@
      "text": "Warm the tortillas and fill with slaw, fish, onion, mayo and coriander.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Venice Beach crispy fish tacos",
+     "prep_min": 35,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "firm white fish fillets",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "quarter cabbage, as needed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin chipotle in adobo",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 330,
+       "u": "ml",
+       "item": "can alcohol-free beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "small flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch coriander",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the red onion thin and soak in lime juice and salt for 20 minutes.",
+       "min": 21
+      },
+      {
+       "text": "Toss a quarter of a shredded cabbage with lime and salt.",
+       "min": 6
+      },
+      {
+       "text": "Mix the mayo with the chipotle in adobo.",
+       "min": 6
+      },
+      {
+       "text": "Whisk the flour, the baking powder and the cold alcohol-free beer.",
+       "min": 6
+      },
+      {
+       "text": "Heat the oil, cut the white fish into strips, dip in the batter and fry at 180C for 3 minutes.",
+       "min": 9
+      },
+      {
+       "text": "Warm the tortillas and fill with slaw, fish, onion, mayo and coriander.",
+       "min": 6
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Man cave pulled pork nachos",
@@ -203,7 +313,9 @@
      "text": "Top with sliced pickled jalapeños, diced tomato, coriander and spring onion.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Open house roast beef baguettes",
@@ -284,7 +396,108 @@
      "text": "Press down and cut each into pieces.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Open house roast mushroom baguettes",
+     "prep_min": 15,
+     "cook_min": 49,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "horseradish",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "baguettes",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag rocket",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "fried shallots",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the red onion thin and soak in the red wine vinegar with the sugar for 20 minutes.",
+       "min": 24
+      },
+      {
+       "text": "Brush the mushrooms with the oil and soy and roast at 220C for 20 minutes, then slice thickly.",
+       "min": 22
+      },
+      {
+       "text": "Mix the sour cream with the horseradish and salt.",
+       "min": 4
+      },
+      {
+       "text": "Split the baguettes lengthways, spread with the horseradish cream and layer with the mushrooms, a handful of rocket, the drained onion and the fried shallots.",
+       "min": 10
+      },
+      {
+       "text": "Press down and cut each into pieces.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Peter and Zooey's lemon wedding cupcakes",
@@ -375,7 +588,9 @@
      "text": "Beat the cream cheese with the soft butter and the icing sugar, pipe on top and finish with lemon zest.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Slappin' da bass grapefruit paloma",
@@ -448,7 +663,79 @@
      "text": "For drivers, skip the tequila and add some more grapefruit and soda.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Slappin' da bass grapefruit paloma (alcohol-free)",
+     "prep_min": 6,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "pink grapefruit",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "agave syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "jalapeño, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt flakes, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice, as needed",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the rims of the tall glasses with lime and dip in salt.",
+       "min": 1
+      },
+      {
+       "text": "Fill with ice.",
+       "min": 1
+      },
+      {
+       "text": "Juice two of the grapefruit and the limes. To each glass add the grapefruit juice, lime juice, agave syrup and a slice of jalapeño and stir.",
+       "min": 3
+      },
+      {
+       "text": "Top with the soda water and add a wedge of the last grapefruit.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

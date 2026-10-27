@@ -64,7 +64,9 @@
      "text": "Pile the fruit on a platter, squeeze over lime juice and sprinkle with the chilli salt.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Plantain chips",
@@ -127,7 +129,9 @@
      "text": "Salt well and serve with the dip.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Castle dinner jerk chicken",
@@ -202,7 +206,98 @@
      "text": "Grill the chicken until charred and cooked through.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Castle dinner jerk tofu",
+     "prep_min": 10,
+     "cook_min": 90,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "firm tofu, cut into thick slabs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "ground allspice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red chillies",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can kidney beans",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blitz the allspice, thyme, chilli, lime juice, spring onion, soy sauce and oil into a paste.",
+       "min": 8
+      },
+      {
+       "text": "Marinate the tofu in the paste.",
+       "min": 60
+      },
+      {
+       "text": "Cook the rice with the drained kidney beans.",
+       "min": 20
+      },
+      {
+       "text": "Grill the tofu until charred on both sides.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ariel's grotto jelly",
@@ -253,7 +348,9 @@
      "text": "Whip the cream and spoon on top like sea foam.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Sebastian's seashell coconut cooler",
@@ -306,7 +403,9 @@
      "text": "Squeeze in a lime wedge, stir and serve cold.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

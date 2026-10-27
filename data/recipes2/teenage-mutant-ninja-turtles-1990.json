@@ -46,7 +46,9 @@
      "text": "Bake at 220C until golden.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Splinter's cheese plate",
@@ -101,7 +103,9 @@
      "text": "Arrange on a board with the crackers and grapes, and drizzle the honey over the brie just before it goes to the table.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Cowabunga four-pie pizza night",
@@ -164,7 +168,74 @@
      "text": "Bake each pizza on a preheated tray at the oven's highest setting until golden and bubbling, one or two at a time.",
      "min": 32
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cowabunga four-pie pizza night (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 32,
+     "make_ahead": "Toppings can be prepped a day ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "grated mozzarella",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plant-based pepperoni",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "capsicum, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms and capsicum and divide the dough into 4 balls.",
+       "min": 10
+      },
+      {
+       "text": "Stretch each ball thin and top with sauce and mozzarella.",
+       "min": 10
+      },
+      {
+       "text": "Top one pizza with plant-based pepperoni, one with mushrooms, one with pepperoni, mushroom and capsicum, and one with whatever vegetables are left in the fridge.",
+       "min": 10
+      },
+      {
+       "text": "Bake each pizza on a preheated tray at the oven's highest setting until golden and bubbling, one or two at a time.",
+       "min": 32
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pizza cookie",
@@ -239,7 +310,9 @@
      "text": "Melt the chocolate, drizzle over the cookie, scatter with lollies and cut into wedges.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Channel 3 green apple soda",
@@ -288,7 +361,9 @@
      "text": "Divide over ice in 4 glasses and top with soda water.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

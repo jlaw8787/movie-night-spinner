@@ -80,7 +80,91 @@
      "text": "Mix the mayonnaise with malt vinegar and crushed garlic for the dip.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Beer-battered onion rings with malt aioli",
+     "prep_min": 25,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "plain flour, divided",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "cold alcohol-free beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "clove garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the onions into 1cm rings and separate.",
+       "min": 5
+      },
+      {
+       "text": "Whisk flour, baking powder and salt with the cold alcohol-free beer until just smooth.",
+       "min": 5
+      },
+      {
+       "text": "Dust the rings in flour, dip in batter and fry in the oil in batches at 180C until golden, salting straight away.",
+       "min": 12
+      },
+      {
+       "text": "Mix the mayonnaise with malt vinegar and crushed garlic for the dip.",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "North Shore roast beef sliders",
@@ -137,7 +221,9 @@
      "text": "Pile the beef into the buns with the sauce and a slice of cheese.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Alice Ward's baked ziti",
@@ -216,7 +302,102 @@
      "text": "Top with mozzarella and parmesan and bake at 200C.",
      "min": 25
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Alice Ward's baked ziti (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 38,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "vegetarian sausages",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fennel seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 700,
+       "u": "g",
+       "item": "passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "penne or ziti",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the sausages and brown in the oil with the fennel seeds.",
+       "min": 8
+      },
+      {
+       "text": "Add garlic, passata and chilli flakes and simmer.",
+       "min": 15
+      },
+      {
+       "text": "Boil the pasta for 2 minutes less than the packet says.",
+       "min": 10
+      },
+      {
+       "text": "Toss with the sauce, spread in a baking dish and dot with ricotta.",
+       "min": 5
+      },
+      {
+       "text": "Top with mozzarella and vegetarian parmesan-style cheese and bake at 200C.",
+       "min": 25
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Boston cream pie",
@@ -293,7 +474,9 @@
      "text": "Fill the cake with custard and pour over the chocolate.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Charlene's bar black and tan",
@@ -332,7 +515,49 @@
      "text": "Serve straight away before the layers mix.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Charlene's bar black and tan (alcohol-free)",
+     "prep_min": 20,
+     "cook_min": 1,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "cans alcohol-free pale ale (375 ml)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "alcohol-free stout",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill four pint glasses in the freezer for 15 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Pour the pale ale into each glass, tilting it so the head stays small.",
+       "min": 2
+      },
+      {
+       "text": "Hold a spoon upside down just above the pale ale and pour the stout slowly over the back of it so it floats in a dark layer.",
+       "min": 3
+      },
+      {
+       "text": "Serve straight away before the layers mix.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -64,7 +64,9 @@
      "text": "Spoon on the tuna and finish with dill and black pepper. Keep it away from the cat.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Garden party devilled eggs",
@@ -123,7 +125,9 @@
      "text": "Pipe back and finish with paprika and chives.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wedding rehearsal salmon",
@@ -196,7 +200,106 @@
      "text": "Plate with lemon wedges.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Wedding rehearsal herb-crusted tofu",
+     "prep_min": 20,
+     "cook_min": 38,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "extra-firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "new potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches asparagus",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the tofu dry, cut into 4 thick slabs and season with salt.",
+       "min": 8
+      },
+      {
+       "text": "Mix the breadcrumbs with the oil, chopped dill, parsley and lemon zest.",
+       "min": 6
+      },
+      {
+       "text": "Brush the tofu with the mustard, press on the crumbs and roast at 200C until golden.",
+       "min": 20
+      },
+      {
+       "text": "Boil the potatoes and toss with the rest of the herbs.",
+       "min": 15
+      },
+      {
+       "text": "Steam the asparagus.",
+       "min": 5
+      },
+      {
+       "text": "Plate with lemon wedges.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Gazebo lemon tart",
@@ -263,7 +366,9 @@
      "text": "Dust with icing sugar.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jack's malted vanilla milkshake",
@@ -320,7 +425,9 @@
      "text": "Pour into the frosted glasses, top with whipped cream and dust with a little extra malt powder.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

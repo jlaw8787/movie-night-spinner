@@ -84,7 +84,9 @@
      "text": "Serve with warm maple syrup for dipping",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Party cocktail franks",
@@ -133,7 +135,9 @@
      "text": "Pile into a warm bowl with toothpicks for picking",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Frank's dinner party meatloaf",
@@ -222,7 +226,106 @@
      "text": "Rest before slicing",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Frank's dinner party lentil loaf",
+     "prep_min": 25,
+     "cook_min": 65,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "canned brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the breadcrumbs in the milk.",
+       "min": 5
+      },
+      {
+       "text": "Fry the mushrooms and onion in the oil until dry and browned.",
+       "min": 10
+      },
+      {
+       "text": "Mash half the lentils, then mix in the rest with the mushrooms, soaked crumbs, eggs and soy sauce.",
+       "min": 8
+      },
+      {
+       "text": "Press into a lined loaf tin and glaze with the tomato sauce and brown sugar.",
+       "min": 7
+      },
+      {
+       "text": "Bake at 180C until firm.",
+       "min": 50
+      },
+      {
+       "text": "Rest before slicing.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rocky's birthday cake",
@@ -305,7 +408,9 @@
      "text": "Brush with edible gold and add candles",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Red lips cranberry cosmopolitan",
@@ -372,7 +477,71 @@
      "text": "Hold a strip of orange peel over each glass, warm it with a match and squeeze so the oil flashes, then drop it in",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Red lips cranberry cosmopolitan (alcohol-free)",
+     "prep_min": 12,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "cranberry juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "white grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill four coupes.",
+       "min": 5
+      },
+      {
+       "text": "Cut 4 strips of peel from the orange, then juice it.",
+       "min": 2
+      },
+      {
+       "text": "For each drink, measure 50ml cranberry juice, 20ml white grape juice, 15ml orange juice and the juice of half a lime into a shaker.",
+       "min": 2
+      },
+      {
+       "text": "Shake each drink with ice for 15 seconds and strain into the coupes.",
+       "min": 5
+      },
+      {
+       "text": "Hold a strip of orange peel over each glass, warm it with a match and squeeze so the oil flashes, then drop it in.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

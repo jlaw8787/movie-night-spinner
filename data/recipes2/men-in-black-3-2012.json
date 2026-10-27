@@ -52,7 +52,9 @@
      "text": "Tuck into buns with mustard and sauerkraut and wrap in wax paper.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chinese restaurant dumplings",
@@ -121,7 +123,9 @@
      "text": "Serve hot with soy sauce and chilli oil.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Agency meatloaf",
@@ -216,7 +220,120 @@
      "text": "Serve thick slices with mash and peas.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Agency lentil and mushroom meatloaf",
+     "prep_min": 21,
+     "cook_min": 79,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins brown lentils (400g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion and mushrooms in the oil until dry and cool slightly.",
+       "min": 12
+      },
+      {
+       "text": "Roughly mash the lentils and mix with the mushrooms, breadcrumbs, eggs, soy sauce and salt.",
+       "min": 8
+      },
+      {
+       "text": "Press into a lined loaf tin, spread with the tomato sauce mixed with the brown sugar and bake at 180C.",
+       "min": 50
+      },
+      {
+       "text": "Boil and mash the potatoes with butter and cook the peas.",
+       "min": 20
+      },
+      {
+       "text": "Rest the loaf 10 minutes and serve thick slices with mash and peas.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Diner apple pie",
@@ -287,7 +404,9 @@
      "text": "Serve warm with ice cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Black suit espresso martini",
@@ -354,7 +473,67 @@
      "text": "Strain into the glasses and float three coffee beans on the foam. Repeat.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Black suit espresso martini (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 320,
+       "u": "ml",
+       "item": "strong cold brew coffee",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "coffee beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill four martini glasses in the freezer.",
+       "min": 15
+      },
+      {
+       "text": "Stir the vanilla into the sugar syrup.",
+       "min": 1
+      },
+      {
+       "text": "Shake two drinks at a time with cold brew, vanilla syrup and plenty of ice, very hard for 30 seconds to build the foam.",
+       "min": 4
+      },
+      {
+       "text": "Strain into the glasses and float three coffee beans on the foam. Repeat.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

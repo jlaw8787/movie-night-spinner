@@ -68,7 +68,9 @@
      "text": "Tear the bread for mopping up the oil.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Date, oat and peanut butter bites",
@@ -127,7 +129,9 @@
      "text": "Chill for an hour.",
      "min": 60
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Date night cheesesteaks",
@@ -198,7 +202,84 @@
      "text": "Scoop into split bread rolls.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Date night mushroom cheesesteaks",
+     "prep_min": 15,
+     "cook_min": 16,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "portobello mushrooms, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "provolone",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long bread rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms, onions and capsicum thinly.",
+       "min": 8
+      },
+      {
+       "text": "Fry the onion and capsicum in 1 tbsp of the oil on a hot plate until soft, then push aside.",
+       "min": 8
+      },
+      {
+       "text": "Add the mushrooms and remaining oil and fry hard until browned and dry, then splash with the soy sauce and mix with the onion and capsicum.",
+       "min": 10
+      },
+      {
+       "text": "Lay the provolone over the top to melt.",
+       "min": 3
+      },
+      {
+       "text": "Scoop into the split bread rolls.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Italian rainbow cookies",
@@ -281,7 +362,9 @@
      "text": "Spread with melted chocolate and slice.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Training camp honey lemon ginger fizz",
@@ -354,7 +437,9 @@
      "text": "Top with sparkling water and finish with a lemon wheel.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

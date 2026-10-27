@@ -70,7 +70,9 @@
      "text": "Drizzle with lime juice, honey and chilli.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Korg's Kiwi sausage rolls",
@@ -149,7 +151,9 @@
      "text": "Bake until golden and serve warm with tomato sauce.",
      "min": 25
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Contest of Champions roast",
@@ -228,7 +232,92 @@
      "text": "Rest the lamb and pull apart to serve.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Contest of Champions roast cauliflower",
+     "prep_min": 20,
+     "cook_min": 68,
+     "make_ahead": "Can rest, covered, for 30 minutes",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "whole cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves of garlic, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "fresh rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zest and juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled and halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful of mint, chopped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the cauliflowers whole for 8 minutes and drain. Cut slits and push in the garlic and rosemary, then rub with the lemon, salt and half the oil.",
+       "min": 20
+      },
+      {
+       "text": "Roast at 200C with the potatoes in the rest of the oil until deep golden.",
+       "min": 60
+      },
+      {
+       "text": "Mix the yoghurt with the mint.",
+       "min": 3
+      },
+      {
+       "text": "Cut the cauliflowers into wedges to serve.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Korg's Kiwi afghan biscuits",
@@ -307,7 +396,9 @@
      "text": "Ice each biscuit and top with half a walnut.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Never-empty mug of honey lager punch",
@@ -380,7 +471,83 @@
      "text": "Pour into big mugs with a lemon wheel and keep a second jug ready.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Never-empty mug of honey lager punch (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 60,
+     "make_ahead": "Syrup up to 1 week, chilled",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "g",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "piece of fresh ginger, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "bottles cold alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, cut into wheels",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the honey, water and ginger, then cool and strain.",
+       "min": 10
+      },
+      {
+       "text": "Chill a large jug.",
+       "min": 60
+      },
+      {
+       "text": "Mix the syrup, lemon juice and apple juice in the jug.",
+       "min": 2
+      },
+      {
+       "text": "Slowly pour in the alcohol-free lager and stir gently once.",
+       "min": 2
+      },
+      {
+       "text": "Pour into big mugs with a lemon wheel and keep a second jug ready.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -64,7 +64,9 @@
      "text": "Pour into 8 small glasses.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Stella's sandwiches",
@@ -111,7 +113,9 @@
      "text": "Cut each into quarters and stack on a plate.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Lisa's lobster dinner",
@@ -184,7 +188,90 @@
      "text": "Toss the potatoes in butter and serve with the beans.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lisa's mushroom thermidor dinner",
+     "prep_min": 15,
+     "cook_min": 25,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king brown mushrooms, halved lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the mushrooms in the oil and roast cut side up at 200C in a baking dish.",
+       "min": 10
+      },
+      {
+       "text": "Boil the potatoes. Steam the beans.",
+       "min": 20
+      },
+      {
+       "text": "Simmer the cream with Dijon until thick and stir in the cheese.",
+       "min": 6
+      },
+      {
+       "text": "Spoon over the mushrooms and grill until bubbling.",
+       "min": 5
+      },
+      {
+       "text": "Toss the potatoes in butter and serve with the beans.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Plaster cast lemon icebox pie",
@@ -241,7 +328,9 @@
      "text": "Top with whipped cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Heatwave iced coffee with ice cream",
@@ -306,7 +395,9 @@
      "text": "Add a scoop of ice cream, spoon on whipped cream and dust with cocoa. Serve with a long spoon and a straw.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

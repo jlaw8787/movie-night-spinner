@@ -52,7 +52,9 @@
      "text": "Spoon into a bowl in the middle and dust the apples with cinnamon.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Trumpkin's dwarf bread",
@@ -113,7 +115,9 @@
      "text": "Tear warm and serve with butter.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Aslan's How camp stew",
@@ -188,7 +192,96 @@
      "text": "Serve in deep bowls with crusty bread.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Aslan's How camp stew (vegetarian)",
+     "prep_min": 12,
+     "cook_min": 60,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "Swiss brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin cannellini beans (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "pearl barley",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "leeks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf crusty bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the carrots and leeks and halve the mushrooms.",
+       "min": 10
+      },
+      {
+       "text": "Brown the mushrooms in the oil.",
+       "min": 10
+      },
+      {
+       "text": "Add the barley, vegetables, rosemary and stock and simmer until the barley is tender.",
+       "min": 45
+      },
+      {
+       "text": "Stir in the cannellini beans and warm through.",
+       "min": 5
+      },
+      {
+       "text": "Serve in deep bowls with crusty bread.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Narnian apple crumble",
@@ -267,7 +360,9 @@
      "text": "Warm the custard and serve over the crumble.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Station platform malted hot chocolate",
@@ -330,7 +425,9 @@
      "text": "Pour into mugs and top with cream and a pinch of malt.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

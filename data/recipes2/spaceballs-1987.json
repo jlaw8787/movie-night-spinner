@@ -44,7 +44,9 @@
      "text": "Let set.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Merchandising snack mix",
@@ -107,7 +109,9 @@
      "text": "Cool completely, then toss through the marshmallows.",
      "min": 13
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pizza the Hutt",
@@ -182,7 +186,96 @@
      "text": "Bake at 220C until molten and golden.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pizza the Hutt (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 51,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mozzarella",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "provolone",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Oil a deep tray and press the dough in.",
+       "min": 5
+      },
+      {
+       "text": "Cover and prove until puffy.",
+       "min": 30
+      },
+      {
+       "text": "Toss the mushrooms with the smoked paprika.",
+       "min": 3
+      },
+      {
+       "text": "Spread with sauce and pile on the mozzarella, provolone, vegetarian parmesan-style cheese, cheddar and mushrooms.",
+       "min": 8
+      },
+      {
+       "text": "Bake at 220C until molten and golden.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Yogurt parfait",
@@ -235,7 +328,9 @@
      "text": "Finish with berries on top and serve straight away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Perri-Air sparkling lime and mint cooler",
@@ -300,7 +395,9 @@
      "text": "Fill four tall glasses with ice, divide the mix between them and top with cold sparkling water.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -44,7 +44,9 @@
      "text": "Roll paper into cones and fill them up.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Big top caramel popcorn",
@@ -113,7 +115,9 @@
      "text": "Bake at 120C, stirring every 15 minutes.",
      "min": 45
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jenny Lind opening night roast",
@@ -192,7 +196,344 @@
      "text": "Reduce the red wine with the pan juices for gravy.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Jenny Lind opening night roast",
+     "prep_min": 20,
+     "cook_min": 135,
+     "make_ahead": "Rest 20 minutes before carving",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "kg",
+       "item": "beef sirloin",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled and halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Season the beef and roast until 52C inside.",
+       "min": 60
+      },
+      {
+       "text": "Rest the beef under foil.",
+       "min": 20
+      },
+      {
+       "text": "Roast the potatoes in oil.",
+       "min": 45
+      },
+      {
+       "text": "Whisk the eggs, flour and milk and bake in hot oiled tins at 220C.",
+       "min": 20
+      },
+      {
+       "text": "Reduce the stock and balsamic with the pan juices for gravy.",
+       "min": 10
+      }
+     ]
+    },
+    "veg": {
+     "n": "Jenny Lind opening night nut roast",
+     "prep_min": 25,
+     "cook_min": 120,
+     "make_ahead": "Shape the nut roast up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mixed nuts, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled and halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour, plus 1 tbsp for the gravy",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion and mushrooms in 1 tbsp of the oil until dry.",
+       "min": 10
+      },
+      {
+       "text": "Mix with the nuts, breadcrumbs, cheddar, 2 of the eggs, thyme, salt and pepper. Press into a lined loaf tin and bake at 200C until firm and browned.",
+       "min": 50
+      },
+      {
+       "text": "Roast the potatoes in 2 tbsp of the oil on another shelf.",
+       "min": 45
+      },
+      {
+       "text": "Whisk the other 3 eggs, the flour and milk and bake in tins oiled with the last of the oil at 220C.",
+       "min": 20
+      },
+      {
+       "text": "Melt the butter, stir in 1 tbsp flour, add the red wine and reduce, then whisk in the stock and simmer for gravy.",
+       "min": 10
+      },
+      {
+       "text": "Rest the nut roast, slice and serve with the potatoes, Yorkshire puddings and gravy.",
+       "min": 10
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Jenny Lind opening night nut roast (alcohol-free)",
+     "prep_min": 25,
+     "cook_min": 120,
+     "make_ahead": "Shape the nut roast up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mixed nuts, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled and halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour, plus 1 tbsp for the gravy",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion and mushrooms in 1 tbsp of the oil until dry.",
+       "min": 10
+      },
+      {
+       "text": "Mix with the nuts, breadcrumbs, cheddar, 2 of the eggs, thyme, salt and pepper. Press into a lined loaf tin and bake at 200C until firm and browned.",
+       "min": 50
+      },
+      {
+       "text": "Roast the potatoes in 2 tbsp of the oil on another shelf.",
+       "min": 45
+      },
+      {
+       "text": "Whisk the other 3 eggs, the flour and milk and bake in tins oiled with the last of the oil at 220C.",
+       "min": 20
+      },
+      {
+       "text": "Melt the butter, stir in 1 tbsp flour, whisk in the stock and balsamic vinegar and simmer for gravy.",
+       "min": 10
+      },
+      {
+       "text": "Rest the nut roast, slice and serve with the potatoes, Yorkshire puddings and gravy.",
+       "min": 10
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Ringmaster's red velvet cake",
@@ -283,7 +624,9 @@
      "text": "Layer and cover the cake and add gold sprinkles.",
      "min": 11
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Barnum's champagne cocktails",
@@ -340,7 +683,83 @@
      "text": "Twist lemon peel over and drop it in. Use sparkling apple juice and a dash of bitters for the younger crowd.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Barnum's champagne cocktails (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "sugar cubes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "black tea bag",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine, cold",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, peel only",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bag in the boiling water for 5 minutes, lift out and cool.",
+       "min": 5
+      },
+      {
+       "text": "Put a sugar cube in each of 4 coupes and soak with a teaspoon of the strong tea and a drop of vanilla.",
+       "min": 3
+      },
+      {
+       "text": "Add 15ml apple juice to each.",
+       "min": 2
+      },
+      {
+       "text": "Slowly top with the cold alcohol-free sparkling wine.",
+       "min": 2
+      },
+      {
+       "text": "Twist lemon peel over and drop it in.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

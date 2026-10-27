@@ -64,7 +64,9 @@
      "text": "Serve in butcher's paper with gravy for dipping",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Goose's pickled onions",
@@ -143,7 +145,9 @@
      "text": "Serve with sliced cheese and crackers",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Last of the V8s highway meat pie",
@@ -220,7 +224,112 @@
      "text": "Add sauce on top",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Last of the V8s highway mushroom pie",
+     "prep_min": 45,
+     "cook_min": 68,
+     "make_ahead": "Filling up to 2 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets shortcrust pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms and onion in the oil in batches.",
+       "min": 15
+      },
+      {
+       "text": "Stir in the flour and tomato paste, then add the stock, soy sauce and lentils and simmer until thick.",
+       "min": 25
+      },
+      {
+       "text": "Cool the filling.",
+       "min": 30
+      },
+      {
+       "text": "Line four pie tins with shortcrust and fill.",
+       "min": 12
+      },
+      {
+       "text": "Top with puff and bake at 200C.",
+       "min": 30
+      },
+      {
+       "text": "Add tomato sauce on top.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Jessie's ice cream",
@@ -267,7 +376,9 @@
      "text": "Drizzle over the chocolate so it sets hard in seconds. Eat it before it drips",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Iced coffee",
@@ -334,7 +445,9 @@
      "text": "Whip the cream and add a swirl to each",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

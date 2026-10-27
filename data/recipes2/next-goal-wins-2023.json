@@ -52,7 +52,9 @@
      "text": "Drain and toss with salt mixed with lime zest and chilli flakes.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Samoan oka raw fish in coconut",
@@ -121,7 +123,9 @@
      "text": "Drain most of the juice, then stir in the coconut cream and vegetables. Season and serve cold.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Tavita's team sapasui",
@@ -202,7 +206,92 @@
      "text": "Add the noodles, soy sauce and water and toss until the noodles soak it all up.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Tavita's team sapasui (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "glass noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "firm tofu, cubed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "knob ginger (about a thumb)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the glass noodles in hot water and drain.",
+       "min": 10
+      },
+      {
+       "text": "Cube the tofu and slice the carrots and onion. Crush the garlic and chop the ginger.",
+       "min": 8
+      },
+      {
+       "text": "Fry the tofu in the oil until golden, add the garlic and ginger, then the carrots and onion.",
+       "min": 10
+      },
+      {
+       "text": "Add the noodles, soy sauce and water and toss until the noodles soak it all up.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Panipopo coconut buns",
@@ -275,7 +364,9 @@
      "text": "Bake at 180C until golden and sticky.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jaiyah's Samoan hot chocolate",
@@ -328,7 +419,9 @@
      "text": "Serve hot in mugs, or cool and pour over ice.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

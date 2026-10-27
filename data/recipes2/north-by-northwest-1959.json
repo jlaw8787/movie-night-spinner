@@ -56,7 +56,9 @@
      "text": "Bake at 200C until hollow and golden.",
      "min": 22
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dining car relish tray",
@@ -121,7 +123,9 @@
      "text": "Add a small dish of cream cheese for spreading.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dining car brook trout",
@@ -196,7 +200,86 @@
      "text": "Spoon over the fish.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dining car haloumi with brown butter and almonds",
+     "prep_min": 8,
+     "cook_min": 10,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter, for frying",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter, for the sauce",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "flaked almonds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "black pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the haloumi thick, dust in the flour and season with pepper.",
+       "min": 5
+      },
+      {
+       "text": "Fry in the frying butter until crisp on both sides.",
+       "min": 6
+      },
+      {
+       "text": "Brown the sauce butter with the almonds, then add the lemon juice and chopped parsley.",
+       "min": 5
+      },
+      {
+       "text": "Spoon over the haloumi.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Baked Alaska",
@@ -251,7 +334,9 @@
      "text": "Bake at 230C until browned. Serve straight away.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gin Gibson with cocktail onion",
@@ -298,7 +383,53 @@
      "text": "For anyone off the gin, pour sparkling water over ice with onions.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Gin Gibson with cocktail onion (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "Mix fresh",
+     "ingredients": [
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail onions",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir the non-alcoholic gin and verjuice over ice, one drink at a time.",
+       "min": 3
+      },
+      {
+       "text": "Strain into a chilled glass with a cocktail onion.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

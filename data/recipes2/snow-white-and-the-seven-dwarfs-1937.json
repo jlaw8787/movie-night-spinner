@@ -52,7 +52,9 @@
      "text": "Pile them high on a dark wooden board and serve at room temperature.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Honey rosemary roasted nuts",
@@ -111,7 +113,9 @@
      "text": "Cool completely, then break into clusters.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dwarfs' supper soup",
@@ -192,7 +196,92 @@
      "text": "Stir in the cream and serve in big bowls with torn bread.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dwarfs' supper soup (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 39,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "leeks, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tinned cannellini beans, drained (2 tins)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf of crusty bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the leeks in the butter.",
+       "min": 15
+      },
+      {
+       "text": "Add the cannellini beans, potatoes, thyme, stock and salt.",
+       "min": 12
+      },
+      {
+       "text": "Simmer until the potatoes break down.",
+       "min": 30
+      },
+      {
+       "text": "Stir in the cream and serve in big bowls with torn bread.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Snow White's gooseberry pie",
@@ -255,7 +344,9 @@
      "text": "Rest and serve warm with cream.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Shiny red apple and cinnamon punch",
@@ -324,7 +415,9 @@
      "text": "Float apple slices on top and serve with a cinnamon stick each.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

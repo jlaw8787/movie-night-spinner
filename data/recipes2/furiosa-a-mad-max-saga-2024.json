@@ -86,7 +86,9 @@
      "text": "Soak the vegetables in iced water 10 minutes, drain and arrange around the dip.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bullet Farm chorizo with smoky honey",
@@ -147,7 +149,9 @@
      "text": "Serve the chorizo on toothpicks with the bread to mop up the pan juices.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "War Rig barbecue lamb",
@@ -206,7 +210,82 @@
      "text": "Grill the corn cobs for 10 minutes alongside and brush with butter.",
      "min": 19
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "War Rig barbecue haloumi and eggplant",
+     "prep_min": 15,
+     "cook_min": 44,
+     "make_ahead": "Marinate up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggplants, cut into thick rounds",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Marinate the eggplant and haloumi for 30 minutes with the chopped rosemary, the crushed garlic cloves, the juice of the lemon and the oil.",
+       "min": 35
+      },
+      {
+       "text": "Grill the eggplant over high heat until soft and charred, then grill the haloumi 2 minutes a side.",
+       "min": 14
+      },
+      {
+       "text": "Grill the corn cobs alongside and brush with butter.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Grilled Green Place peaches",
@@ -253,7 +332,9 @@
      "text": "Drizzle with the honey warmed with thyme and serve with the vanilla ice cream.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Citadel honey malt milkshakes",
@@ -304,7 +385,9 @@
      "text": "Serve straight away with straws.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

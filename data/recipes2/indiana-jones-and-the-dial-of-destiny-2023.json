@@ -68,7 +68,9 @@
      "text": "Stir the harissa through the yoghurt and serve as a dip.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Aegean dive grilled octopus",
@@ -121,7 +123,9 @@
      "text": "Pile onto a plate, scatter with capers and serve with lemon wedges.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Moroccan chicken tagine",
@@ -202,7 +206,104 @@
      "text": "Steep the couscous in hot water, fluff with a fork and serve under the tagine.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Moroccan chickpea and pumpkin tagine",
+     "prep_min": 15,
+     "cook_min": 35,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "pumpkin, peeled and cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tinned chickpeas, drained (2 tins)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "tsp",
+       "item": "saffron threads, a good pinch",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "preserved lemon, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "green olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "couscous",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water, for the couscous",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the pumpkin in the oil.",
+       "min": 10
+      },
+      {
+       "text": "Soften the onion with the ginger and saffron. Add the water, preserved lemon, olives, chickpeas and pumpkin.",
+       "min": 10
+      },
+      {
+       "text": "Cover and simmer until the pumpkin is tender.",
+       "min": 25
+      },
+      {
+       "text": "Steep the couscous in the boiling water, fluff with a fork and serve under the tagine.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Syracuse almond granita with brioche",
@@ -255,7 +356,9 @@
      "text": "Warm the brioche at 160C for 5 minutes. Spoon the granita into glasses and serve with the brioche.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mint tea in Tangier",
@@ -302,7 +405,9 @@
      "text": "Pour from a height into small glasses so it froths, then pour back and pour again.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -84,7 +84,9 @@
      "text": "Mix the sour cream with chives and salt for the dip.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rohan honeyed oatcakes",
@@ -151,7 +153,9 @@
      "text": "Serve with cheddar and apple.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sam's rabbit stew",
@@ -226,7 +230,252 @@
      "text": "Simmer covered until tender.",
      "min": 90
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Sam's rabbit stew",
+     "prep_min": 25,
+     "cook_min": 90,
+     "make_ahead": "Up to 2 days, reheat to serve",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "rabbit pieces or chicken thighs",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "alcohol-free beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes, chopped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the meat in batches.",
+       "min": 15
+      },
+      {
+       "text": "Add the onions, carrots and thyme and soften.",
+       "min": 8
+      },
+      {
+       "text": "Add the alcohol-free beer, stock and potatoes.",
+       "min": 2
+      },
+      {
+       "text": "Simmer covered until tender.",
+       "min": 90
+      }
+     ]
+    },
+    "veg": {
+     "n": "Sam's mushroom stew",
+     "prep_min": 20,
+     "cook_min": 42,
+     "make_ahead": "Up to 2 days, reheat to serve",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "ale",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes, chopped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches.",
+       "min": 12
+      },
+      {
+       "text": "Add the onions, carrots and thyme and soften.",
+       "min": 8
+      },
+      {
+       "text": "Add the ale, stock, potatoes and butter beans.",
+       "min": 2
+      },
+      {
+       "text": "Simmer covered until the potatoes are tender.",
+       "min": 40
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Sam's mushroom stew",
+     "prep_min": 20,
+     "cook_min": 42,
+     "make_ahead": "Up to 2 days, reheat to serve",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "extra vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes, chopped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches.",
+       "min": 12
+      },
+      {
+       "text": "Add the onions, carrots and thyme and soften.",
+       "min": 8
+      },
+      {
+       "text": "Add all the stock, the malt vinegar, potatoes and butter beans.",
+       "min": 2
+      },
+      {
+       "text": "Simmer covered until the potatoes are tender.",
+       "min": 40
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Elvish lembas shortbread",
@@ -287,7 +536,9 @@
      "text": "Cut while warm and wrap each piece in a clean leaf or baking paper.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Meduseld spiced honey mead punch",
@@ -346,7 +597,81 @@
      "text": "Ladle into mugs with an orange slice. For a booze free pot use more apple juice instead of mead.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Meduseld spiced honey mead punch (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 15,
+     "make_ahead": "Best served warm",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "white grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "piece fresh ginger, 2cm, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cinnamon sticks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "whole cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pour the apple juice and grape juice into a pot with the orange, ginger, cinnamon, cloves and honey.",
+       "min": 4
+      },
+      {
+       "text": "Warm gently without boiling.",
+       "min": 15
+      },
+      {
+       "text": "Stir in the lemon juice and ladle into mugs with an orange slice.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

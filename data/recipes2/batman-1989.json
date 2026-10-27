@@ -50,7 +50,9 @@
      "text": "Break up and mix together in a big bowl.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bat-shaped chips and black bean dip",
@@ -119,7 +121,9 @@
      "text": "Serve the dip with the bats.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Manor roast beef and Yorkshire pudding",
@@ -204,7 +208,282 @@
      "text": "Blast the beef at 260C for 10 minutes. Reduce the red wine with the stock for a jus.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Manor roast beef and Yorkshire pudding",
+     "prep_min": 30,
+     "cook_min": 1610,
+     "make_ahead": "Salt the beef the night before",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "kg",
+       "item": "beef rib, bone in",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Salt the beef and leave uncovered in the fridge overnight.",
+       "min": 1440
+      },
+      {
+       "text": "Roast at 120C until 52C inside, then rest.",
+       "min": 120
+      },
+      {
+       "text": "Peel and chop the potatoes and roast them in some of the oil.",
+       "min": 45
+      },
+      {
+       "text": "Whisk the eggs, flour and milk and bake in hot oiled tins at 220C until puffed.",
+       "min": 20
+      },
+      {
+       "text": "Blast the beef at 260C for 10 minutes. Reduce the stock with the balsamic vinegar in the roasting pan for a jus.",
+       "min": 15
+      }
+     ]
+    },
+    "veg": {
+     "n": "Manor roast cauliflower and Yorkshire pudding",
+     "prep_min": 30,
+     "cook_min": 125,
+     "make_ahead": "Make the batter up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "whole cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Trim the cauliflowers, boil whole in salted water for 8 minutes and drain well.",
+       "min": 15
+      },
+      {
+       "text": "Rub with the melted butter and sea salt flakes and roast at 200C until deep golden, basting now and then.",
+       "min": 60
+      },
+      {
+       "text": "Peel and chop the potatoes and roast them in some of the oil alongside.",
+       "min": 45
+      },
+      {
+       "text": "Whisk the eggs, flour and milk and bake in hot oiled tins at 220C until puffed.",
+       "min": 20
+      },
+      {
+       "text": "Reduce the red wine with the mushroom stock for a jus and cut the cauliflowers into wedges.",
+       "min": 15
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Manor roast cauliflower and Yorkshire pudding (alcohol-free)",
+     "prep_min": 30,
+     "cook_min": 125,
+     "make_ahead": "Make the batter up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "whole cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Trim the cauliflowers, boil whole in salted water for 8 minutes and drain well.",
+       "min": 15
+      },
+      {
+       "text": "Rub with the melted butter and sea salt flakes and roast at 200C until deep golden, basting now and then.",
+       "min": 60
+      },
+      {
+       "text": "Peel and chop the potatoes and roast them in some of the oil alongside.",
+       "min": 45
+      },
+      {
+       "text": "Whisk the eggs, flour and milk and bake in hot oiled tins at 220C until puffed.",
+       "min": 20
+      },
+      {
+       "text": "Reduce the mushroom stock with the water and red wine vinegar for a jus and cut the cauliflowers into wedges.",
+       "min": 15
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Joker's birthday cake",
@@ -289,7 +568,9 @@
      "text": "Sandwich and cover the cake, then pipe a crooked smile.",
      "min": 13
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Alfred's Earl Grey gin sour",
@@ -358,7 +639,79 @@
      "text": "Strain into chilled coupes and twist lemon peel over each.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Alfred's Earl Grey gin sour (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 62,
+     "make_ahead": "Gin infuses ahead",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "Earl Grey tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "egg whites",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the non-alcoholic gin for an hour, then remove.",
+       "min": 60
+      },
+      {
+       "text": "Dissolve the honey in the hot water. Juice the lemons.",
+       "min": 4
+      },
+      {
+       "text": "Shake the tea-infused gin, lemon juice, honey syrup and egg whites hard without ice, then add ice and shake again.",
+       "min": 4
+      },
+      {
+       "text": "Strain into chilled coupes and twist lemon peel over each.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -102,7 +102,9 @@
      "text": "Fry at 175C in batches until deep gold and hot through, then drain.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Havana Cuban sliders",
@@ -171,7 +173,9 @@
      "text": "Press in a heavy pan over medium heat with a second pan on top, about 3 minutes a side, until the cheese melts.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Vito's tenement baked ziti",
@@ -250,7 +254,108 @@
      "text": "Bake at 200C until blistered.",
      "min": 25
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Vito's tenement baked ziti (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 55,
+     "make_ahead": "Assemble up to 1 day ahead, keep chilled; add 10 minutes to the bake",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "eggplant, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fennel seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 700,
+       "u": "ml",
+       "item": "passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "ziti or penne",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch ground nutmeg",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mozzarella, torn",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms and eggplant in the oil with the fennel seeds, add the passata and simmer.",
+       "min": 30
+      },
+      {
+       "text": "Cook the pasta 3 minutes short of done and drain.",
+       "min": 10
+      },
+      {
+       "text": "Mix the ricotta with the vegetarian parmesan-style cheese, nutmeg and parsley.",
+       "min": 5
+      },
+      {
+       "text": "Layer pasta, sauce and ricotta in a baking dish and top with mozzarella.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 200C until blistered.",
+       "min": 25
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hyman Roth's birthday cake",
@@ -325,7 +430,9 @@
      "text": "Beat the icing butter with icing sugar and colouring. Spread thinly, then again, and pipe happy birthday across.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Fredo's Havana daiquiri",
@@ -378,7 +485,79 @@
      "text": "For each drink, shake rum, lime juice and syrup hard with plenty of ice, then double strain into a coupe.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Fredo's Havana daiquiri (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 12,
+     "make_ahead": "Syrup up to 1 week ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 40,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "green tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "white grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes, juiced (about 100 ml)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dissolve the sugar in the hot water and cool to make syrup.",
+       "min": 5
+      },
+      {
+       "text": "Steep the green tea in the boiling water for 3 minutes, discard the bags and chill.",
+       "min": 10
+      },
+      {
+       "text": "Chill four coupes.",
+       "min": 1
+      },
+      {
+       "text": "For each drink, shake 40ml green tea, 20ml grape juice, lime juice and syrup hard with plenty of ice, then double strain into a coupe.",
+       "min": 4
+      }
+     ]
+    }
+   }
   }
  ]
 }

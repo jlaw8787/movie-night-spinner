@@ -64,7 +64,9 @@
      "text": "Sprinkle with sea salt, cool completely and break apart.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hamburger phone sliders",
@@ -123,7 +125,9 @@
      "text": "Split the buns and add tomato sauce and pickles. Stack the patties in, scatter sesame seeds and push a toothpick through each.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Minnesota tater tot hotdish",
@@ -194,7 +198,82 @@
      "text": "Cover with neat rows of potato gems and bake at 200C until golden.",
      "min": 35
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Minnesota tater tot hotdish (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "Up to 1 day, bake fresh with the tots on top",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "corn kernels",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "green beans, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "frozen potato gems",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the plant-based mince with the onion in the oil. Add the mushrooms and cook until their liquid has gone.",
+       "min": 15
+      },
+      {
+       "text": "Stir in the corn, beans and cream and simmer briefly. Spread in a baking dish.",
+       "min": 5
+      },
+      {
+       "text": "Cover with neat rows of potato gems and bake at 200C until golden.",
+       "min": 35
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Blue raspberry jelly trifle cups",
@@ -251,7 +330,9 @@
      "text": "Finish with the crushed shortbread and the rest of the raspberries just before serving.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Big jug of orange",
@@ -294,7 +375,9 @@
      "text": "Stir in the mango nectar, then top up with soda water just before serving. Add orange slices and pour into tall glasses.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

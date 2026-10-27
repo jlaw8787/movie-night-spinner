@@ -62,7 +62,9 @@
      "text": "Serve the aioli on the side.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Blood orange and beetroot crostini",
@@ -119,7 +121,9 @@
      "text": "Spread with goat's cheese, top with beetroot and blood orange segments and drizzle with honey.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rare roast beef rolls",
@@ -182,7 +186,74 @@
      "text": "Fill the rolls with beef, horseradish cream and a handful of rocket each.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rare roast beetroot rolls",
+     "prep_min": 20,
+     "cook_min": 67,
+     "make_ahead": "Beetroot up to 2 days ahead, assemble fresh",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "medium beetroots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Wrap the beetroots in foil with the oil, salt and pepper.",
+       "min": 8
+      },
+      {
+       "text": "Roast at 200C until tender.",
+       "min": 60
+      },
+      {
+       "text": "Cool, rub off the skins and slice thin.",
+       "min": 15
+      },
+      {
+       "text": "Fill the rolls with beetroot, horseradish cream and a handful of rocket each.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Black forest gateau",
@@ -255,7 +326,9 @@
      "text": "Whip the cream, fill with cherries and cream, cover in cream and grate dark chocolate on top.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Blood orange spritz",
@@ -296,7 +369,9 @@
      "text": "Top with soda water and finish with a slice of blood orange on the rim.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -74,7 +74,9 @@
      "text": "Ladle into bowls and top with chicken, spring onion, soy, sesame oil and fried shallots.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bus fight sticky pork bao",
@@ -159,7 +161,9 @@
      "text": "Fill with pork, cucumber, spring onion and peanuts.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ta Lo steamed ginger snapper",
@@ -228,7 +232,80 @@
      "text": "Top the fish with fresh spring onion, pour over the soy, then smoking hot oil.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ta Lo steamed ginger tofu",
+     "prep_min": 10,
+     "cook_min": 26,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm silken tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "5cm piece ginger, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch bok choy",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the tofu into thick slabs and lay over the ginger and half the spring onion on a plate.",
+       "min": 8
+      },
+      {
+       "text": "Steam until hot through.",
+       "min": 10
+      },
+      {
+       "text": "Cook the rice and steam the bok choy.",
+       "min": 15
+      },
+      {
+       "text": "Top the tofu with fresh spring onion, pour over the soy, then smoking hot oil.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Dragon scale mango pudding",
@@ -279,7 +356,9 @@
      "text": "Top with thin mango slices laid like scales.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Katy's brown sugar boba milk tea",
@@ -348,7 +427,9 @@
      "text": "Spoon the pearls and syrup into glasses, swirl up the sides, add ice and pour over the milk mixed with the tea.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

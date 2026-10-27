@@ -36,7 +36,9 @@
      "text": "Drop into a paper bag with the cinnamon sugar, fold the top and shake until coated.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Movie trivia snack mix",
@@ -101,7 +103,9 @@
      "text": "Cool before bagging up.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Maria's home cooking",
@@ -178,7 +182,100 @@
      "text": "Serve with the sour cream.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Maria's home cooking (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 55,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "dried chillies",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin crushed tomatoes (400g)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "sweet potato, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin black beans (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the dried chillies in hot water for 15 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Toss the sweet potato in the olive oil and roast at 200C until tender.",
+       "min": 22
+      },
+      {
+       "text": "Blitz the chillies with the crushed tomatoes and garlic and simmer 10 minutes into a sauce.",
+       "min": 12
+      },
+      {
+       "text": "Mix the sweet potato with the black beans and half the cheddar, roll in the corn tortillas and pack into a baking dish.",
+       "min": 10
+      },
+      {
+       "text": "Cover with the sauce and the rest of the cheddar and bake at 190C for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Serve with the sour cream.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Doughnut holes",
@@ -257,7 +354,9 @@
      "text": "Roll in cinnamon sugar while warm.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Reimers' night shift Irish coffee",
@@ -308,7 +407,61 @@
      "text": "Pour the coffee into mugs and float the cream on top over the back of a spoon.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Reimers' night shift Irish coffee (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "strong coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "tsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the coffee.",
+       "min": 5
+      },
+      {
+       "text": "Stir the sugar and vanilla into the hot coffee.",
+       "min": 2
+      },
+      {
+       "text": "Lightly whip the cream until thick but still pourable.",
+       "min": 3
+      },
+      {
+       "text": "Pour the coffee into mugs and float the cream on top over the back of a spoon.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

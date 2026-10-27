@@ -72,7 +72,9 @@
      "text": "Serve with butter.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Saloon pickled eggs",
@@ -135,7 +137,9 @@
      "text": "Pickle in the fridge for 3 days.",
      "min": 4320
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rainy night beef and bean stew",
@@ -202,7 +206,96 @@
      "text": "Add the kidney beans for the last 30 minutes.",
      "min": 30
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rainy night mushroom and bean stew",
+     "prep_min": 15,
+     "cook_min": 65,
+     "make_ahead": "Better the next day, keep chilled",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "dried chillies",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "cans kidney beans, drained",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in batches in the oil.",
+       "min": 10
+      },
+      {
+       "text": "Add the sliced onion, crushed garlic and crumbled chillies.",
+       "min": 5
+      },
+      {
+       "text": "Pour in the tomatoes, soy sauce and water.",
+       "min": 5
+      },
+      {
+       "text": "Braise at 160C for 40 minutes.",
+       "min": 40
+      },
+      {
+       "text": "Add the kidney beans for the last 20 minutes.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Big Whiskey bread pudding, whiskey sauce",
@@ -291,7 +384,105 @@
      "text": "Stir in the whiskey and pour over the warm pudding.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Big Whiskey bread pudding, whiskey sauce",
+     "prep_min": 25,
+     "cook_min": 60,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "day-old white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "raisins",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 220,
+       "u": "g",
+       "item": "brown sugar, divided",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cinnamon",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter, divided",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Tear the bread into a buttered dish with the raisins.",
+       "min": 8
+      },
+      {
+       "text": "Whisk the eggs, milk, some of the sugar and cinnamon and pour over.",
+       "min": 5
+      },
+      {
+       "text": "Soak for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Bake at 170C until set and golden.",
+       "min": 45
+      },
+      {
+       "text": "Melt the remaining butter with the remaining sugar and cream and simmer.",
+       "min": 5
+      },
+      {
+       "text": "Stir in the vanilla and orange juice and pour over the warm pudding.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Whiskey trail coffee with cream",
@@ -352,7 +543,71 @@
      "text": "Spoon the cream over the back of a spoon to float it on top.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Whiskey trail coffee with cream (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 4,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "coarse ground coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "tsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bring the water to the boil, stir in the coffee and simmer.",
+       "min": 5
+      },
+      {
+       "text": "Take off the heat, splash in a little cold water to settle the grounds and rest.",
+       "min": 3
+      },
+      {
+       "text": "Lightly whip the cream until just thick.",
+       "min": 2
+      },
+      {
+       "text": "Put the sugar and a drop of vanilla in each mug and pour in the coffee carefully.",
+       "min": 3
+      },
+      {
+       "text": "Spoon the cream over the back of a spoon to float it on top.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

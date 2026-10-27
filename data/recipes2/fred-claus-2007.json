@@ -86,7 +86,9 @@
      "text": "Finish with a pinch of celery salt.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Iced gingerbread men",
@@ -153,7 +155,9 @@
      "text": "Mix the icing sugar with a little water and pipe on faces and buttons.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Claus family honey mustard glazed ham",
@@ -250,7 +254,108 @@
      "text": "Slice the ham thickly to serve.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Claus family honey mustard glazed smoked tofu",
+     "prep_min": 15,
+     "cook_min": 50,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "smoked tofu, in thick slabs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch broccolini",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the tofu slabs in a diamond pattern and push a clove into a few of the crosses.",
+       "min": 8
+      },
+      {
+       "text": "Simmer the honey, mustard, sugar and orange juice for the glaze.",
+       "min": 3
+      },
+      {
+       "text": "Roast the potatoes in the oil at 200C. After 20 minutes add the tofu on a lined tray and bake, brushing with glaze every so often, until sticky.",
+       "min": 45
+      },
+      {
+       "text": "Toss the beans and broccolini in butter.",
+       "min": 5
+      },
+      {
+       "text": "Slice the tofu thickly to serve.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mother Claus's choc chip cookies",
@@ -341,7 +446,9 @@
      "text": "Sprinkle with sea salt and serve warm with cold milk.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Everybody's nice marshmallow cocoa",
@@ -394,7 +501,9 @@
      "text": "Dust with cinnamon and serve.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   }
  ]
 }

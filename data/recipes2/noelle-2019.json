@@ -96,7 +96,9 @@
      "text": "Fill with chicken, corn, feta, crema, onion and coriander.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Noelle's double candy cane bark",
@@ -157,7 +159,9 @@
      "text": "Chill until set, then snap into shards.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Kringle family maple roast chicken",
@@ -254,7 +258,114 @@
      "text": "Whisk the flour into the pan juices with the stock for gravy.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Kringle family maple roast cauliflower",
+     "prep_min": 20,
+     "cook_min": 65,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "medium cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter, soft",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 350,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the cauliflowers whole for 6 minutes, drain, then rub with the butter, salt and thyme leaves.",
+       "min": 15
+      },
+      {
+       "text": "Toss the potatoes in oil and put them in the oven at 200C with the cauliflowers. Toss the carrots in the honey ready to add.",
+       "min": 10
+      },
+      {
+       "text": "Roast for 45 minutes, adding the carrots part way through and brushing the cauliflowers with the maple syrup mixed with Dijon for the last 15 minutes.",
+       "min": 45
+      },
+      {
+       "text": "Rest the cauliflowers.",
+       "min": 5
+      },
+      {
+       "text": "Cook the flour in a little oil from the potato tray, then whisk in the stock and soy for gravy.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Elf Polly's iced sugar cookies",
@@ -327,7 +438,9 @@
      "text": "Mix the remaining icing sugar with water, divide into three bowls and tint red and green, leaving one white. Ice the cookies and dust with edible glitter.",
      "min": 19
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Snowcone blue raspberry slushie",
@@ -396,7 +509,9 @@
      "text": "Serve with spoons and straws.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

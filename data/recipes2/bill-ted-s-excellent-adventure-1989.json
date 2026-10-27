@@ -64,7 +64,9 @@
      "text": "Serve with the sliced crusty loaf.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Medieval turkey legs",
@@ -127,7 +129,9 @@
      "text": "Mix the honey and mustard, brush over and roast until glazed.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Napoleon's chicken Marengo",
@@ -212,7 +216,300 @@
      "text": "Scatter with parsley and serve with the bread.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Napoleon's chicken Marengo",
+     "prep_min": 20,
+     "cook_min": 37,
+     "make_ahead": "Up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "chicken thigh fillets",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "diced tomatoes (1 tin)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the chicken in the oil in batches and set aside.",
+       "min": 12
+      },
+      {
+       "text": "Soften the onion and garlic in the same pan.",
+       "min": 6
+      },
+      {
+       "text": "Add the mushrooms, stock, verjuice and tomatoes.",
+       "min": 6
+      },
+      {
+       "text": "Return the chicken, cover and simmer.",
+       "min": 30
+      },
+      {
+       "text": "Scatter with parsley and serve with the bread.",
+       "min": 3
+      }
+     ]
+    },
+    "veg": {
+     "n": "Napoleon's mushroom and butter bean Marengo",
+     "prep_min": 20,
+     "cook_min": 27,
+     "make_ahead": "Up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "portobello mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "diced tomatoes (1 tin)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the portobello slices in the oil in batches and set aside.",
+       "min": 12
+      },
+      {
+       "text": "Soften the onion and garlic in the same pan.",
+       "min": 6
+      },
+      {
+       "text": "Add the button mushrooms, wine, tomatoes and stock.",
+       "min": 6
+      },
+      {
+       "text": "Return the portobellos, add the butter beans, cover and simmer.",
+       "min": 20
+      },
+      {
+       "text": "Scatter with parsley and serve with the bread.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Napoleon's mushroom and butter bean Marengo",
+     "prep_min": 20,
+     "cook_min": 27,
+     "make_ahead": "Up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "portobello mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "diced tomatoes (1 tin)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the portobello slices in the oil in batches and set aside.",
+       "min": 12
+      },
+      {
+       "text": "Soften the onion and garlic in the same pan.",
+       "min": 6
+      },
+      {
+       "text": "Add the button mushrooms, vinegar, water, tomatoes and stock.",
+       "min": 6
+      },
+      {
+       "text": "Return the portobellos, add the butter beans, cover and simmer.",
+       "min": 20
+      },
+      {
+       "text": "Scatter with parsley and serve with the bread.",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Ziggy Piggy sundae",
@@ -293,7 +590,9 @@
      "text": "Pile on cream, chocolate sauce, sprinkles, nuts and cherries. Give everyone a long spoon.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wyld Stallyns grape soda spider",
@@ -340,7 +639,9 @@
      "text": "Slowly top with cold soda water so it foams up. Serve straight away with long spoons and straws.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

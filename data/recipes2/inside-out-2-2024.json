@@ -58,7 +58,9 @@
      "text": "Add a few more crackers just in case.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Joy's honey butter sunshine popcorn",
@@ -135,7 +137,9 @@
      "text": "Sprinkle with flaky salt and serve in a big bowl.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Family taco night",
@@ -226,7 +230,114 @@
      "text": "Set everything out so everyone builds their own.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Family taco night (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "taco shells",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "iceberg lettuce, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "tomatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the plant-based mince in the oil with the cumin and paprika.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the tomato paste, black beans and water and simmer.",
+       "min": 10
+      },
+      {
+       "text": "Shred the lettuce, dice the tomato and grate the cheddar.",
+       "min": 12
+      },
+      {
+       "text": "Warm the taco shells.",
+       "min": 4
+      },
+      {
+       "text": "Set everything out with the sour cream so everyone builds their own.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Firehawks hockey puck brownies",
@@ -301,7 +412,9 @@
      "text": "Cut into squares.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Iced chamomile apple tea",
@@ -358,7 +471,9 @@
      "text": "Mix with the apple juice and pour over ice in tall glasses.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

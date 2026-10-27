@@ -48,7 +48,9 @@
      "text": "Salt straight away and serve hot.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rose petal sugar crisps",
@@ -109,7 +111,9 @@
      "text": "Cool on the tray.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Big Mick burger",
@@ -206,7 +210,114 @@
      "text": "Build each with sauce, lettuce, onion, pickles and patties in the three-piece bun.",
      "min": 14
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Big Mick burger (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 100,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sweet relish",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "three-piece sesame burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "iceberg lettuce, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the mayonnaise, relish, mustard, paprika and vinegar for the sauce.",
+       "min": 5
+      },
+      {
+       "text": "Shape the plant-based mince into 8 thin patties.",
+       "min": 8
+      },
+      {
+       "text": "Smash the patties in a hot pan with the oil and add the cheese.",
+       "min": 10
+      },
+      {
+       "text": "Toast the buns.",
+       "min": 3
+      },
+      {
+       "text": "Build each with sauce, lettuce, onion, pickles and patties in the three-piece bun.",
+       "min": 14
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Apple turnovers",
@@ -269,7 +380,9 @@
      "text": "Brush with egg and bake at 200C.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Vanilla thick shake",
@@ -304,7 +417,9 @@
      "text": "Pour into a chilled glass and serve with a wide straw.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

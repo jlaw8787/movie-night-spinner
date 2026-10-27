@@ -56,7 +56,9 @@
      "text": "Pile onto a platter, top with the onions and serve with sour cream and chives.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bleacher honey chilli roasted peanuts",
@@ -115,7 +117,9 @@
      "text": "Sprinkle with sea salt while hot, then cool completely and break into clusters.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Cleveland Polish boy with fries and slaw",
@@ -196,7 +200,98 @@
      "text": "Split the rolls, lay a kielbasa in each, pile on hot chips, drizzle with barbecue sauce and top with slaw.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cleveland Polish boy with fries and slaw (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 22,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "frozen chips",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "green cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "smoky vegetarian sausages",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long soft rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "smoky barbecue sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the chips at 220C until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Toss the cabbage and carrot with the mayonnaise, vinegar and sugar for the slaw.",
+       "min": 5
+      },
+      {
+       "text": "Score the vegetarian sausages, brush with the oil and grill, turning, until charred.",
+       "min": 8
+      },
+      {
+       "text": "Split the rolls, lay a sausage in each, pile on hot chips, drizzle with barbecue sauce and top with slaw.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Wild Thing lattice cherry pie",
@@ -269,7 +364,9 @@
      "text": "Rest, then serve with ice cream.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jobu's dark rum and ginger punch",
@@ -322,7 +419,79 @@
      "text": "Pour one extra small shot of rum into a glass and set it aside for Jobu before anyone drinks.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Jobu's dark rum and ginger punch (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "molasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "ginger beer, cold",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, lift out, stir in the molasses and vanilla and cool.",
+       "min": 10
+      },
+      {
+       "text": "Fill tall glasses with ice. Add the spiced tea and lime juice to each glass.",
+       "min": 2
+      },
+      {
+       "text": "Top with ginger beer, stir once and garnish with a lime wedge.",
+       "min": 2
+      },
+      {
+       "text": "Pour one extra small shot of the spiced tea into a glass and set it aside for Jobu before anyone drinks.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

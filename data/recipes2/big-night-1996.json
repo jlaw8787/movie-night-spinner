@@ -106,7 +106,123 @@
      "text": "Take off the heat and stir through the butter, the parsley and a squeeze of lemon. Serve straight away, no cheese.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Seafood risotto",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1.2,
+       "u": "l",
+       "item": "fish stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 350,
+       "u": "g",
+       "item": "carnaroli rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green prawns, peeled",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "squid rings",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mussels, cleaned",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the prawns, scrub and debeard the mussels, dice the onion, chop the garlic and chop the parsley.",
+       "min": 15
+      },
+      {
+       "text": "Warm the fish stock in a saucepan. Soften the onion and garlic in the olive oil over medium heat for 5 minutes.",
+       "min": 7
+      },
+      {
+       "text": "Add the carnaroli rice and toast for 2 minutes, then pour in the verjuice and water and stir until it is absorbed.",
+       "min": 3
+      },
+      {
+       "text": "Add the hot stock a ladle at a time, stirring, for 16 minutes until the rice is nearly tender.",
+       "min": 16
+      },
+      {
+       "text": "Stir in the prawns, squid rings and mussels, cover and cook for 4 minutes until the mussels open. Throw out any that stay shut.",
+       "min": 4
+      },
+      {
+       "text": "Take off the heat and stir through the butter, the parsley and a squeeze of lemon. Serve straight away, no cheese.",
+       "min": 1
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Risotto three ways",
@@ -197,7 +313,107 @@
      "text": "Spoon the green, white and red risotto side by side on each plate.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Risotto three ways",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 70,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "arborio rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.4,
+       "u": "l",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch basil",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tomato passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch saffron threads",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the chicken stock in a saucepan. Soak the saffron in 2 tbsp of hot water. Blitz the baby spinach and basil leaves with a splash of the stock to a smooth paste.",
+       "min": 10
+      },
+      {
+       "text": "Soften the onion in 40g of the butter for 5 minutes, add the arborio rice and toast for 2 minutes, then add the verjuice and water and stir until absorbed.",
+       "min": 9
+      },
+      {
+       "text": "Add the hot stock a ladle at a time, stirring, for 17 minutes until the rice is just tender.",
+       "min": 17
+      },
+      {
+       "text": "Split the risotto into three pans over low heat. Stir the spinach and basil paste into the first, the parmesan and the last 30g butter into the second, and the passata with the saffron and its water into the third.",
+       "min": 5
+      },
+      {
+       "text": "Spoon the green, white and red risotto side by side on each plate.",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Timpano",
@@ -292,7 +508,118 @@
      "text": "Rest for 30 minutes, turn out and slice.",
      "min": 35
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Timpano (vegetarian)",
+     "prep_min": 60,
+     "cook_min": 125,
+     "make_ahead": "Bake up to 1 day ahead, turn out and reheat sliced",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "00 flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs, for dough",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter, for the bowl",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "eggplant, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin brown lentils (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 700,
+       "u": "ml",
+       "item": "passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "ziti, cooked",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs, boiled and sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "provolone, diced",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Make a dough with the flour and eggs, knead and rest.",
+       "min": 20
+      },
+      {
+       "text": "Fry the diced eggplant in a third of the olive oil until golden and set aside. Fry the onion and mushrooms in the rest of the oil until browned, add the lentils and passata and simmer to a thick ragù.",
+       "min": 45
+      },
+      {
+       "text": "Roll the dough thin and line a buttered ovenproof bowl.",
+       "min": 10
+      },
+      {
+       "text": "Toss the cooked ziti with the ragù and layer in the bowl with the eggplant, boiled egg and provolone.",
+       "min": 15
+      },
+      {
+       "text": "Fold the dough over and bake at 180C for 1 hour.",
+       "min": 60
+      },
+      {
+       "text": "Rest for 30 minutes, turn out and slice.",
+       "min": 35
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Roast suckling pig",
@@ -357,7 +684,90 @@
      "text": "Rest for 15 minutes, cut off the string and carve thick.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Big Night whole roast stuffed pumpkin",
+     "prep_min": 35,
+     "cook_min": 100,
+     "make_ahead": "Stuff and tie the pumpkin up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large butternut pumpkin, about 2kg",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "fennel seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "fresh breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the pumpkin lengthways, scoop out the seeds and hollow out a little more of the flesh. Score the cut faces.",
+       "min": 15
+      },
+      {
+       "text": "Mix the fennel seeds, crushed garlic, chopped rosemary, breadcrumbs, grated cheese and half the olive oil and pack into both hollows.",
+       "min": 10
+      },
+      {
+       "text": "Press the halves back together, tie with string every 5cm and rub the skin with the rest of the oil and the salt.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 200C for 1 and a half hours until a skewer slides through easily and the skin is blistered.",
+       "min": 90
+      },
+      {
+       "text": "Rest for 10 minutes, cut off the string and carve into thick rounds.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Secondo's omelette",
@@ -404,7 +814,9 @@
      "text": "Fold the omelette, slide it onto a plate and cut into four. Serve with the crusty bread torn into pieces.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -96,7 +96,9 @@
      "text": "Mix the mayonnaise with the garlic and a squeeze of lime juice and serve for dipping.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Coconut Grove prawn fritters",
@@ -185,7 +187,9 @@
      "text": "Mix the mayonnaise, sweet chilli sauce and lime juice for the sauce.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Wall of Gaylord mojo roast pork",
@@ -298,7 +302,130 @@
      "text": "Rest and shred the pork and serve with beans, rice and bananas.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Wall of Gaylord mojo roast cauliflower",
+     "prep_min": 30,
+     "cook_min": 210,
+     "make_ahead": "Marinate up to 1 day in the fridge",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "whole cauliflowers, trimmed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green capsicum, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins black beans (400g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "firm bananas, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blitz the garlic, orange and lime juice, two teaspoons of the cumin, the oregano, oil and salt. Sit the cauliflowers in a roasting dish and spoon the mojo over and into the florets.",
+       "min": 15
+      },
+      {
+       "text": "Marinate in the fridge for 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Roast covered at 200C for 40 minutes, then uncovered for 30 minutes, basting with the juices, until charred and tender.",
+       "min": 70
+      },
+      {
+       "text": "Fry the onion and capsicum, add the beans and remaining cumin and simmer.",
+       "min": 15
+      },
+      {
+       "text": "Cook the rice. Fry the banana slices in the butter.",
+       "min": 15
+      },
+      {
+       "text": "Cut the cauliflowers into thick wedges, spoon over the pan juices and serve with the beans, rice and bananas.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Jinx and Moses key lime pie",
@@ -369,7 +496,9 @@
      "text": "Top with whipped cream and more lime zest.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Miami mint mojito",
@@ -428,7 +557,69 @@
      "text": "Top with soda water and stir from the bottom with a long spoon. Garnish with a mint sprig and a lime wheel.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Miami mint mojito (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "tsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag crushed ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "In each tall glass muddle mint leaves with lime wedges and sugar until the sugar dissolves.",
+       "min": 5
+      },
+      {
+       "text": "Fill with crushed ice and pour in 30ml apple juice.",
+       "min": 2
+      },
+      {
+       "text": "Top with soda water and stir from the bottom with a long spoon. Garnish with a mint sprig and a lime wheel.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -58,7 +58,9 @@
      "text": "Butter the rye, cut into squares and spoon the herring on top.",
      "min": 9
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Rostavili's Georgian cheese bread",
@@ -119,7 +121,9 @@
      "text": "Add a knob of butter and stir at the table.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ridzik's Chicago beef stroganoff",
@@ -204,7 +208,90 @@
      "text": "Stir in the sour cream off the heat and return the beef. Serve over the noodles.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ridzik's Chicago mushroom stroganoff",
+     "prep_min": 20,
+     "cook_min": 22,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "egg noodles",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the onion and mushrooms.",
+       "min": 10
+      },
+      {
+       "text": "Sear the mushrooms fast in batches in the oil until browned and set aside.",
+       "min": 12
+      },
+      {
+       "text": "Soften the onion, add the paprika, Dijon and stock and reduce.",
+       "min": 8
+      },
+      {
+       "text": "Boil the noodles and drain.",
+       "min": 8
+      },
+      {
+       "text": "Stir in the sour cream off the heat and return the mushrooms. Serve over the noodles.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Medovik honey cake",
@@ -291,7 +378,9 @@
      "text": "Rest the cake overnight in the fridge.",
      "min": 480
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Danko's cranberry mors and vodka cooler",
@@ -366,7 +455,79 @@
      "text": "Garnish with a few frozen cranberries and a lemon slice.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Danko's cranberry mors and vodka cooler (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 100,
+     "make_ahead": "Up to 3 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen cranberries",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "frozen cranberries, for garnish",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the cranberries with the water and honey, crushing the berries.",
+       "min": 12
+      },
+      {
+       "text": "Strain, add the juice of one lemon and chill the mors.",
+       "min": 93
+      },
+      {
+       "text": "Fill tall glasses with ice. Add mors to each, top with soda water and stir.",
+       "min": 3
+      },
+      {
+       "text": "Garnish with a few frozen cranberries and a lemon slice.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

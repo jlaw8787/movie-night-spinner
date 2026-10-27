@@ -56,7 +56,9 @@
      "text": "Bake at 220C for 15 minutes until crisp.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rose's late-shift popcorn chicken",
@@ -137,7 +139,9 @@
      "text": "Mix the honey and Dijon and serve with the chicken.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Trevor's engagement dinner salmon",
@@ -200,7 +204,96 @@
      "text": "Steam the beans.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Trevor's engagement dinner tofu",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 90,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until tender and crush with 30g of the butter.",
+       "min": 20
+      },
+      {
+       "text": "Pat the tofu dry, cut into 4 thick slabs, season with the salt and dust with the cornflour.",
+       "min": 5
+      },
+      {
+       "text": "Fry the tofu in the oil over medium-high heat for 4 minutes a side until crisp.",
+       "min": 8
+      },
+      {
+       "text": "Melt the remaining butter with the lemon juice and dill and spoon over.",
+       "min": 5
+      },
+      {
+       "text": "Steam the beans.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Smiling cookies",
@@ -269,7 +362,9 @@
      "text": "Pipe a wide red smile on each. A little unsettling.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mustache's chamomile whisky toddy",
@@ -334,7 +429,81 @@
      "text": "Add whisky to each mug and pour over the tea. Finish with a cinnamon stick and a lemon wheel studded with cloves. Leave out the whisky for a plain version.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Mustache's chamomile whisky toddy (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "bags chamomile tea",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "black tea bag",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "just-boiled water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cinnamon sticks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "whole cloves",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the chamomile and black tea bags in the water for 5 minutes, then remove.",
+       "min": 5
+      },
+      {
+       "text": "Stir in the honey, vanilla and the juice of one lemon.",
+       "min": 2
+      },
+      {
+       "text": "Pour into mugs. Finish with a cinnamon stick and a lemon wheel studded with cloves.",
+       "min": 8
+      }
+     ]
+    }
+   }
   }
  ]
 }

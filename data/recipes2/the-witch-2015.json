@@ -74,7 +74,9 @@
      "text": "Beat soft butter with the honey and serve alongside",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Woodland apples and cheese",
@@ -131,7 +133,9 @@
      "text": "Scatter over the walnuts and drizzle with honey",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Black Phillip's goat stew",
@@ -216,7 +220,108 @@
      "text": "Serve with crusty bread",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Black Phillip's root vegetable and barley stew",
+     "prep_min": 25,
+     "cook_min": 70,
+     "make_ahead": "Better the next day, keeps 3 days",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "field mushrooms, in big pieces",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "parsnips, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "pearl barley",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches",
+       "min": 12
+      },
+      {
+       "text": "Soften the onions, carrots, parsnips and garlic",
+       "min": 8
+      },
+      {
+       "text": "Add the barley, stock, thyme and bay leaves",
+       "min": 3
+      },
+      {
+       "text": "Cover and braise at 170C until the barley is tender and the stew is thick",
+       "min": 70
+      },
+      {
+       "text": "Serve with crusty bread",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Baked apples",
@@ -283,7 +388,9 @@
      "text": "Serve with pouring cream",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mulled cider",
@@ -336,7 +443,9 @@
      "text": "Strain and ladle into four mugs. Drink it by the fire with the door shut",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

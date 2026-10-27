@@ -60,7 +60,9 @@
      "text": "Lay rice on the nori sheets, add strips of omelette from the eggs, sautéed carrot, blanched spinach and pickled radish, then roll tightly and slice into rounds.",
      "min": 40
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Saja Boys' sugar-dusted hot dogs",
@@ -149,7 +151,9 @@
      "text": "Fry at 170C for 4 minutes, roll in sugar and drizzle with ketchup and mustard.",
      "min": 14
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ramyeon with egg",
@@ -220,7 +224,88 @@
      "text": "Divide into bowls with the kimchi, sliced spring onions and a slice of cheese melting on top.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ramyeon with egg (vegetarian)",
+     "prep_min": 8,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "gochugaru",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "vegetable stock cube",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "packets ramen noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "vegetarian kimchi",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "water",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bring the water to the boil with the gochugaru, the soy and the vegetable stock cube.",
+       "min": 10
+      },
+      {
+       "text": "Cook the ramen noodles for 3 minutes, leaving out the flavour sachets, crack in the eggs and cover 1 minute.",
+       "min": 10
+      },
+      {
+       "text": "Divide into bowls with the kimchi, sliced spring onions and a slice of cheese melting on top.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Cinnamon walnut hotteok",
@@ -281,7 +366,9 @@
      "text": "Fill the balls with the brown sugar, the cinnamon and the chopped walnuts, flatten in an oiled pan and fry 2 minutes a side until crisp.",
      "min": 14
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Golden honey yuja tea",
@@ -338,7 +425,9 @@
      "text": "For an iced version, cool it and pour over ice.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

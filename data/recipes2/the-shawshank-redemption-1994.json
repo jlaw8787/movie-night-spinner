@@ -74,7 +74,9 @@
      "text": "Cut into squares and serve with butter.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Zihuatanejo guacamole",
@@ -139,7 +141,9 @@
      "text": "Serve straight away with warm corn chips.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Brooks was here beef stew",
@@ -218,7 +222,108 @@
      "text": "Ladle into bowls with thick white bread.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Brooks was here mushroom stew",
+     "prep_min": 25,
+     "cook_min": 54,
+     "make_ahead": "Up to 2 days, reheat gently",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "g",
+       "item": "mixed mushrooms, in large chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the onions, potatoes and carrots.",
+       "min": 12
+      },
+      {
+       "text": "Brown the mushrooms in batches in the oil.",
+       "min": 12
+      },
+      {
+       "text": "Soften the onions, stir in the tomato paste and flour, then add the stock, soy sauce, potatoes, carrots and mushrooms.",
+       "min": 8
+      },
+      {
+       "text": "Cover and simmer until the potatoes are tender.",
+       "min": 40
+      },
+      {
+       "text": "Stir in the lentils and simmer uncovered for 5 minutes, then ladle into bowls with thick white bread.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rock hammer rocky road",
@@ -273,7 +378,9 @@
      "text": "Cut into rough rocks.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Rooftop ginger beer shandy",
@@ -320,7 +427,57 @@
      "text": "Pour lager into each glass, top with ginger beer, squeeze in a lime wedge and add 2 ginger coins. For anyone not drinking, use all ginger beer with extra lime.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Rooftop ginger beer shandy (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 30,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles alcohol-free lager (375 ml each), cold",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "ginger beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "knob ginger (3cm)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Put 4 glasses in the freezer to chill.",
+       "min": 30
+      },
+      {
+       "text": "Slice the ginger into thin coins and cut the limes into wedges.",
+       "min": 6
+      },
+      {
+       "text": "Pour alcohol-free lager into each glass, top with ginger beer, squeeze in a lime wedge and add 2 ginger coins.",
+       "min": 4
+      }
+     ]
+    }
+   }
   }
  ]
 }

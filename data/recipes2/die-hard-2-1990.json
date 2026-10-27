@@ -68,7 +68,9 @@
      "text": "Split warm, spread with butter mixed with Dijon and fill with ham.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Snowbound loaded potato skins",
@@ -139,7 +141,9 @@
      "text": "Top with sour cream and chives.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "General Esperanza's snowbound chilli",
@@ -230,7 +234,102 @@
      "text": "Serve with sour cream and grated cheddar.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "General Esperanza's snowbound chilli (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 65,
+     "make_ahead": "Better made the day before",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins chopped tomatoes (400g each)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins kidney beans (400g each)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the plant-based mince and mushrooms in the oil in batches.",
+       "min": 15
+      },
+      {
+       "text": "Add the chopped onion, chilli powder and cumin, then the tomatoes.",
+       "min": 10
+      },
+      {
+       "text": "Simmer gently, covered.",
+       "min": 30
+      },
+      {
+       "text": "Add the drained kidney beans for the last stretch.",
+       "min": 30
+      },
+      {
+       "text": "Serve with sour cream and grated cheddar.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Christmas cookies",
@@ -313,7 +412,9 @@
      "text": "Mix the icing sugar with a little water and ice the cookies.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Same-guy-twice bourbon eggnog",
@@ -390,7 +491,93 @@
      "text": "Pour into tumblers and grate fresh nutmeg on top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Same-guy-twice bourbon eggnog (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 145,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "egg yolks",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch nutmeg",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "fresh nutmeg, to grate",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the yolks and sugar until pale.",
+       "min": 4
+      },
+      {
+       "text": "Warm the milk, cream and nutmeg until steaming, then slowly whisk into the yolks.",
+       "min": 9
+      },
+      {
+       "text": "Return to the pan and stir over low heat until it coats a spoon, without boiling.",
+       "min": 4
+      },
+      {
+       "text": "Cool, then stir in the vanilla and maple syrup.",
+       "min": 20
+      },
+      {
+       "text": "Chill.",
+       "min": 120
+      },
+      {
+       "text": "Pour into tumblers and grate fresh nutmeg on top.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

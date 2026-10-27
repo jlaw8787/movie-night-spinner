@@ -72,7 +72,9 @@
      "text": "Top with the tomatoes and pieces of mozzarella, drizzle with balsamic glaze and add a basil leaf.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rationed pretzels with beer cheese dip",
@@ -175,7 +177,119 @@
      "text": "Add the cheddar, mustard and paprika and stir until smooth.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Rationed pretzels with beer cheese dip",
+     "prep_min": 35,
+     "cook_min": 2,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "bicarbonate of soda",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Worcestershire sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "American mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "paprika",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the dough into bite-size pieces.",
+       "min": 8
+      },
+      {
+       "text": "Simmer the water with the bicarb and drop the pieces in briefly, in batches. Drain.",
+       "min": 10
+      },
+      {
+       "text": "Lay on a lined tray, brush with egg, sprinkle with sea salt and bake at 220C.",
+       "min": 12
+      },
+      {
+       "text": "Melt the butter, stir in the flour, then whisk in the stock, Worcestershire and milk.",
+       "min": 3
+      },
+      {
+       "text": "Add the cheddar, mustard and paprika and stir until smooth.",
+       "min": 4
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Big breakfast fry-up",
@@ -270,7 +384,112 @@
      "text": "Toast the bread and butter it well. Load up plates and serve with tomato sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Big breakfast fry-up (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 34,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "frozen hash browns",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "haloumi, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "tomatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices thick white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle tomato sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the hash browns at 220C until crisp.",
+       "min": 20
+      },
+      {
+       "text": "Fry the vegetarian sausages in the oil over medium heat.",
+       "min": 12
+      },
+      {
+       "text": "Fry the haloumi in the same pan until golden on both sides.",
+       "min": 5
+      },
+      {
+       "text": "Fry the tomatoes cut-side down. Fry the mushrooms in some of the butter with the garlic.",
+       "min": 8
+      },
+      {
+       "text": "Fry the eggs in a little more of the butter.",
+       "min": 4
+      },
+      {
+       "text": "Toast the bread and butter it well. Load up plates and serve with tomato sauce.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "The last chocolate caramel nougat bar",
@@ -349,7 +568,9 @@
      "text": "Chill until set, then cut into bars with a hot knife.",
      "min": 65
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Rationed water watermelon agua fresca",
@@ -412,7 +633,9 @@
      "text": "Pour over ice and garnish with lime wheels and mint.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

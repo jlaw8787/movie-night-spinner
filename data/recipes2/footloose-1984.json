@@ -64,7 +64,9 @@
      "text": "Fry in the oil at 180C in batches until crisp and cooked through. Drain on paper and serve hot with the honey.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Grain mill corn fritters",
@@ -135,7 +137,9 @@
      "text": "Stir the chives through the sour cream for the dip and serve the fritters warm.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Preacher's Sunday roast",
@@ -210,7 +214,110 @@
      "text": "Lift out the beef and vegetables to rest. Whisk the flour into the pan juices, add the stock and simmer into gravy. Serve after church.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Preacher's Sunday roast cauliflower",
+     "prep_min": 20,
+     "cook_min": 82,
+     "make_ahead": "Gravy up to 1 day, reheat gently",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large whole cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "carrots, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Trim the cauliflower, keeping it whole, and rub with the butter, garlic, thyme and salt.",
+       "min": 10
+      },
+      {
+       "text": "Toss the potatoes and carrots in the oil and roast with the cauliflower, covered, at 200C for 40 minutes.",
+       "min": 40
+      },
+      {
+       "text": "Uncover and roast another 40 minutes until the cauliflower is tender and deep golden.",
+       "min": 40
+      },
+      {
+       "text": "Lift out the cauliflower and vegetables to rest. Fry the onion in the tray juices, whisk in the flour, add the stock and soy sauce and simmer into gravy. Serve after church.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Church social caramel popcorn balls",
@@ -279,7 +386,9 @@
      "text": "Butter your hands and press into 12 balls. Set on baking paper until firm, then wrap.",
      "min": 35
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Prom punch",
@@ -328,7 +437,9 @@
      "text": "Top with the lemonade and float big scoops of sorbet on top so it foams.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

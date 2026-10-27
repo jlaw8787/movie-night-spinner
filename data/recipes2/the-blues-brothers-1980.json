@@ -86,7 +86,9 @@
      "text": "Melt the butter with the hot sauce for dipping",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bob's Country Bunker peanuts",
@@ -127,7 +129,9 @@
      "text": "Toss straight away with salt and cayenne, then tip into a tin bucket",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Four fried chickens",
@@ -200,7 +204,88 @@
      "text": "Pile high on a platter",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Four fried cauliflowers",
+     "prep_min": 30,
+     "cook_min": 82,
+     "make_ahead": "Soak the cauliflower up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "heads cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cauliflower into large florets.",
+       "min": 10
+      },
+      {
+       "text": "Soak the cauliflower in the buttermilk and hot sauce for at least 1 hour.",
+       "min": 60
+      },
+      {
+       "text": "Season the flour with the salt and paprika and dredge the cauliflower twice.",
+       "min": 15
+      },
+      {
+       "text": "Heat the oil to 170C.",
+       "min": 10
+      },
+      {
+       "text": "Fry in batches for 5 to 6 minutes until deep golden and tender.",
+       "min": 15
+      },
+      {
+       "text": "Pile high on a platter.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ruler-straight shortbread fingers",
@@ -255,7 +340,9 @@
      "text": "Sprinkle with the remaining sugar and cut into fingers while warm",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Soul Food Cafe peach sweet tea",
@@ -330,7 +417,9 @@
      "text": "Pour over ice with lemon slices and mint",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

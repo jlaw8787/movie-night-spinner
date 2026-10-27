@@ -50,7 +50,9 @@
      "text": "Cut into strips.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ouija board crackers",
@@ -107,7 +109,9 @@
      "text": "Whip the feta with the yoghurt to dip. Don't ask it anything.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Late night takeaway pizza",
@@ -160,7 +164,64 @@
      "text": "Bake on a hot steel at max heat for 7 minutes. Rewatch the tape.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Late night takeaway pizza (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 7,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plant-based pepperoni",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stretch the dough into two thin bases.",
+       "min": 8
+      },
+      {
+       "text": "Spread with the tomatoes and top with the mozzarella, plant-based pepperoni and mushrooms.",
+       "min": 12
+      },
+      {
+       "text": "Bake on a hot steel at max heat for 7 minutes. Rewatch the tape.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "3am chocolate pots",
@@ -217,7 +278,9 @@
      "text": "Chill until set.",
      "min": 190
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Night-watch espresso martinis",
@@ -280,7 +343,67 @@
      "text": "Strain into chilled coupes and repeat. Float coffee beans on each.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Night-watch espresso martinis (alcohol-free)",
+     "prep_min": 17,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "shots espresso coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "coffee beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Make the espresso and cool for 5 minutes.",
+       "min": 8
+      },
+      {
+       "text": "For each drink, measure 1 and a half shots espresso coffee, 10ml sugar syrup and a couple of drops of vanilla into a shaker.",
+       "min": 2
+      },
+      {
+       "text": "Shake half the batch at a time with plenty of ice for 20 seconds until frothy.",
+       "min": 5
+      },
+      {
+       "text": "Strain into chilled coupes and repeat. Float coffee beans on each.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

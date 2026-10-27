@@ -60,7 +60,9 @@
      "text": "Set.",
      "min": 60
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mount Crumpit cheesy pull-apart bread",
@@ -133,7 +135,9 @@
      "text": "Unwrap and bake until bubbling and golden.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Roast beast",
@@ -222,7 +226,148 @@
      "text": "Make gravy with the stock and pan juices.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Roast beast mushroom wellington",
+     "prep_min": 30,
+     "cook_min": 120,
+     "make_ahead": "Wrap the wellington up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "walnuts, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled and halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour, for the gravy",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms, onion and garlic in the butter until dry and dark, stir in the walnuts, spinach, salt and pepper and cool.",
+       "min": 25
+      },
+      {
+       "text": "Overlap the pastry sheets, spoon the mushroom mix along the middle, roll up, seal the ends and brush with one beaten egg.",
+       "min": 10
+      },
+      {
+       "text": "Roast the potatoes in the olive oil at 220C.",
+       "min": 45
+      },
+      {
+       "text": "Bake the wellington at 200C until deep golden.",
+       "min": 40
+      },
+      {
+       "text": "Whisk the remaining eggs, flour and milk and bake in hot oiled tins at 220C.",
+       "min": 20
+      },
+      {
+       "text": "Whisk the gravy flour into the stock and soy sauce and simmer until thick.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Who pudding",
@@ -285,7 +430,9 @@
      "text": "Bake until puffed and golden.",
      "min": 40
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Grinch green punch",
@@ -332,7 +479,9 @@
      "text": "Add lime slices and ladle into cups.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

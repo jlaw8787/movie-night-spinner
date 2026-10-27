@@ -58,7 +58,9 @@
      "text": "Spread the toasts with goat's cheese, top with pumpkin and sage, and drizzle with honey.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rosemary smoked salt almonds",
@@ -107,7 +109,9 @@
      "text": "Roast at 180C until fragrant. Serve warm in a bowl beside the olives.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mum's chicken, broccoli and rice bake",
@@ -176,7 +180,80 @@
      "text": "Top with cheddar and bake uncovered until golden.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mum's chickpea, broccoli and rice bake",
+     "prep_min": 20,
+     "cook_min": 58,
+     "make_ahead": "Up to 1 day, bake fresh",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins chickpeas (400g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "heads broccoli, cut into florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "hot vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the chickpeas in the oil until a little crisp.",
+       "min": 8
+      },
+      {
+       "text": "Spread the rice in a baking dish, add the chickpeas and broccoli, then pour over the hot stock mixed with the cream.",
+       "min": 10
+      },
+      {
+       "text": "Cover and bake at 180C.",
+       "min": 40
+      },
+      {
+       "text": "Top with cheddar and bake uncovered until golden.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Immaculate Heart bake sale brownies",
@@ -235,7 +312,9 @@
      "text": "Cool completely, cut into squares and wrap each in paper for the stall.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Café shift brown sugar cinnamon latte",
@@ -298,7 +377,9 @@
      "text": "Pour the milk slowly over the coffee, holding back the foam, then spoon the foam on top and dust with cinnamon.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

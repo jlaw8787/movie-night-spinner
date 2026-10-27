@@ -78,7 +78,9 @@
      "text": "Serve on silver trays.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Tommy Ross corsage crudités",
@@ -149,7 +151,9 @@
      "text": "Mix the buttermilk, sour cream, garlic, dill and chives for ranch.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Prom dinner chicken",
@@ -218,7 +222,228 @@
      "text": "Steam the beans and toss with butter.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Prom dinner chicken",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "chicken breasts",
+       "aisle": "Meat"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until tender, drain and mash with some of the butter.",
+       "min": 25
+      },
+      {
+       "text": "Brown the chicken in butter, then finish in a 200C oven.",
+       "min": 20
+      },
+      {
+       "text": "Fry the mushrooms in the pan, add the stock, verjuice and cream and reduce to a sauce.",
+       "min": 10
+      },
+      {
+       "text": "Steam the beans and toss with butter.",
+       "min": 5
+      }
+     ]
+    },
+    "veg": {
+     "n": "Prom dinner haloumi with mushroom cream",
+     "prep_min": 20,
+     "cook_min": 28,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into 8 thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until tender, drain and mash with some of the butter.",
+       "min": 25
+      },
+      {
+       "text": "Sear the haloumi in a little of the butter until golden on both sides, then keep warm.",
+       "min": 8
+      },
+      {
+       "text": "Fry the mushrooms in the pan, add the wine and cream and reduce to a sauce.",
+       "min": 10
+      },
+      {
+       "text": "Steam the beans and toss with butter.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Prom dinner haloumi with mushroom cream",
+     "prep_min": 20,
+     "cook_min": 28,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into 8 thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until tender, drain and mash with some of the butter.",
+       "min": 25
+      },
+      {
+       "text": "Sear the haloumi in a little of the butter until golden on both sides, then keep warm.",
+       "min": 8
+      },
+      {
+       "text": "Fry the mushrooms in the pan, add the stock, vinegar and cream and reduce to a sauce.",
+       "min": 10
+      },
+      {
+       "text": "Steam the beans and toss with butter.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Bates High prom queen strawberry cake",
@@ -287,7 +512,9 @@
      "text": "Fill the cake with sliced strawberries and whipped cream, then cover in the buttercream.",
      "min": 13
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bucket-free prom punch",
@@ -334,7 +561,9 @@
      "text": "Put the ring in a big glass bowl, pour over the lemonade and the rest of the pineapple juice and add the fruit.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

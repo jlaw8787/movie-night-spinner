@@ -58,7 +58,9 @@
      "text": "Spread smashed avocado on the tostadas and pile the prawns on top just before serving.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Heart-shaped herb plantain chips",
@@ -123,7 +125,9 @@
      "text": "Whisk the peanut butter with warm water, chilli and lime to a smooth dip and serve alongside.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mayan pibil pork",
@@ -196,7 +200,96 @@
      "text": "Shred the pork and serve in warm tortillas with the pickled onion.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mayan pibil jackfruit",
+     "prep_min": 20,
+     "cook_min": 70,
+     "make_ahead": "Up to 1 day, pibil reheats well",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins young green jackfruit in brine (565 g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "oyster mushrooms, torn",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "achiote paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "banana leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blend the achiote paste with the oil and the orange and two limes' juice. Squeeze the jackfruit dry, break it up and toss with the mushrooms and the paste.",
+       "min": 10
+      },
+      {
+       "text": "Wrap in banana leaves in a baking dish.",
+       "min": 5
+      },
+      {
+       "text": "Roast covered at 180C until soft and deeply coloured.",
+       "min": 60
+      },
+      {
+       "text": "Pickle the onion in the last lime's juice while it cooks.",
+       "min": 10
+      },
+      {
+       "text": "Shred the jackfruit with two forks and serve in warm tortillas with the pickled onion.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "K'uk'ulkan coconut flan",
@@ -269,7 +362,9 @@
      "text": "Run a knife round the edge, turn out and top with toasted coconut and lime zest.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Talokan coconut and lime agua fresca",
@@ -332,7 +427,9 @@
      "text": "Pour into glasses of ice and garnish with lime wheels and mint.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

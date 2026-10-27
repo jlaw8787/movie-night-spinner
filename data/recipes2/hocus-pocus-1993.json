@@ -50,7 +50,9 @@
      "text": "Lay on baking paper to set",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Apple cider doughnuts",
@@ -135,7 +137,9 @@
      "text": "Toss in the remaining sugar mixed with cinnamon",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Cauldron pumpkin stew",
@@ -224,7 +228,102 @@
      "text": "Serve the stew over the couscous",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cauldron pumpkin and chickpea stew",
+     "prep_min": 25,
+     "cook_min": 37,
+     "make_ahead": "Up to 2 days, reheat gently",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "cans chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cinnamon",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "pumpkin, cubed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "couscous",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "feta, crumbled",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the onions in the oil with the cumin and cinnamon.",
+       "min": 10
+      },
+      {
+       "text": "Add the stock, tomatoes, pumpkin and chickpeas.",
+       "min": 5
+      },
+      {
+       "text": "Cover and simmer until the pumpkin is tender and the stew is thick.",
+       "min": 35
+      },
+      {
+       "text": "Prepare the couscous as the packet says.",
+       "min": 10
+      },
+      {
+       "text": "Serve the stew over the couscous with the feta.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Candy apples",
@@ -285,7 +384,9 @@
      "text": "Set on oiled baking paper until hard",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bubbling lime sorbet punch",
@@ -332,7 +433,9 @@
      "text": "Hang gummy worms over the side of the bowl",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

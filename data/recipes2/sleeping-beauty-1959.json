@@ -50,7 +50,9 @@
      "text": "Chill until set.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pink or blue dip duo",
@@ -127,7 +129,9 @@
      "text": "Serve the dips side by side with the pita crisps.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Woodcutter's cottage stew",
@@ -218,7 +222,108 @@
      "text": "Season and serve in bowls with crusty bread and butter.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Woodcutter's cottage stew (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 75,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "field mushrooms, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "parsnips, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty loaf",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the mushrooms and vegetables.",
+       "min": 15
+      },
+      {
+       "text": "Brown the mushrooms in batches in the oil in a heavy pot.",
+       "min": 12
+      },
+      {
+       "text": "Add the onion, carrots, parsnips, lentils, thyme and enough stock to cover.",
+       "min": 5
+      },
+      {
+       "text": "Cover and simmer gently until the vegetables are tender.",
+       "min": 60
+      },
+      {
+       "text": "Season and serve in bowls with crusty bread and butter.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "The fairies' birthday cake",
@@ -297,7 +402,9 @@
      "text": "Stack the layers with jam and buttercream. Ice half pink and half blue and leave it proudly a little crooked.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Skumps royal toast punch",
@@ -376,7 +483,9 @@
      "text": "Just before serving, add the ice and top with the sparkling apple juice. Pour into goblets.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

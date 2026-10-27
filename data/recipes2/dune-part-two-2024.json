@@ -56,7 +56,9 @@
      "text": "Cool 5 minutes before serving.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sietch Tabr stuffed desert dates",
@@ -103,7 +105,9 @@
      "text": "Lay on a plate and drizzle with the warm honey just before serving.",
      "min": 9
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lisan al Gaib spice-rubbed lamb",
@@ -162,7 +166,94 @@
      "text": "Steep a pinch of saffron in hot water and cook the basmati rice with it until golden and fluffy.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lisan al Gaib spice-rubbed cauliflower",
+     "prep_min": 10,
+     "cook_min": 78,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "whole cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground coriander",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cinnamon",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "basmati rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch saffron",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the cumin, coriander, cinnamon, chilli and salt with the oil and rub all over the cauliflowers.",
+       "min": 10
+      },
+      {
+       "text": "Roast covered at 200C for 30 minutes, then uncover, scatter the chickpeas around and roast 30 minutes more until charred and tender.",
+       "min": 60
+      },
+      {
+       "text": "Steep the saffron in hot water and cook the basmati rice with it until golden and fluffy.",
+       "min": 18
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Shai-Hulud melange spice cake",
@@ -239,7 +330,9 @@
      "text": "Bake in a loaf tin at 170C for 50 minutes and brush with warm honey.",
      "min": 73
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Cardamom spice coffee with date syrup",
@@ -312,7 +405,9 @@
      "text": "Froth the hot milk and spoon over the small cups of the coffee, with a pinch of cinnamon on top.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

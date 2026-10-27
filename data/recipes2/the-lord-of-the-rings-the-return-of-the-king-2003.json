@@ -64,7 +64,9 @@
      "text": "Lay on a long board with the tomatoes, grapes and torn bread.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Shire strawberries with honey cream",
@@ -137,7 +139,9 @@
      "text": "Layer the strawberries, cream and shortbread in glasses and finish with a few whole berries.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Coronation roast sirloin and potatoes",
@@ -216,7 +220,288 @@
      "text": "Reduce the red wine with the pan juices for gravy.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Coronation roast sirloin and potatoes",
+     "prep_min": 30,
+     "cook_min": 140,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "kg",
+       "item": "beef sirloin",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled and halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, cut in batons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "parsnips, cut in batons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Season the beef with salt and pepper and roast until 52C in the middle.",
+       "min": 60
+      },
+      {
+       "text": "Rest the beef under foil.",
+       "min": 20
+      },
+      {
+       "text": "Roast the potatoes in oil.",
+       "min": 45
+      },
+      {
+       "text": "Toss the carrots and parsnips with honey and roast.",
+       "min": 35
+      },
+      {
+       "text": "Reduce the stock and balsamic with the pan juices for gravy.",
+       "min": 10
+      }
+     ]
+    },
+    "veg": {
+     "n": "Coronation roast cauliflower and potatoes",
+     "prep_min": 30,
+     "cook_min": 125,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "whole cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled and halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, cut in batons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "parsnips, cut in batons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Rub the cauliflowers with 2 tbsp of the oil, salt and pepper and roast until deep golden and tender.",
+       "min": 60
+      },
+      {
+       "text": "Roast the potatoes in 2 tbsp of the oil.",
+       "min": 45
+      },
+      {
+       "text": "Toss the carrots and parsnips with honey and the remaining oil and roast.",
+       "min": 35
+      },
+      {
+       "text": "For the gravy, melt the butter, stir in the flour, add the red wine and reduce, then whisk in the stock and simmer.",
+       "min": 10
+      },
+      {
+       "text": "Carve the cauliflowers into thick wedges at the table.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Coronation roast cauliflower and potatoes",
+     "prep_min": 30,
+     "cook_min": 125,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "whole cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled and halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, cut in batons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "parsnips, cut in batons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Rub the cauliflowers with 2 tbsp of the oil, salt and pepper and roast until deep golden and tender.",
+       "min": 60
+      },
+      {
+       "text": "Roast the potatoes in 2 tbsp of the oil.",
+       "min": 45
+      },
+      {
+       "text": "Toss the carrots and parsnips with honey and the remaining oil and roast.",
+       "min": 35
+      },
+      {
+       "text": "For the gravy, melt the butter, stir in the flour, whisk in the stock and vinegar and simmer.",
+       "min": 10
+      },
+      {
+       "text": "Carve the cauliflowers into thick wedges at the table.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Sam's wedding cake",
@@ -295,7 +580,9 @@
      "text": "Cover with white icing and add small flowers.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Green Dragon honey and ginger ale cup",
@@ -358,7 +645,73 @@
      "text": "Stir once and add a lemon wheel. Use ginger beer for the non drinkers.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Green Dragon honey and ginger ale cup (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "Syrup up to 1 week, chilled",
+     "ingredients": [
+      {
+       "q": 100,
+       "u": "g",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "piece of fresh ginger, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "375ml bottles alcohol-free pale ale",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the honey, water and ginger, then cool and strain.",
+       "min": 10
+      },
+      {
+       "text": "Put some syrup and a squeeze of lemon in each of 4 pint glasses with ice.",
+       "min": 3
+      },
+      {
+       "text": "Pour in the alcohol-free ale, tilting the glass.",
+       "min": 2
+      },
+      {
+       "text": "Stir once and add a lemon wheel.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

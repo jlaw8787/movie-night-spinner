@@ -66,7 +66,9 @@
      "text": "Arrange both on trays.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Smoked salmon oatcakes",
@@ -119,7 +121,9 @@
      "text": "Squeeze over a little lemon and lay on a slate.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "English wedding roast beef",
@@ -196,7 +200,140 @@
      "text": "Make gravy from the pan juices and stock.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "English wedding nut roast",
+     "prep_min": 45,
+     "cook_min": 85,
+     "make_ahead": "Shape the nut roast up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mixed nuts, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "fresh breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 170,
+       "u": "g",
+       "item": "plain flour, 150g for the batter and 20g for the gravy",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "eggs, 3 for the batter and 2 for the roast",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk 150 g of the flour, 3 eggs and the milk into a batter and rest it.",
+       "min": 15
+      },
+      {
+       "text": "Fry the onion and mushrooms in 1 tbsp of the oil until dry, then mix with the lentils, nuts, breadcrumbs, 2 eggs, cheddar, thyme and 1 tbsp of the soy sauce. Press into a lined loaf tin.",
+       "min": 20
+      },
+      {
+       "text": "Roast the nut roast at 200C for 45 minutes until firm and browned.",
+       "min": 45
+      },
+      {
+       "text": "Peel and chop the potatoes and roast them in 2 tbsp of the oil alongside.",
+       "min": 10
+      },
+      {
+       "text": "Rest the nut roast. Heat the rest of the oil in muffin tins.",
+       "min": 10
+      },
+      {
+       "text": "Pour in the batter and bake.",
+       "min": 20
+      },
+      {
+       "text": "Melt the butter, stir in the rest of the flour, whisk in the stock and the rest of the soy sauce and simmer for gravy.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Four weddings lemon curd cake",
@@ -281,7 +418,9 @@
      "text": "Ice white with icing sugar and water and decorate with flowers.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gareth's waistcoat elderflower fizz",
@@ -338,7 +477,57 @@
      "text": "For drivers, use sparkling water and a little extra cordial.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Gareth's waistcoat elderflower fizz",
+     "prep_min": 12,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "elderflower cordial",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the cucumber into long ribbons and curl one into each of four glasses.",
+       "min": 6
+      },
+      {
+       "text": "Add cordial and a squeeze of lemon to each.",
+       "min": 3
+      },
+      {
+       "text": "Top slowly with cold alcohol-free sparkling wine.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

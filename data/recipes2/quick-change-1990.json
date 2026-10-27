@@ -52,7 +52,9 @@
      "text": "Pipe into the tomatoes and top each with a small basil leaf.",
      "min": 13
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Airport bar chilli-lime wings",
@@ -133,7 +135,9 @@
      "text": "Toss the wings through and scatter with coriander.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bodega sandwiches",
@@ -204,7 +208,82 @@
      "text": "Wrap each tightly in paper and cut in half.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bodega sandwiches (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "Up to 2 hours, wrapped",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "kaiser rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "smoked tofu, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices Swiss cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "iceberg lettuce, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Split the rolls and spread with mayonnaise and mustard.",
+       "min": 3
+      },
+      {
+       "text": "Fill with smoked tofu, Swiss, lettuce and tomato and season with salt and pepper.",
+       "min": 8
+      },
+      {
+       "text": "Wrap each tightly in paper and cut in half.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Clown cake",
@@ -267,7 +346,9 @@
      "text": "Press in the cherry for the nose.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wheels-up bourbon smash",
@@ -324,7 +405,83 @@
      "text": "Top with a sprig of mint and serve with short straws.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Wheels-up bourbon smash (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "mint leaves, plus 4 sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, cut into 4 wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag crushed ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift them out, stir in the vanilla and chill.",
+       "min": 20
+      },
+      {
+       "text": "Muddle the mint leaves and lemon wedges with the syrup in a shaker.",
+       "min": 3
+      },
+      {
+       "text": "Add 180ml of the tea and ice and shake hard.",
+       "min": 1
+      },
+      {
+       "text": "Double strain into 4 glasses filled with crushed ice.",
+       "min": 3
+      },
+      {
+       "text": "Top with a sprig of mint and serve with short straws.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

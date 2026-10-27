@@ -46,7 +46,9 @@
      "text": "Slice each sandwich into four small triangles and stack on a plate.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Uncle Art's space pizza bites",
@@ -99,7 +101,9 @@
      "text": "Bake until crisp and bubbling.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Meatball cannon dinner",
@@ -174,7 +178,108 @@
      "text": "Cook the spaghetti and pile the meatballs on top.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Meatball cannon dinner with mushroom meatballs",
+     "prep_min": 24,
+     "cook_min": 42,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "parmesan",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cans crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful basil",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "spaghetti",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in 1 tbsp of the oil until dry and browned, then cool.",
+       "min": 12
+      },
+      {
+       "text": "Mash the lentils roughly and mix with the mushrooms, ricotta, parmesan, egg, breadcrumbs, salt and pepper. Roll into balls.",
+       "min": 12
+      },
+      {
+       "text": "Brown the meatballs gently in the rest of the oil.",
+       "min": 10
+      },
+      {
+       "text": "Add the tomatoes and torn basil and simmer for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Cook the spaghetti and pile the meatballs on top.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Keep moving forward cupcakes",
@@ -249,7 +354,9 @@
      "text": "Beat the buttercream with colouring and pipe on top. Add a little icing arrow to each.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bowler Hat Guy's grape smoothie",
@@ -300,7 +407,9 @@
      "text": "Pour into four glasses and serve with straws.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -96,7 +96,9 @@
      "text": "Spoon on the mince and top with pickles",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Wednesday's smile cookies",
@@ -151,7 +153,9 @@
      "text": "Pipe a thin line of chocolate across each as a small smile",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Debbie's wedding lobster",
@@ -218,7 +222,84 @@
      "text": "Serve with dressed salad leaves and lemon wedges",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Debbie's wedding king brown mushrooms",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "new potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "salad leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the mushrooms lengthways and score the cut sides.",
+       "min": 5
+      },
+      {
+       "text": "Melt some of the butter with the garlic and lemon zest and brush over.",
+       "min": 5
+      },
+      {
+       "text": "Grill cut side down, then flip and grill until golden and tender.",
+       "min": 10
+      },
+      {
+       "text": "Boil the potatoes until tender and toss with the rest of the butter.",
+       "min": 20
+      },
+      {
+       "text": "Serve with the salad leaves dressed with the oil and a squeeze of lemon, and lemon wedges.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pumpkin pie",
@@ -285,7 +366,9 @@
      "text": "Cool before slicing",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Camp canteen raspberry lemonade slush",
@@ -338,7 +421,9 @@
      "text": "Pour into tall cups with a lemon wheel and a spoon straw",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

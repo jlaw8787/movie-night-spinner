@@ -114,7 +114,9 @@
      "text": "Drain on paper towel and serve hot with the remoulade.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bourbon Bowl Cajun butter prawns",
@@ -189,7 +191,9 @@
      "text": "Squeeze over the lemon, scatter with parsley and serve from the pan with the baguette.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mama Boucher's chicken and sausage gumbo",
@@ -298,7 +302,136 @@
      "text": "Serve over rice with spring onion and hot sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mama Boucher's mushroom and sausage gumbo (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 55,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "extra vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green capsicum, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "vegetarian sausages, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "Cajun seasoning",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.2,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "okra, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "hot sauce, to serve",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir the flour into the oil in a heavy pot over medium-low heat until the roux turns dark brown like chocolate.",
+       "min": 20
+      },
+      {
+       "text": "Brown the mushrooms and vegetarian sausages in the extra oil in a frying pan.",
+       "min": 10
+      },
+      {
+       "text": "Add the onion, celery and capsicum to the roux and cook until soft.",
+       "min": 5
+      },
+      {
+       "text": "Add the mushrooms, sausages, Cajun seasoning, smoked paprika and stock. Simmer.",
+       "min": 30
+      },
+      {
+       "text": "Add the okra and cook until tender. Meanwhile steam the rice.",
+       "min": 10
+      },
+      {
+       "text": "Serve over rice with spring onion and hot sauce.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bourbon Bowl pecan pralines",
@@ -365,7 +498,9 @@
      "text": "Quickly spoon rounds onto baking paper and leave to set.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "High quality H2O cucumber lime cooler",
@@ -428,7 +563,9 @@
      "text": "Fill glasses with ice and cucumber, add the sparkling water to the jug, stir gently and pour over. Garnish with lime wheels and mint.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

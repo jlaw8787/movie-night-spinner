@@ -88,7 +88,9 @@
      "text": "Roll in the remaining sugar while warm, then poke a hole in each and pipe in raspberry jam.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Product placement pizza bites",
@@ -139,7 +141,9 @@
      "text": "Present one to the camera with a cheesy grin before eating.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mirthmobile pepperoni pizza squares",
@@ -196,7 +200,96 @@
      "text": "Bake until the crust blisters. Cut into squares.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mirthmobile hot pepper pizza squares",
+     "prep_min": 20,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "pickled jalapeños, sliced",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "black olives",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to its highest setting with a steel or tray inside.",
+       "min": 15
+      },
+      {
+       "text": "Toss the capsicum with the paprika and oil.",
+       "min": 3
+      },
+      {
+       "text": "Stretch the dough into two thin bases.",
+       "min": 5
+      },
+      {
+       "text": "Top with sauce, mozzarella, capsicum, jalapeños, olives and mushrooms.",
+       "min": 5
+      },
+      {
+       "text": "Bake until the crust blisters. Cut into squares.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Stan Mikita's crullers",
@@ -275,7 +368,9 @@
      "text": "Whisk the icing sugar with the honey and water and dip the crullers.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Party on cherry cola float",
@@ -326,7 +421,9 @@
      "text": "Top with a cherry and serve with straws.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

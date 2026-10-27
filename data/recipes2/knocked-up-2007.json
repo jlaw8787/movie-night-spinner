@@ -100,7 +100,9 @@
      "text": "Top the nachos with guacamole, the sour cream, pickled jalapeños and spring onion.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Craving pickle-brined popcorn chicken",
@@ -187,7 +189,9 @@
      "text": "Mix the sour cream, the mayo, the chopped pickles and dill for dipping.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "LA Thai green chicken curry",
@@ -288,7 +292,112 @@
      "text": "Stir in Thai basil and serve with rice and sliced chilli.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "LA Thai green tofu curry",
+     "prep_min": 25,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "cup",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetarian green curry paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu, cubed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "makrut lime leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "soy sauce, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "palm sugar, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "snake beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch Thai basil",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the jasmine rice.",
+       "min": 11
+      },
+      {
+       "text": "Fry the green curry paste in the thick top of the coconut milk until fragrant.",
+       "min": 9
+      },
+      {
+       "text": "Add the tofu and turn gently for 3 minutes.",
+       "min": 9
+      },
+      {
+       "text": "Pour in the rest of the coconut milk, the stock, the torn makrut lime leaves, the soy sauce and the palm sugar.",
+       "min": 6
+      },
+      {
+       "text": "Simmer 12 minutes, adding the snake beans for the last 5.",
+       "min": 15
+      },
+      {
+       "text": "Stir in the Thai basil and serve with the rice and sliced chilli.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pastel lemon and raspberry cupcakes",
@@ -389,7 +498,9 @@
      "text": "Pipe on and crumble over freeze-dried raspberries.",
      "min": 126
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Club door knock-back mocktail",
@@ -432,7 +543,9 @@
      "text": "Make it just before the film starts and keep the jug cold.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

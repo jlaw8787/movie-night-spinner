@@ -64,7 +64,9 @@
      "text": "Leave one small wedge of cheese on its own at the edge as bait.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mousetrap cheese toasties",
@@ -111,7 +113,9 @@
      "text": "Cut each into cheese-shaped wedges and poke a few holes in the top with a chopstick like cartoon cheese.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ernie's spinach ricotta stuffed chicken",
@@ -186,7 +190,92 @@
      "text": "Cook the mushrooms in butter, add the remaining cream and simmer until thick. Serve over the chicken.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ernie's spinach ricotta stuffed mushrooms",
+     "prep_min": 25,
+     "cook_min": 75,
+     "make_ahead": "Gratin up to 1 day, reheat gently",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "grated parmesan",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Layer the potatoes in a dish with most of the cream and bake at 180C.",
+       "min": 60
+      },
+      {
+       "text": "Wilt the spinach, squeeze dry and mix with the ricotta and parmesan. Pull the stalks from the portobello mushrooms and fill the cups.",
+       "min": 15
+      },
+      {
+       "text": "Brush the stuffed mushrooms with the oil and roast at 200C alongside for the last 15 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Cook the sliced mushrooms in the butter, add the remaining cream and simmer until thick. Serve over the stuffed mushrooms.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "LaRue house lemon curd cheesecake",
@@ -249,7 +338,9 @@
      "text": "Spread with lemon curd before serving.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mouse-sized honey vanilla shakes",
@@ -298,7 +389,9 @@
      "text": "Pour into eight small glasses. Cut a slit in each biscuit and perch one on each rim.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

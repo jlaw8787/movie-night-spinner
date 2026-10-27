@@ -66,7 +66,9 @@
      "text": "Smash into shards.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Candy kart pretzel rods",
@@ -111,7 +113,9 @@
      "text": "Stand them in a glass like a bunch of candy karts.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ralph's wrecking ball meatballs",
@@ -190,7 +194,100 @@
      "text": "Serve the meatballs and sauce over the spaghetti.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ralph's wrecking ball lentil meatballs",
+     "prep_min": 25,
+     "cook_min": 43,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.75,
+       "u": "cup",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 700,
+       "u": "g",
+       "item": "tomato passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "spaghetti",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms and garlic in 1 tbsp of the oil until dry, then cool.",
+       "min": 8
+      },
+      {
+       "text": "Mash the lentils with the mushrooms, breadcrumbs, egg and cheese, roll into 8 big meatballs and chill for 10 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Brown the meatballs gently all over in the remaining oil.",
+       "min": 10
+      },
+      {
+       "text": "Add the passata and simmer gently.",
+       "min": 20
+      },
+      {
+       "text": "Boil the spaghetti until al dente and drain.",
+       "min": 12
+      },
+      {
+       "text": "Serve the meatballs and sauce over the spaghetti.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Felix's anniversary pie",
@@ -271,7 +368,9 @@
      "text": "Pipe a gold star on top and serve with ice cream.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Cola ice cream float",
@@ -306,7 +405,9 @@
      "text": "Stand the glasses on plates and serve with long spoons.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

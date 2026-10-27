@@ -66,7 +66,9 @@
      "text": "Split while warm and spread with butter and honey.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Grandmother Willow's harvest nuts",
@@ -127,7 +129,9 @@
      "text": "Break into rough clusters.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Virginia harvest stew",
@@ -244,7 +248,140 @@
      "text": "Serve the stew with slices of cornbread.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Virginia harvest stew (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 65,
+     "make_ahead": "Stew up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "can black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "butternut pumpkin, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can corn kernels",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can kidney beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "fine cornmeal",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onion and pumpkin.",
+       "min": 12
+      },
+      {
+       "text": "Soften the onion in the olive oil.",
+       "min": 6
+      },
+      {
+       "text": "Add the pumpkin, corn, both beans, tomatoes, stock and paprika.",
+       "min": 2
+      },
+      {
+       "text": "Simmer until thick and the pumpkin is tender.",
+       "min": 35
+      },
+      {
+       "text": "Mix the cornmeal, flour, baking powder, egg, milk and vegetable oil into a batter.",
+       "min": 8
+      },
+      {
+       "text": "Pour into a greased tin and bake at 200C until golden.",
+       "min": 20
+      },
+      {
+       "text": "Serve the stew with slices of cornbread.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Maple roasted peaches",
@@ -305,7 +442,9 @@
      "text": "Serve warm with ice cream and pecans on top.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Flit's blueberry mint cooler",
@@ -374,7 +513,9 @@
      "text": "Top with sparkling water and garnish with blueberries and a mint sprig.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

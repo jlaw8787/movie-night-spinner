@@ -44,7 +44,9 @@
      "text": "Spread a dot of lemon curd underneath.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Five-note crackers",
@@ -109,7 +111,9 @@
      "text": "Serve straight away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mashed potato mountain",
@@ -176,7 +180,84 @@
      "text": "Pile into a tall mountain and pour the gravy over.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mashed potato mountain (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 45,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "kg",
+       "item": "floury potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel and boil the potatoes until soft.",
+       "min": 25
+      },
+      {
+       "text": "Cook the onions slowly in some of the butter until golden.",
+       "min": 20
+      },
+      {
+       "text": "Stir in the flour, add the vegetable stock and soy sauce and simmer for gravy.",
+       "min": 10
+      },
+      {
+       "text": "Rice the potatoes and beat with the hot milk and the rest of the butter.",
+       "min": 8
+      },
+      {
+       "text": "Pile into a tall mountain and pour the gravy over.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Devils Tower cake",
@@ -249,7 +330,9 @@
      "text": "Stack the layers tall, cover in buttercream and drag ridges with a fork.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Neary kitchen strawberry lemonade",
@@ -312,7 +395,9 @@
      "text": "Pour into glasses and top with mint.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

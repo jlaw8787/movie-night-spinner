@@ -68,7 +68,9 @@
      "text": "Line them up neatly on a long board.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Exploding gum bubble crackers",
@@ -115,7 +117,9 @@
      "text": "Mix the sweet chilli sauce with the lime juice and serve for dipping.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Prague goulash",
@@ -196,7 +200,98 @@
      "text": "Season and serve with crusty bread.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Prague mushroom goulash",
+     "prep_min": 30,
+     "cook_min": 50,
+     "make_ahead": "Better the next day, keeps 3 days chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "potatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "brown onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "caraway seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty Italian loaf",
+       "aisle": "Bakery"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in batches in 2 tbsp of the oil in a hot heavy pot.",
+       "min": 15
+      },
+      {
+       "text": "Cook the onions slowly in the rest of the oil for 20 minutes, then stir in the paprika, caraway and tomato paste.",
+       "min": 20
+      },
+      {
+       "text": "Add the stock and potatoes, return the mushrooms, cover and simmer for 40 minutes.",
+       "min": 40
+      },
+      {
+       "text": "Season with salt and serve with crusty bread.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Trdelník cinnamon walnut pastry",
@@ -281,7 +376,9 @@
      "text": "Slide off the pins and fill with whipped cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Self-destruct ginger pilsner shandy",
@@ -346,7 +443,9 @@
      "text": "Add some ginger syrup and the juice of half a lemon to each glass. Pour in the pilsner, top with soda water and finish with grated lemon zest.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

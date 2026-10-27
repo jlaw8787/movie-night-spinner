@@ -92,7 +92,9 @@
      "text": "Pipe or spread the schmear thickly onto the bagels. Top with salmon, capers and seasoning.",
      "min": 9
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mob truck choc-dipped sundae cones",
@@ -153,7 +155,9 @@
      "text": "Freeze until the shell sets.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Terminal Bar burger",
@@ -222,7 +226,104 @@
      "text": "Toast the buns cut-side down. Assemble with the patties, raw onion and pickles.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Terminal Bar black bean burger",
+     "prep_min": 25,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "canned black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "cheddar, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "dill pickles, sliced",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in half the oil until dry, then cool.",
+       "min": 8
+      },
+      {
+       "text": "Mash the black beans with the mushrooms, breadcrumbs, egg, salt and pepper, shape into four thick patties and chill for 15 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Griddle the patties in the remaining oil over medium-high heat for 4 minutes a side, topping with cheddar in the last minute.",
+       "min": 10
+      },
+      {
+       "text": "Toast the buns cut-side down. Assemble with the patties, raw onion and pickles.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "White frosted plaster cake",
@@ -299,7 +400,9 @@
      "text": "Cover the cake in a thick matte layer, roughly smoothed like plaster. Cut into four.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Terminal Bar whiskey sour",
@@ -370,7 +473,97 @@
      "text": "Strain into 4 ice-filled rocks glasses. Add bitters to each foam and a cherry.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Terminal Bar whiskey sour (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 19,
+     "make_ahead": "Tea up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 50,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "ml",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "lemons, juiced for 90ml",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg white",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch ground cinnamon",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail cherries",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dissolve the sugar in the hot water and cool.",
+       "min": 4
+      },
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, discard them, stir in the vanilla and chill.",
+       "min": 19
+      },
+      {
+       "text": "Shake the cold tea, lemon juice, the cooled syrup and egg white hard without ice, then again with ice.",
+       "min": 3
+      },
+      {
+       "text": "Strain into 4 ice-filled rocks glasses. Dust each foam with a little cinnamon and add a cherry.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

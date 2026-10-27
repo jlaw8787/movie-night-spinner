@@ -68,7 +68,9 @@
      "text": "Grill for 4 minutes until crisp.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Oysters Rockefeller",
@@ -145,7 +147,87 @@
      "text": "Grill on high for 3 minutes until bubbling and serve hot with lemon.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Oysters Rockefeller",
+     "prep_min": 20,
+     "cook_min": 5,
+     "make_ahead": "Make the butter up to 1 day ahead; grill just before serving",
+     "ingredients": [
+      {
+       "q": 100,
+       "u": "g",
+       "item": "spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter, soft",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "fennel seeds, toasted and ground",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "oysters, freshly shucked",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "rock salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, cut in wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blitz the spinach, parsley, spring onions, butter, breadcrumbs and ground fennel seeds.",
+       "min": 8
+      },
+      {
+       "text": "Settle the oysters on a tray of rock salt and spoon over the butter.",
+       "min": 10
+      },
+      {
+       "text": "Grill on high for 3 minutes until bubbling and serve hot with lemon.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Tangiers rib eye",
@@ -220,7 +302,92 @@
      "text": "Slice the steaks and serve with the creamed spinach.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Tangiers cauliflower steak",
+     "prep_min": 10,
+     "cook_min": 38,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch ground nutmeg",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Cut two thick steaks, about 3cm, from the centre of each cauliflower and season with the salt.",
+       "min": 10
+      },
+      {
+       "text": "Sear the steaks in the oil in a hot ovenproof pan for 4 minutes a side, then add the butter, thyme and garlic and baste. Move the pan to the oven and roast until tender in the middle.",
+       "min": 25
+      },
+      {
+       "text": "While they roast, wilt the spinach, squeeze it dry and simmer with the cream and nutmeg.",
+       "min": 10
+      },
+      {
+       "text": "Serve the steaks with the creamed spinach and spoon over the pan butter.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Equal-blueberry muffins",
@@ -289,7 +456,9 @@
      "text": "Bake at 190C for 20 minutes.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dry martini",
@@ -336,7 +505,63 @@
      "text": "Garnish with an olive on a pick.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Dry martini (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 20,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "olive brine, from the jar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "green olives on picks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Freeze four martini glasses for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "For each drink stir the non-alcoholic gin, verjuice and a few drops of olive brine over plenty of ice for 30 seconds and strain into a frozen glass.",
+       "min": 6
+      },
+      {
+       "text": "Garnish with an olive on a pick.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

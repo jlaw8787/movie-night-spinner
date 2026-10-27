@@ -84,7 +84,9 @@
      "text": "Warm the tortillas, fill with the mix and cheddar and top with the salsa.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Corpus Christi shrimp cocktail",
@@ -159,7 +161,9 @@
      "text": "Spoon into glasses with crackers on the side.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Los Dinos Tex-Mex cheese enchiladas",
@@ -238,7 +242,96 @@
      "text": "Bake at 190C until bubbling.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Los Dinos Tex-Mex cheese enchiladas (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 23,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the flour in oil, then stir in the chilli powder and cumin.",
+       "min": 5
+      },
+      {
+       "text": "Add the stock gradually with the soy sauce and simmer until thick.",
+       "min": 10
+      },
+      {
+       "text": "Roll the tortillas around cheese and diced onion and lay in a dish.",
+       "min": 10
+      },
+      {
+       "text": "Pour over the gravy and scatter with more cheese.",
+       "min": 3
+      },
+      {
+       "text": "Bake at 190C until bubbling.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Tres leches cake",
@@ -317,7 +410,9 @@
      "text": "Whip the cream and top the cake with cream and strawberries.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Astrodome watermelon agua fresca",
@@ -396,7 +491,9 @@
      "text": "Fill with crushed ice, pour in the agua fresca and top with torn mint.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

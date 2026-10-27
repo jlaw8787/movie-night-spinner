@@ -64,7 +64,9 @@
      "text": "Drizzle with lime juice mixed with honey.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Tinkerbell fairy bread",
@@ -111,7 +113,9 @@
      "text": "Trim the crusts and cut into triangles.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lost Boys roast chicken, potatoes and corn",
@@ -174,7 +178,84 @@
      "text": "Pile it all in the middle and eat with your hands. Bangarang.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lost Boys roast haloumi, potatoes and corn",
+     "prep_min": 23,
+     "cook_min": 52,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, in chunks",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the crushed garlic, lemon zest, paprika and oil. Chop the potatoes and toss in half of it.",
+       "min": 15
+      },
+      {
+       "text": "Roast the potatoes at 220C.",
+       "min": 30
+      },
+      {
+       "text": "Toss the haloumi in the rest of the garlic mix, add to the tray and roast until golden.",
+       "min": 15
+      },
+      {
+       "text": "Grill the corn cobs, turning until charred.",
+       "min": 12
+      },
+      {
+       "text": "Pile it all in the middle with a squeeze of the lemon and eat with your hands. Bangarang.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Tick-tock crocodile cake",
@@ -247,7 +328,9 @@
      "text": "Pipe a clock face with melted dark chocolate.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pixie dust lemonade",
@@ -284,7 +367,9 @@
      "text": "Stir in the glitter and pour into four glasses straight away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

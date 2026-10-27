@@ -58,7 +58,9 @@
      "text": "Serve with hummus, pickled turnips and olives in little bowls.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Scarif beach prawns",
@@ -117,7 +119,9 @@
      "text": "Thread the prawns onto skewers and grill until pink and charred. Serve with the salsa.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Jedha spiced lamb pilaf",
@@ -216,7 +220,116 @@
      "text": "Pile onto a platter with the raisins and almonds. Serve with yoghurt mixed with the garlic.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jedha spiced eggplant pilaf",
+     "prep_min": 15,
+     "cook_min": 35,
+     "make_ahead": "Pilaf can be reheated, serve with fresh almonds",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large eggplant, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin chickpeas (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, cut into strips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cinnamon",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "basmati rice, rinsed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "flaked almonds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "raisins",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the eggplant in the oil. Add the onion, carrots, cumin and cinnamon and cook 5 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Stir in the chickpeas, rice and stock, cover and cook on low.",
+       "min": 20
+      },
+      {
+       "text": "Rest the pilaf, covered, for 10 minutes. Toast the almonds meanwhile.",
+       "min": 10
+      },
+      {
+       "text": "Pile onto a platter with the raisins and almonds. Serve with yoghurt mixed with the garlic.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Death Star plans chocolate sphere",
@@ -281,7 +394,9 @@
      "text": "Melt the glaze chocolate with the thickened cream and cocoa. Turn out the spheres and glaze them. Press a dent in each.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chirrut's tea",
@@ -328,7 +443,9 @@
      "text": "Serve hot in small cups, or chill and pour over ice. I am one with the Force.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

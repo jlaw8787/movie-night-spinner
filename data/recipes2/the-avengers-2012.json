@@ -114,7 +114,9 @@
      "text": "Add pine nuts, chilli oil and parsley.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Asgardian honey roasted nuts",
@@ -167,7 +169,9 @@
      "text": "Sprinkle with flaky salt while warm and stir as they cool so they don't stick together.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Shawarma",
@@ -272,7 +276,122 @@
      "text": "Warm the flatbreads and fill with chicken, garlic sauce, pickled turnips, tomato and parsley.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cauliflower shawarma",
+     "prep_min": 20,
+     "cook_min": 87,
+     "make_ahead": "Marinate up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground coriander",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "pinch of ground cinnamon",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "flatbreads",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "garlic sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "pickled turnips",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cauliflower into small florets and mix with the yoghurt, garlic, cumin, coriander, paprika, cinnamon, lemon juice and olive oil.",
+       "min": 10
+      },
+      {
+       "text": "Marinate in the fridge for at least 1 hour.",
+       "min": 60
+      },
+      {
+       "text": "Spread on a lined tray and roast at 230C, turning once, until tender and charred at the edges.",
+       "min": 25
+      },
+      {
+       "text": "Warm the flatbreads and fill with the cauliflower, garlic sauce, pickled turnips, tomato and parsley.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Captain America shield cookies",
@@ -341,7 +460,9 @@
      "text": "Ice the rings, add a blue centre and a white star.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Asgardian honey ginger beer or mead",
@@ -394,7 +515,63 @@
      "text": "For the grown-ups, pour chilled mead instead. Raise the glasses high.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Asgardian honey ginger beer or mead (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices fresh ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "ginger beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir a spoon of honey, a squeeze of lemon and a slice of ginger into each of four glasses until the honey dissolves.",
+       "min": 4
+      },
+      {
+       "text": "Fill with ice and top with ginger beer.",
+       "min": 2
+      },
+      {
+       "text": "Stir once and raise the glasses high.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

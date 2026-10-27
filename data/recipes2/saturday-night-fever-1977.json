@@ -52,7 +52,9 @@
      "text": "Toss with the sausage and a splash of red wine vinegar.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Disco fries",
@@ -115,7 +117,9 @@
      "text": "Pile the fries on a tray, pour over the gravy, top with mozzarella and grill for a minute.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Two slices stacked",
@@ -172,7 +176,9 @@
      "text": "Cut into big slices, stack two and fold.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Disco ball cake pops",
@@ -229,7 +235,9 @@
      "text": "Stand in a glass to set.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "2001 Odyssey whisky lemon fizz",
@@ -300,7 +308,91 @@
      "text": "Strain into four ice-filled highballs, top with lemonade and soda, stir once and add a lemon wheel.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "2001 Odyssey whisky lemon fizz (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 15,
+     "make_ahead": "Syrup up to 1 week ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "lemonade",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, in wheels",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift out and chill.",
+       "min": 15
+      },
+      {
+       "text": "Dissolve the sugar in the hot water and cool.",
+       "min": 3
+      },
+      {
+       "text": "Shake 180ml of the tea, the lemon juice and 40ml of the syrup with ice for 10 seconds.",
+       "min": 2
+      },
+      {
+       "text": "Strain into four ice-filled highballs, top with lemonade and soda, stir once and add a lemon wheel.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -52,7 +52,9 @@
      "text": "Spread out to cool, then pour into striped paper cones.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Riddler question mark soft pretzels",
@@ -119,7 +121,9 @@
      "text": "Serve warm with mustard.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gotham neon noodles",
@@ -182,7 +186,74 @@
      "text": "Toss through the noodles with sweet chilli and soy sauce until sticky and pack into takeaway boxes.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Gotham neon noodles (vegetarian)",
+     "prep_min": 8,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "egg noodles, cooked",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 450,
+       "u": "g",
+       "item": "firm tofu, cubed and patted dry",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "sweet chilli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the noodles and drain.",
+       "min": 5
+      },
+      {
+       "text": "Stir-fry the tofu in the oil in a hot wok until golden.",
+       "min": 10
+      },
+      {
+       "text": "Add the capsicum and cook briefly.",
+       "min": 2
+      },
+      {
+       "text": "Toss through the noodles with sweet chilli and soy sauce until sticky and pack into takeaway boxes.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Trapeze funnel cakes",
@@ -247,7 +318,9 @@
      "text": "Drain, dust thickly with icing sugar and serve warm with strawberries.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Riddler lime spider float",
@@ -284,7 +357,9 @@
      "text": "Add a scoop of ice cream so it floats and fizzes up green and serve straight away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

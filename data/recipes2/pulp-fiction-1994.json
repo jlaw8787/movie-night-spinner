@@ -68,7 +68,9 @@
      "text": "Fill soft buns with the patties, onion, pickle, mustard and a dab of mayonnaise, the way they do it in Amsterdam.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Big Kahuna burger bites",
@@ -165,7 +167,107 @@
      "text": "Mix the mayonnaise with the sriracha. Fill the slider buns with the patties, pineapple and sriracha mayonnaise and hold each together with a toothpick.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Big Kahuna burger bites",
+     "prep_min": 16,
+     "cook_min": 18,
+     "make_ahead": "Teriyaki glaze up to 3 days ahead",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "beef mince",
+       "aisle": "Meat"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "tinned pineapple rings",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sriracha",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "slider buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "toothpicks",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy sauce, honey and brown sugar for 5 minutes until syrupy.",
+       "min": 6
+      },
+      {
+       "text": "Shape the beef mince into 12 small patties and season with salt and pepper.",
+       "min": 8
+      },
+      {
+       "text": "Grill the pineapple rings until charred and cut each into 3.",
+       "min": 6
+      },
+      {
+       "text": "Cook the patties on a hot griddle for 2 minutes a side, brush with the teriyaki and top each with a small square of cheddar.",
+       "min": 6
+      },
+      {
+       "text": "Mix the mayonnaise with the sriracha. Fill the slider buns with the patties, pineapple and sriracha mayonnaise and hold each together with a toothpick.",
+       "min": 8
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Jack Rabbit Slim's fries",
@@ -226,7 +328,9 @@
      "text": "Fry again at 190C until crisp, salt and serve in red-checked paper boats with tomato sauce and mustard.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Douglas Sirk steak",
@@ -323,7 +427,330 @@
      "text": "Cut the iceberg lettuce into wedges and spoon over the blue cheese mashed with the sour cream. Serve with the steaks, fries and peppercorn sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Douglas Sirk steak",
+     "prep_min": 70,
+     "cook_min": 35,
+     "make_ahead": "Season the steaks an hour ahead",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "sirloin steaks",
+       "aisle": "Meat"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "frozen skin-on fries",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "black peppercorns, crushed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "iceberg lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "blue cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Season the sirloin steaks with salt an hour ahead and leave them out of the fridge.",
+       "min": 60
+      },
+      {
+       "text": "Bake the frozen skin-on fries at 220C for 25 minutes until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Heat the oil in a pan until smoking and sear the steaks for 2 minutes a side until 48C inside, then rest them for 5 minutes.",
+       "min": 10
+      },
+      {
+       "text": "In the same pan cook the shallot and crushed peppercorns for 1 minute, add the beef stock and let it bubble, then add the cream and simmer for 2 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Cut the iceberg lettuce into wedges and spoon over the blue cheese mashed with the sour cream. Serve with the steaks, fries and peppercorn sauce.",
+       "min": 5
+      }
+     ]
+    },
+    "veg": {
+     "n": "Douglas Sirk cauliflower steak",
+     "prep_min": 15,
+     "cook_min": 51,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "frozen skin-on fries",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "black peppercorns, crushed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "ml",
+       "item": "brandy",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "iceberg lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "blue cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut two 3cm thick steaks from the middle of each cauliflower, season with salt and brush with 2 tbsp of the oil.",
+       "min": 8
+      },
+      {
+       "text": "Bake the frozen skin-on fries at 220C for 25 minutes until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Sear the cauliflower steaks in the remaining oil and the butter in a hot ovenproof pan for 3 minutes a side, then roast at 220C for 15 minutes until tender in the middle.",
+       "min": 22
+      },
+      {
+       "text": "Wipe out the pan, cook the shallot and crushed peppercorns for 1 minute, add the brandy, stock and cream and simmer for 3 minutes.",
+       "min": 6
+      },
+      {
+       "text": "Cut the iceberg lettuce into wedges and spoon over the blue cheese mashed with the sour cream. Serve with the cauliflower steaks, fries and peppercorn sauce.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Douglas Sirk cauliflower steak",
+     "prep_min": 15,
+     "cook_min": 51,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "frozen skin-on fries",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "black peppercorns, crushed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "apple cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "iceberg lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "blue cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut two 3cm thick steaks from the middle of each cauliflower, season with salt and brush with 2 tbsp of the oil.",
+       "min": 8
+      },
+      {
+       "text": "Bake the frozen skin-on fries at 220C for 25 minutes until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Sear the cauliflower steaks in the remaining oil and the butter in a hot ovenproof pan for 3 minutes a side, then roast at 220C for 15 minutes until tender in the middle.",
+       "min": 22
+      },
+      {
+       "text": "Wipe out the pan, cook the shallot and crushed peppercorns for 1 minute, add the vinegar, water, stock and cream and simmer for 3 minutes.",
+       "min": 6
+      },
+      {
+       "text": "Cut the iceberg lettuce into wedges and spoon over the blue cheese mashed with the sour cream. Serve with the cauliflower steaks, fries and peppercorn sauce.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Big Kahuna Hawaiian burger",
@@ -402,7 +829,276 @@
      "text": "Toast the buns and build with lettuce, patty and pineapple.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Big Kahuna Hawaiian burger",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Teriyaki glaze up to 3 days ahead",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pineapple rings",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "beef chuck mince",
+       "aisle": "Meat"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "iceberg lettuce, shredded",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, honey and sugar until syrupy.",
+       "min": 8
+      },
+      {
+       "text": "Grill the pineapple rings until charred.",
+       "min": 6
+      },
+      {
+       "text": "Shape the mince into 4 thick patties.",
+       "min": 4
+      },
+      {
+       "text": "Grill the patties, brushing with the teriyaki, then melt the cheddar on top.",
+       "min": 12
+      },
+      {
+       "text": "Toast the buns and build with lettuce, patty and pineapple.",
+       "min": 10
+      }
+     ]
+    },
+    "veg": {
+     "n": "Big Kahuna Hawaiian mushroom and haloumi burger",
+     "prep_min": 15,
+     "cook_min": 25,
+     "make_ahead": "Teriyaki glaze up to 3 days ahead",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "mirin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pineapple rings",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "haloumi, cut into 4 thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "iceberg lettuce, shredded",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, mirin and sugar until syrupy.",
+       "min": 8
+      },
+      {
+       "text": "Grill the pineapple rings until charred.",
+       "min": 6
+      },
+      {
+       "text": "Brush the mushrooms with the oil and grill them gill side down for 4 minutes, then flip, press flat and cook 4 minutes more, brushing with the teriyaki.",
+       "min": 10
+      },
+      {
+       "text": "Grill the haloumi slices for 2 minutes a side, brush with teriyaki and sit one on each mushroom. Top with the cheddar to melt.",
+       "min": 6
+      },
+      {
+       "text": "Toast the buns and build with lettuce, mushroom and haloumi, and pineapple.",
+       "min": 10
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Big Kahuna Hawaiian mushroom and haloumi burger",
+     "prep_min": 15,
+     "cook_min": 25,
+     "make_ahead": "Teriyaki glaze up to 3 days ahead",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pineapple rings",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "haloumi, cut into 4 thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "iceberg lettuce, shredded",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, apple juice, rice vinegar and sugar until syrupy.",
+       "min": 8
+      },
+      {
+       "text": "Grill the pineapple rings until charred.",
+       "min": 6
+      },
+      {
+       "text": "Brush the mushrooms with the oil and grill them gill side down for 4 minutes, then flip, press flat and cook 4 minutes more, brushing with the teriyaki.",
+       "min": 10
+      },
+      {
+       "text": "Grill the haloumi slices for 2 minutes a side, brush with teriyaki and sit one on each mushroom. Top with the cheddar to melt.",
+       "min": 6
+      },
+      {
+       "text": "Toast the buns and build with lettuce, mushroom and haloumi, and pineapple.",
+       "min": 10
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Diner pancakes",
@@ -477,7 +1173,9 @@
      "text": "Grill the bacon until crisp. Stack the pancakes with butter and maple syrup, with bacon on the side.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Five dollar shake",
@@ -520,7 +1218,9 @@
      "text": "Pour into chilled glasses, top with whipped cream and a cherry.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Vanilla Coke",
@@ -561,7 +1261,9 @@
      "text": "Top each with 300ml cold cola and stir once.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

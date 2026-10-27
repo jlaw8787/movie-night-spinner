@@ -46,7 +46,9 @@
      "text": "Cut into strips with scissors.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hank's camouflage fruit platter",
@@ -105,7 +107,9 @@
      "text": "Serve with the yoghurt in a bowl for dipping.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "California chicken bowls",
@@ -194,7 +198,96 @@
      "text": "Build bowls of rice with chicken, sliced avocado, corn, black beans and a spoon of salsa.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "California haloumi bowls",
+     "prep_min": 15,
+     "cook_min": 28,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "avocados",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can corn kernels",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "salsa",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the haloumi with the juice of two limes, the chilli and oil.",
+       "min": 5
+      },
+      {
+       "text": "Leave to marinate.",
+       "min": 10
+      },
+      {
+       "text": "Grill the haloumi until golden on both sides.",
+       "min": 8
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 15
+      },
+      {
+       "text": "Build bowls of rice with haloumi, sliced avocado, corn, black beans, salsa and wedges of the last lime.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Dory blue jelly",
@@ -249,7 +342,9 @@
      "text": "Top with cream and tuck a slice of orange on each for a little orange fish.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Blue lemonade ice cream float",
@@ -290,7 +385,9 @@
      "text": "Serve straight away with a long spoon.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

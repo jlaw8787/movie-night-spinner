@@ -56,7 +56,9 @@
      "text": "Cut into fingers and serve with a pot of tea.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Professor's house scones",
@@ -117,7 +119,9 @@
      "text": "Serve warm with jam and whipped cream.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mrs Beaver's fish dinner",
@@ -190,7 +194,90 @@
      "text": "Serve everything together.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mrs Beaver's haloumi dinner",
+     "prep_min": 12,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, in 8 slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel and cut the potatoes, chop the parsley and pat the haloumi dry.",
+       "min": 10
+      },
+      {
+       "text": "Boil the potatoes in salted water until tender, drain and toss with some of the butter, the parsley and pepper.",
+       "min": 20
+      },
+      {
+       "text": "Dust the haloumi in the flour and pan-fry in butter until golden on both sides.",
+       "min": 6
+      },
+      {
+       "text": "Cook the peas, then toss with butter and a squeeze of lemon.",
+       "min": 4
+      },
+      {
+       "text": "Serve everything together.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Turkish delight",
@@ -263,7 +350,9 @@
      "text": "Cut into cubes and roll in icing sugar.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Father Christmas cocoa",
@@ -314,7 +403,9 @@
      "text": "Pour into mugs and top with whipped cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

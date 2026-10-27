@@ -84,7 +84,9 @@
      "text": "Top with sour cream, spring onion and jalapenos, and drizzle with honey mixed with chilli flakes.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Maple pecan pretzel crunch",
@@ -153,7 +155,9 @@
      "text": "Toss with the chocolate and cranberries and tip into a big bowl.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Red One's training day steak plate",
@@ -244,7 +248,108 @@
      "text": "Spoon the chimichurri over the steak and serve with the wedges and broccolini.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Red One's training day haloumi plate",
+     "prep_min": 20,
+     "cook_min": 28,
+     "make_ahead": "Chimichurri up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large sweet potatoes, cut into wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, in thick slabs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches broccolini",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the sweet potato with the vegetable oil, paprika and salt and roast at 220C.",
+       "min": 30
+      },
+      {
+       "text": "Blitz the parsley, garlic, chilli, vinegar and olive oil into chimichurri.",
+       "min": 5
+      },
+      {
+       "text": "Grill the haloumi over high heat for 2 minutes a side until charred.",
+       "min": 6
+      },
+      {
+       "text": "Grill the broccolini.",
+       "min": 4
+      },
+      {
+       "text": "Spoon the chimichurri over the haloumi and serve with the wedges and broccolini.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Code Red velvet crinkle cookies",
@@ -341,7 +446,9 @@
      "text": "Cool on the tray.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Callum Drift's spiced hot cocoa",
@@ -412,7 +519,9 @@
      "text": "Pour into mugs and top with whipped cream and a little grated chocolate.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

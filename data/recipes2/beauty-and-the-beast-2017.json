@@ -62,7 +62,9 @@
      "text": "Top half with brie and apple, the rest with goat's cheese and a drizzle of honey.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gaston's five dozen devilled eggs",
@@ -123,7 +125,9 @@
      "text": "Dust with smoked paprika and pile onto one big platter.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lumière's beef and mushroom braise",
@@ -252,7 +256,146 @@
      "text": "Serve the braise over the mash with crusty bread.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lumière's mushroom braise",
+     "prep_min": 30,
+     "cook_min": 75,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "mixed mushrooms (field, portobello, oyster)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "baby onions, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the mushrooms into big chunks and peel the baby onions.",
+       "min": 15
+      },
+      {
+       "text": "Brown the mushrooms hard in the oil in batches, dusting the last batch with smoked paprika.",
+       "min": 15
+      },
+      {
+       "text": "Add the onions and colour lightly.",
+       "min": 8
+      },
+      {
+       "text": "Stir in the flour and tomato paste, then add the stock, soy sauce, balsamic vinegar, thyme, bay leaves and lentils.",
+       "min": 3
+      },
+      {
+       "text": "Cover and simmer until the onions are soft and the sauce is thick.",
+       "min": 40
+      },
+      {
+       "text": "Peel and boil the potatoes, then mash with butter and warm milk.",
+       "min": 20
+      },
+      {
+       "text": "Serve the braise over the mash with crusty bread.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Enchanted rose tart",
@@ -341,7 +484,9 @@
      "text": "Cool before slicing.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ballroom golden peach punch",
@@ -404,7 +549,9 @@
      "text": "Just before serving, add ice and top with sparkling apple juice. Stir gently and pour into wide glasses.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

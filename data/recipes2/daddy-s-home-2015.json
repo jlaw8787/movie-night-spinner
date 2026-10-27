@@ -96,7 +96,9 @@
      "text": "Whisk the peanut butter, the hoisin, the lime juice and the warm water for dipping.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dusty's cool dad nachos",
@@ -155,7 +157,9 @@
      "text": "Finish with salsa and the sour cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Backyard dad-off smash burgers",
@@ -244,7 +248,106 @@
      "text": "Toast the potato buns, spread with sauce and stack the patties each with onion and pickles.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Backyard dad-off smash burgers (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 24,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "tomato sauce, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "mustard, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "cheese slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "potato buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slowly cook the sliced onions in butter for 15 minutes until golden.",
+       "min": 19
+      },
+      {
+       "text": "Mix the mayo, the tomato sauce, the mustard and the chopped pickles.",
+       "min": 5
+      },
+      {
+       "text": "Roll the plant-based mince into 8 balls.",
+       "min": 5
+      },
+      {
+       "text": "On a very hot oiled barbecue plate, smash each flat, season and cook 2 minutes.",
+       "min": 7
+      },
+      {
+       "text": "Flip, add a cheese slice and cook 1 minute.",
+       "min": 6
+      },
+      {
+       "text": "Toast the potato buns, spread with sauce and stack the patties each with onion and pickles.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Daddy-daughter dance cupcakes",
@@ -349,7 +452,9 @@
      "text": "Finish with sprinkles.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Smooth jazz strawberry basil lemonade",
@@ -416,7 +521,9 @@
      "text": "Pour into glasses with sliced strawberries and a basil leaf.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

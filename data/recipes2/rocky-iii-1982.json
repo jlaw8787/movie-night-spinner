@@ -78,7 +78,9 @@
      "text": "Pile on the bread just before serving and top with shaved parmesan.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Venice beach fish tacos",
@@ -163,7 +165,95 @@
      "text": "Fill with cabbage, fish, crema and salsa.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Venice beach fish tacos",
+     "prep_min": 30,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "flathead fillets, cut in strips",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 330,
+       "u": "ml",
+       "item": "cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "small cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "fresh salsa",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the flour with cold soda water to a light batter.",
+       "min": 5
+      },
+      {
+       "text": "Mix the sour cream with lime juice for a crema.",
+       "min": 3
+      },
+      {
+       "text": "Dip the fish strips and fry at 180C in batches until crisp.",
+       "min": 12
+      },
+      {
+       "text": "Warm the tortillas.",
+       "min": 5
+      },
+      {
+       "text": "Fill with cabbage, fish, crema and salsa.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Clubber Lang rematch chicken",
@@ -240,7 +330,94 @@
      "text": "Serve with an extra squeeze of lemon.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Clubber Lang rematch haloumi",
+     "prep_min": 20,
+     "cook_min": 66,
+     "make_ahead": "Marinate up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini, sliced lengthwise",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "brown rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "heads broccoli",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the juice of one lemon, crushed garlic, oregano and olive oil and coat the haloumi and zucchini.",
+       "min": 8
+      },
+      {
+       "text": "Marinate for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Cook the brown rice.",
+       "min": 30
+      },
+      {
+       "text": "Grill the zucchini and haloumi over high heat until charred.",
+       "min": 10
+      },
+      {
+       "text": "Steam the broccoli florets.",
+       "min": 6
+      },
+      {
+       "text": "Serve with an extra squeeze of lemon.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Thunderlips charity tiramisu",
@@ -317,7 +494,9 @@
      "text": "Dust with cocoa.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Beach training lemonade",
@@ -384,7 +563,9 @@
      "text": "Stir well and pour into tall glasses.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

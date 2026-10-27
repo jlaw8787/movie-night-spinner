@@ -68,7 +68,9 @@
      "text": "Top with salmon, capers, a dill sprig and pepper.",
      "min": 9
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Upper West Side bagels",
@@ -115,7 +117,9 @@
      "text": "Spread over the eight halves and serve two halves per person.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Fox Books cafe sandwiches",
@@ -176,7 +180,78 @@
      "text": "Cut each sandwich in half.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fox Books cafe sandwiches (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 6,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices sourdough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "cranberry sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "smoked tofu, thinly sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 160,
+       "u": "g",
+       "item": "brie",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Spread the sourdough with the cranberry sauce.",
+       "min": 2
+      },
+      {
+       "text": "Divide the smoked tofu, spinach and brie among four slices and close.",
+       "min": 3
+      },
+      {
+       "text": "Butter the outsides.",
+       "min": 2
+      },
+      {
+       "text": "Press in a hot sandwich pan or frying pan weighted with a second pan, turning once, until golden and the brie melts.",
+       "min": 8
+      },
+      {
+       "text": "Cut each sandwich in half.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Cafe cheesecake",
@@ -265,7 +340,9 @@
      "text": "Cut four slices and serve with the strawberries and juices.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Tall decaf cappuccino",
@@ -300,7 +377,9 @@
      "text": "Divide the milk among the cups and spoon the foam on top.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

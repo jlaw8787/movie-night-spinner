@@ -74,7 +74,9 @@
      "text": "Lay on a tiered stand",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hotel Excelsior crab sandwiches",
@@ -149,7 +151,9 @@
      "text": "Close with the remaining bread, press gently, trim off the crusts and cut each into three fingers",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Formula 86 watercress soup",
@@ -216,7 +220,78 @@
      "text": "Finish with the cream",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Formula 86 watercress soup (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "leeks, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "potatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches watercress",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Sweat the leeks and potatoes in the butter.",
+       "min": 10
+      },
+      {
+       "text": "Add the stock and simmer.",
+       "min": 20
+      },
+      {
+       "text": "Stir in the watercress for a minute.",
+       "min": 1
+      },
+      {
+       "text": "Blitz until bright green.",
+       "min": 3
+      },
+      {
+       "text": "Finish with the cream.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bruno's chocolate cake",
@@ -289,7 +364,9 @@
      "text": "Melt the remaining chocolate with the cream and pour over. Serve thin slices",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Seaside hotel peach iced tea",
@@ -368,7 +445,9 @@
      "text": "Pour over ice with lemon slices and mint",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

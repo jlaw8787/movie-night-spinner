@@ -72,7 +72,9 @@
      "text": "Serve with mustard and butter.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bounty hunter's jerky",
@@ -129,7 +131,9 @@
      "text": "Lay on racks and dry at 70C.",
      "min": 240
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "German sausages and kraut",
@@ -198,7 +202,240 @@
      "text": "Serve together.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "German sausages and kraut",
+     "prep_min": 10,
+     "cook_min": 58,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar of sauerkraut",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "white vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "apple, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "caraway seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "bratwurst",
+       "aisle": "Meat"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the sauerkraut with the apple juice, vinegar, grated apple and caraway.",
+       "min": 20
+      },
+      {
+       "text": "Grill the bratwurst slowly until browned.",
+       "min": 25
+      },
+      {
+       "text": "Boil the potatoes until tender and toss in butter.",
+       "min": 20
+      },
+      {
+       "text": "Serve together.",
+       "min": 3
+      }
+     ]
+    },
+    "veg": {
+     "n": "German sausages and kraut (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 45,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar of sauerkraut",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "apple, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "caraway seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages, bratwurst style",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the sauerkraut with the wine, apple and caraway.",
+       "min": 20
+      },
+      {
+       "text": "Brush the vegetarian sausages with the oil and grill, turning, until browned.",
+       "min": 15
+      },
+      {
+       "text": "Boil the potatoes until tender and toss in the butter.",
+       "min": 20
+      },
+      {
+       "text": "Serve together.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "German sausages and kraut (vegetarian, alcohol free)",
+     "prep_min": 10,
+     "cook_min": 45,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar of sauerkraut",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "apple, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "caraway seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages, bratwurst style",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the sauerkraut with the apple juice, cider vinegar, apple and caraway.",
+       "min": 20
+      },
+      {
+       "text": "Brush the vegetarian sausages with the oil and grill, turning, until browned.",
+       "min": 15
+      },
+      {
+       "text": "Boil the potatoes until tender and toss in the butter.",
+       "min": 20
+      },
+      {
+       "text": "Serve together.",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Candyland white cake",
@@ -287,7 +524,9 @@
      "text": "Fill and cover the cake.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dr Schultz's lemon wheat beer",
@@ -350,7 +589,73 @@
      "text": "Hang a lemon wheel on each rim.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Dr Schultz's lemon wheat beer (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 5,
+     "make_ahead": "Syrup up to 1 week, chilled",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, peeled zest",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles alcohol-free wheat beer, 500ml each",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "lemon wheels",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the honey, water and lemon zest, then cool and strain.",
+       "min": 8
+      },
+      {
+       "text": "Add a spoon of syrup and a squeeze of lemon to each of 4 chilled tall mugs.",
+       "min": 3
+      },
+      {
+       "text": "Pour in the alcohol-free wheat beer slowly, tilting the mug, then straighten to build a thick head.",
+       "min": 3
+      },
+      {
+       "text": "Hang a lemon wheel on each rim.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

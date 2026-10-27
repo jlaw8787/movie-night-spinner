@@ -80,7 +80,9 @@
      "text": "Heat the cream and pour over the chocolate, stirring until smooth, for dunking.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Spiced gingerbread cookies",
@@ -165,7 +167,9 @@
      "text": "Mix the icing sugar with water, tint a third red and pipe on outlines and details.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Kriss Kringle's Thanksgiving turkey",
@@ -278,7 +282,124 @@
      "text": "Rest the turkey and make gravy from the juices with the flour and remaining stock.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Kriss Kringle's Thanksgiving roast pumpkin",
+     "prep_min": 35,
+     "cook_min": 93,
+     "make_ahead": "Make the sage butter up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "kg",
+       "item": "butternut pumpkin, halved lengthways and seeded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "butter, soft (60g mixed with herbs)",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch sage, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "cornbread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 450,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cranberry sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, zested",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mash 60 g of the butter with half the sage and rub it over the cut side of the pumpkin.",
+       "min": 8
+      },
+      {
+       "text": "Roast cut side up at 180C until tender and golden.",
+       "min": 70
+      },
+      {
+       "text": "Fry the onion and celery in a little butter, crumble in the cornbread and mix with the rest of the sage, the egg and 150 ml of the stock. Bake in a dish for the last 30 minutes of roasting.",
+       "min": 15
+      },
+      {
+       "text": "Boil the potatoes and mash with butter and milk.",
+       "min": 20
+      },
+      {
+       "text": "Simmer the cranberry sauce with the orange zest.",
+       "min": 5
+      },
+      {
+       "text": "Melt the last of the butter, stir in the flour, whisk in the remaining stock and the pumpkin tray juices and simmer into gravy.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "New York pumpkin pie with maple cream",
@@ -373,7 +494,9 @@
      "text": "Whip the remaining cream with the maple syrup and serve with toasted pecans.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Kriss Kringle's hot spiced cider",
@@ -432,7 +555,9 @@
      "text": "Strain into mugs and add a cinnamon stick and an orange slice to each.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

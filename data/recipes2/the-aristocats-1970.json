@@ -56,7 +56,9 @@
      "text": "Add the walnuts, honey and crackers.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ham and gruyere croque bites",
@@ -129,7 +131,9 @@
      "text": "Cut into small squares and serve on a silver tray.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Countryside coq au vin",
@@ -196,7 +200,86 @@
      "text": "Boil and mash the potatoes with butter.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Countryside mushroom au vin",
+     "prep_min": 10,
+     "cook_min": 60,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the potatoes and halve the mushrooms.",
+       "min": 10
+      },
+      {
+       "text": "Brown the mushrooms in the oil in batches with the smoked paprika.",
+       "min": 15
+      },
+      {
+       "text": "Pour in the red grape juice and stock, add the butter beans and simmer until glossy.",
+       "min": 30
+      },
+      {
+       "text": "Boil and mash the potatoes with butter.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Vanilla bean baked custard",
@@ -261,7 +344,9 @@
      "text": "Sprinkle with sugar and torch until amber.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Milk truck vanilla honey milkshake",
@@ -314,7 +399,9 @@
      "text": "Pour into four glasses and dust with nutmeg.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

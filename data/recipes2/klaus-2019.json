@@ -58,7 +58,9 @@
      "text": "Top with slices of pickled onion.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Feuding family meatballs",
@@ -143,7 +145,9 @@
      "text": "Serve on toothpicks with cranberry sauce.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Klaus's juniper beef stew with mash",
@@ -244,7 +248,130 @@
      "text": "Serve the stew over the mash.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Klaus's juniper mushroom stew with mash",
+     "prep_min": 30,
+     "cook_min": 52,
+     "make_ahead": "Stew better the next day",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "mixed mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "juniper berries, crushed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "blackcurrant jam",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches.",
+       "min": 12
+      },
+      {
+       "text": "Slice the onions and chop the carrots, then cook with the mushrooms.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the flour, juniper, thyme, jam, soy sauce, lentils and stock.",
+       "min": 3
+      },
+      {
+       "text": "Cover and simmer until thick and rich.",
+       "min": 35
+      },
+      {
+       "text": "Boil the potatoes and mash with butter and milk.",
+       "min": 20
+      },
+      {
+       "text": "Serve the stew over the mash.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Letter gingerbread envelopes",
@@ -327,7 +454,9 @@
      "text": "Pipe with white icing and add a red seal.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Márgu's warm lingonberry cordial",
@@ -394,7 +523,9 @@
      "text": "To serve cold, pour over ice and top with soda water.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

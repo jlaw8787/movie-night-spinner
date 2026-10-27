@@ -48,7 +48,9 @@
      "text": "Add the crackers, cheddar, apple and pickled onions the way a mountain lodge would set it out.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Seven-day pickles",
@@ -119,7 +121,9 @@
      "text": "Refrigerate for seven days before eating.",
      "min": 10080
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ferry crossing salmon",
@@ -182,7 +186,84 @@
      "text": "Char the broccolini in a hot pan and serve.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ferry crossing miso eggplant",
+     "prep_min": 15,
+     "cook_min": 55,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "white miso",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "wild rice blend",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches broccolini",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the eggplants lengthways, score the flesh, brush with the oil and roast cut side up at 220C.",
+       "min": 22
+      },
+      {
+       "text": "Mix the miso, honey and soy.",
+       "min": 3
+      },
+      {
+       "text": "Cook the rice until tender.",
+       "min": 30
+      },
+      {
+       "text": "Brush the miso glaze over the eggplant and roast for 8 minutes more until bubbling.",
+       "min": 8
+      },
+      {
+       "text": "Char the broccolini in a hot pan and serve.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Well-deep chocolate pots",
@@ -243,7 +324,9 @@
      "text": "Pipe a ring of whipped cream on top.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Shelter Mountain hot toddy",
@@ -292,7 +375,69 @@
      "text": "Top with boiling water, stir and add a cinnamon stick.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Shelter Mountain hot toddy (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "piece fresh ginger, 3cm, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 640,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cinnamon sticks",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags and ginger in the boiling water for 3 minutes, then remove the tea bags.",
+       "min": 6
+      },
+      {
+       "text": "Put honey and a splash of lemon juice in each of four mugs.",
+       "min": 2
+      },
+      {
+       "text": "Pour in the ginger tea, stir and add a cinnamon stick.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

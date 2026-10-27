@@ -80,7 +80,9 @@
      "text": "Serve the soup in mugs with the cheese fingers.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ned's lola's pork lumpia",
@@ -167,7 +169,9 @@
      "text": "Serve with sweet chilli sauce and vinegar mixed with a little garlic.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Happy's apartment spaghetti",
@@ -248,7 +252,98 @@
      "text": "Split the baguette, spread with the butter mixed with the remaining garlic, and bake at 200C.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Happy's apartment spaghetti with chickpea meatballs",
+     "prep_min": 12,
+     "cook_min": 55,
+     "make_ahead": "Meatballs and sauce up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins chickpeas (400g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "spaghetti",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mash the chickpeas with the breadcrumbs, egg and half the parmesan and roll into balls, then brown gently in the oil.",
+       "min": 15
+      },
+      {
+       "text": "Simmer in the tomatoes with half the garlic, crushed.",
+       "min": 30
+      },
+      {
+       "text": "Cook the spaghetti and toss with the sauce and the rest of the parmesan.",
+       "min": 10
+      },
+      {
+       "text": "Split the baguette, spread with the butter mixed with the remaining crushed garlic, and bake at 200C.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Coffee shop custard doughnuts",
@@ -327,7 +422,9 @@
      "text": "Pipe in the custard and roll in the remaining sugar.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "MJ's coffee shop iced vanilla latte",
@@ -402,7 +499,9 @@
      "text": "Froth the milk and cream until thick and spoon on top.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

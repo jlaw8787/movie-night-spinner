@@ -80,7 +80,9 @@
      "text": "Serve with mustard.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Jean Girard's ham and cheese crêpes",
@@ -155,7 +157,9 @@
      "text": "Sprinkle the rest with sugar and lemon juice.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Fried chicken, pizza and tacos dinner",
@@ -246,7 +250,102 @@
      "text": "Fill the taco shells and put everything out together.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fried cauliflower, pizza and tacos dinner",
+     "prep_min": 40,
+     "cook_min": 35,
+     "make_ahead": "Cauliflower can soak in the buttermilk the day before",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, cut into big florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mozzarella",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "taco shells",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the cauliflower in the buttermilk.",
+       "min": 15
+      },
+      {
+       "text": "Dredge in seasoned flour and fry at 175C until crisp and tender.",
+       "min": 20
+      },
+      {
+       "text": "Stretch the dough, top with sauce and mozzarella and bake at 230C until bubbling.",
+       "min": 15
+      },
+      {
+       "text": "Brown the plant-based mince with the cumin and taco spices in a little of the oil.",
+       "min": 10
+      },
+      {
+       "text": "Fill the taco shells and put everything out together.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chequered flag brownies",
@@ -309,7 +408,9 @@
      "text": "Dust every second square with icing sugar like a chequered flag.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jean Girard's iced caramel macchiato",
@@ -372,7 +473,9 @@
      "text": "Drizzle with more caramel.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

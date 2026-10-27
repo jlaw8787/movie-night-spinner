@@ -52,7 +52,9 @@
      "text": "Serve in dark bowls by candlelight.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ham and cheddar toasted sandwiches",
@@ -99,7 +101,9 @@
      "text": "Cut each into long soldiers and serve hot.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Albrecht's diner meatloaf",
@@ -196,7 +200,132 @@
      "text": "Serve thick slices with mash and gravy.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Albrecht's diner lentil meatloaf",
+     "prep_min": 23,
+     "cook_min": 75,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins brown lentils (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms and onion in the oil until dry, then cool slightly.",
+       "min": 10
+      },
+      {
+       "text": "Mash the lentils and mix with the mushrooms, breadcrumbs, eggs, cheddar, soy sauce and salt. Press into a lined loaf tin.",
+       "min": 10
+      },
+      {
+       "text": "Spread with the tomato sauce mixed with the brown sugar and bake at 180C for 45 minutes, then rest 10 minutes.",
+       "min": 55
+      },
+      {
+       "text": "Boil and mash the potatoes with most of the butter. Cook the flour in the last of the butter and whisk in the stock for a gravy.",
+       "min": 20
+      },
+      {
+       "text": "Serve thick slices with the mash and gravy.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Devil's Night blackberry crumble",
@@ -271,7 +400,9 @@
      "text": "Rest, then serve hot with ice cream.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rainy night Irish coffee",
@@ -322,7 +453,61 @@
      "text": "Pour slowly over the back of a spoon so it floats on top. For anyone not drinking, make hot chocolate instead.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Rainy night Irish coffee (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "tsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "hot strong coffee",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Warm the heatproof glasses with hot water and tip it out.",
+       "min": 3
+      },
+      {
+       "text": "Add brown sugar and a few drops of vanilla to each, pour in hot coffee and stir until the sugar dissolves.",
+       "min": 3
+      },
+      {
+       "text": "Lightly whip the cream until just thickened but still pourable.",
+       "min": 4
+      },
+      {
+       "text": "Pour slowly over the back of a spoon so it floats on top.",
+       "min": 0
+      }
+     ]
+    }
+   }
   }
  ]
 }

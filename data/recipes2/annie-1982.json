@@ -74,7 +74,9 @@
      "text": "Blanch the asparagus and wrap each spear in half a slice of prosciutto.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Radio City popcorn",
@@ -121,7 +123,9 @@
      "text": "Toss with the butter and salt, then fill paper cones.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Warbucks roast chicken",
@@ -204,7 +208,102 @@
      "text": "Cook the peas and toss with butter.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Warbucks roast cauliflower",
+     "prep_min": 20,
+     "cook_min": 61,
+     "make_ahead": "Make the tarragon butter up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large whole cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "flaky salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter, for the peas",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Trim the cauliflower, keep it whole and boil for 8 minutes. Drain and dry well.",
+       "min": 10
+      },
+      {
+       "text": "Mix the softened butter with chopped tarragon and the flaky salt and spread it all over the cauliflower, pushing it between the florets.",
+       "min": 8
+      },
+      {
+       "text": "Roast at 220C with the halved potatoes tossed in the oil, basting the cauliflower now and then, until deep golden.",
+       "min": 50
+      },
+      {
+       "text": "Whisk the flour into the tray juices, add the stock and simmer to a gravy.",
+       "min": 8
+      },
+      {
+       "text": "Cook the peas and toss with butter.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mansion sundaes",
@@ -269,7 +368,9 @@
      "text": "Scoop the ice cream into tall glasses, pour over the fudge and top with whipped cream, almonds and a cherry.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mansion ginger beer and orange punch",
@@ -328,7 +429,9 @@
      "text": "Add orange slices and serve with a mint sprig.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

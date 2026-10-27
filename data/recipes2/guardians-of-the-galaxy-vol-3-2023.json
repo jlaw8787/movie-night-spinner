@@ -84,7 +84,9 @@
      "text": "Serve with chilli oil and soy sauce.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Rocket's smoky roasted chickpeas and nuts",
@@ -143,7 +145,9 @@
      "text": "Cool and pile into a bowl.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Orgocorp crackling pork belly with mash",
@@ -214,7 +218,106 @@
      "text": "Slice the pork and serve over the mash with apple sauce.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Orgocorp crackling tofu with mash",
+     "prep_min": 30,
+     "cook_min": 70,
+     "make_ahead": "Tofu can be pressed and marinated a day ahead",
+     "ingredients": [
+      {
+       "q": 900,
+       "u": "g",
+       "item": "extra firm tofu, cut into 4 slabs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "rice paper sheets",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "green apples, peeled and chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Press the tofu dry and marinate in the soy and smoked paprika.",
+       "min": 20
+      },
+      {
+       "text": "Dip the rice paper in water, wrap two sheets around each tofu slab and brush with the oil.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 230C, turning once, until the rice paper puffs and blisters like crackling. Sprinkle with the salt flakes.",
+       "min": 30
+      },
+      {
+       "text": "Meanwhile boil the potatoes and mash with butter.",
+       "min": 20
+      },
+      {
+       "text": "Simmer the apples with the water into a sauce.",
+       "min": 15
+      },
+      {
+       "text": "Slice the tofu and serve over the mash with apple sauce.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Captain Rocket's chocolate fudge cake",
@@ -293,7 +396,9 @@
      "text": "Top with sprinkles and one little candle.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Kraglin's dark and stormy grog",
@@ -356,7 +461,85 @@
      "text": "Garnish with a lime wedge and crystallised ginger.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Kraglin's dark and stormy grog (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "molasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "ginger beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pieces crystallised ginger",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift out, stir in the molasses and vanilla and chill.",
+       "min": 15
+      },
+      {
+       "text": "Fill tall glasses with ice, squeeze lime juice into each and top with ginger beer.",
+       "min": 4
+      },
+      {
+       "text": "Float 45ml of the dark tea over the top so it clouds down through the glass.",
+       "min": 1
+      },
+      {
+       "text": "Garnish with a lime wedge and crystallised ginger.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

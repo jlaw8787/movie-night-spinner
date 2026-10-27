@@ -72,7 +72,9 @@
      "text": "Toss the wings in the sauce and serve with celery sticks and the dip.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Kick step party sub",
@@ -159,7 +161,9 @@
      "text": "Press under a board, then cut into thick slices.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bilal's DJ booth pizza",
@@ -216,7 +220,80 @@
      "text": "Cut into squares and leave in the box on the bench.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bilal's DJ booth pizza (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mushrooms, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stretch the dough into 2 thin bases.",
+       "min": 10
+      },
+      {
+       "text": "Spread with sauce, then add mozzarella, mushrooms, capsicum, chilli flakes and oregano.",
+       "min": 5
+      },
+      {
+       "text": "Bake on a hot steel at maximum heat.",
+       "min": 7
+      },
+      {
+       "text": "Cut into squares and leave in the box on the bench.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Party sheet cake",
@@ -295,7 +372,9 @@
      "text": "Spread over the cake and cover with sprinkles.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pineapple passionfruit party punch",
@@ -380,7 +459,9 @@
      "text": "Just before serving top with cold lemonade and float sliced orange and torn mint.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

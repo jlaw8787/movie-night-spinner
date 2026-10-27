@@ -70,7 +70,9 @@
      "text": "Keep warm over a candle and dip the vegetables and bread.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Blow the bloody doors off cheese toasts",
@@ -127,7 +129,9 @@
      "text": "Grill until golden and bubbling.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pork with creamy tuna sauce",
@@ -190,7 +194,90 @@
      "text": "Slice the pork thin and cover with the sauce and more capers.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Celeriac and egg tonnato (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 158,
+     "make_ahead": "Make the day before",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large celeriac, about 1kg",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "white miso",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the celeriac, cut into thin slices, brush with the oil and roast at 200C until tender and lightly golden.",
+       "min": 30
+      },
+      {
+       "text": "Boil the eggs for 9 minutes, cool and peel.",
+       "min": 15
+      },
+      {
+       "text": "Chill the celeriac and eggs.",
+       "min": 120
+      },
+      {
+       "text": "Blitz the beans, miso, 1 tbsp of the capers, mayonnaise and lemon juice until smooth.",
+       "min": 8
+      },
+      {
+       "text": "Lay the celeriac on a platter with the sliced eggs, cover with the sauce and scatter with the remaining capers.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bonet chocolate amaretti pudding",
@@ -253,7 +340,73 @@
      "text": "Chill and turn out.",
      "min": 240
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Bonet chocolate amaretti pudding",
+     "prep_min": 25,
+     "cook_min": 285,
+     "make_ahead": "Make the day before",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cocoa powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "amaretti biscuits",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "ml",
+       "item": "strong espresso, cooled",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook part of the sugar to a dark caramel and pour into a loaf tin.",
+       "min": 10
+      },
+      {
+       "text": "Whisk the eggs, remaining sugar, milk, cocoa, crushed amaretti and espresso.",
+       "min": 15
+      },
+      {
+       "text": "Pour over and bake in a water bath at 160C.",
+       "min": 45
+      },
+      {
+       "text": "Chill and turn out.",
+       "min": 240
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Hang on lads hot chocolate and espresso",
@@ -310,7 +463,9 @@
      "text": "Gently pour an espresso over the back of a spoon on top, then float the cream. Serve without stirring.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

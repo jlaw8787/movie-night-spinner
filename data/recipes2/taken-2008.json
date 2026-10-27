@@ -72,7 +72,9 @@
      "text": "Bake at 200C until bubbling.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Albanian spinach and cheese byrek",
@@ -139,7 +141,9 @@
      "text": "Cut into wedges.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jean-Claude's tarragon roast chicken",
@@ -228,7 +232,294 @@
      "text": "Steam the beans and serve.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Jean-Claude's tarragon roast chicken",
+     "prep_min": 25,
+     "cook_min": 100,
+     "make_ahead": "Gratin can be made 1 day ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.8,
+       "u": "kg",
+       "item": "whole chicken",
+       "aisle": "Meat"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the potatoes thin and layer in a dish with the cream, garlic and salt.",
+       "min": 15
+      },
+      {
+       "text": "Mash the butter with chopped tarragon and push under the chicken skin.",
+       "min": 10
+      },
+      {
+       "text": "Roast the chicken at 220C, then at 180C, with the gratin on the lower shelf until tender and golden.",
+       "min": 70
+      },
+      {
+       "text": "Rest the chicken.",
+       "min": 15
+      },
+      {
+       "text": "Add the stock, lemon juice and Dijon to the tray, scrape and reduce by half.",
+       "min": 8
+      },
+      {
+       "text": "Steam the beans and serve.",
+       "min": 7
+      }
+     ]
+    },
+    "veg": {
+     "n": "Jean-Claude's tarragon roast mushrooms",
+     "prep_min": 25,
+     "cook_min": 73,
+     "make_ahead": "Gratin can be made 1 day ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large field mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the potatoes thin and layer in a dish with the cream, crushed garlic and salt.",
+       "min": 15
+      },
+      {
+       "text": "Bake the gratin at 200C for 40 minutes.",
+       "min": 40
+      },
+      {
+       "text": "Mash the butter with chopped tarragon and salt and spread it into the gills of the mushrooms.",
+       "min": 8
+      },
+      {
+       "text": "Roast the mushrooms on the top shelf for 20 minutes while the gratin finishes.",
+       "min": 20
+      },
+      {
+       "text": "Pour the wine, stock and Dijon into the mushroom tray, scrape and reduce by half in a pan.",
+       "min": 8
+      },
+      {
+       "text": "Steam the beans and serve.",
+       "min": 7
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Jean-Claude's tarragon roast mushrooms",
+     "prep_min": 25,
+     "cook_min": 73,
+     "make_ahead": "Gratin can be made 1 day ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large field mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the potatoes thin and layer in a dish with the cream, crushed garlic and salt.",
+       "min": 15
+      },
+      {
+       "text": "Bake the gratin at 200C for 40 minutes.",
+       "min": 40
+      },
+      {
+       "text": "Mash the butter with chopped tarragon and salt and spread it into the gills of the mushrooms.",
+       "min": 8
+      },
+      {
+       "text": "Roast the mushrooms on the top shelf for 20 minutes while the gratin finishes.",
+       "min": 20
+      },
+      {
+       "text": "Pour the verjuice, stock and Dijon into the mushroom tray, scrape and reduce by half in a pan.",
+       "min": 8
+      },
+      {
+       "text": "Steam the beans and serve.",
+       "min": 7
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Crème caramel",
@@ -289,7 +580,9 @@
      "text": "Turn out to serve.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "I will find you fresh lemon soda",
@@ -346,7 +639,67 @@
      "text": "Top with cold soda water, stir and add a lemon wheel.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "I will find you fresh lemon soda",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 7,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Squeeze six of the lemons and cut the last into wheels.",
+       "min": 5
+      },
+      {
+       "text": "Stir the vanilla into the sugar syrup.",
+       "min": 1
+      },
+      {
+       "text": "Fill four tall glasses with ice and add lemon juice and syrup to each.",
+       "min": 3
+      },
+      {
+       "text": "Top with cold soda water, stir and add a lemon wheel.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

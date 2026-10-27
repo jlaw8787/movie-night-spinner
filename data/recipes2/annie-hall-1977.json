@@ -68,7 +68,9 @@
      "text": "Pile the lobster on top.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Alvy's potato knishes",
@@ -135,7 +137,9 @@
      "text": "Brush with egg and bake at 200C.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pastrami on white with mayo",
@@ -204,7 +208,108 @@
      "text": "Put rye and mustard on the side for anyone who wants it.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pastrami on white with mayo (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 11,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "smoked tofu, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground coriander",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices soft white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "iceberg lettuce, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar yellow mustard, on the side",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices rye bread, on the side",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the smoked tofu with the pepper, coriander and paprika.",
+       "min": 4
+      },
+      {
+       "text": "Fry in the oil until the edges crisp.",
+       "min": 8
+      },
+      {
+       "text": "Spread the white bread with mayonnaise.",
+       "min": 3
+      },
+      {
+       "text": "Add lettuce and tomato and pile the tofu high.",
+       "min": 4
+      },
+      {
+       "text": "Put rye and mustard on the side for anyone who wants it.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "New York cheesecake",
@@ -277,7 +382,9 @@
      "text": "Chill overnight.",
      "min": 1370
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Alvy's LA cucumber mint cooler",
@@ -340,7 +447,9 @@
      "text": "Add a mint sprig.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

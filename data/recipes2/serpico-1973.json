@@ -54,7 +54,9 @@
      "text": "Spread each half thickly with cream cheese, then top with smoked salmon, capers, onion and small sprigs of dill. Cut each half in two to share.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Deli pastrami on rye",
@@ -97,7 +99,9 @@
      "text": "Spread the rye with mustard, pile the pastrami high on half the slices and close. Cut in half and serve with a pickle each.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Deli hero, paid for",
@@ -172,7 +176,110 @@
      "text": "Fill the rolls with pastrami, Swiss cheese, slaw and the rest of the dressing.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Deli hero, paid for (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "Dressing and slaw up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "smoked tofu, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground coriander",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "horseradish",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "dill pickle, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "coleslaw mix",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices Swiss cheese",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the smoked tofu with the coriander, pepper and smoked paprika and fry in the oil until crisp at the edges.",
+       "min": 10
+      },
+      {
+       "text": "Mix the mayonnaise, tomato sauce, horseradish and pickle for Russian dressing.",
+       "min": 5
+      },
+      {
+       "text": "Toss the coleslaw mix with half the dressing.",
+       "min": 5
+      },
+      {
+       "text": "Fill the rolls with tofu, Swiss cheese, slaw and the rest of the dressing.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Black and white cookies",
@@ -253,7 +360,9 @@
      "text": "Make a thick icing with the icing sugar and a little hot water. Ice half of each flat side, then stir the cocoa into the rest and ice the other half.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Village vanilla iced coffee, paid for",
@@ -328,7 +437,9 @@
      "text": "Fill 4 glasses with ice and add coffee, syrup and milk to each. Top with a small scoop of ice cream.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

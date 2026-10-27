@@ -68,7 +68,9 @@
      "text": "Shred half the lettuce into four glasses, pile in the prawns and spoon the sauce over.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Model town cheese bites",
@@ -121,7 +123,9 @@
      "text": "Thread the tomatoes and cornichons onto toothpicks as trees and stand them between the houses, like Adam's model town.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dinner party lobster",
@@ -200,7 +204,90 @@
      "text": "Dress the salad leaves in lemon juice and serve with the lobster and fries.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dinner party king oyster mushrooms",
+     "prep_min": 30,
+     "cook_min": 12,
+     "make_ahead": "Butter up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king oyster mushrooms, halved lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "soft butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zested and juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "salad leaves",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the cut side of the mushrooms. Mash the butter with the garlic, lemon zest and parsley and brush over them.",
+       "min": 10
+      },
+      {
+       "text": "Cut the potatoes into shoestrings, rinse and dry well.",
+       "min": 10
+      },
+      {
+       "text": "Fry the potatoes in the oil in batches at 180C until crisp, drain and salt.",
+       "min": 10
+      },
+      {
+       "text": "Grill the mushrooms for about 4 minutes a side until golden and tender.",
+       "min": 8
+      },
+      {
+       "text": "Dress the salad leaves in lemon juice and serve with the mushrooms and fries.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Striped suit cake",
@@ -289,7 +376,9 @@
      "text": "Melt the white chocolate with the cream and pour over the cake. Pipe stripes with the melted dark chocolate.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Banana daiquiri",
@@ -348,7 +437,75 @@
      "text": "Blend the rum, lime juice, syrup, bananas and ice until smooth and pour into chilled glasses.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Banana daiquiri (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "Syrup up to 1 week ahead",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "coconut water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes, juiced to give 80ml",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "ripe bananas",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dissolve the sugar in the hot water.",
+       "min": 5
+      },
+      {
+       "text": "Cool the syrup for 10 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Blend the coconut water, lime juice, syrup, bananas, vanilla and ice until smooth and pour into chilled glasses.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

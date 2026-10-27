@@ -102,7 +102,9 @@
      "text": "Wrap each tightly in baking paper and halve.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Red balloon roast tomato ricotta toast",
@@ -155,7 +157,9 @@
      "text": "Spread whipped ricotta over the toast and top with the tomatoes. You'll float too.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Maine lobster rolls",
@@ -220,7 +224,92 @@
      "text": "Pile the filling in.",
      "min": 12
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Maine hearts of palm rolls",
+     "prep_min": 17,
+     "cook_min": 8,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "canned hearts of palm, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "celery stick, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "hot dog buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the hearts of palm dry and chop into chunks.",
+       "min": 8
+      },
+      {
+       "text": "Fold with the mayo, lemon juice, celery, chives, paprika and salt.",
+       "min": 5
+      },
+      {
+       "text": "Butter and toast the cut sides of the buns.",
+       "min": 8
+      },
+      {
+       "text": "Pile the filling in.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Red balloon cake pops",
@@ -283,7 +372,9 @@
      "text": "Tie a bit of string to each like a balloon.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Derry summer strawberry lemonade",
@@ -348,7 +439,9 @@
      "text": "Add plenty of ice, sliced strawberries and lemon wheels, then top with soda water and a few mint leaves.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

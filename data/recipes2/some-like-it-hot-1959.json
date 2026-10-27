@@ -68,7 +68,9 @@
      "text": "Top each egg with pancetta, a dusting of paprika and snipped chives.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Florida beach prawns",
@@ -137,7 +139,9 @@
      "text": "Mix the mayonnaise with tomato sauce, a squeeze of lemon and hot sauce. Serve the prawns on ice with the sauce.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Osgood's yacht lobster",
@@ -200,7 +204,74 @@
      "text": "Toss the potatoes and beans with butter and serve with lemon wedges.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Osgood's yacht king oyster mushrooms",
+     "prep_min": 15,
+     "cook_min": 18,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king oyster mushrooms, halved lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the cut side of the mushrooms and brush with some of the butter mixed with crushed garlic.",
+       "min": 8
+      },
+      {
+       "text": "Boil the potatoes. Steam the green beans.",
+       "min": 15
+      },
+      {
+       "text": "Grill the mushrooms for about 4 minutes a side until golden, brushing with more garlic butter.",
+       "min": 8
+      },
+      {
+       "text": "Toss the potatoes and beans with the rest of the butter and serve with lemon wedges.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Big birthday cake",
@@ -285,7 +356,9 @@
      "text": "Ice white with icing sugar mixed with milk and top with candles.",
      "min": 18
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bourbon Manhattans",
@@ -338,7 +411,85 @@
      "text": "Drop a cherry into each glass.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Bourbon Manhattans (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 12,
+     "make_ahead": "Mix a jug ahead, strain over ice per glass",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "smoky black tea bags (lapsang souchong)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "tart cherry juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "maraschino cherries",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, squeeze out and cool the tea.",
+       "min": 12
+      },
+      {
+       "text": "Stir 240ml of the cold tea with the cherry juice, maple syrup, a drop of vanilla and a strip of orange zest over ice in a jug.",
+       "min": 7
+      },
+      {
+       "text": "Strain into chilled glasses.",
+       "min": 2
+      },
+      {
+       "text": "Drop a cherry into each glass.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

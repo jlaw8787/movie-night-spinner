@@ -58,7 +58,9 @@
      "text": "Cool completely, then mix with the chocolate almonds and pretzels.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Plaza room service club sandwiches",
@@ -121,7 +123,9 @@
      "text": "Build 4 triple-deckers with chicken, bacon, lettuce and tomato. Cut into quarters and pin each with a toothpick.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Lobster mac and cheese",
@@ -200,7 +204,102 @@
      "text": "Top with the panko mixed with melted butter and bake at 200C until golden.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mac and cheese with butter-poached king oyster mushrooms",
+     "prep_min": 15,
+     "cook_min": 32,
+     "make_ahead": "Assemble up to 1 day ahead, bake to serve",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "full cream milk, warm",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "grated Gruyere",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "grated cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "macaroni",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the macaroni and drain well. Cut the king oyster mushrooms into thick coins.",
+       "min": 8
+      },
+      {
+       "text": "Gently cook the mushrooms in some of the butter with the paprika until tender, then squeeze over the lemon.",
+       "min": 6
+      },
+      {
+       "text": "Melt more butter, stir in the flour, then whisk in the warm milk and simmer. Stir in the Gruyere and cheddar.",
+       "min": 8
+      },
+      {
+       "text": "Fold through the macaroni and mushrooms and tip into a baking dish.",
+       "min": 5
+      },
+      {
+       "text": "Top with the panko mixed with the rest of the butter, melted, and bake at 200C until golden.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Room service sundae",
@@ -259,7 +358,9 @@
      "text": "Pile the ice cream into four tall glasses, pour over the fudge, then add cream, nuts, sprinkles and a cherry on each.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hot apple cider",
@@ -312,7 +413,9 @@
      "text": "Strain into 4 mugs and serve steaming with a fresh cinnamon stick in each.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

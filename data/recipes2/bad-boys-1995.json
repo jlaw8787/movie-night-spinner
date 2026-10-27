@@ -88,7 +88,9 @@
      "text": "Fry in 180C oil until golden and hot throughout. Drain.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Fried sweet plantains",
@@ -129,7 +131,9 @@
      "text": "Drain and finish with sea salt.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mike and Marcus swap Cuban sandwich",
@@ -248,7 +252,130 @@
      "text": "Butter the outsides and press in a hot sandwich press until crisp and the filling is piping hot.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mike and Marcus swap Cuban sandwich (vegetarian)",
+     "prep_min": 55,
+     "cook_min": 30,
+     "make_ahead": "Marinate the mushrooms up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "portobello mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long soft rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "smoked tofu, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "Swiss cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "sliced dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the mushrooms with the orange and lime juice, crushed garlic, oregano, cumin, salt and oil.",
+       "min": 10
+      },
+      {
+       "text": "Marinate in the fridge for at least 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Spread on a lined tray and roast at 200C until browned and juicy.",
+       "min": 20
+      },
+      {
+       "text": "Thinly slice the smoked tofu.",
+       "min": 5
+      },
+      {
+       "text": "Split the rolls, spread with mustard and fill with the mushrooms, smoked tofu, Swiss cheese and pickles.",
+       "min": 10
+      },
+      {
+       "text": "Butter the outsides and press in a hot sandwich press until crisp and the filling is piping hot.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Key lime pie",
@@ -325,7 +452,9 @@
      "text": "Softly whip the cream and spread over the pie.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mike Lowrey's ocean view mojito",
@@ -384,7 +513,69 @@
      "text": "Top with soda water, stir gently and garnish with a mint sprig.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Mike Lowrey's ocean view mojito (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "crushed ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Gently muddle the mint leaves with the syrup and lime juice in a jug, without shredding the mint.",
+       "min": 3
+      },
+      {
+       "text": "Add the apple juice and divide between glasses filled with crushed ice.",
+       "min": 2
+      },
+      {
+       "text": "Top with soda water, stir gently and garnish with a mint sprig.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -72,7 +72,9 @@
      "text": "Serve with tartare and lemon wedges.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chum bucket dip",
@@ -137,7 +139,9 @@
      "text": "Spoon into a small bucket and serve with crackers.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Lobster rolls",
@@ -218,7 +222,98 @@
      "text": "Butter and toast the split buns and fill.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lobster-style rolls with hearts of palm",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "Filling up to 4 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins hearts of palm (400g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "celery stick",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "hot dog buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into chips.",
+       "min": 10
+      },
+      {
+       "text": "Fry the chips in the oil once at a lower heat, then again hot until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Chop the hearts of palm into chunks and fold with the mayonnaise, lemon juice, diced celery, chives and paprika.",
+       "min": 10
+      },
+      {
+       "text": "Butter and toast the split buns and fill.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bigger boat sundae",
@@ -275,7 +370,9 @@
      "text": "Scoop both ice creams into bowls, pour over the fudge and top with cream, peanuts and a fin.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Quint's chilli lime lager michelada",
@@ -350,7 +447,85 @@
      "text": "Top each with cold lager, stir once and crush the can.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Quint's chilli lime lager michelada (alcohol-free)",
+     "prep_min": 11,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "x 375ml cans alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "dashes hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "dashes Worcestershire sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice, to serve",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the chilli flakes with the salt on a plate.",
+       "min": 2
+      },
+      {
+       "text": "Rub the rims of four pint glasses with lime and dip in the salt. Fill with ice.",
+       "min": 4
+      },
+      {
+       "text": "Add lime juice, hot sauce, Worcestershire sauce and tomato juice to each glass.",
+       "min": 3
+      },
+      {
+       "text": "Top each with cold alcohol-free lager, stir once and crush the can.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

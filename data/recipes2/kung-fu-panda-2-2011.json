@@ -94,7 +94,9 @@
      "text": "Serve with oyster sauce and chilli oil.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bean bun warrior buns",
@@ -147,7 +149,9 @@
      "text": "Prove 20 minutes, then steam 12 minutes until puffed.",
      "min": 32
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mr Ping's noodles",
@@ -206,7 +210,88 @@
      "text": "Cook the egg noodles and divide into bowls, add the halved bok choy blanched in the broth, ladle over the stock and top with halved eggs and sliced spring onion.",
      "min": 13
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mr Ping's noodles (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 29,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 10,
+       "u": "g",
+       "item": "dried shiitake mushrooms",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "ginger, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "shiitake mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "egg noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bok choy",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the stock with the dried shiitake, ginger and soy for 15 minutes, then add the sliced fresh shiitake for 5 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Boil the eggs for 6 minutes, cool and peel.",
+       "min": 11
+      },
+      {
+       "text": "Cook the egg noodles and divide into bowls, add the halved bok choy blanched in the broth, ladle over the broth and top with halved eggs and sliced spring onion.",
+       "min": 13
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Peach buns",
@@ -265,7 +350,9 @@
      "text": "Steam 12 minutes, then dab the tips with a little red colouring.",
      "min": 18
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gongmen City sour plum cooler",
@@ -332,7 +419,9 @@
      "text": "Serve over ice with a little extra osmanthus on top.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

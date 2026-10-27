@@ -74,7 +74,9 @@
      "text": "Mix the tomato sauce with the brown sugar, brush over and bake a few minutes more.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Prosciutto wrapped breadsticks and ricotta",
@@ -121,7 +123,9 @@
      "text": "Whip the ricotta with salt and pepper and serve in a small bowl alongside.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Christmas duck",
@@ -188,7 +192,92 @@
      "text": "Serve the duck with the pancakes, vegetables and hoisin for rolling at the table.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Christmas crispy mushroom pancakes",
+     "prep_min": 10,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "oyster mushrooms, torn into strips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Chinese five spice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "",
+       "item": "Chinese pancakes",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "hoisin sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the mushrooms with the oil, soy sauce, five spice and salt and roast at 220C, turning once, until crisp at the edges.",
+       "min": 25
+      },
+      {
+       "text": "Cut the cucumber and spring onions into matchsticks.",
+       "min": 8
+      },
+      {
+       "text": "Steam the pancakes.",
+       "min": 3
+      },
+      {
+       "text": "Serve the mushrooms with the pancakes, vegetables and hoisin for rolling at the table.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Christmas sugar cookies",
@@ -261,7 +350,9 @@
      "text": "Mix the icing sugar with a little water and colouring and ice the cooled cookies.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chocolate malted milk",
@@ -308,7 +399,9 @@
      "text": "Pour into four tall glasses.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

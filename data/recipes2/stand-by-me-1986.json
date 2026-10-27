@@ -40,7 +40,9 @@
      "text": "Dip in the chocolate and squash between two biscuits. Eat while still gooey",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Junkyard sandwiches",
@@ -99,7 +101,9 @@
      "text": "Cut in half and wrap each tightly in wax paper",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Campfire hamburger patties",
@@ -168,7 +172,102 @@
      "text": "Serve between thick slices of white bread with the onions and tomato sauce",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Campfire mushroom and black bean patties",
+     "prep_min": 25,
+     "cook_min": 30,
+     "make_ahead": "Shape the patties up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "dried breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in 1 tbsp of the oil until dry, then cool.",
+       "min": 8
+      },
+      {
+       "text": "Mash the beans and mix with the mushrooms, breadcrumbs, egg, salt and pepper. Shape into thick patties and chill for 15 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Fry the onions in 1 tbsp of the oil until soft and sweet.",
+       "min": 15
+      },
+      {
+       "text": "Cook the patties in the rest of the oil on a hot plate over the coals or in a smoking pan, turning once carefully.",
+       "min": 10
+      },
+      {
+       "text": "Serve between thick slices of white bread with the onions and tomato sauce.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Blueberry pie",
@@ -229,7 +328,9 @@
      "text": "Cool completely before cutting, at least 3 hours",
      "min": 180
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Castle Rock sarsaparilla float",
@@ -264,7 +365,9 @@
      "text": "Pour the sarsaparilla slowly down the side, let the foam settle, then top up. Serve with a straw and long spoon",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

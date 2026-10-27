@@ -54,7 +54,9 @@
      "text": "Fry in butter over medium heat until deep golden and crisp, in batches.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Asgard golden honey wings",
@@ -113,7 +115,9 @@
      "text": "Toss the hot wings through the glaze until shiny and golden and serve on a big platter.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Asgardian feast beef ribs with roast roots",
@@ -182,7 +186,98 @@
      "text": "Serve on a big board with crusty bread.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Asgardian feast whole roast celeriac with roast roots",
+     "prep_min": 20,
+     "cook_min": 140,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "medium celeriacs, scrubbed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "carrots, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "parsnips, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf crusty bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the celeriacs with half the oil, the salt and cracked pepper and wrap each in foil with half the butter and thyme.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 200C for 1 and a half hours.",
+       "min": 90
+      },
+      {
+       "text": "Toss the carrots, parsnips and potatoes in the rest of the oil, unwrap the celeriacs and roast everything together, basting with the buttery juices.",
+       "min": 50
+      },
+      {
+       "text": "Cut the celeriacs into wedges and serve on a big board with the roots and crusty bread.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Puente Antiguo churros with hot chocolate",
@@ -269,7 +364,9 @@
      "text": "Heat the cream and pour over the chocolate, stirring smooth, for dipping.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Another! iced coffee float",
@@ -328,7 +425,9 @@
      "text": "Whip the cream to soft peaks, spoon on top and grate over dark chocolate. Serve with a straw and a long spoon.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

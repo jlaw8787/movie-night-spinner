@@ -56,7 +56,9 @@
      "text": "Dust with icing sugar, cut into triangles and serve warm.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ham AND burger sliders",
@@ -113,7 +115,9 @@
      "text": "Put in the slider buns with pickles.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Chilli-lime grilled pineapple spears",
@@ -180,7 +184,9 @@
      "text": "Chill for 20 minutes before serving.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Porch day barbecue plate",
@@ -259,7 +265,96 @@
      "text": "Serve the chicken with the corn and potato salad.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Porch day barbecue plate (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 35,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "potato salad",
+       "aisle": "Deli"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cauliflower into big florets and toss with the oil, salt, pepper and smoked paprika.",
+       "min": 5
+      },
+      {
+       "text": "Roast at 200C until starting to colour.",
+       "min": 20
+      },
+      {
+       "text": "Brush with the barbecue sauce and roast, basting twice, until sticky.",
+       "min": 15
+      },
+      {
+       "text": "Boil the corn for 6 minutes and roll in the butter.",
+       "min": 6
+      },
+      {
+       "text": "Serve the cauliflower with the corn and potato salad.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Big Worm's ice cream truck cones",
@@ -326,7 +421,9 @@
      "text": "Freeze until serving.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Red drink, with sugar this time",
@@ -385,7 +482,9 @@
      "text": "Pour over plenty of ice in big plastic cups.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

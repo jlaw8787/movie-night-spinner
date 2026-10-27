@@ -62,7 +62,9 @@
      "text": "Pile onto a leaf and serve.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rafiki's fruit platter",
@@ -127,7 +129,9 @@
      "text": "Squeeze over lime juice and sprinkle with chilli salt.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jungle hideaway chicken",
@@ -212,7 +216,96 @@
      "text": "Serve together.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jungle hideaway peri peri tofu",
+     "prep_min": 12,
+     "cook_min": 88,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "extra firm tofu, in thick slices",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "red chillies",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "ground turmeric",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blitz the chillies, lemon juice, garlic, paprika, oil and salt into a peri peri sauce.",
+       "min": 8
+      },
+      {
+       "text": "Pat the tofu dry and marinate in the sauce.",
+       "min": 60
+      },
+      {
+       "text": "Grill until charred on both sides.",
+       "min": 15
+      },
+      {
+       "text": "Cook the rice with the turmeric.",
+       "min": 15
+      },
+      {
+       "text": "Serve together.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Circle of life malva pudding",
@@ -307,7 +400,9 @@
      "text": "Warm the custard and serve alongside.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Watering hole peach rooibos iced tea",
@@ -386,7 +481,9 @@
      "text": "Fill tall glasses with ice and peaches, pour in the tea and top with sparkling water and a mint sprig.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -56,7 +56,9 @@
      "text": "Bake at 200C until puffed and golden.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Spinning top meatballs",
@@ -129,7 +131,9 @@
      "text": "Spear each meatball upright on a toothpick and serve with the yoghurt.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Saito's teriyaki salmon bento box",
@@ -218,7 +222,288 @@
      "text": "Pack boxes with rice, salmon, pickled ginger, cucumber and egg.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Saito's teriyaki salmon bento box",
+     "prep_min": 35,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "salmon fillets",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cups sushi rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "pickled ginger",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "Lebanese cucumbers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, honey and sugar until syrupy.",
+       "min": 8
+      },
+      {
+       "text": "Cook the sushi rice.",
+       "min": 20
+      },
+      {
+       "text": "Grill the salmon, brushing with the glaze until sticky.",
+       "min": 10
+      },
+      {
+       "text": "Soft boil the eggs, peel and halve.",
+       "min": 7
+      },
+      {
+       "text": "Slice the cucumber thinly and dress in rice vinegar.",
+       "min": 3
+      },
+      {
+       "text": "Pack boxes with rice, salmon, pickled ginger, cucumber and egg.",
+       "min": 5
+      }
+     ]
+    },
+    "veg": {
+     "n": "Saito's teriyaki tofu bento box",
+     "prep_min": 35,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "extra firm tofu, in thick slices",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mirin",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "sushi rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "pickled ginger",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "Lebanese cucumbers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, mirin and sugar until syrupy.",
+       "min": 8
+      },
+      {
+       "text": "Cook the sushi rice.",
+       "min": 20
+      },
+      {
+       "text": "Pat the tofu dry and fry in the oil until golden, then brush with the glaze until sticky.",
+       "min": 10
+      },
+      {
+       "text": "Soft boil the eggs, peel and halve.",
+       "min": 7
+      },
+      {
+       "text": "Slice the cucumber thinly and dress in rice vinegar.",
+       "min": 3
+      },
+      {
+       "text": "Pack boxes with rice, tofu, pickled ginger, cucumber and egg.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Saito's teriyaki tofu bento box (alcohol-free)",
+     "prep_min": 35,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "extra firm tofu, in thick slices",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "sushi rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "pickled ginger",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "Lebanese cucumbers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, apple juice and sugar until syrupy.",
+       "min": 8
+      },
+      {
+       "text": "Cook the sushi rice.",
+       "min": 20
+      },
+      {
+       "text": "Pat the tofu dry and fry in the oil until golden, then brush with the glaze until sticky.",
+       "min": 10
+      },
+      {
+       "text": "Soft boil the eggs, peel and halve.",
+       "min": 7
+      },
+      {
+       "text": "Slice the cucumber thinly and dress in rice vinegar.",
+       "min": 3
+      },
+      {
+       "text": "Pack boxes with rice, tofu, pickled ginger, cucumber and egg.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Dream within a dream layer cake",
@@ -293,7 +578,9 @@
      "text": "Slice to show every level.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Long-haul espresso martini",
@@ -350,7 +637,67 @@
      "text": "Float three coffee beans on the foam of each.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Long-haul espresso martini (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "strong espresso, cooled slightly",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "coffee beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the espresso and let it cool slightly.",
+       "min": 8
+      },
+      {
+       "text": "Shake the espresso, sugar syrup and vanilla very hard with ice until frothy, in batches.",
+       "min": 4
+      },
+      {
+       "text": "Strain into chilled glasses.",
+       "min": 2
+      },
+      {
+       "text": "Float three coffee beans on the foam of each.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -74,7 +74,9 @@
      "text": "Toss the noodles through the dressing and top with cucumber and spring onion.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Freighter stores crackers",
@@ -133,7 +135,9 @@
      "text": "Top each with a smoked oyster, cracked pepper and snipped chives. Serve straight away.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Nostromo crew dinner",
@@ -218,7 +222,102 @@
      "text": "Add the noodles, oyster sauce and remaining soy, toss and serve in bowls.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Nostromo crew dinner (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 11,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 450,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "knob ginger, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "fresh egg noodles",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetarian mushroom stir-fry sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the tofu dry, cut into thin strips and toss with a little of the soy and the cornflour.",
+       "min": 10
+      },
+      {
+       "text": "Slice the cabbage, carrots and capsicum.",
+       "min": 10
+      },
+      {
+       "text": "Heat the oil in a wok until smoking and stir-fry the tofu until browned.",
+       "min": 5
+      },
+      {
+       "text": "Add the vegetables and ginger and stir-fry briefly.",
+       "min": 3
+      },
+      {
+       "text": "Add the noodles, mushroom stir-fry sauce and remaining soy, toss and serve in bowls.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Red velvet chestburster cake",
@@ -315,7 +414,9 @@
      "text": "Beat the cream cheese with the icing sugar and cover the dome in frosting.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hypersleep wake-up iced mocha",
@@ -374,7 +475,9 @@
      "text": "Pour into four tall glasses, top with whipped cream and shave the remaining chocolate over.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

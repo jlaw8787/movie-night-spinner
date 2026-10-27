@@ -92,7 +92,9 @@
      "text": "Toss the chicken through and top with sesame and spring onion.",
      "min": 9
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Phil's vitamin shop granola bars",
@@ -181,7 +183,9 @@
      "text": "Cool, scatter with the melted dark chocolate and cut into bars once set.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Butcher shop Italian sausage rolls",
@@ -250,7 +254,86 @@
      "text": "Add a sausage, the capsicum and onion and a spoon of chopped hot giardiniera or pickled chillies.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Butcher shop Italian sausage rolls (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 25,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian Italian-style sausages",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fennel seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red capsicums",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "long rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices provolone",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar hot giardiniera",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the red capsicums and the onions and cook in most of the oil over medium-high heat for 12 minutes until soft and charred.",
+       "min": 16
+      },
+      {
+       "text": "Brush the vegetarian sausages with the rest of the oil, roll in the lightly crushed fennel seeds and grill on a medium barbecue for 8 to 10 minutes, turning, until browned.",
+       "min": 15
+      },
+      {
+       "text": "Split the long rolls, toast, and lay a slice of provolone in.",
+       "min": 4
+      },
+      {
+       "text": "Add a sausage, the capsicum and onion and a spoon of chopped hot giardiniera.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Coffee shop biscotti",
@@ -303,7 +386,9 @@
      "text": "Cool 10 minutes, slice thinly and bake 10 minutes more until crisp.",
      "min": 24
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Phil's quadruple-shot mocha",
@@ -374,7 +459,9 @@
      "text": "Decaf is allowed.",
      "min": 9
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

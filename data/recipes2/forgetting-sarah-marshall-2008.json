@@ -52,7 +52,9 @@
      "text": "Spoon onto rice crackers just before serving so they stay crisp.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Do less grilled pineapple",
@@ -97,7 +99,9 @@
      "text": "Serve warm with extra lime.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Luau kalua pork",
@@ -170,7 +174,90 @@
      "text": "Shred the pork and serve over rice with the cabbage salad.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Luau kalua jackfruit",
+     "prep_min": 25,
+     "cook_min": 80,
+     "make_ahead": "Up to 2 days, shred and reheat covered",
+     "ingredients": [
+      {
+       "q": 1.1,
+       "u": "kg",
+       "item": "tinned young jackfruit in brine, drained (2 tins)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "smoked salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "banana leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice, uncooked",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Trim the hard cores off the jackfruit and rub with the smoked salt and vegetable oil.",
+       "min": 10
+      },
+      {
+       "text": "Wrap tightly in banana leaves, then foil.",
+       "min": 10
+      },
+      {
+       "text": "Cook at 180C until very soft.",
+       "min": 60
+      },
+      {
+       "text": "While it cooks, cook the jasmine rice and shred the cabbage with lime juice and sesame oil.",
+       "min": 20
+      },
+      {
+       "text": "Shred the jackfruit with two forks and serve over rice with the cabbage salad.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Dracula puppet mango lime sorbet",
@@ -221,7 +308,9 @@
      "text": "Scoop into glasses.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dark rum mai tai",
@@ -280,7 +369,91 @@
      "text": "Strain over crushed ice and top with mint. Make a rum-free version for anyone not drinking.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Dark rum mai tai (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "Mix per glass",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "lime juice (about 3 limes)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "sugar syrup (from caster sugar and water)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "almond syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "crushed ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift out, add the vanilla and cool.",
+       "min": 10
+      },
+      {
+       "text": "Make the sugar syrup by dissolving equal parts caster sugar and hot water, then cool.",
+       "min": 4
+      },
+      {
+       "text": "Shake 45ml of the tea with the juices, sugar syrup and almond syrup over ice, one drink at a time.",
+       "min": 4
+      },
+      {
+       "text": "Strain over crushed ice and top with mint.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

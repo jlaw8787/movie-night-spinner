@@ -66,7 +66,9 @@
      "text": "Dust with sugar and nutmeg.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jersey crab on toast",
@@ -131,7 +133,9 @@
      "text": "Pile the crab on top.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mr Tuttle's garden potatoes and fish",
@@ -190,7 +194,92 @@
      "text": "Brown some butter, add the capers and lemon juice, and spoon over the fish.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mr Tuttle's garden potatoes and golden eggplant",
+     "prep_min": 10,
+     "cook_min": 32,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "new potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sprig mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes with the mint until tender and toss in some of the butter and a pinch of the salt.",
+       "min": 20
+      },
+      {
+       "text": "Slice the eggplants into 2cm rounds, sprinkle with the rest of the salt and dust in flour.",
+       "min": 5
+      },
+      {
+       "text": "Pan-fry the eggplant in the oil until golden outside and soft through.",
+       "min": 12
+      },
+      {
+       "text": "Brown the rest of the butter, add the capers and lemon juice, and spoon over the eggplant.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Curtains-drawn Jersey cream rice pudding",
@@ -249,7 +338,9 @@
      "text": "Grate nutmeg on top. Serve warm, curtains drawn.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Island apple cider toddy from the teapot",
@@ -312,7 +403,79 @@
      "text": "Warm a teapot with hot water, tip it out, strain the cider into the pot and pour into teacups at the table.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Island apple cider toddy from the teapot (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 11,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zest peeled and juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "whole cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pour the apple juice and water into a saucepan with the honey, lemon zest, cinnamon and cloves.",
+       "min": 3
+      },
+      {
+       "text": "Warm gently for 10 minutes without boiling.",
+       "min": 10
+      },
+      {
+       "text": "Take off the heat, steep the tea bags for 3 minutes, then remove and stir in half the lemon juice.",
+       "min": 4
+      },
+      {
+       "text": "Warm a teapot with hot water, tip it out, strain the toddy into the pot and pour into teacups at the table.",
+       "min": 4
+      }
+     ]
+    }
+   }
   }
  ]
 }

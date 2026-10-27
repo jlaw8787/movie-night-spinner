@@ -62,7 +62,9 @@
      "text": "Make up the sandwiches, cut off the crusts and cut into triangles.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sandy's audition capsicum and feta dip",
@@ -131,7 +133,9 @@
      "text": "Spoon into a bowl, drizzle with oil and serve with crackers.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Les's farm roast chicken",
@@ -198,7 +202,90 @@
      "text": "Rest before carving.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Les's farm roast cauliflower",
+     "prep_min": 20,
+     "cook_min": 58,
+     "make_ahead": "Make the lemon thyme butter up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large whole cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, 1 zested, 1 halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin cannellini beans, drained",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Trim the cauliflower, keep it whole and boil for 8 minutes, then drain and dry well.",
+       "min": 10
+      },
+      {
+       "text": "Mix the butter with lemon zest, thyme leaves and the salt and spread it all over the cauliflower, pushing it between the florets.",
+       "min": 8
+      },
+      {
+       "text": "Roast at 200C with the potatoes and the halved lemon tossed in the oil.",
+       "min": 40
+      },
+      {
+       "text": "Add the cannellini beans to the tray and roast until the cauliflower is deep golden.",
+       "min": 15
+      },
+      {
+       "text": "Cut into wedges and serve.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Strawberry shortcake",
@@ -253,7 +340,9 @@
      "text": "Split the scones and fill with berries and cream.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dorothy Michaels' Russian caravan tea",
@@ -296,7 +385,9 @@
      "text": "Serve with lemon slices and a small dish of cherry jam on the side for stirring in.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -70,7 +70,9 @@
      "text": "Mix the Greek yoghurt with lemon and chopped dill and serve with lemon wedges.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Gobber's smoked sausages",
@@ -101,7 +103,9 @@
      "text": "Cut into chunks and serve on a board with the wholegrain mustard for dipping.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Viking lamb stew",
@@ -166,7 +170,94 @@
      "text": "Serve in big bowls with bread.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Viking mushroom and barley stew",
+     "prep_min": 15,
+     "cook_min": 55,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "parsnips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "pearl barley",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.25,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf crusty bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil, then add the onion, the carrots and the parsnips in chunks, the pearl barley, thyme, soy sauce and the stock.",
+       "min": 15
+      },
+      {
+       "text": "Cover and simmer 50 minutes until the barley is plump and the vegetables are tender.",
+       "min": 50
+      },
+      {
+       "text": "Serve in big bowls with the bread.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Honey cakes",
@@ -225,7 +316,9 @@
      "text": "Brush with the warm honey while hot.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Berk hot spiced berry punch",
@@ -298,7 +391,9 @@
      "text": "Serve hot, or chill and pour over ice in summer.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

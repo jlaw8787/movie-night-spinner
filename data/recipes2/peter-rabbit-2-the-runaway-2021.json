@@ -78,7 +78,9 @@
      "text": "Serve the skewers with the yoghurt dip and the coconut for dipping and rolling.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Honey oat and almond crunch mix",
@@ -163,7 +165,9 @@
      "text": "Break up and toss with chopped dried apricots, dried apple and dried cranberries.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gloucester chicken, leek and bacon pie",
@@ -278,7 +282,134 @@
      "text": "Toss the peas in butter and serve alongside.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Gloucester mushroom, leek and smoky chickpea pie",
+     "prep_min": 20,
+     "cook_min": 57,
+     "make_ahead": "Up to 1 day, bake the pastry fresh",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mixed mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "leeks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Quarter the mushrooms and dice the leeks and carrots.",
+       "min": 12
+      },
+      {
+       "text": "Fry the chickpeas in 1 tbsp of the oil with the smoked paprika until crisp and set aside.",
+       "min": 6
+      },
+      {
+       "text": "Brown the mushrooms in the remaining oil, then add the leeks and carrots and cook until soft.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the flour, then add the stock, cream, thyme and chickpeas and simmer.",
+       "min": 15
+      },
+      {
+       "text": "Pour into a pie dish, top with the pastry and brush with beaten egg.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 200C until golden.",
+       "min": 25
+      },
+      {
+       "text": "Toss the peas in butter and serve alongside.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Peter's cream cheese carrot cake",
@@ -385,7 +516,9 @@
      "text": "Tint a little icing orange to pipe small carrots and scatter with walnuts.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Orchard apple and pear sparkler",
@@ -454,7 +587,9 @@
      "text": "Stir and serve.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

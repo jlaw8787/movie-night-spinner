@@ -52,7 +52,9 @@
      "text": "Pile everything onto a big board so guests can raid it at once.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Green salad with mint and pepitas",
@@ -121,7 +123,9 @@
      "text": "Scatter with pepitas and pile lightly onto a pale platter.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sausage, bacon and eggs breakfast",
@@ -194,7 +198,96 @@
      "text": "Plate it all up.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sausage, mushroom and eggs breakfast (vegetarian)",
+     "prep_min": 8,
+     "cook_min": 28,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "tomatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the vegetarian sausages in the oil until browned.",
+       "min": 12
+      },
+      {
+       "text": "Add the mushrooms and tomatoes to the pan. Once the mushrooms are browned, stir through the smoked paprika and soy sauce.",
+       "min": 10
+      },
+      {
+       "text": "Fry the eggs in a little of the butter at the end.",
+       "min": 4
+      },
+      {
+       "text": "Toast the bread and butter it.",
+       "min": 5
+      },
+      {
+       "text": "Plate it all up.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bilbo's seed cake",
@@ -265,7 +358,9 @@
      "text": "Slice to serve with a cup of tea.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dwarvish spiced ale punch",
@@ -328,7 +423,79 @@
      "text": "Ladle into mugs and add a cinnamon stick to each. For non-drinkers, swap the ale for ginger beer and serve over ice.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Dwarvish spiced ale punch (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "cinnamon sticks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "black tea bag",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "ginger beer",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel strips of zest from the orange.",
+       "min": 3
+      },
+      {
+       "text": "Simmer the apple juice with the honey, 2 cinnamon sticks, cloves and zest, then add the tea bag for 3 minutes and lift it out.",
+       "min": 10
+      },
+      {
+       "text": "Turn the heat to low and add the ginger beer, warming through without boiling.",
+       "min": 3
+      },
+      {
+       "text": "Ladle into mugs and add a cinnamon stick to each.",
+       "min": 4
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -64,7 +64,9 @@
      "text": "Spoon into a bowl and serve with the cucumber sticks and crackers.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pink meringue kisses",
@@ -119,7 +121,9 @@
      "text": "Serve with raspberries.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Emerald City green risotto",
@@ -178,7 +182,70 @@
      "text": "Stir through the green puree, the rest of the butter and the parmesan until bright green.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Emerald City green risotto (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 25,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "arborio rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.25,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the stock, grate the cheese and blitz the peas and spinach with a splash of stock until smooth.",
+       "min": 10
+      },
+      {
+       "text": "Stir the rice in some of the butter, then add the hot stock a ladle at a time.",
+       "min": 20
+      },
+      {
+       "text": "Stir through the green puree, the rest of the butter and the cheese until bright green.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pink and green cake",
@@ -261,7 +328,9 @@
      "text": "Beat the buttercream ingredients, then stack the cakes with it.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ozdust Ballroom pink lemonade",
@@ -320,7 +389,9 @@
      "text": "Pour over ice in four glasses and float a few raspberries on top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

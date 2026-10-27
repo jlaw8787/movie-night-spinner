@@ -48,7 +48,9 @@
      "text": "Lay out on an old tray with pickled onions, a wedge of cheddar and crackers for the porch.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Church's blueberry muffins",
@@ -123,7 +125,9 @@
      "text": "Cool in the tin for 10 minutes.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ludlow baked beans with brown bread",
@@ -210,7 +214,110 @@
      "text": "Serve with buttered brown bread and coleslaw.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ludlow baked beans with brown bread (vegetarian)",
+     "prep_min": 490,
+     "cook_min": 245,
+     "make_ahead": "Soak overnight, bean dish keeps 3 days chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "dried navy beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "smoked tofu, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "molasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "English mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf wholemeal bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag coleslaw mix",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the beans overnight in cold water, then drain.",
+       "min": 480
+      },
+      {
+       "text": "Put the beans, smoked paprika, soy sauce, onion, molasses, sugar, mustard and water in a covered dish.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 150C for 4 hours, stirring in the smoked tofu for the last hour.",
+       "min": 240
+      },
+      {
+       "text": "Serve with buttered brown bread and coleslaw.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Route 15 apple crisp",
@@ -291,7 +398,9 @@
      "text": "Serve with pouring cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jud's porch lager and apple cider shandy",
@@ -338,7 +447,57 @@
      "text": "Add a squeeze of lemon and a thin slice of green apple and serve straight away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Jud's porch lager and apple cider shandy (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles alcohol-free lager, 200ml needed per glass",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "sparkling apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green apple",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Put four pint glasses in the freezer for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Pour cold alcohol-free lager into each, then top slowly with chilled sparkling apple juice.",
+       "min": 3
+      },
+      {
+       "text": "Add a squeeze of lemon and a thin slice of green apple and serve straight away.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

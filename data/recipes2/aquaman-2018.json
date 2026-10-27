@@ -62,7 +62,73 @@
      "text": "Drain and serve with lemon wedges and tartare.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Lighthouse dad's fish bites",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "cod fillets",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "ice-cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "tartare sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cod into bite-sized pieces.",
+       "min": 5
+      },
+      {
+       "text": "Whisk some of the flour with the soda water to a thin batter.",
+       "min": 5
+      },
+      {
+       "text": "Dust the fish in flour, dip in batter and fry at 180C until crisp.",
+       "min": 8
+      },
+      {
+       "text": "Drain and serve with lemon wedges and tartare.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Bikers' bar wings",
@@ -125,7 +191,9 @@
      "text": "Mash the blue cheese into the sour cream and serve with celery.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Atlantis seafood platter",
@@ -190,7 +258,76 @@
      "text": "Squeeze over lemon and serve with crusty bread.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Atlantis garlic butter roast platter (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "king oyster mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "haloumi, in chunks",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cherry tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "garlic butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf of crusty bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Spread the mushrooms, haloumi and tomatoes in a big roasting tray and dot with garlic butter.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 220C until the mushrooms are golden and the tomatoes burst.",
+       "min": 18
+      },
+      {
+       "text": "Squeeze over lemon and serve with crusty bread.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Trident sea salt caramel tart",
@@ -267,7 +404,9 @@
      "text": "Finish with sea salt flakes.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Blue Hawaiian with rum and pineapple",
@@ -332,7 +471,81 @@
      "text": "Strain into tall glasses full of crushed ice and garnish with a pineapple wedge and a cherry.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Blue Hawaiian with pineapple (alcohol-free)",
+     "prep_min": 12,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "blue curacao syrup, alcohol-free",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "coconut water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 360,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "coconut cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pineapple wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "maraschino cherries",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag crushed ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "For each drink, measure 15ml blue curacao syrup, 30ml coconut water, 90ml pineapple juice, 30ml coconut cream and a drop of vanilla into a shaker.",
+       "min": 2
+      },
+      {
+       "text": "Shake each drink hard with ice until frothy.",
+       "min": 8
+      },
+      {
+       "text": "Strain into tall glasses full of crushed ice and garnish with a pineapple wedge and a cherry.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

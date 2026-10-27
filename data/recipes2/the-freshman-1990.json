@@ -58,7 +58,9 @@
      "text": "Tear the loaf at the table.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Little Italy fried calamari",
@@ -133,7 +135,9 @@
      "text": "Warm the marinara and serve with lemon.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Carmine Sabatini's veal marsala",
@@ -204,7 +208,242 @@
      "text": "Whisk in the cold butter, return the veal and warm through.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Carmine Sabatini's veal marsala",
+     "prep_min": 15,
+     "cook_min": 3,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "veal escalopes",
+       "aisle": "Meat"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "seasoned plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "cold butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dust the veal in seasoned flour and sear in butter and oil for 1 minute a side, then set aside.",
+       "min": 7
+      },
+      {
+       "text": "Brown the mushrooms, add the grape juice, balsamic vinegar and stock and reduce by half.",
+       "min": 8
+      },
+      {
+       "text": "Whisk in the cold butter, return the veal and warm through.",
+       "min": 3
+      }
+     ]
+    },
+    "veg": {
+     "n": "Carmine Sabatini's eggplant marsala",
+     "prep_min": 15,
+     "cook_min": 16,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "seasoned plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "marsala",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "cold butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the eggplants lengthwise into 1cm slices.",
+       "min": 5
+      },
+      {
+       "text": "Dust the eggplant in seasoned flour and fry in batches in the butter and oil for 3 to 4 minutes a side until golden and soft, then set aside.",
+       "min": 15
+      },
+      {
+       "text": "Brown the mushrooms, add the marsala and stock and reduce by half.",
+       "min": 8
+      },
+      {
+       "text": "Whisk in the cold butter, return the eggplant and warm through.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Carmine Sabatini's eggplant marsala",
+     "prep_min": 15,
+     "cook_min": 16,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "seasoned plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 130,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "cold butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the eggplants lengthwise into 1cm slices.",
+       "min": 5
+      },
+      {
+       "text": "Dust the eggplant in seasoned flour and fry in batches in the butter and oil for 3 to 4 minutes a side until golden and soft, then set aside.",
+       "min": 15
+      },
+      {
+       "text": "Brown the mushrooms, add the grape juice, balsamic vinegar and stock and reduce by half.",
+       "min": 8
+      },
+      {
+       "text": "Whisk in the cold butter, return the eggplant and warm through.",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Cannoli",
@@ -263,7 +502,9 @@
      "text": "Pipe into the shells just before serving and dip the ends in pistachios.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Carmine's amaro spritz",
@@ -316,7 +557,63 @@
      "text": "Slide a thin orange wheel into each glass and serve straight away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Carmine's amaro spritz (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "non-alcoholic bitter aperitivo",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 360,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill four large wine glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Add the aperitivo to each, then the sparkling wine and soda, and stir once gently.",
+       "min": 2
+      },
+      {
+       "text": "Slide a thin orange wheel into each glass and serve straight away.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

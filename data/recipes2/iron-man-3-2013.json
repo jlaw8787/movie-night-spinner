@@ -46,7 +46,9 @@
      "text": "Leave to set for 30 minutes and break into clusters like snow.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Malibu mansion prawns",
@@ -105,7 +107,9 @@
      "text": "Pile onto a platter and serve with mayonnaise mixed with lemon juice.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Tennessee hot chicken",
@@ -186,7 +190,92 @@
      "text": "Serve on white bread with pickles.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Tennessee hot cauliflower",
+     "prep_min": 30,
+     "cook_min": 60,
+     "make_ahead": "Soak up to 4 hours, fry fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, cut into big florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "plain flour, seasoned",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cayenne pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the cauliflower florets in the buttermilk in the fridge for 1 hour.",
+       "min": 60
+      },
+      {
+       "text": "Dredge in seasoned flour and fry at 175C until crisp and tender.",
+       "min": 20
+      },
+      {
+       "text": "Whisk a few spoonfuls of the hot oil with the cayenne, brown sugar and paprika and brush over the cauliflower.",
+       "min": 5
+      },
+      {
+       "text": "Serve on white bread with pickles.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Giant bunny cake",
@@ -255,7 +344,9 @@
      "text": "Mix the icing sugar with a little water, cover the bunny and press on coconut. Add marshmallows.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Rose Hill malted milkshakes",
@@ -308,7 +399,9 @@
      "text": "Crush the malt balls and scatter over. Serve straight away with wide straws and long spoons.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

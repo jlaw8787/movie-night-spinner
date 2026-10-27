@@ -96,7 +96,9 @@
      "text": "Pin with toothpicks.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Suburban dip and chips",
@@ -169,7 +171,9 @@
      "text": "Serve with a big bowl of chips.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Smurf's Melbourne chicken parma",
@@ -266,7 +270,108 @@
      "text": "Serve with hot chips and a green salad.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Smurf's Melbourne eggplant parma",
+     "prep_min": 25,
+     "cook_min": 28,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants, cut into 4 thick slices lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "clove of garlic, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices of smoked tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "hot chips",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag of green salad leaves",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Salt the eggplant slices for 10 minutes, pat dry and crumb in flour, egg and panko.",
+       "min": 15
+      },
+      {
+       "text": "Shallow fry in the oil until golden and tender.",
+       "min": 12
+      },
+      {
+       "text": "Simmer the tomato with the garlic.",
+       "min": 8
+      },
+      {
+       "text": "Top with smoked tofu, tomato and mozzarella and grill until bubbling.",
+       "min": 8
+      },
+      {
+       "text": "Serve with hot chips and a green salad.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Vanilla slice",
@@ -339,7 +444,9 @@
      "text": "Chill overnight and cut.",
      "min": 180
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Leckie's lemon, lime and bitters",
@@ -398,7 +505,85 @@
      "text": "Top with lemonade, stir once and add a lemon wedge. A pot of lager on the side for anyone after one.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Leckie's lemon, lime and bitters (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 8,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "black tea bag",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "lime cordial",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "pomegranate syrup (grenadine)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "cold lemonade",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bag and cloves in the boiling water for 3 minutes, discard them and cool the spiced tea.",
+       "min": 8
+      },
+      {
+       "text": "Fill 4 pot glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Add the cordial, lemon juice, a splash of spiced tea and the pomegranate syrup to each.",
+       "min": 2
+      },
+      {
+       "text": "Top with lemonade, stir once and add a lemon wedge.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

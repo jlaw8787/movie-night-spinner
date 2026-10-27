@@ -82,7 +82,9 @@
      "text": "Spoon the avocado, tomato salsa and sour cream over the hot nachos.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hard Deck bacon cheese loaded fries",
@@ -145,7 +147,9 @@
      "text": "Finish with sour cream, jalapeño and chives.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Penny's garlic butter grilled prawns",
@@ -232,7 +236,104 @@
      "text": "Toss the cos and cucumber with lemon juice and oil. Serve with the prawns and crusty bread for the butter.",
      "min": 9
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Penny's garlic butter grilled haloumi",
+     "prep_min": 20,
+     "cook_min": 12,
+     "make_ahead": "Butter up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, in 3cm cubes",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini, in thick rounds",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cos lettuce, torn",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Thread the haloumi and zucchini onto skewers.",
+       "min": 10
+      },
+      {
+       "text": "Melt the butter with the garlic, chilli, zest of one lemon and parsley.",
+       "min": 5
+      },
+      {
+       "text": "Brush the skewers with the butter and grill for 2 minutes a side.",
+       "min": 8
+      },
+      {
+       "text": "Toss the cos and cucumber with lemon juice and oil. Serve with the skewers and crusty bread for the butter.",
+       "min": 9
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Dagger squad beach s'mores",
@@ -285,7 +386,9 @@
      "text": "Sandwich each marshmallow with a square of milk chocolate between two biscuits and squash together.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Penny's Hard Deck bourbon smash",
@@ -338,7 +441,79 @@
      "text": "Top with crushed ice and add a big sprig of mint.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Penny's Hard Deck bourbon smash (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, cut into wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 24,
+       "u": "",
+       "item": "mint leaves, plus sprigs to serve",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "crushed ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, lift out, add the vanilla and cool.",
+       "min": 10
+      },
+      {
+       "text": "For each drink muddle lemon wedges with sugar syrup and mint in a shaker.",
+       "min": 5
+      },
+      {
+       "text": "Add 60ml of the cold tea and ice, shake hard and pour everything into a tumbler.",
+       "min": 3
+      },
+      {
+       "text": "Top with crushed ice and add a big sprig of mint.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

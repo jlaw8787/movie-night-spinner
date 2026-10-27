@@ -64,7 +64,9 @@
      "text": "Mash the blue cheese into the sour cream. Serve the wings with the dip and celery.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Beach volleyball fish tacos",
@@ -151,7 +153,97 @@
      "text": "Warm the tortillas and fill with fish, cabbage, tomato, onion and the lime cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Beach volleyball fish tacos",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Slaw and salsa up to 2 hours ahead",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "cold alcohol-free beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "flathead fillets, cut into strips",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the flour with the alcohol-free beer into a batter. Mix the sour cream with lime juice.",
+       "min": 10
+      },
+      {
+       "text": "Dice the tomato and onion and shred the cabbage.",
+       "min": 8
+      },
+      {
+       "text": "Dip the fish in batter and fry at 180C for 3 minutes, in batches, until golden.",
+       "min": 12
+      },
+      {
+       "text": "Warm the tortillas and fill with fish, cabbage, tomato, onion and the lime cream.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Charlie's lemon chicken and Greek salad",
@@ -242,7 +334,108 @@
      "text": "Warm the pita and serve everything together.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Charlie's lemon haloumi and Greek salad",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "Haloumi can marinate up to 1 day",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "tomatoes, cut into wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "feta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pita breads",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the haloumi with the oil, the juice of one lemon, the garlic and oregano.",
+       "min": 5
+      },
+      {
+       "text": "Leave to marinate for 15 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Grill the haloumi until charred on both sides.",
+       "min": 8
+      },
+      {
+       "text": "Toss the tomato, cucumber, red onion, olives and feta with the juice of the other lemon for a Greek salad.",
+       "min": 10
+      },
+      {
+       "text": "Warm the pita and serve everything together.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Aviator sunglasses brownies",
@@ -301,7 +494,9 @@
      "text": "Melt the remaining chocolate with the last of the butter and drizzle over. Cut into rectangles.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Iceman's frozen lemon lager slushie",
@@ -352,7 +547,61 @@
      "text": "Spoon the slush into the frosted glasses and top each with ice-cold lager.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Iceman's frozen lemon lager slushie (alcohol-free)",
+     "prep_min": 20,
+     "cook_min": 210,
+     "make_ahead": "Slush base freezes up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles alcohol-free lager, 250ml each",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir the lemon juice, sugar syrup and water together and pour into a shallow tray.",
+       "min": 5
+      },
+      {
+       "text": "Freeze for 3 hours, scraping with a fork every hour into a slush.",
+       "min": 180
+      },
+      {
+       "text": "Put four glasses in the freezer for 30 minutes to frost.",
+       "min": 30
+      },
+      {
+       "text": "Spoon the slush into the frosted glasses and top each with ice-cold alcohol-free lager.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

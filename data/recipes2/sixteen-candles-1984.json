@@ -68,7 +68,9 @@
      "text": "Cut thick cucumber rounds and top with smoked salmon.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pan fried pork dumplings",
@@ -131,7 +133,9 @@
      "text": "Uncover and crisp again.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Wedding buffet chicken",
@@ -212,7 +216,252 @@
      "text": "Stir the cream into the chicken and serve with the pilaf.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Wedding buffet chicken",
+     "prep_min": 15,
+     "cook_min": 55,
+     "make_ahead": "Up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "chicken thighs",
+       "aisle": "Meat"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the chicken in the oil.",
+       "min": 10
+      },
+      {
+       "text": "Add the mushrooms, thyme, lemon juice and 200ml of the stock and braise.",
+       "min": 35
+      },
+      {
+       "text": "Cook the rice with the butter and remaining stock for a pilaf.",
+       "min": 20
+      },
+      {
+       "text": "Stir the cream into the chicken and serve with the pilaf.",
+       "min": 5
+      }
+     ]
+    },
+    "veg": {
+     "n": "Wedding buffet mushroom and white bean braise",
+     "prep_min": 15,
+     "cook_min": 42,
+     "make_ahead": "Up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "g",
+       "item": "mixed mushrooms, torn",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches.",
+       "min": 12
+      },
+      {
+       "text": "Add the thyme and wine and bubble for 2 minutes, then add the beans and 200 ml of the stock and braise for 15 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Cook the rice with the butter and the rest of the stock for a pilaf.",
+       "min": 20
+      },
+      {
+       "text": "Stir the cream into the mushrooms and serve with the pilaf.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Wedding buffet mushroom and white bean braise (alcohol free)",
+     "prep_min": 15,
+     "cook_min": 42,
+     "make_ahead": "Up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "g",
+       "item": "mixed mushrooms, torn",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches.",
+       "min": 12
+      },
+      {
+       "text": "Add the thyme, lemon juice, beans and 400 ml of the stock and braise for 15 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Cook the rice with the butter and the remaining 400 ml of stock for a pilaf.",
+       "min": 20
+      },
+      {
+       "text": "Stir the cream into the mushrooms and serve with the pilaf.",
+       "min": 5
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Sixteen candles birthday cake",
@@ -291,7 +540,9 @@
      "text": "Fill and cover the cake and add exactly sixteen candles.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Shermer High dance tropical punch",
@@ -372,7 +623,9 @@
      "text": "Ladle into cups.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -78,7 +78,9 @@
      "text": "Mix the icing sugar, honey and milk into a glaze and dip the warm crullers.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Homemade hard candy lollipops",
@@ -135,7 +137,9 @@
      "text": "Press a stick into each and leave to harden.",
      "min": 30
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Kansas farm fried chicken",
@@ -224,7 +228,96 @@
      "text": "Simmer the stock with a little flour to make a gravy and serve with the mash.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Kansas farm fried mushrooms",
+     "prep_min": 20,
+     "cook_min": 70,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "oyster mushrooms, in large clusters",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the mushrooms in the buttermilk with a pinch of salt for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Peel and boil the potatoes, then mash with butter.",
+       "min": 25
+      },
+      {
+       "text": "Dredge the mushrooms in the flour seasoned with paprika and salt, pressing it into the folds.",
+       "min": 10
+      },
+      {
+       "text": "Fry in the oil at 170C in batches until deep golden and crisp.",
+       "min": 15
+      },
+      {
+       "text": "Simmer the stock with a spoonful of the leftover flour to make a gravy and serve with the mash.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ruby slipper jelly",
@@ -275,7 +368,9 @@
      "text": "Whip the cream, dust the jellies with glitter and top with cream.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Yellow brick road pineapple lemonade",
@@ -350,7 +445,9 @@
      "text": "Finish each with a pineapple wedge on the rim.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -72,7 +72,9 @@
      "text": "Bake until bubbling and golden.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Friday's by-the-book glazed doughnut holes",
@@ -177,7 +179,9 @@
      "text": "Whisk the icing sugar, milk and vanilla, dip the warm doughnuts and set on a rack.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Streebek's LA carnitas tacos",
@@ -280,7 +284,114 @@
      "text": "Serve in tortillas with diced onion, coriander and lime.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Streebek's LA jackfruit carnitas tacos",
+     "prep_min": 25,
+     "cook_min": 45,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins young green jackfruit in brine (560g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the hard cores off the jackfruit and rub with the cumin, oregano and salt.",
+       "min": 12
+      },
+      {
+       "text": "Simmer, covered, with the orange juice, crushed garlic and stock for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Shred the jackfruit with two forks.",
+       "min": 8
+      },
+      {
+       "text": "Crisp in a hot pan with the oil.",
+       "min": 12
+      },
+      {
+       "text": "Serve in tortillas with diced onion, coriander and lime.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "By-the-book vanilla slice",
@@ -357,7 +468,9 @@
      "text": "Cut into squares.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Just the facts cold brew tonic",
@@ -418,7 +531,9 @@
      "text": "Squeeze orange peel over each glass and drop it in.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -72,7 +72,9 @@
      "text": "Add the bok choy for the last minute and load up the bowls.",
      "min": 1
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Ectoplasm lime dip",
@@ -147,7 +149,9 @@
      "text": "Serve with prawn crackers and cucumber for dipping.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Sweet and sour pork with egg fried rice",
@@ -238,7 +242,102 @@
      "text": "Toss the pork through the sauce and serve with the rice.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sweet and sour tofu with egg fried rice",
+     "prep_min": 35,
+     "cook_min": 3,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "pineapple, in pieces",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "cooked cold long grain rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the tofu dry, cut into chunks and coat in cornflour.",
+       "min": 8
+      },
+      {
+       "text": "Fry in the oil in batches until crisp.",
+       "min": 12
+      },
+      {
+       "text": "Simmer the rice vinegar, sugar and tomato sauce, add the pineapple and sliced capsicum.",
+       "min": 8
+      },
+      {
+       "text": "Make egg fried rice from the cold rice and eggs with a spoon of the oil.",
+       "min": 8
+      },
+      {
+       "text": "Toss the tofu through the sauce and serve with the rice.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Fortune cookies",
@@ -295,7 +394,9 @@
      "text": "Working fast while hot, lay a paper fortune on each, fold in half and bend over a cup edge.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ectoplasm kiwi lime slime soda",
@@ -368,7 +469,9 @@
      "text": "Stir once and add a lime wheel.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

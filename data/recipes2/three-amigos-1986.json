@@ -58,7 +58,9 @@
      "text": "Brush the cobs with the mayonnaise, roll in feta and dust with chilli powder and chopped coriander.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Singing bush salsa",
@@ -123,7 +125,9 @@
      "text": "Serve with warm corn chips.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "El Guapo's birthday tacos",
@@ -202,7 +206,96 @@
      "text": "Serve in tortillas with the pickled onion and habanero salsa.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "El Guapo's birthday jackfruit tacos",
+     "prep_min": 35,
+     "cook_min": 75,
+     "make_ahead": "Jackfruit can be cooked 1 day ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins young green jackfruit in brine (400 g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "achiote paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar habanero salsa",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pull the jackfruit into shreds and mix with the achiote paste, orange juice, crushed garlic and oil.",
+       "min": 15
+      },
+      {
+       "text": "Wrap tightly in foil and roast at 180C until tender.",
+       "min": 45
+      },
+      {
+       "text": "Slice the red onion thin and quick-pickle in lime juice with a pinch of salt.",
+       "min": 10
+      },
+      {
+       "text": "Unwrap, roast 20 minutes more until crisp at the edges, then warm the tortillas.",
+       "min": 25
+      },
+      {
+       "text": "Serve in tortillas with the pickled onion and habanero salsa.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Birthday churros",
@@ -277,7 +370,9 @@
      "text": "Serve with dulce de leche for dipping and a candle in the pile.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "A plethora of margaritas",
@@ -330,7 +425,69 @@
      "text": "Strain into the glasses over fresh ice.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "A plethora of margaritas (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "fresh orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "agave syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "box sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Juice the limes and rim four glasses with a lime wedge and salt.",
+       "min": 5
+      },
+      {
+       "text": "Shake the lime juice, orange juice and agave syrup with ice in batches, one drink at a time.",
+       "min": 4
+      },
+      {
+       "text": "Strain into the glasses over fresh ice and top with a splash of soda water.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

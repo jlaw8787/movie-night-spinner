@@ -86,7 +86,9 @@
      "text": "Halve and serve with mustard.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Bear mum's salmon bites",
@@ -139,7 +141,9 @@
      "text": "Squeeze over a little lemon and lay out on a slate.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Scotch broth",
@@ -218,7 +222,98 @@
      "text": "Season well and stir through the parsley.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Scotch broth (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 81,
+     "make_ahead": "Up to 3 days, reheats well",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "pearl barley",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "green split peas",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "leeks, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "turnips, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "cup",
+       "item": "parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rinse the barley and split peas and simmer in the stock and water.",
+       "min": 45
+      },
+      {
+       "text": "Slice and dice the vegetables.",
+       "min": 12
+      },
+      {
+       "text": "Add the vegetables and butter and simmer again until the barley and peas are soft.",
+       "min": 40
+      },
+      {
+       "text": "Season well with salt and pepper and stir through the parsley.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "The witch's spell cake",
@@ -295,7 +390,9 @@
      "text": "Glaze with warm honey and set a single raspberry on top.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Highland cranachan shake",
@@ -352,7 +449,9 @@
      "text": "Pour into tall glasses and top with whipped cream and the rest of the oats.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

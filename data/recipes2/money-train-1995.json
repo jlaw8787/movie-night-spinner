@@ -52,7 +52,9 @@
      "text": "Keep stirring as they cool so they do not clump.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Gold token cookies",
@@ -107,7 +109,9 @@
      "text": "Cool on the tray, then brush with gold dust mixed with a drop of water.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Arroz con pollo",
@@ -204,7 +208,114 @@
      "text": "Rest, covered, before serving.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Grace's arroz con garbanzos y hongos",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "Up to 1 day, reheat with a splash of stock",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "oyster mushrooms, torn",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "capsicum, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful coriander, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground annatto",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "green olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 650,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "oil for browning",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in a little oil in a wide lidded pan until golden, then set aside.",
+       "min": 10
+      },
+      {
+       "text": "Fry the onion, capsicum, garlic and coriander in the same pan until soft.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the annatto, rice, chickpeas, olives, capers and stock and bring to a simmer.",
+       "min": 5
+      },
+      {
+       "text": "Sit the mushrooms on top, cover and cook on low until the rice is tender.",
+       "min": 25
+      },
+      {
+       "text": "Rest, covered, before serving.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Guava pastelitos",
@@ -261,7 +372,9 @@
      "text": "Simmer the sugar with the water for a few minutes to make a syrup, then brush it over the warm pastries.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Money Train payday michelada",
@@ -336,7 +449,85 @@
      "text": "Top each with a cold lager, stir gently and slip the glasses into small paper bags.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Money Train payday michelada (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "flaky salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "limes, juiced, with some cut into wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "dashes hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dashes Worcestershire sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles cold alcohol-free lager, 375ml each",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt and chilli powder on a plate.",
+       "min": 2
+      },
+      {
+       "text": "Rub a lime wedge around each of 4 glass rims and dip in the chilli salt.",
+       "min": 3
+      },
+      {
+       "text": "Add ice, a good squeeze of lime juice, the tomato juice, hot sauce and Worcestershire, dividing evenly.",
+       "min": 3
+      },
+      {
+       "text": "Top each with a cold alcohol-free lager, stir gently and slip the glasses into small paper bags.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

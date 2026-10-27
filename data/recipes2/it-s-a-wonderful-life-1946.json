@@ -60,7 +60,9 @@
      "text": "Cool on the tray.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Christmas Eve cheese straws",
@@ -107,7 +109,9 @@
      "text": "Bake at 200C until crisp.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Honeymoon spit-roast chicken",
@@ -170,7 +174,78 @@
      "text": "Rest, then carve.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Honeymoon roast butternut with garlic thyme butter",
+     "prep_min": 20,
+     "cook_min": 65,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "kg",
+       "item": "butternut pumpkin",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the butter with crushed garlic, thyme and salt.",
+       "min": 5
+      },
+      {
+       "text": "Peel the pumpkin, halve lengthways and scoop out the seeds. Cut deep slices across each half without cutting through, then rub with the butter.",
+       "min": 10
+      },
+      {
+       "text": "Cut the potatoes into chunks and set a rack over them in a roasting tin with the pumpkin on top.",
+       "min": 5
+      },
+      {
+       "text": "Roast at 200C, turning the potatoes halfway, until the pumpkin is tender and golden.",
+       "min": 60
+      },
+      {
+       "text": "Rest, then slice.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Gower's chocolate sundae",
@@ -223,7 +298,9 @@
      "text": "Whip the cream, top each sundae and add a cherry. No coconut.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Eggnog",
@@ -290,7 +367,9 @@
      "text": "Serve with grated nutmeg.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

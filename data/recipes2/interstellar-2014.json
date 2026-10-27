@@ -62,7 +62,9 @@
      "text": "Sprinkle with salt and parmesan.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dust storm smoky caramel popcorn",
@@ -145,7 +147,9 @@
      "text": "Cool and break into clusters.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Cooper Station chicken and corn pie",
@@ -234,7 +238,100 @@
      "text": "Bake at 200C.",
      "min": 30
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cooper Station mushroom and corn pie",
+     "prep_min": 25,
+     "cook_min": 33,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mushrooms, quartered",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "leek, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "corn kernels",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets shortcrust pastry",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in half the butter until golden and lift out.",
+       "min": 10
+      },
+      {
+       "text": "Soften the leek in the rest of the butter.",
+       "min": 8
+      },
+      {
+       "text": "Stir in the flour, then the stock and cream.",
+       "min": 5
+      },
+      {
+       "text": "Add the mushrooms, corn and thyme.",
+       "min": 2
+      },
+      {
+       "text": "Tip into a dish and top with the pastry.",
+       "min": 3
+      },
+      {
+       "text": "Bake at 200C for 30 minutes.",
+       "min": 30
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Murph's bookshelf buttermilk pie",
@@ -325,7 +422,9 @@
      "text": "Whip the cream and serve with fresh berries.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Donald's porch lager shandy",
@@ -392,7 +491,77 @@
      "text": "Add a lemon wheel and serve on the porch.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Donald's porch lager shandy (alcohol-free)",
+     "prep_min": 30,
+     "cook_min": 1,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "lemonade",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Frost four glasses in the freezer.",
+       "min": 20
+      },
+      {
+       "text": "Dissolve the sugar in hot water and cool.",
+       "min": 4
+      },
+      {
+       "text": "Squeeze 4 lemons and mix the juice with the syrup and soda water.",
+       "min": 4
+      },
+      {
+       "text": "Half fill each glass with cold alcohol-free lager and top with the lemon mix and lemonade.",
+       "min": 2
+      },
+      {
+       "text": "Add a lemon wheel and serve on the porch.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

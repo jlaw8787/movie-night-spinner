@@ -72,7 +72,9 @@
      "text": "Mix the icing sugar with the water until thick, then ice the cakes white. Tint a little icing pink and pipe EAT ME on top.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Queen of Hearts tarts",
@@ -127,7 +129,9 @@
      "text": "Split each heart in half, fill with jam and cream, then dust the tops with icing sugar.",
      "min": 6
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Croquet lawn chicken and leek pie",
@@ -212,7 +216,102 @@
      "text": "Bake at 200C until puffed and deep golden.",
      "min": 25
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Croquet lawn mushroom and leek pie",
+     "prep_min": 25,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "leeks, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet puff pastry (or 2 for a deeper lid)",
+       "aisle": "Frozen"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches with salt and pepper, then set aside. Slice the leeks.",
+       "min": 12
+      },
+      {
+       "text": "Soften the leeks in the same pan.",
+       "min": 6
+      },
+      {
+       "text": "Stir in the flour, then the stock, cream and thyme. Return the mushrooms, add the beans and simmer until thick.",
+       "min": 15
+      },
+      {
+       "text": "Pour into a pie dish and top with the pastry, pressing the edges down.",
+       "min": 7
+      },
+      {
+       "text": "Bake at 200C until puffed and deep golden.",
+       "min": 25
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Unbirthday cake",
@@ -297,7 +396,9 @@
      "text": "Sandwich the cakes with jam, ice in pastel colours and add the candles.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Drink me iced earl grey lemonade",
@@ -360,7 +461,9 @@
      "text": "Pour over ice in mismatched teacups.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

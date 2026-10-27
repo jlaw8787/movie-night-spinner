@@ -84,7 +84,9 @@
      "text": "Top each with a slice of cheddar, a spoon of chutney and a slice of pickle.",
      "min": 8
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lone Islands market olives",
@@ -149,7 +151,9 @@
      "text": "Tip into a bowl and serve warm with torn bread.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sea voyage fish",
@@ -218,7 +222,80 @@
      "text": "Spoon over the fish and serve with the potatoes.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sea voyage haloumi",
+     "prep_min": 10,
+     "cook_min": 26,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "haloumi, cut into 8 thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until tender, crush lightly and season with salt.",
+       "min": 26
+      },
+      {
+       "text": "Pan-fry the haloumi in the oil until golden on both sides.",
+       "min": 6
+      },
+      {
+       "text": "Add the butter, lemon juice and capers to the pan.",
+       "min": 2
+      },
+      {
+       "text": "Spoon over the haloumi and serve with the potatoes.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sea of lilies pavlova",
@@ -273,7 +350,9 @@
      "text": "Top the pavlova with cream and peach slices.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Sweet water elderflower lemonade",
@@ -342,7 +421,9 @@
      "text": "Pour in the lemonade and top with a splash of soda water.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

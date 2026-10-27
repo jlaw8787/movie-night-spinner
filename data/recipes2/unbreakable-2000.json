@@ -68,7 +68,9 @@
      "text": "Bake at 220C, brush with butter and serve with mustard.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Limited Edition purple potato chips",
@@ -123,7 +125,9 @@
      "text": "Cool so they crisp fully.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Weight room rump with garlic butter",
@@ -206,7 +210,106 @@
      "text": "Top each steak with a slice of garlic butter.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Weight room portobello steaks with garlic butter",
+     "prep_min": 13,
+     "cook_min": 58,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter for beans",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the potatoes in three tablespoons of the oil and the salt.",
+       "min": 5
+      },
+      {
+       "text": "Roast at 220C until crisp.",
+       "min": 45
+      },
+      {
+       "text": "Mash the soft butter with garlic and parsley.",
+       "min": 5
+      },
+      {
+       "text": "Brush the mushrooms with the rest of the oil and the soy sauce and grill over high heat until tender, turning once.",
+       "min": 10
+      },
+      {
+       "text": "Blanch the beans and toss them with butter.",
+       "min": 5
+      },
+      {
+       "text": "Top each pair of mushrooms with a slice of garlic butter.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mr Glass lemon and berry jelly",
@@ -269,7 +372,9 @@
      "text": "Chill until clear and set.",
      "min": 240
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Green poncho honey ginger tea",
@@ -332,7 +437,67 @@
      "text": "Pour into mugs with a lemon slice each and add whisky to any mug where it is wanted.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Green poncho honey ginger tea",
+     "prep_min": 5,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "5cm piece ginger, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "green tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the ginger in the water, then take off the heat and let it cool for a couple of minutes.",
+       "min": 5
+      },
+      {
+       "text": "Add the tea bags and steep, then remove.",
+       "min": 3
+      },
+      {
+       "text": "Stir in the honey and juice of one lemon.",
+       "min": 2
+      },
+      {
+       "text": "Pour into mugs with a slice of the other lemon in each.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

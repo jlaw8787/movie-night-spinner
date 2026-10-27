@@ -102,7 +102,9 @@
      "text": "Serve with the vinegar and sweet chilli sauce.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Easter party pancit with calamansi",
@@ -221,7 +223,9 @@
      "text": "Serve with lime or calamansi wedges and spring onion.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Mum's Easter chicken adobo",
@@ -314,7 +318,106 @@
      "text": "Serve the adobo over the rice with an egg on top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mum's Easter tofu adobo",
+     "prep_min": 15,
+     "cook_min": 54,
+     "make_ahead": "Adobo up to 2 days ahead, fry the rice fresh",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "white vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the rice and spread it on a tray to cool.",
+       "min": 15
+      },
+      {
+       "text": "Crush the garlic. Pat the tofu dry and cut into large cubes.",
+       "min": 10
+      },
+      {
+       "text": "Brown the tofu in 2 tbsp of the oil until golden on all sides.",
+       "min": 10
+      },
+      {
+       "text": "Add two thirds of the garlic, the vinegar, soy sauce, bay leaves, peppercorns and water, and simmer uncovered, turning gently, until the sauce is sticky.",
+       "min": 20
+      },
+      {
+       "text": "Fry the cooled rice with the rest of the garlic in the remaining oil until crisp in spots.",
+       "min": 8
+      },
+      {
+       "text": "Fry the eggs and serve the adobo over the rice with an egg on top.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Tita's silky leche flan",
@@ -379,7 +482,9 @@
      "text": "Turn out onto a plate.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Calamansi lime and honey cooler",
@@ -450,7 +555,9 @@
      "text": "Garnish with lime wheels.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

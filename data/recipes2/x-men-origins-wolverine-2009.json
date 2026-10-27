@@ -66,7 +66,9 @@
      "text": "Pile into bowls, scatter with torn mozzarella and pour over the hot gravy.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Logging camp bacon dates",
@@ -101,7 +103,9 @@
      "text": "Bake at 200C on a lined tray, turning once, until the bacon is crisp.",
      "min": 15
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Pancakes, bacon and fried eggs",
@@ -174,7 +178,102 @@
      "text": "Pile it all on a big plate and pour over maple syrup.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pancakes, smoky mushrooms and fried eggs",
+     "prep_min": 7,
+     "cook_min": 28,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle maple syrup",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the flour, baking powder, two eggs and buttermilk into a batter.",
+       "min": 5
+      },
+      {
+       "text": "Cook the pancakes in butter and keep warm.",
+       "min": 15
+      },
+      {
+       "text": "Fry the mushrooms in the oil until browned, then toss with the smoked paprika and soy sauce.",
+       "min": 8
+      },
+      {
+       "text": "Fry the four remaining eggs.",
+       "min": 5
+      },
+      {
+       "text": "Pile it all on a big plate and pour over maple syrup.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Maple syrup pie",
@@ -229,7 +328,9 @@
      "text": "Cool completely before slicing.",
      "min": 60
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rockies maple whisky sour",
@@ -292,7 +393,79 @@
      "text": "Strain over fresh ice into rocks glasses and add 3 drops of bitters to the foam. Repeat for the other two.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Rockies maple whisky sour (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "Tea up to 2 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "egg whites",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "whole nutmeg",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 5 minutes, lift out and chill until cold.",
+       "min": 20
+      },
+      {
+       "text": "Shake 240ml of the tea with the lemon juice, maple syrup and egg whites without ice for 15 seconds, two drinks at a time.",
+       "min": 4
+      },
+      {
+       "text": "Add ice and shake again until very cold.",
+       "min": 2
+      },
+      {
+       "text": "Strain over fresh ice into rocks glasses and grate a little nutmeg over the foam.",
+       "min": 4
+      }
+     ]
+    }
+   }
   }
  ]
 }

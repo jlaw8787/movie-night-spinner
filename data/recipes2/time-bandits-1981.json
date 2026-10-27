@@ -84,7 +84,9 @@
      "text": "Arrange everything on a big platter with the olives.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Ploughman's board with apple chutney",
@@ -169,7 +171,9 @@
      "text": "Arrange on a board with the sliced ham, pickled onions and chutney.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Winston the ogre's beef and barley stew",
@@ -292,7 +296,136 @@
      "text": "Serve with the horseradish butter and a crusty loaf.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Winston the ogre's mushroom and barley stew",
+     "prep_min": 25,
+     "cook_min": 70,
+     "make_ahead": "Up to 2 days, keep chilled and reheat",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "field mushrooms, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.2,
+       "u": "l",
+       "item": "mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "pearl barley",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onion and carrots and toss the mushrooms in flour.",
+       "min": 15
+      },
+      {
+       "text": "Brown the mushrooms in batches in oil.",
+       "min": 12
+      },
+      {
+       "text": "Add the onion, carrots and garlic and cook.",
+       "min": 5
+      },
+      {
+       "text": "Add the tomato paste, soy sauce, stock, barley and bay leaves and simmer covered until the barley is tender, adding the butter beans for the last 10 minutes.",
+       "min": 50
+      },
+      {
+       "text": "Mash the butter with horseradish cream.",
+       "min": 5
+      },
+      {
+       "text": "Serve with the horseradish butter and a crusty loaf.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Napoleon's little custard tarts",
@@ -369,7 +502,9 @@
      "text": "Cool, then dust with cinnamon.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Titanic iceberg ginger fizz",
@@ -440,7 +575,9 @@
      "text": "Garnish with mint and a lemon wheel.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

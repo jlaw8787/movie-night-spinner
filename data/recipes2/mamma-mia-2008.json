@@ -46,7 +46,9 @@
      "text": "Lay on a plate, drizzle with honey, scatter with thyme and squeeze over a little lemon.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rosie's cookbook spanakopita",
@@ -119,7 +121,9 @@
      "text": "Bake until golden.",
      "min": 25
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wedding lamb kleftiko",
@@ -188,7 +192,110 @@
      "text": "Rest, then open at the table so the steam rises.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Wedding vegetable kleftiko with feta",
+     "prep_min": 20,
+     "cook_min": 103,
+     "make_ahead": "Rest 10 minutes, open at the table",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggplants, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini, in thick rounds",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red capsicums, in strips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cherry tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "cloves of garlic, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "block feta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "baking paper",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the eggplant, zucchini, capsicum, potatoes and tomatoes with the garlic, oregano, lemon juice, oil and salt.",
+       "min": 15
+      },
+      {
+       "text": "Pile onto a large sheet of baking paper in a roasting dish, sit the feta on top and wrap tightly, then cover with foil.",
+       "min": 8
+      },
+      {
+       "text": "Roast at 180C until the potatoes are very soft.",
+       "min": 90
+      },
+      {
+       "text": "Rest, then open at the table so the steam rises.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Loukoumades, Greek honey doughnuts",
@@ -261,7 +368,9 @@
      "text": "Scatter with walnuts.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pepper's Villa Donna ouzo",
@@ -308,7 +417,73 @@
      "text": "Top with lemonade and a mint sprig. Make the kids' glasses with lemonade and mint only.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Pepper's Villa Donna ouzo (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 11,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "star anise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "cold lemonade",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs of mint",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the star anise, sugar and water for 5 minutes for an anise syrup, then strain and cool.",
+       "min": 12
+      },
+      {
+       "text": "Fill 4 glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Pour a spoonful of anise syrup into each.",
+       "min": 1
+      },
+      {
+       "text": "Top with lemonade and a mint sprig.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

@@ -52,7 +52,9 @@
      "text": "Lay the picks out in neat rows on a tray beside a row of crackers.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Airline peanuts",
@@ -105,7 +107,9 @@
      "text": "Cool slightly and divide into the paper packets, one for each passenger.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "The steak, not the fish",
@@ -184,7 +188,90 @@
      "text": "Serve on trays, airline style.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "The mushroom steak, not the fish",
+     "prep_min": 10,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel and boil the potatoes.",
+       "min": 20
+      },
+      {
+       "text": "Sear the mushrooms in the oil until tender and set aside.",
+       "min": 12
+      },
+      {
+       "text": "Crush the peppercorns into the pan, add the cream and reduce until thick.",
+       "min": 8
+      },
+      {
+       "text": "Mash the potatoes with butter and milk and steam the beans.",
+       "min": 8
+      },
+      {
+       "text": "Serve on trays, airline style.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Airline cheesecake",
@@ -257,7 +344,9 @@
      "text": "Cut into squares and top each with a cherry.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Flight 209 espresso martini",
@@ -316,7 +405,69 @@
      "text": "Strain into chilled coupes and float coffee beans on top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Flight 209 espresso martini (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "shots espresso (about 120 ml)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "cold brew coffee",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "coffee beans",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the espresso and cool.",
+       "min": 12
+      },
+      {
+       "text": "Shake the espresso, cold brew, syrup and vanilla with ice very hard to build the foam.",
+       "min": 3
+      },
+      {
+       "text": "Strain into chilled coupes and float coffee beans on top.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

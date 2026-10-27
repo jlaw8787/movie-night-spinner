@@ -68,7 +68,79 @@
      "text": "Drain on paper and serve straight away with ranch dressing.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Wisconsin cheese curds",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "cheese curds",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "ranch dressing",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the flour, egg, alcohol-free lager and salt into a smooth batter.",
+       "min": 5
+      },
+      {
+       "text": "Heat the oil to 185C.",
+       "min": 10
+      },
+      {
+       "text": "Dip the curds in batches and fry until puffed and golden.",
+       "min": 10
+      },
+      {
+       "text": "Drain on paper and serve straight away with ranch dressing.",
+       "min": 0
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Mooby's golden fries",
@@ -119,7 +191,9 @@
      "text": "Toss with salt and paprika and serve in paper cones.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mooby's cow burgers",
@@ -190,7 +264,112 @@
      "text": "Toast the buns. Stack 2 patties per bun with sauce, sliced pickles and diced onion.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mooby's black bean burgers",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "Patties up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins black beans (400g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "burger buns",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mash the beans with the breadcrumbs, egg, paprika, cumin and salt and shape into 8 thin patties. Mix the mayonnaise, tomato sauce and a chopped pickle for the sauce.",
+       "min": 12
+      },
+      {
+       "text": "Fry the patties in the oil on a hot griddle for 3 minutes, flip, top with cheese and cook 3 minutes more.",
+       "min": 8
+      },
+      {
+       "text": "Toast the buns. Stack 2 patties per bun with sauce, sliced pickles and diced onion.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Golden calf caramel slice",
@@ -263,7 +442,9 @@
      "text": "Cool, top with melted chocolate and cut into squares.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mooby's vanilla shake",
@@ -300,7 +481,9 @@
      "text": "Pour into 4 tall cups and serve with straws straight away.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

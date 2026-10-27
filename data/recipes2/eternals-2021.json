@@ -56,7 +56,9 @@
      "text": "Tear the bread and dip.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "London museum tea sandwiches",
@@ -119,7 +121,9 @@
      "text": "Close the sandwiches, cut off the crusts and slice into neat fingers.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Chicken mole with rice and tortillas",
@@ -204,7 +208,108 @@
      "text": "Cook the rice, warm the tortillas and serve with the chicken.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sweet potato and black bean mole with rice and tortillas",
+     "prep_min": 25,
+     "cook_min": 65,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "sweet potato, in 3cm chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "dried chillies",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "almonds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "ground cinnamon",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "dark chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "corn tortillas",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toast the chillies in a dry pan and soak in hot water.",
+       "min": 20
+      },
+      {
+       "text": "Blend the drained chillies with the almonds, garlic, cinnamon and stock.",
+       "min": 10
+      },
+      {
+       "text": "Simmer the sauce and melt in the chocolate. Season with the salt.",
+       "min": 15
+      },
+      {
+       "text": "Add the sweet potato and black beans, cover and simmer until the sweet potato is tender.",
+       "min": 30
+      },
+      {
+       "text": "Cook the rice, warm the tortillas and serve with the mole.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Babylon date and sesame halva",
@@ -271,7 +376,9 @@
      "text": "Chill overnight before cutting.",
      "min": 720
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Babylon date and honey sharbat",
@@ -352,7 +459,9 @@
      "text": "Divide between glasses of ice, top with soda water and stir, and garnish with mint and a lemon slice.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

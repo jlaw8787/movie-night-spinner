@@ -42,7 +42,9 @@
      "text": "Lay them out on a chopping board with the saltine crackers and a small bowl of pickled jalapeños. Eat straight off the board.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Christmas party crab dip",
@@ -111,7 +113,9 @@
      "text": "Serve with crackers.",
      "min": 0
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Trish's stew, made properly",
@@ -214,7 +218,336 @@
      "text": "Boil the potatoes towards the end of braising and mash with butter. Serve the stew on top.",
      "min": 20
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Trish's stew, made properly",
+     "prep_min": 35,
+     "cook_min": 200,
+     "make_ahead": "Better made the day before",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "diced beef chuck",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the beef in batches.",
+       "min": 20
+      },
+      {
+       "text": "Soften the chopped onion, carrots and celery, then stir in the tomato paste.",
+       "min": 10
+      },
+      {
+       "text": "Add the stock, balsamic vinegar and thyme and return the beef.",
+       "min": 5
+      },
+      {
+       "text": "Braise in a 150C oven.",
+       "min": 180
+      },
+      {
+       "text": "Boil the potatoes towards the end of braising and mash with butter. Serve the stew on top.",
+       "min": 20
+      }
+     ]
+    },
+    "veg": {
+     "n": "Trish's stew, made properly (vegetarian)",
+     "prep_min": 35,
+     "cook_min": 55,
+     "make_ahead": "Better made the day before",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "Swiss brown mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches.",
+       "min": 15
+      },
+      {
+       "text": "Soften the chopped onion, carrots and celery, then stir in the tomato paste.",
+       "min": 10
+      },
+      {
+       "text": "Add the wine, stock, lentils and thyme and return the mushrooms.",
+       "min": 5
+      },
+      {
+       "text": "Cover and simmer gently, then season with salt and pepper.",
+       "min": 40
+      },
+      {
+       "text": "Boil the potatoes towards the end and mash with the butter. Serve the stew on top.",
+       "min": 20
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Trish's stew, made properly (vegetarian, alcohol free)",
+     "prep_min": 35,
+     "cook_min": 55,
+     "make_ahead": "Better made the day before",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "Swiss brown mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "extra vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches.",
+       "min": 15
+      },
+      {
+       "text": "Soften the chopped onion, carrots and celery, then stir in the tomato paste.",
+       "min": 10
+      },
+      {
+       "text": "Add the extra stock, balsamic vinegar, stock, lentils and thyme and return the mushrooms.",
+       "min": 5
+      },
+      {
+       "text": "Cover and simmer gently, then season with salt and pepper.",
+       "min": 40
+      },
+      {
+       "text": "Boil the potatoes towards the end and mash with the butter. Serve the stew on top.",
+       "min": 20
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Roger's birthday cake",
@@ -309,7 +642,9 @@
      "text": "Fill, cover and add candles.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Riggs' beach trailer michelada",
@@ -386,7 +721,87 @@
      "text": "Top with cold lager poured slowly, stir once and garnish with lime wedges.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Riggs' beach trailer michelada (alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "dashes hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dashes Worcestershire sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles cold alcohol-free lager (375 ml)",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt and chilli powder on a plate. Rub the glass rims with lime and dip.",
+       "min": 3
+      },
+      {
+       "text": "Fill the glasses with ice and add lime juice, tomato juice, hot sauce and Worcestershire.",
+       "min": 3
+      },
+      {
+       "text": "Top with cold alcohol-free lager poured slowly, stir once and garnish with lime wedges.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

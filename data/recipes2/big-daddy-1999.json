@@ -96,7 +96,9 @@
      "text": "Scatter the wings with spring onion and serve with the ranch.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Central Park everything bagel bites",
@@ -181,7 +183,9 @@
      "text": "Spread with the cream cheese, top with bacon and sprinkle with the seasoning.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Tollbooth shift cheeseburgers",
@@ -290,7 +294,126 @@
      "text": "Set out the toppings and sauces and let everyone build their own.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Tollbooth shift smashed mushroom and haloumi burgers",
+     "prep_min": 20,
+     "cook_min": 27,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "frozen crinkle-cut chips",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen onion rings",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "haloumi, cut into 8 slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small iceberg lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle American mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the chips and onion rings at 220C until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Brush the mushrooms and haloumi with the oil and smoked paprika.",
+       "min": 3
+      },
+      {
+       "text": "Cook the mushrooms in a very hot pan, smashing them flat with a spatula, then flip and top with the cheddar.",
+       "min": 8
+      },
+      {
+       "text": "Fry the haloumi until golden on both sides and toast the buns.",
+       "min": 7
+      },
+      {
+       "text": "Set out the lettuce, tomatoes, pickles and sauces and let everyone build their own.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Blue jelly ice cream sundaes",
@@ -357,7 +480,9 @@
      "text": "Top with whipped cream, biscuit sand, gummy fish and a drizzle of chocolate sauce.",
      "min": 6
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Frankenstein's chocolate malt milkshake",
@@ -420,7 +545,9 @@
      "text": "Top with whipped cream and a sprinkle of malt powder.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

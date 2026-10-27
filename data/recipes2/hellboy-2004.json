@@ -58,7 +58,9 @@
      "text": "Pipe back into the whites and finish with paprika and a sprig of dill.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bureau red chilli wings",
@@ -117,7 +119,9 @@
      "text": "Warm the butter with honey, soy sauce and chilli until sticky and toss the wings through until glossy.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Beef and beetroot borscht",
@@ -192,7 +196,86 @@
      "text": "Serve in bowls with sour cream.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Beetroot borscht (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 55,
+     "make_ahead": "Up to 2 days, reheats well",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "beetroot, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "small cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "potatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Grate the beetroot and carrots, shred the cabbage and dice the potatoes.",
+       "min": 20
+      },
+      {
+       "text": "Simmer the beetroot, carrots, cabbage and potatoes in the vegetable stock until tender.",
+       "min": 50
+      },
+      {
+       "text": "Season with the dill and vinegar.",
+       "min": 2
+      },
+      {
+       "text": "Serve in bowls with the sour cream.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rooftop brown butter choc chip cookies",
@@ -281,7 +364,9 @@
      "text": "Sprinkle with sea salt.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Rooftop strawberry malted milk",
@@ -336,7 +421,9 @@
      "text": "Pour into chilled tall glasses and top each with a halved strawberry.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -68,7 +68,9 @@
      "text": "Serve the salsa in a bowl with the chips.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pantry stash grilled peaches and honey",
@@ -131,7 +133,9 @@
      "text": "Serve warm with the yoghurt, almonds and a dusting of cinnamon.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pan-fried steak",
@@ -184,7 +188,70 @@
      "text": "Rest the steaks, then slice. Keep a plain unseasoned piece aside for the dog.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pan-fried portobello steak",
+     "prep_min": 5,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Season the mushrooms well. Sear in the oil in a hot pan, pressing down, turning once.",
+       "min": 10
+      },
+      {
+       "text": "Add the butter, garlic and thyme and baste.",
+       "min": 3
+      },
+      {
+       "text": "Rest for a minute, then slice.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Neville's shelter pantry rice pudding",
@@ -257,7 +324,9 @@
      "text": "Rest, then serve warm with a spoon of raspberry jam.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Lab bench bourbon peach smash",
@@ -322,7 +391,81 @@
      "text": "Strain into tumblers packed with crushed ice and garnish with a peach slice and a mint sprig.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Lab bench bourbon peach smash (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 410,
+       "u": "g",
+       "item": "tinned sliced peaches, drained (keep 60ml syrup)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 10,
+       "u": "",
+       "item": "mint leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "mint sprigs, to garnish",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "strong black tea, cooled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag crushed ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice, for shaking",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Muddle half the peach slices with the syrup, lemon juice and mint leaves in a shaker.",
+       "min": 4
+      },
+      {
+       "text": "Add the cold tea, vanilla and ice and shake hard.",
+       "min": 2
+      },
+      {
+       "text": "Strain into tumblers packed with crushed ice and garnish with a peach slice and a mint sprig.",
+       "min": 4
+      }
+     ]
+    }
+   }
   }
  ]
 }

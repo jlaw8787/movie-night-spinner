@@ -52,7 +52,9 @@
      "text": "Bake at 200C until crisp at the edges, then cut into thick slices and serve in the alley behind the restaurant.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Antipasto for two",
@@ -111,7 +113,9 @@
      "text": "Tear the bread and set it beside the board. Serve by candlelight.",
      "min": 4
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Spaghetti and meatballs",
@@ -192,7 +196,102 @@
      "text": "Cook the spaghetti until al dente and pile on one big plate with the sauce. Leave the last meatball for your date.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Spaghetti and meatballs (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 38,
+     "make_ahead": "Sauce and meatballs up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "spaghetti",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "parmesan, grated, plus extra to serve",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "crushed tomatoes (2 cans)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch basil, torn",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in 1 tbsp of the oil until dry, then cool.",
+       "min": 10
+      },
+      {
+       "text": "Mash the lentils and mix with the mushrooms, parmesan, parsley, egg and breadcrumbs, then roll into balls.",
+       "min": 15
+      },
+      {
+       "text": "Brown the meatballs in the rest of the oil in batches.",
+       "min": 8
+      },
+      {
+       "text": "Add the tomatoes and basil and simmer gently until the sauce is thick.",
+       "min": 25
+      },
+      {
+       "text": "Cook the spaghetti until al dente and pile on one big plate with the sauce. Leave the last meatball for your date.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bella notte cannoli",
@@ -255,7 +354,9 @@
      "text": "Spoon into a piping bag, fill the shells just before serving, and dip each end in pistachios.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Bella Notte blood orange soda",
@@ -330,7 +431,9 @@
      "text": "Fill glasses with ice, pour in the juice to halfway, top with soda water and garnish with an orange slice and a rosemary sprig.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

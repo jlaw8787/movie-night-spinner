@@ -76,7 +76,9 @@
      "text": "Serve warm with butter, golden syrup and the salt.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Coorong garlic chilli pippis",
@@ -165,7 +167,9 @@
      "text": "Serve with crusty bread.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Hideaway Tom's crisp fish and chips",
@@ -272,7 +276,130 @@
      "text": "Toss the chips in chicken salt and serve wrapped in paper with lemon.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hideaway Tom's crisp banana blossom and chips",
+     "prep_min": 22,
+     "cook_min": 35,
+     "make_ahead": "Eat straight away",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "frozen thick-cut chips",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 180,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cans banana blossom in brine (about 510 g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet nori, crumbled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar of dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "celery salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the chips at 220C.",
+       "min": 30
+      },
+      {
+       "text": "Whisk the flour, baking powder and cold soda water into a batter, keeping a little flour back.",
+       "min": 5
+      },
+      {
+       "text": "Pat the banana blossom dry and press into 8 fillet shapes. Sprinkle with the nori, dust in the saved flour and dip in the batter.",
+       "min": 8
+      },
+      {
+       "text": "Fry in the oil at 180C until golden.",
+       "min": 5
+      },
+      {
+       "text": "Mix the mayonnaise with chopped capers, pickles and dill for tartare.",
+       "min": 6
+      },
+      {
+       "text": "Toss the chips in the celery salt and paprika and serve wrapped in paper with lemon.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Beach shack golden syrup dumplings",
@@ -345,7 +472,9 @@
      "text": "Spoon into bowls with the sauce and serve with vanilla ice cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Shack lemon myrtle billy tea",
@@ -400,7 +529,9 @@
      "text": "Pour into enamel mugs and serve with milk on the side.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

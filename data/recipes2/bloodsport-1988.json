@@ -74,7 +74,9 @@
      "text": "Cook in a hot greased egg waffle pan, 3 minutes a side, in batches until crisp and golden.",
      "min": 18
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Kowloon Walled City curry fish balls",
@@ -147,7 +149,9 @@
      "text": "Thread onto skewers and spoon over the sauce.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Kumite black pepper beef",
@@ -242,7 +246,106 @@
      "text": "Finish with oyster sauce and cracked black pepper and serve over the rice.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Kumite black pepper tofu",
+     "prep_min": 15,
+     "cook_min": 29,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetarian mushroom oyster sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the tofu dry and cut into 2cm cubes. Slice the onion, capsicum and garlic.",
+       "min": 10
+      },
+      {
+       "text": "Toss the tofu in the soy, then in the cornflour.",
+       "min": 5
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 15
+      },
+      {
+       "text": "Fry the tofu in the oil in a very hot wok until crisp, then lift out.",
+       "min": 8
+      },
+      {
+       "text": "Stir-fry the onion, capsicum and garlic in the same wok.",
+       "min": 4
+      },
+      {
+       "text": "Return the tofu, finish with the mushroom oyster sauce and cracked black pepper and serve over the rice.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chong Li's egg tarts",
@@ -303,7 +406,9 @@
      "text": "Cool a little before serving.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hong Kong milk tea",
@@ -360,7 +465,9 @@
      "text": "Serve hot in cups, or chill and pour over ice.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

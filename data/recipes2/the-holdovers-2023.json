@@ -102,7 +102,9 @@
      "text": "Fry over medium heat until golden on both sides. Cut into fingers and serve with the soup.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Boston trip clam chowder",
@@ -189,7 +191,9 @@
      "text": "Stir in the cream and heat through. Season with pepper and serve with oyster crackers.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Barton Academy Christmas roast chicken",
@@ -298,7 +302,126 @@
      "text": "Rest the chicken, then make gravy from the juices with the flour and stock.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Barton Academy Christmas stuffed roast pumpkin",
+     "prep_min": 30,
+     "cook_min": 65,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "fresh breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch sage, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zested",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "small butternut pumpkins",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 350,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion in some of the butter, then mix with the breadcrumbs, sage, lemon zest and egg.",
+       "min": 10
+      },
+      {
+       "text": "Halve the pumpkins lengthways and scoop out the seeds. Rub with butter and salt and roast cut side down at 200C.",
+       "min": 35
+      },
+      {
+       "text": "Turn the pumpkins over, pack the stuffing into the hollows and roast until golden. Roast the potatoes in oil on another tray.",
+       "min": 30
+      },
+      {
+       "text": "Glaze the carrots in butter and honey.",
+       "min": 10
+      },
+      {
+       "text": "Pour off the roasting juices, stir in the flour, whisk in the stock and simmer into gravy.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mr Hunham's flaming cherries jubilee",
@@ -371,7 +494,83 @@
      "text": "Spoon over scoops of ice cream.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Mr Hunham's flaming cherries jubilee",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 680,
+       "u": "g",
+       "item": "jar pitted cherries",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vanilla ice cream",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Drain the cherries, keeping some of the syrup.",
+       "min": 2
+      },
+      {
+       "text": "Melt the butter with the sugar in a wide pan, add the syrup and the orange zest and juice and simmer.",
+       "min": 5
+      },
+      {
+       "text": "Stir in the cornflour mixed with water, then add the cherries and warm through.",
+       "min": 3
+      },
+      {
+       "text": "Off the heat, stir in the vanilla and let the sauce settle for a minute.",
+       "min": 3
+      },
+      {
+       "text": "Spoon over scoops of ice cream.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Mr Hunham's bourbon hot toddy",
@@ -424,7 +623,79 @@
      "text": "Top with hot water and stir until the honey dissolves. Stud a lemon slice with cloves and float it on top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Mr Hunham's bourbon hot toddy (alcohol-free)",
+     "prep_min": 7,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cinnamon sticks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "cloves",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil water in a kettle.",
+       "min": 5
+      },
+      {
+       "text": "Steep a tea bag in each heatproof mug of boiling water for 3 minutes, then remove.",
+       "min": 3
+      },
+      {
+       "text": "Stir in honey, lemon juice, a drop of vanilla and a cinnamon stick until the honey dissolves.",
+       "min": 2
+      },
+      {
+       "text": "Stud a lemon slice with cloves and float it on top.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

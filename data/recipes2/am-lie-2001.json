@@ -42,7 +42,9 @@
      "text": "Set out the soft butter and a pile of sea salt flakes.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Brie, fig jam and ham baguette toasts",
@@ -99,7 +101,9 @@
      "text": "Lay out on a wooden board.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Paris bistro chicken",
@@ -188,7 +192,298 @@
      "text": "Stir the cream into the chicken and serve over the mash.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Paris bistro chicken",
+     "prep_min": 15,
+     "cook_min": 60,
+     "make_ahead": "Up to 2 days, reheat gently",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "chicken thighs",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "milk, for the mash",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel and chop the potatoes.",
+       "min": 5
+      },
+      {
+       "text": "Brown the chicken in the oil.",
+       "min": 10
+      },
+      {
+       "text": "Add the mushrooms and cook until golden.",
+       "min": 7
+      },
+      {
+       "text": "Pour in the stock and verjuice and simmer.",
+       "min": 30
+      },
+      {
+       "text": "Boil the potatoes, mash with butter and milk.",
+       "min": 20
+      },
+      {
+       "text": "Stir the cream into the chicken and serve over the mash.",
+       "min": 3
+      }
+     ]
+    },
+    "veg": {
+     "n": "Paris bistro mushrooms and white beans",
+     "prep_min": 10,
+     "cook_min": 50,
+     "make_ahead": "Up to 2 days, reheat gently",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "milk, for the mash",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel and chop the potatoes.",
+       "min": 5
+      },
+      {
+       "text": "Brown the mushrooms in the oil in batches, then add the shallot.",
+       "min": 12
+      },
+      {
+       "text": "Pour in the wine and stock, add the beans and simmer.",
+       "min": 20
+      },
+      {
+       "text": "Boil the potatoes, mash with butter and milk.",
+       "min": 20
+      },
+      {
+       "text": "Stir the cream into the mushrooms, season and serve over the mash.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Paris bistro mushrooms and white beans (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 50,
+     "make_ahead": "Up to 2 days, reheat gently",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "milk, for the mash",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel and chop the potatoes.",
+       "min": 5
+      },
+      {
+       "text": "Brown the mushrooms in the oil in batches, then add the shallot.",
+       "min": 12
+      },
+      {
+       "text": "Pour in the stock and vinegar, add the beans and simmer.",
+       "min": 20
+      },
+      {
+       "text": "Boil the potatoes, mash with butter and milk.",
+       "min": 20
+      },
+      {
+       "text": "Stir the cream into the mushrooms, season and serve over the mash.",
+       "min": 3
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Amélie's crème brûlée",
@@ -249,7 +544,9 @@
      "text": "Sprinkle with sugar and torch. Crack the top with a spoon.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Kir royale with cassis",
@@ -290,7 +587,51 @@
      "text": "Tilt the glass and top slowly with the sparkling wine. Drop a raspberry into each and serve.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Kir royale with cassis (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 120,
+     "make_ahead": "Make just before serving",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "blackcurrant syrup",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "raspberries",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill the flutes and the sparkling wine for at least 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Pour the blackcurrant syrup into each flute.",
+       "min": 2
+      },
+      {
+       "text": "Tilt the glass and top slowly with the sparkling wine. Drop a raspberry into each and serve.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }

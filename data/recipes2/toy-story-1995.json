@@ -60,7 +60,9 @@
      "text": "Add sour cream and chopped chives.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Army men pea and edamame salad",
@@ -119,7 +121,9 @@
      "text": "Spoon into little toy buckets or cups.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Space-themed pizza",
@@ -176,7 +180,68 @@
      "text": "Bake on the hot tray until blistered.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Space-themed pizza (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plant-based pepperoni",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "black olives",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven and a tray to 250C.",
+       "min": 20
+      },
+      {
+       "text": "Stretch the dough into two rounds and spread with crushed tomatoes.",
+       "min": 8
+      },
+      {
+       "text": "Cover with mozzarella, then arrange plant-based pepperoni like planets and olive slices like craters.",
+       "min": 7
+      },
+      {
+       "text": "Bake on the hot tray until blistered.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Andy's birthday cake",
@@ -255,7 +320,9 @@
      "text": "Top with a fondant cowboy hat and candles.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pizza Planet alien punch",
@@ -314,7 +381,9 @@
      "text": "Add ice and pour into cups.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

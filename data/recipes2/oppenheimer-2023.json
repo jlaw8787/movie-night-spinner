@@ -52,7 +52,9 @@
      "text": "Serve with the blue corn chips.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Los Alamos green chile cheeseburger sliders",
@@ -129,7 +131,9 @@
      "text": "Toast the slider buns and build with mayo, patties and pickles.",
      "min": 13
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Trinity test green chile stew",
@@ -198,7 +202,102 @@
      "text": "Serve with the warm flour tortillas.",
      "min": 9
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Trinity test green chilli and bean stew",
+     "prep_min": 25,
+     "cook_min": 44,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "cans cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "green chillies",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "flour tortillas",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil, then soften the diced onion and the garlic cloves.",
+       "min": 12
+      },
+      {
+       "text": "Char the large green chillies, peel, chop and add with the diced potatoes, the cumin and the vegetable stock.",
+       "min": 12
+      },
+      {
+       "text": "Simmer 30 minutes until the potatoes are tender.",
+       "min": 30
+      },
+      {
+       "text": "Add the cannellini beans for the last 10 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Serve with the warm flour tortillas.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sopaipillas with honey",
@@ -267,7 +366,9 @@
      "text": "Tear open and fill with honey.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Oppie's very dry martini",
@@ -314,7 +415,63 @@
      "text": "Serve iced lime soda the same way for anyone off the gin.",
      "min": 1
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Oppie's very dry martini (alcohol-free)",
+     "prep_min": 3,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 20,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Touch the rim of the chilled glasses with a little honey and lime.",
+       "min": 1
+      },
+      {
+       "text": "For each drink, stir the non-alcoholic gin with a splash of verjuice over ice and strain in.",
+       "min": 1
+      },
+      {
+       "text": "Serve straight away.",
+       "min": 1
+      }
+     ]
+    }
+   }
   }
  ]
 }

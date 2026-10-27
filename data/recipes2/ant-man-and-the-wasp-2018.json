@@ -56,7 +56,9 @@
      "text": "Bake at 190C until puffed and set.",
      "min": 18
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Giant-size choc chip skillet cookie",
@@ -117,7 +119,9 @@
      "text": "Cut into wedges.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Luis's truth serum tacos",
@@ -196,7 +200,96 @@
      "text": "Fill warm tortillas with chicken, salsa and sour cream.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Luis's truth serum mushroom tacos",
+     "prep_min": 15,
+     "cook_min": 33,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "portobello mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "chipotle chillies in adobo, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "pineapple, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "red onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the mushrooms with the chipotle, juice of 2 limes, oil and salt.",
+       "min": 10
+      },
+      {
+       "text": "Leave to marinate for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Grill the mushrooms on a very hot griddle until charred and tender.",
+       "min": 10
+      },
+      {
+       "text": "Mix the pineapple with onion and the remaining lime juice for salsa.",
+       "min": 5
+      },
+      {
+       "text": "Fill warm tortillas with mushrooms, salsa and sour cream.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Quantum realm layered jelly cups",
@@ -239,7 +332,9 @@
      "text": "Top with whipped cream just before serving.",
      "min": 3
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "House arrest root beer floats",
@@ -290,7 +385,9 @@
      "text": "Add whipped cream and a cherry and serve with a straw and long spoon.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

@@ -56,7 +56,9 @@
      "text": "Cut into fish shapes with a cutter, or into triangles.",
      "min": 4
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Kauai poke",
@@ -111,7 +113,9 @@
      "text": "Spoon onto rice crackers and serve straight away.",
      "min": 7
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Loco moco, patties over rice with gravy",
@@ -180,7 +184,92 @@
      "text": "Fry the eggs. Serve patties on rice with gravy and a fried egg.",
      "min": 5
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Loco moco, patties over rice with gravy (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 27,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Shape the plant-based mince into patties and sear in the oil in a hot pan until crusted and hot through.",
+       "min": 12
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 20
+      },
+      {
+       "text": "In the same pan, soften the onion in butter, stir in the flour and then the stock and soy until thick.",
+       "min": 10
+      },
+      {
+       "text": "Fry the eggs. Serve the patties on rice with gravy and a fried egg.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Experiment 626 pineapple soft serve",
@@ -223,7 +312,9 @@
      "text": "Pipe into cups and serve straight away before it melts.",
      "min": 3
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Blue Hawaiian mocktail",
@@ -272,7 +363,9 @@
      "text": "Pour into four tall glasses with a pineapple wedge. Ohana means family.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

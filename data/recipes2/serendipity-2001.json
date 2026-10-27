@@ -96,7 +96,9 @@
      "text": "Mix the icing sugar with the lemon juice, glaze the top and cut into squares.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Wollman Rink roasted chestnuts",
@@ -139,7 +141,9 @@
      "text": "Peel while still warm, sprinkle with salt and serve.",
      "min": 10
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Manhattan bistro steak",
@@ -248,7 +252,342 @@
      "text": "Add the stock and reduce, then stir in the cream and simmer. Serve with the steaks and frites.",
      "min": 8
     }
-   ]
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Manhattan bistro steak",
+     "prep_min": 20,
+     "cook_min": 42,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "neutral oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sirloin steaks (about 200g each)",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Worcestershire sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 190,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into thin frites, rinse and dry thoroughly.",
+       "min": 15
+      },
+      {
+       "text": "Fry in 140C oil until cooked but pale, drain and cool.",
+       "min": 5
+      },
+      {
+       "text": "While the frites cool, season the steaks.",
+       "min": 15
+      },
+      {
+       "text": "Fry the frites again at 185C until crisp. Season with salt.",
+       "min": 3
+      },
+      {
+       "text": "Sear the steaks in a heavy hot pan with oil on both sides.",
+       "min": 6
+      },
+      {
+       "text": "Lower the heat, add the butter and thyme and baste briefly, then rest the steaks.",
+       "min": 9
+      },
+      {
+       "text": "Add the peppercorns and Worcestershire to the pan, then the stock and reduce. Stir in the cream and simmer. Serve with the steaks and frites.",
+       "min": 9
+      }
+     ]
+    },
+    "veg": {
+     "n": "Manhattan bistro mushroom steak",
+     "prep_min": 20,
+     "cook_min": 36,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "neutral oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "brandy",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into thin frites, rinse and dry thoroughly.",
+       "min": 15
+      },
+      {
+       "text": "Fry in 140C oil until cooked but pale, drain and cool.",
+       "min": 5
+      },
+      {
+       "text": "While the frites cool, season the mushrooms with salt.",
+       "min": 10
+      },
+      {
+       "text": "Fry the frites again at 185C until crisp. Season with salt.",
+       "min": 3
+      },
+      {
+       "text": "Sear the mushrooms in a heavy hot pan with the tablespoon of oil on both sides.",
+       "min": 8
+      },
+      {
+       "text": "Lower the heat, add the butter and thyme and baste until tender, then lift out.",
+       "min": 6
+      },
+      {
+       "text": "Add the peppercorns to the pan, then the brandy, carefully and away from the flame, and simmer briefly. Add the stock and soy sauce and reduce, then stir in the cream and simmer. Serve with the mushrooms and frites.",
+       "min": 9
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Manhattan bistro mushroom steak",
+     "prep_min": 20,
+     "cook_min": 36,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "neutral oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black peppercorns",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "vegetable stock, extra",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "apple cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into thin frites, rinse and dry thoroughly.",
+       "min": 15
+      },
+      {
+       "text": "Fry in 140C oil until cooked but pale, drain and cool.",
+       "min": 5
+      },
+      {
+       "text": "While the frites cool, season the mushrooms with salt.",
+       "min": 10
+      },
+      {
+       "text": "Fry the frites again at 185C until crisp. Season with salt.",
+       "min": 3
+      },
+      {
+       "text": "Sear the mushrooms in a heavy hot pan with the tablespoon of oil on both sides.",
+       "min": 8
+      },
+      {
+       "text": "Lower the heat, add the butter and thyme and baste until tender, then lift out.",
+       "min": 6
+      },
+      {
+       "text": "Add the peppercorns to the pan, then the extra stock and vinegar, and simmer briefly. Add the stock and soy sauce and reduce, then stir in the cream and simmer. Serve with the mushrooms and frites.",
+       "min": 9
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Frozen hot chocolate",
@@ -317,7 +656,9 @@
      "text": "Divide into small glasses, spoon over softly whipped cream and finish with shaved chocolate.",
      "min": 7
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mulled cranberry punch",
@@ -360,7 +701,9 @@
      "text": "Strain into mugs and float a fresh orange slice on top of each.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

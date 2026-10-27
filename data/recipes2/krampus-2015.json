@@ -108,7 +108,119 @@
      "text": "Serve the pretzels warm with the dip and cornichons.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Omi's pretzels with obatzda cheese dip",
+     "prep_min": 40,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "bicarbonate of soda",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "ripe camembert",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter, soft",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "alcohol-free beer",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "caraway seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar cornichons",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roll the dough into ropes and twist into pretzels.",
+       "min": 12
+      },
+      {
+       "text": "Dip each in simmering water with the bicarb briefly.",
+       "min": 8
+      },
+      {
+       "text": "Brush with egg, sprinkle with sea salt and bake at 220C.",
+       "min": 12
+      },
+      {
+       "text": "Mash the camembert with the butter, cream cheese, alcohol-free beer, paprika, caraway and onion.",
+       "min": 6
+      },
+      {
+       "text": "Serve the pretzels warm with the dip and cornichons.",
+       "min": 2
+      }
+     ]
+    }
+   }
   },
   {
    "n": "Aunt Dorothy's French onion dip",
@@ -193,7 +305,9 @@
      "text": "Top with crispy shallots and chives and serve with kettle chips.",
      "min": 2
     }
-   ]
+   ],
+   "veg": false,
+   "af": true
   },
   {
    "n": "Christmas Eve lasagne",
@@ -262,7 +376,98 @@
      "text": "Bake at 180C until golden and bubbling.",
      "min": 40
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Christmas Eve lasagne (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 60,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins brown lentils (400 g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 700,
+       "u": "g",
+       "item": "passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "box lasagne sheets",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion and mushrooms in the oil until browned, add the lentils and passata and simmer.",
+       "min": 25
+      },
+      {
+       "text": "Make a white sauce from the butter, flour and milk.",
+       "min": 10
+      },
+      {
+       "text": "Layer the lentil sauce, lasagne sheets and white sauce in a baking dish and top with mozzarella.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 180C until golden and bubbling.",
+       "min": 40
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Gingerbread men with icing grins",
@@ -359,7 +564,9 @@
      "text": "Mix the icing sugar with water and pipe jagged teeth. Add red eyes with a little tinted icing.",
      "min": 20
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Omi's apple glühwein",
@@ -428,7 +635,81 @@
      "text": "For anyone not drinking, warm the remaining apple juice with the remaining spices in a second pan.",
      "min": 5
     }
-   ]
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Omi's apple glühwein (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cinnamon sticks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "star anise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pour the grape juice and apple juice into a saucepan with the tea bag, sugar, spices and half the orange slices.",
+       "min": 3
+      },
+      {
+       "text": "Heat gently without letting it simmer, lifting out the tea bag after 5 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Ladle into mugs with an orange slice each.",
+       "min": 2
+      }
+     ]
+    }
+   }
   }
  ]
 }

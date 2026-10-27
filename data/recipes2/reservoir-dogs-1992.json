@@ -68,7 +68,9 @@
      "text": "Stack in threes with butter and maple syrup.",
      "min": 0
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Warehouse hash browns",
@@ -121,7 +123,9 @@
      "text": "Fry in butter and oil until deep golden on both sides.",
      "min": 15
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Nice Guy Eddie's steak sandwich",
@@ -190,7 +194,92 @@
      "text": "Slice the steak and pile into rolls with onions and provolone.",
      "min": 10
     }
-   ]
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Nice Guy Eddie's portobello steak sandwich",
+     "prep_min": 10,
+     "cook_min": 35,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bread rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices provolone",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "horseradish",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the sliced onions slowly in the butter until golden.",
+       "min": 25
+      },
+      {
+       "text": "Season the mushrooms with salt and pepper and sear in the olive oil, pressing down, until browned and tender.",
+       "min": 10
+      },
+      {
+       "text": "Mix the mayonnaise and horseradish and toast the rolls.",
+       "min": 5
+      },
+      {
+       "text": "Slice the mushrooms and pile into rolls with onions and provolone.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Diner lemon meringue pie",
@@ -263,7 +352,9 @@
      "text": "Bake until golden.",
      "min": 12
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Tip jar maple cream cold brew",
@@ -320,7 +411,9 @@
      "text": "Fill four mugs with ice, pour in the cold brew and spoon the maple cream on top.",
      "min": 2
     }
-   ]
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }
