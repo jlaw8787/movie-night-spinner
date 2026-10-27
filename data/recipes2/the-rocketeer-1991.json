@@ -217,7 +217,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "South Seas Club canapés (vegetarian)",
+     "prep_min": 32,
+     "cook_min": 8,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 360,
+       "u": "g",
+       "item": "haloumi (2 blocks)",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "shredded coconut",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "pineapple, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small red onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the haloumi into 16 bite-sized cubes and pat dry.",
+       "min": 5
+      },
+      {
+       "text": "Mix the coconut and panko. Dip the haloumi in flour, egg, then the crumb mix.",
+       "min": 12
+      },
+      {
+       "text": "Dice the pineapple, red onion and chilli and mix with lime juice for a salsa.",
+       "min": 10
+      },
+      {
+       "text": "Fry the haloumi at 180C in batches until golden, then drain.",
+       "min": 8
+      },
+      {
+       "text": "Serve each bite on a spoonful of salsa.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "South Seas Club tiki chicken",

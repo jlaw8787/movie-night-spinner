@@ -68,7 +68,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bullet train rice balls (vegetarian)",
+     "prep_min": 23,
+     "cook_min": 33,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "sushi rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sheets nori",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sesame seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pickled ginger",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rinse and cook the rice, then let it cool until warm.",
+       "min": 25
+      },
+      {
+       "text": "Crumble the tofu and fry in the sesame oil until golden, then add the soy sauce and a pinch of salt.",
+       "min": 8
+      },
+      {
+       "text": "Shape the rice into triangles around a little tofu.",
+       "min": 15
+      },
+      {
+       "text": "Wrap the base in nori and sprinkle with sesame.",
+       "min": 5
+      },
+      {
+       "text": "Pack into a bento box with pickled ginger.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Tokyo yakitori",
@@ -173,6 +254,143 @@
       },
       {
        "text": "Simmer the soy, honey and sugar until syrupy.",
+       "min": 8
+      },
+      {
+       "text": "Grill the skewers, basting with the glaze, until sticky and charred.",
+       "min": 12
+      },
+      {
+       "text": "Scatter with sliced spring onion.",
+       "min": 2
+      }
+     ]
+    },
+    "veg": {
+     "n": "Tokyo yakitori (vegetarian)",
+     "prep_min": 17,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "shiitake mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mirin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak 12 bamboo skewers in water. Press the tofu dry, cut into cubes and thread onto skewers with the mushrooms.",
+       "min": 15
+      },
+      {
+       "text": "Simmer the soy, mirin and sugar until syrupy.",
+       "min": 8
+      },
+      {
+       "text": "Grill the skewers, basting with the glaze, until sticky and charred.",
+       "min": 12
+      },
+      {
+       "text": "Scatter with sliced spring onion.",
+       "min": 2
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Tokyo yakitori (vegetarian, alcohol-free)",
+     "prep_min": 17,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "shiitake mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak 12 bamboo skewers in water. Press the tofu dry, cut into cubes and thread onto skewers with the mushrooms.",
+       "min": 15
+      },
+      {
+       "text": "Simmer the soy, honey, rice vinegar, water and sugar until syrupy.",
        "min": 8
       },
       {

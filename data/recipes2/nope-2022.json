@@ -131,7 +131,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chuckwagon beans (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 35,
+     "make_ahead": "Better the next day",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mushrooms, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins pinto beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "chipotle in adobo, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "molasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms and onion in the oil in a cast-iron pot until golden, then stir in the paprika.",
+       "min": 10
+      },
+      {
+       "text": "Add the beans, chipotle, molasses, tomato paste and water.",
+       "min": 5
+      },
+      {
+       "text": "Simmer for 30 minutes until thick and smoky.",
+       "min": 30
+      },
+      {
+       "text": "Serve in tin cups.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Haywood Ranch grilled tri-tip and beans",
@@ -384,7 +467,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jean Jacket flying saucer cookies (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 100,
+       "u": "g",
+       "item": "dark chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 180,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "silver sprinkles",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt the chocolate with the butter, beat in the sugar and egg, then the flour.",
+       "min": 10
+      },
+      {
+       "text": "Shape small rounds and bake at 175C for 9 minutes. Cool.",
+       "min": 20
+      },
+      {
+       "text": "Sandwich pairs of cookies with a marshmallow each and warm for 1 minute to melt.",
+       "min": 8
+      },
+      {
+       "text": "Roll the edges in silver sprinkles.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Jupe's watermelon agua fresca",

@@ -60,7 +60,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hot hearts of palm toasts",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "Mix up to 1 day, grill fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "can hearts of palm (400 g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zested",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the hearts of palm finely and mix with the cream cheese, mayonnaise, lemon zest and sliced spring onion.",
+       "min": 8
+      },
+      {
+       "text": "Slice the baguette and spread the mix on each slice.",
+       "min": 7
+      },
+      {
+       "text": "Grill until golden at the edges. Serve hot.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Baked meatballs with sweet tomato sauce",
@@ -137,7 +198,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Baked plant-based meatballs with sweet tomato sauce",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Up to 1 day, reheat in the oven",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Deli"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "toothpicks, to serve",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the plant-based mince with the parmesan-style cheese, breadcrumbs and egg. Roll into small balls.",
+       "min": 15
+      },
+      {
+       "text": "Bake at 200C until browned and firm.",
+       "min": 15
+      },
+      {
+       "text": "Warm the tomato sauce with brown sugar until sticky and toss the balls through.",
+       "min": 5
+      },
+      {
+       "text": "Serve on toothpicks.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Philly cheesesteaks",

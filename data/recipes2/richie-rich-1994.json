@@ -103,7 +103,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mansion black lentil caviar blinis",
+     "prep_min": 18,
+     "cook_min": 5,
+     "make_ahead": "Lentils up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cooked black lentils",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "blinis",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "snipped chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the lentils with the soy and oil so they turn glossy and dark.",
+       "min": 3
+      },
+      {
+       "text": "Warm the blinis in a low oven for 5 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Top each with a small spoon of creme fraiche, a little of the lentils and a few chives.",
+       "min": 10
+      },
+      {
+       "text": "Add a tiny squeeze of lemon and lay them out in neat rows.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Richie's home burger bar",

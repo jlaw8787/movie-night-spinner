@@ -58,7 +58,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cocktail sausages in puff pastry (vegetarian)",
+     "prep_min": 17,
+     "cook_min": 15,
+     "make_ahead": "Up to 1 day uncooked, keep chilled",
+     "ingredients": [
+      {
+       "q": 24,
+       "u": "",
+       "item": "vegetarian cocktail sausages",
+       "aisle": "Deli"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry, thawed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the veggie sausages dry with paper towel.",
+       "min": 2
+      },
+      {
+       "text": "Cut the pastry into strips and roll one around each sausage.",
+       "min": 15
+      },
+      {
+       "text": "Brush with beaten egg and bake at 200C until golden.",
+       "min": 15
+      },
+      {
+       "text": "Serve with mustard and tomato sauce.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Eighties cheese ball",

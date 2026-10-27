@@ -54,7 +54,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Coney Island hot dogs (vegetarian)",
+     "prep_min": 5,
+     "cook_min": 14,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian hot dog sausages",
+       "aisle": "Deli"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "hot dog buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "sauerkraut",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch caraway seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar yellow mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Warm the sauerkraut with the caraway seeds.",
+       "min": 6
+      },
+      {
+       "text": "Grill the veggie sausages until they blister.",
+       "min": 8
+      },
+      {
+       "text": "Tuck into buns with mustard and sauerkraut and wrap in wax paper.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chinese restaurant dumplings",
@@ -125,7 +180,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chinese restaurant dumplings (vegetarian)",
+     "prep_min": 26,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "shiitake or button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet dumpling wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce, for dipping",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar chilli oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Finely chop the mushrooms and fry in the oil until the liquid cooks off. Cool slightly.",
+       "min": 8
+      },
+      {
+       "text": "Crumble the tofu and mix with the mushrooms, ginger and soy.",
+       "min": 4
+      },
+      {
+       "text": "Fill the wrappers and pleat closed.",
+       "min": 15
+      },
+      {
+       "text": "Steam in a lined bamboo basket.",
+       "min": 8
+      },
+      {
+       "text": "Serve hot with soy sauce and chilli oil.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Agency meatloaf",

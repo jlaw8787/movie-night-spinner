@@ -169,7 +169,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pea and smoked provolone arancini",
+     "prep_min": 40,
+     "cook_min": 35,
+     "make_ahead": "Up to 1 day uncooked, or freeze",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "arborio rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable stock, hot",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "smoked provolone, diced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "marinara sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the rice with the hot stock, added a ladle at a time, into a firm risotto.",
+       "min": 25
+      },
+      {
+       "text": "Stir through the peas, provolone and parmesan-style cheese, then spread out and cool.",
+       "min": 20
+      },
+      {
+       "text": "Roll into 16 balls and crumb in flour, egg and breadcrumbs.",
+       "min": 15
+      },
+      {
+       "text": "Fry at 180C in batches until golden.",
+       "min": 11
+      },
+      {
+       "text": "Warm the marinara and serve alongside.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Meatballs and rigatoni",
@@ -281,7 +374,7 @@
       {
        "q": 125,
        "u": "g",
-       "item": "parmesan, grated",
+       "item": "vegetarian parmesan-style cheese, grated",
        "aisle": "Dairy"
       },
       {

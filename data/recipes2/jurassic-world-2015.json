@@ -54,7 +54,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mosasaur feeding mushrooms",
+     "prep_min": 15,
+     "cook_min": 8,
+     "make_ahead": "Marinate up to 1 hour, grill fresh",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king brown mushrooms, cut into thick coins",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red chillies, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes, one zested and the rest in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the mushrooms with the garlic, chilli, lime zest, melted butter and salt.",
+       "min": 10
+      },
+      {
+       "text": "Grill for 3 minutes a side until charred.",
+       "min": 8
+      },
+      {
+       "text": "Pile high on a platter with lime wedges.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Gyrosphere cheese balls",

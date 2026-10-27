@@ -48,7 +48,56 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Spicoli's pizza bites (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 8,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "slices plant-based pepperoni",
+       "aisle": "Deli"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roll out the dough and cut into 16 rounds.",
+       "min": 10
+      },
+      {
+       "text": "Spread with sauce and top with mozzarella and a slice of plant-based pepperoni.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 230C until bubbling and golden. Serve in a pizza box.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Food court pretzels with cheddar sauce",

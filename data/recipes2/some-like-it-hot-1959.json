@@ -70,7 +70,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Speakeasy devilled eggs with smoky crispy shallots",
+     "prep_min": 25,
+     "cook_min": 12,
+     "make_ahead": "Up to 1 day, keep chilled, top with shallots just before serving",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "white vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "eschalots, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs hard, cool in iced water, peel and halve.",
+       "min": 15
+      },
+      {
+       "text": "Mash the yolks with the mayonnaise, mustard, vinegar and a pinch of paprika until smooth. Pipe back into the whites.",
+       "min": 10
+      },
+      {
+       "text": "Fry the eschalots in the oil until golden and crisp, drain on paper and toss with a pinch of paprika.",
+       "min": 10
+      },
+      {
+       "text": "Top each egg with the shallots, a dusting of paprika and snipped chives.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Florida beach prawns",
@@ -141,7 +218,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Florida beach king oyster mushrooms",
+     "prep_min": 13,
+     "cook_min": 7,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "hot sauce, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, for the water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bring a pot of salted water to the boil with lemon slices.",
+       "min": 5
+      },
+      {
+       "text": "Slice the mushroom stems into thick coins.",
+       "min": 5
+      },
+      {
+       "text": "Poach the mushrooms for 3 minutes, then plunge into iced water and drain well.",
+       "min": 5
+      },
+      {
+       "text": "Mix the mayonnaise with tomato sauce, a squeeze of lemon and hot sauce. Serve the mushrooms on ice with the sauce.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Osgood's yacht lobster",

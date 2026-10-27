@@ -104,7 +104,112 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pecorino and melon antipasti (vegetarian)",
+     "prep_min": 40,
+     "cook_min": 0,
+     "make_ahead": "Up to 2 hours ahead",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "vegetarian pecorino-style cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar roasted capsicum",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "rockmelon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "extra virgin olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "sun-dried tomatoes",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cheese into shards. Warm the honey with chilli flakes and drizzle over.",
+       "min": 8
+      },
+      {
+       "text": "Cut the drained capsicum into strips and wrap around wedges of rockmelon with mint leaves.",
+       "min": 8
+      },
+      {
+       "text": "Chop the parsley with capers, lemon zest and oil for salsa verde.",
+       "min": 8
+      },
+      {
+       "text": "Toast baguette slices, spread with salsa verde and top each with a sun-dried tomato.",
+       "min": 10
+      },
+      {
+       "text": "Lay it all out in neat rows on a long board.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rome supplì rice balls",
@@ -185,7 +290,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rome supplì rice balls (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 60,
+     "make_ahead": "Risotto cooled a day ahead",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "arborio rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mozzarella",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the rice with the tomatoes and vegetable stock into a thick risotto.",
+       "min": 25
+      },
+      {
+       "text": "Stir in the grated cheese and cool completely.",
+       "min": 30
+      },
+      {
+       "text": "Roll around cubes of mozzarella.",
+       "min": 15
+      },
+      {
+       "text": "Crumb in beaten egg and breadcrumbs.",
+       "min": 10
+      },
+      {
+       "text": "Fry at 180C until golden.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Cacio e pepe",

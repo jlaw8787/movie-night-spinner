@@ -137,7 +137,60 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Manhole cover mini pizzas (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 8,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "drained roast capsicum",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roll the dough thin and cut 12 rounds.",
+       "min": 12
+      },
+      {
+       "text": "Spread with sauce and top with mozzarella.",
+       "min": 8
+      },
+      {
+       "text": "Slice the roast capsicum into thin strips and lay them in a crosshatch like a manhole grate.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 230C until bubbling.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "The Reverend's soup kitchen stew",

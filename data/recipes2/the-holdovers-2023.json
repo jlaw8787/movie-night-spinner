@@ -104,7 +104,112 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mary's grilled cheese and tomato soup (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 25,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins crushed tomatoes (400g each)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices sourdough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter, soft",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "vintage cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion and garlic in the oil until soft.",
+       "min": 5
+      },
+      {
+       "text": "Add the tomatoes, paprika, sugar and stock and simmer.",
+       "min": 15
+      },
+      {
+       "text": "Blitz the soup smooth and stir in the cream.",
+       "min": 3
+      },
+      {
+       "text": "Butter the outsides of the sourdough and fill with the cheddar and mozzarella.",
+       "min": 4
+      },
+      {
+       "text": "Fry over medium heat until golden on both sides. Cut into fingers and serve with the soup.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Boston trip clam chowder",
@@ -193,7 +298,108 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Boston trip mushroom and potato chowder",
+     "prep_min": 4,
+     "cook_min": 26,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mixed mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "piece kombu (about 10cm)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "potatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "box small round soup crackers",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt the butter and fry the mushrooms over high heat until golden.",
+       "min": 8
+      },
+      {
+       "text": "Add the smoked paprika, onion and celery and cook until soft.",
+       "min": 6
+      },
+      {
+       "text": "Stir in the flour, then the stock, kombu, potato and thyme and simmer until the potato is tender.",
+       "min": 12
+      },
+      {
+       "text": "Lift out the kombu, stir in the cream and heat through. Season with salt and pepper and serve with the crackers.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Barton Academy Christmas roast chicken",

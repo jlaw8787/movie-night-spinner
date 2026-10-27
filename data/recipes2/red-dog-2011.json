@@ -68,7 +68,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mining camp sausage rolls (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Up to 1 day, reheat to crisp",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "vegetarian sausages, skins removed",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets of puff pastry, halved",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "tomato sauce, to serve",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C and line a tray.",
+       "min": 3
+      },
+      {
+       "text": "Mix the vegetarian sausage filling with the onion and carrot.",
+       "min": 5
+      },
+      {
+       "text": "Lay the filling along the edge of the pastry, roll up and seal.",
+       "min": 10
+      },
+      {
+       "text": "Brush with egg, cut into pieces and bake.",
+       "min": 25
+      },
+      {
+       "text": "Serve hot with tomato sauce.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Dampier barbecued squid",
@@ -139,7 +208,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dampier barbecued king oyster mushrooms",
+     "prep_min": 13,
+     "cook_min": 5,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves of garlic, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful of coriander",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms thickly lengthways and score in a criss-cross.",
+       "min": 8
+      },
+      {
+       "text": "Toss with the oil, garlic, chilli and salt.",
+       "min": 4
+      },
+      {
+       "text": "Grill on a very hot barbecue for 2 minutes a side.",
+       "min": 5
+      },
+      {
+       "text": "Finish with lime juice and coriander.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Dampier sausages, steak and potato salad",
@@ -362,7 +502,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Red Dog lamingtons (vegetarian)",
+     "prep_min": 50,
+     "cook_min": 150,
+     "make_ahead": "Make the day before",
+     "ingredients": [
+      {
+       "q": 125,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet of vegetarian raspberry jelly crystals, set with agar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "desiccated coconut",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 180C and line a square tin. Beat the butter and sugar, add the eggs, then fold in the flour and milk.",
+       "min": 15
+      },
+      {
+       "text": "Bake the sponge for 30 minutes and cool completely.",
+       "min": 90
+      },
+      {
+       "text": "Make up the jelly and let it cool until lukewarm but still runny.",
+       "min": 20
+      },
+      {
+       "text": "Cut the sponge into cubes, dip in the jelly and roll in coconut.",
+       "min": 15
+      },
+      {
+       "text": "Chill until firm.",
+       "min": 60
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Red Dog ruby grapefruit radler",

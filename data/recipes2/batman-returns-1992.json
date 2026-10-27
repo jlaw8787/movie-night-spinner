@@ -60,7 +60,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cured beetroot on rye",
+     "prep_min": 27,
+     "cook_min": 0,
+     "make_ahead": "Beetroot up to 1 day ahead, assemble up to 2 hours ahead and keep chilled",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "slices dark rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cooked beetroot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch dill",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the beetroot paper thin and toss with the lemon juice, smoked paprika and salt. Leave for 10 minutes.",
+       "min": 12
+      },
+      {
+       "text": "Butter the rye.",
+       "min": 3
+      },
+      {
+       "text": "Top with creme fraiche, folds of beetroot, a few capers and dill sprigs.",
+       "min": 7
+      },
+      {
+       "text": "Cut into fingers with a sharp knife and serve cold on a dark plate.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Gotham Plaza roasted chestnuts",

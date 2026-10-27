@@ -30,7 +30,7 @@
      "q": 200,
      "u": "g",
      "item": "hummus",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 100,
@@ -42,7 +42,7 @@
      "q": 100,
      "u": "g",
      "item": "kalamata olives",
-     "aisle": "Meat"
+     "aisle": "Deli"
     }
    ],
    "steps": [
@@ -59,7 +59,7 @@
      "min": 7
     }
    ],
-   "veg": false,
+   "veg": true,
    "af": true
   },
   {
@@ -121,7 +121,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Scarif beach haloumi skewers",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "Marinate up to 4 hours, grill fresh",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes, one juiced and one for salsa",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "mango, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped coriander",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the haloumi with the oil, garlic, chilli and juice of 1 lime. Marinate for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Dice the mango and mix with coriander and the juice of the second lime for the salsa.",
+       "min": 5
+      },
+      {
+       "text": "Thread the haloumi onto skewers and grill until golden and charred. Serve with the salsa.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Jedha spiced lamb pilaf",

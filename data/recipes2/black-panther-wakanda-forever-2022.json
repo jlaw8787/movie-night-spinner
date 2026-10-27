@@ -60,7 +60,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Talokan lime hearts of palm tostadas",
+     "prep_min": 25,
+     "cook_min": 0,
+     "make_ahead": "Up to 4 hours, keep chilled, pile onto tostadas just before serving",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can hearts of palm, drained and diced",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "coriander leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "avocados",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "corn tostadas",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cover the hearts of palm with the lime juice and leave for 15 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Drain and toss with the onion and coriander.",
+       "min": 5
+      },
+      {
+       "text": "Spread smashed avocado on the tostadas and pile the hearts of palm on top just before serving.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Heart-shaped herb plantain chips",

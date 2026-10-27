@@ -68,7 +68,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Choirboy's talent show cauliflower bites",
+     "prep_min": 15,
+     "cook_min": 32,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, cut in florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 220C. Whisk the flour, water, garlic powder and salt to a thin batter.",
+       "min": 5
+      },
+      {
+       "text": "Coat the cauliflower and bake on a lined tray until crisp, turning once.",
+       "min": 30
+      },
+      {
+       "text": "Melt the butter with honey and hot sauce.",
+       "min": 4
+      },
+      {
+       "text": "Toss the cauliflower through until glossy and bake for 5 more minutes.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Deviled eggs",

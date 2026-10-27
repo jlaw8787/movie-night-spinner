@@ -72,7 +72,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Slug Club party canapés (vegetarian)",
+     "prep_min": 33,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "blinis",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cooked beetroot, very thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "sprigs dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets shortcrust pastry, thawed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "vegetarian fruit mince",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the shortcrust into small rounds and press into a patty tin.",
+       "min": 12
+      },
+      {
+       "text": "Fill with fruit mince.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 190C until golden.",
+       "min": 15
+      },
+      {
+       "text": "Cool the tarts.",
+       "min": 15
+      },
+      {
+       "text": "Season the beetroot slices with a squeeze of lemon.",
+       "min": 3
+      },
+      {
+       "text": "Top the blinis with creme fraiche, a fold of beetroot and a sprig of dill.",
+       "min": 10
+      },
+      {
+       "text": "Arrange both on trays.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Cocoa dusted chocolate truffles",

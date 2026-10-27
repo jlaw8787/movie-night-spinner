@@ -72,7 +72,86 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Annexation of Puerto Rico cauliflower wings",
+     "prep_min": 15,
+     "cook_min": 33,
+     "make_ahead": "Dip up to 1 day, cauliflower fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, cut into florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped herbs (chives and parsley)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the cauliflower with the oil and salt and roast at 220C until browned at the edges.",
+       "min": 30
+      },
+      {
+       "text": "Warm the honey with the barbecue sauce, toss the cauliflower through and roast 5 minutes more.",
+       "min": 8
+      },
+      {
+       "text": "Mix the sour cream, mayonnaise and herbs into a ranch dip. Serve with celery sticks.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ohio buckeye peanut butter chocolates",

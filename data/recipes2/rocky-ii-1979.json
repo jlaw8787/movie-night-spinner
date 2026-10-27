@@ -56,7 +56,70 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Smoked tofu, egg and cheese rolls",
+     "prep_min": 10,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft rolls",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the smoked tofu into 8 slices.",
+       "min": 4
+      },
+      {
+       "text": "Fry in the oil until browned on both sides.",
+       "min": 8
+      },
+      {
+       "text": "Fry the eggs.",
+       "min": 4
+      },
+      {
+       "text": "Stack the tofu, eggs and cheese into the rolls.",
+       "min": 4
+      },
+      {
+       "text": "Wrap in foil to melt the cheese.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Italian market bites",
@@ -117,7 +180,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Italian market bites (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "provolone",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "chargrilled eggplant strips",
+       "aisle": "Deli"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red capsicums, roasted",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf Italian bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil, for dipping",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the provolone into cubes.",
+       "min": 4
+      },
+      {
+       "text": "Thread onto toothpicks with a folded strip of chargrilled eggplant, an olive and a strip of roasted capsicum.",
+       "min": 8
+      },
+      {
+       "text": "Pile onto a board with sliced Italian bread and a small bowl of olive oil for dipping.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Adrian's spaghetti and meatballs",

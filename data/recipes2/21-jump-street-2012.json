@@ -58,7 +58,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cafeteria pizza squares (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Reheat in the oven, up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plant-based pepperoni slices",
+       "aisle": "Deli"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Press the dough into an oiled tray right to the edges.",
+       "min": 10
+      },
+      {
+       "text": "Spread with crushed tomatoes mixed with oregano and top with mozzarella and the plant-based pepperoni.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 240C until bubbling and golden.",
+       "min": 15
+      },
+      {
+       "text": "Cut into squares.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Peter Pan rehearsal quesadillas",

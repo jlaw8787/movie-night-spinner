@@ -115,7 +115,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Antipasto for two with chargrilled eggplant",
+     "prep_min": 20,
+     "cook_min": 0,
+     "make_ahead": "Up to 3 hours ahead, covered in the fridge",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "chargrilled eggplant, from the deli",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "provolone, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "stuffed cherry peppers",
+       "aisle": "Deli"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "kalamata olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar marinated artichoke hearts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red capsicums, roasted and cut into strips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf Italian bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fold the eggplant and provolone onto a board.",
+       "min": 8
+      },
+      {
+       "text": "Add the stuffed peppers, olives, artichoke hearts and strips of roasted capsicum.",
+       "min": 8
+      },
+      {
+       "text": "Tear the bread and set it beside the board. Serve by candlelight.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Spaghetti and meatballs",
@@ -239,7 +306,7 @@
       {
        "q": 60,
        "u": "g",
-       "item": "parmesan, grated, plus extra to serve",
+       "item": "vegetarian parmesan-style cheese, grated, plus extra to serve",
        "aisle": "Dairy"
       },
       {

@@ -62,7 +62,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Wasteland tin dinner (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 27,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "potatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the diced potatoes for 6 minutes, then drain.",
+       "min": 10
+      },
+      {
+       "text": "Fry the onion in the butter until soft.",
+       "min": 5
+      },
+      {
+       "text": "Add the potato, crumble in the smoked tofu and splash with the soy. Press flat and fry without stirring until crusty, then turn and repeat.",
+       "min": 15
+      },
+      {
+       "text": "Fry the eggs.",
+       "min": 5
+      },
+      {
+       "text": "Serve the hash in clean empty tins with an egg on top.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Feral Kid's boomerang biscuits",

@@ -98,7 +98,112 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lettuce leaf tofu and rice cups",
+     "prep_min": 25,
+     "cook_min": 25,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 450,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "butter lettuces",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "mint leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "coriander leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "roasted peanuts, crushed",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the tofu dry, crumble it and fry in the oil until golden, then splash with 1 tbsp of the soy.",
+       "min": 15
+      },
+      {
+       "text": "Cook the rice.",
+       "min": 15
+      },
+      {
+       "text": "Mix the lime juice, remaining soy, sugar and chilli for the dressing.",
+       "min": 5
+      },
+      {
+       "text": "Separate the lettuce into cups.",
+       "min": 3
+      },
+      {
+       "text": "Fill each with rice, tofu, cucumber, mint and coriander, spoon over the dressing and finish with peanuts.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Silent soft pretzels",

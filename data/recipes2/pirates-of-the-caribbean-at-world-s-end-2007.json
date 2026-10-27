@@ -36,7 +36,7 @@
      "q": 24,
      "u": "",
      "item": "dumpling wrappers",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 3,
@@ -66,7 +66,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Singapore bathhouse dumplings (vegetarian)",
+     "prep_min": 40,
+     "cook_min": 8,
+     "make_ahead": "Fill and pleat up to 1 day ahead, steam fresh",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "fresh shiitake mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "firm tofu, crumbled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, finely sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce, plus extra for dipping",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 24,
+       "u": "",
+       "item": "dumpling wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "black vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "chilli oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in the oil until dry and browned, then cool.",
+       "min": 8
+      },
+      {
+       "text": "Mix with the tofu, spring onions, soy and salt.",
+       "min": 5
+      },
+      {
+       "text": "Fill the wrappers and pleat closed.",
+       "min": 27
+      },
+      {
+       "text": "Steam in a lined bamboo basket and serve with extra soy, the black vinegar and chilli oil.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Jack's honey and smoked salt peanuts",

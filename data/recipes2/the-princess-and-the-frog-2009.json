@@ -159,7 +159,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Muffuletta cob loaf sandwich (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 480,
+     "make_ahead": "Make the day before, press overnight",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "cob loaf",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "chargrilled eggplant",
+       "aisle": "Deli"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "roasted red capsicum",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "provolone",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "green olives",
+       "aisle": "Deli"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "giardiniera",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the olives and giardiniera together for an olive salad.",
+       "min": 10
+      },
+      {
+       "text": "Hollow the loaf slightly.",
+       "min": 5
+      },
+      {
+       "text": "Layer with olive salad, eggplant, capsicum and provolone, then more olive salad.",
+       "min": 10
+      },
+      {
+       "text": "Wrap tightly and press under a heavy weight overnight in the fridge.",
+       "min": 480
+      },
+      {
+       "text": "Cut into small wedges.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Tiana's Palace shrimp and grits",

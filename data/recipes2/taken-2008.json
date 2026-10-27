@@ -74,7 +74,86 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Particular set of skills mushroom croque",
+     "prep_min": 15,
+     "cook_min": 31,
+     "make_ahead": "Assemble ahead, bake just before serving",
+     "ingredients": [
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "vegetarian gruyere-style cheese",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in a little of the butter until golden and season.",
+       "min": 6
+      },
+      {
+       "text": "Melt the rest of the butter, stir in the flour, whisk in the milk and cook until thick.",
+       "min": 10
+      },
+      {
+       "text": "Spread the bread with Dijon and bechamel.",
+       "min": 5
+      },
+      {
+       "text": "Fill with the mushrooms and half the grated cheese, then close.",
+       "min": 5
+      },
+      {
+       "text": "Top with the rest of the sauce and cheese.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 200C until bubbling.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Albanian spinach and cheese byrek",

@@ -58,7 +58,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Tunstall's English sandwiches (vegetarian)",
+     "prep_min": 19,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "mature cheddar, thinly sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "English mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Butter the bread.",
+       "min": 4
+      },
+      {
+       "text": "Fill half with thin cucumber.",
+       "min": 5
+      },
+      {
+       "text": "Fill the rest with cheddar and English mustard.",
+       "min": 5
+      },
+      {
+       "text": "Cut off the crusts and cut into triangles.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "New Mexico green chilli queso",

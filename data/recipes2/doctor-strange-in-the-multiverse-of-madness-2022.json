@@ -68,7 +68,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pizza balls (vegetarian)",
+     "prep_min": 33,
+     "cook_min": 15,
+     "make_ahead": "Up to 1 day, reheat in the oven",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "roasted red capsicum",
+       "aisle": "Deli"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pizza sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cube the mozzarella, cut the capsicum into small pieces and heat the oven to 200C.",
+       "min": 8
+      },
+      {
+       "text": "Cut the dough into small pieces and wrap each around a cube of cheese, a piece of capsicum and a pinch of smoked paprika.",
+       "min": 15
+      },
+      {
+       "text": "Roll into balls and pack into a greased tin.",
+       "min": 5
+      },
+      {
+       "text": "Bake until golden.",
+       "min": 15
+      },
+      {
+       "text": "Melt the butter with crushed garlic and brush over the balls. Warm the sauce for dipping.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chicken momo dumplings",
@@ -145,7 +220,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mushroom momo dumplings",
+     "prep_min": 30,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cabbage, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet dumpling wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms and cabbage in the oil until soft and dry, then cool.",
+       "min": 10
+      },
+      {
+       "text": "Mix with the soy sauce, sliced spring onion and ginger.",
+       "min": 5
+      },
+      {
+       "text": "Fill the wrappers and pleat closed.",
+       "min": 15
+      },
+      {
+       "text": "Steam the momos.",
+       "min": 10
+      },
+      {
+       "text": "Char the tomatoes in a dry pan, then blitz with chilli flakes, salt and garlic for the achar.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Multiverse noodle bowls",

@@ -72,7 +72,86 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Blue steel crudités (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 0,
+     "make_ahead": "Up to 3 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch radishes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "blue cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "black pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cucumber, celery, carrots and radishes into long lean sticks.",
+       "min": 12
+      },
+      {
+       "text": "Mash the blue cheese into the sour cream with lemon juice, soy sauce and black pepper.",
+       "min": 5
+      },
+      {
+       "text": "Stand the sticks in a glass on ice and serve with the dip.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Day spa cucumber bites",
@@ -131,7 +210,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Day spa cucumber and beetroot bites",
+     "prep_min": 22,
+     "cook_min": 15,
+     "make_ahead": "Up to 2 hours ahead, keep very cold",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "Lebanese cucumbers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "goat's cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cooked beetroot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cucumbers into thick rounds.",
+       "min": 6
+      },
+      {
+       "text": "Whip the goat's cheese with lemon zest and pipe on top.",
+       "min": 8
+      },
+      {
+       "text": "Slice the beetroot paper thin, toss with a squeeze of lemon juice and fold a piece on each with a dill frond.",
+       "min": 8
+      },
+      {
+       "text": "Chill until serving.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mugatu's vodka pasta",

@@ -92,7 +92,116 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Awesome Mix mushroom and capsicum pizza rolls",
+     "prep_min": 35,
+     "cook_min": 18,
+     "make_ahead": "Rolls can be filled a day ahead, bake fresh",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets of puff pastry",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 8,
+       "u": "tsp",
+       "item": "pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mushrooms, finely sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "napoli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch of chilli flakes",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C and line trays. Cut each pastry sheet into 8 rectangles.",
+       "min": 8
+      },
+      {
+       "text": "Fry the mushrooms and capsicum in the oil until dry, then cool.",
+       "min": 8
+      },
+      {
+       "text": "Top each rectangle with pizza sauce, the mushroom mix, mozzarella and oregano.",
+       "min": 8
+      },
+      {
+       "text": "Roll up, pinch the ends closed and lay seam down on the trays.",
+       "min": 6
+      },
+      {
+       "text": "Brush with egg, scatter with the cheese and bake until puffed and golden.",
+       "min": 18
+      },
+      {
+       "text": "Warm the napoli sauce with the honey and chilli flakes for dipping.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Knowhere bar wings",
@@ -157,7 +266,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Knowhere bar cauliflower bites",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "Glaze up to 2 days ahead, bake fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, cut in florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "blackberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "clove of garlic, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch of chilli flakes",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 220C. Whisk the flour, water and salt to a thin batter.",
+       "min": 5
+      },
+      {
+       "text": "Coat the cauliflower and bake on a lined tray until crisp, turning once.",
+       "min": 30
+      },
+      {
+       "text": "Simmer the blackberries with the soy, honey, garlic and chilli until sticky, then strain.",
+       "min": 12
+      },
+      {
+       "text": "Toss the cauliflower through the glaze and bake for 5 more minutes.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ravager barbecue ribs with corn and slaw",

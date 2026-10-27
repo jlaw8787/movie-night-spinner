@@ -139,7 +139,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Stephanie's food truck egg rolls (vegetarian)",
+     "prep_min": 22,
+     "cook_min": 18,
+     "make_ahead": "Rolled and uncooked up to 4 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "firm tofu, crumbled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "shredded cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "spring roll wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms and tofu in a splash of the oil until browned.",
+       "min": 6
+      },
+      {
+       "text": "Add the cabbage, carrot, spring onions and soy sauce and cook until dry. Cool the filling.",
+       "min": 10
+      },
+      {
+       "text": "Roll a spoonful into each wrapper, sealing the edge with water.",
+       "min": 14
+      },
+      {
+       "text": "Heat the rest of the oil to about 5cm deep and fry in batches until golden.",
+       "min": 8
+      },
+      {
+       "text": "Drain on paper towel.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Food truck double burger",

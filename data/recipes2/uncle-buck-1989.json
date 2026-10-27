@@ -68,7 +68,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Miles's birthday caramel popcorn balls (vegetarian)",
+     "prep_min": 32,
+     "cook_min": 13,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 100,
+       "u": "g",
+       "item": "popcorn kernels",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "rainbow sprinkles",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pop the kernels in the oil in a covered pot and tip into a big bowl, discarding unpopped kernels.",
+       "min": 8
+      },
+      {
+       "text": "Melt the butter, vegetarian marshmallows and brown sugar over low heat, stirring until smooth, with a pinch of salt.",
+       "min": 5
+      },
+      {
+       "text": "Pour over the popcorn and stir quickly to coat. Cool briefly.",
+       "min": 2
+      },
+      {
+       "text": "With buttered hands squeeze into balls and roll in the sprinkles.",
+       "min": 10
+      },
+      {
+       "text": "Set on baking paper until firm.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bowling night cheesy gravy chips",
@@ -145,7 +214,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bowling night cheesy gravy chips (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 25,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "frozen chips",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vegetarian chicken salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch chives, chopped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the chips at 220C, turning once, then toss with the vegetarian chicken salt.",
+       "min": 25
+      },
+      {
+       "text": "Melt the butter, stir in the flour, then whisk in the stock and soy sauce. Simmer until thick and glossy.",
+       "min": 8
+      },
+      {
+       "text": "Pile the chips on a platter, scatter with cheddar and pour over the hot gravy.",
+       "min": 1
+      },
+      {
+       "text": "Finish with chives.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Buck's big breakfast for dinner",
@@ -426,7 +572,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Uncle Buck's giant buttermilk pancake with smoked maple pecans",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bananas, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "pecans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toast the pecans in a dry pan, add a tablespoon of the maple syrup and the smoked paprika and stir until sticky. Cool on baking paper and roughly chop.",
+       "min": 5
+      },
+      {
+       "text": "Whisk the flour, sugar and a pinch of salt. Whisk in the eggs, buttermilk and some melted butter until just combined.",
+       "min": 5
+      },
+      {
+       "text": "Heat a large 28cm non-stick pan over low heat and grease with butter. Pour in all the batter and cover with a lid.",
+       "min": 2
+      },
+      {
+       "text": "Cook until bubbles set on top.",
+       "min": 10
+      },
+      {
+       "text": "Slide onto a plate, flip back in and cook the other side.",
+       "min": 5
+      },
+      {
+       "text": "Top with butter, the rest of the maple syrup, banana and the smoked maple pecans.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Buck's chocolate malted milk",

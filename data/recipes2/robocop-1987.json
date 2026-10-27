@@ -137,7 +137,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "OCP boardroom canapés (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 0,
+     "make_ahead": "Up to 2 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "small cooked beetroot, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "Lebanese cucumbers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "feta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the beetroot paper thin and dress with the lemon juice.",
+       "min": 4
+      },
+      {
+       "text": "Butter the rye, cut into squares and top with creme fraiche, beetroot and dill.",
+       "min": 10
+      },
+      {
+       "text": "Cut the cucumbers into thick rounds and scoop a small hollow in each.",
+       "min": 7
+      },
+      {
+       "text": "Whip the feta with the olive oil until smooth and fill the cucumber cups.",
+       "min": 7
+      },
+      {
+       "text": "Arrange on a platter.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Detroit coney dog",

@@ -161,7 +161,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Spider Rider midway corn dogs (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cornmeal",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian franks",
+       "aisle": "Deli"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "wooden sticks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the cornmeal, flour, sugar, baking powder, egg and buttermilk into a batter.",
+       "min": 8
+      },
+      {
+       "text": "Pat the vegetarian franks dry and push onto sticks.",
+       "min": 5
+      },
+      {
+       "text": "Heat the oil to 180C.",
+       "min": 5
+      },
+      {
+       "text": "Dip in the batter and fry in batches until deep gold.",
+       "min": 16
+      },
+      {
+       "text": "Serve with mustard.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Uncle Dave's theme park turkey legs",

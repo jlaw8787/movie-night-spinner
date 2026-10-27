@@ -107,7 +107,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lentil caviar on crackers",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "Lentils up to 2 days ahead, keep chilled; assemble just before serving",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "g",
+       "item": "black lentils",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "",
+       "item": "water crackers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "crème fraîche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives, snipped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the lentils in plenty of water for 20 minutes until just tender, drain, cool and dress with the soy, olive oil and lemon juice.",
+       "min": 25
+      },
+      {
+       "text": "Spread each cracker with crème fraîche.",
+       "min": 6
+      },
+      {
+       "text": "Top with a spoon of the lentils and a few chives just before serving so the crackers stay crisp.",
+       "min": 9
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Street cart hot dog",

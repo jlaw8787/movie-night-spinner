@@ -86,7 +86,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cat lady cover croque monsieur bites (vegetarian)",
+     "prep_min": 23,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch ground nutmeg",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 160,
+       "u": "g",
+       "item": "vegetarian gruyere-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plant-based ham-style slices",
+       "aisle": "Deli"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "cornichons",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt some of the butter, stir in the flour, then whisk in the milk and simmer until thick. Season with nutmeg and stir in a little of the cheese.",
+       "min": 8
+      },
+      {
+       "text": "Spread the bread thinly with Dijon and make sandwiches with the plant-based ham-style slices and more cheese.",
+       "min": 5
+      },
+      {
+       "text": "Fry the sandwiches in the rest of the butter on both sides.",
+       "min": 5
+      },
+      {
+       "text": "Spread the bechamel on top, scatter with the last of the cheese and grill until bubbling.",
+       "min": 3
+      },
+      {
+       "text": "Cut into fingers and serve with cornichons.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Budapest garlic lángos with sour cream",

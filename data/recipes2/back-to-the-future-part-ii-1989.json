@@ -324,7 +324,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jaws 19 shark jelly (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 78,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "lemonade",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "blue food colouring",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag vegetarian gummy sharks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bring the lemonade, sugar and agar to the boil, simmer for 2 minutes, then stir in the colouring.",
+       "min": 8
+      },
+      {
+       "text": "Pour half into four glasses and chill until just set. Keep the rest warm over very low heat.",
+       "min": 20
+      },
+      {
+       "text": "Push the gummy sharks in, top up with the rest of the jelly and chill until fully set.",
+       "min": 60
+      },
+      {
+       "text": "Whip the cream to soft peaks and spoon on top as waves.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Cafe 80's milkshake",

@@ -66,7 +66,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Tractor cauliflower bites",
+     "prep_min": 20,
+     "cook_min": 62,
+     "make_ahead": "Marinate up to 1 day ahead, fry fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, cut into florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey, for dipping",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the cauliflower florets in the buttermilk in the fridge for at least 1 hour.",
+       "min": 60
+      },
+      {
+       "text": "Mix the flour, paprika and salt. Lift the cauliflower out of the buttermilk and dredge in the flour.",
+       "min": 10
+      },
+      {
+       "text": "Fry in the oil at 180C in batches until crisp and tender. Drain on paper and serve hot with the honey.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Grain mill corn fritters",

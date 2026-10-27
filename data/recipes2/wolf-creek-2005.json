@@ -80,7 +80,110 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Outback roadhouse mushroom pies",
+     "prep_min": 62,
+     "cook_min": 75,
+     "make_ahead": "Filling up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "mixed mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sheets of shortcrust pastry",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets of puff pastry",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "tomato sauce, to serve",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms and onion in the oil.",
+       "min": 15
+      },
+      {
+       "text": "Stir in the flour, add the lentils, stock and soy and simmer until thick.",
+       "min": 30
+      },
+      {
+       "text": "Cool the filling.",
+       "min": 30
+      },
+      {
+       "text": "Line pie tins with shortcrust and fill with the mushroom mix.",
+       "min": 20
+      },
+      {
+       "text": "Top with puff pastry lids and brush with egg.",
+       "min": 12
+      },
+      {
+       "text": "Bake at 200C and serve with tomato sauce.",
+       "min": 30
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Campfire damper",

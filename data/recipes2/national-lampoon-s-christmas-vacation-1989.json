@@ -181,7 +181,60 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cousin Eddie's RV sausages (vegetarian)",
+     "prep_min": 12,
+     "cook_min": 23,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "vegetarian smoked sausages",
+       "aisle": "Deli"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "wholegrain mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the vegetarian sausages thick on the diagonal and slice the onions.",
+       "min": 8
+      },
+      {
+       "text": "Griddle the sausage pieces until charred.",
+       "min": 8
+      },
+      {
+       "text": "Cook the onions slowly in the butter until soft.",
+       "min": 15
+      },
+      {
+       "text": "Toss together with the mustard and spear on toothpicks.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Juicy roast turkey",
@@ -445,7 +498,50 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sledding hot chocolate (vegetarian)",
+     "prep_min": 5,
+     "cook_min": 7,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "dark chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the chocolate.",
+       "min": 3
+      },
+      {
+       "text": "Heat the milk until steaming, then whisk in the chocolate until frothy.",
+       "min": 7
+      },
+      {
+       "text": "Pour into four mugs and pile the marshmallows on top.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   }
  ]
 }

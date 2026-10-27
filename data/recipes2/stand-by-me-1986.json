@@ -42,7 +42,50 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Campfire marshmallows (vegetarian)",
+     "prep_min": 7,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "dark chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 32,
+       "u": "",
+       "item": "digestive biscuits",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt the chocolate in a bowl over hot water.",
+       "min": 5
+      },
+      {
+       "text": "Toast the marshmallows on sticks over the fire or a gas flame until blistered.",
+       "min": 5
+      },
+      {
+       "text": "Dip in the chocolate and squash between two biscuits. Eat while still gooey.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Junkyard sandwiches",
@@ -103,7 +146,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Junkyard sandwiches (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter, soft",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "plant-based ham slices",
+       "aisle": "Deli"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Butter the bread and spread with mustard.",
+       "min": 5
+      },
+      {
+       "text": "Fill with plant-based ham, cheddar and pickles.",
+       "min": 5
+      },
+      {
+       "text": "Cut in half and wrap each tightly in wax paper.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Campfire hamburger patties",

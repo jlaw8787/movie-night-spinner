@@ -102,7 +102,116 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "The headwaiter's famous tossed salad (vegetarian)",
+     "prep_min": 21,
+     "cook_min": 17,
+     "make_ahead": "Dressing and croutons up to 1 day ahead, toss just before serving",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "bread roll",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "white miso paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cos lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "butter lettuce",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Tear the bread roll into chunks, toss with olive oil and crushed garlic.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 190C until golden.",
+       "min": 10
+      },
+      {
+       "text": "Cook the eggs, then cool and halve.",
+       "min": 7
+      },
+      {
+       "text": "Mash the capers and miso with garlic, then whisk in Dijon, lemon juice, mayonnaise and the cheese.",
+       "min": 8
+      },
+      {
+       "text": "Tear the cos and butter lettuce into a big bowl.",
+       "min": 5
+      },
+      {
+       "text": "Toss with the dressing and croutons and top with the eggs and more cheese.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Opening night gruyère gougères",

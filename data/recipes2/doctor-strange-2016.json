@@ -76,7 +76,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Kathmandu momos (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Up to 1 day, uncooked and chilled",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "paneer, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cabbage, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "",
+       "item": "dumpling wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "toasted sesame seeds",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the paneer with the cabbage, spring onions, ginger, cumin and salt.",
+       "min": 10
+      },
+      {
+       "text": "Fill the wrappers and pleat closed.",
+       "min": 20
+      },
+      {
+       "text": "Steam in batches until hot through.",
+       "min": 10
+      },
+      {
+       "text": "Roast the tomatoes, then blitz with the chilli and sesame seeds into an achar to serve alongside.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pesto parmesan puff pastry pinwheels",

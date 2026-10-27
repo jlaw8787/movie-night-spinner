@@ -70,7 +70,110 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Queensboro Bridge bagels and carrot lox",
+     "prep_min": 50,
+     "cook_min": 8,
+     "make_ahead": "Carrot up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "large carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bagels",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small red onion, paper-thin slices",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful dill sprigs",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the carrots, then shave into long ribbons with the peeler. Blanch for 1 minute and drain.",
+       "min": 8
+      },
+      {
+       "text": "Toss the ribbons with the oil, soy, lemon juice and smoked paprika and chill to marinate.",
+       "min": 30
+      },
+      {
+       "text": "Whip the cream cheese with the milk until light.",
+       "min": 4
+      },
+      {
+       "text": "Split and toast the bagels.",
+       "min": 5
+      },
+      {
+       "text": "Spread thickly, then layer with the carrot, capers, onion and dill.",
+       "min": 8
+      },
+      {
+       "text": "Cut in half and serve on a board.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Elaine's crostini",
@@ -357,7 +460,7 @@
        "min": 8
       },
       {
-       "text": "Add the vinegar, remaining soy, sugar and Shaoxing and toss until glossy.",
+       "text": "Add the vinegar, remaining soy, sugar and chicken stock and toss until glossy.",
        "min": 3
       },
       {

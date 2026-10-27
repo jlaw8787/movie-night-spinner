@@ -193,7 +193,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jalapeño cheese dip with chips and mushroom jerky",
+     "prep_min": 9,
+     "cook_min": 8,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "evaporated milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "pickled jalapeño juice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pickled jalapeños",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag corn chips",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vegetarian mushroom jerky",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Grate the cheddar and chop the jalapeños.",
+       "min": 5
+      },
+      {
+       "text": "Warm the evaporated milk until steaming, then stir in the cheddar until smooth.",
+       "min": 8
+      },
+      {
+       "text": "Add the jalapeño juice and jalapeños.",
+       "min": 2
+      },
+      {
+       "text": "Pour into plastic bowls with corn chips and mushroom jerky on the side.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hacienda carnitas",

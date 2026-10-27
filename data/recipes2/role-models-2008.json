@@ -74,7 +74,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "King Argotron's roast battle mushroom drumsticks",
+     "prep_min": 11,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "vegetable oil, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "smoked paprika, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "wholegrain mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C.",
+       "min": 2
+      },
+      {
+       "text": "Halve the king oyster mushrooms lengthways, score the cut sides and rub with the oil, the crushed garlic cloves, the chopped rosemary, the smoked paprika and salt.",
+       "min": 5
+      },
+      {
+       "text": "Roast on a lined tray for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Mix the honey and the wholegrain mustard, brush over and roast 10 minutes more until sticky.",
+       "min": 12
+      },
+      {
+       "text": "Wrap the stalk ends in baking paper and serve on a board.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sturdy Wings honey soy chicken wings",
@@ -163,7 +238,102 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sturdy Wings honey soy cauliflower wings",
+     "prep_min": 13,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "soy sauce, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "knob ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "sesame seeds, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 220C.",
+       "min": 4
+      },
+      {
+       "text": "Cut the cauliflower into large florets, toss in the flour whisked with the water and the salt and bake on a lined tray for 30 to 35 minutes, turning once, until crisp.",
+       "min": 40
+      },
+      {
+       "text": "Simmer the honey, 3 tablespoons of soy, the crushed garlic cloves, the grated ginger and the rice vinegar for 3 minutes until syrupy.",
+       "min": 5
+      },
+      {
+       "text": "Toss the cauliflower in the glaze and scatter with sesame seeds and sliced spring onion.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ronnie's double cheeseburgers and fries",
@@ -218,7 +388,7 @@
      "q": 1,
      "u": "",
      "item": "jar dill pickles",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 1,

@@ -221,6 +221,213 @@
        "min": 1
       }
      ]
+    },
+    "veg": {
+     "n": "Lemon and parsley risotto with king oyster mushrooms (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 31,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1.2,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 350,
+       "u": "g",
+       "item": "carnaroli rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms into coins, dice the zucchini, dice the onion, chop the garlic and chop the parsley.",
+       "min": 12
+      },
+      {
+       "text": "Sear the mushrooms in 2 tbsp of the olive oil over high heat until golden, then set aside.",
+       "min": 6
+      },
+      {
+       "text": "Warm the vegetable stock in a saucepan. Soften the onion and garlic in the rest of the oil over medium heat for 5 minutes.",
+       "min": 7
+      },
+      {
+       "text": "Add the carnaroli rice and toast for 2 minutes, then pour in the white wine and stir until it is absorbed.",
+       "min": 3
+      },
+      {
+       "text": "Add the hot vegetable stock a ladle at a time, stirring, for 16 minutes until the rice is nearly tender, adding the zucchini for the last 5 minutes.",
+       "min": 16
+      },
+      {
+       "text": "Stir the mushrooms back in, take off the heat and stir through the butter, the parsley and a squeeze of lemon. Serve straight away, no cheese.",
+       "min": 2
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Lemon and parsley risotto with king oyster mushrooms (vegetarian, alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 31,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1.2,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 350,
+       "u": "g",
+       "item": "carnaroli rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms into coins, dice the zucchini, dice the onion, chop the garlic and chop the parsley.",
+       "min": 12
+      },
+      {
+       "text": "Sear the mushrooms in 2 tbsp of the olive oil over high heat until golden, then set aside.",
+       "min": 6
+      },
+      {
+       "text": "Warm the vegetable stock in a saucepan. Soften the onion and garlic in the rest of the oil over medium heat for 5 minutes.",
+       "min": 7
+      },
+      {
+       "text": "Add the carnaroli rice and toast for 2 minutes, then pour in the verjuice and water and stir until absorbed.",
+       "min": 3
+      },
+      {
+       "text": "Add the hot vegetable stock a ladle at a time, stirring, for 16 minutes until the rice is nearly tender, adding the zucchini for the last 5 minutes.",
+       "min": 16
+      },
+      {
+       "text": "Stir the mushrooms back in, take off the heat and stir through the butter, the parsley and a squeeze of lemon. Serve straight away, no cheese.",
+       "min": 2
+      }
+     ]
     }
    }
   },
@@ -405,6 +612,193 @@
       },
       {
        "text": "Split the risotto into three pans over low heat. Stir the spinach and basil paste into the first, the parmesan and the last 30g butter into the second, and the passata with the saffron and its water into the third.",
+       "min": 5
+      },
+      {
+       "text": "Spoon the green, white and red risotto side by side on each plate.",
+       "min": 3
+      }
+     ]
+    },
+    "veg": {
+     "n": "Risotto three ways (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 70,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "arborio rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1.4,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch basil",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tomato passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch saffron threads",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the vegetable stock in a saucepan. Soak the saffron in 2 tbsp of hot water. Blitz the baby spinach and basil leaves with a splash of the vegetable stock to a smooth paste.",
+       "min": 10
+      },
+      {
+       "text": "Soften the onion in 40g of the butter for 5 minutes, add the arborio rice and toast for 2 minutes, then add the white wine and stir until absorbed.",
+       "min": 9
+      },
+      {
+       "text": "Add the hot vegetable stock a ladle at a time, stirring, for 17 minutes until the rice is just tender.",
+       "min": 17
+      },
+      {
+       "text": "Split the risotto into three pans over low heat. Stir the spinach and basil paste into the first, the cheese and the last 30g butter into the second, and the passata with the saffron and its water into the third.",
+       "min": 5
+      },
+      {
+       "text": "Spoon the green, white and red risotto side by side on each plate.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Risotto three ways (vegetarian, alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 70,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "arborio rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.4,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch basil",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tomato passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch saffron threads",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the vegetable stock in a saucepan. Soak the saffron in 2 tbsp of hot water. Blitz the baby spinach and basil leaves with a splash of the vegetable stock to a smooth paste.",
+       "min": 10
+      },
+      {
+       "text": "Soften the onion in 40g of the butter for 5 minutes, add the arborio rice and toast for 2 minutes, then add the verjuice and water and stir until absorbed.",
+       "min": 9
+      },
+      {
+       "text": "Add the hot vegetable stock a ladle at a time, stirring, for 17 minutes until the rice is just tender.",
+       "min": 17
+      },
+      {
+       "text": "Split the risotto into three pans over low heat. Stir the spinach and basil paste into the first, the cheese and the last 30g butter into the second, and the passata with the saffron and its water into the third.",
        "min": 5
       },
       {

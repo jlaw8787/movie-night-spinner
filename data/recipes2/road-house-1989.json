@@ -86,7 +86,116 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Double Deuce smoky eggplant jalapeño poppers",
+     "prep_min": 24,
+     "cook_min": 25,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 12,
+       "u": "",
+       "item": "jalapenos",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "small eggplants, sliced lengthways very thin",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "toothpicks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the jalapenos lengthways and scrape out the seeds.",
+       "min": 8
+      },
+      {
+       "text": "Beat the cream cheese with cheddar and a third of the paprika and pack into the halves.",
+       "min": 5
+      },
+      {
+       "text": "Cut the eggplant into 24 strips, brush with the oil, maple syrup and remaining paprika and cook in a hot pan until soft.",
+       "min": 10
+      },
+      {
+       "text": "Wrap each jalapeno half in a strip of eggplant and pin with a toothpick.",
+       "min": 8
+      },
+      {
+       "text": "Bake on a rack at 200C until the eggplant is crisp at the edges.",
+       "min": 15
+      },
+      {
+       "text": "Mix the sour cream with chives, garlic powder and lemon juice for a dip.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Farm loft pickles",

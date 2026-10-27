@@ -24,7 +24,7 @@
      "q": 250,
      "u": "g",
      "item": "pickled herring",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 200,
@@ -60,7 +60,102 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pelle's pickled eggplant and new potatoes",
+     "prep_min": 20,
+     "cook_min": 87,
+     "make_ahead": "Pickle the eggplant up to 3 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large eggplant",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "white vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "allspice berries",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "new potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped chives",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the eggplant into finger strips, toss with the oil and roast at 220C for 20 minutes until soft.",
+       "min": 20
+      },
+      {
+       "text": "Warm the vinegar, water, sugar and allspice until the sugar dissolves. Pour over the hot eggplant with half the red onion and leave to pickle for 1 hour.",
+       "min": 60
+      },
+      {
+       "text": "Boil the potatoes with the dill until tender.",
+       "min": 20
+      },
+      {
+       "text": "Serve the potatoes warm with the drained eggplant, a bowl of sour cream with chives and the rest of the red onion.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hårga flower crown crudités",

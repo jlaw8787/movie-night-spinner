@@ -94,7 +94,102 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Country club Bloody Mary hearts of palm cocktail",
+     "prep_min": 19,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins hearts of palm (400g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "hot sauce, a few drops",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "celery salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baby cos lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the hearts of palm dry and cut into thick coins. Toss with a squeeze of lemon and a pinch of salt.",
+       "min": 6
+      },
+      {
+       "text": "Mix the mayonnaise with the tomato sauce, horseradish, soy sauce, hot sauce, celery salt and a squeeze of lemon.",
+       "min": 4
+      },
+      {
+       "text": "Shred the lettuce into glasses and spoon over some sauce.",
+       "min": 3
+      },
+      {
+       "text": "Pile the hearts of palm on top, spoon over more sauce, dust with paprika and serve with lemon wedges and a celery stick.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Beach kiosk fish bites with lime aioli",
@@ -193,7 +288,112 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Beach kiosk battered tofu bites with lime aioli",
+     "prep_min": 16,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet nori, crumbled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 220,
+       "u": "ml",
+       "item": "cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "sea salt, to sprinkle",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Press the tofu between paper towels under a heavy board, then cut into bite-size pieces and toss with the crumbled nori.",
+       "min": 10
+      },
+      {
+       "text": "Whisk the flour, cornflour, baking powder and soda water into a batter.",
+       "min": 3
+      },
+      {
+       "text": "Dip the tofu and fry in the oil at 180C until crisp and golden, working in batches. Drain.",
+       "min": 12
+      },
+      {
+       "text": "Mix the mayonnaise with the garlic and lime zest and juice.",
+       "min": 2
+      },
+      {
+       "text": "Sprinkle the tofu with sea salt and chilli flakes and serve with the aioli.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Steak sandwich and a steak sandwich",
@@ -625,6 +825,179 @@
       },
       {
        "text": "Stir the tomato juice, pickle brine, juice of one lemon, horseradish, Worcestershire and hot sauce in a jug.",
+       "min": 3
+      },
+      {
+       "text": "Pour into the glasses and add a celery stick and a lemon wedge.",
+       "min": 3
+      }
+     ]
+    },
+    "veg": {
+     "n": "Underhills' tab Bloody Mary (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "celery salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "vodka",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "hot sauce, several dashes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the celery salt and pepper on a saucer, wet the rims of tall glasses with lemon and dip.",
+       "min": 3
+      },
+      {
+       "text": "Fill the glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Stir the tomato juice, vodka, juice of one lemon, horseradish, soy sauce and hot sauce in a jug.",
+       "min": 3
+      },
+      {
+       "text": "Pour into the glasses and add a celery stick and a lemon wedge.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Underhills' tab Bloody Mary (vegetarian, alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "celery salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 950,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "dill pickle brine",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "hot sauce, several dashes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the celery salt and pepper on a saucer, wet the rims of tall glasses with lemon and dip.",
+       "min": 3
+      },
+      {
+       "text": "Fill the glasses with ice.",
+       "min": 1
+      },
+      {
+       "text": "Stir the tomato juice, pickle brine, juice of one lemon, horseradish, soy sauce and hot sauce in a jug.",
        "min": 3
       },
       {

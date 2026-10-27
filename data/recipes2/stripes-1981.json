@@ -72,7 +72,80 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Boot camp crackers with pimento cheese (vegetarian)",
+     "prep_min": 43,
+     "cook_min": 0,
+     "make_ahead": "Up to 3 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "vintage cheddar, finely grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "roasted red capsicum from a jar, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "cayenne pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "crackers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the cheddar with the mayonnaise, capsicum, soy sauce, cayenne and black pepper, keeping it a little chunky.",
+       "min": 8
+      },
+      {
+       "text": "Chill so the flavours settle.",
+       "min": 30
+      },
+      {
+       "text": "Spoon into a bowl, dust with paprika and serve with crackers and celery sticks.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Lighten up, Francis cocktail franks",
@@ -143,7 +216,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lighten up, Francis cocktail franks (vegetarian)",
+     "prep_min": 4,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 30,
+       "u": "",
+       "item": "vegetarian cocktail frankfurts",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "American mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar wholegrain mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the vegetarian frankfurts diagonally a few times each.",
+       "min": 3
+      },
+      {
+       "text": "Fry in the oil until the cuts open up and the outsides colour.",
+       "min": 3
+      },
+      {
+       "text": "Add the tomato sauce, honey, American mustard and soy sauce and toss until sticky and glazed.",
+       "min": 2
+      },
+      {
+       "text": "Serve on toothpicks with a pot of wholegrain mustard.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sgt Hulka's mess hall meatloaf",

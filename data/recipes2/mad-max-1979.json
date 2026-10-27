@@ -66,7 +66,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "MFP roadhouse chips (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "vegetarian chicken-style salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetarian gravy powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into thick chips and dry.",
+       "min": 10
+      },
+      {
+       "text": "Fry at 140C until cooked through.",
+       "min": 12
+      },
+      {
+       "text": "Fry again at 190C until golden.",
+       "min": 8
+      },
+      {
+       "text": "Toss in the chicken-style salt.",
+       "min": 2
+      },
+      {
+       "text": "Whisk the gravy powder into the boiling water.",
+       "min": 3
+      },
+      {
+       "text": "Serve in butcher's paper with gravy for dipping.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Goose's pickled onions",

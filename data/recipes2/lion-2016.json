@@ -173,7 +173,110 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Tasmanian smoky carrot rye bites",
+     "prep_min": 30,
+     "cook_min": 35,
+     "make_ahead": "Carrot up to 1 day ahead, assemble up to 2 hours ahead",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "large carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices of rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zested and juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs of dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch of cracked black pepper",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roast the whole carrots at 200C until just tender.",
+       "min": 35
+      },
+      {
+       "text": "Cool, peel into long ribbons and toss with the oil, smoked paprika, soy and lemon juice.",
+       "min": 10
+      },
+      {
+       "text": "Butter the rye and cut into small pieces.",
+       "min": 6
+      },
+      {
+       "text": "Whip the creme fraiche with the lemon zest.",
+       "min": 4
+      },
+      {
+       "text": "Top each piece with carrot ribbons, a spoon of cream, capers and dill.",
+       "min": 8
+      },
+      {
+       "text": "Finish with black pepper.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Village dal and rice",

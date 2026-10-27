@@ -374,7 +374,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mr Glass lemon and berry jelly (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 100,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "blueberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "raspberries",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the agar and sugar into the water, bring to the boil and simmer for 2 minutes, stirring.",
+       "min": 7
+      },
+      {
+       "text": "Take off the heat and stir in the juice of the lemons.",
+       "min": 3
+      },
+      {
+       "text": "Divide the berries among round glasses and pour over the jelly.",
+       "min": 10
+      },
+      {
+       "text": "Chill until clear and set, about 90 minutes.",
+       "min": 90
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Green poncho honey ginger tea",

@@ -58,7 +58,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Nakatomi party canapés (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Carrot and lentils up to 1 day, assemble just before serving",
+     "ingredients": [
+      {
+       "q": 40,
+       "u": "g",
+       "item": "black lentils",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "cocktail blini",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "crème fraîche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch dill",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the lentils until just tender, drain and dress with 1 tsp of the soy.",
+       "min": 20
+      },
+      {
+       "text": "Peel the carrots into long ribbons, blanch for 1 minute, drain and toss with the oil, the rest of the soy, lemon juice and smoked paprika.",
+       "min": 10
+      },
+      {
+       "text": "Warm the blini on a tray at 180C.",
+       "min": 4
+      },
+      {
+       "text": "Top each with crème fraîche and a curl of carrot.",
+       "min": 6
+      },
+      {
+       "text": "Finish with a few lentils and a dill sprig and pass around on a tray straight away.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Argyle's limo snacks",

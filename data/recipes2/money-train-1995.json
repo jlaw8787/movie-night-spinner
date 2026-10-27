@@ -526,6 +526,155 @@
        "min": 2
       }
      ]
+    },
+    "veg": {
+     "n": "Money Train payday michelada (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "flaky salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "limes, juiced, with some cut into wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "dashes hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dashes soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles cold lager, 375ml each",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt and chilli powder on a plate.",
+       "min": 2
+      },
+      {
+       "text": "Rub a lime wedge around each of 4 glass rims and dip in the chilli salt.",
+       "min": 3
+      },
+      {
+       "text": "Add ice, a good squeeze of lime juice, the tomato juice, hot sauce and soy, dividing evenly.",
+       "min": 3
+      },
+      {
+       "text": "Top each with a cold lager, stir gently and slip the glasses into small paper bags.",
+       "min": 2
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Money Train payday michelada (vegetarian, alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "flaky salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "limes, juiced, with some cut into wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "dashes hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dashes soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles cold alcohol-free lager, 375ml each",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt and chilli powder on a plate.",
+       "min": 2
+      },
+      {
+       "text": "Rub a lime wedge around each of 4 glass rims and dip in the chilli salt.",
+       "min": 3
+      },
+      {
+       "text": "Add ice, a good squeeze of lime juice, the tomato juice, hot sauce and soy, dividing evenly.",
+       "min": 3
+      },
+      {
+       "text": "Top each with a cold alcohol-free lager, stir gently and slip the glasses into small paper bags.",
+       "min": 2
+      }
+     ]
     }
    }
   }

@@ -58,7 +58,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ben's Famous pizza bites (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 8,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "slices plant-based pepperoni",
+       "aisle": "Deli"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour, for dusting",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 230C with a tray inside.",
+       "min": 5
+      },
+      {
+       "text": "Roll out the dough on a floured bench and cut into rounds.",
+       "min": 10
+      },
+      {
+       "text": "Spread each round with sauce, then add mozzarella and a slice of plant-based pepperoni.",
+       "min": 10
+      },
+      {
+       "text": "Bake on the hot tray until the bases are crisp and the cheese bubbles.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pug cookies",

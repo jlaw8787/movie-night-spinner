@@ -60,7 +60,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pan-Pacific canapés (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 0,
+     "make_ahead": "Up to 4 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 12,
+       "u": "",
+       "item": "blinis",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "crème fraîche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cooked beetroot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "goat's cheese",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the beetroot paper thin and dress with a squeeze of lemon.",
+       "min": 5
+      },
+      {
+       "text": "Top the blinis with crème fraîche, folds of beetroot and dill.",
+       "min": 10
+      },
+      {
+       "text": "Cut the cucumber into thick rounds, scoop a small hollow in each and whip the goat's cheese smooth.",
+       "min": 8
+      },
+      {
+       "text": "Fill the cucumber cups with the cheese and lay everything on trays.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Spanish potato tortilla",

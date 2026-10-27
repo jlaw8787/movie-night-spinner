@@ -98,7 +98,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sweet and Dude mushroom spring rolls",
+     "prep_min": 35,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "savoy cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetarian mushroom oyster sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "spring roll wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "sweet chilli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the finely chopped button mushrooms in a little of the oil until browned, add the finely shredded cabbage, the grated carrot, the crushed garlic cloves, the vegetarian mushroom oyster sauce and the soy, and cook 3 minutes.",
+       "min": 12
+      },
+      {
+       "text": "Cool completely.",
+       "min": 5
+      },
+      {
+       "text": "Roll the filling in each of the spring roll wrappers, sealing the edge with a little water.",
+       "min": 14
+      },
+      {
+       "text": "Deep fry at 180C for 3 to 4 minutes until golden, then drain on paper towel.",
+       "min": 11
+      },
+      {
+       "text": "Stir the juice of the lime into the sweet chilli sauce and serve with coriander.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Zoltan's popping candy caramel corn",

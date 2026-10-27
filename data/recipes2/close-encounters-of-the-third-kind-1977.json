@@ -113,7 +113,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Five-note crackers (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 0,
+     "make_ahead": "Assemble just before serving so the crackers stay crisp",
+     "ingredients": [
+      {
+       "q": 20,
+       "u": "",
+       "item": "seeded crackers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "vegetarian mushroom pâté",
+       "aisle": "Deli"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "cheddar, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small cooked beetroot, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sprig dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "figs, halved",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Lay the crackers out in rows of five.",
+       "min": 3
+      },
+      {
+       "text": "Top each row with a different note: cream cheese, mushroom pâté, cheddar, beetroot with dill, and fig.",
+       "min": 15
+      },
+      {
+       "text": "Serve straight away.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mashed potato mountain",

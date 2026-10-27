@@ -72,7 +72,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cheesy smoky mushroom cob loaf",
+     "prep_min": 25,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "cob loaf",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "button mushrooms, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet French onion soup mix",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in the oil with the smoked paprika until browned and dry.",
+       "min": 8
+      },
+      {
+       "text": "Hollow out the cob loaf, keeping the lid.",
+       "min": 5
+      },
+      {
+       "text": "Mix the cream cheese, sour cream, mushrooms, cheddar and soup mix.",
+       "min": 5
+      },
+      {
+       "text": "Fill the loaf and wrap in foil.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 180C.",
+       "min": 40
+      },
+      {
+       "text": "Tear the hollowed bread into chunks for dipping.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Blues bar wings",
@@ -141,7 +226,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Blues bar cauliflower wings",
+     "prep_min": 15,
+     "cook_min": 37,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, cut into florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "blue cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the flour, milk and salt into a thick batter and coat the cauliflower florets.",
+       "min": 8
+      },
+      {
+       "text": "Spread on a lined tray and bake at 220C until crisp at the edges.",
+       "min": 30
+      },
+      {
+       "text": "Melt the butter with the hot sauce, toss the cauliflower through and bake 5 minutes more.",
+       "min": 8
+      },
+      {
+       "text": "Mash the blue cheese into the sour cream for the dip.",
+       "min": 4
+      },
+      {
+       "text": "Serve with celery sticks.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Shermer house party pizza",

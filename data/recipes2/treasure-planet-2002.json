@@ -52,7 +52,64 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Spinach and cheese puff pastry triangles",
+     "prep_min": 22,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Wilt the spinach in a dry pan, cool and squeeze out the water.",
+       "min": 8
+      },
+      {
+       "text": "Cut the pastry into squares and grate the cheese.",
+       "min": 5
+      },
+      {
+       "text": "Fill each with spinach and cheddar, fold into triangles and press the edges with a fork.",
+       "min": 10
+      },
+      {
+       "text": "Brush with beaten egg.",
+       "min": 2
+      },
+      {
+       "text": "Bake until golden.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Purp fruit platter",

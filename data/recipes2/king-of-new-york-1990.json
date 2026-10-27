@@ -64,7 +64,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chinatown dumplings (vegetarian)",
+     "prep_min": 6,
+     "cook_min": 10,
+     "make_ahead": "Best eaten straight away",
+     "ingredients": [
+      {
+       "q": 12,
+       "u": "",
+       "item": "frozen vegetable dumplings",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "black vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the black vinegar, soy sauce and chilli oil for dipping.",
+       "min": 3
+      },
+      {
+       "text": "Heat the oil in a non-stick pan over medium-high heat and pan-fry the dumplings until the bottoms crisp.",
+       "min": 3
+      },
+      {
+       "text": "Add the water, cover straight away and steam until cooked through (or the packet time), then remove the lid and let the water evaporate.",
+       "min": 9
+      },
+      {
+       "text": "Serve with the dipping sauce.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Plaza Hotel prawn cocktail",
@@ -129,7 +194,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Plaza Hotel hearts of palm cocktail",
+     "prep_min": 19,
+     "cook_min": 0,
+     "make_ahead": "Hearts of palm and sauce up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tinned hearts of palm, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "horseradish",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "iceberg lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "soy sauce, a dash",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the hearts of palm into thick rounds, toss with the juice of half the lemon and chill.",
+       "min": 6
+      },
+      {
+       "text": "Mix the tomato sauce, horseradish, juice of the other half lemon and a dash of soy.",
+       "min": 5
+      },
+      {
+       "text": "Fill 4 glasses with shredded iceberg, pile the hearts of palm on top and spoon the sauce in the middle.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Frank's Plaza steak dinner",

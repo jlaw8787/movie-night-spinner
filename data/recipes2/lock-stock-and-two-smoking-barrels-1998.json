@@ -64,7 +64,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Smoked tofu and horseradish pâté",
+     "prep_min": 15,
+     "cook_min": 5,
+     "make_ahead": "Up to 2 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "horseradish",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "cracked black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "slices rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Crumble the smoked tofu into a food processor.",
+       "min": 5
+      },
+      {
+       "text": "Blitz with the cream cheese, horseradish, lemon juice and black pepper until mostly smooth.",
+       "min": 5
+      },
+      {
+       "text": "Toast the rye.",
+       "min": 5
+      },
+      {
+       "text": "Spread on the toast and top with thin cucumber slices.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hatchet Harry's vinegar pork scratchings",
@@ -121,7 +192,70 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hatchet Harry's vinegar rice paper crackling",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "Best eaten the same day",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "rice paper sheets",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the rice paper into strips with scissors.",
+       "min": 10
+      },
+      {
+       "text": "Heat the oil to 190C in a deep pot.",
+       "min": 10
+      },
+      {
+       "text": "Fry a few strips at a time for a few seconds until puffed and crackling, then drain on paper towel.",
+       "min": 15
+      },
+      {
+       "text": "Brush very lightly with malt vinegar while hot, then toss in the salt flakes and paprika.",
+       "min": 5
+      },
+      {
+       "text": "Tip into paper bags.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Big Chris's pie and chips",

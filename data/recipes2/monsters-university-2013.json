@@ -74,7 +74,104 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Frat house party cauliflower bites",
+     "prep_min": 19,
+     "cook_min": 45,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Spices"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chives, snipped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cauliflower into large florets.",
+       "min": 8
+      },
+      {
+       "text": "Whisk the flour, milk and salt into a batter and coat the florets.",
+       "min": 6
+      },
+      {
+       "text": "Spread on an oiled tray, drizzle with the rest of the oil and bake at 220C until crisp.",
+       "min": 30
+      },
+      {
+       "text": "Warm the barbecue sauce with the honey.",
+       "min": 5
+      },
+      {
+       "text": "Toss the florets through the sauce and bake again until sticky.",
+       "min": 10
+      },
+      {
+       "text": "Mix the sour cream with the mayonnaise and chives for a ranch dip and serve alongside.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Scare Games cheese fries",

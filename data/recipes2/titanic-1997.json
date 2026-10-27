@@ -60,7 +60,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "First class oyster mushrooms",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Mignonette up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "piece kombu, about 10cm",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, cut into wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "cup",
+       "item": "crushed ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the shallots with the vinegar and cracked pepper.",
+       "min": 5
+      },
+      {
+       "text": "Rest the mignonette for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Slice the mushroom stems into thick coins, simmer for 2 minutes in a pot of water with the kombu and salt, then drain into iced water.",
+       "min": 10
+      },
+      {
+       "text": "Lay the mushrooms in Chinese soup spoons on crushed ice with lemon wedges and spoon over the mignonette.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "King of the world ham sandwiches",
@@ -115,7 +192,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "King of the world cheddar and pickle sandwiches",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty Italian loaf",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "vintage cheddar, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "brown pickle",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "hot English mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "small potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes in their skins until tender.",
+       "min": 20
+      },
+      {
+       "text": "Butter thick slices of loaf and fill with cheddar, pickle and mustard.",
+       "min": 10
+      },
+      {
+       "text": "Toss the drained potatoes with butter and salt. Serve together below deck.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Molly Brown's first class filet mignon",

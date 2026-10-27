@@ -58,7 +58,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Late-night office pizza (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plant-based pepperoni, sliced",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stretch the dough thin on a tray.",
+       "min": 8
+      },
+      {
+       "text": "Spread with sauce and scatter with mozzarella, plant-based pepperoni and oregano.",
+       "min": 7
+      },
+      {
+       "text": "Bake at 250C until bubbling.",
+       "min": 10
+      },
+      {
+       "text": "Cut and put back in a box.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Kiss cam ballpark hot dogs",
@@ -113,7 +172,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Kiss cam ballpark hot dogs (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 35,
+     "make_ahead": "Onions up to 1 day, grill the sausages fresh",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian hot dog sausages",
+       "aisle": "Deli"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "hot dog buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the onions and fry slowly in the oil until soft and golden.",
+       "min": 30
+      },
+      {
+       "text": "Grill the veggie sausages until they blister.",
+       "min": 8
+      },
+      {
+       "text": "Tuck into soft buns with the onions and mustard and wrap in paper.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Peppercorn steak with roast potatoes",

@@ -82,7 +82,102 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chinese restaurant spring rolls (vegetarian)",
+     "prep_min": 50,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 50,
+       "u": "g",
+       "item": "rice vermicelli",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "shiitake mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "wombok, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "spring roll pastry sheets",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil, for the filling",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "sweet chilli sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the vermicelli until soft, drain and chop.",
+       "min": 8
+      },
+      {
+       "text": "Shred the wombok, grate the carrots and chop the mushrooms.",
+       "min": 10
+      },
+      {
+       "text": "Cook the mushrooms in the tablespoon of oil until browned, then stir in the soy sauce.",
+       "min": 8
+      },
+      {
+       "text": "Mix the mushrooms with the vermicelli and vegetables and cool.",
+       "min": 10
+      },
+      {
+       "text": "Roll tightly in the spring roll pastry.",
+       "min": 20
+      },
+      {
+       "text": "Fry at 180C in batches until crisp and blistered.",
+       "min": 12
+      },
+      {
+       "text": "Serve hot with sweet chilli sauce.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Garage rehearsal popcorn chicken",
@@ -159,7 +254,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Garage rehearsal popcorn cauliflower",
+     "prep_min": 24,
+     "cook_min": 16,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Spices"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cauliflower into bite-size florets.",
+       "min": 10
+      },
+      {
+       "text": "Mix the flour, panko, paprika and salt. Dip the cauliflower in egg, then in the crumb mix.",
+       "min": 12
+      },
+      {
+       "text": "Shallow fry in batches until golden and just tender.",
+       "min": 16
+      },
+      {
+       "text": "Drain and serve with honey mustard.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Honey chicken",

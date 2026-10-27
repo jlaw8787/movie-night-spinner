@@ -84,7 +84,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pigsty Alley mushroom buns",
+     "prep_min": 31,
+     "cook_min": 100,
+     "make_ahead": "Fill and steam on the day",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 7,
+       "u": "g",
+       "item": "dried yeast",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 220,
+       "u": "ml",
+       "item": "warm water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 350,
+       "u": "g",
+       "item": "Swiss brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "hoisin sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "caster sugar, for the filling",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the flour, yeast, sugar and warm water into a dough and knead.",
+       "min": 12
+      },
+      {
+       "text": "Prove the dough.",
+       "min": 60
+      },
+      {
+       "text": "Dice the mushrooms and fry hard in the oil until browned, then add the soy, hoisin and sugar and cook until sticky. Cool.",
+       "min": 12
+      },
+      {
+       "text": "Divide the dough into 12 rounds, fill and pleat shut.",
+       "min": 15
+      },
+      {
+       "text": "Prove again.",
+       "min": 20
+      },
+      {
+       "text": "Steam.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "The baker's doughnuts",

@@ -70,7 +70,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bed Bug Eddie's mushrooms oreganata",
+     "prep_min": 6,
+     "cook_min": 10,
+     "make_ahead": "Top up to 3 hours ahead, keep chilled; grill to serve",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "cup mushrooms, stalks removed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Sit the mushrooms gill side up in a baking dish with the water and bake at 200C for 8 minutes.",
+       "min": 8
+      },
+      {
+       "text": "Mix the breadcrumbs, garlic, oregano, cheese and olive oil and top each mushroom.",
+       "min": 5
+      },
+      {
+       "text": "Grill for 3 minutes until golden.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Waiter's antipasto",
@@ -137,7 +204,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Waiter's antipasto (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "Up to 2 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "rockmelon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "chargrilled eggplant in oil, drained",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch basil",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 220,
+       "u": "g",
+       "item": "bocconcini",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "cracked black pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the rockmelon into 12 skinless wedges and drape with the chargrilled eggplant.",
+       "min": 8
+      },
+      {
+       "text": "Blitz the basil with olive oil and salt.",
+       "min": 3
+      },
+      {
+       "text": "Drain the bocconcini, dress with the basil oil and pepper, and serve beside the melon.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Veal marsala",

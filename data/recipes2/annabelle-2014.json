@@ -64,7 +64,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Stovetop smoky maple pecan brown butter popcorn",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "g",
+       "item": "pecans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "popcorn kernels",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch flaky sea salt",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toast the pecans in a dry pan, add 1 tbsp of the maple syrup and the paprika and stir until sticky. Cool on baking paper and chop.",
+       "min": 7
+      },
+      {
+       "text": "Heat the oil in a heavy pot over medium heat, add the kernels, cover and shake constantly until the popping slows. Pull it off straight away.",
+       "min": 6
+      },
+      {
+       "text": "Cook the butter in a small pan until golden brown and nutty, then stir in the rest of the maple syrup.",
+       "min": 4
+      },
+      {
+       "text": "Pour over the popcorn and toss with the pecans and a good pinch of salt.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "1969 cocktail party bites",
@@ -143,7 +214,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "1969 cocktail party bites (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "vegetarian cocktail sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grape jelly",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "celery sticks, cut into boats",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "olives, sliced",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs for 10 minutes, cool, peel and halve. Whip the yolks with mayo and paprika and pipe back in.",
+       "min": 20
+      },
+      {
+       "text": "Brown the sausages in the oil, then simmer in the barbecue sauce and grape jelly until sticky.",
+       "min": 12
+      },
+      {
+       "text": "Fill the celery boats with cream cheese and sliced olives.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chicken and rice mushroom casserole",
@@ -273,7 +429,7 @@
       {
        "q": 50,
        "u": "g",
-       "item": "parmesan, grated",
+       "item": "vegetarian parmesan-style cheese, grated",
        "aisle": "Dairy"
       }
      ],

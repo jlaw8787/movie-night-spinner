@@ -50,7 +50,58 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Smoked tofu and cheddar snack plate",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet crackers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sharp cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "apple, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pickled onions",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the smoked tofu thin and fan it out on a wooden board.",
+       "min": 3
+      },
+      {
+       "text": "Add the crackers, cheddar, apple and pickled onions the way a mountain lodge would set it out.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Seven-day pickles",

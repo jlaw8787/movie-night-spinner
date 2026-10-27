@@ -58,7 +58,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Paris café chocolate and spinach croissants",
+     "prep_min": 25,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "dark chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "baby spinach leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vegetarian gruyere-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the pastry into long triangles.",
+       "min": 6
+      },
+      {
+       "text": "Lay a stick of chocolate, or a pinch of spinach and cheese, at the wide end and roll up towards the point.",
+       "min": 6
+      },
+      {
+       "text": "Curve into crescents and brush with beaten egg.",
+       "min": 3
+      },
+      {
+       "text": "Bake at 200C until puffed and golden.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Spinning top meatballs",
@@ -133,7 +192,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Spinning top meatballs (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves garlic, divided",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the plant-based mince with crushed garlic, cumin, chopped parsley and salt.",
+       "min": 8
+      },
+      {
+       "text": "Roll into small balls.",
+       "min": 8
+      },
+      {
+       "text": "Bake at 200C until browned.",
+       "min": 15
+      },
+      {
+       "text": "Mix the yoghurt with the rest of the crushed garlic.",
+       "min": 3
+      },
+      {
+       "text": "Spear each ball upright on a toothpick and serve with the yoghurt.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Saito's teriyaki salmon bento box",

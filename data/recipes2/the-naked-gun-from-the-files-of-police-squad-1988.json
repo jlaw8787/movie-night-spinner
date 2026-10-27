@@ -81,7 +81,56 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Umpire's hot dogs (vegetarian)",
+     "prep_min": 5,
+     "cook_min": 8,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian franks",
+       "aisle": "Deli"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "hot dog buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "sweet relish",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the vegetarian franks, then griddle until blistered.",
+       "min": 8
+      },
+      {
+       "text": "Steam the buns over the pot.",
+       "min": 1
+      },
+      {
+       "text": "Load each with a frank, mustard and relish and wrap in paper.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ballpark chilli dogs",

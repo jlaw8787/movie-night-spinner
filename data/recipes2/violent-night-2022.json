@@ -64,7 +64,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Gertrude Lightstone's blinis with black lentil caviar",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "cocktail blinis",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "black lentils",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch chives, snipped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the lentils in plenty of water until just tender, drain, then dress with the soy sauce and a few drops of lemon juice and cool.",
+       "min": 25
+      },
+      {
+       "text": "Warm the blinis on a tray at 180C.",
+       "min": 5
+      },
+      {
+       "text": "Mix the creme fraiche with the lemon zest and a pinch of salt. Crumble the smoked tofu into small flakes.",
+       "min": 6
+      },
+      {
+       "text": "Top each blini with creme fraiche, a few flakes of tofu and a little spoon of the lentils.",
+       "min": 8
+      },
+      {
+       "text": "Finish with chives and cracked pepper and serve with lemon wedges.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Naughty list brown butter shortbread",

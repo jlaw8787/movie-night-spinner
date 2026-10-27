@@ -70,7 +70,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Second breakfast fry-up (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 180,
+       "u": "g",
+       "item": "haloumi, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices of white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter, for the toast",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "marmalade",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Grill the haloumi and tomatoes until golden.",
+       "min": 12
+      },
+      {
+       "text": "Fry the mushrooms in the butter.",
+       "min": 8
+      },
+      {
+       "text": "Toast the bread and spread with butter and marmalade.",
+       "min": 5
+      },
+      {
+       "text": "Serve on a big platter.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Farmer Maggot's gruyère stuffed mushrooms",

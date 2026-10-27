@@ -58,7 +58,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Philly mushroom cheesesteak bites",
+     "prep_min": 15,
+     "cook_min": 14,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "Swiss brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "slices vegetarian provolone-style cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "mini bread rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms and onion thin.",
+       "min": 10
+      },
+      {
+       "text": "Sear the onion on a hot plate in oil until soft, then push aside and sear the mushrooms hard until browned. Season with salt and pepper.",
+       "min": 12
+      },
+      {
+       "text": "Lay the cheese over the mushrooms to melt.",
+       "min": 2
+      },
+      {
+       "text": "Split the rolls and pile the filling in.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Italian Market antipasto",
@@ -125,7 +190,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Italian Market antipasto (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "Up to 4 hours, cover and keep chilled",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "chargrilled eggplant",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "marinated mushrooms",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "vegetarian provolone-style cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar artichoke hearts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar roasted capsicum",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Italian loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Drain the artichokes, olives, capsicum, eggplant and mushrooms.",
+       "min": 3
+      },
+      {
+       "text": "Arrange the vegetables and sliced cheese on a board with the olives.",
+       "min": 10
+      },
+      {
+       "text": "Serve with the loaf torn into pieces.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Meat locker steak",

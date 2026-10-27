@@ -74,7 +74,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Border run empanadas (vegetarian)",
+     "prep_min": 40,
+     "cook_min": 24,
+     "make_ahead": "Filled and uncooked up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin brown lentils (400 g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "pitted green olives, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sheets shortcrust pastry",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil two of the eggs until hard, then cool, peel and chop.",
+       "min": 12
+      },
+      {
+       "text": "Fry the mushrooms and onion in the oil with the cumin and paprika until browned, then stir in the lentils.",
+       "min": 12
+      },
+      {
+       "text": "Stir in the chopped eggs and olives and cool the filling.",
+       "min": 8
+      },
+      {
+       "text": "Cut the pastry into 12 rounds, fill, fold and crimp the edges.",
+       "min": 12
+      },
+      {
+       "text": "Brush with the remaining beaten egg. Bake at 200C until golden.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Enrique's bean and cheese quesadillas",

@@ -58,7 +58,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Splinter's sewer lair spinach and olive rolls",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "baby spinach, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "black olives, sliced",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour, for rolling",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roll the dough into a rectangle on a floured bench and spread with pizza sauce.",
+       "min": 10
+      },
+      {
+       "text": "Scatter with mozzarella, spinach and olives and roll up from the long side.",
+       "min": 5
+      },
+      {
+       "text": "Cut into twelve rolls and sit in a lined tin.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 200C until golden.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Turtle shell guacamole",

@@ -137,7 +137,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Freighter stores crackers (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 13,
+     "make_ahead": "Up to 2 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "oyster mushrooms, torn into 16 pieces",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zested",
+       "aisle": "Produce"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "seeded crackers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "cracked pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in the oil until golden, then toss with the soy and smoked paprika and cool.",
+       "min": 13
+      },
+      {
+       "text": "Whip the cream cheese with the lemon zest.",
+       "min": 4
+      },
+      {
+       "text": "Spread onto the crackers.",
+       "min": 5
+      },
+      {
+       "text": "Top each with a piece of mushroom, cracked pepper and snipped chives. Serve straight away.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Nostromo crew dinner",

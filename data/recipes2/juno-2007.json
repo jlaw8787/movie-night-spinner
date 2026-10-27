@@ -127,7 +127,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hamburger phone sliders (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 5,
+     "make_ahead": "Shape up to 4 hours ahead, cook fresh",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slider buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sesame seeds",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Shape the plant-based mince into 8 small patties and season well with salt and pepper.",
+       "min": 8
+      },
+      {
+       "text": "Fry for 2 minutes a side, adding a slice of cheddar to each at the end.",
+       "min": 5
+      },
+      {
+       "text": "Split the buns and add tomato sauce and pickles. Stack the patties in, scatter sesame seeds and push a toothpick through each.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Minnesota tater tot hotdish",
@@ -332,7 +399,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Blue raspberry jelly trifle cups (vegetarian)",
+     "prep_min": 22,
+     "cook_min": 120,
+     "make_ahead": "Up to 1 day, top just before serving",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "blue food colouring, a few drops",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "raspberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thick vanilla custard",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "shortbread biscuits, crushed",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bring the water, sugar and agar to the boil and simmer for 2 minutes, stirring. Take off the heat and stir in the lemon juice and blue colouring.",
+       "min": 8
+      },
+      {
+       "text": "Drop a few raspberries into 4 clear cups and pour in the jelly.",
+       "min": 4
+      },
+      {
+       "text": "Chill for 2 hours until set.",
+       "min": 120
+      },
+      {
+       "text": "Spoon the custard over the jelly. Whip the cream to soft peaks and spoon on top.",
+       "min": 8
+      },
+      {
+       "text": "Finish with the crushed shortbread and the rest of the raspberries just before serving.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Big jug of orange",

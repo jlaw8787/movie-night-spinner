@@ -405,7 +405,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Night guard thermos hot chocolate (vegetarian)",
+     "prep_min": 5,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "dark chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cocoa powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch ground cinnamon",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag vegetarian marshmallows",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the milk until steaming.",
+       "min": 5
+      },
+      {
+       "text": "Whisk in the chopped chocolate, cocoa, sugar and cinnamon until smooth.",
+       "min": 5
+      },
+      {
+       "text": "Pour into a warmed thermos to keep hot, then serve in mugs topped with marshmallows.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   }
  ]
 }

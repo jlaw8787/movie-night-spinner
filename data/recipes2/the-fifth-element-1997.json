@@ -64,7 +64,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Noodle boat dumplings (vegetarian)",
+     "prep_min": 3,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 24,
+       "u": "",
+       "item": "frozen vegetable dumplings",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "black vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chilli oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "spring onion, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the black vinegar, chilli oil and spring onion for dipping.",
+       "min": 3
+      },
+      {
+       "text": "Heat the oil in a large non-stick pan and add the dumplings flat side down until golden.",
+       "min": 2
+      },
+      {
+       "text": "Add the water, cover and steam until the water is gone.",
+       "min": 6
+      },
+      {
+       "text": "Fry one more minute to re-crisp the bottoms and serve with the dip.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Fhloston Paradise prawns",
@@ -139,7 +204,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fhloston Paradise tofu skewers",
+     "prep_min": 22,
+     "cook_min": 6,
+     "make_ahead": "Tofu can marinate up to 2 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "sweet chilli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "skewers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Press the tofu dry with paper towel and cut into 24 cubes.",
+       "min": 10
+      },
+      {
+       "text": "Toss with the garlic, chilli, zest and juice of one lime and the oil.",
+       "min": 3
+      },
+      {
+       "text": "Thread onto skewers.",
+       "min": 7
+      },
+      {
+       "text": "Grill or griddle on high until golden and charred.",
+       "min": 6
+      },
+      {
+       "text": "Serve on ice with the sweet chilli sauce and wedges of the other lime.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Flying noodle boat noodles",
@@ -234,8 +380,8 @@
    "alt": {
     "af": {
      "n": "Flying noodle boat noodles",
-     "prep_min": 20,
-     "cook_min": 12,
+     "prep_min": 15,
+     "cook_min": 10,
      "make_ahead": "",
      "ingredients": [
       {
@@ -311,7 +457,7 @@
        "min": 2
       },
       {
-       "text": "Add the udon, oyster sauce, remaining soy sauce and wine and toss until glossy.",
+       "text": "Add the udon, oyster sauce, remaining soy sauce and chicken stock and toss until glossy.",
        "min": 4
       },
       {
@@ -584,7 +730,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Diva Plavalaguna blue jelly (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 92,
+     "make_ahead": "Make the day before, lemon at the table",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.5,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "dried butterfly pea flowers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bring the coconut milk to the boil with half the sugar and half the agar, stirring, and simmer for 2 minutes.",
+       "min": 8
+      },
+      {
+       "text": "Pour into four glasses and chill until set.",
+       "min": 30
+      },
+      {
+       "text": "Steep the butterfly pea flowers in the boiling water, strain, then boil with the remaining sugar and agar for 2 minutes.",
+       "min": 12
+      },
+      {
+       "text": "Cool for 5 minutes, then pour gently over the set coconut layer and chill until set.",
+       "min": 60
+      },
+      {
+       "text": "At the table, squeeze lemon over the top and watch it turn purple.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Multipass dirty martini",

@@ -179,6 +179,183 @@
        "min": 3
       }
      ]
+    },
+    "veg": {
+     "n": "Beer-battered Tassie chips (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "lager",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "vegetarian chicken-style salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into thick chips and parboil, then drain and steam dry.",
+       "min": 20
+      },
+      {
+       "text": "Whisk the flour with the cold lager and salt.",
+       "min": 5
+      },
+      {
+       "text": "Dip the chips in the batter.",
+       "min": 5
+      },
+      {
+       "text": "Fry in batches at 180C until golden.",
+       "min": 25
+      },
+      {
+       "text": "Drain and toss with the chicken-style salt.",
+       "min": 2
+      },
+      {
+       "text": "Mix the mayonnaise with garlic and lemon juice for dipping.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Battered Tassie chips (vegetarian, alcohol-free)",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "vegetarian chicken-style salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into thick chips and parboil, then drain and steam dry.",
+       "min": 20
+      },
+      {
+       "text": "Whisk the flour with the cold soda water and salt.",
+       "min": 5
+      },
+      {
+       "text": "Dip the chips in the batter.",
+       "min": 5
+      },
+      {
+       "text": "Fry in batches at 180C until golden.",
+       "min": 25
+      },
+      {
+       "text": "Drain and toss with the chicken-style salt.",
+       "min": 2
+      },
+      {
+       "text": "Mix the mayonnaise with garlic and lemon juice for dipping.",
+       "min": 3
+      }
+     ]
     }
    }
   },
@@ -259,7 +436,86 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rock and roll king oyster mushroom pies",
+     "prep_min": 30,
+     "cook_min": 50,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "curry powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets shortcrust pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the onion in half the butter.",
+       "min": 8
+      },
+      {
+       "text": "Add the curry powder and cream and simmer until thick.",
+       "min": 10
+      },
+      {
+       "text": "Cut the mushrooms into thick coins, sear in the rest of the butter until golden, stir into the sauce and cool.",
+       "min": 15
+      },
+      {
+       "text": "Line patty tins with shortcrust and fill.",
+       "min": 12
+      },
+      {
+       "text": "Top with puff.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 200C until golden.",
+       "min": 28
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Apple cider pork",

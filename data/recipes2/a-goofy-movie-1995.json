@@ -82,7 +82,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Perfect Cast haloumi fingers",
+     "prep_min": 17,
+     "cook_min": 8,
+     "make_ahead": "Crumb up to 4 hours ahead, fry just before serving",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "dill pickles, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, cut into wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the haloumi into thick fingers and crumb them in flour, egg, then panko.",
+       "min": 10
+      },
+      {
+       "text": "Stir the mayonnaise with the pickles and capers for the tartare.",
+       "min": 5
+      },
+      {
+       "text": "Fry in batches at 180C for about 2 minutes until golden, then drain.",
+       "min": 8
+      },
+      {
+       "text": "Serve with the tartare and lemon wedges.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Powerline concert nachos",
@@ -183,7 +266,120 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Powerline concert nachos (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 5,
+     "make_ahead": "Mince and salsa up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "mild taco spice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "corn chips",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "avocados",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Brown the plant-based mince with the onion in the oil.",
+       "min": 8
+      },
+      {
+       "text": "Add the taco spice, black beans and water and simmer.",
+       "min": 5
+      },
+      {
+       "text": "Spread the corn chips on a large tray, spoon over the mince mix and cover with cheddar, then bake until melted.",
+       "min": 8
+      },
+      {
+       "text": "Mash the avocados with lime and salt, dice the tomatoes with coriander, and top the nachos with guacamole, salsa and sour cream.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pete's RV barbecue sausages",
@@ -376,7 +572,46 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bigfoot campsite s'mores (vegetarian)",
+     "prep_min": 3,
+     "cook_min": 2,
+     "make_ahead": "Best made fresh",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "large vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 32,
+       "u": "",
+       "item": "plain biscuits",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "milk chocolate",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toast the marshmallows on skewers over a gas flame or under a hot grill until golden.",
+       "min": 4
+      },
+      {
+       "text": "Squash each between two biscuits with a square of milk chocolate and leave 30 seconds so the chocolate starts to melt.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Concert night cherry slushie",

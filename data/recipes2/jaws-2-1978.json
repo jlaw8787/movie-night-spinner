@@ -60,7 +60,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sailing trip sandwiches (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "Up to 3 hours, wrap tight",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins chickpeas (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Spices"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft bread rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "avocado, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cos lettuce",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roughly smash the chickpeas with a fork and mix with the mayo, lemon juice, salt and pepper.",
+       "min": 5
+      },
+      {
+       "text": "Pile into the rolls with sliced avocado and crisp cos.",
+       "min": 7
+      },
+      {
+       "text": "Wrap tight in paper for the boat.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Amity Island fried clams",
@@ -131,7 +198,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Amity Island fried king oyster mushrooms",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "king oyster mushrooms, stems sliced into rings",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "fine cornmeal",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tartare sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, cut into wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the mushroom rings in buttermilk for 15 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Mix the cornmeal and flour and dredge the mushrooms.",
+       "min": 5
+      },
+      {
+       "text": "Fry at 185C for 2 minutes, in batches.",
+       "min": 10
+      },
+      {
+       "text": "Serve with tartare and lemon wedges.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Cable Junction clambake",

@@ -58,7 +58,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Grape soda badge jellies (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 180,
+     "make_ahead": "Up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "thickened cream, whipped",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the agar and sugar into the cold grape juice with a squeeze of lemon, bring to the boil and simmer for 2 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Pour into small round moulds and set in the fridge for 3 hours.",
+       "min": 180
+      },
+      {
+       "text": "Turn out and top each with a dot of whipped cream.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Wilderness Explorer honey trail mix bars",

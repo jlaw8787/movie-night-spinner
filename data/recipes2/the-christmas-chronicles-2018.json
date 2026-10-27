@@ -165,7 +165,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chicago Italian mushroom sliders",
+     "prep_min": 8,
+     "cook_min": 23,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "king brown mushrooms, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slider buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mild pickled vegetables, chopped",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in the oil over high heat until browned.",
+       "min": 10
+      },
+      {
+       "text": "Simmer the stock with the garlic, oregano, chilli and soy sauce.",
+       "min": 10
+      },
+      {
+       "text": "Drop the mushrooms into the jus to soak it up.",
+       "min": 3
+      },
+      {
+       "text": "Split the buns and dip the cut sides quickly in the jus.",
+       "min": 3
+      },
+      {
+       "text": "Pile in the mushrooms and top with pickled vegetables. Serve with little cups of jus for dunking.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pierce family bacon-wrapped meatloaf",
@@ -539,7 +626,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sleigh ride salted caramel hot chocolate (vegetarian)",
+     "prep_min": 2,
+     "cook_min": 9,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "milk chocolate, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "tbsp",
+       "item": "salted caramel sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream, whipped",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the milk until steaming, then whisk in the chocolate and most of the caramel sauce until smooth.",
+       "min": 7
+      },
+      {
+       "text": "Pour into mugs and top with whipped cream and a drizzle of caramel.",
+       "min": 2
+      },
+      {
+       "text": "Add the vegetarian marshmallows and brown quickly with a kitchen torch or under the grill.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   }
  ]
 }

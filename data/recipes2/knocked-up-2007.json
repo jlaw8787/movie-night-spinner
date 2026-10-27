@@ -102,7 +102,122 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fantasy baseball draft nachos (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 16,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin refried beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ground cumin, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "corn chips",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "avocados",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pickled jalapeños",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the plant-based mince with the smoked paprika, the chilli flakes and salt until crisp at the edges.",
+       "min": 7
+      },
+      {
+       "text": "Warm the refried beans with the cumin.",
+       "min": 4
+      },
+      {
+       "text": "Spread the corn chips on a big tray, spoon over the beans and mince and cover with the grated cheddar.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 200C for 10 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Mash the avocados with lime, salt and chopped coriander.",
+       "min": 5
+      },
+      {
+       "text": "Top the nachos with guacamole, the sour cream, pickled jalapeños and spring onion.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Craving pickle-brined popcorn chicken",
@@ -121,7 +236,7 @@
      "q": 1,
      "u": "",
      "item": "jar dill pickles",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 1,
@@ -191,7 +306,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Craving pickle-brined popcorn tofu",
+     "prep_min": 24,
+     "cook_min": 130,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "paprika, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "dried dill, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Press the firm tofu dry, tear into bite-sized pieces and soak in the brine from the dill pickles for 2 hours.",
+       "min": 133
+      },
+      {
+       "text": "Drain, dip in the beaten egg with the buttermilk, then the plain flour mixed with the paprika and salt.",
+       "min": 7
+      },
+      {
+       "text": "Fry in the oil at 175C for 4 to 5 minutes until crisp and toss with dried dill and salt.",
+       "min": 7
+      },
+      {
+       "text": "Mix the sour cream, the mayonnaise, the chopped pickles and dill for dipping.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "LA Thai green chicken curry",

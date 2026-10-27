@@ -70,7 +70,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Aunt Cass's hot cauliflower wings",
+     "prep_min": 10,
+     "cook_min": 35,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "gochujang",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sesame seeds",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cauliflower into large florets and toss with the oil and salt.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 220C until crisp and browned at the edges.",
+       "min": 35
+      },
+      {
+       "text": "Warm the gochujang with the honey, garlic and soy until glossy.",
+       "min": 5
+      },
+      {
+       "text": "Toss the cauliflower through and scatter with sesame seeds.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Baymax marshmallow bites",
@@ -117,7 +194,54 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Baymax marshmallow bites (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 30,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "white chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "dark chocolate",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt the white chocolate.",
+       "min": 8
+      },
+      {
+       "text": "Dip each marshmallow until fully coated and set on baking paper.",
+       "min": 12
+      },
+      {
+       "text": "Melt the dark chocolate and pipe two small dots joined by a line on each for the face.",
+       "min": 10
+      },
+      {
+       "text": "Leave to set.",
+       "min": 30
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "San Fransokyo ramen",

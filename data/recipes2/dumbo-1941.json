@@ -344,7 +344,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pink elephant marshmallow slice (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 123,
+     "make_ahead": "Up to 3 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "plain sweet biscuits",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "egg whites",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "pink food colouring",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "desiccated coconut",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Crush the biscuits with the butter and press into a lined tin.",
+       "min": 10
+      },
+      {
+       "text": "Whisk the agar into the water with the sugar, bring to the boil and simmer for 5 minutes, stirring, until syrupy.",
+       "min": 8
+      },
+      {
+       "text": "Whip the egg whites to soft peaks, then pour in the hot syrup while beating and keep whipping until thick, glossy and white. Beat in the pink colouring.",
+       "min": 10
+      },
+      {
+       "text": "Spread over the base straight away, dust with coconut and chill until set.",
+       "min": 120
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mrs Jumbo's pink lemonade",

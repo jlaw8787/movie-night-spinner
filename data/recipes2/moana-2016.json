@@ -76,7 +76,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Coconut pirate crusted haloumi",
+     "prep_min": 25,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "haloumi, cut into fingers",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "shredded coconut",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "sweet chilli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime, juiced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Set up a station: flour, beaten egg, then the panko mixed with the coconut.",
+       "min": 5
+      },
+      {
+       "text": "Pat the haloumi dry and dip each piece in flour, egg, then the crumb mix.",
+       "min": 15
+      },
+      {
+       "text": "Fry at 180C for 2 minutes, in batches, until golden.",
+       "min": 10
+      },
+      {
+       "text": "Serve with sweet chilli sauce mixed with lime juice.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ocean poke cups",
@@ -143,7 +220,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ocean poke cups (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 20,
+     "make_ahead": "Up to 1 hour ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sushi rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, diced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the sushi rice and cool.",
+       "min": 25
+      },
+      {
+       "text": "Pat the tofu dry, dice and toss with soy, sesame oil, spring onion and chilli. Leave to marinate for 10 minutes.",
+       "min": 12
+      },
+      {
+       "text": "Spoon the rice into small cups and top with tofu and cucumber.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Te Fiti fish in coconut",

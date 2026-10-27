@@ -70,7 +70,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lobster bites (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 5,
+     "make_ahead": "Up to 2 hours, assemble just before serving",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins hearts of palm (400 g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "celery stick, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "slices brioche",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the hearts of palm dry and pull into chunky pieces.",
+       "min": 5
+      },
+      {
+       "text": "Fold with the mayonnaise, lemon juice, celery, chives and smoked paprika.",
+       "min": 5
+      },
+      {
+       "text": "Butter the brioche slices and cut 16 rounds.",
+       "min": 5
+      },
+      {
+       "text": "Toast the rounds.",
+       "min": 5
+      },
+      {
+       "text": "Pile the filling on top.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Alvy's potato knishes",

@@ -153,7 +153,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Letters of transit briouats (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 30,
+     "make_ahead": "Up to 1 day uncooked, bake fresh",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cinnamon",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful coriander, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "sheets filo pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the plant-based mince in the oil with the onion, cinnamon, cumin and salt until browned, then stir in the coriander. Cool.",
+       "min": 20
+      },
+      {
+       "text": "Cut the filo into long strips and brush with melted butter.",
+       "min": 8
+      },
+      {
+       "text": "Add a spoonful of filling to each strip and fold into triangles.",
+       "min": 12
+      },
+      {
+       "text": "Bake at 190C until crisp.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Usual suspects chicken tagine",

@@ -113,7 +113,56 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Juicy Lucy sliders (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 11,
+     "make_ahead": "Shape up to 4 hours ahead, cook fresh",
+     "ingredients": [
+      {
+       "q": 700,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices American cheese, halved",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slider buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "dill pickles, sliced",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Divide the plant-based mince into 16 thin patties. Sandwich half a slice of cheese between 2 patties and pinch the edges sealed to make 8.",
+       "min": 20
+      },
+      {
+       "text": "Griddle 4 minutes a side, then rest 2 minutes so the cheese doesn't burst.",
+       "min": 10
+      },
+      {
+       "text": "Serve in the slider buns with pickles.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Minnesota hotdish",
@@ -357,7 +406,50 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "District 5 rinkside hot chocolate (vegetarian)",
+     "prep_min": 5,
+     "cook_min": 10,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "dark chocolate, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the milk until steaming.",
+       "min": 6
+      },
+      {
+       "text": "Whisk in the chocolate until frothy.",
+       "min": 4
+      },
+      {
+       "text": "Pour into big mugs and pile marshmallows on top.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   }
  ]
 }

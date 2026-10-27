@@ -12,7 +12,7 @@
      "q": 300,
      "u": "g",
      "item": "pickled herring",
-     "aisle": "Seafood"
+     "aisle": "Deli"
     },
     {
      "q": 150,
@@ -60,7 +60,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pickled mushrooms on rye",
+     "prep_min": 20,
+     "cook_min": 0,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "marinated mushrooms",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "slices dark rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Drain the mushrooms and cut into bite pieces.",
+       "min": 5
+      },
+      {
+       "text": "Mix with the sour cream, chopped dill and thinly sliced red onion.",
+       "min": 6
+      },
+      {
+       "text": "Butter the rye, cut into squares and spoon the mushrooms on top.",
+       "min": 9
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rostavili's Georgian cheese bread",

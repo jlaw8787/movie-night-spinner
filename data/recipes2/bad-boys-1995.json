@@ -90,7 +90,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Miami mushroom croquetas",
+     "prep_min": 38,
+     "cook_min": 495,
+     "make_ahead": "Chill overnight, up to 1 day before frying",
+     "ingredients": [
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch nutmeg",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "plain flour, for dusting",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "neutral oil, for frying",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt the butter and fry the mushrooms until dry and golden.",
+       "min": 6
+      },
+      {
+       "text": "Stir in the flour and cook briefly. Gradually whisk in the milk and cook until a very thick bechamel forms. Add the nutmeg.",
+       "min": 12
+      },
+      {
+       "text": "Spread in a shallow dish, cool promptly and refrigerate overnight.",
+       "min": 480
+      },
+      {
+       "text": "Shape into logs.",
+       "min": 15
+      },
+      {
+       "text": "Dust with flour, dip in beaten egg and coat in breadcrumbs.",
+       "min": 10
+      },
+      {
+       "text": "Fry in 180C oil until golden and hot throughout. Drain.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Fried sweet plantains",

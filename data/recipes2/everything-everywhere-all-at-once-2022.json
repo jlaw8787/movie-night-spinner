@@ -125,7 +125,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chinese New Year dumplings (vegetarian)",
+     "prep_min": 45,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "shiitake mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "firm tofu, crumbled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "",
+       "item": "dumpling wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "black vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chilli oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in half the vegetable oil until dry, then cool.",
+       "min": 6
+      },
+      {
+       "text": "Mix the mushrooms with the tofu, a quarter of the cabbage finely chopped, the soy sauce and the sesame oil.",
+       "min": 13
+      },
+      {
+       "text": "Fill the dumpling wrappers and pleat closed.",
+       "min": 20
+      },
+      {
+       "text": "Fry flat side down in the rest of the vegetable oil until golden, add the water, cover and steam 6 minutes.",
+       "min": 17
+      },
+      {
+       "text": "Serve with black vinegar and chilli oil.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hibachi steak and prawn fried rice",

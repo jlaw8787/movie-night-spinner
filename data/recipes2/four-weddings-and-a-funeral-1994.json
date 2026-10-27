@@ -68,7 +68,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Charles's running late canapés (vegetarian)",
+     "prep_min": 22,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "blinis",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cooked beetroot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch asparagus",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small eggplant",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Trim the asparagus, blanch for a minute and drain.",
+       "min": 4
+      },
+      {
+       "text": "Shave the eggplant lengthways into thin strips with a peeler and brush with the oil and paprika.",
+       "min": 5
+      },
+      {
+       "text": "Wrap each spear in a strip of eggplant and grill until crisp.",
+       "min": 8
+      },
+      {
+       "text": "Slice the beetroot very thin and dress with lemon juice.",
+       "min": 4
+      },
+      {
+       "text": "Top the blinis with creme fraiche, beetroot and dill.",
+       "min": 8
+      },
+      {
+       "text": "Arrange both on trays.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Smoked salmon oatcakes",
@@ -123,7 +214,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Beetroot and dill oatcakes",
+     "prep_min": 14,
+     "cook_min": 0,
+     "make_ahead": "Up to 2 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet oatcakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cooked beetroot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch sea salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the beetroot very thin and toss with a squeeze of lemon and the salt.",
+       "min": 3
+      },
+      {
+       "text": "Spread the oatcakes with cream cheese.",
+       "min": 5
+      },
+      {
+       "text": "Top with folds of beetroot and a sprig of dill.",
+       "min": 5
+      },
+      {
+       "text": "Squeeze over a little more lemon and lay on a slate.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "English wedding roast beef",

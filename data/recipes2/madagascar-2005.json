@@ -76,7 +76,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Penguins' sushi rolls (vegetarian)",
+     "prep_min": 45,
+     "cook_min": 25,
+     "make_ahead": "Up to 2 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "sushi rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "firm tofu, cut into batons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "nori sheets",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "avocado, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "pickled ginger",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the rice and season with vinegar and sugar. Cool.",
+       "min": 25
+      },
+      {
+       "text": "Fry the tofu batons in the oil until golden, add 1 tbsp of the soy and cook until glazed. Cool.",
+       "min": 10
+      },
+      {
+       "text": "Spread the rice over the nori, fill with tofu and avocado and roll tight with a mat.",
+       "min": 20
+      },
+      {
+       "text": "Slice with a wet knife.",
+       "min": 5
+      },
+      {
+       "text": "Serve with the rest of the soy and pickled ginger.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Marty's birthday zebra brownies",

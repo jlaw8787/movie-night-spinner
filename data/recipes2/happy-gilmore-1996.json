@@ -54,7 +54,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chubbs's golf ball cheese balls (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "pecans",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Beat the cream cheese with grated cheddar, soy sauce and chopped spring onions.",
+       "min": 8
+      },
+      {
+       "text": "Roll into golf ball sizes and chill.",
+       "min": 30
+      },
+      {
+       "text": "Toast and crush the pecans, roll the balls in them and spear each with a toothpick.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Grandma's biscuits",

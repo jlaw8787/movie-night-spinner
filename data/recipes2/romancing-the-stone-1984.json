@@ -181,7 +181,116 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cartagena potato and black bean empanadas",
+     "prep_min": 40,
+     "cook_min": 25,
+     "make_ahead": "Fill a day ahead, fry fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "potato, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "arepa flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 350,
+       "u": "ml",
+       "item": "warm water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion, potato and cumin in half the olive oil until soft, then add the beans and mash lightly.",
+       "min": 15
+      },
+      {
+       "text": "Cool the filling completely.",
+       "min": 20
+      },
+      {
+       "text": "Mix the arepa flour with warm water and salt to a dough.",
+       "min": 5
+      },
+      {
+       "text": "Flatten balls of dough, fill, fold and crimp the edges.",
+       "min": 10
+      },
+      {
+       "text": "Fry in the vegetable oil at 180C until crisp and golden.",
+       "min": 10
+      },
+      {
+       "text": "Blitz coriander, chilli, lime and the rest of the olive oil for the sauce.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Colombian sancocho",
@@ -452,7 +561,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "El Corazón emerald jelly (vegetarian)",
+     "prep_min": 14,
+     "cook_min": 60,
+     "make_ahead": "Up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "fresh lime juice (about 10 limes)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "coconut cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch mint",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the agar into the water with the sugar, bring to the boil and simmer for 2 minutes, stirring.",
+       "min": 6
+      },
+      {
+       "text": "Take off the heat and stir in the lime juice.",
+       "min": 2
+      },
+      {
+       "text": "Pour into a mould.",
+       "min": 3
+      },
+      {
+       "text": "Set in the fridge.",
+       "min": 60
+      },
+      {
+       "text": "Turn out and serve with chilled coconut cream and mint.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Joan Wilder's iced coffee with panela cream",

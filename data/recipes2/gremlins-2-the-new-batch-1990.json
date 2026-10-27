@@ -70,7 +70,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Splice O' Life dumplings (vegetarian)",
+     "prep_min": 50,
+     "cook_min": 10,
+     "make_ahead": "Fill up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "firm tofu, crumbled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "shiitake mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "shredded wombok, salted and squeezed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "",
+       "item": "gyoza wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Chinkiang vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the tofu, mushrooms, wombok, ginger and 1 tbsp of the soy.",
+       "min": 10
+      },
+      {
+       "text": "Fill the gyoza wrappers and pleat.",
+       "min": 35
+      },
+      {
+       "text": "Fry in the oil until browned, add the water and steam under a lid for 4 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Mix the rest of the soy with the Chinkiang vinegar for dipping.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Microwave Marge nachos",

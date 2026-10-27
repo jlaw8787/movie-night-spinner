@@ -82,7 +82,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lunch truck tacos (vegetarian)",
+     "prep_min": 13,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch chilli flakes",
+       "aisle": "Spices"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "iceberg lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "salsa",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onion and garlic.",
+       "min": 5
+      },
+      {
+       "text": "Brown the plant-based mince in the oil with the onion, garlic, cumin and chilli.",
+       "min": 12
+      },
+      {
+       "text": "Shred the lettuce and warm the tortillas.",
+       "min": 3
+      },
+      {
+       "text": "Fill with the mince, lettuce, cheddar and a spoon of salsa.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chilli cheese fries",
@@ -157,7 +246,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chilli cheese fries (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 28,
+     "make_ahead": "Chilli up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chilli powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can kidney beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can chopped tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into thick chips.",
+       "min": 10
+      },
+      {
+       "text": "Fry the chopped onion in the tablespoon of oil with the chilli powder until soft.",
+       "min": 8
+      },
+      {
+       "text": "Add the kidney beans, black beans and tomatoes and simmer until thick.",
+       "min": 20
+      },
+      {
+       "text": "Fry the chips in the frying oil until soft, then fry again until crisp.",
+       "min": 10
+      },
+      {
+       "text": "Spoon the chilli over, top with cheddar and grill to melt.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Dee-Luxe hot dogs with the works",

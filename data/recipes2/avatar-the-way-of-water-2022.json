@@ -58,7 +58,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Reef village garlic haloumi skewers",
+     "prep_min": 20,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red chillies",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak 8 skewers. Crush the garlic, chop the chilli, zest a lime and cut the rest into wedges. Melt the butter.",
+       "min": 10
+      },
+      {
+       "text": "Cut the haloumi into cubes, toss with garlic, chilli, zest and butter and thread onto skewers.",
+       "min": 8
+      },
+      {
+       "text": "Grill a couple of minutes a side until charred.",
+       "min": 5
+      },
+      {
+       "text": "Serve with lime wedges and spoon over any butter left in the pan.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Tulkun tropical fruit",
@@ -352,7 +411,70 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lagoon coconut pudding (vegetarian)",
+     "prep_min": 11,
+     "cook_min": 125,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.5,
+       "u": "tsp",
+       "item": "agar agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "mangoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "passionfruit",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the mangoes.",
+       "min": 6
+      },
+      {
+       "text": "Whisk the agar and sugar into the coconut milk in a saucepan.",
+       "min": 2
+      },
+      {
+       "text": "Bring to the boil and simmer for 2 minutes, stirring.",
+       "min": 5
+      },
+      {
+       "text": "Pour into glasses and chill until set.",
+       "min": 120
+      },
+      {
+       "text": "Top with mango and passionfruit pulp.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Reef coconut pineapple crush",

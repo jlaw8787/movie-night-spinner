@@ -66,7 +66,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Montana camp mushroom jerky",
+     "prep_min": 30,
+     "cook_min": 420,
+     "make_ahead": "Keeps 1 week airtight in the fridge",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms lengthways into thin 3mm strips.",
+       "min": 15
+      },
+      {
+       "text": "Mix the soy, maple syrup, smoked paprika, pepper and crushed garlic and coat the mushrooms.",
+       "min": 10
+      },
+      {
+       "text": "Marinate in the fridge for at least 4 hours.",
+       "min": 240
+      },
+      {
+       "text": "Lay on racks over trays.",
+       "min": 5
+      },
+      {
+       "text": "Dry in the oven at 75C until chewy, turning once.",
+       "min": 180
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Canary seed crackers",

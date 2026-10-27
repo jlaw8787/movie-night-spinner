@@ -175,7 +175,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Camp Firewood salted caramel s'mores (vegetarian)",
+     "prep_min": 11,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 100,
+       "u": "g",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "wheatmeal biscuits",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "milk chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "large vegetarian marshmallows",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Make the caramel: melt the sugar until amber, whisk in the cream and the butter, then a little salt and cool.",
+       "min": 4
+      },
+      {
+       "text": "Lay half the wheatmeal biscuits on a board and top each with a square of milk chocolate.",
+       "min": 3
+      },
+      {
+       "text": "Toast the vegetarian marshmallows on skewers over a fire or gas flame until golden.",
+       "min": 6
+      },
+      {
+       "text": "Push one onto each chocolate biscuit, spoon over caramel and squash with a second biscuit.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mess hall sloppy joe sliders",
@@ -248,7 +313,7 @@
      "q": 1,
      "u": "",
      "item": "jar dill pickles",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 100,

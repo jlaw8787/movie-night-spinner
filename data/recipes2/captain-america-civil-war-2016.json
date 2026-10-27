@@ -76,7 +76,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lagos market tofu suya",
+     "prep_min": 20,
+     "cook_min": 10,
+     "make_ahead": "Spice mix up to 1 week, store airtight",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "extra firm tofu, patted dry and cut into cubes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "peanuts, finely ground",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground ginger",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the ground peanuts with the paprika, ginger, chilli flakes and salt.",
+       "min": 5
+      },
+      {
+       "text": "Thread the tofu onto soaked skewers, brush with the oil and coat all over in the spice.",
+       "min": 15
+      },
+      {
+       "text": "Grill on high heat until charred.",
+       "min": 8
+      },
+      {
+       "text": "Serve with sliced onion and tomato, sprinkled with more spice.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Berlin airport currywurst",
@@ -145,7 +228,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Berlin airport currywurst (vegetarian)",
+     "prep_min": 22,
+     "cook_min": 35,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "vegetarian bratwurst",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "curry powder, plus extra for dusting",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into fries, toss in oil and spread on trays.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 220C, turning once, until crisp.",
+       "min": 30
+      },
+      {
+       "text": "Grill the vegetarian sausages until browned, then slice into rounds.",
+       "min": 12
+      },
+      {
+       "text": "Warm the tomato sauce with the curry powder and paprika.",
+       "min": 5
+      },
+      {
+       "text": "Pour over the sliced sausages, dust with curry powder and serve with the fries.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Siberian winter goulash",

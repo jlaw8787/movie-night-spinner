@@ -68,7 +68,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Venom's rocky road chocolate stash (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 120,
+     "make_ahead": "Up to 1 week, airtight",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "dark chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "milk chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "honeycomb",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "salted peanuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "vegetarian raspberry lollies",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Line a 20cm square tin with baking paper.",
+       "min": 5
+      },
+      {
+       "text": "Melt both chocolates together in short bursts in the microwave.",
+       "min": 5
+      },
+      {
+       "text": "Stir in the marshmallows, broken honeycomb, peanuts and lollies.",
+       "min": 5
+      },
+      {
+       "text": "Spread into the tin and chill until firm.",
+       "min": 120
+      },
+      {
+       "text": "Smash or cut into chunks and pile in a bowl.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sonny and Cher's chicken bites",
@@ -133,7 +202,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sonny and Cher's tofu bites",
+     "prep_min": 22,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "cooking oil spray",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Press the tofu dry, cut into chunks and season with salt. Beat the eggs.",
+       "min": 10
+      },
+      {
+       "text": "Dip in egg and press into panko.",
+       "min": 10
+      },
+      {
+       "text": "Spread on a lined tray, spray with oil and bake at 220C until golden.",
+       "min": 20
+      },
+      {
+       "text": "Mix the honey and mustard for dipping.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bacon and scrambled eggs on toast",

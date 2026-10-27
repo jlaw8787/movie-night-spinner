@@ -64,7 +64,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lord Norinaga's samurai rice balls (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "sushi rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "fresh shiitake mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "nori sheets, cut into strips",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sesame seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "pickled ginger",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the rice and season lightly with the salt.",
+       "min": 20
+      },
+      {
+       "text": "Fry the mushrooms in the oil, add the soy and sugar and cook until sticky.",
+       "min": 10
+      },
+      {
+       "text": "With wet hands, shape rice into triangles around a little of the mushroom.",
+       "min": 15
+      },
+      {
+       "text": "Wrap the base in nori, sprinkle with sesame and serve with pickled ginger.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Time sceptre teriyaki skewers",
@@ -169,6 +252,137 @@
       },
       {
        "text": "Thread the chicken onto skewers.",
+       "min": 7
+      },
+      {
+       "text": "Grill, brushing with the glaze, until sticky and charred.",
+       "min": 12
+      },
+      {
+       "text": "Scatter with spring onion and serve hot.",
+       "min": 0
+      }
+     ]
+    },
+    "veg": {
+     "n": "Time sceptre teriyaki mushroom skewers",
+     "prep_min": 12,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mirin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "zucchini, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, mirin and sugar until syrupy.",
+       "min": 8
+      },
+      {
+       "text": "Thread the mushrooms and zucchini onto skewers.",
+       "min": 7
+      },
+      {
+       "text": "Grill, brushing with the glaze, until sticky and charred.",
+       "min": 12
+      },
+      {
+       "text": "Scatter with spring onion and serve hot.",
+       "min": 0
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Time sceptre teriyaki mushroom skewers (vegetarian, alcohol-free)",
+     "prep_min": 12,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "zucchini, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy, apple juice, rice vinegar and sugar until syrupy.",
+       "min": 8
+      },
+      {
+       "text": "Thread the mushrooms and zucchini onto skewers.",
        "min": 7
       },
       {

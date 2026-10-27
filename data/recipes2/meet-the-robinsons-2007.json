@@ -103,7 +103,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Uncle Art's space pizza bites (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "jar pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "button mushrooms, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 220C. Roll the dough thin and cut into small rounds.",
+       "min": 10
+      },
+      {
+       "text": "Top each with sauce, grated mozzarella, a few slices of mushroom and oregano.",
+       "min": 10
+      },
+      {
+       "text": "Bake until crisp and bubbling.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Meatball cannon dinner",
@@ -209,7 +264,7 @@
       {
        "q": 50,
        "u": "g",
-       "item": "parmesan",
+       "item": "vegetarian parmesan-style cheese",
        "aisle": "Dairy"
       },
       {

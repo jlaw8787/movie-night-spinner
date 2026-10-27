@@ -54,7 +54,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Resort watermelon poke on rice crackers",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Mix up to 1 hour ahead, top the crackers just before serving",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "seedless watermelon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet rice crackers",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the watermelon into small cubes and pat dry on paper towel.",
+       "min": 5
+      },
+      {
+       "text": "Toss with soy sauce, sesame oil and sliced spring onion.",
+       "min": 3
+      },
+      {
+       "text": "Spoon onto rice crackers just before serving so they stay crisp.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Do less grilled pineapple",

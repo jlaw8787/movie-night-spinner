@@ -68,7 +68,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "E.B.'s jellybean rocky road (vegetarian)",
+     "prep_min": 115,
+     "cook_min": 10,
+     "make_ahead": "Up to 1 week, keep chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "milk chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vegetarian mini marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "vegetarian jellybeans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "pretzels, broken",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "shredded coconut",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Line a 20cm square tin with baking paper.",
+       "min": 3
+      },
+      {
+       "text": "Melt the chocolate with the butter in a bowl over simmering water, then cool briefly.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the vegetarian marshmallows, most of the jellybeans, pretzels and coconut.",
+       "min": 4
+      },
+      {
+       "text": "Spread into the tin and press more jellybeans on top.",
+       "min": 3
+      },
+      {
+       "text": "Chill until set, then cut into squares with a hot knife.",
+       "min": 105
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rainbow carrots with green goddess dip",

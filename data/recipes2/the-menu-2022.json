@@ -109,7 +109,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Raw kohlrabi with finger lime",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "Serve straight away",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large kohlrabi",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "finger limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "extra virgin olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "box sea salt flakes",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill the plates.",
+       "min": 5
+      },
+      {
+       "text": "Peel the kohlrabi, slice paper thin on a mandoline and lay on the plates.",
+       "min": 8
+      },
+      {
+       "text": "Dress with lime juice, finger lime pearls, a few drops of oil and sea salt.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "The cheeseburger",

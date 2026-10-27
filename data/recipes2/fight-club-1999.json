@@ -117,7 +117,64 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mushroom and leek vol-au-vents",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "leek, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "vol-au-vent cases",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the leek in the butter until soft, add the sliced mushrooms, then stir in the flour and the cream and simmer until thick.",
+       "min": 18
+      },
+      {
+       "text": "Warm the vol-au-vent cases at 180C for 5 minutes, fill them and pass around on a tray.",
+       "min": 17
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Single-serving chicken and rice",
@@ -428,7 +485,7 @@
        "min": 2
       },
       {
-       "text": "Drink the shot and chase it with the beer, or drop the shot glass carefully into the beer.",
+       "text": "Drink the shot and chase it with the lager, or drop the shot glass carefully into the lager.",
        "min": 1
       },
       {

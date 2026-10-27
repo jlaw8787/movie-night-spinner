@@ -86,7 +86,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Doorstep basket sesame tofu toast",
+     "prep_min": 21,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "firm tofu, patted dry",
+       "aisle": "Deli"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "shiitake mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg white",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "spring onion, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "sesame seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "sweet chilli sauce, to serve",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blitz the tofu, mushrooms, egg white, ginger, spring onion and salt to a thick paste.",
+       "min": 6
+      },
+      {
+       "text": "Spread on the bread and press in the sesame seeds.",
+       "min": 8
+      },
+      {
+       "text": "Cut into triangles.",
+       "min": 3
+      },
+      {
+       "text": "Fry in oil at 180C until golden, then drain.",
+       "min": 10
+      },
+      {
+       "text": "Serve with sweet chilli sauce.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bagel chips and schmear",

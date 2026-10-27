@@ -113,7 +113,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dexter Lake Club cauliflower bites",
+     "prep_min": 18,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "cauliflower (1 large head)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cauliflower into bite-sized florets.",
+       "min": 8
+      },
+      {
+       "text": "Whisk the flour, water, garlic powder and salt into a batter and toss the florets through.",
+       "min": 5
+      },
+      {
+       "text": "Spread on a lined tray and bake at 220C, turning once, until crisp at the edges.",
+       "min": 30
+      },
+      {
+       "text": "Warm the barbecue sauce with the honey, toss the cauliflower through and bake 10 minutes more until sticky.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Delta house sloppy joes",

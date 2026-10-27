@@ -64,7 +64,104 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Club Ritz canapés (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 26,
+     "make_ahead": "Up to 4 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "dried black lentils",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch asparagus",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "eggplant",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs hard and simmer the black lentils in a second pan until just tender.",
+       "min": 20
+      },
+      {
+       "text": "Cool the eggs, peel and halve. Drain the lentils and dress with the soy and a squeeze of lemon.",
+       "min": 8
+      },
+      {
+       "text": "Mash the yolks with the mayo and Dijon, pipe back into the whites and top with the dressed lentils.",
+       "min": 10
+      },
+      {
+       "text": "Slice the eggplant lengthways into thin ribbons, brush with the oil, dust with smoked paprika and grill until soft and charred.",
+       "min": 10
+      },
+      {
+       "text": "Blanch the asparagus.",
+       "min": 3
+      },
+      {
+       "text": "Wrap each spear in a ribbon of smoky eggplant.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Yellow coat cheese puffs",
@@ -257,7 +354,7 @@
       {
        "q": 80,
        "u": "g",
-       "item": "parmesan, grated",
+       "item": "vegetarian parmesan-style cheese, grated",
        "aisle": "Dairy"
       },
       {

@@ -76,7 +76,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Miniature sandwiches (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cress",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plant-based ham slices",
+       "aisle": "Deli"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs, cool, peel and mash with the mayo and cress.",
+       "min": 15
+      },
+      {
+       "text": "Make egg sandwiches, cucumber and cream cheese sandwiches, and plant-based ham and Dijon sandwiches.",
+       "min": 14
+      },
+      {
+       "text": "Cut off the crusts and cut into exact little squares.",
+       "min": 7
+      },
+      {
+       "text": "Stand them up in rows.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Charlie's nut-free seed crackers",

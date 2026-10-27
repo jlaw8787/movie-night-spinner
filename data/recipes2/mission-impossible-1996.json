@@ -24,7 +24,7 @@
      "q": 300,
      "u": "g",
      "item": "potato salad",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 150,
@@ -70,7 +70,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Prague café chlebíčky open sandwiches (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 10,
+     "make_ahead": "Up to 2 hours, cover with a damp cloth",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "potato salad",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sliced edam",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar gherkins",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs for 10 minutes, cool and slice.",
+       "min": 10
+      },
+      {
+       "text": "Slice the baguette into rounds and spread with butter.",
+       "min": 5
+      },
+      {
+       "text": "Top each with potato salad, a fold of edam, a slice of egg, a gherkin slice and parsley.",
+       "min": 12
+      },
+      {
+       "text": "Line them up neatly on a long board.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Exploding gum bubble crackers",
@@ -119,7 +190,56 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Exploding gum bubble crackers (vegetarian)",
+     "prep_min": 5,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet uncooked cassava crackers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "sweet chilli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime, juiced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oil to 190C.",
+       "min": 5
+      },
+      {
+       "text": "Fry a few crackers at a time for a few seconds until they puff up dramatically. Drain on paper towel.",
+       "min": 5
+      },
+      {
+       "text": "Mix the sweet chilli sauce with the lime juice and serve for dipping.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Prague goulash",

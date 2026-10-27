@@ -141,7 +141,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Staff cabin onion dip and pretzels (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 75,
+     "make_ahead": "Dip keeps 2 days chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chives, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "pretzels",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 170,
+       "u": "g",
+       "item": "potato chips",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the onions in butter over low heat, stirring often, until deep brown and jammy.",
+       "min": 40
+      },
+      {
+       "text": "Cool and chop finely.",
+       "min": 10
+      },
+      {
+       "text": "Beat the sour cream with the cream cheese, soy sauce and salt, then fold in the onions and chives.",
+       "min": 5
+      },
+      {
+       "text": "Chill the dip.",
+       "min": 30
+      },
+      {
+       "text": "Serve with pretzels and potato chips.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Kellerman's resort brisket",

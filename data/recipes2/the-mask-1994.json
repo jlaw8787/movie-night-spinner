@@ -80,7 +80,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Coconut cauliflower and plantain chips",
+     "prep_min": 30,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "small cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "shredded coconut",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "green plantains",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "sweet chilli sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cauliflower into bite-sized florets, steam for 4 minutes until just tender and pat dry.",
+       "min": 8
+      },
+      {
+       "text": "Mix the coconut and panko. Dip the florets in flour, egg, then the crumb mix.",
+       "min": 12
+      },
+      {
+       "text": "Peel the plantains and slice thin.",
+       "min": 8
+      },
+      {
+       "text": "Fry the cauliflower at 180C in batches until golden.",
+       "min": 10
+      },
+      {
+       "text": "Fry the plantain slices until crisp.",
+       "min": 8
+      },
+      {
+       "text": "Serve both with sweet chilli.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Green cheese puffs",

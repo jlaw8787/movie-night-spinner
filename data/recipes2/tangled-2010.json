@@ -74,7 +74,104 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mushroom, lentil and sage sausage rolls",
+     "prep_min": 27,
+     "cook_min": 35,
+     "make_ahead": "Up to 1 day, reheat to serve",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can brown lentils (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "cup",
+       "item": "sage, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "fresh breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry, thawed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "English mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the onion and mushrooms in the oil until soft and dry.",
+       "min": 10
+      },
+      {
+       "text": "Mash the lentils and mix with the mushroom mix, sage, breadcrumbs, salt and one beaten egg. Cool.",
+       "min": 10
+      },
+      {
+       "text": "Halve the pastry sheets and lay the filling along each piece, then roll up and seal.",
+       "min": 10
+      },
+      {
+       "text": "Brush with the second egg, beaten, and cut into pieces.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 200C until golden and puffed.",
+       "min": 25
+      },
+      {
+       "text": "Serve hot with English mustard.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Maximus's cinnamon apple crisps",

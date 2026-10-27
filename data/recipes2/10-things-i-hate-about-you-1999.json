@@ -133,7 +133,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cameron's croque squares with mushroom",
+     "prep_min": 21,
+     "cook_min": 15,
+     "make_ahead": "Up to 1 day, assemble and grill fresh",
+     "ingredients": [
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "vegetarian gruyere-style cheese, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt the butter, stir in the flour and cook for a minute. Whisk in the milk and simmer until thick to make the bechamel.",
+       "min": 8
+      },
+      {
+       "text": "Fry the mushrooms in the oil until golden and dry.",
+       "min": 6
+      },
+      {
+       "text": "Spread the bread with Dijon and fill with the mushrooms and some of the cheese.",
+       "min": 7
+      },
+      {
+       "text": "Top with bechamel and the rest of the cheese. Grill until bubbling and golden, then cut into small squares.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Prom night pasta",

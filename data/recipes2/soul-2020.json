@@ -117,7 +117,102 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Barber shop bagel bites with carrot lox",
+     "prep_min": 54,
+     "cook_min": 10,
+     "make_ahead": "Carrots up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 12,
+       "u": "",
+       "item": "mini bagels",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "large carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, thinly sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the carrots into long ribbons with a vegetable peeler.",
+       "min": 6
+      },
+      {
+       "text": "Blanch the ribbons in boiling water for 1 minute and drain well.",
+       "min": 4
+      },
+      {
+       "text": "Toss with the oil, soy sauce, smoked paprika and lemon juice and leave to marinate.",
+       "min": 30
+      },
+      {
+       "text": "Split and toast the bagels.",
+       "min": 6
+      },
+      {
+       "text": "Spread with cream cheese.",
+       "min": 6
+      },
+      {
+       "text": "Top each with a fold of carrot, a few capers and thin slices of red onion.",
+       "min": 10
+      },
+      {
+       "text": "Lay them out on a tray.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "New York pizza slice",

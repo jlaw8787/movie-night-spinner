@@ -52,7 +52,60 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bonnie Doon cheese and kabana (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "plant-based kabana",
+       "aisle": "Deli"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "tasty cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "pickled onions",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet round butter crackers",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the plant-based kabana on the diagonal.",
+       "min": 7
+      },
+      {
+       "text": "Cut the cheese into cubes.",
+       "min": 6
+      },
+      {
+       "text": "Thread onto toothpicks with pickled onions.",
+       "min": 5
+      },
+      {
+       "text": "Lay out on a plastic platter with crackers. It is the vibe.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pool room prawns",
@@ -117,7 +170,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pool room hearts of palm",
+     "prep_min": 18,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tinned hearts of palm (2 tins)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "cup",
+       "item": "crushed ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Drain the hearts of palm, pat dry and cut into thick chunks on the diagonal.",
+       "min": 8
+      },
+      {
+       "text": "Pile on crushed ice.",
+       "min": 3
+      },
+      {
+       "text": "Mix the mayo, tomato sauce, soy and a squeeze of lemon.",
+       "min": 4
+      },
+      {
+       "text": "Serve with lemon wedges, and put the platter in the pool room after.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sal's rissoles",

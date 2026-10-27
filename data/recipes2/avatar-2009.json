@@ -145,7 +145,112 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hallelujah Mountains tofu bao",
+     "prep_min": 24,
+     "cook_min": 30,
+     "make_ahead": "Tofu up to 2 days chilled",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "knob ginger, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "star anise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "bao buns",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "Lebanese cucumbers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "peanuts, crushed",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the tofu dry, cut into 12 thick slabs and fry in the oil until golden on both sides.",
+       "min": 12
+      },
+      {
+       "text": "Add the soy, sugar, ginger, star anise and 250ml water and simmer until sticky and glazed.",
+       "min": 20
+      },
+      {
+       "text": "Slice the cucumber and pickle in the vinegar with a pinch of salt.",
+       "min": 8
+      },
+      {
+       "text": "Steam the bao buns.",
+       "min": 10
+      },
+      {
+       "text": "Fill with tofu, pickled cucumber, coriander and crushed peanuts.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hometree hunter's spit-roast",

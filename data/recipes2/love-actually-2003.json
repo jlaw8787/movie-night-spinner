@@ -127,7 +127,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Nativity hearts of palm bites",
+     "prep_min": 16,
+     "cook_min": 6,
+     "make_ahead": "Up to 2 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "can hearts of palm (400 g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "brioche buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch smoked paprika",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the hearts of palm and chives. Zest the lemon.",
+       "min": 10
+      },
+      {
+       "text": "Toss the hearts of palm with mayonnaise, zest, a squeeze of lemon and chives.",
+       "min": 3
+      },
+      {
+       "text": "Split and toast the brioche buns.",
+       "min": 6
+      },
+      {
+       "text": "Pile in the filling and dust with paprika.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "London Christmas roast",
@@ -436,6 +501,139 @@
       },
       {
        "text": "Make up the jelly and pour over the sponge.",
+       "min": 5
+      },
+      {
+       "text": "Chill until set.",
+       "min": 180
+      },
+      {
+       "text": "Spoon over the custard and top with whipped cream.",
+       "min": 8
+      },
+      {
+       "text": "Chill overnight and top with raspberries.",
+       "min": 480
+      }
+     ]
+    },
+    "veg": {
+     "n": "Christmas trifle (vegetarian)",
+     "prep_min": 21,
+     "cook_min": 660,
+     "make_ahead": "Up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "sponge cake",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "sweet sherry",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet vegetarian raspberry jelly crystals (agar-based)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "custard",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "raspberries",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cube the sponge and press into a glass bowl, then splash with sherry.",
+       "min": 8
+      },
+      {
+       "text": "Make up the jelly as the packet says and pour over the sponge.",
+       "min": 5
+      },
+      {
+       "text": "Chill until set.",
+       "min": 180
+      },
+      {
+       "text": "Spoon over the custard and top with whipped cream.",
+       "min": 8
+      },
+      {
+       "text": "Chill overnight and top with raspberries.",
+       "min": 480
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Christmas trifle (vegetarian, alcohol-free)",
+     "prep_min": 21,
+     "cook_min": 660,
+     "make_ahead": "Up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "sponge cake",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet vegetarian raspberry jelly crystals (agar-based)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "custard",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "raspberries",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cube the sponge and press into a glass bowl, then splash with orange juice.",
+       "min": 8
+      },
+      {
+       "text": "Make up the jelly as the packet says and pour over the sponge.",
        "min": 5
       },
       {

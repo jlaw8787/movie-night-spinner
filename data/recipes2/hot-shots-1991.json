@@ -58,7 +58,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fried egg canapés (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "small brioche loaf",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "shiitake mushrooms, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "quail eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch chives",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut 12 small rounds from the brioche and toast them.",
+       "min": 8
+      },
+      {
+       "text": "Fry the mushrooms in half the butter with the soy and smoked paprika until crisp.",
+       "min": 7
+      },
+      {
+       "text": "Fry the quail eggs in the rest of the butter.",
+       "min": 4
+      },
+      {
+       "text": "Put an egg and a few crisp mushrooms on each round and sprinkle with chives.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Dead Meat's last chips",

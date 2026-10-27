@@ -143,7 +143,60 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Product placement pizza bites (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 8,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "slices plant-based pepperoni (100g)",
+       "aisle": "Deli"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 230C. Roll out the dough and cut into 16 rounds.",
+       "min": 12
+      },
+      {
+       "text": "Spread each with pizza sauce, add mozzarella and a slice of plant-based pepperoni.",
+       "min": 8
+      },
+      {
+       "text": "Bake until bubbling.",
+       "min": 8
+      },
+      {
+       "text": "Present one to the camera with a cheesy grin before eating.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mirthmobile pepperoni pizza squares",

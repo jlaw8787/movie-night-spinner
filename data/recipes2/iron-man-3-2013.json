@@ -109,7 +109,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Malibu mansion garlic chilli mushrooms",
+     "prep_min": 17,
+     "cook_min": 8,
+     "make_ahead": "Marinate up to 2 hours, grill fresh",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red chillies, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, one zested and one juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the mushrooms lengthways, score the cut side and toss with the garlic, chilli, lemon zest and oil.",
+       "min": 15
+      },
+      {
+       "text": "Grill over high heat for 3 minutes a side until charred and tender.",
+       "min": 8
+      },
+      {
+       "text": "Pile onto a platter and serve with mayonnaise mixed with lemon juice.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Tennessee hot chicken",
@@ -346,7 +407,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Giant bunny cake (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 50,
+     "make_ahead": "Bake a day ahead, decorate on the day",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "butter, soft",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "icing sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "desiccated coconut",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Beat the butter and sugar, add the eggs and fold in the flour.",
+       "min": 15
+      },
+      {
+       "text": "Bake in two round tins at 175C. Cool.",
+       "min": 30
+      },
+      {
+       "text": "Cut one round into ears and a bow tie and assemble into a bunny.",
+       "min": 15
+      },
+      {
+       "text": "Mix the icing sugar with a little water, cover the bunny and press on coconut. Add marshmallows.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rose Hill malted milkshakes",

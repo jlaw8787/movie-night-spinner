@@ -58,7 +58,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Stone family vegetarian sausages in blankets",
+     "prep_min": 21,
+     "cook_min": 27,
+     "make_ahead": "Wrap up to 1 day ahead, roast fresh",
+     "ingredients": [
+      {
+       "q": 20,
+       "u": "",
+       "item": "vegetarian chipolatas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cranberry sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "wholegrain mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the pastry into 20 long strips and wrap one around each vegetarian chipolata.",
+       "min": 15
+      },
+      {
+       "text": "Lay on a lined tray and brush with egg.",
+       "min": 3
+      },
+      {
+       "text": "Roast at 200C until the pastry is puffed and golden.",
+       "min": 22
+      },
+      {
+       "text": "Brush with maple syrup for the last few minutes.",
+       "min": 5
+      },
+      {
+       "text": "Mix the cranberry sauce with wholegrain mustard for dipping and serve hot on toothpicks.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Dinner table garlic herb pull-apart",
@@ -251,7 +320,7 @@
       {
        "q": 150,
        "u": "g",
-       "item": "gruyere",
+       "item": "vegetarian gruyere-style cheese",
        "aisle": "Dairy"
       },
       {

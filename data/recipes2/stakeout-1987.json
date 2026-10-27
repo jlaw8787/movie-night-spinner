@@ -105,7 +105,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Movie trivia snack mix (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 65,
+     "make_ahead": "Up to 1 week, airtight",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "pretzels",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "peanuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cereal squares",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "sunflower seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the pretzels, peanuts, cereal squares and sunflower seeds with the melted butter, soy and garlic powder.",
+       "min": 8
+      },
+      {
+       "text": "Bake at 130C, stirring every 15 minutes.",
+       "min": 45
+      },
+      {
+       "text": "Cool before bagging up.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Maria's home cooking",

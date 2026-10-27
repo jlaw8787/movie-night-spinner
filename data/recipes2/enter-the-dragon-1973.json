@@ -70,7 +70,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Harbour shiitake and tofu dumplings",
+     "prep_min": 32,
+     "cook_min": 8,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "firm tofu, crumbled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "shiitake mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "tin water chestnuts, drained and chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 24,
+       "u": "",
+       "item": "wonton wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chilli oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the tofu, shiitake, water chestnuts, ginger, soy and sesame oil.",
+       "min": 15
+      },
+      {
+       "text": "Spoon into the wonton wrappers and pinch up the sides.",
+       "min": 15
+      },
+      {
+       "text": "Steam until hot through.",
+       "min": 8
+      },
+      {
+       "text": "Serve with chilli oil.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Han's island tournament spring rolls",
@@ -311,7 +388,7 @@
      ],
      "steps": [
       {
-       "text": "Mix the hoisin, soy, honey, five spice and Shaoxing and coat the pork.",
+       "text": "Mix the hoisin, soy, honey, five spice and chicken stock and coat the pork.",
        "min": 10
       },
       {

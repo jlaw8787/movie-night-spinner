@@ -76,7 +76,102 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Eden-bound border tacos (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 45,
+     "make_ahead": "Filling up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "565 g tins young jackfruit in brine, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "dried chillies, soaked",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "cloves of garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "white onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful of coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes, cut in wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the chillies and blend with the garlic and cumin.",
+       "min": 10
+      },
+      {
+       "text": "Simmer the jackfruit and mushrooms in the chilli paste and stock until tender and thick.",
+       "min": 40
+      },
+      {
+       "text": "Shred with two forks, fry in the oil until the edges crisp and warm the tortillas.",
+       "min": 10
+      },
+      {
+       "text": "Serve in the tortillas with onion, coriander and lime.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Farm corn fritters",

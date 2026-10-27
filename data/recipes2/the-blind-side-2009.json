@@ -88,7 +88,108 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Memphis dry rub barbecue cauliflower bites",
+     "prep_min": 16,
+     "cook_min": 35,
+     "make_ahead": "Rub up to 1 day ahead, cook fresh",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "onion powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "cayenne pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, cut into florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 75,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "American mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cider vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the paprika, brown sugar, garlic powder, onion powder, cayenne and salt.",
+       "min": 5
+      },
+      {
+       "text": "Whisk the flour, water, baking powder and half the rub into a batter, coat the cauliflower and sprinkle with the rest of the rub.",
+       "min": 6
+      },
+      {
+       "text": "Spread on a lined tray and bake at 220C, turning once, until crisp at the edges.",
+       "min": 35
+      },
+      {
+       "text": "Mix the barbecue sauce, mustard and vinegar for dipping.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "98th percentile devilled eggs",
@@ -171,7 +272,86 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "98th percentile devilled eggs (vegetarian)",
+     "prep_min": 23,
+     "cook_min": 10,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "American mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar of dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "crispy fried shallots",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of chives",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the eggs in boiling water.",
+       "min": 10
+      },
+      {
+       "text": "Cool in iced water, then peel.",
+       "min": 5
+      },
+      {
+       "text": "Halve the eggs and scoop the yolks into a bowl.",
+       "min": 5
+      },
+      {
+       "text": "Mash with mayonnaise, mustard, chopped pickles and salt.",
+       "min": 5
+      },
+      {
+       "text": "Pipe back into the whites.",
+       "min": 6
+      },
+      {
+       "text": "Top the eggs with crispy shallots, a dusting of smoked paprika and chives.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Tuohy Thanksgiving turkey at the table",

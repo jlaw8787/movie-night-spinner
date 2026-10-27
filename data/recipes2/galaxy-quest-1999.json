@@ -70,7 +70,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fan expo smoky garlic nut mix (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 40,
+     "make_ahead": "Up to 5 days, airtight",
+     "ingredients": [
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "pinch of salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mixed nuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "pretzels",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 140C. Melt the butter with the soy, garlic powder, paprika and salt.",
+       "min": 5
+      },
+      {
+       "text": "Toss with the nuts and pretzels until coated and spread on a lined tray.",
+       "min": 5
+      },
+      {
+       "text": "Bake, stirring twice, until toasted and dry.",
+       "min": 30
+      },
+      {
+       "text": "Cool and serve in paper cups.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rock monster crackers",
@@ -137,7 +208,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rock monster crackers (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Tapenade up to 3 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "pitted black olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "white miso",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "extra virgin olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet seeded crackers",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pulse the olives, capers, miso, garlic, lemon juice and oil until coarse.",
+       "min": 5
+      },
+      {
+       "text": "Break the crackers into jagged shards.",
+       "min": 3
+      },
+      {
+       "text": "Serve the tapenade with the cracker shards.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Protector mess hall chilli",

@@ -111,7 +111,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "End of Line Club canapés with beetroot cured slices",
+     "prep_min": 26,
+     "cook_min": 0,
+     "make_ahead": "Up to 2 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cooked beetroot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch sea salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf dark rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the beetroot very thin and toss with a squeeze of lemon and the salt.",
+       "min": 6
+      },
+      {
+       "text": "Cut the rye into neat squares and pick the dill into sprigs.",
+       "min": 8
+      },
+      {
+       "text": "Spread with creme fraiche.",
+       "min": 4
+      },
+      {
+       "text": "Top with a fold of beetroot, a sprig of dill and a squeeze of lemon.",
+       "min": 6
+      },
+      {
+       "text": "Lay out in sharp rows on black slate.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Grid neon noodles",

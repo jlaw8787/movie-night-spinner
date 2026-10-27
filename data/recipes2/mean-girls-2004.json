@@ -82,7 +82,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pink cafeteria wraps (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 45,
+     "make_ahead": "Roast the beetroot a day ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "beetroot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "sweet potato",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin chickpeas",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tahini",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "feta",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Wrap the beetroot in foil. Cut the sweet potato into small cubes and toss with the oil, cumin and a pinch of salt.",
+       "min": 5
+      },
+      {
+       "text": "Roast both at 200C until tender, then peel the beetroot.",
+       "min": 45
+      },
+      {
+       "text": "Blitz the beetroot with the drained chickpeas, tahini, lemon juice and garlic until pink and smooth.",
+       "min": 8
+      },
+      {
+       "text": "Spread on the tortillas and fill with the sweet potato, rocket and crumbled feta.",
+       "min": 10
+      },
+      {
+       "text": "Roll tight and slice into spirals.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Candy cane gram peppermint bark",

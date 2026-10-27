@@ -485,7 +485,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Oaken's cardamom hot chocolate (vegetarian)",
+     "prep_min": 5,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cardamom pods, lightly crushed",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Spices"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "dark chocolate, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Spices"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "whipped cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful vegetarian mini marshmallows",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Warm the milk with the cardamom and cinnamon until steaming.",
+       "min": 5
+      },
+      {
+       "text": "Turn off the heat and steep for 10 minutes. Strain.",
+       "min": 10
+      },
+      {
+       "text": "Return to the heat and whisk in most of the chocolate with the sugar and salt until smooth and frothy.",
+       "min": 5
+      },
+      {
+       "text": "Pour into mugs and top with whipped cream, marshmallows and the rest of the chocolate grated over.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   }
  ]
 }

@@ -76,7 +76,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Zero's sushi counter (vegetarian)",
+     "prep_min": 37,
+     "cook_min": 42,
+     "make_ahead": "Rice and toppings same day",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "sushi rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "wasabi",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "eggplant",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sugar, for the glaze",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "avocado",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pickled ginger",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rinse the rice and cook it.",
+       "min": 25
+      },
+      {
+       "text": "Season with rice vinegar, caster sugar and salt and cool.",
+       "min": 15
+      },
+      {
+       "text": "Cut the eggplant into thin slices the length of a finger, fry in the oil until soft, then glaze with a splash of the soy and the glaze sugar.",
+       "min": 12
+      },
+      {
+       "text": "Shape the rice into fingers with a touch of wasabi under each.",
+       "min": 15
+      },
+      {
+       "text": "Top with the eggplant or sliced avocado. Serve with pickled ginger and soy.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Casablanca spiced olives",

@@ -58,7 +58,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Shrinking lab mini quiches (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 18,
+     "make_ahead": "Up to 1 day, reheat to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "baby spinach, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "semi-dried tomatoes, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the pastry into rounds and press into a greased mini muffin tray.",
+       "min": 10
+      },
+      {
+       "text": "Whisk the eggs and cream, then stir through the spinach, tomatoes and cheddar.",
+       "min": 5
+      },
+      {
+       "text": "Fill the cases.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 190C until puffed and set.",
+       "min": 18
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Giant-size choc chip skillet cookie",
@@ -334,7 +399,52 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Quantum realm layered jelly cups (vegetarian)",
+     "prep_min": 8,
+     "cook_min": 270,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "packets vegetarian jelly crystals (raspberry, lime, blue, orange)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Make up the raspberry jelly with half the usual water and pour a thin layer into clear glasses.",
+       "min": 15
+      },
+      {
+       "text": "Chill until set.",
+       "min": 60
+      },
+      {
+       "text": "Repeat with the lime, then blue, then orange jelly, letting each set before the next goes on.",
+       "min": 20
+      },
+      {
+       "text": "Chill the finished glasses until firm.",
+       "min": 180
+      },
+      {
+       "text": "Whip the cream and spoon on top just before serving.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "House arrest root beer floats",

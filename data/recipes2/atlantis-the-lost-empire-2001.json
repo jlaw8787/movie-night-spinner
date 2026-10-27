@@ -66,7 +66,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cookie's chuck wagon beans (vegetarian)",
+     "prep_min": 14,
+     "cook_min": 590,
+     "make_ahead": "Up to 3 days, reheats well",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "dried navy beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "molasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the beans in plenty of cold water overnight.",
+       "min": 483
+      },
+      {
+       "text": "Simmer the beans in fresh water until tender.",
+       "min": 50
+      },
+      {
+       "text": "Fry the chopped onion in the oil with the smoked paprika, then stir in the beans, molasses, mustard, soy sauce and water to cover.",
+       "min": 10
+      },
+      {
+       "text": "Simmer until thick and smoky.",
+       "min": 60
+      },
+      {
+       "text": "Serve in tin cups.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Cheese, salami and cracker tins",
@@ -115,7 +190,56 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cheese, artichoke and cracker tins",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "box water crackers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar marinated artichoke hearts, drained",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pickled onions",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cube the cheddar and quarter the artichokes.",
+       "min": 8
+      },
+      {
+       "text": "Pack small tins with crackers, cheese, artichokes and pickled onions.",
+       "min": 6
+      },
+      {
+       "text": "Close the lids and hand them out.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Lime grilled fish with mango salsa",

@@ -117,7 +117,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ghost shark tempura mushrooms",
+     "prep_min": 14,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "soda water, ice-cold",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "sweet chilli sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Tear the mushrooms into large clumps. Whisk the flour, cornflour and soda water to a thin, lumpy batter.",
+       "min": 12
+      },
+      {
+       "text": "Heat the oil to 180C.",
+       "min": 8
+      },
+      {
+       "text": "Dip the mushrooms in the batter and fry until puffed and crisp.",
+       "min": 10
+      },
+      {
+       "text": "Stir lime juice into the sweet chilli sauce for dipping.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Caribbean coconut fish",

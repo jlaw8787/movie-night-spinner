@@ -223,7 +223,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "North Shore roast mushroom sliders",
+     "prep_min": 13,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "slider buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brush the mushrooms with oil, season with salt and pepper and roast at 200C until tender and dark.",
+       "min": 20
+      },
+      {
+       "text": "Rest for a few minutes, then slice thin.",
+       "min": 5
+      },
+      {
+       "text": "Mix the barbecue sauce with mayonnaise.",
+       "min": 3
+      },
+      {
+       "text": "Pile the mushrooms into the buns with the sauce and a slice of cheese.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Alice Ward's baked ziti",

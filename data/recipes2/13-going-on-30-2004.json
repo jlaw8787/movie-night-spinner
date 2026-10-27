@@ -72,7 +72,80 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sour lolly popcorn balls (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 40,
+     "make_ahead": "Up to 2 days, airtight",
+     "ingredients": [
+      {
+       "q": 100,
+       "u": "g",
+       "item": "popcorn kernels",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter, plus extra for your hands",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vegetarian sour straps, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "vegetarian jelly beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "cellophane bags",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pop the kernels and tip into a big bowl, discarding any unpopped kernels.",
+       "min": 10
+      },
+      {
+       "text": "Melt the butter over low heat, add the marshmallows and stir until smooth.",
+       "min": 8
+      },
+      {
+       "text": "Pour over the popcorn with the sour straps and jelly beans and fold quickly.",
+       "min": 5
+      },
+      {
+       "text": "With buttered hands, press into 12 tennis ball sized rounds.",
+       "min": 12
+      },
+      {
+       "text": "Set on baking paper until firm.",
+       "min": 30
+      },
+      {
+       "text": "Wrap each in cellophane.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Wishing dust sugar cookies",

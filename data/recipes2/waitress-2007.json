@@ -64,7 +64,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bad Baby quiche bites (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 20,
+     "make_ahead": "Up to 1 day ahead, reheat gently",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets shortcrust pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "brie",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "roasted capsicum, from a jar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut rounds from the pastry, line a 24 hole mini muffin tin and blind-bake.",
+       "min": 20
+      },
+      {
+       "text": "Dice the brie and drained capsicum and chop the chives.",
+       "min": 5
+      },
+      {
+       "text": "Fill the cases. Whisk the eggs with the cream, pour in and bake at 170C.",
+       "min": 5
+      },
+      {
+       "text": "Bake until just set.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Diner biscuits and gravy",
@@ -139,7 +204,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Diner biscuits and gravy (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 120,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 450,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "plant-based sausage mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar black peppercorns",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub most of the butter into part of the flour with the baking powder and stir in the buttermilk.",
+       "min": 10
+      },
+      {
+       "text": "Cut rounds and bake at 220C.",
+       "min": 12
+      },
+      {
+       "text": "Brown the plant-based sausage mince in the rest of the butter, stir in the remaining flour and then the milk.",
+       "min": 10
+      },
+      {
+       "text": "Simmer with lots of cracked peppercorns until thick.",
+       "min": 8
+      },
+      {
+       "text": "Split the biscuits and pour over the gravy.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chicken pot pie",

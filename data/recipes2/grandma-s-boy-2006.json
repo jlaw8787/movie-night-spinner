@@ -76,7 +76,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Grandma's cheddar and chive cheese ball (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 55,
+     "make_ahead": "Up to 2 days, keep wrapped and chilled",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cream cheese, soft",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "vintage cheddar, finely grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "pecans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "water crackers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "celery sticks, cut into batons",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Beat the cream cheese, cheddar, soy sauce, garlic powder and most of the chives until smooth.",
+       "min": 5
+      },
+      {
+       "text": "Shape into a ball and wrap in cling film. Chill until firm.",
+       "min": 60
+      },
+      {
+       "text": "Toast the pecans in a dry pan, chop finely and mix with the remaining chives.",
+       "min": 8
+      },
+      {
+       "text": "Roll the cheese ball in the nuts and serve with the water crackers and celery.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Brainasium game tester pizza scrolls",
@@ -157,7 +234,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Brainasium game tester mushroom pizza scrolls",
+     "prep_min": 23,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "pitted black olives",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "marinara sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roll the dough on a floured bench into a large rectangle.",
+       "min": 5
+      },
+      {
+       "text": "Spread with pizza sauce and scatter with the thinly sliced mushrooms, the sliced olives, mozzarella and oregano.",
+       "min": 5
+      },
+      {
+       "text": "Roll up tightly from the long side and cut into 12 slices. Pack into a greased 24cm tin.",
+       "min": 8
+      },
+      {
+       "text": "Brush with the melted butter and garlic, then bake at 200C for 20 minutes until golden.",
+       "min": 22
+      },
+      {
+       "text": "Warm the marinara and serve for dunking.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Grandma's glazed meatloaf with mash",

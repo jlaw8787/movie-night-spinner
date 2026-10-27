@@ -70,7 +70,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Royale with cheese sliders (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 10,
+     "make_ahead": "Shape the patties up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "slider buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Divide the plant-based mince into 12 small balls and dice the onion.",
+       "min": 10
+      },
+      {
+       "text": "Smash the balls into thin patties on a hot griddle, salt well and flip after a minute or two.",
+       "min": 8
+      },
+      {
+       "text": "Lay a slice of cheese on each patty to melt.",
+       "min": 2
+      },
+      {
+       "text": "Fill soft buns with the patties, onion, pickle, mustard and a dab of mayonnaise, the way they do it in Amsterdam.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Big Kahuna burger bites",
@@ -251,6 +328,205 @@
       },
       {
        "text": "Shape the beef mince into 12 small patties and season with salt and pepper.",
+       "min": 8
+      },
+      {
+       "text": "Grill the pineapple rings until charred and cut each into 3.",
+       "min": 6
+      },
+      {
+       "text": "Cook the patties on a hot griddle for 2 minutes a side, brush with the teriyaki and top each with a small square of cheddar.",
+       "min": 6
+      },
+      {
+       "text": "Mix the mayonnaise with the sriracha. Fill the slider buns with the patties, pineapple and sriracha mayonnaise and hold each together with a toothpick.",
+       "min": 8
+      }
+     ]
+    },
+    "veg": {
+     "n": "Big Kahuna burger bites (vegetarian)",
+     "prep_min": 16,
+     "cook_min": 18,
+     "make_ahead": "Teriyaki glaze up to 3 days ahead",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "mirin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Frozen"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "tinned pineapple rings",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sriracha",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "slider buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "toothpicks",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy sauce, mirin and brown sugar for 5 minutes until syrupy.",
+       "min": 6
+      },
+      {
+       "text": "Shape the plant-based mince into 12 small patties and season with salt and pepper.",
+       "min": 8
+      },
+      {
+       "text": "Grill the pineapple rings until charred and cut each into 3.",
+       "min": 6
+      },
+      {
+       "text": "Cook the patties on a hot griddle for 2 minutes a side, brush with the teriyaki and top each with a small square of cheddar.",
+       "min": 6
+      },
+      {
+       "text": "Mix the mayonnaise with the sriracha. Fill the slider buns with the patties, pineapple and sriracha mayonnaise and hold each together with a toothpick.",
+       "min": 8
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Big Kahuna burger bites (vegetarian, alcohol-free)",
+     "prep_min": 16,
+     "cook_min": 18,
+     "make_ahead": "Teriyaki glaze up to 3 days ahead",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Frozen"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "tinned pineapple rings",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sriracha",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "slider buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "toothpicks",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the soy sauce, apple juice, rice vinegar and brown sugar for 5 minutes until syrupy.",
+       "min": 6
+      },
+      {
+       "text": "Shape the plant-based mince into 12 small patties and season with salt and pepper.",
        "min": 8
       },
       {
@@ -1175,7 +1451,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Diner pancakes (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 35,
+     "make_ahead": "Batter up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "maple syrup, to serve",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "smoked tofu, thinly sliced",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the flour, baking powder, sugar, buttermilk and eggs until just combined.",
+       "min": 5
+      },
+      {
+       "text": "Rest the batter for 15 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Cook ladlefuls in butter in a frying pan until bubbles set, flip and cook through, keeping the stack warm.",
+       "min": 15
+      },
+      {
+       "text": "Fry the smoked tofu in the oil until crisp and brush with a little maple syrup. Stack the pancakes with butter and maple syrup, with the smoky tofu on the side.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Five dollar shake",

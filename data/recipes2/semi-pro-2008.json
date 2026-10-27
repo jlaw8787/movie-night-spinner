@@ -74,7 +74,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Flint coney dogs (vegetarian)",
+     "prep_min": 8,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian frankfurts",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "hot dog buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar American mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the plant-based mince, breaking it up very fine, then add 1 teaspoon each of the chilli powder, cumin and paprika and the water and cook 10 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Grill the vegetarian frankfurts and put in the hot dog buns with mustard, the coney sauce and diced onion.",
+       "min": 13
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Flint Tropics coconut prawns",
@@ -167,7 +242,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Flint Tropics coconut cauliflower bites",
+     "prep_min": 23,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "medium cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "desiccated coconut",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "panko crumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "mango",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "sweet chilli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cauliflower into bite-size florets.",
+       "min": 6
+      },
+      {
+       "text": "Dust in the plain flour, dip in the beaten eggs, then press into the desiccated coconut mixed with the panko.",
+       "min": 7
+      },
+      {
+       "text": "Fry in the oil at 180C for 4 minutes until golden and tender, then drain.",
+       "min": 9
+      },
+      {
+       "text": "Simmer the flesh of the mango with the sweet chilli sauce, the juice of the lime and the chopped red chilli for 3 minutes, then blitz smooth.",
+       "min": 9
+      },
+      {
+       "text": "Serve the cauliflower hot with the sauce.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Jackie Moon's barbecue pork ribs",

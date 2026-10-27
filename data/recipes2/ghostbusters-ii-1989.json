@@ -364,7 +364,58 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pink lemonade jelly (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 125,
+     "make_ahead": "Make the day before, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "pink lemonade",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "raspberries",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the agar into 250ml of the lemonade in a saucepan and leave for 5 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Bring to the boil, stirring, and simmer for 2 minutes, then take off the heat and stir in the rest of the lemonade.",
+       "min": 6
+      },
+      {
+       "text": "Pour into a jelly mould with the raspberries.",
+       "min": 4
+      },
+      {
+       "text": "Chill in the fridge until set, about 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Dip the mould in hot water, turn out and put on something upbeat.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pink lemonade with sherbet",

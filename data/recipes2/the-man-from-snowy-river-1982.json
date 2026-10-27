@@ -131,7 +131,86 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "High country roast beetroot and cheddar sandwiches",
+     "prep_min": 25,
+     "cook_min": 65,
+     "make_ahead": "Beetroot up to 3 days, assemble on the day",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "medium beetroot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "peppercorns, crushed",
+       "aisle": "Spices"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "vintage cheddar, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "English mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mustard pickles",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Wrap the beetroot in foil with the oil, salt and crushed peppercorns and roast at 200C until tender.",
+       "min": 60
+      },
+      {
+       "text": "Cool, rub off the skins and slice thin.",
+       "min": 15
+      },
+      {
+       "text": "Butter the bread and layer with the beetroot, cheddar, mustard and pickles.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Camp oven lamb stew",

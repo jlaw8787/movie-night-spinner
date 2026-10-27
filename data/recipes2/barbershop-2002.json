@@ -42,7 +42,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Stolen ATM hot links (vegetarian)",
+     "prep_min": 5,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "smoky vegetarian sausages",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small jar pickled jalapenos",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "toothpicks",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brush the vegetarian sausages with oil and grill over medium coals, turning often, until browned and hot right through.",
+       "min": 12
+      },
+      {
+       "text": "Slice thickly on an angle and spear each piece with a toothpick.",
+       "min": 3
+      },
+      {
+       "text": "Serve with mustard and pickled jalapenos.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chicago tamales",
@@ -139,7 +194,110 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chicago tamales (vegetarian)",
+     "prep_min": 45,
+     "cook_min": 67,
+     "make_ahead": "Make a day ahead, steam to reheat",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "masa harina",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "warm vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "corn husks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "hot sauce, to serve",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the corn husks in hot water.",
+       "min": 15
+      },
+      {
+       "text": "Brown the plant-based mince in the oil with the diced onion, chilli powder and cumin.",
+       "min": 10
+      },
+      {
+       "text": "Beat the masa harina with the butter, baking powder and warm stock to a soft dough.",
+       "min": 10
+      },
+      {
+       "text": "Spread the dough on the husks, add the filling, and roll up.",
+       "min": 15
+      },
+      {
+       "text": "Steam the tamales until the dough pulls away from the husk.",
+       "min": 60
+      },
+      {
+       "text": "Serve with hot sauce.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Calvin's barbershop rib tips",

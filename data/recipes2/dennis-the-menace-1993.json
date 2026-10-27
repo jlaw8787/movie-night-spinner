@@ -133,7 +133,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Night-blooming flower canapés (vegetarian)",
+     "prep_min": 35,
+     "cook_min": 10,
+     "make_ahead": "Up to 3 hours ahead, keep chilled and covered",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "Lebanese cucumbers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cooked beetroot, very thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "dill sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs for 10 minutes, then cool and peel.",
+       "min": 12
+      },
+      {
+       "text": "Slice the cucumbers into thick rounds and top each with cream cheese, a folded slice of beetroot and a sprig of dill.",
+       "min": 15
+      },
+      {
+       "text": "Mash the eggs with salt and spread on the bread. Cut off the crusts and slice into fingers.",
+       "min": 18
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mr Wilson's lamb chops with mint sauce",

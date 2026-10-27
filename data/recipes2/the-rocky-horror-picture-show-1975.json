@@ -137,7 +137,58 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Party cocktail franks (vegetarian)",
+     "prep_min": 4,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "vegetarian cocktail frankfurts",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "water",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the vegetarian frankfurts in the tomato sauce, sugar, mustard and water, stirring until sticky and glossy.",
+       "min": 12
+      },
+      {
+       "text": "Pile into a warm bowl with toothpicks for picking.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Frank's dinner party meatloaf",

@@ -133,7 +133,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Greeting card cheese and tomato pinwheels (vegetarian)",
+     "prep_min": 27,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry, thawed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "sundried tomato pesto",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "jar roasted red capsicum",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch basil",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "tasty cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Lay the pastry flat and spread with the pesto. Top with the drained roasted capsicum strips, basil leaves and cheese.",
+       "min": 6
+      },
+      {
+       "text": "Roll up tightly and chill.",
+       "min": 15
+      },
+      {
+       "text": "Cut each roll into slices and lay cut-side down on a lined tray. Brush with egg.",
+       "min": 6
+      },
+      {
+       "text": "Bake at 200C until puffed and golden.",
+       "min": 18
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mandrake Falls pepperoni mushroom pizza",

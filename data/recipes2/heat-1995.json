@@ -135,7 +135,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ocean view mushrooms with mignonette",
+     "prep_min": 15,
+     "cook_min": 28,
+     "make_ahead": "Mignonette up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, a pinch",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Finely dice the shallots and mix with the vinegar and pepper.",
+       "min": 5
+      },
+      {
+       "text": "Rest.",
+       "min": 20
+      },
+      {
+       "text": "Tear the mushrooms into pieces and sear in the oil over high heat with a pinch of salt until golden. Cool, then chill.",
+       "min": 8
+      },
+      {
+       "text": "Lay the mushrooms in small spoons on crushed ice with lemon wedges and the mignonette alongside.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hanna's three-hour beef and pork ragù",

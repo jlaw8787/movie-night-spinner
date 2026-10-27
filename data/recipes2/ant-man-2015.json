@@ -133,7 +133,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Luis's baked black bean and cheese taquitos",
+     "prep_min": 27,
+     "cook_min": 15,
+     "make_ahead": "Rolled taquitos up to 1 day ahead, bake fresh",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "corn kernels",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "salsa",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "sour cream, to serve",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 220C. Roughly mash the beans and mix with the corn, cheddar and salsa.",
+       "min": 5
+      },
+      {
+       "text": "Warm the tortillas so they stay pliable.",
+       "min": 5
+      },
+      {
+       "text": "Roll a spoonful tightly in each tortilla.",
+       "min": 15
+      },
+      {
+       "text": "Brush with oil and bake seam side down until crisp.",
+       "min": 15
+      },
+      {
+       "text": "Serve with sour cream.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "San Francisco burritos",

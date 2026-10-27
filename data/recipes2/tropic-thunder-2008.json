@@ -147,7 +147,118 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Four Leaf's jungle banh mi bites (vegetarian)",
+     "prep_min": 27,
+     "cook_min": 25,
+     "make_ahead": "Pickles up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "daikon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "white vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "hoisin sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "small baguettes",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vegetarian mushroom pâté",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the carrot and daikon into matchsticks and quick-pickle in the vinegar and sugar.",
+       "min": 20
+      },
+      {
+       "text": "Slice the tofu, fry in the oil until golden, then glaze with the hoisin and soy.",
+       "min": 12
+      },
+      {
+       "text": "Split the baguettes and spread with the mushroom pâté.",
+       "min": 5
+      },
+      {
+       "text": "Fill with the tofu, drained pickles, cucumber, coriander and chilli.",
+       "min": 10
+      },
+      {
+       "text": "Cut into bites.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Flaming Dragon green curry",

@@ -70,7 +70,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Tangier kofta skewers (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 10,
+     "make_ahead": "Mix up to 1 day ahead, grill fresh",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "harissa",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the plant-based mince with the onion, cumin, parsley and salt.",
+       "min": 8
+      },
+      {
+       "text": "Shape around skewers and chill for 10 minutes so they hold.",
+       "min": 12
+      },
+      {
+       "text": "Grill over high heat until charred and hot through.",
+       "min": 8
+      },
+      {
+       "text": "Stir the harissa through the yoghurt and serve as a dip.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Aegean dive grilled octopus",
@@ -125,7 +196,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Aegean dive grilled king brown mushrooms",
+     "prep_min": 15,
+     "cook_min": 28,
+     "make_ahead": "Marinate up to 3 hours, grill fresh",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king brown mushrooms, halved lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, one juiced and one in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Score the cut side of the mushrooms and marinate in the oil, lemon juice, oregano and salt for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Grill on a very hot plate for 3 to 4 minutes a side until charred and tender.",
+       "min": 8
+      },
+      {
+       "text": "Pile onto a plate, scatter with capers and serve with lemon wedges.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Moroccan chicken tagine",
@@ -180,7 +312,7 @@
      "q": 100,
      "u": "g",
      "item": "green olives",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 250,

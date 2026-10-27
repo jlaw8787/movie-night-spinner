@@ -149,7 +149,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fenway sausage and peppers rolls (vegetarian)",
+     "prep_min": 11,
+     "cook_min": 28,
+     "make_ahead": "Peppers up to 1 day ahead, reheat",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "vegetarian Italian-style sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar of wholegrain mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the capsicums and onions.",
+       "min": 8
+      },
+      {
+       "text": "Fry in the oil over medium heat until soft and sweet, seasoning with salt and oregano.",
+       "min": 15
+      },
+      {
+       "text": "Grill the vegetarian sausages, turning, then split lengthways.",
+       "min": 10
+      },
+      {
+       "text": "Toast the long rolls.",
+       "min": 3
+      },
+      {
+       "text": "Fill with sausage, pile on the peppers and onions and finish with mustard.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Iowa breaded pork tenderloin sandwich",

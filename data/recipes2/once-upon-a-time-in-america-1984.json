@@ -139,7 +139,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bagel crisps with schmear and cured beetroot",
+     "prep_min": 50,
+     "cook_min": 12,
+     "make_ahead": "Crisps up to 2 days airtight; schmear and beetroot up to 1 day chilled",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "day-old bagels",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zested and juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "large beetroot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped dill",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the beetroot and slice it paper thin. Toss with the salt, sugar, dill and lemon juice and leave to cure for 30 minutes.",
+       "min": 35
+      },
+      {
+       "text": "Slice the bagels into thin rounds and brush with olive oil.",
+       "min": 8
+      },
+      {
+       "text": "Bake at 180C until crisp.",
+       "min": 12
+      },
+      {
+       "text": "Beat the cream cheese with chives and lemon zest.",
+       "min": 4
+      },
+      {
+       "text": "Serve the crisps with the schmear and the cured beetroot on the side.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Fat Moe's back room brisket",

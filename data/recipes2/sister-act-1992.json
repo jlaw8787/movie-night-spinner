@@ -62,7 +62,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Reno lounge stuffed mushrooms (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 9,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 20,
+       "u": "",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "clove garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Remove the stems from the mushrooms and chop the stems.",
+       "min": 5
+      },
+      {
+       "text": "Fry the stems in the butter with crushed garlic and the smoked paprika.",
+       "min": 6
+      },
+      {
+       "text": "Mix with breadcrumbs and the cheese.",
+       "min": 4
+      },
+      {
+       "text": "Fill the caps.",
+       "min": 4
+      },
+      {
+       "text": "Bake at 200C until golden.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Choir practice cheese scones",

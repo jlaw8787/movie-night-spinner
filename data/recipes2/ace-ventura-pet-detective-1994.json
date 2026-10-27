@@ -80,7 +80,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Miami mushroom croquetas",
+     "prep_min": 33,
+     "cook_min": 502,
+     "make_ahead": "Roll up to 1 day ahead, fry fresh",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt the butter and cook the mushrooms until all the liquid has gone.",
+       "min": 12
+      },
+      {
+       "text": "Stir in the flour, then whisk in the milk until very thick.",
+       "min": 12
+      },
+      {
+       "text": "Spread in a dish, cover and chill overnight.",
+       "min": 480
+      },
+      {
+       "text": "Shape into logs, roll in beaten egg and breadcrumbs.",
+       "min": 20
+      },
+      {
+       "text": "Heat the oil to 180C and fry in batches.",
+       "min": 10
+      },
+      {
+       "text": "Serve with lime.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Tropical fruit skewers",

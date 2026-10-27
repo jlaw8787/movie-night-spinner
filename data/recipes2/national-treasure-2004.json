@@ -60,7 +60,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Invisible ink lemon haloumi bites",
+     "prep_min": 15,
+     "cook_min": 35,
+     "make_ahead": "Marinate up to 4 hours, grill fresh",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into cubes",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, one for the marinade and one for the sauce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the haloumi in the juice of one lemon with the garlic, oregano and oil and leave for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Grill until golden and charred on each side.",
+       "min": 10
+      },
+      {
+       "text": "Mix the mayonnaise with the zest and juice of the second lemon. Spear the haloumi on toothpicks and serve with the sauce.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Silence Dogood soft pretzels",

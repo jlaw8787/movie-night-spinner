@@ -94,7 +94,108 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Burrow wedding canapés (vegetarian)",
+     "prep_min": 35,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "blinis",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cooked beetroot, very thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "sprigs dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 75,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 75,
+       "u": "g",
+       "item": "vegetarian gruyere-style cheese, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Season the beetroot with a squeeze of lemon, then top the blinis with creme fraiche, beetroot and dill.",
+       "min": 12
+      },
+      {
+       "text": "Boil the water with the butter for the gougeres.",
+       "min": 4
+      },
+      {
+       "text": "Beat in the flour until the dough pulls away from the pan.",
+       "min": 3
+      },
+      {
+       "text": "Beat in the eggs one at a time, then the cheese.",
+       "min": 5
+      },
+      {
+       "text": "Pipe small balls onto lined trays.",
+       "min": 8
+      },
+      {
+       "text": "Bake at 200C until puffed and golden.",
+       "min": 20
+      },
+      {
+       "text": "Arrange both on silver trays.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Shell Cottage seaside crab toasts",
@@ -159,7 +260,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Shell Cottage seaside palm heart toasts",
+     "prep_min": 16,
+     "cook_min": 8,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cans hearts of palm (400g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chives, snipped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet nori, crumbled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices sourdough bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Shred the hearts of palm into flakes with a fork.",
+       "min": 6
+      },
+      {
+       "text": "Fold through the mayonnaise with lemon zest, a squeeze of juice, the chives and the nori.",
+       "min": 5
+      },
+      {
+       "text": "Toast the sourdough and cut into fingers.",
+       "min": 8
+      },
+      {
+       "text": "Pile the mix on top.",
+       "min": 4
+      },
+      {
+       "text": "Finish with smoked paprika.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Foil baked trout with potatoes",

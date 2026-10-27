@@ -344,7 +344,70 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dory blue jelly (vegetarian)",
+     "prep_min": 12,
+     "cook_min": 128,
+     "make_ahead": "Make the day before",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "clear apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "agar agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "drops blue food colouring",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the agar into the apple juice in a saucepan, bring to the boil and simmer for 2 minutes, stirring.",
+       "min": 8
+      },
+      {
+       "text": "Stir in the food colouring and pour into glasses.",
+       "min": 3
+      },
+      {
+       "text": "Chill until set.",
+       "min": 120
+      },
+      {
+       "text": "Whip the cream.",
+       "min": 4
+      },
+      {
+       "text": "Top with cream and tuck a slice of orange on each for a little orange fish.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Blue lemonade ice cream float",

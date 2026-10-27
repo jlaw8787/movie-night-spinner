@@ -76,7 +76,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Katy's family mushroom and tofu congee",
+     "prep_min": 5,
+     "cook_min": 60,
+     "make_ahead": "Up to 2 days, reheats with extra stock",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "5cm piece ginger, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "fresh shiitake mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "silken firm tofu, cubed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "crispy fried shallots",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rinse the rice and put in a big pot with the stock and ginger.",
+       "min": 5
+      },
+      {
+       "text": "Bring to the boil, then simmer gently, stirring often, until thick and creamy.",
+       "min": 40
+      },
+      {
+       "text": "Stir in the mushrooms and simmer until soft, then gently add the tofu to warm through.",
+       "min": 15
+      },
+      {
+       "text": "Ladle into bowls and top with spring onion, soy, sesame oil and fried shallots.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bus fight sticky pork bao",
@@ -163,7 +246,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bus fight sticky tofu bao",
+     "prep_min": 15,
+     "cook_min": 90,
+     "make_ahead": "Tofu can marinate up to 1 day",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "extra firm tofu, cut into 1cm slices",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "hoisin sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "frozen bao buns",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, cut into sticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "roasted peanuts, crushed",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the hoisin, honey, soy and garlic and coat the tofu.",
+       "min": 5
+      },
+      {
+       "text": "Marinate in the fridge.",
+       "min": 60
+      },
+      {
+       "text": "Roast on a lined tray at 200C, basting with the marinade twice, until sticky and charred.",
+       "min": 25
+      },
+      {
+       "text": "Steam the bao buns.",
+       "min": 10
+      },
+      {
+       "text": "Fill with tofu, cucumber, spring onion and peanuts.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ta Lo steamed ginger snapper",
@@ -358,7 +528,64 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dragon scale mango pudding (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 125,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "mangoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.5,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "evaporated milk",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blitz two mangoes with the sugar into a puree.",
+       "min": 10
+      },
+      {
+       "text": "Whisk the agar into the evaporated milk in a saucepan, bring to a simmer and cook for 2 minutes, stirring.",
+       "min": 5
+      },
+      {
+       "text": "Take off the heat, stir in the puree and pour into glasses straight away.",
+       "min": 5
+      },
+      {
+       "text": "Set in the fridge, about 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Top with thin slices of the last mango laid like scales.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Katy's brown sugar boba milk tea",

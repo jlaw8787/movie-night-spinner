@@ -155,7 +155,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Deli hero wedges (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 0,
+     "make_ahead": "Up to 4 hours ahead, wrapped and chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "long hero rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "chargrilled eggplant in oil, drained",
+       "aisle": "Deli"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "drained roast capsicum",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "sliced provolone",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "iceberg lettuce, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Split the rolls lengthwise.",
+       "min": 5
+      },
+      {
+       "text": "Layer the eggplant, roast capsicum, provolone, lettuce and tomato.",
+       "min": 8
+      },
+      {
+       "text": "Dress with the oil, vinegar, oregano, salt and pepper.",
+       "min": 3
+      },
+      {
+       "text": "Press down firmly, then cut each hero into 6 wedges.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hostage pizza",

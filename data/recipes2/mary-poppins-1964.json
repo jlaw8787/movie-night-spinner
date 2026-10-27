@@ -86,7 +86,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Uncle Albert's tea party sandwiches (vegetarian)",
+     "prep_min": 32,
+     "cook_min": 15,
+     "make_ahead": "Up to 3 hours, keep covered and chilled",
+     "ingredients": [
+      {
+       "q": 12,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "punnet mustard cress",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "cheddar, thinly sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs until hard, then cool.",
+       "min": 15
+      },
+      {
+       "text": "Mash the eggs with salt and mayonnaise.",
+       "min": 4
+      },
+      {
+       "text": "Spread bread with cream cheese and layer with cucumber.",
+       "min": 12
+      },
+      {
+       "text": "Fill more with the egg and mustard cress, and the rest with cheddar and a little mustard.",
+       "min": 8
+      },
+      {
+       "text": "Cut off the crusts, slice into fingers and stack on a tiered plate.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mrs Brill's Cornish pasties",
@@ -191,7 +278,120 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mrs Brill's Cornish pasties (vegetarian)",
+     "prep_min": 47,
+     "cook_min": 50,
+     "make_ahead": "Up to 1 day, reheat to serve",
+     "ingredients": [
+      {
+       "q": 350,
+       "u": "g",
+       "item": "field mushrooms, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "potatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "swede, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Spices"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sheets shortcrust pastry, thawed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "brown sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the mushrooms, potato, swede and onion.",
+       "min": 20
+      },
+      {
+       "text": "Mix with the cheddar, soy sauce, salt and plenty of pepper.",
+       "min": 3
+      },
+      {
+       "text": "Cut rounds about 20cm wide from the pastry.",
+       "min": 5
+      },
+      {
+       "text": "Pile the filling onto one half of each, dot with butter, fold over and crimp the edge.",
+       "min": 15
+      },
+      {
+       "text": "Brush with beaten egg and cut a small slit.",
+       "min": 3
+      },
+      {
+       "text": "Bake at 200C for 15 minutes, then drop to 170C and bake until golden and the potato is tender.",
+       "min": 50
+      },
+      {
+       "text": "Serve with brown sauce.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Cherry Tree Lane roast",

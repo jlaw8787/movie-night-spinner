@@ -115,7 +115,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Kauai watermelon poke",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "Best served straight away",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "seedless watermelon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet rice crackers",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the watermelon into small cubes and pat dry on paper towel.",
+       "min": 5
+      },
+      {
+       "text": "Toss with soy, sesame oil, spring onion and chilli and leave for 5 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Spoon onto rice crackers and serve straight away.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Loco moco, patties over rice with gravy",

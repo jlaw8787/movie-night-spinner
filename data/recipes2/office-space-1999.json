@@ -68,7 +68,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chotchkie's loaded potato skins (vegetarian)",
+     "prep_min": 13,
+     "cook_min": 70,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "small potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the potatoes at 200C.",
+       "min": 45
+      },
+      {
+       "text": "While they bake, fry the mushrooms in a little of the butter with the paprika and soy sauce until dark and crisp.",
+       "min": 10
+      },
+      {
+       "text": "Halve the potatoes, scoop out and brush with the rest of the butter, melted.",
+       "min": 10
+      },
+      {
+       "text": "Crisp the skins at 220C.",
+       "min": 10
+      },
+      {
+       "text": "Fill with grated cheddar and the crisp mushrooms and bake again.",
+       "min": 5
+      },
+      {
+       "text": "Top with sour cream and chives.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "TPS report crackers",

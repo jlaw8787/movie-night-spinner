@@ -60,7 +60,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Champignon-beurre baguette bites",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "Best eaten the day they are made",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "Swiss brown mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter, extra, for the mushrooms",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "soft cultured butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "cornichons, sliced",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in the extra butter with the thyme and salt until golden, then cool.",
+       "min": 10
+      },
+      {
+       "text": "Warm the baguette at 200C and cool slightly.",
+       "min": 5
+      },
+      {
+       "text": "Split lengthways and spread both sides generously with the cultured butter. Lay the mushrooms inside, add cornichons and pepper.",
+       "min": 5
+      },
+      {
+       "text": "Close, press firmly and cut into 12 pieces. Serve with Dijon on the side.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Olives and cornichons",

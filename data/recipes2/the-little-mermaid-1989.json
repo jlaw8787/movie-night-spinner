@@ -360,7 +360,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sea-glass jelly cups (vegetarian)",
+     "prep_min": 18,
+     "cook_min": 75,
+     "make_ahead": "Up to 1 day, add toppings just before serving",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "cup",
+       "item": "clear apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "blue food colouring, a few drops",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag vegetarian gummy fish",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet shortbread",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "white chocolate",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the apple juice, sugar and agar in a saucepan, bring to the boil and simmer for 2 minutes, stirring. Tint blue with the food colouring.",
+       "min": 8
+      },
+      {
+       "text": "Pour half into four glasses and leave for about 15 minutes until just set. Keep the rest warm.",
+       "min": 15
+      },
+      {
+       "text": "Push the gummy fish into the jelly, pour over the rest and chill until firm.",
+       "min": 60
+      },
+      {
+       "text": "Whip the cream and crush the shortbread.",
+       "min": 6
+      },
+      {
+       "text": "Top with cream, shortbread for sand and a shell shaved from the white chocolate.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Lagoon punch",

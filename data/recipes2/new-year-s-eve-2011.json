@@ -88,7 +88,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Laura's chilli lime haloumi and avocado tostada bites",
+     "prep_min": 28,
+     "cook_min": 24,
+     "make_ahead": "Crisps and onion up to 1 day ahead, assemble just before serving",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "avocados",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of coriander",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut small rounds from the tortillas with a 6cm cutter and brush with oil. Bake at 200C until crisp, then cool.",
+       "min": 18
+      },
+      {
+       "text": "Cut the haloumi into 16 small squares and fry in a dry non-stick pan until golden on both sides.",
+       "min": 6
+      },
+      {
+       "text": "Toss the hot haloumi with lime juice and chilli flakes.",
+       "min": 2
+      },
+      {
+       "text": "Mash the avocados with lime juice and salt.",
+       "min": 6
+      },
+      {
+       "text": "Thinly slice the red onion and soak in lime juice for 10 minutes.",
+       "min": 14
+      },
+      {
+       "text": "Top each crisp with avocado, a piece of haloumi, a few onion slivers and a coriander leaf.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Times Square halal cart chicken skewers",
@@ -207,7 +292,126 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Times Square halal cart spiced tofu skewers",
+     "prep_min": 58,
+     "cook_min": 15,
+     "make_ahead": "Marinate up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground turmeric",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground coriander",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "white vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pita breads",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle of hot chilli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "iceberg lettuce",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Press the tofu under a heavy board, then cut into cubes and toss with oil, lemon juice, cumin, turmeric, coriander, crushed garlic and salt.",
+       "min": 15
+      },
+      {
+       "text": "Marinate in the fridge for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Thread the tofu onto skewers.",
+       "min": 5
+      },
+      {
+       "text": "Mix the mayonnaise, yoghurt, vinegar, crushed garlic and a pinch of sugar into a white sauce.",
+       "min": 5
+      },
+      {
+       "text": "Grill the skewers, turning, until golden and charred at the edges.",
+       "min": 10
+      },
+      {
+       "text": "Warm the pita and shred the lettuce.",
+       "min": 5
+      },
+      {
+       "text": "Serve the skewers on pita with white sauce, chilli sauce and lettuce.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Midnight garlic prawn linguine",
@@ -694,7 +898,86 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ingrid's resolutions chocolate fondue (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 6,
+     "make_ahead": "Chocolate sauce up to 1 day ahead, reheat gently",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "dark chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "strawberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "brownie",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "pretzels",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the chocolate and prepare the dippers on a platter.",
+       "min": 5
+      },
+      {
+       "text": "Heat the cream until steaming.",
+       "min": 5
+      },
+      {
+       "text": "Pour over the chocolate and leave to melt.",
+       "min": 1
+      },
+      {
+       "text": "Stir until glossy, then stir in orange zest and a pinch of salt.",
+       "min": 3
+      },
+      {
+       "text": "Keep warm in a fondue pot or a bowl over hot water.",
+       "min": 3
+      },
+      {
+       "text": "Serve with strawberries, vegetarian marshmallows, brownie cubes and pretzels on skewers.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Gin French 75 with champagne",

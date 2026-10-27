@@ -127,7 +127,70 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sunnyside spinach and cheese pinwheels",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "Rolls can be chilled up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry, thawed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato relish",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Lay the pastry flat and spread with tomato relish.",
+       "min": 5
+      },
+      {
+       "text": "Cover with the spinach and cheddar and roll up tightly from one edge.",
+       "min": 10
+      },
+      {
+       "text": "Chill the logs for 15 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Cut each log into slices, lay flat on lined trays and brush with beaten egg.",
+       "min": 5
+      },
+      {
+       "text": "Bake for 15 minutes until puffed and golden.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Andy's spaghetti and meatballs",

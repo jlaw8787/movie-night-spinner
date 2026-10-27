@@ -94,7 +94,102 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Halftime crispy orange tofu bites",
+     "prep_min": 25,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "soy sauce, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 70,
+       "u": "g",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "knob ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "sesame seeds, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Press the firm tofu dry, cut into bite-sized pieces, toss with a little soy, then in most of the cornflour.",
+       "min": 9
+      },
+      {
+       "text": "Fry in batches in oil at 180C for 4 to 5 minutes until crisp.",
+       "min": 10
+      },
+      {
+       "text": "Simmer the juice of the oranges with the zest of one of them, a splash of soy, the honey, the rice vinegar, the grated ginger and the crushed garlic clove for 5 minutes, then thicken with the last of the cornflour mixed in water.",
+       "min": 12
+      },
+      {
+       "text": "Toss the tofu through and top with sesame seeds and sliced spring onion.",
+       "min": 9
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Phil's vitamin shop granola bars",
@@ -234,7 +329,7 @@
      "q": 1,
      "u": "",
      "item": "jar hot giardiniera",
-     "aisle": "Meat"
+     "aisle": "Deli"
     }
    ],
    "steps": [

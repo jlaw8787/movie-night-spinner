@@ -167,7 +167,108 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mushroom and dill pirozhki",
+     "prep_min": 45,
+     "cook_min": 107,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 7,
+       "u": "g",
+       "item": "dried yeast",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "warm milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "large potato, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the flour, yeast, warm milk, sugar and butter into a soft dough and knead briefly.",
+       "min": 10
+      },
+      {
+       "text": "Cover and let the dough prove.",
+       "min": 60
+      },
+      {
+       "text": "Boil the potato until tender, drain and mash.",
+       "min": 15
+      },
+      {
+       "text": "Fry the mushrooms with the chopped onion in the oil until dry, then mix with the potato and chopped dill.",
+       "min": 12
+      },
+      {
+       "text": "Cool the filling.",
+       "min": 15
+      },
+      {
+       "text": "Cut the dough into rounds, fill, and seal.",
+       "min": 20
+      },
+      {
+       "text": "Bake at 200C until golden.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mama's beetroot and cabbage borscht",

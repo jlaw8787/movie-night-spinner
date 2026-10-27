@@ -70,7 +70,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Publishing party beetroot cucumber bites",
+     "prep_min": 31,
+     "cook_min": 0,
+     "make_ahead": "Up to 2 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "telegraph cucumbers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "small cooked beetroot, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped dill, plus sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon, zested and juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cucumbers into 1.5cm rounds and pat dry.",
+       "min": 6
+      },
+      {
+       "text": "Slice the beetroot paper thin and toss with the lemon juice and salt.",
+       "min": 6
+      },
+      {
+       "text": "Beat the cream cheese with the chopped dill and lemon zest.",
+       "min": 4
+      },
+      {
+       "text": "Pipe or spoon onto each round.",
+       "min": 6
+      },
+      {
+       "text": "Top with a fold of beetroot, capers, a dill sprig and pepper.",
+       "min": 9
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Upper West Side bagels",

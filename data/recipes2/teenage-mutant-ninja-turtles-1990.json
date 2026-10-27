@@ -48,7 +48,56 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sewer pizza rolls (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Roll up to 4 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "plant-based pepperoni slices",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "grated mozzarella",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roll the dough into a thin rectangle and spread with the sauce.",
+       "min": 10
+      },
+      {
+       "text": "Cover with the plant-based pepperoni and mozzarella, roll up tightly from the long side, slice into 12 rounds and place cut side up on a lined tray.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 220C until golden.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Splinter's cheese plate",

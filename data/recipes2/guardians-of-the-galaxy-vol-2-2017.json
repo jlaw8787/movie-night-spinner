@@ -125,7 +125,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sovereign golden saffron arancini (vegetarian)",
+     "prep_min": 128,
+     "cook_min": 40,
+     "make_ahead": "Make the risotto up to 1 day ahead, fry just before serving",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "arborio rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable stock, hot",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "saffron threads",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mozzarella, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil for frying",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the rice with the hot stock and saffron into a risotto, stir in the cheese, then spread out to cool.",
+       "min": 25
+      },
+      {
+       "text": "Chill overnight or at least a few hours until firm.",
+       "min": 120
+      },
+      {
+       "text": "Roll into balls around cubes of mozzarella, coat in egg and then panko.",
+       "min": 15
+      },
+      {
+       "text": "Fry in the oil at 180C in batches until golden all over.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Yondu's Ravager stew",

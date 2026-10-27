@@ -48,7 +48,56 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Braidwood Inn vending machine mix (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Up to 2 days in a sealed container",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "salted peanuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "pretzels",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "chocolate bars",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "plant-based jerky",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the chocolate bars into chunks and tear the plant-based jerky into bite-sized pieces.",
+       "min": 5
+      },
+      {
+       "text": "Tip the peanuts, pretzels, chocolate and jerky into a shared bowl and mix gently.",
+       "min": 2
+      },
+      {
+       "text": "Divide between four people for the motel snack break.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Shower curtain ring onion rings",

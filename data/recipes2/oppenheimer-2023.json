@@ -103,7 +103,7 @@
      "q": 1,
      "u": "",
      "item": "jar dill pickles",
-     "aisle": "Meat"
+     "aisle": "Deli"
     }
    ],
    "steps": [
@@ -133,7 +133,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Los Alamos green chile cheeseburger sliders (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "long green chillies",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin chipotle in adobo",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slider buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar dill pickles",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Char the long green chillies over a flame or under a grill until blackened, sweat in a bowl, peel, seed and chop.",
+       "min": 5
+      },
+      {
+       "text": "Roll the plant-based mince into 8 balls.",
+       "min": 5
+      },
+      {
+       "text": "Smash flat in a very hot pan with the oil, season and cook 2 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Flip, top with the chillies and a slice of cheddar each, cover 1 minute.",
+       "min": 7
+      },
+      {
+       "text": "Mix the mayo with the chipotle in adobo.",
+       "min": 5
+      },
+      {
+       "text": "Toast the slider buns and build with mayo, patties and pickles.",
+       "min": 13
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Trinity test green chile stew",

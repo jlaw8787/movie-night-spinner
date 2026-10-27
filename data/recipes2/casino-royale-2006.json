@@ -60,7 +60,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fig, smoky eggplant, olive and cheddar picks",
+     "prep_min": 15,
+     "cook_min": 5,
+     "make_ahead": "Up to 4 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "figs, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "chargrilled eggplant",
+       "aisle": "Deli"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, peel in strips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fennel seeds",
+       "aisle": "Spices"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "vintage cheddar",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the eggplant into strips, wrap one around each fig half and dust with smoked paprika.",
+       "min": 8
+      },
+      {
+       "text": "Warm the olives in a small pan with the orange peel and fennel seeds until fragrant.",
+       "min": 5
+      },
+      {
+       "text": "Break the cheddar into shards and push everything onto toothpicks so nobody gets greasy fingers on the cards.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Vesper's train dinner salad",

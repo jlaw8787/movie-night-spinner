@@ -78,7 +78,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Salt and vinegar rice paper crackling",
+     "prep_min": 10,
+     "cook_min": 18,
+     "make_ahead": "Up to 4 hours in an airtight container",
+     "ingredients": [
+      {
+       "q": 12,
+       "u": "",
+       "item": "rice paper sheets",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "neutral oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "flaky sea salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "malt vinegar, extra splash",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pickled onions",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "hot English mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Break the rice paper into palm-sized pieces.",
+       "min": 5
+      },
+      {
+       "text": "Heat the oil to 190C and fry a few pieces at a time for a few seconds until puffed and white, then drain on paper towel.",
+       "min": 15
+      },
+      {
+       "text": "While still hot, flick over the malt vinegar with your fingertips and dust with the salt.",
+       "min": 3
+      },
+      {
+       "text": "Sprinkle with flaky salt mixed with the extra splash of vinegar. Serve with pickled onions and hot mustard.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chinatown dumplings",
@@ -147,7 +224,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chinatown dumplings (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 24,
+       "u": "",
+       "item": "frozen vegetable dumplings",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "black vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "ginger, cut into fine matchsticks",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the soy, black vinegar and ginger for dipping.",
+       "min": 5
+      },
+      {
+       "text": "Fry the dumplings flat side down in oil.",
+       "min": 2
+      },
+      {
+       "text": "Add the water, cover and steam.",
+       "min": 4
+      },
+      {
+       "text": "Uncover and fry again until crisp underneath.",
+       "min": 4
+      },
+      {
+       "text": "Serve straight from the pan with the dip.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chopped cheese",

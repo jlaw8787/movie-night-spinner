@@ -169,7 +169,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Caribbean cruise haloumi cocktail",
+     "prep_min": 13,
+     "cook_min": 8,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "hot sauce, a few drops",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baby cos lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "avocado, cubed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "paprika",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the haloumi into thick fingers and fry in a dry non-stick pan until golden on both sides. Cool slightly.",
+       "min": 8
+      },
+      {
+       "text": "Mix the mayonnaise with the tomato sauce, juice of one lime, hot sauce and soy sauce.",
+       "min": 4
+      },
+      {
+       "text": "Shred the lettuce into glasses and add cubes of avocado.",
+       "min": 4
+      },
+      {
+       "text": "Spoon over the sauce and hang the haloumi around the rims. Dust with paprika and serve with lime wedges.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Nora's last honey glazed ham",
@@ -460,7 +543,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Last-minute Christmas Eve trifle (vegetarian)",
+     "prep_min": 140,
+     "cook_min": 5,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet vegetarian raspberry jelly crystals (agar set)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "sponge cake",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mixed berries, plus a few extra to finish",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "thick vanilla custard",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "icing sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "flaked almonds, toasted",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Make up the vegetarian jelly as the packet directs, bringing it to the boil so the agar dissolves.",
+       "min": 5
+      },
+      {
+       "text": "Break the sponge into a large glass bowl and drizzle with orange juice. Scatter over the berries.",
+       "min": 5
+      },
+      {
+       "text": "Pour the jelly over while still warm and chill until set.",
+       "min": 120
+      },
+      {
+       "text": "Spoon the custard on top.",
+       "min": 5
+      },
+      {
+       "text": "Whip the cream with the icing sugar and spread over. Finish with almonds and a few berries.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hemlock Street cranberry fizz punch",

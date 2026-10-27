@@ -96,7 +96,116 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Amsterdam mushroom bitterballen",
+     "prep_min": 50,
+     "cook_min": 755,
+     "make_ahead": "Fill the day before, chill overnight",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar wholegrain mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Finely chop the mushrooms and onion and fry in a third of the butter with the thyme leaves until dark and dry. Stir in the soy.",
+       "min": 20
+      },
+      {
+       "text": "Cook the rest of the butter with the flour, whisk in the stock until thick, then stir in the mushrooms and season with salt and pepper.",
+       "min": 15
+      },
+      {
+       "text": "Chill overnight.",
+       "min": 720
+      },
+      {
+       "text": "Roll into balls and crumb in beaten egg and panko.",
+       "min": 30
+      },
+      {
+       "text": "Fry at 180C until deep golden.",
+       "min": 15
+      },
+      {
+       "text": "Serve with grainy mustard.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Lake Como antipasto",
@@ -159,7 +268,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lake Como antipasto with marinated artichokes",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "Up to 2 hours ahead",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "marinated artichoke hearts",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "chargrilled eggplant",
+       "aisle": "Deli"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "burrata",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "figs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet breadsticks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "extra virgin olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Lay the artichokes and eggplant on a board with the burrata, halved figs, breadsticks and olives.",
+       "min": 10
+      },
+      {
+       "text": "Drizzle with good olive oil and a squeeze of lemon.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Risotto alla milanese",
@@ -345,7 +523,7 @@
       {
        "q": 60,
        "u": "g",
-       "item": "parmesan",
+       "item": "vegetarian parmesan-style cheese",
        "aisle": "Dairy"
       }
      ],
@@ -414,7 +592,7 @@
       {
        "q": 60,
        "u": "g",
-       "item": "parmesan",
+       "item": "vegetarian parmesan-style cheese",
        "aisle": "Dairy"
       }
      ],

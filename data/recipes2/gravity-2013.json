@@ -80,7 +80,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Space station dumplings (vegetarian)",
+     "prep_min": 40,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cups shredded wombok",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "",
+       "item": "dumpling wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "black vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chilli oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Crumble the tofu and mix with the mushrooms, soy, wombok, ginger and sliced spring onions.",
+       "min": 10
+      },
+      {
+       "text": "Fill the wrappers and pleat.",
+       "min": 20
+      },
+      {
+       "text": "Fry in the oil until crisp underneath.",
+       "min": 4
+      },
+      {
+       "text": "Add water, cover and steam.",
+       "min": 4
+      },
+      {
+       "text": "Serve with black vinegar and chilli oil.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Soyuz pelmeni",
@@ -161,7 +254,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Soyuz mushroom pelmeni",
+     "prep_min": 30,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter, divided",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 32,
+       "u": "",
+       "item": "dumpling wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms and onion in a little of the butter until dry, season with salt and pepper and cool.",
+       "min": 10
+      },
+      {
+       "text": "Fill the wrappers, fold into little hats and pinch closed.",
+       "min": 22
+      },
+      {
+       "text": "Boil until they float, plus 3 minutes.",
+       "min": 7
+      },
+      {
+       "text": "Toss in the rest of the butter.",
+       "min": 2
+      },
+      {
+       "text": "Serve with sour cream and chopped dill.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Kowalski's Ganges sunrise curry",

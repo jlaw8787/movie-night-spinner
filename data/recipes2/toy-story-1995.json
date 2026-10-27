@@ -62,7 +62,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mr Potato Head loaded potato bites (vegetarian)",
+     "prep_min": 11,
+     "cook_min": 43,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until tender and drain.",
+       "min": 15
+      },
+      {
+       "text": "Smash flat on a tray brushed with most of the olive oil and roast at 220C until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Grate the cheddar. Dice the smoked tofu small and fry in the rest of the oil with the paprika until crisp.",
+       "min": 8
+      },
+      {
+       "text": "Top with cheese and the crisp tofu and return to the oven.",
+       "min": 3
+      },
+      {
+       "text": "Add sour cream and chopped chives.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Army men pea and edamame salad",

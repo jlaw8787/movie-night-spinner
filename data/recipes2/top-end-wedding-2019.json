@@ -30,7 +30,7 @@
      "q": 100,
      "u": "g",
      "item": "tofu puffs",
-     "aisle": "Meat"
+     "aisle": "Produce"
     },
     {
      "q": 200,
@@ -66,7 +66,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mindil Beach laksa cups (vegetarian)",
+     "prep_min": 12,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetarian laksa paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "eggplant",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "tofu puffs",
+       "aisle": "Deli"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "rice noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "bean sprouts",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the vegetarian laksa paste for 2 minutes, add the coconut milk and the water and simmer.",
+       "min": 5
+      },
+      {
+       "text": "Add the eggplant cut into chunks and cook 8 minutes, then the halved tofu puffs.",
+       "min": 16
+      },
+      {
+       "text": "Cook the rice noodles, divide into bowls, ladle over the laksa and top with bean sprouts.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Darwin mango and prawn rice paper rolls",
@@ -181,7 +248,122 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Darwin mango and tofu rice paper rolls",
+     "prep_min": 44,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 100,
+       "u": "g",
+       "item": "rice vermicelli",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "mangoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "continental cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch Vietnamese mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "rice paper sheets",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "water",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the rice vermicelli in boiling water 5 minutes, drain and cool.",
+       "min": 6
+      },
+      {
+       "text": "Slice the smoked tofu into thin strips.",
+       "min": 8
+      },
+      {
+       "text": "Slice the mangoes and the cucumber into strips.",
+       "min": 8
+      },
+      {
+       "text": "Dip a rice paper sheet in warm water for 10 seconds, lay flat, add tofu, mango, cucumber, noodles, mint and Vietnamese mint and roll tightly.",
+       "min": 11
+      },
+      {
+       "text": "Repeat until all the rolls are made.",
+       "min": 8
+      },
+      {
+       "text": "Mix the soy sauce, the lime juice, the sugar, the water, the chopped chilli and the crushed garlic clove for dipping.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Tiwi Islands barbecued barramundi",

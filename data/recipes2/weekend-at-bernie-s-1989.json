@@ -66,7 +66,80 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hamptons artichoke dip (vegetarian)",
+     "prep_min": 12,
+     "cook_min": 0,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar marinated artichoke hearts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag potato chips",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Drain the artichokes and chop finely with the capers.",
+       "min": 4
+      },
+      {
+       "text": "Fold into the cream cheese and sour cream with lemon juice, soy sauce and chopped chives.",
+       "min": 6
+      },
+      {
+       "text": "Serve with potato chips.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rumaki bacon wrapped water chestnuts",
@@ -121,7 +194,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rumaki smoky eggplant wrapped water chestnuts",
+     "prep_min": 18,
+     "cook_min": 30,
+     "make_ahead": "Wrap up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin water chestnuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "large eggplant",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the eggplant lengthways into 16 thin strips, brush with the oil and paprika and cook in a hot pan for 1 minute a side until bendy.",
+       "min": 12
+      },
+      {
+       "text": "Drain the water chestnuts and wrap each in a strip of eggplant, held with a toothpick.",
+       "min": 12
+      },
+      {
+       "text": "Brush with the soy, sugar and ginger.",
+       "min": 4
+      },
+      {
+       "text": "Bake at 200C until sticky.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bernie's beach house clambake",

@@ -98,7 +98,112 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Melbourne haloumi souvlaki bites",
+     "prep_min": 35,
+     "cook_min": 8,
+     "make_ahead": "Best served warm",
+     "ingredients": [
+      {
+       "q": 360,
+       "u": "g",
+       "item": "haloumi, cut in strips",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "zucchini, cut in strips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "cloves of garlic, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pita breads, torn",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "clove of garlic, for the yoghurt",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "toothpicks",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Marinate the haloumi and zucchini in the lemon juice, garlic, oregano and oil.",
+       "min": 20
+      },
+      {
+       "text": "Mix the yoghurt with the garlic.",
+       "min": 3
+      },
+      {
+       "text": "Grill the haloumi and zucchini on high until charred.",
+       "min": 8
+      },
+      {
+       "text": "Wrap small pieces in warm pita with tomato, onion and garlic yoghurt.",
+       "min": 8
+      },
+      {
+       "text": "Pin with toothpicks.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Suburban dip and chips",

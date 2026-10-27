@@ -86,7 +86,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Andrew's triple-stack ham and cheese (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "wholegrain mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "plant-based ham slices",
+       "aisle": "Deli"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices Swiss cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "apples",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the mayo with the wholegrain mustard.",
+       "min": 2
+      },
+      {
+       "text": "Toast the bread.",
+       "min": 8
+      },
+      {
+       "text": "Build four stacks: toast, sauce, plant-based ham and Swiss, toast, sauce, plant-based ham, cheddar and pickles, then toast.",
+       "min": 15
+      },
+      {
+       "text": "Press lightly, cut each into three fingers and pin with toothpicks.",
+       "min": 5
+      },
+      {
+       "text": "Slice the apples and toss with lemon juice to serve alongside.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bender's share plate",
@@ -125,7 +212,46 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bender's share plate (vegetarian)",
+     "prep_min": 6,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "g",
+       "item": "crackers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Deli"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cube the cheddar and slice the smoked tofu thin.",
+       "min": 3
+      },
+      {
+       "text": "Arrange the crackers, cheddar and smoked tofu on a shared plate in the middle of the table.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Brian's lunch",

@@ -86,7 +86,110 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fezziwig's ball lentil, apple and sage rolls",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "Swiss brown mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin brown lentils (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "apple, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped sage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs (1 for the filling, 1 beaten for glazing)",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "apple chutney",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "wholegrain mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in the oil until dry and golden, then cool.",
+       "min": 8
+      },
+      {
+       "text": "Lightly mash the lentils and mix with the mushrooms, apple, onion, sage, breadcrumbs, one egg, salt and pepper.",
+       "min": 6
+      },
+      {
+       "text": "Cut the pastry in half, lay a log of filling along each strip, roll and seal underneath.",
+       "min": 8
+      },
+      {
+       "text": "Brush with the other egg and cut each into small rolls.",
+       "min": 4
+      },
+      {
+       "text": "Bake at 200C until golden.",
+       "min": 22
+      },
+      {
+       "text": "Stir the mustard into the chutney and serve alongside.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Brown butter roast chestnuts",

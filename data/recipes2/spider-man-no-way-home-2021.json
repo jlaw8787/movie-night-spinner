@@ -171,7 +171,108 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ned's lola's vegetable lumpia",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Up to 1 day, uncooked and chilled",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "firm tofu, crumbled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "bean sprouts, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "cracked black pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "",
+       "item": "spring roll wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "sweet chilli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "white vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the tofu with the bean sprouts, carrot, onion, most of the garlic, the egg, soy and pepper.",
+       "min": 8
+      },
+      {
+       "text": "Roll a thin line of filling in each wrapper, folding in the sides and sealing with water.",
+       "min": 20
+      },
+      {
+       "text": "Fry in the oil at 175C until deep golden.",
+       "min": 5
+      },
+      {
+       "text": "Serve with sweet chilli sauce and the vinegar mixed with the last of the garlic.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Happy's apartment spaghetti",
@@ -283,7 +384,7 @@
       {
        "q": 80,
        "u": "g",
-       "item": "parmesan, grated",
+       "item": "vegetarian parmesan-style cheese, grated",
        "aisle": "Dairy"
       },
       {

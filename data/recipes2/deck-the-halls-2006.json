@@ -153,7 +153,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Street party cranberry chilli meatballs (vegetarian)",
+     "prep_min": 7,
+     "cook_min": 23,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cranberry sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "sweet chilli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the plant-based mince with the egg, breadcrumbs, garlic and salt.",
+       "min": 5
+      },
+      {
+       "text": "Roll into small balls and bake on a lined tray at 200C.",
+       "min": 20
+      },
+      {
+       "text": "Simmer the cranberry sauce, sweet chilli, soy and lemon juice until glossy.",
+       "min": 3
+      },
+      {
+       "text": "Toss the meatballs through, scatter with spring onion and serve on toothpicks.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Feud's-over turkey with cranberry glaze",
@@ -450,7 +533,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cul-de-sac Christmas trifle (vegetarian)",
+     "prep_min": 140,
+     "cook_min": 10,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet vegetarian strawberry jelly crystals (agar set)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "sponge cake",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "orange juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mixed berries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "thick vanilla custard",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "icing sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "crushed honeycomb",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Make up the vegetarian jelly as the packet directs, bringing it to the boil so the agar dissolves, then cool a little.",
+       "min": 10
+      },
+      {
+       "text": "Break the sponge into a glass bowl, drizzle with orange juice and add the berries. Pour over the jelly while still warm.",
+       "min": 5
+      },
+      {
+       "text": "Chill until set.",
+       "min": 120
+      },
+      {
+       "text": "Spoon over the custard.",
+       "min": 5
+      },
+      {
+       "text": "Whip the cream with the icing sugar and spread on top. Scatter with honeycomb just before serving.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Neighbourly vanilla eggnog",

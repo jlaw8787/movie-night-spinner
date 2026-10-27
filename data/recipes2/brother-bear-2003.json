@@ -58,7 +58,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Salmon run bites (vegetarian)",
+     "prep_min": 14,
+     "cook_min": 0,
+     "make_ahead": "Up to 4 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet rye crispbread",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cooked beetroot, very thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pick the dill into sprigs.",
+       "min": 3
+      },
+      {
+       "text": "Spread the crispbreads with cream cheese.",
+       "min": 4
+      },
+      {
+       "text": "Top with folds of beetroot and a sprig of dill.",
+       "min": 5
+      },
+      {
+       "text": "Squeeze over a little lemon and lay on a wooden board.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rutt and Tuke's maple nuts",

@@ -153,7 +153,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mermaid lagoon asparagus and hearts of palm",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches asparagus, trimmed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can hearts of palm, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bring a pot of water to the boil with the salt and slices of one lemon.",
+       "min": 8
+      },
+      {
+       "text": "Poach the asparagus for 2 minutes until bright green.",
+       "min": 2
+      },
+      {
+       "text": "Plunge into a bowl of water with half the ice to stop the cooking.",
+       "min": 5
+      },
+      {
+       "text": "Drain the asparagus and halve the hearts of palm lengthways.",
+       "min": 5
+      },
+      {
+       "text": "Mix the mayonnaise, tomato sauce, a squeeze of the second lemon and the hot sauce.",
+       "min": 3
+      },
+      {
+       "text": "Serve the asparagus and hearts of palm on the rest of the ice with the sauce.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Captain Hook's beef and allspice stew",

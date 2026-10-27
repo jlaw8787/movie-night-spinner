@@ -143,7 +143,80 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Wasteland lizard skewers (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 10,
+     "make_ahead": "Tofu can marinate up to 1 day",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "extra firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Spices"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the tofu dry, cut into strips and rub with the oil, paprika, cumin, chilli and a pinch of salt. Thread onto skewers.",
+       "min": 15
+      },
+      {
+       "text": "Grill hot until blackened at the edges.",
+       "min": 10
+      },
+      {
+       "text": "Mix the yoghurt with the garlic and salt for a dip.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Harissa lamb shoulder with hummus",

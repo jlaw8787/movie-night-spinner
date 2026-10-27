@@ -422,7 +422,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Facehugger panna cotta (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 119,
+     "make_ahead": "Up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "vanilla bean",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "candied orange peel strips",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "neutral oil, for the moulds",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Lightly oil four small round moulds.",
+       "min": 3
+      },
+      {
+       "text": "Whisk the agar into the cream, milk, sugar and vanilla seeds, bring to a simmer and cook gently for 2 minutes, stirring.",
+       "min": 8
+      },
+      {
+       "text": "Divide between the moulds.",
+       "min": 3
+      },
+      {
+       "text": "Refrigerate until set.",
+       "min": 120
+      },
+      {
+       "text": "Dip each mould briefly in warm water, turn out and fan the orange peel around as legs.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sulaco condensed milk iced coffee",

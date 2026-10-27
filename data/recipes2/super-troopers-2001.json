@@ -159,7 +159,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Shenanigans loaded cheese fries (vegetarian)",
+     "prep_min": 11,
+     "cook_min": 33,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "frozen thick-cut fries",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pickled jalapeños",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the frozen thick-cut fries at 220C for 25 minutes until crisp.",
+       "min": 26
+      },
+      {
+       "text": "Dice the smoked tofu small and fry in the oil until crisp.",
+       "min": 7
+      },
+      {
+       "text": "Melt the butter, stir in the flour, whisk in the milk and simmer 2 minutes, then stir in the grated cheddar until smooth.",
+       "min": 5
+      },
+      {
+       "text": "Pile the fries on a platter, pour over the cheese sauce and top with the tofu, sliced pickled jalapeños and spring onion.",
+       "min": 3
+      },
+      {
+       "text": "Serve with the sour cream.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Farva's double bacon cheeseburgers",
@@ -208,7 +301,7 @@
      "q": 1,
      "u": "",
      "item": "jar dill pickles",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 1,
@@ -420,7 +513,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Syrup-chug maple pecan pancakes",
+     "prep_min": 13,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "pecans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the self-raising flour, the sugar, the eggs, the buttermilk and 50g of the melted butter into a thick batter.",
+       "min": 4
+      },
+      {
+       "text": "Toast the pecans in a dry pan for 4 minutes, add 2 tablespoons of the maple syrup, the smoked paprika and a pinch of salt and stir until sticky, then tip onto baking paper to cool.",
+       "min": 8
+      },
+      {
+       "text": "Cook ladles of batter in a buttered pan over medium heat for 2 minutes a side until golden and risen.",
+       "min": 8
+      },
+      {
+       "text": "Beat the rest of the soft butter until fluffy.",
+       "min": 4
+      },
+      {
+       "text": "Stack the pancakes per plate with the smoky pecans and a spoon of butter, and pour over the warm maple syrup.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Homemade spiced cola",

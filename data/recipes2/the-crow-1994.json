@@ -103,7 +103,56 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Tomato and cheddar toasted sandwiches",
+     "prep_min": 5,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices thick white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, thinly sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Butter the bread on the outside and fill four sandwiches with cheddar and tomato.",
+       "min": 5
+      },
+      {
+       "text": "Cook in a pan over medium heat, pressing down, until golden and melting.",
+       "min": 6
+      },
+      {
+       "text": "Cut each into long soldiers and serve hot.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Albrecht's diner meatloaf",

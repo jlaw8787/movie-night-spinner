@@ -101,7 +101,56 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Oil rig mushroom jerky",
+     "prep_min": 135,
+     "cook_min": 150,
+     "make_ahead": "Up to 1 week, airtight in the fridge",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "black peppercorns, cracked",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms lengthwise into thin strips.",
+       "min": 15
+      },
+      {
+       "text": "Marinate with the soy, sugar and pepper for 2 hours in the fridge.",
+       "min": 120
+      },
+      {
+       "text": "Lay on racks and dry in a 100C oven with the door ajar until leathery but bendy.",
+       "min": 150
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rib eye with onion gravy and mash",

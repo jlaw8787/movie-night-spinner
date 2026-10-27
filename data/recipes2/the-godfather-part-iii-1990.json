@@ -123,7 +123,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Melon with chargrilled eggplant (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 60,
+     "make_ahead": "Up to 2 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "rockmelon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "chargrilled eggplant in oil, drained",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "extra virgin olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "flaky salt, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "cracked black pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Leave the rockmelon at room temperature for an hour.",
+       "min": 60
+      },
+      {
+       "text": "Halve, deseed, cut into 12 long wedges and cut off the skin.",
+       "min": 10
+      },
+      {
+       "text": "Drape each wedge with a strip of eggplant, add flaky salt, pepper and a drizzle of olive oil just before serving.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pasta alla Norma",

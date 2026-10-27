@@ -155,7 +155,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Charters Towers smoked tofu and pickle rolls",
+     "prep_min": 22,
+     "cook_min": 0,
+     "make_ahead": "Up to 4 hours, keep covered and chilled",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft white rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "sweet mustard pickle",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vintage cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "iceberg lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tomato",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Split and butter the rolls.",
+       "min": 6
+      },
+      {
+       "text": "Spread each base generously with mustard pickle.",
+       "min": 4
+      },
+      {
+       "text": "Layer with thinly sliced smoked tofu, a slice of cheddar and a few leaves of iceberg lettuce.",
+       "min": 8
+      },
+      {
+       "text": "Add thinly sliced tomato and a crack of pepper, close and cut in half.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Messines trench corned beef hash",

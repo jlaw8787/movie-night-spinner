@@ -133,7 +133,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Faraway Downs cheddar and pickle sandwiches",
+     "prep_min": 25,
+     "cook_min": 0,
+     "make_ahead": "Up to 3 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "vintage cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices of white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "hot mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mustard pickles",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Thinly slice the cheddar and tomatoes.",
+       "min": 8
+      },
+      {
+       "text": "Butter the bread and pile on the cheddar and tomato with mustard and mustard pickles.",
+       "min": 12
+      },
+      {
+       "text": "Cut into triangles.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Campfire beef and vegetables",

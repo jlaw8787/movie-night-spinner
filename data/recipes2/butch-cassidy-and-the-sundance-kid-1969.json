@@ -70,7 +70,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Etta's smoked tofu and cheddar picnic baguettes",
+     "prep_min": 20,
+     "cook_min": 0,
+     "make_ahead": "Up to 3 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "baguettes",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "salted butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "wholegrain mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "smoked tofu, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sharp cheddar, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green apple, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "cornichons, halved",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Split the baguettes lengthways and cut each in half.",
+       "min": 4
+      },
+      {
+       "text": "Spread with butter and mustard.",
+       "min": 4
+      },
+      {
+       "text": "Layer with the smoked tofu, cheddar, apple and cornichons.",
+       "min": 6
+      },
+      {
+       "text": "Press closed, wrap tightly in baking paper and tie with string.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Candy-dipped pretzel dynamite sticks",

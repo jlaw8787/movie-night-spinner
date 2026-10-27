@@ -60,7 +60,80 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Moulin Rouge oyster mushrooms",
+     "prep_min": 25,
+     "cook_min": 8,
+     "make_ahead": "Mignonette up to 1 day, cook the mushrooms up to 2 hours ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "oyster mushrooms, torn in pieces",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch of salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "crushed ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, cut in wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the shallots, vinegar and pepper for the mignonette and rest.",
+       "min": 20
+      },
+      {
+       "text": "Sear the mushrooms in the oil in a very hot pan for a minute a side, season with salt and cool.",
+       "min": 8
+      },
+      {
+       "text": "Lay the mushrooms on crushed ice with lemon wedges and spoon a little mignonette over each.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Montmartre gougères",

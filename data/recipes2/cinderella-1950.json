@@ -133,7 +133,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Royal ball canapés (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 0,
+     "make_ahead": "Up to 2 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "blinis",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cooked beetroot, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "dill sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "rockmelon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "telegraph cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "mint leaves",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the beetroot very thin and toss with the lemon juice.",
+       "min": 5
+      },
+      {
+       "text": "Top the blinis with creme fraiche, a fold of beetroot and a sprig of dill.",
+       "min": 8
+      },
+      {
+       "text": "Cut the rockmelon into wedges and remove the skin. Peel the cucumber into long ribbons and wrap one around each wedge with a mint leaf.",
+       "min": 10
+      },
+      {
+       "text": "Arrange both on silver trays and serve chilled.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pumpkin coach risotto",
@@ -243,7 +320,7 @@
       {
        "q": 100,
        "u": "g",
-       "item": "parmesan, grated",
+       "item": "vegetarian parmesan-style cheese, grated",
        "aisle": "Dairy"
       },
       {

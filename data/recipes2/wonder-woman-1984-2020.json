@@ -68,7 +68,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Food court sausage rolls and potato skins (vegetarian)",
+     "prep_min": 70,
+     "cook_min": 38,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "vegetarian cocktail sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "small potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mushrooms, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Wrap the sausages in strips of puff pastry.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 200C until golden.",
+       "min": 15
+      },
+      {
+       "text": "Bake the potatoes until soft.",
+       "min": 60
+      },
+      {
+       "text": "Fry the mushrooms in the oil with the paprika and soy until dark and crisp.",
+       "min": 8
+      },
+      {
+       "text": "Halve the potatoes, scoop out a little and fill with cheddar and the crispy mushrooms.",
+       "min": 10
+      },
+      {
+       "text": "Grill until bubbling and serve both with sour cream.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Marinated olives and feta",

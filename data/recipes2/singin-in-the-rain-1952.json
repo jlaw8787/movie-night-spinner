@@ -48,7 +48,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Devils on horseback with smoky eggplant",
+     "prep_min": 23,
+     "cook_min": 18,
+     "make_ahead": "Up to 1 day uncooked, bake fresh",
+     "ingredients": [
+      {
+       "q": 24,
+       "u": "",
+       "item": "pitted prunes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 24,
+       "u": "",
+       "item": "almonds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "large eggplant",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "toothpicks, to secure",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Push an almond into each prune.",
+       "min": 8
+      },
+      {
+       "text": "Shave the eggplant lengthways into 24 thin strips with a peeler and brush with the oil, paprika, maple syrup and salt.",
+       "min": 8
+      },
+      {
+       "text": "Wrap each prune in a strip of eggplant and secure with a toothpick.",
+       "min": 7
+      },
+      {
+       "text": "Bake at 200C until the eggplant is crisp.",
+       "min": 18
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rainy day cheese toasties",

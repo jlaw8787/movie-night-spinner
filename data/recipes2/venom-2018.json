@@ -64,7 +64,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Symbiote black sesame tofu",
+     "prep_min": 5,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "extra firm tofu, patted dry and cut into pieces",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable oil for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "black sesame seeds",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the tofu in cornflour.",
+       "min": 5
+      },
+      {
+       "text": "Fry in the oil in batches until crisp.",
+       "min": 12
+      },
+      {
+       "text": "Warm the soy with the honey until bubbling and toss the tofu through.",
+       "min": 3
+      },
+      {
+       "text": "Roll in black sesame seeds until coated and dark, and serve on toothpicks.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Crispy potato gems with sriracha mayo",
@@ -338,7 +403,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mrs Chen's mango pudding (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 125,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "ripe mangoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "evaporated milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blend the mango flesh with the sugar until smooth, keeping a few cubes aside.",
+       "min": 10
+      },
+      {
+       "text": "Whisk the agar into the water in a saucepan, bring to the boil and simmer for 2 minutes, stirring.",
+       "min": 5
+      },
+      {
+       "text": "Whisk in most of the evaporated milk and the cream, then the mango puree, and pour into glasses.",
+       "min": 10
+      },
+      {
+       "text": "Chill until set, about 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Pour a little of the last evaporated milk over each and top with the mango cubes.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mrs Chen's iced milk tea",

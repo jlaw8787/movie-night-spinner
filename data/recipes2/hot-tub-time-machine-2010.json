@@ -30,7 +30,7 @@
      "q": 200,
      "u": "g",
      "item": "emmental",
-     "aisle": "Meat"
+     "aisle": "Dairy"
     },
     {
      "q": 1,
@@ -66,7 +66,7 @@
      "q": 1,
      "u": "",
      "item": "jar cornichons",
-     "aisle": "Meat"
+     "aisle": "Deli"
     }
    ],
    "steps": [
@@ -91,7 +91,7 @@
      "min": 18
     }
    ],
-   "veg": false,
+   "veg": true,
    "af": false,
    "alt": {
     "af": {
@@ -207,7 +207,7 @@
      "q": 500,
      "u": "g",
      "item": "pizza dough",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 100,
@@ -273,7 +273,86 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Eighties pepperoni pizza rolls (vegetarian)",
+     "prep_min": 32,
+     "cook_min": 22,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plant-based pepperoni slices",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mozzarella",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "marinara sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C.",
+       "min": 6
+      },
+      {
+       "text": "Roll the pizza dough into a 30 x 40cm rectangle.",
+       "min": 6
+      },
+      {
+       "text": "Spread with the pizza sauce and scatter with the plant-based pepperoni slices and the grated mozzarella.",
+       "min": 6
+      },
+      {
+       "text": "Roll up from the long side and cut into slices.",
+       "min": 6
+      },
+      {
+       "text": "Place in a lined tin, bake 20 to 25 minutes and brush with the butter melted with the crushed garlic clove.",
+       "min": 25
+      },
+      {
+       "text": "Warm the marinara sauce for dipping.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ski lodge chilli con carne",

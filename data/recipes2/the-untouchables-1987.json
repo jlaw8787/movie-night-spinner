@@ -86,7 +86,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Capone's arancini (vegetarian)",
+     "prep_min": 40,
+     "cook_min": 20,
+     "make_ahead": "Risotto up to 1 day ahead; fry just before serving",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "arborio rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mozzarella, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "neutral oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "passata",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the rice in the vegetable stock to a firm risotto, stir in the cheese and cool completely.",
+       "min": 25
+      },
+      {
+       "text": "Roll into 16 balls around cubes of mozzarella.",
+       "min": 12
+      },
+      {
+       "text": "Roll in flour, beaten egg and breadcrumbs.",
+       "min": 8
+      },
+      {
+       "text": "Fry at 180C for 4 minutes in batches.",
+       "min": 12
+      },
+      {
+       "text": "Warm the passata and serve for dipping.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Lexington Hotel antipasto",
@@ -165,7 +252,86 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lexington Hotel antipasto (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "Up to 3 hours, keep chilled, serve at room temperature",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "chargrilled eggplant in oil, drained",
+       "aisle": "Deli"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "smoked tofu, thinly sliced",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheese-stuffed sweet peppers",
+       "aisle": "Deli"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "marinated artichokes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar roast peppers, torn into strips",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "bocconcini",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Italian loaf",
+       "aisle": "Bakery"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fold the eggplant and smoked tofu onto a long board and tuck the stuffed sweet peppers in between.",
+       "min": 5
+      },
+      {
+       "text": "Add the artichokes and roast peppers, and dress the bocconcini with olive oil, salt and pepper.",
+       "min": 5
+      },
+      {
+       "text": "Slice the loaf and serve alongside so everyone builds their own.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Italian beef",
