@@ -30,7 +30,7 @@
      "q": 100,
      "u": "g",
      "item": "pickled herring",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 8,
@@ -60,7 +60,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "New Asgard rye platter (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 0,
+     "make_ahead": "Up to 2 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "rye crispbreads",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "smoked tofu, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "pickled baby beetroot, sliced",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dill sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small red onion, thinly sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Spread the crispbreads with creme fraiche.",
+       "min": 5
+      },
+      {
+       "text": "Top half with slices of smoked tofu and half with pickled beetroot.",
+       "min": 8
+      },
+      {
+       "text": "Finish each with a sprig of dill and a few thin slices of red onion. Serve on a board.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Goat's cheese bites",

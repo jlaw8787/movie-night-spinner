@@ -58,7 +58,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Trask wedding canapés (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 0,
+     "make_ahead": "Up to 2 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned hearts of palm, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "Lebanese cucumbers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the hearts of palm dry and cut into thick rounds.",
+       "min": 5
+      },
+      {
+       "text": "Cut the cucumbers into thick rounds.",
+       "min": 5
+      },
+      {
+       "text": "Mix the mayonnaise and tomato sauce.",
+       "min": 2
+      },
+      {
+       "text": "Top each cucumber round with a piece of hearts of palm, a dot of sauce and a dill sprig. Serve cold.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Wall Street crab cakes",
@@ -141,7 +200,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Wall Street hearts of palm cakes",
+     "prep_min": 34,
+     "cook_min": 6,
+     "make_ahead": "Cakes shaped up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned hearts of palm, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "nori sheet, crumbled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, cut into wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "tartare sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Squeeze the hearts of palm dry and shred with a fork.",
+       "min": 5
+      },
+      {
+       "text": "Mix with the nori, mayonnaise, egg, Dijon, parsley and breadcrumbs.",
+       "min": 5
+      },
+      {
+       "text": "Shape 12 small cakes and chill.",
+       "min": 20
+      },
+      {
+       "text": "Pan-fry in butter, turning once, until golden.",
+       "min": 6
+      },
+      {
+       "text": "Serve with lemon wedges and tartare sauce.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Power lunch steak salad",

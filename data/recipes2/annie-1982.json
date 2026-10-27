@@ -76,7 +76,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Warbucks mansion canapés (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 28,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "vol-au-vent cases",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mixed mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "eggplant",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches asparagus",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the vol-au-vent cases until crisp.",
+       "min": 15
+      },
+      {
+       "text": "Dice the mushrooms and fry in butter until browned.",
+       "min": 10
+      },
+      {
+       "text": "Add the cream and thyme and reduce until thick, then fill the cases.",
+       "min": 6
+      },
+      {
+       "text": "Slice the eggplant lengthwise into thin strips, brush with the oil, smoked paprika and salt and grill until soft.",
+       "min": 10
+      },
+      {
+       "text": "Blanch the asparagus and wrap each spear in a strip of eggplant.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Radio City popcorn",

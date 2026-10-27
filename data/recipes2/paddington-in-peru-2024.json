@@ -62,7 +62,70 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Marmalade, smoked tofu and cheddar toasties",
+     "prep_min": 12,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices thick white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar thick-cut orange marmalade",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "smoked tofu, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "vintage cheddar, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Butter the slices of thick white bread on one side.",
+       "min": 3
+      },
+      {
+       "text": "Spread the marmalade on the unbuttered sides, then add the smoked tofu and the grated vintage cheddar.",
+       "min": 3
+      },
+      {
+       "text": "Close with the other slices, butter side out.",
+       "min": 3
+      },
+      {
+       "text": "Cook in a frying pan over medium-low heat for 3 to 4 minutes a side, pressing down, until golden and the cheese melts.",
+       "min": 11
+      },
+      {
+       "text": "Cut into squares.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Peruvian chicken causa bites",
@@ -123,7 +186,80 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Peruvian causa bites with chickpea and corn",
+     "prep_min": 85,
+     "cook_min": 30,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "ají amarillo paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin chickpeas",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "tin corn kernels",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "avocado",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until soft, then mash smooth with the juice of the limes, the ají amarillo paste, the olive oil and salt.",
+       "min": 30
+      },
+      {
+       "text": "Drain the chickpeas and crush roughly with a fork, then mix with the drained corn kernels and the mayonnaise.",
+       "min": 12
+      },
+      {
+       "text": "Layer potato, the chickpea mix, sliced avocado and more potato in a tin, chill 1 hour and cut into squares.",
+       "min": 73
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Beef lomo saltado with fries",

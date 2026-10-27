@@ -143,7 +143,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Forget it, Jake spring rolls (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 25,
+     "make_ahead": "Fill a day ahead, fry fresh",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "shredded cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce, for the filling",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "spring roll wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "sweet chilli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce, to serve",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in the tablespoon of oil until browned, then add the cabbage and carrot and cook until soft, seasoning with soy. Cool.",
+       "min": 15
+      },
+      {
+       "text": "Roll tablespoons of filling into the wrappers and seal with water.",
+       "min": 15
+      },
+      {
+       "text": "Fry at 180C in batches until crisp.",
+       "min": 20
+      },
+      {
+       "text": "Serve with sweet chilli sauce and soy.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Whole grilled fish, head on",

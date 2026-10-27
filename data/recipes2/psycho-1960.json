@@ -58,7 +58,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Norman's parlour sandwiches (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter, soft",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "plant-based ham slices",
+       "aisle": "Deli"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "Swiss cheese, sliced",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Butter the bread and spread with Dijon.",
+       "min": 5
+      },
+      {
+       "text": "Fill with plant-based ham and Swiss cheese.",
+       "min": 4
+      },
+      {
+       "text": "Cut off the crusts and cut into neat triangles.",
+       "min": 4
+      },
+      {
+       "text": "Serve on a plate with a glass of milk alongside.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mother's pickled onions",

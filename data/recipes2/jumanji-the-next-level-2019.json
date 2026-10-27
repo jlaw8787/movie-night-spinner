@@ -328,7 +328,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Falcon jewel jelly (vegetarian)",
+     "prep_min": 22,
+     "cook_min": 120,
+     "make_ahead": "Up to 1 day, top with cream to serve",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "green food colouring, a few drops",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "kiwifruit, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green grapes, plus 4 extra whole",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream, whipped",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bring the water, sugar and agar to the boil and simmer for 2 minutes, stirring. Take off the heat and stir in the lime juice and colouring. Halve most of the grapes.",
+       "min": 12
+      },
+      {
+       "text": "Pour the jelly into clear glasses with the kiwifruit and halved grapes.",
+       "min": 5
+      },
+      {
+       "text": "Chill for 2 hours until set.",
+       "min": 120
+      },
+      {
+       "text": "Top with whipped cream and finish each glass with one whole grape like a jewel.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Desert oasis cooler",

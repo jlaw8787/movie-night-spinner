@@ -82,7 +82,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ranch pretzel and peanut snack mix (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 38,
+     "make_ahead": "Up to 1 week, keep in an airtight container",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "dried ranch seasoning",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "pretzels",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "corn chips",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheese crackers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "roasted peanuts",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt the butter with the soy sauce, ranch seasoning, paprika and garlic powder.",
+       "min": 4
+      },
+      {
+       "text": "Toss with the pretzels, corn chips, crackers and peanuts in a large roasting tin.",
+       "min": 4
+      },
+      {
+       "text": "Bake at 150C, stirring every ten minutes.",
+       "min": 30
+      },
+      {
+       "text": "Cool on the tray so it crisps, then tip into a very big bowl.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Future cheese fries with chicken salt",
@@ -169,7 +252,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Future cheese fries with vegetarian chicken salt",
+     "prep_min": 10,
+     "cook_min": 32,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "frozen chips",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "vegetarian chicken salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "American mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the chips at 220C until crisp, then toss with the vegetarian chicken salt.",
+       "min": 25
+      },
+      {
+       "text": "Dice the smoked tofu small and fry in the oil until crisp.",
+       "min": 8
+      },
+      {
+       "text": "Melt the butter, stir in the flour, whisk in the milk and simmer until thick.",
+       "min": 5
+      },
+      {
+       "text": "Stir in the cheddar and mustard until smooth.",
+       "min": 2
+      },
+      {
+       "text": "Pile the chips on a platter, pour over the cheese sauce and scatter with the crisp tofu and spring onion.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Plants-crave-water chicken salad bowl",

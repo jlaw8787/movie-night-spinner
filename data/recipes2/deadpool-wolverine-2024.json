@@ -76,7 +76,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chimichanga bites (vegetarian)",
+     "prep_min": 5,
+     "cook_min": 25,
+     "make_ahead": "Filling up to 1 day, fry fresh",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sachet taco seasoning",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "refried beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "small flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "tasty cheese, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "tomato salsa",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the plant-based mince with the taco seasoning, add the refried beans and cool.",
+       "min": 10
+      },
+      {
+       "text": "Fill the tortillas with the mix and cheese and roll tightly.",
+       "min": 10
+      },
+      {
+       "text": "Fry in the oil seam down at 180C until golden.",
+       "min": 8
+      },
+      {
+       "text": "Halve and serve with sour cream and salsa.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Void wasteland chips",

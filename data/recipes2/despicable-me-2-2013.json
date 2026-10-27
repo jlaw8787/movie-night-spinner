@@ -338,7 +338,70 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Purple minion jelly cups (vegetarian)",
+     "prep_min": 11,
+     "cook_min": 128,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "purple grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "agar agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bananas",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the agar and sugar into the grape juice in a saucepan, bring to the boil and simmer for 2 minutes, stirring.",
+       "min": 8
+      },
+      {
+       "text": "Pour into clear cups.",
+       "min": 3
+      },
+      {
+       "text": "Chill until set.",
+       "min": 120
+      },
+      {
+       "text": "Whip the cream and swirl on top.",
+       "min": 4
+      },
+      {
+       "text": "Add two banana slices to each like goggles.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Minion banana caramel smoothie",

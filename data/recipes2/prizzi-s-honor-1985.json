@@ -72,7 +72,80 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Prizzi wedding antipasto (vegetarian)",
+     "prep_min": 14,
+     "cook_min": 1,
+     "make_ahead": "Mushrooms need to marinate overnight, serve at room temperature",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "chargrilled eggplant in oil, drained",
+       "aisle": "Deli"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "mixed olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "marinated artichokes, drained",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blanch the mushrooms in boiling water for 1 minute and drain well.",
+       "min": 3
+      },
+      {
+       "text": "Toss with olive oil, lemon juice, garlic and parsley. Refrigerate covered overnight.",
+       "min": 5
+      },
+      {
+       "text": "Serve on a platter with the chargrilled eggplant, olives and artichokes.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Fried zucchini",

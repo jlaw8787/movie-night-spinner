@@ -70,7 +70,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Speedster pancake stack (vegetarian)",
+     "prep_min": 8,
+     "cook_min": 23,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "pecans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle maple syrup",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the flour, baking powder, eggs and buttermilk to a thick batter.",
+       "min": 5
+      },
+      {
+       "text": "Cook small pancakes in butter until golden.",
+       "min": 15
+      },
+      {
+       "text": "Toast the pecans in a dry pan, then toss with a tablespoon of maple syrup, the smoked paprika and salt until sticky.",
+       "min": 8
+      },
+      {
+       "text": "Stack the pancakes with the smoky pecans between and pour over the rest of the maple syrup.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Icelandic village smoked salmon",
@@ -129,7 +212,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Icelandic village beetroot crispbreads",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "Up to 4 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cooked beetroot, very thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet rye crispbread",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pickled onions",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "sea salt",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice a few pickled onions into rings and season the beetroot with a pinch of sea salt.",
+       "min": 5
+      },
+      {
+       "text": "Spread the crispbreads with creme fraiche.",
+       "min": 4
+      },
+      {
+       "text": "Top with a fold of beetroot, a sprig of dill and onion rings.",
+       "min": 5
+      },
+      {
+       "text": "Serve cold on a slate.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Themyscira lemon lamb",

@@ -131,7 +131,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mushroom and gruyere crêpes (vegetarian)",
+     "prep_min": 18,
+     "cook_min": 86,
+     "make_ahead": "Batter up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "Swiss brown mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "vegetarian gruyere-style cheese, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the flour, eggs and milk into a smooth batter.",
+       "min": 5
+      },
+      {
+       "text": "Rest the batter.",
+       "min": 60
+      },
+      {
+       "text": "Fry the mushrooms in a little of the butter until golden, then stir in the spinach until wilted.",
+       "min": 8
+      },
+      {
+       "text": "Cook thin crepes in a buttered pan.",
+       "min": 15
+      },
+      {
+       "text": "Fill each with the mushrooms, spinach and cheese and fold into quarters.",
+       "min": 6
+      },
+      {
+       "text": "Crisp again in the pan.",
+       "min": 8
+      },
+      {
+       "text": "Cut into triangles and serve hot.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Porto Corsa prawn pasta",

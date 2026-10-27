@@ -350,7 +350,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Petri dish jelly (vegetarian)",
+     "prep_min": 18,
+     "cook_min": 60,
+     "make_ahead": "Make a day ahead",
+     "ingredients": [
+      {
+       "q": 0.75,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 425,
+       "u": "g",
+       "item": "raspberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blitz most of the raspberries with the sugar and water, then strain into a saucepan.",
+       "min": 10
+      },
+      {
+       "text": "Whisk in the agar and boil, stirring, for 2 minutes. Stir in the lemon juice.",
+       "min": 6
+      },
+      {
+       "text": "Pour into four shallow glass dishes, cool and set in the fridge.",
+       "min": 60
+      },
+      {
+       "text": "Top with the remaining fresh raspberries.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "MacReady's Rob Roy",

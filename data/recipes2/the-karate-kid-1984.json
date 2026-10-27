@@ -131,7 +131,56 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bonsai broccolini (vegetarian)",
+     "prep_min": 3,
+     "cook_min": 9,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches broccolini",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetarian mushroom stir-fry sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blanch the broccolini and drain. Slice the garlic.",
+       "min": 4
+      },
+      {
+       "text": "Char in a smoking pan with the garlic.",
+       "min": 5
+      },
+      {
+       "text": "Toss with the mushroom stir-fry sauce and sesame oil. Stand them up in a dish like trees.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Johnny's country club spaghetti",

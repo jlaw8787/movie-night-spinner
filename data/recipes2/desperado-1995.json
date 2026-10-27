@@ -52,7 +52,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Tarasco Bar rice paper chicharrones",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "Up to 1 day airtight",
+     "ingredients": [
+      {
+       "q": 12,
+       "u": "",
+       "item": "rice paper sheets",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut each rice paper sheet into quarters with scissors.",
+       "min": 5
+      },
+      {
+       "text": "Heat the oil to 190C.",
+       "min": 8
+      },
+      {
+       "text": "Fry a few pieces at a time for a few seconds until puffed, then drain.",
+       "min": 12
+      },
+      {
+       "text": "Dust with the salt mixed with chilli powder and lime zest.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mariachi guacamole",

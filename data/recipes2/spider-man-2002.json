@@ -113,7 +113,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Thanksgiving sliders with maple roast pumpkin",
+     "prep_min": 18,
+     "cook_min": 25,
+     "make_ahead": "Stuffing squares and pumpkin up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 170,
+       "u": "g",
+       "item": "vegetarian stuffing mix",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "butternut pumpkin",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slider buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cranberry sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Make the stuffing mix as the packet says and press into a tray. Peel the pumpkin, slice it thinly and toss with the oil and maple syrup on a second tray.",
+       "min": 8
+      },
+      {
+       "text": "Bake both at 190C until the stuffing is crisp and the pumpkin is tender, then cut the stuffing into 8 squares.",
+       "min": 25
+      },
+      {
+       "text": "Toast the slider buns. Fill each bun with pumpkin, cranberry sauce and a square of stuffing.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Aunt May's Thanksgiving roast",

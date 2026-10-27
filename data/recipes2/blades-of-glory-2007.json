@@ -121,7 +121,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fire and Ice haloumi",
+     "prep_min": 13,
+     "cook_min": 6,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "extra virgin olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the haloumi into thick fingers and toss with the olive oil, the crushed garlic cloves and the chopped red chilli.",
+       "min": 6
+      },
+      {
+       "text": "Grill on high for 2 to 3 minutes a side until charred.",
+       "min": 8
+      },
+      {
+       "text": "Pile over a platter of crushed ice and serve straight away with lime wedges.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Championship chicken parmigiana",

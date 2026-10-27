@@ -88,7 +88,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Repo man Chicago-style hot dogs (vegetarian)",
+     "prep_min": 13,
+     "cook_min": 6,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian frankfurts",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "hot dog buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "poppy seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle American mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar sweet green relish",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "white onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, cut into wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dill pickle spears",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "pickled peppers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "celery salt",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the vegetarian frankfurts in simmering water, then grill briefly for colour.",
+       "min": 7
+      },
+      {
+       "text": "Steam or warm the buns and sprinkle the tops with poppy seeds.",
+       "min": 3
+      },
+      {
+       "text": "Put a frankfurt in each bun, add mustard and relish, then onion, tomato, a pickle spear and pickled peppers.",
+       "min": 8
+      },
+      {
+       "text": "Finish with a pinch of celery salt.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Iced gingerbread men",
@@ -503,7 +592,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Everybody's nice marshmallow cocoa (vegetarian)",
+     "prep_min": 4,
+     "cook_min": 6,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "milk chocolate, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cocoa powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "large vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "ground cinnamon",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the milk until steaming, then whisk in the chocolate and cocoa until smooth and frothy.",
+       "min": 6
+      },
+      {
+       "text": "Pour into heatproof mugs, pile the vegetarian marshmallows on top and put the mugs on a tray under a hot grill, watching closely, until puffed and golden.",
+       "min": 3
+      },
+      {
+       "text": "Dust with cinnamon and serve.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   }
  ]
 }

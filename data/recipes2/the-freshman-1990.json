@@ -60,7 +60,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Gourmet Club antipasto, all legal (vegetarian)",
+     "prep_min": 12,
+     "cook_min": 0,
+     "make_ahead": "Up to 3 hours, serve at room temperature",
+     "ingredients": [
+      {
+       "q": 120,
+       "u": "g",
+       "item": "chargrilled eggplant in oil, drained",
+       "aisle": "Deli"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "cheese-stuffed sweet peppers",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "provolone",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "roasted red capsicums, cut in strips",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "marinated artichokes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "seeded Italian loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Arrange the eggplant, stuffed peppers and provolone on a board.",
+       "min": 6
+      },
+      {
+       "text": "Add the capsicum strips and artichokes.",
+       "min": 4
+      },
+      {
+       "text": "Tear the loaf at the table.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Little Italy fried calamari",
@@ -137,7 +198,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Little Italy fried mushroom calamari (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "Soak up to 1 hour ahead; fry to serve",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "semolina",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "neutral oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, cut in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "marinara sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushroom stems into thick rings and the caps into strips, then soak in the milk for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Toss in the flour mixed with semolina and salt.",
+       "min": 4
+      },
+      {
+       "text": "Fry at 190C for 1 minute a batch.",
+       "min": 8
+      },
+      {
+       "text": "Warm the marinara and serve with lemon.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Carmine Sabatini's veal marsala",

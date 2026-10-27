@@ -66,7 +66,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cheese and cucumber sandwiches, apple, nuts",
+     "prep_min": 25,
+     "cook_min": 0,
+     "make_ahead": "Up to 3 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter, soft",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "pickle relish",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red apples, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mixed nuts",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Butter the bread and fill with the cucumber, cheddar and relish. Cut into triangles.",
+       "min": 15
+      },
+      {
+       "text": "Slice the apples and twist the nuts into paper cones.",
+       "min": 7
+      },
+      {
+       "text": "Pack it all together like a lunch hidden away in a school attic.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rockbiter's chocolate almond rocks",
@@ -121,7 +188,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rockbiter's chocolate almond rocks (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 120,
+     "make_ahead": "Up to 1 week, airtight in the fridge",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "dark chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "roasted almonds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "sweet biscuits, broken",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "desiccated coconut",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt the chocolate. Stir in the marshmallows, almonds, biscuits and coconut.",
+       "min": 10
+      },
+      {
+       "text": "Press into a lined tray and chill for 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Smash into rough chunky rocks with the handle of a knife.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Urgl's healing soup",

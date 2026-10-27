@@ -121,7 +121,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hawaiian tofu poke cups",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "Best made fresh, keep chilled up to 2 hours",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "sushi rice, uncooked",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rinse and cook the sushi rice, then cool.",
+       "min": 20
+      },
+      {
+       "text": "Pat the tofu dry, cube it and toss with soy sauce, sesame oil and sliced spring onion. Leave to soak while the rice cools.",
+       "min": 10
+      },
+      {
+       "text": "Spoon the rice into small cups and top with the tofu. Serve chilled.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Loco moco",

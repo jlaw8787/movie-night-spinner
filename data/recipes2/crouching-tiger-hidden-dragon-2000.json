@@ -70,7 +70,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Teahouse mushroom and cabbage dumplings",
+     "prep_min": 30,
+     "cook_min": 13,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "shredded wombok",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "",
+       "item": "dumpling wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Chinkiang vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chilli oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in the oil until dry, then cool.",
+       "min": 8
+      },
+      {
+       "text": "Mix with the wombok, ginger, spring onions and soy.",
+       "min": 5
+      },
+      {
+       "text": "Fill the wrappers and pleat.",
+       "min": 20
+      },
+      {
+       "text": "Steam in bamboo baskets.",
+       "min": 8
+      },
+      {
+       "text": "Serve with black vinegar and chilli oil.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Desert lamb skewers",
@@ -123,7 +210,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Desert cumin mushroom skewers",
+     "prep_min": 10,
+     "cook_min": 11,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "king oyster mushrooms, cut in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "cumin seeds, crushed, plus extra to serve",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "bamboo skewers, soaked",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the mushrooms with the oil, cumin, chilli flakes and salt.",
+       "min": 5
+      },
+      {
+       "text": "Thread onto the skewers.",
+       "min": 5
+      },
+      {
+       "text": "Grill hot until charred at the edges.",
+       "min": 10
+      },
+      {
+       "text": "Sprinkle with more cumin to serve.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Yu Shu Lien's steamed whole fish",

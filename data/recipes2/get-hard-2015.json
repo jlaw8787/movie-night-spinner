@@ -50,7 +50,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Car wash corner store cauliflower wings",
+     "prep_min": 14,
+     "cook_min": 35,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "ranch dressing",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 220C. Cut the cauliflower into large florets and toss in the flour whisked with the water and salt.",
+       "min": 7
+      },
+      {
+       "text": "Bake on a lined tray for 30 to 35 minutes, turning once, until crisp at the edges.",
+       "min": 36
+      },
+      {
+       "text": "Toss in the hot sauce melted with the butter and serve with the ranch dressing.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bel Air salmon roe blinis",
@@ -63,7 +124,7 @@
      "q": 16,
      "u": "",
      "item": "small blinis",
-     "aisle": "Meat"
+     "aisle": "Bakery"
     },
     {
      "q": 150,
@@ -121,7 +182,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bel Air beetroot and black lentil blinis",
+     "prep_min": 14,
+     "cook_min": 25,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "black lentils",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "small blinis",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "crème fraîche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cooked beetroot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the black lentils in water for 20 minutes until just tender, drain, cool and dress with the soy sauce and a few drops of lemon juice.",
+       "min": 22
+      },
+      {
+       "text": "Warm the small blinis at 180C for 4 minutes.",
+       "min": 6
+      },
+      {
+       "text": "Mix the crème fraîche with the chopped chives and lemon zest, and slice the cooked beetroot into thin ribbons.",
+       "min": 4
+      },
+      {
+       "text": "Top each blini with a spoon of the cream, a ribbon of beetroot and half a teaspoon of the glossy lentils.",
+       "min": 4
+      },
+      {
+       "text": "Finish with a tiny dill sprig and a squeeze of lemon and arrange on a platter.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Darnell's family barbecue chicken",

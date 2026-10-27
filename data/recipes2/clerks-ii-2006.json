@@ -123,7 +123,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Grill-line jalapeño poppers (vegetarian)",
+     "prep_min": 26,
+     "cook_min": 20,
+     "make_ahead": "Fill up to 1 day, bake fresh",
+     "ingredients": [
+      {
+       "q": 12,
+       "u": "",
+       "item": "jalapenos",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "large eggplant",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the jalapenos lengthways and scrape out the seeds.",
+       "min": 10
+      },
+      {
+       "text": "Mix the cream cheese with the cheddar and fill each half.",
+       "min": 5
+      },
+      {
+       "text": "Shave the eggplant lengthways into thin strips with a peeler and brush with the oil, paprika and salt.",
+       "min": 6
+      },
+      {
+       "text": "Wrap each half in a strip of eggplant.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 200C until the eggplant is crisp.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mooby's double cheeseburger",

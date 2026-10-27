@@ -82,7 +82,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dreamhouse pink hearts of palm cocktail cups",
+     "prep_min": 25,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cans hearts of palm (400 g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "hot sauce, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cos lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "avocado",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "paprika, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the hearts of palm into thick rounds and pat dry.",
+       "min": 6
+      },
+      {
+       "text": "Mix the mayonnaise, the tomato sauce, the soy sauce, a few drops of hot sauce and the juice of half a lemon until pink and smooth.",
+       "min": 6
+      },
+      {
+       "text": "Shred the cos heart and divide between the small glasses.",
+       "min": 6
+      },
+      {
+       "text": "Add diced avocado and the hearts of palm, spoon over the sauce, dust with paprika and add a lemon wedge.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Beach Ken watermelon and feta skewers",

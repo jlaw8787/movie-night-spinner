@@ -76,7 +76,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Midnight fried cauliflower",
+     "prep_min": 26,
+     "cook_min": 145,
+     "make_ahead": "Soak up to 4 hours ahead, fry on the day",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "cauliflower (1 large head)",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "white pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cauliflower into large florets.",
+       "min": 10
+      },
+      {
+       "text": "Soak the florets in the buttermilk and hot sauce in the fridge for 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Mix the flour with the paprika, garlic powder, white pepper and salt. Dredge the cauliflower twice.",
+       "min": 15
+      },
+      {
+       "text": "Heat the oil to 175C and fry in batches until deep golden and tender, then drain on paper towel.",
+       "min": 25
+      },
+      {
+       "text": "Serve well before midnight.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Kingston Falls gingerbread",

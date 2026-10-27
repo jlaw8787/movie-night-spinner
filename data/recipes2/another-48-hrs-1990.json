@@ -137,7 +137,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Glovebox eggplant jerky",
+     "prep_min": 280,
+     "cook_min": 180,
+     "make_ahead": "Up to 1 week, airtight in the fridge",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the eggplants lengthwise as thin as you can, about 3mm.",
+       "min": 15
+      },
+      {
+       "text": "Mix the soy, vinegar, smoked paprika, sugar and pepper and marinate the eggplant in the fridge for at least 4 hours.",
+       "min": 240
+      },
+      {
+       "text": "Pat dry and lay on racks set over trays.",
+       "min": 10
+      },
+      {
+       "text": "Dry at 90C, turning once, until leathery.",
+       "min": 180
+      },
+      {
+       "text": "Cool and store in a bag.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sourdough bread bowl chowder",

@@ -553,7 +553,60 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ski lodge hot chocolate (vegetarian)",
+     "prep_min": 5,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "dark chocolate, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the milk until steaming without boiling.",
+       "min": 7
+      },
+      {
+       "text": "Add the chocolate and whisk until melted and frothy.",
+       "min": 3
+      },
+      {
+       "text": "Divide among four mugs.",
+       "min": 1
+      },
+      {
+       "text": "Softly whip the cream, spoon on top and finish with marshmallows.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   }
  ]
 }

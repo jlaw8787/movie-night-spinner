@@ -40,7 +40,60 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Slaughtered Lamb rice paper crackling",
+     "prep_min": 7,
+     "cook_min": 25,
+     "make_ahead": "Best eaten the same day, keep in an airtight tin",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "rice paper sheets",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the rice paper sheets into quarters with scissors.",
+       "min": 5
+      },
+      {
+       "text": "Heat the oil to 190C in a deep pan.",
+       "min": 10
+      },
+      {
+       "text": "Fry a few pieces at a time for a few seconds until puffed and blistered, then drain.",
+       "min": 15
+      },
+      {
+       "text": "Toss with the salt flakes and smoked paprika while hot.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Scotch eggs",
@@ -109,7 +162,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Scotch eggs (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 12,
+     "make_ahead": "Up to 1 day chilled",
+     "ingredients": [
+      {
+       "q": 5,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "vegetarian sausages, skins removed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "English mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil four eggs, cool and peel.",
+       "min": 10
+      },
+      {
+       "text": "Wrap each in a quarter of the vegetarian sausage meat.",
+       "min": 12
+      },
+      {
+       "text": "Roll in flour, the beaten fifth egg and panko.",
+       "min": 8
+      },
+      {
+       "text": "Fry at 170C until deep golden.",
+       "min": 7
+      },
+      {
+       "text": "Halve and serve with English mustard.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Shepherd's pie",

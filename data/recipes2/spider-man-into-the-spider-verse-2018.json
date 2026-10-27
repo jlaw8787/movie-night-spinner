@@ -58,7 +58,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Spider-Ham's ham and pineapple pinwheels (vegetarian)",
+     "prep_min": 18,
+     "cook_min": 18,
+     "make_ahead": "Roll up to 4 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plant-based ham slices, chopped",
+       "aisle": "Deli"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "drained crushed pineapple",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Lay the pastry flat and spread each sheet with tomato paste.",
+       "min": 4
+      },
+      {
+       "text": "Scatter with the plant-based ham, pineapple and mozzarella.",
+       "min": 4
+      },
+      {
+       "text": "Roll up tightly and slice into 2cm pinwheels.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 200C until puffed and golden.",
+       "min": 18
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chopped cheese rolls",
@@ -141,7 +200,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chopped cheese rolls (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "hero rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "iceberg lettuce, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Prep the lettuce and tomatoes.",
+       "min": 7
+      },
+      {
+       "text": "Fry the plant-based mince and onion in the oil on a hot griddle, chopping it up with two spatulas, and season well.",
+       "min": 12
+      },
+      {
+       "text": "Lay the cheese over, let it melt and chop it through.",
+       "min": 4
+      },
+      {
+       "text": "Pile into the rolls with lettuce, tomato, tomato sauce and mayo.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Peter B. Parker's burger",

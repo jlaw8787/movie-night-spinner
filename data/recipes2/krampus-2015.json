@@ -307,7 +307,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Aunt Dorothy's French onion dip (vegetarian)",
+     "prep_min": 37,
+     "cook_min": 45,
+     "make_ahead": "Up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "brown onions, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch chives, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "crispy fried shallots",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "kettle chips",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slowly cook the onions in the butter and oil over low heat until jammy and deep brown.",
+       "min": 35
+      },
+      {
+       "text": "Add the soy sauce and a splash of water, scrape the pan, then cool.",
+       "min": 10
+      },
+      {
+       "text": "Mix with the sour cream, cream cheese, most of the chives and salt.",
+       "min": 5
+      },
+      {
+       "text": "Chill the dip.",
+       "min": 30
+      },
+      {
+       "text": "Top with crispy shallots and chives and serve with kettle chips.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Christmas Eve lasagne",

@@ -177,6 +177,193 @@
        "min": 6
       }
      ]
+    },
+    "veg": {
+     "n": "What's-the-rumpus mushroom pâté toasts",
+     "prep_min": 25,
+     "cook_min": 243,
+     "make_ahead": "Pâté up to 3 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "brown mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter, for frying",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sprigs thyme, leaves picked",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "brandy",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "walnuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "soft butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "clarified butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in the butter over high heat until all the liquid has gone and they are well browned.",
+       "min": 12
+      },
+      {
+       "text": "Add the shallots and thyme, then the brandy, and let it bubble off.",
+       "min": 4
+      },
+      {
+       "text": "Blitz with the walnuts and soft butter until silky, season and press into a dish.",
+       "min": 6
+      },
+      {
+       "text": "Pour over the clarified butter and chill for 4 hours.",
+       "min": 240
+      },
+      {
+       "text": "Toast the rye and serve with the mushroom spread.",
+       "min": 6
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "What's-the-rumpus mushroom pâté toasts (alcohol-free)",
+     "prep_min": 25,
+     "cook_min": 243,
+     "make_ahead": "Pâté up to 3 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "brown mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter, for frying",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sprigs thyme, leaves picked",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "walnuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "soft butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "clarified butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in the butter over high heat until all the liquid has gone and they are well browned.",
+       "min": 12
+      },
+      {
+       "text": "Add the shallots and thyme, then the verjuice and water, and let it bubble off.",
+       "min": 4
+      },
+      {
+       "text": "Blitz with the walnuts and soft butter until silky, season and press into a dish.",
+       "min": 6
+      },
+      {
+       "text": "Pour over the clarified butter and chill for 4 hours.",
+       "min": 240
+      },
+      {
+       "text": "Toast the rye and serve with the mushroom spread.",
+       "min": 6
+      }
+     ]
     }
    }
   },

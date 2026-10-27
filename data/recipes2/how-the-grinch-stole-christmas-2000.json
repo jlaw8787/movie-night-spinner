@@ -62,7 +62,70 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Whoville Christmas wreaths (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 60,
+     "make_ahead": "Up to 2 days, airtight",
+     "ingredients": [
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "drops green food colouring",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "corn flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 24,
+       "u": "",
+       "item": "dried cranberries",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt the butter and marshmallows with the green colouring.",
+       "min": 6
+      },
+      {
+       "text": "Stir through the corn flakes until coated.",
+       "min": 3
+      },
+      {
+       "text": "Shape spoonfuls into little wreaths on baking paper.",
+       "min": 10
+      },
+      {
+       "text": "Press on dried cranberries as berries.",
+       "min": 5
+      },
+      {
+       "text": "Set.",
+       "min": 60
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mount Crumpit cheesy pull-apart bread",

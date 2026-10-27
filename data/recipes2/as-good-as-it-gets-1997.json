@@ -36,7 +36,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Verdell's smoky eggplant rashers",
+     "prep_min": 10,
+     "cook_min": 22,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large eggplant",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the eggplant lengthways into very thin strips.",
+       "min": 5
+      },
+      {
+       "text": "Mix the oil, soy, paprika and 1 tbsp of the maple syrup. Brush over both sides and lay on a lined tray.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 200C until crisp, turning once.",
+       "min": 20
+      },
+      {
+       "text": "Cut into pieces and serve warm with a small bowl of maple syrup for dipping.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Café breakfast bites",
@@ -91,7 +150,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Café breakfast bites (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "button mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in half the butter until golden.",
+       "min": 8
+      },
+      {
+       "text": "Scramble the eggs softly in the rest of the butter.",
+       "min": 5
+      },
+      {
+       "text": "Toast the bread, cut into small squares and top each with egg, mushrooms and snipped chives.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Baltimore crab cakes",

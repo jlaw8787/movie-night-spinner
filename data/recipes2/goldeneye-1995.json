@@ -70,7 +70,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Zukovsky's blini with black lentil caviar",
+     "prep_min": 20,
+     "cook_min": 70,
+     "make_ahead": "Batter rests up to 2 hours",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "buckwheat flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 7,
+       "u": "g",
+       "item": "dried yeast",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "warm full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "black lentils",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "nori sheet",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the flour, yeast and warm milk and rest until bubbly.",
+       "min": 60
+      },
+      {
+       "text": "While the batter rests, simmer the lentils until just tender, drain and toss with the soy and the nori crumbled fine.",
+       "min": 5
+      },
+      {
+       "text": "Cook small spoonfuls of batter in butter until golden.",
+       "min": 15
+      },
+      {
+       "text": "Top each with creme fraiche, a spoon of the lentils and snipped chives.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "St Petersburg beef pirozhki",
@@ -149,7 +232,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "St Petersburg mushroom and cabbage pirozhki",
+     "prep_min": 35,
+     "cook_min": 90,
+     "make_ahead": "Bake the day you serve",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 7,
+       "u": "g",
+       "item": "dried yeast",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "warm full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cabbage, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the flour, yeast, warm milk and some of the butter into a soft dough.",
+       "min": 10
+      },
+      {
+       "text": "Prove.",
+       "min": 60
+      },
+      {
+       "text": "Fry the mushrooms, cabbage and diced onion in a little butter until soft and golden. Stir in chopped dill, season with salt and pepper and cool.",
+       "min": 20
+      },
+      {
+       "text": "Fill rounds of dough and seal.",
+       "min": 15
+      },
+      {
+       "text": "Bake at 200C.",
+       "min": 18
+      },
+      {
+       "text": "Brush with the rest of the butter, melted.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Beef stroganoff",

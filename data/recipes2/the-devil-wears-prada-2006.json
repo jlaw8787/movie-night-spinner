@@ -119,7 +119,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Paris fashion week canapés (vegetarian)",
+     "prep_min": 22,
+     "cook_min": 0,
+     "make_ahead": "Up to 2 hours, keep covered and chilled",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "blinis",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cooked beetroot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "fresh figs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "goat's cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the beetroot very thin and dress with a squeeze of lemon.",
+       "min": 3
+      },
+      {
+       "text": "Top the blinis with creme fraiche, beetroot and snipped chives.",
+       "min": 10
+      },
+      {
+       "text": "Halve the figs and top each with goat's cheese and a drizzle of honey.",
+       "min": 7
+      },
+      {
+       "text": "Arrange both in neat rows on a platter.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Miranda's steak",

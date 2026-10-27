@@ -42,7 +42,50 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Costume party cocktail sausages (vegetarian)",
+     "prep_min": 5,
+     "cook_min": 3,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "vegetarian cocktail sausages",
+       "aisle": "Deli"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "toothpicks, to serve",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bring a pot of water to a simmer.",
+       "min": 3
+      },
+      {
+       "text": "Add the veggie sausages and heat through gently without boiling.",
+       "min": 5
+      },
+      {
+       "text": "Drain, pile into a bowl with toothpicks and serve with tomato sauce for dipping.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Kiwi onion dip with chippies",

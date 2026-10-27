@@ -80,7 +80,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Grade one capsicum and cheese pinwheels",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "Up to 1 day, keep rolled and chilled",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "American mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "jar roasted red capsicum",
+       "aisle": "Deli"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cherry tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "cornichons",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the cream cheese and mustard until smooth, then spread thinly over the tortillas right to the edges.",
+       "min": 5
+      },
+      {
+       "text": "Layer the drained roasted capsicum strips, baby spinach and grated cheddar over each tortilla.",
+       "min": 5
+      },
+      {
+       "text": "Roll up tightly and wrap in cling film.",
+       "min": 3
+      },
+      {
+       "text": "Chill so the rolls hold their shape.",
+       "min": 30
+      },
+      {
+       "text": "Trim the ends, cut each roll into pinwheels and serve with cherry tomatoes and cornichons.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Madison Hotel mini club sandwiches",
@@ -151,7 +232,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Madison Hotel mini club sandwiches (vegetarian)",
+     "prep_min": 22,
+     "cook_min": 12,
+     "make_ahead": "Up to 4 hours, keep covered and chilled",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small iceberg lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag salted potato crisps",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs for 9 minutes, cool in cold water, peel and slice.",
+       "min": 12
+      },
+      {
+       "text": "Slice the smoked tofu thinly and fry in the oil until crisp on both sides.",
+       "min": 8
+      },
+      {
+       "text": "Toast the bread and spread with mayonnaise.",
+       "min": 4
+      },
+      {
+       "text": "Build each sandwich with toast, egg, lettuce and tomato, then toast, crisp tofu and lettuce, then the last slice of toast.",
+       "min": 6
+      },
+      {
+       "text": "Press down gently, pin with toothpicks, trim the crusts and cut into squares. Serve with the potato crisps.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pool party chilli cheese dogs",

@@ -167,7 +167,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Detroit coney sliders (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 55,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian cocktail franks",
+       "aisle": "Deli"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "mini hot dog buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Finely dice the onion, keeping half aside for topping.",
+       "min": 5
+      },
+      {
+       "text": "Brown the plant-based mince with half the onion in oil.",
+       "min": 5
+      },
+      {
+       "text": "Stir in the chilli powder, cumin and water and simmer gently, adding water if needed to keep it loose.",
+       "min": 40
+      },
+      {
+       "text": "Heat the vegetarian franks in a griddle pan until piping hot.",
+       "min": 5
+      },
+      {
+       "text": "Fill the buns with the franks, chilli, mustard and the raw onion.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Beverly Palm room service",

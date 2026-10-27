@@ -86,7 +86,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Border town jackfruit street tacos",
+     "prep_min": 30,
+     "cook_min": 50,
+     "make_ahead": "Up to 2 days, keep the filling chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "565 g tins young jackfruit in brine, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "dried chillies",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "oranges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "fresh pineapple, plus extra to serve",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small white onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "flaky salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the dried chillies in hot water, then blitz with orange juice, some pineapple and garlic to a smooth marinade.",
+       "min": 15
+      },
+      {
+       "text": "Squeeze the jackfruit dry, coat in the marinade, season and rub in well.",
+       "min": 10
+      },
+      {
+       "text": "Roast covered at 180C until tender.",
+       "min": 40
+      },
+      {
+       "text": "Shred the jackfruit and crisp it in the oil in a very hot pan.",
+       "min": 10
+      },
+      {
+       "text": "Warm the tortillas and serve with diced pineapple, onion and coriander.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Charred jalapeño guacamole and chips",
@@ -565,6 +658,163 @@
       },
       {
        "text": "Top with cold alcohol-free lager, stir once and garnish with a lime wedge.",
+       "min": 1
+      }
+     ]
+    },
+    "veg": {
+     "n": "Mixed-up guitar case michelada beer (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 1,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles Mexican lager",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt and chilli powder on a plate.",
+       "min": 3
+      },
+      {
+       "text": "Run a lime wedge around four tall glasses and dip the rims in the chilli salt.",
+       "min": 3
+      },
+      {
+       "text": "Fill the glasses with ice.",
+       "min": 2
+      },
+      {
+       "text": "Add lime juice, tomato juice, hot sauce and soy sauce to each glass.",
+       "min": 2
+      },
+      {
+       "text": "Top with cold lager, stir once and garnish with a lime wedge.",
+       "min": 1
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Mixed-up guitar case michelada (vegetarian, alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 1,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles alcohol-free lager",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt and chilli powder on a plate.",
+       "min": 3
+      },
+      {
+       "text": "Run a lime wedge around four tall glasses and dip the rims in the chilli salt.",
+       "min": 3
+      },
+      {
+       "text": "Fill the glasses with ice.",
+       "min": 2
+      },
+      {
+       "text": "Add lime juice, tomato juice, hot sauce and soy sauce to each glass.",
+       "min": 2
+      },
+      {
+       "text": "Top with the cold alcohol-free lager, stir once and garnish with a lime wedge.",
        "min": 1
       }
      ]

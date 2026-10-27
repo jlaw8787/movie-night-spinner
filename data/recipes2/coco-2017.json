@@ -151,7 +151,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Abuelita's jackfruit tamales",
+     "prep_min": 60,
+     "cook_min": 82,
+     "make_ahead": "Filled tamales up to 1 day ahead, steam to reheat",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins young jackfruit in brine (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "red chilli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "masa harina",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vegetable shortening",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 450,
+       "u": "ml",
+       "item": "warm vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "corn husks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "salsa",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the corn husks in warm water.",
+       "min": 15
+      },
+      {
+       "text": "Simmer the jackfruit with the red chilli sauce and a splash of the stock for 15 minutes, then shred with two forks.",
+       "min": 20
+      },
+      {
+       "text": "Beat the masa with the shortening, baking powder and the rest of the stock to a soft dough.",
+       "min": 15
+      },
+      {
+       "text": "Spread on the husks, add the jackfruit and fold.",
+       "min": 30
+      },
+      {
+       "text": "Steam for 60 minutes.",
+       "min": 60
+      },
+      {
+       "text": "Serve with salsa.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rivera family enchiladas",

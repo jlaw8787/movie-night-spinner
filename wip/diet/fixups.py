@@ -2,7 +2,9 @@
 import json, glob, re
 CHEESE = [(re.compile(r"^(grated )?(parmesan|parmigiano|grana padano)", re.I), "vegetarian parmesan-style cheese"),
           (re.compile(r"^(grated )?pecorino", re.I), "vegetarian pecorino-style cheese"),
-          (re.compile(r"^(grated )?gruy[eè]re", re.I), "vegetarian gruyere-style cheese")]
+          (re.compile(r"^(grated )?gruy[eè]re", re.I), "vegetarian gruyere-style cheese"),
+          (re.compile(r"^(grated )?manchego", re.I), "vegetarian manchego-style cheese"),
+          (re.compile(r"^(grated )?comt[eé]", re.I), "vegetarian comte-style cheese")]
 STEP = [("Flying noodle", "and wine and", "and chicken stock and"),
         ("boilermaker", "chase it with the beer, or drop the shot glass carefully into the beer", "chase it with the lager, or drop the shot glass carefully into the lager"),
         ("hot buttered rum cider", "Strain the cider into mugs", "Strain the spiced apple juice into mugs")]

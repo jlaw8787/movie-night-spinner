@@ -58,7 +58,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lake-town smoked tofu",
+     "prep_min": 16,
+     "cook_min": 0,
+     "make_ahead": "Up to 4 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet rye crispbread",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pickled onions",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice a few pickled onions into thin rings and pick the dill into small sprigs.",
+       "min": 5
+      },
+      {
+       "text": "Spread each rye crispbread with creme fraiche.",
+       "min": 4
+      },
+      {
+       "text": "Crumble the smoked tofu over the top, squeeze over a little lemon and finish with a dill sprig and a few onion rings.",
+       "min": 5
+      },
+      {
+       "text": "Arrange on a wooden board and serve cold.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Dáin's Iron Hills meat pies",
@@ -133,7 +198,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dáin's Iron Hills mushroom and lentil pies",
+     "prep_min": 20,
+     "cook_min": 50,
+     "make_ahead": "Up to 1 day, keep chilled (bake fresh)",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can brown lentils (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets shortcrust pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle tomato sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onion and cut the pastry into rounds to fit a 12-hole muffin tin.",
+       "min": 10
+      },
+      {
+       "text": "Brown the mushrooms and onion in oil, add the lentils, stock and soy sauce and simmer until thick.",
+       "min": 15
+      },
+      {
+       "text": "Cool the filling for 15 minutes while you line the tin with shortcrust rounds.",
+       "min": 15
+      },
+      {
+       "text": "Fill each case, top with a puff pastry lid and cut a small steam hole.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 200C until golden, then serve with tomato sauce.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Erebor roast beef and Yorkshire puddings",

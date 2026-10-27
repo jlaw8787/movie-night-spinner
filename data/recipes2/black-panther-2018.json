@@ -80,7 +80,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Busan gochujang honey cauliflower bites",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, cut in florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "potato starch",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "cold water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "gochujang",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves of garlic, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sesame seeds",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the potato starch with the cold water and coat the cauliflower.",
+       "min": 5
+      },
+      {
+       "text": "Fry in the oil at 160C, then rest.",
+       "min": 15
+      },
+      {
+       "text": "Simmer the gochujang, honey, soy and garlic until glossy.",
+       "min": 5
+      },
+      {
+       "text": "Fry again at 190C until crisp.",
+       "min": 10
+      },
+      {
+       "text": "Toss in the sauce and top with sesame.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Heart-shaped herb dip",

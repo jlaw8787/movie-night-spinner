@@ -62,7 +62,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Admiral Benbow honey mustard sausages (vegetarian)",
+     "prep_min": 11,
+     "cook_min": 20,
+     "make_ahead": "Up to 1 day, reheat in a hot oven",
+     "ingredients": [
+      {
+       "q": 10,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "wholegrain mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of thyme",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut each vegetarian sausage into three short pieces and toss with the oil.",
+       "min": 5
+      },
+      {
+       "text": "Roast on a lined tray at 200C.",
+       "min": 12
+      },
+      {
+       "text": "Mix the honey, wholegrain mustard and soy sauce.",
+       "min": 3
+      },
+      {
+       "text": "Pour over the sausages, toss and roast until sticky and glazed.",
+       "min": 8
+      },
+      {
+       "text": "Scatter with thyme leaves and serve on toothpicks.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hispaniola cheddar ship's biscuits",

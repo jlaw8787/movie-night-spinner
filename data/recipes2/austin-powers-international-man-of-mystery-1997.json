@@ -76,7 +76,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Shagadelic devilled eggs with smoky crispy shallots",
+     "prep_min": 13,
+     "cook_min": 15,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "white vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "crispy fried shallots",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Lower the eggs into boiling water and cook for 10 minutes, then cool in iced water and peel.",
+       "min": 15
+      },
+      {
+       "text": "Halve the eggs and scoop out the yolks. Mash with the mayonnaise, mustard, vinegar and salt until smooth.",
+       "min": 5
+      },
+      {
+       "text": "Toss the crispy fried shallots with half the smoked paprika.",
+       "min": 3
+      },
+      {
+       "text": "Spoon the yolk mix back into the whites, dust with the rest of the paprika and top with the smoky shallots and chopped chives.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sixties cheese and pineapple hedgehog",
@@ -147,7 +224,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sixties cheese and pineapple hedgehog (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "rockmelon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "vintage cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "pineapple",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar cocktail onions",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "box toothpicks",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the rockmelon into pieces and place one piece cut-side down on a platter as the body, with the cloves for eyes.",
+       "min": 5
+      },
+      {
+       "text": "Cut the cheddar, pineapple and smoked tofu into cubes.",
+       "min": 10
+      },
+      {
+       "text": "Thread the toothpicks with cheese, pineapple and either a cocktail onion or a cube of tofu.",
+       "min": 7
+      },
+      {
+       "text": "Push them all over the rockmelon until covered in spikes.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Dr. Evil's one million dollar steak Diane",

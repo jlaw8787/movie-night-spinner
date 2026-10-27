@@ -96,7 +96,110 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Radish crate crispy daikon cakes (vegetarian)",
+     "prep_min": 34,
+     "cook_min": 130,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "daikon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "dried shiitake mushrooms",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "rice flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "vegetable oil, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "vegetarian mushroom oyster sauce, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "chilli oil, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the dried shiitake mushrooms in hot water. Grate the daikon and simmer in its own juice for 10 minutes.",
+       "min": 28
+      },
+      {
+       "text": "Fry the finely diced smoked tofu, the chopped soaked shiitake and the sliced spring onions in a little oil for 3 minutes.",
+       "min": 9
+      },
+      {
+       "text": "Mix into the daikon with the rice flour, the water, the salt and the sugar.",
+       "min": 8
+      },
+      {
+       "text": "Press into an oiled 20cm square tin and steam 45 minutes.",
+       "min": 99
+      },
+      {
+       "text": "Cool completely, then slice into squares and fry in oil 3 minutes a side until crisp.",
+       "min": 12
+      },
+      {
+       "text": "Serve with the vegetarian mushroom oyster sauce and chilli oil.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bean bun warrior buns",

@@ -70,7 +70,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Maryland hearts of palm cakes",
+     "prep_min": 18,
+     "cook_min": 35,
+     "make_ahead": "Up to 1 day uncooked, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cans hearts of palm (400 g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet nori, finely crumbled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the hearts of palm finely and squeeze dry in a clean tea towel.",
+       "min": 6
+      },
+      {
+       "text": "Mix with the nori, mayonnaise, Dijon, sliced spring onion and breadcrumbs.",
+       "min": 5
+      },
+      {
+       "text": "Shape into small cakes and chill for at least 30 minutes.",
+       "min": 32
+      },
+      {
+       "text": "Pan-fry in the oil until golden on both sides.",
+       "min": 10
+      },
+      {
+       "text": "Serve with lemon wedges.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Diner hash browns",

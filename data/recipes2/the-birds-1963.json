@@ -66,7 +66,80 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bodega Bay hearts of palm toasts",
+     "prep_min": 15,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin hearts of palm (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "nori sheet",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch cayenne pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "small slices sourdough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, cut in half",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Shred the hearts of palm with a fork, pat dry and fold with mayo, lemon juice, chives, cayenne and the nori crumbled fine.",
+       "min": 7
+      },
+      {
+       "text": "Toast the sourdough and rub with the cut garlic.",
+       "min": 5
+      },
+      {
+       "text": "Pile the hearts of palm on top and serve straight away.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Lovebird goat cheese filo cups",

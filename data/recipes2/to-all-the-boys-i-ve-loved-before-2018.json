@@ -117,7 +117,50 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Peppermint choc dipped marshmallows (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 25,
+     "make_ahead": "Up to 2 days, airtight",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "dark chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "peppermint lollies",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt the chocolate.",
+       "min": 5
+      },
+      {
+       "text": "Dip the marshmallows halfway and roll the chocolate end in crushed peppermint lollies.",
+       "min": 10
+      },
+      {
+       "text": "Set on baking paper.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Dr Covey's Korean marinated beef",

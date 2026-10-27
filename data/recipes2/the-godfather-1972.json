@@ -60,7 +60,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Connie's wedding antipasto with marinated artichokes",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Up to 4 hours, keep chilled, serve at room temperature",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "marinated artichokes, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "chargrilled eggplant in oil, drained",
+       "aisle": "Deli"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "aged provolone, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "drained roast capsicum",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "cracked black pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Arrange the artichokes, chargrilled eggplant, provolone and olives on a platter.",
+       "min": 4
+      },
+      {
+       "text": "Pile the roast capsicum alongside, drizzle with olive oil and add cracked pepper.",
+       "min": 3
+      },
+      {
+       "text": "Leave out for a few minutes so it comes to room temperature before serving.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Golden arancini",

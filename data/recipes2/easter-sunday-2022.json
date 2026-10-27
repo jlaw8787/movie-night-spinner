@@ -104,7 +104,122 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Valencia family mushroom and cabbage lumpia",
+     "prep_min": 39,
+     "cook_min": 14,
+     "make_ahead": "Roll up to 1 day ahead, fry fresh",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "Swiss brown mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cabbage, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "",
+       "item": "spring roll wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "white vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "sweet chilli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in a tablespoon of the oil until dry, add the cabbage for a minute, then cool.",
+       "min": 10
+      },
+      {
+       "text": "Mix with grated carrot and onion, most of the garlic, spring onions, egg, soy and pepper.",
+       "min": 8
+      },
+      {
+       "text": "Lay filling along the edge of each wrapper in a thin line and roll up tightly, sealing with water.",
+       "min": 25
+      },
+      {
+       "text": "Fry in the rest of the oil at 180C until deep golden.",
+       "min": 4
+      },
+      {
+       "text": "Mix the white vinegar with the remaining crushed garlic, chilli and pepper.",
+       "min": 4
+      },
+      {
+       "text": "Serve with the vinegar and sweet chilli sauce.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Easter party pancit with calamansi",
@@ -225,7 +340,128 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Easter party pancit with calamansi (vegetarian)",
+     "prep_min": 23,
+     "cook_min": 11,
+     "make_ahead": "Up to 1 day, keep chilled and reheat",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "rice vermicelli",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "fresh shiitake mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "snow peas",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetarian mushroom oyster sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the vermicelli in hot water, then drain.",
+       "min": 5
+      },
+      {
+       "text": "Cut the tofu into strips and slice the mushrooms, onion, cabbage and carrot.",
+       "min": 15
+      },
+      {
+       "text": "Stir-fry the tofu and mushrooms in oil until golden.",
+       "min": 4
+      },
+      {
+       "text": "Add the onion, garlic, cabbage, carrot and snow peas.",
+       "min": 2
+      },
+      {
+       "text": "Add the stock, soy and mushroom oyster sauce, then the noodles, and toss until absorbed.",
+       "min": 5
+      },
+      {
+       "text": "Serve with lime or calamansi wedges and spring onion.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mum's Easter chicken adobo",

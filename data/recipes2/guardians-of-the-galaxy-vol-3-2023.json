@@ -86,7 +86,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Knowhere market dumplings (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "Up to 1 day, uncooked and chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "wombok, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "",
+       "item": "dumpling wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chilli oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the wombok with the salt, leave a few minutes and squeeze out the water. Crumble in the tofu and mix with the ginger.",
+       "min": 10
+      },
+      {
+       "text": "Fill the wrappers and pleat closed.",
+       "min": 15
+      },
+      {
+       "text": "Fry in oil until crisp underneath.",
+       "min": 5
+      },
+      {
+       "text": "Add the water, cover and steam until hot through.",
+       "min": 5
+      },
+      {
+       "text": "Serve with chilli oil and soy sauce.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rocket's smoky roasted chickpeas and nuts",

@@ -135,7 +135,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Asada portobello fries",
+     "prep_min": 18,
+     "cook_min": 55,
+     "make_ahead": "Marinate up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "g",
+       "item": "frozen fries",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "Monterey Jack, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "avocado, mashed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the mushrooms with the oil, lime juice, garlic and cumin.",
+       "min": 5
+      },
+      {
+       "text": "Marinate for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Grill the mushrooms hot, 4 minutes a side, then chop.",
+       "min": 8
+      },
+      {
+       "text": "Bake the fries on a tray at 220C until crisp.",
+       "min": 20
+      },
+      {
+       "text": "Cover with Monterey Jack and grill to melt.",
+       "min": 5
+      },
+      {
+       "text": "Top with the mushrooms, avocado and sour cream.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "San Diego crispy chicken tacos",

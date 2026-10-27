@@ -92,7 +92,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pentagon kitchen tomato soup and toasties (vegetarian)",
+     "prep_min": 5,
+     "cook_min": 47,
+     "make_ahead": "Soup up to 2 days, toasties fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "tomatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, quartered",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 160,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the tomatoes, onion and garlic in oil.",
+       "min": 5
+      },
+      {
+       "text": "Roast at 200C until soft and browned.",
+       "min": 30
+      },
+      {
+       "text": "Blend with the stock, sugar and salt, then reheat and stir in the cream.",
+       "min": 5
+      },
+      {
+       "text": "Make cheddar toasties with buttered bread, cooking each side in a frying pan.",
+       "min": 12
+      },
+      {
+       "text": "Cut into fingers and serve with the soup.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Gruyere cheese puffs (gougères)",
@@ -560,7 +659,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fondue au chocolat (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "dark chocolate, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "strawberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "sponge cake, cubed",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt the chocolate gently with the cream in a fondue pot or small pan.",
+       "min": 8
+      },
+      {
+       "text": "Keep warm at the table.",
+       "min": 2
+      },
+      {
+       "text": "Set out strawberries, marshmallows and cake for dipping on forks.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mystique blue margarita",

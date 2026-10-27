@@ -70,7 +70,104 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Midnight mushroom pate on rye and buttermilk",
+     "prep_min": 25,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter, soft",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "wholegrain mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "Swiss brown mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, in rings",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "well-chilled buttermilk",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms, garlic and thyme in a third of the butter until dark and dry.",
+       "min": 10
+      },
+      {
+       "text": "Blitz with the cream cheese, salt and pepper until smooth, then cool.",
+       "min": 10
+      },
+      {
+       "text": "Spread the bread with the rest of the butter and a thin layer of mustard.",
+       "min": 4
+      },
+      {
+       "text": "Spread the mushroom pate thickly over half the slices. Top with pickles and red onion, then the other slices.",
+       "min": 5
+      },
+      {
+       "text": "Press down, trim the crusts and cut into fingers.",
+       "min": 4
+      },
+      {
+       "text": "Pour the buttermilk into small glasses and serve together.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Columbia Inn cheese puffs",

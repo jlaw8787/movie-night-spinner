@@ -62,7 +62,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Oxford pub ploughman's (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "aged cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar of pickled onions",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tomato chutney",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green apple, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty loaf",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs for 9 minutes, cool in cold water, peel and halve.",
+       "min": 12
+      },
+      {
+       "text": "Lay out the cheddar, eggs, pickled onions, chutney and apple on a board.",
+       "min": 10
+      },
+      {
+       "text": "Add thick slices of crusty bread and a dish of butter.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ham and béchamel croquettes",
@@ -137,7 +204,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mushroom and béchamel croquettes",
+     "prep_min": 125,
+     "cook_min": 36,
+     "make_ahead": "Up to 1 day uncrumbed, chilled",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil for frying",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in 20g of the butter with the salt until dry and browned.",
+       "min": 8
+      },
+      {
+       "text": "Melt the rest of the butter, stir in the flour and whisk in the milk until very thick.",
+       "min": 10
+      },
+      {
+       "text": "Add the mushrooms and spread out to cool.",
+       "min": 5
+      },
+      {
+       "text": "Chill overnight or at least a few hours until firm.",
+       "min": 120
+      },
+      {
+       "text": "Shape into logs and crumb in egg and panko.",
+       "min": 10
+      },
+      {
+       "text": "Fry in the oil until golden.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hellfire Club pepper steak",

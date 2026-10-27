@@ -58,7 +58,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Prison canteen sandwiches (vegetarian)",
+     "prep_min": 8,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "plant-based deli slices",
+       "aisle": "Deli"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "American-style cheese slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Spread the bread with mustard and layer the deli slices and cheese between the slices to make sandwiches.",
+       "min": 6
+      },
+      {
+       "text": "Butter the outsides.",
+       "min": 2
+      },
+      {
+       "text": "Griddle under a weighted pan until crisp and the cheese melts, turning once. Work in batches.",
+       "min": 12
+      },
+      {
+       "text": "Cut into fingers to share.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "LA street tacos",
@@ -139,7 +198,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "LA street tacos (vegetarian)",
+     "prep_min": 40,
+     "cook_min": 13,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "neutral oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "white onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "salsa verde",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Marinate the mushrooms in the juice of 2 limes, crushed garlic, cumin and oil.",
+       "min": 30
+      },
+      {
+       "text": "Grill hot on both sides until dark and tender.",
+       "min": 8
+      },
+      {
+       "text": "Slice the mushrooms thin.",
+       "min": 5
+      },
+      {
+       "text": "Warm the tortillas and dice the onion.",
+       "min": 5
+      },
+      {
+       "text": "Fill the tortillas with mushroom, onion, coriander and salsa verde, with wedges of the other limes on the side.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Tango's tailored rib eye",

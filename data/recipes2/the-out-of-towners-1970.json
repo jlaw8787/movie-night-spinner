@@ -133,7 +133,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Diverted flight cocktail franks (vegetarian)",
+     "prep_min": 5,
+     "cook_min": 7,
+     "make_ahead": "Up to 1 day, reheat gently",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "vegetarian cocktail sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar cocktail onions",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Warm the vegetarian cocktail sausages in simmering water for 3 minutes, then drain.",
+       "min": 4
+      },
+      {
+       "text": "Melt the butter with the honey, Dijon, sugar and soy in a frying pan.",
+       "min": 2
+      },
+      {
+       "text": "Add them and toss over medium heat until sticky and glazed.",
+       "min": 5
+      },
+      {
+       "text": "Serve on toothpicks with cocktail onions.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hotel rib eye breakfast",

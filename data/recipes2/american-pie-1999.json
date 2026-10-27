@@ -64,7 +64,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Stifler's party cauliflower wings",
+     "prep_min": 15,
+     "cook_min": 35,
+     "make_ahead": "Batter and bake up to 3 hours ahead, toss in sauce fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, cut into florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "blue cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the flour, milk and salt into a thick batter and coat the cauliflower florets.",
+       "min": 8
+      },
+      {
+       "text": "Bake on a lined tray at 220C until crisp and golden.",
+       "min": 30
+      },
+      {
+       "text": "Melt the butter with the hot sauce, toss the cauliflower through and bake 5 minutes more.",
+       "min": 8
+      },
+      {
+       "text": "Mash the blue cheese into the sour cream for the dip. Serve with celery sticks.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Band camp grilled corn",

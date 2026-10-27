@@ -80,7 +80,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mittens' chickpea melt bites",
+     "prep_min": 16,
+     "cook_min": 8,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cans chickpeas (400g each), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "celery stick, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "English muffins",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "pepper",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Split and toast the muffins.",
+       "min": 5
+      },
+      {
+       "text": "Roughly mash the chickpeas with a fork.",
+       "min": 4
+      },
+      {
+       "text": "Mix in the mayonnaise, celery, pickles, a squeeze of lemon and pepper.",
+       "min": 5
+      },
+      {
+       "text": "Spread over the muffin halves and top with cheddar.",
+       "min": 4
+      },
+      {
+       "text": "Grill until the cheese is bubbling and golden.",
+       "min": 3
+      },
+      {
+       "text": "Cut each half into quarters and serve warm.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rhino's cheese balls",

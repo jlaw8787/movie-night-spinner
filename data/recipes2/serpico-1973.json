@@ -56,7 +56,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Village bagels and carrot lox",
+     "prep_min": 30,
+     "cook_min": 4,
+     "make_ahead": "Carrot up to 2 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, peeled into long ribbons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bagels",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blanch the carrot ribbons in boiling water for 1 minute, drain and cool.",
+       "min": 4
+      },
+      {
+       "text": "Toss with the olive oil, lemon juice, soy and smoked paprika and leave for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Split and toast the bagels.",
+       "min": 3
+      },
+      {
+       "text": "Spread each half thickly with cream cheese, then top with the carrot, capers, onion and small sprigs of dill. Cut each half in two to share.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Deli pastrami on rye",
@@ -101,7 +190,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Deli beetroot pastrami on rye",
+     "prep_min": 9,
+     "cook_min": 15,
+     "make_ahead": "Beetroot up to 1 day ahead, warm to serve",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "cooked beetroot, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "coriander seeds, crushed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "deli mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "dill pickles",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the beetroot with the oil, coriander seeds, pepper, smoked paprika, sugar and soy.",
+       "min": 4
+      },
+      {
+       "text": "Spread on a lined tray and bake at 200C for 15 minutes until the edges darken.",
+       "min": 15
+      },
+      {
+       "text": "Spread the rye with mustard, pile the beetroot high on half the slices and close. Cut in half and serve with a pickle each.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Deli hero, paid for",

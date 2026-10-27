@@ -54,7 +54,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pool float pizza bites (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 10,
+     "make_ahead": "Up to 1 day, bake fresh",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "pizza dough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plant-based pepperoni, sliced",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roll the dough thin and cut into small rounds.",
+       "min": 10
+      },
+      {
+       "text": "Top each with sauce, mozzarella, a slice of plant-based pepperoni and a pinch of oregano.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 220C until crisp and bubbling.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Desert bar jalapeño poppers",
@@ -107,7 +162,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Desert bar jalapeño poppers (vegetarian)",
+     "prep_min": 26,
+     "cook_min": 20,
+     "make_ahead": "Fill up to 1 day, bake fresh",
+     "ingredients": [
+      {
+       "q": 12,
+       "u": "",
+       "item": "large jalapeno chillies",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "large eggplant",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the jalapenos lengthways and scrape out the seeds.",
+       "min": 10
+      },
+      {
+       "text": "Mix the cream cheese with the cheddar and fill each half.",
+       "min": 5
+      },
+      {
+       "text": "Shave the eggplant lengthways into thin strips with a peeler and brush with the oil, paprika and salt.",
+       "min": 6
+      },
+      {
+       "text": "Wrap each half in a strip of eggplant.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 200C until the eggplant is crisp.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Tala and Abe's wedding fish tacos",
@@ -525,6 +655,155 @@
       },
       {
        "text": "Top slowly with the cold alcohol-free lager, stir gently and add a lime wedge.",
+       "min": 2
+      }
+     ]
+    },
+    "veg": {
+     "n": "Roy's crossbow michelada (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "hot sauce, 16 dashes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles Mexican style lager (330 ml each)",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt with the chilli powder on a plate.",
+       "min": 2
+      },
+      {
+       "text": "Rub the rims of 4 tall glasses with lime and dip into the salt. Fill with ice.",
+       "min": 3
+      },
+      {
+       "text": "Into each glass add lime juice, tomato juice, hot sauce and a few drops of soy sauce.",
+       "min": 3
+      },
+      {
+       "text": "Top slowly with cold lager, stir gently and add a lime wedge.",
+       "min": 2
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Roy's crossbow michelada (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Make fresh",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "hot sauce, 16 dashes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.3,
+       "u": "l",
+       "item": "soda water, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt with the chilli powder on a plate.",
+       "min": 2
+      },
+      {
+       "text": "Rub the rims of 4 tall glasses with lime and dip into the salt. Fill with ice.",
+       "min": 3
+      },
+      {
+       "text": "Into each glass add lime juice, tomato juice, hot sauce and a few drops of soy sauce.",
+       "min": 3
+      },
+      {
+       "text": "Top slowly with cold soda water, stir gently and add a lime wedge.",
        "min": 2
       }
      ]

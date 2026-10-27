@@ -76,7 +76,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Grandma's first corn dog (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 7,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 100,
+       "u": "g",
+       "item": "fine cornmeal",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 24,
+       "u": "",
+       "item": "vegetarian cocktail sausages",
+       "aisle": "Deli"
+      },
+      {
+       "q": 24,
+       "u": "",
+       "item": "skewers or sticks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the cornmeal, flour, baking powder and buttermilk to a thick batter.",
+       "min": 8
+      },
+      {
+       "text": "Pat the veggie sausages dry and push a skewer into each.",
+       "min": 7
+      },
+      {
+       "text": "Dip in the batter and fry at 180C in batches.",
+       "min": 12
+      },
+      {
+       "text": "Serve with mustard.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Genovian pear crostini",

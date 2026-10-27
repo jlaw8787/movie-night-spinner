@@ -133,7 +133,86 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mushroom and gruyere croque bites",
+     "prep_min": 17,
+     "cook_min": 24,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "Swiss brown mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "vegetarian gruyere-style cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 45,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in a third of the butter until golden.",
+       "min": 6
+      },
+      {
+       "text": "Make a bechamel from the rest of the butter, the flour and milk.",
+       "min": 12
+      },
+      {
+       "text": "Spread the bread with Dijon, fill with mushrooms and grated cheese and arrange on a tray.",
+       "min": 10
+      },
+      {
+       "text": "Top with bechamel and more grated cheese.",
+       "min": 4
+      },
+      {
+       "text": "Grill until bubbling.",
+       "min": 6
+      },
+      {
+       "text": "Cut into small squares and serve on a silver tray.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Countryside coq au vin",

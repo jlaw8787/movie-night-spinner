@@ -58,7 +58,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Corn dodgers (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 12,
+     "make_ahead": "Best served warm",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cornmeal",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter, to serve",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the cornmeal, salt and smoked paprika with the melted butter and the boiling water.",
+       "min": 5
+      },
+      {
+       "text": "Shape into small ovals.",
+       "min": 5
+      },
+      {
+       "text": "Fry in the oil in a cast iron pan until crisp.",
+       "min": 10
+      },
+      {
+       "text": "Eat warm with butter.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Fort Smith boarding house biscuits",

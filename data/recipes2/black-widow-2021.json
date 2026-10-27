@@ -137,7 +137,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Norway hideout rye with beetroot",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cooked beetroot, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "rye crispbreads",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "dill sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the beetroot very thin and toss with a squeeze of lemon.",
+       "min": 5
+      },
+      {
+       "text": "Spread the crispbreads with creme fraiche.",
+       "min": 5
+      },
+      {
+       "text": "Top with folds of beetroot, cucumber and a sprig of dill.",
+       "min": 5
+      },
+      {
+       "text": "Squeeze over the rest of the lemon just before serving.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Melina's pork chops (not Alexei)",

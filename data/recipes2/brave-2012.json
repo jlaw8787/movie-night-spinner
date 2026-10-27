@@ -88,7 +88,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Clan DunBroch Scotch eggs (vegetarian)",
+     "prep_min": 43,
+     "cook_min": 22,
+     "make_ahead": "Up to 1 day, reheat to serve",
+     "ingredients": [
+      {
+       "q": 7,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "vegetarian sausages, skins removed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sage, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "wholegrain mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "pepper",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil 6 of the eggs until just set.",
+       "min": 6
+      },
+      {
+       "text": "Cool and peel the eggs.",
+       "min": 10
+      },
+      {
+       "text": "Mash the vegetarian sausage filling with the sage, pepper and a handful of the breadcrumbs.",
+       "min": 5
+      },
+      {
+       "text": "Wrap the mixture around each egg.",
+       "min": 15
+      },
+      {
+       "text": "Roll in flour, the last egg, beaten, and the rest of the breadcrumbs.",
+       "min": 10
+      },
+      {
+       "text": "Fry at 170C in two batches.",
+       "min": 16
+      },
+      {
+       "text": "Halve and serve with mustard.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bear mum's salmon bites",
@@ -143,7 +232,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bear mum's beetroot bites",
+     "prep_min": 22,
+     "cook_min": 0,
+     "make_ahead": "Up to 2 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "oatcakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cooked beetroot, very thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "sprigs dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "sea salt",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Season the beetroot slices with a squeeze of lemon and a pinch of sea salt.",
+       "min": 4
+      },
+      {
+       "text": "Spread the oatcakes with cream cheese.",
+       "min": 6
+      },
+      {
+       "text": "Top with folds of beetroot and a sprig of dill.",
+       "min": 8
+      },
+      {
+       "text": "Squeeze over a little more lemon and lay out on a slate.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Scotch broth",

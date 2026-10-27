@@ -380,7 +380,64 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rock hammer rocky road (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 120,
+     "make_ahead": "Up to 5 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "milk chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "roasted peanuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain biscuits",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt the chocolate gently.",
+       "min": 8
+      },
+      {
+       "text": "Stir in the marshmallows, peanuts and broken biscuits.",
+       "min": 5
+      },
+      {
+       "text": "Spread into a lined 20cm tin.",
+       "min": 2
+      },
+      {
+       "text": "Chill until set.",
+       "min": 120
+      },
+      {
+       "text": "Cut into rough rocks.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rooftop ginger beer shandy",

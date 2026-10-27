@@ -213,7 +213,7 @@
      "q": 500,
      "u": "g",
      "item": "pizza dough",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 60,
@@ -298,7 +298,7 @@
      "min": 7
     }
    ],
-   "veg": false,
+   "veg": true,
    "af": false,
    "alt": {
     "af": {
@@ -311,7 +311,7 @@
        "q": 500,
        "u": "g",
        "item": "pizza dough",
-       "aisle": "Meat"
+       "aisle": "Deli"
       },
       {
        "q": 60,
@@ -440,7 +440,7 @@
      "q": 300,
      "u": "g",
      "item": "sauerkraut",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": null,
@@ -514,7 +514,7 @@
        "q": 300,
        "u": "g",
        "item": "sauerkraut",
-       "aisle": "Meat"
+       "aisle": "Deli"
       },
       {
        "q": null,

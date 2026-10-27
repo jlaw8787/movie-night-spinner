@@ -147,7 +147,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "London 1918 cheese and vegetable pasties",
+     "prep_min": 25,
+     "cook_min": 30,
+     "make_ahead": "Up to 1 day, reheat to serve",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "potato, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small swede, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sheets of shortcrust pastry",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "English mustard, to serve",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Mix the lentils, potato, swede, onion, cheddar and pepper.",
+       "min": 7
+      },
+      {
+       "text": "Cut the pastry into rounds, fill and fold into half moons.",
+       "min": 13
+      },
+      {
+       "text": "Crimp, egg wash and bake.",
+       "min": 30
+      },
+      {
+       "text": "Serve with English mustard.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Veld celebration stew",

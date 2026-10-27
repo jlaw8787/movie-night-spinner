@@ -169,7 +169,102 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Coorong garlic chilli mushrooms",
+     "prep_min": 13,
+     "cook_min": 12,
+     "make_ahead": "Cook just before serving",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mixed mushrooms, such as Swiss brown and shiitake",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch of parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Tear or thickly slice the mushrooms.",
+       "min": 6
+      },
+      {
+       "text": "Slice the garlic and chilli.",
+       "min": 5
+      },
+      {
+       "text": "Fry the mushrooms in the olive oil over high heat until golden.",
+       "min": 6
+      },
+      {
+       "text": "Add the garlic and chilli and fry for a minute.",
+       "min": 1
+      },
+      {
+       "text": "Add the stock, cover and steam briefly.",
+       "min": 3
+      },
+      {
+       "text": "Stir in butter, lemon juice and parsley.",
+       "min": 2
+      },
+      {
+       "text": "Serve with crusty bread.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hideaway Tom's crisp fish and chips",

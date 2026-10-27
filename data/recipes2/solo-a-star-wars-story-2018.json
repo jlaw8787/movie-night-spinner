@@ -42,13 +42,13 @@
      "q": 150,
      "u": "g",
      "item": "green olives",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 150,
      "u": "g",
      "item": "kalamata olives",
-     "aisle": "Meat"
+     "aisle": "Deli"
     }
    ],
    "steps": [
@@ -61,7 +61,7 @@
      "min": 10
     }
    ],
-   "veg": false,
+   "veg": true,
    "af": true
   },
   {
@@ -99,7 +99,7 @@
      "q": 24,
      "u": "",
      "item": "dumpling wrappers",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 2,
@@ -139,7 +139,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Corellia street dumplings (vegetarian)",
+     "prep_min": 50,
+     "cook_min": 15,
+     "make_ahead": "Fill and pleat up to 1 day ahead, cook fresh",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "small wombok, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 24,
+       "u": "",
+       "item": "dumpling wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "chilli oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "black vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Crumble the tofu and mix with the mushrooms, wombok, ginger and salt.",
+       "min": 10
+      },
+      {
+       "text": "Fill the wrappers and pleat closed.",
+       "min": 40
+      },
+      {
+       "text": "Fry in oil until crisp underneath, add a splash of water, cover and steam for 5 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Serve with chilli oil and black vinegar.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Vandor lodge roast pork knuckle",
@@ -200,7 +283,7 @@
      "q": 500,
      "u": "g",
      "item": "sauerkraut",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 2,

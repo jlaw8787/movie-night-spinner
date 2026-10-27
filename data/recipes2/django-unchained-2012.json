@@ -133,7 +133,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bounty hunter's mushroom jerky",
+     "prep_min": 145,
+     "cook_min": 180,
+     "make_ahead": "Keeps 1 week airtight in the fridge",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms lengthways about 3mm thick.",
+       "min": 15
+      },
+      {
+       "text": "Mix the soy, sugar, pepper and paprika and add the mushrooms.",
+       "min": 10
+      },
+      {
+       "text": "Marinate for 2 hours in the fridge.",
+       "min": 120
+      },
+      {
+       "text": "Lay on racks and dry at 70C until leathery.",
+       "min": 180
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "German sausages and kraut",

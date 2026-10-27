@@ -76,7 +76,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "London pub scotch eggs (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 15,
+     "make_ahead": "Wrap up to 1 day ahead, fry fresh",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "vegetarian sausages, skins removed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped sage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "English mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs for 6 minutes, cool and peel.",
+       "min": 15
+      },
+      {
+       "text": "Mix the vegetarian sausage meat with the sage and wrap around each egg.",
+       "min": 10
+      },
+      {
+       "text": "Roll in flour, beaten egg and panko.",
+       "min": 5
+      },
+      {
+       "text": "Fry in the oil at 170C for 5 minutes, then halve and serve with mustard.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Greenwich tube stop chips",

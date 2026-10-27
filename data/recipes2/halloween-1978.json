@@ -127,7 +127,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jack-o'-lantern cheese ball (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 60,
+     "make_ahead": "Up to 1 day chilled",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sharp cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet crackers",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Beat the cheddar with the cream cheese, half the paprika and the soy sauce.",
+       "min": 8
+      },
+      {
+       "text": "Shape into a ball and chill.",
+       "min": 60
+      },
+      {
+       "text": "Score lines like a pumpkin and roll in the remaining paprika.",
+       "min": 8
+      },
+      {
+       "text": "Push a capsicum stem on top and serve with crackers.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Haddonfield chilli in a pumpkin",

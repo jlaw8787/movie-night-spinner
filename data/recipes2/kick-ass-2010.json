@@ -119,7 +119,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "D'Amico's smoky eggplant melon bites",
+     "prep_min": 20,
+     "cook_min": 10,
+     "make_ahead": "Up to 2 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "rockmelon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "eggplant",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "",
+       "item": "small basil leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "aged balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel and seed the rockmelon and cut into 20 cubes.",
+       "min": 7
+      },
+      {
+       "text": "Slice the eggplant lengthways into 10 thin ribbons and halve them. Brush with half the oil, season with smoked paprika and salt and grill until soft and charred.",
+       "min": 12
+      },
+      {
+       "text": "Wrap each cube in a ribbon of eggplant with a basil leaf tucked inside and spear with a pick.",
+       "min": 8
+      },
+      {
+       "text": "Arrange on a platter, drizzle with balsamic and the rest of the oil and finish with pepper.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bowling alley burger",

@@ -200,6 +200,155 @@
        "min": 3
       }
      ]
+    },
+    "veg": {
+     "n": "Fisherman's Wharf garlic mushrooms",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king oyster mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the garlic and chilli.",
+       "min": 8
+      },
+      {
+       "text": "Heat the oil and fry the garlic and chilli briefly.",
+       "min": 3
+      },
+      {
+       "text": "Toss the mushrooms over high heat until golden.",
+       "min": 6
+      },
+      {
+       "text": "Add the butter, wine and parsley. Serve with bread for the juices.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Fisherman's Wharf garlic mushrooms (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king oyster mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the garlic and chilli.",
+       "min": 8
+      },
+      {
+       "text": "Heat the oil and fry the garlic and chilli briefly.",
+       "min": 3
+      },
+      {
+       "text": "Toss the mushrooms over high heat until golden.",
+       "min": 6
+      },
+      {
+       "text": "Add the butter, verjuice and parsley. Serve with bread for the juices.",
+       "min": 3
+      }
+     ]
     }
    }
   },

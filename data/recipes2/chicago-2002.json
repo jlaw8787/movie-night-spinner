@@ -48,7 +48,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Devils on horseback, smoky eggplant-wrapped prunes",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 24,
+       "u": "",
+       "item": "pitted prunes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "blue cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "large eggplant, sliced lengthways very thin",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "toothpicks",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Stuff each prune with a small piece of blue cheese.",
+       "min": 8
+      },
+      {
+       "text": "Cut the eggplant into 24 strips, brush with the oil, paprika, maple syrup and salt and cook in a hot pan until soft.",
+       "min": 10
+      },
+      {
+       "text": "Wrap each prune in a strip of eggplant and secure with a toothpick.",
+       "min": 12
+      },
+      {
+       "text": "Bake until the edges are crisp.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Jail cell cheese straws",
@@ -395,6 +472,127 @@
       {
        "text": "Chill.",
        "min": 240
+      }
+     ]
+    },
+    "veg": {
+     "n": "Champagne jelly (vegetarian)",
+     "prep_min": 14,
+     "cook_min": 60,
+     "make_ahead": "Up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "sparkling wine, at room temperature",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "punnet of raspberries",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Put the raspberries in 4 coupes.",
+       "min": 2
+      },
+      {
+       "text": "Whisk the agar into the water with the sugar, bring to the boil and simmer for 2 minutes, stirring.",
+       "min": 6
+      },
+      {
+       "text": "Take off the heat, cool for 3 minutes, then quickly and gently stir in the sparkling wine.",
+       "min": 4
+      },
+      {
+       "text": "Pour over the raspberries straight away.",
+       "min": 2
+      },
+      {
+       "text": "Chill until set.",
+       "min": 60
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Champagne jelly (vegetarian, alcohol-free)",
+     "prep_min": 14,
+     "cook_min": 60,
+     "make_ahead": "Up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine, at room temperature",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "punnet of raspberries",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Put the raspberries in 4 coupes.",
+       "min": 2
+      },
+      {
+       "text": "Whisk the agar into the water with the sugar, bring to the boil and simmer for 2 minutes, stirring.",
+       "min": 6
+      },
+      {
+       "text": "Take off the heat, cool for 3 minutes, then quickly and gently stir in the alcohol-free sparkling wine.",
+       "min": 4
+      },
+      {
+       "text": "Pour over the raspberries straight away.",
+       "min": 2
+      },
+      {
+       "text": "Chill until set.",
+       "min": 60
       }
      ]
     }

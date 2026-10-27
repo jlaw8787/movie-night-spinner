@@ -68,7 +68,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dark chocolate gummy lolly bark (vegetarian)",
+     "prep_min": 21,
+     "cook_min": 60,
+     "make_ahead": "Up to 1 week in an airtight tin",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "dark chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "white chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vegetarian gummy lollies, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "honeycomb, crushed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "vegetarian mini marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sprinkles",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt the dark and white chocolate separately.",
+       "min": 8
+      },
+      {
+       "text": "Spread the dark chocolate over a lined tray and drizzle with the white, then swirl with a skewer.",
+       "min": 5
+      },
+      {
+       "text": "Scatter over the lollies, honeycomb, marshmallows and sprinkles, pressing them in lightly.",
+       "min": 5
+      },
+      {
+       "text": "Chill until set.",
+       "min": 60
+      },
+      {
+       "text": "Smash into shards.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Candy kart pretzel rods",

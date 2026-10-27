@@ -358,7 +358,64 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Galactus-sized jelly mould (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 740,
+     "make_ahead": "Up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "packets vegetarian strawberry jelly crystals",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "strawberries, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green grapes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream, whipped",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Make up the jelly with a little less water than the packet says.",
+       "min": 15
+      },
+      {
+       "text": "Pour a layer into a ring mould with sliced strawberries and grapes.",
+       "min": 10
+      },
+      {
+       "text": "Chill until set, then fill with the rest.",
+       "min": 120
+      },
+      {
+       "text": "Chill overnight.",
+       "min": 600
+      },
+      {
+       "text": "Turn out and serve with whipped cream.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Space race orange cream shake",

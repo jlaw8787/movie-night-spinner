@@ -82,7 +82,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Roast portobello and provolone sliders",
+     "prep_min": 30,
+     "cook_min": 35,
+     "make_ahead": "Mushrooms up to 1 day ahead, reheat in their juices",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fennel seeds",
+       "aisle": "Spices"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches broccolini",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sharp provolone, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "slider buns",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms thick and toss with half the garlic crushed, the rosemary leaves, fennel seeds and 3 tbsp of the oil.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 200C for 25 minutes, pour in the stock and roast 10 minutes more.",
+       "min": 35
+      },
+      {
+       "text": "Fry the broccolini in the rest of the oil with the remaining garlic and chilli.",
+       "min": 10
+      },
+      {
+       "text": "Pile the mushrooms, greens and provolone into the buns and spoon over the pan juices.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Red tent chocolate strawberries",

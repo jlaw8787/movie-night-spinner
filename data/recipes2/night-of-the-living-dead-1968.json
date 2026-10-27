@@ -78,7 +78,86 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "\"Coming to get you, Barbara\" sandwiches (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 10,
+       "u": "g",
+       "item": "cress, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 25,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "plant-based ham slices",
+       "aisle": "Deli"
+      },
+      {
+       "q": 10,
+       "u": "g",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs, cool, peel and mash with the mayonnaise.",
+       "min": 12
+      },
+      {
+       "text": "Stir in the cress.",
+       "min": 2
+      },
+      {
+       "text": "Butter the bread.",
+       "min": 3
+      },
+      {
+       "text": "Make two egg-and-cress sandwiches and two plant-based ham and mustard sandwiches.",
+       "min": 8
+      },
+      {
+       "text": "Trim the crusts and cut each sandwich into four small pieces.",
+       "min": 5
+      },
+      {
+       "text": "Wrap in wax paper for a 1968-style picnic.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Black and white popcorn",

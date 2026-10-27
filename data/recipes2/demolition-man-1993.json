@@ -322,7 +322,80 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Layered jelly cubes (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 99,
+     "make_ahead": "Make the day before",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "red berry juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream, whipped",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the berry juice with 1 tsp agar and 1 tbsp sugar for 2 minutes, then pour into a lined square tin.",
+       "min": 8
+      },
+      {
+       "text": "Chill until firm.",
+       "min": 30
+      },
+      {
+       "text": "Boil the pineapple juice with 1 tsp agar and 1 tbsp sugar for 2 minutes, cool for 5 minutes, pour gently over and chill until firm.",
+       "min": 38
+      },
+      {
+       "text": "Do the same with the coconut milk and the rest of the agar and sugar, and chill until firm.",
+       "min": 38
+      },
+      {
+       "text": "Turn out and cut into neat cubes.",
+       "min": 10
+      },
+      {
+       "text": "Serve on a white plate with a little whipped cream.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "San Angeles cucumber elderflower spritz",

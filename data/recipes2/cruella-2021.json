@@ -62,7 +62,86 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Black and white ball canapés (vegetarian)",
+     "prep_min": 24,
+     "cook_min": 40,
+     "make_ahead": "Lentils up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "blinis",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "black beluga lentils",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "strawberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "white chocolate",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the lentils until just tender, drain and dress with the soy sauce and oil. Cool.",
+       "min": 25
+      },
+      {
+       "text": "Melt the white chocolate gently.",
+       "min": 4
+      },
+      {
+       "text": "Dip the strawberries halfway in the chocolate and set on baking paper.",
+       "min": 8
+      },
+      {
+       "text": "Leave the chocolate to set.",
+       "min": 15
+      },
+      {
+       "text": "Top the blinis with creme fraiche and a little spoonful of the black lentils.",
+       "min": 8
+      },
+      {
+       "text": "Lay both out on black trays in strict rows, black and white only.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Punk London pub chips",

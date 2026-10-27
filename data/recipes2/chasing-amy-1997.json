@@ -64,7 +64,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jersey disco fries (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 55,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into thick chips, soak and dry well.",
+       "min": 40
+      },
+      {
+       "text": "Fry at 150C, then again at 190C until crisp.",
+       "min": 15
+      },
+      {
+       "text": "Melt the butter, stir in the flour, whisk in the stock and soy and simmer until thick and brown.",
+       "min": 10
+      },
+      {
+       "text": "Pile the chips on a tray, pour over the gravy, cover with mozzarella and grill until melted.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Comic strip pizza bagels",
@@ -113,7 +184,56 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Comic strip pizza bagels (vegetarian)",
+     "prep_min": 5,
+     "cook_min": 8,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "plain bagels",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 8,
+       "u": "tbsp",
+       "item": "pizza sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "plant-based pepperoni, sliced",
+       "aisle": "Deli"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Split the bagels and toast lightly.",
+       "min": 4
+      },
+      {
+       "text": "Spread each half with pizza sauce and top with mozzarella and plant-based pepperoni.",
+       "min": 3
+      },
+      {
+       "text": "Grill until bubbling. Cut into halves to share.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Jersey Italian hot dogs",

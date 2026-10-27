@@ -82,7 +82,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Stark mansion canapés (vegetarian)",
+     "prep_min": 22,
+     "cook_min": 10,
+     "make_ahead": "Watermelon mix up to 1 hour ahead, assemble to serve",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "wonton wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "seedless watermelon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "spring onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "avocado",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sesame seeds, toasted",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the wonton wrappers at 180C until crisp. Drain.",
+       "min": 8
+      },
+      {
+       "text": "Cut the watermelon into 1cm dice, pat dry and dress with soy, sesame oil, lime juice and spring onion. Leave for 10 minutes.",
+       "min": 12
+      },
+      {
+       "text": "Smash the avocado.",
+       "min": 3
+      },
+      {
+       "text": "Spoon the watermelon onto the wontons and top with a dot of avocado and the sesame.",
+       "min": 9
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Cave flatbread",

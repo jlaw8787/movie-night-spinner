@@ -70,7 +70,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cabbie's smoky chilli mushroom jerky",
+     "prep_min": 20,
+     "cook_min": 300,
+     "make_ahead": "Keeps 5 days in an airtight jar in the fridge",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms lengthways 5mm thick.",
+       "min": 15
+      },
+      {
+       "text": "Mix the soy, vinegar, sugar, paprika, chilli and garlic powder and toss through the mushrooms.",
+       "min": 5
+      },
+      {
+       "text": "Marinate in the fridge for at least 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Pat dry, lay on racks over trays and dry at 75C with the oven door slightly open for about 3 hours, until leathery but still bendy.",
+       "min": 180
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Survival tin sardines",
@@ -121,7 +192,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Survival tin smoky tofu",
+     "prep_min": 12,
+     "cook_min": 10,
+     "make_ahead": "Up to 2 hours ahead",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "nori sheet, crumbled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 24,
+       "u": "",
+       "item": "saltine crackers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the tofu into 24 small fingers and fry in the oil until golden.",
+       "min": 10
+      },
+      {
+       "text": "Toss with the soy, smoked paprika and nori, then tip into a shallow tin with the oil.",
+       "min": 3
+      },
+      {
+       "text": "Chop the parsley.",
+       "min": 2
+      },
+      {
+       "text": "Lay a piece of tofu on each cracker, squeeze over lemon, add a drop of hot sauce and some parsley. Serve on the tin lids.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Scavenger's hobo stew",

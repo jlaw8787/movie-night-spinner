@@ -68,7 +68,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Protein farm grub-free skewers (vegetarian)",
+     "prep_min": 21,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu, cubed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "white miso",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the miso with crushed garlic and the vegetable oil and coat the tofu.",
+       "min": 5
+      },
+      {
+       "text": "Marinate for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Thread onto skewers.",
+       "min": 4
+      },
+      {
+       "text": "Grill until charred.",
+       "min": 10
+      },
+      {
+       "text": "Mix soy, sesame oil and sliced spring onion for dipping.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rainy LA street gyoza",
@@ -143,7 +218,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rainy LA street gyoza (vegetarian)",
+     "prep_min": 40,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cups shredded wombok",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "",
+       "item": "dumpling wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "black vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chilli oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Salt the wombok, then squeeze it dry and mix with the mushrooms, crumbled tofu and a splash of the soy.",
+       "min": 15
+      },
+      {
+       "text": "Fill the wrappers and pleat.",
+       "min": 20
+      },
+      {
+       "text": "Fry in the oil until crisp underneath.",
+       "min": 4
+      },
+      {
+       "text": "Add water and steam.",
+       "min": 4
+      },
+      {
+       "text": "Serve with the rest of the soy, black vinegar and chilli oil.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Joi's rib eye, mash and red wine jus",
@@ -526,7 +688,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Snowfall panna cotta (vegetarian)",
+     "prep_min": 18,
+     "cook_min": 480,
+     "make_ahead": "Make the day before, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "vanilla bean",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "meringue nests",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Warm the cream, milk, sugar and split vanilla bean and leave to infuse.",
+       "min": 8
+      },
+      {
+       "text": "Whisk in the agar, bring to the boil and simmer for 2 minutes, stirring.",
+       "min": 5
+      },
+      {
+       "text": "Lift out the vanilla pod and pour into glasses.",
+       "min": 3
+      },
+      {
+       "text": "Set in the fridge overnight.",
+       "min": 480
+      },
+      {
+       "text": "Crush the meringue nests over the top like falling snow.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Deckard's Scotch and honey highball",

@@ -193,7 +193,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bourbon Bowl Cajun butter mushrooms",
+     "prep_min": 11,
+     "cook_min": 8,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "Cajun seasoning",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette, sliced",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the king oyster mushrooms into thick coins, score both sides and toss with the Cajun seasoning.",
+       "min": 8
+      },
+      {
+       "text": "Sear the mushrooms in a very hot pan with the oil in a single layer, turning once, until well browned.",
+       "min": 6
+      },
+      {
+       "text": "Drop the heat, add the butter and garlic and swirl until foaming.",
+       "min": 2
+      },
+      {
+       "text": "Squeeze over the lemon, scatter with chopped parsley and serve from the pan with the baguette.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mama Boucher's chicken and sausage gumbo",

@@ -392,7 +392,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Quick Stop cream-filled chocolate cakes (vegetarian)",
+     "prep_min": 60,
+     "cook_min": 30,
+     "make_ahead": "Up to 2 days, airtight in the fridge",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 70,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "cocoa",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter, soft",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "icing sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vegetarian marshmallow fluff",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "dark chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the eggs and caster sugar until thick, then fold in the flour and cocoa.",
+       "min": 15
+      },
+      {
+       "text": "Spread in a lined slice tin and bake at 180C for 12 minutes. Cool and cut into 12 rectangles.",
+       "min": 15
+      },
+      {
+       "text": "Beat the butter, most of the icing sugar, marshmallow fluff and vanilla until fluffy. Sandwich pairs of cake with it.",
+       "min": 15
+      },
+      {
+       "text": "Melt the chocolate with the cream and dip the cakes in it. Let them set.",
+       "min": 20
+      },
+      {
+       "text": "Mix the leftover icing sugar with a few drops of water and pipe a white squiggle on top.",
+       "min": 25
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Back fridge chocolate malt shake",

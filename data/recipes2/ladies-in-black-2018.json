@@ -50,7 +50,58 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Magda's continental platter with marinated artichokes",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 280,
+       "u": "g",
+       "item": "jar marinated artichokes",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "dark rye loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Drain the marinated artichokes, slice the smoked tofu thinly and lay them out on a big board.",
+       "min": 5
+      },
+      {
+       "text": "Add the dill pickles cut into spears, the cream cheese in a bowl and a sliced dark rye loaf, the way Magda would set out a New Year's Eve spread.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Goodes tearoom egg sandwiches",

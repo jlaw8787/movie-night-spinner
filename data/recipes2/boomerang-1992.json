@@ -74,7 +74,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Strangé's cocktail meatballs (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 13,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "clove garlic, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "sweet chilli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "grape jelly",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "toothpicks",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the plant-based mince with the egg, breadcrumbs, garlic and salt.",
+       "min": 10
+      },
+      {
+       "text": "Roll into 30 small balls.",
+       "min": 10
+      },
+      {
+       "text": "Bake on a lined tray at 200C until browned.",
+       "min": 15
+      },
+      {
+       "text": "Simmer the sweet chilli sauce with the grape jelly in a wide pan until glossy.",
+       "min": 5
+      },
+      {
+       "text": "Add the balls and turn until coated, then serve hot on toothpicks.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Marcus's smoked salmon pinwheels",
@@ -133,7 +214,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Marcus's roast capsicum and dill pinwheels",
+     "prep_min": 20,
+     "cook_min": 58,
+     "make_ahead": "Up to 1 day chilled",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "roasted red capsicum, drained and patted dry",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful of baby spinach",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the cream cheese with chopped dill and lemon zest and spread over the tortillas.",
+       "min": 8
+      },
+      {
+       "text": "Lay the capsicum and spinach over and roll up tightly.",
+       "min": 5
+      },
+      {
+       "text": "Wrap and chill for 1 hour.",
+       "min": 60
+      },
+      {
+       "text": "Slice into 2cm pinwheels.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Date night steak",

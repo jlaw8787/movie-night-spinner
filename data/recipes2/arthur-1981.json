@@ -66,7 +66,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Susan Johnson engagement canapés (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 0,
+     "make_ahead": "Up to 3 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "slices rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "small cooked beetroot, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zested and juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "cracked black pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Butter the rye slices and cut each into small squares.",
+       "min": 8
+      },
+      {
+       "text": "Slice the beetroot paper thin and dress with the lemon juice and salt.",
+       "min": 5
+      },
+      {
+       "text": "Whip the creme fraiche with the lemon zest until it holds a soft peak.",
+       "min": 4
+      },
+      {
+       "text": "Top each square with a fold of beetroot, a small dot of creme fraiche, a dill sprig and cracked pepper.",
+       "min": 13
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Caviar blini",
@@ -115,7 +192,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Caviar blini (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 25,
+     "make_ahead": "Lentils up to 2 days, keep chilled",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "black lentils",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "buckwheat blini",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch chives",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the lentils in plenty of water until just tender, then drain.",
+       "min": 20
+      },
+      {
+       "text": "Dress with the soy, lemon juice and oil and leave to cool.",
+       "min": 5
+      },
+      {
+       "text": "Warm the blini on a tray in a 180C oven.",
+       "min": 5
+      },
+      {
+       "text": "Top each with a teaspoon of creme fraiche, a little of the lentils and snipped chives.",
+       "min": 8
+      },
+      {
+       "text": "Serve straight away on a silver tray if you have one.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hobson's alert-the-media roast beef",

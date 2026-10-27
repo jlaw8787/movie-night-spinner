@@ -111,7 +111,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Merchandising snack mix (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 30,
+     "make_ahead": "Up to 5 days, airtight",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cereal squares",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "pretzels",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "peanuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vegetarian mini marshmallows",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 140C. Melt the butter with the honey.",
+       "min": 3
+      },
+      {
+       "text": "Toss the cereal, pretzels and peanuts with the honey butter.",
+       "min": 4
+      },
+      {
+       "text": "Bake, stirring once.",
+       "min": 20
+      },
+      {
+       "text": "Cool completely, then toss through the marshmallows.",
+       "min": 13
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pizza the Hutt",

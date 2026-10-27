@@ -46,7 +46,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Duke & Duke club canapés (vegetarian)",
+     "prep_min": 22,
+     "cook_min": 23,
+     "make_ahead": "Assemble up to 1 day ahead, bake before serving",
+     "ingredients": [
+      {
+       "q": 20,
+       "u": "",
+       "item": "pitted prunes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "",
+       "item": "almonds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "large eggplant",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "",
+       "item": "toothpicks",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Push an almond into each prune.",
+       "min": 5
+      },
+      {
+       "text": "Slice the eggplant lengthwise into 10 thin slices and cut each in half. Brush with the oil, soy, smoked paprika and maple syrup.",
+       "min": 10
+      },
+      {
+       "text": "Cook the strips in a hot pan for about a minute each side until just soft.",
+       "min": 8
+      },
+      {
+       "text": "Wrap each prune in a strip of eggplant and secure with a toothpick.",
+       "min": 7
+      },
+      {
+       "text": "Bake at 200C until the edges are crisp. Serve warm.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Frozen orange juice shots",

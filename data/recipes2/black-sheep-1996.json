@@ -80,7 +80,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rally night vegetarian sausages in blankets",
+     "prep_min": 22,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 24,
+       "u": "",
+       "item": "vegetarian cocktail frankfurts",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sesame seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar wholegrain mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the thawed puff pastry into strips.",
+       "min": 5
+      },
+      {
+       "text": "Brush each strip with a little Dijon mustard and wrap around the vegetarian cocktail frankfurts.",
+       "min": 5
+      },
+      {
+       "text": "Lay seam-side down on a lined tray, brush with the beaten egg and sprinkle with the sesame seeds.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 200C for 18 minutes until puffed and golden.",
+       "min": 20
+      },
+      {
+       "text": "Stir 2 tablespoons of the wholegrain mustard into the honey and the mayonnaise for dipping and serve warm.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Washington apple and cheddar crostini",

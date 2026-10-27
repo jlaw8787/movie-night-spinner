@@ -151,7 +151,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Kowloon Walled City curry tofu puffs",
+     "prep_min": 6,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "tofu puffs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "curry powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "bamboo skewers",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Crush the garlic.",
+       "min": 2
+      },
+      {
+       "text": "Fry the curry powder and garlic in oil.",
+       "min": 1
+      },
+      {
+       "text": "Add the coconut milk, sugar and water and simmer.",
+       "min": 5
+      },
+      {
+       "text": "Add the tofu puffs and simmer until they soak up the sauce.",
+       "min": 10
+      },
+      {
+       "text": "Thread onto skewers and spoon over the sauce.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Kumite black pepper beef",

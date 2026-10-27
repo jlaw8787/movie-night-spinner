@@ -60,7 +60,7 @@
      "q": 200,
      "u": "g",
      "item": "hummus",
-     "aisle": "Meat"
+     "aisle": "Deli"
     }
    ],
    "steps": [
@@ -77,7 +77,7 @@
      "min": 10
     }
    ],
-   "veg": false,
+   "veg": true,
    "af": true
   },
   {
@@ -115,7 +115,7 @@
      "q": 24,
      "u": "",
      "item": "dumpling wrappers",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 1,
@@ -149,7 +149,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Kijimi snowy city dumplings (vegetarian)",
+     "prep_min": 40,
+     "cook_min": 11,
+     "make_ahead": "Fill and pleat up to 1 day ahead, steam fresh",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions, sliced, plus extra to serve",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 24,
+       "u": "",
+       "item": "dumpling wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "hot vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chilli oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Crumble the tofu and mix with the mushrooms, ginger, spring onion and soy.",
+       "min": 10
+      },
+      {
+       "text": "Fill the wrappers and pleat closed.",
+       "min": 30
+      },
+      {
+       "text": "Steam for 10 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Serve a few in each bowl with hot stock, more spring onion and a drizzle of chilli oil.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Kef Bir ocean seafood stew",

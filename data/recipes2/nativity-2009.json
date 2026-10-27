@@ -68,7 +68,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "St Bernadette's staffroom mince pies (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 18,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "sheets shortcrust pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar vegetarian fruit mince (400g)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "icing sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, zested",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut rounds from two pastry sheets and press into a greased patty pan tin.",
+       "min": 8
+      },
+      {
+       "text": "Fill each with the vegetarian fruit mince. Cut stars from the third sheet and lay on top.",
+       "min": 10
+      },
+      {
+       "text": "Brush with egg and bake at 190C until golden.",
+       "min": 18
+      },
+      {
+       "text": "Whip the cream with some of the icing sugar and the orange zest.",
+       "min": 5
+      },
+      {
+       "text": "Dust the warm pies with icing sugar and serve with the cream.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Christmas fair pork and apple rolls",
@@ -151,7 +220,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Christmas fair lentil and apple rolls",
+     "prep_min": 18,
+     "cook_min": 35,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "Swiss brown mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin brown lentils (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "apple, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped sage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs (1 for the filling, 1 beaten for glazing)",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sesame seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "tomato relish",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in the oil until dry and golden, then cool.",
+       "min": 8
+      },
+      {
+       "text": "Lightly mash the lentils and mix with the mushrooms, apple, onion, sage, breadcrumbs, one egg and salt.",
+       "min": 6
+      },
+      {
+       "text": "Cut the pastry in half, lay a log of filling along each strip, roll up and seal underneath.",
+       "min": 8
+      },
+      {
+       "text": "Brush with the other egg, sprinkle with sesame seeds and cut into pieces.",
+       "min": 4
+      },
+      {
+       "text": "Bake at 200C until golden. Serve with relish.",
+       "min": 27
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Coventry Christmas roast chicken dinner",

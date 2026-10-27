@@ -70,7 +70,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cab driver's pretzel, peanut and mushroom jerky mix",
+     "prep_min": 15,
+     "cook_min": 50,
+     "make_ahead": "Keeps 3 days in an airtight tin",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "king brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "pretzels",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "salted peanuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cashews",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms thinly lengthways and toss with the soy, maple syrup and half the paprika.",
+       "min": 8
+      },
+      {
+       "text": "Toss the pretzels and nuts with the melted butter, the rest of the paprika and the sugar on a second tray.",
+       "min": 5
+      },
+      {
+       "text": "Bake the mushrooms on a lined tray at 160C for 40 minutes, turning once, until dark and chewy. Add the tray of pretzels and nuts for the last 15 minutes.",
+       "min": 40
+      },
+      {
+       "text": "Cool both trays.",
+       "min": 10
+      },
+      {
+       "text": "Tip the mix into paper bags with the chewy mushroom strips.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Koreatown nightclub fried chicken",
@@ -151,7 +238,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Koreatown nightclub fried cauliflower",
+     "prep_min": 15,
+     "cook_min": 27,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, cut into florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "potato starch",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "cold water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "gochujang",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sesame seeds",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the starch, flour and cold water into a thin batter and toss the cauliflower through it.",
+       "min": 10
+      },
+      {
+       "text": "Fry in batches at 160C for 4 minutes, then rest on a rack.",
+       "min": 15
+      },
+      {
+       "text": "Fry again at 190C until shattering.",
+       "min": 7
+      },
+      {
+       "text": "Simmer the gochujang, soy, honey and crushed garlic until glossy.",
+       "min": 5
+      },
+      {
+       "text": "Toss the cauliflower in the sauce and top with sesame.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Late night carne asada tacos",

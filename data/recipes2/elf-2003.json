@@ -395,7 +395,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "World's best maple mocha (vegetarian)",
+     "prep_min": 5,
+     "cook_min": 10,
+     "make_ahead": "Best served hot",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "milk chocolate, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "strong brewed coffee",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag mini vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "candy canes, crushed",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whip the cream.",
+       "min": 3
+      },
+      {
+       "text": "Heat the milk with the chocolate and most of the maple syrup, whisking until smooth and steaming.",
+       "min": 7
+      },
+      {
+       "text": "Stir in the coffee, or leave it out for the kids.",
+       "min": 3
+      },
+      {
+       "text": "Pour into 4 mugs and top with cream, vegetarian marshmallows, a drizzle of maple syrup and crushed candy cane.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   }
  ]
 }

@@ -456,6 +456,147 @@
        "min": 2
       }
      ]
+    },
+    "veg": {
+     "n": "Wooderson's \"alright, alright\" michelada (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "dashes hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.32,
+       "u": "l",
+       "item": "cold lager (4 x 330ml)",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt with the chilli powder on a saucer. Rub the glass rims with lime and dip in the salt.",
+       "min": 4
+      },
+      {
+       "text": "Fill the glasses with ice. Add lime juice, tomato juice, hot sauce and soy sauce to each.",
+       "min": 4
+      },
+      {
+       "text": "Top slowly with cold lager, stir once and serve with a lime wedge.",
+       "min": 2
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Wooderson's \"alright, alright\" michelada (vegetarian, alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "dashes hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1.32,
+       "u": "l",
+       "item": "cold alcohol-free lager (4 x 330ml)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt with the chilli powder on a saucer. Rub the glass rims with lime and dip in the salt.",
+       "min": 4
+      },
+      {
+       "text": "Fill the glasses with ice. Add lime juice, tomato juice, hot sauce and soy sauce to each.",
+       "min": 4
+      },
+      {
+       "text": "Top slowly with cold alcohol-free lager, stir once and serve with a lime wedge.",
+       "min": 2
+      }
+     ]
     }
    }
   }

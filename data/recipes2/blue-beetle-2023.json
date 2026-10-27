@@ -115,7 +115,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Crispy tofu chicharrones",
+     "prep_min": 25,
+     "cook_min": 515,
+     "make_ahead": "Dry the tofu overnight",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "extra firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "sea salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle hot sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Press the tofu, cut into bites and rub with the salt.",
+       "min": 15
+      },
+      {
+       "text": "Dry uncovered on a rack in the fridge overnight.",
+       "min": 480
+      },
+      {
+       "text": "Toss with the cornflour and oil.",
+       "min": 5
+      },
+      {
+       "text": "Roast at 240C, turning once, until puffed and crackling at the edges.",
+       "min": 35
+      },
+      {
+       "text": "Serve with lime wedges and hot sauce.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Nana's pozole rojo",

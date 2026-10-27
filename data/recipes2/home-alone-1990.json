@@ -214,7 +214,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Kevin's sundae bar (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vanilla ice cream",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "chocolate ice cream",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "dark chocolate, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vegetarian mini marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "roasted peanuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "sprinkles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "maraschino cherries",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Take the vanilla and chocolate ice cream out of the freezer to soften for 10 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Melt the dark chocolate with 150ml of the thickened cream over low heat, stirring, for hot fudge.",
+       "min": 5
+      },
+      {
+       "text": "Whip the rest of the cream to soft peaks.",
+       "min": 5
+      },
+      {
+       "text": "Chop the roasted peanuts and put them, the mini marshmallows, sprinkles and maraschino cherries in small bowls.",
+       "min": 5
+      },
+      {
+       "text": "Set everything out with big bowls and let everyone build their own sundae.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Kevin's chocolate malted milkshake",

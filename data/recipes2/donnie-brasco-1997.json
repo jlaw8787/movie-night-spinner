@@ -157,6 +157,173 @@
        "min": 1
       }
      ]
+    },
+    "veg": {
+     "n": "Miami garlic mushrooms (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 6,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf crusty bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms into thick coins and score a criss-cross on each face.",
+       "min": 8
+      },
+      {
+       "text": "Heat the olive oil until very hot, sear the mushrooms until golden on both sides, then add the garlic and chilli.",
+       "min": 5
+      },
+      {
+       "text": "Add the wine, bubble for a minute, then swirl in the butter and parsley and season with salt.",
+       "min": 2
+      },
+      {
+       "text": "Serve in the pan with crusty bread for the juices.",
+       "min": 1
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Miami garlic mushrooms (vegetarian, alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 6,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf crusty bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms into thick coins and score a criss-cross on each face.",
+       "min": 8
+      },
+      {
+       "text": "Heat the olive oil until very hot, sear the mushrooms until golden on both sides, then add the garlic and chilli.",
+       "min": 5
+      },
+      {
+       "text": "Add the verjuice and water, bubble for a minute, then swirl in the butter and parsley and season with salt.",
+       "min": 2
+      },
+      {
+       "text": "Serve in the pan with crusty bread for the juices.",
+       "min": 1
+      }
+     ]
     }
    }
   },

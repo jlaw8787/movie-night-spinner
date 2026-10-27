@@ -74,7 +74,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ink and Paint Club canapés (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 22,
+     "make_ahead": "Up to 4 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "vegetarian cocktail sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs hard, cool, peel and halve.",
+       "min": 15
+      },
+      {
+       "text": "Whip the yolks with mayonnaise and pipe back into the whites.",
+       "min": 10
+      },
+      {
+       "text": "Slice the smoked tofu very thin and lay on buttered rye squares with a sprig of dill.",
+       "min": 8
+      },
+      {
+       "text": "Glaze the vegetarian cocktail sausages in a pan with the sugar and a splash of water until sticky and hot through.",
+       "min": 7
+      },
+      {
+       "text": "Serve on silver trays.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Honey roasted carrots with whipped feta",

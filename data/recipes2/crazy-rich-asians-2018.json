@@ -86,7 +86,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Newton Circus tofu satay",
+     "prep_min": 25,
+     "cook_min": 123,
+     "make_ahead": "Marinate up to 1 day, grill fresh",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "firm tofu, cut into thick strips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground turmeric",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "stalks lemongrass",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "peanut butter",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "coconut milk, extra for the sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "bamboo skewers",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the lemongrass finely and mix with the coconut milk and turmeric. Pat the tofu dry and turn it through the marinade.",
+       "min": 10
+      },
+      {
+       "text": "Marinate in the fridge.",
+       "min": 120
+      },
+      {
+       "text": "Soak the skewers in water, then thread on the tofu.",
+       "min": 5
+      },
+      {
+       "text": "Grill until charred on all sides.",
+       "min": 8
+      },
+      {
+       "text": "Warm the peanut butter with the extra coconut milk, lime juice and sugar into a thick dipping sauce.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Family dumpling making",
@@ -157,7 +244,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Family dumpling making (vegetarian)",
+     "prep_min": 40,
+     "cook_min": 18,
+     "make_ahead": "Up to 1 day, freeze uncooked",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "wombok (Chinese cabbage), shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "ginger, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "",
+       "item": "dumpling wrappers",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "black vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Salt the wombok, leave for a few minutes, then squeeze out the water.",
+       "min": 10
+      },
+      {
+       "text": "Finely chop the mushrooms and fry in the oil until dry, then cool.",
+       "min": 8
+      },
+      {
+       "text": "Mix the mushrooms with the crumbled tofu, wombok, ginger and sliced spring onion.",
+       "min": 5
+      },
+      {
+       "text": "Fold spoonfuls of filling into the wrappers around the table together.",
+       "min": 25
+      },
+      {
+       "text": "Boil in batches until they float, then a minute more.",
+       "min": 10
+      },
+      {
+       "text": "Serve with black vinegar for dipping.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Singapore chilli prawns",

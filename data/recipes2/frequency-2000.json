@@ -76,7 +76,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Firehouse chilli bites (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Up to 1 day, assemble just before serving",
+     "ingredients": [
+      {
+       "q": 12,
+       "u": "",
+       "item": "wonton wrappers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "oil, plus extra to grease",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "tinned chopped tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "tinned kidney beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Press the wonton wrappers into a lightly oiled mini muffin tin. Bake at 180C until crisp.",
+       "min": 8
+      },
+      {
+       "text": "Brown the plant-based mince in oil, add the onion and cook until soft.",
+       "min": 8
+      },
+      {
+       "text": "Stir in the chilli powder, tomatoes and beans. Simmer until thick.",
+       "min": 15
+      },
+      {
+       "text": "Spoon into the baked cups, top with cheddar and return to the oven to melt.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Miracle Mets pretzels with beer mustard",

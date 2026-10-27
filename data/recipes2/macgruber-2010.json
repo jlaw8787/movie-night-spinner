@@ -76,7 +76,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Car stereo mission briefing nuts (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 22,
+     "make_ahead": "Up to 1 week, keep in an airtight container",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mixed raw nuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sprig rosemary, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plant-based jerky, sliced",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the nuts with the honey, oil, chilli, paprika and rosemary.",
+       "min": 5
+      },
+      {
+       "text": "Spread on a lined tray and roast at 170C, stirring twice, until golden.",
+       "min": 15
+      },
+      {
+       "text": "Sprinkle with sea salt while hot and cool so the coating crisps.",
+       "min": 10
+      },
+      {
+       "text": "Serve in a bowl next to the sliced plant-based jerky.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Emergency celery with blue cheese dip",
@@ -569,6 +646,147 @@
       },
       {
        "text": "Fill the glasses with ice. Add lime juice, tomato juice, a couple of dashes of hot sauce and a dash of Worcestershire to each.",
+       "min": 4
+      },
+      {
+       "text": "Top each with a bottle of cold alcohol-free lager, stir gently and serve with a lime wedge.",
+       "min": 3
+      }
+     ]
+    },
+    "veg": {
+     "n": "Vicki St. Elmo's debrief michelada (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sea salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles cold lager (330ml each)",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt and chilli powder on a saucer. Rub a lime wedge around each glass rim and dip into the salt.",
+       "min": 3
+      },
+      {
+       "text": "Fill the glasses with ice. Add lime juice, tomato juice, a couple of dashes of hot sauce and a dash of soy sauce to each.",
+       "min": 4
+      },
+      {
+       "text": "Top each with a bottle of cold lager, stir gently and serve with a lime wedge.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Vicki St. Elmo's debrief michelada (vegetarian, alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sea salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles cold alcohol-free lager (330ml each)",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt and chilli powder on a saucer. Rub a lime wedge around each glass rim and dip into the salt.",
+       "min": 3
+      },
+      {
+       "text": "Fill the glasses with ice. Add lime juice, tomato juice, a couple of dashes of hot sauce and a dash of soy sauce to each.",
        "min": 4
       },
       {

@@ -82,7 +82,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mushroom pâté with broad beans",
+     "prep_min": 22,
+     "cook_min": 20,
+     "make_ahead": "Pâté up to 2 days chilled, assemble fresh",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter, for cooking",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter, softened, to blend",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "Swiss brown mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "broad beans",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the shallot in the butter, add the mushrooms and thyme and cook until dark and dry.",
+       "min": 12
+      },
+      {
+       "text": "Blitz with the softened butter and a pinch of salt until smooth and chill.",
+       "min": 15
+      },
+      {
+       "text": "Boil the broad beans, peel and smash with oil and salt.",
+       "min": 10
+      },
+      {
+       "text": "Serve both on toasted baguette slices.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Moth-wing parmesan crisps",

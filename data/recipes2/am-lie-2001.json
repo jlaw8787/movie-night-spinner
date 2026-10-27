@@ -103,7 +103,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Brie, fig jam and mushroom baguette toasts",
+     "prep_min": 15,
+     "cook_min": 14,
+     "make_ahead": "Assemble just before serving",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "brie",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "fig jam",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the baguette and toast until golden.",
+       "min": 8
+      },
+      {
+       "text": "Fry the mushrooms in the butter until golden.",
+       "min": 6
+      },
+      {
+       "text": "Top half the toasts with brie and fig jam.",
+       "min": 6
+      },
+      {
+       "text": "Spread the rest with Dijon and top with the mushrooms.",
+       "min": 6
+      },
+      {
+       "text": "Lay out on a wooden board.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Paris bistro chicken",

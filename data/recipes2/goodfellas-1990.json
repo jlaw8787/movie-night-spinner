@@ -129,7 +129,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bamboo Lounge provolone board (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "chargrilled eggplant in oil, drained",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "smoked tofu, thinly sliced",
+       "aisle": "Deli"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sharp provolone",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "pepperoncini",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "marinated mushrooms",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf seeded Italian bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the provolone into thick batons.",
+       "min": 5
+      },
+      {
+       "text": "Arrange the eggplant, smoked tofu and provolone on a board.",
+       "min": 5
+      },
+      {
+       "text": "Put the pepperoncini and marinated mushrooms in small bowls beside the board.",
+       "min": 2
+      },
+      {
+       "text": "Tear the Italian bread by hand and set it next to the board.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Prison gravy with three-meat meatballs",

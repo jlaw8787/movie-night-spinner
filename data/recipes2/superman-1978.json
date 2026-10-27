@@ -101,7 +101,64 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Kryptonite jelly (vegetarian)",
+     "prep_min": 18,
+     "cook_min": 120,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "packets vegetarian lime jelly crystals",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the agar into the water in a saucepan and boil, stirring, for 2 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Take off the heat and whisk in the jelly crystals until dissolved.",
+       "min": 3
+      },
+      {
+       "text": "Pour into a lined slab tin, cool, then chill until firm.",
+       "min": 120
+      },
+      {
+       "text": "Whip the cream to soft peaks.",
+       "min": 4
+      },
+      {
+       "text": "Cut the jelly into jagged shards, pile on a plate and serve with the whipped cream.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ma Kent's fried chicken",

@@ -155,7 +155,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Roast capsicum, cheddar and pickle toasties",
+     "prep_min": 12,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices sourdough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sharp cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "roasted capsicum strips, patted dry",
+       "aisle": "Deli"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "dill pickles, sliced",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "hot English mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Butter one side of every slice of sourdough.",
+       "min": 4
+      },
+      {
+       "text": "On the unbuttered side of half the slices layer cheese, capsicum and pickles, then more cheese. Top with the remaining bread, buttered side out.",
+       "min": 8
+      },
+      {
+       "text": "Cook in a pan over medium-low heat for 3 to 4 minutes a side, pressing down, until golden and melted.",
+       "min": 8
+      },
+      {
+       "text": "Cut into fingers and serve with hot English mustard.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Detroit-style pizza",

@@ -42,7 +42,50 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mini marshmallow men (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 5,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 24,
+       "u": "",
+       "item": "large vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "bamboo skewers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "dark chocolate, melted",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stack two marshmallows on each skewer.",
+       "min": 8
+      },
+      {
+       "text": "Pipe eyes and a smile on each with the melted chocolate.",
+       "min": 10
+      },
+      {
+       "text": "Toast half of them with a blowtorch for the full effect.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Summerville fried okra",

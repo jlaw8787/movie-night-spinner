@@ -530,7 +530,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Samuel's birthday jelly slice (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 90,
+     "make_ahead": "Make a day ahead",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "plain sweet biscuits, crushed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1.5,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 395,
+       "u": "g",
+       "item": "sweetened condensed milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet vegetarian raspberry jelly crystals",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Press the crushed biscuits and butter into a lined tin and chill.",
+       "min": 8
+      },
+      {
+       "text": "Boil the agar in the water for 2 minutes, stirring, then quickly whisk into the condensed milk with the lemon juice and spread over the base.",
+       "min": 8
+      },
+      {
+       "text": "Chill until set.",
+       "min": 30
+      },
+      {
+       "text": "Make the jelly as the packet says, cool until just warm and pour over.",
+       "min": 9
+      },
+      {
+       "text": "Chill until firm.",
+       "min": 60
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Dook dook dook honey brandy nightcap",

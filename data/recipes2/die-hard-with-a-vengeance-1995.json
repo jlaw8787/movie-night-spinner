@@ -161,7 +161,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Harlem fried oyster mushrooms and waffles",
+     "prep_min": 40,
+     "cook_min": 20,
+     "make_ahead": "Mushrooms soak up to 2 hours ahead",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "oyster mushrooms, in large clusters",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "waffle mix",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the mushroom clusters in the buttermilk and salt for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Dredge in the flour mixed with paprika and make the waffle batter.",
+       "min": 10
+      },
+      {
+       "text": "Fry the mushrooms in oil at 175C in batches for about 4 minutes, until deep golden and crisp, then drain.",
+       "min": 12
+      },
+      {
+       "text": "Cook the waffles in a waffle iron. Warm the honey with the hot sauce and drizzle over the mushrooms on the waffles.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bacon egg and cheese on a roll",

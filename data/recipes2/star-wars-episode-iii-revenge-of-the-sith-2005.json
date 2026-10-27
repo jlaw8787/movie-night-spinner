@@ -117,7 +117,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Utapau creamy mushroom vol-au-vents",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "Filling up to 1 day, bake fresh",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "vol-au-vent cases",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "leek, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "button mushrooms, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped tarragon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the leek in the butter, add the mushrooms and cook until golden and dry.",
+       "min": 12
+      },
+      {
+       "text": "Stir in the cream and tarragon and simmer until thick.",
+       "min": 8
+      },
+      {
+       "text": "Spoon into the cases and bake at 200C for 10 minutes until golden and hot.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Coruscant opera house roast duck",

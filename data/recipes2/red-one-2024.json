@@ -86,7 +86,104 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "MORA command centre loaded potato skins (vegetarian)",
+     "prep_min": 12,
+     "cook_min": 84,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "medium potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "smoked tofu, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pickled jalapenos",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Prick the potatoes and bake at 200C until tender.",
+       "min": 60
+      },
+      {
+       "text": "Fry the smoked tofu in the oil until crisp and brown.",
+       "min": 6
+      },
+      {
+       "text": "Halve the potatoes, scoop out most of the flesh and brush the skins with melted butter and salt.",
+       "min": 8
+      },
+      {
+       "text": "Bake skin-side up, then flip.",
+       "min": 10
+      },
+      {
+       "text": "Fill with cheddar and the crisp tofu and bake until melted.",
+       "min": 8
+      },
+      {
+       "text": "Top with sour cream, spring onion and jalapenos, and drizzle with honey mixed with chilli flakes.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Maple pecan pretzel crunch",

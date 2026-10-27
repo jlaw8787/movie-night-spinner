@@ -129,7 +129,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Goose's crumbed tofu bites",
+     "prep_min": 10,
+     "cook_min": 20,
+     "make_ahead": "Up to 1 day before baking, keep chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "nori sheet, crumbled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil spray or oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "tartare sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the tofu dry and cut into bite-sized pieces.",
+       "min": 5
+      },
+      {
+       "text": "Dust in the flour mixed with the nori, dip in egg and press into the panko.",
+       "min": 10
+      },
+      {
+       "text": "Spread on a lined tray, spray with a little oil and bake at 220C until golden.",
+       "min": 15
+      },
+      {
+       "text": "Serve with tartare sauce. Keep them away from the cat.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Maria's Louisiana gumbo",

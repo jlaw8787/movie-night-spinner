@@ -70,7 +70,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Imperial court mushroom and tofu dumplings",
+     "prep_min": 40,
+     "cook_min": 2,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "firm tofu, crumbled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot, finely grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "",
+       "item": "dumpling wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Chinkiang vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the tofu, mushrooms, carrot, ginger, spring onion and sesame oil.",
+       "min": 12
+      },
+      {
+       "text": "Fill the wrappers and pleat.",
+       "min": 20
+      },
+      {
+       "text": "Steam until hot through.",
+       "min": 8
+      },
+      {
+       "text": "Serve with soy and black vinegar.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chon Wang cornbread",
@@ -366,7 +449,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Imperial almond jelly with lychees (vegetarian)",
+     "prep_min": 13,
+     "cook_min": 60,
+     "make_ahead": "Make the day before, keep chilled",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "almond extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 565,
+       "u": "g",
+       "item": "tin lychees",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the agar into the water, milk and sugar, simmer for 2 minutes, stirring, then add the almond extract.",
+       "min": 7
+      },
+      {
+       "text": "Set in a shallow dish in the fridge.",
+       "min": 60
+      },
+      {
+       "text": "Cut into diamonds.",
+       "min": 4
+      },
+      {
+       "text": "Serve over the lychees with their syrup.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Rye and jasmine tea highball",

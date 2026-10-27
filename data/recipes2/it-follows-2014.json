@@ -82,7 +82,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "8 Mile coney dog bites (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 22,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "vegetarian cocktail frankfurts",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "mini bread rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "brown onion, extra, finely diced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the plant-based mince in the oil with the onion, cumin and paprika.",
+       "min": 10
+      },
+      {
+       "text": "Add the water and simmer until thick.",
+       "min": 15
+      },
+      {
+       "text": "Simmer the vegetarian frankfurts in a pan of water until hot.",
+       "min": 5
+      },
+      {
+       "text": "Tuck them into split mini rolls, spoon over the chilli and add mustard and the extra diced onion.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Above-ground pool chips and dip",

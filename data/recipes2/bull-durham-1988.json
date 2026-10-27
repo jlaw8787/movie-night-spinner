@@ -48,7 +48,56 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hit Bull Win Steak ballpark veggie dogs",
+     "prep_min": 5,
+     "cook_min": 10,
+     "make_ahead": "Best fresh",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian hot dog sausages",
+       "aisle": "Deli"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "hot dog buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "pickle relish",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Grill the veggie sausages until they blister.",
+       "min": 8
+      },
+      {
+       "text": "Tuck each into a soft bun with a stripe of mustard and a spoon of relish.",
+       "min": 4
+      },
+      {
+       "text": "Wrap tightly in paper so the bun steams.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Carolina hushpuppies",

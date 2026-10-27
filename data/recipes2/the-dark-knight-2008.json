@@ -80,7 +80,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Penthouse fundraiser canapés (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 10,
+     "make_ahead": "Best made fresh, assemble just before serving",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette, sliced",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "horseradish cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "blinis",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cooked beetroot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chives, snipped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Sear the mushrooms in a hot oiled pan until browned, splash with the soy, then rest and slice thin.",
+       "min": 15
+      },
+      {
+       "text": "Toast the baguette slices.",
+       "min": 5
+      },
+      {
+       "text": "Top the toast with mushroom and horseradish cream.",
+       "min": 5
+      },
+      {
+       "text": "Slice the beetroot paper thin and toss with a squeeze of lemon. Top the blinis with creme fraiche, beetroot and chives.",
+       "min": 8
+      },
+      {
+       "text": "Serve on black trays.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hoisin pork belly bites",
@@ -151,7 +244,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hoisin tofu bites (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "Up to 1 day, reheat to serve",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu, pressed and cubed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "five spice",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "hoisin sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cucumber, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "toothpicks",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Pat the tofu dry and toss in the cornflour, oil and five spice.",
+       "min": 10
+      },
+      {
+       "text": "Roast on a lined tray until crisp, turning once.",
+       "min": 25
+      },
+      {
+       "text": "Warm the hoisin and honey, toss through the tofu and roast again until sticky.",
+       "min": 8
+      },
+      {
+       "text": "Quick pickle the cucumber in the vinegar.",
+       "min": 10
+      },
+      {
+       "text": "Serve the tofu on toothpicks with the cucumber.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Joined-tables salmon with caper butter",

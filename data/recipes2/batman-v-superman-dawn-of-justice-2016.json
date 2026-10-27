@@ -64,7 +64,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lex's gala canapés (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 0,
+     "make_ahead": "Up to 2 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "blinis",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cooked beetroot, very thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "fresh figs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "goat's cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve the figs and season the beetroot slices with a squeeze of lemon.",
+       "min": 8
+      },
+      {
+       "text": "Top each blini with creme fraiche and a fold of beetroot.",
+       "min": 8
+      },
+      {
+       "text": "Top each fig half with goat's cheese and a drizzle of honey.",
+       "min": 6
+      },
+      {
+       "text": "Arrange both on silver trays.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Smoked trout crispbreads",
@@ -123,7 +194,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Smoked tofu crispbreads",
+     "prep_min": 13,
+     "cook_min": 0,
+     "make_ahead": "Up to 4 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet rye crispbread",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pickled onions",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice a few pickled onions into rings and pick the dill into sprigs.",
+       "min": 4
+      },
+      {
+       "text": "Spread the crispbreads with creme fraiche.",
+       "min": 4
+      },
+      {
+       "text": "Crumble the smoked tofu over the top and finish with onion rings and dill.",
+       "min": 4
+      },
+      {
+       "text": "Serve cold on a slate.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Metropolis gala beef Wellington",

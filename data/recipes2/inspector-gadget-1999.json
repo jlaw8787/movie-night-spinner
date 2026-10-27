@@ -62,7 +62,70 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Gadget's toolkit skewers (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 0,
+     "make_ahead": "Up to 3 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cherry tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "bocconcini",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "marinated artichoke hearts, halved",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "basil leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Thread tomatoes, bocconcini, artichoke halves and basil onto skewers.",
+       "min": 15
+      },
+      {
+       "text": "Lay on a platter and drizzle with oil and balsamic. Season.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Go-go gadget pizza pinwheels",
@@ -121,7 +184,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Go-go gadget pizza pinwheels (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 33,
+     "make_ahead": "Rolls up to 1 day chilled, bake fresh",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "chargrilled capsicum, chopped and patted dry",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Spread the pastry with tomato paste mixed with oregano. Scatter with capsicum and mozzarella.",
+       "min": 10
+      },
+      {
+       "text": "Roll each sheet up tightly and chill for 15 minutes so it slices cleanly.",
+       "min": 15
+      },
+      {
+       "text": "Cut into 2cm rounds, lay on a lined tray and bake at 200C until golden.",
+       "min": 18
+      },
+      {
+       "text": "Rest for a couple of minutes before serving.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Detective's spaghetti with beef ragu",

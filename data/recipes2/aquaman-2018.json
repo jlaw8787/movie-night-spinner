@@ -127,6 +127,131 @@
        "min": 2
       }
      ]
+    },
+    "veg": {
+     "n": "Lighthouse dad's beer-battered haloumi",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "ice-cold lager",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "tartare sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the haloumi into bite-sized fingers.",
+       "min": 5
+      },
+      {
+       "text": "Whisk most of the flour with the lager to a thin batter.",
+       "min": 5
+      },
+      {
+       "text": "Dust the haloumi in the rest of the flour, dip in batter and fry in the oil at 180C until crisp.",
+       "min": 8
+      },
+      {
+       "text": "Drain and serve with lemon wedges and tartare.",
+       "min": 2
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Lighthouse dad's battered haloumi (vegetarian, alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "ice-cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "tartare sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the haloumi into bite-sized fingers.",
+       "min": 5
+      },
+      {
+       "text": "Whisk most of the flour with the soda water to a thin batter.",
+       "min": 5
+      },
+      {
+       "text": "Dust the haloumi in the rest of the flour, dip in batter and fry in the oil at 180C until crisp.",
+       "min": 8
+      },
+      {
+       "text": "Drain and serve with lemon wedges and tartare.",
+       "min": 2
+      }
+     ]
     }
    }
   },
@@ -193,7 +318,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bikers' bar cauliflower wings",
+     "prep_min": 10,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "blue cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cauliflower into large florets and toss with the oil and salt.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 220C until crisp and browned at the edges.",
+       "min": 35
+      },
+      {
+       "text": "Melt the butter with the hot sauce and toss the cauliflower through.",
+       "min": 5
+      },
+      {
+       "text": "Mash the blue cheese into the sour cream and serve with celery.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Atlantis seafood platter",

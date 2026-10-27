@@ -74,7 +74,92 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mikaela's loaded potato wedges (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can chickpeas (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into wedges and toss with 2 tablespoons of oil and the sweet paprika.",
+       "min": 10
+      },
+      {
+       "text": "Pat the chickpeas dry and toss with the rest of the oil and the smoked paprika.",
+       "min": 3
+      },
+      {
+       "text": "Roast the wedges at 220C, adding the chickpeas on a second tray for the last 25 minutes.",
+       "min": 35
+      },
+      {
+       "text": "Grate the cheddar and slice the spring onions.",
+       "min": 5
+      },
+      {
+       "text": "Top the wedges with cheddar and the crisp chickpeas and bake until melted.",
+       "min": 5
+      },
+      {
+       "text": "Add sour cream and spring onion.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Mission City loaded chicken nachos",
@@ -139,7 +224,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mission City loaded jackfruit nachos",
+     "prep_min": 13,
+     "cook_min": 17,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "corn chips",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can young jackfruit in brine (400 g)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can black beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "tasty cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar tomato salsa",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Drain the beans and grate the cheese.",
+       "min": 5
+      },
+      {
+       "text": "Drain the jackfruit, shred it with two forks and fry in the oil with the paprika and cumin until browned at the edges.",
+       "min": 8
+      },
+      {
+       "text": "Spread the chips on a tray and top with the jackfruit, beans and cheese.",
+       "min": 4
+      },
+      {
+       "text": "Bake at 200C.",
+       "min": 10
+      },
+      {
+       "text": "Finish with salsa and sour cream.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ron's backyard ribs",

@@ -129,7 +129,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Wild mushroom and lentil sausage rolls",
+     "prep_min": 30,
+     "cook_min": 35,
+     "make_ahead": "Up to 1 day uncooked, or freeze",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can brown lentils (400 g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green apple, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sage, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "fresh breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion and mushrooms in the oil until soft and dry, then cool.",
+       "min": 12
+      },
+      {
+       "text": "Roughly mash the lentils and mix with the mushrooms, apple, sage, breadcrumbs, salt and one beaten egg.",
+       "min": 8
+      },
+      {
+       "text": "Roll into logs along the pastry sheets and roll up, then cut each into 6.",
+       "min": 15
+      },
+      {
+       "text": "Beat the second egg, brush over the rolls and bake at 200C until golden.",
+       "min": 25
+      },
+      {
+       "text": "Rest briefly before serving.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Bella's roast pork",

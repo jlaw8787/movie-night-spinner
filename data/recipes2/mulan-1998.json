@@ -64,7 +64,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Matchmaker's tea and dumplings (vegetarian)",
+     "prep_min": 42,
+     "cook_min": 8,
+     "make_ahead": "Fill up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "firm tofu, crumbled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "shiitake mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch garlic chives, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "",
+       "item": "dumpling wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Chinkiang vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the tofu, mushrooms, garlic chives, ginger and 1 tbsp of the soy.",
+       "min": 8
+      },
+      {
+       "text": "Fill the dumpling wrappers and pleat.",
+       "min": 32
+      },
+      {
+       "text": "Steam for 8 minutes.",
+       "min": 8
+      },
+      {
+       "text": "Serve with the rest of the soy and the Chinkiang vinegar, and pour the tea carefully.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Training camp edamame",

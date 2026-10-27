@@ -66,7 +66,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Porpoise Spit haloumi cocktail",
+     "prep_min": 12,
+     "cook_min": 8,
+     "make_ahead": "Sauce up to 1 day, assemble just before serving",
+     "ingredients": [
+      {
+       "q": 360,
+       "u": "g",
+       "item": "haloumi (2 blocks)",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "iceberg lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the haloumi into bite-sized cubes and fry in a dry non-stick pan until golden on all sides, then cool.",
+       "min": 10
+      },
+      {
+       "text": "Mix the mayonnaise, tomato sauce, soy sauce, hot sauce and a squeeze of lemon.",
+       "min": 4
+      },
+      {
+       "text": "Shred the lettuce into four glasses, pile on the haloumi and spoon over the sauce. Hang a lemon wedge on each rim.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chicken tarragon vol-au-vents",
@@ -141,7 +208,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mushroom and tarragon vol-au-vents",
+     "prep_min": 15,
+     "cook_min": 33,
+     "make_ahead": "Cases up to 1 day, fill and warm to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mixed mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small leek",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Thaw the pastry. Cut 16 rounds, press a smaller cutter into each, and place on trays.",
+       "min": 15
+      },
+      {
+       "text": "Bake at 200C until puffed and golden, then push the centres down.",
+       "min": 12
+      },
+      {
+       "text": "Chop the mushrooms and slice the leek. Fry both in the butter until golden.",
+       "min": 10
+      },
+      {
+       "text": "Add the cream, tarragon and a squeeze of lemon and simmer until thick.",
+       "min": 8
+      },
+      {
+       "text": "Fill the cases and warm through in the oven.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sweet and sour pork with rice",

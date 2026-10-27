@@ -94,7 +94,112 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Venice smoked tofu, fig and eggplant toasts",
+     "prep_min": 30,
+     "cook_min": 20,
+     "make_ahead": "Toppings up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "potato",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Deli"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "extra virgin olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "gorgonzola dolce",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "figs, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "chargrilled eggplant",
+       "aisle": "Deli"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "onion, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "raisins",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potato until soft.",
+       "min": 15
+      },
+      {
+       "text": "Blitz the potato with the crumbled tofu, milk and 2 tbsp of the olive oil into a rough spread.",
+       "min": 5
+      },
+      {
+       "text": "Fry the onion in the rest of the oil until soft, then add the raisins and vinegar and cook for 2 minutes.",
+       "min": 8
+      },
+      {
+       "text": "Toast the baguette slices.",
+       "min": 7
+      },
+      {
+       "text": "Top a third with the tofu spread and parsley, a third with gorgonzola and fig, and the rest with eggplant and the sweet and sour onions.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Austrian castle pretzels",

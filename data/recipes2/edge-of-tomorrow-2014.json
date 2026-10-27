@@ -52,7 +52,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Forward base smoked tofu rolls",
+     "prep_min": 15,
+     "cook_min": 2,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "smoked tofu, cut into thin strips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft white rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "brown sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the tofu strips in the oil until crisp at the edges, adding the maple syrup for the last minute.",
+       "min": 10
+      },
+      {
+       "text": "Split the rolls and butter them generously.",
+       "min": 3
+      },
+      {
+       "text": "Stuff the tofu into each roll with a good squeeze of brown sauce.",
+       "min": 2
+      },
+      {
+       "text": "Wrap tightly in paper so they stay warm.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Normandy beach mussels",
@@ -200,6 +265,165 @@
       {
        "text": "Toss through chopped parsley and a knob of butter.",
        "min": 3
+      },
+      {
+       "text": "Serve with crusty bread to mop up.",
+       "min": 3
+      }
+     ]
+    },
+    "veg": {
+     "n": "Normandy beach mushrooms in white wine",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "eschalots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, divided",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "mixed mushrooms, torn or thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "white wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf crusty bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the eschalots and garlic.",
+       "min": 5
+      },
+      {
+       "text": "Soften in some butter in a big pot.",
+       "min": 4
+      },
+      {
+       "text": "Turn the heat up, add the mushrooms and cook until browned.",
+       "min": 6
+      },
+      {
+       "text": "Add the wine, cover and simmer until the juices reduce by half.",
+       "min": 5
+      },
+      {
+       "text": "Toss through chopped parsley and a knob of butter.",
+       "min": 2
+      },
+      {
+       "text": "Serve with crusty bread to mop up.",
+       "min": 3
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Normandy beach mushrooms in garlic butter (alcohol-free)",
+     "prep_min": 10,
+     "cook_min": 15,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "eschalots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, divided",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "mixed mushrooms, torn or thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 170,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf crusty bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the eschalots and garlic.",
+       "min": 5
+      },
+      {
+       "text": "Soften in some butter in a big pot.",
+       "min": 4
+      },
+      {
+       "text": "Turn the heat up, add the mushrooms and cook until browned.",
+       "min": 6
+      },
+      {
+       "text": "Add the stock and verjuice, cover and simmer until the juices reduce by half.",
+       "min": 5
+      },
+      {
+       "text": "Toss through chopped parsley and a knob of butter.",
+       "min": 2
       },
       {
        "text": "Serve with crusty bread to mop up.",

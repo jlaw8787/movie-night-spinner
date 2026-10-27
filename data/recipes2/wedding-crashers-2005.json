@@ -86,7 +86,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hearts of palm cakes (vegetarian)",
+     "prep_min": 26,
+     "cook_min": 40,
+     "make_ahead": "Shape up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned hearts of palm, drained (2 tins)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "celery salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 70,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Drain the hearts of palm, shred with a fork and squeeze dry in a clean tea towel.",
+       "min": 8
+      },
+      {
+       "text": "Fold with the mayonnaise, egg, Dijon, celery salt, paprika and breadcrumbs.",
+       "min": 7
+      },
+      {
+       "text": "Shape into 8 cakes.",
+       "min": 10
+      },
+      {
+       "text": "Chill.",
+       "min": 30
+      },
+      {
+       "text": "Pan-fry in the butter until golden.",
+       "min": 10
+      },
+      {
+       "text": "Serve with lemon.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sailing trip prawn rolls",
@@ -153,7 +244,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sailing trip haloumi rolls",
+     "prep_min": 9,
+     "cook_min": 13,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 360,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "celery stick",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "hot dog buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the haloumi into small cubes and fry in the oil until golden all over.",
+       "min": 8
+      },
+      {
+       "text": "Fold with the mayonnaise, lemon juice, diced celery and chives.",
+       "min": 6
+      },
+      {
+       "text": "Butter the cut sides of the buns and toast.",
+       "min": 5
+      },
+      {
+       "text": "Pile the haloumi in.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Tarragon cream chicken with potato gratin",

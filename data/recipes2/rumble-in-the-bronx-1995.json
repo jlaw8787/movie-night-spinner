@@ -86,7 +86,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Elaine's supermarket Reuben bites (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "slices rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "smoked tofu, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sauerkraut, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "Swiss cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "horseradish",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "dill pickle, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices dill pickle, to garnish",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the rye into quarters and toast lightly at 200C.",
+       "min": 8
+      },
+      {
+       "text": "Top each with smoked tofu, sauerkraut and a square of Swiss cheese.",
+       "min": 5
+      },
+      {
+       "text": "Bake until melted.",
+       "min": 5
+      },
+      {
+       "text": "Mix the mayonnaise with tomato sauce, horseradish and chopped pickle.",
+       "min": 4
+      },
+      {
+       "text": "Dab on each bite and spear with a piece of the sliced dill pickle.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pork and chive dumplings",
@@ -161,7 +248,104 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Egg, tofu and chive dumplings",
+     "prep_min": 33,
+     "cook_min": 9,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "firm tofu, crumbled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch garlic chives, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "",
+       "item": "dumpling wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Chinkiang vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Scramble the eggs in a little of the oil until just set, then chop finely.",
+       "min": 5
+      },
+      {
+       "text": "Mix with the tofu, chives, ginger, sesame oil and soy.",
+       "min": 8
+      },
+      {
+       "text": "Fill the wrappers and pleat.",
+       "min": 20
+      },
+      {
+       "text": "Fry in the rest of the oil until crisp underneath.",
+       "min": 4
+      },
+      {
+       "text": "Add the water and steam under a lid.",
+       "min": 4
+      },
+      {
+       "text": "Serve with black vinegar.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hovercraft sweet and sour pork",
@@ -416,7 +600,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Almond jelly with fruit (vegetarian)",
+     "prep_min": 16,
+     "cook_min": 63,
+     "make_ahead": "Make the day before, keep chilled",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "almond extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 425,
+       "u": "g",
+       "item": "tin lychees",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "mandarins",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the agar into the water, milk and sugar and simmer for 2 minutes, stirring.",
+       "min": 8
+      },
+      {
+       "text": "Take off the heat and stir in the almond extract.",
+       "min": 1
+      },
+      {
+       "text": "Set in a tray in the fridge.",
+       "min": 60
+      },
+      {
+       "text": "Cut into cubes.",
+       "min": 5
+      },
+      {
+       "text": "Serve in bowls with lychees in their syrup and mandarin segments.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Uncle Bill's wedding iced jasmine tea",

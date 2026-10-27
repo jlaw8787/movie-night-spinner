@@ -143,7 +143,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dodgeball meatballs (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 40,
+     "make_ahead": "Make ahead up to 2 days, reheat gently",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "vegetarian parmesan-style cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin crushed tomatoes",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the plant-based mince with the egg, grated cheese, chopped parsley, garlic and some salt. Roll into balls.",
+       "min": 15
+      },
+      {
+       "text": "Brown the balls in batches in the oil.",
+       "min": 10
+      },
+      {
+       "text": "Simmer in the crushed tomatoes until hot through.",
+       "min": 25
+      },
+      {
+       "text": "Serve on toothpicks.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Vegas steak and eggs",

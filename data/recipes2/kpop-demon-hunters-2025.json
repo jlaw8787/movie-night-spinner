@@ -153,7 +153,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Saja Boys' sugar-dusted hot dogs (vegetarian)",
+     "prep_min": 24,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian frankfurts",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mozzarella",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle American mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "bamboo skewers",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Thread the vegetarian frankfurts onto the bamboo skewers with a stick of mozzarella above.",
+       "min": 10
+      },
+      {
+       "text": "Whisk the self-raising flour, the egg, 2 tablespoons of the caster sugar and the milk into a thick batter, pour into a tall glass, dip each skewer and roll in the panko.",
+       "min": 10
+      },
+      {
+       "text": "Fry in the vegetable oil at 170C for 4 minutes, roll in caster sugar and drizzle with tomato sauce and mustard.",
+       "min": 14
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ramyeon with egg",
@@ -190,7 +281,7 @@
      "q": 200,
      "u": "g",
      "item": "kimchi",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 3,
@@ -225,87 +316,8 @@
      "min": 3
     }
    ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Ramyeon with egg (vegetarian)",
-     "prep_min": 8,
-     "cook_min": 15,
-     "make_ahead": "",
-     "ingredients": [
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "gochugaru",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "soy sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "vegetable stock cube",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "packets ramen noodles",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "eggs",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 200,
-       "u": "g",
-       "item": "vegetarian kimchi",
-       "aisle": "Produce"
-      },
-      {
-       "q": 3,
-       "u": "",
-       "item": "spring onions",
-       "aisle": "Produce"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "slices American cheese",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 2,
-       "u": "l",
-       "item": "water",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Bring the water to the boil with the gochugaru, the soy and the vegetable stock cube.",
-       "min": 10
-      },
-      {
-       "text": "Cook the ramen noodles for 3 minutes, leaving out the flavour sachets, crack in the eggs and cover 1 minute.",
-       "min": 10
-      },
-      {
-       "text": "Divide into bowls with the kimchi, sliced spring onions and a slice of cheese melting on top.",
-       "min": 3
-      }
-     ],
-     "af": true
-    }
-   }
+   "veg": true,
+   "af": true
   },
   {
    "n": "Cinnamon walnut hotteok",

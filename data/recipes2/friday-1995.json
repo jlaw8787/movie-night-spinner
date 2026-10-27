@@ -117,7 +117,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ham AND burger sliders (vegetarian)",
+     "prep_min": 13,
+     "cook_min": 7,
+     "make_ahead": "Shape the patties up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Deli"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "smoked tofu, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "slices cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "slider buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Shape the plant-based mince into 12 small patties and season well with salt and pepper.",
+       "min": 10
+      },
+      {
+       "text": "Cook in the oil in a hot pan for about 2 minutes a side.",
+       "min": 4
+      },
+      {
+       "text": "Brown the smoked tofu in the pan, top each patty with tofu and half a cheese slice, and cover for a minute to melt.",
+       "min": 3
+      },
+      {
+       "text": "Put in the slider buns with pickles.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chilli-lime grilled pineapple spears",

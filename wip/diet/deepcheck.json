@@ -1,5 +1,959 @@
 {
  "issues": {
+  "amount far off the original": [
+   [
+    "22-jump-street-2014",
+    "Frat house sticky barbecue wings",
+    "veg",
+    "Frat house sticky barbecue cauliflower wings",
+    1400.0,
+    450
+   ],
+   [
+    "about-time-2013",
+    "Cornish beach crab and cress sandwiches",
+    "veg",
+    "Cornish beach hearts of palm and cress sandwiches",
+    280,
+    30
+   ],
+   [
+    "ace-ventura-pet-detective-1994",
+    "Cuban sandwich",
+    "veg",
+    "Cuban sandwich (vegetarian)",
+    1340,
+    340
+   ],
+   [
+    "annie-hall-1977",
+    "Lobster bites",
+    "veg",
+    "Lobster bites (vegetarian)",
+    320,
+    20
+   ],
+   [
+    "another-48-hrs-1990",
+    "Glovebox jerky",
+    "veg",
+    "Glovebox eggplant jerky",
+    560,
+    60
+   ],
+   [
+    "aquaman-2018",
+    "Bikers' bar wings",
+    "veg",
+    "Bikers' bar cauliflower wings",
+    1450,
+    450
+   ],
+   [
+    "arthur-1981",
+    "Susan Johnson engagement canapés",
+    "veg",
+    "Susan Johnson engagement canapés (vegetarian)",
+    330,
+    130
+   ],
+   [
+    "australia-2008",
+    "Faraway Downs corned beef sandwiches",
+    "veg",
+    "Faraway Downs cheddar and pickle sandwiches",
+    1540.0,
+    240
+   ],
+   [
+    "bad-santa-2003",
+    "Diner roast turkey with stuffing and gravy",
+    "veg",
+    "Diner stuffed roast pumpkin with gravy",
+    5060.0,
+    1760
+   ],
+   [
+    "barbie-2023",
+    "Dreamhouse pink prawn cocktail cups",
+    "veg",
+    "Dreamhouse pink hearts of palm cocktail cups",
+    720,
+    120
+   ],
+   [
+    "baseketball-1998",
+    "Beers beer-braised bratwurst",
+    "af",
+    "Beers beer-braised bratwurst",
+    320,
+    1070
+   ],
+   [
+    "baseketball-1998",
+    "Beers beer-braised bratwurst",
+    "veg_af",
+    "Beers stock-braised vegetarian bratwurst",
+    320,
+    920
+   ],
+   [
+    "batman-v-superman-dawn-of-justice-2016",
+    "Metropolis gala beef Wellington",
+    "veg",
+    "Metropolis gala mushroom Wellington",
+    1500,
+    550
+   ],
+   [
+    "big-daddy-1999",
+    "Sonny's sports bar barbecue wings",
+    "veg",
+    "Sonny's sports bar barbecue cauliflower bites",
+    1500.0,
+    500
+   ],
+   [
+    "big-night-1996",
+    "Roast suckling pig",
+    "veg",
+    "Big Night whole roast stuffed pumpkin",
+    1500.0,
+    240
+   ],
+   [
+    "black-panther-wakanda-forever-2022",
+    "Mayan pibil pork",
+    "veg",
+    "Mayan pibil jackfruit",
+    1500.0,
+    300
+   ],
+   [
+    "boyz-n-the-hood-1991",
+    "Doughboy's welcome-home wings",
+    "veg",
+    "Doughboy's welcome-home cauliflower bites",
+    1120,
+    370
+   ],
+   [
+    "boyz-n-the-hood-1991",
+    "Furious Styles' backyard ribs",
+    "veg",
+    "Furious Styles' backyard barbecue cauliflower",
+    2220,
+    220
+   ],
+   [
+    "bugsy-1991",
+    "Flamingo steak Diane",
+    "veg",
+    "Flamingo portobello Diane",
+    1190,
+    390
+   ],
+   [
+    "bugsy-1991",
+    "Flamingo steak Diane",
+    "veg_af",
+    "Flamingo portobello Diane",
+    1190,
+    390
+   ],
+   [
+    "bull-durham-1988",
+    "Carolina pulled pork",
+    "veg",
+    "Carolina pulled jackfruit",
+    2250,
+    375
+   ],
+   [
+    "caddyshack-1980",
+    "Judge Smails's prime rib",
+    "veg",
+    "Judge Smails's hasselback pumpkin roast",
+    2200,
+    260
+   ],
+   [
+    "captain-america-brave-new-world-2025",
+    "Falcon wings",
+    "veg",
+    "Falcon cauliflower bites",
+    1155,
+    380
+   ],
+   [
+    "casino-1995",
+    "Clams casino",
+    "veg",
+    "Mushrooms casino (vegetarian)",
+    1100,
+    140
+   ],
+   [
+    "cinderella-1950",
+    "Royal ball canapés",
+    "veg",
+    "Royal ball canapés (vegetarian)",
+    400,
+    100
+   ],
+   [
+    "city-slickers-1991",
+    "Curly's one-thing brisket sliders with slaw",
+    "veg",
+    "Curly's one-thing jackfruit sliders with slaw",
+    1150,
+    150
+   ],
+   [
+    "con-air-1997",
+    "Vegas strip prawns",
+    "veg",
+    "Vegas strip hearts of palm cocktail",
+    600,
+    100
+   ],
+   [
+    "crocodile-dundee-ii-1988",
+    "Dynamite-caught campfire barra",
+    "veg",
+    "Dynamite campfire haloumi parcels",
+    1550.0,
+    550
+   ],
+   [
+    "demolition-man-1993",
+    "Underground rat burger",
+    "veg",
+    "Underground rat burger (vegetarian)",
+    800,
+    250
+   ],
+   [
+    "die-hard-1988",
+    "Christmas party roast beef rolls",
+    "veg",
+    "Christmas party roast mushroom rolls",
+    1310,
+    310
+   ],
+   [
+    "dirty-dancing-1987",
+    "Kellerman's resort brisket",
+    "veg",
+    "Kellerman's resort braised cauliflower",
+    2000.0,
+    500
+   ],
+   [
+    "dirty-work-1998",
+    "Dr Farthing's gambling debt wings",
+    "veg",
+    "Dr Farthing's gambling debt cauliflower wings",
+    1600.0,
+    600
+   ],
+   [
+    "dogma-1999",
+    "Mooby's cow burgers",
+    "veg",
+    "Mooby's black bean burgers",
+    600,
+    60
+   ],
+   [
+    "dragnet-1987",
+    "Streebek's LA carnitas tacos",
+    "veg",
+    "Streebek's LA jackfruit carnitas tacos",
+    1450.0,
+    250
+   ],
+   [
+    "dune-part-two-2024",
+    "Lisan al Gaib spice-rubbed lamb",
+    "veg",
+    "Lisan al Gaib spice-rubbed cauliflower",
+    1800.0,
+    700
+   ],
+   [
+    "eagle-vs-shark-2007",
+    "Meaty Boy cheeseburgers",
+    "veg",
+    "Meaty Boy mushroom and haloumi burgers",
+    600,
+    200
+   ],
+   [
+    "el-mariachi-1992",
+    "Border town street tacos",
+    "veg",
+    "Border town jackfruit street tacos",
+    1000,
+    200
+   ],
+   [
+    "elemental-2023",
+    "Bernie's fiery lamb",
+    "veg",
+    "Bernie's fiery eggplant",
+    1250,
+    250
+   ],
+   [
+    "face-off-1997",
+    "Church canapés",
+    "veg",
+    "Church canapés (vegetarian)",
+    330,
+    130
+   ],
+   [
+    "fantastic-four-2005",
+    "Human Torch flaming wings",
+    "veg",
+    "Human Torch flaming cauliflower wings",
+    1300,
+    300
+   ],
+   [
+    "fletch-1985",
+    "Country club Bloody Mary prawn cocktail",
+    "veg",
+    "Country club Bloody Mary hearts of palm cocktail",
+    750,
+    150
+   ],
+   [
+    "flubber-1997",
+    "Flubber jelly",
+    "veg",
+    "Flubber jelly (vegetarian)",
+    300,
+    1700.0
+   ],
+   [
+    "get-hard-2015",
+    "Car wash corner store wings",
+    "veg",
+    "Car wash corner store cauliflower wings",
+    1500.0,
+    550
+   ],
+   [
+    "get-out-2017",
+    "Lawn party lamb",
+    "veg",
+    "Lawn party eggplant and haloumi",
+    1500.0,
+    250
+   ],
+   [
+    "gladiator-2000",
+    "Colosseum lamb",
+    "veg",
+    "Colosseum roast eggplant",
+    2100,
+    200
+   ],
+   [
+    "gladiator-ii-2024",
+    "Emperors' honey roast chicken",
+    "veg",
+    "Emperors' honey roast cauliflower",
+    1800.0,
+    550
+   ],
+   [
+    "glass-onion-a-knives-out-mystery-2022",
+    "Disruptors' hot sauce wings",
+    "veg",
+    "Disruptors' hot sauce cauliflower bites",
+    1580.0,
+    380
+   ],
+   [
+    "guardians-of-the-galaxy-2014",
+    "Knowhere bar wings",
+    "veg",
+    "Knowhere bar cauliflower bites",
+    1150,
+    400
+   ],
+   [
+    "guardians-of-the-galaxy-2014",
+    "Ravager barbecue ribs with corn and slaw",
+    "veg",
+    "Ravager barbecue jackfruit with corn and slaw",
+    2050.0,
+    550
+   ],
+   [
+    "hairspray-2007",
+    "Baltimore crab cakes",
+    "veg",
+    "Baltimore hearts of palm cakes",
+    430,
+    30
+   ],
+   [
+    "happy-feet-2006",
+    "Colony crumbed sardines with lemon mayo",
+    "veg",
+    "Colony crumbed eggplant fingers with lemon mayo",
+    770,
+    270
+   ],
+   [
+    "harry-potter-and-the-deathly-hallows-part-2-2011",
+    "Dragon escape chilli wings",
+    "veg",
+    "Dragon escape chilli cauliflower",
+    1000,
+    225
+   ],
+   [
+    "hellboy-2004",
+    "Bureau red chilli wings",
+    "veg",
+    "Bureau red chilli cauliflower wings",
+    1030,
+    30
+   ],
+   [
+    "i-love-you-man-2009",
+    "Open house roast beef baguettes",
+    "veg",
+    "Open house roast mushroom baguettes",
+    580,
+    180
+   ],
+   [
+    "ice-age-2002",
+    "Mammoth slow-cooked beef ribs",
+    "veg",
+    "Mammoth smoky barbecue eggplant",
+    2150,
+    150
+   ],
+   [
+    "inside-man-2006",
+    "Manhattan steak sandwich",
+    "veg",
+    "Manhattan mushroom steak sandwich",
+    780,
+    180
+   ],
+   [
+    "jumanji-the-next-level-2019",
+    "Falcon jewel jelly",
+    "veg",
+    "Falcon jewel jelly (vegetarian)",
+    600,
+    1750
+   ],
+   [
+    "justice-league-2017",
+    "Themyscira lemon lamb",
+    "veg",
+    "Themyscira lemon roast eggplant",
+    2200,
+    600
+   ],
+   [
+    "la-la-land-2016",
+    "Paris bistro chicken",
+    "veg",
+    "Paris bistro roast celeriac",
+    2960.0,
+    1160
+   ],
+   [
+    "last-holiday-2006",
+    "Georgia's crab cakes with lemon aioli",
+    "veg",
+    "Georgia's hearts of palm cakes with lemon aioli",
+    570,
+    170
+   ],
+   [
+    "lethal-weapon-4-1998",
+    "Uncle Benny's roast duck",
+    "veg",
+    "Uncle Benny's five spice roast mushrooms",
+    2100,
+    700
+   ],
+   [
+    "little-giants-1994",
+    "Annexation of Puerto Rico wings",
+    "veg",
+    "Annexation of Puerto Rico cauliflower wings",
+    1325,
+    325
+   ],
+   [
+    "mad-max-2-1981",
+    "Compound barbecue",
+    "veg",
+    "Compound barbecue (vegetarian)",
+    2250,
+    250
+   ],
+   [
+    "mad-max-beyond-thunderdome-1985",
+    "Aunty Entity's lamb",
+    "veg",
+    "Aunty Entity's whole roast cauliflower",
+    3000,
+    1000
+   ],
+   [
+    "maleficent-2014",
+    "King Stefan's crackling pork roast",
+    "veg",
+    "King Stefan's crackling roast pumpkin",
+    3000,
+    1090
+   ],
+   [
+    "meet-the-fockers-2004",
+    "Wall of Gaylord mojo roast pork",
+    "veg",
+    "Wall of Gaylord mojo roast cauliflower",
+    1880.0,
+    380
+   ],
+   [
+    "monsters-university-2013",
+    "Frat house party wings",
+    "veg",
+    "Frat house party cauliflower bites",
+    1275,
+    500
+   ],
+   [
+    "moonstruck-1987",
+    "Chicken scaloppine",
+    "veg",
+    "Cosmo's eggplant scaloppine",
+    800,
+    200
+   ],
+   [
+    "moonstruck-1987",
+    "Chicken scaloppine",
+    "veg_af",
+    "Cosmo's eggplant scaloppine (alcohol-free)",
+    800,
+    200
+   ],
+   [
+    "national-lampoon-s-christmas-vacation-1989",
+    "Juicy roast turkey",
+    "veg",
+    "Juicy roast cauliflower",
+    2125.0,
+    635
+   ],
+   [
+    "nope-2022",
+    "Haywood Ranch grilled tri-tip and beans",
+    "veg",
+    "Haywood Ranch grilled mushrooms and haloumi with beans",
+    1200.0,
+    250
+   ],
+   [
+    "ocean-s-eleven-2001",
+    "Rusty's prawn cocktail",
+    "veg",
+    "Rusty's hearts of palm cocktail",
+    625,
+    125
+   ],
+   [
+    "once-upon-a-time-in-america-1984",
+    "Fat Moe's back room brisket",
+    "veg",
+    "Fat Moe's back room braised mushrooms",
+    2000.0,
+    500
+   ],
+   [
+    "once-upon-a-time-in-mexico-2003",
+    "Puerco pibil, banana leaf pork",
+    "veg",
+    "Banana leaf jackfruit pibil",
+    1250.0,
+    350
+   ],
+   [
+    "palm-springs-2020",
+    "Roy's crossbow michelada",
+    "veg_af",
+    "Roy's crossbow michelada (alcohol-free)",
+    240,
+    1540.0
+   ],
+   [
+    "paranormal-activity-2007",
+    "Night-watch espresso martinis",
+    "af",
+    "Night-watch espresso martinis (alcohol-free)",
+    260,
+    40
+   ],
+   [
+    "phar-lap-1983",
+    "Big Red's Cup day roast beef rolls",
+    "veg",
+    "Big Red's Cup day roast mushroom rolls",
+    1230,
+    230
+   ],
+   [
+    "pirates-of-the-caribbean-on-stranger-tides-2011",
+    "Whitecap Bay prawns",
+    "veg",
+    "Whitecap Bay hearts of palm",
+    600,
+    100
+   ],
+   [
+    "poltergeist-1982",
+    "Steak that stays put",
+    "veg",
+    "Celeriac steak that stays put",
+    1465,
+    485
+   ],
+   [
+    "quick-change-1990",
+    "Airport bar chilli-lime wings",
+    "veg",
+    "Airport bar chilli-lime cauliflower wings",
+    1030,
+    230
+   ],
+   [
+    "raging-bull-1980",
+    "Jake's steak",
+    "veg",
+    "Jake's cauliflower steak",
+    1250.0,
+    50
+   ],
+   [
+    "road-house-1989",
+    "Missouri barbecue ribs",
+    "veg",
+    "Missouri barbecue corn ribs",
+    1650.0,
+    150
+   ],
+   [
+    "role-models-2008",
+    "Sturdy Wings honey soy chicken wings",
+    "veg",
+    "Sturdy Wings honey soy cauliflower wings",
+    1200.0,
+    250
+   ],
+   [
+    "runaway-bride-1999",
+    "Maryland crab cakes",
+    "veg",
+    "Maryland hearts of palm cakes",
+    500,
+    100
+   ],
+   [
+    "running-scared-1986",
+    "Chicago Italian beef",
+    "veg",
+    "Chicago Italian roast portobello rolls",
+    1300,
+    500
+   ],
+   [
+    "rush-hour-1998",
+    "Carter's hot wings",
+    "veg",
+    "Carter's hot cauliflower wings",
+    760,
+    300
+   ],
+   [
+    "silver-linings-playbook-2012",
+    "Hot crab toasts",
+    "veg",
+    "Hot hearts of palm toasts",
+    375,
+    125
+   ],
+   [
+    "small-soldiers-1998",
+    "Ohio barbecue ribs with corn and slaw",
+    "veg",
+    "Ohio barbecue cauliflower steaks with corn and slaw",
+    1750.0,
+    150
+   ],
+   [
+    "snatch-2000",
+    "Turkish's full English fry-up",
+    "veg",
+    "Turkish's full English fry-up (vegetarian)",
+    240,
+    620
+   ],
+   [
+    "speed-1994",
+    "LA street tacos",
+    "veg",
+    "LA street mushroom tacos",
+    950,
+    150
+   ],
+   [
+    "star-wars-episode-ii-attack-of-the-clones-2002",
+    "Geonosis arena wings",
+    "veg",
+    "Geonosis arena cauliflower wings",
+    1040,
+    40
+   ],
+   [
+    "star-wars-episode-iii-revenge-of-the-sith-2005",
+    "Coruscant opera house roast duck",
+    "veg",
+    "Coruscant opera house glazed roast eggplant",
+    2300,
+    300
+   ],
+   [
+    "tango-cash-1989",
+    "LA street tacos",
+    "veg",
+    "LA street tacos (vegetarian)",
+    650,
+    150
+   ],
+   [
+    "the-avengers-2012",
+    "Shawarma",
+    "veg",
+    "Cauliflower shawarma",
+    1150,
+    150
+   ],
+   [
+    "the-blind-side-2009",
+    "Memphis dry rub barbecue wings",
+    "veg",
+    "Memphis dry rub barbecue cauliflower bites",
+    1350.0,
+    350
+   ],
+   [
+    "the-crow-1994",
+    "Ham and cheddar toasted sandwiches",
+    "veg",
+    "Tomato and cheddar toasted sandwiches",
+    240,
+    40
+   ],
+   [
+    "the-dark-knight-2008",
+    "Penthouse fundraiser canapés",
+    "veg",
+    "Penthouse fundraiser canapés (vegetarian)",
+    500,
+    100
+   ],
+   [
+    "the-exorcist-1973",
+    "Georgetown crab cakes",
+    "veg",
+    "Georgetown hearts of palm cakes",
+    490,
+    100
+   ],
+   [
+    "the-fall-guy-2024",
+    "Harbour prawns with lemon",
+    "veg",
+    "Harbour hearts of palm with lemon",
+    1165,
+    165
+   ],
+   [
+    "the-five-heartbeats-1991",
+    "Choirboy's talent show wings",
+    "veg",
+    "Choirboy's talent show cauliflower bites",
+    1050,
+    300
+   ],
+   [
+    "the-fly-1986",
+    "Sticky glazed pork belly",
+    "veg",
+    "Sticky glazed eggplant",
+    1300,
+    300
+   ],
+   [
+    "the-good-the-bad-and-the-ugly-1966",
+    "Farmhouse bean stew",
+    "veg",
+    "Farmhouse bean stew (vegetarian)",
+    400,
+    1600
+   ],
+   [
+    "the-little-mermaid-2023",
+    "Ariel's grotto jelly",
+    "veg",
+    "Ariel's grotto jelly (vegetarian)",
+    300,
+    1300
+   ],
+   [
+    "the-lord-of-the-rings-the-return-of-the-king-2003",
+    "Green Dragon honey and ginger ale cup",
+    "af",
+    "Green Dragon honey and ginger ale cup (alcohol-free)",
+    575,
+    200
+   ],
+   [
+    "the-man-from-snowy-river-1982",
+    "High country corned beef sandwiches",
+    "veg",
+    "High country roast beetroot and cheddar sandwiches",
+    1230.0,
+    150
+   ],
+   [
+    "the-night-before-2015",
+    "Nutcracka hunt hot honey buffalo wings",
+    "veg",
+    "Nutcracka hunt hot honey buffalo cauliflower",
+    1450.0,
+    450
+   ],
+   [
+    "the-others-2001",
+    "Jersey crab on toast",
+    "veg",
+    "Jersey hearts of palm on toast",
+    280,
+    30
+   ],
+   [
+    "the-pope-of-greenwich-village-1984",
+    "Bed Bug Eddie's clams oreganata",
+    "veg",
+    "Bed Bug Eddie's mushrooms oreganata",
+    1090,
+    90
+   ],
+   [
+    "the-secret-of-my-success-1987",
+    "Executive rib eye",
+    "veg",
+    "Executive portobello steak",
+    850,
+    50
+   ],
+   [
+    "the-terminator-1984",
+    "Big Jeff's burger",
+    "veg",
+    "Big Jeff's mushroom and haloumi burger",
+    800,
+    250
+   ],
+   [
+    "the-wizard-of-oz-1939",
+    "Ruby slipper jelly",
+    "veg",
+    "Ruby slipper jelly (vegetarian)",
+    275,
+    775
+   ],
+   [
+    "thor-2011",
+    "Asgard golden honey wings",
+    "veg",
+    "Asgard golden honey cauliflower wings",
+    1050,
+    50
+   ],
+   [
+    "thor-2011",
+    "Asgardian feast beef ribs with roast roots",
+    "veg",
+    "Asgardian feast whole roast celeriac with roast roots",
+    3000,
+    1040
+   ],
+   [
+    "three-amigos-1986",
+    "El Guapo's birthday tacos",
+    "veg",
+    "El Guapo's birthday jackfruit tacos",
+    1250.0,
+    50
+   ],
+   [
+    "three-men-and-a-baby-1987",
+    "Peter's loft steak sandwich",
+    "veg",
+    "Peter's loft mushroom steak sandwich",
+    700,
+    100
+   ],
+   [
+    "transformers-2007",
+    "Ron's backyard ribs",
+    "veg",
+    "Ron's backyard barbecue cauliflower",
+    1700.0,
+    100
+   ],
+   [
+    "tremors-1990",
+    "Val and Earl's truck jerky",
+    "veg",
+    "Val and Earl's truck eggplant jerky",
+    660,
+    80
+   ],
+   [
+    "violent-night-2022",
+    "Santa's stout and whisky boilermaker",
+    "af",
+    "Santa's stout and whisky boilermaker (alcohol-free)",
+    1370.0,
+    150
+   ],
+   [
+    "what-we-do-in-the-shadows-2014",
+    "Rare roast beef rolls",
+    "veg",
+    "Rare roast beetroot rolls",
+    900,
+    100
+   ]
+  ],
   "veg: meat word in method": [
    [
     "a-bronx-tale-1993",
@@ -16,6 +970,14 @@
     "Paul Vitti's eggplant parm",
     "cutlet",
     "Warm about half the passata, top each cutlet with sauce, mozzarella and parmesan and grill until bubbling."
+   ],
+   [
+    "captain-america-civil-war-2016",
+    "Berlin airport currywurst",
+    "veg",
+    "Berlin airport currywurst (vegetarian)",
+    "sausages",
+    "Pour over the sliced sausages, dust with curry powder and serve with the fries."
    ],
    [
     "casino-1995",
@@ -42,6 +1004,14 @@
     "Simmer gently in the tomatoes with basil, turning the meatballs carefully once."
    ],
    [
+    "deck-the-halls-2006",
+    "Street party cranberry chilli meatballs",
+    "veg",
+    "Street party cranberry chilli meatballs (vegetarian)",
+    "meatballs",
+    "Toss the meatballs through, scatter with spring onion and serve on toothpicks."
+   ],
+   [
     "despicable-me-2010",
     "Gru's meatballs in tomato sauce",
     "veg",
@@ -56,6 +1026,14 @@
     "Big Boy's spaghetti with mushroom and ricotta meatballs",
     "meatballs",
     "Brown the meatballs gently in the remaining oil."
+   ],
+   [
+    "finding-dory-2016",
+    "Dory blue jelly",
+    "veg",
+    "Dory blue jelly (vegetarian)",
+    "fish",
+    "Top with cream and tuck a slice of orange on each for a little orange fish."
    ],
    [
     "frozen-2013",
@@ -226,6 +1204,22 @@
     "Serve the meatballs over the spaghetti with extra cheese."
    ],
    [
+    "rosemary-s-baby-1968",
+    "Bramford welcome canapés",
+    "veg",
+    "Bramford welcome canapés (vegetarian)",
+    "pate",
+    "Slice and toast the baguette and spread with the pate and a little fig jam."
+   ],
+   [
+    "rosemary-s-baby-1968",
+    "Bramford welcome canapés",
+    "veg_af",
+    "Bramford welcome canapés (vegetarian, alcohol-free)",
+    "pate",
+    "Slice and toast the baguette and spread with the pate and a little fig jam."
+   ],
+   [
     "space-jam-1996",
     "Courtside meatball subs",
     "veg",
@@ -264,6 +1258,14 @@
     "Clemenza's Sunday sauce with mushroom meatballs",
     "meatballs",
     "Boil the rigatoni, toss with the sauce and serve with the meatballs and the rest of the cheese."
+   ],
+   [
+    "the-little-mermaid-2023",
+    "Ariel's grotto jelly",
+    "veg",
+    "Ariel's grotto jelly (vegetarian)",
+    "fish",
+    "Cut the mango and kiwifruit into little fish shapes."
    ],
    [
     "the-wedding-singer-1998",
@@ -338,1133 +1340,16 @@
     "Spoon the sauce over the steaks."
    ]
   ],
-  "fewer than 3 dishes left": [
-   [
-    "a-goofy-movie-1995",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "a-goofy-movie-1995",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "anchorman-2-the-legend-continues-2013",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "anchorman-2-the-legend-continues-2013",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "avengers-infinity-war-2018",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "avengers-infinity-war-2018",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "big-daddy-1999",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "big-daddy-1999",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "blade-runner-2049-2017",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "blade-runner-2049-2017",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "city-slickers-1991",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "city-slickers-1991",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "flash-gordon-1980",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "flash-gordon-1980",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "fletch-1985",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "fletch-1985",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "get-out-2017",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "get-out-2017",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "ghostbusters-frozen-empire-2024",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "ghostbusters-frozen-empire-2024",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "jaws-1975",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "jaws-1975",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "jurassic-world-fallen-kingdom-2018",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "jurassic-world-fallen-kingdom-2018",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "kenny-2006",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "kenny-2006",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "lethal-weapon-1987",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "lethal-weapon-1987",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "my-best-friend-s-wedding-1997",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "my-best-friend-s-wedding-1997",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "new-year-s-eve-2011",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "new-year-s-eve-2011",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "palm-springs-2020",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "palm-springs-2020",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "rain-man-1988",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "rain-man-1988",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "red-dog-2011",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "red-dog-2011",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "rumble-in-the-bronx-1995",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "rumble-in-the-bronx-1995",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "shang-chi-and-the-legend-of-the-ten-rings-2021",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "shang-chi-and-the-legend-of-the-ten-rings-2021",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "the-amazing-spider-man-2012",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "the-amazing-spider-man-2012",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "the-fifth-element-1997",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "the-fifth-element-1997",
-    "veg+af",
-    2,
-    5
-   ],
-   [
-    "uncle-buck-1989",
-    "veg",
-    2,
-    5
-   ],
-   [
-    "uncle-buck-1989",
-    "veg+af",
-    2,
-    5
-   ]
-  ],
-  "amount far off the original": [
-   [
-    "ace-ventura-pet-detective-1994",
-    "Cuban sandwich",
-    "veg",
-    "Cuban sandwich (vegetarian)",
-    1340,
-    340
-   ],
-   [
-    "bad-santa-2003",
-    "Diner roast turkey with stuffing and gravy",
-    "veg",
-    "Diner stuffed roast pumpkin with gravy",
-    5060.0,
-    1760
-   ],
-   [
-    "baseketball-1998",
-    "Beers beer-braised bratwurst",
-    "af",
-    "Beers beer-braised bratwurst",
-    320,
-    1070
-   ],
-   [
-    "baseketball-1998",
-    "Beers beer-braised bratwurst",
-    "veg_af",
-    "Beers stock-braised vegetarian bratwurst",
-    320,
-    920
-   ],
-   [
-    "batman-v-superman-dawn-of-justice-2016",
-    "Metropolis gala beef Wellington",
-    "veg",
-    "Metropolis gala mushroom Wellington",
-    1500,
-    550
-   ],
-   [
-    "big-night-1996",
-    "Roast suckling pig",
-    "veg",
-    "Big Night whole roast stuffed pumpkin",
-    1500.0,
-    240
-   ],
-   [
-    "black-panther-wakanda-forever-2022",
-    "Mayan pibil pork",
-    "veg",
-    "Mayan pibil jackfruit",
-    1500.0,
-    300
-   ],
-   [
-    "boyz-n-the-hood-1991",
-    "Furious Styles' backyard ribs",
-    "veg",
-    "Furious Styles' backyard barbecue cauliflower",
-    2220,
-    220
-   ],
-   [
-    "bugsy-1991",
-    "Flamingo steak Diane",
-    "veg",
-    "Flamingo portobello Diane",
-    1190,
-    390
-   ],
-   [
-    "bugsy-1991",
-    "Flamingo steak Diane",
-    "veg_af",
-    "Flamingo portobello Diane",
-    1190,
-    390
-   ],
-   [
-    "bull-durham-1988",
-    "Carolina pulled pork",
-    "veg",
-    "Carolina pulled jackfruit",
-    2250,
-    375
-   ],
-   [
-    "caddyshack-1980",
-    "Judge Smails's prime rib",
-    "veg",
-    "Judge Smails's hasselback pumpkin roast",
-    2200,
-    260
-   ],
-   [
-    "crocodile-dundee-ii-1988",
-    "Dynamite-caught campfire barra",
-    "veg",
-    "Dynamite campfire haloumi parcels",
-    1550.0,
-    550
-   ],
-   [
-    "demolition-man-1993",
-    "Underground rat burger",
-    "veg",
-    "Underground rat burger (vegetarian)",
-    800,
-    250
-   ],
-   [
-    "die-hard-1988",
-    "Christmas party roast beef rolls",
-    "veg",
-    "Christmas party roast mushroom rolls",
-    1310,
-    310
-   ],
-   [
-    "dirty-dancing-1987",
-    "Kellerman's resort brisket",
-    "veg",
-    "Kellerman's resort braised cauliflower",
-    2000.0,
-    500
-   ],
-   [
-    "dogma-1999",
-    "Mooby's cow burgers",
-    "veg",
-    "Mooby's black bean burgers",
-    600,
-    60
-   ],
-   [
-    "dragnet-1987",
-    "Streebek's LA carnitas tacos",
-    "veg",
-    "Streebek's LA jackfruit carnitas tacos",
-    1450.0,
-    250
-   ],
-   [
-    "dune-part-two-2024",
-    "Lisan al Gaib spice-rubbed lamb",
-    "veg",
-    "Lisan al Gaib spice-rubbed cauliflower",
-    1800.0,
-    700
-   ],
-   [
-    "eagle-vs-shark-2007",
-    "Meaty Boy cheeseburgers",
-    "veg",
-    "Meaty Boy mushroom and haloumi burgers",
-    600,
-    200
-   ],
-   [
-    "elemental-2023",
-    "Bernie's fiery lamb",
-    "veg",
-    "Bernie's fiery eggplant",
-    1250,
-    250
-   ],
-   [
-    "get-out-2017",
-    "Lawn party lamb",
-    "veg",
-    "Lawn party eggplant and haloumi",
-    1500.0,
-    250
-   ],
-   [
-    "gladiator-2000",
-    "Colosseum lamb",
-    "veg",
-    "Colosseum roast eggplant",
-    2100,
-    200
-   ],
-   [
-    "gladiator-ii-2024",
-    "Emperors' honey roast chicken",
-    "veg",
-    "Emperors' honey roast cauliflower",
-    1800.0,
-    550
-   ],
-   [
-    "guardians-of-the-galaxy-2014",
-    "Ravager barbecue ribs with corn and slaw",
-    "veg",
-    "Ravager barbecue jackfruit with corn and slaw",
-    2050.0,
-    550
-   ],
-   [
-    "i-love-you-man-2009",
-    "Open house roast beef baguettes",
-    "veg",
-    "Open house roast mushroom baguettes",
-    580,
-    180
-   ],
-   [
-    "ice-age-2002",
-    "Mammoth slow-cooked beef ribs",
-    "veg",
-    "Mammoth smoky barbecue eggplant",
-    2150,
-    150
-   ],
-   [
-    "inside-man-2006",
-    "Manhattan steak sandwich",
-    "veg",
-    "Manhattan mushroom steak sandwich",
-    780,
-    180
-   ],
-   [
-    "justice-league-2017",
-    "Themyscira lemon lamb",
-    "veg",
-    "Themyscira lemon roast eggplant",
-    2200,
-    600
-   ],
-   [
-    "la-la-land-2016",
-    "Paris bistro chicken",
-    "veg",
-    "Paris bistro roast celeriac",
-    2960.0,
-    1160
-   ],
-   [
-    "lethal-weapon-4-1998",
-    "Uncle Benny's roast duck",
-    "veg",
-    "Uncle Benny's five spice roast mushrooms",
-    2100,
-    700
-   ],
-   [
-    "mad-max-2-1981",
-    "Compound barbecue",
-    "veg",
-    "Compound barbecue (vegetarian)",
-    2250,
-    250
-   ],
-   [
-    "mad-max-beyond-thunderdome-1985",
-    "Aunty Entity's lamb",
-    "veg",
-    "Aunty Entity's whole roast cauliflower",
-    3000,
-    1000
-   ],
-   [
-    "maleficent-2014",
-    "King Stefan's crackling pork roast",
-    "veg",
-    "King Stefan's crackling roast pumpkin",
-    3000,
-    1090
-   ],
-   [
-    "meet-the-fockers-2004",
-    "Wall of Gaylord mojo roast pork",
-    "veg",
-    "Wall of Gaylord mojo roast cauliflower",
-    1880.0,
-    380
-   ],
-   [
-    "moonstruck-1987",
-    "Chicken scaloppine",
-    "veg",
-    "Cosmo's eggplant scaloppine",
-    800,
-    200
-   ],
-   [
-    "moonstruck-1987",
-    "Chicken scaloppine",
-    "veg_af",
-    "Cosmo's eggplant scaloppine (alcohol-free)",
-    800,
-    200
-   ],
-   [
-    "national-lampoon-s-christmas-vacation-1989",
-    "Juicy roast turkey",
-    "veg",
-    "Juicy roast cauliflower",
-    2125.0,
-    635
-   ],
-   [
-    "nope-2022",
-    "Haywood Ranch grilled tri-tip and beans",
-    "veg",
-    "Haywood Ranch grilled mushrooms and haloumi with beans",
-    1200.0,
-    250
-   ],
-   [
-    "once-upon-a-time-in-america-1984",
-    "Fat Moe's back room brisket",
-    "veg",
-    "Fat Moe's back room braised mushrooms",
-    2000.0,
-    500
-   ],
-   [
-    "once-upon-a-time-in-mexico-2003",
-    "Puerco pibil, banana leaf pork",
-    "veg",
-    "Banana leaf jackfruit pibil",
-    1250.0,
-    350
-   ],
-   [
-    "paranormal-activity-2007",
-    "Night-watch espresso martinis",
-    "af",
-    "Night-watch espresso martinis (alcohol-free)",
-    260,
-    40
-   ],
-   [
-    "phar-lap-1983",
-    "Big Red's Cup day roast beef rolls",
-    "veg",
-    "Big Red's Cup day roast mushroom rolls",
-    1230,
-    230
-   ],
-   [
-    "poltergeist-1982",
-    "Steak that stays put",
-    "veg",
-    "Celeriac steak that stays put",
-    1465,
-    485
-   ],
-   [
-    "raging-bull-1980",
-    "Jake's steak",
-    "veg",
-    "Jake's cauliflower steak",
-    1250.0,
-    50
-   ],
-   [
-    "road-house-1989",
-    "Missouri barbecue ribs",
-    "veg",
-    "Missouri barbecue corn ribs",
-    1650.0,
-    150
-   ],
-   [
-    "running-scared-1986",
-    "Chicago Italian beef",
-    "veg",
-    "Chicago Italian roast portobello rolls",
-    1300,
-    500
-   ],
-   [
-    "small-soldiers-1998",
-    "Ohio barbecue ribs with corn and slaw",
-    "veg",
-    "Ohio barbecue cauliflower steaks with corn and slaw",
-    1750.0,
-    150
-   ],
-   [
-    "snatch-2000",
-    "Turkish's full English fry-up",
-    "veg",
-    "Turkish's full English fry-up (vegetarian)",
-    240,
-    620
-   ],
-   [
-    "speed-1994",
-    "LA street tacos",
-    "veg",
-    "LA street mushroom tacos",
-    950,
-    150
-   ],
-   [
-    "star-wars-episode-iii-revenge-of-the-sith-2005",
-    "Coruscant opera house roast duck",
-    "veg",
-    "Coruscant opera house glazed roast eggplant",
-    2300,
-    300
-   ],
-   [
-    "the-avengers-2012",
-    "Shawarma",
-    "veg",
-    "Cauliflower shawarma",
-    1150,
-    150
-   ],
-   [
-    "the-fly-1986",
-    "Sticky glazed pork belly",
-    "veg",
-    "Sticky glazed eggplant",
-    1300,
-    300
-   ],
-   [
-    "the-good-the-bad-and-the-ugly-1966",
-    "Farmhouse bean stew",
-    "veg",
-    "Farmhouse bean stew (vegetarian)",
-    400,
-    1600
-   ],
-   [
-    "the-lord-of-the-rings-the-return-of-the-king-2003",
-    "Green Dragon honey and ginger ale cup",
-    "af",
-    "Green Dragon honey and ginger ale cup (alcohol-free)",
-    575,
-    200
-   ],
-   [
-    "the-secret-of-my-success-1987",
-    "Executive rib eye",
-    "veg",
-    "Executive portobello steak",
-    850,
-    50
-   ],
-   [
-    "the-terminator-1984",
-    "Big Jeff's burger",
-    "veg",
-    "Big Jeff's mushroom and haloumi burger",
-    800,
-    250
-   ],
-   [
-    "thor-2011",
-    "Asgardian feast beef ribs with roast roots",
-    "veg",
-    "Asgardian feast whole roast celeriac with roast roots",
-    3000,
-    1040
-   ],
-   [
-    "three-amigos-1986",
-    "El Guapo's birthday tacos",
-    "veg",
-    "El Guapo's birthday jackfruit tacos",
-    1250.0,
-    50
-   ],
-   [
-    "three-men-and-a-baby-1987",
-    "Peter's loft steak sandwich",
-    "veg",
-    "Peter's loft mushroom steak sandwich",
-    700,
-    100
-   ],
-   [
-    "transformers-2007",
-    "Ron's backyard ribs",
-    "veg",
-    "Ron's backyard barbecue cauliflower",
-    1700.0,
-    100
-   ],
-   [
-    "violent-night-2022",
-    "Santa's stout and whisky boilermaker",
-    "af",
-    "Santa's stout and whisky boilermaker (alcohol-free)",
-    1370.0,
-    150
-   ],
-   [
-    "what-we-do-in-the-shadows-2014",
-    "Rare roast beef rolls",
-    "veg",
-    "Rare roast beetroot rolls",
-    900,
-    100
-   ]
-  ],
-  "much longer than original": [
-   [
-    "after-hours-1985",
-    "Terminal Bar whiskey sour",
-    "af",
-    "Terminal Bar whiskey sour (alcohol-free)",
-    10,
-    29
-   ],
-   [
-    "avengers-age-of-ultron-2015",
-    "Asgardian honey mead punch",
-    "af",
-    "Asgardian honey mead punch (alcohol-free)",
-    10,
-    24
-   ],
-   [
-    "bad-santa-2003",
-    "Willie's bourbon and ginger highball",
-    "af",
-    "Willie's bourbon and ginger highball (alcohol-free)",
-    5,
-    25
-   ],
-   [
-    "baseketball-1998",
-    "Denslow Cup brandy old fashioned",
-    "af",
-    "Denslow Cup brandy old fashioned (alcohol-free)",
-    5,
-    25
-   ],
-   [
-    "beerfest-2006",
-    "Das Boot lemon radler",
-    "af",
-    "Das Boot lemon radler (alcohol-free)",
-    3,
-    35
-   ],
-   [
-    "blade-runner-1982",
-    "Deckard's Japanese whisky highball",
-    "af",
-    "Deckard's Japanese whisky highball (alcohol-free)",
-    5,
-    25
-   ],
-   [
-    "blade-runner-2049-2017",
-    "Deckard's Scotch and honey highball",
-    "af",
-    "Deckard's Scotch and honey highball (alcohol-free)",
-    8,
-    28
-   ],
-   [
-    "butch-cassidy-and-the-sundance-kid-1969",
-    "Hole-in-the-Wall bourbon sour",
-    "af",
-    "Hole-in-the-Wall bourbon sour (alcohol-free)",
-    10,
-    29
-   ],
-   [
-    "con-air-1997",
-    "Cyrus the Virus bourbon smash",
-    "af",
-    "Cyrus the Virus bourbon smash (alcohol-free)",
-    8,
-    23
-   ],
-   [
-    "crocodile-dundee-1986",
-    "Walkabout Creek rum and ginger beer",
-    "af",
-    "Walkabout Creek rum and ginger beer (alcohol-free)",
-    8,
-    23
-   ],
-   [
-    "die-hard-1988",
-    "Argyle's limo bar old fashioned",
-    "af",
-    "Argyle's limo bar old fashioned (alcohol-free)",
-    10,
-    25
-   ],
-   [
-    "escape-from-new-york-1981",
-    "Brain's bathtub moonshine sour",
-    "af",
-    "Brain's bathtub moonshine sour (alcohol-free)",
-    8,
-    23
-   ],
-   [
-    "fright-night-1985",
-    "Holy water lemon, lime and bitters",
-    "af",
-    "Holy water lemon, lime and bitters (alcohol-free)",
-    10,
-    23
-   ],
-   [
-    "goldfinger-1964",
-    "Mint julep",
-    "af",
-    "Mint julep (alcohol-free)",
-    10,
-    30
-   ],
-   [
-    "groundhog-day-1993",
-    "Rita's sweet vermouth on the rocks",
-    "af",
-    "Rita's sweet vermouth on the rocks (alcohol-free)",
-    5,
-    26
-   ],
-   [
-    "john-wick-2014",
-    "Continental bourbon sour",
-    "af",
-    "Continental bourbon sour (alcohol-free)",
-    10,
-    30
-   ],
-   [
-    "lock-stock-and-two-smoking-barrels-1998",
-    "Two smoking barrels peated whisky sour",
-    "af",
-    "Two smoking barrels peated whisky sour (alcohol-free)",
-    10,
-    30
-   ],
-   [
-    "logan-2017",
-    "Logan's limo bourbon and maple sour",
-    "af",
-    "Logan's limo bourbon and maple sour (alcohol-free)",
-    10,
-    25
-   ],
-   [
-    "lost-in-translation-2003",
-    "Japanese whisky highball",
-    "af",
-    "Japanese whisky highball (alcohol-free)",
-    5,
-    30
-   ],
-   [
-    "mad-max-2-1981",
-    "Guzzoline dark and stormy",
-    "af",
-    "Guzzoline dark and stormy (alcohol-free)",
-    5,
-    24
-   ],
-   [
-    "manhattan-1979",
-    "Manhattan cocktail",
-    "af",
-    "Manhattan cocktail (alcohol-free)",
-    10,
-    25
-   ],
-   [
-    "pirates-of-the-caribbean-dead-men-tell-no-tales-2017",
-    "Jack's rum, ginger and lime highball",
-    "af",
-    "Jack's rum, ginger and lime highball (alcohol-free)",
-    8,
-    23
-   ],
-   [
-    "predator-1987",
-    "Val Verde jungle rum punch",
-    "af",
-    "Val Verde jungle rum punch (alcohol-free)",
-    10,
-    25
-   ],
-   [
-    "quick-change-1990",
-    "Wheels-up bourbon smash",
-    "af",
-    "Wheels-up bourbon smash (alcohol-free)",
-    10,
-    30
-   ],
-   [
-    "rain-man-1988",
-    "Maple syrup bourbon smash",
-    "af",
-    "Maple syrup bourbon smash (alcohol-free)",
-    10,
-    29
-   ],
-   [
-    "saturday-night-fever-1977",
-    "2001 Odyssey whisky lemon fizz",
-    "af",
-    "2001 Odyssey whisky lemon fizz (alcohol-free)",
-    8,
-    23
-   ],
-   [
-    "shaft-1971",
-    "Bumpy Jonas whisky sour",
-    "af",
-    "Bumpy Jonas whisky sour (alcohol-free)",
-    9,
-    24
-   ],
-   [
-    "solo-a-star-wars-story-2018",
-    "Lando's cape cocktail",
-    "af",
-    "Lando's cape cocktail (alcohol-free)",
-    5,
-    24
-   ],
-   [
-    "terminator-2-judgment-day-1991",
-    "Liquid nitrogen frozen margarita",
-    "af",
-    "Liquid nitrogen frozen margarita (alcohol-free)",
-    10,
-    25
-   ],
-   [
-    "the-french-connection-1971",
-    "Marseille mauresque",
-    "af",
-    "Marseille mauresque (alcohol-free)",
-    5,
-    35
-   ],
-   [
-    "the-heat-2013",
-    "Ashburn and Mullins whiskey sour",
-    "af",
-    "Ashburn and Mullins whiskey sour (alcohol-free)",
-    10,
-    25
-   ],
-   [
-    "the-shining-1980",
-    "Gold Room bourbon old fashioned",
-    "af",
-    "Gold Room bourbon old fashioned (alcohol-free)",
-    7,
-    32
-   ],
-   [
-    "the-untouchables-1987",
-    "Canadian rye",
-    "af",
-    "Canadian rye (alcohol-free)",
-    5,
-    30
-   ],
-   [
-    "the-untouchables-1987",
-    "Repeal Day old fashioned",
-    "af",
-    "Repeal Day old fashioned (alcohol-free)",
-    7,
-    31
-   ],
-   [
-    "true-romance-1993",
-    "Cancún beach margarita",
-    "af",
-    "Cancún beach margarita (alcohol-free)",
-    10,
-    23
-   ],
-   [
-    "under-siege-1992",
-    "USS Missouri navy grog",
-    "af",
-    "USS Missouri navy grog (alcohol-free)",
-    8,
-    23
-   ],
-   [
-    "weekend-at-bernie-s-1989",
-    "Larry and Richard's mai tai",
-    "af",
-    "Larry and Richard's mai tai (alcohol-free)",
-    10,
-    25
-   ],
-   [
-    "when-harry-met-sally-1989",
-    "Pastrami on rye",
-    "veg",
-    "Beetroot pastrami on rye",
-    20,
-    79
-   ],
-   [
-    "working-girl-1988",
-    "Tess's Manhattan cocktail",
-    "af",
-    "Tess's Manhattan cocktail (alcohol-free)",
-    5,
-    25
-   ],
-   [
-    "x-men-days-of-future-past-2014",
-    "Mystique blue margarita",
-    "af",
-    "Mystique blue margarita (alcohol-free)",
-    12,
-    27
-   ],
-   [
-    "x-men-origins-wolverine-2009",
-    "Rockies maple whisky sour",
-    "af",
-    "Rockies maple whisky sour (alcohol-free)",
-    10,
-    30
-   ]
-  ],
   "ingredient never used in method": [
+   [
+    "a-goofy-movie-1995",
+    "Perfect Cast fish fingers",
+    "veg",
+    "Perfect Cast haloumi fingers",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
    [
     "aladdin-1992",
     "Sultan's palace chicken",
@@ -1474,6 +1359,15 @@
      "ground cumin",
      "ground coriander",
      "ground turmeric"
+    ]
+   ],
+   [
+    "always-be-my-maybe-2019",
+    "Hello Peril band wings",
+    "veg",
+    "Hello Peril band cauliflower bites",
+    [
+     "vegetable oil, for frying"
     ]
    ],
    [
@@ -1504,12 +1398,41 @@
     ]
    ],
    [
+    "anchorman-2-the-legend-continues-2013",
+    "Doby's lighthouse fish bites",
+    "veg",
+    "Doby's lighthouse crumbed tofu bites",
+    [
+     "vegetable oil"
+    ]
+   ],
+   [
     "aquaman-2018",
     "Lighthouse dad's fish bites",
     "af",
     "Lighthouse dad's fish bites",
     [
      "vegetable oil for frying"
+    ]
+   ],
+   [
+    "avengers-endgame-2019",
+    "Lake house chicken salad rolls",
+    "veg",
+    "Lake house egg salad rolls",
+    [
+     "salt and pepper, to taste"
+    ]
+   ],
+   [
+    "avengers-infinity-war-2018",
+    "Infinity Stone fruit jelly cups",
+    "veg",
+    "Infinity Stone fruit jelly cups (vegetarian)",
+    [
+     "raspberries",
+     "mango, diced",
+     "can pineapple pieces, drained"
     ]
    ],
    [
@@ -1520,6 +1443,15 @@
     [
      "vegetable oil",
      "salt and pepper, to taste"
+    ]
+   ],
+   [
+    "barbarian-2022",
+    "Salami, cheddar and pickle toasties",
+    "veg",
+    "Roast capsicum, cheddar and pickle toasties",
+    [
+     "sharp cheddar, grated"
     ]
    ],
    [
@@ -1551,6 +1483,21 @@
     ]
    ],
    [
+    "beverly-hills-cop-ii-1987",
+    "Beverly Hills crudités",
+    "veg",
+    "Beverly Hills crudités (vegetarian)",
+    [
+     "small bunch parsley",
+     "tarragon sprigs",
+     "small bunch chives",
+     "baby carrots",
+     "bunch radishes",
+     "cucumber",
+     "sugar snap peas"
+    ]
+   ],
+   [
     "big-daddy-1999",
     "Tollbooth shift cheeseburgers",
     "veg",
@@ -1558,6 +1505,15 @@
     [
      "bottle American mustard",
      "mayonnaise"
+    ]
+   ],
+   [
+    "big-trouble-in-little-china-1986",
+    "Salt and pepper squid",
+    "veg",
+    "Salt and pepper tofu",
+    [
+     "vegetable oil for frying"
     ]
    ],
    [
@@ -1618,6 +1574,24 @@
     ]
    ],
    [
+    "captain-america-civil-war-2016",
+    "Berlin airport currywurst",
+    "veg",
+    "Berlin airport currywurst (vegetarian)",
+    [
+     "vegetarian bratwurst"
+    ]
+   ],
+   [
+    "chasing-amy-1997",
+    "Jersey disco fries",
+    "veg",
+    "Jersey disco fries (vegetarian)",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
+   [
     "chocolat-2000",
     "Easter festival vin chaud",
     "af",
@@ -1625,6 +1599,15 @@
     [
      "cinnamon sticks",
      "star anise"
+    ]
+   ],
+   [
+    "collateral-2004",
+    "Koreatown nightclub fried chicken",
+    "veg",
+    "Koreatown nightclub fried cauliflower",
+    [
+     "vegetable oil"
     ]
    ],
    [
@@ -1673,6 +1656,15 @@
     ]
    ],
    [
+    "el-mariachi-1992",
+    "Border town street tacos",
+    "veg",
+    "Border town jackfruit street tacos",
+    [
+     "flaky salt, to taste"
+    ]
+   ],
+   [
     "fargo-1996",
     "Walleye fish fry",
     "af",
@@ -1692,12 +1684,39 @@
     ]
    ],
    [
+    "freaky-friday-2003",
+    "Garage rehearsal popcorn chicken",
+    "veg",
+    "Garage rehearsal popcorn cauliflower",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
+   [
+    "friday-1995",
+    "Ham AND burger sliders",
+    "veg",
+    "Ham AND burger sliders (vegetarian)",
+    [
+     "slices cheddar"
+    ]
+   ],
+   [
     "fright-night-1985",
     "Forty-clove garlic chicken",
     "af",
     "Forty-clove garlic chicken",
     [
      "Italian loaf"
+    ]
+   ],
+   [
+    "get-shorty-1995",
+    "Ray Bones' Miami croquetas",
+    "veg",
+    "Ray Bones' Miami mushroom croquetas",
+    [
+     "neutral oil, for frying"
     ]
    ],
    [
@@ -1783,10 +1802,46 @@
     ]
    ],
    [
+    "hereditary-2018",
+    "Miniature sandwiches",
+    "veg",
+    "Miniature sandwiches (vegetarian)",
+    [
+     "slices white bread"
+    ]
+   ],
+   [
+    "house-party-1990",
+    "Kick step party sub",
+    "veg",
+    "Kick step party sub (vegetarian)",
+    [
+     "salt and pepper, to taste"
+    ]
+   ],
+   [
+    "how-to-lose-a-guy-in-10-days-2003",
+    "Ham and pea arancini",
+    "veg",
+    "Pea and smoked provolone arancini",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
+   [
     "i-am-legend-2007",
     "Pan-fried steak",
     "veg",
     "Pan-fried portobello steak",
+    [
+     "salt and pepper, to taste"
+    ]
+   ],
+   [
+    "inspector-gadget-1999",
+    "Gadget's toolkit skewers",
+    "veg",
+    "Gadget's toolkit skewers (vegetarian)",
     [
      "salt and pepper, to taste"
     ]
@@ -1799,6 +1854,33 @@
     [
      "flathead fillets",
      "vegetable oil"
+    ]
+   ],
+   [
+    "jackie-brown-1997",
+    "Hermosa Beach fish tacos",
+    "veg",
+    "Hermosa Beach oyster mushroom tacos",
+    [
+     "vegetable oil"
+    ]
+   ],
+   [
+    "jackie-brown-1997",
+    "Hermosa Beach fish tacos",
+    "veg_af",
+    "Hermosa Beach oyster mushroom tacos (alcohol-free)",
+    [
+     "vegetable oil"
+    ]
+   ],
+   [
+    "jaws-2-1978",
+    "Amity Island fried clams",
+    "veg",
+    "Amity Island fried king oyster mushrooms",
+    [
+     "vegetable oil, for frying"
     ]
    ],
    [
@@ -1835,6 +1917,15 @@
     "365-day project mushroom bourguignon",
     [
      "thyme sprigs and 2 bay leaves"
+    ]
+   ],
+   [
+    "kenny-2006",
+    "Splashdown festival hot chips",
+    "veg",
+    "Splashdown festival hot chips (vegetarian)",
+    [
+     "vegetable oil, for frying"
     ]
    ],
    [
@@ -1931,6 +2022,42 @@
     ]
    ],
    [
+    "miller-s-crossing-1990",
+    "What's-the-rumpus liver pâté toasts",
+    "veg",
+    "What's-the-rumpus mushroom pâté toasts",
+    [
+     "salt and pepper, to taste"
+    ]
+   ],
+   [
+    "miller-s-crossing-1990",
+    "What's-the-rumpus liver pâté toasts",
+    "veg_af",
+    "What's-the-rumpus mushroom pâté toasts (alcohol-free)",
+    [
+     "salt and pepper, to taste"
+    ]
+   ],
+   [
+    "moana-2-2024",
+    "Kakamora coconut prawns",
+    "veg",
+    "Kakamora coconut haloumi",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
+   [
+    "moana-2016",
+    "Coconut pirate crusted prawns",
+    "veg",
+    "Coconut pirate crusted haloumi",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
+   [
     "moulin-rouge-2001",
     "Elephant supper duck with cherry sauce",
     "af",
@@ -1968,6 +2095,24 @@
     ]
    ],
    [
+    "onward-2020",
+    "Burger Shire sliders",
+    "veg",
+    "Burger Shire sliders (vegetarian)",
+    [
+     "slices cheddar"
+    ]
+   ],
+   [
+    "popstar-never-stop-never-stopping-2016",
+    "Tour bus crispy chicken sliders",
+    "veg",
+    "Tour bus crispy mushroom sliders",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
+   [
     "prizzi-s-honor-1985",
     "Don Corrado's baked ziti",
     "veg",
@@ -1985,6 +2130,25 @@
      "carrots, diced",
      "celery sticks, diced",
      "onion, diced"
+    ]
+   ],
+   [
+    "raya-and-the-last-dragon-2021",
+    "Talon night market spring rolls",
+    "veg",
+    "Talon night market spring rolls (vegetarian)",
+    [
+     "mint leaves",
+     "coriander leaves"
+    ]
+   ],
+   [
+    "return-of-the-jedi-1983",
+    "Jabba's palace crumbed prawn bites",
+    "veg",
+    "Jabba's palace crumbed haloumi bites",
+    [
+     "vegetable oil"
     ]
    ],
    [
@@ -2015,12 +2179,57 @@
     ]
    ],
    [
+    "rocky-iii-1982",
+    "Venice beach fish tacos",
+    "veg",
+    "Venice beach battered haloumi tacos",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
+   [
+    "rocky-iii-1982",
+    "Venice beach fish tacos",
+    "veg_af",
+    "Venice beach battered haloumi tacos (alcohol-free)",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
+   [
+    "roman-holiday-1953",
+    "Mozzarella risotto croquettes (supplì)",
+    "veg",
+    "Mozzarella risotto croquettes (supplì) (vegetarian)",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
+   [
     "rumble-in-the-bronx-1995",
     "Hovercraft sweet and sour pork",
     "veg",
     "Hovercraft sweet and sour tofu",
     [
      "vegetable oil, for frying"
+    ]
+   ],
+   [
+    "saturday-night-fever-1977",
+    "Disco fries",
+    "veg",
+    "Disco fries (vegetarian)",
+    [
+     "neutral oil, for frying"
+    ]
+   ],
+   [
+    "scarface-1983",
+    "Freedom Town croquetas de jamón",
+    "veg",
+    "Freedom Town croquetas de setas",
+    [
+     "neutral oil, for frying"
     ]
    ],
    [
@@ -2051,12 +2260,40 @@
     ]
    ],
    [
+    "smile-2022",
+    "Rose's late-shift popcorn chicken",
+    "veg",
+    "Rose's late-shift popcorn tofu",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
+   [
+    "spider-man-into-the-spider-verse-2018",
+    "Chopped cheese rolls",
+    "veg",
+    "Chopped cheese rolls (vegetarian)",
+    [
+     "salt, to taste"
+    ]
+   ],
+   [
     "splash-1984",
     "Fish and chip cones",
     "af",
     "Fish and chip cones",
     [
      "vegetable oil for frying"
+    ]
+   ],
+   [
+    "superman-2025",
+    "Fortress crystal prawn rice paper rolls",
+    "veg",
+    "Fortress crystal tofu rice paper rolls",
+    [
+     "mint leaves",
+     "coriander leaves"
     ]
    ],
    [
@@ -2079,6 +2316,15 @@
    ],
    [
     "the-fall-guy-2024",
+    "Beef sausages with beer onions",
+    "veg",
+    "Veggie sausages with beer onions",
+    [
+     "can lager"
+    ]
+   ],
+   [
+    "the-fall-guy-2024",
     "Jean-Claude's Bondi fish and chips",
     "af",
     "Jean-Claude's Bondi fish and chips",
@@ -2093,6 +2339,33 @@
     "Alice Ward's baked ziti (vegetarian)",
     [
      "penne or ziti"
+    ]
+   ],
+   [
+    "the-flash-2023",
+    "Late for work breakfast sandwich",
+    "veg",
+    "Late for work breakfast sandwich (vegetarian)",
+    [
+     "slices cheddar"
+    ]
+   ],
+   [
+    "the-freshman-1990",
+    "Little Italy fried calamari",
+    "veg",
+    "Little Italy fried mushroom calamari (vegetarian)",
+    [
+     "neutral oil, for frying"
+    ]
+   ],
+   [
+    "the-godfather-part-ii-1974",
+    "Genco olive oil arancini",
+    "veg",
+    "Genco olive oil arancini (vegetarian)",
+    [
+     "neutral oil, for frying"
     ]
    ],
    [
@@ -2123,6 +2396,15 @@
     ]
    ],
    [
+    "the-incredibles-2004",
+    "Nomanisan Island coconut prawns",
+    "veg",
+    "Nomanisan Island coconut tofu",
+    [
+     "vegetable oil"
+    ]
+   ],
+   [
     "the-lord-of-the-rings-the-two-towers-2002",
     "Sam's rabbit stew",
     "af",
@@ -2134,11 +2416,29 @@
    ],
    [
     "the-mask-1994",
+    "Coconut prawns and plantain chips",
+    "veg",
+    "Coconut cauliflower and plantain chips",
+    [
+     "vegetable oil"
+    ]
+   ],
+   [
+    "the-mask-1994",
     "Milo's steak",
     "veg",
     "Milo's cauliflower steak",
     [
      "salt and pepper, to taste"
+    ]
+   ],
+   [
+    "the-matrix-1999",
+    "Cypher's steak bites",
+    "veg",
+    "Cypher's mushroom steak bites",
+    [
+     "salt, to taste"
     ]
    ],
    [
@@ -2153,11 +2453,38 @@
    ],
    [
     "the-princess-diaries-2001",
+    "Grandma's first corn dog",
+    "veg",
+    "Grandma's first corn dog (vegetarian)",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
+   [
+    "the-princess-diaries-2001",
     "State dinner chicken",
     "veg",
     "State dinner spinach and ricotta parcels",
     [
      "salt and pepper, to taste"
+    ]
+   ],
+   [
+    "the-rock-1996",
+    "Fisherman's Wharf prawns",
+    "veg",
+    "Fisherman's Wharf garlic mushrooms",
+    [
+     "baguette"
+    ]
+   ],
+   [
+    "the-rock-1996",
+    "Fisherman's Wharf prawns",
+    "veg_af",
+    "Fisherman's Wharf garlic mushrooms (alcohol-free)",
+    [
+     "baguette"
     ]
    ],
    [
@@ -2170,12 +2497,39 @@
     ]
    ],
    [
+    "the-rocketeer-1991",
+    "South Seas Club canapés",
+    "veg",
+    "South Seas Club canapés (vegetarian)",
+    [
+     "vegetable oil"
+    ]
+   ],
+   [
     "the-terminator-1984",
     "Big Jeff's burger",
     "veg",
     "Big Jeff's mushroom and haloumi burger",
     [
      "salt and pepper, to taste"
+    ]
+   ],
+   [
+    "the-untouchables-1987",
+    "Capone's arancini",
+    "veg",
+    "Capone's arancini (vegetarian)",
+    [
+     "neutral oil, for frying"
+    ]
+   ],
+   [
+    "the-witches-1990",
+    "Hotel tea sandwiches",
+    "veg",
+    "Hotel tea sandwiches (vegetarian)",
+    [
+     "slices white bread"
     ]
    ],
    [
@@ -2208,12 +2562,94 @@
     ]
    ],
    [
+    "top-gun-1986",
+    "Beach volleyball fish tacos",
+    "veg",
+    "Beach volleyball haloumi tacos",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
+   [
+    "top-gun-1986",
+    "Beach volleyball fish tacos",
+    "veg_af",
+    "Beach volleyball haloumi tacos (alcohol-free)",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
+   [
+    "toy-story-4-2019",
+    "Carnival corn dogs",
+    "veg",
+    "Carnival corn dogs (vegetarian)",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
+   [
+    "train-to-busan-2016",
+    "Baseball team Korean fried chicken",
+    "veg",
+    "Baseball team Korean fried cauliflower",
+    [
+     "vegetable oil"
+    ]
+   ],
+   [
     "two-hands-1999",
     "Bondi fish and chips",
     "af",
     "Bondi fish and chips",
     [
      "flathead fillets"
+    ]
+   ],
+   [
+    "two-hands-1999",
+    "Bondi fish and chips",
+    "veg",
+    "Bondi battered haloumi and chips",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
+   [
+    "two-hands-1999",
+    "Bondi fish and chips",
+    "veg_af",
+    "Bondi battered haloumi and chips (alcohol-free)",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
+   [
+    "unbreakable-2000",
+    "Mr Glass lemon and berry jelly",
+    "veg",
+    "Mr Glass lemon and berry jelly (vegetarian)",
+    [
+     "blueberries",
+     "raspberries"
+    ]
+   ],
+   [
+    "us-2019",
+    "Santa Cruz boardwalk corn dogs",
+    "veg",
+    "Santa Cruz boardwalk corn dogs (vegetarian)",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
+   [
+    "wall-street-1987",
+    "Steak tartare",
+    "veg",
+    "Beetroot tartare (vegetarian)",
+    [
+     "salt and pepper, to taste"
     ]
    ],
    [
@@ -2234,6 +2670,466 @@
      "vegetable oil",
      "vegetable oil, for frying"
     ]
+   ],
+   [
+    "x-men-origins-wolverine-2009",
+    "Canadian Rockies poutine",
+    "veg",
+    "Canadian Rockies poutine (vegetarian)",
+    [
+     "vegetable oil, for frying"
+    ]
+   ],
+   [
+    "x2-2003",
+    "Boston clam chowder cups",
+    "veg",
+    "Boston mushroom chowder cups",
+    [
+     "salt and pepper, to taste"
+    ]
+   ]
+  ],
+  "much longer than original": [
+   [
+    "after-hours-1985",
+    "Terminal Bar whiskey sour",
+    "af",
+    "Terminal Bar whiskey sour (alcohol-free)",
+    10,
+    29
+   ],
+   [
+    "arthur-1981",
+    "Caviar blini",
+    "veg",
+    "Caviar blini (vegetarian)",
+    15,
+    40
+   ],
+   [
+    "avengers-age-of-ultron-2015",
+    "Asgardian honey mead punch",
+    "af",
+    "Asgardian honey mead punch (alcohol-free)",
+    10,
+    24
+   ],
+   [
+    "bad-santa-2003",
+    "Willie's bourbon and ginger highball",
+    "af",
+    "Willie's bourbon and ginger highball (alcohol-free)",
+    5,
+    25
+   ],
+   [
+    "baseketball-1998",
+    "Denslow Cup brandy old fashioned",
+    "af",
+    "Denslow Cup brandy old fashioned (alcohol-free)",
+    5,
+    25
+   ],
+   [
+    "beerfest-2006",
+    "Das Boot lemon radler",
+    "af",
+    "Das Boot lemon radler (alcohol-free)",
+    3,
+    35
+   ],
+   [
+    "big-1988",
+    "Caviar on crackers",
+    "veg",
+    "Lentil caviar on crackers",
+    15,
+    40
+   ],
+   [
+    "blade-runner-1982",
+    "Deckard's Japanese whisky highball",
+    "af",
+    "Deckard's Japanese whisky highball (alcohol-free)",
+    5,
+    25
+   ],
+   [
+    "blade-runner-2049-2017",
+    "Deckard's Scotch and honey highball",
+    "af",
+    "Deckard's Scotch and honey highball (alcohol-free)",
+    8,
+    28
+   ],
+   [
+    "brewster-s-millions-1985",
+    "Caviar blini",
+    "veg",
+    "Lentil caviar blini",
+    15,
+    40
+   ],
+   [
+    "butch-cassidy-and-the-sundance-kid-1969",
+    "Hole-in-the-Wall bourbon sour",
+    "af",
+    "Hole-in-the-Wall bourbon sour (alcohol-free)",
+    10,
+    29
+   ],
+   [
+    "con-air-1997",
+    "Cyrus the Virus bourbon smash",
+    "af",
+    "Cyrus the Virus bourbon smash (alcohol-free)",
+    8,
+    23
+   ],
+   [
+    "crocodile-dundee-1986",
+    "Walkabout Creek rum and ginger beer",
+    "af",
+    "Walkabout Creek rum and ginger beer (alcohol-free)",
+    8,
+    23
+   ],
+   [
+    "die-hard-1988",
+    "Nakatomi party canapés",
+    "veg",
+    "Nakatomi party canapés (vegetarian)",
+    20,
+    45
+   ],
+   [
+    "die-hard-1988",
+    "Argyle's limo bar old fashioned",
+    "af",
+    "Argyle's limo bar old fashioned (alcohol-free)",
+    10,
+    25
+   ],
+   [
+    "escape-from-new-york-1981",
+    "Brain's bathtub moonshine sour",
+    "af",
+    "Brain's bathtub moonshine sour (alcohol-free)",
+    8,
+    23
+   ],
+   [
+    "fright-night-1985",
+    "Holy water lemon, lime and bitters",
+    "af",
+    "Holy water lemon, lime and bitters (alcohol-free)",
+    10,
+    23
+   ],
+   [
+    "get-hard-2015",
+    "Bel Air salmon roe blinis",
+    "veg",
+    "Bel Air beetroot and black lentil blinis",
+    17,
+    39
+   ],
+   [
+    "goldfinger-1964",
+    "Mint julep",
+    "af",
+    "Mint julep (alcohol-free)",
+    10,
+    30
+   ],
+   [
+    "groundhog-day-1993",
+    "Rita's sweet vermouth on the rocks",
+    "af",
+    "Rita's sweet vermouth on the rocks (alcohol-free)",
+    5,
+    26
+   ],
+   [
+    "john-wick-2014",
+    "Continental bourbon sour",
+    "af",
+    "Continental bourbon sour (alcohol-free)",
+    10,
+    30
+   ],
+   [
+    "lethal-weapon-2-1989",
+    "Consulate biltong",
+    "veg",
+    "Consulate mushroom biltong",
+    20,
+    84
+   ],
+   [
+    "lion-2016",
+    "Tasmanian smoked salmon",
+    "veg",
+    "Tasmanian smoky carrot rye bites",
+    20,
+    65
+   ],
+   [
+    "lock-stock-and-two-smoking-barrels-1998",
+    "Two smoking barrels peated whisky sour",
+    "af",
+    "Two smoking barrels peated whisky sour (alcohol-free)",
+    10,
+    30
+   ],
+   [
+    "logan-2017",
+    "Logan's limo bourbon and maple sour",
+    "af",
+    "Logan's limo bourbon and maple sour (alcohol-free)",
+    10,
+    25
+   ],
+   [
+    "lost-in-translation-2003",
+    "Japanese whisky highball",
+    "af",
+    "Japanese whisky highball (alcohol-free)",
+    5,
+    30
+   ],
+   [
+    "mad-max-2-1981",
+    "Guzzoline dark and stormy",
+    "af",
+    "Guzzoline dark and stormy (alcohol-free)",
+    5,
+    24
+   ],
+   [
+    "manhattan-1979",
+    "Queensboro Bridge bagels and lox",
+    "veg",
+    "Queensboro Bridge bagels and carrot lox",
+    20,
+    58
+   ],
+   [
+    "manhattan-1979",
+    "Manhattan cocktail",
+    "af",
+    "Manhattan cocktail (alcohol-free)",
+    10,
+    25
+   ],
+   [
+    "midsommar-2019",
+    "Pelle's pickled herring and new potatoes",
+    "veg",
+    "Pelle's pickled eggplant and new potatoes",
+    30,
+    107
+   ],
+   [
+    "once-upon-a-time-in-america-1984",
+    "Bagel crisps with schmear",
+    "veg",
+    "Bagel crisps with schmear and cured beetroot",
+    27,
+    62
+   ],
+   [
+    "pirates-of-the-caribbean-dead-men-tell-no-tales-2017",
+    "Jack's rum, ginger and lime highball",
+    "af",
+    "Jack's rum, ginger and lime highball (alcohol-free)",
+    8,
+    23
+   ],
+   [
+    "predator-1987",
+    "Val Verde jungle rum punch",
+    "af",
+    "Val Verde jungle rum punch (alcohol-free)",
+    10,
+    25
+   ],
+   [
+    "quick-change-1990",
+    "Wheels-up bourbon smash",
+    "af",
+    "Wheels-up bourbon smash (alcohol-free)",
+    10,
+    30
+   ],
+   [
+    "rain-man-1988",
+    "Maple syrup bourbon smash",
+    "af",
+    "Maple syrup bourbon smash (alcohol-free)",
+    10,
+    29
+   ],
+   [
+    "saturday-night-fever-1977",
+    "2001 Odyssey whisky lemon fizz",
+    "af",
+    "2001 Odyssey whisky lemon fizz (alcohol-free)",
+    8,
+    23
+   ],
+   [
+    "serpico-1973",
+    "Village bagels and lox",
+    "veg",
+    "Village bagels and carrot lox",
+    13,
+    34
+   ],
+   [
+    "shaft-1971",
+    "Bumpy Jonas whisky sour",
+    "af",
+    "Bumpy Jonas whisky sour (alcohol-free)",
+    9,
+    24
+   ],
+   [
+    "solo-a-star-wars-story-2018",
+    "Lando's cape cocktail",
+    "af",
+    "Lando's cape cocktail (alcohol-free)",
+    5,
+    24
+   ],
+   [
+    "soul-2020",
+    "Barber shop bagel bites",
+    "veg",
+    "Barber shop bagel bites with carrot lox",
+    24,
+    64
+   ],
+   [
+    "terminator-2-judgment-day-1991",
+    "Liquid nitrogen frozen margarita",
+    "af",
+    "Liquid nitrogen frozen margarita (alcohol-free)",
+    10,
+    25
+   ],
+   [
+    "the-french-connection-1971",
+    "Marseille mauresque",
+    "af",
+    "Marseille mauresque (alcohol-free)",
+    5,
+    35
+   ],
+   [
+    "the-heat-2013",
+    "Ashburn and Mullins whiskey sour",
+    "af",
+    "Ashburn and Mullins whiskey sour (alcohol-free)",
+    10,
+    25
+   ],
+   [
+    "the-shining-1980",
+    "Gold Room bourbon old fashioned",
+    "af",
+    "Gold Room bourbon old fashioned (alcohol-free)",
+    7,
+    32
+   ],
+   [
+    "the-untouchables-1987",
+    "Canadian rye",
+    "af",
+    "Canadian rye (alcohol-free)",
+    5,
+    30
+   ],
+   [
+    "the-untouchables-1987",
+    "Repeal Day old fashioned",
+    "af",
+    "Repeal Day old fashioned (alcohol-free)",
+    7,
+    31
+   ],
+   [
+    "true-romance-1993",
+    "Cancún beach margarita",
+    "af",
+    "Cancún beach margarita (alcohol-free)",
+    10,
+    23
+   ],
+   [
+    "under-siege-1992",
+    "USS Missouri navy grog",
+    "af",
+    "USS Missouri navy grog (alcohol-free)",
+    8,
+    23
+   ],
+   [
+    "violent-night-2022",
+    "Gertrude Lightstone's salmon roe blinis",
+    "veg",
+    "Gertrude Lightstone's blinis with black lentil caviar",
+    20,
+    45
+   ],
+   [
+    "weekend-at-bernie-s-1989",
+    "Larry and Richard's mai tai",
+    "af",
+    "Larry and Richard's mai tai (alcohol-free)",
+    10,
+    25
+   ],
+   [
+    "when-harry-met-sally-1989",
+    "Pastrami on rye",
+    "veg",
+    "Beetroot pastrami on rye",
+    20,
+    79
+   ],
+   [
+    "white-christmas-1954",
+    "Midnight liverwurst on rye and buttermilk",
+    "veg",
+    "Midnight mushroom pate on rye and buttermilk",
+    15,
+    35
+   ],
+   [
+    "working-girl-1988",
+    "Tess's Manhattan cocktail",
+    "af",
+    "Tess's Manhattan cocktail (alcohol-free)",
+    5,
+    25
+   ],
+   [
+    "x-men-days-of-future-past-2014",
+    "Mystique blue margarita",
+    "af",
+    "Mystique blue margarita (alcohol-free)",
+    12,
+    27
+   ],
+   [
+    "x-men-origins-wolverine-2009",
+    "Rockies maple whisky sour",
+    "af",
+    "Rockies maple whisky sour (alcohol-free)",
+    10,
+    30
    ]
   ]
  },
@@ -2245,7 +3141,7 @@
    ],
    [
     "Cameron's croque monsieur squares",
-    "meat"
+    "veg"
    ],
    [
     "Prom night pasta",
@@ -2263,7 +3159,7 @@
   "13-going-on-30-2004": [
    [
     "Sour lolly popcorn balls",
-    "meat"
+    "veg"
    ],
    [
     "Wishing dust sugar cookies",
@@ -2285,11 +3181,11 @@
   "16-blocks-2006": [
    [
     "Salt and vinegar pork crackling",
-    "meat"
+    "veg"
    ],
    [
     "Chinatown dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Chopped cheese",
@@ -2307,7 +3203,7 @@
   "21-jump-street-2012": [
    [
     "Cafeteria pizza squares",
-    "meat"
+    "veg"
    ],
    [
     "Peter Pan rehearsal quesadillas",
@@ -2329,11 +3225,11 @@
   "22-jump-street-2014": [
    [
     "My name is Jeff crab cakes",
-    "meat"
+    "veg"
    ],
    [
     "Frat house sticky barbecue wings",
-    "meat"
+    "veg"
    ],
    [
     "Captain Dickson's fish tacos",
@@ -2377,7 +3273,7 @@
    ],
    [
     "Hawaiian poke cups",
-    "meat"
+    "veg"
    ],
    [
     "Loco moco",
@@ -2439,7 +3335,7 @@
   "a-christmas-carol-2009": [
    [
     "Fezziwig's ball pork and sage rolls",
-    "meat"
+    "veg"
    ],
    [
     "Brown butter roast chestnuts",
@@ -2461,11 +3357,11 @@
   "a-christmas-story-1983": [
    [
     "Meatloaf bites",
-    "meat"
+    "veg"
    ],
    [
     "Prosciutto wrapped breadsticks and ricotta",
-    "meat"
+    "veg"
    ],
    [
     "Christmas duck",
@@ -2483,11 +3379,11 @@
   "a-goofy-movie-1995": [
    [
     "Perfect Cast fish fingers",
-    "meat"
+    "veg"
    ],
    [
     "Powerline concert nachos",
-    "meat"
+    "veg"
    ],
    [
     "Pete's RV barbecue sausages",
@@ -2495,7 +3391,7 @@
    ],
    [
     "Bigfoot campsite s'mores",
-    "meat"
+    "veg"
    ],
    [
     "Concert night cherry slushie",
@@ -2505,7 +3401,7 @@
   "a-minecraft-movie-2025": [
    [
     "Overworld loaded jacket potatoes",
-    "meat"
+    "veg"
    ],
    [
     "Pixel chocolate cookies",
@@ -2527,7 +3423,7 @@
   "a-night-at-the-roxbury-1998": [
    [
     "Roxbury club sliders",
-    "meat"
+    "veg"
    ],
    [
     "Fake plant shop crudités",
@@ -2571,7 +3467,7 @@
   "a-quiet-place-2018": [
    [
     "Lettuce leaf chicken and rice cups",
-    "meat"
+    "veg"
    ],
    [
     "Silent soft pretzels",
@@ -2593,11 +3489,11 @@
   "about-time-2013": [
    [
     "Cornish beach crab and cress sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Cornish beef and swede pasties",
-    "meat"
+    "veg"
    ],
    [
     "Dinner-in-the-dark lamb shanks with mash",
@@ -2615,7 +3511,7 @@
   "ace-ventura-pet-detective-1994": [
    [
     "Miami croquetas",
-    "meat"
+    "veg"
    ],
    [
     "Tropical fruit skewers",
@@ -2637,11 +3533,11 @@
   "ace-ventura-when-nature-calls-1995": [
    [
     "Safari camp beef samosas with mint yoghurt",
-    "meat"
+    "veg"
    ],
    [
     "Monastery momos with chilli tomato sauce",
-    "meat"
+    "veg"
    ],
    [
     "Safari grilled chicken with chapati",
@@ -2659,7 +3555,7 @@
   "addams-family-values-1993": [
    [
     "Camp Chippewa sloppy joe sliders",
-    "meat"
+    "veg"
    ],
    [
     "Wednesday's smile cookies",
@@ -2681,7 +3577,7 @@
   "after-hours-1985": [
    [
     "Bagel paperweight bites with chive schmear",
-    "meat"
+    "veg"
    ],
    [
     "Mob truck choc-dipped sundae cones",
@@ -2795,7 +3691,7 @@
    ],
    [
     "Freighter stores crackers",
-    "meat"
+    "veg"
    ],
    [
     "Nostromo crew dinner",
@@ -2825,7 +3721,7 @@
    ],
    [
     "Facehugger panna cotta",
-    "meat"
+    "veg"
    ],
    [
     "Sulaco condensed milk iced coffee",
@@ -2835,11 +3731,11 @@
   "always-be-my-maybe-2019": [
    [
     "Beef and veg bibimbap cups",
-    "meat"
+    "veg"
    ],
    [
     "Hello Peril band wings",
-    "meat"
+    "veg"
    ],
    [
     "Kimchi jjigae",
@@ -2861,7 +3757,7 @@
    ],
    [
     "Brie, fig jam and ham baguette toasts",
-    "meat"
+    "veg"
    ],
    [
     "Paris bistro chicken",
@@ -2879,7 +3775,7 @@
   "american-pie-1999": [
    [
     "Stifler's party wings",
-    "meat"
+    "veg"
    ],
    [
     "Band camp grilled corn",
@@ -2905,7 +3801,7 @@
    ],
    [
     "Beef and dill pirozhki",
-    "meat"
+    "veg"
    ],
    [
     "Mama's beetroot and cabbage borscht",
@@ -2923,11 +3819,11 @@
   "an-american-werewolf-in-london-1981": [
    [
     "Slaughtered Lamb pork crackling",
-    "meat"
+    "veg"
    ],
    [
     "Scotch eggs",
-    "meat"
+    "veg"
    ],
    [
     "Shepherd's pie",
@@ -2945,7 +3841,7 @@
   "analyze-this-1999": [
    [
     "Sobel wedding fried calamari",
-    "meat"
+    "veg"
    ],
    [
     "Mozzarella in carrozza",
@@ -2967,11 +3863,11 @@
   "anchorman-2-the-legend-continues-2013": [
    [
     "Chicken of the Cave wings",
-    "meat"
+    "veg"
    ],
    [
     "Doby's lighthouse fish bites",
-    "meat"
+    "veg"
    ],
    [
     "GNN late shift steak",
@@ -2979,7 +3875,7 @@
    ],
    [
     "Linda's chocolate fondue",
-    "meat"
+    "veg"
    ],
    [
     "Ron's Scotch Rob Roy",
@@ -2993,7 +3889,7 @@
    ],
    [
     "Carne asada fries",
-    "meat"
+    "veg"
    ],
    [
     "San Diego crispy chicken tacos",
@@ -3015,7 +3911,7 @@
    ],
    [
     "Dexter Lake Club wings",
-    "meat"
+    "veg"
    ],
    [
     "Delta house sloppy joes",
@@ -3033,7 +3929,7 @@
   "animal-kingdom-2010": [
    [
     "Melbourne souvlaki bites",
-    "meat"
+    "veg"
    ],
    [
     "Suburban dip and chips",
@@ -3055,11 +3951,11 @@
   "annabelle-2014": [
    [
     "Stovetop maple bacon brown butter popcorn",
-    "meat"
+    "veg"
    ],
    [
     "1969 cocktail party bites",
-    "meat"
+    "veg"
    ],
    [
     "Chicken and rice mushroom casserole",
@@ -3077,7 +3973,7 @@
   "annie-1982": [
    [
     "Warbucks mansion canapés",
-    "meat"
+    "veg"
    ],
    [
     "Radio City popcorn",
@@ -3099,7 +3995,7 @@
   "annie-hall-1977": [
    [
     "Lobster bites",
-    "meat"
+    "veg"
    ],
    [
     "Alvy's potato knishes",
@@ -3125,7 +4021,7 @@
    ],
    [
     "Glovebox jerky",
-    "meat"
+    "veg"
    ],
    [
     "Sourdough bread bowl chowder",
@@ -3147,7 +4043,7 @@
    ],
    [
     "Luis's baked chicken taquitos",
-    "meat"
+    "veg"
    ],
    [
     "San Francisco burritos",
@@ -3165,7 +4061,7 @@
   "ant-man-and-the-wasp-2018": [
    [
     "Shrinking lab mini quiches",
-    "meat"
+    "veg"
    ],
    [
     "Giant-size choc chip skillet cookie",
@@ -3177,7 +4073,7 @@
    ],
    [
     "Quantum realm layered jelly cups",
-    "meat"
+    "veg"
    ],
    [
     "House arrest root beer floats",
@@ -3209,11 +4105,11 @@
   "anyone-but-you-2023": [
    [
     "Huntsman in the pants harbour prawns",
-    "meat"
+    "veg"
    ],
    [
     "Sydney meat pies",
-    "meat"
+    "veg"
    ],
    [
     "Harbour barramundi",
@@ -3231,11 +4127,11 @@
   "aquaman-2018": [
    [
     "Lighthouse dad's fish bites",
-    "meat"
+    "veg"
    ],
    [
     "Bikers' bar wings",
-    "meat"
+    "veg"
    ],
    [
     "Atlantis seafood platter",
@@ -3257,7 +4153,7 @@
    ],
    [
     "Oil rig jerky",
-    "meat"
+    "veg"
    ],
    [
     "Rib eye with onion gravy and mash",
@@ -3275,7 +4171,7 @@
   "arrival-2016": [
    [
     "Montana camp jerky",
-    "meat"
+    "veg"
    ],
    [
     "Canary seed crackers",
@@ -3297,11 +4193,11 @@
   "arthur-1981": [
    [
     "Susan Johnson engagement canapés",
-    "meat"
+    "veg"
    ],
    [
     "Caviar blini",
-    "meat"
+    "veg"
    ],
    [
     "Hobson's alert-the-media roast beef",
@@ -3323,7 +4219,7 @@
    ],
    [
     "Grandsanta's old-school mince pies",
-    "meat"
+    "veg"
    ],
    [
     "North Pole Christmas roast",
@@ -3341,11 +4237,11 @@
   "as-good-as-it-gets-1997": [
    [
     "Verdell's bacon",
-    "meat"
+    "veg"
    ],
    [
     "Café breakfast bites",
-    "meat"
+    "veg"
    ],
    [
     "Baltimore crab cakes",
@@ -3363,11 +4259,11 @@
   "atlantis-the-lost-empire-2001": [
    [
     "Cookie's chuck wagon beans",
-    "meat"
+    "veg"
    ],
    [
     "Cheese, salami and cracker tins",
-    "meat"
+    "veg"
    ],
    [
     "Lime grilled fish with mango salsa",
@@ -3385,11 +4281,11 @@
   "austin-powers-international-man-of-mystery-1997": [
    [
     "Shagadelic devilled eggs with bacon",
-    "meat"
+    "veg"
    ],
    [
     "Sixties cheese and pineapple hedgehog",
-    "meat"
+    "veg"
    ],
    [
     "Dr. Evil's one million dollar steak Diane",
@@ -3411,7 +4307,7 @@
    ],
    [
     "Faraway Downs corned beef sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Campfire beef and vegetables",
@@ -3433,7 +4329,7 @@
    ],
    [
     "Hallelujah Mountains bao",
-    "meat"
+    "veg"
    ],
    [
     "Hometree hunter's spit-roast",
@@ -3451,7 +4347,7 @@
   "avatar-the-way-of-water-2022": [
    [
     "Reef village garlic prawns",
-    "meat"
+    "veg"
    ],
    [
     "Tulkun tropical fruit",
@@ -3463,7 +4359,7 @@
    ],
    [
     "Lagoon coconut pudding",
-    "meat"
+    "veg"
    ],
    [
     "Reef coconut pineapple crush",
@@ -3473,7 +4369,7 @@
   "avengers-age-of-ultron-2015": [
    [
     "Seoul street chicken",
-    "meat"
+    "veg"
    ],
    [
     "Sokovia pierogi",
@@ -3495,11 +4391,11 @@
   "avengers-endgame-2019": [
    [
     "Lake house chicken salad rolls",
-    "meat"
+    "veg"
    ],
    [
     "Compound kitchen tacos",
-    "meat"
+    "veg"
    ],
    [
     "Morgan's cheeseburgers",
@@ -3517,11 +4413,11 @@
   "avengers-infinity-war-2018": [
    [
     "Wakanda battle suya",
-    "meat"
+    "veg"
    ],
    [
     "School bus ham and cheese pizza scrolls",
-    "meat"
+    "veg"
    ],
    [
     "Thanos's farm stew",
@@ -3529,7 +4425,7 @@
    ],
    [
     "Infinity Stone fruit jelly cups",
-    "meat"
+    "veg"
    ],
    [
     "Wakanda pineapple ginger cooler",
@@ -3599,7 +4495,7 @@
    ],
    [
     "Jaws 19 shark jelly",
-    "meat"
+    "veg"
    ],
    [
     "Cafe 80's milkshake",
@@ -3631,7 +4527,7 @@
   "bad-boys-1995": [
    [
     "Miami croquetas",
-    "meat"
+    "veg"
    ],
    [
     "Fried sweet plantains",
@@ -3701,7 +4597,7 @@
    ],
    [
     "Salami, cheddar and pickle toasties",
-    "meat"
+    "veg"
    ],
    [
     "Detroit-style pizza",
@@ -3719,11 +4615,11 @@
   "barbershop-2002": [
    [
     "Stolen ATM hot links",
-    "meat"
+    "veg"
    ],
    [
     "Chicago tamales",
-    "meat"
+    "veg"
    ],
    [
     "Calvin's barbershop rib tips",
@@ -3741,7 +4637,7 @@
   "barbie-2023": [
    [
     "Dreamhouse pink prawn cocktail cups",
-    "meat"
+    "veg"
    ],
    [
     "Beach Ken watermelon and feta skewers",
@@ -3767,7 +4663,7 @@
    ],
    [
     "Psych-out pretzel bites with beer cheese",
-    "meat"
+    "af"
    ],
    [
     "Beers beer-braised bratwurst",
@@ -3807,11 +4703,11 @@
   "batman-begins-2005": [
    [
     "Himalayan beef momo with tomato achar",
-    "meat"
+    "veg"
    ],
    [
     "Alfred's why-do-we-fall tea sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Wayne Manor Sunday roast",
@@ -3851,7 +4747,7 @@
   "batman-returns-1992": [
    [
     "Smoked salmon on rye",
-    "meat"
+    "veg"
    ],
    [
     "Gotham Plaza roasted chestnuts",
@@ -3873,7 +4769,7 @@
   "batman-robin-1997": [
    [
     "Mr Freeze iced prawns",
-    "meat"
+    "veg"
    ],
    [
     "Poison Ivy garden salad cups",
@@ -3895,11 +4791,11 @@
   "batman-v-superman-dawn-of-justice-2016": [
    [
     "Lex's gala canapés",
-    "meat"
+    "veg"
    ],
    [
     "Smoked trout crispbreads",
-    "meat"
+    "veg"
    ],
    [
     "Metropolis gala beef Wellington",
@@ -3929,11 +4825,11 @@
    ],
    [
     "Enchanted rose panna cotta",
-    "meat"
+    "veg"
    ],
    [
     "LeFou's apple slush",
-    "meat"
+    "veg"
    ]
   ],
   "beauty-and-the-beast-2017": [
@@ -3961,7 +4857,7 @@
   "beerfest-2006": [
    [
     "Wolfhouse giant pretzels with mustard butter",
-    "meat"
+    ""
    ],
    [
     "Landfill's beer garden Obatzda",
@@ -3983,7 +4879,7 @@
   "beetlejuice-1988": [
    [
     "Banana Boat prawn cocktail",
-    "meat"
+    "veg"
    ],
    [
     "Model town cheese bites",
@@ -4009,7 +4905,7 @@
    ],
    [
     "Charters Towers corned beef rolls",
-    "meat"
+    "veg"
    ],
    [
     "Messines trench corned beef hash",
@@ -4053,7 +4949,7 @@
    ],
    [
     "Detroit coney sliders",
-    "meat"
+    "veg"
    ],
    [
     "Beverly Palm room service",
@@ -4071,7 +4967,7 @@
   "beverly-hills-cop-ii-1987": [
    [
     "Beverly Hills crudités",
-    "meat"
+    "veg"
    ],
    [
     "Pierogi",
@@ -4097,7 +4993,7 @@
    ],
    [
     "Spider Rider midway corn dogs",
-    "meat"
+    "veg"
    ],
    [
     "Uncle Dave's theme park turkey legs",
@@ -4119,7 +5015,7 @@
    ],
    [
     "Caviar on crackers",
-    "meat"
+    "veg"
    ],
    [
     "Street cart hot dog",
@@ -4137,11 +5033,11 @@
   "big-daddy-1999": [
    [
     "Sonny's sports bar barbecue wings",
-    "meat"
+    "veg"
    ],
    [
     "Central Park everything bagel bites",
-    "meat"
+    "veg"
    ],
    [
     "Tollbooth shift cheeseburgers",
@@ -4149,7 +5045,7 @@
    ],
    [
     "Blue jelly ice cream sundaes",
-    "meat"
+    "veg"
    ],
    [
     "Frankenstein's chocolate malt milkshake",
@@ -4181,11 +5077,11 @@
   "big-hero-6-2014": [
    [
     "Aunt Cass's hot wings",
-    "meat"
+    "veg"
    ],
    [
     "Baymax marshmallow bites",
-    "meat"
+    "veg"
    ],
    [
     "San Fransokyo ramen",
@@ -4203,11 +5099,11 @@
   "big-night-1996": [
    [
     "Seafood risotto",
-    "meat"
+    "veg"
    ],
    [
     "Risotto three ways",
-    "meat"
+    "veg"
    ],
    [
     "Timpano",
@@ -4225,11 +5121,11 @@
   "big-trouble-in-little-china-1986": [
    [
     "Pork and chive dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Salt and pepper squid",
-    "meat"
+    "veg"
    ],
    [
     "Wang Chi's dan dan noodles",
@@ -4255,7 +5151,7 @@
    ],
    [
     "Medieval turkey legs",
-    "meat"
+    "veg"
    ],
    [
     "Napoleon's chicken Marengo",
@@ -4273,11 +5169,11 @@
   "billy-madison-1995": [
    [
     "Grade one ham and cheese pinwheels",
-    "meat"
+    "veg"
    ],
    [
     "Madison Hotel mini club sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Pool party chilli cheese dogs",
@@ -4295,7 +5191,7 @@
   "black-panther-2018": [
    [
     "Busan gochujang honey wings",
-    "meat"
+    "veg"
    ],
    [
     "Heart-shaped herb dip",
@@ -4317,7 +5213,7 @@
   "black-panther-wakanda-forever-2022": [
    [
     "Talokan lime shrimp tostadas",
-    "meat"
+    "veg"
    ],
    [
     "Heart-shaped herb plantain chips",
@@ -4339,7 +5235,7 @@
   "black-sheep-1996": [
    [
     "Rally night pigs in blankets",
-    "meat"
+    "veg"
    ],
    [
     "Washington apple and cheddar crostini",
@@ -4365,7 +5261,7 @@
    ],
    [
     "Norway hideout fish",
-    "meat"
+    "veg"
    ],
    [
     "Melina's pork chops (not Alexei)",
@@ -4405,7 +5301,7 @@
   "blade-runner-1982": [
    [
     "Noodle bar gyoza",
-    "meat"
+    "veg"
    ],
    [
     "Origami crackers",
@@ -4427,11 +5323,11 @@
   "blade-runner-2049-2017": [
    [
     "Protein farm grub-free skewers",
-    "meat"
+    "veg"
    ],
    [
     "Rainy LA street gyoza",
-    "meat"
+    "veg"
    ],
    [
     "Joi's rib eye, mash and red wine jus",
@@ -4439,7 +5335,7 @@
    ],
    [
     "Snowfall panna cotta",
-    "meat"
+    "veg"
    ],
    [
     "Deckard's Scotch and honey highball",
@@ -4453,7 +5349,7 @@
    ],
    [
     "Fire and Ice prawns",
-    "meat"
+    "veg"
    ],
    [
     "Championship chicken parmigiana",
@@ -4497,7 +5393,7 @@
    ],
    [
     "Kowloon Walled City curry fish balls",
-    "meat"
+    "veg"
    ],
    [
     "Kumite black pepper beef",
@@ -4519,7 +5415,7 @@
    ],
    [
     "Crispy pork belly chicharrones",
-    "meat"
+    "veg"
    ],
    [
     "Nana's pozole rojo",
@@ -4537,7 +5433,7 @@
   "bolt-2008": [
    [
     "Mittens' tuna melt bites",
-    "meat"
+    "veg"
    ],
    [
     "Rhino's cheese balls",
@@ -4559,11 +5455,11 @@
   "boomerang-1992": [
    [
     "Strangé's cocktail meatballs",
-    "meat"
+    "veg"
    ],
    [
     "Marcus's smoked salmon pinwheels",
-    "meat"
+    "veg"
    ],
    [
     "Date night steak",
@@ -4603,7 +5499,7 @@
   "boyz-n-the-hood-1991": [
    [
     "Doughboy's welcome-home wings",
-    "meat"
+    "veg"
    ],
    [
     "Front porch devilled eggs",
@@ -4625,11 +5521,11 @@
   "brave-2012": [
    [
     "Clan DunBroch Scotch eggs",
-    "meat"
+    "veg"
    ],
    [
     "Bear mum's salmon bites",
-    "meat"
+    "veg"
    ],
    [
     "Scotch broth",
@@ -4651,7 +5547,7 @@
    ],
    [
     "Thistle-topped smoked salmon",
-    "meat"
+    "veg"
    ],
    [
     "Scotch broth and lamb",
@@ -4691,11 +5587,11 @@
   "brewster-s-millions-1985": [
    [
     "Prawn cocktail for the whole hotel",
-    "meat"
+    "veg"
    ],
    [
     "Caviar blini",
-    "meat"
+    "veg"
    ],
    [
     "Surf and turf",
@@ -4739,7 +5635,7 @@
    ],
    [
     "Capers on toast",
-    "meat"
+    "veg"
    ],
    [
     "Bridget's not-blue leek soup",
@@ -4757,7 +5653,7 @@
   "brother-bear-2003": [
    [
     "Salmon run bites",
-    "meat"
+    "veg"
    ],
    [
     "Rutt and Tuke's maple nuts",
@@ -4779,11 +5675,11 @@
   "bugsy-1991": [
    [
     "Hollywood party blini and caviar",
-    "meat"
+    "veg"
    ],
    [
     "Brown Derby Cobb salad cups",
-    "meat"
+    "veg"
    ],
    [
     "Flamingo steak Diane",
@@ -4801,7 +5697,7 @@
   "bull-durham-1988": [
    [
     "Hit Bull Win Steak ballpark franks",
-    "meat"
+    "veg"
    ],
    [
     "Carolina hushpuppies",
@@ -4823,7 +5719,7 @@
   "butch-cassidy-and-the-sundance-kid-1969": [
    [
     "Etta's ham and cheddar picnic baguettes",
-    "meat"
+    "veg"
    ],
    [
     "Candy-dipped pretzel dynamite sticks",
@@ -4849,7 +5745,7 @@
    ],
    [
     "Manhole cover mini pizzas",
-    "meat"
+    "veg"
    ],
    [
     "The Reverend's soup kitchen stew",
@@ -4867,7 +5763,7 @@
   "caddyshack-1980": [
    [
     "Bushwood club sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Gopher hole dip",
@@ -4889,11 +5785,11 @@
   "can-t-buy-me-love-1987": [
    [
     "Tucson Sonoran hot dog bites",
-    "meat"
+    "veg"
    ],
    [
     "Party potato skins",
-    "meat"
+    "veg"
    ],
    [
     "Tucson red chilli enchiladas",
@@ -4915,7 +5811,7 @@
    ],
    [
     "Falcon wings",
-    "meat"
+    "veg"
    ],
    [
     "Sam's Louisiana gumbo",
@@ -4933,11 +5829,11 @@
   "captain-america-civil-war-2016": [
    [
     "Lagos market suya",
-    "meat"
+    "veg"
    ],
    [
     "Berlin airport currywurst",
-    "meat"
+    "veg"
    ],
    [
     "Siberian winter goulash",
@@ -4955,11 +5851,11 @@
   "captain-america-the-first-avenger-2011": [
    [
     "Stark Expo hot dogs",
-    "meat"
+    "veg"
    ],
    [
     "London pub ploughman's",
-    "meat"
+    "veg"
    ],
    [
     "Army mess hall stew",
@@ -4977,11 +5873,11 @@
   "captain-america-the-winter-soldier-2014": [
    [
     "Washington half-smoke sausages with chili",
-    "meat"
+    "veg"
    ],
    [
     "Brooklyn smoked salmon bagel bites",
-    "meat"
+    "veg"
    ],
    [
     "Thai basil chicken over rice",
@@ -5003,7 +5899,7 @@
    ],
    [
     "Goose's fish bites",
-    "meat"
+    "veg"
    ],
    [
     "Maria's Louisiana gumbo",
@@ -5021,11 +5917,11 @@
   "car-wash-1976": [
    [
     "Lunch truck tacos",
-    "meat"
+    "veg"
    ],
    [
     "Chilli cheese fries",
-    "meat"
+    "veg"
    ],
    [
     "Dee-Luxe hot dogs with the works",
@@ -5043,7 +5939,7 @@
   "carlito-s-way-1993": [
    [
     "Bacalaitos",
-    "meat"
+    "veg"
    ],
    [
     "Tostones",
@@ -5065,7 +5961,7 @@
   "carrie-1976": [
    [
     "Prom night canapés",
-    "meat"
+    "veg"
    ],
    [
     "Tommy Ross corsage crudités",
@@ -5091,7 +5987,7 @@
    ],
    [
     "Ham and gruyere crêpes",
-    "meat"
+    "veg"
    ],
    [
     "Porto Corsa prawn pasta",
@@ -5135,7 +6031,7 @@
    ],
    [
     "Letters of transit beef briouats",
-    "meat"
+    "veg"
    ],
    [
     "Usual suspects chicken tagine",
@@ -5153,11 +6049,11 @@
   "casino-1995": [
    [
     "Clams casino",
-    "meat"
+    "veg"
    ],
    [
     "Oysters Rockefeller",
-    "meat"
+    "veg"
    ],
    [
     "Tangiers rib eye",
@@ -5175,7 +6071,7 @@
   "casino-royale-2006": [
    [
     "Fig prosciutto, olive and cheddar picks",
-    "meat"
+    "veg"
    ],
    [
     "Vesper's train dinner salad",
@@ -5201,7 +6097,7 @@
    ],
    [
     "Friendship, Maine lobster rolls",
-    "meat"
+    "veg"
    ],
    [
     "Fatso's clam chowder in bread bowls",
@@ -5241,11 +6137,11 @@
   "chasing-amy-1997": [
    [
     "Jersey disco fries",
-    "meat"
+    "veg"
    ],
    [
     "Comic strip pizza bagels",
-    "meat"
+    "veg"
    ],
    [
     "Jersey Italian hot dogs",
@@ -5285,7 +6181,7 @@
   "chicago-2002": [
    [
     "Devils on horseback, bacon-wrapped prunes",
-    "meat"
+    "veg"
    ],
    [
     "Jail cell cheese straws",
@@ -5297,7 +6193,7 @@
    ],
    [
     "Champagne jelly",
-    "meat"
+    "veg"
    ],
    [
     "Bathtub gin fizz",
@@ -5333,7 +6229,7 @@
    ],
    [
     "Forget it, Jake spring rolls",
-    "meat"
+    "veg"
    ],
    [
     "Whole grilled fish, head on",
@@ -5377,7 +6273,7 @@
    ],
    [
     "Caribbean cruise prawn cocktail",
-    "meat"
+    "veg"
    ],
    [
     "Nora's last honey glazed ham",
@@ -5385,7 +6281,7 @@
    ],
    [
     "Last-minute Christmas Eve trifle",
-    "meat"
+    "veg"
    ],
    [
     "Hemlock Street cranberry fizz punch",
@@ -5399,7 +6295,7 @@
    ],
    [
     "Royal ball canapés",
-    "meat"
+    "veg"
    ],
    [
     "Pumpkin coach risotto",
@@ -5417,11 +6313,11 @@
   "cinderella-man-2005": [
    [
     "Paid-for salami and ricotta crostini",
-    "meat"
+    "veg"
    ],
    [
     "Depression bread and dripping",
-    "meat"
+    "veg"
    ],
    [
     "Mae's stretch-it stew",
@@ -5439,11 +6335,11 @@
   "city-slickers-1991": [
    [
     "Curly's one-thing brisket sliders with slaw",
-    "meat"
+    "veg"
    ],
    [
     "New York bagel bites",
-    "meat"
+    "veg"
    ],
    [
     "Chuckwagon chilli",
@@ -5451,7 +6347,7 @@
    ],
    [
     "Norman's campfire s'mores",
-    "meat"
+    "veg"
    ],
    [
     "Chuckwagon coffee with cinnamon cream",
@@ -5473,7 +6369,7 @@
    ],
    [
     "Quick Stop cream-filled chocolate cakes",
-    "meat"
+    "veg"
    ],
    [
     "Back fridge chocolate malt shake",
@@ -5487,7 +6383,7 @@
    ],
    [
     "Grill-line jalapeño poppers",
-    "meat"
+    "veg"
    ],
    [
     "Mooby's double cheeseburger",
@@ -5527,11 +6423,11 @@
   "cliffhanger-1993": [
    [
     "Rocky Mountain smoked trout pâté",
-    "meat"
+    "veg"
    ],
    [
     "Ranger hut roast pumpkin soup",
-    "meat"
+    "veg"
    ],
    [
     "Campfire steak",
@@ -5553,7 +6449,7 @@
    ],
    [
     "Five-note crackers",
-    "meat"
+    "veg"
    ],
    [
     "Mashed potato mountain",
@@ -5571,11 +6467,11 @@
   "cloudy-with-a-chance-of-meatballs-2009": [
    [
     "Swallow Falls sardine toast",
-    "meat"
+    "veg"
    ],
    [
     "Cheeseburger rain sliders",
-    "meat"
+    "veg"
    ],
    [
     "Giant meatballs and spaghetti",
@@ -5619,7 +6515,7 @@
    ],
    [
     "Abuelita's tamales",
-    "meat"
+    "veg"
    ],
    [
     "Rivera family enchiladas",
@@ -5637,11 +6533,11 @@
   "collateral-2004": [
    [
     "Cab driver's pretzel, peanut and jerky mix",
-    "meat"
+    "veg"
    ],
    [
     "Koreatown nightclub fried chicken",
-    "meat"
+    "veg"
    ],
    [
     "Late night carne asada tacos",
@@ -5685,7 +6581,7 @@
    ],
    [
     "Vegas strip prawns",
-    "meat"
+    "veg"
    ],
    [
     "Vegas buffet steak",
@@ -5725,7 +6621,7 @@
   "cool-runnings-1993": [
    [
     "\"Sanka, ya dead?\" beef patties",
-    "meat"
+    "veg"
    ],
    [
     "Plantain chips with lime chilli mayo",
@@ -5747,11 +6643,11 @@
   "crazy-rich-asians-2018": [
    [
     "Newton Circus chicken satay",
-    "meat"
+    "veg"
    ],
    [
     "Family dumpling making",
-    "meat"
+    "veg"
    ],
    [
     "Singapore chilli prawns",
@@ -5769,7 +6665,7 @@
   "creed-2015": [
    [
     "Adrian's restaurant antipasto",
-    "meat"
+    "veg"
    ],
    [
     "Date, oat and peanut butter bites",
@@ -5791,11 +6687,11 @@
   "crocodile-dundee-1986": [
    [
     "Garlic prawn skewers",
-    "meat"
+    "veg"
    ],
    [
     "Wally's Walkabout Creek party pies",
-    "meat"
+    "veg"
    ],
    [
     "That's-a-knife barbecued barra",
@@ -5817,7 +6713,7 @@
    ],
    [
     "Wally's Walkabout Creek snags",
-    "meat"
+    "veg"
    ],
    [
     "Dynamite-caught campfire barra",
@@ -5835,11 +6731,11 @@
   "crouching-tiger-hidden-dragon-2000": [
    [
     "Teahouse dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Desert lamb skewers",
-    "meat"
+    "veg"
    ],
    [
     "Yu Shu Lien's steamed whole fish",
@@ -5857,7 +6753,7 @@
   "cruella-2021": [
    [
     "Black and white ball canapés",
-    "meat"
+    "veg"
    ],
    [
     "Punk London pub chips",
@@ -5883,7 +6779,7 @@
    ],
    [
     "Dusty's cool dad nachos",
-    "meat"
+    "veg"
    ],
    [
     "Backyard dad-off smash burgers",
@@ -5901,11 +6797,11 @@
   "danger-close-the-battle-of-long-tan-2019": [
    [
     "Nui Dat concert night satay skewers",
-    "meat"
+    "veg"
    ],
    [
     "Phuoc Tuy prawn rice paper rolls",
-    "meat"
+    "veg"
    ],
    [
     "D Company field kitchen beef and beans",
@@ -5939,13 +6835,13 @@
    ],
    [
     "Wooderson's \"alright, alright\" michelada",
-    "meat"
+    "veg"
    ]
   ],
   "deadpool-2-2018": [
    [
     "Chimichanga bites",
-    "meat"
+    "veg"
    ],
    [
     "Dopinder's taxi samosas",
@@ -5989,7 +6885,7 @@
   "deadpool-wolverine-2024": [
    [
     "Chimichanga bites",
-    "meat"
+    "veg"
    ],
    [
     "Void wasteland chips",
@@ -6015,7 +6911,7 @@
    ],
    [
     "Street party cranberry chilli meatballs",
-    "meat"
+    "veg"
    ],
    [
     "Feud's-over turkey with cranberry glaze",
@@ -6023,7 +6919,7 @@
    ],
    [
     "Cul-de-sac Christmas trifle",
-    "meat"
+    "veg"
    ],
    [
     "Neighbourly vanilla eggnog",
@@ -6045,7 +6941,7 @@
    ],
    [
     "Layered jelly cubes",
-    "meat"
+    "veg"
    ],
    [
     "San Angeles cucumber elderflower spritz",
@@ -6059,7 +6955,7 @@
    ],
    [
     "Night-blooming flower canapés",
-    "meat"
+    "veg"
    ],
    [
     "Mr Wilson's lamb chops with mint sauce",
@@ -6077,7 +6973,7 @@
   "desperado-1995": [
    [
     "Tarasco Bar chicharrones",
-    "meat"
+    "veg"
    ],
    [
     "Mariachi guacamole",
@@ -6111,7 +7007,7 @@
    ],
    [
     "Purple minion jelly cups",
-    "meat"
+    "veg"
    ],
    [
     "Minion banana caramel smoothie",
@@ -6125,7 +7021,7 @@
    ],
    [
     "Theme park corn dogs",
-    "meat"
+    "veg"
    ],
    [
     "Gru's meatballs in tomato sauce",
@@ -6143,7 +7039,7 @@
   "dick-tracy-1990": [
    [
     "Club Ritz canapés",
-    "meat"
+    "veg"
    ],
    [
     "Yellow coat cheese puffs",
@@ -6165,7 +7061,7 @@
   "die-hard-1988": [
    [
     "Nakatomi party canapés",
-    "meat"
+    "veg"
    ],
    [
     "Argyle's limo snacks",
@@ -6187,11 +7083,11 @@
   "die-hard-2-1990": [
    [
     "Virginia ham biscuits",
-    "meat"
+    "veg"
    ],
    [
     "Snowbound loaded potato skins",
-    "meat"
+    "veg"
    ],
    [
     "General Esperanza's snowbound chilli",
@@ -6213,7 +7109,7 @@
    ],
    [
     "Harlem chicken and waffles",
-    "meat"
+    "veg"
    ],
    [
     "Bacon egg and cheese on a roll",
@@ -6235,7 +7131,7 @@
    ],
    [
     "Staff cabin onion dip and pretzels",
-    "meat"
+    "veg"
    ],
    [
     "Kellerman's resort brisket",
@@ -6253,7 +7149,7 @@
   "dirty-work-1998": [
    [
     "Dr Farthing's gambling debt wings",
-    "meat"
+    "veg"
    ],
    [
     "Mitch's job-a-week pretzel bites",
@@ -6279,7 +7175,7 @@
    ],
    [
     "Bounty hunter's jerky",
-    "meat"
+    "veg"
    ],
    [
     "German sausages and kraut",
@@ -6319,7 +7215,7 @@
   "doctor-strange-2016": [
    [
     "Kathmandu momos",
-    "meat"
+    "veg"
    ],
    [
     "Pesto parmesan puff pastry pinwheels",
@@ -6341,11 +7237,11 @@
   "doctor-strange-in-the-multiverse-of-madness-2022": [
    [
     "Pizza balls",
-    "meat"
+    "veg"
    ],
    [
     "Chicken momo dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Multiverse noodle bowls",
@@ -6367,7 +7263,7 @@
    ],
    [
     "Dodgeball meatballs",
-    "meat"
+    "veg"
    ],
    [
     "Vegas steak and eggs",
@@ -6389,7 +7285,7 @@
    ],
    [
     "Deli hero wedges",
-    "meat"
+    "veg"
    ],
    [
     "Hostage pizza",
@@ -6429,7 +7325,7 @@
   "donnie-brasco-1997": [
    [
     "Miami garlic prawns",
-    "meat"
+    "veg"
    ],
    [
     "Fried mozzarella",
@@ -6473,7 +7369,7 @@
   "dude-where-s-my-car-2000": [
    [
     "Sweet and Dude pork spring rolls",
-    "meat"
+    "veg"
    ],
    [
     "Zoltan's popping candy caramel corn",
@@ -6511,7 +7407,7 @@
    ],
    [
     "Ski lodge hot chocolate",
-    "meat"
+    "veg"
    ]
   ],
   "dumbo-1941": [
@@ -6529,7 +7425,7 @@
    ],
    [
     "Pink elephant marshmallow slice",
-    "meat"
+    "veg"
    ],
    [
     "Mrs Jumbo's pink lemonade",
@@ -6605,7 +7501,7 @@
   "eagle-vs-shark-2007": [
    [
     "Costume party cocktail franks",
-    "meat"
+    "veg"
    ],
    [
     "Kiwi onion dip with chippies",
@@ -6627,7 +7523,7 @@
   "easter-parade-1948": [
    [
     "The headwaiter's famous tossed salad",
-    "meat"
+    "veg"
    ],
    [
     "Opening night gruyère gougères",
@@ -6649,11 +7545,11 @@
   "easter-sunday-2022": [
    [
     "Valencia family pork lumpia",
-    "meat"
+    "veg"
    ],
    [
     "Easter party pancit with calamansi",
-    "meat"
+    "veg"
    ],
    [
     "Mum's Easter chicken adobo",
@@ -6675,7 +7571,7 @@
    ],
    [
     "Ojai citrus olives",
-    "meat"
+    ""
    ],
    [
     "Penderghast takeaway pad thai",
@@ -6693,11 +7589,11 @@
   "edge-of-tomorrow-2014": [
    [
     "Forward base bacon rolls",
-    "meat"
+    "veg"
    ],
    [
     "Normandy beach mussels",
-    "meat"
+    "veg"
    ],
    [
     "Angel of Verdun chicken, cider and cream",
@@ -6715,7 +7611,7 @@
   "el-mariachi-1992": [
    [
     "Border town street tacos",
-    "meat"
+    "veg"
    ],
    [
     "Charred jalapeño guacamole and chips",
@@ -6731,7 +7627,7 @@
    ],
    [
     "Mixed-up guitar case michelada beer",
-    "meat"
+    "veg"
    ]
   ],
   "elemental-2023": [
@@ -6775,7 +7671,7 @@
    ],
    [
     "World's best maple mocha",
-    "meat"
+    "veg"
    ]
   ],
   "encanto-2021": [
@@ -6825,11 +7721,11 @@
   "encino-man-1992": [
    [
     "Link's ice block cheddar cheese ball",
-    "meat"
+    "veg"
    ],
    [
     "Caveman club drumsticks",
-    "meat"
+    "veg"
    ],
    [
     "Pool party teriyaki chicken",
@@ -6847,7 +7743,7 @@
   "enter-the-dragon-1973": [
    [
     "Harbour pork and shrimp dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Han's island tournament spring rolls",
@@ -6869,11 +7765,11 @@
   "escape-from-new-york-1981": [
    [
     "Cabbie's smoky chilli beef jerky",
-    "meat"
+    "veg"
    ],
    [
     "Survival tin sardines",
-    "meat"
+    "veg"
    ],
    [
     "Scavenger's hobo stew",
@@ -6913,11 +7809,11 @@
   "eurovision-song-contest-the-story-of-fire-saga-2020": [
    [
     "Húsavík hot dogs",
-    "meat"
+    "veg"
    ],
    [
     "Smoked trout crispbreads",
-    "meat"
+    "veg"
    ],
    [
     "Erick's lamb with caramelised potatoes",
@@ -6939,7 +7835,7 @@
    ],
    [
     "Chinese New Year dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Hibachi steak and prawn fried rice",
@@ -6957,7 +7853,7 @@
   "face-off-1997": [
    [
     "Church canapés",
-    "meat"
+    "veg"
    ],
    [
     "Peach slices",
@@ -7049,7 +7945,7 @@
    ],
    [
     "Chicken momo dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Berlin schnitzel",
@@ -7067,7 +7963,7 @@
   "fantastic-four-2005": [
    [
     "Human Torch flaming wings",
-    "meat"
+    "veg"
    ],
    [
     "Stretchy cheese pull bread",
@@ -7111,7 +8007,7 @@
   "fast-times-at-ridgemont-high-1982": [
    [
     "Spicoli's pizza bites",
-    "meat"
+    "veg"
    ],
    [
     "Food court pretzels with cheddar sauce",
@@ -7133,11 +8029,11 @@
   "father-of-the-bride-1991": [
    [
     "George's eight-and-eight hot dogs",
-    "meat"
+    "veg"
    ],
    [
     "MacKenzie in-laws smoked salmon blinis",
-    "meat"
+    "veg"
    ],
    [
     "Franck's reception chicken with tarragon",
@@ -7159,7 +8055,7 @@
    ],
    [
     "Deep dish bites",
-    "meat"
+    "veg"
    ],
    [
     "Sausage King of Chicago",
@@ -7181,7 +8077,7 @@
    ],
    [
     "Fenway sausage and peppers rolls",
-    "meat"
+    "veg"
    ],
    [
     "Iowa breaded pork tenderloin sandwich",
@@ -7203,7 +8099,7 @@
    ],
    [
     "Chicken mushroom vol-au-vents",
-    "meat"
+    "veg"
    ],
    [
     "Single-serving chicken and rice",
@@ -7233,7 +8129,7 @@
    ],
    [
     "Dory blue jelly",
-    "meat"
+    "veg"
    ],
    [
     "Blue lemonade ice cream float",
@@ -7265,11 +8161,11 @@
   "flash-gordon-1980": [
    [
     "Panko chicken bites with honey mustard",
-    "meat"
+    "veg"
    ],
    [
     "Hawkmen sky city wings",
-    "meat"
+    "veg"
    ],
    [
     "Zarkov's rocket fuel curry",
@@ -7277,7 +8173,7 @@
    ],
    [
     "Mongo red and gold trifle",
-    "meat"
+    "veg"
    ],
    [
     "Princess Aura's red punch",
@@ -7287,11 +8183,11 @@
   "fletch-1985": [
    [
     "Country club Bloody Mary prawn cocktail",
-    "meat"
+    "veg"
    ],
    [
     "Beach kiosk fish bites with lime aioli",
-    "meat"
+    "veg"
    ],
    [
     "Steak sandwich and a steak sandwich",
@@ -7303,7 +8199,7 @@
    ],
    [
     "Underhills' tab Bloody Mary",
-    "meat"
+    "veg"
    ]
   ],
   "flubber-1997": [
@@ -7321,7 +8217,7 @@
    ],
    [
     "Flubber jelly",
-    "meat"
+    "veg"
    ],
    [
     "Weebo's lime ice cream float",
@@ -7331,7 +8227,7 @@
   "footloose-1984": [
    [
     "Tractor chicken bites",
-    "meat"
+    "veg"
    ],
    [
     "Grain mill corn fritters",
@@ -7353,7 +8249,7 @@
   "forgetting-sarah-marshall-2008": [
    [
     "Resort poke on rice crackers",
-    "meat"
+    "veg"
    ],
    [
     "Do less grilled pineapple",
@@ -7379,7 +8275,7 @@
    ],
    [
     "Bubba's barbecue prawns",
-    "meat"
+    "veg"
    ],
    [
     "Bubba's prawn gumbo",
@@ -7401,7 +8297,7 @@
    ],
    [
     "Jumping castle party pies",
-    "meat"
+    "veg"
    ],
    [
     "Nativity play Christmas ham",
@@ -7409,7 +8305,7 @@
    ],
    [
     "Family games night trifle",
-    "meat"
+    "veg"
    ],
    [
     "Cranberry, orange and rosemary punch",
@@ -7419,11 +8315,11 @@
   "four-weddings-and-a-funeral-1994": [
    [
     "Charles's running late canapés",
-    "meat"
+    "veg"
    ],
    [
     "Smoked salmon oatcakes",
-    "meat"
+    "veg"
    ],
    [
     "English wedding roast beef",
@@ -7441,11 +8337,11 @@
   "freaky-friday-2003": [
    [
     "Chinese restaurant spring rolls",
-    "meat"
+    "veg"
    ],
    [
     "Garage rehearsal popcorn chicken",
-    "meat"
+    "veg"
    ],
    [
     "Honey chicken",
@@ -7463,7 +8359,7 @@
   "fred-claus-2007": [
    [
     "Repo man Chicago-style hot dogs",
-    "meat"
+    "veg"
    ],
    [
     "Iced gingerbread men",
@@ -7479,13 +8375,13 @@
    ],
    [
     "Everybody's nice marshmallow cocoa",
-    "meat"
+    "veg"
    ]
   ],
   "free-willy-1993": [
    [
     "Willy's salmon bites",
-    "meat"
+    "veg"
    ],
    [
     "Glen and Annie's grilled cheese soldiers",
@@ -7507,7 +8403,7 @@
   "frequency-2000": [
    [
     "Firehouse chilli bites",
-    "meat"
+    "veg"
    ],
    [
     "Miracle Mets pretzels with beer mustard",
@@ -7533,7 +8429,7 @@
    ],
    [
     "Ham AND burger sliders",
-    "meat"
+    "veg"
    ],
    [
     "Chilli-lime grilled pineapple spears",
@@ -7555,7 +8451,7 @@
   "fried-green-tomatoes-1991": [
    [
     "Fried green tomatoes",
-    "meat"
+    "veg"
    ],
    [
     "Honeycomb and biscuits",
@@ -7581,7 +8477,7 @@
    ],
    [
     "From-scratch French onion dip and chips",
-    "meat"
+    "veg"
    ],
    [
     "Dinner party rump with chimichurri",
@@ -7637,7 +8533,7 @@
    ],
    [
     "Oaken's cardamom hot chocolate",
-    "meat"
+    "veg"
    ]
   ],
   "frozen-ii-2019": [
@@ -7669,7 +8565,7 @@
    ],
    [
     "Bullet Farm chorizo with smoky honey",
-    "meat"
+    "veg"
    ],
    [
     "War Rig barbecue lamb",
@@ -7687,11 +8583,11 @@
   "galaxy-quest-1999": [
    [
     "Fan expo smoky garlic nut mix",
-    "meat"
+    "veg"
    ],
    [
     "Rock monster crackers",
-    "meat"
+    "veg"
    ],
    [
     "Protector mess hall chilli",
@@ -7753,11 +8649,11 @@
   "get-hard-2015": [
    [
     "Car wash corner store wings",
-    "meat"
+    "veg"
    ],
    [
     "Bel Air salmon roe blinis",
-    "meat"
+    "veg"
    ],
    [
     "Darnell's family barbecue chicken",
@@ -7775,11 +8671,11 @@
   "get-out-2017": [
    [
     "Garden party canapés",
-    "meat"
+    "veg"
    ],
    [
     "Brown butter marshmallow cereal bars",
-    "meat"
+    "veg"
    ],
    [
     "Lawn party lamb",
@@ -7787,7 +8683,7 @@
    ],
    [
     "Teacup panna cotta",
-    "meat"
+    "veg"
    ],
    [
     "Missy's spiced Earl Grey milk tea",
@@ -7797,7 +8693,7 @@
   "get-shorty-1995": [
    [
     "Ray Bones' Miami croquetas",
-    "meat"
+    "veg"
    ],
    [
     "Cuban pastelitos",
@@ -7813,7 +8709,7 @@
    ],
    [
     "Look-at-me Bloody Mary",
-    "meat"
+    "veg"
    ]
   ],
   "ghost-1990": [
@@ -7871,7 +8767,7 @@
    ],
    [
     "Toasted marshmallow skewers",
-    "meat"
+    "veg"
    ],
    [
     "Firehouse meatball sub",
@@ -7883,7 +8779,7 @@
    ],
    [
     "Stay Puft s'mores",
-    "meat"
+    "veg"
    ],
    [
     "Ectoplasm slushie",
@@ -7893,11 +8789,11 @@
   "ghostbusters-2016": [
    [
     "Plenty-of-wontons soup",
-    "meat"
+    "veg"
    ],
    [
     "Ectoplasm lime dip",
-    "meat"
+    "veg"
    ],
    [
     "Sweet and sour pork with egg fried rice",
@@ -7915,7 +8811,7 @@
   "ghostbusters-afterlife-2021": [
    [
     "Mini marshmallow men",
-    "meat"
+    "veg"
    ],
    [
     "Summerville fried okra",
@@ -7937,11 +8833,11 @@
   "ghostbusters-frozen-empire-2024": [
    [
     "Firehouse pizza night",
-    "meat"
+    "veg"
    ],
    [
     "Cocktail franks in puff pastry",
-    "meat"
+    "veg"
    ],
    [
     "Reuben sandwiches",
@@ -7949,7 +8845,7 @@
    ],
    [
     "Marshmallow chocolate s'mores",
-    "meat"
+    "veg"
    ],
    [
     "Ectoplasm lime fizz",
@@ -7971,7 +8867,7 @@
    ],
    [
     "Pink lemonade jelly",
-    "meat"
+    "veg"
    ],
    [
     "Pink lemonade with sherbet",
@@ -8007,7 +8903,7 @@
    ],
    [
     "Macrinus's baked feta with figs and honey",
-    "meat"
+    ""
    ],
    [
     "Emperors' honey roast chicken",
@@ -8025,11 +8921,11 @@
   "glass-onion-a-knives-out-mystery-2022": [
    [
     "Greek island mezze",
-    "meat"
+    ""
    ],
    [
     "Disruptors' hot sauce wings",
-    "meat"
+    "veg"
    ],
    [
     "Puzzle box lamb souvlaki",
@@ -8047,11 +8943,11 @@
   "goldeneye-1995": [
    [
     "Zukovsky's caviar blini",
-    "meat"
+    "veg"
    ],
    [
     "St Petersburg beef pirozhki",
-    "meat"
+    "veg"
    ],
    [
     "Beef stroganoff",
@@ -8073,7 +8969,7 @@
    ],
    [
     "Miami Beach crab salad cups",
-    "meat"
+    "veg"
    ],
    [
     "Kentucky stud farm steak",
@@ -8095,7 +8991,7 @@
    ],
    [
     "Bamboo Lounge salami and provolone",
-    "meat"
+    "veg"
    ],
    [
     "Prison gravy with three-meat meatballs",
@@ -8113,11 +9009,11 @@
   "grandma-s-boy-2006": [
    [
     "Grandma's cheddar and chive cheese ball",
-    "meat"
+    "veg"
    ],
    [
     "Brainasium game tester pizza scrolls",
-    "meat"
+    "veg"
    ],
    [
     "Grandma's glazed meatloaf with mash",
@@ -8135,11 +9031,11 @@
   "gravity-2013": [
    [
     "Space station dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Soyuz pelmeni",
-    "meat"
+    "veg"
    ],
    [
     "Kowalski's Ganges sunrise curry",
@@ -8179,7 +9075,7 @@
   "gremlins-1984": [
    [
     "Midnight fried chicken",
-    "meat"
+    "veg"
    ],
    [
     "Kingston Falls gingerbread",
@@ -8201,7 +9097,7 @@
   "gremlins-2-the-new-batch-1990": [
    [
     "Splice O' Life dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Microwave Marge nachos",
@@ -8245,11 +9141,11 @@
   "guardians-of-the-galaxy-2014": [
    [
     "Awesome Mix pepperoni pizza rolls",
-    "meat"
+    "veg"
    ],
    [
     "Knowhere bar wings",
-    "meat"
+    "veg"
    ],
    [
     "Ravager barbecue ribs with corn and slaw",
@@ -8271,7 +9167,7 @@
    ],
    [
     "Sovereign golden saffron arancini",
-    "meat"
+    "veg"
    ],
    [
     "Yondu's Ravager stew",
@@ -8289,7 +9185,7 @@
   "guardians-of-the-galaxy-vol-3-2023": [
    [
     "Knowhere market dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Rocket's smoky roasted chickpeas and nuts",
@@ -8311,7 +9207,7 @@
   "hairspray-2007": [
    [
     "Baltimore crab cakes",
-    "meat"
+    "veg"
    ],
    [
     "Record shop deviled eggs",
@@ -8337,7 +9233,7 @@
    ],
    [
     "Jack-o'-lantern cheese ball",
-    "meat"
+    "veg"
    ],
    [
     "Haddonfield chilli in a pumpkin",
@@ -8355,7 +9251,7 @@
   "hancock-2008": [
    [
     "Beach whale prawns",
-    "meat"
+    "veg"
    ],
    [
     "All Heart bruschetta",
@@ -8377,11 +9273,11 @@
   "happy-feet-2006": [
    [
     "Colony crumbed sardines with lemon mayo",
-    "meat"
+    "veg"
    ],
    [
     "Iceberg wedges",
-    "meat"
+    "veg"
    ],
    [
     "Mumble's fish pie",
@@ -8399,7 +9295,7 @@
   "happy-gilmore-1996": [
    [
     "Chubbs's golf ball cheese balls",
-    "meat"
+    "veg"
    ],
    [
     "Grandma's biscuits",
@@ -8443,11 +9339,11 @@
   "harold-kumar-go-to-white-castle-2004": [
    [
     "Jersey gravy fries with melted cheese",
-    "meat"
+    "veg"
    ],
    [
     "Freakshow fried pickle spears",
-    "meat"
+    ""
    ],
    [
     "Cheetah ride steamed onion sliders",
@@ -8465,7 +9361,7 @@
   "harry-potter-and-the-chamber-of-secrets-2002": [
    [
     "Weasleys' full English breakfast",
-    "meat"
+    "veg"
    ],
    [
     "Hagrid's treacle toffee",
@@ -8477,7 +9373,7 @@
    ],
    [
     "Bubbling potion jelly",
-    "meat"
+    "veg"
    ],
    [
     "Butterscotch cream soda",
@@ -8487,11 +9383,11 @@
   "harry-potter-and-the-deathly-hallows-part-1-2010": [
    [
     "Burrow wedding canapés",
-    "meat"
+    "veg"
    ],
    [
     "Shell Cottage seaside crab toasts",
-    "meat"
+    "veg"
    ],
    [
     "Foil baked trout with potatoes",
@@ -8513,7 +9409,7 @@
    ],
    [
     "Dragon escape chilli wings",
-    "meat"
+    "veg"
    ],
    [
     "Lamb and stout stew over mash",
@@ -8531,11 +9427,11 @@
   "harry-potter-and-the-goblet-of-fire-2005": [
    [
     "World Cup campsite sausages",
-    "meat"
+    "veg"
    ],
    [
     "Dragon task chilli bites",
-    "meat"
+    "veg"
    ],
    [
     "Yule Ball roast",
@@ -8553,7 +9449,7 @@
   "harry-potter-and-the-half-blood-prince-2009": [
    [
     "Slug Club party canapés",
-    "meat"
+    "veg"
    ],
    [
     "Cocoa dusted chocolate truffles",
@@ -8645,7 +9541,7 @@
    ],
    [
     "Ocean view oysters",
-    "meat"
+    "veg"
    ],
    [
     "Hanna's three-hour beef and pork ragù",
@@ -8689,7 +9585,7 @@
    ],
    [
     "Bureau red chilli wings",
-    "meat"
+    "veg"
    ],
    [
     "Beef and beetroot borscht",
@@ -8729,7 +9625,7 @@
   "hereditary-2018": [
    [
     "Miniature sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Charlie's nut-free seed crackers",
@@ -8755,7 +9651,7 @@
    ],
    [
     "Albert's meatball sliders",
-    "meat"
+    "veg"
    ],
    [
     "Chicken piccata",
@@ -8825,7 +9721,7 @@
    ],
    [
     "Kevin's sundae bar",
-    "meat"
+    "veg"
    ],
    [
     "Kevin's chocolate malted milkshake",
@@ -8843,7 +9739,7 @@
    ],
    [
     "Plaza room service club sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Lobster mac and cheese",
@@ -8861,7 +9757,7 @@
   "honey-i-shrunk-the-kids-1989": [
    [
     "Giant puffed rice cereal ring",
-    "meat"
+    "veg"
    ],
    [
     "Giant cream cookie",
@@ -8873,7 +9769,7 @@
    ],
    [
     "Backyard s'mores",
-    "meat"
+    "veg"
    ],
    [
     "Sprinkler watermelon pink lemonade",
@@ -8905,7 +9801,7 @@
   "hop-2011": [
    [
     "E.B.'s jellybean rocky road",
-    "meat"
+    "veg"
    ],
    [
     "Rainbow carrots with green goddess dip",
@@ -8927,7 +9823,7 @@
   "horrible-bosses-2011": [
    [
     "Murder consultant loaded beef nachos",
-    "meat"
+    "veg"
    ],
    [
     "Break room cinnamon jam doughnuts",
@@ -8949,11 +9845,11 @@
   "hot-fuzz-2007": [
    [
     "The Crown pub ploughman's",
-    "meat"
+    "veg"
    ],
    [
     "Village of the Year fete scotch eggs",
-    "meat"
+    "veg"
    ],
    [
     "Greater good steak and ale pie",
@@ -8971,11 +9867,11 @@
   "hot-rod-2007": [
    [
     "Cool beans loaded black bean dip",
-    "meat"
+    ""
    ],
    [
     "Stunt crew chilli cheese dogs",
-    "meat"
+    "veg"
    ],
    [
     "Public pool jump cheeseburgers",
@@ -8993,7 +9889,7 @@
   "hot-shots-1991": [
    [
     "Fried egg canapés",
-    "meat"
+    "veg"
    ],
    [
     "Dead Meat's last chips",
@@ -9015,11 +9911,11 @@
   "hot-tub-time-machine-2010": [
    [
     "Kodiak Valley gruyère fondue",
-    "meat"
+    "af"
    ],
    [
     "Eighties pepperoni pizza rolls",
-    "meat"
+    "veg"
    ],
    [
     "Ski lodge chilli con carne",
@@ -9037,11 +9933,11 @@
   "house-party-1990": [
    [
     "House party chicken wings",
-    "meat"
+    "veg"
    ],
    [
     "Kick step party sub",
-    "meat"
+    "veg"
    ],
    [
     "Bilal's DJ booth pizza",
@@ -9059,7 +9955,7 @@
   "how-the-grinch-stole-christmas-2000": [
    [
     "Whoville Christmas wreaths",
-    "meat"
+    "veg"
    ],
    [
     "Mount Crumpit cheesy pull-apart bread",
@@ -9085,7 +9981,7 @@
    ],
    [
     "Ham and pea arancini",
-    "meat"
+    "veg"
    ],
    [
     "Meatballs and rigatoni",
@@ -9103,11 +9999,11 @@
   "how-to-train-your-dragon-2010": [
    [
     "Toothless's fish bites",
-    "meat"
+    "veg"
    ],
    [
     "Gobber's smoked sausages",
-    "meat"
+    "veg"
    ],
    [
     "Viking lamb stew",
@@ -9129,7 +10025,7 @@
    ],
    [
     "Wild pork sausage rolls",
-    "meat"
+    "veg"
    ],
    [
     "Bella's roast pork",
@@ -9169,11 +10065,11 @@
   "i-love-you-man-2009": [
    [
     "Venice Beach crispy fish tacos",
-    "meat"
+    "veg"
    ],
    [
     "Man cave pulled pork nachos",
-    "meat"
+    "veg"
    ],
    [
     "Open house roast beef baguettes",
@@ -9203,7 +10099,7 @@
    ],
    [
     "Ice age coconut marshmallow cupcakes",
-    "meat"
+    "veg"
    ],
    [
     "Scrat's nutty caramel milkshake",
@@ -9213,11 +10109,11 @@
   "idiocracy-2006": [
    [
     "Ranch pretzel and peanut snack mix",
-    "meat"
+    "veg"
    ],
    [
     "Future cheese fries with chicken salt",
-    "meat"
+    "veg"
    ],
    [
     "Plants-crave-water chicken salad bowl",
@@ -9235,11 +10131,11 @@
   "inception-2010": [
    [
     "Paris café chocolate and ham croissants",
-    "meat"
+    "veg"
    ],
    [
     "Spinning top meatballs",
-    "meat"
+    "veg"
    ],
    [
     "Saito's teriyaki salmon bento box",
@@ -9279,11 +10175,11 @@
   "indiana-jones-and-the-dial-of-destiny-2023": [
    [
     "Tangier lamb kofta skewers",
-    "meat"
+    "veg"
    ],
    [
     "Aegean dive grilled octopus",
-    "meat"
+    "veg"
    ],
    [
     "Moroccan chicken tagine",
@@ -9305,7 +10201,7 @@
    ],
    [
     "Peruvian ceviche cups",
-    "meat"
+    "veg"
    ],
    [
     "Peruvian chicken with green sauce",
@@ -9313,7 +10209,7 @@
    ],
    [
     "Akator crystal skull jelly",
-    "meat"
+    "veg"
    ],
    [
     "Mutt's greaser malt shake",
@@ -9323,7 +10219,7 @@
   "indiana-jones-and-the-last-crusade-1989": [
    [
     "Venice cod, prosciutto and sardine toasts",
-    "meat"
+    "veg"
    ],
    [
     "Austrian castle pretzels",
@@ -9349,7 +10245,7 @@
    ],
    [
     "Coiled chipolata snake with mango glaze",
-    "meat"
+    "veg"
    ],
    [
     "Maharaja's lamb curry",
@@ -9357,7 +10253,7 @@
    ],
    [
     "Chilled mango brains",
-    "meat"
+    "veg"
    ],
    [
     "Sankara stone saffron mango lassi",
@@ -9367,7 +10263,7 @@
   "inside-man-2006": [
    [
     "Hostage pizza bites",
-    "meat"
+    "veg"
    ],
    [
     "Brooklyn potato knishes",
@@ -9455,11 +10351,11 @@
   "inspector-gadget-1999": [
    [
     "Gadget's toolkit skewers",
-    "meat"
+    "veg"
    ],
    [
     "Go-go gadget pizza pinwheels",
-    "meat"
+    "veg"
    ],
    [
     "Detective's spaghetti with beef ragu",
@@ -9503,7 +10399,7 @@
    ],
    [
     "Vanko's Russian pelmeni",
-    "meat"
+    "veg"
    ],
    [
     "Stark miso salmon rice bowl",
@@ -9521,7 +10417,7 @@
   "iron-man-2008": [
    [
     "Stark mansion canapés",
-    "meat"
+    "veg"
    ],
    [
     "Cave flatbread",
@@ -9547,7 +10443,7 @@
    ],
    [
     "Malibu mansion prawns",
-    "meat"
+    "veg"
    ],
    [
     "Tennessee hot chicken",
@@ -9555,7 +10451,7 @@
    ],
    [
     "Giant bunny cake",
-    "meat"
+    "veg"
    ],
    [
     "Rose Hill malted milkshakes",
@@ -9565,7 +10461,7 @@
   "it-2017": [
    [
     "Quarry day Italian sub rolls",
-    "meat"
+    "veg"
    ],
    [
     "Red balloon roast tomato ricotta toast",
@@ -9587,7 +10483,7 @@
   "it-follows-2014": [
    [
     "8 Mile coney dog bites",
-    "meat"
+    "veg"
    ],
    [
     "Above-ground pool chips and dip",
@@ -9613,7 +10509,7 @@
    ],
    [
     "Overnight bus sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Bacon and scrambled eggs on toast",
@@ -9653,11 +10549,11 @@
   "jack-frost-1998": [
    [
     "Snow day toastie fingers with tomato soup",
-    "meat"
+    "veg"
    ],
    [
     "Rinkside pretzel bun hot dogs",
-    "meat"
+    "veg"
    ],
    [
     "Frost family roast beef and Yorkshires",
@@ -9675,7 +10571,7 @@
   "jackie-brown-1997": [
    [
     "Hermosa Beach fish tacos",
-    "meat"
+    "veg"
    ],
    [
     "Cabo flight lime chili peanuts",
@@ -9697,11 +10593,11 @@
   "jaws-1975": [
    [
     "Amity Island fried calamari",
-    "meat"
+    "veg"
    ],
    [
     "Chum bucket dip",
-    "meat"
+    "veg"
    ],
    [
     "Lobster rolls",
@@ -9713,17 +10609,17 @@
    ],
    [
     "Quint's chilli lime lager michelada",
-    "meat"
+    "veg"
    ]
   ],
   "jaws-2-1978": [
    [
     "Sailing trip sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Amity Island fried clams",
-    "meat"
+    "veg"
    ],
    [
     "Cable Junction clambake",
@@ -9763,7 +10659,7 @@
   "jerry-maguire-1996": [
    [
     "Laurel's caramelised onion dip with chips",
-    "meat"
+    "veg"
    ],
    [
     "Show me the money street corn",
@@ -9829,11 +10725,11 @@
   "john-wick-chapter-2-2017": [
    [
     "Pecorino and prosciutto melon antipasti",
-    "meat"
+    "veg"
    ],
    [
     "Rome supplì rice balls",
-    "meat"
+    "veg"
    ],
    [
     "Cacio e pepe",
@@ -9851,7 +10747,7 @@
   "john-wick-chapter-3-parabellum-2019": [
    [
     "Zero's sushi counter",
-    "meat"
+    "veg"
    ],
    [
     "Casablanca spiced olives",
@@ -9873,7 +10769,7 @@
   "john-wick-chapter-4-2023": [
    [
     "Berlin currywurst",
-    "meat"
+    "veg"
    ],
    [
     "Paris cheese puffs (gougères)",
@@ -9995,7 +10891,7 @@
    ],
    [
     "Falcon jewel jelly",
-    "meat"
+    "veg"
    ],
    [
     "Desert oasis cooler",
@@ -10031,7 +10927,7 @@
    ],
    [
     "Hamburger phone sliders",
-    "meat"
+    "veg"
    ],
    [
     "Minnesota tater tot hotdish",
@@ -10039,7 +10935,7 @@
    ],
    [
     "Blue raspberry jelly trifle cups",
-    "meat"
+    "veg"
    ],
    [
     "Big jug of orange",
@@ -10093,7 +10989,7 @@
   "jurassic-world-2015": [
    [
     "Mosasaur feeding prawns",
-    "meat"
+    "veg"
    ],
    [
     "Gyrosphere cheese balls",
@@ -10137,11 +11033,11 @@
   "jurassic-world-fallen-kingdom-2018": [
    [
     "Owen's cabin campfire sausages",
-    "meat"
+    "veg"
    ],
    [
     "Dino egg scotch eggs",
-    "meat"
+    "veg"
    ],
    [
     "Isla Nublar chilli lime chicken and beans",
@@ -10149,7 +11045,7 @@
    ],
    [
     "Owen's campfire banana boats",
-    "meat"
+    "veg"
    ],
    [
     "Blue's butterfly pea lime fizz",
@@ -10163,7 +11059,7 @@
    ],
    [
     "Mosasaur ocean prawns",
-    "meat"
+    "veg"
    ],
    [
     "ParkerGenix expedition grilled fish",
@@ -10181,11 +11077,11 @@
   "justice-league-2017": [
    [
     "Speedster pancake stack",
-    "meat"
+    "veg"
    ],
    [
     "Icelandic village smoked salmon",
-    "meat"
+    "veg"
    ],
    [
     "Themyscira lemon lamb",
@@ -10225,11 +11121,11 @@
   "kenny-2006": [
    [
     "Melbourne Cup marquee canapés",
-    "meat"
+    "veg"
    ],
    [
     "Splashdown festival hot chips",
-    "meat"
+    "veg"
    ],
    [
     "Dad's chops and veg",
@@ -10241,7 +11137,7 @@
    ],
    [
     "Knock-off lager michelada",
-    "meat"
+    "veg"
    ]
   ],
   "kick-ass-2010": [
@@ -10251,7 +11147,7 @@
    ],
    [
     "D'Amico's prosciutto melon bites",
-    "meat"
+    "veg"
    ],
    [
     "Bowling alley burger",
@@ -10269,7 +11165,7 @@
   "kicking-screaming-2005": [
    [
     "Halftime crispy orange chicken bites",
-    "meat"
+    "veg"
    ],
    [
     "Phil's vitamin shop granola bars",
@@ -10291,7 +11187,7 @@
   "kill-bill-vol-1-2003": [
    [
     "Hattori Hanzo's sushi",
-    "meat"
+    "veg"
    ],
    [
     "Yellow tracksuit corn",
@@ -10317,7 +11213,7 @@
    ],
    [
     "Jalapeño cheese dip with chips, jerky",
-    "meat"
+    "veg"
    ],
    [
     "Hacienda carnitas",
@@ -10357,11 +11253,11 @@
   "king-of-new-york-1990": [
    [
     "Chinatown dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Plaza Hotel prawn cocktail",
-    "meat"
+    "veg"
    ],
    [
     "Frank's Plaza steak dinner",
@@ -10379,7 +11275,7 @@
   "kingpin-1996": [
    [
     "Bowling lane chilli cheese fries",
-    "meat"
+    "veg"
    ],
    [
     "Amish farm soft pretzels with apple butter",
@@ -10401,11 +11297,11 @@
   "kingsman-the-secret-service-2014": [
    [
     "Black Prince crackling and scotch eggs",
-    "meat"
+    "veg"
    ],
    [
     "Savile Row tea sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Burgers on fine china",
@@ -10423,11 +11319,11 @@
   "klaus-2019": [
    [
     "Alva's fish shop bites",
-    "meat"
+    "veg"
    ],
    [
     "Feuding family meatballs",
-    "meat"
+    "veg"
    ],
    [
     "Klaus's juniper beef stew with mash",
@@ -10467,11 +11363,11 @@
   "knocked-up-2007": [
    [
     "Fantasy baseball draft nachos",
-    "meat"
+    "veg"
    ],
    [
     "Craving pickle-brined popcorn chicken",
-    "meat"
+    "veg"
    ],
    [
     "LA Thai green chicken curry",
@@ -10493,11 +11389,11 @@
    ],
    [
     "Saja Boys' sugar-dusted hot dogs",
-    "meat"
+    "veg"
    ],
    [
     "Ramyeon with egg",
-    "veg"
+    ""
    ],
    [
     "Cinnamon walnut hotteok",
@@ -10515,7 +11411,7 @@
    ],
    [
     "Aunt Dorothy's French onion dip",
-    "meat"
+    "veg"
    ],
    [
     "Christmas Eve lasagne",
@@ -10533,7 +11429,7 @@
   "kung-fu-hustle-2004": [
    [
     "Pigsty Alley pork buns",
-    "meat"
+    "veg"
    ],
    [
     "The baker's doughnuts",
@@ -10555,7 +11451,7 @@
   "kung-fu-panda-2-2011": [
    [
     "Radish crate crispy daikon cakes",
-    "meat"
+    "veg"
    ],
    [
     "Bean bun warrior buns",
@@ -10577,7 +11473,7 @@
   "kung-fu-panda-2008": [
    [
     "Training bowl dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Oogway's peaches",
@@ -10607,7 +11503,7 @@
   "l-on-the-professional-1994": [
    [
     "Jambon-beurre baguette bites",
-    "meat"
+    "veg"
    ],
    [
     "Olives and cornichons",
@@ -10629,7 +11525,7 @@
   "la-bamba-1987": [
    [
     "Tijuana street tacos",
-    "meat"
+    "veg"
    ],
    [
     "1950s soda fountain fries",
@@ -10695,7 +11591,7 @@
   "ladies-in-black-2018": [
    [
     "Magda's continental platter",
-    "meat"
+    "veg"
    ],
    [
     "Goodes tearoom egg sandwiches",
@@ -10721,7 +11617,7 @@
    ],
    [
     "Antipasto for two",
-    "meat"
+    "veg"
    ],
    [
     "Spaghetti and meatballs",
@@ -10743,7 +11639,7 @@
    ],
    [
     "Rosemary smoked salt almonds",
-    "meat"
+    ""
    ],
    [
     "Mum's chicken, broccoli and rice bake",
@@ -10783,11 +11679,11 @@
   "last-christmas-2019": [
    [
     "Covent Garden cevapi rolls with ajvar",
-    "meat"
+    "veg"
    ],
    [
     "Santa's shop mince pies with orange cream",
-    "meat"
+    "veg"
    ],
    [
     "Petra's stuffed capsicums with yoghurt",
@@ -10805,7 +11701,7 @@
   "last-holiday-2006": [
    [
     "Georgia's crab cakes with lemon aioli",
-    "meat"
+    "veg"
    ],
    [
     "Grandhotel Pupp mushroom and gruyère tarts",
@@ -10831,7 +11727,7 @@
    ],
    [
     "Irish smoked salmon",
-    "meat"
+    "veg"
    ],
    [
     "Irish lamb stew",
@@ -10871,7 +11767,7 @@
   "let-the-right-one-in-2008": [
    [
     "Swedish meatballs",
-    "meat"
+    "veg"
    ],
    [
     "Swedish crispbread",
@@ -10893,11 +11789,11 @@
   "lethal-weapon-1987": [
    [
     "Riggs' trailer snacks",
-    "meat"
+    "veg"
    ],
    [
     "Christmas party crab dip",
-    "meat"
+    "veg"
    ],
    [
     "Trish's stew, made properly",
@@ -10909,7 +11805,7 @@
    ],
    [
     "Riggs' beach trailer michelada",
-    "meat"
+    "veg"
    ]
   ],
   "lethal-weapon-2-1989": [
@@ -10919,7 +11815,7 @@
    ],
    [
     "Consulate biltong",
-    "meat"
+    "veg"
    ],
    [
     "Boerewors rolls",
@@ -10937,7 +11833,7 @@
   "lethal-weapon-3-1992": [
    [
     "Hockey game hot dogs",
-    "meat"
+    "veg"
    ],
    [
     "Building implosion popcorn",
@@ -10959,7 +11855,7 @@
   "lethal-weapon-4-1998": [
    [
     "Chinatown dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Leo's wonton crisps",
@@ -10985,7 +11881,7 @@
    ],
    [
     "Kauai poke",
-    "meat"
+    "veg"
    ],
    [
     "Loco moco, patties over rice with gravy",
@@ -11007,7 +11903,7 @@
    ],
    [
     "Tasmanian smoked salmon",
-    "meat"
+    "veg"
    ],
    [
     "Village dal and rice",
@@ -11025,7 +11921,7 @@
   "little-giants-1994": [
    [
     "Annexation of Puerto Rico wings",
-    "meat"
+    "veg"
    ],
    [
     "Ohio buckeye peanut butter chocolates",
@@ -11051,7 +11947,7 @@
    ],
    [
     "Venus flytrap tacos",
-    "meat"
+    "veg"
    ],
    [
     "Feed me meatballs",
@@ -11069,11 +11965,11 @@
   "lock-stock-and-two-smoking-barrels-1998": [
    [
     "Smoked mackerel pâté",
-    "meat"
+    "veg"
    ],
    [
     "Hatchet Harry's vinegar pork scratchings",
-    "meat"
+    "veg"
    ],
    [
     "Big Chris's pie and chips",
@@ -11091,7 +11987,7 @@
   "logan-2017": [
    [
     "Eden-bound border tacos",
-    "meat"
+    "veg"
    ],
    [
     "Farm corn fritters",
@@ -11117,7 +12013,7 @@
    ],
    [
     "Karaoke night karaage",
-    "meat"
+    "veg"
    ],
    [
     "Shabu-shabu",
@@ -11139,7 +12035,7 @@
    ],
    [
     "Nativity lobster bites",
-    "meat"
+    "veg"
    ],
    [
     "London Christmas roast",
@@ -11147,7 +12043,7 @@
    ],
    [
     "Christmas trifle",
-    "meat"
+    "veg"
    ],
    [
     "Mulled wine",
@@ -11179,7 +12075,7 @@
   "macgruber-2010": [
    [
     "Car stereo mission briefing nuts",
-    "meat"
+    "veg"
    ],
    [
     "Emergency celery with blue cheese dip",
@@ -11195,13 +12091,13 @@
    ],
    [
     "Vicki St. Elmo's debrief michelada",
-    "meat"
+    "veg"
    ]
   ],
   "mad-max-1979": [
    [
     "MFP roadhouse chips",
-    "meat"
+    "veg"
    ],
    [
     "Goose's pickled onions",
@@ -11223,7 +12119,7 @@
   "mad-max-2-1981": [
    [
     "Wasteland tin dinner",
-    "meat"
+    "veg"
    ],
    [
     "Feral Kid's boomerang biscuits",
@@ -11271,7 +12167,7 @@
    ],
    [
     "Wasteland lizard skewers",
-    "meat"
+    "veg"
    ],
    [
     "Harissa lamb shoulder with hummus",
@@ -11289,7 +12185,7 @@
   "madagascar-2005": [
    [
     "Penguins' sushi rolls",
-    "meat"
+    "veg"
    ],
    [
     "Marty's birthday zebra brownies",
@@ -11403,7 +12299,7 @@
    ],
    [
     "Fishing trawler fish bites",
-    "meat"
+    "veg"
    ],
    [
     "Martha's farmhouse pot roast",
@@ -11421,7 +12317,7 @@
   "manhattan-1979": [
    [
     "Queensboro Bridge bagels and lox",
-    "meat"
+    "veg"
    ],
    [
     "Elaine's crostini",
@@ -11443,11 +12339,11 @@
   "mary-poppins-1964": [
    [
     "Uncle Albert's tea party sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Mrs Brill's Cornish pasties",
-    "meat"
+    "veg"
    ],
    [
     "Cherry Tree Lane roast",
@@ -11509,7 +12405,7 @@
   "mean-girls-2004": [
    [
     "Pink cafeteria wraps",
-    "meat"
+    "veg"
    ],
    [
     "Candy cane gram peppermint bark",
@@ -11531,11 +12427,11 @@
   "mean-streets-1973": [
    [
     "San Gennaro sausage bites",
-    "meat"
+    "veg"
    ],
    [
     "Fried calamari",
-    "meat"
+    "veg"
    ],
    [
     "Penne arrabbiata",
@@ -11553,11 +12449,11 @@
   "meet-the-fockers-2004": [
    [
     "Circle of trust ham croquetas",
-    "meat"
+    "veg"
    ],
    [
     "Coconut Grove prawn fritters",
-    "meat"
+    "veg"
    ],
    [
     "Wall of Gaylord mojo roast pork",
@@ -11575,7 +12471,7 @@
   "meet-the-parents-2000": [
    [
     "Mr Jinx's tuna bites",
-    "meat"
+    "veg"
    ],
    [
     "Garden party devilled eggs",
@@ -11601,7 +12497,7 @@
    ],
    [
     "Uncle Art's space pizza bites",
-    "meat"
+    "veg"
    ],
    [
     "Meatball cannon dinner",
@@ -11619,7 +12515,7 @@
   "megamind-2010": [
    [
     "Metro City chicken quesadilla wedges",
-    "meat"
+    "veg"
    ],
    [
     "Cheddar fish crackers",
@@ -11663,11 +12559,11 @@
   "men-in-black-3-2012": [
    [
     "Coney Island hot dogs",
-    "meat"
+    "veg"
    ],
    [
     "Chinese restaurant dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Agency meatloaf",
@@ -11685,7 +12581,7 @@
   "men-in-black-ii-2002": [
    [
     "Ben's Famous pizza bites",
-    "meat"
+    "veg"
    ],
    [
     "Pug cookies",
@@ -11707,7 +12603,7 @@
   "mickey-blue-eyes-1999": [
    [
     "English tea sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Kansas City Mickey's fried ravioli",
@@ -11729,7 +12625,7 @@
   "midnight-cowboy-1969": [
    [
     "Automat sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Cinnamon doughnut holes, coffee custard",
@@ -11751,7 +12647,7 @@
   "midsommar-2019": [
    [
     "Pelle's pickled herring and new potatoes",
-    "meat"
+    "veg"
    ],
    [
     "Hårga flower crown crudités",
@@ -11773,7 +12669,7 @@
   "miller-s-crossing-1990": [
    [
     "What's-the-rumpus liver pâté toasts",
-    "meat"
+    "veg"
    ],
    [
     "Johnny Caspar's cheese straws",
@@ -11795,7 +12691,7 @@
   "million-dollar-baby-2004": [
    [
     "Diner leftovers steak bites",
-    "meat"
+    "veg"
    ],
    [
     "Ozarks cornbread",
@@ -11883,11 +12779,11 @@
   "mission-impossible-1996": [
    [
     "Prague café chlebíčky open sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Exploding gum bubble crackers",
-    "meat"
+    "veg"
    ],
    [
     "Prague goulash",
@@ -11905,7 +12801,7 @@
   "moana-2-2024": [
    [
     "Kakamora coconut prawns",
-    "meat"
+    "veg"
    ],
    [
     "Motunui taro chips",
@@ -11927,11 +12823,11 @@
   "moana-2016": [
    [
     "Coconut pirate crusted prawns",
-    "meat"
+    "veg"
    ],
    [
     "Ocean poke cups",
-    "meat"
+    "veg"
    ],
    [
     "Te Fiti fish in coconut",
@@ -11965,13 +12861,13 @@
    ],
    [
     "Money Train payday michelada",
-    "meat"
+    "veg"
    ]
   ],
   "monsters-inc-2001": [
    [
     "Harryhausen's sushi rolls",
-    "meat"
+    "veg"
    ],
    [
     "Yeti's lemon snow cones",
@@ -11993,7 +12889,7 @@
   "monsters-university-2013": [
    [
     "Frat house party wings",
-    "meat"
+    "veg"
    ],
    [
     "Scare Games cheese fries",
@@ -12041,7 +12937,7 @@
    ],
    [
     "Atlanta pimento cheese with crackers",
-    "meat"
+    "veg"
    ],
    [
     "Mother's Day ham and spinach frittata",
@@ -12059,7 +12955,7 @@
   "moulin-rouge-2001": [
    [
     "Moulin Rouge oysters",
-    "meat"
+    "veg"
    ],
    [
     "Montmartre gougères",
@@ -12107,7 +13003,7 @@
    ],
    [
     "Greeting card cheese and tomato pinwheels",
-    "meat"
+    "veg"
    ],
    [
     "Mandrake Falls pepperoni mushroom pizza",
@@ -12125,7 +13021,7 @@
   "mrs-doubtfire-1993": [
    [
     "Restaurant garlic prawns",
-    "meat"
+    "veg"
    ],
    [
     "Euphegenia's tea sandwiches",
@@ -12147,7 +13043,7 @@
   "mulan-1998": [
    [
     "Matchmaker's tea and dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Training camp edamame",
@@ -12169,7 +13065,7 @@
   "muppet-treasure-island-1996": [
    [
     "Admiral Benbow honey mustard sausages",
-    "meat"
+    "veg"
    ],
    [
     "Hispaniola cheddar ship's biscuits",
@@ -12191,11 +13087,11 @@
   "muriel-s-wedding-1994": [
    [
     "Porpoise Spit prawn cocktail",
-    "meat"
+    "veg"
    ],
    [
     "Chicken tarragon vol-au-vents",
-    "meat"
+    "veg"
    ],
    [
     "Sweet and sour pork with rice",
@@ -12213,11 +13109,11 @@
   "my-best-friend-s-wedding-1997": [
    [
     "Chicago seafood restaurant oysters",
-    "meat"
+    "veg"
    ],
    [
     "Karaoke bar wings",
-    "meat"
+    "veg"
    ],
    [
     "Food critic's steak",
@@ -12225,7 +13121,7 @@
    ],
    [
     "Crème brûlée and jelly",
-    "meat"
+    "veg"
    ],
    [
     "Raspberry sparkler",
@@ -12243,7 +13139,7 @@
    ],
    [
     "Biscuits and sausage gravy",
-    "meat"
+    "veg"
    ],
    [
     "Sac-O-Suds chicken fried steak",
@@ -12283,7 +13179,7 @@
   "mystic-pizza-1988": [
    [
     "Portuguese kale soup",
-    "meat"
+    "veg"
    ],
    [
     "Pizza parlour garlic knots",
@@ -12331,7 +13227,7 @@
    ],
    [
     "Idaho potato skins",
-    "meat"
+    "veg"
    ],
    [
     "Make yourself a dang quesadilla",
@@ -12353,7 +13249,7 @@
    ],
    [
     "Cousin Eddie's RV sausages",
-    "meat"
+    "veg"
    ],
    [
     "Juicy roast turkey",
@@ -12365,13 +13261,13 @@
    ],
    [
     "Sledding hot chocolate",
-    "meat"
+    "veg"
    ]
   ],
   "national-lampoon-s-vacation-1983": [
    [
     "Walley World corn dogs",
-    "meat"
+    "veg"
    ],
    [
     "Family Truckster sweet and salty trail mix",
@@ -12393,7 +13289,7 @@
   "national-treasure-2004": [
    [
     "Invisible ink lemon chicken bites",
-    "meat"
+    "veg"
    ],
    [
     "Silence Dogood soft pretzels",
@@ -12415,11 +13311,11 @@
   "nativity-2009": [
    [
     "St Bernadette's staffroom mince pies",
-    "meat"
+    "veg"
    ],
    [
     "Christmas fair pork and apple rolls",
-    "meat"
+    "veg"
    ],
    [
     "Coventry Christmas roast chicken dinner",
@@ -12437,7 +13333,7 @@
   "neighbors-2014": [
    [
     "Frat party pork and fennel sausage rolls",
-    "meat"
+    "veg"
    ],
    [
     "Baby Stella date night baked brie",
@@ -12459,11 +13355,11 @@
   "new-year-s-eve-2011": [
    [
     "Laura's prawn and avocado tostada bites",
-    "meat"
+    "veg"
    ],
    [
     "Times Square halal cart chicken skewers",
-    "meat"
+    "veg"
    ],
    [
     "Midnight garlic prawn linguine",
@@ -12471,7 +13367,7 @@
    ],
    [
     "Ingrid's resolutions chocolate fondue",
-    "meat"
+    "veg"
    ],
    [
     "Gin French 75 with champagne",
@@ -12507,7 +13403,7 @@
    ],
    [
     "Samoan oka raw fish in coconut",
-    "meat"
+    "veg"
    ],
    [
     "Tavita's team sapasui",
@@ -12541,13 +13437,13 @@
    ],
    [
     "Night guard thermos hot chocolate",
-    "meat"
+    "veg"
    ]
   ],
   "night-of-the-living-dead-1968": [
    [
     "\"Coming to get you, Barbara\" sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Black and white popcorn",
@@ -12569,7 +13465,7 @@
   "noelle-2019": [
    [
     "Phoenix street corn chicken tacos",
-    "meat"
+    "veg"
    ],
    [
     "Noelle's double candy cane bark",
@@ -12595,7 +13491,7 @@
    ],
    [
     "Chuckwagon beans",
-    "meat"
+    "veg"
    ],
    [
     "Haywood Ranch grilled tri-tip and beans",
@@ -12603,7 +13499,7 @@
    ],
    [
     "Jean Jacket flying saucer cookies",
-    "meat"
+    "veg"
    ],
    [
     "Jupe's watermelon agua fresca",
@@ -12635,7 +13531,7 @@
   "notting-hill-1999": [
    [
     "Brie, ham and chutney sandwich bites",
-    "meat"
+    "veg"
    ],
    [
     "Spike's sandwich",
@@ -12657,7 +13553,7 @@
   "ocean-s-eleven-2001": [
    [
     "Rusty's prawn cocktail",
-    "meat"
+    "veg"
    ],
    [
     "High roller chips",
@@ -12679,11 +13575,11 @@
   "ocean-s-twelve-2004": [
    [
     "Amsterdam beef bitterballen",
-    "meat"
+    "veg"
    ],
    [
     "Lake Como antipasto",
-    "meat"
+    "veg"
    ],
    [
     "Risotto alla milanese",
@@ -12701,7 +13597,7 @@
   "office-christmas-party-2016": [
    [
     "Office party beef and onion sausage rolls",
-    "meat"
+    "veg"
    ],
    [
     "Baked camembert with garlic and honey",
@@ -12723,7 +13619,7 @@
   "office-space-1999": [
    [
     "Chotchkie's loaded potato skins",
-    "meat"
+    "veg"
    ],
    [
     "TPS report crackers",
@@ -12745,11 +13641,11 @@
   "old-school-2003": [
    [
     "Frank the Tank's wings",
-    "meat"
+    "veg"
    ],
    [
     "Pledge week jalapeño poppers",
-    "meat"
+    "veg"
    ],
    [
     "Backyard brisket",
@@ -12767,7 +13663,7 @@
   "oliver-company-1988": [
    [
     "Hot dog cart sausages",
-    "meat"
+    "veg"
    ],
    [
     "Fish crackers",
@@ -12793,7 +13689,7 @@
    ],
    [
     "Bagel crisps with schmear",
-    "meat"
+    "veg"
    ],
    [
     "Fat Moe's back room brisket",
@@ -12859,7 +13755,7 @@
    ],
    [
     "Burger Shire sliders",
-    "meat"
+    "veg"
    ],
    [
     "Questing chicken drumsticks",
@@ -12881,7 +13777,7 @@
    ],
    [
     "Los Alamos green chile cheeseburger sliders",
-    "meat"
+    "veg"
    ],
    [
     "Trinity test green chile stew",
@@ -12943,11 +13839,11 @@
   "paddington-in-peru-2024": [
    [
     "Marmalade, ham and cheddar toasties",
-    "meat"
+    "veg"
    ],
    [
     "Peruvian chicken causa bites",
-    "meat"
+    "veg"
    ],
    [
     "Beef lomo saltado with fries",
@@ -12965,11 +13861,11 @@
   "palm-springs-2020": [
    [
     "Pool float pizza bites",
-    "meat"
+    "veg"
    ],
    [
     "Desert bar jalapeño poppers",
-    "meat"
+    "veg"
    ],
    [
     "Tala and Abe's wedding fish tacos",
@@ -12981,7 +13877,7 @@
    ],
    [
     "Roy's crossbow michelada",
-    "meat"
+    "veg"
    ]
   ],
   "paranormal-activity-2007": [
@@ -13035,7 +13931,7 @@
    ],
    [
     "Mermaid lagoon prawns",
-    "meat"
+    "veg"
    ],
    [
     "Captain Hook's beef and allspice stew",
@@ -13097,7 +13993,7 @@
   "phar-lap-1983": [
    [
     "Flemington Cup day beef party pies",
-    "meat"
+    "veg"
    ],
    [
     "Strapper's apple and cheddar crostini",
@@ -13141,7 +14037,7 @@
   "pinocchio-1940": [
    [
     "Salami and provolone crostini",
-    "meat"
+    "veg"
    ],
    [
     "Cleo's goldfish crackers",
@@ -13163,7 +14059,7 @@
   "pirates-of-the-caribbean-at-world-s-end-2007": [
    [
     "Singapore bathhouse dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Jack's honey and smoked salt peanuts",
@@ -13189,7 +14085,7 @@
    ],
    [
     "Pelegosto island skewers",
-    "meat"
+    "veg"
    ],
    [
     "Davy Jones's seafood boil",
@@ -13211,7 +14107,7 @@
    ],
    [
     "Ghost shark tempura prawns",
-    "meat"
+    "veg"
    ],
    [
     "Caribbean coconut fish",
@@ -13229,7 +14125,7 @@
   "pirates-of-the-caribbean-on-stranger-tides-2011": [
    [
     "Whitecap Bay prawns",
-    "meat"
+    "veg"
    ],
    [
     "Spanish expedition olives",
@@ -13273,7 +14169,7 @@
   "planes-trains-and-automobiles-1987": [
    [
     "Braidwood Inn vending machine mix",
-    "meat"
+    "veg"
    ],
    [
     "Shower curtain ring onion rings",
@@ -13317,11 +14213,11 @@
   "point-break-1991": [
    [
     "Beach bonfire prawns",
-    "meat"
+    "veg"
    ],
    [
     "Bodhi's surf shack fish tacos",
-    "meat"
+    "veg"
    ],
    [
     "Utah's two meatball subs",
@@ -13343,7 +14239,7 @@
    ],
    [
     "Blue Oyster bar oysters",
-    "meat"
+    "veg"
    ],
    [
     "Mess hall meatloaf",
@@ -13387,7 +14283,7 @@
    ],
    [
     "Tour bus crispy chicken sliders",
-    "meat"
+    "veg"
    ],
    [
     "Style Boyz fish tacos with mango salsa",
@@ -13453,7 +14349,7 @@
    ],
    [
     "Chinatown pork buns",
-    "meat"
+    "veg"
    ],
    [
     "Wilee's halal cart chicken over rice",
@@ -13497,7 +14393,7 @@
    ],
    [
     "Garlic butter escargot or mushrooms",
-    "meat"
+    "veg"
    ],
    [
     "Business dinner eye fillet and red wine jus",
@@ -13515,7 +14411,7 @@
   "prizzi-s-honor-1985": [
    [
     "Prizzi wedding antipasto",
-    "meat"
+    "veg"
    ],
    [
     "Fried zucchini",
@@ -13537,7 +14433,7 @@
   "psycho-1960": [
    [
     "Norman's parlour sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Mother's pickled onions",
@@ -13559,11 +14455,11 @@
   "pulp-fiction-1994": [
    [
     "Royale with cheese sliders",
-    "meat"
+    "veg"
    ],
    [
     "Big Kahuna burger bites",
-    "meat"
+    "veg"
    ],
    [
     "Jack Rabbit Slim's fries",
@@ -13579,7 +14475,7 @@
    ],
    [
     "Diner pancakes",
-    "meat"
+    "veg"
    ],
    [
     "Five dollar shake",
@@ -13597,7 +14493,7 @@
    ],
    [
     "Airport bar chilli-lime wings",
-    "meat"
+    "veg"
    ],
    [
     "Bodega sandwiches",
@@ -13615,11 +14511,11 @@
   "raging-bull-1980": [
    [
     "Bronx devilled eggs with crisp pancetta",
-    "meat"
+    "veg"
    ],
    [
     "Copacabana prawns",
-    "meat"
+    "veg"
    ],
    [
     "Jake's steak",
@@ -13637,7 +14533,7 @@
   "raiders-of-the-lost-ark-1981": [
    [
     "Good dates",
-    "meat"
+    "veg"
    ],
    [
     "Cairo market falafel",
@@ -13659,11 +14555,11 @@
   "rain-man-1988": [
    [
     "Toothpick cheese cubes",
-    "meat"
+    "veg"
    ],
    [
     "Vegas buffet prawns",
-    "meat"
+    "veg"
    ],
    [
     "Pancakes, syrup first",
@@ -13671,7 +14567,7 @@
    ],
    [
     "Fresh strawberry jelly with vanilla cream",
-    "meat"
+    "veg"
    ],
    [
     "Maple syrup bourbon smash",
@@ -13681,7 +14577,7 @@
   "ratatouille-2007": [
    [
     "Gusteau's soup",
-    "meat"
+    "veg"
    ],
    [
     "Remy's lightning mushroom and cheese",
@@ -13689,7 +14585,7 @@
    ],
    [
     "Paris market jambon-beurre and brie",
-    "meat"
+    "veg"
    ],
    [
     "Ratatouille",
@@ -13707,11 +14603,11 @@
   "raya-and-the-last-dragon-2021": [
    [
     "Boun's shrimp boat bites",
-    "meat"
+    "veg"
    ],
    [
     "Talon night market spring rolls",
-    "meat"
+    "veg"
    ],
    [
     "Benja's shrimp congee",
@@ -13733,7 +14629,7 @@
    ],
    [
     "Stella's sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Lisa's lobster dinner",
@@ -13751,11 +14647,11 @@
   "red-dog-2011": [
    [
     "Mining camp sausage rolls",
-    "meat"
+    "veg"
    ],
    [
     "Dampier barbecued squid",
-    "meat"
+    "veg"
    ],
    [
     "Dampier sausages, steak and potato salad",
@@ -13763,7 +14659,7 @@
    ],
    [
     "Red Dog lamingtons",
-    "meat"
+    "veg"
    ],
    [
     "Red Dog ruby grapefruit radler",
@@ -13773,7 +14669,7 @@
   "red-heat-1988": [
    [
     "Pickled herring on rye",
-    "meat"
+    "veg"
    ],
    [
     "Rostavili's Georgian cheese bread",
@@ -13795,7 +14691,7 @@
   "red-one-2024": [
    [
     "MORA command centre loaded potato skins",
-    "meat"
+    "veg"
    ],
    [
     "Maple pecan pretzel crunch",
@@ -13817,11 +14713,11 @@
   "remember-the-titans-2000": [
    [
     "Gettysburg training camp hoagies",
-    "meat"
+    "veg"
    ],
    [
     "Titans game day chilli dogs",
-    "meat"
+    "veg"
    ],
    [
     "Strong side Virginia fried chicken",
@@ -13861,7 +14757,7 @@
   "return-of-the-jedi-1983": [
    [
     "Jabba's palace crumbed prawn bites",
-    "meat"
+    "veg"
    ],
    [
     "Endor forest berries",
@@ -13887,7 +14783,7 @@
    ],
    [
     "Mansion caviar blinis",
-    "meat"
+    "veg"
    ],
    [
     "Richie's home burger bar",
@@ -13927,7 +14823,7 @@
   "road-house-1989": [
    [
     "Double Deuce bacon jalapeño poppers",
-    "meat"
+    "veg"
    ],
    [
     "Farm loft pickles",
@@ -13971,11 +14867,11 @@
   "robin-hood-1973": [
    [
     "Sherwood ploughman's picnic board",
-    "meat"
+    "veg"
    ],
    [
     "Archery tournament skewers",
-    "meat"
+    "veg"
    ],
    [
     "Outlaws' camp stew",
@@ -13997,7 +14893,7 @@
    ],
    [
     "OCP boardroom canapés",
-    "meat"
+    "veg"
    ],
    [
     "Detroit coney dog",
@@ -14015,11 +14911,11 @@
   "rocky-1976": [
    [
     "Philly cheesesteak bites",
-    "meat"
+    "veg"
    ],
    [
     "Italian Market antipasto",
-    "meat"
+    "veg"
    ],
    [
     "Meat locker steak",
@@ -14037,11 +14933,11 @@
   "rocky-ii-1979": [
    [
     "Pork roll sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Italian market bites",
-    "meat"
+    "veg"
    ],
    [
     "Adrian's spaghetti and meatballs",
@@ -14063,7 +14959,7 @@
    ],
    [
     "Venice beach fish tacos",
-    "meat"
+    "veg"
    ],
    [
     "Clubber Lang rematch chicken",
@@ -14081,7 +14977,7 @@
   "rocky-iv-1985": [
    [
     "Moscow blini",
-    "meat"
+    "veg"
    ],
    [
     "Log cabin pickles",
@@ -14103,11 +14999,11 @@
   "rogue-one-a-star-wars-story-2016": [
    [
     "Za'atar flatbreads with hummus",
-    "meat"
+    ""
    ],
    [
     "Scarif beach prawns",
-    "meat"
+    "veg"
    ],
    [
     "Jedha spiced lamb pilaf",
@@ -14125,11 +15021,11 @@
   "role-models-2008": [
    [
     "King Argotron's roast battle drumsticks",
-    "meat"
+    "veg"
    ],
    [
     "Sturdy Wings honey soy chicken wings",
-    "meat"
+    "veg"
    ],
    [
     "Ronnie's double cheeseburgers and fries",
@@ -14147,7 +15043,7 @@
   "roman-holiday-1953": [
    [
     "Mozzarella risotto croquettes (supplì)",
-    "meat"
+    "veg"
    ],
    [
     "Vespa ride bruschetta",
@@ -14173,7 +15069,7 @@
    ],
    [
     "Cartagena empanadas",
-    "meat"
+    "veg"
    ],
    [
     "Colombian sancocho",
@@ -14181,7 +15077,7 @@
    ],
    [
     "El Corazón emerald jelly",
-    "meat"
+    "veg"
    ],
    [
     "Joan Wilder's iced coffee with panela cream",
@@ -14195,7 +15091,7 @@
    ],
    [
     "Bramford welcome canapés",
-    "meat"
+    "veg"
    ],
    [
     "Chicken club sandwich",
@@ -14213,11 +15109,11 @@
   "rudy-1993": [
    [
     "Joliet steel mill meatloaf sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Notre Dame tailgate beer brats",
-    "meat"
+    "veg"
    ],
    [
     "Ruettiger family Sunday pot roast",
@@ -14235,11 +15131,11 @@
   "rumble-in-the-bronx-1995": [
    [
     "Elaine's supermarket Reuben bites",
-    "meat"
+    "veg"
    ],
    [
     "Pork and chive dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Hovercraft sweet and sour pork",
@@ -14247,7 +15143,7 @@
    ],
    [
     "Almond jelly with fruit",
-    "meat"
+    "veg"
    ],
    [
     "Uncle Bill's wedding iced jasmine tea",
@@ -14257,7 +15153,7 @@
   "runaway-bride-1999": [
    [
     "Maryland crab cakes",
-    "meat"
+    "veg"
    ],
    [
     "Diner hash browns",
@@ -14279,11 +15175,11 @@
   "running-scared-1986": [
    [
     "Chicago hot dogs",
-    "meat"
+    "veg"
    ],
    [
     "Key West conch fritters",
-    "meat"
+    "veg"
    ],
    [
     "Chicago Italian beef",
@@ -14305,7 +15201,7 @@
    ],
    [
     "Carter's hot wings",
-    "meat"
+    "veg"
    ],
    [
     "Foo Chow noodles",
@@ -14327,7 +15223,7 @@
    ],
    [
     "Red Dragon casino prawns",
-    "meat"
+    "veg"
    ],
    [
     "Ricky Tan's Hong Kong roast goose",
@@ -14345,11 +15241,11 @@
   "saturday-night-fever-1977": [
    [
     "Bay Ridge sausage and peppers",
-    "meat"
+    "veg"
    ],
    [
     "Disco fries",
-    "meat"
+    "veg"
    ],
    [
     "Two slices stacked",
@@ -14389,11 +15285,11 @@
   "say-anything-1989": [
    [
     "Graduation party sausage rolls",
-    "meat"
+    "veg"
    ],
    [
     "Seattle smoked salmon bites",
-    "meat"
+    "veg"
    ],
    [
     "Dijon crusted salmon, crushed potatoes",
@@ -14411,7 +15307,7 @@
   "scarface-1983": [
    [
     "Freedom Town croquetas de jamón",
-    "meat"
+    "veg"
    ],
    [
     "Tostones",
@@ -14433,7 +15329,7 @@
   "school-of-rock-2003": [
    [
     "Ned's labeled ham and egg sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Gold star cheese stars",
@@ -14477,11 +15373,11 @@
   "screwed-2000": [
    [
     "Limo back seat prosciutto grissini",
-    "meat"
+    "veg"
    ],
    [
     "Rusty's diner gravy fries",
-    "meat"
+    "veg"
    ],
    [
     "Ransom night meat lovers pizza",
@@ -14499,7 +15395,7 @@
   "scrooged-1988": [
    [
     "TV studio canapés",
-    "meat"
+    "veg"
    ],
    [
     "Toaster fairy toast soldiers",
@@ -14543,11 +15439,11 @@
   "selena-1997": [
    [
     "Tour bus breakfast tacos",
-    "meat"
+    "veg"
    ],
    [
     "Corpus Christi shrimp cocktail",
-    "meat"
+    "veg"
    ],
    [
     "Los Dinos Tex-Mex cheese enchiladas",
@@ -14565,11 +15461,11 @@
   "semi-pro-2008": [
    [
     "Flint coney dogs",
-    "meat"
+    "veg"
    ],
    [
     "Flint Tropics coconut prawns",
-    "meat"
+    "veg"
    ],
    [
     "Jackie Moon's barbecue pork ribs",
@@ -14609,11 +15505,11 @@
   "serpico-1973": [
    [
     "Village bagels and lox",
-    "meat"
+    "veg"
    ],
    [
     "Deli pastrami on rye",
-    "meat"
+    "veg"
    ],
    [
     "Deli hero, paid for",
@@ -14631,11 +15527,11 @@
   "set-it-up-2018": [
    [
     "Late-night office pizza",
-    "meat"
+    "veg"
    ],
    [
     "Kiss cam ballpark hot dogs",
-    "meat"
+    "veg"
    ],
    [
     "Peppercorn steak with roast potatoes",
@@ -14675,11 +15571,11 @@
   "shang-chi-and-the-legend-of-the-ten-rings-2021": [
    [
     "Katy's family chicken congee",
-    "meat"
+    "veg"
    ],
    [
     "Bus fight sticky pork bao",
-    "meat"
+    "veg"
    ],
    [
     "Ta Lo steamed ginger snapper",
@@ -14687,7 +15583,7 @@
    ],
    [
     "Dragon scale mango pudding",
-    "meat"
+    "veg"
    ],
    [
     "Katy's brown sugar boba milk tea",
@@ -14697,7 +15593,7 @@
   "shanghai-noon-2000": [
    [
     "Imperial court dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Chon Wang cornbread",
@@ -14709,7 +15605,7 @@
    ],
    [
     "Imperial almond jelly with lychees",
-    "meat"
+    "veg"
    ],
    [
     "Rye and jasmine tea highball",
@@ -14741,7 +15637,7 @@
   "shazam-2019": [
    [
     "Philly cheesesteak bites",
-    "meat"
+    "veg"
    ],
    [
     "Garlic parmesan potato gems",
@@ -14753,7 +15649,7 @@
    ],
    [
     "Dark chocolate rocky road",
-    "meat"
+    "veg"
    ],
    [
     "Cinnamon vanilla eggnog",
@@ -14767,7 +15663,7 @@
    ],
    [
     "Stephanie's food truck egg rolls",
-    "meat"
+    "veg"
    ],
    [
     "Food truck double burger",
@@ -14833,7 +15729,7 @@
    ],
    [
     "Ashecliffe baked beans on toast",
-    "meat"
+    "veg"
    ],
    [
     "Chuck and Teddy's storm chowder",
@@ -14873,11 +15769,11 @@
   "silver-linings-playbook-2012": [
    [
     "Hot crab toasts",
-    "meat"
+    "veg"
    ],
    [
     "Baked meatballs with sweet tomato sauce",
-    "meat"
+    "veg"
    ],
    [
     "Philly cheesesteaks",
@@ -14895,7 +15791,7 @@
   "singin-in-the-rain-1952": [
    [
     "Devils on horseback bacon prunes",
-    "meat"
+    "veg"
    ],
    [
     "Rainy day cheese toasties",
@@ -14939,7 +15835,7 @@
   "sister-act-1992": [
    [
     "Reno lounge stuffed mushrooms",
-    "meat"
+    "veg"
    ],
    [
     "Choir practice cheese scones",
@@ -14961,11 +15857,11 @@
   "sixteen-candles-1984": [
    [
     "Wedding reception canapés",
-    "meat"
+    "veg"
    ],
    [
     "Pan fried pork dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Wedding buffet chicken",
@@ -14983,11 +15879,11 @@
   "skyfall-2012": [
    [
     "Macau casino dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Highland oatcakes and smoked salmon",
-    "meat"
+    "veg"
    ],
    [
     "Skyfall lodge venison",
@@ -15027,7 +15923,7 @@
   "sleepless-in-seattle-1993": [
    [
     "Seattle smoked salmon dip",
-    "meat"
+    "veg"
    ],
    [
     "Radio show popcorn",
@@ -15075,7 +15971,7 @@
    ],
    [
     "Rose's late-shift popcorn chicken",
-    "meat"
+    "veg"
    ],
    [
     "Trevor's engagement dinner salmon",
@@ -15119,7 +16015,7 @@
    ],
    [
     "Caravan site sausages",
-    "meat"
+    "veg"
    ],
    [
     "Turkish's full English fry-up",
@@ -15159,11 +16055,11 @@
   "solo-a-star-wars-story-2018": [
    [
     "Sabacc rosemary nuts and olives",
-    "meat"
+    ""
    ],
    [
     "Corellia street dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Vandor lodge roast pork knuckle",
@@ -15181,11 +16077,11 @@
   "some-like-it-hot-1959": [
    [
     "Speakeasy devilled eggs with crispy pancetta",
-    "meat"
+    "veg"
    ],
    [
     "Florida beach prawns",
-    "meat"
+    "veg"
    ],
    [
     "Osgood's yacht lobster",
@@ -15207,7 +16103,7 @@
    ],
    [
     "Barber shop bagel bites",
-    "meat"
+    "veg"
    ],
    [
     "New York pizza slice",
@@ -15229,7 +16125,7 @@
    ],
    [
     "Big Mama's ham hock braised greens",
-    "meat"
+    "veg"
    ],
    [
     "Sunday fried chicken",
@@ -15273,7 +16169,7 @@
    ],
    [
     "Merchandising snack mix",
-    "meat"
+    "veg"
    ],
    [
     "Pizza the Hutt",
@@ -15339,7 +16235,7 @@
    ],
    [
     "Thanksgiving sliders",
-    "meat"
+    "veg"
    ],
    [
     "Aunt May's Thanksgiving roast",
@@ -15379,7 +16275,7 @@
   "spider-man-far-from-home-2019": [
    [
     "Venice cicchetti, three toppings on toast",
-    "meat"
+    "veg"
    ],
    [
     "Netherlands tulip field fries",
@@ -15423,11 +16319,11 @@
   "spider-man-into-the-spider-verse-2018": [
    [
     "Spider-Ham's ham and pineapple pinwheels",
-    "meat"
+    "veg"
    ],
    [
     "Chopped cheese rolls",
-    "meat"
+    "veg"
    ],
    [
     "Peter B. Parker's burger",
@@ -15449,7 +16345,7 @@
    ],
    [
     "Ned's lola's pork lumpia",
-    "meat"
+    "veg"
    ],
    [
     "Happy's apartment spaghetti",
@@ -15467,7 +16363,7 @@
   "splash-1984": [
    [
     "Oysters natural",
-    "meat"
+    "veg"
    ],
    [
     "Fish and chip cones",
@@ -15479,7 +16375,7 @@
    ],
    [
     "Ocean blue jelly cups",
-    "meat"
+    "veg"
    ],
    [
     "Blue lagoon",
@@ -15489,7 +16385,7 @@
   "spy-2015": [
    [
     "Cat lady cover croque monsieur bites",
-    "meat"
+    "veg"
    ],
    [
     "Budapest garlic lángos with sour cream",
@@ -15515,7 +16411,7 @@
    ],
    [
     "Movie trivia snack mix",
-    "meat"
+    "veg"
    ],
    [
     "Maria's home cooking",
@@ -15533,11 +16429,11 @@
   "stand-by-me-1986": [
    [
     "Campfire marshmallows",
-    "meat"
+    "veg"
    ],
    [
     "Junkyard sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Campfire hamburger patties",
@@ -15559,7 +16455,7 @@
    ],
    [
     "Death Star meatballs",
-    "meat"
+    "veg"
    ],
    [
     "Ronto wrap",
@@ -15581,7 +16477,7 @@
    ],
    [
     "Podrace grandstand skewers",
-    "meat"
+    "veg"
    ],
    [
     "Shmi's harissa chicken and chickpeas",
@@ -15603,7 +16499,7 @@
    ],
    [
     "Geonosis arena wings",
-    "meat"
+    "veg"
    ],
    [
     "Dex's Diner patty melts and fries",
@@ -15625,7 +16521,7 @@
    ],
    [
     "Utapau creamy chicken vol-au-vents",
-    "meat"
+    "veg"
    ],
    [
     "Coruscant opera house roast duck",
@@ -15665,7 +16561,7 @@
   "star-wars-the-last-jedi-2017": [
    [
     "Luke's lemon dill salmon skewers",
-    "meat"
+    "veg"
    ],
    [
     "Crait red salt chips",
@@ -15677,7 +16573,7 @@
    ],
    [
     "Green pistachio milk panna cotta",
-    "meat"
+    "veg"
    ],
    [
     "Throne room red punch",
@@ -15687,11 +16583,11 @@
   "star-wars-the-rise-of-skywalker-2019": [
    [
     "Sumac flatbreads with beet and herb dips",
-    "meat"
+    ""
    ],
    [
     "Kijimi snowy city dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Kef Bir ocean seafood stew",
@@ -15709,7 +16605,7 @@
   "step-brothers-2008": [
    [
     "Catalina Wine Mixer canapés",
-    "meat"
+    "veg"
    ],
    [
     "Bunk bed parmesan garlic butter popcorn",
@@ -15735,7 +16631,7 @@
    ],
    [
     "Coorong garlic chilli pippis",
-    "meat"
+    "veg"
    ],
    [
     "Hideaway Tom's crisp fish and chips",
@@ -15753,7 +16649,7 @@
   "strange-brew-1983": [
    [
     "Peameal back bacon on a bun",
-    "meat"
+    "veg"
    ],
    [
     "Doughnut shop honey glazed crullers",
@@ -15775,7 +16671,7 @@
   "stranger-than-fiction-2006": [
    [
     "Ham and cheddar toasties",
-    "meat"
+    "veg"
    ],
    [
     "Ana's three-flour brown butter cookies",
@@ -15797,7 +16693,7 @@
   "strictly-ballroom-1992": [
    [
     "Pan-Pacific canapés",
-    "meat"
+    "veg"
    ],
    [
     "Spanish potato tortilla",
@@ -15819,11 +16715,11 @@
   "stripes-1981": [
    [
     "Boot camp crackers with pimento cheese",
-    "meat"
+    "veg"
    ],
    [
     "Lighten up, Francis cocktail franks",
-    "meat"
+    "veg"
    ],
    [
     "Sgt Hulka's mess hall meatloaf",
@@ -15845,7 +16741,7 @@
    ],
    [
     "Shenanigans loaded cheese fries",
-    "meat"
+    "veg"
    ],
    [
     "Farva's double bacon cheeseburgers",
@@ -15853,7 +16749,7 @@
    ],
    [
     "Syrup-chug maple bacon pancakes",
-    "meat"
+    "veg"
    ],
    [
     "Homemade spiced cola",
@@ -15889,7 +16785,7 @@
    ],
    [
     "Kryptonite jelly",
-    "meat"
+    "veg"
    ],
    [
     "Ma Kent's fried chicken",
@@ -15907,11 +16803,11 @@
   "superman-2025": [
    [
     "Daily Planet bagel bites",
-    "meat"
+    "veg"
    ],
    [
     "Fortress crystal prawn rice paper rolls",
-    "meat"
+    "veg"
    ],
    [
     "Ma Kent's beef pot roast",
@@ -15951,7 +16847,7 @@
   "taken-2008": [
    [
     "Particular set of skills croque monsieur",
-    "meat"
+    "veg"
    ],
    [
     "Albanian spinach and cheese byrek",
@@ -15973,11 +16869,11 @@
   "talladega-nights-the-ballad-of-ricky-bobby-2006": [
    [
     "Pit stop corn dogs",
-    "meat"
+    "veg"
    ],
    [
     "Jean Girard's ham and cheese crêpes",
-    "meat"
+    "veg"
    ],
    [
     "Fried chicken, pizza and tacos dinner",
@@ -15995,7 +16891,7 @@
   "tangled-2010": [
    [
     "Pork and sage sausage rolls",
-    "meat"
+    "veg"
    ],
    [
     "Maximus's cinnamon apple crisps",
@@ -16017,11 +16913,11 @@
   "tango-cash-1989": [
    [
     "Prison canteen sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "LA street tacos",
-    "meat"
+    "veg"
    ],
    [
     "Tango's tailored rib eye",
@@ -16083,7 +16979,7 @@
   "teenage-mutant-ninja-turtles-1990": [
    [
     "Sewer pizza rolls",
-    "meat"
+    "veg"
    ],
    [
     "Splinter's cheese plate",
@@ -16109,7 +17005,7 @@
    ],
    [
     "Sewer lair pizza bagels",
-    "meat"
+    "veg"
    ],
    [
     "Late-pizza pepperoni and pineapple pie",
@@ -16127,11 +17023,11 @@
   "teenage-mutant-ninja-turtles-iii-1993": [
    [
     "Lord Norinaga's samurai rice balls",
-    "meat"
+    "veg"
    ],
    [
     "Time sceptre teriyaki skewers",
-    "meat"
+    "veg"
    ],
    [
     "Back home mushroom and capsicum pizza",
@@ -16149,7 +17045,7 @@
   "teenage-mutant-ninja-turtles-mutant-mayhem-2023": [
    [
     "Splinter's sewer lair pepperoni rolls",
-    "meat"
+    "veg"
    ],
    [
     "Turtle shell guacamole",
@@ -16171,7 +17067,7 @@
   "terminator-2-judgment-day-1991": [
    [
     "Border run beef empanadas",
-    "meat"
+    "veg"
    ],
    [
     "Enrique's bean and cheese quesadillas",
@@ -16197,7 +17093,7 @@
    ],
    [
     "Smart Tech poker night queso dip",
-    "meat"
+    "veg"
    ],
    [
     "Trish's lemon garlic roast chicken",
@@ -16259,7 +17155,7 @@
   "the-adventures-of-priscilla-queen-of-the-desert-1994": [
    [
     "Outback pub sausage rolls",
-    "meat"
+    "veg"
    ],
    [
     "Alice Springs damper",
@@ -16281,11 +17177,11 @@
   "the-amazing-spider-man-2012": [
    [
     "Aunt May's egg bites",
-    "meat"
+    "veg"
    ],
    [
     "Midtown Science pepperoni pizza rolls",
-    "meat"
+    "veg"
    ],
    [
     "Captain Stacy's red wine brisket",
@@ -16297,7 +17193,7 @@
    ],
    [
     "Gwen's dark hot chocolate with marshmallow",
-    "meat"
+    "veg"
    ]
   ],
   "the-aristocats-1970": [
@@ -16307,7 +17203,7 @@
    ],
    [
     "Ham and gruyere croque bites",
-    "meat"
+    "veg"
    ],
    [
     "Countryside coq au vin",
@@ -16325,7 +17221,7 @@
   "the-avengers-2012": [
    [
     "Post-battle hummus with spiced lamb",
-    "meat"
+    "veg"
    ],
    [
     "Asgardian honey roasted nuts",
@@ -16359,7 +17255,7 @@
    ],
    [
     "Samuel's birthday jelly slice",
-    "meat"
+    "veg"
    ],
    [
     "Dook dook dook honey brandy nightcap",
@@ -16369,7 +17265,7 @@
   "the-batman-2022": [
    [
     "Iceberg Lounge salmon rye and spiced olives",
-    "meat"
+    "veg"
    ],
    [
     "Riddler's question mark pretzels",
@@ -16443,7 +17339,7 @@
   "the-birds-1963": [
    [
     "Bodega Bay crab toasts",
-    "meat"
+    "veg"
    ],
    [
     "Lovebird goat cheese filo cups",
@@ -16465,11 +17361,11 @@
   "the-blind-side-2009": [
    [
     "Memphis dry rub barbecue wings",
-    "meat"
+    "veg"
    ],
    [
     "98th percentile devilled eggs",
-    "meat"
+    "veg"
    ],
    [
     "Tuohy Thanksgiving turkey at the table",
@@ -16509,11 +17405,11 @@
   "the-breakfast-club-1985": [
    [
     "Andrew's triple-stack ham and cheese",
-    "meat"
+    "veg"
    ],
    [
     "Bender's share plate",
-    "meat"
+    "veg"
    ],
    [
     "Brian's lunch",
@@ -16531,11 +17427,11 @@
   "the-castle-1997": [
    [
     "Bonnie Doon cheese and kabana",
-    "meat"
+    "veg"
    ],
    [
     "Pool room prawns",
-    "meat"
+    "veg"
    ],
    [
     "Sal's rissoles",
@@ -16557,7 +17453,7 @@
    ],
    [
     "Chicago Italian beef sliders",
-    "meat"
+    "veg"
    ],
    [
     "Pierce family bacon-wrapped meatloaf",
@@ -16569,7 +17465,7 @@
    ],
    [
     "Sleigh ride salted caramel hot chocolate",
-    "meat"
+    "veg"
    ]
   ],
   "the-chronicles-of-narnia-prince-caspian-2008": [
@@ -16597,7 +17493,7 @@
   "the-chronicles-of-narnia-the-lion-the-witch-and-the-wardrobe-2005": [
    [
     "Mr Tumnus's tea and toast",
-    "meat"
+    "veg"
    ],
    [
     "Professor's house scones",
@@ -16641,7 +17537,7 @@
   "the-conjuring-2013": [
    [
     "Rhode Island clam cakes",
-    "meat"
+    "veg"
    ],
    [
     "Hide and clap cornmeal johnnycakes",
@@ -16667,7 +17563,7 @@
    ],
    [
     "Ham and cheddar toasted sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Albrecht's diner meatloaf",
@@ -16685,11 +17581,11 @@
   "the-dark-knight-2008": [
    [
     "Penthouse fundraiser canapés",
-    "meat"
+    "veg"
    ],
    [
     "Hoisin pork belly bites",
-    "meat"
+    "veg"
    ],
    [
     "Joined-tables salmon with caper butter",
@@ -16729,7 +17625,7 @@
   "the-departed-2006": [
    [
     "Boston clam chowder cups",
-    "meat"
+    "veg"
    ],
    [
     "Irish soda bread and butter",
@@ -16755,7 +17651,7 @@
    ],
    [
     "Paris fashion week canapés",
-    "meat"
+    "veg"
    ],
    [
     "Miranda's steak",
@@ -16839,7 +17735,7 @@
   "the-exorcist-1973": [
    [
     "Georgetown crab cakes",
-    "meat"
+    "veg"
    ],
    [
     "Baba ganoush and hummus with flatbread",
@@ -16861,11 +17757,11 @@
   "the-fall-guy-2024": [
    [
     "Harbour prawns with lemon",
-    "meat"
+    "veg"
    ],
    [
     "Beef sausages with beer onions",
-    "meat"
+    "veg"
    ],
    [
     "Jean-Claude's Bondi fish and chips",
@@ -16883,7 +17779,7 @@
   "the-family-stone-2005": [
    [
     "Stone family pigs in blankets",
-    "meat"
+    "veg"
    ],
    [
     "Dinner table garlic herb pull-apart",
@@ -16917,7 +17813,7 @@
    ],
    [
     "Galactus-sized jelly mould",
-    "meat"
+    "veg"
    ],
    [
     "Space race orange cream shake",
@@ -16927,7 +17823,7 @@
   "the-farewell-2019": [
    [
     "Nai Nai's pan-fried pork dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Changchun smashed cucumber with chilli oil",
@@ -16949,11 +17845,11 @@
   "the-fifth-element-1997": [
    [
     "Noodle boat dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Fhloston Paradise prawns",
-    "meat"
+    "veg"
    ],
    [
     "Flying noodle boat noodles",
@@ -16961,7 +17857,7 @@
    ],
    [
     "Diva Plavalaguna blue jelly",
-    "meat"
+    "veg"
    ],
    [
     "Multipass dirty martini",
@@ -16975,7 +17871,7 @@
    ],
    [
     "North Shore roast beef sliders",
-    "meat"
+    "veg"
    ],
    [
     "Alice Ward's baked ziti",
@@ -16993,7 +17889,7 @@
   "the-five-heartbeats-1991": [
    [
     "Choirboy's talent show wings",
-    "meat"
+    "veg"
    ],
    [
     "Deviled eggs",
@@ -17015,7 +17911,7 @@
   "the-flash-2023": [
    [
     "Late for work breakfast sandwich",
-    "meat"
+    "veg"
    ],
    [
     "Speed force popcorn",
@@ -17037,7 +17933,7 @@
   "the-fly-1986": [
    [
     "Teleported steak bites",
-    "meat"
+    "veg"
    ],
    [
     "Sugar dusted doughnuts",
@@ -17081,7 +17977,7 @@
   "the-french-connection-1971": [
    [
     "Frog One's bistro pâté",
-    "meat"
+    "veg"
    ],
    [
     "Stakeout coffee and doughnuts",
@@ -17103,11 +17999,11 @@
   "the-freshman-1990": [
    [
     "Gourmet Club antipasto, all legal",
-    "meat"
+    "veg"
    ],
    [
     "Little Italy fried calamari",
-    "meat"
+    "veg"
    ],
    [
     "Carmine Sabatini's veal marsala",
@@ -17125,7 +18021,7 @@
   "the-godfather-1972": [
    [
     "Wedding antipasto",
-    "meat"
+    "veg"
    ],
    [
     "Golden arancini",
@@ -17147,11 +18043,11 @@
   "the-godfather-part-ii-1974": [
    [
     "Genco olive oil arancini",
-    "meat"
+    "veg"
    ],
    [
     "Havana Cuban sliders",
-    "meat"
+    "veg"
    ],
    [
     "Vito's tenement baked ziti",
@@ -17173,7 +18069,7 @@
    ],
    [
     "Prosciutto and melon",
-    "meat"
+    "veg"
    ],
    [
     "Pasta alla Norma",
@@ -17261,7 +18157,7 @@
    ],
    [
     "Scotch eggs",
-    "meat"
+    "veg"
    ],
    [
     "Baker Street shepherd's pie",
@@ -17279,11 +18175,11 @@
   "the-great-outdoors-1988": [
    [
     "Lakeside crumbed fish bites with tartare",
-    "meat"
+    "veg"
    ],
    [
     "Lake cabin campfire s'mores",
-    "meat"
+    "veg"
    ],
    [
     "The Old 96er rump steak",
@@ -17345,7 +18241,7 @@
   "the-hangover-2009": [
    [
     "Wolfpack buffet prawns",
-    "meat"
+    "veg"
    ],
    [
     "Morning after hash browns",
@@ -17367,11 +18263,11 @@
   "the-heat-2013": [
    [
     "Boston clam chowder with oyster crackers",
-    "meat"
+    "veg"
    ],
    [
     "Watermelon toss buffalo wings",
-    "meat"
+    "veg"
    ],
    [
     "Mullins family roast beef and gravy",
@@ -17389,7 +18285,7 @@
   "the-hobbit-an-unexpected-journey-2012": [
    [
     "Cheddar, pork pie and pickle board",
-    "meat"
+    "veg"
    ],
    [
     "Green salad with mint and pepitas",
@@ -17411,11 +18307,11 @@
   "the-hobbit-the-battle-of-the-five-armies-2014": [
    [
     "Lake-town smoked fish",
-    "meat"
+    "veg"
    ],
    [
     "Dáin's Iron Hills meat pies",
-    "meat"
+    "veg"
    ],
    [
     "Erebor roast beef and Yorkshire puddings",
@@ -17455,11 +18351,11 @@
   "the-holdovers-2023": [
    [
     "Mary's grilled cheese and tomato soup",
-    "meat"
+    "veg"
    ],
    [
     "Boston trip clam chowder",
-    "meat"
+    "veg"
    ],
    [
     "Barton Academy Christmas roast chicken",
@@ -17481,7 +18377,7 @@
    ],
    [
     "Rosehill Cottage Welsh rarebit",
-    "meat"
+    "veg"
    ],
    [
     "Graham's family pasta",
@@ -17499,7 +18395,7 @@
   "the-hunchback-of-notre-dame-1996": [
    [
     "Ham and gruyere crêpes",
-    "meat"
+    "veg"
    ],
    [
     "Brie, fig jam and tomato crostini",
@@ -17569,7 +18465,7 @@
    ],
    [
     "Nomanisan Island coconut prawns",
-    "meat"
+    "veg"
    ],
    [
     "Family dinner meatloaf",
@@ -17609,7 +18505,7 @@
   "the-italian-job-1969": [
    [
     "Turin bagna cauda",
-    "meat"
+    "veg"
    ],
    [
     "Blow the bloody doors off cheese toasts",
@@ -17643,7 +18539,7 @@
    ],
    [
     "Coconut mango pudding",
-    "meat"
+    "veg"
    ],
    [
     "Colonel Hathi's dawn patrol mango lassi",
@@ -17679,7 +18575,7 @@
    ],
    [
     "Bonsai broccolini",
-    "meat"
+    "veg"
    ],
    [
     "Johnny's country club spaghetti",
@@ -17797,7 +18693,7 @@
    ],
    [
     "Sea-glass jelly cups",
-    "meat"
+    "veg"
    ],
    [
     "Lagoon punch",
@@ -17819,7 +18715,7 @@
    ],
    [
     "Ariel's grotto jelly",
-    "meat"
+    "veg"
    ],
    [
     "Sebastian's seashell coconut cooler",
@@ -17829,7 +18725,7 @@
   "the-lord-of-the-rings-the-fellowship-of-the-ring-2001": [
    [
     "Second breakfast fry-up",
-    "meat"
+    "veg"
    ],
    [
     "Farmer Maggot's gruyère stuffed mushrooms",
@@ -17851,7 +18747,7 @@
   "the-lord-of-the-rings-the-return-of-the-king-2003": [
    [
     "Steward's roast drumsticks and grapes",
-    "meat"
+    "veg"
    ],
    [
     "Shire strawberries with honey cream",
@@ -17917,11 +18813,11 @@
   "the-lost-city-2022": [
    [
     "Book tour canapés",
-    "meat"
+    "veg"
    ],
    [
     "Cover model coconut prawns",
-    "meat"
+    "veg"
    ],
    [
     "Island grilled fish",
@@ -17943,7 +18839,7 @@
    ],
    [
     "High country corned beef sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Camp oven lamb stew",
@@ -17961,7 +18857,7 @@
   "the-martian-2015": [
    [
     "Hab-grown potato skins",
-    "meat"
+    "veg"
    ],
    [
     "Red planet hummus",
@@ -18005,7 +18901,7 @@
   "the-mask-1994": [
    [
     "Coconut prawns and plantain chips",
-    "meat"
+    "veg"
    ],
    [
     "Green cheese puffs",
@@ -18027,7 +18923,7 @@
   "the-mask-of-zorro-1998": [
    [
     "Chorizo, Manchego and quince tapas",
-    "meat"
+    "veg"
    ],
    [
     "Z-slash quesadillas",
@@ -18049,7 +18945,7 @@
   "the-matrix-1999": [
    [
     "Cypher's steak bites",
-    "meat"
+    "veg"
    ],
    [
     "Green code crackers",
@@ -18075,7 +18971,7 @@
    ],
    [
     "Raw scallop with finger lime",
-    "meat"
+    "veg"
    ],
    [
     "The cheeseburger",
@@ -18097,7 +18993,7 @@
    ],
    [
     "Juicy Lucy sliders",
-    "meat"
+    "veg"
    ],
    [
     "Minnesota hotdish",
@@ -18109,7 +19005,7 @@
    ],
    [
     "District 5 rinkside hot chocolate",
-    "meat"
+    "veg"
    ]
   ],
   "the-mummy-1999": [
@@ -18181,7 +19077,7 @@
   "the-muppets-2011": [
    [
     "Swedish Chef meatballs",
-    "meat"
+    "veg"
    ],
    [
     "Smalltown diner fries",
@@ -18229,7 +19125,7 @@
    ],
    [
     "Umpire's hot dogs",
-    "meat"
+    "veg"
    ],
    [
     "Ballpark chilli dogs",
@@ -18247,11 +19143,11 @@
   "the-neverending-story-1984": [
    [
     "Ham and cheddar sandwiches, apple, nuts",
-    "meat"
+    "veg"
    ],
    [
     "Rockbiter's chocolate almond rocks",
-    "meat"
+    "veg"
    ],
    [
     "Urgl's healing soup",
@@ -18269,11 +19165,11 @@
   "the-night-before-2015": [
    [
     "New York bodega bagel bites",
-    "meat"
+    "veg"
    ],
    [
     "Nutcracka hunt hot honey buffalo wings",
-    "meat"
+    "veg"
    ],
    [
     "Sliders and mac and cheese party plate",
@@ -18313,7 +19209,7 @@
   "the-other-guys-2010": [
    [
     "Desk pop smoked salmon bagel bites",
-    "meat"
+    "veg"
    ],
    [
     "Peacock pakoras",
@@ -18339,7 +19235,7 @@
    ],
    [
     "Jersey crab on toast",
-    "meat"
+    "veg"
    ],
    [
     "Mr Tuttle's garden potatoes and fish",
@@ -18361,7 +19257,7 @@
    ],
    [
     "Diverted flight cocktail franks",
-    "meat"
+    "veg"
    ],
    [
     "Hotel rib eye breakfast",
@@ -18401,7 +19297,7 @@
   "the-polar-express-2004": [
    [
     "Polar Express turkey and cranberry rolls",
-    "meat"
+    "veg"
    ],
    [
     "Golden ticket shortbread",
@@ -18423,11 +19319,11 @@
   "the-pope-of-greenwich-village-1984": [
    [
     "Bed Bug Eddie's clams oreganata",
-    "meat"
+    "veg"
    ],
    [
     "Waiter's antipasto",
-    "meat"
+    "veg"
    ],
    [
     "Veal marsala",
@@ -18449,7 +19345,7 @@
    ],
    [
     "Muffuletta cob loaf sandwich",
-    "meat"
+    "veg"
    ],
    [
     "Tiana's Palace shrimp and grits",
@@ -18467,7 +19363,7 @@
   "the-princess-bride-1987": [
    [
     "The MLT",
-    "meat"
+    "veg"
    ],
    [
     "Miracle pills chocolate truffles",
@@ -18489,7 +19385,7 @@
   "the-princess-diaries-2001": [
    [
     "Grandma's first corn dog",
-    "meat"
+    "veg"
    ],
    [
     "Genovian pear crostini",
@@ -18511,11 +19407,11 @@
   "the-proposal-2009": [
    [
     "Sitka smoked salmon",
-    "meat"
+    "veg"
    ],
    [
     "Welcome party crab dip",
-    "meat"
+    "veg"
    ],
    [
     "Alaskan salmon dinner",
@@ -18533,7 +19429,7 @@
   "the-ring-2002": [
    [
     "Smoked trout and cheddar snack plate",
-    "meat"
+    "veg"
    ],
    [
     "Seven-day pickles",
@@ -18559,7 +19455,7 @@
    ],
    [
     "Fisherman's Wharf prawns",
-    "meat"
+    "veg"
    ],
    [
     "Mason's Fairmont room service",
@@ -18581,7 +19477,7 @@
    ],
    [
     "South Seas Club canapés",
-    "meat"
+    "veg"
    ],
    [
     "South Seas Club tiki chicken",
@@ -18603,7 +19499,7 @@
    ],
    [
     "Party cocktail franks",
-    "meat"
+    "veg"
    ],
    [
     "Frank's dinner party meatloaf",
@@ -18621,7 +19517,7 @@
   "the-sandlot-1993": [
    [
     "Treehouse s'mores",
-    "meat"
+    "veg"
    ],
    [
     "Honey roasted ballpark peanuts",
@@ -18687,7 +19583,7 @@
   "the-sapphires-2012": [
    [
     "Talent quest party pies and sauce",
-    "meat"
+    "veg"
    ],
    [
     "Damper with golden syrup",
@@ -18709,7 +19605,7 @@
   "the-secret-of-my-success-1987": [
    [
     "Mailroom sandwich bites",
-    "meat"
+    "veg"
    ],
    [
     "Kansas corn fritters",
@@ -18743,7 +19639,7 @@
    ],
    [
     "Rock hammer rocky road",
-    "meat"
+    "veg"
    ],
    [
     "Rooftop ginger beer shandy",
@@ -18753,7 +19649,7 @@
   "the-shining-1980": [
    [
     "Overlook storeroom antipasto board",
-    "meat"
+    "veg"
    ],
    [
     "Gold Room spiced nuts",
@@ -18775,7 +19671,7 @@
   "the-silence-of-the-lambs-1991": [
    [
     "Chicken liver pâté with broad beans",
-    "meat"
+    "veg"
    ],
    [
     "Moth-wing parmesan crisps",
@@ -18797,7 +19693,7 @@
   "the-sixth-sense-1999": [
    [
     "Roast pork and provolone sliders",
-    "meat"
+    "veg"
    ],
    [
     "Red tent chocolate strawberries",
@@ -18819,7 +19715,7 @@
   "the-suicide-squad-2021": [
    [
     "Corto Maltese empanadas",
-    "meat"
+    "veg"
    ],
    [
     "Polka-Dot Man's spotty skewers",
@@ -18919,7 +19815,7 @@
    ],
    [
     "Petri dish jelly",
-    "meat"
+    "veg"
    ],
    [
     "MacReady's Rob Roy",
@@ -18929,11 +19825,11 @@
   "the-untouchables-1987": [
    [
     "Capone's arancini",
-    "meat"
+    "veg"
    ],
    [
     "Lexington Hotel antipasto",
-    "meat"
+    "veg"
    ],
    [
     "Italian beef",
@@ -19007,7 +19903,7 @@
    ],
    [
     "Bourbon Bowl Cajun butter prawns",
-    "meat"
+    "veg"
    ],
    [
     "Mama Boucher's chicken and sausage gumbo",
@@ -19025,7 +19921,7 @@
   "the-wedding-singer-1998": [
    [
     "Cocktail franks in puff pastry",
-    "meat"
+    "veg"
    ],
    [
     "Eighties cheese ball",
@@ -19069,11 +19965,11 @@
   "the-witches-1990": [
    [
     "Hotel tea sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Hotel Excelsior crab sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Formula 86 watercress soup",
@@ -19103,7 +19999,7 @@
    ],
    [
     "Ruby slipper jelly",
-    "meat"
+    "veg"
    ],
    [
     "Yellow brick road pineapple lemonade",
@@ -19135,11 +20031,11 @@
   "the-wolverine-2013": [
    [
     "Bullet train rice balls",
-    "meat"
+    "veg"
    ],
    [
     "Tokyo yakitori",
-    "meat"
+    "veg"
    ],
    [
     "Snowy village ramen",
@@ -19191,7 +20087,7 @@
    ],
    [
     "The last chocolate caramel nougat bar",
-    "meat"
+    "veg"
    ],
    [
     "Rationed water watermelon agua fresca",
@@ -19205,7 +20101,7 @@
    ],
    [
     "Asgard golden honey wings",
-    "meat"
+    "veg"
    ],
    [
     "Asgardian feast beef ribs with roast roots",
@@ -19223,7 +20119,7 @@
   "thor-love-and-thunder-2022": [
    [
     "New Asgard fish platter",
-    "meat"
+    "veg"
    ],
    [
     "Goat's cheese bites",
@@ -19249,7 +20145,7 @@
    ],
    [
     "Korg's Kiwi sausage rolls",
-    "meat"
+    "veg"
    ],
    [
     "Contest of Champions roast",
@@ -19267,7 +20163,7 @@
   "thor-the-dark-world-2013": [
    [
     "London pub scotch eggs",
-    "meat"
+    "veg"
    ],
    [
     "Greenwich tube stop chips",
@@ -19311,7 +20207,7 @@
   "three-men-and-a-baby-1987": [
    [
     "Doorstep basket prawn toast",
-    "meat"
+    "veg"
    ],
    [
     "Bagel chips and schmear",
@@ -19355,11 +20251,11 @@
   "ticket-to-paradise-2022": [
    [
     "Bali chicken satay",
-    "meat"
+    "veg"
    ],
    [
     "Beer pong prawn crackers",
-    "meat"
+    "veg"
    ],
    [
     "Gede's seaweed farm nasi goreng",
@@ -19381,7 +20277,7 @@
    ],
    [
     "Ploughman's board with apple chutney",
-    "meat"
+    "veg"
    ],
    [
     "Winston the ogre's beef and barley stew",
@@ -19399,11 +20295,11 @@
   "titanic-1997": [
    [
     "First class oysters",
-    "meat"
+    "veg"
    ],
    [
     "King of the world ham sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "Molly Brown's first class filet mignon",
@@ -19425,7 +20321,7 @@
    ],
    [
     "Peppermint choc dipped marshmallows",
-    "meat"
+    "veg"
    ],
    [
     "Dr Covey's Korean marinated beef",
@@ -19469,7 +20365,7 @@
    ],
    [
     "Diner chicken wings",
-    "meat"
+    "veg"
    ],
    [
     "Cincinnati chilli spaghetti",
@@ -19509,11 +20405,11 @@
   "top-end-wedding-2019": [
    [
     "Mindil Beach laksa cups",
-    "meat"
+    "veg"
    ],
    [
     "Darwin mango and prawn rice paper rolls",
-    "meat"
+    "veg"
    ],
    [
     "Tiwi Islands barbecued barramundi",
@@ -19531,11 +20427,11 @@
   "top-gun-1986": [
    [
     "Officers' club wings",
-    "meat"
+    "veg"
    ],
    [
     "Beach volleyball fish tacos",
-    "meat"
+    "veg"
    ],
    [
     "Charlie's lemon chicken and Greek salad",
@@ -19557,7 +20453,7 @@
    ],
    [
     "Hard Deck bacon cheese loaded fries",
-    "meat"
+    "veg"
    ],
    [
     "Penny's garlic butter grilled prawns",
@@ -19565,7 +20461,7 @@
    ],
    [
     "Dagger squad beach s'mores",
-    "meat"
+    "veg"
    ],
    [
     "Penny's Hard Deck bourbon smash",
@@ -19597,7 +20493,7 @@
   "toy-story-1995": [
    [
     "Mr Potato Head loaded potato bites",
-    "meat"
+    "veg"
    ],
    [
     "Army men pea and edamame salad",
@@ -19645,7 +20541,7 @@
    ],
    [
     "Sunnyside ham and cheese pinwheels",
-    "meat"
+    "veg"
    ],
    [
     "Andy's spaghetti and meatballs",
@@ -19663,7 +20559,7 @@
   "toy-story-4-2019": [
    [
     "Carnival corn dogs",
-    "meat"
+    "veg"
    ],
    [
     "Forky's spork salad cups",
@@ -19685,7 +20581,7 @@
   "trading-places-1983": [
    [
     "Duke & Duke club canapés",
-    "meat"
+    "veg"
    ],
    [
     "Frozen orange juice shots",
@@ -19707,11 +20603,11 @@
   "train-to-busan-2016": [
    [
     "Baseball team Korean fried chicken",
-    "meat"
+    "veg"
    ],
    [
     "Spicy rice cakes",
-    "meat"
+    "veg"
    ],
    [
     "KTX to Busan kimchi fried rice",
@@ -19729,11 +20625,11 @@
   "transformers-2007": [
    [
     "Mikaela's loaded potato wedges",
-    "meat"
+    "veg"
    ],
    [
     "Mission City loaded chicken nachos",
-    "meat"
+    "veg"
    ],
    [
     "Ron's backyard ribs",
@@ -19751,7 +20647,7 @@
   "treasure-planet-2002": [
    [
     "Ham and cheese puff pastry triangles",
-    "meat"
+    "veg"
    ],
    [
     "Purp fruit platter",
@@ -19773,11 +20669,11 @@
   "tremors-1990": [
    [
     "Val and Earl's truck jerky",
-    "meat"
+    "veg"
    ],
    [
     "Chang's Market spiced nuts and crackling",
-    "meat"
+    "veg"
    ],
    [
     "Rump, sausages, beans and slaw",
@@ -19799,7 +20695,7 @@
    ],
    [
     "End of Line Club canapés",
-    "meat"
+    "veg"
    ],
    [
     "Grid neon noodles",
@@ -19821,7 +20717,7 @@
    ],
    [
     "Four Leaf's jungle banh mi bites",
-    "meat"
+    "veg"
    ],
    [
     "Flaming Dragon green curry",
@@ -19839,7 +20735,7 @@
   "true-grit-2010": [
    [
     "Corn dodgers",
-    "meat"
+    "veg"
    ],
    [
     "Fort Smith boarding house biscuits",
@@ -19905,7 +20801,7 @@
   "turning-red-2022": [
    [
     "Mei's dad's dumplings",
-    "meat"
+    "veg"
    ],
    [
     "Temple red bean buns",
@@ -19917,7 +20813,7 @@
    ],
    [
     "Red moon ritual mango pudding",
-    "meat"
+    "veg"
    ],
    [
     "4*Town concert bubble tea",
@@ -19927,11 +20823,11 @@
   "two-hands-1999": [
    [
     "Bondi fish and chips",
-    "meat"
+    "veg"
    ],
    [
     "Kings Cross pie floaters",
-    "meat"
+    "veg"
    ],
    [
     "Sichuan pepper squid and egg fried rice",
@@ -19961,7 +20857,7 @@
    ],
    [
     "Mr Glass lemon and berry jelly",
-    "meat"
+    "veg"
    ],
    [
     "Green poncho honey ginger tea",
@@ -19971,11 +20867,11 @@
   "uncle-buck-1989": [
    [
     "Miles's birthday caramel popcorn balls",
-    "meat"
+    "veg"
    ],
    [
     "Bowling night cheesy gravy chips",
-    "meat"
+    "veg"
    ],
    [
     "Buck's big breakfast for dinner",
@@ -19983,7 +20879,7 @@
    ],
    [
     "Uncle Buck's giant buttermilk pancake",
-    "meat"
+    "veg"
    ],
    [
     "Buck's chocolate malted milk",
@@ -20015,7 +20911,7 @@
   "unforgiven-1992": [
    [
     "Trail cornbread",
-    "meat"
+    "veg"
    ],
    [
     "Saloon pickled eggs",
@@ -20037,7 +20933,7 @@
   "up-2009": [
    [
     "Grape soda badge jellies",
-    "meat"
+    "veg"
    ],
    [
     "Wilderness Explorer honey trail mix bars",
@@ -20059,7 +20955,7 @@
   "us-2019": [
    [
     "Santa Cruz boardwalk corn dogs",
-    "meat"
+    "veg"
    ],
    [
     "Mirror image cheese stacks",
@@ -20103,7 +20999,7 @@
   "venom-2018": [
    [
     "Symbiote black sesame chicken",
-    "meat"
+    "veg"
    ],
    [
     "Crispy potato gems with sriracha mayo",
@@ -20115,7 +21011,7 @@
    ],
    [
     "Mrs Chen's mango pudding",
-    "meat"
+    "veg"
    ],
    [
     "Mrs Chen's iced milk tea",
@@ -20125,11 +21021,11 @@
   "venom-let-there-be-carnage-2021": [
    [
     "Venom's rocky road chocolate stash",
-    "meat"
+    "veg"
    ],
    [
     "Sonny and Cher's chicken bites",
-    "meat"
+    "veg"
    ],
    [
     "Bacon and scrambled eggs on toast",
@@ -20147,7 +21043,7 @@
   "violent-night-2022": [
    [
     "Gertrude Lightstone's salmon roe blinis",
-    "meat"
+    "veg"
    ],
    [
     "Naughty list brown butter shortbread",
@@ -20169,11 +21065,11 @@
   "waitress-2007": [
    [
     "Bad Baby quiche bites",
-    "meat"
+    "veg"
    ],
    [
     "Diner biscuits and gravy",
-    "meat"
+    "veg"
    ],
    [
     "Chicken pot pie",
@@ -20213,11 +21109,11 @@
   "wall-e-2008": [
    [
     "Wall-E's stuffed pressed cob loaf",
-    "meat"
+    "veg"
    ],
    [
     "Trash cube rice crispies",
-    "meat"
+    "veg"
    ],
    [
     "Pumpkin lentil soup in a mug",
@@ -20235,11 +21131,11 @@
   "wall-street-1987": [
    [
     "Steak tartare",
-    "meat"
+    "veg"
    ],
    [
     "Gekko's oysters on ice",
-    "meat"
+    "veg"
    ],
    [
     "Raider's rib eye",
@@ -20327,7 +21223,7 @@
    ],
    [
     "Product placement pizza bites",
-    "meat"
+    "veg"
    ],
    [
     "Mirthmobile pepperoni pizza squares",
@@ -20367,11 +21263,11 @@
   "wedding-crashers-2005": [
    [
     "Crab cakes",
-    "meat"
+    "veg"
    ],
    [
     "Sailing trip prawn rolls",
-    "meat"
+    "veg"
    ],
    [
     "Tarragon cream chicken with potato gratin",
@@ -20389,11 +21285,11 @@
   "weekend-at-bernie-s-1989": [
    [
     "Hamptons clam dip",
-    "meat"
+    "veg"
    ],
    [
     "Rumaki bacon wrapped water chestnuts",
-    "meat"
+    "veg"
    ],
    [
     "Bernie's beach house clambake",
@@ -20411,11 +21307,11 @@
   "weird-science-1985": [
    [
     "Cheesy bacon dip cob loaf",
-    "meat"
+    "veg"
    ],
    [
     "Blues bar wings",
-    "meat"
+    "veg"
    ],
    [
     "Shermer house party pizza",
@@ -20437,7 +21333,7 @@
    ],
    [
     "Camp Firewood salted caramel s'mores",
-    "meat"
+    "veg"
    ],
    [
     "Mess hall sloppy joe sliders",
@@ -20499,7 +21395,7 @@
   "white-christmas-1954": [
    [
     "Midnight liverwurst on rye and buttermilk",
-    "meat"
+    "veg"
    ],
    [
     "Columbia Inn cheese puffs",
@@ -20521,7 +21417,7 @@
   "who-framed-roger-rabbit-1988": [
    [
     "Ink and Paint Club canapés",
-    "meat"
+    "veg"
    ],
    [
     "Honey roasted carrots with whipped feta",
@@ -20653,7 +21549,7 @@
   "wolf-creek-2005": [
    [
     "Outback roadhouse pies",
-    "meat"
+    "veg"
    ],
    [
     "Campfire damper",
@@ -20675,7 +21571,7 @@
   "wonder-woman-1984-2020": [
    [
     "Food court sausage rolls and potato skins",
-    "meat"
+    "veg"
    ],
    [
     "Marinated olives and feta",
@@ -20701,7 +21597,7 @@
    ],
    [
     "London 1918 pasties",
-    "meat"
+    "veg"
    ],
    [
     "Veld celebration stew",
@@ -20719,11 +21615,11 @@
   "working-girl-1988": [
    [
     "Trask wedding canapés",
-    "meat"
+    "veg"
    ],
    [
     "Wall Street crab cakes",
-    "meat"
+    "veg"
    ],
    [
     "Power lunch steak salad",
@@ -20741,7 +21637,7 @@
   "wreck-it-ralph-2012": [
    [
     "Dark chocolate gummy lolly bark",
-    "meat"
+    "veg"
    ],
    [
     "Candy kart pretzel rods",
@@ -20785,7 +21681,7 @@
   "x-men-days-of-future-past-2014": [
    [
     "Pentagon kitchen tomato soup and toasties",
-    "meat"
+    "veg"
    ],
    [
     "Gruyere cheese puffs (gougères)",
@@ -20797,7 +21693,7 @@
    ],
    [
     "Fondue au chocolat",
-    "meat"
+    "veg"
    ],
    [
     "Mystique blue margarita",
@@ -20807,11 +21703,11 @@
   "x-men-first-class-2011": [
    [
     "Oxford pub ploughman's",
-    "meat"
+    "veg"
    ],
    [
     "Ham and béchamel croquettes",
-    "meat"
+    "veg"
    ],
    [
     "Hellfire Club pepper steak",
@@ -20829,11 +21725,11 @@
   "x-men-origins-wolverine-2009": [
    [
     "Canadian Rockies poutine",
-    "meat"
+    "veg"
    ],
    [
     "Logging camp bacon dates",
-    "meat"
+    "veg"
    ],
    [
     "Pancakes, bacon and fried eggs",
@@ -20851,7 +21747,7 @@
   "x2-2003": [
    [
     "Boston clam chowder cups",
-    "meat"
+    "veg"
    ],
    [
     "Iceman frozen grapes",
@@ -20873,7 +21769,7 @@
   "you-ve-got-mail-1998": [
    [
     "Publishing party salmon cucumber bites",
-    "meat"
+    "veg"
    ],
    [
     "Upper West Side bagels",
@@ -20895,11 +21791,11 @@
   "young-einstein-1988": [
    [
     "Beer-battered Tassie chips",
-    "meat"
+    "veg"
    ],
    [
     "Rock and roll scallop pies",
-    "meat"
+    "veg"
    ],
    [
     "Apple cider pork",
@@ -20939,7 +21835,7 @@
   "young-guns-1988": [
    [
     "Tunstall's English sandwiches",
-    "meat"
+    "veg"
    ],
    [
     "New Mexico green chilli queso",
@@ -20961,11 +21857,11 @@
   "zoolander-2001": [
    [
     "Blue steel crudités",
-    "meat"
+    "veg"
    ],
    [
     "Day spa cucumber bites",
-    "meat"
+    "veg"
    ],
    [
     "Mugatu's vodka pasta",

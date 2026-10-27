@@ -370,7 +370,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ruby slipper jelly (vegetarian)",
+     "prep_min": 6,
+     "cook_min": 128,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "cranberry and raspberry juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "agar agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "raspberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "edible glitter",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the agar and sugar into the juice in a saucepan, bring to the boil and simmer for 2 minutes, stirring.",
+       "min": 6
+      },
+      {
+       "text": "Divide the raspberries between four glasses and pour the jelly over.",
+       "min": 3
+      },
+      {
+       "text": "Chill until set.",
+       "min": 120
+      },
+      {
+       "text": "Whip the cream, dust the jellies with glitter and top with cream.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Yellow brick road pineapple lemonade",

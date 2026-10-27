@@ -216,6 +216,135 @@
        "min": 10
       }
      ]
+    },
+    "veg": {
+     "n": "Garlic butter mushrooms",
+     "prep_min": 13,
+     "cook_min": 12,
+     "make_ahead": "Assemble up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 20,
+       "u": "",
+       "item": "button mushrooms, stalks removed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brandy",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mash the butter with crushed garlic, chopped parsley, finely chopped shallot and a splash of brandy.",
+       "min": 8
+      },
+      {
+       "text": "Sit the mushrooms cup side up in a baking dish and fill each one with the butter.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 200C until sizzling and the mushrooms are tender. Serve with baguette.",
+       "min": 12
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Garlic butter mushrooms (alcohol-free)",
+     "prep_min": 13,
+     "cook_min": 12,
+     "make_ahead": "Assemble up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 20,
+       "u": "",
+       "item": "button mushrooms, stalks removed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mash the butter with crushed garlic, chopped parsley, finely chopped shallot and a splash of verjuice.",
+       "min": 8
+      },
+      {
+       "text": "Sit the mushrooms cup side up in a baking dish and fill each one with the butter.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 200C until sizzling and the mushrooms are tender. Serve with baguette.",
+       "min": 12
+      }
+     ]
     }
    }
   },

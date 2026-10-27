@@ -252,6 +252,175 @@
        "min": 5
       }
      ]
+    },
+    "veg": {
+     "n": "Venice beach battered haloumi tacos",
+     "prep_min": 30,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "haloumi, cut into finger strips",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 330,
+       "u": "ml",
+       "item": "cold lager",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "small cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "fresh salsa",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the flour with the cold lager to a light batter.",
+       "min": 5
+      },
+      {
+       "text": "Mix the sour cream with lime juice for a crema.",
+       "min": 3
+      },
+      {
+       "text": "Pat the haloumi dry, dip in the batter and fry at 180C in batches until crisp and golden. Drain on paper.",
+       "min": 12
+      },
+      {
+       "text": "Warm the tortillas.",
+       "min": 5
+      },
+      {
+       "text": "Fill with cabbage, haloumi, crema and salsa.",
+       "min": 5
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Venice beach battered haloumi tacos (alcohol-free)",
+     "prep_min": 30,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "haloumi, cut into finger strips",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 330,
+       "u": "ml",
+       "item": "cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "small cabbage, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "fresh salsa",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the flour with the cold soda water to a light batter.",
+       "min": 5
+      },
+      {
+       "text": "Mix the sour cream with lime juice for a crema.",
+       "min": 3
+      },
+      {
+       "text": "Pat the haloumi dry, dip in the batter and fry at 180C in batches until crisp and golden. Drain on paper.",
+       "min": 12
+      },
+      {
+       "text": "Warm the tortillas.",
+       "min": 5
+      },
+      {
+       "text": "Fill with cabbage, haloumi, crema and salsa.",
+       "min": 5
+      }
+     ]
     }
    }
   },

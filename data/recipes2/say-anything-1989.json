@@ -86,7 +86,116 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Graduation party lentil and mushroom rolls",
+     "prep_min": 25,
+     "cook_min": 35,
+     "make_ahead": "Assemble a day ahead, bake fresh",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "button mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fennel seeds, crushed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sesame seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tomato relish",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion and mushrooms in the oil until all the liquid has cooked off. Cool.",
+       "min": 10
+      },
+      {
+       "text": "Roughly mash the lentils and mix with the mushrooms, fennel, soy, breadcrumbs, pepper and 1 beaten egg.",
+       "min": 8
+      },
+      {
+       "text": "Halve the pastry sheets, lay a log of filling along each strip and roll up, sealing with the other beaten egg.",
+       "min": 10
+      },
+      {
+       "text": "Cut each into 4, brush with egg and sprinkle with sesame seeds.",
+       "min": 5
+      },
+      {
+       "text": "Bake at 200C until golden and puffed.",
+       "min": 25
+      },
+      {
+       "text": "Serve hot with tomato relish.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Seattle smoked salmon bites",
@@ -151,7 +260,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Seattle smoked tofu bites",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "smoked tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet rye crispbread",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Crumble the smoked tofu finely.",
+       "min": 5
+      },
+      {
+       "text": "Fold through the cream cheese with chopped dill, lemon zest and capers.",
+       "min": 5
+      },
+      {
+       "text": "Spread thickly on rye crispbread.",
+       "min": 4
+      },
+      {
+       "text": "Finish each with a squeeze of lemon.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Dijon crusted salmon, crushed potatoes",

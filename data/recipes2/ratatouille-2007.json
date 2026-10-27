@@ -70,7 +70,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Gusteau's soup (vegetarian)",
+     "prep_min": 5,
+     "cook_min": 35,
+     "make_ahead": "Up to 3 days, keep chilled, reheat gently",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "leeks, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "potatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch chives, snipped",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "white pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Sweat the leeks in the butter over low heat until soft.",
+       "min": 10
+      },
+      {
+       "text": "Add the potatoes and vegetable stock and simmer until the potato is very tender.",
+       "min": 20
+      },
+      {
+       "text": "Blend silky smooth with the cream and season.",
+       "min": 5
+      },
+      {
+       "text": "Serve topped with chives and white pepper. Anyone can cook.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Remy's lightning mushroom and cheese",
@@ -182,7 +253,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Paris market baguette with brie and thyme mushrooms",
+     "prep_min": 10,
+     "cook_min": 14,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "baguettes",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "salted butter, at room temperature",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "Swiss brown mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "ripe brie",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Take the salted butter out of the fridge so it is soft at room temperature.",
+       "min": 2
+      },
+      {
+       "text": "Fry the mushrooms in the oil over high heat with the thyme leaves until golden, then season and cool a little.",
+       "min": 8
+      },
+      {
+       "text": "Warm the baguettes in a 200C oven for 6 minutes until the crust crackles when you squeeze it.",
+       "min": 6
+      },
+      {
+       "text": "Split each baguette lengthways and spread thickly with the butter.",
+       "min": 3
+      },
+      {
+       "text": "Fill with the mushrooms and slices of brie, close and cut into short lengths to share.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ratatouille",

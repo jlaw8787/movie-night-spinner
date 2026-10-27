@@ -58,7 +58,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "San Gennaro sausage bites (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 16,
+     "make_ahead": "Cook up to 2 hours ahead and reheat in a hot oven",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "hot mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Grill the vegetarian sausages over medium-high heat, turning, until blistered and hot through.",
+       "min": 10
+      },
+      {
+       "text": "Toss the capsicum and onion in oil and grill until charred at the edges.",
+       "min": 10
+      },
+      {
+       "text": "Slice them thick and thread onto toothpicks with the capsicum and onion.",
+       "min": 10
+      },
+      {
+       "text": "Serve with the hot mustard.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Fried calamari",
@@ -133,7 +192,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fried mushroom calamari (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 32,
+     "make_ahead": "Soak up to 2 hours ahead; fry just before serving",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "fine semolina",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "neutral oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, cut in wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushroom stems into thick rings and the caps into strips, then soak in the buttermilk for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Mix the semolina, flour and plenty of salt.",
+       "min": 3
+      },
+      {
+       "text": "Drain the mushrooms and toss in the flour mix.",
+       "min": 4
+      },
+      {
+       "text": "Fry in 190C oil in batches for 90 seconds each until pale gold.",
+       "min": 8
+      },
+      {
+       "text": "Salt and serve with lemon wedges.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Penne arrabbiata",

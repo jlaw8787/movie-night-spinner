@@ -76,7 +76,96 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fried green tomatoes (vegetarian)",
+     "prep_min": 13,
+     "cook_min": 25,
+     "make_ahead": "Remoulade up to 2 days ahead, fry just before serving",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "green tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "fine cornmeal, seasoned",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the tomatoes thick, salt them and leave for 10 minutes.",
+       "min": 12
+      },
+      {
+       "text": "Mix the mayonnaise with chopped capers and lemon juice for the remoulade.",
+       "min": 8
+      },
+      {
+       "text": "Mix the paprika into the cornmeal. Heat the oil and butter in a large pan until the butter foams.",
+       "min": 3
+      },
+      {
+       "text": "Dip the tomatoes in buttermilk then the cornmeal and fry until golden, turning once.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Honeycomb and biscuits",

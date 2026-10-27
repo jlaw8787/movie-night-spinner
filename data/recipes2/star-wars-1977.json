@@ -149,7 +149,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Death Star meatballs (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Up to 1 day, keep chilled and reheat gently",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Season the plant-based mince with salt and pepper and roll into 20 balls with oiled hands, pressing a thumb dent into each.",
+       "min": 12
+      },
+      {
+       "text": "Brush the balls with half the olive oil and bake at 220C until browned.",
+       "min": 15
+      },
+      {
+       "text": "Fry the mushrooms in the rest of the oil in a wide pan, then add the stock, cream and Dijon and simmer.",
+       "min": 10
+      },
+      {
+       "text": "Add the balls and simmer gently until hot through.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Ronto wrap",

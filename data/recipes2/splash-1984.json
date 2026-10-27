@@ -60,7 +60,86 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Oyster mushrooms with mignonette",
+     "prep_min": 30,
+     "cook_min": 10,
+     "make_ahead": "Mignonette up to 1 day; sear the mushrooms up to 2 hours ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "oyster mushrooms, torn into pieces",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "nori sheet, crumbled",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "crushed ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, cut into wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the shallots, vinegar and plenty of cracked pepper. Rest to let the flavours settle.",
+       "min": 20
+      },
+      {
+       "text": "Sear the mushrooms in the oil over high heat for 2 minutes, season with the salt and nori, then chill.",
+       "min": 10
+      },
+      {
+       "text": "Lay the mushrooms on crushed ice with lemon wedges and the mignonette in a small bowl with a spoon.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Fish and chip cones",
@@ -567,7 +646,76 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ocean blue jelly cups (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 130,
+     "make_ahead": "Make the day before",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 10,
+       "u": "",
+       "item": "dried butterfly pea flowers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bag vegetarian gummy lollies",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk 1 tsp of the agar and half the sugar into the coconut milk in a saucepan, bring to the boil and simmer for 2 minutes.",
+       "min": 8
+      },
+      {
+       "text": "Pour into four glasses and chill until set, about 1 hour.",
+       "min": 60
+      },
+      {
+       "text": "Steep the pea flowers in the hot water for 10 minutes and strain. Whisk in the rest of the agar and sugar, bring to the boil and simmer for 2 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Cool for 10 minutes, then pour gently over the set coconut layer.",
+       "min": 12
+      },
+      {
+       "text": "Chill until firm, about 1 hour, then top with the gummy lollies.",
+       "min": 60
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Blue lagoon",

@@ -92,7 +92,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Link's ice block cheddar cheese ball (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 120,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cream cheese, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sharp cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "pickled jalapenos, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "smoked almonds, finely chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "pretzels, crushed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chives, snipped",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "crushed ice, to serve",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet of crackers",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Beat the cream cheese, cheddar, jalapeno, paprika and soy sauce.",
+       "min": 8
+      },
+      {
+       "text": "Shape into a ball, wrap and chill.",
+       "min": 120
+      },
+      {
+       "text": "Mix the smoked almonds with the pretzels and chives.",
+       "min": 5
+      },
+      {
+       "text": "Roll the ball in the crumb.",
+       "min": 4
+      },
+      {
+       "text": "Serve on a plate of crushed ice with crackers.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Caveman club drumsticks",
@@ -147,7 +240,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Caveman club smoky corn cobs",
+     "prep_min": 10,
+     "cook_min": 35,
+     "make_ahead": "Best served warm",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 220C. Rub the corn with the oil, paprika, garlic powder and sugar.",
+       "min": 10
+      },
+      {
+       "text": "Roast the corn, turning once.",
+       "min": 25
+      },
+      {
+       "text": "Brush with barbecue sauce and roast until sticky.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pool party teriyaki chicken",

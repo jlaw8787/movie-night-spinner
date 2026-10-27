@@ -66,7 +66,74 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Steward's roast king oyster mushrooms and grapes",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "Best served warm",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "king oyster mushrooms, halved lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cherry tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "red grapes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf of crusty bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Score the cut side of the mushrooms and rub with butter, thyme and salt.",
+       "min": 8
+      },
+      {
+       "text": "Roast for 25 minutes until golden and tender.",
+       "min": 30
+      },
+      {
+       "text": "Lay on a long board with the tomatoes, grapes and torn bread.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Shire strawberries with honey cream",

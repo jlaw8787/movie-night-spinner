@@ -94,7 +94,102 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lake house egg salad rolls",
+     "prep_min": 25,
+     "cook_min": 15,
+     "make_ahead": "Up to 3 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chives, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "soft dinner rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "apples, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "punnet of strawberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs for 10 minutes, cool in cold water, then peel and chop.",
+       "min": 20
+      },
+      {
+       "text": "Mix with the mayonnaise, celery, chives, lemon juice and seasoning.",
+       "min": 5
+      },
+      {
+       "text": "Split and butter the rolls and fill with lettuce and egg salad.",
+       "min": 8
+      },
+      {
+       "text": "Toss the apple in lemon and pack in a basket with the strawberries.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Compound kitchen tacos",
@@ -165,7 +260,84 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Compound kitchen tacos (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 12,
+     "make_ahead": "Best served warm",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "taco spice mix",
+       "aisle": "Spices"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "hard taco shells",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small lettuce, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, diced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the plant-based mince in the oil with the cumin and taco spices.",
+       "min": 12
+      },
+      {
+       "text": "Warm the taco shells.",
+       "min": 3
+      },
+      {
+       "text": "Shred the lettuce and dice the tomato.",
+       "min": 6
+      },
+      {
+       "text": "Fill the shells with the mince, lettuce, cheddar and tomato and lay them out.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Morgan's cheeseburgers",

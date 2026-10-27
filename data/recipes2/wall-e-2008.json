@@ -80,7 +80,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Wall-E's stuffed pressed cob loaf (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 720,
+     "make_ahead": "Make the day before, keeps 2 days chilled",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "round cob loaf, about 20cm",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetarian basil pesto",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "chargrilled eggplant",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "roasted capsicum",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mozzarella, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful of baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "marinated artichoke hearts, sliced",
+       "aisle": "Deli"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "semi-dried tomatoes",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the top off the loaf and pull out most of the soft inside.",
+       "min": 5
+      },
+      {
+       "text": "Spread the pesto inside the loaf.",
+       "min": 3
+      },
+      {
+       "text": "Layer in the eggplant, capsicum, mozzarella, spinach, artichokes and tomatoes, pressing each layer down.",
+       "min": 12
+      },
+      {
+       "text": "Put the lid back on, wrap tightly in plastic wrap and press under a heavy pot in the fridge overnight.",
+       "min": 720
+      },
+      {
+       "text": "Cut into wedges to serve.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Trash cube rice crispies",
@@ -131,7 +212,58 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Trash cube rice crispies (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 60,
+     "make_ahead": "Up to 2 days, airtight",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "puffed rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Line a square tray with baking paper.",
+       "min": 3
+      },
+      {
+       "text": "Melt the butter and marshmallows together over low heat.",
+       "min": 7
+      },
+      {
+       "text": "Stir through the puffed rice until well coated.",
+       "min": 3
+      },
+      {
+       "text": "Press firmly into the tray and leave to set.",
+       "min": 60
+      },
+      {
+       "text": "Cut into neat cubes and stack into towers.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pumpkin lentil soup in a mug",

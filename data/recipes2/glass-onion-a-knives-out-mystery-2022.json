@@ -48,7 +48,7 @@
      "q": 150,
      "u": "g",
      "item": "kalamata olives",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 250,
@@ -77,7 +77,7 @@
      "min": 8
     }
    ],
-   "veg": false,
+   "veg": true,
    "af": true
   },
   {
@@ -157,7 +157,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Disruptors' hot sauce cauliflower bites",
+     "prep_min": 15,
+     "cook_min": 50,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "red chillies",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "white vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch celery",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "blue cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cauliflower into large florets, toss with the cornflour, oil and salt and bake at 220C for 40 minutes, turning once.",
+       "min": 50
+      },
+      {
+       "text": "Blitz the red chillies with the garlic cloves, the vinegar and the honey, simmer 5 minutes and toss through the cauliflower.",
+       "min": 10
+      },
+      {
+       "text": "Serve with celery and the blue cheese stirred into the sour cream.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Puzzle box lamb souvlaki",

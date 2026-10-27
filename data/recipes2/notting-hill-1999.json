@@ -54,7 +54,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Brie, roast capsicum and chutney sandwich bites",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf crusty bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "brie",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "roast capsicum, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "tomato chutney",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "green olives",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Split the bread and fill with sliced brie, roast capsicum and chutney.",
+       "min": 8
+      },
+      {
+       "text": "Cut into small pieces and pin with toothpicks.",
+       "min": 5
+      },
+      {
+       "text": "Serve on a board with a bowl of green olives.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Spike's sandwich",

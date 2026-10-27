@@ -64,7 +64,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Polar Express pumpkin, brie and cranberry rolls",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "Assemble up to 1 day ahead, warm to serve",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "pumpkin, peeled and thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "soft dinner rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 8,
+       "u": "tbsp",
+       "item": "cranberry sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "brie, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful of baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "paper tickets, hole punched",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Toss the pumpkin in the oil and roast until tender.",
+       "min": 20
+      },
+      {
+       "text": "Split the rolls and spread the bases with cranberry sauce.",
+       "min": 5
+      },
+      {
+       "text": "Layer with pumpkin, brie and spinach and close.",
+       "min": 8
+      },
+      {
+       "text": "Wrap each in foil and warm at 180C until the cheese softens.",
+       "min": 10
+      },
+      {
+       "text": "Unwrap and rewrap in baking paper with a paper ticket tucked in.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Golden ticket shortbread",

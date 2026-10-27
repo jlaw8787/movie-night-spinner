@@ -70,7 +70,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Wedding reception canapés (vegetarian)",
+     "prep_min": 33,
+     "cook_min": 15,
+     "make_ahead": "Tartlets up to 1 day, reheat to serve",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets shortcrust pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "smoked tofu, finely diced",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cooked beetroot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut rounds from the pastry and line a 12-hole tin.",
+       "min": 12
+      },
+      {
+       "text": "Whisk the eggs with the cream, add the smoked tofu and chopped chives and fill the cases.",
+       "min": 6
+      },
+      {
+       "text": "Bake at 180C until set and golden.",
+       "min": 15
+      },
+      {
+       "text": "Slice the beetroot paper thin and dress with a squeeze of lemon.",
+       "min": 8
+      },
+      {
+       "text": "Cut thick cucumber rounds and top with folds of beetroot.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Pan fried pork dumplings",
@@ -135,7 +216,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pan fried vegetable dumplings",
+     "prep_min": 2,
+     "cook_min": 9,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 24,
+       "u": "",
+       "item": "frozen vegetable dumplings",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "black vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "spring onion, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the soy, black vinegar and spring onion for dipping.",
+       "min": 2
+      },
+      {
+       "text": "Fry the dumplings flat side down in a little oil until golden.",
+       "min": 3
+      },
+      {
+       "text": "Add water, cover and steam.",
+       "min": 4
+      },
+      {
+       "text": "Uncover and crisp again.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Wedding buffet chicken",

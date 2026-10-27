@@ -135,7 +135,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Scotch eggs (vegetarian)",
+     "prep_min": 33,
+     "cook_min": 14,
+     "make_ahead": "Up to 1 day, reheat to serve",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "vegetarian sausages, skins removed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "English mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the four eggs until just set.",
+       "min": 6
+      },
+      {
+       "text": "Cool and peel.",
+       "min": 10
+      },
+      {
+       "text": "Mash the vegetarian sausage filling with a handful of the panko.",
+       "min": 3
+      },
+      {
+       "text": "Wrap each egg in the mixture.",
+       "min": 10
+      },
+      {
+       "text": "Roll in flour, beaten egg and the rest of the panko.",
+       "min": 8
+      },
+      {
+       "text": "Fry at 170C until golden.",
+       "min": 8
+      },
+      {
+       "text": "Halve and serve with mustard.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Baker Street shepherd's pie",

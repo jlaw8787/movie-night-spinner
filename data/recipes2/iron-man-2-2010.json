@@ -85,7 +85,7 @@
      "q": 24,
      "u": "",
      "item": "dumpling wrappers",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 100,
@@ -125,7 +125,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Vanko's Russian pelmeni (vegetarian)",
+     "prep_min": 55,
+     "cook_min": 30,
+     "make_ahead": "Fill up to 1 day ahead, boil fresh",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "potatoes, peeled and chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "cracked black pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 24,
+       "u": "",
+       "item": "dumpling wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chopped dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until tender, drain and mash.",
+       "min": 20
+      },
+      {
+       "text": "Fry the mushrooms and onion in 20g of the butter until dry, then mix into the potato with the salt and pepper.",
+       "min": 10
+      },
+      {
+       "text": "Fill the wrappers and pinch into little round parcels.",
+       "min": 40
+      },
+      {
+       "text": "Boil until they float, then a minute more.",
+       "min": 10
+      },
+      {
+       "text": "Melt the rest of the butter, toss the pelmeni in it with the dill and serve with plenty of sour cream.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Stark miso salmon rice bowl",

@@ -58,7 +58,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sherwood ploughman's picnic board (vegetarian)",
+     "prep_min": 18,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "small cheese and onion pasties",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty loaf",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "aged cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "pickled onions",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "green apples",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Spread a cloth on the floor or table.",
+       "min": 2
+      },
+      {
+       "text": "Cut the cheddar into wedges and slice the apples.",
+       "min": 8
+      },
+      {
+       "text": "Tear the bread.",
+       "min": 3
+      },
+      {
+       "text": "Lay everything out with the pasties and pickled onions for everyone to help themselves.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Archery tournament skewers",
@@ -121,7 +180,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Archery tournament skewers (vegetarian)",
+     "prep_min": 53,
+     "cook_min": 8,
+     "make_ahead": "Marinate up to 4 hours, keep chilled",
+     "ingredients": [
+      {
+       "q": 360,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red capsicums",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "wholegrain mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the haloumi and capsicums into chunks and halve the mushrooms.",
+       "min": 12
+      },
+      {
+       "text": "Mix the honey, mustard, garlic and olive oil and toss through the haloumi, mushrooms and capsicum.",
+       "min": 3
+      },
+      {
+       "text": "Marinate in the fridge.",
+       "min": 30
+      },
+      {
+       "text": "Thread onto long skewers.",
+       "min": 8
+      },
+      {
+       "text": "Grill, turning, until charred and the haloumi is golden.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Outlaws' camp stew",

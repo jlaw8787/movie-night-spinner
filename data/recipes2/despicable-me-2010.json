@@ -161,7 +161,106 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Theme park corn dogs (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Batter can be made 1 hour ahead",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cornmeal",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian frankfurts",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "wooden sticks",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "mustard, to serve",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "tomato sauce, to serve",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the cornmeal, flour, sugar, baking powder, egg and buttermilk into a thick batter in a tall glass.",
+       "min": 5
+      },
+      {
+       "text": "Pat the frankfurts dry and push each onto a stick.",
+       "min": 5
+      },
+      {
+       "text": "Heat the oil to 180C in a deep pot.",
+       "min": 10
+      },
+      {
+       "text": "Dip each frankfurt in batter and fry a few at a time until golden.",
+       "min": 12
+      },
+      {
+       "text": "Drain and serve with mustard and tomato sauce.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Gru's meatballs in tomato sauce",

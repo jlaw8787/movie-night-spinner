@@ -115,7 +115,56 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Stella's sandwiches (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "Up to 3 hours, keep covered",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "chargrilled eggplant in oil, drained",
+       "aisle": "Deli"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices vegetarian Swiss-style cheese",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Spread the rye slices with Dijon.",
+       "min": 3
+      },
+      {
+       "text": "Fill 4 with chargrilled eggplant and cheese and close.",
+       "min": 4
+      },
+      {
+       "text": "Cut each into quarters and stack on a plate.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Lisa's lobster dinner",

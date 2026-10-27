@@ -84,7 +84,98 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Baseball team Korean fried cauliflower",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "potato starch",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "cold water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "gochujang",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sesame seeds",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cauliflower into bite-sized florets. Whisk the potato starch with the cold water and toss the florets through to coat.",
+       "min": 10
+      },
+      {
+       "text": "Fry at 160C.",
+       "min": 8
+      },
+      {
+       "text": "Rest.",
+       "min": 5
+      },
+      {
+       "text": "Fry again at 190C until very crisp.",
+       "min": 8
+      },
+      {
+       "text": "Simmer the gochujang, soy, honey and garlic until glossy.",
+       "min": 6
+      },
+      {
+       "text": "Toss the cauliflower in the glaze and scatter with sesame seeds.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Spicy rice cakes",
@@ -161,7 +252,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Spicy rice cakes (vegetarian)",
+     "prep_min": 14,
+     "cook_min": 30,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "rice cakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "piece kombu (10cm)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "dried shiitake mushrooms",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "gochujang",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "gochugaru",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "fried tofu puffs, halved",
+       "aisle": "Deli"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the rice cakes in water.",
+       "min": 20
+      },
+      {
+       "text": "Simmer the water with the kombu and shiitake for 10 minutes, lift them out, then stir in the gochujang, gochugaru and sugar.",
+       "min": 12
+      },
+      {
+       "text": "Add the rice cakes and tofu puffs and simmer until thick and glossy.",
+       "min": 10
+      },
+      {
+       "text": "Top with spring onion.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "KTX to Busan kimchi fried rice",
@@ -180,7 +354,7 @@
      "q": 300,
      "u": "g",
      "item": "kimchi, chopped",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 300,

@@ -44,7 +44,52 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Riggs' trailer snacks (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "sharp cheddar",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plant-based salami, sliced",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sleeve saltine crackers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pickled jalapeños",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the cheddar into slabs and fold the plant-based salami into quarters.",
+       "min": 6
+      },
+      {
+       "text": "Lay them out on a chopping board with the saltine crackers and a small bowl of pickled jalapeños. Eat straight off the board.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Christmas party crab dip",
@@ -115,7 +160,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Christmas party crab dip (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cream cheese, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin hearts of palm (400 g), drained and shredded",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "crackers",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 190C. Mix the cream cheese, sour cream, soy and a squeeze of lemon.",
+       "min": 8
+      },
+      {
+       "text": "Fold in the hearts of palm and half the cheddar, spoon into a dish and top with the rest.",
+       "min": 7
+      },
+      {
+       "text": "Bake until bubbling.",
+       "min": 20
+      },
+      {
+       "text": "Serve with crackers.",
+       "min": 0
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Trish's stew, made properly",
@@ -797,6 +913,159 @@
       },
       {
        "text": "Top with cold alcohol-free lager poured slowly, stir once and garnish with lime wedges.",
+       "min": 2
+      }
+     ]
+    },
+    "veg": {
+     "n": "Riggs' beach trailer michelada (vegetarian)",
+     "prep_min": 8,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "dashes hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dashes soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles cold lager (375 ml)",
+       "aisle": "Bottle shop"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt and chilli powder on a plate. Rub the glass rims with lime and dip.",
+       "min": 3
+      },
+      {
+       "text": "Fill the glasses with ice and add lime juice, tomato juice, hot sauce and soy sauce.",
+       "min": 3
+      },
+      {
+       "text": "Top with the cold lager poured slowly, stir once and garnish with lime wedges.",
+       "min": 2
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "Riggs' beach trailer michelada (vegetarian, alcohol-free)",
+     "prep_min": 8,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tray ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "lime juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "tomato juice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "dashes hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dashes soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "bottles cold alcohol-free lager (375 ml)",
+       "aisle": "Drinks"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the salt and chilli powder on a plate. Rub the glass rims with lime and dip.",
+       "min": 3
+      },
+      {
+       "text": "Fill the glasses with ice and add lime juice, tomato juice, hot sauce and soy sauce.",
+       "min": 3
+      },
+      {
+       "text": "Top with the cold alcohol-free lager poured slowly, stir once and garnish with lime wedges.",
        "min": 2
       }
      ]

@@ -92,7 +92,110 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Office party lentil, mushroom and onion rolls",
+     "prep_min": 17,
+     "cook_min": 50,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "Swiss brown mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin brown lentils (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs (1 for the filling, 1 beaten for glazing)",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sesame seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "tomato relish",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onions in the butter until golden.",
+       "min": 15
+      },
+      {
+       "text": "Add the mushrooms and cook until all the liquid has gone, then cool.",
+       "min": 10
+      },
+      {
+       "text": "Lightly mash the lentils and mix with the onion and mushroom, soy sauce, thyme, breadcrumbs, one egg and salt.",
+       "min": 5
+      },
+      {
+       "text": "Cut the pastry in half, lay a log of filling along each strip, roll and seal.",
+       "min": 8
+      },
+      {
+       "text": "Brush with egg, sprinkle with sesame and cut into pieces.",
+       "min": 4
+      },
+      {
+       "text": "Bake at 200C until golden. Serve with relish.",
+       "min": 25
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Baked camembert with garlic and honey",

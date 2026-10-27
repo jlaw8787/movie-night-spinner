@@ -76,7 +76,100 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Tucson Sonoran hot dog bites (vegetarian)",
+     "prep_min": 23,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "vegetarian cocktail sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small eggplant",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "mini bread rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can pinto beans",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "jalapeno salsa",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the tomato and onion and warm the pinto beans.",
+       "min": 8
+      },
+      {
+       "text": "Slice the eggplant lengthways into 16 very thin strips and brush with the oil and smoked paprika.",
+       "min": 6
+      },
+      {
+       "text": "Wrap each sausage in a strip of eggplant and pin with a toothpick.",
+       "min": 5
+      },
+      {
+       "text": "Griddle until the eggplant is crisp and browned.",
+       "min": 10
+      },
+      {
+       "text": "Tuck into the rolls with beans, tomato, onion, mustard and salsa.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Party potato skins",
@@ -145,7 +238,88 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Party potato skins (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 58,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "medium potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "button mushrooms, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch chives",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the potatoes at 200C.",
+       "min": 50
+      },
+      {
+       "text": "Halve, scoop out most of the flesh and brush the skins with melted butter.",
+       "min": 8
+      },
+      {
+       "text": "Fry the mushrooms in the oil with the smoked paprika until dark and crisp, then fill the skins with mushrooms and cheddar.",
+       "min": 8
+      },
+      {
+       "text": "Bake again until the cheese melts.",
+       "min": 10
+      },
+      {
+       "text": "Top with sour cream and chives.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Tucson red chilli enchiladas",

@@ -76,7 +76,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hotel tea sandwiches (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cress",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cooked beetroot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "slices white bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs, cool, peel and mash with mayo and cress.",
+       "min": 15
+      },
+      {
+       "text": "Slice the beetroot paper thin and dress with a squeeze of lemon.",
+       "min": 5
+      },
+      {
+       "text": "Make cucumber and cream cheese, egg, and beetroot, cream cheese and dill sandwiches.",
+       "min": 10
+      },
+      {
+       "text": "Cut off the crusts and cut into fingers.",
+       "min": 4
+      },
+      {
+       "text": "Lay on a tiered stand.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Hotel Excelsior crab sandwiches",
@@ -153,7 +240,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hotel Excelsior hearts of palm sandwiches",
+     "prep_min": 22,
+     "cook_min": 0,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned hearts of palm, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chives, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "crumbled nori",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices soft white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Shred the hearts of palm with a fork, pat dry and mix with the mayonnaise, lemon zest, a squeeze of juice, chives, nori and pepper.",
+       "min": 8
+      },
+      {
+       "text": "Butter the bread.",
+       "min": 4
+      },
+      {
+       "text": "Spread the filling over half the slices and lay thin cucumber on top.",
+       "min": 5
+      },
+      {
+       "text": "Close with the remaining bread, press gently, trim off the crusts and cut each into three fingers.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Formula 86 watercress soup",

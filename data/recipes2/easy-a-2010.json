@@ -73,13 +73,13 @@
      "q": 150,
      "u": "g",
      "item": "green olives",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 150,
      "u": "g",
      "item": "kalamata olives",
-     "aisle": "Meat"
+     "aisle": "Deli"
     },
     {
      "q": 2,
@@ -128,7 +128,7 @@
      "min": 5
     }
    ],
-   "veg": false,
+   "veg": true,
    "af": true
   },
   {
@@ -148,7 +148,7 @@
      "q": 200,
      "u": "g",
      "item": "firm tofu, cubed",
-     "aisle": "Meat"
+     "aisle": "Produce"
     },
     {
      "q": 2,

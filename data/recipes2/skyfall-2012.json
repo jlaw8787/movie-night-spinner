@@ -66,7 +66,80 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Macau casino dumplings (vegetarian)",
+     "prep_min": 40,
+     "cook_min": 8,
+     "make_ahead": "Uncooked dumplings up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "firm tofu, crumbled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small tin water chestnuts, drained and chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "grated ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "shiitake mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 24,
+       "u": "",
+       "item": "wonton wrappers",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chilli oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the tofu, water chestnuts, ginger, mushrooms, soy and sesame oil.",
+       "min": 8
+      },
+      {
+       "text": "Spoon into the wonton wrappers, wet the edges and pinch up the sides.",
+       "min": 32
+      },
+      {
+       "text": "Steam in batches for 8 minutes. Top each with a dot of chilli oil.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Highland oatcakes and smoked salmon",
@@ -137,7 +210,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Highland oatcakes and dill cured beetroot",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Oatcakes up to 2 days ahead, airtight",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "rolled oats",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cooked beetroot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "crème fraîche",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the oats with the melted butter, salt and a splash of hot water into a stiff dough.",
+       "min": 5
+      },
+      {
+       "text": "Press thin and cut into rounds.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 180C for 20 minutes and cool.",
+       "min": 20
+      },
+      {
+       "text": "Slice the beetroot paper thin and toss with lemon juice, a pinch of salt and half the chopped dill.",
+       "min": 5
+      },
+      {
+       "text": "Top the oatcakes with crème fraîche, beetroot and the rest of the dill.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Skyfall lodge venison",

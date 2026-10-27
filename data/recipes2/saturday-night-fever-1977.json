@@ -54,7 +54,62 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bay Ridge sausage and peppers (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "Up to 1 day ahead, reheat gently",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "capsicums, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "splash red wine vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Grill the vegetarian sausages until browned and hot through, then slice into chunks.",
+       "min": 12
+      },
+      {
+       "text": "Fry the capsicums and onions in oil until soft and sweet.",
+       "min": 15
+      },
+      {
+       "text": "Toss with the vegetarian sausage and a splash of red wine vinegar.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Disco fries",
@@ -119,7 +174,78 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Disco fries (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 46,
+     "make_ahead": "Make the gravy ahead; fry the chips to serve",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "neutral oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "hot mushroom stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into chips, soak for 30 minutes and dry well.",
+       "min": 35
+      },
+      {
+       "text": "Fry at 150C for 6 minutes, then at 190C until crisp.",
+       "min": 15
+      },
+      {
+       "text": "Melt the butter, stir in the flour for a minute, whisk in the mushroom stock and soy and simmer for 5 minutes into gravy.",
+       "min": 8
+      },
+      {
+       "text": "Pile the fries on a tray, pour over the gravy, top with mozzarella and grill for a minute.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Two slices stacked",

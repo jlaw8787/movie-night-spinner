@@ -54,7 +54,68 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Luke's lemon dill tofu skewers",
+     "prep_min": 15,
+     "cook_min": 27,
+     "make_ahead": "Marinate up to 2 hours, grill fresh",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "chopped dill, plus extra for the dip",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the tofu dry, cut into chunks and marinate in most of the lemon juice with the dill, oil and salt for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Thread onto skewers and grill for 3 minutes a side until charred.",
+       "min": 8
+      },
+      {
+       "text": "Stir more dill and the rest of the lemon through the yoghurt for a dip.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Crait red salt chips",
@@ -334,7 +395,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Green pistachio milk panna cotta (vegetarian)",
+     "prep_min": 23,
+     "cook_min": 320,
+     "make_ahead": "Make the day before, keep chilled",
+     "ingredients": [
+      {
+       "q": 100,
+       "u": "g",
+       "item": "pistachios, plus extra crushed to serve",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blend the pistachios with the milk until fine, then strain.",
+       "min": 10
+      },
+      {
+       "text": "Warm the pistachio milk with the cream, sugar and agar. Bring to the boil and simmer for 2 minutes, stirring.",
+       "min": 8
+      },
+      {
+       "text": "Pour into glasses and set overnight.",
+       "min": 320
+      },
+      {
+       "text": "Top with crushed pistachios and a drizzle of honey.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Throne room red punch",

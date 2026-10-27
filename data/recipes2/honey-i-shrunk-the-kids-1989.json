@@ -46,7 +46,54 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Giant puffed rice cereal ring (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 60,
+     "make_ahead": "Up to 1 day, airtight",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "puffed rice cereal",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Melt the butter with the marshmallows over low heat.",
+       "min": 6
+      },
+      {
+       "text": "Stir through the puffed rice until coated.",
+       "min": 3
+      },
+      {
+       "text": "Press firmly into a greased ring mould.",
+       "min": 6
+      },
+      {
+       "text": "Set, then turn out and cut into wedges at the table.",
+       "min": 60
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Giant cream cookie",
@@ -209,7 +256,50 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Backyard s'mores (vegetarian)",
+     "prep_min": 5,
+     "cook_min": 8,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "large vegetarian marshmallows",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 32,
+       "u": "",
+       "item": "plain biscuits",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "milk chocolate",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toast the marshmallows on skewers over a gas flame or under the grill until golden.",
+       "min": 8
+      },
+      {
+       "text": "Squash each between two biscuits with a square of chocolate.",
+       "min": 4
+      },
+      {
+       "text": "Leave briefly so the chocolate melts.",
+       "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Sprinkler watermelon pink lemonade",

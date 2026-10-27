@@ -76,7 +76,90 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Wakanda battle mushroom suya",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "g",
+       "item": "roasted peanuts, ground",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground ginger",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "large flat mushrooms, cut into thick strips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Grind the peanuts with the paprika, ginger, chilli flakes and salt.",
+       "min": 5
+      },
+      {
+       "text": "Brush the mushrooms with the oil, coat in the spice and thread onto skewers.",
+       "min": 10
+      },
+      {
+       "text": "Grill hot until charred.",
+       "min": 8
+      },
+      {
+       "text": "Serve with sliced red onion and tomato.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "School bus ham and cheese pizza scrolls",
@@ -151,7 +234,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "School bus mushroom and cheese pizza scrolls",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "Up to 1 day, reheat to serve",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "g",
+       "item": "cold butter, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "button mushrooms, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the butter into the flour, then mix in the milk to a soft dough.",
+       "min": 8
+      },
+      {
+       "text": "Roll out to a 30 x 40cm rectangle and spread with tomato paste.",
+       "min": 7
+      },
+      {
+       "text": "Scatter with mushrooms, cheddar and oregano, then roll up from the long side.",
+       "min": 3
+      },
+      {
+       "text": "Cut into 12 slices and lay cut side up in a lined tin.",
+       "min": 2
+      },
+      {
+       "text": "Bake at 210C until golden.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Thanos's farm stew",
@@ -351,7 +509,124 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Infinity Stone fruit jelly cups (vegetarian)",
+     "prep_min": 35,
+     "cook_min": 125,
+     "make_ahead": "Up to 1 day, keep chilled",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "",
+       "item": "packets vegetarian jelly crystals (red, orange, green)",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tsp",
+       "item": "agar powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "purple grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "dried butterfly pea flowers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "raspberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "mango, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "green grapes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "can pineapple pieces, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "purple grapes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "blueberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Make up the red, orange and green jellies as the packets say.",
+       "min": 15
+      },
+      {
+       "text": "Steep the pea flowers in the boiling water and strain. Bring the apple juice, the grape juice and the blue tea to the boil in separate pans, whisking 1 tsp agar into each, and simmer 2 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Divide the fruit between glasses by colour and pour the matching jelly over each.",
+       "min": 10
+      },
+      {
+       "text": "Chill until set, about 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Whip the cream with the vanilla and spoon on top to serve.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Wakanda pineapple ginger cooler",

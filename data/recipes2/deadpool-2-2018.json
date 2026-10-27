@@ -80,7 +80,94 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Chimichanga bites (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "Filling up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "400g cans young green jackfruit in brine, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "chipotle chillies in adobo, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "tomatoes, diced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Put the jackfruit in a pot with the chipotle, water and salt.",
+       "min": 5
+      },
+      {
+       "text": "Simmer until soft and the liquid has cooked away, then shred with two forks.",
+       "min": 30
+      },
+      {
+       "text": "Roll small amounts of jackfruit and cheddar in the tortillas, folding in the sides.",
+       "min": 15
+      },
+      {
+       "text": "Fry in the oil seam side down until crisp all over.",
+       "min": 8
+      },
+      {
+       "text": "Serve with sour cream and diced tomato salsa.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Dopinder's taxi samosas",

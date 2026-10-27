@@ -54,7 +54,72 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Smoky eggplant and provolone crostini",
+     "prep_min": 13,
+     "cook_min": 16,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "eggplant",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "provolone",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "pickled capsicum strips",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the baguette thinly and brush with some of the olive oil.",
+       "min": 8
+      },
+      {
+       "text": "Toast at 200C until crisp.",
+       "min": 6
+      },
+      {
+       "text": "Slice the eggplant thinly, brush with the rest of the oil and the paprika and chargrill until soft and smoky.",
+       "min": 10
+      },
+      {
+       "text": "Top each toast with eggplant, a small slice of provolone and a strip of pickled capsicum, in rows on a board.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Cleo's goldfish crackers",

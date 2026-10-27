@@ -151,7 +151,82 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bullet Farm veggie chorizo with smoky honey",
+     "prep_min": 10,
+     "cook_min": 12,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "vegetarian chorizo-style sausages",
+       "aisle": "Deli"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "smoked paprika, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sherry vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices sourdough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "toothpicks, to serve",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the veggie sausages into 1.5cm coins.",
+       "min": 2
+      },
+      {
+       "text": "Heat the oil in a heavy pan over high heat and fry for 4 minutes, turning, until blistered.",
+       "min": 6
+      },
+      {
+       "text": "Add the honey, the smoked paprika and the sherry vinegar and toss for 1 minute until sticky.",
+       "min": 3
+      },
+      {
+       "text": "Grill the slices of sourdough until charred.",
+       "min": 8
+      },
+      {
+       "text": "Serve the coins on toothpicks with the bread to mop up the pan juices.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "War Rig barbecue lamb",

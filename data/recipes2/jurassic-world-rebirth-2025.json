@@ -135,7 +135,66 @@
     }
    ],
    "veg": false,
-   "af": true
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mosasaur ocean mushrooms",
+     "prep_min": 15,
+     "cook_min": 6,
+     "make_ahead": "",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king oyster mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red chillies",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the mushrooms into thick coins and score the tops. Crush the garlic, chop the chilli, zest and juice a lime and cut the rest into wedges. Melt the butter.",
+       "min": 10
+      },
+      {
+       "text": "Toss the mushrooms with garlic, chilli, zest and butter.",
+       "min": 3
+      },
+      {
+       "text": "Grill a few minutes a side until charred and tender.",
+       "min": 6
+      },
+      {
+       "text": "Pile onto a platter with lime wedges, the lime juice and the pan butter.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "ParkerGenix expedition grilled fish",
