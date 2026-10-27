@@ -1,7 +1,7 @@
 # Handover (Oct 26, 21:00): read this first in a new chat
 
 Repo jlaw8787/movie-night-spinner (GitHub Pages). Work in a worktree on branch wip/menu-polish. Live = main.
-Live as of commit 9ad982db (service worker version mns-a4374126).
+Live as of commit becb7538 (service worker version mns-bc419dd2).
 
 ## Owner rules (non-negotiable)
 - Nothing goes live without the owner's approval. Ask with tappable options.
@@ -40,7 +40,7 @@ Live as of commit 9ad982db (service worker version mns-a4374126).
 ## Next job
 Audit small fixes (live in 9ad982db): offline spins only land on saved menus (SAVED set from caches, spinPool), unknown film link shows a message in #status, welcome card says 1 to 24 guests, Shuffle the menu button removed, floating spin bar hides while .actions is on screen. Service worker only registers on https, so test offline by registering sw.js by hand on localhost.
 
-- Oct 27 (on wip, NOT live yet, waiting on owner approval): diet and ease pass.
+- Oct 27 (live in becb7538): diet and ease pass.
   Diet: data/recipes2 dishes carry veg/af flags and alt.af (527), alt.veg (825), alt.veg_af (106), built by wip/diet/merge.py from wip/diet/out (briefs AF-BRIEF.md, VEG-BRIEF.md; checker wip/genre/lib/dietclass.py). app.js DIET (mns-diet), dietDish swaps in the version; drinks become a mocktail. Kids mode always alcohol-free (was letting 64 PG films plan alcohol).
   Ease: quick find on the front (#findFilm, arrows, Enter, Esc), Saved menus shelf (FAV, mns-fav, max 30, also fetched for offline, synced), usual guests (USUAL, mns-guests), Clear link on ticket stubs, one Settings drawer (#settings, data-keep so closing does not delete it) holding kids mode, sound, streaming service, guests, vegetarian, no alcohol, clear stubs, clear saved, reset everything (two taps; keeps mns-welcome).
   Checks: wip/genre/lib/frontcheck.py OUTDIR [base_url], 68 steps phone and desktop, 0 faults.
