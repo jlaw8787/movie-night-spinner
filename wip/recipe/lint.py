@@ -61,9 +61,10 @@ def lint_dish(d):
         if ws and not seasoned and not any(stem(w) in sw for w in ws):
             out.append(("unused_line", f"ing {i}: {item}"))
         q = x.get("q")
-        if (q in (None, "", 0)) and not re.search(r"to taste|a drop|drops|a pinch|pinch of|a dash|dash of|a few|to serve|for serving|to dust|to garnish|for garnish|for dusting|for frying|for greasing", item, re.I):
+        if (q in (None, "", 0)) and not re.search(r"to taste|a drop|drops|a pinch|pinch of|a dash|dash of|dashes|a few|to serve|for serving|to dust|to garnish|for garnish|for dusting|for frying|for greasing", item, re.I):
             out.append(("no_amount", f"ing {i}: {item}"))
-        if heads[head(item)] > 1 and not re.search(r"\bfor (the )?\w+", item.split(",", 1)[-1] if "," in item else ""):
+        same = [g for g in ings if g.get("item", "").strip().lower() == item.strip().lower()]
+        if len(same) > 1:
             out.append(("double_line", f"ing {i}: {item}"))
     if re.search(r"[‒-―−]", json.dumps(d, ensure_ascii=False)):
         out.append(("dash", ""))
