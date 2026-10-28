@@ -45,3 +45,6 @@ Repo root: /home/claude/movie-night-spinner. Run every command from there.
 - Leave out any dish or version you don't change.
 
 When the check is clean, reply in 3 lines: job number, films patched, findings left and why they are fine.
+
+## Scratch files
+Other jobs run at the same time. Keep any part files in /tmp/recipe-jobNN/ (your own job number) and nowhere else. Your final out file must contain exactly the slugs in your job file, no others. Check: python3 -c "import json;a=set(json.load(open('wip/recipe/jobs/jobNN.json')));b=set(json.load(open('wip/recipe/out/jobNN.json')));print(b-a,a-b)" must print set() set().
