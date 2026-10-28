@@ -124,27 +124,27 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Bureau red chilli cauliflower wings",
+     "n": "Bureau red chilli haloumi bites",
      "prep_min": 10,
-     "cook_min": 35,
-     "make_ahead": "Cut the cauliflower into florets and chop the chillies up to 1 day ahead, keep chilled; bake and glaze just before serving",
+     "cook_min": 25,
+     "make_ahead": "Cut and toss the haloumi in the cornflour up to 1 day ahead and keep it covered in the fridge; chop the chillies the same day. Bake and glaze just before serving.",
      "ingredients": [
       {
-       "q": 1,
-       "u": "",
-       "item": "large cauliflower",
-       "aisle": "Produce"
+       "q": 500,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
       },
       {
        "q": 2,
        "u": "tbsp",
        "item": "olive oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "salt",
        "aisle": "Pantry"
       },
       {
@@ -174,15 +174,15 @@
      ],
      "steps": [
       {
-       "text": "Cut the cauliflower into large florets and toss with the oil and salt.",
+       "text": "Cut the haloumi into bite-sized cubes and toss with the cornflour and olive oil.",
        "min": 5
       },
       {
-       "text": "Bake at 220C until crisp and browned at the edges.",
-       "min": 35
+       "text": "Bake at 220C for 20 minutes, turning once, until golden and crisp at the edges.",
+       "min": 20
       },
       {
-       "text": "Warm the butter with honey, soy sauce and the chopped red chillies until sticky and toss the cauliflower through until glossy.",
+       "text": "Warm the butter with the honey, soy sauce and chopped red chillies until sticky and toss the haloumi through until glossy.",
        "min": 5
       }
      ],

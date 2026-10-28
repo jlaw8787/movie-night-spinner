@@ -229,31 +229,31 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Blues bar cauliflower wings",
+     "n": "Blues bar broccoli wings",
      "prep_min": 15,
-     "cook_min": 37,
-     "make_ahead": "Mash the blue cheese dip up to 2 days ahead, covered in the fridge; batter and bake the cauliflower on the night",
+     "cook_min": 30,
+     "make_ahead": "Cut the broccoli into florets and make the blue cheese dip up to 1 day ahead and keep both chilled. Batter, bake and toss on the night.",
      "ingredients": [
       {
-       "q": 1,
+       "q": 2,
        "u": "",
-       "item": "large cauliflower, cut into florets",
+       "item": "large heads broccoli",
        "aisle": "Produce"
       },
       {
-       "q": 100,
+       "q": 80,
        "u": "g",
        "item": "plain flour",
        "aisle": "Pantry"
       },
       {
-       "q": 125,
+       "q": 100,
        "u": "ml",
-       "item": "milk",
-       "aisle": "Dairy"
+       "item": "water",
+       "aisle": "Pantry"
       },
       {
-       "q": 0.5,
+       "q": 1,
        "u": "tsp",
        "item": "salt",
        "aisle": "Pantry"
@@ -291,24 +291,24 @@
      ],
      "steps": [
       {
-       "text": "Whisk the flour, milk and salt into a thick batter and coat the cauliflower florets.",
-       "min": 8
+       "text": "Cut the broccoli into large florets.",
+       "min": 5
       },
       {
-       "text": "Spread on a lined tray and bake at 220C until crisp at the edges.",
-       "min": 30
+       "text": "Whisk the flour, water and salt into a thin batter and coat each floret.",
+       "min": 5
       },
       {
-       "text": "Melt the butter with the hot sauce, toss the cauliflower through and bake 5 minutes more.",
-       "min": 8
+       "text": "Bake on a lined tray at 220C for 25 minutes, turning once, until crisp.",
+       "min": 25
       },
       {
-       "text": "Mash the blue cheese into the sour cream for the dip.",
+       "text": "Melt the butter with the hot sauce and toss the broccoli through.",
+       "min": 3
+      },
+      {
+       "text": "Mash the blue cheese into the sour cream for the dip and serve with the celery sticks.",
        "min": 4
-      },
-      {
-       "text": "Serve with celery sticks.",
-       "min": 2
       }
      ],
      "af": true

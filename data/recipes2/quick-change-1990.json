@@ -140,39 +140,33 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Airport bar chilli-lime cauliflower wings",
+     "n": "Airport bar chilli-lime paneer wings",
      "prep_min": 10,
-     "cook_min": 31,
-     "make_ahead": "Make the glaze up to 3 days ahead in the fridge and reheat; batter, roast and toss the cauliflower on the night",
+     "cook_min": 25,
+     "make_ahead": "Cut and toss the paneer in the cornflour up to 1 day ahead and keep it covered in the fridge. Bake and glaze just before serving.",
      "ingredients": [
       {
-       "q": 1,
-       "u": "",
-       "item": "large cauliflower, cut into florets",
-       "aisle": "Produce"
-      },
-      {
-       "q": 75,
+       "q": 500,
        "u": "g",
-       "item": "plain flour",
+       "item": "paneer",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
        "aisle": "Pantry"
       },
       {
-       "q": 1,
-       "u": "tsp",
-       "item": "baking powder",
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
        "aisle": "Pantry"
       },
       {
-       "q": 1,
+       "q": 0.5,
        "u": "tsp",
        "item": "salt",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 125,
-       "u": "ml",
-       "item": "water",
        "aisle": "Pantry"
       },
       {
@@ -197,7 +191,7 @@
        "q": 1,
        "u": "tsp",
        "item": "chilli flakes",
-       "aisle": "Pantry"
+       "aisle": "Spices"
       },
       {
        "q": 2,
@@ -214,20 +208,20 @@
      ],
      "steps": [
       {
-       "text": "Whisk the flour, baking powder, salt and water into a batter and toss the cauliflower through it.",
-       "min": 6
+       "text": "Cut the paneer into thick fingers and toss with the cornflour, olive oil and salt.",
+       "min": 5
       },
       {
-       "text": "Roast on a lined tray at 220C, turning once, for 30 minutes until crisp and golden.",
-       "min": 30
+       "text": "Bake on a lined tray at 220C for 20 minutes, turning once, until golden and crisp.",
+       "min": 20
       },
       {
-       "text": "Melt the butter with the honey, sweet chilli sauce, chilli flakes, lime zest and juice.",
+       "text": "Melt the butter with the honey, sweet chilli sauce, chilli flakes, lime zest and lime juice.",
+       "min": 4
+      },
+      {
+       "text": "Toss the paneer through the glaze and scatter with the coriander.",
        "min": 3
-      },
-      {
-       "text": "Toss the cauliflower through and scatter with coriander.",
-       "min": 2
       }
      ],
      "af": true

@@ -660,31 +660,31 @@
   },
   "Blues bar wings": {
    "veg": {
-    "n": "Blues bar cauliflower wings",
+    "n": "Blues bar broccoli wings",
     "prep_min": 15,
-    "cook_min": 37,
-    "make_ahead": "Mash the blue cheese dip up to 2 days ahead, covered in the fridge; batter and bake the cauliflower on the night",
+    "cook_min": 30,
+    "make_ahead": "Cut the broccoli into florets and make the blue cheese dip up to 1 day ahead and keep both chilled. Batter, bake and toss on the night.",
     "ingredients": [
      {
-      "q": 1,
+      "q": 2,
       "u": "",
-      "item": "large cauliflower, cut into florets",
+      "item": "large heads broccoli",
       "aisle": "Produce"
      },
      {
-      "q": 100,
+      "q": 80,
       "u": "g",
       "item": "plain flour",
       "aisle": "Pantry"
      },
      {
-      "q": 125,
+      "q": 100,
       "u": "ml",
-      "item": "milk",
-      "aisle": "Dairy"
+      "item": "water",
+      "aisle": "Pantry"
      },
      {
-      "q": 0.5,
+      "q": 1,
       "u": "tsp",
       "item": "salt",
       "aisle": "Pantry"
@@ -722,24 +722,24 @@
     ],
     "steps": [
      {
-      "text": "Whisk the flour, milk and salt into a thick batter and coat the cauliflower florets.",
-      "min": 8
+      "text": "Cut the broccoli into large florets.",
+      "min": 5
      },
      {
-      "text": "Spread on a lined tray and bake at 220C until crisp at the edges.",
-      "min": 30
+      "text": "Whisk the flour, water and salt into a thin batter and coat each floret.",
+      "min": 5
      },
      {
-      "text": "Melt the butter with the hot sauce, toss the cauliflower through and bake 5 minutes more.",
-      "min": 8
+      "text": "Bake on a lined tray at 220C for 25 minutes, turning once, until crisp.",
+      "min": 25
      },
      {
-      "text": "Mash the blue cheese into the sour cream for the dip.",
+      "text": "Melt the butter with the hot sauce and toss the broccoli through.",
+      "min": 3
+     },
+     {
+      "text": "Mash the blue cheese into the sour cream for the dip and serve with the celery sticks.",
       "min": 4
-     },
-     {
-      "text": "Serve with celery sticks.",
-      "min": 2
      }
     ]
    }
@@ -2938,31 +2938,31 @@
  "american-pie-1999": {
   "Stifler's party wings": {
    "veg": {
-    "n": "Stifler's party cauliflower wings",
-    "prep_min": 15,
-    "cook_min": 35,
-    "make_ahead": "Batter and bake up to 3 hours ahead, toss in sauce fresh",
+    "n": "Stifler's party oyster mushroom wings",
+    "prep_min": 10,
+    "cook_min": 25,
+    "make_ahead": "Make the blue cheese dip up to 2 days ahead and keep it covered in the fridge; tear the mushrooms and cut the celery up to 1 day ahead. Roast and toss just before serving.",
     "ingredients": [
      {
-      "q": 1,
-      "u": "",
-      "item": "large cauliflower, cut into florets",
+      "q": 600,
+      "u": "g",
+      "item": "oyster mushrooms",
       "aisle": "Produce"
      },
      {
-      "q": 100,
-      "u": "g",
-      "item": "plain flour",
+      "q": 2,
+      "u": "tbsp",
+      "item": "cornflour",
       "aisle": "Pantry"
      },
      {
-      "q": 125,
-      "u": "ml",
-      "item": "milk",
-      "aisle": "Dairy"
+      "q": 2,
+      "u": "tbsp",
+      "item": "olive oil",
+      "aisle": "Pantry"
      },
      {
-      "q": 0.5,
+      "q": 1,
       "u": "tsp",
       "item": "salt",
       "aisle": "Pantry"
@@ -3000,20 +3000,20 @@
     ],
     "steps": [
      {
-      "text": "Whisk the flour, milk and salt into a thick batter and coat the cauliflower florets.",
-      "min": 8
+      "text": "Tear the oyster mushrooms into thick clusters and toss with the cornflour, olive oil and salt.",
+      "min": 5
      },
      {
-      "text": "Bake on a lined tray at 220C until crisp and golden.",
-      "min": 30
+      "text": "Roast on a lined tray at 220C for 22 minutes, turning once, until golden with crisp edges.",
+      "min": 22
      },
      {
-      "text": "Melt the butter with the hot sauce, toss the cauliflower through and bake 5 minutes more.",
-      "min": 8
+      "text": "Melt the butter with the hot sauce and toss the mushrooms through it.",
+      "min": 3
      },
      {
-      "text": "Mash the blue cheese into the sour cream for the dip. Serve with celery sticks.",
-      "min": 4
+      "text": "Mash the blue cheese into the sour cream for the dip. Serve with the celery sticks.",
+      "min": 5
      }
     ]
    }
@@ -3808,22 +3808,28 @@
  "little-giants-1994": {
   "Annexation of Puerto Rico wings": {
    "veg": {
-    "n": "Annexation of Puerto Rico cauliflower wings",
-    "prep_min": 15,
-    "cook_min": 33,
-    "make_ahead": "Dip up to 1 day, cauliflower fresh",
+    "n": "Annexation of Puerto Rico barbecue jackfruit wings",
+    "prep_min": 20,
+    "cook_min": 40,
+    "make_ahead": "Drain, squeeze and pull the jackfruit up to 1 day ahead and keep it chilled; mix the ranch dip up to 2 days ahead. Roast and glaze on the night.",
     "ingredients": [
      {
-      "q": 1,
+      "q": 2,
       "u": "",
-      "item": "large cauliflower, cut into florets",
-      "aisle": "Produce"
+      "item": "tins (400g) young green jackfruit in brine",
+      "aisle": "Pantry"
      },
      {
       "q": 2,
       "u": "tbsp",
       "item": "olive oil",
       "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "item": "smoked paprika",
+      "aisle": "Spices"
      },
      {
       "q": 1,
@@ -3870,16 +3876,20 @@
     ],
     "steps": [
      {
-      "text": "Toss the cauliflower with the oil and salt and roast at 220C until browned at the edges.",
-      "min": 30
-     },
-     {
-      "text": "Warm the honey with the barbecue sauce, toss the cauliflower through and roast 5 minutes more.",
+      "text": "Drain the jackfruit from the brine, rinse and squeeze it dry, then pull it into shreds and discard any tough core.",
       "min": 8
      },
      {
-      "text": "Mix the sour cream, mayonnaise and herbs into a ranch dip. Serve with celery sticks.",
-      "min": 10
+      "text": "Toss the jackfruit with the olive oil, smoked paprika and salt and roast at 220C for 30 minutes until the edges crisp.",
+      "min": 30
+     },
+     {
+      "text": "Warm the honey with the barbecue sauce and toss the jackfruit through, then return to the oven for 5 minutes.",
+      "min": 7
+     },
+     {
+      "text": "Mix the sour cream, mayonnaise and chopped herbs into a ranch dip. Serve with the celery sticks.",
+      "min": 5
      }
     ]
    }
@@ -4296,15 +4306,15 @@
  "star-wars-episode-ii-attack-of-the-clones-2002": {
   "Geonosis arena wings": {
    "veg": {
-    "n": "Geonosis arena cauliflower wings",
+    "n": "Geonosis arena chilli broccoli wings",
     "prep_min": 10,
-    "cook_min": 30,
-    "make_ahead": "Cauliflower fresh, sauce can be made ahead",
+    "cook_min": 25,
+    "make_ahead": "Cut the broccoli into florets and slice the spring onions up to 1 day ahead and keep them chilled. Roast and glaze just before serving.",
     "ingredients": [
      {
-      "q": 1,
+      "q": 2,
       "u": "",
-      "item": "large cauliflower, cut into florets",
+      "item": "large heads broccoli",
       "aisle": "Produce"
      },
      {
@@ -4314,7 +4324,7 @@
       "aisle": "Pantry"
      },
      {
-      "q": 0.5,
+      "q": 1,
       "u": "tsp",
       "item": "salt",
       "aisle": "Pantry"
@@ -4352,15 +4362,19 @@
     ],
     "steps": [
      {
-      "text": "Toss the cauliflower with the oil and salt and roast at 220C until browned at the edges.",
-      "min": 30
+      "text": "Cut the broccoli into large florets with a little stem on each and toss with the olive oil and salt.",
+      "min": 6
      },
      {
-      "text": "Melt the chilli sauce, honey and butter, toss the cauliflower through and roast 5 minutes more.",
-      "min": 8
+      "text": "Roast at 220C for 18 minutes, turning once, until charred at the tips.",
+      "min": 18
      },
      {
-      "text": "Scatter with sesame seeds and spring onion.",
+      "text": "Melt the chilli sauce, honey and butter and toss the broccoli through.",
+      "min": 3
+     },
+     {
+      "text": "Scatter with the sesame seeds and spring onions.",
       "min": 2
      }
     ]
@@ -5064,19 +5078,19 @@
   },
   "Hawkmen sky city wings": {
    "veg": {
-    "n": "Hawkmen sky city cauliflower wings",
-    "prep_min": 10,
-    "cook_min": 33,
-    "make_ahead": "Make fresh",
+    "n": "Hawkmen sky city honey soy eggplant wings",
+    "prep_min": 15,
+    "cook_min": 40,
+    "make_ahead": "Cut the eggplant up to 1 day ahead and keep it covered in the fridge; make the honey soy glaze up to 3 days ahead. Roast and glaze on the night.",
     "ingredients": [
      {
-      "q": 1,
+      "q": 2,
       "u": "",
-      "item": "large cauliflower, cut into florets",
+      "item": "large eggplants",
       "aisle": "Produce"
      },
      {
-      "q": 2,
+      "q": 3,
       "u": "tbsp",
       "item": "olive oil",
       "aisle": "Pantry"
@@ -5114,16 +5128,20 @@
     ],
     "steps": [
      {
-      "text": "Toss the cauliflower with the oil and salt and roast at 220C until browned at the edges.",
-      "min": 30
-     },
-     {
-      "text": "Warm the honey, soy and chilli until sticky.",
-      "min": 5
-     },
-     {
-      "text": "Toss the cauliflower through the glaze, roast 5 minutes more and scatter with sesame seeds.",
+      "text": "Cut the eggplants into 4 cm chunks and toss with the olive oil and salt.",
       "min": 8
+     },
+     {
+      "text": "Roast on two trays at 220C for 35 minutes, turning once, until deep golden and soft inside.",
+      "min": 35
+     },
+     {
+      "text": "Warm the honey, soy and chilli for 3 minutes until sticky.",
+      "min": 4
+     },
+     {
+      "text": "Toss the eggplant through the glaze and scatter with the sesame seeds.",
+      "min": 3
      }
     ]
    }

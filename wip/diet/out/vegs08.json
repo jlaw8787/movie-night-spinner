@@ -706,16 +706,22 @@
  "thor-2011": {
   "Asgard golden honey wings": {
    "veg": {
-    "n": "Asgard golden honey cauliflower wings",
+    "n": "Asgard golden honey paneer wings",
     "prep_min": 10,
-    "cook_min": 40,
-    "make_ahead": "Make fresh",
+    "cook_min": 20,
+    "make_ahead": "Cut the paneer and crush the garlic up to 1 day ahead and keep them chilled. Fry and glaze just before serving.",
     "ingredients": [
      {
-      "q": 1,
-      "u": "",
-      "item": "large cauliflower",
-      "aisle": "Produce"
+      "q": 500,
+      "u": "g",
+      "item": "paneer",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "item": "cornflour",
+      "aisle": "Pantry"
      },
      {
       "q": 2,
@@ -724,7 +730,7 @@
       "aisle": "Pantry"
      },
      {
-      "q": 1,
+      "q": 0.5,
       "u": "tsp",
       "item": "salt",
       "aisle": "Pantry"
@@ -756,20 +762,20 @@
     ],
     "steps": [
      {
-      "text": "Cut the cauliflower into large florets.",
+      "text": "Cut the paneer into thick fingers and toss with the cornflour and salt.",
       "min": 5
      },
      {
-      "text": "Toss with the oil and salt and roast at 220C until crisp and browned at the edges.",
-      "min": 35
+      "text": "Pan-fry in the olive oil over medium-high heat for 3 minutes each side until golden.",
+      "min": 8
      },
      {
-      "text": "Melt the butter with the honey, garlic and thyme.",
-      "min": 5
+      "text": "Melt the butter with the honey, garlic and thyme for 2 minutes.",
+      "min": 3
      },
      {
-      "text": "Toss the hot cauliflower through the glaze until shiny and golden and serve on a big platter.",
-      "min": 5
+      "text": "Toss the hot paneer through the glaze until shiny and golden and serve on a big platter.",
+      "min": 3
      }
     ]
    }
@@ -3404,27 +3410,27 @@
  "fantastic-four-2005": {
   "Human Torch flaming wings": {
    "veg": {
-    "n": "Human Torch flaming cauliflower wings",
+    "n": "Human Torch flaming haloumi bites",
     "prep_min": 10,
-    "cook_min": 35,
-    "make_ahead": "Mix the herbed sour cream and cut the cauliflower up to 1 day ahead; roast and sauce the florets just before serving",
+    "cook_min": 20,
+    "make_ahead": "Cut and dust the haloumi up to 1 day ahead and keep it covered in the fridge; mix the herb sour cream and cut the celery the same day. Fry and toss just before serving.",
     "ingredients": [
      {
-      "q": 1,
-      "u": "",
-      "item": "large cauliflower",
-      "aisle": "Produce"
+      "q": 500,
+      "u": "g",
+      "item": "haloumi",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "item": "cornflour",
+      "aisle": "Pantry"
      },
      {
       "q": 2,
       "u": "tbsp",
       "item": "olive oil",
-      "aisle": "Pantry"
-     },
-     {
-      "q": 1,
-      "u": "tsp",
-      "item": "salt",
       "aisle": "Pantry"
      },
      {
@@ -3466,20 +3472,20 @@
     ],
     "steps": [
      {
-      "text": "Cut the cauliflower into large florets and toss with the oil and salt.",
+      "text": "Cut the haloumi into thick fingers, pat dry and dust with the cornflour.",
       "min": 5
      },
      {
-      "text": "Bake at 220C until crisp and browned at the edges.",
-      "min": 35
+      "text": "Pan-fry in the olive oil over medium-high heat for 3 minutes each side until deep golden.",
+      "min": 8
      },
      {
-      "text": "Melt the butter with the hot sauce and honey and toss the cauliflower through.",
-      "min": 5
+      "text": "Melt the butter with the hot sauce and honey and toss the haloumi through.",
+      "min": 3
      },
      {
-      "text": "Serve with the sour cream mixed with the herbs, and celery sticks to put the fire out.",
-      "min": 0
+      "text": "Stir the chopped herbs through the sour cream and serve with the celery sticks to put the fire out.",
+      "min": 4
      }
     ]
    }
@@ -3833,9 +3839,9 @@
   "Bikers' bar wings": {
    "veg": {
     "n": "Bikers' bar cauliflower wings",
-    "prep_min": 10,
+    "prep_min": 15,
     "cook_min": 40,
-    "make_ahead": "Make the blue cheese dip up to 2 days ahead in the fridge; bake and toss the cauliflower just before serving",
+    "make_ahead": "Cut the cauliflower into florets and make the blue cheese dip up to 1 day ahead and keep both chilled. Batter, bake and toss on the night.",
     "ingredients": [
      {
       "q": 1,
@@ -3844,10 +3850,22 @@
       "aisle": "Produce"
      },
      {
-      "q": 2,
-      "u": "tbsp",
-      "item": "olive oil",
+      "q": 100,
+      "u": "g",
+      "item": "plain flour",
       "aisle": "Pantry"
+     },
+     {
+      "q": 120,
+      "u": "ml",
+      "item": "water",
+      "aisle": "Pantry"
+     },
+     {
+      "q": 1,
+      "u": "tsp",
+      "item": "garlic powder",
+      "aisle": "Spices"
      },
      {
       "q": 1,
@@ -3888,19 +3906,23 @@
     ],
     "steps": [
      {
-      "text": "Cut the cauliflower into large florets and toss with the oil and salt.",
+      "text": "Cut the cauliflower into large florets.",
       "min": 5
      },
      {
-      "text": "Bake at 220C until crisp and browned at the edges.",
+      "text": "Whisk the flour, water, garlic powder and salt into a smooth batter and coat each floret.",
+      "min": 5
+     },
+     {
+      "text": "Bake on a lined tray at 220C for 35 minutes, turning once, until crisp.",
       "min": 35
      },
      {
-      "text": "Melt the butter with the hot sauce and toss the cauliflower through.",
-      "min": 5
+      "text": "Melt the butter with the hot sauce and toss the florets through.",
+      "min": 3
      },
      {
-      "text": "Mash the blue cheese into the sour cream and serve with celery.",
+      "text": "Mash the blue cheese into the sour cream and serve with the celery sticks.",
       "min": 5
      }
     ]
@@ -4322,27 +4344,27 @@
  "hellboy-2004": {
   "Bureau red chilli wings": {
    "veg": {
-    "n": "Bureau red chilli cauliflower wings",
+    "n": "Bureau red chilli haloumi bites",
     "prep_min": 10,
-    "cook_min": 35,
-    "make_ahead": "Cut the cauliflower into florets and chop the chillies up to 1 day ahead, keep chilled; bake and glaze just before serving",
+    "cook_min": 25,
+    "make_ahead": "Cut and toss the haloumi in the cornflour up to 1 day ahead and keep it covered in the fridge; chop the chillies the same day. Bake and glaze just before serving.",
     "ingredients": [
      {
-      "q": 1,
-      "u": "",
-      "item": "large cauliflower",
-      "aisle": "Produce"
+      "q": 500,
+      "u": "g",
+      "item": "haloumi",
+      "aisle": "Dairy"
+     },
+     {
+      "q": 2,
+      "u": "tbsp",
+      "item": "cornflour",
+      "aisle": "Pantry"
      },
      {
       "q": 2,
       "u": "tbsp",
       "item": "olive oil",
-      "aisle": "Pantry"
-     },
-     {
-      "q": 1,
-      "u": "tsp",
-      "item": "salt",
       "aisle": "Pantry"
      },
      {
@@ -4372,15 +4394,15 @@
     ],
     "steps": [
      {
-      "text": "Cut the cauliflower into large florets and toss with the oil and salt.",
+      "text": "Cut the haloumi into bite-sized cubes and toss with the cornflour and olive oil.",
       "min": 5
      },
      {
-      "text": "Bake at 220C until crisp and browned at the edges.",
-      "min": 35
+      "text": "Bake at 220C for 20 minutes, turning once, until golden and crisp at the edges.",
+      "min": 20
      },
      {
-      "text": "Warm the butter with honey, soy sauce and the chopped red chillies until sticky and toss the cauliflower through until glossy.",
+      "text": "Warm the butter with the honey, soy sauce and chopped red chillies until sticky and toss the haloumi through until glossy.",
       "min": 5
      }
     ]
@@ -4844,21 +4866,21 @@
  "big-hero-6-2014": {
   "Aunt Cass's hot wings": {
    "veg": {
-    "n": "Aunt Cass's hot cauliflower wings",
-    "prep_min": 10,
+    "n": "Aunt Cass's hot gochujang tempeh wings",
+    "prep_min": 20,
     "cook_min": 35,
-    "make_ahead": "Make the glaze up to 3 days ahead, keep chilled; cut the cauliflower up to 1 day ahead; bake and toss on the night",
+    "make_ahead": "Simmer and cut the tempeh up to 1 day ahead and keep it chilled; make the gochujang glaze up to 3 days ahead. Bake and glaze on the night.",
     "ingredients": [
      {
-      "q": 1,
-      "u": "",
-      "item": "large cauliflower",
+      "q": 500,
+      "u": "g",
+      "item": "tempeh",
       "aisle": "Produce"
      },
      {
       "q": 2,
       "u": "tbsp",
-      "item": "olive oil",
+      "item": "vegetable oil",
       "aisle": "Pantry"
      },
      {
@@ -4900,20 +4922,24 @@
     ],
     "steps": [
      {
-      "text": "Cut the cauliflower into large florets and toss with the oil and salt.",
-      "min": 5
+      "text": "Cut the tempeh into thick fingers and simmer in a pot of water for 10 minutes to soften, then drain well.",
+      "min": 12
      },
      {
-      "text": "Bake at 220C until crisp and browned at the edges.",
-      "min": 35
+      "text": "Toss the tempeh with the vegetable oil and salt.",
+      "min": 3
      },
      {
-      "text": "Warm the gochujang with the honey, garlic and soy until glossy.",
-      "min": 5
+      "text": "Bake at 220C for 25 minutes, turning once, until crisp and browned.",
+      "min": 25
      },
      {
-      "text": "Toss the cauliflower through and scatter with sesame seeds.",
-      "min": 0
+      "text": "Warm the gochujang with the honey, garlic and soy for 3 minutes until glossy.",
+      "min": 4
+     },
+     {
+      "text": "Toss the tempeh through the glaze and scatter with the sesame seeds.",
+      "min": 3
      }
     ]
    }

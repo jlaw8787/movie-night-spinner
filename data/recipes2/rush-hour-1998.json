@@ -183,26 +183,20 @@
    "alt": {
     "veg": {
      "n": "Carter's hot cauliflower wings",
-     "prep_min": 13,
-     "cook_min": 38,
-     "make_ahead": "Make the ranch dip up to 3 days ahead in the fridge; batter and bake the cauliflower on the night, it goes soft if it waits",
+     "prep_min": 15,
+     "cook_min": 40,
+     "make_ahead": "Cut the cauliflower into florets and mix the ranch dip up to 1 day ahead and keep both chilled. Roast and toss on the night.",
      "ingredients": [
       {
        "q": 1,
        "u": "",
-       "item": "cauliflower (about 800 g), cut into florets",
+       "item": "large cauliflower",
        "aisle": "Produce"
       },
       {
-       "q": 60,
-       "u": "g",
-       "item": "plain flour",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 80,
-       "u": "ml",
-       "item": "water",
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
        "aisle": "Pantry"
       },
       {
@@ -245,7 +239,7 @@
        "q": 0.25,
        "u": "tsp",
        "item": "garlic powder",
-       "aisle": "Pantry"
+       "aisle": "Spices"
       },
       {
        "q": 1,
@@ -256,20 +250,20 @@
      ],
      "steps": [
       {
-       "text": "Whisk the flour, water and salt into a thin batter and toss the florets through it.",
+       "text": "Cut the cauliflower into large florets and toss with the olive oil and salt.",
        "min": 8
       },
       {
-       "text": "Bake on a lined tray at 220C, turning halfway, until crisp and tender.",
-       "min": 30
+       "text": "Roast on a rack at 220C for 35 minutes, turning halfway, until crisp and browned.",
+       "min": 35
       },
       {
        "text": "Mix the sour cream, mayonnaise, chives, garlic powder and lemon juice for the ranch dip.",
-       "min": 5
+       "min": 4
       },
       {
-       "text": "Melt the butter with the hot sauce, toss through the cauliflower and bake 5 minutes more.",
-       "min": 8
+       "text": "Melt the butter with the hot sauce and toss through the cauliflower.",
+       "min": 3
       }
      ],
      "af": true

@@ -281,33 +281,39 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Frat house sticky barbecue cauliflower wings",
-     "prep_min": 11,
-     "cook_min": 38,
-     "make_ahead": "Make the barbecue glaze up to 3 days ahead and keep it chilled; the battered cauliflower is best baked just before serving",
+     "n": "Frat house sticky barbecue tofu wings",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "Press and tear the tofu up to 1 day ahead and keep it covered in the fridge; make the glaze up to 3 days ahead. Bake and glaze on the night.",
      "ingredients": [
       {
-       "q": 1,
-       "u": "",
-       "item": "large cauliflower",
+       "q": 800,
+       "u": "g",
+       "item": "extra-firm tofu",
        "aisle": "Produce"
       },
       {
-       "q": 100,
-       "u": "g",
-       "item": "plain flour",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 150,
-       "u": "ml",
-       "item": "water",
+       "q": 3,
+       "u": "tbsp",
+       "item": "cornflour",
        "aisle": "Pantry"
       },
       {
        "q": 1,
        "u": "tsp",
        "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
        "aisle": "Pantry"
       },
       {
@@ -349,23 +355,27 @@
      ],
      "steps": [
       {
-       "text": "Cut the cauliflower into large florets and toss in the flour whisked with the water, paprika and salt.",
+       "text": "Wrap the tofu in a clean tea towel and press it under a heavy pan for 15 minutes, then tear it into 4 cm chunks.",
+       "min": 15
+      },
+      {
+       "text": "Toss the tofu with the cornflour, paprika, olive oil and salt until every piece is coated.",
        "min": 5
       },
       {
-       "text": "Bake on a lined tray at 220C, turning once, for 30 minutes.",
-       "min": 32
+       "text": "Spread the tofu on two lined trays and bake at 220C for 30 minutes, turning once, until crisp.",
+       "min": 30
       },
       {
-       "text": "Simmer the barbecue sauce with the honey, soy and vinegar until sticky.",
-       "min": 4
+       "text": "Simmer the barbecue sauce with the honey, soy and cider vinegar for 5 minutes until sticky.",
+       "min": 5
       },
       {
-       "text": "Toss the hot cauliflower in the glaze and return to the oven for 5 minutes.",
-       "min": 6
+       "text": "Toss the hot tofu in the glaze and return to the oven for 5 minutes to caramelise.",
+       "min": 5
       },
       {
-       "text": "Scatter with sesame seeds and spring onion.",
+       "text": "Scatter with the sesame seeds and spring onions.",
        "min": 2
       }
      ],

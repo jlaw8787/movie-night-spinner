@@ -2314,34 +2314,22 @@
  "tommy-boy-1995": {
   "Diner chicken wings": {
    "veg": {
-    "n": "Diner cauliflower wings",
-    "prep_min": 20,
-    "cook_min": 38,
-    "make_ahead": "Mash the blue cheese dip up to 2 days ahead and keep chilled; batter and bake the cauliflower just before serving",
+    "n": "Diner oyster mushroom wings",
+    "prep_min": 10,
+    "cook_min": 25,
+    "make_ahead": "Make the blue cheese dip up to 2 days ahead and keep it covered in the fridge; trim the mushrooms and cut the celery up to 1 day ahead. Fry and toss just before serving.",
     "ingredients": [
      {
-      "q": 1,
-      "u": "",
-      "item": "large cauliflower",
+      "q": 600,
+      "u": "g",
+      "item": "oyster mushrooms",
       "aisle": "Produce"
      },
      {
-      "q": 100,
-      "u": "g",
-      "item": "plain flour",
+      "q": 3,
+      "u": "tbsp",
+      "item": "vegetable oil",
       "aisle": "Pantry"
-     },
-     {
-      "q": 150,
-      "u": "ml",
-      "item": "water",
-      "aisle": "Pantry"
-     },
-     {
-      "q": 1,
-      "u": "tsp",
-      "item": "garlic powder",
-      "aisle": "Spices"
      },
      {
       "q": 1,
@@ -2382,28 +2370,20 @@
     ],
     "steps": [
      {
-      "text": "Heat the oven to 220C. Cut the cauliflower into large florets.",
-      "min": 8
+      "text": "Trim the oyster mushrooms into thick clusters.",
+      "min": 4
      },
      {
-      "text": "Whisk the flour, water, garlic powder and salt into a batter and toss the florets through.",
-      "min": 5
+      "text": "Heat the vegetable oil in a large frying pan over high heat, add the mushrooms in batches, press down with a plate and fry for 5 minutes each side until crisp. Season with the salt.",
+      "min": 16
      },
      {
-      "text": "Bake on a lined tray, turning once, until crisp and golden.",
-      "min": 30
+      "text": "Melt the butter with the hot sauce and toss the mushrooms through.",
+      "min": 3
      },
      {
-      "text": "Melt the butter with the hot sauce, toss the florets through and bake 5 minutes more.",
-      "min": 8
-     },
-     {
-      "text": "Mash the blue cheese into the sour cream for a dip.",
-      "min": 5
-     },
-     {
-      "text": "Serve with celery sticks.",
-      "min": 2
+      "text": "Mash the blue cheese into the sour cream for a dip and serve with the celery sticks.",
+      "min": 4
      }
     ]
    }

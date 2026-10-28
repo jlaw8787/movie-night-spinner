@@ -241,27 +241,27 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Sturdy Wings honey soy cauliflower wings",
-     "prep_min": 13,
-     "cook_min": 40,
-     "make_ahead": "Cut the cauliflower into florets and make the glaze up to 1 day ahead, chilled; batter, bake and toss on the night",
+     "n": "Sturdy Wings honey soy tempeh wings",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "Simmer and cut the tempeh up to 1 day ahead and keep it chilled; make the honey soy glaze up to 3 days ahead. Bake and glaze on the night.",
      "ingredients": [
       {
-       "q": 1,
-       "u": "",
-       "item": "large cauliflower",
+       "q": 500,
+       "u": "g",
+       "item": "tempeh",
        "aisle": "Produce"
       },
       {
-       "q": 100,
-       "u": "g",
-       "item": "plain flour",
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
        "aisle": "Pantry"
       },
       {
-       "q": 150,
-       "u": "ml",
-       "item": "water",
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
        "aisle": "Pantry"
       },
       {
@@ -271,21 +271,21 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
-       "item": "soy sauce, to taste",
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
        "aisle": "Pantry"
       },
       {
        "q": 2,
        "u": "",
-       "item": "garlic cloves",
+       "item": "garlic cloves, crushed",
        "aisle": "Produce"
       },
       {
        "q": 1,
        "u": "",
-       "item": "knob ginger",
+       "item": "knob ginger, grated",
        "aisle": "Produce"
       },
       {
@@ -295,40 +295,34 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
-       "item": "sesame seeds, to taste",
+       "q": 1,
+       "u": "tbsp",
+       "item": "sesame seeds",
        "aisle": "Pantry"
       },
       {
        "q": 2,
        "u": "",
-       "item": "spring onions",
+       "item": "spring onions, sliced",
        "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "salt",
-       "aisle": "Pantry"
       }
      ],
      "steps": [
       {
-       "text": "Heat the oven to 220C.",
+       "text": "Heat the oven to 220C. Cut the tempeh into thick fingers, simmer in water for 10 minutes, then drain well.",
+       "min": 12
+      },
+      {
+       "text": "Toss the tempeh with the vegetable oil and salt and bake on a rack for 25 minutes, turning once, until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Simmer the honey, soy, garlic, ginger and rice vinegar for 3 minutes until syrupy.",
        "min": 4
       },
       {
-       "text": "Cut the cauliflower into large florets, toss in the flour whisked with the water and the salt and bake on a lined tray for 30 to 35 minutes, turning once, until crisp.",
-       "min": 40
-      },
-      {
-       "text": "Simmer the honey, 3 tablespoons of soy, the crushed garlic cloves, the grated ginger and the rice vinegar for 3 minutes until syrupy.",
-       "min": 5
-      },
-      {
-       "text": "Toss the cauliflower in the glaze and scatter with sesame seeds and sliced spring onion.",
-       "min": 4
+       "text": "Toss the tempeh in the glaze and scatter with the sesame seeds and spring onions.",
+       "min": 3
       }
      ],
      "af": true

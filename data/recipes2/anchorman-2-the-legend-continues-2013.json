@@ -75,15 +75,15 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Cauliflower of the Cave wings",
-     "prep_min": 11,
+     "n": "King oyster of the Cave wings",
+     "prep_min": 20,
      "cook_min": 25,
-     "make_ahead": "Make the glaze up to 3 days ahead in the fridge; batter and fry the cauliflower just before serving",
+     "make_ahead": "Shred the king oyster mushrooms up to 1 day ahead and keep them covered in the fridge; make the honey sriracha glaze up to 3 days ahead. Batter and fry on the night.",
      "ingredients": [
       {
-       "q": 1,
-       "u": "",
-       "item": "large cauliflower",
+       "q": 500,
+       "u": "g",
+       "item": "king oyster mushrooms",
        "aisle": "Produce"
       },
       {
@@ -94,20 +94,32 @@
       },
       {
        "q": 1,
-       "u": "",
-       "item": "jar smoked paprika",
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "cold water",
        "aisle": "Pantry"
       },
       {
        "q": 1,
-       "u": "",
-       "item": "jar garlic powder",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 200,
-       "u": "ml",
-       "item": "water",
+       "u": "l",
+       "item": "vegetable oil",
        "aisle": "Pantry"
       },
       {
@@ -127,26 +139,28 @@
        "u": "tbsp",
        "item": "soy sauce",
        "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "l",
-       "item": "vegetable oil",
-       "aisle": "Pantry"
       }
      ],
      "steps": [
       {
-       "text": "Cut the cauliflower into large florets and whisk the flour with 2 teaspoons each of the paprika and garlic powder, salt and the water into a thick batter.",
+       "text": "Halve the king oyster mushrooms lengthways and shred them with a fork into thick strips.",
        "min": 8
       },
       {
-       "text": "Dip the florets in the batter and fry in the vegetable oil at 175C for 6 to 8 minutes until golden and tender.",
-       "min": 16
+       "text": "Whisk the flour, smoked paprika, garlic powder and salt with the cold water into a thick batter.",
+       "min": 3
       },
       {
-       "text": "Simmer the honey, the sriracha and the soy until glossy and toss the cauliflower through.",
-       "min": 12
+       "text": "Heat the vegetable oil to 175C in a deep heavy pot.",
+       "min": 10
+      },
+      {
+       "text": "Dip the mushroom strips in the batter and fry in batches for 5 minutes until golden and crisp, then drain.",
+       "min": 15
+      },
+      {
+       "text": "Simmer the honey, sriracha and soy for 4 minutes until glossy and toss the fried mushrooms through.",
+       "min": 5
       }
      ],
      "af": true

@@ -288,9 +288,9 @@
    "alt": {
     "veg": {
      "n": "Watermelon toss buffalo cauliflower wings",
-     "prep_min": 16,
-     "cook_min": 35,
-     "make_ahead": "Cut the cauliflower and mash the dip up to 1 day ahead in the fridge; batter and bake on the night",
+     "prep_min": 15,
+     "cook_min": 40,
+     "make_ahead": "Cut the cauliflower into florets and make the blue cheese dip up to 1 day ahead and keep both chilled. Coat, bake and toss on the night.",
      "ingredients": [
       {
        "q": 1,
@@ -299,15 +299,15 @@
        "aisle": "Produce"
       },
       {
-       "q": 100,
-       "u": "g",
-       "item": "plain flour",
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
        "aisle": "Pantry"
       },
       {
-       "q": 150,
-       "u": "ml",
-       "item": "water",
+       "q": 2,
+       "u": "tsp",
+       "item": "baking powder",
        "aisle": "Pantry"
       },
       {
@@ -361,12 +361,12 @@
      ],
      "steps": [
       {
-       "text": "Cut the cauliflower into large florets and toss in the flour whisked with the water and salt.",
-       "min": 7
+       "text": "Cut the cauliflower into large florets and toss with the olive oil, baking powder and salt.",
+       "min": 8
       },
       {
-       "text": "Bake on a lined tray at 220C, turning once, for 30 to 35 minutes until crisp.",
-       "min": 37
+       "text": "Bake on a rack at 220C for 35 minutes, turning once, until crisp.",
+       "min": 35
       },
       {
        "text": "Mash the blue cheese with the sour cream, mayonnaise and a squeeze of lemon for the dip.",
@@ -374,7 +374,7 @@
       },
       {
        "text": "Melt the butter with the hot sauce and toss the cauliflower through it. Serve with the dip and celery.",
-       "min": 3
+       "min": 4
       }
      ],
      "af": true

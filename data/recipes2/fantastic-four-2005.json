@@ -79,27 +79,27 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Human Torch flaming cauliflower wings",
+     "n": "Human Torch flaming haloumi bites",
      "prep_min": 10,
-     "cook_min": 35,
-     "make_ahead": "Mix the herbed sour cream and cut the cauliflower up to 1 day ahead; roast and sauce the florets just before serving",
+     "cook_min": 20,
+     "make_ahead": "Cut and dust the haloumi up to 1 day ahead and keep it covered in the fridge; mix the herb sour cream and cut the celery the same day. Fry and toss just before serving.",
      "ingredients": [
       {
-       "q": 1,
-       "u": "",
-       "item": "large cauliflower",
-       "aisle": "Produce"
+       "q": 500,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
       },
       {
        "q": 2,
        "u": "tbsp",
        "item": "olive oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "salt",
        "aisle": "Pantry"
       },
       {
@@ -141,20 +141,20 @@
      ],
      "steps": [
       {
-       "text": "Cut the cauliflower into large florets and toss with the oil and salt.",
+       "text": "Cut the haloumi into thick fingers, pat dry and dust with the cornflour.",
        "min": 5
       },
       {
-       "text": "Bake at 220C until crisp and browned at the edges.",
-       "min": 35
+       "text": "Pan-fry in the olive oil over medium-high heat for 3 minutes each side until deep golden.",
+       "min": 8
       },
       {
-       "text": "Melt the butter with the hot sauce and honey and toss the cauliflower through.",
-       "min": 5
+       "text": "Melt the butter with the hot sauce and honey and toss the haloumi through.",
+       "min": 3
       },
       {
-       "text": "Serve with the sour cream mixed with the herbs, and celery sticks to put the fire out.",
-       "min": 0
+       "text": "Stir the chopped herbs through the sour cream and serve with the celery sticks to put the fire out.",
+       "min": 4
       }
      ],
      "af": true

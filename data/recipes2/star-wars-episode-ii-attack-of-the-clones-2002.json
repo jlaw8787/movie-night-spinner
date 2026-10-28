@@ -114,15 +114,15 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Geonosis arena cauliflower wings",
+     "n": "Geonosis arena chilli broccoli wings",
      "prep_min": 10,
-     "cook_min": 30,
-     "make_ahead": "Cauliflower fresh, sauce can be made ahead",
+     "cook_min": 25,
+     "make_ahead": "Cut the broccoli into florets and slice the spring onions up to 1 day ahead and keep them chilled. Roast and glaze just before serving.",
      "ingredients": [
       {
-       "q": 1,
+       "q": 2,
        "u": "",
-       "item": "large cauliflower, cut into florets",
+       "item": "large heads broccoli",
        "aisle": "Produce"
       },
       {
@@ -132,7 +132,7 @@
        "aisle": "Pantry"
       },
       {
-       "q": 0.5,
+       "q": 1,
        "u": "tsp",
        "item": "salt",
        "aisle": "Pantry"
@@ -170,15 +170,19 @@
      ],
      "steps": [
       {
-       "text": "Toss the cauliflower with the oil and salt and roast at 220C until browned at the edges.",
-       "min": 30
+       "text": "Cut the broccoli into large florets with a little stem on each and toss with the olive oil and salt.",
+       "min": 6
       },
       {
-       "text": "Melt the chilli sauce, honey and butter, toss the cauliflower through and roast 5 minutes more.",
-       "min": 8
+       "text": "Roast at 220C for 18 minutes, turning once, until charred at the tips.",
+       "min": 18
       },
       {
-       "text": "Scatter with sesame seeds and spring onion.",
+       "text": "Melt the chilli sauce, honey and butter and toss the broccoli through.",
+       "min": 3
+      },
+      {
+       "text": "Scatter with the sesame seeds and spring onions.",
        "min": 2
       }
      ],
