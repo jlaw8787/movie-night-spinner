@@ -81,7 +81,7 @@ body::after{content:none}
 .wrap{max-width:1180px;margin:0 auto;padding:18px 16px 56px}
 
 
-/* ---------- video shop: the library as a 90s rental store ---------- */
+/* ---------- video store: the library as a 90s rental store ---------- */
 :root{--shop-carpet:#14204f;--shop-shelf:#2b2f3a;--shop-sign:#ffd23f;--shop-blue:#1d3aa8;--f-marker:"Permanent Marker","Comic Sans MS",cursive}
 .views{display:flex;gap:8px;justify-content:center;margin:14px 0 18px;flex-wrap:wrap}
 .views button{font:400 15px var(--f-board);letter-spacing:.04em;color:var(--screen);background:rgba(255,255,255,.04);border:2px solid var(--line);border-radius:999px;padding:9px 18px;cursor:pointer}
@@ -1291,7 +1291,7 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 .shop.crave{overflow-x:clip}
 @media (pointer:coarse){body::before{animation:none;inset:0}}
 
-/* ---------- video shop counter controls: 90s rental store, not web form ---------- */
+/* ---------- video store counter controls: 90s rental store, not web form ---------- */
 #viewShop .shop-tools{gap:10px}
 #viewShop .shop-tools input[type=search]{font:600 16px var(--f-body);color:#14204f;background:#fbf7ea;border:3px solid #14204f;border-radius:6px;padding:10px 12px 10px 38px;
   box-shadow:0 0 0 2px #ffd23f,0 4px 0 2px #b58f12;
@@ -1474,7 +1474,7 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
   <header class="top">
     <nav class="views" role="tablist" aria-label="View">
       <button type="button" role="tab" id="viewWheelBtn" aria-selected="true" aria-controls="viewWheel">Spin</button>
-      <button type="button" role="tab" id="viewShopBtn" aria-selected="false" aria-controls="viewShop">Video shop</button>
+      <button type="button" role="tab" id="viewShopBtn" aria-selected="false" aria-controls="viewShop">Video store</button>
       <button type="button" role="tab" id="viewCraveBtn" aria-selected="false" aria-controls="viewCrave">Candy bar</button>
     </nav>
   </header>
@@ -1484,7 +1484,7 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
   <section class="week" id="weekPanel" aria-label="This week's film" hidden></section>
   <section class="week motw" id="motw" aria-label="Menu of the week" hidden></section>
 
-  <section class="shop" id="viewShop" aria-label="Video shop" hidden>
+  <section class="shop" id="viewShop" aria-label="Video store" hidden>
     <div class="sv-front" id="svFront"><img src="assets/hero/shopfront-1000.webp" srcset="assets/hero/shopfront-1000.webp 1000w, assets/hero/shopfront-1400.webp 1400w, assets/hero/shopfront.webp 1774w" sizes="(max-width:640px) 460px, 1240px" alt="Spinner Video shopfront at night" loading="lazy"><div class="sv-sign fit" style="left:6.20%;top:5.86%;width:87.09%;height:11.72%"><span class="fit-t">Spinner Video</span><small>Open 7 days till late</small></div></div>
     <div class="shop-head">
       <h2 class="shop-sign">Spinner Video<small>Every film on the wheel, face-out on the shelves. Tap a tape to read the back.</small></h2>
@@ -1615,7 +1615,7 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 <script src="providers.js?v=1403fceb" defer></script>
 <script src="films.js?v=74deedef" defer></script>
 <script src="formats-core.js?v=a8dfd3e7" defer></script>
-<script src="app.js?v=801fe1dd" defer></script>
+<script src="app.js?v=5ca7823f" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

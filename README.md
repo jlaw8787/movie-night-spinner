@@ -50,4 +50,4 @@ The dependency-free checks exercise the watched-state code from `index.html`: pe
 
 Every film shows its official poster, loaded live from TMDB (`tmdb-posters.js` holds the poster paths only, never the API key), framed in a lobby-card menu in the film's own colours and fonts. Every film also has an exact menu for four people with quantified methods and one shopping list: 124 finished menus in `movie-menus.js`, and the rest in `recipe-menus.js`, generated from `poster-recipes.json`. Shuffle the menu is hidden wherever an exact menu exists. If a poster can't load, the 124 finished films fall back to their old poster art and every other film to its themed menu card.
 
-The **Video shop** tab shows every film face-out on rental shelves by genre, with New releases and Staff picks walls. Tap a tape to read the back of the box and rent it, which loads that film's menu.
+The **Video store** tab shows every film face-out on rental shelves by genre, with New releases and Staff picks walls. Tap a tape to read the back of the box and rent it, which loads that film's menu.
