@@ -319,7 +319,7 @@
    "course": "w",
    "prep_min": 15,
    "cook_min": 245,
-   "make_ahead": "Up to 1 week, frozen",
+   "make_ahead": "Freeze up to 1 week ahead, scraping every hour at first; scoop to serve",
    "ingredients": [
     {
      "q": 150,
@@ -405,8 +405,8 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "crushed ice",
      "aisle": "Frozen"
     }
@@ -483,8 +483,8 @@
        "aisle": "Produce"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "cup",
        "item": "crushed ice",
        "aisle": "Frozen"
       }

@@ -124,7 +124,7 @@
      "min": 10
     },
     {
-     "text": "Boil the sugar, butter and golden syrup, then stir in the bicarb, chilli, lime zest and salt.",
+     "text": "Boil the sugar, butter and golden syrup, then stir in the bicarbonate of soda, chilli, lime zest and salt.",
      "min": 7
     },
     {
@@ -231,7 +231,7 @@
      "min": 15
     },
     {
-     "text": "Fry at 180C until crisp.",
+     "text": "Fry in the vegetable oil at 180C until crisp.",
      "min": 15
     },
     {
@@ -363,7 +363,7 @@
     {
      "q": 125,
      "u": "g",
-     "item": "butter, softened",
+     "item": "butter, softened, for the cakes",
      "aisle": "Dairy"
     },
     {
@@ -403,8 +403,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 1,
+     "u": "tsp",
      "item": "pastel food colouring",
      "aisle": "Pantry"
     },
@@ -421,7 +421,7 @@
      "min": 3
     },
     {
-     "text": "Beat the butter and sugar, add the eggs, then fold in the flour and milk.",
+     "text": "Beat the cake butter and sugar, add the eggs, then fold in the flour and milk.",
      "min": 12
     },
     {
@@ -429,7 +429,7 @@
      "min": 18
     },
     {
-     "text": "Cool, beat the icing butter and icing sugar, split and colour.",
+     "text": "Cool, beat the icing butter and icing sugar, split and colour with the pastel food colouring.",
      "min": 12
     },
     {
@@ -445,7 +445,7 @@
    "course": "d",
    "prep_min": 10,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Juice the limes up to 1 day ahead and keep chilled; salt the rims and shake to order",
    "ingredients": [
     {
      "q": 180,
@@ -472,8 +472,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 4,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }
@@ -499,7 +499,7 @@
      "n": "Sister Margaret's margarita (alcohol-free)",
      "prep_min": 10,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Juice the limes and oranges up to 1 day ahead, chilled; salt the rims, shake to order and add the soda water last",
      "ingredients": [
       {
        "q": 100,
@@ -532,8 +532,8 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 4,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       }

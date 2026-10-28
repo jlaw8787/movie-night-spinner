@@ -122,7 +122,7 @@
      "min": 13
     },
     {
-     "text": "Fry at 170C in batches until crisp.",
+     "text": "Fry in the vegetable oil at 170C in batches until crisp.",
      "min": 14
     },
     {
@@ -329,8 +329,8 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }
@@ -383,8 +383,8 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       }

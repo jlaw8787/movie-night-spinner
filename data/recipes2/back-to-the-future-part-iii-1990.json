@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 4,
    "cook_min": 11,
-   "make_ahead": "",
+   "make_ahead": "Boil the corn up to 1 day ahead and keep chilled; char and butter just before serving",
    "ingredients": [
     {
      "q": 4,
@@ -163,7 +163,7 @@
    ],
    "steps": [
     {
-     "text": "Heat the oven to 150C. Season the beef and brown in batches in a heavy ovenproof pot.",
+     "text": "Heat the oven to 150C. Season the beef and brown in the oil in batches in a heavy ovenproof pot.",
      "min": 20
     },
     {
@@ -249,7 +249,7 @@
      ],
      "steps": [
       {
-       "text": "Heat the oven to 150C. Season the beef and brown in batches in a heavy ovenproof pot.",
+       "text": "Heat the oven to 150C. Season the beef and brown in the oil in batches in a heavy ovenproof pot.",
        "min": 20
       },
       {
@@ -499,7 +499,7 @@
     {
      "q": 120,
      "u": "g",
-     "item": "caster sugar",
+     "item": "caster sugar, for the filling",
      "aisle": "Pantry"
     },
     {
@@ -541,7 +541,7 @@
    ],
    "steps": [
     {
-     "text": "Heat the oven to 190C. Peel, core and slice the apples and toss with the sugar, cinnamon, nutmeg and flour.",
+     "text": "Heat the oven to 190C. Peel, core and slice the apples and toss with the filling sugar, cinnamon, nutmeg and flour.",
      "min": 15
     },
     {
@@ -553,7 +553,7 @@
      "min": 7
     },
     {
-     "text": "Brush with beaten egg and sprinkle with sugar.",
+     "text": "Brush with beaten egg and sprinkle with the remaining caster sugar.",
      "min": 2
     },
     {
@@ -602,8 +602,8 @@
      "aisle": "Drinks"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }

@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 8,
    "cook_min": 20,
-   "make_ahead": "",
+   "make_ahead": "Cook the coney sauce up to 3 days ahead in the fridge; reheat it, grill the frankfurts and fill the buns to serve",
    "ingredients": [
     {
      "q": 300,
@@ -80,7 +80,7 @@
      "n": "Flint coney dogs (vegetarian)",
      "prep_min": 8,
      "cook_min": 20,
-     "make_ahead": "",
+     "make_ahead": "Cook the plant-based coney sauce up to 3 days ahead in the fridge; reheat it, grill the frankfurts and fill the buns to serve",
      "ingredients": [
       {
        "q": 300,
@@ -156,7 +156,7 @@
    "course": "s",
    "prep_min": 25,
    "cook_min": 10,
-   "make_ahead": "",
+   "make_ahead": "Make the mango sauce up to 2 days ahead in the fridge and crumb the prawns up to 4 hours ahead; fry to serve",
    "ingredients": [
     {
      "q": 600,
@@ -248,7 +248,7 @@
      "n": "Flint Tropics coconut cauliflower bites",
      "prep_min": 23,
      "cook_min": 12,
-     "make_ahead": "",
+     "make_ahead": "Make the mango sauce up to 2 days ahead in the fridge and crumb the cauliflower up to 4 hours ahead; fry to serve",
      "ingredients": [
       {
        "q": 1,
@@ -342,7 +342,7 @@
    "course": "m",
    "prep_min": 15,
    "cook_min": 130,
-   "make_ahead": "",
+   "make_ahead": "Rub and wrap the ribs up to 1 day ahead in the fridge; bake low and slow, then glaze and grill to serve",
    "ingredients": [
     {
      "q": 1.5,
@@ -397,8 +397,8 @@
      "min": 5
     },
     {
-     "text": "Serve with the buttered corn cobs and the coleslaw mixed with mayonnaise.",
-     "min": 5
+     "text": "Boil the corn cobs and toss in the butter. Serve with the ribs and the coleslaw mixed with mayonnaise.",
+     "min": 10
     }
    ],
    "veg": false,
@@ -408,7 +408,7 @@
      "n": "Jackie Moon's barbecue mushroom ribs",
      "prep_min": 15,
      "cook_min": 43,
-     "make_ahead": "",
+     "make_ahead": "Rub the mushrooms with the oil and spices up to 4 hours ahead in the fridge; roast, glaze and grill to serve",
      "ingredients": [
       {
        "q": 800,
@@ -490,7 +490,7 @@
    "course": "w",
    "prep_min": 40,
    "cook_min": 55,
-   "make_ahead": "",
+   "make_ahead": "Bake and cool the cakes up to 1 day ahead, airtight; whip the mascarpone cream and fill and top on the day",
    "ingredients": [
     {
      "q": 200,
@@ -581,7 +581,7 @@
    "course": "d",
    "prep_min": 5,
    "cook_min": 30,
-   "make_ahead": "",
+   "make_ahead": "Pull the espresso and cool it up to 1 day ahead in the fridge; chill the coupes and shake with ice to order",
    "ingredients": [
     {
      "q": 180,
@@ -614,9 +614,9 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
-     "u": "",
-     "item": "ice, as needed",
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
      "aisle": "Frozen"
     }
    ],
@@ -649,11 +649,11 @@
      "n": "Coffee Black's espresso martini (alcohol-free)",
      "prep_min": 5,
      "cook_min": 25,
-     "make_ahead": "",
+     "make_ahead": "Pull the espresso and cool it up to 1 day ahead in the fridge; chill the coupes and shake with the cold brew and ice to order",
      "ingredients": [
       {
-       "q": null,
-       "u": "",
+       "q": 70,
+       "u": "g",
        "item": "espresso coffee beans, enough for 4 double shots",
        "aisle": "Pantry"
       },
@@ -682,9 +682,9 @@
        "aisle": "Produce"
       },
       {
-       "q": null,
-       "u": "",
-       "item": "ice, as needed",
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
        "aisle": "Frozen"
       }
      ],

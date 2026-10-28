@@ -63,8 +63,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "tbsp",
      "item": "black vinegar and chilli oil, to dip",
      "aisle": "Pantry"
     }
@@ -155,8 +155,8 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "tbsp",
        "item": "black vinegar and chilli oil, to dip",
        "aisle": "Pantry"
       }
@@ -251,8 +251,8 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "tbsp",
        "item": "black vinegar and chilli oil, to dip",
        "aisle": "Pantry"
       }
@@ -352,8 +352,8 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "tbsp",
        "item": "black vinegar and chilli oil, to dip",
        "aisle": "Pantry"
       }
@@ -392,7 +392,7 @@
    "course": "s",
    "prep_min": 12,
    "cook_min": 8,
-   "make_ahead": "",
+   "make_ahead": "Best fried just before serving; score and cut the squid and slice the garlic, chillies and spring onion up to 1 day ahead, keep chilled",
    "ingredients": [
     {
      "q": 500,
@@ -459,11 +459,11 @@
      "min": 4
     },
     {
-     "text": "Fry at 190C in batches until crisp.",
+     "text": "Heat the vegetable oil to 190C and fry in batches until crisp.",
      "min": 4
     },
     {
-     "text": "Wok-toss with fried garlic, chilli and spring onion.",
+     "text": "Wok-toss with fried garlic, red chillies and spring onion.",
      "min": 4
     }
    ],
@@ -474,7 +474,7 @@
      "n": "Salt and pepper tofu",
      "prep_min": 12,
      "cook_min": 10,
-     "make_ahead": "",
+     "make_ahead": "Best fried just before serving; press and cut the tofu and slice the garlic, chillies and spring onion up to 1 day ahead, keep chilled",
      "ingredients": [
       {
        "q": 500,
@@ -541,11 +541,11 @@
        "min": 4
       },
       {
-       "text": "Fry at 190C in batches until crisp.",
+       "text": "Heat the vegetable oil to 190C and fry in batches until crisp.",
        "min": 6
       },
       {
-       "text": "Wok-toss with fried garlic, chilli and spring onion.",
+       "text": "Wok-toss with fried garlic, red chillies and spring onion.",
        "min": 4
       }
      ],
@@ -558,7 +558,7 @@
    "course": "m",
    "prep_min": 10,
    "cook_min": 15,
-   "make_ahead": "",
+   "make_ahead": "Fry the crisp pork up to 2 days ahead, keep chilled and reheat in the wok; mix the sauce in the bowls and cook the noodles on the night",
    "ingredients": [
     {
      "q": 300,
@@ -650,7 +650,7 @@
      "n": "Wang Chi's dan dan noodles with crisp mushroom",
      "prep_min": 10,
      "cook_min": 23,
-     "make_ahead": "",
+     "make_ahead": "Fry the crisp mushroom and tofu up to 2 days ahead, keep chilled and reheat in the wok; mix the sauce in the bowls and cook the noodles on the night",
      "ingredients": [
       {
        "q": 400,
@@ -971,7 +971,7 @@
    "course": "d",
    "prep_min": 10,
    "cook_min": 5,
-   "make_ahead": "",
+   "make_ahead": "Make the ginger syrup up to 1 week ahead and keep chilled; shake to order, adding the egg white just before shaking",
    "ingredients": [
     {
      "q": 50,
@@ -1043,7 +1043,7 @@
      "n": "Egg Shen's plum wine sour (alcohol-free)",
      "prep_min": 15,
      "cook_min": 5,
-     "make_ahead": "",
+     "make_ahead": "Make the ginger syrup up to 1 week ahead and the plum juice up to 1 day ahead, both chilled; shake to order",
      "ingredients": [
       {
        "q": 50,

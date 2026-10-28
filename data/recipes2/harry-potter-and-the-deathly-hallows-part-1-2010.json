@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 33,
    "cook_min": 20,
-   "make_ahead": "",
+   "make_ahead": "Bake the gougeres up to 1 day ahead and re-crisp in a hot oven; top the blinis on the night",
    "ingredients": [
     {
      "q": 16,
@@ -100,7 +100,7 @@
      "n": "Burrow wedding canapés (vegetarian)",
      "prep_min": 35,
      "cook_min": 20,
-     "make_ahead": "",
+     "make_ahead": "Bake the gougeres up to 1 day ahead and re-crisp in a hot oven; slice the beetroot up to 1 day ahead and top the blinis on the night",
      "ingredients": [
       {
        "q": 16,
@@ -202,7 +202,7 @@
    "course": "s",
    "prep_min": 18,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Mix the crab filling up to 1 day ahead, covered in the fridge; toast the sourdough and pile on just before serving",
    "ingredients": [
     {
      "q": 250,
@@ -266,7 +266,7 @@
      "n": "Shell Cottage seaside palm heart toasts",
      "prep_min": 16,
      "cook_min": 8,
-     "make_ahead": "",
+     "make_ahead": "Mix the palm heart filling up to 1 day ahead, covered in the fridge; toast the sourdough and pile on just before serving",
      "ingredients": [
       {
        "q": 2,
@@ -342,7 +342,7 @@
    "course": "m",
    "prep_min": 20,
    "cook_min": 35,
-   "make_ahead": "",
+   "make_ahead": "Stuff and wrap the trout up to 1 day ahead and keep it in the fridge; cook the trout and boil the potatoes on the night",
    "ingredients": [
     {
      "q": 4,
@@ -365,7 +365,7 @@
     {
      "q": 60,
      "u": "g",
-     "item": "butter",
+     "item": "butter, for the trout",
      "aisle": "Dairy"
     },
     {
@@ -389,13 +389,13 @@
     {
      "q": null,
      "u": "",
-     "item": "salt and pepper",
+     "item": "salt and pepper, to taste",
      "aisle": "Spices"
     }
    ],
    "steps": [
     {
-     "text": "Stuff the trout with lemon slices, dill and butter and season.",
+     "text": "Stuff the trout with lemon slices, dill and the butter for the trout, then season with salt and pepper.",
      "min": 8
     },
     {
@@ -411,7 +411,7 @@
      "min": 20
     },
     {
-     "text": "Toss the potatoes in butter and parsley.",
+     "text": "Toss the potatoes in the butter for the potatoes and the parsley.",
      "min": 3
     },
     {
@@ -426,7 +426,7 @@
      "n": "Foil baked stuffed eggplant with potatoes",
      "prep_min": 20,
      "cook_min": 54,
-     "make_ahead": "",
+     "make_ahead": "Stuff and wrap the eggplants up to 1 day ahead and keep them in the fridge; cook the eggplants and boil the potatoes on the night",
      "ingredients": [
       {
        "q": 4,
@@ -449,7 +449,7 @@
       {
        "q": 60,
        "u": "g",
-       "item": "butter",
+       "item": "butter, for the eggplant",
        "aisle": "Dairy"
       },
       {
@@ -485,13 +485,13 @@
       {
        "q": null,
        "u": "",
-       "item": "salt and pepper",
+       "item": "salt and pepper, to taste",
        "aisle": "Pantry"
       }
      ],
      "steps": [
       {
-       "text": "Cut a deep slit along each eggplant and stuff with lemon slices, dill, butter and crumbled fetta, then season.",
+       "text": "Cut a deep slit along each eggplant and stuff with lemon slices, dill, the butter for the eggplant and crumbled fetta, then season with salt and pepper.",
        "min": 10
       },
       {
@@ -507,7 +507,7 @@
        "min": 20
       },
       {
-       "text": "Toss the potatoes in the butter and parsley.",
+       "text": "Toss the potatoes in the butter for the potatoes and the parsley.",
        "min": 3
       },
       {
@@ -615,7 +615,7 @@
    "course": "d",
    "prep_min": 5,
    "cook_min": 8,
-   "make_ahead": "",
+   "make_ahead": "Chop the chocolate and mix it with the cinnamon up to 1 week ahead in a jar; heat the milk and whisk on the night",
    "ingredients": [
     {
      "q": 1,

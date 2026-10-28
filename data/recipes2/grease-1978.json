@@ -140,7 +140,7 @@
    "course": "m",
    "prep_min": 20,
    "cook_min": 15,
-   "make_ahead": "",
+   "make_ahead": "Dice the onion and portion the mince into balls up to 1 day ahead, covered in the fridge; smash and stack on the night",
    "ingredients": [
     {
      "q": 800,
@@ -216,7 +216,7 @@
      "n": "Frosty Palace burger (vegetarian)",
      "prep_min": 20,
      "cook_min": 8,
-     "make_ahead": "",
+     "make_ahead": "Dice the onion and portion the plant-based mince into balls up to 1 day ahead, covered in the fridge; smash and stack on the night",
      "ingredients": [
       {
        "q": 800,
@@ -300,7 +300,7 @@
    "course": "w",
    "prep_min": 20,
    "cook_min": 5,
-   "make_ahead": "",
+   "make_ahead": "Make both sauces up to 2 days ahead and keep them in the fridge, warming the chocolate gently; whip the cream and scoop on the night",
    "ingredients": [
     {
      "q": 250,
@@ -323,7 +323,7 @@
     {
      "q": 100,
      "u": "ml",
-     "item": "thickened cream",
+     "item": "thickened cream, for the chocolate sauce",
      "aisle": "Dairy"
     },
     {
@@ -335,7 +335,7 @@
     {
      "q": 200,
      "u": "ml",
-     "item": "thickened cream, whipped",
+     "item": "thickened cream, whipped, for the topping",
      "aisle": "Dairy"
     },
     {
@@ -351,11 +351,11 @@
      "min": 5
     },
     {
-     "text": "Melt the chocolate with the cream",
+     "text": "Melt the chocolate with the thickened cream for the sauce",
      "min": 5
     },
     {
-     "text": "Whip the extra cream",
+     "text": "Whip the thickened cream for the topping",
      "min": 5
     },
     {
@@ -375,7 +375,7 @@
    "course": "d",
    "prep_min": 10,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Best built to order or the ice cream melts and the cola goes flat; chill the cola and glasses the day before",
    "ingredients": [
     {
      "q": 60,

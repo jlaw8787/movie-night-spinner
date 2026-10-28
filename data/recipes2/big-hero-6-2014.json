@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 5,
    "cook_min": 50,
-   "make_ahead": "",
+   "make_ahead": "Toss the wings with salt and keep uncovered in the fridge up to 1 day ahead for crisper skin; make the glaze up to 3 days ahead; bake and toss on the night",
    "ingredients": [
     {
      "q": 1,
@@ -73,21 +73,21 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Aunt Cass's hot cauliflower wings",
-     "prep_min": 10,
+     "n": "Aunt Cass's hot gochujang tempeh wings",
+     "prep_min": 20,
      "cook_min": 35,
-     "make_ahead": "",
+     "make_ahead": "Simmer and cut the tempeh up to 1 day ahead and keep it chilled; make the gochujang glaze up to 3 days ahead. Bake and glaze on the night.",
      "ingredients": [
       {
-       "q": 1,
-       "u": "",
-       "item": "large cauliflower",
+       "q": 500,
+       "u": "g",
+       "item": "tempeh",
        "aisle": "Produce"
       },
       {
        "q": 2,
        "u": "tbsp",
-       "item": "olive oil",
+       "item": "vegetable oil",
        "aisle": "Pantry"
       },
       {
@@ -129,20 +129,24 @@
      ],
      "steps": [
       {
-       "text": "Cut the cauliflower into large florets and toss with the oil and salt.",
-       "min": 5
+       "text": "Cut the tempeh into thick fingers and simmer in a pot of water for 10 minutes to soften, then drain well.",
+       "min": 12
       },
       {
-       "text": "Bake at 220C until crisp and browned at the edges.",
-       "min": 35
+       "text": "Toss the tempeh with the vegetable oil and salt.",
+       "min": 3
       },
       {
-       "text": "Warm the gochujang with the honey, garlic and soy until glossy.",
-       "min": 5
+       "text": "Bake at 220C for 25 minutes, turning once, until crisp and browned.",
+       "min": 25
       },
       {
-       "text": "Toss the cauliflower through and scatter with sesame seeds.",
-       "min": 0
+       "text": "Warm the gochujang with the honey, garlic and soy for 3 minutes until glossy.",
+       "min": 4
+      },
+      {
+       "text": "Toss the tempeh through the glaze and scatter with the sesame seeds.",
+       "min": 3
       }
      ],
      "af": true

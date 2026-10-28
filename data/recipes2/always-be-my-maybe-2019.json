@@ -221,7 +221,7 @@
    ],
    "steps": [
     {
-     "text": "Fry the wings at 160C, then rest.",
+     "text": "Fry the wings in the vegetable oil at 160C, then rest.",
      "min": 20
     },
     {
@@ -307,7 +307,7 @@
        "min": 8
       },
       {
-       "text": "Dip the florets in the batter and fry at 170C in batches, then rest.",
+       "text": "Dip the florets in the batter and fry in the vegetable oil at 170C in batches, then rest.",
        "min": 15
       },
       {
@@ -389,7 +389,7 @@
      "min": 8
     },
     {
-     "text": "Fry the pork until browned, then add the kimchi, garlic and gochugaru.",
+     "text": "Fry the pork in the vegetable oil until browned, then add the kimchi, garlic and gochugaru.",
      "min": 7
     },
     {
@@ -572,8 +572,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice, if serving cold",
      "aisle": "Frozen"
     }

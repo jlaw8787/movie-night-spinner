@@ -59,7 +59,7 @@
     {
      "q": null,
      "u": "",
-     "item": "salt",
+     "item": "salt, to taste",
      "aisle": "Spices"
     }
    ],
@@ -145,7 +145,7 @@
       {
        "q": null,
        "u": "",
-       "item": "salt",
+       "item": "salt, to taste",
        "aisle": "Spices"
       }
      ],
@@ -215,7 +215,7 @@
     {
      "q": null,
      "u": "",
-     "item": "pepper",
+     "item": "pepper, to taste",
      "aisle": "Spices"
     },
     {
@@ -331,7 +331,7 @@
       {
        "q": null,
        "u": "",
-       "item": "pepper",
+       "item": "pepper, to taste",
        "aisle": "Spices"
       },
       {
@@ -398,7 +398,7 @@
    "course": "m",
    "prep_min": 35,
    "cook_min": 70,
-   "make_ahead": "",
+   "make_ahead": "Make the batter up to 1 day ahead and keep covered in the fridge; peel the potatoes up to 1 day ahead and keep in cold water. Roast the beef, potatoes and puddings on the day",
    "ingredients": [
     {
      "q": 1.5,
@@ -415,7 +415,7 @@
     {
      "q": 150,
      "u": "g",
-     "item": "plain flour",
+     "item": "plain flour, for the batter",
      "aisle": "Pantry"
     },
     {
@@ -467,7 +467,7 @@
      "min": 5
     },
     {
-     "text": "Whisk the flour, eggs and milk into a batter and rest.",
+     "text": "Whisk the batter flour, eggs and milk into a batter and rest.",
      "min": 5
     },
     {
@@ -506,7 +506,7 @@
      "n": "Cherry Tree Lane nut roast",
      "prep_min": 35,
      "cook_min": 70,
-     "make_ahead": "",
+     "make_ahead": "Press the nut roast mix into the tin up to 1 day ahead and keep covered in the fridge; make the batter up to 1 day ahead. Roast the nut roast, potatoes and puddings on the night",
      "ingredients": [
       {
        "q": 1,
@@ -559,7 +559,7 @@
       {
        "q": 150,
        "u": "g",
-       "item": "plain flour",
+       "item": "plain flour, for the batter",
        "aisle": "Pantry"
       },
       {
@@ -627,7 +627,7 @@
        "min": 10
       },
       {
-       "text": "Whisk the flour, the other 3 eggs and the milk into a batter and rest.",
+       "text": "Whisk the batter flour, the other 3 eggs and the milk into a batter and rest.",
        "min": 5
       },
       {

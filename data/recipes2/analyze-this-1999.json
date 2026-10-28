@@ -65,7 +65,7 @@
      "min": 4
     },
     {
-     "text": "Fry at 190C in batches for 90 seconds each.",
+     "text": "Fry in the neutral oil at 190C in batches for 90 seconds each.",
      "min": 8
     },
     {
@@ -280,7 +280,7 @@
      "min": 10
     },
     {
-     "text": "Shallow-fry 2 minutes a side until golden.",
+     "text": "Shallow-fry in the neutral oil, 2 minutes a side, until golden.",
      "min": 8
     },
     {
@@ -308,8 +308,8 @@
        "aisle": "Produce"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 1,
+       "u": "tsp",
        "item": "salt",
        "aisle": "Pantry"
       },
@@ -444,7 +444,7 @@
    "course": "d",
    "prep_min": 3,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Batch the gin, aperitif and vermouth in a bottle up to 1 week ahead; stir over ice and strain to serve",
    "ingredients": [
     {
      "q": 120,
@@ -500,7 +500,7 @@
      "n": "Dr. Sobel's calming Negroni (alcohol-free)",
      "prep_min": 5,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Mix the non-alcoholic gin, aperitif, grape juice and balsamic up to 1 day ahead in the fridge; stir over ice to serve",
      "ingredients": [
       {
        "q": 120,

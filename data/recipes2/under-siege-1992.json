@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 30,
    "cook_min": 110,
-   "make_ahead": "",
+   "make_ahead": "Bake up to 1 day ahead and keep airtight, warm through before serving; brush with butter and flaky salt on the day",
    "ingredients": [
     {
      "q": 500,
@@ -29,7 +29,7 @@
     {
      "q": 50,
      "u": "g",
-     "item": "butter, softened",
+     "item": "butter, softened, for the dough",
      "aisle": "Dairy"
     },
     {
@@ -79,7 +79,7 @@
      "min": 18
     },
     {
-     "text": "Brush with butter and flaky salt.",
+     "text": "Brush with the melted butter and flaky salt.",
      "min": 2
     }
    ],
@@ -91,7 +91,7 @@
    "course": "s",
    "prep_min": 25,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Cut and split the sponge squares up to 1 day ahead, airtight; whip the cream, fill and dust on the day",
    "ingredients": [
     {
      "q": 1,
@@ -140,7 +140,7 @@
    "course": "m",
    "prep_min": 15,
    "cook_min": 42,
-   "make_ahead": "",
+   "make_ahead": "Make the broth up to 2 days ahead and chill; reheat, then add the fish, mussels and prawns just before serving",
    "ingredients": [
     {
      "q": 1,
@@ -256,7 +256,7 @@
      "n": "Ryback's bouillabaisse with potatoes and poached eggs",
      "prep_min": 15,
      "cook_min": 42,
-     "make_ahead": "",
+     "make_ahead": "Soften the vegetables up to 2 days ahead and chill; add the stock and potatoes, then poach the eggs on the night",
      "ingredients": [
       {
        "q": 1,
@@ -373,7 +373,7 @@
     {
      "q": 200,
      "u": "g",
-     "item": "butter, softened",
+     "item": "butter, softened, for the cake",
      "aisle": "Dairy"
     },
     {
@@ -407,8 +407,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 0.25,
+     "u": "tsp",
      "item": "blue food colouring",
      "aisle": "Pantry"
     }
@@ -435,7 +435,7 @@
      "min": 10
     },
     {
-     "text": "Tint a little buttercream blue and pipe the message.",
+     "text": "Tint a little buttercream blue with the food colouring and pipe the message.",
      "min": 5
     }
    ],
@@ -447,7 +447,7 @@
    "course": "d",
    "prep_min": 8,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Dissolve the honey syrup up to 3 days ahead and keep it in the fridge; shake each round to order over ice",
    "ingredients": [
     {
      "q": 2,
@@ -498,9 +498,9 @@
      "aisle": "Frozen"
     },
     {
-     "q": null,
+     "q": 1,
      "u": "",
-     "item": "nutmeg, to grate",
+     "item": "whole nutmeg, to grate",
      "aisle": "Spices"
     }
    ],
@@ -529,7 +529,7 @@
      "n": "USS Missouri navy grog (alcohol-free)",
      "prep_min": 8,
      "cook_min": 15,
-     "make_ahead": "",
+     "make_ahead": "Steep and chill the spiced tea up to 2 days ahead in the fridge; make the honey syrup and shake to order",
      "ingredients": [
       {
        "q": 2,
@@ -586,9 +586,9 @@
        "aisle": "Frozen"
       },
       {
-       "q": null,
+       "q": 1,
        "u": "",
-       "item": "nutmeg, to grate",
+       "item": "whole nutmeg, to grate",
        "aisle": "Pantry"
       }
      ],

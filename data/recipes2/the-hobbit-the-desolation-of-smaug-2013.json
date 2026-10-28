@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 18,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Beat the ricotta with the honey up to 2 days ahead, covered in the fridge; toast and top just before serving",
    "ingredients": [
     {
      "q": 250,
@@ -55,7 +55,7 @@
    "course": "s",
    "prep_min": 16,
    "cook_min": 9,
-   "make_ahead": "",
+   "make_ahead": "Fry the mushrooms up to 1 day ahead and reheat in a hot pan; toast the bread and top just before serving",
    "ingredients": [
     {
      "q": 500,
@@ -96,7 +96,7 @@
     {
      "q": null,
      "u": "",
-     "item": "black pepper",
+     "item": "black pepper, to taste",
      "aisle": "Spices"
     }
    ],
@@ -196,7 +196,7 @@
      "n": "Erebor gold roast pumpkin",
      "prep_min": 10,
      "cook_min": 68,
-     "make_ahead": "",
+     "make_ahead": "Score and rub the pumpkin up to 1 day ahead, covered in the fridge; roast on the night",
      "ingredients": [
       {
        "q": 2,
@@ -295,7 +295,7 @@
     {
      "q": 150,
      "u": "g",
-     "item": "honey",
+     "item": "honey, for the cake",
      "aisle": "Pantry"
     },
     {
@@ -331,7 +331,7 @@
    ],
    "steps": [
     {
-     "text": "Beat the butter, brown sugar and honey until pale.",
+     "text": "Beat the butter, brown sugar and the honey for the cake until pale.",
      "min": 8
     },
     {
@@ -351,7 +351,7 @@
      "min": 40
     },
     {
-     "text": "Warm the syrup honey with the water.",
+     "text": "Warm the honey for the syrup with the water.",
      "min": 5
     },
     {
@@ -375,7 +375,7 @@
    "course": "d",
    "prep_min": 7,
    "cook_min": 12,
-   "make_ahead": "",
+   "make_ahead": "Make the honey syrup up to 3 days ahead and keep it chilled; shake with the milk and bourbon to order",
    "ingredients": [
     {
      "q": 4,
@@ -408,9 +408,9 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
-     "item": "nutmeg, to grate",
+     "q": 0.25,
+     "u": "tsp",
+     "item": "nutmeg, freshly grated",
      "aisle": "Spices"
     },
     {
@@ -449,7 +449,7 @@
      "n": "Beorn's honey bourbon milk punch (alcohol-free)",
      "prep_min": 7,
      "cook_min": 12,
-     "make_ahead": "",
+     "make_ahead": "Make the honey syrup up to 3 days ahead and keep it chilled; shake with the cold milk to order",
      "ingredients": [
       {
        "q": 4,
@@ -482,9 +482,9 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
-       "item": "nutmeg, to grate",
+       "q": 0.25,
+       "u": "tsp",
+       "item": "nutmeg, freshly grated",
        "aisle": "Pantry"
       },
       {

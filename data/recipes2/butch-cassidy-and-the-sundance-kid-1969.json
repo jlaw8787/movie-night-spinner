@@ -266,7 +266,7 @@
    ],
    "steps": [
     {
-     "text": "Brown the beef in batches.",
+     "text": "Brown the beef in the oil in batches.",
      "min": 15
     },
     {
@@ -422,7 +422,7 @@
     {
      "q": 175,
      "u": "g",
-     "item": "caster sugar",
+     "item": "caster sugar, for the cake",
      "aisle": "Pantry"
     },
     {
@@ -474,7 +474,7 @@
      "min": 3
     },
     {
-     "text": "Beat the butter and sugar, add the eggs and zest, and fold in the flour.",
+     "text": "Beat the butter and the cake sugar, add the eggs and zest, and fold in the flour.",
      "min": 12
     },
     {
@@ -482,11 +482,11 @@
      "min": 45
     },
     {
-     "text": "Heat the sugar and lemon juice into a syrup and soak the hot cake.",
+     "text": "Heat the syrup sugar and syrup lemon juice until the sugar dissolves and soak the hot cake.",
      "min": 5
     },
     {
-     "text": "Mix the icing sugar with lemon juice and spread on top.",
+     "text": "Mix the icing sugar with the icing lemon juice and spread on top.",
      "min": 5
     }
    ],
@@ -498,7 +498,7 @@
    "course": "d",
    "prep_min": 10,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Mix the bourbon, lemon juice and syrup up to 1 day ahead and keep it chilled; add the egg whites and shake to order",
    "ingredients": [
     {
      "q": 200,
@@ -525,8 +525,8 @@
      "aisle": "Dairy"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 4,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     },
@@ -607,8 +607,8 @@
        "aisle": "Dairy"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 4,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       },

@@ -71,7 +71,7 @@
    "course": "s",
    "prep_min": 16,
    "cook_min": 20,
-   "make_ahead": "",
+   "make_ahead": "Halve the vegetables up to 1 day ahead and make the dip up to 2 days ahead; roast just before serving",
    "ingredients": [
     {
      "q": 2,
@@ -148,7 +148,7 @@
    "course": "m",
    "prep_min": 13,
    "cook_min": 55,
-   "make_ahead": "",
+   "make_ahead": "Pickle the carrot and cabbage up to 3 days ahead in the fridge; cook the rice and chicken on the night",
    "ingredients": [
     {
      "q": 300,
@@ -193,9 +193,15 @@
      "aisle": "Pantry"
     },
     {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
      "q": null,
      "u": "",
-     "item": "oil and salt",
+     "item": "salt, to taste",
      "aisle": "Pantry"
     }
    ],
@@ -209,7 +215,7 @@
      "min": 35
     },
     {
-     "text": "Grill the chicken thighs until cooked through, then slice.",
+     "text": "Brush the chicken thighs with the vegetable oil, season with salt and grill until cooked through, then slice.",
      "min": 20
     },
     {
@@ -224,7 +230,7 @@
      "n": "Tofu, coconut black rice and pickles",
      "prep_min": 13,
      "cook_min": 50,
-     "make_ahead": "",
+     "make_ahead": "Pickle the carrots and cabbage up to 3 days ahead; press and slice the tofu up to 1 day ahead",
      "ingredients": [
       {
        "q": 300,
@@ -275,9 +281,15 @@
        "aisle": "Pantry"
       },
       {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
        "q": null,
        "u": "",
-       "item": "oil and salt",
+       "item": "salt, to taste",
        "aisle": "Pantry"
       }
      ],
@@ -313,7 +325,7 @@
     {
      "q": 250,
      "u": "g",
-     "item": "butter",
+     "item": "butter, for the cupcakes",
      "aisle": "Dairy"
     },
     {
@@ -347,8 +359,8 @@
      "aisle": "Dairy"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 1,
+     "u": "tsp",
      "item": "red food colouring",
      "aisle": "Pantry"
     }
@@ -371,7 +383,7 @@
      "min": 40
     },
     {
-     "text": "Cool, beat the buttercream with red colouring and ice them all.",
+     "text": "Cool, beat the softened butter with the icing sugar and the red food colouring, and ice them all.",
      "min": 15
     }
    ],
@@ -383,7 +395,7 @@
    "course": "d",
    "prep_min": 5,
    "cook_min": 65,
-   "make_ahead": "",
+   "make_ahead": "Steep and chill the butterfly pea tea up to 2 days ahead in the fridge; build over ice and add the lemon to serve",
    "ingredients": [
     {
      "q": 2,

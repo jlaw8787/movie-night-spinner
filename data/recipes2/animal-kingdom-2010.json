@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 25,
    "cook_min": 75,
-   "make_ahead": "Best served warm",
+   "make_ahead": "Marinate the lamb up to 1 day ahead in the fridge; grill and wrap just before serving, best served warm",
    "ingredients": [
     {
      "q": 600,
@@ -69,9 +69,9 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
+     "q": 1,
      "u": "",
-     "item": "toothpicks",
+     "item": "box toothpicks",
      "aisle": "Pantry"
     }
    ],
@@ -173,9 +173,9 @@
        "aisle": "Produce"
       },
       {
-       "q": null,
+       "q": 1,
        "u": "",
-       "item": "toothpicks",
+       "item": "box toothpicks",
        "aisle": "Pantry"
       }
      ],
@@ -360,7 +360,7 @@
      "min": 12
     },
     {
-     "text": "Shallow fry until golden and cooked through.",
+     "text": "Shallow fry in the vegetable oil until golden and cooked through.",
      "min": 12
     },
     {
@@ -558,7 +558,7 @@
    "course": "d",
    "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Mix the cordial and lemon juice in a jug up to 1 day ahead in the fridge; add ice, bitters and lemonade to serve",
    "ingredients": [
     {
      "q": 80,
@@ -585,8 +585,8 @@
      "aisle": "Drinks"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 4,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     },
@@ -618,7 +618,7 @@
      "n": "Leckie's lemon, lime and bitters (alcohol-free)",
      "prep_min": 5,
      "cook_min": 8,
-     "make_ahead": "",
+     "make_ahead": "Brew and cool the spiced tea up to 2 days ahead in the fridge; build over ice to serve",
      "ingredients": [
       {
        "q": 1,
@@ -663,8 +663,8 @@
        "aisle": "Drinks"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 4,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       }

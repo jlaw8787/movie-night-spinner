@@ -17,7 +17,7 @@
     {
      "q": 200,
      "u": "ml",
-     "item": "coconut milk",
+     "item": "coconut milk, for the marinade",
      "aisle": "Pantry"
     },
     {
@@ -59,7 +59,7 @@
    ],
    "steps": [
     {
-     "text": "Chop the lemongrass and mix with the coconut milk and turmeric. Add the chicken and marinate in the fridge.",
+     "text": "Chop the lemongrass and mix with the coconut milk for the marinade and the turmeric. Add the chicken and marinate in the fridge.",
      "min": 130
     },
     {
@@ -71,7 +71,7 @@
      "min": 8
     },
     {
-     "text": "Warm the peanut butter with the extra coconut milk and lime juice into a thick sauce.",
+     "text": "Warm the peanut butter with the coconut milk for the sauce and the lime juice into a thick sauce.",
      "min": 5
     }
    ],
@@ -93,7 +93,7 @@
       {
        "q": 200,
        "u": "ml",
-       "item": "coconut milk",
+       "item": "coconut milk, for the marinade",
        "aisle": "Pantry"
       },
       {
@@ -135,7 +135,7 @@
      ],
      "steps": [
       {
-       "text": "Chop the lemongrass and mix with the coconut milk and turmeric. Pat the tofu dry, turn it through and marinate in the fridge.",
+       "text": "Chop the lemongrass and mix with the coconut milk for the marinade and the turmeric. Pat the tofu dry, turn it through and marinate in the fridge.",
        "min": 130
       },
       {
@@ -147,7 +147,7 @@
        "min": 8
       },
       {
-       "text": "Warm the peanut butter with the extra coconut milk and lime juice into a thick sauce.",
+       "text": "Warm the peanut butter with the coconut milk for the sauce and the lime juice into a thick sauce.",
        "min": 5
       }
      ],
@@ -303,7 +303,7 @@
      "min": 10
     },
     {
-     "text": "Stir fry the chicken with the garlic and chilli in a very hot wok.",
+     "text": "Stir fry the chicken with the garlic and chilli in the oil in a very hot wok.",
      "min": 6
     },
     {
@@ -486,8 +486,8 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }

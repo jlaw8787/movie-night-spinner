@@ -187,21 +187,21 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "tbsp",
      "item": "salt, for the water",
      "aisle": "Spices"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 4,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Bring a pot of salted water to the boil with lemon slices.",
+     "text": "Bring a pot of water to the boil with the salt and lemon slices.",
      "min": 5
     },
     {
@@ -257,21 +257,21 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "tbsp",
        "item": "salt, for the water",
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 4,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       }
      ],
      "steps": [
       {
-       "text": "Bring a pot of salted water to the boil with lemon slices.",
+       "text": "Bring a pot of water to the boil with the salt and lemon slices.",
        "min": 5
       },
       {
@@ -540,8 +540,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }
@@ -612,8 +612,8 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       }

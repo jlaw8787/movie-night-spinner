@@ -162,7 +162,7 @@
    "course": "s",
    "prep_min": 8,
    "cook_min": 6,
-   "make_ahead": "",
+   "make_ahead": "Nothing keeps ahead; boil the eggs and toast the bread to order so the yolks stay soft and the soldiers crisp",
    "ingredients": [
     {
      "q": 4,
@@ -264,7 +264,7 @@
      "min": 180
     },
     {
-     "text": "Serve with crusty bread.",
+     "text": "Serve with slices of the Italian loaf.",
      "min": 2
     }
    ],
@@ -346,7 +346,7 @@
        "min": 40
       },
       {
-       "text": "Serve with crusty bread.",
+       "text": "Serve with slices of the Italian loaf.",
        "min": 2
       }
      ],
@@ -359,7 +359,7 @@
    "course": "w",
    "prep_min": 25,
    "cook_min": 720,
-   "make_ahead": "Up to 2 weeks, keep wrapped and reheat by steaming",
+   "make_ahead": "Soak the dried fruit in the brandy the night before; the steamed pudding keeps up to 2 weeks wrapped, steam to reheat",
    "ingredients": [
     {
      "q": 500,
@@ -370,7 +370,7 @@
     {
      "q": 100,
      "u": "ml",
-     "item": "brandy",
+     "item": "brandy, to soak the fruit",
      "aisle": "Bottle shop"
     },
     {
@@ -447,7 +447,7 @@
      "n": "Christmas pudding",
      "prep_min": 25,
      "cook_min": 720,
-     "make_ahead": "Up to 2 weeks, keep wrapped and reheat by steaming",
+     "make_ahead": "Soak the dried fruit in the orange juice the night before; the steamed pudding keeps up to 2 weeks wrapped, steam to reheat",
      "ingredients": [
       {
        "q": 500,
@@ -571,7 +571,7 @@
     {
      "q": null,
      "u": "",
-     "item": "fresh nutmeg, to grate",
+     "item": "fresh nutmeg, grated, to taste",
      "aisle": "Spices"
     }
    ],
@@ -641,7 +641,7 @@
       {
        "q": null,
        "u": "",
-       "item": "fresh nutmeg, to grate",
+       "item": "fresh nutmeg, grated, to taste",
        "aisle": "Pantry"
       }
      ],

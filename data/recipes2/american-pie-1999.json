@@ -67,31 +67,31 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Stifler's party cauliflower wings",
-     "prep_min": 15,
-     "cook_min": 35,
-     "make_ahead": "Batter and bake up to 3 hours ahead, toss in sauce fresh",
+     "n": "Stifler's party oyster mushroom wings",
+     "prep_min": 10,
+     "cook_min": 25,
+     "make_ahead": "Make the blue cheese dip up to 2 days ahead and keep it covered in the fridge; tear the mushrooms and cut the celery up to 1 day ahead. Roast and toss just before serving.",
      "ingredients": [
       {
-       "q": 1,
-       "u": "",
-       "item": "large cauliflower, cut into florets",
+       "q": 600,
+       "u": "g",
+       "item": "oyster mushrooms",
        "aisle": "Produce"
       },
       {
-       "q": 100,
-       "u": "g",
-       "item": "plain flour",
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
        "aisle": "Pantry"
       },
       {
-       "q": 125,
-       "u": "ml",
-       "item": "milk",
-       "aisle": "Dairy"
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
       },
       {
-       "q": 0.5,
+       "q": 1,
        "u": "tsp",
        "item": "salt",
        "aisle": "Pantry"
@@ -129,20 +129,20 @@
      ],
      "steps": [
       {
-       "text": "Whisk the flour, milk and salt into a thick batter and coat the cauliflower florets.",
-       "min": 8
+       "text": "Tear the oyster mushrooms into thick clusters and toss with the cornflour, olive oil and salt.",
+       "min": 5
       },
       {
-       "text": "Bake on a lined tray at 220C until crisp and golden.",
-       "min": 30
+       "text": "Roast on a lined tray at 220C for 22 minutes, turning once, until golden with crisp edges.",
+       "min": 22
       },
       {
-       "text": "Melt the butter with the hot sauce, toss the cauliflower through and bake 5 minutes more.",
-       "min": 8
+       "text": "Melt the butter with the hot sauce and toss the mushrooms through it.",
+       "min": 3
       },
       {
-       "text": "Mash the blue cheese into the sour cream for the dip. Serve with celery sticks.",
-       "min": 4
+       "text": "Mash the blue cheese into the sour cream for the dip. Serve with the celery sticks.",
+       "min": 5
       }
      ],
      "af": true
@@ -274,15 +274,15 @@
    ],
    "steps": [
     {
-     "text": "Crumb the chicken in flour, egg then panko. Soak the cut chips in cold water, then dry well.",
+     "text": "Crumb the chicken in flour, egg then panko. Cut the potatoes into chips, soak in cold water, then dry well.",
      "min": 15
     },
     {
-     "text": "Fry the chips at a low heat until soft, drain, then fry again at a high heat until golden.",
+     "text": "Fry the chips in the vegetable oil at a low heat until soft, drain, then fry again at a high heat until golden.",
      "min": 15
     },
     {
-     "text": "Shallow fry the chicken until golden and cooked through.",
+     "text": "Shallow fry the chicken in some of the oil until golden and cooked through.",
      "min": 8
     },
     {
@@ -362,7 +362,7 @@
      ],
      "steps": [
       {
-       "text": "Cut the eggplants lengthways into 8 thick slices and crumb in flour, egg then panko. Soak the cut chips in cold water, then dry well.",
+       "text": "Cut the eggplants lengthways into 8 thick slices and crumb in flour, egg then panko. Cut the potatoes into chips, soak in cold water, then dry well.",
        "min": 15
       },
       {

@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 15,
    "cook_min": 25,
-   "make_ahead": "",
+   "make_ahead": "Bake up to 1 day ahead and keep covered, rewarm in a 160C oven for 10 minutes; beat the honey butter up to 3 days ahead",
    "ingredients": [
     {
      "q": 200,
@@ -53,19 +53,19 @@
     {
      "q": 80,
      "u": "g",
-     "item": "butter, melted",
+     "item": "butter, melted, for the batter",
      "aisle": "Dairy"
     },
     {
      "q": 1,
      "u": "tbsp",
-     "item": "butter, to grease the pan",
+     "item": "butter, for greasing the pan",
      "aisle": "Dairy"
     },
     {
      "q": 50,
      "u": "g",
-     "item": "butter, softened",
+     "item": "butter, softened, for the honey butter",
      "aisle": "Dairy"
     },
     {
@@ -81,11 +81,11 @@
      "min": 5
     },
     {
-     "text": "Mix the dry ingredients, then stir in the buttermilk, eggs and melted butter.",
+     "text": "Mix the cornmeal, flour, baking powder, salt and sugar, then stir in the buttermilk, eggs and the melted butter.",
      "min": 5
     },
     {
-     "text": "Pour the batter into the hot greased pan and bake until golden.",
+     "text": "Swirl the butter for greasing around the hot pan, pour in the batter and bake until golden.",
      "min": 20
     },
     {
@@ -170,7 +170,7 @@
    "course": "m",
    "prep_min": 10,
    "cook_min": 12,
-   "make_ahead": "",
+   "make_ahead": "Fill and close the sandwiches up to 4 hours ahead and keep them covered in the fridge; toast just before serving",
    "ingredients": [
     {
      "q": 8,
@@ -230,7 +230,7 @@
      "n": "Deli smoked tofu pastrami sandwiches",
      "prep_min": 10,
      "cook_min": 15,
-     "make_ahead": "",
+     "make_ahead": "Fry and season the tofu up to 2 days ahead, keep chilled; build and toast the sandwiches to order",
      "ingredients": [
       {
        "q": 400,
@@ -383,7 +383,7 @@
    "course": "d",
    "prep_min": 10,
    "cook_min": 15,
-   "make_ahead": "",
+   "make_ahead": "Make the sugar syrup up to 1 week ahead and keep it chilled; blend with the ice just before serving",
    "ingredients": [
     {
      "q": 150,

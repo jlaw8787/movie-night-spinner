@@ -17,7 +17,7 @@
     {
      "q": 30,
      "u": "g",
-     "item": "butter, for cooking",
+     "item": "butter, for frying the shallot",
      "aisle": "Dairy"
     },
     {
@@ -99,7 +99,7 @@
       {
        "q": 30,
        "u": "g",
-       "item": "butter, for cooking",
+       "item": "butter, for frying the shallot",
        "aisle": "Dairy"
       },
       {
@@ -284,7 +284,7 @@
    ],
    "steps": [
     {
-     "text": "Brown the shanks in the oil.",
+     "text": "Season the shanks with salt, then brown them in the oil.",
      "min": 15
     },
     {
@@ -394,7 +394,7 @@
      ],
      "steps": [
       {
-       "text": "Brown the shanks in the oil.",
+       "text": "Season the shanks with salt, then brown them in the oil.",
        "min": 15
       },
       {
@@ -496,7 +496,7 @@
      ],
      "steps": [
       {
-       "text": "Brown the mushrooms in the oil, then set aside.",
+       "text": "Season the mushrooms with salt, then brown them in the oil, and set aside.",
        "min": 10
       },
       {
@@ -605,7 +605,7 @@
      ],
      "steps": [
       {
-       "text": "Brown the mushrooms in the oil, then set aside.",
+       "text": "Season the mushrooms with salt, then brown them in the oil, and set aside.",
        "min": 10
       },
       {
@@ -825,8 +825,8 @@
      "aisle": "Spices"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }
@@ -919,8 +919,8 @@
        "aisle": "Drinks"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       }

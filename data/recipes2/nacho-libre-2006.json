@@ -29,7 +29,7 @@
     {
      "q": 1,
      "u": "",
-     "item": "lime, zested",
+     "item": "lime, zested and juiced",
      "aisle": "Produce"
     },
     {
@@ -49,17 +49,11 @@
      "u": "",
      "item": "white onion, diced",
      "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "lime, juiced",
-     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Cut the tortillas into wedges and fry at 180C until crisp.",
+     "text": "Cut the tortillas into wedges and fry in the vegetable oil at 180C until crisp.",
      "min": 10
     },
     {
@@ -175,7 +169,7 @@
     {
      "q": 1,
      "u": "",
-     "item": "white onion, sliced",
+     "item": "white onion, sliced, for the filling",
      "aisle": "Produce"
     },
     {
@@ -293,7 +287,7 @@
       {
        "q": 1,
        "u": "",
-       "item": "white onion, sliced",
+       "item": "white onion, sliced, for the filling",
        "aisle": "Produce"
       },
       {
@@ -490,8 +484,8 @@
      "aisle": "Dairy"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     },

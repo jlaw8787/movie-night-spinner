@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 15,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Cube the cheddar up to 1 day ahead, keep chilled; slice and toss the apples on the morning",
    "ingredients": [
     {
      "q": 200,
@@ -122,7 +122,7 @@
    "course": "m",
    "prep_min": 25,
    "cook_min": 50,
-   "make_ahead": "",
+   "make_ahead": "Crumb the fish fingers up to 4 hours ahead, keep chilled; fry the fish and roast the chips fresh",
    "ingredients": [
     {
      "q": 600,
@@ -208,7 +208,7 @@
      "n": "Astoria school lunch haloumi fingers",
      "prep_min": 25,
      "cook_min": 40,
-     "make_ahead": "",
+     "make_ahead": "Crumb the haloumi up to 4 hours ahead, keep chilled; fry the haloumi and roast the chips fresh",
      "ingredients": [
       {
        "q": 500,
@@ -301,7 +301,7 @@
     {
      "q": 125,
      "u": "g",
-     "item": "butter, softened",
+     "item": "butter, softened, for the cake",
      "aisle": "Dairy"
     },
     {
@@ -341,9 +341,9 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
+     "q": 6,
      "u": "",
-     "item": "food colouring, primary colours",
+     "item": "drops food colouring, primary colours",
      "aisle": "Pantry"
     },
     {
@@ -355,7 +355,7 @@
    ],
    "steps": [
     {
-     "text": "Heat the oven to 180C and line a 12-hole tin. Beat the butter and sugar, add the eggs, then fold in the flour and milk.",
+     "text": "Heat the oven to 180C and line a 12-hole tin. Beat the butter for the cake with the sugar, add the eggs, then fold in the flour and milk.",
      "min": 12
     },
     {
@@ -367,7 +367,7 @@
      "min": 20
     },
     {
-     "text": "Beat the butter with the icing sugar and tint in primary colours.",
+     "text": "Beat the butter for the icing with the icing sugar, divide and tint with the food colouring in primary colours.",
      "min": 8
     },
     {
@@ -383,7 +383,7 @@
    "course": "d",
    "prep_min": 10,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Whip the cream up to 1 day ahead, keep chilled; blend each batch just before serving",
    "ingredients": [
     {
      "q": 600,

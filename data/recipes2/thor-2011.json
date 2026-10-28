@@ -51,7 +51,7 @@
      "min": 25
     },
     {
-     "text": "Fry in butter over medium heat until deep golden and crisp, in batches.",
+     "text": "Fry in butter over medium heat until deep golden and crisp, in batches, and serve with sour cream and snipped chives.",
      "min": 20
     }
    ],
@@ -120,16 +120,22 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Asgard golden honey cauliflower wings",
+     "n": "Asgard golden honey paneer wings",
      "prep_min": 10,
-     "cook_min": 40,
-     "make_ahead": "Make fresh",
+     "cook_min": 20,
+     "make_ahead": "Cut the paneer and crush the garlic up to 1 day ahead and keep them chilled. Fry and glaze just before serving.",
      "ingredients": [
       {
-       "q": 1,
-       "u": "",
-       "item": "large cauliflower",
-       "aisle": "Produce"
+       "q": 500,
+       "u": "g",
+       "item": "paneer",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
       },
       {
        "q": 2,
@@ -138,7 +144,7 @@
        "aisle": "Pantry"
       },
       {
-       "q": 1,
+       "q": 0.5,
        "u": "tsp",
        "item": "salt",
        "aisle": "Pantry"
@@ -170,20 +176,20 @@
      ],
      "steps": [
       {
-       "text": "Cut the cauliflower into large florets.",
+       "text": "Cut the paneer into thick fingers and toss with the cornflour and salt.",
        "min": 5
       },
       {
-       "text": "Toss with the oil and salt and roast at 220C until crisp and browned at the edges.",
-       "min": 35
+       "text": "Pan-fry in the olive oil over medium-high heat for 3 minutes each side until golden.",
+       "min": 8
       },
       {
-       "text": "Melt the butter with the honey, garlic and thyme.",
-       "min": 5
+       "text": "Melt the butter with the honey, garlic and thyme for 2 minutes.",
+       "min": 3
       },
       {
-       "text": "Toss the hot cauliflower through the glaze until shiny and golden and serve on a big platter.",
-       "min": 5
+       "text": "Toss the hot paneer through the glaze until shiny and golden and serve on a big platter.",
+       "min": 3
       }
      ],
      "af": true
@@ -265,7 +271,7 @@
      "n": "Asgardian feast whole roast celeriac with roast roots",
      "prep_min": 20,
      "cook_min": 140,
-     "make_ahead": "",
+     "make_ahead": "Rub and wrap the celeriacs in foil up to 1 day ahead in the fridge; roast with the roots on the day",
      "ingredients": [
       {
        "q": 2,
@@ -372,7 +378,7 @@
     {
      "q": 1,
      "u": "tbsp",
-     "item": "caster sugar",
+     "item": "caster sugar, for the dough",
      "aisle": "Pantry"
     },
     {

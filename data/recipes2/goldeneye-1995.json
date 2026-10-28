@@ -330,7 +330,7 @@
    "course": "m",
    "prep_min": 20,
    "cook_min": 25,
-   "make_ahead": "",
+   "make_ahead": "Slice the beef, mushrooms and onion up to 1 day ahead, covered in the fridge; cook on the night",
    "ingredients": [
     {
      "q": 600,
@@ -420,7 +420,7 @@
      "n": "Beef stroganoff",
      "prep_min": 20,
      "cook_min": 30,
-     "make_ahead": "",
+     "make_ahead": "Slice the beef, mushrooms and onion up to 1 day ahead, covered in the fridge; cook the sauce and noodles on the night",
      "ingredients": [
       {
        "q": 600,
@@ -508,7 +508,7 @@
      "n": "Mushroom stroganoff",
      "prep_min": 20,
      "cook_min": 30,
-     "make_ahead": "",
+     "make_ahead": "Slice the mushrooms and onion up to 1 day ahead, covered in the fridge; cook on the night",
      "ingredients": [
       {
        "q": 800,
@@ -603,7 +603,7 @@
      "n": "Mushroom stroganoff",
      "prep_min": 20,
      "cook_min": 30,
-     "make_ahead": "",
+     "make_ahead": "Slice the mushrooms and onion up to 1 day ahead, covered in the fridge; sear, simmer and finish on the night",
      "ingredients": [
       {
        "q": 800,
@@ -636,19 +636,13 @@
        "aisle": "Pantry"
       },
       {
-       "q": 30,
-       "u": "ml",
-       "item": "vegetable stock, extra",
-       "aisle": "Pantry"
-      },
-      {
        "q": 1,
        "u": "tsp",
        "item": "lemon juice",
        "aisle": "Produce"
       },
       {
-       "q": 200,
+       "q": 230,
        "u": "ml",
        "item": "vegetable stock",
        "aisle": "Pantry"
@@ -682,11 +676,11 @@
        "min": 8
       },
       {
-       "text": "Cook the rest of the mushrooms and the onion in 30g of the butter, add the paprika, then the extra stock and lemon juice, and let it bubble away.",
+       "text": "Cook the rest of the mushrooms and the onion in 30g of the butter, add the paprika, then 30 ml of the stock and the lemon juice, and let it bubble away.",
        "min": 12
       },
       {
-       "text": "Add the stock and soy sauce and simmer.",
+       "text": "Add the rest of the stock and the soy sauce and simmer.",
        "min": 5
       },
       {
@@ -706,7 +700,7 @@
    "course": "w",
    "prep_min": 15,
    "cook_min": 20,
-   "make_ahead": "",
+   "make_ahead": "Shape the patties up to 1 day ahead, covered on a tray in the fridge; fry on the night and warm the jam",
    "ingredients": [
     {
      "q": 500,
@@ -787,7 +781,7 @@
    "course": "d",
    "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Best shaken to order; chill the glasses in the freezer up to 1 day ahead",
    "ingredients": [
     {
      "q": 240,
@@ -831,7 +825,7 @@
      "n": "Vodka martini (alcohol-free)",
      "prep_min": 9,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Blitz and strain the cucumber water up to 1 day ahead in the fridge; shake to order",
      "ingredients": [
       {
        "q": 1,

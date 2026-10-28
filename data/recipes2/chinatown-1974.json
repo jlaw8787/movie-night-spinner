@@ -120,7 +120,7 @@
     {
      "q": 2,
      "u": "tbsp",
-     "item": "soy sauce, to serve",
+     "item": "soy sauce, for dipping",
      "aisle": "Pantry"
     }
    ],
@@ -134,11 +134,11 @@
      "min": 15
     },
     {
-     "text": "Fry at 180C in batches until crisp.",
+     "text": "Heat the oil to 180C and fry in batches until crisp.",
      "min": 20
     },
     {
-     "text": "Serve with sweet chilli sauce and soy.",
+     "text": "Serve with sweet chilli sauce and soy sauce for dipping.",
      "min": 0
     }
    ],
@@ -160,7 +160,7 @@
       {
        "q": 1,
        "u": "tbsp",
-       "item": "vegetable oil",
+       "item": "vegetable oil, for the filling",
        "aisle": "Pantry"
       },
       {
@@ -202,7 +202,7 @@
       {
        "q": 2,
        "u": "tbsp",
-       "item": "soy sauce, to serve",
+       "item": "soy sauce, for dipping",
        "aisle": "Pantry"
       }
      ],
@@ -220,7 +220,7 @@
        "min": 20
       },
       {
-       "text": "Serve with sweet chilli sauce and soy.",
+       "text": "Serve with sweet chilli sauce and soy sauce for dipping.",
        "min": 0
       }
      ],
@@ -380,7 +380,7 @@
     {
      "q": 125,
      "u": "ml",
-     "item": "orange juice",
+     "item": "orange juice, for the batter",
      "aisle": "Drinks"
     },
     {
@@ -392,7 +392,7 @@
     {
      "q": 150,
      "u": "g",
-     "item": "caster sugar",
+     "item": "caster sugar, for the yolks",
      "aisle": "Pantry"
     },
     {
@@ -422,11 +422,11 @@
    ],
    "steps": [
     {
-     "text": "Whisk the yolks with the oil, orange juice, zest, sugar and flour.",
+     "text": "Whisk the egg yolks with the oil, the orange juice for the batter, zest, the caster sugar for the yolks and the flour.",
      "min": 12
     },
     {
-     "text": "Whisk the whites stiff with the sugar and fold in.",
+     "text": "Whisk the egg whites stiff with the caster sugar for the whites and fold in.",
      "min": 13
     },
     {
@@ -438,7 +438,7 @@
      "min": 60
     },
     {
-     "text": "Glaze with the icing sugar mixed with orange juice.",
+     "text": "Mix the icing sugar with the orange juice for the glaze and spoon it over the cake.",
      "min": 5
     }
    ],
@@ -495,14 +495,14 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 4,
+     "u": "cup",
      "item": "crushed ice",
      "aisle": "Frozen"
     }
@@ -583,14 +583,14 @@
        "aisle": "Produce"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 4,
+       "u": "cup",
        "item": "crushed ice",
        "aisle": "Frozen"
       }

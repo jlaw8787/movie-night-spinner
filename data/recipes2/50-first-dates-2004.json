@@ -35,7 +35,7 @@
     {
      "q": 60,
      "u": "g",
-     "item": "butter, melted",
+     "item": "butter, melted, for the batter",
      "aisle": "Dairy"
     },
     {
@@ -244,7 +244,7 @@
      "min": 15
     },
     {
-     "text": "Sear the patties until cooked through and set aside.",
+     "text": "Sear the patties in the oil until cooked through and set aside.",
      "min": 10
     },
     {
@@ -455,8 +455,8 @@
      "aisle": "Drinks"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }

@@ -193,7 +193,7 @@
    "course": "m",
    "prep_min": 20,
    "cook_min": 108,
-   "make_ahead": "",
+   "make_ahead": "Make the roux and gumbo base up to 2 days ahead and keep chilled; reheat, then add the prawns and cook the rice fresh",
    "ingredients": [
     {
      "q": 80,
@@ -285,12 +285,12 @@
      "n": "Bubba's gumbo (vegetarian)",
      "prep_min": 20,
      "cook_min": 100,
-     "make_ahead": "",
+     "make_ahead": "Make the roux and gumbo base up to 2 days ahead and keep chilled; reheat, then fry the sausages and cook the rice fresh",
      "ingredients": [
       {
        "q": 80,
        "u": "ml",
-       "item": "vegetable oil",
+       "item": "vegetable oil, for the roux",
        "aisle": "Pantry"
       },
       {
@@ -350,7 +350,7 @@
       {
        "q": 1,
        "u": "tbsp",
-       "item": "vegetable oil, extra",
+       "item": "vegetable oil, for frying",
        "aisle": "Pantry"
       },
       {
@@ -362,7 +362,7 @@
      ],
      "steps": [
       {
-       "text": "Stir the oil and flour over medium heat into a dark roux.",
+       "text": "Stir the 80ml of oil and the flour over medium heat into a dark roux.",
        "min": 30
       },
       {
@@ -374,7 +374,7 @@
        "min": 45
       },
       {
-       "text": "Fry the sausages and mushrooms in the extra oil until browned and stir into the gumbo for the last 10 minutes.",
+       "text": "Fry the sausages and mushrooms in the tablespoon of oil until browned and stir into the gumbo for the last 10 minutes.",
        "min": 10
       },
       {

@@ -47,7 +47,7 @@
    ],
    "steps": [
     {
-     "text": "Take the cheeses out of the fridge to come to room temperature.",
+     "text": "Take the Wensleydale, aged cheddar and blue cheese out of the fridge to come to room temperature.",
      "min": 60
     },
     {
@@ -394,15 +394,9 @@
      "aisle": "Pantry"
     },
     {
-     "q": 2,
+     "q": 4,
      "u": "",
-     "item": "lemons, peeled zest",
-     "aisle": "Produce"
-    },
-    {
-     "q": 3,
-     "u": "",
-     "item": "lemons, juiced",
+     "item": "lemons",
      "aisle": "Produce"
     },
     {
@@ -412,8 +406,8 @@
      "aisle": "Drinks"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 4,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     },
@@ -430,15 +424,15 @@
      "min": 8
     },
     {
-     "text": "Simmer the sugar, water and lemon zest, then cool and strain.",
+     "text": "Peel the zest from 2 of the lemons, simmer it with the sugar and water, then cool and strain.",
      "min": 6
     },
     {
-     "text": "Stir the syrup and lemon juice into the tea.",
+     "text": "Juice 3 of the lemons, including the 2 peeled ones, and stir the syrup and lemon juice into the tea.",
      "min": 2
     },
     {
-     "text": "Pour over ice, top with sparkling water and add lemon wheels and mint.",
+     "text": "Pour over ice, top with sparkling water and add wheels from the last lemon and mint.",
      "min": 4
     }
    ],

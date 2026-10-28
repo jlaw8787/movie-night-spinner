@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 15,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Make the sandwiches up to 3 hours ahead and keep covered and chilled. Cut and stack just before serving",
    "ingredients": [
     {
      "q": 8,
@@ -55,7 +55,7 @@
    "course": "s",
    "prep_min": 20,
    "cook_min": 10,
-   "make_ahead": "",
+   "make_ahead": "Roll and cut the dough rounds up to 4 hours ahead and keep covered in the fridge. Top and bake just before serving",
    "ingredients": [
     {
      "q": 500,
@@ -109,7 +109,7 @@
      "n": "Uncle Art's space pizza bites (vegetarian)",
      "prep_min": 20,
      "cook_min": 10,
-     "make_ahead": "",
+     "make_ahead": "Roll and cut the dough rounds and slice the mushrooms up to 4 hours ahead and keep covered in the fridge. Top and bake just before serving",
      "ingredients": [
       {
        "q": 500,
@@ -165,7 +165,7 @@
    "course": "m",
    "prep_min": 15,
    "cook_min": 62,
-   "make_ahead": "",
+   "make_ahead": "Roll the meatballs up to 1 day ahead and keep chilled; simmer in the tomatoes up to 2 days ahead and reheat gently. Cook the spaghetti on the night",
    "ingredients": [
     {
      "q": 300,
@@ -241,7 +241,7 @@
      "n": "Meatball cannon dinner with mushroom meatballs",
      "prep_min": 24,
      "cook_min": 42,
-     "make_ahead": "",
+     "make_ahead": "Fry the mushrooms and mix the lentil balls up to 1 day ahead and keep chilled; simmer in the tomatoes up to 2 days ahead and reheat gently. Cook the spaghetti on the night",
      "ingredients": [
       {
        "q": 300,
@@ -346,7 +346,7 @@
     {
      "q": 125,
      "u": "g",
-     "item": "butter",
+     "item": "butter, softened, for the cakes",
      "aisle": "Dairy"
     },
     {
@@ -382,19 +382,19 @@
     {
      "q": 125,
      "u": "g",
-     "item": "butter, softened, for buttercream",
+     "item": "butter, softened, for the buttercream",
      "aisle": "Dairy"
     },
     {
      "q": null,
      "u": "",
-     "item": "food colouring",
+     "item": "food colouring, a few drops",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Heat the oven to 175C and line a muffin tin. Beat the butter and sugar, then the eggs, then fold in flour and milk.",
+     "text": "Heat the oven to 175C and line a muffin tin. Beat the cake butter and sugar, then the eggs, then fold in flour and milk.",
      "min": 10
     },
     {
@@ -406,7 +406,7 @@
      "min": 20
     },
     {
-     "text": "Beat the buttercream with colouring and pipe on top. Add a little icing arrow to each.",
+     "text": "Beat the buttercream butter with the icing sugar and colouring and pipe on top. Add a little icing arrow to each.",
      "min": 12
     }
    ],
@@ -418,7 +418,7 @@
    "course": "d",
    "prep_min": 8,
    "cook_min": 480,
-   "make_ahead": "",
+   "make_ahead": "Freeze the grapes overnight, or up to 1 week ahead in a freezer bag. Blend each batch to order",
    "ingredients": [
     {
      "q": 500,

@@ -35,7 +35,7 @@
     {
      "q": 80,
      "u": "g",
-     "item": "vintage cheddar",
+     "item": "vintage cheddar, grated, for the dough",
      "aisle": "Dairy"
     },
     {
@@ -47,7 +47,7 @@
     {
      "q": 150,
      "u": "g",
-     "item": "vintage cheddar, sliced",
+     "item": "vintage cheddar, sliced, for the topping",
      "aisle": "Dairy"
     },
     {
@@ -93,7 +93,7 @@
    "course": "s",
    "prep_min": 7,
    "cook_min": 5,
-   "make_ahead": "",
+   "make_ahead": "Warm the olives with the zest, garlic and chilli up to 3 days ahead, kept chilled; rewarm and serve with bread",
    "ingredients": [
     {
      "q": 150,
@@ -160,7 +160,7 @@
    "course": "m",
    "prep_min": 10,
    "cook_min": 28,
-   "make_ahead": "",
+   "make_ahead": "Boil and crush the potatoes up to 1 day ahead, kept chilled, and reheat in a pan; fry the fish on the night",
    "ingredients": [
     {
      "q": 800,
@@ -207,11 +207,11 @@
    ],
    "steps": [
     {
-     "text": "Boil the potatoes until tender and crush lightly.",
+     "text": "Boil the potatoes until tender, crush lightly and season with salt.",
      "min": 26
     },
     {
-     "text": "Pan-fry the fish skin side down until crisp, then flip for a minute.",
+     "text": "Pan-fry the fish in the olive oil, skin side down until crisp, then flip for a minute.",
      "min": 8
     },
     {
@@ -230,7 +230,7 @@
      "n": "Sea voyage haloumi",
      "prep_min": 10,
      "cook_min": 26,
-     "make_ahead": "",
+     "make_ahead": "Slice the haloumi up to 2 days ahead and boil the potatoes up to 1 day ahead, kept chilled; fry and finish on the night",
      "ingredients": [
       {
        "q": 800,
@@ -302,7 +302,7 @@
    "course": "w",
    "prep_min": 26,
    "cook_min": 90,
-   "make_ahead": "",
+   "make_ahead": "Bake and cool the meringue up to 2 days ahead, airtight; whip the cream and top just before serving",
    "ingredients": [
     {
      "q": 4,
@@ -359,7 +359,7 @@
    "course": "d",
    "prep_min": 11,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Mix the lemon juice, cordial and water up to 1 day ahead, chilled; add the mint, ice, cucumber and soda to serve",
    "ingredients": [
     {
      "q": 4,

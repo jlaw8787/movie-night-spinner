@@ -39,9 +39,9 @@
      "aisle": "Bottle shop"
     },
     {
-     "q": null,
+     "q": 1,
      "u": "",
-     "item": "fresh nutmeg, to grate",
+     "item": "whole nutmeg, to grate",
      "aisle": "Spices"
     }
    ],
@@ -103,9 +103,9 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
+       "q": 1,
        "u": "",
-       "item": "fresh nutmeg, to grate",
+       "item": "whole nutmeg, to grate",
        "aisle": "Pantry"
       }
      ],
@@ -135,7 +135,7 @@
    "course": "s",
    "prep_min": 12,
    "cook_min": 23,
-   "make_ahead": "",
+   "make_ahead": "Slice and griddle the kielbasa and cook the onions up to 1 day ahead in the fridge; reheat in a pan and toss with the mustard to serve",
    "ingredients": [
     {
      "q": 500,
@@ -187,7 +187,7 @@
      "n": "Cousin Eddie's RV sausages (vegetarian)",
      "prep_min": 12,
      "cook_min": 23,
-     "make_ahead": "",
+     "make_ahead": "Griddle the vegetarian sausages and cook the onions up to 1 day ahead in the fridge; warm through and toss with the mustard on the night",
      "ingredients": [
       {
        "q": 500,
@@ -315,7 +315,7 @@
      "n": "Juicy roast cauliflower",
      "prep_min": 15,
      "cook_min": 78,
-     "make_ahead": "",
+     "make_ahead": "Boil and butter the cauliflower and make the stuffing up to 1 day ahead in the fridge; roast on the day and make the gravy fresh",
      "ingredients": [
       {
        "q": 1,
@@ -462,7 +462,7 @@
    "course": "d",
    "prep_min": 5,
    "cook_min": 7,
-   "make_ahead": "",
+   "make_ahead": "Best made fresh; chop the chocolate up to 2 days ahead",
    "ingredients": [
     {
      "q": 1,
@@ -504,7 +504,7 @@
      "n": "Sledding hot chocolate (vegetarian)",
      "prep_min": 5,
      "cook_min": 7,
-     "make_ahead": "",
+     "make_ahead": "Chop the chocolate up to 2 days ahead; heat the milk and whisk it in to order",
      "ingredients": [
       {
        "q": 1,

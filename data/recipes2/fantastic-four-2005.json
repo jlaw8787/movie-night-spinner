@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 5,
    "cook_min": 50,
-   "make_ahead": "",
+   "make_ahead": "Mix the herbed sour cream up to 1 day ahead; bake and toss the wings just before serving so they stay crisp",
    "ingredients": [
     {
      "q": 1,
@@ -71,7 +71,7 @@
      "min": 5
     },
     {
-     "text": "Serve with herbed sour cream and celery sticks to put the fire out.",
+     "text": "Serve with sour cream mixed with the chopped herbs and celery sticks to put the fire out.",
      "min": 0
     }
    ],
@@ -79,27 +79,27 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Human Torch flaming cauliflower wings",
+     "n": "Human Torch flaming haloumi bites",
      "prep_min": 10,
-     "cook_min": 35,
-     "make_ahead": "",
+     "cook_min": 20,
+     "make_ahead": "Cut and dust the haloumi up to 1 day ahead and keep it covered in the fridge; mix the herb sour cream and cut the celery the same day. Fry and toss just before serving.",
      "ingredients": [
       {
-       "q": 1,
-       "u": "",
-       "item": "large cauliflower",
-       "aisle": "Produce"
+       "q": 500,
+       "u": "g",
+       "item": "haloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
       },
       {
        "q": 2,
        "u": "tbsp",
        "item": "olive oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "salt",
        "aisle": "Pantry"
       },
       {
@@ -141,20 +141,20 @@
      ],
      "steps": [
       {
-       "text": "Cut the cauliflower into large florets and toss with the oil and salt.",
+       "text": "Cut the haloumi into thick fingers, pat dry and dust with the cornflour.",
        "min": 5
       },
       {
-       "text": "Bake at 220C until crisp and browned at the edges.",
-       "min": 35
+       "text": "Pan-fry in the olive oil over medium-high heat for 3 minutes each side until deep golden.",
+       "min": 8
       },
       {
-       "text": "Melt the butter with the hot sauce and honey and toss the cauliflower through.",
-       "min": 5
+       "text": "Melt the butter with the hot sauce and honey and toss the haloumi through.",
+       "min": 3
       },
       {
-       "text": "Serve with the sour cream mixed with the herbs, and celery sticks to put the fire out.",
-       "min": 0
+       "text": "Stir the chopped herbs through the sour cream and serve with the celery sticks to put the fire out.",
+       "min": 4
       }
      ],
      "af": true
@@ -166,7 +166,7 @@
    "course": "s",
    "prep_min": 15,
    "cook_min": 25,
-   "make_ahead": "",
+   "make_ahead": "Stuff the loaf and wrap it in foil up to 1 day ahead in the fridge; bake just before serving, adding 5 minutes if it comes straight from the fridge",
    "ingredients": [
     {
      "q": 1,
@@ -225,7 +225,7 @@
    "course": "m",
    "prep_min": 25,
    "cook_min": 300,
-   "make_ahead": "",
+   "make_ahead": "Rub the ribs up to 1 day ahead in the fridge; slow cook on the day and make the slaw just before serving",
    "ingredients": [
     {
      "q": 2,
@@ -303,7 +303,7 @@
      "n": "Thing's rock-hard mushroom ribs",
      "prep_min": 15,
      "cook_min": 45,
-     "make_ahead": "",
+     "make_ahead": "Score and rub the mushrooms up to 1 day ahead in the fridge; roast on the night and make the slaw just before serving",
      "ingredients": [
       {
        "q": 800,
@@ -452,7 +452,7 @@
    "course": "d",
    "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Peel and freeze the bananas up to 1 week ahead for a thicker smoothie; blend and top with granola just before serving",
    "ingredients": [
     {
      "q": 300,

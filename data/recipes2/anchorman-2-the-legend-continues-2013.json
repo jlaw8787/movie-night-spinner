@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 10,
    "cook_min": 25,
-   "make_ahead": "",
+   "make_ahead": "Make the glaze up to 3 days ahead and keep it in the fridge; fry the wings just before serving",
    "ingredients": [
     {
      "q": 1.2,
@@ -63,7 +63,7 @@
      "min": 6
     },
     {
-     "text": "Fry at 175C for 10 minutes until golden and cooked through.",
+     "text": "Fry in the vegetable oil at 175C for 10 minutes until golden and cooked through.",
      "min": 14
     },
     {
@@ -75,15 +75,15 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Cauliflower of the Cave wings",
-     "prep_min": 11,
+     "n": "King oyster of the Cave wings",
+     "prep_min": 20,
      "cook_min": 25,
-     "make_ahead": "",
+     "make_ahead": "Shred the king oyster mushrooms up to 1 day ahead and keep them covered in the fridge; make the honey sriracha glaze up to 3 days ahead. Batter and fry on the night.",
      "ingredients": [
       {
-       "q": 1,
-       "u": "",
-       "item": "large cauliflower",
+       "q": 500,
+       "u": "g",
+       "item": "king oyster mushrooms",
        "aisle": "Produce"
       },
       {
@@ -94,20 +94,32 @@
       },
       {
        "q": 1,
-       "u": "",
-       "item": "jar smoked paprika",
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "cold water",
        "aisle": "Pantry"
       },
       {
        "q": 1,
-       "u": "",
-       "item": "jar garlic powder",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 200,
-       "u": "ml",
-       "item": "water",
+       "u": "l",
+       "item": "vegetable oil",
        "aisle": "Pantry"
       },
       {
@@ -127,26 +139,28 @@
        "u": "tbsp",
        "item": "soy sauce",
        "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "l",
-       "item": "vegetable oil",
-       "aisle": "Pantry"
       }
      ],
      "steps": [
       {
-       "text": "Cut the cauliflower into large florets and whisk the flour with 2 teaspoons each of the paprika and garlic powder, salt and the water into a thick batter.",
+       "text": "Halve the king oyster mushrooms lengthways and shred them with a fork into thick strips.",
        "min": 8
       },
       {
-       "text": "Dip the florets in the batter and fry in the vegetable oil at 175C for 6 to 8 minutes until golden and tender.",
-       "min": 16
+       "text": "Whisk the flour, smoked paprika, garlic powder and salt with the cold water into a thick batter.",
+       "min": 3
       },
       {
-       "text": "Simmer the honey, the sriracha and the soy until glossy and toss the cauliflower through.",
-       "min": 12
+       "text": "Heat the vegetable oil to 175C in a deep heavy pot.",
+       "min": 10
+      },
+      {
+       "text": "Dip the mushroom strips in the batter and fry in batches for 5 minutes until golden and crisp, then drain.",
+       "min": 15
+      },
+      {
+       "text": "Simmer the honey, sriracha and soy for 4 minutes until glossy and toss the fried mushrooms through.",
+       "min": 5
       }
      ],
      "af": true
@@ -158,7 +172,7 @@
    "course": "s",
    "prep_min": 15,
    "cook_min": 6,
-   "make_ahead": "",
+   "make_ahead": "Crumb up to 3 hours ahead and keep chilled; fry just before serving",
    "ingredients": [
     {
      "q": 500,
@@ -209,7 +223,7 @@
      "min": 5
     },
     {
-     "text": "Roll in the flour, the beaten eggs, then the panko and fry at 180C for 3 minutes until golden.",
+     "text": "Roll in the flour, the beaten eggs, then the panko and fry in the vegetable oil at 180C for 3 minutes until golden.",
      "min": 11
     },
     {
@@ -224,7 +238,7 @@
      "n": "Doby's lighthouse crumbed tofu bites",
      "prep_min": 18,
      "cook_min": 6,
-     "make_ahead": "",
+     "make_ahead": "Press and cut the tofu up to 1 day ahead; crumb and fry just before serving",
      "ingredients": [
       {
        "q": 450,
@@ -281,7 +295,7 @@
        "min": 7
       },
       {
-       "text": "Roll in the flour mixed with the crumbled nori and salt, then the beaten eggs, then the panko, and fry at 180C for 3 minutes until golden.",
+       "text": "Roll in the flour mixed with the crumbled nori and salt, then the beaten eggs, then the panko, and fry in the vegetable oil at 180C for 3 minutes until golden.",
        "min": 12
       },
       {
@@ -298,7 +312,7 @@
    "course": "m",
    "prep_min": 10,
    "cook_min": 30,
-   "make_ahead": "",
+   "make_ahead": "Best cooked just before serving; crush the garlic up to 1 day ahead",
    "ingredients": [
     {
      "q": 4,
@@ -339,6 +353,10 @@
    ],
    "steps": [
     {
+     "text": "Bake the frozen chips following the packet.",
+     "min": 20
+    },
+    {
      "text": "Season the sirloin steaks and sear in a very hot pan for 3 minutes a side, then baste with the butter and the crushed garlic cloves.",
      "min": 21
     },
@@ -358,7 +376,7 @@
      "n": "GNN late shift cauliflower steak",
      "prep_min": 10,
      "cook_min": 30,
-     "make_ahead": "",
+     "make_ahead": "Best cooked just before serving; cut the cauliflower steaks and crush the garlic up to 1 day ahead",
      "ingredients": [
       {
        "q": 2,
@@ -430,7 +448,7 @@
    "course": "w",
    "prep_min": 10,
    "cook_min": 5,
-   "make_ahead": "",
+   "make_ahead": "Make the chocolate sauce up to 2 days ahead, keep it in the fridge and reheat gently",
    "ingredients": [
     {
      "q": 250,
@@ -480,7 +498,7 @@
      "n": "Linda's chocolate fondue (vegetarian)",
      "prep_min": 10,
      "cook_min": 5,
-     "make_ahead": "",
+     "make_ahead": "Melt the chocolate and cream up to 1 day ahead and reheat gently; cut the sponge up to 4 hours ahead",
      "ingredients": [
       {
        "q": 250,
@@ -547,9 +565,9 @@
      "aisle": "Bottle shop"
     },
     {
-     "q": null,
-     "u": "",
-     "item": "aromatic bitters, as needed",
+     "q": 1,
+     "u": "tsp",
+     "item": "aromatic bitters",
      "aisle": "Bottle shop"
     },
     {
@@ -565,9 +583,9 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
-     "u": "",
-     "item": "ice, as needed",
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
      "aisle": "Frozen"
     }
    ],
@@ -600,7 +618,7 @@
      "n": "Ron's Scotch Rob Roy (alcohol-free)",
      "prep_min": 5,
      "cook_min": 20,
-     "make_ahead": "",
+     "make_ahead": "Brew and chill the tea up to 2 days ahead in the fridge; stir with ice to serve",
      "ingredients": [
       {
        "q": 3,
@@ -639,9 +657,9 @@
        "aisle": "Produce"
       },
       {
-       "q": null,
-       "u": "",
-       "item": "ice, as needed",
+       "q": 4,
+       "u": "cup",
+       "item": "ice",
        "aisle": "Frozen"
       }
      ],

@@ -61,7 +61,7 @@
      "min": 15
     },
     {
-     "text": "Shallow fry until golden and cooked through.",
+     "text": "Shallow fry in the oil until golden and cooked through.",
      "min": 10
     },
     {
@@ -211,19 +211,19 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Hawkmen sky city cauliflower wings",
-     "prep_min": 10,
-     "cook_min": 33,
-     "make_ahead": "Make fresh",
+     "n": "Hawkmen sky city honey soy eggplant wings",
+     "prep_min": 15,
+     "cook_min": 40,
+     "make_ahead": "Cut the eggplant up to 1 day ahead and keep it covered in the fridge; make the honey soy glaze up to 3 days ahead. Roast and glaze on the night.",
      "ingredients": [
       {
-       "q": 1,
+       "q": 2,
        "u": "",
-       "item": "large cauliflower, cut into florets",
+       "item": "large eggplants",
        "aisle": "Produce"
       },
       {
-       "q": 2,
+       "q": 3,
        "u": "tbsp",
        "item": "olive oil",
        "aisle": "Pantry"
@@ -261,16 +261,20 @@
      ],
      "steps": [
       {
-       "text": "Toss the cauliflower with the oil and salt and roast at 220C until browned at the edges.",
-       "min": 30
-      },
-      {
-       "text": "Warm the honey, soy and chilli until sticky.",
-       "min": 5
-      },
-      {
-       "text": "Toss the cauliflower through the glaze, roast 5 minutes more and scatter with sesame seeds.",
+       "text": "Cut the eggplants into 4 cm chunks and toss with the olive oil and salt.",
        "min": 8
+      },
+      {
+       "text": "Roast on two trays at 220C for 35 minutes, turning once, until deep golden and soft inside.",
+       "min": 35
+      },
+      {
+       "text": "Warm the honey, soy and chilli for 3 minutes until sticky.",
+       "min": 4
+      },
+      {
+       "text": "Toss the eggplant through the glaze and scatter with the sesame seeds.",
+       "min": 3
       }
      ],
      "af": true

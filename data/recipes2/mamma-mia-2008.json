@@ -169,9 +169,9 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
+     "q": 1,
      "u": "",
-     "item": "baking paper",
+     "item": "roll baking paper",
      "aisle": "Pantry"
     }
    ],
@@ -269,9 +269,9 @@
        "aisle": "Dairy"
       },
       {
-       "q": null,
+       "q": 1,
        "u": "",
-       "item": "baking paper",
+       "item": "roll baking paper",
        "aisle": "Pantry"
       }
      ],
@@ -377,7 +377,7 @@
    "course": "d",
    "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Chill the ouzo and lemonade up to 1 day ahead; nothing else keeps. Build each glass over ice to order",
    "ingredients": [
     {
      "q": 120,
@@ -392,8 +392,8 @@
      "aisle": "Drinks"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     },
@@ -425,7 +425,7 @@
      "n": "Pepper's Villa Donna ouzo (alcohol-free)",
      "prep_min": 5,
      "cook_min": 11,
-     "make_ahead": "",
+     "make_ahead": "Make the anise syrup up to 1 week ahead, strain it and keep in the fridge. Build each glass over ice to order",
      "ingredients": [
       {
        "q": 3,
@@ -452,8 +452,8 @@
        "aisle": "Drinks"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       },

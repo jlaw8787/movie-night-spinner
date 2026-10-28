@@ -322,7 +322,7 @@
     {
      "q": 25,
      "u": "g",
-     "item": "cocoa powder",
+     "item": "cocoa powder, for the biscuits",
      "aisle": "Pantry"
     },
     {
@@ -374,7 +374,7 @@
      "min": 20
     },
     {
-     "text": "Mix the icing sugar with cocoa and water, ice each biscuit and top with a walnut half.",
+     "text": "Mix the icing sugar with the cocoa for the icing and the water, ice each biscuit and top with a walnut half.",
      "min": 7
     }
    ],
@@ -419,8 +419,8 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 4,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }
@@ -497,8 +497,8 @@
        "aisle": "Produce"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 4,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       }

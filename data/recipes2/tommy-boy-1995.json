@@ -128,34 +128,22 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Diner cauliflower wings",
-     "prep_min": 20,
-     "cook_min": 38,
-     "make_ahead": "",
+     "n": "Diner oyster mushroom wings",
+     "prep_min": 10,
+     "cook_min": 25,
+     "make_ahead": "Make the blue cheese dip up to 2 days ahead and keep it covered in the fridge; trim the mushrooms and cut the celery up to 1 day ahead. Fry and toss just before serving.",
      "ingredients": [
       {
-       "q": 1,
-       "u": "",
-       "item": "large cauliflower",
+       "q": 600,
+       "u": "g",
+       "item": "oyster mushrooms",
        "aisle": "Produce"
       },
       {
-       "q": 100,
-       "u": "g",
-       "item": "plain flour",
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
        "aisle": "Pantry"
-      },
-      {
-       "q": 150,
-       "u": "ml",
-       "item": "water",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "garlic powder",
-       "aisle": "Spices"
       },
       {
        "q": 1,
@@ -196,28 +184,20 @@
      ],
      "steps": [
       {
-       "text": "Heat the oven to 220C. Cut the cauliflower into large florets.",
-       "min": 8
+       "text": "Trim the oyster mushrooms into thick clusters.",
+       "min": 4
       },
       {
-       "text": "Whisk the flour, water, garlic powder and salt into a batter and toss the florets through.",
-       "min": 5
+       "text": "Heat the vegetable oil in a large frying pan over high heat, add the mushrooms in batches, press down with a plate and fry for 5 minutes each side until crisp. Season with the salt.",
+       "min": 16
       },
       {
-       "text": "Bake on a lined tray, turning once, until crisp and golden.",
-       "min": 30
+       "text": "Melt the butter with the hot sauce and toss the mushrooms through.",
+       "min": 3
       },
       {
-       "text": "Melt the butter with the hot sauce, toss the florets through and bake 5 minutes more.",
-       "min": 8
-      },
-      {
-       "text": "Mash the blue cheese into the sour cream for a dip.",
-       "min": 5
-      },
-      {
-       "text": "Serve with celery sticks.",
-       "min": 2
+       "text": "Mash the blue cheese into the sour cream for a dip and serve with the celery sticks.",
+       "min": 4
       }
      ],
      "af": true
@@ -229,7 +209,7 @@
    "course": "m",
    "prep_min": 20,
    "cook_min": 120,
-   "make_ahead": "",
+   "make_ahead": "Chilli keeps up to 3 days chilled or 3 months frozen; reheat and cook the spaghetti fresh",
    "ingredients": [
     {
      "q": 600,
@@ -310,7 +290,7 @@
      "min": 10
     },
     {
-     "text": "Add the onion, tomatoes, spices, Worcestershire and chocolate",
+     "text": "Add the onion, tomatoes, chilli powder, cinnamon, cumin, allspice, Worcestershire and chocolate.",
      "min": 5
     },
     {
@@ -333,7 +313,7 @@
      "n": "Cincinnati chilli spaghetti (vegetarian)",
      "prep_min": 20,
      "cook_min": 48,
-     "make_ahead": "",
+     "make_ahead": "Make the chilli up to 3 days ahead in the fridge or 2 months ahead frozen; reheat and cook the spaghetti fresh",
      "ingredients": [
       {
        "q": 500,
@@ -420,7 +400,7 @@
        "min": 8
       },
       {
-       "text": "Add the stock, onion, tomatoes, spices, soy sauce and chocolate.",
+       "text": "Add the stock, onion, tomatoes, chilli powder, cinnamon, cumin, allspice, soy sauce and chocolate.",
        "min": 5
       },
       {
@@ -524,7 +504,7 @@
    "course": "d",
    "prep_min": 15,
    "cook_min": 15,
-   "make_ahead": "",
+   "make_ahead": "Juice the lemons and mix with the syrup up to 1 day ahead in the fridge; add soda water and lager to pour",
    "ingredients": [
     {
      "q": 4,
@@ -576,7 +556,7 @@
      "n": "Holy schnike lemon shandy (alcohol-free)",
      "prep_min": 15,
      "cook_min": 10,
-     "make_ahead": "",
+     "make_ahead": "Juice the lemons and mix with the syrup up to 1 day ahead in the fridge; add soda water and alcohol-free lager to pour",
      "ingredients": [
       {
        "q": 4,

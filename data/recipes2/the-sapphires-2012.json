@@ -35,7 +35,7 @@
     {
      "q": 2,
      "u": "tbsp",
-     "item": "tomato sauce",
+     "item": "tomato sauce, for the filling",
      "aisle": "Pantry"
     },
     {
@@ -133,7 +133,7 @@
       {
        "q": 2,
        "u": "tbsp",
-       "item": "tomato sauce",
+       "item": "tomato sauce, for the filling",
        "aisle": "Pantry"
       },
       {
@@ -567,15 +567,15 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Brew very strong coffee.",
+     "text": "Brew the ground coffee with the hot water to make very strong coffee.",
      "min": 5
     },
     {

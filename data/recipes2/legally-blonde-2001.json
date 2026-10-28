@@ -257,7 +257,7 @@
     {
      "q": 125,
      "u": "g",
-     "item": "butter, softened",
+     "item": "butter, softened, for the cakes",
      "aisle": "Dairy"
     },
     {
@@ -311,7 +311,7 @@
    ],
    "steps": [
     {
-     "text": "Beat the butter and sugar, add the eggs and lemon zest, then fold in the flour and milk.",
+     "text": "Beat the butter for the cakes with the sugar, add the eggs and lemon zest, then fold in the flour and milk.",
      "min": 12
     },
     {
@@ -323,7 +323,7 @@
      "min": 15
     },
     {
-     "text": "Beat the butter and icing sugar with crushed raspberries until pink and pipe on top.",
+     "text": "Beat the butter for the icing with the icing sugar and crushed raspberries until pink and pipe on top.",
      "min": 10
     }
    ],
@@ -368,8 +368,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 3,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }

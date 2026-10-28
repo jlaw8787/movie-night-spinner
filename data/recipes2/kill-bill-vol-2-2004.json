@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 9,
    "cook_min": 29,
-   "make_ahead": "",
+   "make_ahead": "Boil and peel the eggs up to 2 days ahead, keep chilled; cook the rice fresh",
    "ingredients": [
     {
      "q": 300,
@@ -70,7 +70,7 @@
      "n": "Pai Mei's rice bowl",
      "prep_min": 9,
      "cook_min": 29,
-     "make_ahead": "",
+     "make_ahead": "Soft-boil and peel the eggs up to 1 day ahead in the fridge; wash and cook the rice on the night",
      "ingredients": [
       {
        "q": 300,
@@ -135,7 +135,7 @@
    "course": "s",
    "prep_min": 9,
    "cook_min": 8,
-   "make_ahead": "",
+   "make_ahead": "Grate the cheddar and chop the jalapeños up to 1 day ahead; melt the dip fresh",
    "ingredients": [
     {
      "q": 375,
@@ -199,7 +199,7 @@
      "n": "Jalapeño cheese dip with chips and mushroom jerky",
      "prep_min": 9,
      "cook_min": 8,
-     "make_ahead": "",
+     "make_ahead": "Grate the cheddar and chop the jalapeños up to 2 days ahead, keep chilled; warm and melt the dip just before serving",
      "ingredients": [
       {
        "q": 375,
@@ -265,7 +265,7 @@
    "course": "m",
    "prep_min": 15,
    "cook_min": 205,
-   "make_ahead": "",
+   "make_ahead": "Simmer the pork in the lard up to 2 days ahead and cool it in the fat in the fridge; make the salsa and crisp the pork on the night",
    "ingredients": [
     {
      "q": 1.2,
@@ -357,7 +357,7 @@
      "n": "Hacienda mushroom carnitas",
      "prep_min": 15,
      "cook_min": 55,
-     "make_ahead": "",
+     "make_ahead": "Make the tomatillo salsa up to 3 days ahead, keep chilled; roast and crisp the mushrooms fresh",
      "ingredients": [
       {
        "q": 800,
@@ -524,7 +524,7 @@
    "course": "d",
    "prep_min": 17,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Juice the grapefruits and limes up to 1 day ahead, keep chilled; rim the glasses and build to order",
    "ingredients": [
     {
      "q": 180,
@@ -569,9 +569,9 @@
      "aisle": "Spices"
     },
     {
-     "q": null,
-     "u": "",
-     "item": "ice, to serve",
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
      "aisle": "Frozen"
     }
    ],
@@ -604,7 +604,7 @@
      "n": "Hacienda grapefruit paloma (alcohol-free)",
      "prep_min": 17,
      "cook_min": 15,
-     "make_ahead": "",
+     "make_ahead": "Steep and chill the green tea up to 2 days ahead and juice the fruit the day before; rim the glasses and build to order",
      "ingredients": [
       {
        "q": 1,
@@ -655,9 +655,9 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
-       "item": "ice, to serve",
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
        "aisle": "Frozen"
       }
      ],

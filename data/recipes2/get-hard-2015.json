@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 8,
    "cook_min": 45,
-   "make_ahead": "",
+   "make_ahead": "Toss the wings in the baking powder and salt up to 1 day ahead, uncovered in the fridge; bake and sauce on the night",
    "ingredients": [
     {
      "q": 1.2,
@@ -53,27 +53,45 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Car wash corner store cauliflower wings",
-     "prep_min": 14,
-     "cook_min": 35,
-     "make_ahead": "",
+     "n": "Car wash corner store battered onion wings",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "Cut the onions into petals up to 1 day ahead and keep them chilled; the ranch can sit in the fridge as well. Batter, fry and toss just before serving.",
      "ingredients": [
       {
-       "q": 1,
+       "q": 4,
        "u": "",
-       "item": "large cauliflower",
+       "item": "large brown onions",
        "aisle": "Produce"
       },
       {
-       "q": 100,
+       "q": 150,
        "u": "g",
        "item": "plain flour",
        "aisle": "Pantry"
       },
       {
-       "q": 150,
+       "q": 1,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
        "u": "ml",
-       "item": "water",
+       "item": "cold water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "vegetable oil",
        "aisle": "Pantry"
       },
       {
@@ -97,16 +115,24 @@
      ],
      "steps": [
       {
-       "text": "Heat the oven to 220C. Cut the cauliflower into large florets and toss in the flour whisked with the water and salt.",
-       "min": 7
+       "text": "Peel the onions, cut each into 6 wedges and separate into thick petals.",
+       "min": 8
       },
       {
-       "text": "Bake on a lined tray for 30 to 35 minutes, turning once, until crisp at the edges.",
-       "min": 36
+       "text": "Whisk the flour, baking powder and salt with the cold water into a thick batter.",
+       "min": 3
       },
       {
-       "text": "Toss in the hot sauce melted with the butter and serve with the ranch dressing.",
-       "min": 6
+       "text": "Heat the vegetable oil to 180C in a deep heavy pot.",
+       "min": 10
+      },
+      {
+       "text": "Dip the onion petals in the batter and fry in batches for 3 minutes until golden, then drain.",
+       "min": 12
+      },
+      {
+       "text": "Melt the butter with the hot sauce, toss the onion through it and serve with the ranch dressing.",
+       "min": 4
       }
      ],
      "af": true
@@ -118,7 +144,7 @@
    "course": "s",
    "prep_min": 12,
    "cook_min": 5,
-   "make_ahead": "",
+   "make_ahead": "Mix the chive cream up to 1 day ahead and keep chilled; warm the blinis and top to serve",
    "ingredients": [
     {
      "q": 16,
@@ -188,7 +214,7 @@
      "n": "Bel Air beetroot and black lentil blinis",
      "prep_min": 14,
      "cook_min": 25,
-     "make_ahead": "",
+     "make_ahead": "Cook and dress the lentils and slice the beetroot up to 1 day ahead and keep chilled; warm the blinis and top to serve",
      "ingredients": [
       {
        "q": 60,
@@ -270,7 +296,7 @@
    "course": "m",
    "prep_min": 10,
    "cook_min": 30,
-   "make_ahead": "",
+   "make_ahead": "Make the mac and cheese up to 1 day ahead, keep chilled and reheat; bake the chicken on the night",
    "ingredients": [
     {
      "q": 1,
@@ -342,7 +368,7 @@
      "n": "Darnell's family barbecue cauliflower",
      "prep_min": 10,
      "cook_min": 40,
-     "make_ahead": "",
+     "make_ahead": "Make the mac and cheese up to 1 day ahead, keep chilled and reheat; roast the cauliflower on the night",
      "ingredients": [
       {
        "q": 1,
@@ -505,7 +531,7 @@
    "course": "d",
    "prep_min": 8,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Blitz and strain the cucumber juice up to 1 day ahead and keep chilled; shake each drink to order",
    "ingredients": [
     {
      "q": 1,
@@ -544,9 +570,9 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
-     "item": "ice, as needed",
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
      "aisle": "Frozen"
     },
     {
@@ -585,7 +611,7 @@
      "n": "King's cucumber jalapeño margarita (alcohol-free)",
      "prep_min": 8,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Blitz and strain the cucumber juice up to 1 day ahead and keep chilled; shake each drink to order",
      "ingredients": [
       {
        "q": 1,
@@ -618,9 +644,9 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
-       "item": "ice, as needed",
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
        "aisle": "Frozen"
       },
       {

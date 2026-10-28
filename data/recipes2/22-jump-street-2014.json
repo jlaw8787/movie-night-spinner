@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 25,
    "cook_min": 20,
-   "make_ahead": "",
+   "make_ahead": "Mix, shape and chill the cakes up to 1 day ahead, covered; crumb and fry on the night and mix the chipotle mayo up to 2 days ahead",
    "ingredients": [
     {
      "q": 400,
@@ -98,7 +98,7 @@
      "n": "My name is Jeff hearts of palm cakes",
      "prep_min": 42,
      "cook_min": 6,
-     "make_ahead": "",
+     "make_ahead": "Mix and chill the hearts of palm cakes up to 1 day ahead, covered; finish with the panko and fry on the night",
      "ingredients": [
       {
        "q": 400,
@@ -198,7 +198,7 @@
    "course": "s",
    "prep_min": 15,
    "cook_min": 40,
-   "make_ahead": "",
+   "make_ahead": "Toss the wings in the baking powder mix up to 1 day ahead and leave uncovered in the fridge to dry; bake and glaze on the night",
    "ingredients": [
     {
      "q": 1.2,
@@ -281,33 +281,39 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Frat house sticky barbecue cauliflower wings",
-     "prep_min": 11,
-     "cook_min": 38,
-     "make_ahead": "",
+     "n": "Frat house sticky barbecue tofu wings",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "Press and tear the tofu up to 1 day ahead and keep it covered in the fridge; make the glaze up to 3 days ahead. Bake and glaze on the night.",
      "ingredients": [
       {
-       "q": 1,
-       "u": "",
-       "item": "large cauliflower",
+       "q": 800,
+       "u": "g",
+       "item": "extra-firm tofu",
        "aisle": "Produce"
       },
       {
-       "q": 100,
-       "u": "g",
-       "item": "plain flour",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 150,
-       "u": "ml",
-       "item": "water",
+       "q": 3,
+       "u": "tbsp",
+       "item": "cornflour",
        "aisle": "Pantry"
       },
       {
        "q": 1,
        "u": "tsp",
        "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
        "aisle": "Pantry"
       },
       {
@@ -349,23 +355,27 @@
      ],
      "steps": [
       {
-       "text": "Cut the cauliflower into large florets and toss in the flour whisked with the water, paprika and salt.",
+       "text": "Wrap the tofu in a clean tea towel and press it under a heavy pan for 15 minutes, then tear it into 4 cm chunks.",
+       "min": 15
+      },
+      {
+       "text": "Toss the tofu with the cornflour, paprika, olive oil and salt until every piece is coated.",
        "min": 5
       },
       {
-       "text": "Bake on a lined tray at 220C, turning once, for 30 minutes.",
-       "min": 32
+       "text": "Spread the tofu on two lined trays and bake at 220C for 30 minutes, turning once, until crisp.",
+       "min": 30
       },
       {
-       "text": "Simmer the barbecue sauce with the honey, soy and vinegar until sticky.",
-       "min": 4
+       "text": "Simmer the barbecue sauce with the honey, soy and cider vinegar for 5 minutes until sticky.",
+       "min": 5
       },
       {
-       "text": "Toss the hot cauliflower in the glaze and return to the oven for 5 minutes.",
-       "min": 6
+       "text": "Toss the hot tofu in the glaze and return to the oven for 5 minutes to caramelise.",
+       "min": 5
       },
       {
-       "text": "Scatter with sesame seeds and spring onion.",
+       "text": "Scatter with the sesame seeds and spring onions.",
        "min": 2
       }
      ],
@@ -378,7 +388,7 @@
    "course": "m",
    "prep_min": 35,
    "cook_min": 10,
-   "make_ahead": "",
+   "make_ahead": "Soak the onion in the lime juice up to 1 day ahead in the fridge; shred the cabbage and mix the crema up to 1 day ahead, batter and fry the fish on the night",
    "ingredients": [
     {
      "q": 1,
@@ -463,7 +473,7 @@
      "min": 3
     },
     {
-     "text": "Dip the fish in batter and fry at 180C until golden, working in batches.",
+     "text": "Dip the flathead strips in the batter and fry in the oil at 180C until golden, working in batches.",
      "min": 12
     },
     {
@@ -482,7 +492,7 @@
      "n": "Captain Dickson's fish tacos",
      "prep_min": 35,
      "cook_min": 10,
-     "make_ahead": "",
+     "make_ahead": "Soak the onion in the lime juice up to 1 day ahead in the fridge; make the batter and fry the fish just before serving so the soda water stays fizzy",
      "ingredients": [
       {
        "q": 1,
@@ -567,7 +577,7 @@
        "min": 3
       },
       {
-       "text": "Dip the fish in batter and fry in the oil at 180C until golden, working in batches.",
+       "text": "Dip the flathead strips in the batter and fry in the oil at 180C until golden, working in batches.",
        "min": 12
       },
       {
@@ -584,7 +594,7 @@
      "n": "Captain Dickson's banana blossom tacos",
      "prep_min": 35,
      "cook_min": 15,
-     "make_ahead": "",
+     "make_ahead": "Soak the onion in the lime juice up to 1 day ahead in the fridge; make the slaw and crema up to 1 day ahead, fry the banana blossom on the night",
      "ingredients": [
       {
        "q": 1,
@@ -697,7 +707,7 @@
      "n": "Captain Dickson's banana blossom tacos",
      "prep_min": 35,
      "cook_min": 15,
-     "make_ahead": "",
+     "make_ahead": "Soak the onion and mix the crema up to 1 day ahead; whisk the batter and fry the banana blossom just before serving so the sparkling water stays lively",
      "ingredients": [
       {
        "q": 1,
@@ -812,7 +822,7 @@
    "course": "w",
    "prep_min": 15,
    "cook_min": 20,
-   "make_ahead": "",
+   "make_ahead": "Mix the dough and press it into the pan up to 1 day ahead, keep chilled; bake just before serving so it is warm and soft",
    "ingredients": [
     {
      "q": 125,
@@ -877,7 +887,7 @@
    ],
    "steps": [
     {
-     "text": "Beat the butter with both sugars, the egg and vanilla. Stir in the flour, bicarb, a pinch of salt and chocolate chips.",
+     "text": "Beat the butter with both sugars, the egg and vanilla. Stir in the flour, bicarbonate of soda, a pinch of salt and chocolate chips.",
      "min": 8
     },
     {
@@ -901,7 +911,7 @@
    "course": "d",
    "prep_min": 8,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Juice the limes up to 1 day ahead and keep them in the fridge; rim the glasses and blend with the ice to order",
    "ingredients": [
     {
      "q": 5,
@@ -967,7 +977,7 @@
      "n": "Spring break frozen mango margarita (alcohol-free)",
      "prep_min": 11,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Juice the oranges and limes up to 1 day ahead and keep them in the fridge; blend with the frozen mango and ice just before serving",
      "ingredients": [
       {
        "q": 5,

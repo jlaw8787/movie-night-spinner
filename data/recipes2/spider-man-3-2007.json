@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 5,
    "cook_min": 20,
-   "make_ahead": "",
+   "make_ahead": "Bake up to 1 day ahead and chill; reheat at 160C for 8 minutes",
    "ingredients": [
     {
      "q": 8,
@@ -534,7 +534,7 @@
     {
      "q": 150,
      "u": "g",
-     "item": "raspberries",
+     "item": "raspberries, for the puree",
      "aisle": "Produce"
     },
     {
@@ -558,13 +558,13 @@
     {
      "q": 8,
      "u": "",
-     "item": "raspberries, whole, to finish",
+     "item": "whole raspberries, to finish",
      "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Blend the raspberries with the sugar and lemon juice, then push through a sieve.",
+     "text": "Blend the puree raspberries with the sugar and lemon juice, then push through a sieve.",
      "min": 5
     },
     {
@@ -588,7 +588,7 @@
       {
        "q": 150,
        "u": "g",
-       "item": "raspberries",
+       "item": "raspberries, for the puree",
        "aisle": "Produce"
       },
       {
@@ -612,13 +612,13 @@
       {
        "q": 8,
        "u": "",
-       "item": "raspberries, whole, to finish",
+       "item": "whole raspberries, to finish",
        "aisle": "Produce"
       }
      ],
      "steps": [
       {
-       "text": "Blend the raspberries with the sugar and lemon juice, then push through a sieve.",
+       "text": "Blend the puree raspberries with the sugar and lemon juice, then push through a sieve.",
        "min": 5
       },
       {

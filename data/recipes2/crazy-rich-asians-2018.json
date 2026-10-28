@@ -17,7 +17,7 @@
     {
      "q": 200,
      "u": "ml",
-     "item": "coconut milk",
+     "item": "coconut milk, for the marinade",
      "aisle": "Pantry"
     },
     {
@@ -65,7 +65,7 @@
    ],
    "steps": [
     {
-     "text": "Chop the lemongrass finely and mix with the coconut milk and turmeric. Add the chicken, which is the start of the marinating.",
+     "text": "Chop the lemongrass finely and mix with the coconut milk for the marinade and the turmeric. Add the chicken, which is the start of the marinating.",
      "min": 10
     },
     {
@@ -103,7 +103,7 @@
       {
        "q": 200,
        "u": "ml",
-       "item": "coconut milk",
+       "item": "coconut milk, for the marinade",
        "aisle": "Pantry"
       },
       {
@@ -151,7 +151,7 @@
      ],
      "steps": [
       {
-       "text": "Chop the lemongrass finely and mix with the coconut milk and turmeric. Pat the tofu dry and turn it through the marinade.",
+       "text": "Chop the lemongrass finely and mix with the coconut milk for the marinade and the turmeric. Pat the tofu dry and turn it through the marinade.",
        "min": 10
       },
       {
@@ -581,11 +581,11 @@
    ],
    "steps": [
     {
-     "text": "Whisk the yolks with the smaller amount of sugar, the coconut milk, oil and pandan paste, then fold in the flour.",
+     "text": "Whisk the egg yolks with the smaller amount of sugar, the coconut milk, oil and pandan paste, then fold in the flour.",
      "min": 10
     },
     {
-     "text": "Whisk the whites with the larger amount of sugar to stiff peaks and fold in gently.",
+     "text": "Whisk the egg whites with the larger amount of sugar to stiff peaks and fold in gently.",
      "min": 15
     },
     {
@@ -620,8 +620,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 4,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }

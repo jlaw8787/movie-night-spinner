@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 10,
    "cook_min": 45,
-   "make_ahead": "",
+   "make_ahead": "Rub the drumsticks up to 1 day ahead and keep covered in the fridge; roast and glaze on the night",
    "ingredients": [
     {
      "q": 12,
@@ -80,7 +80,7 @@
      "n": "King Argotron's roast battle mushroom drumsticks",
      "prep_min": 11,
      "cook_min": 30,
-     "make_ahead": "",
+     "make_ahead": "Halve and score the mushrooms up to 1 day ahead, covered in the fridge; rub, roast and glaze on the night",
      "ingredients": [
       {
        "q": 8,
@@ -156,7 +156,7 @@
    "course": "s",
    "prep_min": 12,
    "cook_min": 50,
-   "make_ahead": "",
+   "make_ahead": "Toss the wings with the baking powder and salt up to 1 day ahead and leave uncovered on a rack in the fridge to dry the skin; bake and glaze on the night",
    "ingredients": [
     {
      "q": 1.2,
@@ -241,27 +241,27 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Sturdy Wings honey soy cauliflower wings",
-     "prep_min": 13,
-     "cook_min": 40,
-     "make_ahead": "",
+     "n": "Sturdy Wings honey soy tempeh wings",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "Simmer and cut the tempeh up to 1 day ahead and keep it chilled; make the honey soy glaze up to 3 days ahead. Bake and glaze on the night.",
      "ingredients": [
       {
-       "q": 1,
-       "u": "",
-       "item": "large cauliflower",
+       "q": 500,
+       "u": "g",
+       "item": "tempeh",
        "aisle": "Produce"
       },
       {
-       "q": 100,
-       "u": "g",
-       "item": "plain flour",
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
        "aisle": "Pantry"
       },
       {
-       "q": 150,
-       "u": "ml",
-       "item": "water",
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
        "aisle": "Pantry"
       },
       {
@@ -271,21 +271,21 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
-       "item": "soy sauce, to taste",
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
        "aisle": "Pantry"
       },
       {
        "q": 2,
        "u": "",
-       "item": "garlic cloves",
+       "item": "garlic cloves, crushed",
        "aisle": "Produce"
       },
       {
        "q": 1,
        "u": "",
-       "item": "knob ginger",
+       "item": "knob ginger, grated",
        "aisle": "Produce"
       },
       {
@@ -295,40 +295,34 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
-       "item": "sesame seeds, to taste",
+       "q": 1,
+       "u": "tbsp",
+       "item": "sesame seeds",
        "aisle": "Pantry"
       },
       {
        "q": 2,
        "u": "",
-       "item": "spring onions",
+       "item": "spring onions, sliced",
        "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "salt",
-       "aisle": "Pantry"
       }
      ],
      "steps": [
       {
-       "text": "Heat the oven to 220C.",
+       "text": "Heat the oven to 220C. Cut the tempeh into thick fingers, simmer in water for 10 minutes, then drain well.",
+       "min": 12
+      },
+      {
+       "text": "Toss the tempeh with the vegetable oil and salt and bake on a rack for 25 minutes, turning once, until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Simmer the honey, soy, garlic, ginger and rice vinegar for 3 minutes until syrupy.",
        "min": 4
       },
       {
-       "text": "Cut the cauliflower into large florets, toss in the flour whisked with the water and the salt and bake on a lined tray for 30 to 35 minutes, turning once, until crisp.",
-       "min": 40
-      },
-      {
-       "text": "Simmer the honey, 3 tablespoons of soy, the crushed garlic cloves, the grated ginger and the rice vinegar for 3 minutes until syrupy.",
-       "min": 5
-      },
-      {
-       "text": "Toss the cauliflower in the glaze and scatter with sesame seeds and sliced spring onion.",
-       "min": 4
+       "text": "Toss the tempeh in the glaze and scatter with the sesame seeds and spring onions.",
+       "min": 3
       }
      ],
      "af": true
@@ -340,7 +334,7 @@
    "course": "m",
    "prep_min": 25,
    "cook_min": 30,
-   "make_ahead": "",
+   "make_ahead": "Make the burger sauce up to 2 days ahead and roll the patties up to 1 day ahead, both chilled; bake the fries and smash the patties on the night",
    "ingredients": [
     {
      "q": 750,
@@ -417,7 +411,7 @@
      "min": 9
     },
     {
-     "text": "Mix the mayo, the tomato sauce, the mustard and chopped pickles.",
+     "text": "Mix the mayonnaise, the tomato sauce, the mustard and chopped pickles.",
      "min": 7
     },
     {
@@ -432,7 +426,7 @@
      "n": "Ronnie's double cheeseburgers and fries (vegetarian)",
      "prep_min": 25,
      "cook_min": 30,
-     "make_ahead": "",
+     "make_ahead": "Make the burger sauce up to 2 days ahead and roll the patties up to 1 day ahead, both chilled; bake the fries and smash the patties on the night",
      "ingredients": [
       {
        "q": 750,
@@ -515,7 +509,7 @@
        "min": 9
       },
       {
-       "text": "Mix the mayo, the tomato sauce, the mustard and chopped pickles.",
+       "text": "Mix the mayonnaise, the tomato sauce, the mustard and chopped pickles.",
        "min": 7
       },
       {
@@ -532,7 +526,7 @@
    "course": "w",
    "prep_min": 20,
    "cook_min": 34,
-   "make_ahead": "",
+   "make_ahead": "Bake the cakes up to 1 day ahead in an airtight tin; warm them through, then glaze and serve with cream and almonds on the night",
    "ingredients": [
     {
      "q": 125,
@@ -623,7 +617,7 @@
    "course": "d",
    "prep_min": 8,
    "cook_min": 10,
-   "make_ahead": "",
+   "make_ahead": "Simmer, cool and strain the ginger syrup up to 5 days ahead in the fridge; add the lime juice and soda water to order",
    "ingredients": [
     {
      "q": 100,
@@ -662,9 +656,9 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
-     "u": "",
-     "item": "crushed ice, as needed",
+     "q": 3,
+     "u": "cup",
+     "item": "crushed ice",
      "aisle": "Frozen"
     }
    ],

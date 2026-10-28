@@ -485,15 +485,15 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Steep the tea bags, remove and stir in the sugar until dissolved.",
+     "text": "Steep the tea bags in the just boiled water for 5 minutes, remove and stir in the sugar until dissolved.",
      "min": 7
     },
     {
@@ -555,15 +555,15 @@
        "aisle": "Produce"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       }
      ],
      "steps": [
       {
-       "text": "Steep the tea bags, remove and stir in the sugar and vanilla until dissolved.",
+       "text": "Steep the tea bags in the just boiled water for 5 minutes, remove and stir in the sugar and vanilla until dissolved.",
        "min": 7
       },
       {

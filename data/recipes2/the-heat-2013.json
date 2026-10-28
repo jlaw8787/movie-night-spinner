@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 20,
    "cook_min": 15,
-   "make_ahead": "",
+   "make_ahead": "Make the chowder base through to the tender potato up to 2 days ahead in the fridge; add the clams and cream on the night",
    "ingredients": [
     {
      "q": 3,
@@ -94,7 +94,7 @@
      "n": "Boston mushroom and corn chowder with crackers",
      "prep_min": 15,
      "cook_min": 20,
-     "make_ahead": "",
+     "make_ahead": "Make the chowder base through to the tender potato up to 2 days ahead in the fridge; add the corn and cream on the night",
      "ingredients": [
       {
        "q": 30,
@@ -202,7 +202,7 @@
    "course": "s",
    "prep_min": 15,
    "cook_min": 42,
-   "make_ahead": "",
+   "make_ahead": "Toss the wings in the baking powder and salt and leave them uncovered in the fridge up to 1 day ahead, and mash the dip up to 2 days ahead; bake on the night",
    "ingredients": [
     {
      "q": 1.2,
@@ -288,9 +288,9 @@
    "alt": {
     "veg": {
      "n": "Watermelon toss buffalo cauliflower wings",
-     "prep_min": 16,
-     "cook_min": 35,
-     "make_ahead": "",
+     "prep_min": 15,
+     "cook_min": 40,
+     "make_ahead": "Cut the cauliflower into florets and make the blue cheese dip up to 1 day ahead and keep both chilled. Coat, bake and toss on the night.",
      "ingredients": [
       {
        "q": 1,
@@ -299,15 +299,15 @@
        "aisle": "Produce"
       },
       {
-       "q": 100,
-       "u": "g",
-       "item": "plain flour",
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
        "aisle": "Pantry"
       },
       {
-       "q": 150,
-       "u": "ml",
-       "item": "water",
+       "q": 2,
+       "u": "tsp",
+       "item": "baking powder",
        "aisle": "Pantry"
       },
       {
@@ -361,12 +361,12 @@
      ],
      "steps": [
       {
-       "text": "Cut the cauliflower into large florets and toss in the flour whisked with the water and salt.",
-       "min": 7
+       "text": "Cut the cauliflower into large florets and toss with the olive oil, baking powder and salt.",
+       "min": 8
       },
       {
-       "text": "Bake on a lined tray at 220C, turning once, for 30 to 35 minutes until crisp.",
-       "min": 37
+       "text": "Bake on a rack at 220C for 35 minutes, turning once, until crisp.",
+       "min": 35
       },
       {
        "text": "Mash the blue cheese with the sour cream, mayonnaise and a squeeze of lemon for the dip.",
@@ -374,7 +374,7 @@
       },
       {
        "text": "Melt the butter with the hot sauce and toss the cauliflower through it. Serve with the dip and celery.",
-       "min": 3
+       "min": 4
       }
      ],
      "af": true
@@ -386,7 +386,7 @@
    "course": "m",
    "prep_min": 30,
    "cook_min": 73,
-   "make_ahead": "",
+   "make_ahead": "Rub the beef up to 1 day ahead and keep it in the fridge, and parboil the potatoes up to 1 day ahead; roast and make the gravy on the night",
    "ingredients": [
     {
      "q": 1.5,
@@ -476,7 +476,7 @@
      "n": "Mullins family nut roast and gravy",
      "prep_min": 30,
      "cook_min": 73,
-     "make_ahead": "",
+     "make_ahead": "Press the nut roast mix into the tin up to 1 day ahead and keep it covered in the fridge; roast on the night and add 10 minutes",
      "ingredients": [
       {
        "q": 1,
@@ -717,7 +717,7 @@
    "course": "d",
    "prep_min": 10,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Juice the lemons up to 1 day ahead and keep them in the fridge; shake with the egg white and ice to order",
    "ingredients": [
     {
      "q": 240,
@@ -783,7 +783,7 @@
      "n": "Ashburn and Mullins whiskey sour (alcohol-free)",
      "prep_min": 10,
      "cook_min": 15,
-     "make_ahead": "",
+     "make_ahead": "Brew and chill the tea up to 2 days ahead in the fridge; shake with the egg white and ice to order",
      "ingredients": [
       {
        "q": 3,
