@@ -38,6 +38,9 @@ Live as of commit 4605515e (service worker version mns-d60f2755).
   Result: 850 of 850 pass, 0 menu/prep mismatches.
 
 ## Next job
+Oct 29 (on wip/menu-polish, not live yet): Video shop renamed to "Video store" as a placeholder. Tab, aria label, welcome card, error messages, comments, README, test (now tests/video-store.test.cjs). Element ids (viewShop etc.) and the "Spinner Video" sign left as is. 8 tests pass, frontcheck 68 steps 0 faults.
+REMIND OWNER: the store still needs a proper name and branding (sign, member card, rental slip). Owner asked to be reminded.
+
 UP NEXT (owner picked Oct 27): rename the "Video shop" tab and everything that says video shop to a store. Ask the owner what the store should be called before starting (tappable options). Find every mention in index.html, app.js, menu-formats, data and tests; keep the tape/rental look unless told otherwise. Check with wip/genre/lib/frontcheck.py, ask approval, then push live.
 After that, owner's options: rough cost per head on prep sheets and shopping lists; recipe polish (move cocktail steeping and chilling into make ahead, salt/pepper/oil lines no step uses, cauliflower wings repeated on 6 films).
 

@@ -1086,7 +1086,7 @@ async function openTrolley(f,menuOverride,label){
 }
 $("weekSet").addEventListener("click",()=>{if(current)setWeek(current)});
 
-/* video shop: browse every film like a rental store */
+/* video store: browse every film like a rental store */
 const SHOP_AISLES=[["Action and cops",["cop","street","philly"]],["Superheroes",["hero"]],["Sci-fi",["scifi","galaxy"]],["Horror",["horror"]],["Family",["kids","fairytale"]],["Fantasy and adventure",["wizard","adventure"]],["Comedy and teen",["teen","diner"]],["Romance",["romcom"]],["Crime and mob",["redsauce","deli","pizza"]],["Drama",["uptown","soul"]],["Westerns",["western"]],["Around the world",["aussie","asian","mex","tiki"]],["Holiday",["xmas"]]];
 const SHOP_AISLE_OF={};SHOP_AISLES.forEach(([n,ts])=>ts.forEach(t=>SHOP_AISLE_OF[t]=n));
 const TMDB_IMG_SHOP="https://image.tmdb.org/t/p/";
@@ -1535,7 +1535,7 @@ function showWelcome(){
   const modalTrigger=document.activeElement;
   const o=document.createElement("dialog");o.className="welcome";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label","How it works");
   o.innerHTML=`<div class="welcome-in"><h2>Movie night, sorted</h2><p class="lead">Pick a film and dinner comes with it.</p><ol>
-  <li><span><b>Pick a film</b>Spin the wheel, browse the video shop, or start from what you're craving.</span></li>
+  <li><span><b>Pick a film</b>Spin the wheel, browse the video store, or start from what you're craving.</span></li>
   <li><span><b>Get the menu</b>Every film has its own menu built from the movie, with recipes and a shopping list that scales from 1 to 24 guests.</span></li>
   <li><span><b>Cook, then press play</b>Lock it in for the week, tick off the shopping, and check where it's streaming.</span></li>
   </ol><button class="btn primary" type="button">Let's go</button></div>`;
@@ -1714,7 +1714,7 @@ async function renderCanvas(src,forPrint){
       /* html2canvas cannot blend layers, so a grain set to overlay or multiply would paint flat over the paper and wash it out: leave those texture layers out of the export */
       if(cs.mixBlendMode&&cs.mixBlendMode!=="normal"&&!el.textContent.trim()&&!el.querySelector("img"))el.style.visibility="hidden";
     });
-    /* only copy the export stage into html2canvas's working page: the video shop alone holds hundreds of posters, and waiting on them made a PDF take a minute */
+    /* only copy the export stage into html2canvas's working page: the video store alone holds hundreds of posters, and waiting on them made a PDF take a minute */
     const keep=el=>el===document.head||document.head.contains(el)||el.tagName==="STYLE"||el.tagName==="LINK"||el.contains(stage)||stage.contains(el);
     return await html2canvas(clone,{scale:2.5,backgroundColor:STY[current.theme].mg,logging:false,useCORS:true,ignoreElements:el=>!keep(el)});
   }finally{stage.remove()}
@@ -1864,7 +1864,7 @@ const startId=initialFilmId||(week&&week.id)||hist[0];
 const initialFilm=FILMS.find(f=>f.id===startId)||FILMS.find(f=>f.id==="Ghostbusters (1984)")||FILMS[0];
 if(FILMS.some(f=>f.id===startId)){$("now").textContent=initialFilm.title;show(initialFilm,true)}
 else{theatre.classList.add("closed");$("tease").textContent=initialFilmId?"That film isn't on the shelf. Spin the wheel instead":"Spin the wheel to raise the curtain";
-  const badLink=()=>{if(!initialFilmId)return;const st=$("status");if(st)st.textContent=`Couldn't find "${initialFilmId}" in the video shop. The link may be cut short or the film isn't in the catalogue. Spin the wheel or search the video shop.`};badLink();
+  const badLink=()=>{if(!initialFilmId)return;const st=$("status");if(st)st.textContent=`Couldn't find "${initialFilmId}" in the video store. The link may be cut short or the film isn't in the catalogue. Spin the wheel or search the video store.`};badLink();
   /* nobody's picked yet: dress the stage behind the curtain once the page has settled */
   addEventListener("load",()=>(window.requestIdleCallback||setTimeout)(()=>{if(!current)show(initialFilm,true).then(()=>{$("whereWheel").innerHTML="";badLink()})},{timeout:2500}))}
 addEventListener("load",()=>setTimeout(ensureDishes,3000));

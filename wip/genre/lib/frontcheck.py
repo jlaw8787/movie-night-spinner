@@ -178,7 +178,7 @@ async def scenario(b, name, ctxopts):
         await b1[1].click(); await pg.wait_for_timeout(3500); await menu_ready(pg)
         cur = await pg.evaluate("current.title"); return f"replayed {cur}" if cur.lower() == want.lower() else False
     await S("ticket stub replays a film", stub)
-    # 9 video shop
+    # 9 video store
     async def shop():
         await pg.click("#viewShopBtn"); await pg.wait_for_timeout(1500)
         n = await pg.evaluate("document.querySelectorAll('#shopAisles .tape').length")
@@ -186,7 +186,7 @@ async def scenario(b, name, ctxopts):
         m = await pg.evaluate("document.querySelectorAll('#shopAisles .tape').length")
         await pg.fill("#shopSearch", ""); await pg.wait_for_timeout(500)
         return f"{n} tapes, 'alien' gives {m}" if n and m else False
-    await S("Video shop opens and searches", shop, shot=True)
+    await S("Video store opens and searches", shop, shot=True)
     async def shopfilters():
         out = []
         for sel in ["#shopDecade", "#shopSvc"]:
@@ -194,7 +194,7 @@ async def scenario(b, name, ctxopts):
             if o: await pg.select_option(sel, o[0]); await pg.wait_for_timeout(500); out.append(await pg.evaluate("document.querySelectorAll('#shopAisles .tape').length")); await pg.select_option(sel, "")
         await pg.check("#shopKids"); await pg.wait_for_timeout(500); out.append(await pg.evaluate("document.querySelectorAll('#shopAisles .tape').length")); await pg.uncheck("#shopKids")
         return f"decade, service, kids gave {out}" if all(out) else False
-    await S("Video shop filters", shopfilters)
+    await S("Video store filters", shopfilters)
     async def rent():
         await pg.evaluate("document.querySelector('#shopAisles .tape').scrollIntoView({block:'center'})")
         await pg.click("#shopAisles .tape"); await pg.wait_for_timeout(900)
