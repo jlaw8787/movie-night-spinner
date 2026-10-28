@@ -38,6 +38,10 @@ Live as of commit 4605515e (service worker version mns-d60f2755).
   Result: 850 of 850 pass, 0 menu/prep mismatches.
 
 ## Next job
+UP NEXT (owner picked Oct 27): rename the "Video shop" tab and everything that says video shop to a store. Ask the owner what the store should be called before starting (tappable options). Find every mention in index.html, app.js, menu-formats, data and tests; keep the tape/rental look unless told otherwise. Check with wip/genre/lib/frontcheck.py, ask approval, then push live.
+After that, owner's options: rough cost per head on prep sheets and shopping lists; recipe polish (move cocktail steeping and chilling into make ahead, salt/pepper/oil lines no step uses, cauliflower wings repeated on 6 films).
+
+Earlier:
 Audit small fixes (live in 9ad982db): offline spins only land on saved menus (SAVED set from caches, spinPool), unknown film link shows a message in #status, welcome card says 1 to 24 guests, Shuffle the menu button removed, floating spin bar hides while .actions is on screen. Service worker only registers on https, so test offline by registering sw.js by hand on localhost.
 
 - Oct 27 (live in becb7538): diet and ease pass.
