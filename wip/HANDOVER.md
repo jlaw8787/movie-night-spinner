@@ -39,6 +39,7 @@ Live as of commit 021c211 (service worker version mns-6f5a3a0f).
 
 ## Next job
 Oct 29 (live in 021c211, sw mns-6f5a3a0f): Video shop renamed to "Video store" as a placeholder. Tab, aria label, welcome card, error messages, comments, README, test (now tests/video-store.test.cjs). Element ids (viewShop etc.) and the "Spinner Video" sign left as is. 8 tests pass, frontcheck 68 steps 0 faults.
+Oct 29 owner's order after the recipe polish is approved: 1) UI fixes: bigger prep sheet text on screen (print unchanged), tidy Video store top on phone so tapes show first (fold filters and price board), search box hidden under the sticky tab bar, chase a blank black screen seen in frontcheck phone step 3. 2) Series: "Part 2 of 4, start with the first?" swap when a spin lands on a sequel, plus a marathon planner (one combined planner, snacks and drinks from every film, one or two mains). About 75 series, 197 films. Build on the existing Double feature. 3) Cost per head.
 REMIND OWNER: the store still needs a proper name and branding (sign, member card, rental slip). Owner asked to be reminded.
 
 UP NEXT (owner picked Oct 27): rename the "Video shop" tab and everything that says video shop to a store. Ask the owner what the store should be called before starting (tappable options). Find every mention in index.html, app.js, menu-formats, data and tests; keep the tape/rental look unless told otherwise. Check with wip/genre/lib/frontcheck.py, ask approval, then push live.
