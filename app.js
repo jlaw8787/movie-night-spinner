@@ -219,7 +219,7 @@ function spin(){
       document.body.classList.add("winner");setTimeout(()=>document.body.classList.remove("winner"),1500);
       sfx.whirrStop();fanfare();
       buzz([30,50,90]);show(win,true).then(()=>leader(openCurtains));addHistory(win);
-      if(window.innerWidth<900)theatre.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});
+      /* an instant jump: a smooth glide while the bulbs flash and the menu builds left phones drawing a blank screen for half a second */if(window.innerWidth<900)theatre.scrollIntoView({behavior:"auto",block:"start"});
     }
   }
   requestAnimationFrame(frame);
