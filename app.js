@@ -1928,3 +1928,18 @@ $("setClearSaved").addEventListener("click",()=>{FAV=[];favSave();renderFav();$(
 renderFav();setSync();
 
 
+/* video store on phone: keep the pinned search below the top bar, fold the filters, and show how many are on */
+{const top=document.querySelector("header.top"),setH=()=>{if(top)document.documentElement.style.setProperty("--topH",top.offsetHeight+"px")};
+ setH();addEventListener("resize",setH);if(window.ResizeObserver&&top)new ResizeObserver(setH).observe(top);
+ const filt=$("shopFilt"),n=$("shopFiltN");
+ if(filt){if(matchMedia("(max-width:700px)").matches)filt.open=false;
+  const count=()=>{const k=[$("shopDecade").value,$("shopSvc").value,$("shopUnwatched").checked,$("shopKids").checked].filter(Boolean).length;n.textContent=k?String(k):""};
+  ["shopDecade","shopSvc","shopUnwatched","shopKids"].forEach(id=>{const el=$(id);if(el)el.addEventListener("change",count)});count();
+  document.addEventListener("click",e=>{if(filt.open&&matchMedia("(max-width:700px)").matches&&!filt.contains(e.target))filt.open=false});
+  addEventListener("resize",()=>{if(!matchMedia("(max-width:700px)").matches)filt.open=true})}}
+/* video store on phone: after a search or filter change, bring the results up under the pinned search */
+{const narrow2=()=>matchMedia("(max-width:700px)").matches,tools=document.querySelector("#viewShop .shop-tools"),cnt=$("shopCount");
+ const toResults=()=>{if(!narrow2()||!tools||!cnt)return;const off=(parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--topH"))||84)+tools.offsetHeight+8,y=cnt.getBoundingClientRect().top;if(y<off||y>innerHeight*.6)scrollTo({top:scrollY+y-off,behavior:"smooth"})};
+ let t=0;const later=()=>{clearTimeout(t);t=setTimeout(toResults,250)};
+ const s=$("shopSearch");if(s)s.addEventListener("input",later);
+ ["shopDecade","shopSvc","shopUnwatched","shopKids"].forEach(id=>{const el=$(id);if(el)el.addEventListener("change",later)})}
