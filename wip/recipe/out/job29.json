@@ -1,0 +1,1245 @@
+{
+ "two-hands-1999": {
+  "Bondi fish and chips": {
+   "base": {
+    "ing": [
+     {
+      "i": 2,
+      "set": {
+       "item": "plain flour, for the batter"
+      }
+     }
+    ],
+    "steps": [
+     {
+      "i": 0,
+      "text": "Fry the potato chips in the oil at 140C until soft and drain."
+     },
+     {
+      "i": 2,
+      "text": "Dip the flathead fillets in the dusting flour, then batter, and fry in the oil at 180C."
+     },
+     {
+      "i": 3,
+      "text": "Fry the chips again in the oil until crisp."
+     }
+    ]
+   },
+   "af": {
+    "ing": [
+     {
+      "i": 2,
+      "set": {
+       "item": "plain flour, for the batter"
+      }
+     }
+    ],
+    "steps": [
+     {
+      "i": 0,
+      "text": "Fry the potato chips in the oil at 140C until soft and drain."
+     },
+     {
+      "i": 2,
+      "text": "Dip the flathead fillets in the dusting flour, then batter, and fry at 180C."
+     }
+    ]
+   },
+   "veg": {
+    "ing": [
+     {
+      "i": 2,
+      "set": {
+       "item": "plain flour, for the batter"
+      }
+     }
+    ],
+    "steps": [
+     {
+      "i": 0,
+      "text": "Fry the potato chips in the oil at 140C until soft and drain."
+     },
+     {
+      "i": 2,
+      "text": "Pat the haloumi dry, dip in the dusting flour, then the batter, and fry in the oil at 180C."
+     },
+     {
+      "i": 3,
+      "text": "Fry the chips again in the oil until crisp."
+     }
+    ]
+   },
+   "veg_af": {
+    "ing": [
+     {
+      "i": 2,
+      "set": {
+       "item": "plain flour, for the batter"
+      }
+     }
+    ],
+    "steps": [
+     {
+      "i": 0,
+      "text": "Fry the potato chips in the oil at 140C until soft and drain."
+     },
+     {
+      "i": 2,
+      "text": "Pat the haloumi dry, dip in the dusting flour, then the batter, and fry in the oil at 180C."
+     },
+     {
+      "i": 3,
+      "text": "Fry the chips again in the oil until crisp."
+     }
+    ]
+   }
+  },
+  "Sichuan pepper squid and egg fried rice": {
+   "base": {
+    "ing": [
+     {
+      "i": 4,
+      "set": {
+       "item": "vegetable oil, for deep frying"
+      }
+     },
+     {
+      "i": 9,
+      "set": {
+       "item": "vegetable oil, for frying the rice"
+      }
+     }
+    ],
+    "steps": [
+     {
+      "i": 2,
+      "text": "Deep fry in the oil at 190C for a minute, then toss with chilli and spring onion."
+     },
+     {
+      "i": 3,
+      "text": "Heat the 2 tbsp of oil, scramble the eggs, then fry the rice with the eggs and spring onion."
+     }
+    ]
+   },
+   "veg": {
+    "ing": [
+     {
+      "i": 4,
+      "set": {
+       "item": "vegetable oil, for deep frying"
+      }
+     },
+     {
+      "i": 9,
+      "set": {
+       "item": "vegetable oil, for frying the rice"
+      }
+     }
+    ],
+    "steps": [
+     {
+      "i": 2,
+      "text": "Deep fry in the oil at 190C for 2 minutes until crisp, then toss with chilli and half the spring onion."
+     }
+    ]
+   }
+  },
+  "Ten-grand Bondi passionfruit shandy": {
+   "base": {
+    "make_ahead": "Stir the passionfruit, lime and sugar base up to 1 day ahead in the fridge; add the soda and lager on the night",
+    "ing": [
+     {
+      "i": 0,
+      "set": {
+       "item": "passionfruit, pulp, for the soda mix"
+      }
+     }
+    ]
+   },
+   "af": {
+    "make_ahead": "Stir the passionfruit, lime and sugar base up to 1 day ahead in the fridge; add the soda and alcohol-free beer on the night",
+    "ing": [
+     {
+      "i": 0,
+      "set": {
+       "item": "passionfruit, pulp, for the soda mix"
+      }
+     }
+    ]
+   }
+  }
+ },
+ "unbreakable-2000": {
+  "Limited Edition purple potato chips": {
+   "base": {
+    "steps": [
+     {
+      "i": 2,
+      "text": "Fry in the oil in small batches at 160C, stirring, until the bubbling slows and they crisp up."
+     },
+     {
+      "i": 3,
+      "text": "Drain on paper towel and season straight away with the sea salt and smoked paprika."
+     }
+    ]
+   }
+  },
+  "Weight room rump with garlic butter": {
+   "base": {
+    "make_ahead": "Mash the garlic butter up to 3 days ahead and keep chilled; roast, grill and blanch on the night"
+   },
+   "veg": {
+    "make_ahead": "Mash the garlic butter up to 3 days ahead and keep chilled; roast and grill on the night"
+   }
+  },
+  "Mr Glass lemon and berry jelly": {
+   "base": {
+    "steps": [
+     {
+      "i": 2,
+      "text": "Divide the blueberries and raspberries among round glasses and pour over the jelly."
+     }
+    ]
+   },
+   "veg": {
+    "steps": [
+     {
+      "i": 2,
+      "text": "Divide the blueberries and raspberries among round glasses and pour over the jelly."
+     }
+    ]
+   }
+  },
+  "Green poncho honey ginger tea": {
+   "base": {
+    "make_ahead": "Simmer the ginger water up to 1 day ahead and keep it in the fridge; reheat, steep the tea and finish on the night"
+   },
+   "af": {
+    "make_ahead": "Simmer the ginger water up to 1 day ahead and keep it in the fridge; reheat, steep the tea and finish on the night"
+   }
+  }
+ },
+ "uncle-buck-1989": {
+  "Miles's birthday caramel popcorn balls": {
+   "base": {
+    "make_ahead": "Make the balls up to 2 days ahead and keep airtight at room temperature"
+   },
+   "veg": {
+    "make_ahead": "Make the balls up to 2 days ahead and keep airtight at room temperature"
+   }
+  },
+  "Bowling night cheesy gravy chips": {
+   "base": {
+    "make_ahead": "Make the gravy up to 3 days ahead and reheat with a splash of water; bake the chips and assemble on the night"
+   },
+   "veg": {
+    "make_ahead": "Make the gravy up to 3 days ahead and reheat with a splash of water; bake the chips and assemble on the night"
+   }
+  },
+  "Buck's big breakfast for dinner": {
+   "base": {
+    "make_ahead": "Best cooked just before serving; fry the bacon up to 1 day ahead and reheat in a hot pan"
+   },
+   "veg": {
+    "make_ahead": "Best cooked just before serving; slice the mushrooms up to 1 day ahead and keep chilled"
+   }
+  },
+  "Uncle Buck's giant buttermilk pancake": {
+   "base": {
+    "make_ahead": "Cook and crumble the bacon up to 1 day ahead in the fridge; make the batter and cook the pancake just before serving"
+   },
+   "veg": {
+    "make_ahead": "Make the smoked maple pecans up to 3 days ahead, airtight; make the batter and cook the pancake just before serving"
+   }
+  },
+  "Buck's chocolate malted milk": {
+   "base": {
+    "make_ahead": "Best blended just before serving; chill the milk and the glasses the day before"
+   }
+  }
+ },
+ "under-siege-1992": {
+  "Galley bread rolls": {
+   "base": {
+    "make_ahead": "Bake up to 1 day ahead and keep airtight, warm through before serving; brush with butter and flaky salt on the day",
+    "ing": [
+     {
+      "i": 3,
+      "set": {
+       "item": "butter, softened, for the dough"
+      }
+     }
+    ],
+    "steps": [
+     {
+      "i": 5,
+      "text": "Brush with the melted butter and flaky salt."
+     }
+    ]
+   }
+  },
+  "Birthday cake bites": {
+   "base": {
+    "make_ahead": "Cut and split the sponge squares up to 1 day ahead, airtight; whip the cream, fill and dust on the day"
+   }
+  },
+  "Ryback's bouillabaisse": {
+   "base": {
+    "make_ahead": "Make the broth up to 2 days ahead and chill; reheat, then add the fish, mussels and prawns just before serving"
+   },
+   "veg": {
+    "make_ahead": "Soften the vegetables up to 2 days ahead and chill; add the stock and potatoes, then poach the eggs on the night"
+   }
+  },
+  "Captain's birthday cake": {
+   "base": {
+    "ing": [
+     {
+      "i": 0,
+      "set": {
+       "item": "butter, softened, for the cake"
+      }
+     },
+     {
+      "i": 6,
+      "set": {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "blue food colouring"
+      }
+     }
+    ],
+    "steps": [
+     {
+      "i": 5,
+      "text": "Tint a little buttercream blue with the food colouring and pipe the message."
+     }
+    ]
+   }
+  },
+  "USS Missouri navy grog": {
+   "base": {
+    "make_ahead": "Dissolve the honey syrup up to 3 days ahead and keep it in the fridge; shake each round to order over ice",
+    "ing": [
+     {
+      "i": 8,
+      "set": {
+       "q": 1,
+       "u": "",
+       "item": "whole nutmeg, to grate"
+      }
+     }
+    ]
+   },
+   "af": {
+    "make_ahead": "Steep and chill the spiced tea up to 2 days ahead in the fridge; make the honey syrup and shake to order",
+    "ing": [
+     {
+      "i": 9,
+      "set": {
+       "q": 1,
+       "u": "",
+       "item": "whole nutmeg, to grate"
+      }
+     }
+    ]
+   }
+  }
+ },
+ "unforgiven-1992": {
+  "Trail cornbread": {
+   "base": {
+    "make_ahead": "Fry and chop the bacon up to 1 day ahead in the fridge; mix and bake just before serving, best warm"
+   },
+   "veg": {
+    "make_ahead": "Measure the dry ingredients up to 1 day ahead; mix, add the corn and bake just before serving, best warm",
+    "ing": [
+     {
+      "i": 0,
+      "set": {
+       "item": "butter, melted in the hot pan"
+      }
+     }
+    ]
+   }
+  },
+  "Big Whiskey bread pudding, whiskey sauce": {
+   "base": {
+    "make_ahead": "Bake the pudding until set up to 1 day ahead and chill; reheat at 160C for 15 minutes and make the whiskey sauce fresh"
+   },
+   "af": {
+    "make_ahead": "Bake the pudding until set up to 1 day ahead and chill; reheat at 160C for 15 minutes and make the sauce fresh"
+   }
+  },
+  "Whiskey trail coffee with cream": {
+   "base": {
+    "make_ahead": "Best made fresh; whip the cream up to 2 hours ahead and keep it chilled"
+   },
+   "af": {
+    "make_ahead": "Best made fresh; whip the cream up to 2 hours ahead and keep it chilled"
+   }
+  }
+ },
+ "up-2009": {
+  "Muntz's roast sirloin dinner": {
+   "base": {
+    "make_ahead": "Reduce the beef stock up to 2 days ahead and reheat, whisking in the butter at the end; roast the beef and potatoes on the night"
+   },
+   "veg": {
+    "make_ahead": "Boil the cauliflower up to 1 day ahead and keep it in the fridge; reduce the stock sauce 2 days ahead, roast and steam on the night"
+   }
+  },
+  "Kevin's chocolate": {
+   "base": {
+    "make_ahead": "Set in the fridge and break into shards up to 1 week ahead, airtight"
+   }
+  },
+  "Ellie's grape soda floats": {
+   "base": {
+    "make_ahead": "Freeze the grapes up to 1 week ahead in a bag; mix the soda and build the floats on the night"
+   }
+  }
+ },
+ "us-2019": {
+  "Santa Cruz boardwalk corn dogs": {
+   "base": {
+    "make_ahead": "Mix the batter up to 3 hours ahead in the fridge; dip and fry just before serving, best hot",
+    "steps": [
+     {
+      "i": 2,
+      "text": "Dip in batter and fry in the oil at 180C for 4 minutes until golden, in batches."
+     }
+    ]
+   },
+   "veg": {
+    "make_ahead": "Mix the batter up to 3 hours ahead in the fridge; dip and fry just before serving, best hot",
+    "steps": [
+     {
+      "i": 2,
+      "text": "Dip in batter and fry in the oil at 180C for 4 minutes until golden, in batches."
+     }
+    ]
+   }
+  },
+  "Beach house barbecue chicken and corn": {
+   "base": {
+    "make_ahead": "Make the slaw up to 4 hours ahead, covered in the fridge; grill the chicken and corn on the night",
+    "steps": [
+     {
+      "i": 2,
+      "text": "Mix the cabbage with the mayonnaise for slaw."
+     }
+    ]
+   },
+   "veg": {
+    "make_ahead": "Press and slice the tofu up to 1 day ahead in the fridge; make the slaw up to 4 hours ahead and grill on the night",
+    "steps": [
+     {
+      "i": 3,
+      "text": "Mix the cabbage with the mayonnaise for slaw."
+     }
+    ]
+   }
+  },
+  "Holding hands punch": {
+   "base": {
+    "make_ahead": "Mix the juices up to 1 day ahead in the fridge; add the ice, grenadine and lemonade just before serving"
+   }
+  }
+ },
+ "valentine-s-day-2010": {
+  "Pistachio chocolate-dipped strawberries": {
+   "base": {
+    "make_ahead": "Dip and chill up to 4 hours ahead, kept on baking paper in the fridge"
+   }
+  },
+  "Reed's flower shop goat's cheese toasts": {
+   "base": {
+    "make_ahead": "Whip the cheeses up to 1 day ahead and keep chilled; toast, assemble and add the hot honey just before serving"
+   }
+  },
+  "Valentine's sirloin with garlic butter": {
+   "base": {
+    "make_ahead": "Boil the potatoes up to 1 day ahead and keep in the fridge; sear the steaks and make the sauce on the night"
+   },
+   "af": {
+    "make_ahead": "Boil the potatoes up to 1 day ahead and keep in the fridge; sear the steaks and make the sauce on the night"
+   },
+   "veg": {
+    "make_ahead": "Boil the potatoes up to 1 day ahead and keep in the fridge; sear the mushrooms and make the sauce on the night"
+   },
+   "veg_af": {
+    "make_ahead": "Boil the potatoes up to 1 day ahead and keep in the fridge; sear the mushrooms and make the sauce on the night"
+   }
+  },
+  "Valentine's red velvet cupcakes": {
+   "base": {
+    "steps": [
+     {
+      "i": 1,
+      "text": "Fold in the flour, cocoa, bicarbonate of soda and the buttermilk mixed with the vinegar."
+     }
+    ]
+   }
+  },
+  "Kara's anti-Valentine's pink fizz": {
+   "base": {
+    "make_ahead": "Best poured just before serving; chill the sparkling rose and pink lemonade the day before"
+   },
+   "af": {
+    "make_ahead": "Chill the alcohol-free sparkling rosé up to 1 day ahead; build in the glass just before serving"
+   }
+  }
+ },
+ "venom-2018": {
+  "Symbiote black sesame chicken": {
+   "base": {
+    "make_ahead": "Cut the chicken up to 1 day ahead and keep in the fridge; fry and toss through the sauce just before serving",
+    "steps": [
+     {
+      "i": 1,
+      "text": "Fry in the oil in batches until crisp."
+     }
+    ]
+   },
+   "veg": {
+    "make_ahead": "Press and cut the tofu up to 1 day ahead and keep in the fridge; fry and toss through the sauce just before serving"
+   }
+  },
+  "Crispy potato gems with sriracha mayo": {
+   "base": {
+    "make_ahead": "Best baked just before serving; mix the sriracha mayo up to 3 days ahead, covered in the fridge"
+   }
+  },
+  "Lobster tank garlic butter lobster tails": {
+   "base": {
+    "make_ahead": "Make the garlic parsley butter up to 2 days ahead, covered in the fridge; fry the fries and grill the tails on the night",
+    "steps": [
+     {
+      "i": 1,
+      "text": "Fry in the oil twice until crisp."
+     }
+    ]
+   }
+  },
+  "Mrs Chen's iced milk tea": {
+   "base": {
+    "make_ahead": "Steep and chill the tea with the condensed milk up to 2 days ahead in the fridge; pour over ice and add the cold milk to serve"
+   }
+  }
+ },
+ "venom-let-there-be-carnage-2021": {
+  "Venom's rocky road chocolate stash": {
+   "base": {
+    "make_ahead": "Spread and chill until firm, then keep up to 1 week, airtight"
+   },
+   "veg": {
+    "make_ahead": "Spread and chill until firm, then keep up to 1 week, airtight"
+   }
+  },
+  "Sonny and Cher's chicken bites": {
+   "base": {
+    "make_ahead": "Crumb the chicken up to 4 hours ahead and keep chilled on the tray; bake on the night",
+    "ing": [
+     {
+      "i": 5,
+      "set": {
+       "q": 1,
+       "u": "",
+       "item": "can cooking oil spray"
+      }
+     }
+    ]
+   },
+   "veg": {
+    "make_ahead": "Crumb the tofu up to 4 hours ahead and keep chilled on the tray; bake on the night",
+    "ing": [
+     {
+      "i": 5,
+      "set": {
+       "q": 1,
+       "u": "",
+       "item": "can cooking oil spray"
+      }
+     },
+     {
+      "i": 6,
+      "set": {
+       "item": "salt, to taste"
+      }
+     }
+    ]
+   }
+  },
+  "Bacon and scrambled eggs on toast": {
+   "base": {
+    "make_ahead": "Best cooked just before serving; fry the bacon up to 1 day ahead and reheat in a hot pan"
+   },
+   "veg": {
+    "make_ahead": "Best cooked just before serving; slice the mushrooms up to 1 day ahead and keep them chilled"
+   }
+  },
+  "Red velvet cake": {
+   "base": {
+    "ing": [
+     {
+      "i": 7,
+      "set": {
+       "q": 2,
+       "u": "tsp",
+       "item": "red food colouring"
+      }
+     }
+    ],
+    "steps": [
+     {
+      "i": 1,
+      "text": "Whisk the plain flour, cocoa, bicarb soda and caster sugar, then the eggs, oil, buttermilk and colouring until smooth."
+     }
+    ]
+   }
+  },
+  "Venom's triple chocolate thickshake": {
+   "base": {
+    "make_ahead": "Make the chocolate sauce up to 3 days ahead and keep chilled; warm gently and blend the shake on the night",
+    "steps": [
+     {
+      "i": 3,
+      "text": "Pour into the glasses, drizzle with the rest of the sauce and crumble a small brownie over each."
+     }
+    ]
+   }
+  }
+ },
+ "violent-night-2022": {
+  "Gertrude Lightstone's salmon roe blinis": {
+   "base": {
+    "make_ahead": "Mix the creme fraiche up to 1 day ahead and flake the salmon; warm the blinis and assemble just before serving"
+   },
+   "veg": {
+    "make_ahead": "Cook and dress the lentils up to 2 days ahead and chill; warm the blinis and assemble just before serving"
+   }
+  },
+  "Lightstone prime rib with horseradish": {
+   "base": {
+    "make_ahead": "Rub the beef up to 1 day ahead and keep it uncovered in the fridge; mix the horseradish cream up to 2 days ahead"
+   },
+   "af": {
+    "make_ahead": "Rub the beef up to 1 day ahead and keep it uncovered in the fridge; mix the horseradish cream up to 2 days ahead"
+   },
+   "veg": {
+    "make_ahead": "Rub the celeriac up to 1 day ahead and keep it in the fridge; mix the horseradish cream up to 2 days ahead"
+   },
+   "veg_af": {
+    "make_ahead": "Rub the celeriac up to 1 day ahead and keep it in the fridge; mix the horseradish cream up to 2 days ahead",
+    "ing": [
+     {
+      "i": 6,
+      "del": true
+     },
+     {
+      "i": 8,
+      "set": {
+       "q": 450,
+       "u": "ml"
+      }
+     }
+    ]
+   }
+  },
+  "Santa's stout and whisky boilermaker": {
+   "base": {
+    "make_ahead": "Chill the cans, the pint glasses and the cola up to 1 day ahead; pour to order"
+   }
+  }
+ },
+ "waitress-2007": {
+  "Diner biscuits and gravy": {
+   "base": {
+    "make_ahead": "Bake the biscuits up to 1 day ahead, airtight, and warm through; make the gravy fresh",
+    "steps": [
+     {
+      "i": 3,
+      "text": "Simmer with lots of cracked black peppercorns until thick."
+     }
+    ]
+   },
+   "veg": {
+    "make_ahead": "Bake the biscuits up to 1 day ahead, airtight, and warm through; make the gravy fresh"
+   }
+  }
+ },
+ "walk-hard-the-dewey-cox-story-2007": {
+  "Springberry Cajun boiled peanuts": {
+   "base": {
+    "make_ahead": "Boil up to 2 days ahead and keep in the brine in the fridge; reheat gently to serve warm"
+   }
+  },
+  "Wrong kid died cheese fries": {
+   "base": {
+    "make_ahead": "Make the cheese sauce up to 2 days ahead and reheat with a splash of milk; bake the fries on the night"
+   }
+  },
+  "Mama Cox's buttermilk fried chicken": {
+   "base": {
+    "make_ahead": "Soak the chicken in the buttermilk overnight, up to 1 day ahead in the fridge; dredge and fry on the night"
+   },
+   "veg": {
+    "make_ahead": "Soak the mushrooms in the buttermilk up to 4 hours ahead in the fridge; dredge and fry on the night",
+    "ing": [
+     {
+      "i": 11,
+      "set": {
+       "item": "black pepper, to taste"
+      }
+     }
+    ]
+   }
+  },
+  "Mama Cox's sweet potato meringue pie": {
+   "base": {
+    "make_ahead": "Bake the pie up to 1 day ahead without the meringue and chill; top and torch on the night",
+    "steps": [
+     {
+      "i": 5,
+      "text": "Whisk the egg whites with the caster sugar until glossy, pile on top and torch or grill until golden, then serve with the thickened cream, lightly whipped."
+     }
+    ]
+   }
+  },
+  "Dewey Cox Show peach sweet tea": {
+   "base": {
+    "ing": [
+     {
+      "i": 5,
+      "set": {
+       "q": 4,
+       "u": "cup",
+       "item": "ice"
+      }
+     }
+    ]
+   }
+  }
+ },
+ "wall-e-2008": {
+  "Axiom blue raspberry lemonade slushie": {
+   "base": {
+    "make_ahead": "Mix the lemon juice, cordial, sugar and water up to 1 day ahead in the fridge; blend with the frozen raspberries and ice just before serving"
+   }
+  }
+ },
+ "wall-street-1987": {
+  "Gekko's oysters on ice": {
+   "base": {
+    "make_ahead": "Mix the shallot dressing up to 1 day ahead in the fridge; shuck the oysters just before serving"
+   },
+   "veg": {
+    "make_ahead": "Poach and chill the mushrooms up to 1 day ahead in the fridge; lay them on ice and mix the dressing on the night"
+   }
+  },
+  "Raider's rib eye": {
+   "base": {
+    "steps": [
+     {
+      "i": 1,
+      "text": "Sear the steaks hard in the neutral oil in a very hot pan on both sides."
+     }
+    ]
+   },
+   "af": {
+    "steps": [
+     {
+      "i": 1,
+      "text": "Sear the steaks hard in the neutral oil in a very hot pan on both sides."
+     }
+    ]
+   },
+   "veg": {
+    "make_ahead": "Trim and season the mushrooms up to 4 hours ahead in the fridge; sear and make the sauce on the night",
+    "steps": [
+     {
+      "i": 1,
+      "text": "Sear the mushrooms hard in the neutral oil in a very hot pan, gill side up first, then turn and cook until tender."
+     }
+    ]
+   },
+   "veg_af": {
+    "make_ahead": "Trim and season the mushrooms up to 4 hours ahead in the fridge; sear and make the sauce on the night",
+    "steps": [
+     {
+      "i": 1,
+      "text": "Sear the mushrooms hard in the neutral oil in a very hot pan, gill side up first, then turn and cook until tender."
+     }
+    ]
+   }
+  },
+  "Old fashioned": {
+   "base": {
+    "make_ahead": "Make the sugar syrup up to 2 weeks ahead in the fridge; stir each drink over ice to order"
+   },
+   "af": {
+    "make_ahead": "Steep and chill the smoky tea up to 2 days ahead in the fridge; stir each drink over ice to order"
+   }
+  }
+ },
+ "wallace-gromit-the-curse-of-the-were-rabbit-2005": {
+  "Wallace's cheese board": {
+   "base": {
+    "steps": [
+     {
+      "i": 0,
+      "text": "Take the Wensleydale, aged cheddar and blue cheese out of the fridge to come to room temperature."
+     },
+     {
+      "i": 1,
+      "text": "Slice the apples and arrange the cheeses, crackers and apple on a board."
+     }
+    ]
+   }
+  },
+  "Wallace's iced Earl Grey lemonade": {
+   "base": {
+    "ing": [
+     {
+      "i": 4,
+      "set": {
+       "q": 4,
+       "item": "lemons"
+      }
+     },
+     {
+      "i": 5,
+      "del": true
+     },
+     {
+      "i": 7,
+      "set": {
+       "q": 4,
+       "u": "cup",
+       "item": "ice"
+      }
+     }
+    ],
+    "steps": [
+     {
+      "i": 1,
+      "text": "Peel the zest from 2 of the lemons, simmer it with the sugar and water, then cool and strain."
+     },
+     {
+      "i": 2,
+      "text": "Juice 3 of the lemons, including the 2 peeled ones, and stir the syrup and lemon juice into the tea."
+     },
+     {
+      "i": 3,
+      "text": "Pour over ice, top with sparkling water and add wheels from the last lemon and mint."
+     }
+    ]
+   }
+  }
+ },
+ "wallace-gromit-vengeance-most-fowl-2024": {
+  "Wensleydale cheese and chutney toasts": {
+   "base": {
+    "make_ahead": "Mix the grated cheeses up to 1 day ahead in the fridge; toast, top and grill just before serving"
+   }
+  },
+  "Breakfast machine French toast fingers": {
+   "base": {
+    "make_ahead": "Whisk the egg mixture up to 1 day ahead in the fridge; dip and fry just before serving"
+   }
+  },
+  "Bangers and mash": {
+   "base": {
+    "make_ahead": "Boil and mash the potatoes up to 1 day ahead and reheat with a splash of milk; brown the sausages and make the gravy on the night"
+   },
+   "veg": {
+    "make_ahead": "Boil and mash the potatoes up to 1 day ahead and reheat with a splash of milk; brown the sausages and make the gravy on the night"
+   }
+  },
+  "Jam roly-poly with custard": {
+   "base": {
+    "make_ahead": "Bake the roly-poly up to 1 day ahead, covered; reheat in slices and make the custard fresh",
+    "steps": [
+     {
+      "i": 2,
+      "text": "Serve in slices with the custard made from custard powder, the caster sugar and milk."
+     }
+    ]
+   }
+  },
+  "Gromit's malted hot chocolate": {
+   "base": {
+    "make_ahead": "Best made fresh; whip the cream up to 4 hours ahead and keep it chilled"
+   }
+  }
+ },
+ "watchmen-2009": {
+  "Rorschach's beans, upgraded": {
+   "base": {
+    "make_ahead": "Warm the cannellini beans with the garlic and rosemary up to 2 days ahead and reheat; grill the sourdough on the night"
+   }
+  },
+  "Gunga Diner onion bhajis": {
+   "base": {
+    "steps": [
+     {
+      "i": 0,
+      "text": "Mix the onions with the chilli, coriander, cumin seeds, ground turmeric, chilli powder and salt."
+     },
+     {
+      "i": 2,
+      "text": "Fry rough spoonfuls in the oil at 175C in batches until crisp."
+     }
+    ]
+   }
+  },
+  "Archie's midnight coffee old fashioned": {
+   "base": {
+    "make_ahead": "Steep the coffee in the bourbon and strain up to 3 days ahead, keeping it in the fridge; stir with ice to serve",
+    "ing": [
+     {
+      "i": 7,
+      "set": {
+       "q": 2,
+       "u": "cup",
+       "item": "ice, for stirring"
+      }
+     }
+    ]
+   },
+   "af": {
+    "make_ahead": "Steep the tea and coffee and strain up to 2 days ahead, keeping it chilled; stir with ice to serve",
+    "ing": [
+     {
+      "i": 8,
+      "set": {
+       "q": 2,
+       "u": "cup",
+       "item": "ice, for stirring"
+      }
+     }
+    ]
+   }
+  }
+ },
+ "wayne-s-world-1992": {
+  "Stan Mikita's mini jam doughnuts": {
+   "base": {
+    "steps": [
+     {
+      "i": 4,
+      "text": "Fry in the oil at 175C for a couple of minutes, turning, until golden."
+     }
+    ]
+   }
+  },
+  "Product placement pizza bites": {
+   "base": {
+    "make_ahead": "Cut the rounds up to 4 hours ahead, covered in the fridge; top and bake just before serving"
+   },
+   "veg": {
+    "make_ahead": "Cut the rounds up to 4 hours ahead, covered in the fridge; top and bake just before serving"
+   }
+  },
+  "Mirthmobile pepperoni pizza squares": {
+   "base": {
+    "make_ahead": "Slice the mushrooms up to 1 day ahead in the fridge; stretch the dough, top and bake on the night"
+   },
+   "veg": {
+    "make_ahead": "Toss the capsicum with the paprika and oil up to 1 day ahead in the fridge; stretch the dough, top and bake on the night"
+   }
+  },
+  "Stan Mikita's crullers": {
+   "base": {
+    "ing": [
+     {
+      "i": 0,
+      "set": {
+       "item": "water, for the dough"
+      }
+     }
+    ],
+    "steps": [
+     {
+      "i": 3,
+      "text": "Fry in the oil at 180C, paper and all, until puffed, then lift the paper out."
+     }
+    ]
+   }
+  }
+ },
+ "wayne-s-world-2-1993": {
+  "Stan Mikita's doughnuts": {
+   "base": {
+    "make_ahead": "Best fried just before serving; mix and roll the dough up to 2 hours ahead, covered in the fridge",
+    "steps": [
+     {
+      "i": 2,
+      "text": "Fry in the oil at 175C, turning, until golden, working in batches."
+     }
+    ]
+   }
+  },
+  "Waynestock chilli lime corn cobs": {
+   "base": {
+    "make_ahead": "Make the chilli lime butter up to 3 days ahead, covered in the fridge; grill the corn on the night"
+   }
+  },
+  "Aurora basement deep-dish pizza": {
+   "base": {
+    "make_ahead": "Simmer the tomato sauce up to 2 days ahead in the fridge; assemble and bake on the night",
+    "steps": [
+     {
+      "i": 0,
+      "text": "Press the dough into a 26cm cast iron pan or cake tin brushed with the olive oil, pushing it well up the sides."
+     }
+    ]
+   },
+   "veg": {
+    "make_ahead": "Simmer the tomato sauce up to 2 days ahead in the fridge; assemble and bake on the night",
+    "steps": [
+     {
+      "i": 0,
+      "text": "Press the dough into a 26cm cast iron pan or cake tin brushed with the olive oil, pushing it well up the sides."
+     }
+    ]
+   }
+  },
+  "Backstage choc cookie ice cream sandwiches": {
+   "base": {
+    "make_ahead": "Bake the cookies up to 2 days ahead; sandwich and freeze to firm up, then keep frozen up to 1 week",
+    "ing": [
+     {
+      "i": 8,
+      "set": {
+       "q": 3,
+       "u": "tbsp",
+       "item": "rainbow sprinkles, for the edges"
+      }
+     }
+    ],
+    "steps": [
+     {
+      "i": 0,
+      "text": "Beat the butter and sugar with the egg. Mix in the flour, cocoa, bicarbonate of soda and chocolate chips."
+     }
+    ]
+   }
+  },
+  "Waynestock pink lemonade slushie": {
+   "base": {
+    "make_ahead": "Make the syrup and lemon juice mix up to 2 days ahead in the fridge; blend with the raspberries, water and ice just before serving"
+   }
+  }
+ },
+ "wedding-crashers-2005": {
+  "Crab cakes": {
+   "base": {
+    "make_ahead": "Shape and chill the cakes up to 1 day ahead on a tray, covered in the fridge; pan-fry on the night"
+   }
+  },
+  "Sailing trip prawn rolls": {
+   "base": {
+    "make_ahead": "Mix the prawn filling up to 4 hours ahead and chill; butter and toast the buns just before serving"
+   },
+   "veg": {
+    "make_ahead": "Cut the haloumi and dice the celery up to 1 day ahead; fry and fill the rolls just before serving"
+   }
+  },
+  "Reception French 75": {
+   "base": {
+    "make_ahead": "Chill the sparkling wine up to 1 day ahead; shake each drink to order"
+   },
+   "af": {
+    "make_ahead": "Chill the alcohol-free sparkling wine up to 1 day ahead; shake each drink to order"
+   }
+  }
+ },
+ "weekend-at-bernie-s-1989": {
+  "Bernie's beach house clambake": {
+   "base": {
+    "make_ahead": "Scrub the clams and prep the corn and garlic up to 4 hours ahead in the fridge; cook it all on the night"
+   },
+   "af": {
+    "make_ahead": "Scrub the clams and prep the corn and garlic up to 4 hours ahead in the fridge; cook it all on the night"
+   },
+   "veg": {
+    "make_ahead": "Halve the corn and mushrooms and slice the haloumi up to 4 hours ahead in the fridge; cook it all on the night"
+   },
+   "veg_af": {
+    "make_ahead": "Halve the corn and mushrooms and slice the haloumi up to 4 hours ahead in the fridge; cook it all on the night"
+   }
+  },
+  "Larry and Richard's mai tai": {
+   "base": {
+    "make_ahead": "Juice the limes up to 1 day ahead and keep chilled; shake each batch with ice to order"
+   },
+   "af": {
+    "make_ahead": "Steep and chill the spiced tea up to 2 days ahead in the fridge; juice the limes and shake each batch to order"
+   }
+  }
+ },
+ "weird-science-1985": {
+  "Cheesy bacon dip cob loaf": {
+   "base": {
+    "make_ahead": "Fry the bacon and mix the dip up to 1 day ahead in the fridge; fill the loaf and bake on the night"
+   },
+   "veg": {
+    "make_ahead": "Fry the mushrooms and mix the dip up to 1 day ahead in the fridge; fill the loaf and bake on the night"
+   }
+  },
+  "Blues bar wings": {
+   "veg": {
+    "make_ahead": "Mash the blue cheese dip up to 2 days ahead, covered in the fridge; batter and bake the cauliflower on the night"
+   }
+  },
+  "Shermer house party pizza": {
+   "base": {
+    "make_ahead": "Slice the mushrooms up to 1 day ahead; stretch the dough, top and bake on the night"
+   },
+   "veg": {
+    "make_ahead": "Slice the mushrooms up to 1 day ahead; stretch the dough, top and bake on the night"
+   }
+  },
+  "Blues bar bourbon lemon smash": {
+   "base": {
+    "make_ahead": "Make the sugar syrup up to 1 week ahead in the fridge; muddle and shake each drink to order"
+   },
+   "af": {
+    "make_ahead": "Steep and chill the smoked tea up to 2 days ahead in the fridge; muddle and shake each drink to order"
+   }
+  }
+ },
+ "wet-hot-american-summer-2001": {
+  "Gene's mixed vegetable fritters": {
+   "base": {
+    "make_ahead": "Best fried just before serving; make the yoghurt dip up to 1 day ahead"
+   }
+  },
+  "Camp Firewood salted caramel s'mores": {
+   "base": {
+    "make_ahead": "Make the salted caramel up to 5 days ahead in the fridge and warm gently; toast the marshmallows and assemble on the night"
+   },
+   "veg": {
+    "make_ahead": "Make the salted caramel up to 5 days ahead in the fridge and warm gently; toast the marshmallows and assemble on the night"
+   }
+  },
+  "Mess hall sloppy joe sliders": {
+   "base": {
+    "make_ahead": "Cook the mince filling up to 2 days ahead and reheat; toast the buns and assemble on the night"
+   },
+   "veg": {
+    "make_ahead": "Cook the plant-based mince filling up to 2 days ahead and reheat; toast the buns and assemble on the night"
+   }
+  },
+  "Last day bug juice ice blocks": {
+   "base": {
+    "make_ahead": "Blend and freeze the ice blocks up to 1 week ahead and keep frozen; release under warm water to serve"
+   }
+  },
+  "Camp Firewood bug juice punch": {
+   "base": {
+    "make_ahead": "Mix and chill the juices and cordial up to 1 day ahead; add the ice, lemonade and berries just before serving",
+    "ing": [
+     {
+      "i": 6,
+      "set": {
+       "q": 4,
+       "u": "cup",
+       "item": "ice"
+      }
+     }
+    ]
+   }
+  }
+ },
+ "what-we-do-in-the-shadows-2014": {
+  "Nick's hot chips": {
+   "base": {
+    "steps": [
+     {
+      "i": 1,
+      "text": "Fry in the oil at 150C, rest, then fry at 190C until crunchy. Salt well."
+     }
+    ]
+   }
+  },
+  "Rare roast beef rolls": {
+   "base": {
+    "steps": [
+     {
+      "i": 0,
+      "text": "Season the beef and sear on all sides in the olive oil in a hot pan."
+     }
+    ]
+   }
+  },
+  "Blood orange spritz": {
+   "base": {
+    "ing": [
+     {
+      "i": 2,
+      "set": {
+       "q": 4,
+       "u": "cup",
+       "item": "ice"
+      }
+     }
+    ]
+   }
+  }
+ },
+ "when-harry-met-sally-1989": {
+  "Roast grape and ricotta crostini": {
+   "base": {
+    "ing": [
+     {
+      "i": 9,
+      "set": {
+       "item": "cracked black pepper, to taste"
+      }
+     }
+    ]
+   }
+  },
+  "Pastrami on rye": {
+   "base": {
+    "make_ahead": "Best steamed just before serving; set out the mustard and pickles ahead"
+   }
+  },
+  "Apple pie à la mode, her way": {
+   "base": {
+    "make_ahead": "Cut the pie into slices up to 1 day ahead and keep covered; warm in the oven just before serving"
+   }
+  }
+ },
+ "white-christmas-1954": {
+  "Midnight liverwurst on rye and buttermilk": {
+   "base": {
+    "make_ahead": "Make the sandwiches up to 2 hours ahead, covered with a damp cloth in the fridge; pour the buttermilk to serve"
+   },
+   "veg": {
+    "make_ahead": "Make the mushroom pate up to 2 days ahead in the fridge; build the sandwiches up to 2 hours ahead"
+   }
+  },
+  "Columbia Inn cheese puffs": {
+   "base": {
+    "make_ahead": "Make the choux paste up to 1 day ahead, covered in the fridge; pipe and bake on the night, best warm"
+   }
+  },
+  "Vermont inn roast turkey": {
+   "base": {
+    "make_ahead": "Mix the stuffing up to 1 day ahead in the fridge; rub the turkey with butter and herbs up to 1 day ahead"
+   },
+   "veg": {
+    "make_ahead": "Mix the stuffing up to 1 day ahead in the fridge; rub the celeriac with butter and herbs up to 1 day ahead"
+   }
+  },
+  "Snowy coconut cake": {
+   "base": {
+    "make_ahead": "Bake and wrap the cakes up to 2 days ahead; ice and roll in coconut on the day"
+   }
+  }
+ }
+}
