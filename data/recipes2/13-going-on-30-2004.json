@@ -398,7 +398,7 @@
     {
      "q": 200,
      "u": "g",
-     "item": "butter, softened",
+     "item": "butter, softened, for the cake",
      "aisle": "Dairy"
     },
     {
@@ -428,7 +428,7 @@
     {
      "q": 125,
      "u": "ml",
-     "item": "milk",
+     "item": "milk, for the cake",
      "aisle": "Dairy"
     },
     {
@@ -529,8 +529,8 @@
      "aisle": "Bottle shop"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }
@@ -573,8 +573,8 @@
        "aisle": "Produce"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       }

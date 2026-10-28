@@ -248,7 +248,7 @@
     {
      "q": 2,
      "u": "tbsp",
-     "item": "vegetable oil",
+     "item": "vegetable oil, for browning",
      "aisle": "Pantry"
     },
     {
@@ -296,7 +296,7 @@
    ],
    "steps": [
     {
-     "text": "Brown the beef in batches.",
+     "text": "Brown the beef in batches in the browning oil.",
      "min": 15
     },
     {
@@ -308,7 +308,7 @@
      "min": 180
     },
     {
-     "text": "Fry the potatoes at 140C, then again at 180C until crisp.",
+     "text": "Fry the potatoes in the frying oil at 140C, then again at 180C until crisp.",
      "min": 25
     },
     {
@@ -334,7 +334,7 @@
       {
        "q": 2,
        "u": "tbsp",
-       "item": "vegetable oil",
+       "item": "vegetable oil, for browning",
        "aisle": "Pantry"
       },
       {
@@ -400,7 +400,7 @@
      ],
      "steps": [
       {
-       "text": "Brown the beef in batches.",
+       "text": "Brown the beef in batches in the browning oil.",
        "min": 15
       },
       {
@@ -412,7 +412,7 @@
        "min": 180
       },
       {
-       "text": "Fry the potatoes at 140C, then again at 180C until crisp.",
+       "text": "Fry the potatoes in the frying oil at 140C, then again at 180C until crisp.",
        "min": 25
       },
       {
@@ -442,7 +442,7 @@
       {
        "q": 2,
        "u": "tbsp",
-       "item": "vegetable oil",
+       "item": "vegetable oil, for browning",
        "aisle": "Pantry"
       },
       {
@@ -502,7 +502,7 @@
      ],
      "steps": [
       {
-       "text": "Brown the mushrooms in the oil in batches.",
+       "text": "Brown the mushrooms in the browning oil in batches.",
        "min": 12
       },
       {
@@ -514,7 +514,7 @@
        "min": 75
       },
       {
-       "text": "Fry the potatoes at 140C, then again at 180C until crisp.",
+       "text": "Fry the potatoes in the frying oil at 140C, then again at 180C until crisp.",
        "min": 25
       },
       {
@@ -545,7 +545,7 @@
       {
        "q": 2,
        "u": "tbsp",
-       "item": "vegetable oil",
+       "item": "vegetable oil, for browning",
        "aisle": "Pantry"
       },
       {
@@ -605,7 +605,7 @@
      ],
      "steps": [
       {
-       "text": "Brown the mushrooms in the oil in batches.",
+       "text": "Brown the mushrooms in the browning oil in batches.",
        "min": 12
       },
       {
@@ -617,7 +617,7 @@
        "min": 75
       },
       {
-       "text": "Fry the potatoes at 140C, then again at 180C until crisp.",
+       "text": "Fry the potatoes in the frying oil at 140C, then again at 180C until crisp.",
        "min": 25
       },
       {
@@ -662,7 +662,7 @@
     {
      "q": 120,
      "u": "g",
-     "item": "caster sugar",
+     "item": "caster sugar, for the ice cream",
      "aisle": "Pantry"
     },
     {
@@ -690,7 +690,7 @@
      "min": 8
     },
     {
-     "text": "Whisk the yolks and sugar, whisk in the hot milk and cook to 82C, stirring.",
+     "text": "Whisk the yolks and the ice cream sugar, whisk in the hot milk and cook to 82C, stirring.",
      "min": 10
     },
     {
@@ -698,7 +698,7 @@
      "min": 25
     },
     {
-     "text": "Simmer the raspberries with sugar, sieve and cool.",
+     "text": "Simmer the raspberries with the sugar for the sauce, sieve and cool.",
      "min": 12
     },
     {

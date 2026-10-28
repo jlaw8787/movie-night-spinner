@@ -27,7 +27,7 @@
      "aisle": "Meat"
     },
     {
-     "q": null,
+     "q": 24,
      "u": "",
      "item": "toothpicks, to secure",
      "aisle": "Pantry"
@@ -99,7 +99,7 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
+       "q": 24,
        "u": "",
        "item": "toothpicks, to secure",
        "aisle": "Pantry"
@@ -344,7 +344,7 @@
     {
      "q": 250,
      "u": "g",
-     "item": "butter, softened",
+     "item": "butter, softened, for the cake",
      "aisle": "Dairy"
     },
     {
@@ -398,7 +398,7 @@
    ],
    "steps": [
     {
-     "text": "Beat the butter and sugar, add the eggs, then fold in the flour and milk. Divide between two 20cm tins.",
+     "text": "Beat the cake butter and sugar, add the eggs, then fold in the flour and milk. Divide between two 20cm tins.",
      "min": 15
     },
     {

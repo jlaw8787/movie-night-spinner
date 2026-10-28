@@ -108,8 +108,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 1,
+     "u": "tsp",
      "item": "food colouring, two colours",
      "aisle": "Pantry"
     },
@@ -130,7 +130,7 @@
      "min": 15
     },
     {
-     "text": "Split between two small pans, tint each a different colour and pour small rounds onto the paper, swirling the colours.",
+     "text": "Split between two small pans, tint each a different colour with the food colouring and pour small rounds onto the paper, swirling the colours.",
      "min": 7
     },
     {
@@ -146,7 +146,7 @@
    "course": "m",
    "prep_min": 20,
    "cook_min": 514,
-   "make_ahead": "",
+   "make_ahead": "Soak the drumsticks in the buttermilk overnight in the fridge, up to 1 day ahead; dredge and fry on the night",
    "ingredients": [
     {
      "q": 8,
@@ -221,7 +221,7 @@
      "min": 10
     },
     {
-     "text": "Fry at 170C in batches until crisp and cooked through.",
+     "text": "Fry in the vegetable oil at 170C in batches until crisp and cooked through.",
      "min": 24
     },
     {
@@ -236,7 +236,7 @@
      "n": "Kansas farm fried mushrooms",
      "prep_min": 20,
      "cook_min": 70,
-     "make_ahead": "",
+     "make_ahead": "Soak the mushrooms in the buttermilk and salt up to 2 hours ahead in the fridge; dredge and fry on the night",
      "ingredients": [
       {
        "q": 600,
@@ -324,7 +324,7 @@
    "course": "w",
    "prep_min": 13,
    "cook_min": 180,
-   "make_ahead": "",
+   "make_ahead": "Make and chill the jellies up to 2 days ahead; whip the cream and add the glitter to serve",
    "ingredients": [
     {
      "q": 1,
@@ -339,8 +339,8 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 1,
+     "u": "tsp",
      "item": "edible glitter",
      "aisle": "Pantry"
     },
@@ -376,7 +376,7 @@
      "n": "Ruby slipper jelly (vegetarian)",
      "prep_min": 6,
      "cook_min": 128,
-     "make_ahead": "",
+     "make_ahead": "Set the jellies up to 2 days ahead, chilled; whip the cream and add the glitter to serve",
      "ingredients": [
       {
        "q": 500,
@@ -403,8 +403,8 @@
        "aisle": "Produce"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 1,
+       "u": "tsp",
        "item": "edible glitter",
        "aisle": "Pantry"
       },
@@ -442,7 +442,7 @@
    "course": "d",
    "prep_min": 10,
    "cook_min": 12,
-   "make_ahead": "",
+   "make_ahead": "Simmer, cool and strain the ginger syrup up to 3 days ahead in the fridge; juice the lemons and mix with soda water to serve",
    "ingredients": [
     {
      "q": 80,

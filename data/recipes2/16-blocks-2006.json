@@ -15,8 +15,8 @@
      "aisle": "Meat"
     },
     {
-     "q": 1,
-     "u": "tbsp",
+     "q": 4,
+     "u": "tsp",
      "item": "malt vinegar",
      "aisle": "Pantry"
     },
@@ -34,30 +34,24 @@
     },
     {
      "q": 1,
-     "u": "tsp",
-     "item": "malt vinegar, extra splash",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
      "u": "",
      "item": "jar pickled onions",
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "tbsp",
      "item": "hot English mustard",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Score the skin, pat dry and refrigerate uncovered overnight to dry it out.",
+     "text": "Score the skin of the pork belly, pat dry and refrigerate uncovered overnight to dry it out.",
      "min": 600
     },
     {
-     "text": "Rub the skin with vinegar, then salt.",
+     "text": "Rub the skin with 1 tbsp of the malt vinegar, then the salt.",
      "min": 5
     },
     {
@@ -73,7 +67,7 @@
      "min": 10
     },
     {
-     "text": "Sprinkle with flaky salt mixed with a splash of malt vinegar. Serve with pickled onions and hot mustard.",
+     "text": "Sprinkle with the flaky salt mixed with the last 1 tsp of malt vinegar. Serve with pickled onions and hot mustard.",
      "min": 15
     }
    ],
@@ -99,8 +93,8 @@
        "aisle": "Pantry"
       },
       {
-       "q": 1,
-       "u": "tbsp",
+       "q": 4,
+       "u": "tsp",
        "item": "malt vinegar",
        "aisle": "Pantry"
       },
@@ -118,19 +112,13 @@
       },
       {
        "q": 1,
-       "u": "tsp",
-       "item": "malt vinegar, extra splash",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
        "u": "",
        "item": "jar pickled onions",
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "tbsp",
        "item": "hot English mustard",
        "aisle": "Pantry"
       }
@@ -145,11 +133,11 @@
        "min": 15
       },
       {
-       "text": "While still hot, flick over the malt vinegar with your fingertips and dust with the salt.",
+       "text": "While still hot, flick over 1 tbsp of the malt vinegar with your fingertips and dust with the salt.",
        "min": 3
       },
       {
-       "text": "Sprinkle with flaky salt mixed with the extra splash of vinegar. Serve with pickled onions and hot mustard.",
+       "text": "Sprinkle with the flaky salt mixed with the last 1 tsp of malt vinegar. Serve with pickled onions and hot mustard.",
        "min": 5
       }
      ],
@@ -162,7 +150,7 @@
    "course": "s",
    "prep_min": 10,
    "cook_min": 15,
-   "make_ahead": "",
+   "make_ahead": "Mix the dipping sauce up to 2 days ahead and keep it chilled; fry the dumplings straight from frozen just before serving",
    "ingredients": [
     {
      "q": 24,
@@ -230,7 +218,7 @@
      "n": "Chinatown dumplings (vegetarian)",
      "prep_min": 10,
      "cook_min": 10,
-     "make_ahead": "",
+     "make_ahead": "Make the dip up to 3 days ahead in a jar in the fridge; cook the dumplings from frozen on the night, they are best hot and crisp",
      "ingredients": [
       {
        "q": 24,
@@ -300,7 +288,7 @@
    "course": "m",
    "prep_min": 15,
    "cook_min": 5,
-   "make_ahead": "",
+   "make_ahead": "Dice the onion and slice the tomato and lettuce up to 1 day ahead, keep chilled; cook the mince just before serving",
    "ingredients": [
     {
      "q": 1,
@@ -353,17 +341,17 @@
     {
      "q": null,
      "u": "",
-     "item": "salt and pepper",
+     "item": "salt and pepper, to taste",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Fry the onion on a hot griddle until soft.",
+     "text": "Fry the onion in the oil on a hot griddle until soft.",
      "min": 5
     },
     {
-     "text": "Add the mince and chop it up with a spatula as it browns, seasoning well.",
+     "text": "Add the mince and chop it up with a spatula as it browns, seasoning well with salt and pepper.",
      "min": 8
     },
     {
@@ -371,7 +359,7 @@
      "min": 2
     },
     {
-     "text": "Toast the rolls. Pile in the meat with lettuce, tomato and mayo.",
+     "text": "Toast the rolls. Pile in the meat with lettuce, tomato and mayonnaise.",
      "min": 5
     }
    ],
@@ -382,7 +370,7 @@
      "n": "Chopped cheese (vegetarian)",
      "prep_min": 15,
      "cook_min": 5,
-     "make_ahead": "",
+     "make_ahead": "Chop the onion and prep the salad up to 1 day ahead, keep chilled; brown the mince and melt the cheese on the night",
      "ingredients": [
       {
        "q": 1,
@@ -435,7 +423,7 @@
       {
        "q": null,
        "u": "",
-       "item": "salt and pepper",
+       "item": "salt and pepper, to taste",
        "aisle": "Pantry"
       }
      ],
@@ -453,7 +441,7 @@
        "min": 2
       },
       {
-       "text": "Toast the rolls. Pile in the filling with the lettuce, tomato and mayo.",
+       "text": "Toast the rolls. Pile in the filling with the lettuce, tomato and mayonnaise.",
        "min": 5
       }
      ],
@@ -586,7 +574,7 @@
    ],
    "steps": [
     {
-     "text": "Brew the coffee strong and let it cool.",
+     "text": "Brew the coffee strong with the boiling water and let it cool.",
      "min": 10
     },
     {

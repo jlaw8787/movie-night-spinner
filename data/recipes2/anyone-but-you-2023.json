@@ -39,8 +39,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 8,
+     "u": "cup",
      "item": "crushed ice",
      "aisle": "Frozen"
     }
@@ -99,8 +99,8 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 8,
+       "u": "cup",
        "item": "crushed ice",
        "aisle": "Frozen"
       }
@@ -331,13 +331,13 @@
     {
      "q": 1,
      "u": "",
-     "item": "lemon, juiced",
+     "item": "lemon, juiced, for the pan sauce",
      "aisle": "Produce"
     },
     {
      "q": 1,
      "u": "",
-     "item": "lemon, cut into wedges",
+     "item": "lemon, cut into wedges, for serving",
      "aisle": "Produce"
     },
     {
@@ -353,7 +353,7 @@
      "min": 20
     },
     {
-     "text": "Pan fry the barramundi skin side down until crisp, then flip briefly.",
+     "text": "Pan fry the barramundi in the olive oil, skin side down, until crisp, then flip briefly.",
      "min": 8
     },
     {
@@ -401,13 +401,13 @@
       {
        "q": 1,
        "u": "",
-       "item": "lemon, juiced",
+       "item": "lemon, juiced, for the pan sauce",
        "aisle": "Produce"
       },
       {
        "q": 1,
        "u": "",
-       "item": "lemon, cut into wedges",
+       "item": "lemon, cut into wedges, for serving",
        "aisle": "Produce"
       },
       {
@@ -525,7 +525,7 @@
    "course": "d",
    "prep_min": 10,
    "cook_min": 120,
-   "make_ahead": "Make fresh",
+   "make_ahead": "Chill the flutes and the sparkling wine up to 1 day ahead; build the glasses just before serving",
    "ingredients": [
     {
      "q": 1,
@@ -573,7 +573,7 @@
      "n": "Harbour passionfruit fizz",
      "prep_min": 10,
      "cook_min": 120,
-     "make_ahead": "Make fresh",
+     "make_ahead": "Chill the flutes and the alcohol-free sparkling wine up to 1 day ahead; build the glasses to serve",
      "ingredients": [
       {
        "q": 1,

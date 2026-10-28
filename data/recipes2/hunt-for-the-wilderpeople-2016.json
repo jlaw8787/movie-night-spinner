@@ -11,7 +11,7 @@
     {
      "q": 60,
      "u": "g",
-     "item": "butter, cold",
+     "item": "butter, cold, for the dough",
      "aisle": "Dairy"
     },
     {
@@ -47,7 +47,7 @@
    ],
    "steps": [
     {
-     "text": "Rub the cold butter into the flour and salt.",
+     "text": "Rub the cold butter for the dough into the flour and salt.",
      "min": 5
     },
     {
@@ -59,7 +59,7 @@
      "min": 30
     },
     {
-     "text": "Serve warm, torn, with butter and golden syrup.",
+     "text": "Serve warm, torn, with the butter to serve and golden syrup.",
      "min": 0
     }
    ],
@@ -229,7 +229,7 @@
    "course": "m",
    "prep_min": 20,
    "cook_min": 200,
-   "make_ahead": "Gravy fresh",
+   "make_ahead": "Score and salt the pork up to 1 day ahead and leave it uncovered in the fridge; make the gravy fresh from the pan juices",
    "ingredients": [
     {
      "q": 1.5,
@@ -299,7 +299,7 @@
      "n": "Bella's roast cauliflower",
      "prep_min": 15,
      "cook_min": 75,
-     "make_ahead": "",
+     "make_ahead": "Rub the cauliflower with butter and salt up to 1 day ahead, keep chilled; roast and make the gravy on the night",
      "ingredients": [
       {
        "q": 1,
@@ -388,7 +388,7 @@
     {
      "q": 200,
      "u": "g",
-     "item": "butter, softened",
+     "item": "butter, softened, for the cake",
      "aisle": "Dairy"
     },
     {
@@ -412,7 +412,7 @@
     {
      "q": 50,
      "u": "g",
-     "item": "cocoa powder",
+     "item": "cocoa powder, for the cake",
      "aisle": "Pantry"
     },
     {
@@ -448,7 +448,7 @@
    ],
    "steps": [
     {
-     "text": "Beat the butter and sugar, add the eggs, then fold in the flour, cocoa and milk.",
+     "text": "Beat the cake butter and sugar, add the eggs, then fold in the flour, the cake cocoa and milk.",
      "min": 15
     },
     {
@@ -460,7 +460,7 @@
      "min": 25
     },
     {
-     "text": "Beat the icing sugar, cocoa and butter with a splash of milk until smooth and ice the cake.",
+     "text": "Beat the icing sugar, icing cocoa and icing butter with a splash of milk until smooth and ice the cake.",
      "min": 10
     },
     {

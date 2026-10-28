@@ -15,8 +15,8 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 1,
+     "u": "l",
      "item": "vegetable oil, for deep frying",
      "aisle": "Pantry"
     },
@@ -207,7 +207,7 @@
    "course": "m",
    "prep_min": 5,
    "cook_min": 15,
-   "make_ahead": "",
+   "make_ahead": "Best cooked just before serving; the bacon fat and fresh toast are the whole point, so nothing here holds well",
    "ingredients": [
     {
      "q": 8,
@@ -259,7 +259,7 @@
      "n": "Doc's breakfast machine fry-up (vegetarian)",
      "prep_min": 5,
      "cook_min": 15,
-     "make_ahead": "",
+     "make_ahead": "Slice the mushrooms up to 1 day ahead and keep covered in the fridge; fry everything just before serving",
      "ingredients": [
       {
        "q": 400,
@@ -461,7 +461,7 @@
    "course": "d",
    "prep_min": 2,
    "cook_min": 6,
-   "make_ahead": "",
+   "make_ahead": "Best brewed fresh; if you need to get ahead, keep it hot in a flask for up to 2 hours",
    "ingredients": [
     {
      "q": 60,

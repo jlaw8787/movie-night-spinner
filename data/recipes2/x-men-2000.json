@@ -114,7 +114,7 @@
    "course": "m",
    "prep_min": 20,
    "cook_min": 40,
-   "make_ahead": "",
+   "make_ahead": "Make the gravy up to 2 days ahead in the fridge and reheat; cut the chips up to 4 hours ahead in cold water and fry them fresh",
    "ingredients": [
     {
      "q": 1,
@@ -159,7 +159,7 @@
      "min": 10
     },
     {
-     "text": "Fry at 140C until soft and pale.",
+     "text": "Fry in the oil at 140C until soft and pale.",
      "min": 12
     },
     {
@@ -167,7 +167,7 @@
      "min": 10
     },
     {
-     "text": "Fry the chips again at 185C until crisp.",
+     "text": "Fry the chips again in the oil at 185C until crisp.",
      "min": 8
     },
     {
@@ -182,7 +182,7 @@
      "n": "Logan's poutine with mushroom gravy",
      "prep_min": 20,
      "cook_min": 25,
-     "make_ahead": "",
+     "make_ahead": "Make the mushroom gravy up to 2 days ahead in the fridge and reheat; cut the chips up to 4 hours ahead in cold water and fry them fresh",
      "ingredients": [
       {
        "q": 1,
@@ -264,7 +264,7 @@
    "course": "w",
    "prep_min": 5,
    "cook_min": 60,
-   "make_ahead": "",
+   "make_ahead": "Put the four bowls in the freezer up to 1 day ahead; scoop the ice cream and melt the chocolate shell at the table",
    "ingredients": [
     {
      "q": 1,
@@ -307,7 +307,7 @@
    "course": "d",
    "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Stir the rye, maple syrup and bitters together up to 2 days ahead in a jar in the fridge; stir over ice and strain to order",
    "ingredients": [
     {
      "q": 240,
@@ -340,8 +340,8 @@
      "aisle": "Frozen"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice, for stirring",
      "aisle": "Frozen"
     }
@@ -367,7 +367,7 @@
      "n": "Logan's rye and maple old fashioned (alcohol-free)",
      "prep_min": 5,
      "cook_min": 15,
-     "make_ahead": "",
+     "make_ahead": "Brew and chill the smoky tea up to 2 days ahead in the fridge; stir with the maple syrup, vanilla and zest over ice to order",
      "ingredients": [
       {
        "q": 3,
@@ -406,8 +406,8 @@
        "aisle": "Frozen"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "cup",
        "item": "ice, for stirring",
        "aisle": "Frozen"
       }

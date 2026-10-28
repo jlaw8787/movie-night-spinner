@@ -317,7 +317,7 @@
      "min": 5
     },
     {
-     "text": "Dust the fish with chilli, cumin and salt and pan fry until just cooked.",
+     "text": "Dust the fish with chilli, cumin and salt and pan fry in the vegetable oil until just cooked.",
      "min": 8
     },
     {
@@ -558,8 +558,8 @@
      "aisle": "Bottle shop"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }
@@ -634,8 +634,8 @@
        "aisle": "Drinks"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       }
@@ -708,8 +708,8 @@
        "aisle": "Bottle shop"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       }
@@ -783,8 +783,8 @@
        "aisle": "Drinks"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       }

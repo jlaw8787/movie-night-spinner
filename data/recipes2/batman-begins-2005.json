@@ -312,7 +312,7 @@
    "course": "m",
    "prep_min": 30,
    "cook_min": 150,
-   "make_ahead": "Rest 20 minutes before carving",
+   "make_ahead": "Season the beef and leave it uncovered in the fridge overnight, up to 1 day ahead; rest 20 minutes before carving",
    "ingredients": [
     {
      "q": 2,
@@ -455,7 +455,7 @@
       {
        "q": 150,
        "u": "g",
-       "item": "plain flour",
+       "item": "plain flour, for the batter",
        "aisle": "Pantry"
       },
       {
@@ -509,7 +509,7 @@
        "min": 45
       },
       {
-       "text": "Whisk the remaining 3 eggs, the 150g of flour and the milk and bake in hot tins with the vegetable oil at 220C.",
+       "text": "Whisk the remaining 3 eggs, the flour for the batter and the milk and bake in hot tins with the vegetable oil at 220C.",
        "min": 20
       },
       {
@@ -535,7 +535,7 @@
     {
      "q": 200,
      "u": "g",
-     "item": "dark chocolate",
+     "item": "dark chocolate, for the cake",
      "aisle": "Pantry"
     },
     {
@@ -587,7 +587,7 @@
      "min": 5
     },
     {
-     "text": "Melt the chocolate and butter, whisk in the eggs and sugar and fold in the flour.",
+     "text": "Melt the chocolate for the cake and the butter, whisk in the eggs and sugar and fold in the flour.",
      "min": 12
     },
     {
@@ -611,7 +611,7 @@
    "course": "d",
    "prep_min": 10,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Mix the gin, cordial and lemon juice in a jug up to 1 day ahead and keep chilled; slice the cucumber ribbons up to 4 hours ahead, then shake over ice and top with soda water to order",
    "ingredients": [
     {
      "q": 180,
@@ -644,8 +644,8 @@
      "aisle": "Drinks"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 6,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     },
@@ -677,7 +677,7 @@
      "n": "Applied Sciences elderflower gin collins (alcohol-free)",
      "prep_min": 10,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Mix the non-alcoholic gin, cordial and lemon juice in a jug up to 1 day ahead and keep chilled; slice the cucumber ribbons up to 4 hours ahead, then shake over ice and top with soda water to order",
      "ingredients": [
       {
        "q": 180,
@@ -710,8 +710,8 @@
        "aisle": "Drinks"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 6,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       },

@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 15,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Make the sandwiches up to 3 hours ahead, covered with damp paper towel in the fridge; cut off the crusts and cut into triangles just before serving",
    "ingredients": [
     {
      "q": 8,
@@ -64,7 +64,7 @@
      "n": "Norman's parlour sandwiches (vegetarian)",
      "prep_min": 15,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Fill the sandwiches up to 3 hours ahead and keep wrapped in the fridge; trim the crusts and cut into triangles to serve",
      "ingredients": [
       {
        "q": 8,
@@ -124,7 +124,7 @@
    "course": "s",
    "prep_min": 25,
    "cook_min": 10080,
-   "make_ahead": "Pickle for a week before eating",
+   "make_ahead": "Soak the peeled onions in salted water overnight, then pickle and leave for a week before eating",
    "ingredients": [
     {
      "q": 500,
@@ -159,7 +159,7 @@
    ],
    "steps": [
     {
-     "text": "Peel the onions and soak in salted water overnight",
+     "text": "Peel the onions and soak in water with the salt overnight",
      "min": 720
     },
     {
@@ -183,7 +183,7 @@
    "course": "m",
    "prep_min": 25,
    "cook_min": 55,
-   "make_ahead": "",
+   "make_ahead": "Make the chicken stew with the cream up to 2 days ahead, keep chilled; reheat and cook the dumplings on top on the night",
    "ingredients": [
     {
      "q": 1,
@@ -248,7 +248,7 @@
    ],
    "steps": [
     {
-     "text": "Dice the vegetables",
+     "text": "Dice the carrots, celery and onion",
      "min": 10
     },
     {
@@ -275,7 +275,7 @@
      "n": "Fairvale mushroom, chickpea and dumplings",
      "prep_min": 25,
      "cook_min": 40,
-     "make_ahead": "",
+     "make_ahead": "Make the mushroom and chickpea stew up to 2 days ahead, keep chilled; reheat and cook the dumplings on top on the night",
      "ingredients": [
       {
        "q": 300,
@@ -352,7 +352,7 @@
      ],
      "steps": [
       {
-       "text": "Dice the vegetables and slice the mushrooms.",
+       "text": "Dice the carrots, celery and onion and slice the mushrooms.",
        "min": 12
       },
       {
@@ -392,7 +392,7 @@
     {
      "q": 180,
      "u": "g",
-     "item": "caster sugar",
+     "item": "caster sugar, for the meringue",
      "aisle": "Pantry"
     },
     {
@@ -410,13 +410,13 @@
     {
      "q": 40,
      "u": "g",
-     "item": "caster sugar, extra",
+     "item": "caster sugar, for the raspberry sauce",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Whisk the egg whites and sugar over simmering water until hot and dissolved",
+     "text": "Whisk the egg whites and the caster sugar for the meringue over simmering water until hot and dissolved",
      "min": 8
     },
     {
@@ -432,7 +432,7 @@
      "min": 90
     },
     {
-     "text": "Blitz the raspberries with lemon juice and extra sugar and drizzle over",
+     "text": "Blitz the raspberries with lemon juice and the caster sugar for the sauce and drizzle over",
      "min": 5
     }
    ],
@@ -444,7 +444,7 @@
    "course": "d",
    "prep_min": 10,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Mix the milk, brandy, syrup and vanilla in a jug up to 1 day ahead, keep chilled; shake with ice to order",
    "ingredients": [
     {
      "q": 480,
@@ -504,7 +504,7 @@
      "n": "Parlour brandy milk punch (alcohol-free)",
      "prep_min": 12,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Mix the milk, syrup, vanilla and cinnamon up to 1 day ahead in the fridge; shake with ice to order",
      "ingredients": [
       {
        "q": 600,

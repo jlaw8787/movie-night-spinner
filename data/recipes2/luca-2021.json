@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 10,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Scoop the ice cream and sorbet into the cups up to 2 hours ahead and keep in the freezer. Add the amaretti and zest just before serving",
    "ingredients": [
     {
      "q": 600,
@@ -55,7 +55,7 @@
    "course": "s",
    "prep_min": 19,
    "cook_min": 12,
-   "make_ahead": "",
+   "make_ahead": "Grate, squeeze and mix the batter up to 2 hours ahead and keep chilled. Fry just before serving",
    "ingredients": [
     {
      "q": 3,
@@ -126,7 +126,7 @@
    "course": "m",
    "prep_min": 19,
    "cook_min": 14,
-   "make_ahead": "",
+   "make_ahead": "Make the pesto up to 2 days ahead and keep chilled under a thin layer of olive oil. Boil the potatoes, linguine and beans on the night",
    "ingredients": [
     {
      "q": 500,
@@ -177,9 +177,9 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
-     "u": "",
-     "item": "salt",
+     "q": 1,
+     "u": "tbsp",
+     "item": "salt, for the cooking water",
      "aisle": "Spices"
     }
    ],
@@ -193,7 +193,7 @@
      "min": 8
     },
     {
-     "text": "Boil the potatoes in salted water, then add the linguine and beans to the same pot.",
+     "text": "Boil the potatoes in water salted with the salt, then add the linguine and beans to the same pot.",
      "min": 14
     },
     {

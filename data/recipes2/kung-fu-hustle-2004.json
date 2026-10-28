@@ -23,7 +23,7 @@
     {
      "q": 2,
      "u": "tbsp",
-     "item": "caster sugar",
+     "item": "caster sugar, for the dough",
      "aisle": "Pantry"
     },
     {
@@ -59,7 +59,7 @@
    ],
    "steps": [
     {
-     "text": "Mix the flour, yeast, sugar and warm water into a dough and knead.",
+     "text": "Mix the flour, yeast, the caster sugar for the dough and warm water into a dough and knead.",
      "min": 12
     },
     {
@@ -67,7 +67,7 @@
      "min": 60
     },
     {
-     "text": "Chop the pork and mix with the oyster sauce, hoisin and sugar.",
+     "text": "Chop the pork and mix with the oyster sauce, hoisin and the caster sugar for the filling.",
      "min": 6
     },
     {
@@ -107,7 +107,7 @@
       {
        "q": 2,
        "u": "tbsp",
-       "item": "caster sugar",
+       "item": "caster sugar, for the dough",
        "aisle": "Pantry"
       },
       {
@@ -149,7 +149,7 @@
      ],
      "steps": [
       {
-       "text": "Mix the flour, yeast, sugar and warm water into a dough and knead.",
+       "text": "Mix the flour, yeast, the caster sugar for the dough and warm water into a dough and knead.",
        "min": 12
       },
       {
@@ -157,7 +157,7 @@
        "min": 60
       },
       {
-       "text": "Dice the mushrooms and fry hard in the oil until browned, then add the soy, hoisin and sugar and cook until sticky. Cool.",
+       "text": "Dice the mushrooms and fry hard in the oil until browned, then add the soy, hoisin and the caster sugar for the filling and cook until sticky. Cool.",
        "min": 12
       },
       {
@@ -235,7 +235,7 @@
      "min": 10
     },
     {
-     "text": "Fry at 190C in batches until puffed and golden.",
+     "text": "Fry in the vegetable oil at 190C in batches until puffed and golden.",
      "min": 12
     },
     {
@@ -251,7 +251,7 @@
    "course": "m",
    "prep_min": 15,
    "cook_min": 43,
-   "make_ahead": "",
+   "make_ahead": "Cut the pork and slice the garlic, chillies and spring onions up to 1 day ahead, chilled; coat in starch, fry and toss just before serving",
    "ingredients": [
     {
      "q": 800,
@@ -314,7 +314,7 @@
      "min": 15
     },
     {
-     "text": "Fry at 180C in batches until crisp.",
+     "text": "Fry in the vegetable oil at 180C in batches until crisp.",
      "min": 20
     },
     {
@@ -333,7 +333,7 @@
      "n": "Axe Gang salt and pepper tofu",
      "prep_min": 15,
      "cook_min": 38,
-     "make_ahead": "",
+     "make_ahead": "Pat dry and cut the tofu and slice the garlic, chillies and spring onions up to 1 day ahead, chilled; coat in starch, fry and toss just before serving",
      "ingredients": [
       {
        "q": 800,
@@ -396,7 +396,7 @@
        "min": 15
       },
       {
-       "text": "Fry at 180C in batches until crisp.",
+       "text": "Fry in the vegetable oil at 180C in batches until crisp.",
        "min": 15
       },
       {
@@ -474,7 +474,7 @@
    "course": "d",
    "prep_min": 3,
    "cook_min": 5,
-   "make_ahead": "",
+   "make_ahead": "Steep and strain up to 3 days ahead and keep chilled; reheat or pour over ice to serve",
    "ingredients": [
     {
      "q": 15,
@@ -495,8 +495,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice, if serving cold",
      "aisle": "Frozen"
     }

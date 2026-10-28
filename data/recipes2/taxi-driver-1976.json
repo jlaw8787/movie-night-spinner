@@ -133,7 +133,7 @@
     {
      "q": 40,
      "u": "g",
-     "item": "butter",
+     "item": "butter, for the mash",
      "aisle": "Dairy"
     },
     {
@@ -227,7 +227,7 @@
       {
        "q": 40,
        "u": "g",
-       "item": "butter",
+       "item": "butter, for the mash",
        "aisle": "Dairy"
       },
       {
@@ -470,7 +470,7 @@
    ],
    "steps": [
     {
-     "text": "Brew the coffee strong.",
+     "text": "Brew the coffee strong using the water.",
      "min": 5
     },
     {
@@ -530,7 +530,7 @@
      ],
      "steps": [
       {
-       "text": "Brew the coffee strong.",
+       "text": "Brew the coffee strong using the water.",
        "min": 5
       },
       {

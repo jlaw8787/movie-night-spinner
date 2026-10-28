@@ -33,8 +33,8 @@
      "aisle": "Seafood"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 6,
+     "u": "cup",
      "item": "crushed ice",
      "aisle": "Frozen"
     },
@@ -105,8 +105,8 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 4,
+       "u": "cup",
        "item": "crushed ice",
        "aisle": "Frozen"
       },
@@ -252,7 +252,7 @@
    ],
    "steps": [
     {
-     "text": "Score the duck skin and render skin side down over medium heat.",
+     "text": "Score the duck skin, season with salt and pepper and render skin side down over medium heat.",
      "min": 8
     },
     {
@@ -332,7 +332,7 @@
      ],
      "steps": [
       {
-       "text": "Score the duck skin and render skin side down over medium heat.",
+       "text": "Score the duck skin, season with salt and pepper and render skin side down over medium heat.",
        "min": 8
       },
       {
@@ -374,7 +374,7 @@
       {
        "q": 30,
        "u": "g",
-       "item": "butter",
+       "item": "butter, for the mushrooms",
        "aisle": "Dairy"
       },
       {
@@ -420,7 +420,7 @@
        "min": 8
       },
       {
-       "text": "Turn, add the butter, baste and roast at 200C until tender.",
+       "text": "Turn, add the butter for the mushrooms, baste and roast at 200C until tender.",
        "min": 15
       },
       {
@@ -459,7 +459,7 @@
       {
        "q": 30,
        "u": "g",
-       "item": "butter",
+       "item": "butter, for the mushrooms",
        "aisle": "Dairy"
       },
       {
@@ -517,7 +517,7 @@
        "min": 8
       },
       {
-       "text": "Turn, add the butter, baste and roast at 200C until tender.",
+       "text": "Turn, add the butter for the mushrooms, baste and roast at 200C until tender.",
        "min": 15
       },
       {
@@ -588,7 +588,7 @@
    ],
    "steps": [
     {
-     "text": "Heat the oven to 180C. Line a tart tin and blind bake.",
+     "text": "Heat the oven to 180C. Line a tart tin with the pastry and blind bake.",
      "min": 25
     },
     {
@@ -616,7 +616,7 @@
    "course": "d",
    "prep_min": 10,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Blitz and strain the apple mint juice up to 3 hours ahead and keep it chilled; make the absinthe drips and top with soda to serve",
    "ingredients": [
     {
      "q": 40,
@@ -649,8 +649,8 @@
      "aisle": "Drinks"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }
@@ -665,7 +665,7 @@
      "min": 4
     },
     {
-     "text": "Top with soda water and pour into small glasses.",
+     "text": "Pour the absinthe mix or the apple mint juice into small glasses over ice and top with soda water.",
      "min": 2
     }
    ],
@@ -676,7 +676,7 @@
      "n": "Green fairy absinthe or green apple mint (alcohol-free)",
      "prep_min": 10,
      "cook_min": 10,
-     "make_ahead": "",
+     "make_ahead": "Make the aniseed syrup up to 1 week ahead and keep it chilled; blitz the apples and mint up to 3 hours ahead and finish to order",
      "ingredients": [
       {
        "q": 2,
@@ -721,8 +721,8 @@
        "aisle": "Drinks"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       }

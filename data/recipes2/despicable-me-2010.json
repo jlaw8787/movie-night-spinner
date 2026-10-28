@@ -144,7 +144,7 @@
      "min": 5
     },
     {
-     "text": "Pat the franks dry and push each onto a stick.",
+     "text": "Pat the beef frankfurts dry and push each onto a stick.",
      "min": 5
     },
     {
@@ -290,7 +290,7 @@
     {
      "q": 40,
      "u": "g",
-     "item": "parmesan, grated",
+     "item": "parmesan, grated, for the meatballs",
      "aisle": "Dairy"
     },
     {
@@ -332,7 +332,7 @@
     {
      "q": 40,
      "u": "g",
-     "item": "parmesan, extra to serve",
+     "item": "parmesan, grated, for serving",
      "aisle": "Dairy"
     },
     {
@@ -400,7 +400,7 @@
       {
        "q": 40,
        "u": "g",
-       "item": "vegetarian parmesan-style cheese, grated",
+       "item": "vegetarian parmesan-style cheese, grated, for the meatballs",
        "aisle": "Dairy"
       },
       {
@@ -442,7 +442,7 @@
       {
        "q": 40,
        "u": "g",
-       "item": "vegetarian parmesan-style cheese, extra to serve",
+       "item": "vegetarian parmesan-style cheese, grated, for serving",
        "aisle": "Dairy"
       },
       {
@@ -492,7 +492,7 @@
     {
      "q": 200,
      "u": "g",
-     "item": "butter, softened",
+     "item": "butter, softened, for the cake",
      "aisle": "Dairy"
     },
     {
@@ -538,8 +538,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 1,
+     "u": "tsp",
      "item": "pastel food colouring",
      "aisle": "Pantry"
     },

@@ -39,15 +39,15 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 4,
+     "u": "cup",
      "item": "crushed ice",
      "aisle": "Frozen"
     }
    ],
    "steps": [
     {
-     "text": "Finely dice the eschalots and stir into the vinegar with the cracked pepper.",
+     "text": "Finely dice the eschalots and stir into the vinegar with the cracked black peppercorns.",
      "min": 8
     },
     {
@@ -117,15 +117,15 @@
        "aisle": "Produce"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 4,
+       "u": "cup",
        "item": "crushed ice",
        "aisle": "Frozen"
       }
      ],
      "steps": [
       {
-       "text": "Finely dice the eschalots and stir into the vinegar with the cracked pepper.",
+       "text": "Finely dice the eschalots and stir into the vinegar with the cracked black peppercorns.",
        "min": 8
       },
       {
@@ -339,11 +339,11 @@
      "min": 10
     },
     {
-     "text": "Fry the fries twice until crisp.",
+     "text": "Fry the fries twice in the oil until crisp.",
      "min": 18
     },
     {
-     "text": "Sear the steaks to your liking and rest.",
+     "text": "Season the steaks with salt, sear to your liking and rest.",
      "min": 12
     },
     {
@@ -473,7 +473,7 @@
     {
      "q": 80,
      "u": "g",
-     "item": "caster sugar",
+     "item": "caster sugar, for the custard",
      "aisle": "Pantry"
     },
     {
@@ -541,7 +541,7 @@
       {
        "q": 80,
        "u": "g",
-       "item": "caster sugar",
+       "item": "caster sugar, for the custard",
        "aisle": "Pantry"
       },
       {

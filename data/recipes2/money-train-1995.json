@@ -181,15 +181,15 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "tbsp",
      "item": "oil for browning",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Brown the chicken in a wide lidded pan until golden, then set aside.",
+     "text": "Brown the chicken in the oil in a wide lidded pan until golden, then set aside.",
      "min": 10
     },
     {
@@ -285,8 +285,8 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "tbsp",
        "item": "oil for browning",
        "aisle": "Pantry"
       }
@@ -381,7 +381,7 @@
    "course": "d",
    "prep_min": 10,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Mix the chilli salt up to 1 week ahead and keep it airtight; build the drinks and add the lager just before serving",
    "ingredients": [
     {
      "q": 1,
@@ -457,7 +457,7 @@
      "n": "Money Train payday michelada (alcohol-free)",
      "prep_min": 10,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Mix the chilli salt up to 1 week ahead; stir the tomato juice, lime and sauces together up to 1 day ahead in the fridge and add the alcohol-free lager to serve",
      "ingredients": [
       {
        "q": 1,
@@ -531,7 +531,7 @@
      "n": "Money Train payday michelada (vegetarian)",
      "prep_min": 10,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Mix the chilli salt up to 1 week ahead; stir the tomato juice, lime and soy together up to 1 day ahead in the fridge and top with lager to serve",
      "ingredients": [
       {
        "q": 1,
@@ -606,7 +606,7 @@
      "n": "Money Train payday michelada (vegetarian, alcohol-free)",
      "prep_min": 10,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Mix the chilli salt up to 1 week ahead; stir the tomato juice, lime and soy together up to 1 day ahead in the fridge and top with alcohol-free lager to serve",
      "ingredients": [
       {
        "q": 1,

@@ -47,7 +47,7 @@
     {
      "q": 3,
      "u": "tbsp",
-     "item": "vegetable oil",
+     "item": "vegetable oil, for the dough",
      "aisle": "Pantry"
     },
     {
@@ -75,7 +75,7 @@
      "min": 20
     },
     {
-     "text": "Make a firm dough from the flour, oil and water and rest.",
+     "text": "Make a firm dough from the flour, the vegetable oil for the dough and the water, then rest.",
      "min": 15
     },
     {
@@ -87,7 +87,7 @@
      "min": 10
     },
     {
-     "text": "Fry at 175C until blistered and golden.",
+     "text": "Heat the vegetable oil for frying to 175C and fry until blistered and golden.",
      "min": 15
     },
     {
@@ -381,13 +381,13 @@
     {
      "q": 1,
      "u": "",
-     "item": "pinch of saffron",
+     "item": "pinch of saffron, for the batter",
      "aisle": "Spices"
     },
     {
      "q": 150,
      "u": "ml",
-     "item": "water",
+     "item": "water, for the batter",
      "aisle": "Pantry"
     },
     {
@@ -423,11 +423,11 @@
    ],
    "steps": [
     {
-     "text": "Mix the flour, yoghurt, saffron and water into a thick batter and rest overnight.",
+     "text": "Mix the flour, yoghurt, the saffron for the batter and the water for the batter into a thick batter and rest overnight.",
      "min": 720
     },
     {
-     "text": "Boil the sugar with the water, cardamom and saffron for a syrup.",
+     "text": "Boil the sugar with the water for the syrup, the cardamom and the saffron for the syrup.",
      "min": 8
     },
     {

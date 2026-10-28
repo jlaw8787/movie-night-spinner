@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 15,
    "cook_min": 5,
-   "make_ahead": "",
+   "make_ahead": "Mix the crab filling up to 1 day ahead, kept chilled; toast the sourdough and pile on at the last minute",
    "ingredients": [
     {
      "q": 250,
@@ -72,7 +72,7 @@
      "n": "Bodega Bay hearts of palm toasts",
      "prep_min": 15,
      "cook_min": 5,
-     "make_ahead": "",
+     "make_ahead": "Shred and mix the hearts of palm filling up to 1 day ahead, chilled; toast and assemble just before serving",
      "ingredients": [
       {
        "q": 1,
@@ -205,7 +205,7 @@
    "course": "m",
    "prep_min": 15,
    "cook_min": 35,
-   "make_ahead": "",
+   "make_ahead": "Simmer the tomato, wine and stock base up to 2 days ahead, chilled; reheat and cook the seafood on the night",
    "ingredients": [
     {
      "q": 1,
@@ -305,7 +305,7 @@
      "n": "San Francisco cioppino",
      "prep_min": 15,
      "cook_min": 35,
-     "make_ahead": "",
+     "make_ahead": "Make the tomato and stock base up to 2 days ahead in the fridge; bring back to a simmer and add the seafood to serve",
      "ingredients": [
       {
        "q": 1,
@@ -403,7 +403,7 @@
      "n": "San Francisco cioppino (vegetarian)",
      "prep_min": 15,
      "cook_min": 35,
-     "make_ahead": "",
+     "make_ahead": "Make the base and brown the mushrooms up to 1 day ahead, kept chilled; reheat, add the beans and tofu and serve",
      "ingredients": [
       {
        "q": 1,
@@ -502,7 +502,7 @@
      "n": "San Francisco cioppino (vegetarian, alcohol-free)",
      "prep_min": 15,
      "cook_min": 35,
-     "make_ahead": "",
+     "make_ahead": "Simmer the tomato and stock base up to 2 days ahead, covered in the fridge; reheat with the mushrooms, beans and tofu on the night",
      "ingredients": [
       {
        "q": 1,
@@ -535,19 +535,13 @@
        "aisle": "Pantry"
       },
       {
-       "q": 200,
-       "u": "ml",
-       "item": "vegetable stock, extra",
-       "aisle": "Pantry"
-      },
-      {
        "q": 1,
        "u": "tbsp",
        "item": "lemon juice",
        "aisle": "Produce"
       },
       {
-       "q": 500,
+       "q": 700,
        "u": "ml",
        "item": "vegetable stock",
        "aisle": "Pantry"
@@ -662,7 +656,7 @@
    "course": "d",
    "prep_min": 10,
    "cook_min": 5,
-   "make_ahead": "",
+   "make_ahead": "Best made fresh and hot; whip the cream lightly up to 4 hours ahead and keep it chilled",
    "ingredients": [
     {
      "q": 60,
@@ -697,7 +691,7 @@
    ],
    "steps": [
     {
-     "text": "Brew the coffee.",
+     "text": "Brew the coffee with the water.",
      "min": 5
     },
     {
@@ -716,7 +710,7 @@
      "n": "Irish coffee (alcohol-free)",
      "prep_min": 10,
      "cook_min": 5,
-     "make_ahead": "",
+     "make_ahead": "Brew the coffee fresh; the cream can be whipped earlier in the day and kept chilled",
      "ingredients": [
       {
        "q": 60,

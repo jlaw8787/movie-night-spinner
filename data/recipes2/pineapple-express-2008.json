@@ -6,12 +6,12 @@
    "course": "s",
    "prep_min": 15,
    "cook_min": 16,
-   "make_ahead": "",
+   "make_ahead": "Char and dice the pineapple and mix the salsa up to 1 day ahead in the fridge; toss the corn chips just before serving",
    "ingredients": [
     {
-     "q": null,
+     "q": 0.5,
      "u": "",
-     "item": "half pineapple, as needed",
+     "item": "pineapple",
      "aisle": "Produce"
     },
     {
@@ -75,7 +75,7 @@
    "course": "s",
    "prep_min": 15,
    "cook_min": 25,
-   "make_ahead": "",
+   "make_ahead": "Cut, stuff and wrap in foil up to 6 hours ahead and keep in the fridge; bake on the night",
    "ingredients": [
     {
      "q": 1,
@@ -500,7 +500,7 @@
       {
        "q": 1,
        "u": "tsp",
-       "item": "rice vinegar, extra",
+       "item": "rice vinegar, for the sauce",
        "aisle": "Pantry"
       },
       {
@@ -560,13 +560,13 @@
       {
        "q": null,
        "u": "",
-       "item": "rice vinegar, to taste",
+       "item": "rice vinegar, to serve",
        "aisle": "Pantry"
       }
      ],
      "steps": [
       {
-       "text": "Simmer the soy, apple juice, extra rice vinegar, brown sugar, grated ginger and crushed garlic for 5 minutes until syrupy.",
+       "text": "Simmer the soy, apple juice, the rice vinegar for the sauce, brown sugar, grated ginger and crushed garlic for 5 minutes until syrupy.",
        "min": 8
       },
       {
@@ -586,7 +586,7 @@
        "min": 12
       },
       {
-       "text": "Serve the tofu with the pineapple, rice, sesame seeds, sliced spring onion and sliced chilli in rice vinegar.",
+       "text": "Serve the tofu with the pineapple, rice, sesame seeds, sliced spring onion and sliced chilli, with a splash of rice vinegar to serve.",
        "min": 6
       }
      ]
@@ -598,7 +598,7 @@
    "course": "w",
    "prep_min": 30,
    "cook_min": 50,
-   "make_ahead": "",
+   "make_ahead": "Bake up to 1 day ahead and keep covered; warm slices briefly and serve with chilled coconut cream",
    "ingredients": [
     {
      "q": 185,
@@ -688,7 +688,7 @@
      "n": "Angie's family pineapple upside-down cake",
      "prep_min": 30,
      "cook_min": 50,
-     "make_ahead": "",
+     "make_ahead": "Bake up to 1 day ahead and keep covered at room temperature; warm briefly before serving",
      "ingredients": [
       {
        "q": 185,
@@ -785,12 +785,12 @@
    "course": "d",
    "prep_min": 8,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Cut the pineapple and juice the limes up to 1 day ahead, keep chilled; muddle and shake to order",
    "ingredients": [
     {
-     "q": null,
+     "q": 0.5,
      "u": "",
-     "item": "half pineapple, as needed",
+     "item": "pineapple",
      "aisle": "Produce"
     },
     {
@@ -830,9 +830,9 @@
      "aisle": "Spices"
     },
     {
-     "q": null,
-     "u": "",
-     "item": "crushed ice, as needed",
+     "q": 3,
+     "u": "cup",
+     "item": "crushed ice",
      "aisle": "Frozen"
     },
     {
@@ -867,12 +867,12 @@
      "n": "Pineapple mint rum crush (alcohol-free)",
      "prep_min": 8,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Cut the pineapple and juice the limes up to 1 day ahead, keep chilled; muddle, shake and top with soda to order",
      "ingredients": [
       {
-       "q": null,
+       "q": 0.5,
        "u": "",
-       "item": "half pineapple, as needed",
+       "item": "pineapple",
        "aisle": "Produce"
       },
       {
@@ -918,9 +918,9 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
-       "item": "crushed ice, as needed",
+       "q": 3,
+       "u": "cup",
+       "item": "crushed ice",
        "aisle": "Frozen"
       },
       {

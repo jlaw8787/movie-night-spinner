@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 25,
    "cook_min": 5,
-   "make_ahead": "",
+   "make_ahead": "Warm and cool the olives up to 3 days ahead, covered in the fridge; slice the meat and cheese and arrange the board on the night",
    "ingredients": [
     {
      "q": 250,
@@ -100,7 +100,7 @@
      "n": "Overlook storeroom antipasto board (vegetarian)",
      "prep_min": 27,
      "cook_min": 12,
-     "make_ahead": "",
+     "make_ahead": "Warm the olives and grill the eggplant up to 2 days ahead, covered in the fridge; slice the provolone and arrange the board on the night",
      "ingredients": [
       {
        "q": 250,
@@ -111,7 +111,7 @@
       {
        "q": 60,
        "u": "ml",
-       "item": "olive oil",
+       "item": "olive oil, for warming the olives",
        "aisle": "Pantry"
       },
       {
@@ -141,7 +141,7 @@
       {
        "q": 2,
        "u": "tbsp",
-       "item": "olive oil, extra",
+       "item": "olive oil, for the eggplant",
        "aisle": "Pantry"
       },
       {
@@ -183,11 +183,11 @@
      ],
      "steps": [
       {
-       "text": "Warm the olives in the oil with orange peel, garlic and chilli flakes, then cool.",
+       "text": "Warm the olives in the olive oil with orange peel, garlic and chilli flakes, then cool.",
        "min": 12
       },
       {
-       "text": "Slice the eggplant into thin rounds, brush with the extra oil, season with salt and grill until charred and soft.",
+       "text": "Slice the eggplant into thin rounds, brush with the olive oil for the eggplant, season with salt and grill until charred and soft.",
        "min": 12
       },
       {
@@ -212,7 +212,7 @@
    "course": "s",
    "prep_min": 10,
    "cook_min": 15,
-   "make_ahead": "",
+   "make_ahead": "Up to 5 days, airtight",
    "ingredients": [
     {
      "q": 400,
@@ -277,7 +277,7 @@
    "course": "m",
    "prep_min": 25,
    "cook_min": 130,
-   "make_ahead": "",
+   "make_ahead": "Stud and rub the lamb up to 1 day ahead, covered in the fridge; roast and make the gravy on the day",
    "ingredients": [
     {
      "q": 2,
@@ -363,7 +363,7 @@
      "n": "Hallorann's garlic and rosemary roast pumpkin",
      "prep_min": 25,
      "cook_min": 75,
-     "make_ahead": "",
+     "make_ahead": "Stud and rub the pumpkins up to 1 day ahead, covered in the fridge; roast, add the lentils and make the gravy on the day",
      "ingredients": [
       {
        "q": 2,
@@ -544,7 +544,7 @@
    "course": "d",
    "prep_min": 7,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Measure the bourbon, syrup and bitters into a jug up to 1 day ahead in the fridge; stir each drink over ice to order",
    "ingredients": [
     {
      "q": 240,

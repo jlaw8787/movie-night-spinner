@@ -155,7 +155,7 @@
     {
      "q": 150,
      "u": "g",
-     "item": "plain flour",
+     "item": "plain flour, for the dredge",
      "aisle": "Pantry"
     },
     {
@@ -215,7 +215,7 @@
      "min": 22
     },
     {
-     "text": "Fry the chicken at 170C until crisp and cooked through.",
+     "text": "Fry the chicken in the vegetable oil at 170C until crisp and cooked through.",
      "min": 18
     },
     {
@@ -247,7 +247,7 @@
       {
        "q": 150,
        "u": "g",
-       "item": "plain flour",
+       "item": "plain flour, for the dredge",
        "aisle": "Pantry"
       },
       {
@@ -307,7 +307,7 @@
        "min": 22
       },
       {
-       "text": "Fry the cauliflower at 170C in batches until crisp and tender.",
+       "text": "Fry the cauliflower in the vegetable oil at 170C in batches until crisp and tender.",
        "min": 15
       },
       {
@@ -426,8 +426,8 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 4,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }

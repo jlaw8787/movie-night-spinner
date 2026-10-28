@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 30,
    "cook_min": 20,
-   "make_ahead": "",
+   "make_ahead": "Crumb the prawns up to 2 hours ahead, chilled; slice and fry the plantains and prawns just before serving",
    "ingredients": [
     {
      "q": 400,
@@ -67,7 +67,7 @@
      "min": 8
     },
     {
-     "text": "Fry the prawns at 180C in batches.",
+     "text": "Fry the prawns in the oil at 180C in batches.",
      "min": 8
     },
     {
@@ -86,7 +86,7 @@
      "n": "Coconut cauliflower and plantain chips",
      "prep_min": 30,
      "cook_min": 18,
-     "make_ahead": "",
+     "make_ahead": "Steam the cauliflower and crumb it up to 2 hours ahead, chilled; slice and fry the plantains and cauliflower just before serving",
      "ingredients": [
       {
        "q": 1,
@@ -151,7 +151,7 @@
        "min": 8
       },
       {
-       "text": "Fry the cauliflower at 180C in batches until golden.",
+       "text": "Fry the cauliflower in the oil at 180C in batches until golden.",
        "min": 10
       },
       {
@@ -189,13 +189,13 @@
     {
      "q": 2,
      "u": "tbsp",
-     "item": "water",
+     "item": "water, for the puree",
      "aisle": "Pantry"
     },
     {
      "q": 125,
      "u": "ml",
-     "item": "water",
+     "item": "water, for the dough",
      "aisle": "Pantry"
     },
     {
@@ -225,11 +225,11 @@
    ],
    "steps": [
     {
-     "text": "Blitz the basil and spinach with a little water into a puree.",
+     "text": "Blitz the basil and spinach with the water for the puree.",
      "min": 5
     },
     {
-     "text": "Boil the water with the butter, beat in the flour and cook a minute. Cool.",
+     "text": "Boil the water for the dough with the butter, beat in the flour and cook a minute. Cool.",
      "min": 8
     },
     {
@@ -249,7 +249,7 @@
    "course": "m",
    "prep_min": 15,
    "cook_min": 45,
-   "make_ahead": "",
+   "make_ahead": "Mash the garlic butter up to 3 days ahead, chilled; fry the chips the first time up to 2 hours ahead, then finish the chips and sear the steaks on the night",
    "ingredients": [
     {
      "q": 1,
@@ -294,7 +294,7 @@
      "min": 12
     },
     {
-     "text": "Fry the chips at 140C until soft and pale.",
+     "text": "Fry the chips in the oil at 140C until soft and pale.",
      "min": 12
     },
     {
@@ -317,7 +317,7 @@
      "n": "Milo's cauliflower steak",
      "prep_min": 15,
      "cook_min": 35,
-     "make_ahead": "",
+     "make_ahead": "Mash the garlic butter up to 3 days ahead, chilled; fry the chips the first time up to 2 hours ahead, then finish the chips and sear the cauliflower on the night",
      "ingredients": [
       {
        "q": 1,
@@ -540,7 +540,7 @@
    "course": "d",
    "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Mix the melon liqueur, vodka and lime juice in a jug up to 1 day ahead, chilled; add ice and lemonade just before serving",
    "ingredients": [
     {
      "q": 120,
@@ -573,8 +573,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 4,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }
@@ -600,7 +600,7 @@
      "n": "Coco Bongo cocktail (alcohol-free)",
      "prep_min": 5,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Mix the melon syrup and lime juice in a jug up to 1 day ahead, chilled; add ice, soda water and lemonade just before serving",
      "ingredients": [
       {
        "q": 80,
@@ -633,8 +633,8 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 4,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       }

@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 10,
    "cook_min": 20,
-   "make_ahead": "",
+   "make_ahead": "Make the red chile salsa up to 3 days ahead in the fridge; serve with the chips on the day",
    "ingredients": [
     {
      "q": 4,
@@ -61,7 +61,7 @@
    "course": "s",
    "prep_min": 25,
    "cook_min": 20,
-   "make_ahead": "",
+   "make_ahead": "Char, peel and chop the chillies and mix the chipotle mayonnaise up to 2 days ahead in the fridge; smash and cook the patties just before serving",
    "ingredients": [
     {
      "q": 4,
@@ -124,11 +124,11 @@
      "min": 7
     },
     {
-     "text": "Mix the mayo with the chipotle in adobo.",
+     "text": "Mix the mayonnaise with the chipotle in adobo.",
      "min": 5
     },
     {
-     "text": "Toast the slider buns and build with mayo, patties and pickles.",
+     "text": "Toast the slider buns and build with the chipotle mayonnaise, patties and pickles.",
      "min": 13
     }
    ],
@@ -139,7 +139,7 @@
      "n": "Los Alamos green chile cheeseburger sliders (vegetarian)",
      "prep_min": 25,
      "cook_min": 20,
-     "make_ahead": "",
+     "make_ahead": "Roll the plant-based mince into balls and mix the chipotle mayonnaise up to 1 day ahead in the fridge; smash and cook just before serving",
      "ingredients": [
       {
        "q": 4,
@@ -208,11 +208,11 @@
        "min": 7
       },
       {
-       "text": "Mix the mayo with the chipotle in adobo.",
+       "text": "Mix the mayonnaise with the chipotle in adobo.",
        "min": 5
       },
       {
-       "text": "Toast the slider buns and build with mayo, patties and pickles.",
+       "text": "Toast the slider buns and build with the chipotle mayonnaise, patties and pickles.",
        "min": 13
       }
      ],
@@ -225,7 +225,7 @@
    "course": "m",
    "prep_min": 25,
    "cook_min": 115,
-   "make_ahead": "",
+   "make_ahead": "Cook completely, cool and keep up to 3 days in the fridge, better the next day; reheat gently and warm the tortillas to serve",
    "ingredients": [
     {
      "q": 1,
@@ -295,7 +295,7 @@
      "n": "Trinity test green chilli and bean stew",
      "prep_min": 25,
      "cook_min": 44,
-     "make_ahead": "",
+     "make_ahead": "Make up to 2 days ahead in the fridge, adding the cannellini beans as you reheat; warm the tortillas to serve",
      "ingredients": [
       {
        "q": 400,
@@ -389,7 +389,7 @@
    "course": "w",
    "prep_min": 25,
    "cook_min": 35,
-   "make_ahead": "",
+   "make_ahead": "Make the dough up to 1 day ahead, wrapped in the fridge; roll and fry just before serving as they puff best fresh",
    "ingredients": [
     {
      "q": 250,
@@ -444,7 +444,7 @@
      "min": 32
     },
     {
-     "text": "Fry at 185C for 1 minute a side until puffed.",
+     "text": "Fry in the vegetable oil at 185C for 1 minute a side until puffed.",
      "min": 7
     },
     {
@@ -460,7 +460,7 @@
    "course": "d",
    "prep_min": 3,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Chill the glasses and the gin up to 1 day ahead; rim the glasses and stir to order",
    "ingredients": [
     {
      "q": 240,
@@ -508,7 +508,7 @@
      "n": "Oppie's very dry martini (alcohol-free)",
      "prep_min": 3,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Chill the glasses and the non-alcoholic gin up to 1 day ahead; rim the glasses and stir to order",
      "ingredients": [
       {
        "q": 240,
@@ -535,8 +535,8 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       }

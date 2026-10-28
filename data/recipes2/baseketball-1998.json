@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 30,
    "cook_min": 25,
-   "make_ahead": "",
+   "make_ahead": "Pat dry and freeze the cheese up to 1 day ahead, and make the ranch up to 2 days ahead and keep chilled; batter and fry just before serving",
    "ingredients": [
     {
      "q": 400,
@@ -91,11 +91,11 @@
      "min": 8
     },
     {
-     "text": "Dust the cheese in flour, dip in batter and fry in batches at 185C for 1 to 2 minutes until golden.",
+     "text": "Dust the cheese in flour, dip in batter and fry in the vegetable oil in batches at 185C for 1 to 2 minutes until golden.",
      "min": 10
     },
     {
-     "text": "For ranch, mix the sour cream, the buttermilk, the mayo, chives, dill and garlic.",
+     "text": "For ranch, mix the sour cream, the buttermilk, the mayonnaise, chives, dill and garlic.",
      "min": 8
     }
    ],
@@ -106,7 +106,7 @@
      "n": "Milwaukee beer-battered cheese curds",
      "prep_min": 30,
      "cook_min": 25,
-     "make_ahead": "",
+     "make_ahead": "Pat dry and freeze the cheese up to 1 day ahead, and make the ranch up to 2 days ahead and keep chilled; batter and fry just before serving",
      "ingredients": [
       {
        "q": 400,
@@ -191,11 +191,11 @@
        "min": 8
       },
       {
-       "text": "Dust the cheese in flour, dip in batter and fry in batches at 185C for 1 to 2 minutes until golden.",
+       "text": "Dust the cheese in flour, dip in batter and fry in the vegetable oil in batches at 185C for 1 to 2 minutes until golden.",
        "min": 10
       },
       {
-       "text": "For ranch, mix the sour cream, the buttermilk, the mayo, chives, dill and garlic.",
+       "text": "For ranch, mix the sour cream, the buttermilk, the mayonnaise, chives, dill and garlic.",
        "min": 8
       }
      ]
@@ -207,7 +207,7 @@
    "course": "s",
    "prep_min": 30,
    "cook_min": 20,
-   "make_ahead": "",
+   "make_ahead": "Roll and cut the bites up to 4 hours ahead, covered in the fridge, and make the beer cheese up to 2 days ahead; reheat the cheese gently, then dip and bake the bites on the night",
    "ingredients": [
     {
      "q": 500,
@@ -305,7 +305,7 @@
      "n": "Psych-out pretzel bites with beer cheese",
      "prep_min": 30,
      "cook_min": 20,
-     "make_ahead": "",
+     "make_ahead": "Roll and cut the bites up to 4 hours ahead, covered in the fridge, and make the alcohol-free beer cheese up to 2 days ahead; reheat it gently, then dip and bake the bites on the night",
      "ingredients": [
       {
        "q": 500,
@@ -404,7 +404,7 @@
    "course": "m",
    "prep_min": 12,
    "cook_min": 30,
-   "make_ahead": "",
+   "make_ahead": "Simmer the bratwurst in the lager up to 1 day ahead and keep them in the liquid in the fridge; grill and finish the onions on the night",
    "ingredients": [
     {
      "q": 8,
@@ -478,7 +478,7 @@
      "n": "Beers beer-braised bratwurst",
      "prep_min": 12,
      "cook_min": 30,
-     "make_ahead": "",
+     "make_ahead": "Simmer the bratwurst in the alcohol-free lager up to 1 day ahead and keep them in the liquid in the fridge; grill and finish the onions on the night",
      "ingredients": [
       {
        "q": 8,
@@ -550,7 +550,7 @@
      "n": "Beers beer-braised vegetarian bratwurst",
      "prep_min": 12,
      "cook_min": 30,
-     "make_ahead": "",
+     "make_ahead": "Cook the beer onions up to 2 days ahead and keep chilled; grill the sausages and fill the rolls on the night",
      "ingredients": [
       {
        "q": 8,
@@ -619,7 +619,7 @@
      "n": "Beers stock-braised vegetarian bratwurst",
      "prep_min": 12,
      "cook_min": 30,
-     "make_ahead": "",
+     "make_ahead": "Cook the stock and cider vinegar onions up to 2 days ahead and keep chilled; grill the sausages and fill the rolls on the night",
      "ingredients": [
       {
        "q": 8,
@@ -696,7 +696,7 @@
    "course": "w",
    "prep_min": 10,
    "cook_min": 5,
-   "make_ahead": "",
+   "make_ahead": "Make the hot fudge sauce up to 1 week ahead and keep it chilled; reheat gently, whip the cream and scoop the ice cream on the night",
    "ingredients": [
     {
      "q": 300,
@@ -773,7 +773,7 @@
    "course": "d",
    "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Slice the oranges and cut the garnish up to 1 day ahead, covered in the fridge; muddle and build over ice to order",
    "ingredients": [
     {
      "q": 200,
@@ -800,8 +800,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 1,
+     "u": "tsp",
      "item": "aromatic bitters, as needed",
      "aisle": "Bottle shop"
     },
@@ -812,8 +812,8 @@
      "aisle": "Drinks"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 4,
+     "u": "cup",
      "item": "ice, as needed",
      "aisle": "Frozen"
     }
@@ -843,7 +843,7 @@
      "n": "Denslow Cup brandy old fashioned (alcohol-free)",
      "prep_min": 10,
      "cook_min": 15,
-     "make_ahead": "",
+     "make_ahead": "Steep and chill the smoky tea up to 2 days ahead in the fridge; muddle and build over ice to order",
      "ingredients": [
       {
        "q": 2,
@@ -894,8 +894,8 @@
        "aisle": "Drinks"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 4,
+       "u": "cup",
        "item": "ice, as needed",
        "aisle": "Frozen"
       }

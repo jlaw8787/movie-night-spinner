@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 13,
    "cook_min": 11,
-   "make_ahead": "",
+   "make_ahead": "Smash the peas up to 1 day ahead, covered in the fridge; toast the baguette and spread just before serving",
    "ingredients": [
     {
      "q": 1,
@@ -47,7 +47,7 @@
     {
      "q": null,
      "u": "",
-     "item": "salt and pepper",
+     "item": "salt and pepper, to taste",
      "aisle": "Spices"
     }
    ],
@@ -65,7 +65,7 @@
      "min": 3
     },
     {
-     "text": "Smash the peas with the mint, crumbled feta and a squeeze of lemon.",
+     "text": "Smash the peas with the mint, crumbled feta, a squeeze of lemon and salt and pepper to taste.",
      "min": 5
     },
     {
@@ -128,7 +128,7 @@
    ],
    "steps": [
     {
-     "text": "Bring a pot of salted water to the boil with the lemon slices.",
+     "text": "Bring a pot of water to the boil with the salt and the lemon slices.",
      "min": 8
     },
     {
@@ -310,7 +310,7 @@
     {
      "q": null,
      "u": "",
-     "item": "salt and pepper",
+     "item": "salt and pepper, to taste",
      "aisle": "Spices"
     }
    ],
@@ -320,7 +320,7 @@
      "min": 15
     },
     {
-     "text": "Brown the beef in batches in a heavy pot.",
+     "text": "Brown the beef in batches in the olive oil in a heavy pot.",
      "min": 15
     },
     {
@@ -336,7 +336,7 @@
      "min": 180
     },
     {
-     "text": "Season well and serve in big bowls with crusty bread.",
+     "text": "Season well with salt and pepper and serve in big bowls with crusty bread.",
      "min": 5
     }
    ],
@@ -424,7 +424,7 @@
       {
        "q": null,
        "u": "",
-       "item": "salt and pepper",
+       "item": "salt and pepper, to taste",
        "aisle": "Pantry"
       }
      ],
@@ -463,7 +463,7 @@
    "course": "w",
    "prep_min": 15,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Make up to 3 hours ahead and cover with a damp tea towel; dust with the glitter at the last minute",
    "ingredients": [
     {
      "q": 12,
@@ -484,9 +484,9 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
-     "item": "edible glitter, a tiny pinch",
+     "q": 1,
+     "u": "tsp",
+     "item": "edible glitter",
      "aisle": "Pantry"
     }
    ],
@@ -504,7 +504,7 @@
      "min": 3
     },
     {
-     "text": "Dust with a tiny pinch of edible glitter and pile on a plate.",
+     "text": "Dust with the edible glitter and pile on a plate.",
      "min": 2
     }
    ],
@@ -516,7 +516,7 @@
    "course": "d",
    "prep_min": 9,
    "cook_min": 8,
-   "make_ahead": "",
+   "make_ahead": "Whip the cream up to 4 hours ahead, covered in the fridge; heat the milk just before serving",
    "ingredients": [
     {
      "q": 1,
@@ -549,9 +549,9 @@
      "aisle": "Dairy"
     },
     {
-     "q": null,
+     "q": 1,
      "u": "",
-     "item": "nutmeg, to grate",
+     "item": "whole nutmeg",
      "aisle": "Spices"
     },
     {

@@ -63,7 +63,7 @@
      "min": 5
     },
     {
-     "text": "Fry at 160C, then rest.",
+     "text": "Heat the vegetable oil to 160C and fry the wings, then rest.",
      "min": 15
     },
     {
@@ -503,14 +503,14 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 500,
+     "u": "ml",
      "item": "sparkling water, to top",
      "aisle": "Drinks"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     },
@@ -585,14 +585,14 @@
        "aisle": "Produce"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 500,
+       "u": "ml",
        "item": "sparkling water, to top",
        "aisle": "Drinks"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       }

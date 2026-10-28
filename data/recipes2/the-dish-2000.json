@@ -29,7 +29,7 @@
     {
      "q": 50,
      "u": "ml",
-     "item": "thickened cream",
+     "item": "thickened cream, for the dough",
      "aisle": "Dairy"
     },
     {
@@ -51,7 +51,7 @@
      "min": 5
     },
     {
-     "text": "Mix in the milk and cream lightly with a knife, pat out and cut rounds.",
+     "text": "Mix in the milk and the cream for the dough lightly with a knife, pat out and cut rounds.",
      "min": 8
     },
     {
@@ -126,7 +126,7 @@
    "course": "m",
    "prep_min": 20,
    "cook_min": 55,
-   "make_ahead": "",
+   "make_ahead": "Mix the mint sauce up to 2 days ahead in the fridge; roast the lamb and vegetables on the night",
    "ingredients": [
     {
      "q": 800,
@@ -171,8 +171,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "tbsp",
      "item": "hot water, for mint sauce",
      "aisle": "Pantry"
     }
@@ -206,7 +206,7 @@
      "n": "Mayor's roast cauliflower and mint sauce",
      "prep_min": 20,
      "cook_min": 46,
-     "make_ahead": "",
+     "make_ahead": "Cut the potatoes and pumpkin up to 1 day ahead, covered in the fridge, and make the mint sauce up to 2 days ahead; roast on the night",
      "ingredients": [
       {
        "q": 800,
@@ -275,8 +275,8 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "tbsp",
        "item": "hot water, for mint sauce",
        "aisle": "Pantry"
       }

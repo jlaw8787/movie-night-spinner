@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 6,
    "cook_min": 16,
-   "make_ahead": "",
+   "make_ahead": "Best fried just before serving; once cool the noodles hold airtight for up to 4 hours",
    "ingredients": [
     {
      "q": 200,
@@ -59,7 +59,7 @@
      "min": 3
     },
     {
-     "text": "Pile onto a leaf and serve.",
+     "text": "Pile onto a lettuce leaf and serve.",
      "min": 3
     }
    ],
@@ -71,7 +71,7 @@
    "course": "s",
    "prep_min": 23,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Cut the fruit up to 4 hours ahead, covered in the fridge; add the passionfruit, lime juice and chilli salt just before serving",
    "ingredients": [
     {
      "q": 1,
@@ -138,7 +138,7 @@
    "course": "m",
    "prep_min": 12,
    "cook_min": 148,
-   "make_ahead": "",
+   "make_ahead": "Marinate the chicken in the peri peri sauce up to 1 day ahead in the fridge; grill and cook the rice on the night",
    "ingredients": [
     {
      "q": 1,
@@ -224,7 +224,7 @@
      "n": "Jungle hideaway peri peri tofu",
      "prep_min": 12,
      "cook_min": 88,
-     "make_ahead": "",
+     "make_ahead": "Marinate the tofu in the peri peri sauce up to 1 day ahead in the fridge; grill and cook the rice on the night",
      "ingredients": [
       {
        "q": 800,
@@ -323,7 +323,7 @@
     {
      "q": 200,
      "u": "g",
-     "item": "caster sugar",
+     "item": "caster sugar, for the pudding",
      "aisle": "Pantry"
     },
     {
@@ -341,7 +341,7 @@
     {
      "q": 30,
      "u": "g",
-     "item": "butter, melted",
+     "item": "butter, melted, for the pudding",
      "aisle": "Dairy"
     },
     {
@@ -359,7 +359,7 @@
     {
      "q": 100,
      "u": "g",
-     "item": "butter",
+     "item": "butter, for the sauce",
      "aisle": "Dairy"
     },
     {
@@ -377,7 +377,7 @@
    ],
    "steps": [
     {
-     "text": "Beat the eggs with the sugar and jam.",
+     "text": "Beat the eggs with the caster sugar for the pudding and the jam.",
      "min": 6
     },
     {
@@ -389,7 +389,7 @@
      "min": 40
     },
     {
-     "text": "Heat the cream, butter and sugar until melted.",
+     "text": "Heat the cream with the butter and sugar for the sauce until melted.",
      "min": 5
     },
     {

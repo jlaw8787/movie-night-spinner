@@ -71,7 +71,7 @@
      "min": 20
     },
     {
-     "text": "Fry at 180C in batches until golden.",
+     "text": "Fry in the neutral oil at 180C in batches until golden.",
      "min": 12
     }
    ],
@@ -99,7 +99,7 @@
       {
        "q": 60,
        "u": "g",
-       "item": "butter",
+       "item": "butter, for the sauce",
        "aisle": "Dairy"
       },
       {
@@ -145,7 +145,7 @@
        "min": 8
       },
       {
-       "text": "Melt the butter, cook the flour for 1 minute and whisk in the milk until very thick.",
+       "text": "Melt the butter for the sauce, cook the flour for 1 minute and whisk in the milk until very thick.",
        "min": 10
       },
       {
@@ -157,7 +157,7 @@
        "min": 20
       },
       {
-       "text": "Fry at 180C in batches until golden.",
+       "text": "Fry in the neutral oil at 180C in batches until golden.",
        "min": 12
       }
      ],
@@ -276,7 +276,7 @@
    ],
    "steps": [
     {
-     "text": "Cut the potatoes into thin frites and fry at 140C for 5 minutes, then rest.",
+     "text": "Cut the potatoes into thin frites and fry in the neutral oil at 140C for 5 minutes, then rest.",
      "min": 20
     },
     {
@@ -288,7 +288,7 @@
      "min": 8
     },
     {
-     "text": "Fry the frites again at 185C until crisp.",
+     "text": "Fry the frites again in the oil at 185C until crisp.",
      "min": 8
     },
     {
@@ -356,7 +356,7 @@
      ],
      "steps": [
       {
-       "text": "Cut the potatoes into thin frites and fry at 140C for 5 minutes, then rest.",
+       "text": "Cut the potatoes into thin frites and fry in the neutral oil at 140C for 5 minutes, then rest.",
        "min": 20
       },
       {
@@ -368,7 +368,7 @@
        "min": 8
       },
       {
-       "text": "Fry the frites again at 185C until crisp.",
+       "text": "Fry the frites again in the oil at 185C until crisp.",
        "min": 8
       },
       {
@@ -618,7 +618,7 @@
    "course": "d",
    "prep_min": 8,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Mix the tomato juice, lemon juice and seasonings up to 1 day ahead and keep chilled; add the vodka and shake with ice to order",
    "ingredients": [
     {
      "q": 180,
@@ -641,13 +641,13 @@
     {
      "q": null,
      "u": "",
-     "item": "Worcestershire sauce, 8 dashes",
+     "item": "Worcestershire sauce, to taste",
      "aisle": "Pantry"
     },
     {
      "q": null,
      "u": "",
-     "item": "hot sauce, 8 dashes",
+     "item": "hot sauce, to taste",
      "aisle": "Pantry"
     },
     {
@@ -690,7 +690,7 @@
      "n": "Look-at-me Bloody Mary (alcohol-free)",
      "prep_min": 8,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Mix the tomato juice, lemon juice, horseradish and seasonings up to 1 day ahead and keep chilled; shake with ice to order",
      "ingredients": [
       {
        "q": 640,
@@ -713,13 +713,13 @@
       {
        "q": null,
        "u": "",
-       "item": "Worcestershire sauce, 8 dashes",
+       "item": "Worcestershire sauce, to taste",
        "aisle": "Pantry"
       },
       {
        "q": null,
        "u": "",
-       "item": "hot sauce, 8 dashes",
+       "item": "hot sauce, to taste",
        "aisle": "Pantry"
       },
       {
@@ -760,7 +760,7 @@
      "n": "Look-at-me Bloody Mary (vegetarian)",
      "prep_min": 8,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Mix the tomato juice, lemon juice, soy sauce and seasonings up to 1 day ahead and keep chilled; add the vodka and shake with ice to order",
      "ingredients": [
       {
        "q": 180,
@@ -789,7 +789,7 @@
       {
        "q": null,
        "u": "",
-       "item": "hot sauce, 8 dashes",
+       "item": "hot sauce, to taste",
        "aisle": "Pantry"
       },
       {
@@ -831,7 +831,7 @@
      "n": "Look-at-me Bloody Mary (vegetarian, alcohol-free)",
      "prep_min": 8,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Mix the tomato juice, pickle brine, lemon juice, soy sauce and seasonings up to 1 day ahead and keep chilled; shake with ice to order",
      "ingredients": [
       {
        "q": 600,
@@ -860,7 +860,7 @@
       {
        "q": null,
        "u": "",
-       "item": "hot sauce, 8 dashes",
+       "item": "hot sauce, to taste",
        "aisle": "Pantry"
       },
       {

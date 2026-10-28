@@ -5,7 +5,7 @@
     "n": "Mission City loaded jackfruit nachos",
     "prep_min": 13,
     "cook_min": 17,
-    "make_ahead": "",
+    "make_ahead": "Cook the jackfruit up to 2 days ahead and keep chilled; assemble and bake just before serving",
     "ingredients": [
      {
       "q": 300,
@@ -163,7 +163,7 @@
     "n": "Coney Island hot dogs (vegetarian)",
     "prep_min": 5,
     "cook_min": 14,
-    "make_ahead": "",
+    "make_ahead": "Prepare the sauerkraut up to 2 days ahead and reheat to serve; grill the veggie sausages just before filling the buns",
     "ingredients": [
      {
       "q": 8,
@@ -217,7 +217,7 @@
     "n": "Chinese restaurant dumplings (vegetarian)",
     "prep_min": 26,
     "cook_min": 10,
-    "make_ahead": "",
+    "make_ahead": "Cook the mushroom filling up to 2 days ahead and keep it chilled; fill, pleat and steam on the night",
     "ingredients": [
      {
       "q": 250,
@@ -252,7 +252,7 @@
      {
       "q": 1,
       "u": "tbsp",
-      "item": "soy sauce",
+      "item": "soy sauce, for the filling",
       "aisle": "Pantry"
      },
      {
@@ -286,7 +286,7 @@
       "min": 8
      },
      {
-      "text": "Serve hot with soy sauce and chilli oil.",
+      "text": "Serve hot with the dipping soy sauce and chilli oil.",
       "min": 1
      }
     ]
@@ -299,7 +299,7 @@
     "n": "Brie, roast capsicum and chutney sandwich bites",
     "prep_min": 15,
     "cook_min": 0,
-    "make_ahead": "",
+    "make_ahead": "Drain the roast capsicum and fill the bread up to 4 hours ahead, wrapped in the fridge; cut and pin to serve",
     "ingredients": [
      {
       "q": 1,
@@ -555,7 +555,7 @@
     "n": "Charles's running late canapés (vegetarian)",
     "prep_min": 22,
     "cook_min": 10,
-    "make_ahead": "",
+    "make_ahead": "Blanch the asparagus and slice and dress the beetroot up to 1 day ahead and keep chilled; wrap, grill and top the blinis on the night",
     "ingredients": [
      {
       "q": 16,
@@ -904,7 +904,7 @@
      {
       "q": 200,
       "u": "ml",
-      "item": "coconut milk",
+      "item": "coconut milk, for the marinade",
       "aisle": "Pantry"
      },
      {
@@ -952,7 +952,7 @@
     ],
     "steps": [
      {
-      "text": "Chop the lemongrass finely and mix with the coconut milk and turmeric. Pat the tofu dry and turn it through the marinade.",
+      "text": "Chop the lemongrass finely and mix with the coconut milk for the marinade and the turmeric. Pat the tofu dry and turn it through the marinade.",
       "min": 10
      },
      {
@@ -1148,7 +1148,7 @@
       "min": 15
      },
      {
-      "text": "Fry at 180C in batches until golden.",
+      "text": "Fry in the vegetable oil at 180C in batches until golden.",
       "min": 11
      },
      {
@@ -1276,15 +1276,15 @@
       "aisle": "Produce"
      },
      {
-      "q": null,
-      "u": "",
+      "q": 4,
+      "u": "cup",
       "item": "crushed ice",
       "aisle": "Frozen"
      }
     ],
     "steps": [
      {
-      "text": "Finely dice the eschalots and stir into the vinegar with the cracked pepper.",
+      "text": "Finely dice the eschalots and stir into the vinegar with the cracked black peppercorns.",
       "min": 8
      },
      {
@@ -1412,7 +1412,7 @@
      {
       "q": 80,
       "u": "g",
-      "item": "caster sugar",
+      "item": "caster sugar, for the custard",
       "aisle": "Pantry"
      },
      {
@@ -1864,7 +1864,7 @@
       "min": 10
      },
      {
-      "text": "Fry at 180C until golden.",
+      "text": "Fry in the vegetable oil at 180C until golden.",
       "min": 10
      },
      {
@@ -1990,21 +1990,21 @@
       "aisle": "Pantry"
      },
      {
-      "q": null,
-      "u": "",
+      "q": 2,
+      "u": "tbsp",
       "item": "salt, for the water",
       "aisle": "Pantry"
      },
      {
-      "q": null,
-      "u": "",
+      "q": 4,
+      "u": "cup",
       "item": "ice",
       "aisle": "Frozen"
      }
     ],
     "steps": [
      {
-      "text": "Bring a pot of salted water to the boil with lemon slices.",
+      "text": "Bring a pot of water to the boil with the salt and lemon slices.",
       "min": 5
      },
      {
@@ -2456,8 +2456,8 @@
       "aisle": "Bottle shop"
      },
      {
-      "q": null,
-      "u": "",
+      "q": 2,
+      "u": "cup",
       "item": "ice",
       "aisle": "Frozen"
      }
@@ -2530,8 +2530,8 @@
       "aisle": "Drinks"
      },
      {
-      "q": null,
-      "u": "",
+      "q": 2,
+      "u": "cup",
       "item": "ice",
       "aisle": "Frozen"
      }
@@ -2870,7 +2870,7 @@
       "min": 8
      },
      {
-      "text": "Dip the florets in the batter and fry at 170C in batches, then rest.",
+      "text": "Dip the florets in the batter and fry in the vegetable oil at 170C in batches, then rest.",
       "min": 15
      },
      {
@@ -2928,8 +2928,8 @@
       "aisle": "Pantry"
      },
      {
-      "q": null,
-      "u": "",
+      "q": 8,
+      "u": "cup",
       "item": "crushed ice",
       "aisle": "Frozen"
      }
@@ -3060,7 +3060,7 @@
      {
       "q": 200,
       "u": "ml",
-      "item": "coconut milk",
+      "item": "coconut milk, for the marinade",
       "aisle": "Pantry"
      },
      {
@@ -3102,7 +3102,7 @@
     ],
     "steps": [
      {
-      "text": "Chop the lemongrass and mix with the coconut milk and turmeric. Pat the tofu dry, turn it through and marinate in the fridge.",
+      "text": "Chop the lemongrass and mix with the coconut milk for the marinade and the turmeric. Pat the tofu dry, turn it through and marinate in the fridge.",
       "min": 130
      },
      {
@@ -3114,7 +3114,7 @@
       "min": 8
      },
      {
-      "text": "Warm the peanut butter with the extra coconut milk and lime juice into a thick sauce.",
+      "text": "Warm the peanut butter with the coconut milk for the sauce and the lime juice into a thick sauce.",
       "min": 5
      }
     ]
@@ -3460,7 +3460,7 @@
       "min": 7
      },
      {
-      "text": "Dip in the batter and fry at 180C in batches.",
+      "text": "Dip in the batter and fry in the vegetable oil at 180C in batches.",
       "min": 12
      },
      {
@@ -3544,7 +3544,7 @@
       "min": 5
      },
      {
-      "text": "Fry in batches at 180C for about 2 minutes until golden, then drain.",
+      "text": "Fry in batches in the vegetable oil at 180C for about 2 minutes until golden, then drain.",
       "min": 8
      },
      {
@@ -3711,7 +3711,7 @@
     "n": "Jersey disco fries (vegetarian)",
     "prep_min": 15,
     "cook_min": 55,
-    "make_ahead": "Best fresh",
+    "make_ahead": "Cut the chips and soak them in cold water up to 1 day ahead in the fridge, then dry well; the gravy keeps 2 days chilled, fry on the night",
     "ingredients": [
      {
       "q": 1,
@@ -3762,7 +3762,7 @@
       "min": 40
      },
      {
-      "text": "Fry at 150C, then again at 190C until crisp.",
+      "text": "Fry in the oil at 150C, then again at 190C until crisp.",
       "min": 15
      },
      {
@@ -4045,7 +4045,7 @@
     "n": "Samoan oka with lime-marinated tofu",
     "prep_min": 25,
     "cook_min": 25,
-    "make_ahead": "Make just before serving",
+    "make_ahead": "Marinate the tofu in the lime juice and chill up to 1 day ahead; stir in the coconut cream and vegetables just before serving",
     "ingredients": [
      {
       "q": 400,
@@ -4296,7 +4296,7 @@
       "aisle": "Pantry"
      },
      {
-      "q": null,
+      "q": 24,
       "u": "",
       "item": "toothpicks, to secure",
       "aisle": "Pantry"
@@ -4340,7 +4340,7 @@
      {
       "q": 1,
       "u": "tbsp",
-      "item": "vegetable oil",
+      "item": "vegetable oil, for the filling",
       "aisle": "Pantry"
      },
      {
@@ -4382,7 +4382,7 @@
      {
       "q": 2,
       "u": "tbsp",
-      "item": "soy sauce, to serve",
+      "item": "soy sauce, for dipping",
       "aisle": "Pantry"
      }
     ],
@@ -4400,7 +4400,7 @@
       "min": 20
      },
      {
-      "text": "Serve with sweet chilli sauce and soy.",
+      "text": "Serve with sweet chilli sauce and soy sauce for dipping.",
       "min": 0
      }
     ]
@@ -4482,7 +4482,7 @@
      {
       "q": 30,
       "u": "g",
-      "item": "butter, for cooking",
+      "item": "butter, for frying the shallot",
       "aisle": "Dairy"
      },
      {
@@ -4555,7 +4555,7 @@
     "n": "Mushroom and leek vol-au-vents",
     "prep_min": 20,
     "cook_min": 15,
-    "make_ahead": "",
+    "make_ahead": "Make the mushroom and leek filling up to 1 day ahead and keep chilled; reheat gently and fill the warm cases on the night",
     "ingredients": [
      {
       "q": 1,
@@ -4697,7 +4697,7 @@
     "n": "Disruptors' hot sauce cauliflower bites",
     "prep_min": 15,
     "cook_min": 50,
-    "make_ahead": "",
+    "make_ahead": "Make the hot sauce up to 3 days ahead in the fridge; cut the cauliflower up to 1 day ahead; bake and toss on the night",
     "ingredients": [
      {
       "q": 1,
@@ -4789,7 +4789,7 @@
     "n": "Chinese New Year dumplings (vegetarian)",
     "prep_min": 45,
     "cook_min": 18,
-    "make_ahead": "",
+    "make_ahead": "Fry and cool the mushroom filling up to 1 day ahead; fill the wrappers, then fry and steam to serve",
     "ingredients": [
      {
       "q": 250,
@@ -4883,7 +4883,7 @@
     "n": "Dreamhouse pink hearts of palm cocktail cups",
     "prep_min": 25,
     "cook_min": 0,
-    "make_ahead": "",
+    "make_ahead": "Cut the hearts of palm and mix the pink sauce up to 1 day ahead, separately in the fridge; shred the cos, dice the avocado and assemble just before serving",
     "ingredients": [
      {
       "q": 2,
@@ -4967,7 +4967,7 @@
     "n": "Los Alamos green chile cheeseburger sliders (vegetarian)",
     "prep_min": 25,
     "cook_min": 20,
-    "make_ahead": "",
+    "make_ahead": "Roll the plant-based mince into balls and mix the chipotle mayonnaise up to 1 day ahead in the fridge; smash and cook just before serving",
     "ingredients": [
      {
       "q": 4,
@@ -5036,11 +5036,11 @@
       "min": 7
      },
      {
-      "text": "Mix the mayo with the chipotle in adobo.",
+      "text": "Mix the mayonnaise with the chipotle in adobo.",
       "min": 5
      },
      {
-      "text": "Toast the slider buns and build with mayo, patties and pickles.",
+      "text": "Toast the slider buns and build with the chipotle mayonnaise, patties and pickles.",
       "min": 13
      }
     ]
@@ -5053,7 +5053,7 @@
     "n": "Bullet Farm veggie chorizo with smoky honey",
     "prep_min": 10,
     "cook_min": 12,
-    "make_ahead": "",
+    "make_ahead": "Slice the veggie sausages up to 1 day ahead and keep chilled; fry, glaze and grill the bread on the night",
     "ingredients": [
      {
       "q": 500,
@@ -5129,7 +5129,7 @@
     "n": "Harbour hearts of palm with lemon",
     "prep_min": 15,
     "cook_min": 0,
-    "make_ahead": "",
+    "make_ahead": "Cut the hearts of palm and mix the sauce up to 1 day ahead in the fridge; pile on ice just before serving",
     "ingredients": [
      {
       "q": 3,
@@ -5138,8 +5138,8 @@
       "aisle": "Pantry"
      },
      {
-      "q": null,
-      "u": "",
+      "q": 4,
+      "u": "cup",
       "item": "crushed ice",
       "aisle": "Frozen"
      },
@@ -5184,7 +5184,7 @@
       "min": 5
      },
      {
-      "text": "Serve with buttered white bread, the way you would on the harbour.",
+      "text": "Serve with white bread spread with the butter, the way you would on the harbour.",
       "min": 5
      }
     ]
@@ -5195,7 +5195,7 @@
     "n": "Veggie sausages with beer onions",
     "prep_min": 12,
     "cook_min": 40,
-    "make_ahead": "",
+    "make_ahead": "Cook the beer onions up to 3 days ahead in the fridge; reheat and grill the veggie sausages on the night",
     "ingredients": [
      {
       "q": 8,
@@ -5264,7 +5264,7 @@
       "min": 22
      },
      {
-      "text": "Add the brown sugar, the balsamic and the beer and simmer 5 minutes until jammy.",
+      "text": "Add the brown sugar, the balsamic and the lager and simmer 5 minutes until jammy.",
       "min": 9
      },
      {
@@ -5281,7 +5281,7 @@
     "n": "Veggie sausages with sticky onions (alcohol-free)",
     "prep_min": 12,
     "cook_min": 40,
-    "make_ahead": "",
+    "make_ahead": "Cook the sticky onions up to 3 days ahead in the fridge; reheat and grill the veggie sausages on the night",
     "ingredients": [
      {
       "q": 8,
@@ -5371,7 +5371,7 @@
     "n": "Marmalade, smoked tofu and cheddar toasties",
     "prep_min": 12,
     "cook_min": 10,
-    "make_ahead": "",
+    "make_ahead": "Butter and fill the sandwiches up to 4 hours ahead and keep wrapped in the fridge; fry to order",
     "ingredients": [
      {
       "q": 8,

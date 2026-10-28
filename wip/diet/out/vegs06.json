@@ -56,7 +56,7 @@
       "aisle": "Pantry"
      },
      {
-      "q": null,
+      "q": 24,
       "u": "",
       "item": "toothpicks",
       "aisle": "Pantry"
@@ -1110,7 +1110,7 @@
      {
       "q": 2,
       "u": "tbsp",
-      "item": "tomato sauce",
+      "item": "tomato sauce, for the filling",
       "aisle": "Pantry"
      },
      {
@@ -1244,9 +1244,9 @@
       "aisle": "Produce"
      },
      {
-      "q": null,
+      "q": 1,
       "u": "",
-      "item": "toothpicks",
+      "item": "box toothpicks",
       "aisle": "Pantry"
      }
     ],
@@ -1590,8 +1590,8 @@
       "aisle": "Pantry"
      },
      {
-      "q": null,
-      "u": "",
+      "q": 4,
+      "u": "cup",
       "item": "crushed ice",
       "aisle": "Frozen"
      },
@@ -1774,7 +1774,7 @@
     ],
     "steps": [
      {
-      "text": "Rinse and dry the chips well.",
+      "text": "Rinse and dry the potato chips well.",
       "min": 8
      },
      {
@@ -1782,7 +1782,7 @@
       "min": 2
      },
      {
-      "text": "Fry at 140C until soft, then drain and rest.",
+      "text": "Fry the chips in the vegetable oil at 140C until soft, then drain and rest.",
       "min": 8
      },
      {
@@ -1801,7 +1801,7 @@
     "n": "Knock-off lager michelada (vegetarian)",
     "prep_min": 10,
     "cook_min": 0,
-    "make_ahead": "",
+    "make_ahead": "Mix the lime juice, tomato juice, soy and hot sauce up to 1 day ahead, keep chilled; rim the glasses and add ice and lager to serve",
     "ingredients": [
      {
       "q": 1,
@@ -1846,8 +1846,8 @@
       "aisle": "Pantry"
      },
      {
-      "q": null,
-      "u": "",
+      "q": 2,
+      "u": "cup",
       "item": "ice",
       "aisle": "Frozen"
      },
@@ -1881,7 +1881,7 @@
     "n": "Knock-off lager michelada (vegetarian, alcohol-free)",
     "prep_min": 10,
     "cook_min": 0,
-    "make_ahead": "",
+    "make_ahead": "Mix the lime juice, tomato juice, soy and hot sauce up to 1 day ahead in the fridge; rim the glasses and add ice and alcohol-free lager to serve",
     "ingredients": [
      {
       "q": 1,
@@ -1926,8 +1926,8 @@
       "aisle": "Pantry"
      },
      {
-      "q": null,
-      "u": "",
+      "q": 2,
+      "u": "cup",
       "item": "ice",
       "aisle": "Frozen"
      },
@@ -2196,7 +2196,7 @@
      {
       "q": 150,
       "u": "g",
-      "item": "plain flour",
+      "item": "plain flour, for the batter",
       "aisle": "Pantry"
      },
      {
@@ -2232,7 +2232,7 @@
     ],
     "steps": [
      {
-      "text": "Fry the chips at 140C until soft and drain.",
+      "text": "Fry the potato chips in the oil at 140C until soft and drain.",
       "min": 12
      },
      {
@@ -2240,11 +2240,11 @@
       "min": 5
      },
      {
-      "text": "Pat the haloumi dry, dip in the dusting flour, then the batter, and fry at 180C.",
+      "text": "Pat the haloumi dry, dip in the dusting flour, then the batter, and fry in the oil at 180C.",
       "min": 8
      },
      {
-      "text": "Fry the chips again until crisp.",
+      "text": "Fry the chips again in the oil until crisp.",
       "min": 8
      },
      {
@@ -2274,7 +2274,7 @@
      {
       "q": 150,
       "u": "g",
-      "item": "plain flour",
+      "item": "plain flour, for the batter",
       "aisle": "Pantry"
      },
      {
@@ -2310,7 +2310,7 @@
     ],
     "steps": [
      {
-      "text": "Fry the chips at 140C until soft and drain.",
+      "text": "Fry the potato chips in the oil at 140C until soft and drain.",
       "min": 12
      },
      {
@@ -2318,11 +2318,11 @@
       "min": 5
      },
      {
-      "text": "Pat the haloumi dry, dip in the dusting flour, then the batter, and fry at 180C.",
+      "text": "Pat the haloumi dry, dip in the dusting flour, then the batter, and fry in the oil at 180C.",
       "min": 8
      },
      {
-      "text": "Fry the chips again until crisp.",
+      "text": "Fry the chips again in the oil until crisp.",
       "min": 8
      },
      {
@@ -2536,7 +2536,7 @@
      {
       "q": 40,
       "u": "g",
-      "item": "butter, melted",
+      "item": "butter, melted, for the dough",
       "aisle": "Dairy"
      },
      {
@@ -3084,7 +3084,7 @@
       "aisle": "Pantry"
      },
      {
-      "q": null,
+      "q": 24,
       "u": "",
       "item": "toothpicks",
       "aisle": "Pantry"
@@ -3331,7 +3331,7 @@
     "n": "Mixed-up guitar case michelada beer (vegetarian)",
     "prep_min": 10,
     "cook_min": 1,
-    "make_ahead": "",
+    "make_ahead": "Mix the chilli salt up to 1 week ahead and juice the limes up to 4 hours ahead; top with lager just before serving",
     "ingredients": [
      {
       "q": 4,
@@ -3409,7 +3409,7 @@
     "n": "Mixed-up guitar case michelada (vegetarian, alcohol-free)",
     "prep_min": 10,
     "cook_min": 1,
-    "make_ahead": "",
+    "make_ahead": "Mix the chilli salt up to 1 week ahead and juice the limes up to 1 day ahead in the fridge; build the drinks to order",
     "ingredients": [
      {
       "q": 4,
@@ -3729,7 +3729,7 @@
     "n": "Smoky mushroom, Manchego and quince tapas",
     "prep_min": 15,
     "cook_min": 8,
-    "make_ahead": "",
+    "make_ahead": "Halve the mushrooms and cut the cheese up to 1 day ahead, chilled; fry the mushrooms and warm the olives on the night",
     "ingredients": [
      {
       "q": 300,
@@ -3813,7 +3813,7 @@
     "n": "Smoky mushroom, Manchego and quince tapas (alcohol-free)",
     "prep_min": 15,
     "cook_min": 8,
-    "make_ahead": "",
+    "make_ahead": "Halve the mushrooms and cut the cheese up to 1 day ahead, chilled; fry the mushrooms and warm the olives on the night",
     "ingredients": [
      {
       "q": 300,
@@ -3907,7 +3907,7 @@
     "n": "Tour bus potato and black bean breakfast tacos",
     "prep_min": 20,
     "cook_min": 3,
-    "make_ahead": "",
+    "make_ahead": "Make the red salsa up to 1 day ahead in the fridge; fry the potatoes and beans, scramble the eggs and warm the tortillas to serve",
     "ingredients": [
      {
       "q": 8,
@@ -4083,7 +4083,7 @@
     "n": "Tijuana portobello street tacos",
     "prep_min": 15,
     "cook_min": 10,
-    "make_ahead": "",
+    "make_ahead": "Char the tomatillos and blend the salsa up to 2 days ahead; grill the mushrooms and warm the tortillas to order",
     "ingredients": [
      {
       "q": 600,
@@ -4298,7 +4298,7 @@
       "min": 4
      },
      {
-      "text": "Brown the smoked tofu in the pan, top each patty with tofu and half a cheese slice, and cover for a minute to melt.",
+      "text": "Brown the smoked tofu in the pan, top each patty with tofu and half a slice of cheddar, and cover for a minute to melt.",
       "min": 3
      },
      {
@@ -4401,7 +4401,7 @@
     "n": "Kick step party sub (vegetarian)",
     "prep_min": 25,
     "cook_min": 10,
-    "make_ahead": "",
+    "make_ahead": "Grill the eggplant up to 1 day ahead, keep chilled; assemble and press the sub up to 4 hours ahead and slice to serve",
     "ingredients": [
      {
       "q": 1,
@@ -4507,7 +4507,7 @@
     "n": "Stolen ATM hot links (vegetarian)",
     "prep_min": 5,
     "cook_min": 12,
-    "make_ahead": "",
+    "make_ahead": "Best grilled just before serving; brush the sausages with oil up to 4 hours ahead and keep them covered in the fridge",
     "ingredients": [
      {
       "q": 8,
@@ -4534,7 +4534,7 @@
       "aisle": "Pantry"
      },
      {
-      "q": null,
+      "q": 20,
       "u": "",
       "item": "toothpicks",
       "aisle": "Pantry"
@@ -4665,7 +4665,7 @@
     "n": "Strangé's cocktail meatballs (vegetarian)",
     "prep_min": 30,
     "cook_min": 13,
-    "make_ahead": "",
+    "make_ahead": "Roll the balls up to 1 day ahead and keep chilled, or bake and freeze up to 1 month; glaze and serve hot",
     "ingredients": [
      {
       "q": 500,
@@ -4710,7 +4710,7 @@
       "aisle": "Pantry"
      },
      {
-      "q": null,
+      "q": 30,
       "u": "",
       "item": "toothpicks",
       "aisle": "Pantry"
@@ -4811,7 +4811,7 @@
     "n": "Reno lounge stuffed mushrooms (vegetarian)",
     "prep_min": 25,
     "cook_min": 9,
-    "make_ahead": "",
+    "make_ahead": "Make the stuffing up to 2 days ahead and fill the caps up to 6 hours ahead, chilled; bake on the night",
     "ingredients": [
      {
       "q": 20,
@@ -4881,7 +4881,7 @@
     "n": "Lunch truck tacos (vegetarian)",
     "prep_min": 13,
     "cook_min": 12,
-    "make_ahead": "",
+    "make_ahead": "The plant-based mince filling keeps up to 2 days in the fridge; reheat, shred the lettuce and warm the tortillas on the night",
     "ingredients": [
      {
       "q": 500,
@@ -4974,7 +4974,7 @@
      {
       "q": 1,
       "u": "tbsp",
-      "item": "vegetable oil",
+      "item": "vegetable oil, for the chilli",
       "aisle": "Pantry"
      },
      {
@@ -5135,7 +5135,7 @@
     "n": "Harbour shiitake and tofu dumplings",
     "prep_min": 32,
     "cook_min": 8,
-    "make_ahead": "",
+    "make_ahead": "Mix the tofu filling up to 1 day ahead in the fridge; fill the wrappers and steam on the night",
     "ingredients": [
      {
       "q": 250,
@@ -5213,7 +5213,7 @@
     "n": "Kowloon Walled City curry tofu puffs",
     "prep_min": 6,
     "cook_min": 15,
-    "make_ahead": "",
+    "make_ahead": "Make the curry sauce up to 3 days ahead and keep chilled; heat it with the tofu puffs and skewer on the night",
     "ingredients": [
      {
       "q": 300,
@@ -5258,7 +5258,7 @@
       "aisle": "Pantry"
      },
      {
-      "q": null,
+      "q": 8,
       "u": "",
       "item": "bamboo skewers",
       "aisle": "Pantry"
@@ -5295,7 +5295,7 @@
     "n": "Elaine's supermarket Reuben bites (vegetarian)",
     "prep_min": 25,
     "cook_min": 0,
-    "make_ahead": "",
+    "make_ahead": "Slice the smoked tofu and mix the dressing up to 2 days ahead in the fridge; toast, top and bake just before serving",
     "ingredients": [
      {
       "q": 6,
@@ -5381,7 +5381,7 @@
     "n": "Egg, tofu and chive dumplings",
     "prep_min": 33,
     "cook_min": 9,
-    "make_ahead": "",
+    "make_ahead": "Make the egg, tofu and chive filling up to 1 day ahead in the fridge; fill, pleat, fry and steam on the night",
     "ingredients": [
      {
       "q": 3,
@@ -5553,7 +5553,7 @@
     "n": "Teahouse mushroom and cabbage dumplings",
     "prep_min": 30,
     "cook_min": 13,
-    "make_ahead": "",
+    "make_ahead": "Make the mushroom filling up to 1 day ahead in the fridge; fill and steam on the day, or freeze the filled dumplings for up to 1 month",
     "ingredients": [
      {
       "q": 300,
@@ -5639,7 +5639,7 @@
     "n": "Desert cumin mushroom skewers",
     "prep_min": 10,
     "cook_min": 11,
-    "make_ahead": "",
+    "make_ahead": "Soak the skewers up to 1 day ahead; toss and thread the mushrooms up to 2 hours before grilling",
     "ingredients": [
      {
       "q": 500,
@@ -5672,7 +5672,7 @@
       "aisle": "Pantry"
      },
      {
-      "q": null,
+      "q": 12,
       "u": "",
       "item": "bamboo skewers, soaked",
       "aisle": "Pantry"
@@ -5705,7 +5705,7 @@
     "n": "Imperial court mushroom and tofu dumplings",
     "prep_min": 40,
     "cook_min": 2,
-    "make_ahead": "",
+    "make_ahead": "Mix the tofu and mushroom filling up to 2 days ahead in the fridge; fill, pleat and steam on the day",
     "ingredients": [
      {
       "q": 200,
@@ -5853,7 +5853,7 @@
     "n": "Tunstall's English sandwiches (vegetarian)",
     "prep_min": 19,
     "cook_min": 0,
-    "make_ahead": "",
+    "make_ahead": "Butter and fill the sandwiches up to 4 hours ahead, wrapped in damp paper towel in the fridge; trim the crusts and cut just before serving",
     "ingredients": [
      {
       "q": 8,
@@ -5913,12 +5913,12 @@
     "n": "Trail cornbread (vegetarian)",
     "prep_min": 15,
     "cook_min": 19,
-    "make_ahead": "",
+    "make_ahead": "Measure the dry ingredients up to 1 day ahead; mix, add the corn and bake just before serving, best warm",
     "ingredients": [
      {
       "q": 30,
       "u": "g",
-      "item": "butter, for the pan",
+      "item": "butter, melted in the hot pan",
       "aisle": "Dairy"
      },
      {
@@ -6103,7 +6103,7 @@
     "n": "New York bagel bites (vegetarian)",
     "prep_min": 14,
     "cook_min": 4,
-    "make_ahead": "",
+    "make_ahead": "Slice the beetroot and toss with the lemon up to 1 day ahead in the fridge; toast the bagels and top just before serving",
     "ingredients": [
      {
       "q": 200,
@@ -6173,7 +6173,7 @@
     "n": "Norman's campfire s'mores (vegetarian)",
     "prep_min": 10,
     "cook_min": 2,
-    "make_ahead": "",
+    "make_ahead": "Toast fresh at the fire; pack the biscuits, chocolate and marshmallows in a box up to 1 week ahead",
     "ingredients": [
      {
       "q": 16,
@@ -6213,7 +6213,7 @@
     "n": "Double Deuce smoky eggplant jalapeño poppers",
     "prep_min": 24,
     "cook_min": 25,
-    "make_ahead": "",
+    "make_ahead": "Cook the eggplant strips and fill the jalapenos up to 1 day ahead, chilled; wrap, pin and bake on the night",
     "ingredients": [
      {
       "q": 12,
@@ -6258,7 +6258,7 @@
       "aisle": "Pantry"
      },
      {
-      "q": null,
+      "q": 24,
       "u": "",
       "item": "toothpicks",
       "aisle": "Pantry"
@@ -6323,7 +6323,7 @@
     "n": "Smoked tofu, egg and cheese rolls",
     "prep_min": 10,
     "cook_min": 12,
-    "make_ahead": "",
+    "make_ahead": "Slice the smoked tofu up to 2 days ahead, covered in the fridge; fry and build the rolls on the night",
     "ingredients": [
      {
       "q": 400,

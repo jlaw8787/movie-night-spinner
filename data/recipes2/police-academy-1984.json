@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 15,
    "cook_min": 25,
-   "make_ahead": "",
+   "make_ahead": "Bake up to 1 day ahead and wrap once cool; warm in the oven for 10 minutes before serving",
    "ingredients": [
     {
      "q": 150,
@@ -47,7 +47,7 @@
     {
      "q": 60,
      "u": "g",
-     "item": "butter, melted",
+     "item": "butter, melted, for the batter",
      "aisle": "Dairy"
     },
     {
@@ -65,11 +65,11 @@
    ],
    "steps": [
     {
-     "text": "Heat a buttered cast iron pan in a 200C oven.",
+     "text": "Grease a cast iron pan with the butter and heat it in a 200C oven.",
      "min": 10
     },
     {
-     "text": "Whisk the dry ingredients with the buttermilk, eggs and melted butter.",
+     "text": "Whisk the cornmeal, plain flour, caster sugar and baking powder with the buttermilk, eggs and melted butter.",
      "min": 5
     },
     {
@@ -89,7 +89,7 @@
    "course": "s",
    "prep_min": 20,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Make the mignonette up to 2 days ahead in the fridge; shuck the oysters just before serving",
    "ingredients": [
     {
      "q": 1,
@@ -149,7 +149,7 @@
      "n": "Blue Oyster bar oyster mushrooms",
      "prep_min": 17,
      "cook_min": 5,
-     "make_ahead": "",
+     "make_ahead": "Make the mignonette up to 2 days ahead, and poach and chill the mushrooms up to 1 day ahead; plate on ice just before serving",
      "ingredients": [
       {
        "q": 1,
@@ -227,7 +227,7 @@
    "course": "m",
    "prep_min": 20,
    "cook_min": 72,
-   "make_ahead": "",
+   "make_ahead": "Mix and shape the meatloaf up to 1 day ahead in the tin, covered in the fridge; bake and make the mash on the night",
    "ingredients": [
     {
      "q": 500,
@@ -325,7 +325,7 @@
      "n": "Mess hall lentil and mushroom loaf",
      "prep_min": 25,
      "cook_min": 60,
-     "make_ahead": "",
+     "make_ahead": "Bake the loaf up to 1 day ahead until firm, then cool and keep chilled; reheat slices and make the mash on the night",
      "ingredients": [
       {
        "q": 800,
@@ -436,7 +436,7 @@
     {
      "q": 200,
      "u": "g",
-     "item": "butter, softened",
+     "item": "butter, softened, for the cake",
      "aisle": "Dairy"
     },
     {
@@ -466,7 +466,7 @@
     {
      "q": 200,
      "u": "g",
-     "item": "butter, softened, for icing",
+     "item": "butter, softened, for the icing",
      "aisle": "Dairy"
     },
     {
@@ -476,9 +476,9 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
+     "q": 4,
      "u": "",
-     "item": "blue food colouring",
+     "item": "drops blue food colouring",
      "aisle": "Pantry"
     }
    ],
@@ -516,7 +516,7 @@
    "course": "d",
    "prep_min": 8,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Squeeze the lemon juice up to 1 day ahead in the fridge; shake the vodka and curacao to order",
    "ingredients": [
     {
      "q": 1,
@@ -582,7 +582,7 @@
      "n": "Blue Oyster blue lagoon (alcohol-free)",
      "prep_min": 8,
      "cook_min": 12,
-     "make_ahead": "",
+     "make_ahead": "Warm, strain and cool the blue syrup up to 3 days ahead in the fridge; shake with the lemon juice and ice to order",
      "ingredients": [
       {
        "q": 1,

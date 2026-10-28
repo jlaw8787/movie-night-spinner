@@ -225,7 +225,7 @@
     "n": "Hydrated pizza (vegetarian)",
     "prep_min": 25,
     "cook_min": 20,
-    "make_ahead": "",
+    "make_ahead": "Slice the mushrooms and cheese up to 1 day ahead and keep covered in the fridge; stretch the dough and bake on the night",
     "ingredients": [
      {
       "q": 4,
@@ -370,7 +370,7 @@
      {
       "q": 60,
       "u": "g",
-      "item": "parmesan, grated",
+      "item": "vegetarian parmesan-style cheese, grated",
       "aisle": "Dairy"
      }
     ],
@@ -532,7 +532,7 @@
      {
       "q": 30,
       "u": "g",
-      "item": "butter",
+      "item": "butter, for the stuffing",
       "aisle": "Dairy"
      },
      {
@@ -584,7 +584,7 @@
       "min": 10
      },
      {
-      "text": "Fry the onion, sage and chopped pumpkin flesh in the butter until soft.",
+      "text": "Fry the onion, sage and chopped pumpkin flesh in the stuffing butter until soft.",
       "min": 8
      },
      {
@@ -786,8 +786,8 @@
       "aisle": "Pantry"
      },
      {
-      "q": null,
-      "u": "",
+      "q": 2,
+      "u": "tbsp",
       "item": "oil for browning",
       "aisle": "Pantry"
      }
@@ -823,7 +823,7 @@
     "n": "King oyster mushrooms à la Gusteau",
     "prep_min": 20,
     "cook_min": 10,
-    "make_ahead": "",
+    "make_ahead": "Slice and score the mushrooms up to 1 day ahead, covered in the fridge; fry and make the sauce on the night",
     "ingredients": [
      {
       "q": 600,
@@ -1072,7 +1072,7 @@
     ],
     "steps": [
      {
-      "text": "Reduce the vinegar with half the tarragon and the chopped shallot until almost dry. Cut and dry the chips.",
+      "text": "Reduce the vinegar with half the tarragon and the chopped shallot until almost dry. Cut the potatoes into chips and dry them.",
       "min": 10
      },
      {
@@ -1919,7 +1919,7 @@
     "n": "Frank Vitale's linguine with oyster mushrooms",
     "prep_min": 15,
     "cook_min": 18,
-    "make_ahead": "",
+    "make_ahead": "Tear the mushrooms and slice the garlic up to 1 day ahead and keep chilled in separate containers; cook everything on the night",
     "ingredients": [
      {
       "q": 400,
@@ -1993,7 +1993,7 @@
     "n": "Frank Vitale's linguine with oyster mushrooms",
     "prep_min": 15,
     "cook_min": 18,
-    "make_ahead": "",
+    "make_ahead": "Tear the mushrooms and slice the garlic up to 1 day ahead and keep chilled in separate containers; cook everything on the night",
     "ingredients": [
      {
       "q": 400,
@@ -2071,7 +2071,7 @@
     "n": "Celeriac steak that stays put",
     "prep_min": 20,
     "cook_min": 90,
-    "make_ahead": "",
+    "make_ahead": "Bake the potatoes up to 1 day ahead and reheat; cook the celeriac steaks and spinach on the night",
     "ingredients": [
      {
       "q": 4,
@@ -2159,7 +2159,7 @@
     "n": "Trevor's engagement dinner tofu",
     "prep_min": 20,
     "cook_min": 25,
-    "make_ahead": "",
+    "make_ahead": "Cut and dry the tofu slabs up to 1 day ahead in the fridge; boil the potatoes and fry the tofu on the night",
     "ingredients": [
      {
       "q": 600,
@@ -2247,7 +2247,7 @@
     "n": "Mayor's roast cauliflower and mint sauce",
     "prep_min": 20,
     "cook_min": 46,
-    "make_ahead": "",
+    "make_ahead": "Cut the potatoes and pumpkin up to 1 day ahead, covered in the fridge, and make the mint sauce up to 2 days ahead; roast on the night",
     "ingredients": [
      {
       "q": 800,
@@ -2316,8 +2316,8 @@
       "aisle": "Pantry"
      },
      {
-      "q": null,
-      "u": "",
+      "q": 2,
+      "u": "tbsp",
       "item": "hot water, for mint sauce",
       "aisle": "Pantry"
      }
@@ -2535,7 +2535,7 @@
     "n": "Creamy mushroom, cannellini and rice casserole",
     "prep_min": 20,
     "cook_min": 58,
-    "make_ahead": "",
+    "make_ahead": "Brown the mushrooms and soften the onion up to 1 day ahead; assemble and bake on the night",
     "ingredients": [
      {
       "q": 500,
@@ -2588,7 +2588,7 @@
      {
       "q": 50,
       "u": "g",
-      "item": "parmesan, grated",
+      "item": "vegetarian parmesan-style cheese, grated",
       "aisle": "Dairy"
      }
     ],
@@ -2825,7 +2825,7 @@
     "n": "Mushroom stroganoff",
     "prep_min": 20,
     "cook_min": 30,
-    "make_ahead": "",
+    "make_ahead": "Slice the mushrooms and onion up to 1 day ahead, covered in the fridge; cook on the night",
     "ingredients": [
      {
       "q": 800,
@@ -2919,7 +2919,7 @@
     "n": "Mushroom stroganoff",
     "prep_min": 20,
     "cook_min": 30,
-    "make_ahead": "",
+    "make_ahead": "Slice the mushrooms and onion up to 1 day ahead, covered in the fridge; sear, simmer and finish on the night",
     "ingredients": [
      {
       "q": 800,
@@ -2952,19 +2952,13 @@
       "aisle": "Pantry"
      },
      {
-      "q": 30,
-      "u": "ml",
-      "item": "vegetable stock, extra",
-      "aisle": "Pantry"
-     },
-     {
       "q": 1,
       "u": "tsp",
       "item": "lemon juice",
       "aisle": "Produce"
      },
      {
-      "q": 200,
+      "q": 230,
       "u": "ml",
       "item": "vegetable stock",
       "aisle": "Pantry"
@@ -2998,11 +2992,11 @@
       "min": 8
      },
      {
-      "text": "Cook the rest of the mushrooms and the onion in 30g of the butter, add the paprika, then the extra stock and lemon juice, and let it bubble away.",
+      "text": "Cook the rest of the mushrooms and the onion in 30g of the butter, add the paprika, then 30 ml of the stock and the lemon juice, and let it bubble away.",
       "min": 12
      },
      {
-      "text": "Add the stock and soy sauce and simmer.",
+      "text": "Add the rest of the stock and the soy sauce and simmer.",
       "min": 5
      },
      {
@@ -3113,7 +3107,7 @@
     "n": "Chinese takeaway in bed (vegetarian)",
     "prep_min": 20,
     "cook_min": 22,
-    "make_ahead": "",
+    "make_ahead": "Press and cube the tofu up to 1 day ahead and keep chilled; slice the spring onions up to 1 day ahead. Fry the tofu, cook the rice and finish the dish on the night",
     "ingredients": [
      {
       "q": 600,
@@ -3219,7 +3213,7 @@
     "n": "Chinese takeaway in bed (vegetarian)",
     "prep_min": 20,
     "cook_min": 22,
-    "make_ahead": "",
+    "make_ahead": "Press and cube the tofu up to 1 day ahead and keep chilled; slice the spring onions up to 1 day ahead. Fry the tofu, cook the rice and finish the dish on the night",
     "ingredients": [
      {
       "q": 600,
@@ -3470,7 +3464,7 @@
      {
       "q": 1,
       "u": "tsp",
-      "item": "rice vinegar, extra",
+      "item": "rice vinegar, for the sauce",
       "aisle": "Pantry"
      },
      {
@@ -3530,13 +3524,13 @@
      {
       "q": null,
       "u": "",
-      "item": "rice vinegar, to taste",
+      "item": "rice vinegar, to serve",
       "aisle": "Pantry"
      }
     ],
     "steps": [
      {
-      "text": "Simmer the soy, apple juice, extra rice vinegar, brown sugar, grated ginger and crushed garlic for 5 minutes until syrupy.",
+      "text": "Simmer the soy, apple juice, the rice vinegar for the sauce, brown sugar, grated ginger and crushed garlic for 5 minutes until syrupy.",
       "min": 8
      },
      {
@@ -3556,7 +3550,7 @@
       "min": 12
      },
      {
-      "text": "Serve the tofu with the pineapple, rice, sesame seeds, sliced spring onion and sliced chilli in rice vinegar.",
+      "text": "Serve the tofu with the pineapple, rice, sesame seeds, sliced spring onion and sliced chilli, with a splash of rice vinegar to serve.",
       "min": 6
      }
     ]
@@ -3569,7 +3563,7 @@
     "n": "Chuck and Teddy's storm chowder (vegetarian)",
     "prep_min": 20,
     "cook_min": 26,
-    "make_ahead": "",
+    "make_ahead": "Crisp the swiss brown mushrooms and make the soup up to the milk step up to 1 day ahead in the fridge; reheat, then stir in the cream, corn and oyster mushrooms to serve",
     "ingredients": [
      {
       "q": 150,
@@ -3689,7 +3683,7 @@
     "n": "Chuck and Teddy's storm chowder (vegetarian)",
     "prep_min": 20,
     "cook_min": 26,
-    "make_ahead": "",
+    "make_ahead": "Crisp the swiss brown mushrooms and make the soup up to the milk step up to 1 day ahead in the fridge; reheat, then stir in the cream, corn and oyster mushrooms to serve",
     "ingredients": [
      {
       "q": 150,
@@ -3724,7 +3718,7 @@
      {
       "q": 125,
       "u": "ml",
-      "item": "vegetable stock, extra",
+      "item": "vegetable stock, extra, for the mushrooms",
       "aisle": "Pantry"
      },
      {
@@ -3754,7 +3748,7 @@
      {
       "q": 300,
       "u": "ml",
-      "item": "vegetable stock",
+      "item": "vegetable stock, for the soup",
       "aisle": "Pantry"
      },
      {
@@ -4025,7 +4019,7 @@
     "n": "Hotel club sandwich and shoestring fries (vegetarian)",
     "prep_min": 30,
     "cook_min": 32,
-    "make_ahead": "",
+    "make_ahead": "Boil and slice the eggs up to 1 day ahead and keep chilled; fry the tofu, build the sandwiches and finish the fries just before serving",
     "ingredients": [
      {
       "q": 200,
@@ -4366,7 +4360,7 @@
      {
       "q": 80,
       "u": "g",
-      "item": "parmesan, grated",
+      "item": "vegetarian parmesan-style cheese, grated",
       "aisle": "Dairy"
      },
      {
@@ -4564,7 +4558,7 @@
      {
       "q": 100,
       "u": "g",
-      "item": "parmesan, grated",
+      "item": "vegetarian parmesan-style cheese, grated",
       "aisle": "Dairy"
      },
      {
@@ -4707,7 +4701,7 @@
     "n": "Questing honey thyme mushroom drumsticks",
     "prep_min": 18,
     "cook_min": 42,
-    "make_ahead": "",
+    "make_ahead": "Toss the mushrooms and chickpeas with the honey, garlic, thyme and oil up to 4 hours ahead in the fridge; roast the vegetables first on the night",
     "ingredients": [
      {
       "q": 8,
@@ -4791,7 +4785,7 @@
     "n": "Manhattan bistro mushroom steak",
     "prep_min": 20,
     "cook_min": 36,
-    "make_ahead": "",
+    "make_ahead": "Fry the frites the first time up to 3 hours ahead and leave on a tray; fry again, cook the mushrooms and make the sauce on the night",
     "ingredients": [
      {
       "q": 800,
@@ -4814,7 +4808,7 @@
      {
       "q": 1,
       "u": "tbsp",
-      "item": "neutral oil",
+      "item": "neutral oil, for searing the mushrooms",
       "aisle": "Pantry"
      },
      {
@@ -4901,7 +4895,7 @@
     "n": "Manhattan bistro mushroom steak",
     "prep_min": 20,
     "cook_min": 36,
-    "make_ahead": "",
+    "make_ahead": "Fry the frites the first time up to 3 hours ahead and leave on a tray; fry again, cook the mushrooms and make the vinegar sauce on the night",
     "ingredients": [
      {
       "q": 800,
@@ -4924,7 +4918,7 @@
      {
       "q": 1,
       "u": "tbsp",
-      "item": "neutral oil",
+      "item": "neutral oil, for searing the mushrooms",
       "aisle": "Pantry"
      },
      {
@@ -4948,7 +4942,7 @@
      {
       "q": 40,
       "u": "ml",
-      "item": "vegetable stock, extra",
+      "item": "vegetable stock, extra, to deglaze",
       "aisle": "Pantry"
      },
      {
@@ -4960,7 +4954,7 @@
      {
       "q": 150,
       "u": "ml",
-      "item": "vegetable stock",
+      "item": "vegetable stock, for the sauce",
       "aisle": "Pantry"
      },
      {
@@ -5021,7 +5015,7 @@
     "n": "Pepperberry roast eggplant with sweet potato",
     "prep_min": 15,
     "cook_min": 41,
-    "make_ahead": "",
+    "make_ahead": "Score and rub the eggplant up to 1 day ahead, covered in the fridge; roast and crumble the feta on the night",
     "ingredients": [
      {
       "q": 2,
@@ -5468,8 +5462,8 @@
       "aisle": "Bakery"
      },
      {
-      "q": null,
-      "u": "",
+      "q": 3,
+      "u": "tbsp",
       "item": "yellow mustard",
       "aisle": "Pantry"
      },
@@ -5507,7 +5501,7 @@
     "n": "Date night mushroom cheesesteaks",
     "prep_min": 15,
     "cook_min": 16,
-    "make_ahead": "",
+    "make_ahead": "Slice the mushrooms, onions and capsicum up to 1 day ahead in the fridge; fry on the night",
     "ingredients": [
      {
       "q": 600,
@@ -5684,7 +5678,7 @@
      {
       "q": 125,
       "u": "g",
-      "item": "parmesan, grated",
+      "item": "vegetarian parmesan-style cheese, grated",
       "aisle": "Dairy"
      },
      {
@@ -5745,7 +5739,7 @@
     "n": "Slater's LA cauliflower steaks",
     "prep_min": 20,
     "cook_min": 85,
-    "make_ahead": "",
+    "make_ahead": "Cut and salt the cauliflower steaks up to 4 hours ahead, covered in the fridge; fry the mushrooms and sear the steaks on the night",
     "ingredients": [
      {
       "q": 2,
@@ -5827,7 +5821,7 @@
     "n": "Brooklyn hot dogs (vegetarian)",
     "prep_min": 10,
     "cook_min": 10,
-    "make_ahead": "",
+    "make_ahead": "Brush the franks with oil up to 4 hours ahead in the fridge; griddle, fill and wrap just before serving",
     "ingredients": [
      {
       "q": 8,
@@ -5883,7 +5877,7 @@
     "n": "Haloumi club sandwich",
     "prep_min": 25,
     "cook_min": 7,
-    "make_ahead": "",
+    "make_ahead": "Fry the mushrooms up to 1 day ahead, chilled; fry the haloumi, toast the bread and build on the night",
     "ingredients": [
      {
       "q": 250,
@@ -5950,7 +5944,7 @@
       "min": 5
      },
      {
-      "text": "Layer the haloumi, mushrooms, lettuce and tomato with mayo across three slices per sandwich.",
+      "text": "Layer the haloumi, mushrooms, lettuce and tomato with mayonnaise across three slices per sandwich.",
       "min": 10
      },
      {
@@ -5967,7 +5961,7 @@
     "n": "Night shift breakfast burritos (vegetarian)",
     "prep_min": 20,
     "cook_min": 20,
-    "make_ahead": "",
+    "make_ahead": "Cook the potato and chickpeas up to 1 day ahead and reheat; scramble the eggs and fill the tortillas on the night",
     "ingredients": [
      {
       "q": 8,
@@ -6262,9 +6256,9 @@
       "aisle": "Pantry"
      },
      {
-      "q": 300,
+      "q": 550,
       "u": "ml",
-      "item": "vegetable stock, extra",
+      "item": "vegetable stock",
       "aisle": "Pantry"
      },
      {
@@ -6277,12 +6271,6 @@
       "q": 1,
       "u": "tsp",
       "item": "brown sugar",
-      "aisle": "Pantry"
-     },
-     {
-      "q": 250,
-      "u": "ml",
-      "item": "vegetable stock",
       "aisle": "Pantry"
      },
      {
@@ -6316,7 +6304,7 @@
       "min": 15
      },
      {
-      "text": "Add the onions and thyme and soften, then stir in the tomato paste, soy sauce, extra stock, balsamic vinegar, brown sugar and stock.",
+      "text": "Add the onions and thyme and soften, then stir in the tomato paste, soy sauce, stock, balsamic vinegar and brown sugar.",
       "min": 8
      },
      {
@@ -6341,7 +6329,7 @@
     "n": "Fox Books cafe sandwiches (vegetarian)",
     "prep_min": 10,
     "cook_min": 6,
-    "make_ahead": "",
+    "make_ahead": "Fill the sandwiches up to 4 hours ahead, wrapped in the fridge; butter the outsides and press them just before serving",
     "ingredients": [
      {
       "q": 8,
@@ -6411,7 +6399,7 @@
     "n": "Calvin's barbershop cauliflower tips",
     "prep_min": 25,
     "cook_min": 40,
-    "make_ahead": "",
+    "make_ahead": "Toss the cauliflower in the rub up to 4 hours ahead, covered in the fridge; roast and glaze on the night",
     "ingredients": [
      {
       "q": 1,
@@ -6499,7 +6487,7 @@
     "n": "Pumpkin coach risotto (vegetarian)",
     "prep_min": 19,
     "cook_min": 50,
-    "make_ahead": "",
+    "make_ahead": "Roast the pumpkin up to 1 day ahead in the fridge; the risotto is best made fresh, with the sage butter fried to finish",
     "ingredients": [
      {
       "q": 1,
@@ -6528,7 +6516,7 @@
      {
       "q": 100,
       "u": "g",
-      "item": "parmesan, grated",
+      "item": "vegetarian parmesan-style cheese, grated",
       "aisle": "Dairy"
      },
      {
@@ -6710,9 +6698,9 @@
       "aisle": "Pantry"
      },
      {
-      "q": 350,
+      "q": 600,
       "u": "ml",
-      "item": "vegetable stock, extra",
+      "item": "vegetable stock",
       "aisle": "Pantry"
      },
      {
@@ -6725,12 +6713,6 @@
       "q": 1,
       "u": "tbsp",
       "item": "balsamic vinegar",
-      "aisle": "Pantry"
-     },
-     {
-      "q": 250,
-      "u": "ml",
-      "item": "vegetable stock",
       "aisle": "Pantry"
      },
      {
@@ -6762,7 +6744,7 @@
       "min": 15
      },
      {
-      "text": "Brown the onions, stir in the tomato paste and flour, then add the extra stock, grape juice, balsamic vinegar, stock, thyme and mushrooms and tofu.",
+      "text": "Brown the onions, stir in the tomato paste and flour, then add the vegetable stock, grape juice, balsamic vinegar, thyme, mushrooms and tofu.",
       "min": 5
      },
      {
@@ -6993,7 +6975,7 @@
     "n": "Astoria school lunch haloumi fingers",
     "prep_min": 25,
     "cook_min": 40,
-    "make_ahead": "",
+    "make_ahead": "Crumb the haloumi up to 4 hours ahead, keep chilled; fry the haloumi and roast the chips fresh",
     "ingredients": [
      {
       "q": 500,
@@ -7098,7 +7080,7 @@
      {
       "q": 30,
       "u": "g",
-      "item": "butter",
+      "item": "butter, for the mushrooms",
       "aisle": "Dairy"
      },
      {
@@ -7144,7 +7126,7 @@
       "min": 8
      },
      {
-      "text": "Turn, add the butter, baste and roast at 200C until tender.",
+      "text": "Turn, add the butter for the mushrooms, baste and roast at 200C until tender.",
       "min": 15
      },
      {
@@ -7182,7 +7164,7 @@
      {
       "q": 30,
       "u": "g",
-      "item": "butter",
+      "item": "butter, for the mushrooms",
       "aisle": "Dairy"
      },
      {
@@ -7240,7 +7222,7 @@
       "min": 8
      },
      {
-      "text": "Turn, add the butter, baste and roast at 200C until tender.",
+      "text": "Turn, add the butter for the mushrooms, baste and roast at 200C until tender.",
       "min": 15
      },
      {
@@ -7388,7 +7370,7 @@
      {
       "q": 80,
       "u": "g",
-      "item": "parmesan, grated",
+      "item": "vegetarian parmesan-style cheese, grated",
       "aisle": "Dairy"
      },
      {
@@ -7672,9 +7654,9 @@
       "aisle": "Pantry"
      },
      {
-      "q": 300,
+      "q": 425,
       "u": "ml",
-      "item": "vegetable stock, extra",
+      "item": "vegetable stock",
       "aisle": "Pantry"
      },
      {
@@ -7687,12 +7669,6 @@
       "q": 75,
       "u": "ml",
       "item": "water",
-      "aisle": "Pantry"
-     },
-     {
-      "q": 125,
-      "u": "ml",
-      "item": "vegetable stock",
       "aisle": "Pantry"
      },
      {
@@ -7744,7 +7720,7 @@
       "min": 20
      },
      {
-      "text": "Add the onions and soften, then stir in the flour, extra stock, malt vinegar, water, stock and soy sauce and simmer until thick.",
+      "text": "Add the onions and soften, then stir in the flour, stock, malt vinegar, water and soy sauce and simmer until thick.",
       "min": 35
      },
      {
@@ -7769,7 +7745,7 @@
     "n": "Vermont inn roast celeriac",
     "prep_min": 30,
     "cook_min": 93,
-    "make_ahead": "",
+    "make_ahead": "Mix the stuffing up to 1 day ahead in the fridge; rub the celeriac with butter and herbs up to 1 day ahead",
     "ingredients": [
      {
       "q": 1,

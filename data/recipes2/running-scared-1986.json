@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 10,
    "cook_min": 7,
-   "make_ahead": "",
+   "make_ahead": "Dice the onion and slice the tomato up to 1 day ahead, covered in the fridge; heat the franks and fill the buns to serve",
    "ingredients": [
     {
      "q": 4,
@@ -77,8 +77,8 @@
      "min": 1
     },
     {
-     "text": "Fill the buns and finish with celery salt.",
-     "min": 1
+     "text": "Fill the buns with a frank, mustard, relish, onion, tomato, a pickle spear and sport peppers, then finish with celery salt.",
+     "min": 4
     }
    ],
    "veg": false,
@@ -88,7 +88,7 @@
      "n": "Chicago hot dogs (vegetarian)",
      "prep_min": 8,
      "cook_min": 7,
-     "make_ahead": "",
+     "make_ahead": "Dice the onion and slice the tomato up to 1 day ahead, covered in the fridge; heat the vegetarian franks and fill the buns to serve",
      "ingredients": [
       {
        "q": 4,
@@ -172,7 +172,7 @@
    "course": "s",
    "prep_min": 20,
    "cook_min": 16,
-   "make_ahead": "",
+   "make_ahead": "Chop the prawns and vegetables and mix the lime mayonnaise up to 1 day ahead in the fridge; make the batter and fry just before serving",
    "ingredients": [
     {
      "q": 300,
@@ -270,7 +270,7 @@
      "n": "Key West conch fritters (vegetarian)",
      "prep_min": 20,
      "cook_min": 16,
-     "make_ahead": "",
+     "make_ahead": "Chop the mushrooms and vegetables and mix the lime mayonnaise up to 1 day ahead in the fridge; make the batter and fry just before serving",
      "ingredients": [
       {
        "q": 250,
@@ -370,7 +370,7 @@
    "course": "m",
    "prep_min": 15,
    "cook_min": 71,
-   "make_ahead": "",
+   "make_ahead": "Roast, rest and shave the beef up to 2 days ahead; keep it and the jus apart in the fridge, then warm together and fill the rolls to serve",
    "ingredients": [
     {
      "q": 800,
@@ -458,7 +458,7 @@
      "n": "Chicago Italian roast portobello rolls",
      "prep_min": 15,
      "cook_min": 29,
-     "make_ahead": "",
+     "make_ahead": "Roast the mushrooms and make the jus up to 1 day ahead, kept apart in the fridge; slice, warm in the jus and fill the rolls to serve",
      "ingredients": [
       {
        "q": 6,
@@ -552,7 +552,7 @@
    "course": "w",
    "prep_min": 21,
    "cook_min": 285,
-   "make_ahead": "",
+   "make_ahead": "Bake, cool and chill the pie up to 1 day ahead in the fridge; whip the cream and spoon over just before serving",
    "ingredients": [
     {
      "q": 150,
@@ -625,7 +625,7 @@
    "course": "d",
    "prep_min": 8,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Mix the rum, juices and grenadine in a jug up to 1 day ahead in the fridge; pour over ice and grate the nutmeg to serve",
    "ingredients": [
     {
      "q": 400,
@@ -666,7 +666,7 @@
     {
      "q": null,
      "u": "",
-     "item": "nutmeg, to grate",
+     "item": "nutmeg, grated, to taste",
      "aisle": "Spices"
     }
    ],
@@ -691,7 +691,7 @@
      "n": "Key West rum punch (alcohol-free)",
      "prep_min": 8,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Mix the coconut water, juices, grenadine and vanilla in a jug up to 1 day ahead in the fridge; pour over ice and grate the nutmeg to serve",
      "ingredients": [
       {
        "q": 400,
@@ -738,7 +738,7 @@
       {
        "q": null,
        "u": "",
-       "item": "nutmeg, to grate",
+       "item": "nutmeg, grated, to taste",
        "aisle": "Pantry"
       }
      ],

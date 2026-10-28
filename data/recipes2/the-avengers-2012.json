@@ -384,7 +384,7 @@
    ],
    "steps": [
     {
-     "text": "Mix the chicken with the yoghurt, garlic, spices and lemon juice. Marinate overnight in the fridge.",
+     "text": "Mix the chicken with the yoghurt, garlic, cumin, coriander, paprika, cinnamon and lemon juice. Marinate overnight in the fridge.",
      "min": 720
     },
     {
@@ -619,8 +619,8 @@
      "aisle": "Bottle shop"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }
@@ -646,7 +646,7 @@
      "n": "Asgardian honey ginger beer or mead (alcohol-free)",
      "prep_min": 8,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Best built in the glass just before serving; keep the ginger beer well chilled",
      "ingredients": [
       {
        "q": 4,
@@ -673,8 +673,8 @@
        "aisle": "Drinks"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       }

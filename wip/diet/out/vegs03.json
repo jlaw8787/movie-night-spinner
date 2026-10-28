@@ -77,7 +77,7 @@
     "n": "Jabba's palace crumbed haloumi bites",
     "prep_min": 20,
     "cook_min": 8,
-    "make_ahead": "",
+    "make_ahead": "Crumb the haloumi fingers up to 1 day ahead, laid on a tray in the fridge; fry just before serving",
     "ingredients": [
      {
       "q": 360,
@@ -132,7 +132,7 @@
       "min": 12
      },
      {
-      "text": "Fry at 180C in batches until golden.",
+      "text": "Fry in the vegetable oil at 180C in batches until golden.",
       "min": 8
      },
      {
@@ -291,7 +291,7 @@
     "n": "South Seas Club canapés (vegetarian)",
     "prep_min": 32,
     "cook_min": 8,
-    "make_ahead": "",
+    "make_ahead": "Make the salsa and crumb the haloumi up to 3 hours ahead, chilled; fry the haloumi just before serving",
     "ingredients": [
      {
       "q": 360,
@@ -368,7 +368,7 @@
       "min": 10
      },
      {
-      "text": "Fry the haloumi at 180C in batches until golden, then drain.",
+      "text": "Fry the haloumi in the vegetable oil at 180C in batches until golden, then drain.",
       "min": 8
      },
      {
@@ -458,7 +458,7 @@
       "min": 8
      },
      {
-      "text": "Mash the yolks with the mayo and Dijon, pipe back into the whites and top with the dressed lentils.",
+      "text": "Mash the yolks with the mayonnaise and Dijon, pipe back into the whites and top with the dressed lentils.",
       "min": 10
      },
      {
@@ -483,7 +483,7 @@
     "n": "Coconut cauliflower and plantain chips",
     "prep_min": 30,
     "cook_min": 18,
-    "make_ahead": "",
+    "make_ahead": "Steam the cauliflower and crumb it up to 2 hours ahead, chilled; slice and fry the plantains and cauliflower just before serving",
     "ingredients": [
      {
       "q": 1,
@@ -548,7 +548,7 @@
       "min": 8
      },
      {
-      "text": "Fry the cauliflower at 180C in batches until golden.",
+      "text": "Fry the cauliflower in the oil at 180C in batches until golden.",
       "min": 10
      },
      {
@@ -647,7 +647,7 @@
     "n": "Nomanisan Island coconut tofu",
     "prep_min": 27,
     "cook_min": 8,
-    "make_ahead": "",
+    "make_ahead": "Press and cut the tofu and crumb it up to 2 hours ahead, kept chilled, and blitz the mango dip up to 1 day ahead; fry just before serving",
     "ingredients": [
      {
       "q": 500,
@@ -724,7 +724,7 @@
       "min": 5
      },
      {
-      "text": "Fry at 180C in batches until golden.",
+      "text": "Fry in the oil at 180C in batches until golden.",
       "min": 8
      }
     ]
@@ -1003,7 +1003,7 @@
     "n": "Chopped cheese rolls (vegetarian)",
     "prep_min": 15,
     "cook_min": 15,
-    "make_ahead": "",
+    "make_ahead": "Prep the lettuce, tomatoes and onion up to 1 day ahead in the fridge; fry the plant-based mince fresh",
     "ingredients": [
      {
       "q": 500,
@@ -1080,7 +1080,7 @@
       "min": 4
      },
      {
-      "text": "Pile into the rolls with lettuce, tomato, tomato sauce and mayo.",
+      "text": "Pile into the rolls with lettuce, tomato, tomato sauce and mayonnaise.",
       "min": 7
      }
     ]
@@ -1093,7 +1093,7 @@
     "n": "Andrew's triple-stack ham and cheese (vegetarian)",
     "prep_min": 25,
     "cook_min": 10,
-    "make_ahead": "",
+    "make_ahead": "Stir up the mustard mayo up to 2 days ahead in the fridge; build the stacks on the night so the toast stays crisp",
     "ingredients": [
      {
       "q": 3,
@@ -1179,7 +1179,7 @@
     "n": "Bender's share plate (vegetarian)",
     "prep_min": 6,
     "cook_min": 0,
-    "make_ahead": "",
+    "make_ahead": "Cube the cheddar and slice the smoked tofu up to 1 day ahead, kept chilled; arrange on the plate to serve",
     "ingredients": [
      {
       "q": 80,
@@ -1219,7 +1219,7 @@
     "n": "Deep dish bites (vegetarian)",
     "prep_min": 25,
     "cook_min": 18,
-    "make_ahead": "",
+    "make_ahead": "Chop the sausages and dice the mozzarella up to 1 day ahead; press, fill and bake on the night",
     "ingredients": [
      {
       "q": 300,
@@ -1359,7 +1359,7 @@
     "n": "Pan fried vegetable dumplings",
     "prep_min": 2,
     "cook_min": 9,
-    "make_ahead": "",
+    "make_ahead": "Cook from frozen on the night; the dipping sauce keeps in the fridge up to 1 day",
     "ingredients": [
      {
       "q": 24,
@@ -1425,7 +1425,7 @@
     "n": "Product placement pizza bites (vegetarian)",
     "prep_min": 20,
     "cook_min": 8,
-    "make_ahead": "",
+    "make_ahead": "Cut the rounds up to 4 hours ahead, covered in the fridge; top and bake just before serving",
     "ingredients": [
      {
       "q": 500,
@@ -1479,7 +1479,7 @@
     "n": "Wooderson's \"alright, alright\" michelada (vegetarian)",
     "prep_min": 10,
     "cook_min": 0,
-    "make_ahead": "",
+    "make_ahead": "Mix the chilli salt for the rims up to 1 week ahead in a jar; add the lager last so it stays fizzy",
     "ingredients": [
      {
       "q": 1,
@@ -1524,8 +1524,8 @@
       "aisle": "Bottle shop"
      },
      {
-      "q": null,
-      "u": "",
+      "q": 4,
+      "u": "cup",
       "item": "ice",
       "aisle": "Frozen"
      }
@@ -1549,7 +1549,7 @@
     "n": "Wooderson's \"alright, alright\" michelada (vegetarian, alcohol-free)",
     "prep_min": 10,
     "cook_min": 0,
-    "make_ahead": "",
+    "make_ahead": "Mix the chilli salt for the rims up to 1 week ahead in a jar; add the alcohol-free lager last so it stays fizzy",
     "ingredients": [
      {
       "q": 1,
@@ -1594,8 +1594,8 @@
       "aisle": "Drinks"
      },
      {
-      "q": null,
-      "u": "",
+      "q": 4,
+      "u": "cup",
       "item": "ice",
       "aisle": "Frozen"
      }
@@ -1623,7 +1623,7 @@
     "n": "Idaho potato skins (vegetarian)",
     "prep_min": 15,
     "cook_min": 65,
-    "make_ahead": "",
+    "make_ahead": "Bake the potatoes and fry the smoked tofu up to 1 day ahead in the fridge; crisp, fill and top on the night",
     "ingredients": [
      {
       "q": 8,
@@ -1699,7 +1699,7 @@
     "n": "Campfire marshmallows (vegetarian)",
     "prep_min": 7,
     "cook_min": 5,
-    "make_ahead": "",
+    "make_ahead": "Best toasted and eaten warm; the chocolate can be melted up to 4 hours ahead",
     "ingredients": [
      {
       "q": 16,
@@ -1741,7 +1741,7 @@
     "n": "Junkyard sandwiches (vegetarian)",
     "prep_min": 15,
     "cook_min": 0,
-    "make_ahead": "",
+    "make_ahead": "Make up to 6 hours ahead, wrapped and chilled, so the bread stays soft",
     "ingredients": [
      {
       "q": 8,
@@ -1891,7 +1891,7 @@
     "n": "Spicoli's pizza bites (vegetarian)",
     "prep_min": 20,
     "cook_min": 8,
-    "make_ahead": "",
+    "make_ahead": "Roll and cut the 16 rounds up to 1 day ahead in the fridge; top and bake on the night",
     "ingredients": [
      {
       "q": 500,
@@ -1991,7 +1991,7 @@
     "n": "Walley World corn dogs (vegetarian)",
     "prep_min": 20,
     "cook_min": 20,
-    "make_ahead": "",
+    "make_ahead": "Whisk the batter up to 2 hours ahead and keep it chilled; fry the vegetarian hot dogs fresh and serve hot",
     "ingredients": [
      {
       "q": 150,
@@ -2079,7 +2079,7 @@
     "n": "Toothpick cheese cubes (vegetarian)",
     "prep_min": 15,
     "cook_min": 0,
-    "make_ahead": "",
+    "make_ahead": "Cut the cheddar and drain the capsicum up to 1 day ahead, covered in the fridge; thread the toothpicks on the day",
     "ingredients": [
      {
       "q": 200,
@@ -2127,7 +2127,7 @@
     "n": "Vegas buffet hearts of palm cocktail",
     "prep_min": 16,
     "cook_min": 0,
-    "make_ahead": "",
+    "make_ahead": "Drain and chop the hearts of palm and mix the sauce up to 1 day ahead, both chilled; pile on ice to serve",
     "ingredients": [
      {
       "q": 800,
@@ -2263,7 +2263,7 @@
     "n": "Ski lodge hot chocolate (vegetarian)",
     "prep_min": 5,
     "cook_min": 10,
-    "make_ahead": "",
+    "make_ahead": "Chop the chocolate up to 1 week ahead; heat the milk and whisk to order, then whip the cream and top",
     "ingredients": [
      {
       "q": 600,
@@ -2317,7 +2317,7 @@
     "n": "Diner cauliflower wings",
     "prep_min": 20,
     "cook_min": 38,
-    "make_ahead": "",
+    "make_ahead": "Mash the blue cheese dip up to 2 days ahead and keep chilled; batter and bake the cauliflower just before serving",
     "ingredients": [
      {
       "q": 1,
@@ -2775,7 +2775,7 @@
     "n": "Norman's parlour sandwiches (vegetarian)",
     "prep_min": 15,
     "cook_min": 0,
-    "make_ahead": "",
+    "make_ahead": "Fill the sandwiches up to 3 hours ahead and keep wrapped in the fridge; trim the crusts and cut into triangles to serve",
     "ingredients": [
      {
       "q": 8,
@@ -3007,7 +3007,7 @@
     "n": "\"Coming to get you, Barbara\" sandwiches (vegetarian)",
     "prep_min": 25,
     "cook_min": 10,
-    "make_ahead": "",
+    "make_ahead": "Make the egg and cress filling up to 1 day ahead in the fridge; assemble the sandwiches and wrap them up to 3 hours ahead, kept chilled",
     "ingredients": [
      {
       "q": 2,
@@ -3213,7 +3213,7 @@
     "n": "Swedish meatballs (vegetarian)",
     "prep_min": 25,
     "cook_min": 25,
-    "make_ahead": "",
+    "make_ahead": "Mix and roll the plant-based balls up to 8 hours ahead, covered in the fridge; brown and simmer in the sauce on the night",
     "ingredients": [
      {
       "q": 50,
@@ -3383,7 +3383,7 @@
     "n": "8 Mile coney dog bites (vegetarian)",
     "prep_min": 20,
     "cook_min": 22,
-    "make_ahead": "",
+    "make_ahead": "Cook the mince chilli up to 2 days ahead and reheat; heat the frankfurts and build the bites on the night",
     "ingredients": [
      {
       "q": 250,
@@ -3400,7 +3400,7 @@
      {
       "q": 0.5,
       "u": "",
-      "item": "brown onion, diced",
+      "item": "brown onion, diced, for the chilli",
       "aisle": "Produce"
      },
      {
@@ -3442,7 +3442,7 @@
      {
       "q": 0.5,
       "u": "",
-      "item": "brown onion, extra, finely diced",
+      "item": "brown onion, finely diced, for the topping",
       "aisle": "Produce"
      }
     ],
@@ -3473,7 +3473,7 @@
     "n": "Baseball team Korean fried cauliflower",
     "prep_min": 20,
     "cook_min": 20,
-    "make_ahead": "",
+    "make_ahead": "Make the glaze up to 3 days ahead in the fridge and reheat; coat and fry the cauliflower just before serving, as the crust softens",
     "ingredients": [
      {
       "q": 1,
@@ -3536,7 +3536,7 @@
       "min": 10
      },
      {
-      "text": "Fry at 160C.",
+      "text": "Fry in the oil at 160C.",
       "min": 8
      },
      {
@@ -3563,7 +3563,7 @@
     "n": "Spicy rice cakes (vegetarian)",
     "prep_min": 14,
     "cook_min": 30,
-    "make_ahead": "",
+    "make_ahead": "Simmer the kombu and shiitake broth up to 3 days ahead and keep chilled; cook the rice cakes in it just before serving",
     "ingredients": [
      {
       "q": 500,
@@ -3647,7 +3647,7 @@
     "n": "Garden party canapés (vegetarian)",
     "prep_min": 31,
     "cook_min": 0,
-    "make_ahead": "",
+    "make_ahead": "Slice and dress the beetroot and whip the goat's cheese up to 1 day ahead, keep chilled; assemble just before serving",
     "ingredients": [
      {
       "q": 16,
@@ -3727,7 +3727,7 @@
     "n": "Brown butter marshmallow cereal bars (vegetarian)",
     "prep_min": 15,
     "cook_min": 65,
-    "make_ahead": "",
+    "make_ahead": "Up to 2 days ahead, airtight; pour the cold milk to serve",
     "ingredients": [
      {
       "q": 60,
@@ -3853,7 +3853,7 @@
     "n": "Miniature sandwiches (vegetarian)",
     "prep_min": 30,
     "cook_min": 10,
-    "make_ahead": "",
+    "make_ahead": "Make the egg filling up to 1 day ahead, keep chilled; assemble up to 3 hours ahead, covered with a damp tea towel",
     "ingredients": [
      {
       "q": 3,
@@ -3906,11 +3906,11 @@
     ],
     "steps": [
      {
-      "text": "Boil the eggs, cool, peel and mash with the mayo and cress.",
+      "text": "Boil the eggs, cool, peel and mash with the mayonnaise and cress.",
       "min": 15
      },
      {
-      "text": "Make egg sandwiches, cucumber and cream cheese sandwiches, and plant-based ham and Dijon sandwiches.",
+      "text": "Use the slices of white bread to make egg sandwiches, cucumber and cream cheese sandwiches, and plant-based ham and Dijon sandwiches.",
       "min": 14
      },
      {
@@ -3931,7 +3931,7 @@
     "n": "Lettuce leaf tofu and rice cups",
     "prep_min": 25,
     "cook_min": 25,
-    "make_ahead": "",
+    "make_ahead": "Fry the tofu and mix the dressing up to 1 day ahead, keep chilled; cook the rice and fill the cups on the night",
     "ingredients": [
      {
       "q": 450,
@@ -4312,7 +4312,7 @@
       "min": 8
      },
      {
-      "text": "Fry at 170C until deep golden.",
+      "text": "Deep fry in the vegetable oil at 170C until deep golden.",
       "min": 7
      },
      {
@@ -4329,7 +4329,7 @@
     "n": "Teleported king oyster mushroom bites",
     "prep_min": 13,
     "cook_min": 12,
-    "make_ahead": "",
+    "make_ahead": "Cut and score the mushrooms up to 1 day ahead and keep them in the fridge, and mix the horseradish cream up to 2 days ahead; season and sear to order",
     "ingredients": [
      {
       "q": 600,
@@ -4407,7 +4407,7 @@
     "n": "Camp Chippewa sloppy joe sliders (vegetarian)",
     "prep_min": 20,
     "cook_min": 25,
-    "make_ahead": "",
+    "make_ahead": "Cook the sloppy joe filling up to 2 days ahead, keep chilled; reheat and fill the buns on the night",
     "ingredients": [
      {
       "q": 500,
@@ -4513,7 +4513,7 @@
     "n": "Hotel tea sandwiches (vegetarian)",
     "prep_min": 25,
     "cook_min": 10,
-    "make_ahead": "",
+    "make_ahead": "Make the egg filling and slice the beetroot up to 1 day ahead in the fridge; assemble and cut up to 3 hours ahead, covered with a damp tea towel",
     "ingredients": [
      {
       "q": 3,
@@ -4572,7 +4572,7 @@
     ],
     "steps": [
      {
-      "text": "Boil the eggs, cool, peel and mash with mayo and cress.",
+      "text": "Boil the eggs, cool, peel and mash with the mayonnaise and cress.",
       "min": 15
      },
      {
@@ -4580,7 +4580,7 @@
       "min": 5
      },
      {
-      "text": "Make cucumber and cream cheese, egg, and beetroot, cream cheese and dill sandwiches.",
+      "text": "Use the white bread to make cucumber and cream cheese, egg, and beetroot, cream cheese and dill sandwiches.",
       "min": 10
      },
      {
@@ -4599,7 +4599,7 @@
     "n": "Hotel Excelsior hearts of palm sandwiches",
     "prep_min": 22,
     "cook_min": 0,
-    "make_ahead": "",
+    "make_ahead": "Mix the hearts of palm filling up to 1 day ahead, chilled; assemble, trim and cut up to 2 hours ahead, covered with a damp tea towel",
     "ingredients": [
      {
       "q": 400,
@@ -4683,7 +4683,7 @@
     "n": "Venus flytrap tacos (vegetarian)",
     "prep_min": 20,
     "cook_min": 12,
-    "make_ahead": "",
+    "make_ahead": "Cook the plant-based mince up to 2 days ahead and reheat; shred the lettuce and cut the capsicum up to 1 day ahead, keep chilled. Warm the shells and fill on the night",
     "ingredients": [
      {
       "q": 400,
@@ -4759,7 +4759,7 @@
     "n": "Overlook storeroom antipasto board (vegetarian)",
     "prep_min": 27,
     "cook_min": 12,
-    "make_ahead": "",
+    "make_ahead": "Warm the olives and grill the eggplant up to 2 days ahead, covered in the fridge; slice the provolone and arrange the board on the night",
     "ingredients": [
      {
       "q": 250,
@@ -4770,7 +4770,7 @@
      {
       "q": 60,
       "u": "ml",
-      "item": "olive oil",
+      "item": "olive oil, for warming the olives",
       "aisle": "Pantry"
      },
      {
@@ -4800,7 +4800,7 @@
      {
       "q": 2,
       "u": "tbsp",
-      "item": "olive oil, extra",
+      "item": "olive oil, for the eggplant",
       "aisle": "Pantry"
      },
      {
@@ -4842,11 +4842,11 @@
     ],
     "steps": [
      {
-      "text": "Warm the olives in the oil with orange peel, garlic and chilli flakes, then cool.",
+      "text": "Warm the olives in the olive oil with orange peel, garlic and chilli flakes, then cool.",
       "min": 12
      },
      {
-      "text": "Slice the eggplant into thin rounds, brush with the extra oil, season with salt and grill until charred and soft.",
+      "text": "Slice the eggplant into thin rounds, brush with the olive oil for the eggplant, season with salt and grill until charred and soft.",
       "min": 12
      },
      {
@@ -4871,7 +4871,7 @@
     "n": "Party cocktail franks (vegetarian)",
     "prep_min": 4,
     "cook_min": 10,
-    "make_ahead": "",
+    "make_ahead": "Simmer the sauce with the vegetarian franks up to 1 day ahead in the fridge; reheat gently with a splash of water before serving",
     "ingredients": [
      {
       "q": 500,
@@ -4923,7 +4923,7 @@
     "n": "Bonnie Doon cheese and kabana (vegetarian)",
     "prep_min": 20,
     "cook_min": 0,
-    "make_ahead": "",
+    "make_ahead": "Slice the plant-based kabana and cube the cheese up to 1 day ahead, kept chilled; thread and serve with the crackers",
     "ingredients": [
      {
       "q": 250,
@@ -4975,7 +4975,7 @@
     "n": "Pool room hearts of palm",
     "prep_min": 18,
     "cook_min": 0,
-    "make_ahead": "",
+    "make_ahead": "Drain and cut the hearts of palm and mix the sauce up to 1 day ahead, kept chilled; pile on ice to serve",
     "ingredients": [
      {
       "q": 800,
@@ -5041,7 +5041,7 @@
     "n": "MFP roadhouse chips (vegetarian)",
     "prep_min": 20,
     "cook_min": 15,
-    "make_ahead": "",
+    "make_ahead": "Cut the chips up to 1 day ahead and keep in cold water in the fridge; do the first fry up to 3 hours ahead and leave on a tray. Second fry and gravy on the night",
     "ingredients": [
      {
       "q": 1,
@@ -5080,7 +5080,7 @@
       "min": 10
      },
      {
-      "text": "Fry at 140C until cooked through.",
+      "text": "Fry in the vegetable oil at 140C until cooked through.",
       "min": 12
      },
      {
@@ -5109,7 +5109,7 @@
     "n": "Wasteland tin dinner (vegetarian)",
     "prep_min": 10,
     "cook_min": 27,
-    "make_ahead": "",
+    "make_ahead": "Boil the potatoes and dice the onion up to 1 day ahead and keep chilled; crumble the tofu up to 1 day ahead. Fry the hash and eggs on the night",
     "ingredients": [
      {
       "q": 400,
@@ -5179,7 +5179,7 @@
     "n": "Beer-battered Tassie chips (vegetarian)",
     "prep_min": 20,
     "cook_min": 40,
-    "make_ahead": "",
+    "make_ahead": "Parboil and steam dry the chips up to 1 day ahead in the fridge, and mix the dipping mayonnaise up to 2 days ahead; batter and fry fresh",
     "ingredients": [
      {
       "q": 1,
@@ -5250,7 +5250,7 @@
       "min": 5
      },
      {
-      "text": "Fry in batches at 180C until golden.",
+      "text": "Fry in batches in the oil at 180C until golden.",
       "min": 25
      },
      {
@@ -5267,7 +5267,7 @@
     "n": "Battered Tassie chips (vegetarian, alcohol-free)",
     "prep_min": 20,
     "cook_min": 40,
-    "make_ahead": "",
+    "make_ahead": "Parboil and steam dry the chips up to 1 day ahead in the fridge, and mix the dipping mayonnaise up to 2 days ahead; batter and fry fresh",
     "ingredients": [
      {
       "q": 1,
@@ -5338,7 +5338,7 @@
       "min": 5
      },
      {
-      "text": "Fry in batches at 180C until golden.",
+      "text": "Fry in batches in the oil at 180C until golden.",
       "min": 25
      },
      {
@@ -5357,7 +5357,7 @@
     "n": "Rock and roll king oyster mushroom pies",
     "prep_min": 30,
     "cook_min": 50,
-    "make_ahead": "",
+    "make_ahead": "Make the filling up to 1 day ahead in the fridge; fill, top and bake the pies on the day",
     "ingredients": [
      {
       "q": 1,
@@ -5833,7 +5833,7 @@
     "n": "Kevin's sundae bar (vegetarian)",
     "prep_min": 20,
     "cook_min": 10,
-    "make_ahead": "",
+    "make_ahead": "Make the hot fudge sauce up to 3 days ahead, keep chilled and rewarm; whip the cream and put the toppings in bowls on the night",
     "ingredients": [
      {
       "q": 1,

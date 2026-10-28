@@ -94,7 +94,7 @@
    "n": "Flamingo steak Diane",
    "prep_min": 15,
    "cook_min": 4,
-   "make_ahead": "",
+   "make_ahead": "Flatten the steaks and chop the shallots up to 1 day ahead, keep chilled; sear and make the sauce on the night",
    "ingredients": [
     {
      "q": 800,
@@ -174,7 +174,7 @@
    "n": "Virginia Hill's gin rickey (alcohol-free)",
    "prep_min": 3,
    "cook_min": 1,
-   "make_ahead": "",
+   "make_ahead": "Best made to order; chill the non-alcoholic gin and soda water up to 1 day ahead",
    "ingredients": [
     {
      "q": 180,
@@ -222,7 +222,7 @@
    "n": "Frank Vitale's linguine with clams",
    "prep_min": 15,
    "cook_min": 37,
-   "make_ahead": "",
+   "make_ahead": "Purge the clams in salted water up to 4 hours ahead and keep them chilled; cook the pasta and steam the clams on the night",
    "ingredients": [
     {
      "q": 1,
@@ -366,7 +366,7 @@
    "n": "Auction house gin and elderflower collins (alcohol-free)",
    "prep_min": 8,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Peel the cucumber ribbons up to 3 hours ahead and keep them covered in the fridge; shake with the non-alcoholic gin and top with soda to order",
    "ingredients": [
     {
      "q": 1,
@@ -432,7 +432,7 @@
    "n": "Captain Dickson's fish tacos",
    "prep_min": 35,
    "cook_min": 10,
-   "make_ahead": "",
+   "make_ahead": "Soak the onion in the lime juice up to 1 day ahead in the fridge; make the batter and fry the fish just before serving so the soda water stays fizzy",
    "ingredients": [
     {
      "q": 1,
@@ -517,7 +517,7 @@
      "min": 3
     },
     {
-     "text": "Dip the fish in batter and fry in the oil at 180C until golden, working in batches.",
+     "text": "Dip the flathead strips in the batter and fry in the oil at 180C until golden, working in batches.",
      "min": 12
     },
     {
@@ -534,7 +534,7 @@
    "n": "Spring break frozen mango margarita (alcohol-free)",
    "prep_min": 11,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Juice the oranges and limes up to 1 day ahead and keep them in the fridge; blend with the frozen mango and ice just before serving",
    "ingredients": [
     {
      "q": 5,
@@ -752,7 +752,7 @@
    "n": "Date night steak",
    "prep_min": 30,
    "cook_min": 74,
-   "make_ahead": "",
+   "make_ahead": "Bake the potato layers up to 1 day ahead, keep chilled and reheat; sear and roast the steaks and make the sauce on the night",
    "ingredients": [
     {
      "q": 4,
@@ -834,7 +834,7 @@
    "n": "Strangé's French 75 (alcohol-free)",
    "prep_min": 5,
    "cook_min": 4,
-   "make_ahead": "",
+   "make_ahead": "Make the sugar syrup up to 1 week ahead and squeeze the lemons up to 1 day ahead, keep chilled; shake and top with alcohol-free sparkling wine to order",
    "ingredients": [
     {
      "q": 120,
@@ -979,13 +979,13 @@
     {
      "q": 1,
      "u": "",
-     "item": "lemon, peeled zest",
+     "item": "lemon, peeled zest, for the syrup",
      "aisle": "Produce"
     },
     {
      "q": 1,
      "u": "",
-     "item": "lemon, juiced",
+     "item": "lemon, juiced, for the glasses",
      "aisle": "Produce"
     },
     {
@@ -1026,7 +1026,7 @@
    "n": "Sam's Tribeca loft pasta",
    "prep_min": 15,
    "cook_min": 18,
-   "make_ahead": "",
+   "make_ahead": "Make the sausage and cream sauce up to 1 day ahead and keep chilled; reheat, boil the rigatoni and toss together",
    "ingredients": [
     {
      "q": 4,
@@ -1085,7 +1085,7 @@
    ],
    "steps": [
     {
-     "text": "Boil the rigatoni in salted water until just tender, then drain.",
+     "text": "Boil the rigatoni in water with a good pinch of salt until just tender, then drain.",
      "min": 12
     },
     {
@@ -1110,7 +1110,7 @@
    "n": "Molly's studio mulled pinot noir (alcohol-free)",
    "prep_min": 5,
    "cook_min": 17,
-   "make_ahead": "",
+   "make_ahead": "Steep and cool the tea up to 1 day ahead and keep chilled; mix with the juice and spices and warm gently to serve",
    "ingredients": [
     {
      "q": 500,
@@ -1192,7 +1192,7 @@
    "n": "Kodiak Valley gruyère fondue",
    "prep_min": 15,
    "cook_min": 15,
-   "make_ahead": "",
+   "make_ahead": "Grate the cheeses up to 1 day ahead, keep chilled; boil the potatoes and make the fondue on the night",
    "ingredients": [
     {
      "q": 1,
@@ -1292,7 +1292,7 @@
    "n": "Chernobly citrus ginger fizz",
    "prep_min": 8,
    "cook_min": 10,
-   "make_ahead": "",
+   "make_ahead": "Simmer, cool and strain the ginger syrup up to 1 week ahead and juice the citrus the day before; build over ice with the soda water to serve",
    "ingredients": [
     {
      "q": 80,
@@ -1337,8 +1337,8 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice, as needed",
      "aisle": "Frozen"
     }
@@ -1518,7 +1518,7 @@
    "n": "Santa's shop mince pies with orange cream",
    "prep_min": 35,
    "cook_min": 8,
-   "make_ahead": "",
+   "make_ahead": "Bake the pies up to 2 days ahead, airtight, and warm in a 160C oven for 5 minutes; whip the orange juice cream on the day",
    "ingredients": [
     {
      "q": 3,
@@ -1584,7 +1584,7 @@
    "n": "Covent Garden mulled wine (alcohol-free)",
    "prep_min": 10,
    "cook_min": 15,
-   "make_ahead": "",
+   "make_ahead": "Steep the tea and warm everything with the spices up to 1 day ahead, then chill; reheat gently to serve",
    "ingredients": [
     {
      "q": 500,
@@ -1846,7 +1846,7 @@
    "n": "Angie's family pineapple upside-down cake",
    "prep_min": 30,
    "cook_min": 50,
-   "make_ahead": "",
+   "make_ahead": "Bake up to 1 day ahead and keep covered at room temperature; warm briefly before serving",
    "ingredients": [
     {
      "q": 185,
@@ -1940,12 +1940,12 @@
    "n": "Pineapple mint rum crush (alcohol-free)",
    "prep_min": 8,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Cut the pineapple and juice the limes up to 1 day ahead, keep chilled; muddle, shake and top with soda to order",
    "ingredients": [
     {
-     "q": null,
+     "q": 0.5,
      "u": "",
-     "item": "half pineapple, as needed",
+     "item": "pineapple",
      "aisle": "Produce"
     },
     {
@@ -1991,9 +1991,9 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
-     "item": "crushed ice, as needed",
+     "q": 3,
+     "u": "cup",
+     "item": "crushed ice",
      "aisle": "Frozen"
     },
     {
@@ -2028,7 +2028,7 @@
    "n": "Chuck and Teddy's storm chowder",
    "prep_min": 20,
    "cook_min": 20,
-   "make_ahead": "",
+   "make_ahead": "Make the chowder with the fish stock up to the milk step, up to 1 day ahead, and chill it with the clams; reheat, then stir in the cream, clams and thyme to serve",
    "ingredients": [
     {
      "q": 1,
@@ -2108,7 +2108,7 @@
    "n": "Dr Cawley's brandy Alexander (alcohol-free)",
    "prep_min": 7,
    "cook_min": 10,
-   "make_ahead": "",
+   "make_ahead": "Steep and cool the tea up to 2 days ahead in the fridge; shake with the syrup, cream and ice to order",
    "ingredients": [
     {
      "q": 2,
@@ -2268,7 +2268,7 @@
    "n": "Dook dook dook honey brandy nightcap (alcohol-free)",
    "prep_min": 5,
    "cook_min": 8,
-   "make_ahead": "",
+   "make_ahead": "Infuse the milk with the cinnamon and orange peel up to 1 day ahead in the fridge; reheat, whisk and finish with nutmeg",
    "ingredients": [
     {
      "q": 800,
@@ -2332,7 +2332,7 @@
    "n": "Beer-battered onion rings with malt aioli",
    "prep_min": 25,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Cut the onions and mix the malt aioli up to 1 day ahead in the fridge; batter and fry just before serving",
    "ingredients": [
     {
      "q": 2,
@@ -2412,7 +2412,7 @@
    "n": "Charlene's bar black and tan (alcohol-free)",
    "prep_min": 20,
    "cook_min": 1,
-   "make_ahead": "",
+   "make_ahead": "Chill the cans and the pint glasses up to 1 day ahead; pour just before serving so the layers hold",
    "ingredients": [
     {
      "q": 4,
@@ -2636,7 +2636,7 @@
    "n": "Fisherman's Wharf prawns",
    "prep_min": 10,
    "cook_min": 6,
-   "make_ahead": "",
+   "make_ahead": "Slice the garlic and chilli up to 1 day ahead; the prawns and verjuice sauce are cooked just before serving",
    "ingredients": [
     {
      "q": 3,
@@ -2710,7 +2710,7 @@
    "n": "Mason's single malt Rob Roy (alcohol-free)",
    "prep_min": 6,
    "cook_min": 15,
-   "make_ahead": "",
+   "make_ahead": "Steep and cool the smoked tea up to 2 days ahead in the fridge and chill the coupes; stir with the grape juice over ice to serve",
    "ingredients": [
     {
      "q": 4,
@@ -2788,7 +2788,7 @@
    "n": "Frozen orange juice shots",
    "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Chill the juice and the glasses up to 1 day ahead in the fridge; blend with the ice and pour straight away",
    "ingredients": [
     {
      "q": 500,
@@ -2818,7 +2818,7 @@
    "n": "Mimosa (alcohol-free)",
    "prep_min": 5,
    "cook_min": 15,
-   "make_ahead": "",
+   "make_ahead": "Squeeze the oranges up to 1 day ahead and chill the juice; top with the alcohol-free sparkling wine just before serving",
    "ingredients": [
     {
      "q": 4,
@@ -2934,7 +2934,7 @@
    "n": "Reception French 75 (alcohol-free)",
    "prep_min": 10,
    "cook_min": 180,
-   "make_ahead": "",
+   "make_ahead": "Chill the alcohol-free sparkling wine up to 1 day ahead; shake each drink to order",
    "ingredients": [
     {
      "q": 750,
@@ -2992,7 +2992,7 @@
    "n": "Espresso with anisette (alcohol-free)",
    "prep_min": 8,
    "cook_min": 10,
-   "make_ahead": "",
+   "make_ahead": "Make the anise syrup up to 1 week ahead and keep it chilled; brew the espresso fresh",
    "ingredients": [
     {
      "q": 36,
@@ -3050,7 +3050,7 @@
    "n": "Keep off the moors mulled ale (alcohol-free)",
    "prep_min": 5,
    "cook_min": 11,
-   "make_ahead": "",
+   "make_ahead": "Best heated just before serving; keep warm on the lowest heat for up to 1 hour",
    "ingredients": [
     {
      "q": 2,
@@ -3126,7 +3126,7 @@
    "n": "Jack Cates' rye and ginger highball (alcohol-free)",
    "prep_min": 6,
    "cook_min": 12,
-   "make_ahead": "",
+   "make_ahead": "Brew and cool the tea up to 2 days ahead in the fridge; build over ice to serve",
    "ingredients": [
     {
      "q": 2,
@@ -3288,7 +3288,7 @@
    "n": "Milk punch (alcohol-free)",
    "prep_min": 6,
    "cook_min": 12,
-   "make_ahead": "",
+   "make_ahead": "Steep and cool the tea, then mix with the milk, sugar syrup and vanilla up to 1 day ahead and keep chilled; shake with ice and strain to order",
    "ingredients": [
     {
      "q": 2,
@@ -3327,8 +3327,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 4,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }
@@ -3354,7 +3354,7 @@
    "n": "Rosewood's tequila sunrise (alcohol-free)",
    "prep_min": 8,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Squeeze the orange juice and lime and chill up to 1 day ahead; stir and pour the grenadine just before serving",
    "ingredients": [
     {
      "q": 1,
@@ -3478,7 +3478,7 @@
    "n": "1995 fuzzy navel slushies (alcohol-free)",
    "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Blend to order so it stays thick; chill the glasses, orange juice and peach nectar up to 1 day ahead",
    "ingredients": [
     {
      "q": 300,
@@ -3540,7 +3540,7 @@
    "n": "Gabe Walker's hot buttered rum (alcohol-free)",
    "prep_min": 10,
    "cook_min": 5,
-   "make_ahead": "",
+   "make_ahead": "Beat the spiced butter up to 1 week ahead in the fridge; steep the tea and build the mugs just before serving",
    "ingredients": [
     {
      "q": 80,
@@ -3622,7 +3622,7 @@
    "n": "Logan's whisky and ginger highball (alcohol-free)",
    "prep_min": 4,
    "cook_min": 12,
-   "make_ahead": "",
+   "make_ahead": "Steep and chill the tea up to 2 days ahead in the fridge; build over ice and top with ginger ale to serve",
    "ingredients": [
     {
      "q": 2,
@@ -3740,7 +3740,7 @@
    "n": "Mixed-up guitar case michelada beer (alcohol-free)",
    "prep_min": 10,
    "cook_min": 1,
-   "make_ahead": "",
+   "make_ahead": "Mix the chilli salt up to 1 week ahead; pour the alcohol-free lager at the last minute so it stays fizzy",
    "ingredients": [
     {
      "q": 4,
@@ -3926,7 +3926,7 @@
    "n": "Grapefruit pale ale radler (alcohol-free)",
    "prep_min": 5,
    "cook_min": 28,
-   "make_ahead": "",
+   "make_ahead": "Chill the glasses in the freezer and the ale in the fridge up to 1 day ahead; mix the grapefruit soda and pour to serve",
    "ingredients": [
     {
      "q": 4,
@@ -4032,7 +4032,7 @@
    "n": "Club champagne cocktail (alcohol-free)",
    "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Best built to order; zest the orange up to 1 day ahead and chill the sparkling wine",
    "ingredients": [
     {
      "q": 4,
@@ -4086,7 +4086,7 @@
    "n": "Glengoolie Blue whisky sour (alcohol-free)",
    "prep_min": 10,
    "cook_min": 13,
-   "make_ahead": "",
+   "make_ahead": "Steep and cool the smoked tea up to 2 days ahead and make the honey syrup up to 1 week ahead, keep both chilled; shake to order",
    "ingredients": [
     {
      "q": 3,
@@ -4166,7 +4166,7 @@
    "n": "Fourth of July bourbon lemonade (alcohol-free)",
    "prep_min": 10,
    "cook_min": 12,
-   "make_ahead": "",
+   "make_ahead": "Steep and cool the tea and mix the lemonade up to 1 day ahead in the fridge; crush the berries and add ice on the night",
    "ingredients": [
     {
      "q": 5,
@@ -4258,7 +4258,7 @@
    "n": "Quint's chilli lime lager michelada (alcohol-free)",
    "prep_min": 11,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Mix the chilli salt up to 1 week ahead and juice the limes up to 1 day ahead in the fridge; build each glass with cold alcohol-free lager to order",
    "ingredients": [
     {
      "q": 4,
@@ -4334,7 +4334,7 @@
    "n": "Gin martini (alcohol-free)",
    "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Chill the non-alcoholic gin and freeze the glasses up to 1 day ahead; stir over ice to order",
    "ingredients": [
     {
      "q": 280,
@@ -4372,7 +4372,7 @@
    "n": "Eight days to go whiskey sour (alcohol-free)",
    "prep_min": 10,
    "cook_min": 12,
-   "make_ahead": "",
+   "make_ahead": "Brew and cool the tea up to 2 days ahead and keep chilled; shake with the lemon, syrup and egg whites to order",
    "ingredients": [
     {
      "q": 3,
@@ -4458,7 +4458,7 @@
    "n": "Pepper's Villa Donna ouzo (alcohol-free)",
    "prep_min": 5,
    "cook_min": 11,
-   "make_ahead": "",
+   "make_ahead": "Make the anise syrup up to 1 week ahead, strain it and keep in the fridge. Build each glass over ice to order",
    "ingredients": [
     {
      "q": 3,
@@ -4485,8 +4485,8 @@
      "aisle": "Drinks"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     },
@@ -4522,7 +4522,7 @@
    "n": "Elderflower and strawberry gin punch (alcohol-free)",
    "prep_min": 10,
    "cook_min": 15,
-   "make_ahead": "",
+   "make_ahead": "Crush the strawberries with the sugar up to 4 hours ahead and keep chilled; add the non-alcoholic gin, cordial, lemon juice, ice and sparkling water just before serving",
    "ingredients": [
     {
      "q": 250,
@@ -4627,9 +4627,9 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
+     "q": 1,
      "u": "",
-     "item": "fresh nutmeg, to grate",
+     "item": "whole nutmeg, to grate",
      "aisle": "Pantry"
     }
    ],
@@ -4658,7 +4658,7 @@
    "n": "Mitch's house bourbon lemonade punch (alcohol-free)",
    "prep_min": 15,
    "cook_min": 12,
-   "make_ahead": "",
+   "make_ahead": "Brew and cool the tea, then mix the base up to 1 day ahead in the fridge; add ice and the alcohol-free lager just before serving",
    "ingredients": [
     {
      "q": 3,
@@ -4740,7 +4740,7 @@
    "n": "Jud's porch lager and apple cider shandy (alcohol-free)",
    "prep_min": 5,
    "cook_min": 30,
-   "make_ahead": "",
+   "make_ahead": "Freeze the pint glasses up to 1 day ahead; pour the lager and apple juice at the last minute",
    "ingredients": [
     {
      "q": 4,
@@ -4788,7 +4788,7 @@
    "n": "Blue Oyster blue lagoon (alcohol-free)",
    "prep_min": 8,
    "cook_min": 12,
-   "make_ahead": "",
+   "make_ahead": "Warm, strain and cool the blue syrup up to 3 days ahead in the fridge; shake with the lemon juice and ice to order",
    "ingredients": [
     {
      "q": 1,
@@ -4962,7 +4962,7 @@
    "n": "Double Deuce bourbon and ginger (alcohol-free)",
    "prep_min": 5,
    "cook_min": 12,
-   "make_ahead": "",
+   "make_ahead": "Steep and chill the tea up to 2 days ahead in the fridge; build each drink over ice on the night",
    "ingredients": [
     {
      "q": 2,
@@ -5102,11 +5102,11 @@
    "n": "Coffee Black's espresso martini (alcohol-free)",
    "prep_min": 5,
    "cook_min": 25,
-   "make_ahead": "",
+   "make_ahead": "Pull the espresso and cool it up to 1 day ahead in the fridge; chill the coupes and shake with the cold brew and ice to order",
    "ingredients": [
     {
-     "q": null,
-     "u": "",
+     "q": 70,
+     "u": "g",
      "item": "espresso coffee beans, enough for 4 double shots",
      "aisle": "Pantry"
     },
@@ -5135,9 +5135,9 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
-     "u": "",
-     "item": "ice, as needed",
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
      "aisle": "Frozen"
     }
    ],
@@ -5248,7 +5248,7 @@
    "n": "Water elemental seafood spaghetti",
    "prep_min": 15,
    "cook_min": 20,
-   "make_ahead": "",
+   "make_ahead": "Best made fresh; crush the garlic and chop the parsley up to 1 day ahead, then add the stock and seafood on the night",
    "ingredients": [
     {
      "q": 5,
@@ -5546,7 +5546,7 @@
    "n": "Blondie's rye old fashioned (alcohol-free)",
    "prep_min": 10,
    "cook_min": 12,
-   "make_ahead": "",
+   "make_ahead": "Steep and cool the smoked tea and make the syrup up to 2 days ahead in the fridge; stir over ice to serve",
    "ingredients": [
     {
      "q": 2,
@@ -5579,8 +5579,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 3,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     },
@@ -5684,7 +5684,7 @@
    "n": "Island apple cider toddy from the teapot (alcohol-free)",
    "prep_min": 10,
    "cook_min": 11,
-   "make_ahead": "",
+   "make_ahead": "Simmer the apple juice with the spices up to 1 day ahead and keep in the fridge; reheat, steep the tea and finish on the night",
    "ingredients": [
     {
      "q": 1,
@@ -5754,7 +5754,7 @@
    "n": "Rooftop ginger beer shandy (alcohol-free)",
    "prep_min": 10,
    "cook_min": 30,
-   "make_ahead": "Make fresh",
+   "make_ahead": "Put the glasses in the freezer up to 1 day ahead; slice the ginger and build the drinks just before serving",
    "ingredients": [
     {
      "q": 4,
@@ -5802,7 +5802,7 @@
    "n": "MacReady's Rob Roy (alcohol-free)",
    "prep_min": 7,
    "cook_min": 12,
-   "make_ahead": "",
+   "make_ahead": "Steep and cool the smoked tea up to 2 days ahead in the fridge; stir with the other ingredients and ice to serve",
    "ingredients": [
     {
      "q": 2,
@@ -5872,7 +5872,7 @@
    "n": "Night-feed bourbon milk punch (alcohol-free)",
    "prep_min": 5,
    "cook_min": 12,
-   "make_ahead": "",
+   "make_ahead": "Steep and cool the tea up to 2 days ahead in the fridge; shake with the milk, syrup, vanilla and ice to order",
    "ingredients": [
     {
      "q": 2,
@@ -5911,7 +5911,7 @@
      "aisle": "Frozen"
     },
     {
-     "q": null,
+     "q": 1,
      "u": "",
      "item": "whole nutmeg, to grate",
      "aisle": "Pantry"
@@ -5969,8 +5969,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }
@@ -5996,7 +5996,7 @@
    "n": "Green poncho honey ginger tea",
    "prep_min": 5,
    "cook_min": 10,
-   "make_ahead": "",
+   "make_ahead": "Simmer the ginger water up to 1 day ahead and keep it in the fridge; reheat, steep the tea and finish on the night",
    "ingredients": [
     {
      "q": 1,
@@ -6054,7 +6054,7 @@
    "n": "Wishing stone champagne cocktail (alcohol-free)",
    "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Nothing to cook; chill the alcohol-free sparkling wine, grape juice and flutes up to 1 day ahead and build each glass to order",
    "ingredients": [
     {
      "q": 4,
@@ -6104,7 +6104,7 @@
    "n": "Lincoln saloon rye old fashioned (alcohol-free)",
    "prep_min": 10,
    "cook_min": 12,
-   "make_ahead": "",
+   "make_ahead": "Steep and cool the smoked tea and make the demerara syrup up to 2 days ahead in the fridge; stir each drink with ice to order",
    "ingredients": [
     {
      "q": 2,

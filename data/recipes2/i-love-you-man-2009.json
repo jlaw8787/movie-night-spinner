@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 35,
    "cook_min": 20,
-   "make_ahead": "",
+   "make_ahead": "Pickle the onion, shred the cabbage and mix the chipotle mayo up to 1 day ahead in the fridge; make the batter and fry the fish just before serving",
    "ingredients": [
     {
      "q": 500,
@@ -27,9 +27,9 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
+     "q": 0.25,
      "u": "",
-     "item": "quarter cabbage, as needed",
+     "item": "cabbage, shredded",
      "aisle": "Produce"
     },
     {
@@ -91,15 +91,15 @@
      "min": 6
     },
     {
-     "text": "Mix the mayo with the chipotle in adobo.",
+     "text": "Mix the mayonnaise with the chipotle in adobo.",
      "min": 6
     },
     {
-     "text": "Whisk the flour, the baking powder and the cold beer.",
+     "text": "Whisk the flour, the baking powder and the cold lager.",
      "min": 6
     },
     {
-     "text": "Cut the white fish into strips, dip in the batter and fry at 180C for 3 minutes.",
+     "text": "Heat the oil, cut the white fish into strips, dip in the batter and fry at 180C for 3 minutes.",
      "min": 9
     },
     {
@@ -114,7 +114,7 @@
      "n": "Venice Beach crispy fish tacos",
      "prep_min": 35,
      "cook_min": 20,
-     "make_ahead": "",
+     "make_ahead": "Pickle the onion, shred the cabbage and mix the chipotle mayo up to 1 day ahead in the fridge; whisk the batter and fry the fish fresh on the night",
      "ingredients": [
       {
        "q": 500,
@@ -135,9 +135,9 @@
        "aisle": "Produce"
       },
       {
-       "q": null,
+       "q": 0.25,
        "u": "",
-       "item": "quarter cabbage, as needed",
+       "item": "cabbage, shredded",
        "aisle": "Produce"
       },
       {
@@ -199,7 +199,7 @@
        "min": 6
       },
       {
-       "text": "Mix the mayo with the chipotle in adobo.",
+       "text": "Mix the mayonnaise with the chipotle in adobo.",
        "min": 6
       },
       {
@@ -220,7 +220,7 @@
      "n": "Venice Beach crispy haloumi tacos",
      "prep_min": 29,
      "cook_min": 20,
-     "make_ahead": "",
+     "make_ahead": "Pickle the onion and shred the cabbage up to 1 day ahead in the fridge; mix the chipotle mayonnaise up to 2 days ahead, then batter and fry the haloumi just before serving",
      "ingredients": [
       {
        "q": 500,
@@ -241,9 +241,9 @@
        "aisle": "Produce"
       },
       {
-       "q": null,
+       "q": 0.25,
        "u": "",
-       "item": "quarter cabbage, as needed",
+       "item": "cabbage, shredded",
        "aisle": "Produce"
       },
       {
@@ -323,7 +323,7 @@
      "n": "Venice Beach crispy haloumi tacos (alcohol-free)",
      "prep_min": 29,
      "cook_min": 20,
-     "make_ahead": "",
+     "make_ahead": "Pickle the onion and shred the cabbage up to 1 day ahead in the fridge; mix the chipotle mayonnaise up to 2 days ahead, then whisk the batter and fry the haloumi fresh",
      "ingredients": [
       {
        "q": 500,
@@ -344,9 +344,9 @@
        "aisle": "Produce"
       },
       {
-       "q": null,
+       "q": 0.25,
        "u": "",
-       "item": "quarter cabbage, as needed",
+       "item": "cabbage, shredded",
        "aisle": "Produce"
       },
       {
@@ -428,7 +428,7 @@
    "course": "s",
    "prep_min": 15,
    "cook_min": 10,
-   "make_ahead": "",
+   "make_ahead": "Toss the pulled pork with the barbecue sauce up to 1 day ahead and keep chilled; build the nachos and bake on the night",
    "ingredients": [
     {
      "q": 400,
@@ -526,7 +526,7 @@
      "n": "Man cave pulled jackfruit nachos",
      "prep_min": 11,
      "cook_min": 25,
-     "make_ahead": "",
+     "make_ahead": "Fry and pull the jackfruit and toss with the barbecue sauce up to 2 days ahead, then chill; build the nachos and bake on the night",
      "ingredients": [
       {
        "q": 2,
@@ -638,7 +638,7 @@
    "course": "m",
    "prep_min": 15,
    "cook_min": 50,
-   "make_ahead": "",
+   "make_ahead": "Pickle the onion and mix the horseradish cream up to 1 day ahead in the fridge; layer the baguettes within 2 hours of serving",
    "ingredients": [
     {
      "q": 1,
@@ -720,7 +720,7 @@
      "n": "Open house roast mushroom baguettes",
      "prep_min": 15,
      "cook_min": 49,
-     "make_ahead": "",
+     "make_ahead": "Pickle the onion and roast the mushrooms up to 1 day ahead in the fridge; mix the horseradish cream and build the baguettes on the day",
      "ingredients": [
       {
        "q": 1,
@@ -820,7 +820,7 @@
    "course": "w",
    "prep_min": 35,
    "cook_min": 38,
-   "make_ahead": "",
+   "make_ahead": "Bake the cupcakes up to 1 day ahead and keep airtight; fill with curry and ice on the day",
    "ingredients": [
     {
      "q": 205,
@@ -913,7 +913,7 @@
    "course": "d",
    "prep_min": 5,
    "cook_min": 0,
-   "make_ahead": "",
+   "make_ahead": "Squeeze the grapefruit and limes up to 1 day ahead in the fridge; build each glass with the tequila and soda water on the night",
    "ingredients": [
     {
      "q": 180,
@@ -952,9 +952,9 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
-     "item": "ice, as needed",
+     "q": 3,
+     "u": "cup",
+     "item": "ice",
      "aisle": "Frozen"
     }
    ],
@@ -987,7 +987,7 @@
      "n": "Slappin' da bass grapefruit paloma (alcohol-free)",
      "prep_min": 6,
      "cook_min": 0,
-     "make_ahead": "",
+     "make_ahead": "Squeeze the grapefruit and limes and slice the jalapeno up to 1 day ahead in the fridge; build each glass and top with soda water on the night",
      "ingredients": [
       {
        "q": 3,
@@ -1026,9 +1026,9 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
-       "item": "ice, as needed",
+       "q": 3,
+       "u": "cup",
+       "item": "ice",
        "aisle": "Frozen"
       }
      ],

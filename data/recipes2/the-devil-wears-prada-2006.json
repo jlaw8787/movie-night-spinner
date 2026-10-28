@@ -254,7 +254,7 @@
      "min": 45
     },
     {
-     "text": "Sear the steaks in a smoking pan, baste with butter and garlic, then rest.",
+     "text": "Sear the steaks in the olive oil in a smoking pan, baste with butter and garlic, then rest.",
      "min": 10
     },
     {
@@ -447,8 +447,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }
@@ -505,8 +505,8 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 2,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       }

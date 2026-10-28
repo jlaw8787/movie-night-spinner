@@ -6,7 +6,7 @@
    "course": "s",
    "prep_min": 20,
    "cook_min": 12,
-   "make_ahead": "",
+   "make_ahead": "Bake the biscuits up to 1 day ahead, airtight, and warm in a 160C oven; fill with the Dijon butter and ham on the night",
    "ingredients": [
     {
      "q": 100,
@@ -76,7 +76,7 @@
      "n": "Virginia ham biscuits (vegetarian)",
      "prep_min": 23,
      "cook_min": 18,
-     "make_ahead": "",
+     "make_ahead": "Bake the biscuits up to 1 day ahead, airtight, and warm in a 160C oven; fry the tofu and fill on the night",
      "ingredients": [
       {
        "q": 100,
@@ -105,7 +105,7 @@
       {
        "q": 40,
        "u": "g",
-       "item": "butter, softened",
+       "item": "butter, softened, for spreading",
        "aisle": "Dairy"
       },
       {
@@ -123,7 +123,7 @@
       {
        "q": 10,
        "u": "g",
-       "item": "butter, for frying",
+       "item": "butter, for frying the tofu",
        "aisle": "Dairy"
       },
       {
@@ -164,7 +164,7 @@
    "course": "s",
    "prep_min": 20,
    "cook_min": 63,
-   "make_ahead": "",
+   "make_ahead": "Bake the potatoes and cook the bacon up to 1 day ahead, chilled; crisp, fill and bake on the night",
    "ingredients": [
     {
      "q": 8,
@@ -236,7 +236,7 @@
      "n": "Snowbound loaded potato skins (vegetarian)",
      "prep_min": 20,
      "cook_min": 60,
-     "make_ahead": "",
+     "make_ahead": "Bake the potatoes and fry the tofu up to 1 day ahead, chilled; crisp, fill and bake on the night",
      "ingredients": [
       {
        "q": 8,
@@ -387,7 +387,7 @@
    ],
    "steps": [
     {
-     "text": "Brown the chuck and mince in batches.",
+     "text": "Brown the chuck and mince in the neutral oil in batches.",
      "min": 15
     },
     {
@@ -561,7 +561,7 @@
    ],
    "steps": [
     {
-     "text": "Melt the butter, sugar and golden syrup together. Stir in the flour, spices and bicarb to a dough.",
+     "text": "Melt the butter, sugar and golden syrup together. Stir in the flour, ground ginger, ground cinnamon and bicarbonate of soda to a dough.",
      "min": 10
     },
     {
@@ -593,7 +593,7 @@
    "course": "d",
    "prep_min": 15,
    "cook_min": 145,
-   "make_ahead": "",
+   "make_ahead": "Make the eggnog, stir in the bourbon and chill up to 2 days ahead; stir well, pour and grate the nutmeg to serve",
    "ingredients": [
     {
      "q": 4,
@@ -634,7 +634,7 @@
     {
      "q": null,
      "u": "",
-     "item": "fresh nutmeg, to grate",
+     "item": "fresh nutmeg, to taste",
      "aisle": "Spices"
     }
    ],
@@ -671,7 +671,7 @@
      "n": "Same-guy-twice bourbon eggnog (alcohol-free)",
      "prep_min": 15,
      "cook_min": 145,
-     "make_ahead": "",
+     "make_ahead": "Make the eggnog, stir in the vanilla and maple syrup and chill up to 2 days ahead; stir well, pour and grate the nutmeg to serve",
      "ingredients": [
       {
        "q": 4,
@@ -718,7 +718,7 @@
       {
        "q": null,
        "u": "",
-       "item": "fresh nutmeg, to grate",
+       "item": "fresh nutmeg, to taste",
        "aisle": "Pantry"
       }
      ],

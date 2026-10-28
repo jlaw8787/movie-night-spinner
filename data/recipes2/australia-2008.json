@@ -254,7 +254,7 @@
    ],
    "steps": [
     {
-     "text": "Brown the beef in a camp oven or heavy pot.",
+     "text": "Brown the beef in the vegetable oil in a camp oven or heavy pot.",
      "min": 15
     },
     {
@@ -465,8 +465,8 @@
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 6,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     },
@@ -547,8 +547,8 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
-       "u": "",
+       "q": 6,
+       "u": "cup",
        "item": "ice",
        "aisle": "Frozen"
       },

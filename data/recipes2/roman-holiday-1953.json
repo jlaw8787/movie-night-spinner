@@ -71,7 +71,7 @@
      "min": 10
     },
     {
-     "text": "Fry at 180C until golden.",
+     "text": "Fry in the vegetable oil at 180C until golden.",
      "min": 10
     },
     {
@@ -151,7 +151,7 @@
        "min": 10
       },
       {
-       "text": "Fry at 180C until golden.",
+       "text": "Fry in the vegetable oil at 180C until golden.",
        "min": 10
       },
       {
@@ -348,8 +348,8 @@
      "aisle": "Produce"
     },
     {
-     "q": null,
-     "u": "",
+     "q": 2,
+     "u": "cup",
      "item": "ice",
      "aisle": "Frozen"
     }
