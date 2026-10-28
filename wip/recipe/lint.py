@@ -41,6 +41,9 @@ def lint_dish(d):
     steps = d.get("steps") or []
     stext = " ".join(s.get("text", "") for s in steps)
     sw = set(stem(w) for w in re.findall(r"[a-z]+", stext.lower()))
+    for short, full in (("mayo", "mayonnaise"), ("bicarb", "bicarbonate"), ("yolk", "egg"), ("white", "egg")):
+        if short in sw:
+            sw.add(full)
     ma = (d.get("make_ahead") or "").strip()
     # make ahead
     if not ma:
