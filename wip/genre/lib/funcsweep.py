@@ -28,7 +28,7 @@ PROBE = """async()=>{
  if(!prep)return R;
  R.p4=read();
  const rr=prep.getBoundingClientRect(),inner=prep.querySelector('.mc-in');R.prepH=Math.round(rr.height);
- R.overflow=inner?Math.max(0,inner.scrollHeight-inner.clientHeight):0;
+ R.overflow=(()=>{const st=document.createElement('div');st.style.cssText='position:fixed;left:-20000px;top:0;width:794px;height:1123px';const c=prep.cloneNode(true);c.style.transform='none';c.hidden=false;st.appendChild(c);document.body.appendChild(st);fitPrep(c);const i=c.querySelector('.mc-in'),o=i?Math.max(0,i.scrollHeight-i.clientHeight):0;st.remove();return o})();
  if(R.planner){
    const plus=pl.querySelector('[data-pl="+"]');for(let i=0;i<4;i++){plus.click();await new Promise(r=>setTimeout(r,60))}
    R.g8=(pl.querySelector('.pl-g')||{}).textContent;R.p8=read();

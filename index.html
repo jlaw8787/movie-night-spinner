@@ -860,6 +860,13 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
 .mcard.pp-sheet .pp-title{font-size:38px;margin:4px 0 10px}
 .mcard.pp-sheet .pp-cols{grid-template-columns:minmax(0,1fr) minmax(0,1.75fr);gap:24px}
 .mcard.pp-sheet .pp-method li{margin-bottom:.5em}
+/* prep sheet on screen: a normal page at reading size; save, PDF and print still build the A4 sheet from a copy */
+.preview .mcard.pp-sheet{position:relative;width:100%;height:auto;transform:none!important;overflow:visible}
+.preview .mcard.pp-sheet .mc-in.pp{position:relative;left:auto;right:auto;top:auto;bottom:auto;inset:auto;padding:28px 28px 24px}
+.preview .mcard.pp-sheet .pp-title{font-size:clamp(26px,4.4vw,38px)}
+.preview .mcard.pp-sheet .pp-cols{font-size:16px;line-height:1.45;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:28px}
+.preview .mcard.pp-sheet .pp-method li{margin-bottom:.8em}
+@media (max-width:700px){.preview .mcard.pp-sheet .mc-in.pp{padding:20px 16px 18px}.preview .mcard.pp-sheet .pp-cols{grid-template-columns:1fr;gap:20px;font-size:16px}.preview .mcard.pp-sheet .pp-serves{font-size:12px;margin:-4px 0 14px}}
 
 /* ===== era formats: landscape A4 spread ===== */
 .mcard.fmt{width:1123px;height:794px;background:#0b1530;padding:26px;box-sizing:border-box;font-size:16px;line-height:1.3}
@@ -1615,7 +1622,7 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 <script src="providers.js?v=1403fceb" defer></script>
 <script src="films.js?v=74deedef" defer></script>
 <script src="formats-core.js?v=a8dfd3e7" defer></script>
-<script src="app.js?v=5ca7823f" defer></script>
+<script src="app.js?v=6e9900bf" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

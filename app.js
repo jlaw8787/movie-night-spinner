@@ -676,14 +676,22 @@ function fit(el){
 function fitPrep(el){
   const inner=el.querySelector(".mc-in"),cols=el.querySelector(".pp-cols");
   if(!inner||!cols)return;
+  /* on screen the sheet is a normal page at reading size; only the A4 copy for save, PDF and print gets fitted */
+  if(el.closest(".preview")){cols.style.fontSize="";return}
   let fs=16;cols.style.fontSize=fs+"px";
-  while(inner.scrollHeight>inner.clientHeight+1&&fs>9.5){fs-=0.5;cols.style.fontSize=fs+"px"}
+  while(inner.scrollHeight>inner.clientHeight+1&&fs>9){fs-=0.5;cols.style.fontSize=fs+"px"}
+}
+/* an A4 copy of the prep sheet, fitted off screen, for print */
+function prepA4(){
+  const stage=document.createElement("div");stage.style.cssText="position:fixed;left:-20000px;top:0;width:794px;height:1123px";
+  const c=prep.cloneNode(true);c.style.transform="none";c.hidden=false;stage.appendChild(c);document.body.appendChild(stage);
+  fitPrep(c);stage.remove();return c;
 }
 document.documentElement.style.setProperty("--grain",`url("${GRAIN}")`);
 const preview=$("preview");
 const card=document.createElement("div");card.className="mcard";preview.appendChild(card);
 const prep=document.createElement("div");prep.className="mcard";prep.hidden=true;preview.appendChild(prep);
-function scalePreview(){const pw=preview.clientWidth;if(!pw)return;const land=card.classList.contains("fmt"),cw=+card.dataset.w||(land?1123:794),ch=+card.dataset.h||(land?794:1123),kc=pw/cw,kp=pw/794;card.style.transform=`scale(${kc})`;prep.style.transform=`scale(${kp})`;preview.style.height=(tab==="prep"?1123*kp:ch*kc)+"px"}
+function scalePreview(){const pw=preview.clientWidth;if(!pw)return;const land=card.classList.contains("fmt"),cw=+card.dataset.w||(land?1123:794),ch=+card.dataset.h||(land?794:1123),kc=pw/cw,kp=pw/794;card.style.transform=`scale(${kc})`;prep.style.transform="none";preview.style.height=tab==="prep"?"auto":ch*kc+"px"}
 let tab="menu";
 function setTab(t){tab=t;{const pb=$("planner");if(pb)pb.hidden=!(pb.dataset.has&&t==="prep")}if(t==="menu")phoneOn=true;card.hidden=t!=="menu";prep.hidden=t!=="prep";$("tabMenu").classList.toggle("on",t==="menu");$("tabPrep").classList.toggle("on",t==="prep");$("tabMenu").setAttribute("aria-selected",t==="menu");$("tabPrep").setAttribute("aria-selected",t==="prep");if(t==="prep"&&current){if(!prep.querySelector(".pp-cols")&&current.menu){try{styleCard(prep,current);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(current,current.menu)}catch(e){}}fitPrep(prep)}scalePreview();applyPhone()}
 $("tabMenu").addEventListener("click",()=>setTab("menu"));
@@ -1688,6 +1696,7 @@ async function renderCanvas(src,forPrint){
   stage.appendChild(clone);document.body.appendChild(stage);
   try{
     await document.fonts.ready;
+    if(clone.classList.contains("pp-sheet"))fitPrep(clone);
     /* Safari can mark a cached poster as off-limits to the canvas, which kills the export.
        Pull each outside image fresh as a local copy first so the canvas can always read it. */
     const temp=[];
@@ -1837,7 +1846,7 @@ $("shareLink").addEventListener("click",async()=>{
 $("print").addEventListener("click",()=>{
   const pa=$("printArea");pa.innerHTML="";
   if(card.classList.contains("fx-paper")){card.querySelectorAll(".fx-face").forEach(fc=>{const c=card.cloneNode(false);c.style.transform="none";c.hidden=false;c.style.width=fc.style.width;c.style.height=fc.style.height;c.innerHTML=fc.innerHTML;if(parseFloat(fc.style.height)>parseFloat(fc.style.width))c.classList.add("fx-port");pa.appendChild(c)})}else{const c=card.cloneNode(true);c.style.transform="none";c.hidden=false;pa.appendChild(c);}
-  const c2=prep.cloneNode(true);c2.style.transform="none";c2.hidden=false;pa.appendChild(c2);
+  pa.appendChild(prepA4());
   window.print();
 });
 $("copy").addEventListener("click",()=>{
