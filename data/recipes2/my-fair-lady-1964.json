@@ -1,0 +1,748 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Ascot race day cucumber sandwiches",
+   "course": "s",
+   "prep_min": 32,
+   "cook_min": 0,
+   "make_ahead": "Make up to 2 hours ahead, covered with a damp tea towel in the fridge so the bread stays soft",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "telegraph cucumbers, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "cream cheese, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "bunch dill, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground white pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "slices soft white sandwich bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the cucumber with the salt and drain on paper towel.",
+     "min": 15
+    },
+    {
+     "text": "Beat the butter with the cream cheese, dill and white pepper.",
+     "min": 4
+    },
+    {
+     "text": "Spread the bread to the edges, lay cucumber over 8 slices and close with the rest.",
+     "min": 8
+    },
+    {
+     "text": "Press down gently, cut off the crusts and cut each into 3 fingers.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Doolittle's pub Scotch eggs",
+   "course": "s",
+   "prep_min": 50,
+   "cook_min": 18,
+   "make_ahead": "Make and crumb the Scotch eggs up to 1 day ahead and keep in the fridge; fry on the night or serve cold",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "pork sausage meat",
+     "aisle": "Meat"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "eggs, 4 for boiling, 2 beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chopped sage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "English mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "piccalilli",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lower 4 eggs into boiling water for 6 1/2 minutes, then into iced water. Peel.",
+     "min": 15
+    },
+    {
+     "text": "Mix the sausage meat with the sage, mustard, nutmeg, salt and pepper.",
+     "min": 5
+    },
+    {
+     "text": "Flatten a quarter of the mixture on wet hands, wrap it round an egg and seal. Chill 20 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Roll each in flour, then the beaten eggs, then the panko.",
+     "min": 6
+    },
+    {
+     "text": "Deep-fry at 170C for 7 minutes until deep golden and cooked through. Drain, halve and serve with piccalilli.",
+     "min": 12
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Doolittle's pub Scotch eggs (vegetarian)",
+     "prep_min": 50,
+     "cook_min": 18,
+     "make_ahead": "Make and crumb the Scotch eggs up to 1 day ahead and keep in the fridge; fry on the night or serve cold",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "eggs, 4 for boiling, 2 beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chopped sage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "English mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "ground nutmeg",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "piccalilli",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Lower 4 eggs into boiling water for 6 1/2 minutes, then into iced water. Peel.",
+       "min": 15
+      },
+      {
+       "text": "Squeeze the vegetarian sausages out of their skins and mix with the sage, mustard, nutmeg, salt and pepper.",
+       "min": 5
+      },
+      {
+       "text": "Flatten a quarter of the mixture on wet hands, wrap it round an egg and seal. Chill 20 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Roll each in flour, then the beaten eggs, then the panko.",
+       "min": 6
+      },
+      {
+       "text": "Deep-fry at 170C for 6 minutes until deep golden and hot through. Drain, halve and serve with piccalilli.",
+       "min": 12
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Embassy Ball beef Wellington",
+   "course": "m",
+   "prep_min": 55,
+   "cook_min": 70,
+   "make_ahead": "Sear the beef and make the duxelles up to 1 day ahead, or wrap it up to 1 day ahead and keep it in the fridge; bake on the night",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "centre-cut beef fillet",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil, for searing",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "swiss brown mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "shallots, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cloves of garlic, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs of thyme, leaves picked",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 750,
+     "u": "g",
+     "item": "baby potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans, trimmed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the beef with half the salt and pepper, sear all over in the vegetable oil in a very hot pan, brush with the mustard and cool.",
+     "min": 15
+    },
+    {
+     "text": "Blitz the mushrooms finely and cook with the shallots, garlic, thyme and butter until dry and dark. Cool.",
+     "min": 25
+    },
+    {
+     "text": "Lay the pastry sheets slightly overlapping, press to join, spread with the mushrooms, sit the beef on top, roll up and seal. Brush with egg and chill 20 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Heat the oven to 200C. Toss the potatoes with the olive oil and the rest of the salt and pepper and roast.",
+     "min": 5
+    },
+    {
+     "text": "Score the pastry and bake the Wellington for medium rare.",
+     "min": 40
+    },
+    {
+     "text": "Steam the beans for 4 minutes and rest the Wellington 10 minutes before slicing thickly.",
+     "min": 10
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Embassy Ball mushroom and chestnut Wellington",
+     "prep_min": 50,
+     "cook_min": 70,
+     "make_ahead": "Make the filling up to 2 days ahead, or wrap the Wellington up to 1 day ahead and keep it in the fridge; bake on the night",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cooked peeled chestnuts, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "swiss brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves of garlic, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs of thyme, leaves picked",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 750,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans, trimmed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blitz the mushrooms finely and cook with the shallots, garlic, thyme and butter until dry and dark, then stir in the chestnuts, spinach and half the salt and pepper. Cool.",
+       "min": 30
+      },
+      {
+       "text": "Lay the pastry sheets slightly overlapping, press to join, spread the centre with mustard and pile the mushroom filling down the middle in a log. Roll up, seal, brush with egg and chill 20 minutes.",
+       "min": 35
+      },
+      {
+       "text": "Heat the oven to 200C. Toss the potatoes with the oil and the rest of the salt and pepper and roast.",
+       "min": 5
+      },
+      {
+       "text": "Score the pastry and bake the Wellington until deep golden and crisp underneath.",
+       "min": 40
+      },
+      {
+       "text": "Steam the beans for 4 minutes and rest the Wellington 10 minutes before slicing thickly.",
+       "min": 10
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Flower girl's violet Victoria sponge",
+   "course": "w",
+   "prep_min": 68,
+   "cook_min": 22,
+   "make_ahead": "Bake the sponges up to 1 day ahead and keep them airtight; fill and ice on the day",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 160,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "blackberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "drop purple food colouring",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "punnet edible violas or violets",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C and line two 20cm tins. Beat the butter and sugar until pale, then beat in the eggs one at a time.",
+     "min": 10
+    },
+    {
+     "text": "Fold in the flour, vanilla and milk, split between the tins and bake.",
+     "min": 25
+    },
+    {
+     "text": "Cool the sponges completely.",
+     "min": 40
+    },
+    {
+     "text": "Whip the cream with 1 tbsp of the icing sugar. Spread one sponge with jam, then cream, and top with the second.",
+     "min": 8
+    },
+    {
+     "text": "Mix the rest of the icing sugar with lemon juice and the food colouring, spread over the top and finish with the flowers.",
+     "min": 7
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Wimpole Street elderflower gin fizz",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 0,
+   "make_ahead": "Ribbon the cucumber and squeeze the lemons up to 4 hours ahead and keep cold; shake to order",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "dry gin",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "elderflower cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, in long ribbons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs of mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill 4 tall glasses with ice and add a couple of cucumber ribbons to each.",
+     "min": 3
+    },
+    {
+     "text": "Shake the gin, elderflower cordial and lemon juice with ice and strain into the glasses.",
+     "min": 2
+    },
+    {
+     "text": "Top with soda water and add a mint sprig.",
+     "min": 1
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Wimpole Street elderflower fizz (alcohol-free)",
+     "prep_min": 6,
+     "cook_min": 0,
+     "make_ahead": "Ribbon the cucumber and squeeze the lemons up to 4 hours ahead and keep cold; shake to order",
+     "ingredients": [
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "elderflower cordial",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, in long ribbons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs of mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fill 4 tall glasses with ice and add a couple of cucumber ribbons to each.",
+       "min": 3
+      },
+      {
+       "text": "Shake the non-alcoholic gin, elderflower cordial and lemon juice with ice and strain into the glasses.",
+       "min": 2
+      },
+      {
+       "text": "Top with soda water and add a mint sprig.",
+       "min": 1
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

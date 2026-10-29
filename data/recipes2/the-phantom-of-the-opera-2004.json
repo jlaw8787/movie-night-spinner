@@ -1,0 +1,660 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Opera managers' gougeres",
+   "course": "s",
+   "prep_min": 19,
+   "cook_min": 30,
+   "make_ahead": "Pipe the gougeres and freeze them raw up to 1 month ahead, then bake from frozen for 5 extra minutes",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "gruyere, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground black pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Bring the milk, 125ml water, butter and salt to the boil, tip in the flour and beat over the heat until it comes away from the pan.",
+     "min": 6
+    },
+    {
+     "text": "Cool 5 minutes, then beat in the eggs one at a time, then 120g of the gruyere, the mustard and pepper.",
+     "min": 10
+    },
+    {
+     "text": "Pipe or spoon walnut-sized balls onto lined trays and scatter with the rest of the gruyere.",
+     "min": 8
+    },
+    {
+     "text": "Bake until puffed and deep golden, and serve warm.",
+     "min": 25
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Underground lake smoked trout rillettes",
+   "course": "s",
+   "prep_min": 74,
+   "cook_min": 0,
+   "make_ahead": "Make up to 3 days ahead and keep covered in the fridge; take it out 20 minutes before serving",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "hot-smoked trout",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "creme fraiche",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested and juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "baby capers, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground white pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette, sliced and toasted",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cornichons",
+     "aisle": "Deli"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Flake the trout, checking for bones.",
+     "min": 5
+    },
+    {
+     "text": "Mash with the butter, creme fraiche, lemon zest and juice, chives, capers and pepper, leaving it coarse.",
+     "min": 6
+    },
+    {
+     "text": "Pack into a dish, smooth the top and chill until set.",
+     "min": 60
+    },
+    {
+     "text": "Serve with the toasted baguette and cornichons.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Underground lake mushroom rillettes",
+     "prep_min": 71,
+     "cook_min": 15,
+     "make_ahead": "Make up to 3 days ahead and keep covered in the fridge; take it out 20 minutes before serving",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mixed mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sprigs of thyme, leaves picked",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "creme fraiche",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zested and juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "baby capers, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "ground white pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette, sliced and toasted",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cornichons",
+       "aisle": "Deli"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms and shallot in 30g of the butter with the thyme until dark and dry, add the soy and cool.",
+       "min": 15
+      },
+      {
+       "text": "Mash the mushrooms with the cannellini beans, the rest of the butter, creme fraiche, lemon zest and juice, chives, capers and pepper, leaving it coarse.",
+       "min": 8
+      },
+      {
+       "text": "Pack into a dish, smooth the top and chill until set.",
+       "min": 60
+      },
+      {
+       "text": "Serve with the toasted baguette and cornichons.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "The new patron's steak frites with bearnaise",
+   "course": "m",
+   "prep_min": 21,
+   "cook_min": 40,
+   "make_ahead": "Make the first fry of the chips up to 4 hours ahead; make the bearnaise and sear the steaks just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sirloin steaks, about 250g each",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "white wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "shallot, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch tarragon, leaves chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "large potatoes, cut into chips",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch watercress",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into chips, rinse and dry, then fry at 140C in batches until soft but pale.",
+     "min": 20
+    },
+    {
+     "text": "Simmer the vinegar, shallot, half the tarragon and 2 tbsp water down to 1 tbsp and strain.",
+     "min": 6
+    },
+    {
+     "text": "Whisk the reduction and egg yolks in a bowl over simmering water until thick, then whisk in the melted butter in a thin stream. Stir in the rest of the tarragon and keep warm.",
+     "min": 10
+    },
+    {
+     "text": "Rub the steaks with the oil, half the salt and the pepper and sear in a very hot pan 3 minutes a side, then rest 5 minutes.",
+     "min": 12
+    },
+    {
+     "text": "Fry the chips again at 190C until crisp and golden, and toss with the rest of the salt.",
+     "min": 10
+    },
+    {
+     "text": "Serve the steaks with the chips, the bearnaise and watercress.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Patron's portobello frites with bearnaise",
+     "prep_min": 19,
+     "cook_min": 40,
+     "make_ahead": "Make the first fry of the chips up to 4 hours ahead; make the bearnaise and cook the mushrooms just before serving",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "haloumi, in 4 thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch tarragon, leaves chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "egg yolks",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 180,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "large potatoes, cut into chips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch watercress",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into chips, rinse and dry, then fry at 140C in batches until soft but pale.",
+       "min": 20
+      },
+      {
+       "text": "Simmer the vinegar, shallot, half the tarragon and 2 tbsp water down to 1 tbsp and strain.",
+       "min": 6
+      },
+      {
+       "text": "Whisk the reduction and egg yolks in a bowl over simmering water until thick, then whisk in the melted butter in a thin stream. Stir in the rest of the tarragon and keep warm.",
+       "min": 10
+      },
+      {
+       "text": "Brush the portobellos and haloumi with the olive oil, season with half the pepper and cook in a hot pan 4 minutes a side until browned.",
+       "min": 10
+      },
+      {
+       "text": "Fry the chips again at 190C until crisp and golden, and toss with the salt.",
+       "min": 10
+      },
+      {
+       "text": "Serve the mushrooms and haloumi with the chips, the bearnaise and watercress.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Red rose creme brulee",
+   "course": "w",
+   "prep_min": 258,
+   "cook_min": 35,
+   "make_ahead": "Bake and chill the custards up to 2 days ahead; burn the sugar just before serving",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean, split",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 140,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "rosewater",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful edible rose petals, optional",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 150C and warm the cream with the vanilla until steaming.",
+     "min": 6
+    },
+    {
+     "text": "Whisk the yolks with 80g of the sugar, pour in the hot cream, stir in the rosewater and strain.",
+     "min": 5
+    },
+    {
+     "text": "Crush the raspberries into 4 ramekins, pour over the custard and bake in a water bath until just set.",
+     "min": 37
+    },
+    {
+     "text": "Cool, then chill.",
+     "min": 240
+    },
+    {
+     "text": "Scatter the rest of the sugar over the tops, burn with a blowtorch or under a very hot grill and top with rose petals.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "New Year's Eve kir royale",
+   "course": "d",
+   "prep_min": 4,
+   "cook_min": 0,
+   "make_ahead": "Chill the wine and glasses up to 1 day ahead; pour to order",
+   "ingredients": [
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "blackcurrant liqueur",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "dry sparkling wine",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "blackberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill the sparkling wine and 4 flutes.",
+     "min": 1
+    },
+    {
+     "text": "Pour 20ml blackcurrant liqueur into each flute.",
+     "min": 1
+    },
+    {
+     "text": "Top slowly with sparkling wine and drop in a few blackberries.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "New Year's Eve kir royale (alcohol-free)",
+     "prep_min": 4,
+     "cook_min": 0,
+     "make_ahead": "Chill the sparkling grape juice and glasses up to 1 day ahead; pour to order",
+     "ingredients": [
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "blackcurrant cordial",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "sparkling white grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "blackberries",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill the sparkling grape juice and 4 flutes.",
+       "min": 1
+      },
+      {
+       "text": "Pour 20ml blackcurrant cordial into each flute.",
+       "min": 1
+      },
+      {
+       "text": "Top slowly with the sparkling white grape juice and a squeeze of lemon, and drop in a few blackberries.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,842 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Babysitter's pizza scrolls",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 35,
+   "make_ahead": "Roll and slice the scrolls up to 1 day ahead and keep covered in the fridge, then rest 30 minutes before baking; make the dip up to 3 days ahead",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pizza dough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "tomato passata, for the filling",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "tomato passata, for the dip",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C, line a tray and roll the dough into a 40 x 30cm rectangle.",
+     "min": 8
+    },
+    {
+     "text": "Spread with the passata for the filling and sprinkle with the oregano, mozzarella and half the parmesan.",
+     "min": 4
+    },
+    {
+     "text": "Roll up from the long side, cut into 12 scrolls and lay them cut side up. Brush with the oil and sprinkle with the rest of the parmesan.",
+     "min": 8
+    },
+    {
+     "text": "Rest the scrolls so they puff.",
+     "min": 15
+    },
+    {
+     "text": "Bake until golden.",
+     "min": 20
+    },
+    {
+     "text": "Simmer the passata for the dip with the garlic, chilli flakes and salt and serve warm with the scrolls.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Laurie's bunker beef jerky",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 515,
+   "make_ahead": "Marinate up to 1 day ahead; once dried the jerky keeps 1 week airtight in the fridge",
+   "ingredients": [
+    {
+     "q": 750,
+     "u": "g",
+     "item": "beef topside, trimmed",
+     "aisle": "Meat"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "onion powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "black pepper, cracked",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Freeze the beef to firm it up for slicing.",
+     "min": 60
+    },
+    {
+     "text": "Slice the beef 4mm thick against the grain.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the soy, sugar, Worcestershire and spices, toss the beef through and marinate in the fridge.",
+     "min": 240
+    },
+    {
+     "text": "Heat the oven to 75C, pat the strips dry and lay them on wire racks over trays.",
+     "min": 10
+    },
+    {
+     "text": "Dry in the oven with the door slightly open, turning once, until leathery but still bendy.",
+     "min": 210
+    },
+    {
+     "text": "Cool before packing.",
+     "min": 15
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Laurie's bunker mushroom jerky",
+     "prep_min": 25,
+     "cook_min": 220,
+     "make_ahead": "Marinate up to 1 day ahead; once dried the jerky keeps 5 days airtight in the fridge",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king brown mushrooms, sliced lengthways 4mm thick",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "onion powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "black pepper, cracked",
+       "aisle": "Spices"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the mushrooms lengthways 4mm thick.",
+       "min": 10
+      },
+      {
+       "text": "Whisk the soy, sugar, vinegar and spices, toss the mushrooms through and marinate in the fridge.",
+       "min": 60
+      },
+      {
+       "text": "Heat the oven to 90C, pat the strips dry and lay them on wire racks over trays.",
+       "min": 10
+      },
+      {
+       "text": "Dry in the oven with the door slightly open, turning once, until chewy.",
+       "min": 150
+      },
+      {
+       "text": "Cool before packing.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Laurie's compound chilli",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 145,
+   "make_ahead": "Make the chilli up to 3 days ahead, or freeze it for 3 months; it is better the next day",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, in 3cm cubes",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "chipotle chillies in adobo, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "tinned black beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "corn chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, in wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the beef with the salt and brown in batches in the oil.",
+     "min": 15
+    },
+    {
+     "text": "Soften the onions and capsicum in the pot.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the garlic, chipotle, cumin, paprika, oregano and tomato paste.",
+     "min": 3
+    },
+    {
+     "text": "Add the tomatoes and stock, return the beef, cover and simmer until tender.",
+     "min": 120
+    },
+    {
+     "text": "Stir in the beans and chocolate and simmer uncovered to thicken.",
+     "min": 20
+    },
+    {
+     "text": "Serve with sour cream, cheddar, corn chips and lime wedges.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Laurie's compound chilli (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 45,
+     "make_ahead": "Make the chilli up to 3 days ahead, or freeze it for 3 months",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mushrooms, quartered",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "chipotle chillies in adobo, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "large sweet potato, in 2cm cubes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tinned black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "dark chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "corn chips",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime, in wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil and set aside.",
+       "min": 10
+      },
+      {
+       "text": "Soften the onions and capsicum in the pot.",
+       "min": 8
+      },
+      {
+       "text": "Stir in the garlic, chipotle, cumin, paprika, oregano and tomato paste.",
+       "min": 3
+      },
+      {
+       "text": "Add the tomatoes, stock and sweet potato and simmer until the sweet potato is tender.",
+       "min": 25
+      },
+      {
+       "text": "Stir in the mushrooms, beans, salt and chocolate and simmer uncovered to thicken.",
+       "min": 15
+      },
+      {
+       "text": "Serve with sour cream, cheddar, corn chips and lime wedges.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Haddonfield High dance whoopie pies",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 40,
+   "make_ahead": "Bake the cakes up to 2 days ahead and keep airtight; fill on the day",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarb soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 115,
+     "u": "g",
+     "item": "butter, softened, for the cakes",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, softened, for the filling",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "orange food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C and line two trays.",
+     "min": 3
+    },
+    {
+     "text": "Whisk the flour, cocoa, bicarb and salt.",
+     "min": 2
+    },
+    {
+     "text": "Beat the butter for the cakes with the sugar until pale, then beat in the egg and half the vanilla.",
+     "min": 5
+    },
+    {
+     "text": "Fold in the dry mix and buttermilk alternately.",
+     "min": 4
+    },
+    {
+     "text": "Spoon 24 rounds onto the trays and bake until springy.",
+     "min": 12
+    },
+    {
+     "text": "Cool the cakes.",
+     "min": 30
+    },
+    {
+     "text": "Beat the butter for the filling with the icing sugar, milk, the rest of the vanilla and the colouring until fluffy.",
+     "min": 6
+    },
+    {
+     "text": "Sandwich the cakes together in pairs.",
+     "min": 8
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Laurie's rye and ginger",
+   "course": "d",
+   "prep_min": 7,
+   "cook_min": 0,
+   "make_ahead": "Slice the ginger and cut the limes up to 1 day ahead; build each drink to order",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "5cm piece ginger, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "rye whiskey",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "ginger beer, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, cut into wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Muddle the ginger slices with the lime juice in four tumblers.",
+     "min": 3
+    },
+    {
+     "text": "Fill with ice and add the rye.",
+     "min": 2
+    },
+    {
+     "text": "Top with ginger beer, stir and finish with a lime wedge.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Laurie's ginger and lime (alcohol-free)",
+     "prep_min": 7,
+     "cook_min": 30,
+     "make_ahead": "Brew and chill the tea up to 2 days ahead; build each drink to order",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "smoky black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "5cm piece ginger, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "ginger beer, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime, cut into wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, lift them out and chill the tea.",
+       "min": 30
+      },
+      {
+       "text": "Muddle the ginger slices with the lime juice in four tumblers.",
+       "min": 3
+      },
+      {
+       "text": "Fill with ice and add the tea.",
+       "min": 2
+      },
+      {
+       "text": "Top with ginger beer, stir and finish with a lime wedge.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

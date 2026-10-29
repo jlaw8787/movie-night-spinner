@@ -1,0 +1,1000 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Le Vrai gruyère gougères",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 31,
+   "make_ahead": "Bake up to 1 day ahead and recrisp at 180C for 5 minutes, or freeze the raw mounds and bake from frozen",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, diced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "gruyère, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "nutmeg, a pinch",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C, line 2 trays and grate the gruyère.",
+     "min": 5
+    },
+    {
+     "text": "Bring the water, butter and salt to the boil. Tip in the flour all at once and beat over the heat for 2 minutes until the dough pulls away from the pan.",
+     "min": 6
+    },
+    {
+     "text": "Tip into a bowl and cool for 5 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Beat in the eggs one at a time until glossy, then 60g of the gruyère, the nutmeg and pepper.",
+     "min": 6
+    },
+    {
+     "text": "Spoon or pipe 20 walnut-sized mounds onto the trays and top with the rest of the cheese.",
+     "min": 8
+    },
+    {
+     "text": "Bake for 25 minutes until puffed and deep golden, without opening the oven for the first 15.",
+     "min": 25
+    },
+    {
+     "text": "Serve warm.",
+     "min": 1
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Zion temple flatbreads with smoked eggplant",
+   "course": "s",
+   "prep_min": 23,
+   "cook_min": 26,
+   "make_ahead": "Make the dip up to 2 days ahead and keep chilled; warm the flatbreads just before serving",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "large eggplants",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tahini",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "flatbreads or pita",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Char the eggplants over a gas flame or under a very hot grill, turning, until black and collapsed.",
+     "min": 20
+    },
+    {
+     "text": "Put them in a bowl, cover with a plate and steam for 10 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Peel off the skin, chop the flesh and drain in a sieve.",
+     "min": 5
+    },
+    {
+     "text": "Mash with the tahini, lemon juice, garlic, 2 tbsp of the oil and salt to taste.",
+     "min": 5
+    },
+    {
+     "text": "Warm the flatbreads in a hot dry pan and brush with 1 tbsp of the oil.",
+     "min": 6
+    },
+    {
+     "text": "Spoon the dip into a bowl, drizzle with the last of the oil, dust with smoked paprika and parsley and serve with the torn bread.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Merovingian's coq au vin",
+   "course": "m",
+   "prep_min": 28,
+   "cook_min": 70,
+   "make_ahead": "Braise up to 2 days ahead and keep chilled, it only gets better; reheat gently and make the mash on the night",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "chicken thigh cutlets, skin on",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon, cut into lardons",
+     "aisle": "Deli"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, for the sauce",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "pickling onions, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "button mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thyme sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "floury potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, for the mash",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "parsley, chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the chicken and brown it skin side down in the oil in a large heavy casserole, in batches, then turn and brown the other side. Set aside.",
+     "min": 12
+    },
+    {
+     "text": "Fry the bacon in the same pot until crisp, then add the butter, onions and mushrooms and colour for 8 minutes. Add the garlic for the last minute.",
+     "min": 9
+    },
+    {
+     "text": "Stir in the flour and tomato paste for a minute, then pour in the wine and stock, scraping the base. Add the thyme and bay.",
+     "min": 4
+    },
+    {
+     "text": "Return the chicken skin side up, cover and simmer gently for 35 minutes, then uncover and simmer 10 minutes more to reduce the sauce.",
+     "min": 45
+    },
+    {
+     "text": "Meanwhile peel and chop the potatoes, boil until tender, drain and mash with the butter and warm milk, seasoning with salt.",
+     "min": 25
+    },
+    {
+     "text": "Taste the sauce, season, scatter with parsley and serve over the mash.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "veg": {
+     "n": "Merovingian's coq au vin (vegetarian)",
+     "prep_min": 28,
+     "cook_min": 60,
+     "make_ahead": "Braise up to 2 days ahead and keep chilled, it only gets better; reheat gently and make the mash on the night",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mixed portobello and Swiss brown mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter, for the sauce",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "pickling onions, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Spices"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "floury potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, for the mash",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "parsley, chopped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the sliced mushrooms in the oil in a large heavy casserole, in batches, until well coloured. Set aside.",
+       "min": 12
+      },
+      {
+       "text": "Add the butter, onions, carrots and button mushrooms and colour for 8 minutes. Add the garlic and smoked paprika for the last minute.",
+       "min": 9
+      },
+      {
+       "text": "Stir in the flour and tomato paste for a minute, then pour in the wine, stock and soy sauce, scraping the base. Add the thyme and bay.",
+       "min": 4
+      },
+      {
+       "text": "Return the browned mushrooms, cover and simmer gently for 25 minutes, then uncover and simmer 10 minutes more to reduce the sauce.",
+       "min": 35
+      },
+      {
+       "text": "Meanwhile peel and chop the potatoes, boil until tender, drain and mash with the butter and warm milk, seasoning with salt.",
+       "min": 25
+      },
+      {
+       "text": "Taste the sauce, season with salt and pepper, scatter with parsley and serve over the mash.",
+       "min": 3
+      }
+     ],
+     "veg": true,
+     "af": false
+    },
+    "af": {
+     "n": "Merovingian's coq au vin (alcohol-free)",
+     "prep_min": 28,
+     "cook_min": 70,
+     "make_ahead": "Braise up to 2 days ahead and keep chilled, it only gets better; reheat gently and make the mash on the night",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "chicken thigh cutlets, skin on",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "bacon, cut into lardons",
+       "aisle": "Deli"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter, for the sauce",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "pickling onions, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Spices"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "floury potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, for the mash",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "parsley, chopped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Season the chicken and brown it skin side down in the oil in a large heavy casserole, in batches, then turn and brown the other side. Set aside.",
+       "min": 12
+      },
+      {
+       "text": "Fry the bacon in the same pot until crisp, then add the butter, onions and mushrooms and colour for 8 minutes. Add the garlic for the last minute.",
+       "min": 9
+      },
+      {
+       "text": "Stir in the flour and tomato paste for a minute, then pour in the stock, grape juice and vinegar, scraping the base. Add the thyme and bay.",
+       "min": 4
+      },
+      {
+       "text": "Return the chicken skin side up, cover and simmer gently for 35 minutes, then uncover and simmer 10 minutes more to reduce the sauce.",
+       "min": 45
+      },
+      {
+       "text": "Meanwhile peel and chop the potatoes, boil until tender, drain and mash with the butter and warm milk, seasoning with salt.",
+       "min": 25
+      },
+      {
+       "text": "Taste the sauce, season, scatter with parsley and serve over the mash.",
+       "min": 3
+      }
+     ],
+     "veg": false,
+     "af": true
+    },
+    "veg_af": {
+     "n": "Merovingian's coq au vin (vegetarian, alcohol-free)",
+     "prep_min": 28,
+     "cook_min": 60,
+     "make_ahead": "Braise up to 2 days ahead and keep chilled, it only gets better; reheat gently and make the mash on the night",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mixed portobello and Swiss brown mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, cut into chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter, for the sauce",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "pickling onions, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Spices"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "floury potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, for the mash",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "parsley, chopped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the sliced mushrooms in the oil in a large heavy casserole, in batches, until well coloured. Set aside.",
+       "min": 12
+      },
+      {
+       "text": "Add the butter, onions, carrots and button mushrooms and colour for 8 minutes. Add the garlic and smoked paprika for the last minute.",
+       "min": 9
+      },
+      {
+       "text": "Stir in the flour and tomato paste for a minute, then pour in the stock, grape juice, vinegar and soy sauce, scraping the base. Add the thyme and bay.",
+       "min": 4
+      },
+      {
+       "text": "Return the browned mushrooms, cover and simmer gently for 25 minutes, then uncover and simmer 10 minutes more to reduce the sauce.",
+       "min": 35
+      },
+      {
+       "text": "Meanwhile peel and chop the potatoes, boil until tender, drain and mash with the butter and warm milk, seasoning with salt.",
+       "min": 25
+      },
+      {
+       "text": "Taste the sauce, season with salt and pepper, scatter with parsley and serve over the mash.",
+       "min": 3
+      }
+     ],
+     "veg": true,
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "The Merovingian's chocolate cake",
+   "course": "w",
+   "prep_min": 98,
+   "cook_min": 38,
+   "make_ahead": "Bake and glaze up to 2 days ahead and keep covered somewhere cool; bring to room temperature before slicing",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate, chopped, for the cake",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "almond meal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, a pinch",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate, chopped, for the ganache",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 170C and grease and line a 20cm round tin.",
+     "min": 5
+    },
+    {
+     "text": "Melt the chocolate for the cake with the butter in a bowl over simmering water, stirring until smooth.",
+     "min": 8
+    },
+    {
+     "text": "Whisk the eggs and sugar until pale and thick.",
+     "min": 6
+    },
+    {
+     "text": "Fold in the chocolate, then the almond meal, flour, cocoa and salt.",
+     "min": 5
+    },
+    {
+     "text": "Bake for 30 minutes until just set with a slight wobble in the middle.",
+     "min": 30
+    },
+    {
+     "text": "Cool completely in the tin.",
+     "min": 60
+    },
+    {
+     "text": "Bring the cream to a simmer, pour over the ganache chocolate, stand 2 minutes and stir until glossy. Pour over the cake and leave to set.",
+     "min": 20
+    },
+    {
+     "text": "Slice with a hot knife.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Merovingian's kir royale",
+   "course": "d",
+   "prep_min": 21,
+   "cook_min": 0,
+   "make_ahead": "Chill the wine and the flutes for at least 15 minutes ahead; pour to order",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "crème de cassis",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "dry sparkling wine, chilled",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "blackberries",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill 4 flutes in the freezer.",
+     "min": 15
+    },
+    {
+     "text": "Pour 15ml of the cassis into each flute.",
+     "min": 2
+    },
+    {
+     "text": "Top slowly with the sparkling wine.",
+     "min": 3
+    },
+    {
+     "text": "Drop a blackberry into each glass and serve.",
+     "min": 1
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Merovingian's kir royale (alcohol-free)",
+     "prep_min": 21,
+     "cook_min": 0,
+     "make_ahead": "Chill the wine and the flutes for at least 15 minutes ahead; pour to order",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "blackcurrant syrup",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "blackberries",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill 4 flutes in the freezer.",
+       "min": 15
+      },
+      {
+       "text": "Pour 15ml of the blackcurrant syrup into each flute.",
+       "min": 2
+      },
+      {
+       "text": "Top slowly with the sparkling wine.",
+       "min": 3
+      },
+      {
+       "text": "Drop a blackberry into each glass and serve.",
+       "min": 1
+      }
+     ],
+     "veg": true,
+     "af": true
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,1012 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Paris class trip croque monsieur bites",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 18,
+   "make_ahead": "Make the béchamel up to 2 days ahead; build the sandwiches up to 4 hours ahead, then toast and grill on the night",
+   "ingredients": [
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "ground nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white sandwich bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sliced ham",
+     "aisle": "Deli"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "gruyère, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter, stir in the flour, whisk in the milk and simmer to a thick béchamel. Season with the nutmeg and salt.",
+     "min": 8
+    },
+    {
+     "text": "Heat the grill. Spread 4 slices of bread with mustard, top with the ham and half the gruyère and close the sandwiches.",
+     "min": 5
+    },
+    {
+     "text": "Toast in a dry frying pan until golden on both sides.",
+     "min": 8
+    },
+    {
+     "text": "Spread the béchamel over the tops, scatter with the rest of the gruyère and grill until bubbling.",
+     "min": 5
+    },
+    {
+     "text": "Cut each into 4 squares.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Paris class trip croque monsieur bites (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 25,
+     "make_ahead": "Make the béchamel and fry the mushrooms up to 2 days ahead; toast and grill on the night",
+     "ingredients": [
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "ground nutmeg",
+       "aisle": "Spices"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices white sandwich bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "gruyère, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in 20g of the butter until golden and dry.",
+       "min": 8
+      },
+      {
+       "text": "Melt the rest of the butter, stir in the flour, whisk in the milk and simmer to a thick béchamel. Season with the nutmeg and salt.",
+       "min": 8
+      },
+      {
+       "text": "Heat the grill. Spread 4 slices of bread with mustard, top with the mushrooms and half the gruyère and close the sandwiches.",
+       "min": 5
+      },
+      {
+       "text": "Toast in a dry frying pan until golden on both sides.",
+       "min": 8
+      },
+      {
+       "text": "Spread the béchamel over the tops, scatter with the rest of the gruyère, grill until bubbling and cut each into 4 squares.",
+       "min": 6
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Window seat French onion dip",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 87,
+   "make_ahead": "Make up to 3 days ahead in the fridge, it's better after a night; serve with the crisps straight from the bag",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "brown onions, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "cream cheese, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives, snipped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain salted crisps",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the onions in the butter and oil with the salt over low heat, stirring often, until deep golden and jammy.",
+     "min": 40
+    },
+    {
+     "text": "Cool.",
+     "min": 20
+    },
+    {
+     "text": "Beat the sour cream and cream cheese until smooth and fold in the onions, most of the chives and the pepper.",
+     "min": 5
+    },
+    {
+     "text": "Chill so the flavours settle.",
+     "min": 30
+    },
+    {
+     "text": "Scatter with the rest of the chives and serve with the crisps.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Flight 180 coq au vin",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 83,
+   "make_ahead": "Make up to 2 days ahead, the sauce improves; reheat gently and scatter the parsley on the night",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "chicken thigh cutlets, skin on",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon, diced",
+     "aisle": "Deli"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "small pickling onions, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "button mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thyme sprigs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the chicken with the salt and pepper and brown skin side down in the oil in a wide heavy pan, then turn, brown and lift out.",
+     "min": 15
+    },
+    {
+     "text": "Fry the bacon, onions and mushrooms in the same pan until golden, then add the garlic.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the flour and tomato paste, pour in 500ml red wine and 250ml chicken stock, and add the thyme and bay.",
+     "min": 5
+    },
+    {
+     "text": "Return the chicken skin side up, cover and simmer gently.",
+     "min": 50
+    },
+    {
+     "text": "Uncover and simmer until the sauce coats a spoon.",
+     "min": 15
+    },
+    {
+     "text": "Scatter with parsley and serve with torn baguette.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "veg": {
+     "n": "Flight 180 coq au vin (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 45,
+     "make_ahead": "Make up to 2 days ahead, the sauce improves; reheat gently and scatter the parsley on the night",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "g",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small pickling onions, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "red wine",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in 2 tbsp of the oil in batches over high heat until browned, then lift out.",
+       "min": 12
+      },
+      {
+       "text": "Fry the onions and carrots in the rest of the oil until golden, then add the garlic, smoked paprika, salt and pepper.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the flour and tomato paste, pour in 500ml red wine and 250ml vegetable stock with the soy sauce, and add the thyme and bay.",
+       "min": 5
+      },
+      {
+       "text": "Return the mushrooms and simmer uncovered until the carrots are tender and the sauce coats a spoon.",
+       "min": 30
+      },
+      {
+       "text": "Scatter with parsley and serve with torn baguette.",
+       "min": 3
+      }
+     ]
+    },
+    "af": {
+     "n": "Flight 180 coq au vin (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 83,
+     "make_ahead": "Make up to 2 days ahead, the sauce improves; reheat gently and scatter the parsley on the night",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "chicken thigh cutlets, skin on",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "bacon, diced",
+       "aisle": "Deli"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small pickling onions, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 650,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Season the chicken with the salt and pepper and brown skin side down in the oil in a wide heavy pan, then turn, brown and lift out.",
+       "min": 15
+      },
+      {
+       "text": "Fry the bacon, onions and mushrooms in the same pan until golden, then add the garlic.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the flour and tomato paste, pour in 650ml chicken stock, 150ml red grape juice and 2 tbsp red wine vinegar, and add the thyme and bay.",
+       "min": 5
+      },
+      {
+       "text": "Return the chicken skin side up, cover and simmer gently.",
+       "min": 50
+      },
+      {
+       "text": "Uncover and simmer until the sauce coats a spoon.",
+       "min": 15
+      },
+      {
+       "text": "Scatter with parsley and serve with torn baguette.",
+       "min": 3
+      }
+     ]
+    },
+    "veg_af": {
+     "n": "Flight 180 coq au vin (vegetarian, alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 45,
+     "make_ahead": "Make up to 2 days ahead, the sauce improves; reheat gently and scatter the parsley on the night",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "g",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small pickling onions, peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 650,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thyme sprigs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in 2 tbsp of the oil in batches over high heat until browned, then lift out.",
+       "min": 12
+      },
+      {
+       "text": "Fry the onions and carrots in the rest of the oil until golden, then add the garlic, smoked paprika, salt and pepper.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the flour and tomato paste, pour in 650ml vegetable stock, 150ml red grape juice and 2 tbsp red wine vinegar with the soy sauce, and add the thyme and bay.",
+       "min": 5
+      },
+      {
+       "text": "Return the mushrooms and simmer uncovered until the carrots are tender and the sauce coats a spoon.",
+       "min": 30
+      },
+      {
+       "text": "Scatter with parsley and serve with torn baguette.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Bludworth's funeral parlour madeleines",
+   "course": "w",
+   "prep_min": 17,
+   "cook_min": 70,
+   "make_ahead": "Chill the batter up to 2 days ahead; bake just before serving, they're best warm",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 110,
+     "u": "g",
+     "item": "butter, melted and cooled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the eggs, caster sugar, honey and lemon zest until pale and thick.",
+     "min": 6
+    },
+    {
+     "text": "Fold in the flour and baking powder, then 100g of the melted butter.",
+     "min": 4
+    },
+    {
+     "text": "Cover and chill the batter.",
+     "min": 60
+    },
+    {
+     "text": "Heat the oven to 200C and brush a madeleine tray with the rest of the butter.",
+     "min": 4
+    },
+    {
+     "text": "Spoon in the batter and bake until domed and golden.",
+     "min": 10
+    },
+    {
+     "text": "Turn out, dust with icing sugar and serve warm.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Premonition French 75",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 0,
+   "make_ahead": "Squeeze the lemons and cut the twists up to 4 hours ahead and keep chilled; shake to order",
+   "ingredients": [
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "sparkling wine, chilled",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, peeled into twists",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shake the gin, lemon juice and sugar syrup hard with the ice.",
+     "min": 2
+    },
+    {
+     "text": "Strain into 4 chilled flutes.",
+     "min": 2
+    },
+    {
+     "text": "Top with the sparkling wine and add a lemon twist.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Premonition French 75 (alcohol-free)",
+     "prep_min": 6,
+     "cook_min": 0,
+     "make_ahead": "Squeeze the lemons and cut the twists up to 4 hours ahead and keep chilled; shake to order",
+     "ingredients": [
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, peeled into twists",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Shake the non-alcoholic gin, lemon juice and sugar syrup hard with the ice.",
+       "min": 2
+      },
+      {
+       "text": "Strain into 4 chilled flutes.",
+       "min": 2
+      },
+      {
+       "text": "Top with the alcohol-free sparkling wine and add a lemon twist.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

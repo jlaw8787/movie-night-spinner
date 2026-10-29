@@ -1,0 +1,703 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Clone 8 devilled eggs",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Boil and peel the eggs and mix the filling up to 1 day ahead, kept separate in the fridge; fill just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "curry powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chives, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lower the eggs into a pot of boiling water and cook for 10 minutes.",
+     "min": 12
+    },
+    {
+     "text": "Lift into iced water and cool completely.",
+     "min": 10
+    },
+    {
+     "text": "Peel the eggs and cut in half lengthways. Tip the yolks into a bowl.",
+     "min": 5
+    },
+    {
+     "text": "Mash the yolks with the mayonnaise, mustard, curry powder and salt and pepper until smooth.",
+     "min": 4
+    },
+    {
+     "text": "Pipe or spoon the filling into the 8 whites, dust with the smoked paprika and scatter with the chives.",
+     "min": 4
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Basketball court gougères",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 33,
+   "make_ahead": "Pipe the raw puffs onto a tray and freeze up to 1 month ahead; bake from frozen, adding 5 minutes",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "gruyère, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "ground nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, a pinch",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C and line a tray with baking paper. Bring the water, butter and salt to the boil in a saucepan.",
+     "min": 6
+    },
+    {
+     "text": "Tip in the flour all at once and beat with a wooden spoon over the heat until it forms a smooth ball that leaves the sides, about 2 minutes.",
+     "min": 3
+    },
+    {
+     "text": "Take off the heat and cool.",
+     "min": 5
+    },
+    {
+     "text": "Beat in the eggs one at a time until glossy, then stir in most of the gruyère and the nutmeg.",
+     "min": 5
+    },
+    {
+     "text": "Pipe or spoon 16 small balls onto the tray and top with the rest of the gruyère.",
+     "min": 6
+    },
+    {
+     "text": "Bake until puffed, deep golden and crisp. Do not open the oven for the first 15 minutes.",
+     "min": 25
+    },
+    {
+     "text": "Cool for a few minutes and serve warm.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Flooded galley bouillabaisse",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 39,
+   "make_ahead": "Make the broth with the potatoes up to 1 day ahead and keep chilled; reheat and poach the seafood on the night",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "fennel bulb, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, sliced, for the broth",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "fennel seeds",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "saffron threads, a good pinch",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, zest peeled in a strip",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned chopped tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "fish stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "waxy potatoes, sliced 1cm thick",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "firm white fish fillets, in chunks",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green prawns, peeled",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed, for the rouille",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "cayenne pepper, a pinch",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "flat-leaf parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the onion, fennel, broth garlic and potatoes. Cut the fish into chunks and peel the prawns.",
+     "min": 15
+    },
+    {
+     "text": "Heat the oil in a wide heavy pot and soften the onion, fennel, garlic and fennel seeds without browning.",
+     "min": 10
+    },
+    {
+     "text": "Add the saffron, orange zest, tomatoes, stock and potatoes. Simmer until the potatoes are just tender.",
+     "min": 20
+    },
+    {
+     "text": "Mix the mayonnaise with the rouille garlic and cayenne.",
+     "min": 3
+    },
+    {
+     "text": "Slice the baguette and toast until golden.",
+     "min": 5
+    },
+    {
+     "text": "Add the fish and simmer gently for 4 minutes, then add the prawns for 3 minutes more. Season with salt and pepper.",
+     "min": 8
+    },
+    {
+     "text": "Ladle into wide bowls, scatter with parsley and serve with the toasts and rouille.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Flooded galley bouillabaisse (vegetarian)",
+     "prep_min": 25,
+     "cook_min": 41,
+     "make_ahead": "Make the broth with the potatoes up to 1 day ahead and keep chilled; reheat, add the vegetables and poach the eggs on the night",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, sliced, for the broth",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fennel seeds",
+       "aisle": "Spices"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "saffron threads, a good pinch",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, zest peeled in a strip",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned chopped tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "waxy potatoes, sliced 1cm thick",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed, for the rouille",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "cayenne pepper, a pinch",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "flat-leaf parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slice the onion, fennel, broth garlic and potatoes. Cut the zucchini into chunks.",
+       "min": 15
+      },
+      {
+       "text": "Heat the oil in a wide heavy pot and soften the onion, fennel, garlic and fennel seeds without browning.",
+       "min": 10
+      },
+      {
+       "text": "Add the saffron, orange zest, tomatoes, stock and potatoes. Simmer until the potatoes are just tender.",
+       "min": 20
+      },
+      {
+       "text": "Mix the mayonnaise with the rouille garlic and cayenne.",
+       "min": 3
+      },
+      {
+       "text": "Slice the baguette and toast until golden.",
+       "min": 5
+      },
+      {
+       "text": "Add the zucchini and beans and simmer for 5 minutes. Season, then crack the eggs into the barely simmering broth, cover and poach for 4 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Ladle into wide bowls with an egg in each, scatter with parsley and serve with the toasts and rouille.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Acid blood lime tart",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 190,
+   "make_ahead": "Bake and chill the tart up to 1 day ahead, the chill takes 2 hours; zest the top just before serving",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet frozen sweet shortcrust pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "",
+     "item": "limes, 3 zested, all juiced to make 150ml",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a 23cm loose-based tart tin with the pastry, prick the base and chill.",
+     "min": 25
+    },
+    {
+     "text": "Heat the oven to 180C. Line the pastry with baking paper and rice, bake for 15 minutes, lift out the paper and bake 5 minutes more. Turn the oven down to 150C.",
+     "min": 20
+    },
+    {
+     "text": "Whisk the eggs and sugar, then whisk in the zest of 3 limes, the lime juice and cream. Skim off any froth.",
+     "min": 8
+    },
+    {
+     "text": "Pour into the warm shell and bake until just set with a slight wobble in the middle.",
+     "min": 30
+    },
+    {
+     "text": "Cool, then chill until firm.",
+     "min": 120
+    },
+    {
+     "text": "Grate over a little more lime zest and cut into wedges.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Betty smugglers' spiced rum and ginger",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 20,
+   "make_ahead": "Make and cool the spiced syrup up to 1 week ahead and keep it in the fridge; build the drinks to order",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "whole cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "dark rum",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes, 2 juiced, 1 in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "ginger beer, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the brown sugar, water, cinnamon and cloves for 3 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Cool the syrup and strain.",
+     "min": 15
+    },
+    {
+     "text": "Fill 4 glasses with ice. Add the rum, the spiced syrup and the lime juice, sharing it between the glasses.",
+     "min": 3
+    },
+    {
+     "text": "Top with the ginger beer, stir once and add a lime wedge.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Betty smugglers' spiced rum and ginger (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 26,
+     "make_ahead": "Brew and chill the tea and make the spiced syrup up to 3 days ahead, both in the fridge; build the drinks to order",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water, for the tea",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "water, for the syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "whole cloves",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes, 2 juiced, 1 in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "ginger beer, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the tea bags in the boiling water for 5 minutes, lift out and stir in the vanilla.",
+       "min": 6
+      },
+      {
+       "text": "Simmer the brown sugar, syrup water, cinnamon and cloves for 3 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Cool the tea and syrup in the fridge and strain the syrup.",
+       "min": 15
+      },
+      {
+       "text": "Fill 4 glasses with ice. Add the cold tea, the spiced syrup and the lime juice, sharing it between the glasses.",
+       "min": 3
+      },
+      {
+       "text": "Top with the ginger beer, stir once and add a lime wedge.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

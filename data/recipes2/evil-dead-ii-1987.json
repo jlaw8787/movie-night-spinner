@@ -1,0 +1,576 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Ash's runaway hand pies",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 45,
+   "make_ahead": "Fill and crimp up to 1 day ahead and keep chilled, or freeze for a month; bake on the night",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets frozen shortcrust pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "potatoes, cut into 1cm dice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "leek, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the diced potato until just tender and drain well.",
+     "min": 12
+    },
+    {
+     "text": "Soften the leek in the butter.",
+     "min": 8
+    },
+    {
+     "text": "Mix the potato, leek, cheddar, thyme, salt and pepper and leave to cool.",
+     "min": 10
+    },
+    {
+     "text": "Heat the oven to 200C. Cut 8 rounds of 12cm from the pastry, spoon in the filling, fold into half moons, crimp the edges and brush with egg.",
+     "min": 15
+    },
+    {
+     "text": "Bake on a lined tray until deep golden.",
+     "min": 25
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Jake and Bobbie Joe's hush puppies",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 33,
+   "make_ahead": "Mix the dry ingredients and the honey butter up to 2 days ahead; stir the batter and fry just before serving",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "spring onions, finely sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cornmeal, flour, baking powder, sugar and salt.",
+     "min": 3
+    },
+    {
+     "text": "Whisk the egg and buttermilk, stir into the dry mix with the spring onion and rest.",
+     "min": 10
+    },
+    {
+     "text": "Beat the butter with the honey.",
+     "min": 3
+    },
+    {
+     "text": "Heat the oil in a deep pot to 180C.",
+     "min": 10
+    },
+    {
+     "text": "Drop in heaped tablespoons of batter in batches and fry for 3 to 4 minutes, turning, until golden. Drain on paper towel.",
+     "min": 15
+    },
+    {
+     "text": "Serve hot with the honey butter.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Henrietta's fruit cellar pork chops",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 40,
+   "make_ahead": "Best cooked on the night; boil the potatoes up to 4 hours ahead and slice the onion in the morning",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "baby potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thick pork loin chops",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red apples, cored and cut into wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "sage leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "wholegrain mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes until tender, drain and crush lightly with a fork and half the butter.",
+     "min": 20
+    },
+    {
+     "text": "Season the chops with the salt and pepper and sear in the oil for 4 minutes a side until just cooked. Rest on a plate.",
+     "min": 12
+    },
+    {
+     "text": "Fry the apples, onion and sage in the rest of the butter until golden.",
+     "min": 8
+    },
+    {
+     "text": "Add 250ml chicken stock and the mustard, bubble to reduce by half, then stir in the cream.",
+     "min": 6
+    },
+    {
+     "text": "Return the chops and their juices to warm through and serve with the potatoes.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Henrietta's fruit cellar cauliflower steaks",
+     "prep_min": 10,
+     "cook_min": 42,
+     "make_ahead": "Best cooked on the night; boil the potatoes up to 4 hours ahead and slice the onion in the morning",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cauliflowers, each cut into 2 thick steaks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red apples, cored and cut into wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "sage leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "wholegrain mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 220C. Brush the cauliflower steaks with the oil, season with the salt and pepper and roast on a tray, turning once, until tender and browned.",
+       "min": 30
+      },
+      {
+       "text": "Meanwhile boil the potatoes until tender, drain and crush lightly with a fork and half the butter.",
+       "min": 5
+      },
+      {
+       "text": "Fry the apples, onion and sage in the rest of the butter until golden.",
+       "min": 8
+      },
+      {
+       "text": "Add 250ml vegetable stock and the mustard, bubble to reduce by half, then stir in the cream.",
+       "min": 6
+      },
+      {
+       "text": "Spoon the sauce over the cauliflower steaks and serve with the potatoes.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Dead by dawn pecan pie",
+   "course": "w",
+   "prep_min": 18,
+   "cook_min": 165,
+   "make_ahead": "Bake up to 2 days ahead and keep covered at room temperature; whip the cream on the night",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet frozen shortcrust pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "pecans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C. Line a 23cm pie tin with the pastry and chill.",
+     "min": 20
+    },
+    {
+     "text": "Line with baking paper and rice and blind bake, then lift out the paper and rice.",
+     "min": 20
+    },
+    {
+     "text": "Whisk the eggs, brown sugar, maple syrup, butter, vanilla and salt.",
+     "min": 5
+    },
+    {
+     "text": "Scatter the pecans in the pastry case and pour over the filling.",
+     "min": 3
+    },
+    {
+     "text": "Bake until set with a slight wobble in the centre.",
+     "min": 40
+    },
+    {
+     "text": "Cool completely.",
+     "min": 90
+    },
+    {
+     "text": "Whip the cream to soft peaks and serve with slices of pie.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Laughing room peach iced tea",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 130,
+   "make_ahead": "Brew and chill the tea and peach syrup up to 2 days ahead; add ice, peach slices and mint to serve",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "ripe peaches, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steep the tea bags in the boiling water for 5 minutes and remove.",
+     "min": 6
+    },
+    {
+     "text": "Simmer half the peach slices with the sugar and 100ml of the cold water until soft, then strain to a syrup.",
+     "min": 10
+    },
+    {
+     "text": "Stir the syrup, lemon juice and the rest of the cold water into the tea and chill.",
+     "min": 120
+    },
+    {
+     "text": "Pour over ice with the remaining peach slices and a sprig of mint.",
+     "min": 4
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

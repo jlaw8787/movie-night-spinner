@@ -1,0 +1,892 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Kingston stamp and go saltfish fritters",
+   "course": "s",
+   "prep_min": 734,
+   "cook_min": 38,
+   "make_ahead": "Soak the salt cod overnight, changing the water twice, and flake it up to 1 day ahead; fry just before serving",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "salt cod",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small red chilli, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tomato, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, cut into wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the salt cod in cold water in the fridge overnight, changing the water twice.",
+     "min": 720
+    },
+    {
+     "text": "Simmer the cod in fresh water for 15 minutes, drain, then flake it, picking out any skin and bones.",
+     "min": 20
+    },
+    {
+     "text": "Whisk the flour, baking powder and water into a thick batter.",
+     "min": 4
+    },
+    {
+     "text": "Stir in the cod, spring onions, chilli, thyme, garlic, tomato and pepper.",
+     "min": 4
+    },
+    {
+     "text": "Heat the oil to 180C in a deep heavy pan.",
+     "min": 8
+    },
+    {
+     "text": "Fry heaped spoonfuls in batches for 3 minutes, turning, until puffed and golden. Drain on paper towel.",
+     "min": 15
+    },
+    {
+     "text": "Serve hot with the lime wedges.",
+     "min": 1
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Kingston stamp and go fritters (vegetarian)",
+     "prep_min": 14,
+     "cook_min": 23,
+     "make_ahead": "Mix the corn and spinach up to 1 day ahead and keep chilled; make the batter and fry just before serving",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "frozen corn kernels, thawed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "baby spinach, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small red chilli, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tomato, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime, cut into wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Pat the corn dry and chop the spinach.",
+       "min": 5
+      },
+      {
+       "text": "Whisk the flour, baking powder, salt and water into a thick batter.",
+       "min": 4
+      },
+      {
+       "text": "Stir in the corn, spinach, spring onions, chilli, thyme, garlic, tomato and pepper.",
+       "min": 4
+      },
+      {
+       "text": "Heat the oil to 180C in a deep heavy pan.",
+       "min": 8
+      },
+      {
+       "text": "Fry heaped spoonfuls in batches for 3 minutes, turning, until puffed and golden. Drain on paper towel.",
+       "min": 15
+      },
+      {
+       "text": "Serve hot with the lime wedges.",
+       "min": 1
+      }
+     ],
+     "veg": true,
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Crab Key plantain chips",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 23,
+   "make_ahead": "Fry up to 1 day ahead and keep airtight; season again just before serving",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "green plantains or green cooking bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the ends off the plantains, score the skin along the ridges and prise it off.",
+     "min": 8
+    },
+    {
+     "text": "Slice the plantains 2mm thick on a mandoline.",
+     "min": 8
+    },
+    {
+     "text": "Heat the oil to 175C in a deep heavy pan.",
+     "min": 8
+    },
+    {
+     "text": "Fry in batches for about 3 minutes until crisp and pale gold, then drain on paper towel.",
+     "min": 15
+    },
+    {
+     "text": "Toss with the salt, chilli powder and the zest and a squeeze of the lime.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Quarrel's jerk chicken with rice and peas",
+   "course": "m",
+   "prep_min": 253,
+   "cook_min": 73,
+   "make_ahead": "Marinate the chicken at least 4 hours or overnight in the fridge; cook the rice and peas on the night",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "chicken thighs, bone in, skin on",
+     "aisle": "Meat"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "habanero chilli, seeded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "ginger, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tsp",
+     "item": "ground allspice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice, rinsed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin red kidney beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "tin coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz 4 of the spring onions, the chilli, 4 garlic cloves, the ginger, 3 tsp of the allspice, 2 tsp of the thyme, the cinnamon, nutmeg, sugar, soy sauce, juice of 1 lime, oil, pepper and 1 tsp of the salt to a paste.",
+     "min": 8
+    },
+    {
+     "text": "Slash the chicken to the bone, rub all over with the marinade and refrigerate for at least 4 hours or overnight.",
+     "min": 240
+    },
+    {
+     "text": "Heat the oven to 200C. Roast the chicken on a rack for 40 minutes, then char on a hot barbecue or under the grill for 5 minutes.",
+     "min": 45
+    },
+    {
+     "text": "For the rice and peas, bring the coconut milk, water, the last 2 spring onions bashed whole, the last garlic clove crushed, the remaining allspice, thyme and salt to a simmer. Add the rice and beans, cover and cook on low for 18 minutes, then stand for 5.",
+     "min": 28
+    },
+    {
+     "text": "Rest the chicken for 5 minutes and serve with the rice and peas and the second lime in wedges.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Quarrel's jerk cauliflower with rice and peas",
+     "prep_min": 73,
+     "cook_min": 68,
+     "make_ahead": "Marinate the cauliflower and haloumi up to 1 day ahead in the fridge; cook the rice and peas on the night",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, cut into 8 wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "haloumi, sliced 1cm thick",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "habanero chilli, seeded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "ginger, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tsp",
+       "item": "ground allspice",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "tsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "ground cinnamon",
+       "aisle": "Spices"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "ground nutmeg",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice, rinsed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin red kidney beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "tin coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blitz 4 of the spring onions, the chilli, 4 garlic cloves, the ginger, 3 tsp of the allspice, 2 tsp of the thyme, the cinnamon, nutmeg, sugar, soy sauce, juice of 1 lime, oil, pepper and 1 tsp of the salt to a paste.",
+       "min": 8
+      },
+      {
+       "text": "Rub the cauliflower wedges and haloumi all over with the marinade and refrigerate for 1 hour.",
+       "min": 60
+      },
+      {
+       "text": "Heat the oven to 200C. Roast the cauliflower on a lined tray for 35 minutes until tender and charred at the edges, then sear the haloumi in a hot pan for 2 minutes a side.",
+       "min": 40
+      },
+      {
+       "text": "For the rice and peas, bring the coconut milk, water, the last 2 spring onions bashed whole, the last garlic clove crushed, the remaining allspice, thyme and salt to a simmer. Add the rice and beans, cover and cook on low for 18 minutes, then stand for 5.",
+       "min": 28
+      },
+      {
+       "text": "Serve the cauliflower and haloumi with the rice and peas and the second lime in wedges.",
+       "min": 5
+      }
+     ],
+     "veg": true,
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Honey Ryder's coconut toto",
+   "course": "w",
+   "prep_min": 43,
+   "cook_min": 35,
+   "make_ahead": "Bake up to 2 days ahead and keep airtight; whip the cream just before serving",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, melted, plus extra for the tin",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "demerara sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "shredded coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, zested",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C and butter a 20cm square tin.",
+     "min": 5
+    },
+    {
+     "text": "Mix the flour, baking powder, cinnamon, nutmeg, salt, brown sugar and desiccated coconut.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the egg, coconut milk, melted butter and vanilla and stir into the dry mix.",
+     "min": 5
+    },
+    {
+     "text": "Spread into the tin and scatter with the demerara and shredded coconut.",
+     "min": 3
+    },
+    {
+     "text": "Bake for 35 minutes until golden and a skewer comes out clean.",
+     "min": 35
+    },
+    {
+     "text": "Cool in the tin for 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Whip the cream with the lime zest to soft peaks and serve with the toto cut into squares.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Puss-Feller's planter's punch",
+   "course": "d",
+   "prep_min": 36,
+   "cook_min": 0,
+   "make_ahead": "Mix and chill the punch in a jug up to 4 hours ahead; pour over ice and grate the nutmeg to order",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "lime juice, freshly squeezed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "sugar syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "dark rum",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "pineapple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "aromatic bitters, 4 dashes",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "whole nutmeg, for grating",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, sliced into wheels",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the lime juice, sugar syrup, rum, pineapple juice and bitters together in a jug.",
+     "min": 3
+    },
+    {
+     "text": "Chill for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Pour over ice in 4 glasses, grate over a little nutmeg and add a lime wheel.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Puss-Feller's planter's punch (alcohol-free)",
+     "prep_min": 46,
+     "cook_min": 5,
+     "make_ahead": "Brew the tea and mix the punch up to 4 hours ahead and keep chilled; pour over ice and grate the nutmeg to order",
+     "ingredients": [
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "lime juice, freshly squeezed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "strong black tea",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "molasses",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 240,
+       "u": "ml",
+       "item": "pineapple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ground allspice, a pinch",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "whole nutmeg, for grating",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime, sliced into wheels",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the tea strong, stir in the molasses and cool.",
+       "min": 15
+      },
+      {
+       "text": "Stir the lime juice, sugar syrup, tea, pineapple juice and allspice together in a jug.",
+       "min": 3
+      },
+      {
+       "text": "Chill for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Pour over ice in 4 glasses, grate over a little nutmeg and add a lime wheel.",
+       "min": 3
+      }
+     ],
+     "veg": true,
+     "af": true
+    }
+   }
+  }
+ ]
+}

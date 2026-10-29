@@ -1,0 +1,740 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Sunset Strip prawn cocktail",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Mix the Marie Rose sauce up to 2 days ahead and keep it covered in the fridge; build the glasses just before serving",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "cooked king prawns, peeled",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "iceberg lettuce, finely shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "telegraph cucumber, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "avocado, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot chilli sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, half juiced, half in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices buttered brown bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the mayonnaise, tomato sauce, chilli sauce and lemon juice together for the Marie Rose sauce.",
+     "min": 3
+    },
+    {
+     "text": "Split the lettuce, cucumber and avocado between 4 coupes or wide glasses.",
+     "min": 4
+    },
+    {
+     "text": "Fold the prawns through half the sauce, saving 4 to hook on the rims.",
+     "min": 3
+    },
+    {
+     "text": "Pile the prawns into the glasses, spoon over the rest of the sauce and dust with paprika.",
+     "min": 3
+    },
+    {
+     "text": "Serve with lemon wedges and triangles of buttered brown bread.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sunset Strip avocado and palm heart cocktail",
+     "prep_min": 17,
+     "cook_min": 0,
+     "make_ahead": "Mix the Marie Rose sauce up to 2 days ahead and keep it covered in the fridge; build the glasses just before serving",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin hearts of palm",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cherry tomatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "iceberg lettuce, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "telegraph cucumber, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "avocado, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "whole egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "hot chilli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, half juiced, half in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch of sweet paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices buttered brown bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir the mayonnaise, tomato sauce, chilli sauce and lemon juice together for the Marie Rose sauce.",
+       "min": 3
+      },
+      {
+       "text": "Drain and slice the hearts of palm into rounds and fold through half the sauce with the cherry tomatoes.",
+       "min": 5
+      },
+      {
+       "text": "Split the lettuce, cucumber and avocado between 4 coupes or wide glasses.",
+       "min": 4
+      },
+      {
+       "text": "Pile the palm hearts on top, spoon over the rest of the sauce and dust with paprika.",
+       "min": 3
+      },
+      {
+       "text": "Serve with lemon wedges and triangles of buttered brown bread.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Nan's Pinner cheese and pineapple hedgehog",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "Cube the cheese and drain the pineapple up to 1 day ahead; spike the hedgehog within an hour of serving",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "grapefruit",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sharp cheddar, in 2cm cubes",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 440,
+     "u": "g",
+     "item": "tin pineapple chunks, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "pickled onions",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "cherry tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "cocktail cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "box water crackers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet cocktail sticks",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Halve the grapefruit, wrap the cut side of one half in foil and sit it cut side down on a plate.",
+     "min": 3
+    },
+    {
+     "text": "Thread cocktail sticks with cheddar and pineapple, cheddar and pickled onion, and some with a cherry tomato or cocktail cherry on top.",
+     "min": 12
+    },
+    {
+     "text": "Spike them all over the grapefruit and serve with the crackers.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Hollywood party beef stroganoff",
+   "course": "m",
+   "prep_min": 12,
+   "cook_min": 25,
+   "make_ahead": "Best made on the night; slice the beef and mushrooms up to 1 day ahead and keep them covered in the fridge",
+   "ingredients": [
+    {
+     "q": 700,
+     "u": "g",
+     "item": "beef rump, in thin strips",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "button mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cloves of garlic, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "wide egg noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "bunch flat-leaf parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the beef with the flour, paprika and a little salt and pepper.",
+     "min": 4
+    },
+    {
+     "text": "Sear the beef in batches in 2 tbsp of the oil over very high heat, 1 minute a side, and lift out.",
+     "min": 6
+    },
+    {
+     "text": "Melt the butter with the rest of the oil and cook the onion and mushrooms until browned.",
+     "min": 8
+    },
+    {
+     "text": "Add the garlic, tomato paste and mustard for a minute, pour in the stock and simmer 5 minutes.",
+     "min": 6
+    },
+    {
+     "text": "Return the beef and its juices, take off the boil and stir in the sour cream. Season with salt and pepper.",
+     "min": 3
+    },
+    {
+     "text": "Cook the noodles while the sauce simmers, drain and serve the stroganoff over them with parsley.",
+     "min": 10
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hollywood party mushroom stroganoff",
+     "prep_min": 10,
+     "cook_min": 33,
+     "make_ahead": "Best made on the night; slice the onion and tear the mushrooms up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "mixed mushrooms, swiss brown, oyster and portobello",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cloves of garlic, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "wide egg noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "bunch flat-leaf parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Tear the mixed mushrooms into big pieces and toss with the flour and paprika.",
+       "min": 5
+      },
+      {
+       "text": "Fry the mushrooms hard in the oil and half the butter in two batches until browned, then lift out.",
+       "min": 12
+      },
+      {
+       "text": "Soften the onion and garlic in the rest of the butter, then stir in the tomato paste and mustard.",
+       "min": 8
+      },
+      {
+       "text": "Pour in the stock, simmer 5 minutes, then return the mushrooms and stir in the sour cream off the boil. Season with salt and pepper.",
+       "min": 8
+      },
+      {
+       "text": "Cook the noodles while the sauce simmers, drain and serve the stroganoff over them with parsley.",
+       "min": 10
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Platform boots knickerbocker glory",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 5,
+   "make_ahead": "Make the raspberry sauce up to 3 days ahead and keep it in the fridge; build the glasses just before serving",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "frozen raspberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "strawberries, hulled and halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "blueberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "strawberry ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "roasted peanuts, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "wafer biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cocktail cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the raspberries with the icing sugar and a squeeze of lemon, push through a sieve and cool.",
+     "min": 15
+    },
+    {
+     "text": "Whip the cream to soft peaks.",
+     "min": 4
+    },
+    {
+     "text": "Layer raspberry sauce, strawberries, blueberries and the vanilla ice cream in 4 tall glasses, then more fruit and sauce and the strawberry ice cream.",
+     "min": 8
+    },
+    {
+     "text": "Top with cream, a drizzle of sauce, the peanuts, a wafer and a cherry.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Opening night tequila sunrise",
+   "course": "d",
+   "prep_min": 11,
+   "cook_min": 0,
+   "make_ahead": "Squeeze the juice up to 1 day ahead and keep it cold; pour the grenadine to order so the colours stay separate",
+   "ingredients": [
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "silver tequila",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "oranges, 5 juiced and 1 in wheels",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "grenadine",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cocktail cherries",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Squeeze the oranges and lime and stir the juices together.",
+     "min": 6
+    },
+    {
+     "text": "Fill 4 tall glasses with ice, pour in the tequila and top with the juice.",
+     "min": 2
+    },
+    {
+     "text": "Pour the grenadine slowly down the inside of each glass so it sinks and rises up in a red to orange sunrise.",
+     "min": 2
+    },
+    {
+     "text": "Garnish with an orange wheel and a cocktail cherry.",
+     "min": 1
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Opening night sunrise (alcohol-free)",
+     "prep_min": 12,
+     "cook_min": 0,
+     "make_ahead": "Squeeze the juice up to 1 day ahead and keep it cold; pour the grenadine to order so the colours stay separate",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "oranges, 5 juiced and 1 in wheels",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "grenadine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail cherries",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Squeeze the oranges and lime and stir the juices together.",
+       "min": 6
+      },
+      {
+       "text": "Fill 4 tall glasses with ice and pour in the orange and lime juice.",
+       "min": 2
+      },
+      {
+       "text": "Top each glass with a splash of soda water.",
+       "min": 1
+      },
+      {
+       "text": "Pour the grenadine slowly down the inside of each glass so it sinks and rises up in a red to orange sunrise.",
+       "min": 2
+      },
+      {
+       "text": "Garnish with an orange wheel and a cocktail cherry.",
+       "min": 1
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

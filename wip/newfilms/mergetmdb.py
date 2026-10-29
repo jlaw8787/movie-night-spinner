@@ -29,7 +29,7 @@ for fid in want:
     ids[fid] = t["id"]
     if t.get("poster"): posters[fid] = t["poster"]
     else: problems.append(f"{fid}: no poster")
-    c = (t.get("cert") or "").strip(); ratings[fid] = c if c in AU else US2AU.get(c, c)
+    c = (t.get("cert") or "").replace(" ", "").strip(); ratings[fid] = c if c in AU else US2AU.get(c, "")
     trailers[fid] = t.get("trailer") or ""
     provs[fid] = t.get("providers") or {"t": t["id"]}
     if t.get("stills"): stills[fid] = t["stills"]

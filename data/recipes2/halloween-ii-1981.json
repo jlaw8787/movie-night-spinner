@@ -1,0 +1,565 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Jack-o'-lantern pumpkin seeds",
+   "course": "s",
+   "prep_min": 6,
+   "cook_min": 27,
+   "make_ahead": "Keeps 1 week in an airtight jar",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "pepitas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 170C. Toss the pepitas with the butter, sugar, paprika, cinnamon, cayenne and salt.",
+     "min": 4
+    },
+    {
+     "text": "Spread on a lined tray and roast, stirring halfway, until puffed and crunchy.",
+     "min": 14
+    },
+    {
+     "text": "Cool on the tray.",
+     "min": 15
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Night shift egg sandwiches",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 21,
+   "make_ahead": "Make the egg filling up to 1 day ahead in the fridge; fill the bread no more than 2 hours before serving and keep covered",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chives, snipped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "white pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices soft white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lower the eggs into boiling water and cook for 10 minutes.",
+     "min": 12
+    },
+    {
+     "text": "Cool the eggs in iced water.",
+     "min": 10
+    },
+    {
+     "text": "Peel and mash with the mayonnaise, mustard, chives, salt and pepper.",
+     "min": 6
+    },
+    {
+     "text": "Butter the bread, fill, cut off the crusts and cut into fingers.",
+     "min": 8
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Night shift chicken pot pie",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 51,
+   "make_ahead": "Make the filling up to 2 days ahead and keep it in the fridge; top with pastry and bake on the night",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thigh fillets, in 3cm pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets frozen puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken in half the butter and set aside.",
+     "min": 10
+    },
+    {
+     "text": "Soften the onion, carrots, celery and garlic in the rest of the butter.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the flour, then gradually add the stock and cream with the thyme and simmer until thick.",
+     "min": 10
+    },
+    {
+     "text": "Return the chicken with the peas, season with salt and pepper and cool a little while the oven heats to 200C.",
+     "min": 10
+    },
+    {
+     "text": "Pour into a 2 litre pie dish, top with the pastry, crimp, cut a slit and brush with egg.",
+     "min": 8
+    },
+    {
+     "text": "Bake until puffed and deep golden.",
+     "min": 30
+    },
+    {
+     "text": "Rest before serving.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Night shift mushroom and leek pot pie",
+     "prep_min": 30,
+     "cook_min": 46,
+     "make_ahead": "Make the filling up to 2 days ahead and keep it in the fridge; top with pastry and bake on the night",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "leek, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets frozen puff pastry, thawed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in half the butter and set aside.",
+       "min": 10
+      },
+      {
+       "text": "Soften the leek, carrots, celery and garlic in the rest of the butter.",
+       "min": 8
+      },
+      {
+       "text": "Stir in the flour, then gradually add the stock and cream with the thyme and simmer until thick.",
+       "min": 10
+      },
+      {
+       "text": "Return the mushrooms with the beans and peas, season with salt and pepper and heat the oven to 200C.",
+       "min": 5
+      },
+      {
+       "text": "Pour into a 2 litre pie dish, top with the pastry, crimp, cut a slit and brush with egg.",
+       "min": 8
+      },
+      {
+       "text": "Bake until puffed and deep golden.",
+       "min": 30
+      },
+      {
+       "text": "Rest before serving.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Haddonfield candy apples",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 42,
+   "make_ahead": "Best dipped on the day; they keep 1 day uncovered somewhere cool and dry, never in the fridge",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "small crisp red apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "wooden sticks",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vegetable oil, for the paper",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "white sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "glucose syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "red food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Wash the apples in hot water to strip the wax, dry well and push a stick into each. Oil a sheet of baking paper.",
+     "min": 8
+    },
+    {
+     "text": "Heat the sugar, water, glucose and cinnamon stick, stirring until dissolved, then boil without stirring to 150C.",
+     "min": 20
+    },
+    {
+     "text": "Take off the heat, lift out the cinnamon and stir in the colouring.",
+     "min": 1
+    },
+    {
+     "text": "Tilt the pan and dip each apple, twirling to coat, then stand on the paper.",
+     "min": 8
+    },
+    {
+     "text": "Leave to set hard.",
+     "min": 20
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Night shift mulled apple juice",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 26,
+   "make_ahead": "Mull up to 2 days ahead, strain and keep in the fridge; reheat gently without boiling",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cinnamon sticks",
+     "aisle": "Spices"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "whole cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "star anise",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "3cm piece ginger, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put everything in a pot and bring to just below a simmer.",
+     "min": 8
+    },
+    {
+     "text": "Keep on the lowest heat to infuse, without boiling.",
+     "min": 20
+    },
+    {
+     "text": "Strain into mugs and garnish with orange and cinnamon.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}
