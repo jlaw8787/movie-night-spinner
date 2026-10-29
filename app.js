@@ -1578,7 +1578,7 @@ function renderShop(){
   shelfRest=[];
   if(!dishesReady)ensureDishes().then(()=>{if(!$("viewShop").hidden)renderShop()});
   const q=$("shopSearch").value.trim().toLowerCase(),dec=$("shopDecade").value,unseen=$("shopUnwatched").checked;
-  const ok=f=>(!q||f.title.toLowerCase().includes(q))&&(!dec||f.year.slice(0,3)===dec)&&(!unseen||!watched.has(f.id))&&(!kidsMode||isKidSafe(f))&&onSvc(f,svc);
+  const ok=f=>(!q||filmScore(q,f)>=0)&&(!dec||f.year.slice(0,3)===dec)&&(!unseen||!watched.has(f.id))&&(!kidsMode||isKidSafe(f))&&onSvc(f,svc);
   const list=FILMS.filter(ok);
   const rows=[];
   const fresh=list.filter(isNew).sort((a,b)=>b.year-a.year||a.title.localeCompare(b.title));
@@ -2047,6 +2047,14 @@ else{theatre.classList.add("closed");$("tease").textContent=initialFilmId?"That 
   /* nobody's picked yet: dress the stage behind the curtain once the page has settled */
   document.body.classList.add("staged");addEventListener("load",()=>(window.requestIdleCallback||setTimeout)(()=>{if(!current){window.__stage=true;show(initialFilm,true).then(()=>{$("whereWheel").innerHTML="";badLink()})}},{timeout:2500}))}
 addEventListener("load",()=>setTimeout(ensureDishes,3000));
+/* forgiving film search: ignores case, accents and apostrophes, reads & as and, and lets a word be a letter or two out ("singing in the rain", "breakfast at tiffanys") */
+function searchNorm(x){return String(x).toLocaleLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/['’‘`]/g,"").replace(/&/g," and ").replace(/[^a-z0-9 ]+/g," ").replace(/\s+/g," ").trim()}
+const ROMAN={i:"1",ii:"2",iii:"3",iv:"4",v:"5",vi:"6",vii:"7",viii:"8",ix:"9",x:"10"},SEARCH_STOP=new Set(["the","a","an","of","and","in","at","on","to"]);
+function editNear(a,b,max){if(Math.abs(a.length-b.length)>max)return false;const m=a.length,n=b.length;let prev=Array.from({length:n+1},(_,j)=>j);for(let i=1;i<=m;i++){const cur=[i];let best=i;for(let j=1;j<=n;j++){cur[j]=Math.min(prev[j]+1,cur[j-1]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1));best=Math.min(best,cur[j])}if(best>max)return false;prev=cur}return prev[n]<=max}
+function wordHit(w,toks){const r=ROMAN[w]||w;let fuzzy=false;for(const t of toks){const tr=ROMAN[t]||t;if(tr===r||(w.length>=3&&t.startsWith(w)))return 1;if((w.length>=4&&w.startsWith(t)&&t.length>=4)||(w.length>=5&&editNear(w,t.slice(0,Math.max(w.length,t.length)),w.length>=8?2:1)))fuzzy=true}return fuzzy?2:0}
+function filmScore(q,f){const Q=searchNorm(q);if(!Q)return 0;const T=searchNorm(f.title+" "+f.year),toks=T.split(" ");
+  if(searchNorm(f.title)===Q||T===Q)return 0;if(T.startsWith(Q))return 0.5;if((" "+T).includes(" "+Q))return 1;if(Q.length>=2&&!Q.includes(" ")&&T.replace(/ /g,"").startsWith(Q))return 1;
+  let worst=1,any=0;for(const w of Q.split(" ")){const h=wordHit(w,toks);if(!h){if(SEARCH_STOP.has(w))continue;return -1}any++;worst=Math.max(worst,h+1)}return any?worst:-1}
 /* ================= ease of use: quick find, saved menus, settings, clear and reset ================= */
 /* open any film straight from its title, the way a stub does */
 function openFilm(f){if(!f)return;addHistory(f);goView("wheel",true);replay(f).then(()=>toMenu());toMenu()}
@@ -2056,9 +2064,9 @@ function openFilm(f){if(!f)return;addHistory(f);goView("wheel",true);replay(f).t
  const close=()=>{box.hidden=true;box.innerHTML="";hits=[];at=-1;inp.setAttribute("aria-expanded","false")};
  const draw=()=>{box.innerHTML=hits.length?hits.map((f,i)=>`<button type="button" role="option" data-i="${i}" aria-selected="${i===at}"><span>${ESC(f.title)}</span><small>${ESC(f.year)}</small></button>`).join(""):'<p class="none">No film by that name. Try fewer letters.</p>';box.hidden=false;inp.setAttribute("aria-expanded","true")};
  inp.addEventListener("input",()=>{const q=norm(inp.value);if(q.length<2){close();return}
-   const words=q.split(" ");const scored=[];
-   for(const f of FILMS){const t=norm(f.title+" "+f.year);if(!words.every(w=>t.includes(w)))continue;scored.push([t.startsWith(q)?0:(" "+t).includes(" "+q)?1:2,f])}
-   scored.sort((a,b)=>a[0]-b[0]||a[1].title.localeCompare(b[1].title));hits=scored.slice(0,7).map(x=>x[1]);at=hits.length?0:-1;draw()});
+   const scored=[];
+   for(const f of FILMS){if(kidsMode&&!isKidSafe(f))continue;const sc=filmScore(inp.value,f);if(sc>=0)scored.push([sc,f])}
+   scored.sort((a,b)=>a[0]-b[0]||(+a[1].year)-(+b[1].year)||a[1].title.localeCompare(b[1].title));hits=scored.slice(0,7).map(x=>x[1]);at=hits.length?0:-1;draw()});
  inp.addEventListener("keydown",e=>{if(box.hidden)return;
    if(e.key==="ArrowDown"||e.key==="ArrowUp"){e.preventDefault();if(!hits.length)return;at=(at+(e.key==="ArrowDown"?1:-1)+hits.length)%hits.length;draw()}
    else if(e.key==="Enter"){e.preventDefault();if(hits[at]){const f=hits[at];inp.value="";close();inp.blur();openFilm(f)}}
@@ -2123,7 +2131,7 @@ function seriesNote(f){
   if(!sr){box.hidden=true;box.innerHTML="";return}
   const ord=seriesOrderPref(),films=seriesList(sr,ord),i=films.findIndex(x=>x.id===f.id),first=films[0];
   const how=sr.story?` in ${ord==="story"?"story":"release"} order`:"";
-  box.innerHTML=`<p>Part <b>${i+1} of ${films.length}</b> in ${ESC(sr.name)}${how}.</p>${i>0?`<button type="button" class="go" data-sr="first">Start with ${ESC(first.title)}</button>`:""}<button type="button" data-sr="run">Plan a marathon</button>`;
+  box.innerHTML=`<p>Film <b>${i+1} of the ${films.length}</b> ${ESC(sr.name)} films in the store${how}.</p>${i>0?`<button type="button" class="go" data-sr="first">Start with ${ESC(first.title)}</button>`:""}<button type="button" data-sr="run">Plan a marathon</button>`;
   box.hidden=false;
   box.onclick=e=>{const k=e.target.closest("[data-sr]");if(!k)return;
     if(k.dataset.sr==="first"){replay(first);addHistory(first);toMenu()}
