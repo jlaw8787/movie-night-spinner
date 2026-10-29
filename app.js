@@ -754,7 +754,7 @@ function dietItem(f,it){
   const v=dietWhich(d,x),N=(f._diet&&f._diet.notes&&f._diet.notes[d.n])||{};
   const note=N[v]||(v==="veg_af"?N.veg:"")||"";
   const nm=String(x.n).replace(/\s*\((vegetarian|alcohol[- ]free|vegetarian, alcohol[- ]free)\)\s*$/i,"");
-  return Object.assign({},it,it.label!=null&&it.label===d.n?{label:nm}:{},{n:String(x.n).replace(/\s*\((vegetarian|alcohol[- ]free|vegetarian, alcohol[- ]free)\)\s*$/i,""),note,orig:d.n,how:(x.steps||[]).map(t=>t.text).join(" "),shop:dietShop(x),diet:v});
+  return Object.assign({},it,it.label!=null&&it.label===d.n?{label:dietText(f,d.n)!==d.n?dietText(f,d.n):nm.length<=d.n.length+2?nm:d.n}:{},{n:String(x.n).replace(/\s*\((vegetarian|alcohol[- ]free|vegetarian, alcohol[- ]free)\)\s*$/i,""),note,orig:d.n,how:(x.steps||[]).map(t=>t.text).join(" "),shop:dietShop(x),diet:v});
 }
 function dietMenu(f,menu){
   if(!menu||!dietKey()||!f||!f._r2)return menu;
