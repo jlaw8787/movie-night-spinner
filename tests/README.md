@@ -8,6 +8,7 @@ node tests/poster-menus.test.cjs
 node tests/watched-state.test.cjs
 node tests/tmdb-posters.test.cjs
 node tests/video-store.test.cjs
+node tests/series.test.cjs
 node tests/shopping.test.cjs
 node tests/week.test.cjs
 ```
