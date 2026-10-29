@@ -187,7 +187,7 @@ function setPointer(){pointer.style.transform=`rotate(${-kick*26}deg)`}
 const SAVED=new Set();
 async function savedScan(){try{if(!("caches" in window))return;SAVED.clear();for(const k of await caches.keys()){const c=await caches.open(k);for(const r of await c.keys()){const m=new URL(r.url).pathname.match(/data\/film\/[^/]+\.json$/);if(m)SAVED.add(m[0])}}}catch(e){}}
 addEventListener("offline",savedScan);if(navigator.onLine===false)savedScan();
-function spinPool(){if(navigator.onLine!==false)return list;const ok=list.filter(f=>SAVED.has(filmFile(f)));return ok}
+function spinPool(){if(navigator.onLine!==false)return list;const ok=list.filter(f=>SAVED.has(filmPath(f)));return ok}
 /* tap to skip: a tap on the wheel or the curtain while it spins or counts down jumps straight to the menu */
 var skipReq=false;
 function spin(){
@@ -288,7 +288,9 @@ function mountModal(o,initial,trigger,onClose){
 const EDITIONS={},RECIPE_MENUS={};
 const movieEdition=f=>EDITIONS[f.id]||null;
 const movieRecipe=f=>RECIPE_MENUS[f.id]||null;
-const filmFile=f=>"data/film/"+f.id.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")+".json";
+const filmPath=f=>"data/film/"+f.id.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")+".json";
+/* the ?v fingerprint changes only when that film's file changes, so an updated film is fetched fresh on first open */
+const filmFile=f=>filmPath(f)+(f.v?"?v="+f.v:"");
 const _filmLoads={};
 function ensureExact(f){
   if(f._full)return Promise.resolve();
@@ -1628,11 +1630,11 @@ const craveRx=q=>{const w=q.trim().toLowerCase().replace(/[^a-z0-9 '&-]/g,"");if
 let _dishes=null,_notes=null,dishesReady=false;
 const fillDishes=(N,i)=>{for(const f of FILMS){if(f._full)continue;const n=N[f.id];if(!n)continue;["S","M","W","K"].forEach((k,c)=>{if(i===0)f[k]=(n[c]||[]).map(x=>[x]);else(f[k]||[]).forEach((d,j)=>{if(n[c]&&n[c][j]!=null)d[1]=n[c][j]})})}};
 function ensureDishes(){
-  if(!_dishes)_dishes=fetch("data/dish-names.json").then(r=>r.json()).then(N=>{fillDishes(N,0);dishesReady=true}).catch(()=>{_dishes=null});
+  if(!_dishes)_dishes=fetch("data/dish-names.json"+(window.DATA_V?"?v="+DATA_V.names:"")).then(r=>r.json()).then(N=>{fillDishes(N,0);dishesReady=true}).catch(()=>{_dishes=null});
   return _dishes||Promise.resolve();
 }
 function ensureNotes(){
-  if(!_notes)_notes=ensureDishes().then(()=>fetch("data/dish-notes.json")).then(r=>r.json()).then(N=>fillDishes(N,1)).catch(()=>{_notes=null});
+  if(!_notes)_notes=ensureDishes().then(()=>fetch("data/dish-notes.json"+(window.DATA_V?"?v="+DATA_V.notes:""))).then(r=>r.json()).then(N=>fillDishes(N,1)).catch(()=>{_notes=null});
   return _notes||Promise.resolve();
 }
 let _notesOK=false;
