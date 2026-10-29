@@ -4,7 +4,7 @@ function fmtMarket(f,spec,menu,poster){
   const PAINT="font-family:'Anton',sans-serif;font-weight:400",SCRIPT="font-family:'Mr Dafoe',cursive;font-weight:400",MARK="font-family:'Permanent Marker',cursive;font-weight:400",HAND="font-family:'Caveat Brush',cursive;font-weight:400";
   const STUCCO="background-color:#f1e6cf;background-image:radial-gradient(rgba(120,100,70,.10) 1px,transparent 1.6px),radial-gradient(rgba(255,255,255,.5) 1px,transparent 1.8px),radial-gradient(ellipse at 20% 30%,rgba(160,130,90,.10),transparent 60%),radial-gradient(ellipse at 80% 80%,rgba(160,130,90,.12),transparent 55%);background-size:7px 7px,11px 11px,100% 100%,100% 100%;background-position:0 0,3px 5px,0 0,0 0";
   const col=c=>c==="red"?RED:BLUE;
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const head=(t,c)=>`<div style="${PAINT};font-size:31px;line-height:1;letter-spacing:.03em;color:${c};text-shadow:3px 3px 0 ${SHADOW};transform:rotate(-1deg);white-space:nowrap;text-transform:uppercase">${ESC(t)}</div>`;
   const name=t=>`<span style="${PAINT};font-size:26px;line-height:1.05;color:${INK};letter-spacing:.02em;text-transform:uppercase;white-space:nowrap">${ESC(t)}</span><span style="flex:1;border-bottom:3px dotted rgba(21,21,21,.45);transform:translateY(-6px);min-width:10px"></span>`;
   const note=t=>`<div style="${HAND};font-size:20.5px;line-height:1.15;color:#3d3a35;margin-top:2px">${ESC(t)}</div>`;

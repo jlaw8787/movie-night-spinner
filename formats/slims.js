@@ -2,7 +2,7 @@
 function fmtSlims(f,spec,menu,poster){
   const CREAM="#fff4dc",INK="#151515",PINK="#ff4f86",TEAL="#1fb5ac",YEL="#ffd23a",NOTE="#4d4a45",RED="#d7262e";
   const NEON="font-family:'Sacramento',cursive;font-weight:400",BLK="font-family:'Archivo Black',sans-serif;font-weight:400",JO="font-family:'Josefin Sans',sans-serif";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const head=(t,c)=>`<div style="align-self:flex-start;background:${c};color:#fff;padding:5px 18px 4px 14px;border-radius:4px 22px 22px 4px;transform:skewX(-10deg);box-shadow:3px 3px 0 ${INK}"><span style="display:inline-block;transform:skewX(10deg);${BLK};font-size:20px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap">${ESC(t)}</span></div>`;
   const bullet=`<span aria-hidden="true" style="flex:none;width:12px;height:12px;background:${PINK};transform:rotate(45deg);margin-right:2px"></span>`;
   const item=x=>{const it=pick(x.k),lab=it.label||x.n||x.k;

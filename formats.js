@@ -633,7 +633,7 @@ const FMT_FILMS={
       {h:"Cold Drinks",c:"red",items:[
         {k:"Red drink, with sugar this time",n:"Red drink",note:"With sugar this time. Big cups, lots of ice.",p:"0.75",burst:["75¢","With sugar!","#ff6ec7",9]}]}]}
 };
-const fmtSpec=f=>FMT_FILMS[f.id]||null;
+const fmtSpec=f=>{const sp=FMT_FILMS[f.id]||null;return sp&&typeof dietSpec==="function"?dietSpec(f,sp):sp};
 
 /* the dishes, in menu order, with the 4-person method and shopping from the recipe file when there is one */
 function fmtMenu(f,spec){
@@ -644,7 +644,8 @@ function fmtMenu(f,spec){
   const all=groups.flatMap(g=>g.items.map(x=>{const b=Object.assign({},pool[x.k]||{n:x.k,note:x.note,how:"",shop:[]},x.how?{how:x.how,shop:x.shop||[]}:{});return Object.assign({},b,{label:x.n||x.k,desc:x.d||"",film:x.note,price:x.p,special:x.special,c:x.c})}));
   const byCourse={s:[],m:[],w:[],d:[]};
   for(const it of all){const c=it.c||((f.S||[]).some(d=>d[0]===it.n)?"s":(f.M||[]).some(d=>d[0]===it.n)?"m":(f.W||[]).some(d=>d[0]===it.n)?"w":"d");byCourse[c].push(it)}
-  return Object.assign(byCourse,{all,groups,fmt:true});
+  const out=Object.assign(byCourse,{all,groups,fmt:true});
+  return typeof dietMenu==="function"?dietMenu(f,out):out;
 }
 
 /* ---------- the painted wall of a 90s South Central corner market (Friday) ---------- */
@@ -666,7 +667,7 @@ function fmtMarket(f,spec,menu,poster){
   const PAINT="font-family:'Anton',sans-serif;font-weight:400",SCRIPT="font-family:'Mr Dafoe',cursive;font-weight:400",MARK="font-family:'Permanent Marker',cursive;font-weight:400",HAND="font-family:'Caveat Brush',cursive;font-weight:400";
   const STUCCO="background-color:#f1e6cf;background-image:radial-gradient(rgba(120,100,70,.10) 1px,transparent 1.6px),radial-gradient(rgba(255,255,255,.5) 1px,transparent 1.8px),radial-gradient(ellipse at 20% 30%,rgba(160,130,90,.10),transparent 60%),radial-gradient(ellipse at 80% 80%,rgba(160,130,90,.12),transparent 55%);background-size:7px 7px,11px 11px,100% 100%,100% 100%;background-position:0 0,3px 5px,0 0,0 0";
   const col=c=>c==="red"?RED:BLUE;
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const head=(t,c)=>`<div style="${PAINT};font-size:31px;line-height:1;letter-spacing:.03em;color:${c};text-shadow:3px 3px 0 ${SHADOW};transform:rotate(-1deg);white-space:nowrap;text-transform:uppercase">${ESC(t)}</div>`;
   const name=t=>`<span style="${PAINT};font-size:26px;line-height:1.05;color:${INK};letter-spacing:.02em;text-transform:uppercase;white-space:nowrap">${ESC(t)}</span><span style="flex:1;border-bottom:3px dotted rgba(21,21,21,.45);transform:translateY(-6px);min-width:10px"></span>`;
   const note=t=>`<div style="${HAND};font-size:20.5px;line-height:1.15;color:#3d3a35;margin-top:2px">${ESC(t)}</div>`;
@@ -785,7 +786,7 @@ const ZODIAC=[["鼠","Rat"],["牛","Ox"],["虎","Tiger"],["兔","Rabbit"],["龍"
 function fmtTakeaway(f,spec,menu,poster){
   const RED="#a51c24",GOLD="#d8b257",PG="#f2d58a",INK="#2a1610",NOTE="#5a4436",CREAM="#f6eedb";
   const DISP="font-family:'Fraunces',serif;font-variation-settings:'SOFT' 100,'WONK' 0",ZH="font-family:'Noto Serif TC',serif;font-weight:900",BODY="font-family:'Libre Caslon Text',serif";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const header=(en,zh)=>`<div style="display:flex;align-items:center;justify-content:center;gap:12px;background:${RED};color:${PG};padding:6px 10px 7px;box-shadow:0 0 0 2px ${CREAM},0 0 0 4px ${GOLD}"><span style="${DISP};font-weight:900;font-size:21px;white-space:nowrap">${ESC(en)}</span><span lang="zh-Hant" style="${ZH};font-size:17px;color:#fff;letter-spacing:.08em;white-space:nowrap">${zh}</span></div>`;
   const dish=x=>{const it=pick(x.k),ch=x.hot?`<span style="color:#c8102e;font-size:12px;letter-spacing:1px">${"&#9679;".repeat(x.hot)}</span>`:"";
     const inner=`<div style="display:flex;align-items:baseline;gap:7px"><span style="${DISP};font-weight:900;color:${RED};font-size:15px;width:26px;flex:none">${x.code}</span><span style="${DISP};font-weight:800;font-size:17.5px;line-height:1.1;letter-spacing:-.01em;white-space:nowrap">${ESC(it.label||x.n||x.k)}</span>${ch}<span style="flex:1;border-bottom:2px dotted rgba(42,22,16,.45);transform:translateY(-4px);min-width:8px"></span><span style="${DISP};font-weight:800;font-size:16.5px">${ESC(x.p)}</span></div>
@@ -818,7 +819,7 @@ function fmtTakeaway(f,spec,menu,poster){
 function fmtDiner(f,spec,menu,poster){
   const RED="#c41e2a",NAVY="#1f3a7a",CREAM="#fbf5e6",INK="#241a14",NOTE="#5b4a3c",MUSTARD="#f2b632";
   const SCRIPT="font-family:'Yellowtail',cursive;font-weight:400",SLAB="font-family:'Alfa Slab One',serif;font-weight:400",BODY="font-family:'Arvo',serif",HAND="font-family:'Kalam',cursive";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};let no=0;
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};let no=0;
   const header=t=>`<div style="display:flex;align-items:baseline;justify-content:center;gap:10px;background:${NAVY};color:#fff;padding:7px 10px 6px;box-shadow:0 0 0 2px ${CREAM},0 0 0 4px ${RED}"><span style="${SLAB};font-size:20px;letter-spacing:.03em;white-space:nowrap">${ESC(t)}</span></div>`;
   const dish=x=>{const it=pick(x.k);no++;
     const inner=`<div style="display:flex;align-items:center;gap:9px"><span style="flex:none;width:25px;height:25px;border-radius:50%;background:${RED};color:#fff;display:grid;place-items:center;${SLAB};font-size:13px">${no}</span><span style="${BODY};font-weight:700;font-size:17.5px;line-height:1.1;white-space:nowrap;letter-spacing:-.01em">${ESC(it.label||x.n||x.k)}</span><span style="flex:1;border-bottom:2px dotted rgba(36,26,20,.45);transform:translateY(4px);min-width:8px"></span><span style="${SLAB};font-size:17px;color:${RED}">${ESC(x.p)}</span></div>
@@ -854,7 +855,7 @@ function fmtDiner(f,spec,menu,poster){
 function fmtCase(f,spec,menu,poster){
   const MANILA="#d9b77a",PAPER="#f6f1e3",INK="#1c1a17",RED="#9e1b1b",NOTE="#4a4438";
   const TYPE="font-family:'Special Elite',monospace;font-weight:400",MONO="font-family:'Courier Prime',monospace",SHOUL="font-family:'Big Shoulders Display',sans-serif",STEN="font-family:'Big Shoulders Stencil Display',sans-serif;font-weight:800";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const head=t=>`<div style="display:flex;align-items:center;gap:10px"><span style="${SHOUL};font-weight:900;font-size:21px;letter-spacing:.06em;color:${INK};white-space:nowrap;text-transform:uppercase">${ESC(t)}</span><span style="flex:1;height:0;border-top:2px solid ${INK};border-bottom:1px solid ${INK};padding-top:2px"></span></div>`;
   const item=x=>{const it=pick(x.k);
     const inner=`<div style="display:flex;align-items:baseline;gap:9px"><span style="${TYPE};font-size:15px;color:${RED};width:24px;flex:none">${x.code}</span><span style="${MONO};font-weight:700;font-size:17px;white-space:nowrap">${ESC(it.label||x.n||x.k)}</span><span style="flex:1;border-bottom:2px dotted rgba(28,26,23,.45);transform:translateY(-4px);min-width:8px"></span><span style="${SHOUL};font-weight:900;font-size:19px">${ESC(x.p)}</span></div><div style="${MONO};font-style:italic;font-size:14px;line-height:1.35;color:${NOTE};padding-left:33px;margin-top:2px">${ESC(x.note)}</div>`;
@@ -884,7 +885,7 @@ function fmtCase(f,spec,menu,poster){
 function fmtNoodle(f,spec,menu,poster){
   const INK="#2a1a10",RED="#a8322a",GOLD="#e8c46a",RICE="#f4ecd8",NOTE="#5c4632";
   const ZH="font-family:'LXGW WenKai TC',serif",SC="font-family:'Marcellus SC',serif",BODY="font-family:'Alegreya',serif";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const items=[...spec.colA,...spec.colB].flatMap(g=>g.items);
   const WOOD="background:repeating-linear-gradient(90deg,rgba(0,0,0,.22) 0 2px,transparent 2px 74px),repeating-linear-gradient(90deg,rgba(255,220,170,.04) 0 9px,rgba(0,0,0,.04) 9px 17px),linear-gradient(#6e4126,#5a3420)";
   const tablet=(x,i)=>`<div style="position:relative;display:flex;flex-direction:column;align-items:center">
@@ -918,7 +919,7 @@ function fmtNoodle(f,spec,menu,poster){
 function fmtSlims(f,spec,menu,poster){
   const CREAM="#fff4dc",INK="#151515",PINK="#ff4f86",TEAL="#1fb5ac",YEL="#ffd23a",NOTE="#4d4a45",RED="#d7262e";
   const NEON="font-family:'Sacramento',cursive;font-weight:400",BLK="font-family:'Archivo Black',sans-serif;font-weight:400",JO="font-family:'Josefin Sans',sans-serif";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const head=(t,c)=>`<div style="align-self:flex-start;background:${c};color:#fff;padding:5px 18px 4px 14px;border-radius:4px 22px 22px 4px;transform:skewX(-10deg);box-shadow:3px 3px 0 ${INK}"><span style="display:inline-block;transform:skewX(10deg);${BLK};font-size:20px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap">${ESC(t)}</span></div>`;
   const bullet=`<span aria-hidden="true" style="flex:none;width:12px;height:12px;background:${PINK};transform:rotate(45deg);margin-right:2px"></span>`;
   const item=x=>{const it=pick(x.k),lab=it.label||x.n||x.k;
@@ -950,7 +951,7 @@ function fmtSlims(f,spec,menu,poster){
 function fmtLanes(f,spec,menu,poster){
   const NAVY="#1c2240",ORANGE="#e8692c",GREEN="#2f7a52",SHEET="#f4f7ee",INK="#1d2a22",NOTE="#4f5c52",PENCIL="#4a4f57";
   const GOOG="font-family:'Righteous',sans-serif;font-weight:400",COND="font-family:'Barlow Condensed',sans-serif",BODY="font-family:'Barlow',sans-serif",PEN="font-family:'Reenie Beanie',cursive;font-weight:400";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const frames=`<div aria-hidden="true" style="position:absolute;inset:0;display:grid;grid-template-columns:repeat(10,1fr)">${Array.from({length:10},()=>`<span style="border-left:1px solid rgba(47,122,82,.28);position:relative"><i style="position:absolute;right:0;top:0;width:34%;height:42%;border-left:1px solid rgba(47,122,82,.28);border-bottom:1px solid rgba(47,122,82,.28)"></i></span>`).join("")}</div>`;
   const GRID="grid-template-columns:210px minmax(0,1fr) 92px";
   const band=t=>`<div style="display:grid;${GRID};background:${GREEN};color:#fff;${COND};font-weight:700;font-size:14px;letter-spacing:.14em;text-transform:uppercase"><span style="padding:2px 10px">${ESC(t)}</span><span></span><span></span></div>`;
@@ -982,7 +983,7 @@ function fmtLanes(f,spec,menu,poster){
 function fmtWorkOrder(f,spec,menu,poster){
   const RED="#c2272d",INK="#1e1e22",BLUE="#1f3c9e",YEL="#fff3b0",NOTE="#4c4a45";
   const HEAD="font-family:'Oswald',sans-serif",FORM="font-family:'Archivo Narrow',sans-serif",PEN="font-family:'Caveat',cursive";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const GRID="grid-template-columns:44px 230px minmax(0,1fr) 74px";
   const cell="border-right:1px solid rgba(30,30,34,.35);padding:4px 8px;display:flex;align-items:center";
   const row=x=>{const it=pick(x.k);return `<div style="display:grid;${GRID};min-height:49px;border-bottom:1px solid rgba(30,30,34,.35)"><span style="${cell};justify-content:center;${PEN};font-weight:700;font-size:24px;color:${BLUE}">${ESC(x.q||"4")}</span><span style="${cell};${FORM};font-weight:700;font-size:17px;line-height:1.1;text-transform:uppercase">${ESC(it.label||x.n||x.k)}</span><span style="${cell};${PEN};font-weight:500;font-size:20px;line-height:1.05;color:${BLUE}">${ESC(x.note)}</span><span style="padding:4px 8px;display:flex;align-items:center;justify-content:flex-end;${PEN};font-weight:700;font-size:23px;color:${BLUE}">${ESC(x.p)}</span></div>`};
@@ -1018,7 +1019,7 @@ function fmtWorkOrder(f,spec,menu,poster){
 function fmtNero(f,spec,menu,poster){
   const RED="#b81a22",GRN="#145a2e",KRAFT="#c99a5f",INK="#1e140c",PAPER="#fffdf6",BLUE="#1f3c9e",NOTE="#4b3a2c",WHITE="#fbf8f1";
   const DISP="font-family:'Shrikhand',cursive;font-weight:400",SLAB="font-family:'Bevan',serif;font-weight:400",BODY="font-family:'Libre Franklin',sans-serif",MARK="font-family:'Permanent Marker',cursive;font-weight:400",TYPE="font-family:'Courier Prime',monospace";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   /* laurel sprigs drawn from rotated leaves, so saved images keep them */
   const laurel=sx=>`<div aria-hidden="true" style="position:relative;flex:none;width:150px;height:56px;transform:scaleX(${sx})">${Array.from({length:6},(_,i)=>{const x=8+i*15,y=34-Math.sin((i/6)*1.4+.2)*22;return `<i style="position:absolute;left:${x.toFixed(1)}px;top:${y.toFixed(1)}px;width:20px;height:9px;border-radius:50%;background:${GRN};transform:rotate(${-30+i*12}deg)"></i>`}).join("")}<i style="position:absolute;left:14px;right:40px;top:43px;height:2.5px;border-radius:2px;background:${GRN};transform:rotate(-6deg)"></i></div>`;
   const line=x=>{const it=pick(x.k),lab=it.label||x.n||x.k;return `<div><div style="display:flex;align-items:baseline;gap:8px"><span style="${SLAB};font-size:21px;line-height:1.1;color:${RED};white-space:nowrap">${ESC(lab)}</span><span style="flex:1;border-bottom:2px dotted rgba(42,26,16,.5);min-width:10px;transform:translateY(-5px)"></span><span style="${SLAB};font-size:21px;color:${GRN};white-space:nowrap">${ESC(x.p)}</span></div><div style="${BODY};font-weight:400;font-size:15.5px;line-height:1.3;color:${INK};margin-top:3px">${ESC(x.d||"")}</div><div style="${BODY};font-style:italic;font-size:15px;line-height:1.3;color:${NOTE};margin-top:1px">${ESC(x.note)}</div></div>`};
@@ -1060,7 +1061,7 @@ function fmtNero(f,spec,menu,poster){
 function fmtLous(f,spec,menu,poster){
   const TEAL="#3fa79c",CREAM="#f3ead2",RED="#c4262e",INK="#1c1c1c",CHROME="linear-gradient(180deg,#f4f6f8,#9aa2ab 45%,#e9edf0 55%,#8a929b)";
   const NEON="font-family:'Damion',cursive;font-weight:400",BOARD="font-family:'Oswald',sans-serif",MONO="font-family:'Cutive Mono',monospace",PEN="font-family:'Covered By Your Grace',cursive;font-weight:400",BODY="font-family:'Archivo',sans-serif";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   /* plastic letters never sit quite straight on the felt */
   const jig=(s,seed)=>s.split(" ").map((w,i)=>`<span style="display:inline-block;transform:translateY(${((hashN(seed+i)%3)-1)*.8}px) rotate(${((hashN(seed+"r"+i)%5)-2)*.35}deg)">${ESC(w)}</span>`).join(" ");
   const row=x=>{const it=pick(x.k),lab=(it.label||x.n||x.k).toUpperCase();return `<div><div style="display:flex;align-items:baseline;gap:10px"><span style="${BOARD};font-weight:500;font-size:31px;line-height:1.1;letter-spacing:.05em;color:#f6f4ec;white-space:nowrap">${jig(lab,lab)}</span><span style="flex:1;border-bottom:2px dotted rgba(246,244,236,.3);min-width:12px;transform:translateY(-6px)"></span><span style="${BOARD};font-weight:500;font-size:31px;letter-spacing:.04em;color:#ffd75e;white-space:nowrap">${ESC(x.p)}</span></div><div style="${BOARD};font-weight:400;font-size:18px;line-height:1.3;letter-spacing:.07em;color:#d3d0c5;text-transform:uppercase;margin:3px 0 0 2px">${ESC(x.note)}</div></div>`};
@@ -1093,7 +1094,7 @@ function fmtLous(f,spec,menu,poster){
 function fmtPad(f,spec,menu,poster){
   const INK="#1b2a6b",RED="#b8262b",PAD="#fbf6df",DARK="#1c1410";
   const HAND="font-family:'Covered By Your Grace',cursive;font-weight:400",TYPE="font-family:'Courier Prime',monospace";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const L=40;
   const all=spec.groups.flatMap(g=>g.items);
   const lines=(spec.padLines||all.map(x=>({k:x.k}))).map(l=>l.k?Object.assign({},all.find(x=>x.k===l.k)):l);
@@ -1189,7 +1190,7 @@ function fmtFoldPages(f,spec,menu){
 function fmtCarte(f,spec,menu,poster){
   const INK="#2b1d16",GOLD="#b08d4a",WINE="#6d1a24",CARD="#fbf6ea",NOTE="#5e4a3a";
   const SCRIPT="font-family:'Pinyon Script',cursive;font-weight:400",SC="font-family:'Cormorant SC',serif",BODY="font-family:'Cormorant Garamond',serif";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const orn=`<div aria-hidden="true" style="display:flex;align-items:center;justify-content:center;gap:10px;color:${GOLD}"><span style="width:60px;height:1px;background:${GOLD}"></span><span style="font-size:13px">&#10022;</span><span style="width:60px;height:1px;background:${GOLD}"></span></div>`;
   const dish=x=>{const it=pick(x.k);return `<div style="text-align:center"><div style="${SC};font-weight:600;font-size:21px;line-height:1.1;letter-spacing:.03em;color:${INK}">${ESC(x.fr||it.label||x.k)}</div><div style="${BODY};font-style:italic;font-size:16px;line-height:1.25;color:${NOTE};margin-top:2px">${ESC(it.label||x.n||x.k)}${x.p?` &nbsp;·&nbsp; <span style="font-style:normal;color:${WINE}">${ESC(x.p)}</span>`:""}</div><div style="${BODY};font-size:15.5px;line-height:1.3;color:${NOTE};margin-top:2px">${ESC(x.note)}</div></div>`};
   const sect=g=>`<div style="display:flex;flex-direction:column;gap:14px"><div style="text-align:center"><div style="${SCRIPT};font-size:34px;line-height:1;color:${WINE}">${ESC(g.h)}</div><div style="${SC};font-size:12.5px;letter-spacing:.24em;color:${GOLD};margin-top:2px">${ESC(g.en)}</div></div>${g.items.map(dish).join("")}</div>`;
@@ -1213,7 +1214,7 @@ function fmtCarte(f,spec,menu,poster){
 function fmtFeast(f,spec,menu,poster){
   const INK="#2a1f18",RED="#9a2b22",GRN="#2f5d3a",CARD="#f7f0de",NOTE="#5d4c3e",GOLD="#b8954f";
   const SCRIPT="font-family:'Italianno',cursive;font-weight:400",DISP="font-family:'Bodoni Moda',serif",BODY="font-family:'Libre Baskerville',serif";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const dish=x=>{const it=pick(x.k);return `<div><div style="display:flex;align-items:baseline;gap:8px"><span style="${DISP};font-weight:700;font-size:20px;line-height:1.15;color:${INK};white-space:nowrap">${ESC(x.it||it.label||x.k)}</span><span style="flex:1;border-bottom:1px dotted rgba(42,31,24,.5);min-width:10px;transform:translateY(-4px)"></span><span style="${DISP};font-weight:700;font-size:18px;color:${RED}">${ESC(x.p)}</span></div><div style="${BODY};font-style:italic;font-size:14px;line-height:1.35;color:${NOTE};margin-top:2px">${ESC(it.label||x.n||x.k)}. ${ESC(x.note)}</div></div>`};
   const sect=g=>`<div style="display:flex;flex-direction:column;gap:12px"><div style="display:flex;align-items:center;gap:12px"><span style="${SCRIPT};font-size:42px;line-height:.9;color:${RED};white-space:nowrap">${ESC(g.h)}</span><span style="flex:1;height:1px;background:${GOLD}"></span><span style="${DISP};font-size:12px;letter-spacing:.2em;color:${GRN};text-transform:uppercase;white-space:nowrap">${ESC(g.en)}</span></div>${g.items.map(dish).join("")}</div>`;
   const flag=`<div aria-hidden="true" style="display:flex;height:6px"><i style="flex:1;background:${GRN}"></i><i style="flex:1;background:#fff"></i><i style="flex:1;background:${RED}"></i></div>`;
@@ -1235,7 +1236,7 @@ function fmtFeast(f,spec,menu,poster){
 function fmtTruck(f,spec,menu,poster){
   const CHALK="#f3f1ea",YEL="#ffd24a",ORA="#f07a2a",TEAL="#2fb6a8",PINK="#ff8fb1",BOARD="#1f2523";
   const DISP="font-family:'Fredericka the Great',serif;font-weight:400",HEAD="font-family:'Amatic SC',sans-serif;font-weight:700",HAND="font-family:'Patrick Hand',cursive;font-weight:400",TRUCK="font-family:'Bungee',sans-serif;font-weight:400";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const cols=[YEL,TEAL,PINK,ORA];
   const dish=(x,c)=>{const it=pick(x.k);return `<div><div style="display:flex;align-items:baseline;gap:10px"><span style="${DISP};font-size:25px;line-height:1.05;color:${CHALK};white-space:nowrap">${ESC(it.label||x.n||x.k)}</span><span style="flex:1;border-bottom:2px dashed rgba(243,241,234,.35);min-width:10px;transform:translateY(-6px)"></span><span style="${DISP};font-size:25px;color:${c}">${ESC(x.p)}</span></div><div style="${HAND};font-size:19px;line-height:1.2;color:rgba(243,241,234,.86);margin-top:2px">${ESC(x.note)}</div></div>`};
   const sect=(g,i)=>`<div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:0 16px;align-items:start"><div style="${HEAD};font-size:32px;line-height:1.1;letter-spacing:.04em;color:${cols[i%4]};border-bottom:2px solid ${cols[i%4]};padding-bottom:2px">${ESC(g.h)}</div><div style="display:flex;flex-direction:column;gap:10px">${g.items.map(x=>dish(x,cols[i%4])).join("")}</div></div>`;
@@ -1262,7 +1263,7 @@ function fmtTruck(f,spec,menu,poster){
 function fmtCheck(f,spec,menu,poster){
   const GRN="#2f6b45",PAD="#f2f6ea",INK="#1d2e8f",DARK="#1f2a22",RED="#b8262b",LINE="rgba(47,107,69,.28)";
   const PRINT="font-family:'Archivo Narrow',sans-serif",HAND="font-family:'Homemade Apple',cursive;font-weight:400",BODY="font-family:'Libre Franklin',sans-serif",DISP="font-family:'DM Serif Display',serif;font-weight:400";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const L=50;
   const row=x=>{const it=pick(x.k);const mods=(x.mods||[]).map(m=>`<div style="${HAND};font-size:16px;line-height:${L/2}px;color:${INK};padding-left:18px">${ESC(m)}</div>`).join("");
     return `<div style="display:grid;grid-template-columns:44px minmax(0,1fr) 74px;border-bottom:1px solid ${LINE}"><span style="${HAND};font-size:17px;line-height:${L}px;color:${INK};text-align:center">${ESC(x.q||"4")}</span><div><div style="${HAND};font-size:20px;line-height:${L}px;color:${INK};white-space:nowrap">${ESC(it.label||x.n||x.k)}</div>${mods}<div style="${BODY};font-size:13.5px;line-height:1.3;color:#5a6a5e;padding:0 0 6px 2px;font-style:italic">${ESC(x.note)}</div></div><span style="${HAND};font-size:17px;line-height:${L}px;color:${INK};text-align:right;padding-right:10px">${ESC(x.p)}</span></div>`};
@@ -1327,7 +1328,7 @@ function fmtMcdowells(f,spec,menu,poster){
   const at=(x,y,w,s='')=>`position:absolute;left:${x}px;top:${y}px;width:${w}px;${s}`;
   const micro=(t,c=R)=>`<div style="${T};font-size:10px;font-weight:700;letter-spacing:.1em;line-height:1.35;text-transform:uppercase;color:${c}">${ESC(t)}</div>`;
   const art=spec.art||{},image=(k,w='w780')=>TMDB_IMG+w+art[k];
-  const pick=x=>menu.all.find(it=>it.n===x.k)||{};
+  const pick=x=>menu.all.find(it=>(it.orig||it.n)===x.k)||{};
   const label=x=>ESC(pick(x).label||x.n||x.k);
   const snacks=spec.groups[0].items,main=spec.groups[1].items[0],sweet=spec.groups[2].items[0],drink=spec.groups[3].items[0];
   const dish=(x,y,w,item,kicker)=>`<article style="${at(x,y,w)}">${micro(kicker)}<h3 style="margin:8px 0 0;${B};font-size:22px;line-height:1.12;letter-spacing:-.025em;font-weight:700;color:${R}">${label(item)}</h3><div style="${B};font-size:12.5px;line-height:1.5;color:${I};margin-top:7px">${ESC(item.d)}</div></article>`;

@@ -46,6 +46,7 @@ for (const f of films) {
     { const fo = {}, ar = Object.fromEntries((LIB.st[id] || []).map(x => [x[0], +(x[1] / x[2]).toFixed(3)])); for (const p of out.lib.stills) if (LIB.sfoc[p]) fo[p] = LIB.sfoc[p].concat(ar[p] || 1.778); if (Object.keys(fo).length) out.lib.focus = fo; }
   }
   { const r2p = path.join(root, 'data/recipes2', s + '.json'); if (fs.existsSync(r2p)) out.r2 = JSON.parse(fs.readFileSync(r2p, 'utf8')); }
+  { const dp = path.join(root, 'data/diet', s + '.json'); if (fs.existsSync(dp)) out.diet = JSON.parse(fs.readFileSync(dp, 'utf8')); }
   if (EDITIONS[id]) out.edition = EDITIONS[id];
   else {
     const rp = path.join(root, 'data/recipes', s + '.json');

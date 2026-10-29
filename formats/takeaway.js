@@ -2,7 +2,7 @@
 function fmtTakeaway(f,spec,menu,poster){
   const RED="#a51c24",GOLD="#d8b257",PG="#f2d58a",INK="#2a1610",NOTE="#5a4436",CREAM="#f6eedb";
   const DISP="font-family:'Fraunces',serif;font-variation-settings:'SOFT' 100,'WONK' 0",ZH="font-family:'Noto Serif TC',serif;font-weight:900",BODY="font-family:'Libre Caslon Text',serif";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const header=(en,zh)=>`<div style="display:flex;align-items:center;justify-content:center;gap:12px;background:${RED};color:${PG};padding:6px 10px 7px;box-shadow:0 0 0 2px ${CREAM},0 0 0 4px ${GOLD}"><span style="${DISP};font-weight:900;font-size:21px;white-space:nowrap">${ESC(en)}</span><span lang="zh-Hant" style="${ZH};font-size:17px;color:#fff;letter-spacing:.08em;white-space:nowrap">${zh}</span></div>`;
   const dish=x=>{const it=pick(x.k),ch=x.hot?`<span style="color:#c8102e;font-size:12px;letter-spacing:1px">${"&#9679;".repeat(x.hot)}</span>`:"";
     const inner=`<div style="display:flex;align-items:baseline;gap:7px"><span style="${DISP};font-weight:900;color:${RED};font-size:15px;width:26px;flex:none">${x.code}</span><span style="${DISP};font-weight:800;font-size:17.5px;line-height:1.1;letter-spacing:-.01em;white-space:nowrap">${ESC(it.label||x.n||x.k)}</span>${ch}<span style="flex:1;border-bottom:2px dotted rgba(42,22,16,.45);transform:translateY(-4px);min-width:8px"></span><span style="${DISP};font-weight:800;font-size:16.5px">${ESC(x.p)}</span></div>

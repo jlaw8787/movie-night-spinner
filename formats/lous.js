@@ -2,7 +2,7 @@
 function fmtLous(f,spec,menu,poster){
   const TEAL="#3fa79c",CREAM="#f3ead2",RED="#c4262e",INK="#1c1c1c",CHROME="linear-gradient(180deg,#f4f6f8,#9aa2ab 45%,#e9edf0 55%,#8a929b)";
   const NEON="font-family:'Damion',cursive;font-weight:400",BOARD="font-family:'Oswald',sans-serif",MONO="font-family:'Cutive Mono',monospace",PEN="font-family:'Covered By Your Grace',cursive;font-weight:400",BODY="font-family:'Archivo',sans-serif";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   /* plastic letters never sit quite straight on the felt */
   const jig=(s,seed)=>s.split(" ").map((w,i)=>`<span style="display:inline-block;transform:translateY(${((hashN(seed+i)%3)-1)*.8}px) rotate(${((hashN(seed+"r"+i)%5)-2)*.35}deg)">${ESC(w)}</span>`).join(" ");
   const row=x=>{const it=pick(x.k),lab=(it.label||x.n||x.k).toUpperCase();return `<div><div style="display:flex;align-items:baseline;gap:10px"><span style="${BOARD};font-weight:500;font-size:31px;line-height:1.1;letter-spacing:.05em;color:#f6f4ec;white-space:nowrap">${jig(lab,lab)}</span><span style="flex:1;border-bottom:2px dotted rgba(246,244,236,.3);min-width:12px;transform:translateY(-6px)"></span><span style="${BOARD};font-weight:500;font-size:31px;letter-spacing:.04em;color:#ffd75e;white-space:nowrap">${ESC(x.p)}</span></div><div style="${BOARD};font-weight:400;font-size:18px;line-height:1.3;letter-spacing:.07em;color:#d3d0c5;text-transform:uppercase;margin:3px 0 0 2px">${ESC(x.note)}</div></div>`};

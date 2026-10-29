@@ -2,7 +2,7 @@
 function fmtCase(f,spec,menu,poster){
   const MANILA="#d9b77a",PAPER="#f6f1e3",INK="#1c1a17",RED="#9e1b1b",NOTE="#4a4438";
   const TYPE="font-family:'Special Elite',monospace;font-weight:400",MONO="font-family:'Courier Prime',monospace",SHOUL="font-family:'Big Shoulders Display',sans-serif",STEN="font-family:'Big Shoulders Stencil Display',sans-serif;font-weight:800";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const head=t=>`<div style="display:flex;align-items:center;gap:10px"><span style="${SHOUL};font-weight:900;font-size:21px;letter-spacing:.06em;color:${INK};white-space:nowrap;text-transform:uppercase">${ESC(t)}</span><span style="flex:1;height:0;border-top:2px solid ${INK};border-bottom:1px solid ${INK};padding-top:2px"></span></div>`;
   const item=x=>{const it=pick(x.k);
     const inner=`<div style="display:flex;align-items:baseline;gap:9px"><span style="${TYPE};font-size:15px;color:${RED};width:24px;flex:none">${x.code}</span><span style="${MONO};font-weight:700;font-size:17px;white-space:nowrap">${ESC(it.label||x.n||x.k)}</span><span style="flex:1;border-bottom:2px dotted rgba(28,26,23,.45);transform:translateY(-4px);min-width:8px"></span><span style="${SHOUL};font-weight:900;font-size:19px">${ESC(x.p)}</span></div><div style="${MONO};font-style:italic;font-size:14px;line-height:1.35;color:${NOTE};padding-left:33px;margin-top:2px">${ESC(x.note)}</div>`;
