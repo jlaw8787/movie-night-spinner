@@ -268,6 +268,9 @@ function mountModal(o,initial,trigger,onClose){
   Object.assign(o.style,{margin:"0",border:"0",maxWidth:"none",maxHeight:"none",width:"100%",height:"100%",boxSizing:"border-box",color:"inherit"});
   if(o._mm){document.body.appendChild(o);if(!o.open)o.showModal();const f=o.querySelector(initial);if(f)f.focus({preventScroll:true});return}
   o._mm=1;
+  /* one close X in the same corner on every pop-up (the box art case keeps its own) */
+  const addX=()=>{if(o.querySelector(".x,.modal-x"))return;const b=document.createElement("button");b.type="button";b.className="modal-x";b.setAttribute("aria-label","Close");b.textContent="×";b.addEventListener("click",()=>dismissModal(o));o.append(b)};
+  addX();if(window.MutationObserver)new MutationObserver(addX).observe(o,{childList:true});
   o.addEventListener("cancel",e=>{e.preventDefault();dismissModal(o)});
   o.addEventListener("close",()=>finishModal(o));
   o.tabIndex=-1;
@@ -1514,17 +1517,18 @@ async function openCase(f){
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];const m=makeMenu(f,true);
   const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`${f.title}, back of the box`);
   const seen=watched.has(f.id);
-  o.innerHTML=`<div class="case"><button class="x" type="button" aria-label="Put it back">×</button><div class="case-l">${p?`<div class="case-art${reduce?"":" track"}"><img alt="${ESC(f.title)} poster" src="${TMDB_IMG_SHOP}w500${ESC(p)}"></div>`:""}${tvHTML(f)}</div><div><h3>${ESC(f.title)}</h3><p class="meta">${f.year} &nbsp;/&nbsp; ${ESC(SHOP_AISLE_OF[f.theme]||"")} aisle &nbsp;/&nbsp; ${ESC(T[f.theme].name)}${ratingOf(f)?` <span class="ratebig ${rateCls(ratingOf(f))}" aria-label="Rated ${ratingOf(f)}">${ratingOf(f)}</span>`:""}</p>${isOut(f)?'<p class="outnote">All copies are out. Lucky you, one just came back.</p>':""}<p class="syn">${ESC(f.D)}</p><div class="where">${whereHTML(f)}</div><p class="staff">Staff pick: ${ESC((movieEdition(f)||{}).tagline||f.T)}</p>${seen?starsHTML(f):""}<h4>Comes with</h4><ul>${[...m.s,...m.m,...m.w,...m.d].map(it=>`<li>${ESC(it.n)}</li>`).join("")}</ul><div class="acts">${isRentedOut(f)?'<button class="rent" type="button">Open the menu</button><button class="ret" type="button">Return it</button>':'<button class="rent" type="button">Rent it</button>'}<button class="seen" type="button">${seen?"Not seen it yet":"Seen it"}</button></div></div></div>`;
+  o.innerHTML=`<div class="case"><div class="case-l">${p?`<div class="case-art${reduce?"":" track"}"><img alt="${ESC(f.title)} poster" src="${TMDB_IMG_SHOP}w500${ESC(p)}"></div>`:""}${tvHTML(f)}</div><div><h3>${ESC(f.title)}</h3><p class="meta">${f.year} &nbsp;/&nbsp; ${ESC(SHOP_AISLE_OF[f.theme]||"")} aisle &nbsp;/&nbsp; ${ESC(T[f.theme].name)}${ratingOf(f)?` <span class="ratebig ${rateCls(ratingOf(f))}" aria-label="Rated ${ratingOf(f)}">${ratingOf(f)}</span>`:""}</p>${isOut(f)?'<p class="outnote">All copies are out. Lucky you, one just came back.</p>':""}<p class="syn">${ESC(f.D)}</p><div class="where">${whereHTML(f)}</div><p class="staff">Staff pick: ${ESC((movieEdition(f)||{}).tagline||f.T)}</p>${seen?starsHTML(f):""}<h4>Comes with</h4><ul>${[...m.s,...m.m,...m.w,...m.d].map(it=>`<li>${ESC(it.n)}</li>`).join("")}</ul><div class="acts"><button class="menu-go" type="button">See the menu</button>${isRentedOut(f)?'<button class="ret" type="button">Return it</button>':'<button class="rent" type="button">Rent it</button>'}<button class="seen" type="button">${seen?"Not seen it yet":"Seen it"}</button></div></div></div>`;
   const close=()=>dismissModal(o);
   o.addEventListener("click",e=>{if(e.target===o)close()});
-  o.querySelector(".x").addEventListener("click",close);
-  o.querySelector(".rent").addEventListener("click",()=>{const out=isRentedOut(f);close();if(out){openRentalMenu(f);return}sfx.clunk();openSlip(f,()=>openRentalMenu(f))});
+  /* the menu is one tap from any tape; renting is just for fun and never needed to see it */
+  o.querySelector(".menu-go").addEventListener("click",()=>{close();openRentalMenu(f)});
+  {const rb2=o.querySelector(".rent");if(rb2)rb2.addEventListener("click",()=>{close();sfx.clunk();openSlip(f,()=>openRentalMenu(f))})}
   if(seen)wireStars(o,f,()=>renderShop());
   const rb=o.querySelector(".ret");if(rb)rb.addEventListener("click",()=>{close();openChute(f)});
   const tv=o.querySelector(".tv-play");
   if(tv)tv.addEventListener("click",()=>{const k=tv.dataset.k;const scr=tv.parentElement;scr.classList.add("tracking");sfx.clunk();setTimeout(()=>{scr.classList.remove("tracking");scr.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(k)}?autoplay=1&playsinline=1&rel=0&modestbranding=1" title="${ESC(f.title)} trailer" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`},reduce?0:600)});
   o.querySelector(".seen").addEventListener("click",()=>{setWatched(f,!watched.has(f.id));close();renderShop()});
-  mountModal(o,".rent",modalTrigger);
+  mountModal(o,".menu-go",modalTrigger);
 }
 
 /* where to watch in Australia (TMDB, data by JustWatch) */
@@ -1782,6 +1786,7 @@ function showOverlay(url,file){
     :`<img alt="Menu for ${ESC(current.title)}"><p>Press and hold the menu, then choose Save to Photos.</p><button class="btn primary" type="button" data-close>Close</button>`;
   o.querySelector("img").src=url;
   o.querySelector("[data-close]").addEventListener("click",close);
+  o.addEventListener("click",e=>{if(e.target===o)close()});
   if(file)o.querySelector("[data-share]").addEventListener("click",async()=>{
     try{await navigator.share({files:[file],title:`${current.title} menu`});close();$("status").textContent="Saved. Check your Photos."}
     catch(e){if(!(e&&e.name==="AbortError"))o.querySelector("p").textContent="Long-press the menu and choose Save to Photos."}

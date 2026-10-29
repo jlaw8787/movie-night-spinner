@@ -331,9 +331,8 @@ body::after{content:none}
 .case ul{margin:0 0 16px;padding-left:18px;font-size:14.5px}
 .case .acts{display:flex;flex-wrap:wrap;gap:8px}
 .case .acts button{font:400 14px var(--f-board);letter-spacing:.03em;border-radius:8px;padding:10px 16px;cursor:pointer;border:2px solid #14204f;background:#fff;color:#14204f}
-.case .acts .rent{background:#ffd23f;border-color:#ffd23f;color:#14204f}
-.case .x{position:absolute;top:8px;right:10px;border:0;background:none;font:400 26px/1 var(--f-body);color:#5b564c;cursor:pointer;padding:6px}
-@media (max-width:620px){.case{grid-template-columns:1fr}.case img{max-width:200px;margin:0 auto}}
+.case .acts .menu-go{background:#ffd23f;border-color:#ffd23f;color:#14204f}
+@media (max-width:620px){.case{grid-template-columns:1fr}.case img{max-width:200px;margin:0 auto}.case .acts{position:sticky;bottom:-18px;margin:0 -18px -18px;padding:12px 18px calc(14px + env(safe-area-inset-bottom,0px));background:#f6f1e6;box-shadow:0 -10px 14px -8px rgba(0,0,0,.18);border-radius:0 0 8px 8px;z-index:2}.case .acts button{flex:1 1 auto}}
 @media (prefers-reduced-motion:reduce){.box{transition:none}.tape:hover .box{transform:none}}
 
 
@@ -1473,6 +1472,9 @@ html{scroll-padding-top:var(--topH,84px)}
 .member-out .out-open .t{text-decoration:underline;text-decoration-color:rgba(255,210,63,.6);text-underline-offset:3px}
 .member-out .out-open small{display:block;font-size:12px;opacity:.75;margin-top:2px}
 .member .out-all{margin-top:8px;font:400 12px var(--f-board);letter-spacing:.03em;border-radius:999px;padding:8px 14px;min-height:40px;cursor:pointer;border:2px solid var(--shop-sign);background:transparent;color:var(--shop-sign)}
+/* the same close X on every pop-up */
+dialog .modal-x{position:fixed;top:max(12px,env(safe-area-inset-top,0px));right:12px;z-index:100;width:44px;height:44px;border-radius:50%;border:2px solid rgba(255,255,255,.75);background:rgba(20,8,10,.78);color:#fff;font:400 26px/1 var(--f-body);display:grid;place-items:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.5)}
+dialog .modal-x:focus-visible{outline:3px solid #ffd23f;outline-offset:2px}
 .fit.tiny .fit-t{visibility:hidden}
 .sv-jump{display:none;gap:6px;flex-wrap:wrap;margin:-6px 0 14px}
 .sv-hang-chip{font:400 12px var(--f-board);letter-spacing:.04em;color:#14204f;background:#fbf7ea;border:2px solid #1d3aa8;border-radius:4px;padding:7px 10px;cursor:pointer}
@@ -1707,7 +1709,7 @@ html{scroll-padding-top:var(--topH,84px)}
 <script src="providers.js?v=1403fceb" defer></script>
 <script src="films.js?v=7aa6d614" defer></script>
 <script src="formats-core.js?v=a8dfd3e7" defer></script>
-<script src="app.js?v=57939d7a" defer></script>
+<script src="app.js?v=d1cb7caa" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
