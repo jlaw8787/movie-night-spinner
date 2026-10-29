@@ -1,0 +1,1329 @@
+[
+ {
+  "id": "butter-popcorn",
+  "n": "Butter popcorn",
+  "cat": "Popcorn",
+  "kind": "make",
+  "note": "The cinema classic, popped on the stove",
+  "prep_min": 2,
+  "cook_min": 6,
+  "make_ahead": "Best popped just before the film; it goes chewy after a few hours",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 120,
+    "u": "g",
+    "item": "popping corn",
+    "aisle": "Lollies and snacks"
+   },
+   {
+    "q": 3,
+    "u": "tbsp",
+    "item": "neutral oil",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 60,
+    "u": "g",
+    "item": "butter",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 1,
+    "u": "tsp",
+    "item": "fine salt",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Heat the oil in a large lidded pot over medium-high heat with 3 kernels in. When they pop, add the rest of the popping corn, lid on.",
+    "min": 2
+   },
+   {
+    "text": "Shake the pot every 20 seconds until the popping slows to a few seconds apart, then tip into a big bowl.",
+    "min": 3
+   },
+   {
+    "text": "Melt the butter, pour it over, toss and season with the salt.",
+    "min": 1
+   }
+  ]
+ },
+ {
+  "id": "caramel-popcorn",
+  "n": "Caramel popcorn",
+  "cat": "Popcorn",
+  "kind": "make",
+  "note": "Crunchy toffee coat, baked so it stays crisp",
+  "prep_min": 10,
+  "cook_min": 40,
+  "make_ahead": "Up to 3 days ahead in an airtight tin",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 100,
+    "u": "g",
+    "item": "popping corn",
+    "aisle": "Lollies and snacks"
+   },
+   {
+    "q": 2,
+    "u": "tbsp",
+    "item": "neutral oil",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 100,
+    "u": "g",
+    "item": "butter",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 200,
+    "u": "g",
+    "item": "brown sugar",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 60,
+    "u": "ml",
+    "item": "golden syrup",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 0.5,
+    "u": "tsp",
+    "item": "bicarbonate of soda",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 0.5,
+    "u": "tsp",
+    "item": "fine salt",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Pop the popping corn in the oil in a large lidded pot and tip into a big roasting tray lined with baking paper. Heat the oven to 120C.",
+    "min": 6
+   },
+   {
+    "text": "Boil the butter, brown sugar, golden syrup and salt for 4 minutes, then stir in the bicarbonate of soda off the heat; it will foam.",
+    "min": 5
+   },
+   {
+    "text": "Pour over the popcorn and toss to coat.",
+    "min": 2
+   },
+   {
+    "text": "Bake for 30 minutes, stirring every 10, then cool on the tray and break up.",
+    "min": 35
+   }
+  ]
+ },
+ {
+  "id": "golden-syrup-popcorn",
+  "n": "Golden syrup and sea salt popcorn",
+  "cat": "Popcorn",
+  "kind": "make",
+  "note": "Sweet and salty, done in ten minutes",
+  "prep_min": 3,
+  "cook_min": 7,
+  "make_ahead": "Up to 1 day ahead, airtight",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 100,
+    "u": "g",
+    "item": "popping corn",
+    "aisle": "Lollies and snacks"
+   },
+   {
+    "q": 2,
+    "u": "tbsp",
+    "item": "neutral oil",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 50,
+    "u": "g",
+    "item": "butter",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 3,
+    "u": "tbsp",
+    "item": "golden syrup",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "tsp",
+    "item": "sea salt flakes",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Pop the popping corn in the oil in a large lidded pot and tip into a big bowl.",
+    "min": 5
+   },
+   {
+    "text": "Melt the butter with the golden syrup until bubbling, drizzle over the popcorn, toss and scatter with the sea salt flakes.",
+    "min": 2
+   }
+  ]
+ },
+ {
+  "id": "choc-tops",
+  "n": "Choc tops",
+  "cat": "Retro",
+  "kind": "make",
+  "note": "Ice cream cones dipped in a hard chocolate shell, like the cinema ones",
+  "prep_min": 20,
+  "cook_min": 5,
+  "make_ahead": "Dip up to 1 week ahead and keep frozen in a container",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 4,
+    "u": "",
+    "item": "wafer ice cream cones",
+    "aisle": "Lollies and snacks"
+   },
+   {
+    "q": 1,
+    "u": "l",
+    "item": "vanilla ice cream",
+    "aisle": "Frozen"
+   },
+   {
+    "q": 200,
+    "u": "g",
+    "item": "dark chocolate",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 60,
+    "u": "ml",
+    "item": "coconut oil",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Pack the cones with the vanilla ice cream and round the tops with a scoop. Stand them in a glass and freeze for 1 hour until firm.",
+    "min": 10
+   },
+   {
+    "text": "Melt the dark chocolate with the coconut oil and let it cool to just warm in a narrow glass.",
+    "min": 5
+   },
+   {
+    "text": "Dip each frozen cone top into the chocolate, lift and turn until the shell sets, then back into the freezer.",
+    "min": 5
+   }
+  ]
+ },
+ {
+  "id": "fairy-bread",
+  "n": "Fairy bread",
+  "cat": "Retro",
+  "kind": "make",
+  "note": "White bread, butter and hundreds and thousands, cut in triangles",
+  "prep_min": 10,
+  "cook_min": 0,
+  "make_ahead": "Best made just before serving; the sprinkles bleed if it sits",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 8,
+    "u": "",
+    "item": "slices white bread",
+    "aisle": "Bakery"
+   },
+   {
+    "q": 60,
+    "u": "g",
+    "item": "butter, softened",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 80,
+    "u": "g",
+    "item": "hundreds and thousands",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Butter the white bread right to the edges, press the buttered side into a plate of hundreds and thousands, and cut each slice into 4 triangles.",
+    "min": 10
+   }
+  ]
+ },
+ {
+  "id": "chocolate-crackles",
+  "n": "Chocolate crackles",
+  "cat": "Retro",
+  "kind": "make",
+  "note": "Puffed rice and copha in patty cases, every kid's party",
+  "prep_min": 15,
+  "cook_min": 5,
+  "make_ahead": "Up to 3 days ahead in the fridge",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 4,
+    "u": "cup",
+    "item": "puffed rice cereal",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "cup",
+    "item": "icing sugar",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 3,
+    "u": "tbsp",
+    "item": "cocoa",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "cup",
+    "item": "desiccated coconut",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 250,
+    "u": "g",
+    "item": "copha",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 24,
+    "u": "",
+    "item": "paper patty cases",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Mix the puffed rice cereal, icing sugar, cocoa and desiccated coconut in a big bowl.",
+    "min": 3
+   },
+   {
+    "text": "Melt the copha gently, let it cool a little and stir it through until everything is coated.",
+    "min": 5
+   },
+   {
+    "text": "Spoon into the paper patty cases and chill for 30 minutes until set.",
+    "min": 7
+   }
+  ]
+ },
+ {
+  "id": "honey-joys",
+  "n": "Honey joys",
+  "cat": "Retro",
+  "kind": "make",
+  "note": "Cornflakes baked in honey butter, the other party favourite",
+  "prep_min": 10,
+  "cook_min": 12,
+  "make_ahead": "Up to 4 days ahead, airtight",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 4,
+    "u": "cup",
+    "item": "cornflakes",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 90,
+    "u": "g",
+    "item": "butter",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 2,
+    "u": "tbsp",
+    "item": "honey",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 75,
+    "u": "g",
+    "item": "caster sugar",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 24,
+    "u": "",
+    "item": "paper patty cases",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Heat the oven to 150C. Melt the butter, honey and caster sugar together until frothy.",
+    "min": 4
+   },
+   {
+    "text": "Pour over the cornflakes, stir to coat and spoon into the paper patty cases on a tray.",
+    "min": 5
+   },
+   {
+    "text": "Bake for 10 minutes and cool until crisp.",
+    "min": 12
+   }
+  ]
+ },
+ {
+  "id": "coconut-ice",
+  "n": "Coconut ice",
+  "cat": "Retro",
+  "kind": "make",
+  "note": "Pink and white slab, no cooking",
+  "prep_min": 15,
+  "cook_min": 0,
+  "make_ahead": "Up to 1 week ahead in the fridge",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 395,
+    "u": "g",
+    "item": "tin sweetened condensed milk",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 250,
+    "u": "g",
+    "item": "icing sugar",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 250,
+    "u": "g",
+    "item": "desiccated coconut",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 2,
+    "u": "",
+    "item": "drops red food colouring",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Mix the sweetened condensed milk, icing sugar and desiccated coconut into a stiff dough.",
+    "min": 5
+   },
+   {
+    "text": "Press half into a lined slice tin. Knead the red food colouring into the rest, press it on top and chill for 2 hours before cutting into squares.",
+    "min": 10
+   }
+  ]
+ },
+ {
+  "id": "rocky-road",
+  "n": "Rocky road",
+  "cat": "Chocolate",
+  "kind": "make",
+  "note": "Milk chocolate, marshmallows, raspberry lollies and peanuts",
+  "prep_min": 15,
+  "cook_min": 5,
+  "make_ahead": "Up to 1 week ahead in the fridge",
+  "veg": false,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 400,
+    "u": "g",
+    "item": "milk chocolate",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 150,
+    "u": "g",
+    "item": "marshmallows",
+    "aisle": "Lollies and snacks"
+   },
+   {
+    "q": 100,
+    "u": "g",
+    "item": "raspberry lollies",
+    "aisle": "Lollies and snacks"
+   },
+   {
+    "q": 100,
+    "u": "g",
+    "item": "roasted peanuts",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 40,
+    "u": "g",
+    "item": "desiccated coconut",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Melt the milk chocolate gently and let it cool a little.",
+    "min": 5
+   },
+   {
+    "text": "Cut the marshmallows and raspberry lollies in half and mix with the roasted peanuts and desiccated coconut.",
+    "min": 5
+   },
+   {
+    "text": "Stir into the chocolate, press into a lined tin and chill for 2 hours, then cut into chunks.",
+    "min": 5
+   }
+  ]
+ },
+ {
+  "id": "cheerios",
+  "n": "Cheerios with tomato sauce",
+  "cat": "Hot",
+  "kind": "make",
+  "note": "Little red cocktail frankfurts, the Aussie party staple",
+  "prep_min": 2,
+  "cook_min": 6,
+  "make_ahead": "Best heated just before serving",
+  "veg": false,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 500,
+    "u": "g",
+    "item": "cocktail frankfurts",
+    "aisle": "Deli"
+   },
+   {
+    "q": 125,
+    "u": "ml",
+    "item": "tomato sauce",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Drop the cocktail frankfurts into a pot of just-simmering water for 5 minutes until hot through; don't boil or they split.",
+    "min": 6
+   },
+   {
+    "text": "Drain and serve with toothpicks and a bowl of tomato sauce.",
+    "min": 1
+   }
+  ]
+ },
+ {
+  "id": "party-pies",
+  "n": "Party pies and sausage rolls",
+  "cat": "Hot",
+  "kind": "buy",
+  "note": "A box of each from the freezer, straight into the oven",
+  "prep_min": 2,
+  "cook_min": 25,
+  "make_ahead": "Bake from frozen just before serving",
+  "veg": false,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 1,
+    "u": "",
+    "item": "box frozen party pies (12)",
+    "aisle": "Frozen"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "box frozen party sausage rolls (12)",
+    "aisle": "Frozen"
+   },
+   {
+    "q": 125,
+    "u": "ml",
+    "item": "tomato sauce",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Bake the frozen party pies and frozen party sausage rolls on lined trays as the box says, about 25 minutes, and serve with tomato sauce.",
+    "min": 25
+   }
+  ]
+ },
+ {
+  "id": "dagwood-dogs",
+  "n": "Battered hot dogs on sticks",
+  "cat": "Hot",
+  "kind": "make",
+  "note": "Show bag style, dunked in tomato sauce",
+  "prep_min": 15,
+  "cook_min": 12,
+  "make_ahead": "Mix the batter up to 2 hours ahead and chill; fry to order",
+  "veg": false,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 8,
+    "u": "",
+    "item": "frankfurts",
+    "aisle": "Deli"
+   },
+   {
+    "q": 8,
+    "u": "",
+    "item": "wooden skewers",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "cup",
+    "item": "self-raising flour",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 0.5,
+    "u": "cup",
+    "item": "fine polenta",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "egg",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 250,
+    "u": "ml",
+    "item": "milk",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 1,
+    "u": "l",
+    "item": "neutral oil, for frying",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 125,
+    "u": "ml",
+    "item": "tomato sauce",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Whisk the self-raising flour, fine polenta, egg and milk into a thick batter.",
+    "min": 5
+   },
+   {
+    "text": "Push a wooden skewer into each frankfurt, pat dry and dust with a little of the flour.",
+    "min": 5
+   },
+   {
+    "text": "Heat the oil to 180C, dip each one in the batter and fry for 3 minutes, turning, until golden. Drain and serve with tomato sauce.",
+    "min": 12
+   }
+  ]
+ },
+ {
+  "id": "hot-chips",
+  "n": "Hot chips with chicken salt",
+  "cat": "Hot",
+  "kind": "make",
+  "note": "Oven chips done properly, with a shaker of chicken salt",
+  "prep_min": 2,
+  "cook_min": 25,
+  "make_ahead": "Bake just before serving",
+  "veg": false,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 1,
+    "u": "kg",
+    "item": "frozen crinkle-cut chips",
+    "aisle": "Frozen"
+   },
+   {
+    "q": 2,
+    "u": "tsp",
+    "item": "chicken salt",
+    "aisle": "Spices"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Spread the frozen crinkle-cut chips on two lined trays and bake at 220C for 25 minutes, turning once, until crisp.",
+    "min": 25
+   },
+   {
+    "text": "Shake over the chicken salt while they're hot.",
+    "min": 1
+   }
+  ]
+ },
+ {
+  "id": "nachos",
+  "n": "Cheesy nachos",
+  "cat": "Hot",
+  "kind": "make",
+  "note": "Corn chips, melted cheese, salsa and sour cream",
+  "prep_min": 10,
+  "cook_min": 10,
+  "make_ahead": "Best baked just before serving",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 230,
+    "u": "g",
+    "item": "corn chips",
+    "aisle": "Lollies and snacks"
+   },
+   {
+    "q": 200,
+    "u": "g",
+    "item": "cheddar, grated",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 300,
+    "u": "g",
+    "item": "jar tomato salsa",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 200,
+    "u": "g",
+    "item": "sour cream",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "avocado",
+    "aisle": "Produce"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Layer the corn chips and cheddar in an ovenproof dish and bake at 200C for 8 minutes until melted.",
+    "min": 10
+   },
+   {
+    "text": "Top with the tomato salsa, sour cream and diced avocado.",
+    "min": 3
+   }
+  ]
+ },
+ {
+  "id": "pretzels",
+  "n": "Soft pretzel bites",
+  "cat": "Hot",
+  "kind": "make",
+  "note": "Chewy and salty, with mustard for dunking",
+  "prep_min": 30,
+  "cook_min": 15,
+  "make_ahead": "Shape up to 1 day ahead and chill; boil and bake on the night",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 375,
+    "u": "g",
+    "item": "plain flour",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 7,
+    "u": "g",
+    "item": "dried yeast",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "tbsp",
+    "item": "brown sugar",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 250,
+    "u": "ml",
+    "item": "warm water",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 40,
+    "u": "g",
+    "item": "butter, melted",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 3,
+    "u": "tbsp",
+    "item": "bicarbonate of soda",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 1,
+    "u": "tbsp",
+    "item": "sea salt flakes",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 4,
+    "u": "tbsp",
+    "item": "mild mustard",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Mix the plain flour, dried yeast, brown sugar, warm water and melted butter into a soft dough and knead for 5 minutes. Rest 45 minutes until puffy.",
+    "min": 10
+   },
+   {
+    "text": "Roll into ropes, cut into bites and drop in batches into 2 litres of simmering water with the bicarbonate of soda for 30 seconds.",
+    "min": 15
+   },
+   {
+    "text": "Lift onto a lined tray, scatter with sea salt flakes and bake at 220C for 12 minutes until deep brown. Serve with the mild mustard.",
+    "min": 15
+   }
+  ]
+ },
+ {
+  "id": "spider",
+  "n": "Spider floats",
+  "cat": "Drinks",
+  "kind": "make",
+  "note": "Lemonade or creaming soda with a scoop of ice cream fizzing on top",
+  "prep_min": 5,
+  "cook_min": 0,
+  "make_ahead": "Chill the soft drink and glasses ahead; build to order",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 1.25,
+    "u": "l",
+    "item": "creaming soda or lemonade",
+    "aisle": "Drinks"
+   },
+   {
+    "q": 500,
+    "u": "ml",
+    "item": "vanilla ice cream",
+    "aisle": "Frozen"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Pour the cold creaming soda or lemonade into tall glasses, add a big scoop of vanilla ice cream and let it fizz. Long spoons and straws.",
+    "min": 5
+   }
+  ]
+ },
+ {
+  "id": "slushies",
+  "n": "Frozen cola slushies",
+  "cat": "Drinks",
+  "kind": "make",
+  "note": "Like the machine at the cinema, made in the blender",
+  "prep_min": 5,
+  "cook_min": 0,
+  "make_ahead": "Freeze the cola in ice cube trays up to 1 week ahead",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 1.25,
+    "u": "l",
+    "item": "cola",
+    "aisle": "Drinks"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "lime",
+    "aisle": "Produce"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Freeze two thirds of the cola in ice cube trays overnight.",
+    "min": 2
+   },
+   {
+    "text": "Blend the frozen cola cubes with the rest of the cold cola and a squeeze of lime until slushy. Serve straight away with straws.",
+    "min": 3
+   }
+  ]
+ },
+ {
+  "id": "milkshakes",
+  "n": "Chocolate malt milkshakes",
+  "cat": "Drinks",
+  "kind": "make",
+  "note": "Thick, in tall glasses, the milk bar way",
+  "prep_min": 5,
+  "cook_min": 0,
+  "make_ahead": "Blend just before serving",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 1,
+    "u": "l",
+    "item": "cold full cream milk",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 500,
+    "u": "ml",
+    "item": "vanilla ice cream",
+    "aisle": "Frozen"
+   },
+   {
+    "q": 4,
+    "u": "tbsp",
+    "item": "chocolate topping",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 4,
+    "u": "tbsp",
+    "item": "malted milk powder",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Blend the cold full cream milk, vanilla ice cream, chocolate topping and malted milk powder until frothy and pour into tall glasses.",
+    "min": 5
+   }
+  ]
+ },
+ {
+  "id": "choc-coated-ice-creams",
+  "n": "Choc-coated ice cream sticks",
+  "cat": "Frozen",
+  "kind": "buy",
+  "note": "A box of the frozen classics, one each",
+  "prep_min": 0,
+  "cook_min": 0,
+  "make_ahead": "Keep frozen until the film starts",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 1,
+    "u": "",
+    "item": "box chocolate-coated ice cream sticks (4 pack)",
+    "aisle": "Frozen"
+   }
+  ],
+  "steps": []
+ },
+ {
+  "id": "icy-poles",
+  "n": "Fruit ice blocks",
+  "cat": "Frozen",
+  "kind": "buy",
+  "note": "For hot nights and sticky hands",
+  "prep_min": 0,
+  "cook_min": 0,
+  "make_ahead": "Keep frozen",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 1,
+    "u": "",
+    "item": "box fruit ice blocks (8 pack)",
+    "aisle": "Frozen"
+   }
+  ],
+  "steps": []
+ },
+ {
+  "id": "lolly-snakes",
+  "n": "Lolly snakes",
+  "cat": "Lollies",
+  "kind": "buy",
+  "note": "Soft, chewy and long enough to last the trailers",
+  "prep_min": 0,
+  "cook_min": 0,
+  "make_ahead": "Pantry stable",
+  "veg": false,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 1,
+    "u": "",
+    "item": "bag lolly snakes",
+    "aisle": "Lollies and snacks"
+   }
+  ],
+  "steps": []
+ },
+ {
+  "id": "musk-sticks",
+  "n": "Musk sticks",
+  "cat": "Lollies",
+  "kind": "buy",
+  "note": "Pink, chalky and very Aussie",
+  "prep_min": 0,
+  "cook_min": 0,
+  "make_ahead": "Pantry stable",
+  "veg": false,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 1,
+    "u": "",
+    "item": "bag musk sticks",
+    "aisle": "Lollies and snacks"
+   }
+  ],
+  "steps": []
+ },
+ {
+  "id": "milk-bottles",
+  "n": "Milk bottles",
+  "cat": "Lollies",
+  "kind": "buy",
+  "note": "Soft white milk lollies from the corner shop days",
+  "prep_min": 0,
+  "cook_min": 0,
+  "make_ahead": "Pantry stable",
+  "veg": false,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 1,
+    "u": "",
+    "item": "bag milk bottle lollies",
+    "aisle": "Lollies and snacks"
+   }
+  ],
+  "steps": []
+ },
+ {
+  "id": "sherbet",
+  "n": "Sherbet and dippers",
+  "cat": "Lollies",
+  "kind": "buy",
+  "note": "Fizzing sherbet with a lolly stick to dip",
+  "prep_min": 0,
+  "cook_min": 0,
+  "make_ahead": "Pantry stable",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 4,
+    "u": "",
+    "item": "sherbet dip packets",
+    "aisle": "Lollies and snacks"
+   }
+  ],
+  "steps": []
+ },
+ {
+  "id": "mixed-lollies",
+  "n": "Pick and mix bag",
+  "cat": "Lollies",
+  "kind": "buy",
+  "note": "Jellies, sours and teeth, a bit of everything",
+  "prep_min": 0,
+  "cook_min": 0,
+  "make_ahead": "Pantry stable",
+  "veg": false,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 500,
+    "u": "g",
+    "item": "mixed lollies",
+    "aisle": "Lollies and snacks"
+   }
+  ],
+  "steps": []
+ },
+ {
+  "id": "sour-straps",
+  "n": "Sour straps",
+  "cat": "Lollies",
+  "kind": "buy",
+  "note": "Mouth-puckering rainbow strips",
+  "prep_min": 0,
+  "cook_min": 0,
+  "make_ahead": "Pantry stable",
+  "veg": false,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 1,
+    "u": "",
+    "item": "bag sour straps",
+    "aisle": "Lollies and snacks"
+   }
+  ],
+  "steps": []
+ },
+ {
+  "id": "jelly-babies",
+  "n": "Jelly babies",
+  "cat": "Lollies",
+  "kind": "buy",
+  "note": "Soft, dusted and gone in a handful",
+  "prep_min": 0,
+  "cook_min": 0,
+  "make_ahead": "Pantry stable",
+  "veg": false,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 1,
+    "u": "",
+    "item": "bag jelly babies",
+    "aisle": "Lollies and snacks"
+   }
+  ],
+  "steps": []
+ },
+ {
+  "id": "choc-peanuts",
+  "n": "Chocolate-coated peanuts",
+  "cat": "Chocolate",
+  "kind": "buy",
+  "note": "The box that rattles through the quiet bits",
+  "prep_min": 0,
+  "cook_min": 0,
+  "make_ahead": "Pantry stable",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 250,
+    "u": "g",
+    "item": "chocolate-coated peanuts",
+    "aisle": "Lollies and snacks"
+   }
+  ],
+  "steps": []
+ },
+ {
+  "id": "choc-raisins",
+  "n": "Chocolate-coated sultanas",
+  "cat": "Chocolate",
+  "kind": "buy",
+  "note": "Basically fruit",
+  "prep_min": 0,
+  "cook_min": 0,
+  "make_ahead": "Pantry stable",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 250,
+    "u": "g",
+    "item": "chocolate-coated sultanas",
+    "aisle": "Lollies and snacks"
+   }
+  ],
+  "steps": []
+ },
+ {
+  "id": "honeycomb-balls",
+  "n": "Choc honeycomb balls",
+  "cat": "Chocolate",
+  "kind": "buy",
+  "note": "Malty centres that melt in the hand",
+  "prep_min": 0,
+  "cook_min": 0,
+  "make_ahead": "Pantry stable",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 1,
+    "u": "",
+    "item": "bag chocolate honeycomb balls",
+    "aisle": "Lollies and snacks"
+   }
+  ],
+  "steps": []
+ },
+ {
+  "id": "orange-choc-balls",
+  "n": "Orange choc balls",
+  "cat": "Chocolate",
+  "kind": "buy",
+  "note": "The ones that roll down the cinema floor",
+  "prep_min": 0,
+  "cook_min": 0,
+  "make_ahead": "Pantry stable",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 1,
+    "u": "",
+    "item": "box orange candy-coated chocolate balls",
+    "aisle": "Lollies and snacks"
+   }
+  ],
+  "steps": []
+ },
+ {
+  "id": "family-block",
+  "n": "Family block of chocolate",
+  "cat": "Chocolate",
+  "kind": "buy",
+  "note": "Snapped into rows and passed down the couch",
+  "prep_min": 0,
+  "cook_min": 0,
+  "make_ahead": "Pantry stable",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 1,
+    "u": "",
+    "item": "family block milk chocolate",
+    "aisle": "Lollies and snacks"
+   }
+  ],
+  "steps": []
+ },
+ {
+  "id": "chips-dip",
+  "n": "Chips and French onion dip",
+  "cat": "Savoury",
+  "kind": "make",
+  "note": "Crinkle chips and a two-ingredient dip",
+  "prep_min": 5,
+  "cook_min": 0,
+  "make_ahead": "Mix the dip up to 1 day ahead and chill",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 2,
+    "u": "",
+    "item": "bags crinkle-cut potato chips",
+    "aisle": "Lollies and snacks"
+   },
+   {
+    "q": 300,
+    "u": "g",
+    "item": "sour cream",
+    "aisle": "Dairy"
+   },
+   {
+    "q": 1,
+    "u": "",
+    "item": "packet French onion soup mix",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Stir the French onion soup mix into the sour cream, chill for 30 minutes so it thickens, and serve with the crinkle-cut potato chips.",
+    "min": 5
+   }
+  ]
+ },
+ {
+  "id": "cheese-twists",
+  "n": "Cheese scrolls",
+  "cat": "Savoury",
+  "kind": "make",
+  "note": "Puff pastry pinwheels with a lick of yeast spread, warm from the oven",
+  "prep_min": 10,
+  "cook_min": 15,
+  "make_ahead": "Roll and slice up to 1 day ahead, chill, bake on the night",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 2,
+    "u": "",
+    "item": "sheets frozen puff pastry, thawed",
+    "aisle": "Frozen"
+   },
+   {
+    "q": 2,
+    "u": "tbsp",
+    "item": "yeast spread",
+    "aisle": "Pantry"
+   },
+   {
+    "q": 150,
+    "u": "g",
+    "item": "cheddar, grated",
+    "aisle": "Dairy"
+   }
+  ],
+  "steps": [
+   {
+    "text": "Spread the thawed puff pastry thinly with the yeast spread, scatter with the cheddar and roll up tightly.",
+    "min": 5
+   },
+   {
+    "text": "Slice into 2cm rounds, lay on a lined tray and bake at 200C for 15 minutes until puffed and golden.",
+    "min": 15
+   }
+  ]
+ },
+ {
+  "id": "pretzel-mix",
+  "n": "Salty pretzels and peanuts",
+  "cat": "Savoury",
+  "kind": "buy",
+  "note": "A bowl for the dad who doesn't want sweets",
+  "prep_min": 0,
+  "cook_min": 0,
+  "make_ahead": "Pantry stable",
+  "veg": true,
+  "af": true,
+  "ingredients": [
+   {
+    "q": 1,
+    "u": "",
+    "item": "bag salted pretzels",
+    "aisle": "Lollies and snacks"
+   },
+   {
+    "q": 250,
+    "u": "g",
+    "item": "salted roasted peanuts",
+    "aisle": "Pantry"
+   }
+  ],
+  "steps": []
+ }
+]

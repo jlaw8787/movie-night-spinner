@@ -408,7 +408,7 @@ function cardBlurb(f,it){
   const same=(a,b)=>(a||"").replace(/[^a-z0-9]/gi,"").toLowerCase()===(b||"").replace(/[^a-z0-9]/gi,"").toLowerCase();
   for(const k of ["S","M","W","K"])for(const d of f[k]||[])if(d[0]===it.n&&d[2]){const b=shortHow(d[2]);if(!same(b,it.note))return b;return d[1]&&!same(d[1],it.note)?d[1].charAt(0).toUpperCase()+d[1].slice(1)+(/[.!?]$/.test(d[1])?"":"."):""}
   const b=it.how?shortHow(it.how):"";return same(b,it.note)?"":b}
-const AISLES=["Meat","Seafood","Deli","Produce","Dairy","Bakery","Frozen","Pantry","Drinks","Bottle shop"];
+const AISLES=["Meat","Seafood","Deli","Produce","Dairy","Bakery","Frozen","Pantry","Lollies and snacks","Drinks","Bottle shop"];
 function shopGroups(menu){
   const groups={};
   const shopping=[...(menu.shopping||[...menu.s,...menu.m,...menu.w,...menu.d].flatMap(it=>it.shop||[])),...(menu.counter||[])];
@@ -740,8 +740,8 @@ function dietDish(d){
 }
 /* lazy night: plan only the dishes left on the cut-down menu */
 const planAll=f=>{const all=((f._r2&&f._r2.dishes)||[]).map(dietDish),m=f.menu||(typeof current!=="undefined"&&current===f?current.menu:null);
-  if(m&&m.lazy){const keep=new Set([...m.s,...m.m,...m.w,...m.d].map(it=>it.n)),few=all.filter(d=>keep.has(d.orig||d.n));if(few.length)return few}
-  return all};
+  let out=all;if(m&&m.lazy){const keep=new Set([...m.s,...m.m,...m.w,...m.d].map(it=>it.n)),few=all.filter(d=>keep.has(d.orig||d.n));if(few.length)out=few}
+  return out.concat(snackDishes(f).map(dietDish))};
 const planOn=x=>x.blocked?!!PLAN.on[x.orig]:!PLAN.off[x.orig||x.n];
 const planDishes=f=>planAll(f).filter(planOn);
 const FRAC=[[0,""],[0.25,"1/4"],[1/3,"1/3"],[0.5,"1/2"],[2/3,"2/3"],[0.75,"3/4"],[1,""]];
@@ -782,13 +782,13 @@ function planShopping(f){
 }
 const planMin=m=>m>=1440?(d=>d+(d===1?" day":" days")+" ahead")(Math.round(m/1440)):m>=600?(Math.round(m/60))+" hr, start the day before":m>=60?Math.floor(m/60)+" hr"+(m%60?" "+m%60+" min":""):m+" min";
 function planHTML(f){
-  const r=f._r2,k=PLAN.guests/(r.serves||4),C={s:"Snacks",m:"Mains",w:"Sweets",d:"Drinks"},all=planAll(f);
+  const r=f._r2,k=PLAN.guests/(r.serves||4),C={s:"Snacks",m:"Mains",w:"Sweets",d:"Drinks",c:"From the candy bar"},all=planAll(f);
   const TAG={veg:"vegetarian version",af:"alcohol-free version"},BLK={meat:"has meat or fish",alcohol:"has alcohol"};
   return `<div class="pl-row"><span class="pl-l">Guests</span><button type="button" class="pl-b" data-pl="-" aria-label="Fewer guests">-</button><output class="pl-g" aria-live="polite">${PLAN.guests}</output><button type="button" class="pl-b" data-pl="+" aria-label="More guests">+</button></div>
   <div class="pl-row pl-diet"><label class="pl-t"><input type="checkbox" data-diet="veg"${DIET.veg?" checked":""}><span>Vegetarian</span></label><label class="pl-t"><input type="checkbox" data-diet="af"${dietAF()?" checked":""}${kidsMode?" disabled":""}><span>No alcohol${kidsMode?" (kids mode)":""}</span></label></div>
   <details class="pl-pick"${planOpen()?" open":""}><summary><span class="pl-sum">${planCount(r)}</span><span class="pl-tw">Choose dishes</span></summary>
   <p class="pl-hint">Tick what you want to make tonight. The prep sheet, shopping list and times follow your picks.${DIET.veg||dietAF()?" Dishes that don't fit are swapped for their own version, or left off so you can choose.":""}</p>
-  ${["s","m","w","d"].map(c=>{const ds=all.filter(d=>d.course===c);return ds.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.orig||d.n)}"${planOn(d)?" checked":""}><span>${ESC(d.n)}${d.tag&&!/alcohol-free|vegetarian/i.test(d.n)?`<em class="pl-tag">${TAG[d.tag]}</em>`:""}${d.blocked?`<em class="pl-tag pl-no">${BLK[d.blocked]}</em>`:""}</span><small>${planMin((d.prep_min||0)+(d.cook_min||0))}</small></label>`).join("")}</fieldset>`:""}).join("")}</details>`;
+  ${["s","m","w","d","c"].map(c=>{const ds=all.filter(d=>d.course===c);return ds.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.orig||d.n)}"${planOn(d)?" checked":""}><span>${ESC(d.n)}${d.tag&&!/alcohol-free|vegetarian/i.test(d.n)?`<em class="pl-tag">${TAG[d.tag]}</em>`:""}${d.blocked?`<em class="pl-tag pl-no">${BLK[d.blocked]}</em>`:""}</span><small>${planMin((d.prep_min||0)+(d.cook_min||0))}</small></label>`).join("")}</fieldset>`:""}).join("")}</details>`;
 }
 function planCount(r){const on=r.dishes.map(dietDish).filter(planOn).length;return `${on} of ${r.dishes.length} dishes picked`}
 function planOpen(){try{return localStorage.getItem("mns-plan-open")==="1"}catch(e){return false}}
@@ -799,8 +799,8 @@ function prepHTML2(f,menu){
   const tk=prepTicks(f);
   const shop=AISLES.filter(a=>groups[a]).map(a=>`<div class="pp-aisle"><h4>${a}</h4><ul>${groups[a].map(x=>{const k=tickKey(x),on=!!tk[k];return `<li role="checkbox" tabindex="0" aria-checked="${on}" data-k="${ESC(k)}"${on?' class="pp-done"':""}><span class="pp-box"></span>${ESC(x)}</li>`}).join("")}</ul></div>`).join("");
   const hands=ds.reduce((s,x)=>s+(x.prep_min||0),0),longest=ds.reduce((m,x)=>Math.max(m,(x.prep_min||0)+(x.cook_min||0)),0);
-  const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink"};
-  const steps=ds.map(x=>`<li><b>${ESC(x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">Prep ${planMin(x.prep_min||0)}${x.cook_min?`, cook ${planMin(x.cook_min)}`:""}${x.make_ahead?`. Make ahead: ${ESC(x.make_ahead)}`:""}</span><span>${(x.steps||[]).map(s=>ESC(s.text)+(s.min?` <i>(${planMin(s.min)})</i>`:"")).join(" ")}</span></li>`).join("");
+  const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"};
+  const steps=ds.filter(x=>(x.steps||[]).length).map(x=>`<li><b>${ESC(x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">Prep ${planMin(x.prep_min||0)}${x.cook_min?`, cook ${planMin(x.cook_min)}`:""}${x.make_ahead?`. Make ahead: ${ESC(x.make_ahead)}`:""}</span><span>${(x.steps||[]).map(s=>ESC(s.text)+(s.min?` <i>(${planMin(s.min)})</i>`:"")).join(" ")}</span></li>`).join("");
   return `<div class="mc-bg">${d.bg}</div><div class="mc-grain" style="background-image:url('${GRAIN}')"></div>
   <div class="mc-in pp">
     <div class="mc-eye">Prep sheet</div>
@@ -1623,7 +1623,7 @@ function lightboxes(){
 }
 
 /* craving: start from the food, find the film */
-const CRAVES=[["Wings",/\bwings?\b/i],["Pizza",/pizza|calzone|stromboli/i],["Burgers",/burger|slider/i],["Tacos",/taco|burrito|nacho|quesadilla|enchilada|fajita|tamale|churro/i],["Hot dogs",/hot ?dog|frankfurt|\bfranks?\b|bratwurst|sausage|snag/i],["Fried chicken",/fried chicken|chicken tender|nugget|popcorn chicken|schnitzel/i],["BBQ",/bbq|barbecue|brisket|\bribs?\b|pulled pork|smoked/i],["Steak",/steak|rib roast|scotch fillet|sirloin|t-bone/i],["Roasts",/\broast\b|roast (beef|chicken|lamb|turkey|pork|beast)|turkey|ham\b/i],["Pasta",/pasta|spaghetti|lasagn|linguine|penne|macaroni|mac and cheese|ravioli|gnocchi|fettuccine|carbonara|rigatoni|meatball/i],["Noodles",/noodle|ramen|pho\b|lo mein|pad thai|udon|chow mein|pancit|laksa/i],["Dumplings",/dumpling|gyoza|wonton|bao|potsticker|mandu|momo/i],["Sushi",/sushi|sashimi|maki|onigiri/i],["Curry",/curry|tikka|masala|korma|vindaloo|dal\b|dhal/i],["Seafood",/prawn|shrimp|\bfish|crab|lobster|oyster|calamari|squid|clam|mussel|salmon|tuna|pippi|scallop|chowder/i],["Fish and chips",/fish and chips|fish & chips|battered fish/i],["Pies",/\bpies?\b|pasty|pasties|pot pie/i],["Sandwiches",/sandwich|sub\b|hoagie|cheesesteak|po' ?boy|toastie|club\b|reuben|banh mi/i],["Breakfast",/pancake|waffle|bacon and egg|eggs benedict|french toast|breakfast|omelette|hash brown|fry-up|scrambled/i],["Fries",/\bfries\b|\bchips\b|wedges|tater/i],["Cheese",/cheese board|cheese platter|fondue|mac and cheese|grilled cheese|toasted cheese|raclette/i],["Ice cream",/ice cream|sundae|gelato|milkshake|banana split|float/i],["Chocolate",/chocolate|brownie|fudge|cocoa/i],["Cake",/\bcake|cupcake|cheesecake|gateau|torte/i],["Donuts",/donut|doughnut|beignet|churro|zeppole/i],["Cookies",/cookie|biscuit|shortbread|snickerdoodle/i],["Popcorn",/popcorn/i]];
+const CRAVES=[["Wings",/\bwings?\b/i],["Pizza",/pizza|calzone|stromboli/i],["Burgers",/burger|slider/i],["Tacos",/taco|burrito|nacho|quesadilla|enchilada|fajita|tamale|churro/i],["Hot dogs",/hot ?dog|frankfurt|\bfranks\b|bratwurst|\bsnags?\b|sausage sizzle|\bdogs?\b(?= with| on| in|$)|corn dog|chili dog|chilli dog/i],["Fried chicken",/fried chicken|chicken tender|nugget|popcorn chicken|schnitzel/i],["BBQ",/bbq|barbecue|brisket|\bribs\b|rib tips|short ribs|spare ?ribs|baby back|pulled pork|burnt ends|smoked (brisket|ribs|pork|sausage|chicken|beef)/i],["Steak",/steak|rib roast|scotch fillet|sirloin|t-bone/i],["Roasts",/\broast (beef|chicken|lamb|turkey|pork|beast|dinner|leg|rack|shoulder)|\broast\b(?! (capsicum|peppers?|vegetables?|veg|pumpkin|tomato(es)?|garlic|potato(es)?|sweet potato(es)?|carrots?|beetroots?|corn|chestnuts?|marshmallows?|nuts?|grapes?|cauliflower|squash|onions?|fennel)\b)|\bturkey\b|\bglazed ham\b|\bbaked ham\b/i],["Pasta",/pasta|spaghetti|lasagn|linguine|penne|macaroni|mac and cheese|ravioli|gnocchi|fettuccine|carbonara|rigatoni|meatball/i],["Noodles",/noodle|ramen|pho\b|lo mein|pad thai|udon|chow mein|pancit|laksa/i],["Dumplings",/dumpling|gyoza|wonton|bao|potsticker|mandu|momo/i],["Sushi",/sushi|sashimi|maki|onigiri/i],["Curry",/curry|tikka|masala|korma|vindaloo|dal\b|dhal/i],["Seafood",/prawn|shrimp|\bfish|crab|lobster|oyster|calamari|squid|clam|mussel|salmon|tuna|pippi|scallop|chowder/i],["Fish and chips",/fish and chips|fish & chips|battered fish/i],["Pies",/\bpies?\b|pasty|pasties|pot pie/i],["Sandwiches",/sandwich|sub\b|hoagie|cheesesteak|po' ?boy|toastie|club\b|reuben|banh mi/i],["Breakfast",/pancake|waffle|bacon and egg|eggs benedict|french toast|breakfast|omelette|hash brown|fry-up|scrambled/i],["Fries",/\bfries\b|hot chips|(?<!(corn|tortilla|potato|pita|bagel|kale|banana|apple|plantain|taro|prawn|vegetable|veggie|chocolate|choc) )\bchips\b|potato wedges|(?<!(watermelon|lemon|lime|orange|apple|melon|cheese|tomato|pineapple) )\bwedges\b|tater/i],["Cheese",/cheese board|cheese platter|fondue|mac and cheese|grilled cheese|toasted cheese|raclette/i],["Ice cream",/ice cream|sundae|gelato|milkshake|banana split|float/i],["Chocolate",/chocolate|brownie|fudge|cocoa/i],["Cake",/(?<!(crab|fish|rice|potato|corn|salmon|prawn|cod|oat|tuna|zucchini|sweetcorn|pea) )\bcakes?\b|cupcake|cheesecake|gateau|torte/i],["Donuts",/donut|doughnut|beignet|churro|zeppole/i],["Cookies",/cookie|biscuit|shortbread|snickerdoodle/i],["Popcorn",/popcorn/i]];
 let craveSel=null,craveHits=[];
 const craveRx=q=>{const w=q.trim().toLowerCase().replace(/[^a-z0-9 '&-]/g,"");if(!w)return null;const stem=w.replace(/(es|s)$/,"");return new RegExp(stem.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"),"i")};
 /* dish names and notes load after the page settles: the shop's seasonal shelves and the Candy bar use them */
@@ -1640,13 +1640,13 @@ function ensureNotes(){
 let _notesOK=false;
 function renderCrave(){
   if(!_notesOK){$("craveChips").innerHTML='<p class="crave-empty">Reading the board...</p>';ensureNotes().then(()=>{_notesOK=true;renderCrave()});return}
-  if(!window.__craveN){window.__craveN={};CRAVES.forEach(([n,rx])=>{window.__craveN[n]=FILMS.filter(f=>["S","M","W","K"].some(k=>(f[k]||[]).some(it=>rx.test(it[0])||rx.test(it[1]||"")))).length})}
+  if(!window.__craveN){window.__craveN={};CRAVES.forEach(([n,rx])=>{window.__craveN[n]=FILMS.filter(f=>["S","M","W","K"].some(k=>(f[k]||[]).some(it=>rx.test(it[0])))).length})}
   $("craveChips").innerHTML=CRAVES.map(([n])=>`<button type="button" aria-pressed="${craveSel===n}" data-crave="${ESC(n)}"><span>${ESC(n)}</span><b>${window.__craveN[n]}</b></button>`).join("");
   const typed=$("craveSearch").value;let rx=null,label="";
   if(typed.trim()){rx=craveRx(typed);label=typed.trim()}else if(craveSel){rx=CRAVES.find(c=>c[0]===craveSel)[1];label=craveSel.toLowerCase()}
   if(!rx){craveHits=[];$("craveCount").textContent="";$("craveSpin").hidden=true;$("craveGrid").innerHTML='<p class="crave-empty">Tap something on the board to see which films serve it.</p>';return}
   craveHits=[];
-  for(const f of FILMS){if(kidsMode&&!isKidSafe(f))continue;if(!onSvc(f,svc))continue;const d=[];for(const k of["S","M","W","K"])for(const it of f[k]||[])if(rx.test(it[0])||rx.test(it[1]||""))d.push(it[0]);if(d.length)craveHits.push([f,d])}
+  for(const f of FILMS){if(kidsMode&&!isKidSafe(f))continue;if(!onSvc(f,svc))continue;const d=[];for(const k of["S","M","W","K"])for(const it of f[k]||[])if(rx.test(it[0]))d.push(it[0]);if(d.length)craveHits.push([f,d])}
   craveHits.sort((a,b)=>b[1].length-a[1].length||a[0].title.localeCompare(b[0].title));
   $("craveCount").textContent=craveHits.length?`Combo deal: ${label} with your pick of ${craveHits.length} film${craveHits.length>1?"s":""}`:"";
   $("craveSpin").hidden=craveHits.length<2;
@@ -1665,7 +1665,7 @@ $("craveSpin").addEventListener("click",()=>{const tapes=[...$("craveGrid").quer
 function setView(v){
   const shop=v==="shop",crave=v==="crave";$("viewShop").hidden=!shop;$("viewCrave").hidden=!crave;$("viewWheel").hidden=shop||crave;
   $("viewShopBtn").setAttribute("aria-selected",shop);$("viewCraveBtn").setAttribute("aria-selected",crave);$("viewWheelBtn").setAttribute("aria-selected",!shop&&!crave);
-  if(crave)renderCrave();
+  if(crave){renderCrave();renderSnacks()}
   document.body.classList.toggle("in-shop",shop);
   try{localStorage.setItem("mns-view",v)}catch(e){}
   if(shop&&!window.__inShop){sfx.chime();const sh=$("viewShop");sh.classList.remove("lightson");void sh.offsetWidth;sh.classList.add("lightson")}window.__inShop=shop;
@@ -2047,3 +2047,27 @@ function prepClean(c){c.querySelectorAll(".pp-done").forEach(x=>x.classList.remo
  const wb=document.querySelector(".wheel-box");if(wb)wb.addEventListener("click",skip,true);
  $("theatre").addEventListener("click",skip);
  document.addEventListener("keydown",e=>{if(e.key==="Escape"&&(spinning||$("tease").classList.contains("leader")))skip()});}
+
+/* the snack counter: real movie snacks, bought or made, added to tonight's film; they plan, scale and shop like its dishes */
+const SNACK_BY=()=>{if(!window._snackBy){window._snackBy={};(window.SNACKS||[]).forEach(x=>{window._snackBy[x.id]=x})}return window._snackBy};
+function snackPicks(f){try{return JSON.parse(localStorage.getItem("mns-snacks-"+f.id)||"[]").filter(id=>SNACK_BY()[id])}catch(e){return []}}
+function snackSave(f,ids){try{ids.length?localStorage.setItem("mns-snacks-"+f.id,JSON.stringify(ids)):localStorage.removeItem("mns-snacks-"+f.id)}catch(e){}}
+function snackDishes(f){if(!f)return [];return snackPicks(f).map(id=>{const x=SNACK_BY()[id];return {n:x.n,course:"c",prep_min:x.prep_min,cook_min:x.cook_min,make_ahead:x.make_ahead,ingredients:x.ingredients,steps:x.steps,veg:x.veg,af:true,snack:x.id}})}
+let snackCat="All";
+function renderSnacks(){
+  const box=$("snackCounter");if(!box)return;const f=current;const on=new Set(f?snackPicks(f):[]);
+  const cats=["All",...new Set((window.SNACKS||[]).map(x=>x.cat))];
+  const list=(window.SNACKS||[]).filter(x=>snackCat==="All"||x.cat===snackCat);
+  box.innerHTML=`<div class="sc-head"><h2 class="sc-t">The snack counter</h2><p class="sc-sub">Real movie snacks. Tap Add and they go on ${f?`tonight's film, <b>${ESC(f.title)}</b>`:"tonight's film"}: the prep sheet, the shopping list and Lock it in.</p></div>
+  <div class="sc-cats" role="group" aria-label="Snack type">${cats.map(c=>`<button type="button" data-sc-cat="${ESC(c)}" aria-pressed="${c===snackCat}">${ESC(c)}</button>`).join("")}</div>
+  <ul class="sc-list">${list.map(x=>`<li class="sc-item${on.has(x.id)?" on":""}"><div class="sc-n"><span>${ESC(x.n)}</span><small>${ESC(x.note)}</small></div><em class="sc-kind ${x.kind}">${x.kind==="make"?"Make it":"Buy it"}</em><button type="button" class="sc-add" data-snack="${ESC(x.id)}" aria-pressed="${on.has(x.id)}" aria-label="${on.has(x.id)?"Remove":"Add"} ${ESC(x.n)}">${on.has(x.id)?"Added":"Add"}</button></li>`).join("")}</ul>
+  <div class="sc-bar"${on.size?"":" hidden"}><span>${on.size} snack${on.size===1?"":"s"} on ${f?ESC(f.title):"tonight's film"}</span><button type="button" class="sc-go" data-sc-go="1">See the shopping list</button></div>`;
+}
+document.addEventListener("click",e=>{
+  const box=$("snackCounter");if(!box||!box.contains(e.target))return;
+  const c=e.target.closest("[data-sc-cat]");if(c){snackCat=c.dataset.scCat;renderSnacks();const b=box.querySelector(`[data-sc-cat="${CSS.escape(snackCat)}"]`);if(b)b.focus();return}
+  const a=e.target.closest("[data-snack]");if(a&&current){const ids=snackPicks(current),id=a.dataset.snack,i=ids.indexOf(id);if(i<0)ids.push(id);else ids.splice(i,1);snackSave(current,ids);
+    try{if(current._r2){planWire(current);prep.innerHTML=prepHTML(current,current.menu)}}catch(err){}
+    renderSnacks();buzz(15);const b=box.querySelector(`[data-snack="${CSS.escape(id)}"]`);if(b)b.focus();return}
+  if(e.target.closest("[data-sc-go]")){setView("wheel");setTab("prep");setTimeout(()=>{const pv=$("preview");if(pv)pv.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})},60)}
+});
