@@ -2,7 +2,7 @@
 function fmtNoodle(f,spec,menu,poster){
   const INK="#2a1a10",RED="#a8322a",GOLD="#e8c46a",RICE="#f4ecd8",NOTE="#5c4632";
   const ZH="font-family:'LXGW WenKai TC',serif",SC="font-family:'Marcellus SC',serif",BODY="font-family:'Alegreya',serif";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const items=[...spec.colA,...spec.colB].flatMap(g=>g.items);
   const WOOD="background:repeating-linear-gradient(90deg,rgba(0,0,0,.22) 0 2px,transparent 2px 74px),repeating-linear-gradient(90deg,rgba(255,220,170,.04) 0 9px,rgba(0,0,0,.04) 9px 17px),linear-gradient(#6e4126,#5a3420)";
   const tablet=(x,i)=>`<div style="position:relative;display:flex;flex-direction:column;align-items:center">

@@ -5,7 +5,7 @@ function fmtMcdowells(f,spec,menu,poster){
   const at=(x,y,w,s='')=>`position:absolute;left:${x}px;top:${y}px;width:${w}px;${s}`;
   const micro=(t,c=R)=>`<div style="${T};font-size:10px;font-weight:700;letter-spacing:.1em;line-height:1.35;text-transform:uppercase;color:${c}">${ESC(t)}</div>`;
   const art=spec.art||{},image=(k,w='w780')=>TMDB_IMG+w+art[k];
-  const pick=x=>menu.all.find(it=>it.n===x.k)||{};
+  const pick=x=>menu.all.find(it=>(it.orig||it.n)===x.k)||{};
   const label=x=>ESC(pick(x).label||x.n||x.k);
   const snacks=spec.groups[0].items,main=spec.groups[1].items[0],sweet=spec.groups[2].items[0],drink=spec.groups[3].items[0];
   const dish=(x,y,w,item,kicker)=>`<article style="${at(x,y,w)}">${micro(kicker)}<h3 style="margin:8px 0 0;${B};font-size:22px;line-height:1.12;letter-spacing:-.025em;font-weight:700;color:${R}">${label(item)}</h3><div style="${B};font-size:12.5px;line-height:1.5;color:${I};margin-top:7px">${ESC(item.d)}</div></article>`;

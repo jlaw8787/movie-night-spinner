@@ -301,7 +301,7 @@ function ensureExact(f){
     for(let tryN=0;tryN<2;tryN++){
       try{const r=await fetch(filmFile(f));if(!r.ok)break;const d=await r.json();
         Object.assign(f,{T:d.T,D:d.D,P:d.P,S:d.S,M:d.M,W:d.W,K:d.K,_full:true});
-        if(d.edition)EDITIONS[f.id]=d.edition;if(d.recipe)RECIPE_MENUS[f.id]=d.recipe;if(d.lib)f._lib=d.lib;if(d.r2)f._r2=d.r2;return}
+        if(d.edition)EDITIONS[f.id]=d.edition;if(d.recipe)RECIPE_MENUS[f.id]=d.recipe;if(d.lib)f._lib=d.lib;if(d.r2)f._r2=d.r2;if(d.diet)f._diet=d.diet;return}
       catch(e){}
     }
     delete _filmLoads[f.id];
@@ -313,7 +313,8 @@ function ensureExact(f){
 function prefetchFilms(list){const go=()=>list.slice(0,6).forEach(f=>ensureExact(f));(window.requestIdleCallback||setTimeout)(go,{timeout:3000})}
 const exactMenu=f=>{const e=movieEdition(f);return e?e.menu:movieRecipe(f)};
 const toItem=([n,note,how,shop])=>({n,note,how,shop});
-function makeMenu(f,first){
+function makeMenu(f,first){const m=baseMenu(f,first);return typeof dietMenu==="function"?dietMenu(f,m):m}
+function baseMenu(f,first){
   const exact=exactMenu(f);
   if(exact)return JSON.parse(JSON.stringify(exact));
   if(first)return {s:f.S.slice(0,2).map(toItem),m:f.M.map(toItem),w:f.W.map(toItem),d:f.K.map(toItem)};
@@ -741,9 +742,58 @@ function dietDish(d){
   if(dietAF()&&dietBooze(x)){if(!tag&&alt.af){x=Object.assign({},d,alt.af,{orig:d.n,af:true});tag="af"}else return Object.assign({},x,{orig:d.n,blocked:"alcohol",tag})}
   return tag?Object.assign({},x,{tag}):x;
 }
+/* the printed menu follows the diet too: a swapped dish takes its own name, menu line, method and shopping, and film copy that names meat or drink is reworded */
+function dietKey(){const v=DIET.veg,a=dietAF();return v&&a?"veg_af":v?"veg":a?"af":""}
+function dietWhich(d,x){const alt=d.alt||{};if(!x.tag)return "";if(x.tag==="af")return "af";return alt.veg_af&&x.n===alt.veg_af.n?"veg_af":"veg"}
+function dietShop(x){return (x.ingredients||[]).map(i=>`${i.u?planQty(i.q,i.u):planQty(i.q,"")} ${i.item}@${i.aisle||"Other"}`.trim())}
+function dietItem(f,it){
+  const r2=f&&f._r2&&f._r2.dishes;if(!r2||!it||!dietKey())return it;
+  const d=r2.find(z=>z.n===(it.k||it.n));if(!d)return it;
+  const x=dietDish(d);if(x.blocked)return Object.assign({},it,{blocked:x.blocked,orig:d.n});
+  if(!x.tag)return it;
+  const v=dietWhich(d,x),N=(f._diet&&f._diet.notes&&f._diet.notes[d.n])||{};
+  const note=N[v]||(v==="veg_af"?N.veg:"")||"";
+  const nm=String(x.n).replace(/\s*\((vegetarian|alcohol[- ]free|vegetarian, alcohol[- ]free)\)\s*$/i,"");
+  return Object.assign({},it,it.label!=null&&it.label===d.n?{label:dietText(f,d.n)!==d.n?dietText(f,d.n):nm.length<=d.n.length+2?nm:d.n}:{},{n:String(x.n).replace(/\s*\((vegetarian|alcohol[- ]free|vegetarian, alcohol[- ]free)\)\s*$/i,""),note,orig:d.n,how:(x.steps||[]).map(t=>t.text).join(" "),shop:dietShop(x),diet:v});
+}
+function dietMenu(f,menu){
+  if(!menu||!dietKey()||!f||!f._r2)return menu;
+  const m=Object.assign({},menu);for(const c of ["s","m","w","d"])if(Array.isArray(menu[c]))m[c]=menu[c].map(it=>dietItem(f,it));
+  if(Array.isArray(menu.all))m.all=menu.all.map(it=>dietItem(f,it));
+  if(Array.isArray(menu.shopping))m.shopping=[...m.s,...m.m,...m.w,...m.d].flatMap(it=>Array.isArray(it.shop)?it.shop:[]);
+  m.diet=dietKey();return m;
+}
+/* film copy reworded for the diet: data/diet/<film>.json "text" holds [from, to] pairs per diet */
+function dietText(f,str){
+  const k=dietKey();if(!k||typeof str!=="string"||!f||!f._diet||!f._diet.text)return str;
+  const T=f._diet.text,lists=k==="veg_af"?[T.veg_af,T.veg,T.af]:[T[k]];let out=str;
+  const pairs=[];for(const L of lists)for(const [a,b] of (L||[]))if(a)pairs.push([a,b]);
+  pairs.forEach(([a],i)=>{if(out.includes(a))out=out.split(a).join("\u0001"+i+"\u0002")});
+  return out.replace(/\u0001(\d+)\u0002/g,(m,i)=>pairs[+i][1]);
+}
+/* the hand-built menus are finished artwork with the words baked in, so the same swaps run over the page itself */
+function dietHTML(f,html){
+  const k=dietKey();if(!k||typeof html!=="string"||!f||!f._diet||!f._diet.text)return html;
+  const T=f._diet.text,lists=k==="veg_af"?[T.veg_af,T.veg,T.af]:[T[k]];let out=html;
+  const esc=t=>String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  /* each swap lands once: matches become placeholders first, so wording that contains the old wording is never swapped again */
+  const pairs=[],miss=[];for(const L of lists)for(const [a,b] of (L||[]))if(a)pairs.push([a,b]);
+  pairs.forEach(([a,b],i)=>{const tok="\u0001"+i+"\u0002";let hit=false;
+    for(const [x] of new Map([[a],[esc(a)],[esc(a).replace(/'/g,"&#39;")],[esc(a).replace(/'/g,"&#x27;")],[esc(a).replace(/"/g,"&quot;")]].map(v=>[v[0],1])))if(out.includes(x)){out=out.split(x).join(tok);hit=true}
+    if(!hit)miss.push(i)});
+  /* words written with character codes in the artwork: swap them in the page's own text */
+  if(miss.length&&typeof document!=="undefined"&&document.createElement){try{const t=document.createElement("template");t.innerHTML=out;const w=document.createTreeWalker(t.content,NodeFilter.SHOW_TEXT);let n,ch=false;
+    while(n=w.nextNode()){let v=n.nodeValue;for(const i of miss){const a=pairs[i][0];if(v.includes(a))v=v.split(a).join("\u0001"+i+"\u0002")}if(v!==n.nodeValue){n.nodeValue=v;ch=true}}if(ch)out=t.innerHTML}catch(e){}}
+  return out.replace(/\u0001(\d+)\u0002/g,(m,i)=>{const b=pairs[+i][1];return esc(b)});
+}
+function dietDeep(f,o){if(typeof o==="string")return dietText(f,o);if(Array.isArray(o))return o.map(x=>dietDeep(f,x));if(o&&typeof o==="object"){const r={};for(const k in o)r[k]=k==="k"?o[k]:dietDeep(f,o[k]);return r}return o}
+const _dietSpecs=new WeakMap();
+function dietSpec(f,spec){if(!spec||!dietKey()||!f._diet)return spec;let c=_dietSpecs.get(spec);if(!c){c={};_dietSpecs.set(spec,c)}const k=dietKey();return c[k]||(c[k]=dietDeep(f,spec))}
+function dietStamp(){const b=$("dietNote");if(!b)return;const t=dietLabel();b.textContent=t?t+" menu":"";b.hidden=!t}
+function dietLabel(){const k=dietKey();return k==="veg_af"?"Vegetarian · Alcohol-free":k==="veg"?"Vegetarian":k==="af"?"Alcohol-free":""}
 /* lazy night: plan only the dishes left on the cut-down menu */
 const planAll=f=>{const all=((f._r2&&f._r2.dishes)||[]).map(dietDish),m=f.menu||(typeof current!=="undefined"&&current===f?current.menu:null);
-  let out=all;if(m&&m.lazy){const keep=new Set([...m.s,...m.m,...m.w,...m.d].map(it=>it.n)),few=all.filter(d=>keep.has(d.orig||d.n));if(few.length)out=few}
+  let out=all;if(m&&m.lazy){const keep=new Set([...m.s,...m.m,...m.w,...m.d].map(it=>it.orig||it.n)),few=all.filter(d=>keep.has(d.orig||d.n));if(few.length)out=few}
   return out.concat(snackDishes(f).map(dietDish))};
 const planOn=x=>x.blocked?!!PLAN.on[x.orig]:!PLAN.off[x.orig||x.n];
 const planDishes=f=>planAll(f).filter(planOn);
@@ -924,7 +974,7 @@ async function show(f,preferSig){
   if(spec){
     await fmtFontsReady(spec);if(id!==renderId)return;
     menu=fmtMenu(f,spec);menu.counter=counterShop(f.id);current.menu=menu;
-    styleCard(card,f);card.className="mcard fmt fmt-"+spec.fmt;card.style.transform="";card.innerHTML=fmtHTML(f,spec,menu);{const sh=fmtSheet(spec);if(sh){const z=fmtSheetSize(sh);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}}fmtStarsPNG(card);fmtTilesPNG(card);await fmtPhotocopy(card);if(id!==renderId)return;
+    styleCard(card,f);card.className="mcard fmt fmt-"+spec.fmt;card.style.transform="";card.innerHTML=fmtHTML(f,spec,menu);dietStamp();{const sh=fmtSheet(spec);if(sh){const z=fmtSheetSize(sh);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}}fmtStarsPNG(card);fmtTilesPNG(card);await fmtPhotocopy(card);if(id!==renderId)return;
     try{const im=card.querySelector(".fx-poster");if(im)await im.decode()}catch(e){}
     if(id!==renderId)return;
     styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);
@@ -935,9 +985,9 @@ async function show(f,preferSig){
   }
   if(f._lib&&await libLoad(f._lib.fmt)&&id===renderId){
     try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
-      const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f,menu:libMenu(menu),poster:lobbyPoster(f),stills:L.stills||[],logo:L.logo,palette:L.palette,flavour:L.flavour,era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
+      const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f:dietKey()?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietText(f,f.P),D:dietText(f,f.D)}):f,menu:libMenu(menu),poster:lobbyPoster(f),stills:L.stills||[],logo:L.logo,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
       const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
-      styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);
+      styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);dietStamp();
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       try{libAim(card,L)}catch(e){}
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;

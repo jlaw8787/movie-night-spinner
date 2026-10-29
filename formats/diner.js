@@ -2,7 +2,7 @@
 function fmtDiner(f,spec,menu,poster){
   const RED="#c41e2a",NAVY="#1f3a7a",CREAM="#fbf5e6",INK="#241a14",NOTE="#5b4a3c",MUSTARD="#f2b632";
   const SCRIPT="font-family:'Yellowtail',cursive;font-weight:400",SLAB="font-family:'Alfa Slab One',serif;font-weight:400",BODY="font-family:'Arvo',serif",HAND="font-family:'Kalam',cursive";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};let no=0;
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};let no=0;
   const header=t=>`<div style="display:flex;align-items:baseline;justify-content:center;gap:10px;background:${NAVY};color:#fff;padding:7px 10px 6px;box-shadow:0 0 0 2px ${CREAM},0 0 0 4px ${RED}"><span style="${SLAB};font-size:20px;letter-spacing:.03em;white-space:nowrap">${ESC(t)}</span></div>`;
   const dish=x=>{const it=pick(x.k);no++;
     const inner=`<div style="display:flex;align-items:center;gap:9px"><span style="flex:none;width:25px;height:25px;border-radius:50%;background:${RED};color:#fff;display:grid;place-items:center;${SLAB};font-size:13px">${no}</span><span style="${BODY};font-weight:700;font-size:17.5px;line-height:1.1;white-space:nowrap;letter-spacing:-.01em">${ESC(it.label||x.n||x.k)}</span><span style="flex:1;border-bottom:2px dotted rgba(36,26,20,.45);transform:translateY(4px);min-width:8px"></span><span style="${SLAB};font-size:17px;color:${RED}">${ESC(x.p)}</span></div>

@@ -2,7 +2,7 @@
 function fmtFeast(f,spec,menu,poster){
   const INK="#2a1f18",RED="#9a2b22",GRN="#2f5d3a",CARD="#f7f0de",NOTE="#5d4c3e",GOLD="#b8954f";
   const SCRIPT="font-family:'Italianno',cursive;font-weight:400",DISP="font-family:'Bodoni Moda',serif",BODY="font-family:'Libre Baskerville',serif";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const dish=x=>{const it=pick(x.k);return `<div><div style="display:flex;align-items:baseline;gap:8px"><span style="${DISP};font-weight:700;font-size:20px;line-height:1.15;color:${INK};white-space:nowrap">${ESC(x.it||it.label||x.k)}</span><span style="flex:1;border-bottom:1px dotted rgba(42,31,24,.5);min-width:10px;transform:translateY(-4px)"></span><span style="${DISP};font-weight:700;font-size:18px;color:${RED}">${ESC(x.p)}</span></div><div style="${BODY};font-style:italic;font-size:14px;line-height:1.35;color:${NOTE};margin-top:2px">${ESC(it.label||x.n||x.k)}. ${ESC(x.note)}</div></div>`};
   const sect=g=>`<div style="display:flex;flex-direction:column;gap:12px"><div style="display:flex;align-items:center;gap:12px"><span style="${SCRIPT};font-size:42px;line-height:.9;color:${RED};white-space:nowrap">${ESC(g.h)}</span><span style="flex:1;height:1px;background:${GOLD}"></span><span style="${DISP};font-size:12px;letter-spacing:.2em;color:${GRN};text-transform:uppercase;white-space:nowrap">${ESC(g.en)}</span></div>${g.items.map(dish).join("")}</div>`;
   const flag=`<div aria-hidden="true" style="display:flex;height:6px"><i style="flex:1;background:${GRN}"></i><i style="flex:1;background:#fff"></i><i style="flex:1;background:${RED}"></i></div>`;

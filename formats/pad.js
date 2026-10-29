@@ -2,7 +2,7 @@
 function fmtPad(f,spec,menu,poster){
   const INK="#1b2a6b",RED="#b8262b",PAD="#fbf6df",DARK="#1c1410";
   const HAND="font-family:'Covered By Your Grace',cursive;font-weight:400",TYPE="font-family:'Courier Prime',monospace";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const L=40;
   const all=spec.groups.flatMap(g=>g.items);
   const lines=(spec.padLines||all.map(x=>({k:x.k}))).map(l=>l.k?Object.assign({},all.find(x=>x.k===l.k)):l);

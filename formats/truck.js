@@ -2,7 +2,7 @@
 function fmtTruck(f,spec,menu,poster){
   const CHALK="#f3f1ea",YEL="#ffd24a",ORA="#f07a2a",TEAL="#2fb6a8",PINK="#ff8fb1",BOARD="#1f2523";
   const DISP="font-family:'Fredericka the Great',serif;font-weight:400",HEAD="font-family:'Amatic SC',sans-serif;font-weight:700",HAND="font-family:'Patrick Hand',cursive;font-weight:400",TRUCK="font-family:'Bungee',sans-serif;font-weight:400";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const cols=[YEL,TEAL,PINK,ORA];
   const dish=(x,c)=>{const it=pick(x.k);return `<div><div style="display:flex;align-items:baseline;gap:10px"><span style="${DISP};font-size:25px;line-height:1.05;color:${CHALK};white-space:nowrap">${ESC(it.label||x.n||x.k)}</span><span style="flex:1;border-bottom:2px dashed rgba(243,241,234,.35);min-width:10px;transform:translateY(-6px)"></span><span style="${DISP};font-size:25px;color:${c}">${ESC(x.p)}</span></div><div style="${HAND};font-size:19px;line-height:1.2;color:rgba(243,241,234,.86);margin-top:2px">${ESC(x.note)}</div></div>`};
   const sect=(g,i)=>`<div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:0 16px;align-items:start"><div style="${HEAD};font-size:32px;line-height:1.1;letter-spacing:.04em;color:${cols[i%4]};border-bottom:2px solid ${cols[i%4]};padding-bottom:2px">${ESC(g.h)}</div><div style="display:flex;flex-direction:column;gap:10px">${g.items.map(x=>dish(x,cols[i%4])).join("")}</div></div>`;

@@ -2,7 +2,7 @@
 function fmtCheck(f,spec,menu,poster){
   const GRN="#2f6b45",PAD="#f2f6ea",INK="#1d2e8f",DARK="#1f2a22",RED="#b8262b",LINE="rgba(47,107,69,.28)";
   const PRINT="font-family:'Archivo Narrow',sans-serif",HAND="font-family:'Homemade Apple',cursive;font-weight:400",BODY="font-family:'Libre Franklin',sans-serif",DISP="font-family:'DM Serif Display',serif;font-weight:400";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const L=50;
   const row=x=>{const it=pick(x.k);const mods=(x.mods||[]).map(m=>`<div style="${HAND};font-size:16px;line-height:${L/2}px;color:${INK};padding-left:18px">${ESC(m)}</div>`).join("");
     return `<div style="display:grid;grid-template-columns:44px minmax(0,1fr) 74px;border-bottom:1px solid ${LINE}"><span style="${HAND};font-size:17px;line-height:${L}px;color:${INK};text-align:center">${ESC(x.q||"4")}</span><div><div style="${HAND};font-size:20px;line-height:${L}px;color:${INK};white-space:nowrap">${ESC(it.label||x.n||x.k)}</div>${mods}<div style="${BODY};font-size:13.5px;line-height:1.3;color:#5a6a5e;padding:0 0 6px 2px;font-style:italic">${ESC(x.note)}</div></div><span style="${HAND};font-size:17px;line-height:${L}px;color:${INK};text-align:right;padding-right:10px">${ESC(x.p)}</span></div>`};

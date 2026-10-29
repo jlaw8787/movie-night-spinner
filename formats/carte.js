@@ -2,7 +2,7 @@
 function fmtCarte(f,spec,menu,poster){
   const INK="#2b1d16",GOLD="#b08d4a",WINE="#6d1a24",CARD="#fbf6ea",NOTE="#5e4a3a";
   const SCRIPT="font-family:'Pinyon Script',cursive;font-weight:400",SC="font-family:'Cormorant SC',serif",BODY="font-family:'Cormorant Garamond',serif";
-  const pick=k=>menu.all.find(x=>x.n===k)||{};
+  const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const orn=`<div aria-hidden="true" style="display:flex;align-items:center;justify-content:center;gap:10px;color:${GOLD}"><span style="width:60px;height:1px;background:${GOLD}"></span><span style="font-size:13px">&#10022;</span><span style="width:60px;height:1px;background:${GOLD}"></span></div>`;
   const dish=x=>{const it=pick(x.k);return `<div style="text-align:center"><div style="${SC};font-weight:600;font-size:21px;line-height:1.1;letter-spacing:.03em;color:${INK}">${ESC(x.fr||it.label||x.k)}</div><div style="${BODY};font-style:italic;font-size:16px;line-height:1.25;color:${NOTE};margin-top:2px">${ESC(it.label||x.n||x.k)}${x.p?` &nbsp;·&nbsp; <span style="font-style:normal;color:${WINE}">${ESC(x.p)}</span>`:""}</div><div style="${BODY};font-size:15.5px;line-height:1.3;color:${NOTE};margin-top:2px">${ESC(x.note)}</div></div>`};
   const sect=g=>`<div style="display:flex;flex-direction:column;gap:14px"><div style="text-align:center"><div style="${SCRIPT};font-size:34px;line-height:1;color:${WINE}">${ESC(g.h)}</div><div style="${SC};font-size:12.5px;letter-spacing:.24em;color:${GOLD};margin-top:2px">${ESC(g.en)}</div></div>${g.items.map(dish).join("")}</div>`;
