@@ -302,6 +302,8 @@ body::after{content:none}
 .mr-films{list-style:none;margin:0 0 6px;padding:0;display:grid;gap:4px}
 .mr-films label{display:flex;gap:10px;align-items:center;font-size:14.5px;min-height:36px;cursor:pointer}
 .mr-films input{width:20px;height:20px;accent-color:var(--velvet);flex:none}
+.trolley .mr-films li input:checked+span{text-decoration:none;color:var(--velvet-2)}
+.mr-films input:not(:checked)~*{opacity:.45;text-decoration:line-through}
 .mr-films .n{font:700 13px var(--f-body);color:var(--velvet-2);min-width:1.6em}
 .df .msg{font-size:13px;color:#5b4f44;margin:8px 0 0}
 /* sync forms */
@@ -479,6 +481,8 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
 .theatre.closed .curtain{transform:translateX(0)}
 .theatre .tease{position:absolute;inset:0;z-index:7;display:flex;align-items:center;justify-content:center;font:clamp(18px,3vw,28px)/1.1 var(--f-board);color:var(--bulb);text-shadow:0 0 16px rgba(255,200,110,.6);opacity:0;transition:opacity .4s;pointer-events:none;text-align:center;padding:20px}
 .theatre.closed .tease{opacity:1;transition-delay:.6s}
+.theatre .skip-k{position:absolute;left:0;right:0;bottom:14px;z-index:8;text-align:center;font:600 13px var(--f-body);letter-spacing:.04em;color:rgba(255,236,200,.85);text-shadow:0 1px 6px rgba(0,0,0,.8);opacity:0;transition:opacity .3s;pointer-events:none}
+body.spinning .theatre.closed .skip-k,.theatre.closed .tease.leader~.skip-k{opacity:1}
 .easel{position:relative;transform-style:preserve-3d;transition:transform .25s ease-out;will-change:transform}
 .preview{position:relative;width:100%;overflow:hidden;border-radius:2px;box-shadow:0 28px 50px -10px rgba(0,0,0,.8),0 0 0 1px rgba(0,0,0,.4)}
 .preview .mcard{position:absolute;left:0;top:0;transform-origin:0 0}
@@ -879,6 +883,10 @@ select{font:inherit;font-weight:600;color:var(--screen);background:#1f0a10;borde
 .preview .mcard.pp-sheet .pp-title{font-size:clamp(26px,4.4vw,38px)}
 .preview .mcard.pp-sheet .pp-cols{font-size:16px;line-height:1.45;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:28px}
 .preview .mcard.pp-sheet .pp-method li{margin-bottom:.8em}
+.preview .mcard.pp-sheet .pp-aisle li[data-k]{cursor:pointer;border-radius:4px;padding:.25em .2em;margin:0 -.2em;-webkit-tap-highlight-color:transparent}
+.preview .mcard.pp-sheet .pp-aisle li[data-k]:focus-visible{outline:2px solid var(--hd);outline-offset:1px}
+.preview .mcard.pp-sheet .pp-aisle li.pp-done{text-decoration:line-through;opacity:.5}
+.preview .mcard.pp-sheet .pp-aisle li.pp-done .pp-box{background:currentColor;box-shadow:inset 0 0 0 2px var(--paper,#fff)}
 @media (max-width:700px){.preview .mcard.pp-sheet .mc-in.pp{padding:20px 16px 18px}.preview .mcard.pp-sheet .pp-cols{grid-template-columns:1fr;gap:20px;font-size:16px}.preview .mcard.pp-sheet .pp-serves{font-size:12px;margin:-4px 0 14px}}
 
 /* ===== era formats: landscape A4 spread ===== */
@@ -1210,6 +1218,7 @@ select{font:500 16px var(--f-body);letter-spacing:.01em}
 .crave .crave-chips button:hover span{color:#c8102e}
 .crave .crave-chips button[aria-pressed="true"]{background:#c8102e;color:#fff;border-radius:4px;padding-left:8px;padding-right:8px}
 .crave .crave-chips button[aria-pressed="true"] b,.crave .crave-chips button[aria-pressed="true"] b::after{color:#ffd23f}
+.crave .crave-chips button[aria-pressed="true"] span,.crave .crave-chips button[aria-pressed="true"]:hover span{color:#fff}
 @media (max-width:620px){.crave .crave-chips{grid-auto-flow:row;grid-template-rows:none;grid-template-columns:minmax(0,1fr) minmax(0,1fr);overflow:visible;gap:0 12px;padding:0}.crave .crave-chips button{font-size:13px;letter-spacing:.03em;min-width:0}.crave .crave-chips button span{min-width:0;overflow-wrap:anywhere}.crave .crave-chips button b::after{content:""}}
 .cb-search{margin:14px 0 4px}
 .cb-search input[type=search]{background:rgba(11,13,46,.85)!important;border:1px solid rgba(255,255,255,.18)!important}
@@ -1286,6 +1295,7 @@ select{font:500 16px var(--f-body);letter-spacing:.01em}
 .cb-hero{position:relative}
 .cb-pop{position:absolute;right:-34px;bottom:-30px;width:120px;transform:rotate(8deg);filter:drop-shadow(0 10px 14px rgba(0,0,0,.55));pointer-events:none;transition:transform .2s}
 .cb-pop.bounce{animation:popBounce .5s ease}
+@media (min-width:621px){.crave .cb-hero .crave-chips{padding-right:70px}}
 @keyframes popBounce{0%{transform:rotate(8deg) translateY(0)}35%{transform:rotate(2deg) translateY(-14px) scale(1.06)}100%{transform:rotate(8deg) translateY(0)}}
 @media (max-width:620px){.cb-pop{width:74px;bottom:-30px;right:-8px}.cb-photo{margin:-14px -14px 14px}}
 @media (prefers-reduced-motion:reduce){.cb-pop.bounce{animation:none}}
@@ -1630,7 +1640,7 @@ html{scroll-padding-top:var(--topH,84px)}
       <div class="theatre" id="theatre">
         <div class="valance" aria-hidden="true"></div>
         <div class="curtain l" aria-hidden="true"></div><div class="curtain r" aria-hidden="true"></div>
-        <div class="tease" aria-hidden="true" id="tease">Setting the table</div>
+        <div class="tease" aria-hidden="true" id="tease">Setting the table</div><div class="skip-k" aria-hidden="true">Tap to skip</div>
         <div class="easel" id="easel"><div class="preview" id="preview"></div><div class="glare" aria-hidden="true"></div></div>
         <div class="fmt-phone" id="fmtPhone" hidden></div>
       </div>
@@ -1665,7 +1675,7 @@ html{scroll-padding-top:var(--topH,84px)}
 <script src="providers.js?v=1403fceb" defer></script>
 <script src="films.js?v=606a4780" defer></script>
 <script src="formats-core.js?v=a8dfd3e7" defer></script>
-<script src="app.js?v=0c0c70f1" defer></script>
+<script src="app.js?v=d0bf3bbd" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

@@ -188,6 +188,8 @@ const SAVED=new Set();
 async function savedScan(){try{if(!("caches" in window))return;SAVED.clear();for(const k of await caches.keys()){const c=await caches.open(k);for(const r of await c.keys()){const m=new URL(r.url).pathname.match(/data\/film\/[^/]+\.json$/);if(m)SAVED.add(m[0])}}}catch(e){}}
 addEventListener("offline",savedScan);if(navigator.onLine===false)savedScan();
 function spinPool(){if(navigator.onLine!==false)return list;const ok=list.filter(f=>SAVED.has(filmFile(f)));return ok}
+/* tap to skip: a tap on the wheel or the curtain while it spins or counts down jumps straight to the menu */
+var skipReq=false;
 function spin(){
   if(spinning||!list.length)return;
   if(navigator.onLine===false&&!spinPool().length){const st=$("status");if(st)st.textContent="You're offline and no menus are saved on this device yet. Open a few films while you're online and they'll be here next time.";savedScan();return}
@@ -204,8 +206,9 @@ function spin(){
   const over=reduce?0:A*0.45,dur=reduce?900:6200,t0=performance.now();
   const easeOut=x=>1-Math.pow(1-x,4),easeIO=x=>x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;
   let last=indexAt(rot);
+  skipReq=false;
   function frame(now){
-    const p=Math.min(1,(now-t0)/dur);
+    const p=skipReq?1:Math.min(1,(now-t0)/dur);
     rot=p<.88?start+(delta+over)*easeOut(p/.88):start+delta+over*(1-easeIO((p-.88)/.12));
     const i=indexAt(rot);
     if(i!==last){last=i;kick=1;tick();$("now").textContent=wedges[i].title;phase++}
@@ -231,7 +234,7 @@ function closeCurtains(){theatre.classList.add("closed");$("tease").textContent=
 /* the old film-leader countdown on the curtain before it opens */
 function leader(done){
   const t=$("tease");if(reduce||!theatre.classList.contains("closed")){done();return}
-  t.classList.add("leader");let n=3;const step=()=>{if(n===0){t.classList.remove("leader");done();return}t.innerHTML=`<span class="ld"><b>${n}</b></span>`;tick();n--;setTimeout(step,420)};step();
+  t.classList.add("leader");let n=3;const step=()=>{if(n===0||skipReq){skipReq=false;t.classList.remove("leader");done();return}t.innerHTML=`<span class="ld"><b>${n}</b></span>`;tick();n--;setTimeout(step,420)};step();
 }
 function openCurtains(){setTimeout(()=>{if(theatre.classList.contains("closed"))sfx.swish();theatre.classList.remove("closed")},reduce?0:250)}
 const canTilt=!reduce&&window.matchMedia("(hover:hover) and (pointer:fine)").matches;
@@ -684,7 +687,7 @@ function fitPrep(el){
 /* an A4 copy of the prep sheet, fitted off screen, for print */
 function prepA4(){
   const stage=document.createElement("div");stage.style.cssText="position:fixed;left:-20000px;top:0;width:794px;height:1123px";
-  const c=prep.cloneNode(true);c.style.transform="none";c.hidden=false;stage.appendChild(c);document.body.appendChild(stage);
+  const c=prep.cloneNode(true);c.style.transform="none";c.hidden=false;prepClean(c);stage.appendChild(c);document.body.appendChild(stage);
   fitPrep(c);stage.remove();return c;
 }
 document.documentElement.style.setProperty("--grain",`url("${GRAIN}")`);
@@ -693,7 +696,7 @@ const card=document.createElement("div");card.className="mcard";preview.appendCh
 const prep=document.createElement("div");prep.className="mcard";prep.hidden=true;preview.appendChild(prep);
 function scalePreview(){const pw=preview.clientWidth;if(!pw)return;const land=card.classList.contains("fmt"),cw=+card.dataset.w||(land?1123:794),ch=+card.dataset.h||(land?794:1123),kc=pw/cw,kp=pw/794;card.style.transform=`scale(${kc})`;prep.style.transform="none";preview.style.height=tab==="prep"?"auto":ch*kc+"px"}
 let tab="menu";
-function setTab(t){tab=t;{const pb=$("planner");if(pb)pb.hidden=!(pb.dataset.has&&t==="prep")}if(t==="menu")phoneOn=true;card.hidden=t!=="menu";prep.hidden=t!=="prep";$("tabMenu").classList.toggle("on",t==="menu");$("tabPrep").classList.toggle("on",t==="prep");$("tabMenu").setAttribute("aria-selected",t==="menu");$("tabPrep").setAttribute("aria-selected",t==="prep");if(t==="prep"&&current){if(!prep.querySelector(".pp-cols")&&current.menu){try{styleCard(prep,current);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(current,current.menu)}catch(e){}}fitPrep(prep)}scalePreview();applyPhone()}
+function setTab(t){tab=t;{const pb=$("planner");if(pb)pb.hidden=!(pb.dataset.has&&t==="prep")}if(t==="menu")phoneOn=true;card.hidden=t!=="menu";prep.hidden=t!=="prep";$("tabMenu").classList.toggle("on",t==="menu");$("tabPrep").classList.toggle("on",t==="prep");$("tabMenu").setAttribute("aria-selected",t==="menu");$("tabPrep").setAttribute("aria-selected",t==="prep");if(window.__spinbarUpd)setTimeout(window.__spinbarUpd,0);if(t==="prep"&&current){if(!prep.querySelector(".pp-cols")&&current.menu){try{styleCard(prep,current);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(current,current.menu)}catch(e){}}fitPrep(prep)}scalePreview();applyPhone()}
 $("tabMenu").addEventListener("click",()=>setTab("menu"));
 $("tabPrep").addEventListener("click",()=>setTab("prep"));
 window.addEventListener("resize",()=>{scalePreview();applyPhone()});
@@ -733,7 +736,10 @@ function dietDish(d){
   if(dietAF()&&dietBooze(x)){if(!tag&&alt.af){x=Object.assign({},d,alt.af,{orig:d.n,af:true});tag="af"}else return Object.assign({},x,{orig:d.n,blocked:"alcohol",tag})}
   return tag?Object.assign({},x,{tag}):x;
 }
-const planAll=f=>((f._r2&&f._r2.dishes)||[]).map(dietDish);
+/* lazy night: plan only the dishes left on the cut-down menu */
+const planAll=f=>{const all=((f._r2&&f._r2.dishes)||[]).map(dietDish),m=f.menu||(typeof current!=="undefined"&&current===f?current.menu:null);
+  if(m&&m.lazy){const keep=new Set([...m.s,...m.m,...m.w,...m.d].map(it=>it.n)),few=all.filter(d=>keep.has(d.orig||d.n));if(few.length)return few}
+  return all};
 const planOn=x=>x.blocked?!!PLAN.on[x.orig]:!PLAN.off[x.orig||x.n];
 const planDishes=f=>planAll(f).filter(planOn);
 const FRAC=[[0,""],[0.25,"1/4"],[1/3,"1/3"],[0.5,"1/2"],[2/3,"2/3"],[0.75,"3/4"],[1,""]];
@@ -788,7 +794,8 @@ function prepHTML2(f,menu){
   const edition=movieEdition(f),L=LAYOUT[f.theme]||"storybook",c=pal(f),d=DECO(L,c,f);
   const ds=planDishes(f),groups={};
   for(const x of planShopping(f)){const [n,a]=x.split("@");(groups[a]=groups[a]||[]).push(n)}
-  const shop=AISLES.filter(a=>groups[a]).map(a=>`<div class="pp-aisle"><h4>${a}</h4><ul>${groups[a].map(x=>`<li><span class="pp-box"></span>${ESC(x)}</li>`).join("")}</ul></div>`).join("");
+  const tk=prepTicks(f);
+  const shop=AISLES.filter(a=>groups[a]).map(a=>`<div class="pp-aisle"><h4>${a}</h4><ul>${groups[a].map(x=>{const k=tickKey(x),on=!!tk[k];return `<li role="checkbox" tabindex="0" aria-checked="${on}" data-k="${ESC(k)}"${on?' class="pp-done"':""}><span class="pp-box"></span>${ESC(x)}</li>`}).join("")}</ul></div>`).join("");
   const hands=ds.reduce((s,x)=>s+(x.prep_min||0),0),longest=ds.reduce((m,x)=>Math.max(m,(x.prep_min||0)+(x.cook_min||0)),0);
   const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink"};
   const steps=ds.map(x=>`<li><b>${ESC(x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">Prep ${planMin(x.prep_min||0)}${x.cook_min?`, cook ${planMin(x.cook_min)}`:""}${x.make_ahead?`. Make ahead: ${ESC(x.make_ahead)}`:""}</span><span>${(x.steps||[]).map(s=>ESC(s.text)+(s.min?` <i>(${planMin(s.min)})</i>`:"")).join(" ")}</span></li>`).join("");
@@ -1027,7 +1034,7 @@ function renderWeek(){
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];const [d,n]=cookDate();
   const when=n===0?"<b>Tonight</b>":n===1?"<b>Tomorrow</b>":n<0?`<b>${-n} day${n===-1?"":"s"} ago</b>`:`<b>${n} days to go</b>`;
   box.hidden=false;
-  box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}">`:"<span></span>"}<p class="week-k">This week's film</p><p class="week-t">${ESC(f.title)} (${f.year})${week.double&&FILMS.find(x=>x.id===week.double)?` + ${ESC(FILMS.find(x=>x.id===week.double).title)}`:""}</p><p class="week-when">Cook night <select id="weekDay" aria-label="Cook night">${[5,6,0].map(i=>`<option value="${i}"${i===week.day?" selected":""}>${DAYS[i]}</option>`).join("")}</select> ${d.getDate()} ${d.toLocaleString("en-AU",{month:"short"})}, ${when} &nbsp;Showtime <select id="weekTime" class="week-time" aria-label="Showtime">${SHOWTIMES.map(t=>`<option value="${t}"${t===(week.time||"19:00")?" selected":""}>${clock(t)}</option>`).join("")}</select></p><p class="week-count" id="weekCount" aria-live="polite"></p><div class="week-acts"><button class="go" type="button" id="weekShop">Shopping list</button><button type="button" id="weekOpen">Open the menu</button><button type="button" id="weekClear">Clear</button></div>`;
+  box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}">`:"<span></span>"}<p class="week-k">This week's film</p><p class="week-t">${ESC(f.title)} (${f.year})${week.double&&FILMS.find(x=>x.id===week.double)?` + ${ESC(FILMS.find(x=>x.id===week.double).title)}`:""}</p><p class="week-when">Cook night <select id="weekDay" aria-label="Cook night">${[5,6,0].map(i=>`<option value="${i}"${i===week.day?" selected":""}>${DAYS[i]}</option>`).join("")}</select> ${d.getDate()} ${d.toLocaleString("en-AU",{month:"short"})} · ${when} &nbsp;Showtime <select id="weekTime" class="week-time" aria-label="Showtime">${SHOWTIMES.map(t=>`<option value="${t}"${t===(week.time||"19:00")?" selected":""}>${clock(t)}</option>`).join("")}</select></p><p class="week-count" id="weekCount" aria-live="polite"></p><div class="week-acts"><button class="go" type="button" id="weekShop">Shopping list</button><button type="button" id="weekOpen">Open the menu</button><button type="button" id="weekClear">Clear</button></div>`;
   $("weekDay").addEventListener("change",e=>{week.day=weekDay(e.target.value);week.date=nextWeekDate(week.day,week.time);saveWeek();renderWeek()});
   $("weekTime").addEventListener("change",e=>{week.time=e.target.value;saveWeek();tickShowtime()});
   tickShowtime();renderMotw();
@@ -1470,14 +1477,14 @@ function renderShop(){
   const top=!q?topShelf(list):[];if(top.length)rows.push([member.name?`${member.name}'s shelf`:"Your top shelf",top,"Everything you gave 4 or 5 stars."]);
   if(fresh.length&&!q)rows.push(["New release wall",fresh,isTuesday()?"$2 Tuesday is on. Every new release is $2 tonight.":"Overnight $7. Back by 7pm tomorrow.","wall"]);
   if(!q){const picks=list.filter(isPick);if(picks.length)rows.push(["Staff picks",picks])}
-  if(q)rows.push(["Search results",list.slice().sort((a,b)=>a.title.localeCompare(b.title))]);
+  if(q&&list.length)rows.push(["Search results",list.slice().sort((a,b)=>a.title.localeCompare(b.title))]);
   else SHOP_AISLES.forEach(([n,ts])=>{if(n==="Holiday")return;const r=list.filter(f=>ts.includes(f.theme)).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(r.length)rows.push([n,r])});
   if(!q&&!kidsMode){const ls=list.filter(f=>f.theme==="horror"||/^(MA15\+|R18\+|R)$/.test(ratingOf(f)||"")).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(ls.length)rows.push(["Late Show",ls,"Out the back, behind the curtain. Grown-ups only.","lateshow"])}
   if(!q)cal.filter(c=>!c.on&&c.next).sort((a,b)=>a.next-b.next).forEach(c=>later.push(...seasonRows(c.s,list,c.next)));
   renderMember();
   $("shopCount").textContent=list.length?`${list.length} of ${FILMS.length} titles on the shelves`:"";
   const aisle=([n,r,note,cls,st,sid])=>`<section class="aisle${cls?" "+cls:""}"${st?` style="${st}"`:""}${sid?` id="season-${sid}${/late show/.test(n)?"-late":""}"`:""}><div class="aisle-top"><h3 class="aisle-sign">${ESC(n)}<span>${r.length}</span></h3>${r.length>1?`<button class="aisle-spin" type="button" data-aisle="${ESC(n)}">Spin this aisle</button>`:""}${note?`<p class="aisle-note">${ESC(note)}</p>`:""}</div>${/lateshow/.test(cls||"")?`<button class="ls-curtain" type="button" aria-expanded="false" aria-label="Pull back the curtain"><img src="assets/hero/latedoor.webp" alt="" loading="lazy"><span class="ls-sign fit" style="left:34.81%;top:3.31%;width:31.12%;height:5.52%"><span class="fit-t">Late Show</span></span><span class="ls-tap">Pull back the curtain</span></button>`:""}<div class="shelf" data-k="${shelfRest.push(/lateshow/.test(cls||"")?[]:r.slice(SHELF_FIRST))-1}">${(/lateshow/.test(cls||"")?[]:r.slice(0,SHELF_FIRST)).map(tapeHTML).join("")}</div></section>`;
-  $("shopAisles").innerHTML=rows.length?rows.map(aisle).join("")+(later.length?`<div class="aisles-later"><h3>Holiday shelves</h3><p>Each one moves to the front of the shop when its day comes round.</p>${later.map(aisle).join("")}</div>`:""):`<p class="shelf-empty">Nothing on the shelves matches that. Try another title or clear the filters.</p>`;
+  $("shopAisles").innerHTML=rows.length?rows.map(aisle).join("")+(later.length?`<div class="aisles-later"><h3>Holiday shelves</h3><p>Each one moves to the front of the shop when its day comes round.</p>${later.map(aisle).join("")}</div>`:""):`<p class="shelf-empty">${q?`No tapes match "${ESC(q)}". Check the spelling, or clear the filters.`:"Nothing on the shelves matches that. Try another title or clear the filters."}</p>`;
   fillShelvesLater();
 }
 function tvHTML(f){
@@ -1556,11 +1563,13 @@ function showWelcome(){
 
 {const g=document.getElementById("bulbGlow");if(g){let h="";for(let i=0;i<32;i++)h+=`<i style="--a:${i*11.25}deg;--d:${-(i%8)*0.2}s"></i>`;g.innerHTML=h}}
 /* phones: a Spin button pinned to the bottom until the wheel is on screen */
-{const bar=$("spinbar"),hub=$("spin"),acts=document.querySelector(".actions");let hubSeen=false,actsSeen=false;
+{const bar=$("spinbar"),hub=$("spin"),acts=document.querySelector(".actions");let hubSeen=false,actsSeen=false,prepSeen=false;
  /* the floating Spin button steps aside while the wheel or the menu buttons are on screen, so it never sits over them */
- const upd=()=>{bar.hidden=hubSeen||actsSeen||spinning||$("viewWheel").hidden||!matchMedia("(max-width:900px)").matches};
+ const upd=()=>{bar.hidden=hubSeen||actsSeen||(prepSeen&&tab==="prep")||spinning||$("viewWheel").hidden||!matchMedia("(max-width:900px)").matches};
  if("IntersectionObserver" in window){new IntersectionObserver(es=>{hubSeen=es[0].isIntersecting;upd()},{threshold:.4}).observe(hub);
-   if(acts)new IntersectionObserver(es=>{actsSeen=es[0].isIntersecting;upd()},{threshold:0,rootMargin:"0px 0px 90px 0px"}).observe(acts)}
+   if(acts)new IntersectionObserver(es=>{actsSeen=es[0].isIntersecting;upd()},{threshold:0,rootMargin:"0px 0px 90px 0px"}).observe(acts);
+   /* and while the prep sheet is being read, so it never sits over the method */
+   new IntersectionObserver(es=>{prepSeen=es[0].isIntersecting;upd()},{threshold:0}).observe($("preview"))}
  window.addEventListener("scroll",upd,{passive:true});
  $("spinbarBtn").addEventListener("click",()=>{$("spin").scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"});setTimeout(()=>{if(!spinning)$("spin").click()},reduce?50:650)});
  window.__spinbarUpd=upd;}
@@ -1697,7 +1706,7 @@ async function renderCanvas(src,forPrint){
   stage.appendChild(clone);document.body.appendChild(stage);
   try{
     await document.fonts.ready;
-    if(clone.classList.contains("pp-sheet"))fitPrep(clone);
+    if(clone.classList.contains("pp-sheet")){prepClean(clone);fitPrep(clone)}
     /* Safari can mark a cached poster as off-limits to the canvas, which kills the export.
        Pull each outside image fresh as a local copy first so the canvas can always read it. */
     const temp=[];
@@ -1867,7 +1876,7 @@ try{document.documentElement.style.setProperty("--grainTile",`url("${noiseTile()
 if("serviceWorker" in navigator&&location.protocol==="https:")addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
 setKidsUI();if(kidsMode)setList();pullSync();
 try{if(!localStorage.getItem("mns-welcome"))setTimeout(showWelcome,400)}catch(e){}
-try{const v=localStorage.getItem("mns-view");if(location.hash==="#shop"||v==="shop")setView("shop");else if(location.hash==="#crave"||v==="crave")setView("crave")}catch(e){}
+/* a shared film link always opens on its menu, whatever tab was open last */try{const v=new URLSearchParams(location.search).get("film")?"wheel":localStorage.getItem("mns-view");if(location.hash==="#shop"||v==="shop")setView("shop");else if(location.hash==="#crave"||v==="crave")setView("crave")}catch(e){}
 document.fonts.ready.then(draw);
 const initialFilmId=new URLSearchParams(window.location.search).get("film");
 const startId=initialFilmId||(week&&week.id)||hist[0];
@@ -2001,3 +2010,27 @@ function openMarathon(sr){
   o.addEventListener("change",async e=>{const id=e.target.dataset&&e.target.dataset.f;if(!id)return;e.target.checked?off.delete(id):off.add(id);await draw();const b=o.querySelector(`[data-f="${CSS.escape(id)}"]`);if(b)b.focus()});
   draw().then(()=>{mountModal(o,".go",modalTrigger);buzz([20,40,20])});
 }
+/* tabs: arrow keys, Home and End move between tabs, as a tab list should */
+document.addEventListener("keydown",e=>{
+  const t=e.target.closest&&e.target.closest('[role="tab"]');if(!t)return;const list=t.closest('[role="tablist"]');if(!list)return;
+  const tabs=[...list.querySelectorAll('[role="tab"]')].filter(x=>!x.hidden&&!x.disabled),i=tabs.indexOf(t);let j=-1;
+  if(e.key==="ArrowRight"||e.key==="ArrowDown")j=(i+1)%tabs.length;else if(e.key==="ArrowLeft"||e.key==="ArrowUp")j=(i-1+tabs.length)%tabs.length;else if(e.key==="Home")j=0;else if(e.key==="End")j=tabs.length-1;
+  if(j<0)return;e.preventDefault();tabs[j].focus();tabs[j].click();
+});
+
+/* prep sheet shopping list: tick items off on screen, saved per film on this device; save, PDF and print stay blank */
+function tickKey(x){return String(x).toLowerCase().replace(/^[\d\s\/.+]+(kg|g|ml|l|tsp|tbsp|cups?|bunch(es)?|pinch)?\b\s*/,"").replace(/\s+/g," ").trim()}
+function prepTicks(f){try{return JSON.parse(localStorage.getItem("mns-ticks-"+f.id)||"{}")}catch(e){return {}}}
+function prepTick(li){
+  if(!current||!li)return;const t=prepTicks(current),k=li.dataset.k,on=!t[k];if(on)t[k]=1;else delete t[k];
+  try{localStorage.setItem("mns-ticks-"+current.id,JSON.stringify(t))}catch(e){}
+  li.classList.toggle("pp-done",on);li.setAttribute("aria-checked",on);
+}
+prep.addEventListener("click",e=>{const li=e.target.closest&&e.target.closest("li[data-k]");if(li&&prep.closest(".preview"))prepTick(li)});
+prep.addEventListener("keydown",e=>{const li=e.target.closest&&e.target.closest("li[data-k]");if(li&&(e.key===" "||e.key==="Enter")){e.preventDefault();prepTick(li)}});
+function prepClean(c){c.querySelectorAll(".pp-done").forEach(x=>x.classList.remove("pp-done"));c.querySelectorAll("li[data-k]").forEach(x=>{x.removeAttribute("tabindex");x.removeAttribute("role");x.removeAttribute("aria-checked")})}
+
+{const skip=e=>{if(spinning||($("theatre").classList.contains("closed")&&$("tease").classList.contains("leader"))){skipReq=true;if(e)e.stopPropagation()}};
+ const wb=document.querySelector(".wheel-box");if(wb)wb.addEventListener("click",skip,true);
+ $("theatre").addEventListener("click",skip);
+ document.addEventListener("keydown",e=>{if(e.key==="Escape"&&(spinning||$("tease").classList.contains("leader")))skip()});}
