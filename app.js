@@ -853,10 +853,11 @@ const NUMW=["zero","one","two","three","four","five","six","seven","eight","nine
 const STEP_NOUN="glass|glasses|cup|cups|mug|mugs|bowl|bowls|plate|plates|meatballs?|patties|patty|burgers?|skewers?|kebabs?|balls?|rolls?|buns?|tacos?|tortillas?|wraps?|portions?|pieces?|slices?|wedges?|squares?|triangles?|fingers?|cookies?|biscuits?|cupcakes?|muffins?|scones?|pancakes?|crepes?|sandwiches|sandwich|toasties?|pies?|tarts?|parcels?|dumplings?|rissoles?|fritters?|cakes?|bars?|cones?|scoops?|shots?|jars?|ramekins?|moulds?|molds?|serves|servings|people|pizzas?|bases|nests|stacks?|sliders?|hot dogs?|dogs?|sausages?|chops?|steaks?|fillets?|cutlets?|wings?|drumsticks?|lollies|lolly|ice blocks?|popsicles?|lettuce cups";
 const STEP_RE=new RegExp("\\b(\\d{1,3}|"+NUMW.slice(1).join("|")+")((?:\\s+[a-z-]+){0,2}?)\\s+("+STEP_NOUN+")\\b","gi");
 const STEP_AMT=/\b(\d+(?:\.\d+)?)\s?(kg|g|ml|l)\b(?!\s*(?:tin|can|jar|bottle|packet|pack|tub|block|bag)s?\b)/gi;
-function scaleStep(t,k){if(!k||Math.abs(k-1)<0.01)return t;
-  /* a sentence about one serve ("two patties per bun", "for each drink, 45ml tequila") stays as written */
-  return String(t).split(/(?<=[.!?])\s+/).map(sn=>/\b(per|apiece|a head)\b|\beach\b(?!\s+of\b)/i.test(sn)?sn:scaleOne(sn,k)).join(" ")}
-function scaleOne(t,k){return String(t).replace(STEP_AMT,(m,n,u)=>planQty(+n*k,u.toLowerCase())).replace(STEP_RE,(m,n,mid,noun)=>{const w=NUMW.indexOf(n.toLowerCase());const v=w>0?w:+n;if(!(v>0))return m;if(/^(\s+(minutes?|mins?|hours?|hrs?|seconds?|cm|mm|degrees?|c|f|inch|inches))/i.test(mid))return m;
+function scaleStep(t,k){if(!k||Math.abs(k-1)<0.01)return t;return String(t).split(/(?<=[.!?])\s+/).map(sn=>scaleOne(sn,k)).join(" ")}
+/* a count about one serve stays as written: "for each drink, 45ml tequila", "cut each sheet into four squares", "two patties per bun", "three scoops to each" */
+const PER_BEFORE=/\b(each|per|every)\b(?!\s+of\b)/i,PER_AFTER=/^\s*(?:of\s+(?:[a-z-]+\s+){0,3})?(per|to each|in each|on each|into each|for each|each|apiece|a head)\b/i;
+function scaleOne(t,k){const keep=(m,off)=>PER_BEFORE.test(t.slice(0,off))||PER_AFTER.test(t.slice(off+m.length));
+  return String(t).replace(STEP_AMT,(m,n,u,off)=>keep(m,off)?m:planQty(+n*k,u.toLowerCase())).replace(STEP_RE,(m,n,mid,noun,off,all)=>{if(keep(m,off))return m;const w=NUMW.indexOf(n.toLowerCase());const v=w>0?w:+n;if(!(v>0))return m;if(/^(\s+(minutes?|mins?|hours?|hrs?|seconds?|cm|mm|degrees?|c|f|inch|inches))/i.test(mid))return m;
   const nv=Math.max(1,Math.round(v*k));let out=w>0&&nv<=20?NUMW[nv]:String(nv);if(/^[A-Z]/.test(n))out=out[0].toUpperCase()+out.slice(1);
   let nn=noun;if(nv>1&&v===1)nn=/(ch|sh|x|s)$/i.test(noun)?noun+"es":/y$/i.test(noun)&&!/(ay|ey|oy)$/i.test(noun)?noun.slice(0,-1)+"ies":noun+"s";if(nv===1&&v>1)nn=planSing(noun);return out+mid+" "+nn})}
 const planMin=m=>m>=1440?(d=>d+(d===1?" day":" days")+" ahead")(Math.round(m/1440)):m>=600?(Math.round(m/60))+" hr, start the day before":m>=60?Math.floor(m/60)+" hr"+(m%60?" "+m%60+" min":""):m+" min";
@@ -1883,7 +1884,9 @@ function showOverlay(url,file){
 async function exportMenu(kind){
   if(!current)return;
   const btns=[$("pdf"),$("png")];btns.forEach(b=>b.disabled=true);
-  $("status").textContent=kind==="pdf"?"Building your A4 PDF...":"Building your image...";
+  const pb=$("pdf"),pbText=pb.textContent;if(kind==="pdf"){pb.classList.add("busy");pb.setAttribute("aria-busy","true");pb.textContent="Making your PDF..."}
+  var pdfStep=t=>{if(kind==="pdf"){pb.textContent=`Making your PDF: ${t}`;$("status").textContent=`Making your A4 PDF: ${t.toLowerCase()}...`}};
+  $("status").textContent=kind==="pdf"?"Making your A4 PDF...":"Building your image...";
   if(!await loadExportTools(kind==="pdf")){btns.forEach(b=>b.disabled=false);$("status").textContent="Couldn't load the export tools. Check your connection and try again.";return}
   try{
     const canvas=await renderCanvas(kind==="pdf"||tab==="menu"?card:prep,kind==="pdf");
@@ -1895,20 +1898,22 @@ async function exportMenu(kind){
       const spec=fmtSpec(current),sh=card.classList.contains("fx-paper")&&(spec&&fmtSheet(spec)||current.libSheet);
       let pdf;
       if(sh){
-        const mm=sh.mm||[sh.w*25.4/96,sh.h*25.4/96],o=mm[0]>mm[1]?"landscape":"portrait";
-        pdf=new jsPDF({unit:"mm",format:[Math.min(...mm),Math.max(...mm)],orientation:o});
+        const mm=sh.mm||[sh.w*25.4/96,sh.h*25.4/96],o=mm[0]>mm[1]?"landscape":"portrait",PW=o==="landscape"?297:210,PH=o==="landscape"?210:297;
+        const k=Math.min(PW/mm[0],PH/mm[1]),dw=mm[0]*k,dh=mm[1]*k,dx=(PW-dw)/2,dy=(PH-dh)/2;
+        pdf=new jsPDF({unit:"mm",format:"a4",orientation:o});
         if(card.classList.contains("fmt-lib"))libUnclip(card);const faces=[...card.querySelectorAll(".fx-face")];
         for(let i=0;i<faces.length;i++){
+          pdfStep(`Page ${i+1} of ${faces.length+1}`);
           const el=document.createElement("div");styleCard(el,current);el.className=card.className;el.style.transform="none";
           el.style.width=sh.w+"px";el.style.height=sh.h+"px";el.dataset.w=sh.w;el.dataset.h=sh.h;el.innerHTML=faces[i].innerHTML;
-          const cv=await renderCanvas(el,true);if(i)pdf.addPage([Math.min(...mm),Math.max(...mm)],o);
-          pdf.addImage(cv.toDataURL("image/jpeg",0.92),"JPEG",0,0,mm[0],mm[1]);
+          const cv=await renderCanvas(el,true);if(i)pdf.addPage("a4",o);
+          pdf.addImage(cv.toDataURL("image/jpeg",0.92),"JPEG",dx,dy,dw,dh);
         }
       }else{
         pdf=new jsPDF({unit:"mm",format:"a4",orientation:land?"landscape":"portrait"});
         pdf.addImage(canvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,land?297:210,land?210:297);
       }
-      const prepCanvas=await renderCanvas(prep);
+      pdfStep("The prep sheet");const prepCanvas=await renderCanvas(prep);
       pdf.addPage("a4","portrait");pdf.addImage(prepCanvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297);
       data=pdf.output("blob");filename=name+".pdf";
     }else{
@@ -1930,7 +1935,7 @@ async function exportMenu(kind){
     }else if(!inClaude){plainDownload(data,filename);$("status").textContent=`Downloaded ${filename}. Print it at A4, actual size.`}
     else{showOverlay(canvas.toDataURL("image/png"));$("status").textContent=""}
   }catch(e){console.error(e);$("status").textContent=`Couldn't build the image (${(e&&(e.name||e.message))||"unknown error"}). Close and reopen the app, then try again.`}
-  finally{btns.forEach(b=>b.disabled=false)}
+  finally{btns.forEach(b=>b.disabled=false);if(kind==="pdf"){pb.textContent=pbText;pb.classList.remove("busy");pb.removeAttribute("aria-busy")}}
 }
 
 $("spin").addEventListener("click",spin);
@@ -1966,12 +1971,35 @@ $("shareLink").addEventListener("click",async()=>{
     else{await navigator.clipboard.writeText(url);$("status").textContent="Link copied. Anyone who opens it lands on this menu."}}
   catch(e){if(!(e&&e.name==="AbortError")){try{await navigator.clipboard.writeText(url);$("status").textContent="Link copied."}catch(err){$("status").textContent=url}}}
 });
-$("print").addEventListener("click",()=>{
-  const pa=$("printArea");pa.innerHTML="";
-  if(card.classList.contains("fx-paper")){card.querySelectorAll(".fx-face").forEach(fc=>{const c=card.cloneNode(false);c.style.transform="none";c.hidden=false;c.style.width=fc.style.width;c.style.height=fc.style.height;c.innerHTML=fc.innerHTML;if(parseFloat(fc.style.height)>parseFloat(fc.style.width))c.classList.add("fx-port");pa.appendChild(c)})}else{const c=card.cloneNode(true);c.style.transform="none";c.hidden=false;pa.appendChild(c);}
-  pa.appendChild(prepA4());
-  window.print();
-});
+/* printing: every page lands on A4, scaled to fit and centred, from the Print button or the browser's own Print */
+function printPage(el,w,h){const land=w>h,W=land?1120:792,H=land?790:1118,k=Math.min(W/w,H/h);const pg=document.createElement("div");pg.className="print-page"+(land?" land":"");
+  el.style.cssText+=`;position:absolute;left:${Math.round((W-w*k)/2)}px;top:${Math.round((H-h*k)/2)}px;width:${w}px;height:${h}px;transform:scale(${k});transform-origin:0 0;margin:0`;pg.appendChild(el);return pg}
+function fillPrint(){
+  const pa=$("printArea");pa.innerHTML="";if(!current)return;
+  if(card.classList.contains("fx-paper")){card.querySelectorAll(".fx-face").forEach(fc=>{const c=card.cloneNode(false);c.hidden=false;c.innerHTML=fc.innerHTML;pa.appendChild(printPage(c,parseFloat(fc.style.width)||+card.dataset.w,parseFloat(fc.style.height)||+card.dataset.h))})}
+  else{const c=card.cloneNode(true);c.hidden=false;const land=card.classList.contains("fmt");pa.appendChild(printPage(c,+card.dataset.w||(land?1123:794),+card.dataset.h||(land?794:1123)))}
+  const pp=prepA4();pa.appendChild(printPage(pp,794,1123));
+}
+$("print").addEventListener("click",()=>{fillPrint();window.print()});
+window.addEventListener("beforeprint",()=>{if(!$("printArea").children.length)fillPrint()});
+window.addEventListener("afterprint",()=>{$("printArea").innerHTML=""});
+/* phones: the printed menu is small on screen, so a tap opens it big, with zoom */
+function openZoom(){
+  if(!current||!narrow())return;const modalTrigger=document.activeElement;
+  const o=document.createElement("dialog");o.className="zoomview";o.setAttribute("aria-label",`${current.title} menu, enlarged`);
+  const faces=card.classList.contains("fx-paper")?[...card.querySelectorAll(".fx-face")]:[card];
+  o.innerHTML=`<div class="zv-bar"><button type="button" data-z="-" aria-label="Smaller">-</button><button type="button" data-z="fit">Fit</button><button type="button" data-z="+" aria-label="Bigger">+</button></div><div class="zv-scroll"><div class="zv-in"></div></div>`;
+  const inn=o.querySelector(".zv-in");let wMax=0;
+  faces.forEach(fc=>{const w=parseFloat(fc.style.width)||+card.dataset.w||794,h=parseFloat(fc.style.height)||+card.dataset.h||1123;wMax=Math.max(wMax,w);const c=card.cloneNode(false);c.className=card.className;c.hidden=false;c.innerHTML=fc===card?card.innerHTML:fc.innerHTML;c.style.cssText+=`;transform:none;width:${w}px;height:${h}px;position:relative;margin:0 auto 14px`;inn.appendChild(c)});
+  const sc=o.querySelector(".zv-scroll");let z=1;const fit=()=>Math.min(1,(sc.clientWidth||innerWidth)/wMax);
+  const set=v=>{z=Math.max(fit(),Math.min(2.5,v));inn.style.zoom=z};
+  o.addEventListener("click",e=>{const b=e.target.closest("[data-z]");if(!b)return;set(b.dataset.z==="fit"?fit():b.dataset.z==="+"?z*1.4:z/1.4)});
+  mountModal(o,"[data-z='+']",modalTrigger);
+  /* open big, at the first dish, since the dishes are what people want to read */
+  requestAnimationFrame(()=>{set(Math.min(2.5,fit()*2));try{const names=[...current.menu.s,...current.menu.m,...current.menu.w,...current.menu.d].map(x=>String(x.label||x.n||"").toLowerCase().slice(0,26)).filter(Boolean);
+    const w=document.createTreeWalker(inn,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){const t=n.nodeValue.trim().toLowerCase();if(t.length>6&&names.some(x=>x.length>5&&t.startsWith(x))){const r=n.parentElement.getBoundingClientRect(),sr=sc.getBoundingClientRect();sc.scrollTop+=r.top-sr.top-90;sc.scrollLeft+=Math.max(0,r.left-sr.left-16);break}}}catch(e){}});
+}
+card.addEventListener("click",e=>{if(e.target.closest("a,button,input,label"))return;openZoom()});
 $("copy").addEventListener("click",()=>{
   const txt=menuText();
   const done=()=>{$("status").textContent="Menu copied as text."};
