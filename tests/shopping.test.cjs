@@ -4,7 +4,7 @@ const fs=require('node:fs');
 const path=require('node:path');
 const vm=require('node:vm');
 const source=fs.readFileSync(process.argv[2]||path.join(__dirname,'..','app.js'),'utf8');
-const listSource=source.slice(source.indexOf('function listText(f,groups)'),source.indexOf('async function openTrolley(f,menuOverride,label)'));
+const listSource=source.slice(source.indexOf('function listText(f,groups,serves)'),source.indexOf('async function openTrolley(f,menuOverride,label)'));
 const trolleySource=source.slice(source.indexOf('async function openTrolley(f,menuOverride,label)'),source.indexOf('\n$("weekSet")'));
 const groupsSource=source.slice(source.indexOf('const AISLES='),source.indexOf('/* ================= MENU DESIGN v2'));
 const tickSource=source.slice(source.indexOf('function tickKey('),source.indexOf('function prepTick(li)'));
