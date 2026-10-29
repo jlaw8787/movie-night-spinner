@@ -514,16 +514,29 @@ body.spinning .theatre.closed .skip-k,.theatre.closed .tease.leader~.skip-k{opac
 #printArea{display:none}
 @media print{
   @page{size:A4;margin:0}
-  html,body{background:#fff}
-  body::after{display:none}
+  html,body{background:#fff!important;min-height:0!important;height:auto!important;overflow:visible!important;margin:0!important;padding:0!important}
+  #printArea{margin:0!important;padding:0!important}
+  body::before,body::after,html::before,html::after{display:none!important;content:none!important}
   body>*:not(#printArea){display:none!important}
   #printArea{display:block}
-  #printArea .mcard{transform:none!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-  #printArea .mcard+.mcard{break-before:page;page-break-before:always}
-  #printArea .mcard.fmt{page:land}
-  #printArea .mcard.fmt.fx-paper{padding:0!important;background:transparent!important}#printArea .mcard.fmt.fx-port{page:auto}
+  #printArea .print-page{position:relative;width:792px;height:1118px;overflow:hidden;break-after:page;page-break-after:always;page:port}
+  #printArea .print-page.land{width:1120px;height:790px;page:land}
+  #printArea .print-page:last-child{break-after:auto;page-break-after:auto}
+  #printArea .mcard{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-shadow:none!important}
+  #printArea .mcard.fmt.fx-paper{padding:0!important}
+  @page port{size:A4 portrait;margin:0}
   @page land{size:A4 landscape;margin:0}
 }
+.zoomview{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:#0d0608;color:#fff}
+.zoomview .zv-bar{position:sticky;top:0;z-index:2;display:flex;justify-content:center;gap:10px;padding:max(10px,env(safe-area-inset-top,0px)) 64px 10px;background:rgba(13,6,8,.92)}
+.zoomview .zv-bar button{min-width:52px;height:44px;border-radius:999px;border:1px solid rgba(226,176,79,.6);background:transparent;color:#f5e6c8;font:700 17px var(--f-body);cursor:pointer}
+.zoomview .zv-scroll{position:absolute;inset:64px 0 0;overflow:auto;-webkit-overflow-scrolling:touch;padding:12px 0 30px}
+.zoomview .zv-in{width:max-content;margin:0 auto}
+.zoomview .zv-in .mcard{display:block}
+.btn.busy{cursor:progress;opacity:1!important}
+.btn.busy::before{content:"";display:inline-block;width:14px;height:14px;margin-right:8px;vertical-align:-2px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spinb .8s linear infinite}
+@keyframes spinb{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.btn.busy::before{animation:none}}
 .overlay{position:fixed;inset:0;background:rgba(10,4,6,.94);z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:16px}
 .overlay img{max-height:78vh;max-width:100%;box-shadow:0 10px 30px #000}
 .overlay p{margin:0;text-align:center;max-width:40ch}
@@ -1696,6 +1709,7 @@ dialog .modal-x:focus-visible{outline:3px solid #ffd23f;outline-offset:2px}
       <div class="snack-pair" id="snackPair" hidden></div>
       <div class="actions">
         <button class="btn primary" id="pdf" type="button">Save PDF (menu + prep)</button>
+        <button class="btn" id="print" type="button" hidden>Print</button>
         <button class="btn" id="favBtn" type="button" aria-pressed="false">Save this menu</button>
         <button class="btn" id="weekSet" type="button" disabled>Lock in for this week</button>
         <button class="btn" id="watchCurrent" type="button" aria-pressed="false" disabled>Mark as watched</button>
@@ -1707,7 +1721,6 @@ dialog .modal-x:focus-visible{outline:3px solid #ffd23f;outline-offset:2px}
             <button class="btn" id="foldPdf" type="button" hidden>Print to fold (2 sides)</button>
             <button class="btn" id="shareLink" type="button">Share this menu</button>
             <button class="btn" id="copy" type="button">Copy text</button>
-            <button class="btn" id="print" type="button" hidden>Print</button>
           </div>
         </details>
       </div>
@@ -1724,7 +1737,7 @@ dialog .modal-x:focus-visible{outline:3px solid #ffd23f;outline-offset:2px}
 <script src="providers.js?v=1403fceb" defer></script>
 <script src="films.js?v=1744080d" defer></script>
 <script src="formats-core.js?v=a1a8325d" defer></script>
-<script src="app.js?v=3497e6d2" defer></script>
+<script src="app.js?v=526dbadf" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
