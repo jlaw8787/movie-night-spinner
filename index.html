@@ -293,6 +293,16 @@ body::after{content:none}
 /* series: part of a run, start from the first, or plan a marathon */
 .series-note{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:12px 0 4px;padding:10px 14px;border:1px solid rgba(226,176,79,.4);border-radius:12px;background:rgba(0,0,0,.28)}
 .series-note p{margin:0;flex:1 1 210px;font-size:14px;line-height:1.35}
+.snack-pair{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:10px 0 4px;padding:10px 14px;border:1px solid rgba(226,176,79,.4);border-radius:12px;background:rgba(0,0,0,.28)}
+.snack-pair .sp-t{margin:0;font:600 12px var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:var(--brass);flex:0 0 100%}
+.snack-pair ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;flex:1 1 300px}
+.snack-pair li{display:flex;align-items:center;gap:10px;flex:1 1 200px;justify-content:space-between;padding:6px 6px 6px 12px;border-radius:999px;background:rgba(255,255,255,.06)}
+.snack-pair .sp-n{font-size:14.5px;line-height:1.2}
+.snack-pair .sp-n small{display:block;font-size:12px;opacity:.75}
+.snack-pair button{font:600 13.5px var(--f-body);min-height:44px;min-width:44px;padding:8px 16px;border-radius:999px;border:1px solid rgba(226,176,79,.55);background:transparent;color:inherit;cursor:pointer}
+.snack-pair .sp-add{background:var(--brass);border-color:var(--brass);color:var(--night)}
+.snack-pair .sp-add[aria-pressed="true"]{background:transparent;color:var(--brass)}
+.snack-pair .sp-add[aria-pressed="true"]::before{content:"\2713  "}
 .series-note p b{color:var(--brass);font-weight:600}
 .series-note button{font:600 13.5px var(--f-body);min-height:40px;padding:8px 14px;border-radius:999px;border:1px solid rgba(226,176,79,.55);background:transparent;color:inherit;cursor:pointer}
 .series-note button.go{background:var(--brass);border-color:var(--brass);color:var(--night)}
@@ -1679,6 +1689,7 @@ dialog .modal-x:focus-visible{outline:3px solid #ffd23f;outline-offset:2px}
         <div class="fmt-phone" id="fmtPhone" hidden></div>
       </div>
       <div class="series-note" id="seriesNote" hidden></div>
+      <div class="snack-pair" id="snackPair" hidden></div>
       <div class="actions">
         <button class="btn primary" id="pdf" type="button">Save PDF (menu + prep)</button>
         <button class="btn" id="favBtn" type="button" aria-pressed="false">Save this menu</button>
@@ -1709,7 +1720,7 @@ dialog .modal-x:focus-visible{outline:3px solid #ffd23f;outline-offset:2px}
 <script src="providers.js?v=1403fceb" defer></script>
 <script src="films.js?v=7aa6d614" defer></script>
 <script src="formats-core.js?v=a8dfd3e7" defer></script>
-<script src="app.js?v=d1cb7caa" defer></script>
+<script src="app.js?v=9885da53" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
