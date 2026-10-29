@@ -753,7 +753,7 @@ function dietItem(f,it){
   if(!x.tag)return it;
   const v=dietWhich(d,x),N=(f._diet&&f._diet.notes&&f._diet.notes[d.n])||{};
   const note=N[v]||(v==="veg_af"?N.veg:"")||"";
-  return Object.assign({},it,{n:x.n,note,orig:d.n,how:(x.steps||[]).map(t=>t.text).join(" "),shop:dietShop(x),diet:v});
+  return Object.assign({},it,{n:String(x.n).replace(/\s*\((vegetarian|alcohol[- ]free|vegetarian, alcohol[- ]free)\)\s*$/i,""),note,orig:d.n,how:(x.steps||[]).map(t=>t.text).join(" "),shop:dietShop(x),diet:v});
 }
 function dietMenu(f,menu){
   if(!menu||!dietKey()||!f||!f._r2)return menu;
