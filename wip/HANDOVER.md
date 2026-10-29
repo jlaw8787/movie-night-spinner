@@ -1,7 +1,7 @@
 # Handover (Oct 26, 21:00): read this first in a new chat
 
 Repo jlaw8787/movie-night-spinner (GitHub Pages). Work in a worktree on branch wip/menu-polish. Live = main.
-Live as of commit 7c7620d1 (clear first step: nothing preloaded as a pick, tabs land at their top, Back stays in the app and closes pop-ups, Find a film lands on the menu, Oct 30). Earlier today: printing (d48d81de), recipe numbers (815a976d), diet-following menus (8091578b). Checks: navcheck.py, printcheck.py, recipecheck.py, dietsweep.py, livefit.py.
+Live as of commit dbd07367 (finding films: forgiving search, kids mode in Find a film, honest series counts, Oct 30). Earlier today: clear first step (7c7620d1), printing (d48d81de), recipe numbers (815a976d), diet-following menus (8091578b). Run sheet parked by owner. Checks: findcheck.py, navcheck.py, printcheck.py, recipecheck.py, dietsweep.py, livefit.py.
 
 ## Owner rules (non-negotiable)
 - Nothing goes live without the owner's approval. Ask with tappable options.
