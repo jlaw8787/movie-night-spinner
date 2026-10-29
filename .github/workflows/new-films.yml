@@ -1,0 +1,29 @@
+name: New films from TMDB
+# Runs only on the wip/new-films branch: looks up the films in wip/newfilms/films-new.txt and commits
+# wip/newfilms/tmdb.json back to that branch. Never touches main or the live site.
+on:
+  push:
+    branches: [wip/new-films]
+    paths: ['wip/newfilms/films-new.txt', 'scripts/new_films_tmdb.py']
+permissions:
+  contents: write
+jobs:
+  lookup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Look the films up on TMDB
+        env:
+          TMDB_KEY: ${{ secrets.TMDB_KEY }}
+        run: python3 scripts/new_films_tmdb.py
+      - name: Commit to this branch
+        run: |
+          git add wip/newfilms/tmdb.json
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git config user.name "movie-night-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git commit -m "New films: TMDB lookup"
+          git push origin HEAD:wip/new-films
