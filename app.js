@@ -252,6 +252,7 @@ const modalStack=[];
 const modalState=new WeakMap();
 function finishModal(o){
   const state=modalState.get(o);if(!state)return;
+  try{if(o._hist&&!o._popped){o._hist=false;window.__ignorePop=(window.__ignorePop||0)+1;history.back()}}catch(e){}
   const wasTop=modalStack[modalStack.length-1]===o;
   modalState.delete(o);const i=modalStack.indexOf(o);if(i!==-1)modalStack.splice(i,1);
   if(!o.hasAttribute("data-keep"))o.remove();if(state.onClose)state.onClose();
@@ -264,6 +265,8 @@ function finishModal(o){
 function dismissModal(o){if(o.open)o.close();finishModal(o)}
 function mountModal(o,initial,trigger,onClose){
   modalState.set(o,{trigger,onClose});modalStack.push(o);
+  /* the phone's Back button closes a pop-up instead of leaving the app */
+  try{if(typeof history!=="undefined"&&history.pushState&&!o.dataset.keep){history.pushState(Object.assign({},history.state||{},{m:1}),"");o._hist=true}}catch(e){}
   /* Neutralise native dialog sizing; existing overlay classes keep their padding and visual treatment. */
   Object.assign(o.style,{margin:"0",border:"0",maxWidth:"none",maxHeight:"none",width:"100%",height:"100%",boxSizing:"border-box",color:"inherit"});
   if(o._mm){document.body.appendChild(o);if(!o.open)o.showModal();const f=o.querySelector(initial);if(f)f.focus({preventScroll:true});return}
@@ -980,6 +983,8 @@ function libLoad(k){
 }
 async function show(f,preferSig){
   const id=++renderId;
+  /* the film dressed behind the curtain on a first visit isn't anyone's pick yet */
+  {const st=!!window.__stage;window.__stage=false;document.body.classList.toggle("staged",st);if(!st&&typeof renderSnacks==="function")setTimeout(()=>{try{renderSnacks()}catch(e){}},0)}
   current=f;
   updateWatchButton();try{updateFav()}catch(e){}
   try{seriesNote(f)}catch(e){}
@@ -1050,7 +1055,7 @@ async function show(f,preferSig){
   refit();
   await document.fonts.ready;refit();
 }
-function replay(f){closeCurtains();setTimeout(()=>show(f,true).then(openCurtains),reduce?0:900);$("now").textContent=f.title}
+function replay(f){closeCurtains();$("now").textContent=f.title;return new Promise(r=>setTimeout(()=>show(f,true).then(()=>{openCurtains();r()}),reduce?0:900))}
 
 /* history */
 let hist=[];
@@ -1122,7 +1127,7 @@ function renderWeek(){
   $("weekTime").addEventListener("change",e=>{week.time=e.target.value;saveWeek();tickShowtime()});
   tickShowtime();renderMotw();
   $("weekShop").addEventListener("click",async()=>{const g=week.double&&FILMS.find(x=>x.id===week.double);if(g){const dm=await doubleMenu(f,g);openTrolley(f,dm,`${f.title} + ${g.title}`)}else openTrolley(f)});
-  $("weekOpen").addEventListener("click",()=>{setView("wheel");replay(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})});
+  $("weekOpen").addEventListener("click",()=>{setView("wheel");replay(f);toMenu()});
   $("weekClear").addEventListener("click",()=>{week=null;saveWeek();renderWeek();$("status").textContent="This week's film cleared."});
 }
 /* Countdown to the scheduled showtime. Cooking times belong to the individual recipes. */
@@ -1151,7 +1156,7 @@ function renderMotw(){
   const sp={fmt:FMT_INDEX[f.id]},p=lobbyPoster(f);
   box.hidden=false;
   box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}" loading="lazy">`:"<span></span>"}<p class="week-k">Menu of the week</p><p class="week-t">${ESC(f.title)} (${f.year})<small>${ESC(MOTW_KIND[sp.fmt]||"A printed menu from the film")}</small></p><div class="week-acts"><button class="go" type="button" id="motwOpen">Open the menu</button><button type="button" id="motwLock">Lock it in</button></div>`;
-  $("motwOpen").addEventListener("click",()=>{setView("wheel");replay(f);addHistory(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})});
+  $("motwOpen").addEventListener("click",()=>{setView("wheel");replay(f);addHistory(f);toMenu()});
   $("motwLock").addEventListener("click",()=>{setWeek(f);replay(f)});
 }
 function setWeek(f){week=newWeekPlan(f.id);saveWeek();renderWeek();updateWatchButton();$("status").textContent=`${f.title} is locked in for this week.`}
@@ -1442,7 +1447,7 @@ async function openDouble(pa,pb){
     if(k==="g-"||k==="g+"){G=Math.min(60,Math.max(1,G+(k==="g+"?1:-1)));o.querySelector("#dfG").textContent=G;doubleMenu(a,b,G).then(x=>{m=x});return}
     if(k==="done")close();
     if(k==="again"){close();openDouble()}
-    if(k==="first"){close();setView("wheel");replay(a);addHistory(a);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})}
+    if(k==="first"){close();setView("wheel");replay(a);addHistory(a);toMenu()}
     if(k==="shop")openTrolley(a,m,`${a.title} + ${b.title}`);
     if(k==="lock"){week=newWeekPlan(a.id,b.id);saveWeek();renderWeek();o.querySelector("#dfMsg").textContent="Locked in. It's on your This week panel with one shopping list for both."}
   });
@@ -1772,9 +1777,23 @@ function setView(v){
   if(shop){if(!shopBuilt){const ds=[...new Set(FILMS.map(f=>f.year.slice(0,3)))].sort();$("shopDecade").innerHTML='<option value="">Any decade</option>'+ds.map(d=>`<option value="${d}">${d}0s</option>`).join("");shopBuilt=true}renderShop()}
   else if(!crave)scalePreview();
 }
-$("viewWheelBtn").addEventListener("click",()=>setView("wheel"));
-$("viewShopBtn").addEventListener("click",()=>setView("shop"));
-$("viewCraveBtn").addEventListener("click",()=>setView("crave"));
+/* getting about: each tab lands at its own top, Back steps back through tabs and pop-ups, and every way into a film lands on its menu */
+const topH=()=>{const t=document.querySelector(".top");return t?t.getBoundingClientRect().height:0};
+function toEl(el){if(!el||!el.getBoundingClientRect)return;const y=el.getBoundingClientRect().top+scrollY-topH()-8;try{window.scrollTo({top:Math.max(0,y),behavior:reduce?"auto":"smooth"})}catch(e){window.scrollTo(0,Math.max(0,y))}}
+function toMenu(){const fp=$("fmtPhone");toEl(fp&&!fp.hidden&&fp.innerHTML?fp:$("theatre"))}
+const curView=()=>!$("viewShop").hidden?"shop":!$("viewCrave").hidden?"crave":"wheel";
+const VIEW_EL={wheel:"viewWheel",shop:"viewShop",crave:"viewCrave"};
+function goView(v,noScroll){const was=curView();setView(v);try{if(was!==v&&history.pushState)history.pushState({v},"",location.pathname+location.search+(v==="wheel"?"":"#"+v))}catch(e){}if(!noScroll)toEl($(VIEW_EL[v]))}
+try{history.replaceState(Object.assign({},history.state||{},{v:curView()}),"")}catch(e){}
+addEventListener("popstate",e=>{
+  if(window.__ignorePop>0){window.__ignorePop--;return}
+  const top=[...document.querySelectorAll("dialog[open]")].pop();
+  if(top&&top._hist){top._popped=true;dismissModal(top);return}
+  const v=(e.state&&e.state.v)||(location.hash==="#shop"?"shop":location.hash==="#crave"?"crave":"wheel");if(v!==curView()){setView(v);toEl($(VIEW_EL[v]))}
+});
+$("viewWheelBtn").addEventListener("click",()=>goView("wheel"));
+$("viewShopBtn").addEventListener("click",()=>goView("shop"));
+$("viewCraveBtn").addEventListener("click",()=>goView("crave"));
 ["shopSearch","shopDecade","shopUnwatched"].forEach(id=>$(id).addEventListener(id==="shopSearch"?"input":"change",renderShop));
 $("shopCal").addEventListener("click",e=>{const b=e.target.closest("[data-season]");if(!b)return;const id=b.dataset.season;
   if(!b.classList.contains("on")){peekSeason=peekSeason===id?"":id;$("shopSearch").value="";renderShop();if(!peekSeason)return}
@@ -2026,11 +2045,11 @@ if(FILMS.some(f=>f.id===startId)){$("now").textContent=initialFilm.title;show(in
 else{theatre.classList.add("closed");$("tease").textContent=initialFilmId?"That film isn't on the shelf. Spin the wheel instead":"Spin the wheel to raise the curtain";
   const badLink=()=>{if(!initialFilmId)return;const st=$("status");if(st)st.textContent=`Couldn't find "${initialFilmId}" in the video store. The link may be cut short or the film isn't in the catalogue. Spin the wheel or search the video store.`};badLink();
   /* nobody's picked yet: dress the stage behind the curtain once the page has settled */
-  addEventListener("load",()=>(window.requestIdleCallback||setTimeout)(()=>{if(!current)show(initialFilm,true).then(()=>{$("whereWheel").innerHTML="";badLink()})},{timeout:2500}))}
+  document.body.classList.add("staged");addEventListener("load",()=>(window.requestIdleCallback||setTimeout)(()=>{if(!current){window.__stage=true;show(initialFilm,true).then(()=>{$("whereWheel").innerHTML="";badLink()})}},{timeout:2500}))}
 addEventListener("load",()=>setTimeout(ensureDishes,3000));
 /* ================= ease of use: quick find, saved menus, settings, clear and reset ================= */
 /* open any film straight from its title, the way a stub does */
-function openFilm(f){if(!f)return;addHistory(f);replay(f);try{window.scrollTo({top:0,behavior:reduce?"auto":"smooth"})}catch(e){}}
+function openFilm(f){if(!f)return;addHistory(f);goView("wheel",true);replay(f).then(()=>toMenu());toMenu()}
 {const inp=$("findFilm"),box=$("findList");let hits=[],at=-1;
   inp.addEventListener("focus",()=>{if(innerWidth<760)setTimeout(()=>{const t=inp.getBoundingClientRect().top;if(t>innerHeight*0.3)scrollBy({top:t-70,behavior:reduce?"auto":"smooth"})},250)});
  const norm=s=>s.toLocaleLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9 ]+/g," ").replace(/\s+/g," ").trim();
@@ -2107,7 +2126,7 @@ function seriesNote(f){
   box.innerHTML=`<p>Part <b>${i+1} of ${films.length}</b> in ${ESC(sr.name)}${how}.</p>${i>0?`<button type="button" class="go" data-sr="first">Start with ${ESC(first.title)}</button>`:""}<button type="button" data-sr="run">Plan a marathon</button>`;
   box.hidden=false;
   box.onclick=e=>{const k=e.target.closest("[data-sr]");if(!k)return;
-    if(k.dataset.sr==="first"){replay(first);addHistory(first);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})}
+    if(k.dataset.sr==="first"){replay(first);addHistory(first);toMenu()}
     if(k.dataset.sr==="run")openMarathon(sr)};
 }
 async function marathonMenu(films,G){
@@ -2148,7 +2167,7 @@ function openMarathon(sr){
     const k=e.target.dataset&&e.target.dataset.a;if(!k)return;
     if(k==="g-"||k==="g+"){G=Math.min(60,Math.max(1,G+(k==="g+"?1:-1)));await draw();const b=o.querySelector(`[data-a="${k}"]`);if(b)b.focus();return}
     if(k==="done")close();
-    if(k==="first"&&films[0]){const f=films[0];close();setView("wheel");replay(f);addHistory(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})}
+    if(k==="first"&&films[0]){const f=films[0];close();setView("wheel");replay(f);addHistory(f);toMenu()}
     if(k==="shop"&&films[0])openTrolley(films[0],menu,sr.name+" marathon");
   });
   o.addEventListener("change",async e=>{const id=e.target.dataset&&e.target.dataset.f;if(!id)return;e.target.checked?off.delete(id):off.add(id);await draw();const b=o.querySelector(`[data-f="${CSS.escape(id)}"]`);if(b)b.focus()});
@@ -2192,7 +2211,7 @@ function snackSave(f,ids){try{ids.length?localStorage.setItem("mns-snacks-"+f.id
 function snackDishes(f){if(!f)return [];return snackPicks(f).map(id=>{const x=SNACK_BY()[id];return {n:x.n,course:"c",prep_min:x.prep_min,cook_min:x.cook_min,make_ahead:x.make_ahead,ingredients:x.ingredients,steps:x.steps,veg:x.veg,af:true,snack:x.id}})}
 let snackCat="All";
 /* snacks go on the locked-in film when there is one, so renting or spinning something else doesn't move them */
-function snackFilm(){const w=typeof week!=="undefined"&&week&&week.id&&FILMS.find(x=>x.id===week.id);return w||current}
+function snackFilm(){const w=typeof week!=="undefined"&&week&&week.id&&FILMS.find(x=>x.id===week.id);return w||(document.body.classList.contains("staged")?null:current)}
 function renderSnacks(){
   const box=$("snackCounter");if(!box)return;const f=snackFilm(),locked=!!(f&&week&&week.id===f.id);const on=new Set(f?snackPicks(f):[]);
   const cats=["All",...new Set((window.SNACKS||[]).map(x=>x.cat))];
@@ -2205,7 +2224,10 @@ function renderSnacks(){
 document.addEventListener("click",e=>{
   const box=$("snackCounter");if(!box||!box.contains(e.target))return;
   const c=e.target.closest("[data-sc-cat]");if(c){snackCat=c.dataset.scCat;renderSnacks();const b=box.querySelector(`[data-sc-cat="${CSS.escape(snackCat)}"]`);if(b)b.focus();return}
-  const a=e.target.closest("[data-snack]");const tf=snackFilm();if(a&&tf){const ids=snackPicks(tf),id=a.dataset.snack,i=ids.indexOf(id);if(i<0)ids.push(id);else ids.splice(i,1);snackSave(tf,ids);
+  if(e.target.closest("[data-sc-spin]")){goView("wheel");return}
+  const a=e.target.closest("[data-snack]");const tf=snackFilm();
+  if(a&&!tf){const sub=box.querySelector(".sc-sub");if(sub)sub.innerHTML='Pick a film first, then your snacks go on its prep sheet and shopping list. <button type="button" class="sc-spin" data-sc-spin="1">Spin the wheel</button>';buzz(15);return}
+  if(a&&tf){const ids=snackPicks(tf),id=a.dataset.snack,i=ids.indexOf(id);if(i<0)ids.push(id);else ids.splice(i,1);snackSave(tf,ids);
     try{if(tf===current&&current._r2){planWire(current);prep.innerHTML=prepHTML(current,current.menu)}}catch(err){}
     renderSnacks();try{snackPair(current)}catch(err){}buzz(15);const b=box.querySelector(`[data-snack="${CSS.escape(id)}"]`);if(b)b.focus();return}
   if(e.target.closest("[data-sc-go]")){const tf=snackFilm();if(tf&&tf!==current){openTrolley(tf);return}setView("wheel");setTab("prep");setTimeout(()=>{const pv=$("preview");if(pv)pv.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})},60)}
@@ -2240,4 +2262,4 @@ function toSharedFilm(){try{const id=new URLSearchParams(location.search).get("f
 
 /* rentals: a tape you've got out opens straight to its menu */
 function isRentedOut(f){return (member.out||[]).some(r=>r.id===f.id)&&!watched.has(f.id)}
-function openRentalMenu(f){setView("wheel");replay(f);addHistory(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})}
+function openRentalMenu(f){setView("wheel");replay(f);addHistory(f);toMenu()}
