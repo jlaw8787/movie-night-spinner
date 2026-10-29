@@ -30,7 +30,7 @@ let a=boot(legacy);
 assert.equal(a.state().date,'2026-10-23');assert.equal(a.state().double,'other');assert.equal(a.state().ticks.milk,true);
 assert.equal(a.writes(),1,'Legacy date is persisted immediately');
 a.now(2026,9,26,12);assert.equal(a.run('cookDate()[1]'),-3);a.run('renderWeek()');
-assert.match(a.$('weekPanel').innerHTML,/23 Oct, <b>3 days ago/);
+assert.match(a.$('weekPanel').innerHTML,/23 Oct · <b>3 days ago/);
 assert.match(a.$('weekCount').innerHTML,/Scheduled showtime has passed/);
 assert.equal(a.state().date,'2026-10-23','Rendering never rolls a past plan into the next week');
 a=boot(JSON.parse(a.storage['mns-week']),[2026,10,10,12]);
