@@ -1,0 +1,712 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Avenue B cart soft pretzels with mustard",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 85,
+   "make_ahead": "Best baked on the day; shape the pretzels and keep them covered in the fridge up to 4 hours, then boil and bake",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "bread flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 325,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "water, for the bath",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "coarse sea salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "wholegrain mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, sugar, salt, melted butter and warm water and knead until smooth.",
+     "min": 10
+    },
+    {
+     "text": "Cover and leave somewhere warm until doubled.",
+     "min": 60
+    },
+    {
+     "text": "Heat the oven to 220C. Cut the dough into 8, roll each into a long rope and twist into a pretzel.",
+     "min": 15
+    },
+    {
+     "text": "Boil the water for the bath with the bicarbonate of soda and dip each pretzel for 30 seconds, then lift onto lined trays.",
+     "min": 12
+    },
+    {
+     "text": "Brush with the egg, scatter with the coarse salt and bake until deep brown.",
+     "min": 14
+    },
+    {
+     "text": "Serve warm with the yellow and wholegrain mustard in bowls.",
+     "min": 4
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Mark's film reel pinwheels",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "Roll and chill the logs up to 1 day ahead, wrapped; slice and bake just before serving",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "sun-dried tomato pesto",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Spread the pastry sheets with the pesto and scatter over the parmesan and cheddar.",
+     "min": 6
+    },
+    {
+     "text": "Roll each sheet up tightly from the long side.",
+     "min": 4
+    },
+    {
+     "text": "Chill so the logs slice cleanly. Heat the oven to 200C.",
+     "min": 20
+    },
+    {
+     "text": "Cut into 1.5cm rounds, lay flat on lined trays and brush with the egg.",
+     "min": 6
+    },
+    {
+     "text": "Bake until puffed and golden, then cool a few minutes.",
+     "min": 19
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Christmas Eve arroz con pollo for the loft",
+   "course": "m",
+   "prep_min": 50,
+   "cook_min": 58,
+   "make_ahead": "Marinate the chicken up to 1 day ahead in the fridge and blitz the sofrito up to 2 days ahead; cook the rice on the night",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "bone-in chicken thighs, skin on",
+     "aisle": "Meat"
+    },
+    {
+     "q": 7,
+     "u": "",
+     "item": "garlic cloves, 3 crushed for the rub, 4 for the sofrito",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, 1 juiced, 1 in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, roughly chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green capsicum, roughly chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum, roughly chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "handful coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "medium grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "green olives",
+     "aisle": "Deli"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the chicken with the crushed garlic, oregano, cumin, lime juice and salt.",
+     "min": 8
+    },
+    {
+     "text": "Leave to marinate.",
+     "min": 30
+    },
+    {
+     "text": "Blitz the onion, both capsicums, the rest of the garlic and the coriander to a rough sofrito.",
+     "min": 10
+    },
+    {
+     "text": "Brown the chicken skin side down in the olive oil in a wide heavy pot, turning once, then lift out.",
+     "min": 12
+    },
+    {
+     "text": "Fry the sofrito in the fat until soft.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the tomato paste, paprika, turmeric and rice.",
+     "min": 3
+    },
+    {
+     "text": "Pour in the stock, add the bay leaves, sit the chicken on top, cover and simmer gently.",
+     "min": 25
+    },
+    {
+     "text": "Scatter over the peas and olives, cover off the heat to finish, and serve with the lime wedges.",
+     "min": 10
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Christmas Eve arroz with mushrooms and chickpeas",
+     "prep_min": 25,
+     "cook_min": 48,
+     "make_ahead": "Blitz the sofrito up to 2 days ahead; cook the rice on the night",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "Swiss brown mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 7,
+       "u": "",
+       "item": "garlic cloves, 3 crushed for the rub, 4 for the sofrito",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes, 1 juiced, 1 in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, roughly chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green capsicum, roughly chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum, roughly chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "handful coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "ground turmeric",
+       "aisle": "Spices"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "medium grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "green olives",
+       "aisle": "Deli"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the mushrooms with the crushed garlic, oregano, cumin, lime juice and salt.",
+       "min": 10
+      },
+      {
+       "text": "Blitz the onion, both capsicums, the rest of the garlic and the coriander to a rough sofrito.",
+       "min": 10
+      },
+      {
+       "text": "Brown the mushrooms hard in the olive oil in a wide heavy pot, then lift out.",
+       "min": 10
+      },
+      {
+       "text": "Fry the sofrito in the pot until soft.",
+       "min": 8
+      },
+      {
+       "text": "Stir in the tomato paste, paprika, turmeric and rice.",
+       "min": 3
+      },
+      {
+       "text": "Pour in the stock, add the bay leaves, chickpeas and mushrooms, cover and simmer gently.",
+       "min": 22
+      },
+      {
+       "text": "Scatter over the peas and olives, cover off the heat to finish, and serve with the lime wedges.",
+       "min": 10
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Angel's Christmas tembleque",
+   "course": "w",
+   "prep_min": 5,
+   "cook_min": 255,
+   "make_ahead": "Make and chill up to 2 days ahead, covered in the fridge; turn out and dust just before serving",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 110,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vegetable oil, for the mould",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the cornflour into the coconut milk in a saucepan until smooth, then add the sugar, salt and cinnamon stick.",
+     "min": 3
+    },
+    {
+     "text": "Stir over medium heat until it boils and turns thick and glossy.",
+     "min": 12
+    },
+    {
+     "text": "Take off the heat, lift out the cinnamon stick and stir in the vanilla. Pour into a lightly oiled mould.",
+     "min": 3
+    },
+    {
+     "text": "Chill until set.",
+     "min": 240
+    },
+    {
+     "text": "Turn out onto a plate and dust with the ground cinnamon.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Collins' hot toddy for a loft with no heat",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 8,
+   "make_ahead": "Simmer the spiced water up to 1 day ahead and reheat; build each mug to order",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cinnamon sticks, broken in half",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "whole cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "whisky",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, 1 juiced, 1 sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the water with the cinnamon sticks and cloves.",
+     "min": 7
+    },
+    {
+     "text": "Put the honey and whisky into 4 heatproof mugs and squeeze in the lemon juice.",
+     "min": 2
+    },
+    {
+     "text": "Top with the hot spiced water and stir until the honey melts.",
+     "min": 2
+    },
+    {
+     "text": "Finish each mug with a lemon slice and a piece of the cinnamon stick.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Collins' hot toddy for a loft with no heat (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 12,
+     "make_ahead": "Simmer the spiced ginger water up to 1 day ahead and reheat; steep the tea and build each mug to order",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cinnamon sticks, broken in half",
+       "aisle": "Spices"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "whole cloves",
+       "aisle": "Spices"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thin slices fresh ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, 1 juiced, 1 sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the water with the cinnamon sticks, cloves and ginger.",
+       "min": 8
+      },
+      {
+       "text": "Take off the heat, drop in the tea bags and steep, then lift them out.",
+       "min": 4
+      },
+      {
+       "text": "Put the honey into 4 heatproof mugs with the lemon juice, pour over the hot tea and stir until the honey melts.",
+       "min": 3
+      },
+      {
+       "text": "Finish each mug with a lemon slice and a piece of the cinnamon stick.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  }
+ ]
+}
