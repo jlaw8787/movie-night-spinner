@@ -753,7 +753,8 @@ function dietItem(f,it){
   if(!x.tag)return it;
   const v=dietWhich(d,x),N=(f._diet&&f._diet.notes&&f._diet.notes[d.n])||{};
   const note=N[v]||(v==="veg_af"?N.veg:"")||"";
-  return Object.assign({},it,{n:String(x.n).replace(/\s*\((vegetarian|alcohol[- ]free|vegetarian, alcohol[- ]free)\)\s*$/i,""),note,orig:d.n,how:(x.steps||[]).map(t=>t.text).join(" "),shop:dietShop(x),diet:v});
+  const nm=String(x.n).replace(/\s*\((vegetarian|alcohol[- ]free|vegetarian, alcohol[- ]free)\)\s*$/i,"");
+  return Object.assign({},it,it.label!=null&&it.label===d.n?{label:nm}:{},{n:String(x.n).replace(/\s*\((vegetarian|alcohol[- ]free|vegetarian, alcohol[- ]free)\)\s*$/i,""),note,orig:d.n,how:(x.steps||[]).map(t=>t.text).join(" "),shop:dietShop(x),diet:v});
 }
 function dietMenu(f,menu){
   if(!menu||!dietKey()||!f||!f._r2)return menu;
@@ -769,7 +770,7 @@ function dietText(f,str){
   for(const L of lists)for(const [a,b] of (L||[]))if(a&&out.includes(a))out=out.split(a).join(b);
   return out;
 }
-function dietDeep(f,o){if(typeof o==="string")return dietText(f,o);if(Array.isArray(o))return o.map(x=>dietDeep(f,x));if(o&&typeof o==="object"){const r={};for(const k in o)r[k]=dietDeep(f,o[k]);return r}return o}
+function dietDeep(f,o){if(typeof o==="string")return dietText(f,o);if(Array.isArray(o))return o.map(x=>dietDeep(f,x));if(o&&typeof o==="object"){const r={};for(const k in o)r[k]=k==="k"?o[k]:dietDeep(f,o[k]);return r}return o}
 const _dietSpecs=new WeakMap();
 function dietSpec(f,spec){if(!spec||!dietKey()||!f._diet)return spec;let c=_dietSpecs.get(spec);if(!c){c={};_dietSpecs.set(spec,c)}const k=dietKey();return c[k]||(c[k]=dietDeep(f,spec))}
 function dietStamp(el){const t=dietLabel();if(!t||!el)return;const b=document.createElement("div");b.className="diet-stamp";b.textContent=t;el.appendChild(b)}
