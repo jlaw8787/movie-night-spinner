@@ -1,0 +1,728 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Viktor's Kyiv deruny",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 22,
+   "make_ahead": "Best fried just before serving; mix the dill sour cream up to 2 days ahead. Keep fried deruny crisp in a 120C oven for up to 30 minutes",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "floury potatoes, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "dill, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grate the potatoes and onion on the coarse side of a grater.",
+     "min": 8
+    },
+    {
+     "text": "Tip into a clean tea towel and squeeze out as much liquid as you can.",
+     "min": 4
+    },
+    {
+     "text": "Mix with the egg, flour and plenty of salt and pepper.",
+     "min": 3
+    },
+    {
+     "text": "Heat the oil in a large frying pan and fry heaped spoonfuls, flattened, for 3 to 4 minutes a side, in batches, until deep golden and crisp. Drain.",
+     "min": 20
+    },
+    {
+     "text": "Stir half the dill through the sour cream and serve with the hot deruny and the rest of the dill on top.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "LA proposal night tuna tostadas",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Bake the tostadas up to 1 day ahead and keep airtight; mix the chipotle mayonnaise up to 3 days ahead; dress the tuna just before serving",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "small corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sashimi-grade tuna",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chipotle chillies in adobo, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "avocado",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "fried shallots",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Brush the tortillas with the oil and bake on a tray until crisp, turning once.",
+     "min": 10
+    },
+    {
+     "text": "Mix the mayonnaise with the chipotle.",
+     "min": 2
+    },
+    {
+     "text": "Mash the avocado with the juice of half a lime and salt.",
+     "min": 3
+    },
+    {
+     "text": "Dice the tuna and toss with the juice of 1 lime, the soy sauce, sesame oil and spring onions.",
+     "min": 5
+    },
+    {
+     "text": "Spread the tostadas with avocado, top with the tuna, a little chipotle mayonnaise and the fried shallots. Serve with the last lime half in wedges.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "LA proposal night charred corn tostadas",
+     "prep_min": 15,
+     "cook_min": 12,
+     "make_ahead": "Bake the tostadas up to 1 day ahead and keep airtight; mix the chipotle mayonnaise up to 3 days ahead; char the corn just before serving",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "small corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chipotle chillies in adobo, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "avocado",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "feta, crumbled",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "fried shallots",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Brush the tortillas with 1 tbsp of the oil and bake on a tray until crisp, turning once.",
+       "min": 10
+      },
+      {
+       "text": "Cut the kernels off the corn and char in the rest of the oil in a very hot pan. Toss with the beans, the juice of 1 lime, the soy sauce and spring onions.",
+       "min": 8
+      },
+      {
+       "text": "Mix the mayonnaise with the chipotle. Mash the avocado with the juice of half a lime and salt.",
+       "min": 4
+      },
+      {
+       "text": "Spread the tostadas with avocado, top with the corn and beans, a little chipotle mayonnaise, the feta and fried shallots. Serve with the last lime half in wedges.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "The Pit desert camp chilli",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 148,
+   "make_ahead": "Make the chilli up to 3 days ahead and keep chilled, or freeze up to 3 months; cook the rice on the night",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chipotle chillies in adobo, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned chopped tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned kidney beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long-grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the beef with salt and brown well in the oil in batches in a heavy pot. Lift out.",
+     "min": 12
+    },
+    {
+     "text": "Soften the onion and garlic in the same pot.",
+     "min": 6
+    },
+    {
+     "text": "Stir in the cumin, paprika, oregano and chipotle for 1 minute, then return the beef with the tomatoes and stock. Simmer, covered, on low until the beef is very tender.",
+     "min": 122
+    },
+    {
+     "text": "Stir in the beans and chocolate and simmer, uncovered, until thick. Meanwhile cook the rice.",
+     "min": 20
+    },
+    {
+     "text": "Season and serve over the rice with sour cream, cheddar and spring onion.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "The Pit desert camp sweet potato chilli",
+     "prep_min": 15,
+     "cook_min": 46,
+     "make_ahead": "Make the chilli up to 3 days ahead and keep chilled, or freeze up to 3 months; cook the rice on the night",
+     "ingredients": [
+      {
+       "q": 700,
+       "u": "g",
+       "item": "sweet potato, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chipotle chillies in adobo, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned chopped tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tinned kidney and black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "dark chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long-grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the onion and garlic in the oil in a heavy pot.",
+       "min": 8
+      },
+      {
+       "text": "Stir in the cumin, paprika, oregano and chipotle for 1 minute, then add the sweet potato, tomatoes and stock. Simmer, covered, until the sweet potato is tender.",
+       "min": 30
+      },
+      {
+       "text": "Stir in the beans and chocolate and simmer, uncovered, until thick. Meanwhile cook the rice.",
+       "min": 20
+      },
+      {
+       "text": "Season with salt and serve over the rice with sour cream, cheddar and spring onion.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Moscow fight night honey cake",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 531,
+   "make_ahead": "Assemble 1 day ahead, the overnight chill is what softens the layers; keeps 3 days in the fridge",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 350,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the honey, caster sugar and butter in a bowl over simmering water.",
+     "min": 8
+    },
+    {
+     "text": "Whisk in the eggs, then the bicarb, until it foams and turns golden. Off the heat, work in the flour to a soft dough.",
+     "min": 8
+    },
+    {
+     "text": "Cover and rest until cool enough to handle. Heat the oven to 180C.",
+     "min": 15
+    },
+    {
+     "text": "Divide into 6, roll each thinly on baking paper, cut to a 20cm round using a plate and bake each for about 6 minutes until golden. Keep the offcuts and bake them too.",
+     "min": 40
+    },
+    {
+     "text": "Blitz the offcuts to fine crumbs.",
+     "min": 5
+    },
+    {
+     "text": "Whip the cream to soft peaks, then whisk in the sour cream and icing sugar.",
+     "min": 5
+    },
+    {
+     "text": "Stack the layers with the cream between each, cover the top and sides and press on the crumbs.",
+     "min": 10
+    },
+    {
+     "text": "Chill overnight.",
+     "min": 480
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Desert camp watermelon agua fresca",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 32,
+   "make_ahead": "Blend and strain up to 1 day ahead and keep chilled; stir before pouring over ice",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "seedless watermelon flesh, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs mint",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the watermelon, lime juice, sugar and water until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Strain through a sieve into a jug.",
+     "min": 5
+    },
+    {
+     "text": "Chill until very cold.",
+     "min": 30
+    },
+    {
+     "text": "Pour over ice in 4 glasses and add a mint sprig.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

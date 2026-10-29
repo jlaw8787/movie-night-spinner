@@ -1,0 +1,744 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Carnival corn dogs",
+   "course": "s",
+   "prep_min": 11,
+   "cook_min": 24,
+   "make_ahead": "Mix the dry batter ingredients up to 1 week ahead; add the egg and buttermilk and fry on the night",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "frankfurts",
+     "aisle": "Deli"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine polenta",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "bamboo skewers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the polenta, flour, baking powder, sugar and salt, then whisk in the egg and buttermilk to a thick batter. Pour into a tall glass.",
+     "min": 6
+    },
+    {
+     "text": "Heat the oil to 175C in a deep pot.",
+     "min": 10
+    },
+    {
+     "text": "Pat the frankfurts dry and push a skewer into each.",
+     "min": 3
+    },
+    {
+     "text": "Dip each frankfurt into the batter, twirl to coat and fry 2 at a time, turning, until deep golden. Drain.",
+     "min": 14
+    },
+    {
+     "text": "Serve hot with mustard and tomato sauce.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Carnival corn dogs (vegetarian)",
+     "prep_min": 11,
+     "cook_min": 24,
+     "make_ahead": "Mix the dry batter ingredients up to 1 week ahead; add the egg and buttermilk and fry on the night",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian frankfurts",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "fine polenta",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "bamboo skewers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "American mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the polenta, flour, baking powder, sugar and salt, then whisk in the egg and buttermilk to a thick batter. Pour into a tall glass.",
+       "min": 6
+      },
+      {
+       "text": "Heat the oil to 175C in a deep pot.",
+       "min": 10
+      },
+      {
+       "text": "Pat the vegetarian frankfurts dry and push a skewer into each.",
+       "min": 3
+      },
+      {
+       "text": "Dip each frankfurt into the batter, twirl to coat and fry 2 at a time, turning, until deep golden. Drain.",
+       "min": 14
+      },
+      {
+       "text": "Serve hot with mustard and tomato sauce.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Tupelo fried green tomatoes",
+   "course": "s",
+   "prep_min": 28,
+   "cook_min": 15,
+   "make_ahead": "Make the buttermilk dressing up to 2 days ahead; crumb and fry the tomatoes on the night",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "large green tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 185,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "fine polenta",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot chilli sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground black pepper",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the tomatoes 1cm thick, salt lightly and sit on paper towel.",
+     "min": 15
+    },
+    {
+     "text": "Set out the flour, the eggs beaten with 60ml of the buttermilk, and the polenta mixed with the cayenne.",
+     "min": 4
+    },
+    {
+     "text": "Dip each slice in flour, egg and polenta.",
+     "min": 6
+    },
+    {
+     "text": "Shallow-fry in the oil for 2 to 3 minutes a side until golden, and drain.",
+     "min": 15
+    },
+    {
+     "text": "Stir the rest of the buttermilk with the mayonnaise, chives, hot sauce and pepper and serve with the tomatoes.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Beale Street dry rub pork ribs with slaw",
+   "course": "m",
+   "prep_min": 78,
+   "cook_min": 165,
+   "make_ahead": "Rub the ribs up to 1 day ahead and keep them in the fridge; bake on the day and toss the slaw while they finish",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "American-style pork ribs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "apple cider vinegar, for the mop",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "onion powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried thyme",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "green cabbage, finely shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "red cabbage, finely shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "apple cider vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sugar, for the slaw",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf soft white bread",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the paprikas, brown sugar, garlic powder, onion powder, cayenne, thyme, salt and pepper and rub all over the ribs, keeping 1 tbsp back.",
+     "min": 8
+    },
+    {
+     "text": "Leave the ribs in the fridge to take in the rub.",
+     "min": 60
+    },
+    {
+     "text": "Wrap the ribs tightly in foil on a tray and bake at 150C.",
+     "min": 150
+    },
+    {
+     "text": "Unwrap, turn the oven to 220C, splash with the mop vinegar, dust with the last of the rub and roast until crusted.",
+     "min": 15
+    },
+    {
+     "text": "Toss the cabbages and carrot with the mayonnaise, the rest of the vinegar and the sugar.",
+     "min": 6
+    },
+    {
+     "text": "Cut the ribs and serve with the slaw and slices of white bread.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Beale Street dry rub cauliflower with slaw",
+     "prep_min": 21,
+     "cook_min": 41,
+     "make_ahead": "Mix the dry rub up to 1 month ahead and the slaw dressing up to 2 days ahead; roast and toss the slaw on the night",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "apple cider vinegar, for the mop",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sweet paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "onion powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cayenne pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "green cabbage, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "red cabbage, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "whole egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "apple cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sugar, for the slaw",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "loaf soft white bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 220C. Cut the cauliflowers into thick wedges through the stalk.",
+       "min": 5
+      },
+      {
+       "text": "Mix the paprikas, brown sugar, garlic powder, onion powder, cayenne, thyme, salt and pepper, toss the wedges with the oil and coat them well in the rub.",
+       "min": 8
+      },
+      {
+       "text": "Roast on a lined tray for 35 minutes, turning once, until charred at the edges and soft at the stalk.",
+       "min": 35
+      },
+      {
+       "text": "Splash the wedges with the vinegar mopping sauce and roast 5 minutes more.",
+       "min": 6
+      },
+      {
+       "text": "Toss the cabbages and carrot with the mayonnaise, the rest of the vinegar and the sugar.",
+       "min": 6
+      },
+      {
+       "text": "Serve the cauliflower with the slaw and slices of white bread.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Graceland fried peanut butter and banana sandwiches",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Best fried just before serving; mash the bananas no more than 1 hour ahead with a squeeze of lemon",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "ripe bananas",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 160,
+     "u": "g",
+     "item": "smooth peanut butter",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mash the bananas.",
+     "min": 3
+    },
+    {
+     "text": "Spread the bread with peanut butter, spread banana over 4 slices and sandwich together.",
+     "min": 5
+    },
+    {
+     "text": "Fry 2 at a time in half the butter over medium heat, pressing, until deep golden on both sides. Repeat with the rest of the butter.",
+     "min": 15
+    },
+    {
+     "text": "Cut into fingers, drizzle with honey and dust with icing sugar.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Memphis peach sweet tea",
+   "course": "d",
+   "prep_min": 126,
+   "cook_min": 13,
+   "make_ahead": "Brew and chill the sweet tea up to 2 days ahead and keep it in a jug in the fridge; pour over ice to order",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "ripe peaches, 2 sliced for syrup, 1 for serving",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "black tea bags",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs of mint",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer 2 of the peaches with the sugar and 250ml water, then mash and strain.",
+     "min": 10
+    },
+    {
+     "text": "Pour 1 litre boiling water over the tea bags, steep 5 minutes and remove.",
+     "min": 6
+    },
+    {
+     "text": "Stir in the peach syrup, lemon juice and 500ml cold water and chill.",
+     "min": 120
+    },
+    {
+     "text": "Pour over ice with slices of the last peach and the mint.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

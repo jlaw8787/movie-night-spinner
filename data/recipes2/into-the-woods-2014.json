@@ -1,0 +1,626 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Little Red's basket cheese and herb buns",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 117,
+   "make_ahead": "Bake up to 1 day ahead and keep in an airtight tin; warm at 180C for 5 minutes. The dough can do its first prove overnight in the fridge",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "bread flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "warm milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chives, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, sugar, salt, warm milk and butter and knead for 10 minutes until smooth. Knead in two thirds of the cheddar with the chives and thyme.",
+     "min": 12
+    },
+    {
+     "text": "Cover and prove until doubled.",
+     "min": 60
+    },
+    {
+     "text": "Divide into 12 and roll into tight balls. Set them close together in a lined 23cm square tin.",
+     "min": 10
+    },
+    {
+     "text": "Cover and prove until puffy and touching. Heat the oven to 200C.",
+     "min": 30
+    },
+    {
+     "text": "Brush with the egg, scatter with the rest of the cheddar and bake until golden.",
+     "min": 20
+    },
+    {
+     "text": "Cool for 10 minutes, then pull apart into a cloth-lined basket.",
+     "min": 10
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Jack's cow-for-beans broad bean crostini",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 13,
+   "make_ahead": "Crush the beans up to 1 day ahead and keep covered in the fridge with a film of oil on top; toast the bread up to 4 hours ahead",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "frozen broad beans",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested and juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "mint, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette, in 1cm slices",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the broad beans in boiling water for 3 minutes, drain and cool in cold water.",
+     "min": 5
+    },
+    {
+     "text": "Pop the bright green beans out of their pale skins.",
+     "min": 10
+    },
+    {
+     "text": "Crush roughly with the garlic, lemon zest and juice, mint and half the oil, and season with salt and pepper.",
+     "min": 5
+    },
+    {
+     "text": "Brush the baguette slices with the rest of the oil and toast under the grill until golden.",
+     "min": 8
+    },
+    {
+     "text": "Spread each toast with ricotta and pile on the crushed beans.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Granny's cottage chicken and mushroom pot pie",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 60,
+   "make_ahead": "Make the filling up to 2 days ahead and chill; top with pastry and bake on the night",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "boneless chicken thighs, in 3cm pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "leek, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "button mushrooms, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sprigs thyme, leaves picked",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets frozen puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the chicken and brown it in the butter and oil in a large frying pan. Lift out.",
+     "min": 10
+    },
+    {
+     "text": "Soften the leek, button mushrooms, garlic and thyme in the same pan.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the flour, then the stock, cream and mustard. Return the browned filling and simmer until thick.",
+     "min": 15
+    },
+    {
+     "text": "Stir in the parsley, season and spoon into a 2 litre pie dish. Cool for 10 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Heat the oven to 200C. Lay the pastry over the top, overlapping the sheets, trim and press the edges, brush with the egg and cut a small steam hole.",
+     "min": 5
+    },
+    {
+     "text": "Bake until puffed and deep golden.",
+     "min": 30
+    },
+    {
+     "text": "Rest for 5 minutes before serving.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Granny's cottage mushroom and leek pot pie",
+     "prep_min": 25,
+     "cook_min": 60,
+     "make_ahead": "Make the filling up to 2 days ahead and chill; top with pastry and bake on the night",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "Swiss brown mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "leek, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "button mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sprigs thyme, leaves picked",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets frozen puff pastry, thawed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the Swiss brown mushrooms hard in the butter and oil in a large frying pan, then stir in the butter beans and lift out.",
+       "min": 10
+      },
+      {
+       "text": "Soften the leek, button mushrooms, garlic and thyme in the same pan.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the flour, then the stock, cream and mustard. Return the browned filling and simmer until thick.",
+       "min": 15
+      },
+      {
+       "text": "Stir in the parsley, season and spoon into a 2 litre pie dish. Cool for 10 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Heat the oven to 200C. Lay the pastry over the top, overlapping the sheets, trim and press the edges, brush with the egg and cut a small steam hole.",
+       "min": 5
+      },
+      {
+       "text": "Bake until puffed and deep golden.",
+       "min": 30
+      },
+      {
+       "text": "Rest for 5 minutes before serving.",
+       "min": 5
+      }
+     ],
+     "veg": true,
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Rapunzel's golden apple plait",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 165,
+   "make_ahead": "Bake up to 1 day ahead and keep wrapped; the dough can do its first prove overnight in the fridge",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "bread flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "warm milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, softened, for the dough",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, softened, for the filling",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "green apples, peeled and grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, caster sugar, salt, warm milk and eggs, then knead in the dough butter bit by bit until smooth and glossy.",
+     "min": 15
+    },
+    {
+     "text": "Cover and prove until doubled.",
+     "min": 90
+    },
+    {
+     "text": "Squeeze the apple dry. Roll the dough out to 40cm by 30cm, spread with the filling butter and scatter with the brown sugar, cinnamon and apple.",
+     "min": 8
+    },
+    {
+     "text": "Roll up from a long side, cut in half lengthways and twist the two strands together, cut sides up, into a long plait. Set on a lined tray.",
+     "min": 7
+    },
+    {
+     "text": "Cover loosely and prove until puffy. Heat the oven to 180C.",
+     "min": 30
+    },
+    {
+     "text": "Bake until deep golden and cooked through.",
+     "min": 30
+    },
+    {
+     "text": "Brush with the warmed honey, cool a little and serve in slices with the cream, lightly whipped.",
+     "min": 15
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Milky White's vanilla milkshake",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Chill the milk and glasses up to 1 day ahead; blend to order",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pinch of ground nutmeg",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the milk, ice cream, vanilla and honey until thick and frothy.",
+     "min": 3
+    },
+    {
+     "text": "Pour into 4 tall chilled glasses.",
+     "min": 1
+    },
+    {
+     "text": "Dust each with a pinch of nutmeg and serve with a straw.",
+     "min": 1
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

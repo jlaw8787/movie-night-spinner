@@ -1,0 +1,722 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Mobil Avenue platform sausage rolls",
+   "course": "s",
+   "prep_min": 47,
+   "cook_min": 25,
+   "make_ahead": "Roll and cut up to 1 day ahead and keep chilled, or freeze raw and bake from frozen for 30 minutes",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pork sausage mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "fennel seeds, crushed",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried thyme",
+     "aisle": "Spices"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "dried breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets frozen puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "tomato sauce, to serve",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C, line a tray and thaw the pastry.",
+     "min": 10
+    },
+    {
+     "text": "Mix the sausage mince with the onion, fennel, thyme, breadcrumbs and pepper.",
+     "min": 5
+    },
+    {
+     "text": "Cut each pastry sheet in half, lay a log of filling along each strip, roll up and seal the seam.",
+     "min": 10
+    },
+    {
+     "text": "Brush with the egg, scatter with sesame, cut each roll into 6 and slash the tops.",
+     "min": 5
+    },
+    {
+     "text": "Chill on the tray for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Bake for 25 minutes until puffed, golden and cooked through.",
+     "min": 25
+    },
+    {
+     "text": "Serve hot with the tomato sauce.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mobil Avenue platform sausage rolls (vegetarian)",
+     "prep_min": 47,
+     "cook_min": 25,
+     "make_ahead": "Roll and cut up to 1 day ahead and keep chilled, or freeze raw and bake from frozen for 30 minutes",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "vegetarian sausages, skins removed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small onion, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fennel seeds, crushed",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Spices"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "dried breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets frozen puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sesame seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "tomato sauce, to serve",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C, line a tray and thaw the pastry.",
+       "min": 10
+      },
+      {
+       "text": "Mash the vegetarian sausage meat with the ricotta, onion, fennel, thyme, breadcrumbs and pepper.",
+       "min": 5
+      },
+      {
+       "text": "Cut each pastry sheet in half, lay a log of filling along each strip, roll up and seal the seam.",
+       "min": 10
+      },
+      {
+       "text": "Brush with the egg, scatter with sesame, cut each roll into 6 and slash the tops.",
+       "min": 5
+      },
+      {
+       "text": "Chill on the tray for 15 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Bake for 25 minutes until puffed, golden and cooked through.",
+       "min": 25
+      },
+      {
+       "text": "Serve hot with the tomato sauce.",
+       "min": 2
+      }
+     ],
+     "veg": true,
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Club Hel devilled eggs",
+   "course": "s",
+   "prep_min": 27,
+   "cook_min": 12,
+   "make_ahead": "Boil and peel the eggs and mix the filling up to 1 day ahead; pipe and dust within an hour of serving",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "cayenne pepper, a pinch",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "black sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chives, finely chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lower the eggs into boiling water and cook for 10 minutes.",
+     "min": 12
+    },
+    {
+     "text": "Cool in iced water for 10 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Peel, halve lengthways and scoop the yolks into a bowl.",
+     "min": 6
+    },
+    {
+     "text": "Mash the yolks with the mayonnaise, mustard, lemon juice, cayenne and salt until smooth.",
+     "min": 4
+    },
+    {
+     "text": "Pipe or spoon the filling back into the whites.",
+     "min": 5
+    },
+    {
+     "text": "Dust with smoked paprika, black sesame and chives.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Trainman's dining car chicken and leek pie",
+   "course": "m",
+   "prep_min": 33,
+   "cook_min": 72,
+   "make_ahead": "Make and chill the filling up to 2 days ahead; top with pastry and bake on the night",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thigh fillets, cut into chunks",
+     "aisle": "Meat"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "leeks, washed and sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "thyme leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets frozen puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the chicken and brown it in the oil in a wide pan in batches. Set aside.",
+     "min": 12
+    },
+    {
+     "text": "Melt the butter in the pan and soften the leeks and garlic for 8 minutes.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the flour for a minute, then the stock, cream, mustard and thyme. Return the chicken and simmer for 20 minutes until thick.",
+     "min": 22
+    },
+    {
+     "text": "Cool the filling for 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Heat the oven to 200C. Spoon the filling into a pie dish, top with the pastry, crimp the edges, brush with egg and cut 2 vents.",
+     "min": 8
+    },
+    {
+     "text": "Bake for 30 minutes until puffed and deep golden.",
+     "min": 30
+    },
+    {
+     "text": "Rest for 5 minutes before serving.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Trainman's dining car mushroom and leek pie",
+     "prep_min": 33,
+     "cook_min": 72,
+     "make_ahead": "Make and chill the filling up to 2 days ahead; top with pastry and bake on the night",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "leeks, washed and sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "thyme leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets frozen puff pastry, thawed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Season the mushrooms and brown them in the oil in a wide pan in batches until dry and golden. Set aside.",
+       "min": 12
+      },
+      {
+       "text": "Melt the butter in the pan and soften the leeks and garlic for 8 minutes.",
+       "min": 8
+      },
+      {
+       "text": "Stir in the flour for a minute, then the stock, cream, mustard and thyme. Return the mushrooms and simmer for 20 minutes until thick.",
+       "min": 22
+      },
+      {
+       "text": "Cool the filling for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Heat the oven to 200C. Spoon the filling into a pie dish, top with the pastry, crimp the edges, brush with egg and cut 2 vents.",
+       "min": 8
+      },
+      {
+       "text": "Bake for 30 minutes until puffed and deep golden.",
+       "min": 30
+      },
+      {
+       "text": "Rest for 5 minutes before serving.",
+       "min": 5
+      }
+     ],
+     "veg": true,
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Trainman's steamed golden syrup pudding",
+   "course": "w",
+   "prep_min": 24,
+   "cook_min": 100,
+   "make_ahead": "Steam up to 2 days ahead, keep chilled in the basin and resteam for 30 minutes; make the custard on the night",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter, softened, plus extra for the basin",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "caster sugar, for the pudding",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 175,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "milk, for the pudding",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "full cream milk, for the custard",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar, for the custard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Butter a 1.2 litre pudding basin and spoon the golden syrup into the base.",
+     "min": 3
+    },
+    {
+     "text": "Cream the butter and sugar until pale.",
+     "min": 5
+    },
+    {
+     "text": "Beat in the eggs one at a time, then fold in the flour, lemon zest and milk.",
+     "min": 5
+    },
+    {
+     "text": "Spoon into the basin, cover with pleated buttered baking paper and foil and tie with string.",
+     "min": 6
+    },
+    {
+     "text": "Stand on a trivet in a large pot with boiling water halfway up the basin, cover and steam for 90 minutes, topping up the water.",
+     "min": 90
+    },
+    {
+     "text": "For the custard, heat the milk and vanilla. Whisk the yolks, sugar and cornflour, pour on the hot milk, return to the pan and stir over low heat until thick.",
+     "min": 10
+    },
+    {
+     "text": "Rest the pudding for 5 minutes, turn out onto a plate and serve with the custard.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Sati's sunrise soda",
+   "course": "d",
+   "prep_min": 9,
+   "cook_min": 0,
+   "make_ahead": "Chill the juice and soda for at least 2 hours ahead; build each glass to order",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "orange juice, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "soda water, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "grenadine syrup",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, cut into wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "orange slices",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fill 4 tall glasses with ice.",
+     "min": 2
+    },
+    {
+     "text": "Pour in the orange juice and top with the soda water.",
+     "min": 3
+    },
+    {
+     "text": "Slowly pour the grenadine down the inside of each glass so it sinks to the bottom.",
+     "min": 2
+    },
+    {
+     "text": "Squeeze in a lime wedge and finish with an orange slice.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

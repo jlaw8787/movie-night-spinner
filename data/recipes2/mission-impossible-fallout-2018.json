@@ -1,0 +1,852 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Berlin handover currywurst",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 28,
+   "make_ahead": "Make the curry sauce up to 3 days ahead and reheat; fry the sausages on the night",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "curry powder, plus extra to dust",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "tomato passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cider vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "bratwurst sausages",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft white rolls",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the onion in the butter until soft.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the curry powder and paprika, then add the passata, tomato sauce, sugar, vinegar and salt and simmer until thick.",
+     "min": 15
+    },
+    {
+     "text": "Meanwhile fry the sausages in the oil, turning, until browned and cooked through.",
+     "min": 12
+    },
+    {
+     "text": "Slice thick, pile in a dish, spoon over the sauce, dust with curry powder and serve with the rolls.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Berlin handover currywurst (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 24,
+     "make_ahead": "Make the curry sauce up to 3 days ahead and reheat; fry the sausages on the night",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "curry powder, plus extra to dust",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "tomato passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft white rolls",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the onion in the butter until soft.",
+       "min": 8
+      },
+      {
+       "text": "Stir in the curry powder and paprika, then add the passata, tomato sauce, sugar, vinegar and salt and simmer until thick.",
+       "min": 15
+      },
+      {
+       "text": "Meanwhile fry the vegetarian sausages in the oil, turning, until browned and hot through.",
+       "min": 8
+      },
+      {
+       "text": "Slice thick, pile in a dish, spoon over the sauce, dust with curry powder and serve with the rolls.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Grand Palais gala gougères",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 34,
+   "make_ahead": "Pipe the unbaked puffs onto trays and freeze them up to 1 month, then bake from frozen with 5 extra minutes; baked puffs re-crisp in a hot oven",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, cubed",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "ground nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "gruyère, grated, for the dough",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "gruyère, grated, for the tops",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C and line two trays.",
+     "min": 5
+    },
+    {
+     "text": "Bring the water, milk, butter and salt to the boil.",
+     "min": 5
+    },
+    {
+     "text": "Tip in the flour all at once and beat over the heat until the dough pulls away from the pan.",
+     "min": 4
+    },
+    {
+     "text": "Cool the dough in a bowl.",
+     "min": 5
+    },
+    {
+     "text": "Beat in the eggs one at a time, then the mustard, nutmeg, pepper and gruyère for the dough.",
+     "min": 8
+    },
+    {
+     "text": "Pipe or spoon walnut-sized mounds onto the trays and top with the rest of the gruyère.",
+     "min": 10
+    },
+    {
+     "text": "Bake until puffed, deep golden and crisp.",
+     "min": 25
+    },
+    {
+     "text": "Serve warm.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Kashmir valley rogan josh",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 115,
+   "make_ahead": "Make the curry up to 2 days ahead; it is better reheated. Cook the rice on the night",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "boneless lamb shoulder, in 4cm pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "ghee",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "cardamom pods",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "whole cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, finely sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground ginger",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground fennel",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Kashmiri chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground coriander",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Greek yoghurt, whisked",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "basmati rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "garam masala",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "coriander leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the lamb with the salt. Heat the ghee, fry the cardamom, cloves, cinnamon and bay leaves, then brown the lamb in batches.",
+     "min": 15
+    },
+    {
+     "text": "Add the onion and fry until golden.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the garlic, ginger, fennel, chilli powder and coriander with a splash of water.",
+     "min": 3
+    },
+    {
+     "text": "Stir in the yoghurt a spoonful at a time so it doesn't split.",
+     "min": 5
+    },
+    {
+     "text": "Add the water, cover and simmer gently until the lamb is very tender.",
+     "min": 90
+    },
+    {
+     "text": "Cook the rice.",
+     "min": 15
+    },
+    {
+     "text": "Stir the garam masala into the curry, scatter with coriander and serve with the rice.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Kashmir valley rogan josh with paneer and potato",
+     "prep_min": 25,
+     "cook_min": 41,
+     "make_ahead": "Make the sauce with the potatoes up to 2 days ahead; add the paneer when you reheat and cook the rice on the night",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "baby potatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "paneer, in 3cm cubes",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "ghee",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "cardamom pods",
+       "aisle": "Spices"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "whole cloves",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, finely sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground ginger",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground fennel",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Kashmiri chilli powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground coriander",
+       "aisle": "Spices"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Greek yoghurt, whisked",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "basmati rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "garam masala",
+       "aisle": "Spices"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "coriander leaves",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes in salted water until just tender, then drain.",
+       "min": 15
+      },
+      {
+       "text": "Brown the paneer in 1 tbsp of the ghee and set aside.",
+       "min": 6
+      },
+      {
+       "text": "Fry the cardamom, cloves, cinnamon and bay leaves in the rest of the ghee, then add the onion and fry until golden.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the garlic, ginger, fennel, chilli powder and coriander with a splash of water.",
+       "min": 3
+      },
+      {
+       "text": "Stir in the yoghurt a spoonful at a time so it doesn't split.",
+       "min": 5
+      },
+      {
+       "text": "Add the water, potatoes and salt and simmer until the sauce is thick and deep red. Cook the rice meanwhile.",
+       "min": 20
+      },
+      {
+       "text": "Stir in the paneer to warm through, then the garam masala. Scatter with coriander and serve with the rice.",
+       "min": 7
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Kashmir camp saffron phirni",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 165,
+   "make_ahead": "Make up to 2 days ahead and keep covered in the fridge; add the pistachios and petals just before serving",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "basmati rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "full-cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "saffron threads",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground cardamom",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "rosewater",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "pistachios, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "dried rose petals",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the rice in cold water.",
+     "min": 30
+    },
+    {
+     "text": "Drain and blitz to a coarse grit.",
+     "min": 3
+    },
+    {
+     "text": "Warm the saffron in 2 tbsp of the milk.",
+     "min": 2
+    },
+    {
+     "text": "Bring the rest of the milk to a simmer, whisk in the rice and stir on low until thick like custard.",
+     "min": 25
+    },
+    {
+     "text": "Stir in the sugar, cardamom, saffron milk and rosewater.",
+     "min": 3
+    },
+    {
+     "text": "Pour into four small bowls and chill until set.",
+     "min": 120
+    },
+    {
+     "text": "Top with pistachios and rose petals.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "White Widow's French 75",
+   "course": "d",
+   "prep_min": 7,
+   "cook_min": 20,
+   "make_ahead": "Make and cool the sugar syrup up to 1 week ahead and chill the flutes and wine; shake to order",
+   "ingredients": [
+    {
+     "q": 40,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "gin",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "sparkling wine, chilled",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, peeled into long twists",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the sugar into the hot water until dissolved, then cool.",
+     "min": 20
+    },
+    {
+     "text": "Shake the gin, lemon juice and syrup hard with ice.",
+     "min": 2
+    },
+    {
+     "text": "Strain into four chilled flutes and top with sparkling wine.",
+     "min": 3
+    },
+    {
+     "text": "Twist a strip of lemon peel over each glass and drop it in.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "White Widow's French 75 (alcohol-free)",
+     "prep_min": 7,
+     "cook_min": 20,
+     "make_ahead": "Make and cool the sugar syrup up to 1 week ahead and chill the flutes and sparkling; shake to order",
+     "ingredients": [
+      {
+       "q": 40,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "hot water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "non-alcoholic gin",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "alcohol-free sparkling wine, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, peeled into long twists",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir the sugar into the hot water until dissolved, then cool.",
+       "min": 20
+      },
+      {
+       "text": "Shake the non-alcoholic gin, lemon juice and syrup hard with ice.",
+       "min": 2
+      },
+      {
+       "text": "Strain into four chilled flutes and top with the alcohol-free sparkling wine.",
+       "min": 3
+      },
+      {
+       "text": "Twist a strip of lemon peel over each glass and drop it in.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

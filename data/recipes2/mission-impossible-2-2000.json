@@ -1,0 +1,915 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Seville flamenco party garlic prawns",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 8,
+   "make_ahead": "Peel the prawns and slice the garlic up to 1 day ahead and keep them covered in the fridge; cook just before serving",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "green prawns, peeled, tails on",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "garlic cloves, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "flat-leaf parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pat the prawns dry and season with the salt.",
+     "min": 5
+    },
+    {
+     "text": "Warm the olive oil with the garlic and chilli flakes in a wide pan over low heat until the garlic is pale gold.",
+     "min": 6
+    },
+    {
+     "text": "Turn the heat up, add the prawns and smoked paprika and cook, turning once, until just pink.",
+     "min": 4
+    },
+    {
+     "text": "Stir through the parsley, squeeze over the lemon and serve in the pan with torn baguette.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Seville flamenco party garlic mushrooms",
+     "prep_min": 10,
+     "cook_min": 12,
+     "make_ahead": "Clean and halve the mushrooms and slice the garlic up to 1 day ahead; cook just before serving",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "button mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "garlic cloves, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "flat-leaf parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Wipe and halve the mushrooms.",
+       "min": 5
+      },
+      {
+       "text": "Warm the olive oil with the garlic and chilli flakes in a wide pan over low heat until the garlic is pale gold.",
+       "min": 6
+      },
+      {
+       "text": "Turn the heat up, add the mushrooms, paprika and salt and fry, tossing, until golden and juicy.",
+       "min": 8
+      },
+      {
+       "text": "Stir through the parsley, squeeze over the lemon and serve in the pan with torn baguette.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Randwick race day sausage rolls",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 42,
+   "make_ahead": "Roll and chill the unbaked logs up to 1 day ahead, or freeze them for a month; brush, cut and bake on the day",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, finely grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "fennel seeds, toasted and crushed",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "fresh breadcrumbs",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, for the filling",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets frozen puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten, for brushing",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Mix the mince with the onion, fennel, breadcrumbs, egg for the filling, salt and pepper.",
+     "min": 10
+    },
+    {
+     "text": "Cut each pastry sheet in half, lay a log of filling along each strip, roll up and seal underneath.",
+     "min": 12
+    },
+    {
+     "text": "Chill the logs so they cut cleanly.",
+     "min": 15
+    },
+    {
+     "text": "Brush with the beaten egg, sprinkle with sesame seeds and cut each log into four.",
+     "min": 5
+    },
+    {
+     "text": "Bake until puffed and deep golden.",
+     "min": 25
+    },
+    {
+     "text": "Rest, then serve with the tomato sauce.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Randwick race day sausage rolls (vegetarian)",
+     "prep_min": 40,
+     "cook_min": 52,
+     "make_ahead": "Make the filling up to 2 days ahead, or roll and chill the unbaked logs up to 1 day ahead; brush, cut and bake on the day",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, finely grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fennel seeds, toasted and crushed",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "fresh breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, for the filling",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sheets frozen puff pastry, thawed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten, for brushing",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sesame seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms and onion in the olive oil until dry and browned.",
+       "min": 12
+      },
+      {
+       "text": "Cool the mushrooms.",
+       "min": 10
+      },
+      {
+       "text": "Heat the oven to 200C. Roughly mash the lentils and mix with the mushrooms, cheddar, fennel, breadcrumbs, egg for the filling, salt and pepper.",
+       "min": 8
+      },
+      {
+       "text": "Cut each pastry sheet in half, lay a log of filling along each strip, roll up and seal underneath.",
+       "min": 12
+      },
+      {
+       "text": "Chill the logs so they cut cleanly.",
+       "min": 15
+      },
+      {
+       "text": "Brush with the beaten egg, sprinkle with sesame seeds and cut each log into four.",
+       "min": 5
+      },
+      {
+       "text": "Bake until puffed and deep golden.",
+       "min": 25
+      },
+      {
+       "text": "Rest, then serve with the tomato sauce.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Sydney Harbour barramundi with salsa verde",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 33,
+   "make_ahead": "Make the salsa verde up to 1 day ahead and keep it covered in the fridge; cook the potatoes and fish on the night",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "baby potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "flat-leaf parsley leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "mint leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced, for the salsa verde",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil, for the potatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested, for the potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "barramundi fillets, skin on, about 180g each",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil, for the fish",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes in salted water until tender.",
+     "min": 20
+    },
+    {
+     "text": "Finely chop the parsley, mint, capers and garlic and stir with the mustard, lemon juice, extra virgin olive oil and a pinch of salt.",
+     "min": 10
+    },
+    {
+     "text": "Drain the potatoes and crush lightly with the olive oil, lemon zest and salt. Keep warm.",
+     "min": 5
+    },
+    {
+     "text": "Score the fish skin, pat dry and season with salt.",
+     "min": 3
+    },
+    {
+     "text": "Cook the fish skin side down in the hot oil, pressing flat, until crisp, then flip to finish.",
+     "min": 7
+    },
+    {
+     "text": "Serve the fish on the potatoes with the salsa verde spooned over.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sydney Harbour haloumi with salsa verde",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "Make the salsa verde up to 1 day ahead and keep it covered in the fridge; cook the potatoes and haloumi on the night",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "baby potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "flat-leaf parsley leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "mint leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced, for the salsa verde",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "extra virgin olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil, for the potatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zested, for the potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into 8 thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil, for the haloumi",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes in salted water until tender.",
+       "min": 20
+      },
+      {
+       "text": "Finely chop the parsley, mint, capers and garlic and stir with the mustard, lemon juice, extra virgin olive oil and a pinch of salt.",
+       "min": 10
+      },
+      {
+       "text": "Drain the potatoes and crush lightly with the olive oil, lemon zest and salt. Keep warm.",
+       "min": 5
+      },
+      {
+       "text": "Pat the haloumi dry.",
+       "min": 2
+      },
+      {
+       "text": "Fry the haloumi in the hot oil until deep golden on both sides.",
+       "min": 5
+      },
+      {
+       "text": "Serve the haloumi on the potatoes with the salsa verde spooned over.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Sydney summer pavlova",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 137,
+   "make_ahead": "Bake the pavlova up to 1 day ahead and leave it in the turned-off oven or an airtight container; top with cream and fruit just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "egg whites",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 220,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "mango, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "kiwifruit, peeled and sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "passionfruit",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 150C and draw a 20cm circle on baking paper on a tray.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the egg whites to soft peaks, then add the caster sugar a spoonful at a time and whisk until thick and glossy.",
+     "min": 12
+    },
+    {
+     "text": "Fold in the cornflour, vinegar and vanilla and spread inside the circle with a slight hollow.",
+     "min": 5
+    },
+    {
+     "text": "Turn the oven to 120C and bake.",
+     "min": 75
+    },
+    {
+     "text": "Turn the oven off and cool the pavlova inside with the door ajar.",
+     "min": 60
+    },
+    {
+     "text": "Whip the cream with the icing sugar.",
+     "min": 5
+    },
+    {
+     "text": "Pile the cream on the pavlova and top with mango, kiwifruit and passionfruit pulp.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Seville sherry cobbler",
+   "course": "d",
+   "prep_min": 9,
+   "cook_min": 20,
+   "make_ahead": "Make and cool the sugar syrup up to 1 week ahead in the fridge; shake to order",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "fino sherry",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "crushed ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, cut into half wheels",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "raspberries",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "mint sprigs",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the sugar into the hot water until dissolved, then cool.",
+     "min": 20
+    },
+    {
+     "text": "Shake the sherry, orange juice, lemon juice and syrup hard with ice, in two batches.",
+     "min": 4
+    },
+    {
+     "text": "Strain into four glasses packed with crushed ice.",
+     "min": 2
+    },
+    {
+     "text": "Garnish with orange half wheels, raspberries and mint.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Seville cobbler (alcohol-free)",
+     "prep_min": 14,
+     "cook_min": 30,
+     "make_ahead": "Brew, sweeten and chill the tea up to 2 days ahead; shake to order",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "white grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "cup",
+       "item": "crushed ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, cut into half wheels",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "raspberries",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "mint sprigs",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bags in the boiling water for 4 minutes, lift them out and stir in the sugar until dissolved.",
+       "min": 5
+      },
+      {
+       "text": "Chill the sweet tea.",
+       "min": 30
+      },
+      {
+       "text": "Shake the tea, grape juice, verjuice, orange juice and lemon juice hard with ice, in two batches.",
+       "min": 4
+      },
+      {
+       "text": "Strain into four glasses packed with crushed ice.",
+       "min": 2
+      },
+      {
+       "text": "Garnish with orange half wheels, raspberries and mint.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

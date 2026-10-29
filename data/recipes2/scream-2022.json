@@ -1,0 +1,645 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Amber's party potato skins",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 81,
+   "make_ahead": "Bake and scoop the potatoes up to 2 days ahead and keep them in the fridge; crisp, fill and top on the night",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "medium potatoes, about 1.2kg, scrubbed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "pickled jalapeños, chopped",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C, prick the potatoes and bake until tender.",
+     "min": 60
+    },
+    {
+     "text": "Cool until you can handle them.",
+     "min": 10
+    },
+    {
+     "text": "Halve and scoop out most of the flesh, leaving a thin wall.",
+     "min": 8
+    },
+    {
+     "text": "Brush the skins with the oil, season with salt, pepper and paprika and roast, turning once, until crisp.",
+     "min": 15
+    },
+    {
+     "text": "Fill with the cheddar and bake until melted.",
+     "min": 5
+    },
+    {
+     "text": "Top with sour cream, spring onions and jalapeños.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Dewey's trailer bar mix",
+   "course": "s",
+   "prep_min": 8,
+   "cook_min": 43,
+   "make_ahead": "Keeps 1 week in an airtight jar",
+   "ingredients": [
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "raw peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "raw cashews",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pretzels",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 160C. Mix the butter with the sugar, paprika, garlic powder, cayenne and salt.",
+     "min": 3
+    },
+    {
+     "text": "Toss the nuts and pretzels in the butter mix and spread on a lined tray.",
+     "min": 3
+    },
+    {
+     "text": "Roast, stirring every 10 minutes, until golden.",
+     "min": 25
+    },
+    {
+     "text": "Cool on the tray until crisp.",
+     "min": 20
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Woodsboro motel smash burgers",
+   "course": "m",
+   "prep_min": 12,
+   "cook_min": 17,
+   "make_ahead": "Mix the sauce and portion the mince into balls up to 1 day ahead; smash and cook to order",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince, 20 percent fat",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "pickle brine",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft burger buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, very finely sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices burger cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "cup",
+     "item": "iceberg lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "dill pickles, sliced",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Roll the mince into 8 balls and keep cold.",
+     "min": 5
+    },
+    {
+     "text": "Mix the mayonnaise, tomato sauce, mustard and pickle brine.",
+     "min": 3
+    },
+    {
+     "text": "Toast the cut sides of the buns in the butter.",
+     "min": 4
+    },
+    {
+     "text": "Heat a heavy pan until very hot. In batches, put in the balls, top with a little onion and smash flat. Season with salt and pepper, cook until deeply browned, flip, add cheese and cook a minute more.",
+     "min": 12
+    },
+    {
+     "text": "Build the buns with sauce, lettuce, two patties each and pickles.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Woodsboro motel smash burgers (vegetarian)",
+     "prep_min": 12,
+     "cook_min": 15,
+     "make_ahead": "Mix the sauce and portion the plant-based mince into balls up to 1 day ahead; smash and cook to order",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "plant-based mince",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "pickle brine",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft burger buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, very finely sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices burger cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "cup",
+       "item": "iceberg lettuce, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "cup",
+       "item": "dill pickles, sliced",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roll the plant-based mince into 8 balls and keep cold.",
+       "min": 5
+      },
+      {
+       "text": "Mix the mayonnaise, tomato sauce, mustard and pickle brine.",
+       "min": 3
+      },
+      {
+       "text": "Toast the cut sides of the buns in the butter.",
+       "min": 4
+      },
+      {
+       "text": "Heat the oil in a heavy pan until very hot. In batches, put in the balls, top with a little onion and smash flat. Season with salt and pepper, cook until well browned, flip, add cheese and cook a minute more.",
+       "min": 10
+      },
+      {
+       "text": "Build the buns with sauce, lettuce, two patties each and pickles.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Requel brownies",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 88,
+   "make_ahead": "Bake up to 3 days ahead and keep airtight; they cut cleaner the next day",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "raspberry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "raspberries, fresh or frozen",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 175C and line a 20cm square tin.",
+     "min": 3
+    },
+    {
+     "text": "Melt the chocolate with the butter.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the sugar, eggs and vanilla until pale and thick.",
+     "min": 5
+    },
+    {
+     "text": "Fold in the chocolate, then the flour, cocoa and salt.",
+     "min": 4
+    },
+    {
+     "text": "Pour into the tin, dot with jam and raspberries and swirl with a skewer.",
+     "min": 3
+    },
+    {
+     "text": "Bake until just set in the middle.",
+     "min": 28
+    },
+    {
+     "text": "Cool completely in the tin before cutting.",
+     "min": 60
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Macher house cherry rum and cola",
+   "course": "d",
+   "prep_min": 7,
+   "cook_min": 0,
+   "make_ahead": "Pit the cherries and cut the limes up to 1 day ahead; build each drink to order",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cherries, pitted, fresh or frozen",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "dark rum",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 800,
+     "u": "ml",
+     "item": "cola, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime, cut into wedges",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Muddle the cherries with the lime juice in four tall glasses.",
+     "min": 3
+    },
+    {
+     "text": "Fill with ice and add the rum.",
+     "min": 2
+    },
+    {
+     "text": "Top with cola, stir and finish with a lime wedge.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Macher house cherry cola (alcohol-free)",
+     "prep_min": 7,
+     "cook_min": 30,
+     "make_ahead": "Brew and chill the tea up to 2 days ahead; pit the cherries the day before and build each drink to order",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "black tea bag",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "boiling water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cherries, pitted, fresh or frozen",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.25,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 800,
+       "u": "ml",
+       "item": "cola, chilled",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime, cut into wedges",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Steep the tea bag in the boiling water for 4 minutes, lift it out and chill the tea.",
+       "min": 30
+      },
+      {
+       "text": "Muddle the cherries with the lime juice and vanilla in four tall glasses.",
+       "min": 3
+      },
+      {
+       "text": "Fill with ice and add the tea.",
+       "min": 2
+      },
+      {
+       "text": "Top with cola, stir and finish with a lime wedge.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

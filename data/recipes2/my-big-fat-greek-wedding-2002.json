@@ -1,0 +1,760 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Aunt Voula's tiropita triangles",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 25,
+   "make_ahead": "Fold and freeze the unbaked triangles on a tray up to 1 month ahead; bake from frozen for 5 minutes longer",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "feta, crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "mint, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "black pepper, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "sheets filo pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 190C and line 2 trays. Mix the feta, ricotta, egg, mint and a good grind of pepper.",
+     "min": 5
+    },
+    {
+     "text": "Lay out 1 filo sheet, brush with butter, lay a second on top and brush again. Cut lengthways into 3 strips. Repeat with the rest.",
+     "min": 10
+    },
+    {
+     "text": "Put a heaped teaspoon of filling at the end of each strip and fold over and over into a triangle. Brush the tops with butter.",
+     "min": 15
+    },
+    {
+     "text": "Bake until crisp and golden.",
+     "min": 20
+    },
+    {
+     "text": "Cool for 5 minutes before serving.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Dancing Zorba's keftedes with tzatziki",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Roll the keftedes up to 1 day ahead and chill on a tray; make the tzatziki up to 2 days ahead; fry to serve",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, grated and squeezed dry",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, grated, for the tzatziki",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "lemon juice, plus wedges to serve",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "dill, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small brown onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "fresh breadcrumbs",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "mint, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "olive oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the yoghurt, cucumber, grated garlic, lemon juice and dill for the tzatziki and chill.",
+     "min": 8
+    },
+    {
+     "text": "Mix the beef mince, onion, crushed garlic, breadcrumbs, milk, egg, mint and oregano with salt and pepper.",
+     "min": 8
+    },
+    {
+     "text": "Roll into walnut-sized balls and roll them in the flour.",
+     "min": 10
+    },
+    {
+     "text": "Fry in batches in the oil over medium high heat, turning, until browned and cooked through.",
+     "min": 12
+    },
+    {
+     "text": "Drain on paper towel and serve hot with the tzatziki and lemon wedges.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dancing Zorba's zucchini keftedes with tzatziki",
+     "prep_min": 30,
+     "cook_min": 23,
+     "make_ahead": "Grate and salt the zucchini and make the tzatziki up to 1 day ahead; mix and fry to serve",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, grated and squeezed dry",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, grated, for the tzatziki",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice, plus wedges to serve",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "dill, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "zucchini, coarsely grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Spices"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "feta, crumbled",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "spring onions, finely sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "fresh breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "mint, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "black pepper, to taste",
+       "aisle": "Spices"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "olive oil, for frying",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the zucchini with the salt in a colander and leave to drain.",
+       "min": 15
+      },
+      {
+       "text": "Mix the yoghurt, cucumber, grated garlic, lemon juice and dill for the tzatziki and chill.",
+       "min": 8
+      },
+      {
+       "text": "Squeeze the zucchini hard in a clean tea towel, then mix with the feta, spring onions, breadcrumbs, egg, mint, oregano and pepper.",
+       "min": 8
+      },
+      {
+       "text": "Shape into walnut-sized balls, flatten slightly and roll in the flour.",
+       "min": 8
+      },
+      {
+       "text": "Fry in batches in the oil over medium heat until golden on both sides.",
+       "min": 12
+      },
+      {
+       "text": "Drain on paper towel and serve hot with the tzatziki and lemon wedges.",
+       "min": 2
+      }
+     ],
+     "veg": true,
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Gus's front-yard lamb with lemon potatoes",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 175,
+   "make_ahead": "Marinate the lamb up to 1 day ahead in the fridge; cut the potatoes up to 4 hours ahead and keep in cold water",
+   "ingredients": [
+    {
+     "q": 1.8,
+     "u": "kg",
+     "item": "butterflied lamb leg",
+     "aisle": "Meat"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "olive oil, for the lamb",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, juiced, for the lamb",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed, for the lamb",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "dried oregano, for the lamb",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "potatoes, in thick wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "olive oil, for the potatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons, juiced, for the potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, sliced, for the potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano, for the potatoes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the olive oil, lemon juice, garlic, oregano and salt for the lamb, rub all over the lamb and leave to marinate.",
+     "min": 10
+    },
+    {
+     "text": "Marinate in the fridge, then bring back to room temperature.",
+     "min": 120
+    },
+    {
+     "text": "Heat the oven to 220C. Toss the potatoes in a roasting tin with the potato oil, lemon juice, garlic and oregano and pour in the stock.",
+     "min": 10
+    },
+    {
+     "text": "Roast the potatoes, turning twice, until golden and the liquid has gone.",
+     "min": 60
+    },
+    {
+     "text": "Meanwhile heat a barbecue to high and cook the lamb for 10 to 12 minutes a side until charred outside and pink inside.",
+     "min": 0
+    },
+    {
+     "text": "Rest the lamb under foil for 15 minutes.",
+     "min": 0
+    },
+    {
+     "text": "Carve thickly and serve with the lemon potatoes and the pan juices.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Gus's front-yard haloumi souvlaki with lemon potatoes",
+     "prep_min": 30,
+     "cook_min": 85,
+     "make_ahead": "Marinate the vegetables up to 4 hours ahead; cut the potatoes up to 4 hours ahead and keep in cold water",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, in 3cm cubes",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "large eggplant, in 3cm cubes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum, in 3cm pieces",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "metal skewers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "olive oil, for the skewers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, juiced, for the skewers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, crushed, for the skewers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "dried oregano, for the skewers",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1.2,
+       "u": "kg",
+       "item": "potatoes, in thick wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "olive oil, for the potatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons, juiced, for the potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, sliced, for the potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano, for the potatoes",
+       "aisle": "Spices"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the olive oil, lemon juice, garlic and oregano for the skewers and toss with the eggplant, capsicum and onion.",
+       "min": 10
+      },
+      {
+       "text": "Leave the vegetables to marinate.",
+       "min": 30
+      },
+      {
+       "text": "Heat the oven to 220C. Toss the potatoes in a roasting tin with the potato oil, lemon juice, garlic and oregano and pour in the stock.",
+       "min": 10
+      },
+      {
+       "text": "Roast the potatoes, turning twice, until golden and the liquid has gone.",
+       "min": 60
+      },
+      {
+       "text": "Meanwhile thread the haloumi and marinated vegetables onto the skewers.",
+       "min": 0
+      },
+      {
+       "text": "Heat a barbecue to high and cook the skewers, turning and brushing with the leftover marinade, until charred.",
+       "min": 0
+      },
+      {
+       "text": "Serve the skewers on the lemon potatoes with the pan juices.",
+       "min": 5
+      }
+     ],
+     "veg": true,
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Harriet's honey walnut Bundt cake",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 80,
+   "make_ahead": "Bake and soak the cake up to 3 days ahead and keep it covered at room temperature",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar, for the cake",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "oranges, 1 zested and both juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "walnuts, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "caster sugar, for the syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "water, for the syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 170C and butter and flour a 24cm Bundt tin.",
+     "min": 5
+    },
+    {
+     "text": "Beat the butter and cake sugar until pale and fluffy, then beat in the eggs one at a time with the orange zest.",
+     "min": 10
+    },
+    {
+     "text": "Fold in the flour, cinnamon, walnuts and yoghurt and spoon into the tin.",
+     "min": 5
+    },
+    {
+     "text": "Bake until a skewer comes out clean.",
+     "min": 45
+    },
+    {
+     "text": "Meanwhile simmer the syrup sugar, water, honey, orange juice and cinnamon stick for 5 minutes, then cool.",
+     "min": 0
+    },
+    {
+     "text": "Cool the cake in the tin for 10 minutes, turn out onto a plate and spoon the cool syrup slowly over the hot cake.",
+     "min": 10
+    },
+    {
+     "text": "Leave to soak before slicing.",
+     "min": 30
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Toula's iced coffee frappe",
+   "course": "d",
+   "prep_min": 7,
+   "cook_min": 0,
+   "make_ahead": "Chill the milk and glasses up to 1 day ahead; shake the coffee foam to order",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "tsp",
+     "item": "instant coffee",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "cold milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Shake the coffee, sugar and cold water hard in a sealed jar until it turns into a thick, pale foam.",
+     "min": 3
+    },
+    {
+     "text": "Fill 4 tall glasses with the ice.",
+     "min": 1
+    },
+    {
+     "text": "Spoon the coffee foam over the ice.",
+     "min": 1
+    },
+    {
+     "text": "Top slowly with the cold milk and serve with a straw.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

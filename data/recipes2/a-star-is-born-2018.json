@@ -1,0 +1,642 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Car park frozen pea smash on toast",
+   "course": "s",
+   "prep_min": 11,
+   "cook_min": 8,
+   "make_ahead": "Smash the peas up to 4 hours ahead and keep them covered in the fridge; toast and build just before serving",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested and juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint, leaves picked",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices sourdough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "clove of garlic, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "fresh ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "dried chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan, shaved",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the peas in boiling salted water for 3 minutes and drain.",
+     "min": 6
+    },
+    {
+     "text": "Smash roughly with 2 tbsp of the oil, the lemon zest and juice, most of the mint and salt and pepper.",
+     "min": 4
+    },
+    {
+     "text": "Toast the sourdough, rub with the cut garlic and drizzle with the rest of the oil.",
+     "min": 5
+    },
+    {
+     "text": "Spread with ricotta, pile on the peas and finish with chilli flakes, parmesan and the rest of the mint.",
+     "min": 4
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Lorenzo's kitchen table arancini",
+   "course": "s",
+   "prep_min": 150,
+   "cook_min": 35,
+   "make_ahead": "Make and chill the risotto up to 2 days ahead, or roll and crumb the balls up to 1 day ahead; fry on the night",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "small brown onion, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "arborio rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "hot vegetable stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "cup",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "mozzarella, in 16 cubes",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dried breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "basil leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the onion in the butter, stir in the rice, then add the stock a ladle at a time until thick and creamy.",
+     "min": 25
+    },
+    {
+     "text": "Stir in the parmesan and peas, spread on a tray and chill until firm.",
+     "min": 120
+    },
+    {
+     "text": "Roll into 16 balls around a cube of mozzarella, roll in flour, dip in egg and coat in breadcrumbs.",
+     "min": 20
+    },
+    {
+     "text": "Deep-fry at 180C in batches until deep golden, and drain.",
+     "min": 15
+    },
+    {
+     "text": "Warm the passata with the salt and basil and serve with the arancini.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Lorenzo's limo crew meatballs and spaghetti",
+   "course": "m",
+   "prep_min": 27,
+   "cook_min": 60,
+   "make_ahead": "Make the meatballs and sauce up to 2 days ahead and keep them together in the fridge; cook the spaghetti on the night",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef and pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cloves of garlic, 1 grated for the meatballs, 3 sliced for the sauce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "700g bottles passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "spaghetti",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "parmesan, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "fresh breadcrumbs",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "bunch flat-leaf parsley, chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the breadcrumbs in the milk, then mix with the mince, egg, grated garlic, half the parmesan, parsley and 1 tsp of the salt. Roll into 16 balls.",
+     "min": 15
+    },
+    {
+     "text": "Bake on an oiled tray at 200C for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Meanwhile soften the onion and sliced garlic in the oil, add the passata, chilli, basil stalks and the rest of the salt and simmer 20 minutes.",
+     "min": 25
+    },
+    {
+     "text": "Slip the meatballs into the sauce and simmer gently.",
+     "min": 20
+    },
+    {
+     "text": "Cook the spaghetti, drain and toss with some of the sauce, then serve with the meatballs, torn basil and the rest of the parmesan.",
+     "min": 12
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lorenzo's limo crew ricotta and mushroom meatballs",
+     "prep_min": 57,
+     "cook_min": 60,
+     "make_ahead": "Roll the meatballs and make the sauce up to 1 day ahead and keep them in the fridge; bake, simmer and cook the pasta on the night",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "swiss brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "firm ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cloves of garlic, 1 grated for the meatballs, 3 sliced for the sauce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "700g bottles passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch basil",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried chilli flakes",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "spaghetti",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "parmesan, finely grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "fresh breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "bunch flat-leaf parsley, chopped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blitz the mushrooms finely and fry in 1 tbsp of the oil until dry and browned, then cool.",
+       "min": 15
+      },
+      {
+       "text": "Soak the breadcrumbs in the milk, then mix with the mushrooms, ricotta, half the parmesan, the egg, grated garlic, parsley and 1 tsp of the salt. Roll into 16 balls and chill 30 minutes.",
+       "min": 45
+      },
+      {
+       "text": "Soften the onion and sliced garlic in the rest of the oil, add the passata, chilli, basil stalks and the rest of the salt and simmer 15 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Bake the meatballs at 200C on an oiled tray for 15 minutes, then slip them into the sauce and simmer gently 10 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Cook the spaghetti, drain and toss with some of the sauce, then pile into bowls with the meatballs, torn basil and the rest of the parmesan.",
+       "min": 12
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Catering shift cannoli",
+   "course": "w",
+   "prep_min": 103,
+   "cook_min": 0,
+   "make_ahead": "Drain the ricotta and make the filling up to 1 day ahead; fill the shells just before serving so they stay crisp",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "firm ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "icing sugar, plus extra for dusting",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "dark chocolate, finely chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "cannoli shells",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "pistachios, chopped",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drain the ricotta in a sieve in the fridge.",
+     "min": 60
+    },
+    {
+     "text": "Beat with 80g of the icing sugar, the vanilla and orange zest until smooth, then fold in the chocolate.",
+     "min": 5
+    },
+    {
+     "text": "Spoon into a piping bag and chill.",
+     "min": 30
+    },
+    {
+     "text": "Pipe into the shells from both ends, dip the ends in pistachios and dust with the rest of the icing sugar.",
+     "min": 8
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Drag night cosmopolitan",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 0,
+   "make_ahead": "Squeeze the lime up to 1 day ahead and chill everything; shake to order",
+   "ingredients": [
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "vodka",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "orange liqueur",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 240,
+     "u": "ml",
+     "item": "cranberry juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, peel only, for twists",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chill 4 coupe or martini glasses.",
+     "min": 2
+    },
+    {
+     "text": "Shake the vodka, orange liqueur, cranberry juice and lime juice hard with the ice.",
+     "min": 2
+    },
+    {
+     "text": "Strain into the glasses and twist an orange peel over the top.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Drag night cosmopolitan (alcohol-free)",
+     "prep_min": 6,
+     "cook_min": 0,
+     "make_ahead": "Squeeze the lime and orange juice up to 1 day ahead and chill everything; shake to order",
+     "ingredients": [
+      {
+       "q": 360,
+       "u": "ml",
+       "item": "cranberry juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "limes, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, juiced, peel kept for twists",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "ml",
+       "item": "sugar syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chill 4 coupe or martini glasses.",
+       "min": 2
+      },
+      {
+       "text": "Shake the cranberry juice, lime juice, orange juice and sugar syrup hard with the ice.",
+       "min": 2
+      },
+      {
+       "text": "Strain into the glasses, top each with a splash of soda water and twist an orange peel over the top.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,572 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Golde's Friday night challah",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 177,
+   "make_ahead": "Bake up to 1 day ahead and keep wrapped; the dough can do its first prove overnight in the fridge",
+   "ingredients": [
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "bread flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg yolk, for glazing",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the yeast and honey into the warm water and leave until foamy.",
+     "min": 5
+    },
+    {
+     "text": "Add the flour, salt, eggs and oil and knead for 10 minutes until smooth and springy.",
+     "min": 12
+    },
+    {
+     "text": "Cover and prove until doubled.",
+     "min": 90
+    },
+    {
+     "text": "Divide into 3, roll each into a 40cm rope and plait them, tucking the ends under.",
+     "min": 10
+    },
+    {
+     "text": "Set on a lined tray, cover loosely and prove until puffy. Heat the oven to 190C.",
+     "min": 45
+    },
+    {
+     "text": "Brush with the egg yolk, scatter with sesame seeds and bake until deep golden and hollow when tapped underneath.",
+     "min": 30
+    },
+    {
+     "text": "Cool on a rack before tearing.",
+     "min": 15
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Yente's chopped herring on rye",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 42,
+   "make_ahead": "Make up to 2 days ahead and keep covered in the fridge",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "pickled herring fillets, drained",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green apple, peeled and cored",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "small red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "black pepper, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices dark rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "dill, chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs for 10 minutes, then cool in cold water and peel.",
+     "min": 15
+    },
+    {
+     "text": "Chop the herring, eggs, apple and onion finely by hand on a board.",
+     "min": 10
+    },
+    {
+     "text": "Mix with the vinegar, sugar and plenty of black pepper.",
+     "min": 2
+    },
+    {
+     "text": "Cover and chill so the flavours settle.",
+     "min": 30
+    },
+    {
+     "text": "Spread thickly on the rye bread and scatter with dill.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Yente's chopped egg and onion on rye",
+     "prep_min": 15,
+     "cook_min": 45,
+     "make_ahead": "Make up to 1 day ahead and keep covered in the fridge",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green apple, peeled and cored",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "dill pickle, finely chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Spices"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices dark rye bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "dill, chopped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs for 10 minutes, then cool in cold water and peel.",
+       "min": 15
+      },
+      {
+       "text": "Meanwhile fry the onion slowly in the oil until deep golden, then cool.",
+       "min": 0
+      },
+      {
+       "text": "Chop the eggs and apple finely by hand and mix with the onion, its oil and the pickle. Season well with salt and pepper.",
+       "min": 10
+      },
+      {
+       "text": "Cover and chill so the flavours settle.",
+       "min": 30
+      },
+      {
+       "text": "Spread thickly on the rye bread and scatter with dill.",
+       "min": 5
+      }
+     ],
+     "veg": true,
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Tevye's dairyman cheese blintzes",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 75,
+   "make_ahead": "Cook the pancakes and mix the filling up to 1 day ahead, keep separately in the fridge; make the cherries up to 3 days ahead; fill and fry to serve",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pinch of salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted, for the batter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cream cheese, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg yolk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar, for the filling",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested and juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "frozen pitted cherries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "caster sugar, for the cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, for frying",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the flour, eggs, milk, salt and melted butter to a smooth thin batter and rest it.",
+     "min": 35
+    },
+    {
+     "text": "Beat the ricotta, cream cheese, egg yolk, filling sugar, vanilla and lemon zest until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Simmer the cherries with their sugar and the lemon juice until juicy, then stir in the cornflour mixed with a splash of water and bubble until glossy.",
+     "min": 10
+    },
+    {
+     "text": "Cook 12 thin pancakes in a lightly buttered 20cm frying pan, on one side only, and stack them cooked side up.",
+     "min": 25
+    },
+    {
+     "text": "Put a heaped spoonful of filling on each, fold in the sides and roll into a parcel.",
+     "min": 10
+    },
+    {
+     "text": "Fry the parcels in the frying butter, seam side down first, until golden on both sides.",
+     "min": 12
+    },
+    {
+     "text": "Serve 3 each with sour cream and the warm cherries.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Grandma Tzeitel's honey cake",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 75,
+   "make_ahead": "Bake up to 4 days ahead; it gets stickier and better wrapped at room temperature",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "strong black tea, cooled",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground ginger",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "flaked almonds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 170C and line a 23cm square cake tin.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the eggs and brown sugar until thick, then whisk in the honey, oil and tea.",
+     "min": 5
+    },
+    {
+     "text": "Whisk in the flour, baking powder, bicarbonate of soda, spices and orange zest to a smooth, runny batter.",
+     "min": 5
+    },
+    {
+     "text": "Pour into the tin, scatter with the almonds and bake until dark and springy and a skewer comes out clean.",
+     "min": 50
+    },
+    {
+     "text": "Cool in the tin before cutting into squares.",
+     "min": 30
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Samovar glass tea with lemon and cherry jam",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "Slice the lemon up to 4 hours ahead; brew the tea fresh",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "strong loose leaf black tea",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "boiling water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "cherry jam",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "sugar cubes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brew the tea in a small pot with 250ml of the boiling water for 5 minutes to make a strong concentrate.",
+     "min": 6
+    },
+    {
+     "text": "Pour a little concentrate into 4 heatproof glasses and top up with the rest of the boiling water to taste.",
+     "min": 2
+    },
+    {
+     "text": "Serve each glass with a lemon slice, a spoonful of cherry jam and sugar cubes on the side.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

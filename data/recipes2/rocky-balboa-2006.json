@@ -1,0 +1,872 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Adrian's arancini",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 93,
+   "make_ahead": "Make and chill the risotto up to 2 days ahead; roll and crumb up to 1 day ahead, or freeze crumbed up to 1 month; fry on the night",
+   "ingredients": [
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "arborio rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "vegetable stock, hot",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mozzarella, in 12 cubes",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dried breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "tomato passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "basil leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter and soften the onion. Stir in the rice, then add the stock a ladle at a time, stirring, until the rice is tender.",
+     "min": 22
+    },
+    {
+     "text": "Stir in the parmesan, peas and salt and pepper. Spread on a tray and chill until firm.",
+     "min": 60
+    },
+    {
+     "text": "Roll into 12 balls, pushing a cube of mozzarella into the middle of each and sealing it in.",
+     "min": 12
+    },
+    {
+     "text": "Roll each in flour, then egg, then breadcrumbs.",
+     "min": 8
+    },
+    {
+     "text": "Heat the oil to 175C. Meanwhile simmer the passata with the garlic and basil.",
+     "min": 8
+    },
+    {
+     "text": "Fry the arancini in batches for 4 minutes until deep golden. Drain.",
+     "min": 12
+    },
+    {
+     "text": "Serve hot with the warm tomato sauce.",
+     "min": 1
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Lucky Seven Tiger Bar hot honey wings",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 49,
+   "make_ahead": "Mix the hot honey butter up to 1 week ahead; season the wings up to 1 day ahead, uncovered in the fridge so the skin dries; bake on the night",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken wing pieces",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "hot chilli sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 220C. Pat the wings very dry and toss with the baking powder, salt and garlic powder.",
+     "min": 8
+    },
+    {
+     "text": "Spread on a rack over a tray and bake, turning once, until crisp and golden.",
+     "min": 45
+    },
+    {
+     "text": "Melt the butter with the honey, chilli flakes and hot sauce and add a squeeze of lemon.",
+     "min": 4
+    },
+    {
+     "text": "Toss the hot wings in the honey butter and serve.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lucky Seven Tiger Bar hot honey cauliflower",
+     "prep_min": 10,
+     "cook_min": 41,
+     "make_ahead": "Mix the hot honey butter up to 1 week ahead; cut the cauliflower up to 1 day ahead; batter and bake on the night",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, in florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "hot chilli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 220C and line a tray with oiled baking paper. Whisk the flour, garlic powder, salt and water into a batter.",
+       "min": 5
+      },
+      {
+       "text": "Dip the florets in the batter, then in the panko, and spread on the tray. Drizzle with the oil.",
+       "min": 10
+      },
+      {
+       "text": "Bake, turning once, until crisp and golden.",
+       "min": 30
+      },
+      {
+       "text": "Melt the butter with the honey, chilli flakes and hot sauce and add a squeeze of lemon.",
+       "min": 4
+      },
+      {
+       "text": "Toss the hot cauliflower in the honey butter and serve.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Adrian's braciole with soft polenta",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 112,
+   "make_ahead": "Braise the braciole up to 2 days ahead and keep chilled in the gravy, it slices better cold; make the polenta on the night",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef topside, in 4 thin slices",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "pecorino, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "dried breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, 2 crushed for the filling, 2 sliced for the gravy",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch flat-leaf parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "pine nuts, toasted",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices prosciutto",
+     "aisle": "Deli"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.4,
+     "u": "l",
+     "item": "tomato passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "instant polenta",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the pecorino, breadcrumbs, crushed garlic, parsley, pine nuts and pepper.",
+     "min": 5
+    },
+    {
+     "text": "Pound the beef slices thin between baking paper. Lay a slice of prosciutto on each, spread with the filling, roll up tightly and tie with kitchen string.",
+     "min": 12
+    },
+    {
+     "text": "Brown the rolls all over in the oil in a heavy pot. Lift out.",
+     "min": 8
+    },
+    {
+     "text": "Soften the onion and sliced garlic in the same pot, add the passata and half the basil, return the rolls and simmer, covered, on low, turning now and then.",
+     "min": 95
+    },
+    {
+     "text": "Bring the water to the boil with salt, whisk in the polenta and cook, stirring, until thick, then beat in the butter and parmesan.",
+     "min": 12
+    },
+    {
+     "text": "Cut the string off the braciole, slice thickly and serve over the polenta with plenty of gravy and the rest of the basil.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Adrian's eggplant braciole with soft polenta",
+     "prep_min": 30,
+     "cook_min": 55,
+     "make_ahead": "Grill and roll the eggplant and make the gravy up to 1 day ahead and keep chilled; bake and make the polenta on the night",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants, sliced lengthways 5mm thick",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "pecorino, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "dried breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, 2 crushed for the filling, 2 sliced for the gravy",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch flat-leaf parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "pine nuts, toasted",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "mozzarella, torn",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 700,
+       "u": "ml",
+       "item": "tomato passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch basil",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "instant polenta",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brush the eggplant slices with 3 tbsp of the oil, season and grill in a hot pan until soft and marked.",
+       "min": 15
+      },
+      {
+       "text": "Mix the pecorino, breadcrumbs, crushed garlic, parsley, pine nuts and pepper.",
+       "min": 5
+      },
+      {
+       "text": "Spread the filling and a little mozzarella over each eggplant slice and roll up.",
+       "min": 10
+      },
+      {
+       "text": "Soften the onion and sliced garlic in the rest of the oil, add the passata and half the basil and simmer.",
+       "min": 15
+      },
+      {
+       "text": "Heat the oven to 190C. Sit the rolls in a baking dish, pour over the gravy and bake.",
+       "min": 25
+      },
+      {
+       "text": "Bring the water to the boil with salt, whisk in the polenta and cook, stirring, until thick, then beat in the butter and parmesan.",
+       "min": 12
+      },
+      {
+       "text": "Serve the rolls over the polenta with plenty of gravy and the rest of the basil.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Marie's ricotta cheesecake",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 362,
+   "make_ahead": "Bake up to 2 days ahead and keep chilled, it needs at least 4 hours in the fridge; dust with icing sugar just before serving",
+   "ingredients": [
+    {
+     "q": 10,
+     "u": "g",
+     "item": "butter, softened, for the tin",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 900,
+     "u": "g",
+     "item": "fresh ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 160C. Butter a 23cm springform tin and dust it with a little of the flour.",
+     "min": 5
+    },
+    {
+     "text": "Beat the ricotta, caster sugar, both zests and the vanilla until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Beat in the eggs one at a time, then the rest of the flour.",
+     "min": 5
+    },
+    {
+     "text": "Pour into the tin and bake until set at the edges with a slight wobble in the middle.",
+     "min": 60
+    },
+    {
+     "text": "Turn the oven off and leave the cake inside with the door ajar to cool slowly.",
+     "min": 60
+    },
+    {
+     "text": "Chill until cold and set.",
+     "min": 240
+    },
+    {
+     "text": "Dust with the icing sugar and cut into wedges.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Lucky Seven Tiger Bar whisky sour",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 13,
+   "make_ahead": "Make the sugar syrup up to 1 week ahead in the fridge; shake to order",
+   "ingredients": [
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "hot water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "rye whiskey",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons, juiced to make 90ml",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg white",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dashes aromatic bitters",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "cocktail cherries",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stir the sugar into the hot water until dissolved.",
+     "min": 3
+    },
+    {
+     "text": "Cool the syrup.",
+     "min": 10
+    },
+    {
+     "text": "Shake the whiskey, lemon juice, syrup and egg white hard without ice.",
+     "min": 2
+    },
+    {
+     "text": "Add half the ice and shake hard again.",
+     "min": 2
+    },
+    {
+     "text": "Strain into 4 glasses over the rest of the ice, dot the foam with the bitters and add a cherry.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Lucky Seven Tiger Bar whisky sour (alcohol-free)",
+     "prep_min": 6,
+     "cook_min": 29,
+     "make_ahead": "Brew and chill the tea and make the sugar syrup up to 3 days ahead, both in the fridge; shake to order",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "boiling water, for the tea",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "smoked black tea bags",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "hot water, for the syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "lemons, juiced to make 90ml",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg white",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, zest peeled in strips",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "ground cinnamon, a pinch",
+       "aisle": "Spices"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "cocktail cherries",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brew the tea bags in the boiling water for 5 minutes, lift out and stir in the vanilla.",
+       "min": 6
+      },
+      {
+       "text": "Stir the sugar into the hot syrup water until dissolved.",
+       "min": 3
+      },
+      {
+       "text": "Chill the tea and syrup until cold.",
+       "min": 20
+      },
+      {
+       "text": "Shake the tea, lemon juice, syrup and egg white hard without ice.",
+       "min": 2
+      },
+      {
+       "text": "Add half the ice and shake hard again.",
+       "min": 2
+      },
+      {
+       "text": "Strain into 4 glasses over the rest of the ice, twist an orange zest strip over each, dust with a pinch of cinnamon and add a cherry.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

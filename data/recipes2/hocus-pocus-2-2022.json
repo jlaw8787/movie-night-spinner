@@ -1,0 +1,744 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Book's one-eyed devilled eggs",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 16,
+   "make_ahead": "Boil, peel and fill the eggs up to 1 day ahead and keep covered in the fridge; add the olive eyes and paprika to serve",
+   "ingredients": [
+    {
+     "q": 6,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "pitted black olives, halved",
+     "aisle": "Deli"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chives, finely chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lower the eggs into a pan of boiling water and boil for 10 minutes.",
+     "min": 12
+    },
+    {
+     "text": "Cool in a bowl of iced water, then peel and halve lengthways.",
+     "min": 5
+    },
+    {
+     "text": "Mash the yolks with the mayonnaise and mustard and season with salt and pepper.",
+     "min": 5
+    },
+    {
+     "text": "Spoon or pipe the filling back into the whites.",
+     "min": 5
+    },
+    {
+     "text": "Press an olive half into the middle of each egg for an eye, dust with paprika and scatter with chives.",
+     "min": 4
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Salem town square corn dogs",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 18,
+   "make_ahead": "Mix the batter up to 2 hours ahead and keep it in the fridge; fry just before serving",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "frankfurts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "bamboo skewers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine polenta",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the polenta, flour, sugar, baking powder and salt, then whisk in the egg and milk to a thick batter. Pour into a tall glass.",
+     "min": 5
+    },
+    {
+     "text": "Heat the oil in a deep heavy pan to 180C.",
+     "min": 10
+    },
+    {
+     "text": "Pat the frankfurts dry and push a skewer into each.",
+     "min": 3
+    },
+    {
+     "text": "Dip each one in the batter to coat and fry 2 or 3 at a time, turning, until deep golden, about 3 minutes.",
+     "min": 12
+    },
+    {
+     "text": "Drain on paper towel and serve hot with the tomato sauce and mustard.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Salem town square corn dogs (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 18,
+     "make_ahead": "Mix the batter up to 2 hours ahead and keep it in the fridge; fry just before serving",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian frankfurts",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "bamboo skewers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "fine polenta",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the polenta, flour, sugar, baking powder and salt, then whisk in the egg and milk to a thick batter. Pour into a tall glass.",
+       "min": 5
+      },
+      {
+       "text": "Heat the oil in a deep heavy pan to 180C.",
+       "min": 10
+      },
+      {
+       "text": "Pat the vegetarian frankfurts dry and push a skewer into each.",
+       "min": 3
+      },
+      {
+       "text": "Dip each one in the batter to coat and fry 2 or 3 at a time, turning, until deep golden, about 3 minutes.",
+       "min": 12
+      },
+      {
+       "text": "Drain on paper towel and serve hot with the tomato sauce and mustard.",
+       "min": 3
+      }
+     ],
+     "veg": true,
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Winifred's cauldron beef and pumpkin stew with herb dumplings",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 135,
+   "make_ahead": "Make the stew up to 2 days ahead and chill; reheat until bubbling and add the dumplings on the night",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, in 4cm cubes",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried thyme",
+     "aisle": "Spices"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "butternut pumpkin, in 3cm chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cold butter, diced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the beef in the plain flour with salt and pepper and brown well in batches in the oil in a heavy pot. Lift out.",
+     "min": 15
+    },
+    {
+     "text": "Cook the onion, garlic and carrots in the same pot until soft.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the tomato paste, then the stock, bay leaves and thyme. Return the beef, cover and simmer gently until tender.",
+     "min": 90
+    },
+    {
+     "text": "Add the pumpkin and simmer, uncovered, until just soft.",
+     "min": 20
+    },
+    {
+     "text": "Meanwhile rub the butter into the self-raising flour with the parsley and a pinch of salt, stir in the milk to a soft dough and roll into 8 balls.",
+     "min": 8
+    },
+    {
+     "text": "Sit the dumplings on top of the stew, cover and simmer until puffed and cooked through.",
+     "min": 20
+    },
+    {
+     "text": "Season the stew and ladle into bowls with 2 dumplings each.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Winifred's cauldron mushroom and pumpkin stew with herb dumplings",
+     "prep_min": 25,
+     "cook_min": 52,
+     "make_ahead": "Make the stew up to 2 days ahead and chill; reheat until bubbling and add the dumplings on the night",
+     "ingredients": [
+      {
+       "q": 750,
+       "u": "g",
+       "item": "Swiss brown mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Spices"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "butternut pumpkin, in 3cm chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "cold butter, diced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in batches in the oil in a heavy pot until dark, then lift out.",
+       "min": 12
+      },
+      {
+       "text": "Cook the onion, garlic and carrots in the same pot until soft.",
+       "min": 8
+      },
+      {
+       "text": "Stir in the plain flour and tomato paste, then the soy sauce, stock, bay leaves and thyme. Add the mushrooms, lentils and pumpkin and simmer, uncovered, until the pumpkin is soft.",
+       "min": 25
+      },
+      {
+       "text": "Meanwhile rub the butter into the self-raising flour with the parsley and a pinch of salt, stir in the milk to a soft dough and roll into 8 balls.",
+       "min": 8
+      },
+      {
+       "text": "Sit the dumplings on top of the stew, cover and simmer until puffed and cooked through.",
+       "min": 20
+      },
+      {
+       "text": "Season with salt and pepper and ladle into bowls with 2 dumplings each.",
+       "min": 4
+      }
+     ],
+     "veg": true,
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Black Flame chocolate lava puddings",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Fill the moulds up to 1 day ahead and keep in the fridge; bake from cold for 1 to 2 minutes longer",
+   "ingredients": [
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter, softened, for the moulds",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, diced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "scoops vanilla ice cream",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brush four 200ml pudding moulds with the soft butter and dust with the cocoa.",
+     "min": 5
+    },
+    {
+     "text": "Melt the chocolate and diced butter together in a bowl over simmering water, then cool slightly.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the eggs, yolks and sugar until thick and pale.",
+     "min": 5
+    },
+    {
+     "text": "Fold in the chocolate, then the flour, and divide between the moulds.",
+     "min": 5
+    },
+    {
+     "text": "Chill until firm.",
+     "min": 30
+    },
+    {
+     "text": "Heat the oven to 200C and bake on a tray until risen with a soft wobble in the middle.",
+     "min": 12
+    },
+    {
+     "text": "Stand for 1 minute, turn out onto plates and serve with the ice cream.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Sanderson green potion punch",
+   "course": "d",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Blend and strain the kiwi base up to 4 hours ahead and chill; freeze the grape skewers up to 1 week ahead; top with lemonade to serve",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "kiwifruit, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, 1 juiced and 1 sliced into wheels",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "green grapes, frozen on 4 skewers",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "lemonade",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the kiwifruit with the apple juice and lime juice until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Strain into a jug through a sieve, pressing on the pulp.",
+     "min": 3
+    },
+    {
+     "text": "Bruise half the mint and stir it into the jug.",
+     "min": 2
+    },
+    {
+     "text": "Fill 4 glasses with the ice, pour in the green potion and top with the lemonade.",
+     "min": 3
+    },
+    {
+     "text": "Garnish each with a frozen grape skewer, a lime wheel and a mint sprig.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

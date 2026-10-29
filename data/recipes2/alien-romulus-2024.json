@@ -1,0 +1,678 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Jackson's Star miners' pasties",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 50,
+   "make_ahead": "Make and crimp the pasties up to 1 day ahead and keep chilled, or freeze raw up to 1 month; bake on the night",
+   "ingredients": [
+    {
+     "q": 350,
+     "u": "g",
+     "item": "beef skirt steak, finely diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "potato, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "swede, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets frozen shortcrust pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and plenty of black pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the steak, potato, swede and onion small and evenly.",
+     "min": 15
+    },
+    {
+     "text": "Mix together and season hard with salt and pepper.",
+     "min": 3
+    },
+    {
+     "text": "Heat the oven to 200C. Cut 4 large rounds from the pastry, pile the filling on one half of each, dot with the butter, fold over and crimp the edge.",
+     "min": 12
+    },
+    {
+     "text": "Brush with the egg, cut a small steam hole and bake for 15 minutes, then turn the oven down to 170C and bake 30 minutes more.",
+     "min": 45
+    },
+    {
+     "text": "Rest before serving.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jackson's Star miners' pasties (vegetarian)",
+     "prep_min": 30,
+     "cook_min": 50,
+     "make_ahead": "Make and crimp the pasties up to 1 day ahead and keep chilled, or freeze raw up to 1 month; bake on the night",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "Swiss brown mushrooms, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "vintage cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "potato, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "swede, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sheets frozen shortcrust pastry, thawed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and plenty of black pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the mushrooms, potato, swede and onion small and evenly.",
+       "min": 15
+      },
+      {
+       "text": "Mix with the cheddar and season hard with salt and pepper.",
+       "min": 3
+      },
+      {
+       "text": "Heat the oven to 200C. Cut 4 large rounds from the pastry, pile the filling on one half of each, dot with the butter, fold over and crimp the edge.",
+       "min": 12
+      },
+      {
+       "text": "Brush with the egg, cut a small steam hole and bake for 15 minutes, then turn the oven down to 170C and bake 30 minutes more.",
+       "min": 45
+      },
+      {
+       "text": "Rest before serving.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Andy's corny corn fritters",
+   "course": "s",
+   "prep_min": 13,
+   "cook_min": 18,
+   "make_ahead": "Mix the lime sour cream up to 2 days ahead; fry the fritters just before serving, the batter can wait 2 hours in the fridge",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 75,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Stand each cob on its end and cut off the kernels.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the egg, milk, flour, baking powder and a good pinch of salt and pepper into a thick batter.",
+     "min": 5
+    },
+    {
+     "text": "Fold in the corn, spring onions and most of the coriander.",
+     "min": 3
+    },
+    {
+     "text": "Heat the oil in a frying pan and fry heaped spoonfuls for 3 minutes a side, in batches, until golden. Drain on paper towel.",
+     "min": 15
+    },
+    {
+     "text": "Mix the sour cream with the lime zest and juice, scatter the rest of the coriander over the fritters and serve.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Jackson's Star never-sunrise beef and barley stew",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 115,
+   "make_ahead": "Make the stew up to 3 days ahead and keep chilled, it gets better; loosen with a splash of water when you reheat",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried thyme",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "pearl barley, rinsed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "flat-leaf parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the beef in the flour with salt and pepper. Dice the onion, carrots and celery and crush the garlic.",
+     "min": 10
+    },
+    {
+     "text": "Heat the oil in a heavy pot and brown the beef well in batches. Lift out.",
+     "min": 12
+    },
+    {
+     "text": "Soften the onion, carrots, celery and garlic in the same pot.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the tomato paste, return the beef, add the stock, bay leaves and thyme and simmer, covered, on low.",
+     "min": 62
+    },
+    {
+     "text": "Stir in the barley and simmer, uncovered, until the barley is tender and the gravy thick.",
+     "min": 40
+    },
+    {
+     "text": "Season, scatter with parsley and serve with torn crusty bread.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jackson's Star never-sunrise mushroom and barley stew",
+     "prep_min": 20,
+     "cook_min": 58,
+     "make_ahead": "Make the stew up to 3 days ahead and keep chilled; loosen with a splash of water when you reheat",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Spices"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "pearl barley, rinsed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "flat-leaf parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty loaf",
+       "aisle": "Bakery"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onion, carrots and celery and crush the garlic.",
+       "min": 8
+      },
+      {
+       "text": "Heat the oil in a heavy pot and fry the mushrooms hard in batches until browned. Lift out.",
+       "min": 12
+      },
+      {
+       "text": "Soften the onion, carrots, celery and garlic in the same pot, then stir in the flour and tomato paste.",
+       "min": 10
+      },
+      {
+       "text": "Return the mushrooms, add the stock, soy sauce, beans, bay leaves, thyme and barley and simmer, partly covered, until the barley is tender and the gravy thick.",
+       "min": 45
+      },
+      {
+       "text": "Season, scatter with parsley and serve with torn crusty bread.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Yvaga sunshine lemon drizzle cake",
+   "course": "w",
+   "prep_min": 16,
+   "cook_min": 78,
+   "make_ahead": "Bake up to 2 days ahead and keep airtight; it gets stickier and better",
+   "ingredients": [
+    {
+     "q": 175,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 175,
+     "u": "g",
+     "item": "caster sugar, for the cake",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons, 2 zested, all 3 juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 175,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar, for the drizzle",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180C and line a loaf tin with baking paper.",
+     "min": 5
+    },
+    {
+     "text": "Beat the butter and cake sugar until pale and fluffy.",
+     "min": 5
+    },
+    {
+     "text": "Beat in the eggs one at a time with the zest of 2 lemons, then fold in the flour and milk.",
+     "min": 6
+    },
+    {
+     "text": "Spoon into the tin and bake until risen and a skewer comes out clean.",
+     "min": 45
+    },
+    {
+     "text": "Mix the juice of all 3 lemons with the drizzle sugar.",
+     "min": 3
+    },
+    {
+     "text": "Prick the hot cake all over with a skewer, pour over the drizzle and leave to cool in the tin.",
+     "min": 30
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Cryo bay frozen lime slushie",
+   "course": "d",
+   "prep_min": 6,
+   "cook_min": 18,
+   "make_ahead": "Make and chill the lime syrup up to 1 week ahead; blend with the ice just before serving",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "soda water, chilled",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs mint",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the sugar and water until dissolved.",
+     "min": 4
+    },
+    {
+     "text": "Cool the syrup completely.",
+     "min": 15
+    },
+    {
+     "text": "Blend the syrup, lime juice and ice until slushy.",
+     "min": 3
+    },
+    {
+     "text": "Pour into 4 glasses, top with soda water and add a mint sprig.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

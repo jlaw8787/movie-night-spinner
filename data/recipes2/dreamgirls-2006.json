@@ -1,0 +1,832 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Detroit talent night Coney dogs",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Make the chilli up to 3 days ahead and reheat; warm the dogs and rolls to serve",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "beef frankfurts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "long soft bread rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef mince with half the onion, the garlic and the oil, breaking it up very fine with a wooden spoon.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the chilli powder, cumin, paprika and tomato paste, then the stock. Simmer, stirring, until thick and saucy, and season.",
+     "min": 20
+    },
+    {
+     "text": "Heat the dogs in a pan of barely simmering water.",
+     "min": 5
+    },
+    {
+     "text": "Warm the rolls, put a dog in each, spoon over the chilli and finish with a stripe of mustard and the rest of the onion.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Detroit talent night Coney dogs (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 25,
+     "make_ahead": "Make the chilli up to 3 days ahead and reheat; warm the dogs and rolls to serve",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian frankfurts",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "long soft bread rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chilli powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Spices"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the mushrooms with half the onion, the garlic and the oil until dark, then add the lentils and mash them roughly.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the chilli powder, cumin, paprika and tomato paste, then the stock. Simmer, stirring, until thick and saucy, and season.",
+       "min": 20
+      },
+      {
+       "text": "Heat the dogs in a pan of barely simmering water.",
+       "min": 5
+      },
+      {
+       "text": "Warm the rolls, put a dog in each, spoon over the chilli and finish with a stripe of mustard and the rest of the onion.",
+       "min": 5
+      }
+     ],
+     "veg": true,
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Effie's fried green tomatoes with hot sauce mayo",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 22,
+   "make_ahead": "Make the hot sauce mayo up to 3 days ahead; crumb the tomatoes up to 1 hour ahead and fry to serve",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "green tomatoes, in 1cm slices",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "lemon juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "fine polenta",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Salt the tomato slices and leave on a rack for 10 minutes, then pat dry.",
+     "min": 10
+    },
+    {
+     "text": "Mix the mayonnaise, hot sauce and lemon juice.",
+     "min": 2
+    },
+    {
+     "text": "Set out the flour, then the eggs whisked with the buttermilk, then the polenta mixed with the paprika and cayenne. Coat each slice in all three.",
+     "min": 8
+    },
+    {
+     "text": "Shallow fry in the oil over medium high heat, in batches, for about 3 minutes a side until golden.",
+     "min": 15
+    },
+    {
+     "text": "Drain on paper towel, sprinkle with salt and serve hot with the hot sauce mayo.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Rainbow Records Sunday fried chicken with baked mac and cheese",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 297,
+   "make_ahead": "Marinate the chicken up to 1 day ahead; make the mac and cheese up to 1 day ahead and bake on the night",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "chicken thighs and drumsticks, bone in",
+     "aisle": "Meat"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour, for the coating",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "macaroni",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "plain flour, for the sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "vintage cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "mustard powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "dry breadcrumbs",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the buttermilk, hot sauce and half the salt and turn the chicken through it.",
+     "min": 5
+    },
+    {
+     "text": "Marinate in the fridge.",
+     "min": 240
+    },
+    {
+     "text": "Boil the macaroni in salted water until just tender and drain.",
+     "min": 10
+    },
+    {
+     "text": "Melt the butter, stir in the sauce flour, then whisk in the milk until thick. Stir in most of the cheddar and the mustard powder and fold through the macaroni.",
+     "min": 12
+    },
+    {
+     "text": "Heat the oven to 180C. Tip into a baking dish, top with the rest of the cheddar and the breadcrumbs and bake until golden and bubbling.",
+     "min": 25
+    },
+    {
+     "text": "Meanwhile heat the oil in a deep heavy pot to 165C. Mix the coating flour with the paprika, garlic powder, cayenne, pepper and the rest of the salt.",
+     "min": 0
+    },
+    {
+     "text": "Lift the chicken from the buttermilk, press firmly into the flour and fry in batches, turning, for 12 to 14 minutes until deep golden and cooked through.",
+     "min": 30
+    },
+    {
+     "text": "Drain on a rack for 5 minutes and serve with the mac and cheese.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rainbow Records Sunday fried cauliflower with baked mac and cheese",
+     "prep_min": 30,
+     "cook_min": 117,
+     "make_ahead": "Marinate the cauliflower up to 4 hours ahead; make the mac and cheese up to 1 day ahead and bake on the night",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, in big florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Spices"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "plain flour, for the coating",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cayenne pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "macaroni",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "plain flour, for the sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "vintage cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "mustard powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "dry breadcrumbs",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the buttermilk, hot sauce and half the salt and turn the cauliflower through it.",
+       "min": 5
+      },
+      {
+       "text": "Marinate in the fridge.",
+       "min": 60
+      },
+      {
+       "text": "Boil the macaroni in salted water until just tender and drain.",
+       "min": 10
+      },
+      {
+       "text": "Melt the butter, stir in the sauce flour, then whisk in the milk until thick. Stir in most of the cheddar and the mustard powder and fold through the macaroni.",
+       "min": 12
+      },
+      {
+       "text": "Heat the oven to 180C. Tip into a baking dish, top with the rest of the cheddar and the breadcrumbs and bake until golden and bubbling.",
+       "min": 25
+      },
+      {
+       "text": "Meanwhile heat the oil in a deep heavy pot to 165C. Mix the coating flour with the paprika, garlic powder, cayenne, pepper and the rest of the salt.",
+       "min": 0
+      },
+      {
+       "text": "Lift the cauliflower from the buttermilk, press firmly into the flour and fry in batches, turning, for 6 to 8 minutes until deep golden and tender.",
+       "min": 30
+      },
+      {
+       "text": "Drain on a rack for 5 minutes and serve with the mac and cheese.",
+       "min": 5
+      }
+     ],
+     "veg": true,
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Lorrell's sweet potato pie",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 135,
+   "make_ahead": "Bake the pie up to 1 day ahead and keep covered in the fridge; whip the cream to serve",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "orange sweet potato, peeled and chunked",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet frozen shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 160,
+     "u": "ml",
+     "item": "evaporated milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pinch of salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the sweet potato until very soft, drain well.",
+     "min": 20
+    },
+    {
+     "text": "Mash until completely smooth and cool slightly.",
+     "min": 5
+    },
+    {
+     "text": "Heat the oven to 180C. Line a 23cm pie dish with the pastry, prick, line with baking paper and rice and blind bake, then remove the paper and rice.",
+     "min": 20
+    },
+    {
+     "text": "Whisk the sweet potato with the butter, sugar, eggs, evaporated milk, vanilla, spices and salt.",
+     "min": 5
+    },
+    {
+     "text": "Pour into the pastry case and bake until set at the edges with a slight wobble in the middle.",
+     "min": 45
+    },
+    {
+     "text": "Cool to room temperature.",
+     "min": 60
+    },
+    {
+     "text": "Whip the cream to soft peaks and serve with slices of the pie.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Las Vegas showroom champagne cocktail",
+   "course": "d",
+   "prep_min": 5,
+   "cook_min": 0,
+   "make_ahead": "Chill the sparkling wine and the flutes up to 1 day ahead; build each glass to order",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sugar cubes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dashes aromatic bitters",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "chilled sparkling wine",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, peel cut into 4 strips",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drop a sugar cube into each flute and soak it with 2 dashes of bitters.",
+     "min": 2
+    },
+    {
+     "text": "Top slowly with the sparkling wine.",
+     "min": 2
+    },
+    {
+     "text": "Twist a strip of orange peel over each glass and drop it in.",
+     "min": 1
+    }
+   ],
+   "veg": true,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Las Vegas showroom champagne cocktail (alcohol-free)",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "Chill the alcohol-free sparkling wine and the flutes up to 1 day ahead; build each glass to order",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "sugar cubes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "vanilla extract",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "chilled alcohol-free sparkling wine",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, peel cut into 4 strips",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Drop a sugar cube into each flute and soak it with a few drops of vanilla.",
+       "min": 2
+      },
+      {
+       "text": "Rub a strip of orange peel around the rim of each glass, then top slowly with the alcohol-free sparkling wine.",
+       "min": 2
+      },
+      {
+       "text": "Twist the peel over each glass and drop it in.",
+       "min": 1
+      }
+     ],
+     "veg": true,
+     "af": true
+    }
+   }
+  }
+ ]
+}

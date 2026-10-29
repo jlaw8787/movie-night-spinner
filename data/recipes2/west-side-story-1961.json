@@ -1,0 +1,764 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Bernardo's tostones with garlic mojo",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 23,
+   "make_ahead": "First fry and smash up to 4 hours ahead, make the mojo up to 1 day ahead; do the second fry just before serving",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "green plantains",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "cloves of garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the plantains by slitting the skin lengthways and prising it off, then cut into 3cm pieces.",
+     "min": 8
+    },
+    {
+     "text": "Heat 3cm of the vegetable oil in a heavy pot to 160C.",
+     "min": 8
+    },
+    {
+     "text": "Fry the plantain in batches until pale gold but still soft inside, then drain.",
+     "min": 8
+    },
+    {
+     "text": "Smash each piece flat to about 1cm with the base of a glass.",
+     "min": 5
+    },
+    {
+     "text": "Crush the garlic to a paste with half the salt, then stir in the olive oil, lime juice and coriander.",
+     "min": 6
+    },
+    {
+     "text": "Turn the oil up to 180C and fry the smashed plantain again until crisp and golden.",
+     "min": 6
+    },
+    {
+     "text": "Drain on paper towel, sprinkle with the rest of the salt and serve hot with the mojo.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Jets' corner cart hot dogs with onion sauce",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 32,
+   "make_ahead": "Onion sauce up to 3 days ahead in the fridge, reheat with a splash of water; simmer the frankfurts to order",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "frankfurts",
+     "aisle": "Deli"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "long soft rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Halve and thinly slice the onions.",
+     "min": 5
+    },
+    {
+     "text": "Cook the onions in the oil over medium heat until soft and pale gold.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the tomato paste, chilli powder, cinnamon, sugar, vinegar and water and simmer until thick and jammy.",
+     "min": 15
+    },
+    {
+     "text": "Simmer the frankfurts in a pot of barely bubbling water until hot through.",
+     "min": 6
+    },
+    {
+     "text": "Warm the rolls in a low oven.",
+     "min": 3
+    },
+    {
+     "text": "Tuck a frankfurt in each roll, spread with mustard and spoon over the onion sauce.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jets' corner cart hot dogs with onion sauce (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 34,
+     "make_ahead": "Onion sauce up to 3 days ahead in the fridge, reheat with a splash of water; brown the sausages to order",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "long soft rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch of ground cinnamon",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "white vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "water",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "yellow mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Halve and thinly slice the onions.",
+       "min": 5
+      },
+      {
+       "text": "Cook the onions in 2 tbsp of the oil over medium heat until soft and pale gold.",
+       "min": 10
+      },
+      {
+       "text": "Stir in the tomato paste, chilli powder, cinnamon, sugar, vinegar and water and simmer until thick and jammy.",
+       "min": 15
+      },
+      {
+       "text": "Brown the vegetarian sausages in the rest of the oil in a frying pan, turning, until hot through.",
+       "min": 8
+      },
+      {
+       "text": "Warm the rolls in a low oven.",
+       "min": 3
+      },
+      {
+       "text": "Tuck a sausage in each roll, spread with mustard and spoon over the onion sauce.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Maria's pernil with arroz con gandules",
+   "course": "m",
+   "prep_min": 775,
+   "cook_min": 310,
+   "make_ahead": "Marinate the pork overnight, up to 1 day ahead, in the fridge; roast and make the rice on the day",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "boneless pork shoulder, skin on",
+     "aisle": "Meat"
+    },
+    {
+     "q": 10,
+     "u": "",
+     "item": "cloves of garlic",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes, 2 juiced and 1 in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green capsicum, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander, stalks chopped, leaves picked",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "cup",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin pigeon peas, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "green olives",
+     "aisle": "Deli"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "vegetable stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the garlic, oregano, cumin, paprika, salt, pepper, 60ml of the olive oil, the lime juice and orange juice to a paste.",
+     "min": 10
+    },
+    {
+     "text": "Score the pork skin, rub the paste all over and into the cuts, cover and marinate in the fridge overnight.",
+     "min": 720
+    },
+    {
+     "text": "Take the pork out of the fridge to come to room temperature and heat the oven to 160C.",
+     "min": 30
+    },
+    {
+     "text": "Roast skin up for 4 hours, then turn the oven to 230C for 25 minutes to crackle the skin.",
+     "min": 265
+    },
+    {
+     "text": "While it roasts, soften the onion, capsicum and coriander stalks in the rest of the oil, then stir in the tomato paste, turmeric and rice for 2 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Add the pigeon peas, olives and stock, bring to the boil, cover and cook on low for 20 minutes, then rest 10 minutes off the heat.",
+     "min": 30
+    },
+    {
+     "text": "Rest the pork 15 minutes, pull into chunks with the crackling and serve over the rice with coriander leaves and lime wedges.",
+     "min": 15
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Maria's pernil-spiced cauliflower with arroz con gandules",
+     "prep_min": 140,
+     "cook_min": 120,
+     "make_ahead": "Rub the cauliflower and marinate up to 1 day ahead in the fridge; roast and make the rice on the day",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "small cauliflowers, leaves trimmed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 10,
+       "u": "",
+       "item": "cloves of garlic",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sweet paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 110,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes, 2 juiced and 1 in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "orange, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green capsicum, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch coriander, stalks chopped, leaves picked",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "tsp",
+       "item": "ground turmeric",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "cup",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin pigeon peas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "green olives",
+       "aisle": "Deli"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blend the garlic, oregano, cumin, paprika, salt, pepper, 70ml of the olive oil, the lime juice and orange juice to a paste.",
+       "min": 10
+      },
+      {
+       "text": "Sit the whole cauliflowers in a roasting dish, rub the paste all over and into the florets, cover and marinate in the fridge for 2 hours.",
+       "min": 120
+      },
+      {
+       "text": "Heat the oven to 200C.",
+       "min": 10
+      },
+      {
+       "text": "Pour 125ml water into the dish, cover with foil and roast for 40 minutes, then uncover, baste and roast 30 minutes more until charred and tender.",
+       "min": 70
+      },
+      {
+       "text": "While it roasts, soften the onion, capsicum and coriander stalks in the rest of the oil, then stir in the tomato paste, turmeric and rice for 2 minutes.",
+       "min": 15
+      },
+      {
+       "text": "Add the pigeon peas, olives and stock, bring to the boil, cover and cook on low for 20 minutes, then rest 10 minutes off the heat.",
+       "min": 30
+      },
+      {
+       "text": "Cut the cauliflowers into thick wedges and serve over the rice with the pan juices, coriander leaves and lime wedges.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
+   "n": "Bridal shop coconut flan",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 450,
+   "make_ahead": "Bake and chill up to 2 days ahead, left in the tin; turn out just before serving",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 395,
+     "u": "g",
+     "item": "tin condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "tin coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the sugar with the water over medium heat, without stirring, until deep amber.",
+     "min": 12
+    },
+    {
+     "text": "Pour the caramel into a 20cm round cake tin and swirl to coat the base, then heat the oven to 160C.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the condensed milk, coconut milk, eggs, vanilla and salt until smooth, then strain into the tin.",
+     "min": 8
+    },
+    {
+     "text": "Sit the tin in a roasting dish and pour in hot water to come halfway up the sides.",
+     "min": 5
+    },
+    {
+     "text": "Bake until just set with a slight wobble in the middle.",
+     "min": 55
+    },
+    {
+     "text": "Lift out of the water and cool on a rack.",
+     "min": 30
+    },
+    {
+     "text": "Chill in the fridge until firm.",
+     "min": 360
+    },
+    {
+     "text": "Run a knife around the edge and turn out onto a plate with a lip to catch the caramel.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Doc's candy store egg cream",
+   "course": "d",
+   "prep_min": 8,
+   "cook_min": 36,
+   "make_ahead": "Make and cool the chocolate syrup up to 1 week ahead, kept in the fridge; build each glass to order so the foam holds",
+   "ingredients": [
+    {
+     "q": 50,
+     "u": "g",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch of salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "very cold full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "cold soda water",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the cocoa, sugar, water and salt, stirring, until smooth and glossy, then stir in the vanilla.",
+     "min": 6
+    },
+    {
+     "text": "Cool the chocolate syrup completely.",
+     "min": 30
+    },
+    {
+     "text": "Spoon 2 tbsp syrup into each of 4 tall glasses and add the cold milk.",
+     "min": 3
+    },
+    {
+     "text": "Pour in the soda water in a fast stream while stirring hard with a long spoon until a thick white foam rises.",
+     "min": 4
+    },
+    {
+     "text": "Serve straight away, with the spoon still in.",
+     "min": 1
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}
