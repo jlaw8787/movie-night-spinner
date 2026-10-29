@@ -189,6 +189,9 @@ async def scenario(b, name, ctxopts):
     await S("Video store opens and searches", shop, shot=True)
     async def shopfilters():
         out = []
+        # on phone the filters fold behind a Filters button: open it like a person would
+        if await pg.evaluate("!!document.getElementById('shopFilt')&&!document.getElementById('shopFilt').open"):
+            await pg.click("#shopFilt > summary"); await pg.wait_for_timeout(300)
         for sel in ["#shopDecade", "#shopSvc"]:
             o = await pg.evaluate(f"[...document.querySelector('{sel}').options].map(o=>o.value).filter(Boolean)")
             if o: await pg.select_option(sel, o[0]); await pg.wait_for_timeout(500); out.append(await pg.evaluate("document.querySelectorAll('#shopAisles .tape').length")); await pg.select_option(sel, "")
