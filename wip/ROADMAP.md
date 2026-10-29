@@ -14,7 +14,7 @@ When an item goes live, the owner (or the session that pushed it) marks it LIVE 
 - The report to the owner: what was built, the branch, check results, screenshots, anything that needs his call. Short, plain, no AI phrasing.
 
 ## The list (top is next)
-1. TODO  Walkthrough fixes: fix the broken and confusing findings from the casual-user walkthrough (wip/JOURNEY-FINDINGS.md). Skip anything marked ASK FIRST there.
+1. BUILT (wip/menu-polish, Oct 29, waiting for the owner)  Walkthrough fixes 1, 2, 3, 6, 7 from wip/JOURNEY-FINDINGS.md. The rest of that file is folded into items 8, 9 and the ASK FIRST list.
 2. TODO  Checks on every push: a GitHub Actions workflow that runs node tests/*.test.cjs on pushes to any branch (no deploy, no secrets). Fails loudly if a test breaks.
 3. TODO  Accessibility: WCAG 2.1 AA pass. Colour contrast, focus order and visible focus, labels on every control, dialogs trap focus, reduced motion respected, tap targets 44px on phone. Fix what fails.
 4. TODO  Speed on phones: measure first load on a mid phone profile (throttled), cut what is slow (image sizes, unused CSS and JS on first paint, font loading). Report before and after numbers.

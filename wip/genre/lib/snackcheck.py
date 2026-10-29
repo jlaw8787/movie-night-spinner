@@ -52,8 +52,8 @@ async def main():
             # picks belong to the film: another film starts empty
             await pg.goto("http://localhost:8795/?film=" + quote("Moana (2016)"), wait_until="networkidle"); await pg.wait_for_timeout(2500)
             await pg.click("#viewCraveBtn"); await pg.wait_for_timeout(1200)
-            n2 = await pg.evaluate("document.querySelectorAll('#snackCounter .sc-add[aria-pressed=true]').length")
-            rec(f"{name}: another film starts with no snacks", n2 == 0, str(n2))
+            n2 = await pg.evaluate("[document.querySelectorAll('#snackCounter .sc-add[aria-pressed=true]').length,document.querySelector('#snackCounter .sc-sub').innerText,localStorage.getItem('mns-snacks-Moana (2016)')]")
+            rec(f"{name}: with Jaws locked in, opening Moana keeps the snacks on Jaws", n2[0] == 3 and "Jaws" in n2[1] and not n2[2], str(n2)[:90])
             rec(f"{name}: no page errors", not errs, "; ".join(errs[:2]))
             await c.close()
         await b.close()
