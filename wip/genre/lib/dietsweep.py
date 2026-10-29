@@ -28,9 +28,13 @@ PROBE = """async(limit)=>{
      if(it.blocked){R.swaps.push({orig:it.orig,blocked:it.blocked});continue}
      if(!it.diet)continue;
      const s={orig:it.orig,swap:it.n,v:it.diet,note:it.note||''};
-     if(R.kind==='lib'){s.origShown=text.toLowerCase().includes(it.orig.toLowerCase());s.swapShown=text.toLowerCase().includes(String(it.n).toLowerCase().slice(0,40));}
+     const norm=t=>String(t).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(),NT=norm(text);
+     if(R.kind==='lib'){s.origShown=NT.includes(norm(it.orig));s.swapShown=NT.includes(norm(it.n).slice(0,40));}
      else {const raw=(typeof FMT_FILMS!=='undefined'&&FMT_FILMS[f.id])||{};const g=(raw.groups||[...(raw.colA||[]),...(raw.colB||[])]).flatMap(x=>x.items||[]).find(x=>x.k===it.orig)||{};
-       s.label=g.n||g.k;s.labelNow=it.label;s.labelSame=!!g.n&&it.label===g.n}
+       s.label=g.n||g.k;s.labelNow=it.label;s.labelSame=!!g.n&&it.label===g.n;
+       const MEAT=/\b(beef|pork|lamb|veal|chicken|bacon|ham|salami|prosciutto|pancetta|chorizo|sirloin|rib eye|brisket|turkey|duck|prawns?|shrimp|salmon|tuna|crab|lobster|calamari|squid|mussels|oysters?|anchov\w*|clams?|scallops?|fish)\b/i,BOOZE=/\b(wine|beer|lager|ale|stout|vodka|whisky|whiskey|scotch|bourbon|rum|gin|tequila|mezcal|brandy|cognac|champagne|prosecco|sherry|vermouth|liqueur|marsala|cider|sake|amaro|amaretto|campari)\b/i;
+       const pat=it.diet==='veg'?[MEAT]:it.diet==='af'?[BOOZE]:[MEAT,BOOZE];
+       s.left=[g.note,g.d].filter(t=>t&&pat.some(re=>re.test(t))&&NT.includes(norm(t)))}
      R.swaps.push(s)}
    R.names=items.map(it=>it.n);
   }catch(e){R.err=String(e).slice(0,200)}
@@ -60,7 +64,7 @@ async def main():
                     if s["origShown"] and s["orig"].lower() not in s["swap"].lower(): faults["orig_shown"] += 1; ex["orig_shown"].append((key, r["id"], s["orig"]))
                     if not s["swapShown"]: faults["swap_missing"] += 1; ex["swap_missing"].append((key, r["id"], s["swap"]))
                     if not s["note"]: faults["no_note"] += 1; ex["no_note"].append((key, r["id"], s["orig"]))
-                elif s.get("labelSame"): faults["label_unchanged"] += 1; ex["label_unchanged"].append((key, r["id"], s["label"]))
+                elif s.get("left"): faults["label_unchanged"] += 1; ex["label_unchanged"].append((key, r["id"], s["label"], s["left"][0][:80]))
     changed_off = sum(1 for r in res["off"] if any(s for s in r["swaps"]))
     print("off-mode swaps (should be 0):", changed_off, "| page errors:", len(errs))
     for k, v in faults.items(): print(f"{k}: {v}", ex[k][:4])

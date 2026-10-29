@@ -770,6 +770,14 @@ function dietText(f,str){
   for(const L of lists)for(const [a,b] of (L||[]))if(a&&out.includes(a))out=out.split(a).join(b);
   return out;
 }
+/* the hand-built menus are finished artwork with the words baked in, so the same swaps run over the page itself */
+function dietHTML(f,html){
+  const k=dietKey();if(!k||typeof html!=="string"||!f||!f._diet||!f._diet.text)return html;
+  const T=f._diet.text,lists=k==="veg_af"?[T.veg_af,T.veg,T.af]:[T[k]];let out=html;
+  const esc=t=>String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  for(const L of lists)for(const [a,b] of (L||[]))for(const [x,y] of [[a,b],[esc(a),esc(b)],[esc(a).replace(/'/g,"&#39;"),esc(b).replace(/'/g,"&#39;")],[esc(a).replace(/'/g,"&#x27;"),esc(b).replace(/'/g,"&#x27;")],[esc(a).replace(/"/g,"&quot;"),esc(b).replace(/"/g,"&quot;")]])if(x&&out.includes(x))out=out.split(x).join(y);
+  return out;
+}
 function dietDeep(f,o){if(typeof o==="string")return dietText(f,o);if(Array.isArray(o))return o.map(x=>dietDeep(f,x));if(o&&typeof o==="object"){const r={};for(const k in o)r[k]=k==="k"?o[k]:dietDeep(f,o[k]);return r}return o}
 const _dietSpecs=new WeakMap();
 function dietSpec(f,spec){if(!spec||!dietKey()||!f._diet)return spec;let c=_dietSpecs.get(spec);if(!c){c={};_dietSpecs.set(spec,c)}const k=dietKey();return c[k]||(c[k]=dietDeep(f,spec))}

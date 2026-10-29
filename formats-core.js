@@ -38,7 +38,7 @@ function fmtStarsPNG(root){
 }
 const fmtCue=f=>(movieEdition(f)||{}).cue||f.P;
 const FMT_RENDER={};
-function fmtHTML(f,spec,menu){return FMT_RENDER[spec.fmt](f,spec,menu,lobbyPoster(f))}
+function fmtHTML(f,spec,menu){const h=FMT_RENDER[spec.fmt](f,spec,menu,lobbyPoster(f));return typeof dietHTML==="function"?dietHTML(f,h):h}
 
 /* phone view: same menu, big type, one section at a time, tap a dish for the method */
 function fmtPhoneHTML(f,spec,menu){
