@@ -293,6 +293,8 @@ body::after{content:none}
 /* series: part of a run, start from the first, or plan a marathon */
 .series-note{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:12px 0 4px;padding:10px 14px;border:1px solid rgba(226,176,79,.4);border-radius:12px;background:rgba(0,0,0,.28)}
 .series-note p{margin:0;flex:1 1 210px;font-size:14px;line-height:1.35}
+body.staged #seriesNote,body.staged #snackPair,body.staged #dietNote,body.staged #viewWheel .actions,body.staged #whereWheel,body.staged #planner,body.staged .tabs{display:none!important}
+.sc-sub .sc-spin{margin-left:6px;font:600 13.5px var(--f-body);min-height:40px;padding:8px 14px;border-radius:999px;border:1px solid var(--brass);background:var(--brass);color:var(--night);cursor:pointer}
 .diet-note{display:inline-flex;align-items:center;gap:8px;margin:10px 0 0;padding:6px 12px;border:1px solid rgba(139,209,75,.55);border-radius:999px;background:rgba(0,0,0,.28);color:#cfeab5;font:600 12.5px/1.2 var(--f-body);letter-spacing:.06em;text-transform:uppercase}
 .diet-note[hidden]{display:none}
 .snack-pair{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:10px 0 4px;padding:10px 14px;border:1px solid rgba(226,176,79,.4);border-radius:12px;background:rgba(0,0,0,.28)}
@@ -1737,7 +1739,7 @@ dialog .modal-x:focus-visible{outline:3px solid #ffd23f;outline-offset:2px}
 <script src="providers.js?v=1403fceb" defer></script>
 <script src="films.js?v=1744080d" defer></script>
 <script src="formats-core.js?v=a1a8325d" defer></script>
-<script src="app.js?v=526dbadf" defer></script>
+<script src="app.js?v=40f2b0bf" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
