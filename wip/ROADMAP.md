@@ -23,9 +23,17 @@ When an item goes live, the owner (or the session that pushed it) marks it LIVE 
 7. TODO  About and privacy page: what is saved on the device, what the member card syncs, the TMDB and JustWatch credits, how to clear everything.
 8. TODO  Private review diary: after Mark as watched, stars and a short note for the film and for the menu; a "Your diary" view with history; synced on the member card. Private only.
 9. TODO  Snacks on marathons and double features: their shopping lists carry the snack counter picks.
-10. TODO Suggested snacks per film: two "goes well with" picks from the snack counter on each film's menu view.
+10. LIVE (c48dab3f) Suggested snacks per film: two "goes well with" picks from the snack counter on each film's menu view.
 11. PARKED  Name and brand the store (sign, member card, rental slip). Owner picks the name. Oct 29: none of Reel Hungry Video, Overnighter Video, Rewind Video, Late Fee Video, Dinner & a Tape, Rewind & Dine, Credits & Crumbs, Reel Feast Video landed. Next time ask the feel first (local corner shop, big 90s chain, food pun). Stays "Video store" for now.
 12. ASK FIRST  Sharing reviews with friends by link.
 13. ASK FIRST  New films each month: a pipeline to add new releases with menus.
 14. PARKED  Cost per head.
 15. PARKED  Food safety pass on make-ahead hold times (owner: not needed).
+
+## Focus group, Oct 29 (simulated, 41 personas weighted to 1,000; raw results in wip/focus-group/)
+Headline: first impression 8.0, would use again 5.6, NPS -65, 58% reached their goal. The food is the gap, not the fun.
+Biggest issues, waiting on the owner to order them into the list above:
+- BUG: printed menu card, PDF and image ignore Vegetarian and No alcohol (only the prep sheet swaps). Confirmed.
+- Diet and allergy settings beyond Vegetarian and No alcohol (halal, no pork, no beef, gluten, dairy, egg, nut, vegan), with allergen flags on dishes and snacks.
+- Numbers: guests into double feature and marathon, steps scale, plurals and units, per-dish ingredient list, waiting vs cooking time.
+- No preloaded film, Back stays in app, tabs land at the top. Printing (real Print, true A4, progress). Run sheet. Lazy night. Cost. Search. Missing films.

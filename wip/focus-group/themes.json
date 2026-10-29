@@ -1,0 +1,169 @@
+{
+ "diet": {
+  "reach": 439,
+  "personas": 21,
+  "sev": {
+   "major": 13,
+   "blocker": 8,
+   "minor": 11
+  }
+ },
+ "card_ignores_diet": {
+  "reach": 239,
+  "personas": 10,
+  "sev": {
+   "major": 9,
+   "minor": 2
+  }
+ },
+ "scaling": {
+  "reach": 445,
+  "personas": 17,
+  "sev": {
+   "major": 12,
+   "minor": 15
+  }
+ },
+ "budget": {
+  "reach": 201,
+  "personas": 7,
+  "sev": {
+   "major": 5,
+   "minor": 5
+  }
+ },
+ "tiny_menu": {
+  "reach": 148,
+  "personas": 6,
+  "sev": {
+   "minor": 3,
+   "major": 3
+  }
+ },
+ "lazy": {
+  "reach": 194,
+  "personas": 6,
+  "sev": {
+   "minor": 5,
+   "major": 6
+  }
+ },
+ "df_marathon": {
+  "reach": 257,
+  "personas": 11,
+  "sev": {
+   "blocker": 1,
+   "minor": 10,
+   "major": 3
+  }
+ },
+ "runsheet": {
+  "reach": 210,
+  "personas": 8,
+  "sev": {
+   "minor": 4,
+   "major": 6
+  }
+ },
+ "speed": {
+  "reach": 166,
+  "personas": 7,
+  "sev": {
+   "major": 3,
+   "minor": 6
+  }
+ },
+ "nav": {
+  "reach": 309,
+  "personas": 11,
+  "sev": {
+   "major": 6,
+   "minor": 6
+  }
+ },
+ "preload": {
+  "reach": 257,
+  "personas": 9,
+  "sev": {
+   "major": 5,
+   "minor": 7,
+   "blocker": 1
+  }
+ },
+ "kids": {
+  "reach": 97,
+  "personas": 4,
+  "sev": {
+   "minor": 4,
+   "blocker": 1,
+   "major": 1
+  }
+ },
+ "a11y": {
+  "reach": 233,
+  "personas": 9,
+  "sev": {
+   "major": 6,
+   "minor": 11
+  }
+ },
+ "plain": {
+  "reach": 96,
+  "personas": 4,
+  "sev": {
+   "major": 3,
+   "minor": 1
+  }
+ },
+ "search": {
+  "reach": 143,
+  "personas": 5,
+  "sev": {
+   "minor": 2,
+   "major": 4
+  }
+ },
+ "films": {
+  "reach": 183,
+  "personas": 7,
+  "sev": {
+   "blocker": 2,
+   "major": 2,
+   "minor": 4
+  }
+ },
+ "privacy": {
+  "reach": 52,
+  "personas": 2,
+  "sev": {
+   "major": 3,
+   "minor": 2
+  }
+ },
+ "print": {
+  "reach": 457,
+  "personas": 20,
+  "sev": {
+   "major": 19,
+   "minor": 8
+  }
+ },
+ "share": {
+  "reach": 315,
+  "personas": 12,
+  "sev": {
+   "blocker": 1,
+   "minor": 7,
+   "major": 8
+  }
+ },
+ "units": {
+  "reach": 68,
+  "personas": 3,
+  "sev": {
+   "minor": 1,
+   "blocker": 1,
+   "major": 1
+  }
+ }
+}

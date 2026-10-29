@@ -1,0 +1,555 @@
+[
+ {
+  "id": "P05",
+  "journey": [
+   "Landed on phone, read the welcome card, tapped Let's go",
+   "Set usual guests to 4 in Settings",
+   "Spun the wheel: Under Siege, 11.1s from tap to menu",
+   "Read the printed menu, opened Prep sheet and shopping list",
+   "Saw bouillabaisse with mussels, prawns, saffron, rum and 520g butter for 4",
+   "Spun again (Step Brothers) and turned on Lazy night: popcorn and sundae bar",
+   "Browsed the Video store, rented Ghostbusters (2016) for $2 weekly",
+   "Candy bar: added butter popcorn, chicken salt chips, lolly snakes",
+   "Checked they landed on the shopping list",
+   "Opened More and used Share this menu and Copy text for the house group chat"
+  ],
+  "completed_goal": true,
+  "gave_up_at": null,
+  "scores": {
+   "first_impression": 8,
+   "clarity": 7,
+   "find_film": 8,
+   "menu_appeal": 7,
+   "recipe_usefulness": 6,
+   "diet_fit": 5,
+   "shopping_list": 6,
+   "video_store": 8,
+   "candy_bar": 9,
+   "speed": 6,
+   "accessibility": 7,
+   "trust_privacy": 7,
+   "delight": 9,
+   "would_use_again": 7,
+   "nps": 7
+  },
+  "frictions": [
+   {
+    "what": "No idea what the night will cost. No price estimate, no budget filter, no cheap swaps. The default full menus lean premium (mussels, prawns, saffron, rum, a layer cake).",
+    "where": "Prep sheet and shopping list",
+    "severity": "major",
+    "evidence": "Under Siege for 4: 500g mussels, 300g prawns, saffron, 1l fish stock, 520g butter, dark and white rum. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P05-05-prep.png"
+   },
+   {
+    "what": "The prices printed on the menus (6.30, 6.92, 4.50) look like real costs. I briefly thought the bouillabaisse was $6.30.",
+    "where": "Printed menu",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P05-03-menu.png"
+   },
+   {
+    "what": "Lazy night is the cheap option but it is a small toggle tucked under the menu and not mentioned on the welcome card. Took a second spin before I found it.",
+    "where": "Menu action buttons",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P05-06-lazy.png"
+   },
+   {
+    "what": "Candy bar adds snacks to 'tonight's film' even when I never picked one. It was the preloaded Ghostbusters menu sitting under the wheel.",
+    "where": "Candy bar",
+    "severity": "minor",
+    "evidence": "Added popcorn, chips and snakes before spinning; they went on Ghostbusters (1984). P05c run"
+   },
+   {
+    "what": "Renting a tape does not make it tonight's film until you also hit Roll the film on the receipt. Easy to close the receipt and lose it.",
+    "where": "Video store rental receipt",
+    "severity": "minor",
+    "evidence": "After Rent it, current film stayed Ghostbusters (1984)"
+   },
+   {
+    "what": "Share and Copy text are hidden behind a More dropdown. Copy text is actually the best thing for a share house (shopping list with [ ] boxes) and nobody will find it.",
+    "where": "Menu action buttons, More",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P05-07-more.png"
+   }
+  ],
+  "wishes": [
+   "Rough cost per head or a total for the shopping list",
+   "A 'cheap night' or 'under $10 a head' filter",
+   "Split the list between housemates (who buys what)",
+   "Share the shopping list straight to Messenger or WhatsApp as a list, not just a link"
+  ],
+  "loved": [
+   "Rental receipt: weekly $2, paid with a $10 note, change $8, be kind rewind",
+   "Candy bar is full of proper Aussie stuff: chicken salt chips, fairy bread, Cheerios",
+   "Lazy night turns a fancy menu into popcorn and a sundae bar",
+   "Shopping list grouped by aisle with tick boxes"
+  ],
+  "quote": "Honestly the video store and candy bar are the fun bit, we'd use those every week. But I need to know if dinner is $20 or $80 before I send it to the group chat.",
+  "would_pay": "maybe, a one-off $2 to $3 if it had a cheap mode and a cost estimate"
+ },
+ {
+  "id": "P13",
+  "journey": [
+   "Landed on phone, welcome card, Let's go",
+   "Set guests to 10 for the dorm floor",
+   "Turned on Kids mode to keep it clean: 328 films left",
+   "Turned on Lazy night hoping for no-cook food",
+   "Spun: Cars. Lazy menu was corn you boil then char on a hot grill, plus cola floats",
+   "Spun: The Goonies. Lazy menu was cheese coins you chill an hour then bake at 180C",
+   "Looked for a microwave or kettle option in Settings and on the prep sheet. None",
+   "Candy bar, Retro tab: found buy-it lollies and coconut ice",
+   "Tapped MAKE IT on a snack expecting a recipe. Nothing happened"
+  ],
+  "completed_goal": false,
+  "gave_up_at": "Cooking: every Lazy night menu I got still needed a stove, grill or oven, so I fell back to buying lollies from the Candy bar",
+  "scores": {
+   "first_impression": 8,
+   "clarity": 7,
+   "find_film": 8,
+   "menu_appeal": 6,
+   "recipe_usefulness": 3,
+   "diet_fit": 2,
+   "shopping_list": 5,
+   "video_store": 7,
+   "candy_bar": 8,
+   "speed": 6,
+   "accessibility": 7,
+   "trust_privacy": 7,
+   "delight": 8,
+   "would_use_again": 5,
+   "nps": 5
+  },
+  "frictions": [
+   {
+    "what": "No way to say 'microwave and kettle only' or 'no cook'. Lazy night still assumes a grill, stove or oven.",
+    "where": "Settings and Lazy night",
+    "severity": "major",
+    "evidence": "Cars lazy: 'Boil the corn cobs... char on a hot grill'. Goonies lazy: 'chill 1 hr... bake at 180C'. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P13-05-lazyprep.png"
+   },
+   {
+    "what": "Method text does not scale with guests. Prep sheet says serves 10 but the float method says 'two scoops in each of four tall glasses'.",
+    "where": "Prep sheet, How to make it",
+    "severity": "major",
+    "evidence": "The Goonies, serves 10, root beer float method"
+   },
+   {
+    "what": "Scaled shopping list reads badly: '3 pinch smoked paprikas', '10 x 375ml cans root beers'. Root beer is hard to find in Australia anyway.",
+    "where": "Shopping list",
+    "severity": "minor",
+    "evidence": "The Goonies at 10 guests"
+   },
+   {
+    "what": "MAKE IT on candy bar items looks like a button but is just a label. The recipe only shows up later on the prep sheet.",
+    "where": "Candy bar",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P13-12-retro.png"
+   },
+   {
+    "what": "On a phone you scroll past the whole cinema hero and Menu of the week before the snack counter starts.",
+    "where": "Candy bar",
+    "severity": "minor",
+    "evidence": "Snack counter starts about 1250px down. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P13-12-retro.png"
+   }
+  ],
+  "wishes": [
+   "A 'no cook / microwave / kettle' filter",
+   "A 'buy it all from Coles' or Woolies version of each menu",
+   "Cost per head for a big group",
+   "Clean or church-friendly film filter beyond Kids mode"
+  ],
+  "loved": [
+   "Kids mode cut it straight down to 328 films",
+   "Candy bar buy-it snacks are perfect for a dorm",
+   "The theming is gorgeous and the curtain countdown is fun with a crowd",
+   "Cola floats and root beer floats are basically no-cook"
+  ],
+  "quote": "I've got a kettle and a microwave that smells like popcorn already. Love the look, but Lazy night still wants me to grill corn.",
+  "would_pay": "no"
+ },
+ {
+  "id": "P24",
+  "journey": [
+   "Landed on phone, welcome card, Let's go",
+   "Set guests to 2 for date night",
+   "Chose Rom-Com Date Night (54) from Tonight's programme",
+   "Spun: Some Like It Hot (1959), 11.0s",
+   "Looked at the printed menu, it is very pretty",
+   "Prep sheet for 2: lobster tails, green prawns, pancetta, bourbon, a whole birthday cake",
+   "Opened More, tapped Save image: got 'press and hold, Save to Photos'",
+   "Tapped Share this menu: native share with a link",
+   "Opened the link as my boyfriend would: he got the generic welcome card first"
+  ],
+  "completed_goal": true,
+  "gave_up_at": null,
+  "scores": {
+   "first_impression": 9,
+   "clarity": 7,
+   "find_film": 7,
+   "menu_appeal": 8,
+   "recipe_usefulness": 6,
+   "diet_fit": 6,
+   "shopping_list": 6,
+   "video_store": 8,
+   "candy_bar": 8,
+   "speed": 6,
+   "accessibility": 7,
+   "trust_privacy": 7,
+   "delight": 9,
+   "would_use_again": 7,
+   "nps": 8
+  },
+  "frictions": [
+   {
+    "what": "Saved image is a near-square two-page spread (3430x3360) with tiny text. Not a 9:16 story or a TikTok frame, so I would have to crop it and lose half the menu.",
+    "where": "More, Save image",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P24-09-afterpng.png"
+   },
+   {
+    "what": "Date night for two lands on lobster tails and bourbon Manhattans. No budget hint or swap, I work retail.",
+    "where": "Prep sheet and shopping list",
+    "severity": "major",
+    "evidence": "Some Like It Hot, serves 2: 2 lobster tails, 250g green prawns, 120ml bourbon"
+   },
+   {
+    "what": "Share and Save image are buried under More. These should be the big buttons for people like me.",
+    "where": "Menu action buttons",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P05-07-more.png"
+   },
+   {
+    "what": "Shared link opens on the generic welcome card, not 'Chloe sent you this menu'. Feels like spam to the person who opens it.",
+    "where": "Shared link",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P24-10-friend-opens-link.png"
+   },
+   {
+    "what": "Rom-com spin gave a 1959 black and white film. Fine, but there is no 'newer only' or decade filter on the wheel (the Video store has one).",
+    "where": "Spin, Tonight's programme",
+    "severity": "minor",
+    "evidence": "Spun Some Like It Hot (1959)"
+   },
+   {
+    "what": "Odd units for two: '1 cloves garlic', '3 cup ice', '1/2 tbsp milk', '6 candles'.",
+    "where": "Shopping list",
+    "severity": "minor",
+    "evidence": "Some Like It Hot at 2 guests"
+   }
+  ],
+  "wishes": [
+   "Story-sized (9:16) export of the menu, poster and our names",
+   "A cute 'we're having...' card to post, with the film poster",
+   "Cheaper date night swaps",
+   "Decade or 'newer than 2000' filter on the wheel"
+  ],
+  "loved": [
+   "The printed menus look like real props, super aesthetic",
+   "The curtain countdown",
+   "Rental receipt and member card in the Video store",
+   "Choc tops and pick and mix in the Candy bar"
+  ],
+  "quote": "It's so cute I'd post it, but the save gives me a square with tiny writing. Give me a story-sized one with the poster and I'm sold.",
+  "would_pay": "maybe, $2 to $4 for story templates and themed packs"
+ },
+ {
+  "id": "P31",
+  "journey": [
+   "Landed on phone, Let's go",
+   "Settings: guests 5, turned on No alcohol. Looked for halal, there is none",
+   "Spun: The Night Before. Prep sheet header says ALCOHOL-FREE, mulled wine swapped to alcohol-free",
+   "Spun: Fargo. Batter uses alcohol-free lager",
+   "Checked Home Alone 2: bacon in the club sandwich, no warning",
+   "Looked at the default Ghostbusters menu: pork mince and lap cheong",
+   "Tried Double feature: Knocked Up plus The Big Sick, but it says serves 4 when I set 5"
+  ],
+  "completed_goal": true,
+  "gave_up_at": null,
+  "scores": {
+   "first_impression": 8,
+   "clarity": 7,
+   "find_film": 8,
+   "menu_appeal": 6,
+   "recipe_usefulness": 6,
+   "diet_fit": 4,
+   "shopping_list": 6,
+   "video_store": 7,
+   "candy_bar": 6,
+   "speed": 6,
+   "accessibility": 7,
+   "trust_privacy": 5,
+   "delight": 7,
+   "would_use_again": 5,
+   "nps": 5
+  },
+  "frictions": [
+   {
+    "what": "No halal or no-pork setting. Pork turns up with no flag: bacon, pancetta, prosciutto, pork mince, lap cheong.",
+    "where": "Settings, Dinner",
+    "severity": "major",
+    "evidence": "Home Alone 2 method: 'Grill the bacon until crisp'. Ghostbusters list: 250g pork mince, 2 lap cheong. Settings only has Vegetarian and No alcohol. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P05-04-settings.png"
+   },
+   {
+    "what": "Double feature ignores my guest count and says serves 4.",
+    "where": "Double feature",
+    "severity": "minor",
+    "evidence": "Guests set to 5, dialog says 'One menu for both films, serves 4'. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P31-06-df4000.png"
+   },
+   {
+    "what": "Alcohol-free lager and alcohol-free 'mulled wine' still read as beer and wine to a lot of Muslim families. A plain soft-drink swap option would be safer.",
+    "where": "No alcohol swaps",
+    "severity": "minor",
+    "evidence": "Fargo: 'cold alcohol-free lager'; Night Before: 'mulled wine (alcohol-free)'"
+   },
+   {
+    "what": "Meat shows no note to buy halal, even for steak and mince.",
+    "where": "Shopping list",
+    "severity": "minor",
+    "evidence": "Fargo list: 1.5kg chicken wings, 625g beef mince"
+   },
+   {
+    "what": "No cost guide for a student budget.",
+    "where": "Shopping list",
+    "severity": "major",
+    "evidence": "No price or cost anywhere in the app"
+   }
+  ],
+  "wishes": [
+   "A halal setting that swaps pork and flags gelatine",
+   "'Buy halal' note on meat",
+   "Cheap or student mode",
+   "Double feature that respects my guest count"
+  ],
+  "loved": [
+   "No alcohol really works: every drink swapped and the prep sheet says ALCOHOL-FREE",
+   "Double feature menu layout is clear",
+   "Streaming info shows Stan, Netflix, Disney+ straight away"
+  ],
+  "quote": "No alcohol is done properly, I'll give it that. But no halal option and bacon in the sandwich means I'm checking every recipe myself.",
+  "would_pay": "no"
+ },
+ {
+  "id": "P41",
+  "journey": [
+   "Landed on phone, Let's go",
+   "Settings: guests 5, No alcohol on",
+   "Chose Rom-Com Date Night, spun: Valentine's Day (2010)",
+   "Read the printed menu: still says 'Sparkling rosé'",
+   "Prep sheet: drink swapped to alcohol-free sparkling rosé, good",
+   "Main is sirloin with beef stock, no halal note",
+   "Candy bar: Lollies tab, added jelly babies, pick and mix, rocky road and cola slushies",
+   "Checked the shopping list: marshmallows, jelly babies and mixed lollies added with no gelatine warning"
+  ],
+  "completed_goal": true,
+  "gave_up_at": null,
+  "scores": {
+   "first_impression": 9,
+   "clarity": 7,
+   "find_film": 8,
+   "menu_appeal": 8,
+   "recipe_usefulness": 6,
+   "diet_fit": 4,
+   "shopping_list": 5,
+   "video_store": 7,
+   "candy_bar": 7,
+   "speed": 6,
+   "accessibility": 7,
+   "trust_privacy": 5,
+   "delight": 8,
+   "would_use_again": 6,
+   "nps": 6
+  },
+  "frictions": [
+   {
+    "what": "Candy bar lollies (jelly babies, snakes, marshmallows in rocky road, pick and mix) usually have pork gelatine. No flag, no halal swap.",
+    "where": "Candy bar, Lollies",
+    "severity": "major",
+    "evidence": "Added to list: 190g marshmallows, 2 bags jelly babies, 625g mixed lollies. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P41-12-lollies.png"
+   },
+   {
+    "what": "With No alcohol on, the printed menu card still advertises 'Sparkling rosé with grapefruit juice'. Only the prep sheet shows the swap. Mixed message when I show the girls.",
+    "where": "Printed menu",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P41-03-menu.png"
+   },
+   {
+    "what": "Shopping list wording is broken when scaled to 5: '3 small bunch thymes', '5 small sprigs rosemaries', '2 tube red food colouring pastes', '6 1/4 tbsp olive oil', '2/3 tsp chilli flakes'.",
+    "where": "Shopping list",
+    "severity": "major",
+    "evidence": "Valentine's Day at 5 guests"
+   },
+   {
+    "what": "Girls' night isn't a theme; Rom-Com Date Night is pitched at couples.",
+    "where": "Tonight's programme",
+    "severity": "minor",
+    "evidence": "Theme list has Rom-Com Date Night only"
+   }
+  ],
+  "wishes": [
+   "Halal setting that includes gelatine-free lolly picks",
+   "Girls' night or sleepover theme",
+   "Menu card that matches my settings",
+   "A grazing board or dessert-only option for snack nights"
+  ],
+  "loved": [
+   "Candy bar is so fun, felt like a real cinema counter",
+   "Chocolate-dipped strawberries and red velvet cupcakes are exactly girls' night food",
+   "No alcohol swaps on the prep sheet"
+  ],
+  "quote": "The candy bar is the best bit, but half those lollies have gelatine and it doesn't say. I'd still have to read every packet.",
+  "would_pay": "no"
+ },
+ {
+  "id": "P37",
+  "journey": [
+   "Landed on desktop 1440 wide: full-screen marquee, had to scroll to find the wheel",
+   "Tabbed through: order is logical (tabs, menu of the week, Spin, programme, find, double feature, settings)",
+   "Spun and hit Escape to skip the curtains: 6.3s spin, 13.9s from page load to a menu",
+   "Read the Narnia menu and prep sheet",
+   "Searched for gamer films: Mario, Sonic, Pokemon, Detective Pikachu, Scott Pilgrim, Ready Player One, Free Guy: nothing. Found A Minecraft Movie, Wreck-It Ralph, Tron: Legacy",
+   "The Matrix: no sequels, no marathon",
+   "Lord of the Rings: Plan a marathon gave a 6-film Middle-earth run with release or story order and one menu",
+   "Video store: searched 'game', got Avengers: Endgame only"
+  ],
+  "completed_goal": true,
+  "gave_up_at": null,
+  "scores": {
+   "first_impression": 8,
+   "clarity": 7,
+   "find_film": 5,
+   "menu_appeal": 7,
+   "recipe_usefulness": 6,
+   "diet_fit": 7,
+   "shopping_list": 7,
+   "video_store": 7,
+   "candy_bar": 6,
+   "speed": 5,
+   "accessibility": 8,
+   "trust_privacy": 7,
+   "delight": 7,
+   "would_use_again": 5,
+   "nps": 6
+  },
+  "frictions": [
+   {
+    "what": "The spin is a show every time: about 11 to 13s on phone, unless you happen to find Tap to skip or Escape. No setting for instant results, no Space to spin.",
+    "where": "Spin",
+    "severity": "major",
+    "evidence": "Phone spins 11.0 to 13.6s; desktop with Escape 6.3s; load to menu 13.9s"
+   },
+   {
+    "what": "Gamer catalogue gaps: no Super Mario Bros. Movie, Sonic, Detective Pikachu, Scott Pilgrim, Ready Player One, Free Guy, original Tron or Matrix sequels.",
+    "where": "Find a film, Video store",
+    "severity": "major",
+    "evidence": "Search results empty for Mario, Sonic, Pokemon, Pikachu, Scott Pilgrim, Ready Player, Free Guy. Source has only 'The Matrix' and 'Tron: Legacy'"
+   },
+   {
+    "what": "On desktop the first screen is all marquee art. No Spin button above the fold.",
+    "where": "Home, desktop",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P37-01b-home.png"
+   },
+   {
+    "what": "Search results not in series order (Return of the King listed before The Two Towers).",
+    "where": "Find a film",
+    "severity": "minor",
+    "evidence": "Search 'Lord of the Rings'"
+   },
+   {
+    "what": "Printed menus are tiny on desktop; the prices jump between 0.59 and 24.00 with no meaning.",
+    "where": "Printed menu",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P37-03-menu.png"
+   }
+  ],
+  "wishes": [
+   "An instant spin setting and Space bar to spin",
+   "A gaming aisle in the Video store",
+   "Quick 'snacks only' plan for a 2 hour break",
+   "Respawn: spin again without the curtains"
+  ],
+  "loved": [
+   "The desktop wheel looks great",
+   "Marathon planner with release or story order and one shared menu",
+   "Keyboard tab order is sensible and tabs work with arrow keys",
+   "Escape skips the curtains"
+  ],
+  "quote": "Cool once, then I want it in under three seconds. And a movie app with no Mario or Sonic is missing my whole crowd.",
+  "would_pay": "no, unless it adds a gaming aisle and instant mode"
+ },
+ {
+  "id": "P18",
+  "journey": [
+   "Landed on phone, Let's go",
+   "Settings: guests 6 for the house",
+   "Searched Ratatouille, Chef, Big Night, Julie & Julia, Godfather: all there",
+   "Opened Ratatouille: Gusteau's menu with soup, stuffed mushrooms, ratatouille, sweetbreads",
+   "Tapped a dish card for the method: fancy serif font with old-style numbers, 'Serves four'",
+   "Prep sheet for 6: scaled list, method with timings, hands-on 4 hr 40",
+   "Used Choose dishes to see each dish and its time",
+   "Saved the PDF: A4 landscape, menu on one page, prep on the other"
+  ],
+  "completed_goal": true,
+  "gave_up_at": null,
+  "scores": {
+   "first_impression": 8,
+   "clarity": 7,
+   "find_film": 9,
+   "menu_appeal": 9,
+   "recipe_usefulness": 7,
+   "diet_fit": 8,
+   "shopping_list": 7,
+   "video_store": 7,
+   "candy_bar": 7,
+   "speed": 7,
+   "accessibility": 5,
+   "trust_privacy": 7,
+   "delight": 9,
+   "would_use_again": 8,
+   "nps": 8
+  },
+  "frictions": [
+   {
+    "what": "Dish cards use Cormorant Garamond with old-style numbers and small caps. '40g' reads as '4og' and '10 minutes' as '1o minutes'. Hard going for a dyslexic reader. Some titles use a script font.",
+    "where": "Menu dish card",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P18-04-dish.png"
+   },
+   {
+    "what": "Dish card quantities are fixed at serves four while the prep sheet is set to 6. Two different sets of numbers for the same dish.",
+    "where": "Menu dish card vs Prep sheet",
+    "severity": "major",
+    "evidence": "Card: '2 sliced leeks, 40g butter, 1L stock'. Prep at 6: '1.77l chicken stock'"
+   },
+   {
+    "what": "Methods on the prep sheet are one long paragraph with timings in brackets. Numbered steps on separate lines would be much easier to follow at the bench.",
+    "where": "Prep sheet, How to make it",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P18-05-method.png"
+   },
+   {
+    "what": "PDF menu page still lists 'Bordeaux, 1947, ask the sommelier' while the drink on the prep sheet is a grape spritz.",
+    "where": "Save PDF",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P18-08-pdf-both.png"
+   },
+   {
+    "what": "Hands-on time is the sum of every dish (4 hr 40). No run sheet telling me what to start first so it all lands together.",
+    "where": "Prep sheet header",
+    "severity": "minor",
+    "evidence": "SERVES 6 / 6 DISHES / HANDS-ON 4 HR 40 MIN, LONGEST DISH 3 HR 40 MIN"
+   }
+  ],
+  "wishes": [
+   "Plain, dyslexia-friendly font option for recipes",
+   "Numbered steps, one per line, with a timer per step",
+   "A cook's run sheet: start the ratatouille at 4pm, sweetbreads at 6",
+   "Dish card quantities that follow the guest count"
+  ],
+  "loved": [
+   "Ratatouille menu with sweetbreads is a proper flex for the boys",
+   "Choose dishes shows each dish with its time so I can drop one",
+   "The PDF looks like a real restaurant menu",
+   "Prep sheet font (rounded, 16px) is easy to read"
+  ],
+  "quote": "The food's legit, sweetbreads for the boys is a flex. Just give me the steps one line at a time in a normal font, those fancy numbers mess with me.",
+  "would_pay": "yes, $5 one-off for a chef mode with a run sheet and step timers"
+ }
+]

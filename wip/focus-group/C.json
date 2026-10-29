@@ -1,0 +1,575 @@
+[
+ {
+  "id": "P07",
+  "journey": [
+   "Opened on phone, read the welcome card",
+   "Turned on Kids mode and set 6 guests in Settings",
+   "Spun the wheel",
+   "Got Dumb and Dumber with a chilli burger menu",
+   "Tried the Video store, tapped The Addams Family tape",
+   "Pressed phone Back to get back and fell out of the app",
+   "Searched Mary Poppins, tried to read the printed menu, could not, tapping it did nothing"
+  ],
+  "completed_goal": true,
+  "gave_up_at": null,
+  "scores": {
+   "first_impression": 8,
+   "clarity": 6,
+   "find_film": 6,
+   "menu_appeal": 7,
+   "recipe_usefulness": 5,
+   "diet_fit": 7,
+   "shopping_list": 7,
+   "video_store": 8,
+   "candy_bar": 8,
+   "speed": 6,
+   "accessibility": 4,
+   "trust_privacy": 7,
+   "delight": 8,
+   "would_use_again": 6,
+   "nps": 6
+  },
+  "frictions": [
+   {
+    "what": "Phone Back button leaves the app completely. Video store, Candy bar and Spin are tabs inside one page with no history, so Back from the Video store goes to whatever site was open before (about:blank in testing), not back to the menu",
+    "where": "whole app, browser Back",
+    "severity": "major",
+    "evidence": "rose.py: history.length stayed 2 after opening Video store; go_back landed on about:blank. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P07-06-afterback.png"
+   },
+   {
+    "what": "The printed menu card shrinks its dish names to about 4 to 6.5px effective size on a 390px phone (Casablanca 3.9px min, Mary Poppins 3.5px min, Dumb and Dumber 4.1px min). Tapping the card does nothing, no zoom or full screen view",
+    "where": "Menu tab, printed menu formats (.mcard fmt-lib)",
+    "severity": "major",
+    "evidence": "measured via text range rects; /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P07-08-tapmenu.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-05-menu-slow.png"
+   },
+   {
+    "what": "Kids mode on still spun Dumb and Dumber (rated PG in the app data) with an 'Extra hot chilli burger'. Rating is defensible but a gran would not call it a kids film",
+    "where": "Kids mode spin",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P07-03-afterspin.png"
+   },
+   {
+    "what": "Video store has seasonal shelves, Family aisle and PG badges which suit grandkids well, but the 'Family' filter chip and a separate kids checkbox under Filters overlap with Kids mode in Settings; three places for one idea",
+    "where": "Video store",
+    "severity": "minor",
+    "evidence": "rose.py visible controls; /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P07-04-store.png"
+   },
+   {
+    "what": "On a first visit the Candy bar says Add puts snacks on 'tonight's film, Ghostbusters', a film the user never picked",
+    "where": "Candy bar",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P10-03-candy-pick.png"
+   },
+   {
+    "what": "Mains often need skills or gear older plain cooks lack: 'pull at 54C' steak needs a thermometer, deep frying at 180C, piping devilled eggs. No soft food or easy option",
+    "where": "recipes",
+    "severity": "minor",
+    "evidence": "P20-prep.txt, Breakfast at Tiffany's prep"
+   }
+  ],
+  "wishes": [
+   "A big 'Back to my menu' button that is always there",
+   "A plain kids menu option with simple food like nuggets, toasties, fairy bread",
+   "Budget hint on the shopping list, roughly how much it will cost",
+   "Tap the menu card to see it full size"
+  ],
+  "loved": [
+   "The cinema look, the curtain and the wheel, the grandkids will love spinning it",
+   "Video store tapes with trailers and PG badges",
+   "Candy bar with fairy bread, chocolate crackles and honey joys, proper Aussie party food"
+  ],
+  "quote": "The kids would go mad for the wheel and the lollies. But I pressed back and the whole thing disappeared on me, and that little menu I can't read without my glasses and even then.",
+  "would_pay": "no, but would happily use it free for school holidays"
+ },
+ {
+  "id": "P10",
+  "journey": [
+   "Opened on phone, hit Let's go",
+   "Spun the wheel straight away",
+   "Read the menu cards, tapped How to make it on a dish",
+   "Opened Candy bar, picked Savoury",
+   "Pressed Lazy night, could not tell what it did",
+   "Looked for a simple meat and three veg feed"
+  ],
+  "completed_goal": true,
+  "gave_up_at": null,
+  "scores": {
+   "first_impression": 7,
+   "clarity": 6,
+   "find_film": 7,
+   "menu_appeal": 6,
+   "recipe_usefulness": 5,
+   "diet_fit": 6,
+   "shopping_list": 7,
+   "video_store": 6,
+   "candy_bar": 8,
+   "speed": 7,
+   "accessibility": 6,
+   "trust_privacy": 7,
+   "delight": 7,
+   "would_use_again": 5,
+   "nps": 5
+  },
+  "frictions": [
+   {
+    "what": "'Lazy night: off/on' toggles with no explanation and nothing obvious changes on screen",
+    "where": "menu actions",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P10-05-lazy.png"
+   },
+   {
+    "what": "Lots of idioms and in-jokes in buttons and headings: 'Lock it in', 'Lazy night', 'Ticket stubs', 'Showtime cue', 'Ask the counter', 'Spin this aisle', 'Popping the corn', course names like 'Containment' and 'Sweet & cold', 'Main slaughter'. Aussie food words too: copha, hundreds and thousands, esky, arvo. Hard going with second language English",
+    "where": "labels across app",
+    "severity": "major",
+    "evidence": "dump of visible text in d1.py, baz.py, rose.py"
+   },
+   {
+    "what": "The floating 'Spin the wheel' bar sits over the bottom of the menu and recipe text on small screens, and it is the easiest thing to hit by mistake, which throws away the film you were reading",
+    "where": "sticky bottom bar",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P17-06-recipe.png"
+   },
+   {
+    "what": "On a first visit the Candy bar says Add puts snacks on 'tonight's film, Ghostbusters', a film the user never picked",
+    "where": "Candy bar",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P10-03-candy-pick.png"
+   },
+   {
+    "what": "Menus lean fancy and American for a meat and veg bloke: shrimp cocktail, chipotle crema, blue cheese wedge, michelada. 'Dad's chops and veg' on Kenny is the exception and it is the dish he wanted",
+    "where": "menus",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-04-afterspin.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-05-menu-slow.png"
+   },
+   {
+    "what": "Phone Back button leaves the app completely. Video store, Candy bar and Spin are tabs inside one page with no history, so Back from the Video store goes to whatever site was open before (about:blank in testing), not back to the menu",
+    "where": "whole app, browser Back",
+    "severity": "major",
+    "evidence": "rose.py: history.length stayed 2 after opening Video store; go_back landed on about:blank. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P07-06-afterback.png"
+   }
+  ],
+  "wishes": [
+   "A 'just give me a feed' option: one main, no starters, no cocktails",
+   "A plain Print button",
+   "Fewer buttons under the menu"
+  ],
+  "loved": [
+   "Spin and go, no sign up",
+   "Snack counter with chips and dip and party pies",
+   "Shopping list grouped by meat, produce, dairy, done in grams"
+  ],
+  "quote": "Spun it, got a film, fair enough. Then it wants me to make shrimp cocktail and a michelada. Give me the chops and veg and I'm happy.",
+  "would_pay": "no"
+ },
+ {
+  "id": "P14",
+  "journey": [
+   "Opened on desktop at a large zoom",
+   "Looked for The Sound of Music, not there",
+   "Typed Casablanca and picked it",
+   "Page jumped to the top, thought it had not worked, scrolled down to find the menu",
+   "Opened Prep sheet and shopping list and read the method",
+   "Looked for a Print button, found only Save PDF"
+  ],
+  "completed_goal": true,
+  "gave_up_at": null,
+  "scores": {
+   "first_impression": 7,
+   "clarity": 5,
+   "find_film": 4,
+   "menu_appeal": 7,
+   "recipe_usefulness": 5,
+   "diet_fit": 4,
+   "shopping_list": 7,
+   "video_store": null,
+   "candy_bar": null,
+   "speed": 7,
+   "accessibility": 4,
+   "trust_privacy": 7,
+   "delight": 6,
+   "would_use_again": 4,
+   "nps": 4
+  },
+  "frictions": [
+   {
+    "what": "Film search is exact substring only. 'breakfast at tiffanys' and 'singing in the rain' return 'No film by that name' although Breakfast at Tiffany's and Singin' in the Rain are in the list. Apostrophes and small typos kill it",
+    "where": "Find a film box",
+    "severity": "major",
+    "evidence": "d3.py and bev.py search results"
+   },
+   {
+    "what": "Picking a film from Find a film jumps the page back to the very top (scrollY 0). On a zoomed screen the marquee fills the view and the menu is off screen, so it looks like nothing happened",
+    "where": "Find a film, after choosing a match",
+    "severity": "major",
+    "evidence": "doug.py: search at y 1023, after pick y 0, menu at 766 on a 600px tall view. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P14-04-menu.png"
+   },
+   {
+    "what": "Using the browser's own Print (what an older user would do) gives one dark blank page. Only the 'Save PDF (menu + prep)' button makes something printable, and it is called Save PDF, not Print",
+    "where": "Print",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P32-print-p-1.png"
+   },
+   {
+    "what": "Prep sheet serif font uses old style numerals so '1 hr 10 min' and '1kg' read like 'ı hr ıo min' and 'ıkg'; '2l vegetable oil' reads as '21'",
+    "where": "Prep sheet and shopping list",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P14-07-method.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P32-04-afterpdf.png"
+   },
+   {
+    "what": "All type is set in fixed px (about 25 rules at 13px, 9 at 12px, labels at 11.5px, 'NOW SHOWING' at 8.6px), so phone and tablet 'larger text' settings do nothing. Pinch zoom is allowed, which helps",
+    "where": "whole app",
+    "severity": "minor",
+    "evidence": "index.html font-size rules; pat.py tiny text list"
+   },
+   {
+    "what": "Mains often need skills or gear older plain cooks lack: 'pull at 54C' steak needs a thermometer, deep frying at 180C, piping devilled eggs. No soft food or easy option",
+    "where": "recipes",
+    "severity": "minor",
+    "evidence": "P20-prep.txt, Breakfast at Tiffany's prep"
+   },
+   {
+    "what": "Some old favourites are missing (The Sound of Music); the list leans 1980s onward",
+    "where": "film list",
+    "severity": "minor",
+    "evidence": "d3.py: no match; confirmed absent in films.js"
+   }
+  ],
+  "wishes": [
+   "Search that copes with spelling and missing apostrophes",
+   "A Print button that prints the menu and recipes big and plain on A4",
+   "Soft and simple food option",
+   "Numbered recipe steps instead of a paragraph"
+  ],
+  "loved": [
+   "Casablanca with Rick's Cafe olives and briouats is a lovely touch",
+   "Shopping list with tick boxes",
+   "Prep sheet tells you what you can make ahead"
+  ],
+  "quote": "I typed Singing in the Rain and it told me there was no such film. Then I found Casablanca and the screen jumped to a picture of a picture theatre and I thought I'd broken it.",
+  "would_pay": "no"
+ },
+ {
+  "id": "P17",
+  "journey": [
+   "Opened on a 320px wide phone and at large zoom",
+   "Read the welcome card fine",
+   "Searched Ghostbusters, opened a dish method",
+   "Tried printed menus for Mary Poppins and Casablanca, too small to read, tapping did nothing",
+   "Looked for a diabetic option in Settings, none"
+  ],
+  "completed_goal": false,
+  "gave_up_at": "Reading the printed menu on the phone; dish names are a few pixels high and tapping does not enlarge them",
+  "scores": {
+   "first_impression": 6,
+   "clarity": 5,
+   "find_film": 6,
+   "menu_appeal": 4,
+   "recipe_usefulness": 4,
+   "diet_fit": 3,
+   "shopping_list": 6,
+   "video_store": 5,
+   "candy_bar": 6,
+   "speed": 7,
+   "accessibility": 3,
+   "trust_privacy": 7,
+   "delight": 5,
+   "would_use_again": 3,
+   "nps": 3
+  },
+  "frictions": [
+   {
+    "what": "The printed menu card shrinks its dish names to about 4 to 6.5px effective size on a 390px phone (Casablanca 3.9px min, Mary Poppins 3.5px min, Dumb and Dumber 4.1px min). Tapping the card does nothing, no zoom or full screen view",
+    "where": "Menu tab, printed menu formats (.mcard fmt-lib)",
+    "severity": "major",
+    "evidence": "measured via text range rects; /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P07-08-tapmenu.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-05-menu-slow.png"
+   },
+   {
+    "what": "No diabetic or low sugar option and no sugar info on dishes; desserts and drinks lean sweet (sugar syrups, sugar cubes, jam)",
+    "where": "Settings, recipes",
+    "severity": "minor",
+    "evidence": "P20-prep.txt and Breakfast at Tiffany's prep"
+   },
+   {
+    "what": "All type is set in fixed px (about 25 rules at 13px, 9 at 12px, labels at 11.5px, 'NOW SHOWING' at 8.6px), so phone and tablet 'larger text' settings do nothing. Pinch zoom is allowed, which helps",
+    "where": "whole app",
+    "severity": "minor",
+    "evidence": "index.html font-size rules; pat.py tiny text list"
+   },
+   {
+    "what": "At 320px wide the line 'Serves four. Tap a dish for the method' is cut off at the right edge",
+    "where": "Menu header, 320px phone",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P17-06-recipe.png"
+   },
+   {
+    "what": "The floating 'Spin the wheel' bar sits over the bottom of the menu and recipe text on small screens, and it is the easiest thing to hit by mistake, which throws away the film you were reading",
+    "where": "sticky bottom bar",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P17-06-recipe.png"
+   },
+   {
+    "what": "Gold and dim text on dark brown (subtitles like 'Make it', 'Buy it', checklist counts) is low contrast for low vision",
+    "where": "home and Goes well with strip",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-05-menu-slow.png"
+   },
+   {
+    "what": "Tapping a dish flips the card to a single paragraph method with no amounts (amounts only live on the Prep tab). For a nervous cook it is hard to follow and you have to jump between tabs",
+    "where": "dish card 'How to make it'",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P17-06-recipe.png"
+   }
+  ],
+  "wishes": [
+   "A large text or plain view of the menu",
+   "Diabetic friendly or low sugar setting",
+   "Tap a menu to open it full screen",
+   "Honour the phone's text size setting"
+  ],
+  "loved": [
+   "No sideways scrolling even at 320px",
+   "The Goes well with and Add buttons are big and easy to hit",
+   "Welcome card is short and clear"
+  ],
+  "quote": "The bits with big gold buttons I can manage. The actual menu, the part I came for, is like reading the fine print on a pill bottle.",
+  "would_pay": "no"
+ },
+ {
+  "id": "P32",
+  "journey": [
+   "Opened on tablet",
+   "Set 8 guests for bridge club",
+   "Typed breakfast at tiffanys, no match, tried just breakfast and found it",
+   "Read the menu and prep sheet: pastries, devilled eggs, steak, champagne cocktails",
+   "Tried the browser Print, got a dark blank page",
+   "Pressed Save PDF (menu + prep), waited about 13s, got a nice 3 page PDF"
+  ],
+  "completed_goal": true,
+  "gave_up_at": null,
+  "scores": {
+   "first_impression": 8,
+   "clarity": 6,
+   "find_film": 5,
+   "menu_appeal": 9,
+   "recipe_usefulness": 6,
+   "diet_fit": 8,
+   "shopping_list": 7,
+   "video_store": null,
+   "candy_bar": 6,
+   "speed": 6,
+   "accessibility": 6,
+   "trust_privacy": 7,
+   "delight": 9,
+   "would_use_again": 7,
+   "nps": 7
+  },
+  "frictions": [
+   {
+    "what": "Film search is exact substring only. 'breakfast at tiffanys' and 'singing in the rain' return 'No film by that name' although Breakfast at Tiffany's and Singin' in the Rain are in the list. Apostrophes and small typos kill it",
+    "where": "Find a film box",
+    "severity": "major",
+    "evidence": "d3.py and bev.py search results"
+   },
+   {
+    "what": "Using the browser's own Print (what an older user would do) gives one dark blank page. Only the 'Save PDF (menu + prep)' button makes something printable, and it is called Save PDF, not Print",
+    "where": "Print",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P32-print-p-1.png"
+   },
+   {
+    "what": "The Save PDF file looks great but is not A4 as promised ('Building your A4 PDF...'); pages are 450x675pt, so it prints small with big margins. Prep page text is small for older eyes, and the menu page clips a line under the title ('to an evening of dinner and a film at' is cut)",
+    "where": "Save PDF output",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P32-savepdf-all.png"
+   },
+   {
+    "what": "Scaling to 8 gives odd amounts like '14 tbsp apricot jam' and '2l vegetable oil' instead of a jar or a bottle",
+    "where": "shopping list at 8 guests",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P32-04-afterpdf.png"
+   },
+   {
+    "what": "Prep sheet serif font uses old style numerals so '1 hr 10 min' and '1kg' read like 'ı hr ıo min' and 'ıkg'; '2l vegetable oil' reads as '21'",
+    "where": "Prep sheet and shopping list",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P14-07-method.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P32-04-afterpdf.png"
+   }
+  ],
+  "wishes": [
+   "A Print button that goes straight to the printer",
+   "A retro or 'golden age' shelf in the video store",
+   "Afternoon tea sized menus, not full dinners",
+   "Place cards and a menu per table to print"
+  ],
+  "loved": [
+   "Breakfast at Tiffany's menu with the cat canapes and champagne cocktails, the girls will adore it",
+   "The saved PDF looks like a real printed menu",
+   "Prep sheet with make ahead notes"
+  ],
+  "quote": "Once I found it, it was the prettiest menu I have ever seen and I'll put it on the table. Getting there took me three goes and a grandson would have helped.",
+  "would_pay": "maybe, a few dollars for printable menu packs for themed afternoons"
+ },
+ {
+  "id": "P20",
+  "journey": [
+   "Opened on phone",
+   "Read the welcome card slowly",
+   "Opened Settings, set 6 guests and No alcohol, looked for halal, not there",
+   "Spun and got Jackie Brown",
+   "Saw vodka and lager on the printed menu and worried",
+   "Opened Prep sheet and shopping list, found the drinks were changed to alcohol-free",
+   "Checked meat: steak and fish, no pork this time, no halal note"
+  ],
+  "completed_goal": true,
+  "gave_up_at": null,
+  "scores": {
+   "first_impression": 7,
+   "clarity": 5,
+   "find_film": 6,
+   "menu_appeal": 5,
+   "recipe_usefulness": 5,
+   "diet_fit": 4,
+   "shopping_list": 7,
+   "video_store": 6,
+   "candy_bar": 6,
+   "speed": 7,
+   "accessibility": 5,
+   "trust_privacy": 6,
+   "delight": 6,
+   "would_use_again": 5,
+   "nps": 5
+  },
+  "frictions": [
+   {
+    "what": "Settings only has Vegetarian and No alcohol. No halal or no pork option, so pork dumplings (King of New York), ham sandwiches (Mary Poppins) and similar turn up with no warning",
+    "where": "Settings, Dinner",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P20-01-settings.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-04-afterspin.png"
+   },
+   {
+    "what": "With No alcohol ticked, the printed menu still lists the boozy drink and batter: 'Ordell's blood orange screwdriver: Vodka, blood orange' and 'Lager battered fish' on Jackie Brown, 'Knock-off lager michelada' on Kenny. The prep sheet does swap them to alcohol-free, but the menu you look at first does not",
+    "where": "Menu tab, printed menu art",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P20-04-menu.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-05-menu-slow.png; prep text shows 'alcohol-free lager' and '(alcohol-free)' screwdriver"
+   },
+   {
+    "what": "Lots of idioms and in-jokes in buttons and headings: 'Lock it in', 'Lazy night', 'Ticket stubs', 'Showtime cue', 'Ask the counter', 'Spin this aisle', 'Popping the corn', course names like 'Containment' and 'Sweet & cold', 'Main slaughter'. Aussie food words too: copha, hundreds and thousands, esky, arvo. Hard going with second language English",
+    "where": "labels across app",
+    "severity": "major",
+    "evidence": "dump of visible text in d1.py, baz.py, rose.py"
+   },
+   {
+    "what": "Tapping a dish flips the card to a single paragraph method with no amounts (amounts only live on the Prep tab). For a nervous cook it is hard to follow and you have to jump between tabs",
+    "where": "dish card 'How to make it'",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P17-06-recipe.png"
+   },
+   {
+    "what": "The printed menu card shrinks its dish names to about 4 to 6.5px effective size on a 390px phone (Casablanca 3.9px min, Mary Poppins 3.5px min, Dumb and Dumber 4.1px min). Tapping the card does nothing, no zoom or full screen view",
+    "where": "Menu tab, printed menu formats (.mcard fmt-lib)",
+    "severity": "major",
+    "evidence": "measured via text range rects; /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P07-08-tapmenu.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-05-menu-slow.png"
+   },
+   {
+    "what": "Gelatine in lollies and marshmallows (Candy bar, Ghostbusters marshmallow skewers) has no halal note",
+    "where": "Candy bar and desserts",
+    "severity": "minor",
+    "evidence": "Ghostbusters menu text in d1.py"
+   }
+  ],
+  "wishes": [
+   "Halal setting that removes pork, ham and gelatine and says 'use halal meat'",
+   "Simple English mode with plain course names: Starter, Main, Dessert, Drink",
+   "Pictures of each dish",
+   "Step by step recipes with numbers"
+  ],
+  "loved": [
+   "Alcohol-free swap on the prep sheet is real, not just hidden",
+   "Shopping list in grams and millilitres, grouped by shop section",
+   "Guests number goes up to 24 for a big family"
+  ],
+  "quote": "I tick no alcohol and the menu still says vodka. Then in the other tab it is okay. I need it to say halal, and to say it in easy words.",
+  "would_pay": "no"
+ },
+ {
+  "id": "P34",
+  "journey": [
+   "Opened on an old Android over slow data (slow 3G, 4x slower CPU)",
+   "Saw the cinema picture after about 6 to 8s, waited about 25 to 33s for the welcome card",
+   "Set No alcohol and 5 guests",
+   "Spun, waited about 38s for the menu (Kenny)",
+   "Opened Video store and Candy bar, each pulled more data",
+   "Reloaded, still re-downloaded data"
+  ],
+  "completed_goal": true,
+  "gave_up_at": null,
+  "scores": {
+   "first_impression": 6,
+   "clarity": 6,
+   "find_film": 6,
+   "menu_appeal": 5,
+   "recipe_usefulness": 5,
+   "diet_fit": 4,
+   "shopping_list": 7,
+   "video_store": 5,
+   "candy_bar": 6,
+   "speed": 3,
+   "accessibility": 5,
+   "trust_privacy": 7,
+   "delight": 6,
+   "would_use_again": 4,
+   "nps": 4
+  },
+  "frictions": [
+   {
+    "what": "On slow 3G with a 4x slower CPU: first picture at 5.6 to 7.7s, welcome card at about 25 to 33s, page fully loaded at 37s, 1.4 to 1.5MB on first load (providers.js 338KB, app.js 231KB, index.html 169KB, films.js 115KB, hero images about 300KB). A spin then takes about 38s to show the menu and pulls another 1.4MB. Save PDF makes a 2.4MB file",
+    "where": "first load and spin",
+    "severity": "major",
+    "evidence": "slow.py and slow2.py, more.py; /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-01-firstpaint.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-02-welcome.png"
+   },
+   {
+    "what": "No service worker took control on the repeat visit, so a reload still re-downloaded 0.36MB on slow data",
+    "where": "repeat visit",
+    "severity": "minor",
+    "evidence": "slow2.py: navigator.serviceWorker.controller was null after reload"
+   },
+   {
+    "what": "Settings only has Vegetarian and No alcohol. No halal or no pork option, so pork dumplings (King of New York), ham sandwiches (Mary Poppins) and similar turn up with no warning",
+    "where": "Settings, Dinner",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P20-01-settings.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-04-afterspin.png"
+   },
+   {
+    "what": "With No alcohol ticked, the printed menu still lists the boozy drink and batter: 'Ordell's blood orange screwdriver: Vodka, blood orange' and 'Lager battered fish' on Jackie Brown, 'Knock-off lager michelada' on Kenny. The prep sheet does swap them to alcohol-free, but the menu you look at first does not",
+    "where": "Menu tab, printed menu art",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P20-04-menu.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-05-menu-slow.png; prep text shows 'alcohol-free lager' and '(alcohol-free)' screwdriver"
+   },
+   {
+    "what": "Video store renders over 1000 tape elements and loads posters as you scroll, heavy on an old phone",
+    "where": "Video store",
+    "severity": "minor",
+    "evidence": "rose.py: 1008 tape elements; slow2.py 0.27MB on open"
+   },
+   {
+    "what": "Phone Back button leaves the app completely. Video store, Candy bar and Spin are tabs inside one page with no history, so Back from the Video store goes to whatever site was open before (about:blank in testing), not back to the menu",
+    "where": "whole app, browser Back",
+    "severity": "major",
+    "evidence": "rose.py: history.length stayed 2 after opening Video store; go_back landed on about:blank. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P07-06-afterback.png"
+   }
+  ],
+  "wishes": [
+   "A light mode that skips the big pictures and animations",
+   "Work offline after the first visit",
+   "Halal setting",
+   "Skip the spin animation on slow phones"
+  ],
+  "loved": [
+   "Once loaded it works, nothing broke",
+   "Shopping list is clear",
+   "No account or sign up needed"
+  ],
+  "quote": "Half a minute to open, another half a minute for the wheel. My kids are already fighting by then. And still no halal button.",
+  "would_pay": "no"
+ }
+]

@@ -1,0 +1,499 @@
+[
+ {
+  "id": "P06",
+  "journey": [
+   "Arrived on desktop, read the 3 step welcome, Let's go",
+   "Opened Settings to look for diet and units",
+   "Typed Ghostbusters in Find a film, opened the menu",
+   "Read the work order menu card",
+   "Opened Prep sheet, read shopping list and method",
+   "Bumped guests to 6 and compared quantities",
+   "Opened Choose dishes",
+   "Saved PDF (menu + prep)",
+   "Locked in Saturday 7pm to see if it builds a timeline"
+  ],
+  "completed_goal": true,
+  "gave_up_at": null,
+  "scores": {
+   "first_impression": 9,
+   "clarity": 8,
+   "find_film": 8,
+   "menu_appeal": 9,
+   "recipe_usefulness": 7,
+   "diet_fit": 8,
+   "shopping_list": 8,
+   "video_store": null,
+   "candy_bar": null,
+   "speed": 8,
+   "accessibility": 7,
+   "trust_privacy": 8,
+   "delight": 8,
+   "would_use_again": 7,
+   "nps": 7
+  },
+  "frictions": [
+   {
+    "what": "No run sheet. The app knows showtime (Saturday 7pm) and every step's minutes, but never says 'start the sauce at 4:40, arancini in the oil at 6:15'. It just says 'check each recipe for cooking times'",
+    "where": "This week's film card and prep sheet",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P06-10-locked.png; prep text contains no clock times"
+   },
+   {
+    "what": "Shopping list scales with guests but the method text does not. At 6 guests it still says roll 16 meatballs, lay 8 biscuits, pour into 4 glasses, cut mozzarella into 8 cubes",
+    "where": "Prep sheet, How to make it",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P06-prep-2.png (Ghostbusters at 6), Godfather at 6 says 'Fill 4 glasses' and '8 cubes'"
+   },
+   {
+    "what": "Odd quantities when scaling: '4 1/2 tbsp mayonnaise', '1.05l passata', '600g cold cooked risotto' listed as something to buy when it is a sub recipe with no method",
+    "where": "Shopping list at 6 guests",
+    "severity": "minor",
+    "evidence": "Ghostbusters and Godfather at 6 guests"
+   },
+   {
+    "what": "Hands-on time stays at 1 hr 42 min whether serving 4 or 6, which an accountant notices",
+    "where": "Prep sheet header",
+    "severity": "minor",
+    "evidence": "SERVES 4 and SERVES 6 headers identical times"
+   },
+   {
+    "what": "Menu of the week card and the wheel stay on screen above the film I picked, so it is easy to lose which film is active",
+    "where": "Main page after opening a film",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P06-07-choose.png"
+   }
+  ],
+  "wishes": [
+   "Backwards run sheet from showtime with clock times per step",
+   "Method quantities that scale with guests",
+   "Total cost estimate of the shopping list",
+   "Film runtime shown next to showtime so I know when dessert lands"
+  ],
+  "loved": [
+   "Make-ahead notes on every dish",
+   "Shopping list grouped by aisle with tick boxes in the PDF",
+   "The Ghostbusters work order menu is genuinely funny and looks great printed",
+   "Choose dishes to trim the menu and have times follow"
+  ],
+  "quote": "The prep sheet is better than most recipe sites, and the make-ahead notes are gold. But if you know my showtime and every step's minutes, just tell me what time to start the sauce.",
+  "would_pay": "maybe, a few dollars once for a run sheet and method that scales properly"
+ },
+ {
+  "id": "P12",
+  "journey": [
+   "Desktop, welcome card, Settings looking for gluten free",
+   "Only Vegetarian and No alcohol on offer",
+   "Searched The Godfather for a dinner party of 6",
+   "Set guests to 6 on the prep tab",
+   "Read every dish for gluten",
+   "Opened Choose dishes to untick the gluten dishes",
+   "Looked at the menu card as a table piece"
+  ],
+  "completed_goal": false,
+  "gave_up_at": "Checking the Godfather menu for Tom: 4 of 5 dishes need wheat and there is no gluten free option or swap",
+  "scores": {
+   "first_impression": 9,
+   "clarity": 8,
+   "find_film": 8,
+   "menu_appeal": 9,
+   "recipe_usefulness": 6,
+   "diet_fit": 2,
+   "shopping_list": 7,
+   "video_store": null,
+   "candy_bar": null,
+   "speed": 8,
+   "accessibility": 7,
+   "trust_privacy": 7,
+   "delight": 8,
+   "would_use_again": 4,
+   "nps": 5
+  },
+  "frictions": [
+   {
+    "what": "No gluten free or coeliac setting anywhere. Godfather menu has rigatoni, breadcrumbs, plain flour arancini, cannoli shells. Nothing flagged, no GF swap like the vegetarian ones",
+    "where": "Settings and prep sheet",
+    "severity": "blocker",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P12-prep-2.png; source search for gluten/coeliac/celiac returns 0 hits"
+   },
+   {
+    "what": "Choose dishes lets me untick, but then the dinner party for 6 is an antipasto platter and a soda",
+    "where": "Prep tab, Choose dishes",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P06-07-choose.png"
+   },
+   {
+    "what": "No allergen tags on dishes, so hidden gluten (soy sauce, salami, malt, digestives) is on me to catch",
+    "where": "Dish list",
+    "severity": "major",
+    "evidence": "Ghostbusters fried rice uses 3 tbsp soy sauce with no tamari note"
+   },
+   {
+    "what": "Shopping list scales with guests but the method text does not. At 6 guests it still says roll 16 meatballs, lay 8 biscuits, pour into 4 glasses, cut mozzarella into 8 cubes",
+    "where": "Prep sheet, How to make it",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P06-prep-2.png (Ghostbusters at 6), Godfather at 6 says 'Fill 4 glasses' and '8 cubes'"
+   }
+  ],
+  "wishes": [
+   "Gluten free toggle that swaps pasta, crumbs and pastry like vegetarian does",
+   "Allergen tags per dish (gluten, dairy, egg, nuts)",
+   "Per guest dietary notes for a dinner party"
+  ],
+  "loved": [
+   "The printed menu cards would look brilliant on the table",
+   "Vegetarian swaps prove the swap engine exists",
+   "Guest stepper up to 24"
+  ],
+  "quote": "It's gorgeous and I'd print the menu for the table in a heartbeat, but Tom can't eat four of the five dishes and the app doesn't even tell you that. Give me a gluten free toggle and I'm in.",
+  "would_pay": "maybe, would pay for proper allergen filters"
+ },
+ {
+  "id": "P19",
+  "journey": [
+   "Phone, welcome, Settings: ticked Vegetarian as the closest thing to vegan",
+   "Picked Rom-Com Date Night and spun: Valentine's Day",
+   "Saw the menu card still offering sirloin with garlic butter",
+   "Opened Prep sheet: mains swapped to portobello steaks",
+   "Read the ingredients for animal products",
+   "Saved the PDF and checked the menu card in it",
+   "Ticked No alcohol too and rechecked the card"
+  ],
+  "completed_goal": false,
+  "gave_up_at": "Reading the vegetarian Valentine's Day list: goat's cheese, cream cheese, 245g butter, eggs, buttermilk, honey",
+  "scores": {
+   "first_impression": 9,
+   "clarity": 7,
+   "find_film": 7,
+   "menu_appeal": 7,
+   "recipe_usefulness": 6,
+   "diet_fit": 1,
+   "shopping_list": 6,
+   "video_store": null,
+   "candy_bar": null,
+   "speed": 7,
+   "accessibility": 7,
+   "trust_privacy": 7,
+   "delight": 7,
+   "would_use_again": 3,
+   "nps": 4
+  },
+  "frictions": [
+   {
+    "what": "No vegan option. Vegetarian is the closest and still gives butter, eggs, buttermilk, cream cheese, goat's cheese and honey in 4 of 5 dishes",
+    "where": "Settings, prep sheet",
+    "severity": "blocker",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P19-06-prep.png; source has 0 hits for vegan"
+   },
+   {
+    "what": "Printed menu card ignores Vegetarian and No alcohol. With both ticked the card and the PDF still list Valentine's sirloin and sparkling rose, while the prep sheet correctly swaps to portobello",
+    "where": "Menu tab card and Save PDF page 1",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P19-07-card-after-toggles.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P19-valentines-veg.pdf"
+   },
+   {
+    "what": "Ingredient names pluralise wrongly: '2 small bunch thymes', '4 small sprigs rosemaries', '3 drops green food colourings'",
+    "where": "Shopping list",
+    "severity": "minor",
+    "evidence": "Valentine's Day and Toy Story lists"
+   },
+   {
+    "what": "PDF menu card for Valentine's Day is an odd 11 x 14 inch page with the title clipped across the top edge, while Ghostbusters was A4",
+    "where": "Save PDF page 1",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P19-valentines-veg.pdf"
+   }
+  ],
+  "wishes": [
+   "Vegan toggle (plant milk, vegan butter, flax egg, maple instead of honey)",
+   "Menu card that matches the diet I set",
+   "Filter films by menus that are already plant based"
+  ],
+  "loved": [
+   "Portobello steak swap is a nice touch",
+   "The date night menu card looks lovely",
+   "Make-ahead notes for a relaxed date night"
+  ],
+  "quote": "I ticked vegetarian and the menu card still says sirloin. Then the actual recipes are full of butter, eggs and honey. Pretty app, not for me.",
+  "would_pay": "no"
+ },
+ {
+  "id": "P21",
+  "journey": [
+   "Phone, welcome, Settings: usual guests up to 5",
+   "Spun with everything: got Knocked Up",
+   "Checked prep serves 5",
+   "Locked it in for the week",
+   "Opened Moana instead for the kids, locked it in",
+   "Browsed the Video store Halloween aisle",
+   "Candy bar: added butter popcorn, it landed on Moana's shopping list"
+  ],
+  "completed_goal": true,
+  "gave_up_at": null,
+  "scores": {
+   "first_impression": 9,
+   "clarity": 8,
+   "find_film": 7,
+   "menu_appeal": 8,
+   "recipe_usefulness": 7,
+   "diet_fit": 8,
+   "shopping_list": 8,
+   "video_store": 8,
+   "candy_bar": 9,
+   "speed": 7,
+   "accessibility": 8,
+   "trust_privacy": 8,
+   "delight": 9,
+   "would_use_again": 8,
+   "nps": 8
+  },
+  "frictions": [
+   {
+    "what": "Cook night only offers Friday, Saturday or Sunday. I'm home one week in three, often midweek, so I can't lock in a Tuesday",
+    "where": "This week's film, Cook night",
+    "severity": "major",
+    "evidence": "weekDay select options: Friday, Saturday, Sunday only"
+   },
+   {
+    "what": "Default spin with no kids mode gave Knocked Up for a family of five. Kids mode is buried in Settings",
+    "where": "Spin",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P21-04-locked.png"
+   },
+   {
+    "what": "Tapping Candy bar lands halfway down the page on the week's film card, not the snack counter",
+    "where": "Candy bar tab",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P21-06-candy.png (scrollY 1883)"
+   },
+   {
+    "what": "Lock in is one film per week. No way to plan the whole week home in one go",
+    "where": "Lock in for this week",
+    "severity": "minor",
+    "evidence": "Only one This week's film slot"
+   }
+  ],
+  "wishes": [
+   "Pick any night of the week",
+   "Plan a run of nights for my week home",
+   "Kids mode prompt on first run"
+  ],
+  "loved": [
+   "Candy bar Add goes straight onto the locked film's shopping list with a 'See the shopping list' toast",
+   "Fairy bread and chocolate crackles, proper Aussie kid party food",
+   "Video store Halloween aisle with 'spin this aisle'",
+   "Scales to 5 without me doing maths"
+  ],
+  "quote": "Easy enough on the phone and the kids would love the candy bar. Just let me pick a Tuesday, I'm not home most weekends.",
+  "would_pay": "maybe, small one-off to plan a whole week home"
+ },
+ {
+  "id": "P26",
+  "journey": [
+   "Phone, welcome, Settings looking for units",
+   "No cups or Fahrenheit option",
+   "Searched Toy Story",
+   "Read the prep sheet: grams, ml, Celsius",
+   "Checked the cake recipe for oven temperature and quantities"
+  ],
+  "completed_goal": true,
+  "gave_up_at": null,
+  "scores": {
+   "first_impression": 9,
+   "clarity": 8,
+   "find_film": 8,
+   "menu_appeal": 8,
+   "recipe_usefulness": 5,
+   "diet_fit": 6,
+   "shopping_list": 7,
+   "video_store": null,
+   "candy_bar": null,
+   "speed": 7,
+   "accessibility": 7,
+   "trust_privacy": 8,
+   "delight": 8,
+   "would_use_again": 6,
+   "nps": 6
+  },
+  "frictions": [
+   {
+    "what": "No US units. Everything is grams, ml and Celsius (pizza at 250C, cake at 175C, 400g butter). No toggle for cups, sticks of butter or Fahrenheit",
+    "where": "Settings and prep sheet",
+    "severity": "major",
+    "evidence": "Toy Story prep text; source has 0 hits for Fahrenheit or °F"
+   },
+   {
+    "what": "Units are inconsistent between menus: Finding Nemo uses '1/2 cup plain flour' and '2 cup panko' while every other menu uses grams",
+    "where": "Shopping list",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P28-06-prep.png"
+   },
+   {
+    "what": "Aussie ingredient names with no explanation: caster sugar, icing sugar, self-raising flour, capsicum, thickened cream, copha",
+    "where": "Shopping list",
+    "severity": "minor",
+    "evidence": "Toy Story and Halloween lists"
+   }
+  ],
+  "wishes": [
+   "Units toggle: metric or US cups, ounces, Fahrenheit",
+   "Hover or tap glossary for Aussie ingredient names"
+  ],
+  "loved": [
+   "Andy's birthday cake and Pizza Planet punch are perfect for the kids",
+   "Shopping list by aisle",
+   "Gorgeous theatre front"
+  ],
+  "quote": "My kids would love this, but I had to Google 175C and figure out what 400 grams of butter is in sticks. One units switch and it's perfect.",
+  "would_pay": "maybe, for a US units mode"
+ },
+ {
+  "id": "P28",
+  "journey": [
+   "Phone, welcome card",
+   "Found Kids mode in Settings and turned it on",
+   "Spun: Finding Nemo",
+   "Looked at the printed menu card",
+   "Opened Prep sheet and read Dairy section for lactose",
+   "Looked for a Sunday afternoon time to lock in"
+  ],
+  "completed_goal": false,
+  "gave_up_at": "Lock in: earliest showtime is 5pm and the dishes need dairy swaps she has to work out herself",
+  "scores": {
+   "first_impression": 8,
+   "clarity": 6,
+   "find_film": 6,
+   "menu_appeal": 7,
+   "recipe_usefulness": 6,
+   "diet_fit": 4,
+   "shopping_list": 7,
+   "video_store": null,
+   "candy_bar": null,
+   "speed": 7,
+   "accessibility": 5,
+   "trust_privacy": 7,
+   "delight": 7,
+   "would_use_again": 5,
+   "nps": 5
+  },
+  "frictions": [
+   {
+    "what": "No dairy free or lactose free option. Nemo menu has sour cream dip, buttered fairy bread and yoghurt pops, nothing flagged",
+    "where": "Settings, prep sheet",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P28-06-prep.png"
+   },
+   {
+    "what": "Eggs are listed under DAIRY, which confuses someone scanning the Dairy aisle to see what to avoid",
+    "where": "Shopping list",
+    "severity": "minor",
+    "evidence": "'2 eggs' under DAIRY in every list"
+   },
+   {
+    "what": "Menu card text is tiny on a phone and full of jokes and film references that are hard for a second language reader",
+    "where": "Menu tab card",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P28-05-menu.png"
+   },
+   {
+    "what": "Kids mode wheel still shows Rear Window and City Slickers",
+    "where": "Wheel in kids mode",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P28-03-wheel.png"
+   },
+   {
+    "what": "Showtime choices start at 5pm on Fri, Sat or Sun only, no Sunday lunch matinee for the grandchild",
+    "where": "Lock in",
+    "severity": "minor",
+    "evidence": "weekTime 5pm to 9pm"
+   },
+   {
+    "what": "Floating 'Spin the wheel' button covers the 'Part 1 of' and marathon text under the menu",
+    "where": "Bottom of menu on phone",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P28-05-menu.png"
+   }
+  ],
+  "wishes": [
+   "Dairy free toggle with swaps",
+   "Bigger text option",
+   "Simplified Chinese language option",
+   "Sunday afternoon showtimes"
+  ],
+  "loved": [
+   "Kids mode was easy to find and works",
+   "Fairy bread and fish shaped food, the grandchild would love it",
+   "Shopping list grouped by aisle so she can see the Dairy section"
+  ],
+  "quote": "Very beautiful, my grandson would like Nemo. But I cannot have the dairy and the small words are hard for me to read.",
+  "would_pay": "no"
+ },
+ {
+  "id": "P30",
+  "journey": [
+   "Phone, welcome, picked Midnight Monster Feast on the wheel",
+   "Searched Scream, Friday the 13th, Evil Dead, Final Destination for a marathon",
+   "Only first films exist; Scream had no marathon",
+   "Opened Alien and tried Plan a marathon (Alien plus Aliens)",
+   "Tried Double feature: random Poltergeist plus Addams Family Values, no way to pick",
+   "Checked Halloween and Jaws menus with Vegetarian on as a pescatarian"
+  ],
+  "completed_goal": false,
+  "gave_up_at": "Trying to build a 4 film Halloween horror marathon of her own picks",
+  "scores": {
+   "first_impression": 9,
+   "clarity": 7,
+   "find_film": 6,
+   "menu_appeal": 9,
+   "recipe_usefulness": 7,
+   "diet_fit": 6,
+   "shopping_list": 7,
+   "video_store": 8,
+   "candy_bar": null,
+   "speed": 7,
+   "accessibility": 7,
+   "trust_privacy": 8,
+   "delight": 9,
+   "would_use_again": 6,
+   "nps": 7
+  },
+  "frictions": [
+   {
+    "what": "No custom marathon. Marathons only exist for a film's own series, and most horror series stop at film one (Scream, Saw, Halloween, Nightmare on Elm Street). Friday the 13th, Evil Dead and Final Destination aren't in the library",
+    "where": "Plan a marathon, Find a film",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P30-04-marathon.png; search results"
+   },
+   {
+    "what": "Double feature is random, I can't choose the two films, only spin again",
+    "where": "Double feature dialog",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P30-05-double.png"
+   },
+   {
+    "what": "No pescatarian mode. Vegetarian swaps Jaws' lobster rolls for hearts of palm and fish for smoked tofu, which a pescatarian doesn't need",
+    "where": "Prep sheet with Vegetarian",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P30-menu-Jaws.png"
+   },
+   {
+    "what": "Marathon menu fixed at serves 4 with no guest control, and two iced coffees as the drinks for a late night party",
+    "where": "Marathon dialog",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P30-04-marathon.png"
+   }
+  ],
+  "wishes": [
+   "Build my own marathon from any films, with a combined menu and timeline",
+   "Pick both films in a double feature",
+   "Pescatarian setting",
+   "More horror sequels and franchises"
+  ],
+  "loved": [
+   "Midnight Monster Feast theme and the Halloween aisle in the video store",
+   "Pumpkin pie with a piped mask, babysitter's popcorn, chilli in a pumpkin",
+   "The menu writing is clever and the cards look great printed"
+  ],
+  "quote": "The Halloween menu is so good I want to frame it. But I can't build my own marathon and Scream has no sequels, which is wild for a horror night.",
+  "would_pay": "maybe, for custom marathons with a combined shopping list"
+ }
+]

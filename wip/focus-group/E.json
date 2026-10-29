@@ -1,0 +1,486 @@
+[
+ {
+  "id": "P08",
+  "journey": [
+   "Arrived, read welcome card (likes '1 to 24 guests')",
+   "Settings: usual guests up to 24 (cap), then 20",
+   "Picked Home Alone, read prep sheet at 24",
+   "Opened Double feature at 20 guests, then its shopping list",
+   "Plan a marathon on Toy Story"
+  ],
+  "completed_goal": false,
+  "gave_up_at": "Double feature shopping list still says serves 4 for a youth group of 20",
+  "scores": {
+   "first_impression": 8,
+   "clarity": 7,
+   "find_film": 8,
+   "menu_appeal": 7,
+   "recipe_usefulness": 5,
+   "diet_fit": 6,
+   "shopping_list": 6,
+   "video_store": null,
+   "candy_bar": 7,
+   "speed": 7,
+   "accessibility": 7,
+   "trust_privacy": 8,
+   "delight": 8,
+   "would_use_again": 6,
+   "nps": 6
+  },
+  "frictions": [
+   {
+    "what": "Double feature and marathon menus ignore Usual guests. Set to 20, the double feature still says 'serves 4' and its shopping list says 'Serves 4' with no guest stepper",
+    "where": "Double feature dialog and its Shopping list; Plan a marathon",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P08-05-df-shop.png"
+   },
+   {
+    "what": "Scaling to 20 to 24 is arithmetic only. Spoon measures balloon ('24 tbsp sprinkles', '30 tbsp chocolate syrup', '20 tbsp plain flour', '10 cup ice'), plurals break ('5 small bunch mints', '5 handful mint leaves'), and odd precision ('1.13kg plain flour'). Method text is not scaled: Home Alone at 24 still says 'fill four tall glasses' and 'six scoops of ice cream', 'tip into a baking dish' for 2.4kg macaroni",
+    "where": "Prep sheet at 20 and 24 guests (Home Alone, Jurassic Park, Moana)",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P08-03-prep-top.png and prep text dumps"
+   },
+   {
+    "what": "Double feature for a church youth group spun Arthur and Pretty Woman with champagne, Kir royale, brandy and bitters. Nothing suggests turning on No alcohol or picking a crowd-friendly pair",
+    "where": "Double feature dialog",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P08-04-df.png"
+   },
+   {
+    "what": "Guest cap of 24 is fine for 20, but church nights often run 30 plus and there is no way past 24",
+    "where": "Settings, Usual guests",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P08-02-guests-max.png"
+   },
+   {
+    "what": "'Longest dish 4 hr 5 min' on Home Alone is just chilling cola overnight, which makes a simple menu look like a big job",
+    "where": "Prep sheet header",
+    "severity": "minor",
+    "evidence": "Home Alone prep sheet text"
+   }
+  ],
+  "wishes": [
+   "Guest stepper on double feature and marathon lists",
+   "Crowd mode: trays, batch sizes, 'buy 3 x 1kg packs' instead of 2.4kg",
+   "Allow more than 24 guests",
+   "Youth-group friendly pairs (PG, no alcohol)"
+  ],
+  "loved": [
+   "The cinema front and spin wheel, the kids will love it on the TV",
+   "Shopping list grouped by aisle",
+   "Marathon plan for Toy Story 1 to 4 with one combined menu"
+  ],
+  "quote": "Mate, it's beautiful and the youth will love the wheel, but when I set 20 people and the double feature still says serves 4, I'm back doing maths on the back of the church bulletin.",
+  "would_pay": "maybe, a few dollars a year if crowd sizes actually flow through everything"
+ },
+ {
+  "id": "P09",
+  "journey": [
+   "Arrived after shift, tapped Let's go",
+   "Picked Moana, Toy Story, Paddington, Home Alone",
+   "Hunted for an easy option, found Lazy night at the bottom",
+   "Toggled Lazy night on each film and compared"
+  ],
+  "completed_goal": false,
+  "gave_up_at": "Lazy night gave snacks and a drink, not dinner, and did nothing on Home Alone",
+  "scores": {
+   "first_impression": 8,
+   "clarity": 6,
+   "find_film": 8,
+   "menu_appeal": 6,
+   "recipe_usefulness": 5,
+   "diet_fit": 4,
+   "shopping_list": 6,
+   "video_store": null,
+   "candy_bar": 7,
+   "speed": 7,
+   "accessibility": 6,
+   "trust_privacy": 8,
+   "delight": 7,
+   "would_use_again": 5,
+   "nps": 5
+  },
+  "frictions": [
+   {
+    "what": "Lazy night is hard to find (bottom of the page, under Save PDF) and when on it keeps the two 'easiest' dishes, which can be a snack and a drink with no main (Toy Story: potato bites and punch; Paddington: marmalade sandwiches and cocoa; Shaft: knishes and a whisky sour). Moana's lazy menu still has a 3 hr 20 min dessert. On Home Alone the button says 'Lazy night: on' but the prep sheet stays at all 5 dishes",
+    "where": "Lazy night button, prep sheet",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P40-04-lazy.png; P09 runs on Toy Story, Paddington, Moana, Home Alone"
+   },
+   {
+    "what": "No 'buy it' or takeaway route for a main. Only snacks in the Candy bar are tagged Buy it (party pies, ice blocks). After a 12 hour shift I want 'grab a roast chook and a salad' not a recipe",
+    "where": "Menu and Goes well with",
+    "severity": "major",
+    "evidence": "Candy bar list, prep sheets"
+   },
+   {
+    "what": "Lazy night should be a setting before I spin, not a toggle at the end of a long menu page. Toggling it gives no feedback near the button; the change happens up the page off screen",
+    "where": "Lazy night button",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P40-04-lazy.png"
+   }
+  ],
+  "wishes": [
+   "A real 'no cook' mode: shop-bought main plus one easy thing",
+   "Filter films by runtime under 100 minutes for a toddler bedtime",
+   "Lazy night as a setting in Settings"
+  ],
+  "loved": [
+   "Fairy bread and milk bottles suggestions, the toddler will eat that",
+   "Where to stream it is right there"
+  ],
+  "quote": "I turned on lazy night and it gave me marmalade sandwiches and a cocoa. That's not dinner, love, that's what I eat at 3am on night shift.",
+  "would_pay": "no"
+ },
+ {
+  "id": "P11",
+  "journey": [
+   "Arrived, turned on Kids mode",
+   "Set guests to 3",
+   "Picked Paddington, read prep",
+   "Browsed Video store in kids mode",
+   "Candy bar: added fairy bread, saw it land on the shopping list"
+  ],
+  "completed_goal": true,
+  "gave_up_at": null,
+  "scores": {
+   "first_impression": 8,
+   "clarity": 7,
+   "find_film": 7,
+   "menu_appeal": 7,
+   "recipe_usefulness": 6,
+   "diet_fit": 6,
+   "shopping_list": 7,
+   "video_store": 8,
+   "candy_bar": 9,
+   "speed": 7,
+   "accessibility": 7,
+   "trust_privacy": 8,
+   "delight": 9,
+   "would_use_again": 7,
+   "nps": 7
+  },
+  "frictions": [
+   {
+    "what": "No cost estimate anywhere. At 20 guests Moana wants 2.5kg prawns, 1.5kg sashimi tuna and 3kg snapper; Jurassic Park wants 10 lamb racks. You only find out the bill at the register",
+    "where": "Prep sheet and locked-in shopping list at 20 guests",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P39-06-week-shop.png"
+   },
+   {
+    "what": "Double feature says serves 4 even when guests is set to another number (tested at 5: prep sheet said serves 5, double feature said serves 4)",
+    "where": "Double feature dialog",
+    "severity": "minor",
+    "evidence": "P11 and P15 runs"
+   },
+   {
+    "what": "Menu dishes lean fancy for a budget night with kids (Cinderella: smoked salmon blinis, prosciutto rockmelon, pumpkin risotto)",
+    "where": "Cinderella menu",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P22-06-menu.png"
+   }
+  ],
+  "wishes": [
+   "Budget toggle or a cheap swap per dish",
+   "Rough cost per head",
+   "Video store rentals pointing to free options (ABC iview, SBS) first"
+  ],
+  "loved": [
+   "Candy bar: Aussie party food like chocolate crackles, honey joys, fairy bread, and the Add button drops it straight onto the list",
+   "Video store with a member card, $2 Tuesday and a Halloween all ages shelf",
+   "Kids mode badge in the video store"
+  ],
+  "quote": "The candy bar is pure magic, my two would spend an hour in it. I just need to know it won't cost me sixty quid before I start.",
+  "would_pay": "maybe, small one-off for a kids pack"
+ },
+ {
+  "id": "P15",
+  "journey": [
+   "Arrived, Kids mode on, guests 5",
+   "Picked Moana",
+   "Lock in for this week",
+   "Set cook night Saturday, showtime 6pm",
+   "Reloaded to check it stuck",
+   "Opened Double feature (Onward + Toy Story 4)"
+  ],
+  "completed_goal": true,
+  "gave_up_at": null,
+  "scores": {
+   "first_impression": 9,
+   "clarity": 7,
+   "find_film": 8,
+   "menu_appeal": 8,
+   "recipe_usefulness": 6,
+   "diet_fit": 7,
+   "shopping_list": 8,
+   "video_store": null,
+   "candy_bar": 7,
+   "speed": 7,
+   "accessibility": 7,
+   "trust_privacy": 8,
+   "delight": 8,
+   "would_use_again": 8,
+   "nps": 7
+  },
+  "frictions": [
+   {
+    "what": "Lock in gives a countdown ('Showtime in 2 days 1h') then says 'Check each recipe for cooking times and make-ahead steps'. It knows every dish's timing and make-ahead notes but doesn't build a timeline (e.g. start the haupia at 2:40pm, fry at 5:30pm)",
+    "where": "This week's film card",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P15-05-thisweek.png"
+   },
+   {
+    "what": "Cook night only offers Friday, Saturday or Sunday. A family on a schedule might do Wednesday",
+    "where": "This week's film, Cook night select",
+    "severity": "minor",
+    "evidence": "weekDay select options: Friday, Saturday, Sunday"
+   },
+   {
+    "what": "After reload the page opens scrolled to the bottom of the menu, not to the This week card",
+    "where": "Reload after lock in",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P15-03-reload.png"
+   },
+   {
+    "what": "Double feature ignores guests (serves 4 for a family of 5)",
+    "where": "Double feature dialog",
+    "severity": "minor",
+    "evidence": "P15 run with guests 5"
+   },
+   {
+    "what": "No spice level control; Moana, Toy Story menus are mild by default",
+    "where": "Menu",
+    "severity": "minor",
+    "evidence": "menu text"
+   }
+  ],
+  "wishes": [
+   "Backwards cooking timeline from showtime",
+   "Calendar invite or reminder for cook night",
+   "Any day of the week",
+   "Spice it up toggle"
+  ],
+  "loved": [
+   "Lock in with a countdown and cook night",
+   "Locked-in shopping list keeps my ticks",
+   "Send to Notes or Reminders from the shopping list",
+   "Kids mode double feature picked Onward and Toy Story 4, spot on"
+  ],
+  "quote": "Locking in Moana for Saturday at six is exactly how my house runs. Now tell me what time to start cooking and I'm sold.",
+  "would_pay": "yes, a few dollars a month for timelines and calendar reminders"
+ },
+ {
+  "id": "P22",
+  "journey": [
+   "Arrived, Kids mode on",
+   "Spun three times (Cinderella, Bambi, The Freshman)",
+   "Searched Cinderella, saw Cinderella Man in results",
+   "Read Cinderella prep sheet",
+   "Opened E.T. prep sheet looking for nuts",
+   "Checked Settings for an allergy option",
+   "Browsed Candy bar for nut items"
+  ],
+  "completed_goal": false,
+  "gave_up_at": "No nut filter or warnings; E.T. menu is peanut butter end to end",
+  "scores": {
+   "first_impression": 8,
+   "clarity": 7,
+   "find_film": 6,
+   "menu_appeal": 7,
+   "recipe_usefulness": 6,
+   "diet_fit": 2,
+   "shopping_list": 7,
+   "video_store": 8,
+   "candy_bar": 5,
+   "speed": 7,
+   "accessibility": 7,
+   "trust_privacy": 6,
+   "delight": 7,
+   "would_use_again": 3,
+   "nps": 3
+  },
+  "frictions": [
+   {
+    "what": "No allergen flags and no nut-free filter. By my scan 131 of the 328 kids-mode films have nuts somewhere in their recipes. E.T. (rated PG, served up in kids mode) is built around peanut butter: 350g peanut butter, peanut butter candy trail, homemade peanut butter cups, with no warning. Home Alone's sundae bar has 480g roasted peanuts. Candy bar sells rocky road with peanuts and chocolate-coated peanuts with no allergy marker",
+    "where": "Prep sheet, recipes, Candy bar, Goes well with",
+    "severity": "blocker",
+    "evidence": "E.T. prep sheet text; Home Alone prep text; /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P22-09-candybar.png"
+   },
+   {
+    "what": "Kids mode uses G or PG ratings, so it lets through The Fifth Element, Batman Forever, Gremlins, Rear Window and Pretty in Pink. Fine for 10 year olds, not for under 8s. Find a film ignores kids mode completely (Cinderella Man, a boxing film, shows up as a match). The programme dropdown still says 'Everything (850 films)' and theme counts are for all films",
+    "where": "Wheel in kids mode, Find a film search, Tonight's programme dropdown",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P22-04-kidshome.png"
+   },
+   {
+    "what": "Settings only has Vegetarian and No alcohol. No allergens at all (nuts, gluten, dairy, egg, sesame)",
+    "where": "Settings, Dinner section",
+    "severity": "blocker",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P08-03-settings.png"
+   },
+   {
+    "what": "'Goes well with' suggests Rocky road (with peanuts) next to Home Alone, a film already carrying a peanut sundae bar",
+    "where": "Goes well with strip",
+    "severity": "major",
+    "evidence": "Home Alone menu text"
+   }
+  ],
+  "wishes": [
+   "Nut-free toggle that swaps or hides dishes and snacks",
+   "Allergen tags on every dish and candy bar item (peanut, tree nut, sesame, egg, dairy, gluten)",
+   "'May contain' note on Buy it items",
+   "Age filter: under 5, under 8, under 12"
+  ],
+  "loved": [
+   "Kids mode forcing alcohol-free drinks automatically",
+   "Spin animation and the ticket stubs",
+   "Shopping list checkboxes that survive a reload"
+  ],
+  "quote": "It's gorgeous, but the first family film I opened was E.T. and it's peanut butter three ways with no warning. I can't hand this to my husband to cook from.",
+  "would_pay": "maybe, if allergens were properly flagged, I'd pay for that peace of mind"
+ },
+ {
+  "id": "P39",
+  "journey": [
+   "Arrived, picked Jurassic Park",
+   "Bumped guests to 20 on the Prep tab",
+   "Read the scaled shopping list",
+   "Ticked items like in a real shop, reloaded, ticks stayed",
+   "Opened More: Save image, Share, Copy text",
+   "Locked in Moana at 20 and opened that shopping list"
+  ],
+  "completed_goal": true,
+  "gave_up_at": null,
+  "scores": {
+   "first_impression": 8,
+   "clarity": 7,
+   "find_film": 8,
+   "menu_appeal": 7,
+   "recipe_usefulness": 5,
+   "diet_fit": 7,
+   "shopping_list": 7,
+   "video_store": null,
+   "candy_bar": 7,
+   "speed": 7,
+   "accessibility": 7,
+   "trust_privacy": 8,
+   "delight": 7,
+   "would_use_again": 6,
+   "nps": 6
+  },
+  "frictions": [
+   {
+    "what": "Scaling to 20 to 24 is arithmetic only. Spoon measures balloon ('24 tbsp sprinkles', '30 tbsp chocolate syrup', '20 tbsp plain flour', '10 cup ice'), plurals break ('5 small bunch mints', '5 handful mint leaves'), and odd precision ('1.13kg plain flour'). Method text is not scaled: Home Alone at 24 still says 'fill four tall glasses' and 'six scoops of ice cream', 'tip into a baking dish' for 2.4kg macaroni",
+    "where": "Prep sheet at 20 and 24 guests (Home Alone, Jurassic Park, Moana)",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P08-03-prep-top.png and prep text dumps"
+   },
+   {
+    "what": "No cost estimate anywhere. At 20 guests Moana wants 2.5kg prawns, 1.5kg sashimi tuna and 3kg snapper; Jurassic Park wants 10 lamb racks. You only find out the bill at the register",
+    "where": "Prep sheet and locked-in shopping list at 20 guests",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P39-06-week-shop.png"
+   },
+   {
+    "what": "Copy text shopping list differs from the on-screen list ('1 bag caster sugar' vs '60ml sugar syrup', '1 jar maraschino cherries' vs '4 maraschino cherries'). The copy is actually more useful, but they should match",
+    "where": "More, Copy text vs prep sheet",
+    "severity": "minor",
+    "evidence": "P40 Shaft clipboard vs prep text"
+   },
+   {
+    "what": "Duplicate items not merged: '5 small bunch mints' and '60 mint leaves' on the same list",
+    "where": "Jurassic Park shopping list at 20",
+    "severity": "minor",
+    "evidence": "prep text dump"
+   },
+   {
+    "what": "Shopping list rows on the prep sheet are about 31px tall, a bit tight with a trolley in one hand; the locked-in list dialog is better",
+    "where": "Prep sheet shopping list",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P39-04-shoplist-ticked.png"
+   }
+  ],
+  "wishes": [
+   "Pack sizes for crowds (3 x 1kg mince, 2 dozen eggs)",
+   "Rough cost at 20",
+   "Cheaper protein swaps when guests go over 10",
+   "One merged list across double features at the real guest count"
+  ],
+  "loved": [
+   "Aisle grouping matches how I walk Woolies",
+   "Ticks persist after reload",
+   "Locked-in list with big checkboxes and Send to Notes",
+   "Copy text gives a clean list I can text to my eldest"
+  ],
+  "quote": "I cook for 400 kids a day so I know a scaled list when I see one. Good bones, but nobody buys 20 tablespoons of flour and nobody's buying 10 lamb racks for a movie night.",
+  "would_pay": "maybe, if it did proper crowd quantities and costs"
+ },
+ {
+  "id": "P40",
+  "journey": [
+   "Arrived one-handed, tapped Let's go",
+   "Hit Spin the wheel (thumb zone, bottom of screen)",
+   "Got Shaft, prep says 'start the day before'",
+   "Scrolled to the bottom to find Lazy night, turned it on",
+   "Copied the menu text to send to partner"
+  ],
+  "completed_goal": false,
+  "gave_up_at": "Lazy night left a knish snack and a whisky sour, no actual dinner",
+  "scores": {
+   "first_impression": 8,
+   "clarity": 7,
+   "find_film": 7,
+   "menu_appeal": 6,
+   "recipe_usefulness": 4,
+   "diet_fit": 4,
+   "shopping_list": 6,
+   "video_store": null,
+   "candy_bar": 6,
+   "speed": 6,
+   "accessibility": 6,
+   "trust_privacy": 8,
+   "delight": 7,
+   "would_use_again": 5,
+   "nps": 5
+  },
+  "frictions": [
+   {
+    "what": "Lazy night is hard to find (bottom of the page, under Save PDF) and when on it keeps the two 'easiest' dishes, which can be a snack and a drink with no main (Toy Story: potato bites and punch; Paddington: marmalade sandwiches and cocoa; Shaft: knishes and a whisky sour). Moana's lazy menu still has a 3 hr 20 min dessert. On Home Alone the button says 'Lazy night: on' but the prep sheet stays at all 5 dishes",
+    "where": "Lazy night button, prep sheet",
+    "severity": "major",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P40-04-lazy.png; P09 runs on Toy Story, Paddington, Moana, Home Alone"
+   },
+   {
+    "what": "Random spin gave Shaft with 'longest dish 14 hr, start the day before'. There is no time filter before spinning, so a zero-time parent can land on a two-day cook",
+    "where": "Prep sheet header after spin",
+    "severity": "major",
+    "evidence": "Shaft prep: 'HANDS-ON 1 HR 54 MIN, LONGEST DISH 14 HR, START THE DAY BEFORE'"
+   },
+   {
+    "what": "Copy text in lazy mode includes empty 'Main' and 'Something sweet' headings",
+    "where": "More, Copy text",
+    "severity": "minor",
+    "evidence": "clipboard dump in P40 run"
+   },
+   {
+    "what": "Lazy night, Save, Share all sit low on a long scroll; Share is hidden inside More",
+    "where": "Action buttons under the menu",
+    "severity": "minor",
+    "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P40-04-lazy.png"
+   }
+  ],
+  "wishes": [
+   "'I've got 20 minutes' filter before the spin",
+   "Buy-not-cook mode with a supermarket or takeaway main",
+   "Lazy night up near the spin button",
+   "Shorter films option for when the baby wakes"
+  ],
+  "loved": [
+   "Spin the wheel button sits right under my thumb",
+   "Streaming and rent options right on the film",
+   "Copy text is a neat message to send"
+  ],
+  "quote": "Spin button's perfect one-handed. Then it tells me to start cooking yesterday. Lazy night needs to mean actual dinner with zero effort, not a cocktail.",
+  "would_pay": "no"
+ }
+]

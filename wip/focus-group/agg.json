@@ -1,0 +1,3674 @@
+{
+ "n_personas": 41,
+ "weighted_total": 1000,
+ "overall": {
+  "first_impression": 8.0,
+  "clarity": 6.8,
+  "find_film": 7.1,
+  "menu_appeal": 7.3,
+  "recipe_usefulness": 5.7,
+  "diet_fit": 5.1,
+  "shopping_list": 6.7,
+  "video_store": 6.9,
+  "candy_bar": 6.6,
+  "speed": 6.8,
+  "accessibility": 6.4,
+  "trust_privacy": 7.2,
+  "delight": 7.6,
+  "would_use_again": 5.6
+ },
+ "nps": -65,
+ "completed_goal_pct": 58,
+ "segments": {
+  "Age": {
+   "18 to 29": {
+    "people": 223,
+    "nps": -41,
+    "use_again": 6.2,
+    "diet_fit": 5.4,
+    "clarity": 6.9,
+    "completed_pct": 74
+   },
+   "30 to 44": {
+    "people": 411,
+    "nps": -71,
+    "use_again": 5.2,
+    "diet_fit": 4.3,
+    "clarity": 6.9,
+    "completed_pct": 40
+   },
+   "45 to 64": {
+    "people": 280,
+    "nps": -78,
+    "use_again": 5.8,
+    "diet_fit": 5.8,
+    "clarity": 6.9,
+    "completed_pct": 65
+   },
+   "65 plus": {
+    "people": 86,
+    "nps": -60,
+    "use_again": 4.9,
+    "diet_fit": 5.3,
+    "clarity": 5.4,
+    "completed_pct": 73
+   }
+  },
+  "Diet": {
+   "Allergy or intolerance": {
+    "people": 103,
+    "nps": -100,
+    "use_again": 3.6,
+    "diet_fit": 2.6,
+    "clarity": 6.6,
+    "completed_pct": 0
+   },
+   "Faith-based (halal, kosher, no beef, Jain, fasting)": {
+    "people": 189,
+    "nps": -100,
+    "use_again": 4.6,
+    "diet_fit": 3.2,
+    "clarity": 7.0,
+    "completed_pct": 30
+   },
+   "No restrictions": {
+    "people": 629,
+    "nps": -54,
+    "use_again": 6.2,
+    "diet_fit": 6.1,
+    "clarity": 6.7,
+    "completed_pct": 77
+   },
+   "Vegetarian or vegan": {
+    "people": 80,
+    "nps": -29,
+    "use_again": 5.6,
+    "diet_fit": 5.2,
+    "clarity": 7.0,
+    "completed_pct": 43
+   }
+  },
+  "Tech": {
+   "High": {
+    "people": 503,
+    "nps": -57,
+    "use_again": 5.6,
+    "diet_fit": 4.9,
+    "clarity": 7.1,
+    "completed_pct": 52
+   },
+   "Low": {
+    "people": 211,
+    "nps": -84,
+    "use_again": 5.0,
+    "diet_fit": 5.4,
+    "clarity": 5.7,
+    "completed_pct": 81
+   },
+   "Medium": {
+    "people": 286,
+    "nps": -66,
+    "use_again": 5.9,
+    "diet_fit": 5.3,
+    "clarity": 6.9,
+    "completed_pct": 50
+   }
+  },
+  "Device": {
+   "Desktop": {
+    "people": 274,
+    "nps": -60,
+    "use_again": 5.7,
+    "diet_fit": 5.7,
+    "clarity": 7.0,
+    "completed_pct": 67
+   },
+   "Phone or tablet": {
+    "people": 726,
+    "nps": -67,
+    "use_again": 5.5,
+    "diet_fit": 4.9,
+    "clarity": 6.7,
+    "completed_pct": 54
+   }
+  }
+ },
+ "frictions": [
+  {
+   "id": "P01",
+   "W": 34,
+   "what": "Double feature ignores the Vegetarian setting. Main was 'Wolf pack lamb' and the combined list said 2kg lamb shoulder; another pairing gave Swedish Chef meatballs and steak frites",
+   "where": "Double feature dialog and its Shopping list",
+   "severity": "blocker",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P01-doubleshop.png"
+  },
+  {
+   "id": "P01",
+   "W": 34,
+   "what": "Menu card and printed menu still show meat with Vegetarian on. Lady and the Tramp printed menu: salami, beef and pork meatballs, chicken cacciatore. Ghostbusters 2016 canteen: pork wontons, sweet and sour pork. Only the prep sheet swaps. The kids read the menu, not the prep sheet",
+   "where": "Menu tab and See the printed menu",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P01-menu0.png"
+  },
+  {
+   "id": "P01",
+   "W": 34,
+   "what": "No egg-free option. Eggs in nearly every vegetarian menu: 10 eggs for devilled eggs and fried rice (Ghostbusters), egg binding the lentil meatballs (Lady and the Tramp, Ghostbusters), egg wash on Moana haloumi",
+   "where": "Settings, Dinner section",
+   "severity": "major",
+   "evidence": "Ghostbusters veg prep: '10 eggs', 'mix with the mushrooms, ricotta, egg'"
+  },
+  {
+   "id": "P01",
+   "W": 34,
+   "what": "'Vegetarian' menus still use regular parmesan (animal rennet) beside a separate 'vegetarian parmesan-style cheese' line in the same list. Garlic bread in Lady and the Tramp and Slimer's dip in Ghostbusters",
+   "where": "Prep sheet, Dairy",
+   "severity": "minor",
+   "evidence": "Lady and the Tramp veg list: '50g parmesan, grated' and '60g vegetarian parmesan-style cheese'"
+  },
+  {
+   "id": "P01",
+   "W": 34,
+   "what": "Candy bar is not filtered by Vegetarian: Cheerios (cocktail frankfurts), party pies and sausage rolls, battered hot dogs, chicken salt chips, rocky road with marshmallows all shown with no tag",
+   "where": "Candy bar",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P01-candy.png"
+  },
+  {
+   "id": "P01",
+   "W": 34,
+   "what": "Shopping list wording glitches: '2 cup ice', '1.18l vegetable stock', '2 small bunch parsleys', '8 Swiss brown mushrooms + 300g'",
+   "where": "Prep sheet shopping list",
+   "severity": "minor",
+   "evidence": "Moana and Ratatouille veg prep text"
+  },
+  {
+   "id": "P02",
+   "W": 34,
+   "what": "No halal or no-pork setting. Pork in 4 of 4 films checked: 14 rashers of bacon (Pulp Fiction), salami plus 700g pork and beef mince (Godfather), 440g pork mince and 42 pork dumplings (Ghostbusters). Only workaround is Vegetarian, which drops the meat a crowd of 7 wants",
+   "where": "Settings",
+   "severity": "blocker",
+   "evidence": "Ghostbusters prep at 7: '440g pork mince', '42 frozen pork dumplings'"
+  },
+  {
+   "id": "P02",
+   "W": 34,
+   "what": "No alcohol is ticked but the printed menu still lists Chianti, Anisette, Veal scaloppine with Marsala wine and 'red wine' in the copy",
+   "where": "See the printed menu, The Godfather",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P02-printed1.png"
+  },
+  {
+   "id": "P02",
+   "W": 34,
+   "what": "Regular marshmallows (pork gelatine) in Ghostbusters skewers and Home Alone, no halal or vegetarian marshmallow note unless Vegetarian is on",
+   "where": "Prep sheet",
+   "severity": "major",
+   "evidence": "'42 large marshmallows', '175g mini marshmallows'"
+  },
+  {
+   "id": "P02",
+   "W": 34,
+   "what": "Method text does not scale with guests. At 7 guests: 'Fill 4 glasses with ice', 'Fill four tall glasses', 'Form 12 meatballs'",
+   "where": "Prep sheet methods",
+   "severity": "minor",
+   "evidence": "Godfather blood orange soda and Pulp Fiction Vanilla Coke at 7 guests"
+  },
+  {
+   "id": "P02",
+   "W": 34,
+   "what": "Printed menu on a phone is too small to read without zooming",
+   "where": "See the printed menu",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P02-printed1.png"
+  },
+  {
+   "id": "P02",
+   "W": 34,
+   "what": "Candy bar pushes Cheerios, sausage rolls and hot dogs with no meat labels",
+   "where": "Candy bar",
+   "severity": "minor",
+   "evidence": "Candy bar text dump"
+  },
+  {
+   "id": "P03",
+   "W": 17,
+   "what": "No kosher option and no way to keep meat and dairy apart. When Harry Met Sally: chef salad with leg ham, turkey and swiss cheese, pastrami main then apple pie with ice cream. Casablanca: beef briouats brushed with melted butter, chicken tagine then cake with Greek yoghurt. Annie Hall: lobster, pastrami, then New York cheesecake",
+   "where": "Settings and prep sheets",
+   "severity": "blocker",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P030-prep.png"
+  },
+  {
+   "id": "P03",
+   "W": 17,
+   "what": "Shellfish with no warning: Jaws has fried calamari and lobster rolls, Annie Hall lobster bites",
+   "where": "Prep sheets",
+   "severity": "major",
+   "evidence": "Jaws list: '400g cooked lobster meat'"
+  },
+  {
+   "id": "P03",
+   "W": 17,
+   "what": "Fiddler on the Roof and other Jewish classics are not in the 850; search just says 'No film by that name'",
+   "where": "Find a film",
+   "severity": "minor",
+   "evidence": "Search result 'No film by that name. Try fewer letters.'"
+  },
+  {
+   "id": "P03",
+   "W": 17,
+   "what": "Choose dishes lets me drop dishes but offers no substitute, so I end up with no main",
+   "where": "Prep tab, Choose dishes",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P23-choose.png"
+  },
+  {
+   "id": "P04",
+   "W": 17,
+   "what": "Printed menu still shows ham sandwiches, beef Cornish pasties and roast beef with Yorkshire puddings for Mary Poppins and kung pao chicken for Kung Fu Panda, though the prep sheet is vegetarian. Gran reads the printed menu",
+   "where": "See the printed menu",
+   "severity": "major",
+   "evidence": "Mary Poppins printed menu text with Vegetarian on: 'Pastry rounds filled with beef, potato, swede and onion'"
+  },
+  {
+   "id": "P04",
+   "W": 17,
+   "what": "No Indian, Punjabi or Bollywood films in the catalogue at all (checked Lagaan, DDLJ, 3 Idiots, Dangal), so nothing gran would pick herself",
+   "where": "Find a film and Video store",
+   "severity": "major",
+   "evidence": "Searches for Indian titles return no film"
+  },
+  {
+   "id": "P04",
+   "W": 17,
+   "what": "Printed menu text is tiny on phone, hard for gran",
+   "where": "Printed menu",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P02-printed1.png"
+  },
+  {
+   "id": "P04",
+   "W": 17,
+   "what": "Some lists use cups and odd quantities: '4 cup ice', '2 cup finely shredded wombok', '2 1/3 tbsp cornflour', '160g + 1 tbsp caster sugar'",
+   "where": "Prep sheet shopping list",
+   "severity": "minor",
+   "evidence": "Kung Fu Panda and Mary Poppins veg prep"
+  },
+  {
+   "id": "P23",
+   "W": 23,
+   "what": "No 'no beef' setting. Rocky: cheesesteak bites (rib eye), meat locker steak (4 sirloins). Elf hot dog franks don't say what meat",
+   "where": "Settings",
+   "severity": "major",
+   "evidence": "Rocky prep: '400g rib eye steak', '4 sirloin steaks'"
+  },
+  {
+   "id": "P23",
+   "W": 23,
+   "what": "Vegetarian is all or nothing. A mixed household can't keep the meat main and add a veg main for one person; Choose dishes only lets you untick",
+   "where": "Prep tab, Choose dishes",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P23-choose.png"
+  },
+  {
+   "id": "P23",
+   "W": 23,
+   "what": "Double feature plan does not take diet into account and can't be edited",
+   "where": "Double feature",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P23-double.png"
+  },
+  {
+   "id": "P36",
+   "W": 17,
+   "what": "No vegan or fasting option. 0 of 3 vegetarian menus usable on a fast: Mamma Mia has 3 blocks of haloumi, 315g feta, 2 eggs, 125g butter; Frozen has cream, butter, feta, yoghurt, 3 eggs and 1.25l milk; Encanto has 625g feta, mozzarella and 8 eggs",
+   "where": "Settings, Dinner",
+   "severity": "blocker",
+   "evidence": "Mamma Mia, Frozen, Encanto veg prep at 5 guests"
+  },
+  {
+   "id": "P36",
+   "W": 17,
+   "what": "Odd scaled quantities at 5 guests: '2 1/2 tbsp + 190g honey', '5 cubes mozzarellas', '2 handful vegetarian mini marshmallows', '315g feta'",
+   "where": "Shopping list",
+   "severity": "minor",
+   "evidence": "Mamma Mia and Frozen shopping lists"
+  },
+  {
+   "id": "P36",
+   "W": 17,
+   "what": "No Greek films apart from Mamma Mia, which is set in Greece but American",
+   "where": "Catalogue",
+   "severity": "minor",
+   "evidence": "Search for My Big Fat Greek Wedding: not in catalogue"
+  },
+  {
+   "id": "P42",
+   "W": 6,
+   "what": "No Jain option or ingredient exclusion. 0 of 4 vegetarian menus usable: Toy Story potato bites, chives, eggs; Shrek layered onion rings, 5 onions, 5 garlic, 600g mushrooms, eggs, honey; Big Night 3 onions, 6 garlic, 800g mushrooms, 14 eggs; Aladdin garlic, garlic sauce, turmeric root, 200g honey",
+   "where": "Settings",
+   "severity": "blocker",
+   "evidence": "Vegetarian prep sheets for Toy Story, Shrek, Big Night, Aladdin"
+  },
+  {
+   "id": "P42",
+   "W": 6,
+   "what": "'Vegetarian' label is loose: standard parmesan (animal rennet) next to vegetarian parmesan in the same list",
+   "where": "Prep sheet",
+   "severity": "minor",
+   "evidence": "Lady and the Tramp and Ghostbusters vegetarian lists"
+  },
+  {
+   "id": "P42",
+   "W": 6,
+   "what": "Menu card and printed menu don't reflect the diet, so there's no single trustworthy view",
+   "where": "Menu tab",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P01-menu0.png"
+  },
+  {
+   "id": "P05",
+   "W": 29,
+   "what": "No idea what the night will cost. No price estimate, no budget filter, no cheap swaps. The default full menus lean premium (mussels, prawns, saffron, rum, a layer cake).",
+   "where": "Prep sheet and shopping list",
+   "severity": "major",
+   "evidence": "Under Siege for 4: 500g mussels, 300g prawns, saffron, 1l fish stock, 520g butter, dark and white rum. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P05-05-prep.png"
+  },
+  {
+   "id": "P05",
+   "W": 29,
+   "what": "The prices printed on the menus (6.30, 6.92, 4.50) look like real costs. I briefly thought the bouillabaisse was $6.30.",
+   "where": "Printed menu",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P05-03-menu.png"
+  },
+  {
+   "id": "P05",
+   "W": 29,
+   "what": "Lazy night is the cheap option but it is a small toggle tucked under the menu and not mentioned on the welcome card. Took a second spin before I found it.",
+   "where": "Menu action buttons",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P05-06-lazy.png"
+  },
+  {
+   "id": "P05",
+   "W": 29,
+   "what": "Candy bar adds snacks to 'tonight's film' even when I never picked one. It was the preloaded Ghostbusters menu sitting under the wheel.",
+   "where": "Candy bar",
+   "severity": "minor",
+   "evidence": "Added popcorn, chips and snakes before spinning; they went on Ghostbusters (1984). P05c run"
+  },
+  {
+   "id": "P05",
+   "W": 29,
+   "what": "Renting a tape does not make it tonight's film until you also hit Roll the film on the receipt. Easy to close the receipt and lose it.",
+   "where": "Video store rental receipt",
+   "severity": "minor",
+   "evidence": "After Rent it, current film stayed Ghostbusters (1984)"
+  },
+  {
+   "id": "P05",
+   "W": 29,
+   "what": "Share and Copy text are hidden behind a More dropdown. Copy text is actually the best thing for a share house (shopping list with [ ] boxes) and nobody will find it.",
+   "where": "Menu action buttons, More",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P05-07-more.png"
+  },
+  {
+   "id": "P13",
+   "W": 34,
+   "what": "No way to say 'microwave and kettle only' or 'no cook'. Lazy night still assumes a grill, stove or oven.",
+   "where": "Settings and Lazy night",
+   "severity": "major",
+   "evidence": "Cars lazy: 'Boil the corn cobs... char on a hot grill'. Goonies lazy: 'chill 1 hr... bake at 180C'. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P13-05-lazyprep.png"
+  },
+  {
+   "id": "P13",
+   "W": 34,
+   "what": "Method text does not scale with guests. Prep sheet says serves 10 but the float method says 'two scoops in each of four tall glasses'.",
+   "where": "Prep sheet, How to make it",
+   "severity": "major",
+   "evidence": "The Goonies, serves 10, root beer float method"
+  },
+  {
+   "id": "P13",
+   "W": 34,
+   "what": "Scaled shopping list reads badly: '3 pinch smoked paprikas', '10 x 375ml cans root beers'. Root beer is hard to find in Australia anyway.",
+   "where": "Shopping list",
+   "severity": "minor",
+   "evidence": "The Goonies at 10 guests"
+  },
+  {
+   "id": "P13",
+   "W": 34,
+   "what": "MAKE IT on candy bar items looks like a button but is just a label. The recipe only shows up later on the prep sheet.",
+   "where": "Candy bar",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P13-12-retro.png"
+  },
+  {
+   "id": "P13",
+   "W": 34,
+   "what": "On a phone you scroll past the whole cinema hero and Menu of the week before the snack counter starts.",
+   "where": "Candy bar",
+   "severity": "minor",
+   "evidence": "Snack counter starts about 1250px down. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P13-12-retro.png"
+  },
+  {
+   "id": "P24",
+   "W": 46,
+   "what": "Saved image is a near-square two-page spread (3430x3360) with tiny text. Not a 9:16 story or a TikTok frame, so I would have to crop it and lose half the menu.",
+   "where": "More, Save image",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P24-09-afterpng.png"
+  },
+  {
+   "id": "P24",
+   "W": 46,
+   "what": "Date night for two lands on lobster tails and bourbon Manhattans. No budget hint or swap, I work retail.",
+   "where": "Prep sheet and shopping list",
+   "severity": "major",
+   "evidence": "Some Like It Hot, serves 2: 2 lobster tails, 250g green prawns, 120ml bourbon"
+  },
+  {
+   "id": "P24",
+   "W": 46,
+   "what": "Share and Save image are buried under More. These should be the big buttons for people like me.",
+   "where": "Menu action buttons",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P05-07-more.png"
+  },
+  {
+   "id": "P24",
+   "W": 46,
+   "what": "Shared link opens on the generic welcome card, not 'Chloe sent you this menu'. Feels like spam to the person who opens it.",
+   "where": "Shared link",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P24-10-friend-opens-link.png"
+  },
+  {
+   "id": "P24",
+   "W": 46,
+   "what": "Rom-com spin gave a 1959 black and white film. Fine, but there is no 'newer only' or decade filter on the wheel (the Video store has one).",
+   "where": "Spin, Tonight's programme",
+   "severity": "minor",
+   "evidence": "Spun Some Like It Hot (1959)"
+  },
+  {
+   "id": "P24",
+   "W": 46,
+   "what": "Odd units for two: '1 cloves garlic', '3 cup ice', '1/2 tbsp milk', '6 candles'.",
+   "where": "Shopping list",
+   "severity": "minor",
+   "evidence": "Some Like It Hot at 2 guests"
+  },
+  {
+   "id": "P31",
+   "W": 11,
+   "what": "No halal or no-pork setting. Pork turns up with no flag: bacon, pancetta, prosciutto, pork mince, lap cheong.",
+   "where": "Settings, Dinner",
+   "severity": "major",
+   "evidence": "Home Alone 2 method: 'Grill the bacon until crisp'. Ghostbusters list: 250g pork mince, 2 lap cheong. Settings only has Vegetarian and No alcohol. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P05-04-settings.png"
+  },
+  {
+   "id": "P31",
+   "W": 11,
+   "what": "Double feature ignores my guest count and says serves 4.",
+   "where": "Double feature",
+   "severity": "minor",
+   "evidence": "Guests set to 5, dialog says 'One menu for both films, serves 4'. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P31-06-df4000.png"
+  },
+  {
+   "id": "P31",
+   "W": 11,
+   "what": "Alcohol-free lager and alcohol-free 'mulled wine' still read as beer and wine to a lot of Muslim families. A plain soft-drink swap option would be safer.",
+   "where": "No alcohol swaps",
+   "severity": "minor",
+   "evidence": "Fargo: 'cold alcohol-free lager'; Night Before: 'mulled wine (alcohol-free)'"
+  },
+  {
+   "id": "P31",
+   "W": 11,
+   "what": "Meat shows no note to buy halal, even for steak and mince.",
+   "where": "Shopping list",
+   "severity": "minor",
+   "evidence": "Fargo list: 1.5kg chicken wings, 625g beef mince"
+  },
+  {
+   "id": "P31",
+   "W": 11,
+   "what": "No cost guide for a student budget.",
+   "where": "Shopping list",
+   "severity": "major",
+   "evidence": "No price or cost anywhere in the app"
+  },
+  {
+   "id": "P41",
+   "W": 11,
+   "what": "Candy bar lollies (jelly babies, snakes, marshmallows in rocky road, pick and mix) usually have pork gelatine. No flag, no halal swap.",
+   "where": "Candy bar, Lollies",
+   "severity": "major",
+   "evidence": "Added to list: 190g marshmallows, 2 bags jelly babies, 625g mixed lollies. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P41-12-lollies.png"
+  },
+  {
+   "id": "P41",
+   "W": 11,
+   "what": "With No alcohol on, the printed menu card still advertises 'Sparkling ros\u00e9 with grapefruit juice'. Only the prep sheet shows the swap. Mixed message when I show the girls.",
+   "where": "Printed menu",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P41-03-menu.png"
+  },
+  {
+   "id": "P41",
+   "W": 11,
+   "what": "Shopping list wording is broken when scaled to 5: '3 small bunch thymes', '5 small sprigs rosemaries', '2 tube red food colouring pastes', '6 1/4 tbsp olive oil', '2/3 tsp chilli flakes'.",
+   "where": "Shopping list",
+   "severity": "major",
+   "evidence": "Valentine's Day at 5 guests"
+  },
+  {
+   "id": "P41",
+   "W": 11,
+   "what": "Girls' night isn't a theme; Rom-Com Date Night is pitched at couples.",
+   "where": "Tonight's programme",
+   "severity": "minor",
+   "evidence": "Theme list has Rom-Com Date Night only"
+  },
+  {
+   "id": "P37",
+   "W": 23,
+   "what": "The spin is a show every time: about 11 to 13s on phone, unless you happen to find Tap to skip or Escape. No setting for instant results, no Space to spin.",
+   "where": "Spin",
+   "severity": "major",
+   "evidence": "Phone spins 11.0 to 13.6s; desktop with Escape 6.3s; load to menu 13.9s"
+  },
+  {
+   "id": "P37",
+   "W": 23,
+   "what": "Gamer catalogue gaps: no Super Mario Bros. Movie, Sonic, Detective Pikachu, Scott Pilgrim, Ready Player One, Free Guy, original Tron or Matrix sequels.",
+   "where": "Find a film, Video store",
+   "severity": "major",
+   "evidence": "Search results empty for Mario, Sonic, Pokemon, Pikachu, Scott Pilgrim, Ready Player, Free Guy. Source has only 'The Matrix' and 'Tron: Legacy'"
+  },
+  {
+   "id": "P37",
+   "W": 23,
+   "what": "On desktop the first screen is all marquee art. No Spin button above the fold.",
+   "where": "Home, desktop",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P37-01b-home.png"
+  },
+  {
+   "id": "P37",
+   "W": 23,
+   "what": "Search results not in series order (Return of the King listed before The Two Towers).",
+   "where": "Find a film",
+   "severity": "minor",
+   "evidence": "Search 'Lord of the Rings'"
+  },
+  {
+   "id": "P37",
+   "W": 23,
+   "what": "Printed menus are tiny on desktop; the prices jump between 0.59 and 24.00 with no meaning.",
+   "where": "Printed menu",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P37-03-menu.png"
+  },
+  {
+   "id": "P18",
+   "W": 17,
+   "what": "Dish cards use Cormorant Garamond with old-style numbers and small caps. '40g' reads as '4og' and '10 minutes' as '1o minutes'. Hard going for a dyslexic reader. Some titles use a script font.",
+   "where": "Menu dish card",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P18-04-dish.png"
+  },
+  {
+   "id": "P18",
+   "W": 17,
+   "what": "Dish card quantities are fixed at serves four while the prep sheet is set to 6. Two different sets of numbers for the same dish.",
+   "where": "Menu dish card vs Prep sheet",
+   "severity": "major",
+   "evidence": "Card: '2 sliced leeks, 40g butter, 1L stock'. Prep at 6: '1.77l chicken stock'"
+  },
+  {
+   "id": "P18",
+   "W": 17,
+   "what": "Methods on the prep sheet are one long paragraph with timings in brackets. Numbered steps on separate lines would be much easier to follow at the bench.",
+   "where": "Prep sheet, How to make it",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P18-05-method.png"
+  },
+  {
+   "id": "P18",
+   "W": 17,
+   "what": "PDF menu page still lists 'Bordeaux, 1947, ask the sommelier' while the drink on the prep sheet is a grape spritz.",
+   "where": "Save PDF",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P18-08-pdf-both.png"
+  },
+  {
+   "id": "P18",
+   "W": 17,
+   "what": "Hands-on time is the sum of every dish (4 hr 40). No run sheet telling me what to start first so it all lands together.",
+   "where": "Prep sheet header",
+   "severity": "minor",
+   "evidence": "SERVES 6 / 6 DISHES / HANDS-ON 4 HR 40 MIN, LONGEST DISH 3 HR 40 MIN"
+  },
+  {
+   "id": "P07",
+   "W": 23,
+   "what": "Phone Back button leaves the app completely. Video store, Candy bar and Spin are tabs inside one page with no history, so Back from the Video store goes to whatever site was open before (about:blank in testing), not back to the menu",
+   "where": "whole app, browser Back",
+   "severity": "major",
+   "evidence": "rose.py: history.length stayed 2 after opening Video store; go_back landed on about:blank. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P07-06-afterback.png"
+  },
+  {
+   "id": "P07",
+   "W": 23,
+   "what": "The printed menu card shrinks its dish names to about 4 to 6.5px effective size on a 390px phone (Casablanca 3.9px min, Mary Poppins 3.5px min, Dumb and Dumber 4.1px min). Tapping the card does nothing, no zoom or full screen view",
+   "where": "Menu tab, printed menu formats (.mcard fmt-lib)",
+   "severity": "major",
+   "evidence": "measured via text range rects; /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P07-08-tapmenu.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-05-menu-slow.png"
+  },
+  {
+   "id": "P07",
+   "W": 23,
+   "what": "Kids mode on still spun Dumb and Dumber (rated PG in the app data) with an 'Extra hot chilli burger'. Rating is defensible but a gran would not call it a kids film",
+   "where": "Kids mode spin",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P07-03-afterspin.png"
+  },
+  {
+   "id": "P07",
+   "W": 23,
+   "what": "Video store has seasonal shelves, Family aisle and PG badges which suit grandkids well, but the 'Family' filter chip and a separate kids checkbox under Filters overlap with Kids mode in Settings; three places for one idea",
+   "where": "Video store",
+   "severity": "minor",
+   "evidence": "rose.py visible controls; /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P07-04-store.png"
+  },
+  {
+   "id": "P07",
+   "W": 23,
+   "what": "On a first visit the Candy bar says Add puts snacks on 'tonight's film, Ghostbusters', a film the user never picked",
+   "where": "Candy bar",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P10-03-candy-pick.png"
+  },
+  {
+   "id": "P07",
+   "W": 23,
+   "what": "Mains often need skills or gear older plain cooks lack: 'pull at 54C' steak needs a thermometer, deep frying at 180C, piping devilled eggs. No soft food or easy option",
+   "where": "recipes",
+   "severity": "minor",
+   "evidence": "P20-prep.txt, Breakfast at Tiffany's prep"
+  },
+  {
+   "id": "P10",
+   "W": 51,
+   "what": "'Lazy night: off/on' toggles with no explanation and nothing obvious changes on screen",
+   "where": "menu actions",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P10-05-lazy.png"
+  },
+  {
+   "id": "P10",
+   "W": 51,
+   "what": "Lots of idioms and in-jokes in buttons and headings: 'Lock it in', 'Lazy night', 'Ticket stubs', 'Showtime cue', 'Ask the counter', 'Spin this aisle', 'Popping the corn', course names like 'Containment' and 'Sweet & cold', 'Main slaughter'. Aussie food words too: copha, hundreds and thousands, esky, arvo. Hard going with second language English",
+   "where": "labels across app",
+   "severity": "major",
+   "evidence": "dump of visible text in d1.py, baz.py, rose.py"
+  },
+  {
+   "id": "P10",
+   "W": 51,
+   "what": "The floating 'Spin the wheel' bar sits over the bottom of the menu and recipe text on small screens, and it is the easiest thing to hit by mistake, which throws away the film you were reading",
+   "where": "sticky bottom bar",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P17-06-recipe.png"
+  },
+  {
+   "id": "P10",
+   "W": 51,
+   "what": "On a first visit the Candy bar says Add puts snacks on 'tonight's film, Ghostbusters', a film the user never picked",
+   "where": "Candy bar",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P10-03-candy-pick.png"
+  },
+  {
+   "id": "P10",
+   "W": 51,
+   "what": "Menus lean fancy and American for a meat and veg bloke: shrimp cocktail, chipotle crema, blue cheese wedge, michelada. 'Dad's chops and veg' on Kenny is the exception and it is the dish he wanted",
+   "where": "menus",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-04-afterspin.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-05-menu-slow.png"
+  },
+  {
+   "id": "P10",
+   "W": 51,
+   "what": "Phone Back button leaves the app completely. Video store, Candy bar and Spin are tabs inside one page with no history, so Back from the Video store goes to whatever site was open before (about:blank in testing), not back to the menu",
+   "where": "whole app, browser Back",
+   "severity": "major",
+   "evidence": "rose.py: history.length stayed 2 after opening Video store; go_back landed on about:blank. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P07-06-afterback.png"
+  },
+  {
+   "id": "P14",
+   "W": 29,
+   "what": "Film search is exact substring only. 'breakfast at tiffanys' and 'singing in the rain' return 'No film by that name' although Breakfast at Tiffany's and Singin' in the Rain are in the list. Apostrophes and small typos kill it",
+   "where": "Find a film box",
+   "severity": "major",
+   "evidence": "d3.py and bev.py search results"
+  },
+  {
+   "id": "P14",
+   "W": 29,
+   "what": "Picking a film from Find a film jumps the page back to the very top (scrollY 0). On a zoomed screen the marquee fills the view and the menu is off screen, so it looks like nothing happened",
+   "where": "Find a film, after choosing a match",
+   "severity": "major",
+   "evidence": "doug.py: search at y 1023, after pick y 0, menu at 766 on a 600px tall view. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P14-04-menu.png"
+  },
+  {
+   "id": "P14",
+   "W": 29,
+   "what": "Using the browser's own Print (what an older user would do) gives one dark blank page. Only the 'Save PDF (menu + prep)' button makes something printable, and it is called Save PDF, not Print",
+   "where": "Print",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P32-print-p-1.png"
+  },
+  {
+   "id": "P14",
+   "W": 29,
+   "what": "Prep sheet serif font uses old style numerals so '1 hr 10 min' and '1kg' read like '\u0131 hr \u0131o min' and '\u0131kg'; '2l vegetable oil' reads as '21'",
+   "where": "Prep sheet and shopping list",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P14-07-method.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P32-04-afterpdf.png"
+  },
+  {
+   "id": "P14",
+   "W": 29,
+   "what": "All type is set in fixed px (about 25 rules at 13px, 9 at 12px, labels at 11.5px, 'NOW SHOWING' at 8.6px), so phone and tablet 'larger text' settings do nothing. Pinch zoom is allowed, which helps",
+   "where": "whole app",
+   "severity": "minor",
+   "evidence": "index.html font-size rules; pat.py tiny text list"
+  },
+  {
+   "id": "P14",
+   "W": 29,
+   "what": "Mains often need skills or gear older plain cooks lack: 'pull at 54C' steak needs a thermometer, deep frying at 180C, piping devilled eggs. No soft food or easy option",
+   "where": "recipes",
+   "severity": "minor",
+   "evidence": "P20-prep.txt, Breakfast at Tiffany's prep"
+  },
+  {
+   "id": "P14",
+   "W": 29,
+   "what": "Some old favourites are missing (The Sound of Music); the list leans 1980s onward",
+   "where": "film list",
+   "severity": "minor",
+   "evidence": "d3.py: no match; confirmed absent in films.js"
+  },
+  {
+   "id": "P17",
+   "W": 23,
+   "what": "The printed menu card shrinks its dish names to about 4 to 6.5px effective size on a 390px phone (Casablanca 3.9px min, Mary Poppins 3.5px min, Dumb and Dumber 4.1px min). Tapping the card does nothing, no zoom or full screen view",
+   "where": "Menu tab, printed menu formats (.mcard fmt-lib)",
+   "severity": "major",
+   "evidence": "measured via text range rects; /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P07-08-tapmenu.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-05-menu-slow.png"
+  },
+  {
+   "id": "P17",
+   "W": 23,
+   "what": "No diabetic or low sugar option and no sugar info on dishes; desserts and drinks lean sweet (sugar syrups, sugar cubes, jam)",
+   "where": "Settings, recipes",
+   "severity": "minor",
+   "evidence": "P20-prep.txt and Breakfast at Tiffany's prep"
+  },
+  {
+   "id": "P17",
+   "W": 23,
+   "what": "All type is set in fixed px (about 25 rules at 13px, 9 at 12px, labels at 11.5px, 'NOW SHOWING' at 8.6px), so phone and tablet 'larger text' settings do nothing. Pinch zoom is allowed, which helps",
+   "where": "whole app",
+   "severity": "minor",
+   "evidence": "index.html font-size rules; pat.py tiny text list"
+  },
+  {
+   "id": "P17",
+   "W": 23,
+   "what": "At 320px wide the line 'Serves four. Tap a dish for the method' is cut off at the right edge",
+   "where": "Menu header, 320px phone",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P17-06-recipe.png"
+  },
+  {
+   "id": "P17",
+   "W": 23,
+   "what": "The floating 'Spin the wheel' bar sits over the bottom of the menu and recipe text on small screens, and it is the easiest thing to hit by mistake, which throws away the film you were reading",
+   "where": "sticky bottom bar",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P17-06-recipe.png"
+  },
+  {
+   "id": "P17",
+   "W": 23,
+   "what": "Gold and dim text on dark brown (subtitles like 'Make it', 'Buy it', checklist counts) is low contrast for low vision",
+   "where": "home and Goes well with strip",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-05-menu-slow.png"
+  },
+  {
+   "id": "P17",
+   "W": 23,
+   "what": "Tapping a dish flips the card to a single paragraph method with no amounts (amounts only live on the Prep tab). For a nervous cook it is hard to follow and you have to jump between tabs",
+   "where": "dish card 'How to make it'",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P17-06-recipe.png"
+  },
+  {
+   "id": "P32",
+   "W": 34,
+   "what": "Film search is exact substring only. 'breakfast at tiffanys' and 'singing in the rain' return 'No film by that name' although Breakfast at Tiffany's and Singin' in the Rain are in the list. Apostrophes and small typos kill it",
+   "where": "Find a film box",
+   "severity": "major",
+   "evidence": "d3.py and bev.py search results"
+  },
+  {
+   "id": "P32",
+   "W": 34,
+   "what": "Using the browser's own Print (what an older user would do) gives one dark blank page. Only the 'Save PDF (menu + prep)' button makes something printable, and it is called Save PDF, not Print",
+   "where": "Print",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P32-print-p-1.png"
+  },
+  {
+   "id": "P32",
+   "W": 34,
+   "what": "The Save PDF file looks great but is not A4 as promised ('Building your A4 PDF...'); pages are 450x675pt, so it prints small with big margins. Prep page text is small for older eyes, and the menu page clips a line under the title ('to an evening of dinner and a film at' is cut)",
+   "where": "Save PDF output",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P32-savepdf-all.png"
+  },
+  {
+   "id": "P32",
+   "W": 34,
+   "what": "Scaling to 8 gives odd amounts like '14 tbsp apricot jam' and '2l vegetable oil' instead of a jar or a bottle",
+   "where": "shopping list at 8 guests",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P32-04-afterpdf.png"
+  },
+  {
+   "id": "P32",
+   "W": 34,
+   "what": "Prep sheet serif font uses old style numerals so '1 hr 10 min' and '1kg' read like '\u0131 hr \u0131o min' and '\u0131kg'; '2l vegetable oil' reads as '21'",
+   "where": "Prep sheet and shopping list",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P14-07-method.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P32-04-afterpdf.png"
+  },
+  {
+   "id": "P20",
+   "W": 17,
+   "what": "Settings only has Vegetarian and No alcohol. No halal or no pork option, so pork dumplings (King of New York), ham sandwiches (Mary Poppins) and similar turn up with no warning",
+   "where": "Settings, Dinner",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P20-01-settings.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-04-afterspin.png"
+  },
+  {
+   "id": "P20",
+   "W": 17,
+   "what": "With No alcohol ticked, the printed menu still lists the boozy drink and batter: 'Ordell's blood orange screwdriver: Vodka, blood orange' and 'Lager battered fish' on Jackie Brown, 'Knock-off lager michelada' on Kenny. The prep sheet does swap them to alcohol-free, but the menu you look at first does not",
+   "where": "Menu tab, printed menu art",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P20-04-menu.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-05-menu-slow.png; prep text shows 'alcohol-free lager' and '(alcohol-free)' screwdriver"
+  },
+  {
+   "id": "P20",
+   "W": 17,
+   "what": "Lots of idioms and in-jokes in buttons and headings: 'Lock it in', 'Lazy night', 'Ticket stubs', 'Showtime cue', 'Ask the counter', 'Spin this aisle', 'Popping the corn', course names like 'Containment' and 'Sweet & cold', 'Main slaughter'. Aussie food words too: copha, hundreds and thousands, esky, arvo. Hard going with second language English",
+   "where": "labels across app",
+   "severity": "major",
+   "evidence": "dump of visible text in d1.py, baz.py, rose.py"
+  },
+  {
+   "id": "P20",
+   "W": 17,
+   "what": "Tapping a dish flips the card to a single paragraph method with no amounts (amounts only live on the Prep tab). For a nervous cook it is hard to follow and you have to jump between tabs",
+   "where": "dish card 'How to make it'",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P17-06-recipe.png"
+  },
+  {
+   "id": "P20",
+   "W": 17,
+   "what": "The printed menu card shrinks its dish names to about 4 to 6.5px effective size on a 390px phone (Casablanca 3.9px min, Mary Poppins 3.5px min, Dumb and Dumber 4.1px min). Tapping the card does nothing, no zoom or full screen view",
+   "where": "Menu tab, printed menu formats (.mcard fmt-lib)",
+   "severity": "major",
+   "evidence": "measured via text range rects; /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P07-08-tapmenu.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-05-menu-slow.png"
+  },
+  {
+   "id": "P20",
+   "W": 17,
+   "what": "Gelatine in lollies and marshmallows (Candy bar, Ghostbusters marshmallow skewers) has no halal note",
+   "where": "Candy bar and desserts",
+   "severity": "minor",
+   "evidence": "Ghostbusters menu text in d1.py"
+  },
+  {
+   "id": "P34",
+   "W": 17,
+   "what": "On slow 3G with a 4x slower CPU: first picture at 5.6 to 7.7s, welcome card at about 25 to 33s, page fully loaded at 37s, 1.4 to 1.5MB on first load (providers.js 338KB, app.js 231KB, index.html 169KB, films.js 115KB, hero images about 300KB). A spin then takes about 38s to show the menu and pulls another 1.4MB. Save PDF makes a 2.4MB file",
+   "where": "first load and spin",
+   "severity": "major",
+   "evidence": "slow.py and slow2.py, more.py; /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-01-firstpaint.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-02-welcome.png"
+  },
+  {
+   "id": "P34",
+   "W": 17,
+   "what": "No service worker took control on the repeat visit, so a reload still re-downloaded 0.36MB on slow data",
+   "where": "repeat visit",
+   "severity": "minor",
+   "evidence": "slow2.py: navigator.serviceWorker.controller was null after reload"
+  },
+  {
+   "id": "P34",
+   "W": 17,
+   "what": "Settings only has Vegetarian and No alcohol. No halal or no pork option, so pork dumplings (King of New York), ham sandwiches (Mary Poppins) and similar turn up with no warning",
+   "where": "Settings, Dinner",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P20-01-settings.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-04-afterspin.png"
+  },
+  {
+   "id": "P34",
+   "W": 17,
+   "what": "With No alcohol ticked, the printed menu still lists the boozy drink and batter: 'Ordell's blood orange screwdriver: Vodka, blood orange' and 'Lager battered fish' on Jackie Brown, 'Knock-off lager michelada' on Kenny. The prep sheet does swap them to alcohol-free, but the menu you look at first does not",
+   "where": "Menu tab, printed menu art",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P20-04-menu.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P34-05-menu-slow.png; prep text shows 'alcohol-free lager' and '(alcohol-free)' screwdriver"
+  },
+  {
+   "id": "P34",
+   "W": 17,
+   "what": "Video store renders over 1000 tape elements and loads posters as you scroll, heavy on an old phone",
+   "where": "Video store",
+   "severity": "minor",
+   "evidence": "rose.py: 1008 tape elements; slow2.py 0.27MB on open"
+  },
+  {
+   "id": "P34",
+   "W": 17,
+   "what": "Phone Back button leaves the app completely. Video store, Candy bar and Spin are tabs inside one page with no history, so Back from the Video store goes to whatever site was open before (about:blank in testing), not back to the menu",
+   "where": "whole app, browser Back",
+   "severity": "major",
+   "evidence": "rose.py: history.length stayed 2 after opening Video store; go_back landed on about:blank. /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P07-06-afterback.png"
+  },
+  {
+   "id": "P16",
+   "W": 11,
+   "what": "Spinning by keyboard gives no announcement of the film picked. The status live region stays empty and focus falls to the body, so VoiceOver says nothing",
+   "where": "Spin button, main view",
+   "severity": "major",
+   "evidence": "a2.py: after Enter on #spin, #status empty at 0.5, 1.5, 3 and 6 s, activeElement BODY, page scrolled to y=-1569 (film was Hairspray). Shot P16-03-after-spin.png"
+  },
+  {
+   "id": "P16",
+   "W": 11,
+   "what": "Closing the welcome dialog sends focus to the body instead of the main content or the Spin button",
+   "where": "Welcome card",
+   "severity": "minor",
+   "evidence": "a1.py: after Enter on Let's go, activeElement BODY"
+  },
+  {
+   "id": "P16",
+   "W": 11,
+   "what": "Most printed menu styles come through as one long run of text with no headings or list structure, so you can't jump between starters, mains and dessert",
+   "where": "Menu tab (#easel)",
+   "severity": "major",
+   "evidence": "aria_snapshot for The Hobbit: one text node with the whole menu, from 'Recipe box no. 13' to 'Photos: TMDB'"
+  },
+  {
+   "id": "P16",
+   "W": 11,
+   "what": "Saved PDF is pictures only, no text layer, so a screen reader can't read it at all",
+   "where": "Save PDF (menu + prep)",
+   "severity": "major",
+   "evidence": "pdftotext on jaws-1975-menu.pdf returns nothing; 3 pages, jsPDF, untagged, 3.2 MB"
+  },
+  {
+   "id": "P16",
+   "W": 11,
+   "what": "The curtain loading screen has a 'Tap to skip' that is aria-hidden and can't be clicked, and you wait 3 to 9 seconds with no spoken progress",
+   "where": "Menu and Prep panels after picking a film",
+   "severity": "minor",
+   "evidence": "Playwright: 'Tap to skip' div aria-hidden, the #easel overlay intercepts pointer events"
+  },
+  {
+   "id": "P16",
+   "W": 11,
+   "what": "Video store tapes read the rating before the title ('Rated PG The Addams Family 1991')",
+   "where": "Video store shelf",
+   "severity": "minor",
+   "evidence": "aria_snapshot of button.tape"
+  },
+  {
+   "id": "P16",
+   "W": 11,
+   "what": "The page heading reads as single letters M O V I E N I G H T if aria-label is ignored (innerText is letters split by line breaks)",
+   "where": "h1",
+   "severity": "minor",
+   "evidence": "headings dump: 'H1:M\\nO\\nV\\nI...' (aria-label 'Movie Night' is present, which saves it on VoiceOver)"
+  },
+  {
+   "id": "P33",
+   "W": 17,
+   "what": "On desktop the theatre hero fills the whole first screen. Clicking Video store or Candy bar only changes the tab highlight, nothing else visible moves, so it feels broken until you scroll",
+   "where": "Top nav tabs, desktop",
+   "severity": "major",
+   "evidence": "P35-02-videostore.png and P35-03-candybar.png look the same as the home shot apart from the tab highlight"
+  },
+  {
+   "id": "P33",
+   "W": 17,
+   "what": "Before you pick anything, the app is already on a hidden Ghostbusters: Ghostbusters posters on the marquee, a Part 1 of 4 in Ghostbusters bar, a Goes well with strip and Save PDF under a closed curtain",
+   "where": "Home, before first spin",
+   "severity": "major",
+   "evidence": "P33-02-homefull.png"
+  },
+  {
+   "id": "P33",
+   "W": 17,
+   "what": "Six typefaces (Oswald, Jost, Limelight, IBM Plex Sans Condensed, Aldrich, Cedarville Cursive) plus menu fonts, and three separate visual worlds (deco cinema, 90s video store, candy counter). Each is lovely on its own but the switch is jarring",
+   "where": "Across sections",
+   "severity": "minor",
+   "evidence": "font audit in d1.py; P35-09-phone-candy.png vs P33-03-afterspin.png vs P35-11-phone-tape.png"
+  },
+  {
+   "id": "P33",
+   "W": 17,
+   "what": "Button styles are mixed in one row: notched ticket buttons, gold pills and plain outline pills (More snacks, Plan a marathon) side by side",
+   "where": "Action row under the menu",
+   "severity": "minor",
+   "evidence": "P33-03-afterspin.png"
+  },
+  {
+   "id": "P33",
+   "W": 17,
+   "what": "The curtain plays 'Warming the plates' / 'Chilling the glasses' every time, 3 s on a fast machine and longer on phone, even with reduced motion on",
+   "where": "Menu reveal",
+   "severity": "minor",
+   "evidence": "s3.py: 3.0 s to the menu; mobile with reduced_motion still curtained at 9 s (P16-04-mobile-menu.png)"
+  },
+  {
+   "id": "P33",
+   "W": 17,
+   "what": "The sticky Spin the wheel bar on phone covers content, for example the Start with button in the series bar",
+   "where": "Phone, bottom of screen",
+   "severity": "minor",
+   "evidence": "P16-04-mobile-menu.png"
+  },
+  {
+   "id": "P33",
+   "W": 17,
+   "what": "Menu of the week (Lady and the Tramp) sits above the wheel and competes with the main job of the page",
+   "where": "Home",
+   "severity": "minor",
+   "evidence": "P33-02-homefull.png"
+  },
+  {
+   "id": "P35",
+   "W": 29,
+   "what": "Candy bar adds snacks to a film you never picked. On a fresh visit it says 'they go on tonight's film, Ghostbusters' and the toast says '1 snack on Ghostbusters'",
+   "where": "Candy bar, first visit",
+   "severity": "major",
+   "evidence": "P35-10-phone-candy-added.png"
+  },
+  {
+   "id": "P35",
+   "W": 29,
+   "what": "Double feature ignores the film you are looking at. With Jaws open it spun X-Men: First Class plus Black Widow",
+   "where": "Double feature button",
+   "severity": "minor",
+   "evidence": "k3.py output"
+  },
+  {
+   "id": "P35",
+   "W": 29,
+   "what": "Save PDF takes about 12 s with nothing clear on screen, comes out 3.2 MB, image only, and on 7x11 inch pages instead of A4",
+   "where": "Save PDF (menu + prep)",
+   "severity": "minor",
+   "evidence": "jaws-1975-menu.pdf: 504x792 pt, 3 pages, no text layer"
+  },
+  {
+   "id": "P35",
+   "W": 29,
+   "what": "No About, contact, privacy or terms page. The only data note is one line in Settings",
+   "where": "Whole app",
+   "severity": "major",
+   "evidence": "P38-01-settings.png; footer only has TMDB/JustWatch credits and How it works (which just re-opens the welcome card)"
+  },
+  {
+   "id": "P35",
+   "W": 29,
+   "what": "Hard to explain in one breath: Spin, Menu of the week, Lock it in, Lock in for this week, Save this menu, ticket stubs, checklist and member card overlap",
+   "where": "Home",
+   "severity": "minor",
+   "evidence": "Two lock buttons (motwLock 'Lock it in' and weekSet 'Lock in for this week') on screen together"
+  },
+  {
+   "id": "P35",
+   "W": 29,
+   "what": "Shopping list can't go anywhere useful: no export to phone reminders, no grocery store, no price estimate",
+   "where": "Prep sheet",
+   "severity": "minor",
+   "evidence": "More menu only has share link, copy, print"
+  },
+  {
+   "id": "P38",
+   "W": 23,
+   "what": "'Put my card online' uploads your card, ticks and rentals with only a 6 digit member number and a 4 digit PIN. Nothing says where it goes, what's included, how long it's kept or how to delete the online copy",
+   "where": "Video store, member card",
+   "severity": "major",
+   "evidence": "P38-03-card-online.png, P38-04-card-other.png; source shows a Supabase function endpoint (mns-sync)"
+  },
+  {
+   "id": "P38",
+   "W": 23,
+   "what": "A 4 digit PIN plus a short member number is easy to guess if there's no rate limiting",
+   "where": "Card sync",
+   "severity": "major",
+   "evidence": "PIN field asks for 4 digits; member number shown as No. 527 907"
+  },
+  {
+   "id": "P38",
+   "W": 23,
+   "what": "The only privacy statement is one line at the bottom of Settings",
+   "where": "Settings",
+   "severity": "minor",
+   "evidence": "'Saved on this device. Reset clears stubs, saved menus, watched films, this week's film, rentals and settings.'"
+  },
+  {
+   "id": "P38",
+   "W": 23,
+   "what": "Page loads fonts from Google and posters from TMDB on every visit, and trailers from YouTube; this isn't mentioned",
+   "where": "Network",
+   "severity": "minor",
+   "evidence": "pr.py hosts: fonts.googleapis.com, fonts.gstatic.com, image.tmdb.org; youtube-nocookie embed in source"
+  },
+  {
+   "id": "P38",
+   "W": 23,
+   "what": "Member card is created on first visit (number and 'member since' date) without asking",
+   "where": "Local storage",
+   "severity": "minor",
+   "evidence": "mns-member={no:337262, since:..., name:'', rentals:0} after one spin"
+  },
+  {
+   "id": "P29",
+   "W": 23,
+   "what": "Series counts only include films in the library but read as the full run: 'Part 1 of 2 in Alien' (there are 7 with Prometheus, Covenant and Romulus, 4 core), 'Part 2 of 2 in Jaws' (4), Terminator 2 of 6, Die Hard 3 of 5, Shrek 2 of 5, Ocean's without Thirteen",
+   "where": "Series bar and marathon",
+   "severity": "major",
+   "evidence": "s8.py output and window.SERIES dump"
+  },
+  {
+   "id": "P29",
+   "W": 23,
+   "what": "Gaps in the middle of a run: Rocky and Creed goes Rocky IV straight to Creed, skipping Rocky V and Rocky Balboa; Jurassic Park skips The Lost World (1997); The Conjuring 'series' is The Conjuring plus Annabelle with no Conjuring 2",
+   "where": "Marathons",
+   "severity": "major",
+   "evidence": "P29-marathon-0.png (Rocky and Creed marathon)"
+  },
+  {
+   "id": "P29",
+   "W": 23,
+   "what": "'James Bond' series is just Goldfinger, GoldenEye, Casino Royale and Skyfall, so GoldenEye shows as part 2 of 4",
+   "where": "Series bar",
+   "severity": "minor",
+   "evidence": "window.SERIES dump"
+  },
+  {
+   "id": "P29",
+   "W": 23,
+   "what": "Marathon plan has no total running time, start time or break plan, and repeats a drink (Training shake for Rocky and Rocky II) and two cheesesteak dishes",
+   "where": "Plan a marathon",
+   "severity": "minor",
+   "evidence": "P29-marathon-0.png"
+  },
+  {
+   "id": "P29",
+   "W": 23,
+   "what": "Quotes on menus are made up but signed by characters, e.g. 'Keep the chum bucket out of the kitchen, and somebody find me a bigger boat' signed Martin Brody, and an invented Gabe Wilson line for Us",
+   "where": "Printed menus",
+   "severity": "minor",
+   "evidence": "P35-07-pdf-2.png; s3.py Us menu text"
+  },
+  {
+   "id": "P29",
+   "W": 23,
+   "what": "No Mission: Impossible, Halloween sequels or Scream series at all",
+   "where": "Library",
+   "severity": "minor",
+   "evidence": "s8.py: NO SERIES for those"
+  },
+  {
+   "id": "P25",
+   "W": 23,
+   "what": "No ingredient list per dish. Quantities only live in the combined shopping list, and steps say 'the butter', 'some of the cream', 'a share of the pecorino'. You can't cook one dish without hunting",
+   "where": "Prep sheet, How to make it",
+   "severity": "major",
+   "evidence": "Jaws, Godfather, Castle prep text (s6.py, s7.py); P35-07-pdf-3.png"
+  },
+  {
+   "id": "P25",
+   "W": 23,
+   "what": "Hidden sub-recipes: Godfather arancini lists '400g cold cooked risotto, thick' as a pantry buy; Jaws sundae pours 'the fudge' that is never made as a step",
+   "where": "Golden arancini, Bigger boat sundae",
+   "severity": "major",
+   "evidence": "s7.py Godfather; s6.py Jaws"
+  },
+  {
+   "id": "P25",
+   "W": 23,
+   "what": "Times are counted wrong: Ratatouille says hands-on 4 hr 40 because a 2 hr soak and 1 hr press count as hands-on; Home Alone 'longest dish 4 hr 5 min' is chilling a bottle of cola; Castle shandy 'cook 15 min' is chilling glasses; pizza bites 'cook 5 min' but the step says 6",
+   "where": "Prep sheet header and dish times",
+   "severity": "major",
+   "evidence": "s7.py Ratatouille, Home Alone, The Castle"
+  },
+  {
+   "id": "P25",
+   "W": 23,
+   "what": "Scaling to 10 guests breaks: '3.75l Australian lager (4 stubbies of 375 ml)', '1.88kg cooked king prawns', method still says shape eight rissoles and bake in two tins, and hands-on time stays at 2 hr",
+   "where": "Guests stepper",
+   "severity": "major",
+   "evidence": "m1.py output; P25-03-castle-10.png"
+  },
+  {
+   "id": "P25",
+   "W": 23,
+   "what": "Plural and unit bugs: '12 dashes hot sauces', '4 dashes Worcestershire sauces', '4 x 375ml cans lagers', '2 small bunch thymes', '4 cup crushed ice', '1 1/3 tbsp', '2 tbsp + 60g plain flour', '1 tsp lemon juice' as a produce item",
+   "where": "Shopping list",
+   "severity": "minor",
+   "evidence": "s6.py Jaws, s7.py Ratatouille and Castle"
+  },
+  {
+   "id": "P25",
+   "W": 23,
+   "what": "Big Night menu: two risottos both as 'snacks' needing carnaroli and arborio on separate lines, passata on two lines, three mains for four people, and 'roast suckling pig' is really a rolled pork belly",
+   "where": "Big Night",
+   "severity": "minor",
+   "evidence": "s7.py Big Night"
+  },
+  {
+   "id": "P25",
+   "W": 23,
+   "what": "Duplicate shopping lines: '4 maraschino cherries' and '4 cocktail cherries'",
+   "where": "Home Alone shopping list",
+   "severity": "minor",
+   "evidence": "s7.py Home Alone"
+  },
+  {
+   "id": "P08",
+   "W": 23,
+   "what": "Double feature and marathon menus ignore Usual guests. Set to 20, the double feature still says 'serves 4' and its shopping list says 'Serves 4' with no guest stepper",
+   "where": "Double feature dialog and its Shopping list; Plan a marathon",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P08-05-df-shop.png"
+  },
+  {
+   "id": "P08",
+   "W": 23,
+   "what": "Scaling to 20 to 24 is arithmetic only. Spoon measures balloon ('24 tbsp sprinkles', '30 tbsp chocolate syrup', '20 tbsp plain flour', '10 cup ice'), plurals break ('5 small bunch mints', '5 handful mint leaves'), and odd precision ('1.13kg plain flour'). Method text is not scaled: Home Alone at 24 still says 'fill four tall glasses' and 'six scoops of ice cream', 'tip into a baking dish' for 2.4kg macaroni",
+   "where": "Prep sheet at 20 and 24 guests (Home Alone, Jurassic Park, Moana)",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P08-03-prep-top.png and prep text dumps"
+  },
+  {
+   "id": "P08",
+   "W": 23,
+   "what": "Double feature for a church youth group spun Arthur and Pretty Woman with champagne, Kir royale, brandy and bitters. Nothing suggests turning on No alcohol or picking a crowd-friendly pair",
+   "where": "Double feature dialog",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P08-04-df.png"
+  },
+  {
+   "id": "P08",
+   "W": 23,
+   "what": "Guest cap of 24 is fine for 20, but church nights often run 30 plus and there is no way past 24",
+   "where": "Settings, Usual guests",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P08-02-guests-max.png"
+  },
+  {
+   "id": "P08",
+   "W": 23,
+   "what": "'Longest dish 4 hr 5 min' on Home Alone is just chilling cola overnight, which makes a simple menu look like a big job",
+   "where": "Prep sheet header",
+   "severity": "minor",
+   "evidence": "Home Alone prep sheet text"
+  },
+  {
+   "id": "P09",
+   "W": 29,
+   "what": "Lazy night is hard to find (bottom of the page, under Save PDF) and when on it keeps the two 'easiest' dishes, which can be a snack and a drink with no main (Toy Story: potato bites and punch; Paddington: marmalade sandwiches and cocoa; Shaft: knishes and a whisky sour). Moana's lazy menu still has a 3 hr 20 min dessert. On Home Alone the button says 'Lazy night: on' but the prep sheet stays at all 5 dishes",
+   "where": "Lazy night button, prep sheet",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P40-04-lazy.png; P09 runs on Toy Story, Paddington, Moana, Home Alone"
+  },
+  {
+   "id": "P09",
+   "W": 29,
+   "what": "No 'buy it' or takeaway route for a main. Only snacks in the Candy bar are tagged Buy it (party pies, ice blocks). After a 12 hour shift I want 'grab a roast chook and a salad' not a recipe",
+   "where": "Menu and Goes well with",
+   "severity": "major",
+   "evidence": "Candy bar list, prep sheets"
+  },
+  {
+   "id": "P09",
+   "W": 29,
+   "what": "Lazy night should be a setting before I spin, not a toggle at the end of a long menu page. Toggling it gives no feedback near the button; the change happens up the page off screen",
+   "where": "Lazy night button",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P40-04-lazy.png"
+  },
+  {
+   "id": "P11",
+   "W": 40,
+   "what": "No cost estimate anywhere. At 20 guests Moana wants 2.5kg prawns, 1.5kg sashimi tuna and 3kg snapper; Jurassic Park wants 10 lamb racks. You only find out the bill at the register",
+   "where": "Prep sheet and locked-in shopping list at 20 guests",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P39-06-week-shop.png"
+  },
+  {
+   "id": "P11",
+   "W": 40,
+   "what": "Double feature says serves 4 even when guests is set to another number (tested at 5: prep sheet said serves 5, double feature said serves 4)",
+   "where": "Double feature dialog",
+   "severity": "minor",
+   "evidence": "P11 and P15 runs"
+  },
+  {
+   "id": "P11",
+   "W": 40,
+   "what": "Menu dishes lean fancy for a budget night with kids (Cinderella: smoked salmon blinis, prosciutto rockmelon, pumpkin risotto)",
+   "where": "Cinderella menu",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P22-06-menu.png"
+  },
+  {
+   "id": "P15",
+   "W": 17,
+   "what": "Lock in gives a countdown ('Showtime in 2 days 1h') then says 'Check each recipe for cooking times and make-ahead steps'. It knows every dish's timing and make-ahead notes but doesn't build a timeline (e.g. start the haupia at 2:40pm, fry at 5:30pm)",
+   "where": "This week's film card",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P15-05-thisweek.png"
+  },
+  {
+   "id": "P15",
+   "W": 17,
+   "what": "Cook night only offers Friday, Saturday or Sunday. A family on a schedule might do Wednesday",
+   "where": "This week's film, Cook night select",
+   "severity": "minor",
+   "evidence": "weekDay select options: Friday, Saturday, Sunday"
+  },
+  {
+   "id": "P15",
+   "W": 17,
+   "what": "After reload the page opens scrolled to the bottom of the menu, not to the This week card",
+   "where": "Reload after lock in",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P15-03-reload.png"
+  },
+  {
+   "id": "P15",
+   "W": 17,
+   "what": "Double feature ignores guests (serves 4 for a family of 5)",
+   "where": "Double feature dialog",
+   "severity": "minor",
+   "evidence": "P15 run with guests 5"
+  },
+  {
+   "id": "P15",
+   "W": 17,
+   "what": "No spice level control; Moana, Toy Story menus are mild by default",
+   "where": "Menu",
+   "severity": "minor",
+   "evidence": "menu text"
+  },
+  {
+   "id": "P22",
+   "W": 40,
+   "what": "No allergen flags and no nut-free filter. By my scan 131 of the 328 kids-mode films have nuts somewhere in their recipes. E.T. (rated PG, served up in kids mode) is built around peanut butter: 350g peanut butter, peanut butter candy trail, homemade peanut butter cups, with no warning. Home Alone's sundae bar has 480g roasted peanuts. Candy bar sells rocky road with peanuts and chocolate-coated peanuts with no allergy marker",
+   "where": "Prep sheet, recipes, Candy bar, Goes well with",
+   "severity": "blocker",
+   "evidence": "E.T. prep sheet text; Home Alone prep text; /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P22-09-candybar.png"
+  },
+  {
+   "id": "P22",
+   "W": 40,
+   "what": "Kids mode uses G or PG ratings, so it lets through The Fifth Element, Batman Forever, Gremlins, Rear Window and Pretty in Pink. Fine for 10 year olds, not for under 8s. Find a film ignores kids mode completely (Cinderella Man, a boxing film, shows up as a match). The programme dropdown still says 'Everything (850 films)' and theme counts are for all films",
+   "where": "Wheel in kids mode, Find a film search, Tonight's programme dropdown",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P22-04-kidshome.png"
+  },
+  {
+   "id": "P22",
+   "W": 40,
+   "what": "Settings only has Vegetarian and No alcohol. No allergens at all (nuts, gluten, dairy, egg, sesame)",
+   "where": "Settings, Dinner section",
+   "severity": "blocker",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P08-03-settings.png"
+  },
+  {
+   "id": "P22",
+   "W": 40,
+   "what": "'Goes well with' suggests Rocky road (with peanuts) next to Home Alone, a film already carrying a peanut sundae bar",
+   "where": "Goes well with strip",
+   "severity": "major",
+   "evidence": "Home Alone menu text"
+  },
+  {
+   "id": "P39",
+   "W": 23,
+   "what": "Scaling to 20 to 24 is arithmetic only. Spoon measures balloon ('24 tbsp sprinkles', '30 tbsp chocolate syrup', '20 tbsp plain flour', '10 cup ice'), plurals break ('5 small bunch mints', '5 handful mint leaves'), and odd precision ('1.13kg plain flour'). Method text is not scaled: Home Alone at 24 still says 'fill four tall glasses' and 'six scoops of ice cream', 'tip into a baking dish' for 2.4kg macaroni",
+   "where": "Prep sheet at 20 and 24 guests (Home Alone, Jurassic Park, Moana)",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P08-03-prep-top.png and prep text dumps"
+  },
+  {
+   "id": "P39",
+   "W": 23,
+   "what": "No cost estimate anywhere. At 20 guests Moana wants 2.5kg prawns, 1.5kg sashimi tuna and 3kg snapper; Jurassic Park wants 10 lamb racks. You only find out the bill at the register",
+   "where": "Prep sheet and locked-in shopping list at 20 guests",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P39-06-week-shop.png"
+  },
+  {
+   "id": "P39",
+   "W": 23,
+   "what": "Copy text shopping list differs from the on-screen list ('1 bag caster sugar' vs '60ml sugar syrup', '1 jar maraschino cherries' vs '4 maraschino cherries'). The copy is actually more useful, but they should match",
+   "where": "More, Copy text vs prep sheet",
+   "severity": "minor",
+   "evidence": "P40 Shaft clipboard vs prep text"
+  },
+  {
+   "id": "P39",
+   "W": 23,
+   "what": "Duplicate items not merged: '5 small bunch mints' and '60 mint leaves' on the same list",
+   "where": "Jurassic Park shopping list at 20",
+   "severity": "minor",
+   "evidence": "prep text dump"
+  },
+  {
+   "id": "P39",
+   "W": 23,
+   "what": "Shopping list rows on the prep sheet are about 31px tall, a bit tight with a trolley in one hand; the locked-in list dialog is better",
+   "where": "Prep sheet shopping list",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P39-04-shoplist-ticked.png"
+  },
+  {
+   "id": "P40",
+   "W": 34,
+   "what": "Lazy night is hard to find (bottom of the page, under Save PDF) and when on it keeps the two 'easiest' dishes, which can be a snack and a drink with no main (Toy Story: potato bites and punch; Paddington: marmalade sandwiches and cocoa; Shaft: knishes and a whisky sour). Moana's lazy menu still has a 3 hr 20 min dessert. On Home Alone the button says 'Lazy night: on' but the prep sheet stays at all 5 dishes",
+   "where": "Lazy night button, prep sheet",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P40-04-lazy.png; P09 runs on Toy Story, Paddington, Moana, Home Alone"
+  },
+  {
+   "id": "P40",
+   "W": 34,
+   "what": "Random spin gave Shaft with 'longest dish 14 hr, start the day before'. There is no time filter before spinning, so a zero-time parent can land on a two-day cook",
+   "where": "Prep sheet header after spin",
+   "severity": "major",
+   "evidence": "Shaft prep: 'HANDS-ON 1 HR 54 MIN, LONGEST DISH 14 HR, START THE DAY BEFORE'"
+  },
+  {
+   "id": "P40",
+   "W": 34,
+   "what": "Copy text in lazy mode includes empty 'Main' and 'Something sweet' headings",
+   "where": "More, Copy text",
+   "severity": "minor",
+   "evidence": "clipboard dump in P40 run"
+  },
+  {
+   "id": "P40",
+   "W": 34,
+   "what": "Lazy night, Save, Share all sit low on a long scroll; Share is hidden inside More",
+   "where": "Action buttons under the menu",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P40-04-lazy.png"
+  },
+  {
+   "id": "P06",
+   "W": 40,
+   "what": "No run sheet. The app knows showtime (Saturday 7pm) and every step's minutes, but never says 'start the sauce at 4:40, arancini in the oil at 6:15'. It just says 'check each recipe for cooking times'",
+   "where": "This week's film card and prep sheet",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P06-10-locked.png; prep text contains no clock times"
+  },
+  {
+   "id": "P06",
+   "W": 40,
+   "what": "Shopping list scales with guests but the method text does not. At 6 guests it still says roll 16 meatballs, lay 8 biscuits, pour into 4 glasses, cut mozzarella into 8 cubes",
+   "where": "Prep sheet, How to make it",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P06-prep-2.png (Ghostbusters at 6), Godfather at 6 says 'Fill 4 glasses' and '8 cubes'"
+  },
+  {
+   "id": "P06",
+   "W": 40,
+   "what": "Odd quantities when scaling: '4 1/2 tbsp mayonnaise', '1.05l passata', '600g cold cooked risotto' listed as something to buy when it is a sub recipe with no method",
+   "where": "Shopping list at 6 guests",
+   "severity": "minor",
+   "evidence": "Ghostbusters and Godfather at 6 guests"
+  },
+  {
+   "id": "P06",
+   "W": 40,
+   "what": "Hands-on time stays at 1 hr 42 min whether serving 4 or 6, which an accountant notices",
+   "where": "Prep sheet header",
+   "severity": "minor",
+   "evidence": "SERVES 4 and SERVES 6 headers identical times"
+  },
+  {
+   "id": "P06",
+   "W": 40,
+   "what": "Menu of the week card and the wheel stay on screen above the film I picked, so it is easy to lose which film is active",
+   "where": "Main page after opening a film",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P06-07-choose.png"
+  },
+  {
+   "id": "P12",
+   "W": 23,
+   "what": "No gluten free or coeliac setting anywhere. Godfather menu has rigatoni, breadcrumbs, plain flour arancini, cannoli shells. Nothing flagged, no GF swap like the vegetarian ones",
+   "where": "Settings and prep sheet",
+   "severity": "blocker",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P12-prep-2.png; source search for gluten/coeliac/celiac returns 0 hits"
+  },
+  {
+   "id": "P12",
+   "W": 23,
+   "what": "Choose dishes lets me untick, but then the dinner party for 6 is an antipasto platter and a soda",
+   "where": "Prep tab, Choose dishes",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P06-07-choose.png"
+  },
+  {
+   "id": "P12",
+   "W": 23,
+   "what": "No allergen tags on dishes, so hidden gluten (soy sauce, salami, malt, digestives) is on me to catch",
+   "where": "Dish list",
+   "severity": "major",
+   "evidence": "Ghostbusters fried rice uses 3 tbsp soy sauce with no tamari note"
+  },
+  {
+   "id": "P12",
+   "W": 23,
+   "what": "Shopping list scales with guests but the method text does not. At 6 guests it still says roll 16 meatballs, lay 8 biscuits, pour into 4 glasses, cut mozzarella into 8 cubes",
+   "where": "Prep sheet, How to make it",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P06-prep-2.png (Ghostbusters at 6), Godfather at 6 says 'Fill 4 glasses' and '8 cubes'"
+  },
+  {
+   "id": "P19",
+   "W": 23,
+   "what": "No vegan option. Vegetarian is the closest and still gives butter, eggs, buttermilk, cream cheese, goat's cheese and honey in 4 of 5 dishes",
+   "where": "Settings, prep sheet",
+   "severity": "blocker",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P19-06-prep.png; source has 0 hits for vegan"
+  },
+  {
+   "id": "P19",
+   "W": 23,
+   "what": "Printed menu card ignores Vegetarian and No alcohol. With both ticked the card and the PDF still list Valentine's sirloin and sparkling rose, while the prep sheet correctly swaps to portobello",
+   "where": "Menu tab card and Save PDF page 1",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P19-07-card-after-toggles.png, /tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P19-valentines-veg.pdf"
+  },
+  {
+   "id": "P19",
+   "W": 23,
+   "what": "Ingredient names pluralise wrongly: '2 small bunch thymes', '4 small sprigs rosemaries', '3 drops green food colourings'",
+   "where": "Shopping list",
+   "severity": "minor",
+   "evidence": "Valentine's Day and Toy Story lists"
+  },
+  {
+   "id": "P19",
+   "W": 23,
+   "what": "PDF menu card for Valentine's Day is an odd 11 x 14 inch page with the title clipped across the top edge, while Ghostbusters was A4",
+   "where": "Save PDF page 1",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P19-valentines-veg.pdf"
+  },
+  {
+   "id": "P21",
+   "W": 17,
+   "what": "Cook night only offers Friday, Saturday or Sunday. I'm home one week in three, often midweek, so I can't lock in a Tuesday",
+   "where": "This week's film, Cook night",
+   "severity": "major",
+   "evidence": "weekDay select options: Friday, Saturday, Sunday only"
+  },
+  {
+   "id": "P21",
+   "W": 17,
+   "what": "Default spin with no kids mode gave Knocked Up for a family of five. Kids mode is buried in Settings",
+   "where": "Spin",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P21-04-locked.png"
+  },
+  {
+   "id": "P21",
+   "W": 17,
+   "what": "Tapping Candy bar lands halfway down the page on the week's film card, not the snack counter",
+   "where": "Candy bar tab",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P21-06-candy.png (scrollY 1883)"
+  },
+  {
+   "id": "P21",
+   "W": 17,
+   "what": "Lock in is one film per week. No way to plan the whole week home in one go",
+   "where": "Lock in for this week",
+   "severity": "minor",
+   "evidence": "Only one This week's film slot"
+  },
+  {
+   "id": "P26",
+   "W": 11,
+   "what": "No US units. Everything is grams, ml and Celsius (pizza at 250C, cake at 175C, 400g butter). No toggle for cups, sticks of butter or Fahrenheit",
+   "where": "Settings and prep sheet",
+   "severity": "major",
+   "evidence": "Toy Story prep text; source has 0 hits for Fahrenheit or \u00b0F"
+  },
+  {
+   "id": "P26",
+   "W": 11,
+   "what": "Units are inconsistent between menus: Finding Nemo uses '1/2 cup plain flour' and '2 cup panko' while every other menu uses grams",
+   "where": "Shopping list",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P28-06-prep.png"
+  },
+  {
+   "id": "P26",
+   "W": 11,
+   "what": "Aussie ingredient names with no explanation: caster sugar, icing sugar, self-raising flour, capsicum, thickened cream, copha",
+   "where": "Shopping list",
+   "severity": "minor",
+   "evidence": "Toy Story and Halloween lists"
+  },
+  {
+   "id": "P28",
+   "W": 17,
+   "what": "No dairy free or lactose free option. Nemo menu has sour cream dip, buttered fairy bread and yoghurt pops, nothing flagged",
+   "where": "Settings, prep sheet",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P28-06-prep.png"
+  },
+  {
+   "id": "P28",
+   "W": 17,
+   "what": "Eggs are listed under DAIRY, which confuses someone scanning the Dairy aisle to see what to avoid",
+   "where": "Shopping list",
+   "severity": "minor",
+   "evidence": "'2 eggs' under DAIRY in every list"
+  },
+  {
+   "id": "P28",
+   "W": 17,
+   "what": "Menu card text is tiny on a phone and full of jokes and film references that are hard for a second language reader",
+   "where": "Menu tab card",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P28-05-menu.png"
+  },
+  {
+   "id": "P28",
+   "W": 17,
+   "what": "Kids mode wheel still shows Rear Window and City Slickers",
+   "where": "Wheel in kids mode",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P28-03-wheel.png"
+  },
+  {
+   "id": "P28",
+   "W": 17,
+   "what": "Showtime choices start at 5pm on Fri, Sat or Sun only, no Sunday lunch matinee for the grandchild",
+   "where": "Lock in",
+   "severity": "minor",
+   "evidence": "weekTime 5pm to 9pm"
+  },
+  {
+   "id": "P28",
+   "W": 17,
+   "what": "Floating 'Spin the wheel' button covers the 'Part 1 of' and marathon text under the menu",
+   "where": "Bottom of menu on phone",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P28-05-menu.png"
+  },
+  {
+   "id": "P30",
+   "W": 23,
+   "what": "No custom marathon. Marathons only exist for a film's own series, and most horror series stop at film one (Scream, Saw, Halloween, Nightmare on Elm Street). Friday the 13th, Evil Dead and Final Destination aren't in the library",
+   "where": "Plan a marathon, Find a film",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P30-04-marathon.png; search results"
+  },
+  {
+   "id": "P30",
+   "W": 23,
+   "what": "Double feature is random, I can't choose the two films, only spin again",
+   "where": "Double feature dialog",
+   "severity": "major",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P30-05-double.png"
+  },
+  {
+   "id": "P30",
+   "W": 23,
+   "what": "No pescatarian mode. Vegetarian swaps Jaws' lobster rolls for hearts of palm and fish for smoked tofu, which a pescatarian doesn't need",
+   "where": "Prep sheet with Vegetarian",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P30-menu-Jaws.png"
+  },
+  {
+   "id": "P30",
+   "W": 23,
+   "what": "Marathon menu fixed at serves 4 with no guest control, and two iced coffees as the drinks for a late night party",
+   "where": "Marathon dialog",
+   "severity": "minor",
+   "evidence": "/tmp/claude-0/-home-claude/6a0d96ab-f9fb-5c75-b6b0-4681bb3c85ff/scratchpad/fg/shots/P30-04-marathon.png"
+  }
+ ],
+ "wishes": [
+  {
+   "id": "P01",
+   "W": 34,
+   "w": "Egg-free and no-beef toggles"
+  },
+  {
+   "id": "P01",
+   "W": 34,
+   "w": "Vegetarian setting that also changes the menu card, printed menu, double feature and candy bar"
+  },
+  {
+   "id": "P01",
+   "W": 34,
+   "w": "Green veg tick on each dish and snack"
+  },
+  {
+   "id": "P01",
+   "W": 34,
+   "w": "Some Bollywood or Indian family films in the 850"
+  },
+  {
+   "id": "P02",
+   "W": 34,
+   "w": "Halal toggle: swap pork for chicken or lamb, beef bacon for bacon, halal marshmallows, note to buy halal meat"
+  },
+  {
+   "id": "P02",
+   "W": 34,
+   "w": "No alcohol that also cleans up the printed menu"
+  },
+  {
+   "id": "P02",
+   "W": 34,
+   "w": "Methods that rescale counts for big groups"
+  },
+  {
+   "id": "P03",
+   "W": 17,
+   "w": "Kosher mode: no pork or shellfish, a meat or dairy meal choice, butter swapped for oil and parev desserts in meat meals"
+  },
+  {
+   "id": "P03",
+   "W": 17,
+   "w": "Allergen and shellfish tags on each dish"
+  },
+  {
+   "id": "P03",
+   "W": 17,
+   "w": "More classic Jewish films"
+  },
+  {
+   "id": "P04",
+   "W": 17,
+   "w": "Egg-free option for stricter family members"
+  },
+  {
+   "id": "P04",
+   "W": 17,
+   "w": "Indian films and menus"
+  },
+  {
+   "id": "P04",
+   "W": 17,
+   "w": "Bigger text mode for older relatives"
+  },
+  {
+   "id": "P23",
+   "W": 23,
+   "w": "Exclude by ingredient (beef, pork) rather than one Vegetarian box"
+  },
+  {
+   "id": "P23",
+   "W": 23,
+   "w": "Per-dish 'make a veg version too' so one prep sheet covers both"
+  },
+  {
+   "id": "P23",
+   "W": 23,
+   "w": "Data export of the shopping list to a list app"
+  },
+  {
+   "id": "P36",
+   "W": 17,
+   "w": "Vegan or 'fasting' toggle with no meat, dairy or eggs (shellfish optional)"
+  },
+  {
+   "id": "P36",
+   "W": 17,
+   "w": "Save a menu with a fasting version for Lent"
+  },
+  {
+   "id": "P36",
+   "W": 17,
+   "w": "My Big Fat Greek Wedding"
+  },
+  {
+   "id": "P42",
+   "W": 6,
+   "w": "Exclude by ingredient (onion, garlic, potato, carrot, egg, honey, mushroom) with the shopping list filtered and dishes flagged"
+  },
+  {
+   "id": "P42",
+   "W": 6,
+   "w": "A 'no root vegetables' toggle"
+  },
+  {
+   "id": "P42",
+   "W": 6,
+   "w": "Ingredient tags so a filter is possible"
+  },
+  {
+   "id": "P05",
+   "W": 29,
+   "w": "Rough cost per head or a total for the shopping list"
+  },
+  {
+   "id": "P05",
+   "W": 29,
+   "w": "A 'cheap night' or 'under $10 a head' filter"
+  },
+  {
+   "id": "P05",
+   "W": 29,
+   "w": "Split the list between housemates (who buys what)"
+  },
+  {
+   "id": "P05",
+   "W": 29,
+   "w": "Share the shopping list straight to Messenger or WhatsApp as a list, not just a link"
+  },
+  {
+   "id": "P13",
+   "W": 34,
+   "w": "A 'no cook / microwave / kettle' filter"
+  },
+  {
+   "id": "P13",
+   "W": 34,
+   "w": "A 'buy it all from Coles' or Woolies version of each menu"
+  },
+  {
+   "id": "P13",
+   "W": 34,
+   "w": "Cost per head for a big group"
+  },
+  {
+   "id": "P13",
+   "W": 34,
+   "w": "Clean or church-friendly film filter beyond Kids mode"
+  },
+  {
+   "id": "P24",
+   "W": 46,
+   "w": "Story-sized (9:16) export of the menu, poster and our names"
+  },
+  {
+   "id": "P24",
+   "W": 46,
+   "w": "A cute 'we're having...' card to post, with the film poster"
+  },
+  {
+   "id": "P24",
+   "W": 46,
+   "w": "Cheaper date night swaps"
+  },
+  {
+   "id": "P24",
+   "W": 46,
+   "w": "Decade or 'newer than 2000' filter on the wheel"
+  },
+  {
+   "id": "P31",
+   "W": 11,
+   "w": "A halal setting that swaps pork and flags gelatine"
+  },
+  {
+   "id": "P31",
+   "W": 11,
+   "w": "'Buy halal' note on meat"
+  },
+  {
+   "id": "P31",
+   "W": 11,
+   "w": "Cheap or student mode"
+  },
+  {
+   "id": "P31",
+   "W": 11,
+   "w": "Double feature that respects my guest count"
+  },
+  {
+   "id": "P41",
+   "W": 11,
+   "w": "Halal setting that includes gelatine-free lolly picks"
+  },
+  {
+   "id": "P41",
+   "W": 11,
+   "w": "Girls' night or sleepover theme"
+  },
+  {
+   "id": "P41",
+   "W": 11,
+   "w": "Menu card that matches my settings"
+  },
+  {
+   "id": "P41",
+   "W": 11,
+   "w": "A grazing board or dessert-only option for snack nights"
+  },
+  {
+   "id": "P37",
+   "W": 23,
+   "w": "An instant spin setting and Space bar to spin"
+  },
+  {
+   "id": "P37",
+   "W": 23,
+   "w": "A gaming aisle in the Video store"
+  },
+  {
+   "id": "P37",
+   "W": 23,
+   "w": "Quick 'snacks only' plan for a 2 hour break"
+  },
+  {
+   "id": "P37",
+   "W": 23,
+   "w": "Respawn: spin again without the curtains"
+  },
+  {
+   "id": "P18",
+   "W": 17,
+   "w": "Plain, dyslexia-friendly font option for recipes"
+  },
+  {
+   "id": "P18",
+   "W": 17,
+   "w": "Numbered steps, one per line, with a timer per step"
+  },
+  {
+   "id": "P18",
+   "W": 17,
+   "w": "A cook's run sheet: start the ratatouille at 4pm, sweetbreads at 6"
+  },
+  {
+   "id": "P18",
+   "W": 17,
+   "w": "Dish card quantities that follow the guest count"
+  },
+  {
+   "id": "P07",
+   "W": 23,
+   "w": "A big 'Back to my menu' button that is always there"
+  },
+  {
+   "id": "P07",
+   "W": 23,
+   "w": "A plain kids menu option with simple food like nuggets, toasties, fairy bread"
+  },
+  {
+   "id": "P07",
+   "W": 23,
+   "w": "Budget hint on the shopping list, roughly how much it will cost"
+  },
+  {
+   "id": "P07",
+   "W": 23,
+   "w": "Tap the menu card to see it full size"
+  },
+  {
+   "id": "P10",
+   "W": 51,
+   "w": "A 'just give me a feed' option: one main, no starters, no cocktails"
+  },
+  {
+   "id": "P10",
+   "W": 51,
+   "w": "A plain Print button"
+  },
+  {
+   "id": "P10",
+   "W": 51,
+   "w": "Fewer buttons under the menu"
+  },
+  {
+   "id": "P14",
+   "W": 29,
+   "w": "Search that copes with spelling and missing apostrophes"
+  },
+  {
+   "id": "P14",
+   "W": 29,
+   "w": "A Print button that prints the menu and recipes big and plain on A4"
+  },
+  {
+   "id": "P14",
+   "W": 29,
+   "w": "Soft and simple food option"
+  },
+  {
+   "id": "P14",
+   "W": 29,
+   "w": "Numbered recipe steps instead of a paragraph"
+  },
+  {
+   "id": "P17",
+   "W": 23,
+   "w": "A large text or plain view of the menu"
+  },
+  {
+   "id": "P17",
+   "W": 23,
+   "w": "Diabetic friendly or low sugar setting"
+  },
+  {
+   "id": "P17",
+   "W": 23,
+   "w": "Tap a menu to open it full screen"
+  },
+  {
+   "id": "P17",
+   "W": 23,
+   "w": "Honour the phone's text size setting"
+  },
+  {
+   "id": "P32",
+   "W": 34,
+   "w": "A Print button that goes straight to the printer"
+  },
+  {
+   "id": "P32",
+   "W": 34,
+   "w": "A retro or 'golden age' shelf in the video store"
+  },
+  {
+   "id": "P32",
+   "W": 34,
+   "w": "Afternoon tea sized menus, not full dinners"
+  },
+  {
+   "id": "P32",
+   "W": 34,
+   "w": "Place cards and a menu per table to print"
+  },
+  {
+   "id": "P20",
+   "W": 17,
+   "w": "Halal setting that removes pork, ham and gelatine and says 'use halal meat'"
+  },
+  {
+   "id": "P20",
+   "W": 17,
+   "w": "Simple English mode with plain course names: Starter, Main, Dessert, Drink"
+  },
+  {
+   "id": "P20",
+   "W": 17,
+   "w": "Pictures of each dish"
+  },
+  {
+   "id": "P20",
+   "W": 17,
+   "w": "Step by step recipes with numbers"
+  },
+  {
+   "id": "P34",
+   "W": 17,
+   "w": "A light mode that skips the big pictures and animations"
+  },
+  {
+   "id": "P34",
+   "W": 17,
+   "w": "Work offline after the first visit"
+  },
+  {
+   "id": "P34",
+   "W": 17,
+   "w": "Halal setting"
+  },
+  {
+   "id": "P34",
+   "W": 17,
+   "w": "Skip the spin animation on slow phones"
+  },
+  {
+   "id": "P16",
+   "W": 11,
+   "w": "Announce 'Tonight: <film>' in a live region after a spin and move focus to the result"
+  },
+  {
+   "id": "P16",
+   "W": 11,
+   "w": "A text-only recipe view with headings per dish and quantities in each step"
+  },
+  {
+   "id": "P16",
+   "W": 11,
+   "w": "Tagged or text PDF, or a plain 'email me the shopping list' option"
+  },
+  {
+   "id": "P16",
+   "W": 11,
+   "w": "Skip link to the menu"
+  },
+  {
+   "id": "P33",
+   "W": 17,
+   "w": "Scroll to the section, or collapse the hero, when a top tab is tapped"
+  },
+  {
+   "id": "P33",
+   "W": 17,
+   "w": "Start on an empty state, not a pre-loaded Ghostbusters"
+  },
+  {
+   "id": "P33",
+   "W": 17,
+   "w": "One shared type scale and button system across the three sections"
+  },
+  {
+   "id": "P33",
+   "W": 17,
+   "w": "Respect prefers-reduced-motion and make the curtain skippable"
+  },
+  {
+   "id": "P35",
+   "W": 29,
+   "w": "One clear first step: no film pre-selected, a big Spin, and everything else hangs off the chosen film"
+  },
+  {
+   "id": "P35",
+   "W": 29,
+   "w": "Send shopping list to Reminders, Notes or a supermarket app"
+  },
+  {
+   "id": "P35",
+   "W": 29,
+   "w": "Rough cost per head"
+  },
+  {
+   "id": "P35",
+   "W": 29,
+   "w": "Proper About and privacy page before any sync feature ships"
+  },
+  {
+   "id": "P35",
+   "W": 29,
+   "w": "Double feature that starts from the current film"
+  },
+  {
+   "id": "P35",
+   "W": 29,
+   "w": "A4 PDF with real text"
+  },
+  {
+   "id": "P38",
+   "W": 23,
+   "w": "A short plain 'What we keep' panel: on this device, what goes online only if you turn on card sync, nothing else"
+  },
+  {
+   "id": "P38",
+   "W": 23,
+   "w": "Delete my online card button"
+  },
+  {
+   "id": "P38",
+   "W": 23,
+   "w": "Longer PIN or a magic link"
+  },
+  {
+   "id": "P38",
+   "W": 23,
+   "w": "Say up front there's no account, no tracking, no ads"
+  },
+  {
+   "id": "P29",
+   "W": 23,
+   "w": "Say 'Films 1 and 2 of 7 in the library' or list the missing ones greyed out"
+  },
+  {
+   "id": "P29",
+   "W": 23,
+   "w": "Fill mid-run gaps first (Rocky V, Rocky Balboa, The Lost World, Conjuring 2)"
+  },
+  {
+   "id": "P29",
+   "W": 23,
+   "w": "Running time per film and a marathon timetable with breaks"
+  },
+  {
+   "id": "P29",
+   "W": 23,
+   "w": "Real quotes, or mark the invented ones as house notes"
+  },
+  {
+   "id": "P29",
+   "W": 23,
+   "w": "Choose release order or story order for Star Wars"
+  },
+  {
+   "id": "P25",
+   "W": 23,
+   "w": "Per-dish recipe card: ingredients with amounts, then steps with amounts inline"
+  },
+  {
+   "id": "P25",
+   "W": 23,
+   "w": "Separate hands-on time from waiting time"
+  },
+  {
+   "id": "P25",
+   "W": 23,
+   "w": "Scale the method text (number of rissoles, tins, batches), not just the list"
+  },
+  {
+   "id": "P25",
+   "W": 23,
+   "w": "Merge the same ingredient across dishes (one rice, one passata)"
+  },
+  {
+   "id": "P25",
+   "W": 23,
+   "w": "Oven temps for every bake and fry, including chip first-fry"
+  },
+  {
+   "id": "P08",
+   "W": 23,
+   "w": "Guest stepper on double feature and marathon lists"
+  },
+  {
+   "id": "P08",
+   "W": 23,
+   "w": "Crowd mode: trays, batch sizes, 'buy 3 x 1kg packs' instead of 2.4kg"
+  },
+  {
+   "id": "P08",
+   "W": 23,
+   "w": "Allow more than 24 guests"
+  },
+  {
+   "id": "P08",
+   "W": 23,
+   "w": "Youth-group friendly pairs (PG, no alcohol)"
+  },
+  {
+   "id": "P09",
+   "W": 29,
+   "w": "A real 'no cook' mode: shop-bought main plus one easy thing"
+  },
+  {
+   "id": "P09",
+   "W": 29,
+   "w": "Filter films by runtime under 100 minutes for a toddler bedtime"
+  },
+  {
+   "id": "P09",
+   "W": 29,
+   "w": "Lazy night as a setting in Settings"
+  },
+  {
+   "id": "P11",
+   "W": 40,
+   "w": "Budget toggle or a cheap swap per dish"
+  },
+  {
+   "id": "P11",
+   "W": 40,
+   "w": "Rough cost per head"
+  },
+  {
+   "id": "P11",
+   "W": 40,
+   "w": "Video store rentals pointing to free options (ABC iview, SBS) first"
+  },
+  {
+   "id": "P15",
+   "W": 17,
+   "w": "Backwards cooking timeline from showtime"
+  },
+  {
+   "id": "P15",
+   "W": 17,
+   "w": "Calendar invite or reminder for cook night"
+  },
+  {
+   "id": "P15",
+   "W": 17,
+   "w": "Any day of the week"
+  },
+  {
+   "id": "P15",
+   "W": 17,
+   "w": "Spice it up toggle"
+  },
+  {
+   "id": "P22",
+   "W": 40,
+   "w": "Nut-free toggle that swaps or hides dishes and snacks"
+  },
+  {
+   "id": "P22",
+   "W": 40,
+   "w": "Allergen tags on every dish and candy bar item (peanut, tree nut, sesame, egg, dairy, gluten)"
+  },
+  {
+   "id": "P22",
+   "W": 40,
+   "w": "'May contain' note on Buy it items"
+  },
+  {
+   "id": "P22",
+   "W": 40,
+   "w": "Age filter: under 5, under 8, under 12"
+  },
+  {
+   "id": "P39",
+   "W": 23,
+   "w": "Pack sizes for crowds (3 x 1kg mince, 2 dozen eggs)"
+  },
+  {
+   "id": "P39",
+   "W": 23,
+   "w": "Rough cost at 20"
+  },
+  {
+   "id": "P39",
+   "W": 23,
+   "w": "Cheaper protein swaps when guests go over 10"
+  },
+  {
+   "id": "P39",
+   "W": 23,
+   "w": "One merged list across double features at the real guest count"
+  },
+  {
+   "id": "P40",
+   "W": 34,
+   "w": "'I've got 20 minutes' filter before the spin"
+  },
+  {
+   "id": "P40",
+   "W": 34,
+   "w": "Buy-not-cook mode with a supermarket or takeaway main"
+  },
+  {
+   "id": "P40",
+   "W": 34,
+   "w": "Lazy night up near the spin button"
+  },
+  {
+   "id": "P40",
+   "W": 34,
+   "w": "Shorter films option for when the baby wakes"
+  },
+  {
+   "id": "P06",
+   "W": 40,
+   "w": "Backwards run sheet from showtime with clock times per step"
+  },
+  {
+   "id": "P06",
+   "W": 40,
+   "w": "Method quantities that scale with guests"
+  },
+  {
+   "id": "P06",
+   "W": 40,
+   "w": "Total cost estimate of the shopping list"
+  },
+  {
+   "id": "P06",
+   "W": 40,
+   "w": "Film runtime shown next to showtime so I know when dessert lands"
+  },
+  {
+   "id": "P12",
+   "W": 23,
+   "w": "Gluten free toggle that swaps pasta, crumbs and pastry like vegetarian does"
+  },
+  {
+   "id": "P12",
+   "W": 23,
+   "w": "Allergen tags per dish (gluten, dairy, egg, nuts)"
+  },
+  {
+   "id": "P12",
+   "W": 23,
+   "w": "Per guest dietary notes for a dinner party"
+  },
+  {
+   "id": "P19",
+   "W": 23,
+   "w": "Vegan toggle (plant milk, vegan butter, flax egg, maple instead of honey)"
+  },
+  {
+   "id": "P19",
+   "W": 23,
+   "w": "Menu card that matches the diet I set"
+  },
+  {
+   "id": "P19",
+   "W": 23,
+   "w": "Filter films by menus that are already plant based"
+  },
+  {
+   "id": "P21",
+   "W": 17,
+   "w": "Pick any night of the week"
+  },
+  {
+   "id": "P21",
+   "W": 17,
+   "w": "Plan a run of nights for my week home"
+  },
+  {
+   "id": "P21",
+   "W": 17,
+   "w": "Kids mode prompt on first run"
+  },
+  {
+   "id": "P26",
+   "W": 11,
+   "w": "Units toggle: metric or US cups, ounces, Fahrenheit"
+  },
+  {
+   "id": "P26",
+   "W": 11,
+   "w": "Hover or tap glossary for Aussie ingredient names"
+  },
+  {
+   "id": "P28",
+   "W": 17,
+   "w": "Dairy free toggle with swaps"
+  },
+  {
+   "id": "P28",
+   "W": 17,
+   "w": "Bigger text option"
+  },
+  {
+   "id": "P28",
+   "W": 17,
+   "w": "Simplified Chinese language option"
+  },
+  {
+   "id": "P28",
+   "W": 17,
+   "w": "Sunday afternoon showtimes"
+  },
+  {
+   "id": "P30",
+   "W": 23,
+   "w": "Build my own marathon from any films, with a combined menu and timeline"
+  },
+  {
+   "id": "P30",
+   "W": 23,
+   "w": "Pick both films in a double feature"
+  },
+  {
+   "id": "P30",
+   "W": 23,
+   "w": "Pescatarian setting"
+  },
+  {
+   "id": "P30",
+   "W": 23,
+   "w": "More horror sequels and franchises"
+  }
+ ],
+ "loved": [
+  {
+   "id": "P01",
+   "W": 34,
+   "l": "Ratatouille vegetarian menu is genuinely egg-free and lovely"
+  },
+  {
+   "id": "P01",
+   "W": 34,
+   "l": "Vegetarian marshmallows and vegetable stock show someone thought about it"
+  },
+  {
+   "id": "P01",
+   "W": 34,
+   "l": "Kids mode cuts to 328 films and the curtain animation"
+  },
+  {
+   "id": "P01",
+   "W": 34,
+   "l": "Shopping list grouped by aisle in grams"
+  },
+  {
+   "id": "P02",
+   "W": 34,
+   "l": "Guests go to 24 and quantities scale"
+  },
+  {
+   "id": "P02",
+   "W": 34,
+   "l": "Shopping list by aisle"
+  },
+  {
+   "id": "P02",
+   "W": 34,
+   "l": "The Godfather menu looks like a real old menu"
+  },
+  {
+   "id": "P03",
+   "W": 17,
+   "l": "Desktop layout with the wheel and prep sheet side by side is clear"
+  },
+  {
+   "id": "P03",
+   "W": 17,
+   "l": "Choose dishes so I can drop what I won't make"
+  },
+  {
+   "id": "P03",
+   "W": 17,
+   "l": "Save PDF and share link both worked first try"
+  },
+  {
+   "id": "P04",
+   "W": 17,
+   "l": "Vegetarian plus No alcohol together worked cleanly in the prep sheet, with vegetable stock and vegetarian marshmallows"
+  },
+  {
+   "id": "P04",
+   "W": 17,
+   "l": "Kung Fu Panda menu with red bean buns and kung pao tofu"
+  },
+  {
+   "id": "P04",
+   "W": 17,
+   "l": "Paddington marmalade menu is a hit for the whole house"
+  },
+  {
+   "id": "P23",
+   "W": 23,
+   "l": "Prep sheet with timings and make-ahead notes"
+  },
+  {
+   "id": "P23",
+   "W": 23,
+   "l": "Lock in for the week and saved menus kept on device"
+  },
+  {
+   "id": "P23",
+   "W": 23,
+   "l": "Share link copied first time"
+  },
+  {
+   "id": "P36",
+   "W": 17,
+   "l": "Mamma Mia menu with spanakopita, kleftiko and loukoumades feels like home outside fasting"
+  },
+  {
+   "id": "P36",
+   "W": 17,
+   "l": "Guests stepper and shopping list grouped by aisle"
+  },
+  {
+   "id": "P42",
+   "W": 6,
+   "l": "Recipes are structured with timings and make-ahead notes, so a filter is clearly buildable"
+  },
+  {
+   "id": "P42",
+   "W": 6,
+   "l": "Fast, no sign-up, saved on device"
+  },
+  {
+   "id": "P05",
+   "W": 29,
+   "l": "Rental receipt: weekly $2, paid with a $10 note, change $8, be kind rewind"
+  },
+  {
+   "id": "P05",
+   "W": 29,
+   "l": "Candy bar is full of proper Aussie stuff: chicken salt chips, fairy bread, Cheerios"
+  },
+  {
+   "id": "P05",
+   "W": 29,
+   "l": "Lazy night turns a fancy menu into popcorn and a sundae bar"
+  },
+  {
+   "id": "P05",
+   "W": 29,
+   "l": "Shopping list grouped by aisle with tick boxes"
+  },
+  {
+   "id": "P13",
+   "W": 34,
+   "l": "Kids mode cut it straight down to 328 films"
+  },
+  {
+   "id": "P13",
+   "W": 34,
+   "l": "Candy bar buy-it snacks are perfect for a dorm"
+  },
+  {
+   "id": "P13",
+   "W": 34,
+   "l": "The theming is gorgeous and the curtain countdown is fun with a crowd"
+  },
+  {
+   "id": "P13",
+   "W": 34,
+   "l": "Cola floats and root beer floats are basically no-cook"
+  },
+  {
+   "id": "P24",
+   "W": 46,
+   "l": "The printed menus look like real props, super aesthetic"
+  },
+  {
+   "id": "P24",
+   "W": 46,
+   "l": "The curtain countdown"
+  },
+  {
+   "id": "P24",
+   "W": 46,
+   "l": "Rental receipt and member card in the Video store"
+  },
+  {
+   "id": "P24",
+   "W": 46,
+   "l": "Choc tops and pick and mix in the Candy bar"
+  },
+  {
+   "id": "P31",
+   "W": 11,
+   "l": "No alcohol really works: every drink swapped and the prep sheet says ALCOHOL-FREE"
+  },
+  {
+   "id": "P31",
+   "W": 11,
+   "l": "Double feature menu layout is clear"
+  },
+  {
+   "id": "P31",
+   "W": 11,
+   "l": "Streaming info shows Stan, Netflix, Disney+ straight away"
+  },
+  {
+   "id": "P41",
+   "W": 11,
+   "l": "Candy bar is so fun, felt like a real cinema counter"
+  },
+  {
+   "id": "P41",
+   "W": 11,
+   "l": "Chocolate-dipped strawberries and red velvet cupcakes are exactly girls' night food"
+  },
+  {
+   "id": "P41",
+   "W": 11,
+   "l": "No alcohol swaps on the prep sheet"
+  },
+  {
+   "id": "P37",
+   "W": 23,
+   "l": "The desktop wheel looks great"
+  },
+  {
+   "id": "P37",
+   "W": 23,
+   "l": "Marathon planner with release or story order and one shared menu"
+  },
+  {
+   "id": "P37",
+   "W": 23,
+   "l": "Keyboard tab order is sensible and tabs work with arrow keys"
+  },
+  {
+   "id": "P37",
+   "W": 23,
+   "l": "Escape skips the curtains"
+  },
+  {
+   "id": "P18",
+   "W": 17,
+   "l": "Ratatouille menu with sweetbreads is a proper flex for the boys"
+  },
+  {
+   "id": "P18",
+   "W": 17,
+   "l": "Choose dishes shows each dish with its time so I can drop one"
+  },
+  {
+   "id": "P18",
+   "W": 17,
+   "l": "The PDF looks like a real restaurant menu"
+  },
+  {
+   "id": "P18",
+   "W": 17,
+   "l": "Prep sheet font (rounded, 16px) is easy to read"
+  },
+  {
+   "id": "P07",
+   "W": 23,
+   "l": "The cinema look, the curtain and the wheel, the grandkids will love spinning it"
+  },
+  {
+   "id": "P07",
+   "W": 23,
+   "l": "Video store tapes with trailers and PG badges"
+  },
+  {
+   "id": "P07",
+   "W": 23,
+   "l": "Candy bar with fairy bread, chocolate crackles and honey joys, proper Aussie party food"
+  },
+  {
+   "id": "P10",
+   "W": 51,
+   "l": "Spin and go, no sign up"
+  },
+  {
+   "id": "P10",
+   "W": 51,
+   "l": "Snack counter with chips and dip and party pies"
+  },
+  {
+   "id": "P10",
+   "W": 51,
+   "l": "Shopping list grouped by meat, produce, dairy, done in grams"
+  },
+  {
+   "id": "P14",
+   "W": 29,
+   "l": "Casablanca with Rick's Cafe olives and briouats is a lovely touch"
+  },
+  {
+   "id": "P14",
+   "W": 29,
+   "l": "Shopping list with tick boxes"
+  },
+  {
+   "id": "P14",
+   "W": 29,
+   "l": "Prep sheet tells you what you can make ahead"
+  },
+  {
+   "id": "P17",
+   "W": 23,
+   "l": "No sideways scrolling even at 320px"
+  },
+  {
+   "id": "P17",
+   "W": 23,
+   "l": "The Goes well with and Add buttons are big and easy to hit"
+  },
+  {
+   "id": "P17",
+   "W": 23,
+   "l": "Welcome card is short and clear"
+  },
+  {
+   "id": "P32",
+   "W": 34,
+   "l": "Breakfast at Tiffany's menu with the cat canapes and champagne cocktails, the girls will adore it"
+  },
+  {
+   "id": "P32",
+   "W": 34,
+   "l": "The saved PDF looks like a real printed menu"
+  },
+  {
+   "id": "P32",
+   "W": 34,
+   "l": "Prep sheet with make ahead notes"
+  },
+  {
+   "id": "P20",
+   "W": 17,
+   "l": "Alcohol-free swap on the prep sheet is real, not just hidden"
+  },
+  {
+   "id": "P20",
+   "W": 17,
+   "l": "Shopping list in grams and millilitres, grouped by shop section"
+  },
+  {
+   "id": "P20",
+   "W": 17,
+   "l": "Guests number goes up to 24 for a big family"
+  },
+  {
+   "id": "P34",
+   "W": 17,
+   "l": "Once loaded it works, nothing broke"
+  },
+  {
+   "id": "P34",
+   "W": 17,
+   "l": "Shopping list is clear"
+  },
+  {
+   "id": "P34",
+   "W": 17,
+   "l": "No account or sign up needed"
+  },
+  {
+   "id": "P16",
+   "W": 11,
+   "l": "Welcome dialog is a real modal with focus trapped and a sensible first focus"
+  },
+  {
+   "id": "P16",
+   "W": 11,
+   "l": "Find a film suggestions are real buttons, very quick to use"
+  },
+  {
+   "id": "P16",
+   "W": 11,
+   "l": "Prep sheet has proper headings for each aisle (Meat, Produce, Dairy) so the shopping list is easy to move through"
+  },
+  {
+   "id": "P16",
+   "W": 11,
+   "l": "Add buttons in Goes well with have clear labels like 'Add Coconut ice'"
+  },
+  {
+   "id": "P16",
+   "W": 11,
+   "l": "Mark as watched button names the film"
+  },
+  {
+   "id": "P33",
+   "W": 17,
+   "l": "The printed menus are the star. Each film gets its own layout (Jaws ship's mess ration card, Us funhouse snack bar, Hobbit recipe box) and they look like real props"
+  },
+  {
+   "id": "P33",
+   "W": 17,
+   "l": "The marquee showing the picked film's title is a great touch"
+  },
+  {
+   "id": "P33",
+   "W": 17,
+   "l": "Vegetarian mode really rewrites dishes (mushroom 'calamari', hearts of palm lobster rolls, soy instead of Worcestershire, vegetarian parmesan-style cheese) instead of just dropping meat"
+  },
+  {
+   "id": "P33",
+   "W": 17,
+   "l": "The video store tape cards with the trailer TV and rating sticker are beautifully done"
+  },
+  {
+   "id": "P33",
+   "W": 17,
+   "l": "Contrast is mostly fine; only small uppercase labels at 11.5px"
+  },
+  {
+   "id": "P35",
+   "W": 29,
+   "l": "Fast: first paint about 0.5 s on phone, about 1.1 MB transferred"
+  },
+  {
+   "id": "P35",
+   "W": 29,
+   "l": "Each film menu is unique and themed, which is the real moat"
+  },
+  {
+   "id": "P35",
+   "W": 29,
+   "l": "Guest scaling from 1 to 24 and make-ahead notes are genuinely useful"
+  },
+  {
+   "id": "P35",
+   "W": 29,
+   "l": "Streaming info for Australian services (Binge, Stan, Foxtel Now, SBS, ABC iview)"
+  },
+  {
+   "id": "P35",
+   "W": 29,
+   "l": "Video store seasonal aisles (Halloween, Melbourne Cup, Christmas countdown) give a reason to come back"
+  },
+  {
+   "id": "P35",
+   "W": 29,
+   "l": "Saved menus and lock-in survive a reload"
+  },
+  {
+   "id": "P38",
+   "W": 23,
+   "l": "No cookies, no analytics, no ad trackers at all"
+  },
+  {
+   "id": "P38",
+   "W": 23,
+   "l": "Everything is kept on the device by default and Reset everything clears it"
+  },
+  {
+   "id": "P38",
+   "W": 23,
+   "l": "Share link only carries the film name (?film=...), nothing personal"
+  },
+  {
+   "id": "P38",
+   "W": 23,
+   "l": "Reset options are split (stubs, saved menus, everything)"
+  },
+  {
+   "id": "P29",
+   "W": 23,
+   "l": "Release years were right on all 49 I checked"
+  },
+  {
+   "id": "P29",
+   "W": 23,
+   "l": "Star Wars in release order includes Rogue One and Solo in the right spots; Middle-earth runs Rings then Hobbits by release"
+  },
+  {
+   "id": "P29",
+   "W": 23,
+   "l": "Mad Max 2 under its proper Australian title, and Furiosa included"
+  },
+  {
+   "id": "P29",
+   "W": 23,
+   "l": "Godfather, Back to the Future, Indiana Jones, Lethal Weapon, Harry Potter, Toy Story and the Dark Knight runs are complete"
+  },
+  {
+   "id": "P29",
+   "W": 23,
+   "l": "Marathon menu logic (snack and drink per film, mains first and last, dessert at halfway) is clever, and you can untick films"
+  },
+  {
+   "id": "P25",
+   "W": 23,
+   "l": "Methods read like a real cook wrote them: 185C for squid, 170C for arancini, 240C then 160C for crackling, salt the pork skin and dry it overnight"
+  },
+  {
+   "id": "P25",
+   "W": 23,
+   "l": "Make-ahead notes are genuinely useful for a dinner party"
+  },
+  {
+   "id": "P25",
+   "W": 23,
+   "l": "Proper Aussie ingredients: tasty cheese, thickened cream, cornflour sponge, kabana and pickled onions for The Castle"
+  },
+  {
+   "id": "P25",
+   "W": 23,
+   "l": "Timpano for Big Night shows someone knows the film"
+  },
+  {
+   "id": "P25",
+   "W": 23,
+   "l": "Vegetarian swaps are sensible, not lazy"
+  },
+  {
+   "id": "P08",
+   "W": 23,
+   "l": "The cinema front and spin wheel, the kids will love it on the TV"
+  },
+  {
+   "id": "P08",
+   "W": 23,
+   "l": "Shopping list grouped by aisle"
+  },
+  {
+   "id": "P08",
+   "W": 23,
+   "l": "Marathon plan for Toy Story 1 to 4 with one combined menu"
+  },
+  {
+   "id": "P09",
+   "W": 29,
+   "l": "Fairy bread and milk bottles suggestions, the toddler will eat that"
+  },
+  {
+   "id": "P09",
+   "W": 29,
+   "l": "Where to stream it is right there"
+  },
+  {
+   "id": "P11",
+   "W": 40,
+   "l": "Candy bar: Aussie party food like chocolate crackles, honey joys, fairy bread, and the Add button drops it straight onto the list"
+  },
+  {
+   "id": "P11",
+   "W": 40,
+   "l": "Video store with a member card, $2 Tuesday and a Halloween all ages shelf"
+  },
+  {
+   "id": "P11",
+   "W": 40,
+   "l": "Kids mode badge in the video store"
+  },
+  {
+   "id": "P15",
+   "W": 17,
+   "l": "Lock in with a countdown and cook night"
+  },
+  {
+   "id": "P15",
+   "W": 17,
+   "l": "Locked-in shopping list keeps my ticks"
+  },
+  {
+   "id": "P15",
+   "W": 17,
+   "l": "Send to Notes or Reminders from the shopping list"
+  },
+  {
+   "id": "P15",
+   "W": 17,
+   "l": "Kids mode double feature picked Onward and Toy Story 4, spot on"
+  },
+  {
+   "id": "P22",
+   "W": 40,
+   "l": "Kids mode forcing alcohol-free drinks automatically"
+  },
+  {
+   "id": "P22",
+   "W": 40,
+   "l": "Spin animation and the ticket stubs"
+  },
+  {
+   "id": "P22",
+   "W": 40,
+   "l": "Shopping list checkboxes that survive a reload"
+  },
+  {
+   "id": "P39",
+   "W": 23,
+   "l": "Aisle grouping matches how I walk Woolies"
+  },
+  {
+   "id": "P39",
+   "W": 23,
+   "l": "Ticks persist after reload"
+  },
+  {
+   "id": "P39",
+   "W": 23,
+   "l": "Locked-in list with big checkboxes and Send to Notes"
+  },
+  {
+   "id": "P39",
+   "W": 23,
+   "l": "Copy text gives a clean list I can text to my eldest"
+  },
+  {
+   "id": "P40",
+   "W": 34,
+   "l": "Spin the wheel button sits right under my thumb"
+  },
+  {
+   "id": "P40",
+   "W": 34,
+   "l": "Streaming and rent options right on the film"
+  },
+  {
+   "id": "P40",
+   "W": 34,
+   "l": "Copy text is a neat message to send"
+  },
+  {
+   "id": "P06",
+   "W": 40,
+   "l": "Make-ahead notes on every dish"
+  },
+  {
+   "id": "P06",
+   "W": 40,
+   "l": "Shopping list grouped by aisle with tick boxes in the PDF"
+  },
+  {
+   "id": "P06",
+   "W": 40,
+   "l": "The Ghostbusters work order menu is genuinely funny and looks great printed"
+  },
+  {
+   "id": "P06",
+   "W": 40,
+   "l": "Choose dishes to trim the menu and have times follow"
+  },
+  {
+   "id": "P12",
+   "W": 23,
+   "l": "The printed menu cards would look brilliant on the table"
+  },
+  {
+   "id": "P12",
+   "W": 23,
+   "l": "Vegetarian swaps prove the swap engine exists"
+  },
+  {
+   "id": "P12",
+   "W": 23,
+   "l": "Guest stepper up to 24"
+  },
+  {
+   "id": "P19",
+   "W": 23,
+   "l": "Portobello steak swap is a nice touch"
+  },
+  {
+   "id": "P19",
+   "W": 23,
+   "l": "The date night menu card looks lovely"
+  },
+  {
+   "id": "P19",
+   "W": 23,
+   "l": "Make-ahead notes for a relaxed date night"
+  },
+  {
+   "id": "P21",
+   "W": 17,
+   "l": "Candy bar Add goes straight onto the locked film's shopping list with a 'See the shopping list' toast"
+  },
+  {
+   "id": "P21",
+   "W": 17,
+   "l": "Fairy bread and chocolate crackles, proper Aussie kid party food"
+  },
+  {
+   "id": "P21",
+   "W": 17,
+   "l": "Video store Halloween aisle with 'spin this aisle'"
+  },
+  {
+   "id": "P21",
+   "W": 17,
+   "l": "Scales to 5 without me doing maths"
+  },
+  {
+   "id": "P26",
+   "W": 11,
+   "l": "Andy's birthday cake and Pizza Planet punch are perfect for the kids"
+  },
+  {
+   "id": "P26",
+   "W": 11,
+   "l": "Shopping list by aisle"
+  },
+  {
+   "id": "P26",
+   "W": 11,
+   "l": "Gorgeous theatre front"
+  },
+  {
+   "id": "P28",
+   "W": 17,
+   "l": "Kids mode was easy to find and works"
+  },
+  {
+   "id": "P28",
+   "W": 17,
+   "l": "Fairy bread and fish shaped food, the grandchild would love it"
+  },
+  {
+   "id": "P28",
+   "W": 17,
+   "l": "Shopping list grouped by aisle so she can see the Dairy section"
+  },
+  {
+   "id": "P30",
+   "W": 23,
+   "l": "Midnight Monster Feast theme and the Halloween aisle in the video store"
+  },
+  {
+   "id": "P30",
+   "W": 23,
+   "l": "Pumpkin pie with a piped mask, babysitter's popcorn, chilli in a pumpkin"
+  },
+  {
+   "id": "P30",
+   "W": 23,
+   "l": "The menu writing is clever and the cards look great printed"
+  }
+ ],
+ "quotes": [
+  {
+   "id": "P01",
+   "name": "Priya",
+   "age": 34,
+   "q": "The prep sheet gets vegetarian right most of the time, but then the menu my kids are reading says pork and the double feature wants me to buy lamb. And there's egg in almost everything, so I'm still checking every line myself.",
+   "pay": "maybe, a few dollars once if egg-free and no-beef filters worked everywhere",
+   "done": false,
+   "gave_up": "Double feature shopping list listed 2kg lamb shoulder with Vegetarian on",
+   "nps": 6
+  },
+  {
+   "id": "P02",
+   "name": "Yusuf",
+   "age": 41,
+   "q": "It's a great idea for the cousins but every film I tried had pork in it. If I have to go through every dish myself I may as well just order pizza.",
+   "pay": "no, not until there's a halal setting",
+   "done": false,
+   "gave_up": "Pork in all four films with no way to remove it except going fully vegetarian",
+   "nps": 3
+  },
+  {
+   "id": "P03",
+   "name": "Miriam",
+   "age": 58,
+   "q": "It looks beautiful and the films are the ones we love, but nearly every menu mixes meat and milk or has lobster in it. I'd be rewriting dinner from scratch.",
+   "pay": "no",
+   "done": false,
+   "gave_up": "Meat and dairy combined in the same dish (Casablanca briouats brushed with butter) and shellfish mains",
+   "nps": 4
+  },
+  {
+   "id": "P04",
+   "name": "Harjit",
+   "age": 29,
+   "q": "Veg and no alcohol together actually worked on the prep sheet, which surprised me. I just wish the printed menu matched and there was one Hindi film in there for my nani.",
+   "pay": "maybe, small one-off for a family pack with Indian films",
+   "done": true,
+   "gave_up": null,
+   "nps": 7
+  },
+  {
+   "id": "P23",
+   "name": "Raj",
+   "age": 50,
+   "q": "The engine is clearly there because Vegetarian swaps every dish. Give me a 'no beef' switch and a 'one veg plate' option and I'd use it every week.",
+   "pay": "maybe, if it had ingredient exclusions and mixed menus",
+   "done": false,
+   "gave_up": "Could not build a menu that is half vegetarian and beef-free",
+   "nps": 5
+  },
+  {
+   "id": "P36",
+   "name": "Ruth",
+   "age": 49,
+   "q": "Outside Lent I'd use this, the Mamma Mia menu is lovely. But we fast a lot of the year and every vegetarian menu is full of feta and eggs.",
+   "pay": "maybe, if a fasting mode existed",
+   "done": false,
+   "gave_up": "Every vegetarian menu built on cheese, butter and eggs",
+   "nps": 5
+  },
+  {
+   "id": "P42",
+   "name": "Arjun",
+   "age": 33,
+   "q": "I didn't expect Jain support, and there isn't any. Onions, garlic or potatoes in every menu I tried. The data's structured enough that an ingredient exclude list wouldn't be hard.",
+   "pay": "no",
+   "done": false,
+   "gave_up": "First shopping list (Toy Story: 1kg baby potatoes, chives, 4 eggs)",
+   "nps": 3
+  },
+  {
+   "id": "P05",
+   "name": "Linh",
+   "age": 26,
+   "q": "Honestly the video store and candy bar are the fun bit, we'd use those every week. But I need to know if dinner is $20 or $80 before I send it to the group chat.",
+   "pay": "maybe, a one-off $2 to $3 if it had a cheap mode and a cost estimate",
+   "done": true,
+   "gave_up": null,
+   "nps": 7
+  },
+  {
+   "id": "P13",
+   "name": "Grace",
+   "age": 19,
+   "q": "I've got a kettle and a microwave that smells like popcorn already. Love the look, but Lazy night still wants me to grill corn.",
+   "pay": "no",
+   "done": false,
+   "gave_up": "Cooking: every Lazy night menu I got still needed a stove, grill or oven, so I fell back to buying lollies from the Candy bar",
+   "nps": 5
+  },
+  {
+   "id": "P24",
+   "name": "Chloe",
+   "age": 22,
+   "q": "It's so cute I'd post it, but the save gives me a square with tiny writing. Give me a story-sized one with the poster and I'm sold.",
+   "pay": "maybe, $2 to $4 for story templates and themed packs",
+   "done": true,
+   "gave_up": null,
+   "nps": 8
+  },
+  {
+   "id": "P31",
+   "name": "Ahmed",
+   "age": 27,
+   "q": "No alcohol is done properly, I'll give it that. But no halal option and bacon in the sandwich means I'm checking every recipe myself.",
+   "pay": "no",
+   "done": true,
+   "gave_up": null,
+   "nps": 5
+  },
+  {
+   "id": "P41",
+   "name": "Fatima",
+   "age": 23,
+   "q": "The candy bar is the best bit, but half those lollies have gelatine and it doesn't say. I'd still have to read every packet.",
+   "pay": "no",
+   "done": true,
+   "gave_up": null,
+   "nps": 6
+  },
+  {
+   "id": "P37",
+   "name": "Isaac",
+   "age": 26,
+   "q": "Cool once, then I want it in under three seconds. And a movie app with no Mario or Sonic is missing my whole crowd.",
+   "pay": "no, unless it adds a gaming aisle and instant mode",
+   "done": true,
+   "gave_up": null,
+   "nps": 6
+  },
+  {
+   "id": "P18",
+   "name": "Leo",
+   "age": 24,
+   "q": "The food's legit, sweetbreads for the boys is a flex. Just give me the steps one line at a time in a normal font, those fancy numbers mess with me.",
+   "pay": "yes, $5 one-off for a chef mode with a run sheet and step timers",
+   "done": true,
+   "gave_up": null,
+   "nps": 8
+  },
+  {
+   "id": "P07",
+   "name": "Aunty Rose",
+   "age": 63,
+   "q": "The kids would go mad for the wheel and the lollies. But I pressed back and the whole thing disappeared on me, and that little menu I can't read without my glasses and even then.",
+   "pay": "no, but would happily use it free for school holidays",
+   "done": true,
+   "gave_up": null,
+   "nps": 6
+  },
+  {
+   "id": "P10",
+   "name": "Bazza",
+   "age": 52,
+   "q": "Spun it, got a film, fair enough. Then it wants me to make shrimp cocktail and a michelada. Give me the chops and veg and I'm happy.",
+   "pay": "no",
+   "done": true,
+   "gave_up": null,
+   "nps": 5
+  },
+  {
+   "id": "P14",
+   "name": "Doug",
+   "age": 76,
+   "q": "I typed Singing in the Rain and it told me there was no such film. Then I found Casablanca and the screen jumped to a picture of a picture theatre and I thought I'd broken it.",
+   "pay": "no",
+   "done": true,
+   "gave_up": null,
+   "nps": 4
+  },
+  {
+   "id": "P17",
+   "name": "Pat",
+   "age": 67,
+   "q": "The bits with big gold buttons I can manage. The actual menu, the part I came for, is like reading the fine print on a pill bottle.",
+   "pay": "no",
+   "done": false,
+   "gave_up": "Reading the printed menu on the phone; dish names are a few pixels high and tapping does not enlarge them",
+   "nps": 3
+  },
+  {
+   "id": "P32",
+   "name": "Bev",
+   "age": 71,
+   "q": "Once I found it, it was the prettiest menu I have ever seen and I'll put it on the table. Getting there took me three goes and a grandson would have helped.",
+   "pay": "maybe, a few dollars for printable menu packs for themed afternoons",
+   "done": true,
+   "gave_up": null,
+   "nps": 7
+  },
+  {
+   "id": "P20",
+   "name": "Nadia",
+   "age": 39,
+   "q": "I tick no alcohol and the menu still says vodka. Then in the other tab it is okay. I need it to say halal, and to say it in easy words.",
+   "pay": "no",
+   "done": true,
+   "gave_up": null,
+   "nps": 5
+  },
+  {
+   "id": "P34",
+   "name": "Tanvir",
+   "age": 40,
+   "q": "Half a minute to open, another half a minute for the wheel. My kids are already fighting by then. And still no halal button.",
+   "pay": "no",
+   "done": true,
+   "gave_up": null,
+   "nps": 4
+  },
+  {
+   "id": "P16",
+   "name": "Sam",
+   "age": 28,
+   "q": "The bones are better than most sites. Search, the prep sheet headings and labelled buttons all work. But I spun the wheel and my phone went silent, so I had no idea what film I'd landed on.",
+   "pay": "no, not until spin results are announced and recipes read properly; maybe a few dollars after that",
+   "done": true,
+   "gave_up": null,
+   "nps": 5
+  },
+  {
+   "id": "P33",
+   "name": "Jordan",
+   "age": 32,
+   "q": "This is the most fun I've seen in a recipe app, the menus feel like real props. It just needs to stop opening on a ghost Ghostbusters and to show me something when I tap a tab.",
+   "pay": "maybe, $5 to 10 one-off for printable menu packs or a party kit; not a subscription",
+   "done": true,
+   "gave_up": null,
+   "nps": 8
+  },
+  {
+   "id": "P35",
+   "name": "Kate",
+   "age": 35,
+   "q": "The content is the product here, 850 bespoke menus is a lot of work and it shows. What's missing is the boring stuff: a clear first step, a privacy page and a way to get the shopping list onto my phone.",
+   "pay": "maybe: $4 to 6 one-off or about $15 a year for sync, holiday party packs and shopping list export; would not pay for the core spin",
+   "done": true,
+   "gave_up": null,
+   "nps": 7
+  },
+  {
+   "id": "P38",
+   "name": "Lisa",
+   "age": 53,
+   "q": "It's actually very tidy, nothing is tracked and it all stays on my computer. But the minute it offers to put my card online with a four digit PIN, I want to know where it's going, and nothing tells me.",
+   "pay": "no for the app itself; maybe a small amount for sync if it explained where data lives and let me delete it",
+   "done": false,
+   "gave_up": "Put my card online: could not find out what gets uploaded, where to, or how to delete it",
+   "nps": 6
+  },
+  {
+   "id": "P29",
+   "name": "Dave",
+   "age": 60,
+   "q": "The years are spot on and the marathon menu idea is a beauty. But don't tell me Alien is part 1 of 2, and you can't go from Rocky IV straight to Creed.",
+   "pay": "no; maybe $5 if the series were complete and the marathons had running times",
+   "done": true,
+   "gave_up": null,
+   "nps": 6
+  },
+  {
+   "id": "P25",
+   "name": "Marco",
+   "age": 47,
+   "q": "Whoever wrote these methods can cook, the temperatures are right and the make-ahead notes are gold. But give me an ingredient list per dish, and don't tell me chilling a can of Coke is four hours of cooking.",
+   "pay": "maybe: $5 to 10 for proper per-dish recipe cards and a reliable scaler for a big family; not for the current format",
+   "done": true,
+   "gave_up": null,
+   "nps": 7
+  },
+  {
+   "id": "P08",
+   "name": "Sione",
+   "age": 38,
+   "q": "Mate, it's beautiful and the youth will love the wheel, but when I set 20 people and the double feature still says serves 4, I'm back doing maths on the back of the church bulletin.",
+   "pay": "maybe, a few dollars a year if crowd sizes actually flow through everything",
+   "done": false,
+   "gave_up": "Double feature shopping list still says serves 4 for a youth group of 20",
+   "nps": 6
+  },
+  {
+   "id": "P09",
+   "name": "Marisol",
+   "age": 31,
+   "q": "I turned on lazy night and it gave me marmalade sandwiches and a cocoa. That's not dinner, love, that's what I eat at 3am on night shift.",
+   "pay": "no",
+   "done": false,
+   "gave_up": "Lazy night gave snacks and a drink, not dinner, and did nothing on Home Alone",
+   "nps": 5
+  },
+  {
+   "id": "P11",
+   "name": "Shona",
+   "age": 44,
+   "q": "The candy bar is pure magic, my two would spend an hour in it. I just need to know it won't cost me sixty quid before I start.",
+   "pay": "maybe, small one-off for a kids pack",
+   "done": true,
+   "gave_up": null,
+   "nps": 7
+  },
+  {
+   "id": "P15",
+   "name": "Amara",
+   "age": 36,
+   "q": "Locking in Moana for Saturday at six is exactly how my house runs. Now tell me what time to start cooking and I'm sold.",
+   "pay": "yes, a few dollars a month for timelines and calendar reminders",
+   "done": true,
+   "gave_up": null,
+   "nps": 7
+  },
+  {
+   "id": "P22",
+   "name": "Emma",
+   "age": 37,
+   "q": "It's gorgeous, but the first family film I opened was E.T. and it's peanut butter three ways with no warning. I can't hand this to my husband to cook from.",
+   "pay": "maybe, if allergens were properly flagged, I'd pay for that peace of mind",
+   "done": false,
+   "gave_up": "No nut filter or warnings; E.T. menu is peanut butter end to end",
+   "nps": 3
+  },
+  {
+   "id": "P39",
+   "name": "Tui",
+   "age": 45,
+   "q": "I cook for 400 kids a day so I know a scaled list when I see one. Good bones, but nobody buys 20 tablespoons of flour and nobody's buying 10 lamb racks for a movie night.",
+   "pay": "maybe, if it did proper crowd quantities and costs",
+   "done": true,
+   "gave_up": null,
+   "nps": 6
+  },
+  {
+   "id": "P40",
+   "name": "Noah",
+   "age": 31,
+   "q": "Spin button's perfect one-handed. Then it tells me to start cooking yesterday. Lazy night needs to mean actual dinner with zero effort, not a cocktail.",
+   "pay": "no",
+   "done": false,
+   "gave_up": "Lazy night left a knish snack and a whisky sour, no actual dinner",
+   "nps": 5
+  },
+  {
+   "id": "P06",
+   "name": "Wei",
+   "age": 45,
+   "q": "The prep sheet is better than most recipe sites, and the make-ahead notes are gold. But if you know my showtime and every step's minutes, just tell me what time to start the sauce.",
+   "pay": "maybe, a few dollars once for a run sheet and method that scales properly",
+   "done": true,
+   "gave_up": null,
+   "nps": 7
+  },
+  {
+   "id": "P12",
+   "name": "Jake and Tom",
+   "age": 33,
+   "q": "It's gorgeous and I'd print the menu for the table in a heartbeat, but Tom can't eat four of the five dishes and the app doesn't even tell you that. Give me a gluten free toggle and I'm in.",
+   "pay": "maybe, would pay for proper allergen filters",
+   "done": false,
+   "gave_up": "Checking the Godfather menu for Tom: 4 of 5 dishes need wheat and there is no gluten free option or swap",
+   "nps": 5
+  },
+  {
+   "id": "P19",
+   "name": "Kirra",
+   "age": 30,
+   "q": "I ticked vegetarian and the menu card still says sirloin. Then the actual recipes are full of butter, eggs and honey. Pretty app, not for me.",
+   "pay": "no",
+   "done": false,
+   "gave_up": "Reading the vegetarian Valentine's Day list: goat's cheese, cream cheese, 245g butter, eggs, buttermilk, honey",
+   "nps": 4
+  },
+  {
+   "id": "P21",
+   "name": "Hemi",
+   "age": 35,
+   "q": "Easy enough on the phone and the kids would love the candy bar. Just let me pick a Tuesday, I'm not home most weekends.",
+   "pay": "maybe, small one-off to plan a whole week home",
+   "done": true,
+   "gave_up": null,
+   "nps": 8
+  },
+  {
+   "id": "P26",
+   "name": "Hannah",
+   "age": 42,
+   "q": "My kids would love this, but I had to Google 175C and figure out what 400 grams of butter is in sticks. One units switch and it's perfect.",
+   "pay": "maybe, for a US units mode",
+   "done": true,
+   "gave_up": null,
+   "nps": 6
+  },
+  {
+   "id": "P28",
+   "name": "Mei",
+   "age": 55,
+   "q": "Very beautiful, my grandson would like Nemo. But I cannot have the dairy and the small words are hard for me to read.",
+   "pay": "no",
+   "done": false,
+   "gave_up": "Lock in: earliest showtime is 5pm and the dishes need dairy swaps she has to work out herself",
+   "nps": 5
+  },
+  {
+   "id": "P30",
+   "name": "Steph",
+   "age": 29,
+   "q": "The Halloween menu is so good I want to frame it. But I can't build my own marathon and Scream has no sequels, which is wild for a horror night.",
+   "pay": "maybe, for custom marathons with a combined shopping list",
+   "done": false,
+   "gave_up": "Trying to build a 4 film Halloween horror marathon of her own picks",
+   "nps": 7
+  }
+ ]
+}
