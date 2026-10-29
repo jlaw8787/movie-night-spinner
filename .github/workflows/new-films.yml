@@ -1,10 +1,11 @@
 name: New films from TMDB
-# Runs only on the wip/new-films branch: looks up the films in wip/newfilms/films-new.txt and commits
+# Looks up the films in wip/newfilms/films-new.txt on the wip/new-films branch and commits
 # wip/newfilms/tmdb.json back to that branch. Never touches main or the live site.
+# Runs on a timer, or by the Run workflow button, and does nothing once tmdb.json exists.
 on:
-  push:
-    branches: [wip/new-films]
-    paths: ['wip/newfilms/films-new.txt', 'scripts/new_films_tmdb.py']
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch: {}
 permissions:
   contents: write
 jobs:
@@ -12,14 +13,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: wip/new-films
+      - name: Already done?
+        id: done
+        run: if [ -f wip/newfilms/tmdb.json ]; then echo "skip=1" >> "$GITHUB_OUTPUT"; fi
       - uses: actions/setup-python@v5
+        if: steps.done.outputs.skip != '1'
         with:
           python-version: '3.12'
       - name: Look the films up on TMDB
+        if: steps.done.outputs.skip != '1'
         env:
           TMDB_KEY: ${{ secrets.TMDB_KEY }}
         run: python3 scripts/new_films_tmdb.py
-      - name: Commit to this branch
+      - name: Commit to wip/new-films
+        if: steps.done.outputs.skip != '1'
         run: |
           git add wip/newfilms/tmdb.json
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
