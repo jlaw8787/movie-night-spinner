@@ -1,7 +1,7 @@
 # Handover (Oct 26, 21:00): read this first in a new chat
 
 Repo jlaw8787/movie-night-spinner (GitHub Pages). Work in a worktree on branch wip/menu-polish. Live = main.
-Live as of commit 815a976d (recipe numbers: per-dish ingredients, steps follow guests, waiting time apart, tidy units, guests on double features and marathons, up to 60 guests, Oct 30). Earlier today: printed menus follow Vegetarian and No alcohol (8091578b). Checks: recipecheck.py, dietsweep.py, livefit.py.
+Live as of commit d48d81de (printing: browser Print, A4 pages, Print button, PDF progress, tap to enlarge on phones, Oct 30). Earlier: recipe numbers (815a976d), diet-following menus (8091578b). Checks: printcheck.py, recipecheck.py, dietsweep.py, livefit.py.
 
 ## Owner rules (non-negotiable)
 - Nothing goes live without the owner's approval. Ask with tappable options.
