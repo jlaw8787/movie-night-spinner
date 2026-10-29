@@ -1,7 +1,7 @@
 # Handover (Oct 26, 21:00): read this first in a new chat
 
 Repo jlaw8787/movie-night-spinner (GitHub Pages). Work in a worktree on branch wip/menu-polish. Live = main.
-Live as of commit 632fd084 (walkthrough fixes and rentals, Oct 29).
+Live as of commit 5b6c8f8a (pop-up tidy: See the menu on every tape, X and tap-outside close on every pop-up, pinned tape buttons on phones, Oct 29). Check: wip/genre/lib/popcheck.py SHOTDIR (52).
 
 ## Owner rules (non-negotiable)
 - Nothing goes live without the owner's approval. Ask with tappable options.
