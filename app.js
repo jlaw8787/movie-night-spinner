@@ -893,6 +893,7 @@ async function show(f,preferSig){
   const id=++renderId;
   current=f;
   updateWatchButton();try{updateFav()}catch(e){}
+  try{seriesNote(f)}catch(e){}
   await Promise.all([ensureExact(f),fmtLoad(f)]);
   if(id!==renderId)return;
   let menu=makeMenu(f,preferSig);if(lazy)menu=lazyMenu(menu);menu.counter=counterShop(f.id);
@@ -1943,3 +1944,60 @@ renderFav();setSync();
  let t=0;const later=()=>{clearTimeout(t);t=setTimeout(toResults,250)};
  const s=$("shopSearch");if(s)s.addEventListener("input",later);
  ["shopDecade","shopSvc","shopUnwatched","shopKids"].forEach(id=>{const el=$(id);if(el)el.addEventListener("change",later)})}
+
+/* series: where a film sits in its run, a one-tap swap to the first film, and a marathon menu for the whole run */
+var _seriesBy=null;function seriesOf(id){if(!_seriesBy){_seriesBy={};(window.SERIES||[]).forEach(sr=>sr.release.forEach(x=>{_seriesBy[x]=sr}))}return _seriesBy[id]}
+function seriesOrderPref(){try{return localStorage.getItem("mns-series-order")==="story"?"story":"release"}catch(e){return "release"}}
+function seriesList(sr,ord){return (ord==="story"&&sr.story?sr.story:sr.release).map(id=>FILMS.find(f=>f.id===id)).filter(Boolean)}
+function seriesNote(f){
+  const box=$("seriesNote");if(!box)return;const sr=f&&seriesOf(f.id);
+  if(!sr){box.hidden=true;box.innerHTML="";return}
+  const ord=seriesOrderPref(),films=seriesList(sr,ord),i=films.findIndex(x=>x.id===f.id),first=films[0];
+  const how=sr.story?` in ${ord==="story"?"story":"release"} order`:"";
+  box.innerHTML=`<p>Part <b>${i+1} of ${films.length}</b> in ${ESC(sr.name)}${how}.</p>${i>0?`<button type="button" class="go" data-sr="first">Start with ${ESC(first.title)}</button>`:""}<button type="button" data-sr="run">Plan a marathon</button>`;
+  box.hidden=false;
+  box.onclick=e=>{const k=e.target.closest("[data-sr]");if(!k)return;
+    if(k.dataset.sr==="first"){replay(first);addHistory(first);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})}
+    if(k.dataset.sr==="run")openMarathon(sr)};
+}
+async function marathonMenu(films){
+  await Promise.all(films.map(ensureExact));
+  const M=films.map(f=>makeMenu(f,true)),pickIt=(menu,it,film)=>Object.assign({},it,{film:film.title,shop:itemShop(menu,it)});
+  const one=(k,i)=>M[i]&&M[i][k]&&M[i][k][0]?pickIt(M[i],M[i][k][0],films[i]):null;
+  const last=films.length-1,mid=Math.floor(last/2);
+  const m={s:films.map((f,i)=>one("s",i)).filter(Boolean),
+    m:[one("m",0),films.length>=4?one("m",last):null].filter(Boolean),
+    w:[one("w",mid)||one("w",last)||one("w",0)].filter(Boolean),
+    d:films.map((f,i)=>one("d",i)).filter(Boolean)};
+  m.counter=[...new Set(films.flatMap(f=>counterShop(f.id)))];
+  return m;
+}
+function openMarathon(sr){
+  const modalTrigger=document.activeElement;
+  let ord=seriesOrderPref(),off=new Set();
+  const o=document.createElement("dialog");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",sr.name+" marathon");
+  let films=[],menu=null;
+  const li=it=>`<li>${ESC(it.n)} <small>(${ESC(it.film)})</small></li>`;
+  const draw=async()=>{
+    const all=seriesList(sr,ord);films=all.filter(f=>!off.has(f.id));
+    menu=films.length?await marathonMenu(films):{s:[],m:[],w:[],d:[],counter:[]};
+    const n=films.length,mains=menu.m.length>1?"mains from the first and last film":"the main from the first film";
+    o.innerHTML=`<div class="df"><h3>${ESC(sr.name)} marathon</h3>
+    ${sr.story?`<div class="mr-order" role="group" aria-label="Watch order"><button type="button" data-o="release" aria-pressed="${ord==="release"}">Release order</button><button type="button" data-o="story" aria-pressed="${ord==="story"}">Story order</button></div>`:""}
+    <ol class="mr-films">${all.map((f,i)=>`<li><label><input type="checkbox" data-f="${ESC(f.id)}"${off.has(f.id)?"":" checked"}><span class="n">${i+1}</span>${ESC(f.title)} (${f.year})</label></li>`).join("")}</ol>
+    ${n?`<p class="msg">One menu for ${n} film${n===1?"":"s"}, serves 4. A snack and a drink from each film, ${mains}, and dessert at the halfway break.</p>
+    <h4>Snacks</h4><ul>${menu.s.map(li).join("")}</ul><h4>${menu.m.length>1?"Mains":"Main"}</h4><ul>${menu.m.map(li).join("")}</ul><h4>Halfway dessert</h4><ul>${menu.w.map(li).join("")}</ul><h4>To drink</h4><ul>${menu.d.map(li).join("")}</ul>`:`<p class="msg">Tick at least one film.</p>`}
+    <div class="acts">${n?`<button type="button" class="go" data-a="first">Start with ${ESC(films[0].title)}</button><button type="button" data-a="shop">Shopping list</button>`:""}<button type="button" data-a="done">Done</button></div></div>`;
+  };
+  const close=()=>dismissModal(o);
+  o.addEventListener("click",async e=>{
+    if(e.target===o)return close();
+    const ob=e.target.closest("[data-o]");if(ob){ord=ob.dataset.o;try{localStorage.setItem("mns-series-order",ord)}catch(err){}await draw();if(current)seriesNote(current);o.querySelector(`[data-o="${ord}"]`).focus();return}
+    const k=e.target.dataset&&e.target.dataset.a;if(!k)return;
+    if(k==="done")close();
+    if(k==="first"&&films[0]){const f=films[0];close();setView("wheel");replay(f);addHistory(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})}
+    if(k==="shop"&&films[0])openTrolley(films[0],menu,sr.name+" marathon");
+  });
+  o.addEventListener("change",async e=>{const id=e.target.dataset&&e.target.dataset.f;if(!id)return;e.target.checked?off.delete(id):off.add(id);await draw();const b=o.querySelector(`[data-f="${CSS.escape(id)}"]`);if(b)b.focus()});
+  draw().then(()=>{mountModal(o,".go",modalTrigger);buzz([20,40,20])});
+}
