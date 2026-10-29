@@ -199,8 +199,8 @@ async def scenario(b, name, ctxopts):
         return f"decade, service, kids gave {out}" if all(out) else False
     await S("Video store filters", shopfilters)
     async def rent():
-        await pg.evaluate("document.querySelector('#shopAisles .tape').scrollIntoView({block:'center'})")
-        await pg.click("#shopAisles .tape"); await pg.wait_for_timeout(900)
+        await pg.evaluate("document.querySelector('#shopAisles .tape:not(.out)').scrollIntoView({block:'center'})")
+        await pg.click("#shopAisles .tape:not(.out)"); await pg.wait_for_timeout(900)
         rb = await pg.query_selector("dialog[open] .rent, .case .rent")
         if not rb: return False
         await rb.click(); await pg.wait_for_timeout(1200)
