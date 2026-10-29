@@ -1108,7 +1108,11 @@ const SHOP_AISLE_OF={};SHOP_AISLES.forEach(([n,ts])=>ts.forEach(t=>SHOP_AISLE_OF
 const TMDB_IMG_SHOP="https://image.tmdb.org/t/p/";
 const buzz=p=>{try{navigator.vibrate&&navigator.vibrate(p)}catch(e){}};
 const hashN=s=>{let h=7;for(const c of s)h=(h*31+c.charCodeAt(0))>>>0;return h};
-const isPick=f=>hashN(f.id)%9===0,isNew=f=>+f.year>=2020;
+/* staff picks: a hand-picked pool of well-loved films, 12 on the shelf each week; the new release wall: the 20 newest films */
+const STAFF_POOL=["Back to the Future (1985)", "The Princess Bride (1987)", "Jaws (1975)", "Ghostbusters (1984)", "Raiders of the Lost Ark (1981)", "Die Hard (1988)", "Groundhog Day (1993)", "Paddington 2 (2017)", "My Neighbor Totoro (1988)", "Amélie (2001)", "The Castle (1997)", "Hunt for the Wilderpeople (2016)", "Toy Story (1995)", "Pulp Fiction (1994)", "Goodfellas (1990)", "The Big Lebowski (1998)", "Alien (1979)", "The Thing (1982)", "Mad Max: Fury Road (2015)", "Knives Out (2019)", "Ratatouille (2007)", "Galaxy Quest (1999)", "Hot Fuzz (2007)", "Shaun of the Dead (2004)", "Moonstruck (1987)", "When Harry Met Sally... (1989)", "Strictly Ballroom (1992)", "Muriel's Wedding (1994)", "Babe (1995)", "The Iron Giant (1999)", "Coco (2017)", "Everything Everywhere All at Once (2022)", "Get Out (2017)", "Arrival (2016)", "Casablanca (1942)", "Some Like It Hot (1959)", "Fargo (1996)", "Heat (1995)", "Big Night (1996)", "Chef (2014)", "Ferris Bueller's Day Off (1986)", "The Dish (2000)"];
+let _picks=null,_newest=null;
+const isPick=f=>{if(!_picks){const wk=Math.floor((Date.now()/864e5+3)/7),pool=STAFF_POOL.filter(id=>FILMS.some(x=>x.id===id)),n=pool.length,o=(wk*12)%Math.max(1,n);_picks=new Set(Array.from({length:Math.min(12,n)},(_,i)=>pool[(o+i)%n]))}return _picks.has(f.id)};
+const isNew=f=>{if(!_newest)_newest=new Set(FILMS.slice().sort((a,b)=>b.year-a.year||a.title.localeCompare(b.title)).slice(0,20).map(x=>x.id));return _newest.has(f.id)};
 const HALLOWEEN_SOFT=new Set(["Hocus Pocus","The Addams Family","Addams Family Values","Beetlejuice","Casper","Ghostbusters","Ghostbusters II","Ghostbusters: Afterlife","Ghostbusters: Frozen Empire","The Nightmare Before Christmas","Gremlins","Gremlins 2: The New Batch","The Witches","Little Shop of Horrors","Young Frankenstein","Practical Magic","Monsters, Inc.","Monsters University","Labyrinth","Tremors","The Mummy","The Mummy Returns","Shaun of the Dead","What We Do in the Shadows","The Rocky Horror Picture Show","The Lost Boys","Fright Night","Night at the Museum"]);
 const HALLOWEEN_DARK_EXTRA=new Set(["Alien","Aliens","Jaws","Wolf Creek","Psycho","The Silence of the Lambs"]);
 const isSpookySeason=()=>{const d=new Date();return d.getMonth()===9||(d.getMonth()===10&&d.getDate()===1)};
@@ -1433,12 +1437,16 @@ async function pullSync(){
   renderMember();
 }
 let shopBuilt=false;
+/* the Late Show: horror rated MA15+ or R, kept behind the curtain and off the open Horror aisle */
+const isLate=f=>f.theme==="horror"&&/^(MA15\+|R18\+|R)$/.test(ratingOf(f)||"");
 function tapeHTML(f){
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];
-  const st=watched.has(f.id)?'<span class="sticker back">Seen it</span>':isNew(f)?'<span class="sticker new">New</span>':isPick(f)?'<span class="sticker pick">Staff pick</span>':"";
+  /* one sticker per tape: Seen it, else the new release price, else Staff pick */
+  const seen=watched.has(f.id),nw=!seen&&isNew(f),pk=!seen&&!nw&&isPick(f);
+  const st=seen?'<span class="sticker back">Seen it</span>':pk?'<span class="sticker pick">Staff pick</span>':"";
   const out=isOut(f);
-  const tk=isPick(f)&&!out?talkFor(f):null;
-  return `<button class="tape${isClam(f)?" clam":""}${out?" out":""}${+f.year<1995?" faded":""}" type="button" data-id="${ESC(f.id)}" style="transform:rotate(${(hashN(f.id)%5-2)*.35}deg)">${out?"":st}<span class="box">${p?`<img loading="lazy" decoding="async" alt="" src="${TMDB_IMG_SHOP}w185${ESC(p)}">`:""}${out?'<span class="out-card">All copies out<small>Wait by the returns chute</small></span>':isNew(f)?`<span class="price">${priceTag(f)}</span>`:`<span class="neon${hashN(f.id)%3===0?" peel":""}" style="--nc:${weeklyCol(f)}">Weekly<b>$2</b></span>`}${ratingOf(f)?`<span class="rate ${rateCls(ratingOf(f))}" aria-label="Rated ${ratingOf(f)}">${ratingOf(f)}</span>`:""}</span><span class="tape-t">${ESC(f.title)}</span><span class="tape-y">${f.year}</span>${tk?`<span class="talker"><b>${tk[0]}'s pick</b>${tk[1]}</span>`:""}</button>`;
+  const tk=pk&&!out?talkFor(f):null;
+  return `<button class="tape${isClam(f)?" clam":""}${out?" out":""}${+f.year<1995?" faded":""}" type="button" data-id="${ESC(f.id)}" style="transform:rotate(${(hashN(f.id)%5-2)*.35}deg)">${out?"":st}<span class="box">${p?`<img loading="lazy" decoding="async" alt="" src="${TMDB_IMG_SHOP}w185${ESC(p)}">`:""}${out?'<span class="out-card">All copies out<small>Wait by the returns chute</small></span>':nw?`<span class="price">${priceTag(f)}</span>`:""}${ratingOf(f)?`<span class="rate ${rateCls(ratingOf(f))}" aria-label="Rated ${ratingOf(f)}">${ratingOf(f)}</span>`:""}</span><span class="tape-t">${ESC(f.title)}</span><span class="tape-y">${f.year}</span>${tk?`<span class="talker"><b>${tk[0]}'s pick</b>${tk[1]}</span>`:""}</button>`;
 }
 function renderBoard(){
   const t=isTuesday();
@@ -1446,9 +1454,9 @@ function renderBoard(){
   $("svFri").addEventListener("click",()=>{const kids=FILMS.filter(f=>isKidSafe(f)&&onSvc(f,svc)),late=FILMS.filter(f=>!isKidSafe(f)&&onSvc(f,svc));if(!kids.length||!late.length)return;openDouble(pick(kids),pick(late))});
 }
 function renderCal(cal){
-  const on=cal.filter(c=>c.on),up=cal.filter(c=>!c.on&&c.next).sort((a,b)=>a.day-b.day).slice(0,4);
-  const chip=(c,isOn)=>`<button type="button" class="${isOn?"on":""}" data-season="${c.s.id}" style="--sg:${c.s.c[0]};--sf:${c.s.c[1]}"><b>${ESC(c.s.name)}</b><small>${isOn?"On the shelves now":(d=>d===1?"Tomorrow":`In ${d} days, ${fmtDay(c.day)}`)(daysTo(c.day))}</small></button>`;
-  $("shopCal").innerHTML=`<span class="cal-k">${on.length?"On now":"Coming up"}</span>`+on.map(c=>chip(c,true)).join("")+up.map(c=>chip(c,false)).join("");
+  const on=cal.filter(c=>c.on),up=cal.filter(c=>!c.on&&c.next).sort((a,b)=>a.day-b.day);
+  const chip=(c,isOn)=>`<button type="button" class="${isOn?"on":""}${!isOn&&peekSeason===c.s.id?" peek":""}" aria-pressed="${isOn||peekSeason===c.s.id}" data-season="${c.s.id}" style="--sg:${c.s.c[0]};--sf:${c.s.c[1]}"><b>${ESC(c.s.name)}</b><small>${isOn?"On the shelves now":(d=>d===1?"Tomorrow":`In ${d} days, ${fmtDay(c.day)}`)(daysTo(c.day))}</small></button>`;
+  $("shopCal").innerHTML=(on.length?`<span class="cal-k">On now</span>`+on.map(c=>chip(c,true)).join(""):"")+(up.length?`<span class="cal-k">Coming up</span>`+up.map(c=>chip(c,false)).join(""):"");
 }
 /* shelves fill in the background: the first few tapes of each row go up straight away, the rest as the phone gets a spare moment */
 const SHELF_FIRST=8;let shelfRest=[],shelfJob=0;
@@ -1461,6 +1469,7 @@ function fillShelvesLater(){
     if(shelves.some(sh=>(shelfRest[sh.dataset.k]||[]).length))idle(step)};
   idle(step);
 }
+var peekSeason="";
 function renderShop(){
   shelfRest=[];
   if(!dishesReady)ensureDishes().then(()=>{if(!$("viewShop").hidden)renderShop()});
@@ -1478,9 +1487,9 @@ function renderShop(){
   if(fresh.length&&!q)rows.push(["New release wall",fresh,isTuesday()?"$2 Tuesday is on. Every new release is $2 tonight.":"Overnight $7. Back by 7pm tomorrow.","wall"]);
   if(!q){const picks=list.filter(isPick);if(picks.length)rows.push(["Staff picks",picks])}
   if(q&&list.length)rows.push(["Search results",list.slice().sort((a,b)=>a.title.localeCompare(b.title))]);
-  else SHOP_AISLES.forEach(([n,ts])=>{if(n==="Holiday")return;const r=list.filter(f=>ts.includes(f.theme)).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(r.length)rows.push([n,r])});
-  if(!q&&!kidsMode){const ls=list.filter(f=>f.theme==="horror"||/^(MA15\+|R18\+|R)$/.test(ratingOf(f)||"")).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(ls.length)rows.push(["Late Show",ls,"Out the back, behind the curtain. Grown-ups only.","lateshow"])}
-  if(!q)cal.filter(c=>!c.on&&c.next).sort((a,b)=>a.next-b.next).forEach(c=>later.push(...seasonRows(c.s,list,c.next)));
+  else SHOP_AISLES.forEach(([n,ts])=>{if(n==="Holiday")return;const r=list.filter(f=>ts.includes(f.theme)&&(kidsMode||!isLate(f))).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(r.length)rows.push([n,r])});
+  if(!q&&!kidsMode){const ls=list.filter(isLate).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(ls.length)rows.push(["Late Show",ls,"Out the back, behind the curtain. The proper scares, grown-ups only.","lateshow"])}
+  if(!q&&peekSeason){const c=cal.find(c=>c.s.id===peekSeason&&!c.on&&c.next);if(c)rows.unshift(...seasonRows(c.s,list,c.next).map(r=>{r[2]=(r[2]||"").replace(/^Back on /,"Sneak look. Back on ");return r}))}
   renderMember();
   $("shopCount").textContent=list.length?`${list.length} of ${FILMS.length} titles on the shelves`:"";
   const aisle=([n,r,note,cls,st,sid])=>`<section class="aisle${cls?" "+cls:""}"${st?` style="${st}"`:""}${sid?` id="season-${sid}${/late show/.test(n)?"-late":""}"`:""}><div class="aisle-top"><h3 class="aisle-sign">${ESC(n)}<span>${r.length}</span></h3>${r.length>1?`<button class="aisle-spin" type="button" data-aisle="${ESC(n)}">Spin this aisle</button>`:""}${note?`<p class="aisle-note">${ESC(note)}</p>`:""}</div>${/lateshow/.test(cls||"")?`<button class="ls-curtain" type="button" aria-expanded="false" aria-label="Pull back the curtain"><img src="assets/hero/latedoor.webp" alt="" loading="lazy"><span class="ls-sign fit" style="left:34.81%;top:3.31%;width:31.12%;height:5.52%"><span class="fit-t">Late Show</span></span><span class="ls-tap">Pull back the curtain</span></button>`:""}<div class="shelf" data-k="${shelfRest.push(/lateshow/.test(cls||"")?[]:r.slice(SHELF_FIRST))-1}">${(/lateshow/.test(cls||"")?[]:r.slice(0,SHELF_FIRST)).map(tapeHTML).join("")}</div></section>`;
@@ -1665,7 +1674,9 @@ $("viewWheelBtn").addEventListener("click",()=>setView("wheel"));
 $("viewShopBtn").addEventListener("click",()=>setView("shop"));
 $("viewCraveBtn").addEventListener("click",()=>setView("crave"));
 ["shopSearch","shopDecade","shopUnwatched"].forEach(id=>$(id).addEventListener(id==="shopSearch"?"input":"change",renderShop));
-$("shopCal").addEventListener("click",e=>{const b=e.target.closest("[data-season]");if(!b)return;const el=document.getElementById("season-"+b.dataset.season);if(el)el.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});else{$("shopSearch").value="";renderShop();const el2=document.getElementById("season-"+b.dataset.season);if(el2)el2.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})}});
+$("shopCal").addEventListener("click",e=>{const b=e.target.closest("[data-season]");if(!b)return;const id=b.dataset.season;
+  if(!b.classList.contains("on")){peekSeason=peekSeason===id?"":id;$("shopSearch").value="";renderShop();if(!peekSeason)return}
+  const el=document.getElementById("season-"+id);if(el)el.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})});
 if(typeof document!=="undefined"&&document.addEventListener)document.addEventListener("click",e=>{const h=e.target.closest(".sv-hang,.sv-hang-chip");if(!h)return;const g=h.dataset.go;const secs=[...document.querySelectorAll("#shopAisles .aisle")];const t=secs.find(x=>g==="wall"?x.classList.contains("wall"):(x.querySelector(".aisle-sign")||{}).firstChild&&x.querySelector(".aisle-sign").firstChild.textContent===g);if(t){t.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});sfx.chime&&tick()}});
 $("shopAisles").addEventListener("scroll",e=>{const sh=e.target;if(sh.classList&&sh.classList.contains("shelf")&&sh.scrollLeft+sh.clientWidth>sh.scrollWidth-600)fillShelf(sh)},true);
 $("shopAisles").addEventListener("click",e=>{
