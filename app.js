@@ -906,6 +906,7 @@ async function show(f,preferSig){
   current=f;
   updateWatchButton();try{updateFav()}catch(e){}
   try{seriesNote(f)}catch(e){}
+  try{snackPair(f)}catch(e){}
   await Promise.all([ensureExact(f),fmtLoad(f)]);
   if(id!==renderId)return;
   let menu=makeMenu(f,preferSig);if(lazy)menu=lazyMenu(menu);menu.counter=counterShop(f.id);
@@ -2068,7 +2069,7 @@ function prepClean(c){c.querySelectorAll(".pp-done").forEach(x=>x.classList.remo
  document.addEventListener("keydown",e=>{if(e.key==="Escape"&&(spinning||$("tease").classList.contains("leader")))skip()});}
 
 /* the snack counter: real movie snacks, bought or made, added to tonight's film; they plan, scale and shop like its dishes */
-const SNACK_BY=()=>{if(!window._snackBy){window._snackBy={};(window.SNACKS||[]).forEach(x=>{window._snackBy[x.id]=x})}return window._snackBy};
+function SNACK_BY(){if(!window._snackBy){window._snackBy={};(window.SNACKS||[]).forEach(x=>{window._snackBy[x.id]=x})}return window._snackBy}
 function snackPicks(f){try{return JSON.parse(localStorage.getItem("mns-snacks-"+f.id)||"[]").filter(id=>SNACK_BY()[id])}catch(e){return []}}
 function snackSave(f,ids){try{ids.length?localStorage.setItem("mns-snacks-"+f.id,JSON.stringify(ids)):localStorage.removeItem("mns-snacks-"+f.id)}catch(e){}}
 function snackDishes(f){if(!f)return [];return snackPicks(f).map(id=>{const x=SNACK_BY()[id];return {n:x.n,course:"c",prep_min:x.prep_min,cook_min:x.cook_min,make_ahead:x.make_ahead,ingredients:x.ingredients,steps:x.steps,veg:x.veg,af:true,snack:x.id}})}
@@ -2089,9 +2090,33 @@ document.addEventListener("click",e=>{
   const c=e.target.closest("[data-sc-cat]");if(c){snackCat=c.dataset.scCat;renderSnacks();const b=box.querySelector(`[data-sc-cat="${CSS.escape(snackCat)}"]`);if(b)b.focus();return}
   const a=e.target.closest("[data-snack]");const tf=snackFilm();if(a&&tf){const ids=snackPicks(tf),id=a.dataset.snack,i=ids.indexOf(id);if(i<0)ids.push(id);else ids.splice(i,1);snackSave(tf,ids);
     try{if(tf===current&&current._r2){planWire(current);prep.innerHTML=prepHTML(current,current.menu)}}catch(err){}
-    renderSnacks();buzz(15);const b=box.querySelector(`[data-snack="${CSS.escape(id)}"]`);if(b)b.focus();return}
+    renderSnacks();try{snackPair(current)}catch(err){}buzz(15);const b=box.querySelector(`[data-snack="${CSS.escape(id)}"]`);if(b)b.focus();return}
   if(e.target.closest("[data-sc-go]")){const tf=snackFilm();if(tf&&tf!==current){openTrolley(tf);return}setView("wheel");setTab("prep");setTimeout(()=>{const pv=$("preview");if(pv)pv.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})},60)}
 });
+
+/* goes well with: two snack counter picks for each film, from its theme, varied by film, vegetarian aware */
+function snackGoData(){return {only:{"Babe (1995)":["fairy-bread","musk-sticks","honey-joys"],"Chicken Run (2000)":["honey-joys","chocolate-crackles","sherbet"]},go:{redsauce:["cheese-twists","choc-peanuts","family-block"],pizza:["pretzels","slushies","sour-straps"],deli:["pretzels","chips-dip","milkshakes"],street:["nachos","slushies","sour-straps"],cop:["hot-chips","choc-peanuts","pretzel-mix"],soul:["honey-joys","milkshakes","hot-chips"],xmas:["rocky-road","coconut-ice","choc-tops"],aussie:["party-pies","musk-sticks","cheerios"],asian:["slushies","sour-straps","honeycomb-balls"],scifi:["sherbet","slushies","golden-syrup-popcorn"],hero:["butter-popcorn","slushies","dagwood-dogs"],kids:["fairy-bread","chocolate-crackles","honey-joys"],teen:["milkshakes","hot-chips","sour-straps"],diner:["milkshakes","hot-chips","spider"],mex:["nachos","slushies","chips-dip"],tiki:["icy-poles","slushies","coconut-ice"],uptown:["family-block","honeycomb-balls","caramel-popcorn"],horror:["lolly-snakes","mixed-lollies","caramel-popcorn"],western:["dagwood-dogs","golden-syrup-popcorn","pretzels"],philly:["hot-chips","choc-raisins","cheerios"],galaxy:["sherbet","choc-tops","slushies"],wizard:["honeycomb-balls","jelly-babies","caramel-popcorn"],adventure:["lolly-snakes","pretzel-mix","choc-peanuts"],fairytale:["fairy-bread","coconut-ice","milk-bottles"],romcom:["choc-tops","family-block","caramel-popcorn"]},fall:["butter-popcorn","choc-tops","orange-choc-balls","golden-syrup-popcorn"]}}
+function snackGoes(f){
+  if(!f)return [];const by=SNACK_BY(),G=snackGoData(),ok=id=>by[id]&&(!DIET.veg||by[id].veg);
+  let h=0;for(const ch of f.id)h=(h*31+ch.charCodeAt(0))>>>0;
+  const pool=(G.only[f.id]||G.go[f.theme]||[]).filter(ok),fall=G.fall.filter(id=>ok(id)&&!pool.includes(id));
+  const rot=pool.length?h%pool.length:0,list=[...pool.slice(rot),...pool.slice(0,rot)];
+  return [...list,...fall].slice(0,2).map(id=>by[id]);
+}
+function snackPair(f){
+  const box=$("snackPair");if(!box)return;const goes=snackGoes(f);
+  if(!f||!goes.length){box.hidden=true;box.innerHTML="";return}
+  const on=new Set(snackPicks(f));
+  box.innerHTML=`<p class="sp-t">Goes well with</p><ul>${goes.map(x=>`<li><span class="sp-n">${ESC(x.n)}<small>${x.kind==="make"?"Make it":"Buy it"}</small></span><button type="button" class="sp-add" data-sp="${ESC(x.id)}" aria-pressed="${on.has(x.id)}" aria-label="${on.has(x.id)?"Remove":"Add"} ${ESC(x.n)}">${on.has(x.id)?"Added":"Add"}</button></li>`).join("")}</ul><button type="button" class="sp-more" data-sp-more="1">More snacks</button>`;
+  box.hidden=false;
+  box.onclick=e=>{
+    const a=e.target.closest("[data-sp]");
+    if(a&&current){const ids=snackPicks(current),id=a.dataset.sp,i=ids.indexOf(id);if(i<0)ids.push(id);else ids.splice(i,1);snackSave(current,ids);
+      try{if(current._r2){planWire(current);prep.innerHTML=prepHTML(current,current.menu)}}catch(err){}
+      try{renderSnacks()}catch(err){}snackPair(current);buzz(15);const b=box.querySelector(`[data-sp="${CSS.escape(id)}"]`);if(b)b.focus();return}
+    if(e.target.closest("[data-sp-more]")){const sc=$("snackCounter");if(sc)sc.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})}
+  };
+}
 
 /* a shared film link lands on that film's menu, once any welcome card is out of the way */
 function toSharedFilm(){try{const id=new URLSearchParams(location.search).get("film");if(!id||!current||current.id!==id||document.querySelector("dialog.welcome[open]")||window.__sharedDone)return;window.__sharedDone=true;$("theatre").scrollIntoView({behavior:"auto",block:"start"})}catch(e){}}
