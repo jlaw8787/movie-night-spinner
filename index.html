@@ -1468,6 +1468,11 @@ html{scroll-padding-top:var(--topH,84px)}
 .cb-find{margin:6px 0 10px;text-align:center;font:600 13px/1.2 "Oswald",var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:#ffd23f}
 @media (max-width:620px){.sc{padding:14px 12px 12px}.sc-list{grid-template-columns:1fr}.sc-item{grid-template-columns:minmax(0,1fr) auto;row-gap:6px}.sc-kind{grid-column:1;grid-row:2;justify-self:start}.sc-add{grid-column:2;grid-row:1 / span 2}}
 
+/* member card rentals: tap a title for its menu, or return them all */
+.member-out .out-open{flex:1;min-width:0;text-align:left;background:none;border:0;padding:6px 0;color:inherit;font:inherit;cursor:pointer}
+.member-out .out-open .t{text-decoration:underline;text-decoration-color:rgba(255,210,63,.6);text-underline-offset:3px}
+.member-out .out-open small{display:block;font-size:12px;opacity:.75;margin-top:2px}
+.member .out-all{margin-top:8px;font:400 12px var(--f-board);letter-spacing:.03em;border-radius:999px;padding:8px 14px;min-height:40px;cursor:pointer;border:2px solid var(--shop-sign);background:transparent;color:var(--shop-sign)}
 .fit.tiny .fit-t{visibility:hidden}
 .sv-jump{display:none;gap:6px;flex-wrap:wrap;margin:-6px 0 14px}
 .sv-hang-chip{font:400 12px var(--f-board);letter-spacing:.04em;color:#14204f;background:#fbf7ea;border:2px solid #1d3aa8;border-radius:4px;padding:7px 10px;cursor:pointer}
@@ -1702,7 +1707,7 @@ html{scroll-padding-top:var(--topH,84px)}
 <script src="providers.js?v=1403fceb" defer></script>
 <script src="films.js?v=7aa6d614" defer></script>
 <script src="formats-core.js?v=a8dfd3e7" defer></script>
-<script src="app.js?v=332fa560" defer></script>
+<script src="app.js?v=57939d7a" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

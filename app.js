@@ -796,7 +796,7 @@ function prepHTML2(f,menu){
   const edition=movieEdition(f),L=LAYOUT[f.theme]||"storybook",c=pal(f),d=DECO(L,c,f);
   const ds=planDishes(f),groups={};
   for(const x of planShopping(f)){const [n,a]=x.split("@");(groups[a]=groups[a]||[]).push(n)}
-  const tk=prepTicks(f);
+  const tk=sharedTicks(f);
   const shop=AISLES.filter(a=>groups[a]).map(a=>`<div class="pp-aisle"><h4>${a}</h4><ul>${groups[a].map(x=>{const k=tickKey(x),on=!!tk[k];return `<li role="checkbox" tabindex="0" aria-checked="${on}" data-k="${ESC(k)}"${on?' class="pp-done"':""}><span class="pp-box"></span>${ESC(x)}</li>`}).join("")}</ul></div>`).join("");
   const hands=ds.reduce((s,x)=>s+(x.prep_min||0),0),longest=ds.reduce((m,x)=>Math.max(m,(x.prep_min||0)+(x.cook_min||0)),0);
   const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"};
@@ -1080,26 +1080,30 @@ async function openTrolley(f,menuOverride,label){
   const modalTrigger=document.activeElement;
   await ensureExact(f);
   const mm=makeMenu(f,true);mm.counter=counterShop(f.id);
+  /* the film's own list shares its ticks with the prep sheet; double feature and marathon lists keep their own */
+  const own=!menuOverride;
   if(!menuOverride&&f._r2&&f._r2.dishes&&f._r2.dishes.length){if(f!==current)planLoad(f);menuOverride={s:[],m:[],w:[],d:[],shopping:planShopping(f)}}
   const serves=f._r2?PLAN.guests:4;
   const groups=shopGroups(menuOverride||mm);const all=groups.flatMap(([,l])=>l);
   const o=document.createElement("dialog");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Shopping list for ${f.title}`);
   const sessionKey=JSON.stringify([f.id,label||""]);
   if(!trolleySessionTicks.has(sessionKey))trolleySessionTicks.set(sessionKey,Object.create(null));
-  const ticks=()=>week&&week.id===f.id?(week.ticks||(week.ticks={})):trolleySessionTicks.get(sessionKey);
-  o.innerHTML=`<div class="trolley-in"><h3>${ESC(label||f.title)}</h3><p class="tp" id="tProg"></p><div class="bar"><i id="tBar"></i></div>${groups.map(([a,l])=>`<h4>${ESC(a)}</h4><ul>${l.map(x=>`<li><label><input type="checkbox" data-k="${ESC(x)}"${ticks()[x]?" checked":""}><span>${ESC(x)}</span></label></li>`).join("")}</ul>`).join("")}<div class="acts"><button class="go" type="button" data-a="share">Send to Notes or Reminders</button><button type="button" data-a="reset">Untick all</button><button type="button" data-a="done">Done</button></div><p class="msg" id="tMsg" role="status"></p></div>`;
-  const prog=()=>{const n=all.filter(x=>ticks()[x]).length;o.querySelector("#tProg").textContent=`${n} of ${all.length} in the trolley. Serves ${serves}.`;o.querySelector("#tBar").style.width=(all.length?100*n/all.length:0)+"%"};
-  o.addEventListener("change",e=>{const k=e.target.dataset.k;if(!k)return;ticks()[k]=e.target.checked;if(week&&week.id===f.id)saveWeek();o.querySelector("#tMsg").textContent="";prog()});
+  const kf=own?tickKey:(x=>x);
+  const ticks=()=>own?sharedTicks(f):week&&week.id===f.id?(week.ticks||(week.ticks={})):trolleySessionTicks.get(sessionKey);
+  const tick=(k,on,quiet)=>{if(own)setTick(f,k,on,quiet);else{const t=ticks();if(on)t[k]=true;else delete t[k];if(!quiet&&week&&week.id===f.id)saveWeek()}};
+  o.innerHTML=`<div class="trolley-in"><h3>${ESC(label||f.title)}</h3><p class="tp" id="tProg"></p><div class="bar"><i id="tBar"></i></div>${groups.map(([a,l])=>`<h4>${ESC(a)}</h4><ul>${l.map(x=>`<li><label><input type="checkbox" data-k="${ESC(kf(x))}"${ticks()[kf(x)]?" checked":""}><span>${ESC(x)}</span></label></li>`).join("")}</ul>`).join("")}<div class="acts"><button class="go" type="button" data-a="share">Send to Notes or Reminders</button><button type="button" data-a="reset">Untick all</button><button type="button" data-a="done">Done</button></div><p class="msg" id="tMsg" role="status"></p></div>`;
+  const prog=()=>{const n=all.filter(x=>ticks()[kf(x)]).length;o.querySelector("#tProg").textContent=`${n} of ${all.length} in the trolley. Serves ${serves}.`;o.querySelector("#tBar").style.width=(all.length?100*n/all.length:0)+"%"};
+  o.addEventListener("change",e=>{const k=e.target.dataset.k;if(!k)return;tick(k,e.target.checked);o.querySelector("#tMsg").textContent="";prog()});
   const close=()=>dismissModal(o);
   o.addEventListener("click",async e=>{
     if(e.target===o)return close();const a=e.target.dataset&&e.target.dataset.a;if(!a)return;
     if(a==="done")close();
-    if(a==="reset"){const checked=ticks();all.forEach(k=>delete checked[k]);if(week&&week.id===f.id)saveWeek();o.querySelectorAll("input").forEach(i=>i.checked=false);o.querySelector("#tMsg").textContent="";prog()}
-    if(a==="share"){const left=groups.map(([g,l])=>[g,l.filter(x=>!ticks()[x])]).filter(([,l])=>l.length);if(!left.length){o.querySelector("#tMsg").textContent=all.length?"Everything is in the trolley. Nothing left to send.":"This shopping list is empty.";return}const text=listText(f,left);
+    if(a==="reset"){all.forEach(x=>tick(kf(x),false,true));if(week&&week.id===f.id)saveWeek();o.querySelectorAll("input").forEach(i=>i.checked=false);o.querySelector("#tMsg").textContent="";prog()}
+    if(a==="share"){const left=groups.map(([g,l])=>[g,l.filter(x=>!ticks()[kf(x)])]).filter(([,l])=>l.length);if(!left.length){o.querySelector("#tMsg").textContent=all.length?"Everything is in the trolley. Nothing left to send.":"This shopping list is empty.";return}const text=listText(f,left);
       try{if(navigator.share){await navigator.share({title:`${f.title} shopping list`,text});o.querySelector("#tMsg").textContent="Sent."}else{await navigator.clipboard.writeText(text);o.querySelector("#tMsg").textContent="Copied. Paste it into Notes or Reminders."}}
       catch(err){if(!(err&&err.name==="AbortError"))o.querySelector("#tMsg").textContent="Couldn't share from here. Use Copy text under the menu instead."}}
   });
-  if(!(week&&week.id===f.id))o.querySelector(".tp").insertAdjacentHTML("afterend",'<p class="tp">Lock this film in for the week to save your ticks.</p>');
+  if(!own&&!(week&&week.id===f.id))o.querySelector(".tp").insertAdjacentHTML("afterend",'<p class="tp">Lock this film in for the week to save your ticks.</p>');
   mountModal(o,"input,button",modalTrigger);prog();
 }
 $("weekSet").addEventListener("click",()=>{if(current)setWeek(current)});
@@ -1201,9 +1205,11 @@ function renderMember(){
   const outList=(member.out||[]).filter(r=>!watched.has(r.id)).map(r=>({r,f:FILMS.find(x=>x.id===r.id)})).filter(x=>x.f);
   const late=lateFees();const owe=late.reduce((n,x)=>n+Math.min(x.days,10),0);
   const fee=late.length?`Late fees: $${owe}.00 on ${late.slice(0,2).map(x=>x.f.title).join(" and ")}${late.length>2?` and ${late.length-2} more`:""}. Mark it seen to clear the slate.`:"Late fees: none. Good member.";
-  box.innerHTML=`<div class="member-logo" aria-hidden="true">SV</div><p class="member-k">Spinner Video member</p><input id="memberName" type="text" maxlength="28" autocomplete="off" aria-label="Name on your member card" placeholder="Tap to write your name" value="${ESC(member.name||"")}"><p class="member-meta"><span>No. ${member.no.slice(0,3)} ${member.no.slice(3)}</span><span>Since ${since}</span><span>Rentals ${member.rentals||0}</span>${fav?`<span>Usually in ${ESC(fav[0])}</span>`:""}</p><p class="member-fee${late.length?" owing":""}">${ESC(fee)}</p>${outList.length?`<ul class="member-out">${outList.map(({f,r})=>`<li><span>${ESC(f.title)}, due ${new Date(r.due).toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"})}</span><button type="button" data-ret="${ESC(f.id)}">Return</button></li>`).join("")}</ul>`:""}<div class="member-sync">${member.pin?`<p id="syncNote">${ESC(syncNote())}</p><button type="button" data-sync="out">Sign out here</button>`:`<button type="button" data-sync="join">Put my card online</button><button type="button" data-sync="in">Use my card from another device</button>`}</div>`;
+  box.innerHTML=`<div class="member-logo" aria-hidden="true">SV</div><p class="member-k">Spinner Video member</p><input id="memberName" type="text" maxlength="28" autocomplete="off" aria-label="Name on your member card" placeholder="Tap to write your name" value="${ESC(member.name||"")}"><p class="member-meta"><span>No. ${member.no.slice(0,3)} ${member.no.slice(3)}</span><span>Since ${since}</span><span>Rentals ${member.rentals||0}</span>${fav?`<span>Usually in ${ESC(fav[0])}</span>`:""}</p><p class="member-fee${late.length?" owing":""}">${ESC(fee)}</p>${outList.length?`<ul class="member-out">${outList.map(({f,r})=>`<li><button type="button" class="out-open" data-open="${ESC(f.id)}" aria-label="Open the menu for ${ESC(f.title)}"><span class="t">${ESC(f.title)}</span><small>due ${new Date(r.due).toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"})}. Tap for the menu</small></button><button type="button" data-ret="${ESC(f.id)}">Return</button></li>`).join("")}</ul>${outList.length>1?'<button type="button" class="out-all" data-retall="1">Return them all</button>':""}`:""}<div class="member-sync">${member.pin?`<p id="syncNote">${ESC(syncNote())}</p><button type="button" data-sync="out">Sign out here</button>`:`<button type="button" data-sync="join">Put my card online</button><button type="button" data-sync="in">Use my card from another device</button>`}</div>`;
   $("memberName").addEventListener("change",e=>{member.name=e.target.value.trim();saveMember();renderShop()});
   box.querySelectorAll("[data-ret]").forEach(b=>b.addEventListener("click",()=>{const f=FILMS.find(x=>x.id===b.dataset.ret);if(f)openChute(f)}));
+  box.querySelectorAll("[data-open]").forEach(b=>b.addEventListener("click",()=>{const f=FILMS.find(x=>x.id===b.dataset.open);if(f)openRentalMenu(f)}));
+  {const ra=box.querySelector("[data-retall]");if(ra)ra.addEventListener("click",()=>{const n=(member.out||[]).filter(r=>!watched.has(r.id)).length;member.out=[];saveMember();renderMember();renderShop();const st=$("shopCount");if(st)st.textContent=`All ${n} tapes back in the returns chute. No late fees.`;buzz(20)})}
   box.querySelectorAll("[data-sync]").forEach(b=>b.addEventListener("click",()=>{const k=b.dataset.sync;if(k==="out"){delete member.pin;try{localStorage.setItem("mns-member",JSON.stringify(member))}catch(e){}renderMember()}else openSyncForm(k)}));
 }
 function dueBack(f){
@@ -1508,11 +1514,11 @@ async function openCase(f){
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];const m=makeMenu(f,true);
   const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`${f.title}, back of the box`);
   const seen=watched.has(f.id);
-  o.innerHTML=`<div class="case"><button class="x" type="button" aria-label="Put it back">×</button><div class="case-l">${p?`<div class="case-art${reduce?"":" track"}"><img alt="${ESC(f.title)} poster" src="${TMDB_IMG_SHOP}w500${ESC(p)}"></div>`:""}${tvHTML(f)}</div><div><h3>${ESC(f.title)}</h3><p class="meta">${f.year} &nbsp;/&nbsp; ${ESC(SHOP_AISLE_OF[f.theme]||"")} aisle &nbsp;/&nbsp; ${ESC(T[f.theme].name)}${ratingOf(f)?` <span class="ratebig ${rateCls(ratingOf(f))}" aria-label="Rated ${ratingOf(f)}">${ratingOf(f)}</span>`:""}</p>${isOut(f)?'<p class="outnote">All copies are out. Lucky you, one just came back.</p>':""}<p class="syn">${ESC(f.D)}</p><div class="where">${whereHTML(f)}</div><p class="staff">Staff pick: ${ESC((movieEdition(f)||{}).tagline||f.T)}</p>${seen?starsHTML(f):""}<h4>Comes with</h4><ul>${[...m.s,...m.m,...m.w,...m.d].map(it=>`<li>${ESC(it.n)}</li>`).join("")}</ul><div class="acts"><button class="rent" type="button">Rent it</button>${(member.out||[]).some(r=>r.id===f.id)&&!seen?'<button class="ret" type="button">Return it</button>':""}<button class="seen" type="button">${seen?"Not seen it yet":"Seen it"}</button></div></div></div>`;
+  o.innerHTML=`<div class="case"><button class="x" type="button" aria-label="Put it back">×</button><div class="case-l">${p?`<div class="case-art${reduce?"":" track"}"><img alt="${ESC(f.title)} poster" src="${TMDB_IMG_SHOP}w500${ESC(p)}"></div>`:""}${tvHTML(f)}</div><div><h3>${ESC(f.title)}</h3><p class="meta">${f.year} &nbsp;/&nbsp; ${ESC(SHOP_AISLE_OF[f.theme]||"")} aisle &nbsp;/&nbsp; ${ESC(T[f.theme].name)}${ratingOf(f)?` <span class="ratebig ${rateCls(ratingOf(f))}" aria-label="Rated ${ratingOf(f)}">${ratingOf(f)}</span>`:""}</p>${isOut(f)?'<p class="outnote">All copies are out. Lucky you, one just came back.</p>':""}<p class="syn">${ESC(f.D)}</p><div class="where">${whereHTML(f)}</div><p class="staff">Staff pick: ${ESC((movieEdition(f)||{}).tagline||f.T)}</p>${seen?starsHTML(f):""}<h4>Comes with</h4><ul>${[...m.s,...m.m,...m.w,...m.d].map(it=>`<li>${ESC(it.n)}</li>`).join("")}</ul><div class="acts">${isRentedOut(f)?'<button class="rent" type="button">Open the menu</button><button class="ret" type="button">Return it</button>':'<button class="rent" type="button">Rent it</button>'}<button class="seen" type="button">${seen?"Not seen it yet":"Seen it"}</button></div></div></div>`;
   const close=()=>dismissModal(o);
   o.addEventListener("click",e=>{if(e.target===o)close()});
   o.querySelector(".x").addEventListener("click",close);
-  o.querySelector(".rent").addEventListener("click",()=>{close();sfx.clunk();openSlip(f,()=>{setView("wheel");replay(f);addHistory(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})})});
+  o.querySelector(".rent").addEventListener("click",()=>{const out=isRentedOut(f);close();if(out){openRentalMenu(f);return}sfx.clunk();openSlip(f,()=>openRentalMenu(f))});
   if(seen)wireStars(o,f,()=>renderShop());
   const rb=o.querySelector(".ret");if(rb)rb.addEventListener("click",()=>{close();openChute(f)});
   const tv=o.querySelector(".tv-play");
@@ -1569,18 +1575,20 @@ function showWelcome(){
   const close=()=>dismissModal(o);
   o.querySelector("button").addEventListener("click",close);
   o.addEventListener("click",e=>{if(e.target===o)close()});
-  mountModal(o,"button",modalTrigger,()=>{try{localStorage.setItem("mns-welcome","1")}catch(e){}});
+  mountModal(o,"button",modalTrigger,()=>{try{localStorage.setItem("mns-welcome","1")}catch(e){}setTimeout(toSharedFilm,60)});
 }
 
 {const g=document.getElementById("bulbGlow");if(g){let h="";for(let i=0;i<32;i++)h+=`<i style="--a:${i*11.25}deg;--d:${-(i%8)*0.2}s"></i>`;g.innerHTML=h}}
 /* phones: a Spin button pinned to the bottom until the wheel is on screen */
-{const bar=$("spinbar"),hub=$("spin"),acts=document.querySelector(".actions");let hubSeen=false,actsSeen=false,prepSeen=false;
+{const bar=$("spinbar"),hub=$("spin"),acts=document.querySelector(".actions");let hubSeen=false,actsSeen=false,prepSeen=false,weekSeen=false;
  /* the floating Spin button steps aside while the wheel or the menu buttons are on screen, so it never sits over them */
- const upd=()=>{bar.hidden=hubSeen||actsSeen||(prepSeen&&tab==="prep")||spinning||$("viewWheel").hidden||!matchMedia("(max-width:900px)").matches};
+ const upd=()=>{bar.hidden=hubSeen||actsSeen||weekSeen||(prepSeen&&tab==="prep")||spinning||$("viewWheel").hidden||!matchMedia("(max-width:900px)").matches};
  if("IntersectionObserver" in window){new IntersectionObserver(es=>{hubSeen=es[0].isIntersecting;upd()},{threshold:.4}).observe(hub);
    if(acts)new IntersectionObserver(es=>{actsSeen=es[0].isIntersecting;upd()},{threshold:0,rootMargin:"0px 0px 90px 0px"}).observe(acts);
    /* and while the prep sheet is being read, so it never sits over the method */
-   new IntersectionObserver(es=>{prepSeen=es[0].isIntersecting;upd()},{threshold:0}).observe($("preview"))}
+   new IntersectionObserver(es=>{prepSeen=es[0].isIntersecting;upd()},{threshold:0}).observe($("preview"));
+   /* and while this week's film is on screen, so it never covers its buttons */
+   {const wp=$("weekPanel");if(wp)new IntersectionObserver(es=>{weekSeen=es[0].isIntersecting;upd()},{threshold:0,rootMargin:"0px 0px 90px 0px"}).observe(wp)}}
  window.addEventListener("scroll",upd,{passive:true});
  $("spinbarBtn").addEventListener("click",()=>{$("spin").scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"});setTimeout(()=>{if(!spinning)$("spin").click()},reduce?50:650)});
  window.__spinbarUpd=upd;}
@@ -1894,7 +1902,7 @@ document.fonts.ready.then(draw);
 const initialFilmId=new URLSearchParams(window.location.search).get("film");
 const startId=initialFilmId||(week&&week.id)||hist[0];
 const initialFilm=FILMS.find(f=>f.id===startId)||FILMS.find(f=>f.id==="Ghostbusters (1984)")||FILMS[0];
-if(FILMS.some(f=>f.id===startId)){$("now").textContent=initialFilm.title;show(initialFilm,true)}
+if(FILMS.some(f=>f.id===startId)){$("now").textContent=initialFilm.title;show(initialFilm,true).then(()=>setTimeout(toSharedFilm,250))}
 else{theatre.classList.add("closed");$("tease").textContent=initialFilmId?"That film isn't on the shelf. Spin the wheel instead":"Spin the wheel to raise the curtain";
   const badLink=()=>{if(!initialFilmId)return;const st=$("status");if(st)st.textContent=`Couldn't find "${initialFilmId}" in the video store. The link may be cut short or the film isn't in the catalogue. Spin the wheel or search the video store.`};badLink();
   /* nobody's picked yet: dress the stage behind the curtain once the page has settled */
@@ -1927,7 +1935,7 @@ function renderFav(){const shelf=$("savedShelf"),box=$("savedChips");const items
 function updateFav(){const b=$("favBtn");if(!b)return;const on=!!(current&&FAV.includes(current.id));b.setAttribute("aria-pressed",on);b.textContent=on?"Saved":"Save this menu"}
 $("favBtn").addEventListener("click",()=>{if(!current)return;const id=current.id;
   if(FAV.includes(id)){FAV=FAV.filter(x=>x!==id);$("status").textContent="Taken off your saved menus."}
-  else{FAV=[id,...FAV].slice(0,30);$("status").textContent="Saved. It's on the front page, and kept on this device for offline.";try{fetch(filmFile(current)).catch(()=>{})}catch(e){}}
+  else{FAV=[id,...FAV].slice(0,30);$("status").textContent="Saved. It's under Your saved menus, below the wheel, and kept on this device for offline.";try{fetch(filmFile(current)).catch(()=>{})}catch(e){}}
   favSave();renderFav()});
 
 /* settings drawer */
@@ -2033,10 +2041,16 @@ document.addEventListener("keydown",e=>{
 
 /* prep sheet shopping list: tick items off on screen, saved per film on this device; save, PDF and print stay blank */
 function tickKey(x){return String(x).toLowerCase().replace(/^[\d\s\/.+]+(kg|g|ml|l|tsp|tbsp|cups?|bunch(es)?|pinch)?\b\s*/,"").replace(/\s+/g," ").trim()}
-function prepTicks(f){try{return JSON.parse(localStorage.getItem("mns-ticks-"+f.id)||"{}")}catch(e){return {}}}
+var _tickCache={};function prepTicks(f){let t=null;try{t=JSON.parse(localStorage.getItem("mns-ticks-"+f.id)||"null")}catch(e){}if(t)_tickCache[f.id]=t;return Object.assign({},_tickCache[f.id]||{})}
+/* one set of ticks per film, keyed by the ingredient (not the amount, so changing guests keeps them), shared by the prep sheet and the Lock it in list.
+   A locked-in film also keeps them in the week plan so the member card syncs them; each change touches only its own item there. */
+function sharedTicks(f){const t=prepTicks(f);if(week&&week.id===f.id&&week.ticks)for(const k in week.ticks)if(week.ticks[k])t[tickKey(k)]=true;return t}
+function setTick(f,k,on,quiet){const t=prepTicks(f);if(on)t[k]=true;else delete t[k];_tickCache[f.id]=Object.assign({},t);try{Object.keys(t).length?localStorage.setItem("mns-ticks-"+f.id,JSON.stringify(t)):localStorage.removeItem("mns-ticks-"+f.id)}catch(e){}
+  if(week&&week.id===f.id){const w=week.ticks||(week.ticks={});for(const x in w)if(x!==k&&tickKey(x)===k)delete w[x];if(on)w[k]=true;else delete w[k];if(!quiet)saveWeek()}
+  /* keep the prep sheet on screen in step */
+  if(typeof prep!=="undefined"&&typeof current!=="undefined"&&current===f)prep.querySelectorAll("li[data-k]").forEach(li=>{if(li.dataset.k===k){li.classList.toggle("pp-done",on);li.setAttribute("aria-checked",on)}})}
 function prepTick(li){
-  if(!current||!li)return;const t=prepTicks(current),k=li.dataset.k,on=!t[k];if(on)t[k]=1;else delete t[k];
-  try{localStorage.setItem("mns-ticks-"+current.id,JSON.stringify(t))}catch(e){}
+  if(!current||!li)return;const k=li.dataset.k,on=!sharedTicks(current)[k];setTick(current,k,on);
   li.classList.toggle("pp-done",on);li.setAttribute("aria-checked",on);
 }
 prep.addEventListener("click",e=>{const li=e.target.closest&&e.target.closest("li[data-k]");if(li&&prep.closest(".preview"))prepTick(li)});
@@ -2054,11 +2068,13 @@ function snackPicks(f){try{return JSON.parse(localStorage.getItem("mns-snacks-"+
 function snackSave(f,ids){try{ids.length?localStorage.setItem("mns-snacks-"+f.id,JSON.stringify(ids)):localStorage.removeItem("mns-snacks-"+f.id)}catch(e){}}
 function snackDishes(f){if(!f)return [];return snackPicks(f).map(id=>{const x=SNACK_BY()[id];return {n:x.n,course:"c",prep_min:x.prep_min,cook_min:x.cook_min,make_ahead:x.make_ahead,ingredients:x.ingredients,steps:x.steps,veg:x.veg,af:true,snack:x.id}})}
 let snackCat="All";
+/* snacks go on the locked-in film when there is one, so renting or spinning something else doesn't move them */
+function snackFilm(){const w=typeof week!=="undefined"&&week&&week.id&&FILMS.find(x=>x.id===week.id);return w||current}
 function renderSnacks(){
-  const box=$("snackCounter");if(!box)return;const f=current;const on=new Set(f?snackPicks(f):[]);
+  const box=$("snackCounter");if(!box)return;const f=snackFilm(),locked=!!(f&&week&&week.id===f.id);const on=new Set(f?snackPicks(f):[]);
   const cats=["All",...new Set((window.SNACKS||[]).map(x=>x.cat))];
   const list=(window.SNACKS||[]).filter(x=>snackCat==="All"||x.cat===snackCat);
-  box.innerHTML=`<div class="sc-head"><h2 class="sc-t">The snack counter</h2><p class="sc-sub">Real movie snacks. Tap Add and they go on ${f?`tonight's film, <b>${ESC(f.title)}</b>`:"tonight's film"}: the prep sheet, the shopping list and Lock it in.</p></div>
+  box.innerHTML=`<div class="sc-head"><h2 class="sc-t">The snack counter</h2><p class="sc-sub">Real movie snacks. Tap Add and they go on ${f?`${locked?"your locked-in film":"tonight's film"}, <b>${ESC(f.title)}</b>`:"tonight's film"}: the prep sheet and the shopping list.</p></div>
   <div class="sc-cats" role="group" aria-label="Snack type">${cats.map(c=>`<button type="button" data-sc-cat="${ESC(c)}" aria-pressed="${c===snackCat}">${ESC(c)}</button>`).join("")}</div>
   <ul class="sc-list">${list.map(x=>`<li class="sc-item${on.has(x.id)?" on":""}"><div class="sc-n"><span>${ESC(x.n)}</span><small>${ESC(x.note)}</small></div><em class="sc-kind ${x.kind}">${x.kind==="make"?"Make it":"Buy it"}</em><button type="button" class="sc-add" data-snack="${ESC(x.id)}" aria-pressed="${on.has(x.id)}" aria-label="${on.has(x.id)?"Remove":"Add"} ${ESC(x.n)}">${on.has(x.id)?"Added":"Add"}</button></li>`).join("")}</ul>
   <div class="sc-bar"${on.size?"":" hidden"}><span>${on.size} snack${on.size===1?"":"s"} on ${f?ESC(f.title):"tonight's film"}</span><button type="button" class="sc-go" data-sc-go="1">See the shopping list</button></div>`;
@@ -2066,8 +2082,15 @@ function renderSnacks(){
 document.addEventListener("click",e=>{
   const box=$("snackCounter");if(!box||!box.contains(e.target))return;
   const c=e.target.closest("[data-sc-cat]");if(c){snackCat=c.dataset.scCat;renderSnacks();const b=box.querySelector(`[data-sc-cat="${CSS.escape(snackCat)}"]`);if(b)b.focus();return}
-  const a=e.target.closest("[data-snack]");if(a&&current){const ids=snackPicks(current),id=a.dataset.snack,i=ids.indexOf(id);if(i<0)ids.push(id);else ids.splice(i,1);snackSave(current,ids);
-    try{if(current._r2){planWire(current);prep.innerHTML=prepHTML(current,current.menu)}}catch(err){}
+  const a=e.target.closest("[data-snack]");const tf=snackFilm();if(a&&tf){const ids=snackPicks(tf),id=a.dataset.snack,i=ids.indexOf(id);if(i<0)ids.push(id);else ids.splice(i,1);snackSave(tf,ids);
+    try{if(tf===current&&current._r2){planWire(current);prep.innerHTML=prepHTML(current,current.menu)}}catch(err){}
     renderSnacks();buzz(15);const b=box.querySelector(`[data-snack="${CSS.escape(id)}"]`);if(b)b.focus();return}
-  if(e.target.closest("[data-sc-go]")){setView("wheel");setTab("prep");setTimeout(()=>{const pv=$("preview");if(pv)pv.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})},60)}
+  if(e.target.closest("[data-sc-go]")){const tf=snackFilm();if(tf&&tf!==current){openTrolley(tf);return}setView("wheel");setTab("prep");setTimeout(()=>{const pv=$("preview");if(pv)pv.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})},60)}
 });
+
+/* a shared film link lands on that film's menu, once any welcome card is out of the way */
+function toSharedFilm(){try{const id=new URLSearchParams(location.search).get("film");if(!id||!current||current.id!==id||document.querySelector("dialog.welcome[open]")||window.__sharedDone)return;window.__sharedDone=true;$("theatre").scrollIntoView({behavior:"auto",block:"start"})}catch(e){}}
+
+/* rentals: a tape you've got out opens straight to its menu */
+function isRentedOut(f){return (member.out||[]).some(r=>r.id===f.id)&&!watched.has(f.id)}
+function openRentalMenu(f){setView("wheel");replay(f);addHistory(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})}
