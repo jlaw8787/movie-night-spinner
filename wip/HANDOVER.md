@@ -1,7 +1,7 @@
 # Handover (Oct 26, 21:00): read this first in a new chat
 
 Repo jlaw8787/movie-night-spinner (GitHub Pages). Work in a worktree on branch wip/menu-polish. Live = main.
-Live as of commit c48dab3f (suggested snacks under every menu, Oct 29). Checks: popcheck.py SHOTDIR (52), pairscheck.py SHOTDIR (22).
+Live as of commit 8091578b (printed menus follow Vegetarian and No alcohol on all 850 films; swap lines in data/diet/, film dressing kept, Oct 29). Checks: dietsweep.py, livefit.py, popcheck.py, pairscheck.py.
 
 ## Owner rules (non-negotiable)
 - Nothing goes live without the owner's approval. Ask with tappable options.
