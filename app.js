@@ -725,8 +725,8 @@ $("fmtBack").addEventListener("click",()=>{phoneOn=true;applyPhone()});
 let renderId=0;
 /* ---------- plan the night: tick dishes, set guests, scaled shopping and real times (data/recipes2) ---------- */
 const PLAN={guests:4,off:{},on:{}};
-let USUAL=(()=>{try{const g=+localStorage.getItem("mns-guests");return g>=1&&g<=24?g:4}catch(e){return 4}})();
-function planLoad(f){PLAN.guests=USUAL;PLAN.off={};PLAN.on={};try{const s=JSON.parse(localStorage.getItem("mns-plan-"+f.id)||"null");if(s){PLAN.guests=Math.min(24,Math.max(1,+s.g||USUAL));PLAN.off=s.off||{};PLAN.on=s.on||{}}}catch(e){}}
+let USUAL=(()=>{try{const g=+localStorage.getItem("mns-guests");return g>=1&&g<=60?g:4}catch(e){return 4}})();
+function planLoad(f){PLAN.guests=USUAL;PLAN.off={};PLAN.on={};try{const s=JSON.parse(localStorage.getItem("mns-plan-"+f.id)||"null");if(s){PLAN.guests=Math.min(60,Math.max(1,+s.g||USUAL));PLAN.off=s.off||{};PLAN.on=s.on||{}}}catch(e){}}
 function planSave(f){try{localStorage.setItem("mns-plan-"+f.id,JSON.stringify({g:PLAN.guests,off:PLAN.off,on:PLAN.on}))}catch(e){}}
 /* diet: vegetarian and no alcohol, kept for every film. A dish that doesn't fit swaps to its written alternative
    (data/recipes2 dish.alt.veg, .af, .veg_af); one with no alternative is left off unless the cook ticks it back */
@@ -802,21 +802,30 @@ function fracText(q){const w=Math.floor(q),r=q-w;let best=FRAC[0];for(const x of
 function planQty(q,u){
   if(u==="g"&&q>=1000){q/=1000;u="kg"}else if(u==="ml"&&q>=1000){q/=1000;u="l"}else if(u==="kg"&&q<1){q*=1000;u="g"}else if(u==="l"&&q<1){q*=1000;u="ml"}
   if(u==="g"||u==="ml")return (q>=50?Math.round(q/5)*5:Math.max(1,Math.round(q)))+u;
-  if(u==="kg"||u==="l")return (Math.round(q*100)/100)+u;
-  if(u==="tsp"||u==="tbsp"||u==="cup")return fracText(q)+" "+u;
+  if(u==="kg"||u==="l")return (q>=1?Math.round(q*10)/10:Math.round(q*100)/100)+u;
+  /* spoons that pile up turn into the next measure: 9 tsp is 3 tbsp, 20 tbsp is 1 1/4 cups */
+  if(u==="tsp"&&q>6){q/=3;u="tbsp"}
+  if(u==="tbsp"&&q>8){q/=16;u="cup"}
+  if(u==="cup")return fracText(q)+(q>1.01?" cups":" cup");
+  if(u==="tsp"||u==="tbsp")return fracText(q)+" "+u;
   return String(q<1?fracText(q):Math.ceil(q-0.01));
 }
 const UNITB={g:["g",1],kg:["g",1000],ml:["ml",1],l:["ml",1000]};
-const PL_CONT=/^(bag|can|tin|bottle|jar|packet|pack|bunch|clove|rasher|slice|sprig|stick|sheet|block|head|stalk|punnet|loaf|fillet|piece|wedge|strip|scoop|shot|glass|cup|leaf|tray|box|carton|tub|round|ball|sachet)s?$/i;
+const PL_CONT=/^(bag|can|tin|bottle|jar|packet|pack|bunch|bunche|clove|rasher|slice|sprig|stick|sheet|block|head|stalk|punnet|loaf|loave|fillet|piece|wedge|strip|scoop|shot|glass|glasse|cup|leaf|leave|tray|box|boxe|carton|tub|round|ball|sachet|pinch|pinche|handful|drop|dash|dashe|tube|splash|splashe|knob|dollop|cube|wheel|twist|square|ear|stem|rib|cob|sprinkle|log|disc|tablet|envelope|tray|container|pot|roll)s?$/i;
+const PL_MASS=/(thyme|rosemary|mint|parsley|basil|coriander|dill|chives|oregano|sage|tarragon|paprika|cinnamon|nutmeg|cumin|turmeric|allspice|colouring|coloring|paste|sauce|syrup|honey|vinegar|stock|yoghurt|yogurt|mayonnaise|mustard|ketchup|jam|chocolate|cocoa|spinach|lettuce|garlic|ginger|salt|ice cream|custard|gravy|cordial|lemonade|chilli flakes|seasoning|spice|zest|ice)$/i;
 function planPlural(item,q){if(!(q>1))return item;let [head,...rest]=String(item).split(",");const par=head.indexOf(" (");if(par>0){rest=[head.slice(par)+(rest.length?","+rest.join(","):"")];head=head.slice(0,par);return planPlural(head,q)+rest[0]}const w=head.trim().split(" ");
   const pl=x=>/(s|ice|milk|water|juice|sugar|flour|rice|bread|butter|cream|cheese|fish|corn|meat|oil|salt|pepper|mince|beef|pork|lamb|chicken|bacon|ham|tea|coffee|soda)$/i.test(x)?x:/(ch|sh|x)$/i.test(x)?x+"es":/(tomato|potato|mango|avocado)$/i.test(x)?x+"es":/[^aeiou]y$/i.test(x)?x.slice(0,-1)+"ies":/f$/i.test(x)&&/loaf|leaf|half/i.test(x)?x.slice(0,-1)+"ves":x+"s";
-  if(PL_CONT.test(w[0])){w[0]=pl(w[0]);if(w.length>1&&w[1]!=="of")w[0]+=" of"}else w[w.length-1]=pl(w[w.length-1]);return [w.join(" "),...rest].join(",")}
+  const ci=w.slice(0,3).findIndex(x=>PL_CONT.test(x));
+  if(ci>=0){if(!/s$/i.test(w[ci]))w[ci]=pl(w[ci]);if(w.length>ci+1&&w[ci+1]!=="of")w[ci]+=" of"}else if(!PL_MASS.test(head.trim()))w[w.length-1]=pl(w[w.length-1]);return [w.join(" "),...rest].join(",")}
+/* one of something stays singular even when the recipe wrote it plural: "1 clove garlic", not "1 cloves garlic" */
+function planOne(item){const w=String(item).split(" ");const i=w.slice(0,3).findIndex(x=>PL_CONT.test(x)&&/s$/i.test(x));if(i>=0)w[i]=planSing(w[i]);return w.join(" ")}
 /* one shopping line per ingredient: the same item from two dishes is added up, and a mix of units shows as "100g + 2 tbsp" */
 const planSing=w=>/ies$/.test(w)?w.slice(0,-3)+"y":/(ch|sh|x|ss|o)es$/.test(w)?w.slice(0,-2):/[^s]s$/.test(w)?w.slice(0,-1):w;
-const planKey=item=>String(item).toLowerCase().split(/,| \(/)[0].replace(/\s+/g," ").trim().split(" ").map(planSing).join(" ");
-function planShopping(f){
-  const k=PLAN.guests/((f._r2&&f._r2.serves)||4),tally={},order=[];
-  for(const d of planDishes(f))for(const i of d.ingredients||[]){
+const planKey=item=>String(item).toLowerCase().split(/,| \(/)[0].replace(/\s+/g," ").trim().replace(/^(cold|chilled|fresh|warm|hot|room temperature|softened|melted|extra)\s+/,"").split(" ").map(planSing).join(" ");
+function planShopping(f){const k=PLAN.guests/((f._r2&&f._r2.serves)||4);return shopLines(planDishes(f).map(d=>({d,k})))}
+function shopLines(list){
+  const tally={},order=[];
+  for(const {d,k} of list)for(const i of d.ingredients||[]){
     const b=UNITB[i.u]||[i.u||"#",1],a=AISLES.includes(i.aisle)?i.aisle:"Pantry";
     const key=a+"|"+planKey(i.item);
     if(!tally[key]){tally[key]={a,item:i.item,items:new Set(),parts:{},order:[],open:false};order.push(key)}
@@ -829,10 +838,27 @@ function planShopping(f){
     const item=t.items.size>1?String(t.item).split(/,| \(/)[0].trim():t.item;
     if("tsp" in t.parts&&"tbsp" in t.parts){t.parts.tbsp+=t.parts.tsp/3;delete t.parts.tsp;t.order=t.order.filter(u=>u!=="tsp")}
     if(!t.order.length)return item+"@"+t.a;
-    const count=""in t.parts?planQty(t.parts[""],"")+" "+planPlural(item,t.parts[""]):"";
+    const count=""in t.parts?planQty(t.parts[""],"")+" "+(t.parts[""]>1.01?planPlural(item,t.parts[""]):planOne(item)):"";
     const rest=t.order.filter(u=>u!=="").map(u=>planQty(t.parts[u],u)).join(" + ");
     return (count?count+(rest?" + "+rest:""):rest+" "+item)+"@"+t.a});
 }
+/* waiting time (chilling, soaking, resting, setting) is shown apart from hands-on and cooking time */
+const WAIT_RE=/^(chill|refrigerate|freeze|soak|marinate|rest|cool|prove|steep|leave|let|set aside|stand|infuse|steep)\b|\b(in the fridge|overnight|to set|until set|to rest|to cool|to chill|to prove|to rise|to soak|to marinate|to steep|to infuse)\b/i;
+function dishTimes(x){const st=x.steps||[];let wait=0;for(const t of st)if((t.min||0)>=10&&WAIT_RE.test(String(t.text).trim()))wait+=t.min;
+  const prep=x.prep_min||0,cook=x.cook_min||0;wait=Math.min(wait,prep+cook);const c2=Math.max(0,cook-wait),p2=Math.max(0,prep-Math.max(0,wait-cook));return {prep:p2,cook:c2,wait,active:p2+c2}}
+/* a dish's own ingredients, scaled to the guests */
+function dishIng(x,k){return (x.ingredients||[]).map(i=>{if(i.q==null)return i.item;const q=i.q*k;if(!i.u)return planQty(q,"")+" "+(q>1.01?planPlural(i.item,q):planOne(i.item));return planQty(q,i.u)+" "+i.item}).join(", ")}
+/* counts in a method step follow the guests: "fill four tall glasses" for 4 becomes "fill eight tall glasses" for 8; times, heat and sizes stay put */
+const NUMW=["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty"];
+const STEP_NOUN="glass|glasses|cup|cups|mug|mugs|bowl|bowls|plate|plates|meatballs?|patties|patty|burgers?|skewers?|kebabs?|balls?|rolls?|buns?|tacos?|tortillas?|wraps?|portions?|pieces?|slices?|wedges?|squares?|triangles?|fingers?|cookies?|biscuits?|cupcakes?|muffins?|scones?|pancakes?|crepes?|sandwiches|sandwich|toasties?|pies?|tarts?|parcels?|dumplings?|rissoles?|fritters?|cakes?|bars?|cones?|scoops?|shots?|jars?|ramekins?|moulds?|molds?|serves|servings|people|pizzas?|bases|nests|stacks?|sliders?|hot dogs?|dogs?|sausages?|chops?|steaks?|fillets?|cutlets?|wings?|drumsticks?|lollies|lolly|ice blocks?|popsicles?|lettuce cups";
+const STEP_RE=new RegExp("\\b(\\d{1,3}|"+NUMW.slice(1).join("|")+")((?:\\s+[a-z-]+){0,2}?)\\s+("+STEP_NOUN+")\\b","gi");
+const STEP_AMT=/\b(\d+(?:\.\d+)?)\s?(kg|g|ml|l)\b(?!\s*(?:tin|can|jar|bottle|packet|pack|tub|block|bag)s?\b)/gi;
+function scaleStep(t,k){if(!k||Math.abs(k-1)<0.01)return t;
+  /* a sentence about one serve ("two patties per bun", "for each drink, 45ml tequila") stays as written */
+  return String(t).split(/(?<=[.!?])\s+/).map(sn=>/\b(per|apiece|a head)\b|\beach\b(?!\s+of\b)/i.test(sn)?sn:scaleOne(sn,k)).join(" ")}
+function scaleOne(t,k){return String(t).replace(STEP_AMT,(m,n,u)=>planQty(+n*k,u.toLowerCase())).replace(STEP_RE,(m,n,mid,noun)=>{const w=NUMW.indexOf(n.toLowerCase());const v=w>0?w:+n;if(!(v>0))return m;if(/^(\s+(minutes?|mins?|hours?|hrs?|seconds?|cm|mm|degrees?|c|f|inch|inches))/i.test(mid))return m;
+  const nv=Math.max(1,Math.round(v*k));let out=w>0&&nv<=20?NUMW[nv]:String(nv);if(/^[A-Z]/.test(n))out=out[0].toUpperCase()+out.slice(1);
+  let nn=noun;if(nv>1&&v===1)nn=/(ch|sh|x|s)$/i.test(noun)?noun+"es":/y$/i.test(noun)&&!/(ay|ey|oy)$/i.test(noun)?noun.slice(0,-1)+"ies":noun+"s";if(nv===1&&v>1)nn=planSing(noun);return out+mid+" "+nn})}
 const planMin=m=>m>=1440?(d=>d+(d===1?" day":" days")+" ahead")(Math.round(m/1440)):m>=600?(Math.round(m/60))+" hr, start the day before":m>=60?Math.floor(m/60)+" hr"+(m%60?" "+m%60+" min":""):m+" min";
 function planHTML(f){
   const r=f._r2,k=PLAN.guests/(r.serves||4),C={s:"Snacks",m:"Mains",w:"Sweets",d:"Drinks",c:"From the candy bar"},all=planAll(f);
@@ -841,7 +867,7 @@ function planHTML(f){
   <div class="pl-row pl-diet"><label class="pl-t"><input type="checkbox" data-diet="veg"${DIET.veg?" checked":""}><span>Vegetarian</span></label><label class="pl-t"><input type="checkbox" data-diet="af"${dietAF()?" checked":""}${kidsMode?" disabled":""}><span>No alcohol${kidsMode?" (kids mode)":""}</span></label></div>
   <details class="pl-pick"${planOpen()?" open":""}><summary><span class="pl-sum">${planCount(r)}</span><span class="pl-tw">Choose dishes</span></summary>
   <p class="pl-hint">Tick what you want to make tonight. The prep sheet, shopping list and times follow your picks.${DIET.veg||dietAF()?" Dishes that don't fit are swapped for their own version, or left off so you can choose.":""}</p>
-  ${["s","m","w","d","c"].map(c=>{const ds=all.filter(d=>d.course===c);return ds.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.orig||d.n)}"${planOn(d)?" checked":""}><span>${ESC(d.n)}${d.tag&&!/alcohol-free|vegetarian/i.test(d.n)?`<em class="pl-tag">${TAG[d.tag]}</em>`:""}${d.blocked?`<em class="pl-tag pl-no">${BLK[d.blocked]}</em>`:""}</span><small>${planMin((d.prep_min||0)+(d.cook_min||0))}</small></label>`).join("")}</fieldset>`:""}).join("")}</details>`;
+  ${["s","m","w","d","c"].map(c=>{const ds=all.filter(d=>d.course===c);return ds.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.orig||d.n)}"${planOn(d)?" checked":""}><span>${ESC(d.n)}${d.tag&&!/alcohol-free|vegetarian/i.test(d.n)?`<em class="pl-tag">${TAG[d.tag]}</em>`:""}${d.blocked?`<em class="pl-tag pl-no">${BLK[d.blocked]}</em>`:""}</span><small>${(t=>planMin(t.active)+(t.wait?" + "+planMin(t.wait)+" wait":""))(dishTimes(d))}</small></label>`).join("")}</fieldset>`:""}).join("")}</details>`;
 }
 function planCount(r){const on=r.dishes.map(dietDish).filter(planOn).length;return `${on} of ${r.dishes.length} dishes picked`}
 function planOpen(){try{return localStorage.getItem("mns-plan-open")==="1"}catch(e){return false}}
@@ -851,14 +877,14 @@ function prepHTML2(f,menu){
   for(const x of planShopping(f)){const [n,a]=x.split("@");(groups[a]=groups[a]||[]).push(n)}
   const tk=sharedTicks(f);
   const shop=AISLES.filter(a=>groups[a]).map(a=>`<div class="pp-aisle"><h4>${a}</h4><ul>${groups[a].map(x=>{const k=tickKey(x),on=!!tk[k];return `<li role="checkbox" tabindex="0" aria-checked="${on}" data-k="${ESC(k)}"${on?' class="pp-done"':""}><span class="pp-box"></span>${ESC(x)}</li>`}).join("")}</ul></div>`).join("");
-  const hands=ds.reduce((s,x)=>s+(x.prep_min||0),0),longest=ds.reduce((m,x)=>Math.max(m,(x.prep_min||0)+(x.cook_min||0)),0);
-  const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"};
-  const steps=ds.filter(x=>(x.steps||[]).length).map(x=>`<li><b>${ESC(x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">Prep ${planMin(x.prep_min||0)}${x.cook_min?`, cook ${planMin(x.cook_min)}`:""}${x.make_ahead?`. Make ahead: ${ESC(x.make_ahead)}`:""}</span><span>${(x.steps||[]).map(s=>ESC(s.text)+(s.min?` <i>(${planMin(s.min)})</i>`:"")).join(" ")}</span></li>`).join("");
+  const TT=ds.map(dishTimes),hands=TT.reduce((s,x)=>s+x.prep,0),longest=TT.reduce((m,x)=>Math.max(m,x.active),0),waitMax=TT.reduce((m,x)=>Math.max(m,x.wait),0);
+  const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"},K=PLAN.guests/((f._r2&&f._r2.serves)||4);
+  const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const T=dishTimes(x),kk=x.snack?PLAN.guests/4:K;return `<li><b>${ESC(x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">Prep ${planMin(T.prep)}${T.cook?`, cook ${planMin(T.cook)}`:""}${T.wait?`, then ${planMin(T.wait)} waiting (chill, soak or rest)`:""}${x.make_ahead?`. Make ahead: ${ESC(x.make_ahead)}`:""}</span><span class="pp-ing"><b>You need</b> ${ESC(dishIng(x,kk))}</span><span>${(x.steps||[]).map(s=>ESC(scaleStep(s.text,kk))+(s.min?` <i>(${planMin(s.min)})</i>`:"")).join(" ")}</span></li>`}).join("");
   return `<div class="mc-bg">${d.bg}</div><div class="mc-grain" style="background-image:url('${GRAIN}')"></div>
   <div class="mc-in pp">
     <div class="mc-eye">Prep sheet</div>
     <div class="pp-title">${ESC(f.title)}</div>
-    <p class="pp-serves">Serves ${PLAN.guests}${DIET.veg||dietAF()?` &nbsp;/&nbsp; ${[DIET.veg&&"vegetarian",dietAF()&&"alcohol-free"].filter(Boolean).join(", ")}`:""} &nbsp;/&nbsp; ${ds.length} dish${ds.length===1?"":"es"} &nbsp;/&nbsp; hands-on ${planMin(hands)}, longest dish ${planMin(longest)}</p>
+    <p class="pp-serves">Serves ${PLAN.guests}${DIET.veg||dietAF()?` &nbsp;/&nbsp; ${[DIET.veg&&"vegetarian",dietAF()&&"alcohol-free"].filter(Boolean).join(", ")}`:""} &nbsp;/&nbsp; ${ds.length} dish${ds.length===1?"":"es"} &nbsp;/&nbsp; hands-on ${planMin(hands)}, longest dish ${planMin(longest)}${waitMax?` plus up to ${planMin(waitMax)} waiting`:""}</p>
     <div class="pp-cols"><div class="pp-shop"><h3>Shopping list</h3>${shop||"<p>Tick at least one dish.</p>"}</div><div class="pp-method"><h3>How to make it</h3><ol>${steps}</ol></div></div>
     <div class="mc-cue"><b>Showtime cue</b><span>${ESC(edition&&edition.cue||f.P)}</span></div>
   </div>`;
@@ -868,7 +894,7 @@ function planWire(f){
   if(!f||!f._r2||!f._r2.dishes||!f._r2.dishes.length){box.hidden=true;box.dataset.has="";box.innerHTML="";return}
   planLoad(f);box.dataset.has="1";box.hidden=tab!=="prep";box.innerHTML=planHTML(f);
   const redo=()=>{planSave(f);box.querySelector(".pl-g").textContent=PLAN.guests;{const n=box.querySelector(".pl-sum");if(n)n.textContent=planCount(f._r2)}prep.innerHTML=prepHTML(f,current.menu);const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
-  box.onclick=e=>{const b=e.target.closest("[data-pl]");if(!b)return;PLAN.guests=Math.min(24,Math.max(1,PLAN.guests+(b.dataset.pl==="+"?1:-1)));redo()};
+  box.onclick=e=>{const b=e.target.closest("[data-pl]");if(!b)return;PLAN.guests=Math.min(60,Math.max(1,PLAN.guests+(b.dataset.pl==="+"?1:-1)));redo()};
   const wireToggle=()=>{const dt=box.querySelector(".pl-pick");if(dt)dt.addEventListener("toggle",()=>{try{localStorage.setItem("mns-plan-open",dt.open?"1":"0")}catch(e){}})};wireToggle();
   box.onchange=e=>{const dk=e.target.dataset.diet;if(dk){DIET[dk]=e.target.checked;dietSave();try{setSync()}catch(_){}const op=box.querySelector(".pl-pick"),was=op&&op.open;box.innerHTML=planHTML(f);if(was){const o2=box.querySelector(".pl-pick");if(o2)o2.open=true}wireToggle();redo();return}
     const n=e.target.dataset.dish;if(n==null)return;const x=planAll(f).find(d=>(d.orig||d.n)===n);
@@ -1128,7 +1154,7 @@ function renderMotw(){
   $("motwLock").addEventListener("click",()=>{setWeek(f);replay(f)});
 }
 function setWeek(f){week=newWeekPlan(f.id);saveWeek();renderWeek();updateWatchButton();$("status").textContent=`${f.title} is locked in for this week.`}
-function listText(f,groups){return `${f.title} (${f.year}) shopping list, serves ${f._r2?PLAN.guests:4}\n`+groups.map(([a,l])=>`\n${a}\n${l.map(x=>"- "+x).join("\n")}`).join("\n")}
+function listText(f,groups,serves){return `${f.title} (${f.year}) shopping list, serves ${serves||(f._r2?PLAN.guests:4)}\n`+groups.map(([a,l])=>`\n${a}\n${l.map(x=>"- "+x).join("\n")}`).join("\n")}
 const trolleySessionTicks=new Map();
 async function openTrolley(f,menuOverride,label){
   const modalTrigger=document.activeElement;
@@ -1137,7 +1163,7 @@ async function openTrolley(f,menuOverride,label){
   /* the film's own list shares its ticks with the prep sheet; double feature and marathon lists keep their own */
   const own=!menuOverride;
   if(!menuOverride&&f._r2&&f._r2.dishes&&f._r2.dishes.length){if(f!==current)planLoad(f);menuOverride={s:[],m:[],w:[],d:[],shopping:planShopping(f)}}
-  const serves=f._r2?PLAN.guests:4;
+  const serves=menuOverride&&menuOverride.serves||(f._r2?PLAN.guests:4);
   const groups=shopGroups(menuOverride||mm);const all=groups.flatMap(([,l])=>l);
   const o=document.createElement("dialog");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Shopping list for ${f.title}`);
   const sessionKey=JSON.stringify([f.id,label||""]);
@@ -1153,7 +1179,7 @@ async function openTrolley(f,menuOverride,label){
     if(e.target===o)return close();const a=e.target.dataset&&e.target.dataset.a;if(!a)return;
     if(a==="done")close();
     if(a==="reset"){all.forEach(x=>tick(kf(x),false,true));if(week&&week.id===f.id)saveWeek();o.querySelectorAll("input").forEach(i=>i.checked=false);o.querySelector("#tMsg").textContent="";prog()}
-    if(a==="share"){const left=groups.map(([g,l])=>[g,l.filter(x=>!ticks()[kf(x)])]).filter(([,l])=>l.length);if(!left.length){o.querySelector("#tMsg").textContent=all.length?"Everything is in the trolley. Nothing left to send.":"This shopping list is empty.";return}const text=listText(f,left);
+    if(a==="share"){const left=groups.map(([g,l])=>[g,l.filter(x=>!ticks()[kf(x)])]).filter(([,l])=>l.length);if(!left.length){o.querySelector("#tMsg").textContent=all.length?"Everything is in the trolley. Nothing left to send.":"This shopping list is empty.";return}const text=listText(f,left,serves);
       try{if(navigator.share){await navigator.share({title:`${f.title} shopping list`,text});o.querySelector("#tMsg").textContent="Sent."}else{await navigator.clipboard.writeText(text);o.querySelector("#tMsg").textContent="Copied. Paste it into Notes or Reminders."}}
       catch(err){if(!(err&&err.name==="AbortError"))o.querySelector("#tMsg").textContent="Couldn't share from here. Use Copy text under the menu instead."}}
   });
@@ -1374,12 +1400,21 @@ function itemShop(menu,it){
   const how=((it.how||"")+" "+(it.n||"")).toLowerCase();
   return (menu.shopping||[]).filter(x=>{const words=x.split("@")[0].toLowerCase().replace(/[0-9.,/()]+(g|kg|ml|l|cm)?\b/g," ").split(/\s+/).filter(w=>w.length>=4);return words.some(w=>how.includes(w.replace(/s$/,"")))});
 }
-async function doubleMenu(a,b){
+/* a double feature or marathon list is built from each dish's own recipe, scaled to the guests */
+function pickedShop(m,G){
+  const list=[],extra=[];
+  for(const it of [...m.s,...m.m,...m.w,...m.d]){const f=it._f,r2=f&&f._r2&&f._r2.dishes,d=r2&&r2.find(z=>z.n===(it.orig||it.n));
+    if(d){const x=dietDish(d);if(!x.blocked)list.push({d:x,k:G/((f._r2&&f._r2.serves)||4)})}else extra.push(...(it.shop||[]))}
+  return [...shopLines(list),...extra];
+}
+async function doubleMenu(a,b,G){
+  G=G||USUAL;
   await ensureExact(a);await ensureExact(b);
   const A=makeMenu(a,true),B=makeMenu(b,true);
-  const pickIt=(menu,it,film)=>Object.assign({},it,{film:film.title,shop:itemShop(menu,it)});
+  const pickIt=(menu,it,film)=>Object.assign({},it,{film:film.title,_f:film,shop:itemShop(menu,it)});
   const m={s:[pickIt(A,A.s[0],a),pickIt(B,B.s[0],b)],m:[pickIt(A,A.m[0],a)],w:[pickIt(B,B.w[0],b)],d:[A.d[0]&&pickIt(A,A.d[0],a),B.d[0]&&pickIt(B,B.d[0],b)].filter(Boolean)};
   m.counter=[...new Set([...counterShop(a.id),...counterShop(b.id)])];
+  m.serves=G;m.shopping=pickedShop(m,G);
   return m;
 }
 function pairFor(a,pool){
@@ -1395,14 +1430,15 @@ async function openDouble(pa,pb){
   if(pa&&!pa.id)pa=null;
   const pool=list.length>1?list:FILMS.filter(f=>!kidsMode||isKidSafe(f));
   const a=pa||pool[Math.floor(Math.random()*pool.length)],b=pb||pairFor(a,pool);if(!b)return;
-  const m=await doubleMenu(a,b);
+  let G=USUAL,m=await doubleMenu(a,b,G);
   const img=f=>{const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];return p?`<img alt="${ESC(f.title)} poster" src="https://image.tmdb.org/t/p/w342${ESC(p)}">`:""};
   const li=it=>`<li>${ESC(it.n)} <small>(${ESC(it.film)})</small></li>`;
   const o=document.createElement("dialog");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label","Double feature");
-  o.innerHTML=`<div class="df"><h3>Tonight's double feature</h3><div class="df-pair"><figure>${img(a)}<figcaption><b>First up</b>${ESC(a.title)} (${a.year})</figcaption></figure><span class="df-amp" aria-hidden="true">+</span><figure>${img(b)}<figcaption><b>Then</b>${ESC(b.title)} (${b.year})</figcaption></figure></div><p class="msg">One menu for both films, serves 4. A snack and a drink from each, the main from the first film and dessert at intermission.</p><h4>Snacks</h4><ul>${m.s.map(li).join("")}</ul><h4>Main</h4><ul>${m.m.map(li).join("")}</ul><h4>Intermission dessert</h4><ul>${m.w.map(li).join("")}</ul><h4>To drink</h4><ul>${m.d.map(li).join("")}</ul><div class="acts"><button class="go" type="button" data-a="lock">Lock in for the week</button><button type="button" data-a="shop">Shopping list</button><button type="button" data-a="again">Spin again</button><button type="button" data-a="first">Open first film</button><button type="button" data-a="done">Done</button></div><p class="msg" role="status" id="dfMsg"></p></div>`;
+  o.innerHTML=`<div class="df"><h3>Tonight's double feature</h3><div class="df-pair"><figure>${img(a)}<figcaption><b>First up</b>${ESC(a.title)} (${a.year})</figcaption></figure><span class="df-amp" aria-hidden="true">+</span><figure>${img(b)}<figcaption><b>Then</b>${ESC(b.title)} (${b.year})</figcaption></figure></div><p class="msg">One menu for both films. A snack and a drink from each, the main from the first film and dessert at intermission.</p><div class="df-g"><span>Guests</span><button type="button" data-a="g-" aria-label="Fewer guests">-</button><output id="dfG" aria-live="polite">${G}</output><button type="button" data-a="g+" aria-label="More guests">+</button></div><h4>Snacks</h4><ul>${m.s.map(li).join("")}</ul><h4>Main</h4><ul>${m.m.map(li).join("")}</ul><h4>Intermission dessert</h4><ul>${m.w.map(li).join("")}</ul><h4>To drink</h4><ul>${m.d.map(li).join("")}</ul><div class="acts"><button class="go" type="button" data-a="lock">Lock in for the week</button><button type="button" data-a="shop">Shopping list</button><button type="button" data-a="again">Spin again</button><button type="button" data-a="first">Open first film</button><button type="button" data-a="done">Done</button></div><p class="msg" role="status" id="dfMsg"></p></div>`;
   const close=()=>dismissModal(o);
   o.addEventListener("click",e=>{
     if(e.target===o)return close();const k=e.target.dataset&&e.target.dataset.a;if(!k)return;
+    if(k==="g-"||k==="g+"){G=Math.min(60,Math.max(1,G+(k==="g+"?1:-1)));o.querySelector("#dfG").textContent=G;doubleMenu(a,b,G).then(x=>{m=x});return}
     if(k==="done")close();
     if(k==="again"){close();openDouble()}
     if(k==="first"){close();setView("wheel");replay(a);addHistory(a);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})}
@@ -2001,7 +2037,7 @@ function refreshPlan(){try{if(current&&current._r2){planWire(current);prep.inner
 $("setBtn").addEventListener("click",()=>{setSync();const o=$("settings");mountModal(o,"#setClose",$("setBtn"));if(!o.open)o.showModal()});
 $("setClose").addEventListener("click",()=>dismissModal($("settings")));
 $("settings").addEventListener("click",e=>{if(e.target===$("settings"))dismissModal($("settings"))});
-$("settings").querySelectorAll("[data-sg]").forEach(b=>b.addEventListener("click",()=>{USUAL=Math.min(24,Math.max(1,USUAL+(b.dataset.sg==="+"?1:-1)));try{localStorage.setItem("mns-guests",USUAL)}catch(e){}setSync();$("setMsg").textContent=`New prep sheets start at ${USUAL} guest${USUAL===1?"":"s"}.`}));
+$("settings").querySelectorAll("[data-sg]").forEach(b=>b.addEventListener("click",()=>{USUAL=Math.min(60,Math.max(1,USUAL+(b.dataset.sg==="+"?1:-1)));try{localStorage.setItem("mns-guests",USUAL)}catch(e){}setSync();$("setMsg").textContent=`New prep sheets start at ${USUAL} guest${USUAL===1?"":"s"}.`}));
 $("setVeg").addEventListener("change",e=>{DIET.veg=e.target.checked;dietSave();refreshPlan()});
 $("setAf").addEventListener("change",e=>{DIET.af=e.target.checked;dietSave();refreshPlan()});
 function clearStubs(){hist=[];try{localStorage.setItem("mns-hist","[]")}catch(e){}renderHist();setSync();try{queueSync()}catch(e){}}
@@ -2046,9 +2082,10 @@ function seriesNote(f){
     if(k.dataset.sr==="first"){replay(first);addHistory(first);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})}
     if(k.dataset.sr==="run")openMarathon(sr)};
 }
-async function marathonMenu(films){
+async function marathonMenu(films,G){
+  G=G||USUAL;
   await Promise.all(films.map(ensureExact));
-  const M=films.map(f=>makeMenu(f,true)),pickIt=(menu,it,film)=>Object.assign({},it,{film:film.title,shop:itemShop(menu,it)});
+  const M=films.map(f=>makeMenu(f,true)),pickIt=(menu,it,film)=>Object.assign({},it,{film:film.title,_f:film,shop:itemShop(menu,it)});
   const one=(k,i)=>M[i]&&M[i][k]&&M[i][k][0]?pickIt(M[i],M[i][k][0],films[i]):null;
   const last=films.length-1,mid=Math.floor(last/2);
   const m={s:films.map((f,i)=>one("s",i)).filter(Boolean),
@@ -2056,22 +2093,23 @@ async function marathonMenu(films){
     w:[one("w",mid)||one("w",last)||one("w",0)].filter(Boolean),
     d:films.map((f,i)=>one("d",i)).filter(Boolean)};
   m.counter=[...new Set(films.flatMap(f=>counterShop(f.id)))];
+  m.serves=G;m.shopping=pickedShop(m,G);
   return m;
 }
 function openMarathon(sr){
   const modalTrigger=document.activeElement;
   let ord=seriesOrderPref(),off=new Set();
   const o=document.createElement("dialog");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",sr.name+" marathon");
-  let films=[],menu=null;
+  let films=[],menu=null,G=USUAL;
   const li=it=>`<li>${ESC(it.n)} <small>(${ESC(it.film)})</small></li>`;
   const draw=async()=>{
     const all=seriesList(sr,ord);films=all.filter(f=>!off.has(f.id));
-    menu=films.length?await marathonMenu(films):{s:[],m:[],w:[],d:[],counter:[]};
+    menu=films.length?await marathonMenu(films,G):{s:[],m:[],w:[],d:[],counter:[]};
     const n=films.length,mains=menu.m.length>1?"mains from the first and last film":"the main from the first film";
     o.innerHTML=`<div class="df"><h3>${ESC(sr.name)} marathon</h3>
     ${sr.story?`<div class="mr-order" role="group" aria-label="Watch order"><button type="button" data-o="release" aria-pressed="${ord==="release"}">Release order</button><button type="button" data-o="story" aria-pressed="${ord==="story"}">Story order</button></div>`:""}
     <ol class="mr-films">${all.map((f,i)=>`<li><label><input type="checkbox" data-f="${ESC(f.id)}"${off.has(f.id)?"":" checked"}><span class="n">${i+1}</span>${ESC(f.title)} (${f.year})</label></li>`).join("")}</ol>
-    ${n?`<p class="msg">One menu for ${n} film${n===1?"":"s"}, serves 4. A snack and a drink from each film, ${mains}, and dessert at the halfway break.</p>
+    ${n?`<p class="msg">One menu for ${n} film${n===1?"":"s"}. A snack and a drink from each film, ${mains}, and dessert at the halfway break.</p><div class="df-g"><span>Guests</span><button type="button" data-a="g-" aria-label="Fewer guests">-</button><output aria-live="polite">${G}</output><button type="button" data-a="g+" aria-label="More guests">+</button></div>
     <h4>Snacks</h4><ul>${menu.s.map(li).join("")}</ul><h4>${menu.m.length>1?"Mains":"Main"}</h4><ul>${menu.m.map(li).join("")}</ul><h4>Halfway dessert</h4><ul>${menu.w.map(li).join("")}</ul><h4>To drink</h4><ul>${menu.d.map(li).join("")}</ul>`:`<p class="msg">Tick at least one film.</p>`}
     <div class="acts">${n?`<button type="button" class="go" data-a="first">Start with ${ESC(films[0].title)}</button><button type="button" data-a="shop">Shopping list</button>`:""}<button type="button" data-a="done">Done</button></div></div>`;
   };
@@ -2080,6 +2118,7 @@ function openMarathon(sr){
     if(e.target===o)return close();
     const ob=e.target.closest("[data-o]");if(ob){ord=ob.dataset.o;try{localStorage.setItem("mns-series-order",ord)}catch(err){}await draw();if(current)seriesNote(current);o.querySelector(`[data-o="${ord}"]`).focus();return}
     const k=e.target.dataset&&e.target.dataset.a;if(!k)return;
+    if(k==="g-"||k==="g+"){G=Math.min(60,Math.max(1,G+(k==="g+"?1:-1)));await draw();const b=o.querySelector(`[data-a="${k}"]`);if(b)b.focus();return}
     if(k==="done")close();
     if(k==="first"&&films[0]){const f=films[0];close();setView("wheel");replay(f);addHistory(f);$("theatre").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})}
     if(k==="shop"&&films[0])openTrolley(films[0],menu,sr.name+" marathon");
