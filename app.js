@@ -767,21 +767,29 @@ function dietMenu(f,menu){
 function dietText(f,str){
   const k=dietKey();if(!k||typeof str!=="string"||!f||!f._diet||!f._diet.text)return str;
   const T=f._diet.text,lists=k==="veg_af"?[T.veg_af,T.veg,T.af]:[T[k]];let out=str;
-  for(const L of lists)for(const [a,b] of (L||[]))if(a&&out.includes(a))out=out.split(a).join(b);
-  return out;
+  const pairs=[];for(const L of lists)for(const [a,b] of (L||[]))if(a)pairs.push([a,b]);
+  pairs.forEach(([a],i)=>{if(out.includes(a))out=out.split(a).join("\u0001"+i+"\u0002")});
+  return out.replace(/\u0001(\d+)\u0002/g,(m,i)=>pairs[+i][1]);
 }
 /* the hand-built menus are finished artwork with the words baked in, so the same swaps run over the page itself */
 function dietHTML(f,html){
   const k=dietKey();if(!k||typeof html!=="string"||!f||!f._diet||!f._diet.text)return html;
   const T=f._diet.text,lists=k==="veg_af"?[T.veg_af,T.veg,T.af]:[T[k]];let out=html;
   const esc=t=>String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
-  for(const L of lists)for(const [a,b] of (L||[]))for(const [x,y] of [[a,b],[esc(a),esc(b)],[esc(a).replace(/'/g,"&#39;"),esc(b).replace(/'/g,"&#39;")],[esc(a).replace(/'/g,"&#x27;"),esc(b).replace(/'/g,"&#x27;")],[esc(a).replace(/"/g,"&quot;"),esc(b).replace(/"/g,"&quot;")]])if(x&&out.includes(x))out=out.split(x).join(y);
-  return out;
+  /* each swap lands once: matches become placeholders first, so wording that contains the old wording is never swapped again */
+  const pairs=[],miss=[];for(const L of lists)for(const [a,b] of (L||[]))if(a)pairs.push([a,b]);
+  pairs.forEach(([a,b],i)=>{const tok="\u0001"+i+"\u0002";let hit=false;
+    for(const [x] of new Map([[a],[esc(a)],[esc(a).replace(/'/g,"&#39;")],[esc(a).replace(/'/g,"&#x27;")],[esc(a).replace(/"/g,"&quot;")]].map(v=>[v[0],1])))if(out.includes(x)){out=out.split(x).join(tok);hit=true}
+    if(!hit)miss.push(i)});
+  /* words written with character codes in the artwork: swap them in the page's own text */
+  if(miss.length&&typeof document!=="undefined"&&document.createElement){try{const t=document.createElement("template");t.innerHTML=out;const w=document.createTreeWalker(t.content,NodeFilter.SHOW_TEXT);let n,ch=false;
+    while(n=w.nextNode()){let v=n.nodeValue;for(const i of miss){const a=pairs[i][0];if(v.includes(a))v=v.split(a).join("\u0001"+i+"\u0002")}if(v!==n.nodeValue){n.nodeValue=v;ch=true}}if(ch)out=t.innerHTML}catch(e){}}
+  return out.replace(/\u0001(\d+)\u0002/g,(m,i)=>{const b=pairs[+i][1];return esc(b)});
 }
 function dietDeep(f,o){if(typeof o==="string")return dietText(f,o);if(Array.isArray(o))return o.map(x=>dietDeep(f,x));if(o&&typeof o==="object"){const r={};for(const k in o)r[k]=k==="k"?o[k]:dietDeep(f,o[k]);return r}return o}
 const _dietSpecs=new WeakMap();
 function dietSpec(f,spec){if(!spec||!dietKey()||!f._diet)return spec;let c=_dietSpecs.get(spec);if(!c){c={};_dietSpecs.set(spec,c)}const k=dietKey();return c[k]||(c[k]=dietDeep(f,spec))}
-function dietStamp(el){const t=dietLabel();if(!t||!el)return;const b=document.createElement("div");b.className="diet-stamp";b.textContent=t;el.appendChild(b)}
+function dietStamp(){const b=$("dietNote");if(!b)return;const t=dietLabel();b.textContent=t?t+" menu":"";b.hidden=!t}
 function dietLabel(){const k=dietKey();return k==="veg_af"?"Vegetarian · Alcohol-free":k==="veg"?"Vegetarian":k==="af"?"Alcohol-free":""}
 /* lazy night: plan only the dishes left on the cut-down menu */
 const planAll=f=>{const all=((f._r2&&f._r2.dishes)||[]).map(dietDish),m=f.menu||(typeof current!=="undefined"&&current===f?current.menu:null);
@@ -966,7 +974,7 @@ async function show(f,preferSig){
   if(spec){
     await fmtFontsReady(spec);if(id!==renderId)return;
     menu=fmtMenu(f,spec);menu.counter=counterShop(f.id);current.menu=menu;
-    styleCard(card,f);card.className="mcard fmt fmt-"+spec.fmt;card.style.transform="";card.innerHTML=fmtHTML(f,spec,menu);dietStamp(card);{const sh=fmtSheet(spec);if(sh){const z=fmtSheetSize(sh);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}}fmtStarsPNG(card);fmtTilesPNG(card);await fmtPhotocopy(card);if(id!==renderId)return;
+    styleCard(card,f);card.className="mcard fmt fmt-"+spec.fmt;card.style.transform="";card.innerHTML=fmtHTML(f,spec,menu);dietStamp();{const sh=fmtSheet(spec);if(sh){const z=fmtSheetSize(sh);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}}fmtStarsPNG(card);fmtTilesPNG(card);await fmtPhotocopy(card);if(id!==renderId)return;
     try{const im=card.querySelector(".fx-poster");if(im)await im.decode()}catch(e){}
     if(id!==renderId)return;
     styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);
@@ -979,7 +987,7 @@ async function show(f,preferSig){
     try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
       const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f:dietKey()?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietText(f,f.P),D:dietText(f,f.D)}):f,menu:libMenu(menu),poster:lobbyPoster(f),stills:L.stills||[],logo:L.logo,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
       const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
-      styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);dietStamp(card);
+      styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);dietStamp();
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       try{libAim(card,L)}catch(e){}
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;
