@@ -24,7 +24,7 @@ When an item goes live, the owner (or the session that pushed it) marks it LIVE 
 8. TODO  Private review diary: after Mark as watched, stars and a short note for the film and for the menu; a "Your diary" view with history; synced on the member card. Private only.
 9. TODO  Snacks on marathons and double features: their shopping lists carry the snack counter picks.
 10. TODO Suggested snacks per film: two "goes well with" picks from the snack counter on each film's menu view.
-11. ASK FIRST  Name and brand the store (sign, member card, rental slip). Owner picks the name.
+11. PARKED  Name and brand the store (sign, member card, rental slip). Owner picks the name. Oct 29: none of Reel Hungry Video, Overnighter Video, Rewind Video, Late Fee Video, Dinner & a Tape, Rewind & Dine, Credits & Crumbs, Reel Feast Video landed. Next time ask the feel first (local corner shop, big 90s chain, food pun). Stays "Video store" for now.
 12. ASK FIRST  Sharing reviews with friends by link.
 13. ASK FIRST  New films each month: a pipeline to add new releases with menus.
 14. PARKED  Cost per head.
