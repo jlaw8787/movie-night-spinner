@@ -1,0 +1,827 @@
+{
+ "serves": 4,
+ "dishes": [
+  {
+   "n": "Frau Schmidt's picnic Liptauer",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Up to 2 days, keep covered in the fridge",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "quark",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sweet paprika, plus extra to dust",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caraway seeds, crushed",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "eschalot, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chives, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt, to taste",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices dark rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch radishes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "gherkins",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the quark and butter together until smooth.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the paprika, caraway, mustard, capers, eschalot, chives and salt.",
+     "min": 7
+    },
+    {
+     "text": "Cover and chill until firm.",
+     "min": 30
+    },
+    {
+     "text": "Pile into a bowl, dust with paprika and serve with the rye bread, radishes and gherkins.",
+     "min": 8
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Nonnberg Abbey pretzels with sweet mustard",
+   "course": "s",
+   "prep_min": 105,
+   "cook_min": 30,
+   "make_ahead": "Bake up to 1 day ahead and warm at 180C for 5 minutes; the dough can prove overnight in the fridge",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "bread flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 7,
+     "u": "g",
+     "item": "dried yeast",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1.5,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "warm water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "water, for the bath",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "sweet mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, yeast, sugar, salt, butter and warm water, then knead until smooth and elastic.",
+     "min": 15
+    },
+    {
+     "text": "Cover and prove until doubled.",
+     "min": 60
+    },
+    {
+     "text": "Cut into 8 pieces, roll each into a 50cm rope, thin at the ends, and twist into pretzels.",
+     "min": 20
+    },
+    {
+     "text": "Rest on lined trays.",
+     "min": 10
+    },
+    {
+     "text": "Simmer the bath water with the bicarbonate of soda and dip each pretzel for 30 seconds, then put back on the trays.",
+     "min": 10
+    },
+    {
+     "text": "Sprinkle with salt flakes, slash the thick part and bake at 220C until deep brown.",
+     "min": 15
+    },
+    {
+     "text": "Cool a few minutes and serve warm with sweet mustard.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Uncle Max's cheese kransky board",
+   "course": "s",
+   "prep_min": 8,
+   "cook_min": 20,
+   "make_ahead": "Warm the sauerkraut up to 1 day ahead; brown the kranskys to serve",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "sauerkraut, drained",
+     "aisle": "Deli"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caraway seeds",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "cheese kranskys",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "horseradish cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "hot mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "cornichons",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the sauerkraut with the caraway and a splash of water.",
+     "min": 10
+    },
+    {
+     "text": "Score the kranskys and brown in the oil over medium heat, turning, until the cheese bubbles out.",
+     "min": 12
+    },
+    {
+     "text": "Slice on an angle.",
+     "min": 3
+    },
+    {
+     "text": "Pile on a board with the sauerkraut, horseradish cream, mustard and cornichons.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Uncle Max's cheese kransky board (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 18,
+     "make_ahead": "Warm the sauerkraut up to 1 day ahead; brown the sausages to serve",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "sauerkraut, drained",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "caraway seeds",
+       "aisle": "Spices"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "emmental, cut in cubes",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "hot mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "cornichons",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Warm the sauerkraut with the caraway and a splash of water.",
+       "min": 10
+      },
+      {
+       "text": "Brown the vegetarian sausages in the oil over medium heat, turning, until crisp.",
+       "min": 10
+      },
+      {
+       "text": "Slice on an angle and cube the emmental.",
+       "min": 4
+      },
+      {
+       "text": "Pile on a board with the sauerkraut, emmental, horseradish cream, mustard and cornichons.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Captain von Trapp's Tafelspitz",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 180,
+   "make_ahead": "Simmer the beef up to 1 day ahead and chill it in the broth, then reheat gently; make both sauces up to 4 hours ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "beef rump cap",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "l",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "leek, in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "celeriac, in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 10,
+     "u": "",
+     "item": "black peppercorns",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "waxy potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "parsley, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "green apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "horseradish cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "lemon, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives, chopped",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Char the onion cut side down in a dry pan until black.",
+     "min": 5
+    },
+    {
+     "text": "Put the beef in a large pot with the cold water, bring to a simmer and skim.",
+     "min": 20
+    },
+    {
+     "text": "Add the onion, carrots, leek, celeriac, bay leaves, peppercorns and salt and simmer very gently, lid ajar, until tender.",
+     "min": 150
+    },
+    {
+     "text": "Meanwhile boil the potatoes until just tender, drain and slice thickly.",
+     "min": 0
+    },
+    {
+     "text": "Grate the apples into the horseradish cream with the lemon juice.",
+     "min": 5
+    },
+    {
+     "text": "Mix the sour cream, mayonnaise, vinegar and chives with a pinch of salt.",
+     "min": 5
+    },
+    {
+     "text": "Fry the potatoes in the butter until golden and toss with the parsley.",
+     "min": 15
+    },
+    {
+     "text": "Rest the beef in the broth, slice across the grain and serve in shallow bowls with a ladle of broth, the potatoes and both sauces.",
+     "min": 10
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Captain von Trapp's celeriac Tafelspitz",
+     "prep_min": 25,
+     "cook_min": 80,
+     "make_ahead": "Simmer the celeriac up to 1 day ahead and chill it in the broth; make both sauces up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "large celeriac (about 1.2kg), peeled",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "leek, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bay leaves",
+       "aisle": "Spices"
+      },
+      {
+       "q": 10,
+       "u": "",
+       "item": "black peppercorns",
+       "aisle": "Spices"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "waxy potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "parsley, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "green apples",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "lemon, juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives, chopped",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Char the onion cut side down in a dry pan until black.",
+       "min": 5
+      },
+      {
+       "text": "Put the whole celeriac in a pot with the stock, onion, carrots, leek, bay leaves and peppercorns and simmer, lid ajar, until a knife slides in easily.",
+       "min": 60
+      },
+      {
+       "text": "Meanwhile boil the potatoes until just tender, drain and slice thickly.",
+       "min": 0
+      },
+      {
+       "text": "Grate the apples into the horseradish cream with the lemon juice.",
+       "min": 5
+      },
+      {
+       "text": "Mix the sour cream, mayonnaise, vinegar and chives with a pinch of salt.",
+       "min": 5
+      },
+      {
+       "text": "Fry the potatoes in 50g of the butter until golden and toss with the parsley.",
+       "min": 15
+      },
+      {
+       "text": "Cut the celeriac into 4 thick steaks and brown in the rest of the butter.",
+       "min": 10
+      },
+      {
+       "text": "Serve in shallow bowls with a ladle of broth, the potatoes and both sauces.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Salzburger Nockerl",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Bake to order; the raspberry base can sit ready in the dish up to 4 hours ahead",
+   "ingredients": [
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "frozen raspberries",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "vanilla extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "eggs, separated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "pinch of salt",
+     "aisle": "Spices"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "lemon, zested",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "plain flour, sifted",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Butter the dish, add the raspberries, 2 tbsp of the sugar, the milk and half the vanilla and warm in the oven.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the 6 egg whites with the salt to soft peaks, then whisk in the rest of the sugar a spoonful at a time until stiff and glossy.",
+     "min": 8
+    },
+    {
+     "text": "Mix 4 of the yolks with the lemon zest and the rest of the vanilla, then fold through the whites with the flour.",
+     "min": 4
+    },
+    {
+     "text": "Pile into three tall peaks in the dish with a spatula.",
+     "min": 3
+    },
+    {
+     "text": "Bake until golden outside and soft in the middle.",
+     "min": 13
+    },
+    {
+     "text": "Dust with icing sugar and serve at once.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Liesl's gazebo elderflower fizz",
+   "course": "d",
+   "prep_min": 10,
+   "cook_min": 0,
+   "make_ahead": "Mix the cordial, juice and lemon up to 4 hours ahead and chill; add the soda to serve",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "elderflower cordial",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "cloudy apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "lemons, 2 juiced and 1 sliced into wheels",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "soda water",
+     "aisle": "Drinks"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the elderflower cordial, apple juice and lemon juice in a jug.",
+     "min": 3
+    },
+    {
+     "text": "Bruise most of the mint and add to the jug.",
+     "min": 2
+    },
+    {
+     "text": "Fill 4 tall glasses with ice and pour in the elderflower mix.",
+     "min": 2
+    },
+    {
+     "text": "Top with soda water and stir gently.",
+     "min": 1
+    },
+    {
+     "text": "Garnish with a lemon wheel and a mint sprig.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  }
+ ]
+}

@@ -1,92 +1,803 @@
 [
- {"id":"star-wars","name":"Star Wars","release":["Star Wars (1977)","The Empire Strikes Back (1980)","Return of the Jedi (1983)","Star Wars: Episode I - The Phantom Menace (1999)","Star Wars: Episode II - Attack of the Clones (2002)","Star Wars: Episode III - Revenge of the Sith (2005)","Star Wars: The Force Awakens (2015)","Rogue One: A Star Wars Story (2016)","Star Wars: The Last Jedi (2017)","Solo: A Star Wars Story (2018)","Star Wars: The Rise of Skywalker (2019)"],
-  "story":["Star Wars: Episode I - The Phantom Menace (1999)","Star Wars: Episode II - Attack of the Clones (2002)","Star Wars: Episode III - Revenge of the Sith (2005)","Solo: A Star Wars Story (2018)","Rogue One: A Star Wars Story (2016)","Star Wars (1977)","The Empire Strikes Back (1980)","Return of the Jedi (1983)","Star Wars: The Force Awakens (2015)","Star Wars: The Last Jedi (2017)","Star Wars: The Rise of Skywalker (2019)"]},
- {"id":"middle-earth","name":"Middle-earth","release":["The Lord of the Rings: The Fellowship of the Ring (2001)","The Lord of the Rings: The Two Towers (2002)","The Lord of the Rings: The Return of the King (2003)","The Hobbit: An Unexpected Journey (2012)","The Hobbit: The Desolation of Smaug (2013)","The Hobbit: The Battle of the Five Armies (2014)"],
-  "story":["The Hobbit: An Unexpected Journey (2012)","The Hobbit: The Desolation of Smaug (2013)","The Hobbit: The Battle of the Five Armies (2014)","The Lord of the Rings: The Fellowship of the Ring (2001)","The Lord of the Rings: The Two Towers (2002)","The Lord of the Rings: The Return of the King (2003)"]},
- {"id":"harry-potter","name":"Harry Potter","release":["Harry Potter and the Philosopher's Stone (2001)","Harry Potter and the Chamber of Secrets (2002)","Harry Potter and the Prisoner of Azkaban (2004)","Harry Potter and the Goblet of Fire (2005)","Harry Potter and the Order of the Phoenix (2007)","Harry Potter and the Half-Blood Prince (2009)","Harry Potter and the Deathly Hallows: Part 1 (2010)","Harry Potter and the Deathly Hallows: Part 2 (2011)"]},
- {"id":"fantastic-beasts","name":"Fantastic Beasts","release":["Fantastic Beasts and Where to Find Them (2016)","Fantastic Beasts: The Crimes of Grindelwald (2018)","Fantastic Beasts: The Secrets of Dumbledore (2022)"]},
- {"id":"narnia","name":"The Chronicles of Narnia","release":["The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005)","The Chronicles of Narnia: Prince Caspian (2008)","The Chronicles of Narnia: The Voyage of the Dawn Treader (2010)"]},
- {"id":"indiana-jones","name":"Indiana Jones","release":["Raiders of the Lost Ark (1981)","Indiana Jones and the Temple of Doom (1984)","Indiana Jones and the Last Crusade (1989)","Indiana Jones and the Kingdom of the Crystal Skull (2008)","Indiana Jones and the Dial of Destiny (2023)"],
-  "story":["Indiana Jones and the Temple of Doom (1984)","Raiders of the Lost Ark (1981)","Indiana Jones and the Last Crusade (1989)","Indiana Jones and the Kingdom of the Crystal Skull (2008)","Indiana Jones and the Dial of Destiny (2023)"]},
- {"id":"back-to-the-future","name":"Back to the Future","release":["Back to the Future (1985)","Back to the Future Part II (1989)","Back to the Future Part III (1990)"]},
- {"id":"godfather","name":"The Godfather","release":["The Godfather (1972)","The Godfather Part II (1974)","The Godfather Part III (1990)"]},
- {"id":"rocky","name":"Rocky and Creed","release":["Rocky (1976)","Rocky II (1979)","Rocky III (1982)","Rocky IV (1985)","Creed (2015)"]},
- {"id":"alien","name":"Alien","release":["Alien (1979)","Aliens (1986)"]},
- {"id":"terminator","name":"The Terminator","release":["The Terminator (1984)","Terminator 2: Judgment Day (1991)"]},
- {"id":"die-hard","name":"Die Hard","release":["Die Hard (1988)","Die Hard 2 (1990)","Die Hard with a Vengeance (1995)"]},
- {"id":"lethal-weapon","name":"Lethal Weapon","release":["Lethal Weapon (1987)","Lethal Weapon 2 (1989)","Lethal Weapon 3 (1992)","Lethal Weapon 4 (1998)"]},
- {"id":"mad-max","name":"Mad Max","release":["Mad Max (1979)","Mad Max 2 (1981)","Mad Max Beyond Thunderdome (1985)","Mad Max: Fury Road (2015)","Furiosa: A Mad Max Saga (2024)"],
-  "story":["Mad Max (1979)","Mad Max 2 (1981)","Mad Max Beyond Thunderdome (1985)","Furiosa: A Mad Max Saga (2024)","Mad Max: Fury Road (2015)"]},
- {"id":"jaws","name":"Jaws","release":["Jaws (1975)","Jaws 2 (1978)"]},
- {"id":"gremlins","name":"Gremlins","release":["Gremlins (1984)","Gremlins 2: The New Batch (1990)"]},
- {"id":"ghostbusters","name":"Ghostbusters","release":["Ghostbusters (1984)","Ghostbusters II (1989)","Ghostbusters: Afterlife (2021)","Ghostbusters: Frozen Empire (2024)"]},
- {"id":"beverly-hills-cop","name":"Beverly Hills Cop","release":["Beverly Hills Cop (1984)","Beverly Hills Cop II (1987)","Beverly Hills Cop III (1994)"]},
- {"id":"48-hrs","name":"48 Hrs.","release":["48 Hrs. (1982)","Another 48 Hrs. (1990)"]},
- {"id":"crocodile-dundee","name":"Crocodile Dundee","release":["Crocodile Dundee (1986)","Crocodile Dundee II (1988)"]},
- {"id":"rush-hour","name":"Rush Hour","release":["Rush Hour (1998)","Rush Hour 2 (2001)"]},
- {"id":"men-in-black","name":"Men in Black","release":["Men in Black (1997)","Men in Black II (2002)","Men in Black 3 (2012)"]},
- {"id":"mummy","name":"The Mummy","release":["The Mummy (1999)","The Mummy Returns (2001)"]},
- {"id":"jurassic","name":"Jurassic Park","release":["Jurassic Park (1993)","Jurassic Park III (2001)","Jurassic World (2015)","Jurassic World: Fallen Kingdom (2018)","Jurassic World Dominion (2022)","Jurassic World Rebirth (2025)"]},
- {"id":"jumanji","name":"Jumanji","release":["Jumanji (1995)","Jumanji: Welcome to the Jungle (2017)","Jumanji: The Next Level (2019)"]},
- {"id":"pirates","name":"Pirates of the Caribbean","release":["Pirates of the Caribbean: The Curse of the Black Pearl (2003)","Pirates of the Caribbean: Dead Man's Chest (2006)","Pirates of the Caribbean: At World's End (2007)","Pirates of the Caribbean: On Stranger Tides (2011)","Pirates of the Caribbean: Dead Men Tell No Tales (2017)"]},
- {"id":"john-wick","name":"John Wick","release":["John Wick (2014)","John Wick: Chapter 2 (2017)","John Wick: Chapter 3 Parabellum (2019)","John Wick: Chapter 4 (2023)"]},
- {"id":"kill-bill","name":"Kill Bill","release":["Kill Bill: Vol. 1 (2003)","Kill Bill: Vol. 2 (2004)"]},
- {"id":"oceans","name":"Ocean's","release":["Ocean's Eleven (2001)","Ocean's Twelve (2004)"]},
- {"id":"knives-out","name":"Knives Out","release":["Knives Out (2019)","Glass Onion: A Knives Out Mystery (2022)"]},
- {"id":"bond","name":"James Bond","release":["Goldfinger (1964)","GoldenEye (1995)","Casino Royale (2006)","Skyfall (2012)"]},
- {"id":"mexico","name":"The Mexico Trilogy","release":["El Mariachi (1992)","Desperado (1995)","Once Upon a Time in Mexico (2003)"]},
- {"id":"top-gun","name":"Top Gun","release":["Top Gun (1986)","Top Gun: Maverick (2022)"]},
- {"id":"gladiator","name":"Gladiator","release":["Gladiator (2000)","Gladiator II (2024)"]},
- {"id":"blade-runner","name":"Blade Runner","release":["Blade Runner (1982)","Blade Runner 2049 (2017)"]},
- {"id":"avatar","name":"Avatar","release":["Avatar (2009)","Avatar: The Way of Water (2022)"]},
- {"id":"dune","name":"Dune","release":["Dune (2021)","Dune: Part Two (2024)"]},
- {"id":"conjuring","name":"The Conjuring","release":["The Conjuring (2013)","Annabelle (2014)"],
-  "story":["Annabelle (2014)","The Conjuring (2013)"]},
- {"id":"x-men","name":"X-Men","release":["X-Men (2000)","X2 (2003)","X-Men Origins: Wolverine (2009)","X-Men: First Class (2011)","The Wolverine (2013)","X-Men: Days of Future Past (2014)","Logan (2017)"],
-  "story":["X-Men: First Class (2011)","X-Men Origins: Wolverine (2009)","X-Men (2000)","X2 (2003)","The Wolverine (2013)","X-Men: Days of Future Past (2014)","Logan (2017)"]},
- {"id":"deadpool","name":"Deadpool","release":["Deadpool (2016)","Deadpool 2 (2018)","Deadpool & Wolverine (2024)"]},
- {"id":"spider-man-raimi","name":"Spider-Man (2002 trilogy)","release":["Spider-Man (2002)","Spider-Man 2 (2004)","Spider-Man 3 (2007)"]},
- {"id":"spider-man-mcu","name":"Spider-Man (Homecoming trilogy)","release":["Spider-Man: Homecoming (2017)","Spider-Man: Far From Home (2019)","Spider-Man: No Way Home (2021)"]},
- {"id":"avengers","name":"The Avengers","release":["The Avengers (2012)","Avengers: Age of Ultron (2015)","Avengers: Infinity War (2018)","Avengers: Endgame (2019)"]},
- {"id":"iron-man","name":"Iron Man","release":["Iron Man (2008)","Iron Man 2 (2010)","Iron Man 3 (2013)"]},
- {"id":"thor","name":"Thor","release":["Thor (2011)","Thor: The Dark World (2013)","Thor: Ragnarok (2017)","Thor: Love and Thunder (2022)"]},
- {"id":"captain-america","name":"Captain America","release":["Captain America: The First Avenger (2011)","Captain America: The Winter Soldier (2014)","Captain America: Civil War (2016)","Captain America: Brave New World (2025)"]},
- {"id":"guardians","name":"Guardians of the Galaxy","release":["Guardians of the Galaxy (2014)","Guardians of the Galaxy Vol. 2 (2017)","Guardians of the Galaxy Vol. 3 (2023)"]},
- {"id":"ant-man","name":"Ant-Man","release":["Ant-Man (2015)","Ant-Man and the Wasp (2018)","Ant-Man and the Wasp: Quantumania (2023)"]},
- {"id":"black-panther","name":"Black Panther","release":["Black Panther (2018)","Black Panther: Wakanda Forever (2022)"]},
- {"id":"doctor-strange","name":"Doctor Strange","release":["Doctor Strange (2016)","Doctor Strange in the Multiverse of Madness (2022)"]},
- {"id":"captain-marvel","name":"Captain Marvel","release":["Captain Marvel (2019)","The Marvels (2023)"]},
- {"id":"venom","name":"Venom","release":["Venom (2018)","Venom: Let There Be Carnage (2021)"]},
- {"id":"batman-89","name":"Batman (1989 to 1997)","release":["Batman (1989)","Batman Returns (1992)","Batman Forever (1995)","Batman & Robin (1997)"]},
- {"id":"dark-knight","name":"The Dark Knight trilogy","release":["Batman Begins (2005)","The Dark Knight (2008)","The Dark Knight Rises (2012)"]},
- {"id":"wonder-woman","name":"Wonder Woman","release":["Wonder Woman (2017)","Wonder Woman 1984 (2020)"]},
- {"id":"toy-story","name":"Toy Story","release":["Toy Story (1995)","Toy Story 2 (1999)","Toy Story 3 (2010)","Toy Story 4 (2019)"]},
- {"id":"monsters","name":"Monsters, Inc.","release":["Monsters, Inc. (2001)","Monsters University (2013)"],
-  "story":["Monsters University (2013)","Monsters, Inc. (2001)"]},
- {"id":"finding-nemo","name":"Finding Nemo","release":["Finding Nemo (2003)","Finding Dory (2016)"]},
- {"id":"incredibles","name":"The Incredibles","release":["The Incredibles (2004)","The Incredibles 2 (2018)"]},
- {"id":"inside-out","name":"Inside Out","release":["Inside Out (2015)","Inside Out 2 (2024)"]},
- {"id":"cars","name":"Cars","release":["Cars (2006)","Cars 2 (2011)"]},
- {"id":"frozen","name":"Frozen","release":["Frozen (2013)","Frozen II (2019)"]},
- {"id":"moana","name":"Moana","release":["Moana (2016)","Moana 2 (2024)"]},
- {"id":"shrek","name":"Shrek","release":["Shrek (2001)","Shrek 2 (2004)"]},
- {"id":"kung-fu-panda","name":"Kung Fu Panda","release":["Kung Fu Panda (2008)","Kung Fu Panda 2 (2011)"]},
- {"id":"despicable-me","name":"Despicable Me","release":["Despicable Me (2010)","Despicable Me 2 (2013)","Minions (2015)"],
-  "story":["Minions (2015)","Despicable Me (2010)","Despicable Me 2 (2013)"]},
- {"id":"paddington","name":"Paddington","release":["Paddington (2014)","Paddington 2 (2017)","Paddington in Peru (2024)"]},
- {"id":"peter-rabbit","name":"Peter Rabbit","release":["Peter Rabbit (2018)","Peter Rabbit 2: The Runaway (2021)"]},
- {"id":"wallace-gromit","name":"Wallace & Gromit","release":["Wallace & Gromit: The Curse of the Were-Rabbit (2005)","Wallace & Gromit: Vengeance Most Fowl (2024)"]},
- {"id":"mary-poppins","name":"Mary Poppins","release":["Mary Poppins (1964)","Mary Poppins Returns (2018)"]},
- {"id":"wicked","name":"Wicked","release":["Wicked (2024)","Wicked: For Good (2025)"]},
- {"id":"tmnt","name":"Teenage Mutant Ninja Turtles (1990 trilogy)","release":["Teenage Mutant Ninja Turtles (1990)","Teenage Mutant Ninja Turtles II: The Secret of the Ooze (1991)","Teenage Mutant Ninja Turtles III (1993)"]},
- {"id":"home-alone","name":"Home Alone","release":["Home Alone (1990)","Home Alone 2: Lost in New York (1992)"]},
- {"id":"santa-clause","name":"The Santa Clause","release":["The Santa Clause (1994)","The Santa Clause 2 (2002)"]},
- {"id":"addams","name":"The Addams Family","release":["The Addams Family (1991)","Addams Family Values (1993)"]},
- {"id":"meet-the-parents","name":"Meet the Parents","release":["Meet the Parents (2000)","Meet the Fockers (2004)"]},
- {"id":"vacation","name":"National Lampoon's Vacation","release":["National Lampoon's Vacation (1983)","National Lampoon's Christmas Vacation (1989)"]},
- {"id":"waynes-world","name":"Wayne's World","release":["Wayne's World (1992)","Wayne's World 2 (1993)"]},
- {"id":"ace-ventura","name":"Ace Ventura","release":["Ace Ventura: Pet Detective (1994)","Ace Ventura: When Nature Calls (1995)"]},
- {"id":"anchorman","name":"Anchorman","release":["Anchorman: The Legend of Ron Burgundy (2004)","Anchorman 2: The Legend Continues (2013)"]},
- {"id":"jump-street","name":"Jump Street","release":["21 Jump Street (2012)","22 Jump Street (2014)"]},
- {"id":"clerks","name":"Clerks","release":["Clerks (1994)","Clerks II (2006)","Clerks III (2022)"]}
+ {
+  "id": "star-wars",
+  "name": "Star Wars",
+  "release": [
+   "Star Wars (1977)",
+   "The Empire Strikes Back (1980)",
+   "Return of the Jedi (1983)",
+   "Star Wars: Episode I - The Phantom Menace (1999)",
+   "Star Wars: Episode II - Attack of the Clones (2002)",
+   "Star Wars: Episode III - Revenge of the Sith (2005)",
+   "Star Wars: The Force Awakens (2015)",
+   "Rogue One: A Star Wars Story (2016)",
+   "Star Wars: The Last Jedi (2017)",
+   "Solo: A Star Wars Story (2018)",
+   "Star Wars: The Rise of Skywalker (2019)"
+  ],
+  "story": [
+   "Star Wars: Episode I - The Phantom Menace (1999)",
+   "Star Wars: Episode II - Attack of the Clones (2002)",
+   "Star Wars: Episode III - Revenge of the Sith (2005)",
+   "Solo: A Star Wars Story (2018)",
+   "Rogue One: A Star Wars Story (2016)",
+   "Star Wars (1977)",
+   "The Empire Strikes Back (1980)",
+   "Return of the Jedi (1983)",
+   "Star Wars: The Force Awakens (2015)",
+   "Star Wars: The Last Jedi (2017)",
+   "Star Wars: The Rise of Skywalker (2019)"
+  ]
+ },
+ {
+  "id": "middle-earth",
+  "name": "Middle-earth",
+  "release": [
+   "The Lord of the Rings: The Fellowship of the Ring (2001)",
+   "The Lord of the Rings: The Two Towers (2002)",
+   "The Lord of the Rings: The Return of the King (2003)",
+   "The Hobbit: An Unexpected Journey (2012)",
+   "The Hobbit: The Desolation of Smaug (2013)",
+   "The Hobbit: The Battle of the Five Armies (2014)"
+  ],
+  "story": [
+   "The Hobbit: An Unexpected Journey (2012)",
+   "The Hobbit: The Desolation of Smaug (2013)",
+   "The Hobbit: The Battle of the Five Armies (2014)",
+   "The Lord of the Rings: The Fellowship of the Ring (2001)",
+   "The Lord of the Rings: The Two Towers (2002)",
+   "The Lord of the Rings: The Return of the King (2003)"
+  ]
+ },
+ {
+  "id": "harry-potter",
+  "name": "Harry Potter",
+  "release": [
+   "Harry Potter and the Philosopher's Stone (2001)",
+   "Harry Potter and the Chamber of Secrets (2002)",
+   "Harry Potter and the Prisoner of Azkaban (2004)",
+   "Harry Potter and the Goblet of Fire (2005)",
+   "Harry Potter and the Order of the Phoenix (2007)",
+   "Harry Potter and the Half-Blood Prince (2009)",
+   "Harry Potter and the Deathly Hallows: Part 1 (2010)",
+   "Harry Potter and the Deathly Hallows: Part 2 (2011)"
+  ]
+ },
+ {
+  "id": "fantastic-beasts",
+  "name": "Fantastic Beasts",
+  "release": [
+   "Fantastic Beasts and Where to Find Them (2016)",
+   "Fantastic Beasts: The Crimes of Grindelwald (2018)",
+   "Fantastic Beasts: The Secrets of Dumbledore (2022)"
+  ]
+ },
+ {
+  "id": "narnia",
+  "name": "The Chronicles of Narnia",
+  "release": [
+   "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe (2005)",
+   "The Chronicles of Narnia: Prince Caspian (2008)",
+   "The Chronicles of Narnia: The Voyage of the Dawn Treader (2010)"
+  ]
+ },
+ {
+  "id": "indiana-jones",
+  "name": "Indiana Jones",
+  "release": [
+   "Raiders of the Lost Ark (1981)",
+   "Indiana Jones and the Temple of Doom (1984)",
+   "Indiana Jones and the Last Crusade (1989)",
+   "Indiana Jones and the Kingdom of the Crystal Skull (2008)",
+   "Indiana Jones and the Dial of Destiny (2023)"
+  ],
+  "story": [
+   "Indiana Jones and the Temple of Doom (1984)",
+   "Raiders of the Lost Ark (1981)",
+   "Indiana Jones and the Last Crusade (1989)",
+   "Indiana Jones and the Kingdom of the Crystal Skull (2008)",
+   "Indiana Jones and the Dial of Destiny (2023)"
+  ]
+ },
+ {
+  "id": "back-to-the-future",
+  "name": "Back to the Future",
+  "release": [
+   "Back to the Future (1985)",
+   "Back to the Future Part II (1989)",
+   "Back to the Future Part III (1990)"
+  ]
+ },
+ {
+  "id": "godfather",
+  "name": "The Godfather",
+  "release": [
+   "The Godfather (1972)",
+   "The Godfather Part II (1974)",
+   "The Godfather Part III (1990)"
+  ]
+ },
+ {
+  "id": "rocky",
+  "name": "Rocky and Creed",
+  "release": [
+   "Rocky (1976)",
+   "Rocky II (1979)",
+   "Rocky III (1982)",
+   "Rocky IV (1985)",
+   "Creed (2015)"
+  ]
+ },
+ {
+  "id": "alien",
+  "name": "Alien",
+  "release": [
+   "Alien (1979)",
+   "Aliens (1986)",
+   "Alien 3 (1992)"
+  ]
+ },
+ {
+  "id": "terminator",
+  "name": "The Terminator",
+  "release": [
+   "The Terminator (1984)",
+   "Terminator 2: Judgment Day (1991)"
+  ]
+ },
+ {
+  "id": "die-hard",
+  "name": "Die Hard",
+  "release": [
+   "Die Hard (1988)",
+   "Die Hard 2 (1990)",
+   "Die Hard with a Vengeance (1995)"
+  ]
+ },
+ {
+  "id": "lethal-weapon",
+  "name": "Lethal Weapon",
+  "release": [
+   "Lethal Weapon (1987)",
+   "Lethal Weapon 2 (1989)",
+   "Lethal Weapon 3 (1992)",
+   "Lethal Weapon 4 (1998)"
+  ]
+ },
+ {
+  "id": "mad-max",
+  "name": "Mad Max",
+  "release": [
+   "Mad Max (1979)",
+   "Mad Max 2 (1981)",
+   "Mad Max Beyond Thunderdome (1985)",
+   "Mad Max: Fury Road (2015)",
+   "Furiosa: A Mad Max Saga (2024)"
+  ],
+  "story": [
+   "Mad Max (1979)",
+   "Mad Max 2 (1981)",
+   "Mad Max Beyond Thunderdome (1985)",
+   "Furiosa: A Mad Max Saga (2024)",
+   "Mad Max: Fury Road (2015)"
+  ]
+ },
+ {
+  "id": "jaws",
+  "name": "Jaws",
+  "release": [
+   "Jaws (1975)",
+   "Jaws 2 (1978)"
+  ]
+ },
+ {
+  "id": "gremlins",
+  "name": "Gremlins",
+  "release": [
+   "Gremlins (1984)",
+   "Gremlins 2: The New Batch (1990)"
+  ]
+ },
+ {
+  "id": "ghostbusters",
+  "name": "Ghostbusters",
+  "release": [
+   "Ghostbusters (1984)",
+   "Ghostbusters II (1989)",
+   "Ghostbusters: Afterlife (2021)",
+   "Ghostbusters: Frozen Empire (2024)"
+  ]
+ },
+ {
+  "id": "beverly-hills-cop",
+  "name": "Beverly Hills Cop",
+  "release": [
+   "Beverly Hills Cop (1984)",
+   "Beverly Hills Cop II (1987)",
+   "Beverly Hills Cop III (1994)"
+  ]
+ },
+ {
+  "id": "48-hrs",
+  "name": "48 Hrs.",
+  "release": [
+   "48 Hrs. (1982)",
+   "Another 48 Hrs. (1990)"
+  ]
+ },
+ {
+  "id": "crocodile-dundee",
+  "name": "Crocodile Dundee",
+  "release": [
+   "Crocodile Dundee (1986)",
+   "Crocodile Dundee II (1988)"
+  ]
+ },
+ {
+  "id": "rush-hour",
+  "name": "Rush Hour",
+  "release": [
+   "Rush Hour (1998)",
+   "Rush Hour 2 (2001)"
+  ]
+ },
+ {
+  "id": "men-in-black",
+  "name": "Men in Black",
+  "release": [
+   "Men in Black (1997)",
+   "Men in Black II (2002)",
+   "Men in Black 3 (2012)"
+  ]
+ },
+ {
+  "id": "mummy",
+  "name": "The Mummy",
+  "release": [
+   "The Mummy (1999)",
+   "The Mummy Returns (2001)"
+  ]
+ },
+ {
+  "id": "jurassic",
+  "name": "Jurassic Park",
+  "release": [
+   "Jurassic Park (1993)",
+   "Jurassic Park III (2001)",
+   "Jurassic World (2015)",
+   "Jurassic World: Fallen Kingdom (2018)",
+   "Jurassic World Dominion (2022)",
+   "Jurassic World Rebirth (2025)"
+  ]
+ },
+ {
+  "id": "jumanji",
+  "name": "Jumanji",
+  "release": [
+   "Jumanji (1995)",
+   "Jumanji: Welcome to the Jungle (2017)",
+   "Jumanji: The Next Level (2019)"
+  ]
+ },
+ {
+  "id": "pirates",
+  "name": "Pirates of the Caribbean",
+  "release": [
+   "Pirates of the Caribbean: The Curse of the Black Pearl (2003)",
+   "Pirates of the Caribbean: Dead Man's Chest (2006)",
+   "Pirates of the Caribbean: At World's End (2007)",
+   "Pirates of the Caribbean: On Stranger Tides (2011)",
+   "Pirates of the Caribbean: Dead Men Tell No Tales (2017)"
+  ]
+ },
+ {
+  "id": "john-wick",
+  "name": "John Wick",
+  "release": [
+   "John Wick (2014)",
+   "John Wick: Chapter 2 (2017)",
+   "John Wick: Chapter 3 Parabellum (2019)",
+   "John Wick: Chapter 4 (2023)"
+  ]
+ },
+ {
+  "id": "kill-bill",
+  "name": "Kill Bill",
+  "release": [
+   "Kill Bill: Vol. 1 (2003)",
+   "Kill Bill: Vol. 2 (2004)"
+  ]
+ },
+ {
+  "id": "oceans",
+  "name": "Ocean's",
+  "release": [
+   "Ocean's Eleven (2001)",
+   "Ocean's Twelve (2004)"
+  ]
+ },
+ {
+  "id": "knives-out",
+  "name": "Knives Out",
+  "release": [
+   "Knives Out (2019)",
+   "Glass Onion: A Knives Out Mystery (2022)"
+  ]
+ },
+ {
+  "id": "bond",
+  "name": "James Bond",
+  "release": [
+   "Goldfinger (1964)",
+   "GoldenEye (1995)",
+   "Casino Royale (2006)",
+   "Skyfall (2012)"
+  ]
+ },
+ {
+  "id": "mexico",
+  "name": "The Mexico Trilogy",
+  "release": [
+   "El Mariachi (1992)",
+   "Desperado (1995)",
+   "Once Upon a Time in Mexico (2003)"
+  ]
+ },
+ {
+  "id": "top-gun",
+  "name": "Top Gun",
+  "release": [
+   "Top Gun (1986)",
+   "Top Gun: Maverick (2022)"
+  ]
+ },
+ {
+  "id": "gladiator",
+  "name": "Gladiator",
+  "release": [
+   "Gladiator (2000)",
+   "Gladiator II (2024)"
+  ]
+ },
+ {
+  "id": "blade-runner",
+  "name": "Blade Runner",
+  "release": [
+   "Blade Runner (1982)",
+   "Blade Runner 2049 (2017)"
+  ]
+ },
+ {
+  "id": "avatar",
+  "name": "Avatar",
+  "release": [
+   "Avatar (2009)",
+   "Avatar: The Way of Water (2022)"
+  ]
+ },
+ {
+  "id": "dune",
+  "name": "Dune",
+  "release": [
+   "Dune (2021)",
+   "Dune: Part Two (2024)"
+  ]
+ },
+ {
+  "id": "conjuring",
+  "name": "The Conjuring",
+  "release": [
+   "The Conjuring (2013)",
+   "Annabelle (2014)"
+  ],
+  "story": [
+   "Annabelle (2014)",
+   "The Conjuring (2013)"
+  ]
+ },
+ {
+  "id": "x-men",
+  "name": "X-Men",
+  "release": [
+   "X-Men (2000)",
+   "X2 (2003)",
+   "X-Men Origins: Wolverine (2009)",
+   "X-Men: First Class (2011)",
+   "The Wolverine (2013)",
+   "X-Men: Days of Future Past (2014)",
+   "Logan (2017)"
+  ],
+  "story": [
+   "X-Men: First Class (2011)",
+   "X-Men Origins: Wolverine (2009)",
+   "X-Men (2000)",
+   "X2 (2003)",
+   "The Wolverine (2013)",
+   "X-Men: Days of Future Past (2014)",
+   "Logan (2017)"
+  ]
+ },
+ {
+  "id": "deadpool",
+  "name": "Deadpool",
+  "release": [
+   "Deadpool (2016)",
+   "Deadpool 2 (2018)",
+   "Deadpool & Wolverine (2024)"
+  ]
+ },
+ {
+  "id": "spider-man-raimi",
+  "name": "Spider-Man (2002 trilogy)",
+  "release": [
+   "Spider-Man (2002)",
+   "Spider-Man 2 (2004)",
+   "Spider-Man 3 (2007)"
+  ]
+ },
+ {
+  "id": "spider-man-mcu",
+  "name": "Spider-Man (Homecoming trilogy)",
+  "release": [
+   "Spider-Man: Homecoming (2017)",
+   "Spider-Man: Far From Home (2019)",
+   "Spider-Man: No Way Home (2021)"
+  ]
+ },
+ {
+  "id": "avengers",
+  "name": "The Avengers",
+  "release": [
+   "The Avengers (2012)",
+   "Avengers: Age of Ultron (2015)",
+   "Avengers: Infinity War (2018)",
+   "Avengers: Endgame (2019)"
+  ]
+ },
+ {
+  "id": "iron-man",
+  "name": "Iron Man",
+  "release": [
+   "Iron Man (2008)",
+   "Iron Man 2 (2010)",
+   "Iron Man 3 (2013)"
+  ]
+ },
+ {
+  "id": "thor",
+  "name": "Thor",
+  "release": [
+   "Thor (2011)",
+   "Thor: The Dark World (2013)",
+   "Thor: Ragnarok (2017)",
+   "Thor: Love and Thunder (2022)"
+  ]
+ },
+ {
+  "id": "captain-america",
+  "name": "Captain America",
+  "release": [
+   "Captain America: The First Avenger (2011)",
+   "Captain America: The Winter Soldier (2014)",
+   "Captain America: Civil War (2016)",
+   "Captain America: Brave New World (2025)"
+  ]
+ },
+ {
+  "id": "guardians",
+  "name": "Guardians of the Galaxy",
+  "release": [
+   "Guardians of the Galaxy (2014)",
+   "Guardians of the Galaxy Vol. 2 (2017)",
+   "Guardians of the Galaxy Vol. 3 (2023)"
+  ]
+ },
+ {
+  "id": "ant-man",
+  "name": "Ant-Man",
+  "release": [
+   "Ant-Man (2015)",
+   "Ant-Man and the Wasp (2018)",
+   "Ant-Man and the Wasp: Quantumania (2023)"
+  ]
+ },
+ {
+  "id": "black-panther",
+  "name": "Black Panther",
+  "release": [
+   "Black Panther (2018)",
+   "Black Panther: Wakanda Forever (2022)"
+  ]
+ },
+ {
+  "id": "doctor-strange",
+  "name": "Doctor Strange",
+  "release": [
+   "Doctor Strange (2016)",
+   "Doctor Strange in the Multiverse of Madness (2022)"
+  ]
+ },
+ {
+  "id": "captain-marvel",
+  "name": "Captain Marvel",
+  "release": [
+   "Captain Marvel (2019)",
+   "The Marvels (2023)"
+  ]
+ },
+ {
+  "id": "venom",
+  "name": "Venom",
+  "release": [
+   "Venom (2018)",
+   "Venom: Let There Be Carnage (2021)"
+  ]
+ },
+ {
+  "id": "batman-89",
+  "name": "Batman (1989 to 1997)",
+  "release": [
+   "Batman (1989)",
+   "Batman Returns (1992)",
+   "Batman Forever (1995)",
+   "Batman & Robin (1997)"
+  ]
+ },
+ {
+  "id": "dark-knight",
+  "name": "The Dark Knight trilogy",
+  "release": [
+   "Batman Begins (2005)",
+   "The Dark Knight (2008)",
+   "The Dark Knight Rises (2012)"
+  ]
+ },
+ {
+  "id": "wonder-woman",
+  "name": "Wonder Woman",
+  "release": [
+   "Wonder Woman (2017)",
+   "Wonder Woman 1984 (2020)"
+  ]
+ },
+ {
+  "id": "toy-story",
+  "name": "Toy Story",
+  "release": [
+   "Toy Story (1995)",
+   "Toy Story 2 (1999)",
+   "Toy Story 3 (2010)",
+   "Toy Story 4 (2019)"
+  ]
+ },
+ {
+  "id": "monsters",
+  "name": "Monsters, Inc.",
+  "release": [
+   "Monsters, Inc. (2001)",
+   "Monsters University (2013)"
+  ],
+  "story": [
+   "Monsters University (2013)",
+   "Monsters, Inc. (2001)"
+  ]
+ },
+ {
+  "id": "finding-nemo",
+  "name": "Finding Nemo",
+  "release": [
+   "Finding Nemo (2003)",
+   "Finding Dory (2016)"
+  ]
+ },
+ {
+  "id": "incredibles",
+  "name": "The Incredibles",
+  "release": [
+   "The Incredibles (2004)",
+   "The Incredibles 2 (2018)"
+  ]
+ },
+ {
+  "id": "inside-out",
+  "name": "Inside Out",
+  "release": [
+   "Inside Out (2015)",
+   "Inside Out 2 (2024)"
+  ]
+ },
+ {
+  "id": "cars",
+  "name": "Cars",
+  "release": [
+   "Cars (2006)",
+   "Cars 2 (2011)"
+  ]
+ },
+ {
+  "id": "frozen",
+  "name": "Frozen",
+  "release": [
+   "Frozen (2013)",
+   "Frozen II (2019)"
+  ]
+ },
+ {
+  "id": "moana",
+  "name": "Moana",
+  "release": [
+   "Moana (2016)",
+   "Moana 2 (2024)"
+  ]
+ },
+ {
+  "id": "shrek",
+  "name": "Shrek",
+  "release": [
+   "Shrek (2001)",
+   "Shrek 2 (2004)"
+  ]
+ },
+ {
+  "id": "kung-fu-panda",
+  "name": "Kung Fu Panda",
+  "release": [
+   "Kung Fu Panda (2008)",
+   "Kung Fu Panda 2 (2011)"
+  ]
+ },
+ {
+  "id": "despicable-me",
+  "name": "Despicable Me",
+  "release": [
+   "Despicable Me (2010)",
+   "Despicable Me 2 (2013)",
+   "Minions (2015)"
+  ],
+  "story": [
+   "Minions (2015)",
+   "Despicable Me (2010)",
+   "Despicable Me 2 (2013)"
+  ]
+ },
+ {
+  "id": "paddington",
+  "name": "Paddington",
+  "release": [
+   "Paddington (2014)",
+   "Paddington 2 (2017)",
+   "Paddington in Peru (2024)"
+  ]
+ },
+ {
+  "id": "peter-rabbit",
+  "name": "Peter Rabbit",
+  "release": [
+   "Peter Rabbit (2018)",
+   "Peter Rabbit 2: The Runaway (2021)"
+  ]
+ },
+ {
+  "id": "wallace-gromit",
+  "name": "Wallace & Gromit",
+  "release": [
+   "Wallace & Gromit: The Curse of the Were-Rabbit (2005)",
+   "Wallace & Gromit: Vengeance Most Fowl (2024)"
+  ]
+ },
+ {
+  "id": "mary-poppins",
+  "name": "Mary Poppins",
+  "release": [
+   "Mary Poppins (1964)",
+   "Mary Poppins Returns (2018)"
+  ]
+ },
+ {
+  "id": "wicked",
+  "name": "Wicked",
+  "release": [
+   "Wicked (2024)",
+   "Wicked: For Good (2025)"
+  ]
+ },
+ {
+  "id": "tmnt",
+  "name": "Teenage Mutant Ninja Turtles (1990 trilogy)",
+  "release": [
+   "Teenage Mutant Ninja Turtles (1990)",
+   "Teenage Mutant Ninja Turtles II: The Secret of the Ooze (1991)",
+   "Teenage Mutant Ninja Turtles III (1993)"
+  ]
+ },
+ {
+  "id": "home-alone",
+  "name": "Home Alone",
+  "release": [
+   "Home Alone (1990)",
+   "Home Alone 2: Lost in New York (1992)"
+  ]
+ },
+ {
+  "id": "santa-clause",
+  "name": "The Santa Clause",
+  "release": [
+   "The Santa Clause (1994)",
+   "The Santa Clause 2 (2002)"
+  ]
+ },
+ {
+  "id": "addams",
+  "name": "The Addams Family",
+  "release": [
+   "The Addams Family (1991)",
+   "Addams Family Values (1993)"
+  ]
+ },
+ {
+  "id": "meet-the-parents",
+  "name": "Meet the Parents",
+  "release": [
+   "Meet the Parents (2000)",
+   "Meet the Fockers (2004)"
+  ]
+ },
+ {
+  "id": "vacation",
+  "name": "National Lampoon's Vacation",
+  "release": [
+   "National Lampoon's Vacation (1983)",
+   "National Lampoon's Christmas Vacation (1989)"
+  ]
+ },
+ {
+  "id": "waynes-world",
+  "name": "Wayne's World",
+  "release": [
+   "Wayne's World (1992)",
+   "Wayne's World 2 (1993)"
+  ]
+ },
+ {
+  "id": "ace-ventura",
+  "name": "Ace Ventura",
+  "release": [
+   "Ace Ventura: Pet Detective (1994)",
+   "Ace Ventura: When Nature Calls (1995)"
+  ]
+ },
+ {
+  "id": "anchorman",
+  "name": "Anchorman",
+  "release": [
+   "Anchorman: The Legend of Ron Burgundy (2004)",
+   "Anchorman 2: The Legend Continues (2013)"
+  ]
+ },
+ {
+  "id": "jump-street",
+  "name": "Jump Street",
+  "release": [
+   "21 Jump Street (2012)",
+   "22 Jump Street (2014)"
+  ]
+ },
+ {
+  "id": "clerks",
+  "name": "Clerks",
+  "release": [
+   "Clerks (1994)",
+   "Clerks II (2006)",
+   "Clerks III (2022)"
+  ]
+ },
+ {
+  "id": "scream",
+  "name": "Scream",
+  "release": [
+   "Scream (1996)",
+   "Scream 2 (1997)"
+  ],
+  "story": null
+ }
 ]

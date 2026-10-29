@@ -30,6 +30,12 @@ def put(paths):
             if sub in p:
                 (D / sub).mkdir(exist_ok=True); json.dump(p[sub], open(D / sub / f"{s}.json", "w"), ensure_ascii=False, indent=1)
         for sid in p.get("series", []):
+            if isinstance(sid, dict) and sid.get("new"):
+                name = sid["new"]; nid = slug(name); sr = next((x for x in series if x["id"] == nid), None)
+                if not sr:
+                    have = [f"{x['title']} ({x['year']})" for x in films if x["title"] == name or x["title"].startswith(name + " ") or x["title"].startswith(name + ":")]
+                    sr = {"id": nid, "name": name, "release": sorted(set(have) - {fid}, key=lambda x: int(x.rsplit("(", 1)[1].rstrip(")"))), "story": None}; series.append(sr); print("new series", nid, sr["release"])
+                sid = nid
             sr = next((x for x in series if x["id"] == sid), None)
             if not sr: print("unknown series", sid, "for", fid); continue
             for key in ("release", "story"):
