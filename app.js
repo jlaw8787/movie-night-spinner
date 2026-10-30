@@ -122,7 +122,7 @@ function setList(){
 $("watchSearch").addEventListener("input",renderWatchList);
 $("watchFilter").addEventListener("change",renderWatchList);
 $("skipWatched").addEventListener("change",()=>{if(spinning)return;skipWatched=$("skipWatched").checked;saveWatched();setList()});
-$("watchCurrent").addEventListener("click",()=>{if(current)setWatched(current,!watched.has(current.id))});
+$("watchCurrent").addEventListener("click",()=>{if(!current)return;const now=!watched.has(current.id);setWatched(current,now);if(now)openRate(current)});
 
 function size(){
   const r=canvas.getBoundingClientRect(),dpr=Math.min(2,window.devicePixelRatio||1);
@@ -1062,11 +1062,11 @@ function replay(f){closeCurtains();$("now").textContent=f.title;return new Promi
 let hist=[];
 try{hist=JSON.parse(localStorage.getItem("mns-hist")||"[]")}catch(e){hist=[]}
 function renderHist(){
-  const box=$("chips");
+  const box=$("chips");{const w=$("wallBtn");if(w)w.hidden=!(typeof RATES!=="undefined"&&Object.keys(RATES).length)}
   const items=hist.map(id=>FILMS.find(f=>f.id===id)).filter(Boolean);
   if(!items.length){box.innerHTML='<span class="empty">Nothing yet. Your picks land here.</span>';return}
   box.innerHTML="";
-  items.forEach(f=>{const b=document.createElement("button");b.className="ticket";b.type="button";b.innerHTML=`<small>Admit one</small>${ESC(f.title)}`;b.addEventListener("click",()=>replay(f));box.appendChild(b)});
+  items.forEach(f=>{const r=typeof RATES!=="undefined"&&RATES[f.id];const b=document.createElement("button");b.className="ticket"+(r?" rated":"");b.type="button";b.innerHTML=`<small>Admit one${r?" · "+ESC(nightDate(r.d)):""}</small>${ESC(f.title)}${r?popRow(r.s):""}`;b.addEventListener("click",()=>replay(f));box.appendChild(b)});
 }
 function addHistory(f){
   hist=[f.id,...hist.filter(x=>x!==f.id)].slice(0,8);try{$("histClear").hidden=false}catch(e){}
@@ -1465,7 +1465,7 @@ async function syncCall(body){
 }
 function syncPayload(){
   const {pin,...m}=member;
-  return {v:1,member:m,watched:[...watched],skip:skipWatched,hist,week,counter,kids:kidsMode,fav:typeof FAV!=="undefined"?FAV:[]};
+  return {v:1,member:m,watched:[...watched],skip:skipWatched,hist,week,counter,kids:kidsMode,fav:typeof FAV!=="undefined"?FAV:[],rates:typeof RATES!=="undefined"?RATES:{}};
 }
 function applyRemote(d){
   if(!d||!d.member)return;
@@ -1491,6 +1491,7 @@ function applyRemote(d){
     }
   }
   counter=Object.assign({},counter,d.counter||{});
+  if(d.rates&&typeof d.rates==="object"&&typeof RATES!=="undefined"){for(const [id,r] of Object.entries(d.rates)){if(r&&r.s&&(!RATES[id]||(r.t||0)>(RATES[id].t||0)))RATES[id]=r}try{localStorage.setItem("mns-rates",JSON.stringify(RATES))}catch(e){}}
   if(typeof d.kids==="boolean")kidsMode=d.kids;
   try{localStorage.setItem("mns-member",JSON.stringify(member));localStorage.setItem("mns-watched",JSON.stringify([...watched]));localStorage.setItem("mns-hist",JSON.stringify(hist));localStorage.setItem("mns-counter",JSON.stringify(counter));if(week)localStorage.setItem("mns-week",JSON.stringify(week));else localStorage.removeItem("mns-week");localStorage.setItem("mns-kids",kidsMode?"1":"0")}catch(e){}
   renderHist();renderWeek();setKidsUI();if(!spinning){setList();updateWatchButton()}if(!$("viewShop").hidden)renderShop();
@@ -2098,6 +2099,40 @@ function startShow(f){
 }
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-show]");if(b)startShow()});
 
+/* rate the night: popcorns out of five, kept per film with the date, shown on the stubs and on the stub wall */
+var RATES={};try{RATES=JSON.parse(localStorage.getItem("mns-rates")||"{}")||{}}catch(e){RATES={}}
+const ratesSave=()=>{try{localStorage.setItem("mns-rates",JSON.stringify(RATES))}catch(e){}try{queueSync()}catch(e){}};
+const POP_WORDS=["","Not for us","It was fine","Good night","Great night","One for the ages"];
+const popSVG=on=>`<svg class="pc${on?" on":""}" viewBox="0 0 24 24" aria-hidden="true"><path class="pc-top" d="M5 10.5c-1.6-.4-2.2-2.6-.8-3.6.2-1.8 2.3-2.6 3.6-1.5.8-1.6 3.2-1.7 4.1-.2 1-1.4 3.3-1.2 4 .4 1.5-.9 3.5.3 3.2 2 1.3 1 .8 3-.8 3.1z"/><path class="pc-tub" d="M4.6 10h14.8l-1.9 11.2H6.5z"/><path class="pc-str" d="M8.4 10.4l.9 10.6M12 10.4v10.6M15.6 10.4l-.9 10.6"/></svg>`;
+const popRow=n=>`<span class="pops" aria-label="${n} out of 5 popcorns">${[1,2,3,4,5].map(i=>popSVG(i<=n)).join("")}</span>`;
+const nightDate=iso=>{const d=new Date(iso+"T12:00:00");if(isNaN(d))return String(iso||"");const D=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],M=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];return `${D[d.getDay()]} ${d.getDate()} ${M[d.getMonth()]}${d.getFullYear()!==new Date().getFullYear()?" "+d.getFullYear():""}`};
+const todayISO=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`};
+function openRate(f){
+  if(!f)return;const was=RATES[f.id];let pick=was?was.s:0;
+  const o=document.createElement("dialog");o.className="counter rate";o.setAttribute("aria-label","Rate the night: "+f.title);
+  o.innerHTML=`<div class="rate-box"><p class="rate-k">Rate the night</p><h3>${ESC(f.title)}</h3><p class="rate-q">How did it go? Score it out of five popcorns.</p>
+   <div class="rate-pops" role="radiogroup" aria-label="Popcorns">${[1,2,3,4,5].map(i=>`<button type="button" role="radio" aria-checked="${i===pick}" aria-label="${i} popcorn${i>1?"s":""}: ${POP_WORDS[i]}" data-n="${i}">${popSVG(i<=pick)}</button>`).join("")}</div>
+   <p class="rate-word" aria-live="polite">${pick?POP_WORDS[pick]:"&nbsp;"}</p>
+   <div class="acts"><button type="button" class="go" data-a="save"${pick?"":" disabled"}>Stick it on the wall</button><button type="button" data-a="skip">Not now</button></div></div>`;
+  const paint=n=>{o.querySelectorAll(".rate-pops button").forEach(b=>{const k=+b.dataset.n;b.querySelector(".pc").classList.toggle("on",k<=n);b.setAttribute("aria-checked",k===pick)});o.querySelector(".rate-word").textContent=n?POP_WORDS[n]:" "};
+  o.addEventListener("click",e=>{if(e.target===o)return dismissModal(o);const b=e.target.closest("button");if(!b)return;
+    if(b.dataset.n){pick=+b.dataset.n;paint(pick);o.querySelector("[data-a=save]").disabled=false;try{sfx.pop()}catch(x){}return}
+    if(b.dataset.a==="skip")return dismissModal(o);
+    if(b.dataset.a==="save"&&pick){RATES[f.id]={s:pick,d:(was&&was.d)||todayISO(),t:Date.now()};ratesSave();renderHist();dismissModal(o);$("status").textContent=`${pick} popcorn${pick>1?"s":""} for ${f.title}. It's on your stub wall.`}});
+  o.querySelectorAll(".rate-pops button").forEach(b=>{b.addEventListener("mouseenter",()=>paint(+b.dataset.n));b.addEventListener("mouseleave",()=>paint(pick))});
+  mountModal(o,pick?"[data-a=save]":".rate-pops button",document.activeElement);
+}
+function openWall(){
+  const items=Object.entries(RATES).map(([id,r])=>({f:FILMS.find(x=>x.id===id),r})).filter(x=>x.f).sort((a,b)=>(b.r.d||"").localeCompare(a.r.d||"")||(b.r.t||0)-(a.r.t||0));
+  const avg=items.length?(items.reduce((a,x)=>a+x.r.s,0)/items.length):0;
+  const o=document.createElement("dialog");o.className="counter wall";o.setAttribute("aria-label","Your stub wall");
+  o.innerHTML=`<div class="wall-box"><h3>The stub wall</h3><p class="wall-sum">${items.length?`${items.length} night${items.length>1?"s":""} rated. Average ${avg.toFixed(1)} popcorns.`:"No nights rated yet. Mark a film as watched to score it."}</p>
+   <div class="wall-grid">${items.map((x,i)=>`<button type="button" class="wstub" data-i="${i}" style="--tilt:${((i*37)%7-3)*.6}deg"><small>Admit one</small><span class="wd">${ESC(nightDate(x.r.d))}</span><b>${ESC(x.f.title)}</b><span class="wy">${ESC(x.f.year)}</span>${popRow(x.r.s)}</button>`).join("")}</div></div>`;
+  o.addEventListener("click",e=>{if(e.target===o)return dismissModal(o);const b=e.target.closest(".wstub");if(!b)return;const f=items[+b.dataset.i].f;dismissModal(o);openFilm(f)});
+  mountModal(o,".wstub",document.activeElement);
+}
+renderHist();
+
 /* saved menus: a heart on the menu, a shelf on the front, and the menu kept for offline */
 var FAV=[];try{FAV=JSON.parse(localStorage.getItem("mns-fav")||"[]").filter(id=>FILMS.some(f=>f.id===id))}catch(e){FAV=[]}
 const favSave=()=>{try{localStorage.setItem("mns-fav",JSON.stringify(FAV))}catch(e){}try{queueSync()}catch(e){}};
@@ -2121,6 +2156,7 @@ $("setVeg").addEventListener("change",e=>{DIET.veg=e.target.checked;dietSave();r
 $("setAf").addEventListener("change",e=>{DIET.af=e.target.checked;dietSave();refreshPlan()});
 function clearStubs(){hist=[];try{localStorage.setItem("mns-hist","[]")}catch(e){}renderHist();setSync();try{queueSync()}catch(e){}}
 $("histClear").addEventListener("click",()=>{clearStubs();$("status").textContent="Ticket stubs cleared."});
+$("wallBtn").addEventListener("click",openWall);
 $("setClearStubs").addEventListener("click",()=>{clearStubs();$("setMsg").textContent="Ticket stubs cleared."});
 $("setClearSaved").addEventListener("click",()=>{FAV=[];favSave();renderFav();$("setMsg").textContent="Saved menus cleared."});
 {let armed=0;$("setReset").addEventListener("click",()=>{const b=$("setReset");

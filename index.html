@@ -1602,6 +1602,38 @@ dialog.leader::backdrop{background:#000}
 .leader .ld-go{font:400 20px var(--f-disp);color:#2a1206;background:radial-gradient(circle at 40% 30%,#fff1c4,#e2b04f 50%,#a8762a);border:0;border-radius:999px;padding:13px 34px;cursor:pointer;box-shadow:0 0 0 2px #2a0b10,0 0 0 4px #c9962c}
 @keyframes ldin{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){.leader .ld-film{animation:none}.leader .ld-card{animation:none}}
+
+/* rate the night */
+.pops{display:inline-flex;gap:2px;vertical-align:middle}
+.ticket .pops{display:flex;margin-top:3px}
+.pc{width:14px;height:14px}
+.pc .pc-top{fill:#5b4a3a;opacity:.45}.pc .pc-tub{fill:#5b4a3a;opacity:.35}.pc .pc-str{stroke:#f3e3b8;stroke-width:1.4;opacity:.5}
+.pc.on .pc-top{fill:#fff3cf;opacity:1;stroke:#c99a3a;stroke-width:.6}.pc.on .pc-tub{fill:#c8102e;opacity:1}.pc.on .pc-str{stroke:#fff;opacity:.9}
+.hist-btns{display:flex;gap:6px;align-items:center}
+dialog.rate .rate-box,dialog.wall .wall-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a;border-radius:18px;padding:26px 22px;max-width:460px;margin:auto;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+dialog.wall .wall-box{width:min(820px,92vw);max-width:none;max-height:86vh;overflow:auto;box-sizing:border-box}
+.rate-k{font:600 12px var(--f-body);letter-spacing:.3em;text-transform:uppercase;color:#d8a84a;margin:0 0 8px}
+.rate-box h3,.wall-box h3{font:400 clamp(26px,6vw,38px)/1.1 var(--f-disp);margin:0 0 10px;color:#fff4d6}
+.rate-q,.wall-sum{margin:0 0 18px;color:#d9c9a8;font:400 15px/1.5 var(--f-body)}
+.rate-pops{display:flex;justify-content:center;gap:6px}
+.rate-pops button{background:none;border:0;padding:4px;cursor:pointer;border-radius:12px}
+.rate-pops button:focus-visible{outline:2px solid #d8a84a}
+.rate-pops .pc{width:clamp(44px,13vw,60px);height:clamp(44px,13vw,60px);transition:transform .15s}
+.rate-pops button:hover .pc,.rate-pops .pc.on{transform:translateY(-3px)}
+.rate-pops .pc .pc-str{stroke:#1d0b10}
+.rate-word{min-height:1.5em;margin:10px 0 18px;font:400 20px var(--f-disp);color:#f0c766}
+.rate-box .acts,.wall-box .acts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.rate-box .acts button{font:600 15px var(--f-body);border-radius:999px;padding:12px 22px;cursor:pointer;border:1px solid #8a6a3a;background:transparent;color:#f3e6c8}
+.rate-box .acts .go{background:radial-gradient(circle at 40% 30%,#fff1c4,#e2b04f 50%,#a8762a);color:#2a1206;border:0}
+.rate-box .acts .go:disabled{opacity:.4;cursor:default}
+.wall-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px 12px;text-align:left}
+.wstub{text-align:left;transform:rotate(var(--tilt));background:#f3e3b8;color:#3a0a14;border:0;border-radius:4px;padding:10px 12px 10px 16px;cursor:pointer;font:600 14px/1.25 var(--f-body);position:relative;box-shadow:0 6px 14px rgba(0,0,0,.45);-webkit-mask:radial-gradient(circle 6px at 0 50%,transparent 6px,#000 6.5px);mask:radial-gradient(circle 6px at 0 50%,transparent 6px,#000 6.5px)}
+.wstub:hover,.wstub:focus-visible{transform:rotate(0) translateY(-2px)}
+.wstub small{display:block;font:700 9.5px var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:#8a1a2c;margin-bottom:4px}
+.wstub .wd{display:block;font:600 12px var(--f-body);color:#5a3a2a;margin-bottom:2px}.wstub b{display:block;font-weight:700}
+.wstub .wy{display:block;font-size:12px;opacity:.7;margin-bottom:6px}
+.wstub .pc{width:16px;height:16px}
+.wstub .pc .pc-str,.ticket .pc .pc-str{stroke:#f3e3b8}
 </style>
 
 <div id="printArea"></div>
@@ -1715,7 +1747,7 @@ dialog.leader::backdrop{background:#000}
         <div class="chips" id="savedChips"></div>
       </div>
       <div class="history">
-        <div class="hist-head"><h2>Your ticket stubs</h2><button type="button" class="hist-clear" id="histClear" hidden>Clear</button></div>
+        <div class="hist-head"><h2>Your ticket stubs</h2><span class="hist-btns"><button type="button" class="hist-clear wall-btn" id="wallBtn" hidden>The stub wall</button><button type="button" class="hist-clear" id="histClear" hidden>Clear</button></span></div>
         <div class="chips" id="chips"><span class="empty">Nothing yet. Your picks land here.</span></div>
       </div>
     </section>
@@ -1767,7 +1799,7 @@ dialog.leader::backdrop{background:#000}
 <script src="providers.js?v=76e7a870" defer></script>
 <script src="films.js?v=11659780" defer></script>
 <script src="formats-core.js?v=eb2381a5" defer></script>
-<script src="app.js?v=42678f18" defer></script>
+<script src="app.js?v=a5d13758" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
