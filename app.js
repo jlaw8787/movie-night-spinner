@@ -2163,7 +2163,7 @@ async function openTrivia(){
   o.innerHTML=`<div class="tv-box"><p class="tv-k">Trivia spin</p><p class="tv-t">The wheel has picked a film</p>
     <p class="tv-say">Get two of three right and it's yours.</p><div class="tv-dots"><i></i><i></i><i></i></div><div class="tv-stage" aria-live="polite"></div></div>`;
   const stage=o.querySelector(".tv-stage"),dots=[...o.querySelectorAll(".tv-dots i")];
-  const ask=()=>{const q=Q[i];stage.innerHTML=`<p class="tv-n">Clue ${i+1} of 3</p><p class="tv-q">${ESC(q.q)}</p><div class="tv-opts">${q.o.map((x,k)=>`<button type="button" data-o="${k}">${ESC(x.t)}</button>`).join("")}</div>`;const b=stage.querySelector("[data-o]");b&&b.focus()};
+  const ask=()=>{const q=Q[i];stage.innerHTML=`<p class="tv-n">Clue ${i+1} of 3</p><p class="tv-q">${ESC(q.q)}</p><div class="tv-opts">${q.o.map((x,k)=>`<button type="button" data-o="${k}">${ESC(x.t)}</button>`).join("")}</div>`;const h=stage.querySelector(".tv-q");h.tabIndex=-1;h.focus({preventScroll:true})};
   const end=win=>{
     if(win)stage.innerHTML=`<p class="tv-res win">You got it.</p><p class="tv-say">The film is unlocked. Lights down.</p><div class="acts"><button type="button" class="go" data-a="reveal">Roll the film</button></div>`;
     else stage.innerHTML=`<p class="tv-res">Not this time.</p><p class="tv-say">The film stays sealed. Spin again for a new one.</p><div class="acts"><button type="button" class="go" data-a="again">Spin again</button><button type="button" data-a="close">Close</button></div>`;
@@ -2178,7 +2178,7 @@ async function openTrivia(){
     if(a==="close")return dismissModal(o);
     if(a==="again"){dismissModal(o);return openTrivia()}
     if(a==="reveal"){dismissModal(o);addHistory(f);goView("wheel",true);replay(f).then(()=>toMenu());setTimeout(()=>startShow(f),reduce?0:300)}});
-  ask();mountModal(o,"[data-o]",document.activeElement);
+  mountModal(o,".tv-stage",document.activeElement);ask();
 }
 /* table kit: a door sign, place cards and an intermission card, printed in tonight's film's colours and type */
 const kitTime=t=>{const m=/^(\d{1,2}):(\d{2})$/.exec(t||"");if(!m)return "";let h=+m[1];const ap=h>=12?"pm":"am";h=h%12||12;return `${h}:${m[2]} ${ap}`};
