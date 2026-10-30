@@ -1647,34 +1647,117 @@ dialog.kit .kit-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a;bo
 .kit-box .acts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 .kit-box .acts button{font:600 15px var(--f-body);border-radius:999px;padding:12px 22px;cursor:pointer;border:1px solid #8a6a3a;background:transparent;color:#f3e6c8}
 .kit-box .acts .go{background:radial-gradient(circle at 40% 30%,#fff1c4,#e2b04f 50%,#a8762a);color:#2a1206;border:0}
-.kit-page{position:relative;box-sizing:border-box;background:var(--mg);color:var(--mi);font-family:var(--mb);overflow:hidden;text-align:center}
-.kit-page::before{content:"";position:absolute;inset:0;background:var(--mpat,none);background-size:var(--mpsz,auto);opacity:.35;pointer-events:none}
-.kit-frame{position:absolute;inset:44px;border:3px solid var(--ma);outline:1px solid var(--ma);outline-offset:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 48px;box-sizing:border-box;gap:6px}
-.kit-eye{font:700 18px var(--mb);letter-spacing:.32em;text-transform:uppercase;color:var(--ma);margin:0}
-.kit-now{font:var(--mdw,400) 64px/1 var(--md);margin:6px 0 22px;color:var(--mi)}
-.kit-poster{width:330px;height:495px;object-fit:cover;border:6px solid var(--mi);box-shadow:0 10px 30px rgba(0,0,0,.35);margin:0 0 24px}
-.kit-logo{max-width:440px;max-height:150px;object-fit:contain;margin:4px 0}
-.kit-title{font:var(--mdw,400) 60px/1.05 var(--md);margin:0;color:var(--mi)}
-.kit-year{font:600 20px var(--mb);letter-spacing:.3em;margin:4px 0 0;opacity:.8}
-.kit-venue{font:italic 400 22px var(--mb);margin:14px 0 0;color:var(--ma)}
-.kit-doors{font:var(--mdw,400) 34px var(--md);margin:22px 0 6px}
-.kit-tag{font:400 20px/1.4 var(--mb);margin:6px 0 0;max-width:560px;opacity:.85}
-.kit-line{display:inline-block;width:160px;border-bottom:2px solid currentColor;vertical-align:-4px}
-.kit-line.wide{width:70%;height:40px;margin:6px 0}
-.kit-tents{position:absolute;left:36px;right:36px;top:36px;bottom:70px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr)}
-.kit-tent{border:1px solid rgba(0,0,0,.35);display:grid;grid-template-rows:1fr 1fr;position:relative;background:var(--mg)}
-.kit-tent::after{content:"";position:absolute;left:0;right:0;top:50%;border-top:2px dashed rgba(0,0,0,.35)}
-.kit-back{transform:rotate(180deg);display:flex;align-items:center;justify-content:center;background:var(--ma);color:var(--mg);font:var(--mdw,400) 26px/1.1 var(--md);padding:12px}
-.kit-front{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 18px;gap:4px}
-.kit-front small{font:700 12px var(--mb);letter-spacing:.18em;text-transform:uppercase;color:var(--ma)}
-.kit-front b{font:var(--mdw,400) 40px/1.1 var(--md)}
-.kit-front em{font:italic 400 14px var(--mb);opacity:.8}
-.kit-cut{position:absolute;left:0;right:0;bottom:26px;margin:0;font:400 14px var(--mb);opacity:.7}
-.kit-big{font:var(--mdw,400) 88px/1 var(--md);margin:10px 0 18px;color:var(--ma)}
-.kit-k{font:700 16px var(--mb);letter-spacing:.28em;text-transform:uppercase;color:var(--ma);margin:30px 0 4px}
-.kit-dish{font:var(--mdw,400) 38px/1.15 var(--md);margin:0;max-width:600px}
-.kit-dish.small{font-size:28px}
-.kit-back15{font:italic 400 24px var(--mb);margin:34px 0 0}
+.kit-page{position:relative;box-sizing:border-box;overflow:hidden;text-align:center;color:#1d1712;background:#f2ead6}
+.kit-page *{box-sizing:border-box}
+.kit-line{display:inline-block;width:150px;border-bottom:2px solid currentColor;vertical-align:-4px}
+/* door sign: neon */
+.ks-neon.kit-door{background:radial-gradient(ellipse at 50% 30%,color-mix(in srgb,var(--kd) 70%,#3a2a2a) 0,var(--kd) 55%,#050304 100%)}
+.kn-wall{position:absolute;inset:0;padding:90px 60px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:30px;background:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 2px,transparent 2px 46px),repeating-linear-gradient(90deg,rgba(0,0,0,.18) 0 2px,transparent 2px 92px)}
+.kn-tonight{font:400 46px "Yellowtail",cursive;color:#fff;padding:6px 34px 10px;border:3px solid #fff;border-radius:60px;box-shadow:0 0 6px #fff,0 0 18px var(--ka),0 0 40px var(--ka),inset 0 0 14px var(--ka);text-shadow:0 0 4px #fff,0 0 14px var(--ka),0 0 30px var(--ka);transform:rotate(-4deg)}
+.kn-name{font:400 96px/1.05 "Yellowtail",cursive;color:#fff8ec;text-shadow:0 0 4px #fff,0 0 12px var(--ka),0 0 28px var(--ka),0 0 60px var(--ka);max-width:680px}
+.kn-box{background:#fbf6e8;color:#1d1712;font:600 20px/1.35 "Oswald",sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:14px 26px;max-width:560px;box-shadow:0 0 30px rgba(255,240,200,.5),0 0 0 6px #111}
+.kn-board{width:620px;background:#0d0c0c;border:10px solid #2a2725;box-shadow:inset 0 0 0 2px #444,0 14px 30px rgba(0,0,0,.6);padding:20px 24px 24px;color:#fff;background-image:repeating-linear-gradient(0deg,transparent 0 37px,rgba(255,255,255,.07) 37px 39px)}
+.kn-board small{display:block;font:600 18px "Oswald",sans-serif;letter-spacing:.4em;text-transform:uppercase;color:#ddd}
+.kn-board b{display:block;font:700 54px/1.1 "Oswald",sans-serif;text-transform:uppercase;letter-spacing:.06em;margin:8px 0}
+.kn-board>span{display:block;font:500 24px "Oswald",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#f1d36b}
+/* door sign: painted board */
+.ks-board.kit-door{background:repeating-linear-gradient(90deg,#5b3a22 0 3px,#6b4529 3px 9px,#5a3820 9px 14px,#704a2c 14px 22px),#5b3a22}
+.kb-wall{position:absolute;inset:0;padding:70px 56px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;background:repeating-linear-gradient(0deg,transparent 0 186px,rgba(0,0,0,.35) 186px 190px)}
+.kb-plank{font:400 64px/1.1 "Rye",serif;color:#f4e6c4;background:color-mix(in srgb,var(--kd) 55%,#3b2412);padding:26px 40px;border:6px solid #2b1a0e;box-shadow:0 10px 0 #2b1a0e,0 18px 30px rgba(0,0,0,.5);max-width:690px;text-shadow:2px 2px 0 rgba(0,0,0,.35)}
+.kb-chalk{width:620px;min-height:520px;background:radial-gradient(ellipse at 40% 30%,#3c4a41,#232b26 70%);border:22px solid #8a5a33;border-image:repeating-linear-gradient(90deg,#8a5a33 0 6px,#7a4c2a 6px 12px) 22;box-shadow:0 18px 40px rgba(0,0,0,.55);padding:40px 44px;color:#f3f0e6;font-family:"Caveat",cursive;display:flex;flex-direction:column;justify-content:center}
+.kb-t{font:700 40px "Caveat",cursive;margin:0;color:#f6d9a0}
+.kb-film{font:700 76px/1 "Caveat",cursive;margin:10px 0 18px;text-decoration:underline;text-decoration-color:var(--ka);text-decoration-thickness:4px;text-underline-offset:10px}
+.kb-d{font:500 40px "Caveat",cursive;margin:0 0 18px}
+.kb-s{font:500 30px/1.25 "Caveat",cursive;margin:0;opacity:.85}
+/* door sign: printed notice */
+.ks-notice.kit-door{background:#3a3833}
+.kt-sheet{position:absolute;inset:60px 70px;background:#f6f1e4;box-shadow:0 20px 40px rgba(0,0,0,.5);padding:0 56px 60px;display:flex;flex-direction:column;align-items:center;font-family:"Special Elite",monospace;color:#22201c;transform:rotate(-.6deg)}
+.kt-sheet::before{content:"";position:absolute;top:-14px;left:50%;width:30px;height:30px;margin-left:-15px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#e66,#911 70%);box-shadow:0 3px 4px rgba(0,0,0,.4)}
+.kt-bar{align-self:stretch;margin:0 -56px 60px;background:var(--ka);color:#fff;display:flex;justify-content:space-between;padding:20px 40px;font:700 28px "Oswald",sans-serif;letter-spacing:.3em;text-transform:uppercase}
+.kt-v{font:400 54px/1.15 "Special Elite",monospace;margin:auto 0 18px}
+.kt-s{font:400 22px/1.5 "Special Elite",monospace;margin:0;max-width:520px;opacity:.85}
+.kt-rule{width:80%;border-top:3px double #22201c;margin:46px 0 36px}
+.kt-k{font:400 22px "Special Elite",monospace;letter-spacing:.3em;text-transform:uppercase;margin:0}
+.kt-film{font:700 60px/1.1 "Oswald",sans-serif;text-transform:uppercase;margin:12px 0 20px}
+.kt-d{font:400 30px "Special Elite",monospace;margin:0 0 auto}
+.kt-stamp{position:absolute;right:56px;bottom:70px;width:170px;height:170px;border:6px double var(--ka);border-radius:50%;color:var(--ka);display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-14deg);opacity:.8;font-family:"Oswald",sans-serif}
+.kt-stamp span{font:700 20px "Oswald",sans-serif;letter-spacing:.2em;text-transform:uppercase}.kt-stamp b{font:700 38px "Oswald",sans-serif}
+/* door sign: engraved plaque */
+.ks-plaque.kit-door{background:radial-gradient(ellipse at 50% 40%,color-mix(in srgb,var(--kd) 75%,#000) 0,#0b0807 100%)}
+.kq-card{position:absolute;inset:80px 84px;background:#f7f0de;border:2px solid var(--ka);outline:10px solid #f7f0de;box-shadow:0 0 0 12px var(--ka),0 24px 50px rgba(0,0,0,.6);padding:80px 60px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#2a1d14}
+.kq-card::after{content:"";position:absolute;inset:16px;border:1px solid var(--ka);pointer-events:none}
+.kq-k{font:italic 500 26px "Cormorant Garamond",serif;margin:0;color:color-mix(in srgb,var(--ka) 70%,#2a1d14)}
+.kq-v{font:700 64px/1.1 "Playfair Display SC",serif;margin:14px 0 18px;letter-spacing:.02em}
+.kq-s{font:italic 500 26px/1.4 "Cormorant Garamond",serif;margin:0;max-width:520px}
+.kq-orn{display:flex;align-items:center;gap:16px;color:var(--ka);font-size:26px;margin:40px 0 34px;width:70%}.kq-orn span{flex:1;border-top:2px solid var(--ka)}
+.kq-film{font:400 58px/1.1 "Playfair Display SC",serif;margin:10px 0 26px}
+.kq-d{font:italic 500 32px "Cormorant Garamond",serif;margin:0}
+/* place cards: tents with the film's own prop on the front */
+.kit-place{background:#fff}
+.kit-tents{position:absolute;left:30px;right:30px;top:30px;bottom:66px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr);gap:0}
+.kit-tent{border:1px dashed #999;display:grid;grid-template-rows:1fr 1fr;position:relative}
+.kit-tent::after{content:"";position:absolute;left:0;right:0;top:50%;border-top:2px dotted #888}
+.kit-back{transform:rotate(180deg);display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--kd);color:#fff;padding:12px 18px;gap:4px}
+.kit-back b{font:400 30px/1.05 "Yellowtail",cursive;color:#fff;text-shadow:0 0 10px var(--ka)}
+.kit-back small{font:600 12px "Oswald",sans-serif;letter-spacing:.3em;text-transform:uppercase;opacity:.75}
+.kit-front{display:flex;align-items:center;justify-content:center;padding:14px 16px}
+.kit-cut{position:absolute;left:0;right:0;bottom:24px;margin:0;font:400 15px "Special Elite",monospace;color:#555}
+.kp{width:100%;height:100%;position:relative;text-align:left;color:#1d1712}
+.kp-name{display:block;font:700 34px/1.05 "Oswald",sans-serif;text-transform:uppercase;letter-spacing:.03em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kp-blank{display:block;height:34px;border-bottom:2px solid currentColor;margin:4px 0 6px;width:85%}
+.kp-ticket{display:flex;background:var(--ka);color:#fff;border-radius:6px;overflow:hidden;box-shadow:inset 0 0 0 4px rgba(255,255,255,.35)}
+.kp-ticket .kp-main{flex:1;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between}
+.kp-ticket .kp-h{font:700 13px "Oswald",sans-serif;letter-spacing:.24em;text-transform:uppercase;opacity:.9}
+.kp-ticket .kp-f{font:500 12px "Oswald",sans-serif;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.kp-stub{width:74px;border-left:3px dashed rgba(255,255,255,.7);display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(0,0,0,.18)}
+.kp-stub span{writing-mode:vertical-rl;transform:rotate(180deg);font:700 13px "Oswald",sans-serif;letter-spacing:.3em;text-transform:uppercase}
+.kp-stub b{font:700 18px "Oswald",sans-serif;margin-top:6px}
+.kp-ticket .kp-name{color:#fff}
+.kp-slip{background:#e9f1e2;border:1px solid #9bb08d;padding:0 14px 10px;background-image:repeating-linear-gradient(0deg,transparent 0 25px,#b9cdb0 25px 26px);font-family:"Courier Prime",monospace}
+.kp-slip .kp-h{display:flex;justify-content:space-between;margin:0 -14px 6px;padding:6px 14px;background:#2f5d3a;color:#fff;font:700 13px "Courier Prime",monospace;letter-spacing:.1em;text-transform:uppercase}
+.kp-slip .kp-rows{display:flex;gap:30px;font:700 11px "Courier Prime",monospace;color:#2f5d3a;text-transform:uppercase}
+.kp-slip .kp-name{font:700 40px/1.1 "Caveat",cursive;text-transform:none;color:#1d3a8a}
+.kp-slip .kp-f{font:700 12px "Courier Prime",monospace;text-transform:uppercase;color:#2f5d3a;margin-top:4px}
+.kp-card{border-radius:14px;padding:14px 18px;color:#fff;background:linear-gradient(135deg,var(--ka),color-mix(in srgb,var(--ka) 45%,#000));display:flex;flex-direction:column;justify-content:space-between;box-shadow:inset 0 0 0 1px rgba(255,255,255,.3)}
+.kp-card .kp-h{display:flex;justify-content:space-between;align-items:center;font:700 14px "Oswald",sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.kp-chip{width:38px;height:28px;border-radius:5px;background:linear-gradient(135deg,#f6e2a0,#b89640);box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)}
+.kp-card .kp-name{color:#fff;font-family:"Courier Prime",monospace;font-size:30px;letter-spacing:.08em}
+.kp-card .kp-f{display:flex;justify-content:space-between;font:500 12px "Courier Prime",monospace;letter-spacing:.1em;text-transform:uppercase;opacity:.9}
+.kp-badge{background:#fff;border:2px solid #222;border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.kp-badge .kp-h{background:var(--ka);color:#fff;font:700 15px "Oswald",sans-serif;letter-spacing:.24em;text-transform:uppercase;padding:9px 14px}
+.kp-badge .kp-name{padding:8px 14px 0;flex:1;display:flex;align-items:center}
+.kp-badge .kp-blank{margin:14px 14px 0}
+.kp-badge .kp-f{display:flex;justify-content:space-between;align-items:center;padding:6px 14px 10px;font:500 12px "Courier Prime",monospace;text-transform:uppercase}
+.kp-bars{width:90px;height:22px;background:repeating-linear-gradient(90deg,#111 0 2px,transparent 2px 4px,#111 4px 5px,transparent 5px 8px,#111 8px 11px,transparent 11px 13px)}
+.kp-tag{display:flex;background:#f3e2b6;border:2px solid #8a6a2a;border-radius:10px 40px 40px 10px;padding:12px 26px 12px 14px;align-items:center;gap:14px}
+.kp-hole{position:absolute;right:16px;top:50%;width:18px;height:18px;margin-top:-9px;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 3px #8a6a2a}
+.kp-tag .kp-no{font:700 54px/1 "Playfair Display SC",serif;color:var(--ka);min-width:70px;text-align:center}
+.kp-tag .kp-body{flex:1;min-width:0;padding-right:24px}
+.kp-tag .kp-h{font:700 13px "Oswald",sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#5a4318}
+.kp-tag .kp-f{font:italic 500 14px "Cormorant Garamond",serif;color:#5a4318}
+.kp-receipt{background:#fbfbf6;padding:10px 16px;font-family:"Courier Prime",monospace;box-shadow:0 0 0 1px #ddd;-webkit-mask:linear-gradient(#000,#000) top/100% calc(100% - 8px) no-repeat,radial-gradient(circle 5px at 50% 100%,transparent 5px,#000 5.5px) bottom/12px 9px repeat-x;mask:linear-gradient(#000,#000) top/100% calc(100% - 8px) no-repeat,radial-gradient(circle 5px at 50% 100%,transparent 5px,#000 5.5px) bottom/12px 9px repeat-x}
+.kp-receipt .kp-h{text-align:center;font:700 14px "Courier Prime",monospace;text-transform:uppercase;border-bottom:1px dashed #555;padding-bottom:4px;margin-bottom:4px}
+.kp-receipt .kp-r{display:flex;justify-content:space-between;font:400 12px "Courier Prime",monospace;text-transform:uppercase}
+.kp-receipt .kp-name{font:700 30px "Courier Prime",monospace;margin:4px 0}
+.kp-receipt .kp-f{text-align:center;font:400 11px "Courier Prime",monospace;border-top:1px dashed #555;margin-top:4px;padding-top:3px}
+/* intermission */
+.kit-inter{background:radial-gradient(ellipse at 50% 30%,color-mix(in srgb,var(--kd) 80%,#333),#070505 85%)}
+.ki-wall{position:absolute;inset:0;padding:90px 70px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:#f6efdd}
+.ki-big{font:400 110px/1 "Yellowtail",cursive;margin:0;color:#fff;text-shadow:0 0 6px #fff,0 0 20px var(--ka),0 0 50px var(--ka)}
+.ks-board .ki-big{font-family:"Rye",serif;font-size:82px;text-shadow:3px 3px 0 #000}
+.ks-notice .ki-big{font:700 92px "Oswald",sans-serif;text-transform:uppercase;letter-spacing:.08em;text-shadow:none;color:#f6efdd}
+.ks-plaque .ki-big{font:700 82px "Playfair Display SC",serif;text-shadow:none;color:#f3dfae}
+.ki-film{font:600 22px "Oswald",sans-serif;letter-spacing:.4em;text-transform:uppercase;margin:6px 0 34px;opacity:.85}
+.ki-note{position:relative;background:#fdf7df;color:#2b2414;width:520px;padding:36px 40px 26px;transform:rotate(-2.5deg);box-shadow:0 14px 30px rgba(0,0,0,.55);text-align:left;background-image:repeating-linear-gradient(0deg,transparent 0 33px,#c8d8ea 33px 34px)}
+.ki-tape{position:absolute;top:-16px;left:50%;width:140px;height:34px;margin-left:-70px;background:rgba(240,228,180,.85);transform:rotate(3deg);box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.ki-note p{font:500 30px/1.13 "Caveat",cursive;margin:0}
+.ki-note b{display:block;text-align:right;font:700 30px "Caveat",cursive;margin-top:10px;color:#1d3a8a}
+.ki-menu{margin:44px 0 0}
+.ki-k{font:600 18px "Oswald",sans-serif;letter-spacing:.32em;text-transform:uppercase;color:color-mix(in srgb,var(--ka) 60%,#fff);margin:16px 0 4px}
+.ki-dish{font:700 36px/1.15 "Oswald",sans-serif;margin:0;max-width:620px}
+.ki-dish.small{font-size:28px}
+.ki-back{font:400 34px "Caveat",cursive;margin:34px 0 0;color:#f6d9a0}
+
 </style>
 
 <div id="printArea"></div>
@@ -1841,7 +1924,7 @@ dialog.kit .kit-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a;bo
 <script src="providers.js?v=76e7a870" defer></script>
 <script src="films.js?v=11659780" defer></script>
 <script src="formats-core.js?v=eb2381a5" defer></script>
-<script src="app.js?v=111bd643" defer></script>
+<script src="app.js?v=c450598f" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

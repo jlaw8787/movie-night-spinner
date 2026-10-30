@@ -2102,31 +2102,58 @@ $("kitBtn").addEventListener("click",()=>openKit());
 
 /* table kit: a door sign, place cards and an intermission card, printed in tonight's film's colours and type */
 const kitTime=t=>{const m=/^(\d{1,2}):(\d{2})$/.exec(t||"");if(!m)return "";let h=+m[1];const ap=h>=12?"pm":"am";h=h%12||12;return `${h}:${m[2]} ${ap}`};
+const KIT_SIGN={club:"neon",bartab:"neon",diner:"neon",motel:"neon",tiki:"neon",kiosk:"neon",candybar:"neon",takeaway:"neon",stadium:"neon",prom:"neon",
+  campfire:"board",saloon:"board",tavern:"board",pub:"board",truck:"board",cafe:"board",canteen:"board",galley:"board",
+  lab:"notice",precinct:"notice",newspaper:"notice",airline:"notice",diningcar:"notice",
+  hotel:"plaque",banquet:"plaque",invite:"plaque",tearoom:"plaque",bistro:"plaque",home:"plaque",placemat:"neon"};
+const KIT_THEME_SIGN={redsauce:"plaque",uptown:"plaque",romcom:"plaque",fairytale:"plaque",xmas:"plaque",wizard:"plaque",diner:"neon",teen:"neon",tiki:"neon",mex:"neon",street:"neon",pizza:"neon",cop:"notice",scifi:"notice",galaxy:"notice",hero:"notice",horror:"notice",western:"board",aussie:"board",adventure:"board",kids:"board",soul:"neon",deli:"neon",asian:"neon",philly:"neon"};
+function kitFonts(){if(!document.getElementById("kitFonts")){const l=document.createElement("link");l.id="kitFonts";l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Rye&family=Special+Elite&family=Playfair+Display+SC:wght@400;700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Caveat:wght@500;700&family=Courier+Prime:wght@400;700&display=swap";document.head.appendChild(l)}
+  return Promise.all(["Yellowtail","Rye","Special Elite","Playfair Display SC","Cormorant Garamond","Caveat","Courier Prime"].map(n=>document.fonts.load(`32px "${n}"`).catch(()=>{}))).then(()=>document.fonts.ready)}
 function kitBits(f){
-  const L=f._lib||{},fl=L.flavour||{};
-  const venue=dietText(f,String(fl.venue||""));
+  const L=f._lib||{},fl=L.flavour||{},pal=L.palette||{},st=STY[f.theme]||{};
+  const D=x=>dietText(f,String(x||""));
   const m=current&&current.id===f.id&&current.menu||{};const w=(m.w||[])[0],d=(m.d||[])[0];
   const time=typeof week!=="undefined"&&week&&week.id===f.id?kitTime(week.time):"";
-  return {venue,sweet:w?(w.label||w.n):"",drink:d?(d.label||d.n):"",time,poster:lobbyPoster(f),logo:L.logo||(typeof FILM_LOGOS!=="undefined"&&FILM_LOGOS[f.id])||"",eye:(STY[f.theme]||{}).eye||"Tonight's feature"};
+  const prop=fl.prop||{kind:"ticket",title:f.title,lines:[String(f.year)]};
+  return {venue:D(fl.venue)||f.title,sign:D(fl.sign),note:fl.note&&fl.note.text?{text:D(fl.note.text),by:fl.note.by||""}:null,num:String(fl.number||f.year),
+    prop:{kind:prop.kind||"ticket",title:D(prop.title||f.title),lines:(prop.lines||[]).map(D)},
+    style:KIT_SIGN[L.fmt]||KIT_THEME_SIGN[f.theme]||"plaque",dark:pal.dark||st.mi||"#1b1210",acc:pal.accent||st.ma||"#b3261e",
+    sweet:w?(w.label||w.n):"",drink:d?(d.label||d.n):"",time,eye:st.eye||"Tonight's feature"};
 }
-function kitPage(f,kind,inner){const el=document.createElement("div");styleCard(el,f);el.className="kit-page kit-"+kind+" T-"+f.theme;el.dataset.w=794;el.dataset.h=1123;el.style.width="794px";el.style.height="1123px";el.innerHTML=inner;return el}
+function kitPage(f,kind,b,inner){const el=document.createElement("div");el.className=`kit-page kit-${kind} ks-${b.style}`;el.dataset.w=794;el.dataset.h=1123;el.style.cssText=`width:794px;height:1123px;--kd:${b.dark};--ka:${b.acc}`;el.innerHTML=inner;return el}
+function kitProp(b,f,name){
+  const p=b.prop,N=name?ESC(name):"",line=name?`<b class="kp-name">${N}</b>`:`<span class="kp-blank"></span>`,l0=ESC(p.lines[0]||""),l1=ESC(p.lines[1]||""),T=ESC(p.title),no=ESC(b.num);
+  switch(p.kind){
+    case "slip":return `<div class="kp kp-slip"><div class="kp-h"><span>Guest check</span><span>No. ${no}</span></div><div class="kp-rows"><span>Table</span><span>Guest</span></div>${line}<div class="kp-f">${T}</div></div>`;
+    case "card":return `<div class="kp kp-card"><div class="kp-h"><span>${T}</span><span class="kp-chip"></span></div>${line}<div class="kp-f"><span>${l0}</span><span>No. ${no}</span></div></div>`;
+    case "badge":return `<div class="kp kp-badge"><div class="kp-h">${T}</div>${line}<div class="kp-f"><span>${l0}</span><span class="kp-bars"></span></div></div>`;
+    case "tag":return `<div class="kp kp-tag"><span class="kp-hole"></span><div class="kp-no">${no}</div><div class="kp-body"><div class="kp-h">${T}</div>${line}<div class="kp-f">${l0}</div></div></div>`;
+    case "receipt":return `<div class="kp kp-receipt"><div class="kp-h">${ESC(b.venue)}</div><div class="kp-r"><span>1 x seat</span><span>No. ${no}</span></div>${line}<div class="kp-r"><span>${T}</span><span>PAID</span></div><div class="kp-f">Thank you. Come again.</div></div>`;
+    default:return `<div class="kp kp-ticket"><div class="kp-main"><div class="kp-h">${T}</div>${line}<div class="kp-f">${l0}${l1?" · "+l1:""}</div></div><div class="kp-stub"><span>Admit one</span><b>${no}</b></div></div>`;
+  }
+}
 function kitPages(f,names,count){
-  const b=kitBits(f),T=ESC(f.title),pages=[];
-  const title=`<h2 class="kit-title">${T}</h2>`;
-  pages.push(kitPage(f,"door",`<div class="kit-frame"><p class="kit-eye">${ESC(b.eye)}</p><p class="kit-now">Now showing</p>${b.poster?`<img class="kit-poster" alt="" src="${TMDB_IMG}w500${ESC(b.poster)}" crossorigin="anonymous">`:""}${title}<p class="kit-year">${ESC(f.year)}</p>${b.venue?`<p class="kit-venue">${ESC(b.venue)}</p>`:""}<p class="kit-doors">${b.time?`Doors at ${ESC(b.time)}`:"Doors at <span class=\"kit-line\"></span>"}</p><p class="kit-tag">${ESC(dietText(f,f.T||""))}</p></div>`));
+  const b=kitBits(f),T=ESC(f.title),V=ESC(b.venue),pages=[];
+  const doors=b.time?`Doors at ${ESC(b.time)}`:`Doors at <span class="kit-line"></span>`;
+  const sign={
+    neon:`<div class="kn-wall"><div class="kn-tonight">Tonight</div><div class="kn-name">${V}</div>${b.sign?`<div class="kn-box">${ESC(b.sign)}</div>`:""}<div class="kn-board"><small>Now showing</small><b>${T}</b><span>${doors}</span></div></div>`,
+    board:`<div class="kb-wall"><div class="kb-plank">${V}</div><div class="kb-chalk"><p class="kb-t">Tonight</p><p class="kb-film">${T}</p><p class="kb-d">${doors}</p>${b.sign?`<p class="kb-s">${ESC(b.sign)}</p>`:""}</div></div>`,
+    notice:`<div class="kt-sheet"><div class="kt-bar"><span>Notice</span><span>No. ${ESC(b.num)}</span></div><p class="kt-v">${V}</p>${b.sign?`<p class="kt-s">${ESC(b.sign)}</p>`:""}<div class="kt-rule"></div><p class="kt-k">Screening tonight</p><p class="kt-film">${T}</p><p class="kt-d">${doors}</p><div class="kt-stamp"><span>Approved</span><b>${ESC(b.num)}</b></div></div>`,
+    plaque:`<div class="kq-card"><p class="kq-k">Tonight at</p><p class="kq-v">${V}</p>${b.sign?`<p class="kq-s">${ESC(b.sign)}</p>`:""}<div class="kq-orn"><span></span>&#10022;<span></span></div><p class="kq-k">This evening's picture</p><p class="kq-film">${T}</p><p class="kq-d">${doors}</p></div>`}[b.style];
+  pages.push(kitPage(f,"door",b,sign));
   const list=names.length?names:Array.from({length:count},()=>"");
   for(let i=0;i<list.length;i+=6){
-    const cards=list.slice(i,i+6).map(n=>`<div class="kit-tent"><div class="kit-back"><span>${T}</span></div><div class="kit-front"><small>Admit one · ${T}</small>${n?`<b>${ESC(n)}</b>`:`<span class="kit-line wide"></span>`}${b.venue?`<em>${ESC(b.venue)}</em>`:""}</div></div>`).join("");
-    pages.push(kitPage(f,"place",`<div class="kit-tents">${cards}</div><p class="kit-cut">Cut along the outside lines, fold along the dotted line, stand them up.</p>`));
+    const cards=list.slice(i,i+6).map(n=>`<div class="kit-tent"><div class="kit-back"><b>${V}</b><small>${T}</small></div><div class="kit-front">${kitProp(b,f,n)}</div></div>`).join("");
+    pages.push(kitPage(f,"place",b,`<div class="kit-tents">${cards}</div><p class="kit-cut">Cut around each card, fold along the dotted line, stand it up.</p>`));
   }
-  pages.push(kitPage(f,"inter",`<div class="kit-frame"><p class="kit-eye">${ESC(b.eye)}</p><p class="kit-big">Intermission</p>${title}${b.sweet?`<p class="kit-k">Dessert is served</p><p class="kit-dish">${ESC(b.sweet)}</p>`:""}${b.drink?`<p class="kit-k">Top-ups at the bar</p><p class="kit-dish small">${ESC(b.drink)}</p>`:""}<p class="kit-back15">Back in fifteen minutes</p>${b.venue?`<p class="kit-venue">${ESC(b.venue)}</p>`:""}</div>`));
+  pages.push(kitPage(f,"inter",b,`<div class="ki-wall"><p class="ki-big">Intermission</p><p class="ki-film">${T}</p>${b.note?`<div class="ki-note"><span class="ki-tape"></span><p>${ESC(b.note.text)}</p><b>${ESC(b.note.by)}</b></div>`:""}<div class="ki-menu">${b.sweet?`<p class="ki-k">Dessert is served</p><p class="ki-dish">${ESC(b.sweet)}</p>`:""}${b.drink?`<p class="ki-k">Top-ups at the bar</p><p class="ki-dish small">${ESC(b.drink)}</p>`:""}</div><p class="ki-back">Back in fifteen minutes</p></div>`));
   return pages;
 }
 function openKit(){
   const f=current;if(!f||document.body.classList.contains("staged"))return;
   let names=[];const count=()=>names.length||Math.min(60,PLAN.guests||USUAL||4);
   const o=document.createElement("dialog");o.className="counter kit";o.setAttribute("aria-label","Table kit: "+f.title);
-  o.innerHTML=`<div class="kit-box"><p class="rate-k">Table kit</p><h3>${ESC(f.title)}</h3><p class="kit-say">A door sign, place cards and an intermission card in tonight's film's look. All A4.</p>
+  o.innerHTML=`<div class="kit-box"><p class="rate-k">Table kit</p><h3>${ESC(f.title)}</h3><p class="kit-say">A door sign, place cards and an intermission card, made like they came from the film. All A4.</p>
    <div class="kit-thumbs" aria-hidden="true"></div>
    <label class="kit-names">Guest names for the place cards <small>(one per line, or leave blank to write them in)</small><textarea rows="4" placeholder="Sam&#10;Jordan&#10;Alex"></textarea></label>
    <p class="kit-msg" role="status"></p>
@@ -2135,7 +2162,7 @@ function openKit(){
   const draw=()=>{thumbs.innerHTML="";const pg=kitPages(f,names,count());pg.forEach(p=>{const w=document.createElement("div");w.className="kit-thumb";p.style.transform="scale(.16)";p.style.transformOrigin="0 0";w.appendChild(p);thumbs.appendChild(w)});msg.textContent=`${pg.length} pages: the door sign, ${count()} place card${count()>1?"s":""} and the intermission card.`};
   o.querySelector("textarea").addEventListener("input",e=>{names=e.target.value.split("\n").map(x=>x.trim()).filter(Boolean).slice(0,60);draw()});
   o.addEventListener("click",async e=>{if(e.target===o)return dismissModal(o);const b=e.target.closest("[data-a]");if(!b)return;
-    const pages=kitPages(f,names,count());
+    await kitFonts();const pages=kitPages(f,names,count());
     if(b.dataset.a==="print"){const pa=$("printArea");pa.innerHTML="";pages.forEach(p=>pa.appendChild(printPage(p,794,1123)));pa.dataset.kit="1";window.print();return}
     b.disabled=true;const t=b.textContent;b.textContent="Making your PDF...";
     try{if(!await loadExportTools(true))throw new Error("tools");const {jsPDF}=window.jspdf;const pdf=new jsPDF({unit:"mm",format:"a4",orientation:"portrait"});
@@ -2143,7 +2170,7 @@ function openKit(){
       const data=pdf.output("blob"),filename=`${slug(f.title)}-${f.year}-table-kit.pdf`;if(downloads)await downloads.save({filename,data});else plainDownload(data,filename);msg.textContent=`Saved ${filename}. Print it at A4, actual size.`}
     catch(err){msg.textContent="Couldn't make the PDF. Check your connection and try again, or use Print."}
     finally{b.disabled=false;b.textContent=t}});
-  mountModal(o,"textarea",document.activeElement);requestAnimationFrame(draw);
+  mountModal(o,"textarea",document.activeElement);kitFonts().then(draw);
 }
 
 /* rate the night: popcorns out of five, kept per film with the date, shown on the stubs and on the stub wall */
