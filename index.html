@@ -2155,6 +2155,14 @@ dialog.kit .kit-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a;bo
 
 .hr-menu{margin-bottom:26px}
 .hr-w{line-height:1.4}
+
+/* save PDF chooser */
+dialog.pdfpick .rate-box{max-width:480px}
+.pp-opts{display:flex;flex-direction:column;gap:10px;text-align:left;margin-top:6px}
+.pp-opts button{background:#2a1218;border:1px solid #6b4a2a;border-radius:14px;padding:14px 18px;color:#f3e6c8;cursor:pointer;font:400 14px/1.4 var(--f-body);text-align:left}
+.pp-opts button:hover,.pp-opts button:focus-visible{border-color:#e2b04f;background:#341720}
+.pp-opts b{display:block;font:600 17px var(--f-body);color:#fff4d6;margin-bottom:2px}
+.pp-opts span{color:#d9c9a8}
 </style>
 
 <div id="printArea"></div>
@@ -2290,7 +2298,7 @@ dialog.kit .kit-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a;bo
       <div class="series-note" id="seriesNote" hidden></div>
       <div class="snack-pair" id="snackPair" hidden></div>
       <div class="actions">
-        <button class="btn primary" id="pdf" type="button">Save PDF (menu + prep)</button>
+        <button class="btn primary" id="pdf" type="button">Save PDF</button>
         <button class="btn" id="print" type="button" hidden>Print</button>
         <button class="btn" id="favBtn" type="button" aria-pressed="false">Save this menu</button>
         <button class="btn" id="weekSet" type="button" disabled>Lock in for this week</button>
@@ -2321,7 +2329,7 @@ dialog.kit .kit-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a;bo
 <script src="providers.js?v=76e7a870" defer></script>
 <script src="films.js?v=6b400171" defer></script>
 <script src="formats-core.js?v=969dc62f" defer></script>
-<script src="app.js?v=3e7b4e58" defer></script>
+<script src="app.js?v=228f80ff" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

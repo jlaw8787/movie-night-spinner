@@ -1906,7 +1906,8 @@ function showOverlay(url,file){
   });
   mountModal(o,"button",modalTrigger);
 }
-async function exportMenu(kind){
+async function exportMenu(kind,parts){
+  parts=parts||"all";let sides=0,orient="portrait";
   if(!current)return;
   const btns=[$("pdf"),$("png")];btns.forEach(b=>b.disabled=true);
   const pb=$("pdf"),pbText=pb.textContent;if(kind==="pdf"){pb.classList.add("busy");pb.setAttribute("aria-busy","true");pb.textContent="Making your PDF..."}
@@ -1914,32 +1915,34 @@ async function exportMenu(kind){
   $("status").textContent=kind==="pdf"?"Making your A4 PDF...":"Building your image...";
   if(!await loadExportTools(kind==="pdf")){btns.forEach(b=>b.disabled=false);$("status").textContent="Couldn't load the export tools. Check your connection and try again.";return}
   try{
-    const canvas=await renderCanvas(kind==="pdf"||tab==="menu"?card:prep,kind==="pdf");
+    const canvas=kind==="pdf"&&parts==="prep"?null:await renderCanvas(kind==="pdf"||tab==="menu"?card:prep,kind==="pdf");
     const land=(kind==="pdf"||tab==="menu")&&card.classList.contains("fmt");
-    const name=`${slug(current.title)}-${current.year}-${kind==="png"&&tab==="prep"?"prep-sheet":"menu"}`;
+    const name=`${slug(current.title)}-${current.year}-${kind==="png"&&tab==="prep"||parts==="prep"?"prep-sheet":parts==="menu"?"menu-only":"menu"}`;
     let data,filename;
     if(kind==="pdf"){
       const {jsPDF}=window.jspdf;
       const spec=fmtSpec(current),sh=card.classList.contains("fx-paper")&&(spec&&fmtSheet(spec)||current.libSheet);
       let pdf;
-      if(sh){
+      if(parts==="prep"){pdf=new jsPDF({unit:"mm",format:"a4",orientation:"portrait"});const pc=await renderCanvas(prep);pdf.addImage(pc.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297)}
+      else if(sh){
         const mm=sh.mm||[sh.w*25.4/96,sh.h*25.4/96],o=mm[0]>mm[1]?"landscape":"portrait",PW=o==="landscape"?297:210,PH=o==="landscape"?210:297;
         const k=Math.min(PW/mm[0],PH/mm[1]),dw=mm[0]*k,dh=mm[1]*k,dx=(PW-dw)/2,dy=(PH-dh)/2;
         pdf=new jsPDF({unit:"mm",format:"a4",orientation:o});
         if(card.classList.contains("fmt-lib"))libUnclip(card);const faces=[...card.querySelectorAll(".fx-face")];
         for(let i=0;i<faces.length;i++){
-          pdfStep(`Page ${i+1} of ${faces.length+1}`);
+          pdfStep(`Page ${i+1} of ${faces.length+(parts==="all"?1:0)}`);
           const el=document.createElement("div");styleCard(el,current);el.className=card.className;el.style.transform="none";
           el.style.width=sh.w+"px";el.style.height=sh.h+"px";el.dataset.w=sh.w;el.dataset.h=sh.h;el.innerHTML=faces[i].innerHTML;
           const cv=await renderCanvas(el,true);if(i)pdf.addPage("a4",o);
           pdf.addImage(cv.toDataURL("image/jpeg",0.92),"JPEG",dx,dy,dw,dh);
         }
+        sides=faces.length;orient=o;
       }else{
         pdf=new jsPDF({unit:"mm",format:"a4",orientation:land?"landscape":"portrait"});
-        pdf.addImage(canvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,land?297:210,land?210:297);
+        pdf.addImage(canvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,land?297:210,land?210:297);sides=1;orient=land?"landscape":"portrait";
       }
-      pdfStep("The prep sheet");const prepCanvas=await renderCanvas(prep);
-      pdf.addPage("a4","portrait");pdf.addImage(prepCanvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297);
+      if(parts==="all"){pdfStep("The prep sheet");const prepCanvas=await renderCanvas(prep);
+      pdf.addPage("a4","portrait");pdf.addImage(prepCanvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297)}
       data=pdf.output("blob");filename=name+".pdf";
     }else{
       data=await new Promise(r=>canvas.toBlob(r,"image/jpeg",0.92));filename=name+".jpg";
@@ -1952,12 +1955,12 @@ async function exportMenu(kind){
       showOverlay(canvas.toDataURL("image/jpeg",0.9),shareable(data,filename)?file:null);$("status").textContent="";return
     }
     if(downloads){
-      try{await downloads.save({filename,data});$("status").textContent=`Saved ${filename}. Print it at A4, actual size.`}
+      try{await downloads.save({filename,data});$("status").textContent=`Saved ${filename}. ${parts==="menu"&&kind==="pdf"?pdfTip():"Print it at A4, actual size."}`}
       catch(e){
         if(e&&e.code==="declined")$("status").textContent="Save cancelled.";
         else{showOverlay(canvas.toDataURL("image/png"));$("status").textContent=""}
       }
-    }else if(!inClaude){plainDownload(data,filename);$("status").textContent=`Downloaded ${filename}. Print it at A4, actual size.`}
+    }else if(!inClaude){plainDownload(data,filename);$("status").textContent=`Downloaded ${filename}. ${parts==="menu"&&kind==="pdf"?pdfTip():"Print it at A4, actual size."}`}
     else{showOverlay(canvas.toDataURL("image/png"));$("status").textContent=""}
   }catch(e){console.error(e);$("status").textContent=`Couldn't build the image (${(e&&(e.name||e.message))||"unknown error"}). Close and reopen the app, then try again.`}
   finally{btns.forEach(b=>b.disabled=false);if(kind==="pdf"){pb.textContent=pbText;pb.classList.remove("busy");pb.removeAttribute("aria-busy")}}
@@ -1965,7 +1968,16 @@ async function exportMenu(kind){
 
 $("spin").addEventListener("click",spin);
 sel.addEventListener("change",setList);
-$("pdf").addEventListener("click",()=>exportMenu("pdf"));
+/* Save PDF asks what it's for: everything in one file, the menu on its own (ready for double-sided), or just the prep sheet for the kitchen */
+function pdfTip(){if(!current)return "";const sh=card.classList.contains("fx-paper"),fc=sh?card.querySelector(".fx-face"):card,n=sh?card.querySelectorAll(".fx-face").length:1,w=parseFloat(fc&&fc.style.width)||+card.dataset.w||794,h=parseFloat(fc&&fc.style.height)||+card.dataset.h||1123,land=w>h;
+  return n>1?`Two sides. Print double-sided, ${land?"flip on short edge":"flip on long edge"}, at 100%.`:"One page. Print it single-sided at 100%."}
+$("pdf").addEventListener("click",()=>{if(!current)return;const o=document.createElement("dialog");o.className="counter pdfpick";o.setAttribute("aria-label","Save PDF");
+  o.innerHTML=`<div class="rate-box"><p class="rate-k">Save PDF</p><h3>${ESC(current.title)}</h3><div class="pp-opts">
+   <button type="button" data-p="menu"><b>Menu only</b><span>${ESC(pdfTip())}</span></button>
+   <button type="button" data-p="prep"><b>Prep sheet only</b><span>Recipes and the shopping list for the kitchen. One page, single-sided.</span></button>
+   <button type="button" data-p="all"><b>Menu and prep sheet</b><span>Everything in one file. Best kept on screen or printed single-sided.</span></button></div></div>`;
+  o.addEventListener("click",e=>{if(e.target===o)return dismissModal(o);const b=e.target.closest("[data-p]");if(!b)return;dismissModal(o);exportMenu("pdf",b.dataset.p)});
+  mountModal(o,"[data-p=menu]",$("pdf"))});
 $("png").addEventListener("click",()=>exportMenu("png"));
 /* trifolds: a two-sided PDF that prints and folds into a real takeaway menu */
 async function exportFold(){
