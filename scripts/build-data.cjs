@@ -23,6 +23,7 @@ const EDITIONS = ctx.E;
 const C = ['S', 'M', 'W', 'K'];
 /* menu format library: per-film format, era, tone and identity (logo, poster colours, stills, flavour) */
 const rj = n => { try { return JSON.parse(rd(n)); } catch (e) { return {}; } };
+const KITF = fs.existsSync(path.join(root, 'data/kit-flavour.json')) ? JSON.parse(fs.readFileSync(path.join(root, 'data/kit-flavour.json'), 'utf8')) : {};
 const LIB = { fmt: rj('data/film-format.json'), fl: rj('data/film-flavour.json'), pal: rj('data/film-palette.json'), logo: rj('data/film-logos.json'), block: rj('data/logo-block.json'), sblock: rj('data/still-block.json'), st: rj('data/film-stills.json'), sfoc: rj('data/still-focus.json'), spick: rj('data/still-pick.json') };
 const lite = [], names = {}, notes = {};
 fs.mkdirSync(path.join(root, 'data/film'), { recursive: true });
@@ -44,6 +45,12 @@ for (const f of films) {
     out.lib = { fmt: a.format, era: a.era, tone: a.tone, flavour: LIB.fl[id] || null, palette: LIB.pal[id] || null, logo: LIB.block[id] ? null : (LIB.logo[id] || null),
       stills: LIB.spick[id] ? LIB.spick[id].slice(0, 8) : (() => { const sb = LIB.sblock[id] || [], all = (LIB.st[id] || []).filter(x => x[1] >= 1280 && !sb.includes(x[0])), clean = all.filter(x => !x[3]); return (clean.length >= 2 ? clean : all).map(x => x[0]).slice(0, 8); })() };
     { const fo = {}, ar = Object.fromEntries((LIB.st[id] || []).map(x => [x[0], +(x[1] / x[2]).toFixed(3)])); for (const p of out.lib.stills) if (LIB.sfoc[p]) fo[p] = LIB.sfoc[p].concat(ar[p] || 1.778); if (Object.keys(fo).length) out.lib.focus = fo; }
+  }
+  else {
+    /* hand-built menus: the table kit still needs the film's venue, prop, colours and stills */
+    const kf = KITF[id], sb = LIB.sblock[id] || [], all = (LIB.st[id] || []).filter(x => x[1] >= 1280 && !sb.includes(x[0])), clean = all.filter(x => !x[3]);
+    const stills = LIB.spick[id] ? LIB.spick[id].slice(0, 8) : (clean.length >= 2 ? clean : all).map(x => x[0]).slice(0, 8);
+    if (kf || stills.length) out.kit = { flavour: kf || null, palette: LIB.pal[id] || null, stills };
   }
   { const r2p = path.join(root, 'data/recipes2', s + '.json'); if (fs.existsSync(r2p)) out.r2 = JSON.parse(fs.readFileSync(r2p, 'utf8')); }
   { const dp = path.join(root, 'data/diet', s + '.json'); if (fs.existsSync(dp)) out.diet = JSON.parse(fs.readFileSync(dp, 'utf8')); }
