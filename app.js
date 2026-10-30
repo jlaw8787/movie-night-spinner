@@ -30,6 +30,7 @@ const sfx={
     const hum=a.createOscillator();hum.type="sawtooth";hum.frequency.value=50;const hg=a.createGain();hg.gain.value=.018;const hf=a.createBiquadFilter();hf.type="lowpass";hf.frequency.value=220;hum.connect(hf).connect(hg).connect(g);
     s.connect(f).connect(flick).connect(g).connect(a.destination);s.start(t);lfo.start(t);hum.start(t);this._whirr={s,lfo,hum,g}},
   whirrStop(){const w=this._whirr;if(!w)return;this._whirr=null;const t=audio.currentTime;w.g.gain.cancelScheduledValues(t);w.g.gain.setValueAtTime(w.g.gain.value,t);w.g.gain.exponentialRampToValueAtTime(.0001,t+.6);[w.s,w.lfo,w.hum].forEach(n=>n.stop(t+.65))},
+  beep(){if(!soundOn||!ac())return;const t=audio.currentTime,o=audio.createOscillator(),g=audio.createGain();o.type="sine";o.frequency.value=1000;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.16,t+.005);g.gain.setValueAtTime(.16,t+.045);g.gain.exponentialRampToValueAtTime(.0001,t+.07);o.connect(g).connect(audio.destination);o.start(t);o.stop(t+.08)},
   clunk(){if(!soundOn||!ac())return;const t=audio.currentTime;nburst(t,.03,"highpass",2500,.7,.35);thump(t+.02,110,.5,.18);nburst(t+.12,.04,"bandpass",1400,3,.25);thump(t+.16,70,.35,.14);nburst(t+.3,.7,"bandpass",420,1.2,.05,.7)},
   print(){if(!soundOn||!ac())return;const t=audio.currentTime;for(let i=0;i<14;i++)nburst(t+i*.045,.02,"bandpass",3200,4,.16);nburst(t+.7,.18,"highpass",1800,.5,.18,.2)},
   pop(){if(!soundOn||!ac())return;const t=audio.currentTime;for(let i=0;i<7;i++){const d=Math.random()*1.1;nburst(t+d,.025,"bandpass",900+Math.random()*1400,1.5,.3+Math.random()*.25)}},
@@ -1140,7 +1141,7 @@ function tickShowtime(){
   const now=new Date(),ms=at-now;
   const span=x=>{const mins=Math.max(0,Math.ceil(x/6e4)),dd=Math.floor(mins/1440),hh=Math.floor(mins%1440/60),mm=mins%60;return dd?`${dd} day${dd>1?"s":""}${hh?` ${hh}h`:""}`:hh?`${hh}h ${mm}m`:`${mm} min`};
   if(ms<0)el.innerHTML=`Scheduled showtime has passed. <span>Open your menu or lock in a new movie night.</span>`;
-  else if(ms===0)el.innerHTML=`Showtime. <span>Lights down, press play when you're ready.</span>`;
+  else if(ms===0)el.innerHTML=`Showtime. <span>Lights down, press play when you're ready.</span> <button class="btn primary" type="button" data-show>Start the show</button>`;
   else el.innerHTML=`Showtime in ${span(ms)}. <span>Check each recipe for cooking times and make-ahead steps.</span>`;
   _showT=setTimeout(tickShowtime,30000);
 }
@@ -2075,6 +2076,27 @@ function openFilm(f){if(!f)return;addHistory(f);goView("wheel",true);if(tab!=="m
    else if(e.key==="Escape"){close()}});
  box.addEventListener("click",e=>{const b=e.target.closest("[data-i]");if(!b)return;const f=hits[+b.dataset.i];inp.value="";close();openFilm(f)});
  document.addEventListener("click",e=>{if(!e.target.closest(".field.find"))close()});}
+
+/* showtime: an old film countdown leader runs, the 2 pops, and the lights go down on tonight's film */
+function startShow(f){
+  f=f||current;if(!f||document.body.classList.contains("staged"))return;
+  const cue=String(((typeof movieEdition==="function"&&movieEdition(f))||{}).cue||f.P||"");
+  const o=document.createElement("dialog");o.className="leader";o.setAttribute("aria-label","Showtime: "+f.title);
+  o.innerHTML=`<div class="ld-film" aria-hidden="true"><div class="ld-sweep"></div><div class="ld-rings"></div><div class="ld-cross"></div><b class="ld-n">5</b></div>
+  <div class="ld-card" hidden><p class="ld-k">Now showing</p><h3>${ESC(f.title)}</h3><p class="ld-y">${ESC(f.year)}</p>${cue?`<p class="ld-cue"><b>Showtime cue</b>${ESC(dietText(f,cue))}</p>`:""}<button type="button" class="ld-go" data-a="done">Enjoy the film</button></div>`;
+  const timers=[];const later=(ms,fn)=>timers.push(setTimeout(fn,ms));
+  const film=o.querySelector(".ld-film"),n=o.querySelector(".ld-n"),cardEl=o.querySelector(".ld-card");
+  const showCard=()=>{sfx.whirrStop();film.hidden=true;o.classList.add("dark");cardEl.hidden=false;const b=cardEl.querySelector(".ld-go");if(b)b.focus({preventScroll:true})};
+  o.addEventListener("click",e=>{if(e.target===o||(e.target.dataset&&e.target.dataset.a==="done"))dismissModal(o);else if(!cardEl.hidden)return;else{timers.forEach(clearTimeout);showCard()}});
+  mountModal(o,".ld-go",document.activeElement,()=>{timers.forEach(clearTimeout);sfx.whirrStop()});
+  if(reduce){showCard();return}
+  sfx.whirrStart();
+  [5,4,3,2].forEach((k,i)=>later(i*1000,()=>{n.textContent=k;film.classList.remove("tick");void film.offsetWidth;film.classList.add("tick")}));
+  later(3000,()=>{sfx.beep();film.classList.add("pop")});
+  later(3150,()=>{film.classList.add("black")});
+  later(3800,showCard);
+}
+document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-show]");if(b)startShow()});
 
 /* saved menus: a heart on the menu, a shelf on the front, and the menu kept for offline */
 var FAV=[];try{FAV=JSON.parse(localStorage.getItem("mns-fav")||"[]").filter(id=>FILMS.some(f=>f.id===id))}catch(e){FAV=[]}
