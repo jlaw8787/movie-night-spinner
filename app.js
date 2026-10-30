@@ -1666,7 +1666,7 @@ function showWelcome(){
   const o=document.createElement("dialog");o.className="welcome";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label","How it works");
   o.innerHTML=`<div class="welcome-in"><h2>Movie night, sorted</h2><p class="lead">Pick a film and dinner comes with it.</p><ol>
   <li><span><b>Pick a film</b>Spin the wheel, browse the video store, or start from what you're craving.</span></li>
-  <li><span><b>Get the menu</b>Every film has its own menu built from the movie, with recipes and a shopping list that scales from 1 to 24 guests.</span></li>
+  <li><span><b>Get the menu</b>Every film has its own menu built from the movie, with recipes and a shopping list that scales from 1 to 60 guests.</span></li>
   <li><span><b>Cook, then press play</b>Lock it in for the week, tick off the shopping, and check where it's streaming.</span></li>
   </ol><button class="btn primary" type="button">Let's go</button></div>`;
   const close=()=>dismissModal(o);
@@ -1677,11 +1677,13 @@ function showWelcome(){
 
 {const g=document.getElementById("bulbGlow");if(g){let h="";for(let i=0;i<32;i++)h+=`<i style="--a:${i*11.25}deg;--d:${-(i%8)*0.2}s"></i>`;g.innerHTML=h}}
 /* phones: a Spin button pinned to the bottom until the wheel is on screen */
-{const bar=$("spinbar"),hub=$("spin"),acts=document.querySelector(".actions");let hubSeen=false,actsSeen=false,prepSeen=false,weekSeen=false;
+{const bar=$("spinbar"),hub=$("spin"),acts=document.querySelector(".actions");let hubSeen=false,actsSeen=false,prepSeen=false,weekSeen=false,pairSeen=false;
  /* the floating Spin button steps aside while the wheel or the menu buttons are on screen, so it never sits over them */
- const upd=()=>{bar.hidden=hubSeen||actsSeen||weekSeen||(prepSeen&&tab==="prep")||spinning||$("viewWheel").hidden||!matchMedia("(max-width:900px)").matches};
+ const upd=()=>{bar.hidden=hubSeen||actsSeen||weekSeen||pairSeen||(prepSeen&&tab==="prep")||spinning||$("viewWheel").hidden||!matchMedia("(max-width:900px)").matches};
  if("IntersectionObserver" in window){new IntersectionObserver(es=>{hubSeen=es[0].isIntersecting;upd()},{threshold:.4}).observe(hub);
    if(acts)new IntersectionObserver(es=>{actsSeen=es[0].isIntersecting;upd()},{threshold:0,rootMargin:"0px 0px 90px 0px"}).observe(acts);
+   /* and while the snacks under the menu are on screen, so it never covers their Add buttons */
+   {const sp=$("snackPair");if(sp)new IntersectionObserver(es=>{pairSeen=es[0].isIntersecting;upd()},{threshold:0,rootMargin:"0px 0px 90px 0px"}).observe(sp)}
    /* and while the prep sheet is being read, so it never sits over the method */
    new IntersectionObserver(es=>{prepSeen=es[0].isIntersecting;upd()},{threshold:0}).observe($("preview"));
    /* and while this week's film is on screen, so it never covers its buttons */
@@ -2057,7 +2059,7 @@ function filmScore(q,f){const Q=searchNorm(q);if(!Q)return 0;const T=searchNorm(
   let worst=1,any=0;for(const w of Q.split(" ")){const h=wordHit(w,toks);if(!h){if(SEARCH_STOP.has(w))continue;return -1}any++;worst=Math.max(worst,h+1)}return any?worst:-1}
 /* ================= ease of use: quick find, saved menus, settings, clear and reset ================= */
 /* open any film straight from its title, the way a stub does */
-function openFilm(f){if(!f)return;addHistory(f);goView("wheel",true);replay(f).then(()=>toMenu());toMenu()}
+function openFilm(f){if(!f)return;addHistory(f);goView("wheel",true);if(tab!=="menu")setTab("menu");replay(f).then(()=>toMenu());toMenu()}
 {const inp=$("findFilm"),box=$("findList");let hits=[],at=-1;
   inp.addEventListener("focus",()=>{if(innerWidth<760)setTimeout(()=>{const t=inp.getBoundingClientRect().top;if(t>innerHeight*0.3)scrollBy({top:t-70,behavior:reduce?"auto":"smooth"})},250)});
  const norm=s=>s.toLocaleLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9 ]+/g," ").replace(/\s+/g," ").trim();
