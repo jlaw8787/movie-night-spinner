@@ -2283,8 +2283,10 @@ $("setBtn").addEventListener("click",()=>{setSync();const o=$("settings");mountM
 $("setClose").addEventListener("click",()=>dismissModal($("settings")));
 $("settings").addEventListener("click",e=>{if(e.target===$("settings"))dismissModal($("settings"))});
 $("settings").querySelectorAll("[data-sg]").forEach(b=>b.addEventListener("click",()=>{USUAL=Math.min(60,Math.max(1,USUAL+(b.dataset.sg==="+"?1:-1)));try{localStorage.setItem("mns-guests",USUAL)}catch(e){}setSync();$("setMsg").textContent=`New prep sheets start at ${USUAL} guest${USUAL===1?"":"s"}.`}));
-$("setVeg").addEventListener("change",e=>{DIET.veg=e.target.checked;dietSave();refreshPlan()});
-$("setAf").addEventListener("change",e=>{DIET.af=e.target.checked;dietSave();refreshPlan()});
+/* the menu on screen follows the diet straight away, not only the next film opened */
+function dietRedraw(){refreshPlan();if(!current||document.body.classList.contains("staged"))return;const t=tab,y=scrollY;show(current,true).then(()=>{if(t==="prep")setTab("prep");scrollTo(0,y)}).catch(()=>{})}
+$("setVeg").addEventListener("change",e=>{DIET.veg=e.target.checked;dietSave();dietRedraw()});
+$("setAf").addEventListener("change",e=>{DIET.af=e.target.checked;dietSave();dietRedraw()});
 function clearStubs(){hist=[];try{localStorage.setItem("mns-hist","[]")}catch(e){}renderHist();setSync();try{queueSync()}catch(e){}}
 $("histClear").addEventListener("click",()=>{clearStubs();$("status").textContent="Ticket stubs cleared."});
 $("wallBtn").addEventListener("click",openWall);
