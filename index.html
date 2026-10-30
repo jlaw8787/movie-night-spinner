@@ -1964,6 +1964,197 @@ dialog.kit .kit-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a;bo
 .kil-slip,.kil-photo{position:relative;left:auto;right:auto;top:auto;bottom:auto}
 .kil-slip{width:400px;flex:none;margin-top:30px}
 .kil-photo{width:290px;height:240px;flex:none}
+
+/* table kit: 13 more styles */
+.x-wall{position:absolute;inset:0;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.x-wall img{display:block;object-fit:cover}
+.x-note{position:absolute;right:46px;bottom:56px;width:380px;z-index:4}.x-note .ki-note{width:auto;transform:rotate(3deg)}.x-note .ki-note p{font-size:26px}
+.kit-page .ki-k{font:600 17px "Oswald",sans-serif;letter-spacing:.3em;text-transform:uppercase;margin:14px 0 4px}
+.kit-page .ki-dish{font:700 32px/1.15 "Oswald",sans-serif}
+/* tiki */
+.ks-tiki{background:#0c2b2c}
+.tk{padding:70px 70px}
+.tk-photo{position:absolute;inset:0;width:100%;height:100%;opacity:.35}
+.tk-torch{position:absolute;top:160px;bottom:120px;width:26px;background:linear-gradient(90deg,#6b3e1a 0,#a0652e 50%,#6b3e1a 100%);z-index:1}
+.tk-torch.l{left:54px}.tk-torch.r{right:54px}
+.tk-torch i{position:absolute;top:-70px;left:-22px;width:70px;height:80px;border-radius:50% 50% 45% 45%;background:radial-gradient(circle at 50% 65%,#fff3b0 0,#ffb020 40%,#e2470c 70%,transparent 72%)}
+.tk-plank{position:relative;z-index:2;background:linear-gradient(#8a5426,#5d3416);border:6px solid #3b1f0b;border-radius:18px;padding:24px 40px 30px;transform:rotate(-2deg);box-shadow:0 14px 30px rgba(0,0,0,.6);max-width:620px}
+.tk-k{display:block;font:400 26px "Shrikhand",cursive;color:#ffd27a}
+.tk-plank b{display:block;font:400 64px/1.05 "Shrikhand",cursive;color:#ffb347;text-shadow:3px 3px 0 #3b1f0b}
+.tk-card{position:relative;z-index:2;margin-top:44px;background:#f4ecd6;border:8px solid #1d6b5c;border-radius:12px;padding:26px 36px;max-width:560px;color:#173c36;box-shadow:0 12px 26px rgba(0,0,0,.5)}
+.tk-card small{display:block;font:600 16px "Oswald",sans-serif;letter-spacing:.35em;text-transform:uppercase;color:#c4532a}
+.tk-card b{display:block;font:400 48px/1.1 "Shrikhand",cursive;margin:8px 0}
+.tk-card span{display:block;font:600 24px "Oswald",sans-serif;letter-spacing:.15em;text-transform:uppercase}
+.tk-card em{display:block;font:italic 400 20px "Cormorant Garamond",serif;margin-top:10px}
+.tk-card .ki-k{color:#c4532a}.tk-back{font:400 28px "Shrikhand",cursive;margin:16px 0 0;color:#c4532a}
+.tk .x-note{bottom:40px}
+/* wanted */
+.ks-wanted{background:#5a3d22}
+.wd{padding:50px}
+.wd-poster{width:640px;background:#ead6a6;border:2px solid #b08b52;box-shadow:0 18px 40px rgba(0,0,0,.6);padding:40px 46px 46px;color:#2e1d0e;transform:rotate(-1deg)}
+.wd-h{font:400 132px/1 "Rye",serif;margin:0;letter-spacing:.04em}.wd-h.sm{font-size:100px}
+.wd-s{font:700 22px "Playfair Display SC",serif;letter-spacing:.2em;text-transform:uppercase;margin:8px 0 18px}
+.wd-photo{width:100%;height:330px;border:4px solid #2e1d0e}
+.wd-t{font:400 56px/1.05 "Rye",serif;margin:20px 0 10px}.wd-t.sm{font-size:40px}
+.wd-rule{border-top:3px double #2e1d0e;margin:10px 40px 14px}
+.wd-r{font:700 26px "Playfair Display SC",serif;margin:0}
+.wd-d{font:400 30px "Rye",serif;margin:14px 0 0}
+.wd-f{font:italic 400 20px/1.35 "IM Fell English",serif;margin:16px 0 0}
+/* newspaper */
+.ks-newspaper{background:#2b2a27}
+.np{padding:46px 50px}
+.np-paper{width:100%;height:100%;background:#f1ece0;color:#1a1a1a;padding:34px 40px;box-shadow:0 18px 40px rgba(0,0,0,.6);display:flex;flex-direction:column}
+.np-mast{font:400 64px/1.05 "UnifrakturMaguntia",serif;margin:0;border-bottom:4px double #1a1a1a;padding-bottom:10px}
+.np-date{display:flex;justify-content:space-between;gap:12px;font:700 13px "Courier Prime",monospace;text-transform:uppercase;border-bottom:2px solid #1a1a1a;padding:8px 0;margin-bottom:16px}
+.np-date span:nth-child(2){flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.np-head{font:900 62px/1.02 "Playfair Display",serif;margin:0 0 18px;text-transform:uppercase}
+.np-photo{width:100%;height:380px;border:1px solid #1a1a1a}
+.np-cols{columns:2;column-gap:28px;text-align:justify;margin-top:16px;font:400 19px/1.45 "IM Fell English",serif}
+.np-cols p{margin:0 0 10px}
+/* departures */
+.ks-departures{background:#16181c}
+.dp{padding:60px 46px;justify-content:flex-start;gap:30px}
+.dp-board{width:100%;background:#0b0b0c;border:10px solid #2c2f35;padding:20px 22px 26px;box-shadow:0 16px 34px rgba(0,0,0,.6)}
+.dp-h{display:flex;justify-content:space-between;font:700 40px "Oswald",sans-serif;color:#ffc93c;text-transform:uppercase;letter-spacing:.12em;border-bottom:2px solid #333;padding-bottom:10px;margin-bottom:10px}
+.dp-row{display:grid;grid-template-columns:1fr 2.3fr 1.6fr 1.1fr;gap:6px;margin-top:6px}
+.dp-row span{background:#1d1e21;border-top:1px solid #34363b;color:#f2f2ea;font:700 20px/44px "Courier Prime",monospace;text-transform:uppercase;padding:0 10px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dp-row.hd span{background:none;border:0;color:#8b8f97;font-size:14px;line-height:22px}
+.dp-row.on span{color:#ffc93c;font-size:22px}
+.dp-photo{width:100%;height:380px;border-radius:40px;border:14px solid #d9dbe0;box-shadow:0 10px 24px rgba(0,0,0,.5)}
+.dp-s{font:500 20px "Oswald",sans-serif;color:#c8ccd4;letter-spacing:.12em;text-transform:uppercase;margin:0}
+.dp .x-note{bottom:46px}
+/* roadside motel */
+.ks-roadside{background:#14102a}
+.rs-photo{position:absolute;inset:0;width:100%;height:100%;opacity:.4}
+.rs-sign{position:relative;z-index:2;width:560px;background:#1f8f86;border:10px solid #f1e9d6;border-radius:30px;padding:30px 30px 34px;box-shadow:0 18px 40px rgba(0,0,0,.6)}
+.rs-star{position:absolute;top:-58px;right:-40px;width:110px;height:110px;border-radius:50%;background:#ffcf33;border:6px solid #f1e9d6}
+.rs-v{font:400 54px/1.1 "Monoton",cursive;color:#fff6dc;margin:0 0 20px;text-shadow:0 0 10px #ff6ec7}
+.rs-arrow{background:#e84a3c;margin:0 -60px 0 -10px;padding:16px 70px 16px 24px;border:5px solid #f1e9d6;border-radius:6px 60px 60px 6px}
+.rs-arrow span{display:block;font:700 40px/1.1 "Oswald",sans-serif;color:#fff;text-transform:uppercase;letter-spacing:.05em}
+.rs-vac{font:400 70px "Yellowtail",cursive;color:#ff6ec7;margin:22px 0 4px;text-shadow:0 0 6px #fff,0 0 20px #ff2aa0,0 0 44px #ff2aa0}
+.rs-d{font:600 26px "Oswald",sans-serif;color:#fff6dc;letter-spacing:.2em;text-transform:uppercase;margin:0}
+.rs-s{position:relative;z-index:2;font:600 20px "Oswald",sans-serif;color:#fff6dc;letter-spacing:.14em;text-transform:uppercase;margin:40px 60px 0}
+/* comic */
+.ks-comic{background:#ffd23f}
+.cm{padding:40px 46px;justify-content:flex-start;gap:16px;border:12px solid #111}
+.cm-top{width:100%;display:flex;justify-content:space-between;background:#e2231a;color:#fff;font:400 30px "Bangers",cursive;letter-spacing:.08em;padding:6px 18px;border:4px solid #111}
+.cm-v{font:400 92px/.95 "Bangers",cursive;color:#1d4fd8;margin:6px 0;-webkit-text-stroke:3px #111;text-shadow:6px 6px 0 #111;letter-spacing:.03em}
+.cm-panel{position:relative;width:100%;height:470px;border:6px solid #111;background:#fff}
+.cm-photo{width:100%;height:100%}
+.cm-bub{position:absolute;left:24px;top:22px;max-width:380px;background:#fff;border:4px solid #111;border-radius:40px;padding:16px 22px;font:400 24px/1.15 "Bangers",cursive;letter-spacing:.04em;text-align:left}
+.cm-cap{width:100%;background:#fff6cf;border:4px solid #111;padding:12px 18px;font:400 30px/1.15 "Bangers",cursive;letter-spacing:.04em;text-align:left}
+.cm-d{font:400 36px "Bangers",cursive;letter-spacing:.06em;margin:0}
+.cm-burst{position:absolute;right:30px;bottom:40px;width:150px;height:150px;border-radius:50%;background:#e2231a;border:6px solid #111;color:#ffd23f;font:400 46px/138px "Bangers",cursive;transform:rotate(-12deg)}
+/* horror */
+.ks-horror{background:#070404}
+.hr{padding:60px}
+.hr-photo{position:absolute;inset:0;width:100%;height:100%;opacity:.42}
+.hr>*:not(img){position:relative;z-index:2}
+.hr-v{font:400 92px/1 "Creepster",cursive;color:#c8101e;margin:0 0 20px;text-shadow:0 0 18px rgba(200,16,30,.6)}
+.hr-k{font:400 22px "Special Elite",monospace;letter-spacing:.3em;text-transform:uppercase;color:#d9d0c4;margin:0}
+.hr-t{font:700 60px/1.05 "Oswald",sans-serif;color:#f4ece0;text-transform:uppercase;margin:10px 0 20px}
+.hr-d{font:400 32px "Special Elite",monospace;color:#f4ece0;margin:0 0 30px}
+.hr-w{font:400 22px "Special Elite",monospace;color:#c8101e;margin:0;max-width:520px}
+.hr-s{font:400 18px "Special Elite",monospace;color:#a89c90;margin:18px 0 0}
+.hr-menu .ki-k{color:#c8101e}.hr-menu .ki-dish{color:#f4ece0}
+.hr .x-note{bottom:36px}
+/* storybook */
+.ks-storybook{background:#7a5a3a}
+.sb{padding:44px}
+.sb-page{width:100%;height:100%;background:#fbf4e2;border:3px solid var(--ka);outline:12px solid #fbf4e2;box-shadow:0 0 0 15px var(--ka),0 18px 40px rgba(0,0,0,.5);padding:50px 60px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#3a2a1a}
+.sb-k{font:italic 400 28px "IM Fell English",serif;margin:0}
+.sb-v{font:400 60px/1.1 "IM Fell English",serif;margin:8px 0 22px;color:var(--ka)}
+.sb-photo{width:430px;height:430px;border-radius:50%;border:8px solid #fff;box-shadow:0 0 0 3px var(--ka),0 10px 20px rgba(0,0,0,.25)}
+.sb-txt{font:400 26px/1.5 "IM Fell English",serif;margin:26px 0 10px;text-align:left;max-width:560px}
+.sb-cap{float:left;font:400 82px/.8 "Cinzel Decorative",serif;color:var(--ka);margin:6px 10px 0 0}
+.sb-d{font:italic 400 30px "IM Fell English",serif;margin:10px 0 0}
+.sb-q{font:italic 400 22px/1.4 "IM Fell English",serif;margin:8px 0 0;max-width:560px}
+/* festive */
+.ks-festive{background:#0f3d2a}
+.fs{padding:56px}
+.fs-card{width:100%;height:100%;background:#a3131f;border:10px solid #e6c25c;outline:3px solid #e6c25c;outline-offset:-24px;padding:60px 50px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff6e3;box-shadow:0 18px 40px rgba(0,0,0,.6)}
+.fs-k{font:italic 500 28px "Cormorant Garamond",serif;margin:0;color:#ffe6a6}
+.fs-v{font:700 68px/1.05 "Mountains of Christmas",cursive;margin:6px 0 24px}
+.fs-photo{width:440px;height:300px;border:10px solid #fff6e3;box-shadow:0 10px 20px rgba(0,0,0,.4)}
+.fs-t{font:700 54px/1.05 "Mountains of Christmas",cursive;margin:24px 0 8px;color:#ffe6a6}
+.fs-d{font:600 26px "Oswald",sans-serif;letter-spacing:.2em;text-transform:uppercase;margin:0}
+.fs-s{font:italic 500 22px/1.35 "Cormorant Garamond",serif;margin:16px 0 0;max-width:520px}
+.fs-menu .ki-k{color:#ffe6a6}
+.fs-holly{display:flex;gap:8px;margin-top:22px}.fs-holly i{width:22px;height:22px;border-radius:50%;background:#e8202f;border:3px solid #fff6e3}
+/* arcade */
+.ks-arcade{background:#07021a}
+.ar{padding:50px}
+.ar-cab{width:100%;height:100%;border:8px solid #ff2fd0;border-radius:24px;box-shadow:0 0 30px rgba(255,47,208,.5);padding:46px 40px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:#0d0628}
+.ar-k{font:400 22px "Press Start 2P",monospace;color:#3cf6ff;margin:0}
+.ar-v{font:400 40px/1.3 "Press Start 2P",monospace;color:#fff36a;text-shadow:4px 4px 0 #ff2fd0;margin:6px 0}
+.ar-photo{width:540px;height:330px;border:8px solid #3cf6ff;image-rendering:pixelated}
+.ar-lv{font:400 22px/1.5 "Press Start 2P",monospace;color:#fff;margin:6px 0 0;max-width:600px}
+.ar-d{font:400 22px "Press Start 2P",monospace;color:#3cf6ff;margin:0}
+.ar-c{font:400 26px "Press Start 2P",monospace;color:#ff2fd0;margin:10px 0 0}
+.ar-score{display:flex;gap:30px;font:400 16px "Press Start 2P",monospace;color:#fff36a;margin-top:10px}
+/* deco */
+.ks-deco{background:#0b0b0b}
+.dc{padding:56px}
+.dc-frame{position:relative;width:100%;height:100%;border:3px solid #c9a24a;outline:1px solid #c9a24a;outline-offset:10px;padding:90px 56px 50px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#f1e2b8;background:#121110}
+.dc-fan{position:absolute;top:-3px;left:50%;width:280px;height:140px;margin-left:-140px;border:3px solid #c9a24a;border-top:0;border-radius:0 0 140px 140px;background:repeating-linear-gradient(90deg,#121110 0,#121110 18px,#2a2212 18px,#2a2212 20px)}
+.dc-k{font:400 26px "Poiret One",cursive;letter-spacing:.3em;text-transform:uppercase;color:#c9a24a;margin:0}
+.dc-v{font:400 62px/1.05 "Limelight",serif;margin:10px 0 24px}
+.dc-photo{width:470px;height:300px;border:3px solid #c9a24a;outline:1px solid #c9a24a;outline-offset:6px;margin-bottom:26px}
+.dc-t{font:400 52px/1.1 "Poiret One",cursive;font-weight:700;margin:8px 0 14px}
+.dc-d{font:400 28px "Poiret One",cursive;letter-spacing:.2em;text-transform:uppercase;margin:0}
+.dc-s{font:400 20px/1.4 "Poiret One",cursive;margin:16px 0 0;color:#c9a24a;max-width:540px}
+.dc-menu .ki-k{color:#c9a24a}.dc-menu .ki-dish{font-family:"Limelight",serif;font-weight:400}
+/* parchment */
+.ks-parchment{background:#2a1d10}
+.pm{padding:50px}
+.pm-scroll{position:relative;width:100%;height:100%;background:radial-gradient(ellipse at center,#f1e2bc 0,#dcc38c 85%);border-radius:10px;padding:60px 60px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#3a2410;box-shadow:0 18px 40px rgba(0,0,0,.6)}
+.pm-k{font:italic 400 26px "IM Fell English",serif;margin:0}
+.pm-v{font:700 52px/1.1 "Cinzel Decorative",serif;margin:12px 0 24px;color:#6b1a10}
+.pm-photo{width:480px;height:300px;border:6px double #6b4a20;margin-bottom:22px}
+.pm-txt{font:italic 400 26px "IM Fell English",serif;margin:6px 0}
+.pm-t{font:700 46px/1.1 "Cinzel Decorative",serif;margin:6px 0 16px}.pm-t.sm{font-size:34px}
+.pm-d{font:400 30px "IM Fell English",serif;margin:0}
+.pm-s{font:italic 400 21px/1.4 "IM Fell English",serif;margin:16px 0 0;max-width:540px}
+.pm-seal{position:absolute;right:60px;bottom:60px;width:120px;height:120px;border-radius:50%;background:#9b1b14;border:6px solid #6e110c;color:#f3d7a0;font:700 26px/108px "Cinzel Decorative",serif;transform:rotate(-12deg)}
+
+/* camp trail sign */
+.ks-camp{background:#1d2a1c}
+.cp{justify-content:flex-start;padding-top:150px}
+.cp-photo{position:absolute;inset:0;width:100%;height:100%;opacity:.55}
+.cp-post{position:absolute;left:50%;top:120px;bottom:0;width:44px;margin-left:-22px;background:linear-gradient(90deg,#4a2c14 0,#7a4a24 50%,#4a2c14 100%);z-index:1}
+.cp-arrow{position:relative;z-index:2;width:560px;margin:0 0 40px 120px;background:linear-gradient(#a8743e,#7c5126);border:5px solid #3a220e;border-radius:10px 70px 70px 10px;padding:22px 70px 22px 34px;text-align:left;box-shadow:0 10px 20px rgba(0,0,0,.55);transform:rotate(-3deg)}
+.cp-arrow.lf{margin:0 120px 40px 0;border-radius:70px 10px 10px 70px;padding:22px 34px 22px 70px;text-align:right;transform:rotate(2deg)}
+.cp-arrow.a3{transform:rotate(-1deg)}
+.cp-arrow span{display:block;font:400 46px/1.1 "Rye",serif;color:#fbe9c4;text-shadow:2px 2px 0 #3a220e}
+.cp-arrow.a3 span{font-size:34px}
+.cp-tag{position:relative;z-index:2;background:#f4ecd6;color:#3a220e;font:500 26px/1.3 "Caveat",cursive;padding:14px 22px;max-width:460px;transform:rotate(2deg);box-shadow:0 8px 16px rgba(0,0,0,.4);margin-top:10px}
+.cp .x-note{bottom:46px}
+/* kitchen fridge */
+.ks-kitchen{background:#d9d2c3}
+.kt2{padding:50px 70px}
+.kt2-fridge{position:relative;width:100%;height:100%;background:linear-gradient(90deg,#e9eef0,#ffffff 40%,#dfe5e8);border:3px solid #b9c1c6;border-radius:30px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.kt2-handle{position:absolute;left:30px;top:120px;width:22px;height:300px;border-radius:12px;background:linear-gradient(90deg,#9aa3a9,#e6eaec,#9aa3a9)}
+.kt2-mag{position:absolute;top:-14px;left:50%;width:40px;height:40px;margin-left:-20px;border-radius:50%;box-shadow:0 3px 5px rgba(0,0,0,.35)}
+.kt2-mag.m1{background:#e8402f}.kt2-mag.m2{background:#2f7fe8}.kt2-mag.m3{background:#f2c12e}
+.kt2-pol{position:absolute;right:50px;top:60px;width:300px;background:#fff;padding:12px 12px 40px;transform:rotate(5deg);box-shadow:0 10px 20px rgba(0,0,0,.3)}
+.kt2-pol img{width:100%;height:220px}
+.kt2-card{position:absolute;left:90px;top:330px;width:470px;background:#fffdf6;border-top:34px solid var(--ka);padding:26px 30px 30px;transform:rotate(-2deg);box-shadow:0 10px 20px rgba(0,0,0,.3);text-align:left;background-image:repeating-linear-gradient(0deg,transparent 0,transparent 41px,#cfe0ee 41px,#cfe0ee 42px)}
+.kt2-h{position:absolute;top:-30px;left:20px;font:700 18px "Oswald",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:420px}
+.kt2-t{font:700 52px/1.05 "Caveat",cursive;color:#1d3a8a;margin:6px 0 8px}.kt2-t.sm{font-size:40px}
+.kt2-k{font:700 18px "Oswald",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--ka);margin:10px 0 0}
+.kt2-d{font:700 34px "Caveat",cursive;color:#1d3a8a;margin:6px 0 0}
+.kt2-s{font:500 26px/1.2 "Caveat",cursive;color:#555;margin:8px 0 0}
+.kt2-post{position:absolute;right:60px;bottom:70px;width:290px;background:#fff58f;padding:30px 24px 22px;transform:rotate(4deg);box-shadow:0 10px 20px rgba(0,0,0,.25);text-align:left}
+.kt2-post p{font:500 27px/1.12 "Caveat",cursive;margin:0;color:#333}
+.kt2-post b{display:block;text-align:right;font:700 26px "Caveat",cursive;color:#1d3a8a;margin-top:8px}
+
+.hr .x-note{position:relative;right:auto;bottom:auto;margin-top:30px}
+.pm-scroll{padding-bottom:110px}
+.pm-seal{right:36px;bottom:30px;width:100px;height:100px;line-height:88px;font-size:22px}
+.dc-s{margin-bottom:10px}
+
+.hr-menu{margin-bottom:26px}
+.hr-w{line-height:1.4}
 </style>
 
 <div id="printArea"></div>
@@ -2130,7 +2321,7 @@ dialog.kit .kit-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a;bo
 <script src="providers.js?v=76e7a870" defer></script>
 <script src="films.js?v=0047d3a6" defer></script>
 <script src="formats-core.js?v=eb2381a5" defer></script>
-<script src="app.js?v=f18983e9" defer></script>
+<script src="app.js?v=499860d8" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
