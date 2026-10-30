@@ -1172,7 +1172,7 @@ async function openTrolley(f,menuOverride,label){
   if(!menuOverride&&f._r2&&f._r2.dishes&&f._r2.dishes.length){if(f!==current)planLoad(f);menuOverride={s:[],m:[],w:[],d:[],shopping:planShopping(f)}}
   const serves=menuOverride&&menuOverride.serves||(f._r2?PLAN.guests:4);
   const groups=shopGroups(menuOverride||mm);const all=groups.flatMap(([,l])=>l);
-  const o=document.createElement("dialog");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Shopping list for ${f.title}`);
+  const o=document.createElement("dialog");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",label?`Shopping list: ${label}`:`Shopping list for ${f.title}`);
   const sessionKey=JSON.stringify([f.id,label||""]);
   if(!trolleySessionTicks.has(sessionKey))trolleySessionTicks.set(sessionKey,Object.create(null));
   const kf=own?tickKey:(x=>x);
@@ -2094,7 +2094,7 @@ function openFilm(f){if(!f)return;addHistory(f);goView("wheel",true);if(tab!=="m
 
 /* showtime: an old film countdown leader runs, the 2 pops, and the lights go down on tonight's film */
 function startShow(f){
-  f=f||current;if(!f||document.body.classList.contains("staged"))return;
+  f=f||current;if(!f||(f===current&&document.body.classList.contains("staged")))return;
   const cue=String(((typeof movieEdition==="function"&&movieEdition(f))||{}).cue||f.P||"");
   const o=document.createElement("dialog");o.className="leader";o.setAttribute("aria-label","Showtime: "+f.title);
   o.innerHTML=`<div class="ld-film" aria-hidden="true"><div class="ld-sweep"></div><div class="ld-rings"></div><div class="ld-cross"></div><b class="ld-n">5</b></div>
@@ -2113,7 +2113,41 @@ function startShow(f){
 }
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-show]");if(b)startShow()});
 $("kitBtn").addEventListener("click",()=>openKit());
+$("mysBtn").addEventListener("click",()=>openMystery(false));mystButton();
 
+/* mystery night: the menu is cooked blind, the film stays sealed in an envelope until showtime */
+var MYST=null;try{MYST=JSON.parse(localStorage.getItem("mns-mystery")||"null")}catch(e){MYST=null}
+const mystSave=()=>{try{MYST?localStorage.setItem("mns-mystery",JSON.stringify(MYST)):localStorage.removeItem("mns-mystery")}catch(e){}};
+function mystScrub(f,t){
+  t=String(t||"");const words=f.title.split(/[^A-Za-z0-9']+/).filter(w=>w.length>3&&!/^(the|and|with|from|part)$/i.test(w));
+  for(const w of words)t=t.replace(new RegExp("\\b"+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"\\b","gi"),"?");
+  return t.replace(/\b[A-Z][a-z]+(?:\s[A-Z][a-z]+)?['’]s\b/g,"the house").replace(/\?(\s\?)+/g,"?");
+}
+function mystGenre(f){const a=SHOP_AISLES.find(([,t])=>t.includes(f.theme));return a?a[0]:"A good one"}
+function mystButton(){const b=$("mysBtn");if(!b)return;const f=MYST&&FILMS.find(x=>x.id===MYST.id);b.textContent=f?"Your mystery night":"Mystery night";b.classList.toggle("on",!!f)}
+async function openMystery(fresh){
+  let f=MYST&&!fresh&&FILMS.find(x=>x.id===MYST.id);
+  if(!f){const pool=(list&&list.length?list:FILMS).filter(x=>!kidsMode||isKidSafe(x));f=pool[Math.floor(Math.random()*pool.length)];MYST={id:f.id,at:Date.now()};mystSave()}
+  await ensureExact(f);
+  const m=makeMenu(f,true),C=[["s","Snacks"],["m","Main"],["w","Dessert"],["d","To drink"]];
+  const r2=(f._r2&&f._r2.dishes)||[];
+  const steps=it=>{const d=r2.find(z=>z.n===(it.orig||it.k||it.n));return d&&d.steps?d.steps.map(x=>mystScrub(f,x.text)):String(it.how||"").split(/(?<=\.)\s+/).map(t=>mystScrub(f,t)).filter(Boolean)};
+  let n=0;const courses=C.filter(([k])=>(m[k]||[]).length).map(([k,h])=>`<h4>${h}</h4>${m[k].map(it=>{n++;return `<details class="my-dish"><summary><b>Dish ${n}</b><span>${ESC(mystScrub(f,it.note||it.d||""))}</span></summary><ol>${steps(it).map(t=>`<li>${ESC(t)}</li>`).join("")}</ol></details>`}).join("")}`).join("");
+  const rate=ratingOf(f);
+  const o=document.createElement("dialog");o.className="counter mystery";o.setAttribute("aria-label","Mystery night");
+  o.innerHTML=`<div class="my-box"><div class="my-env"><div class="my-flap"></div><div class="my-seal">?</div><p class="my-k">Tonight's mystery</p><p class="my-t">Sealed until showtime</p>
+    <div class="my-clues"><span>${ESC(mystGenre(f))}</span><span>${ESC(String(f.year).slice(0,3))}0s</span>${rate?`<span>Rated ${ESC(rate)}</span>`:""}</div></div>
+    <p class="my-say">Cook the menu blind. Nobody finds out the film until you open the envelope.</p>
+    <div class="my-menu">${courses}</div>
+    <details class="my-hint"><summary>Need a hint?</summary><p>${ESC(mystScrub(f,f.D))}</p></details>
+    <div class="acts"><button type="button" class="go" data-a="reveal">Open the envelope</button><button type="button" data-a="shop">Shopping list</button><button type="button" data-a="new">Different mystery</button><button type="button" data-a="drop">Cancel mystery</button></div></div>`;
+  o.addEventListener("click",async e=>{if(e.target===o)return dismissModal(o);const b=e.target.closest("[data-a]");if(!b)return;const a=b.dataset.a;
+    if(a==="shop")return openTrolley(f,undefined,"Mystery night shopping");
+    if(a==="new"){dismissModal(o);return openMystery(true)}
+    if(a==="drop"){MYST=null;mystSave();mystButton();return dismissModal(o)}
+    if(a==="reveal"){dismissModal(o);MYST=null;mystSave();mystButton();addHistory(f);goView("wheel",true);replay(f).then(()=>toMenu());setTimeout(()=>startShow(f),reduce?0:300)}});
+  mountModal(o,"[data-a=reveal]",document.activeElement);mystButton();
+}
 /* table kit: a door sign, place cards and an intermission card, printed in tonight's film's colours and type */
 const kitTime=t=>{const m=/^(\d{1,2}):(\d{2})$/.exec(t||"");if(!m)return "";let h=+m[1];const ap=h>=12?"pm":"am";h=h%12||12;return `${h}:${m[2]} ${ap}`};
 const KIT_SIGN={club:"neon",bartab:"neon",diner:"letterboard",motel:"neon",tiki:"neon",kiosk:"letterboard",candybar:"marquee",takeaway:"letterboard",stadium:"marquee",prom:"marquee",
