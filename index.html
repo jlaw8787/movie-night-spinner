@@ -2187,6 +2187,28 @@ dialog.mystery .acts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap
 dialog.mystery .acts button{font:600 15px var(--f-body);border-radius:999px;padding:12px 18px;cursor:pointer;border:1px solid #8a6a3a;background:transparent;color:#f3e6c8}
 dialog.mystery .acts .go{background:radial-gradient(circle at 40% 30%,#fff1c4,#e2b04f 50%,#a8762a);color:#2a1206;border:0}
 #mysBtn.on{border-color:#e2b04f;color:#ffe9b0}
+/* trivia spin */
+dialog.trivia .tv-box{background:#0f1426;color:#eef1ff;border:1px solid #3a4a8a;border-radius:18px;padding:22px 20px;width:min(520px,94vw);box-sizing:border-box;margin:auto;max-height:90vh;overflow:auto;text-align:center}
+dialog.trivia .tv-k{font:700 12px var(--f-body);letter-spacing:.2em;text-transform:uppercase;color:#ffcf4a;margin:0}
+dialog.trivia .tv-t{font:700 24px var(--f-display,var(--f-body));margin:6px 0 2px}
+dialog.trivia .tv-say{opacity:.85;margin:6px 0 10px}
+dialog.trivia .tv-dots{display:flex;gap:10px;justify-content:center;margin:8px 0 14px}
+dialog.trivia .tv-dots i{width:14px;height:14px;border-radius:50%;border:2px solid #5a6aa8;display:block}
+dialog.trivia .tv-dots i.ok{background:#3fcf7a;border-color:#3fcf7a}
+dialog.trivia .tv-dots i.no{background:#e0505a;border-color:#e0505a}
+dialog.trivia .tv-n{font:600 13px var(--f-body);opacity:.7;margin:0 0 6px}
+dialog.trivia .tv-q{font:600 19px/1.35 var(--f-body);margin:0 0 14px}
+dialog.trivia .tv-opts{display:grid;gap:10px}
+dialog.trivia .tv-opts button{font:600 16px var(--f-body);text-align:left;padding:14px 16px;border-radius:12px;border:1px solid #3a4a8a;background:#18203a;color:#eef1ff;cursor:pointer;min-height:48px}
+dialog.trivia .tv-opts button:hover:not(:disabled){border-color:#ffcf4a}
+dialog.trivia .tv-opts button.ok{background:#1d5a38;border-color:#3fcf7a}
+dialog.trivia .tv-opts button.no{background:#5a1d24;border-color:#e0505a}
+dialog.trivia .tv-opts button:disabled{cursor:default}
+dialog.trivia .tv-res{font:700 26px var(--f-body);margin:6px 0}
+dialog.trivia .tv-res.win{color:#ffcf4a}
+dialog.trivia .acts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+dialog.trivia .acts button{font:600 15px var(--f-body);border-radius:999px;padding:12px 18px;cursor:pointer;border:1px solid #5a6aa8;background:transparent;color:#eef1ff}
+dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 </style>
 
 <div id="printArea"></div>
@@ -2281,6 +2303,7 @@ dialog.mystery .acts .go{background:radial-gradient(circle at 40% 30%,#fff1c4,#e
         </div>
         <button class="toggle df-btn" id="dfBtn" type="button">Double feature</button>
         <button class="toggle df-btn" id="mysBtn" type="button">Mystery night</button>
+        <button class="toggle df-btn" id="trivBtn" type="button">Trivia spin</button>
         <button class="toggle set-btn" id="setBtn" type="button" aria-haspopup="dialog">Settings</button>
       </div>
       <div class="count" id="count"></div>
@@ -2352,9 +2375,9 @@ dialog.mystery .acts .go{background:radial-gradient(circle at 40% 30%,#fff1c4,#e
 <script src="tmdb-posters.js?v=5239a32c" defer></script>
 <script src="ratings.js?v=eca9e799" defer></script>
 <script src="providers.js?v=76e7a870" defer></script>
-<script src="films.js?v=6b400171" defer></script>
+<script src="films.js?v=00827412" defer></script>
 <script src="formats-core.js?v=969dc62f" defer></script>
-<script src="app.js?v=d43e834e" defer></script>
+<script src="app.js?v=ecd6ac29" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

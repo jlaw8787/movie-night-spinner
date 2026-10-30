@@ -2114,6 +2114,7 @@ function startShow(f){
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-show]");if(b)startShow()});
 $("kitBtn").addEventListener("click",()=>openKit());
 $("mysBtn").addEventListener("click",()=>openMystery(false));mystButton();
+$("trivBtn").addEventListener("click",()=>openTrivia());
 
 /* mystery night: the menu is cooked blind, the film stays sealed in an envelope until showtime */
 var MYST=null;try{MYST=JSON.parse(localStorage.getItem("mns-mystery")||"null")}catch(e){MYST=null}
@@ -2147,6 +2148,37 @@ async function openMystery(fresh){
     if(a==="drop"){MYST=null;mystSave();mystButton();return dismissModal(o)}
     if(a==="reveal"){dismissModal(o);MYST=null;mystSave();mystButton();addHistory(f);goView("wheel",true);replay(f).then(()=>toMenu());setTimeout(()=>startShow(f),reduce?0:300)}});
   mountModal(o,"[data-a=reveal]",document.activeElement);mystButton();
+}
+/* trivia spin: the wheel hides a film, three questions stand between you and it, two right unlocks the show */
+let _triv=null;
+const ensureTrivia=()=>_triv||(_triv=fetch("data/trivia.json"+(window.DATA_V&&DATA_V.trivia?"?v="+DATA_V.trivia:"")).then(r=>r.json()).catch(()=>{_triv=null;return {}}));
+async function openTrivia(){
+  const T=await ensureTrivia();
+  const pool=(list&&list.length?list:FILMS).filter(x=>(!kidsMode||isKidSafe(x))&&T[x.id]&&T[x.id].length>=3);
+  if(!pool.length)return;
+  const f=pool[Math.floor(Math.random()*pool.length)];
+  const Q=T[f.id].slice(0,3).map(q=>{const o=q.a.map((t,i)=>({t,ok:i===q.c}));for(let i=o.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[o[i],o[j]]=[o[j],o[i]]}return {q:q.q,o}});
+  let i=0,right=0,wrong=0;
+  const o=document.createElement("dialog");o.className="counter trivia";o.setAttribute("aria-label","Trivia spin");
+  o.innerHTML=`<div class="tv-box"><p class="tv-k">Trivia spin</p><p class="tv-t">The wheel has picked a film</p>
+    <p class="tv-say">Get two of three right and it's yours.</p><div class="tv-dots"><i></i><i></i><i></i></div><div class="tv-stage" aria-live="polite"></div></div>`;
+  const stage=o.querySelector(".tv-stage"),dots=[...o.querySelectorAll(".tv-dots i")];
+  const ask=()=>{const q=Q[i];stage.innerHTML=`<p class="tv-n">Clue ${i+1} of 3</p><p class="tv-q">${ESC(q.q)}</p><div class="tv-opts">${q.o.map((x,k)=>`<button type="button" data-o="${k}">${ESC(x.t)}</button>`).join("")}</div>`;const b=stage.querySelector("[data-o]");b&&b.focus()};
+  const end=win=>{
+    if(win)stage.innerHTML=`<p class="tv-res win">You got it.</p><p class="tv-say">The film is unlocked. Lights down.</p><div class="acts"><button type="button" class="go" data-a="reveal">Roll the film</button></div>`;
+    else stage.innerHTML=`<p class="tv-res">Not this time.</p><p class="tv-say">The film stays sealed. Spin again for a new one.</p><div class="acts"><button type="button" class="go" data-a="again">Spin again</button><button type="button" data-a="close">Close</button></div>`;
+    const g=stage.querySelector(".go");g&&g.focus()};
+  o.addEventListener("click",e=>{if(e.target===o)return dismissModal(o);
+    const ob=e.target.closest("[data-o]");
+    if(ob&&!stage.dataset.lock){stage.dataset.lock=1;const q=Q[i],k=+ob.dataset.o,ok=q.o[k].ok;
+      stage.querySelectorAll("[data-o]").forEach((b,n)=>{b.disabled=true;if(q.o[n].ok)b.classList.add("ok");else if(n===k)b.classList.add("no")});
+      dots[i].className=ok?"ok":"no";ok?right++:wrong++;try{ok?sfx.beep&&sfx.beep():0}catch(_){}
+      setTimeout(()=>{delete stage.dataset.lock;i++;if(right>=2)end(true);else if(wrong>=2)end(false);else ask()},reduce?400:1100);return}
+    const b=e.target.closest("[data-a]");if(!b)return;const a=b.dataset.a;
+    if(a==="close")return dismissModal(o);
+    if(a==="again"){dismissModal(o);return openTrivia()}
+    if(a==="reveal"){dismissModal(o);addHistory(f);goView("wheel",true);replay(f).then(()=>toMenu());setTimeout(()=>startShow(f),reduce?0:300)}});
+  ask();mountModal(o,"[data-o]",document.activeElement);
 }
 /* table kit: a door sign, place cards and an intermission card, printed in tonight's film's colours and type */
 const kitTime=t=>{const m=/^(\d{1,2}):(\d{2})$/.exec(t||"");if(!m)return "";let h=+m[1];const ap=h>=12?"pm":"am";h=h%12||12;return `${h}:${m[2]} ${ap}`};
