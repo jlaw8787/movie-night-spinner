@@ -1679,11 +1679,13 @@ function showWelcome(){
 
 {const g=document.getElementById("bulbGlow");if(g){let h="";for(let i=0;i<32;i++)h+=`<i style="--a:${i*11.25}deg;--d:${-(i%8)*0.2}s"></i>`;g.innerHTML=h}}
 /* phones: a Spin button pinned to the bottom until the wheel is on screen */
-{const bar=$("spinbar"),hub=$("spin"),acts=document.querySelector(".actions");let hubSeen=false,actsSeen=false,prepSeen=false,weekSeen=false,pairSeen=false;
+{const bar=$("spinbar"),hub=$("spin"),acts=document.querySelector(".actions");let hubSeen=false,actsSeen=false,prepSeen=false,weekSeen=false,pairSeen=false,phoneSeen=false;
  /* the floating Spin button steps aside while the wheel or the menu buttons are on screen, so it never sits over them */
- const upd=()=>{bar.hidden=hubSeen||actsSeen||weekSeen||pairSeen||(prepSeen&&tab==="prep")||spinning||$("viewWheel").hidden||!matchMedia("(max-width:900px)").matches};
+ const upd=()=>{bar.hidden=hubSeen||actsSeen||weekSeen||pairSeen||prepSeen||phoneSeen||spinning||$("viewWheel").hidden||!matchMedia("(max-width:900px)").matches};
  if("IntersectionObserver" in window){new IntersectionObserver(es=>{hubSeen=es[0].isIntersecting;upd()},{threshold:.4}).observe(hub);
    if(acts)new IntersectionObserver(es=>{actsSeen=es[0].isIntersecting;upd()},{threshold:0,rootMargin:"0px 0px 90px 0px"}).observe(acts);
+   /* and while the menu itself is being read on a phone, so it never covers a dish */
+   {const fp=$("fmtPhone");if(fp)new IntersectionObserver(es=>{phoneSeen=es[0].isIntersecting;upd()},{threshold:0}).observe(fp)}
    /* and while the snacks under the menu are on screen, so it never covers their Add buttons */
    {const sp=$("snackPair");if(sp)new IntersectionObserver(es=>{pairSeen=es[0].isIntersecting;upd()},{threshold:0,rootMargin:"0px 0px 90px 0px"}).observe(sp)}
    /* and while the prep sheet is being read, so it never sits over the method */
