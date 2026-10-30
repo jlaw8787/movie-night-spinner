@@ -1634,6 +1634,47 @@ dialog.wall .wall-box{width:min(820px,92vw);max-width:none;max-height:86vh;overf
 .wstub .wy{display:block;font-size:12px;opacity:.7;margin-bottom:6px}
 .wstub .pc{width:16px;height:16px}
 .wstub .pc .pc-str,.ticket .pc .pc-str{stroke:#f3e3b8}
+
+/* table kit */
+dialog.kit .kit-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a;border-radius:18px;padding:24px 20px;width:min(640px,94vw);box-sizing:border-box;margin:auto;text-align:center;max-height:90vh;overflow:auto}
+.kit-box h3{font:400 clamp(24px,6vw,34px)/1.1 var(--f-disp);margin:0 0 8px;color:#fff4d6}
+.kit-say,.kit-msg{color:#d9c9a8;font:400 14px/1.5 var(--f-body);margin:0 0 14px}
+.kit-thumbs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:0 0 16px}
+.kit-thumb{width:127px;height:180px;overflow:hidden;border-radius:4px;box-shadow:0 6px 16px rgba(0,0,0,.5);flex:none;position:relative}
+.kit-names{display:block;text-align:left;font:600 14px var(--f-body);margin:0 0 10px}
+.kit-names small{font-weight:400;color:#bfae8c}
+.kit-names textarea{display:block;width:100%;box-sizing:border-box;margin-top:6px;border-radius:10px;border:1px solid #6b4a2a;background:#120609;color:#f3e6c8;font:400 16px/1.4 var(--f-body);padding:10px}
+.kit-box .acts{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.kit-box .acts button{font:600 15px var(--f-body);border-radius:999px;padding:12px 22px;cursor:pointer;border:1px solid #8a6a3a;background:transparent;color:#f3e6c8}
+.kit-box .acts .go{background:radial-gradient(circle at 40% 30%,#fff1c4,#e2b04f 50%,#a8762a);color:#2a1206;border:0}
+.kit-page{position:relative;box-sizing:border-box;background:var(--mg);color:var(--mi);font-family:var(--mb);overflow:hidden;text-align:center}
+.kit-page::before{content:"";position:absolute;inset:0;background:var(--mpat,none);background-size:var(--mpsz,auto);opacity:.35;pointer-events:none}
+.kit-frame{position:absolute;inset:44px;border:3px solid var(--ma);outline:1px solid var(--ma);outline-offset:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 48px;box-sizing:border-box;gap:6px}
+.kit-eye{font:700 18px var(--mb);letter-spacing:.32em;text-transform:uppercase;color:var(--ma);margin:0}
+.kit-now{font:var(--mdw,400) 64px/1 var(--md);margin:6px 0 22px;color:var(--mi)}
+.kit-poster{width:330px;height:495px;object-fit:cover;border:6px solid var(--mi);box-shadow:0 10px 30px rgba(0,0,0,.35);margin:0 0 24px}
+.kit-logo{max-width:440px;max-height:150px;object-fit:contain;margin:4px 0}
+.kit-title{font:var(--mdw,400) 60px/1.05 var(--md);margin:0;color:var(--mi)}
+.kit-year{font:600 20px var(--mb);letter-spacing:.3em;margin:4px 0 0;opacity:.8}
+.kit-venue{font:italic 400 22px var(--mb);margin:14px 0 0;color:var(--ma)}
+.kit-doors{font:var(--mdw,400) 34px var(--md);margin:22px 0 6px}
+.kit-tag{font:400 20px/1.4 var(--mb);margin:6px 0 0;max-width:560px;opacity:.85}
+.kit-line{display:inline-block;width:160px;border-bottom:2px solid currentColor;vertical-align:-4px}
+.kit-line.wide{width:70%;height:40px;margin:6px 0}
+.kit-tents{position:absolute;left:36px;right:36px;top:36px;bottom:70px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,1fr)}
+.kit-tent{border:1px solid rgba(0,0,0,.35);display:grid;grid-template-rows:1fr 1fr;position:relative;background:var(--mg)}
+.kit-tent::after{content:"";position:absolute;left:0;right:0;top:50%;border-top:2px dashed rgba(0,0,0,.35)}
+.kit-back{transform:rotate(180deg);display:flex;align-items:center;justify-content:center;background:var(--ma);color:var(--mg);font:var(--mdw,400) 26px/1.1 var(--md);padding:12px}
+.kit-front{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 18px;gap:4px}
+.kit-front small{font:700 12px var(--mb);letter-spacing:.18em;text-transform:uppercase;color:var(--ma)}
+.kit-front b{font:var(--mdw,400) 40px/1.1 var(--md)}
+.kit-front em{font:italic 400 14px var(--mb);opacity:.8}
+.kit-cut{position:absolute;left:0;right:0;bottom:26px;margin:0;font:400 14px var(--mb);opacity:.7}
+.kit-big{font:var(--mdw,400) 88px/1 var(--md);margin:10px 0 18px;color:var(--ma)}
+.kit-k{font:700 16px var(--mb);letter-spacing:.28em;text-transform:uppercase;color:var(--ma);margin:30px 0 4px}
+.kit-dish{font:var(--mdw,400) 38px/1.15 var(--md);margin:0;max-width:600px}
+.kit-dish.small{font-size:28px}
+.kit-back15{font:italic 400 24px var(--mb);margin:34px 0 0}
 </style>
 
 <div id="printArea"></div>
@@ -1774,6 +1815,7 @@ dialog.wall .wall-box{width:min(820px,92vw);max-width:none;max-height:86vh;overf
         <button class="btn" id="favBtn" type="button" aria-pressed="false">Save this menu</button>
         <button class="btn" id="weekSet" type="button" disabled>Lock in for this week</button>
         <button class="btn" id="showBtn" type="button" data-show>Start the show</button>
+        <button class="btn" id="kitBtn" type="button">Table kit</button>
         <button class="btn" id="watchCurrent" type="button" aria-pressed="false" disabled>Mark as watched</button>
         <button class="btn" id="lazyBtn" type="button" aria-pressed="false">Lazy night: off</button>
         <details class="more">
@@ -1799,7 +1841,7 @@ dialog.wall .wall-box{width:min(820px,92vw);max-width:none;max-height:86vh;overf
 <script src="providers.js?v=76e7a870" defer></script>
 <script src="films.js?v=11659780" defer></script>
 <script src="formats-core.js?v=eb2381a5" defer></script>
-<script src="app.js?v=a5d13758" defer></script>
+<script src="app.js?v=111bd643" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

@@ -2098,6 +2098,53 @@ function startShow(f){
   later(3800,showCard);
 }
 document.addEventListener("click",e=>{const b=e.target.closest&&e.target.closest("[data-show]");if(b)startShow()});
+$("kitBtn").addEventListener("click",()=>openKit());
+
+/* table kit: a door sign, place cards and an intermission card, printed in tonight's film's colours and type */
+const kitTime=t=>{const m=/^(\d{1,2}):(\d{2})$/.exec(t||"");if(!m)return "";let h=+m[1];const ap=h>=12?"pm":"am";h=h%12||12;return `${h}:${m[2]} ${ap}`};
+function kitBits(f){
+  const L=f._lib||{},fl=L.flavour||{};
+  const venue=dietText(f,String(fl.venue||""));
+  const m=current&&current.id===f.id&&current.menu||{};const w=(m.w||[])[0],d=(m.d||[])[0];
+  const time=typeof week!=="undefined"&&week&&week.id===f.id?kitTime(week.time):"";
+  return {venue,sweet:w?(w.label||w.n):"",drink:d?(d.label||d.n):"",time,poster:lobbyPoster(f),logo:L.logo||(typeof FILM_LOGOS!=="undefined"&&FILM_LOGOS[f.id])||"",eye:(STY[f.theme]||{}).eye||"Tonight's feature"};
+}
+function kitPage(f,kind,inner){const el=document.createElement("div");styleCard(el,f);el.className="kit-page kit-"+kind+" T-"+f.theme;el.dataset.w=794;el.dataset.h=1123;el.style.width="794px";el.style.height="1123px";el.innerHTML=inner;return el}
+function kitPages(f,names,count){
+  const b=kitBits(f),T=ESC(f.title),pages=[];
+  const title=`<h2 class="kit-title">${T}</h2>`;
+  pages.push(kitPage(f,"door",`<div class="kit-frame"><p class="kit-eye">${ESC(b.eye)}</p><p class="kit-now">Now showing</p>${b.poster?`<img class="kit-poster" alt="" src="${TMDB_IMG}w500${ESC(b.poster)}" crossorigin="anonymous">`:""}${title}<p class="kit-year">${ESC(f.year)}</p>${b.venue?`<p class="kit-venue">${ESC(b.venue)}</p>`:""}<p class="kit-doors">${b.time?`Doors at ${ESC(b.time)}`:"Doors at <span class=\"kit-line\"></span>"}</p><p class="kit-tag">${ESC(dietText(f,f.T||""))}</p></div>`));
+  const list=names.length?names:Array.from({length:count},()=>"");
+  for(let i=0;i<list.length;i+=6){
+    const cards=list.slice(i,i+6).map(n=>`<div class="kit-tent"><div class="kit-back"><span>${T}</span></div><div class="kit-front"><small>Admit one · ${T}</small>${n?`<b>${ESC(n)}</b>`:`<span class="kit-line wide"></span>`}${b.venue?`<em>${ESC(b.venue)}</em>`:""}</div></div>`).join("");
+    pages.push(kitPage(f,"place",`<div class="kit-tents">${cards}</div><p class="kit-cut">Cut along the outside lines, fold along the dotted line, stand them up.</p>`));
+  }
+  pages.push(kitPage(f,"inter",`<div class="kit-frame"><p class="kit-eye">${ESC(b.eye)}</p><p class="kit-big">Intermission</p>${title}${b.sweet?`<p class="kit-k">Dessert is served</p><p class="kit-dish">${ESC(b.sweet)}</p>`:""}${b.drink?`<p class="kit-k">Top-ups at the bar</p><p class="kit-dish small">${ESC(b.drink)}</p>`:""}<p class="kit-back15">Back in fifteen minutes</p>${b.venue?`<p class="kit-venue">${ESC(b.venue)}</p>`:""}</div>`));
+  return pages;
+}
+function openKit(){
+  const f=current;if(!f||document.body.classList.contains("staged"))return;
+  let names=[];const count=()=>names.length||Math.min(60,PLAN.guests||USUAL||4);
+  const o=document.createElement("dialog");o.className="counter kit";o.setAttribute("aria-label","Table kit: "+f.title);
+  o.innerHTML=`<div class="kit-box"><p class="rate-k">Table kit</p><h3>${ESC(f.title)}</h3><p class="kit-say">A door sign, place cards and an intermission card in tonight's film's look. All A4.</p>
+   <div class="kit-thumbs" aria-hidden="true"></div>
+   <label class="kit-names">Guest names for the place cards <small>(one per line, or leave blank to write them in)</small><textarea rows="4" placeholder="Sam&#10;Jordan&#10;Alex"></textarea></label>
+   <p class="kit-msg" role="status"></p>
+   <div class="acts"><button type="button" class="go" data-a="pdf">Save PDF</button><button type="button" data-a="print">Print</button></div></div>`;
+  const thumbs=o.querySelector(".kit-thumbs"),msg=o.querySelector(".kit-msg");
+  const draw=()=>{thumbs.innerHTML="";const pg=kitPages(f,names,count());pg.forEach(p=>{const w=document.createElement("div");w.className="kit-thumb";p.style.transform="scale(.16)";p.style.transformOrigin="0 0";w.appendChild(p);thumbs.appendChild(w)});msg.textContent=`${pg.length} pages: the door sign, ${count()} place card${count()>1?"s":""} and the intermission card.`};
+  o.querySelector("textarea").addEventListener("input",e=>{names=e.target.value.split("\n").map(x=>x.trim()).filter(Boolean).slice(0,60);draw()});
+  o.addEventListener("click",async e=>{if(e.target===o)return dismissModal(o);const b=e.target.closest("[data-a]");if(!b)return;
+    const pages=kitPages(f,names,count());
+    if(b.dataset.a==="print"){const pa=$("printArea");pa.innerHTML="";pages.forEach(p=>pa.appendChild(printPage(p,794,1123)));pa.dataset.kit="1";window.print();return}
+    b.disabled=true;const t=b.textContent;b.textContent="Making your PDF...";
+    try{if(!await loadExportTools(true))throw new Error("tools");const {jsPDF}=window.jspdf;const pdf=new jsPDF({unit:"mm",format:"a4",orientation:"portrait"});
+      for(let i=0;i<pages.length;i++){msg.textContent=`Making your PDF: page ${i+1} of ${pages.length}`;const cv=await renderCanvas(pages[i],true);if(i)pdf.addPage("a4","portrait");pdf.addImage(cv.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297)}
+      const data=pdf.output("blob"),filename=`${slug(f.title)}-${f.year}-table-kit.pdf`;if(downloads)await downloads.save({filename,data});else plainDownload(data,filename);msg.textContent=`Saved ${filename}. Print it at A4, actual size.`}
+    catch(err){msg.textContent="Couldn't make the PDF. Check your connection and try again, or use Print."}
+    finally{b.disabled=false;b.textContent=t}});
+  mountModal(o,"textarea",document.activeElement);requestAnimationFrame(draw);
+}
 
 /* rate the night: popcorns out of five, kept per film with the date, shown on the stubs and on the stub wall */
 var RATES={};try{RATES=JSON.parse(localStorage.getItem("mns-rates")||"{}")||{}}catch(e){RATES={}}
