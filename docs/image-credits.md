@@ -447,3 +447,7 @@ Real photos, cropped square and resized to 240px webp. Pack shots from Open Food
 ## Galaxy Video logo (assets/brand/)
 
 - galaxy-video-480/800/1200.webp: Galaxy Video master logo, made for this site (Canva, "Galaxy Video logo" design, Master page). Own artwork.
+
+## Galaxy Video shopfront (assets/hero/galaxy-front*.webp)
+
+- Composite of assets/hero/shopfront.webp with the Galaxy Video master logo as a weathered lit sign cabinet, faded red vinyl lettering on the fascia and an extended night sky. Built by scripts/compose-shopfront.py. Own artwork.
