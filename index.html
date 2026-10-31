@@ -52,7 +52,7 @@
 <title>Movie Night Spinner</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Oswald:wght@500;700&family=Limelight&family=Jost:wght@400;500;600&family=Archivo:wght@400;600;800&family=Permanent+Marker&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Oswald:wght@500;700&family=Limelight&family=Jost:wght@400;500;600&family=Archivo:wght@400;600;800&family=Permanent+Marker&family=Mr+Dafoe&display=swap">
 <style>
 /* The house: a picture palace at night. Marquee up top, the wheel lit like a game show on the left, the menu revealed behind velvet curtains on the right. */
 :root{
@@ -2300,6 +2300,15 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 .member .mc-name::placeholder{color:rgba(231,226,242,.5);text-shadow:none}
 .member .mc-name:focus{outline:none;border-bottom-color:rgba(255,210,63,.7)}
 .member .mc-name:focus-visible{outline:2px solid #ffd23f;outline-offset:3px}
+/* raised characters: silver tipping rubbed off in patches, the card's purple showing through */
+.member .mc-name{color:transparent;caret-color:#ffd23f;text-shadow:none}
+.mc-name-show{position:absolute;left:4.2%;top:83%;width:58%;font:700 4.3cqw/1.2 "Courier New",Courier,monospace;letter-spacing:.08em;text-transform:uppercase;white-space:pre;overflow:hidden;padding-top:1px;pointer-events:none}
+.mc .foil{color:transparent;text-shadow:none;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='70'%3E%3Cfilter id='w'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.32' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .36 0 0 0 0 .31 0 0 0 0 .46 5 0 0 0 -2.9'/%3E%3C/filter%3E%3Crect width='140' height='70' filter='url(%23w)'/%3E%3C/svg%3E") 0 0/140px 70px,
+  linear-gradient(180deg,#f6f3fb 0%,#c3bcd2 55%,#ece7f5 100%);
+  -webkit-background-clip:text;background-clip:text;filter:drop-shadow(0 -.5px 0 rgba(255,255,255,.4)) drop-shadow(0 1px 0 rgba(0,0,0,.9)) drop-shadow(1px 2px 1.5px rgba(0,0,0,.35))}
+.mc-bars{position:absolute;left:68.6%;top:75.9%;width:26.1%;height:11.9%;fill:#141218;opacity:.92}
+.mc-sig{position:absolute;left:61.5%;top:45.6%;width:35%;font:400 6cqw/1 "Mr Dafoe","Brush Script MT",cursive;color:#1f2f8f;transform:rotate(-4deg);white-space:nowrap;overflow:hidden;opacity:.88;pointer-events:none}
 .member-meta{margin:14px 0 0;color:#c9d3ff}
 .member-fee{margin:6px 0 0}
 /* the shop's own sticker on the hire case, stock number written in biro */
@@ -2488,7 +2497,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 <script src="providers.js?v=76e7a870" defer></script>
 <script src="films.js?v=29c0c1e4" defer></script>
 <script src="formats-core.js?v=d090b2ad" defer></script>
-<script src="app.js?v=8a31d7ce" defer></script>
+<script src="app.js?v=55b8c4a1" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

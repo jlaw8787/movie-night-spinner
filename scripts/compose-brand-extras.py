@@ -109,14 +109,17 @@ card = stripes(card, 0, W, 392, 4, 5, taper=False)
 BX, BY, BW, BH = 676, 470, 300, 124
 panel = np.zeros((H, W), np.float32); panel[BY:BY + BH, BX:BX + BW] = 1
 card = paint(card, panel, [0.95, 0.93, 0.88])
-r_ = np.random.default_rng(5); x = BX + 18
-while x < BX + BW - 22:
-    w_ = int(r_.choice([2, 2, 3, 5])); g_ = int(r_.choice([2, 3, 3, 5]))
-    bar = np.zeros((H, W), np.float32); bar[BY + 14:BY + BH - 34, x:x + w_] = 1
-    card = paint(card, bar, [0.08, 0.07, 0.09]); x += w_ + g_
+# the bars themselves are drawn in HTML from the member number
 card = paint(card, text_mask(W, H, (BX + BW / 2, BY + BH - 10), 'GALAXY VIDEO MEMBER', font('archivo-black', 15), 'ms'), [0.1, 0.1, 0.12])
 card = paint(card, text_mask(W, H, (40, 618), 'Card remains the property of Galaxy Video. Show it every time you hire.', font('archivo-black', 14), 'ls'), cream, 0.45)
 
+# signature strip: off-white panel with a faint security pattern
+SX, SY, SW, SH = 600, 296, 376, 62
+sp_ = np.zeros((H, W), np.float32); sp_[SY:SY + SH, SX:SX + SW] = 1
+card = paint(card, sp_, [0.93, 0.91, 0.86])
+pat = ((((xx - yy) % 14) < 2) | (((xx + yy) % 14) < 1)).astype(np.float32) * sp_
+card = paint(card, pat, [0.80, 0.70, 0.86], 0.45)
+card = paint(card, text_mask(W, H, (SX + 8, SY + SH - 7), 'AUTHORISED SIGNATURE', font('archivo-black', 11), 'ls'), [0.45, 0.35, 0.5], 0.8)
 # wear: worn print, rubbed edges, fine scratches, gloss sheen, grain
 card *= (0.94 + 0.10 * smooth_noise(H, W, 30, 1))[..., None]
 edge = np.minimum.reduce([xx, W - 1 - xx, yy, H - 1 - yy])
