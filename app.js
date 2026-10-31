@@ -13,7 +13,7 @@ const pick=a=>a[Math.floor(Math.random()*a.length)];
 /* ---------- sound: a tick per wedge and a little fanfare, off by default ---------- */
 let audio=null,soundOn=false;
 soundOn=true;try{soundOn=localStorage.getItem("mns-sound")!=="0"}catch(e){}
-function setSoundLabel(){const b=$("sound");b.setAttribute("aria-pressed",soundOn);b.textContent=soundOn?"Sound on":"Sound off"}
+function setSoundLabel(){const b=$("sound");b.setAttribute("aria-pressed",soundOn);b.textContent=soundOn?"Sound on":"Sound off";const q=document.getElementById("quickMute");if(q){q.setAttribute("aria-pressed",String(!soundOn));q.setAttribute("aria-label",soundOn?"Mute sound":"Turn sound on");q.classList.toggle("off",!soundOn)}}
 function ac(){if(!audio){const C=window.AudioContext||window.webkitAudioContext;if(C)audio=new C()}return audio}
 function tick(){if(!soundOn||!ac())return;const t=audio.currentTime;const src=audio.createBufferSource();src.buffer=noiseBuf();const f=audio.createBiquadFilter();f.type="bandpass";f.frequency.value=2400;f.Q.value=2.5;const g=audio.createGain();g.gain.setValueAtTime(.32,t);g.gain.exponentialRampToValueAtTime(.0001,t+.035);src.connect(f).connect(g).connect(audio.destination);src.start(t,Math.random()*1.5,.05)}
 function fanfare(){if(!soundOn||!ac())return;const t=audio.currentTime;[523.25,659.25,783.99,1046.5].forEach((f,i)=>{const o=audio.createOscillator(),g=audio.createGain();o.type="triangle";o.frequency.value=f;g.gain.setValueAtTime(0,t+i*.09);g.gain.linearRampToValueAtTime(.12,t+i*.09+.02);g.gain.exponentialRampToValueAtTime(.0001,t+i*.09+.9);o.connect(g).connect(audio.destination);o.start(t+i*.09);o.stop(t+i*.09+1)})}
@@ -40,6 +40,7 @@ const sfx={
 /* phones only allow sound after a tap: wake the audio on the first touch */
 if(typeof addEventListener!=="undefined")addEventListener("pointerdown",function wake(){if(soundOn&&ac()&&audio.state==="suspended")audio.resume();removeEventListener("pointerdown",wake)},{once:true});
 $("sound").addEventListener("click",()=>{soundOn=!soundOn;try{localStorage.setItem("mns-sound",soundOn?"1":"0")}catch(e){}setSoundLabel();if(soundOn&&ac()&&audio.state==="suspended")audio.resume();tick()});
+{const q=document.getElementById("quickMute");if(q)q.addEventListener("click",()=>$("sound").click())}
 setSoundLabel();
 
 /* ---------- the wheel: 24 lit wedges, each showing a film from tonight's programme ---------- */
@@ -1376,7 +1377,7 @@ function openChute(f,after){
     if(e.target===o)return close();const a=e.target.dataset&&e.target.dataset.a;if(!a)return;
     if(a==="back")return close();
     if(a==="drop"){
-      o.querySelector(".chute").classList.add("dropped");buzz([15,60,25]);
+      o.querySelector(".chute").classList.add("dropped");buzz([15,60,25]);setTimeout(()=>{try{sfx.clunk()}catch(e){}},reduce?0:350);
       member.out=(member.out||[]).filter(r=>r.id!==f.id);
       if(!watched.has(f.id)){watched.add(f.id);saveWatched();if(!spinning){setList();updateWatchButton()}}
       saveMember();

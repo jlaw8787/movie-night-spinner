@@ -1370,6 +1370,13 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 
 
 
+
+/* ---------- quick mute in the top bar ---------- */
+.top{position:relative}
+.quick-mute{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:44px;height:44px;display:grid;place-items:center;border-radius:50%;border:2px solid var(--line);background:rgba(0,0,0,.25);color:var(--screen);cursor:pointer}
+.quick-mute:focus-visible{outline:3px solid #ff3d6e;outline-offset:2px}
+.quick-mute .qm-off{display:none}.quick-mute.off .qm-on{display:none}.quick-mute.off .qm-off{display:inline}.quick-mute.off{opacity:.7}
+@media (max-width:520px){.top .views{margin-right:52px}.quick-mute{right:6px}}
 /* ---------- candy bar photos ---------- */
 .sc-item.has-img{display:grid;grid-template-columns:64px minmax(0,1fr) auto auto;align-items:center;gap:12px}
 .sc-img{width:64px;height:64px;border-radius:10px;object-fit:cover;background:#2a1a10;box-shadow:0 2px 0 rgba(0,0,0,.35)}
@@ -2301,6 +2308,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
       <button type="button" role="tab" id="viewShopBtn" aria-selected="false" aria-controls="viewShop">The aisles</button>
       <button type="button" role="tab" id="viewCraveBtn" aria-selected="false" aria-controls="viewCrave">Candy bar</button>
     </nav>
+    <button type="button" class="quick-mute" id="quickMute" aria-pressed="false" aria-label="Mute sound"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path class="qm-on" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/><path class="qm-off" d="M17 9l5 6M22 9l-5 6"/></svg></button>
   </header>
   <div class="ambient" id="ambient" aria-hidden="true"></div>
 
@@ -2454,7 +2462,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 <script src="providers.js?v=76e7a870" defer></script>
 <script src="films.js?v=29c0c1e4" defer></script>
 <script src="formats-core.js?v=d090b2ad" defer></script>
-<script src="app.js?v=6fe9f420" defer></script>
+<script src="app.js?v=282330e2" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
