@@ -109,19 +109,19 @@ SS = 4
 st = Image.new('L', (W * SS, H * SS), 0); sd = ImageDraw.Draw(st)
 hl = Image.new('L', (W * SS, H * SS), 0); hd = ImageDraw.Draw(hl)
 for px_ in (X0 + 74, X0 + OW - 74):
-    sd.rectangle(((px_ - 5) * SS, (Y0 - 16) * SS, (px_ + 5) * SS, (Y0 + 40) * SS), fill=255)
-    sd.rectangle(((px_ - 7) * SS, (Y0 - 18) * SS, (px_ + 7) * SS, (Y0 - 14) * SS), fill=255)   # cap plate
-    hd.rectangle(((px_ - 7) * SS, (Y0 - 18) * SS, (px_ + 7) * SS, (Y0 - 17) * SS), fill=255)
+    sd.rectangle(((px_ - 8) * SS, (Y0 - 16) * SS, (px_ + 8) * SS, (Y0 + 40) * SS), fill=255)
+    sd.rectangle(((px_ - 11) * SS, (Y0 - 19) * SS, (px_ + 11) * SS, (Y0 - 14) * SS), fill=255)   # cap plate
+    hd.rectangle(((px_ - 11) * SS, (Y0 - 19) * SS, (px_ + 11) * SS, (Y0 - 17) * SS), fill=255)
 for side in (-1, 1):
     ax = X0 + 8 if side < 0 else X0 + OW - 8
-    for (y_top, dx_, w_) in ((Y0 + 70, 58, 10), (Y0 + 150, 34, 8)):
+    for (y_top, dx_, w_) in ((Y0 + 70, 58, 18), (Y0 + 150, 34, 14)):
         bx = ax + side * dx_
         sd.line((ax * SS, y_top * SS, bx * SS, (ROOF + 3) * SS), fill=255, width=w_ * SS)
-        hd.line((ax * SS, (y_top - 2) * SS, bx * SS, (ROOF + 1) * SS), fill=200, width=2 * SS)
-    sd.rectangle(((ax + side * 64 - 6) * SS, (ROOF - 2) * SS, (ax + side * 64 + 6) * SS, (ROOF + 4) * SS), fill=255)   # base plate
+        hd.line((ax * SS, (y_top - 2) * SS, bx * SS, (ROOF + 1) * SS), fill=210, width=3 * SS)
+    sd.rectangle(((ax + side * 64 - 11) * SS, (ROOF - 3) * SS, (ax + side * 64 + 11) * SS, (ROOF + 4) * SS), fill=255)   # base plate
 st = np.asarray(st.resize((W, H), Image.LANCZOS)).astype(np.float32)[..., None] / 255
 hl = np.asarray(hl.resize((W, H), Image.LANCZOS)).astype(np.float32)[..., None] / 255
-steel = np.array([0.075, 0.07, 0.078]) * (0.85 + 0.3 * smooth_noise(H, W, 6, 41))[..., None]
+steel = np.array([0.15, 0.13, 0.17]) * (0.85 + 0.3 * smooth_noise(H, W, 6, 41))[..., None]
 canvas = canvas * (1 - st) + steel * st
 canvas = canvas + hl * st * np.array([0.26, 0.21, 0.30])
 
