@@ -2575,9 +2575,8 @@ function buildAisleNav(){
   if(secs.length<2){nav.hidden=true;box.classList.remove("one-aisle");return}
   nav.hidden=false;
   if(hereAisle&&!secs.some(s=>s.dataset.name===hereAisle))hereAisle=null;
-  const card=(name,count,cls)=>`<button type="button" class="an-card${cls?" "+cls:""}" data-go="${ESC(name)}" aria-pressed="${(name===""&&!hereAisle)||name===hereAisle}"><span class="an-sign">${ESC(name||"Every aisle")}</span><span class="an-n">${count} tape${count==1?"":"s"}</span></button>`;
-  const total=secs.reduce((t,s)=>t+(+s.dataset.count||0),0);
-  nav.querySelector(".an-row").innerHTML=card("",total,"all")+secs.map(s=>card(s.dataset.name,+s.dataset.count||0,"")).join("");
+  const card=(name,count,cls,unit)=>`<button type="button" class="an-card${cls?" "+cls:""}" data-go="${ESC(name)}" aria-pressed="${(name===""&&!hereAisle)||name===hereAisle}"><span class="an-sign">${ESC(name||"Every aisle")}</span><span class="an-n">${count} ${unit||"tape"}${count==1?"":"s"}</span></button>`;
+  nav.querySelector(".an-row").innerHTML=card("",secs.length,"all","aisle")+secs.map(s=>card(s.dataset.name,+s.dataset.count||0,"")).join("");
   applyAisle(false);
 }
 function applyAisle(scroll){
