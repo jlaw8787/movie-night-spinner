@@ -1367,6 +1367,25 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 #viewShop .shop-count{font:400 12px var(--f-board);letter-spacing:.06em;color:#ffd23f}
 
 
+
+/* ---------- aisle carousel: hanging signs you swipe, tap to walk down one aisle ---------- */
+.aisle-nav{order:7;margin:8px -16px 6px;padding:0 16px}
+.an-row{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:18px 4px 14px;scrollbar-width:none}
+.an-row::-webkit-scrollbar{display:none}
+.an-card{position:relative;flex:0 0 auto;min-width:132px;min-height:76px;scroll-snap-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:10px 16px;border-radius:6px;border:0;cursor:pointer;background:var(--shop-sign);color:#14204f;box-shadow:0 5px 0 #b58f12}
+.an-card::before,.an-card::after{content:"";position:absolute;top:-16px;width:2px;height:16px;background:repeating-linear-gradient(#9aa0b8 0 3px,transparent 3px 5px)}
+.an-card::before{left:16px}.an-card::after{right:16px}
+.an-card.all{background:#14204f;color:var(--shop-sign);box-shadow:0 5px 0 #070c24,inset 0 0 0 2px var(--shop-sign)}
+.an-sign{font:400 16px/1.1 var(--f-board);letter-spacing:.04em;white-space:nowrap}
+.an-n{font-size:12px;font-weight:600;opacity:.75}
+.an-card[aria-pressed="true"]{transform:translateY(3px);box-shadow:0 2px 0 #b58f12,0 0 0 3px #ff3d6e}
+.an-card.all[aria-pressed="true"]{box-shadow:0 2px 0 #070c24,inset 0 0 0 2px var(--shop-sign),0 0 0 3px #ff3d6e}
+.an-card:focus-visible{outline:3px solid #ff3d6e;outline-offset:3px}
+.an-back{margin:2px 0 4px;min-height:44px;padding:10px 18px;border-radius:999px;background:transparent;color:var(--screen);border:2px solid var(--line);font:400 14px var(--f-board);cursor:pointer}
+#shopAisles.one-aisle .aisle:not(.here),#shopAisles.one-aisle .aisles-later>h3,#shopAisles.one-aisle .aisles-later>p{display:none}
+#shopAisles.one-aisle .aisles-later{border-top:0;margin-top:0;padding-top:0}
+#shopAisles.one-aisle .aisle.here{margin-top:4px;content-visibility:visible}
+@media (prefers-reduced-motion:reduce){.an-card[aria-pressed="true"]{transform:none}}
 /* ---------- Galaxy Video walk-in: the shopfront you step through once per visit ---------- */
 .walkin{position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:16px;background:#0b0f2a;transition:opacity .5s ease}
 .walkin[hidden]{display:none}
@@ -2281,6 +2300,10 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
     <div class="cal" id="shopCal" aria-label="Holiday calendar"></div>
     <div class="member" id="memberCard"></div>
     <p class="shop-count" id="shopCount" aria-live="polite"></p>
+    <nav class="aisle-nav" id="aisleNav" aria-label="Pick an aisle" hidden>
+      <div class="an-row"></div>
+      <button type="button" class="an-back" id="aisleBack" hidden>Back to every aisle</button>
+    </nav>
     <div id="shopAisles"></div>
   </section>
 
@@ -2403,7 +2426,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 <script src="providers.js?v=76e7a870" defer></script>
 <script src="films.js?v=92a0ce25" defer></script>
 <script src="formats-core.js?v=d090b2ad" defer></script>
-<script src="app.js?v=68db2fc1" defer></script>
+<script src="app.js?v=4d408321" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

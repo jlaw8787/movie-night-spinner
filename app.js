@@ -1598,9 +1598,9 @@ function renderShop(){
   if(!q&&peekSeason){const c=cal.find(c=>c.s.id===peekSeason&&!c.on&&c.next);if(c)rows.unshift(...seasonRows(c.s,list,c.next).map(r=>{r[2]=(r[2]||"").replace(/^Back on /,"Sneak look. Back on ");return r}))}
   renderMember();
   $("shopCount").textContent=list.length?`${list.length} of ${FILMS.length} titles on the shelves`:"";
-  const aisle=([n,r,note,cls,st,sid])=>`<section class="aisle${cls?" "+cls:""}"${st?` style="${st}"`:""}${sid?` id="season-${sid}${/late show/.test(n)?"-late":""}"`:""}><div class="aisle-top"><h3 class="aisle-sign">${ESC(n)}<span>${r.length}</span></h3>${r.length>1?`<button class="aisle-spin" type="button" data-aisle="${ESC(n)}">Spin this aisle</button>`:""}${note?`<p class="aisle-note">${ESC(note)}</p>`:""}</div>${/lateshow/.test(cls||"")?`<button class="ls-curtain" type="button" aria-expanded="false" aria-label="Pull back the curtain"><img src="assets/hero/latedoor.webp" alt="" loading="lazy"><span class="ls-sign fit" style="left:34.81%;top:3.31%;width:31.12%;height:5.52%"><span class="fit-t">Late Show</span></span><span class="ls-tap">Pull back the curtain</span></button>`:""}<div class="shelf" data-k="${shelfRest.push(/lateshow/.test(cls||"")?[]:r.slice(SHELF_FIRST))-1}">${(/lateshow/.test(cls||"")?[]:r.slice(0,SHELF_FIRST)).map(tapeHTML).join("")}</div></section>`;
+  const aisle=([n,r,note,cls,st,sid])=>`<section class="aisle${cls?" "+cls:""}" data-name="${ESC(n)}" data-count="${r.length}"${st?` style="${st}"`:""}${sid?` id="season-${sid}${/late show/.test(n)?"-late":""}"`:""}><div class="aisle-top"><h3 class="aisle-sign">${ESC(n)}<span>${r.length}</span></h3>${r.length>1?`<button class="aisle-spin" type="button" data-aisle="${ESC(n)}">Spin this aisle</button>`:""}${note?`<p class="aisle-note">${ESC(note)}</p>`:""}</div>${/lateshow/.test(cls||"")?`<button class="ls-curtain" type="button" aria-expanded="false" aria-label="Pull back the curtain"><img src="assets/hero/latedoor.webp" alt="" loading="lazy"><span class="ls-sign fit" style="left:34.81%;top:3.31%;width:31.12%;height:5.52%"><span class="fit-t">Late Show</span></span><span class="ls-tap">Pull back the curtain</span></button>`:""}<div class="shelf" data-k="${shelfRest.push(/lateshow/.test(cls||"")?[]:r.slice(SHELF_FIRST))-1}">${(/lateshow/.test(cls||"")?[]:r.slice(0,SHELF_FIRST)).map(tapeHTML).join("")}</div></section>`;
   $("shopAisles").innerHTML=rows.length?rows.map(aisle).join("")+(later.length?`<div class="aisles-later"><h3>Holiday shelves</h3><p>Each one moves to the front of the shop when its day comes round.</p>${later.map(aisle).join("")}</div>`:""):`<p class="shelf-empty">${q?`No tapes match "${ESC(q)}". Check the spelling, or clear the filters.`:"Nothing on the shelves matches that. Try another title or clear the filters."}</p>`;
-  fillShelvesLater();
+  fillShelvesLater();buildAisleNav();
 }
 function tvHTML(f){
   const k=typeof TRAILERS!=="undefined"&&TRAILERS[f.id];
@@ -2566,3 +2566,29 @@ function openRentalMenu(f){setView("wheel");replay(f);addHistory(f);toMenu()}
   document.getElementById("wiSkip").addEventListener("click",()=>done(false));
   setTimeout(()=>{try{document.getElementById("wiIn").focus({preventScroll:true})}catch(e){}},50);
 })();
+
+/* the aisle carousel: swipe the hanging signs, tap one to walk down that aisle; "Every aisle" shows the lot */
+let hereAisle=null;try{hereAisle=sessionStorage.getItem("mns-aisle")||null}catch(e){}
+function buildAisleNav(){
+  const box=$("shopAisles"),nav=$("aisleNav");if(!box||!nav)return;
+  const secs=[...box.querySelectorAll(".aisle[data-name]")];
+  if(secs.length<2){nav.hidden=true;box.classList.remove("one-aisle");return}
+  nav.hidden=false;
+  if(hereAisle&&!secs.some(s=>s.dataset.name===hereAisle))hereAisle=null;
+  const card=(name,count,cls)=>`<button type="button" class="an-card${cls?" "+cls:""}" data-go="${ESC(name)}" aria-pressed="${(name===""&&!hereAisle)||name===hereAisle}"><span class="an-sign">${ESC(name||"Every aisle")}</span><span class="an-n">${count} tape${count==1?"":"s"}</span></button>`;
+  const total=secs.reduce((t,s)=>t+(+s.dataset.count||0),0);
+  nav.querySelector(".an-row").innerHTML=card("",total,"all")+secs.map(s=>card(s.dataset.name,+s.dataset.count||0,"")).join("");
+  applyAisle(false);
+}
+function applyAisle(scroll){
+  const box=$("shopAisles"),nav=$("aisleNav");if(!box||!nav)return;
+  box.classList.toggle("one-aisle",!!hereAisle);
+  box.querySelectorAll(".aisle[data-name]").forEach(s=>s.classList.toggle("here",s.dataset.name===hereAisle));
+  nav.querySelectorAll(".an-card").forEach(c=>c.setAttribute("aria-pressed",String((c.dataset.go===""&&!hereAisle)||c.dataset.go===hereAisle)));
+  $("aisleBack").hidden=!hereAisle;
+  const on=nav.querySelector('.an-card[aria-pressed="true"]');
+  if(on){try{on.scrollIntoView({block:"nearest",inline:"center",behavior:scroll&&!reduce?"smooth":"auto"})}catch(e){}}
+  if(scroll){const here=box.querySelector(".aisle.here");if(here){const sh=here.querySelector(".shelf[data-k]");try{fillShelf(sh)}catch(e){}}const st=document.querySelector("#viewShop .shop-tools"),pin=st&&/sticky|fixed/.test(getComputedStyle(st).position)?st.getBoundingClientRect().height:0;const y=nav.getBoundingClientRect().top+scrollY-topH()-pin-8;try{window.scrollTo({top:Math.max(0,y),behavior:reduce?"auto":"smooth"})}catch(e){window.scrollTo(0,Math.max(0,y))}}
+}
+function goAisle(name){hereAisle=name||null;try{hereAisle?sessionStorage.setItem("mns-aisle",hereAisle):sessionStorage.removeItem("mns-aisle")}catch(e){}if(hereAisle){try{sfx.clunk()}catch(e){}}applyAisle(true)}
+{const nav=$("aisleNav");if(nav){nav.addEventListener("click",e=>{const c=e.target.closest(".an-card");if(c)goAisle(c.dataset.go)});$("aisleBack").addEventListener("click",()=>goAisle(null))}}
