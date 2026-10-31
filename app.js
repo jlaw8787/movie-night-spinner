@@ -1171,27 +1171,29 @@ async function openTrolley(f,menuOverride,label){
   const own=!menuOverride;
   if(!menuOverride&&f._r2&&f._r2.dishes&&f._r2.dishes.length){if(f!==current)planLoad(f);menuOverride={s:[],m:[],w:[],d:[],shopping:planShopping(f)}}
   const serves=menuOverride&&menuOverride.serves||(f._r2?PLAN.guests:4);
-  const groups=shopGroups(menuOverride||mm);const all=groups.flatMap(([,l])=>l);
+  const groups=shopGroups(menuOverride||mm);if(own&&typeof extrasFor==="function"){const ex=extrasFor(f);if(ex.length)groups.push(["Your extras",ex])}const all=groups.flatMap(([,l])=>l);
   const o=document.createElement("dialog");o.className="trolley";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",label?`Shopping list: ${label}`:`Shopping list for ${f.title}`);
   const sessionKey=JSON.stringify([f.id,label||""]);
   if(!trolleySessionTicks.has(sessionKey))trolleySessionTicks.set(sessionKey,Object.create(null));
   const kf=own?tickKey:(x=>x);
   const ticks=()=>own?sharedTicks(f):week&&week.id===f.id?(week.ticks||(week.ticks={})):trolleySessionTicks.get(sessionKey);
+  const skip=k=>own&&typeof pantryHas==="function"&&pantryHas(f,k);const live=()=>all.filter(x=>!skip(kf(x)));
   const tick=(k,on,quiet)=>{if(own)setTick(f,k,on,quiet);else{const t=ticks();if(on)t[k]=true;else delete t[k];if(!quiet&&week&&week.id===f.id)saveWeek()}};
   o.innerHTML=`<div class="trolley-in"><h3>${ESC(label||f.title)}</h3><p class="tp" id="tProg"></p><div class="bar"><i id="tBar"></i></div>${groups.map(([a,l])=>`<h4>${ESC(a)}</h4><ul>${l.map(x=>`<li><label><input type="checkbox" data-k="${ESC(kf(x))}"${ticks()[kf(x)]?" checked":""}><span>${ESC(x)}</span></label></li>`).join("")}</ul>`).join("")}<div class="acts"><button class="go" type="button" data-a="share">Send to Notes or Reminders</button><button type="button" data-a="reset">Untick all</button><button type="button" data-a="done">Done</button></div><p class="msg" id="tMsg" role="status"></p></div>`;
-  const prog=()=>{const n=all.filter(x=>ticks()[kf(x)]).length;o.querySelector("#tProg").textContent=`${n} of ${all.length} in the trolley. Serves ${serves}.`;o.querySelector("#tBar").style.width=(all.length?100*n/all.length:0)+"%"};
+  const prog=()=>{const L=live(),n=L.filter(x=>ticks()[kf(x)]).length;o.querySelector("#tProg").textContent=`${n} of ${L.length} in the trolley. Serves ${serves}.`;o.querySelector("#tBar").style.width=(L.length?100*n/L.length:0)+"%"};
   o.addEventListener("change",e=>{const k=e.target.dataset.k;if(!k)return;tick(k,e.target.checked);o.querySelector("#tMsg").textContent="";prog()});
   const close=()=>dismissModal(o);
   o.addEventListener("click",async e=>{
     if(e.target===o)return close();const a=e.target.dataset&&e.target.dataset.a;if(!a)return;
     if(a==="done")close();
     if(a==="reset"){all.forEach(x=>tick(kf(x),false,true));if(week&&week.id===f.id)saveWeek();o.querySelectorAll("input").forEach(i=>i.checked=false);o.querySelector("#tMsg").textContent="";prog()}
-    if(a==="share"){const left=groups.map(([g,l])=>[g,l.filter(x=>!ticks()[kf(x)])]).filter(([,l])=>l.length);if(!left.length){o.querySelector("#tMsg").textContent=all.length?"Everything is in the trolley. Nothing left to send.":"This shopping list is empty.";return}const text=listText(f,left,serves);
+    if(a==="share"){const left=groups.map(([g,l])=>[g,l.filter(x=>!ticks()[kf(x)]&&!skip(kf(x)))]).filter(([,l])=>l.length);if(!left.length){o.querySelector("#tMsg").textContent=all.length?"Everything is in the trolley. Nothing left to send.":"This shopping list is empty.";return}const text=listText(f,left,serves);
       try{if(navigator.share){await navigator.share({title:`${f.title} shopping list`,text});o.querySelector("#tMsg").textContent="Sent."}else{await navigator.clipboard.writeText(text);o.querySelector("#tMsg").textContent="Copied. Paste it into Notes or Reminders."}}
       catch(err){if(!(err&&err.name==="AbortError"))o.querySelector("#tMsg").textContent="Couldn't share from here. Use Copy text under the menu instead."}}
   });
   if(!own&&!(week&&week.id===f.id))o.querySelector(".tp").insertAdjacentHTML("afterend",'<p class="tp">Lock this film in for the week to save your ticks.</p>');
   mountModal(o,"input,button",modalTrigger);prog();
+  if(own&&typeof initTicket==="function")initTicket(o,f,{groups,all,kf,ticks,prog,skip,serves,reopen:()=>{dismissModal(o);setTimeout(()=>openTrolley(f),60)}});
 }
 $("weekSet").addEventListener("click",()=>{if(current)setWeek(current)});
 
@@ -2591,3 +2593,51 @@ function applyAisle(scroll){
 }
 function goAisle(name){hereAisle=name||null;try{hereAisle?sessionStorage.setItem("mns-aisle",hereAisle):sessionStorage.removeItem("mns-aisle")}catch(e){}if(hereAisle){try{sfx.clunk()}catch(e){}}applyAisle(true)}
 {const nav=$("aisleNav");if(nav){nav.addEventListener("click",e=>{const c=e.target.closest(".an-card");if(c)goAisle(c.dataset.go)});$("aisleBack").addEventListener("click",()=>goAisle(null))}}
+
+/* the counter ticket: your own extras, a pantry check before you go, and a printed Galaxy Video ticket */
+function extrasFor(f){try{return JSON.parse(localStorage.getItem("mns-extras-"+f.id)||"[]").filter(x=>typeof x==="string"&&x.trim())}catch(e){return []}}
+function extrasSave(f,l){try{l.length?localStorage.setItem("mns-extras-"+f.id,JSON.stringify(l)):localStorage.removeItem("mns-extras-"+f.id)}catch(e){}}
+function pantryOf(f){try{return JSON.parse(localStorage.getItem("mns-pantry-"+f.id)||"{}")||{}}catch(e){return {}}}
+function pantryHas(f,k){return !!pantryOf(f)[k]}
+function pantrySet(f,k,on){const p=pantryOf(f);if(on)p[k]=1;else delete p[k];try{Object.keys(p).length?localStorage.setItem("mns-pantry-"+f.id,JSON.stringify(p)):localStorage.removeItem("mns-pantry-"+f.id)}catch(e){}}
+function initTicket(o,f,api){
+  const inner=o.querySelector(".trolley-in");if(!inner)return;
+  let mode="shop";
+  const head=document.createElement("div");head.className="tk-head";
+  head.innerHTML=`<div class="tk-mode" role="group" aria-label="List mode"><button type="button" data-m="pantry" aria-pressed="false">Pantry check</button><button type="button" data-m="shop" aria-pressed="true">Shopping</button></div><p class="tk-hint" id="tkHint"></p>`;
+  inner.querySelector(".bar").insertAdjacentElement("afterend",head);
+  const extra=document.createElement("form");extra.className="tk-add";
+  extra.innerHTML=`<label for="tkNew">Add your own</label><div><input id="tkNew" type="text" maxlength="60" autocomplete="off" placeholder="Milk, ice, bin bags"><button type="submit">Add</button></div>`;
+  inner.querySelector(".acts").insertAdjacentElement("beforebegin",extra);
+  inner.querySelector(".acts").insertAdjacentHTML("afterbegin",'<button type="button" class="tk-print">Print counter ticket</button>');
+  const ex=extrasFor(f);
+  inner.querySelectorAll("li input[data-k]").forEach(i=>{const raw=i.closest("li").textContent.trim();if(ex.includes(raw)){const b=document.createElement("button");b.type="button";b.className="tk-del";b.setAttribute("aria-label","Remove "+raw);b.textContent="Remove";b.dataset.del=raw;i.closest("li").appendChild(b)}});
+  const paint=()=>{
+    head.querySelectorAll("[data-m]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.m===mode)));
+    o.classList.toggle("pantry-mode",mode==="pantry");
+    let hidden=0;
+    inner.querySelectorAll("li input[data-k]").forEach(i=>{const k=i.dataset.k,li=i.closest("li"),home=pantryHas(f,k);
+      if(mode==="pantry"){i.checked=home;li.hidden=false}else{i.checked=!!api.ticks()[k];li.hidden=home;if(home)hidden++}});
+    inner.querySelectorAll("h4").forEach(h=>{const ul=h.nextElementSibling;if(ul)h.hidden=ul.querySelectorAll("li:not([hidden])").length===0});
+    const hint=head.querySelector("#tkHint");
+    hint.textContent=mode==="pantry"?"Tick what's already at home. Those come off the list.":hidden?`${hidden} already in the pantry, left off this list.`:"";
+    api.prog();
+  };
+  o.addEventListener("change",e=>{if(mode!=="pantry")return;const k=e.target.dataset&&e.target.dataset.k;if(!k)return;e.stopImmediatePropagation();pantrySet(f,k,e.target.checked);paint()},true);
+  head.addEventListener("click",e=>{const b=e.target.closest("[data-m]");if(!b)return;mode=b.dataset.m;paint()});
+  extra.addEventListener("submit",e=>{e.preventDefault();const v=extra.querySelector("input").value.trim();if(!v)return;const l=extrasFor(f);if(!l.includes(v))l.push(v);extrasSave(f,l);api.reopen()});
+  inner.addEventListener("click",e=>{const d=e.target.closest(".tk-del");if(d){extrasSave(f,extrasFor(f).filter(x=>x!==d.dataset.del));pantrySet(f,api.kf(d.dataset.del),false);api.reopen();return}
+    if(e.target.closest(".tk-print"))printTicket(f,api)});
+  paint();
+}
+function printTicket(f,api){
+  const left=api.groups.map(([g,l])=>[g,l.filter(x=>!api.skip(api.kf(x)))]).filter(([,l])=>l.length);
+  const d=new Date(),date=d.toLocaleDateString("en-AU",{day:"2-digit",month:"2-digit",year:"numeric"}),time=d.toLocaleTimeString("en-AU",{hour:"2-digit",minute:"2-digit"});
+  const E=x=>String(x).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+  const n=left.reduce((t,[,l])=>t+l.length,0);
+  const html=`<!doctype html><html><head><meta charset="utf-8"><title>Counter ticket</title><style>@page{margin:8mm}body{font:13px/1.45 "Courier New",monospace;color:#000;width:72mm;margin:0 auto}h1{font:700 20px/1 "Courier New",monospace;text-align:center;margin:6px 0 2px;letter-spacing:.06em}.c{text-align:center;margin:0}.rule{border-top:1px dashed #000;margin:8px 0}h2{font-size:13px;margin:8px 0 2px;text-transform:uppercase}ul{list-style:none;padding:0;margin:0}li{display:flex;gap:6px}li:before{content:"[ ]"}</style></head><body><h1>GALAXY VIDEO</h1><p class="c">Entertainment out of this world</p><div class="rule"></div><p>COUNTER TICKET<br>${E(f.title)} (${E(f.year)})<br>Serves ${E(api.serves)}<br>${date} ${time}</p><div class="rule"></div>${left.map(([g,l])=>`<h2>${E(g)}</h2><ul>${l.map(x=>`<li>${E(x)}</li>`).join("")}</ul>`).join("")}<div class="rule"></div><p>${n} item${n==1?"":"s"} to pick up</p><p class="c">Be kind, rewind.</p></body></html>`;
+  const fr=document.createElement("iframe");fr.style.cssText="position:fixed;width:0;height:0;border:0;right:0;bottom:0";fr.setAttribute("aria-hidden","true");document.body.appendChild(fr);
+  const doc=fr.contentWindow.document;doc.open();doc.write(html);doc.close();
+  setTimeout(()=>{try{fr.contentWindow.focus();fr.contentWindow.print()}catch(e){}setTimeout(()=>fr.remove(),1500)},250);
+  try{sfx.print()}catch(e){}
+}
