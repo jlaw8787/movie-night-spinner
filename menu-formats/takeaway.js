@@ -144,7 +144,7 @@ window.MENU_FORMATS[ID]=ctx=>{
    <div style="position:absolute;left:1020px;top:14px;bottom:14px;width:308px;display:flex;flex-direction:column;gap:12px">
      <div style="flex:none;padding:14px 18px 12px;box-sizing:border-box;background:${dark?toHex(mix(paper,[0,0,0],.2)):P};${dark?"":`border-bottom:6px solid ${BAR};`}box-shadow:0 5px 14px rgba(0,0,0,.35)">
        ${kick("Takeaway menu")}
-       <div data-fit data-min="22" style="height:92px;overflow:hidden;font-size:46px;display:flex;align-items:center;margin-top:2px"><div style="max-width:100%;overflow-wrap:break-word;font:${E.dw} 1em/1.02 ${E.disp};text-transform:uppercase;color:${INK};${press}">${esc(venue)}</div></div>
+       <div data-fit data-min="22" style="height:92px;overflow:hidden;font-size:46px;display:flex;align-items:center;margin-top:2px"><div style="max-width:100%;font:${E.dw} 1em/1.02 ${E.disp};text-transform:uppercase;color:${INK};${press}">${esc(venue)}</div></div>
        <div data-fit data-min="16" style="height:50px;overflow:hidden;font-size:20px;margin-top:2px"><div style="font:italic 500 1em/1.25 ${E.body};color:${SOFT}">${esc(sign)}</div></div></div>
      ${logoPanel}
      <div style="flex:none;transform:rotate(1.5deg);background:#fbfaf6;color:#222;padding:8px 14px;box-sizing:border-box;box-shadow:0 5px 14px rgba(0,0,0,.4);text-align:center;${eg==="new"?"border-radius:12px;":""}">

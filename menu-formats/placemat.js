@@ -149,8 +149,8 @@ const TONE={
   warm:{tex:.4,photo:" sepia(.08) saturate(1.04)",vig:.18,tilt:1.8,voice:"Come in, sit down, eat well."}
 };
 
-const NOISE="data:image/svg+xml,"+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45  0 0 0 0 .36  0 0 0 0 .22  0 0 0 .55 0'/></filter><rect width='300' height='300' filter='url(#n)'/></svg>");
-const BLOTCH="data:image/svg+xml,"+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900'><filter id='b'><feTurbulence type='fractalNoise' baseFrequency='.006' numOctaves='4' seed='7'/><feColorMatrix values='0 0 0 0 .62  0 0 0 0 .5  0 0 0 0 .3  0 0 0 .32 0'/></filter><rect width='900' height='900' filter='url(#b)'/></svg>");
+const NOISE="data:image/svg+xml,"+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .45  0 0 0 0 .36  0 0 0 0 .22  0 0 0 .55 0'/></filter><rect width='300' height='300' filter='url(#n)'/></svg>").replace(/'/g,"%27");
+const BLOTCH="data:image/svg+xml,"+encodeURIComponent("<svg xmlns='http://www.w3.org/2000/svg' width='900' height='900'><filter id='b'><feTurbulence type='fractalNoise' baseFrequency='.006' numOctaves='4' seed='7'/><feColorMatrix values='0 0 0 0 .62  0 0 0 0 .5  0 0 0 0 .3  0 0 0 .32 0'/></filter><rect width='900' height='900' filter='url(#b)'/></svg>").replace(/'/g,"%27");
 const HALFTONE="radial-gradient(rgba(40,25,10,.22) 30%,transparent 32%) 0 0/5px 5px";
 
 function price(k,i,yy){
@@ -231,7 +231,7 @@ window.MENU_FORMATS.placemat=ctx=>{
   const pr=(k,i)=>{if(k==="m"&&i===0&&num.length===2)return num[0]+"."+num[1]+"0";if(k==="m"&&i===0&&num.length===3)return num[0]+"."+num.slice(1);return price(k,i,yy)};
   const caps=L.caps?"text-transform:uppercase;":"";
   const spread=L.printSpread?"text-shadow:0 0 .6px currentColor;":"";
-  const tex=op=>`<div style="position:absolute;inset:0;background:url("${NOISE}") 0 0/300px;opacity:${op};mix-blend-mode:multiply;pointer-events:none"></div>`;
+  const tex=op=>`<div style="position:absolute;inset:0;background:url('${NOISE}') 0 0/300px;opacity:${op};mix-blend-mode:multiply;pointer-events:none"></div>`;
   const photoFilter=L.photo+T.photo;
 
   /* photos: still, or the poster on its own blurred bed when the film has no stills */
@@ -244,7 +244,7 @@ window.MENU_FORMATS.placemat=ctx=>{
     return base
       +(L.halftone?`<div style="position:absolute;inset:0;background:${HALFTONE};mix-blend-mode:multiply;opacity:.55"></div>`:"")
       +(T.sheen?`<div style="position:absolute;inset:0;background:linear-gradient(125deg,rgba(255,255,255,.22),rgba(255,255,255,0) 38%)"></div>`:"")
-      +(T.tex>=.7?`<div style="position:absolute;inset:0;background:url("${NOISE}") 0 0/220px;mix-blend-mode:multiply;opacity:.9"></div><div style="position:absolute;inset:0;background:url("${BLOTCH}") 0 0/700px;mix-blend-mode:multiply;opacity:.8"></div>`:"")
+      +(T.tex>=.7?`<div style="position:absolute;inset:0;background:url('${NOISE}') 0 0/220px;mix-blend-mode:multiply;opacity:.9"></div><div style="position:absolute;inset:0;background:url('${BLOTCH}') 0 0/700px;mix-blend-mode:multiply;opacity:.8"></div>`:"")
       +`<div style="position:absolute;inset:0;box-shadow:inset 0 0 ${60+T.vig*120}px rgba(0,0,0,${.15+T.vig*.6})"></div>`;
   };
   const heroP=stills[0]||ctx.poster,heroIsPoster=!stills[0];
@@ -327,7 +327,7 @@ window.MENU_FORMATS.placemat=ctx=>{
   ${tex(T.tex*.6)}
   <img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="window.__placematFit&&__placematFit(this)" style="position:absolute;width:1px;height:1px;opacity:0">
   <div style="position:absolute;left:${inset}px;top:${inset}px;width:${IW}px;height:${IH}px;background:${L.paper};border-radius:${L.radius}px;${frame}overflow:hidden">
-    <div style="position:absolute;inset:0;background:url("${BLOTCH}") 0 0/900px;mix-blend-mode:multiply;opacity:${.25+T.tex*.5};pointer-events:none"></div>
+    <div style="position:absolute;inset:0;background:url('${BLOTCH}') 0 0/900px;mix-blend-mode:multiply;opacity:${.25+T.tex*.5};pointer-events:none"></div>
     ${tex(T.tex)}
     <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${80+T.vig*160}px rgba(110,80,40,${T.vig*.6});pointer-events:none"></div>
 
@@ -387,7 +387,7 @@ window.MENU_FORMATS.placemat=ctx=>{
   ${tex(T.tex*.6)}
   <img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onload="window.__placematFit&&__placematFit(this)" style="position:absolute;width:1px;height:1px;opacity:0">
   <div style="position:absolute;left:${inset}px;top:${inset}px;width:${IW}px;height:${IH}px;background:${L.paper};border-radius:${L.radius}px;${frame}overflow:hidden">
-    <div style="position:absolute;inset:0;background:url("${BLOTCH}") 0 0/900px;mix-blend-mode:multiply;opacity:${.25+T.tex*.5};pointer-events:none"></div>
+    <div style="position:absolute;inset:0;background:url('${BLOTCH}') 0 0/900px;mix-blend-mode:multiply;opacity:${.25+T.tex*.5};pointer-events:none"></div>
     ${tex(T.tex)}
     <div style="position:absolute;left:0;top:0;width:${PW}px;height:${IH}px;overflow:hidden;background:${K.deep}"><img crossorigin="anonymous" alt="${esc(f.title)} (${esc(f.year)}) poster" src="${img(ctx.poster,"w780")}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block"></div>
     <div style="position:absolute;left:${PW}px;top:0;width:${gut}px;height:${IH}px;background:${gc}"></div>

@@ -153,7 +153,7 @@ window.MENU_FORMATS.home=function(ctx){
      <div style="height:1px;background:rgba(60,100,170,.45);margin-bottom:12px"></div>
      <div data-fit="16" style="height:${RH-20-16-20}px;overflow:hidden;font-size:20px;color:${ink}">
        ${kick(`Recipe box no. ${num}`)}
-       <div style="margin-top:.25em;font:${E.dw} 2em/1.04 ${dd};${up}color:${ink};overflow-wrap:anywhere">${x(venue)}</div>
+       <div style="margin-top:.25em;font:${E.dw} 2em/1.04 ${dd};${up}color:${ink}">${x(venue)}</div>
        <div style="margin-top:.35em;font:700 1em/1.3 ${bd};color:${acc}">${x(sign)}</div>
        ${f.T?`<div style="margin-top:.6em;font:italic 1.05em/1.35 ${bd}">${x(f.T)}</div>`:""}
        ${f.P?`<div style="margin-top:.8em;padding-top:.6em;border-top:1px solid rgba(0,0,0,.18)">${kick("Showtime")}<div style="margin-top:.2em;font:1em/1.35 ${bd}">${x(M.sent(f.P))}</div></div>`:""}
@@ -189,7 +189,7 @@ window.MENU_FORMATS.home=function(ctx){
        ${winks.map((w,i)=>`<div style="display:flex;gap:.4em;font:1em/1.3 ${bd};margin-bottom:.45em"><span style="font-weight:700;color:${acc}">${i+1}.</span><span>${x(w)}</span></div>`).join("")}
      </div>
    </div>
-   ${mags(String(num).slice(0,3),110,22,52)}
+   ${mags(String(num).slice(0,4),110,22,String(num).length>3?46:52)}
    ${rcard(cardA,26,552,-T.rot*.6,`No. ${num}`,`From the ${x(venue.replace(/^the\s+/i,""))}.`)}
    ${rcard(cardB,420,548,T.rot*.5,f.year?String(f.year):"",`Serves everyone on the couch. ${fam?"Every drink alcohol free. ":""}Photos: TMDB.`)}`;
   return {w:W,h:H,faces:[front,back]};

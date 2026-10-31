@@ -24,7 +24,7 @@ function inks(pal,paper,fallback){
 }
 function rng(seed){let h=2166136261;for(const ch of String(seed))h=Math.imul(h^ch.charCodeAt(0),16777619);return()=>{h=Math.imul(h^h>>>15,2246822507);h=Math.imul(h^h>>>13,3266489909);return((h^=h>>>16)>>>0)/4294967296}}
 /* procedural paper and ink texture (filters, never pictures of things) */
-const noise=(freq,oct,rgb,a,seed=1,size=320)=>`url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='${size}' height='${size}'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='${freq}' numOctaves='${oct}' seed='${seed}' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 ${(rgb[0]/255).toFixed(3)}  0 0 0 0 ${(rgb[1]/255).toFixed(3)}  0 0 0 0 ${(rgb[2]/255).toFixed(3)}  0 0 0 ${a} 0'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>`)}")`;
+const noise=(freq,oct,rgb,a,seed=1,size=320)=>`url('data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='${size}' height='${size}'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='${freq}' numOctaves='${oct}' seed='${seed}' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 ${(rgb[0]/255).toFixed(3)}  0 0 0 0 ${(rgb[1]/255).toFixed(3)}  0 0 0 0 ${(rgb[2]/255).toFixed(3)}  0 0 0 ${a} 0'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>`).replace(/'/g,"%27")}')`;
 const HALFTONE=(o,step=4)=>`<div style="position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,0,${o}) 32%,transparent 36%);background-size:${step}px ${step}px;mix-blend-mode:multiply;pointer-events:none"></div>`;
 const SHEEN=o=>`<div style="position:absolute;inset:0;background:linear-gradient(118deg,rgba(255,255,255,${o}) 0%,rgba(255,255,255,0) 38%,rgba(255,255,255,0) 70%,rgba(255,255,255,${o*.5}) 100%);pointer-events:none"></div>`;
 /* era: type pairing group, print process, photo handling, price level */
@@ -110,7 +110,7 @@ function fitRoot(root){
       for(const L of [2,1]){if(!over(box))break;ns.forEach(e=>{e.style.display="-webkit-box";e.style.webkitBoxOrient="vertical";e.style.webkitLineClamp=String(L);e.style.overflow="hidden"})}
       if(over(box))ns.forEach(e=>{e.style.display="none"})}
     /* last resort: drop extra items (highest index first, later courses first), then fine print extras */
-    const dr=[...box.querySelectorAll("[data-drop]")].map((e,i)=>[+(e.dataset.drop||0),i,e]).sort((x,y)=>x[0]-y[0]||x[1]-y[1]);
+    const dr=[...box.querySelectorAll("[data-drop]")].filter(e=>e.parentElement.closest("[data-box]")===box||e.closest("[data-box]")===box).map((e,i)=>[+(e.dataset.drop||0),i,e]).sort((x,y)=>x[0]-y[0]||x[1]-y[1]);
     while(over(box)&&dr.length)dr.pop()[2].style.display="none";
   });
 }
@@ -248,9 +248,9 @@ window.MENU_FORMATS[ID]=ctx=>{
           <div data-fs="17" data-min="14" style="font:italic ${ty.bw} 17px ${ty.body};line-height:1.22;margin-top:3px">${T(ctx.f.P||"Supper is served at sundown.")}</div>
           <div data-fs="17" data-min="14" style="margin-top:10px;font:italic ${ty.bw} 17px ${ty.body};line-height:1.22">\u201c${T(F.note.text)}\u201d <span data-fs="${ty.sigS-8}" data-min="16" style="font:${ty.sigS-8}px ${ty.sig};color:${C.ink};font-style:normal">${T(F.note.by)}</span></div>
         </div>
-        <div data-box style="width:100%;height:96px;overflow:hidden;box-sizing:border-box;padding:5px 8px;background:${toHex(mix(hex(P.bg),WHITE,.55))};border:2px solid ${C.ink};outline:1px solid ${C.ink};outline-offset:-6px;transform:rotate(${TN.tilt*.8}deg);text-align:center">
+        <div data-box style="width:100%;height:auto;min-height:80px;max-height:130px;overflow:hidden;box-sizing:border-box;padding:5px 8px;background:${toHex(mix(hex(P.bg),WHITE,.55))};border:2px solid ${C.ink};outline:1px solid ${C.ink};outline-offset:-6px;transform:rotate(${TN.tilt*.8}deg);text-align:center">
           <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.1em;text-transform:uppercase;color:${C.ink};line-height:1.15">${T(F.prop.title)}</div>
-          ${propLines(F.prop).map(l=>`<div data-drop data-fs="16" data-min="14" style="font:${ty.bw} 16px ${ty.body};line-height:1.2">${T(l)}</div>`).join("")}
+          ${propLines(F.prop).map(l=>`<div data-drop="-1" data-fs="16" data-min="14" style="font:${ty.bw} 16px ${ty.body};line-height:1.2">${T(l)}</div>`).join("")}
         </div>
       </div>
     </div>

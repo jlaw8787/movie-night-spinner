@@ -140,7 +140,7 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   /* bill of fare: two columns with a rule between, dotted leaders to coin prices */
   const m=ctx.menu||{};
-  const secHead=t=>`<div style="break-inside:avoid;text-align:center;white-space:nowrap;margin:0 0 .3em;font-family:${D};font-weight:${E.dw};font-size:max(18px,1.08em);line-height:1.1;color:${acc};${E.up?"text-transform:uppercase;letter-spacing:.1em":""}">${E.orn} ${esc(t)} ${E.orn}</div>`;
+  const secHead=t=>`<div style="break-inside:avoid;text-align:center;white-space:nowrap;margin:0 0 .3em;font-family:${D};font-weight:${E.dw};font-size:max(18px,1.08em);line-height:1.1;color:${acc};${E.up?"text-transform:uppercase;letter-spacing:.1em":""}">${E.up&&t.length>12?esc(t):`${E.orn} ${esc(t)} ${E.orn}`}</div>`;
   function row(it,ci,ii){
     const n=clean(it.n),p=price(f,fl,ci,ii,n,E.coin);
     return `<div style="break-inside:avoid;margin:0 0 .45em"><div style="display:flex;align-items:baseline;gap:.3em"><span style="font:600 max(15px,1em)/1.15 ${B};color:${ink}">${esc(n)}</span><span style="flex:1;min-width:1em;border-bottom:2px dotted ${ink};opacity:.45;transform:translateY(-.2em)"></span><span style="flex:none;font:italic 600 max(15px,.86em)/1.15 ${B};color:${acc}">${esc(p)}</span></div>

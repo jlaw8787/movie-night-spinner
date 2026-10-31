@@ -970,7 +970,9 @@ function libUnclip(card,done){if(done)card.dataset.unclip="1";card.querySelector
   if(hid()&&cs.whiteSpace==="nowrap"){let ws=0;while(hid()&&ws>-3){ws-=0.5;e.style.wordSpacing=ws+"px"}if(hid()){e.style.whiteSpace="normal";e.style.textOverflow="clip"}}
   /* last resort for plain fine print: drop whole sentences; if it still cannot fit, hide the line rather than show half a description */
   if(hid()&&e.children.length===0&&(+cs.webkitLineClamp>=2||(+cs.webkitLineClamp===1&&fs<=20))){let t=e.textContent.trim();const sent=t.match(/[^.!?]+[.!?]+/g);while(hid()&&sent&&sent.length>1){sent.pop();e.textContent=sent.join("").trim()}
-    if(hid())e.style.visibility="hidden";}
+    /* still over: drop list items off the end at the commas, so it reads "Hummus and eggplant dip, flatbread." not "olives,..." */
+    if(hid()){const parts=e.textContent.trim().replace(/[.!?]+$/,"").split(/,\s+/);while(hid()&&parts.length>1){parts.pop();e.textContent=parts.join(", ")+"."}}
+    if(hid())e.style.display="none";}
  })}
 function libMenu(menu){const m=Object.assign({},menu);for(const c of ["s","m","w","d"])if(Array.isArray(menu[c]))m[c]=menu[c].map(it=>Object.assign({},it,{note:libTrim(it.note,100)}));return m}
 /* menu format library: one script per printed-menu format, fetched the first time a film needs it */

@@ -6,7 +6,7 @@ function fmtMarket(f,spec,menu,poster){
   const col=c=>c==="red"?RED:BLUE;
   const pick=k=>menu.all.find(x=>(x.orig||x.n)===k)||{};
   const head=(t,c)=>`<div style="${PAINT};font-size:31px;line-height:1;letter-spacing:.03em;color:${c};text-shadow:3px 3px 0 ${SHADOW};transform:rotate(-1deg);white-space:nowrap;text-transform:uppercase">${ESC(t)}</div>`;
-  const name=t=>`<span style="${PAINT};font-size:26px;line-height:1.05;color:${INK};letter-spacing:.02em;text-transform:uppercase;white-space:nowrap">${ESC(t)}</span><span style="flex:1;border-bottom:3px dotted rgba(21,21,21,.45);transform:translateY(-6px);min-width:10px"></span>`;
+  const name=t=>`<span style="${PAINT};font-size:26px;line-height:1.05;color:${INK};letter-spacing:.02em;text-transform:uppercase;flex:0 1 auto;min-width:0">${ESC(t)}</span><span style="flex:1;border-bottom:3px dotted rgba(21,21,21,.45);transform:translateY(-6px);min-width:10px"></span>`;
   const note=t=>`<div style="${HAND};font-size:20.5px;line-height:1.15;color:#3d3a35;margin-top:2px">${ESC(t)}</div>`;
   const item=x=>{const it=pick(x.k),lab=it.label||x.n||x.k;
     if(x.burst)return `<div style="position:relative;padding-right:96px"><div style="display:flex;align-items:baseline;gap:10px">${name(lab)}</div>${note(x.note)}<div style="position:absolute;right:-8px;top:-12px">${fmtStar(x.burst[0],x.burst[1],x.burst[2],x.burst[3],98)}</div></div>`;
