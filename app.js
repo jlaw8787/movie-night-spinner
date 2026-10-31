@@ -1678,7 +1678,7 @@ function showWelcome(){
   const modalTrigger=document.activeElement;
   const o=document.createElement("dialog");o.className="welcome";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label","How it works");
   o.innerHTML=`<div class="welcome-in"><h2>Movie night, sorted</h2><p class="lead">Pick a film and dinner comes with it.</p><ol>
-  <li><span><b>Pick a film</b>Spin the wheel at the counter, browse the aisles, or start from what you're craving at the candy bar.</span></li>
+  <li><span><b>Pick a film</b>Spin the wheel at the box office, browse the shelves at Galaxy Video, or start from what you're craving at the candy bar.</span></li>
   <li><span><b>Get the menu</b>Every film has its own menu built from the movie, with recipes and a shopping list that scales from 1 to 60 guests.</span></li>
   <li><span><b>Cook, then press play</b>Lock it in for the week, tick off the shopping, and check where it's streaming.</span></li>
   </ol><button class="btn primary" type="button">Let's go</button></div>`;
@@ -2557,26 +2557,27 @@ function isRentedOut(f){return (member.out||[]).some(r=>r.id===f.id)&&!watched.h
 function openRentalMenu(f){setView("wheel");replay(f);addHistory(f);toMenu()}
 
 /* the walk-in: Galaxy Video's shopfront, once per visit, never in the way of a shared film link */
-(function(){
-  const w=document.getElementById("walkin");if(!w)return;
+function openWalkin(){
+  const w=document.getElementById("walkin");if(!w||!w.hidden)return;
   let seen=false;try{seen=sessionStorage.getItem("mns-walkin")==="1"}catch(e){}
-  const linked=new URLSearchParams(location.search).get("film")||location.hash;
-  if(seen||linked)return;
+  if(seen)return;
   const prev=document.activeElement;
   w.hidden=false;document.body.style.overflow="hidden";
   try{fitSigns(w,true)}catch(e){}
   const done=(walk)=>{
     try{sessionStorage.setItem("mns-walkin","1")}catch(e){}
     document.removeEventListener("keydown",key);
-    const close=()=>{w.hidden=true;w.classList.remove("going");document.body.style.overflow="";document.dispatchEvent(new Event("walkin-done"));const b=document.getElementById("viewWheelBtn");try{(b||prev).focus({preventScroll:true})}catch(e){}};
+    const close=()=>{w.hidden=true;w.classList.remove("going");document.body.style.overflow="";document.dispatchEvent(new Event("walkin-done"));const b=document.getElementById("viewShopBtn");try{(b||prev).focus({preventScroll:true})}catch(e){}};
     if(walk){try{sfx.chime()}catch(e){}if(reduce){close();return}w.classList.add("going");setTimeout(close,900)}else close();
   };
   const key=e=>{if(e.key==="Escape"){e.preventDefault();done(false)}else if(e.key==="Tab"){const f=[document.getElementById("wiIn"),document.getElementById("wiSkip")];const i=f.indexOf(document.activeElement);e.preventDefault();f[(i+(e.shiftKey?f.length-1:1))%f.length].focus()}};
   document.addEventListener("keydown",key);
-  document.getElementById("wiIn").addEventListener("click",()=>done(true));
-  document.getElementById("wiSkip").addEventListener("click",()=>done(false));
+  document.getElementById("wiIn").addEventListener("click",()=>done(true),{once:true});
+  document.getElementById("wiSkip").addEventListener("click",()=>done(false),{once:true});
   setTimeout(()=>{try{document.getElementById("wiIn").focus({preventScroll:true})}catch(e){}},50);
-})();
+}
+/* the cinema is the front door: the shopfront only plays the first time you step into Galaxy Video */
+{const sb=document.getElementById("viewShopBtn");if(sb)sb.addEventListener("click",()=>setTimeout(openWalkin,60))}
 
 /* the aisle carousel: swipe the hanging signs, tap one to walk down that aisle; "Every aisle" shows the lot */
 let hereAisle=null;try{hereAisle=sessionStorage.getItem("mns-aisle")||null}catch(e){}
@@ -2603,7 +2604,7 @@ function applyAisle(scroll){
 function goAisle(name){hereAisle=name||null;try{hereAisle?sessionStorage.setItem("mns-aisle",hereAisle):sessionStorage.removeItem("mns-aisle")}catch(e){}if(hereAisle){try{sfx.clunk()}catch(e){}}applyAisle(true)}
 {const nav=$("aisleNav");if(nav){nav.addEventListener("click",e=>{const c=e.target.closest(".an-card");if(c)goAisle(c.dataset.go)});$("aisleBack").addEventListener("click",()=>goAisle(null))}}
 
-/* the counter ticket: your own extras, a pantry check before you go, and a printed Galaxy Video ticket */
+/* the box office ticket: your own extras, a pantry check before you go, and a printed Movie Night ticket */
 function extrasFor(f){try{return JSON.parse(localStorage.getItem("mns-extras-"+f.id)||"[]").filter(x=>typeof x==="string"&&x.trim())}catch(e){return []}}
 function extrasSave(f,l){try{l.length?localStorage.setItem("mns-extras-"+f.id,JSON.stringify(l)):localStorage.removeItem("mns-extras-"+f.id)}catch(e){}}
 function pantryOf(f){try{return JSON.parse(localStorage.getItem("mns-pantry-"+f.id)||"{}")||{}}catch(e){return {}}}
@@ -2618,7 +2619,7 @@ function initTicket(o,f,api){
   const extra=document.createElement("form");extra.className="tk-add";
   extra.innerHTML=`<label for="tkNew">Add your own</label><div><input id="tkNew" type="text" maxlength="60" autocomplete="off" placeholder="Milk, ice, bin bags"><button type="submit">Add</button></div>`;
   inner.querySelector(".acts").insertAdjacentElement("beforebegin",extra);
-  inner.querySelector(".acts").insertAdjacentHTML("afterbegin",'<button type="button" class="tk-print">Print counter ticket</button>');
+  inner.querySelector(".acts").insertAdjacentHTML("afterbegin",'<button type="button" class="tk-print">Print box office ticket</button>');
   const ex=extrasFor(f);
   inner.querySelectorAll("li input[data-k]").forEach(i=>{const raw=i.closest("li").textContent.trim();if(ex.includes(raw)){const b=document.createElement("button");b.type="button";b.className="tk-del";b.setAttribute("aria-label","Remove "+raw);b.textContent="Remove";b.dataset.del=raw;i.closest("li").appendChild(b)}});
   const paint=()=>{
@@ -2644,7 +2645,7 @@ function printTicket(f,api){
   const d=new Date(),date=d.toLocaleDateString("en-AU",{day:"2-digit",month:"2-digit",year:"numeric"}),time=d.toLocaleTimeString("en-AU",{hour:"2-digit",minute:"2-digit"});
   const E=x=>String(x).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
   const n=left.reduce((t,[,l])=>t+l.length,0);
-  const html=`<!doctype html><html><head><meta charset="utf-8"><title>Counter ticket</title><style>@page{margin:8mm}body{font:13px/1.45 "Courier New",monospace;color:#000;width:72mm;margin:0 auto}h1{font:700 20px/1 "Courier New",monospace;text-align:center;margin:6px 0 2px;letter-spacing:.06em}.c{text-align:center;margin:0}.rule{border-top:1px dashed #000;margin:8px 0}h2{font-size:13px;margin:8px 0 2px;text-transform:uppercase}ul{list-style:none;padding:0;margin:0}li{display:flex;gap:6px}li:before{content:"[ ]"}</style></head><body><h1>GALAXY VIDEO</h1><p class="c">Entertainment out of this world</p><div class="rule"></div><p>COUNTER TICKET<br>${E(f.title)} (${E(f.year)})<br>Serves ${E(api.serves)}<br>${date} ${time}</p><div class="rule"></div>${left.map(([g,l])=>`<h2>${E(g)}</h2><ul>${l.map(x=>`<li>${E(x)}</li>`).join("")}</ul>`).join("")}<div class="rule"></div><p>${n} item${n==1?"":"s"} to pick up</p><p class="c">Be kind, rewind.</p></body></html>`;
+  const html=`<!doctype html><html><head><meta charset="utf-8"><title>Box office ticket</title><style>@page{margin:8mm}body{font:13px/1.45 "Courier New",monospace;color:#000;width:72mm;margin:0 auto}h1{font:700 20px/1 "Courier New",monospace;text-align:center;margin:6px 0 2px;letter-spacing:.06em}.c{text-align:center;margin:0}.rule{border-top:1px dashed #000;margin:8px 0}h2{font-size:13px;margin:8px 0 2px;text-transform:uppercase}ul{list-style:none;padding:0;margin:0}li{display:flex;gap:6px}li:before{content:"[ ]"}</style></head><body><h1>MOVIE NIGHT</h1><p class="c">Now showing at your place</p><div class="rule"></div><p>BOX OFFICE TICKET<br>${E(f.title)} (${E(f.year)})<br>Serves ${E(api.serves)}<br>${date} ${time}</p><div class="rule"></div>${left.map(([g,l])=>`<h2>${E(g)}</h2><ul>${l.map(x=>`<li>${E(x)}</li>`).join("")}</ul>`).join("")}<div class="rule"></div><p>${n} item${n==1?"":"s"} to pick up</p><p class="c">Lights down. Enjoy the show.</p></body></html>`;
   const fr=document.createElement("iframe");fr.style.cssText="position:fixed;width:0;height:0;border:0;right:0;bottom:0";fr.setAttribute("aria-hidden","true");document.body.appendChild(fr);
   const doc=fr.contentWindow.document;doc.open();doc.write(html);doc.close();
   setTimeout(()=>{try{fr.contentWindow.focus();fr.contentWindow.print()}catch(e){}setTimeout(()=>fr.remove(),1500)},250);
