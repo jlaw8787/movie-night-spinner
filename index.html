@@ -1366,7 +1366,23 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 #viewShop .shop-tools input:focus-visible,#viewShop .shop-tools select:focus-visible{outline:3px solid #ff3d6e;outline-offset:3px}
 #viewShop .shop-count{font:400 12px var(--f-board);letter-spacing:.06em;color:#ffd23f}
 
-/* ---------- Spinner Video: shopfront, price board, neon weeklies, the wall, staff picks, late show ---------- */
+
+/* ---------- Galaxy Video walk-in: the shopfront you step through once per visit ---------- */
+.walkin{position:fixed;inset:0;z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:16px;background:#0b0f2a;transition:opacity .5s ease}
+.walkin[hidden]{display:none}
+.wi-scene{position:relative;width:min(100%,1100px);aspect-ratio:2/1;container-type:inline-size;border-radius:10px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.6);transform-origin:55% 55%;transition:transform .9s cubic-bezier(.5,0,.75,0)}
+.wi-scene img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.wi-scene .sv-sign small{font:600 1.5cqw/1 var(--f-body,system-ui);letter-spacing:.08em;color:#b3172f;opacity:.8;margin-top:.5cqw;mix-blend-mode:multiply}
+.wi-acts{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.wi-in,.wi-skip{min-height:48px;padding:12px 28px;border-radius:999px;font:400 17px var(--f-board);letter-spacing:.05em;cursor:pointer}
+.wi-in{background:#ffd23f;color:#14204f;border:2px solid #ffd23f}
+.wi-skip{background:transparent;color:#f6efe0;border:2px solid rgba(246,239,224,.45)}
+.wi-in:focus-visible,.wi-skip:focus-visible{outline:3px solid #ff5a8a;outline-offset:3px}
+.walkin.going .wi-scene{transform:scale(3.2)}
+.walkin.going{opacity:0}
+@media (prefers-reduced-motion:reduce){.wi-scene{transition:none}.walkin.going .wi-scene{transform:none}}
+@media (max-width:640px){.walkin{gap:16px}.wi-in,.wi-skip{font-size:15px;padding:12px 22px}}
+/* ---------- Galaxy Video: shopfront, price board, neon weeklies, the wall, staff picks, late show ---------- */
 .sv-front{position:relative;overflow:hidden;border-radius:12px;margin:-18px -16px 14px;aspect-ratio:2/1;container-type:inline-size;background:#0b0f2a}
 .sv-front img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .sv-front.noimg{display:none}
@@ -2222,10 +2238,20 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
       <div class="palace-glow" aria-hidden="true"></div>
     </div>
   </header>
+  <div class="walkin" id="walkin" role="dialog" aria-modal="true" aria-labelledby="wiName" hidden>
+  <div class="wi-scene" id="wiScene">
+    <img src="assets/hero/shopfront-1400.webp" srcset="assets/hero/shopfront-1000.webp 1000w, assets/hero/shopfront-1400.webp 1400w, assets/hero/shopfront.webp 1774w" sizes="100vw" alt="Galaxy Video shopfront at night">
+    <div class="sv-sign fit" style="left:6.20%;top:5.86%;width:87.09%;height:11.72%"><span class="fit-t" id="wiName">Galaxy Video</span><small>Entertainment out of this world</small></div>
+  </div>
+  <div class="wi-acts">
+    <button type="button" class="wi-in" id="wiIn">Walk in</button>
+    <button type="button" class="wi-skip" id="wiSkip">Skip</button>
+  </div>
+</div>
   <header class="top">
     <nav class="views" role="tablist" aria-label="View">
-      <button type="button" role="tab" id="viewWheelBtn" aria-selected="true" aria-controls="viewWheel">Spin</button>
-      <button type="button" role="tab" id="viewShopBtn" aria-selected="false" aria-controls="viewShop">Video store</button>
+      <button type="button" role="tab" id="viewWheelBtn" aria-selected="true" aria-controls="viewWheel">The counter</button>
+      <button type="button" role="tab" id="viewShopBtn" aria-selected="false" aria-controls="viewShop">The aisles</button>
       <button type="button" role="tab" id="viewCraveBtn" aria-selected="false" aria-controls="viewCrave">Candy bar</button>
     </nav>
   </header>
@@ -2235,10 +2261,10 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
   <section class="week" id="weekPanel" aria-label="This week's film" hidden></section>
   <section class="week motw" id="motw" aria-label="Menu of the week" hidden></section>
 
-  <section class="shop" id="viewShop" aria-label="Video store" hidden>
-    <div class="sv-front" id="svFront"><img src="assets/hero/shopfront-1000.webp" srcset="assets/hero/shopfront-1000.webp 1000w, assets/hero/shopfront-1400.webp 1400w, assets/hero/shopfront.webp 1774w" sizes="(max-width:640px) 460px, 1240px" alt="Spinner Video shopfront at night" loading="lazy"><div class="sv-sign fit" style="left:6.20%;top:5.86%;width:87.09%;height:11.72%"><span class="fit-t">Spinner Video</span><small>Open 7 days till late</small></div></div>
+  <section class="shop" id="viewShop" aria-label="The aisles" hidden>
+    <div class="sv-front" id="svFront"><img src="assets/hero/shopfront-1000.webp" srcset="assets/hero/shopfront-1000.webp 1000w, assets/hero/shopfront-1400.webp 1400w, assets/hero/shopfront.webp 1774w" sizes="(max-width:640px) 460px, 1240px" alt="Galaxy Video shopfront at night" loading="lazy"><div class="sv-sign fit" style="left:6.20%;top:5.86%;width:87.09%;height:11.72%"><span class="fit-t">Galaxy Video</span><small>Entertainment out of this world</small></div></div>
     <div class="shop-head">
-      <h2 class="shop-sign">Spinner Video<small>Every film on the wheel, face-out on the shelves. Tap a tape to read the back.</small></h2>
+      <h2 class="shop-sign">Galaxy Video<small>Every film on the wheel, face-out on the shelves. Tap a tape to read the back.</small></h2>
       <div class="shop-tools">
         <input type="search" id="shopSearch" placeholder="Ask the counter" aria-label="Search titles">
         <details class="shop-filt" id="shopFilt" open><summary>Filters<span class="sf-n" id="shopFiltN"></span></summary><div class="sf-in">
@@ -2277,7 +2303,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
     <div class="crave-grid" id="craveGrid"></div>
   </section>
 
-  <div class="stage" id="viewWheel">
+  <div class="stage" id="viewWheel" aria-label="The counter">
     <section class="deck" aria-label="Spin wheel">
       <div class="wheel-wrap">
         <div class="pointer" id="pointer" aria-hidden="true"><img src="assets/hero/pointer.webp" alt=""></div>
@@ -2377,7 +2403,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 <script src="providers.js?v=76e7a870" defer></script>
 <script src="films.js?v=92a0ce25" defer></script>
 <script src="formats-core.js?v=d090b2ad" defer></script>
-<script src="app.js?v=f3268208" defer></script>
+<script src="app.js?v=68db2fc1" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

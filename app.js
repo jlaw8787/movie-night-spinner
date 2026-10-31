@@ -1292,7 +1292,7 @@ function renderMember(){
   const outList=(member.out||[]).filter(r=>!watched.has(r.id)).map(r=>({r,f:FILMS.find(x=>x.id===r.id)})).filter(x=>x.f);
   const late=lateFees();const owe=late.reduce((n,x)=>n+Math.min(x.days,10),0);
   const fee=late.length?`Late fees: $${owe}.00 on ${late.slice(0,2).map(x=>x.f.title).join(" and ")}${late.length>2?` and ${late.length-2} more`:""}. Mark it seen to clear the slate.`:"Late fees: none. Good member.";
-  box.innerHTML=`<div class="member-logo" aria-hidden="true">SV</div><p class="member-k">Spinner Video member</p><input id="memberName" type="text" maxlength="28" autocomplete="off" aria-label="Name on your member card" placeholder="Tap to write your name" value="${ESC(member.name||"")}"><p class="member-meta"><span>No. ${member.no.slice(0,3)} ${member.no.slice(3)}</span><span>Since ${since}</span><span>Rentals ${member.rentals||0}</span>${fav?`<span>Usually in ${ESC(fav[0])}</span>`:""}</p><p class="member-fee${late.length?" owing":""}">${ESC(fee)}</p>${outList.length?`<ul class="member-out">${outList.map(({f,r})=>`<li><button type="button" class="out-open" data-open="${ESC(f.id)}" aria-label="Open the menu for ${ESC(f.title)}"><span class="t">${ESC(f.title)}</span><small>due ${new Date(r.due).toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"})}. Tap for the menu</small></button><button type="button" data-ret="${ESC(f.id)}">Return</button></li>`).join("")}</ul>${outList.length>1?'<button type="button" class="out-all" data-retall="1">Return them all</button>':""}`:""}<div class="member-sync">${member.pin?`<p id="syncNote">${ESC(syncNote())}</p><button type="button" data-sync="out">Sign out here</button>`:`<button type="button" data-sync="join">Put my card online</button><button type="button" data-sync="in">Use my card from another device</button>`}</div>`;
+  box.innerHTML=`<div class="member-logo" aria-hidden="true">GV</div><p class="member-k">Galaxy Video member</p><input id="memberName" type="text" maxlength="28" autocomplete="off" aria-label="Name on your member card" placeholder="Tap to write your name" value="${ESC(member.name||"")}"><p class="member-meta"><span>No. ${member.no.slice(0,3)} ${member.no.slice(3)}</span><span>Since ${since}</span><span>Rentals ${member.rentals||0}</span>${fav?`<span>Usually in ${ESC(fav[0])}</span>`:""}</p><p class="member-fee${late.length?" owing":""}">${ESC(fee)}</p>${outList.length?`<ul class="member-out">${outList.map(({f,r})=>`<li><button type="button" class="out-open" data-open="${ESC(f.id)}" aria-label="Open the menu for ${ESC(f.title)}"><span class="t">${ESC(f.title)}</span><small>due ${new Date(r.due).toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"})}. Tap for the menu</small></button><button type="button" data-ret="${ESC(f.id)}">Return</button></li>`).join("")}</ul>${outList.length>1?'<button type="button" class="out-all" data-retall="1">Return them all</button>':""}`:""}<div class="member-sync">${member.pin?`<p id="syncNote">${ESC(syncNote())}</p><button type="button" data-sync="out">Sign out here</button>`:`<button type="button" data-sync="join">Put my card online</button><button type="button" data-sync="in">Use my card from another device</button>`}</div>`;
   $("memberName").addEventListener("change",e=>{member.name=e.target.value.trim();saveMember();renderShop()});
   box.querySelectorAll("[data-ret]").forEach(b=>b.addEventListener("click",()=>{const f=FILMS.find(x=>x.id===b.dataset.ret);if(f)openChute(f)}));
   box.querySelectorAll("[data-open]").forEach(b=>b.addEventListener("click",()=>{const f=FILMS.find(x=>x.id===b.dataset.open);if(f)openRentalMenu(f)}));
@@ -1324,7 +1324,7 @@ function hireCaseHTML(f){
     </div>`:`<div class="hc-sleeve none"></div>`}
     ${tape!==1?`<i class="hc-tape t1"></i>`:""}${tape!==2?`<i class="hc-tape t2"></i>`:""}
     <i class="hc-plastic"></i><i class="hc-scratch" style="background-image:url('${scratch}')"></i>
-    <span class="hc-label fit" style="left:57.17%;top:9.83%;width:31.86%;height:8.38%"><span class="fit-t">SV ${String(hashN(f.id)%9000+1000)}</span><small>Spinner Video</small></span>
+    <span class="hc-label fit" style="left:57.17%;top:9.83%;width:31.86%;height:8.38%"><span class="fit-t">GV ${String(hashN(f.id)%9000+1000)}</span><small>Galaxy Video</small></span>
     <span class="hc-dymo fit" style="--dr:${(-r*.8).toFixed(2)}deg"><span class="fit-t">${ESC(title)}</span></span>
     <span class="hc-rewind">Be kind, rewind</span>
   </div>`;
@@ -1334,7 +1334,7 @@ function openSlip(f,go){
   const due=dueBack(f),now=new Date();const picked=new Set(counter[f.id]||[]);
   const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Rental slip for ${f.title}`);
   const fmt=d=>d.toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"});
-  o.innerHTML=`<div class="slip"><h3>Spinner Video</h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?(isTuesday()?"New release, $2 Tuesday":"New release, overnight"):"Weekly"} $${priceOf(f).toFixed(2)}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd><dt>Paid</dt><dd>$10 note, change $${(10-priceOf(f)).toFixed(2)}</dd></dl>${hireCaseHTML(f)}<p class="hc-k">Box swapped for a hire case. The cover's been in that sleeve since the shop opened.</p><button type="button" class="peek" data-a="peek" aria-expanded="false">Preview the menu</button><div class="peekbox" hidden></div><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
+  o.innerHTML=`<div class="slip"><h3>Galaxy Video</h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?(isTuesday()?"New release, $2 Tuesday":"New release, overnight"):"Weekly"} $${priceOf(f).toFixed(2)}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd><dt>Paid</dt><dd>$10 note, change $${(10-priceOf(f)).toFixed(2)}</dd></dl>${hireCaseHTML(f)}<p class="hc-k">Box swapped for a hire case. The cover's been in that sleeve since the shop opened.</p><button type="button" class="peek" data-a="peek" aria-expanded="false">Preview the menu</button><div class="peekbox" hidden></div><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
   const close=()=>dismissModal(o);
   o.addEventListener("click",e=>{
     if(e.target===o)return close();
@@ -1667,7 +1667,7 @@ function showWelcome(){
   const modalTrigger=document.activeElement;
   const o=document.createElement("dialog");o.className="welcome";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label","How it works");
   o.innerHTML=`<div class="welcome-in"><h2>Movie night, sorted</h2><p class="lead">Pick a film and dinner comes with it.</p><ol>
-  <li><span><b>Pick a film</b>Spin the wheel, browse the video store, or start from what you're craving.</span></li>
+  <li><span><b>Pick a film</b>Spin the wheel at the counter, browse the aisles, or start from what you're craving at the candy bar.</span></li>
   <li><span><b>Get the menu</b>Every film has its own menu built from the movie, with recipes and a shopping list that scales from 1 to 60 guests.</span></li>
   <li><span><b>Cook, then press play</b>Lock it in for the week, tick off the shopping, and check where it's streaming.</span></li>
   </ol><button class="btn primary" type="button">Let's go</button></div>`;
@@ -2053,7 +2053,7 @@ setList();size();renderHist();scalePreview();renderWeek();renderMotw();
 try{document.documentElement.style.setProperty("--grainTile",`url("${noiseTile()}")`)}catch(e){}
 if("serviceWorker" in navigator&&location.protocol==="https:")addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
 setKidsUI();if(kidsMode)setList();pullSync();
-try{if(!localStorage.getItem("mns-welcome"))setTimeout(showWelcome,400)}catch(e){}
+try{if(!localStorage.getItem("mns-welcome"))setTimeout(()=>{const w=document.getElementById("walkin");if(w&&!w.hidden)document.addEventListener("walkin-done",()=>setTimeout(showWelcome,300),{once:true});else showWelcome()},400)}catch(e){}
 /* a shared film link always opens on its menu, whatever tab was open last */try{const v=new URLSearchParams(location.search).get("film")?"wheel":localStorage.getItem("mns-view");if(location.hash==="#shop"||v==="shop")setView("shop");else if(location.hash==="#crave"||v==="crave")setView("crave")}catch(e){}
 document.fonts.ready.then(draw);
 const initialFilmId=new URLSearchParams(window.location.search).get("film");
@@ -2544,3 +2544,25 @@ function toSharedFilm(){try{const id=new URLSearchParams(location.search).get("f
 /* rentals: a tape you've got out opens straight to its menu */
 function isRentedOut(f){return (member.out||[]).some(r=>r.id===f.id)&&!watched.has(f.id)}
 function openRentalMenu(f){setView("wheel");replay(f);addHistory(f);toMenu()}
+
+/* the walk-in: Galaxy Video's shopfront, once per visit, never in the way of a shared film link */
+(function(){
+  const w=document.getElementById("walkin");if(!w)return;
+  let seen=false;try{seen=sessionStorage.getItem("mns-walkin")==="1"}catch(e){}
+  const linked=new URLSearchParams(location.search).get("film")||location.hash;
+  if(seen||linked)return;
+  const prev=document.activeElement;
+  w.hidden=false;document.body.style.overflow="hidden";
+  try{fitSigns(w,true)}catch(e){}
+  const done=(walk)=>{
+    try{sessionStorage.setItem("mns-walkin","1")}catch(e){}
+    document.removeEventListener("keydown",key);
+    const close=()=>{w.hidden=true;w.classList.remove("going");document.body.style.overflow="";document.dispatchEvent(new Event("walkin-done"));const b=document.getElementById("viewWheelBtn");try{(b||prev).focus({preventScroll:true})}catch(e){}};
+    if(walk){try{sfx.chime()}catch(e){}if(reduce){close();return}w.classList.add("going");setTimeout(close,900)}else close();
+  };
+  const key=e=>{if(e.key==="Escape"){e.preventDefault();done(false)}else if(e.key==="Tab"){const f=[document.getElementById("wiIn"),document.getElementById("wiSkip")];const i=f.indexOf(document.activeElement);e.preventDefault();f[(i+(e.shiftKey?f.length-1:1))%f.length].focus()}};
+  document.addEventListener("keydown",key);
+  document.getElementById("wiIn").addEventListener("click",()=>done(true));
+  document.getElementById("wiSkip").addEventListener("click",()=>done(false));
+  setTimeout(()=>{try{document.getElementById("wiIn").focus({preventScroll:true})}catch(e){}},50);
+})();
