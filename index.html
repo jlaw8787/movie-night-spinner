@@ -1369,6 +1369,16 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 
 
 
+
+/* ---------- candy bar photos ---------- */
+.sc-item.has-img{display:grid;grid-template-columns:64px minmax(0,1fr) auto auto;align-items:center;gap:12px}
+.sc-img{width:64px;height:64px;border-radius:10px;object-fit:cover;background:#2a1a10;box-shadow:0 2px 0 rgba(0,0,0,.35)}
+@media (max-width:620px){.sc-item.has-img{grid-template-columns:56px minmax(0,1fr) auto;row-gap:6px}.sc-item.has-img .sc-img{width:56px;height:56px;grid-row:span 2}.sc-item.has-img .sc-kind{grid-column:2;justify-self:start}.sc-item.has-img .sc-add{grid-column:3;grid-row:1 / span 2}}
+.sc-credits{margin:18px 0 4px;font-size:12px;opacity:.85}
+.sc-credits summary{cursor:pointer;min-height:44px;display:flex;align-items:center;font-weight:600}
+.sc-credits ul{margin:6px 0 0;padding-left:18px;columns:2 260px;column-gap:24px}
+.sc-credits li{margin:0 0 4px;break-inside:avoid}
+.sc-credits a{color:inherit}
 /* ---------- counter ticket: pantry check, your extras, printed ticket ---------- */
 .tk-head{margin:10px 0 6px}
 .tk-mode{display:inline-flex;border:2px solid var(--brass,#d9a441);border-radius:999px;overflow:hidden}
@@ -2442,9 +2452,9 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 <script src="tmdb-posters.js?v=5239a32c" defer></script>
 <script src="ratings.js?v=eca9e799" defer></script>
 <script src="providers.js?v=76e7a870" defer></script>
-<script src="films.js?v=92a0ce25" defer></script>
+<script src="films.js?v=29c0c1e4" defer></script>
 <script src="formats-core.js?v=d090b2ad" defer></script>
-<script src="app.js?v=1a5b0370" defer></script>
+<script src="app.js?v=6fe9f420" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

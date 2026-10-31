@@ -2501,8 +2501,8 @@ function renderSnacks(){
   const list=(window.SNACKS||[]).filter(x=>snackCat==="All"||x.cat===snackCat);
   box.innerHTML=`<div class="sc-head"><h2 class="sc-t">The snack counter</h2><p class="sc-sub">Real movie snacks. Tap Add and they go on ${f?`${locked?"your locked-in film":"tonight's film"}, <b>${ESC(f.title)}</b>`:"tonight's film"}: the prep sheet and the shopping list.</p></div>
   <div class="sc-cats" role="group" aria-label="Snack type">${cats.map(c=>`<button type="button" data-sc-cat="${ESC(c)}" aria-pressed="${c===snackCat}">${ESC(c)}</button>`).join("")}</div>
-  <ul class="sc-list">${list.map(x=>`<li class="sc-item${on.has(x.id)?" on":""}"><div class="sc-n"><span>${ESC(x.n)}</span><small>${ESC(x.note)}</small></div><em class="sc-kind ${x.kind}">${x.kind==="make"?"Make it":"Buy it"}</em><button type="button" class="sc-add" data-snack="${ESC(x.id)}" aria-pressed="${on.has(x.id)}" aria-label="${on.has(x.id)?"Remove":"Add"} ${ESC(x.n)}">${on.has(x.id)?"Added":"Add"}</button></li>`).join("")}</ul>
-  <div class="sc-bar"${on.size?"":" hidden"}><span>${on.size} snack${on.size===1?"":"s"} on ${f?ESC(f.title):"tonight's film"}</span><button type="button" class="sc-go" data-sc-go="1">See the shopping list</button></div>`;
+  <ul class="sc-list">${list.map(x=>`<li class="sc-item${on.has(x.id)?" on":""}${x.img?" has-img":""}">${x.img?`<img class="sc-img" src="${ESC(x.img)}" alt="" width="64" height="64" loading="lazy" decoding="async">`:""}<div class="sc-n"><span>${ESC(x.n)}</span><small>${ESC(x.note)}</small></div><em class="sc-kind ${x.kind}">${x.kind==="make"?"Make it":"Buy it"}</em><button type="button" class="sc-add" data-snack="${ESC(x.id)}" aria-pressed="${on.has(x.id)}" aria-label="${on.has(x.id)?"Remove":"Add"} ${ESC(x.n)}">${on.has(x.id)?"Added":"Add"}</button></li>`).join("")}</ul>
+  <div class="sc-bar"${on.size?"":" hidden"}><span>${on.size} snack${on.size===1?"":"s"} on ${f?ESC(f.title):"tonight's film"}</span><button type="button" class="sc-go" data-sc-go="1">See the shopping list</button></div>`+snackCredits();
 }
 document.addEventListener("click",e=>{
   const box=$("snackCounter");if(!box||!box.contains(e.target))return;
@@ -2641,3 +2641,7 @@ function printTicket(f,api){
   setTimeout(()=>{try{fr.contentWindow.focus();fr.contentWindow.print()}catch(e){}setTimeout(()=>fr.remove(),1500)},250);
   try{sfx.print()}catch(e){}
 }
+
+/* candy bar photo credits: real photos from Open Food Facts and Wikimedia Commons, each under its own licence */
+function snackCredits(){const l=(window.SNACKS||[]).filter(x=>x.img&&x.credit);if(!l.length)return "";
+  return `<details class="sc-credits"><summary>Photo credits</summary><p>Snack photos are real photos, cropped, used under the licences shown.</p><ul>${l.map(x=>`<li>${ESC(x.n)}: <a href="${ESC(x.credit.url)}" target="_blank" rel="noopener">${ESC(x.credit.by)}</a>, ${ESC(x.credit.lic)}</li>`).join("")}</ul></details>`}

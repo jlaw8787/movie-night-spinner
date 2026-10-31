@@ -404,3 +404,42 @@ All pictures are TMDB stills of Teenage Mutant Ninja Turtles (1990), listed in d
 - File: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/STATEN_ISLAND_FERRY_WITH_SMOG-OBSCURED_SKYLINE_OF_LOWER_MANHATTAN_IN_BACKGROUND._ON_THE_RIGHT_ARE_THE_TWIN_TOWERS_OF..._-_NARA_-_549900.jpg/1920px-STATEN_ISLAND_FERRY_WITH_SMOG-OBSCURED_SKYLINE_OF_LOWER_MANHATTAN_IN_BACKGROUND._ON_THE_RIGHT_ARE_THE_TWIN_TOWERS_OF..._-_NARA_-_549900.jpg
 - Licence: Public domain (PD-USGov-EPA, work of a US federal agency).
 - Treatment (photo.py): slide border cropped, colour fade corrected, warmed slightly, sky lifted toward paper behind the wordmark.
+
+## Candy bar snack photos (assets/snacks/)
+
+Real photos, cropped square and resized to 240px webp. Pack shots from Open Food Facts (CC BY-SA 3.0, Open Food Facts contributors); the rest from Wikimedia Commons under the licence shown. Credits also show in the candy bar under Photo credits.
+
+- assets/snacks/butter-popcorn.webp: Butter popcorn. Alex Munsell, CC0. https://commons.wikimedia.org/wiki/File:Bowl_of_Popcorn_(Unsplash).jpg
+- assets/snacks/caramel-popcorn.webp: Caramel popcorn. Capvi, CC BY 4.0. https://commons.wikimedia.org/wiki/File:Popcorn_Confection.jpg
+- assets/snacks/golden-syrup-popcorn.webp: Golden syrup and sea salt popcorn. msgohan, Public domain. https://commons.wikimedia.org/wiki/File:Kettle_Corn.jpg
+- assets/snacks/choc-tops.webp: Choc tops. Tomwsulcer, CC0. https://commons.wikimedia.org/wiki/File:Ice_cream_cone_chocolate_dipped_held_in_hand.jpg
+- assets/snacks/fairy-bread.webp: Fairy bread. Jellyfish juice, CC BY-SA 3.0. https://commons.wikimedia.org/wiki/File:Fairy_bread.jpg
+- assets/snacks/chocolate-crackles.webp: Chocolate crackles. Sam Bedggood, Public domain. https://commons.wikimedia.org/wiki/File:Chocolatecrackles.jpg
+- assets/snacks/coconut-ice.webp: Coconut ice. Peter, CC BY-SA 2.0. https://commons.wikimedia.org/wiki/File:Coconut_ice.jpg
+- assets/snacks/rocky-road.webp: Rocky road. Leon Brooks, Public domain. https://commons.wikimedia.org/wiki/File:Rocky_Road_dessert.jpg
+- assets/snacks/cheerios.webp: Cheerios with tomato sauce. Remy Sharp, CC BY-SA 2.0. https://commons.wikimedia.org/wiki/File:Saveloy_with_potato_wedges.jpg
+- assets/snacks/party-pies.webp: Party pies and sausage rolls. Andy Li, CC0. https://commons.wikimedia.org/wiki/File:Sausage_roll_-_One_Market,_One_Garden_Brighton_(cropped).jpg
+- assets/snacks/dagwood-dogs.webp: Battered hot dogs on sticks. Ocdp, CC0. https://commons.wikimedia.org/wiki/File:Corn_dog_001.jpg
+- assets/snacks/hot-chips.webp: Hot chips with chicken salt. Finbar.concaig, CC BY-SA 4.0. https://commons.wikimedia.org/wiki/File:Hot_chips_with_chicken_salt.jpg
+- assets/snacks/nachos.webp: Cheesy nachos. chee.hong from Kuala Lumpur, Malaysia, CC BY 2.0. https://commons.wikimedia.org/wiki/File:Nachos-cheese_(cropped).jpg
+- assets/snacks/pretzels.webp: Soft pretzel bites. jlwelsh, CC BY 2.0. https://commons.wikimedia.org/wiki/File:Flavored_soft_pretzels.jpg
+- assets/snacks/spider.webp: Spider floats. Morio, CC BY-SA 4.0. https://commons.wikimedia.org/wiki/File:Coffee_float_and_ice_cream_soda_2017_Ginza_Renoir_2.jpg
+- assets/snacks/slushies.webp: Frozen cola slushies. Entheta, CC BY-SA 3.0. https://commons.wikimedia.org/wiki/File:Slushscoop1b.jpg
+- assets/snacks/choc-coated-ice-creams.webp: Choc-coated ice cream sticks. HaJunkiyada, CC BY-SA 4.0. https://commons.wikimedia.org/wiki/File:Liat_Portal_for_Foodie_Disorder_-_Chocolate_coated_ice_cream_bar_with_nuts.jpg
+- assets/snacks/icy-poles.webp: Fruit ice blocks. Open Food Facts contributors, CC BY-SA 3.0. https://world.openfoodfacts.org/product/9300648340300
+- assets/snacks/lolly-snakes.webp: Lolly snakes. Open Food Facts contributors, CC BY-SA 3.0. https://world.openfoodfacts.org/product/9300605042391
+- assets/snacks/musk-sticks.webp: Musk sticks. Open Food Facts contributors, CC BY-SA 3.0. https://world.openfoodfacts.org/product/9310974014646
+- assets/snacks/milk-bottles.webp: Milk bottles. Open Food Facts contributors, CC BY-SA 3.0. https://world.openfoodfacts.org/product/9300605134645
+- assets/snacks/sherbet.webp: Sherbet and dippers. Open Food Facts contributors, CC BY-SA 3.0. https://world.openfoodfacts.org/product/9310123002036
+- assets/snacks/mixed-lollies.webp: Pick and mix bag. Open Food Facts contributors, CC BY-SA 3.0. https://world.openfoodfacts.org/product/9300682034081
+- assets/snacks/sour-straps.webp: Sour straps. Steven Depolo, CC BY 2.0. https://commons.wikimedia.org/wiki/File:Airheads_Extreme_Sweet_Sour_Belts_Candy,_May_2010.jpg
+- assets/snacks/jelly-babies.webp: Jelly babies. Open Food Facts contributors, CC BY-SA 3.0. https://world.openfoodfacts.org/product/9310434006037
+- assets/snacks/choc-peanuts.webp: Chocolate-coated peanuts. Open Food Facts contributors, CC BY-SA 3.0. https://world.openfoodfacts.org/product/9300685000618
+- assets/snacks/choc-raisins.webp: Chocolate-coated sultanas. Tiia Monto, CC BY-SA 3.0. https://commons.wikimedia.org/wiki/File:Panda_-_Smoothie_Tumma_Suklaarusina.jpg
+- assets/snacks/honeycomb-balls.webp: Choc honeycomb balls. Open Food Facts contributors, CC BY-SA 3.0. https://world.openfoodfacts.org/product/9300682047500
+- assets/snacks/orange-choc-balls.webp: Orange choc balls. Andynahman, CC BY 2.0. https://commons.wikimedia.org/wiki/File:Jaffas.jpg
+- assets/snacks/family-block.webp: Family block of chocolate. Open Food Facts contributors, CC BY-SA 3.0. https://world.openfoodfacts.org/product/9300617064879
+- assets/snacks/chips-dip.webp: Chips and French onion dip. Whitney in Chicago, CC BY 2.0. https://commons.wikimedia.org/wiki/File:French_onion_dip_topped_with_caramelized_onion.jpg
+- assets/snacks/cheese-twists.webp: Cheese scrolls. Snerfu, Public domain. https://commons.wikimedia.org/wiki/File:Cheesymite_scroll.jpg
+- assets/snacks/pretzel-mix.webp: Salty pretzels and peanuts. Open Food Facts contributors, CC BY-SA 3.0. https://world.openfoodfacts.org/product/9310015330056
+- Honey joys and chocolate malt milkshakes: no photo yet. No free real photo was found; to be supplied.
