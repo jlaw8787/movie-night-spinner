@@ -90,7 +90,12 @@ face = face * (1 - bugs * 0.75)
 sheen = np.clip(1 - np.abs((u * 0.6 + v) - 0.35) * 6, 0, 1) * 0.05
 face = face + sheen[..., None]
 face = np.clip(face, 0, 1)
-face = np.asarray(Image.fromarray((face * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(0.9))).astype(np.float32) / 255
+face = np.asarray(Image.fromarray((face * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(1.3))).astype(np.float32) / 255
+# halation: the brightest ink glows into the acrylic around it, like a real lit face shot on a cheap lens
+hot = np.clip((face.max(2, keepdims=True) - 0.55) / 0.45, 0, 1) * face
+for rad, amt in ((3, 0.35), (9, 0.22)):
+    h_ = np.asarray(Image.fromarray((np.clip(hot, 0, 1) * 255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(rad))).astype(np.float32) / 255
+    face = 1 - (1 - face) * (1 - h_ * amt)
 face = np.clip(face + rng.normal(0, 2 / 255, face.shape), 0, 1)
 
 OW, OH = FW + 2 * FR, FH + 2 * FR
