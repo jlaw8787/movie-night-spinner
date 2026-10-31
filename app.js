@@ -1559,7 +1559,7 @@ function tapeHTML(f){
 }
 function renderBoard(){
   const t=isTuesday();
-  $("svBoard").innerHTML=`<div class="svb-row${t?" dim":""}"><b>New releases</b><span>$7 overnight</span></div><div class="svb-row"><b>Weeklies</b><span>$2 for 7 nights</span></div><div class="svb-row${t?" hot":""}"><b>$2 Tuesday</b><span>${t?"On tonight":"Every new release, every Tuesday"}</span></div><button type="button" class="svb-fri" id="svFri">Friday night: one for the kids, one for later</button>`;
+  $("svBoard").innerHTML=`<div class="svb-row${t?" dim":""}"><b>New releases</b><span>$7 overnight</span></div><div class="svb-row"><b>Weeklys</b><span>$2 for 7 nights</span></div><div class="svb-row${t?" hot":""}"><b>$2 Tuesday</b><span>${t?"On tonight":"Every new release, every Tuesday"}</span></div><button type="button" class="svb-fri" id="svFri">Friday night: one for the kids, one for later</button>`;
   $("svFri").addEventListener("click",()=>{const kids=FILMS.filter(f=>isKidSafe(f)&&onSvc(f,svc)),late=FILMS.filter(f=>!isKidSafe(f)&&onSvc(f,svc));if(!kids.length||!late.length)return;openDouble(pick(kids),pick(late))});
 }
 function renderCal(cal){
