@@ -443,3 +443,7 @@ Real photos, cropped square and resized to 240px webp. Pack shots from Open Food
 - assets/snacks/cheese-twists.webp: Cheese scrolls. Snerfu, Public domain. https://commons.wikimedia.org/wiki/File:Cheesymite_scroll.jpg
 - assets/snacks/pretzel-mix.webp: Salty pretzels and peanuts. Open Food Facts contributors, CC BY-SA 3.0. https://world.openfoodfacts.org/product/9310015330056
 - Honey joys and chocolate malt milkshakes: no photo yet. No free real photo was found; to be supplied.
+
+## Galaxy Video logo (assets/brand/)
+
+- galaxy-video-480/800/1200.webp: Galaxy Video master logo, made for this site (Canva, "Galaxy Video logo" design, Master page). Own artwork.

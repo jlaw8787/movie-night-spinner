@@ -1782,7 +1782,7 @@ function setView(v){
   if(crave){renderCrave();renderSnacks()}
   document.body.classList.toggle("in-shop",shop);
   try{localStorage.setItem("mns-view",v)}catch(e){}
-  if(shop&&!window.__inShop){sfx.chime();const sh=$("viewShop");sh.classList.remove("lightson");void sh.offsetWidth;sh.classList.add("lightson")}window.__inShop=shop;
+  if(shop&&!window.__inShop){sfx.chime();const sh=$("viewShop");sh.classList.remove("lightson");void sh.offsetWidth;sh.classList.add("lightson");const lb=sh.querySelector(".gv-lightbox");if(lb){lb.classList.remove("lit");void lb.offsetWidth;lb.classList.add("lit")}}window.__inShop=shop;
   if(shop){if(!shopBuilt){const ds=[...new Set(FILMS.map(f=>f.year.slice(0,3)))].sort();$("shopDecade").innerHTML='<option value="">Any decade</option>'+ds.map(d=>`<option value="${d}">${d}0s</option>`).join("");shopBuilt=true}renderShop()}
   else if(!crave)scalePreview();
 }
@@ -2556,6 +2556,7 @@ function openRentalMenu(f){setView("wheel");replay(f);addHistory(f);toMenu()}
   if(seen||linked)return;
   const prev=document.activeElement;
   w.hidden=false;document.body.style.overflow="hidden";
+  {const lb=w.querySelector(".gv-lightbox");if(lb){lb.classList.remove("lit");void lb.offsetWidth;lb.classList.add("lit")}}
   try{fitSigns(w,true)}catch(e){}
   const done=(walk)=>{
     try{sessionStorage.setItem("mns-walkin","1")}catch(e){}
