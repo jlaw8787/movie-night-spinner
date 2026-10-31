@@ -2315,6 +2315,49 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 .hc-sticker{position:absolute;z-index:5;left:51%;top:8.6%;width:37%;transform:rotate(var(--sr,0deg));filter:drop-shadow(0 1px 1.5px rgba(0,0,0,.4))}
 .hirecase .hc-sticker img{position:static;display:block;width:100%;height:auto;filter:none}
 .hc-sticker b{position:absolute;left:34%;bottom:4.5%;font:400 4.6cqw/1 var(--f-marker);color:#1f2f8f;letter-spacing:.04em;transform:rotate(-2deg);opacity:.92}
+/* ---------- Galaxy Video palette: the store's UI takes its colours from the logo ----------
+   night purple behind the logo, gold-to-orange GALAXY with its purple extrude, teal planet, pink stripe, cream badge */
+:root{--gv-night:#1b0f30;--gv-deep:#2a1250;--gv-purple:#5b2a9e;--gv-gold:#ffc42e;--gv-grad:linear-gradient(180deg,#ffd43a,#ff9a1f);--gv-teal:#1fb5ad;--gv-pink:#ff3d8b;--gv-cream:#fff4dc;--gv-lav:#d9c9f2}
+#viewShop{--shop-sign:var(--gv-gold);--shop-carpet:var(--gv-night)}
+#viewShop.shop{background:repeating-linear-gradient(45deg,rgba(255,255,255,.022) 0 6px,transparent 6px 12px),radial-gradient(120% 50% at 50% 0,#2c1650,transparent 70%),var(--gv-night);box-shadow:inset 0 0 0 3px #0e0719,0 20px 50px rgba(0,0,0,.45)}
+#viewShop .shop-sign{text-shadow:0 0 18px rgba(255,154,31,.45)}
+#viewShop .shop-tools input[type=search]{color:var(--gv-deep);background-color:var(--gv-cream);border-color:var(--gv-deep);box-shadow:0 0 0 2px var(--gv-teal),0 4px 0 2px var(--gv-purple);
+  background-image:radial-gradient(circle at 16px 50%,transparent 6px,var(--gv-deep) 6.5px 8.5px,transparent 9px),linear-gradient(45deg,transparent 46%,var(--gv-deep) 46% 58%,transparent 58%)}
+#viewShop .shop-tools select{color:var(--gv-deep);background-color:#ffb62a;box-shadow:0 4px 0 var(--gv-purple);
+  background-image:linear-gradient(45deg,transparent 50%,var(--gv-deep) 50%),linear-gradient(-45deg,transparent 50%,var(--gv-deep) 50%)}
+#viewShop .shop-tools select option{background:var(--gv-cream);color:var(--gv-deep)}
+#viewShop .shop-tools label{color:var(--gv-cream);background:rgba(14,7,25,.65)}
+#viewShop .shop-tools input[type=checkbox]{background:var(--gv-cream);border-color:var(--gv-deep);box-shadow:0 0 0 2px var(--gv-teal)}
+#viewShop .shop-tools input[type=checkbox]:checked{background:var(--gv-pink);box-shadow:0 0 0 2px var(--gv-teal),0 0 10px rgba(255,61,139,.6)}
+#viewShop .shop-count{color:var(--gv-gold)}
+#viewShop .shop-filt>summary{border-color:#ffb62a;background:var(--gv-grad);color:var(--gv-deep);box-shadow:0 4px 0 var(--gv-purple)}
+#viewShop .shop-filt[open] .sf-in{background:var(--gv-night);border-color:var(--gv-teal)}
+#viewShop .sv-board{background:#12091f;box-shadow:inset 0 0 0 2px var(--gv-teal),inset 0 0 30px rgba(0,0,0,.6)}
+#viewShop .svb-row b{color:var(--gv-gold)}
+#viewShop .svb-fri{background:var(--gv-grad);color:var(--gv-deep);box-shadow:0 4px 0 var(--gv-purple)}
+#viewShop .an-card{background:var(--gv-grad);color:var(--gv-deep);box-shadow:0 5px 0 var(--gv-purple)}
+#viewShop .an-card small,#viewShop .an-card span{color:inherit}
+#viewShop .an-card.all{background:var(--gv-deep);color:var(--gv-gold);box-shadow:0 5px 0 #0e0719,inset 0 0 0 2px var(--gv-teal)}
+#viewShop .an-card[aria-pressed="true"]{box-shadow:0 2px 0 var(--gv-purple),0 0 0 3px var(--gv-pink)}
+#viewShop .an-card.all[aria-pressed="true"]{box-shadow:0 2px 0 #0e0719,inset 0 0 0 2px var(--gv-teal),0 0 0 3px var(--gv-pink)}
+#viewShop .aisle-sign{background:var(--gv-grad);color:var(--gv-deep);box-shadow:0 4px 0 var(--gv-purple)}
+#viewShop .sticker.pick{background:var(--gv-grad);color:var(--gv-deep)}
+#viewShop .neon{color:var(--gv-deep)}
+.case .tv-play,#viewShop .tv-play{background:var(--gv-grad);color:var(--gv-deep);box-shadow:0 3px 0 var(--gv-purple)}
+#viewShop .sv-hang .fit-t{color:var(--gv-purple)}
+#viewShop .sv-hang:hover,#viewShop .sv-hang:focus-visible{background:rgba(255,196,46,.22);outline-color:var(--gv-gold)}
+#viewShop .member-meta,#viewShop .member-sync{color:var(--gv-lav)}
+.walkin .wi-in{background:var(--gv-grad);color:var(--gv-deep);border-color:#ffb62a;box-shadow:0 4px 0 var(--gv-purple)}
+/* the store's paper: tape backs, rental slip, returns chute, member card sync */
+.case h3,.slip h3,.chute h3,.syncbox h3,.syncbox label,.slip .peekbox li b{color:var(--gv-deep)}
+.case h4,.slip h4,.case .where-k,.stars-k{color:var(--gv-purple)}
+.case .acts button,.slip .acts button,.chute .acts button,.syncbox .acts button,.syncbox input{border-color:var(--gv-deep);color:var(--gv-deep)}
+.slip .acts .go,.chute .acts .go,.syncbox .acts .go{background:var(--gv-deep);color:var(--gv-gold)}
+.case .acts .menu-go,.slip .peek{background:var(--gv-grad);border-color:var(--gv-deep);color:var(--gv-deep)}
+.slip .lollies label{border-color:var(--gv-deep);color:var(--gv-deep)}
+.slip .lollies label:has(input:checked){background:var(--gv-grad);border-color:#ffb62a}
+.slip .lollies input{accent-color:var(--gv-purple)}
+.chute .slot{color:var(--gv-gold)}
 .slip h3.slip-logo{margin:0 auto 8px;max-width:270px;line-height:0}
 .slip-logo img{display:block;width:100%;height:auto;border-radius:6px;box-shadow:0 2px 4px rgba(0,0,0,.25);filter:saturate(.92)}
 </style>
