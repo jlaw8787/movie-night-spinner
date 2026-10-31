@@ -2287,6 +2287,25 @@ dialog.trivia .acts button{font:600 15px var(--f-body);border-radius:999px;paddi
 dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 .wi-scene img,.sv-front img{object-position:50% 0}
 @media (max-width:640px){.wi-scene{aspect-ratio:1/1;width:100%}.sv-front{aspect-ratio:5/4}.walkin{gap:16px}}
+/* member card: the printed plastic card, with the name and number embossed on top */
+.member{display:block;max-width:440px;background:none;border:0;box-shadow:none;padding:0;overflow:visible}
+.member::after{display:none}
+.mc{position:relative;container-type:inline-size;aspect-ratio:1012/638;transform:rotate(-1.2deg);filter:drop-shadow(0 10px 14px rgba(0,0,0,.5)) drop-shadow(0 2px 2px rgba(0,0,0,.35))}
+.mc-art{position:absolute;inset:0;width:100%;height:100%;display:block}
+.mc p,.member .mc-name{position:absolute;left:4.2%;margin:0;font-family:"Courier New",Courier,monospace;font-weight:700;text-transform:uppercase;color:#e7e2f2;
+  text-shadow:0 -1px 0 rgba(255,255,255,.55),0 1px 0 rgba(0,0,0,.85),1px 2px 2px rgba(0,0,0,.35)}
+.mc-no{top:66%;font-size:6.2cqw;letter-spacing:.14em;line-height:1}
+.mc-since{top:77.5%;font-size:2.5cqw;letter-spacing:.1em;opacity:.85}
+.member .mc-name{top:83%;width:58%;font-size:4.3cqw;letter-spacing:.08em;line-height:1.2;padding:0;background:transparent;border:0;border-bottom:1px dashed transparent;border-radius:0;min-width:0;color:#e7e2f2}
+.member .mc-name::placeholder{color:rgba(231,226,242,.5);text-shadow:none}
+.member .mc-name:focus{outline:none;border-bottom-color:rgba(255,210,63,.7)}
+.member .mc-name:focus-visible{outline:2px solid #ffd23f;outline-offset:3px}
+.member-meta{margin:14px 0 0;color:#c9d3ff}
+.member-fee{margin:6px 0 0}
+/* the shop's own sticker on the hire case, stock number written in biro */
+.hc-sticker{position:absolute;z-index:5;left:51%;top:8.6%;width:37%;transform:rotate(var(--sr,0deg));filter:drop-shadow(0 1px 1.5px rgba(0,0,0,.4))}
+.hirecase .hc-sticker img{position:static;display:block;width:100%;height:auto;filter:none}
+.hc-sticker b{position:absolute;left:34%;bottom:4.5%;font:400 4.6cqw/1 var(--f-marker);color:#1f2f8f;letter-spacing:.04em;transform:rotate(-2deg);opacity:.92}
 </style>
 
 <div id="printArea"></div>
@@ -2469,7 +2488,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 <script src="providers.js?v=76e7a870" defer></script>
 <script src="films.js?v=29c0c1e4" defer></script>
 <script src="formats-core.js?v=d090b2ad" defer></script>
-<script src="app.js?v=9d674fe7" defer></script>
+<script src="app.js?v=8a31d7ce" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
