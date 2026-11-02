@@ -2039,6 +2039,63 @@ $("pdf").addEventListener("click",()=>{if(!current)return;const o=document.creat
   o.addEventListener("click",e=>{if(e.target===o)return dismissModal(o);const b=e.target.closest("[data-p]");if(!b)return;dismissModal(o);exportMenu("pdf",b.dataset.p)});
   mountModal(o,"[data-p=menu]",$("pdf"))});
 $("png").addEventListener("click",()=>exportMenu("png"));
+/* story image: a 1080x1920 card of tonight's feature and menu for Instagram and TikTok stories */
+async function storyCanvas(f){
+  const W=1080,H=1920,c=document.createElement("canvas");c.width=W;c.height=H;const x=c.getContext("2d");
+  try{await Promise.all(['700 60px "Oswald"','500 30px "Oswald"','100px "Limelight"','400 36px "Jost"','500 36px "Jost"'].map(n=>document.fonts.load(n)))}catch(e){}
+  const g=x.createRadialGradient(W/2,560,60,W/2,700,1300);g.addColorStop(0,"#7a1428");g.addColorStop(.45,"#5a0f1f");g.addColorStop(1,"#2a070f");x.fillStyle=g;x.fillRect(0,0,W,H);
+  const BRASS="#e7c069",CREAM="#f4e6c8",SOFT="#e9d9b8";
+  const spaced=(t,y,font,col,sp)=>{x.font=font;x.fillStyle=col;const ch=[...t],w=ch.reduce((a,k)=>a+x.measureText(k).width,0)+sp*(ch.length-1);let cx=(W-w)/2;for(const k of ch){x.fillText(k,cx,y);cx+=x.measureText(k).width+sp}};
+  const wrap=(t,font,max)=>{x.font=font;const out=[];let line="";for(const w of String(t).split(/\s+/)){const tr=line?line+" "+w:w;if(x.measureText(tr).width>max&&line){out.push(line);line=w}else line=tr}if(line)out.push(line);return out};
+  x.textAlign="left";x.textBaseline="alphabetic";
+  spaced("BOX OFFICE BITES",150,'700 40px "Oswald"',BRASS,10);
+  spaced("TONIGHT'S FEATURE",200,'500 28px "Oswald"',SOFT,9);
+  /* bulbs across the top */
+  for(let i=0;i<18;i++){const bx=90+i*(900/17);x.beginPath();x.arc(bx,250,8,0,Math.PI*2);x.fillStyle="#ffe9a8";x.shadowColor="rgba(255,214,120,.9)";x.shadowBlur=18;x.fill()}x.shadowBlur=0;
+  const pw=440,ph=660,px=(W-pw)/2,py=300;
+  x.fillStyle=BRASS;x.fillRect(px-12,py-12,pw+24,ph+24);x.fillStyle="#1a0409";x.fillRect(px,py,pw,ph);
+  const pp=lobbyPoster(f);
+  if(pp)await new Promise(ok=>{const im=new Image();im.crossOrigin="anonymous";im.onload=()=>{try{x.drawImage(im,px,py,pw,ph)}catch(e){}ok()};im.onerror=ok;im.src=TMDB_IMG+"w500"+pp;setTimeout(ok,6000)});
+  x.textAlign="center";
+  let y=py+ph+110;
+  let tf=88,tl;do{tl=wrap(f.title,`${tf}px "Limelight"`,940);if(tl.length<=2)break;tf-=8}while(tf>48);
+  x.fillStyle=CREAM;x.font=`${tf}px "Limelight"`;for(const l of tl.slice(0,2)){x.fillText(l,W/2,y);y+=tf*1.05}
+  const spec=typeof fmtSpec==="function"?fmtSpec(f):null,L=f._lib||{};
+  const venue=(L.flavour&&L.flavour.venue)||(spec&&(spec.sign?spec.sign[1]:spec.brand))||"";
+  if(venue){y+=4;spaced(String(venue).toUpperCase().slice(0,40),y,'500 30px "Oswald"',BRASS,6);y+=30}
+  y+=40;x.strokeStyle="rgba(231,192,105,.5)";x.lineWidth=2;x.beginPath();x.moveTo(140,y);x.lineTo(W-140,y);x.stroke();y+=70;
+  const m=(current&&current.id===f.id&&current.menu)||makeMenu(f),NAMES={s:"STARTERS",m:"MAINS",w:"SWEETS",d:"DRINKS"};
+  const courses=["s","m","w","d"].map(k=>[k,(m[k]||[]).map(it=>it&&(it.label||it.n)).filter(Boolean)]).filter(c=>c[1].length);
+  const room=H-230-y,need=n=>courses.reduce((a,c)=>a+76+Math.min(n,c[1].length)*50,0),per=need(2)<=room?2:1;
+  if(need(1)>room){
+    /* tight: two columns, one dish each, names wrap to two lines */
+    const cols=[W*.27,W*.73];let rowY=y;
+    courses.slice(0,4).forEach(([k,its],i)=>{const cx=cols[i%2],yy=rowY+Math.floor(i/2)*170;
+      x.textAlign="left";const nm=NAMES[k];x.font='700 28px "Oswald"';const ch=[...nm],sw=ch.reduce((a,q)=>a+x.measureText(q).width,0)+8*(ch.length-1);let sx=cx-sw/2;x.fillStyle=BRASS;for(const q of ch){x.fillText(q,sx,yy);sx+=x.measureText(q).width+8}
+      x.textAlign="center";x.fillStyle=CREAM;const ls=wrap(its[0],'500 34px "Jost"',440);x.font='500 34px "Jost"';ls.slice(0,2).forEach((l,j)=>x.fillText(j===1&&ls.length>2?l+"...":l,cx,yy+48+j*44))});
+    courses.length=0;
+  }
+  for(const [k,its] of courses){
+    if(y+126>H-200)break;
+    spaced(NAMES[k],y,'700 28px "Oswald"',BRASS,8);y+=50;
+    for(const n of its.slice(0,per)){const ls=wrap(n,'500 38px "Jost"',900);x.fillStyle=CREAM;x.font='500 38px "Jost"';x.fillText(ls[0]+(ls.length>1?"...":""),W/2,y);y+=50}
+    y+=26;
+  }
+  const site=(location.host+location.pathname).replace(/index\.html$/,"").replace(/\/$/,"");
+  spaced("SPIN YOURS AT",H-130,'500 26px "Oswald"',SOFT,7);
+  x.fillStyle=BRASS;x.font='600 34px "Jost"';x.fillText(site,W/2,H-80);
+  return c;
+}
+$("storyBtn").addEventListener("click",async()=>{
+  if(!current)return;const b=$("storyBtn");b.disabled=true;$("status").textContent="Making your story image...";
+  try{
+    const c=await storyCanvas(current),data=await new Promise(r=>c.toBlob(r,"image/jpeg",.9)),name=`${slug(current.title)}-${current.year}-story.jpg`;
+    if(shareable(data,name))showOverlay(URL.createObjectURL(data),new File([data],name,{type:"image/jpeg"}));
+    else plainDownload(data,name);
+    $("status").textContent="Story image ready.";
+  }catch(e){console.warn("story",e);$("status").textContent="Couldn't make the story image. Try again."}
+  b.disabled=false;
+});
 /* trifolds: a two-sided PDF that prints and folds into a real takeaway menu */
 async function exportFold(){
   const f=current,spec=f&&fmtSpec(f);if(!spec||!fmtCanFold(spec))return;
