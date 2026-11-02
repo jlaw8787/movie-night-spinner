@@ -1045,7 +1045,7 @@ async function show(f,preferSig){
   let menu=makeMenu(f,preferSig);if(lazy)menu=lazyMenu(menu);menu.counter=counterShop(f.id);
   $("whereWheel").innerHTML=whereHTML(f);
   try{lightboxes()}catch(e){}
-  {const amb=$("ambient"),pp=lobbyPoster(f);amb.classList.remove("on");if(pp)setTimeout(()=>{if(id!==renderId)return;amb.style.backgroundImage=`url("${TMDB_IMG}w342${pp}")`;amb.classList.add("on")},reduce?0:400)}
+  {const amb=$("ambient"),pp=lobbyPoster(f);amb.classList.remove("on");if(pp)setTimeout(()=>{if(id!==renderId)return;amb.style.backgroundImage=`url("${TMDB_IMG}w500${pp}")`;amb.classList.add("on")},reduce?0:400)}
   const edition=movieEdition(f);
   current.menu=menu;current.tag=edition?edition.tagline:f.T;
   {const sp=fmtSpec(f);$("foldPdf").hidden=!(sp&&fmtCanFold(sp))}

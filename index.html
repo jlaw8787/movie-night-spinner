@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Movie Night">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="preload" as="image" href="assets/hero/palace-1000.webp" imagesrcset="assets/hero/palace-1000.webp 1000w, assets/hero/palace-1400.webp 1400w, assets/hero/palace.webp 1774w" imagesizes="(max-width:640px) 460px, 1240px" fetchpriority="high">
+<link rel="preload" as="image" fetchpriority="high" href="assets/hero/palace-1000.webp" imagesrcset="assets/hero/palace-1000.webp 1000w, assets/hero/palace-1400.webp 1400w, assets/hero/palace.webp 1774w" imagesizes="(max-width:640px) 460px, 1240px" fetchpriority="high">
 <link rel="prefetch" href="trailers.js?v=0009383f">
 <link rel="icon" href="assets/app/icon-192.png">
 <link rel="apple-touch-icon" href="assets/app/apple-touch-icon.png">
@@ -2392,7 +2392,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
   </header>
   <div class="walkin" id="walkin" role="dialog" aria-modal="true" aria-label="Galaxy Video" hidden>
   <div class="wi-scene" id="wiScene">
-    <img src="assets/hero/galaxy-front-1400.webp" srcset="assets/hero/galaxy-front-1000.webp 1000w, assets/hero/galaxy-front-1400.webp 1400w, assets/hero/galaxy-front.webp 1774w" sizes="(max-width:640px) 900px, 1100px" width="1774" height="1057" alt="Galaxy Video at night: an old lit sign cabinet on the shop fascia, posters in the windows, wet car park out front">
+    <img src="assets/hero/galaxy-front-1400.webp" srcset="assets/hero/galaxy-front-1000.webp 1000w, assets/hero/galaxy-front-1400.webp 1400w, assets/hero/galaxy-front.webp 1774w" sizes="(max-width:640px) 900px, 1100px" width="1774" height="1057" loading="lazy" alt="Galaxy Video at night: an old lit sign cabinet on the shop fascia, posters in the windows, wet car park out front">
   </div>
   <div class="wi-acts">
     <button type="button" class="wi-in" id="wiIn">Walk in</button>
@@ -2559,7 +2559,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=e68cd5e3" defer></script>
 <script src="formats-core.js?v=25ffa69f" defer></script>
-<script src="app.js?v=8d78d69f" defer></script>
+<script src="app.js?v=5f5850a3" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
