@@ -717,7 +717,7 @@ const narrow=()=>matchMedia("(max-width:700px)").matches;
 function applyPhone(){
   const has=!!fmtPhone.innerHTML,on=has&&narrow()&&phoneOn&&tab==="menu";
   fmtPhone.hidden=!on;$("easel").hidden=on;$("fmtBack").hidden=!(has&&narrow()&&!phoneOn&&tab==="menu");
-  if(!on)scalePreview();
+  if(!on)scalePreview();else fitPhoneTitle();
 }
 function phoneView(f,spec,menu){
   if(!f){fmtPhone.innerHTML="";applyPhone();return}
@@ -726,6 +726,53 @@ function phoneView(f,spec,menu){
   applyPhone();
 }
 $("fmtBack").addEventListener("click",()=>{phoneOn=true;applyPhone()});
+/* library menus: the same big-type phone menu, coloured and set from the printed card it sits under */
+function libPhonePal(root){
+  const rgb=c=>{const m=/rgba?\(([^)]+)\)/.exec(c||"");if(!m)return null;const v=m[1].split(",").map(Number);return v.length>3&&v[3]<.9?null:v.slice(0,3)};
+  const lum=([r,g,b])=>{const f=v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)};return .2126*f(r)+.7152*f(g)+.0722*f(b)};
+  const con=(a,b)=>{const x=lum(a),y=lum(b);return (Math.max(x,y)+.05)/(Math.min(x,y)+.05)};
+  const mix=(a,b,t)=>a.map((v,i)=>Math.round(v+(b[i]-v)*t));
+  const hex=a=>"#"+a.map(v=>v.toString(16).padStart(2,"0")).join("");
+  const fam=s=>(s||"").split(",")[0].trim();
+  let paper=null,area=0,big=null,bigSize=0;const ink={},font={};
+  root.querySelectorAll("*").forEach(e=>{
+    const cs=getComputedStyle(e);if(cs.display==="none"||cs.visibility==="hidden")return;const r=e.getBoundingClientRect();
+    const bg=rgb(cs.backgroundColor);if(bg&&r.width*r.height>area){area=r.width*r.height;paper=bg}
+    const own=[...e.childNodes].filter(n=>n.nodeType===3).map(n=>n.textContent.trim()).join(" ");if(!own||r.width<1)return;
+    const c=rgb(cs.color),fs=parseFloat(cs.fontSize)||0,k=c&&c.join(",");
+    if(c){ink[k]=(ink[k]||0)+own.length;font[cs.fontFamily]=(font[cs.fontFamily]||0)+own.length}
+    if(c&&fs>bigSize&&own.length>2){bigSize=fs;big={c,f:cs.fontFamily}}
+  });
+  const top1=o=>Object.keys(o).sort((a,b)=>o[b]-o[a])[0];
+  let P=paper||[244,236,220],I=(top1(ink)||"34,26,20").split(",").map(Number),A=big?big.c:I;
+  if(lum(P)<.35){P=mix([246,239,226],A,.06);I=[34,26,20]}
+  for(let i=0;i<10&&con(I,P)<7;i++)I=mix(I,lum(P)>.4?[0,0,0]:[255,255,255],.25);
+  if(con(I,P)<4.5)I=[34,26,20];
+  if(con(A,P)<3)A=I;
+  let T=A;for(let i=0;i<12&&lum(T)>.06;i++)T=mix(T,[0,0,0],.25);
+  const q=v=>String(v).replace(/"/g,"'");
+  const fancy=/marker|script|hand|caveat|kalam|pacifico|lobster|dafoe|grace|apple|satisfy|sacramento|allura|yellowtail|courgette|damion|fraktur|pirata|unifraktur|gotisch|blackletter|texturina|germania|rye|smokum|ewert|monoton|bungee shade/i;
+  let body=q(top1(font)||"var(--f-body)");if(fancy.test(body))body="var(--f-body)";
+  const disp=big?q(big.f):body;
+  const wide=f=>{try{const x=document.createElement("canvas").getContext("2d");x.font="20px "+f;return x.measureText("Spider Rider corn dogs").width/(20*22)>.6}catch(e){return false}};
+  const name=wide(disp)?body:disp,soft=mix(I,P,.38);
+  return {top:hex(T),topInk:hex(P),paper:hex(P),ink:hex(I),soft:hex(con(soft,P)<4.5?mix(I,P,.22):soft),accent:hex(con(A,P)<3?I:A),tab:hex(mix(P,A,.15)),
+    disp,name,body,price:body,title:disp,note:body};
+}
+const LIB_COURSE={s:"Starters",m:"Mains",w:"Sweets",d:"Drinks"};
+function libPhoneView(f,menu,L,root){
+  const fl=L.flavour||{},all=[],groups=[];
+  for(const c of ["s","m","w","d"]){const its=(menu[c]||[]).filter(it=>it&&it.n);if(!its.length)continue;
+    groups.push({h:LIB_COURSE[c],items:its.map(it=>({k:it.n}))});for(const it of its)all.push({label:it.n,film:it.note||"",how:it.how||"",price:""})}
+  if(!groups.length){phoneView(null);return}
+  {const ea=$("easel"),was=ea.hidden;ea.hidden=false;try{FMT_PHONE.lib=libPhonePal(root)}finally{ea.hidden=was}}
+  phoneView(f,{fmt:"lib",brand:fl.venue||"",tag:ESC(current&&current.tag||f.T),phoneTitle:f.title},{groups,all});
+}
+function fitPhoneTitle(){
+  const t=fmtPhone.querySelector(".fp-lib .fp-title");if(!t||!t.offsetWidth)return;
+  let z=34;t.style.fontSize=z+"px";
+  while(z>18&&(t.scrollWidth>t.clientWidth+1||t.offsetHeight>z*3.3)){z-=2;t.style.fontSize=z+"px"}
+}
 
 let renderId=0;
 /* ---------- plan the night: tick dishes, set guests, scaled shopping and real times (data/recipes2) ---------- */
@@ -1028,7 +1075,7 @@ async function show(f,preferSig){
       try{libAim(card,L)}catch(e){}
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;
       await new Promise(r=>setTimeout(r,180));try{libPhotoPass(card,L,lobbyPoster(f))}catch(e){console.warn("photo pass",e)}libUnclip(card);setTimeout(()=>{if(id===renderId)libUnclip(card)},1400);setTimeout(()=>{if(id===renderId)libUnclip(card,1)},3200);
-      phoneView(null);styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);scalePreview();
+      try{libPhoneView(f,menu,L,card)}catch(e){console.warn("phone menu",e);phoneView(null)}styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);scalePreview();
       const refitL=()=>{if(id!==renderId)return;const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
       refitL();await document.fonts.ready;refitL();scalePreview();
       return;
