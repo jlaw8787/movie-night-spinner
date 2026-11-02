@@ -1782,9 +1782,29 @@ if(typeof window!=="undefined"&&window.addEventListener&&typeof document!=="unde
   clearTimeout(window.__fs);window.__fs=setTimeout(()=>fitSigns(),60)}).observe(document.body,{childList:true,subtree:true})}
 /* palace marquee: shrink long titles to fit the sign, light boxes show tonight's poster and recent spins */
 let _hang=false;
-function fitMarquee(){if(_hang)return;const t=$("now");const txt=t.textContent;const n=txt.length;t.style.fontSize=`min(3.3cqw,${(64/Math.max(n,8)).toFixed(2)}cqw)`;
+function fitMarquee(){if(_hang)return;const t=$("now");const txt=t.textContent;const n=txt.length;t.style.fontSize=`${Math.min(112,1.56*(+(document.querySelector(".mq")||{dataset:{}}).dataset.w||1000)/Math.max(n,8)).toFixed(1)}px`;
   if(!t.querySelector("i")){_hang=true;t.innerHTML=[...txt].map((ch,i)=>ch===" "?" ":`<i style="--r:${((Math.sin(i*12.9898+n)*43758.5453)%1*2.4).toFixed(2)}deg;--y:${((Math.sin(i*78.233+n)*12345.678)%1*0.05).toFixed(3)}em">${ch==="&"?"&amp;":ch==="<"?"&lt;":ch===">"?"&gt;":ch}</i>`).join("");_hang=false}}
 
+/* the board in the photo is seen at an angle: map the live letters onto it with a perspective transform */
+const BOARD_Q=[[0.1093, 0.27008], [0.77325, 0.4913], [0.77723, 0.69619], [0.10822, 0.55794]];
+function placeMarquee(){
+  const st=document.querySelector(".palace-stage"),mq=document.querySelector(".mq");if(!st||!mq)return;
+  const w=st.clientWidth,h=st.clientHeight;if(!w||!h)return;
+  /* phones show only the middle of the photo: keep the letters on the part of the board that is on screen */
+  const sr=st.getBoundingClientRect(),pr=st.parentElement.getBoundingClientRect(),pad=.035;
+  const vx0=Math.max(0,(pr.left-sr.left)/w)+pad,vx1=Math.min(1,(pr.right-sr.left)/w)-pad;
+  const [q0,q1,q2,q3]=BOARD_Q,lx=(q0[0]+q3[0])/2,rx=(q1[0]+q2[0])/2,t0=Math.max(0,(vx0-lx)/(rx-lx)),t1=Math.min(1,(vx1-lx)/(rx-lx));
+  const L=(a,b,t)=>[a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t];
+  const Q=[L(q0,q1,t0),L(q0,q1,t1),L(q3,q2,t1),L(q3,q2,t0)];
+  const H=260,W=Math.round(1000*(t1-t0));mq.style.width=W+"px";mq.dataset.w=W;
+  const d=Q.map(([x,y])=>[x*w,y*h]);
+  const [[x0,y0],[x1,y1],[x2,y2],[x3,y3]]=d,dx1=x1-x2,dx2=x3-x2,dy1=y1-y2,dy2=y3-y2,sx=x0-x1+x2-x3,sy=y0-y1+y2-y3;
+  const den=dx1*dy2-dx2*dy1,g=(sx*dy2-dx2*sy)/den,k=(dx1*sy-sx*dy1)/den;
+  const a=x1-x0+g*x1,b=x3-x0+k*x3,c=x0,dd=y1-y0+g*y1,e=y3-y0+k*y3,f=y0;
+  const m=[a/W,dd/W,0,g/W,b/H,e/H,0,k/H,0,0,1,0,c,f,0,1];
+  mq.style.transform=`matrix3d(${m.map(v=>+v.toFixed(8)).join(",")})`;mq.classList.add("on");_hang=false;try{const t=$("now");t.textContent=t.textContent;}catch(e){}
+}
+try{placeMarquee();addEventListener("resize",placeMarquee);if(typeof ResizeObserver!=="undefined")new ResizeObserver(placeMarquee).observe(document.querySelector(".palace-stage"))}catch(e){}
 if(typeof MutationObserver!=="undefined")new MutationObserver(fitMarquee).observe($("now"),{childList:true,characterData:true,subtree:true});try{fitMarquee()}catch(e){}
 function lightboxes(){
   const P=typeof TMDB_POSTERS!=="undefined"?TMDB_POSTERS:{};

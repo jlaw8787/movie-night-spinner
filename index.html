@@ -1148,6 +1148,17 @@ body.winner .palace-glow{animation:palacePulse .22s steps(2) 8}
 .top .brand{display:none}
 .top{justify-content:center}
 @media (max-width:640px){.palace-stage{width:900px}.top{padding-top:8px}}
+/* real photo hero: the crest is lit in the photo, the board gets live letters set in its perspective (placeMarquee) */
+.blade{left:0;top:0;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.lbox{display:none!important}
+.mq{left:0;top:0;width:1000px;height:260px;padding:0 20px;gap:34px;background:none;transform-origin:0 0;visibility:hidden}
+.mq.on{visibility:visible}
+/* slotted letters on a backlit board: not pure black, soft edged, a few hung crooked or sun-faded, the board's light shows through */
+.mq-k,.mq-t{color:#2b2627;mix-blend-mode:multiply;filter:blur(.55px);text-shadow:0 0 1px rgba(43,38,39,.5)}
+.mq-t i:nth-child(5n+2){opacity:.84}.mq-t i:nth-child(7n+4){opacity:.9;color:#3a3334}.mq-t i:nth-child(11n+6){opacity:.76}
+.mq-k{font:700 46px/1 "Oswald",Impact,sans-serif;letter-spacing:.14em;color:#151112}
+.mq-t{font:700 100px/1 "Oswald",Impact,sans-serif;letter-spacing:.05em;color:#151112;max-width:100%;overflow:visible}
+.palace-glow{background:radial-gradient(ellipse 36% 15% at 44% 48%,rgba(255,236,190,.5),transparent 70%),radial-gradient(ellipse 18% 10% at 51% 22%,rgba(255,200,110,.5),transparent 70%)}
 
 /* ---------- palace wheel: real brass rim and pointer, bulbs chase in CSS, damask walls ---------- */
 body{background:linear-gradient(rgba(14,5,7,.66),rgba(14,5,7,.8)),url("assets/hero/wall.webp") 0 0/360px 360px,#160609}
@@ -2553,14 +2564,14 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
     </section>
   </div>
 </div>
-<p class="credit"><a class="tmdb-logo" href="https://www.themoviedb.org/" rel="noopener" target="_blank"><img src="assets/tmdb/tmdb-logo.svg" alt="TMDB" width="120" height="16"></a> Film posters come from <a href="https://www.themoviedb.org/" rel="noopener" target="_blank">TMDB</a>. This product uses the TMDB API but is not endorsed or certified by TMDB. Where to watch data by <a href="https://www.justwatch.com/au" rel="noopener" target="_blank">JustWatch</a>. <button class="howlink" id="howBtn" type="button">How it works</button></p>
+<p class="credit"><a class="tmdb-logo" href="https://www.themoviedb.org/" rel="noopener" target="_blank"><img src="assets/tmdb/tmdb-logo.svg" alt="TMDB" width="120" height="16"></a> Film posters come from <a href="https://www.themoviedb.org/" rel="noopener" target="_blank">TMDB</a>. This product uses the TMDB API but is not endorsed or certified by TMDB. Where to watch data by <a href="https://www.justwatch.com/au" rel="noopener" target="_blank">JustWatch</a>. Cinema photo by SecretName101 via <a href="https://commons.wikimedia.org/wiki/File:Orpheum_Theatre_marquee_on_election_night_2024_IMG_2517.jpg" rel="noopener" target="_blank">Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener" target="_blank">CC BY 4.0</a>, signs changed. Shopfront photo by Mathias Reding on <a href="https://unsplash.com/photos/0rgZp-E8iIs" rel="noopener" target="_blank">Unsplash</a>, signs changed. <button class="howlink" id="howBtn" type="button">How it works</button></p>
 
 <script src="tmdb-posters.js?v=050c5f60" defer></script>
 <script src="ratings.js?v=dfb01117" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=e68cd5e3" defer></script>
 <script src="formats-core.js?v=25ffa69f" defer></script>
-<script src="app.js?v=49dbf3d5" defer></script>
+<script src="app.js?v=e2a8185e" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
