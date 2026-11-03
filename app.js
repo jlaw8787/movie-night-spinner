@@ -249,6 +249,9 @@ addEventListener("pointerdown",()=>{lastKey=false},true);
 function announceFilm(f,focus){const h=$("nowShowing");if(!h)return;h.textContent="Now showing: "+f.title+" ("+f.year+")";if(focus)h.focus({preventScroll:true});kbSpin=false}
 document.getElementById("skipLink").addEventListener("click",e=>{e.preventDefault();const v=!$("viewShop").hidden?"viewShop":!$("viewCrave").hidden?"viewCrave":null;
   const t=v?$(v).querySelector("input,button,select"):$("spin");if(t){t.focus();t.scrollIntoView({block:"center"})}});
+/* touch screens say Tap, mouse screens say Click */
+const tapWord=t=>matchMedia("(pointer:coarse)").matches?t:String(t).replace(/\bTap\b/,"Click").replace(/\btap\b/,"click");
+if(!matchMedia("(pointer:coarse)").matches)document.querySelectorAll(".cb-k,.sv-tap,.skip-k,[data-tap]").forEach(e=>{e.textContent=tapWord(e.textContent)});
 /* ---------- curtains and the easel tilt ---------- */
 const theatre=$("theatre"),easel=$("easel");
 function closeCurtains(){theatre.classList.add("closed");$("tease").textContent=pick(["Setting the table","Warming the plates","Popping the corn","Chilling the glasses","Lighting the candles"])}
@@ -987,7 +990,8 @@ const PL_CONT=/^(bag|can|tin|bottle|jar|packet|pack|bunch|bunche|clove|rasher|sl
 const PL_MASS=/(thyme|rosemary|mint|parsley|basil|coriander|dill|chives|oregano|sage|tarragon|paprika|cinnamon|nutmeg|cumin|turmeric|allspice|colouring|coloring|paste|sauce|syrup|honey|vinegar|stock|yoghurt|yogurt|mayonnaise|mustard|ketchup|jam|chocolate|cocoa|spinach|lettuce|garlic|ginger|salt|ice cream|custard|gravy|cordial|lemonade|chilli flakes|seasoning|spice|zest|ice)$/i;
 function planPlural(item,q){if(!(q>1))return item;let [head,...rest]=String(item).split(",");const par=head.indexOf(" (");if(par>0){rest=[head.slice(par)+(rest.length?","+rest.join(","):"")];head=head.slice(0,par);return planPlural(head,q)+rest[0]}const w=head.trim().split(" ");
   const pl=x=>/(s|ice|milk|water|juice|sugar|flour|rice|bread|butter|cream|cheese|fish|corn|meat|oil|salt|pepper|mince|beef|pork|lamb|chicken|bacon|ham|tea|coffee|soda)$/i.test(x)?x:/(ch|sh|x)$/i.test(x)?x+"es":/(tomato|potato|mango|avocado)$/i.test(x)?x+"es":/[^aeiou]y$/i.test(x)?x.slice(0,-1)+"ies":/f$/i.test(x)&&/loaf|leaf|half/i.test(x)?x.slice(0,-1)+"ves":x+"s";
-  const ci=w.slice(0,3).findIndex(x=>PL_CONT.test(x));
+  /* "rib eye", "ear of corn" style names are the food, not a container: "rib" only counts when it is "rib of" or "ribs" */
+  const ci=w.slice(0,3).findIndex((x,i)=>PL_CONT.test(x)&&!(/^(rib|ear|head|wheel|log)$/i.test(x)&&w[i+1]&&w[i+1]!=="of"&&w[i+1]!=="celery"));
   if(ci>=0){if(!/s$/i.test(w[ci]))w[ci]=pl(w[ci]);if(w.length>ci+1&&w[ci+1]!=="of")w[ci]+=" of"}else if(!PL_MASS.test(head.trim()))w[w.length-1]=pl(w[w.length-1]);return [w.join(" "),...rest].join(",")}
 /* one of something stays singular even when the recipe wrote it plural: "1 clove garlic", not "1 cloves garlic" */
 function planOne(item){const w=String(item).split(" ");const i=w.slice(0,3).findIndex(x=>PL_CONT.test(x)&&/s$/i.test(x));if(i>=0)w[i]=planSing(w[i]);return w.join(" ")}
@@ -1037,7 +1041,7 @@ const planMin=m=>m>=1440?(d=>d+(d===1?" day":" days")+" ahead")(Math.round(m/144
 function planHTML(f){
   const r=f._r2,k=PLAN.guests/(r.serves||4),C={s:"Snacks",m:"Mains",w:"Sweets",d:"Drinks",c:"From the candy bar"},all=planAll(f);
   const TAG={veg:"vegetarian version",af:"alcohol-free version"},BLK={meat:"has meat or fish",alcohol:"has alcohol"};
-  return `<div class="pl-row"><span class="pl-l">Guests</span><button type="button" class="pl-b" data-pl="-" aria-label="Fewer guests">-</button><output class="pl-g" aria-live="polite">${PLAN.guests}</output><button type="button" class="pl-b" data-pl="+" aria-label="More guests">+</button></div>
+  return `<div class="pl-row"><span class="pl-l">Guests</span><button type="button" class="pl-b" data-pl="-" aria-label="Fewer guests">−</button><output class="pl-g" aria-live="polite">${PLAN.guests}</output><button type="button" class="pl-b" data-pl="+" aria-label="More guests">+</button></div>
   <div class="pl-row pl-diet"><label class="pl-t"><input type="checkbox" data-diet="veg"${DIET.veg?" checked":""}><span>Vegetarian</span></label><label class="pl-t"><input type="checkbox" data-diet="af"${dietAF()?" checked":""}${kidsMode?" disabled":""}><span>No alcohol${kidsMode?" (kids mode)":""}</span></label></div>
   <details class="pl-pick"${planOpen()?" open":""}><summary><span class="pl-sum">${planCount(r)}</span><span class="pl-tw">Choose dishes</span></summary>
   <p class="pl-hint">Tick what you want to make tonight. The prep sheet, shopping list and times follow your picks.${DIET.veg||dietAF()?" Dishes that don't fit are swapped for their own version, or left off so you can choose.":""}</p>
@@ -1574,7 +1578,7 @@ function renderMember(){
   const late=lateFees();const owe=late.reduce((n,x)=>n+Math.min(x.days,10),0);
   const fee=late.length?`Late fees: $${owe}.00 on ${late.slice(0,2).map(x=>x.f.title).join(" and ")}${late.length>2?` and ${late.length-2} more`:""}. Mark it seen to clear the slate.`:"Late fees: none. Good member.";
   const sinceMY=new Date(member.since).toLocaleString("en-AU",{month:"2-digit",year:"2-digit"});
-  box.innerHTML=`<div class="mc" role="group" aria-label="Your Galaxy Video member card"><img class="mc-art" src="assets/brand/member-card.webp" alt="" width="1012" height="638" decoding="async"><p class="mc-no foil" aria-label="Member number ${member.no}">${member.no.slice(0,3)} ${member.no.slice(3)}</p><p class="mc-since foil">Member since ${sinceMY}</p>${code39("GV"+member.no)}<span class="mc-sig" aria-hidden="true">${ESC(member.name||"")}</span><span class="mc-name-show foil" aria-hidden="true">${ESC(member.name||"")}</span><input id="memberName" class="mc-name" type="text" maxlength="24" autocomplete="off" aria-label="Name on your member card" placeholder="Tap to add your name" value="${ESC(member.name||"")}"></div><p class="member-meta"><span>Since ${since}</span><span>Rentals ${member.rentals||0}</span>${fav?`<span>Usually in ${ESC(fav[0])}</span>`:""}</p><p class="member-fee${late.length?" owing":""}">${ESC(fee)}</p>${outList.length?`<ul class="member-out">${outList.map(({f,r})=>`<li><button type="button" class="out-open" data-open="${ESC(f.id)}" aria-label="Open the menu for ${ESC(f.title)}"><span class="t">${ESC(f.title)}</span><small>due ${new Date(r.due).toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"})}. Tap for the menu</small></button><button type="button" data-ret="${ESC(f.id)}">Return</button></li>`).join("")}</ul>${outList.length>1?'<button type="button" class="out-all" data-retall="1">Return them all</button>':""}`:""}<div class="member-sync">${member.pin?`<p id="syncNote">${ESC(syncNote())}</p><button type="button" data-sync="out">Sign out here</button>`:`<button type="button" data-sync="join">Put my card online</button><button type="button" data-sync="in">Use my card from another device</button>`}</div>`;
+  box.innerHTML=`<div class="mc" role="group" aria-label="Your Galaxy Video member card"><img class="mc-art" src="assets/brand/member-card.webp" alt="" width="1012" height="638" decoding="async"><p class="mc-no foil" aria-label="Member number ${member.no}">${member.no.slice(0,3)} ${member.no.slice(3)}</p><p class="mc-since foil">Member since ${sinceMY}</p>${code39("GV"+member.no)}<span class="mc-sig" aria-hidden="true">${ESC(member.name||"")}</span><span class="mc-name-show foil" aria-hidden="true">${ESC(member.name||"")}</span><input id="memberName" class="mc-name" type="text" maxlength="24" autocomplete="off" aria-label="Name on your member card" placeholder=tapWord("Tap to add your name") value="${ESC(member.name||"")}"></div><p class="member-meta"><span>Since ${since}</span><span>Rentals ${member.rentals||0}</span>${fav?`<span>Usually in ${ESC(fav[0])}</span>`:""}</p><p class="member-fee${late.length?" owing":""}">${ESC(fee)}</p>${outList.length?`<ul class="member-out">${outList.map(({f,r})=>`<li><button type="button" class="out-open" data-open="${ESC(f.id)}" aria-label="Open the menu for ${ESC(f.title)}"><span class="t">${ESC(f.title)}</span><small>due ${new Date(r.due).toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"})}. Tap for the menu</small></button><button type="button" data-ret="${ESC(f.id)}">Return</button></li>`).join("")}</ul>${outList.length>1?'<button type="button" class="out-all" data-retall="1">Return them all</button>':""}`:""}<div class="member-sync">${member.pin?`<p id="syncNote">${ESC(syncNote())}</p><button type="button" data-sync="out">Sign out here</button>`:`<button type="button" data-sync="join">Put my card online</button><button type="button" data-sync="in">Use my card from another device</button>`}</div>`;
   $("memberName").addEventListener("input",e=>{const v=e.target.value;box.querySelector(".mc-name-show").textContent=v;box.querySelector(".mc-sig").textContent=v.trim()});
   $("memberName").addEventListener("change",e=>{member.name=e.target.value.trim();saveMember();renderShop()});
   box.querySelectorAll("[data-ret]").forEach(b=>b.addEventListener("click",()=>{const f=FILMS.find(x=>x.id===b.dataset.ret);if(f)openChute(f)}));
@@ -1838,7 +1842,7 @@ function tapeHTML(f){
 }
 function renderBoard(){
   const t=isTuesday();
-  $("svBoard").innerHTML=`<div class="svb-row${t?" dim":""}"><b>New releases</b><span>$7 overnight</span></div><div class="svb-row"><b>Weeklys</b><span>$2 for 7 nights</span></div><div class="svb-row${t?" hot":""}"><b>$2 Tuesday</b><span>${t?"On tonight":"Every new release, every Tuesday"}</span></div><button type="button" class="svb-fri" id="svFri">Friday night: one for the kids, one for later</button>`;
+  $("svBoard").innerHTML=`<div class="svb-row${t?" dim":""}"><b>New releases</b><span>$7 overnight</span></div><div class="svb-row"><b>Weeklys</b><span>$2 for 7 nights</span></div><div class="svb-row${t?" hot":""}"><b>$2 Tuesday</b><span>${t?"On tonight":"Every new release, every Tuesday"}</span></div><button type="button" class="svb-fri" id="svFri">Double bill: one for the kids, one for later</button>`;
   $("svFri").addEventListener("click",()=>{const kids=FILMS.filter(f=>isKidSafe(f)&&onSvc(f,svc)),late=FILMS.filter(f=>!isKidSafe(f)&&onSvc(f,svc));if(!kids.length||!late.length)return;openDouble(pick(kids),pick(late))});
 }
 function renderCal(cal){
@@ -2075,7 +2079,7 @@ function renderCrave(){
   $("craveChips").innerHTML=CRAVES.map(([n])=>`<button type="button" aria-pressed="${craveSel===n}" data-crave="${ESC(n)}"><span>${ESC(n)}</span><b>${window.__craveN[n]}</b></button>`).join("");
   const typed=$("craveSearch").value;let rx=null,label="";
   if(typed.trim()){rx=craveRx(typed);label=typed.trim()}else if(craveSel){rx=CRAVES.find(c=>c[0]===craveSel)[1];label=craveSel.toLowerCase()}
-  if(!rx){craveHits=[];$("craveCount").textContent="";$("craveSpin").hidden=true;$("craveGrid").innerHTML='<p class="crave-empty">Tap something on the board to see which films serve it.</p>';return}
+  if(!rx){craveHits=[];$("craveCount").textContent="";$("craveSpin").hidden=true;$("craveGrid").innerHTML='<p class="crave-empty">${tapWord("Tap something on the board to see which films serve it.")}</p>';return}
   craveHits=[];
   for(const f of FILMS){if(kidsMode&&!isKidSafe(f))continue;if(!onSvc(f,svc))continue;const d=[];for(const k of["S","M","W","K"])for(const it of f[k]||[])if(rx.test(it[0]))d.push(it[0]);if(d.length)craveHits.push([f,d])}
   craveHits.sort((a,b)=>b[1].length-a[1].length||a[0].title.localeCompare(b[0].title));
@@ -2735,7 +2739,7 @@ $("wallBtn").addEventListener("click",openWall);
 $("setClearStubs").addEventListener("click",()=>{clearStubs();$("setMsg").textContent="Ticket stubs cleared."});
 $("setClearSaved").addEventListener("click",()=>{FAV=[];favSave();renderFav();$("setMsg").textContent="Saved menus cleared."});
 {let armed=0;$("setReset").addEventListener("click",()=>{const b=$("setReset");
-  if(!armed){armed=setTimeout(()=>{armed=0;b.classList.remove("arm");b.textContent="Reset everything"},5000);b.classList.add("arm");b.textContent="Tap again to reset";$("setMsg").textContent="This clears everything saved on this device. Tap again to confirm.";return}
+  if(!armed){armed=setTimeout(()=>{armed=0;b.classList.remove("arm");b.textContent="Reset everything"},5000);b.classList.add("arm");b.textContent=tapWord("Tap again to reset");$("setMsg").textContent="This clears everything saved on this device. Tap again to confirm.";return}
   clearTimeout(armed);try{Object.keys(localStorage).filter(k=>k.startsWith("mns-")&&k!=="mns-welcome").forEach(k=>localStorage.removeItem(k))}catch(e){}
   location.replace(location.pathname)})}
 renderFav();setSync();
@@ -2766,7 +2770,7 @@ function seriesNote(f){
   if(!sr){box.hidden=true;box.innerHTML="";return}
   const ord=seriesOrderPref(),films=seriesList(sr,ord),i=films.findIndex(x=>x.id===f.id),first=films[0];
   const how=sr.story?` in ${ord==="story"?"story":"release"} order`:"";
-  box.innerHTML=`<p>Film <b>${i+1} of the ${films.length}</b> ${ESC(sr.name)} films in the store${how}.</p>${i>0?`<button type="button" class="go" data-sr="first">Start with ${ESC(first.title)}</button>`:""}<button type="button" data-sr="run">Plan a marathon</button>`;
+  box.innerHTML=`<p>Film <b>${i+1} of the ${films.length}</b> ${ESC(sr.name)} films on the wheel${how}.</p>${i>0?`<button type="button" class="go" data-sr="first">Start with ${ESC(first.title)}</button>`:""}<button type="button" data-sr="run">Plan a marathon</button>`;
   box.hidden=false;
   box.onclick=e=>{const k=e.target.closest("[data-sr]");if(!k)return;
     if(k.dataset.sr==="first"){replay(first);addHistory(first);toMenu()}

@@ -2369,7 +2369,7 @@ dialog.mystery .my-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a
 .my-dish{background:#2a1218;border:1px solid #4a2a2a;border-radius:12px;margin:0 0 8px;padding:10px 14px}
 .my-dish summary{cursor:pointer;list-style:none;display:flex;flex-direction:column;gap:2px}
 .my-dish summary b{font:600 15px var(--f-body);color:#fff4d6}
-.my-dish summary b::after{content:"Tap for the method";float:right;font:500 12px var(--f-body);color:#e2b04f}
+.my-dish summary b::after{content:"Click for the method";float:right;font:500 12px var(--f-body);color:#e2b04f}
 .my-dish[open] summary b::after{content:"Hide"}
 .my-dish summary span{font:400 14px/1.4 var(--f-body);color:#d9c9a8}
 .my-dish ol{margin:10px 0 2px;padding-left:20px;font:400 14px/1.5 var(--f-body);color:#eadcbe}
@@ -2545,6 +2545,9 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 .pp-chip{display:inline-block;padding:2px 9px;border:1px solid currentColor;border-radius:999px;line-height:1.5;white-space:nowrap}
 .pp-a4 .pp-chip{padding:0 7px}
 .sc:empty{display:none}
+@media (pointer:coarse){.my-dish summary b::after{content:"Tap for the method"}}
+/* the wheel rim drawing runs a pixel past a phone screen: never let it cause a sideways scroll (clip keeps sticky elements working) */
+html,body{overflow-x:clip}
 /* printed menu, full size */
 #preview{cursor:zoom-in}
 .tab-prep-on #preview{cursor:auto}
@@ -2693,7 +2696,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
     </div>
     
     <div class="sv-board" id="svBoard"></div>
-    <div class="sv-aisles"><img src="assets/hero/aisles-1000.webp" srcset="assets/hero/aisles-1000.webp 1000w, assets/hero/aisles-1400.webp 1400w, assets/hero/aisles.webp 1774w" sizes="(max-width:640px) 460px, 1240px" alt="Inside the shop" loading="lazy"><button type="button" class="sv-hang fit" data-go="wall" style="left:9.13%;top:4.51%;width:15.67%;height:9.70%"><span class="fit-t">New releases</span></button><button type="button" class="sv-hang fit" data-go="Comedy and teen" style="left:40.70%;top:10.60%;width:19.05%;height:8.12%"><span class="fit-t">Comedy</span></button><button type="button" class="sv-hang fit" data-go="Family" style="left:64.04%;top:19.50%;width:9.13%;height:5.07%"><span class="fit-t">Family</span></button><button type="button" class="sv-hang fit" data-go="Horror" style="left:39.52%;top:22.44%;width:6.54%;height:3.49%"><span class="fit-t">Horror</span></button><button type="button" class="sv-hang fit" data-go="Sci-fi" style="left:50.68%;top:24.46%;width:5.86%;height:3.04%"><span class="fit-t">Sci-fi</span></button><button type="button" class="sv-hang fit" data-go="Drama" style="left:79.03%;top:25.48%;width:5.36%;height:3.04%"><span class="fit-t">Drama</span></button><p class="sv-aisles-k">Tap a sign to walk to that aisle</p></div><div class="sv-jump" aria-label="Walk to an aisle"><button type="button" class="sv-hang-chip" data-go="wall">New releases</button><button type="button" class="sv-hang-chip" data-go="Comedy and teen">Comedy</button><button type="button" class="sv-hang-chip" data-go="Family">Family</button><button type="button" class="sv-hang-chip" data-go="Horror">Horror</button><button type="button" class="sv-hang-chip" data-go="Sci-fi">Sci-fi</button><button type="button" class="sv-hang-chip" data-go="Drama">Drama</button></div>
+    <div class="sv-aisles"><img src="assets/hero/aisles-1000.webp" srcset="assets/hero/aisles-1000.webp 1000w, assets/hero/aisles-1400.webp 1400w, assets/hero/aisles.webp 1774w" sizes="(max-width:640px) 460px, 1240px" alt="Inside the shop" loading="lazy"><button type="button" class="sv-hang fit" data-go="wall" style="left:9.13%;top:4.51%;width:15.67%;height:9.70%"><span class="fit-t">New releases</span></button><button type="button" class="sv-hang fit" data-go="Comedy and teen" style="left:40.70%;top:10.60%;width:19.05%;height:8.12%"><span class="fit-t">Comedy</span></button><button type="button" class="sv-hang fit" data-go="Family" style="left:64.04%;top:19.50%;width:9.13%;height:5.07%"><span class="fit-t">Family</span></button><button type="button" class="sv-hang fit" data-go="Horror" style="left:39.52%;top:22.44%;width:6.54%;height:3.49%"><span class="fit-t">Horror</span></button><button type="button" class="sv-hang fit" data-go="Sci-fi" style="left:50.68%;top:24.46%;width:5.86%;height:3.04%"><span class="fit-t">Sci-fi</span></button><button type="button" class="sv-hang fit" data-go="Drama" style="left:79.03%;top:25.48%;width:5.36%;height:3.04%"><span class="fit-t">Drama</span></button><p class="sv-aisles-k" data-tap>Tap a sign to walk to that aisle</p></div><div class="sv-jump" aria-label="Walk to an aisle"><button type="button" class="sv-hang-chip" data-go="wall">New releases</button><button type="button" class="sv-hang-chip" data-go="Comedy and teen">Comedy</button><button type="button" class="sv-hang-chip" data-go="Family">Family</button><button type="button" class="sv-hang-chip" data-go="Horror">Horror</button><button type="button" class="sv-hang-chip" data-go="Sci-fi">Sci-fi</button><button type="button" class="sv-hang-chip" data-go="Drama">Drama</button></div>
     <div class="cal" id="shopCal" aria-label="Holiday calendar"></div>
     <div class="member" id="memberCard"></div>
     <p class="shop-count" id="shopCount" aria-live="polite"></p>
@@ -2829,9 +2832,9 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 <script src="ratings.js?v=dfb01117" defer></script>
 <script src="aisles.js?v=6b920a43" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
-<script src="films.js?v=79a18e5d" defer></script>
+<script src="films.js?v=94bc6236" defer></script>
 <script src="formats-core.js?v=b4efa0b8" defer></script>
-<script src="app.js?v=fdc70297" defer></script>
+<script src="app.js?v=b99c2f95" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

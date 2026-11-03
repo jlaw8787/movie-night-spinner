@@ -143,6 +143,7 @@ Gaps:
 8. **Shorten the Galaxy Video phone page and surface the member card.** Where: Galaxy Video on phone. What's wrong: about 15,000px of aisles with the member card at the very bottom. Good: member card and price board near the top (or behind a "My card" button in the sticky bar), aisles collapsed to one row each with "See all".
 
 9. **Fix the small store and menu text bugs.** Member card name field overlapping the fine print; "Friday night" banner on a Tuesday; walk-in and store both opening on the same shopfront photo; Boomerang venue as a cosmetics company; "4 ribs of eye steaks"; "Tap" wording on desktop; hyphen as minus on the Prep stepper; "in the store" on cinema pages; 1px phone overflow.
+   Partly done (3 Nov). Fixed: "4 ribs of eye steaks" (rib eye is now the food, "ribs of celery" still works); proper minus on the Prep guest stepper; the banner reads "Double bill: one for the kids, one for later" so it is right on any day; series note on cinema pages says "on the wheel", not "in the store"; mouse screens say Click, touch screens say Tap; Boomerang venue is now "Lady Eloise Executive Dining Room"; no 1px sideways scroll on phones. Still open: member card name field over the fine print, walk-in and store opening on the same shopfront photo.
 
 10. **Tighten first view on desktop.** Where: box office at 1440x900. What's wrong: Spin sits at the bottom edge with the wheel cut off. Good: trim the marquee height on wide short screens so the whole wheel and Spin button sit above the fold.
 
