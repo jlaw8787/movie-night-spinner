@@ -15,7 +15,7 @@ Read this first in a new chat. Last updated 4 Nov 2026.
 
 ## The to-do
 
-All 15 items in docs/review-2.md are done (3 Nov evening, notes against each item). Review 3 is worked through. Review 4 (8 out of 10, docs/review-4.md) is worked through on 4 Nov, notes against each item. Next: a fifth review, or merge to main once the GitHub flag clears.
+All 15 items in docs/review-2.md are done (3 Nov evening, notes against each item). Review 3 is worked through. Review 4 (8 out of 10, docs/review-4.md) is worked through on 4 Nov, notes against each item. Fifth review: 8.1 out of 10 (docs/review-5.md). Next: work down docs/review-5.md one item at a time, commit and push after each.
 
 Left open from review 2: matching prices across sequels (low impact), the fallback photo treatment for films with no good still, and (fixed 3 Nov) the 3 browser checks: two were out of date with the shopping list format, the third found a real bug where closing the rental slip stepped browser history back one extra entry and could leave the app. All tests and browser checks now pass.
 
