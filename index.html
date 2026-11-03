@@ -1760,6 +1760,7 @@ dialog .modal-x:focus-visible{outline:3px solid #ffd23f;outline-offset:2px}
 /* menu of the week: one of the printed era menus, a new one each week */
 .motw{border-color:rgba(232,176,74,.45);background:linear-gradient(100deg,rgba(232,176,74,.12),transparent 55%),var(--raise)}
 .motw .week-t small{display:block;font:500 14px/1.3 var(--f-body);color:var(--soft);margin-top:3px}
+@media (max-width:700px){.motw .motw-n{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:normal}.motw .week-t.long{font-size:18px}}
 .week-time{font:inherit;color:var(--screen);background:var(--raise-2);border:1px solid var(--hair);border-radius:8px;padding:3px 6px}
 .week-count{grid-column:2/-1;margin:2px 0 0;font:600 14.5px/1.35 var(--f-body);color:var(--acc)}
 .week-count span{color:var(--soft);font-weight:500}
@@ -2839,9 +2840,9 @@ html,body{overflow-x:clip}
 <script src="ratings.js?v=dfb01117" defer></script>
 <script src="aisles.js?v=6b920a43" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
-<script src="films.js?v=2b779f25" defer></script>
+<script src="films.js?v=dfc58262" defer></script>
 <script src="formats-core.js?v=590078ae" defer></script>
-<script src="app.js?v=4be842d1" defer></script>
+<script src="app.js?v=1ef59612" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

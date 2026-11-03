@@ -125,6 +125,7 @@ $("watchFilter").addEventListener("change",renderWatchList);
 $("skipWatched").addEventListener("change",()=>{if(spinning)return;skipWatched=$("skipWatched").checked;saveWatched();setList()});
 $("watchCurrent").addEventListener("click",()=>{if(!current)return;const now=!watched.has(current.id);setWatched(current,now);if(now)openRate(current)});
 
+if(typeof ResizeObserver!=="undefined")new ResizeObserver(()=>{if(canvas.getBoundingClientRect().width)size()}).observe(canvas);
 function size(){
   const r=canvas.getBoundingClientRect(),dpr=Math.min(2,window.devicePixelRatio||1);
   canvas.width=Math.round(r.width*dpr);canvas.height=Math.round(r.height*dpr);draw();
@@ -1463,7 +1464,7 @@ function renderMotw(){
   if(week&&week.id===f.id){box.hidden=true;return}
   const sp={fmt:FMT_INDEX[f.id]},p=lobbyPoster(f);
   box.hidden=false;
-  box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}" loading="lazy">`:"<span></span>"}<p class="week-k">Menu of the week</p><p class="week-t">${ESC(f.title)} (${f.year})<small>${ESC(MOTW_KIND[sp.fmt]||"A printed menu from the film")}</small></p><div class="week-acts"><button class="go" type="button" id="motwOpen">Open the menu</button><button type="button" id="motwLock">Lock it in</button></div>`;
+  box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}" loading="lazy">`:"<span></span>"}<p class="week-k">Menu of the week</p><p class="week-t${f.title.length>26?" long":""}"><span class="motw-n">${ESC(f.title)} (${f.year})</span><small>${ESC(MOTW_KIND[sp.fmt]||"A printed menu from the film")}</small></p><div class="week-acts"><button class="go" type="button" id="motwOpen">Open the menu</button><button type="button" id="motwLock">Lock it in</button></div>`;
   $("motwOpen").addEventListener("click",()=>{setView("wheel");replay(f);addHistory(f);toMenu()});
   $("motwLock").addEventListener("click",()=>{setWeek(f);replay(f)});
 }
@@ -2134,6 +2135,8 @@ $("craveGrid").addEventListener("click",e=>{const t=e.target.closest(".tape");if
 $("craveSpin").addEventListener("click",()=>{const tapes=[...$("craveGrid").querySelectorAll(".tape")];if(!tapes.length)return;const p=tapes[Math.floor(Math.random()*tapes.length)];buzz([20,40,20]);tapes.forEach(t=>t.classList.remove("picked"));p.classList.add("picked");p.scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"});setTimeout(()=>{p.classList.remove("picked");const f=FILMS.find(x=>x.id===p.dataset.id);if(f)craveOpen(f,true)},reduce?0:700)});
 function setView(v){
   const shop=v==="shop",crave=v==="crave";$("viewShop").hidden=!shop;$("viewCrave").hidden=!crave;$("viewWheel").hidden=shop||crave;
+  /* the wheel canvas can be sized while its view is hidden (0 wide), so size it again once the box office shows */
+  if(!shop&&!crave)requestAnimationFrame(()=>{if(canvas.width<2||canvas.width!==Math.round(canvas.getBoundingClientRect().width*Math.min(2,devicePixelRatio||1)))size()});
   $("viewShopBtn").setAttribute("aria-selected",shop);$("viewCraveBtn").setAttribute("aria-selected",crave);$("viewWheelBtn").setAttribute("aria-selected",!shop&&!crave);
   if(crave){renderCrave();renderSnacks()}
   document.body.classList.toggle("in-shop",shop);
