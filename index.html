@@ -2475,6 +2475,51 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 .mz-scroll{overflow:auto;-webkit-overflow-scrolling:touch;padding:8px 8px 24px;display:grid;justify-content:safe center;align-content:start;overscroll-behavior:contain}
 .mz-sheet{position:relative;box-shadow:0 30px 70px rgba(0,0,0,.7)}
 .mz-sheet>.mcard{position:absolute;left:0;top:0}
+
+/* ---------- controls kit: one switch, one tick box, one select per brand ---------- */
+/* switches: settings rows (cinema) and the shop's two filters (Galaxy) */
+.settings .set-chk input,#viewShop .shop-tools input[type=checkbox],.settings .set-row .toggle{
+  --sw-off:#d8ccb8;--sw-on:#a3182f;--sw-knob:#fff;
+  appearance:none;-webkit-appearance:none;flex:none;width:48px;height:28px;min-height:0;margin:0;padding:0;border-radius:14px;border:0;cursor:pointer;
+  background:radial-gradient(circle at 14px 50%,var(--sw-knob) 0 9.5px,transparent 10.5px),var(--sw-off);
+  box-shadow:inset 0 1px 3px rgba(0,0,0,.25);transition:background-color .15s;font-size:0;color:transparent;overflow:hidden;display:inline-block}
+.settings .set-chk input:checked,#viewShop .shop-tools input[type=checkbox]:checked,.settings .set-row .toggle[aria-pressed=true]{
+  background:radial-gradient(circle at calc(100% - 14px) 50%,var(--sw-knob) 0 9.5px,transparent 10.5px),var(--sw-on)}
+.settings .set-chk input::after,#viewShop .shop-tools input[type=checkbox]::after,#viewShop .shop-tools input[type=checkbox]:checked::after{content:none}
+.settings .set-row .toggle:focus-visible,.settings .set-chk input:focus-visible{outline:3px solid #a3182f;outline-offset:3px}
+.settings .set-row .toggle.kids[aria-pressed=true]{background:radial-gradient(circle at calc(100% - 14px) 50%,var(--sw-knob) 0 9.5px,transparent 10.5px),var(--sw-on)}
+#viewShop .shop-tools input[type=checkbox]{--sw-off:rgba(255,244,220,.22);--sw-on:var(--gv-teal);--sw-knob:var(--gv-cream);box-shadow:inset 0 0 0 2px rgba(217,201,242,.45)}
+#viewShop .shop-tools input[type=checkbox]:checked{box-shadow:inset 0 0 0 2px var(--gv-teal),0 0 10px rgba(31,181,173,.5)}
+#viewShop .shop-tools input[type=checkbox]:checked{--sw-knob:var(--gv-gold)}
+#viewShop .shop-tools label{background:rgba(27,15,48,.7);padding:6px 12px 6px 6px;gap:10px;min-height:40px}
+/* settings select matches the cinema fields */
+.settings .set-row select{appearance:none;-webkit-appearance:none;padding:8px 34px 8px 12px;border:1px solid #c9bba4;border-radius:8px;background-color:#fff;background-image:linear-gradient(45deg,transparent 50%,#a3182f 50%),linear-gradient(-45deg,transparent 50%,#a3182f 50%);background-position:calc(100% - 18px) 52%,calc(100% - 12px) 52%;background-size:6px 6px;background-repeat:no-repeat;cursor:pointer}
+/* tick boxes in the cinema: brass outline, gold fill, dark tick */
+.watch-panel input[type=checkbox]{appearance:none;-webkit-appearance:none;width:22px;height:22px;flex:none;margin:0;border-radius:5px;border:2px solid #b8923f;background:transparent;display:inline-grid;place-items:center;cursor:pointer}
+.watch-list input[type=checkbox]{border-color:#8a6a3a;background:#fff}
+.watch-panel input[type=checkbox]:checked{background:#e7c069;border-color:#e7c069}
+.watch-panel input[type=checkbox]:checked::after{content:"";width:10px;height:5px;border-left:3px solid #2a0a10;border-bottom:3px solid #2a0a10;transform:translate(0,-1px) rotate(-45deg)}
+.watch-panel input[type=checkbox]:focus-visible{outline:3px solid #e7c069;outline-offset:2px}
+/* the aisle signs fade at the edge so you can tell there are more */
+.an-row{-webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 56px),transparent);mask-image:linear-gradient(90deg,#000 calc(100% - 56px),transparent)}
+.an-row.at-end{-webkit-mask-image:none;mask-image:none}
+.an-row.mid{-webkit-mask-image:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 56px),transparent);mask-image:linear-gradient(90deg,transparent,#000 40px,#000 calc(100% - 56px),transparent)}
+.an-row.mid.at-end{-webkit-mask-image:linear-gradient(90deg,transparent,#000 40px);mask-image:linear-gradient(90deg,transparent,#000 40px)}
+/* phone: the four cinema buttons sit in a tidy two by two */
+@media (max-width:640px){
+.controls{display:grid!important;grid-template-columns:1fr 1fr;gap:10px}
+.controls .field{grid-column:1/-1}
+.controls .toggle{justify-content:center;width:100%;min-height:44px}
+}
+/* shop filter row on desktop: intro on its own line, then one tidy row of controls */
+@media (min-width:641px){
+#viewShop .shop-head{flex-direction:column;align-items:stretch;gap:12px}
+#viewShop .shop-head>.shop-tools{flex-wrap:nowrap;align-items:center;gap:10px}
+#viewShop .shop-head>.shop-tools input[type=search]{flex:1 1 220px;min-width:0}
+#viewShop .shop-head>.shop-tools label{white-space:nowrap}
+#viewShop .shop-head>.shop-tools .shop-filt{display:block;flex:none}
+#viewShop .shop-head>.shop-tools .sf-in{display:flex;flex-wrap:nowrap;align-items:center;gap:10px}
+}
 </style>
 
 <div id="printArea"></div>
@@ -2520,8 +2565,8 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
         <details class="shop-filt" id="shopFilt" open><summary>Filters<span class="sf-n" id="shopFiltN"></span></summary><div class="sf-in">
         <select id="shopDecade" aria-label="Decade"><option value="">Any decade</option></select>
         <select id="shopSvc" aria-label="Streaming on"><option value="">Any service</option></select>
-        <label><input type="checkbox" id="shopUnwatched"> Not seen yet</label>
-        <label><input type="checkbox" id="shopKids"> Kids mode</label>
+        <label><input type="checkbox" role="switch" id="shopUnwatched"> Not seen yet</label>
+        <label><input type="checkbox" role="switch" id="shopKids"> Kids mode</label>
         </div></details>
       </div>
     </div>
@@ -2660,7 +2705,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=4fa7e40e" defer></script>
 <script src="formats-core.js?v=25ffa69f" defer></script>
-<script src="app.js?v=26926f0d" defer></script>
+<script src="app.js?v=4aa9e3cd" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
@@ -2671,8 +2716,8 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
     <div class="set-row"><label for="svcSel">Streaming on</label><select id="svcSel"><option value="">Any film</option></select></div>
     <h4>Dinner</h4>
     <div class="set-row"><span>Usual guests</span><span class="set-g"><button type="button" class="pl-b" data-sg="-" aria-label="Fewer guests">-</button><output id="setGuests">4</output><button type="button" class="pl-b" data-sg="+" aria-label="More guests">+</button></span></div>
-    <label class="set-row set-chk"><span>Vegetarian</span><input type="checkbox" id="setVeg"></label>
-    <label class="set-row set-chk"><span>No alcohol</span><input type="checkbox" id="setAf"></label>
+    <label class="set-row set-chk"><span>Vegetarian</span><input type="checkbox" role="switch" id="setVeg"></label>
+    <label class="set-row set-chk"><span>No alcohol</span><input type="checkbox" role="switch" id="setAf"></label>
     <p class="tp">Every film's prep sheet and shopping list start from these. You can still change them on the Prep tab.</p>
     <h4>Your stuff</h4>
     <div class="set-acts">

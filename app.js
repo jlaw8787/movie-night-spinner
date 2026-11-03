@@ -2779,6 +2779,9 @@ function openWalkin(){
 /* the cinema is the front door: the shopfront only plays the first time you step into Galaxy Video */
 {const sb=document.getElementById("viewShopBtn");if(sb)sb.addEventListener("click",()=>setTimeout(openWalkin,60))}
 
+/* fade the aisle signs at whichever edge has more to scroll */
+document.addEventListener("scroll",e=>{const r=e.target;if(r&&r.classList&&r.classList.contains("an-row"))anEdge(r)},true);
+function anEdge(r){r.classList.toggle("mid",r.scrollLeft>4);r.classList.toggle("at-end",r.scrollLeft+r.clientWidth>=r.scrollWidth-4)}
 /* the aisle carousel: swipe the hanging signs, tap one to walk down that aisle; "Every aisle" shows the lot */
 let hereAisle=null;try{hereAisle=sessionStorage.getItem("mns-aisle")||null}catch(e){}
 function buildAisleNav(){
@@ -2788,7 +2791,7 @@ function buildAisleNav(){
   nav.hidden=false;
   if(hereAisle&&!secs.some(s=>s.dataset.name===hereAisle))hereAisle=null;
   const card=(name,count,cls,unit)=>`<button type="button" class="an-card${cls?" "+cls:""}" data-go="${ESC(name)}" aria-pressed="${(name===""&&!hereAisle)||name===hereAisle}"><span class="an-sign">${ESC(name||"Every aisle")}</span><span class="an-n">${count} ${unit||"tape"}${count==1?"":"s"}</span></button>`;
-  nav.querySelector(".an-row").innerHTML=card("",secs.length,"all","aisle")+secs.map(s=>card(s.dataset.name,+s.dataset.count||0,"")).join("");
+  nav.querySelector(".an-row").innerHTML=card("",secs.length,"all","aisle")+secs.map(s=>card(s.dataset.name,+s.dataset.count||0,"")).join("");requestAnimationFrame(()=>{const r=nav.querySelector(".an-row");if(r)anEdge(r)});
   applyAisle(false);
 }
 function applyAisle(scroll){
