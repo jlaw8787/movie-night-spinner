@@ -1876,7 +1876,7 @@ async function openCase(f){
   const tag=(movieEdition(f)||{}).tagline||f.T;
   const shotHTML=shots.length>=2?shots.map(s=>`<img alt="" src="${TMDB_IMG_SHOP}w300${ESC(s)}" loading="lazy">`).join(""):(p?`<img class="vb-poster" alt="${ESC(f.title)} poster" src="${TMDB_IMG_SHOP}w342${ESC(p)}">`:"");
   o.innerHTML=`<div class="case vhs"><div class="vb">
-    <header class="vb-top"><p class="vb-tag">${ESC(tag)}</p><h3>${ESC(f.title)}</h3></header>
+    <header class="vb-top"><p class="vb-tag">${ESC(tag)}</p><h3 class="vb-h" tabindex="-1">${ESC(f.title)}</h3></header>
     <div class="vb-body">
       <div class="vb-l"><div class="vb-shots n${Math.min(shots.length,3)}">${shotHTML}</div>${tvHTML(f,st[0])}</div>
       <div class="vb-r">${isOut(f)?'<p class="outnote">All copies are out. Lucky you, one just came back.</p>':""}
@@ -1899,7 +1899,9 @@ async function openCase(f){
   const tv=o.querySelector(".tv-play");
   if(tv)tv.addEventListener("click",()=>{const k=tv.dataset.k;const scr=tv.parentElement;scr.classList.add("tracking");sfx.clunk();setTimeout(()=>{scr.classList.remove("tracking");scr.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(k)}?autoplay=1&playsinline=1&rel=0&modestbranding=1" title="${ESC(f.title)} trailer" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`},reduce?0:600)});
   o.querySelector(".seen").addEventListener("click",()=>{setWatched(f,!watched.has(f.id));close();renderShop()});
-  mountModal(o,".menu-go",modalTrigger);
+  /* open on the title, not the buttons at the bottom: focus the heading without scrolling, then make sure the case sits at the top */
+  mountModal(o,".vb-h",modalTrigger);
+  {const top=()=>{o.scrollTop=0;const c=o.querySelector(".case");if(c)c.scrollTop=0;const h=o.querySelector(".vb-h");if(h&&document.activeElement!==h)h.focus({preventScroll:true})};top();requestAnimationFrame(top);setTimeout(top,60)}
 }
 
 /* where to watch in Australia (TMDB, data by JustWatch) */
