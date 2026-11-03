@@ -139,6 +139,7 @@ Gaps:
    Done (3 Nov). The dead zone was the 3, 2, 1 countdown and menu build: a press on the hub counted as "skip" while the button looked ready. The hub now stays visibly disabled (dimmed, wait cursor) until the curtain lifts (about 2.4s after landing), and works on the first press after that. Tapping during the countdown still skips it.
 
 7. **Give landscape layouts a phone answer.** Where: canteen (Rogue One) and other single landscape faces on phone. What's wrong: 6px text in a strip, half the viewer empty. Good: on narrow screens split the face into two portrait panels the swipe viewer can page through, or open the viewer zoomed to the menu column.
+   Done (3 Nov). On phones a single wide page (canteen, placemat, candy bar, stadium, kiosk and the rest) now shows as two overlapping views, left side then right side, each just over half the page, with swipe and dots like the multi-page menus. The full size viewer pages them the same way ("Left side", "Right side") at fit to width, pinch to zoom. Portrait and multi-page menus unchanged; desktop unchanged.
 
 8. **Shorten the Galaxy Video phone page and surface the member card.** Where: Galaxy Video on phone. What's wrong: about 15,000px of aisles with the member card at the very bottom. Good: member card and price board near the top (or behind a "My card" button in the sticky bar), aisles collapsed to one row each with "See all".
 

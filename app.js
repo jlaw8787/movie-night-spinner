@@ -734,10 +734,15 @@ const prep=document.createElement("div");prep.className="mcard";prep.hidden=true
 const swipeW=()=>matchMedia("(max-width:600px)").matches;
 let pvFace=0,pvDrag=0;
 function cardFaces(){
-  if(!card.classList.contains("fx-paper"))return [];
-  const fs=[...card.querySelectorAll(".fx-face")];if(fs.length<2)return [];
-  const w=parseFloat(fs[0].style.width),h=parseFloat(fs[0].style.height),row=h>w,g=typeof FMT_GAP!=="undefined"?FMT_GAP:28;
-  return fs.map((el,i)=>({el,w,h,x:row?i*(w+g):0,y:row?0:i*(h+g),row}));
+  if(!card.innerHTML.trim()||!card.classList.contains("fmt"))return [];
+  const fs=card.classList.contains("fx-paper")?[...card.querySelectorAll(".fx-face")]:[];
+  if(fs.length>=2){const w=parseFloat(fs[0].style.width),h=parseFloat(fs[0].style.height),row=h>w,g=typeof FMT_GAP!=="undefined"?FMT_GAP:28;
+    return fs.map((el,i)=>({el,w,h,x:row?i*(w+g):0,y:row?0:i*(h+g),row}))}
+  /* one wide page (a landscape placemat, canteen tray or bill of fare): on a phone it shows as two overlapping views, left then right,
+     each a little over half the page, so the type is readable and nothing is lost at the join */
+  const el=fs[0]||card,w=parseFloat(el.style.width)||+card.dataset.w||1123,h=parseFloat(el.style.height)||+card.dataset.h||794;
+  if(!(w>h*1.15))return [];
+  const vw=Math.round(w*.56);return [{el,w:vw,h,x:0,y:0,row:true,part:1},{el,w:vw,h,x:w-vw,y:0,row:true,part:2}];
 }
 const pvDots=document.createElement("div");pvDots.className="pv-dots";pvDots.hidden=true;$("easel").after(pvDots);
 pvDots.addEventListener("click",e=>{const b=e.target.closest("button[data-i]");if(b)pvGo(+b.dataset.i)});
@@ -804,7 +809,7 @@ function openMenuZoom(trigger){
   const set=(v,px=sc.clientWidth/2,py=sc.clientHeight/2)=>{const cx=(sc.scrollLeft+px)/k,cy=(sc.scrollTop+py)/k;k=Math.max(Math.min(.25,fit()),Math.min(2.5,v));paint();sc.scrollLeft=cx*k-px;sc.scrollTop=cy*k-py};
   const toFit=()=>{k=fit();paint();sc.scrollLeft=0;sc.scrollTop=0};
   const go=i=>{if(!paged||i<0||i>=faces.length||i===fi)return;fi=i;pvFace=i;paint();sc.scrollLeft=0;sc.scrollTop=0;
-    o.querySelector(".mz-pg").textContent=`Page ${fi+1} of ${faces.length}`;o.querySelector(".mz-prev").disabled=fi===0;o.querySelector(".mz-next").disabled=fi===faces.length-1};
+    o.querySelector(".mz-pg").textContent=faces[0].part?(fi?"Right side":"Left side"):`Page ${fi+1} of ${faces.length}`;o.querySelector(".mz-prev").disabled=fi===0;o.querySelector(".mz-next").disabled=fi===faces.length-1};
   o.querySelector(".mz-in").addEventListener("click",()=>set(k*1.25));
   o.querySelector(".mz-out").addEventListener("click",()=>set(k/1.25));
   o.querySelector(".mz-fit").addEventListener("click",toFit);
