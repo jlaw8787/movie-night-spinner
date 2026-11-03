@@ -206,6 +206,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const C=[["s",e.cols[0]],["m",e.cols[1]],["w",e.cols[2]],["d",e.cols[3]]].filter(([k])=>(ctx.menu[k]||[]).length);
   const items={};C.forEach(([k])=>items[k]=(ctx.menu[k]||[]).slice(0,4));
   const total=C.reduce((a,[k])=>a+items[k].length,0);
+  /* the board suits the event: a race card, a fight, a golf round, an expo hall or a concert set instead of innings (flavour sport) */
+  const SB={team:["Stand","Home","Guests","T","Att"],race:["Race","Starters","Scratched","T","Crowd"],fight:["Round","Red corner","Blue corner","T","Crowd"],golf:["Hole","Strokes","Par","T","Gallery"],expo:["Hall","On show","Sold out","T","Visitors"],concert:["Set","Songs","Encores","T","Crowd"]}[(ctx.flavour||{}).sport]||["Stand","Home","Guests","T","Att"];
   const B={manual:{bg:"#24432f",cell:"#183022",dig:"#f4f1e6",lab:"#f4f1e6",glow:"none",font:DF},
            bulb:{bg:"#141210",cell:"#060505",dig:"#ffb347",lab:"#f3e2c4",glow:"0 0 6px rgba(255,170,60,.85)",font:DF},
            led:{bg:"#0b0b0b",cell:"#000",dig:"#ff4433",lab:"#f2f2f2",glow:"0 0 6px rgba(255,60,40,.8)",font:DF},
@@ -213,13 +215,13 @@ window.MENU_FORMATS[ID]=ctx=>{
   const cellBg=e.board==="led"?`${B.cell} radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.5px) 0 0/5px 5px`:B.cell;
   const cell=(v,wd)=>`<div style="flex:0 0 ${wd||46}px;height:46px;display:flex;align-items:center;justify-content:center;background:${cellBg};font:${e.dw} 30px/1 ${B.font};color:${B.dig};text-shadow:${B.glow}">${v}</div>`;
   const lab=(v)=>`<div style="flex:1;font:700 18px/1 ${BF};letter-spacing:.14em;color:${B.lab};text-transform:uppercase">${v}</div>`;
-  const hdr=`<div style="display:flex;gap:6px;align-items:center;margin-bottom:6px">${lab("Stand")}${[1,2,3,4].map(n=>`<div style="flex:0 0 46px;text-align:center;font:700 16px/1 ${BF};color:${B.lab}">${n}</div>`).join("")}<div style="flex:0 0 60px;text-align:center;font:700 16px/1 ${BF};color:${B.lab}">R</div></div>`;
+  const hdr=`<div style="display:flex;gap:6px;align-items:center;margin-bottom:6px">${lab(SB[0])}${[1,2,3,4].map(n=>`<div style="flex:0 0 46px;text-align:center;font:700 16px/1 ${BF};color:${B.lab}">${n}</div>`).join("")}<div style="flex:0 0 60px;text-align:center;font:700 16px/1 ${BF};color:${B.lab}">${SB[3]}</div></div>`;
   const cnt=k=>items[k]?items[k].length:"";
   const board=`<div style="background:${B.bg};padding:14px 16px 12px;border:${e.board==="manual"?"6px solid #1a3022":"4px solid #2a2a2a"};box-shadow:0 4px 12px rgba(0,0,0,.35);flex:none">
     ${hdr}
-    <div style="display:flex;gap:6px;align-items:center;margin-bottom:6px">${lab("Home")}${["s","m","w","d"].map(k=>cell(cnt(k))).join("")}${cell(total,60)}</div>
-    <div style="display:flex;gap:6px;align-items:center">${lab("Guests")}${[0,0,0,0].map(v=>cell(v)).join("")}${cell(0,60)}</div>
-    <div style="display:flex;justify-content:space-between;margin-top:9px;font:700 15px/1.2 ${BF};letter-spacing:.14em;color:${B.lab};text-transform:uppercase"><span>Att ${esc(num.slice(0,6))}</span><span>Now serving: ${esc(C[0]?C[0][1]:"Snacks")}</span></div></div>`;
+    <div style="display:flex;gap:6px;align-items:center;margin-bottom:6px">${lab(SB[1])}${["s","m","w","d"].map(k=>cell(cnt(k))).join("")}${cell(total,60)}</div>
+    <div style="display:flex;gap:6px;align-items:center">${lab(SB[2])}${[0,0,0,0].map(v=>cell(v)).join("")}${cell(0,60)}</div>
+    <div style="display:flex;justify-content:space-between;margin-top:9px;font:700 15px/1.2 ${BF};letter-spacing:.14em;color:${B.lab};text-transform:uppercase"><span>${SB[4]} ${esc(num.slice(0,6))}</span><span>Now serving: ${esc(C[0]?C[0][1]:"Snacks")}</span></div></div>`;
   /* ticket */
   const sec=(num+"101").slice(0,3),row=(title.replace(/[^A-Z]/gi,"").charAt(0)||"A").toUpperCase(),seat=String(total||1);
   const ticket=`<div style="display:flex;transform:rotate(${t.tilt*.5}deg);background:${darkPaper?"#f2efe6":mix(paper,"#ffffff",.55)};box-shadow:0 3px 10px rgba(0,0,0,.3);border-top:6px solid ${acc};flex:none">

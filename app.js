@@ -1104,7 +1104,7 @@ function prepHTML2(f,menu){
   for(const x of planShopping(f)){const [n,a]=x.split("@");(groups[a]=groups[a]||[]).push(n)}
   const tk=sharedTicks(f);
   const shop=AISLES.filter(a=>groups[a]).map(a=>`<div class="pp-aisle"><h4>${a}</h4><ul>${groups[a].map(x=>{const k=tickKey(x),on=!!tk[k];return `<li role="checkbox" tabindex="0" aria-checked="${on}" data-k="${ESC(k)}"${on?' class="pp-done"':""}><span class="pp-box"></span>${ESC(x)}</li>`}).join("")}</ul></div>`).join("");
-  const TT=ds.map(x=>dishTimes(x,x.snack?PLAN.guests/4:K)),hands=TT.reduce((s,x)=>s+x.prep,0),longest=TT.reduce((m,x)=>Math.max(m,x.active),0),waitMax=TT.reduce((m,x)=>Math.max(m,x.wait),0);
+  const TT=ds.map(x=>dishTimes(x,x.snack?PLAN.guests/4:PLAN.guests/((f._r2&&f._r2.serves)||4))),hands=TT.reduce((s,x)=>s+x.prep,0),longest=TT.reduce((m,x)=>Math.max(m,x.active),0),waitMax=TT.reduce((m,x)=>Math.max(m,x.wait),0);
   const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"},K=PLAN.guests/((f._r2&&f._r2.serves)||4);const LBp=planLabels(f);
   const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const kk=x.snack?PLAN.guests/4:K,T=dishTimes(x,kk),hot=(x.steps||[]).some(s=>HEAT_RE.test(s.text));
     const time=x.extra?"From the printed menu, buy to suit":hot&&T.cook?`Prep ${planMin(T.prep)}, cook ${planMin(T.cook)}`:`Takes ${planMin(T.prep+T.cook)}`;

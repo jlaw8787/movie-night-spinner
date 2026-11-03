@@ -20,7 +20,8 @@ const C={paper:"#f2ecde",ink:"#1b1a17",red:"#c3241a",soft:"#5d584f",head:"#1b1a1
 const GENRE_RED="#c3241a";
 let FD="'Oswald','Arial Narrow',Impact,sans-serif",FB="'Source Serif 4',Georgia,serif";
 const FM="'UnifrakturMaguntia','Old English Text MT',serif",FS="'Homemade Apple',cursive";
-const LAB=["Origin snacks","Main event","Sweet victory","Power-up"],SEC=["A","B","C","D"];
+/* comic-book section names only for superhero films; the rest get plain newspaper ones */
+const LAB_HERO=["Origin snacks","Main event","Sweet victory","Power-up"],LAB_NEWS=["Early edition","Front page","Sweet stuff","Late extra"],SEC=["A","B","C","D"];
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const clean=s=>String(s||"").replace(/\s*[\u2013\u2014]\s*/g,", ").replace(/\s+/g," ").trim();
 const sentence=s=>{s=clean(s);if(!s)return "";s=s[0].toUpperCase()+s.slice(1);return /[.!?]$/.test(s)?s:s+"."};
@@ -197,7 +198,7 @@ root.MENU_FORMATS.newspaper=ctx=>{
   const sign=clean(fl&&fl.sign).toUpperCase()||"CITY NEWSSTAND AND LUNCH COUNTER";
   const winks=(fl&&fl.winks||[]).map(clean).filter(Boolean);
   const menu=ctx.menu||{};
-  const courses=[["s",0],["m",1],["w",2],["d",3]].map(([k,i])=>({label:LAB[i],sec:i,items:(menu[k]||[]).filter(x=>x&&x.n)})).filter(c=>c.items.length);
+  const courses=[["s",0],["m",1],["w",2],["d",3]].map(([k,i])=>({label:((ctx.f||{}).theme==="hero"?LAB_HERO:LAB_NEWS)[i],sec:i,items:(menu[k]||[]).filter(x=>x&&x.n)})).filter(c=>c.items.length);
   const list=[];courses.forEach((c,ci)=>c.items.forEach((it,ii)=>list.push({ci,ii})));
   const img=ctx.img||((p,s)=>p?"https://image.tmdb.org/t/p/"+(s||"w1280")+p:"");
   const st=(ctx.stills||[]).filter(Boolean);

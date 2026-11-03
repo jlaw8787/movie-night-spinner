@@ -57,6 +57,11 @@ loadFonts(["Noto+Serif+Display:wght@700;900","Domine:wght@700","Mohave:wght@600;
 
 /* ---------- prices ---------- */
 function money(v,ei){if(v<1&&ei<2)return "."+String(Math.round(v*100)).padStart(2,"0");return v.toFixed(2)}
+const RIDE={
+ bus:{id:"BUS",tt:"Snacks at your seat",hello:"Take a seat. Snacks come round once we're moving.",cap:"Out the window, somewhere down the road.",lounge:"Heard down the back",seat:"Bus Seat",show:"Show the driver",by:"The Driver",welcome:"Sit back and let the driver look after the road. Snacks come round from the first stop to the last."},
+ cab:{id:"CAB",tt:"Back seat service",hello:"Meter's running. Eat up.",cap:"Out the window, the city at night.",lounge:"Heard in the back seat",seat:"Back Seat",show:"Show the driver",by:"The Driver",welcome:"Sit back, the meter's running. Dinner is on the way, wherever we end up."},
+ bench:{id:"STOP",tt:"Served at the bench",hello:"Take a seat. The bus will be along.",cap:"Out on the street, waiting for the bus.",lounge:"Heard on the bench",seat:"Bench Seat",show:"Keep it till the bus comes",by:"The Bench",welcome:"Take a seat, the bus will be along. Something to eat while you wait."}
+};
 function prices(menu,e,ei,egg){
   const mult={s:.55,m:1,w:.42,d:.28},out={};let hid=false;
   for(const k of ["s","m","w","d"])out[k]=(menu[k]||[]).map((it,i)=>{let v=e.base*mult[k]*(1+i*.12);v=ei<2?Math.round(v*20)/20:Math.floor(v)+(v%1<.5?.5:.95);
@@ -65,14 +70,17 @@ function prices(menu,e,ei,egg){
 }
 
 window.MENU_FORMATS[ID]=ctx=>{
-  const f=ctx.f||{},ei=Math.max(0,ERAS.indexOf(ctx.era)),e=E[ei<0?7:ei],t=T[ctx.tone]||T.warm;
+  const f=ctx.f||{},ei=Math.max(0,ERAS.indexOf(ctx.era)),e0=E[ei<0?7:ei],t0=T[ctx.tone]||T.warm;
   const fam=FAMILY.has(f.theme),tx=s=>fam?dry(s):clean(s);
   const fl=ctx.flavour||{};
+  /* not every film on this layout is on a train: a bus, a cab or a bus stop bench gets its own wording (flavour ride, or read from the venue) */
+  const ride=fl.ride||(/bench/i.test(fl.venue||"")?"bench":/\bbus\b|coach/i.test(fl.venue||"")?"bus":/\bcab\b|taxi/i.test(fl.venue||"")?"cab":"train");
+  const R0=RIDE[ride],e=R0?Object.assign({},e0,{tt:R0.tt}):e0,t=R0?Object.assign({},t0,R0):t0;
   const title=clean(f.title||"Tonight's Feature"),year=f.year||"";
-  const venue=clean(fl.venue||(title.length<=20?title+" Dining Car":"The Dining Car")),sign=clean(fl.sign||"Dinner served at your seat");
-  const note=fl.note&&fl.note.text?{text:fl.note.text,by:fl.note.by||"The Steward"}:{text:"Sit back and let the line look after you. Supper is served from the first call until the last stop.",by:"Your Steward"};
+  const venue=clean(fl.venue||(R0?"The "+R0.seat:title.length<=20?title+" Dining Car":"The Dining Car")),sign=clean(fl.sign||"Dinner served at your seat");
+  const note=fl.note&&fl.note.text?{text:fl.note.text,by:fl.note.by||(R0?R0.by:"The Steward")}:R0?{text:R0.welcome,by:R0.by}:{text:"Sit back and let the line look after you. Supper is served from the first call until the last stop.",by:"Your Steward"};
   const winks=(fl.winks||[]).map(clean).filter(Boolean);
-  const prop=fl.prop&&fl.prop.title?fl.prop:{title:"Dining Car Seat",lines:["Present to the steward","One seat, one sitting"]};
+  const prop=fl.prop&&fl.prop.title?fl.prop:{title:R0?R0.seat:"Dining Car Seat",lines:[R0?R0.show:"Present to the steward","One seat, one sitting"]};
   const num=String(fl.number||"").replace(/\D/g,"")||String(year).slice(-2)||"7";
   const egg=String(fl.number||"").replace(/\D/g,"").slice(-2)||"";
   /* paper and colours */
@@ -153,7 +161,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const timetable=`<div>
     <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid ${ink};padding-bottom:4px">
       <span style="font:${e.dw} 24px/1 ${DF};color:${ink};${up?"text-transform:uppercase;letter-spacing:.04em":""}">Dinner Timetable</span>
-      <span style="font:700 15px/1 ${BF};letter-spacing:.16em;color:${acc}">TRAIN ${esc(num.slice(0,4))}</span></div>
+      <span style="font:700 15px/1 ${BF};letter-spacing:.16em;color:${acc}">${R0?R0.id:"TRAIN"} ${esc(num.slice(0,4))}</span></div>
     ${rows}
     ${cue?`<div style="font:italic 400 16px/1.35 ${BF};color:${soft};margin-top:7px;${clamp(1)}">Arriving: ${esc(cue.replace(/^./,c=>c.toLowerCase()))}</div>`:""}</div>`;
   const fine1=`<div style="position:absolute;left:${inset+30}px;right:${inset+30}px;bottom:${inset+12}px;font:400 15px/1.2 ${BF};color:${soft};display:flex;justify-content:space-between;gap:10px"><span style="${clamp(1)}">${esc(title.length>34?title.slice(0,32).replace(/\W+\w*$/,"")+"..." :title)}, ${esc(year)}</span><span>Form DC-${esc(num.slice(-4))}</span></div>`;
@@ -161,7 +169,7 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   /* ---------- BACK ---------- */
   const SW=176;
-  const tk=prop.title?clean(prop.title):"Dining Car Seat";
+  const tk=prop.title?clean(prop.title):R0?R0.seat:"Dining Car Seat";
   const punch=Array.from({length:12},(_,i)=>i+1);
   const pIdx=(+num%12)||5;
   const ticket=`<div style="position:absolute;left:12px;width:${SW-24}px;bottom:58px;transform:rotate(${t.tilt}deg);background:${mix(paper,"#fff6d8",.4)};box-shadow:0 3px 10px rgba(0,0,0,.45);padding:12px 12px 10px;box-sizing:border-box;border-top:6px solid ${acc}">

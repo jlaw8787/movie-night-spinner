@@ -179,6 +179,19 @@ const TONE={
  tense:{wear:.45,bleach:.04,tilt:1,photo:"contrast(1.16)",kick:"Beach closed? Kiosk open",cond:"Sighting reported, stay inside the flags",close:"Listen for the siren."},
  scrappy:{wear:.9,bleach:.14,tilt:-3.5,photo:"contrast(1.1)",kick:"Honesty box if we're out",cond:"Messy onshore slop, paddle out anyway",close:"Back in five. Maybe ten."}
 };
+/* the same kiosk away from the water (a backyard, a town square, a tournament): no surf, swell or lifeguard */
+const LAND={
+ gritty:{kick:"No shirt, no service",cond:"Hot and dusty, water on the counter",close:"Cash only. No change for the phone."},
+ glossy:{kick:"Fresh and fast",cond:"Fine and clear all day",close:"Table service on request."},
+ warm:{kick:"Fresh every morning",cond:"Fine, light breeze, a good day for it",close:"Thanks for coming by."},
+ eerie:{kick:"Closed after dark",cond:"Fog rolling in, keep to the path",close:"Shutters down at dusk."},
+ playful:{kick:"Sticky fingers welcome",cond:"Sunny with a chance of fun",close:"Spot prize for the loudest cheer."},
+ grand:{kick:"The finest in town",cond:"Clear skies, a fine evening ahead",close:"Service to your table on request."},
+ tender:{kick:"See you at sunset",cond:"Warm, easing to a mild evening",close:"Open until the sun goes down."},
+ tense:{kick:"Stay close to the counter",cond:"Stay indoors if you can",close:"Listen for the siren."},
+ scrappy:{kick:"Honesty box if we're out",cond:"Patchy, bring a jacket",close:"Back in five. Maybe ten."}
+};
+const BEACH_RE=/\b(beach|surf|boardwalk|reef|lighthouse|coast|ocean|shore|dock|pier|island|lagoon|bay|harbou?r|sea|marine|coorong|amity)\b/i;
 const SEC={s:"Snacks",m:"Hot Food",w:"Ices and Sweets",d:"Cold Drinks"};
 
 /* board material: planks, varnish, laminate, corflute or ply; texture from gradients plus noise grain */
@@ -204,12 +217,16 @@ window.MENU_FORMATS[ID]=ctx=>{
   const fam=FAMILY.has(f.theme),C=s=>fam?dry(clean(s)):clean(s);
   const year=String(f.year||"").slice(0,4)||"1999",yy=year.slice(-2);
   const fl=ctx.flavour||{};
+  /* beach kit only where the film has a beach: flavour beach true or false decides, otherwise the venue and sign do */
+  const beach=typeof fl.beach==="boolean"?fl.beach:BEACH_RE.test(String(fl.venue||"")+" "+String(fl.sign||""));
+  const TK=beach?T:Object.assign({},T,LAND[ctx.tone]||LAND.warm);
+  const KICK=beach?E.kick:E.kick==="SURF SHACK"?"SNACK SHACK":E.kick.replace(/^(BATHING PAVILION|BEACH) /,"");
   const title=clean(f.title||"Tonight's Feature");
-  const venue=C(fl.venue)||"The Beach Kiosk";
+  const venue=C(fl.venue)||(beach?"The Beach Kiosk":"The Kiosk");
   const sign=C(fl.sign)||venue;
-  const note={text:C(fl.note&&fl.note.text)||sentence(f.T)||"Grab a bite, grab a towel and get down to the water.",by:C(fl.note&&fl.note.by)||"The Kiosk"};
+  const note={text:C(fl.note&&fl.note.text)||sentence(f.T)||(beach?"Grab a bite, grab a towel and get down to the water.":"Grab a bite and pull up a seat."),by:C(fl.note&&fl.note.by)||"The Kiosk"};
   const winks=(fl.winks||[]).map(C).filter(Boolean);
-  const prop=fl.prop&&fl.prop.title?{title:C(fl.prop.title),lines:(fl.prop.lines||[]).map(C).filter(Boolean).slice(0,2)}:{title:"Board Hire",lines:["One hour, wax included","Back by sunset"]};
+  const prop=fl.prop&&fl.prop.title?{title:C(fl.prop.title),lines:(fl.prop.lines||[]).map(C).filter(Boolean).slice(0,2)}:beach?{title:"Board Hire",lines:["One hour, wax included","Back by sunset"]}:{title:"Lost Property",lines:["Ask at the counter","Claim it by closing"]};
   const num=String(fl.number||"").replace(/\D/g,"")||year,realNum=String(fl.number||"").replace(/\D/g,"");
   const poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&TMDB_POSTERS[f.id])||null;
   const img=ctx.img||((p,s)=>p?`https://image.tmdb.org/t/p/${s||"w1280"}${p}`:"");
@@ -231,10 +248,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* ===== surf report strip ===== */
   const SH=84,PH=H-SH,PW=PM?593:740;
   const swell=(+num%5)+2,water=(+yy%7)+17,tideH=(+yy%12)||12;
-  const cells=[[E.rep,""],["Swell",`${swell} ft`],["Wind",["offshore","light offshore","cross shore","onshore"][+num%4]],["Water",`${water} C`],["High tide",`${tideH}:${String(+yy%60).padStart(2,"0")}`]];
+  const cells=beach?[[E.rep,""],["Swell",`${swell} ft`],["Wind",["offshore","light offshore","cross shore","onshore"][+num%4]],["Water",`${water} C`],["High tide",`${tideH}:${String(+yy%60).padStart(2,"0")}`]]
+    :[["Out front",""],["Sky",ctx.tone==="eerie"?"Fog":["Fine","Clear","Cloudy","Overcast"][+num%4]],["Wind",["still","light breeze","gusty","fresh"][+num%4]],["Temp",`${water+4} C`],["Last orders",`${(+yy%3)+8}:${["00","15","30","45"][+num%4]}`]];
   const cw=c=>c[1]?Math.max(c[0].length*15*.78,c[1].length*20*(E.bcw+.06))+36:c[0].length*24*(E.dcw+.04)+36;
   const room=W-48-cells.reduce((a,c)=>a+cw(c),0)-4;
-  const tail=[["Conditions",T.cond]];if(winks[0]&&room>=560)tail.push(["Spotted",trunc(winks[0],44)]);
+  const tail=[[beach?"Conditions":"Forecast",TK.cond]];if(winks[0]&&room>=560)tail.push(["Spotted",trunc(winks[0],44)]);
   const tailW=tail.length===2?[room*.5,room*.5]:[room];
   const tailZ=tail.map((c,i)=>fitType(c[1],tailW[i]-40,46,E.bcw+.06,20,15,1.15,2));
   const NT=cells.length;cells.push(...tail);
@@ -257,15 +275,15 @@ window.MENU_FORMATS[ID]=ctx=>{
   const nw=PM?252:360,nT=fitType(note.text,nw-44,PM?330:140,.5,PM?20:21,16,1.35,PM?12:6);
   const nh=Math.round(30+20+nT.n*nT.z*1.35+56+26);
   const noteHtml=`<div data-sp="note" style="position:absolute;left:${PM?466:28}px;bottom:26px;width:${nw}px;height:${nh}px;box-sizing:border-box;padding:18px 22px;transform:rotate(${(T.tilt*.6).toFixed(2)}deg);background:linear-gradient(170deg,#fffdf6,#f3ecdb),#fffaf0;box-shadow:0 6px 18px rgba(0,0,0,.35);color:#1d1a16">
-      <div style="${caps(15,fit(ACC,"#fbf6ea","#5b3a1a",3.4),.18)};margin-bottom:8px">${esc(T.kick)}</div>
+      <div style="${caps(15,fit(ACC,"#fbf6ea","#5b3a1a",3.4),.18)};margin-bottom:8px">${esc(TK.kick)}</div>
       <div style="font:italic 500 ${nT.z}px/1.35 ${body};color:#1d1a16">"${esc(note.text)}"</div>
       <div style="font:36px/1.2 ${sig};color:${fit(ACC,"#fbf6ea","#1d3a6a",3.4)};text-align:right;margin-top:4px">${esc(trunc(note.by,24))}</div></div>`;
   /* poster mode: the note is a compact pinned card on the board, the hire tag is dropped */
-  const nwP=316,noteTxt=clip(note.text,150)||"Grab a bite, grab a towel and get down to the water.";
+  const nwP=316,noteTxt=clip(note.text,150)||note.text;
   const nTp=fitType(noteTxt,nwP-44,100,.5,18,16,1.35,5);
   const noteH=Math.round(14+22+nTp.n*nTp.z*1.35+42+14);
   const notePM=`<div data-sp="note" style="flex:none;width:${nwP}px;height:${noteH}px;box-sizing:border-box;padding:14px 22px;transform:rotate(${(T.tilt*.5).toFixed(2)}deg);background:linear-gradient(170deg,#fffdf6,#f3ecdb),#fffaf0;box-shadow:0 6px 18px rgba(0,0,0,.35);color:#1d1a16">
-      <div style="${caps(15,fit(ACC,"#fbf6ea","#5b3a1a",3.4),.18)};margin-bottom:6px">${esc(T.kick)}</div>
+      <div style="${caps(15,fit(ACC,"#fbf6ea","#5b3a1a",3.4),.18)};margin-bottom:6px">${esc(TK.kick)}</div>
       <div style="font:italic 500 ${nTp.z}px/1.35 ${body};color:#1d1a16">"${esc(noteTxt)}"</div>
       <div style="font:32px/1.3 ${sig};color:${fit(ACC,"#fbf6ea","#1d3a6a",3.4)};text-align:right">${esc(trunc(note.by,24))}</div></div>`;
   const tw=250,th=150,pT=fitType(prop.title,tw-40,56,.6,26,17,1.05,2);
@@ -291,15 +309,15 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* ===== the board ===== */
   const BX=PW,BW=W-PW,pad=34,IW=BW-pad*2;
   const leftW=PM?IW-320:IW,sT=fitType(sign,leftW,128,E.dcw,PM?56:64,30,1.0,2);
-  const kickN=PM?lines(E.kick+", since "+year,17,leftW,.8):1;
-  const hdrL=`<div style="${caps(17,ACC,.2)}">${esc(E.kick)}, since ${esc(year)}</div>
+  const kickN=PM?lines(KICK+", since "+year,17,leftW,.8):1;
+  const hdrL=`<div style="${caps(17,ACC,.2)}">${esc(KICK)}, since ${esc(year)}</div>
      <div style="font:${E.dw}${sT.z}px/1.0 ${disp};color:${ink};margin-top:8px;${glow}">${esc(sign)}</div>`;
   const hdr=PM?`<div style="display:flex;align-items:flex-start;gap:20px"><div style="flex:1;min-width:0">${hdrL}</div><div style="flex:none">${logoHtml}<br>${capHtml}</div></div>`:hdrL;
   const hdrH=PM?Math.max(kickN*21+8+sT.n*sT.z*1.0+16,logoH+54):22+8+sT.n*sT.z*1.0+16;
   const cue=sentence(C(f.P));
   const cueW=PM?IW-316-28:IW;
   const cT=fitType(cue,cueW-24,PM?150:80,E.bcw,19,15,1.3,PM?8:4);
-  const fine=`${T.close} Prices subject to change. Kiosk licence ${num}.`;
+  const fine=`${TK.close} Prices subject to change. Kiosk licence ${num}.`;
   const fT=fitType(fine,IW,44,.52,15,14,1.3,3);
   const cueH=cue?16+18+6+cT.n*cT.z*1.3+14:0,footTail=fT.n*fT.z*1.3+8,footH=(PM?Math.max(cueH,noteH+12):cueH)+footTail;
   let MH=PH-pad-hdrH-14-footH-pad;
@@ -345,7 +363,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div>${hdr}</div>
       <div style="margin-top:14px;height:${Math.floor(MH)}px;display:flex;flex-direction:column">
         <div style="display:flex;gap:${GAP}px">${colsArr.map(cs=>`<div style="width:${colW}px">${colHtml(cs,FS)}</div>`).join("")}</div>
-        ${also.length?`<div style="margin-top:auto;margin-bottom:12px;border-top:2px solid ${ACC};padding-top:10px"><div style="${caps(15,ACC,.2)};margin-bottom:4px">Seen on the beach</div>${also.map(w=>`<div style="font:600 18px/1.3 ${body};color:${ink};margin-top:3px">${esc(sentence(trunc(w,60)))}</div>`).join("")}</div>`:""}
+        ${also.length?`<div style="margin-top:auto;margin-bottom:12px;border-top:2px solid ${ACC};padding-top:10px"><div style="${caps(15,ACC,.2)};margin-bottom:4px">${beach?"Seen on the beach":"Seen out front"}</div>${also.map(w=>`<div style="font:600 18px/1.3 ${body};color:${ink};margin-top:3px">${esc(sentence(trunc(w,60)))}</div>`).join("")}</div>`:""}
       </div>
       <div style="margin-top:auto">
         ${PM?`<div style="display:flex;align-items:flex-end;gap:28px;margin-bottom:12px">${cue&&!dropCue?`<div style="width:${cueW}px;box-sizing:border-box;border-left:4px solid ${ACC};padding:2px 0 2px 16px"><div style="${caps(15,ACC,.2)};margin-bottom:6px">Showtime cue</div><div style="font:500 ${cT.z}px/1.3 ${body};color:${ink}">${esc(cue)}</div></div>`:""}${notePM}</div>`:cue&&!dropCue?`<div style="border-left:4px solid ${ACC};padding:2px 0 2px 16px;margin-bottom:14px"><div style="${caps(15,ACC,.2)};margin-bottom:6px">Showtime cue</div><div style="font:500 ${cT.z}px/1.3 ${body};color:${ink}">${esc(cue)}</div></div>`:""}
