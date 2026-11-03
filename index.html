@@ -2462,6 +2462,19 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 .case.vhs .acts{position:sticky;bottom:-8px;margin:0 -8px -8px;padding:12px 10px calc(12px + env(safe-area-inset-bottom,0px));background:#141417;border-radius:0 0 10px 10px;box-shadow:none}
 .case.vhs .vb-shots img{max-width:none}
 }
+
+/* printed menu, full size */
+#preview{cursor:zoom-in}
+.tab-prep-on #preview{cursor:auto}
+#preview:focus-visible{outline:3px solid #e7c069;outline-offset:4px}
+.zoom-hint{display:block;margin:10px auto 0;text-align:center;font:600 12.5px var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:#e7c069;opacity:.85}
+.mzoom{position:fixed;inset:0;z-index:70;padding:0;background:#120608;display:grid;grid-template-rows:auto 1fr}
+.mz-bar{display:flex;justify-content:center;gap:8px;padding:12px 64px 10px}
+.mz-bar button{min-width:48px;min-height:44px;border-radius:999px;border:2px solid #e7c069;background:transparent;color:#f4e6c8;font:400 18px var(--f-board);cursor:pointer;padding:0 16px}
+.mz-bar .mz-fit{font-size:14px;letter-spacing:.06em}
+.mz-scroll{overflow:auto;-webkit-overflow-scrolling:touch;padding:8px 8px 24px;display:grid;justify-content:safe center;align-content:start;overscroll-behavior:contain}
+.mz-sheet{position:relative;box-shadow:0 30px 70px rgba(0,0,0,.7)}
+.mz-sheet>.mcard{position:absolute;left:0;top:0}
 </style>
 
 <div id="printArea"></div>
@@ -2607,6 +2620,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
         <div class="curtain l" aria-hidden="true"></div><div class="curtain r" aria-hidden="true"></div>
         <div class="tease" aria-hidden="true" id="tease">Setting the table</div><div class="skip-k" aria-hidden="true">Tap to skip</div>
         <div class="easel" id="easel"><div class="preview" id="preview"></div><div class="glare" aria-hidden="true"></div></div>
+        <p class="zoom-hint" id="zoomHint">Tap the menu to read it full size</p>
         <div class="fmt-phone" id="fmtPhone" hidden></div>
       </div>
       <div class="diet-note" id="dietNote" hidden></div>
@@ -2646,7 +2660,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=4fa7e40e" defer></script>
 <script src="formats-core.js?v=25ffa69f" defer></script>
-<script src="app.js?v=874c89ec" defer></script>
+<script src="app.js?v=26926f0d" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

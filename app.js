@@ -716,7 +716,7 @@ document.documentElement.style.setProperty("--grain",`url("${GRAIN}")`);
 const preview=$("preview");
 const card=document.createElement("div");card.className="mcard";preview.appendChild(card);
 const prep=document.createElement("div");prep.className="mcard";prep.hidden=true;preview.appendChild(prep);
-function scalePreview(){const pw=preview.clientWidth;if(!pw)return;const land=card.classList.contains("fmt"),cw=+card.dataset.w||(land?1123:794),ch=+card.dataset.h||(land?794:1123),kc=pw/cw,kp=pw/794;card.style.transform=`scale(${kc})`;prep.style.transform="none";preview.style.height=tab==="prep"?"auto":ch*kc+"px"}
+function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;const land=card.classList.contains("fmt"),cw=+card.dataset.w||(land?1123:794),ch=+card.dataset.h||(land?794:1123),kc=pw/cw,kp=pw/794;card.style.transform=`scale(${kc})`;prep.style.transform="none";preview.style.height=tab==="prep"?"auto":ch*kc+"px"}
 let tab="menu";
 function setTab(t){tab=t;{const pb=$("planner");if(pb)pb.hidden=!(pb.dataset.has&&t==="prep")}if(t==="menu")phoneOn=true;card.hidden=t!=="menu";prep.hidden=t!=="prep";$("tabMenu").classList.toggle("on",t==="menu");$("tabPrep").classList.toggle("on",t==="prep");$("tabMenu").setAttribute("aria-selected",t==="menu");$("tabPrep").setAttribute("aria-selected",t==="prep");if(window.__spinbarUpd)setTimeout(window.__spinbarUpd,0);if(t==="prep"&&current){if(!prep.querySelector(".pp-cols")&&current.menu){try{styleCard(prep,current);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(current,current.menu)}catch(e){}}fitPrep(prep)}scalePreview();applyPhone()}
 $("tabMenu").addEventListener("click",()=>setTab("menu"));
@@ -725,18 +725,41 @@ window.addEventListener("resize",()=>{scalePreview();applyPhone()});
 /* era formats: phones get the big-type menu, the printed spread is one tap away */
 const fmtPhone=$("fmtPhone");let phoneOn=true;
 const narrow=()=>matchMedia("(max-width:700px)").matches;
+/* phones: the printed menu first, tap it to read it full size, the big-type text menu underneath */
 function applyPhone(){
-  const has=!!fmtPhone.innerHTML,on=has&&narrow()&&phoneOn&&tab==="menu";
-  fmtPhone.hidden=!on;$("easel").hidden=on;$("fmtBack").hidden=!(has&&narrow()&&!phoneOn&&tab==="menu");
-  if(!on)scalePreview();else fitPhoneTitle();
+  const has=!!fmtPhone.innerHTML,on=has&&narrow()&&tab==="menu";
+  fmtPhone.hidden=!on;$("easel").hidden=false;$("fmtBack").hidden=true;
+  scalePreview();if(on)fitPhoneTitle();
+  const zh=$("zoomHint");if(zh){const ok=tab==="menu"&&!!card.innerHTML.trim();zh.hidden=!ok;preview.style.cursor=ok?"":"auto";zh.textContent=(matchMedia("(pointer:coarse)").matches?"Tap":"Click")+" the menu to read it full size"}
 }
 function phoneView(f,spec,menu){
   if(!f){fmtPhone.innerHTML="";applyPhone();return}
   fmtPhone.innerHTML=fmtPhoneHTML(f,spec,menu);fmtPhoneWire(fmtPhone);
-  fmtPhone.querySelector(".fp-flip").addEventListener("click",()=>{phoneOn=false;applyPhone();$("easel").scrollIntoView({block:"nearest"})});
+  {const fb=fmtPhone.querySelector(".fp-flip");fb.textContent="Read the printed menu full size";fb.addEventListener("click",()=>openMenuZoom(fb))}
   applyPhone();
 }
 $("fmtBack").addEventListener("click",()=>{phoneOn=true;applyPhone()});
+/* full size printed menu: the card itself moves into a pop-up you can zoom and pan, then goes back */
+function openMenuZoom(trigger){
+  if(tab!=="menu"||!card.innerHTML.trim())return;
+  const land=card.classList.contains("fmt"),cw=+card.dataset.w||(land?1123:794),ch=+card.dataset.h||(land?794:1123);
+  const o=document.createElement("dialog");o.className="mzoom";o.setAttribute("aria-label","Printed menu, full size");
+  o.innerHTML=`<div class="mz-bar"><button type="button" class="mz-out" aria-label="Zoom out">−</button><button type="button" class="mz-fit">Fit</button><button type="button" class="mz-in" aria-label="Zoom in">+</button></div><div class="mz-scroll"><div class="mz-sheet"></div></div>`;
+  const sc=o.querySelector(".mz-scroll"),sheet=o.querySelector(".mz-sheet");
+  const home=card.nextSibling,keepT=card.style.transform;sheet.appendChild(card);card.style.transformOrigin="0 0";
+  const fit=()=>Math.min(1.4,(innerWidth-(narrow()?16:80))/cw,narrow()?9:(innerHeight-120)/ch);
+  let k=narrow()?Math.max(.62,fit()):fit();
+  const set=v=>{const cx=(sc.scrollLeft+sc.clientWidth/2)/k,cy=(sc.scrollTop+sc.clientHeight/2)/k;k=Math.max(.25,Math.min(2,v));card.style.transform=`scale(${k})`;sheet.style.width=cw*k+"px";sheet.style.height=ch*k+"px";sc.scrollLeft=cx*k-sc.clientWidth/2;sc.scrollTop=cy*k-sc.clientHeight/2};
+  o.querySelector(".mz-in").addEventListener("click",()=>set(k*1.25));
+  o.querySelector(".mz-out").addEventListener("click",()=>set(k/1.25));
+  o.querySelector(".mz-fit").addEventListener("click",()=>{set(fit());sc.scrollLeft=0;sc.scrollTop=0});
+  o.addEventListener("click",e=>{if(e.target===o||e.target===sc)dismissModal(o)});
+  mountModal(o,".mz-fit",trigger||preview,()=>{card.style.transform=keepT;card.style.transformOrigin="";preview.insertBefore(card,home&&home.parentNode===preview?home:preview.firstChild);scalePreview()});
+  set(k);sc.scrollLeft=0;sc.scrollTop=0;
+}
+preview.setAttribute("role","button");preview.tabIndex=0;preview.setAttribute("aria-label","Open the printed menu full size");
+preview.addEventListener("click",e=>{if(tab==="menu"&&!e.target.closest("a,button,input,select,textarea"))openMenuZoom(preview)});
+preview.addEventListener("keydown",e=>{if(tab==="menu"&&(e.key==="Enter"||e.key===" ")&&e.target===preview){e.preventDefault();openMenuZoom(preview)}});
 /* library menus: the same big-type phone menu, coloured and set from the printed card it sits under */
 function libPhonePal(root){
   const rgb=c=>{const m=/rgba?\(([^)]+)\)/.exec(c||"");if(!m)return null;const v=m[1].split(",").map(Number);return v.length>3&&v[3]<.9?null:v.slice(0,3)};
