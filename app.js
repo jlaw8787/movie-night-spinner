@@ -2085,7 +2085,7 @@ function renderCrave(){
   $("craveChips").innerHTML=CRAVES.map(([n])=>`<button type="button" aria-pressed="${craveSel===n}" data-crave="${ESC(n)}"><span>${ESC(n)}</span><b>${window.__craveN[n]}</b></button>`).join("");
   const typed=$("craveSearch").value;let rx=null,label="";
   if(typed.trim()){rx=craveRx(typed);label=typed.trim()}else if(craveSel){rx=CRAVES.find(c=>c[0]===craveSel)[1];label=craveSel.toLowerCase()}
-  if(!rx){craveHits=[];$("craveCount").textContent="";$("craveSpin").hidden=true;$("craveGrid").innerHTML='<p class="crave-empty">${tapWord("Tap something on the board to see which films serve it.")}</p>';return}
+  if(!rx){craveHits=[];$("craveCount").textContent="";$("craveSpin").hidden=true;$("craveGrid").innerHTML=`<p class="crave-empty">${tapWord("Tap something on the board to see which films serve it.")}</p>`;return}
   craveHits=[];
   for(const f of FILMS){if(kidsMode&&!isKidSafe(f))continue;if(!onSvc(f,svc))continue;const d=[];for(const k of["S","M","W","K"])for(const it of f[k]||[])if(rx.test(it[0]))d.push(it[0]);if(d.length)craveHits.push([f,d])}
   craveHits.sort((a,b)=>b[1].length-a[1].length||a[0].title.localeCompare(b[0].title));
