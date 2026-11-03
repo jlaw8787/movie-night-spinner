@@ -26,7 +26,7 @@ Work down docs/review-2.md (second independent review, 7.2 out of 10, target 9.5
 - Short need-to-know replies first.
 - Lock a direction once set, no drift. Josh watches token spend.
 - Spell it "Weeklys".
-- Real brands and TMDB posters are fine in general. Shared (library) menus have no posters, by his call.
+- Real brands and TMDB posters are in. Josh likes posters on the menus (turned back on 3 Nov, LIB_POSTER_ON in app.js). Do not remove them.
 - Shared menus use period prices, not year-coded ones.
 - Phones show the printed menu first, then the text menu.
 - Menus: show all dishes, cook 5.

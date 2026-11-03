@@ -1087,7 +1087,7 @@ function fullMenu(f,menu,fmt){
   return Object.assign({},menu,out);
 }
 /* venue menus carry the venue, not the film's poster: the poster stays in the page around the menu */
-let LIB_POSTER_ON=false;window.LIB_NO_POSTER=!LIB_POSTER_ON;
+let LIB_POSTER_ON=true;window.LIB_NO_POSTER=!LIB_POSTER_ON;
 async function show(f,preferSig){
   const id=++renderId;
   /* the film dressed behind the curtain on a first visit isn't anyone's pick yet */
