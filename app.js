@@ -1040,9 +1040,25 @@ function planShopping(f){const k=PLAN.guests/((f._r2&&f._r2.serves)||4),ds=planD
     if(seen.has(key))continue;seen.add(key);taste.push(i.item+"@"+TASTE)}
   return shopLines(base.map(d=>({d,k})).concat(add.length?[{d:{ingredients:add},k}]:[])).concat(taste)}
 const WHOLE_RE=/^(bags?|packets?|tins?|cans?|bottles?|jars?|tubs?|loa(f|ves)|punnets?|box(es)?|cartons?|blocks?|rolls?|sheets?|tubes?|sachets?)\b/i;
+/* things a recipe uses ready-made that no shop sells: shopped as what you actually buy, with a first step to make them */
+const baseG=(q,i)=>/^cups? /i.test(i.item)?q*185:i.u==="g"?q:i.u==="kg"?q*1000:null;
+const BASES=[
+ {re:/^(cold )?cooked risotto/i,buy:g=>[[g*.4,"g","arborio rice","Pantry"],[g*1.25,"ml","chicken or vegetable stock","Pantry"],[g*.075,"g","parmesan","Dairy"],[g*.05,"g","butter","Dairy"]],
+  step:g=>`Make the risotto the day before: soften ${planQty(g*.4,"g")} arborio in the butter, add ${planQty(g*1.25,"ml")} hot stock a ladle at a time over about 20 minutes, stir in the parmesan, then spread it on a tray and chill overnight.`},
+ {re:/^(cups? )?(cold )?cooked (cold )?(jasmine |long grain |white )?rice|^(jasmine |long grain )?rice, cooked/i,buy:(g,i)=>[[g/2.5,"g",(/jasmine/i.test(i.item)?"jasmine":/long grain/i.test(i.item)?"long grain":"white")+" rice","Pantry"]],
+  step:(g,i)=>`Cook ${planQty(g/2.5,"g")} ${/jasmine/i.test(i.item)?"jasmine ":""}rice ahead (the day before is best), spread it out and chill. Cold rice fries and holds better.`},
+ {re:/^mashed potato/i,buy:g=>[[g*1.15,"g","floury potatoes","Produce"],[g*.08,"g","butter","Dairy"],[g*.1,"ml","milk","Dairy"]],
+  step:g=>`For the mash: boil ${planQty(g*1.15,"g")} peeled floury potatoes until soft, drain well and mash with the butter and milk.`},
+ {re:/^(cooked (spaghetti|macaroni|penne|rigatoni|ziti)|(spaghetti|macaroni|penne|rigatoni|ziti|egg noodles), cooked)/i,buy:(g,i)=>{const n=i.item.toLowerCase().match(/spaghetti|macaroni|penne|rigatoni|ziti|egg noodles/)[0];return [[g/2.2,"g",n==="egg noodles"?"dried egg noodles":"dried "+n,"Pantry"]]},
+  step:(g,i)=>{const n=i.item.toLowerCase().match(/spaghetti|macaroni|penne|rigatoni|ziti|egg noodles/)[0];return `Cook ${planQty(g/2.2,"g")} dried ${n} in well salted water until just tender, then drain.`}}];
+const baseOf=i=>i&&i.q!=null&&baseG(i.q,i)!=null&&BASES.find(b=>b.re.test(String(i.item)));
+/* tap water is never on the shopping list; soda, tonic, mineral and coconut water are */
+const WATER_RE=/^((cold|hot|boiling|iced|ice|warm|fresh|filtered|tap)\s+)?water\b(?!\s*(crackers?|chestnuts?))|^(boiling|hot|cold) and (cold|hot) water|^water or (soda|stock)/i;
 function shopLines(list){
   const tally={},order=[];
-  for(const {d,k} of list)for(const i of d.ingredients||[]){
+  const flat=[];for(const {d,k} of list)for(const i of d.ingredients||[]){if(WATER_RE.test(String(i.item))&&!/stock/i.test(i.item))continue;
+    const bs=baseOf(i);if(bs){const g=baseG(i.q,i);for(const [q,u,item,aisle] of bs.buy(g,i))flat.push({i:{q,u,item,aisle},k});continue}flat.push({i,k})}
+  for(const {i,k} of flat){
     const b=UNITB[i.u]||[i.u||"#",1],a=AISLES.includes(i.aisle)?i.aisle:"Pantry";
     const key=a+"|"+planKey(i.item);
     if(!tally[key]){tally[key]={a,item:i.item,items:new Set(),parts:{},order:[],open:false};order.push(key)}
@@ -1121,7 +1137,7 @@ function prepHTML2(f,menu){
   const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const kk=x.snack?PLAN.guests/4:K,T=dishTimes(x,kk),hot=(x.steps||[]).some(s=>HEAT_RE.test(s.text));
     const time=x.extra?"From the printed menu, buy to suit":hot&&T.cook?`Prep ${planMin(T.prep)}, cook ${planMin(T.cook)}`:`Takes ${planMin(T.prep+T.cook)}`;
     const ing=dishIngList(x,kk);
-    return `<li><b>${ESC(LBp[x.orig||x.n]&&!x.tag?LBp[x.orig||x.n]:x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">${time}${T.wait?`, then ${planMin(T.wait)} ${waitWords(x)}`:""}</span>${x.make_ahead?`<span class="pp-ahead"><b>Make ahead</b> ${ESC(degC(x.make_ahead))}</span>`:""}${ing.length?`<div class="pp-ing"><b>You need</b><ul>${ing.map(g=>`<li>${ESC(degC(g))}</li>`).join("")}</ul></div>`:""}<ol class="pp-steps">${(x.steps||[]).map(s=>`<li>${ESC(degC(scaleStep(s.text,kk)))}${s.min?` <span class="pp-t">${planMin(s.min)}</span>`:""}</li>`).join("")}</ol></li>`}).join("");
+    return `<li><b>${ESC(LBp[x.orig||x.n]&&!x.tag?LBp[x.orig||x.n]:x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">${time}${T.wait?`, then ${planMin(T.wait)} ${waitWords(x)}`:""}</span>${x.make_ahead?`<span class="pp-ahead"><b>Make ahead</b> ${ESC(degC(x.make_ahead))}</span>`:""}${ing.length?`<div class="pp-ing"><b>You need</b><ul>${ing.map(g=>`<li>${ESC(degC(g))}</li>`).join("")}</ul></div>`:""}<ol class="pp-steps">${(x.ingredients||[]).filter(baseOf).map(i=>`<li>${ESC(baseOf(i).step(baseG(i.q,i)*kk,i))}</li>`).join("")}${(x.steps||[]).map(s=>`<li>${ESC(degC(scaleStep(s.text,kk)))}${s.min?` <span class="pp-t">${planMin(s.min)}</span>`:""}</li>`).join("")}</ol></li>`}).join("");
   return `<div class="mc-bg">${d.bg}</div><div class="mc-grain" style="background-image:url('${GRAIN}')"></div>
   <div class="mc-in pp">
     <div class="mc-eye">Prep sheet</div>
