@@ -111,7 +111,7 @@ const ERA={
   "modern":{disp:"Instrument Serif",body:"Inter",bw:"400;600;700",sig:"Caveat",paper:"#f4f1ea",ink:"#1d1f22",acc0:"#c4562e",border:14,bcol:"#f4f1ea",rad:0,cap:"minimal",tag:"card",
     photoF:"none",P:{s:[7,9,8,10],m:[16,19,17,21],w:[7,8,6.5,9],d:[4,5,4.5,6]},dr:.45}};
 function eraOf(e){e=String(e||"").toLowerCase();if(ERA[e])return e;if(/30|40/.test(e))return"1930s-40s";if(/2000|00s/.test(e))return"2000s";const m=e.match(/(19)?([5-9])0/);if(m)return"19"+m[2]+"0s";return"modern"}
-function money(era,k,i,f){const e=ERA[era],v=e.P[k][i%4],y=yy(f);if(k==="d"&&i===0)return e.cents?y+"¢":Math.floor(v)+"."+y;if(e.cents)return v<100?v+"¢":(v/100).toFixed(2);return v.toFixed(2)}
+function money(era,k,i,f){const e=ERA[era],v=e.P[k][i%4],y=yy(f);if(e.cents)return v<100?v+"¢":(v/100).toFixed(2);return v.toFixed(2)}
 const LABEL={s:"Starters",m:"Blue Plates",w:"Pie and Sweets",d:"Coffee and Pop"};
 
 window.MENU_FORMATS=window.MENU_FORMATS||{};

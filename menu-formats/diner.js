@@ -55,7 +55,13 @@ function titleSize(t,width,maxLines,hi,lo,cw){
     for(const w of words){const L=w.length;if(L>per)lines+=Math.ceil(L/per)-1;if(cur&&cur+1+L>per){lines++;cur=L}else cur+=cur?1+L:L}
     if(lines<=maxLines)return s}
   return lo}
-const PRICE={s:[4,4],m:[9,6],w:[4,3],d:[2,3]};
+/* period prices: what the dish would have cost in the film's year (US CPI shape, 1990 = 1), with real menu endings */
+const CPI=[[1880,.07],[1900,.065],[1915,.08],[1920,.15],[1930,.13],[1940,.11],[1950,.19],[1960,.23],[1970,.30],[1980,.63],[1990,1],[2000,1.32],[2010,1.68],[2020,1.98],[2025,2.4]];
+function cpi(y){y=+y||1990;if(y<=CPI[0][0])return CPI[0][1];for(let i=1;i<CPI.length;i++){const [a,va]=CPI[i-1],[b,vb]=CPI[i];if(y<=b)return va+(vb-va)*(y-a)/(b-a)}return CPI[CPI.length-1][1]}
+function periodPrice(base1990,year,seed){const x=base1990*cpi(year)*(0.88+((seed>>>3)%25)/100);
+  if(x<1)return String(Math.max(5,Math.round(x*20)*5))+"¢";
+  const ends=x<10?[".95",".50",".25",".75"]:[".95",".50",".00"];const w=Math.floor(x);return w+ends[seed%ends.length]}
+const PRICE={s:3.95,m:6.95,w:2.95,d:1.25};
 
 let SEQ=0;
 window.MENU_FORMATS=window.MENU_FORMATS||{};
@@ -72,7 +78,7 @@ window.MENU_FORMATS.diner=ctx=>{
   const glow=`0 0 2px ${mix(c,.85)},0 0 8px ${neon},0 0 22px ${rgba(c,.8)},0 0 46px ${rgba(c,.55)}`;
   const K={night:"#0d1014",ink:"#161a20",paper:night?"#ebe6d8":ek==="modern"?"#fbfaf6":"#f4ead2",bone:"#d8d1bf",mute:"#5a5d63"};
   const yy=String(f.year||"").slice(-2).padStart(2,"0"),num=String(fl&&fl.number||"").replace(/\D/g,"");
-  const price=(k,n)=>{const [a,r]=PRICE[k];return (a+hash(n)%r)+"."+yy};
+  const price=(k,n)=>periodPrice(PRICE[k],f.year,hash(n));
   const special={};if(num.length===2&&menu.d&&menu.d[0])special.d0=(2+hash(menu.d[0].n)%3)+"."+num;
   if((num.length===3||num.length===4)&&menu.m&&menu.m[0])special.m0=(+num/100).toFixed(2);
   const W=fl&&fl.winks||[],venue=(fl&&fl.venue)||(night?"Last Light Diner":"Blue Plate Diner"),signTxt=fl&&fl.sign?ESC(fl.sign):"Route 13 &nbsp;/&nbsp; Mile 66";

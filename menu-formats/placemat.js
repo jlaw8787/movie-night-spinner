@@ -5,6 +5,11 @@
    place: props and logo panels on a photo go to the candidate spot that covers the least face and detail
           (skin tone weighted edges), and the crop can slide to give faces room. */
 (function(){
+const CPI=[[1880,.07],[1900,.065],[1915,.08],[1920,.15],[1930,.13],[1940,.11],[1950,.19],[1960,.23],[1970,.30],[1980,.63],[1990,1],[2000,1.32],[2010,1.68],[2020,1.98],[2025,2.4]];
+function cpi(y){y=+y||1990;if(y<=CPI[0][0])return CPI[0][1];for(let i=1;i<CPI.length;i++){const [a,va]=CPI[i-1],[b,vb]=CPI[i];if(y<=b)return va+(vb-va)*(y-a)/(b-a)}return CPI[CPI.length-1][1]}
+function eraPrice(str,year,baseYear){const v=+str;if(!isFinite(v))return str;const x=v*cpi(year)/cpi(baseYear);if(x<1)return String(Math.max(5,Math.round(x*20)*5))+"¢";const c=String(str).split(".")[1]||"00";return Math.floor(x)+"."+c}
+window.cpi=window.cpi||cpi;window.eraPrice=window.eraPrice||eraPrice;
+
 if(window.__PICK)return;
 const P=window.__PICK={};
 const grab=(img,w)=>{const c=document.createElement("canvas");c.width=w;c.height=Math.max(4,Math.round(w*img.naturalHeight/img.naturalWidth));const x=c.getContext("2d",{willReadFrequently:true});x.drawImage(img,0,0,c.width,c.height);return {w:c.width,h:c.height,d:x.getImageData(0,0,c.width,c.height).data}};
@@ -156,8 +161,8 @@ const HALFTONE="radial-gradient(rgba(40,25,10,.22) 30%,transparent 32%) 0 0/5px 
 function price(k,i,yy){
   if(k==="s")return["3.50","4.25","3.95","4.75"][i%4];
   if(k==="m")return["6.95","7.50","6.50","7.25"][i%4];
-  if(k==="w")return i?"2.50":"2."+yy;
-  return i?"1.75":"1."+yy;
+  if(k==="w")return i?"2.50":"2.25";
+  return i?"1.75":"1.50";
 }
 /* menu sizes from the estimated height of the 404px column */
 function sizes(menu,avail){
@@ -228,7 +233,7 @@ window.MENU_FORMATS.placemat=ctx=>{
   const kicker=family?"Kids' menu":(eg==="e40"?"Bill of fare":eg==="e70"?"Our menu":"Tonight's menu");
   const tz=sizes(menu,590);
   const stills=(ctx.stills||[]).filter(Boolean);
-  const pr=(k,i)=>{if(k==="m"&&i===0&&num.length===2)return num[0]+"."+num[1]+"0";if(k==="m"&&i===0&&num.length===3)return num[0]+"."+num.slice(1);return price(k,i,yy)};
+  const pr=(k,i)=>{if(k==="m"&&i===0&&num.length===2)return num[0]+"."+num[1]+"0";if(k==="m"&&i===0&&num.length===3)return num[0]+"."+num.slice(1);return eraPrice(price(k,i,yy),f.year,1985)};
   const caps=L.caps?"text-transform:uppercase;":"";
   const spread=L.printSpread?"text-shadow:0 0 .6px currentColor;":"";
   const tex=op=>`<div style="position:absolute;inset:0;background:url('${NOISE}') 0 0/300px;opacity:${op};mix-blend-mode:multiply;pointer-events:none"></div>`;

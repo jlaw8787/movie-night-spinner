@@ -52,7 +52,6 @@ const FAMILY=new Set(["kids","fairytale"]);
 function priceFor(era,year,number){const b=BASE[era]||9,M={s:1,m:1.9,w:1.05,d:.8};
   const yy=(+year||0)%100,num=/^\d{2,3}$/.test(String(number||""))?+number:null;
   return (k,i)=>{let p=b*M[k]*(1+i*.14);p=b<1?Math.round(p*20)/20:Math.round(p*4)/4;
-    if(k==="w"&&i===0)p=Math.floor(p)+yy/100;
     if(k==="m"&&i===0&&num){const c=[num/100,num/10,num].sort((x,y)=>Math.abs(x-p)-Math.abs(y-p));p=c[0]}
     return p}}
 const money=(p,era)=>p<1&&(era==="1930s-40s"||era==="1950s"||era==="1960s")?Math.round(p*100)+"c":p.toFixed(2);

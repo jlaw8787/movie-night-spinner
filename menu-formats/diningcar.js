@@ -74,7 +74,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const winks=(fl.winks||[]).map(clean).filter(Boolean);
   const prop=fl.prop&&fl.prop.title?fl.prop:{title:"Dining Car Seat",lines:["Present to the steward","One seat, one sitting"]};
   const num=String(fl.number||"").replace(/\D/g,"")||String(year).slice(-2)||"7";
-  const egg=String(fl.number||year).replace(/\D/g,"").slice(-2)||"";
+  const egg=String(fl.number||"").replace(/\D/g,"").slice(-2)||"";
   /* paper and colours */
   let paper=t.paperTo?mix(e.paper,t.paperTo,t.pt):e.paper;
   const pal=ctx.palette||{};

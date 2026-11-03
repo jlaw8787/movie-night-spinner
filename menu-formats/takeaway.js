@@ -3,6 +3,11 @@
    Inside: a photo band, then numbered dishes across three panels and a set dinner for two.
    Era sets print process (one-colour letterpress on manila, two-colour offset, photocopy with a spot colour, glossy full colour) and type pairing. Tone sets wear, tint and voice. */
 (function(){
+const CPI=[[1880,.07],[1900,.065],[1915,.08],[1920,.15],[1930,.13],[1940,.11],[1950,.19],[1960,.23],[1970,.30],[1980,.63],[1990,1],[2000,1.32],[2010,1.68],[2020,1.98],[2025,2.4]];
+function cpi(y){y=+y||1990;if(y<=CPI[0][0])return CPI[0][1];for(let i=1;i<CPI.length;i++){const [a,va]=CPI[i-1],[b,vb]=CPI[i];if(y<=b)return va+(vb-va)*(y-a)/(b-a)}return CPI[CPI.length-1][1]}
+/* the board's prices were set for its base year: carry them to the film's year */
+function eraPrice(str,year,baseYear){const v=+str;if(!isFinite(v))return str;const x=v*cpi(year)/cpi(baseYear);if(x<1)return String(Math.max(5,Math.round(x*20)*5))+"¢";const c=String(str).split(".")[1]||"00";return Math.floor(x)+"."+c}
+
 const ID="takeaway",W=1344,H=816;
 /* ---------- shared helpers ---------- */
 const IMG="https://image.tmdb.org/t/p/";
@@ -131,7 +136,7 @@ window.MENU_FORMATS[ID]=ctx=>{
    <div style="position:absolute;left:30px;top:138px;width:388px;background:${BAR};color:${BARINK};padding:12px 16px;box-sizing:border-box;${eg==="new"?"border-radius:10px;":""}">
      <div style="font:700 15px/1 ${E.body};letter-spacing:.24em;text-transform:uppercase">Phone your order</div>
      <div style="font:${E.dw} 44px/1.1 ${E.disp};margin-top:4px;white-space:nowrap">${phone}</div></div>
-   <div style="position:absolute;left:30px;top:236px;width:388px;font:500 20px/1.35 ${E.body};color:${INK}">Open 5 pm till late, seven nights.<br>Free delivery over 25.${yy||"00"}.</div>
+   <div style="position:absolute;left:30px;top:236px;width:388px;font:500 20px/1.35 ${E.body};color:${INK}">Open 5 pm till late, seven nights.<br>Free delivery over $25.</div>
    <div style="position:absolute;left:30px;top:310px;width:388px;height:1px;background:${SOFT};opacity:.6"></div>
    <div data-fit data-min="15" style="position:absolute;left:30px;top:322px;width:388px;height:220px;overflow:hidden;font-size:20px;color:${INK}">
      <div style="font:700 15px/1.2 ${E.body};letter-spacing:.22em;text-transform:uppercase;color:${SPOT};margin-bottom:.4em">Talk on the delivery run</div>
@@ -159,7 +164,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const LAB=fam?{s:"Starters",m:"Mains",w:"Sweets",d:"Drinks"}:{s:"Starters",m:"Mains",w:"Sweets",d:"Drinks"};
   const BASE={s:1,m:20,w:40,d:60};
   const PR={s:["6.50","7.20","5.90","6.80"],m:["14.90","16.50","13.80","15.20"],w:["6.40","5.90","6.80","5.50"],d:["4.50","3.90","4.80","4.20"]};
-  const price=(k,i)=>k==="w"&&i===0&&yy?"6."+yy:k==="m"&&i===0&&num&&num.length<=2?"1"+num.padStart(2,"0")[0]+"."+num.padStart(2,"0")[1]+"0":PR[k][i%4];
+  const price=(k,i)=>k==="m"&&i===0&&num&&num.length<=2?"1"+num.padStart(2,"0")[0]+"."+num.padStart(2,"0")[1]+"0":eraPrice(PR[k][i%4],f.year,2012);
   const keys=["s","m","w","d"].filter(k=>(menu[k]||[]).length);
   const nIt=keys.reduce((a,k)=>a+menu[k].length,0),heavy=nIt>9;
   const wt=k=>menu[k].reduce((a,it)=>a+1.4+Math.ceil(clean(it.n).length/26)+(it.note?Math.ceil(clean(it.note).length/34):0),0)+1.5;
@@ -181,7 +186,7 @@ window.MENU_FORMATS[ID]=ctx=>{
          ${it.note&&!(nIt>12&&i>1)?`<div style="font:italic 500 .76em/1.28 ${E.body};font-size:max(15px,.76em);color:${SOFT};margin-top:.1em;${heavy?clamp(1):""}">${esc(sent(txt(it.note)))}</div>`:""}</div></div>`).join("")}</div>`;
   const setNo=num||(yy?"8"+yy[1]:"88");
   const setDinner=`<div style="border:2px ${eg==="late"?"dashed":"solid"} ${SPOT};padding:.4em .6em;margin-top:.2em;${eg==="new"?"border-radius:10px;":""}">
-     <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:${E.dw} .92em/1.1 ${E.disp};font-size:max(18px,.92em);color:${SPOT};text-transform:uppercase">No. ${esc(setNo)} Movie night for two</span><span style="flex:none;font:700 1em/1 ${E.body};color:${INK};margin-left:.4em">32.${yy||"50"}</span></div>
+     <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:${E.dw} .92em/1.1 ${E.disp};font-size:max(18px,.92em);color:${SPOT};text-transform:uppercase">No. ${esc(setNo)} Movie night for two</span><span style="flex:none;font:700 1em/1 ${E.body};color:${INK};margin-left:.4em">${eraPrice("32.50",f.year,2012)}</span></div>
      <div style="font:500 .74em/1.3 ${E.body};font-size:max(15px,.74em);color:${INK};margin-top:.2em">One of every course, packed in one bag, ready by the opening credits.</div></div>`;
   /* panel fill: under each panel's dishes a still takes whatever depth is left (flex), so short menus never leave a bare lower panel; tiles too short to read are dropped after fitting */
   const extra=stills.length>2?stills.slice(2):stills.length?stills.slice(0):[];

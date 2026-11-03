@@ -72,7 +72,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const winks=(fl.winks||[]).map(clean).filter(Boolean);
   const prop=fl.prop&&fl.prop.title?fl.prop:{title:"Order Ticket",lines:["Keep this ticket","We call your number"]};
   const num=String(fl.number||"").replace(/\D/g,"")||String(year).slice(-2)||"7";
-  const egg=String(fl.number||year).replace(/\D/g,"").slice(-2)||"";
+  const egg=String(fl.number||"").replace(/\D/g,"").slice(-2)||"";
   const pal=ctx.palette||{};
   const truck=e.truck,darkTruck=lum(truck)<.2;
   const tink=e.tink;

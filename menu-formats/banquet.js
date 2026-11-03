@@ -176,7 +176,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   if(heavy){const half=[];let a=0,best=1,bd=1e9;for(let i=1;i<keys.length;i++){a+=menu[keys[i-1]].length;const d=Math.abs(nIt-2*a);if(d<bd){bd=d;best=i}}
     courses=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:0 26px;align-items:start"><div>${keys.slice(0,best).map((k,i)=>course(k,i)).join("")}</div><div>${keys.slice(best).map((k,i)=>course(k,i+best)).join("")}</div></div>`}
   else courses=keys.map(course).join("");
-  const fee=num?(num.length>=3?num.slice(0,-2)+"."+num.slice(-2):num+"."+yy):"19."+yy;
+  const fee=num?(num.length>=3?num.slice(0,-2)+"."+num.slice(-2):num+".00"):"19.50";
   const back=`${stock()}${border()}
    <div style="position:absolute;left:60px;right:60px;top:50px">${kick("The courses in procession")}</div>
    <div style="position:absolute;left:60px;right:60px;top:78px;font:${E.dw} 50px/1.05 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};color:${INK};text-align:center;${press}">Bill of Fare</div>

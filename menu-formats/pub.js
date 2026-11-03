@@ -6,6 +6,13 @@
    Fonts (fmt-pub in wip/print/FONTS.md): DM Serif Display, Ranchers, Poller One, Sansita, Kanit, Saira Extra Condensed,
    Sofia Sans Extra Condensed, Schibsted Grotesk. Bodies Source Serif 4, Karla, Cabin, Barlow, Work Sans; signature Homemade Apple. */
 (function(){
+/* period prices: what the dish would have cost in the film's year (US CPI shape, 1990 = 1), with real menu endings */
+const CPI=[[1880,.07],[1900,.065],[1915,.08],[1920,.15],[1930,.13],[1940,.11],[1950,.19],[1960,.23],[1970,.30],[1980,.63],[1990,1],[2000,1.32],[2010,1.68],[2020,1.98],[2025,2.4]];
+function cpi(y){y=+y||1990;if(y<=CPI[0][0])return CPI[0][1];for(let i=1;i<CPI.length;i++){const [a,va]=CPI[i-1],[b,vb]=CPI[i];if(y<=b)return va+(vb-va)*(y-a)/(b-a)}return CPI[CPI.length-1][1]}
+function periodPrice(base1990,year,seed){const x=base1990*cpi(year)*(0.88+((seed>>>3)%25)/100);
+  if(x<1)return String(Math.max(5,Math.round(x*20)*5))+"¢";
+  const ends=x<10?[".95",".50",".25",".75"]:[".95",".50",".00"];const w=Math.floor(x);return w+ends[seed%ends.length]}
+
 const W=1056,H=1344,ID="pub";
 if(!document.getElementById("fmt-pub-fonts")){
   const l=document.createElement("link");l.id="fmt-pub-fonts";l.rel="stylesheet";
@@ -163,8 +170,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const footH=cue?(20+6+cT.n*cT.z*1.3+6):0;
   let MH=IH-headH-footH-16;
   const m=ctx.menu||{};
-  const numPrice=num.length>=3&&num.length<=4?`${+num.slice(0,-2)}.${num.slice(-2)}`:num.length<=2?`${+num}.00`:null;
-  let courses=["s","m","w","d"].map(k=>({k,items:(m[k]||[]).filter(i=>i&&i.n).slice(0,4).map((it,j)=>({n:C(it.n),note:C(it.note),p:(k==="m"&&j===0&&numPrice)?numPrice:`${[9,22,8,5][["s","m","w","d"].indexOf(k)]+j*2}.${yy}`}))})).filter(c=>c.items.length);
+  const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(num))?null:num.length>=3&&num.length<=4?`${+num.slice(0,-2)}.${num.slice(-2)}`:num.length<=2?`${+num}.00`:null;
+  let courses=["s","m","w","d"].map(k=>({k,items:(m[k]||[]).filter(i=>i&&i.n).slice(0,4).map((it,j)=>({n:C(it.n),note:C(it.note),p:(k==="m"&&j===0&&numPrice)?numPrice:periodPrice([4.5,8.95,3.95,2.2][["s","m","w","d"].indexOf(k)]*(1+j*.12),f.year,[...String(it.n)].reduce((a,c)=>(a*31+c.charCodeAt(0))>>>0,7))}))})).filter(c=>c.items.length);
   const total=courses.reduce((a,c)=>a+c.items.length,0);
   const cols=1,GAP=24,colW=cols===2?(IW-GAP)/2:IW;
   let splits=cols===2?courses.slice(1).map((_,i)=>[courses.slice(0,i+1),courses.slice(i+1)]):[[courses]];

@@ -162,7 +162,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const winks=(fl.winks||[]).map(clean).filter(Boolean);
   const prop=fl.prop&&fl.prop.title?fl.prop:{title:"General Admission",lines:["Good for one game","Keep this stub"]};
   const num=String(fl.number||"").replace(/\D/g,"")||String(year).slice(-2)||"7";
-  const egg=String(fl.number||year).replace(/\D/g,"").slice(-2)||"";
+  const egg=String(fl.number||"").replace(/\D/g,"").slice(-2)||"";
   let paper=t.paperTo&&lum(e.paper)>.4?mix(e.paper,t.paperTo,t.pt):e.paper;
   const darkPaper=lum(paper)<.2;
   const pal=ctx.palette||{};

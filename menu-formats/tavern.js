@@ -26,7 +26,6 @@ const yr2=y=>String(y||"").slice(-2);
 function hash(s){let h=0;for(const ch of String(s))h=(h*31+ch.charCodeAt(0))>>>0;return h}
 function price(f,fl,ci,ii,name,scale){
   const base=[3,8,4,2][ci]+(ii>1?1:0);let c=["25","40","50","65","75","95"][hash(name)%6];
-  if(ci===1&&ii===0&&/\d\d$/.test(String(f.year)))c=yr2(f.year);
   if(ci===3&&ii===0&&fl&&/^\d{1,2}$/.test(String(fl.number||"")))c=String(fl.number).padStart(2,"0");
   return scale(base,c);
 }

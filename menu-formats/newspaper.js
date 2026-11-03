@@ -6,6 +6,10 @@
    stock, glossy photos, rounded panels). Tone sets wear, contrast, photo treatment and the edition wording.
    Ported from the hero pilot (wip/genre/hero/template.js). Inline styles only; no drawn art. */
 (function(){
+const CPI=[[1880,.07],[1900,.065],[1915,.08],[1920,.15],[1930,.13],[1940,.11],[1950,.19],[1960,.23],[1970,.30],[1980,.63],[1990,1],[2000,1.32],[2010,1.68],[2020,1.98],[2025,2.4]];
+function cpi(y){y=+y||1990;if(y<=CPI[0][0])return CPI[0][1];for(let i=1;i<CPI.length;i++){const [a,va]=CPI[i-1],[b,vb]=CPI[i];if(y<=b)return va+(vb-va)*(y-a)/(b-a)}return CPI[CPI.length-1][1]}
+function eraPrice(str,year,baseYear){const v=+str;if(!isFinite(v))return str;const x=v*cpi(year)/cpi(baseYear);if(x<1)return String(Math.max(5,Math.round(x*20)*5))+"¢";const c=String(str).split(".")[1]||"00";return Math.floor(x)+"."+c}
+
 const root=window;root.MENU_FORMATS=root.MENU_FORMATS||{};
 const BASE=(document.currentScript&&document.currentScript.src||"").replace(/[^/]*$/,"");
 if(!document.getElementById("fmt-newspaper-fonts")){const l=document.createElement("link");l.id="fmt-newspaper-fonts";l.rel="stylesheet";
@@ -56,9 +60,8 @@ function banner(title,max){
 /* prices: a lunch counter in dollars and cents; the first main carries the film's year as its cents */
 function price(f,ci,ii,name){
   const base=[3,7,4,2][ci]+(ii>1?1:0);
-  if(ci===1&&ii===0&&/\d\d$/.test(String(f.year)))return base+"."+String(f.year).slice(-2);
   let h=0;for(const ch of String(name))h=(h*31+ch.charCodeAt(0))>>>0;
-  return base+"."+["25","40","50","65","75","95"][h%6];
+  return eraPrice(base+"."+["25","40","50","65","75","95"][h%6],f.year,1985);
 }
 
 /* type tiers, biggest first: dish name, description, course head. Tiers 0 to 4 keep STYLE-LOCK sizes; tier 5 (24/18) is the front-page squeeze; 6+ only on Page 2 */

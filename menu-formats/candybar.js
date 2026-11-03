@@ -3,6 +3,11 @@
    Right: the venue header, one priced board per course, the combo line and the coming attractions fine print.
    Era sets the board (letter board felt, backlit acrylic, neon edged, digital screen), type pairing and frame. Tone sets lighting, wear and voice. */
 (function(){
+const CPI=[[1880,.07],[1900,.065],[1915,.08],[1920,.15],[1930,.13],[1940,.11],[1950,.19],[1960,.23],[1970,.30],[1980,.63],[1990,1],[2000,1.32],[2010,1.68],[2020,1.98],[2025,2.4]];
+function cpi(y){y=+y||1990;if(y<=CPI[0][0])return CPI[0][1];for(let i=1;i<CPI.length;i++){const [a,va]=CPI[i-1],[b,vb]=CPI[i];if(y<=b)return va+(vb-va)*(y-a)/(b-a)}return CPI[CPI.length-1][1]}
+/* the board's prices were set for its base year: carry them to the film's year */
+function eraPrice(str,year,baseYear){const v=+str;if(!isFinite(v))return str;const x=v*cpi(year)/cpi(baseYear);if(x<1)return String(Math.max(5,Math.round(x*20)*5))+"¢";const c=String(str).split(".")[1]||"00";return Math.floor(x)+"."+c}
+
 const ID="candybar",W=1344,H=816;
 /* ---------- shared helpers ---------- */
 const IMG="https://image.tmdb.org/t/p/";
@@ -96,7 +101,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const keys=["s","m","w","d"].filter(k=>(menu[k]||[]).length);
   const nIt=keys.reduce((a,k)=>a+menu[k].length,0),heavy=nIt>8;
   const PR={s:["4.50","5.25","3.95","4.75"],m:["7.95","8.50","6.95","7.25"],w:["3.25","3.75","2.95","3.50"],d:["3.50","2.95","3.95","3.25"]};
-  const price=(k,i)=>k==="w"&&i===0&&yy?"2."+yy:k==="m"&&i===0&&num?(num.length===1?num+".95":num.length===2?num[0]+"."+num[1]+"5":num[0]+"."+num.slice(1)):PR[k][i%4];
+  const price=(k,i)=>k==="m"&&i===0&&num?(num.length===1?num+".95":num.length===2?num[0]+"."+num[1]+"5":num[0]+"."+num.slice(1)):eraPrice(PR[k][i%4],f.year,2008);
   const combo="12."+(yy||"50");
   let boardBg,boardInk,boardEdge,boardHead,headInk,priceInk,noteInk;
   if(E.board==="felt"){boardBg=`repeating-linear-gradient(180deg,#141414 0 7px,#0a0a0a 7px 9px)`;boardInk="#f5f2ea";boardEdge=`6px solid #2a2a2a;outline:2px solid #8f8f8f`;boardHead=toHex(mix(pa,[0,0,0],.25));headInk=readable("#f5f2ea",toHex(mix(pa,[0,0,0],.25)),4.5);priceInk="#f5f2ea";noteInk="#cfc9bb"}

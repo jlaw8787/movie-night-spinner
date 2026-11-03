@@ -128,7 +128,7 @@ function fam(e){const list=[e.disp+(e.dw?":wght@"+e.dw:""),e.body+(e.bw?":wght@"
   if(e.disp===e.body)list.splice(1,1);if(e.disp==="Domine")list.push("DM Sans:wght@400;700");return[...new Set(list)]}
 
 function money(era,k,i,f,fl){const e=ERA[era],v=e.P[k][i%4];
-  const egg=k==="d"&&i===0, y=yy(f);
+  const egg=false, y=yy(f);
   if(e.cents){if(egg)return y+"¢";return v<100?v+"¢":(v/100).toFixed(2)}
   if(egg){const w=Math.floor(v);return w+"."+y}
   return v.toFixed(2)}

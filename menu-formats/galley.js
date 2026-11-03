@@ -54,9 +54,8 @@ const SPACE_RX=/\b(space|star|galaxy|galactic|orbit|planet|moon|lunar|mars|stati
 function priceFor(era,year,number,space){const b=BASE[era]||8.5,M={s:1,m:2,w:1,d:.75};
   const yy=(+year||0)%100,num=/^\d{2,4}$/.test(String(number||""))?+number:null;
   return (k,i)=>{let p=b*M[k]*(1+i*.15);
-    if(space){p=Math.max(1,Math.round(p*3));if(k==="w"&&i===0)p=yy||p;if(k==="m"&&i===0&&num&&num<1000)p=num;return p}
+    if(space){p=Math.max(1,Math.round(p*3));if(k==="m"&&i===0&&num&&num<1000)p=num;return p}
     p=b<1?Math.round(p*20)/20:Math.round(p*4)/4;
-    if(k==="w"&&i===0)p=Math.floor(p)+yy/100;
     if(k==="m"&&i===0&&num){const c=[num/1000,num/100,num/10,num].sort((x,y)=>Math.abs(x-p)-Math.abs(y-p));p=c[0]}
     return p}}
 const money=(p,era,space)=>space?p+" cr":p<1&&ERA_G[era]<2?Math.round(p*100)+"c":p.toFixed(2);

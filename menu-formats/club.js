@@ -75,7 +75,6 @@ const ERA={
     border:"hair",photoF:"none",card:"linear-gradient(135deg,#1b1b1b,#0c0c0c)",cardInk:"#f1ede4",P:{s:[12,16,14,18],m:[28,34,31,38],w:[12,14,11,15],d:[11,13,12,15]}}};
 function eraOf(e){e=String(e||"").toLowerCase();if(ERA[e])return e;if(/30|40/.test(e))return"1930s-40s";if(/2000|00s/.test(e))return"2000s";const m=e.match(/(19)?([5-9])0/);if(m)return"19"+m[2]+"0s";return"modern"}
 function money(era,k,i,f){const e=ERA[era],v=e.P[k][i%4],y=yy(f);
-  if(k==="d"&&i===0)return e.cents?y+"¢":Math.floor(v)+"."+y;
   if(e.cents&&v<1)return Math.round(v)+"¢";if(e.cents)return v>=1?v.toFixed(2):v+"¢";
   return era==="modern"&&Number.isInteger(v)?String(v):v.toFixed(2)}
 
