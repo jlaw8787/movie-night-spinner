@@ -51,11 +51,7 @@ x0,y0,x1,y1=884,170,1994,368;w,h=x1-x0,y1-y0
 yy,xx=np.mgrid[0:h,0:w];c=np.exp(-(((xx-w/2)/(w*.62))**2+((yy-h/2)/(h*.9))**2))
 face=np.zeros((h,w,3));base=np.array([24,12,46]);hi=np.array([70,36,120])
 face=base+(hi-base)*c[...,None]
-lg=Image.open('/home/claude/movie-night-spinner/assets/brand/galaxy-video-wide-1200.webp').convert('RGBA')
-la=np.asarray(lg).astype(np.float32);dk=np.abs(la[...,:3]-np.array([14,9,27])).sum(2)<34
-lab,n=ndimage.label(dk);edge=set(np.unique(np.concatenate([lab[0],lab[-1],lab[:,0],lab[:,-1]])))-{0}
-bg=np.isin(lab,list(edge));al=np.where(bg,0,255).astype(np.float32);al=ndimage.gaussian_filter(al,1.2)
-la[...,3]=al;lg=Image.fromarray(la.astype(np.uint8))
+lg=Image.open('/home/claude/movie-night-spinner/scripts/brand/galaxy-video-wide-clear.png').convert('RGBA')
 s=min((w*.9)/lg.width,(h*.86)/lg.height);lg=lg.resize((int(lg.width*s),int(lg.height*s)),Image.LANCZOS)
 F=Image.fromarray(face.astype(np.uint8)).convert('RGBA');F.alpha_composite(lg,((w-lg.width)//2,(h-lg.height)//2))
 F=F.convert('RGB');F=ImageEnhance.Color(F).enhance(0.8);F=ImageEnhance.Contrast(F).enhance(0.88)

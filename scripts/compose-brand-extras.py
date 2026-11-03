@@ -32,6 +32,11 @@ BG_OUT = M[0:40].mean((0, 1))
 
 def logo_cut(tagline=True):
     """the logo with its own background feathered away, so it sits on any dark purple"""
+    import os
+    if os.path.exists(SP + 'gv-master-alpha.png'):   # flat vector logo rendered on a clear background
+        A = arr(Image.open(SP + 'gv-master-alpha.png').convert('RGBA'))
+        y1 = 975 if tagline else 885
+        return A[20:y1, 130:1406, :3], A[20:y1, 130:1406, 3]
     y1 = 960 if tagline else 845
     crop = M[20:y1, 130:1406]
     lum = crop.max(2)
@@ -93,9 +98,9 @@ for _ in range(70):
 card = paint(card, blur(arr(st), 0.5), [0.95, 0.90, 1.0], 0.55)
 
 crop, a = logo_cut(tagline=True)
-lw = 520; lh = int(crop.shape[0] * lw / crop.shape[1])
+lw = 470; lh = int(crop.shape[0] * lw / crop.shape[1])
 lc = arr(img(crop).resize((lw, lh), Image.LANCZOS)); la = arr(img(a).resize((lw, lh), Image.LANCZOS))
-LX, LY = 22, 18
+LX, LY = 44, 10
 card[LY:LY + lh, LX:LX + lw] = card[LY:LY + lh, LX:LX + lw] * (1 - la[..., None]) + lc * la[..., None]
 
 cream = [1.0, 0.95, 0.84]
