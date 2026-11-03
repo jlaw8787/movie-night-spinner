@@ -151,3 +151,7 @@ Gaps:
 - Galaxy Video's live details: $2 Tuesday on a Tuesday with the struck-through price, the Melbourne Cup aisle on Cup day, "All copies out. Lucky you, one just came back".
 - The Aussie snack counter content (Cheerios, fairy bread, chocolate crackles, choc tops, chicken salt).
 - Keyboard and focus handling, and the Settings sheet. Clear, honest copy ("Saved on this device. Reset clears...").
+
+## Fixed straight after the review
+
+- Aisle signs off their boards on the desktop store photo (fix 2): caused by the 3 Nov tap-target change setting the signs to position relative. Reverted for the signs, tap area still 44px. Fixed 3 Nov.

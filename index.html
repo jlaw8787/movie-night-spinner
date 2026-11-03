@@ -2528,7 +2528,8 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 .views button,#motwOpen,#motwLock,#weekPanel .week-acts button,.tab,.stage .btn,.stage .toggle,.aisle-spin,.sc-add,.sc-cats button,
 .crave .crave-chips button,#viewShop .shop-tools select,#memberCard button,.watch-panel summary,#svFri,.sc-go,.sc-spin{min-height:44px}
 .watch-panel summary{display:flex;align-items:center}
-.where-more,#howBtn,.howlink,.tmdb-logo,.sv-hang,.sc-credits a,.crave .tape-t a{position:relative}
+.where-more,#howBtn,.howlink,.tmdb-logo,.sc-credits a,.crave .tape-t a{position:relative}
+/* aisle signs are absolutely placed on the store photo (.fit): never make them relative, just grow the tap area */
 .where-more::after,#howBtn::after,.howlink::after,.tmdb-logo::after,.sc-credits a::after{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;transform:translateY(-50%)}
 .sv-hang::after{content:"";position:absolute;left:50%;top:50%;width:max(100%,64px);height:max(100%,44px);transform:translate(-50%,-50%)}
 #viewShop .shop-tools label{min-height:44px}
