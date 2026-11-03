@@ -1697,9 +1697,9 @@ function renderShop(){
   $("shopAisles").innerHTML=rows.length?rows.map(aisle).join("")+(later.length?`<div class="aisles-later"><h3>Holiday shelves</h3><p>Each one moves to the front of the shop when its day comes round.</p>${later.map(aisle).join("")}</div>`:""):`<p class="shelf-empty">${q?`No tapes match "${ESC(q)}". Check the spelling, or clear the filters.`:"Nothing on the shelves matches that. Try another title or clear the filters."}</p>`;
   fillShelvesLater();buildAisleNav();
 }
-function tvHTML(f){
+function tvHTML(f,still){
   const k=typeof TRAILERS!=="undefined"&&TRAILERS[f.id];
-  return `<div class="tv"><div class="tv-screen">${k?`<button class="tv-play" type="button" data-k="${ESC(k)}">Play trailer</button>`:`<p class="tv-none">No trailer in the machine for this one.</p>`}</div><div class="tv-base"><span class="tv-knobs" aria-hidden="true"><i></i><i></i></span>${k?`<a href="https://www.youtube.com/watch?v=${encodeURIComponent(k)}" target="_blank" rel="noopener">Open on YouTube</a>`:""}</div></div>`;
+  return `<div class="tv"><div class="tv-screen"${still?` style="background:#0a0d10 url('${TMDB_IMG_SHOP}w500${ESC(still)}') center/cover"`:""}>${k?`<button class="tv-play" type="button" data-k="${ESC(k)}">Play trailer</button>`:`<p class="tv-none">No trailer in the machine for this one.</p>`}</div><div class="tv-base"><span class="tv-knobs" aria-hidden="true"><i></i><i></i></span>${k?`<a href="https://www.youtube.com/watch?v=${encodeURIComponent(k)}" target="_blank" rel="noopener">Open on YouTube</a>`:""}</div></div>`;
 }
 async function openCase(f){
   const modalTrigger=document.activeElement;
@@ -1707,7 +1707,23 @@ async function openCase(f){
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];const m=makeMenu(f,true);
   const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`${f.title}, back of the box`);
   const seen=watched.has(f.id);
-  o.innerHTML=`<div class="case"><div class="case-l">${p?`<div class="case-art${reduce?"":" track"}"><img alt="${ESC(f.title)} poster" src="${TMDB_IMG_SHOP}w500${ESC(p)}"></div>`:""}${tvHTML(f)}</div><div><h3>${ESC(f.title)}</h3><p class="meta">${f.year} &nbsp;/&nbsp; ${ESC(aisleOf(f))} aisle &nbsp;/&nbsp; ${ESC(T[f.theme].name)}${ratingOf(f)?` <span class="ratebig ${rateCls(ratingOf(f))}" aria-label="Rated ${ratingOf(f)}">${ratingOf(f)}</span>`:""}</p>${isOut(f)?'<p class="outnote">All copies are out. Lucky you, one just came back.</p>':""}<p class="syn">${ESC(f.D)}</p><div class="where">${whereHTML(f)}</div><p class="staff">Staff pick: ${ESC((movieEdition(f)||{}).tagline||f.T)}</p>${seen?starsHTML(f):""}<h4>Comes with</h4><ul>${[...m.s,...m.m,...m.w,...m.d].map(it=>`<li>${ESC(it.n)}</li>`).join("")}</ul><div class="acts"><button class="menu-go" type="button">See the menu</button>${isRentedOut(f)?'<button class="ret" type="button">Return it</button>':'<button class="rent" type="button">Rent it</button>'}<button class="seen" type="button">${seen?"Not seen it yet":"Seen it"}</button></div></div></div>`;
+  const st=((f._lib&&f._lib.stills)||[]).map(x=>Array.isArray(x)?x[0]:x).filter(x=>x&&x!==p),shots=st.slice(1,4),fresh=typeof isNew==="function"&&isNew(f),rt=ratingOf(f);
+  const tag=(movieEdition(f)||{}).tagline||f.T;
+  const shotHTML=shots.length>=2?shots.map(s=>`<img alt="" src="${TMDB_IMG_SHOP}w300${ESC(s)}" loading="lazy">`).join(""):(p?`<img class="vb-poster" alt="${ESC(f.title)} poster" src="${TMDB_IMG_SHOP}w342${ESC(p)}">`:"");
+  o.innerHTML=`<div class="case vhs"><div class="vb">
+    <header class="vb-top"><p class="vb-tag">${ESC(tag)}</p><h3>${ESC(f.title)}</h3></header>
+    <div class="vb-body">
+      <div class="vb-l"><div class="vb-shots n${Math.min(shots.length,3)}">${shotHTML}</div>${tvHTML(f,st[0])}</div>
+      <div class="vb-r">${isOut(f)?'<p class="outnote">All copies are out. Lucky you, one just came back.</p>':""}
+        <p class="syn">${ESC(f.D)}</p>
+        ${f.T&&f.T!==tag?`<p class="staff">Staff pick: ${ESC(f.T)}</p>`:(m.w[0]?`<p class="staff">Staff tip: save room for ${ESC(m.w[0].n)}.</p>`:"")}${seen?starsHTML(f):""}
+        <h4>Tonight's menu</h4><ul>${[...m.s,...m.m,...m.w,...m.d].map(it=>`<li>${ESC(it.n)}</li>`).join("")}</ul>
+        <div class="where">${whereHTML(f)}</div>
+      </div>
+    </div>
+    <footer class="vb-foot">${rt?`<span class="vb-rate ratebig ${rateCls(rt)}" aria-label="Rated ${rt}">${rt}</span>`:""}<span class="vb-spec">${f.year} &nbsp;·&nbsp; ${ESC(aisleOf(f)||"")} aisle<br>Colour &nbsp;·&nbsp; Hi-Fi Stereo &nbsp;·&nbsp; VHS</span><span class="vb-code">${code39(String(f.year)+String(Math.abs([...f.id].reduce((h,c)=>(h*31+c.charCodeAt(0))|0,7))%10000).padStart(4,"0"))}</span><span class="vb-price"><b>${fresh?"NEW RELEASE":"WEEKLY"}</b>${ESC(priceTag(f).replace(/^Weekly /,""))}${fresh?"":" for 7 nights"}</span></footer>
+  </div>
+  <div class="acts"><button class="menu-go" type="button">See the menu</button>${isRentedOut(f)?'<button class="ret" type="button">Return it</button>':'<button class="rent" type="button">Rent it</button>'}<button class="seen" type="button">${seen?"Not seen it yet":"Seen it"}</button></div></div>`;
   const close=()=>dismissModal(o);
   o.addEventListener("click",e=>{if(e.target===o)close()});
   /* the menu is one tap from any tape; renting is just for fun and never needed to see it */
@@ -1732,7 +1748,7 @@ function whereHTML(f){
   const p=provOf(f);
   if(!p)return "";
   const svcRow=(label,list)=>list&&list.length?`<div class="where-row"><span class="where-k">${label}</span>${list.map(([n,l])=>`<span class="where-svc">${l?`<img alt="" src="${LOGO}${ESC(l)}" loading="lazy">`:""}<span class="nm">${ESC(n)}</span></span>`).join("")}</div>`:"";
-  const rb=[];(p.r||[]).concat(p.b||[]).forEach(x=>{if(!rb.some(y=>y[0]===x[0]))rb.push(x)});
+  const rb=[];(p.r||[]).concat(p.b||[]).forEach(x=>{if(!/justwatch/i.test(x[0])&&!rb.some(y=>y[0]===x[0]))rb.push(x)});
   const more=`<a class="where-more" href="https://www.themoviedb.org/movie/${p.t}/watch?locale=AU" target="_blank" rel="noopener">All options and prices</a>`;
   if(!(p.s&&p.s.length)&&!rb.length)return `<p class="where-none">Not streaming in Australia right now. Time to dust off the DVD player. ${more}</p>`;
   return svcRow("Stream on",p.s)+svcRow(p.s&&p.s.length?"Or rent":"Rent or buy",rb.slice(0,4))+`<div class="where-row">${more}</div>`;
