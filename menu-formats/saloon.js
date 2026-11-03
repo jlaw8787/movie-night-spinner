@@ -211,7 +211,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const mis=E.mis?`text-shadow:3px 2px 0 ${rgba(C.accA,.45)};`:"";
   const vlen=String(F.venue).length,vs=vlen>36?54:vlen>24?64:vlen>14?78:92;
   const url=logoUrl(ctx),title=T(ctx.f.title||"");
-  const fb=title.length>40?20:title.length>22?24:30;
+  const fb=Math.max(14,Math.min(title.length>40?20:title.length>22?24:30,Math.floor(150/(Math.max(...String(title).replace(/<[^>]*>/g,"").split(/\s+/).map(w=>w.length),1)*.7))));
   const reward=/^\d+$/.test(F.number)?`$${F.number}`:F.number;
   const lpDark=`position:relative;display:block;width:100%;max-width:182px;padding:10px 12px;box-sizing:border-box;background-color:${C.dark};background-image:${noise(".02 .5",3,[255,235,200],.16,seed,500)},${noise(".9",2,[255,255,255],.07,seed+1)};box-shadow:0 6px 14px rgba(0,0,0,.4)`;
   const lpLight=lpDark.replace(`background-color:${C.dark}`,`background-color:${toHex(mix(hex(P.bg),WHITE,.5))}`);
@@ -237,7 +237,7 @@ window.MENU_FORMATS[ID]=ctx=>{
         </div>
         <div data-lpanel data-dark="${esc(lpDark)}" data-light="${esc(lpLight)}" style="${lpDark}">
           ${url?`<img data-logo crossorigin="anonymous" src="${url}" alt="" style="display:block;max-width:150px;max-height:96px;object-fit:contain">`:""}
-          <div data-title-fb data-box style="${url?"display:none;":""}width:150px;max-height:120px;overflow:hidden;text-align:center"><div data-fs="${fb}" data-min="16" style="font:${ty.dw} ${fb}px ${ty.disp};line-height:1.02;text-transform:uppercase;color:${C.onDark};overflow-wrap:anywhere">${title}</div></div>
+          <div data-title-fb data-box style="${url?"display:none;":""}width:150px;max-height:120px;overflow:hidden;text-align:center"><div data-fs="${fb}" data-min="16" style="font:${ty.dw} ${fb}px ${ty.disp};line-height:1.02;text-transform:uppercase;color:${C.onDark};overflow-wrap:normal;word-break:keep-all">${title}</div></div>
         </div>
         <div>
           <div style="font:${ty.dw} 16px ${ty.disp};line-height:1.25;text-transform:uppercase;color:${C.ink}">Now showing</div>

@@ -774,7 +774,7 @@ const LIB_COURSE={s:"Starters",m:"Mains",w:"Sweets",d:"Drinks"};
 function libPhoneView(f,menu,L,root){
   const fl=L.flavour||{},all=[],groups=[];
   for(const c of ["s","m","w","d"]){const its=(menu[c]||[]).filter(it=>it&&it.n);if(!its.length)continue;
-    groups.push({h:LIB_COURSE[c],items:its.map(it=>({k:it.n}))});for(const it of its)all.push({label:it.n,film:it.note||"",how:degC(it.how||""),price:""})}
+    groups.push({h:LIB_COURSE[c],items:its.map(it=>({k:it.n}))});for(const it of its)all.push({label:it.n,film:it.note||"",how:it.house?"A house standard, not part of tonight's cook.":degC(it.how||"Not on tonight's cook."),price:""})}
   if(!groups.length){phoneView(null);return}
   {const ea=$("easel"),was=ea.hidden;ea.hidden=false;try{FMT_PHONE.lib=libPhonePal(root)}finally{ea.hidden=was}}
   phoneView(f,{fmt:"lib",brand:fl.venue||"",tag:ESC(current&&current.tag||f.T),phoneTitle:f.title},{groups,all});
@@ -1033,7 +1033,7 @@ function libUnclip(card,done){if(done)card.dataset.unclip="1";card.querySelector
     if(hid()){const parts=e.textContent.trim().replace(/[.!?]+$/,"").split(/,\s+/);while(hid()&&parts.length>1){parts.pop();e.textContent=parts.join(", ")+"."}}
     if(hid())e.style.display="none";}
  })}
-function libMenu(menu){const m=Object.assign({},menu);for(const c of ["s","m","w","d"])if(Array.isArray(menu[c]))m[c]=menu[c].map(it=>Object.assign({},it,{note:libTrim(it.note,100)}));return m}
+function libMenu(menu){const m=Object.assign({},menu);for(const c of ["s","m","w","d"])if(Array.isArray(menu[c]))m[c]=menu[c].map(it=>Object.assign({},it,{note:degC(libTrim(it.note,100))}));return m}
 /* menu format library: one script per printed-menu format, fetched the first time a film needs it */
 const _libLoads={};
 function libLoad(k){
@@ -1043,6 +1043,25 @@ function libLoad(k){
     const s=document.createElement("script");s.src="menu-formats/"+k+".js?v="+(window.LIB_VER&&LIB_VER[k]||"1");
     s.onload=()=>ok(!!window.MENU_FORMATS[k]);s.onerror=()=>{delete _libLoads[k];ok(false)};document.head.appendChild(s);
   }));
+}
+/* a venue menu shows the whole board: tonight's five to cook, the film's other dishes, and a couple of house standards.
+   The prep sheet still cooks only the five (planAll reads the recipe list, not this). */
+const HOUSE_FORMAL=new Set(["bistro","hotel","club","banquet","invite","tearoom","diningcar","bartab","tavern"]);
+const FULL_CAP={galley:1,tearoom:1,candybar:2,canteen:1,club:1,diningcar:1,saloon:1,banquet:2,placemat:2,motel:3};
+function fullMenu(f,menu,fmt){
+  if(window.LIB_FULL===false)return menu;
+  const out={},seen=new Set(),adds=[];
+  for(const k of ["s","m","w","d"])for(const it of menu[k]||[])seen.add(String(it.n||"").toLowerCase());
+  const src={s:f.S,m:f.M,w:f.W,d:f.K},plain=!(DIET.veg||dietAF());
+  if(plain&&f._full)for(const k of ["s","m","w","d"])for(const r of src[k]||[]){const it=toItem(r);if(!it.n||seen.has(it.n.toLowerCase()))continue;seen.add(it.n.toLowerCase());adds.push([k,Object.assign(it,{extra:true})])}
+  const formal=HOUSE_FORMAL.has(fmt);
+  const house=formal?{d:["Tea or coffee","Pot of tea or a fresh brew, after dinner"],s:["Bread and butter","Warm bread with salted butter, for the table"]}
+                    :{d:["Bottomless coffee","Filter coffee, refills on the house"],s:["Fries","Hot and salted, by the basket"]};
+  for(const k of ["d","s"])adds.push([k,{n:house[k][0],note:house[k][1],how:"",shop:[],house:true}]);
+  const cap=FULL_CAP[fmt]==null?99:FULL_CAP[fmt];
+  for(const k of ["s","m","w","d"])out[k]=(menu[k]||[]).slice();
+  for(const [k,it] of adds.slice(0,cap))out[k].push(it);
+  return Object.assign({},menu,out);
 }
 /* venue menus carry the venue, not the film's poster: the poster stays in the page around the menu */
 let LIB_POSTER_ON=false;window.LIB_NO_POSTER=!LIB_POSTER_ON;
@@ -1082,14 +1101,14 @@ async function show(f,preferSig){
   }
   if(f._lib&&await libLoad(f._lib.fmt)&&id===renderId){
     try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
-      const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f:dietKey()?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietText(f,f.P),D:dietText(f,f.D)}):f,menu:libMenu(menu),poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
+      const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f:dietKey()?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietText(f,f.P),D:dietText(f,f.D)}):f,menu:libMenu(fullMenu(f,menu,L.fmt)),poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
       const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
       styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);dietStamp();
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       try{libAim(card,L)}catch(e){}
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;
       await new Promise(r=>setTimeout(r,180));try{libPhotoPass(card,L,lobbyPoster(f))}catch(e){console.warn("photo pass",e)}libUnclip(card);setTimeout(()=>{if(id===renderId)libUnclip(card)},1400);setTimeout(()=>{if(id===renderId)libUnclip(card,1)},3200);
-      try{libPhoneView(f,menu,L,card)}catch(e){console.warn("phone menu",e);phoneView(null)}styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);scalePreview();
+      try{libPhoneView(f,fullMenu(f,menu,L.fmt),L,card)}catch(e){console.warn("phone menu",e);phoneView(null)}styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);scalePreview();
       const refitL=()=>{if(id!==renderId)return;const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
       refitL();await document.fonts.ready;refitL();scalePreview();
       return;
