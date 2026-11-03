@@ -233,6 +233,8 @@ function spin(){
       sfx.whirrStop();fanfare();
       buzz([30,50,90]);show(win,true).then(()=>{announceFilm(win,kbSpin);leader(openCurtains)});addHistory(win);
       /* an instant jump: a smooth glide while the bulbs flash and the menu builds left phones drawing a blank screen for half a second */if(window.innerWidth<900)theatre.scrollIntoView({behavior:"auto",block:"start"});
+      /* desktop: glide down to the result once it is ready, unless the whole menu is already in view */
+      else setTimeout(()=>{const r=$("easel").getBoundingClientRect();if(r.bottom>innerHeight-20)window.scrollTo({top:scrollY+theatre.getBoundingClientRect().top-16,behavior:reduce?"auto":"smooth"})},reduce?0:600);
     }
   }
   requestAnimationFrame(frame);

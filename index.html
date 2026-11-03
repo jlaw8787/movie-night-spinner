@@ -443,7 +443,9 @@ h1{margin:0;font-family:var(--f-marquee);font-weight:400;font-size:clamp(30px,7.
 /* stage */
 .stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.04fr);grid-template-rows:auto 1fr;gap:clamp(24px,4vw,48px);align-items:start}
 /* desktop: the wheel runs down the left, the menu sits right, and the checklist and stubs fill the space under it */
-.stage>.deck{grid-row:1 / span 2}.stage>.side{grid-column:2;grid-row:1}.stage>.extras{grid-column:2;grid-row:2;display:flex;flex-direction:column;gap:16px;min-width:0}
+.stage>.deck{grid-row:1 / span 2}
+/* desktop: the wheel column stays beside you while you read a long menu or prep sheet, instead of leaving an empty column */
+@media (min-width:901px){.stage>.deck{position:sticky;top:12px;align-self:start}}.stage>.side{grid-column:2;grid-row:1}.stage>.extras{grid-column:2;grid-row:2;display:flex;flex-direction:column;gap:16px;min-width:0}
 .extras .watch-panel,.extras .history{width:100%}
 @media (max-width:900px){.stage{grid-template-columns:minmax(0,1fr);grid-template-rows:none}.stage>.deck,.stage>.side,.stage>.extras{grid-column:1;grid-row:auto}.extras{align-items:center}.extras .watch-panel,.extras .history{width:min(100%,540px)}}
 /* phones: a slim marquee so the wheel and Spin button sit in the first screen */
@@ -2829,7 +2831,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=16ab0b78" defer></script>
 <script src="formats-core.js?v=16a06c84" defer></script>
-<script src="app.js?v=78cfada6" defer></script>
+<script src="app.js?v=26e6d407" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
