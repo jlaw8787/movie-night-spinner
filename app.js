@@ -1124,14 +1124,35 @@ function libAim(card,L){const foc=L&&L.focus;if(!foc)return;
 function fitLines(card){
   const els=[...card.querySelectorAll("*")].filter(e=>{if(!e.firstChild||!e.offsetWidth)return false;const cs=getComputedStyle(e);
     if(!/^(nowrap|pre)/.test(cs.whiteSpace)&&cs.textOverflow!=="ellipsis")return false;if(cs.overflow==="visible"&&cs.overflowX==="visible")return false;
-    if(cs.webkitLineClamp&&cs.webkitLineClamp!=="none")return false;return e.scrollWidth>e.clientWidth+1&&e.textContent.trim().length>1});
-  for(const e of els){const sized=[e,...e.querySelectorAll("*")].filter(x=>x.textContent.trim());const base=sized.map(x=>parseFloat(getComputedStyle(x).fontSize)||0);
-    for(let k=.97;k>=.65&&e.scrollWidth>e.clientWidth+1;k-=.03)sized.forEach((x,i)=>{if(base[i])x.style.fontSize=(base[i]*k).toFixed(2)+"px"});
+    if(cs.webkitLineClamp&&cs.webkitLineClamp!=="none")return false;return (e.scrollWidth>e.clientWidth+1||e.dataset.fl0)&&e.textContent.trim().length>1});
+  for(const e of els){const sized=[e,...e.querySelectorAll("*")].filter(x=>x.textContent.trim());const base=sized.map(x=>+(x.dataset.fl0||(x.dataset.fl0=parseFloat(getComputedStyle(x).fontSize)||0)));
+    sized.forEach((x,i)=>{if(base[i])x.style.fontSize=base[i]+"px"});for(let k=.97;k>=.65&&e.scrollWidth>e.clientWidth+1;k-=.03)sized.forEach((x,i)=>{if(base[i])x.style.fontSize=(base[i]*k).toFixed(2)+"px"});
     /* a decorative tag (data-opt) that still will not fit steps aside rather than show half a word */
     if(e.hasAttribute("data-opt")&&e.scrollWidth>e.clientWidth+1)e.style.visibility="hidden"}
   /* decorative tags pushed past their row's edge by a layout's own sizing step aside too */
   card.querySelectorAll("[data-opt]").forEach(e=>{const p=e.parentElement;if(!p||!e.offsetWidth)return;const r=e.getBoundingClientRect(),pr=p.getBoundingClientRect();
     e.style.visibility=(e.scrollWidth>e.clientWidth+1||r.right>pr.right+1)?"hidden":""})
+}
+/* fold-out menus (tiki): a dish row sitting on a crease is nudged just below it, so nothing folds in half.
+   Measured in the menu's own units (offsetTop), so it works on the scaled preview too. If that runs the
+   block out of room, its type steps down a little, never under each line's own minimum, and no dish is dropped. */
+function foldClear(card){
+  if(!card.classList.contains("lib-tiki"))return;
+  const topIn=(el,root)=>{let y=0;for(let e=el;e&&e!==root;e=e.offsetParent)y+=e.offsetTop;return y};
+  card.querySelectorAll(".fx-face").forEach(face=>{const H=face.offsetHeight,creases=[H/3,2*H/3];
+    face.querySelectorAll("[data-box]").forEach(box=>{if(box.offsetHeight<200)return;const bt=topIn(box,face);
+      if(!creases.some(c=>c>bt&&c<bt+box.offsetHeight))return;
+      const rows=[...box.children].flatMap(c=>[c,...c.children]).filter(e=>e.offsetHeight&&e.offsetHeight<120);
+      const fsEls=[...box.querySelectorAll("[data-fs]")],base=fsEls.map(e=>+(e.dataset.fc0||(e.dataset.fc0=parseFloat(getComputedStyle(e).fontSize))));
+      fsEls.forEach((e,i)=>e.style.fontSize=base[i]+"px");
+      const push=()=>{rows.forEach(r=>{if(r.dataset.mt0==null)r.dataset.mt0=r.style.marginTop||"";r.style.marginTop=r.dataset.mt0});
+        for(const c of creases){const r=rows.filter(r=>r.offsetHeight<80).find(r=>{const t=topIn(r,face);return t<c-2&&t+r.offsetHeight>c+2})||rows.find(r=>{const t=topIn(r,face);return t<c-2&&t+r.offsetHeight>c+2});
+          if(r)r.style.marginTop=((parseFloat(getComputedStyle(r).marginTop)||0)+(c-topIn(r,face))+8)+"px"}};
+      for(let step=0;step<16;step++){push();if(box.scrollHeight<=box.clientHeight+1)break;
+        fsEls.forEach((e,i)=>{const min=+e.dataset.min||14;e.style.fontSize=Math.max(min,base[i]*(1-.025*(step+1)))+"px"})}
+      push();
+      /* nothing a layout marked to drop stays hidden because of this pass */
+      box.querySelectorAll("[data-drop]").forEach(d=>{if(d.style.display==="none"&&box.scrollHeight<=box.clientHeight+1)d.style.display=""})})});
 }
 function libUnclip(card,done){if(done)card.dataset.unclip="1";card.querySelectorAll(".fx-face *").forEach(e=>{const cs=getComputedStyle(e);if(!((cs.webkitLineClamp&&cs.webkitLineClamp!=="none")||cs.textOverflow==="ellipsis"))return;const hid=()=>e.scrollHeight>e.clientHeight+2||e.scrollWidth>e.clientWidth+2;if(!hid())return;
   let fs=parseFloat(cs.fontSize),lh=parseFloat(cs.lineHeight)||fs*1.2;
@@ -1237,7 +1258,7 @@ async function show(f,preferSig){
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       try{libAim(card,L)}catch(e){}
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;
-      await new Promise(r=>setTimeout(r,180));try{libPhotoPass(card,L,lobbyPoster(f))}catch(e){console.warn("photo pass",e)}libUnclip(card);fitLines(card);setTimeout(()=>{if(id===renderId){libUnclip(card);fitLines(card)}},1400);setTimeout(()=>{if(id===renderId){libUnclip(card,1);fitLines(card)}},3200);setTimeout(()=>{if(id===renderId)fitLines(card)},5000);
+      await new Promise(r=>setTimeout(r,180));try{libPhotoPass(card,L,lobbyPoster(f))}catch(e){console.warn("photo pass",e)}libUnclip(card);fitLines(card);foldClear(card);setTimeout(()=>{if(id===renderId){libUnclip(card);fitLines(card);foldClear(card)}},1400);setTimeout(()=>{if(id===renderId){libUnclip(card,1);fitLines(card)}},3200);setTimeout(()=>{if(id===renderId){fitLines(card);foldClear(card)}},5000);
       try{libPhoneView(f,fullMenu(f,menu,L.fmt),L,card)}catch(e){console.warn("phone menu",e);phoneView(null)}styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);scalePreview();
       const refitL=()=>{if(id!==renderId)return;const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
       refitL();await document.fonts.ready;refitL();scalePreview();

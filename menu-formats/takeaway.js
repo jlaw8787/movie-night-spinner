@@ -202,7 +202,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const inside=`${stock}
    <div style="position:absolute;left:0;top:0;width:1344px;height:226px;overflow:hidden;background:#111">${photo(second,stills[1]?"50% 42%":"50% 30%")}
      <div style="position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(0deg,rgba(0,0,0,.6),rgba(0,0,0,0))"></div>
-     <div style="position:absolute;left:28px;bottom:14px;font:${E.dw} 34px/1 ${E.disp};color:#fff;text-transform:uppercase;text-shadow:0 2px 8px rgba(0,0,0,.6);white-space:nowrap">${esc(venue.length>34?"The menu":venue)}</div>
+     <div style="position:absolute;left:28px;bottom:14px;width:398px;font:${E.dw} 34px/1.02 ${E.disp};color:#fff;text-transform:uppercase;text-shadow:0 2px 8px rgba(0,0,0,.6);text-wrap:balance">${esc(venue.length>34?"The menu":venue)}</div>
      <div style="position:absolute;right:28px;bottom:16px;font:700 16px/1 ${E.body};color:#fff;letter-spacing:.2em;text-transform:uppercase;text-shadow:0 2px 6px rgba(0,0,0,.7)">Order by number</div></div>
    <div style="position:absolute;left:0;right:0;top:226px;height:6px;background:${BAR}"></div>
    ${pnl(0,best.sp[0].map(course).join(""))}
