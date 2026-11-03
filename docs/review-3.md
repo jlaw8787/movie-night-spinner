@@ -164,3 +164,11 @@ Gaps:
 ## Fixed straight after the review
 
 - Aisle signs off their boards on the desktop store photo (fix 2): caused by the 3 Nov tap-target change setting the signs to position relative. Reverted for the signs, tap area still 44px. Fixed 3 Nov.
+
+## Open items closed out (3 Nov, evening)
+
+- Browser checks: all passing. Two were out of date with the shopping list format; the third found a real bug (closing the rental slip stepped browser history back an extra entry and could leave the app), fixed.
+- Prices across sequels: about 8 real cases of the same dish in two films of a series. Most rise with the years, which suits period prices. Crocodile Dundee II prices its pies and damper below the first film. Josh's original example (MIB fries) went with the house-line change. Each layout prices in its own code, so a cross-film price table would touch all 30; left as a known small gap.
+- Fallback photo treatment: only 4 films have one still or none (Kenny, Eagle vs Shark, Paranormal Activity, Phar Lap). All four checked by eye and read well with the poster and remaining still. No change.
+- Mixed item sizes: dish name sizes measured on 3 films per layout (90 menus). Apart from galley (fixed), the differences are deliberate: feature boards (bistro special, saloon birthday dessert), front-cover teaser lists (diner), side cards (hotel room service), or venue names read as dishes. No change.
+
