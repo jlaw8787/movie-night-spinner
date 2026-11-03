@@ -15,7 +15,18 @@ Read this first in a new chat. Last updated 3 Nov 2026.
 
 ## The to-do
 
-Work down docs/review-2.md (second independent review, 7.2 out of 10, target 9.5). Do one item at a time, commit and push after each, then a third review at the end.
+All 15 items in docs/review-2.md are done (3 Nov evening, notes against each item). Next: work down docs/review-3.md (third independent review) the same way, one item at a time, commit and push after each.
+
+Left open from review 2: matching prices across sequels (low impact), the fallback photo treatment for films with no good still, and 3 checks in scripts/check-browser.cjs that already failed on the handed-over code (shopping ticks, locked shopping, rental dialog).
+
+## Things added on 3 Nov (so they are not undone by accident)
+
+- data/film-house.json: two house lines per shared-layout film (table item, drink) with a film note; `fit` lists which ones fit without hiding the film's own notes. Generic Fries, Bottomless coffee, Bread and butter, Tea or coffee are gone on purpose.
+- app.js fitLines (shrinks one-line text to fit, never under 65%), foldClear (tiki rows off creases), nbRange (number ranges never split), libVary (per-venue wording of stock notices, never longer than the original line).
+- Josh's rule: Easter eggs and the film's own dish notes come first. Only house lines drop when a layout runs out of room, never a dish.
+- Phone printed menus: one page per screen with swipe and dots; the full size view opens at fit to width with pinch zoom.
+- Fold menus (takeaway, tiki and the hand-built fold PDFs): no text on a crease, checked on all 42.
+- Desktop: shorter marquee framed on the letter board; weekly strips, checklist and stubs in the right column.
 
 ## Rules Josh has set
 
