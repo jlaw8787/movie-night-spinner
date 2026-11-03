@@ -67,7 +67,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   loadFonts(ID+"-"+eg,E.fonts.concat(["Caveat:wght@600"]));
   const fam=isFamily(f),fl=ctx.flavour||null,menu=ctx.menu||{};
   const txt=s=>fam?dry(s):clean(s);
-  if(!ctx.poster&&typeof TMDB_POSTERS!=="undefined")ctx.poster=TMDB_POSTERS[f.id]||null;
+  if(!ctx.poster&&(typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER))ctx.poster=TMDB_POSTERS[f.id]||null;
   const pd=hex(ctx.palette&&ctx.palette.dark)||[30,20,20],pa0=hex(ctx.palette&&ctx.palette.accent);
   const pa=pa0&&Math.max(...pa0)-Math.min(...pa0)>=35?pa0:[200,40,30];
   /* stock and inks per print process */

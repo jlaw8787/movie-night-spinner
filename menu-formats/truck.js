@@ -81,7 +81,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const bsoft=mix(e.btx,e.bbg,.3);
   const grain=(ctx.root!=null?ctx.root:_ROOT_truck)+"assets/era/_shared/paper-grain.webp";
   const stills=(ctx.stills||[]).filter(Boolean);
-  const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id||`${f.title} (${f.year})`])||null;
+  const poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&TMDB_POSTERS[f.id||`${f.title} (${f.year})`])||null;
   const pf=e.photo+" "+t.photo;
   const DF=e.disp,BF=e.body,SF=e.sig,PF=e.price;
   const UP=s=>e.caps?`text-transform:uppercase;letter-spacing:.06em;`:"";

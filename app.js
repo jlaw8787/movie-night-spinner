@@ -1044,6 +1044,8 @@ function libLoad(k){
     s.onload=()=>ok(!!window.MENU_FORMATS[k]);s.onerror=()=>{delete _libLoads[k];ok(false)};document.head.appendChild(s);
   }));
 }
+/* venue menus carry the venue, not the film's poster: the poster stays in the page around the menu */
+let LIB_POSTER_ON=false;window.LIB_NO_POSTER=!LIB_POSTER_ON;
 async function show(f,preferSig){
   const id=++renderId;
   /* the film dressed behind the curtain on a first visit isn't anyone's pick yet */
@@ -1080,7 +1082,7 @@ async function show(f,preferSig){
   }
   if(f._lib&&await libLoad(f._lib.fmt)&&id===renderId){
     try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
-      const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f:dietKey()?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietText(f,f.P),D:dietText(f,f.D)}):f,menu:libMenu(menu),poster:lobbyPoster(f),stills:L.stills||[],logo:L.logo,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
+      const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f:dietKey()?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietText(f,f.P),D:dietText(f,f.D)}):f,menu:libMenu(menu),poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
       const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
       styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);dietStamp();
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}

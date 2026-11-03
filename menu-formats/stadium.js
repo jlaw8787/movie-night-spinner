@@ -173,7 +173,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const bandText=darkPaper?ink:mix(paper,"#ffffff",.6);
   const grain=(ctx.root!=null?ctx.root:_ROOT_stadium)+"assets/era/_shared/paper-grain.webp";
   const stills=(ctx.stills||[]).filter(Boolean);
-  const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id||`${f.title} (${f.year})`])||null;
+  const poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&TMDB_POSTERS[f.id||`${f.title} (${f.year})`])||null;
   const pf=e.photo+" "+t.photo;
   const DF=e.disp,BF=e.body,SF=e.sig;
   const kick=(s,c,size)=>`<div style="font:700 ${size||16}px/1.2 ${BF};letter-spacing:.2em;text-transform:uppercase;color:${c||acc};${clamp(1)}">${esc(s)}</div>`;

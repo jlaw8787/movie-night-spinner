@@ -198,7 +198,7 @@ root.MENU_FORMATS.newspaper=ctx=>{
   const list=[];courses.forEach((c,ci)=>c.items.forEach((it,ii)=>list.push({ci,ii})));
   const img=ctx.img||((p,s)=>p?"https://image.tmdb.org/t/p/"+(s||"w1280")+p:"");
   const st=(ctx.stills||[]).filter(Boolean);
-  const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&f.id&&TMDB_POSTERS[f.id])||null;
+  const poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&f.id&&TMDB_POSTERS[f.id])||null;
   /* front hero is the film's poster, whole (2:3). Stills are secondary: the right-hand photo beside it and page 2. */
   const posterSrc=poster?img(poster,"w780"):null;
   const pic1=posterSrc||(st[0]?img(st[0],"w1280"):null);

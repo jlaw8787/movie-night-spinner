@@ -199,7 +199,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const winks=(fl.winks||[]).map(C).filter(Boolean);
   const prop=fl.prop&&fl.prop.title?{title:C(fl.prop.title),lines:(fl.prop.lines||[]).map(C).filter(Boolean).slice(0,2)}:{title:"Dance Ticket",lines:["Doors open at seven","Supper served at nine"]};
   const num=String(fl.number||"").replace(/\D/g,"")||year;
-  const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id])||null;
+  const poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&TMDB_POSTERS[f.id])||null;
   const img=ctx.img||((p,s)=>p?`https://image.tmdb.org/t/p/${s||"w1280"}${p}`:"");
   const stills=(ctx.stills||[]).slice();
   const PM=!!poster; /* poster mode: the whole poster is the hero; the first still is only the fallback */
@@ -222,7 +222,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const fp=E.proc==="glossy"?`text-shadow:0 0 14px ${rgba(ACC,.55)}`:E.proc==="letterpress"?`text-shadow:0 0 .7px ${rgba(ink,.6)}`:"";
 
   /* ===== FRONT ===== */
-  const PMq=!!(ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id]));
+  const PMq=!!(ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&TMDB_POSTERS[f.id]));
   const BH=PMq?112:172,SY=BH,SH=PMq?580:440;
   /* gym banner: shape follows the era */
   const kick=`${E.kick}, CLASS OF ${year}`;

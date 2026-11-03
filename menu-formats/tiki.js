@@ -71,7 +71,7 @@ function heroes(ctx){
   const im=ctx.img||((p,s)=>p?`https://image.tmdb.org/t/p/${s||"w1280"}${p}`:"");
   const st=(ctx.stills||[]).filter(Boolean).map(p=>im(p,"w1280"));
   /* tmdb-posters.js declares a top level const, so window.TMDB_POSTERS is empty: read the binding directly */
-  let pp=ctx.poster;if(!pp){try{pp=typeof TMDB_POSTERS!=="undefined"&&ctx.f&&TMDB_POSTERS[ctx.f.id||`${ctx.f.title} (${ctx.f.year})`]}catch(e){}}
+  let pp=ctx.poster;if(!pp){try{pp=(typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&ctx.f&&TMDB_POSTERS[ctx.f.id||`${ctx.f.title} (${ctx.f.year})`]}catch(e){}}
   const post=pp?im(pp,"w780"):"";
   return{list:st,poster:post,hero:post||st[0],heroIsPoster:!!post,second:st[1]||st[0]||post,isPoster:!st.length};
 }

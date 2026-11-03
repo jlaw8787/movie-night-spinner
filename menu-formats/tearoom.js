@@ -104,7 +104,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const xmas=f.theme==="xmas";
   const venue=clean(fl&&fl.venue)||"The Tea Room",sign=clean(fl&&fl.sign)||"Fourth floor, take the lift";
   const num=String((fl&&fl.number)||yr2(f.year)||"07").replace(/[^0-9A-Za-z]/g,"").slice(0,6)||"07";
-  const stills=(ctx.stills||[]).slice(),poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&f.id)?TMDB_POSTERS[f.id]:null)||null;
+  const stills=(ctx.stills||[]).slice(),poster=ctx.poster||(((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&f.id)?TMDB_POSTERS[f.id]:null)||null;
   const posterSrc=poster?ctx.img(poster,"w780"):"";
   const s1=posterSrc||(stills[0]?ctx.img(stills[0],"w1280"):"");
   const s2=stills[1]?ctx.img(stills[1],"w1280"):(stills[0]?ctx.img(stills[0],"w1280"):posterSrc);

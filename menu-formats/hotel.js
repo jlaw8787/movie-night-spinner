@@ -103,7 +103,7 @@ const fam=f=>"family="+f.replace(/ /g,"+");
 /* the film poster is the hero; stills only feed the secondary photo. No poster: first still in the hero slot. */
 function photos(ctx){
   /* the harness map is a top-level const, not on window: read the global binding when ctx.poster is empty */
-  let pp=ctx.poster;try{if(!pp&&typeof TMDB_POSTERS!=="undefined")pp=TMDB_POSTERS[ctx.f.id||`${ctx.f.title} (${ctx.f.year})`]||null}catch(e){}
+  let pp=ctx.poster;try{if(!pp&&(typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER))pp=TMDB_POSTERS[ctx.f.id||`${ctx.f.title} (${ctx.f.year})`]||null}catch(e){}
   const st=(ctx.stills||[]).filter(Boolean),po=pp?ctx.img(pp,"w780"):"";
   const sec=st[1]||st[0]||"";
   return{hero:po||(st[0]?ctx.img(st[0],"w1280"):""),heroPos:"center 40%",isPoster:!!po,

@@ -89,7 +89,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const toasts=(winks.length?winks.slice(0,3):[clean(f.T||"To tonight's picture"),"To the cooks below stairs","To absent friends"]).map(sent);
   const prop=fl&&fl.prop&&fl.prop.title?{title:clean(fl.prop.title),lines:(fl.prop.lines||[]).map(clean).slice(0,2)}:{title:"Guest of Honour",lines:["Seat at the long table","Kept by the house"]};
   const stills=(ctx.stills||[]).filter(Boolean);
-  if(!ctx.poster&&typeof TMDB_POSTERS!=="undefined")ctx.poster=TMDB_POSTERS[f.id]||null;
+  if(!ctx.poster&&(typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER))ctx.poster=TMDB_POSTERS[f.id]||null;
   const posterSrc=ctx.poster?IMG+"w780"+ctx.poster:"";
   const heroIsPoster=!!posterSrc;
   const hero=posterSrc||(stills[0]?IMG+"w1280"+stills[0]:"");

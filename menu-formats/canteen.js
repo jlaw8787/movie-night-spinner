@@ -87,7 +87,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   loadFonts();
   const W=1056,H=816,f=ctx.f||{},menu=ctx.menu||{},era=ERA_G[ctx.era]!=null?ctx.era:"modern",gi=ERA_G[era],g=G[gi],t=TONE[ctx.tone]||TONE.warm;
   const fam=FAMILY.has(f.theme),fl=ctx.flavour||{},yr=f.year||"";
-  const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id])||null;
+  const poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&TMDB_POSTERS[f.id])||null;
   const stills=(ctx.stills||[]).filter(Boolean);
   const heroSrc=poster?ctx.img(poster,"w780"):stills[0]?ctx.img(stills[0],"w1280"):"";
   const heroPoster=!!poster;

@@ -86,7 +86,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const grain=(ctx.root!=null?ctx.root:_ROOT_diningcar)+"assets/era/_shared/paper-grain.webp";
   const stills=(ctx.stills||[]).filter(Boolean);
   /* harness note: TMDB_POSTERS is a top-level const, so window.TMDB_POSTERS is undefined and ctx.poster arrives null */
-  const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id||`${f.title} (${f.year})`])||null;
+  const poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&TMDB_POSTERS[f.id||`${f.title} (${f.year})`])||null;
   /* the poster is the hero; stills only feed the secondary photos. No poster: first still in the poster slot. */
   const heroSrc=poster?ctx.img(poster,"w780"):stills[0]?ctx.img(stills[0],"w1280"):"";
   const heroIsPoster=!!poster;

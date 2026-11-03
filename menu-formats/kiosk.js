@@ -203,7 +203,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const winks=(fl.winks||[]).map(C).filter(Boolean);
   const prop=fl.prop&&fl.prop.title?{title:C(fl.prop.title),lines:(fl.prop.lines||[]).map(C).filter(Boolean).slice(0,2)}:{title:"Board Hire",lines:["One hour, wax included","Back by sunset"]};
   const num=String(fl.number||"").replace(/\D/g,"")||year;
-  const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id])||null;
+  const poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&TMDB_POSTERS[f.id])||null;
   const img=ctx.img||((p,s)=>p?`https://image.tmdb.org/t/p/${s||"w1280"}${p}`:"");
   const stills=ctx.stills||[];
   const PM=!!poster; /* poster mode: the whole poster is the hero, the first still is only the fallback */

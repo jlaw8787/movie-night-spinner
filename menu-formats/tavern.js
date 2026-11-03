@@ -95,7 +95,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const darkPanel=(ctx.palette&&hex(ctx.palette.dark)&&lum(hex(ctx.palette.dark))<.04)?ctx.palette.dark:"#1d140c";
   const venue=clean(fl&&fl.venue)||"The Wayfarer's Rest",sign=clean(fl&&fl.sign)||"Beds, board and a warm hearth";
   const num=String((fl&&fl.number)||yr2(f.year)||"07").replace(/[^0-9A-Za-z]/g,"").slice(0,6)||"07";
-  const stills=(ctx.stills||[]).slice(),poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&f.id)?TMDB_POSTERS[f.id]:null)||null;
+  const stills=(ctx.stills||[]).slice(),poster=ctx.poster||(((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&f.id)?TMDB_POSTERS[f.id]:null)||null;
   const posterSrc=poster?ctx.img(poster,"w780"):"";
   const heroSrc=posterSrc||(stills[0]?ctx.img(stills[0],"w1280"):"");
   const sealSrc=stills[1]?ctx.img(stills[1],"w780"):(stills[0]?ctx.img(stills[0],"w780"):"");

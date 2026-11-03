@@ -85,7 +85,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const W=528,H=1056,P=26,f=ctx.f||{},menu=ctx.menu||{},era=ERA_G[ctx.era]!=null?ctx.era:"modern",g=G[ERA_G[era]],t=TONE[ctx.tone]||TONE.warm;
   const fam=FAMILY.has(f.theme),fl=ctx.flavour||{},yr=f.year||"";
   const PW=372,PH=558;
-  const poster=ctx.poster||(typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id])||null;
+  const poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&TMDB_POSTERS[f.id])||null;
   const stills=(ctx.stills||[]).filter(Boolean);
   const heroSrc=poster?ctx.img(poster,"w780"):stills[0]?ctx.img(stills[0],"w1280"):"";
   const heroPoster=!!poster;
