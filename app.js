@@ -2927,7 +2927,9 @@ function openWalkin(){
   const done=(walk)=>{
     try{sessionStorage.setItem("mns-walkin","1")}catch(e){}
     document.removeEventListener("keydown",key);
-    const close=()=>{w.hidden=true;w.classList.remove("going");document.body.style.overflow="";document.dispatchEvent(new Event("walkin-done"));const b=document.getElementById("viewShopBtn");try{(b||prev).focus({preventScroll:true})}catch(e){}};
+    const close=()=>{w.hidden=true;w.classList.remove("going");document.body.style.overflow="";document.dispatchEvent(new Event("walkin-done"));
+      /* you are through the door now: land at the counter, past the shopfront photo you just walked through */
+      {const fr=$("svFront");if(fr&&!$("viewShop").hidden)window.scrollTo({top:fr.getBoundingClientRect().bottom+scrollY-8,behavior:"auto"})}const b=document.getElementById("viewShopBtn");try{(b||prev).focus({preventScroll:true})}catch(e){}};
     if(walk){try{sfx.chime()}catch(e){}if(reduce){close();return}w.classList.add("going");setTimeout(close,900)}else close();
   };
   const key=e=>{if(e.key==="Escape"){e.preventDefault();done(false)}else if(e.key==="Tab"){const f=[document.getElementById("wiIn"),document.getElementById("wiSkip")];const i=f.indexOf(document.activeElement);e.preventDefault();f[(i+(e.shiftKey?f.length-1:1))%f.length].focus()}};
