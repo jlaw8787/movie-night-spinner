@@ -4,7 +4,7 @@
    Film files: carry a ?v fingerprint of their content. They live in their own store that app updates never wipe,
    so saved menus survive updates; a changed film is fetched fresh, and offline the last saved copy is used.
    Photos, fonts and libraries: saved on first use. */
-const VERSION = 'mns-d54bc903';
+const VERSION = 'mns-991ac53d';
 const FILMS_CACHE = 'mns-films';
 const FILM_RX = /data\/film\/[^/]+\.json$/;
 const SHELL = ['./', 'index.html', 'manifest.webmanifest', 'assets/app/icon-192.png', 'assets/app/icon-512.png'];

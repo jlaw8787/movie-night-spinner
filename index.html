@@ -545,12 +545,6 @@ body.spinning .theatre.closed .skip-k,.theatre.closed .tease.leader~.skip-k{opac
   @page port{size:A4 portrait;margin:0}
   @page land{size:A4 landscape;margin:0}
 }
-.zoomview{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;padding:0;border:0;background:#0d0608;color:#fff}
-.zoomview .zv-bar{position:sticky;top:0;z-index:2;display:flex;justify-content:center;gap:10px;padding:max(10px,env(safe-area-inset-top,0px)) 64px 10px;background:rgba(13,6,8,.92)}
-.zoomview .zv-bar button{min-width:52px;height:44px;border-radius:999px;border:1px solid rgba(226,176,79,.6);background:transparent;color:#f5e6c8;font:700 17px var(--f-body);cursor:pointer}
-.zoomview .zv-scroll{position:absolute;inset:64px 0 0;overflow:auto;-webkit-overflow-scrolling:touch;padding:12px 0 30px}
-.zoomview .zv-in{width:max-content;margin:0 auto}
-.zoomview .zv-in .mcard{display:block}
 .btn.busy{cursor:progress;opacity:1!important}
 .btn.busy::before{content:"";display:inline-block;width:14px;height:14px;margin-right:8px;vertical-align:-2px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spinb .8s linear infinite}
 @keyframes spinb{to{transform:rotate(360deg)}}
@@ -2472,9 +2466,28 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 .mz-bar{display:flex;justify-content:center;gap:8px;padding:12px 64px 10px}
 .mz-bar button{min-width:48px;min-height:44px;border-radius:999px;border:2px solid #e7c069;background:transparent;color:#f4e6c8;font:400 18px var(--f-board);cursor:pointer;padding:0 16px}
 .mz-bar .mz-fit{font-size:14px;letter-spacing:.06em}
-.mz-scroll{overflow:auto;-webkit-overflow-scrolling:touch;padding:8px 8px 24px;display:grid;justify-content:safe center;align-content:start;overscroll-behavior:contain}
+.mz-scroll{overflow:auto;-webkit-overflow-scrolling:touch;padding:8px 8px 24px;display:grid;justify-content:safe center;align-content:safe center;overscroll-behavior:contain}
 .mz-sheet{position:relative;box-shadow:0 30px 70px rgba(0,0,0,.7)}
 .mz-sheet>.mcard{position:absolute;left:0;top:0}
+.mz-paged .mz-sheet{overflow:hidden}
+.mzoom.mz-paged{grid-template-rows:auto 1fr auto}
+.mz-scroll{touch-action:pan-x pan-y}
+.mz-pages{display:flex;align-items:center;justify-content:center;gap:14px;padding:8px 16px calc(10px + env(safe-area-inset-bottom,0px));background:#120608;border-top:1px solid rgba(231,192,105,.25)}
+.mz-pages button{width:48px;height:44px;border-radius:999px;border:2px solid #e7c069;background:transparent;color:#f4e6c8;cursor:pointer;padding:0;display:grid;place-items:center}
+.mz-turn{position:absolute;left:0;right:0;bottom:calc(76px + env(safe-area-inset-bottom,0px));margin:0;text-align:center;font:600 12.5px var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:#e7c069;opacity:.85;pointer-events:none}
+.mzoom:not(.mz-paged) .mz-turn{bottom:calc(16px + env(safe-area-inset-bottom,0px))}
+.mz-pages button:disabled{opacity:.3;cursor:default}
+.mz-pg{min-width:7.5em;text-align:center;font:700 13px var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:#f4e6c8}
+/* phones: one page of the printed menu per screen */
+.preview.pv-swipe{touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.preview.pv-swipe.pv-turn .mcard{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
+.pv-dots{display:flex;justify-content:center;gap:2px;margin:6px auto -6px}
+.pv-dots[hidden]{display:none}
+.pv-dots button{width:44px;height:44px;padding:0;border:0;background:transparent;cursor:pointer;display:grid;place-items:center}
+.pv-dots i{width:10px;height:10px;border-radius:50%;border:2px solid #e7c069;box-sizing:border-box;transition:background-color .2s,transform .2s}
+.pv-dots button[aria-current=true] i{background:#e7c069;transform:scale(1.2)}
+.pv-dots button:focus-visible{outline:3px solid #e7c069;outline-offset:-6px;border-radius:999px}
+@media (prefers-reduced-motion:reduce){.preview.pv-swipe.pv-turn .mcard,.pv-dots i{transition:none}}
 
 /* ---------- controls kit: one switch, one tick box, one select per brand ---------- */
 /* switches: settings rows (cinema) and the shop's two filters (Galaxy) */
@@ -2705,7 +2718,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=4fa7e40e" defer></script>
 <script src="formats-core.js?v=25ffa69f" defer></script>
-<script src="app.js?v=bdf440b0" defer></script>
+<script src="app.js?v=05bcc5bb" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

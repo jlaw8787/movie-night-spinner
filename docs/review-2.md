@@ -15,21 +15,10 @@ Overall: 7.2 out of 10 (first review was about 6.3). A fresh agent with no prior
 
 ## Fix list, ranked by impact
 
-1. Phone printed menu unreadable, full size viewer opens cropped. Below 600px show one panel per screen as a swipe carousel with dots. Open the viewer at fit to width, allow pinch zoom, swipe between panels.
+1. Done (3 Nov). Below 600px a menu with more than one page shows one page per screen: swipe, tap a dot or use the arrow keys to turn. Tapping opens the full size view at fit to width, one page at a time, with pinch zoom, swipe and Previous/Next buttons, and it refits when the phone turns. Landscape pages get a "turn your phone sideways" hint. Also fixed: a tap on a phone opened two viewers stacked on top of each other (old phone-only zoom removed).
 2. Text menu under the printed menu doubles up and looks unfinished. Dotted leaders with no price, category names change by film, "How to make it" looks like body text, poster still shown. Make it a clean recipe index (no leaders, fixed four category names, clear button with chevron, no poster) or fold it into the Prep tab.
 3. Recipe method hard to cook from. Justified paragraphs with big gaps, times buried inline, "cook 1 hr" on a drink that is chilling, "1l" reads as 11. Left align, one numbered step per line with the time as a tag, ingredients as a list, chill or rest wording, write "1 L".
 4. Done, reversed. The reviewer flagged poster art on menus, but Josh wants posters, so they are back on for every menu (3 Nov). Keep the "Poster and stills: TMDB" credit.
-5. Core flow (spin, menu, shopping, cooking): 6.5
-6. Galaxy Video store: 8.5
-7. Polish and craft: 6.5
-8. Accessibility basics: 7
-
-## Fix list, ranked by impact
-
-1. Phone printed menu unreadable, full size viewer opens cropped. Below 600px show one panel per screen as a swipe carousel with dots. Open the viewer at fit to width, allow pinch zoom, swipe between panels.
-2. Text menu under the printed menu doubles up and looks unfinished. Dotted leaders with no price, category names change by film, "How to make it" looks like body text, poster still shown. Make it a clean recipe index (no leaders, fixed four category names, clear button with chevron, no poster) or fold it into the Prep tab.
-3. Recipe method hard to cook from. Justified paragraphs with big gaps, times buried inline, "cook 1 hr" on a drink that is chilling, "1l" reads as 11. Left align, one numbered step per line with the time as a tag, ingredients as a list, chill or rest wording, write "1 L".
-4. Some menus use actual poster art and credit "Poster and stills: TMDB" (Crocodile Dundee, Men in Black II, Crocodile Dundee II, The Last Dragon, Blue Beetle). Script check every film's menu art, swap to stills, credit "Stills: TMDB".
 5. Uneven menu quality. Wall Street left panel muddy and empty, right panel dead space. Repeated filler ("Fries, hot and salted, by the basket", "Bottomless coffee") across films, takeaway lucky numbers near identical. Minimum fill per format (no panel over about 15% empty), ban stock filler lines across the set, better fallback image treatment.
 6. Text overflow on bold display formats ("BLUE BEETL" clipped, "NO. 83 MOVIE NIGHT FOR TWO" squashed). Fit text on headline slots plus an automated overflow check across all 900 films.
 7. Period prices inconsistent. Arthur 1981 bread and butter 11.50 above caviar blini 10. Wall Street mixes whole and decimal. MIB fries 5.95 vs MIB II 7.40. Price table per format and year (inflation index times dish tier), sides below mains, one number format per menu.

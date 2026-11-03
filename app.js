@@ -716,7 +716,38 @@ document.documentElement.style.setProperty("--grain",`url("${GRAIN}")`);
 const preview=$("preview");
 const card=document.createElement("div");card.className="mcard";preview.appendChild(card);
 const prep=document.createElement("div");prep.className="mcard";prep.hidden=true;preview.appendChild(prep);
-function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;const land=card.classList.contains("fmt"),cw=+card.dataset.w||(land?1123:794),ch=+card.dataset.h||(land?794:1123),kc=pw/cw,kp=pw/794;card.style.transform=`scale(${kc})`;prep.style.transform="none";preview.style.height=tab==="prep"?"auto":ch*kc+"px"}
+/* phones: a menu with more than one page shows one page per screen, swipe or tap a dot to turn */
+const swipeW=()=>matchMedia("(max-width:600px)").matches;
+let pvFace=0,pvDrag=0;
+function cardFaces(){
+  if(!card.classList.contains("fx-paper"))return [];
+  const fs=[...card.querySelectorAll(".fx-face")];if(fs.length<2)return [];
+  const w=parseFloat(fs[0].style.width),h=parseFloat(fs[0].style.height),row=h>w,g=typeof FMT_GAP!=="undefined"?FMT_GAP:28;
+  return fs.map((el,i)=>({el,w,h,x:row?i*(w+g):0,y:row?0:i*(h+g),row}));
+}
+const pvDots=document.createElement("div");pvDots.className="pv-dots";pvDots.hidden=true;$("easel").after(pvDots);
+pvDots.addEventListener("click",e=>{const b=e.target.closest("button[data-i]");if(b)pvGo(+b.dataset.i)});
+function paintDots(n){
+  if(n<2){pvDots.hidden=true;pvDots.innerHTML="";return}
+  if(pvDots.children.length!==n)pvDots.innerHTML=Array.from({length:n},(_,i)=>`<button type="button" data-i="${i}" aria-label="Page ${i+1} of ${n}"><i></i></button>`).join("");
+  [...pvDots.children].forEach((b,i)=>b.setAttribute("aria-current",i===pvFace?"true":"false"));pvDots.hidden=false;
+}
+/* animate only a page turn, never the first layout of a new menu */
+let pvT=0;function pvTurn(){preview.classList.add("pv-turn");clearTimeout(pvT);pvT=setTimeout(()=>preview.classList.remove("pv-turn"),340)}
+function pvGo(i){
+  const fs=cardFaces();if(!fs.length)return;i=Math.max(0,Math.min(fs.length-1,i));
+  if(i===pvFace||fs[0].row||reduce){pvTurn();pvFace=i;scalePreview();return}
+  /* pages stacked top to bottom on the sheet: fade across instead of sliding */
+  card.style.transition="opacity .15s";card.style.opacity="0";
+  setTimeout(()=>{pvFace=i;card.style.transition="none";scalePreview();requestAnimationFrame(()=>{card.style.transition="opacity .15s";card.style.opacity="";setTimeout(()=>{card.style.transition=""},200)})},150);
+}
+function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;
+  const fs=tab==="menu"&&swipeW()?cardFaces():[];paintDots(fs.length);
+  if(fs.length){pvFace=Math.min(pvFace,fs.length-1);const f=fs[pvFace],k=pw/f.w;preview.classList.add("pv-swipe");
+    card.style.transform=`translate(${-f.x*k+pvDrag}px,${-f.y*k}px) scale(${k})`;prep.style.transform="none";preview.style.height=f.h*k+"px";
+    preview.setAttribute("aria-label",`Printed menu, page ${pvFace+1} of ${fs.length}. Open it full size`);return}
+  if(preview.classList.contains("pv-swipe")){preview.classList.remove("pv-swipe");preview.setAttribute("aria-label","Open the printed menu full size")}
+  const land=card.classList.contains("fmt"),cw=+card.dataset.w||(land?1123:794),ch=+card.dataset.h||(land?794:1123),kc=pw/cw,kp=pw/794;card.style.transform=`scale(${kc})`;prep.style.transform="none";preview.style.height=tab==="prep"?"auto":ch*kc+"px"}
 let tab="menu";
 function setTab(t){tab=t;{const pb=$("planner");if(pb)pb.hidden=!(pb.dataset.has&&t==="prep")}if(t==="menu")phoneOn=true;card.hidden=t!=="menu";prep.hidden=t!=="prep";$("tabMenu").classList.toggle("on",t==="menu");$("tabPrep").classList.toggle("on",t==="prep");$("tabMenu").setAttribute("aria-selected",t==="menu");$("tabPrep").setAttribute("aria-selected",t==="prep");if(window.__spinbarUpd)setTimeout(window.__spinbarUpd,0);if(t==="prep"&&current){if(!prep.querySelector(".pp-cols")&&current.menu){try{styleCard(prep,current);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(current,current.menu)}catch(e){}}fitPrep(prep)}scalePreview();applyPhone()}
 $("tabMenu").addEventListener("click",()=>setTab("menu"));
@@ -730,7 +761,7 @@ function applyPhone(){
   const has=!!fmtPhone.innerHTML,on=has&&narrow()&&tab==="menu";
   fmtPhone.hidden=!on;$("easel").hidden=false;$("fmtBack").hidden=true;
   scalePreview();if(on)fitPhoneTitle();
-  const zh=$("zoomHint");if(zh){const ok=tab==="menu"&&!!card.innerHTML.trim();zh.hidden=!ok;preview.style.cursor=ok?"":"auto";zh.textContent=(matchMedia("(pointer:coarse)").matches?"Tap":"Click")+" the menu to read it full size"}
+  const zh=$("zoomHint");if(zh){const ok=tab==="menu"&&!!card.innerHTML.trim();zh.hidden=!ok;preview.style.cursor=ok?"":"auto";const tap=matchMedia("(pointer:coarse)").matches?"tap":"click";zh.textContent=ok&&cardFaces().length&&swipeW()?`Swipe to turn, ${tap} to zoom`:`${tap[0].toUpperCase()+tap.slice(1)} the menu to read it full size`}
 }
 function phoneView(f,spec,menu){
   if(!f){fmtPhone.innerHTML="";applyPhone();return}
@@ -739,27 +770,65 @@ function phoneView(f,spec,menu){
   applyPhone();
 }
 $("fmtBack").addEventListener("click",()=>{phoneOn=true;applyPhone()});
-/* full size printed menu: the card itself moves into a pop-up you can zoom and pan, then goes back */
+/* full size printed menu: the card itself moves into a pop-up you can zoom and pan, then goes back.
+   Phones open one page at a time at fit to width: pinch to zoom, swipe or use the arrows to turn the page. */
 function openMenuZoom(trigger){
   if(tab!=="menu"||!card.innerHTML.trim())return;
   const land=card.classList.contains("fmt"),cw=+card.dataset.w||(land?1123:794),ch=+card.dataset.h||(land?794:1123);
-  const o=document.createElement("dialog");o.className="mzoom";o.setAttribute("aria-label","Printed menu, full size");
-  o.innerHTML=`<div class="mz-bar"><button type="button" class="mz-out" aria-label="Zoom out">−</button><button type="button" class="mz-fit">Fit</button><button type="button" class="mz-in" aria-label="Zoom in">+</button></div><div class="mz-scroll"><div class="mz-sheet"></div></div>`;
+  const phone=narrow(),faces=phone?cardFaces():[],paged=faces.length>1;let fi=paged?Math.min(pvFace,faces.length-1):0;
+  const fw=()=>paged?faces[fi].w:cw,fh=()=>paged?faces[fi].h:ch;
+  const o=document.createElement("dialog");o.className="mzoom"+(paged?" mz-paged":"");o.setAttribute("aria-label","Printed menu, full size");
+  o.innerHTML=`<div class="mz-bar"><button type="button" class="mz-out" aria-label="Zoom out">−</button><button type="button" class="mz-fit">Fit</button><button type="button" class="mz-in" aria-label="Zoom in">+</button></div><div class="mz-scroll"><div class="mz-sheet"></div></div>`+
+    (paged?`<div class="mz-pages"><button type="button" class="mz-prev" aria-label="Previous page"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span class="mz-pg" aria-live="polite"></span><button type="button" class="mz-next" aria-label="Next page"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>`:"")+
+    (phone&&fw()>fh()*1.15?`<p class="mz-turn">Turn your phone sideways for a bigger view</p>`:"");
   const sc=o.querySelector(".mz-scroll"),sheet=o.querySelector(".mz-sheet");
-  const home=card.nextSibling,keepT=card.style.transform;sheet.appendChild(card);card.style.transformOrigin="0 0";
-  const fit=()=>Math.min(1.4,(innerWidth-(narrow()?16:80))/cw,narrow()?9:(innerHeight-120)/ch);
-  let k=narrow()?Math.max(.62,fit()):fit();
-  const set=v=>{const cx=(sc.scrollLeft+sc.clientWidth/2)/k,cy=(sc.scrollTop+sc.clientHeight/2)/k;k=Math.max(.25,Math.min(2,v));card.style.transform=`scale(${k})`;sheet.style.width=cw*k+"px";sheet.style.height=ch*k+"px";sc.scrollLeft=cx*k-sc.clientWidth/2;sc.scrollTop=cy*k-sc.clientHeight/2};
+  const home=card.nextSibling,keepT=card.style.transform;sheet.appendChild(card);card.style.transformOrigin="0 0";card.style.transition="none";card.style.opacity="";
+  const fit=()=>phone?Math.min(2,((sc.clientWidth||innerWidth)-16)/fw()):Math.min(1.4,(innerWidth-80)/cw,(innerHeight-120)/ch);
+  let k=1;
+  const paint=()=>{const f=paged?faces[fi]:{x:0,y:0};card.style.transform=`translate(${-f.x*k}px,${-f.y*k}px) scale(${k})`;sheet.style.width=fw()*k+"px";sheet.style.height=fh()*k+"px"};
+  /* zoom around a point on screen (the middle by default, or between two fingers) */
+  const set=(v,px=sc.clientWidth/2,py=sc.clientHeight/2)=>{const cx=(sc.scrollLeft+px)/k,cy=(sc.scrollTop+py)/k;k=Math.max(Math.min(.25,fit()),Math.min(2.5,v));paint();sc.scrollLeft=cx*k-px;sc.scrollTop=cy*k-py};
+  const toFit=()=>{k=fit();paint();sc.scrollLeft=0;sc.scrollTop=0};
+  const go=i=>{if(!paged||i<0||i>=faces.length||i===fi)return;fi=i;pvFace=i;paint();sc.scrollLeft=0;sc.scrollTop=0;
+    o.querySelector(".mz-pg").textContent=`Page ${fi+1} of ${faces.length}`;o.querySelector(".mz-prev").disabled=fi===0;o.querySelector(".mz-next").disabled=fi===faces.length-1};
   o.querySelector(".mz-in").addEventListener("click",()=>set(k*1.25));
   o.querySelector(".mz-out").addEventListener("click",()=>set(k/1.25));
-  o.querySelector(".mz-fit").addEventListener("click",()=>{set(fit());sc.scrollLeft=0;sc.scrollTop=0});
+  o.querySelector(".mz-fit").addEventListener("click",toFit);
+  if(paged){o.querySelector(".mz-prev").addEventListener("click",()=>go(fi-1));o.querySelector(".mz-next").addEventListener("click",()=>go(fi+1))}
+  o.addEventListener("keydown",e=>{if(e.altKey||e.ctrlKey||e.metaKey)return;
+    if(paged&&(e.key==="ArrowRight"||e.key==="ArrowLeft")&&sc.scrollWidth<=sc.clientWidth+2){e.preventDefault();go(fi+(e.key==="ArrowRight"?1:-1))}
+    else if(e.key==="+"||e.key==="="){e.preventDefault();set(k*1.25)}else if(e.key==="-"){e.preventDefault();set(k/1.25)}});
+  /* pinch to zoom, and a sideways swipe turns the page when the page fits the screen */
+  {let pz=null,sw=null;const mid=(a,b)=>{const r=sc.getBoundingClientRect();return [(a.clientX+b.clientX)/2-r.left,(a.clientY+b.clientY)/2-r.top]},gap=(a,b)=>Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY);
+    sc.addEventListener("touchstart",e=>{if(e.touches.length===2){pz={d:gap(e.touches[0],e.touches[1])||1,k0:k};sw=null}else if(e.touches.length===1&&!pz){const t=e.touches[0];sw={x:t.clientX,y:t.clientY,fits:sc.scrollWidth<=sc.clientWidth+2}}},{passive:true});
+    sc.addEventListener("touchmove",e=>{if(!pz||e.touches.length!==2)return;e.preventDefault();const [a,b]=e.touches;set(pz.k0*gap(a,b)/pz.d,...mid(a,b))},{passive:false});
+    sc.addEventListener("touchend",e=>{if(pz){if(e.touches.length<2)pz=null;sw=null;return}
+      if(sw&&sw.fits&&paged&&e.changedTouches.length){const t=e.changedTouches[0],dx=t.clientX-sw.x,dy=t.clientY-sw.y;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5)go(fi+(dx<0?1:-1))}sw=null});
+    /* trackpad pinch on a laptop */
+    sc.addEventListener("wheel",e=>{if(!e.ctrlKey)return;e.preventDefault();const r=sc.getBoundingClientRect();set(k*Math.exp(-e.deltaY/200),e.clientX-r.left,e.clientY-r.top)},{passive:false})}
   o.addEventListener("click",e=>{if(e.target===o||e.target===sc)dismissModal(o)});
-  mountModal(o,".mz-fit",trigger||preview,()=>{card.style.transform=keepT;card.style.transformOrigin="";preview.insertBefore(card,home&&home.parentNode===preview?home:preview.firstChild);scalePreview()});
-  set(k);sc.scrollLeft=0;sc.scrollTop=0;
+  mountModal(o,".mz-fit",trigger||preview,()=>{card.style.transform=keepT;card.style.transformOrigin="";card.style.transition="";preview.insertBefore(card,home&&home.parentNode===preview?home:preview.firstChild);scalePreview()});
+  toFit();if(paged){const f0=fi;fi=-1;go(f0)}
+  /* turning the phone: stay at fit if it was at fit */
+  const onRz=()=>{if(!o.isConnected){removeEventListener("resize",onRz);return}const t=o.querySelector(".mz-turn");if(t)t.hidden=innerWidth>innerHeight;if(Math.abs(k-fitWas)<.01){toFit();fitWas=k}};let fitWas=k;
+  addEventListener("resize",onRz);o.querySelector(".mz-fit").addEventListener("click",()=>{fitWas=k});
 }
 preview.setAttribute("role","button");preview.tabIndex=0;preview.setAttribute("aria-label","Open the printed menu full size");
 preview.addEventListener("click",e=>{if(tab==="menu"&&!e.target.closest("a,button,input,select,textarea"))openMenuZoom(preview)});
-preview.addEventListener("keydown",e=>{if(tab==="menu"&&(e.key==="Enter"||e.key===" ")&&e.target===preview){e.preventDefault();openMenuZoom(preview)}});
+preview.addEventListener("keydown",e=>{if(tab!=="menu"||e.target!==preview)return;
+  if(e.key==="Enter"||e.key===" "){e.preventDefault();openMenuZoom(preview)}
+  else if(preview.classList.contains("pv-swipe")&&(e.key==="ArrowRight"||e.key==="ArrowLeft")){e.preventDefault();pvGo(pvFace+(e.key==="ArrowRight"?1:-1))}});
+/* swipe the page on a phone: the page follows your finger, a short flick turns it */
+{let s=null,moved=false;
+  preview.addEventListener("pointerdown",e=>{moved=false;if(!preview.classList.contains("pv-swipe")||e.button)return;s={x:e.clientX,y:e.clientY,id:e.pointerId,on:false}});
+  preview.addEventListener("pointermove",e=>{if(!s||e.pointerId!==s.id)return;const dx=e.clientX-s.x,dy=e.clientY-s.y;
+    if(!s.on){if(Math.abs(dx)>10&&Math.abs(dx)>Math.abs(dy)*1.2){s.on=moved=true;card.style.transition="none";try{preview.setPointerCapture(e.pointerId)}catch(_){}}else{if(Math.abs(dy)>10)s=null;return}}
+    const n=cardFaces().length;pvDrag=(pvFace===0&&dx>0)||(pvFace===n-1&&dx<0)?dx*.3:dx;scalePreview()});
+  const end=e=>{if(!s||e.pointerId!==s.id)return;const on=s.on,dx=pvDrag;s=null;pvDrag=0;card.style.transition="";if(!on)return;
+    const step=dx<-50?1:dx>50?-1:0,fs=cardFaces();if(step&&fs.length&&!fs[0].row){scalePreview();pvGo(pvFace+step)}else{pvTurn();pvFace=Math.max(0,Math.min(fs.length-1,pvFace+step));scalePreview()}};
+  preview.addEventListener("pointerup",end);preview.addEventListener("pointercancel",end);
+  /* a swipe is not a tap: don't open the full size view after one */
+  preview.addEventListener("click",e=>{if(moved){moved=false;e.stopImmediatePropagation();e.preventDefault()}},true)}
 /* library menus: the same big-type phone menu, coloured and set from the printed card it sits under */
 function libPhonePal(root){
   const rgb=c=>{const m=/rgba?\(([^)]+)\)/.exec(c||"");if(!m)return null;const v=m[1].split(",").map(Number);return v.length>3&&v[3]<.9?null:v.slice(0,3)};
@@ -1089,7 +1158,7 @@ function fullMenu(f,menu,fmt){
 /* venue menus carry the venue, not the film's poster: the poster stays in the page around the menu */
 let LIB_POSTER_ON=true;window.LIB_NO_POSTER=!LIB_POSTER_ON;
 async function show(f,preferSig){
-  const id=++renderId;
+  const id=++renderId;pvFace=0;
   /* the film dressed behind the curtain on a first visit isn't anyone's pick yet */
   {const st=!!window.__stage;window.__stage=false;document.body.classList.toggle("staged",st);if(!st&&typeof renderSnacks==="function")setTimeout(()=>{try{renderSnacks()}catch(e){}},0)}
   current=f;
@@ -2231,23 +2300,6 @@ function fillPrint(){
 $("print").addEventListener("click",()=>{fillPrint();window.print()});
 window.addEventListener("beforeprint",()=>{if(!$("printArea").children.length)fillPrint()});
 window.addEventListener("afterprint",()=>{$("printArea").innerHTML=""});
-/* phones: the printed menu is small on screen, so a tap opens it big, with zoom */
-function openZoom(){
-  if(!current||!narrow())return;const modalTrigger=document.activeElement;
-  const o=document.createElement("dialog");o.className="zoomview";o.setAttribute("aria-label",`${current.title} menu, enlarged`);
-  const faces=card.classList.contains("fx-paper")?[...card.querySelectorAll(".fx-face")]:[card];
-  o.innerHTML=`<div class="zv-bar"><button type="button" data-z="-" aria-label="Smaller">-</button><button type="button" data-z="fit">Fit</button><button type="button" data-z="+" aria-label="Bigger">+</button></div><div class="zv-scroll"><div class="zv-in"></div></div>`;
-  const inn=o.querySelector(".zv-in");let wMax=0;
-  faces.forEach(fc=>{const w=parseFloat(fc.style.width)||+card.dataset.w||794,h=parseFloat(fc.style.height)||+card.dataset.h||1123;wMax=Math.max(wMax,w);const c=card.cloneNode(false);c.className=card.className;c.hidden=false;c.innerHTML=fc===card?card.innerHTML:fc.innerHTML;c.style.cssText+=`;transform:none;width:${w}px;height:${h}px;position:relative;margin:0 auto 14px`;inn.appendChild(c)});
-  const sc=o.querySelector(".zv-scroll");let z=1;const fit=()=>Math.min(1,(sc.clientWidth||innerWidth)/wMax);
-  const set=v=>{z=Math.max(fit(),Math.min(2.5,v));inn.style.zoom=z};
-  o.addEventListener("click",e=>{const b=e.target.closest("[data-z]");if(!b)return;set(b.dataset.z==="fit"?fit():b.dataset.z==="+"?z*1.4:z/1.4)});
-  mountModal(o,"[data-z='+']",modalTrigger);
-  /* open big, at the first dish, since the dishes are what people want to read */
-  requestAnimationFrame(()=>{set(Math.min(2.5,fit()*2));try{const names=[...current.menu.s,...current.menu.m,...current.menu.w,...current.menu.d].map(x=>String(x.label||x.n||"").toLowerCase().slice(0,26)).filter(Boolean);
-    const w=document.createTreeWalker(inn,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode()){const t=n.nodeValue.trim().toLowerCase();if(t.length>6&&names.some(x=>x.length>5&&t.startsWith(x))){const r=n.parentElement.getBoundingClientRect(),sr=sc.getBoundingClientRect();sc.scrollTop+=r.top-sr.top-90;sc.scrollLeft+=Math.max(0,r.left-sr.left-16);break}}}catch(e){}});
-}
-card.addEventListener("click",e=>{if(e.target.closest("a,button,input,label"))return;openZoom()});
 $("copy").addEventListener("click",()=>{
   const txt=menuText();
   const done=()=>{$("status").textContent="Menu copied as text."};
