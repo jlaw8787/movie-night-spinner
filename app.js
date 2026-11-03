@@ -1028,12 +1028,16 @@ function planPlural(item,q){if(!(q>1))return item;let [head,...rest]=String(item
 function planOne(item){const w=String(item).split(" ");const i=w.slice(0,3).findIndex(x=>PL_CONT.test(x)&&/s$/i.test(x));if(i>=0)w[i]=planSing(w[i]);return w.join(" ")}
 /* one shopping line per ingredient: the same item from two dishes is added up, and a mix of units shows as "100g + 2 tbsp" */
 const planSing=w=>/ies$/.test(w)?w.slice(0,-3)+"y":/(ch|sh|x|ss|o)es$/.test(w)?w.slice(0,-2):/[^s]s$/.test(w)?w.slice(0,-1):w;
-const planKey=item=>String(item).toLowerCase().split(/,| \(/)[0].replace(/\s+/g," ").trim().replace(/^(cold|chilled|fresh|warm|hot|room temperature|softened|melted|extra)\s+/,"").split(" ").map(planSing).join(" ");
+const planKey=item=>String(item).toLowerCase().split(/,| \(/)[0].replace(/\s+/g," ").trim().replace(/^((cold|chilled|fresh|warm|hot|room temperature|softened|melted|extra|full cream|whole|unsalted|salted|free-range|large|medium)\s+)+/,"").replace(/\s+(slices|sliced|pieces)$/,"").split(" ").map(planSing).join(" ");
 function planShopping(f){const k=PLAN.guests/((f._r2&&f._r2.serves)||4),ds=planDishes(f),base=ds.filter(d=>!d.extra);
-  /* the card's extra dishes have no tested amounts: anything a measured recipe already buys merges in, the rest gets its own group so the main list stays exact */
-  const have=new Set(base.flatMap(d=>(d.ingredients||[]).map(i=>planKey(i.item)))),taste=[],seen=new Set();
-  for(const d of ds.filter(d=>d.extra))for(const i of d.ingredients||[]){const key=planKey(i.item);if(have.has(key)||seen.has(key))continue;seen.add(key);taste.push(i.item+"@"+TASTE)}
-  return shopLines(base.map(d=>({d,k}))).concat(taste)}
+  /* the card's extra dishes list shop lines like "100g butter" with no tested scaling: the amount is split out so anything a measured recipe
+     already buys merges into that one line; the rest gets its own group so the main list stays exact */
+  const have=new Set(base.flatMap(d=>(d.ingredients||[]).map(i=>planKey(i.item)))),add=[],taste=[],seen=new Set();
+  for(const d of ds.filter(d=>d.extra))for(const i of d.ingredients||[]){
+    const m=String(i.item).match(/^(\d+(?:\.\d+)?)\s*(kg|g|ml|l|L)?\s+(.+)$/),q=m?+m[1]:null,u=m&&m[2]?m[2].toLowerCase():"",item=m?m[3]:i.item,key=planKey(item);
+    if(have.has(key)){if(q!=null)add.push({q,u,item,aisle:i.aisle});continue}
+    if(seen.has(key))continue;seen.add(key);taste.push(i.item+"@"+TASTE)}
+  return shopLines(base.map(d=>({d,k})).concat(add.length?[{d:{ingredients:add},k}]:[])).concat(taste)}
 const WHOLE_RE=/^(bags?|packets?|tins?|cans?|bottles?|jars?|tubs?|loa(f|ves)|punnets?|box(es)?|cartons?|blocks?|rolls?|sheets?|tubes?|sachets?)\b/i;
 function shopLines(list){
   const tally={},order=[];
