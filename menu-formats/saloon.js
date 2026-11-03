@@ -216,6 +216,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const lpDark=`position:relative;display:block;width:100%;max-width:182px;padding:10px 12px;box-sizing:border-box;background-color:${C.dark};background-image:${noise(".02 .5",3,[255,235,200],.16,seed,500)},${noise(".9",2,[255,255,255],.07,seed+1)};box-shadow:0 6px 14px rgba(0,0,0,.4)`;
   const lpLight=lpDark.replace(`background-color:${C.dark}`,`background-color:${toHex(mix(hex(P.bg),WHITE,.5))}`);
   const face=`<div data-fmt="${ID}" style="position:absolute;inset:0;overflow:hidden;${stock(P,tone,seed)};color:${P.ink};font-family:${ty.body}">
+    ${wearLayer(P,tone,seed)}
     ${border(tone,C,P)}
     <div style="position:absolute;left:44px;right:44px;top:40px;bottom:38px;display:flex;flex-direction:column">
     <div data-box style="flex:none;max-height:170px;overflow:hidden;text-align:center">
@@ -264,7 +265,6 @@ window.MENU_FORMATS[ID]=ctx=>{
       <span data-fs="15" data-min="14">${fam?"No liquor served. ":""}Poster and stills: TMDB. Bill no. ${esc(F.number)}.</span>${F.winks.slice(0,4).map(w=>` <span data-drop data-fs="15" data-min="14">Talk of the town: ${T(w)}.</span>`).join("")}
     </div>
     </div>
-    ${wearLayer(P,tone,seed)}
   </div>`;
   return{w:W,h:H,faces:[face]};
 };
