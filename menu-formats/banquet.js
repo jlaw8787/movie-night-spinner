@@ -179,14 +179,15 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* per cover on the era's price scale; the film's number, when it has one, only sets the cents (a nod, never a year as a price) */
   const FEE={"1930s-40s":3,"1950s":5,"1960s":8,"1970s":14,"1980s":28,"1990s":45,"2000s":65,"modern":85}[ctx.era]||85;
   const fee=FEE+"."+(num?num.slice(-2).padStart(2,"0"):"50");
+  /* the footer gets two lines of room above the photo, so the credit never sits under it */
   const back=`${stock()}${border()}
    <div style="position:absolute;left:60px;right:60px;top:50px">${kick("The courses in procession")}</div>
    <div style="position:absolute;left:60px;right:60px;top:78px;font:${E.dw} 50px/1.05 ${E.disp};text-transform:${dispCase};letter-spacing:${E.track};color:${INK};text-align:center;${press}">Bill of Fare</div>
-   <div data-fit data-min="${heavy?14:17}" style="position:absolute;left:64px;right:64px;top:${heavy?136:150}px;height:${heavy?486:470}px;overflow:hidden;font-size:${heavy?20:28}px;text-align:center;display:flex;flex-direction:column">
+   <div data-fit data-min="${heavy?14:17}" style="position:absolute;left:64px;right:64px;top:${heavy?136:150}px;height:${heavy?470:454}px;overflow:hidden;font-size:${heavy?20:28}px;text-align:center;display:flex;flex-direction:column">
      <div style="margin:auto 0">${courses}</div></div>
-   <div style="position:absolute;left:64px;right:64px;top:626px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid ${GOLD};padding-top:8px">
+   <div style="position:absolute;left:64px;right:64px;top:610px;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid ${GOLD};padding-top:8px">
      <span style="font:600 20px/1.2 ${E.body};color:${INK}">The whole feast, per cover</span><span style="font:700 26px/1 ${E.body};color:${ACC}">${esc(fee)}</span></div>
-   <div data-fit data-min="14" style="position:absolute;left:64px;width:440px;top:668px;height:28px;overflow:hidden;font-size:16px;color:${SOFT}">
+   <div data-fit data-min="14" style="position:absolute;left:64px;width:440px;top:650px;height:44px;overflow:hidden;font-size:16px;color:${SOFT}">
      <div style="font:${E.bodyW} 1em/1.3 ${E.body}">${winks[3]?`At table: ${esc(winks[3].replace(/\.$/,""))}. `:""}Form BF ${esc(num||yy)}. Poster and stills: TMDB.</div></div>
    <div style="position:absolute;left:43px;top:698px;width:730px;height:296px;padding:5px;box-sizing:border-box;background:${frame};box-shadow:0 8px 20px rgba(0,0,0,.28)">
      <div style="position:relative;width:100%;height:100%;overflow:hidden;background:#222">${secIsPoster?stage(second):photo(second,secPos)}</div></div>
