@@ -17,7 +17,7 @@ Read this first in a new chat. Last updated 3 Nov 2026.
 
 All 15 items in docs/review-2.md are done (3 Nov evening, notes against each item). Next: work down docs/review-3.md (third independent review) the same way, one item at a time, commit and push after each.
 
-Left open from review 2: matching prices across sequels (low impact), the fallback photo treatment for films with no good still, and 3 checks in scripts/check-browser.cjs that already failed on the handed-over code (shopping ticks, locked shopping, rental dialog).
+Left open from review 2: matching prices across sequels (low impact), the fallback photo treatment for films with no good still, and (fixed 3 Nov) the 3 browser checks: two were out of date with the shopping list format, the third found a real bug where closing the rental slip stepped browser history back one extra entry and could leave the app. All tests and browser checks now pass.
 
 ## Things added on 3 Nov (so they are not undone by accident)
 

@@ -276,7 +276,8 @@ const modalStack=[];
 const modalState=new WeakMap();
 function finishModal(o){
   const state=modalState.get(o);if(!state)return;
-  try{if(o._hist&&!o._popped){o._hist=false;window.__ignorePop=(window.__ignorePop||0)+1;history.back()}}catch(e){}
+  /* step history back a moment later, so a pop-up that replaces this one straight away (hire case to rental slip) can take over its entry instead of racing it */
+  try{if(o._hist&&!o._popped){o._hist=false;clearTimeout(window.__histHandoff);window.__histHandoff=setTimeout(()=>{window.__histHandoff=0;window.__ignorePop=(window.__ignorePop||0)+1;history.back()},0)}}catch(e){}
   const wasTop=modalStack[modalStack.length-1]===o;
   modalState.delete(o);const i=modalStack.indexOf(o);if(i!==-1)modalStack.splice(i,1);
   if(!o.hasAttribute("data-keep"))o.remove();if(state.onClose)state.onClose();
@@ -290,7 +291,7 @@ function dismissModal(o){if(o.open)o.close();finishModal(o)}
 function mountModal(o,initial,trigger,onClose){
   modalState.set(o,{trigger,onClose});modalStack.push(o);
   /* the phone's Back button closes a pop-up instead of leaving the app */
-  try{if(typeof history!=="undefined"&&history.pushState&&!o.dataset.keep){history.pushState(Object.assign({},history.state||{},{m:1}),"");o._hist=true}}catch(e){}
+  try{if(typeof history!=="undefined"&&history.pushState&&!o.dataset.keep){if(window.__histHandoff){clearTimeout(window.__histHandoff);window.__histHandoff=0}else history.pushState(Object.assign({},history.state||{},{m:1}),"");o._hist=true}}catch(e){}
   /* Neutralise native dialog sizing; existing overlay classes keep their padding and visual treatment. */
   Object.assign(o.style,{margin:"0",border:"0",maxWidth:"none",maxHeight:"none",width:"100%",height:"100%",boxSizing:"border-box",color:"inherit"});
   if(o._mm){document.body.appendChild(o);if(!o.open)o.showModal();const f=o.querySelector(initial);if(f)f.focus({preventScroll:true});return}
