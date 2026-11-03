@@ -1146,9 +1146,9 @@ function libLoad(k){
     s.onload=()=>ok(!!window.MENU_FORMATS[k]);s.onerror=()=>{delete _libLoads[k];ok(false)};document.head.appendChild(s);
   }));
 }
-/* a venue menu shows the whole board: tonight's five to cook, the film's other dishes, and a couple of house standards.
-   The prep sheet still cooks only the five (planAll reads the recipe list, not this). */
-const HOUSE_FORMAL=new Set(["bistro","hotel","club","banquet","invite","tearoom","diningcar","bartab","tavern"]);
+/* a venue menu shows the whole board: tonight's five to cook, the film's other dishes, and two house lines
+   written for that film's own venue (data/film-house.json). A house line that has meat or alcohol stays off
+   when Vegetarian or No alcohol is on. The prep sheet still cooks only the five (planAll reads the recipe list, not this). */
 const FULL_CAP={galley:1,tearoom:1,candybar:2,canteen:1,club:1,diningcar:1,saloon:1,banquet:2,placemat:2,motel:3};
 function fullMenu(f,menu,fmt){
   if(window.LIB_FULL===false)return menu;
@@ -1156,15 +1156,28 @@ function fullMenu(f,menu,fmt){
   for(const k of ["s","m","w","d"])for(const it of menu[k]||[])seen.add(String(it.n||"").toLowerCase());
   const src={s:f.S,m:f.M,w:f.W,d:f.K},plain=!(DIET.veg||dietAF());
   if(plain&&f._full)for(const k of ["s","m","w","d"])for(const r of src[k]||[]){const it=toItem(r);if(!it.n||seen.has(it.n.toLowerCase()))continue;seen.add(it.n.toLowerCase());adds.push([k,Object.assign(it,{extra:true})])}
-  const formal=HOUSE_FORMAL.has(fmt);
-  const house=formal?{d:["Tea or coffee","Pot of tea or a fresh brew, after dinner"],s:["Bread and butter","Warm bread with salted butter, for the table"]}
-                    :{d:["Bottomless coffee","Filter coffee, refills on the house"],s:["Fries","Hot and salted, by the basket"]};
-  for(const k of ["d","s"])adds.push([k,{n:house[k][0],note:house[k][1],how:"",shop:[],house:true}]);
+  const hz=f._lib&&f._lib.flavour&&f._lib.flavour.house;
+  if(hz)for(const k of ["d","s"]){const h=hz[k];if(!h||!h.n||seen.has(h.n.toLowerCase()))continue;if((DIET.veg&&h.meat)||(dietAF()&&h.alc))continue;
+    adds.push([k,{n:h.n,note:h.note||"",how:"",shop:[],house:true}])}
   const cap=FULL_CAP[fmt]==null?99:FULL_CAP[fmt];
   for(const k of ["s","m","w","d"])out[k]=(menu[k]||[]).slice();
   for(const [k,it] of adds.slice(0,cap))out[k].push(it);
   return Object.assign({},menu,out);
 }
+/* stock venue notices on the shared layouts get worded per venue: each film always gets the same pick, but the same line no longer turns up word for word on dozens of menus */
+const LIB_VARY={
+  "Open 6 a.m. to midnight":["Open 6 a.m. to midnight","Open 5.30 a.m. till late","Open 7 a.m. to 11 p.m.","Open all night, every night","Breakfast from 6 a.m.","Open early, close late"],
+  "Prices subject to change. Pie while it lasts.":["Prices subject to change. Pie while it lasts.","No substitutions. Pie while it lasts.","Cash only. Refills on the coffee.","Ask about today's pie at the counter.","Prices subject to change. Tip your waitress.","Booths for four or more, please."],
+  "Dial 0 for the kitchen. Open all night.":["Dial 0 for the kitchen. Open all night.","Dial 7 for room service. Open till 2.","Ring the front desk for the kitchen.","Room service from 6 a.m. to midnight.","Dial 0 and ask for the kitchen. Any hour."],
+  "Order by 2 am":["Order by 2 am","Order by midnight","Last orders 1 am","Kitchen closes at 3","Order any hour"],
+  "Coffee shop, open early and late":["Coffee shop, open early and late","Coffee shop, open 6 till 10","Coffee shop off the lobby","Coffee shop, open all night","Coffee shop by the front office"],
+  "Open 5 pm till late, seven nights.":["Open 5 pm till late, seven nights.","Open 4 pm to midnight, closed Mondays.","Open 11 am till late, every day.","Open 6 pm till 2 am on weekends.","Open for lunch and dinner, seven days."],
+  "Free delivery over $25.":["Free delivery in the neighbourhood.","We deliver within ten blocks.","Delivery or pick up, your call.","Free delivery after 9 pm.","Ring ahead, we'll have it ready."],
+  "One of every course, packed in one bag, ready by the opening credits.":["One of every course, packed in one bag, ready by the opening credits.","Starter, main, sweet and a drink each, all in one bag.","The lot in one bag, at your door before the trailers end.","A bit of everything, bagged up hot for the couch."],
+  "Luncheon 11.30 till 2.30. Afternoon tea from 3.":["Luncheon 11.30 till 2.30. Afternoon tea from 3.","Luncheon from noon. Afternoon tea 3 till 5.","Morning tea from 10. Luncheon at 12.","Luncheon 12 till 2. High tea from 4.","Open 10 till 5. Afternoon tea from 3."],
+  "Honk if you're hungry.":["Honk if you're hungry.","Follow the line.","Order at the window.","Parked here till we sell out.","Hot through the window."],
+  "When it's gone, it's gone.":["When it's gone, it's gone.","Sold out means sold out.","Made in the truck today.","Till the last plate goes."]};
+function libVary(html,f){let h=String(html);for(const k in LIB_VARY){if(!h.includes(k))continue;let x=2166136261;for(const ch of f.title+f.year+k){x^=ch.charCodeAt(0);x=Math.imul(x,16777619)>>>0}const v=LIB_VARY[k];h=h.split(k).join(v[x%v.length].replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])))}return h}
 /* venue menus carry the venue, not the film's poster: the poster stays in the page around the menu */
 let LIB_POSTER_ON=true;window.LIB_NO_POSTER=!LIB_POSTER_ON;
 async function show(f,preferSig){
@@ -1204,7 +1217,7 @@ async function show(f,preferSig){
   if(f._lib&&await libLoad(f._lib.fmt)&&id===renderId){
     try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
       const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f:dietKey()?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietText(f,f.P),D:dietText(f,f.D)}):f,menu:libMenu(fullMenu(f,menu,L.fmt)),poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
-      const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
+      r.faces=r.faces.map(h=>libVary(h,f));const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
       styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);dietStamp();
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       try{libAim(card,L)}catch(e){}

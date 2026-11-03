@@ -123,7 +123,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* ---------- outside: delivery panel, wraparound photo, cover ---------- */
   const phone="555 0"+(num?num.padStart(3,"0").slice(-3):(yy||"00")+"1");
   const run=(winks.length?winks.slice(0,3):["Every street in town","Hot or it is free","Napkins in every bag"]).map(w=>esc(w.replace(/\.$/,"")));
-  const lucky=[num||"8",yy||"16","23",String((+(num||7)*3)%90+4)].join("  ");
+  /* lucky numbers: the film's own number and year when it has them, the rest drawn from the title so no two films share a set */
+  const lucky=(()=>{let h=2166136261;for(const ch of String(f.title)+f.year){h^=ch.charCodeAt(0);h=Math.imul(h,16777619)>>>0}
+    const out=[];if(num&&+num>0&&+num<100)out.push(+num);if(yy)out.push(+yy);
+    while(out.length<4){h=Math.imul(h^(h>>>13),1274126177)>>>0;const v=1+h%45;if(!out.includes(v))out.push(v)}
+    return out.join("  ")})();
   /* the whole poster, stuck on a printed bag panel in the format's own colours; the cover panel keeps the lower right free for the logo */
   const bagA=toHex(mix(pd,[0,0,0],.5)),bagB=toHex(mix(mix(pa,pd,.5),[0,0,0],.4));
   const posterWrap=`<div style="position:absolute;left:448px;top:0;width:896px;height:816px;overflow:hidden;background:repeating-linear-gradient(45deg,${bagA} 0 26px,${bagB} 26px 52px)"></div>
