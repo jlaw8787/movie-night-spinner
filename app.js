@@ -1119,6 +1119,20 @@ function libAim(card,L){const foc=L&&L.focus;if(!foc)return;
     if(i.dataset.trim==="1")return;
     i.dataset.aim="1";i.style.objectPosition=(px*100).toFixed(1)+"% "+(py*100).toFixed(1)+"%"})}
 /* after a format's own fitter: any clamped or ellipsis text that still hides words shrinks (to 14px at most) until it shows in full */
+/* one-line boxes whose words run past the edge (subtitles, heading tags, stamp names): shrink the type in small steps,
+   never under 65% of its size, so nothing reads "Curry before the clock hits MID". Works on every printed menu. */
+function fitLines(card){
+  const els=[...card.querySelectorAll("*")].filter(e=>{if(!e.firstChild||!e.offsetWidth)return false;const cs=getComputedStyle(e);
+    if(!/^(nowrap|pre)/.test(cs.whiteSpace)&&cs.textOverflow!=="ellipsis")return false;if(cs.overflow==="visible"&&cs.overflowX==="visible")return false;
+    if(cs.webkitLineClamp&&cs.webkitLineClamp!=="none")return false;return e.scrollWidth>e.clientWidth+1&&e.textContent.trim().length>1});
+  for(const e of els){const sized=[e,...e.querySelectorAll("*")].filter(x=>x.textContent.trim());const base=sized.map(x=>parseFloat(getComputedStyle(x).fontSize)||0);
+    for(let k=.97;k>=.65&&e.scrollWidth>e.clientWidth+1;k-=.03)sized.forEach((x,i)=>{if(base[i])x.style.fontSize=(base[i]*k).toFixed(2)+"px"});
+    /* a decorative tag (data-opt) that still will not fit steps aside rather than show half a word */
+    if(e.hasAttribute("data-opt")&&e.scrollWidth>e.clientWidth+1)e.style.visibility="hidden"}
+  /* decorative tags pushed past their row's edge by a layout's own sizing step aside too */
+  card.querySelectorAll("[data-opt]").forEach(e=>{const p=e.parentElement;if(!p||!e.offsetWidth)return;const r=e.getBoundingClientRect(),pr=p.getBoundingClientRect();
+    e.style.visibility=(e.scrollWidth>e.clientWidth+1||r.right>pr.right+1)?"hidden":""})
+}
 function libUnclip(card,done){if(done)card.dataset.unclip="1";card.querySelectorAll(".fx-face *").forEach(e=>{const cs=getComputedStyle(e);if(!((cs.webkitLineClamp&&cs.webkitLineClamp!=="none")||cs.textOverflow==="ellipsis"))return;const hid=()=>e.scrollHeight>e.clientHeight+2||e.scrollWidth>e.clientWidth+2;if(!hid())return;
   let fs=parseFloat(cs.fontSize),lh=parseFloat(cs.lineHeight)||fs*1.2;
   /* tall display faces: the glyphs poke past a tight line box, so open the line a little */
@@ -1210,7 +1224,7 @@ async function show(f,preferSig){
     try{const im=card.querySelector(".fx-poster");if(im)await im.decode()}catch(e){}
     if(id!==renderId)return;
     styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);
-    phoneView(f,spec,menu);scalePreview();
+    phoneView(f,spec,menu);scalePreview();try{fitLines(card)}catch(e){}setTimeout(()=>{if(id===renderId)try{fitLines(card)}catch(e){}},1500);
     const refitP=()=>{if(id!==renderId)return;const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
     refitP();await document.fonts.ready;refitP();
     return;
@@ -1223,7 +1237,7 @@ async function show(f,preferSig){
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       try{libAim(card,L)}catch(e){}
       await Promise.all([...card.querySelectorAll("img")].map(im=>im.decode().catch(()=>{})));if(id!==renderId)return;
-      await new Promise(r=>setTimeout(r,180));try{libPhotoPass(card,L,lobbyPoster(f))}catch(e){console.warn("photo pass",e)}libUnclip(card);setTimeout(()=>{if(id===renderId)libUnclip(card)},1400);setTimeout(()=>{if(id===renderId)libUnclip(card,1)},3200);
+      await new Promise(r=>setTimeout(r,180));try{libPhotoPass(card,L,lobbyPoster(f))}catch(e){console.warn("photo pass",e)}libUnclip(card);fitLines(card);setTimeout(()=>{if(id===renderId){libUnclip(card);fitLines(card)}},1400);setTimeout(()=>{if(id===renderId){libUnclip(card,1);fitLines(card)}},3200);setTimeout(()=>{if(id===renderId)fitLines(card)},5000);
       try{libPhoneView(f,fullMenu(f,menu,L.fmt),L,card)}catch(e){console.warn("phone menu",e);phoneView(null)}styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);scalePreview();
       const refitL=()=>{if(id!==renderId)return;const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
       refitL();await document.fonts.ready;refitL();scalePreview();
