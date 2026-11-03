@@ -169,6 +169,8 @@ const FX=window.__fmtBHA=window.__fmtBHA||{
         box.querySelectorAll("[data-gap]").forEach(g=>{const p=parseFloat(g.style.paddingBottom)||0;if(p>3){g.style.paddingBottom=(p-1)+"px";ch=true}});
         if(!ch)break}
       for(const n of [2,1])if(FX.over(box))box.querySelectorAll("[data-clamp]").forEach(e=>{e.style.display="-webkit-box";e.style.webkitBoxOrient="vertical";e.style.webkitLineClamp=String(n);e.style.overflow="hidden"});
+      /* the film's own dish notes are the Easter eggs: house lines and spare dishes go before any note does */
+      if(FX.over(box)){const xs=[...box.querySelectorAll("[data-x]")];for(let i=xs.length-1;i>=0&&FX.over(box);i--)xs[i].style.display="none"}
       if(FX.over(box))box.querySelectorAll("[data-clamp]").forEach(e=>e.style.display="none");
       if(FX.over(box))box.querySelectorAll("[data-drop]").forEach(e=>e.style.display="none");
       /* last resort for extreme menus: everything down to the 14px floor */
@@ -318,13 +320,13 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="position:absolute;left:0;right:0;top:${secH}px;height:6px;background:${K.acc}"></div>`;
   const labels=fm||t==="playful"?["To start","The plates","Sweet things","To drink"]:era<2?["Hors d'oeuvres","Plats du jour","Desserts","The cellar"]:["To start","The plates","Sweet things","From the bar"];
   const keys=["s","m","d"],labIdx={s:0,m:1,w:2,d:3};
-  const item=(k,it,i)=>`<div data-gap style="padding-bottom:16px">
+  const item=(k,it,i)=>`<div data-gap${it.house||it.extra?" data-x":""} style="padding-bottom:16px">
     <div style="display:flex;align-items:baseline;gap:10px"><span data-fs="18" style="font:700 28px/1.12 ${B};color:${K.ink}">${esc(dry(it.n))}</span><span style="flex:1;min-width:20px;border-bottom:2px dotted ${rgba(K.ink,.4)};transform:translateY(-6px)"></span><span data-fs="18" style="font:700 28px/1 ${B};color:${K.acc}">${price(k,i)}</span></div>
     ${it.note?`<div data-clamp data-fs="14" style="font:italic 400 21px/1.28 ${B};color:${K.soft};margin-top:4px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`;
   const course=k=>{const its=(menu[k]||[]).slice(0,4);if(!its.length)return"";
     return`<div style="display:flex;align-items:center;gap:14px;margin:4px 0 12px"><i style="flex:1;height:1px;background:${K.acc};opacity:.6"></i><span data-fs="22" style="${dispStyle}font-size:38px;line-height:1.05;color:${K.acc};${inkSpread}${L.ital&&!L.caps?"font-style:italic;":""}">${esc(labels[labIdx[k]])}</span><i style="flex:1;height:1px;background:${K.acc};opacity:.6"></i></div>${its.map((it,i)=>item(k,it,i)).join("")}`};
   const tag=ctx.f.T?`<div data-drop data-fs="16" style="font:italic 400 22px/1.25 ${B};color:${K.ink};text-align:center;margin:0 0 14px">${esc(sentence(dry(ctx.f.T)))}</div>`:"";
-  const menuBox=`<div data-fbox style="position:absolute;left:46px;right:46px;top:${secH+92}px;bottom:118px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${tag}${keys.map(course).join("")}</div>`;
+  const menuBox=`<div data-fbox style="position:absolute;left:46px;right:46px;top:${secH+40}px;bottom:112px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${tag}${keys.map(course).join("")}</div>`;
   const wk=F.winks.slice(1,3).map(w=>w.replace(/\.$/,"")).join(". ");
   const fine=`<div data-fbox style="position:absolute;left:46px;right:46px;bottom:34px;height:74px;overflow:hidden;border-top:1px solid ${rgba(K.ink,.35)};padding-top:8px;text-align:center">
     <div data-fs="14" style="font:400 16px/1.35 ${B};color:${K.soft}">Prices subject to change. Service included. ${fm?"Every drink is alcohol free. ":""}${wk?esc(wk)+". ":""}Carte no. ${esc(F.num||ctx.f.year)}. Images: TMDB.</div></div>`;
