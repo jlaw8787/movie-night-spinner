@@ -122,6 +122,7 @@ Gaps:
 ## Fix list, ranked by impact
 
 1. **Prep sheet must include every dish on the printed menu.** Where: Prep sheet and "Choose dishes" for all films (seen on Wall Street 5 of 9, Two Hands 5 of 9, Peter Rabbit 2 5 of 7). What's wrong: printed dishes are missing from the planner, and the counter says "5 of 5". Good: Choose dishes lists every printed dish grouped by course, a sensible default set ticked, counter reads "5 of 9 dishes picked", and every dish can go on the shopping list.
+   Done (3 Nov). Every film dish on the printed menu is now in Choose dishes, grouped by course. The five recipe-tested dishes stay ticked by default; the film's other printed dishes are offered unticked ("From the menu") and, when ticked, go on the shopping list and the prep sheet with the method from the menu (items, no exact quantities). Counter reads e.g. "5 of 7". The two house lines (venue table item and drink) stay out of the cook on purpose: they have no recipe, and the menu marks them as house standards.
 
 2. **Fix the Galaxy Video aisle signs on the interior photo.** Where: desktop Galaxy Video, the store interior image under the member card. What's wrong: only New releases sits on its board; the other five labels float off the boards over the shelves. Good: each label centred on a hanging board in the same signage style as New releases, with any extra boards either labelled or painted out.
 

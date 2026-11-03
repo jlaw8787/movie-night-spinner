@@ -955,8 +955,15 @@ function dietLabel(){const k=dietKey();return k==="veg_af"?"Vegetarian · Alcoho
 /* lazy night: plan only the dishes left on the cut-down menu */
 const planAll=f=>{const all=((f._r2&&f._r2.dishes)||[]).map(dietDish),m=f.menu||(typeof current!=="undefined"&&current===f?current.menu:null);
   let out=all;if(m&&m.lazy){const keep=new Set([...m.s,...m.m,...m.w,...m.d].map(it=>it.orig||it.n)),few=all.filter(d=>keep.has(d.orig||d.n));if(few.length)out=few}
-  return out.concat(snackDishes(f).map(dietDish))};
-const planOn=x=>x.blocked?!!PLAN.on[x.orig]:!PLAN.off[x.orig||x.n];
+  return out.concat(planExtras(f).map(dietDish)).concat(snackDishes(f).map(dietDish))};
+/* the film's other printed dishes: offered in the planner unticked, so every dish on the printed menu can go on the shopping list.
+   Method and shopping come from the menu itself (no quantities), and the tonight's-five recipes stay the default cook. */
+function planExtras(f){if(!f||!f._full)return [];const have=new Set(((f._r2&&f._r2.dishes)||[]).map(d=>String(d.n).toLowerCase())),out=[];
+  [["S","s"],["M","m"],["W","w"],["K","d"]].forEach(([K,c])=>(f[K]||[]).forEach(r=>{const it=toItem(r),key=String(it.n||"").toLowerCase();if(!it.n||!it.how||have.has(key))return;have.add(key);
+    out.push({n:it.n,course:c,extra:true,prep_min:0,cook_min:0,ingredients:(it.shop||[]).map(x=>{const [item,aisle]=String(x).split("@");return {q:null,u:"",item,aisle:aisle||"Pantry"}}),
+      steps:String(it.how).split(/(?<=[.!?])\s+(?=[A-Z0-9])/).map(t=>t.trim()).filter(Boolean).map(text=>({text}))})}));
+  return out}
+const planOn=x=>x.blocked||x.extra?!!PLAN.on[x.orig||x.n]:!PLAN.off[x.orig||x.n];
 const planDishes=f=>planAll(f).filter(planOn);
 const FRAC=[[0,""],[0.25,"1/4"],[1/3,"1/3"],[0.5,"1/2"],[2/3,"2/3"],[0.75,"3/4"],[1,""]];
 function fracText(q){const w=Math.floor(q),r=q-w;let best=FRAC[0];for(const x of FRAC)if(Math.abs(x[0]-r)<Math.abs(best[0]-r))best=x;const W=best[0]===1?w+1:w;return (W?String(W):"")+(best[1]?(W?" ":"")+best[1]:"")||"1/4"}
@@ -1030,9 +1037,9 @@ function planHTML(f){
   <div class="pl-row pl-diet"><label class="pl-t"><input type="checkbox" data-diet="veg"${DIET.veg?" checked":""}><span>Vegetarian</span></label><label class="pl-t"><input type="checkbox" data-diet="af"${dietAF()?" checked":""}${kidsMode?" disabled":""}><span>No alcohol${kidsMode?" (kids mode)":""}</span></label></div>
   <details class="pl-pick"${planOpen()?" open":""}><summary><span class="pl-sum">${planCount(r)}</span><span class="pl-tw">Choose dishes</span></summary>
   <p class="pl-hint">Tick what you want to make tonight. The prep sheet, shopping list and times follow your picks.${DIET.veg||dietAF()?" Dishes that don't fit are swapped for their own version, or left off so you can choose.":""}</p>
-  ${["s","m","w","d","c"].map(c=>{const ds=all.filter(d=>d.course===c);return ds.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.orig||d.n)}"${planOn(d)?" checked":""}><span>${ESC(d.n)}${d.tag&&!/alcohol-free|vegetarian/i.test(d.n)?`<em class="pl-tag">${TAG[d.tag]}</em>`:""}${d.blocked?`<em class="pl-tag pl-no">${BLK[d.blocked]}</em>`:""}</span><small>${(t=>planMin(t.active)+(t.wait?" + "+planMin(t.wait)+" wait":""))(dishTimes(d))}</small></label>`).join("")}</fieldset>`:""}).join("")}</details>`;
+  ${["s","m","w","d","c"].map(c=>{const ds=all.filter(d=>d.course===c);return ds.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.orig||d.n)}"${planOn(d)?" checked":""}><span>${ESC(d.n)}${d.tag&&!/alcohol-free|vegetarian/i.test(d.n)?`<em class="pl-tag">${TAG[d.tag]}</em>`:""}${d.blocked?`<em class="pl-tag pl-no">${BLK[d.blocked]}</em>`:""}</span><small>${d.extra?"From the menu":(t=>planMin(t.active)+(t.wait?" + "+planMin(t.wait)+" wait":""))(dishTimes(d))}</small></label>`).join("")}</fieldset>`:""}).join("")}</details>`;
 }
-function planCount(r){const on=r.dishes.map(dietDish).filter(planOn).length;return `${on} of ${r.dishes.length} dishes picked`}
+function planCount(r){const f=current,all=r.dishes.map(dietDish).concat(f?planExtras(f).map(dietDish):[]),on=all.filter(planOn).length;return `${on} of ${all.length} dishes picked`}
 function planOpen(){try{return localStorage.getItem("mns-plan-open")==="1"}catch(e){return false}}
 /* 175C reads as 175°C, and a lone litre is written "1 L" so it never reads as eleven */
 const degC=t=>String(t).replace(/(\d{2,3})\s?C\b/g,"$1°C").replace(/(\d(?:\.\d+)?)\s?l\b/g,"$1\u00a0L").replace(/(\d[\d.]*)\s+to\s+(\d[\d.]*)/g,"$1\u00a0to\u00a0$2");
@@ -1051,7 +1058,7 @@ function prepHTML2(f,menu){
   const TT=ds.map(dishTimes),hands=TT.reduce((s,x)=>s+x.prep,0),longest=TT.reduce((m,x)=>Math.max(m,x.active),0),waitMax=TT.reduce((m,x)=>Math.max(m,x.wait),0);
   const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"},K=PLAN.guests/((f._r2&&f._r2.serves)||4);
   const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const T=dishTimes(x),kk=x.snack?PLAN.guests/4:K,hot=(x.steps||[]).some(s=>HEAT_RE.test(s.text));
-    const time=hot&&T.cook?`Prep ${planMin(T.prep)}, cook ${planMin(T.cook)}`:`Takes ${planMin(T.prep+T.cook)}`;
+    const time=x.extra?"From the printed menu, buy to taste":hot&&T.cook?`Prep ${planMin(T.prep)}, cook ${planMin(T.cook)}`:`Takes ${planMin(T.prep+T.cook)}`;
     const ing=dishIngList(x,kk);
     return `<li><b>${ESC(x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">${time}${T.wait?`, then ${planMin(T.wait)} ${waitWords(x)}`:""}</span>${x.make_ahead?`<span class="pp-ahead"><b>Make ahead</b> ${ESC(degC(x.make_ahead))}</span>`:""}${ing.length?`<div class="pp-ing"><b>You need</b><ul>${ing.map(g=>`<li>${ESC(degC(g))}</li>`).join("")}</ul></div>`:""}<ol class="pp-steps">${(x.steps||[]).map(s=>`<li>${ESC(degC(scaleStep(s.text,kk)))}${s.min?` <span class="pp-t">${planMin(s.min)}</span>`:""}</li>`).join("")}</ol></li>`}).join("");
   return `<div class="mc-bg">${d.bg}</div><div class="mc-grain" style="background-image:url('${GRAIN}')"></div>
@@ -1072,7 +1079,7 @@ function planWire(f){
   const wireToggle=()=>{const dt=box.querySelector(".pl-pick");if(dt)dt.addEventListener("toggle",()=>{try{localStorage.setItem("mns-plan-open",dt.open?"1":"0")}catch(e){}})};wireToggle();
   box.onchange=e=>{const dk=e.target.dataset.diet;if(dk){DIET[dk]=e.target.checked;dietSave();try{setSync()}catch(_){}const op=box.querySelector(".pl-pick"),was=op&&op.open;box.innerHTML=planHTML(f);if(was){const o2=box.querySelector(".pl-pick");if(o2)o2.open=true}wireToggle();redo();return}
     const n=e.target.dataset.dish;if(n==null)return;const x=planAll(f).find(d=>(d.orig||d.n)===n);
-    if(x&&x.blocked){if(e.target.checked)PLAN.on[n]=1;else delete PLAN.on[n]}else{if(e.target.checked)delete PLAN.off[n];else PLAN.off[n]=1}redo()};
+    if(x&&(x.blocked||x.extra)){if(e.target.checked)PLAN.on[n]=1;else delete PLAN.on[n]}else{if(e.target.checked)delete PLAN.off[n];else PLAN.off[n]=1}redo()};
 }
 /* long dish notes are cut back at a natural break so no format has to clip them mid-sentence */
 function libTrim(t,max){t=String(t||"").trim();if(t.length<=max)return t;const cut=t.slice(0,max);let i=Math.max(cut.lastIndexOf(", "),cut.lastIndexOf("; "),cut.lastIndexOf(". "));if(i<max*0.45)i=cut.lastIndexOf(" ");return t.slice(0,i).replace(/[,;:\s]+$/,"")+"."}
