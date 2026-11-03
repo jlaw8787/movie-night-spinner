@@ -1167,18 +1167,18 @@ function fullMenu(f,menu,fmt){
 }
 /* stock venue notices on the shared layouts get worded per venue: each film always gets the same pick, but the same line no longer turns up word for word on dozens of menus */
 const LIB_VARY={
-  "Open 6 a.m. to midnight":["Open 6 a.m. to midnight","Open 5.30 a.m. till late","Open 7 a.m. to 11 p.m.","Open all night, every night","Breakfast from 6 a.m.","Open early, close late"],
+  "Open 6 a.m. to midnight":["Open 6 a.m. to midnight","Open 5.30 a.m. till late","Open 7 a.m. to 11 p.m.","Open all night, daily","Breakfast from 6 a.m.","Open early, close late"],
   "Prices subject to change. Pie while it lasts.":["Prices subject to change. Pie while it lasts.","No substitutions. Pie while it lasts.","Cash only. Refills on the coffee.","Ask about today's pie at the counter.","Prices subject to change. Tip your waitress.","Booths for four or more, please."],
   "Dial 0 for the kitchen. Open all night.":["Dial 0 for the kitchen. Open all night.","Dial 7 for room service. Open till 2.","Ring the front desk for the kitchen.","Room service from 6 a.m. to midnight.","Dial 0 and ask for the kitchen. Any hour."],
-  "Order by 2 am":["Order by 2 am","Order by midnight","Last orders 1 am","Kitchen closes at 3","Order any hour"],
+  "Order by 2 am":["Order by 2 am","Order by 1 am","Last order 1 am","Order by 3 am","Order any hour"],
   "Coffee shop, open early and late":["Coffee shop, open early and late","Coffee shop, open 6 till 10","Coffee shop off the lobby","Coffee shop, open all night","Coffee shop by the front office"],
-  "Open 5 pm till late, seven nights.":["Open 5 pm till late, seven nights.","Open 4 pm to midnight, closed Mondays.","Open 11 am till late, every day.","Open 6 pm till 2 am on weekends.","Open for lunch and dinner, seven days."],
-  "Free delivery over $25.":["Free delivery in the neighbourhood.","We deliver within ten blocks.","Delivery or pick up, your call.","Free delivery after 9 pm.","Ring ahead, we'll have it ready."],
+  "Open 5 pm till late, seven nights.":["Open 5 pm till late, seven nights.","Open 4 pm to midnight, not Mondays.","Open 11 am till late, every day.","Open 6 pm till 2 am on weekends.","Lunch and dinner, seven days."],
+  "Free delivery over $25.":["Free delivery over $25.","We deliver 10 blocks.","Delivery or pick up.","Free delivery after 9.","Ring ahead for pick up."],
   "One of every course, packed in one bag, ready by the opening credits.":["One of every course, packed in one bag, ready by the opening credits.","Starter, main, sweet and a drink each, all in one bag.","The lot in one bag, at your door before the trailers end.","A bit of everything, bagged up hot for the couch."],
   "Luncheon 11.30 till 2.30. Afternoon tea from 3.":["Luncheon 11.30 till 2.30. Afternoon tea from 3.","Luncheon from noon. Afternoon tea 3 till 5.","Morning tea from 10. Luncheon at 12.","Luncheon 12 till 2. High tea from 4.","Open 10 till 5. Afternoon tea from 3."],
-  "Honk if you're hungry.":["Honk if you're hungry.","Follow the line.","Order at the window.","Parked here till we sell out.","Hot through the window."],
+  "Honk if you're hungry.":["Honk if you're hungry.","Follow the line.","Order at the window.","Here till we sell out.","Hot through the window."],
   "When it's gone, it's gone.":["When it's gone, it's gone.","Sold out means sold out.","Made in the truck today.","Till the last plate goes."]};
-function libVary(html,f){let h=String(html);for(const k in LIB_VARY){if(!h.includes(k))continue;let x=2166136261;for(const ch of f.title+f.year+k){x^=ch.charCodeAt(0);x=Math.imul(x,16777619)>>>0}const v=LIB_VARY[k];h=h.split(k).join(v[x%v.length].replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])))}return h}
+function libVary(html,f){let h=String(html);for(const k in LIB_VARY){if(!h.includes(k))continue;let x=2166136261;for(const ch of f.title+f.year+k){x^=ch.charCodeAt(0);x=Math.imul(x,16777619)>>>0}/* never longer than the line it replaces, so it always fits the same spot */const v=LIB_VARY[k].filter(x=>x.length<=k.length+2);h=h.split(k).join(v[x%v.length].replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])))}return h}
 /* venue menus carry the venue, not the film's poster: the poster stays in the page around the menu */
 let LIB_POSTER_ON=true;window.LIB_NO_POSTER=!LIB_POSTER_ON;
 async function show(f,preferSig){

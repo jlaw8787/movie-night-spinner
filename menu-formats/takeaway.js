@@ -190,7 +190,7 @@ window.MENU_FORMATS[ID]=ctx=>{
          ${it.note&&!(nIt>12&&i>1)?`<div style="font:italic 500 .76em/1.28 ${E.body};font-size:max(15px,.76em);color:${SOFT};margin-top:.1em;${heavy?clamp(1):""}">${esc(sent(txt(it.note)))}</div>`:""}</div></div>`).join("")}</div>`;
   const setNo=num||(yy?"8"+yy[1]:"88");
   const setDinner=`<div style="border:2px ${eg==="late"?"dashed":"solid"} ${SPOT};padding:.4em .6em;margin-top:.2em;${eg==="new"?"border-radius:10px;":""}">
-     <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:${E.dw} .92em/1.1 ${E.disp};font-size:max(18px,.92em);color:${SPOT};text-transform:uppercase">No. ${esc(setNo)} Movie night for two</span><span style="flex:none;font:700 1em/1 ${E.body};color:${INK};margin-left:.4em">${eraPrice("32.50",f.year,2012)}</span></div>
+     <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;column-gap:10px"><span style="flex:1 1 100%;min-width:0;font:${E.dw} .92em/1.08 ${E.disp};font-size:max(16px,.74em);color:${SPOT};text-transform:uppercase">No. ${esc(setNo)} Movie night for two</span><span style="flex:none;font:700 1em/1 ${E.body};color:${INK};margin-left:auto">${eraPrice("32.50",f.year,2012)}</span></div>
      <div style="font:500 .74em/1.3 ${E.body};font-size:max(15px,.74em);color:${INK};margin-top:.2em">One of every course, packed in one bag, ready by the opening credits.</div></div>`;
   /* panel fill: under each panel's dishes a still takes whatever depth is left (flex), so short menus never leave a bare lower panel; tiles too short to read are dropped after fitting */
   const extra=stills.length>2?stills.slice(2):stills.length?stills.slice(0):[];
