@@ -169,7 +169,7 @@ const FX=window.__fmtBHA=window.__fmtBHA||{
         box.querySelectorAll("[data-gap]").forEach(g=>{const p=parseFloat(g.style.paddingBottom)||0;if(p>3){g.style.paddingBottom=(p-1)+"px";ch=true}});
         if(!ch)break}
       for(const n of [2,1])if(FX.over(box))box.querySelectorAll("[data-clamp]").forEach(e=>{e.style.display="-webkit-box";e.style.webkitBoxOrient="vertical";e.style.webkitLineClamp=String(n);e.style.overflow="hidden"});
-      /* the film's own dish notes are the Easter eggs: house lines and spare dishes go before any note does */
+      /* the film's own dish notes are the Easter eggs: house lines go before any note does */
       if(FX.over(box)){const xs=[...box.querySelectorAll("[data-x]")];for(let i=xs.length-1;i>=0&&FX.over(box);i--)xs[i].style.display="none"}
       if(FX.over(box))box.querySelectorAll("[data-clamp]").forEach(e=>e.style.display="none");
       if(FX.over(box))box.querySelectorAll("[data-drop]").forEach(e=>e.style.display="none");
@@ -320,7 +320,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="position:absolute;left:0;right:0;top:${secH}px;height:6px;background:${K.acc}"></div>`;
   const labels=fm||t==="playful"?["To start","The plates","Sweet things","To drink"]:era<2?["Hors d'oeuvres","Plats du jour","Desserts","The cellar"]:["To start","The plates","Sweet things","From the bar"];
   const keys=["s","m","d"],labIdx={s:0,m:1,w:2,d:3};
-  const item=(k,it,i)=>`<div data-gap${it.house||it.extra?" data-x":""} style="padding-bottom:16px">
+  const item=(k,it,i)=>`<div data-gap${it.house?" data-x":""} style="padding-bottom:16px">
     <div style="display:flex;align-items:baseline;gap:10px"><span data-fs="18" style="font:700 28px/1.12 ${B};color:${K.ink}">${esc(dry(it.n))}</span><span style="flex:1;min-width:20px;border-bottom:2px dotted ${rgba(K.ink,.4)};transform:translateY(-6px)"></span><span data-fs="18" style="font:700 28px/1 ${B};color:${K.acc}">${price(k,i)}</span></div>
     ${it.note?`<div data-clamp data-fs="14" style="font:italic 400 21px/1.28 ${B};color:${K.soft};margin-top:4px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`;
   const course=k=>{const its=(menu[k]||[]).slice(0,4);if(!its.length)return"";
