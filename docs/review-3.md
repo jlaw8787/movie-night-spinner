@@ -146,6 +146,7 @@ Gaps:
    Partly done (3 Nov). Fixed: "4 ribs of eye steaks" (rib eye is now the food, "ribs of celery" still works); proper minus on the Prep guest stepper; the banner reads "Double bill: one for the kids, one for later" so it is right on any day; series note on cinema pages says "on the wheel", not "in the store"; mouse screens say Click, touch screens say Tap; Boomerang venue is now "Lady Eloise Executive Dining Room"; no 1px sideways scroll on phones. Still open: member card name field over the fine print, walk-in and store opening on the same shopfront photo.
 
 10. **Tighten first view on desktop.** Where: box office at 1440x900. What's wrong: Spin sits at the bottom edge with the wheel cut off. Good: trim the marquee height on wide short screens so the whole wheel and Spin button sit above the fold.
+   Decided (3 Nov): left as is, Josh's call. Spin shows on load at 1440x900; the full wheel and the whole marquee board stay full size rather than shrinking the wheel or cutting the board.
 
 ## Genuinely excellent, leave it alone
 
