@@ -971,11 +971,19 @@ const planAll=f=>{const all=((f._r2&&f._r2.dishes)||[]).map(dietDish),m=f.menu||
   return out.concat(planExtras(f).map(dietDish)).concat(snackDishes(f).map(dietDish))};
 /* the film's other printed dishes: offered in the planner unticked, so every dish on the printed menu can go on the shopping list.
    Method and shopping come from the menu itself (no quantities), and the tonight's-five recipes stay the default cook. */
+/* what the printed card actually shows for a film, so the planner lists exactly those dishes, under the card's own names */
+function planCard(f){try{const sp=typeof fmtSpec==="function"&&fmtSpec(f),m=(typeof current!=="undefined"&&current===f&&current.menu)?current.menu:(sp?fmtMenu(f,sp):makeMenu(f));
+  const full=f._lib?fullMenu(f,m,f._lib.fmt):m;return ["s","m","w","d"].flatMap(k=>(full[k]||[]).map(it=>Object.assign({},it,{course:k})))}catch(e){return []}}
 function planExtras(f){if(!f||!f._full)return [];const have=new Set(((f._r2&&f._r2.dishes)||[]).map(d=>String(d.n).toLowerCase())),out=[];
-  [["S","s"],["M","m"],["W","w"],["K","d"]].forEach(([K,c])=>(f[K]||[]).forEach(r=>{const it=toItem(r),key=String(it.n||"").toLowerCase();if(!it.n||!it.how||have.has(key))return;have.add(key);
-    out.push({n:it.n,course:c,extra:true,prep_min:0,cook_min:0,ingredients:(it.shop||[]).map(x=>{const [item,aisle]=String(x).split("@");return {q:null,u:"",item,aisle:aisle||"Pantry"}}),
-      steps:String(it.how).split(/(?<=[.!?])\s+(?=[A-Z0-9])/).map(t=>t.trim()).filter(Boolean).map(text=>({text}))})}));
+  /* only the film's other dishes the card prints (a layout shows as many as fit) */
+  for(const it of planCard(f)){if(!it.extra)continue;const key=String(it.n||"").toLowerCase();if(!it.n||have.has(key))continue;have.add(key);
+    const src=[["S","s"],["M","m"],["W","w"],["K","d"]].map(([K])=>(f[K]||[]).find(r=>String(r[0]).toLowerCase()===key)).find(Boolean);const d=src?toItem(src):it;if(!d.how)continue;
+    out.push({n:it.n,course:it.course,extra:true,prep_min:0,cook_min:0,ingredients:(d.shop||[]).map(x=>{const [item,aisle]=String(x).split("@");return {q:null,u:"",item,aisle:aisle||"Pantry"}}),
+      steps:String(d.how).split(/(?<=[.!?])\s+(?=[A-Z0-9])/).map(t=>t.trim()).filter(Boolean).map(text=>({text}))})}
   return out}
+/* the card's own name for a dish (hand-built menus print "Antipasto, wedding style" for the "Wedding antipasto" recipe) */
+function planLabels(f){const L={};for(const it of planCard(f)){if(it.n&&it.label&&it.label!==it.n)L[it.n]=it.label}return L}
+const planHouse=f=>planCard(f).filter(it=>it.house);
 const planOn=x=>x.blocked||x.extra?!!PLAN.on[x.orig||x.n]:!PLAN.off[x.orig||x.n];
 const planDishes=f=>planAll(f).filter(planOn);
 const FRAC=[[0,""],[0.25,"1/4"],[1/3,"1/3"],[0.5,"1/2"],[2/3,"2/3"],[0.75,"3/4"],[1,""]];
@@ -1051,7 +1059,7 @@ function planHTML(f){
   <div class="pl-row pl-diet"><label class="pl-t"><input type="checkbox" data-diet="veg"${DIET.veg?" checked":""}><span>Vegetarian</span></label><label class="pl-t"><input type="checkbox" data-diet="af"${dietAF()?" checked":""}${kidsMode?" disabled":""}><span>No alcohol${kidsMode?" (kids mode)":""}</span></label></div>
   <details class="pl-pick"${planOpen()?" open":""}><summary><span class="pl-sum">${planCount(r)}</span><span class="pl-tw">Choose dishes</span></summary>
   <p class="pl-hint">Tick what you want to make tonight. The prep sheet, shopping list and times follow your picks.${DIET.veg||dietAF()?" Dishes that don't fit are swapped for their own version, or left off so you can choose.":""}</p>
-  ${["s","m","w","d","c"].map(c=>{const ds=all.filter(d=>d.course===c);return ds.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.orig||d.n)}"${planOn(d)?" checked":""}><span>${ESC(d.n)}${d.tag&&!/alcohol-free|vegetarian/i.test(d.n)?`<em class="pl-tag">${TAG[d.tag]}</em>`:""}${d.blocked?`<em class="pl-tag pl-no">${BLK[d.blocked]}</em>`:""}</span><small>${d.extra?"From the menu":(t=>planMin(t.active)+(t.wait?" + "+planMin(t.wait)+" wait":""))(dishTimes(d))}</small></label>`).join("")}</fieldset>`:""}).join("")}</details>`;
+  ${(()=>{const LB=planLabels(f),HS=planHouse(f);return ["s","m","w","d","c"].map(c=>{const ds=all.filter(d=>d.course===c),hs=HS.filter(h=>h.course===c);return ds.length||hs.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.orig||d.n)}"${planOn(d)?" checked":""}><span>${ESC(LB[d.orig||d.n]&&!d.tag?LB[d.orig||d.n]:d.n)}${d.tag&&!/alcohol-free|vegetarian/i.test(d.n)?`<em class="pl-tag">${TAG[d.tag]}</em>`:""}${d.blocked?`<em class="pl-tag pl-no">${BLK[d.blocked]}</em>`:""}</span><small>${d.extra?"From the menu":(t=>planMin(t.active)+(t.wait?" + "+planMin(t.wait)+" wait":""))(dishTimes(d))}</small></label>`).join("")}${hs.map(h=>`<p class="pl-d pl-house"><span>${ESC(h.n)}<em class="pl-tag">house standard</em></span><small>Served as is</small></p>`).join("")}</fieldset>`:""}).join("")})()}</details>`;
 }
 function planCount(r){const f=current,all=r.dishes.map(dietDish).concat(f?planExtras(f).map(dietDish):[]),on=all.filter(planOn).length;return `${on} of ${all.length} dishes picked`}
 function planOpen(){try{return localStorage.getItem("mns-plan-open")==="1"}catch(e){return false}}
@@ -1070,11 +1078,11 @@ function prepHTML2(f,menu){
   const tk=sharedTicks(f);
   const shop=AISLES.filter(a=>groups[a]).map(a=>`<div class="pp-aisle"><h4>${a}</h4><ul>${groups[a].map(x=>{const k=tickKey(x),on=!!tk[k];return `<li role="checkbox" tabindex="0" aria-checked="${on}" data-k="${ESC(k)}"${on?' class="pp-done"':""}><span class="pp-box"></span>${ESC(x)}</li>`}).join("")}</ul></div>`).join("");
   const TT=ds.map(dishTimes),hands=TT.reduce((s,x)=>s+x.prep,0),longest=TT.reduce((m,x)=>Math.max(m,x.active),0),waitMax=TT.reduce((m,x)=>Math.max(m,x.wait),0);
-  const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"},K=PLAN.guests/((f._r2&&f._r2.serves)||4);
+  const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"},K=PLAN.guests/((f._r2&&f._r2.serves)||4);const LBp=planLabels(f);
   const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const T=dishTimes(x),kk=x.snack?PLAN.guests/4:K,hot=(x.steps||[]).some(s=>HEAT_RE.test(s.text));
     const time=x.extra?"From the printed menu, buy to taste":hot&&T.cook?`Prep ${planMin(T.prep)}, cook ${planMin(T.cook)}`:`Takes ${planMin(T.prep+T.cook)}`;
     const ing=dishIngList(x,kk);
-    return `<li><b>${ESC(x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">${time}${T.wait?`, then ${planMin(T.wait)} ${waitWords(x)}`:""}</span>${x.make_ahead?`<span class="pp-ahead"><b>Make ahead</b> ${ESC(degC(x.make_ahead))}</span>`:""}${ing.length?`<div class="pp-ing"><b>You need</b><ul>${ing.map(g=>`<li>${ESC(degC(g))}</li>`).join("")}</ul></div>`:""}<ol class="pp-steps">${(x.steps||[]).map(s=>`<li>${ESC(degC(scaleStep(s.text,kk)))}${s.min?` <span class="pp-t">${planMin(s.min)}</span>`:""}</li>`).join("")}</ol></li>`}).join("");
+    return `<li><b>${ESC(LBp[x.orig||x.n]&&!x.tag?LBp[x.orig||x.n]:x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">${time}${T.wait?`, then ${planMin(T.wait)} ${waitWords(x)}`:""}</span>${x.make_ahead?`<span class="pp-ahead"><b>Make ahead</b> ${ESC(degC(x.make_ahead))}</span>`:""}${ing.length?`<div class="pp-ing"><b>You need</b><ul>${ing.map(g=>`<li>${ESC(degC(g))}</li>`).join("")}</ul></div>`:""}<ol class="pp-steps">${(x.steps||[]).map(s=>`<li>${ESC(degC(scaleStep(s.text,kk)))}${s.min?` <span class="pp-t">${planMin(s.min)}</span>`:""}</li>`).join("")}</ol></li>`}).join("");
   return `<div class="mc-bg">${d.bg}</div><div class="mc-grain" style="background-image:url('${GRAIN}')"></div>
   <div class="mc-in pp">
     <div class="mc-eye">Prep sheet</div>
@@ -1272,7 +1280,7 @@ async function show(f,preferSig){
   const spec=fmtSpec(f);
   if(spec){
     await fmtFontsReady(spec);if(id!==renderId)return;
-    menu=fmtMenu(f,spec);menu.counter=counterShop(f.id);current.menu=menu;
+    menu=fmtMenu(f,spec);menu.counter=counterShop(f.id);current.menu=menu;try{planWire(f)}catch(e){}
     styleCard(card,f);card.className="mcard fmt fmt-"+spec.fmt;card.style.transform="";card.innerHTML=nbRange(fmtHTML(f,spec,menu));dietStamp();{const sh=fmtSheet(spec);if(sh){const z=fmtSheetSize(sh);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}}fmtStarsPNG(card);fmtTilesPNG(card);await fmtPhotocopy(card);if(id!==renderId)return;
     try{const im=card.querySelector(".fx-poster");if(im)await im.decode()}catch(e){}
     if(id!==renderId)return;

@@ -130,3 +130,4 @@ Good foundations. First Tab shows a clear "Skip to the wheel" link and Enter lan
 
 - Raw "${tapWord(...)}" text under the candy bar craving board (fix 2): a quoting slip from the 3 Nov Tap/Click change. Fixed 3 Nov.
 - Note: "Weeklys" is Josh's chosen spelling and stays.
+- Fix 1, Choose dishes matches the printed card (3 Nov): the chooser is now built from what the card actually prints. Extras appear only when the card shows them (hand-built menus like The Godfather add none; shared layouts add the one or two that fit), dishes use the card's own names ("Antipasto, wedding style"), and house lines are listed as "house standard, served as is" without a tick box. Checked in the browser across all 900 films: 0 mismatches. Two recipes renamed to their card names (Crocodile Dundee barra, The Rock room service). New test: tests/menu-chooser.test.cjs.
