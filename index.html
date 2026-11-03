@@ -1641,13 +1641,15 @@ html{scroll-padding-top:var(--topH,84px)}
   #viewShop .sf-n:not(:empty){display:inline-grid;place-items:center;min-width:20px;height:20px;border-radius:10px;background:#ff3d6e;color:#fff;font-size:12px;padding:0 5px}
   #viewShop .shop-filt[open] .sf-in{display:flex;flex-direction:column;gap:10px;position:absolute;right:0;top:calc(100% + 8px);width:min(300px,calc(100vw - 32px));padding:14px;border-radius:12px;background:#0b1236;border:2px solid #ffd23f;box-shadow:0 14px 30px rgba(0,0,0,.6)}
   #viewShop .shop-filt[open] .sf-in select{width:100%;min-height:44px}
-  #viewShop #shopCal{order:4}
-  #viewShop .sv-jump{order:5}
-  #viewShop .shop-count{order:6}
-  #viewShop #shopAisles{order:7}
+  /* phones: the specials board and your member card come first, under the search bar, then the aisles (each one a sideways shelf) */
+  #viewShop #svBoard{order:4;margin-top:4px}
+  #viewShop #memberCard{order:5;margin:14px auto 6px}
+  #viewShop #shopCal{order:6}
+  #viewShop .sv-jump{order:7}
+  #viewShop .shop-count{order:8}
+  #viewShop .aisle-nav{order:8}
+  #viewShop #shopAisles{order:9}
   #viewShop .sv-aisles{display:none}
-  #viewShop #svBoard{order:8;margin-top:18px}
-  #viewShop #memberCard{order:9}
 }
 /* desktop store: the member card and the specials board share a row, card left, board right, ahead of the aisle photo */
 @media (min-width:960px){
@@ -2536,7 +2538,8 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 .sv-hang::after{content:"";position:absolute;left:50%;top:50%;width:max(100%,64px);height:max(100%,44px);transform:translate(-50%,-50%)}
 #viewShop .shop-tools label{min-height:44px}
 .watch-list label,.watch-option{min-height:44px;display:flex;align-items:center}
-#memberName{min-height:44px}
+/* the card name sits in a printed slot: the tap area grows above and below with padding the margin cancels, so the text stays put and never covers the fine print */
+.member .mc-name{box-sizing:content-box;padding-block:max(0px,calc((44px - 1.2em) / 2));margin-block:min(0px,calc((1.2em - 44px) / 2))}
 /* skip link: first thing a keyboard reaches, hidden until it has focus */
 .skip-link{position:fixed;left:12px;top:-60px;z-index:100;padding:12px 18px;border-radius:10px;background:#e7c069;color:#24110a;font:700 15px var(--f-body);text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,.5);transition:top .15s}
 .skip-link:focus{top:12px;outline:3px solid #fff3d6;outline-offset:2px}
@@ -2834,7 +2837,7 @@ html,body{overflow-x:clip}
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=94bc6236" defer></script>
 <script src="formats-core.js?v=b4efa0b8" defer></script>
-<script src="app.js?v=5d2077dc" defer></script>
+<script src="app.js?v=dc65fb3e" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
