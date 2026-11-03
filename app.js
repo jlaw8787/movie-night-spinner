@@ -1219,7 +1219,7 @@ let LIB_POSTER_ON=true;window.LIB_NO_POSTER=!LIB_POSTER_ON;
 async function show(f,preferSig){
   const id=++renderId;pvFace=0;
   /* the film dressed behind the curtain on a first visit isn't anyone's pick yet */
-  {const st=!!window.__stage;window.__stage=false;document.body.classList.toggle("staged",st);if(!st&&typeof renderSnacks==="function")setTimeout(()=>{try{renderSnacks()}catch(e){}},0)}
+  {const st=!!window.__stage;window.__stage=false;document.body.classList.toggle("staged",st);document.body.classList.toggle("picked",!st);if(!st&&typeof renderSnacks==="function")setTimeout(()=>{try{renderSnacks()}catch(e){}},0)}
   current=f;
   updateWatchButton();try{updateFav()}catch(e){}
   try{seriesNote(f)}catch(e){}
@@ -1290,7 +1290,21 @@ async function show(f,preferSig){
   refit();
   await document.fonts.ready;refit();
 }
-function replay(f){closeCurtains();$("now").textContent=f.title;return new Promise(r=>setTimeout(()=>show(f,true).then(()=>{openCurtains();r()}),reduce?0:900))}
+/* picking a film without a spin (search, store, stubs, the weekly strip): the full curtain only plays when it is
+   still down; once it is up the menu crossfades in under half a second. Spins and the mystery and trivia reveals pass full. */
+function replay(f,full){
+  $("now").textContent=f.title;
+  if(full||theatre.classList.contains("closed")){closeCurtains();return new Promise(r=>setTimeout(()=>show(f,true).then(()=>{openCurtains();r()}),reduce?0:900))}
+  if(reduce)return show(f,true);
+  /* the old menu stays up while the new one loads; it hides only once the new one starts drawing, then fades in */
+  let shown=false;const reveal=()=>{if(shown)return;shown=true;requestAnimationFrame(()=>requestAnimationFrame(()=>easel.classList.remove("swap")))};
+  const mo=new MutationObserver(()=>{mo.disconnect();easel.classList.add("swap");
+    /* fade in once its photos are decoded, and never later than 300ms, so the whole swap stays under half a second */
+    Promise.race([new Promise(z=>setTimeout(z,300)),new Promise(z=>requestAnimationFrame(()=>Promise.all([...card.querySelectorAll("img")].map(i=>i.decode().catch(()=>{}))).then(z)))]).then(reveal)});
+  mo.observe(card,{childList:true});
+  const done=()=>{mo.disconnect();reveal()};
+  return show(f,true).then(done,done);
+}
 
 /* history */
 let hist=[];
@@ -2468,7 +2482,7 @@ async function openMystery(fresh){
     if(a==="shop")return openTrolley(f,undefined,"Mystery night shopping");
     if(a==="new"){dismissModal(o);return openMystery(true)}
     if(a==="drop"){MYST=null;mystSave();mystButton();return dismissModal(o)}
-    if(a==="reveal"){dismissModal(o);MYST=null;mystSave();mystButton();addHistory(f);goView("wheel",true);replay(f).then(()=>toMenu());setTimeout(()=>startShow(f),reduce?0:300)}});
+    if(a==="reveal"){dismissModal(o);MYST=null;mystSave();mystButton();addHistory(f);goView("wheel",true);replay(f,true).then(()=>toMenu());setTimeout(()=>startShow(f),reduce?0:300)}});
   mountModal(o,"[data-a=reveal]",document.activeElement);mystButton();
 }
 /* trivia spin: the wheel hides a film, three questions stand between you and it, two right unlocks the show */
@@ -2499,7 +2513,7 @@ async function openTrivia(){
     const b=e.target.closest("[data-a]");if(!b)return;const a=b.dataset.a;
     if(a==="close")return dismissModal(o);
     if(a==="again"){dismissModal(o);return openTrivia()}
-    if(a==="reveal"){dismissModal(o);addHistory(f);goView("wheel",true);replay(f).then(()=>toMenu());setTimeout(()=>startShow(f),reduce?0:300)}});
+    if(a==="reveal"){dismissModal(o);addHistory(f);goView("wheel",true);replay(f,true).then(()=>toMenu());setTimeout(()=>startShow(f),reduce?0:300)}});
   mountModal(o,".tv-stage",document.activeElement);ask();
 }
 /* table kit: a door sign, place cards and an intermission card, printed in tonight's film's colours and type */
