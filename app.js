@@ -2085,8 +2085,10 @@ $("howBtn").addEventListener("click",showWelcome);
 fillSvcSelects();setLazyUI();
 $("craveChips").addEventListener("click",e=>{const b=e.target.closest("[data-crave]");if(!b)return;craveSel=craveSel===b.dataset.crave?null:b.dataset.crave;if(craveSel){sfx.pop();const pc=$("cbPop");pc.classList.remove("bounce");void pc.offsetWidth;pc.classList.add("bounce")}$("craveSearch").value="";renderCrave()});
 $("craveSearch").addEventListener("input",()=>{if($("craveSearch").value.trim())craveSel=null;renderCrave()});
-$("craveGrid").addEventListener("click",e=>{const t=e.target.closest(".tape");if(t){const f=FILMS.find(x=>x.id===t.dataset.id);if(f)openCase(f)}});
-$("craveSpin").addEventListener("click",()=>{const tapes=[...$("craveGrid").querySelectorAll(".tape")];if(!tapes.length)return;const p=tapes[Math.floor(Math.random()*tapes.length)];buzz([20,40,20]);tapes.forEach(t=>t.classList.remove("picked"));p.classList.add("picked");p.scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"});setTimeout(()=>{p.classList.remove("picked");const f=FILMS.find(x=>x.id===p.dataset.id);if(f)openCase(f)},reduce?0:700)});
+/* the candy bar belongs to the cinema: a film picked here goes straight to its menu at the box office, never to a Galaxy Video hire case */
+function craveOpen(f,spun){addHistory(f);goView("wheel",true);if(tab!=="menu")setTab("menu");replay(f,!!spun).then(()=>toMenu());toMenu()}
+$("craveGrid").addEventListener("click",e=>{const t=e.target.closest(".tape");if(t){e.preventDefault();const f=FILMS.find(x=>x.id===t.dataset.id);if(f)craveOpen(f)}});
+$("craveSpin").addEventListener("click",()=>{const tapes=[...$("craveGrid").querySelectorAll(".tape")];if(!tapes.length)return;const p=tapes[Math.floor(Math.random()*tapes.length)];buzz([20,40,20]);tapes.forEach(t=>t.classList.remove("picked"));p.classList.add("picked");p.scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"});setTimeout(()=>{p.classList.remove("picked");const f=FILMS.find(x=>x.id===p.dataset.id);if(f)craveOpen(f,true)},reduce?0:700)});
 function setView(v){
   const shop=v==="shop",crave=v==="crave";$("viewShop").hidden=!shop;$("viewCrave").hidden=!crave;$("viewWheel").hidden=shop||crave;
   $("viewShopBtn").setAttribute("aria-selected",shop);$("viewCraveBtn").setAttribute("aria-selected",crave);$("viewWheelBtn").setAttribute("aria-selected",!shop&&!crave);
@@ -3001,3 +3003,5 @@ function printTicket(f,api){
 /* candy bar photo credits: real photos from Open Food Facts and Wikimedia Commons, each under its own licence */
 function snackCredits(){const l=(window.SNACKS||[]).filter(x=>x.img&&x.credit);if(!l.length)return "";
   return `<details class="sc-credits"><summary>Snack photo credits</summary><p>Snack photos are real photos, cropped, used under the licences shown.</p><ul>${l.map(x=>`<li>${ESC(x.n)}: <a href="${ESC(x.credit.url)}" target="_blank" rel="noopener">${ESC(x.credit.by)}</a>, ${ESC(x.credit.lic)}</li>`).join("")}</ul></details>`}
+/* the candy bar can be restored at startup before the snack counter code above is ready: draw it now that it is */
+try{if(!$("viewCrave").hidden)renderSnacks()}catch(e){}
