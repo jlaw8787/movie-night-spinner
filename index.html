@@ -440,8 +440,11 @@ h1{margin:0;font-family:var(--f-marquee);font-weight:400;font-size:clamp(30px,7.
 .sub{margin:14px auto 0;max-width:56ch;color:#f1d9c4;font-size:15px}
 
 /* stage */
-.stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.04fr);gap:clamp(24px,4vw,48px);align-items:start}
-@media (max-width:900px){.stage{grid-template-columns:minmax(0,1fr)}}
+.stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.04fr);grid-template-rows:auto 1fr;gap:clamp(24px,4vw,48px);align-items:start}
+/* desktop: the wheel runs down the left, the menu sits right, and the checklist and stubs fill the space under it */
+.stage>.deck{grid-row:1 / span 2}.stage>.side{grid-column:2;grid-row:1}.stage>.extras{grid-column:2;grid-row:2;display:flex;flex-direction:column;gap:16px;min-width:0}
+.extras .watch-panel,.extras .history{width:100%}
+@media (max-width:900px){.stage{grid-template-columns:minmax(0,1fr);grid-template-rows:none}.stage>.deck,.stage>.side,.stage>.extras{grid-column:1;grid-row:auto}.extras{align-items:center}.extras .watch-panel,.extras .history{width:min(100%,540px)}}
 /* phones: a slim marquee so the wheel and Spin button sit in the first screen */
 @media (max-width:640px){
   .wrap{padding-top:10px}
@@ -1146,7 +1149,7 @@ select:hover{border-color:rgba(255,240,222,.2)}
 @media (max-width:640px){.top{padding-left:14px;padding-right:14px}}
 
 /* ---------- Hollywood palace hero: the real artwork, live text in the blank signs ---------- */
-.palace{position:relative;overflow:hidden;margin:0 calc(50% - 50vw);background:#0b0a1c}
+.palace{position:relative;overflow:hidden;margin:0 calc(50% - 50vw);background:#120608}
 .palace-stage{position:relative;width:max(100%,860px);max-width:1774px;aspect-ratio:2/1;left:50%;transform:translateX(-50%);container-type:inline-size}
 .palace-img{position:absolute;inset:0;width:100%;height:100%;display:block}
 .palace::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22%;background:linear-gradient(transparent,var(--ink));pointer-events:none}
@@ -1197,6 +1200,12 @@ body.in-shop .views button[aria-selected="true"]{background:linear-gradient(#ffd
   .palace::after{height:9%}
 }
 @media (min-width:1774px){.palace-stage{margin-top:-96px}}
+@media (min-width:901px){
+  /* desktop: about 395px, framed on the letter board (whole board and the MOVIE NIGHT crest stay in), so the Spin hub makes the first screen at 1440x900 */
+  .palace{aspect-ratio:auto;height:clamp(330px,27.4vw,480px);max-height:none}
+  .palace-stage{margin-top:-7.3%}
+  .palace::after{height:6%}
+}
 /* menu of the week: a compact strip, not a wide empty card */
 @media (min-width:700px){
   .motw{grid-template-columns:48px minmax(0,1fr) auto;gap:2px 16px;padding:10px 16px}
@@ -1624,6 +1633,15 @@ html{scroll-padding-top:var(--topH,84px)}
   #viewShop .sv-aisles{display:none}
   #viewShop #svBoard{order:8;margin-top:18px}
   #viewShop #memberCard{order:9}
+}
+/* desktop store: the member card and the specials board share a row, card left, board right, ahead of the aisle photo */
+@media (min-width:960px){
+  #viewShop{display:grid;grid-template-columns:440px minmax(0,1fr);grid-auto-flow:row dense;column-gap:24px;align-items:start}
+  #viewShop>*{grid-column:1 / -1;order:5}
+  #viewShop>.sv-front{order:0}#viewShop>.shop-head{order:1}
+  #viewShop>#memberCard{order:2;grid-column:1;margin-top:20px}
+  #viewShop>#svBoard{order:2;grid-column:2;align-self:center;margin-top:20px}
+  #viewShop>.sv-aisles{order:3;margin-top:18px}
 }
 
 /* ---------- the snack counter: menu board rows on the candy bar paper, add to tonight's film ---------- */
@@ -2621,8 +2639,6 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
   <div class="ambient" id="ambient" aria-hidden="true"></div>
 
   <div class="spinbar" id="spinbar" hidden><button type="button" id="spinbarBtn">Spin the wheel</button></div>
-  <section class="week" id="weekPanel" aria-label="This week's film" hidden></section>
-  <section class="week motw" id="motw" aria-label="Menu of the week" hidden></section>
 
   <section class="shop" id="viewShop" aria-label="Galaxy Video" hidden>
     <div class="sv-front" id="svFront"><img src="assets/hero/galaxy-front-1000.webp" srcset="assets/hero/galaxy-front-1000.webp 1000w, assets/hero/galaxy-front-1400.webp 1400w, assets/hero/galaxy-front.webp 1774w" sizes="(max-width:640px) 700px, 1240px" width="1774" height="1057" alt="Galaxy Video shopfront at night" loading="lazy"></div>
@@ -2700,29 +2716,11 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
         <button class="toggle set-btn" id="setBtn" type="button" aria-haspopup="dialog">Settings</button>
       </div>
       <div class="count" id="count"></div>
-      <details class="watch-panel" id="watchPanel">
-        <summary id="watchSummary">My movie checklist</summary>
-        <p>Tick films you've watched. You can untick them any time. Saved in this browser only.</p>
-        <label class="watch-option"><input type="checkbox" id="skipWatched" checked> Skip watched films when spinning</label>
-        <div class="watch-tools">
-          <input type="search" id="watchSearch" placeholder="Search movies" aria-label="Search movies">
-          <select id="watchFilter" aria-label="Show movies"><option value="all">All movies</option><option value="unwatched">Unwatched</option><option value="watched">Watched</option></select>
-        </div>
-        <p id="watchResults" aria-live="polite"></p>
-        <div class="watch-list" id="watchList"></div>
-        <p class="watch-save" id="watchSave" role="status"></p>
-      </details>
-      <div class="history saved-shelf" id="savedShelf" hidden>
-        <h2>Your saved menus</h2>
-        <div class="chips" id="savedChips"></div>
-      </div>
-      <div class="history">
-        <div class="hist-head"><h2>Your ticket stubs</h2><span class="hist-btns"><button type="button" class="hist-clear wall-btn" id="wallBtn" hidden>The stub wall</button><button type="button" class="hist-clear" id="histClear" hidden>Clear</button></span></div>
-        <div class="chips" id="chips"><span class="empty">Nothing yet. Your picks land here.</span></div>
-      </div>
     </section>
 
     <section class="side" aria-label="Printable menu">
+      <section class="week" id="weekPanel" aria-label="This week's film" hidden></section>
+      <section class="week motw" id="motw" aria-label="Menu of the week" hidden></section>
       <div class="tabs" role="tablist" aria-label="Which page">
         <button class="tab on" id="tabMenu" type="button" role="tab" aria-selected="true">Menu</button>
         <button class="tab" id="tabPrep" type="button" role="tab" aria-selected="false">Prep sheet and shopping list</button>
@@ -2762,6 +2760,28 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
       <button class="btn fmt-back" id="fmtBack" type="button" hidden>Back to the phone menu</button>
       <div class="status" id="status" aria-live="polite"></div>
       <div class="where" id="whereWheel"></div>
+    </section>
+    <section class="extras" aria-label="Your checklist and stubs">
+      <details class="watch-panel" id="watchPanel">
+        <summary id="watchSummary">My movie checklist</summary>
+        <p>Tick films you've watched. You can untick them any time. Saved in this browser only.</p>
+        <label class="watch-option"><input type="checkbox" id="skipWatched" checked> Skip watched films when spinning</label>
+        <div class="watch-tools">
+          <input type="search" id="watchSearch" placeholder="Search movies" aria-label="Search movies">
+          <select id="watchFilter" aria-label="Show movies"><option value="all">All movies</option><option value="unwatched">Unwatched</option><option value="watched">Watched</option></select>
+        </div>
+        <p id="watchResults" aria-live="polite"></p>
+        <div class="watch-list" id="watchList"></div>
+        <p class="watch-save" id="watchSave" role="status"></p>
+      </details>
+      <div class="history saved-shelf" id="savedShelf" hidden>
+        <h2>Your saved menus</h2>
+        <div class="chips" id="savedChips"></div>
+      </div>
+      <div class="history">
+        <div class="hist-head"><h2>Your ticket stubs</h2><span class="hist-btns"><button type="button" class="hist-clear wall-btn" id="wallBtn" hidden>The stub wall</button><button type="button" class="hist-clear" id="histClear" hidden>Clear</button></span></div>
+        <div class="chips" id="chips"><span class="empty">Nothing yet. Your picks land here.</span></div>
+      </div>
     </section>
   </div>
 </div>
