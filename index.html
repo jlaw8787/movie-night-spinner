@@ -948,14 +948,12 @@ body.spinning .theatre.closed .skip-k,.theatre.closed .tease.leader~.skip-k{opac
 /* ===== era formats: phone view ===== */
 .fp{background:var(--fp-top);color:var(--fp-ink);border-radius:10px;overflow:hidden;font-family:var(--fp-body);box-shadow:0 20px 40px -12px rgba(0,0,0,.7)}
 .fp-head{display:flex;gap:14px;align-items:center;padding:16px 16px 14px;color:var(--fp-top-ink)}
-.fp-poster{flex:none;width:78px;height:117px;object-fit:cover;border:3px solid var(--fp-top-ink);box-shadow:0 6px 12px rgba(0,0,0,.35)}
 .fp-brand{font-family:var(--fp-disp);font-size:13px;letter-spacing:.06em;color:#fff}
 .fp.fp-market .fp-head{background:var(--fp-paper);color:var(--fp-ink);border-top:44px solid var(--fp-top);position:relative;padding-top:18px}
 .fp.fp-market .fp-brand{position:absolute;left:0;right:0;top:-36px;text-align:center;font-size:24px;letter-spacing:.06em;text-transform:uppercase;color:var(--fp-top-ink);text-shadow:2px 2px 0 #6e0f14}
 .fp.fp-market .fp-title{font-size:58px;color:var(--fp-acc);text-shadow:3px 3px 0 #8b8478;transform:rotate(-3deg);transform-origin:left bottom}
 .fp.fp-market .fp-tag{color:var(--fp-top);font:400 18px/1.15 var(--fp-note);font-style:normal}
 .fp.fp-market .fp-hint{color:var(--fp-soft)}
-.fp.fp-market .fp-poster{border:5px solid #fff;transform:rotate(-2deg)}
 .fp.fp-market .fp-tabs{background:var(--fp-paper);padding-top:4px}
 .fp.fp-market .fp-tab{color:var(--fp-acc);border-color:var(--fp-acc);font-size:13px;letter-spacing:0;line-height:1.05}
 .fp.fp-market .fp-cue span{font:400 18px/1.3 'Permanent Marker',cursive}
@@ -964,7 +962,6 @@ body.spinning .theatre.closed .skip-k,.theatre.closed .tease.leader~.skip-k{opac
 .fp.fp-market .fp-tab[aria-selected="true"]{background:var(--fp-acc);color:#fff}
 .fp.fp-market .fp-body{border-radius:0}
 .fp.fp-market .fp-h{background:transparent;box-shadow:none;color:var(--fp-acc);font-size:30px;text-shadow:3px 3px 0 #8b8478;text-align:left;padding:0 2px;text-transform:uppercase}
-.fp.fp-market .fp-price{color:var(--fp-top)}
 /* Channel 4 canteen: keep the film title readable on narrow phones. */
 .fp.fp-newsroom .fp-head{border-top:6px solid #d5a244;border-bottom:4px solid #b87443}
 .fp.fp-newsroom .fp-title{font-size:clamp(22px,6vw,30px);line-height:1.1;text-shadow:none}
@@ -989,22 +986,22 @@ body.spinning .theatre.closed .skip-k,.theatre.closed .tease.leader~.skip-k{opac
 .fp-tabs{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:6px;padding:0 12px 12px}
 .fp-tab{min-height:44px;font:400 13px var(--fp-disp);letter-spacing:.02em;color:var(--fp-tab);background:transparent;border:2px solid var(--fp-tab);border-radius:6px;cursor:pointer;padding:0 4px}
 .fp-tab[aria-selected="true"]{background:var(--fp-tab);color:var(--fp-top)}
-.fp-tab:focus-visible,.fp-dish:focus-visible,.fp-flip:focus-visible{outline:3px solid var(--fp-acc);outline-offset:2px}
+.fp-tab:focus-visible,.fp-more:focus-visible,.fp-flip:focus-visible{outline:3px solid var(--fp-acc);outline-offset:2px}
 .fp-body{background:var(--fp-paper);padding:18px 14px 6px;border-radius:14px 14px 0 0}
 .fp-sec{display:flex;flex-direction:column;gap:12px}
 .fp-h{margin:0 0 2px;text-align:center;font:400 20px var(--fp-disp);color:var(--fp-top-ink);background:var(--fp-top);padding:8px 10px;box-shadow:0 0 0 2px var(--fp-paper),0 0 0 4px var(--fp-acc)}
-.fp-dish{display:block;width:100%;text-align:left;font:inherit;color:inherit;background:#fff;border:2px solid rgba(0,0,0,.12);border-radius:8px;padding:14px 14px 12px;cursor:pointer}
-.fp-dish[aria-expanded="true"]{border-color:var(--fp-acc)}
-.fp-row{display:flex;align-items:baseline;gap:8px}
-.fp-name{font:700 21px/1.15 var(--fp-name)}
+.fp-dish{display:block;color:var(--fp-ink);background:#fff;border:2px solid rgba(0,0,0,.12);border-radius:8px;padding:14px 14px 12px}
+.fp-name{margin:0;font:700 21px/1.15 var(--fp-name)}
 .fp-name.up{text-transform:uppercase}
-.fp-dots{flex:1;min-width:10px;border-bottom:2px dotted rgba(0,0,0,.35);transform:translateY(-4px)}
-.fp-price{font:400 19px var(--fp-price);color:var(--fp-acc);white-space:nowrap}
-.fp-desc{display:block;margin-top:6px;font-size:15px;font-weight:600;color:var(--fp-top)}
-.fp-film{display:block;margin-top:4px;font:400 19px/1.3 var(--fp-note);color:var(--fp-soft)}
-.fp-how{display:block;margin-top:6px;font-size:16px;line-height:1.55;color:var(--fp-ink)}
-.fp-how[hidden],.fp-film[hidden]{display:none}
-.fp-more{display:block;margin-top:8px;font:400 12px var(--fp-disp);color:var(--fp-acc)}
+.fp-desc{margin:6px 0 0;font-size:15px;line-height:1.4;font-weight:600;color:var(--fp-top)}
+.fp-film{margin:4px 0 0;font:400 19px/1.3 var(--fp-note);color:var(--fp-soft)}
+.fp-how{margin-top:10px;padding-top:10px;border-top:1px solid rgba(0,0,0,.12);font-size:16px;line-height:1.55;color:var(--fp-ink)}
+.fp-how[hidden]{display:none}
+.fp-more{display:inline-flex;align-items:center;gap:6px;min-height:44px;margin-top:10px;padding:0 14px 0 16px;border:2px solid var(--fp-acc);border-radius:999px;background:transparent;color:var(--fp-acc);font:700 14px var(--fp-body);letter-spacing:.02em;cursor:pointer}
+.fp-more .fp-chev{flex:none;transition:transform .2s}
+.fp-more[aria-expanded="true"]{background:var(--fp-acc);color:var(--fp-paper)}
+.fp-more[aria-expanded="true"] .fp-chev{transform:rotate(180deg)}
+@media (prefers-reduced-motion:reduce){.fp-more .fp-chev{transition:none}}
 .fp-cue{background:var(--fp-paper);padding:12px 14px 16px;display:flex;flex-direction:column;gap:4px}
 .fp-cue b{font:400 12px var(--fp-disp);color:var(--fp-acc);letter-spacing:.06em}
 .fp-cue span{font-size:16px;line-height:1.4}
@@ -2717,8 +2714,8 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 <script src="aisles.js?v=96b9270c" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=4fa7e40e" defer></script>
-<script src="formats-core.js?v=25ffa69f" defer></script>
-<script src="app.js?v=05bcc5bb" defer></script>
+<script src="formats-core.js?v=268bf373" defer></script>
+<script src="app.js?v=23dc8ffd" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

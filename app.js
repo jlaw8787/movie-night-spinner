@@ -864,12 +864,11 @@ function libPhonePal(root){
 }
 const LIB_COURSE={s:"Starters",m:"Mains",w:"Sweets",d:"Drinks"};
 function libPhoneView(f,menu,L,root){
-  const fl=L.flavour||{},all=[],groups=[];
-  for(const c of ["s","m","w","d"]){const its=(menu[c]||[]).filter(it=>it&&it.n);if(!its.length)continue;
-    groups.push({h:LIB_COURSE[c],items:its.map(it=>({k:it.n}))});for(const it of its)all.push({label:it.n,film:it.note||"",how:it.house?"A house standard, not part of tonight's cook.":degC(it.how||"Not on tonight's cook."),price:""})}
-  if(!groups.length){phoneView(null);return}
+  const fl=L.flavour||{},pm={};let any=false;
+  for(const c of ["s","m","w","d"]){pm[c]=(menu[c]||[]).filter(it=>it&&it.n).map(it=>({label:it.n,desc:it.d||it.desc||"",film:it.note||"",how:it.house?"A house standard, not part of tonight's cook.":degC(it.how||"Not on tonight's cook.")}));if(pm[c].length)any=true}
+  if(!any){phoneView(null);return}
   {const ea=$("easel"),was=ea.hidden;ea.hidden=false;try{FMT_PHONE.lib=libPhonePal(root)}finally{ea.hidden=was}}
-  phoneView(f,{fmt:"lib",brand:fl.venue||"",tag:ESC(current&&current.tag||f.T),phoneTitle:f.title},{groups,all});
+  phoneView(f,{fmt:"lib",brand:fl.venue||"",tag:ESC(current&&current.tag||f.T),phoneTitle:f.title},pm);
 }
 function fitPhoneTitle(){
   const t=fmtPhone.querySelector(".fp-lib .fp-title");if(!t||!t.offsetWidth)return;
