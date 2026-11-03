@@ -210,7 +210,7 @@ function flavourOf(ctx,neutral){
 }
 /* prices scale with the era of the printed object */
 const ERA_PRICE=[.07,.11,.16,.3,.55,.75,.9,1];
-function money(v,era){const x=v*ERA_PRICE[era];if(ERA_PRICE[era]<.5||x<5)return x<1?String(Math.max(5,Math.round(x*20)*5))+"¢":(Math.round(x*4)/4).toFixed(2);const r=Math.round(x*2)/2;return r%1?r.toFixed(2):String(r)}
+function money(v,era){const x=v*ERA_PRICE[era];if(ERA_PRICE[era]<.5||x<5)return x<1?String(Math.max(5,Math.round(x*20)*5))+"¢":(Math.round(x*4)/4).toFixed(2);const r=Math.round(x*2)/2;return r.toFixed(2)}
 /* the film's number or year hidden in one price */
 function eggPrice(base,num,yy,era){if(!num)return money(base,era);const p=money(base,era);const whole=p.split(".")[0];
   if(num&&num.length===3&&+num[0]>0)return ERA_PRICE[era]<.2?num[0]+"."+num.slice(1):num.slice(0,2)+"."+num[2]+"0";

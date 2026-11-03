@@ -100,7 +100,7 @@ const BASE={s:1,m:2.4,w:.9,d:.6};
 function price(k,i,era){
   const v=BASE[k]*ERA[era].price*(1+i*.14);
   if(v<1)return Math.max(5,Math.round(v*20)*5)+"¢";
-  if(v>=10)return String(Math.round(v));
+  if(v>=10)return (Math.round(v*2)/2).toFixed(2);
   return (Math.round(v*4)/4).toFixed(2);
 }
 function heroes(ctx){
