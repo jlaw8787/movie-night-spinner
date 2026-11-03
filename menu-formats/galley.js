@@ -79,7 +79,10 @@ function logoInit(img){if(img.dataset.seen)return;img.dataset.seen="1";const pan
   const ok=()=>{if(!img.naturalWidth)return fail();try{const c=document.createElement("canvas"),w=c.width=64,h=c.height=Math.max(1,Math.round(64*img.naturalHeight/img.naturalWidth));const g=c.getContext("2d");g.drawImage(img,0,0,w,h);const d=g.getImageData(0,0,w,h).data;let s=0,n=0;for(let i=0;i<d.length;i+=4)if(d[i+3]>140){s+=lumA([d[i],d[i+1],d[i+2]]);n++}
     const L=n?s/n:.5;if(panel){panel.style.background=L<.2?panel.getAttribute(A+"-light"):panel.getAttribute(A+"-dark")}}catch(e){}};
   if(img.complete)(img.naturalWidth?ok():fail());else{img.addEventListener("load",ok);img.addEventListener("error",fail)}}
-let pend=0;function fitAll(){pend=0;document.querySelectorAll(`[${A}-face]`).forEach(f=>{f.querySelectorAll(`img[${A}-logo]`).forEach(logoInit);f.querySelectorAll(`[${A}-text]`).forEach(fitText);f.querySelectorAll(`[${A}-box]`).forEach(fitBox)})}
+let pend=0;function fitAll(){pend=0;document.querySelectorAll(`[${A}-face]`).forEach(f=>{f.querySelectorAll(`img[${A}-logo]`).forEach(logoInit);f.querySelectorAll(`[${A}-text]`).forEach(fitText);f.querySelectorAll(`[${A}-box]`).forEach(fitBox)});
+  /* one item size across both sheets: every dish box on a menu takes the smallest scale any of them needed */
+  const groups=new Map();document.querySelectorAll(`[${A}-box]`).forEach(b=>{const root=b.closest(".mcard")||b.closest(`[${A}-face]`).parentElement;if(!groups.has(root))groups.set(root,[]);groups.get(root).push(b)});
+  groups.forEach(bs=>{if(bs.length<2)return;const k=Math.min(...bs.map(b=>+b.style.getPropertyValue("--k")||1));bs.forEach(b=>{if((+b.style.getPropertyValue("--k")||1)>k)b.style.setProperty("--k",k)})})}
 function soon(){if(!pend){pend=1;requestAnimationFrame(()=>setTimeout(fitAll,30))}}
 if(!window["__fit_"+ID]){window["__fit_"+ID]=1;new MutationObserver(m=>{if(m.some(r=>[...r.addedNodes].some(n=>n.nodeType===1&&(n.matches(`[${A}-face]`)||n.querySelector&&n.querySelector(`[${A}-face]`)))))soon()}).observe(document.documentElement,{childList:true,subtree:true});
   if(document.fonts){document.fonts.addEventListener&&document.fonts.addEventListener("loadingdone",soon);document.fonts.ready.then(soon)}[400,1200,2200].forEach(t=>setTimeout(soon,t))}
