@@ -1064,7 +1064,14 @@ function shopLines(list){
 const WAIT_RE=/^(chill|refrigerate|freeze|soak|marinate|rest|cool|prove|steep|leave|let|set aside|stand|infuse|steep)\b|\b(in the fridge|overnight|to set|until set|to rest|to cool|to chill|to prove|to rise|to soak|to marinate|to steep|to infuse)\b/i;
 /* hands-on time grows by half for each extra batch (k = guests / serves); cooking and waiting stay the same */
 function dishTimes(x,k){const st=x.steps||[];let wait=0;for(const t of st)if((t.min||0)>=10&&WAIT_RE.test(String(t.text).trim()))wait+=t.min;
-  const prep=x.prep_min||0,cook=x.cook_min||0;wait=Math.min(wait,prep+cook);const c2=Math.max(0,cook-wait),p2=Math.max(0,prep-Math.max(0,wait-cook));const p3=k>1.01?Math.round(p2*(1+(k-1)/2)/5)*5:p2;return {prep:p3,cook:c2,wait,active:p3+c2}}
+  const prep=x.prep_min||0,cook=x.cook_min||0;wait=Math.min(wait,prep+cook);
+  /* split by the steps themselves when their minutes add up to the recipe's total: hands-on, heat and waiting each counted where they happen */
+  const isW=t=>(t.min||0)>=10&&WAIT_RE.test(String(t.text).trim()),isH=t=>!isW(t)&&HEAT_RE.test(String(t.text));
+  const heat=st.filter(isH).reduce((a,t)=>a+(t.min||0),0),sum=st.reduce((a,t)=>a+(t.min||0),0);
+  let c2,p2;
+  if(st.length&&st.every(t=>t.min>0)&&Math.abs(sum-(prep+cook))<=Math.max(5,(prep+cook)*.25)){c2=heat;p2=Math.max(0,sum-heat-wait)}
+  else{/* otherwise take the waiting off cooking, but never below the heat steps, and the rest off prep */
+    c2=Math.max(heat,cook-wait);p2=Math.max(0,prep+cook-c2-wait)}const p3=k>1.01?Math.round(p2*(1+(k-1)/2)/5)*5:p2;return {prep:p3,cook:c2,wait,active:p3+c2}}
 /* frying oil is set by the pot, not the guests: never less than the recipe's own amount */
 const ingQ=(i,k)=>/\bfor (deep[- ])?frying\b/i.test(i.item)?Math.max(i.q,i.q*k):i.q*k;
 /* a dish's own ingredients, scaled to the guests */
