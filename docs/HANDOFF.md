@@ -1,6 +1,6 @@
 # Handover: Movie Night Spinner
 
-Read this first in a new chat. Last updated 3 Nov 2026.
+Read this first in a new chat. Last updated 4 Nov 2026.
 
 ## Where things are
 
@@ -15,7 +15,7 @@ Read this first in a new chat. Last updated 3 Nov 2026.
 
 ## The to-do
 
-All 15 items in docs/review-2.md are done (3 Nov evening, notes against each item). Review 3 is worked through (notes against each item). Fourth review: 8 out of 10 (docs/review-4.md). Next: work down docs/review-4.md the same way, one item at a time, commit and push after each.
+All 15 items in docs/review-2.md are done (3 Nov evening, notes against each item). Review 3 is worked through. Review 4 (8 out of 10, docs/review-4.md) is worked through on 4 Nov, notes against each item. Next: a fifth review, or merge to main once the GitHub flag clears.
 
 Left open from review 2: matching prices across sequels (low impact), the fallback photo treatment for films with no good still, and (fixed 3 Nov) the 3 browser checks: two were out of date with the shopping list format, the third found a real bug where closing the rental slip stepped browser history back one extra entry and could leave the app. All tests and browser checks now pass.
 
@@ -61,3 +61,10 @@ Left open from review 2: matching prices across sequels (low impact), the fallba
 - Update the Design canvases with the new real photos and logo.
 - Update og:image and URLs when the domain is bought.
 - Accounts plan, app store apps, Box Office Bites social series: see Josh's notes.
+
+## Added 4 Nov
+
+- Sound starts off until the speaker is tapped (Josh's call). Stored as mns-sound "1".
+- Untested extra dishes shop in their own last group, "For the extras, buy to suit".
+- Phone half views of wide menus hide badly cut words and fade the cut edge (pvMask in app.js).
+- Wheel redraws when its canvas resizes or the box office view returns.

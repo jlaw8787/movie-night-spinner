@@ -12,7 +12,8 @@ const pick=a=>a[Math.floor(Math.random()*a.length)];
 
 /* ---------- sound: a tick per wedge and a little fanfare, off by default ---------- */
 let audio=null,soundOn=false;
-soundOn=true;try{soundOn=localStorage.getItem("mns-sound")!=="0"}catch(e){}
+/* silent until someone taps the speaker (or Settings); after that their choice is remembered */
+try{soundOn=localStorage.getItem("mns-sound")==="1"}catch(e){}
 function setSoundLabel(){const b=$("sound");b.setAttribute("aria-pressed",soundOn);b.textContent=soundOn?"Sound on":"Sound off";const q=document.getElementById("quickMute");if(q){q.setAttribute("aria-pressed",String(!soundOn));q.setAttribute("aria-label",soundOn?"Mute sound":"Turn sound on");q.classList.toggle("off",!soundOn)}}
 function ac(){if(!audio){const C=window.AudioContext||window.webkitAudioContext;if(C)audio=new C()}return audio}
 function tick(){if(!soundOn||!ac())return;const t=audio.currentTime;const src=audio.createBufferSource();src.buffer=noiseBuf();const f=audio.createBiquadFilter();f.type="bandpass";f.frequency.value=2400;f.Q.value=2.5;const g=audio.createGain();g.gain.setValueAtTime(.32,t);g.gain.exponentialRampToValueAtTime(.0001,t+.035);src.connect(f).connect(g).connect(audio.destination);src.start(t,Math.random()*1.5,.05)}

@@ -142,3 +142,6 @@ Good foundations. First Tab shows a clear "Skip to the wheel" link and Enter lan
 - Fix 9, tab order (4 Nov): checked, no change. Menu of the week sits at the top of the right column on desktop and after the wheel on phones, and Tab already follows that order (wheel and its controls, then the right column).
 - Fix 10, rest (4 Nov): Hulk's pastéis note now names a moment, not a place ("what Bruce grabs in Rocinha on the way to the bottling plant"). The other film notes are the Easter eggs and stay. The phone Menu of the week title is held to two lines and drops to 18px for long titles.
 - Fix 11, blank wheel (4 Nov): the wheel now resizes and redraws whenever its canvas changes size or the box office view comes back, so a wheel sized while hidden can't stay blank. Checked: candy bar to box office draws straight away, no resize loop.
+- Fix 9, sound (4 Nov, Josh's call): the site starts silent and stays that way until someone taps the speaker or turns sound on in Settings; that choice is remembered after a reload.
+
+Review 4 is worked through.
