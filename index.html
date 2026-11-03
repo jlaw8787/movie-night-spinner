@@ -629,6 +629,11 @@ body.spinning .theatre.closed .skip-k,.theatre.closed .tease.leader~.skip-k{opac
 .pp .mc-eye{text-align:center}
 .pp-title{font-family:var(--md);font-weight:var(--mdw,400);font-size:44px;line-height:1.05;text-align:center;margin:6px 0 14px;color:var(--tc,var(--ink));text-transform:var(--mtt,none);letter-spacing:var(--mls,0)}
 .pp-serves{text-align:center;margin:-8px 0 12px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+.pp-serves .nw{white-space:nowrap}
+/* shopping quantities and times use lining figures so 1 never reads as I */
+.pp-cols,.pp-serves,.pp-time,.fp-how{font-variant-numeric:lining-nums tabular-nums}
+.pp-cols h3{overflow-wrap:normal;word-break:keep-all}
+.pp-cols h3{font-size:1.18em;letter-spacing:.01em}
 .pp-cols{display:grid;grid-template-columns:1fr 1.45fr;gap:28px;flex:1 0 auto;align-content:start;font-size:16px;line-height:1.35}
 .pp-cols h3{font-family:var(--md);font-weight:var(--mdw,400);font-size:1.55em;line-height:1.1;color:var(--hd);margin:0 0 .45em;text-transform:var(--mtt,none)}
 .pp-aisle{margin-bottom:.7em}
@@ -1155,9 +1160,31 @@ body.winner .palace-glow{animation:palacePulse .22s steps(2) 8}
 .mq.on{visibility:visible}
 /* slotted letters on a backlit board: not pure black, soft edged, a few hung crooked or sun-faded, the board's light shows through */
 .mq-k,.mq-t{color:#2b2627;mix-blend-mode:multiply;filter:blur(.55px);text-shadow:0 0 1px rgba(43,38,39,.5)}
-.mq-t i:nth-child(5n+2){opacity:.84}.mq-t i:nth-child(7n+4){opacity:.9;color:#3a3334}.mq-t i:nth-child(11n+6){opacity:.76}
-.mq-k{font:700 46px/1 "Oswald",Impact,sans-serif;letter-spacing:.14em;color:#151112}
+
+.mq-k{font:700 40px/1 "Oswald",Impact,sans-serif;letter-spacing:.16em;color:#151112}
 .mq-t{font:700 100px/1 "Oswald",Impact,sans-serif;letter-spacing:.05em;color:#151112;max-width:100%;overflow:visible}
+/* Galaxy Video is its own shop: the cinema marquee and cinema cards step aside, the store's colours take the page */
+body.in-shop .palace,body.in-shop #motw,body.in-shop #weekPanel{display:none!important}
+body.in-shop{background:linear-gradient(rgba(27,15,48,.88),rgba(18,10,32,.94)),url("assets/hero/carpet.webp") 0 0/300px 300px,#1b0f30}
+body.in-shop .top{background:linear-gradient(rgba(27,15,48,.97),rgba(27,15,48,.9));border-bottom:1px solid rgba(255,196,46,.25)}
+body.in-shop .views{background:rgba(42,18,80,.9)!important;border-color:rgba(255,196,46,.35)!important}
+body.in-shop .views button[aria-selected="true"]{background:linear-gradient(#ffd75a,#ffc42e)!important;color:#1b0f30!important;border-color:#ffc42e!important;box-shadow:0 0 12px rgba(255,196,46,.35)}
+@media (min-width:641px){
+  /* shorter hero so the wheel makes the first screen: show the crest and board, crop sky and footpath */
+  .palace{aspect-ratio:10/3.3;max-height:580px}
+  .palace-stage{margin-top:-3.2%}
+  .palace::after{height:9%}
+}
+@media (min-width:1774px){.palace-stage{margin-top:-96px}}
+/* menu of the week: a compact strip, not a wide empty card */
+@media (min-width:700px){
+  .motw{grid-template-columns:48px minmax(0,1fr) auto;gap:2px 16px;padding:10px 16px}
+  .motw img{grid-row:1/span 2;width:48px;height:72px}
+  .motw .week-acts{grid-column:3;grid-row:1/span 2;margin:0;flex-wrap:nowrap}
+}
+/* before the first spin the curtain fills its column instead of leaving a gap under it */
+@media (min-width:900px){.theatre.closed{min-height:560px}}
+@media (max-width:700px){.theatre.closed{max-height:62vh;overflow:hidden}}
 .palace-glow{background:radial-gradient(ellipse 36% 15% at 44% 48%,rgba(255,236,190,.5),transparent 70%),radial-gradient(ellipse 18% 10% at 51% 22%,rgba(255,200,110,.5),transparent 70%)}
 
 /* ---------- palace wheel: real brass rim and pointer, bulbs chase in CSS, damask walls ---------- */
@@ -1276,7 +1303,7 @@ select{font:500 16px var(--f-body);letter-spacing:.01em}
 .crave .crave-chips button[aria-pressed="true"] span,.crave .crave-chips button[aria-pressed="true"]:hover span{color:#fff}
 @media (max-width:620px){.crave .crave-chips{grid-auto-flow:row;grid-template-rows:none;grid-template-columns:minmax(0,1fr) minmax(0,1fr);overflow:visible;gap:0 12px;padding:0}.crave .crave-chips button{font-size:13px;letter-spacing:.03em;min-width:0}.crave .crave-chips button span{min-width:0;overflow-wrap:anywhere}.crave .crave-chips button b::after{content:""}}
 .cb-search{margin:14px 0 4px}
-.cb-search input[type=search]{background:rgba(11,13,46,.85)!important;border:1px solid rgba(255,255,255,.18)!important}
+.cb-search input[type=search]{background:rgba(30,6,10,.9)!important;border:1px solid rgba(226,176,79,.45)!important;color:#f4e6c8!important}
 .crave .crave-bar{background:rgba(11,13,46,.82);border-radius:10px;padding:8px 10px;margin:10px 0 14px}
 .crave .crave-bar .shop-count{color:#f3f0e6;font-weight:500}
 .crave .aisle-spin{background:#ffd23f;border-color:#ffd23f;color:#1a0a0c}
@@ -1339,7 +1366,7 @@ select{font:500 16px var(--f-body);letter-spacing:.01em}
 @media (max-width:900px){body{padding-bottom:84px}}
 
 /* candy bar photo, real carpet and the popcorn box */
-.shop.crave{background:url("assets/hero/carpet.webp") 0 0/300px 300px,#0b0d2e!important}
+.shop.crave{background:url("assets/hero/carpet-red.webp") 0 0/300px 300px,#33090f!important}
 .cb-photo{position:relative;overflow:hidden;border-radius:12px;margin:-14px -14px 16px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
 .cb-stage{position:relative;width:max(100%,780px);aspect-ratio:2/1;left:50%;transform:translateX(-50%);container-type:inline-size}
 .cb-img{position:absolute;inset:0;width:100%;height:100%;display:block}
@@ -1678,7 +1705,7 @@ dialog .modal-x:focus-visible{outline:3px solid #ffd23f;outline-offset:2px}
 /* phones: the pinned tab bar also covers the status bar zone, so the page never shows through behind the clock */
 @media (max-width:820px){.top{padding-top:calc(8px + env(safe-area-inset-top,0px));background:rgb(18,6,8)}}
 .planner[hidden]{display:none!important}
-.pl-pick{margin-top:10px;border-top:1px solid rgba(231,192,105,.25);padding-top:8px}.pl-pick>summary{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:44px;cursor:pointer;list-style:none;font-size:15px}.pl-pick>summary::-webkit-details-marker{display:none}.pl-tw{color:#e7c069;font-weight:600;white-space:nowrap}.pl-tw::after{content:" \25BE";display:inline-block;transition:transform .2s}.pl-pick[open] .pl-tw::after{transform:rotate(180deg)}
+.pl-pick{margin-top:10px;border-top:1px solid rgba(231,192,105,.25);padding-top:8px}.pl-pick>summary{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:44px;cursor:pointer;list-style:none;font-size:15px}.pl-pick>summary::-webkit-details-marker{display:none}.pl-tw{color:#e7c069;font-weight:600;white-space:nowrap}.pl-tw::after{content:"\25BE";display:inline-block;margin-left:.45em;transition:transform .2s}.pl-pick[open] .pl-tw::after{transform:rotate(180deg)}
 
 /* showtime countdown leader */
 dialog.leader{padding:0;background:#16130e;overflow:hidden;display:grid;place-items:center}
@@ -2540,16 +2567,16 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
       <div class="snack-pair" id="snackPair" hidden></div>
       <div class="actions">
         <button class="btn primary" id="pdf" type="button">Save PDF</button>
-        <button class="btn" id="print" type="button" hidden>Print</button>
-        <button class="btn" id="favBtn" type="button" aria-pressed="false">Save this menu</button>
         <button class="btn" id="weekSet" type="button" disabled>Lock in for this week</button>
-        <button class="btn" id="showBtn" type="button" data-show>Start the show</button>
-        <button class="btn" id="kitBtn" type="button">Table kit</button>
-        <button class="btn" id="watchCurrent" type="button" aria-pressed="false" disabled>Mark as watched</button>
-        <button class="btn" id="lazyBtn" type="button" aria-pressed="false">Lazy night: off</button>
         <details class="more">
-          <summary class="btn">More</summary>
+          <summary class="btn">More options</summary>
           <div class="more-menu">
+            <button class="btn" id="print" type="button" hidden>Print</button>
+            <button class="btn" id="favBtn" type="button" aria-pressed="false">Save to favourites</button>
+            <button class="btn" id="watchCurrent" type="button" aria-pressed="false" disabled>Mark as watched</button>
+            <button class="btn" id="lazyBtn" type="button" aria-pressed="false">Easy cook mode: off</button>
+            <button class="btn" id="showBtn" type="button" data-show>Start the show</button>
+            <button class="btn" id="kitBtn" type="button">Table kit</button>
             <button class="btn" id="png" type="button">Save image</button>
             <button class="btn" id="storyBtn" type="button">Share to story</button>
             <button class="btn" id="foldPdf" type="button" hidden>Print to fold (2 sides)</button>
@@ -2568,10 +2595,11 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 
 <script src="tmdb-posters.js?v=050c5f60" defer></script>
 <script src="ratings.js?v=dfb01117" defer></script>
+<script src="aisles.js?v=96b9270c" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=e68cd5e3" defer></script>
 <script src="formats-core.js?v=25ffa69f" defer></script>
-<script src="app.js?v=e2a8185e" defer></script>
+<script src="app.js?v=fe97713d" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

@@ -159,9 +159,17 @@ function draw(){
   ctx.font=`500 ${fs*1.06}px Jost, Futura, "Helvetica Neue", Arial, sans-serif`;ctx.textAlign="right";ctx.textBaseline="middle";
   for(let i=0;i<N;i++){
     const f=wedges[i];if(!f)continue;
-    ctx.save();ctx.translate(c,c);ctx.rotate(rot+(i+.5)*A-Math.PI/2);
+    const ang=rot+(i+.5)*A-Math.PI/2,left=Math.cos(ang)<0;
+    ctx.save();ctx.translate(c,c);ctx.rotate(left?ang+Math.PI:ang);
     ctx.fillStyle=i===winner?"#1d1404":WEDGE_INK[i%WEDGE.length];
-    ctx.fillText(fitText(f.title,R*0.6),R*0.94,0);
+    /* short form first (drop a subtitle), then a smaller size, and only then cut it */
+    let t=f.title.replace(/&amp;/g,"&"),max=R*0.6;
+    if(ctx.measureText(t).width>max){const sh=t.split(/: | - |, /)[0];if(sh.length>=4)t=sh}
+    let shrink=ctx.measureText(t).width>max&&ctx.measureText(t).width<=max*1.34;
+    if(shrink)ctx.font=`500 ${fs*1.06/1.34}px Jost, Futura, "Helvetica Neue", Arial, sans-serif`;
+    ctx.textAlign=left?"left":"right";
+    ctx.fillText(fitText(t,max),left?-R*0.94:R*0.94,0);
+    if(shrink)ctx.font=`500 ${fs*1.06}px Jost, Futura, "Helvetica Neue", Arial, sans-serif`;
     ctx.restore();
   }
   /* printed-card texture and a little wear over the slices */
@@ -638,7 +646,7 @@ function prepHTML(f,menu){
   const L=LAYOUT[f.theme]||"storybook",c=pal(f),d=DECO(L,c,f);
   const shop=shopGroups(menu).map(([a,list])=>`<div class="pp-aisle"><h4>${a}</h4><ul>${list.map(x=>`<li><span class="pp-box"></span>${ESC(x)}</li>`).join("")}</ul></div>`).join("");
   const secs=[["Snack",menu.s],["Main",menu.m],["Sweet",menu.w],["Drink",menu.d]];
-  const steps=secs.map(([l,items])=>items.map(it=>`<li><b>${ESC(it.n)}</b><em>${l}</em><span>${ESC(it.how||"")}</span></li>`).join("")).join("");
+  const steps=secs.map(([l,items])=>items.map(it=>`<li><b>${ESC(it.n)}</b><em>${l}</em><span>${ESC(degC(it.how||""))}</span></li>`).join("")).join("");
   return `<div class="mc-bg">${d.bg}</div><div class="mc-grain" style="background-image:url('${GRAIN}')"></div>
   <div class="mc-in pp">
     <div class="mc-eye">Prep sheet</div>
@@ -688,6 +696,9 @@ function fit(el){
   if(over())el.querySelectorAll(".mc-how").forEach(n=>n.style.display="none");
 }
 function fitPrep(el){
+  /* section headings stay on one line: wide display faces step down until they fit their column */
+  try{el.querySelectorAll(".pp-cols h3").forEach(h=>{h.style.fontSize="";h.style.whiteSpace="nowrap";let k=1;const base=parseFloat(getComputedStyle(h).fontSize);
+    while(k>.62&&h.scrollWidth>h.clientWidth+1){k-=.04;h.style.fontSize=(base*k)+"px"}h.style.whiteSpace=""})}catch(e){}
   const inner=el.querySelector(".mc-in"),cols=el.querySelector(".pp-cols");
   if(!inner||!cols)return;
   /* on screen the sheet is a normal page at reading size; only the A4 copy for save, PDF and print gets fitted */
@@ -763,7 +774,7 @@ const LIB_COURSE={s:"Starters",m:"Mains",w:"Sweets",d:"Drinks"};
 function libPhoneView(f,menu,L,root){
   const fl=L.flavour||{},all=[],groups=[];
   for(const c of ["s","m","w","d"]){const its=(menu[c]||[]).filter(it=>it&&it.n);if(!its.length)continue;
-    groups.push({h:LIB_COURSE[c],items:its.map(it=>({k:it.n}))});for(const it of its)all.push({label:it.n,film:it.note||"",how:it.how||"",price:""})}
+    groups.push({h:LIB_COURSE[c],items:its.map(it=>({k:it.n}))});for(const it of its)all.push({label:it.n,film:it.note||"",how:degC(it.how||""),price:""})}
   if(!groups.length){phoneView(null);return}
   {const ea=$("easel"),was=ea.hidden;ea.hidden=false;try{FMT_PHONE.lib=libPhonePal(root)}finally{ea.hidden=was}}
   phoneView(f,{fmt:"lib",brand:fl.venue||"",tag:ESC(current&&current.tag||f.T),phoneTitle:f.title},{groups,all});
@@ -924,6 +935,7 @@ function planHTML(f){
 }
 function planCount(r){const on=r.dishes.map(dietDish).filter(planOn).length;return `${on} of ${r.dishes.length} dishes picked`}
 function planOpen(){try{return localStorage.getItem("mns-plan-open")==="1"}catch(e){return false}}
+const degC=t=>String(t).replace(/(\d{2,3})\s?C\b/g,"$1°C");
 function prepHTML2(f,menu){
   const edition=movieEdition(f),L=LAYOUT[f.theme]||"storybook",c=pal(f),d=DECO(L,c,f);
   const ds=planDishes(f),groups={};
@@ -932,12 +944,12 @@ function prepHTML2(f,menu){
   const shop=AISLES.filter(a=>groups[a]).map(a=>`<div class="pp-aisle"><h4>${a}</h4><ul>${groups[a].map(x=>{const k=tickKey(x),on=!!tk[k];return `<li role="checkbox" tabindex="0" aria-checked="${on}" data-k="${ESC(k)}"${on?' class="pp-done"':""}><span class="pp-box"></span>${ESC(x)}</li>`}).join("")}</ul></div>`).join("");
   const TT=ds.map(dishTimes),hands=TT.reduce((s,x)=>s+x.prep,0),longest=TT.reduce((m,x)=>Math.max(m,x.active),0),waitMax=TT.reduce((m,x)=>Math.max(m,x.wait),0);
   const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"},K=PLAN.guests/((f._r2&&f._r2.serves)||4);
-  const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const T=dishTimes(x),kk=x.snack?PLAN.guests/4:K;return `<li><b>${ESC(x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">Prep ${planMin(T.prep)}${T.cook?`, cook ${planMin(T.cook)}`:""}${T.wait?`, then ${planMin(T.wait)} waiting (chill, soak or rest)`:""}${x.make_ahead?`. Make ahead: ${ESC(x.make_ahead)}`:""}</span><span class="pp-ing"><b>You need</b> ${ESC(dishIng(x,kk))}</span><span>${(x.steps||[]).map(s=>ESC(scaleStep(s.text,kk))+(s.min?` <i>(${planMin(s.min)})</i>`:"")).join(" ")}</span></li>`}).join("");
+  const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const T=dishTimes(x),kk=x.snack?PLAN.guests/4:K;return `<li><b>${ESC(x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">Prep ${planMin(T.prep)}${T.cook?`, cook ${planMin(T.cook)}`:""}${T.wait?`, then ${planMin(T.wait)} waiting (chill, soak or rest)`:""}${x.make_ahead?`. Make ahead: ${ESC(x.make_ahead)}`:""}</span><span class="pp-ing"><b>You need</b> ${ESC(dishIng(x,kk))}</span><span>${(x.steps||[]).map(s=>ESC(degC(scaleStep(s.text,kk)))+(s.min?` <i>(${planMin(s.min)})</i>`:"")).join(" ")}</span></li>`}).join("");
   return `<div class="mc-bg">${d.bg}</div><div class="mc-grain" style="background-image:url('${GRAIN}')"></div>
   <div class="mc-in pp">
     <div class="mc-eye">Prep sheet</div>
     <div class="pp-title">${ESC(f.title)}</div>
-    <p class="pp-serves">Serves ${PLAN.guests}${DIET.veg||dietAF()?` &nbsp;/&nbsp; ${[DIET.veg&&"vegetarian",dietAF()&&"alcohol-free"].filter(Boolean).join(", ")}`:""} &nbsp;/&nbsp; ${ds.length} dish${ds.length===1?"":"es"} &nbsp;/&nbsp; hands-on ${planMin(hands)}, longest dish ${planMin(longest)}${waitMax?` plus up to ${planMin(waitMax)} waiting`:""}</p>
+    <p class="pp-serves">${[`Serves ${PLAN.guests}`,DIET.veg||dietAF()?[DIET.veg&&"vegetarian",dietAF()&&"alcohol-free"].filter(Boolean).join(", "):"",`${ds.length} dish${ds.length===1?"":"es"}`,`hands-on ${planMin(hands)}`,`longest ${planMin(longest)}`,waitMax?`plus ${planMin(waitMax)} waiting`:""].filter(Boolean).map((x,i)=>`<span class="nw">${i?"/&nbsp;":""}${x}</span>`).join(" &nbsp;")}</p>
     <div class="pp-cols"><div class="pp-shop"><h3>Shopping list</h3>${shop||"<p>Tick at least one dish.</p>"}</div><div class="pp-method"><h3>How to make it</h3><ol>${steps}</ol></div></div>
     <div class="mc-cue"><b>Showtime cue</b><span>${ESC(edition&&edition.cue||f.P)}</span></div>
   </div>`;
@@ -1250,6 +1262,8 @@ $("weekSet").addEventListener("click",()=>{if(current)setWeek(current)});
 /* video store: browse every film like a rental store */
 const SHOP_AISLES=[["Action and cops",["cop","street","philly"]],["Superheroes",["hero"]],["Sci-fi",["scifi","galaxy"]],["Horror",["horror"]],["Family",["kids","fairytale"]],["Fantasy and adventure",["wizard","adventure"]],["Comedy and teen",["teen","diner"]],["Romance",["romcom"]],["Crime and mob",["redsauce","deli","pizza"]],["Drama",["uptown","soul"]],["Westerns",["western"]],["Around the world",["aussie","asian","mex","tiki"]],["Holiday",["xmas"]]];
 const SHOP_AISLE_OF={};SHOP_AISLES.forEach(([n,ts])=>ts.forEach(t=>SHOP_AISLE_OF[t]=n));
+/* aisles follow the film's genre (aisles.js, from TMDB); the food theme is only the fallback */
+const aisleOf=f=>(typeof FILM_AISLE!=="undefined"&&FILM_AISLE[f.id])||SHOP_AISLE_OF[f.theme]||"";
 const TMDB_IMG_SHOP="https://image.tmdb.org/t/p/";
 const buzz=p=>{try{navigator.vibrate&&navigator.vibrate(p)}catch(e){}};
 const hashN=s=>{let h=7;for(const c of s)h=(h*31+c.charCodeAt(0))>>>0;return h};
@@ -1321,7 +1335,7 @@ const priceOf=f=>isNew(f)?(isTuesday()?2:7):2;
 const priceTag=f=>isNew(f)?(isTuesday()?"Tuesday $2":"Overnight $7"):"Weekly $2";
 const STAFF=["Kate","Sam","Dave","Michelle","Andrew","Lisa","Ben","Nicole"];
 const TALK={"Action and cops":["Turn it up.","Still holds up.","Proper Friday night film."],"Superheroes":["Stay for the end credits.","Better than you remember.","Big screen energy."],"Sci-fi":["Watch it twice.","Still holds up.","Lights down for this one."],"Horror":["Lights off. Doors locked.","Not one for the kids.","Watch it with company."],"Family":["One for the whole house.","Kids will want it again.","Grown-ups will love it too."],"Fantasy and adventure":["Settle in for this one.","Pure Saturday afternoon.","Still holds up."],"Comedy and teen":["Quote it all week.","Better with a crowd.","Still makes me laugh."],"Romance":["Have the tissues handy.","Date night sorted.","Better than you remember."],"Crime and mob":["Don't skip the ending.","Clear your evening.","A proper classic."],"Drama":["Worth the slow start.","Have the tissues handy.","Stays with you."],"Westerns":["Saddle up.","A proper classic.","Watch it on the big telly."],"Around the world":["Something different tonight.","Worth the subtitles.","A hidden gem."],"Holiday":["Put the tree lights on.","Every year without fail.","One for the whole house."]};
-const talkFor=f=>{const h=hashN(f.id+"t"),a=SHOP_AISLE_OF[f.theme]||"Drama",L=(a==="Horror"&&isKidSafe(f))?["Spooky, not scary.","Fine with the kids up.","A Halloween regular."]:(TALK[a]||TALK.Drama);return [STAFF[h%STAFF.length],L[(h>>>3)%L.length]]};
+const talkFor=f=>{const h=hashN(f.id+"t"),a=aisleOf(f)||"Drama",L=(a==="Horror"&&isKidSafe(f))?["Spooky, not scary.","Fine with the kids up.","A Halloween regular."]:(TALK[a]||TALK.Drama);return [STAFF[h%STAFF.length],L[(h>>>3)%L.length]]};
 const weeklyCol=f=>["#ff3d9a","#7ee08a","#ff9f1c","#ffe14d","#4dd8ff"][hashN(f.id+"w")%5];
 /* membership card, rentals and late fees live on this phone only */
 let member=null;
@@ -1410,7 +1424,7 @@ function openSlip(f,go){
     if(!counter[f.id].length)delete counter[f.id];
     try{localStorage.setItem("mns-counter",JSON.stringify(counter))}catch(err){}
     member.rentals=(member.rentals||0)+1;
-    const aisle=SHOP_AISLE_OF[f.theme];if(aisle)member.aisles[aisle]=(member.aisles[aisle]||0)+1;
+    const aisle=aisleOf(f);if(aisle)member.aisles[aisle]=(member.aisles[aisle]||0)+1;
     member.out=[{id:f.id,due:due.getTime()},...(member.out||[]).filter(r=>r.id!==f.id)].slice(0,6);
     saveMember();renderMember();buzz(30);
     close();go();
@@ -1487,7 +1501,7 @@ async function doubleMenu(a,b,G){
 function pairFor(a,pool){
   const others=pool.filter(f=>f.id!==a.id);
   const sameTheme=others.filter(f=>f.theme===a.theme);
-  const sameAisle=others.filter(f=>SHOP_AISLE_OF[f.theme]&&SHOP_AISLE_OF[f.theme]===SHOP_AISLE_OF[a.theme]);
+  const sameAisle=others.filter(f=>aisleOf(f)&&aisleOf(f)===aisleOf(a));
   const near=x=>x.filter(f=>Math.abs(+f.year-+a.year)<=12);
   const c=[near(sameTheme),sameTheme,near(sameAisle),sameAisle,others].find(x=>x.length);
   return c?c[Math.floor(Math.random()*c.length)]:null;
@@ -1653,7 +1667,7 @@ function renderShop(){
   if(fresh.length&&!q)rows.push(["New release wall",fresh,isTuesday()?"$2 Tuesday is on. Every new release is $2 tonight.":"Overnight $7. Back by 7pm tomorrow.","wall"]);
   if(!q){const picks=list.filter(isPick);if(picks.length)rows.push(["Staff picks",picks])}
   if(q&&list.length)rows.push(["Search results",list.slice().sort((a,b)=>a.title.localeCompare(b.title))]);
-  else SHOP_AISLES.forEach(([n,ts])=>{if(n==="Holiday")return;const r=list.filter(f=>ts.includes(f.theme)&&(kidsMode||!isLate(f))).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(r.length)rows.push([n,r])});
+  else SHOP_AISLES.forEach(([n,ts])=>{if(n==="Holiday")return;const r=list.filter(f=>aisleOf(f)===n&&(kidsMode||!isLate(f))).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(r.length)rows.push([n,r])});
   if(!q&&!kidsMode){const ls=list.filter(isLate).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));if(ls.length)rows.push(["Late Show",ls,"Out the back, behind the curtain. The proper scares, grown-ups only.","lateshow"])}
   if(!q&&peekSeason){const c=cal.find(c=>c.s.id===peekSeason&&!c.on&&c.next);if(c)rows.unshift(...seasonRows(c.s,list,c.next).map(r=>{r[2]=(r[2]||"").replace(/^Back on /,"Sneak look. Back on ");return r}))}
   renderMember();
@@ -1672,7 +1686,7 @@ async function openCase(f){
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];const m=makeMenu(f,true);
   const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`${f.title}, back of the box`);
   const seen=watched.has(f.id);
-  o.innerHTML=`<div class="case"><div class="case-l">${p?`<div class="case-art${reduce?"":" track"}"><img alt="${ESC(f.title)} poster" src="${TMDB_IMG_SHOP}w500${ESC(p)}"></div>`:""}${tvHTML(f)}</div><div><h3>${ESC(f.title)}</h3><p class="meta">${f.year} &nbsp;/&nbsp; ${ESC(SHOP_AISLE_OF[f.theme]||"")} aisle &nbsp;/&nbsp; ${ESC(T[f.theme].name)}${ratingOf(f)?` <span class="ratebig ${rateCls(ratingOf(f))}" aria-label="Rated ${ratingOf(f)}">${ratingOf(f)}</span>`:""}</p>${isOut(f)?'<p class="outnote">All copies are out. Lucky you, one just came back.</p>':""}<p class="syn">${ESC(f.D)}</p><div class="where">${whereHTML(f)}</div><p class="staff">Staff pick: ${ESC((movieEdition(f)||{}).tagline||f.T)}</p>${seen?starsHTML(f):""}<h4>Comes with</h4><ul>${[...m.s,...m.m,...m.w,...m.d].map(it=>`<li>${ESC(it.n)}</li>`).join("")}</ul><div class="acts"><button class="menu-go" type="button">See the menu</button>${isRentedOut(f)?'<button class="ret" type="button">Return it</button>':'<button class="rent" type="button">Rent it</button>'}<button class="seen" type="button">${seen?"Not seen it yet":"Seen it"}</button></div></div></div>`;
+  o.innerHTML=`<div class="case"><div class="case-l">${p?`<div class="case-art${reduce?"":" track"}"><img alt="${ESC(f.title)} poster" src="${TMDB_IMG_SHOP}w500${ESC(p)}"></div>`:""}${tvHTML(f)}</div><div><h3>${ESC(f.title)}</h3><p class="meta">${f.year} &nbsp;/&nbsp; ${ESC(aisleOf(f))} aisle &nbsp;/&nbsp; ${ESC(T[f.theme].name)}${ratingOf(f)?` <span class="ratebig ${rateCls(ratingOf(f))}" aria-label="Rated ${ratingOf(f)}">${ratingOf(f)}</span>`:""}</p>${isOut(f)?'<p class="outnote">All copies are out. Lucky you, one just came back.</p>':""}<p class="syn">${ESC(f.D)}</p><div class="where">${whereHTML(f)}</div><p class="staff">Staff pick: ${ESC((movieEdition(f)||{}).tagline||f.T)}</p>${seen?starsHTML(f):""}<h4>Comes with</h4><ul>${[...m.s,...m.m,...m.w,...m.d].map(it=>`<li>${ESC(it.n)}</li>`).join("")}</ul><div class="acts"><button class="menu-go" type="button">See the menu</button>${isRentedOut(f)?'<button class="ret" type="button">Return it</button>':'<button class="rent" type="button">Rent it</button>'}<button class="seen" type="button">${seen?"Not seen it yet":"Seen it"}</button></div></div></div>`;
   const close=()=>dismissModal(o);
   o.addEventListener("click",e=>{if(e.target===o)close()});
   /* the menu is one tap from any tape; renting is just for fun and never needed to see it */
@@ -1720,7 +1734,7 @@ function lazyMenu(menu){
   out.shopping=[sav,sw].filter(Boolean).flatMap(x=>x[1].shop||[]);
   return out;
 }
-function setLazyUI(){const b=$("lazyBtn");b.setAttribute("aria-pressed",lazy);b.textContent=lazy?"Lazy night: on":"Lazy night: off"}
+function setLazyUI(){const b=$("lazyBtn");b.setAttribute("aria-pressed",lazy);b.textContent=lazy?"Easy cook mode: on":"Easy cook mode: off"}
 
 /* first visit: a quick how-it-works */
 function showWelcome(){
@@ -1782,7 +1796,7 @@ if(typeof window!=="undefined"&&window.addEventListener&&typeof document!=="unde
   clearTimeout(window.__fs);window.__fs=setTimeout(()=>fitSigns(),60)}).observe(document.body,{childList:true,subtree:true})}
 /* palace marquee: shrink long titles to fit the sign, light boxes show tonight's poster and recent spins */
 let _hang=false;
-function fitMarquee(){if(_hang)return;const t=$("now");const txt=t.textContent;const n=txt.length;t.style.fontSize=`${Math.min(112,1.56*(+(document.querySelector(".mq")||{dataset:{}}).dataset.w||1000)/Math.max(n,8)).toFixed(1)}px`;
+function fitMarquee(){if(_hang)return;const t=$("now");const txt=t.textContent;const n=txt.length;t.style.fontSize=`${Math.min(84,1.56*(+(document.querySelector(".mq")||{dataset:{}}).dataset.w||1000)/Math.max(n,8)).toFixed(1)}px`;
   if(!t.querySelector("i")){_hang=true;t.innerHTML=[...txt].map((ch,i)=>ch===" "?" ":`<i style="--r:${((Math.sin(i*12.9898+n)*43758.5453)%1*2.4).toFixed(2)}deg;--y:${((Math.sin(i*78.233+n)*12345.678)%1*0.05).toFixed(3)}em">${ch==="&"?"&amp;":ch==="<"?"&lt;":ch===">"?"&gt;":ch}</i>`).join("");_hang=false}}
 
 /* the board in the photo is seen at an angle: map the live letters onto it with a perspective transform */
@@ -2261,7 +2275,7 @@ function mystScrub(f,t){
   for(const w of words)t=t.replace(new RegExp("\\b"+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"\\b","gi"),"?");
   return t.replace(/\b[A-Z][a-z]+(?:\s[A-Z][a-z]+)?['’]s\b/g,"the house").replace(/\?(\s\?)+/g,"?");
 }
-function mystGenre(f){const a=SHOP_AISLES.find(([,t])=>t.includes(f.theme));return a?a[0]:"A good one"}
+function mystGenre(f){return aisleOf(f)||"A good one"}
 function mystButton(){const b=$("mysBtn");if(!b)return;const f=MYST&&FILMS.find(x=>x.id===MYST.id);b.textContent=f?"Your mystery night":"Mystery night";b.classList.toggle("on",!!f)}
 async function openMystery(fresh){
   let f=MYST&&!fresh&&FILMS.find(x=>x.id===MYST.id);
@@ -2486,7 +2500,7 @@ var FAV=[];try{FAV=JSON.parse(localStorage.getItem("mns-fav")||"[]").filter(id=>
 const favSave=()=>{try{localStorage.setItem("mns-fav",JSON.stringify(FAV))}catch(e){}try{queueSync()}catch(e){}};
 function renderFav(){const shelf=$("savedShelf"),box=$("savedChips");const items=FAV.map(id=>FILMS.find(f=>f.id===id)).filter(Boolean);shelf.hidden=!items.length;box.innerHTML="";
   items.forEach(f=>{const b=document.createElement("button");b.className="ticket saved";b.type="button";b.innerHTML=`<small>Saved</small>${ESC(f.title)}`;b.addEventListener("click",()=>openFilm(f));box.appendChild(b)});updateFav()}
-function updateFav(){const b=$("favBtn");if(!b)return;const on=!!(current&&FAV.includes(current.id));b.setAttribute("aria-pressed",on);b.textContent=on?"Saved":"Save this menu"}
+function updateFav(){const b=$("favBtn");if(!b)return;const on=!!(current&&FAV.includes(current.id));b.setAttribute("aria-pressed",on);b.textContent=on?"Saved to favourites":"Save to favourites"}
 $("favBtn").addEventListener("click",()=>{if(!current)return;const id=current.id;
   if(FAV.includes(id)){FAV=FAV.filter(x=>x!==id);$("status").textContent="Taken off your saved menus."}
   else{FAV=[id,...FAV].slice(0,30);$("status").textContent="Saved. It's under Your saved menus, below the wheel, and kept on this device for offline.";try{fetch(filmFile(current)).catch(()=>{})}catch(e){}}
