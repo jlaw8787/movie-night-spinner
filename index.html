@@ -639,7 +639,33 @@ body.spinning .theatre.closed .skip-k,.theatre.closed .tease.leader~.skip-k{opac
 .pp-method li{margin-bottom:.62em}
 .pp-method li b{font-weight:700}
 .pp-method li em{font-style:normal;font-size:.7em;letter-spacing:.12em;text-transform:uppercase;color:var(--sub);margin-left:.5em}
-.pp-method li span{display:block;opacity:.86}
+.pp-method{text-align:left}
+.pp-method>ol>li{margin-bottom:1em}
+.pp-ahead{display:block;font-size:.8em;opacity:.8;margin:0 0 4px}
+.pp-ahead b,.pp-ing>b{font-size:.78em;letter-spacing:.12em;text-transform:uppercase}
+.pp-ing{margin:4px 0 6px}
+.pp-ing ul{margin:2px 0 0;padding:0;list-style:none;columns:2 8.5em;column-gap:1.2em}
+.mcard.pp-sheet .pp-method .pp-ing ul li,.pp-ing ul li{break-inside:avoid;padding-left:.9em;text-indent:-.9em;margin:0 0 .15em;line-height:1.3}
+.pp-ing ul li::before{content:"·";display:inline-block;width:.9em;text-indent:0;font-weight:700}
+.pp-method ol.pp-steps{margin:4px 0 0;padding-left:1.5em;list-style:decimal}
+.mcard.pp-sheet .pp-method ol.pp-steps li,.pp-method ol.pp-steps li{margin:0 0 .35em;padding-left:.15em;line-height:1.4}
+.pp-method ol.pp-steps li::marker{font-weight:700;font-size:.85em}
+.pp-t{display:inline-block;margin-left:.35em;padding:0 .5em;border:1px solid currentColor;border-radius:999px;font-size:.72em;line-height:1.55;letter-spacing:.04em;white-space:nowrap;opacity:.75;vertical-align:.1em}
+/* the A4 print copy runs each dish as one tight paragraph so a full menu fits one page: numbered steps inline, ingredients comma separated */
+.pp-a4 .pp-ing ul{display:inline;columns:auto}
+.mcard.pp-sheet.pp-a4 .pp-method .pp-ing ul li{display:inline;padding:0;text-indent:0;margin:0}
+.pp-a4 .pp-ing ul li::before{content:none}
+.pp-a4 .pp-ing ul li:not(:last-child)::after{content:", "}
+.pp-a4 .pp-ing>b{margin-right:.4em}
+.pp-a4 .pp-method ol.pp-steps{display:block;margin:2px 0 0;padding:0;list-style:none;counter-reset:st}
+.mcard.pp-sheet.pp-a4 .pp-method ol.pp-steps li{display:inline;margin:0;padding:0;counter-increment:st}
+.pp-a4 .pp-method ol.pp-steps li::before{content:counter(st) ". ";font-weight:700}
+.pp-a4 .pp-method ol.pp-steps li:not(:last-child)::after{content:" "}
+.pp-a4 .pp-t{font-size:.68em;line-height:1.35;margin-left:.2em}
+.pp-a4 .pp-ing{margin:2px 0 0}
+.pp-a4 .pp-time{display:inline;margin:0}
+.pp-a4 .pp-ahead{display:inline;margin:0 0 0 .5em}
+.pp-a4 .pp-ahead::before{content:"/ ";opacity:.6}
 .pp .mc-cue{align-self:center;text-align:center}
 
 /* ---------- trattoria: awning, gingham cloth, a cream card ---------- */
@@ -997,6 +1023,10 @@ body.spinning .theatre.closed .skip-k,.theatre.closed .tease.leader~.skip-k{opac
 .fp-film{margin:4px 0 0;font:400 19px/1.3 var(--fp-note);color:var(--fp-soft)}
 .fp-how{margin-top:10px;padding-top:10px;border-top:1px solid rgba(0,0,0,.12);font-size:16px;line-height:1.55;color:var(--fp-ink)}
 .fp-how[hidden]{display:none}
+.fp-steps{margin:0;padding-left:1.5em;text-align:left}
+.fp-steps li{margin:0 0 .5em;padding-left:.2em}
+.fp-steps li::marker{font-weight:700;color:var(--fp-acc)}
+.fp-step1{margin:0;text-align:left}
 .fp-more{display:inline-flex;align-items:center;gap:6px;min-height:44px;margin-top:10px;padding:0 14px 0 16px;border:2px solid var(--fp-acc);border-radius:999px;background:transparent;color:var(--fp-acc);font:700 14px var(--fp-body);letter-spacing:.02em;cursor:pointer}
 .fp-more .fp-chev{flex:none;transition:transform .2s}
 .fp-more[aria-expanded="true"]{background:var(--fp-acc);color:var(--fp-paper)}
@@ -2714,8 +2744,8 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 <script src="aisles.js?v=96b9270c" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=4fa7e40e" defer></script>
-<script src="formats-core.js?v=268bf373" defer></script>
-<script src="app.js?v=23dc8ffd" defer></script>
+<script src="formats-core.js?v=073f01a6" defer></script>
+<script src="app.js?v=5618922e" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

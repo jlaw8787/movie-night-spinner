@@ -709,7 +709,7 @@ function fitPrep(el){
 /* an A4 copy of the prep sheet, fitted off screen, for print */
 function prepA4(){
   const stage=document.createElement("div");stage.style.cssText="position:fixed;left:-20000px;top:0;width:794px;height:1123px";
-  const c=prep.cloneNode(true);c.style.transform="none";c.hidden=false;prepClean(c);stage.appendChild(c);document.body.appendChild(stage);
+  const c=prep.cloneNode(true);c.style.transform="none";c.hidden=false;c.classList.add("pp-a4");prepClean(c);stage.appendChild(c);document.body.appendChild(stage);
   fitPrep(c);stage.remove();return c;
 }
 document.documentElement.style.setProperty("--grain",`url("${GRAIN}")`);
@@ -956,7 +956,7 @@ function fracText(q){const w=Math.floor(q),r=q-w;let best=FRAC[0];for(const x of
 function planQty(q,u){
   if(u==="g"&&q>=1000){q/=1000;u="kg"}else if(u==="ml"&&q>=1000){q/=1000;u="l"}else if(u==="kg"&&q<1){q*=1000;u="g"}else if(u==="l"&&q<1){q*=1000;u="ml"}
   if(u==="g"||u==="ml")return (q>=50?Math.round(q/5)*5:Math.max(1,Math.round(q)))+u;
-  if(u==="kg"||u==="l")return (q>=1?Math.round(q*10)/10:Math.round(q*100)/100)+u;
+  if(u==="kg"||u==="l")return (q>=1?Math.round(q*10)/10:Math.round(q*100)/100)+(u==="l"?" L":u);
   /* spoons that pile up turn into the next measure: 9 tsp is 3 tbsp, 20 tbsp is 1 1/4 cups */
   if(u==="tsp"&&q>6){q/=3;u="tbsp"}
   if(u==="tbsp"&&q>8){q/=16;u="cup"}
@@ -1001,7 +1001,8 @@ const WAIT_RE=/^(chill|refrigerate|freeze|soak|marinate|rest|cool|prove|steep|le
 function dishTimes(x){const st=x.steps||[];let wait=0;for(const t of st)if((t.min||0)>=10&&WAIT_RE.test(String(t.text).trim()))wait+=t.min;
   const prep=x.prep_min||0,cook=x.cook_min||0;wait=Math.min(wait,prep+cook);const c2=Math.max(0,cook-wait),p2=Math.max(0,prep-Math.max(0,wait-cook));return {prep:p2,cook:c2,wait,active:p2+c2}}
 /* a dish's own ingredients, scaled to the guests */
-function dishIng(x,k){return (x.ingredients||[]).map(i=>{if(i.q==null)return i.item;const q=i.q*k;if(!i.u)return planQty(q,"")+" "+(q>1.01?planPlural(i.item,q):planOne(i.item));return planQty(q,i.u)+" "+i.item}).join(", ")}
+function dishIng(x,k){return dishIngList(x,k).join(", ")}
+function dishIngList(x,k){return (x.ingredients||[]).map(i=>{if(i.q==null)return i.item;const q=i.q*k;if(!i.u)return planQty(q,"")+" "+(q>1.01?planPlural(i.item,q):planOne(i.item));return planQty(q,i.u)+" "+i.item})}
 /* counts in a method step follow the guests: "fill four tall glasses" for 4 becomes "fill eight tall glasses" for 8; times, heat and sizes stay put */
 const NUMW=["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty"];
 const STEP_NOUN="glass|glasses|cup|cups|mug|mugs|bowl|bowls|plate|plates|meatballs?|patties|patty|burgers?|skewers?|kebabs?|balls?|rolls?|buns?|tacos?|tortillas?|wraps?|portions?|pieces?|slices?|wedges?|squares?|triangles?|fingers?|cookies?|biscuits?|cupcakes?|muffins?|scones?|pancakes?|crepes?|sandwiches|sandwich|toasties?|pies?|tarts?|parcels?|dumplings?|rissoles?|fritters?|cakes?|bars?|cones?|scoops?|shots?|jars?|ramekins?|moulds?|molds?|serves|servings|people|pizzas?|bases|nests|stacks?|sliders?|hot dogs?|dogs?|sausages?|chops?|steaks?|fillets?|cutlets?|wings?|drumsticks?|lollies|lolly|ice blocks?|popsicles?|lettuce cups";
@@ -1026,7 +1027,14 @@ function planHTML(f){
 }
 function planCount(r){const on=r.dishes.map(dietDish).filter(planOn).length;return `${on} of ${r.dishes.length} dishes picked`}
 function planOpen(){try{return localStorage.getItem("mns-plan-open")==="1"}catch(e){return false}}
-const degC=t=>String(t).replace(/(\d{2,3})\s?C\b/g,"$1°C");
+/* 175C reads as 175°C, and a lone litre is written "1 L" so it never reads as eleven */
+const degC=t=>String(t).replace(/(\d{2,3})\s?C\b/g,"$1°C").replace(/(\d(?:\.\d+)?)\s?l\b/g,"$1 L");
+/* the kind of waiting a dish needs, in plain words: "to chill", "to marinate and rest" */
+const WAIT_WORD=/\b(chill|refrigerate|freeze|soak|marinate|rest|cool|prove|rise|set|steep|infuse)/i,WAIT_TO={refrigerate:"chill",rise:"prove"};
+function waitWords(x){const w=[];for(const t of x.steps||[])if((t.min||0)>=10&&WAIT_RE.test(String(t.text).trim()))for(const m of String(t.text).matchAll(new RegExp(WAIT_WORD.source,"gi"))){const v=WAIT_TO[m[1].toLowerCase()]||m[1].toLowerCase();if(!w.includes(v))w.push(v)}
+  return w.length?"to "+(w.length>1?w.slice(0,-1).join(", ")+" and "+w[w.length-1]:w[0]):"waiting"}
+/* only heat counts as cooking: a drink that is stirred or a tartare that is chopped is all prep */
+const HEAT_RE=/\b(oven|bake|baking|fry|fried|grill|boil|simmer|roast|sear|toast|heat|cook|pan|barbecue|bbq|microwave|poach|steam|saut|caramel|flame|reduce|melt|char|braise|broil|smoke)/i;
 function prepHTML2(f,menu){
   const edition=movieEdition(f),L=LAYOUT[f.theme]||"storybook",c=pal(f),d=DECO(L,c,f);
   const ds=planDishes(f),groups={};
@@ -1035,7 +1043,10 @@ function prepHTML2(f,menu){
   const shop=AISLES.filter(a=>groups[a]).map(a=>`<div class="pp-aisle"><h4>${a}</h4><ul>${groups[a].map(x=>{const k=tickKey(x),on=!!tk[k];return `<li role="checkbox" tabindex="0" aria-checked="${on}" data-k="${ESC(k)}"${on?' class="pp-done"':""}><span class="pp-box"></span>${ESC(x)}</li>`}).join("")}</ul></div>`).join("");
   const TT=ds.map(dishTimes),hands=TT.reduce((s,x)=>s+x.prep,0),longest=TT.reduce((m,x)=>Math.max(m,x.active),0),waitMax=TT.reduce((m,x)=>Math.max(m,x.wait),0);
   const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"},K=PLAN.guests/((f._r2&&f._r2.serves)||4);
-  const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const T=dishTimes(x),kk=x.snack?PLAN.guests/4:K;return `<li><b>${ESC(x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">Prep ${planMin(T.prep)}${T.cook?`, cook ${planMin(T.cook)}`:""}${T.wait?`, then ${planMin(T.wait)} waiting (chill, soak or rest)`:""}${x.make_ahead?`. Make ahead: ${ESC(x.make_ahead)}`:""}</span><span class="pp-ing"><b>You need</b> ${ESC(dishIng(x,kk))}</span><span>${(x.steps||[]).map(s=>ESC(degC(scaleStep(s.text,kk)))+(s.min?` <i>(${planMin(s.min)})</i>`:"")).join(" ")}</span></li>`}).join("");
+  const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const T=dishTimes(x),kk=x.snack?PLAN.guests/4:K,hot=(x.steps||[]).some(s=>HEAT_RE.test(s.text));
+    const time=hot&&T.cook?`Prep ${planMin(T.prep)}, cook ${planMin(T.cook)}`:`Takes ${planMin(T.prep+T.cook)}`;
+    const ing=dishIngList(x,kk);
+    return `<li><b>${ESC(x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">${time}${T.wait?`, then ${planMin(T.wait)} ${waitWords(x)}`:""}</span>${x.make_ahead?`<span class="pp-ahead"><b>Make ahead</b> ${ESC(degC(x.make_ahead))}</span>`:""}${ing.length?`<div class="pp-ing"><b>You need</b><ul>${ing.map(g=>`<li>${ESC(degC(g))}</li>`).join("")}</ul></div>`:""}<ol class="pp-steps">${(x.steps||[]).map(s=>`<li>${ESC(degC(scaleStep(s.text,kk)))}${s.min?` <span class="pp-t">${planMin(s.min)}</span>`:""}</li>`).join("")}</ol></li>`}).join("");
   return `<div class="mc-bg">${d.bg}</div><div class="mc-grain" style="background-image:url('${GRAIN}')"></div>
   <div class="mc-in pp">
     <div class="mc-eye">Prep sheet</div>
