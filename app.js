@@ -226,12 +226,14 @@ function spin(){
     if(p<1)requestAnimationFrame(frame);
     else{
       rot=((rot%(Math.PI*2))+Math.PI*2)%(Math.PI*2);winner=indexAt(rot);kick=0;setPointer();draw();
-      spinning=false;sel.disabled=false;$("skipWatched").disabled=false;renderWatchList();$("spin").disabled=false;document.body.classList.remove("spinning");
+      spinning=false;sel.disabled=false;$("skipWatched").disabled=false;renderWatchList();document.body.classList.remove("spinning");
+      /* the hub stays visibly off until the curtain is up: a press during the countdown skips it rather than silently doing nothing */
+      const hubOn=()=>{$("spin").disabled=false};
       const win=wedges[winner];
       $("now").textContent=win.title;
       document.body.classList.add("winner");setTimeout(()=>document.body.classList.remove("winner"),1500);
       sfx.whirrStop();fanfare();
-      buzz([30,50,90]);show(win,true).then(()=>{announceFilm(win,kbSpin);leader(openCurtains)});addHistory(win);
+      buzz([30,50,90]);show(win,true).then(()=>{announceFilm(win,kbSpin);leader(()=>{openCurtains();hubOn()})},hubOn);setTimeout(hubOn,8000);addHistory(win);
       /* an instant jump: a smooth glide while the bulbs flash and the menu builds left phones drawing a blank screen for half a second */if(window.innerWidth<900)theatre.scrollIntoView({behavior:"auto",block:"start"});
       /* desktop: glide down to the result once it is ready, unless the whole menu is already in view */
       else setTimeout(()=>{const r=$("easel").getBoundingClientRect();if(r.bottom>innerHeight-20)window.scrollTo({top:scrollY+theatre.getBoundingClientRect().top-16,behavior:reduce?"auto":"smooth"})},reduce?0:600);
