@@ -271,7 +271,7 @@ window.MENU_FORMATS.invite=function(ctx){
    </div>
    <div style="position:absolute;left:286px;top:756px;width:274px;height:116px;box-sizing:border-box;padding:10px 14px;border:1px solid ${acc};text-align:left;color:${ink}">
      <div style="display:flex;justify-content:space-between;align-items:baseline">${kick("R.S.V.P.","15px")}<span style="font:15px/1 ${bd};opacity:.8">${x(f.year||"")}</span></div>
-     <div data-fit="14" style="height:76px;overflow:hidden;margin-top:4px;font:16px/1.3 ${bd};font-size:16px">${x(f.P?`Showtime: ${M.sent(f.P)}`:"Kindly reply before the film starts.")}${winks[0]?` <i>Also on the list: ${x(winks[0])}.</i>`:""}${fam?" All drinks alcohol free.":""}</div>
+     <div data-fit="14" style="height:76px;overflow:hidden;margin-top:4px;font:16px/1.3 ${bd};font-size:16px">${x(f.P?`Showtime: ${M.sent(f.P)}`:"Kindly reply before the film starts.")}${winks[0]?` <i data-opt>Also on the list: ${x(winks[0])}.</i>`:""}${fam?" All drinks alcohol free.":""}</div>
    </div>`;
   return {w:W,h:H,faces:[front,back]};
 };

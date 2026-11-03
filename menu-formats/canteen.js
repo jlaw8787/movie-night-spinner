@@ -121,7 +121,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const slots=school?["Period 1","Period 2","Lunch","Period 4","Period 5"]:["9:00","10:30","Lunch","2:00","3:30"];
   const fall=school?["Assembly","Maths","",  "Library","Sport"]:["Briefing","Meetings","","Reports","Home time"];
   const lunchAt=`12:${String((parseInt(number,10)||0)%60).padStart(2,"0")}`;
-  const cut=(w,n)=>{if(!w||w.length<=n)return w;const c=w.slice(0,n).replace(/\s+\S*$/,"");return c||w.slice(0,n)};
+  /* a long wink keeps a whole phrase (cut at a comma, "and" or "with"), never a fragment like "Bruce Bogtrotter and the"; if no clean phrase fits, the plain subject is used */
+  const cut=(w,n)=>{if(!w||w.length<=n)return w;for(const sep of [", "," and "," with "," at "," in "," on "]){const i=w.indexOf(sep);if(i>3&&i<=n)return w.slice(0,i)}return null};
   const subj=[cut(winks[0],30)||fall[0],cut(winks[1],30)||fall[1],lunchAt,cut(winks[2],30)||fall[3],cut(winks[3],30)||fall[4]];
   const stripBg=gi===0?`background:${mix(paper,"#000000",.04)};border-bottom:3px double ${ink};`
     :gi===1?`background:${mix(ink,acc,.25)};`
