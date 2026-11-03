@@ -1012,7 +1012,7 @@ function planQty(q,u){
   /* spoons that pile up turn into the next measure: 9 tsp is 3 tbsp, 20 tbsp is 1 1/4 cups */
   if(u==="tsp"&&q>6){q/=3;u="tbsp"}
   if(u==="tbsp"&&q>8){q/=16;u="cup"}
-  if(u==="cup")return fracText(q)+(q>1.01?" cups":" cup");
+  if(u==="cup"){const t=fracText(q);return t+(/^(1|\d\/\d)$/.test(t)?" cup":" cups")}
   if(u==="tsp"||u==="tbsp")return fracText(q)+" "+u;
   return String(q<1?fracText(q):Math.ceil(q-0.01));
 }
@@ -1034,6 +1034,7 @@ function planShopping(f){const k=PLAN.guests/((f._r2&&f._r2.serves)||4),ds=planD
   const have=new Set(base.flatMap(d=>(d.ingredients||[]).map(i=>planKey(i.item)))),taste=[],seen=new Set();
   for(const d of ds.filter(d=>d.extra))for(const i of d.ingredients||[]){const key=planKey(i.item);if(have.has(key)||seen.has(key))continue;seen.add(key);taste.push(i.item+"@"+TASTE)}
   return shopLines(base.map(d=>({d,k}))).concat(taste)}
+const WHOLE_RE=/^(bags?|packets?|tins?|cans?|bottles?|jars?|tubs?|loa(f|ves)|punnets?|box(es)?|cartons?|blocks?|rolls?|sheets?|tubes?|sachets?)\b/i;
 function shopLines(list){
   const tally={},order=[];
   for(const {d,k} of list)for(const i of d.ingredients||[]){
@@ -1042,27 +1043,32 @@ function shopLines(list){
     if(!tally[key]){tally[key]={a,item:i.item,items:new Set(),parts:{},order:[],open:false};order.push(key)}
     const t=tally[key];t.items.add(String(i.item));
     if(i.q==null){t.open=true;continue}
-    const u=b[0]==="#"?"":b[0];if(!(u in t.parts)){t.parts[u]=0;t.order.push(u)}t.parts[u]+=i.q*b[1]*k;
+    const u=b[0]==="#"?"":b[0];if(!(u in t.parts)){t.parts[u]=0;t.order.push(u)}t.parts[u]+=ingQ(i,k)*b[1];
   }
   return order.map(key=>{const t=tally[key];
     /* two different cuts of the same thing ("lemon, juiced" and "lemons") share the plain name */
     const item=t.items.size>1?String(t.item).split(/,| \(/)[0].trim():t.item;
     if("tsp" in t.parts&&"tbsp" in t.parts){t.parts.tbsp+=t.parts.tsp/3;delete t.parts.tsp;t.order=t.order.filter(u=>u!=="tsp")}
     if(!t.order.length)return item+"@"+t.a;
+    /* bags, jars, tins and the like are bought whole */
+    if(""in t.parts&&WHOLE_RE.test(item))t.parts[""]=Math.ceil(t.parts[""]-0.05);
     const count=""in t.parts?planQty(t.parts[""],"")+" "+(t.parts[""]>1.01?planPlural(item,t.parts[""]):planOne(item)):"";
     const rest=t.order.filter(u=>u!=="").map(u=>planQty(t.parts[u],u)).join(" + ");
     return (count?count+(rest?" + "+rest:""):rest+" "+item)+"@"+t.a});
 }
 /* waiting time (chilling, soaking, resting, setting) is shown apart from hands-on and cooking time */
 const WAIT_RE=/^(chill|refrigerate|freeze|soak|marinate|rest|cool|prove|steep|leave|let|set aside|stand|infuse|steep)\b|\b(in the fridge|overnight|to set|until set|to rest|to cool|to chill|to prove|to rise|to soak|to marinate|to steep|to infuse)\b/i;
-function dishTimes(x){const st=x.steps||[];let wait=0;for(const t of st)if((t.min||0)>=10&&WAIT_RE.test(String(t.text).trim()))wait+=t.min;
-  const prep=x.prep_min||0,cook=x.cook_min||0;wait=Math.min(wait,prep+cook);const c2=Math.max(0,cook-wait),p2=Math.max(0,prep-Math.max(0,wait-cook));return {prep:p2,cook:c2,wait,active:p2+c2}}
+/* hands-on time grows by half for each extra batch (k = guests / serves); cooking and waiting stay the same */
+function dishTimes(x,k){const st=x.steps||[];let wait=0;for(const t of st)if((t.min||0)>=10&&WAIT_RE.test(String(t.text).trim()))wait+=t.min;
+  const prep=x.prep_min||0,cook=x.cook_min||0;wait=Math.min(wait,prep+cook);const c2=Math.max(0,cook-wait),p2=Math.max(0,prep-Math.max(0,wait-cook));const p3=k>1.01?Math.round(p2*(1+(k-1)/2)/5)*5:p2;return {prep:p3,cook:c2,wait,active:p3+c2}}
+/* frying oil is set by the pot, not the guests: never less than the recipe's own amount */
+const ingQ=(i,k)=>/\bfor (deep[- ])?frying\b/i.test(i.item)?Math.max(i.q,i.q*k):i.q*k;
 /* a dish's own ingredients, scaled to the guests */
 function dishIng(x,k){return dishIngList(x,k).join(", ")}
-function dishIngList(x,k){return (x.ingredients||[]).map(i=>{if(i.q==null)return i.item;const q=i.q*k;if(!i.u)return planQty(q,"")+" "+(q>1.01?planPlural(i.item,q):planOne(i.item));return planQty(q,i.u)+" "+i.item})}
+function dishIngList(x,k){return (x.ingredients||[]).map(i=>{if(i.q==null)return i.item;const q=ingQ(i,k);if(!i.u)return planQty(q,"")+" "+(q>1.01?planPlural(i.item,q):planOne(i.item));return planQty(q,i.u)+" "+i.item})}
 /* counts in a method step follow the guests: "fill four tall glasses" for 4 becomes "fill eight tall glasses" for 8; times, heat and sizes stay put */
 const NUMW=["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty"];
-const STEP_NOUN="glass|glasses|cup|cups|mug|mugs|bowl|bowls|plate|plates|meatballs?|patties|patty|burgers?|skewers?|kebabs?|balls?|rolls?|buns?|tacos?|tortillas?|wraps?|portions?|pieces?|slices?|wedges?|squares?|triangles?|fingers?|cookies?|biscuits?|cupcakes?|muffins?|scones?|pancakes?|crepes?|sandwiches|sandwich|toasties?|pies?|tarts?|parcels?|dumplings?|rissoles?|fritters?|cakes?|bars?|cones?|scoops?|shots?|jars?|ramekins?|moulds?|molds?|serves|servings|people|pizzas?|bases|nests|stacks?|sliders?|hot dogs?|dogs?|sausages?|chops?|steaks?|fillets?|cutlets?|wings?|drumsticks?|lollies|lolly|ice blocks?|popsicles?|lettuce cups";
+const STEP_NOUN="cubes?|chunks?|strips?|rounds?|discs?|logs?|eggs?|glass|glasses|cup|cups|mug|mugs|bowl|bowls|plate|plates|meatballs?|patties|patty|burgers?|skewers?|kebabs?|balls?|rolls?|buns?|tacos?|tortillas?|wraps?|portions?|pieces?|slices?|wedges?|squares?|triangles?|fingers?|cookies?|biscuits?|cupcakes?|muffins?|scones?|pancakes?|crepes?|sandwiches|sandwich|toasties?|pies?|tarts?|parcels?|dumplings?|rissoles?|fritters?|cakes?|bars?|cones?|scoops?|shots?|jars?|ramekins?|moulds?|molds?|serves|servings|people|pizzas?|bases|nests|stacks?|sliders?|hot dogs?|dogs?|sausages?|chops?|steaks?|fillets?|cutlets?|wings?|drumsticks?|lollies|lolly|ice blocks?|popsicles?|lettuce cups";
 const STEP_RE=new RegExp("\\b(\\d{1,3}|"+NUMW.slice(1).join("|")+")((?:\\s+[a-z-]+){0,2}?)\\s+("+STEP_NOUN+")\\b","gi");
 const STEP_AMT=/\b(\d+(?:\.\d+)?)\s?(kg|g|ml|l)\b(?!\s*(?:tin|can|jar|bottle|packet|pack|tub|block|bag)s?\b)/gi;
 function scaleStep(t,k){if(!k||Math.abs(k-1)<0.01)return t;return String(t).split(/(?<=[.!?])\s+/).map(sn=>scaleOne(sn,k)).join(" ")}
@@ -1080,7 +1086,7 @@ function planHTML(f){
   <div class="pl-row pl-diet"><label class="pl-t"><input type="checkbox" data-diet="veg"${DIET.veg?" checked":""}><span>Vegetarian</span></label><label class="pl-t"><input type="checkbox" data-diet="af"${dietAF()?" checked":""}${kidsMode?" disabled":""}><span>No alcohol${kidsMode?" (kids mode)":""}</span></label></div>
   <details class="pl-pick"${planOpen()?" open":""}><summary><span class="pl-sum">${planCount(r)}</span><span class="pl-tw">Choose dishes</span></summary>
   <p class="pl-hint">Tick what you want to make tonight. The prep sheet, shopping list and times follow your picks.${DIET.veg||dietAF()?" Dishes that don't fit are swapped for their own version, or left off so you can choose.":""}</p>
-  ${(()=>{const LB=planLabels(f),HS=planHouse(f);return ["s","m","w","d","c"].map(c=>{const ds=all.filter(d=>d.course===c),hs=HS.filter(h=>h.course===c);return ds.length||hs.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.orig||d.n)}"${planOn(d)?" checked":""}><span>${ESC(LB[d.orig||d.n]&&!d.tag?LB[d.orig||d.n]:d.n)}${d.tag&&!/alcohol-free|vegetarian/i.test(d.n)?`<em class="pl-tag">${TAG[d.tag]}</em>`:""}${d.blocked?`<em class="pl-tag pl-no">${BLK[d.blocked]}</em>`:""}</span><small>${d.extra?"From the menu":(t=>planMin(t.active)+(t.wait?" + "+planMin(t.wait)+" wait":""))(dishTimes(d))}</small></label>`).join("")}${hs.map(h=>`<p class="pl-d pl-house"><span>${ESC(h.n)}<em class="pl-tag">house standard</em></span><small>Served as is</small></p>`).join("")}</fieldset>`:""}).join("")})()}</details>`;
+  ${(()=>{const LB=planLabels(f),HS=planHouse(f);return ["s","m","w","d","c"].map(c=>{const ds=all.filter(d=>d.course===c),hs=HS.filter(h=>h.course===c);return ds.length||hs.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.orig||d.n)}"${planOn(d)?" checked":""}><span>${ESC(LB[d.orig||d.n]&&!d.tag?LB[d.orig||d.n]:d.n)}${d.tag&&!/alcohol-free|vegetarian/i.test(d.n)?`<em class="pl-tag">${TAG[d.tag]}</em>`:""}${d.blocked?`<em class="pl-tag pl-no">${BLK[d.blocked]}</em>`:""}</span><small>${d.extra?"From the menu":(t=>planMin(t.active)+(t.wait?" + "+planMin(t.wait)+" wait":""))(dishTimes(d,PLAN.guests/((f._r2&&f._r2.serves)||4)))}</small></label>`).join("")}${hs.map(h=>`<p class="pl-d pl-house"><span>${ESC(h.n)}<em class="pl-tag">house standard</em></span><small>Served as is</small></p>`).join("")}</fieldset>`:""}).join("")})()}</details>`;
 }
 function planCount(r){const f=current,all=r.dishes.map(dietDish).concat(f?planExtras(f).map(dietDish):[]),on=all.filter(planOn).length;return `${on} of ${all.length} dishes picked`}
 function planOpen(){try{return localStorage.getItem("mns-plan-open")==="1"}catch(e){return false}}
@@ -1098,9 +1104,9 @@ function prepHTML2(f,menu){
   for(const x of planShopping(f)){const [n,a]=x.split("@");(groups[a]=groups[a]||[]).push(n)}
   const tk=sharedTicks(f);
   const shop=AISLES.filter(a=>groups[a]).map(a=>`<div class="pp-aisle"><h4>${a}</h4><ul>${groups[a].map(x=>{const k=tickKey(x),on=!!tk[k];return `<li role="checkbox" tabindex="0" aria-checked="${on}" data-k="${ESC(k)}"${on?' class="pp-done"':""}><span class="pp-box"></span>${ESC(x)}</li>`}).join("")}</ul></div>`).join("");
-  const TT=ds.map(dishTimes),hands=TT.reduce((s,x)=>s+x.prep,0),longest=TT.reduce((m,x)=>Math.max(m,x.active),0),waitMax=TT.reduce((m,x)=>Math.max(m,x.wait),0);
+  const TT=ds.map(x=>dishTimes(x,x.snack?PLAN.guests/4:K)),hands=TT.reduce((s,x)=>s+x.prep,0),longest=TT.reduce((m,x)=>Math.max(m,x.active),0),waitMax=TT.reduce((m,x)=>Math.max(m,x.wait),0);
   const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"},K=PLAN.guests/((f._r2&&f._r2.serves)||4);const LBp=planLabels(f);
-  const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const T=dishTimes(x),kk=x.snack?PLAN.guests/4:K,hot=(x.steps||[]).some(s=>HEAT_RE.test(s.text));
+  const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const kk=x.snack?PLAN.guests/4:K,T=dishTimes(x,kk),hot=(x.steps||[]).some(s=>HEAT_RE.test(s.text));
     const time=x.extra?"From the printed menu, buy to suit":hot&&T.cook?`Prep ${planMin(T.prep)}, cook ${planMin(T.cook)}`:`Takes ${planMin(T.prep+T.cook)}`;
     const ing=dishIngList(x,kk);
     return `<li><b>${ESC(LBp[x.orig||x.n]&&!x.tag?LBp[x.orig||x.n]:x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">${time}${T.wait?`, then ${planMin(T.wait)} ${waitWords(x)}`:""}</span>${x.make_ahead?`<span class="pp-ahead"><b>Make ahead</b> ${ESC(degC(x.make_ahead))}</span>`:""}${ing.length?`<div class="pp-ing"><b>You need</b><ul>${ing.map(g=>`<li>${ESC(degC(g))}</li>`).join("")}</ul></div>`:""}<ol class="pp-steps">${(x.steps||[]).map(s=>`<li>${ESC(degC(scaleStep(s.text,kk)))}${s.min?` <span class="pp-t">${planMin(s.min)}</span>`:""}</li>`).join("")}</ol></li>`}).join("");
