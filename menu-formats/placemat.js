@@ -233,7 +233,8 @@ window.MENU_FORMATS.placemat=ctx=>{
   const kicker=family?"Kids' menu":(eg==="e40"?"Bill of fare":eg==="e70"?"Our menu":"Tonight's menu");
   const tz=sizes(menu,590);
   const stills=(ctx.stills||[]).filter(Boolean);
-  const pr=(k,i)=>{if(k==="m"&&i===0&&num.length===2)return num[0]+"."+num[1]+"0";if(k==="m"&&i===0&&num.length===3)return num[0]+"."+num.slice(1);return eraPrice(price(k,i,yy),f.year,1985)};
+  /* the film's number only sets the cents of the first main, on the period price */
+  const pr=(k,i)=>{const v=eraPrice(price(k,i,yy),f.year,1985);if(k==="m"&&i===0&&num){const d=String(v).match(/^(\d+)\.\d\d$/);if(d)return d[1]+"."+num.slice(-2).padStart(2,"0")}return v};
   const caps=L.caps?"text-transform:uppercase;":"";
   const spread=L.printSpread?"text-shadow:0 0 .6px currentColor;":"";
   const tex=op=>`<div style="position:absolute;inset:0;background:url('${NOISE}') 0 0/300px;opacity:${op};mix-blend-mode:multiply;pointer-events:none"></div>`;

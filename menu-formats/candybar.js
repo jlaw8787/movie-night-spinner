@@ -101,8 +101,12 @@ window.MENU_FORMATS[ID]=ctx=>{
   const keys=["s","m","w","d"].filter(k=>(menu[k]||[]).length);
   const nIt=keys.reduce((a,k)=>a+menu[k].length,0),heavy=nIt>8;
   const PR={s:["4.50","5.25","3.95","4.75"],m:["7.95","8.50","6.95","7.25"],w:["3.25","3.75","2.95","3.50"],d:["3.50","2.95","3.95","3.25"]};
-  const price=(k,i)=>k==="m"&&i===0&&num?(num.length===1?num+".95":num.length===2?num[0]+"."+num[1]+"5":num[0]+"."+num.slice(1)):eraPrice(PR[k][i%4],f.year,2008);
-  const combo="12."+(yy||"50");
+  /* the film's number only sets the cents of the first main, on the period price */
+  const price=(k,i)=>{const v=eraPrice(PR[k][i%4],f.year,2008);if(k==="m"&&i===0&&num){const d=String(v).match(/^(\d+)\.\d\d$/);if(d)return d[1]+"."+num.slice(-2).padStart(2,"0")}return v};
+  /* one of each board, a little under the sum of the first item on each, so it sits on the same period scale; the year only sets the cents */
+  const val=v=>/¢$/.test(v)?parseFloat(v)/100:parseFloat(v)||0;
+  const sum=keys.reduce((a,k)=>a+val(price(k,0)),0)*.9;
+  const combo=sum<1?Math.max(5,Math.round(sum*20)*5)+"¢":Math.max(1,Math.floor(sum))+"."+(yy||"50");
   let boardBg,boardInk,boardEdge,boardHead,headInk,priceInk,noteInk;
   if(E.board==="felt"){boardBg=`repeating-linear-gradient(180deg,#141414 0 7px,#0a0a0a 7px 9px)`;boardInk="#f5f2ea";boardEdge=`6px solid #2a2a2a;outline:2px solid #8f8f8f`;boardHead=toHex(mix(pa,[0,0,0],.25));headInk=readable("#f5f2ea",toHex(mix(pa,[0,0,0],.25)),4.5);priceInk="#f5f2ea";noteInk="#cfc9bb"}
   else if(E.board==="acrylic"){const bg=mix(lit,[255,248,225],.55);boardBg=`radial-gradient(ellipse at 50% 40%,${toHex(mix(bg,[255,255,255],.35))},${toHex(bg)})`;boardInk=readable("#3a2210",toHex(bg),7);boardEdge=`5px solid #3b2a18`;boardHead=toHex(mix(pa,[0,0,0],.45));headInk=readable("#fff1d6",toHex(mix(pa,[0,0,0],.45)),4.5);priceInk=readable(toHex(mix(pa,[0,0,0],.4)),toHex(bg),4.5);noteInk=readable("#5a3e24",toHex(bg),4.5)}

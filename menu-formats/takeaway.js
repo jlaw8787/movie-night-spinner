@@ -168,7 +168,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const LAB=fam?{s:"Starters",m:"Mains",w:"Sweets",d:"Drinks"}:{s:"Starters",m:"Mains",w:"Sweets",d:"Drinks"};
   const BASE={s:1,m:20,w:40,d:60};
   const PR={s:["6.50","7.20","5.90","6.80"],m:["14.90","16.50","13.80","15.20"],w:["6.40","5.90","6.80","5.50"],d:["4.50","3.90","4.80","4.20"]};
-  const price=(k,i)=>k==="m"&&i===0&&num&&num.length<=2?"1"+num.padStart(2,"0")[0]+"."+num.padStart(2,"0")[1]+"0":eraPrice(PR[k][i%4],f.year,2012);
+  /* the film's number only sets the cents of the first main, on the period price */
+  const price=(k,i)=>{const v=eraPrice(PR[k][i%4],f.year,2012);if(k==="m"&&i===0&&num){const d=String(v).match(/^(\d+)\.\d\d$/);if(d)return d[1]+"."+num.slice(-2).padStart(2,"0")}return v};
   const keys=["s","m","w","d"].filter(k=>(menu[k]||[]).length);
   const nIt=keys.reduce((a,k)=>a+menu[k].length,0),heavy=nIt>9;
   const wt=k=>menu[k].reduce((a,it)=>a+1.4+Math.ceil(clean(it.n).length/26)+(it.note?Math.ceil(clean(it.note).length/34):0),0)+1.5;

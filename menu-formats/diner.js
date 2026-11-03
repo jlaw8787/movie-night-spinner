@@ -79,8 +79,9 @@ window.MENU_FORMATS.diner=ctx=>{
   const K={night:"#0d1014",ink:"#161a20",paper:night?"#ebe6d8":ek==="modern"?"#fbfaf6":"#f4ead2",bone:"#d8d1bf",mute:"#5a5d63"};
   const yy=String(f.year||"").slice(-2).padStart(2,"0"),num=String(fl&&fl.number||"").replace(/\D/g,"");
   const price=(k,n)=>periodPrice(PRICE[k],f.year,hash(n));
-  const special={};if(num.length===2&&menu.d&&menu.d[0])special.d0=(2+hash(menu.d[0].n)%3)+"."+num;
-  if((num.length===3||num.length===4)&&menu.m&&menu.m[0])special.m0=(+num/100).toFixed(2);
+  const special={};if(num.length===2&&menu.d&&menu.d[0]){const pv=String(price("d",menu.d[0].n)),d=pv.match(/^(\d+)\./);special.d0=d?d[1]+"."+num:/¢$/.test(pv)?(+num)+"¢":pv}
+  /* a three or four digit film number only sets the cents of the special, on the period price ("1938" on a 1.25 main reads 1.38) */
+  if((num.length===3||num.length===4)&&menu.m&&menu.m[0]){const pv=String(price("m",menu.m[0].n)),d=pv.match(/^(\d+)\./);if(d)special.m0=d[1]+"."+num.slice(-2)}
   const W=fl&&fl.winks||[],venue=(fl&&fl.venue)||(night?"Last Light Diner":"Blue Plate Diner"),signTxt=fl&&fl.sign?ESC(fl.sign):"Route 13 &nbsp;/&nbsp; Mile 66";
   const photo=(ERAPHOTO[ek](era||"")+(PHOTO[T]||"")).trim();
   const wear=T==="gritty"||T==="scrappy"?1:T==="eerie"?.85:night?.6:.35;
