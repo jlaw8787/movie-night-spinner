@@ -80,6 +80,7 @@ function money(era,k,i,f){const e=ERA[era],v=e.P[k][i%4],y=yy(f);
   return era==="modern"&&Number.isInteger(v)?String(v):v.toFixed(2)}
 
 window.MENU_FORMATS=window.MENU_FORMATS||{};
+const low1=w=>/^(The|A|An|Some|Every|His|Her|Their|Its|One|Two|Three|That|This|How|Why|What|Where|When) /.test(w)?w.charAt(0).toLowerCase()+w.slice(1):w; /* names keep their capitals */
 window.MENU_FORMATS["club"]=ctx=>{
   const f=ctx.f||{},fl=ctx.flavour||null,era=eraOf(ctx.era),e=ERA[era],T=TONE[ctx.tone]||TONE.warm;
   loadFonts("club-"+era,[e.disp+(e.dw?(e.ital?":ital,wght@1,":":wght@")+e.dw:""),e.body+":wght@"+e.bw,e.sig]);
@@ -167,7 +168,7 @@ window.MENU_FORMATS["club"]=ctx=>{
       ${centered?`<div style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:var(--dl,3);overflow:hidden;font-family:${BODY};font-weight:700;color:${INK};line-height:1.15;${fs(dish,14)}">${esc(it.n)} <span style="color:${ACC};white-space:nowrap">${money(era,c.k,i,f)}</span></div>`
         :`<div style="display:flex;align-items:baseline;gap:12px"><div style="flex:1;min-width:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:var(--dl,3);overflow:hidden;font-family:${BODY};font-weight:700;color:${INK};line-height:1.15;${fs(dish,14)}">${esc(it.n)}</div><div style="font-family:${BODY};font-weight:700;color:${c.k==="d"?ACC2:ACC};${fs(dish,14)};white-space:nowrap">${money(era,c.k,i,f)}</div></div>`}
       <div style="display:var(--nd,block);font-family:${BODY};${e.body==="Cormorant Garamond"?"font-style:italic;":""}color:${mix(INK,STOCK,.3)};line-height:1.28;${fs(desc,14)};margin-top:2px">${esc(it.note)}</div></div>`).join("")}</div>`).join("");
-  const rules=[family?"Minimum one dessert per table":"Two drink minimum at the stage tables","Cover charge after nine",winks[0]?"No discussing "+winks[0].charAt(0).toLowerCase()+winks[0].slice(1)+" at the tables":"",`Card No. ${num}`].filter(Boolean).join(". ")+".";
+  const rules=[family?"Minimum one dessert per table":"Two drink minimum at the stage tables","Cover charge after nine",winks[0]?"No discussing "+low1(winks[0])+" at the tables":"",`Card No. ${num}`].filter(Boolean).join(". ")+".";
   const face1=`<div style="position:absolute;inset:0;overflow:hidden">${stock}
     <div style="position:absolute;left:0;top:0;width:${W}px;height:${SH}px;overflow:hidden;${fade}">${photo(ctx,s1,W,SH,filt,"50% 40%")}${lamps}
       <div style="position:absolute;right:${PAD}px;top:${PAD-6}px;font-family:${BODY};font-weight:700;font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.6);padding:5px 10px">On stage tonight</div></div>

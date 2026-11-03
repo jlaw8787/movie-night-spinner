@@ -115,6 +115,7 @@ function money(era,k,i,f){const e=ERA[era],v=e.P[k][i%4],y=yy(f);if(e.cents)retu
 const LABEL={s:"Starters",m:"Blue Plates",w:"Pie and Sweets",d:"Coffee and Pop"};
 
 window.MENU_FORMATS=window.MENU_FORMATS||{};
+const low1=w=>/^(The|A|An|Some|Every|His|Her|Their|Its|One|Two|Three|That|This|How|Why|What|Where|When) /.test(w)?w.charAt(0).toLowerCase()+w.slice(1):w; /* names keep their capitals */
 window.MENU_FORMATS["motel"]=ctx=>{
   const f=ctx.f||{},fl=ctx.flavour||null,era=eraOf(ctx.era),e=ERA[era],T=TONE[ctx.tone]||TONE.warm;
   const sigF=era==="1930s-40s"||era==="1950s"?"Mr Dafoe":"Caveat";
@@ -284,7 +285,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
       <div style="font-family:${DISP};font-weight:${e.dw||400};color:${ACC};font-size:${venue.length>24?26:32}px;line-height:1.05;margin:4px 0 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(venue)}</div>
       ${n<=10?`<div style="font-family:${BODY};font-weight:600;color:${e.ink};font-size:16px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">Coffee shop, open early and late</div>`:`<div style="height:6px"></div>`}
       <div data-fit style="flex:1;min-height:0;overflow:hidden">${menuHtml}</div>
-      <div style="font-family:${BODY};font-size:14px;line-height:1.25;color:${mix(e.ink,e.paper,.3)};margin-top:6px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">${esc(["Prices subject to change",winks[0]?"Ask the desk about "+winks[0].charAt(0).toLowerCase()+winks[0].slice(1):"",`Card No. ${num}`].filter(Boolean).join(". ")+".")}</div>
+      <div style="font-family:${BODY};font-size:14px;line-height:1.25;color:${mix(e.ink,e.paper,.3)};margin-top:6px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">${esc(["Prices subject to change",winks[0]?"Ask the desk about "+low1(winks[0]):"",`Card No. ${num}`].filter(Boolean).join(". ")+".")}</div>
     </div>
     <div style="position:absolute;left:${LW+46}px;top:26px;bottom:26px;width:2px;background:${mix(e.ink,e.paper,.55)}"></div>
     ${stamp}${postmark}
