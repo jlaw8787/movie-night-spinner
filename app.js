@@ -443,7 +443,8 @@ function cardBlurb(f,it){
   const same=(a,b)=>(a||"").replace(/[^a-z0-9]/gi,"").toLowerCase()===(b||"").replace(/[^a-z0-9]/gi,"").toLowerCase();
   for(const k of ["S","M","W","K"])for(const d of f[k]||[])if(d[0]===it.n&&d[2]){const b=shortHow(d[2]);if(!same(b,it.note))return b;return d[1]&&!same(d[1],it.note)?d[1].charAt(0).toUpperCase()+d[1].slice(1)+(/[.!?]$/.test(d[1])?"":"."):""}
   const b=it.how?shortHow(it.how):"";return same(b,it.note)?"":b}
-const AISLES=["Meat","Seafood","Deli","Produce","Dairy","Bakery","Frozen","Pantry","Lollies and snacks","Drinks","Bottle shop"];
+const AISLES=["Meat","Seafood","Deli","Produce","Dairy","Bakery","Frozen","Pantry","Lollies and snacks","Drinks","Bottle shop","For the extras, buy to suit"];
+const TASTE=AISLES[AISLES.length-1];
 function shopGroups(menu){
   const groups={};
   const shopping=[...(menu.shopping||[...menu.s,...menu.m,...menu.w,...menu.d].flatMap(it=>it.shop||[])),...(menu.counter||[])];
@@ -1015,7 +1016,11 @@ function planOne(item){const w=String(item).split(" ");const i=w.slice(0,3).find
 /* one shopping line per ingredient: the same item from two dishes is added up, and a mix of units shows as "100g + 2 tbsp" */
 const planSing=w=>/ies$/.test(w)?w.slice(0,-3)+"y":/(ch|sh|x|ss|o)es$/.test(w)?w.slice(0,-2):/[^s]s$/.test(w)?w.slice(0,-1):w;
 const planKey=item=>String(item).toLowerCase().split(/,| \(/)[0].replace(/\s+/g," ").trim().replace(/^(cold|chilled|fresh|warm|hot|room temperature|softened|melted|extra)\s+/,"").split(" ").map(planSing).join(" ");
-function planShopping(f){const k=PLAN.guests/((f._r2&&f._r2.serves)||4);return shopLines(planDishes(f).map(d=>({d,k})))}
+function planShopping(f){const k=PLAN.guests/((f._r2&&f._r2.serves)||4),ds=planDishes(f),base=ds.filter(d=>!d.extra);
+  /* the card's extra dishes have no tested amounts: anything a measured recipe already buys merges in, the rest gets its own group so the main list stays exact */
+  const have=new Set(base.flatMap(d=>(d.ingredients||[]).map(i=>planKey(i.item)))),taste=[],seen=new Set();
+  for(const d of ds.filter(d=>d.extra))for(const i of d.ingredients||[]){const key=planKey(i.item);if(have.has(key)||seen.has(key))continue;seen.add(key);taste.push(i.item+"@"+TASTE)}
+  return shopLines(base.map(d=>({d,k}))).concat(taste)}
 function shopLines(list){
   const tally={},order=[];
   for(const {d,k} of list)for(const i of d.ingredients||[]){
@@ -1083,7 +1088,7 @@ function prepHTML2(f,menu){
   const TT=ds.map(dishTimes),hands=TT.reduce((s,x)=>s+x.prep,0),longest=TT.reduce((m,x)=>Math.max(m,x.active),0),waitMax=TT.reduce((m,x)=>Math.max(m,x.wait),0);
   const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"},K=PLAN.guests/((f._r2&&f._r2.serves)||4);const LBp=planLabels(f);
   const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const T=dishTimes(x),kk=x.snack?PLAN.guests/4:K,hot=(x.steps||[]).some(s=>HEAT_RE.test(s.text));
-    const time=x.extra?"From the printed menu, buy to taste":hot&&T.cook?`Prep ${planMin(T.prep)}, cook ${planMin(T.cook)}`:`Takes ${planMin(T.prep+T.cook)}`;
+    const time=x.extra?"From the printed menu, buy to suit":hot&&T.cook?`Prep ${planMin(T.prep)}, cook ${planMin(T.cook)}`:`Takes ${planMin(T.prep+T.cook)}`;
     const ing=dishIngList(x,kk);
     return `<li><b>${ESC(LBp[x.orig||x.n]&&!x.tag?LBp[x.orig||x.n]:x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">${time}${T.wait?`, then ${planMin(T.wait)} ${waitWords(x)}`:""}</span>${x.make_ahead?`<span class="pp-ahead"><b>Make ahead</b> ${ESC(degC(x.make_ahead))}</span>`:""}${ing.length?`<div class="pp-ing"><b>You need</b><ul>${ing.map(g=>`<li>${ESC(degC(g))}</li>`).join("")}</ul></div>`:""}<ol class="pp-steps">${(x.steps||[]).map(s=>`<li>${ESC(degC(scaleStep(s.text,kk)))}${s.min?` <span class="pp-t">${planMin(s.min)}</span>`:""}</li>`).join("")}</ol></li>`}).join("");
   return `<div class="mc-bg">${d.bg}</div><div class="mc-grain" style="background-image:url('${GRAIN}')"></div>
