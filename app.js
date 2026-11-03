@@ -2968,4 +2968,4 @@ function printTicket(f,api){
 
 /* candy bar photo credits: real photos from Open Food Facts and Wikimedia Commons, each under its own licence */
 function snackCredits(){const l=(window.SNACKS||[]).filter(x=>x.img&&x.credit);if(!l.length)return "";
-  return `<details class="sc-credits"><summary>Photo credits</summary><p>Snack photos are real photos, cropped, used under the licences shown.</p><ul>${l.map(x=>`<li>${ESC(x.n)}: <a href="${ESC(x.credit.url)}" target="_blank" rel="noopener">${ESC(x.credit.by)}</a>, ${ESC(x.credit.lic)}</li>`).join("")}</ul></details>`}
+  return `<details class="sc-credits"><summary>Snack photo credits</summary><p>Snack photos are real photos, cropped, used under the licences shown.</p><ul>${l.map(x=>`<li>${ESC(x.n)}: <a href="${ESC(x.credit.url)}" target="_blank" rel="noopener">${ESC(x.credit.by)}</a>, ${ESC(x.credit.lic)}</li>`).join("")}</ul></details>`}
