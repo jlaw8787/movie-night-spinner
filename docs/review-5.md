@@ -141,3 +141,7 @@ Solid. Skip link first, Enter lands on Spin, Enter spins, focus moves to the "No
 - Galaxy Video end to end: shopfront, signed member card, aisles, staff picks, hire case, rental slip with the blue case.
 - Candy bar craving board with live film counts, and Spin a combo landing on a film that serves it (Burgers to Planes, Trains and Automobiles' diner cheeseburger) (23).
 - Skip link, focus rings, proper tabs and the "Now showing" live region.
+
+## Fixed after the review
+
+- Fix 1, Prep sheet diet switches (4 Nov): flipping Vegetarian or No alcohol on the Prep sheet now redraws the printed card, phone text menu and label straight away, the same as Settings. You stay on the Prep sheet, the dish list stays open and focus stays on the switch. Checked on The Godfather (card swaps to mushroom meatballs and Funghi Marsala; the "best veal in the city" sign is the film's line and stays).

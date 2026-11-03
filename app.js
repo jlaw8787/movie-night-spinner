@@ -1120,7 +1120,7 @@ function planWire(f){
   const redo=()=>{planSave(f);box.querySelector(".pl-g").textContent=PLAN.guests;{const n=box.querySelector(".pl-sum");if(n)n.textContent=planCount(f._r2)}prep.innerHTML=prepHTML(f,current.menu);const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
   box.onclick=e=>{const b=e.target.closest("[data-pl]");if(!b)return;PLAN.guests=Math.min(60,Math.max(1,PLAN.guests+(b.dataset.pl==="+"?1:-1)));redo()};
   const wireToggle=()=>{const dt=box.querySelector(".pl-pick");if(dt)dt.addEventListener("toggle",()=>{try{localStorage.setItem("mns-plan-open",dt.open?"1":"0")}catch(e){}})};wireToggle();
-  box.onchange=e=>{const dk=e.target.dataset.diet;if(dk){DIET[dk]=e.target.checked;dietSave();try{setSync()}catch(_){}const op=box.querySelector(".pl-pick"),was=op&&op.open;box.innerHTML=planHTML(f);if(was){const o2=box.querySelector(".pl-pick");if(o2)o2.open=true}wireToggle();redo();return}
+  box.onchange=e=>{const dk=e.target.dataset.diet;if(dk){DIET[dk]=e.target.checked;dietSave();try{setSync()}catch(_){}const op=box.querySelector(".pl-pick"),was=op&&op.open;box.innerHTML=planHTML(f);if(was){const o2=box.querySelector(".pl-pick");if(o2)o2.open=true}wireToggle();redo();if(f===current)dietRedraw(dk);return}
     const n=e.target.dataset.dish;if(n==null)return;const x=planAll(f).find(d=>(d.orig||d.n)===n);
     if(x&&(x.blocked||x.extra)){if(e.target.checked)PLAN.on[n]=1;else delete PLAN.on[n]}else{if(e.target.checked)delete PLAN.off[n];else PLAN.off[n]=1}redo()};
 }
@@ -2767,7 +2767,10 @@ $("setClose").addEventListener("click",()=>dismissModal($("settings")));
 $("settings").addEventListener("click",e=>{if(e.target===$("settings"))dismissModal($("settings"))});
 $("settings").querySelectorAll("[data-sg]").forEach(b=>b.addEventListener("click",()=>{USUAL=Math.min(60,Math.max(1,USUAL+(b.dataset.sg==="+"?1:-1)));try{localStorage.setItem("mns-guests",USUAL)}catch(e){}setSync();$("setMsg").textContent=`New prep sheets start at ${USUAL} guest${USUAL===1?"":"s"}.`}));
 /* the menu on screen follows the diet straight away, not only the next film opened */
-function dietRedraw(){refreshPlan();if(!current||document.body.classList.contains("staged"))return;const t=tab,y=scrollY;show(current,true).then(()=>{if(t==="prep")setTab("prep");scrollTo(0,y)}).catch(()=>{})}
+function dietRedraw(dk){refreshPlan();if(!current||document.body.classList.contains("staged"))return;const t=tab,y=scrollY,open=!!document.querySelector("#planner .pl-pick[open]");
+  return show(current,true).then(()=>{if(t==="prep")setTab("prep");scrollTo(0,y);
+    /* from the Prep sheet switch: keep the dish list open and focus on the switch that was flipped */
+    if(dk){const pb=$("planner"),o=pb&&pb.querySelector(".pl-pick");if(o&&open)o.open=true;const c=pb&&pb.querySelector(`[data-diet="${dk}"]`);if(c)c.focus({preventScroll:true})}}).catch(()=>{})}
 $("setVeg").addEventListener("change",e=>{DIET.veg=e.target.checked;dietSave();dietRedraw()});
 $("setAf").addEventListener("change",e=>{DIET.af=e.target.checked;dietSave();dietRedraw()});
 function clearStubs(){hist=[];try{localStorage.setItem("mns-hist","[]")}catch(e){}renderHist();setSync();try{queueSync()}catch(e){}}
