@@ -1630,7 +1630,7 @@ html{scroll-padding-top:var(--topH,84px)}
   #viewShop .shop-head{display:contents}
   #viewShop .shop-sign{order:2;margin:0 0 8px}
   #viewShop .sv-front{order:1}
-  #viewShop .shop-tools{order:3;position:sticky;top:var(--topH,84px);z-index:15;margin:0 -16px 12px;padding:10px 16px;background:#0b1236;box-shadow:0 8px 16px -8px rgba(0,0,0,.7);flex-wrap:nowrap;align-items:flex-start}
+  #viewShop .shop-tools{order:3;position:sticky;top:0;z-index:15;margin:0 -16px 12px;padding:max(8px,env(safe-area-inset-top,0px)) 10px 10px;border-radius:0 0 16px 16px;background:var(--gv-night);box-shadow:0 12px 18px -10px rgba(0,0,0,.75),0 1px 0 rgba(217,201,242,.16);flex-wrap:nowrap;align-items:flex-start}
   #viewShop .shop-tools input[type=search]{flex:1 1 auto;min-height:44px}
   #viewShop .shop-filt{display:block;flex:none;position:relative}
   #viewShop .shop-filt>summary{display:flex;align-items:center;gap:6px;min-height:44px;padding:0 14px;border-radius:8px;border:2px solid #ffd23f;background:#ffd23f;color:#14204f;font:400 14px var(--f-board);letter-spacing:.04em;cursor:pointer;list-style:none}
@@ -2805,7 +2805,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=59d00c51" defer></script>
 <script src="formats-core.js?v=073f01a6" defer></script>
-<script src="app.js?v=3f8c3118" defer></script>
+<script src="app.js?v=4015aacb" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

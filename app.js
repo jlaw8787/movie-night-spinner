@@ -2726,7 +2726,7 @@ renderFav();setSync();
   addEventListener("resize",()=>{if(!matchMedia("(max-width:700px)").matches)filt.open=true})}}
 /* video store on phone: after a search or filter change, bring the results up under the pinned search */
 {const narrow2=()=>matchMedia("(max-width:700px)").matches,tools=document.querySelector("#viewShop .shop-tools"),cnt=$("shopCount");
- const toResults=()=>{if(!narrow2()||!tools||!cnt)return;const off=(parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--topH"))||84)+tools.offsetHeight+8,y=cnt.getBoundingClientRect().top;if(y<off||y>innerHeight*.6)scrollTo({top:scrollY+y-off,behavior:"smooth"})};
+ const toResults=()=>{if(!narrow2()||!tools||!cnt)return;const off=8+tools.offsetHeight+8,y=cnt.getBoundingClientRect().top;if(y<off||y>innerHeight*.6)scrollTo({top:scrollY+y-off,behavior:"smooth"})};
  let t=0;const later=()=>{clearTimeout(t);t=setTimeout(toResults,250)};
  const s=$("shopSearch");if(s)s.addEventListener("input",later);
  ["shopDecade","shopSvc","shopUnwatched","shopKids"].forEach(id=>{const el=$(id);if(el)el.addEventListener("change",later)})}
