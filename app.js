@@ -765,12 +765,23 @@ function pvGo(i){
   card.style.transition="opacity .15s";card.style.opacity="0";
   setTimeout(()=>{pvFace=i;card.style.transition="none";scalePreview();requestAnimationFrame(()=>{card.style.transition="opacity .15s";card.style.opacity="";setTimeout(()=>{card.style.transition=""},200)})},150);
 }
+/* half views of a wide page: text the view edge cuts so that less than 60% shows ("Parr", "DUMB") is hidden, so the edge reads as a clean peek */
+function pvMask(f,k){const key=f&&f.part?f.part+"|"+card.innerHTML.length:"";if(card.dataset.pvm===key)return;card.dataset.pvm=key;
+  card.querySelectorAll(".pv-off").forEach(e=>e.classList.remove("pv-off"));if(!key)return;
+  const b=f.el.getBoundingClientRect(),lo=f.x,hi=f.x+f.w,off=[];
+  const rg=document.createRange();
+  for(const e of f.el.querySelectorAll("*")){const tn=[...e.childNodes].filter(n=>n.nodeType===3&&n.textContent.trim());if(!tn.length)continue;
+    /* measure the words themselves, not the box around them */
+    let l=1e9,rt=-1e9;for(const n of tn){rg.selectNodeContents(n);for(const r of rg.getClientRects()){if(r.width){l=Math.min(l,r.left);rt=Math.max(rt,r.right)}}}
+    if(rt<l)continue;l=(l-b.left)/k;rt=(rt-b.left)/k;const w=rt-l,seen=Math.min(rt,hi)-Math.max(l,lo);
+    if(seen<w-1&&(seen/w<.6||(l+rt)/2<lo||(l+rt)/2>hi))off.push(e)}
+  off.forEach(e=>e.classList.add("pv-off"))}
 function scalePreview(){if(card.parentNode!==preview)return;const pw=preview.clientWidth;if(!pw)return;
   const fs=tab==="menu"&&swipeW()?cardFaces():[];paintDots(fs.length);
   if(fs.length){pvFace=Math.min(pvFace,fs.length-1);const f=fs[pvFace],k=pw/f.w;preview.classList.add("pv-swipe");
-    card.style.transform=`translate(${-f.x*k+pvDrag}px,${-f.y*k}px) scale(${k})`;prep.style.transform="none";preview.style.height=f.h*k+"px";
+    card.style.transform=`translate(${-f.x*k+pvDrag}px,${-f.y*k}px) scale(${k})`;prep.style.transform="none";preview.style.height=f.h*k+"px";pvMask(f,k);preview.dataset.part=f.part||"";
     preview.setAttribute("aria-label",`Printed menu, page ${pvFace+1} of ${fs.length}. Open it full size`);return}
-  if(preview.classList.contains("pv-swipe")){preview.classList.remove("pv-swipe");preview.setAttribute("aria-label","Open the printed menu full size")}
+  pvMask(null);delete preview.dataset.part;if(preview.classList.contains("pv-swipe")){preview.classList.remove("pv-swipe");preview.setAttribute("aria-label","Open the printed menu full size")}
   const land=card.classList.contains("fmt"),cw=+card.dataset.w||(land?1123:794),ch=+card.dataset.h||(land?794:1123),kc=pw/cw,kp=pw/794;card.style.transform=`scale(${kc})`;prep.style.transform="none";preview.style.height=tab==="prep"?"auto":ch*kc+"px"}
 let tab="menu";
 function setTab(t){tab=t;{const pb=$("planner");if(pb)pb.hidden=!(pb.dataset.has&&t==="prep")}if(t==="menu")phoneOn=true;card.hidden=t!=="menu";prep.hidden=t!=="prep";$("tabMenu").classList.toggle("on",t==="menu");$("tabPrep").classList.toggle("on",t==="prep");$("tabMenu").setAttribute("aria-selected",t==="menu");$("tabPrep").setAttribute("aria-selected",t==="prep");if(window.__spinbarUpd)setTimeout(window.__spinbarUpd,0);if(t==="prep"&&current){if(!prep.querySelector(".pp-cols")&&current.menu){try{styleCard(prep,current);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(current,current.menu)}catch(e){}}fitPrep(prep)}scalePreview();applyPhone()}

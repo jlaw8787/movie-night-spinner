@@ -2575,6 +2575,9 @@ html,body{overflow-x:clip}
 .mz-pg{min-width:7.5em;text-align:center;font:700 13px var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:#f4e6c8}
 /* phones: one page of the printed menu per screen */
 .preview.pv-swipe{touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.preview.pv-swipe .pv-off{visibility:hidden}
+.preview.pv-swipe[data-part="1"]{-webkit-mask-image:linear-gradient(to right,#000 90%,transparent);mask-image:linear-gradient(to right,#000 90%,transparent)}
+.preview.pv-swipe[data-part="2"]{-webkit-mask-image:linear-gradient(to left,#000 90%,transparent);mask-image:linear-gradient(to left,#000 90%,transparent)}
 .preview.pv-swipe.pv-turn .mcard{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
 .pv-dots{display:flex;justify-content:center;gap:2px;margin:6px auto -6px}
 .pv-dots[hidden]{display:none}
@@ -2838,7 +2841,7 @@ html,body{overflow-x:clip}
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=2b779f25" defer></script>
 <script src="formats-core.js?v=590078ae" defer></script>
-<script src="app.js?v=2d3271bf" defer></script>
+<script src="app.js?v=4be842d1" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
