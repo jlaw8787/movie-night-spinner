@@ -1458,7 +1458,8 @@ body::before{content:"";position:fixed;inset:-50%;z-index:60;pointer-events:none
 /* ---------- quick mute in the top bar ---------- */
 .top{position:relative}
 .quick-mute{position:absolute;right:12px;top:50%;transform:translateY(-50%);width:44px;height:44px;display:grid;place-items:center;border-radius:50%;border:2px solid var(--line);background:rgba(0,0,0,.25);color:var(--screen);cursor:pointer}
-.quick-mute:focus-visible{outline:3px solid #ff3d6e;outline-offset:2px}
+.quick-mute:focus-visible{outline:3px solid #e7c069;outline-offset:2px}
+body.in-shop .quick-mute:focus-visible{outline-color:#ff3d6e}
 .quick-mute .qm-off{display:none}.quick-mute.off .qm-on{display:none}.quick-mute.off .qm-off{display:inline}.quick-mute.off{opacity:.7}
 @media (max-width:520px){.top .views{margin-right:52px}.quick-mute{right:6px}}
 /* ---------- candy bar photos ---------- */
@@ -2539,6 +2540,28 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 #viewShop .shop-tools label{background:rgba(27,15,48,.7);padding:6px 12px 6px 6px;gap:10px;min-height:40px}
 /* settings select matches the cinema fields */
 .settings .set-row select{appearance:none;-webkit-appearance:none;padding:8px 34px 8px 12px;border:1px solid #c9bba4;border-radius:8px;background-color:#fff;background-image:linear-gradient(45deg,transparent 50%,#a3182f 50%),linear-gradient(-45deg,transparent 50%,#a3182f 50%);background-position:calc(100% - 18px) 52%,calc(100% - 12px) 52%;background-size:6px 6px;background-repeat:no-repeat;cursor:pointer}
+/* settings: the cinema's dark panel, same as the welcome pop-up (deco heading, gold controls), not a cream sheet */
+.settings .trolley-in{color-scheme:dark;background:linear-gradient(#2a0c12,#17070a);border:1px solid rgba(226,176,79,.38);border-radius:18px;color:#f1e3c4;box-shadow:0 24px 60px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,236,190,.06)}
+.settings h3{font:400 30px/1.1 var(--f-disp);color:#f3dfb4;letter-spacing:.01em}
+.settings h4{color:#e2b04f;margin:18px 0 2px}
+.settings .x{color:#f3dfb4}
+.settings .x:focus-visible{outline:3px solid #e7c069;outline-offset:2px;border-radius:50%}
+.settings .set-row{border-bottom:1px solid rgba(226,176,79,.16);color:#f1e3c4}
+.settings .tp{color:rgba(241,227,196,.68)}
+.settings .set-chk input,.settings .set-row .toggle{--sw-off:rgba(255,236,200,.2);--sw-on:#e2b04f;--sw-knob:#fff7e6;box-shadow:inset 0 0 0 1px rgba(226,176,79,.35)}
+.settings .set-chk input:checked,.settings .set-row .toggle[aria-pressed=true]{--sw-knob:#2a0c12}
+.settings .set-row .toggle:focus-visible,.settings .set-chk input:focus-visible{outline-color:#e7c069}
+.settings .set-row select{background-color:#1c080b;color:#f1e3c4;border-color:rgba(226,176,79,.45);background-image:linear-gradient(45deg,transparent 50%,#e2b04f 50%),linear-gradient(-45deg,transparent 50%,#e2b04f 50%)}
+.settings .set-row select:focus-visible{outline:3px solid #e7c069;outline-offset:2px}
+.settings .set-g .pl-b{width:44px;height:44px;border:1px solid #e2b04f;color:#e2b04f;font:500 24px/1 var(--f-body);display:grid;place-items:center;padding:0 0 3px}
+.settings .set-g .pl-b:focus-visible{outline:3px solid #e7c069;outline-offset:2px}
+.settings .set-g output{color:#f3dfb4}
+.settings .set-acts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+.settings .set-acts button{background:transparent;color:#f1e3c4;border:1px solid rgba(226,176,79,.45);line-height:1.2}
+.settings .set-acts button:hover{background:rgba(226,176,79,.1)}
+.settings .set-acts button:focus-visible{outline:3px solid #e7c069;outline-offset:2px}
+.settings .set-acts .danger{border-color:#e5484d;color:#ff8f8a}.settings .set-acts .danger.arm{background:#c62a2f;border-color:#c62a2f;color:#fff}
+@media (max-width:480px){.settings .set-acts{grid-template-columns:1fr}}
 /* tick boxes in the cinema: brass outline, gold fill, dark tick */
 .watch-panel input[type=checkbox]{appearance:none;-webkit-appearance:none;width:22px;height:22px;flex:none;margin:0;border-radius:5px;border:2px solid #b8923f;background:transparent;display:inline-grid;place-items:center;cursor:pointer}
 .watch-list input[type=checkbox]{border-color:#8a6a3a;background:#fff}
@@ -2760,7 +2783,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
     <div class="set-row"><span>Sound</span><button class="toggle" id="sound" type="button" aria-pressed="false">Sound off</button></div>
     <div class="set-row"><label for="svcSel">Streaming on</label><select id="svcSel"><option value="">Any film</option></select></div>
     <h4>Dinner</h4>
-    <div class="set-row"><span>Usual guests</span><span class="set-g"><button type="button" class="pl-b" data-sg="-" aria-label="Fewer guests">-</button><output id="setGuests">4</output><button type="button" class="pl-b" data-sg="+" aria-label="More guests">+</button></span></div>
+    <div class="set-row"><span>Usual guests</span><span class="set-g"><button type="button" class="pl-b" data-sg="-" aria-label="Fewer guests">−</button><output id="setGuests">4</output><button type="button" class="pl-b" data-sg="+" aria-label="More guests">+</button></span></div>
     <label class="set-row set-chk"><span>Vegetarian</span><input type="checkbox" role="switch" id="setVeg"></label>
     <label class="set-row set-chk"><span>No alcohol</span><input type="checkbox" role="switch" id="setAf"></label>
     <p class="tp">Every film's prep sheet and shopping list start from these. You can still change them on the Prep tab.</p>
