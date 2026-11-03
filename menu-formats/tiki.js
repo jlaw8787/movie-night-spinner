@@ -275,7 +275,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     </div>
     <div data-box style="position:absolute;left:34px;top:1098px;width:532px;height:84px;overflow:hidden;border-top:3px double ${C.ink};padding-top:6px;box-sizing:border-box">
       <div data-fs="17" data-min="14" style="font:${ty.bw} 17px ${ty.body};line-height:1.25"><b style="font-weight:${ty.cw};color:${C.ink};letter-spacing:.1em;text-transform:uppercase">Ring the gong:</b> ${T(ctx.f.P||"Serve the mains when the torches are lit.")}</div>
-      <div style="font:${ty.bw} 15px ${ty.body};line-height:1.3;opacity:.82;margin-top:2px"><span data-fs="15" data-min="14">Poster and stills: TMDB.</span>${F.winks.slice(0,4).map(w=>` <span data-drop data-fs="15" data-min="14">Overheard at the bar: ${T(w)}.</span>`).join("")}</div>
+      <div style="font:${ty.bw} 15px ${ty.body};line-height:1.3;opacity:.82;margin-top:2px"><span data-fs="15" data-min="14">Poster and stills: TMDB.</span>${F.winks.slice(0,4).map((w,i)=>` <span data-drop data-fs="15" data-min="14">${i?"":"Overheard at the bar: "}${T(w)}.</span>`).join("")}</div>
     </div>
     ${wearLayer(P,tone,seed+20,true)}
   </div>`;

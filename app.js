@@ -1185,8 +1185,10 @@ function libUnclip(card,done){if(done)card.dataset.unclip="1";card.querySelector
   /* last resort for plain fine print: drop whole sentences; if it still cannot fit, hide the line rather than show half a description */
   if(hid()&&e.children.length===0&&(+cs.webkitLineClamp>=2||(+cs.webkitLineClamp===1&&fs<=20))){let t=e.textContent.trim();const sent=t.match(/[^.!?]+[.!?]+/g);while(hid()&&sent&&sent.length>1){sent.pop();e.textContent=sent.join("").trim()}
     /* still over: drop list items off the end at the commas, so it reads "Hummus and eggplant dip, flatbread." not "olives,..." */
-    if(hid()){const parts=e.textContent.trim().replace(/[.!?]+$/,"").split(/,\s+/);while(hid()&&parts.length>1){parts.pop();e.textContent=parts.join(", ")+"."}}
-    if(hid())e.style.display="none";}
+    /* but never down to a stub like "Lamb.": keep at least four words, otherwise let the two-line clamp end it with an ellipsis */
+    if(hid()){const full=e.textContent,parts=full.trim().replace(/[.!?]+$/,"").split(/,\s+/);while(hid()&&parts.length>1){const next=parts.slice(0,-1).join(", ");if(next.split(/\s+/).length<4)break;parts.pop();e.textContent=next+"."}
+      if(hid()&&e.textContent.split(/\s+/).length<4){e.textContent=full;e.style.textOverflow="ellipsis";e.dataset.keep="1"}}
+    if(hid()&&!e.dataset.keep)e.style.display="none";}
  })}
 function libMenu(menu){const m=Object.assign({},menu);for(const c of ["s","m","w","d"])if(Array.isArray(menu[c]))m[c]=menu[c].map(it=>Object.assign({},it,{note:degC(libTrim(it.note,100))}));return m}
 /* menu format library: one script per printed-menu format, fetched the first time a film needs it */

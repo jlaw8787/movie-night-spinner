@@ -262,7 +262,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div data-box style="flex:1;overflow:hidden">${menuCol(["w","d"],cs,era,ty,C,fam)}</div>
     </div>
     <div data-box style="flex:none;height:22px;margin-top:4px;overflow:hidden;text-align:center;white-space:nowrap;font:${ty.bw} 15px ${ty.body};opacity:.85">
-      <span data-fs="15" data-min="14">${fam?"No liquor served. ":""}Poster and stills: TMDB. Bill no. ${esc(F.number)}.</span>${F.winks.slice(0,4).map(w=>` <span data-drop data-fs="15" data-min="14">Talk of the town: ${T(w)}.</span>`).join("")}
+      <span data-fs="15" data-min="14">${fam?"No liquor served. ":""}Poster and stills: TMDB. Bill no. ${esc(F.number)}.</span>${F.winks.slice(0,4).map((w,i)=>` <span data-drop data-fs="15" data-min="14">${i?"":"Talk of the town: "}${T(w)}.</span>`).join("")}
     </div>
     </div>
   </div>`;
