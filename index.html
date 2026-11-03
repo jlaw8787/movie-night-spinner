@@ -2537,6 +2537,10 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 /* skip link: first thing a keyboard reaches, hidden until it has focus */
 .skip-link{position:fixed;left:12px;top:-60px;z-index:100;padding:12px 18px;border-radius:10px;background:#e7c069;color:#24110a;font:700 15px var(--f-body);text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,.5);transition:top .15s}
 .skip-link:focus{top:12px;outline:3px solid #fff3d6;outline-offset:2px}
+/* prep sheet stats as chips: they wrap as whole units, never a stray slash at the start of a line */
+.pp-serves{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.pp-chip{display:inline-block;padding:2px 9px;border:1px solid currentColor;border-radius:999px;line-height:1.5;white-space:nowrap}
+.pp-a4 .pp-chip{padding:0 7px}
 /* printed menu, full size */
 #preview{cursor:zoom-in}
 .tab-prep-on #preview{cursor:auto}
@@ -2819,11 +2823,11 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 
 <script src="tmdb-posters.js?v=050c5f60" defer></script>
 <script src="ratings.js?v=dfb01117" defer></script>
-<script src="aisles.js?v=96b9270c" defer></script>
+<script src="aisles.js?v=6b920a43" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
-<script src="films.js?v=59d00c51" defer></script>
-<script src="formats-core.js?v=073f01a6" defer></script>
-<script src="app.js?v=8cabe469" defer></script>
+<script src="films.js?v=16ab0b78" defer></script>
+<script src="formats-core.js?v=16a06c84" defer></script>
+<script src="app.js?v=c7dd52b4" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

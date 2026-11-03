@@ -3,7 +3,12 @@ import json,os,re,collections
 ROOT=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 G=json.load(open(os.path.join(ROOT,'data/film-genres.json')))
 TH={f"{f['title']} ({f['year']})":f['theme'] for f in json.load(open(os.path.join(ROOT,'data/films.json')))}
+# hand checked: comedy-led capers and buddy cop films the genre order files under Crime (review 2, 3 Nov 2026)
+OVERRIDE={'22 Jump Street (2014)':'Action and cops','48 Hrs. (1982)':'Action and cops','Hot Fuzz (2007)':'Action and cops',
+  'Kingsman: The Secret Service (2014)':'Action and cops','Rumble in the Bronx (1995)':'Action and cops',
+  'Ace Ventura: When Nature Calls (1995)':'Comedy and teen'}
 def aisle(fid,g,th):
+  if fid in OVERRIDE:return OVERRIDE[fid]
   if th=='xmas':return 'Holiday'
   if th=='hero':return 'Superheroes'
   if 'Animation' in g or 'Family' in g[:2]:return 'Family'

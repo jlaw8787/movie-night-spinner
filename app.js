@@ -1035,7 +1035,7 @@ function planHTML(f){
 function planCount(r){const on=r.dishes.map(dietDish).filter(planOn).length;return `${on} of ${r.dishes.length} dishes picked`}
 function planOpen(){try{return localStorage.getItem("mns-plan-open")==="1"}catch(e){return false}}
 /* 175C reads as 175°C, and a lone litre is written "1 L" so it never reads as eleven */
-const degC=t=>String(t).replace(/(\d{2,3})\s?C\b/g,"$1°C").replace(/(\d(?:\.\d+)?)\s?l\b/g,"$1 L");
+const degC=t=>String(t).replace(/(\d{2,3})\s?C\b/g,"$1°C").replace(/(\d(?:\.\d+)?)\s?l\b/g,"$1\u00a0L").replace(/(\d[\d.]*)\s+to\s+(\d[\d.]*)/g,"$1\u00a0to\u00a0$2");
 /* the kind of waiting a dish needs, in plain words: "to chill", "to marinate and rest" */
 const WAIT_WORD=/\b(chill|refrigerate|freeze|soak|marinate|rest|cool|prove|rise|set|steep|infuse)/i,WAIT_TO={refrigerate:"chill",rise:"prove"};
 function waitWords(x){const w=[];for(const t of x.steps||[])if((t.min||0)>=10&&WAIT_RE.test(String(t.text).trim()))for(const m of String(t.text).matchAll(new RegExp(WAIT_WORD.source,"gi"))){const v=WAIT_TO[m[1].toLowerCase()]||m[1].toLowerCase();if(!w.includes(v))w.push(v)}
@@ -1058,7 +1058,7 @@ function prepHTML2(f,menu){
   <div class="mc-in pp">
     <div class="mc-eye">Prep sheet</div>
     <div class="pp-title">${ESC(f.title)}</div>
-    <p class="pp-serves">${[`Serves ${PLAN.guests}`,DIET.veg||dietAF()?[DIET.veg&&"vegetarian",dietAF()&&"alcohol-free"].filter(Boolean).join(", "):"",`${ds.length} dish${ds.length===1?"":"es"}`,`hands-on ${planMin(hands)}`,`longest ${planMin(longest)}`,waitMax?`plus ${planMin(waitMax)} waiting`:""].filter(Boolean).map((x,i)=>`<span class="nw">${i?"/&nbsp;":""}${x}</span>`).join(" &nbsp;")}</p>
+    <p class="pp-serves">${[`Serves ${PLAN.guests}`,DIET.veg||dietAF()?[DIET.veg&&"vegetarian",dietAF()&&"alcohol-free"].filter(Boolean).join(", "):"",`${ds.length} dish${ds.length===1?"":"es"}`,`hands-on ${planMin(hands)}`,`longest ${planMin(longest)}`,waitMax?`plus ${planMin(waitMax)} waiting`:""].filter(Boolean).map(x=>`<span class="pp-chip">${x.replace(/ /g,"&nbsp;")}</span>`).join(" ")}</p>
     <div class="pp-cols"><div class="pp-shop"><h3>Shopping list</h3>${shop||"<p>Tick at least one dish.</p>"}</div><div class="pp-method"><h3>How to make it</h3><ol>${steps}</ol></div></div>
     <div class="mc-cue"><b>Showtime cue</b><span>${ESC(edition&&edition.cue||f.P)}</span></div>
   </div>`;
@@ -1220,7 +1220,9 @@ const LIB_VARY={
   "Luncheon 11.30 till 2.30. Afternoon tea from 3.":["Luncheon 11.30 till 2.30. Afternoon tea from 3.","Luncheon from noon. Afternoon tea 3 till 5.","Morning tea from 10. Luncheon at 12.","Luncheon 12 till 2. High tea from 4.","Open 10 till 5. Afternoon tea from 3."],
   "Honk if you're hungry.":["Honk if you're hungry.","Follow the line.","Order at the window.","Here till we sell out.","Hot through the window."],
   "When it's gone, it's gone.":["When it's gone, it's gone.","Sold out means sold out.","Made in the truck today.","Till the last plate goes."]};
-function libVary(html,f){let h=String(html);for(const k in LIB_VARY){if(!h.includes(k))continue;let x=2166136261;for(const ch of f.title+f.year+k){x^=ch.charCodeAt(0);x=Math.imul(x,16777619)>>>0}/* never longer than the line it replaces, so it always fits the same spot */const v=LIB_VARY[k].filter(x=>x.length<=k.length+2);h=h.split(k).join(v[x%v.length].replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])))}return h}
+/* number ranges never split across lines on a printed menu ("6 to / 8"): non-breaking spaces round "to", text only, never inside tags */
+function nbRange(html){return String(html).replace(/>([^<]+)</g,(m,t)=>">"+t.replace(/(\d[\d.:]*)\s+to\s+(\d[\d.:]*)(\s?(?:am|pm|a\.m\.|p\.m\.|min|mins|minutes|hr|hrs|hours|°C|C)\b)?/g,(x,a,b,u)=>a+"\u00a0to\u00a0"+b+(u?u.replace(/^\s/,"\u00a0"):""))+"<")}
+function libVary(html,f){let h=String(html);for(const k in LIB_VARY){if(!h.includes(k))continue;let x=2166136261;for(const ch of f.title+f.year+k){x^=ch.charCodeAt(0);x=Math.imul(x,16777619)>>>0}/* never longer than the line it replaces, so it always fits the same spot */const v=LIB_VARY[k].filter(x=>x.length<=k.length+2);h=h.split(k).join(v[x%v.length].replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])))}return nbRange(h)}
 /* venue menus carry the venue, not the film's poster: the poster stays in the page around the menu */
 let LIB_POSTER_ON=true;window.LIB_NO_POSTER=!LIB_POSTER_ON;
 async function show(f,preferSig){
@@ -1248,7 +1250,7 @@ async function show(f,preferSig){
   if(spec){
     await fmtFontsReady(spec);if(id!==renderId)return;
     menu=fmtMenu(f,spec);menu.counter=counterShop(f.id);current.menu=menu;
-    styleCard(card,f);card.className="mcard fmt fmt-"+spec.fmt;card.style.transform="";card.innerHTML=fmtHTML(f,spec,menu);dietStamp();{const sh=fmtSheet(spec);if(sh){const z=fmtSheetSize(sh);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}}fmtStarsPNG(card);fmtTilesPNG(card);await fmtPhotocopy(card);if(id!==renderId)return;
+    styleCard(card,f);card.className="mcard fmt fmt-"+spec.fmt;card.style.transform="";card.innerHTML=nbRange(fmtHTML(f,spec,menu));dietStamp();{const sh=fmtSheet(spec);if(sh){const z=fmtSheetSize(sh);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}}fmtStarsPNG(card);fmtTilesPNG(card);await fmtPhotocopy(card);if(id!==renderId)return;
     try{const im=card.querySelector(".fx-poster");if(im)await im.decode()}catch(e){}
     if(id!==renderId)return;
     styleCard(prep,f);prep.classList.add("pp-sheet");prep.innerHTML=prepHTML(f,menu);

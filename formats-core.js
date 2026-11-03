@@ -44,6 +44,8 @@ function fmtHTML(f,spec,menu){const h=FMT_RENDER[spec.fmt](f,spec,menu,lobbyPost
    no prices or leaders (those live on the printed menu), and a clear button opens each method */
 const FMT_COURSES=[["s","Starters"],["m","Mains"],["w","Sweets"],["d","Drinks"]];
 const FMT_CHEV='<svg class="fp-chev" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+/* notes and descriptions read as sentences on the phone menu: capital first letter (the printed layouts style their own) */
+const fmtSentence=t=>{t=String(t||"").trim();return t?t.charAt(0).toUpperCase()+t.slice(1):t};
 /* a method as numbered steps, one sentence a line, so it can be followed at the bench */
 function fmtSteps(how){const t=typeof degC==="function"?degC(how):String(how);const st=t.split(/(?<=[.!?])\s+(?=[A-Z0-9])/).map(x=>x.trim()).filter(Boolean);
   return st.length>1?`<ol class="fp-steps">${st.map(x=>`<li>${ESC(x)}</li>`).join("")}</ol>`:`<p class="fp-step1">${ESC(t)}</p>`}
@@ -55,7 +57,7 @@ function fmtPhoneHTML(f,spec,menu){
   return `<div class="fp fp-${spec.fmt}" style="--fp-top:${P.top};--fp-top-ink:${P.topInk};--fp-paper:${P.paper};--fp-ink:${P.ink};--fp-soft:${P.soft};--fp-acc:${P.accent};--fp-tab:${P.tab};--fp-disp:${P.disp};--fp-name:${P.name};--fp-body:${P.body};--fp-price:${P.price};--fp-title:${P.title};--fp-note:${P.note||P.body}">
     <header class="fp-head"><div><div class="fp-brand">${spec.fmt==="mcdowells"?fmtMcdowellsMark("display:inline-block;width:24px;height:31px;vertical-align:middle;margin-right:7px"):""}${ESC(spec.sign?spec.sign[1]:spec.brand||"")}</div><h2 class="fp-title">${ESC(spec.phoneTitle||f.title)}</h2><p class="fp-tag">${spec.tag||ESC(f.T)}</p><p class="fp-hint">Every recipe serves four.</p></div></header>
     <div class="fp-tabs" role="tablist" aria-label="Menu sections">${secs.map((g,i)=>`<button type="button" role="tab" class="fp-tab" aria-selected="${i===0}" data-g="${i}">${g.h}</button>`).join("")}</div>
-    <div class="fp-body">${secs.map((g,i)=>`<section class="fp-sec" data-g="${i}" ${i?"hidden":""}><h3 class="fp-h">${g.h}</h3>${g.items.map(it=>{const id="fpHow"+(n++);return `<article class="fp-dish"><h4 class="fp-name${P.upper?" up":""}">${name(it)}</h4>${it.desc?`<p class="fp-desc">${ESC(it.desc)}</p>`:""}${it.film?`<p class="fp-film">${ESC(it.film)}</p>`:""}${it.how?`<button type="button" class="fp-more" aria-expanded="false" aria-controls="${id}"><span>How to make it</span>${FMT_CHEV}</button><div class="fp-how" id="${id}" hidden>${fmtSteps(it.how)}</div>`:""}</article>`}).join("")}</section>`).join("")}</div>
+    <div class="fp-body">${secs.map((g,i)=>`<section class="fp-sec" data-g="${i}" ${i?"hidden":""}><h3 class="fp-h">${g.h}</h3>${g.items.map(it=>{const id="fpHow"+(n++);return `<article class="fp-dish"><h4 class="fp-name${P.upper?" up":""}">${name(it)}</h4>${it.desc?`<p class="fp-desc">${ESC(fmtSentence(it.desc))}</p>`:""}${it.film?`<p class="fp-film">${ESC(fmtSentence(it.film))}</p>`:""}${it.how?`<button type="button" class="fp-more" aria-expanded="false" aria-controls="${id}"><span>How to make it</span>${FMT_CHEV}</button><div class="fp-how" id="${id}" hidden>${fmtSteps(it.how)}</div>`:""}</article>`}).join("")}</section>`).join("")}</div>
     <div class="fp-cue"><b>Showtime cue</b><span>${ESC(fmtCue(f))}</span></div>
     <button type="button" class="fp-flip">See the printed menu</button>
   </div>`;
