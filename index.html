@@ -49,6 +49,7 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#spin" id="skipLink">Skip to the wheel</a>
 <title>Movie Night Spinner</title>
 <meta name="description" content="Spin the wheel for tonight's film and get a themed menu to cook, with a shopping list and prep sheet. 900 films to land on.">
 <meta property="og:type" content="website">
@@ -2521,6 +2522,21 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 }
 
 .vb-h:focus{outline:none}.vb-h:focus-visible{outline:3px solid var(--gv-gold,#ffc42e);outline-offset:4px;border-radius:4px}
+
+/* ---------- tap targets: every control at least 44px tall. Where a bigger box would change the look (small links, switches,
+   the aisle signs on the store photo, the checklist ticks), the tap area grows instead of the drawing ---------- */
+.views button,#motwOpen,#motwLock,#weekPanel .week-acts button,.tab,.stage .btn,.stage .toggle,.aisle-spin,.sc-add,.sc-cats button,
+.crave .crave-chips button,#viewShop .shop-tools select,#memberCard button,.watch-panel summary,#svFri,.sc-go,.sc-spin{min-height:44px}
+.watch-panel summary{display:flex;align-items:center}
+.where-more,#howBtn,.howlink,.tmdb-logo,.sv-hang,.sc-credits a,.crave .tape-t a{position:relative}
+.where-more::after,#howBtn::after,.howlink::after,.tmdb-logo::after,.sc-credits a::after{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;transform:translateY(-50%)}
+.sv-hang::after{content:"";position:absolute;left:50%;top:50%;width:max(100%,64px);height:max(100%,44px);transform:translate(-50%,-50%)}
+#viewShop .shop-tools label{min-height:44px}
+.watch-list label,.watch-option{min-height:44px;display:flex;align-items:center}
+#memberName{min-height:44px}
+/* skip link: first thing a keyboard reaches, hidden until it has focus */
+.skip-link{position:fixed;left:12px;top:-60px;z-index:100;padding:12px 18px;border-radius:10px;background:#e7c069;color:#24110a;font:700 15px var(--f-body);text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,.5);transition:top .15s}
+.skip-link:focus{top:12px;outline:3px solid #fff3d6;outline-offset:2px}
 /* printed menu, full size */
 #preview{cursor:zoom-in}
 .tab-prep-on #preview{cursor:auto}
@@ -2743,6 +2759,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
         <div class="valance" aria-hidden="true"></div>
         <div class="curtain l" aria-hidden="true"></div><div class="curtain r" aria-hidden="true"></div>
         <div class="tease" aria-hidden="true" id="tease">Setting the table</div><div class="skip-k" aria-hidden="true">Tap to skip</div>
+        <h2 class="sr" id="nowShowing" tabindex="-1" aria-live="polite"></h2>
         <div class="easel" id="easel"><div class="preview" id="preview"></div><div class="glare" aria-hidden="true"></div></div>
         <p class="zoom-hint" id="zoomHint">Tap the menu to read it full size</p>
         <div class="fmt-phone" id="fmtPhone" hidden></div>
@@ -2806,7 +2823,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=59d00c51" defer></script>
 <script src="formats-core.js?v=073f01a6" defer></script>
-<script src="app.js?v=4cae9913" defer></script>
+<script src="app.js?v=8cabe469" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

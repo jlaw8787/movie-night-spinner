@@ -231,13 +231,20 @@ function spin(){
       $("now").textContent=win.title;
       document.body.classList.add("winner");setTimeout(()=>document.body.classList.remove("winner"),1500);
       sfx.whirrStop();fanfare();
-      buzz([30,50,90]);show(win,true).then(()=>leader(openCurtains));addHistory(win);
+      buzz([30,50,90]);show(win,true).then(()=>{announceFilm(win,kbSpin);leader(openCurtains)});addHistory(win);
       /* an instant jump: a smooth glide while the bulbs flash and the menu builds left phones drawing a blank screen for half a second */if(window.innerWidth<900)theatre.scrollIntoView({behavior:"auto",block:"start"});
     }
   }
   requestAnimationFrame(frame);
 }
 
+/* say which film landed, and after a keyboard spin put focus on it so a keyboard or screen reader user lands on the result */
+let kbSpin=false,lastKey=false;
+addEventListener("keydown",e=>{if(!e.altKey&&!e.ctrlKey&&!e.metaKey)lastKey=true},true);
+addEventListener("pointerdown",()=>{lastKey=false},true);
+function announceFilm(f,focus){const h=$("nowShowing");if(!h)return;h.textContent="Now showing: "+f.title+" ("+f.year+")";if(focus)h.focus({preventScroll:true});kbSpin=false}
+document.getElementById("skipLink").addEventListener("click",e=>{e.preventDefault();const v=!$("viewShop").hidden?"viewShop":!$("viewCrave").hidden?"viewCrave":null;
+  const t=v?$(v).querySelector("input,button,select"):$("spin");if(t){t.focus();t.scrollIntoView({block:"center"})}});
 /* ---------- curtains and the easel tilt ---------- */
 const theatre=$("theatre"),easel=$("easel");
 function closeCurtains(){theatre.classList.add("closed");$("tease").textContent=pick(["Setting the table","Warming the plates","Popping the corn","Chilling the glasses","Lighting the candles"])}
@@ -761,7 +768,7 @@ function applyPhone(){
   const has=!!fmtPhone.innerHTML,on=has&&narrow()&&tab==="menu";
   fmtPhone.hidden=!on;$("easel").hidden=false;$("fmtBack").hidden=true;
   scalePreview();if(on)fitPhoneTitle();
-  const zh=$("zoomHint");if(zh){const ok=tab==="menu"&&!!card.innerHTML.trim();zh.hidden=!ok;preview.style.cursor=ok?"":"auto";const tap=matchMedia("(pointer:coarse)").matches?"tap":"click";zh.textContent=ok&&cardFaces().length&&swipeW()?`Swipe to turn, ${tap} to zoom`:`${tap[0].toUpperCase()+tap.slice(1)} the menu to read it full size`}
+  {const has=tab==="menu"&&!!card.innerHTML.trim()&&!document.body.classList.contains("staged");preview.tabIndex=has?0:-1;if(has)preview.removeAttribute("aria-hidden")}const zh=$("zoomHint");if(zh){const ok=tab==="menu"&&!!card.innerHTML.trim();zh.hidden=!ok;preview.style.cursor=ok?"":"auto";const tap=matchMedia("(pointer:coarse)").matches?"tap":"click";zh.textContent=ok&&cardFaces().length&&swipeW()?`Swipe to turn, ${tap} to zoom`:`${tap[0].toUpperCase()+tap.slice(1)} the menu to read it full size`}
 }
 function phoneView(f,spec,menu){
   if(!f){fmtPhone.innerHTML="";applyPhone();return}
@@ -813,7 +820,7 @@ function openMenuZoom(trigger){
   const onRz=()=>{if(!o.isConnected){removeEventListener("resize",onRz);return}const t=o.querySelector(".mz-turn");if(t)t.hidden=innerWidth>innerHeight;if(Math.abs(k-fitWas)<.01){toFit();fitWas=k}};let fitWas=k;
   addEventListener("resize",onRz);o.querySelector(".mz-fit").addEventListener("click",()=>{fitWas=k});
 }
-preview.setAttribute("role","button");preview.tabIndex=0;preview.setAttribute("aria-label","Open the printed menu full size");
+preview.setAttribute("role","button");preview.tabIndex=-1;preview.setAttribute("aria-label","Open the printed menu full size");
 preview.addEventListener("click",e=>{if(tab==="menu"&&!e.target.closest("a,button,input,select,textarea"))openMenuZoom(preview)});
 preview.addEventListener("keydown",e=>{if(tab!=="menu"||e.target!==preview)return;
   if(e.key==="Enter"||e.key===" "){e.preventDefault();openMenuZoom(preview)}
@@ -2264,7 +2271,7 @@ async function exportMenu(kind,parts){
   finally{btns.forEach(b=>b.disabled=false);if(kind==="pdf"){pb.textContent=pbText;pb.classList.remove("busy");pb.removeAttribute("aria-busy")}}
 }
 
-$("spin").addEventListener("click",spin);
+$("spin").addEventListener("click",e=>{kbSpin=lastKey||e.detail===0;spin()});
 sel.addEventListener("change",setList);
 /* Save PDF asks what it's for: everything in one file, the menu on its own (ready for double-sided), or just the prep sheet for the kitchen */
 function pdfTip(){if(!current)return "";const sh=card.classList.contains("fx-paper"),fc=sh?card.querySelector(".fx-face"):card,n=sh?card.querySelectorAll(".fx-face").length:1,w=parseFloat(fc&&fc.style.width)||+card.dataset.w||794,h=parseFloat(fc&&fc.style.height)||+card.dataset.h||1123,land=w>h;
