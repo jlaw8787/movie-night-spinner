@@ -3,7 +3,7 @@
  "dishes": [
   {
    "n": "UFO meringues",
-   "course": "s",
+   "course": "w",
    "prep_min": 25,
    "cook_min": 100,
    "make_ahead": "Up to 2 days, airtight",
@@ -181,6 +181,93 @@
      "af": true
     }
    }
+  },
+  {
+   "n": "Muncie sweetcorn fritters",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 16,
+   "make_ahead": "Make the batter up to 2 hours ahead and keep it in the fridge; fry just before serving",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the kernels off the corn cobs.",
+     "min": 6
+    },
+    {
+     "text": "Whisk the flour, eggs, milk, paprika and a good pinch of salt into a thick batter, then stir in the corn and spring onions.",
+     "min": 5
+    },
+    {
+     "text": "Heat the oil in a frying pan over medium heat and drop in heaped tablespoons of batter, pressing them flat.",
+     "min": 3
+    },
+    {
+     "text": "Fry 2 to 3 minutes a side until golden and cooked through, in batches, and drain on paper towel.",
+     "min": 16
+    },
+    {
+     "text": "Serve hot with sour cream and snipped chives.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mashed potato mountain",

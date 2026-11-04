@@ -3,7 +3,7 @@
  "dishes": [
   {
    "n": "Stakeout salted caramel choc chip cookies",
-   "course": "s",
+   "course": "w",
    "prep_min": 25,
    "cook_min": 25,
    "make_ahead": "Shape and fill the dough balls up to 2 days ahead and keep them chilled; bake from the fridge, adding 2 minutes",
@@ -253,6 +253,87 @@
      "af": true
     }
    }
+  },
+  {
+   "n": "Christmas Eve spinach and artichoke dip",
+   "course": "s",
+   "prep_min": 12,
+   "cook_min": 20,
+   "make_ahead": "Mix up to a day ahead in the dish; bake to serve",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "frozen spinach, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar marinated artichoke hearts (280g)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cream cheese, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Squeeze the spinach dry and chop the drained artichokes.",
+     "min": 6
+    },
+    {
+     "text": "Mix the cream cheese, sour cream, garlic, parmesan, spinach and artichokes. Season.",
+     "min": 4
+    },
+    {
+     "text": "Spread in a small baking dish and top with mozzarella.",
+     "min": 2
+    },
+    {
+     "text": "Bake 20 minutes until bubbling and golden.",
+     "min": 20
+    },
+    {
+     "text": "Slice and toast the baguette and serve with the hot dip.",
+     "min": 6
+    }
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Pierce family bacon-wrapped meatloaf",

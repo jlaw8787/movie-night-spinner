@@ -17,6 +17,8 @@ const lum=h=>{const a=hex(h).map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v
 const cr=(a,b)=>{const x=lum(a),y=lum(b);return(Math.max(x,y)+.05)/(Math.min(x,y)+.05)};
 /* push a film colour away from the paper until it reads, else fall back */
 function readable(c,paper,min,fb){if(!hex(c))return fb;const dark=lum(paper)>.4;let x=c;for(let i=0;i<10&&cr(x,paper)<min;i++)x=mix(x,dark?"#000000":"#ffffff",.15);return cr(x,paper)>=min?x:fb}
+/* a signature in script sized so the whole name fits its column on one line ("Roger Thornhill"), never under 18px */
+const bySz=(base,w,name)=>Math.max(18,Math.min(base,Math.floor(w/(Math.max(1,String(name||"").length)*.46))));
 const clamp=n=>`display:-webkit-box;-webkit-line-clamp:${n};-webkit-box-orient:vertical;overflow:hidden`;
 function wrapLines(t,fs,w,cw){t=clean(t).trim();if(!t)return 0;const per=Math.max(4,Math.floor(w/(fs*cw)));let n=1,c=0;for(const wd of t.split(/\s+/)){const L=wd.length;if(!c)c=L;else if(c+1+L<=per)c+=1+L;else{n++;c=L}}return n}
 const FAMILY=new Set(["kids","fairytale","xmas","wizard"]);
@@ -144,7 +146,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="height:2px;background:${acc};margin:8px 0 8px"></div>
       <div style="font:${e.dw} 40px/1 ${DF};color:${ink}">${esc(year)}</div>
       <div style="font:italic 400 ${qSize}px/1.32 ${BF};color:${ink};margin-top:14px;${clamp(9)}">"${esc(note.text)}"</div>
-      <div style="font:400 ${ei<2?32:28}px/1 ${SF};color:${acc};text-align:right;margin-top:2px;${clamp(1)}">${esc(note.by)}</div>
+      <div style="font:400 ${bySz(ei<2?32:28,colW,note.by)}px/1 ${SF};color:${acc};text-align:right;margin-top:2px;${clamp(1)}">${esc(note.by)}</div>
       <div style="height:2px;background:${acc};margin-top:10px"></div>
       <div style="font:700 14px/1.2 ${BF};letter-spacing:.14em;text-transform:uppercase;color:${soft};margin-top:8px">${esc(e.tt)}</div></div>`;
   const lg=logoImg(ctx,W-2*inset-80,logoH-28);

@@ -2,8 +2,89 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Circus Arcanus chocolate croissants",
+   "n": "Cirque Arcanus mushroom and gruyère galettes",
    "course": "s",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "Make the batter up to a day ahead in the fridge",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "buckwheat flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "gruyère, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs, extra",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the buckwheat flour, egg, water and a pinch of salt into a thin batter and rest 20 minutes.",
+     "min": 22
+    },
+    {
+     "text": "Fry the mushrooms in half the butter with thyme until golden. Season.",
+     "min": 8
+    },
+    {
+     "text": "Butter a hot frying pan and swirl in a ladle of batter. Cook 2 minutes until set.",
+     "min": 3
+    },
+    {
+     "text": "Scatter with gruyère and mushrooms, crack an egg in the middle and fold the edges in to make a square. Cover and cook 3 minutes until the white sets.",
+     "min": 4
+    },
+    {
+     "text": "Repeat with the rest and serve hot.",
+     "min": 14
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Circus Arcanus chocolate croissants",
+   "course": "w",
    "prep_min": 20,
    "cook_min": 15,
    "make_ahead": "Roll the croissants up to 1 day ahead, covered on the tray in the fridge; brush with egg and bake just before serving",
@@ -50,7 +131,7 @@
   },
   {
    "n": "Plum jam doughnuts (pączki)",
-   "course": "s",
+   "course": "w",
    "prep_min": 33,
    "cook_min": 105,
    "make_ahead": "Prove the dough slowly in the fridge up to 1 day ahead; shape, prove again, fry and fill on the day",

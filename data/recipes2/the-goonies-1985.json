@@ -3,7 +3,7 @@
  "dishes": [
   {
    "n": "Chunk's chocolate truffles",
-   "course": "s",
+   "course": "w",
    "prep_min": 25,
    "cook_min": 180,
    "make_ahead": "Up to 5 days, keep chilled",
@@ -116,6 +116,206 @@
    ],
    "veg": true,
    "af": true
+  },
+  {
+   "n": "Astoria clam chowder cups",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "Make the base up to a day ahead without the clam meat; reheat gently and add the clams to serve",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "fresh clams (vongole), purged",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "bacon rashers, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "potatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bay leaves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet oyster crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Steam the clams in a covered pot with 250ml water for 4 to 5 minutes until open, then strain and keep the liquid. Pick out the meat and throw away any that stay shut.",
+     "min": 10
+    },
+    {
+     "text": "Fry the bacon in a large pot until crisp, then add the onion and celery and soften for 5 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the flour, then the clam liquid, milk, potatoes and bay leaves.",
+     "min": 4
+    },
+    {
+     "text": "Simmer gently for 15 minutes until the potatoes are tender.",
+     "min": 15
+    },
+    {
+     "text": "Stir in the cream and clam meat and heat through without boiling. Season with pepper.",
+     "min": 4
+    },
+    {
+     "text": "Serve in mugs with oyster crackers.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Astoria corn and potato chowder",
+     "prep_min": 18,
+     "cook_min": 30,
+     "make_ahead": "Make up to a day ahead; reheat gently",
+     "ingredients": [
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "potatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet oyster crackers",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the kernels off the corn cobs.",
+       "min": 6
+      },
+      {
+       "text": "Melt the butter in a large pot and soften the onion and celery for 5 minutes.",
+       "min": 8
+      },
+      {
+       "text": "Stir in the flour and paprika, then the stock, milk, potatoes and corn.",
+       "min": 4
+      },
+      {
+       "text": "Simmer gently for 15 minutes until the potatoes are tender.",
+       "min": 15
+      },
+      {
+       "text": "Stir in the cream, season and heat through without boiling.",
+       "min": 4
+      },
+      {
+       "text": "Serve in mugs with oyster crackers.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Fratelli family pizza",

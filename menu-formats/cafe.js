@@ -272,7 +272,7 @@ window.MENU_FORMATS["cafe"]=ctx=>{
   const rings=[...e.frameIn.matchAll(/inset 0 0 0 (\d+)px (#[0-9a-f]{3,8})/gi)].map(m=>[+m[1],m[2]]).sort((x,y)=>x[0]-y[0]);
   const ringHtml=rings.map((r,i)=>{const p0=i?rings[i-1][0]:0;return `<div style="position:absolute;inset:${p0}px;border:${r[0]-p0}px solid ${r[1]};box-sizing:border-box"></div>`}).join("");
   const frame=`<div style="position:absolute;inset:0;background:${e.frame}"></div>${ringHtml}<div style="position:absolute;inset:0;background-image:${noise("#000000",.25,.6,200)};opacity:.6"></div>`;
-  const face=`<div style="position:absolute;inset:0;overflow:hidden;background:#1a1a1a">${frame}${photoFn()}<div style="position:absolute;left:${FR}px;right:${FR}px;top:${BT-3}px;height:6px;background:${ACC};z-index:2"></div>${board}${logoHtml}${FIT}</div>`;
+  const face=`<div style="position:absolute;inset:0;overflow:hidden;background:#1a1a1a">${frame}${photoFn()}<div style="position:absolute;left:${FR}px;right:${FR}px;top:${BT-3}px;height:6px;background:${ACC};z-index:2"></div>${board}${hasP?"":logoHtml}${FIT}</div>`;
   return{w:W,h:H,faces:[face]};
 };
 })();

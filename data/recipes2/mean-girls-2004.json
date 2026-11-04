@@ -184,8 +184,67 @@
    }
   },
   {
-   "n": "Candy cane gram peppermint bark",
+   "n": "Cafeteria cheesy potato gems",
    "course": "s",
+   "prep_min": 6,
+   "cook_min": 26,
+   "make_ahead": "Best straight from the oven",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "frozen potato gems",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 220C and spread the potato gems on two lined trays.",
+     "min": 3
+    },
+    {
+     "text": "Bake 20 minutes, turning once, until crisp.",
+     "min": 20
+    },
+    {
+     "text": "Pile into one tray, scatter with cheddar and paprika and bake 5 minutes more until melted.",
+     "min": 6
+    },
+    {
+     "text": "Top with spring onions and serve with sour cream.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Candy cane gram peppermint bark",
+   "course": "w",
    "prep_min": 20,
    "cook_min": 45,
    "make_ahead": "Keeps 2 weeks in a cool place",

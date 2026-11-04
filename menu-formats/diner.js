@@ -69,6 +69,9 @@ window.MENU_FORMATS.diner=ctx=>{
   const {f,menu,poster,flavour:fl,era,tone}=ctx,img=ctx.img||((p,s="w1280")=>p?`https://image.tmdb.org/t/p/${s}${p}`:"");
   const stills=(ctx.stills||[]).map(s=>Array.isArray(s)?s[0]:s).filter(Boolean);
   const E=ERA[eraOf(era)],ek=eraOf(era),night=NIGHT(tone),T=tone||"warm";
+  /* the diner opened before the story: a film set in an earlier decade than its release (The Iron Giant's 1957, Stand by Me's 1959)
+     says Est. one to eight years before that decade starts, never the release year; a diner in its own decade keeps the film's year */
+  const eraD=+((String(era||"").match(/(\d{4})s/)||[])[1]||0),estYear=eraD&&eraD+10<=+f.year?eraD-1-(hash(f.title)%8):f.year;
   const V=night?VOICE[T]||VOICE.eerie:null;
   const token="d"+(++SEQ)+"-"+(hash(f.id||f.title)%9999);
   /* colour: the poster accent if it holds up on paper and in the dark, else the era's diner colour */
@@ -79,9 +82,9 @@ window.MENU_FORMATS.diner=ctx=>{
   const K={night:"#0d1014",ink:"#161a20",paper:night?"#ebe6d8":ek==="modern"?"#fbfaf6":"#f4ead2",bone:"#d8d1bf",mute:"#5a5d63"};
   const yy=String(f.year||"").slice(-2).padStart(2,"0"),num=String(fl&&fl.number||"").replace(/\D/g,"");
   const price=(k,n)=>periodPrice(PRICE[k],f.year,hash(n));
-  const special={};if(num.length===2&&menu.d&&menu.d[0]){const pv=String(price("d",menu.d[0].n)),d=pv.match(/^(\d+)\./);special.d0=d?d[1]+"."+num:/¢$/.test(pv)?(+num)+"¢":pv}
-  /* a three or four digit film number only sets the cents of the special, on the period price ("1938" on a 1.25 main reads 1.38) */
-  if((num.length===3||num.length===4)&&menu.m&&menu.m[0]){const pv=String(price("m",menu.m[0].n)),d=pv.match(/^(\d+)\./);if(d)special.m0=d[1]+"."+num.slice(-2)}
+  const special={};if(num.length===2&&menu.d&&menu.d[0]){const pv=String(price("d",menu.d[0].n)),d=pv.match(/^(\d+)\./);if(+num%5===0)special.d0=d?d[1]+"."+num:/¢$/.test(pv)?(+num)+"¢":pv}
+  /* a film number only sets the cents of the special, on the period price, and only when it reads like a price ("1945" on a 1.25 main reads 1.45; "1957" leaves the price alone) */
+  if((num.length===3||num.length===4)&&menu.m&&menu.m[0]){const pv=String(price("m",menu.m[0].n)),d=pv.match(/^(\d+)\./);if(d&&+num.slice(-2)%5===0)special.m0=d[1]+"."+num.slice(-2)}
   const W=fl&&fl.winks||[],venue=(fl&&fl.venue)||(night?"Last Light Diner":"Blue Plate Diner"),signTxt=fl&&fl.sign?ESC(fl.sign):"Route 13 &nbsp;/&nbsp; Mile 66";
   const photo=(ERAPHOTO[ek](era||"")+(PHOTO[T]||"")).trim();
   const wear=T==="gritty"||T==="scrappy"?1:T==="eerie"?.85:night?.6:.35;
@@ -114,7 +117,7 @@ window.MENU_FORMATS.diner=ctx=>{
         :`<div style="position:absolute;left:0;right:0;top:0;height:12px;background:${red}"></div><div style="position:absolute;left:0;right:0;bottom:0;height:12px;background:${red}"></div>`}`;
   const sign=`<div style="position:absolute;left:0;right:0;top:26px;text-align:center;white-space:nowrap;font:600 ${ks}px/1 ${SANS};letter-spacing:.26em;color:${fg};opacity:.85;text-transform:uppercase">${signTxt}${/open/i.test(fl&&fl.sign||"")?"":` &nbsp;/&nbsp; ${night?"Open all night":"Open every day"}`}</div>
     ${signBox}
-    <div style="position:absolute;left:0;right:0;top:176px;text-align:center;font:italic 400 21px/1 ${SERIF};color:${fg}">${ESC(night?V.sub:DAY.sub[T]||DAY.sub.warm)} Est. ${ESC(f.year)}.</div>`;
+    <div style="position:absolute;left:0;right:0;top:176px;text-align:center;font:italic 400 21px/1 ${SERIF};color:${fg}">${ESC(night?V.sub:DAY.sub[T]||DAY.sub.warm)} Est. ${ESC(estYear)}.</div>`;
   const heroImg=s0?`<img alt="Still from ${ESC(f.title)} (${ESC(f.year)})" crossorigin="anonymous" src="${img(s0,"w1280")}" style="width:100%;height:100%;object-fit:cover;display:block;filter:${photo}">`
     :poster?`<img alt="" crossorigin="anonymous" src="${img(poster,"w342")}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(12px) brightness(.5)"><img alt="${ESC(f.title)} poster" crossorigin="anonymous" src="${img(poster,"w500")}" style="position:relative;height:100%;display:block;margin:0 auto;filter:${photo}">`
     :`<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;${disp(64)};line-height:1.05;color:${K.paper};white-space:normal">${ESC(f.title)}</div>`;

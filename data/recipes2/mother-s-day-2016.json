@@ -3,7 +3,7 @@
  "dishes": [
   {
    "n": "Breakfast in bed almond croissants",
-   "course": "s",
+   "course": "w",
    "prep_min": 21,
    "cook_min": 15,
    "make_ahead": "Syrup and almond cream up to 1 day ahead, bake fresh",
@@ -257,6 +257,93 @@
      "af": true
     }
    }
+  },
+  {
+   "n": "Backyard brunch fried green tomatoes",
+   "course": "s",
+   "prep_min": 21,
+   "cook_min": 15,
+   "make_ahead": "Make the dressing up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "green tomatoes, thickly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "fine polenta",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Salt the tomato slices and leave 10 minutes, then pat dry.",
+     "min": 12
+    },
+    {
+     "text": "Dip each slice in 150ml of the buttermilk, then in the polenta, flour and paprika mixed.",
+     "min": 6
+    },
+    {
+     "text": "Fry in the oil over medium heat for 3 minutes a side until golden. Drain.",
+     "min": 15
+    },
+    {
+     "text": "Whisk the rest of the buttermilk with the mayonnaise, chopped chives and a squeeze of lemon.",
+     "min": 3
+    },
+    {
+     "text": "Serve the tomatoes hot with the dressing.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Mother's Day ham and spinach frittata",
