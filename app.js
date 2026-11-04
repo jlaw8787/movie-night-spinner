@@ -1325,7 +1325,11 @@ function fullMenu(f,menu,fmt){
   if(plain&&f._full)for(const k of ["s","m","w","d"])for(const r of src[k]||[]){const it=toItem(r);if(!it.n||seen.has(it.n.toLowerCase()))continue;seen.add(it.n.toLowerCase());adds.push([k,Object.assign(it,{extra:true})])}
   const hz=f._lib&&f._lib.flavour&&f._lib.flavour.house;
   /* hz.fit, when set, lists the house lines that fit this film's layout without hiding any of its own dish notes */
+  /* a house line never repeats a dish already on the card (no second sourdough, no second punch): same main noun, it drops */
+  const headN=n=>{const w=String(n).split(/\s+(?:with|and|in|on|from|over|served|topped)\s+|,|\(/i)[0].split(/[^a-zà-ÿ']+/i).filter(Boolean);return w.length?planSing(w[w.length-1].toLowerCase()):""};
+  const heads=new Set([...seen].map(headN));
   if(hz)for(const k of (hz.fit||["d","s"])){const h=hz[k];if(!h||!h.n||seen.has(h.n.toLowerCase()))continue;if((DIET.veg&&h.meat)||(dietAF()&&h.alc))continue;
+    {const hn=headN(h.n);if(hn.length>=4&&heads.has(hn))continue}
     adds.push([k,{n:h.n,note:h.note||"",how:"",shop:[],house:true}])}
   const cap=FULL_CAP[fmt]==null?99:FULL_CAP[fmt];
   for(const k of ["s","m","w","d"])out[k]=(menu[k]||[]).slice();

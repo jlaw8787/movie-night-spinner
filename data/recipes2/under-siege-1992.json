@@ -215,10 +215,28 @@
      "aisle": "Seafood"
     },
     {
-     "q": 100,
-     "u": "g",
-     "item": "rouille",
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, for the rouille",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg yolk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "olive oil, for the rouille",
      "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
     },
     {
      "q": 1,
@@ -245,7 +263,11 @@
      "min": 10
     },
     {
-     "text": "Toast sliced baguette and serve with rouille.",
+     "text": "For the rouille, crush the garlic with a pinch of salt, whisk in the egg yolk and a few saffron threads soaked in a spoon of the hot broth, then whisk in the olive oil drop by drop until thick. Finish with a squeeze of lemon.",
+     "min": 8
+    },
+    {
+     "text": "Toast sliced baguette and serve with the rouille.",
      "min": 5
     }
    ],

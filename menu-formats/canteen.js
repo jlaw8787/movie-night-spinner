@@ -106,7 +106,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   const heroPoster=!!poster;
   const sideSrc=poster&&stills[0]?ctx.img(stills[0],"w1280"):"";
   const venue=fl.venue||"The Canteen",sign=fl.sign||"Lunch served daily";
-  const school=/school|academy|high|hall|primary|college|class|camp|university|campus/i.test(venue+" "+sign)||(!fl.venue&&FAMILY.has(f.theme));
+  /* which kind of canteen: a prison or an army mess gets its own day, not school periods ("Mess Hall" is not a school hall) */
+  const vs=venue+" "+sign,prison=/prison|jail|gaol|cell block|block [a-z]\b|alcatraz|belle reve|shawshank|penitentiary/i.test(vs),
+    mess=!prison&&/\bmess\b|\bbase\b|\bfort\b|barracks|\brig\b|nui dat|rebel|army|navy|squadron/i.test(vs)&&!/police academy/i.test(vs),
+    school=!prison&&!mess&&(/school|academy|high|primary|college|class|camp|university|campus|dining hall|\bhall\b(?! block)/i.test(vs)||(!fl.venue&&FAMILY.has(f.theme)));
   const accRaw=ctx.palette&&ctx.palette.accent;
   const paper=hx(accRaw)&&sat(accRaw)>.22?mix(g.paper,accRaw,.07):g.paper;
   const ink=g.ink;
@@ -136,8 +139,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const gilt=t.gilt?`<div style="position:absolute;inset:8px;border:2px solid ${acc};box-shadow:inset 0 0 0 4px ${paper},inset 0 0 0 5px ${acc};pointer-events:none"></div>`:"";
 
   /* timetable strip */
-  const slots=school?["Period 1","Period 2","Lunch","Period 4","Period 5"]:["9:00","10:30","Lunch","2:00","3:30"];
-  const fall=school?["Assembly","Maths","",  "Library","Sport"]:["Briefing","Meetings","","Reports","Home time"];
+  const slots=school?["Period 1","Period 2","Lunch","Period 4","Period 5"]:mess?["0600","0900","Chow","1500","2200"]:prison?["0600","0900","Chow","1400","2100"]:["9:00","10:30","Lunch","2:00","3:30"];
+  const fall=school?["Assembly","Maths","",  "Library","Sport"]:mess?["Reveille","Drill","","Duty roster","Lights out"]:prison?["Count","Yard","","Work detail","Lock-up"]:["Briefing","Meetings","","Reports","Home time"];
   const lunchAt=`12:${String((parseInt(number,10)||0)%60).padStart(2,"0")}`;
   /* a long wink keeps a whole phrase (cut at a comma, "and" or "with"), never a fragment like "Bruce Bogtrotter and the"; if no clean phrase fits, the plain subject is used */
   const cut=(w,n)=>{if(!w||w.length<=n)return w;for(const sep of [", "," and "," with "," at "," in "," on "]){const i=w.indexOf(sep);if(i>3&&i<=n)return w.slice(0,i)}return null};
@@ -184,14 +187,14 @@ window.MENU_FORMATS[ID]=ctx=>{
   const cue=f.P||"";
   const ticket=`<div style="position:absolute;left:${heroPoster?CX+8:400}px;top:${heroPoster?214:500}px;width:${heroPoster?CW-16:206}px;height:${heroPoster?150:160}px;box-sizing:border-box;padding:${heroPoster?"10px 8px":"12px 14px"};background-color:${tkBg};background-image:${noise(.8,.08,"#6a5a40",2)};border:2px dashed ${tkAcc};outline:6px solid ${tkBg};box-shadow:0 8px 20px rgba(0,0,0,.4);transform:rotate(${t.rot}deg);color:${ink}">
      <div ${A}-box ${A}-min=".85" style="width:100%;height:100%;overflow:hidden;--k:1;text-align:center">
-       <div style="font:700 max(14px,calc(14px*var(--k))) ${g.body};letter-spacing:.2em;text-transform:uppercase;color:${tkAcc}">${school?"Lunch ticket":"Meal voucher"}</div>
+       <div style="font:700 max(14px,calc(14px*var(--k))) ${g.body};letter-spacing:.2em;text-transform:uppercase;color:${tkAcc}">${school?"Lunch ticket":mess?"Mess chit":prison?"Meal tray":"Meal voucher"}</div>
        <div style="font:${g.dw} max(22px,calc(34px*var(--k)))/1.05 ${g.disp};margin:2px 0 4px">No. ${esc(number)}</div>
        <div style="font:600 max(14px,calc(15px*var(--k)))/1.25 ${g.body}">Admit one to the line</div>
        ${cue?`<div ${A}-drop style="margin-top:3px;font:500 max(14px,calc(15px*var(--k)))/1.25 ${g.body};color:${mix(ink,tkBg,.25)}">${esc(cue)}</div>`:""}</div></div>`;
 
   /* note card and prop card */
-  const note=fl.note&&fl.note.text?fl.note:{text:f.T||voice[1],by:fl.note&&fl.note.by||(school?"The lunch lady":"The kitchen")};
-  const prop=fl.prop&&fl.prop.title?fl.prop:(school?{kind:"pass",title:"Hall pass",lines:["Out of class: lunch","Signed, the office"]}:{kind:"badge",title:"Staff ID",lines:["Canteen access","Level 2"]});
+  const note=fl.note&&fl.note.text?fl.note:{text:f.T||voice[1],by:fl.note&&fl.note.by||(school?"The lunch lady":mess?"The cook":prison?"The kitchen detail":"The kitchen")};
+  const prop=fl.prop&&fl.prop.title?fl.prop:(school?{kind:"pass",title:"Hall pass",lines:["Out of class: lunch","Signed, the office"]}:mess?{kind:"pass",title:"Mess pass",lines:["One tray, one sitting","Signed, duty officer"]}:prison?{kind:"pass",title:"Kitchen pass",lines:["Escorted to the line","Signed, the guard"]}:{kind:"badge",title:"Staff ID",lines:["Canteen access","Level 2"]});
   const ruled=gi===0?"":`repeating-linear-gradient(180deg,rgba(0,0,0,0) 0 27px,${rgba("#6a9bd1",.35)} 27px 28px),`;
   const noteCard=`<div style="position:absolute;left:${heroPoster?SX:18}px;top:${heroPoster?528:662}px;width:${heroPoster?SW:364}px;height:${heroPoster?228:140}px;box-sizing:border-box;padding:10px ${heroPoster?12:16}px;background-color:#fbf8ef;background-image:${ruled}${noise(.8,.06,"#6a5a40",2)};${gi===0?"":`border-top:3px solid ${rgba("#d9534f",.55)};`}box-shadow:0 4px 12px rgba(0,0,0,.25);transform:rotate(${-t.rot/3}deg)">
     <div ${A}-box ${A}-min=".78" style="width:100%;height:100%;overflow:hidden;--k:1;color:#24211b">
