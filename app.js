@@ -1087,7 +1087,7 @@ function shopLines(list){
     if(!tally[key]){tally[key]={a,item:i.item,items:new Set(),parts:{},order:[],open:false};order.push(key)}
     const t=tally[key];t.items.add(String(i.item));
     if(i.q==null){t.open=true;continue}
-    const u=b[0]==="#"?"":b[0];if(!(u in t.parts)){t.parts[u]=0;t.order.push(u)}t.parts[u]+=ingQ(i,k)*b[1];
+    const u=b[0]==="#"?"":b[0];if(!(u in t.parts)){t.parts[u]=0;t.order.push(u)}if(FRY_RE.test(i.item))t.parts[u]=Math.max(t.parts[u],ingQ(i,k)*b[1]);else t.parts[u]+=ingQ(i,k)*b[1];
   }
   return order.map(key=>{const t=tally[key];
     /* two different cuts of the same thing ("lemon, juiced" and "lemons") share the plain name */
@@ -1119,6 +1119,9 @@ const WAIT_RE=/^(chill|refrigerate|freeze|soak|marinate|rest|cool|prove|steep|le
 /* a note for non-drinkers or kids is a tip, not a timed step */
 const TIP_RE=/\b(for the kids|for kids|non-drinkers?|for drivers|alcohol-free (version|ones?|jug)|soda only for|without the (rum|vodka|gin|whisky|bourbon|tequila|wine|beer|booze))\b/i;
 /* split a step into the instruction and any tip sentence; a step that is only a tip has no time */
+/* a bake scaled past one and a half times goes in batches: same tins, same time, not one overloaded tin */
+const BAKE_RE=/\b(cake tins?|loaf tins?|baking (tin|dish|tray)|pie dish|tart tin|springform|muffin tin|lamington tin|slice tin|sandwich tins?|tins?)\b/i;
+const batchTip=(x,k)=>{if(!(k>1.5)||!(x.steps||[]).some(s=>BAKE_RE.test(s.text)&&/\bbake\b/i.test(s.text)))return "";const n=Math.ceil(k-0.05);return `For this many, make it in ${n===2?"two":n===3?"three":n} batches: same tins and baking time for each.`};
 const stepParts=t=>{const ss=String(t).split(/(?<=[.!?])\s+(?=[A-Z])/),tip=ss.filter(x=>TIP_RE.test(x)),main=ss.filter(x=>!TIP_RE.test(x));return {main:main.join(" "),tip:tip.join(" ")}};
 function dishTimes(x,k){const st=(x.steps||[]).filter(t=>stepParts(t.text).main);let wait=0;for(const t of st)if((t.min||0)>=10&&WAIT_RE.test(String(t.text).trim()))wait+=t.min;
   const prep=x.prep_min||0,cook=x.cook_min||0;wait=Math.min(wait,prep+cook);
@@ -1134,7 +1137,9 @@ function dishTimes(x,k){const st=(x.steps||[]).filter(t=>stepParts(t.text).main)
 /* frying oil is set by the pot, not the guests: never less than the recipe's own amount */
 /* pack notes inside an item follow the guests: "750ml lager (4 stubbies)" for 4 is "(9 stubbies)" for 9 */
 const packNote=(item,k)=>!k||Math.abs(k-1)<.01?item:String(item).replace(/\((\d+)\s+(stubbies|stubby|cans?|bottles?|tins?|jars?|packets?|bags?|tinnies|slabs?|longnecks?)([^)]*)\)/i,(m,n,u,rest)=>{const v=Math.max(1,Math.ceil(+n*k-0.05));return `(${v} ${v===1?u.replace(/ies$/,"y").replace(/s$/,""):/y$/.test(u)?u.replace(/y$/,"ies"):/s$/.test(u)?u:u+"s"}${rest})`});
-const ingQ=(i,k)=>/\bfor (deep[- ])?frying\b/i.test(i.item)?Math.max(i.q,i.q*k):i.q*k;
+const FRY_RE=/\bfor (deep[- ])?frying\b/i;
+/* frying oil is one pot whatever the guest count: it never scales, and dishes on the same sheet share it (the list takes the biggest pot, not the sum) */
+const ingQ=(i,k)=>FRY_RE.test(i.item)?i.q:i.q*k;
 /* a dish's own ingredients, scaled to the guests */
 function dishIng(x,k){return dishIngList(x,k).join(", ")}
 function dishIngList(x,k){return (x.ingredients||[]).map(i0=>{const i=Object.assign({},i0,{item:packNote(i0.item,k)});if(i.q==null)return i.item;let q=ingQ(i,k);if(!i.u&&(/^eggs?\b|^egg yolks?|^egg whites?|\bloa(f|ves)\b|^(pinch|dash|sprig|splash|drop|handful)(es|s)?\b/i.test(i.item)||WHOLE_RE.test(i.item)))q=Math.max(1,Math.ceil(q-0.05));if(!i.u)return planQty(q,"")+" "+(q>1.01?planPlural(i.item,q):planOne(i.item));return planQty(q,i.u)+" "+i.item})}
@@ -1181,7 +1186,7 @@ function prepHTML2(f,menu){
   const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const kk=x.snack?PLAN.guests/4:K,T=dishTimes(x,kk),hot=(x.steps||[]).some(s=>HEAT_RE.test(s.text));
     const time=x.extra?"From the printed menu, buy to suit":hot&&T.cook?`Prep ${planMin(T.prep)}, cook ${planMin(T.cook)}`:`Takes ${planMin(T.prep+T.cook)}`;
     const ing=dishIngList(x,kk);
-    return `<li><b>${ESC(LBp[x.orig||x.n]&&!x.tag?LBp[x.orig||x.n]:x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">${time}${T.wait?`, then ${planMin(T.wait)} ${waitWords(x)}`:""}</span>${x.make_ahead?`<span class="pp-ahead"><b>Make ahead</b> ${ESC(degC(x.make_ahead))}</span>`:""}${ing.length?`<div class="pp-ing"><b>You need</b><ul>${ing.map(g=>`<li>${ESC(degC(g))}</li>`).join("")}</ul></div>`:""}<ol class="pp-steps">${(x.ingredients||[]).filter(baseOf).map(i=>`<li>${ESC(baseOf(i).step(baseG(i.q,i)*kk,i))}</li>`).join("")}${(x.steps||[]).filter(s=>stepParts(s.text).main).map(s=>`<li>${ESC(degC(scaleStep(stepParts(s.text).main,kk)))}${s.min?` <span class="pp-t">${planMin(s.min)}</span>`:""}</li>`).join("")}</ol>${(x.steps||[]).map(s=>stepParts(s.text).tip).filter(Boolean).map(t=>`<p class="pp-tip"><b>Tip</b> ${ESC(degC(scaleStep(t,kk)))}</p>`).join("")}</li>`}).join("");
+    return `<li><b>${ESC(LBp[x.orig||x.n]&&!x.tag?LBp[x.orig||x.n]:x.n)}</b><em>${L2[x.course]||""}</em><span class="pp-time">${time}${T.wait?`, then ${planMin(T.wait)} ${waitWords(x)}`:""}</span>${x.make_ahead?`<span class="pp-ahead"><b>Make ahead</b> ${ESC(degC(x.make_ahead))}</span>`:""}${ing.length?`<div class="pp-ing"><b>You need</b><ul>${ing.map(g=>`<li>${ESC(degC(g))}</li>`).join("")}</ul></div>`:""}${batchTip(x,kk)?`<p class="pp-tip"><b>Tip</b> ${ESC(batchTip(x,kk))}</p>`:""}<ol class="pp-steps">${(x.ingredients||[]).filter(baseOf).map(i=>`<li>${ESC(baseOf(i).step(baseG(i.q,i)*kk,i))}</li>`).join("")}${(x.steps||[]).filter(s=>stepParts(s.text).main).map(s=>`<li>${ESC(degC(scaleStep(stepParts(s.text).main,kk)))}${s.min?` <span class="pp-t">${planMin(s.min)}</span>`:""}</li>`).join("")}</ol>${(x.steps||[]).map(s=>stepParts(s.text).tip).filter(Boolean).map(t=>`<p class="pp-tip"><b>Tip</b> ${ESC(degC(scaleStep(t,kk)))}</p>`).join("")}</li>`}).join("");
   return `<div class="mc-bg">${d.bg}</div><div class="mc-grain" style="background-image:url('${GRAIN}')"></div>
   <div class="mc-in pp">
     <div class="mc-eye">Prep sheet</div>
