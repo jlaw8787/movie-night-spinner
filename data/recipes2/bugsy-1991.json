@@ -978,6 +978,213 @@
      ]
     }
    }
+  },
+  {
+   "n": "Prime rib with popovers",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 150,
+   "make_ahead": "Salt the beef the day before; make the popover batter 1 hour ahead",
+   "ingredients": [
+    {
+     "q": 1.8,
+     "u": "kg",
+     "item": "beef rib roast, on the bone",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "horseradish cream",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the beef with 2 tsp of the salt and leave uncovered in the fridge overnight.",
+     "min": 720
+    },
+    {
+     "text": "Rub with the pepper, garlic and rosemary and roast at 220C for 20 minutes, then 160C until 52C in the middle, about 1 hour 20 minutes.",
+     "min": 100
+    },
+    {
+     "text": "Whisk the eggs, milk, flour, the last 1 tsp salt and half the butter into a smooth batter and rest it.",
+     "min": 10
+    },
+    {
+     "text": "Rest the beef under foil. Turn the oven to 220C, brush a muffin tin with the rest of the butter and heat it for 5 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Fill the hot tin halfway with batter and bake until tall and crisp, about 25 minutes. Do not open the door.",
+     "min": 25
+    },
+    {
+     "text": "Simmer the pan juices with the stock for the jus. Carve the beef thick and serve with the popovers, jus and horseradish.",
+     "min": 8
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Roast portobellos with popovers",
+     "prep_min": 20,
+     "cook_min": 45,
+     "make_ahead": "Make the popover batter 1 hour ahead",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter, melted",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 220C. Whisk the eggs, milk, flour, 1 tsp of the salt and half the butter into a smooth batter and rest it.",
+       "min": 10
+      },
+      {
+       "text": "Toss the mushrooms with the oil, the rest of the salt, pepper, garlic and rosemary and roast for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Brush a muffin tin with the rest of the butter and heat it for 5 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Fill the hot tin halfway with batter and bake until tall and crisp, about 25 minutes. Do not open the door.",
+       "min": 25
+      },
+      {
+       "text": "Simmer the mushroom pan juices with the stock for the jus and serve with the popovers and horseradish.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

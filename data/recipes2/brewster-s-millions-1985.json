@@ -592,6 +592,235 @@
      ]
     }
    }
+  },
+  {
+   "n": "Gold leaf fried chicken",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 75,
+   "make_ahead": "Soak the chicken in buttermilk the night before; fry on the night",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "boneless chicken thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "L",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "floury potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pack edible gold leaf",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the chicken in the buttermilk with half the salt, covered in the fridge, overnight.",
+     "min": 480
+    },
+    {
+     "text": "Peel and boil the potatoes until soft, then mash with half the butter, the milk and a pinch of salt. Keep warm.",
+     "min": 25
+    },
+    {
+     "text": "Mix the flour, paprika, garlic powder and the rest of the salt. Lift the chicken from the buttermilk and toss it in the flour until thickly coated.",
+     "min": 10
+    },
+    {
+     "text": "Fry in batches at 170C until deep gold and cooked through, about 7 minutes a batch. Drain on a rack.",
+     "min": 30
+    },
+    {
+     "text": "Melt the rest of the butter with the honey and hot sauce and brush over the hot chicken.",
+     "min": 3
+    },
+    {
+     "text": "Lay a little gold leaf on each piece with dry tweezers and serve on the mash.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Gold leaf fried cauliflower",
+     "prep_min": 25,
+     "cook_min": 60,
+     "make_ahead": "Soak the cauliflower in buttermilk up to 4 hours ahead; fry on the night",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower, in big florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "L",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "floury potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pack edible gold leaf",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the cauliflower in the buttermilk with half the salt for at least 1 hour.",
+       "min": 60
+      },
+      {
+       "text": "Peel and boil the potatoes until soft, then mash with half the butter, the milk and a pinch of salt. Keep warm.",
+       "min": 25
+      },
+      {
+       "text": "Mix the flour, paprika, garlic powder and the rest of the salt. Toss the cauliflower through until thickly coated.",
+       "min": 10
+      },
+      {
+       "text": "Fry in batches at 170C until deep gold and tender, about 5 minutes a batch. Drain on a rack.",
+       "min": 20
+      },
+      {
+       "text": "Melt the rest of the butter with the honey and hot sauce and brush over the hot cauliflower.",
+       "min": 3
+      },
+      {
+       "text": "Lay a little gold leaf on each piece with dry tweezers and serve on the mash.",
+       "min": 5
+      }
+     ]
+    }
+   }
   }
  ]
 }

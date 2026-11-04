@@ -53,6 +53,215 @@
    "af": true
   },
   {
+   "n": "Beef patties from the corner shop",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 45,
+   "make_ahead": "Fill and fold up to 1 day ahead, keep chilled; bake on the night",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "mild curry powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried thyme",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "dry breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sheets frozen shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle hot sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the onion in the oil, then brown the mince with the curry powder, thyme and salt.",
+     "min": 10
+    },
+    {
+     "text": "Add the stock and simmer until almost dry, then stir in the breadcrumbs and cool.",
+     "min": 10
+    },
+    {
+     "text": "Heat the oven to 200C. Brush the pastry sheets with turmeric mixed into the beaten egg and cut two 12cm rounds from each.",
+     "min": 8
+    },
+    {
+     "text": "Spoon the filling onto half of each round, fold over and crimp with a fork. Brush the tops with the rest of the egg.",
+     "min": 10
+    },
+    {
+     "text": "Bake on lined trays until golden and flaky, about 25 minutes. Serve hot with hot sauce.",
+     "min": 25
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bean patties from the corner shop",
+     "prep_min": 30,
+     "cook_min": 40,
+     "make_ahead": "Fill and fold up to 1 day ahead, keep chilled; bake on the night",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "mild curry powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried thyme",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "dry breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sheets frozen shortcrust pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground turmeric",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bottle hot sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the onion and carrot in the oil with the curry powder, thyme and salt.",
+       "min": 8
+      },
+      {
+       "text": "Add the beans, crush them roughly and stir in the breadcrumbs. Cool.",
+       "min": 7
+      },
+      {
+       "text": "Heat the oven to 200C. Brush the pastry sheets with turmeric mixed into the beaten egg and cut two 12cm rounds from each.",
+       "min": 8
+      },
+      {
+       "text": "Spoon the filling onto half of each round, fold over and crimp with a fork. Brush the tops with the rest of the egg.",
+       "min": 10
+      },
+      {
+       "text": "Bake on lined trays until golden and flaky, about 25 minutes. Serve hot with hot sauce.",
+       "min": 25
+      }
+     ]
+    }
+   }
+  },
+  {
    "n": "Rose petal sugar crisps",
    "course": "s",
    "prep_min": 20,

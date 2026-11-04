@@ -166,6 +166,187 @@
    }
   },
   {
+   "n": "Hollywood power lunch crudités",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 0,
+   "make_ahead": "Make the dip up to 2 days ahead; cut the vegetables up to 4 hours ahead and keep in iced water",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches baby carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch radishes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "telegraph cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "baby cos lettuces",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch flat-leaf parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch tarragon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "anchovy fillets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the mayonnaise, sour cream, a big handful each of parsley and tarragon, half the chives, the anchovies and the lemon juice until smooth and green.",
+     "min": 5
+    },
+    {
+     "text": "Trim the carrots and radishes, leaving a little green on top. Cut the cucumber into batons and pull the cos into leaves.",
+     "min": 12
+    },
+    {
+     "text": "Stand the vegetables up in glasses of ice and serve with the green goddess in a bowl.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hollywood power lunch crudités",
+     "prep_min": 20,
+     "cook_min": 0,
+     "make_ahead": "Make the dip up to 2 days ahead; cut the vegetables up to 4 hours ahead and keep in iced water",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches baby carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch radishes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "telegraph cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "baby cos lettuces",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch flat-leaf parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blitz the mayonnaise, sour cream, a big handful each of parsley and tarragon, half the chives, the capers and the lemon juice until smooth and green.",
+       "min": 5
+      },
+      {
+       "text": "Trim the carrots and radishes, leaving a little green on top. Cut the cucumber into batons and pull the cos into leaves.",
+       "min": 12
+      },
+      {
+       "text": "Stand the vegetables up in glasses of ice and serve with the green goddess in a bowl.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  },
+  {
    "n": "Cuban pastelitos",
    "course": "s",
    "prep_min": 25,
@@ -378,7 +559,7 @@
      ]
     },
     "veg": {
-     "n": "Chilli Palmer's portobello frites",
+     "n": "Chili Palmer's portobello frites",
      "prep_min": 30,
      "cook_min": 18,
      "make_ahead": "Make the sauce while the mushrooms rest; fry the chips twice",
@@ -457,7 +638,7 @@
      "af": false
     },
     "veg_af": {
-     "n": "Chilli Palmer's portobello frites (alcohol-free)",
+     "n": "Chili Palmer's portobello frites (alcohol-free)",
      "prep_min": 30,
      "cook_min": 18,
      "make_ahead": "Make the sauce while the mushrooms rest; fry the chips twice",
