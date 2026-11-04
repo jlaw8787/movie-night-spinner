@@ -7,9 +7,18 @@ TH={f"{f['title']} ({f['year']})":f['theme'] for f in json.load(open(os.path.joi
 OVERRIDE={'22 Jump Street (2014)':'Action and cops','48 Hrs. (1982)':'Action and cops','Hot Fuzz (2007)':'Action and cops',
   'Kingsman: The Secret Service (2014)':'Action and cops','Rumble in the Bronx (1995)':'Action and cops',
   'Ace Ventura: When Nature Calls (1995)':'Comedy and teen'}
+# films where the songs carry the story, live action (animated musicals stay in Family where kids look for them) (Josh, 4 Nov 2026)
+MUSICALS={'Annie (1982)','Chicago (2002)','Chitty Chitty Bang Bang (1968)','Dreamgirls (2006)','Easter Parade (1948)','Enchanted (2007)',
+  'Fiddler on the Roof (1971)','Grease (1978)','Hairspray (2007)','Into the Woods (2014)','La La Land (2016)','Les Misérables (2012)',
+  'Little Shop of Horrors (1986)','Mamma Mia! (2008)','Mamma Mia! Here We Go Again (2018)','Mary Poppins (1964)','Mary Poppins Returns (2018)',
+  'Moulin Rouge! (2001)','My Fair Lady (1964)','Newsies (1992)','Oliver! (1968)','Rent (2005)','Rocketman (2019)',"Singin' in the Rain (1952)",
+  'Sister Act (1992)','The Blues Brothers (1980)','The Greatest Showman (2017)','The Muppets Take Manhattan (1984)','The Muppets (2011)',
+  'The Phantom of the Opera (2004)','The Rocky Horror Picture Show (1975)','The Sound of Music (1965)','The Wizard of Oz (1939)',
+  'West Side Story (1961)','Wicked (2024)','Willy Wonka & the Chocolate Factory (1971)'}
 def aisle(fid,g,th):
   if fid in OVERRIDE:return OVERRIDE[fid]
   if th=='xmas':return 'Holiday'
+  if fid in MUSICALS:return 'Musicals'
   if th=='hero':return 'Superheroes'
   if 'Animation' in g or 'Family' in g[:2]:return 'Family'
   if 'Horror' in g:return 'Horror'
