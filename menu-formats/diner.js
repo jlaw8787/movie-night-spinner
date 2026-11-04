@@ -69,6 +69,9 @@ window.MENU_FORMATS.diner=ctx=>{
   const {f,menu,poster,flavour:fl,era,tone}=ctx,img=ctx.img||((p,s="w1280")=>p?`https://image.tmdb.org/t/p/${s}${p}`:"");
   const stills=(ctx.stills||[]).map(s=>Array.isArray(s)?s[0]:s).filter(Boolean);
   const E=ERA[eraOf(era)],ek=eraOf(era),night=NIGHT(tone),T=tone||"warm";
+  /* the diner opened before the story: a film set in an earlier decade than its release (The Iron Giant's 1957, Stand by Me's 1959)
+     says Est. one to eight years before that decade starts, never the release year; a diner in its own decade keeps the film's year */
+  const eraD=+((String(era||"").match(/(\d{4})s/)||[])[1]||0),estYear=eraD&&eraD+10<=+f.year?eraD-1-(hash(f.title)%8):f.year;
   const V=night?VOICE[T]||VOICE.eerie:null;
   const token="d"+(++SEQ)+"-"+(hash(f.id||f.title)%9999);
   /* colour: the poster accent if it holds up on paper and in the dark, else the era's diner colour */
@@ -114,7 +117,7 @@ window.MENU_FORMATS.diner=ctx=>{
         :`<div style="position:absolute;left:0;right:0;top:0;height:12px;background:${red}"></div><div style="position:absolute;left:0;right:0;bottom:0;height:12px;background:${red}"></div>`}`;
   const sign=`<div style="position:absolute;left:0;right:0;top:26px;text-align:center;white-space:nowrap;font:600 ${ks}px/1 ${SANS};letter-spacing:.26em;color:${fg};opacity:.85;text-transform:uppercase">${signTxt}${/open/i.test(fl&&fl.sign||"")?"":` &nbsp;/&nbsp; ${night?"Open all night":"Open every day"}`}</div>
     ${signBox}
-    <div style="position:absolute;left:0;right:0;top:176px;text-align:center;font:italic 400 21px/1 ${SERIF};color:${fg}">${ESC(night?V.sub:DAY.sub[T]||DAY.sub.warm)} Est. ${ESC(f.year)}.</div>`;
+    <div style="position:absolute;left:0;right:0;top:176px;text-align:center;font:italic 400 21px/1 ${SERIF};color:${fg}">${ESC(night?V.sub:DAY.sub[T]||DAY.sub.warm)} Est. ${ESC(estYear)}.</div>`;
   const heroImg=s0?`<img alt="Still from ${ESC(f.title)} (${ESC(f.year)})" crossorigin="anonymous" src="${img(s0,"w1280")}" style="width:100%;height:100%;object-fit:cover;display:block;filter:${photo}">`
     :poster?`<img alt="" crossorigin="anonymous" src="${img(poster,"w342")}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:blur(12px) brightness(.5)"><img alt="${ESC(f.title)} poster" crossorigin="anonymous" src="${img(poster,"w500")}" style="position:relative;height:100%;display:block;margin:0 auto;filter:${photo}">`
     :`<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;${disp(64)};line-height:1.05;color:${K.paper};white-space:normal">${ESC(f.title)}</div>`;
