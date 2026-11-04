@@ -2364,6 +2364,16 @@ function showOverlay(url,file){
   });
   mountModal(o,"button",modalTrigger);
 }
+/* the most common colour around the outside of a rendered page: its paper, used to fill the rest of the A4 sheet */
+function edgeColour(cv){const x=cv.getContext("2d"),W=cv.width,H=cv.height,b=Math.max(4,Math.round(Math.min(W,H)*.05)),cnt=new Map();
+  const take=(sx,sy,w,h)=>{const d=x.getImageData(sx,sy,w,h).data;for(let i=0;i<d.length;i+=28){const k=(d[i]>>3)<<10|(d[i+1]>>3)<<5|(d[i+2]>>3);const c=cnt.get(k);if(c)c.n++;else cnt.set(k,{n:1,r:d[i],g:d[i+1],b:d[i+2]})}};
+  take(0,0,W,b);take(0,H-b,W,b);take(0,0,b,H);take(W-b,0,b,H);let best=null;for(const c of cnt.values())if(!best||c.n>best.n)best=c;return best?[best.r,best.g,best.b]:null}
+/* a pure white border round a rendered page is print padding, not the design: cut it off (never more than 15% a side) so the real paper fills the sheet */
+function trimWhite(cv){const W=cv.width,H=cv.height,d=cv.getContext("2d").getImageData(0,0,W,H).data,white=(x,y)=>{const i=(y*W+x)*4;return d[i]>=250&&d[i+1]>=250&&d[i+2]>=250};
+  const rowW=y=>{for(let x=0;x<W;x+=3)if(!white(x,y))return false;return true},colW=x=>{for(let y=0;y<H;y+=3)if(!white(x,y))return false;return true};
+  let t=0,b=H-1,l=0,r=W-1;const mx=Math.round(H*.15),my=Math.round(W*.15);
+  while(t<mx&&rowW(t))t++;while(H-1-b<mx&&rowW(b))b--;while(l<my&&colW(l))l++;while(W-1-r<my&&colW(r))r--;
+  if(t<2&&l<2&&H-1-b<2&&W-1-r<2)return cv;const o=document.createElement("canvas");o.width=r-l+1;o.height=b-t+1;o.getContext("2d").drawImage(cv,l,t,o.width,o.height,0,0,o.width,o.height);return o}
 async function exportMenu(kind,parts,opts){
   parts=parts||"all";opts=opts||{};const toPrint=!!opts.print;
   /* printing: every page sits on A4 with an even 5mm white margin, so home printers never clip the border (see addImage below) */let sides=0,orient="portrait";
@@ -2373,8 +2383,15 @@ async function exportMenu(kind,parts,opts){
   var pdfStep=t=>{if(kind==="pdf"){pb.textContent=`${word}: ${t}`;$("status").textContent=`Making your A4 PDF: ${t.toLowerCase()}...`}};
   $("status").textContent=kind==="pdf"?"Making your A4 PDF...":"Building your image...";
   if(!await loadExportTools(kind==="pdf")){if(opts.win)try{opts.win.close()}catch(e){}btns.forEach(b=>b.disabled=false);$("status").textContent="Couldn't load the export tools. Check your connection and try again.";return}
-  const API2=window.jspdf&&window.jspdf.jsPDF&&window.jspdf.jsPDF.API,orig2=API2&&API2.addImage;
-  if(toPrint&&API2)API2.addImage=function(img,fmt,x,y,w,h,...rest){if(typeof w!=="number")return orig2.call(this,img,fmt,x,y,w,h,...rest);const PW=this.internal.pageSize.getWidth(),PH=this.internal.pageSize.getHeight(),k=Math.min((PW-10)/PW,(PH-10)/PH);
+  /* full coverage: every page is painted edge to edge in the menu's own paper colour, then the menu sits on it 4mm in,
+     so a printer that cannot ink the very edge only ever loses plain colour, never words, and a borderless printer prints true full bleed */
+  const API2=window.jspdf&&window.jspdf.jsPDF&&window.jspdf.jsPDF.API,orig2=API2&&API2.addImage,origURL=HTMLCanvasElement.prototype.toDataURL,EDGE=new Map();
+  HTMLCanvasElement.prototype.toDataURL=function(...a){try{const t=trimWhite(this);const u=origURL.apply(t,a);EDGE.set(u,{col:edgeColour(t),ar:t.width/t.height});return u}catch(e){return origURL.apply(this,a)}};
+  if(kind==="pdf"&&API2)API2.addImage=function(img,fmt,x,y,w,h,...rest){if(typeof w!=="number")return orig2.call(this,img,fmt,x,y,w,h,...rest);
+    const PW=this.internal.pageSize.getWidth(),PH=this.internal.pageSize.getHeight(),k=Math.min((PW-8)/PW,(PH-8)/PH),inf=EDGE.get(img)||{},col=inf.col;
+    if(col){this.setFillColor(col[0],col[1],col[2]);this.rect(0,0,PW,PH,"F")}
+    /* a trimmed image keeps its own shape, centred in the space it was given */
+    if(inf.ar){if(w/h>inf.ar){const nw=h*inf.ar;x+=(w-nw)/2;w=nw}else{const nh=w/inf.ar;y+=(h-nh)/2;h=nh}}
     return orig2.call(this,img,fmt,PW*(1-k)/2+x*k,PH*(1-k)/2+y*k,w*k,h*k,...rest)};
   try{
     const canvas=kind==="pdf"&&parts==="prep"?null:await renderCanvas(kind==="pdf"||tab==="menu"?card:prep,kind==="pdf");
@@ -2429,7 +2446,7 @@ async function exportMenu(kind,parts,opts){
     }else if(!inClaude){plainDownload(data,filename);$("status").textContent=`Downloaded ${filename}. ${parts==="menu"&&kind==="pdf"?pdfTip():"Print it at A4, actual size."}`}
     else{showOverlay(canvas.toDataURL("image/png"));$("status").textContent=""}
   }catch(e){console.error(e);if(opts.win)try{opts.win.close()}catch(x){}$("status").textContent=`Couldn't build the image (${(e&&(e.name||e.message))||"unknown error"}). Close and reopen the app, then try again.`}
-  finally{if(API2&&orig2)API2.addImage=orig2;btns.forEach(b=>b.disabled=false);if(kind==="pdf"){pb.textContent=pbText;pb.classList.remove("busy");pb.removeAttribute("aria-busy")}}
+  finally{if(API2&&orig2)API2.addImage=orig2;HTMLCanvasElement.prototype.toDataURL=origURL;btns.forEach(b=>b.disabled=false);if(kind==="pdf"){pb.textContent=pbText;pb.classList.remove("busy");pb.removeAttribute("aria-busy")}}
 }
 
 $("spin").addEventListener("click",e=>{kbSpin=lastKey||e.detail===0;spin()});
