@@ -801,7 +801,15 @@ function applyPhone(){
   scalePreview();if(on)fitPhoneTitle();
   {const has=tab==="menu"&&!!card.innerHTML.trim()&&!document.body.classList.contains("staged");preview.tabIndex=has?0:-1;if(has)preview.removeAttribute("aria-hidden")}const zh=$("zoomHint");if(zh){const ok=tab==="menu"&&!!card.innerHTML.trim();zh.hidden=!ok;preview.style.cursor=ok?"":"auto";const tap=matchMedia("(pointer:coarse)").matches?"tap":"click";zh.textContent=ok&&cardFaces().length&&swipeW()?`Swipe to turn, ${tap} to zoom`:`${tap[0].toUpperCase()+tap.slice(1)} the menu to read it full size`}
 }
+/* the phone text menu uses the Prep sheet's own recipe for a dish: same amounts for tonight's guests, same method */
+function phoneRecipe(f,it){try{if(!f||!f._r2||!f._r2.dishes||!it)return null;const LB=planLabels(f),want=[it.n,it.label].filter(Boolean).map(x=>String(x).toLowerCase());
+  const d=f._r2.dishes.find(d=>want.includes(String(d.n).toLowerCase())||(LB[d.n]&&want.includes(String(LB[d.n]).toLowerCase())));if(!d)return null;const x=dietDish(d);if(x.blocked)return null;
+  const k=phoneGuests(f)/((f._r2&&f._r2.serves)||4);
+  return {ing:dishIngList(x,k),steps:(x.ingredients||[]).filter(baseOf).map(i=>baseOf(i).step(baseG(i.q,i)*k,i)).concat((x.steps||[]).map(s=>degC(scaleStep(s.text,k))))}}catch(e){return null}}
+const phoneGuests=f=>typeof current!=="undefined"&&current===f?PLAN.guests:USUAL;
+let pvArgs=null;function phoneRefresh(){if(pvArgs&&pvArgs[0]===current&&fmtPhone.innerHTML)phoneView(...pvArgs)}
 function phoneView(f,spec,menu){
+  pvArgs=f?[f,spec,menu]:null;
   if(!f){fmtPhone.innerHTML="";applyPhone();return}
   fmtPhone.innerHTML=fmtPhoneHTML(f,spec,menu);fmtPhoneWire(fmtPhone);
   {const fb=fmtPhone.querySelector(".fp-flip");fb.textContent="Read the printed menu full size";fb.addEventListener("click",()=>openMenuZoom(fb))}
@@ -1152,7 +1160,7 @@ function planWire(f){
   if(!f||!f._r2||!f._r2.dishes||!f._r2.dishes.length){box.hidden=true;box.dataset.has="";box.innerHTML="";return}
   planLoad(f);box.dataset.has="1";box.hidden=tab!=="prep";box.innerHTML=planHTML(f);
   const redo=()=>{planSave(f);box.querySelector(".pl-g").textContent=PLAN.guests;{const n=box.querySelector(".pl-sum");if(n)n.textContent=planCount(f._r2)}prep.innerHTML=prepHTML(f,current.menu);const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
-  box.onclick=e=>{const b=e.target.closest("[data-pl]");if(!b)return;PLAN.guests=Math.min(60,Math.max(1,PLAN.guests+(b.dataset.pl==="+"?1:-1)));redo()};
+  box.onclick=e=>{const b=e.target.closest("[data-pl]");if(!b)return;PLAN.guests=Math.min(60,Math.max(1,PLAN.guests+(b.dataset.pl==="+"?1:-1)));redo();phoneRefresh()};
   const wireToggle=()=>{const dt=box.querySelector(".pl-pick");if(dt)dt.addEventListener("toggle",()=>{try{localStorage.setItem("mns-plan-open",dt.open?"1":"0")}catch(e){}})};wireToggle();
   box.onchange=e=>{const dk=e.target.dataset.diet;if(dk){DIET[dk]=e.target.checked;dietSave();try{setSync()}catch(_){}const op=box.querySelector(".pl-pick"),was=op&&op.open;box.innerHTML=planHTML(f);if(was){const o2=box.querySelector(".pl-pick");if(o2)o2.open=true}wireToggle();redo();if(f===current)dietRedraw(dk);return}
     const n=e.target.dataset.dish;if(n==null)return;const x=planAll(f).find(d=>(d.orig||d.n)===n);
@@ -2795,7 +2803,7 @@ $("favBtn").addEventListener("click",()=>{if(!current)return;const id=current.id
 /* settings drawer */
 function setSync(){$("setGuests").textContent=USUAL;$("setVeg").checked=DIET.veg;$("setAf").checked=DIET.af||kidsMode;$("setAf").disabled=kidsMode;
   $("histClear").hidden=!hist.length}
-function refreshPlan(){try{if(current&&current._r2){planWire(current);prep.innerHTML=prepHTML(current,current.menu);const h=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=h}}catch(e){}}
+function refreshPlan(){try{if(current&&current._r2){planWire(current);prep.innerHTML=prepHTML(current,current.menu);const h=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=h;phoneRefresh()}}catch(e){}}
 $("setBtn").addEventListener("click",()=>{setSync();const o=$("settings");mountModal(o,"#setClose",$("setBtn"));if(!o.open)o.showModal()});
 $("setClose").addEventListener("click",()=>dismissModal($("settings")));
 $("settings").addEventListener("click",e=>{if(e.target===$("settings"))dismissModal($("settings"))});
