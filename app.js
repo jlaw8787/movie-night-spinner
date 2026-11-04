@@ -853,8 +853,11 @@ function applyPhone(){
   {const has=tab==="menu"&&!!card.innerHTML.trim()&&!document.body.classList.contains("staged");preview.tabIndex=has?0:-1;if(has)preview.removeAttribute("aria-hidden")}const zh=$("zoomHint");if(zh){const ok=tab==="menu"&&!!card.innerHTML.trim();zh.hidden=!ok;preview.style.cursor=ok?"":"auto";const tap=isTouch()?"tap":"click";zh.textContent=ok&&cardFaces().length&&swipeW()?`Swipe to turn, ${tap} to zoom`:`${tap[0].toUpperCase()+tap.slice(1)} the menu to read it full size`}
 }
 /* the phone text menu uses the Prep sheet's own recipe for a dish: same amounts for tonight's guests, same method */
-function phoneRecipe(f,it){try{if(!f||!f._r2||!f._r2.dishes||!it)return null;const LB=planLabels(f),want=[it.n,it.label].filter(Boolean).map(x=>String(x).toLowerCase());
-  const d=f._r2.dishes.find(d=>want.includes(String(d.n).toLowerCase())||(LB[d.n]&&want.includes(String(LB[d.n]).toLowerCase())));if(!d)return null;const x=dietDish(d);if(x.blocked)return null;
+function phoneRecipe(f,it){try{if(!f||!f._r2||!f._r2.dishes||!it)return null;const LB=planLabels(f),want=[it.orig,it.n,it.label].filter(Boolean).map(x=>String(x).toLowerCase());
+  const altN=d=>Object.values(d.alt||{}).map(a=>String(a&&a.n||"").replace(/\s*\((vegetarian|alcohol[- ]free|vegetarian, alcohol[- ]free)\)\s*$/i,"").toLowerCase()).filter(Boolean);
+  const d=f._r2.dishes.find(d=>want.includes(String(d.n).toLowerCase())||(LB[d.n]&&want.includes(String(LB[d.n]).toLowerCase())))||f._r2.dishes.find(d=>altN(d).some(n=>want.includes(n)));if(!d)return null;
+  /* a film that always prints dry shows the written alcohol-free method on the phone too, when there is one */
+  const only=dietMenuOnly(f);let x=dietDish(d,only||dietAF());if(x.blocked){if(!only)return null;x=d}
   const k=phoneGuests(f)/((f._r2&&f._r2.serves)||4);
   return {ing:dishIngList(x,k),steps:(x.ingredients||[]).filter(baseOf).map(i=>baseOf(i).step(baseG(i.q,i)*k,i)).concat((x.steps||[]).map(s=>degC(scaleStep(s.text,k))))}}catch(e){return null}}
 const phoneGuests=f=>typeof current!=="undefined"&&current===f?PLAN.guests:USUAL;
@@ -963,7 +966,7 @@ function libPhonePal(root){
 const LIB_COURSE={s:"Starters",m:"Mains",w:"Sweets",d:"Drinks"};
 function libPhoneView(f,menu,L,root){
   const fl=L.flavour||{},pm={};let any=false;
-  for(const c of ["s","m","w","d"]){pm[c]=(menu[c]||[]).filter(it=>it&&it.n).map(it=>({label:it.n,desc:it.d||it.desc||"",film:it.note||"",how:it.house?"A house standard, not part of tonight's cook.":degC(it.how||"Not on tonight's cook.")}));if(pm[c].length)any=true}
+  for(const c of ["s","m","w","d"]){pm[c]=(menu[c]||[]).filter(it=>it&&it.n).map(it=>({label:it.n,orig:it.orig,desc:it.d||it.desc||"",film:it.note||"",how:it.house?"A house standard, not part of tonight's cook.":degC(it.how||"Not on tonight's cook.")}));if(pm[c].length)any=true}
   if(!any){phoneView(null);return}
   {const ea=$("easel"),was=ea.hidden;ea.hidden=false;try{FMT_PHONE.lib=libPhonePal(root)}finally{ea.hidden=was}}
   phoneView(f,{fmt:"lib",brand:fl.venue||"",tag:ESC(current&&current.tag||f.T),phoneTitle:f.title},pm);
@@ -988,28 +991,33 @@ function dietSave(){try{localStorage.setItem("mns-diet",JSON.stringify(DIET))}ca
 const dietAF=()=>DIET.af||(typeof kidsMode!=="undefined"&&kidsMode);
 const dietBooze=x=>x.af===false||(x.ingredients||[]).some(i=>i.aisle==="Bottle shop");
 const dietMeat=x=>x.veg===false;
-function dietDish(d){
+function dietDish(d,af=dietAF()){
   const alt=d.alt||{};let x=d,tag="";
-  if(DIET.veg&&dietMeat(d)){if(dietAF()&&alt.veg_af){return Object.assign({},d,alt.veg_af,{orig:d.n,tag:"veg",af:true})}if(alt.veg){x=Object.assign({},d,alt.veg,{orig:d.n,af:alt.veg.af});tag="veg"}else return Object.assign({},d,{orig:d.n,blocked:"meat"})}
-  if(dietAF()&&dietBooze(x)){if(!tag&&alt.af){x=Object.assign({},d,alt.af,{orig:d.n,af:true});tag="af"}else return Object.assign({},x,{orig:d.n,blocked:"alcohol",tag})}
+  if(DIET.veg&&dietMeat(d)){if(af&&alt.veg_af){return Object.assign({},d,alt.veg_af,{orig:d.n,tag:"veg",af:true})}if(alt.veg){x=Object.assign({},d,alt.veg,{orig:d.n,af:alt.veg.af});tag="veg"}else return Object.assign({},d,{orig:d.n,blocked:"meat"})}
+  if(af&&dietBooze(x)){if(!tag&&alt.af){x=Object.assign({},d,alt.af,{orig:d.n,af:true});tag="af"}else return Object.assign({},x,{orig:d.n,blocked:"alcohol",tag})}
   return tag?Object.assign({},x,{tag}):x;
 }
 /* the printed menu follows the diet too: a swapped dish takes its own name, menu line, method and shopping, and film copy that names meat or drink is reworded */
 function dietKey(){const v=DIET.veg,a=dietAF();return v&&a?"veg_af":v?"veg":a?"af":""}
+/* family and Christmas films always print dry: their menus take the written alcohol-free versions (name, menu line, film copy) before the word swaps,
+   but only on the menus, so the plan, prep sheet and shopping keep the cook's own diet settings and no dish is left off */
+const DRY_THEMES=["kids","fairytale","xmas","wizard"];
+const dietMenuOnly=f=>!dietKey()&&!!f&&DRY_THEMES.includes(f.theme);
+const dietKeyF=f=>dietKey()||(dietMenuOnly(f)?"af":"");
 function dietWhich(d,x){const alt=d.alt||{};if(!x.tag)return "";if(x.tag==="af")return "af";return alt.veg_af&&x.n===alt.veg_af.n?"veg_af":"veg"}
 function dietShop(x){return (x.ingredients||[]).map(i=>`${i.u?planQty(i.q,i.u):planQty(i.q,"")} ${i.item}@${i.aisle||"Other"}`.trim())}
 function dietItem(f,it){
-  const r2=f&&f._r2&&f._r2.dishes;if(!r2||!it||!dietKey())return it;
+  const r2=f&&f._r2&&f._r2.dishes;if(!r2||!it||!dietKeyF(f))return it;
   const d=r2.find(z=>z.n===(it.k||it.n));if(!d)return it;
-  const x=dietDish(d);if(x.blocked)return Object.assign({},it,{blocked:x.blocked,orig:d.n});
+  const only=dietMenuOnly(f),x=dietDish(d,only||dietAF());if(x.blocked)return only?it:Object.assign({},it,{blocked:x.blocked,orig:d.n});
   if(!x.tag)return it;
   const v=dietWhich(d,x),N=(f._diet&&f._diet.notes&&f._diet.notes[d.n])||{};
   const note=N[v]||(v==="veg_af"?N.veg:"")||"";
   const nm=String(x.n).replace(/\s*\((vegetarian|alcohol[- ]free|vegetarian, alcohol[- ]free)\)\s*$/i,"");
-  return Object.assign({},it,it.label!=null&&it.label===d.n?{label:dietText(f,d.n)!==d.n?dietText(f,d.n):nm.length<=d.n.length+2?nm:d.n}:{},{n:String(x.n).replace(/\s*\((vegetarian|alcohol[- ]free|vegetarian, alcohol[- ]free)\)\s*$/i,""),note,orig:d.n,how:(x.steps||[]).map(t=>t.text).join(" "),shop:dietShop(x),diet:v});
+  return Object.assign({},it,it.label!=null&&it.label===d.n?{label:dietText(f,d.n)!==d.n?dietText(f,d.n):nm.length<=d.n.length+2?nm:d.n}:{},{n:String(x.n).replace(/\s*\((vegetarian|alcohol[- ]free|vegetarian, alcohol[- ]free)\)\s*$/i,""),note:note||(only?it.note:""),orig:d.n},only?{}:{how:(x.steps||[]).map(t=>t.text).join(" "),shop:dietShop(x)},{diet:v});
 }
 function dietMenu(f,menu){
-  if(!menu||!dietKey()||!f||!f._r2)return menu;
+  if(!menu||!f||!dietKeyF(f)||!f._r2)return menu;
   const m=Object.assign({},menu);for(const c of ["s","m","w","d"])if(Array.isArray(menu[c]))m[c]=menu[c].map(it=>dietItem(f,it));
   if(Array.isArray(menu.all))m.all=menu.all.map(it=>dietItem(f,it));
   if(Array.isArray(menu.shopping))m.shopping=[...m.s,...m.m,...m.w,...m.d].flatMap(it=>Array.isArray(it.shop)?it.shop:[]);
@@ -1017,7 +1025,7 @@ function dietMenu(f,menu){
 }
 /* film copy reworded for the diet: data/diet/<film>.json "text" holds [from, to] pairs per diet */
 function dietText(f,str){
-  const k=dietKey();if(!k||typeof str!=="string"||!f||!f._diet||!f._diet.text)return str;
+  const k=dietKeyF(f);if(!k||typeof str!=="string"||!f||!f._diet||!f._diet.text)return str;
   const T=f._diet.text,lists=k==="veg_af"?[T.veg_af,T.veg,T.af]:[T[k]];let out=str;
   const pairs=[];for(const L of lists)for(const [a,b] of (L||[]))if(a)pairs.push([a,b]);
   pairs.forEach(([a],i)=>{if(out.includes(a))out=out.split(a).join("\u0001"+i+"\u0002")});
@@ -1025,7 +1033,7 @@ function dietText(f,str){
 }
 /* the hand-built menus are finished artwork with the words baked in, so the same swaps run over the page itself */
 function dietHTML(f,html){
-  const k=dietKey();if(!k||typeof html!=="string"||!f||!f._diet||!f._diet.text)return html;
+  const k=dietKeyF(f);if(!k||typeof html!=="string"||!f||!f._diet||!f._diet.text)return html;
   const T=f._diet.text,lists=k==="veg_af"?[T.veg_af,T.veg,T.af]:[T[k]];let out=html;
   const esc=t=>String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
   /* each swap lands once: matches become placeholders first, so wording that contains the old wording is never swapped again */
@@ -1040,16 +1048,31 @@ function dietHTML(f,html){
 }
 function dietDeep(f,o){if(typeof o==="string")return dietText(f,o);if(Array.isArray(o))return o.map(x=>dietDeep(f,x));if(o&&typeof o==="object"){const r={};for(const k in o)r[k]=k==="k"?o[k]:dietDeep(f,o[k]);return r}return o}
 const _dietSpecs=new WeakMap();
-function dietSpec(f,spec){if(!spec||!dietKey()||!f._diet)return spec;let c=_dietSpecs.get(spec);if(!c){c={};_dietSpecs.set(spec,c)}const k=dietKey();return c[k]||(c[k]=dietDeep(f,spec))}
+function dietSpec(f,spec){if(!spec||!dietKeyF(f)||!f._diet)return spec;let c=_dietSpecs.get(spec);if(!c){c={};_dietSpecs.set(spec,c)}const k=dietKeyF(f);return c[k]||(c[k]=dietDeep(f,spec))}
 function dietStamp(){const b=$("dietNote");if(!b)return;const t=dietLabel();b.textContent=t?t+" menu":"";b.hidden=!t}
 function dietLabel(){const k=dietKey();return k==="veg_af"?"Vegetarian · Alcohol-free":k==="veg"?"Vegetarian":k==="af"?"Alcohol-free":""}
 /* lazy night: plan only the dishes left on the cut-down menu */
 /* cook five: a tested recipe for a dish that isn't one of tonight's five (a card extra the sweep gave a recipe) is offered unticked */
 const planCooked=f=>{const src=(typeof EDITIONS!=="undefined"&&EDITIONS[f.id]&&EDITIONS[f.id].menu)||(typeof RECIPE_MENUS!=="undefined"&&RECIPE_MENUS[f.id])||null;
   return src?new Set(["s","m","w","d"].flatMap(k=>(src[k]||[]).map(it=>String(it.n||"").toLowerCase()))):null};
-const planAll=f=>{const ck=planCooked(f),r2=((f._r2&&f._r2.dishes)||[]).map(dietDish),hit=d=>ck.has(String(d.orig||d.n).toLowerCase()),
-    /* only when every cooked dish is found by name; a hand-built menu that names its dishes differently keeps all its recipes ticked */
-    sp=ck&&ck.size&&r2.filter(hit).length>=Math.min(5,ck.size),all=sp?r2.map(d=>hit(d)?d:Object.assign({},d,{spare:true})):r2,m=f.menu||(typeof current!=="undefined"&&current===f?current.menu:null);
+/* the five a printed menu cooks when its old recipe names no longer match the recipe files (hand-built menus: Ghostbusters, Pulp Fiction):
+   from the printed menu, two starters, a main, a sweet and a drink that have a recipe, topped up to five from the rest it prints */
+function planFive(f,r2){const have=new Set(r2.map(d=>String(d.orig||d.n).toLowerCase()));let byC=null;
+  try{const sp=typeof fmtSpec==="function"&&fmtSpec(f);if(sp){const m=fmtMenu(f,sp);byC={};for(const c of ["s","m","w","d"])byC[c]=(m[c]||[]).map(it=>String(it.orig||it.n||"").toLowerCase())}}catch(e){}
+  if(!byC){byC={s:[],m:[],w:[],d:[]};for(const d of r2)(byC[d.course]||byC.s).push(String(d.orig||d.n).toLowerCase())}
+  /* within a course the film card's own order leads (Stay Puft s'mores before the marshmallow skewers) */
+  /* a dish the showtime cue names comes first, so the cue always has its dish (Ghostbusters: "Serve the takeaway boxes") */
+  const cue=String((typeof EDITIONS!=="undefined"&&EDITIONS[f.id]&&EDITIONS[f.id].cue)||f.P||"").toLowerCase(),
+    named=x=>x.split(/[^a-z']+/).some(w=>w.length>=5&&!/^(serve|with|their|after|first)$/.test(w)&&new RegExp("\\b"+w+"\\b").test(cue));
+  const card=[...f.S||[],...f.M||[],...f.W||[],...f.K||[]].map(r=>String(r[0]).toLowerCase()),rank=x=>(named(x)?-1000:0)+(card.indexOf(x)<0?999:card.indexOf(x));
+  for(const c in byC)byC[c]=byC[c].map((x,i)=>[x,i]).sort((a,b)=>rank(a[0])-rank(b[0])||a[1]-b[1]).map(z=>z[0]);
+  const out=new Set();for(const [c,n] of [["s",2],["m",1],["w",1],["d",1]]){let k=0;for(const x of byC[c])if(k<n&&have.has(x)&&!out.has(x)){out.add(x);k++}}
+  for(const c of ["s","m","w","d"])for(const x of byC[c])if(out.size<5&&have.has(x))out.add(x);
+  return out.size?out:null}
+const planAll=f=>{const ck0=planCooked(f),r2=((f._r2&&f._r2.dishes)||[]).map(dietDish),
+    /* every cooked dish found by name: those are tonight's five. Otherwise the card picks them (planFive), so extras start unticked on hand-built menus too */
+    ok=ck0&&ck0.size&&r2.filter(d=>ck0.has(String(d.orig||d.n).toLowerCase())).length>=Math.min(5,ck0.size),ck=ok?ck0:r2.length>5?planFive(f,r2):null,
+    hit=d=>ck.has(String(d.orig||d.n).toLowerCase()),sp=!!ck,all=sp?r2.map(d=>hit(d)?d:Object.assign({},d,{spare:true})):r2,m=f.menu||(typeof current!=="undefined"&&current===f?current.menu:null);
   let out=all;if(m&&m.lazy){const keep=new Set([...m.s,...m.m,...m.w,...m.d].map(it=>it.orig||it.n)),few=all.filter(d=>keep.has(d.orig||d.n));if(few.length)out=few}
   return out.concat(planExtras(f).map(dietDish)).concat(snackDishes(f).map(dietDish))};
 /* the film's other printed dishes: offered in the planner unticked, so every dish on the printed menu can go on the shopping list.
@@ -1088,11 +1111,14 @@ const PL_MASS=/(thyme|rosemary|mint|parsley|basil|coriander|dill|chives|oregano|
 function planPlural(item,q){if(!(q>1))return item;if(/^cob loa(f|ves)\b/i.test(item))return String(item).replace(/^cob loa(f|ves)/i,"cob loaves");let [head,...rest]=String(item).split(",");const par=head.indexOf(" (");if(par>0){rest=[head.slice(par)+(rest.length?","+rest.join(","):"")];head=head.slice(0,par);return planPlural(head,q)+rest[0]}const w=head.trim().split(" ");
   const pl=x=>/(s|ice|milk|water|juice|sugar|flour|rice|bread|butter|cream|cheese|fish|corn|meat|oil|salt|pepper|mince|beef|pork|lamb|chicken|bacon|ham|tea|coffee|soda)$/i.test(x)?x:/(ch|sh|x)$/i.test(x)?x+"es":/(tomato|potato|mango|avocado)$/i.test(x)?x+"es":/[^aeiou]y$/i.test(x)?x.slice(0,-1)+"ies":/f$/i.test(x)&&/loaf|leaf|half/i.test(x)?x.slice(0,-1)+"ves":x+"s";
   /* "rib eye", "ear of corn" style names are the food, not a container: "rib" only counts when it is "rib of" or "ribs" */
-  const ci=w.slice(0,3).findIndex((x,i)=>PL_CONT.test(x)&&!(i>0&&/^fillets?$/i.test(x))&&!(/^(rib|ear|head|wheel|log)$/i.test(x)&&w[i+1]&&w[i+1]!=="of"&&w[i+1]!=="celery"));
+  const ci=w.slice(0,3).findIndex((x,i)=>planCont(w,i));
   if(ci>=0){if(!/s$/i.test(w[ci]))w[ci]=pl(w[ci]);if(w.length>ci+1&&w[ci+1]!=="of")w[ci]+=" of"}else if(!PL_MASS.test(head.trim()))w[w.length-1]=pl(w[w.length-1]);return [w.join(" "),...rest].join(",")}
+/* "rib eye", "round steak", "ear of corn": rib, round, square, disc, ear, head, wheel and log are the food's own name, not a container,
+   unless "of" follows or the word ends the name ("4 pastry rounds"). So "9 thin beef round steaks", never "beef rounds of steaks" */
+const planCont=(w,i)=>PL_CONT.test(w[i])&&!(i>0&&/^fillets?$/i.test(w[i]))&&!(/^(rib|ear|head|wheel|log|round|square|disc)$/i.test(w[i])&&w[i+1]&&w[i+1]!=="of"&&w[i+1]!=="celery")&&!(/^cobs?$/i.test(w[i])&&/^loa(f|ves)$/i.test(w[i+1]||""));
 /* one of something stays singular even when the recipe wrote it plural: "1 clove garlic", not "1 cloves garlic" */
 function planOne(item){let [head,...rest]=String(item).split(",");const par=head.indexOf(" (");let tail="";if(par>0){tail=head.slice(par);head=head.slice(0,par)}
-  const w=head.split(" ");const i=w.slice(0,3).findIndex(x=>PL_CONT.test(x)&&/s$/i.test(x)),hasCont=w.slice(0,3).some(x=>PL_CONT.test(x));
+  const w=head.split(" ");const i=w.slice(0,3).findIndex((x,j)=>planCont(w,j)&&/s$/i.test(x)),hasCont=w.slice(0,3).some((x,j)=>planCont(w,j));
   if(i>=0)w[i]=planSing(w[i]);
   else if(hasCont){}
   /* "1 lemons", "1 brown onions": a plain plural noun at the end goes singular too */
@@ -1336,7 +1362,7 @@ function libAim(card,L){const foc=L&&L.focus;if(!foc)return;
    never under 65% of its size, so nothing reads "Curry before the clock hits MID". Works on every printed menu. */
 /* kids' mode, alcohol-free, and family films: one dry pass over the finished card and phone menu, on every layout and hand-built menu alike.
    Whole drink names first, then single words; cooking phrases lose just the alcohol word; vinegars and root, ginger and butter beer are left alone. */
-const dryNow=f=>dietAF()||["kids","fairytale","xmas","wizard"].includes(f&&f.theme);
+const dryNow=f=>dietAF()||DRY_THEMES.includes(f&&f.theme);
 const KDRY=(()=>{const cap=(m,v)=>v&&/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v,W="beer|stout|ale|guinness|lager|red wine|white wine|wine|cider|bourbon|whisk(?:e)?y|rum|brandy|sherry|marsala|tequila|vodka|sake|champagne|port";
   const r=(re,v)=>[re,typeof v==="function"?v:m=>cap(m,v)];
   return [r(/[^.]*\bmust be (18|19|21)( or over)? to (order|drink)\b[^.]*\.?\s*/gi,""),r(/\b(18\+|over 18s?) only\.?\s*/gi,""),
@@ -1440,7 +1466,8 @@ const FULL_CAP={galley:1,tearoom:1,candybar:2,canteen:1,club:1,diningcar:1,saloo
 function fullMenu(f,menu,fmt){
   if(window.LIB_FULL===false)return menu;
   const out={},seen=new Set(),adds=[];
-  for(const k of ["s","m","w","d"])for(const it of menu[k]||[])seen.add(String(it.n||"").toLowerCase());
+  /* a dish shown under its alcohol-free or vegetarian name still counts as on the card, so its original never comes back as an extra */
+  for(const k of ["s","m","w","d"])for(const it of menu[k]||[]){seen.add(String(it.n||"").toLowerCase());if(it.orig)seen.add(String(it.orig).toLowerCase())}
   const src={s:f.S,m:f.M,w:f.W,d:f.K},plain=!(DIET.veg||dietAF());
   if(plain&&f._full)for(const k of ["s","m","w","d"])for(const r of src[k]||[]){const it=toItem(r);if(!it.n||seen.has(it.n.toLowerCase()))continue;seen.add(it.n.toLowerCase());adds.push([k,Object.assign(it,{extra:true})])}
   /* a card with one main shows the film's second main before a third starter, so a short board still reads as a dinner (Blazing Saddles: rib eyes beside the beans) */
@@ -1512,7 +1539,7 @@ async function show(f,preferSig){
   }
   if(f._lib&&await libLoad(f._lib.fmt)&&id===renderId){
     try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
-      const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f:dietKey()?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietText(f,f.P),D:dietText(f,f.D)}):f,menu:libMenu(fullMenu(f,menu,L.fmt)),poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
+      const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f:dietKeyF(f)?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietText(f,f.P),D:dietText(f,f.D)}):f,menu:libMenu(fullMenu(f,menu,L.fmt)),poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
       r.faces=r.faces.map(h=>libVary(h,f));const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
       styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);dietStamp();
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
@@ -1655,7 +1682,7 @@ function tickShowtime(){
 }
 /* menu of the week: the printed era menus take turns, a new one every Monday */
 function weekNo(d){const t=new Date(Date.UTC(d.getFullYear(),d.getMonth(),d.getDate()));const day=t.getUTCDay()||7;t.setUTCDate(t.getUTCDate()+4-day);const y=new Date(Date.UTC(t.getUTCFullYear(),0,1));return Math.ceil(((t-y)/864e5+1)/7)+t.getUTCFullYear()*53}
-const MOTW_KIND={workorder:"A firehouse work order",lanes:"A league night score sheet",market:"The corner market wall",takeaway:"A Chinatown takeaway trifold",diner:"The Wazoo Diner trifold",casefile:"A Prohibition case file",noodle:"Mr Ping's noodle shop wall",slims:"The Jack Rabbit Slim's menu",nero:"A Little Nero's pizza box",lous:"The Lou's Cafe letter board",pad:"Henry's notepad, May 1980"};
+const MOTW_KIND={workorder:"A firehouse work order",lanes:"A league night score sheet",market:"The corner market wall",takeaway:"A Chinatown takeaway trifold",diner:"The Wazoo Diner trifold",casefile:"The Lexington Hotel banquet menu",noodle:"Mr Ping's noodle shop wall",slims:"The Jack Rabbit Slim's menu",nero:"A Little Nero's pizza box",lous:"The Lou's Cafe letter board",pad:"Henry's notepad, May 1980"};
 function renderMotw(){
   const box=$("motw");if(!box||typeof FMT_INDEX==="undefined")return;
   const ids=Object.keys(FMT_INDEX).filter(id=>FILMS.some(f=>f.id===id)&&(!kidsMode||isKidSafe(FILMS.find(f=>f.id===id)))).sort();

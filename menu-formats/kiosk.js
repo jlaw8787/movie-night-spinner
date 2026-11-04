@@ -137,6 +137,8 @@ const trunc=(s,n)=>{s=clean(s);if(s.length<=n)return s;const c=s.slice(0,n);cons
 /* notes that do not fit are cut back to their first clause, or left off; never cut mid thought */
 const clip=(s,n)=>{s=clean(s);if(s.length<=n)return s;const p=s.split(/(?<=[.!?;])\s/)[0].replace(/[.;]$/,"").trim();return p.length<=n&&p.length>=12?p:""};
 /* real layout height of a block at a given width, measured off screen; null when there is no document */
+/* where the content ends inside a fixed-height box (floats included), read from an end marker */
+const domEnd=(html,w)=>{try{const b=document.body;if(!b)return null;const d=document.createElement("div");d.style.cssText=`position:absolute;left:-12000px;top:0;width:${w}px;visibility:hidden;display:flow-root`;d.innerHTML=html;b.appendChild(d);const e=d.querySelector("[data-end]"),h=e.getBoundingClientRect().top-d.getBoundingClientRect().top;b.removeChild(d);return h}catch(e){return null}};
 const domH=(html,w)=>{try{const b=document.body;if(!b)return null;const d=document.createElement("div");d.style.cssText=`position:absolute;left:-12000px;top:0;width:${w}px;visibility:hidden;display:flow-root`;d.innerHTML=html;b.appendChild(d);const h=d.getBoundingClientRect().height;b.removeChild(d);return h}catch(e){return null}};
 
 /* ---------- colour ---------- */
@@ -326,13 +328,15 @@ window.MENU_FORMATS[ID]=ctx=>{
   const hdrL=`<div style="${caps(17,ACC,.2)}">${esc(KICK)}, since ${esc(year)}</div>
      <div style="font:${E.dw}${sT.z}px/1.0 ${disp};color:${ink};margin-top:8px;${glow}">${esc(sign)}</div>`;
   const hdr=PM?`<div style="display:flex;align-items:flex-start;gap:20px"><div style="flex:1;min-width:0">${hdrL}</div><div style="flex:none">${logoHtml}<br>${capHtml}</div></div>`:hdrL;
-  const hdrH=PM?Math.max(kickN*21+8+sT.n*sT.z*1.0+16,logoH+54):22+8+sT.n*sT.z*1.0+16;
+  /* measured when the page can, since the estimate ran 40px over on three-line signs and left a gap under the menu (Terminator 2) */
+  const hdrE=PM?Math.max(kickN*21+8+sT.n*sT.z*1.0+16,logoH+54):22+8+sT.n*sT.z*1.0+16,hdrM=domH(`<div style="font-size:16px;line-height:1.3">${hdr}</div>`,IW);
+  const hdrH=hdrM>40&&hdrM<=hdrE+20?Math.ceil(hdrM)+4:hdrE;
   const cue=sentence(C(f.P));
   const cueW=PM?IW-316-28:IW;
-  const cT=fitType(cue,cueW-24,PM?150:80,E.bcw,19,15,1.3,PM?8:4);
+  let cT=fitType(cue,cueW-24,PM?150:80,E.bcw,19,15,1.3,PM?8:4);
   const fine=`${TK.close} Prices subject to change. Kiosk licence ${num}.`;
   const fT=fitType(fine,IW,44,.52,15,14,1.3,3);
-  const cueH=cue?16+18+6+cT.n*cT.z*1.3+14:0,footTail=fT.n*fT.z*1.3+8,footH=(PM?Math.max(cueH,noteH+12):cueH)+footTail;
+  let cueH=cue?16+18+6+cT.n*cT.z*1.3+14:0;const footTail=fT.n*fT.z*1.3+8,footH=(PM?Math.max(cueH,noteH+12):cueH)+footTail;
   let MH=PH-pad-hdrH-14-footH-pad;
   /* menu courses, priced like a kiosk board */
   const m=ctx.menu||{};
@@ -342,28 +346,38 @@ window.MENU_FORMATS[ID]=ctx=>{
   const total=courses.reduce((a,c)=>a+c.items.length,0);
   const cols=total>8&&courses.length>1?2:1,GAP=26;
   const colW=cols===2?(IW-GAP)/2:IW;
+  /* poster mode, one column: the note card floats in the bottom right of the menu area and the dishes run down beside it to the cue,
+     instead of the list stopping above the card and leaving a hole beside a short cue (Knocked Up, Terminator 2) */
+  const FLT=PM&&cols===1,ZW=nwP+28,ZH=noteH+12;
+  /* the cue has the full width under the menu once the note card moves up */
+  if(FLT){cT=fitType(cue,IW-24,80,E.bcw,19,15,1.3,4);cueH=cue?16+18+6+cT.n*cT.z*1.3+14:0;MH=PH-pad-hdrH-14-(cue?cueH+12:0)-footTail-pad;
+    const cm=cue?domH(`<div style="font-size:16px;line-height:1.3;border-left:4px solid;padding:2px 0 2px 16px"><div style="${caps(15,ACC,.2)};margin-bottom:6px">Showtime cue</div><div style="font:500 ${cT.z}px/1.3 ${body}">${esc(cue)}</div></div>`,IW):0;
+    if(cm!=null&&cm<=cueH+4){cueH=Math.ceil(cm)+2;MH=PH-pad-hdrH-14-(cue?cueH+12:0)-footTail-pad}}
+  const flo=h=>`<div style="float:right;width:0;height:${Math.max(0,Math.floor(h)-ZH)}px"></div><div style="float:right;clear:right;width:${ZW}px;height:${ZH}px;display:flex;align-items:flex-end;justify-content:flex-end">${notePM}</div>`;
   let splits=cols===2?courses.slice(1).map((_,i)=>[courses.slice(0,i+1),courses.slice(i+1)]):[[courses]];
   let colsArr=splits[0];
   const dcw=E.bcw+.05;
   const secStyle={wood:`border-bottom:3px solid ${ACC}`,varnish:`border-bottom:2px solid ${rgba(ink,.6)}`,faded:`background:${rgba(ACC,.92)};color:${E.board};padding:2px 12px;border-radius:30px;display:inline-block`,laminate:`color:${ACC};${glow}`,corflute:`background:${ink};color:${E.board};padding:2px 10px;display:inline-block`,vinyl:`background:${ACC};color:#fff;padding:2px 12px;border-radius:8px;display:inline-block`,ply:`border-bottom:2px solid ${ink}`}[E.plank];
   const secC={faded:fit(E.board,ACC,"#ffffff",3),corflute:E.board,vinyl:"#ffffff"}[E.plank]||ink;
+  const dishNote=(it,FS)=>it.note?sentence(clip(it.note,Math.floor((it.nk||FS.nl||1)*colW/(FS.N*E.bcw)*.95))):"";
   const colHtml=(cs,FS)=>cs.map((c,i)=>`<div style="margin-top:${i?FS.G+6:0}px">
       <div style="margin-bottom:8px"><span style="font:${E.dw}${FS.S}px/1.15 ${disp};${secStyle};color:${secC}">${esc(SEC[c.k])}</span></div>
       ${c.items.map(it=>`<div style="margin-bottom:${FS.G}px"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
         <span style="font:800 ${FS.D}px/1.12 ${body};color:${ink}">${esc(it.n)}</span><span style="font:${E.dw}${Math.round(FS.D*1.08)}px/1 ${disp};color:${ACC};white-space:nowrap;${glow}">${esc(it.p)}</span></div>
-        ${(FS.nl||it.nk)&&it.note?`<div style="font:500 ${FS.N}px/1.3 ${body};color:${soft};margin-top:2px">${esc(sentence(clip(it.note,Math.floor((FS.nl||1)*colW/(FS.N*E.bcw)*.95))))}</div>`:""}</div>`).join("")}</div>`).join("");
-  const est=(cs,FS)=>{let t=0;cs.forEach((c,i)=>{t+=FS.S*1.15+8+(i?FS.G+6:0);c.items.forEach(it=>{t+=lines(it.n,FS.D,colW-FS.D*2.6,dcw)*FS.D*1.12;if((FS.nl||it.nk)&&it.note)t+=Math.min(FS.nl||1,lines(it.note,FS.N,colW,E.bcw))*FS.N*1.3+2;t+=FS.G})});return t};
-  const measure=(cs,FS)=>{const h=domH(colHtml(cs,FS),colW);return h==null?est(cs,FS):h*1.04};
+        ${(it.nk||FS.nl)&&dishNote(it,FS)?`<div style="font:500 ${FS.N}px/1.3 ${body};color:${soft};margin-top:2px">${esc(dishNote(it,FS))}</div>`:""}</div>`).join("")}</div>`).join("");
+  const est=(cs,FS)=>{let t=0;cs.forEach((c,i)=>{t+=FS.S*1.15+8+(i?FS.G+6:0);c.items.forEach(it=>{t+=lines(it.n,FS.D,colW-FS.D*2.6,dcw)*FS.D*1.12;if((it.nk||FS.nl)&&dishNote(it,FS))t+=Math.min(it.nk||FS.nl||1,lines(it.note,FS.N,colW,E.bcw))*FS.N*1.3+2;t+=FS.G})});return t};
+  const measure=(cs,FS)=>{if(FLT){const h=domEnd(`<div style="height:${Math.floor(MH)}px">${flo(MH)}${colHtml(cs,FS)}<div data-end style="height:0"></div></div>`,colW);return h==null?est(cs,FS)+ZH:h*1.04}
+    const h=domH(colHtml(cs,FS),colW);return h==null?est(cs,FS):h*1.04};
   let FS=null;
   /* the film's notes come first: try every size with two-line then one-line notes before any size without them */
-  outer:for(const nl of [2,1,0])for(let s=1.07;s>=(nl?.6:.55);s-=.05){
+  outer:for(const nl of [2,1,0])for(let s=1.17;s>=(nl?.6:.55);s-=.05){
     const base={D:Math.max(17,Math.round(28*s)),N:Math.max(15,Math.round(21*s)),S:Math.max(20,Math.round(30*s)),G:Math.max(4,Math.round(16*s))};
     {const FSx=Object.assign({},base,{nl});
       let best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break outer}}
   }
   /* rescue for very long menus: give the cue's room to the menu, then smallest legal type, then fewer items per course */
   let dropCue=false;
-  if(!FS){dropCue=!!cue;MH+=PM?footH-(noteH+12)-footTail:footH;
+  if(!FS){dropCue=!!cue;MH+=FLT?(cue?cueH+12:0):PM?footH-(noteH+12)-footTail:footH;
     /* with the cue's room, try the notes again before going to the smallest type (Terminator 2 had half the panel empty and no notes) */
     again:for(const nl of [2,1,0])for(let s=1.07;s>=(nl?.6:.55);s-=.05){const FSx={D:Math.max(17,Math.round(28*s)),N:Math.max(15,Math.round(21*s)),S:Math.max(20,Math.round(30*s)),G:Math.max(4,Math.round(16*s)),nl};
       let best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break again}}
@@ -376,20 +390,31 @@ window.MENU_FORMATS[ID]=ctx=>{
       if(FS)break}
     FS=FS||{D:15,N:15,S:16,G:3,nl:0,t:MH}}
 
-  /* when the notes had to go, put back one-line notes one dish at a time while the panel has room, the film's dishes before house lines (Terminator 2, Knocked Up) */
-  if(FS.nl===0){const all=colsArr.flat().flatMap(c=>c.items).filter(it=>it.note),ord=all.filter(it=>!it.house).concat(all.filter(it=>it.house));
-    for(const it of ord){it.nk=true;const t=Math.max(...colsArr.map(cs=>measure(cs,FS)));if(t>MH)it.nk=false;else FS.t=t}}
+  /* notes that do not show (left off, or cut back to nothing in a narrow column) are put back one dish at a time while the panel has room:
+     one line first, then a second line, the film's dishes before house lines. With every note off, take the largest type that still shows
+     the most of them (Terminator 2, Knocked Up, The Lost Boys): notes beat type size */
+  {const all=colsArr.flat().flatMap(c=>c.items).filter(it=>it.note),ord=all.filter(it=>!it.house).concat(all.filter(it=>it.house));
+    const m=FSb=>Math.max(...colsArr.map(cs=>measure(cs,FSb))),showing=FSb=>all.filter(it=>(it.nk||FSb.nl)&&dishNote(it,FSb)).length;
+    const fill=FSb=>{all.forEach(it=>it.nk=0);for(const L of [1,2])for(const it of ord){if((it.nk||FSb.nl)>=L&&dishNote(it,FSb))continue;if(L===1&&FSb.nl)continue;
+        const was=it.nk;it.nk=L;if(!dishNote(it,FSb)){it.nk=was;continue}const t=m(FSb);if(t>MH)it.nk=was;else FSb.t=t}
+      FSb.nks=all.map(it=>it.nk);return showing(FSb)};
+    let best={FS,n:fill(FS)};
+    if(FS.nl===0&&best.n<all.length)for(let s=1.17;s>=.55;s-=.05){const FSx={D:Math.max(17,Math.round(28*s)),N:Math.max(15,Math.round(21*s)),S:Math.max(20,Math.round(30*s)),G:Math.max(4,Math.round(16*s)),nl:0};
+      if(FSx.D>FS.D)continue;const t0=m(FSx);if(t0>MH)continue;FSx.t=t0;const n=fill(FSx);if(n>best.n)best={FS:FSx,n}}
+    FS=best.FS;all.forEach((it,i)=>it.nk=FS.nks[i])}
+  /* room left over: open up the spacing between dishes and courses, up to about double, so a short menu fills its panel */
+  {const G0=FS.G;for(let g=G0+1;g<=Math.round(G0*2.2)+2;g++){const FSx=Object.assign({},FS,{G:g}),t=Math.max(...colsArr.map(cs=>measure(cs,FSx)));if(t>MH)break;FS.G=g;FS.t=t}}
   const spare=MH-FS.t,aw=winks.slice(1,4);
-  const also=spare>150&&aw.length?aw.slice(0,Math.max(1,Math.min(aw.length,Math.floor((spare-64)/32)))):[];
+  const also=!FLT&&spare>150&&aw.length?aw.slice(0,Math.max(1,Math.min(aw.length,Math.floor((spare-64)/32)))):[];
   const boardHtml=`<div style="position:absolute;left:${BX}px;top:0;width:${BW}px;height:${PH}px;background:${boardBg(E,T)};box-shadow:inset 8px 0 18px rgba(0,0,0,.25);border-radius:0">
     <div style="position:absolute;left:${pad}px;top:${pad}px;width:${IW}px;height:${PH-pad*2}px;display:flex;flex-direction:column">
       <div>${hdr}</div>
       <div style="margin-top:14px;height:${Math.floor(MH)}px;display:flex;flex-direction:column">
-        <div style="display:flex;gap:${GAP}px">${colsArr.map(cs=>`<div style="width:${colW}px">${colHtml(cs,FS)}</div>`).join("")}</div>
+        ${FLT?`<div style="height:${Math.floor(MH)}px">${flo(MH)}${colHtml(colsArr[0],FS)}</div>`:`<div style="display:flex;gap:${GAP}px">${colsArr.map(cs=>`<div style="width:${colW}px">${colHtml(cs,FS)}</div>`).join("")}</div>`}
         ${also.length?`<div style="margin-top:auto;margin-bottom:12px;border-top:2px solid ${ACC};padding-top:10px"><div style="${caps(15,ACC,.2)};margin-bottom:4px">${beach?"Seen on the beach":"Seen out front"}</div>${also.map(w=>`<div style="font:600 18px/1.3 ${body};color:${ink};margin-top:3px">${esc(sentence(trunc(w,60)))}</div>`).join("")}</div>`:""}
       </div>
       <div style="margin-top:auto">
-        ${PM?`<div style="display:flex;align-items:flex-end;gap:28px;margin-bottom:12px">${cue&&!dropCue?`<div style="width:${cueW}px;box-sizing:border-box;border-left:4px solid ${ACC};padding:2px 0 2px 16px"><div style="${caps(15,ACC,.2)};margin-bottom:6px">Showtime cue</div><div style="font:500 ${cT.z}px/1.3 ${body};color:${ink}">${esc(cue)}</div></div>`:""}${notePM}</div>`:cue&&!dropCue?`<div style="border-left:4px solid ${ACC};padding:2px 0 2px 16px;margin-bottom:14px"><div style="${caps(15,ACC,.2)};margin-bottom:6px">Showtime cue</div><div style="font:500 ${cT.z}px/1.3 ${body};color:${ink}">${esc(cue)}</div></div>`:""}
+        ${PM?`<div style="display:flex;align-items:flex-end;gap:28px;margin-bottom:12px">${cue&&!dropCue?`<div style="width:${FLT?IW:cueW}px;box-sizing:border-box;border-left:4px solid ${ACC};padding:2px 0 2px 16px"><div style="${caps(15,ACC,.2)};margin-bottom:6px">Showtime cue</div><div style="font:500 ${cT.z}px/1.3 ${body};color:${ink}">${esc(cue)}</div></div>`:""}${FLT?"":notePM}</div>`:cue&&!dropCue?`<div style="border-left:4px solid ${ACC};padding:2px 0 2px 16px;margin-bottom:14px"><div style="${caps(15,ACC,.2)};margin-bottom:6px">Showtime cue</div><div style="font:500 ${cT.z}px/1.3 ${body};color:${ink}">${esc(cue)}</div></div>`:""}
         <div style="font:500 ${fT.z}px/1.3 ${body};color:${soft}">${esc(fine)}</div></div></div></div>`;
 
   const face=`<div style="position:absolute;inset:0;background:#111">${boardHtml}${photoHtml}${stripHtml}</div>`;

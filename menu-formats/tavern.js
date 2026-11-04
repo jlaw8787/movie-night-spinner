@@ -159,7 +159,9 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   const MX=PX+PW+40,MY=PY,MH=PH+8;
   const menu=`<div data-fit="26" style="position:absolute;left:${MX}px;top:${MY}px;width:${W-MX-36}px;height:${MH}px;overflow:hidden;font-size:26px">${flow}</div>`;
-  const foot=`<div style="position:absolute;left:44px;right:44px;bottom:20px;text-align:center;font:italic 400 15px/1.2 ${B};color:${ink};white-space:nowrap;overflow:hidden">Rooms above, stabling round the back. Coin of the realm only. Bill No. ${esc(num)}, ${esc(f.year||"")}. Images: TMDB</div>`;
+  /* rooms and stabling only for a real inn (the Prancing Pony, the Three Broomsticks), not a workshop, castle kitchen or ball (Rise of the Guardians, A Christmas Carol) */
+  const inn=/\b(inn|tavern|alehouse|beds|rooms)\b/i.test(venue+" "+sign);
+  const foot=`<div style="position:absolute;left:44px;right:44px;bottom:20px;text-align:center;font:italic 400 15px/1.2 ${B};color:${ink};white-space:nowrap;overflow:hidden">${inn?"Rooms above, stabling round the back. ":""}Coin of the realm only. Bill No. ${esc(num)}, ${esc(f.year||"")}. Images: TMDB</div>`;
 
   const face=`<div style="position:absolute;inset:0;${bg};font-family:${B}">
     <div style="position:absolute;inset:14px;${E.frame};pointer-events:none;opacity:.75"></div>
