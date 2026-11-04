@@ -4,7 +4,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const root=path.join(__dirname,'..'),src=fs.readFileSync(path.join(root,'app.js'),'utf8');
 const line=start=>{const i=src.indexOf(start);assert.ok(i>=0,'missing '+start);return src.slice(i,src.indexOf('\n',i))};
 const fnStart=src.indexOf('function dishTimes(');const fnEnd=src.indexOf('\n/*',fnStart);
-const code=[line('const WAIT_RE='),line('const HEAT_RE='),line('const TIP_RE='),line('const stepParts='),src.slice(fnStart,fnEnd)].join('\n')+'\n;globalThis.dishTimes=dishTimes;globalThis.WAIT_RE=WAIT_RE;globalThis.HEAT_RE=HEAT_RE;';
+const code=[line('const WAIT_RE='),line('const HEAT_RE='),line('const TIP_RE='),line('const stepParts='),line('const isWaitStep='),src.slice(fnStart,fnEnd)].join('\n')+'\n;globalThis.dishTimes=dishTimes;globalThis.WAIT_RE=WAIT_RE;globalThis.HEAT_RE=HEAT_RE;';
 const ctx={};vm.createContext(ctx);vm.runInContext(code,ctx);
 let n=0;const bad=[];
 for(const f of fs.readdirSync(path.join(root,'data/film'))){const d=JSON.parse(fs.readFileSync(path.join(root,'data/film',f),'utf8'));
