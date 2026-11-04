@@ -191,6 +191,155 @@
    "af": true
   },
   {
+   "n": "Gyro Captain's frankfurt pastry snake",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Roll and coil the snake up to 4 hours ahead and keep it covered in the fridge; brush with egg and bake to serve",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "frankfurts",
+     "aisle": "Deli"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets frozen puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sesame seeds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "black peppercorns",
+     "aisle": "Spices"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "American mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200°C and line a large tray.",
+     "min": 5
+    },
+    {
+     "text": "Cut each pastry sheet into 3 strips. Lay the frankfurts end to end along the strips, roll the pastry around them and pinch the joins so they make one long roll.",
+     "min": 10
+    },
+    {
+     "text": "Coil the roll on the tray like a snake. Shape a head at one end and press in the peppercorns for eyes.",
+     "min": 5
+    },
+    {
+     "text": "Brush with egg, scatter with sesame seeds and bake for 25 minutes until puffed and golden.",
+     "min": 25
+    },
+    {
+     "text": "Serve on a board with the barbecue sauce and mustard to dip.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Gyro Captain's veggie sausage pastry snake",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Roll and coil up to 4 hours ahead and keep covered in the fridge",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian sausages",
+       "aisle": "Fridge"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sheets frozen puff pastry, thawed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sesame seeds",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "black peppercorns",
+       "aisle": "Spices"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "American mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200°C and line a large tray.",
+       "min": 5
+      },
+      {
+       "text": "Cut each pastry sheet into 3 strips. Lay the sausages end to end along the strips, roll the pastry around them and pinch the joins so they make one long roll.",
+       "min": 10
+      },
+      {
+       "text": "Coil the roll on the tray like a snake. Shape a head at one end and press in the peppercorns for eyes.",
+       "min": 5
+      },
+      {
+       "text": "Brush with egg, scatter with sesame seeds and bake for 25 minutes until puffed and golden.",
+       "min": 25
+      },
+      {
+       "text": "Serve on a board with the barbecue sauce and mustard to dip.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  },
+  {
    "n": "Compound barbecue",
    "course": "m",
    "prep_min": 20,

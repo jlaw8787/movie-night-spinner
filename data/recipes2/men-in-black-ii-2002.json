@@ -193,6 +193,161 @@
    "af": true
   },
   {
+   "n": "Truro post office sausage rolls",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Roll and cut up to a day ahead and keep covered in the fridge; brush with egg and bake to serve",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "fennel seeds",
+     "aisle": "Spices"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "dried breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets frozen puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200°C and line two trays.",
+     "min": 5
+    },
+    {
+     "text": "Mix the pork, onion, fennel seeds, breadcrumbs, 1 egg and a good pinch of salt and pepper.",
+     "min": 5
+    },
+    {
+     "text": "Cut each pastry sheet in half. Lay a log of filling along each half, roll up and press the seam down underneath.",
+     "min": 8
+    },
+    {
+     "text": "Cut each roll into 4, brush with the other egg, beaten, and bake for 25 minutes until golden and cooked through.",
+     "min": 25
+    },
+    {
+     "text": "Serve hot with tomato sauce.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Truro post office lentil rolls",
+     "prep_min": 25,
+     "cook_min": 25,
+     "make_ahead": "Roll and cut up to a day ahead and keep covered in the fridge",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "fennel seeds",
+       "aisle": "Spices"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "dried breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sheets frozen puff pastry, thawed",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200°C and line two trays. Fry the mushrooms and onion in a little oil until dry, then cool.",
+       "min": 12
+      },
+      {
+       "text": "Mash the lentils roughly and mix with the mushrooms, fennel seeds, breadcrumbs, 1 egg and a good pinch of salt and pepper.",
+       "min": 5
+      },
+      {
+       "text": "Cut each pastry sheet in half. Lay a log of filling along each half, roll up and press the seam down underneath.",
+       "min": 8
+      },
+      {
+       "text": "Cut each roll into 4, brush with the other egg, beaten, and bake for 25 minutes until golden.",
+       "min": 25
+      },
+      {
+       "text": "Serve hot with tomato sauce.",
+       "min": 2
+      }
+     ]
+    }
+   }
+  },
+  {
    "n": "Ben's Famous pizza",
    "course": "m",
    "prep_min": 20,

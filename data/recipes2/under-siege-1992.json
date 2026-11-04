@@ -87,6 +87,179 @@
    "af": true
   },
   {
+   "n": "Saffron rouille and prawn crostini",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 12,
+   "make_ahead": "Make the rouille up to a day ahead and keep it in the fridge; poach the prawns and toast the bread on the night",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch saffron threads",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg yolk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, 1 crushed and 1 halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "pinch",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon, zested and juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "green prawns, peeled with tails on",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "fennel bulb with fronds",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the saffron in 1 tbsp hot water for 5 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Whisk the egg yolk with the crushed garlic, saffron water, chilli and 1 tsp lemon juice, then whisk in the olive oil a few drops at a time until thick. Season with salt.",
+     "min": 8
+    },
+    {
+     "text": "Poach the prawns in simmering salted water for 2 minutes until just pink, then cool.",
+     "min": 4
+    },
+    {
+     "text": "Slice the baguette into 16 rounds and toast at 200°C for 6 minutes, then rub each with the cut garlic.",
+     "min": 8
+    },
+    {
+     "text": "Spread with rouille, top with a prawn, a few fennel fronds and lemon zest.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Saffron rouille and roast capsicum crostini",
+     "prep_min": 20,
+     "cook_min": 12,
+     "make_ahead": "Make the rouille up to a day ahead and keep it in the fridge",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch saffron threads",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg yolk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, 1 crushed and 1 halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "pinch",
+       "item": "chilli flakes",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon, zested and juiced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar roasted red capsicum",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baguette",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb with fronds",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the saffron in 1 tbsp hot water for 5 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Whisk the egg yolk with the crushed garlic, saffron water, chilli and 1 tsp lemon juice, then whisk in the olive oil a few drops at a time until thick. Season with salt.",
+       "min": 8
+      },
+      {
+       "text": "Drain the capsicum and slice into strips.",
+       "min": 3
+      },
+      {
+       "text": "Slice the baguette into 16 rounds and toast at 200°C for 6 minutes, then rub each with the cut garlic.",
+       "min": 8
+      },
+      {
+       "text": "Spread with rouille, top with capsicum, a few fennel fronds and lemon zest.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
    "n": "Ryback's bouillabaisse",
    "course": "m",
    "prep_min": 15,

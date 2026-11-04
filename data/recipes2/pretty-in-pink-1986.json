@@ -128,6 +128,203 @@
    "af": true
   },
   {
+   "n": "Steff's party salmon maki",
+   "course": "s",
+   "prep_min": 35,
+   "cook_min": 20,
+   "make_ahead": "Cook and season the rice up to 3 hours ahead and keep it covered at room temperature; roll and slice close to serving",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "sushi rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "rice vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "nori sheets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sashimi-grade salmon",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "Japanese mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sriracha",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "tube wasabi",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar pickled ginger",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rinse the rice until the water runs clear, then cook with 480ml water, covered, on low for 12 minutes. Rest 10 minutes.",
+     "min": 25
+    },
+    {
+     "text": "Stir the vinegar with the sugar and 1 tsp salt until dissolved, fold through the rice and cool.",
+     "min": 10
+    },
+    {
+     "text": "Cut the salmon and cucumber into long strips. Mix the mayonnaise with the sriracha.",
+     "min": 8
+    },
+    {
+     "text": "Spread a quarter of the rice over each nori sheet, leaving a strip bare at the far edge. Lay salmon, cucumber and a line of spicy mayo along the middle and roll up tight with a mat.",
+     "min": 12
+    },
+    {
+     "text": "Slice each roll into 8 with a wet knife. Serve with soy, wasabi and ginger.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Steff's party avocado maki",
+     "prep_min": 35,
+     "cook_min": 20,
+     "make_ahead": "Cook and season the rice up to 3 hours ahead; roll and slice close to serving",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "sushi rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "rice vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "nori sheets",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "avocados",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "Japanese mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sriracha",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tube wasabi",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pickled ginger",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rinse the rice until the water runs clear, then cook with 480ml water, covered, on low for 12 minutes. Rest 10 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Stir the vinegar with the sugar and 1 tsp salt until dissolved, fold through the rice and cool.",
+       "min": 10
+      },
+      {
+       "text": "Slice the avocado and cut the cucumber into long strips. Mix the mayonnaise with the sriracha.",
+       "min": 8
+      },
+      {
+       "text": "Spread a quarter of the rice over each nori sheet, leaving a strip bare at the far edge. Lay avocado, cucumber and a line of spicy mayo along the middle and roll up tight with a mat.",
+       "min": 12
+      },
+      {
+       "text": "Slice each roll into 8 with a wet knife. Serve with soy, wasabi and ginger.",
+       "min": 5
+      }
+     ]
+    }
+   }
+  },
+  {
    "n": "Andie's dad's pot roast",
    "course": "m",
    "prep_min": 20,

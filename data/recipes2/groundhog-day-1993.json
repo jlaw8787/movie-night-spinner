@@ -104,6 +104,147 @@
    "af": true
   },
   {
+   "n": "Tip Top Cafe silver dollar pancakes",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Mix the batter up to 2 hours ahead and keep it in the fridge; cook just before serving",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "bacon, diced",
+     "aisle": "Meat"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the flour, sugar and a pinch of salt with the buttermilk, eggs and 40g melted butter. Rest 15 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Beat 40g soft butter with the maple syrup.",
+     "min": 3
+    },
+    {
+     "text": "Fry the bacon until crisp and drain on paper.",
+     "min": 8
+    },
+    {
+     "text": "Cook tablespoons of batter in a little of the last butter over medium heat for 1 to 2 minutes a side.",
+     "min": 15
+    },
+    {
+     "text": "Stack the pancakes, top with a little maple butter and scatter with the bacon.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Tip Top Cafe silver dollar pancakes with chives",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "Mix the batter up to 2 hours ahead and keep it in the fridge",
+     "ingredients": [
+      {
+       "q": 250,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 375,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk the flour, sugar and a pinch of salt with the buttermilk, eggs and 40g melted butter. Snip in half the chives and rest 15 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Cook tablespoons of batter in a little of the last butter over medium heat for 1 to 2 minutes a side.",
+       "min": 15
+      },
+      {
+       "text": "Stack the pancakes, top with sour cream and the rest of the chives.",
+       "min": 3
+      }
+     ]
+    }
+   }
+  },
+  {
    "n": "Phil's diner feast",
    "course": "m",
    "prep_min": 30,
