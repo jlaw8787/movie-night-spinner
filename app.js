@@ -257,6 +257,7 @@ document.getElementById("skipLink").addEventListener("click",e=>{e.preventDefaul
   const t=v?$(v).querySelector("input,button,select"):$("spin");if(t){t.focus();t.scrollIntoView({block:"center"})}});
 /* touch screens say Tap, mouse screens say Click */
 const tapWord=t=>matchMedia("(pointer:coarse)").matches?t:String(t).replace(/\bTap\b/,"Click").replace(/\btap\b/,"click");
+{const gh=document.querySelector(".gv-head small");if(gh)gh.textContent=tapWord(gh.textContent)}
 if(!matchMedia("(pointer:coarse)").matches)document.querySelectorAll(".cb-k,.sv-tap,.skip-k,[data-tap]").forEach(e=>{e.textContent=tapWord(e.textContent)});
 /* ---------- curtains and the easel tilt ---------- */
 const theatre=$("theatre"),easel=$("easel");
@@ -1620,8 +1621,9 @@ let outDay="",outSet=new Set();
 const isOut=f=>{const k=todayKey();if(k!==outDay){outDay=k;outSet=new Set(FILMS.filter(x=>isNew(x)&&!watched.has(x.id)).sort((a,b)=>hashN(a.id+k)-hashN(b.id+k)).slice(0,3).map(x=>x.id))}return outSet.has(f.id)};
 const isClam=f=>f.theme==="kids"||f.theme==="fairytale";
 const isTuesday=()=>new Date().getDay()===2;
-const priceOf=f=>isNew(f)?(isTuesday()?2:7):2;
-const priceTag=f=>isNew(f)?(isTuesday()?"Tuesday $2":"Overnight $7"):"Weekly $2";
+/* matches the window sign: new releases $4 for 3 nights ($2 on Tuesdays), weeklys $2 for 7 nights */
+const priceOf=f=>isNew(f)?(isTuesday()?2:4):2;
+const priceTag=f=>isNew(f)?(isTuesday()?"Tuesday $2":"3 nights $4"):"Weekly $2";
 const STAFF=["Kate","Sam","Dave","Michelle","Andrew","Lisa","Ben","Nicole"];
 const TALK={"Action and cops":["Turn it up.","Still holds up.","Proper Friday night film."],"Superheroes":["Stay for the end credits.","Better than you remember.","Big screen energy."],"Sci-fi":["Watch it twice.","Still holds up.","Lights down for this one."],"Horror":["Lights off. Doors locked.","Not one for the kids.","Watch it with company."],"Family":["One for the whole house.","Kids will want it again.","Grown-ups will love it too."],"Fantasy and adventure":["Settle in for this one.","Pure Saturday afternoon.","Still holds up."],"Comedy and teen":["Quote it all week.","Better with a crowd.","Still makes me laugh."],"Romance":["Have the tissues handy.","Date night sorted.","Better than you remember."],"Crime and mob":["Don't skip the ending.","Clear your evening.","A proper classic."],"Drama":["Worth the slow start.","Have the tissues handy.","Stays with you."],"Westerns":["Saddle up.","A proper classic.","Watch it on the big telly."],"Around the world":["Something different tonight.","Worth the subtitles.","A hidden gem."],"Holiday":["Put the tree lights on.","Every year without fail.","One for the whole house."]};
 const talkFor=f=>{const h=hashN(f.id+"t"),a=aisleOf(f)||"Drama",L=(a==="Horror"&&isKidSafe(f))?["Spooky, not scary.","Fine with the kids up.","A Halloween regular."]:(TALK[a]||TALK.Drama);return [STAFF[h%STAFF.length],L[(h>>>3)%L.length]]};
@@ -1665,7 +1667,7 @@ function renderMember(){
 }
 function dueBack(f){
   const d=new Date();
-  if(isNew(f)){d.setDate(d.getDate()+1)}else{d.setDate(d.getDate()+7)}
+  if(isNew(f)){d.setDate(d.getDate()+3)}else{d.setDate(d.getDate()+7)}
   d.setHours(19,0,0,0);return d;
 }
 /* the blue hire case: the shop's own sleeve with a cut-down cover that has sat in the front window for years,
@@ -1697,7 +1699,7 @@ function openSlip(f,go){
   const due=dueBack(f),now=new Date();const picked=new Set(counter[f.id]||[]);
   const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Rental slip for ${f.title}`);
   const fmt=d=>d.toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"});
-  o.innerHTML=`<div class="slip"><h3 class="slip-logo"><img src="assets/brand/galaxy-video-wide-600.webp" srcset="assets/brand/galaxy-video-wide-600.webp 600w, assets/brand/galaxy-video-wide-1200.webp 1200w" sizes="300px" width="600" height="154" alt="Galaxy Video" decoding="async"></h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?(isTuesday()?"New release, $2 Tuesday":"New release, overnight"):"Weekly"} $${priceOf(f).toFixed(2)}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd><dt>Paid</dt><dd>$10 note, change $${(10-priceOf(f)).toFixed(2)}</dd></dl>${hireCaseHTML(f)}<p class="hc-k">Box swapped for a hire case. The cover's been in that sleeve since the shop opened.</p><button type="button" class="peek" data-a="peek" aria-expanded="false">Preview the menu</button><div class="peekbox" hidden></div><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
+  o.innerHTML=`<div class="slip"><h3 class="slip-logo"><img src="assets/brand/galaxy-video-wide-600.webp" srcset="assets/brand/galaxy-video-wide-600.webp 600w, assets/brand/galaxy-video-wide-1200.webp 1200w" sizes="300px" width="600" height="154" alt="Galaxy Video" decoding="async"></h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?(isTuesday()?"New release, $2 Tuesday":"New release, 3 nights"):"Weekly"} $${priceOf(f).toFixed(2)}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd><dt>Paid</dt><dd>$10 note, change $${(10-priceOf(f)).toFixed(2)}</dd></dl>${hireCaseHTML(f)}<p class="hc-k">Box swapped for a hire case. The cover's been in that sleeve since the shop opened.</p><button type="button" class="peek" data-a="peek" aria-expanded="false">Preview the menu</button><div class="peekbox" hidden></div><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
   const close=()=>dismissModal(o);
   o.addEventListener("click",e=>{
     if(e.target===o)return close();
@@ -1919,7 +1921,7 @@ function tapeHTML(f){
 }
 function renderBoard(){
   const t=isTuesday();
-  $("svBoard").innerHTML=`<div class="svb-row${t?" dim":""}"><b>New releases</b><span>$7 overnight</span></div><div class="svb-row"><b>Weeklys</b><span>$2 for 7 nights</span></div><div class="svb-row${t?" hot":""}"><b>$2 Tuesday</b><span>${t?"On tonight":"Every new release, every Tuesday"}</span></div><button type="button" class="svb-fri" id="svFri">Double bill: one for the kids, one for later</button>`;
+  $("svBoard").innerHTML=`<div class="svb-row${t?" dim":""}"><b>New releases</b><span>$4 for 3 nights</span></div><div class="svb-row"><b>Weeklys</b><span>$2 for 7 nights</span></div><div class="svb-row${t?" hot":""}"><b>$2 Tuesday</b><span>${t?"On tonight":"Every new release, every Tuesday"}</span></div><button type="button" class="svb-fri" id="svFri">Double bill: one for the kids, one for later</button>`;
   $("svFri").addEventListener("click",()=>{const kids=FILMS.filter(f=>isKidSafe(f)&&onSvc(f,svc)),late=FILMS.filter(f=>!isKidSafe(f)&&onSvc(f,svc));if(!kids.length||!late.length)return;openDouble(pick(kids),pick(late))});
 }
 function renderCal(cal){
@@ -2945,7 +2947,7 @@ function renderSnacks(){
   const box=$("snackCounter");if(!box)return;const f=snackFilm(),locked=!!(f&&week&&week.id===f.id);const on=new Set(f?snackPicks(f):[]);
   const cats=["All",...new Set((window.SNACKS||[]).map(x=>x.cat))];
   const list=(window.SNACKS||[]).filter(x=>snackCat==="All"||x.cat===snackCat);
-  box.innerHTML=`<div class="sc-head"><h2 class="sc-t">The snack counter</h2><p class="sc-sub">Real movie snacks. Tap Add and they go on ${f?`${locked?"your locked-in film":"tonight's film"}, <b>${ESC(f.title)}</b>`:"tonight's film"}: the prep sheet and the shopping list.</p></div>
+  box.innerHTML=`<div class="sc-head"><h2 class="sc-t">The snack counter</h2><p class="sc-sub">Real movie snacks. ${tapWord("Tap")} Add and they go on ${f?`${locked?"your locked-in film":"tonight's film"}, <b>${ESC(f.title)}</b>`:"tonight's film"}: the prep sheet and the shopping list.</p></div>
   <div class="sc-cats" role="group" aria-label="Snack type">${cats.map(c=>`<button type="button" data-sc-cat="${ESC(c)}" aria-pressed="${c===snackCat}">${ESC(c)}</button>`).join("")}</div>
   <ul class="sc-list">${list.map(x=>`<li class="sc-item${on.has(x.id)?" on":""}${x.img?" has-img":""}">${x.img?`<img class="sc-img" src="${ESC(x.img)}" alt="" width="64" height="64" loading="lazy" decoding="async">`:""}<div class="sc-n"><span>${ESC(x.n)}</span><small>${ESC(x.note)}</small></div><em class="sc-kind ${x.kind}">${x.kind==="make"?"Make it":"Buy it"}</em><button type="button" class="sc-add" data-snack="${ESC(x.id)}" aria-pressed="${on.has(x.id)}" aria-label="${on.has(x.id)?"Remove":"Add"} ${ESC(x.n)}">${on.has(x.id)?"Added":"Add"}</button></li>`).join("")}</ul>
   <div class="sc-bar"${on.size?"":" hidden"}><span>${on.size} snack${on.size===1?"":"s"} on ${f?ESC(f.title):"tonight's film"}</span><button type="button" class="sc-go" data-sc-go="1">See the shopping list</button></div>`+snackCredits();
