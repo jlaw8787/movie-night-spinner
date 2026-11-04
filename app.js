@@ -25,6 +25,17 @@ window.priceSense=function(menu,P){const SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin
   /* any price left with odd cents (a film number like 28.12) goes up to the next ending that reads like a price */
   for(const k of ["s","m","w","d"])out[k]=(out[k]||[]).map(x=>{const m=String(x).match(/^(\D*)(\d+)\.(\d\d)(\D*)$/);if(!m||+m[3]%5===0)return x;const c=[25,50,75,95].find(e=>e>=+m[3]);return c?m[1]+m[2]+"."+c+m[4]:m[1]+(+m[2]+1)+".00"+m[4]});
   return out};
+/* a price that reads like a price: cents a multiple of 5, and odd cents (8.57, a film number) go up to .25, .50, .75 or .95 */
+window.priceEnd=v=>{if(v==null||isNaN(v))return v;if(v<1)return Math.max(.05,Math.ceil(v*20-1e-9)/20);const c=Math.round((v%1)*100);if(c%5===0)return Math.round(v*100)/100;const e=[25,50,75,95].find(x=>x>=c);return e?Math.floor(v)+e/100:Math.floor(v)+1};
+/* one price style per card and no odd cents, on every shared layout: reads each price that is a whole text node on the card's pages
+   ("8.57", "$6.32", "12¢", "60c"); odd cents go up to a price ending, and a card that prints dollar prices shows its cent prices
+   in dollars too ("0.85" beside "1.95", "$0.75" beside "$1.25"). Precinct evidence tags keep their own cents. */
+window.priceTidy=(faces,fmt)=>{if(fmt==="precinct")return faces;
+  const DOL=/>(\s*)(\$|£)?(\d{1,3})\.(\d\d)(\s*)</g,CEN=/>(\s*)(\d{1,2})(¢|c)(\s*)</g,all=faces.join("");
+  const dol=[...all.matchAll(DOL)],big=dol.filter(m=>+m[3]>=1),mixed=big.length>0&&CEN.test(all);CEN.lastIndex=0;
+  const pre=big.filter(m=>m[2]).length*2>big.length?(big.find(m=>m[2])||[])[2]||"":"";
+  return faces.map(h=>h.replace(DOL,(m0,a,cur,d,c,b)=>{const v=+d+ +c/100;if(+c%5===0)return m0;return ">"+a+(cur||"")+window.priceEnd(v).toFixed(2)+b+"<"})
+    .replace(CEN,(m0,a,c,sym,b)=>{const n=Math.max(5,Math.ceil(+c/5)*5);if(n>=100)return ">"+a+pre+"1.00"+b+"<";return mixed?">"+a+pre+"0."+String(n).padStart(2,"0")+b+"<":">"+a+n+sym+b+"<"}))};
 const low1=w=>/^(The|A|An|Some|Every|His|Her|Their|Its|One|Two|Three|That|This|How|Why|What|Where|When) /.test(w)?w.charAt(0).toLowerCase()+w.slice(1):w; /* names keep their capitals */
 const T={"redsauce": {"name": "Little Italy Sunday Gravy"}, "pizza": {"name": "Brooklyn Slice Joint"}, "deli": {"name": "Manhattan Deli Counter"}, "street": {"name": "Bodega and Street Cart"}, "cop": {"name": "Stakeout Snacks"}, "soul": {"name": "Soul Food Kitchen"}, "xmas": {"name": "Christmas in the City"}, "aussie": {"name": "Arvo in the Outback"}, "asian": {"name": "Chinatown Late Night"}, "scifi": {"name": "Mission Control Rations"}, "hero": {"name": "Rooftop Patrol"}, "kids": {"name": "Family Matinee"}, "teen": {"name": "Mall Food Court"}, "diner": {"name": "Roadside Diner"}, "mex": {"name": "Cantina Night"}, "tiki": {"name": "Beach House Luau"}, "uptown": {"name": "Uptown Steakhouse"}, "horror": {"name": "Midnight Monster Feast"}, "western": {"name": "Chuckwagon BBQ"}, "philly": {"name": "Philly Fight Night"}, "galaxy": {"name": "Galactic Cantina"}, "wizard": {"name": "Great Hall Feast"}, "adventure": {"name": "Explorer's Field Rations"}, "fairytale": {"name": "Storybook Banquet"}, "romcom": {"name": "Rom-Com Date Night"}};
 /* every film has its own menu: T tagline, D description, P serve cue, S snacks, M mains, W sweet, K drink */
@@ -1540,7 +1551,7 @@ async function show(f,preferSig){
   if(f._lib&&await libLoad(f._lib.fmt)&&id===renderId){
     try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
       const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f:dietKeyF(f)?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietText(f,f.P),D:dietText(f,f.D)}):f,menu:libMenu(fullMenu(f,menu,L.fmt)),poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
-      r.faces=r.faces.map(h=>libVary(h,f));const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
+      r.faces=window.priceTidy(r.faces.map(h=>libVary(h,f)),L.fmt);const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
       styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);dietStamp();
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       try{libAim(card,L)}catch(e){}

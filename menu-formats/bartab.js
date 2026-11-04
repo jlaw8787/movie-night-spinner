@@ -120,6 +120,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const PR={},rnd=v=>v<1?Math.round(v*20)/20:Math.round(v*4)/4,SPIRIT=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|sour|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|vodka)\b/i;for(const k of ["s","m","w","d"])PR[k]=(menu[k]||[]).slice(0,4).map((x,i)=>price(k,i));
   {const sw=Math.max(0,...PR.s,...PR.w);PR.m=PR.m.map(v=>v>sw?v:rnd(sw*1.3+(v%1)*.1));
    const ds=(menu.d||[]).slice(0,4),plain=Math.max(0,...ds.map((x,i)=>SPIRIT.test(x.n+" "+(x.note||""))?0:PR.d[i]));PR.d=PR.d.map((v,i)=>SPIRIT.test(ds[i].n+" "+(ds[i].note||""))&&v<=plain?rnd(plain*1.3):v)}
+  /* every price lands on a price ending before the tab adds up, so the totals stay true (the film number on the first main only when it reads like a price) */
+  if(window.priceEnd)for(const k of ["s","m","w","d"])PR[k]=PR[k].map(v=>window.priceEnd(v));
   const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({n:dry(x.n,fam),note:dry(x.note,fam),p:PR[k][i],house:!!x.house}));
   const I={s:items("s"),m:items("m"),w:items("w"),d:items("d")};
   /* the photo gives way to the dishes: estimate the height the front's names and notes need at a slightly shrunk size,

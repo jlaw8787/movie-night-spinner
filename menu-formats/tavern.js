@@ -26,7 +26,8 @@ const yr2=y=>{const s=String(y||"").slice(-2);return s==="00"?String(y):s}; /* a
 function hash(s){let h=0;for(const ch of String(s))h=(h*31+ch.charCodeAt(0))>>>0;return h}
 function price(f,fl,ci,ii,name,scale){
   const base=[3,8,4,2][ci]+(ii>1?1:0);let c=["25","40","50","65","75","95"][hash(name)%6];
-  if(ci===3&&ii===0&&fl&&/^\d{1,2}$/.test(String(fl.number||"")))c=String(fl.number).padStart(2,"0");
+  /* the film number sets the first drink's pennies only when it reads like a price */
+  if(ci===3&&ii===0&&fl&&/^\d{1,2}$/.test(String(fl.number||""))&&+fl.number%5===0)c=String(fl.number).padStart(2,"0");
   return scale(base,c);
 }
 /* logo on a panel that suits it: dark by default; the onload check flips it to the light panel when the logo itself is dark */
