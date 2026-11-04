@@ -17,4 +17,13 @@ assert.deepEqual([...ctx.dishIngList(dish(ee,'Sesame balls'),9/4)].filter(l=>/oi
 // spoons of oil still scale
 assert.ok(lines(ee,8).some(l=>/^2 tsp sesame oil@/.test(l)),'sesame oil scales');
 
-console.log('PASS: frying oil holds at one pot at 2, 4 and 9 guests; spoon oils still scale.');
+// fix 6: notes inside an item follow the guests
+const find=(id,g,re)=>{const l=lines(id,g).find(x=>re.test(x));assert.ok(l,`${id} at ${g}: no line for ${re}`);return l};
+assert.match(find('romancing-the-stone-1984',9,/lime juice/),/\(about 2[23] limes\)/,'lime count at 9');
+assert.match(find('romancing-the-stone-1984',2,/lime juice/),/\(about 5 limes\)/,'lime count at 2');
+assert.match(find('rocky-v-1990',9,/steaks/),/about 1\.[34]kg/,'steak weight at 9');
+{const m=find('rocky-v-1990',9,/milk,/),sum=[...m.matchAll(/(\d+(?:\.\d+)?)\s?(ml|L)\b(?= for)/g)].reduce((a,x)=>a+(+x[1])*(x[2]==='L'?1000:1),0);assert.ok(sum>1400&&sum<1700,'milk split adds up to the line: '+m)}
+// a tin or bag size never scales
+assert.ok(!lines('rocky-v-1990',9).some(l=>/\(\d+ ?g\)/.test(l)&&/tins?|cans?/.test(l)&&!/\(400 ?g\)/.test(l)),'tin sizes stay put');
+
+console.log('PASS: frying oil holds at one pot at 2, 4 and 9 guests; spoon oils still scale; pack notes follow the guests.');

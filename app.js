@@ -1190,7 +1190,13 @@ function dishTimes(x,k){const st=(x.steps||[]).filter(t=>stepParts(t.text).main)
   const p3=k>1.01?Math.round(p2*(1+(k-1)/2)/5)*5:p2;return {prep:p3,cook:c2,wait,active:p3+c2}}
 /* frying oil is set by the pot, not the guests: never less than the recipe's own amount */
 /* pack notes inside an item follow the guests: "750ml lager (4 stubbies)" for 4 is "(9 stubbies)" for 9 */
-const packNote=(item,k)=>!k||Math.abs(k-1)<.01?item:String(item).replace(/\((\d+)\s+(stubbies|stubby|cans?|bottles?|tins?|jars?|packets?|bags?|tinnies|slabs?|longnecks?)([^)]*)\)/i,(m,n,u,rest)=>{const v=Math.max(1,Math.ceil(+n*k-0.05));return `(${v} ${v===1?u.replace(/ies$/,"y").replace(/s$/,""):/y$/.test(u)?u.replace(/y$/,"ies"):/s$/.test(u)?u:u+"s"}${rest})`});
+/* so do the notes after the name: "(about 10 limes)" is "(about 22 limes)" for 9, "about 600g" and a split ("80ml for the mash, 125ml for the coating") scale too.
+   A size per piece ("about 250g each", "330ml each", "per glass"), a temperature or a length, and the size of a tin, jar or bag stay put */
+const packAbout=(item,k)=>{const c=item.search(/,|\(/);if(c<0||WHOLE_RE.test(item))return item;
+  const tail=item.slice(c).replace(/\(about (\d+) ([a-z]+)/gi,(m,n,w)=>{if(/^(cm|mm|c|ml|g|kg|l)$/i.test(w))return m;const v=Math.max(1,Math.ceil(+n*k-0.05));return `(about ${v} ${v>1?(/s$/i.test(w)?w:planPlural(w,v)):planSing(w)}`})
+    .replace(/\b(\d+(?:\.\d+)?)\s?(ml|g|kg|l)\b(?![^,(]*\b(each|per)\b)/gi,(m,n,u,e,o,all)=>/\b(of|x)\s*$|\(\s*$/i.test(all.slice(0,o))&&!/about\s*$/i.test(all.slice(0,o))||/^\s*(tins?|cans?|jars?|bottles?|packets?)\b/i.test(all.slice(o+m.length))?m:planQty(+n*k,u.toLowerCase()).replace(" L","\u00a0L"));
+  return item.slice(0,c)+tail};
+const packNote=(item,k)=>!k||Math.abs(k-1)<.01?item:packAbout(String(item),k).replace(/\((\d+)\s+(stubbies|stubby|cans?|bottles?|tins?|jars?|packets?|bags?|tinnies|slabs?|longnecks?)([^)]*)\)/i,(m,n,u,rest)=>{const v=Math.max(1,Math.ceil(+n*k-0.05));return `(${v} ${v===1?u.replace(/ies$/,"y").replace(/s$/,""):/y$/.test(u)?u.replace(/y$/,"ies"):/s$/.test(u)?u:u+"s"}${rest})`});
 const FRY_RE=/\bfor (deep[- ])?frying\b/i;
 /* frying oil is one pot whatever the guest count: it never scales, and dishes on the same sheet share it (the list takes the biggest pot, not the sum).
    Half a litre or more of plain oil is always a frying pot, whatever the recipe calls it ("2 L vegetable oil" for sesame balls) */
