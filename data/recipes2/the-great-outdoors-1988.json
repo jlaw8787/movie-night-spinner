@@ -188,114 +188,81 @@
    }
   },
   {
-   "n": "Lake cabin campfire s'mores",
+   "n": "Chet's Wisconsin fried cheese curds",
    "course": "s",
-   "prep_min": 10,
-   "cook_min": 3,
-   "make_ahead": "Best built while the marshmallows are warm; lay out the biscuits and chocolate on the tray up to 1 day ahead",
+   "prep_min": 15,
+   "cook_min": 12,
+   "make_ahead": "Batter up to 2 hours ahead, keep chilled; fry to serve",
    "ingredients": [
     {
-     "q": 24,
-     "u": "",
-     "item": "plain sweet wheatmeal biscuits",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 100,
+     "q": 500,
      "u": "g",
-     "item": "milk chocolate",
-     "aisle": "Pantry"
+     "item": "cheese curds or mild cheddar, cubed",
+     "aisle": "Dairy"
     },
     {
-     "q": 100,
+     "q": 150,
      "u": "g",
-     "item": "dark chocolate",
+     "item": "plain flour",
      "aisle": "Pantry"
     },
     {
-     "q": 4,
-     "u": "tbsp",
-     "item": "caramel sauce",
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
      "aisle": "Pantry"
     },
     {
-     "q": 16,
+     "q": 1,
      "u": "",
-     "item": "large marshmallows",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cold soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "ranch dressing",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Lay half the biscuits on a lined tray. Top some with milk chocolate and the rest with dark chocolate and a little caramel.",
+     "text": "Whisk the flour, paprika and salt with the egg and soda water into a smooth batter.",
      "min": 5
     },
     {
-     "text": "Thread the marshmallows onto skewers and toast over a fire or gas flame until golden, or grill on a tray.",
-     "min": 5
+     "text": "Heat the oil to 180C.",
+     "min": 8
     },
     {
-     "text": "Put marshmallows on each chocolate biscuit and press another biscuit on top. Eat while warm.",
-     "min": 3
+     "text": "Dip the cheese in the batter and fry in batches for 1 to 2 minutes until golden.",
+     "min": 10
+    },
+    {
+     "text": "Drain and serve hot with the ranch.",
+     "min": 2
     }
    ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Lake cabin campfire s'mores (vegetarian)",
-     "prep_min": 10,
-     "cook_min": 3,
-     "make_ahead": "Best built while the marshmallows are warm; lay out the biscuits and chocolate on the tray up to 1 day ahead",
-     "ingredients": [
-      {
-       "q": 24,
-       "u": "",
-       "item": "plain sweet wheatmeal biscuits",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 100,
-       "u": "g",
-       "item": "milk chocolate",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 100,
-       "u": "g",
-       "item": "dark chocolate",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "tbsp",
-       "item": "caramel sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 16,
-       "u": "",
-       "item": "large vegetarian marshmallows",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Lay half the biscuits on a lined tray. Top some with milk chocolate and the rest with dark chocolate and a little caramel.",
-       "min": 5
-      },
-      {
-       "text": "Thread the vegetarian marshmallows onto skewers and toast over a fire or gas flame until golden, or grill on a tray.",
-       "min": 5
-      },
-      {
-       "text": "Put the marshmallows on each chocolate biscuit and press another biscuit on top. Eat while warm.",
-       "min": 3
-      }
-     ],
-     "af": true
-    }
-   }
+   "veg": true,
+   "af": true
   },
   {
    "n": "The Old 96er rump steak",
@@ -709,6 +676,116 @@
    ],
    "veg": true,
    "af": true
+  },
+  {
+   "n": "Lake cabin campfire s'mores",
+   "course": "w",
+   "prep_min": 10,
+   "cook_min": 3,
+   "make_ahead": "Best built while the marshmallows are warm; lay out the biscuits and chocolate on the tray up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 24,
+     "u": "",
+     "item": "plain sweet wheatmeal biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "milk chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "caramel sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 16,
+     "u": "",
+     "item": "large marshmallows",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lay half the biscuits on a lined tray. Top some with milk chocolate and the rest with dark chocolate and a little caramel.",
+     "min": 5
+    },
+    {
+     "text": "Thread the marshmallows onto skewers and toast over a fire or gas flame until golden, or grill on a tray.",
+     "min": 5
+    },
+    {
+     "text": "Put marshmallows on each chocolate biscuit and press another biscuit on top. Eat while warm.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lake cabin campfire s'mores (vegetarian)",
+     "prep_min": 10,
+     "cook_min": 3,
+     "make_ahead": "Best built while the marshmallows are warm; lay out the biscuits and chocolate on the tray up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 24,
+       "u": "",
+       "item": "plain sweet wheatmeal biscuits",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "milk chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "dark chocolate",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "caramel sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 16,
+       "u": "",
+       "item": "large vegetarian marshmallows",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Lay half the biscuits on a lined tray. Top some with milk chocolate and the rest with dark chocolate and a little caramel.",
+       "min": 5
+      },
+      {
+       "text": "Thread the vegetarian marshmallows onto skewers and toast over a fire or gas flame until golden, or grill on a tray.",
+       "min": 5
+      },
+      {
+       "text": "Put the marshmallows on each chocolate biscuit and press another biscuit on top. Eat while warm.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Chet's waterski root beer floats",

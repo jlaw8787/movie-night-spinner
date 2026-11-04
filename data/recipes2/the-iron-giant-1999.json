@@ -2,121 +2,252 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Diner pie bites",
+   "n": "Annie's diner clam chowder",
    "course": "s",
-   "prep_min": 30,
-   "cook_min": 35,
-   "make_ahead": "Up to 1 day, reheat to serve",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Base up to 1 day ahead; add the clams to serve",
    "ingredients": [
     {
-     "q": 3,
+     "q": 4,
      "u": "",
-     "item": "apples, diced",
-     "aisle": "Produce"
-    },
-    {
-     "q": 50,
-     "u": "g",
-     "item": "caster sugar",
-     "aisle": "Pantry"
+     "item": "rashers bacon",
+     "aisle": "Meat"
     },
     {
      "q": 1,
-     "u": "tsp",
-     "item": "ground cinnamon",
-     "aisle": "Spices"
-    },
-    {
-     "q": 3,
      "u": "",
-     "item": "sheets shortcrust pastry",
-     "aisle": "Frozen"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Cook the apples with the sugar and cinnamon until soft, then cool.",
-     "min": 12
+     "item": "brown onion",
+     "aisle": "Produce"
     },
     {
-     "text": "Cut rounds from two pastry sheets and line a 12-hole muffin tin. Fill with the apple.",
-     "min": 10
+     "q": 2,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
     },
     {
-     "text": "Cut the third sheet into strips and lay a lattice over each.",
-     "min": 8
-    },
-    {
-     "text": "Bake at 190C until golden.",
-     "min": 25
-    }
-   ],
-   "veg": true,
-   "af": true
-  },
-  {
-   "n": "Beatnik coffee shop biscotti",
-   "course": "s",
-   "prep_min": 20,
-   "cook_min": 65,
-   "make_ahead": "Up to 1 week, airtight",
-   "ingredients": [
-    {
-     "q": 250,
-     "u": "g",
+     "q": 2,
+     "u": "tbsp",
      "item": "plain flour",
      "aisle": "Pantry"
     },
     {
-     "q": 150,
-     "u": "g",
-     "item": "caster sugar",
+     "q": 500,
+     "u": "ml",
+     "item": "fish stock",
      "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
     },
     {
      "q": 1,
-     "u": "tsp",
-     "item": "baking powder",
-     "aisle": "Pantry"
+     "u": "",
+     "item": "bay leaf",
+     "aisle": "Spices"
     },
     {
-     "q": 2,
+     "q": 1,
+     "u": "kg",
+     "item": "vongole (clams)",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet water crackers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the bacon, onion, celery and potatoes.",
+     "min": 10
+    },
+    {
+     "text": "Fry the bacon until crisp, then add the onion and celery and soften.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the flour, then add the stock, potatoes and bay leaf and simmer.",
+     "min": 15
+    },
+    {
+     "text": "Add the clams, cover and cook until they open, then pull most of the meat from the shells.",
+     "min": 7
+    },
+    {
+     "text": "Stir in the cream, warm through, season and serve with crackers.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Annie's diner corn chowder",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "Base up to 1 day ahead; add the clams to serve",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bay leaf",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet water crackers",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the onion, celery and potatoes and cut the corn from the cobs.",
+       "min": 10
+      },
+      {
+       "text": "Soften the onion and celery in the butter with the paprika.",
+       "min": 8
+      },
+      {
+       "text": "Stir in the flour, then add the stock, potatoes and bay leaf and simmer.",
+       "min": 15
+      },
+      {
+       "text": "Add the corn and simmer 5 minutes more.",
+       "min": 5
+      },
+      {
+       "text": "Stir in the cream, warm through, season and serve with crackers.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Kent Mansley's devilled eggs",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 10,
+   "make_ahead": "Up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 8,
      "u": "",
      "item": "eggs",
      "aisle": "Dairy"
     },
     {
-     "q": 100,
-     "u": "g",
-     "item": "almonds",
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "Dijon mustard",
      "aisle": "Pantry"
     },
     {
      "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
      "u": "",
-     "item": "orange, zested",
+     "item": "bunch chives",
      "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Mix the flour, sugar, baking powder, eggs, almonds and orange zest into a dough.",
-     "min": 10
+     "text": "Boil the eggs for 10 minutes, then cool in iced water and peel.",
+     "min": 15
     },
     {
-     "text": "Shape into a log on a lined tray.",
+     "text": "Halve the eggs and mash the yolks with the mayonnaise, mustard, vinegar, salt and pepper.",
      "min": 5
     },
     {
-     "text": "Bake at 170C.",
-     "min": 25
-    },
-    {
-     "text": "Cool, slice and bake again, turning once.",
-     "min": 20
-    },
-    {
-     "text": "Cool completely to crisp up.",
+     "text": "Pipe or spoon back into the whites, dust with paprika and scatter with chives.",
      "min": 5
     }
    ],
@@ -551,6 +682,128 @@
     {
      "text": "Cool, then smash into jagged shards.",
      "min": 30
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Diner pie bites",
+   "course": "w",
+   "prep_min": 30,
+   "cook_min": 35,
+   "make_ahead": "Up to 1 day, reheat to serve",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "apples, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the apples with the sugar and cinnamon until soft, then cool.",
+     "min": 12
+    },
+    {
+     "text": "Cut rounds from two pastry sheets and line a 12-hole muffin tin. Fill with the apple.",
+     "min": 10
+    },
+    {
+     "text": "Cut the third sheet into strips and lay a lattice over each.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 190C until golden.",
+     "min": 25
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Beatnik coffee shop biscotti",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 65,
+   "make_ahead": "Up to 1 week, airtight",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange, zested",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flour, sugar, baking powder, eggs, almonds and orange zest into a dough.",
+     "min": 10
+    },
+    {
+     "text": "Shape into a log on a lined tray.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 170C.",
+     "min": 25
+    },
+    {
+     "text": "Cool, slice and bake again, turning once.",
+     "min": 20
+    },
+    {
+     "text": "Cool completely to crisp up.",
+     "min": 5
     }
    ],
    "veg": true,

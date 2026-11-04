@@ -2,85 +2,81 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Tunnellers' macadamia Anzac biscuits",
+   "n": "Ypres dugout leek and potato soup",
    "course": "s",
-   "prep_min": 19,
-   "cook_min": 31,
-   "make_ahead": "Up to 1 week, keep airtight",
+   "prep_min": 15,
+   "cook_min": 32,
+   "make_ahead": "Up to 2 days ahead, keep chilled; reheat gently",
    "ingredients": [
     {
-     "q": 100,
+     "q": 40,
      "u": "g",
-     "item": "rolled oats",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 150,
-     "u": "g",
-     "item": "plain flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 60,
-     "u": "g",
-     "item": "desiccated coconut",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 60,
-     "u": "g",
-     "item": "macadamias",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 120,
-     "u": "g",
-     "item": "brown sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 125,
-     "u": "g",
-     "item": "butter",
+     "item": "butter, plus extra for the bread",
      "aisle": "Dairy"
     },
     {
      "q": 2,
-     "u": "tbsp",
-     "item": "golden syrup",
-     "aisle": "Pantry"
+     "u": "",
+     "item": "leeks",
+     "aisle": "Produce"
     },
     {
      "q": 1,
-     "u": "tsp",
-     "item": "bicarbonate of soda",
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "vegetable stock",
      "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
     }
    ],
    "steps": [
     {
-     "text": "Mix the oats, flour, coconut, chopped macadamias and brown sugar.",
-     "min": 6
+     "text": "Wash and slice the leeks, chop the onion and dice the potatoes.",
+     "min": 12
     },
     {
-     "text": "Melt the butter with golden syrup, then stir in the bicarbonate of soda dissolved in boiling water so it foams.",
-     "min": 3
-    },
-    {
-     "text": "Stir into the dry mix.",
-     "min": 3
-    },
-    {
-     "text": "Roll into balls and flatten slightly on lined trays.",
+     "text": "Melt the butter and soften the leeks and onion for 10 minutes.",
      "min": 10
     },
     {
-     "text": "Bake at 170C until golden.",
-     "min": 13
+     "text": "Add the potatoes, thyme and stock and simmer until the potato breaks up.",
+     "min": 20
     },
     {
-     "text": "Cool on the trays to crisp.",
-     "min": 15
+     "text": "Pick out the thyme, blitz smooth, stir in the cream and season.",
+     "min": 3
+    },
+    {
+     "text": "Serve in mugs with sliced bread and butter.",
+     "min": 2
     }
    ],
    "veg": true,
@@ -740,6 +736,91 @@
      ]
     }
    }
+  },
+  {
+   "n": "Tunnellers' macadamia Anzac biscuits",
+   "course": "w",
+   "prep_min": 19,
+   "cook_min": 31,
+   "make_ahead": "Up to 1 week, keep airtight",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rolled oats",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "macadamias",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "bicarbonate of soda",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the oats, flour, coconut, chopped macadamias and brown sugar.",
+     "min": 6
+    },
+    {
+     "text": "Melt the butter with golden syrup, then stir in the bicarbonate of soda dissolved in boiling water so it foams.",
+     "min": 3
+    },
+    {
+     "text": "Stir into the dry mix.",
+     "min": 3
+    },
+    {
+     "text": "Roll into balls and flatten slightly on lined trays.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 170C until golden.",
+     "min": 13
+    },
+    {
+     "text": "Cool on the trays to crisp.",
+     "min": 15
+    }
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Dugout cocoa with condensed milk",
