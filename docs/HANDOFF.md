@@ -94,3 +94,12 @@ Left open from review 2, closed 4 Nov: sequel prices (checked: same-layout seque
 - Prices: each snack has a 1996 price in data/snacks.json ("price"), moved to the film's year by snackK. Combos come in about 12 per cent under the separate prices.
 - The tray reads the same picks storage (mns-snacks-<film>). A combo shows as one line when all its snacks are in.
 - The craving board sits folded under the counter (details#cbFold).
+
+## 4 Nov, night: menu sweep and Candy bar (live, app.js?v=1a9eec96)
+- Menu sweep merged: 306 flagged films split across six teams (branches sweep/hand-built-a, hand-built-b, shared-a, shared-b, shared-c, shared-d). Their notes and per-film patches are in sweep/<team>/. Card changes go through scripts/sweep-films.cjs; scripts/sweep-shot.cjs renders a film for checking.
+- Cooked dishes live in data/recipes/<slug>.json (or movie-menus.js for editions). A card rename that skips those files prints the old dish beside the new one.
+- Candy bar rebuilt as a cinema counter with combos for tonight's film (sweep/candy-bar, merged).
+- Paused at the usage limit, to resume after it resets:
+  1. sweep/followup-data (worktree /home/claude/sweep/followup-data): the cooked-dish items in sweep/ALL-NOTES.md (sweets in starters, plain names, Chili Palmer, editions, US spelling in data/recipes, Holiday Inn wording, A Christmas Carol venue). Had only just started.
+  2. sweep/code-r9 (worktree /home/claude/sweep/code-r9): review 9 code fixes 1 to 7 and 9. Then the code items in the team notes: kids' mode "prawn mocktail", home footer "From the X's", priceSense on stadium, saloon, canteen, placemat, candy bar and prom, precinct and lab extras pricing, bar tab and kiosk notes dropping all at once, takeaway drinks panel, the six-dish cook from new recipes2 extras, The Untouchables layout.
+  3. Then: the review 9 spelling pass, merge, full checks, deploy.
