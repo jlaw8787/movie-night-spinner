@@ -83,7 +83,7 @@ window.MENU_FORMATS.diner=ctx=>{
   const yy=String(f.year||"").slice(-2).padStart(2,"0"),num=String(fl&&fl.number||"").replace(/\D/g,"");
   const price=(k,n)=>periodPrice(PRICE[k],f.year,hash(n));
   const special={};if(num.length===2&&menu.d&&menu.d[0]){const pv=String(price("d",menu.d[0].n)),d=pv.match(/^(\d+)\./);if(+num%5===0)special.d0=d?d[1]+"."+num:/¢$/.test(pv)?(+num)+"¢":pv}
-  /* a film number only sets the cents of the special, on the period price, and only when it reads like a price ("1945" on a 1.25 main reads 1.45; "1957" leaves the price alone) */
+  /* a film number only sets the cents of the special, on the period price, and only when it reads like a price ("1945" on a 1.25 main reads 1.45); one that does not ("1957") goes on the plate in the day note instead ("Plate No. 57.") */
   if((num.length===3||num.length===4)&&menu.m&&menu.m[0]){const pv=String(price("m",menu.m[0].n)),d=pv.match(/^(\d+)\./);if(d&&+num.slice(-2)%5===0)special.m0=d[1]+"."+num.slice(-2)}
   const W=fl&&fl.winks||[],venue=(fl&&fl.venue)||(night?"Last Light Diner":"Blue Plate Diner"),signTxt=fl&&fl.sign?ESC(fl.sign):"Route 13 &nbsp;/&nbsp; Mile 66";
   const photo=(ERAPHOTO[ek](era||"")+(PHOTO[T]||"")).trim();
@@ -144,7 +144,7 @@ window.MENU_FORMATS.diner=ctx=>{
   if(lg){const ar=(+lg[1]||4)/(+lg[2]||1),w=Math.min(posterOn?224:318,96*ar),h=w/ar;
     logoHTML=`<div data-h="plate" style="display:inline-block;padding:10px 16px;border-radius:3px;background:${night?"rgba(6,8,10,.62)":"transparent"}"><img data-h="logo" alt="${ESC(f.title)}" crossorigin="anonymous" src="${img(lg[0],"w500")}" style="display:block;width:${Math.round(w)}px;height:${Math.round(h)}px;object-fit:contain"></div>`}
   const firstMain=menu.m&&menu.m[0];
-  const noteTxt=night?V.noteTxt(W[3]&&W[3].length<=48?ESC(low(W[3])):""):firstMain?`${ESC(firstMain.n)}, ${special.m0||price("m",firstMain.n)}, with a cup of coffee and a slice from the pie case.`:"Ask at the counter for today's plate.";
+  const noteTxt=night?V.noteTxt(W[3]&&W[3].length<=48?ESC(low(W[3])):""):firstMain?`${!special.m0&&(num.length===3||num.length===4)?`Plate No. ${num.length===4?num.slice(-2):num}. `:""}${ESC(firstMain.n)}, ${special.m0||price("m",firstMain.n)}, with a cup of coffee and a slice from the pie case.`:"Ask at the counter for today's plate.";
   const info=`<div data-h="info" style="position:absolute;left:${posterOn?552:44}px;right:${posterOn?26:296}px;top:${posterOn?208:738}px;bottom:${posterOn?(P?424:330):50}px;display:flex;flex-direction:column;justify-content:${posterOn?"flex-start":"center"};gap:10px;overflow:hidden">
       <div style="white-space:${posterOn?"normal":"nowrap"};font:700 17px/1.15 ${SANS};letter-spacing:${posterOn?".1em":".18em"};color:${night?neon:red};text-transform:uppercase">${night?"Tonight on the late show":"Now showing above the counter"}</div>
       <div style="display:flex;${posterOn?"flex-direction:column;align-items:flex-start;gap:8px":"align-items:flex-end;gap:16px"}">${logoHTML}<div data-h="${lg?"alt":"title"}" data-max="${ts}" style="${lg?"display:none;":""}${disp(ts)};line-height:.95;color:${night?K.paper:K.ink}">${ESC(f.title)}</div><span style="${disp(40)};color:${night?neon:red};flex:none">${ESC(f.year)}</span></div>
