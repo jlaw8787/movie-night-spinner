@@ -8,7 +8,7 @@
 const CPI=[[1880,.07],[1900,.065],[1915,.08],[1920,.15],[1930,.13],[1940,.11],[1950,.19],[1960,.23],[1970,.30],[1980,.63],[1990,1],[2000,1.32],[2010,1.68],[2020,1.98],[2025,2.4]];
 function cpi(y){y=+y||1990;if(y<=CPI[0][0])return CPI[0][1];for(let i=1;i<CPI.length;i++){const [a,va]=CPI[i-1],[b,vb]=CPI[i];if(y<=b)return va+(vb-va)*(y-a)/(b-a)}return CPI[CPI.length-1][1]}
 function periodPrice(base1990,year,seed){const x=base1990*cpi(year)*(0.88+((seed>>>3)%25)/100);
-  if(x<1)return String(Math.max(5,Math.round(x*20)*5))+"¢";
+  if(x<.975)return String(Math.max(5,Math.round(x*20)*5))+"¢";
   const ends=x<10?[".95",".50",".25",".75"]:[".95",".50",".00"];const w=Math.floor(x);return w+ends[seed%ends.length]}
 const strSeed=s=>[...String(s)].reduce((a,c)=>(a*31+c.charCodeAt(0))>>>0,7);
 window.cpi=window.cpi||cpi;window.periodPrice=window.periodPrice||periodPrice;window.strSeed=window.strSeed||strSeed;

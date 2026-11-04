@@ -223,10 +223,11 @@ window.MENU_FORMATS["cafe"]=ctx=>{
    const ordered=C.slice();ordered.forEach((c,i)=>{const w=wt(c);if(i===0||(a<=b&&!(i===ordered.length-1&&cols[1].length===0))){cols[0].push(c);a+=w}else{cols[1].push(c);b+=w}});
    if(!cols[1].length&&cols[0].length>1)cols[1].push(cols[0].pop())}
   const n=C.reduce((a,c)=>a+c.items.length,0);
+  const PQ=(()=>{const P={},M={};C.forEach(c=>{M[c.k]=c.items;P[c.k]=c.items.map((it,i)=>money(era,c.k,i,f,fl))});return window.priceSense?window.priceSense(M,P):P})();
   const dish=n<=6?30:n<=9?28:26,desc=n<=6?22:21,gap=n<=6?16:n<=10?11:8;
   const itemHtml=(c,it,i)=>`<div style="margin:0 0 ${gap}px">
       <div style="display:flex;align-items:baseline;gap:14px"><div style="flex:1;min-width:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:var(--dl,3);overflow:hidden;font-family:${bodyF};font-weight:${e.bw?"700":"400"};color:${INK};line-height:1.14;${fs(dish,18)};${e.up&&era!=="1930s-40s"?"text-transform:uppercase;letter-spacing:.03em;":""}">${esc(it.n)}</div>
-      <div style="font-family:${bodyF};font-weight:700;color:${c.k==="d"?ACC2:ACC};${fs(dish,18)};white-space:nowrap">${money(era,c.k,i,f,fl)}</div></div>
+      <div style="font-family:${bodyF};font-weight:700;color:${c.k==="d"?ACC2:ACC};${fs(dish,18)};white-space:nowrap">${PQ[c.k][i]}</div></div>
       <div data-cnote style="display:var(--nd,block);font-family:${bodyF};${e.body==="Lora"?"font-style:italic;":""}color:${mix(INK,BOARD,.12)};line-height:1.28;${fs(desc,14)};margin-top:3px">${esc(it.note)}</div></div>`;
   const colHtml=list=>list.map(c=>`<div style="margin:0 0 ${gap+6}px">${secHead(e,era,(family&&LABEL_FAMILY[c.k])||LABEL[c.k],c.k==="d"?ACC2:ACC,INK)}${c.items.map((it,i)=>itemHtml(c,it,i)).join("")}</div>`).join("");
 

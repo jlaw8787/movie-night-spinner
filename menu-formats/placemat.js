@@ -7,7 +7,7 @@
 (function(){
 const CPI=[[1880,.07],[1900,.065],[1915,.08],[1920,.15],[1930,.13],[1940,.11],[1950,.19],[1960,.23],[1970,.30],[1980,.63],[1990,1],[2000,1.32],[2010,1.68],[2020,1.98],[2025,2.4]];
 function cpi(y){y=+y||1990;if(y<=CPI[0][0])return CPI[0][1];for(let i=1;i<CPI.length;i++){const [a,va]=CPI[i-1],[b,vb]=CPI[i];if(y<=b)return va+(vb-va)*(y-a)/(b-a)}return CPI[CPI.length-1][1]}
-function eraPrice(str,year,baseYear){const v=+str;if(!isFinite(v))return str;const x=v*cpi(year)/cpi(baseYear);if(x<1)return String(Math.max(5,Math.round(x*20)*5))+"¢";const c=String(str).split(".")[1]||"00";return Math.floor(x)+"."+c}
+function eraPrice(str,year,baseYear){const v=+str;if(!isFinite(v))return str;const x=v*cpi(year)/cpi(baseYear);if(x<.975)return String(Math.max(5,Math.round(x*20)*5))+"¢";const c=String(str).split(".")[1]||"00";return Math.floor(x)+"."+c}
 window.cpi=window.cpi||cpi;window.eraPrice=window.eraPrice||eraPrice;
 
 if(window.__PICK)return;

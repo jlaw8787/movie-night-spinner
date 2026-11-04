@@ -72,7 +72,7 @@ function prices(menu,e,ei,egg){
   const mult={s:.55,m:1,w:.45,d:.3},out={};let hid=false;
   for(const k of ["s","m","w","d"])out[k]=(menu[k]||[]).map((it,i)=>{let v=e.base*mult[k]*(1+i*.15);v=ei<2?Math.max(.05,Math.round(v*20)/20):ei>=6?Math.max(3,Math.round(v)):Math.floor(v)+(v%1<.5?.5:.95);
     if(!hid&&egg&&k==="w"&&ei>=2&&ei<6){hid=true;v=Math.max(1,Math.floor(v))+(+egg)/100}return money(v,ei)});
-  return out;
+  return window.priceSense?window.priceSense(menu,out):out;
 }
 
 window.MENU_FORMATS[ID]=ctx=>{

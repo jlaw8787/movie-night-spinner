@@ -150,13 +150,14 @@ window.MENU_FORMATS[ID]=ctx=>{
   };
   const cur=E.cur;
   const secs=["s","m","w","d"].map((k,ci)=>({ci,items:(m[k]||[]).slice(0,4)})).filter(x=>x.items.length);
+  const PQ=(()=>{const P={},M={};secs.forEach(x=>{const k="smwd"[x.ci];M[k]=x.items;P[k]=x.items.map((it,ii)=>price(f,fl,x.ci,ii,clean(it.n),E.scale))});return window.priceSense?window.priceSense(M,P):P})();
   const tot=secs.reduce((a,x)=>a+x.items.length,0);let seen=0,flowA="",flow="";
   secs.forEach(x=>{
     const h=`<div style="break-inside:avoid">${secHead(LAB[x.ci])}`+x.items.slice(0,1).map((it,ii)=>row(it,x.ci,ii)).join("")+`</div>`+x.items.slice(1).map((it,ii)=>row(it,x.ci,ii+1)).join("")+`<div style="height:.45em"></div>`;
     if(seen<tot/2)flowA+=h;else flow+=h;seen+=x.items.length;
   });
   function row(it,ci,ii){
-    const n=clean(it.n),p=price(f,fl,ci,ii,n,E.scale);
+    const n=clean(it.n),p=PQ["smwd"[ci]][ii];
     return `<div style="break-inside:avoid;margin:0 0 .5em;display:flex;gap:.4em"><div style="flex:none;width:.62em;height:.62em;border:1.5px solid ${ink};margin-top:.28em"></div><div style="flex:1;min-width:0">
       <div style="display:flex;gap:.5em;align-items:baseline"><span style="flex:1;font:600 max(15px,1em)/1.15 ${B};color:${ink}">${esc(n)}</span><span style="flex:none;font:${E.dw} max(15px,1em)/1.15 ${D};color:${acc}">${cur}${esc(p)}</span></div>
       ${it.note?`<div data-note="1" style="font:400 max(14px,.74em)/1.3 ${B};color:${ink};opacity:.88;margin-top:.12em">${esc(sent(it.note))}</div>`:""}

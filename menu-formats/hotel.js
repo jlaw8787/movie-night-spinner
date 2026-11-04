@@ -187,7 +187,7 @@ function flavourOf(ctx,neutral){
 }
 /* prices scale with the era of the printed object */
 const ERA_PRICE=[.07,.11,.16,.3,.55,.75,.9,1];
-function money(v,era){const x=v*ERA_PRICE[era];if(ERA_PRICE[era]<.5||x<5)return x<1?String(Math.max(5,Math.round(x*20)*5))+"¢":(Math.round(x*4)/4).toFixed(2);const r=Math.round(x*2)/2;return r.toFixed(2)}
+function money(v,era){const x=v*ERA_PRICE[era];if(ERA_PRICE[era]<.5||x<5)return x<.975?String(Math.max(5,Math.round(x*20)*5))+"¢":(Math.round(x*4)/4).toFixed(2);const r=Math.round(x*2)/2;return r.toFixed(2)}
 /* the film's number or year hidden in one price */
 function eggPrice(base,num,yy,era){if(!num)return money(base,era);const p=money(base,era);const whole=p.split(".")[0];
   if(num&&num.length===3&&+num[0]>0)return ERA_PRICE[era]<.2?num[0]+"."+num.slice(1):num.slice(0,2)+"."+num[2]+"0";
@@ -236,8 +236,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const rule=gold?"#b48a35":K.acc;
   const face=inner=>`<div data-fmtface="${ID}" style="position:absolute;inset:0;width:${W}px;height:${H}px;overflow:hidden;background:${paper};color:${K.ink};font-family:${B}">
     ${paperLayers(t,dark,H)}${borderHTML(P.border,rule,gold,P.border==="double"?12:0)}${inner}</div>`;
-  const price=(k,i)=>{const base={s:[16,18,15,21],m:[38,44,36,48],w:[14,16,13,17],d:[14,18,12,16]}[k][i%4];
+  const price0=(k,i)=>{const base={s:[16,18,15,21],m:[38,44,36,48],w:[14,16,13,17],d:[14,18,12,16]}[k][i%4];
     if(k==="m"&&i===0&&F.num)return eggPrice(base,F.num,yy,era);if(k==="w"&&i===0)return eggPrice(base,"",yy,era);return money(base,era)};
+  const PQ=(()=>{const P={};for(const k of ["s","m","w","d"])P[k]=(menu[k]||[]).map((x,i)=>price0(k,i));return window.priceSense?window.priceSense(menu,P):P})(),price=(k,i)=>PQ[k][i]!=null?PQ[k][i]:price0(k,i);
   const kick=(s,col,al)=>`<div data-fs="14" style="font:700 18px/1.15 ${B};letter-spacing:.24em;text-transform:uppercase;color:${col||K.acc};text-align:${al||"left"}">${esc(s)}</div>`;
 
   /* ---- front: monogram crest (type and rules), venue, suite photo, logo, note, door hanger ---- */

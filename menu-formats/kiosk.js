@@ -8,7 +8,7 @@
 const CPI=[[1880,.07],[1900,.065],[1915,.08],[1920,.15],[1930,.13],[1940,.11],[1950,.19],[1960,.23],[1970,.30],[1980,.63],[1990,1],[2000,1.32],[2010,1.68],[2020,1.98],[2025,2.4]];
 function cpi(y){y=+y||1990;if(y<=CPI[0][0])return CPI[0][1];for(let i=1;i<CPI.length;i++){const [a,va]=CPI[i-1],[b,vb]=CPI[i];if(y<=b)return va+(vb-va)*(y-a)/(b-a)}return CPI[CPI.length-1][1]}
 function periodPrice(base1990,year,seed){const x=base1990*cpi(year)*(0.88+((seed>>>3)%25)/100);
-  if(x<1)return String(Math.max(5,Math.round(x*20)*5))+"¢";
+  if(x<.975)return String(Math.max(5,Math.round(x*20)*5))+"¢";
   const ends=x<10?[".95",".50",".25",".75"]:[".95",".50",".00"];const w=Math.floor(x);return w+ends[seed%ends.length]}
 const strSeed=s=>[...String(s)].reduce((a,c)=>(a*31+c.charCodeAt(0))>>>0,7);
 window.cpi=window.cpi||cpi;window.periodPrice=window.periodPrice||periodPrice;window.strSeed=window.strSeed||strSeed;
@@ -338,6 +338,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const m=ctx.menu||{};
   const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(num))?null:num.length>=3&&num.length<=4?`${+num.slice(0,-2)}.${num.slice(-2)}`:num.length<=2?`${+num}.00`:null;
   let courses=["s","m","w","d"].map(k=>({k,items:(m[k]||[]).filter(i=>i&&i.n).slice(0,4).map((it,j)=>({n:C(it.n),note:C(it.note),p:(k==="m"&&j===0&&numPrice)?numPrice:periodPrice([3.5,7.5,2.75,1.75][["s","m","w","d"].indexOf(k)]*(1+j*.12),f.year,strSeed(it.n))}))})).filter(c=>c.items.length);
+  if(window.priceSense){const P={},M={};courses.forEach(c=>{P[c.k]=c.items.map(x=>x.p);M[c.k]=c.items});const Q=window.priceSense(M,P);courses.forEach(c=>c.items.forEach((x,j)=>x.p=Q[c.k][j]))}
   const total=courses.reduce((a,c)=>a+c.items.length,0);
   const cols=total>8&&courses.length>1?2:1,GAP=26;
   const colW=cols===2?(IW-GAP)/2:IW;
