@@ -2838,6 +2838,23 @@ function kitProp(b,f,name,i){
     default:return `<div class="kp kp-ticket"><div class="kp-main"><div class="kp-h">${T}</div>${line}<div class="kp-f">${l0}${l1?" · "+l1:""}</div><div class="kp-seat"><span>Row ${row}</span><span>Seat ${seat}</span><span>No. ${ser}</span></div></div><div class="kp-stub"><span>Admit one</span><b>${row}${seat}</b></div></div>`;
   }
 }
+/* names fit their card: shrink a long name (down to 40%) rather than cut it, then the usual one-line fitting for the rest of the page */
+function kitFit(page){
+  page.querySelectorAll(".kp-name").forEach(e=>{const b=+(e.dataset.fz0||(e.dataset.fz0=parseFloat(getComputedStyle(e).fontSize)||0));if(!b)return;e.style.fontSize=b+"px";e.style.whiteSpace="";e.style.lineHeight="";
+    let k=1;for(;k>=.4&&e.scrollWidth>e.clientWidth+1;k-=.04)e.style.fontSize=(b*k).toFixed(1)+"px";
+    /* a long two-word name reads bigger on two lines than squeezed onto one, if the card has the height for it */
+    if(k<.66&&/\s/.test(e.textContent.trim())){const kp=e.closest(".kp");let k2=.7;e.style.whiteSpace="normal";e.style.lineHeight="1";
+      const ok=()=>e.scrollWidth<=e.clientWidth+1&&e.offsetHeight<=b*k2*2.2&&(!kp||kp.scrollHeight<=kp.clientHeight+1);
+      for(;k2>k&&(e.style.fontSize=(b*k2).toFixed(1)+"px",!ok());k2-=.04);
+      if(k2<=k){e.style.whiteSpace="";e.style.lineHeight="";e.style.fontSize=(b*Math.max(k,.4)).toFixed(1)+"px"}}});
+  try{fitLines(page)}catch(e){}
+}
+/* kit pages are measured in the page itself before they are drawn or saved: an offscreen holder, fonts and photos ready, then kitFit */
+async function kitReady(pages){const h=document.createElement("div");h.className="kit-hold";h.setAttribute("aria-hidden","true");h.style.cssText="position:fixed;left:-30000px;top:0;width:794px";
+  pages.forEach(p=>h.appendChild(p));document.body.appendChild(h);await kitFonts();
+  /* a still the browser refuses as a cross-origin load gets one plain retry, so no tent back or photo frame prints empty */
+  await Promise.all([...h.querySelectorAll("img")].map(async im=>{await im.decode().catch(()=>{});if(im.naturalWidth)return;
+    im.removeAttribute("crossorigin");im.src=im.src.split("?")[0]+"?k=1";await im.decode().catch(()=>{})}));pages.forEach(kitFit);return ()=>h.remove()}
 function kitPages(f,names,count){
   const b=kitBits(f),T=ESC(f.title),V=ESC(b.venue),pages=[];
   const doors=b.time?`Doors at ${ESC(b.time)}`:`Doors at <span class="kit-line"></span>`;
@@ -2907,17 +2924,17 @@ function openKit(){
    <p class="kit-msg" role="status"></p>
    <div class="acts"><button type="button" class="go" data-a="pdf">Save PDF</button><button type="button" data-a="print">Print</button></div></div>`;
   const thumbs=o.querySelector(".kit-thumbs"),msg=o.querySelector(".kit-msg");
-  const draw=()=>{thumbs.innerHTML="";const pg=kitPages(f,names,count());pg.forEach(p=>{const w=document.createElement("div");w.className="kit-thumb";p.style.transform="scale(.16)";p.style.transformOrigin="0 0";w.appendChild(p);thumbs.appendChild(w)});msg.textContent=`${pg.length} pages: the door sign, ${count()} place card${count()>1?"s":""} and the intermission card.`};
+  const draw=()=>{thumbs.innerHTML="";const pg=kitPages(f,names,count());pg.forEach(p=>{const w=document.createElement("div");w.className="kit-thumb";p.style.transform="scale(.16)";p.style.transformOrigin="0 0";w.appendChild(p);thumbs.appendChild(w)});pg.forEach(kitFit);msg.textContent=`${pg.length} pages: the door sign, ${count()} place card${count()>1?"s":""} and the intermission card.`};
   o.querySelector("textarea").addEventListener("input",e=>{names=e.target.value.split("\n").map(x=>x.trim()).filter(Boolean).slice(0,60);draw()});
   o.addEventListener("click",async e=>{if(e.target===o)return dismissModal(o);const b=e.target.closest("[data-a]");if(!b)return;
-    await kitFonts();const pages=kitPages(f,names,count());
-    if(b.dataset.a==="print"){const pa=$("printArea");pa.innerHTML="";pages.forEach(p=>pa.appendChild(printPage(p,794,1123)));pa.dataset.kit="1";window.print();return}
+    const pages=kitPages(f,names,count()),done=await kitReady(pages);
+    if(b.dataset.a==="print"){const pa=$("printArea");pa.innerHTML="";pages.forEach(p=>pa.appendChild(printPage(p,794,1123)));done();pa.dataset.kit="1";window.print();return}
     b.disabled=true;const t=b.textContent;b.textContent="Making your PDF...";
     try{if(!await loadExportTools(true))throw new Error("tools");const {jsPDF}=window.jspdf;const pdf=new jsPDF({unit:"mm",format:"a4",orientation:"portrait"});
       for(let i=0;i<pages.length;i++){msg.textContent=`Making your PDF: page ${i+1} of ${pages.length}`;const cv=await renderCanvas(pages[i],true);if(i)pdf.addPage("a4","portrait");pdf.addImage(cv.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297)}
       const data=pdf.output("blob"),filename=`${slug(f.title)}-${f.year}-table-kit.pdf`;if(downloads)await downloads.save({filename,data});else plainDownload(data,filename);msg.textContent=`Saved ${filename}. Print it at A4, actual size.`}
     catch(err){msg.textContent="Couldn't make the PDF. Check your connection and try again, or use Print."}
-    finally{b.disabled=false;b.textContent=t}});
+    finally{done();b.disabled=false;b.textContent=t}});
   mountModal(o,"textarea",document.activeElement);kitFonts().then(draw);
 }
 

@@ -2015,6 +2015,12 @@ dialog.kit .kit-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a;bo
 .ki-pin .ki-note{position:relative;margin-left:220px;margin-top:70px;width:440px;transform:rotate(3deg);z-index:2}
 
 .kit-tents{grid-template-rows:repeat(3,minmax(0,1fr))}
+/* two equal columns whatever the names: a long name shrinks to fit its card, it never widens the column */
+.kit-tents{grid-template-columns:repeat(2,minmax(0,1fr))}
+.kit-tent,.kit-back,.kit-front,.kp,.kp-main,.kp-body,.kp-who{min-width:0}
+.kp-name{text-overflow:clip}
+.kp-card .kp-f,.kp-badge .kp-f,.kp-receipt .kp-r{gap:10px}
+.kp-card .kp-f span,.kp-badge .kp-f span{min-width:0}
 .kit-tent{min-height:0;grid-template-rows:minmax(0,1fr) minmax(0,1fr)}
 .kit-front{min-height:0}
 .kp-photo{width:50px;height:60px}
@@ -2854,7 +2860,7 @@ html,body{overflow-x:clip}
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=dee32339" defer></script>
 <script src="formats-core.js?v=f9ea9258" defer></script>
-<script src="app.js?v=f3f14dd9" defer></script>
+<script src="app.js?v=79e3ea57" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
