@@ -1,0 +1,4 @@
+# shared-c: needs code (for the lead)
+
+1. Kids and dry pass (KDRY in app.js) turns food into drinks. On Christmas with the Kranks (xmas theme, so always dry) the printed home card reads "Caribbean cruise prawn mocktail" and "lime and hot sauce mocktail dressing". The cocktail rule skips "prawn cocktail" in a plain string, so the dish name is most likely reaching the pass split across text nodes (fitted name spans). Suggest: add "dressing" to the cocktail rule's negative lookahead, and run the pass on the joined text of each name element rather than per text node.
+2. Home layout footer reads "From the Adrian's Little Kitchen." When the venue is a possessive name ("Adrian's", "Tevye's", "Brad's", "Maria Rambeau's") the footer should drop "the". Same check is worth doing on any shared layout that writes "the " + venue.
