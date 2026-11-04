@@ -803,6 +803,174 @@
    }
   },
   {
+   "n": "Volée Airlines salmon en papillote",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Make up the parcels up to 4 hours ahead and keep in the fridge",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "salmon fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "fennel bulb",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "zucchini",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Slice the fennel, zucchini and 1 lemon thinly.",
+     "min": 10
+    },
+    {
+     "text": "Lay each salmon fillet on a sheet of baking paper on a bed of fennel and zucchini, top with lemon, dill and butter, season and fold into a tight parcel.",
+     "min": 8
+    },
+    {
+     "text": "Bake on a tray for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Simmer the rice with 600ml water, covered, for 12 minutes, rest for 5, then stir through chopped parsley and the juice of the other lemon.",
+     "min": 17
+    },
+    {
+     "text": "Open the parcels at the table and serve with the rice.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Volée Airlines vegetables en papillote",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Make up the parcels up to 4 hours ahead and keep in the fridge",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "feta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cherry tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "fennel bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Slice the fennel, zucchini and 1 lemon thinly.",
+       "min": 10
+      },
+      {
+       "text": "Divide the vegetables, tomatoes and crumbled feta between four sheets of baking paper, top with lemon, dill and butter, season and fold into tight parcels.",
+       "min": 8
+      },
+      {
+       "text": "Bake on a tray for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Simmer the rice with 600ml water, covered, for 12 minutes, rest for 5, then stir through chopped parsley and the juice of the other lemon.",
+       "min": 17
+      },
+      {
+       "text": "Open the parcels at the table and serve with the rice.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Bludworth's funeral parlour madeleines",
    "course": "w",
    "prep_min": 17,

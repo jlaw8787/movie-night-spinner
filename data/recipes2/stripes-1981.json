@@ -540,6 +540,236 @@
    }
   },
   {
+   "n": "Czech border chicken paprikash",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Make the paprikash up to 1 day ahead and reheat gently; stir in the sour cream on the night",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "egg noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "Lebanese cucumbers",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "white wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "dill",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken in half the butter and set aside.",
+     "min": 10
+    },
+    {
+     "text": "Fry the sliced onions and capsicum in the same pan for 6 minutes, then stir in the paprika and flour for 1 minute.",
+     "min": 8
+    },
+    {
+     "text": "Add the tomatoes, stock and chicken and simmer for 30 minutes until tender.",
+     "min": 30
+    },
+    {
+     "text": "Thinly slice the cucumbers and toss with the vinegar, a pinch of sugar and half the dill.",
+     "min": 4
+    },
+    {
+     "text": "Cook the noodles, drain and toss with the rest of the butter.",
+     "min": 10
+    },
+    {
+     "text": "Stir the sour cream through the chicken off the heat, scatter with dill and serve with the noodles and cucumber salad.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Czech border mushroom paprikash",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "Make the paprikash up to 1 day ahead and reheat gently; stir in the sour cream on the night",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "Swiss brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sweet paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "egg noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "Lebanese cucumbers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "dill",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the thickly sliced mushrooms in half the butter.",
+       "min": 10
+      },
+      {
+       "text": "Add the sliced onions and capsicum and fry for 6 minutes, then stir in the paprika and flour for 1 minute.",
+       "min": 8
+      },
+      {
+       "text": "Add the tomatoes and stock and simmer for 15 minutes until thick.",
+       "min": 15
+      },
+      {
+       "text": "Thinly slice the cucumbers and toss with the vinegar, a pinch of sugar and half the dill.",
+       "min": 4
+      },
+      {
+       "text": "Cook the noodles, drain and toss with the rest of the butter.",
+       "min": 10
+      },
+      {
+       "text": "Stir the sour cream through off the heat, scatter with dill and serve with the noodles and cucumber salad.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Graduation day chocolate fudge cake",
    "course": "w",
    "prep_min": 30,

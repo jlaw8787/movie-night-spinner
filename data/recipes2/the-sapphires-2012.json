@@ -457,6 +457,240 @@
    }
   },
   {
+   "n": "Saigon chicken pho",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 60,
+   "make_ahead": "Make the broth up to 2 days ahead and keep in the fridge; skim and reheat",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs, bone in",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "star anise",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cinnamon stick",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "fish sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "dried rice noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "bean sprouts",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "Thai basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Char the halved onion and ginger in a dry pan, then toast the star anise and cinnamon for 1 minute.",
+     "min": 10
+    },
+    {
+     "text": "Put the chicken, onion, ginger and spices in a pot with 2 litres of water and simmer gently for 50 minutes, skimming.",
+     "min": 50
+    },
+    {
+     "text": "Lift out the chicken and shred the meat. Strain the broth and season with the fish sauce and sugar.",
+     "min": 5
+    },
+    {
+     "text": "Soak or cook the noodles as the packet says and divide between bowls.",
+     "min": 8
+    },
+    {
+     "text": "Top with the chicken, pour over the hot broth and serve with bean sprouts, herbs, lime and chilli.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Saigon tofu and mushroom pho",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "Make the broth up to 2 days ahead and keep in the fridge; skim and reheat",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "shiitake mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "star anise",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cinnamon stick",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "dried rice noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "bean sprouts",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "Thai basil",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Char the halved onion and ginger in a dry pan, then toast the star anise and cinnamon for 1 minute.",
+       "min": 10
+      },
+      {
+       "text": "Simmer with the stock and 500ml water for 30 minutes, then strain and season with the soy and sugar.",
+       "min": 30
+      },
+      {
+       "text": "Add the sliced mushrooms and cubed tofu and simmer for 5 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Soak or cook the noodles as the packet says and divide between bowls.",
+       "min": 8
+      },
+      {
+       "text": "Pour over the hot broth with the tofu and mushrooms and serve with bean sprouts, herbs, lime and chilli.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Cummeragunja lamingtons",
    "course": "w",
    "prep_min": 50,

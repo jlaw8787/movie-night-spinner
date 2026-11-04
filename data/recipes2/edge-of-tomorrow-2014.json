@@ -434,6 +434,89 @@
    }
   },
   {
+   "n": "Same day again Welsh rarebit",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 12,
+   "make_ahead": "Make the cheese mix up to 2 days ahead and keep it in the fridge; grill just before serving",
+   "ingredients": [
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "vintage cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "English mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg yolk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thick slices sourdough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter in a saucepan, stir in the flour for 1 minute, then whisk in the milk until thick.",
+     "min": 4
+    },
+    {
+     "text": "Take off the heat and stir in the cheddar, mustard, paprika and egg yolk.",
+     "min": 3
+    },
+    {
+     "text": "Toast the bread on one side under a hot grill, spread the cheese mix on the other side and grill for 4 minutes until bubbling and browned in spots.",
+     "min": 8
+    },
+    {
+     "text": "Cut into fingers and scatter with sliced spring onion.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Angel of Verdun chicken, cider and cream",
    "course": "m",
    "prep_min": 20,
@@ -822,6 +905,234 @@
        "min": 1
       }
      ]
+    }
+   }
+  },
+  {
+   "n": "Farmhouse beef and mushroom stew with mash",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 150,
+   "make_ahead": "Make the stew up to 2 days ahead and reheat gently; mash on the night",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "Swiss brown mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the beef in the flour with salt and pepper and brown it in batches in the oil in a heavy pot.",
+     "min": 12
+    },
+    {
+     "text": "Fry the chopped onion, carrots, mushrooms and garlic for 5 minutes, stir in the tomato paste, then add the stock and thyme and put the beef back in.",
+     "min": 8
+    },
+    {
+     "text": "Cover and simmer gently for 2 hours until the beef is tender.",
+     "min": 120
+    },
+    {
+     "text": "Boil the peeled potatoes for 20 minutes, drain and mash with the butter and milk.",
+     "min": 25
+    },
+    {
+     "text": "Serve the stew over the mash.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Farmhouse mushroom and white bean stew with mash",
+     "prep_min": 25,
+     "cook_min": 50,
+     "make_ahead": "Make the stew up to 2 days ahead and reheat gently; mash on the night",
+     "ingredients": [
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "Swiss brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tinned cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the chopped onion, carrots, quartered mushrooms and garlic in the oil for 10 minutes until browned.",
+       "min": 12
+      },
+      {
+       "text": "Stir in the tomato paste and flour, then add the stock, soy and thyme.",
+       "min": 3
+      },
+      {
+       "text": "Add the beans and simmer gently for 30 minutes until thick.",
+       "min": 30
+      },
+      {
+       "text": "Boil the peeled potatoes for 20 minutes, drain and mash with the butter and milk.",
+       "min": 25
+      },
+      {
+       "text": "Serve the stew over the mash.",
+       "min": 2
+      }
+     ],
+     "af": true
     }
    }
   },

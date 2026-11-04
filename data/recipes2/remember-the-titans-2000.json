@@ -668,6 +668,200 @@
    }
   },
   {
+   "n": "Sunshine's California fish tacos",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 10,
+   "make_ahead": "Make the slaw and crema up to 4 hours ahead; cook the fish just before serving",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "firm white fish fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "small corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "white cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "avocados",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jalapeño",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the fish with the chilli, cumin, the juice of 1 lime, the oil and a pinch of salt.",
+     "min": 5
+    },
+    {
+     "text": "Shred the cabbage and toss with the juice of 1 lime, chopped coriander and sliced jalapeño.",
+     "min": 6
+    },
+    {
+     "text": "Mix the sour cream with the zest and juice of the last lime.",
+     "min": 2
+    },
+    {
+     "text": "Cook the fish in a hot grill pan for 3 minutes a side, then break into chunks.",
+     "min": 8
+    },
+    {
+     "text": "Warm the tortillas in a dry pan and fill with fish, slaw, sliced avocado and crema.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sunshine's California cauliflower tacos",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Make the slaw and crema up to 4 hours ahead; cook the fish just before serving",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "small corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "white cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "avocados",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jalapeño",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss small cauliflower florets with the chilli, cumin, oil and salt and roast at 220C for 25 minutes until charred.",
+       "min": 25
+      },
+      {
+       "text": "Shred the cabbage and toss with the juice of 1 lime, chopped coriander and sliced jalapeño.",
+       "min": 6
+      },
+      {
+       "text": "Mix the sour cream with the zest and juice of another lime.",
+       "min": 2
+      },
+      {
+       "text": "Squeeze the last lime over the cauliflower. Warm the tortillas in a dry pan and fill with cauliflower, slaw, sliced avocado and crema.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Alexandria peach cobbler",
    "course": "w",
    "prep_min": 22,

@@ -181,6 +181,186 @@
    "af": true
   },
   {
+   "n": "Onyx Club oysters Rockefeller",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 10,
+   "make_ahead": "Make the spinach butter up to 1 day ahead; top and bake the oysters just before serving",
+   "ingredients": [
+    {
+     "q": 16,
+     "u": "",
+     "item": "oysters, freshly shucked",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "baby spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "hot sauce, to taste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "rock salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven grill to high.",
+     "min": 5
+    },
+    {
+     "text": "Wilt the spinach in a dry pan, squeeze it out and chop finely with the parsley and spring onions.",
+     "min": 8
+    },
+    {
+     "text": "Mash into the butter with the breadcrumbs, parmesan, a squeeze of lemon and a few drops of hot sauce.",
+     "min": 4
+    },
+    {
+     "text": "Sit the oysters on a tray of rock salt, top each with the spinach butter and grill for 4 minutes until bubbling and golden.",
+     "min": 10
+    },
+    {
+     "text": "Serve with lemon wedges.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Onyx Club mushrooms Rockefeller",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Make the spinach butter up to 1 day ahead; fill and bake the mushrooms just before serving",
+     "ingredients": [
+      {
+       "q": 16,
+       "u": "",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "hot sauce, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C and pull the stalks from the mushrooms.",
+       "min": 5
+      },
+      {
+       "text": "Wilt the spinach in a dry pan, squeeze it out and chop finely with the parsley, spring onions and mushroom stalks.",
+       "min": 8
+      },
+      {
+       "text": "Mash into the butter with the breadcrumbs, parmesan, a squeeze of lemon and a few drops of hot sauce.",
+       "min": 4
+      },
+      {
+       "text": "Fill the mushroom cups and bake for 12 minutes until bubbling and golden.",
+       "min": 15
+      },
+      {
+       "text": "Serve with lemon wedges.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Deep dish pizza",
    "course": "m",
    "prep_min": 25,
