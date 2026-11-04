@@ -18,7 +18,7 @@ Read this first in a new chat. Last updated 4 Nov 2026.
 
 All 15 items in docs/review-2.md are done (3 Nov evening, notes against each item). Review 3 is worked through. Review 4 (8 out of 10, docs/review-4.md) is worked through on 4 Nov, notes against each item. Fifth review: 8.1 out of 10 (docs/review-5.md). Next: work down docs/review-5.md one item at a time, commit and push after each.
 
-Left open from review 2: matching prices across sequels (low impact), the fallback photo treatment for films with no good still, and (fixed 3 Nov) the 3 browser checks: two were out of date with the shopping list format, the third found a real bug where closing the rental slip stepped browser history back one extra entry and could leave the app. All tests and browser checks now pass.
+Left open from review 2, closed 4 Nov: sequel prices (checked: same-layout sequels already rise with the year; Crocodile Dundee II is a campfire out bush, cheaper than the Walkabout Creek pub on purpose); films with no good still (only Kenny has none and three have one, and posters cover all four, so no fallback needed); the missing assets/band.png (now a gingham strip on the Julie & Julia menu). Shopping lines now always read as one amount: spoons fold into weights or cups, counts round up, counted produce uses standard weights, herbs go by the bunch.
 
 ## Things added on 3 Nov (so they are not undone by accident)
 
