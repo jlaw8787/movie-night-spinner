@@ -818,6 +818,7 @@ let pvArgs=null;function phoneRefresh(){if(pvArgs&&pvArgs[0]===current&&fmtPhone
 function phoneView(f,spec,menu){
   pvArgs=f?[f,spec,menu]:null;
   if(!f){fmtPhone.innerHTML="";applyPhone();return}
+  setTimeout(()=>{try{kidsDryDom(fmtPhone,f)}catch(e){}},0);
   fmtPhone.innerHTML=fmtPhoneHTML(f,spec,menu);fmtPhoneWire(fmtPhone);
   {const fb=fmtPhone.querySelector(".fp-flip");fb.textContent="Read the printed menu full size";fb.addEventListener("click",()=>openMenuZoom(fb))}
   applyPhone();
@@ -1255,7 +1256,30 @@ function libAim(card,L){const foc=L&&L.focus;if(!foc)return;
 /* after a format's own fitter: any clamped or ellipsis text that still hides words shrinks (to 14px at most) until it shows in full */
 /* one-line boxes whose words run past the edge (subtitles, heading tags, stamp names): shrink the type in small steps,
    never under 65% of its size, so nothing reads "Curry before the clock hits MID". Works on every printed menu. */
-function fitLines(card){
+/* kids' mode, alcohol-free, and family films: one dry pass over the finished card and phone menu, on every layout and hand-built menu alike.
+   Whole drink names first, then single words; cooking phrases lose just the alcohol word; vinegars and root, ginger and butter beer are left alone. */
+const dryNow=f=>dietAF()||["kids","fairytale","xmas","wizard"].includes(f&&f.theme);
+const KDRY=(()=>{const cap=(m,v)=>v&&/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v,W="beer|stout|ale|guinness|lager|red wine|white wine|wine|cider|bourbon|whisk(?:e)?y|rum|brandy|sherry|marsala|tequila|vodka|sake|champagne|port";
+  const r=(re,v)=>[re,typeof v==="function"?v:m=>cap(m,v)];
+  return [r(/[^.]*\bmust be (18|19|21)( or over)? to (order|drink)\b[^.]*\.?\s*/gi,""),r(/\b(18\+|over 18s?) only\.?\s*/gi,""),
+   r(/\bbrandy alexanders?\b/gi,"vanilla nutmeg milk"),r(/\bhot buttered (rum|syrup|whisky|whiskey)\b/gi,"hot spiced apple"),r(/\bmulled wine\b/gi,"mulled grape punch"),
+   r(/\b(brandy|bourbon|whisky|whiskey|rum) milk punch\b/gi,"vanilla milk punch"),r(/\birish coffee\b/gi,"Irish-style hot chocolate"),r(/\bmimosas?\b/gi,"orange fizz"),
+   r(/\bshandy\b/gi,"lemon squash"),r(/\b(gin|vodka) and tonic\b/gi,"lime and tonic"),r(/\bmint juleps?\b/gi,"mint lemonade"),r(/\bold fashioneds?\b/gi,"orange and cherry soda"),
+   r(/\bboilermakers?\b/gi,"ginger beer float"),r(/\bmargaritas?\b/gi,"lime slushie"),r(/\bmojitos?\b/gi,"mint and lime fizz"),r(/\bmartinis?\b/gi,"mocktail"),r(/\bdaiquiris?\b/gi,"strawberry slushie"),
+   r(/\bpi[nñ]a coladas?\b/gi,"pineapple colada"),r(/\bsangria\b/gi,"fruit punch"),r(/\bspritz(es)?\b/gi,"soda spritz"),r(/\bnegronis?\b/gi,"blood orange soda"),
+   [/\b(red wine|white wine|rice wine|sherry|cider|champagne|malt) vinegar\b/gi,m=>m.replace(/(wine|sherry|cider|champagne|malt)/i,w=>w[0]+"\u200B"+w.slice(1))],
+   [new RegExp("\\b("+W+")[- ](battered)\\b","gi"),m=>cap(m,"crisp battered")],[new RegExp("\\b("+W+")[- ](braised|stewed)\\b","gi"),(m,a,b)=>cap(m,"slow-"+b.toLowerCase())],
+   [new RegExp("\\b("+W+")[- ](glazed)\\b","gi"),m=>cap(m,"sticky glazed")],[new RegExp("\\b("+W+")[- ](jus|sauce|gravy|reduction|butter|glaze)\\b","gi"),(m,a,b)=>cap(m,"rich "+b.toLowerCase())],
+   [new RegExp("\\b("+W+")[- ](marinated|poached|steamed|soaked|infused|spiked|cured)\\b","gi"),(m,a,b)=>cap(m,b.toLowerCase())],
+   r(/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?))/gi,"mocktail"),r(/\b(champagne|prosecco|sparkling wine|bubbly)\b/gi,"sparkling apple"),
+   r(/\b(red |white |rosé |rose )?wines?\b/gi,"grape juice"),r(/\balcohol-free (beer|lager|stout|ale) batter\b/gi,"soda water batter"),r(/\b(cold |ice-cold )?alcohol-free (beers?|lagers?|stouts?|ales?)\b/gi,"ginger beer"),r(/\b(?<!(root|ginger|butter) )(beers?|lagers?|ales?|stouts?|longnecks?|stubbies|tinnies|guinness)\b/gi,"root beer"),
+   r(/\bciders?\b/gi,"sparkling apple juice"),r(/\b(whisk(e)?y|bourbon|scotch|rye whiskey)\b/gi,"butterscotch"),r(/\brum\b/gi,"coconut"),r(/\bgin\b/gi,"cucumber"),
+   r(/\b(vodka|tequila|mezcal)\b/gi,"lime"),r(/\b(brandy|cognac)\b/gi,"vanilla"),r(/\b(liqueurs?|schnapps|amaretto|kahlua|baileys)\b/gi,"syrup"),r(/\bvermouth\b/gi,"bitter orange"),r(/\bsake\b/gi,"yuzu soda"),
+   r(/\b(port|sherry|marsala)\b(?= (and|or|,|glass|wine|by the|\.))/gi,"grape juice")]})();
+function kidsDryDom(root,f){if(!root||!dryNow(f||current))return;const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;const todo=[];
+  while(n=tw.nextNode()){const p=n.parentElement;if(!p||/^(SCRIPT|STYLE)$/.test(p.tagName))continue;const t=n.nodeValue;if(!/[a-z]/i.test(t))continue;const v=KDRY.reduce((a,[re,to])=>a.replace(re,to),t);if(v!==t)todo.push([n,v])}
+  for(const [n,v] of todo)n.nodeValue=v}
+function fitLines(card){try{kidsDryDom(card)}catch(e){}
   const els=[...card.querySelectorAll("*")].filter(e=>{if(!e.firstChild||!e.offsetWidth)return false;const cs=getComputedStyle(e);
     if(!/^(nowrap|pre)/.test(cs.whiteSpace)&&cs.textOverflow!=="ellipsis")return false;if(cs.overflow==="visible"&&cs.overflowX==="visible")return false;
     if(cs.webkitLineClamp&&cs.webkitLineClamp!=="none")return false;return (e.scrollWidth>e.clientWidth+1||e.dataset.fl0)&&e.textContent.trim().length>1});
@@ -1332,7 +1356,7 @@ function fullMenu(f,menu,fmt){
   /* a house line never repeats a dish already on the card (no second sourdough, no second punch): same main noun, it drops */
   const headN=n=>{const w=String(n).split(/\s+(?:with|and|in|on|from|over|served|topped)\s+|,|\(/i)[0].split(/[^a-zà-ÿ']+/i).filter(Boolean);return w.length?planSing(w[w.length-1].toLowerCase()):""};
   const heads=new Set([...seen].map(headN));
-  if(hz)for(const k of (hz.fit||["d","s"])){const h=hz[k];if(!h||!h.n||seen.has(h.n.toLowerCase()))continue;if((DIET.veg&&h.meat)||(dietAF()&&h.alc))continue;
+  if(hz)for(const k of (hz.fit||["d","s"])){const h=hz[k];if(!h||!h.n||seen.has(h.n.toLowerCase()))continue;if((DIET.veg&&h.meat)||(h.alc&&dryNow(f)))continue;
     {const hn=headN(h.n);if(hn.length>=4&&heads.has(hn))continue}
     adds.push([k,{n:h.n,note:h.note||"",how:"",shop:[],house:true}])}
   const cap=FULL_CAP[fmt]==null?99:FULL_CAP[fmt];

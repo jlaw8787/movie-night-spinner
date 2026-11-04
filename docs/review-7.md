@@ -127,3 +127,8 @@ Solid. Every visible control has a name and every image has alt text. Skip link 
 - Print PDFs with no browser furniture, full-colour pages and a light prep sheet.
 - Galaxy Video end to end.
 - No console errors, failed requests or broken images in anything opened.
+
+## Fixed after the review
+
+- Print, full coverage (4 Nov, before this list was worked): Save PDF and Print fill every page edge to edge with the menu's own paper colour (white print padding trimmed), the menu sits 4mm in, and each PDF carries its print settings: actual size, and two-sided with the right flip for folded and two-sided menus. Audited all 120 layouts through the real Print button.
+- Fix 1, alcohol leaks (4 Nov): one alcohol-free pass now runs over the finished card and the phone menu whenever kids' mode or alcohol-free is on, or the film is a family film, on every shared layout and hand-built menu (Splash's champagne and "Must be 19 to order" go; The Fifth Element's gin, Top Gun's beer batter and Gremlins' hot buttered rum are swapped). Whole drink names swap first, cooking phrases lose just the alcohol word, vinegars and root, ginger and butter beer stay, and "by the pint" stays a measure. House lines with alcohol drop on dry cards, so Christmas Vacation's "Every drink alcohol free" is true. New browser check opens one film per layout in kids' mode and fails on any alcohol word.
