@@ -27,7 +27,9 @@ if(!window.__fmtFit){
     if(!el.dataset.base)el.dataset.base=parseFloat(el.style.fontSize)||16;
     let fs=+el.dataset.base;const min=+el.dataset.min||14;el.style.fontSize=fs+"px";
     const over=()=>el.scrollHeight>el.clientHeight+1||el.scrollWidth>el.clientWidth+1;
-    for(let n=0;n<60&&over()&&fs>min;n++){fs=Math.max(min,fs*.97);el.style.fontSize=fs+"px"}});
+    el.querySelectorAll("[data-drop]").forEach(x=>x.style.display="");for(let n=0;n<60&&over()&&fs>min;n++){fs=Math.max(min,fs*.97);el.style.fontSize=fs+"px"}
+    /* last resort: drop descriptions from the bottom up, never a dish or price */
+    const dr=[...el.querySelectorAll("[data-drop]")];while(over()&&dr.length)dr.pop().style.display="none"});
   const run=()=>{try{window.__fmtFit()}catch(e){}};
   window.__fmtFitLater=()=>{[0,300,1200,2000].forEach(t=>setTimeout(run,t));if(document.fonts){document.fonts.ready.then(run);document.fonts.addEventListener&&document.fonts.addEventListener("loadingdone",run)}};
 }

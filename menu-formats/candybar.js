@@ -32,7 +32,9 @@ if(!window.__fmtFit){
     if(!el.dataset.base)el.dataset.base=parseFloat(el.style.fontSize)||16;
     let fs=+el.dataset.base;const min=+el.dataset.min||14;el.style.fontSize=fs+"px";
     const over=()=>el.scrollHeight>el.clientHeight+1||el.scrollWidth>el.clientWidth+1;
-    for(let n=0;n<60&&over()&&fs>min;n++){fs=Math.max(min,fs*.97);el.style.fontSize=fs+"px"}});
+    el.querySelectorAll("[data-drop]").forEach(x=>x.style.display="");for(let n=0;n<60&&over()&&fs>min;n++){fs=Math.max(min,fs*.97);el.style.fontSize=fs+"px"}
+    /* last resort: drop descriptions from the bottom up, never a dish or price */
+    const dr=[...el.querySelectorAll("[data-drop]")];while(over()&&dr.length)dr.pop().style.display="none"});
   const run=()=>{try{window.__fmtFit()}catch(e){}};
   window.__fmtFitLater=()=>{[0,300,1200,2000].forEach(t=>setTimeout(run,t));if(document.fonts){document.fonts.ready.then(run);document.fonts.addEventListener&&document.fonts.addEventListener("loadingdone",run)}};
 }
@@ -123,7 +125,7 @@ window.MENU_FORMATS[ID]=ctx=>{
         <div style="display:flex;justify-content:space-between;gap:.6em;align-items:baseline">
           <span style="font:${E.it} ${E.dw} 1em/1.1 ${E.disp};text-transform:${up};letter-spacing:${trk};color:${boardInk};${heavy?clamp(1):""}">${esc(txt(it.n))}</span>
           <span style="flex:none;font:${E.it} ${E.dw} 1em/1.1 ${E.disp};color:${priceInk}${E.board==="neon"?`;text-shadow:0 0 ${6*T.glow}px ${LIT}`:""}">${price(k,ii)}</span></div>
-        ${it.note&&!(nIt>12&&ii>0)?`<div style="font:500 .74em/1.25 ${E.body};font-size:max(15px,.74em);color:${noteInk};margin-top:.08em;${heavy?clamp(1):""}">${esc(sent(txt(it.note)))}</div>`:""}</div>`).join("")}
+        ${it.note&&!(nIt>12&&ii>0)?`<div data-drop style="font:500 .74em/1.25 ${E.body};font-size:max(15px,.74em);color:${noteInk};margin-top:.08em;${heavy?clamp(1):""}">${esc(sent(txt(it.note)))}</div>`:""}</div>`).join("")}
      </div></div>`).join("");
 
   /* ---------- the wall and the lightbox ---------- */
@@ -182,7 +184,7 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div style="font:700 15px/1.1 ${E.body};letter-spacing:.24em;text-transform:uppercase;color:${E.board==="acrylic"?priceInk:LIT}">${esc(T.kick)}</div>
      <div data-fit data-min="22" style="font-size:44px;height:58px;overflow:hidden;margin-top:4px;display:flex;align-items:center"><div style="font:${E.it} ${E.dw} 1em/1.04 ${E.disp};text-transform:uppercase;color:${E.board==="acrylic"?boardInk:"#fff"};${E.board==="acrylic"?"":`text-shadow:0 0 ${10*T.glow}px ${LIT}`}">${esc(venue)}</div></div>
      <div data-fit data-min="15" style="font-size:17px;height:22px;overflow:hidden;white-space:nowrap"><div style="font:500 1em/1.2 ${E.body};color:${E.board==="acrylic"?noteInk:"#d8d8de"}">${esc(sign)}</div></div></div>
-   <div data-fit data-min="${heavy?14:17}" style="position:absolute;left:850px;top:156px;width:472px;height:${heavy?560:520}px;overflow:hidden;font-size:${heavy?20:26}px">${boards}</div>
+   <div data-fit data-min="14" style="position:absolute;left:850px;top:156px;width:472px;height:${heavy?560:520}px;overflow:hidden;font-size:${heavy?20:26}px">${boards}</div>
    <div style="position:absolute;left:850px;top:${heavy?722:684}px;width:472px;display:flex;justify-content:space-between;align-items:baseline;background:${E.board==="acrylic"?boardHead:"#0c0c0f"};border:${E.board==="neon"?`2px solid ${LIT}`:`2px solid ${E.board==="acrylic"?"#3b2a18":"#2c2d32"}`};box-sizing:border-box;padding:8px 14px">
      <span style="font:${E.it} ${E.dw} 22px/1.1 ${E.disp};color:#fff;text-transform:uppercase">Combo ${esc(num||yy||"1")}: one of each board</span><span style="font:${E.it} ${E.dw} 26px/1 ${E.disp};color:${E.board==="acrylic"?"#fff1d6":LIT}">${combo}</span></div>
    ${heavy?"":`<div data-fit data-min="14" style="position:absolute;left:850px;top:736px;width:472px;height:62px;overflow:hidden;font-size:16px;color:${lum(wall)>.3?"#1c1c1c":"#e6e2d8"}">
@@ -202,7 +204,7 @@ window.MENU_FORMATS[ID]=ctx=>{
      <div style="font:700 15px/1.1 ${E.body};letter-spacing:.24em;text-transform:uppercase;color:${E.board==="acrylic"?priceInk:LIT}">${esc(T.kick)}</div>
      <div data-fit data-min="22" style="font-size:44px;height:58px;overflow:hidden;margin-top:4px;display:flex;align-items:center"><div style="font:${E.it} ${E.dw} 1em/1.04 ${E.disp};text-transform:uppercase;color:${E.board==="acrylic"?boardInk:"#fff"};${E.board==="acrylic"?"":`text-shadow:0 0 ${10*T.glow}px ${LIT}`}">${esc(venue)}</div></div>
      <div data-fit data-min="15" style="font-size:17px;height:22px;overflow:hidden;white-space:nowrap"><div style="font:500 1em/1.2 ${E.body};color:${E.board==="acrylic"?noteInk:"#d8d8de"}">${esc(sign)}</div></div></div>
-   <div data-fit data-min="${heavy?14:17}" style="position:absolute;left:${RX}px;top:156px;width:${RW}px;height:${heavy?560:520}px;overflow:hidden;font-size:${heavy?20:26}px">${boards}</div>
+   <div data-fit data-min="14" style="position:absolute;left:${RX}px;top:156px;width:${RW}px;height:${heavy?560:520}px;overflow:hidden;font-size:${heavy?20:26}px">${boards}</div>
    <div style="position:absolute;left:${RX}px;top:${heavy?722:684}px;width:${RW}px;display:flex;justify-content:space-between;align-items:baseline;background:${E.board==="acrylic"?boardHead:"#0c0c0f"};border:${E.board==="neon"?`2px solid ${LIT}`:`2px solid ${E.board==="acrylic"?"#3b2a18":"#2c2d32"}`};box-sizing:border-box;padding:8px 14px">
      <span style="font:${E.it} ${E.dw} 20px/1.1 ${E.disp};color:#fff;text-transform:uppercase">Combo ${esc(num||yy||"1")}: one of each</span><span style="font:${E.it} ${E.dw} 26px/1 ${E.disp};color:${E.board==="acrylic"?"#fff1d6":LIT}">${combo}</span></div>
    ${heavy?"":`<div data-fit data-min="14" style="position:absolute;left:${RX}px;top:736px;width:${RW}px;height:62px;overflow:hidden;font-size:16px;color:${lum(wall)>.3?"#1c1c1c":"#e6e2d8"}">

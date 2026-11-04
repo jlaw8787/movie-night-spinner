@@ -128,7 +128,7 @@ window.MENU_FORMATS.precinct=function(ctx){
    ${heroP?evid(hero,36,FT,FW,FH,-T.tilt*.4,"center","Now showing",null,true):evid(hero,36,96,744,548,-T.tilt*.4,"center 40%","Exhibit A")}
    ${logo}
    ${heroP?"":`<div style="position:absolute;left:40px;top:672px;width:736px;height:166px;box-sizing:border-box;padding:12px 18px;background:#fffdf6;box-shadow:0 4px 12px rgba(0,0,0,.25);transform:rotate(${T.tilt*.2}deg)">
-     <div data-fit="18" style="height:142px;overflow:hidden;font-size:20px">
+     <div data-fit="14" style="height:142px;overflow:hidden;font-size:20px">
       ${fields}
      </div>
    </div>
@@ -145,7 +145,7 @@ window.MENU_FORMATS.precinct=function(ctx){
      <div style="flex:none;font:30px/1 ${SIG};color:#1d3a8a;text-align:right;white-space:nowrap;overflow:hidden">${x(nt.by)}</div>
    </div>
    <div style="position:absolute;left:40px;top:${sT}px;width:480px;height:${sH}px;box-sizing:border-box;padding:12px 18px;background:#fffdf6;box-shadow:0 4px 12px rgba(0,0,0,.25);transform:rotate(${T.tilt*.2}deg)">
-     <div data-fit="18" style="height:${sH-24}px;overflow:hidden;font-size:20px">
+     <div data-fit="14" style="height:${sH-24}px;overflow:hidden;font-size:20px">
       ${fields}
      </div>
    </div>

@@ -61,9 +61,9 @@ function fitBox(b){b.style.setProperty("--k","1");const notes=[...b.querySelecto
   const names=[...b.querySelectorAll(`[${A}-name]`)];names.forEach(n=>{n.style.display="";n.style.webkitLineClamp="";n.style.overflow=""});notes.forEach(n=>{n.style.display="-webkit-box";n.style.webkitLineClamp="2"});drops.forEach(d=>d.style.display="");
   const min=+b.getAttribute(A+"-min")||.68;let k=1;
   while(over(b)&&k>min){k=Math.round((k-.02)*100)/100;b.style.setProperty("--k",k)}
-  if(over(b)){notes.forEach(n=>n.style.webkitLineClamp="1")}
+  /* house lines go first, then whole notes from the bottom up: a note is shown in full or not at all, never cut to "mozzarell..." */
   for(let i=drops.length-1;i>=0&&over(b);i--)drops[i].style.display="none";
-  if(over(b)){notes.forEach(n=>n.style.display="none")}
+  for(let i=notes.length-1;i>=0&&over(b);i--)notes[i].style.display="none";
   if(over(b)){names.forEach(n=>{n.style.display="-webkit-box";n.style.webkitBoxOrient="vertical";n.style.webkitLineClamp="1";n.style.overflow="hidden"})}
   while(over(b)&&k>.5){k=Math.round((k-.02)*100)/100;b.style.setProperty("--k",k)}}
 function fitText(e){let s=+e.getAttribute(A+"-text");const lo=+e.getAttribute(A+"-lo")||16;e.style.fontSize=s+"px";while(over(e)&&s>lo){s-=1;e.style.fontSize=s+"px"}}
