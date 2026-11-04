@@ -151,75 +151,6 @@
    }
   },
   {
-   "n": "Dino egg cookies",
-   "course": "s",
-   "prep_min": 25,
-   "cook_min": 15,
-   "make_ahead": "Up to 3 days, airtight tin",
-   "ingredients": [
-    {
-     "q": 125,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 150,
-     "u": "g",
-     "item": "brown sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "egg",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 225,
-     "u": "g",
-     "item": "plain flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 12,
-     "u": "",
-     "item": "small chocolate eggs",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "tbsp",
-     "item": "cocoa powder",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Brown the butter in a small pan and cool for 10 minutes until just warm.",
-     "min": 10
-    },
-    {
-     "text": "Beat the butter with the sugar and egg, then mix in the flour to a soft dough.",
-     "min": 5
-    },
-    {
-     "text": "Wrap the dough around each chocolate egg, shape into ovals and place on a lined tray.",
-     "min": 10
-    },
-    {
-     "text": "Bake at 175C until set and lightly golden, then cool.",
-     "min": 12
-    },
-    {
-     "text": "Mix the cocoa with a little water and flick over the cookies with a brush for speckles.",
-     "min": 3
-    }
-   ],
-   "veg": true,
-   "af": true
-  },
-  {
    "n": "Raptor claw crisps",
    "course": "s",
    "prep_min": 20,
@@ -500,6 +431,75 @@
     {
      "text": "Scoop three each into chilled coupes, pour over the fudge and scatter with crushed honeycomb.",
      "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Dino egg cookies",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Up to 3 days, airtight tin",
+   "ingredients": [
+    {
+     "q": 125,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 225,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "small chocolate eggs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cocoa powder",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the butter in a small pan and cool for 10 minutes until just warm.",
+     "min": 10
+    },
+    {
+     "text": "Beat the butter with the sugar and egg, then mix in the flour to a soft dough.",
+     "min": 5
+    },
+    {
+     "text": "Wrap the dough around each chocolate egg, shape into ovals and place on a lined tray.",
+     "min": 10
+    },
+    {
+     "text": "Bake at 175C until set and lightly golden, then cool.",
+     "min": 12
+    },
+    {
+     "text": "Mix the cocoa with a little water and flick over the cookies with a brush for speckles.",
+     "min": 3
     }
    ],
    "veg": true,

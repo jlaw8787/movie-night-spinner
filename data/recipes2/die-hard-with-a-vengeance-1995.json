@@ -211,83 +211,154 @@
    }
   },
   {
-   "n": "Zeus's salted peanut caramel slab",
+   "n": "Bacon egg and cheese on a roll",
    "course": "s",
-   "prep_min": 15,
-   "cook_min": 160,
-   "make_ahead": "Up to 1 week, keep chilled",
+   "prep_min": 5,
+   "cook_min": 12,
+   "make_ahead": "Best eaten straight away",
    "ingredients": [
     {
-     "q": 200,
-     "u": "g",
-     "item": "brown sugar",
-     "aisle": "Pantry"
+     "q": 8,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
     },
     {
-     "q": 100,
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "kaiser rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 20,
      "u": "g",
      "item": "butter",
      "aisle": "Dairy"
     },
     {
-     "q": 150,
-     "u": "ml",
-     "item": "thickened cream",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 2,
+     "q": 3,
      "u": "tbsp",
-     "item": "golden syrup",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 200,
-     "u": "g",
-     "item": "roasted salted peanuts",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 150,
-     "u": "g",
-     "item": "milk chocolate",
+     "item": "tomato sauce",
      "aisle": "Pantry"
     },
     {
      "q": null,
      "u": "",
-     "item": "flaky sea salt, to taste",
+     "item": "salt and pepper, to taste",
      "aisle": "Spices"
     }
    ],
    "steps": [
     {
-     "text": "Line a 20cm square tin. Heat the sugar, butter, cream and golden syrup, stirring, then boil to 118C.",
-     "min": 7
+     "text": "Fry the bacon until crisp.",
+     "min": 8
     },
     {
-     "text": "Stir in the peanuts and pour into the tin.",
-     "min": 2
+     "text": "Fry the eggs in the same pan, breaking the yolks, and lay a slice of cheese on each to melt.",
+     "min": 4
     },
     {
-     "text": "Cool.",
-     "min": 30
-    },
-    {
-     "text": "Spread with melted chocolate and sprinkle with flaky salt.",
-     "min": 6
-    },
-    {
-     "text": "Chill, then cut into squares.",
-     "min": 120
+     "text": "Split, butter and toast the rolls. Fill with bacon and egg, season and add tomato sauce.",
+     "min": 3
     }
    ],
-   "veg": true,
-   "af": true
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Smoky mushroom, egg and cheese on a roll",
+     "prep_min": 5,
+     "cook_min": 10,
+     "make_ahead": "Best eaten straight away",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "kaiser rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in the olive oil over high heat until browned and crisp at the edges, then stir through the smoked paprika.",
+       "min": 8
+      },
+      {
+       "text": "Fry the eggs in the same pan, breaking the yolks, and lay a slice of cheese on each to melt.",
+       "min": 4
+      },
+      {
+       "text": "Split, butter and toast the rolls. Fill with the mushrooms and egg, season with salt and pepper and add tomato sauce.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
   },
   {
    "n": "Harlem chicken and waffles",
-   "course": "s",
+   "course": "m",
    "prep_min": 25,
    "cook_min": 140,
    "make_ahead": "Chicken soaks up to 1 day ahead",
@@ -456,150 +527,79 @@
    }
   },
   {
-   "n": "Bacon egg and cheese on a roll",
-   "course": "m",
-   "prep_min": 5,
-   "cook_min": 12,
-   "make_ahead": "Best eaten straight away",
+   "n": "Zeus's salted peanut caramel slab",
+   "course": "w",
+   "prep_min": 15,
+   "cook_min": 160,
+   "make_ahead": "Up to 1 week, keep chilled",
    "ingredients": [
     {
-     "q": 8,
-     "u": "",
-     "item": "rashers bacon",
-     "aisle": "Meat"
+     "q": 200,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
     },
     {
-     "q": 4,
-     "u": "",
-     "item": "eggs",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "slices American cheese",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "kaiser rolls",
-     "aisle": "Bakery"
-    },
-    {
-     "q": 20,
+     "q": 100,
      "u": "g",
      "item": "butter",
      "aisle": "Dairy"
     },
     {
-     "q": 3,
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
      "u": "tbsp",
-     "item": "tomato sauce",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "roasted salted peanuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "milk chocolate",
      "aisle": "Pantry"
     },
     {
      "q": null,
      "u": "",
-     "item": "salt and pepper, to taste",
+     "item": "flaky sea salt, to taste",
      "aisle": "Spices"
     }
    ],
    "steps": [
     {
-     "text": "Fry the bacon until crisp.",
-     "min": 8
+     "text": "Line a 20cm square tin. Heat the sugar, butter, cream and golden syrup, stirring, then boil to 118C.",
+     "min": 7
     },
     {
-     "text": "Fry the eggs in the same pan, breaking the yolks, and lay a slice of cheese on each to melt.",
-     "min": 4
+     "text": "Stir in the peanuts and pour into the tin.",
+     "min": 2
     },
     {
-     "text": "Split, butter and toast the rolls. Fill with bacon and egg, season and add tomato sauce.",
-     "min": 3
+     "text": "Cool.",
+     "min": 30
+    },
+    {
+     "text": "Spread with melted chocolate and sprinkle with flaky salt.",
+     "min": 6
+    },
+    {
+     "text": "Chill, then cut into squares.",
+     "min": 120
     }
    ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Smoky mushroom, egg and cheese on a roll",
-     "prep_min": 5,
-     "cook_min": 10,
-     "make_ahead": "Best eaten straight away",
-     "ingredients": [
-      {
-       "q": 300,
-       "u": "g",
-       "item": "mushrooms, sliced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "olive oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "smoked paprika",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "eggs",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "slices American cheese",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "kaiser rolls",
-       "aisle": "Bakery"
-      },
-      {
-       "q": 20,
-       "u": "g",
-       "item": "butter",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "tomato sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": null,
-       "u": "",
-       "item": "salt and pepper, to taste",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Fry the mushrooms in the olive oil over high heat until browned and crisp at the edges, then stir through the smoked paprika.",
-       "min": 8
-      },
-      {
-       "text": "Fry the eggs in the same pan, breaking the yolks, and lay a slice of cheese on each to melt.",
-       "min": 4
-      },
-      {
-       "text": "Split, butter and toast the rolls. Fill with the mushrooms and egg, season with salt and pepper and add tomato sauce.",
-       "min": 3
-      }
-     ],
-     "af": true
-    }
-   }
+   "veg": true,
+   "af": true
   },
   {
    "n": "Crumb cake",

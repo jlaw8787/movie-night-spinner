@@ -2,6 +2,192 @@
  "serves": 4,
  "dishes": [
   {
+   "n": "Frosty Palace chilli cheese fries",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Chilli up to 2 days ahead; cut and soak the potatoes up to 4 hours ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "tomato passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "evaporated milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "pickled jalapeños",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into thin fries and soak in cold water.",
+     "min": 60
+    },
+    {
+     "text": "Brown the beef with 1 chopped onion, add the cumin, chilli and passata and simmer.",
+     "min": 15
+    },
+    {
+     "text": "Dry the fries well. Fry at 140C for 5 minutes and drain, then at 190C for 3 minutes until crisp, and salt them.",
+     "min": 15
+    },
+    {
+     "text": "Warm the evaporated milk and melt in the grated cheddar.",
+     "min": 5
+    },
+    {
+     "text": "Pile the fries into paper boats with the chilli, cheese sauce, the other onion diced and the jalapeños.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Frosty Palace chilli cheese fries",
+     "prep_min": 20,
+     "cook_min": 45,
+     "make_ahead": "Chilli up to 2 days ahead; cut and soak the potatoes up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin kidney beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "tomato passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "evaporated milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "pickled jalapeños",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into thin fries and soak in cold water.",
+       "min": 60
+      },
+      {
+       "text": "Soften 1 chopped onion, add the beans, cumin, chilli and passata and simmer, crushing some of the beans.",
+       "min": 15
+      },
+      {
+       "text": "Dry the fries well. Fry at 140C for 5 minutes and drain, then at 190C for 3 minutes until crisp, and salt them.",
+       "min": 15
+      },
+      {
+       "text": "Warm the evaporated milk and melt in the grated cheddar.",
+       "min": 5
+      },
+      {
+       "text": "Pile the fries into paper boats with the bean chilli, cheese sauce, the other onion diced and the jalapeños.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Drive-in butter toffee popcorn",
    "course": "s",
    "prep_min": 15,
@@ -77,59 +263,6 @@
     {
      "text": "Cool and break up.",
      "min": 5
-    }
-   ],
-   "veg": true,
-   "af": true
-  },
-  {
-   "n": "Pink Ladies coconut ice",
-   "course": "s",
-   "prep_min": 20,
-   "cook_min": 180,
-   "make_ahead": "Up to 1 week, keep chilled",
-   "ingredients": [
-    {
-     "q": 250,
-     "u": "g",
-     "item": "desiccated coconut",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 395,
-     "u": "g",
-     "item": "condensed milk",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 250,
-     "u": "g",
-     "item": "icing sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "drops pink food colouring",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Mix the coconut, condensed milk and icing sugar into a stiff mix.",
-     "min": 8
-    },
-    {
-     "text": "Press half into a lined tin.",
-     "min": 4
-    },
-    {
-     "text": "Tint the rest pink and press it on top.",
-     "min": 8
-    },
-    {
-     "text": "Chill until firm, about 3 hours, then cut into squares.",
-     "min": 180
     }
    ],
    "veg": true,
@@ -555,6 +688,59 @@
     {
      "text": "Top with whipped cream and a cherry.",
      "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Pink Ladies coconut ice",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 180,
+   "make_ahead": "Up to 1 week, keep chilled",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 395,
+     "u": "g",
+     "item": "condensed milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "drops pink food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the coconut, condensed milk and icing sugar into a stiff mix.",
+     "min": 8
+    },
+    {
+     "text": "Press half into a lined tin.",
+     "min": 4
+    },
+    {
+     "text": "Tint the rest pink and press it on top.",
+     "min": 8
+    },
+    {
+     "text": "Chill until firm, about 3 hours, then cut into squares.",
+     "min": 180
     }
    ],
    "veg": true,

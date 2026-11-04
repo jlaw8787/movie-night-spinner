@@ -92,106 +92,74 @@
    }
   },
   {
-   "n": "Ana's three-flour brown butter cookies",
+   "n": "Ana's bakery cheddar and chive scones",
    "course": "s",
    "prep_min": 20,
-   "cook_min": 55,
-   "make_ahead": "Up to 1 day, keep chilled",
+   "cook_min": 15,
+   "make_ahead": "Best baked to serve; cut rounds can be frozen",
    "ingredients": [
     {
-     "q": 150,
+     "q": 160,
      "u": "g",
      "item": "butter",
      "aisle": "Dairy"
     },
     {
-     "q": 100,
+     "q": 450,
      "u": "g",
-     "item": "brown sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 50,
-     "u": "g",
-     "item": "caster sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "egg",
-     "aisle": "Dairy"
-    },
-    {
-     "q": null,
-     "u": "",
-     "item": "vanilla extract, to taste",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "plain flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 60,
-     "u": "g",
-     "item": "spelt flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 40,
-     "u": "g",
-     "item": "rye flour",
+     "item": "self-raising flour",
      "aisle": "Pantry"
     },
     {
      "q": 1,
      "u": "tsp",
-     "item": "baking powder",
+     "item": "salt",
      "aisle": "Pantry"
     },
     {
-     "q": 40,
-     "u": "g",
-     "item": "demerara sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": null,
+     "q": 1,
      "u": "",
-     "item": "sea salt flakes, to taste",
-     "aisle": "Pantry"
+     "item": "pinch cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "vintage cheddar",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
     }
    ],
    "steps": [
     {
-     "text": "Brown the butter until nutty and cool 10 minutes.",
-     "min": 12
+     "text": "Rub 60g cold butter into the flour, salt and cayenne.",
+     "min": 6
     },
     {
-     "text": "Whisk with the brown sugar, the caster sugar, the egg and the vanilla.",
+     "text": "Stir in 120g grated cheddar and half the chives, snipped, then the milk to a soft dough.",
      "min": 4
     },
     {
-     "text": "Stir in the plain flour, the spelt flour, the rye flour, the baking powder and a pinch of salt.",
-     "min": 4
+     "text": "Pat 3cm thick, cut 8 rounds, brush with milk and top with the rest of the cheddar.",
+     "min": 6
     },
     {
-     "text": "Chill 30 minutes.",
-     "min": 32
+     "text": "Bake at 220C until risen and golden.",
+     "min": 15
     },
     {
-     "text": "Heat the oven to 180C.",
-     "min": 4
-    },
-    {
-     "text": "Roll into balls, roll in demerara sugar and bake 11 to 12 minutes.",
-     "min": 16
-    },
-    {
-     "text": "Sprinkle with flaky salt while warm.",
+     "text": "Whip the rest of the butter soft and serve with the warm scones.",
      "min": 4
     }
    ],
@@ -525,14 +493,14 @@
    }
   },
   {
-   "n": "Ana's warm skillet cookie with ice cream",
+   "n": "Ana's three-flour brown butter cookies",
    "course": "w",
-   "prep_min": 15,
-   "cook_min": 24,
-   "make_ahead": "Press the dough into the pan up to 1 day ahead, covered in the fridge; bake a few minutes longer from cold, then top with ice cream",
+   "prep_min": 20,
+   "cook_min": 55,
+   "make_ahead": "Up to 1 day, keep chilled",
    "ingredients": [
     {
-     "q": 125,
+     "q": 150,
      "u": "g",
      "item": "butter",
      "aisle": "Dairy"
@@ -562,56 +530,70 @@
      "aisle": "Pantry"
     },
     {
-     "q": 180,
+     "q": 100,
      "u": "g",
      "item": "plain flour",
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
-     "item": "bicarb soda, to taste",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 150,
+     "q": 60,
      "u": "g",
-     "item": "dark chocolate",
+     "item": "spelt flour",
      "aisle": "Pantry"
     },
     {
-     "q": 500,
-     "u": "ml",
-     "item": "vanilla ice cream",
-     "aisle": "Frozen"
+     "q": 40,
+     "u": "g",
+     "item": "rye flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "demerara sugar",
+     "aisle": "Pantry"
     },
     {
      "q": null,
      "u": "",
-     "item": "hot fudge sauce, to taste",
+     "item": "sea salt flakes, to taste",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
+     "text": "Brown the butter until nutty and cool 10 minutes.",
+     "min": 12
+    },
+    {
+     "text": "Whisk with the brown sugar, the caster sugar, the egg and the vanilla.",
+     "min": 4
+    },
+    {
+     "text": "Stir in the plain flour, the spelt flour, the rye flour, the baking powder and a pinch of salt.",
+     "min": 4
+    },
+    {
+     "text": "Chill 30 minutes.",
+     "min": 32
+    },
+    {
      "text": "Heat the oven to 180C.",
      "min": 4
     },
     {
-     "text": "Beat the soft butter with the brown sugar and the caster sugar, then the egg and the vanilla.",
+     "text": "Roll into balls, roll in demerara sugar and bake 11 to 12 minutes.",
+     "min": 16
+    },
+    {
+     "text": "Sprinkle with flaky salt while warm.",
      "min": 4
-    },
-    {
-     "text": "Stir in the plain flour, a little bicarb, a pinch of salt and the chopped dark chocolate.",
-     "min": 4
-    },
-    {
-     "text": "Press into a buttered 23cm ovenproof frying pan and bake 18 to 20 minutes until golden at the edges but soft in the middle.",
-     "min": 23
-    },
-    {
-     "text": "Rest 5 minutes, top with the scoops of vanilla ice cream and drizzle with hot fudge sauce.",
-     "min": 5
     }
    ],
    "veg": true,
