@@ -1,0 +1,5 @@
+# Code notes for the lead (shared-d)
+
+- bartab layout (menu-formats/bartab.js, fitBox): once page 1 runs over, every note on the page is hidden at once. Any bar tab with more than about 3 card lines on page 1 shows names and prices only (Blade, An American Werewolf in London already do). Adding a second main to Beerfest wiped all its notes, so the single-main bar tabs were left as they are. Suggest shrinking the poster first, or dropping notes one at a time from the bottom (house lines first), before hiding them all.
+- takeaway layout: the inside page prints starters, mains and sweets but no drinks, while the right-hand panel sits empty above the kitchen tip (seen on Screwed, before and after). The phone menu has the drinks. Worth putting the drinks in that panel.
+- placemat layout: prices are not run through priceSense. Mother's Day prints the blood orange mimosa (3.50) under the iced hibiscus tea (3.75), spirits below a soft drink. The note signature "Jesse" is also cut at the right edge (before and after). When the card gets longer, notes shrink to their first line and longer ones vanish; dish notes were kept short to suit.
