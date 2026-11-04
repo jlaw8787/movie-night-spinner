@@ -102,3 +102,14 @@ The kit takes dessert and drink from the menu itself (first sweet, first drink),
 - Dessert and drink pulled live from the menu, so they always match the card.
 - Save PDF: all pages, real fonts, stills loaded, A4, sensible file name and message.
 - No em or en dashes and no script errors in anything built.
+
+## Fixed after the review
+
+- Fix 1, place card grid (4 Nov): two fixed, equal columns. A long name shrinks to fit its own card, or goes onto two lines when that reads bigger, and never widens the column. Card footers keep a gap. A still that the browser refuses as a cross-origin load gets one plain retry, so no tent back prints empty. Checked on every prop kind with "Alexandra Fitzgerald-Hughes" and "Christopher Montgomery".
+- Fix 2, alcohol-free and vegetarian (4 Nov): the kit runs the card's dry pass in kids' mode, alcohol-free and on family films (Splash's blue lagoon is now a blue lagoon mocktail, Three Amigos!'s margaritas a lime slushie). On a vegetarian night, a kit note that still names meat or fish is left off. The browser check's kids' mode test now opens the table kit on every layout too.
+- Fix 3, Print (4 Nov): Print builds the same PDF as Save PDF and sends it to the printer the way the menus do (a new tab on phones). Pages fill edge to edge with every photo in. The kit PDF opens at actual size, one-sided.
+- Fix 4, furniture (4 Nov): wedding invitations and seating cards print as paper invitations, with no chip and no member line (Muriel's Wedding, The Godfather). Other cards say Member since, Valid from or Issued to suit. The departures board wraps and sizes its cells instead of cutting words. Board intermissions say Half time only for pubs, taverns and stadiums. Aloha and Luau break only show for tropical venues (Splash now reads "Welcome to Bauer Fruit and Vegetable"). The saloon line only shows for saloons (Miller's Crossing: "Supper stops for fifteen minutes").
+- Fix 5, dish picks (4 Nov): the intermission card serves the first sweet and drink still ticked, and drops the line when none are.
+- Fix 6, cut guide and ink (4 Nov): place card pages print on white on every style. Only the cards carry ink, and the cut, fold and instruction lines are dark enough to see.
+- Fix 7, legibility (4 Nov): horror text sits above the still, with a dark band behind the small lines (Psycho, C.H.U.D.). The board sign's polaroid pins below the chalkboard, clear of the film's title.
+- Fix 8, small items (4 Nov): "Doors at" is a drawn line on every style. Camp and roadside intermissions show the drink. The dialog counts the cards it prints ("6 place cards, 3 left blank to write in"). The `stub` prop already falls back to the ticket, which suits it. Hand-built venues were checked and left as they are.

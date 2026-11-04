@@ -78,4 +78,5 @@ Left open from review 2, closed 4 Nov: sequel prices (checked: same-layout seque
 - New shared helper: window.priceSense(menu,P) in app.js keeps card prices in order (mains over starters and sweets, spirits over plain drinks and sweets); used by truck, kiosk, lab, cafe and hotel.
 - Shopping lines: PREP_TAIL strips prep words, STAPLE_RE lists salt and pepper with no amount, spoons round to halves, green and ripe fruit share one line.
 - fullMenu: a card with one main shows the film's second main before a third starter.
-- Table kit review done: docs/review-8.md (6.5 out of 10, 8 fixes). Next: work down its fix list one item at a time, commit and push after each.
+- Table kit review done: docs/review-8.md (6.5 out of 10). All 8 fixes done 4 Nov, noted at the end of review-8.md.
+- New kit helpers in app.js: kitFit (names shrink or go to two lines, departures cells fit) and kitReady (mounts kit pages offscreen, retries refused stills, runs kitFit and the dry pass). Kit Print now goes through printPdf like the menus.
