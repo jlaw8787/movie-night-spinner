@@ -84,7 +84,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const note=fl.note&&fl.note.text?{text:fl.note.text,by:fl.note.by||"The Cook"}:{text:"Everything on the board is cooked to order. Wait by the window and we'll call your number.",by:"The Cook"};
   const winks=(fl.winks||[]).map(clean).filter(Boolean);
   const prop=fl.prop&&fl.prop.title?fl.prop:{title:"Order Ticket",lines:["Keep this ticket","We call your number"]};
-  const num=String(fl.number||"").replace(/\D/g,"")||String(year).slice(-2)||"7";
+  const num=String(fl.number||"").replace(/\D/g,"")||(String(year).slice(-2)==="00"?String(year):String(year).slice(-2))||"7";
   const egg=String(fl.number||"").replace(/\D/g,"").slice(-2)||"";
   const pal=ctx.palette||{};
   const truck=e.truck,darkTruck=lum(truck)<.2;

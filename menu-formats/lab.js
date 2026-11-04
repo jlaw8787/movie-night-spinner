@@ -21,7 +21,7 @@ const toHex=c=>"#"+c.map(x=>Math.max(0,Math.min(255,Math.round(x))).toString(16)
 function inkOn(h,paper,min){let c=hex(h);if(!c)return null;if(Math.max(...c)-Math.min(...c)<40)return null;const P=hex(paper);
   for(let i=0;i<14&&ratio(c,P)<min;i++)c=c.map(x=>x*.86);return ratio(c,P)>=min?toHex(c):null}
 const band=e=>/193|194|1950/.test(e)?"P":/196|197/.test(e)?"S":/198|199/.test(e)?"E":"M";
-const yr2=y=>String(y||"").slice(-2);
+const yr2=y=>{const s=String(y||"").slice(-2);return s==="00"?String(y):s}; /* a 2000 film is "2000", never "00" */
 function hash(s){let h=0;for(const ch of String(s))h=(h*31+ch.charCodeAt(0))>>>0;return h}
 function price(f,fl,ci,ii,name,scale){
   const base=[3,8,4,2][ci]+(ii>1?1:0);let c=["25","40","50","65","75","95"][hash(name)%6];

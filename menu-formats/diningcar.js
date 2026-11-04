@@ -94,7 +94,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const note=fl.note&&fl.note.text?{text:fl.note.text,by:fl.note.by||(R0?R0.by:"The Steward")}:R0?{text:R0.welcome,by:R0.by}:{text:"Sit back and let the line look after you. Supper is served from the first call until the last stop.",by:"Your Steward"};
   const winks=(fl.winks||[]).map(clean).filter(Boolean);
   const prop=fl.prop&&fl.prop.title?fl.prop:{title:R0?R0.seat:"Dining Car Seat",lines:[R0?R0.show:"Present to the steward","One seat, one sitting"]};
-  const num=String(fl.number||"").replace(/\D/g,"")||String(year).slice(-2)||"7";
+  const num=String(fl.number||"").replace(/\D/g,"")||(String(year).slice(-2)==="00"?String(year):String(year).slice(-2))||"7";
   const egg=String(fl.number||"").replace(/\D/g,"").slice(-2)||"";
   /* paper and colours */
   let paper=t.paperTo?mix(e.paper,t.paperTo,t.pt):e.paper;

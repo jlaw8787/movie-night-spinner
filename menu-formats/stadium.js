@@ -174,7 +174,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const note=fl.note&&fl.note.text?{text:fl.note.text,by:fl.note.by||"The Manager"}:{text:"Grab a seat, grab a bite, and stay for the whole game. The stands are open till the final whistle.",by:"The Stand Manager"};
   const winks=(fl.winks||[]).map(clean).filter(Boolean);
   const prop=fl.prop&&fl.prop.title?fl.prop:{title:"General Admission",lines:["Good for one game","Keep this stub"]};
-  const num=String(fl.number||"").replace(/\D/g,"")||String(year).slice(-2)||"7";
+  const num=String(fl.number||"").replace(/\D/g,"")||(String(year).slice(-2)==="00"?String(year):String(year).slice(-2))||"7";
   const egg=String(fl.number||"").replace(/\D/g,"").slice(-2)||"";
   let paper=t.paperTo&&lum(e.paper)>.4?mix(e.paper,t.paperTo,t.pt):e.paper;
   const darkPaper=lum(paper)<.2;
