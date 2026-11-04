@@ -1044,7 +1044,12 @@ function dietSpec(f,spec){if(!spec||!dietKey()||!f._diet)return spec;let c=_diet
 function dietStamp(){const b=$("dietNote");if(!b)return;const t=dietLabel();b.textContent=t?t+" menu":"";b.hidden=!t}
 function dietLabel(){const k=dietKey();return k==="veg_af"?"Vegetarian · Alcohol-free":k==="veg"?"Vegetarian":k==="af"?"Alcohol-free":""}
 /* lazy night: plan only the dishes left on the cut-down menu */
-const planAll=f=>{const all=((f._r2&&f._r2.dishes)||[]).map(dietDish),m=f.menu||(typeof current!=="undefined"&&current===f?current.menu:null);
+/* cook five: a tested recipe for a dish that isn't one of tonight's five (a card extra the sweep gave a recipe) is offered unticked */
+const planCooked=f=>{const src=(typeof EDITIONS!=="undefined"&&EDITIONS[f.id]&&EDITIONS[f.id].menu)||(typeof RECIPE_MENUS!=="undefined"&&RECIPE_MENUS[f.id])||null;
+  return src?new Set(["s","m","w","d"].flatMap(k=>(src[k]||[]).map(it=>String(it.n||"").toLowerCase()))):null};
+const planAll=f=>{const ck=planCooked(f),r2=((f._r2&&f._r2.dishes)||[]).map(dietDish),hit=d=>ck.has(String(d.orig||d.n).toLowerCase()),
+    /* only when every cooked dish is found by name; a hand-built menu that names its dishes differently keeps all its recipes ticked */
+    sp=ck&&ck.size&&r2.filter(hit).length>=Math.min(5,ck.size),all=sp?r2.map(d=>hit(d)?d:Object.assign({},d,{spare:true})):r2,m=f.menu||(typeof current!=="undefined"&&current===f?current.menu:null);
   let out=all;if(m&&m.lazy){const keep=new Set([...m.s,...m.m,...m.w,...m.d].map(it=>it.orig||it.n)),few=all.filter(d=>keep.has(d.orig||d.n));if(few.length)out=few}
   return out.concat(planExtras(f).map(dietDish)).concat(snackDishes(f).map(dietDish))};
 /* the film's other printed dishes: offered in the planner unticked, so every dish on the printed menu can go on the shopping list.
@@ -1062,7 +1067,7 @@ function planExtras(f){if(!f||!f._full)return [];const have=new Set(((f._r2&&f._
 /* the card's own name for a dish (hand-built menus print "Antipasto, wedding style" for the "Wedding antipasto" recipe) */
 function planLabels(f){const L={};for(const it of planCard(f)){if(it.n&&it.label&&it.label!==it.n)L[it.n]=it.label}return L}
 const planHouse=f=>planCard(f).filter(it=>it.house);
-const planOn=x=>x.blocked||x.extra?!!PLAN.on[x.orig||x.n]:!PLAN.off[x.orig||x.n];
+const planOn=x=>x.blocked||x.extra||x.spare?!!PLAN.on[x.orig||x.n]:!PLAN.off[x.orig||x.n];
 const planDishes=f=>planAll(f).filter(planOn);
 const FRAC=[[0,""],[0.25,"1/4"],[1/3,"1/3"],[0.5,"1/2"],[2/3,"2/3"],[0.75,"3/4"],[1,""]];
 function fracText(q){const w=Math.floor(q),r=q-w;let best=FRAC[0];for(const x of FRAC)if(Math.abs(x[0]-r)<Math.abs(best[0]-r))best=x;const W=best[0]===1?w+1:w;return (W?String(W):"")+(best[1]?(W?" ":"")+best[1]:"")||"1/4"}
@@ -1232,7 +1237,7 @@ function planHTML(f){
   <p class="pl-hint">Tick what you want to make tonight. The prep sheet, shopping list and times follow your picks.${DIET.veg||dietAF()?" Dishes that don't fit are swapped for their own version, or left off so you can choose.":""}</p>
   ${(()=>{const LB=planLabels(f),HS=planHouse(f);return ["s","m","w","d","c"].map(c=>{const ds=all.filter(d=>d.course===c),hs=HS.filter(h=>h.course===c);return ds.length||hs.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.orig||d.n)}"${planOn(d)?" checked":""}><span>${ESC(LB[d.orig||d.n]&&!d.tag?LB[d.orig||d.n]:d.n)}${d.tag&&!/alcohol-free|vegetarian/i.test(d.n)?`<em class="pl-tag">${TAG[d.tag]}</em>`:""}${d.blocked?`<em class="pl-tag pl-no">${BLK[d.blocked]}</em>`:""}</span><small>${d.extra?"From the menu":(t=>planDur(t.active)+(t.wait?" + "+planMin(t.wait)+" wait":""))(dishTimes(d,PLAN.guests/((f._r2&&f._r2.serves)||4)))}</small></label>`).join("")}${hs.map(h=>`<p class="pl-d pl-house"><span>${ESC(h.n)}<em class="pl-tag">house standard</em></span><small>Served as is</small></p>`).join("")}</fieldset>`:""}).join("")})()}</details>`;
 }
-function planCount(r){const f=current,all=r.dishes.map(dietDish).concat(f?planExtras(f).map(dietDish):[]),on=all.filter(planOn).length;return `${on} of ${all.length} dishes picked`}
+function planCount(r){const f=current,all=f?planAll(f).filter(d=>d.course!=="c"):r.dishes.map(dietDish),on=all.filter(planOn).length;return `${on} of ${all.length} dishes picked`}
 function planOpen(){try{return localStorage.getItem("mns-plan-open")==="1"}catch(e){return false}}
 /* 175C reads as 175°C, and a lone litre is written "1 L" so it never reads as eleven */
 const degC=t=>String(t).replace(/(\d{2,3})\s?C\b/g,"$1°C").replace(/(\d(?:\.\d+)?)\s?l\b/g,"$1\u00a0L").replace(/(\d[\d.]*)\s+to\s+(\d[\d.]*)/g,"$1\u00a0to\u00a0$2");
@@ -1272,7 +1277,7 @@ function planWire(f){
   const wireToggle=()=>{const dt=box.querySelector(".pl-pick");if(dt)dt.addEventListener("toggle",()=>{try{localStorage.setItem("mns-plan-open",dt.open?"1":"0")}catch(e){}})};wireToggle();
   box.onchange=e=>{const dk=e.target.dataset.diet;if(dk){DIET[dk]=e.target.checked;dietSave();try{setSync()}catch(_){}const op=box.querySelector(".pl-pick"),was=op&&op.open;box.innerHTML=planHTML(f);if(was){const o2=box.querySelector(".pl-pick");if(o2)o2.open=true}wireToggle();redo();if(f===current)dietRedraw(dk);return}
     const n=e.target.dataset.dish;if(n==null)return;const x=planAll(f).find(d=>(d.orig||d.n)===n);
-    if(x&&(x.blocked||x.extra)){if(e.target.checked)PLAN.on[n]=1;else delete PLAN.on[n]}else{if(e.target.checked)delete PLAN.off[n];else PLAN.off[n]=1}redo()};
+    if(x&&(x.blocked||x.extra||x.spare)){if(e.target.checked)PLAN.on[n]=1;else delete PLAN.on[n]}else{if(e.target.checked)delete PLAN.off[n];else PLAN.off[n]=1}redo()};
 }
 /* long dish notes are cut back at a natural break so no format has to clip them mid-sentence */
 function libTrim(t,max){t=String(t||"").trim();if(t.length<=max)return t;const cut=t.slice(0,max);let i=Math.max(cut.lastIndexOf(", "),cut.lastIndexOf("; "),cut.lastIndexOf(". "));if(i<max*0.45)i=cut.lastIndexOf(" ");return noDangle(t.slice(0,i).replace(/[,;:\s]+$/,""))+"."}
@@ -1707,7 +1712,7 @@ async function lockAsk(f,trigger){if(!f)return;try{await ensureExact(f)}catch(e)
    <button type="button" data-l="all"><b>The full feature</b><span>Cook the lot. Every dish on the menu goes on the Prep sheet and shopping list.</span></button></div></div>`;
   o.addEventListener("click",async e=>{if(e.target===o)return dismissModal(o);const b=e.target.closest("[data-l]");if(!b)return;dismissModal(o);
     for(let i=0;i<30&&current!==f;i++)await new Promise(r=>setTimeout(r,100));if(current!==f)return;
-    if(b.dataset.l==="all"){PLAN.off={};for(const x of planExtras(f))PLAN.on[x.n]=1;planSave(f);refreshPlan();setTab("prep");
+    if(b.dataset.l==="all"){PLAN.off={};for(const x of planExtras(f))PLAN.on[x.n]=1;for(const x of planAll(f))if(x.spare)PLAN.on[x.orig||x.n]=1;planSave(f);refreshPlan();setTab("prep");
       {const pp=prep;if(pp)setTimeout(()=>pp.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"}),reduce?0:350)}
       const n=planDishes(f).length;$("status").textContent=`The full feature: all ${n} dishes are on the Prep sheet and shopping list.`}
     else{setTab("prep");const pb=$("planner"),d=pb&&pb.querySelector(".pl-pick");if(d){d.open=true;/* once the tab has drawn, land on the "Choose dishes" list itself with focus on the first tick, not on the planner box (the phone ended mid shopping list) */
