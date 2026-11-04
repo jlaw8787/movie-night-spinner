@@ -459,6 +459,196 @@
    }
   },
   {
+   "n": "Serge's gallery lunch chicken Caesar",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Make the dressing up to 2 days ahead; grill the chicken and toss just before serving",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken breast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "baby cos lettuces",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thick slices sourdough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg yolk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "anchovy fillets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "light olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Tear the bread into chunks, toss with 2 tbsp of the olive oil and 1 crushed garlic clove and bake at 200C for 10 minutes until golden.",
+     "min": 10
+    },
+    {
+     "text": "Blend the egg yolk, anchovies, the other garlic clove, mustard and lemon juice, then drizzle in the light olive oil until thick. Grate in half the parmesan.",
+     "min": 5
+    },
+    {
+     "text": "Slice the chicken in half through the middle, rub with the rest of the oil and salt and cook in a hot grill pan for 4 minutes a side. Rest and slice.",
+     "min": 12
+    },
+    {
+     "text": "Toss the cos leaves with the dressing and croutons, top with the chicken and shave over the rest of the parmesan.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Serge's gallery lunch halloumi Caesar",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Make the dressing up to 2 days ahead; grill the chicken and toss just before serving",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "halloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "baby cos lettuces",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "thick slices sourdough",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg yolk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "light olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "parmesan",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Tear the bread into chunks, toss with 2 tbsp of the olive oil and 1 crushed garlic clove and bake at 200C for 10 minutes until golden.",
+       "min": 10
+      },
+      {
+       "text": "Blend the egg yolk, capers, the other garlic clove, mustard and lemon juice, then drizzle in the light olive oil until thick. Grate in half the parmesan.",
+       "min": 5
+      },
+      {
+       "text": "Slice the halloumi, rub with the rest of the oil and cook in a hot grill pan for 2 minutes a side.",
+       "min": 6
+      },
+      {
+       "text": "Toss the cos leaves with the dressing and croutons, top with the halloumi and shave over the rest of the parmesan.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Banana split",
    "course": "w",
    "prep_min": 15,

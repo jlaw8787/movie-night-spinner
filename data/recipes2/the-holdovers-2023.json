@@ -630,6 +630,226 @@
    }
   },
   {
+   "n": "Mary's Christmas Eve pot roast",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 200,
+   "make_ahead": "Braise up to 2 days ahead and reheat in the gravy; it slices better the next day",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "beef chuck roast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "small potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 160C. Season the beef well and brown all over in the oil in a heavy pot. Lift out.",
+     "min": 12
+    },
+    {
+     "text": "Fry the onion wedges and garlic for 5 minutes, stir in the tomato paste, then add the stock, Worcestershire and thyme.",
+     "min": 8
+    },
+    {
+     "text": "Put the beef back, cover and braise in the oven for 2 hours.",
+     "min": 120
+    },
+    {
+     "text": "Add the carrots and halved potatoes and braise for 1 more hour until everything is tender.",
+     "min": 60
+    },
+    {
+     "text": "Lift out the beef and vegetables, thicken the juices with the cornflour mixed with a little water and simmer for 2 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Slice the beef and serve with the vegetables, gravy and chopped parsley.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mary's Christmas Eve mushroom and lentil pot roast",
+     "prep_min": 20,
+     "cook_min": 60,
+     "make_ahead": "Braise up to 2 days ahead and reheat in the gravy; it slices better the next day",
+     "ingredients": [
+      {
+       "q": 6,
+       "u": "",
+       "item": "large field mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "small potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 180C. Brown the mushrooms in the oil in a heavy pot and lift out.",
+       "min": 8
+      },
+      {
+       "text": "Fry the onion wedges and garlic for 5 minutes, stir in the tomato paste, then add the stock, soy, thyme and lentils.",
+       "min": 8
+      },
+      {
+       "text": "Add the carrots and halved potatoes, sit the mushrooms on top, cover and braise in the oven for 50 minutes until tender.",
+       "min": 50
+      },
+      {
+       "text": "Thicken the juices with the cornflour mixed with a little water and simmer for 2 minutes.",
+       "min": 5
+      },
+      {
+       "text": "Serve with chopped parsley.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Mr Hunham's flaming cherries jubilee",
    "course": "w",
    "prep_min": 15,

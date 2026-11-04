@@ -539,6 +539,216 @@
    }
   },
   {
+   "n": "Roland Tembo's hunters' camp chicken curry",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Make the curry up to 2 days ahead and reheat",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "curry powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "basmati rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "chapati",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "lime pickle",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the sliced onions in the oil for 8 minutes, then the grated garlic, ginger and curry powder for 1 minute.",
+     "min": 10
+    },
+    {
+     "text": "Add the diced chicken, diced potato, tomatoes and 250ml water and simmer for 30 minutes until the potato is tender.",
+     "min": 30
+    },
+    {
+     "text": "Simmer the rice with 600ml water, covered, for 12 minutes, then rest for 5.",
+     "min": 17
+    },
+    {
+     "text": "Warm the chapati in a dry pan.",
+     "min": 4
+    },
+    {
+     "text": "Scatter the curry with coriander and serve with rice, chapati and lime pickle.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Roland Tembo's hunters' camp bean curry",
+     "prep_min": 20,
+     "cook_min": 45,
+     "make_ahead": "Make the curry up to 2 days ahead and reheat",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tinned red kidney beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "curry powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "basmati rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "chapati",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "lime pickle",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "coriander",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the sliced onions in the oil for 8 minutes, then the grated garlic, ginger and curry powder for 1 minute.",
+       "min": 10
+      },
+      {
+       "text": "Add the beans, diced potato, tomatoes and 250ml water and simmer for 25 minutes until the potato is tender.",
+       "min": 25
+      },
+      {
+       "text": "Simmer the rice with 600ml water, covered, for 12 minutes, then rest for 5.",
+       "min": 17
+      },
+      {
+       "text": "Warm the chapati in a dry pan.",
+       "min": 4
+      },
+      {
+       "text": "Scatter the curry with coriander and serve with rice, chapati and lime pickle.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Rex parents' mud pie",
    "course": "w",
    "prep_min": 20,

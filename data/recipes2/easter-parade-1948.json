@@ -489,6 +489,309 @@
    }
   },
   {
+   "n": "Couple of Swells chicken à la King",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Make the chicken mixture up to 1 day ahead and reheat gently",
+   "ingredients": [
+    {
+     "q": 700,
+     "u": "g",
+     "item": "chicken breast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "button mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "dry sherry",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg yolk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "vol-au-vent cases",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Dice the chicken and cook in half the butter for 6 minutes. Lift out.",
+     "min": 10
+    },
+    {
+     "text": "Fry the sliced mushrooms and diced capsicum in the rest of the butter for 5 minutes, then stir in the flour.",
+     "min": 6
+    },
+    {
+     "text": "Whisk in the stock, cream and sherry and simmer for 5 minutes. Put the chicken back, take off the heat and stir in the egg yolk.",
+     "min": 10
+    },
+    {
+     "text": "Warm the pastry cases at 180C for 5 minutes. Cook the peas for 3 minutes.",
+     "min": 8
+    },
+    {
+     "text": "Spoon the chicken into the cases, scatter with parsley and serve with the peas.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Couple of Swells chicken à la King (alcohol-free)",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "Make the chicken mixture up to 1 day ahead and reheat gently",
+     "ingredients": [
+      {
+       "q": 700,
+       "u": "g",
+       "item": "chicken breast",
+       "aisle": "Meat"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 350,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg yolk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vol-au-vent cases",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Dice the chicken and cook in half the butter for 6 minutes. Lift out.",
+       "min": 10
+      },
+      {
+       "text": "Fry the sliced mushrooms and diced capsicum in the rest of the butter for 5 minutes, then stir in the flour.",
+       "min": 6
+      },
+      {
+       "text": "Whisk in the stock, cream and lemon juice and simmer for 5 minutes. Put the chicken back, take off the heat and stir in the egg yolk.",
+       "min": 10
+      },
+      {
+       "text": "Warm the pastry cases at 180C for 5 minutes. Cook the peas for 3 minutes.",
+       "min": 8
+      },
+      {
+       "text": "Spoon the chicken into the cases, scatter with parsley and serve with the peas.",
+       "min": 2
+      }
+     ],
+     "veg": false
+    },
+    "veg": {
+     "n": "Couple of Swells mushroom à la King",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "Make the chicken mixture up to 1 day ahead and reheat gently",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mixed mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "lemon juice",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg yolk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "vol-au-vent cases",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the sliced mushrooms and diced capsicum in the butter for 8 minutes, then stir in the flour.",
+       "min": 10
+      },
+      {
+       "text": "Whisk in the stock, cream and lemon juice and simmer for 5 minutes. Take off the heat and stir in the egg yolk.",
+       "min": 10
+      },
+      {
+       "text": "Warm the pastry cases at 180C for 5 minutes. Cook the peas for 3 minutes.",
+       "min": 8
+      },
+      {
+       "text": "Spoon the mushrooms into the cases, scatter with parsley and serve with the peas.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Hot cross bun bread and butter pudding",
    "course": "w",
    "prep_min": 15,

@@ -519,6 +519,204 @@
    }
   },
   {
+   "n": "Lawrence's Colorado farm steak with chimichurri",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "Make the chimichurri up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "rump steak",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "small potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the parsley, oregano, garlic and chilli and mix with the vinegar, 80ml of the oil and salt.",
+     "min": 5
+    },
+    {
+     "text": "Halve the potatoes, toss with 2 tbsp of the oil, the paprika and salt and roast at 220C for 35 minutes.",
+     "min": 35
+    },
+    {
+     "text": "Rub the steak with the rest of the oil and salt and chargrill for 4 minutes a side, then rest for 8 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Slice the tomatoes and onion thinly and season.",
+     "min": 4
+    },
+    {
+     "text": "Slice the steak, spoon over the chimichurri and serve with the potatoes and salad.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lawrence's Colorado farm cauliflower steak with chimichurri",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "Make the chimichurri up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cauliflowers",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "small potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Chop the parsley, oregano, garlic and chilli and mix with the vinegar, 80ml of the oil and salt.",
+       "min": 5
+      },
+      {
+       "text": "Halve the potatoes, toss with 1 tbsp of the oil, the paprika and salt and roast at 220C for 35 minutes.",
+       "min": 35
+      },
+      {
+       "text": "Cut two thick steaks from the middle of each cauliflower, brush with the rest of the oil, sear in a hot pan for 3 minutes a side, then roast for 18 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Slice the tomatoes and onion thinly and season.",
+       "min": 4
+      },
+      {
+       "text": "Spoon the chimichurri over the cauliflower and serve with the potatoes and salad.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Platinum record vanilla bean cookies",
    "course": "w",
    "prep_min": 45,

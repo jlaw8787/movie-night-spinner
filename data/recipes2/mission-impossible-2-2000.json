@@ -630,6 +630,289 @@
    }
   },
   {
+   "n": "Ambrose's Bare Island lamb",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Rub the lamb up to 1 day ahead and keep in the fridge",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "lamb racks, 8 cutlets each",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "small potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes for 18 minutes, drain and crush with a little oil.",
+     "min": 20
+    },
+    {
+     "text": "Rub the lamb with chopped rosemary, garlic, oil and salt, sear fat side down, then roast at 200C for 20 minutes. Rest for 10 minutes.",
+     "min": 25
+    },
+    {
+     "text": "Pour the wine into the roasting pan, bubble on the stove, add the stock and reduce for 5 minutes.",
+     "min": 6
+    },
+    {
+     "text": "Cook the peas for 3 minutes and crush with the butter and chopped mint.",
+     "min": 5
+    },
+    {
+     "text": "Cut into cutlets and serve on the potatoes and peas with the jus.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Ambrose's Bare Island lamb (alcohol-free)",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "Rub the lamb up to 1 day ahead and keep in the fridge",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "lamb racks, 8 cutlets each",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "small potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes for 18 minutes, drain and crush with a little oil.",
+       "min": 20
+      },
+      {
+       "text": "Rub the lamb with chopped rosemary, garlic, oil and salt, sear fat side down, then roast at 200C for 20 minutes. Rest for 10 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Pour the stock and balsamic into the roasting pan and reduce on the stove for 5 minutes.",
+       "min": 6
+      },
+      {
+       "text": "Cook the peas for 3 minutes and crush with the butter and chopped mint.",
+       "min": 5
+      },
+      {
+       "text": "Cut into cutlets and serve on the potatoes and peas with the jus.",
+       "min": 2
+      }
+     ],
+     "veg": false
+    },
+    "veg": {
+     "n": "Ambrose's Bare Island roast eggplant",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "Rub the lamb up to 1 day ahead and keep in the fridge",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "feta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "small potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes for 18 minutes, drain and crush with a little oil.",
+       "min": 20
+      },
+      {
+       "text": "Halve the eggplants, score the flesh, rub with chopped rosemary, garlic, oil and salt and roast at 200C for 30 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Simmer the balsamic with the sugar until syrupy.",
+       "min": 6
+      },
+      {
+       "text": "Cook the peas for 3 minutes and crush with the butter and chopped mint.",
+       "min": 5
+      },
+      {
+       "text": "Crumble the feta over the eggplant, spoon over the glaze and serve on the potatoes and peas.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Sydney summer pavlova",
    "course": "w",
    "prep_min": 30,

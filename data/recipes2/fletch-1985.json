@@ -588,6 +588,204 @@
    }
   },
   {
+   "n": "Gail Stanwyk's country club Cobb salad",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Boil the eggs and make the dressing up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "chicken breasts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "avocados",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "blue cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "baby cos lettuces",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs for 9 minutes, cool and peel.",
+     "min": 10
+    },
+    {
+     "text": "Cook the chicken in a hot grill pan for 5 minutes a side, rest and dice. Fry the bacon until crisp and break up.",
+     "min": 12
+    },
+    {
+     "text": "Shake the vinegar, mustard, oil and salt in a jar.",
+     "min": 3
+    },
+    {
+     "text": "Chop the cos onto a platter and lay rows of chicken, bacon, chopped egg, avocado, halved tomatoes and crumbled blue cheese across the top.",
+     "min": 8
+    },
+    {
+     "text": "Scatter with chives and pour over the dressing at the table.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Gail Stanwyk's country club garden Cobb",
+     "prep_min": 25,
+     "cook_min": 15,
+     "make_ahead": "Boil the eggs and make the dressing up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "avocados",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cherry tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "blue cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "baby cos lettuces",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs for 9 minutes, cool and peel.",
+       "min": 10
+      },
+      {
+       "text": "Char the corn in a hot grill pan, turning, for 8 minutes, then cut off the kernels.",
+       "min": 10
+      },
+      {
+       "text": "Shake the vinegar, mustard, oil and salt in a jar.",
+       "min": 3
+      },
+      {
+       "text": "Chop the cos onto a platter and lay rows of corn, chickpeas, chopped egg, avocado, halved tomatoes and crumbled blue cheese across the top.",
+       "min": 8
+      },
+      {
+       "text": "Scatter with chives and pour over the dressing at the table.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Country club hot fudge sundaes",
    "course": "w",
    "prep_min": 15,

@@ -427,6 +427,236 @@
    }
   },
   {
+   "n": "Hightower's chicken parmigiana",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 40,
+   "make_ahead": "Crumb the chicken and make the napoli up to 1 day ahead in the fridge",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "large chicken breasts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "frozen chips",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rocket",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Simmer the tomatoes with the crushed garlic, oregano and a pinch of salt for 10 minutes until thick.",
+     "min": 10
+    },
+    {
+     "text": "Slice each breast in half through the middle and flatten. Dip in flour, then beaten egg, then panko.",
+     "min": 12
+    },
+    {
+     "text": "Bake the chips at 220C for 25 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Shallow fry the chicken in the vegetable oil for 3 minutes a side until golden.",
+     "min": 10
+    },
+    {
+     "text": "Spoon the napoli over the chicken, cover with mozzarella and grill for 5 minutes until bubbling.",
+     "min": 8
+    },
+    {
+     "text": "Dress the rocket with the olive oil and lemon and serve with the parmigiana and chips.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hightower's eggplant parmigiana",
+     "prep_min": 30,
+     "cook_min": 40,
+     "make_ahead": "Crumb the chicken and make the napoli up to 1 day ahead in the fridge",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "frozen chips",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Simmer the tomatoes with the crushed garlic, oregano and a pinch of salt for 10 minutes until thick.",
+       "min": 10
+      },
+      {
+       "text": "Slice the eggplants into thick rounds, salt them, then dip in flour, beaten egg and panko.",
+       "min": 12
+      },
+      {
+       "text": "Bake the chips at 220C for 25 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Shallow fry the eggplant in the vegetable oil for 3 minutes a side until golden and soft.",
+       "min": 12
+      },
+      {
+       "text": "Spoon the napoli over, cover with mozzarella and grill for 5 minutes until bubbling.",
+       "min": 8
+      },
+      {
+       "text": "Dress the rocket with the olive oil and lemon and serve with the parmigiana and chips.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Graduation cake",
    "course": "w",
    "prep_min": 45,

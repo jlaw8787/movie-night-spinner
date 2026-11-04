@@ -519,6 +519,216 @@
    }
   },
   {
+   "n": "Firefist's flame-grilled peri peri chicken",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 25,
+   "make_ahead": "Marinate the chicken up to 1 day ahead in the fridge",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "red chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "red wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "basmati rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "red cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the chillies, garlic, juice of 1 lemon, paprika, vinegar, 3 tbsp of the oil and a pinch of salt. Toss with the chicken and leave for 20 minutes.",
+     "min": 25
+    },
+    {
+     "text": "Simmer the rice with the turmeric and 600ml water, covered, for 12 minutes, then rest for 5.",
+     "min": 17
+    },
+    {
+     "text": "Cook the chicken in a hot grill pan with the rest of the oil for 5 minutes a side until charred and cooked through.",
+     "min": 12
+    },
+    {
+     "text": "Shred the cabbage and grate the carrots, then toss with the mayonnaise and a squeeze of the other lemon.",
+     "min": 6
+    },
+    {
+     "text": "Slice the chicken and serve over the rice with the slaw.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Firefist's flame-grilled peri peri halloumi",
+     "prep_min": 25,
+     "cook_min": 20,
+     "make_ahead": "Marinate the chicken up to 1 day ahead in the fridge",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "halloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "red chillies",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "basmati rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground turmeric",
+       "aisle": "Spices"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "red cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blitz the chillies, garlic, juice of 1 lemon, paprika, vinegar, 3 tbsp of the oil and a pinch of salt. Slice the halloumi thickly and toss it through.",
+       "min": 8
+      },
+      {
+       "text": "Simmer the rice with the turmeric and 600ml water, covered, for 12 minutes, then rest for 5.",
+       "min": 17
+      },
+      {
+       "text": "Cook the halloumi in a hot grill pan with the rest of the oil for 2 minutes a side until charred.",
+       "min": 6
+      },
+      {
+       "text": "Shred the cabbage and grate the carrots, then toss with the mayonnaise and a squeeze of the other lemon.",
+       "min": 6
+      },
+      {
+       "text": "Serve the halloumi over the rice with the slaw.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Red suit raspberry cheesecake",
    "course": "w",
    "prep_min": 25,

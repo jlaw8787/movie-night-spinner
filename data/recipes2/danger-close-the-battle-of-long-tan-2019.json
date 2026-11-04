@@ -682,6 +682,224 @@
    }
   },
   {
+   "n": "Vung Tau leave caramel pork",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 95,
+   "make_ahead": "Braise up to 2 days ahead and reheat; skim the fat off the cold braise first",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "pork belly, skin off",
+     "aisle": "Meat"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "fish sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "coconut water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "red Asian shallots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the eggs for 8 minutes, cool and peel. Cut the pork into 4cm pieces.",
+     "min": 10
+    },
+    {
+     "text": "Melt the sugar in a heavy pot over medium heat until dark amber, then stir in the sliced shallots and garlic.",
+     "min": 8
+    },
+    {
+     "text": "Add the pork and toss for 5 minutes, then add the fish sauce and coconut water.",
+     "min": 8
+    },
+    {
+     "text": "Simmer gently, half covered, for 1 hour 15 minutes, adding the eggs for the last 20 minutes, until the pork is tender and the sauce sticky.",
+     "min": 75
+    },
+    {
+     "text": "Simmer the rice with 450ml water, covered, for 12 minutes, then rest for 5.",
+     "min": 17
+    },
+    {
+     "text": "Serve with the rice, sliced cucumber, spring onion and chilli.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Vung Tau leave caramel tofu and eggplant",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "Braise up to 2 days ahead and reheat; skim the fat off the cold braise first",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "large eggplant",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "coconut water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "red Asian shallots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs for 8 minutes, cool and peel. Cut the tofu and eggplant into chunks.",
+       "min": 10
+      },
+      {
+       "text": "Fry the tofu and eggplant in the oil until golden and lift out.",
+       "min": 10
+      },
+      {
+       "text": "Melt the sugar in the pot over medium heat until dark amber, then stir in the sliced shallots and garlic.",
+       "min": 8
+      },
+      {
+       "text": "Add the soy, coconut water, tofu, eggplant and eggs and simmer for 20 minutes until sticky.",
+       "min": 20
+      },
+      {
+       "text": "Simmer the rice with 450ml water, covered, for 12 minutes, then rest for 5.",
+       "min": 17
+      },
+      {
+       "text": "Serve with the rice, sliced cucumber, spring onion and chilli.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Ration pack chocolate orange pots",
    "course": "w",
    "prep_min": 13,

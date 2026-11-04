@@ -215,6 +215,73 @@
    }
   },
   {
+   "n": "Charlene's Venice Beach charred corn",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 12,
+   "make_ahead": "Mix the lime mayo up to 1 day ahead; grill the corn just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cotija or feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brush the corn with melted butter and cook in a very hot grill pan, turning, for 10 minutes until charred all over.",
+     "min": 12
+    },
+    {
+     "text": "Mix the mayonnaise with the zest and juice of 1 lime.",
+     "min": 2
+    },
+    {
+     "text": "Brush the hot corn with the lime mayo, roll in crumbled cotija, dust with chilli and scatter with coriander. Serve with lime wedges.",
+     "min": 4
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Hanna's three-hour beef and pork ragù",
    "course": "m",
    "prep_min": 20,

@@ -1,0 +1,634 @@
+[
+ {
+  "id": "Clueless (1995)",
+  "layout": "canteen",
+  "flags": [
+   {
+    "k": "protein",
+    "w": 3,
+    "msg": "3 of 5 savoury dishes are seafood"
+   }
+  ]
+ },
+ {
+  "id": "Gremlins 2: The New Batch (1990)",
+  "layout": "canteen",
+  "flags": [
+   {
+    "k": "protein",
+    "w": 3,
+    "msg": "3 of 5 savoury dishes are beef"
+   }
+  ]
+ },
+ {
+  "id": "Edge of Tomorrow (2014)",
+  "layout": "canteen",
+  "flags": [
+   {
+    "k": "protein",
+    "w": 3,
+    "msg": "3 of 5 savoury dishes are pork"
+   }
+  ]
+ },
+ {
+  "id": "Deadpool 2 (2018)",
+  "layout": "canteen",
+  "flags": [
+   {
+    "k": "protein",
+    "w": 3,
+    "msg": "3 of 5 savoury dishes are beef"
+   }
+  ]
+ },
+ {
+  "id": "The Rock (1996)",
+  "layout": "canteen",
+  "flags": [
+   {
+    "k": "protein",
+    "w": 3,
+    "msg": "3 of 5 savoury dishes are seafood"
+   }
+  ]
+ },
+ {
+  "id": "Chicago (2002)",
+  "layout": "canteen",
+  "flags": [
+   {
+    "k": "protein",
+    "w": 3,
+    "msg": "3 of 5 savoury dishes are pork"
+   }
+  ]
+ },
+ {
+  "id": "Police Academy (1984)",
+  "layout": "canteen",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "The 40-Year-Old Virgin (2005)",
+  "layout": "canteen",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Stripes (1981)",
+  "layout": "canteen",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Fred Claus (2007)",
+  "layout": "canteen",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "The Holdovers (2023)",
+  "layout": "canteen",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Remember the Titans (2000)",
+  "layout": "canteen",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Rudy (1993)",
+  "layout": "canteen",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Alien: Romulus (2024)",
+  "layout": "canteen",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Halloween II (1981)",
+  "layout": "canteen",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "22 Jump Street (2014)",
+  "layout": "canteen",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Danger Close: The Battle of Long Tan (2019)",
+  "layout": "canteen",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Beverly Hills Cop (1984)",
+  "layout": "cafe",
+  "flags": [
+   {
+    "k": "protein",
+    "w": 3,
+    "msg": "3 of 5 savoury dishes are beef"
+   }
+  ]
+ },
+ {
+  "id": "Heat (1995)",
+  "layout": "cafe",
+  "flags": [
+   {
+    "k": "protein",
+    "w": 3,
+    "msg": "3 of 5 savoury dishes are pork"
+   }
+  ]
+ },
+ {
+  "id": "Deadpool & Wolverine (2024)",
+  "layout": "cafe",
+  "flags": [
+   {
+    "k": "protein",
+    "w": 3,
+    "msg": "3 of 5 savoury dishes are beef"
+   }
+  ]
+ },
+ {
+  "id": "Runaway Bride (1999)",
+  "layout": "cafe",
+  "flags": [
+   {
+    "k": "noveg",
+    "w": 1,
+    "msg": "no vegetable dish or veg in any savoury dish"
+   }
+  ]
+ },
+ {
+  "id": "Stranger than Fiction (2006)",
+  "layout": "cafe",
+  "flags": [
+   {
+    "k": "noveg",
+    "w": 1,
+    "msg": "no vegetable dish or veg in any savoury dish"
+   },
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Last Christmas (2019)",
+  "layout": "cafe",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Valentine's Day (2010)",
+  "layout": "cafe",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Into the Woods (2014)",
+  "layout": "cafe",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "The Grinch (2018)",
+  "layout": "cafe",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "The Sapphires (2012)",
+  "layout": "club",
+  "flags": [
+   {
+    "k": "protein",
+    "w": 3,
+    "msg": "3 of 5 savoury dishes are beef"
+   }
+  ]
+ },
+ {
+  "id": "Fright Night (1985)",
+  "layout": "club",
+  "flags": [
+   {
+    "k": "noveg",
+    "w": 1,
+    "msg": "no vegetable dish or veg in any savoury dish"
+   }
+  ]
+ },
+ {
+  "id": "Popstar: Never Stop Never Stopping (2016)",
+  "layout": "club",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Office Christmas Party (2016)",
+  "layout": "club",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "New Year's Eve (2011)",
+  "layout": "club",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Dreamgirls (2006)",
+  "layout": "club",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Rocketman (2019)",
+  "layout": "club",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "A Night at the Roxbury (1998)",
+  "layout": "club",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Walk Hard: The Dewey Cox Story (2007)",
+  "layout": "club",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Die Hard 2 (1990)",
+  "layout": "airline",
+  "flags": [
+   {
+    "k": "protein",
+    "w": 3,
+    "msg": "3 of 5 savoury dishes are pork"
+   }
+  ]
+ },
+ {
+  "id": "Captain America: Civil War (2016)",
+  "layout": "airline",
+  "flags": [
+   {
+    "k": "protein",
+    "w": 3,
+    "msg": "3 of 5 savoury dishes are beef"
+   }
+  ]
+ },
+ {
+  "id": "Hot Shots! (1991)",
+  "layout": "airline",
+  "flags": [
+   {
+    "k": "protein",
+    "w": 3,
+    "msg": "3 of 5 savoury dishes are pork"
+   }
+  ]
+ },
+ {
+  "id": "Chitty Chitty Bang Bang (1968)",
+  "layout": "airline",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Final Destination (2000)",
+  "layout": "airline",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Mission: Impossible 2 (2000)",
+  "layout": "airline",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Prometheus (2012)",
+  "layout": "airline",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Fletch (1985)",
+  "layout": "newspaper",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Oliver! (1968)",
+  "layout": "newspaper",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Rocky Balboa (2006)",
+  "layout": "newspaper",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Scream 2 (1997)",
+  "layout": "newspaper",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "The Conjuring 2 (2016)",
+  "layout": "newspaper",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "The Lost World: Jurassic Park (1997)",
+  "layout": "newspaper",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Anchorman 2: The Legend Continues (2013)",
+  "layout": "newspaper",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Speed (1994)",
+  "layout": "diningcar",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Black Sheep (1996)",
+  "layout": "diningcar",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "From Russia with Love (1963)",
+  "layout": "diningcar",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Mission: Impossible - Ghost Protocol (2011)",
+  "layout": "diningcar",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "The Matrix Revolutions (2003)",
+  "layout": "diningcar",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Small Soldiers (1998)",
+  "layout": "candybar",
+  "flags": [
+   {
+    "k": "protein",
+    "w": 3,
+    "msg": "3 of 5 savoury dishes are pork"
+   }
+  ]
+ },
+ {
+  "id": "Hop (2011)",
+  "layout": "candybar",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Easter Parade (1948)",
+  "layout": "candybar",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ }
+]

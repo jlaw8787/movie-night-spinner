@@ -481,6 +481,238 @@
    }
   },
   {
+   "n": "Mooj's lamb rogan josh",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 110,
+   "make_ahead": "Make the curry up to 2 days ahead and reheat; it gets better",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "lamb shoulder, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Kashmiri chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "ghee",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garam masala",
+     "aisle": "Spices"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "cardamom pods",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "basmati rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the sliced onions in the ghee for 12 minutes until deep golden, then add the grated garlic and ginger, chilli, garam masala and cardamom for 1 minute.",
+     "min": 15
+    },
+    {
+     "text": "Add the lamb and brown on all sides, then stir in the tomatoes, 100g of the yoghurt and 250ml water.",
+     "min": 10
+    },
+    {
+     "text": "Cover and simmer gently for 1 and a half hours until the lamb is tender.",
+     "min": 90
+    },
+    {
+     "text": "Simmer the rice with 600ml water, covered, for 12 minutes, then rest for 5.",
+     "min": 17
+    },
+    {
+     "text": "Grate the cucumber, squeeze it out and mix with the rest of the yoghurt and a pinch of salt.",
+     "min": 4
+    },
+    {
+     "text": "Scatter the curry with coriander and serve with the rice and raita.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mooj's chickpea and potato rogan josh",
+     "prep_min": 20,
+     "cook_min": 45,
+     "make_ahead": "Make the curry up to 2 days ahead and reheat; it gets better",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tinned chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Kashmiri chilli powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "ghee",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garam masala",
+       "aisle": "Spices"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "cardamom pods",
+       "aisle": "Spices"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "basmati rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "coriander",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the sliced onions in the ghee for 12 minutes until deep golden, then add the grated garlic and ginger, chilli, garam masala and cardamom for 1 minute.",
+       "min": 15
+      },
+      {
+       "text": "Add the diced potato, chickpeas, tomatoes, 100g of the yoghurt and 250ml water and simmer for 25 minutes until the potato is tender.",
+       "min": 30
+      },
+      {
+       "text": "Simmer the rice with 600ml water, covered, for 12 minutes, then rest for 5.",
+       "min": 17
+      },
+      {
+       "text": "Grate the cucumber, squeeze it out and mix with the rest of the yoghurt and a pinch of salt.",
+       "min": 4
+      },
+      {
+       "text": "Scatter the curry with coriander and serve with the rice and raita.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Speed dating salted chocolate truffles",
    "course": "w",
    "prep_min": 40,

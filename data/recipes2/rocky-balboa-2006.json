@@ -591,6 +591,196 @@
    }
   },
   {
+   "n": "Adrian's chicken cacciatore",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 50,
+   "make_ahead": "Make up to 2 days ahead and reheat; it is better the next day",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "chicken thighs, bone in",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "button mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "tinned crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "black olives",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "ciabatta loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the chicken and brown skin side down in the oil. Lift out.",
+     "min": 10
+    },
+    {
+     "text": "Fry the sliced onion, capsicum, mushrooms and garlic for 6 minutes.",
+     "min": 8
+    },
+    {
+     "text": "Add the tomatoes and rosemary, put the chicken back skin side up and simmer, half covered, for 35 minutes.",
+     "min": 35
+    },
+    {
+     "text": "Stir in the olives, scatter with parsley and serve with torn bread.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Adrian's mushroom and white bean cacciatore",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "Make up to 2 days ahead and reheat; it is better the next day",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "Swiss brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tinned crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "black olives",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "ciabatta loaf",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the halved mushrooms in the oil.",
+       "min": 8
+      },
+      {
+       "text": "Add the sliced onion, capsicum and garlic for 6 minutes.",
+       "min": 8
+      },
+      {
+       "text": "Add the tomatoes, beans and rosemary and simmer for 20 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Stir in the olives, scatter with parsley and serve with torn bread.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Marie's ricotta cheesecake",
    "course": "w",
    "prep_min": 15,

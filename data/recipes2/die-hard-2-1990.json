@@ -504,6 +504,273 @@
    }
   },
   {
+   "n": "Holly's in-flight chicken in white wine",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "Make the chicken up to 1 day ahead and reheat gently",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "shallots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "button mushrooms",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "dry white wine",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "tarragon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the chicken and brown in the butter. Lift out.",
+     "min": 10
+    },
+    {
+     "text": "Fry the sliced shallots and mushrooms for 5 minutes, then add the wine and bubble for 1 minute.",
+     "min": 6
+    },
+    {
+     "text": "Add the stock, put the chicken back and simmer for 20 minutes. Stir in the cream and chopped tarragon for the last 3 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Simmer the rice with 600ml water, covered, for 12 minutes, then rest for 5.",
+     "min": 17
+    },
+    {
+     "text": "Boil the beans for 4 minutes and serve with the chicken and rice.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Holly's in-flight chicken in white wine (alcohol-free)",
+     "prep_min": 15,
+     "cook_min": 40,
+     "make_ahead": "Make the chicken up to 1 day ahead and reheat gently",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "chicken thigh fillets",
+       "aisle": "Meat"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "button mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "chicken stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Season the chicken and brown in the butter. Lift out.",
+       "min": 10
+      },
+      {
+       "text": "Fry the sliced shallots and mushrooms for 5 minutes, then add the verjuice and bubble for 1 minute.",
+       "min": 6
+      },
+      {
+       "text": "Add the stock, put the chicken back and simmer for 20 minutes. Stir in the cream and chopped tarragon for the last 3 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Simmer the rice with 600ml water, covered, for 12 minutes, then rest for 5.",
+       "min": 17
+      },
+      {
+       "text": "Boil the beans for 4 minutes and serve with the chicken and rice.",
+       "min": 5
+      }
+     ],
+     "veg": false
+    },
+    "veg": {
+     "n": "Holly's in-flight mushrooms in tarragon cream",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "Make the chicken up to 1 day ahead and reheat gently",
+     "ingredients": [
+      {
+       "q": 700,
+       "u": "g",
+       "item": "mixed mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "shallots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "verjuice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the butter with the sliced shallots.",
+       "min": 10
+      },
+      {
+       "text": "Add the verjuice and bubble for 1 minute, then the stock and simmer for 10 minutes. Stir in the cream and chopped tarragon for the last 3 minutes.",
+       "min": 12
+      },
+      {
+       "text": "Simmer the rice with 600ml water, covered, for 12 minutes, then rest for 5.",
+       "min": 17
+      },
+      {
+       "text": "Boil the beans for 4 minutes and serve with the mushrooms and rice.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Christmas cookies",
    "course": "w",
    "prep_min": 40,

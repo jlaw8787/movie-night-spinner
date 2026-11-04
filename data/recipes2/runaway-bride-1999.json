@@ -363,6 +363,176 @@
    }
   },
   {
+   "n": "Rehearsal dinner lemon roast chicken with green beans",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 80,
+   "make_ahead": "Stuff and season the chicken up to 1 day ahead in the fridge",
+   "ingredients": [
+    {
+     "q": 1.8,
+     "u": "kg",
+     "item": "whole chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic bulb",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "small potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "flaked almonds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Rub the chicken with butter mixed with thyme leaves and salt and stuff it with a halved lemon and half the garlic.",
+     "min": 10
+    },
+    {
+     "text": "Roast the chicken for 1 hour 15 minutes with the halved potatoes tossed in oil around it, until the juices run clear.",
+     "min": 75
+    },
+    {
+     "text": "Rest the chicken for 15 minutes and crush the potatoes with a fork in the pan juices.",
+     "min": 15
+    },
+    {
+     "text": "Boil the beans for 4 minutes, drain and toss with the rest of the garlic, sliced and fried in a little oil, the almonds and the other lemon.",
+     "min": 6
+    },
+    {
+     "text": "Carve and serve with the potatoes and beans.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rehearsal dinner lemon roast cauliflower with green beans",
+     "prep_min": 15,
+     "cook_min": 60,
+     "make_ahead": "Stuff and season the chicken up to 1 day ahead in the fridge",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic bulb",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "small potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "flaked almonds",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200C. Boil the whole cauliflower for 6 minutes and drain well.",
+       "min": 10
+      },
+      {
+       "text": "Rub with butter mixed with thyme, half the garlic, crushed, the zest of a lemon and salt, and roast for 55 minutes with the halved potatoes tossed in oil around it.",
+       "min": 55
+      },
+      {
+       "text": "Boil the beans for 4 minutes, drain and toss with the rest of the garlic, sliced and fried in a little oil, the almonds and the lemon juice.",
+       "min": 6
+      },
+      {
+       "text": "Crush the potatoes, cut the cauliflower into wedges and serve with the beans.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Abandoned wedding cake",
    "course": "w",
    "prep_min": 30,
