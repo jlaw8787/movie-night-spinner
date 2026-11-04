@@ -557,6 +557,73 @@
    }
   },
   {
+   "n": "Engel house fennel and apple salad",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Make the dressing up to 2 days ahead; shave the fennel and apple and toss just before serving",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "fennel bulbs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "green apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rocket",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk the juice of the lemon with the mustard, olive oil and salt.",
+     "min": 3
+    },
+    {
+     "text": "Shave the fennel and apples thin and toss straight into the dressing so the apple stays white.",
+     "min": 8
+    },
+    {
+     "text": "Toss through the rocket and shave the parmesan over the top.",
+     "min": 4
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Gingerbread men with icing grins",
    "course": "w",
    "prep_min": 35,

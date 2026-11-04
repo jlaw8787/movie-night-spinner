@@ -324,6 +324,73 @@
    }
   },
   {
+   "n": "Reception fig and goat's cheese crostini",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 8,
+   "make_ahead": "Toast the crostini up to 2 days ahead and keep airtight; whip the goat's cheese up to 1 day ahead; top just before serving",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "baguette",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "soft goat's cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "figs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the baguette thin on an angle, brush with oil and bake at 200C until crisp.",
+     "min": 8
+    },
+    {
+     "text": "Beat the goat's cheese with the cream cheese until smooth.",
+     "min": 3
+    },
+    {
+     "text": "Spread the toasts with the cheese, top with fig wedges, a drizzle of honey, thyme leaves and cracked pepper.",
+     "min": 8
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Tarragon cream chicken with potato gratin",
    "course": "m",
    "prep_min": 30,

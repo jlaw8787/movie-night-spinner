@@ -499,6 +499,71 @@
    }
   },
   {
+   "n": "Christmas Eve garlic mash and green beans",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Make the mash up to 1 day ahead and reheat with a splash of milk; cook the beans on the night",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, peeled and chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, peeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "green beans, trimmed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "fried shallots",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel and chop the potatoes and trim the beans.",
+     "min": 10
+    },
+    {
+     "text": "Boil the potatoes with the garlic cloves in salted water until soft.",
+     "min": 20
+    },
+    {
+     "text": "Drain and mash with the butter and hot milk, garlic and all, until smooth. Season well.",
+     "min": 5
+    },
+    {
+     "text": "Boil the beans until just tender, drain and pile beside the mash with the fried shallots on top.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Sleigh ride iced reindeer cookies",
    "course": "w",
    "prep_min": 45,

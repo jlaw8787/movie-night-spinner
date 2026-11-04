@@ -415,6 +415,83 @@
    }
   },
   {
+   "n": "Woodstove skillet cornbread",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 25,
+   "make_ahead": "Bake up to 1 day ahead and warm through wrapped in foil; whip the honey butter up to 1 week ahead",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "fine cornmeal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 110,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Put 30g of the butter in a cast iron pan and heat it in the oven at 220C.",
+     "min": 5
+    },
+    {
+     "text": "Mix the cornmeal, flour, baking powder, sugar and a pinch of salt, then stir in the eggs and buttermilk.",
+     "min": 5
+    },
+    {
+     "text": "Pour into the hot pan and bake until risen and golden.",
+     "min": 20
+    },
+    {
+     "text": "Beat the rest of the butter with the honey and serve with the cornbread warm.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Deadite devil's food cake",
    "course": "w",
    "prep_min": 23,

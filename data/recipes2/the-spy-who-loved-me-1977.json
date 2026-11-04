@@ -635,6 +635,77 @@
    }
   },
   {
+   "n": "Sardinian roast pork with rosemary",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 150,
+   "make_ahead": "Score and salt the pork up to 1 day ahead, uncovered in the fridge so the skin dries; roast on the day",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "boneless pork shoulder, skin scored",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "fennel seeds",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pound the fennel seeds, garlic, rosemary leaves and salt with a little oil and rub into the meat, not the skin. Salt the skin well.",
+     "min": 10
+    },
+    {
+     "text": "Roast at 240C until the skin starts to blister.",
+     "min": 30
+    },
+    {
+     "text": "Turn the oven to 170C, add the potatoes tossed in oil around the pork and roast until tender.",
+     "min": 110
+    },
+    {
+     "text": "Rest the pork, then carve with the crackling and serve with the potatoes and lemon.",
+     "min": 15
+    }
+   ],
+   "veg": false,
+   "af": true
+  },
+  {
    "n": "Costa Smeralda seadas with honey",
    "course": "w",
    "prep_min": 63,

@@ -4,9 +4,9 @@
   {
    "n": "Hotel tea sandwiches",
    "course": "s",
-   "prep_min": 30,
+   "prep_min": 25,
    "cook_min": 10,
-   "make_ahead": "Make the egg filling up to 1 day ahead in the fridge; assemble and cut the sandwiches up to 3 hours ahead, covered with a damp tea towel",
+   "make_ahead": "Make the egg filling and slice the beetroot up to 1 day ahead in the fridge; assemble and cut up to 3 hours ahead, covered with a damp tea towel",
    "ingredients": [
     {
      "q": 3,
@@ -33,7 +33,7 @@
      "aisle": "Produce"
     },
     {
-     "q": 100,
+     "q": 150,
      "u": "g",
      "item": "cream cheese",
      "aisle": "Dairy"
@@ -41,8 +41,14 @@
     {
      "q": 100,
      "u": "g",
-     "item": "smoked salmon",
-     "aisle": "Seafood"
+     "item": "cooked beetroot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
     },
     {
      "q": 2,
@@ -63,7 +69,11 @@
      "min": 15
     },
     {
-     "text": "Use the white bread to make cucumber and cream cheese, egg, and smoked salmon and dill sandwiches.",
+     "text": "Slice the beetroot paper thin and dress with a squeeze of lemon.",
+     "min": 5
+    },
+    {
+     "text": "Use the white bread to make cucumber and cream cheese, egg, and beetroot, cream cheese and dill sandwiches.",
      "min": 10
     },
     {
@@ -75,95 +85,8 @@
      "min": 1
     }
    ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Hotel tea sandwiches (vegetarian)",
-     "prep_min": 25,
-     "cook_min": 10,
-     "make_ahead": "Make the egg filling and slice the beetroot up to 1 day ahead in the fridge; assemble and cut up to 3 hours ahead, covered with a damp tea towel",
-     "ingredients": [
-      {
-       "q": 3,
-       "u": "",
-       "item": "eggs",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "mayonnaise",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "cress",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "Lebanese cucumber, sliced",
-       "aisle": "Produce"
-      },
-      {
-       "q": 150,
-       "u": "g",
-       "item": "cream cheese",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 100,
-       "u": "g",
-       "item": "cooked beetroot",
-       "aisle": "Produce"
-      },
-      {
-       "q": 0.5,
-       "u": "",
-       "item": "lemon",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "dill",
-       "aisle": "Produce"
-      },
-      {
-       "q": 12,
-       "u": "",
-       "item": "slices white bread",
-       "aisle": "Bakery"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Boil the eggs, cool, peel and mash with the mayonnaise and cress.",
-       "min": 15
-      },
-      {
-       "text": "Slice the beetroot paper thin and dress with a squeeze of lemon.",
-       "min": 5
-      },
-      {
-       "text": "Use the white bread to make cucumber and cream cheese, egg, and beetroot, cream cheese and dill sandwiches.",
-       "min": 10
-      },
-      {
-       "text": "Cut off the crusts and cut into fingers.",
-       "min": 4
-      },
-      {
-       "text": "Lay on a tiered stand.",
-       "min": 1
-      }
-     ],
-     "af": true
-    }
-   }
+   "veg": true,
+   "af": true
   },
   {
    "n": "Hotel Excelsior crab sandwiches",
@@ -457,6 +380,164 @@
       {
        "text": "Finish with the cream.",
        "min": 1
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Hotel Excelsior roast beef and Yorkshires",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 70,
+   "make_ahead": "Make the Yorkshire batter up to 1 day ahead in the fridge; roast on the day",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "beef sirloin roast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, peeled and quartered",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 140,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "English mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk 120g of the flour with the eggs, milk and a pinch of salt to a smooth batter and rest it.",
+     "min": 6
+    },
+    {
+     "text": "Rub the beef with mustard, salt and pepper and roast at 220C with the potatoes in a little oil until medium rare.",
+     "min": 55
+    },
+    {
+     "text": "Rest the beef under foil. Turn the oven to 230C, heat a little oil in each hole of a muffin tin, pour in the batter and bake until puffed.",
+     "min": 20
+    },
+    {
+     "text": "Stir the rest of the flour into the beef pan juices, whisk in the stock and simmer into gravy.",
+     "min": 6
+    },
+    {
+     "text": "Carve the beef and serve with the potatoes, Yorkshires and gravy.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hotel Excelsior mushroom roast and Yorkshires",
+     "prep_min": 25,
+     "cook_min": 55,
+     "make_ahead": "Make the batter up to 1 day ahead; roast on the day",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, peeled and quartered",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 140,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "full cream milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "English mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk 120g of the flour with the eggs, milk and a pinch of salt and rest it.",
+       "min": 6
+      },
+      {
+       "text": "Roast the potatoes in a little oil at 220C, adding the mushrooms brushed with mustard and oil for the last 20 minutes.",
+       "min": 45
+      },
+      {
+       "text": "Heat oil in a muffin tin at 230C, pour in the batter and bake until puffed.",
+       "min": 20
+      },
+      {
+       "text": "Stir the rest of the flour into the mushroom juices, whisk in the stock and simmer into gravy.",
+       "min": 6
       }
      ],
      "af": true

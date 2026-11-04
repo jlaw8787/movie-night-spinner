@@ -507,6 +507,71 @@
    }
   },
   {
+   "n": "Rain in Spain saffron potatoes",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 45,
+   "make_ahead": "Par-boil the potatoes up to 1 day ahead; roast on the night",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "potatoes, cut in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch saffron threads",
+     "aisle": "Spices"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the saffron in 2 tbsp hot water.",
+     "min": 5
+    },
+    {
+     "text": "Boil the potatoes for 8 minutes and drain well.",
+     "min": 10
+    },
+    {
+     "text": "Melt the butter with the oil, garlic and saffron water, toss through the potatoes and roast at 220C until golden.",
+     "min": 35
+    },
+    {
+     "text": "Scatter with chopped parsley and salt.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Flower girl's violet Victoria sponge",
    "course": "w",
    "prep_min": 68,

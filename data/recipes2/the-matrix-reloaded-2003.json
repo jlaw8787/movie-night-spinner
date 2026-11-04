@@ -797,6 +797,71 @@
    }
   },
   {
+   "n": "Persephone's gratin dauphinois",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 70,
+   "make_ahead": "Bake up to 1 day ahead and reheat covered, then uncover to colour the top",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "potatoes, peeled and thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "ground nutmeg",
+     "aisle": "Spices"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the potatoes thin and butter a baking dish.",
+     "min": 12
+    },
+    {
+     "text": "Warm the cream and milk with the garlic, nutmeg, salt and pepper.",
+     "min": 5
+    },
+    {
+     "text": "Layer the potatoes in the dish and pour the cream over.",
+     "min": 5
+    },
+    {
+     "text": "Bake at 170C until tender all the way through and golden.",
+     "min": 70
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "The Merovingian's chocolate cake",
    "course": "w",
    "prep_min": 98,

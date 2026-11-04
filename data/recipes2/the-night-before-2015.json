@@ -574,6 +574,192 @@
    }
   },
   {
+   "n": "Isaac's Christmas Eve beef and broccoli",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Slice and marinate the beef up to 1 day ahead in the fridge; stir-fry on the night",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "rump steak, thinly sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "oyster sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "head broccoli, in small florets",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 15,
+     "u": "g",
+     "item": "ginger, cut in matchsticks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the beef with half the soy and the cornflour. Mix the oyster sauce, the rest of the soy, sesame oil, sugar and 4 tbsp water.",
+     "min": 8
+    },
+    {
+     "text": "Rinse the rice and simmer it, covered, until the water is gone. Rest it with the lid on.",
+     "min": 15
+    },
+    {
+     "text": "Stir-fry the beef in a very hot wok with half the oil in two batches. Lift out.",
+     "min": 5
+    },
+    {
+     "text": "Stir-fry the broccoli, garlic and ginger in the rest of the oil with a splash of water until bright, return the beef, add the sauce and toss until glossy.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Isaac's Christmas Eve tofu and broccoli",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "Mix the sauce up to 2 days ahead; stir-fry on the night",
+     "ingredients": [
+      {
+       "q": 450,
+       "u": "g",
+       "item": "firm tofu, cubed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetarian oyster sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "head broccoli, in small florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 15,
+       "u": "g",
+       "item": "ginger, cut in matchsticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the tofu in the cornflour. Mix the sauce with the soy, sesame oil, sugar and 4 tbsp water.",
+       "min": 6
+      },
+      {
+       "text": "Rinse the rice and simmer it, covered, until the water is gone.",
+       "min": 15
+      },
+      {
+       "text": "Fry the tofu in most of the oil until crisp. Stir-fry the broccoli, garlic and ginger, return the tofu, add the sauce and toss.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Christmas gingerbread cake",
    "course": "w",
    "prep_min": 20,

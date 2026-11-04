@@ -417,6 +417,73 @@
    }
   },
   {
+   "n": "Brad's grilled corn salad",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 12,
+   "make_ahead": "Grill the corn up to 1 day ahead and keep it in the fridge; add the avocado just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "avocados, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion, finely sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the corn with oil and salt and grill, turning, until charred in spots.",
+     "min": 12
+    },
+    {
+     "text": "Cut the kernels off the cobs once cool enough to hold.",
+     "min": 4
+    },
+    {
+     "text": "Toss with the tomatoes, onion, avocado, chopped coriander, lime juice and salt.",
+     "min": 6
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Daddy-daughter dance cupcakes",
    "course": "w",
    "prep_min": 40,

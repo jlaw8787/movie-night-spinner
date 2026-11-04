@@ -509,6 +509,93 @@
    }
   },
   {
+   "n": "Ishmael's Amish pot roast",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 180,
+   "make_ahead": "Cook up to 2 days ahead, it slices better cold; reheat in the gravy",
+   "ingredients": [
+    {
+     "q": 1.4,
+     "u": "kg",
+     "item": "beef chuck roast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions, cut in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "carrots, in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "potatoes, in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the beef and sear on all sides in the oil in a heavy pot.",
+     "min": 12
+    },
+    {
+     "text": "Add the onions and tomato paste, then the stock and thyme. Cover and cook at 160C.",
+     "min": 120
+    },
+    {
+     "text": "Add the carrots and potatoes and cook until the beef falls apart.",
+     "min": 60
+    },
+    {
+     "text": "Lift out the beef and vegetables. Thicken the pot juices with the cornflour mixed with water and simmer into gravy.",
+     "min": 5
+    },
+    {
+     "text": "Pull the beef into chunks and serve with the vegetables and gravy.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true
+  },
+  {
    "n": "Shoofly molasses crumb pie",
    "course": "w",
    "prep_min": 30,

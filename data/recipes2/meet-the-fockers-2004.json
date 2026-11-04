@@ -632,6 +632,192 @@
    }
   },
   {
+   "n": "Bernie's arroz con pollo",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 45,
+   "make_ahead": "Cook up to 1 day ahead and reheat covered with a splash of stock",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "chicken thigh cutlets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch saffron threads",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 700,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "green olives",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken skin side down in the oil until crisp. Lift out.",
+     "min": 10
+    },
+    {
+     "text": "Soften the onion, capsicum and garlic in the same pot, then stir in the saffron, paprika and rice.",
+     "min": 6
+    },
+    {
+     "text": "Pour in the stock, sit the chicken on top, cover and simmer on low until the rice is tender and the chicken cooked.",
+     "min": 28
+    },
+    {
+     "text": "Scatter over the peas and olives, cover and rest off the heat.",
+     "min": 6
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bernie's arroz con garbanzos",
+     "prep_min": 10,
+     "cook_min": 30,
+     "make_ahead": "Cook up to 1 day ahead and reheat covered with a splash of stock",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch saffron threads",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 700,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "green olives",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the onion, capsicum and garlic in the oil, then stir in the saffron, paprika, chickpeas and rice.",
+       "min": 8
+      },
+      {
+       "text": "Pour in the stock, cover and simmer on low until the rice is tender.",
+       "min": 20
+      },
+      {
+       "text": "Scatter over the peas and olives, cover and rest off the heat.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Jinx and Moses key lime pie",
    "course": "w",
    "prep_min": 30,

@@ -415,6 +415,67 @@
    }
   },
   {
+   "n": "Supper club broccolini with whipped feta",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 8,
+   "make_ahead": "Whip the feta up to 2 days ahead in the fridge; char the broccolini just before serving",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches broccolini",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blend the feta with the yoghurt until smooth and spread over a platter.",
+     "min": 4
+    },
+    {
+     "text": "Toss the broccolini in oil and salt and char in a very hot pan, turning, until tender.",
+     "min": 8
+    },
+    {
+     "text": "Pile onto the feta and finish with lemon zest, a squeeze of juice, chilli flakes and a drizzle of oil.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Mini pavlovas with berries",
    "course": "w",
    "prep_min": 25,

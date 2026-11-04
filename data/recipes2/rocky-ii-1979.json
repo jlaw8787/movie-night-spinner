@@ -126,7 +126,7 @@
    "course": "s",
    "prep_min": 15,
    "cook_min": 0,
-   "make_ahead": "Thread the toothpicks up to 1 day ahead, covered in the fridge; pile onto the board with the bread and oil on the day",
+   "make_ahead": "Thread the toothpicks with eggplant up to 1 day ahead, covered in the fridge; pile onto the board with the bread and oil on the day",
    "ingredients": [
     {
      "q": 150,
@@ -135,10 +135,10 @@
      "aisle": "Dairy"
     },
     {
-     "q": 100,
+     "q": 150,
      "u": "g",
-     "item": "prosciutto",
-     "aisle": "Meat"
+     "item": "chargrilled eggplant strips",
+     "aisle": "Deli"
     },
     {
      "q": 300,
@@ -171,7 +171,7 @@
      "min": 4
     },
     {
-     "text": "Thread onto toothpicks with folded prosciutto, an olive and a strip of roasted capsicum.",
+     "text": "Thread onto toothpicks with a folded strip of chargrilled eggplant, an olive and a strip of roasted capsicum.",
      "min": 8
     },
     {
@@ -179,69 +179,8 @@
      "min": 3
     }
    ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Italian market bites (vegetarian)",
-     "prep_min": 15,
-     "cook_min": 0,
-     "make_ahead": "Thread the toothpicks with eggplant up to 1 day ahead, covered in the fridge; pile onto the board with the bread and oil on the day",
-     "ingredients": [
-      {
-       "q": 150,
-       "u": "g",
-       "item": "provolone",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 150,
-       "u": "g",
-       "item": "chargrilled eggplant strips",
-       "aisle": "Deli"
-      },
-      {
-       "q": 300,
-       "u": "g",
-       "item": "olives",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "red capsicums, roasted",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "loaf Italian bread",
-       "aisle": "Bakery"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "olive oil, for dipping",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Cut the provolone into cubes.",
-       "min": 4
-      },
-      {
-       "text": "Thread onto toothpicks with a folded strip of chargrilled eggplant, an olive and a strip of roasted capsicum.",
-       "min": 8
-      },
-      {
-       "text": "Pile onto a board with sliced Italian bread and a small bowl of olive oil for dipping.",
-       "min": 3
-      }
-     ],
-     "af": true
-    }
-   }
+   "veg": true,
+   "af": true
   },
   {
    "n": "Adrian's spaghetti and meatballs",

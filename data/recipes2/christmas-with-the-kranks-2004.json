@@ -465,6 +465,59 @@
    }
   },
   {
+   "n": "Christmas Eve party green beans",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 8,
+   "make_ahead": "Trim the beans and toast the almonds up to 1 day ahead; cook just before serving",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "green beans, trimmed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "flaked almonds",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Trim the beans and zest the lemon.",
+     "min": 6
+    },
+    {
+     "text": "Boil the beans in salted water until just tender, then drain.",
+     "min": 4
+    },
+    {
+     "text": "Melt the butter in a frying pan and cook until it smells nutty and turns golden. Add the almonds and toast.",
+     "min": 3
+    },
+    {
+     "text": "Toss the beans through the brown butter with the lemon zest, a squeeze of juice and salt.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Last-minute Christmas Eve trifle",
    "course": "w",
    "prep_min": 30,
