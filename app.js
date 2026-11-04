@@ -1055,9 +1055,24 @@ function dietLabel(){const k=dietKey();return k==="veg_af"?"Vegetarian · Alcoho
 /* cook five: a tested recipe for a dish that isn't one of tonight's five (a card extra the sweep gave a recipe) is offered unticked */
 const planCooked=f=>{const src=(typeof EDITIONS!=="undefined"&&EDITIONS[f.id]&&EDITIONS[f.id].menu)||(typeof RECIPE_MENUS!=="undefined"&&RECIPE_MENUS[f.id])||null;
   return src?new Set(["s","m","w","d"].flatMap(k=>(src[k]||[]).map(it=>String(it.n||"").toLowerCase()))):null};
-const planAll=f=>{const ck=planCooked(f),r2=((f._r2&&f._r2.dishes)||[]).map(dietDish),hit=d=>ck.has(String(d.orig||d.n).toLowerCase()),
-    /* only when every cooked dish is found by name; a hand-built menu that names its dishes differently keeps all its recipes ticked */
-    sp=ck&&ck.size&&r2.filter(hit).length>=Math.min(5,ck.size),all=sp?r2.map(d=>hit(d)?d:Object.assign({},d,{spare:true})):r2,m=f.menu||(typeof current!=="undefined"&&current===f?current.menu:null);
+/* the five a printed menu cooks when its old recipe names no longer match the recipe files (hand-built menus: Ghostbusters, Pulp Fiction):
+   from the printed menu, two starters, a main, a sweet and a drink that have a recipe, topped up to five from the rest it prints */
+function planFive(f,r2){const have=new Set(r2.map(d=>String(d.orig||d.n).toLowerCase()));let byC=null;
+  try{const sp=typeof fmtSpec==="function"&&fmtSpec(f);if(sp){const m=fmtMenu(f,sp);byC={};for(const c of ["s","m","w","d"])byC[c]=(m[c]||[]).map(it=>String(it.orig||it.n||"").toLowerCase())}}catch(e){}
+  if(!byC){byC={s:[],m:[],w:[],d:[]};for(const d of r2)(byC[d.course]||byC.s).push(String(d.orig||d.n).toLowerCase())}
+  /* within a course the film card's own order leads (Stay Puft s'mores before the marshmallow skewers) */
+  /* a dish the showtime cue names comes first, so the cue always has its dish (Ghostbusters: "Serve the takeaway boxes") */
+  const cue=String((typeof EDITIONS!=="undefined"&&EDITIONS[f.id]&&EDITIONS[f.id].cue)||f.P||"").toLowerCase(),
+    named=x=>x.split(/[^a-z']+/).some(w=>w.length>=5&&!/^(serve|with|their|after|first)$/.test(w)&&new RegExp("\\b"+w+"\\b").test(cue));
+  const card=[...f.S||[],...f.M||[],...f.W||[],...f.K||[]].map(r=>String(r[0]).toLowerCase()),rank=x=>(named(x)?-1000:0)+(card.indexOf(x)<0?999:card.indexOf(x));
+  for(const c in byC)byC[c]=byC[c].map((x,i)=>[x,i]).sort((a,b)=>rank(a[0])-rank(b[0])||a[1]-b[1]).map(z=>z[0]);
+  const out=new Set();for(const [c,n] of [["s",2],["m",1],["w",1],["d",1]]){let k=0;for(const x of byC[c])if(k<n&&have.has(x)&&!out.has(x)){out.add(x);k++}}
+  for(const c of ["s","m","w","d"])for(const x of byC[c])if(out.size<5&&have.has(x))out.add(x);
+  return out.size?out:null}
+const planAll=f=>{const ck0=planCooked(f),r2=((f._r2&&f._r2.dishes)||[]).map(dietDish),
+    /* every cooked dish found by name: those are tonight's five. Otherwise the card picks them (planFive), so extras start unticked on hand-built menus too */
+    ok=ck0&&ck0.size&&r2.filter(d=>ck0.has(String(d.orig||d.n).toLowerCase())).length>=Math.min(5,ck0.size),ck=ok?ck0:r2.length>5?planFive(f,r2):null,
+    hit=d=>ck.has(String(d.orig||d.n).toLowerCase()),sp=!!ck,all=sp?r2.map(d=>hit(d)?d:Object.assign({},d,{spare:true})):r2,m=f.menu||(typeof current!=="undefined"&&current===f?current.menu:null);
   let out=all;if(m&&m.lazy){const keep=new Set([...m.s,...m.m,...m.w,...m.d].map(it=>it.orig||it.n)),few=all.filter(d=>keep.has(d.orig||d.n));if(few.length)out=few}
   return out.concat(planExtras(f).map(dietDish)).concat(snackDishes(f).map(dietDish))};
 /* the film's other printed dishes: offered in the planner unticked, so every dish on the printed menu can go on the shopping list.
