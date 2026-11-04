@@ -2391,6 +2391,15 @@ async function renderCanvas(src,forPrint){
       await img.decode().catch(()=>{});
     }));
     setTimeout(()=>temp.forEach(u=>URL.revokeObjectURL(u)),30000);
+    /* html2canvas ignores object-fit, so a cropped photo (a round frame, a tent back, a wide still in a tall box) would print squashed or stretched.
+       In the export copy each cropped photo becomes a box with the same size and look, showing the photo as a cover or contain background */
+    clone.querySelectorAll("img").forEach(im=>{try{const cs=getComputedStyle(im),fit=cs.objectFit;if((fit!=="cover"&&fit!=="contain")||!im.naturalWidth)return;
+      const w=parseFloat(cs.width),h=parseFloat(cs.height);if(!w||!h||Math.abs(Math.log((w/h)/(im.naturalWidth/im.naturalHeight)))<.01)return;
+      const d=document.createElement("div");d.className=im.className;
+      for(const k of ["position","top","right","bottom","left","width","height","margin","border","borderRadius","boxShadow","transform","transformOrigin","opacity","filter","zIndex","boxSizing","padding","outline","outlineOffset","verticalAlign","flex","alignSelf","gridArea"])d.style[k]=cs[k];
+      d.style.display=cs.display==="inline"?"inline-block":cs.display;d.style.backgroundColor=cs.backgroundColor;
+      d.style.backgroundImage=`url("${im.currentSrc||im.src}")`;d.style.backgroundSize=fit;d.style.backgroundPosition=cs.objectPosition;d.style.backgroundRepeat="no-repeat";d.style.backgroundOrigin="content-box";d.style.backgroundClip="content-box";
+      im.replaceWith(d)}catch(e){}});
     /* iPhone Safari won't let a canvas be saved once an SVG texture has been drawn on it (SecurityError).
        Swap every SVG texture for a plain noise tile and hide inline SVG art, in the export copy only. */
     const nz=noiseTile(),svgRx=/url\("data:image\/svg\+xml(?:[^"\\]|\\.)*"\)/g;
