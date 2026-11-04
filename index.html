@@ -2020,6 +2020,12 @@ dialog.kit .kit-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a;bo
 .kit-tent,.kit-back,.kit-front,.kp,.kp-main,.kp-body,.kp-who{min-width:0}
 .kp-name{text-overflow:clip}
 .kp-card .kp-f,.kp-badge .kp-f,.kp-receipt .kp-r{gap:10px}
+/* place card pages print on white whatever the style: only the cards carry ink, and the cut and fold guides always show */
+.kit-page.kit-place{background:#fff!important;background-image:none!important}
+.kit-page.kit-place::before,.kit-page.kit-place::after{content:none!important}
+.kit-place .kit-tent{border:1px dashed #8a8a8a}
+.kit-place .kit-tent::after{border-top:2px dotted #6a6a6a;z-index:2}
+.kit-place .kit-cut{color:#444}
 /* departures board: cells wrap to two lines rather than cut a word */
 .dp-row{grid-template-columns:.9fr 2.2fr 1.5fr 1.4fr;align-items:stretch}
 .dp-row span{white-space:normal;text-overflow:clip;line-height:1.15;padding:9px 10px;min-height:44px;display:flex;align-items:center;min-width:0}
