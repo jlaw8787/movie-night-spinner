@@ -651,6 +651,10 @@ body.spinning .theatre.closed .skip-k,.theatre.closed .tease.leader~.skip-k{opac
 .pp-method li em{font-style:normal;font-size:.7em;letter-spacing:.12em;text-transform:uppercase;color:var(--sub);margin-left:.5em}
 .pp-method{text-align:left}
 .pp-method>ol>li{margin-bottom:1em}
+/* a Prep sheet carried onto a second page: the method runs full width */
+.mcard.pp-cont .pp-cols{grid-template-columns:1fr!important}
+.mcard.pp-cont .pp-method>ol{columns:2;column-gap:30px}
+.mcard.pp-cont .pp-method>ol>li{break-inside:avoid}
 .pp-ahead{display:block;font-size:.8em;opacity:.8;margin:0 0 4px}
 .pp-ahead b,.pp-ing>b{font-size:.78em;letter-spacing:.12em;text-transform:uppercase}
 .pp-ing{margin:4px 0 6px}
@@ -2884,9 +2888,9 @@ html,body{overflow-x:clip}
 <script src="ratings.js?v=dfb01117" defer></script>
 <script src="aisles.js?v=6b920a43" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
-<script src="films.js?v=dee32339" defer></script>
-<script src="formats-core.js?v=f9ea9258" defer></script>
-<script src="app.js?v=c220b659" defer></script>
+<script src="films.js?v=15482f80" defer></script>
+<script src="formats-core.js?v=0a9d8d0d" defer></script>
+<script src="app.js?v=78321284" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

@@ -21,9 +21,9 @@
      "aisle": "Produce"
     },
     {
-     "q": 1,
-     "u": "tbsp",
-     "item": "grated ginger",
+     "q": 10,
+     "u": "g",
+     "item": "ginger, grated",
      "aisle": "Produce"
     },
     {
@@ -47,13 +47,13 @@
     {
      "q": 30,
      "u": "",
-     "item": "gyoza wrappers",
+     "item": "dumpling wrappers",
      "aisle": "Frozen"
     },
     {
      "q": 2,
      "u": "tbsp",
-     "item": "oil for frying",
+     "item": "vegetable oil",
      "aisle": "Pantry"
     },
     {
@@ -63,9 +63,15 @@
      "aisle": "Pantry"
     },
     {
-     "q": 2,
+     "q": 1,
      "u": "tbsp",
-     "item": "black vinegar and chilli oil, to dip",
+     "item": "black vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chilli oil",
      "aisle": "Pantry"
     }
    ],
@@ -75,7 +81,7 @@
      "min": 8
     },
     {
-     "text": "Pleat spoonfuls into the gyoza wrappers.",
+     "text": "Pleat spoonfuls into the dumpling wrappers.",
      "min": 32
     },
     {
@@ -113,9 +119,9 @@
        "aisle": "Produce"
       },
       {
-       "q": 1,
-       "u": "tbsp",
-       "item": "grated ginger",
+       "q": 10,
+       "u": "g",
+       "item": "ginger, grated",
        "aisle": "Produce"
       },
       {
@@ -139,13 +145,13 @@
       {
        "q": 30,
        "u": "",
-       "item": "gyoza wrappers",
+       "item": "dumpling wrappers",
        "aisle": "Frozen"
       },
       {
        "q": 2,
        "u": "tbsp",
-       "item": "oil for frying",
+       "item": "vegetable oil",
        "aisle": "Pantry"
       },
       {
@@ -155,9 +161,15 @@
        "aisle": "Pantry"
       },
       {
-       "q": 2,
+       "q": 1,
        "u": "tbsp",
-       "item": "black vinegar and chilli oil, to dip",
+       "item": "black vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chilli oil",
        "aisle": "Pantry"
       }
      ],
@@ -167,7 +179,7 @@
        "min": 8
       },
       {
-       "text": "Pleat spoonfuls into the gyoza wrappers.",
+       "text": "Pleat spoonfuls into the dumpling wrappers.",
        "min": 32
       },
       {
@@ -209,9 +221,9 @@
        "aisle": "Produce"
       },
       {
-       "q": 1,
-       "u": "tbsp",
-       "item": "grated ginger",
+       "q": 10,
+       "u": "g",
+       "item": "ginger, grated",
        "aisle": "Produce"
       },
       {
@@ -235,13 +247,13 @@
       {
        "q": 30,
        "u": "",
-       "item": "gyoza wrappers",
+       "item": "dumpling wrappers",
        "aisle": "Frozen"
       },
       {
        "q": 3,
        "u": "tbsp",
-       "item": "oil for frying",
+       "item": "vegetable oil",
        "aisle": "Pantry"
       },
       {
@@ -251,9 +263,15 @@
        "aisle": "Pantry"
       },
       {
-       "q": 2,
+       "q": 1,
        "u": "tbsp",
-       "item": "black vinegar and chilli oil, to dip",
+       "item": "black vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chilli oil",
        "aisle": "Pantry"
       }
      ],
@@ -267,7 +285,7 @@
        "min": 8
       },
       {
-       "text": "Pleat spoonfuls into the gyoza wrappers.",
+       "text": "Pleat spoonfuls into the dumpling wrappers.",
        "min": 30
       },
       {
@@ -310,9 +328,9 @@
        "aisle": "Produce"
       },
       {
-       "q": 1,
-       "u": "tbsp",
-       "item": "grated ginger",
+       "q": 10,
+       "u": "g",
+       "item": "ginger, grated",
        "aisle": "Produce"
       },
       {
@@ -336,13 +354,13 @@
       {
        "q": 30,
        "u": "",
-       "item": "gyoza wrappers",
+       "item": "dumpling wrappers",
        "aisle": "Frozen"
       },
       {
        "q": 3,
        "u": "tbsp",
-       "item": "oil for frying",
+       "item": "vegetable oil",
        "aisle": "Pantry"
       },
       {
@@ -352,9 +370,15 @@
        "aisle": "Pantry"
       },
       {
-       "q": 2,
+       "q": 1,
        "u": "tbsp",
-       "item": "black vinegar and chilli oil, to dip",
+       "item": "black vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chilli oil",
        "aisle": "Pantry"
       }
      ],
@@ -368,7 +392,7 @@
        "min": 8
       },
       {
-       "text": "Pleat spoonfuls into the gyoza wrappers.",
+       "text": "Pleat spoonfuls into the dumpling wrappers.",
        "min": 30
       },
       {
@@ -554,53 +578,17 @@
    }
   },
   {
-   "n": "Wang Chi's dan dan noodles",
+   "n": "Wang Chi's beef ho fun",
    "course": "m",
-   "prep_min": 10,
-   "cook_min": 15,
-   "make_ahead": "Fry the crisp pork up to 2 days ahead, keep chilled and reheat in the wok; mix the sauce in the bowls and cook the noodles on the night",
+   "prep_min": 25,
+   "cook_min": 10,
+   "make_ahead": "Slice and marinate the beef up to 1 day ahead, keep chilled",
    "ingredients": [
     {
-     "q": 300,
+     "q": 400,
      "u": "g",
-     "item": "pork mince",
+     "item": "beef rump, thinly sliced",
      "aisle": "Meat"
-    },
-    {
-     "q": 40,
-     "u": "g",
-     "item": "preserved mustard greens (ya cai)",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "ground Sichuan pepper",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "vegetable oil",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 4,
-     "u": "tbsp",
-     "item": "sesame paste",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 4,
-     "u": "tbsp",
-     "item": "chilli oil",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "tbsp",
-     "item": "black vinegar",
-     "aisle": "Pantry"
     },
     {
      "q": 3,
@@ -609,37 +597,73 @@
      "aisle": "Pantry"
     },
     {
-     "q": 500,
-     "u": "g",
-     "item": "fresh wheat noodles",
-     "aisle": "Deli"
+     "q": 1,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
     },
     {
      "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "fresh flat rice noodles",
+     "aisle": "Deli"
+    },
+    {
+     "q": 1,
      "u": "",
-     "item": "spring onions, sliced",
+     "item": "brown onion, sliced",
      "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "spring onions, cut into lengths",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "bean sprouts",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "dark soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sugar",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Put a large pot of water on to boil. Slice the spring onions and rinse and chop the mustard greens.",
+     "text": "Toss the beef with 1 tbsp of the soy sauce, the cornflour and 1 tbsp of the oil, and leave for 15 minutes.",
+     "min": 18
+    },
+    {
+     "text": "Loosen the noodles by hand under warm water and drain well.",
      "min": 5
     },
     {
-     "text": "Heat the vegetable oil in a wok and fry the pork mince with the mustard greens and Sichuan pepper over high heat for 8 minutes until crisp and dry.",
-     "min": 8
+     "text": "Sear the beef in a smoking hot wok with 1 tbsp of the oil for 1 minute, then tip it out.",
+     "min": 3
     },
     {
-     "text": "Divide the sesame paste, chilli oil, black vinegar and soy sauce between four bowls and stir each with 2 tbsp of the hot water.",
-     "min": 4
+     "text": "Fry the onion in the last of the oil, add the noodles and toss over high heat until they catch at the edges.",
+     "min": 5
     },
     {
-     "text": "Cook the wheat noodles for 2 to 3 minutes, drain and pile on top of the sauce.",
-     "min": 4
-    },
-    {
-     "text": "Spoon over the crisp pork, scatter with spring onion and toss at the table.",
+     "text": "Add the rest of the soy sauce, the dark soy and sugar, then the beef, bean sprouts and spring onion, and toss for 1 minute. Serve straight away.",
      "min": 3
     }
    ],
@@ -647,101 +671,84 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Wang Chi's dan dan noodles with crisp mushroom",
-     "prep_min": 10,
-     "cook_min": 23,
-     "make_ahead": "Fry the crisp mushroom and tofu up to 2 days ahead, keep chilled and reheat in the wok; mix the sauce in the bowls and cook the noodles on the night",
+     "n": "Wang Chi's mushroom ho fun",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "Slice the mushrooms up to 1 day ahead, keep chilled",
      "ingredients": [
       {
        "q": 400,
        "u": "g",
-       "item": "mushrooms, finely chopped",
+       "item": "mixed mushrooms, sliced",
        "aisle": "Produce"
       },
       {
-       "q": 150,
-       "u": "g",
-       "item": "firm tofu, crumbled",
-       "aisle": "Produce"
-      },
-      {
-       "q": 40,
-       "u": "g",
-       "item": "preserved mustard greens (ya cai)",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "ground Sichuan pepper",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "vegetable oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "tbsp",
-       "item": "sesame paste",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "tbsp",
-       "item": "chilli oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "black vinegar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
+       "q": 3,
        "u": "tbsp",
        "item": "soy sauce",
        "aisle": "Pantry"
       },
       {
-       "q": 500,
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
        "u": "g",
-       "item": "fresh wheat noodles",
+       "item": "fresh flat rice noodles",
        "aisle": "Deli"
       },
       {
-       "q": 3,
+       "q": 1,
        "u": "",
-       "item": "spring onions, sliced",
+       "item": "brown onion, sliced",
        "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "spring onions, cut into lengths",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "bean sprouts",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "dark soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sugar",
+       "aisle": "Pantry"
       }
      ],
      "steps": [
       {
-       "text": "Put a large pot of water on to boil. Slice the spring onions, rinse and chop the mustard greens, finely chop the mushrooms and crumble the tofu.",
-       "min": 8
+       "text": "Loosen the noodles by hand under warm water and drain well.",
+       "min": 5
       },
       {
-       "text": "Heat the vegetable oil in a wok and fry the mushrooms and tofu over high heat for 12 minutes until dry and browning. Add the mustard greens, Sichuan pepper and 1 tbsp of the soy sauce and fry 2 minutes more until crisp.",
-       "min": 14
+       "text": "Fry the mushrooms in a smoking hot wok with 2 tbsp of the oil until browned, then tip them out.",
+       "min": 6
       },
       {
-       "text": "Divide the sesame paste, chilli oil, black vinegar and remaining soy sauce between four bowls and stir each with 2 tbsp of the hot water.",
-       "min": 4
+       "text": "Fry the onion in the last of the oil, add the noodles and toss over high heat until they catch at the edges.",
+       "min": 5
       },
       {
-       "text": "Cook the wheat noodles for 2 to 3 minutes, drain and pile on top of the sauce.",
-       "min": 4
-      },
-      {
-       "text": "Spoon over the crisp mushroom, scatter with spring onion and toss at the table.",
+       "text": "Add the soy sauce, dark soy and sugar, then the mushrooms, bean sprouts and spring onion, and toss for 1 minute. Serve straight away.",
        "min": 3
       }
-     ],
-     "af": true
+     ]
     }
    }
   },
@@ -902,9 +909,143 @@
    }
   },
   {
+   "n": "Dragon of the Black Pool fried rice",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 12,
+   "make_ahead": "Cook the rice the day before. Cold rice fries best",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "cooked jasmine rice, a day old",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "white pepper",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the eggs and scramble them softly in a hot wok with half the oil, then tip them out.",
+     "min": 4
+    },
+    {
+     "text": "Fry the rice in the rest of the oil over high heat, breaking up the clumps, until it starts to toast.",
+     "min": 6
+    },
+    {
+     "text": "Add the peas, soy sauce and white pepper, then the egg and spring onion, and finish with the sesame oil.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Garlic gai lan",
+   "course": "m",
+   "prep_min": 6,
+   "cook_min": 6,
+   "make_ahead": "Trim the gai lan up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches gai lan",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "water",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Trim the gai lan and halve any thick stems.",
+     "min": 4
+    },
+    {
+     "text": "Blanch in boiling salted water for 1 minute and drain.",
+     "min": 4
+    },
+    {
+     "text": "Fry the garlic in the oil until golden, then toss the gai lan through with the soy, sugar and water for 1 minute.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Fortune cookies",
    "course": "w",
-   "prep_min": 20,
+   "prep_min": 28,
    "cook_min": 14,
    "make_ahead": "Up to 3 days, airtight",
    "ingredients": [
@@ -946,6 +1087,10 @@
     }
    ],
    "steps": [
+    {
+     "text": "Write 12 fortunes on thin paper strips, two of each: It's all in the reflexes. Green eyes mean big trouble. Never lend out your truck. The bag holds six things, don't ask. Pay what you owe before you go underground. Somebody at this table owes you twenty bucks.",
+     "min": 8
+    },
     {
      "text": "Whisk the egg whites with the sugar, then stir in the flour, butter and vanilla.",
      "min": 8

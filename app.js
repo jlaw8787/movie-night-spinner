@@ -753,6 +753,23 @@ function fitPrep(el){
   while(inner.scrollHeight>inner.clientHeight+1&&fs>9){fs-=0.5;cols.style.fontSize=fs+"px"}
 }
 /* an A4 copy of the prep sheet, fitted off screen, for print */
+/* a long Prep sheet runs onto more A4 pages instead of shrinking below reading size or losing its last dishes:
+   page one keeps the header and shopping list, later pages carry on the method full width */
+const PREP_MIN_FS=9.5;
+function prepFit(el){const st=document.createElement("div");st.style.cssText="position:fixed;left:-20000px;top:0;width:794px;height:1123px";
+  /* measured exactly as renderCanvas draws it */
+  const c=el.cloneNode(true);c.hidden=false;c.style.transform="none";prepClean(c);st.appendChild(c);document.body.appendChild(st);fitPrep(c);
+  const i=c.querySelector(".mc-in"),cols=c.querySelector(".pp-cols"),fs=cols?parseFloat(cols.style.fontSize)||16:16,ok=!i||i.scrollHeight<=i.clientHeight+1;st.remove();return ok&&fs>=PREP_MIN_FS}
+function prepParts(){
+  const base=prep.cloneNode(true);if(prepFit(base))return [prep];
+  const o0=base.querySelector(".pp-method>ol"),n=o0?o0.children.length:0;if(n<2)return [prep];
+  const page=(from,to,first)=>{const c=prep.cloneNode(true);const o=c.querySelector(".pp-method>ol");[...o.children].forEach((li,i)=>{if(i<from||i>=to)li.remove()});if(from)o.setAttribute("start",from+1);
+    if(!first){c.classList.add("pp-cont");const sh=c.querySelector(".pp-shop");if(sh)sh.remove();const h=c.querySelector(".pp-method h3");if(h)h.textContent="How to make it, continued";}return c};
+  const out=[];let from=0,first=true;
+  while(from<n){let to=n;while(to>from+1&&!prepFit(page(from,to,first)))to--;out.push(page(from,to,first));from=to;first=false}
+  return out;
+}
+async function prepCanvases(){const out=[];for(const el of prepParts()){out.push(await renderCanvas(el))}return out}
 function prepA4(){
   const stage=document.createElement("div");stage.style.cssText="position:fixed;left:-20000px;top:0;width:794px;height:1123px";
   const c=prep.cloneNode(true);c.style.transform="none";c.hidden=false;c.classList.add("pp-a4");prepClean(c);stage.appendChild(c);document.body.appendChild(stage);
@@ -2495,7 +2512,7 @@ async function exportMenu(kind,parts,opts){
       const {jsPDF}=window.jspdf;
       const spec=fmtSpec(current),sh=card.classList.contains("fx-paper")&&(spec&&fmtSheet(spec)||current.libSheet);
       let pdf;
-      if(parts==="prep"){pdf=new jsPDF({unit:"mm",format:"a4",orientation:"portrait"});const pc=await renderCanvas(prep);pdf.addImage(pc.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297)}
+      if(parts==="prep"){pdf=new jsPDF({unit:"mm",format:"a4",orientation:"portrait"});const pcs=await prepCanvases();pcs.forEach((pc,i)=>{if(i)pdf.addPage("a4","portrait");pdf.addImage(pc.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297)})}
       else if(sh){
         const mm=sh.mm||[sh.w*25.4/96,sh.h*25.4/96],o=mm[0]>mm[1]?"landscape":"portrait",PW=o==="landscape"?297:210,PH=o==="landscape"?210:297;
         const k=Math.min(PW/mm[0],PH/mm[1]),dw=mm[0]*k,dh=mm[1]*k,dx=(PW-dw)/2,dy=(PH-dh)/2;
@@ -2513,8 +2530,8 @@ async function exportMenu(kind,parts,opts){
         pdf=new jsPDF({unit:"mm",format:"a4",orientation:land?"landscape":"portrait"});
         pdf.addImage(canvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,land?297:210,land?210:297);sides=1;orient=land?"landscape":"portrait";
       }
-      if(parts==="all"){pdfStep("The prep sheet");const prepCanvas=await renderCanvas(prep);
-      pdf.addPage("a4","portrait");pdf.addImage(prepCanvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297)}
+      if(parts==="all"){pdfStep("The prep sheet");for(const prepCanvas of await prepCanvases()){
+      pdf.addPage("a4","portrait");pdf.addImage(prepCanvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297)}}
       /* print settings travel inside the PDF, so the print dialog opens ready: actual size, and two-sided with the right flip for a two-sided or folded menu
          (landscape folds turn like a book on the short edge, portrait front-and-back on the long edge) */
       try{pdf.viewerPreferences({PrintScaling:"None",Duplex:sides>=2?(orient==="landscape"?"DuplexFlipShortEdge":"DuplexFlipLongEdge"):"Simplex"})}catch(e){}
@@ -2620,11 +2637,11 @@ async function exportFold(){
     if(!await loadExportTools(true)){$("status").textContent="Couldn't load the export tools. Check your connection and try again.";return}
     const pages=fmtFoldPages(f,spec,current.menu);
     const page=async html=>{const el=document.createElement("div");styleCard(el,f);el.className="mcard fmt fmt-"+spec.fmt;el.style.transform="none";el.innerHTML=html;fmtTilesPNG(el);return renderCanvas(el,true)};
-    const out=await page(pages.outside),ins=await page(pages.inside),pp=await renderCanvas(prep);
+    const out=await page(pages.outside),ins=await page(pages.inside),pps=await prepCanvases();
     const {jsPDF}=window.jspdf;const pdf=new jsPDF({unit:"mm",format:"a4",orientation:"landscape"});
     pdf.addImage(out.toDataURL("image/jpeg",0.92),"JPEG",0,0,297,210);
     pdf.addPage("a4","landscape");pdf.addImage(ins.toDataURL("image/jpeg",0.92),"JPEG",0,0,297,210);
-    pdf.addPage("a4","portrait");pdf.addImage(pp.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297);
+    for(const pp of pps){pdf.addPage("a4","portrait");pdf.addImage(pp.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297)}
     const data=pdf.output("blob"),filename=`${slug(f.title)}-${f.year}-fold-at-home.pdf`;
     const tip="Print pages 1 and 2 double-sided, flip on the short edge, actual size. Fold the left panel in first, then the cover over it.";
     if(downloads){try{await downloads.save({filename,data});$("status").textContent=`Saved ${filename}. ${tip}`}catch(e){$("status").textContent=e&&e.code==="declined"?"Save cancelled.":"Couldn't save the PDF."}}
@@ -2648,7 +2665,8 @@ function fillPrint(){
   const pa=$("printArea");pa.innerHTML="";if(!current)return;
   if(card.classList.contains("fx-paper")){card.querySelectorAll(".fx-face").forEach(fc=>{const c=card.cloneNode(false);c.hidden=false;c.innerHTML=fc.innerHTML;pa.appendChild(printPage(c,parseFloat(fc.style.width)||+card.dataset.w,parseFloat(fc.style.height)||+card.dataset.h))})}
   else{const c=card.cloneNode(true);c.hidden=false;const land=card.classList.contains("fmt");pa.appendChild(printPage(c,+card.dataset.w||(land?1123:794),+card.dataset.h||(land?794:1123)))}
-  const pp=prepA4();pa.appendChild(printPage(pp,794,1123));
+  for(const el of prepParts()){const st=document.createElement("div");st.style.cssText="position:fixed;left:-20000px;top:0;width:794px;height:1123px";
+    const c=el.cloneNode(true);c.hidden=false;c.style.transform="none";c.classList.add("pp-a4");prepClean(c);st.appendChild(c);document.body.appendChild(st);fitPrep(c);st.remove();pa.appendChild(printPage(c,794,1123))}
 }
 /* Print sends the finished PDF to the printer, so no browser adds a web address, date or page numbers. On a computer it goes straight to the print dialog;
    on a phone or tablet it opens in the PDF viewer, where Share then Print gives clean pages */

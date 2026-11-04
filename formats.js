@@ -556,24 +556,26 @@ const FMT_FILMS={
     colB:[{h:"Sweet & tea",items:[
         {k:"Almond cookies",zh:"杏仁餅",coinZh:"二文",p:"2 coins",note:"The Furious Five's training snack"},
         {k:"Oogway's iced peach jasmine tea",zh:"茉莉花茶",coinZh:"一文",p:"1 coin",note:"A quiet moment in the Jade Palace"}]}]},
-  "Big Trouble in Little China (1986)":{fmt:"takeaway",brand:"Chinatown takeaway",
-    title:["Big Trouble","in Little China"],signs:["唐人街","大酒樓"],tag:"Something big is cooking in Chinatown",
+  "Big Trouble in Little China (1986)":{fmt:"takeaway",brand:"Dragon of the Black Pool",
+    title:["Big Trouble","in Little China"],signs:["黑龍潭","大酒樓"],tag:"Dragon of the Black Pool, Chinatown",
     colA:[
       {h:"Entrées",zh:"點心",items:[
-        {k:"Pork and chive dumplings",n:"Pork & chive dumplings",code:"A1",zh:"韭菜豬肉餃",extra:"steamed or pan fried, 8 pcs",note:"Wang's family restaurant, before everything goes sideways",p:"5.80"},
+        {k:"Pork and chive dumplings",n:"Pork & chive dumplings",code:"A1",zh:"韭菜豬肉餃",extra:"pan fried, 8 pcs",note:"Before everything goes sideways",p:"5.80"},
         {k:"Salt and pepper squid",n:"Salt & pepper squid",code:"A2",zh:"椒鹽鮮魷",extra:"with lemon",note:"Late night in Chinatown",p:"8.50",hot:1}]},
       {h:"Noodles & Mains",zh:"麵食小菜",items:[
-        {k:"Wang Chi's dan dan noodles",n:"Wang Chi's dan dan",code:"M1",zh:"擔擔麵",extra:"Sichuan style",note:"Crisp pork, Sichuan pepper, chilli oil",p:"7.90",hot:2},
-        {k:"Pork-Chop Express ribs",code:"M2",zh:"叉燒排骨",extra:"honey char siu",note:"Straight off Jack's truck. Sticky fingers guaranteed",p:"12.80",special:"Chef's Special"}]}],
+        {k:"Wang Chi's beef ho fun",code:"M1",zh:"干炒牛河",extra:"dry fried, wok hei",note:"Fast hands. It's all in the reflexes",p:"8.90"},
+        {k:"Pork-Chop Express ribs",code:"M2",zh:"叉燒排骨",extra:"honey char siu",note:"Straight off Jack's truck",p:"12.80",special:"Chef's Special"},
+        {k:"Dragon of the Black Pool fried rice",n:"House fried rice",code:"M3",zh:"蛋炒飯",extra:"egg & spring onion",note:"Chang Sing or Wing Kong, all order it",p:"4.50"},
+        {k:"Garlic gai lan",code:"M4",zh:"蒜蓉芥蘭",extra:"wok tossed",note:"Green as Miao Yin's eyes",p:"4.80"}]}],
     colB:[
       {h:"Dessert & Drinks",zh:"甜品飲品",items:[
         {k:"Fortune cookies",code:"D1",zh:"幸運餅",extra:"one each",note:"Jack would ignore his anyway",p:"1.00"},
         {k:"Egg Shen's plum wine sour",n:"Egg Shen's plum wine",code:"D2",zh:"梅酒",extra:"by the glass",note:"The bottle for the trip below",p:"3.50"}]}],
-    banquet:{name:"Banquet A",price:"$16.50",lines:["Pork & chive dumplings","Salt & pepper squid","Pork-Chop Express ribs","Fortune cookies / Plum wine"]},
+    banquet:{name:"Six Demon Banquet",price:"$11.50",lines:["Pork & chive dumplings","Salt & pepper squid","Pork-Chop Express ribs","House fried rice / Garlic gai lan","Fortune cookies / Plum wine"]},
     hours:["Open 7 nights &nbsp;·&nbsp; 5pm till late","Licensed &amp; B.Y.O. &nbsp;·&nbsp; Dine in or take away"],
-    fold:{name:"Chinatown Takeaway",line:"Family recipes, late into the night",flapLine:"Find your year, then turn the page",
+    fold:{name:"Dragon of the Black Pool",line:"Wang Chi's family restaurant, late into the night",flapLine:"Find your year, then turn the page",
       address:"Grant Avenue, near Washington Street<br>Chinatown, San Francisco",
-      notes:["Every dish is cooked to order and packed hot for the trip home.","Ask about the plum wine. Egg Shen swears by it before a long night."],
+      notes:["Every dish is cooked to order and packed hot for the trip home.","Ask about the plum wine. Egg Shen swears by it before a long night.","Wing Kong business is not welcome at these tables."],
       stills:[["/7LK2053iOtiat3MeWM3S4MZ2mXK.jpg","Jack, Gracie, Miao Yin and Wang"],["/gPpcZPLMQ1ygk0PwIygO9qsjx0M.jpg","Jack and the crew, heading under Chinatown"],["/f1MCWiYy7QbQY5r0LSREGW1nINN.jpg","Thunder, one of the Three Storms"],["/giERHPpe9vINE6VMDoSh3BHGk4O.jpg","Lo Pan's hall, under the city"]],
       map:{roads:[{v:1,at:30,n:"Grant Ave",w:12,label:74},{v:1,at:70,n:"Stockton St",label:70},{at:34,n:"Washington St",label:58},{at:72,n:"Jackson St",label:40}],spots:[{x:84,y:16,n:"Gate"}],us:{x:30,y:34,n:"We're here"}}}},
   "My Cousin Vinny (1992)":{fmt:"diner",brand:"Wazoo Diner",
