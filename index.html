@@ -2263,6 +2263,9 @@ dialog.kit .kit-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a;bo
 .dp-photo{width:100%;height:380px;border-radius:40px;border:14px solid #d9dbe0;box-shadow:0 10px 24px rgba(0,0,0,.5)}
 .dp-s{font:500 20px "Oswald",sans-serif;color:#c8ccd4;letter-spacing:.12em;text-transform:uppercase;margin:0}
 .dp .x-note{bottom:46px}
+/* cells wrap rather than cut a word (kitFit sizes them); this sits after the board styles so it wins */
+.dp .dp-row span{white-space:normal;text-overflow:clip;line-height:1.15;padding:8px 10px;min-height:44px;display:flex;align-items:center;min-width:0;overflow-wrap:normal}
+.dp .dp-row.hd span{min-height:0;padding:0 10px;line-height:22px}
 /* roadside motel */
 .ks-roadside{background:#14102a}
 .rs-photo{position:absolute;inset:0;width:100%;height:100%;opacity:.4}
@@ -2892,7 +2895,7 @@ html,body{overflow-x:clip}
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=8779db76" defer></script>
 <script src="formats-core.js?v=0a9d8d0d" defer></script>
-<script src="app.js?v=c97c8e7e" defer></script>
+<script src="app.js?v=ecb5694c" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
