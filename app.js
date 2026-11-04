@@ -278,9 +278,10 @@ function announceFilm(f,focus){const h=$("nowShowing");if(!h)return;h.textConten
 document.getElementById("skipLink").addEventListener("click",e=>{e.preventDefault();const v=!$("viewShop").hidden?"viewShop":!$("viewCrave").hidden?"viewCrave":null;
   const t=v?$(v).querySelector("input,button,select"):$("spin");if(t){t.focus();t.scrollIntoView({block:"center"})}});
 /* touch screens say Tap, mouse screens say Click */
-const tapWord=t=>matchMedia("(pointer:coarse)").matches?t:String(t).replace(/\bTap\b/,"Click").replace(/\btap\b/,"click");
+const isTouch=()=>matchMedia("(pointer:coarse), (hover:none), (max-width:700px)").matches;
+const tapWord=t=>isTouch()?t:String(t).replace(/\bTap\b/,"Click").replace(/\btap\b/,"click");
 {const gh=document.querySelector(".gv-head small");if(gh)gh.textContent=tapWord(gh.textContent)}
-if(!matchMedia("(pointer:coarse)").matches)document.querySelectorAll(".cb-k,.sv-tap,.skip-k,[data-tap]").forEach(e=>{e.textContent=tapWord(e.textContent)});
+if(!isTouch())document.querySelectorAll(".cb-k,.sv-tap,.skip-k,[data-tap]").forEach(e=>{e.textContent=tapWord(e.textContent)});
 /* ---------- curtains and the easel tilt ---------- */
 const theatre=$("theatre"),easel=$("easel");
 function closeCurtains(){theatre.classList.add("closed");$("tease").textContent=pick(["Setting the table","Warming the plates","Popping the corn","Chilling the glasses","Lighting the candles"])}
@@ -822,7 +823,7 @@ function applyPhone(){
   const has=!!fmtPhone.innerHTML,on=has&&narrow()&&tab==="menu";
   fmtPhone.hidden=!on;$("easel").hidden=false;$("fmtBack").hidden=true;
   scalePreview();if(on)fitPhoneTitle();
-  {const has=tab==="menu"&&!!card.innerHTML.trim()&&!document.body.classList.contains("staged");preview.tabIndex=has?0:-1;if(has)preview.removeAttribute("aria-hidden")}const zh=$("zoomHint");if(zh){const ok=tab==="menu"&&!!card.innerHTML.trim();zh.hidden=!ok;preview.style.cursor=ok?"":"auto";const tap=matchMedia("(pointer:coarse)").matches?"tap":"click";zh.textContent=ok&&cardFaces().length&&swipeW()?`Swipe to turn, ${tap} to zoom`:`${tap[0].toUpperCase()+tap.slice(1)} the menu to read it full size`}
+  {const has=tab==="menu"&&!!card.innerHTML.trim()&&!document.body.classList.contains("staged");preview.tabIndex=has?0:-1;if(has)preview.removeAttribute("aria-hidden")}const zh=$("zoomHint");if(zh){const ok=tab==="menu"&&!!card.innerHTML.trim();zh.hidden=!ok;preview.style.cursor=ok?"":"auto";const tap=isTouch()?"tap":"click";zh.textContent=ok&&cardFaces().length&&swipeW()?`Swipe to turn, ${tap} to zoom`:`${tap[0].toUpperCase()+tap.slice(1)} the menu to read it full size`}
 }
 /* the phone text menu uses the Prep sheet's own recipe for a dish: same amounts for tonight's guests, same method */
 function phoneRecipe(f,it){try{if(!f||!f._r2||!f._r2.dishes||!it)return null;const LB=planLabels(f),want=[it.n,it.label].filter(Boolean).map(x=>String(x).toLowerCase());
@@ -1652,11 +1653,12 @@ $("weekSet").addEventListener("click",()=>{if(current){setWeek(current);lockAsk(
 async function lockAsk(f,trigger){if(!f)return;try{await ensureExact(f)}catch(e){}if(!f._r2||!(f._r2.dishes||[]).length)return;
   const o=document.createElement("dialog");o.className="counter pdfpick lockask";o.setAttribute("aria-label","Locked in: "+f.title);
   o.innerHTML=`<div class="rate-box"><p class="rate-k">Locked in: ${ESC(f.title)}</p><h3>Roll credits on the menu</h3><div class="pp-opts">
-   <button type="button" data-l="pick"><b>Director's cut</b><span>I'll pick the dishes. The shopping list follows what you tick.</span></button>
+   <button type="button" data-l="pick"><b>Director's cut</b><span>Pick the dishes. The shopping list follows what you tick.</span></button>
    <button type="button" data-l="all"><b>The full feature</b><span>Cook the lot. Every dish on the menu goes on the Prep sheet and shopping list.</span></button></div></div>`;
   o.addEventListener("click",async e=>{if(e.target===o)return dismissModal(o);const b=e.target.closest("[data-l]");if(!b)return;dismissModal(o);
     for(let i=0;i<30&&current!==f;i++)await new Promise(r=>setTimeout(r,100));if(current!==f)return;
     if(b.dataset.l==="all"){PLAN.off={};for(const x of planExtras(f))PLAN.on[x.n]=1;planSave(f);refreshPlan();setTab("prep");
+      {const pp=prep;if(pp)setTimeout(()=>pp.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"}),reduce?0:350)}
       const n=planDishes(f).length;$("status").textContent=`The full feature: all ${n} dishes are on the Prep sheet and shopping list.`}
     else{setTab("prep");const pb=$("planner"),d=pb&&pb.querySelector(".pl-pick");if(d){d.open=true;pb.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});const c=d.querySelector("input[type=checkbox]");if(c)setTimeout(()=>c.focus({preventScroll:true}),reduce?0:400)}
       $("status").textContent="Director's cut: tick the dishes you want. The shopping list follows."}});
@@ -1812,7 +1814,7 @@ function openSlip(f,go){
   const due=dueBack(f),now=new Date();const picked=new Set(counter[f.id]||[]);
   const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Rental slip for ${f.title}`);
   const fmt=d=>d.toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"});
-  o.innerHTML=`<div class="slip"><h3 class="slip-logo"><img src="assets/brand/galaxy-video-wide-600.webp" srcset="assets/brand/galaxy-video-wide-600.webp 600w, assets/brand/galaxy-video-wide-1200.webp 1200w" sizes="300px" width="600" height="154" alt="Galaxy Video" decoding="async"></h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?(isTuesday()?"New release, $2 Tuesday":"New release, 3 nights"):"Weekly"} $${priceOf(f).toFixed(2)}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd><dt>Paid</dt><dd>$10 note, change $${(10-priceOf(f)).toFixed(2)}</dd></dl>${hireCaseHTML(f)}<p class="hc-k">Box swapped for a hire case. The cover's been in that sleeve since the shop opened.</p><button type="button" class="peek" data-a="peek" aria-expanded="false">Preview the menu</button><div class="peekbox" hidden></div><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
+  o.innerHTML=`<div class="slip"><h3 class="slip-logo"><img src="assets/brand/galaxy-video-wide-600.webp" srcset="assets/brand/galaxy-video-wide-600.webp 600w, assets/brand/galaxy-video-wide-1200.webp 1200w" sizes="300px" width="600" height="154" alt="Galaxy Video" decoding="async"></h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?(isTuesday()?"New release, $2 Tuesday":"New release, 3 nights"):"Weekly"} $${priceOf(f).toFixed(2)}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd><dt>Paid</dt><dd>$10 note, change $${(10-priceOf(f)).toFixed(2)}</dd></dl>${hireCaseHTML(f)}<p class="hc-k">Box swapped for a hire case. ${isNew(f)?"The cover went in that sleeve this week and it's still glossy.":"The cover's been in that sleeve since the shop opened."}</p><button type="button" class="peek" data-a="peek" aria-expanded="false">Preview the menu</button><div class="peekbox" hidden></div><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
   const close=()=>dismissModal(o);
   o.addEventListener("click",e=>{
     if(e.target===o)return close();

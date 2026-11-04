@@ -89,7 +89,7 @@ const TONE={
  glossy:{wear:.06,rot:.4,vig:.12,photo:"saturate(1.12) contrast(1.05)",k:"Tonight's table",lst:"For tonight"},
  warm:{wear:.2,rot:1,vig:.22,photo:"sepia(.1) saturate(1.05)",k:"Stuck on the fridge",lst:"Don't forget"},
  eerie:{wear:.32,rot:.6,vig:.55,photo:"saturate(.55) brightness(.93) contrast(1.1)",k:"Left on the fridge for you",lst:"Do not forget"},
- playful:{wear:.12,rot:2.2,vig:.1,photo:"saturate(1.2) brightness(1.03)",k:"Read me before the fridge",lst:"Don't forget!"},
+ playful:{wear:.12,rot:2.2,vig:.1,photo:"saturate(1.2) brightness(1.03)",k:"Read me first",lst:"Don't forget!"},
  grand:{wear:.14,rot:.3,vig:.25,photo:"contrast(1.08) sepia(.08)",k:"Tonight we feast",lst:"The plan"},
  tender:{wear:.2,rot:1,vig:.25,photo:"brightness(1.05) saturate(.92) sepia(.12)",k:"With love, from the kitchen",lst:"Remember"},
  tense:{wear:.3,rot:.5,vig:.42,photo:"contrast(1.22) saturate(.7)",k:"Dinner at seven sharp",lst:"Check twice"},
@@ -202,7 +202,7 @@ window.MENU_FORMATS.home=function(ctx){
        ${winks.map((w,i)=>`<div style="display:flex;gap:.4em;font:1em/1.3 ${bd};margin-bottom:.45em"><span style="font-weight:700;color:${acc}">${i+1}.</span><span>${x(w)}</span></div>`).join("")}
      </div>
    </div>
-   ${mags(String(num).slice(0,4),110,22,String(num).length>3?46:52)}
+   ${mags(String(num).slice(0,5),110,22,String(num).length>4?38:String(num).length>3?46:52)}
    ${rcard(cardA,26,552,-T.rot*.6,`No. ${num}`,`From the ${x(venue.replace(/^the\s+/i,""))}.`)}
    ${rcard(cardB,420,548,T.rot*.5,f.year?String(f.year):"",`Serves everyone on the couch. ${fam?"Every drink alcohol free. ":""}Photos: TMDB.`)}`;
   return {w:W,h:H,faces:[front,back]};

@@ -153,9 +153,9 @@ window.MENU_FORMATS.precinct=function(ctx){
    </div>
    ${stamp(T.stamp,28,872,-8+T.tilt,acc,T.stamp.length>14?22:30)}
    ${stamp(`Breakroom copy`,40,976,4-T.tilt,"#2b2b2b",18)}`}
-   ${heroP?(()=>{const mT=FT+4+lpH+22,mH=FB-mT,sT=FB+18,sH=Math.min(166,1040-sT);return `<div style="position:absolute;left:${RX}px;top:${mT}px;width:${RW}px;height:${mH}px;box-sizing:border-box;padding:12px 16px;display:flex;flex-direction:column;background:${T.memo==="Sticky note from"?"#fbe98a":"#fffef8"};box-shadow:0 6px 14px rgba(0,0,0,.3);transform:rotate(${-T.tilt*.5}deg)">
+   ${heroP?(()=>{const mT=FT+4+lpH+22,mH=FB-mT,sT=FB+18,sH=Math.min(166,1040-sT);/* a short note grows to fill its card instead of leaving it mostly blank; the fitter still shrinks a long one */const nfs=Math.max(20,Math.min(36,Math.floor(.92*Math.sqrt((RW-32)*(mH-110)/(.5*1.32*Math.max(20,String(nt.text||"").length))))));return `<div style="position:absolute;left:${RX}px;top:${mT}px;width:${RW}px;height:${mH}px;box-sizing:border-box;padding:12px 16px;display:flex;flex-direction:column;background:${T.memo==="Sticky note from"?"#fbe98a":"#fffef8"};box-shadow:0 6px 14px rgba(0,0,0,.3);transform:rotate(${-T.tilt*.5}deg)">
      <div style="flex:none">${kick(`${T.memo} ${nt.by}`)}</div>
-     <div data-fit="14" style="flex:1 1 0;min-height:0;overflow:hidden;margin:8px 0;font:20px/1.32 ${bd};font-size:20px;color:${ink}">${x(nt.text)}</div>
+     <div data-fit="14" style="flex:1 1 0;min-height:0;overflow:hidden;margin:8px 0;font:${nfs}px/1.32 ${bd};font-size:${nfs}px;color:${ink}">${x(nt.text)}</div>
      <div style="flex:none;font:30px/1 ${SIG};color:#1d3a8a;text-align:right;white-space:nowrap;overflow:hidden">${x(nt.by)}</div>
    </div>
    <div style="position:absolute;left:40px;top:${sT}px;width:480px;height:${sH}px;box-sizing:border-box;padding:12px 18px;background:#fffdf6;box-shadow:0 4px 12px rgba(0,0,0,.25);transform:rotate(${T.tilt*.2}deg)">

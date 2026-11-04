@@ -630,8 +630,8 @@ body.spinning .theatre.closed .skip-k,.theatre.closed .tease.leader~.skip-k{opac
 /* prep sheet */
 .pp{align-items:stretch;text-align:left}
 .pp .mc-eye{text-align:center}
-.pp-title{font-family:var(--md);font-weight:var(--mdw,400);font-size:44px;line-height:1.05;text-align:center;margin:6px 0 14px;color:var(--tc,var(--ink));text-transform:var(--mtt,none);letter-spacing:var(--mls,0)}
-.pp-serves{text-align:center;margin:-8px 0 12px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+.pp-title{font-family:var(--md);font-weight:var(--mdw,400);font-size:44px;line-height:1.25;text-align:center;margin:6px 0 14px;padding-bottom:.06em;color:var(--tc,var(--ink));text-transform:var(--mtt,none);letter-spacing:var(--mls,0)}
+.pp-serves{text-align:center;margin:2px 0 12px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
 .pp-serves .nw{white-space:nowrap}
 /* shopping quantities and times use lining figures so 1 never reads as I */
 .pp-cols,.pp-serves,.pp-time,.fp-how{font-variant-numeric:lining-nums tabular-nums}
@@ -2384,6 +2384,7 @@ dialog.mystery .my-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a
 .my-dish summary{cursor:pointer;list-style:none;display:flex;flex-direction:column;gap:2px}
 .my-dish summary b{font:600 15px var(--f-body);color:#fff4d6}
 .my-dish summary b::after{content:"Click for the method";float:right;font:500 12px var(--f-body);color:#e2b04f}
+@media (pointer:coarse),(hover:none),(max-width:700px){.my-dish summary b::after{content:"Tap for the method"}}
 .my-dish[open] summary b::after{content:"Hide"}
 .my-dish summary span{font:400 14px/1.4 var(--f-body);color:#d9c9a8}
 .my-dish ol{margin:10px 0 2px;padding-left:20px;font:400 14px/1.5 var(--f-body);color:#eadcbe}
@@ -2851,9 +2852,9 @@ html,body{overflow-x:clip}
 <script src="ratings.js?v=dfb01117" defer></script>
 <script src="aisles.js?v=6b920a43" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
-<script src="films.js?v=fce0c556" defer></script>
+<script src="films.js?v=dee32339" defer></script>
 <script src="formats-core.js?v=f9ea9258" defer></script>
-<script src="app.js?v=32cdaa35" defer></script>
+<script src="app.js?v=f3f14dd9" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
