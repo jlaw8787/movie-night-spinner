@@ -3,11 +3,12 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const {spawn}=require('child_process');
 const fs=require('fs'),path=require('path'),http=require('http');
 const REPO=path.resolve(__dirname,'..');
-const ORIGIN='http://127.0.0.1:4184';
+/* MNS_PORT runs it on another port, so two copies (two worktrees) don't share one server */
+const PORT=String(process.env.MNS_PORT||4184),ORIGIN='http://127.0.0.1:'+PORT;
 const OUTPUT=process.env.REGRESSION_PROOF||path.join(require('os').tmpdir(),'movie-night-browser-regression.json');
 const report={scope:'Functional browser checks only; external fonts/images blocked. No visual or performance grade.',started:new Date().toISOString(),viewports:[],unexpectedExternalWrites:0};
 const assert=(ok,message)=>{if(!ok)throw Error(message)};
-const server=spawn('python3',['-m','http.server','4184','--bind','127.0.0.1'],{cwd:REPO,stdio:'ignore'});
+const server=spawn('python3',['-m','http.server',PORT,'--bind','127.0.0.1'],{cwd:REPO,stdio:'ignore'});
 let browser;
 process.on('exit',()=>server.kill());
 async function serverReady(){for(let i=0;i<60;i++){const ok=await new Promise(resolve=>{const r=http.get(ORIGIN+'/index.html',res=>{res.resume();resolve(res.statusCode===200)});r.on('error',()=>resolve(false));r.setTimeout(300,()=>{r.destroy();resolve(false)})});if(ok)return;await new Promise(r=>setTimeout(r,50))}throw Error('Local regression server did not start')}

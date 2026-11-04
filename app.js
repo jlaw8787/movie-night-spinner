@@ -1,4 +1,8 @@
 
+/* a note cut short never ends on a joining word ("with yellow mustard and."): those come off, and a lone word left after a comma goes with them */
+window.noDangle=function(t){t=String(t||"");const D=/\s+(and|with|of|in|the|a|an|is|to|for|or|on|at|by|from|into|under|over|but|so|as|its|his|her|their|our|your|my)$/i;
+  let s=t.replace(/[\s.,;:]+$/,"");const s0=s;for(let n=0;n<4&&D.test(s);n++)s=s.replace(D,"").replace(/[\s,;:]+$/,"");
+  if(s===s0)return t;s=s.replace(/,\s*\S+$/,"");return s+(/[.!?]\s*$/.test(t)?".":"")};
 /* prices that make sense on their own card, for shared layouts: every main above every starter and sweet, a drink with spirits above every plain drink and sweet; a raised price keeps its own cents (the film's number lives there) and the card's price style, and nothing prints as 100 cents */
 window.priceSense=function(menu,P){const SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy)\b/i;
   const all=[].concat(...["s","m","w","d"].map(k=>P[k]||[])).map(String),cents=all.some(x=>/¢/.test(x)),dot=all.some(x=>/^\D*\.\d\d$/.test(x));
@@ -1259,7 +1263,7 @@ function planWire(f){
     if(x&&(x.blocked||x.extra)){if(e.target.checked)PLAN.on[n]=1;else delete PLAN.on[n]}else{if(e.target.checked)delete PLAN.off[n];else PLAN.off[n]=1}redo()};
 }
 /* long dish notes are cut back at a natural break so no format has to clip them mid-sentence */
-function libTrim(t,max){t=String(t||"").trim();if(t.length<=max)return t;const cut=t.slice(0,max);let i=Math.max(cut.lastIndexOf(", "),cut.lastIndexOf("; "),cut.lastIndexOf(". "));if(i<max*0.45)i=cut.lastIndexOf(" ");return t.slice(0,i).replace(/[,;:\s]+$/,"")+"."}
+function libTrim(t,max){t=String(t||"").trim();if(t.length<=max)return t;const cut=t.slice(0,max);let i=Math.max(cut.lastIndexOf(", "),cut.lastIndexOf("; "),cut.lastIndexOf(". "));if(i<max*0.45)i=cut.lastIndexOf(" ");return noDangle(t.slice(0,i).replace(/[,;:\s]+$/,""))+"."}
 /* one photo rule for every library menu (owner, Oct 26): the poster is shown whole, never blurred into a smear, never under the title logo,
    and no photo appears twice. Runs after the format renders, so all 30 styles follow the same rule. */
 function libPhotoPass(card,L,poster){
