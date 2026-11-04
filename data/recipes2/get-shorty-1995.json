@@ -347,66 +347,7 @@
    }
   },
   {
-   "n": "Cuban pastelitos",
-   "course": "s",
-   "prep_min": 25,
-   "cook_min": 13,
-   "make_ahead": "Assemble up to 4 hours ahead, keep chilled; bake to serve",
-   "ingredients": [
-    {
-     "q": 2,
-     "u": "",
-     "item": "sheets puff pastry",
-     "aisle": "Frozen"
-    },
-    {
-     "q": 135,
-     "u": "g",
-     "item": "guava paste",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 9,
-     "u": "tsp",
-     "item": "cream cheese",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "egg, beaten",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 2,
-     "u": "tbsp",
-     "item": "caster sugar",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Cut each pastry sheet into 9 squares.",
-     "min": 5
-    },
-    {
-     "text": "Put a slice of guava paste and a teaspoon of cream cheese on half the squares.",
-     "min": 8
-    },
-    {
-     "text": "Top with the other squares, press the edges with a fork and brush with egg.",
-     "min": 7
-    },
-    {
-     "text": "Bake at 200C for 18 minutes until puffed and golden, then dust with sugar while hot.",
-     "min": 18
-    }
-   ],
-   "veg": true,
-   "af": true
-  },
-  {
-   "n": "Chilli Palmer's steak frites",
+   "n": "Chili Palmer's steak frites",
    "course": "m",
    "prep_min": 30,
    "cook_min": 18,
@@ -481,7 +422,7 @@
    "af": false,
    "alt": {
     "af": {
-     "n": "Chilli Palmer's steak frites",
+     "n": "Chili Palmer's steak frites",
      "prep_min": 30,
      "cook_min": 18,
      "make_ahead": "Make the sauce while the steak rests; fry the chips twice",
@@ -789,6 +730,65 @@
     {
      "text": "Scoop ice cream into four bowls, pour over the fudge and top with popcorn and peanuts.",
      "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Cuban pastelitos",
+   "course": "w",
+   "prep_min": 25,
+   "cook_min": 13,
+   "make_ahead": "Assemble up to 4 hours ahead, keep chilled; bake to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 135,
+     "u": "g",
+     "item": "guava paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 9,
+     "u": "tsp",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut each pastry sheet into 9 squares.",
+     "min": 5
+    },
+    {
+     "text": "Put a slice of guava paste and a teaspoon of cream cheese on half the squares.",
+     "min": 8
+    },
+    {
+     "text": "Top with the other squares, press the edges with a fork and brush with egg.",
+     "min": 7
+    },
+    {
+     "text": "Bake at 200C for 18 minutes until puffed and golden, then dust with sugar while hot.",
+     "min": 18
     }
    ],
    "veg": true,
