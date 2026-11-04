@@ -1303,7 +1303,8 @@ function libPhotoPass(card,L,poster){
   shown.forEach(i=>{const k=path(i);if(!used.has(k)){used.add(k);return}
     const nx=spare.find(x=>!used.has(x));
     if(nx){used.add(nx);i.removeAttribute("srcset");i.src=TMDB_IMG+"w780"+nx}
-    else{let e=i;while(e.parentElement&&area(e.parentElement)<FA*0.4&&e.parentElement.querySelectorAll("img").length===1)e=e.parentElement;e.style.visibility="hidden"}});
+    /* the frame goes, never the text around it (takeaway's third panel held the drinks and went with its photo tile: Screwed) */
+    else{let e=i;while(e.parentElement&&area(e.parentElement)<FA*0.4&&e.parentElement.querySelectorAll("img").length===1&&!(e.parentElement.textContent||"").trim())e=e.parentElement;e.style.visibility="hidden"}});
   /* 4. a very thin frame (a window strip, a booth strip) shows only a sliver of a wide still, so a face there is always cut in half:
      give it an unused still with no faces in it (a place, not a person) */
   const foc=L.focus||{},faceless=spare.filter(x=>!foc[x]&&!used.has(x));
