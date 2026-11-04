@@ -65,7 +65,8 @@ const FAMILY=new Set(["kids","fairytale"]);
 function priceFor(era,year,number){const b=BASE[era]||9,M={s:1,m:1.9,w:1.05,d:.8};
   const yy=(+year||0)%100,num=/^\d{2,3}$/.test(String(number||""))?+number:null;
   return (k,i)=>{let p=b*M[k]*(1+i*.14);p=b<1?Math.round(p*20)/20:Math.round(p*4)/4;
-    if(k==="m"&&i===0&&num){const c=[num/100,num/10,num].sort((x,y)=>Math.abs(x-p)-Math.abs(y-p));p=c[0]}
+    /* the film number only sets the cents, on the period price */
+    if(k==="m"&&i===0&&num&&p>=1)p=Math.floor(p)+(num%100)/100;
     return p}}
 const money=(p,era)=>p<1&&(era==="1930s-40s"||era==="1950s"||era==="1960s")?Math.round(p*100)+"c":p.toFixed(2);
 
@@ -114,7 +115,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   const number=fl.number||String(yr).slice(-2)||"00";
   const price=priceFor(era,yr,fl.number);
   const C={s:"Bar snacks",m:"Plates",w:"Afters",d:fam?"From the fountain":"Behind the bar"};
-  const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({n:dry(x.n,fam),note:dry(x.note,fam),p:price(k,i)}));
+  /* prices that make sense on their own card: every main above every starter and sweet, and a drink with spirits above a plain beer or soft drink */
+  const PR={},rnd=v=>v<1?Math.round(v*20)/20:Math.round(v*4)/4,SPIRIT=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|sour|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|vodka)\b/i;for(const k of ["s","m","w","d"])PR[k]=(menu[k]||[]).slice(0,4).map((x,i)=>price(k,i));
+  {const sw=Math.max(0,...PR.s,...PR.w);PR.m=PR.m.map(v=>v>sw?v:rnd(sw*1.3+(v%1)*.1));
+   const ds=(menu.d||[]).slice(0,4),plain=Math.max(0,...ds.map((x,i)=>SPIRIT.test(x.n+" "+(x.note||""))?0:PR.d[i]));PR.d=PR.d.map((v,i)=>SPIRIT.test(ds[i].n+" "+(ds[i].note||""))&&v<=plain?rnd(plain*1.3):v)}
+  const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({n:dry(x.n,fam),note:dry(x.note,fam),p:PR[k][i]}));
   const I={s:items("s"),m:items("m"),w:items("w"),d:items("d")};
   const sum=a=>a.reduce((x,y)=>x+y.p,0);
   const front=sum(I.s)+sum(I.m),total=front+sum(I.w)+sum(I.d);

@@ -64,7 +64,8 @@ const FAMILY=new Set(["kids","fairytale"]);
 function priceFor(era,year,number){const b=BASE[era]||2.8,M={s:1,m:2.2,w:1,d:.7};
   const yy=(+year||0)%100,num=/^\d{2,3}$/.test(String(number||""))?+number:null;
   return (k,i)=>{let p=b*M[k]*(1+i*.15);p=Math.max(.05,Math.round(p*20)/20);
-    if(k==="m"&&i===0&&num){const c=[num/100,num/10,num].sort((x,y)=>Math.abs(x-p)-Math.abs(y-p));p=c[0]}
+    /* the film number only sets the cents, on the period price */
+    if(k==="m"&&i===0&&num&&p>=1)p=Math.floor(p)+(num%100)/100;
     return p}}
 const money=(p,era)=>p<1&&ERA_G[era]<2?Math.round(p*100)+"c":p.toFixed(2);
 
@@ -118,7 +119,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   const number=fl.number||String(yr).slice(-2)||"00";
   const price=priceFor(era,yr,fl.number);
   const C=school?{s:"Starters",m:"Main tray",w:"Pudding",d:"Drinks"}:{s:"Starters",m:"Hot line",w:"Sweets",d:"Drinks"};
-  const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({n:dry(x.n,fam),note:dry(x.note,fam),p:price(k,i)}));
+  /* prices that make sense on their own card: every main above every starter and sweet, and a drink with spirits above a plain beer or soft drink */
+  const PR={},rnd=v=>Math.max(.05,Math.round(v*20)/20),SPIRIT=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|sour|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|vodka)\b/i;for(const k of ["s","m","w","d"])PR[k]=(menu[k]||[]).slice(0,4).map((x,i)=>price(k,i));
+  {const sw=Math.max(0,...PR.s,...PR.w);PR.m=PR.m.map(v=>v>sw?v:rnd(sw*1.3+(v%1)*.1));
+   const ds=(menu.d||[]).slice(0,4),plain=Math.max(0,...ds.map((x,i)=>SPIRIT.test(x.n+" "+(x.note||""))?0:PR.d[i]));PR.d=PR.d.map((v,i)=>SPIRIT.test(ds[i].n+" "+(ds[i].note||""))&&v<=plain?rnd(plain*1.3):v)}
+  const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({n:dry(x.n,fam),note:dry(x.note,fam),p:PR[k][i]}));
   const I={s:items("s"),m:items("m"),w:items("w"),d:items("d")};
   const photoF=`${g.photo} ${t.photo}`;
   const winks=(fl.winks||[]).slice(0,5);

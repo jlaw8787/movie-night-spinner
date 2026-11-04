@@ -102,7 +102,8 @@ window.MENU_FORMATS.precinct=function(ctx){
   const bd=E.b,dd=E.d;
   /* coin-op breakroom prices with the film's number hidden in the cents */
   const n2=+(String(num).slice(-2))||48;
-  const price=(k,i)=>{const base={s:1,m:3,w:1,d:1}[k],c=(n2+i*17+(k==="m"?25:k==="d"?60:0))%100;return `${base+((i+(k==="m"?1:0))%3)}.${String(c).padStart(2,"0")}`};
+  /* mains always above starters and sweets (4 to 6 against 1 to 3), and a drink with spirits two dollars above the rest */
+  const price=(k,i,n)=>{const base={s:1,m:4,w:1,d:1}[k],c=(n2+i*17+(k==="m"?25:k==="d"?60:0))%100,sp=k==="d"&&/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|sour|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|vodka)\b/i.test(String(n||""))?2:0;return `${base+(i%3)+sp}.${String(c).padStart(2,"0")}`};
   const grain=M.noise(T.wear);
   /* manila folder: stock colour, tab, grain, wear on the edges */
   const folder=(tabTxt,tabLeft)=>`<div style="position:absolute;inset:0;background:#3a3631"></div>
@@ -167,7 +168,7 @@ window.MENU_FORMATS.precinct=function(ctx){
 
   const shift=c=>`<div style="margin-bottom:.6em">
      <div style="display:flex;justify-content:space-between;align-items:baseline;background:${dark};color:#fbf7ee;padding:.18em .45em;margin-bottom:.3em"><span style="font:${E.dw} 1.15em/1.1 ${dd};text-transform:uppercase;letter-spacing:.04em">${SHIFT[c.k][0]}</span><span style="flex:none;margin-left:.5em;font:.72em/1.2 ${bd};letter-spacing:.14em;text-transform:uppercase">${SHIFT[c.k][1]}</span></div>
-     ${c.items.map((it,i)=>`<div data-item${i?"":" data-keep"} style="padding:.15em .1em .3em;border-bottom:1px solid rgba(0,0,0,.12)"><div style="display:flex;gap:.5em;justify-content:space-between;align-items:baseline"><span style="font:700 1em/1.15 ${bd};color:${ink}">${x(it.n)}</span><span style="flex:none;font:700 1em/1.15 ${bd};color:${acc}">${price(c.k,i)}</span></div>${it.note?`<div data-opt style="font:.76em/1.3 ${bd};color:${ink};opacity:.85">${x(it.note)}</div>`:""}</div>`).join("")}
+     ${c.items.map((it,i)=>`<div data-item${i?"":" data-keep"} style="padding:.15em .1em .3em;border-bottom:1px solid rgba(0,0,0,.12)"><div style="display:flex;gap:.5em;justify-content:space-between;align-items:baseline"><span style="font:700 1em/1.15 ${bd};color:${ink}">${x(it.n)}</span><span style="flex:none;font:700 1em/1.15 ${bd};color:${acc}">${price(c.k,i,it.n)}</span></div>${it.note?`<div data-opt style="font:.76em/1.3 ${bd};color:${ink};opacity:.85">${x(it.note)}</div>`:""}</div>`).join("")}
    </div>`;
   const half=Math.ceil(C.length/2);
   const col=cs=>`<div data-fit="20" style="width:344px;height:100%;overflow:hidden;font-size:26px">${cs.map(shift).join("")}</div>`;
