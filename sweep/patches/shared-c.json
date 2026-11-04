@@ -1174,12 +1174,12 @@
    ],
    [
     "Warbucks mansion canapés",
-    "Creamy mushroom and leek pastry cases, plus asparagus wrapped in prosciutto",
-    "Vol-au-vent cases filled with mushroom and leek in thyme cream, beside asparagus spears wrapped in prosciutto and roasted.",
+    "Creamy chicken and mushroom pastry cases, plus asparagus wrapped in prosciutto",
+    "Bake vol-au-vent cases crisp, fill with chicken and mushroom in a thyme cream sauce. Blanched asparagus spears wrapped in prosciutto alongside.",
     [
-     "vol-au-vent cases@Bakery",
+     "vol-au-vent cases@Frozen",
+     "chicken thighs@Meat",
      "mushrooms@Produce",
-     "leek@Produce",
      "thickened cream@Dairy",
      "asparagus@Produce",
      "prosciutto@Deli"
@@ -1194,6 +1194,35 @@
      "coconut oil@Pantry",
      "butter@Dairy",
      "fine salt@Pantry"
+    ]
+   ]
+  ],
+  "M": [
+   [
+    "Warbucks roast chicken",
+    "Whole chicken with tarragon butter under the skin, roasted golden",
+    "Dry-brine a chicken overnight, tarragon butter under the skin, roast at 220C for 20 minutes then 180C to 72C in the thigh. Pan gravy, roast potatoes and buttered peas.",
+    [
+     "whole chicken@Meat",
+     "butter@Dairy",
+     "tarragon@Produce",
+     "potatoes@Produce",
+     "frozen peas@Frozen",
+     "chicken stock@Pantry"
+    ]
+   ],
+   [
+    "Punjab's lamb curry",
+    "the bodyguard's favourite, made the way he likes it",
+    "Lamb shoulder simmered slowly with onion, ginger, garlic, garam masala and tomato, finished with yoghurt and coriander, with basmati rice.",
+    [
+     "lamb shoulder@Meat",
+     "onions@Produce",
+     "ginger@Produce",
+     "garam masala@Spices",
+     "crushed tomatoes@Pantry",
+     "Greek yoghurt@Dairy",
+     "basmati rice@Pantry"
     ]
    ]
   ]
@@ -2078,6 +2107,63 @@
      "cranberry sauce@Pantry",
      "potatoes@Produce",
      "chicken stock@Pantry"
+    ]
+   ]
+  ]
+ },
+ "Kate & Leopold (2001)": {
+  "S": [
+   [
+    "Rooftop crostini",
+    "Toasted baguette, whipped goat's cheese, honey poached pear and thyme",
+    "Baguette sliced thin on the bias, brushed with oil and toasted. Top with whipped goat's cheese, a few slices of poached pear and a drizzle of honey and thyme.",
+    [
+     "baguette@Bakery",
+     "goat's cheese@Deli",
+     "pears@Produce",
+     "honey@Pantry",
+     "thyme@Produce"
+    ]
+   ],
+   [
+    "Butter tasting",
+    "Leopold refuses to lie about the diet margarine in the ad",
+    "Three butters on a board: cultured, salted Irish, and brown butter whipped with honey. Warm sourdough and radishes with flaky salt.",
+    [
+     "cultured butter@Dairy",
+     "salted butter@Dairy",
+     "honey@Pantry",
+     "sourdough@Bakery",
+     "radishes@Produce"
+    ]
+   ]
+  ],
+  "M": [
+   [
+    "Leopold's rooftop dinner",
+    "Whole roast snapper with beurre blanc, candlelight on the roof",
+    "Whole snapper scored, stuffed with lemon, fennel and dill, roasted at 220C for 25 minutes. Beurre blanc (shallot, white wine and vinegar reduced, cold butter whisked in) and new potatoes.",
+    [
+     "whole snapper@Seafood",
+     "lemons@Produce",
+     "fennel@Produce",
+     "shallots@Produce",
+     "butter@Dairy",
+     "new potatoes@Produce"
+    ]
+   ],
+   [
+    "Kate's steak frites with red wine butter",
+    "the late nights at the ad agency",
+    "Sirloin seared hard and rested, sliced, with shallot and red wine butter melting over the top and double-fried frites with sea salt. Reduce 150ml red wine with 1 finely chopped shallot until 2 tbsp remain, cool, then mash into 100g soft butter with parsley and salt. Cut 1kg potatoes into chips, soak 30 minutes, dry and fry at 140C for 6 minutes. Season 4 sirloin steaks (250g each) and sear in a smoking pan 3 minutes a side for medium rare, then rest 5 minutes. Fry the chips again at 190C for 3 minutes until crisp and salt them. Slice the steak and top with the butter.",
+    [
+     "4 sirloin steaks (250g each)@Meat",
+     "1kg potatoes@Produce",
+     "1 shallot@Produce",
+     "1 bunch parsley@Produce",
+     "100g butter@Dairy",
+     "150ml red wine@Bottle shop",
+     "2 litres vegetable oil@Pantry"
     ]
    ]
   ]

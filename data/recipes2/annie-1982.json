@@ -15,13 +15,13 @@
      "aisle": "Bakery"
     },
     {
-     "q": 1,
-     "u": "",
-     "item": "leek, finely sliced",
-     "aisle": "Produce"
+     "q": 250,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
     },
     {
-     "q": 300,
+     "q": 150,
      "u": "g",
      "item": "mushrooms",
      "aisle": "Produce"
@@ -63,7 +63,7 @@
      "min": 15
     },
     {
-     "text": "Slice the mushrooms and fry with the leek in butter until browned and soft.",
+     "text": "Dice the chicken and mushrooms and fry in butter until browned.",
      "min": 10
     },
     {
@@ -392,6 +392,218 @@
       {
        "text": "Cook the peas and toss with butter.",
        "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Punjab's lamb curry",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 110,
+   "make_ahead": "Cook the curry up to 2 days ahead, it gets better; cook the rice on the night",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "boneless lamb shoulder, in chunks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions, finely sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "ginger, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "garam masala",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "can crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "basmati rice",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the lamb in the oil in batches. Lift out.",
+     "min": 12
+    },
+    {
+     "text": "Cook the onions slowly in the same pot until deep golden, then add the garlic, ginger and spices and stir for a minute.",
+     "min": 15
+    },
+    {
+     "text": "Return the lamb with the tomatoes and a cup of water, cover and simmer gently until tender.",
+     "min": 90
+    },
+    {
+     "text": "Rinse the rice and simmer it, covered, until the water is gone. Rest it with the lid on.",
+     "min": 15
+    },
+    {
+     "text": "Take the curry off the heat, stir through the yoghurt and finish with coriander.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Punjab's chickpea and potato curry",
+     "prep_min": 15,
+     "cook_min": 35,
+     "make_ahead": "Cook up to 2 days ahead; cook the rice on the night",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cans chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "potatoes, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions, finely sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "ginger, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "garam masala",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground turmeric",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "basmati rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cook the onions slowly in the oil until golden, then add the garlic, ginger and spices.",
+       "min": 15
+      },
+      {
+       "text": "Add the potatoes, chickpeas, tomatoes and a cup of water and simmer until the potatoes are tender.",
+       "min": 25
+      },
+      {
+       "text": "Rinse the rice and simmer it, covered, until the water is gone.",
+       "min": 15
+      },
+      {
+       "text": "Stir through the yoghurt and finish with coriander.",
+       "min": 3
       }
      ],
      "af": true
