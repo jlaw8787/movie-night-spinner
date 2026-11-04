@@ -624,8 +624,7 @@ const FMT_FILMS={
     colA:[
       {h:"Sandwiches",c:"blue",items:[
         {k:"Craig's peanut butter jelly toasties",note:"Never two things that match. Now they do.",p:"1.50"},
-        {k:"Porch ham and beef sliders",note:"Ham, no burger. Fixed.",p:"2.99"},
-        {k:"Fried catfish sandwich",n:"Catfish sandwich",note:"Hot sauce slaw and pickles on white bread.",p:"3.49"}]},
+        {k:"Porch ham and beef sliders",note:"Ham, no burger. Fixed.",p:"2.99"}]},
       {h:"Off the Grill",c:"red",items:[
         {k:"Porch day barbecue plate",n:"Porch day BBQ plate",note:"Drumsticks, corn, potato salad. Eat it on the steps.",p:"4.99",burst:["$4.99","Big plate","#b6ff3b",-10]},
         {k:"Chilli-lime grilled pineapple spears",n:"Pineapple spears",note:"Off the kitchen counter, grill-charred.",p:"1.00"}]}],
