@@ -207,8 +207,83 @@
    }
   },
   {
-   "n": "Cake Baby cinnamon scrolls",
+   "n": "Paris shower leek and gruyère tartlets",
    "course": "s",
+   "prep_min": 17,
+   "cook_min": 32,
+   "make_ahead": "Cook the leeks up to a day ahead; fill and bake on the day",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets frozen puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "leeks, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "gruyère, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "thyme",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Cut 12 rounds from the pastry and press into a greased muffin tin.",
+     "min": 8
+    },
+    {
+     "text": "Cook the leeks gently in the butter with the thyme leaves for 12 minutes until soft and sweet.",
+     "min": 12
+    },
+    {
+     "text": "Whisk the eggs, cream, salt and pepper.",
+     "min": 2
+    },
+    {
+     "text": "Divide the leeks and gruyère between the cases and pour over the egg mix.",
+     "min": 5
+    },
+    {
+     "text": "Bake 18 to 20 minutes until puffed and golden. Serve warm.",
+     "min": 20
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Cake Baby cinnamon scrolls",
+   "course": "w",
    "prep_min": 30,
    "cook_min": 115,
    "make_ahead": "Best the day they are baked",

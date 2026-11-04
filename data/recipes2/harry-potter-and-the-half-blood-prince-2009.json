@@ -158,8 +158,95 @@
    }
   },
   {
-   "n": "Cocoa dusted chocolate truffles",
+   "n": "Slughorn's mushroom vol-au-vents",
    "course": "s",
+   "prep_min": 15,
+   "cook_min": 26,
+   "make_ahead": "Bake the cases a day ahead and keep in a tin; reheat the filling and fill to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets frozen puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "button mushrooms, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "flat-leaf parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Cut 16 rounds of pastry with a 6cm cutter, then cut a smaller circle half way through each.",
+     "min": 8
+    },
+    {
+     "text": "Brush with egg and bake 15 minutes until puffed. Push the centres down while warm.",
+     "min": 15
+    },
+    {
+     "text": "Cook the mushrooms, garlic and thyme leaves in the butter for 8 minutes until the liquid is gone.",
+     "min": 8
+    },
+    {
+     "text": "Stir in the flour, then the cream, and simmer 2 minutes until thick. Season.",
+     "min": 3
+    },
+    {
+     "text": "Spoon into the cases and finish with chopped parsley.",
+     "min": 4
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Cocoa dusted chocolate truffles",
+   "course": "w",
    "prep_min": 20,
    "cook_min": 124,
    "make_ahead": "Up to 3 days, keep chilled",

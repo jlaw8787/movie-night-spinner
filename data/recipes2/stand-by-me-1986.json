@@ -3,7 +3,7 @@
  "dishes": [
   {
    "n": "Campfire marshmallows",
-   "course": "s",
+   "course": "w",
    "prep_min": 10,
    "cook_min": 10,
    "make_ahead": "Melt the chocolate up to 1 day ahead and re-warm gently; toast the marshmallows fresh over the fire",
@@ -208,6 +208,75 @@
      "af": true
     }
    }
+  },
+  {
+   "n": "Trail walk devilled eggs",
+   "course": "s",
+   "prep_min": 18,
+   "cook_min": 12,
+   "make_ahead": "Boil and fill up to a day ahead, covered in the fridge; dust with paprika to serve",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "yellow mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Lower the eggs into boiling water and cook for 10 minutes.",
+     "min": 12
+    },
+    {
+     "text": "Cool them in iced water, then peel.",
+     "min": 6
+    },
+    {
+     "text": "Halve the eggs lengthways and tip the yolks into a bowl.",
+     "min": 3
+    },
+    {
+     "text": "Mash the yolks with the mayonnaise, mustard, vinegar, salt and pepper until smooth.",
+     "min": 4
+    },
+    {
+     "text": "Spoon the filling back into the whites and dust with paprika and snipped chives.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Campfire hamburger patties",

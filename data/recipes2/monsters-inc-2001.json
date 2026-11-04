@@ -178,8 +178,101 @@
    }
   },
   {
-   "n": "Yeti's lemon snow cones",
+   "n": "Harryhausen's vegetable gyoza",
    "course": "s",
+   "prep_min": 36,
+   "cook_min": 12,
+   "make_ahead": "Fold up to 4 hours ahead and keep on a floured tray in the fridge, or freeze; cook from cold",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "Chinese cabbage, finely shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "shiitake mushrooms, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "ginger, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 24,
+     "u": "",
+     "item": "round gyoza wrappers",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "rice vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Salt the cabbage, leave 10 minutes, then squeeze out the water.",
+     "min": 12
+    },
+    {
+     "text": "Mix the cabbage, mushrooms, spring onions, ginger, garlic, 1 tbsp soy sauce and the sesame oil.",
+     "min": 4
+    },
+    {
+     "text": "Put a teaspoon of filling on each wrapper, wet the edge and pleat it closed.",
+     "min": 20
+    },
+    {
+     "text": "Fry the gyoza flat side down in the oil for 2 minutes, add 80ml water, cover and steam 4 minutes, then uncover until crisp again.",
+     "min": 10
+    },
+    {
+     "text": "Mix the rest of the soy sauce with the rice vinegar for dipping.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Yeti's lemon snow cones",
+   "course": "w",
    "prep_min": 10,
    "cook_min": 35,
    "make_ahead": "Syrup up to 3 days",

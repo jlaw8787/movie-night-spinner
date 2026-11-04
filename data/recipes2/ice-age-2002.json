@@ -3,7 +3,7 @@
  "dishes": [
   {
    "n": "Scrat's chocolate hazelnut acorns",
-   "course": "s",
+   "course": "w",
    "prep_min": 30,
    "cook_min": 180,
    "make_ahead": "Keeps 3 days chilled",
@@ -100,6 +100,65 @@
     {
      "text": "Crumble the feta over, scatter mint, squeeze over the lime and finish with flaky salt. Serve very cold.",
      "min": 10
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Manny's campfire corn with herb butter",
+   "course": "s",
+   "prep_min": 8,
+   "cook_min": 15,
+   "make_ahead": "Make the herb butter up to 3 days ahead",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs, husks on",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "flat-leaf parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the corn in cold water for 15 minutes.",
+     "min": 15
+    },
+    {
+     "text": "Mash the butter with the garlic, chopped parsley, lime zest and a pinch of salt.",
+     "min": 4
+    },
+    {
+     "text": "Cook the corn in the husks over hot coals or a barbecue for 15 minutes, turning, until charred.",
+     "min": 15
+    },
+    {
+     "text": "Peel back the husks and brush the hot corn with the herb butter. Serve with lime wedges.",
+     "min": 3
     }
    ],
    "veg": true,

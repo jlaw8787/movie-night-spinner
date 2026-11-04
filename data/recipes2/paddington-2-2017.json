@@ -71,8 +71,89 @@
    "af": true
   },
   {
-   "n": "Barbershop scone fingers",
+   "n": "Prison kitchen leek and potato soup",
    "course": "s",
+   "prep_min": 14,
+   "cook_min": 32,
+   "make_ahead": "Make the soup up to 2 days ahead; reheat and add the cream to serve",
+   "ingredients": [
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "leeks, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter in a large pot and cook the leeks and onion gently for 10 minutes without colouring.",
+     "min": 12
+    },
+    {
+     "text": "Add the potatoes and stock and simmer 20 minutes until soft.",
+     "min": 20
+    },
+    {
+     "text": "Blend until smooth, stir in the cream and season.",
+     "min": 5
+    },
+    {
+     "text": "Toast and butter the bread and cut into soldiers.",
+     "min": 5
+    },
+    {
+     "text": "Serve the soup in mugs with snipped chives and the soldiers.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Barbershop scone fingers",
+   "course": "w",
    "prep_min": 15,
    "cook_min": 12,
    "make_ahead": "Best the day they are baked",

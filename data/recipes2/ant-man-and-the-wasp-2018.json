@@ -126,8 +126,79 @@
    }
   },
   {
-   "n": "Giant-size choc chip skillet cookie",
+   "n": "Luis's chips and guacamole",
    "course": "s",
+   "prep_min": 12,
+   "cook_min": 5,
+   "make_ahead": "Make the pico de gallo up to 4 hours ahead; mash the avocado just before serving",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "ripe avocados",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes, juiced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "tomatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jalapeño, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "corn chips",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 160C and warm the corn chips on a tray for 5 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Mash the avocados roughly with half the lime juice, a third of the onion and salt.",
+     "min": 4
+    },
+    {
+     "text": "Mix the tomatoes, the rest of the onion, the jalapeño, chopped coriander and the rest of the lime juice for the pico de gallo.",
+     "min": 6
+    },
+    {
+     "text": "Spoon the pico de gallo over the guacamole and serve with the warm chips.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Giant-size choc chip skillet cookie",
+   "course": "w",
    "prep_min": 10,
    "cook_min": 30,
    "make_ahead": "Up to 1 day, warm before serving",
