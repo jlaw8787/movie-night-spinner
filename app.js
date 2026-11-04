@@ -1069,12 +1069,12 @@ function planFive(f,r2){const have=new Set(r2.map(d=>String(d.orig||d.n).toLower
   const out=new Set();for(const [c,n] of [["s",2],["m",1],["w",1],["d",1]]){let k=0;for(const x of byC[c])if(k<n&&have.has(x)&&!out.has(x)){out.add(x);k++}}
   for(const c of ["s","m","w","d"])for(const x of byC[c])if(out.size<5&&have.has(x))out.add(x);
   return out.size?out:null}
-const planAll=f=>{const ck0=planCooked(f),r2=((f._r2&&f._r2.dishes)||[]).map(dietDish),
+const planAll=f=>{const ck0=planCooked(f),r2=((f._r2&&f._r2.dishes)||[]).map(d=>dietDish(d)),
     /* every cooked dish found by name: those are tonight's five. Otherwise the card picks them (planFive), so extras start unticked on hand-built menus too */
     ok=ck0&&ck0.size&&r2.filter(d=>ck0.has(String(d.orig||d.n).toLowerCase())).length>=Math.min(5,ck0.size),ck=ok?ck0:r2.length>5?planFive(f,r2):null,
     hit=d=>ck.has(String(d.orig||d.n).toLowerCase()),sp=!!ck,all=sp?r2.map(d=>hit(d)?d:Object.assign({},d,{spare:true})):r2,m=f.menu||(typeof current!=="undefined"&&current===f?current.menu:null);
   let out=all;if(m&&m.lazy){const keep=new Set([...m.s,...m.m,...m.w,...m.d].map(it=>it.orig||it.n)),few=all.filter(d=>keep.has(d.orig||d.n));if(few.length)out=few}
-  return out.concat(planExtras(f).map(dietDish)).concat(snackDishes(f).map(dietDish))};
+  return out.concat(planExtras(f).map(d=>dietDish(d))).concat(snackDishes(f).map(d=>dietDish(d)))};
 /* the film's other printed dishes: offered in the planner unticked, so every dish on the printed menu can go on the shopping list.
    Method and shopping come from the menu itself (no quantities), and the tonight's-five recipes stay the default cook. */
 /* what the printed card actually shows for a film, so the planner lists exactly those dishes, under the card's own names */
@@ -1263,7 +1263,7 @@ function planHTML(f){
   <p class="pl-hint">Tick what you want to make tonight. The prep sheet, shopping list and times follow your picks.${DIET.veg||dietAF()?" Dishes that don't fit are swapped for their own version, or left off so you can choose.":""}</p>
   ${(()=>{const LB=planLabels(f),HS=planHouse(f);return ["s","m","w","d","c"].map(c=>{const ds=all.filter(d=>d.course===c),hs=HS.filter(h=>h.course===c);return ds.length||hs.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.orig||d.n)}"${planOn(d)?" checked":""}><span>${ESC(LB[d.orig||d.n]&&!d.tag?LB[d.orig||d.n]:d.n)}${d.tag&&!/alcohol-free|vegetarian/i.test(d.n)?`<em class="pl-tag">${TAG[d.tag]}</em>`:""}${d.blocked?`<em class="pl-tag pl-no">${BLK[d.blocked]}</em>`:""}</span><small>${d.extra?"From the menu":(t=>planDur(t.active)+(t.wait?" + "+planMin(t.wait)+" wait":""))(dishTimes(d,PLAN.guests/((f._r2&&f._r2.serves)||4)))}</small></label>`).join("")}${hs.map(h=>`<p class="pl-d pl-house"><span>${ESC(h.n)}<em class="pl-tag">house standard</em></span><small>Served as is</small></p>`).join("")}</fieldset>`:""}).join("")})()}</details>`;
 }
-function planCount(r){const f=current,all=f?planAll(f).filter(d=>d.course!=="c"):r.dishes.map(dietDish),on=all.filter(planOn).length;return `${on} of ${all.length} dishes picked`}
+function planCount(r){const f=current,all=f?planAll(f).filter(d=>d.course!=="c"):r.dishes.map(d=>dietDish(d)),on=all.filter(planOn).length;return `${on} of ${all.length} dishes picked`}
 function planOpen(){try{return localStorage.getItem("mns-plan-open")==="1"}catch(e){return false}}
 /* 175C reads as 175°C, and a lone litre is written "1 L" so it never reads as eleven */
 const degC=t=>String(t).replace(/(\d{2,3})\s?C\b/g,"$1°C").replace(/(\d(?:\.\d+)?)\s?l\b/g,"$1\u00a0L").replace(/(\d[\d.]*)\s+to\s+(\d[\d.]*)/g,"$1\u00a0to\u00a0$2");
