@@ -1530,7 +1530,7 @@ function renderMotw(){
   box.hidden=false;
   box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}" loading="lazy">`:"<span></span>"}<p class="week-k">Menu of the week</p><p class="week-t${f.title.length>26?" long":""}"><span class="motw-n">${ESC(f.title)} (${f.year})</span><small>${ESC(MOTW_KIND[sp.fmt]||"A printed menu from the film")}</small></p><div class="week-acts"><button class="go" type="button" id="motwOpen">Open the menu</button><button type="button" id="motwLock">Lock it in</button></div>`;
   $("motwOpen").addEventListener("click",()=>{setView("wheel");replay(f);addHistory(f);toMenu()});
-  $("motwLock").addEventListener("click",()=>{setWeek(f);replay(f)});
+  $("motwLock").addEventListener("click",()=>{setWeek(f);replay(f);lockAsk(f,$("weekSet"))});
 }
 function setWeek(f){week=newWeekPlan(f.id);saveWeek();renderWeek();updateWatchButton();$("status").textContent=`${f.title} is locked in for this week.`}
 function listText(f,groups,serves){return `${f.title} (${f.year}) shopping list, serves ${serves||(f._r2?PLAN.guests:4)}\n`+groups.map(([a,l])=>`\n${a}\n${l.map(x=>"- "+x).join("\n")}`).join("\n")}
@@ -1567,7 +1567,20 @@ async function openTrolley(f,menuOverride,label){
   mountModal(o,"input,button",modalTrigger);prog();
   if(own&&typeof initTicket==="function")initTicket(o,f,{groups,all,kf,ticks,prog,skip,serves,reopen:()=>{dismissModal(o);setTimeout(()=>openTrolley(f),60)}});
 }
-$("weekSet").addEventListener("click",()=>{if(current)setWeek(current)});
+$("weekSet").addEventListener("click",()=>{if(current){setWeek(current);lockAsk(current,$("weekSet"))}});
+/* after locking in: Director's cut (pick the dishes) or The full feature (cook the lot); either way the Prep sheet and shopping list follow */
+async function lockAsk(f,trigger){if(!f)return;try{await ensureExact(f)}catch(e){}if(!f._r2||!(f._r2.dishes||[]).length)return;
+  const o=document.createElement("dialog");o.className="counter pdfpick lockask";o.setAttribute("aria-label","Locked in: "+f.title);
+  o.innerHTML=`<div class="rate-box"><p class="rate-k">Locked in: ${ESC(f.title)}</p><h3>Roll credits on the menu</h3><div class="pp-opts">
+   <button type="button" data-l="pick"><b>Director's cut</b><span>I'll pick the dishes. The shopping list follows what you tick.</span></button>
+   <button type="button" data-l="all"><b>The full feature</b><span>Cook the lot. Every dish on the menu goes on the Prep sheet and shopping list.</span></button></div></div>`;
+  o.addEventListener("click",async e=>{if(e.target===o)return dismissModal(o);const b=e.target.closest("[data-l]");if(!b)return;dismissModal(o);
+    for(let i=0;i<30&&current!==f;i++)await new Promise(r=>setTimeout(r,100));if(current!==f)return;
+    if(b.dataset.l==="all"){PLAN.off={};for(const x of planExtras(f))PLAN.on[x.n]=1;planSave(f);refreshPlan();setTab("prep");
+      const n=planDishes(f).length;$("status").textContent=`The full feature: all ${n} dishes are on the Prep sheet and shopping list.`}
+    else{setTab("prep");const pb=$("planner"),d=pb&&pb.querySelector(".pl-pick");if(d){d.open=true;pb.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});const c=d.querySelector("input[type=checkbox]");if(c)setTimeout(()=>c.focus({preventScroll:true}),reduce?0:400)}
+      $("status").textContent="Director's cut: tick the dishes you want. The shopping list follows."}});
+  mountModal(o,"[data-l=pick]",trigger||document.activeElement)}
 
 /* video store: browse every film like a rental store */
 const SHOP_AISLES=[["Action and cops",["cop","street","philly"]],["Superheroes",["hero"]],["Sci-fi",["scifi","galaxy"]],["Horror",["horror"]],["Family",["kids","fairytale"]],["Fantasy and adventure",["wizard","adventure"]],["Comedy and teen",["teen","diner"]],["Romance",["romcom"]],["Crime and mob",["redsauce","deli","pizza"]],["Drama",["uptown","soul"]],["Westerns",["western"]],["Around the world",["aussie","asian","mex","tiki"]],["Holiday",["xmas"]]];

@@ -2356,7 +2356,10 @@ dialog.kit .kit-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a;bo
 .hr-w{line-height:1.4}
 
 /* save PDF chooser */
-dialog.pdfpick .rate-box{max-width:480px}
+/* Save PDF and the lock-in pop-up belong to the cinema: red velvet and gold, never the Galaxy Video counter */
+dialog.counter.pdfpick{background:radial-gradient(ellipse at 50% 32%,#5a0f1f 0,#2a070f 55%,#140306 100%) #140306}
+dialog.pdfpick .rate-box{max-width:480px;background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a;border-radius:18px;padding:26px 22px;margin:auto;box-shadow:0 18px 50px rgba(0,0,0,.55)}
+dialog.pdfpick .rate-k{color:#e2b04f}
 .pp-opts{display:flex;flex-direction:column;gap:10px;text-align:left;margin-top:6px}
 .pp-opts button{background:#2a1218;border:1px solid #6b4a2a;border-radius:14px;padding:14px 18px;color:#f3e6c8;cursor:pointer;font:400 14px/1.4 var(--f-body);text-align:left}
 .pp-opts button:hover,.pp-opts button:focus-visible{border-color:#e2b04f;background:#341720}
@@ -2847,7 +2850,7 @@ html,body{overflow-x:clip}
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=071e0a00" defer></script>
 <script src="formats-core.js?v=dc2c547a" defer></script>
-<script src="app.js?v=d5ed314c" defer></script>
+<script src="app.js?v=cf4b3cbc" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
