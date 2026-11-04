@@ -2332,6 +2332,19 @@ async function renderCanvas(src,forPrint){
   const stage=document.createElement("div"),land=src.classList.contains("fmt");
   stage.style.cssText=`position:fixed;left:-20000px;top:0;width:${+src.dataset.w||(land?1123:794)}px;height:${+src.dataset.h||(land?794:1123)}px;`;
   const clone=src.cloneNode(true);clone.style.transform="none";clone.hidden=false;if(forPrint&&land)clone.classList.add("for-print");
+  /* the copy keeps the colours the screen already settled on (logo panels and the like): their load-time checks must not run again on it */
+  clone.querySelectorAll("[onload],[onerror]").forEach(e=>{e.removeAttribute("onload");e.removeAttribute("onerror")});
+  /* the PDF renderer floods a box with the colour of an inset ring shadow ("inset 0 0 0 3px cream" turns a dark logo panel cream):
+     on the copy, each flat inset ring becomes a real bordered frame laid over the box, and the inset shadow is dropped */
+  try{clone.querySelectorAll("[style*=inset]").forEach(e=>{const bs=e.style.boxShadow;if(!bs||!/inset/.test(bs))return;
+    const parts=bs.split(/,(?![^(]*\))/).map(x=>x.trim()),keep=[];let off=0;const frames=[];
+    for(const sh of parts){if(!/\binset\b/.test(sh)){keep.push(sh);continue}
+      /* either order: "inset 0 0 0 3px #fff" or the browser's "rgb(...) 0px 0px 0px 3px inset"; only flat rings (no offset, no blur) become frames */
+      const col=(sh.match(/(rgba?\([^)]*\)|#[0-9a-f]{3,8}\b|\b[a-z]+\b(?<!inset|px))/i)||[])[0],nums=(sh.replace(/rgba?\([^)]*\)/g,"").match(/-?\d+(\.\d+)?(px)?/g)||[]).map(parseFloat);
+      if(col&&nums.length>=4&&nums[0]===0&&nums[1]===0&&nums[2]===0&&nums[3]>0)frames.push([nums[3],col])}
+    if(!frames.length)return;e.style.boxShadow=keep.join(",")||"none";if(getComputedStyle(e).position==="static")e.style.position="relative";
+    /* rings stack inward: each later ring sits inside the earlier ones */
+    frames.sort((a,b)=>a[0]-b[0]);let prev=0;for(const [w,col] of frames){const d=document.createElement("i");d.style.cssText=`position:absolute;left:${prev}px;top:${prev}px;right:${prev}px;bottom:${prev}px;border:${w-prev}px solid ${col};border-radius:inherit;pointer-events:none;box-sizing:border-box`;e.appendChild(d);prev=w}})}catch(err){}
   stage.appendChild(clone);document.body.appendChild(stage);
   try{
     await document.fonts.ready;
@@ -2444,7 +2457,7 @@ async function exportMenu(kind,parts,opts){
         for(let i=0;i<faces.length;i++){
           pdfStep(`Page ${i+1} of ${faces.length+(parts==="all"?1:0)}`);
           const el=document.createElement("div");styleCard(el,current);el.className=card.className;el.style.transform="none";
-          el.style.width=sh.w+"px";el.style.height=sh.h+"px";el.dataset.w=sh.w;el.dataset.h=sh.h;el.innerHTML=faces[i].innerHTML;
+          el.style.width=sh.w+"px";el.style.height=sh.h+"px";el.dataset.w=sh.w;el.dataset.h=sh.h;el.innerHTML=faces[i].innerHTML.replace(/\s(onload|onerror)="[^"]*"/g,"");
           const cv=await renderCanvas(el,true);if(i)pdf.addPage("a4",o);
           pdf.addImage(cv.toDataURL("image/jpeg",0.92),"JPEG",dx,dy,dw,dh);
         }
