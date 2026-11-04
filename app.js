@@ -2333,14 +2333,18 @@ function showOverlay(url,file){
   });
   mountModal(o,"button",modalTrigger);
 }
-async function exportMenu(kind,parts){
-  parts=parts||"all";let sides=0,orient="portrait";
+async function exportMenu(kind,parts,opts){
+  parts=parts||"all";opts=opts||{};const toPrint=!!opts.print;
+  /* printing: every page sits on A4 with an even 5mm white margin, so home printers never clip the border (see addImage below) */let sides=0,orient="portrait";
   if(!current)return;
   const btns=[$("pdf"),$("png")];btns.forEach(b=>b.disabled=true);
-  const pb=$("pdf"),pbText=pb.textContent;if(kind==="pdf"){pb.classList.add("busy");pb.setAttribute("aria-busy","true");pb.textContent="Making your PDF..."}
-  var pdfStep=t=>{if(kind==="pdf"){pb.textContent=`Making your PDF: ${t}`;$("status").textContent=`Making your A4 PDF: ${t.toLowerCase()}...`}};
+  const pb=toPrint?$("print"):$("pdf"),pbText=pb.textContent,word=toPrint?"Getting it ready":"Making your PDF";if(kind==="pdf"){pb.classList.add("busy");pb.setAttribute("aria-busy","true");pb.textContent=word+"..."}
+  var pdfStep=t=>{if(kind==="pdf"){pb.textContent=`${word}: ${t}`;$("status").textContent=`Making your A4 PDF: ${t.toLowerCase()}...`}};
   $("status").textContent=kind==="pdf"?"Making your A4 PDF...":"Building your image...";
-  if(!await loadExportTools(kind==="pdf")){btns.forEach(b=>b.disabled=false);$("status").textContent="Couldn't load the export tools. Check your connection and try again.";return}
+  if(!await loadExportTools(kind==="pdf")){if(opts.win)try{opts.win.close()}catch(e){}btns.forEach(b=>b.disabled=false);$("status").textContent="Couldn't load the export tools. Check your connection and try again.";return}
+  const API2=window.jspdf&&window.jspdf.jsPDF&&window.jspdf.jsPDF.API,orig2=API2&&API2.addImage;
+  if(toPrint&&API2)API2.addImage=function(img,fmt,x,y,w,h,...rest){if(typeof w!=="number")return orig2.call(this,img,fmt,x,y,w,h,...rest);const PW=this.internal.pageSize.getWidth(),PH=this.internal.pageSize.getHeight(),k=Math.min((PW-10)/PW,(PH-10)/PH);
+    return orig2.call(this,img,fmt,PW*(1-k)/2+x*k,PH*(1-k)/2+y*k,w*k,h*k,...rest)};
   try{
     const canvas=kind==="pdf"&&parts==="prep"?null:await renderCanvas(kind==="pdf"||tab==="menu"?card:prep,kind==="pdf");
     const land=(kind==="pdf"||tab==="menu")&&card.classList.contains("fmt");
@@ -2371,6 +2375,7 @@ async function exportMenu(kind,parts){
       if(parts==="all"){pdfStep("The prep sheet");const prepCanvas=await renderCanvas(prep);
       pdf.addPage("a4","portrait");pdf.addImage(prepCanvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297)}
       data=pdf.output("blob");filename=name+".pdf";
+      if(toPrint){printPdf(data,opts.win);$("status").textContent="Menu ready to print.";return}
     }else{
       data=await new Promise(r=>canvas.toBlob(r,"image/jpeg",0.92));filename=name+".jpg";
       if(!data)data=await (await fetch(canvas.toDataURL("image/jpeg",0.92))).blob();
@@ -2389,8 +2394,8 @@ async function exportMenu(kind,parts){
       }
     }else if(!inClaude){plainDownload(data,filename);$("status").textContent=`Downloaded ${filename}. ${parts==="menu"&&kind==="pdf"?pdfTip():"Print it at A4, actual size."}`}
     else{showOverlay(canvas.toDataURL("image/png"));$("status").textContent=""}
-  }catch(e){console.error(e);$("status").textContent=`Couldn't build the image (${(e&&(e.name||e.message))||"unknown error"}). Close and reopen the app, then try again.`}
-  finally{btns.forEach(b=>b.disabled=false);if(kind==="pdf"){pb.textContent=pbText;pb.classList.remove("busy");pb.removeAttribute("aria-busy")}}
+  }catch(e){console.error(e);if(opts.win)try{opts.win.close()}catch(x){}$("status").textContent=`Couldn't build the image (${(e&&(e.name||e.message))||"unknown error"}). Close and reopen the app, then try again.`}
+  finally{if(API2&&orig2)API2.addImage=orig2;btns.forEach(b=>b.disabled=false);if(kind==="pdf"){pb.textContent=pbText;pb.classList.remove("busy");pb.removeAttribute("aria-busy")}}
 }
 
 $("spin").addEventListener("click",e=>{kbSpin=lastKey||e.detail===0;spin()});
@@ -2501,7 +2506,18 @@ function fillPrint(){
   else{const c=card.cloneNode(true);c.hidden=false;const land=card.classList.contains("fmt");pa.appendChild(printPage(c,+card.dataset.w||(land?1123:794),+card.dataset.h||(land?794:1123)))}
   const pp=prepA4();pa.appendChild(printPage(pp,794,1123));
 }
-$("print").addEventListener("click",()=>{fillPrint();window.print()});
+/* Print sends the finished PDF to the printer, so no browser adds a web address, date or page numbers. On a computer it goes straight to the print dialog;
+   on a phone or tablet it opens in the PDF viewer, where Share then Print gives clean pages */
+const coarse=()=>matchMedia("(pointer:coarse)").matches;
+function printPdf(blob,win){const url=URL.createObjectURL(blob);
+  if(win&&!win.closed){win.location.href=url;setTimeout(()=>URL.revokeObjectURL(url),120000);return}
+  const fr=document.createElement("iframe");fr.style.cssText="position:fixed;width:0;height:0;border:0;right:0;bottom:0";fr.setAttribute("aria-hidden","true");fr.src=url;
+  fr.onload=()=>{setTimeout(()=>{try{fr.contentWindow.focus();fr.contentWindow.print()}catch(e){window.open(url,"_blank")}},300);setTimeout(()=>{fr.remove();URL.revokeObjectURL(url)},120000)};document.body.appendChild(fr)}
+$("print").addEventListener("click",()=>{if(!current)return;
+  /* the new tab has to open on the tap itself or phones block it; it shows a holding line until the PDF is ready */
+  let win=null;if(coarse()){try{win=window.open("","_blank");if(win)win.document.write('<title>Getting your menu ready</title><body style="font:18px system-ui;padding:40px;color:#333;background:#fff">Getting your menu ready to print...</body>')}catch(e){win=null}}
+  const pb=$("print"),t=pb.textContent;pb.disabled=true;pb.textContent="Getting it ready...";
+  exportMenu("pdf","all",{print:true,win}).finally(()=>{pb.disabled=false;pb.textContent=t})});
 window.addEventListener("beforeprint",()=>{if(!$("printArea").children.length)fillPrint()});
 window.addEventListener("afterprint",()=>{$("printArea").innerHTML=""});
 $("copy").addEventListener("click",()=>{
@@ -2948,7 +2964,17 @@ function prepTick(li){
 }
 prep.addEventListener("click",e=>{const li=e.target.closest&&e.target.closest("li[data-k]");if(li&&prep.closest(".preview"))prepTick(li)});
 prep.addEventListener("keydown",e=>{const li=e.target.closest&&e.target.closest("li[data-k]");if(li&&(e.key===" "||e.key==="Enter")){e.preventDefault();prepTick(li)}});
-function prepClean(c){c.querySelectorAll(".pp-done").forEach(x=>x.classList.remove("pp-done"));c.querySelectorAll("li[data-k]").forEach(x=>{x.removeAttribute("tabindex");x.removeAttribute("role");x.removeAttribute("aria-checked")})}
+/* dark prep sheets print on light paper with dark ink (a full black page is slow, smudgy and wasteful); the accent darkens until it reads on paper */
+const hexRGB=h=>{const m=String(h||"").trim().match(/^#?([0-9a-f]{6})$/i);return m?[0,2,4].map(i=>parseInt(m[1].slice(i,i+2),16)):null};
+const relLum=c=>{const f=v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)};return .2126*f(c[0])+.7152*f(c[1])+.0722*f(c[2])};
+const toHexC=c=>"#"+c.map(v=>Math.round(v).toString(16).padStart(2,"0")).join("");
+function inkSafe(c){const g=hexRGB(c.style.getPropertyValue("--mg"));if(!g||relLum(g)>.3)return;const PAPER="#fbf8f1",pl=relLum(hexRGB(PAPER));
+  c.style.setProperty("--mg",PAPER);c.style.setProperty("--mi",relLum(g)<.05?toHexC(g):"#1b1b1b");
+  for(const v of ["--ma","--m2"]){let a=hexRGB(c.style.getPropertyValue(v));if(!a)continue;let n=0;while((pl+.05)/(relLum(a)+.05)<4.5&&n++<20)a=a.map(x=>x*.88);c.style.setProperty(v,toHexC(a))}
+  c.classList.add("pp-ink")}
+function prepClean(c){inkSafe(c);
+  /* list numbers written as text: the PDF renderer drops the gap after list markers ("1Steak tartare") */
+  c.querySelectorAll("ol").forEach(ol=>{if(ol.dataset.num)return;ol.dataset.num="1";let n=+(ol.getAttribute("start")||1);for(const li of ol.children){if(li.tagName!=="LI")continue;const sp=document.createElement("span");sp.className="pp-num";sp.textContent=(n++)+". ";li.prepend(sp)}ol.style.listStyle="none"});c.querySelectorAll(".pp-done").forEach(x=>x.classList.remove("pp-done"));c.querySelectorAll("li[data-k]").forEach(x=>{x.removeAttribute("tabindex");x.removeAttribute("role");x.removeAttribute("aria-checked")})}
 
 {const skip=e=>{if(spinning||($("theatre").classList.contains("closed")&&$("tease").classList.contains("leader"))){skipReq=true;if(e)e.stopPropagation()}};
  const wb=document.querySelector(".wheel-box");if(wb)wb.addEventListener("click",skip,true);
