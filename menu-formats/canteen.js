@@ -144,7 +144,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   const lunchAt=`12:${String((parseInt(number,10)||0)%60).padStart(2,"0")}`;
   /* a long wink keeps a whole phrase (cut at a comma, "and" or "with"), never a fragment like "Bruce Bogtrotter and the"; if no clean phrase fits, the plain subject is used */
   const cut=(w,n)=>{if(!w||w.length<=n)return w;for(const sep of [", "," and "," with "," at "," in "," on "]){const i=w.indexOf(sep);if(i>3&&i<=n)return w.slice(0,i)}return null};
-  const subj=[cut(winks[0],30)||fall[0],cut(winks[1],30)||fall[1],lunchAt,cut(winks[2],30)||fall[3],cut(winks[3],30)||fall[4]];
+  /* timetable slots are lessons or duties: a wink that is mostly people's names falls back to the slot's own label */
+  const named=w=>{const ws=String(w||"").split(/\s+/).filter(Boolean);return ws.length&&ws.filter(x=>/^[A-Z]/.test(x)).length/ws.length>.5};
+  const sl=(w,i)=>{const c=cut(w,30);return !c||named(c)?fall[i]:c};
+  const subj=[sl(winks[0],0)||fall[0],sl(winks[1],1),lunchAt,sl(winks[2],3),sl(winks[3],4)];
   const stripBg=gi===0?`background:${mix(paper,"#000000",.04)};border-bottom:3px double ${ink};`
     :gi===1?`background:${mix(ink,acc,.25)};`
     :gi===2?`background:repeating-linear-gradient(0deg,${mix(paper,"#9fc9a4",.55)} 0 18px,${paper} 18px 36px);border-bottom:2px solid ${mix(ink,paper,.4)};`

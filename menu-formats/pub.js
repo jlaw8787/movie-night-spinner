@@ -233,7 +233,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const raffle=`<div style="position:relative;flex:none;width:${RW}px;transform:rotate(${(T.tilt*.5).toFixed(2)}deg);background:linear-gradient(165deg,rgba(255,255,255,.35),transparent 55%),${mix("#f7e7c2",acc,.22)};box-shadow:0 5px 14px rgba(0,0,0,.3);display:flex;color:#211a12">
       <div style="width:62px;border-right:2px dashed rgba(33,26,18,.45);display:flex;align-items:center;justify-content:center"><div style="transform:rotate(-90deg);white-space:nowrap;font:800 18px/1 ${body};letter-spacing:.1em">No. ${esc(num.padStart(4,"0"))}</div></div>
       <div style="flex:1;padding:14px 16px 14px;min-width:0">
-        <div style="${caps(15,"#4a3a24",.16)}">${esc(fam?"Friday raffle":T.raffle)}</div>
+        <div style="${caps(15,"#4a3a24",.16)}">${esc(fl.prop&&fl.prop.title?"Keep this":fam?"Friday raffle":T.raffle)}</div>
         <div style="font:${E.dw}${rT.z}px/1.05 ${disp};color:#1b150e;margin:6px 0">${esc(up(prop.title))}</div>
         ${prop.lines.map(l=>`<div style="font:500 16px/1.3 ${body};color:#3a2f22">${esc(trunc(l,28))}</div>`).join("")}
         </div></div>`;

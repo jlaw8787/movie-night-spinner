@@ -126,7 +126,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const bandHtml=`<div style="position:absolute;left:0;right:0;top:0;height:${bandH}px;background:${bandC};color:${paper};text-align:center;border-bottom:4px solid ${E.gilt}">
     <div style="margin-top:22px;font:600 15px/1.2 ${B};letter-spacing:.24em;text-transform:uppercase;opacity:.92;white-space:nowrap;overflow:hidden;padding:0 30px">${esc(sign)}</div>
     <div data-fitw="${vs}" data-min="24" style="margin:8px 30px 0;font-family:${D};font-weight:${E.dw};font-size:${vs}px;line-height:1.08;white-space:nowrap;overflow:hidden;${up}">${esc(venue)}</div>
-    <div style="margin-top:6px;font:italic 400 17px/1.2 ${B};opacity:.92">The Tea Room, top floor</div></div>`;
+    <div style="margin-top:6px;font:italic 400 17px/1.2 ${B};opacity:.92">${/house|home|kitchen|cottage|flat|apartment|windsor gardens|street/i.test(venue+" "+sign)?"Tea at home, in the front room":"The Tea Room, top floor"}</div></div>`;
   const WX=24,WY=bandH+52,WW=672-2*WX,WH=470;
   const winLabel=`<div data-fitw="24" data-min="16" style="position:absolute;left:${WX}px;width:${WW-200}px;top:${bandH+14}px;text-align:center;white-space:nowrap;overflow:hidden;font-family:${D};font-weight:${E.dw};font-size:24px;line-height:1.1;color:${acc};${up}">${xmas?"Our Christmas windows":"In the windows this season"}</div>`;
   const PW=420,PH=630,BW=({P:10,S:12,E:4,M:1})[band(ctx.era||"modern")],RX=24+PW+2*BW+26,RW=672-24-RX;

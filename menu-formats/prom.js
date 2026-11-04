@@ -246,7 +246,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const PMq=!!(ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&TMDB_POSTERS[f.id]));
   const BH=PMq?112:172,SY=BH,SH=PMq?580:440;
   /* gym banner: shape follows the era */
-  const kick=`${E.kick}, CLASS OF ${year}`;
+  /* a dance competition film reads as a comp, not a school dance */
+  const comp=/grand prix|championship|competition|ballroom|dance comp|dance-off|regional|nationals/i.test(String(fl&&fl.venue||"")+" "+String(fl&&fl.sign||"")+" "+(f.title||""));
+  const kick=comp?`DANCE CHAMPIONSHIP, ${year}`:`${E.kick}, CLASS OF ${year}`;
   const sT=fitType(sign,W-96,PMq?58:92,E.dcw,PMq?40:56,24,1.04,2);
   let banner;
   const signHtml=`<div style="${caps(18,E.proc==="letterpress"||E.proc==="offset"?mix(bandText,band,.15):ACC==band?bandText:bandText,.22)};text-align:center">${esc(kick)}</div>

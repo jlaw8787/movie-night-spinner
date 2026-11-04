@@ -290,7 +290,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="font:700 14px/1 ${B};letter-spacing:.24em;color:${sub}">SEAT</div>
       <div style="${dispStyle}font-size:${seat.length>3?44:52}px;line-height:1.02;color:${fg};font-style:normal;margin-top:3px">${seat}</div>
       <div style="font:700 14px/1 ${B};letter-spacing:.14em;color:${sub}">WINDOW</div></div>`;
-  const heading=(col,sub,acc,al)=>`${kick(`Flight ${flight} · Home to ${ctx.f.year}`,acc,al)}
+  const heading=(col,sub,acc,al)=>`${kick(`Flight ${flight} · Now boarding`,acc,al)}
         <div data-fline="2" data-fs="20" style="${dispStyle}font-size:${F.venue.length>22?(G==="prop"?30:27):(G==="prop"?36:32)}px;line-height:1.04;color:${col};margin-top:5px;text-align:${al||"left"};${G==="prop"?inkSpread:""}">${esc(F.venue)}</div>
         <div data-fs="14" style="font:${G==="prop"?"italic ":""}400 16px/1.2 ${B};color:${sub};margin-top:4px;text-align:${al||"left"}">${esc(F.sign)}</div>`;
   let strip,winTop,winH,winW,winRad,frame,winExtra="";

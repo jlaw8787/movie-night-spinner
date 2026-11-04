@@ -182,14 +182,14 @@ const ERA={
  "modern":{disp:"Space Grotesk",dw:"700 ",dcw:.6,body:"Work Sans",bcw:.55,board:"#e8d7b8",plank:"ply",ink:"#141414",strip:"#141414",photo:"saturate(1.05)",radius:16,kick:"KIOSK",rep:"Surf report"}
 };
 const TONE={
- gritty:{wear:.8,bleach:.1,tilt:-2,photo:"contrast(1.14) saturate(.88)",kick:"No shirt, no service",cond:"Rips running, swim between the flags",close:"Cash only. No change for the phone."},
+ gritty:{wear:.8,bleach:.1,tilt:-2,photo:"contrast(1.14) saturate(.88)",kick:"No shirt, no service",cond:"Rips running, swim where the lifeguard can see you",close:"Cash only. No change for the phone."},
  glossy:{wear:.08,bleach:0,tilt:0,photo:"saturate(1.12) brightness(1.03)",kick:"Beachfront dining",cond:"Glassy and clean all morning",close:"Umbrellas and loungers from the front desk."},
  warm:{wear:.35,bleach:.08,tilt:-1.5,photo:"sepia(.08) saturate(1.06)",kick:"Fresh every morning",cond:"Small and clean, perfect for learners",close:"Thanks for keeping the beach clean."},
  eerie:{wear:.5,bleach:.04,tilt:1.5,photo:"saturate(.8) contrast(1.1)",kick:"Closed after dark",cond:"Murky water, low visibility",close:"Lifeguard off duty from five."},
  playful:{wear:.25,bleach:.06,tilt:-3,photo:"saturate(1.22) brightness(1.04)",kick:"Sandy feet welcome",cond:"Fun waves, bring the boogie board",close:"Spot prize for the best sandcastle."},
  grand:{wear:.12,bleach:0,tilt:0,photo:"contrast(1.06)",kick:"The finest on the coast",cond:"Long clean lines on the point",close:"Service to your deckchair on request."},
  tender:{wear:.3,bleach:.1,tilt:-1,photo:"brightness(1.05) saturate(.95)",kick:"See you at sunset",cond:"Gentle swell easing towards evening",close:"Open until the sun goes down."},
- tense:{wear:.45,bleach:.04,tilt:1,photo:"contrast(1.16)",kick:"Beach closed? Kiosk open",cond:"Sighting reported, stay inside the flags",close:"Listen for the siren."},
+ tense:{wear:.45,bleach:.04,tilt:1,photo:"contrast(1.16)",kick:"Beach closed? Kiosk open",cond:"Sighting reported, stay close to shore",close:"Listen for the siren."},
  scrappy:{wear:.9,bleach:.14,tilt:-3.5,photo:"contrast(1.1)",kick:"Honesty box if we're out",cond:"Messy onshore slop, paddle out anyway",close:"Back in five. Maybe ten."}
 };
 /* the same kiosk away from the water (a backyard, a town square, a tournament): no surf, swell or lifeguard */
