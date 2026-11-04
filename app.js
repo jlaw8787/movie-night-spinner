@@ -1069,6 +1069,7 @@ const BASES=[
 const baseOf=i=>i&&i.q!=null&&baseG(i.q,i)!=null&&BASES.find(b=>b.re.test(String(i.item)));
 /* tap water is never on the shopping list; soda, tonic, mineral and coconut water are */
 const WATER_RE=/^((cold|hot|boiling|iced|ice|warm|fresh|filtered|tap)\s+)?water\b(?!\s*(crackers?|chestnuts?))|^(boiling|hot|cold) and (cold|hot) water|^water or (soda|stock)/i;
+const EACH_G=[[/potato/i,200],[/marshmallow/i,7],[/almond/i,1.2],[/raspberr/i,4],[/strawberr/i,15],[/steak/i,250],[/onion/i,150],[/carrot/i,120],[/tomato/i,120],[/apple/i,150],[/lemon/i,100],[/lime/i,70],[/banana/i,120],[/blueberr/i,1]];
 function shopLines(list){
   const tally={},order=[];
   const flat=[];for(const {d,k} of list)for(const i of d.ingredients||[]){if(WATER_RE.test(String(i.item))&&!/stock/i.test(i.item))continue;
@@ -1085,6 +1086,19 @@ function shopLines(list){
     /* two different cuts of the same thing ("lemon, juiced" and "lemons") share the plain name */
     const item=t.items.size>1?String(t.item).split(/,| \(/)[0].trim():t.item;
     if("tsp" in t.parts&&"tbsp" in t.parts){t.parts.tbsp+=t.parts.tsp/3;delete t.parts.tsp;t.order=t.order.filter(u=>u!=="tsp")}
+    /* spoons and cups next to a weight or volume fold into it, so the line reads as one amount ("375g caster sugar", not "1 tsp + 370g") */
+    for(const base of ["ml","g"])if(base in t.parts){const per=base==="ml"?{tsp:5,tbsp:15,cup:250}:{tsp:4,tbsp:12,cup:200};
+      for(const u of ["tsp","tbsp","cup"])if(u in t.parts){t.parts[base]+=t.parts[u]*per[u];delete t.parts[u];t.order=t.order.filter(x=>x!==u)}}
+    /* the same thing in grams and millilitres (sour cream, ice cream) adds up as grams; spoons alongside cups fold into cups */
+    if("g" in t.parts&&"ml" in t.parts){t.parts.g+=t.parts.ml;delete t.parts.ml;t.order=t.order.filter(x=>x!=="ml")}
+    if("cup" in t.parts)for(const [u,d] of [["tbsp",16],["tsp",48]])if(u in t.parts){t.parts.cup+=t.parts[u]/d;delete t.parts[u];t.order=t.order.filter(x=>x!==u)}
+    /* a count next to a weight ("1 potato + 800g") becomes one weight, using a standard size */
+    if(""in t.parts&&"g" in t.parts){const w=EACH_G.find(([re])=>re.test(item));if(w){t.parts.g+=t.parts[""]*w[1];delete t.parts[""];t.order=t.order.filter(x=>x!=="")}}
+    /* herb leaves are bought by the bunch: about a cup of leaves, or 20 leaves, to a bunch */
+    {const hm=String(item).match(/^(fresh )?(mint|basil|coriander|parsley|dill|sage|thyme|tarragon|oregano|curry|kaffir lime|makrut lime|shiso|perilla|thai basil)( leaves|,.*leaves)/i);
+     if(hm&&(""in t.parts||"cup" in t.parts)&&!("g" in t.parts)){const b=Math.max(1,Math.ceil((t.parts[""]||0)/20+(t.parts.cup||0)-0.05));return `${b} bunch${b>1?"es":""} ${hm[2].toLowerCase()}@${t.a}`}}
+    /* nobody buys half an egg or half a lemon: counts round up on the shopping list */
+    if(""in t.parts&&!WHOLE_RE.test(item))t.parts[""]=Math.max(1,Math.ceil(t.parts[""]-0.05));
     if(!t.order.length)return item+"@"+t.a;
     /* bags, jars, tins and the like are bought whole */
     if(""in t.parts&&WHOLE_RE.test(item))t.parts[""]=Math.ceil(t.parts[""]-0.05);
