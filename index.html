@@ -1604,6 +1604,7 @@ body.in-shop .quick-mute:focus-visible{outline-color:#ff3d6e}
 .sv-sign .fit-t{font-family:var(--f-board);letter-spacing:.06em;color:#b3172f;text-shadow:0 1px 0 rgba(255,255,255,.25);opacity:.88;mix-blend-mode:multiply;filter:url(#none)}
 .sv-sign small{display:block;margin-top:.25em;font-family:"Oswald",sans-serif;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#1d3aa8;opacity:.8;mix-blend-mode:multiply}
 .sv-aisles{position:relative;overflow:hidden;border-radius:10px;aspect-ratio:1774/887;margin:0 0 14px;box-shadow:0 10px 24px rgba(0,0,0,.45)}
+.sv-pan{position:absolute;inset:0;container-type:inline-size}
 .sv-aisles img{position:absolute;inset:0;width:100%;height:100%}
 .sv-hang{border:0;padding:0 2%;background:transparent;cursor:pointer;border-radius:2px}
 .sv-hang .fit-t{font-family:var(--f-board);letter-spacing:.05em;color:#1d3aa8;opacity:.9;mix-blend-mode:multiply}
@@ -1654,7 +1655,15 @@ html{scroll-padding-top:var(--topH,84px)}
   #viewShop .shop-count{order:8}
   #viewShop .aisle-nav{order:8}
   #viewShop #shopAisles{order:9}
-  #viewShop .sv-aisles{display:none}
+  /* phones: the shop photo pans sideways at a size where the signs can be read and tapped */
+  #viewShop .sv-aisles{order:7;aspect-ratio:auto;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scrollbar-width:none;margin:16px 0 14px;-webkit-overflow-scrolling:touch}
+  #viewShop .sv-aisles::-webkit-scrollbar{display:none}
+  #viewShop .sv-pan{position:relative;inset:auto;width:720px;height:360px}
+  #viewShop .sv-hang::after{content:"";position:absolute;left:-4px;right:-4px;top:min(-8px,calc(50% - 22px));bottom:min(-8px,calc(50% - 22px))}
+  #viewShop .sv-more{gap:8px 8px;bottom:7%}
+  #viewShop .sv-more .sv-board{font-size:13px;min-height:36px;padding:0 12px;display:inline-flex;align-items:center}
+  #viewShop .sv-aisles .sv-aisles-k{display:block;position:sticky;left:0;bottom:auto;width:auto;box-sizing:border-box;background:#0b0f2a;padding:8px 10px;font-size:13px}
+  #viewShop .sv-aisles .sv-aisles-k::before{content:"Swipe the shop. "}
 }
 /* desktop store: the member card and the specials board share a row, card left, board right, ahead of the aisle photo */
 @media (min-width:960px){
@@ -2850,7 +2859,7 @@ html,body{overflow-x:clip}
     </div>
     
     <div class="sv-board" id="svBoard"></div>
-    <div class="sv-aisles"><img src="assets/hero/aisles-1000.webp" srcset="assets/hero/aisles-1000.webp 1000w, assets/hero/aisles-1400.webp 1400w, assets/hero/aisles.webp 1774w" sizes="(max-width:640px) 460px, 1240px" alt="Inside the shop" loading="lazy"><button type="button" class="sv-hang fit" data-go="wall" style="left:9.13%;top:4.51%;width:15.67%;height:9.70%"><span class="fit-t">New releases</span></button><button type="button" class="sv-hang fit" data-go="Comedy and teen" style="left:40.70%;top:10.60%;width:19.05%;height:8.12%"><span class="fit-t">Comedy</span></button><button type="button" class="sv-hang fit" data-go="Family" style="left:64.04%;top:19.50%;width:9.13%;height:5.07%"><span class="fit-t">Family</span></button><button type="button" class="sv-hang fit" data-go="Horror" style="left:39.52%;top:22.44%;width:6.54%;height:3.49%"><span class="fit-t">Horror</span></button><button type="button" class="sv-hang fit" data-go="Sci-fi" style="left:50.68%;top:24.46%;width:5.86%;height:3.04%"><span class="fit-t">Sci-fi</span></button><button type="button" class="sv-hang fit" data-go="Drama" style="left:79.03%;top:25.48%;width:5.36%;height:3.04%"><span class="fit-t">Drama</span></button><div class="sv-more" aria-label="More aisles"><button type="button" class="sv-hang-chip sv-board" data-go="Action and cops">Action</button><button type="button" class="sv-hang-chip sv-board" data-go="Superheroes">Superheroes</button><button type="button" class="sv-hang-chip sv-board" data-go="Romance">Romance</button><button type="button" class="sv-hang-chip sv-board" data-go="Crime and mob">Crime</button><button type="button" class="sv-hang-chip sv-board" data-go="Fantasy and adventure">Fantasy</button><button type="button" class="sv-hang-chip sv-board" data-go="Westerns">Westerns</button><button type="button" class="sv-hang-chip sv-board" data-go="Musicals">Musicals</button><button type="button" class="sv-hang-chip sv-board" data-go="Around the world">World</button><button type="button" class="sv-hang-chip sv-board" data-go="Late Show">Late Show</button></div><p class="sv-aisles-k" data-tap>Tap a sign to walk to that aisle</p></div><div class="sv-jump" aria-label="Walk to an aisle"><button type="button" class="sv-hang-chip" data-go="wall">New releases</button><button type="button" class="sv-hang-chip" data-go="Comedy and teen">Comedy</button><button type="button" class="sv-hang-chip" data-go="Family">Family</button><button type="button" class="sv-hang-chip" data-go="Horror">Horror</button><button type="button" class="sv-hang-chip" data-go="Sci-fi">Sci-fi</button><button type="button" class="sv-hang-chip" data-go="Drama">Drama</button></div>
+    <div class="sv-aisles"><div class="sv-pan"><img src="assets/hero/aisles-1000.webp" srcset="assets/hero/aisles-1000.webp 1000w, assets/hero/aisles-1400.webp 1400w, assets/hero/aisles.webp 1774w" sizes="(max-width:640px) 460px, 1240px" alt="Inside the shop" loading="lazy"><button type="button" class="sv-hang fit" data-go="wall" style="left:9.13%;top:4.51%;width:15.67%;height:9.70%"><span class="fit-t">New releases</span></button><button type="button" class="sv-hang fit" data-go="Comedy and teen" style="left:40.70%;top:10.60%;width:19.05%;height:8.12%"><span class="fit-t">Comedy</span></button><button type="button" class="sv-hang fit" data-go="Family" style="left:64.04%;top:19.50%;width:9.13%;height:5.07%"><span class="fit-t">Family</span></button><button type="button" class="sv-hang fit" data-go="Horror" style="left:39.52%;top:22.44%;width:6.54%;height:3.49%"><span class="fit-t">Horror</span></button><button type="button" class="sv-hang fit" data-go="Sci-fi" style="left:50.68%;top:24.46%;width:5.86%;height:3.04%"><span class="fit-t">Sci-fi</span></button><button type="button" class="sv-hang fit" data-go="Drama" style="left:79.03%;top:25.48%;width:5.36%;height:3.04%"><span class="fit-t">Drama</span></button><div class="sv-more" aria-label="More aisles"><button type="button" class="sv-hang-chip sv-board" data-go="Action and cops">Action</button><button type="button" class="sv-hang-chip sv-board" data-go="Superheroes">Superheroes</button><button type="button" class="sv-hang-chip sv-board" data-go="Romance">Romance</button><button type="button" class="sv-hang-chip sv-board" data-go="Crime and mob">Crime</button><button type="button" class="sv-hang-chip sv-board" data-go="Fantasy and adventure">Fantasy</button><button type="button" class="sv-hang-chip sv-board" data-go="Westerns">Westerns</button><button type="button" class="sv-hang-chip sv-board" data-go="Musicals">Musicals</button><button type="button" class="sv-hang-chip sv-board" data-go="Around the world">World</button><button type="button" class="sv-hang-chip sv-board" data-go="Late Show">Late Show</button></div></div><p class="sv-aisles-k" data-tap>Tap a sign to walk to that aisle</p></div><div class="sv-jump" aria-label="Walk to an aisle"><button type="button" class="sv-hang-chip" data-go="wall">New releases</button><button type="button" class="sv-hang-chip" data-go="Comedy and teen">Comedy</button><button type="button" class="sv-hang-chip" data-go="Family">Family</button><button type="button" class="sv-hang-chip" data-go="Horror">Horror</button><button type="button" class="sv-hang-chip" data-go="Sci-fi">Sci-fi</button><button type="button" class="sv-hang-chip" data-go="Drama">Drama</button></div>
     <div class="cal" id="shopCal" aria-label="Holiday calendar"></div>
     <div class="member" id="memberCard"></div>
     <p class="shop-count" id="shopCount" aria-live="polite"></p>
@@ -2987,7 +2996,7 @@ html,body{overflow-x:clip}
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=06e91e0a" defer></script>
 <script src="formats-core.js?v=bb3446ef" defer></script>
-<script src="app.js?v=03d382ba" defer></script>
+<script src="app.js?v=47d66be6" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

@@ -334,7 +334,7 @@ function mountModal(o,initial,trigger,onClose){
   try{if(typeof history!=="undefined"&&history.pushState&&!o.dataset.keep){if(window.__histHandoff){clearTimeout(window.__histHandoff);window.__histHandoff=0}else history.pushState(Object.assign({},history.state||{},{m:1}),"");o._hist=true}}catch(e){}
   /* Neutralise native dialog sizing; existing overlay classes keep their padding and visual treatment. */
   Object.assign(o.style,{margin:"0",border:"0",maxWidth:"none",maxHeight:"none",width:"100%",height:"100%",boxSizing:"border-box",color:"inherit"});
-  if(o._mm){document.body.appendChild(o);if(!o.open)o.showModal();const f=o.querySelector(initial);if(f)f.focus({preventScroll:true});return}
+  if(o._mm){document.body.appendChild(o);if(!o.open)o.showModal();const f=initial&&o.querySelector(initial);if(f)f.focus({preventScroll:true});return}
   o._mm=1;
   /* one close X in the same corner on every pop-up (the box art case keeps its own) */
   const addX=()=>{if(o.querySelector(".x,.modal-x"))return;const b=document.createElement("button");b.type="button";b.className="modal-x";b.setAttribute("aria-label","Close");b.textContent="×";b.addEventListener("click",()=>dismissModal(o));o.append(b)};
@@ -351,7 +351,7 @@ function mountModal(o,initial,trigger,onClose){
     else if(!e.shiftKey&&(index===items.length-1||index<0)){e.preventDefault();items[0].focus()}
   });
   document.body.appendChild(o);o.showModal();
-  const first=o.querySelector(initial);if(first)first.focus({preventScroll:true});
+  const first=initial&&o.querySelector(initial);if(first)first.focus({preventScroll:true});
 }
 
 /* each film's full menu (tagline, blurb, methods, shopping, and its finished poster menu or exact recipe)
@@ -1926,7 +1926,10 @@ function openSlip(f,go){
     saveMember();renderMember();buzz(30);
     close();go();
   });
-  mountModal(o,".go",modalTrigger);
+  /* the slip opens at the top (member, date, due back, then the cover): focus goes to the slip itself, not "Roll the film" at the foot,
+     so no phone scrolls down to a focused button; Tab still reaches every control in order */
+  mountModal(o,null,modalTrigger);o.focus({preventScroll:true});
+  const top=()=>{if(document.activeElement===o)o.scrollTop=0};top();requestAnimationFrame(top);setTimeout(top,150);
 }
 /* classification sticker */
 const rateCls=r=>r.replace(/\s/g,"");
