@@ -2815,7 +2815,10 @@ function kitFonts(){if(!document.getElementById("kitFonts")){const l=document.cr
 function kitBits(f){
   const L=f._lib||f._kit||{},fl=L.flavour||{},pal=L.palette||{},st=STY[f.theme]||{};
   const D=x=>dietText(f,String(x||""));
-  const m=current&&current.id===f.id&&current.menu||{};const w=(m.w||[])[0],d=(m.d||[])[0];
+  const m=current&&current.id===f.id&&current.menu||{};
+  /* the intermission card serves what's being cooked: an unticked sweet or drink is skipped for the next one still ticked */
+  const off=current&&current.id===f.id&&PLAN.off||{},kept=x=>x&&![x.n,x.orig,x.label].some(k=>k&&off[k]);
+  const w=(m.w||[]).find(kept),d=(m.d||[]).find(kept);
   const time=typeof week!=="undefined"&&week&&week.id===f.id?kitTime(week.time):"";
   const prop=fl.prop||{kind:"ticket",title:f.title,lines:[String(f.year)]};
   /* on a vegetarian night a kit note that still names meat or fish after the diet swaps stays off the kit, as the card's notes do */
