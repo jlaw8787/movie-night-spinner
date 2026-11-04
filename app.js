@@ -1113,7 +1113,7 @@ function shopLines(list){
     return (count?count+(rest?" + "+rest:""):rest+" "+item)+"@"+t.a});
 }
 /* waiting time (chilling, soaking, resting, setting) is shown apart from hands-on and cooking time */
-const WAIT_RE=/^(chill|refrigerate|freeze|soak|marinate|rest|cool|prove|steep|leave|let|set aside|stand|infuse|steep)\b|\b(in the fridge|overnight|to set|until set|to rest|to cool|to chill|to prove|to rise|to soak|to marinate|to steep|to infuse)\b/i;
+const WAIT_RE=/^(chill|refrigerate|freeze|soak|marinate|rest|cool|prove|steep|leave|let|set aside|stand|infuse|steep|drain|set|churn|rise)\b|\b(in the fridge|overnight|to set|until set|to rest|to cool|to chill|to prove|to rise|to soak|to marinate|to steep|to infuse|to drain|until doubled|doubled in size|an hour before|hours before|an hour ahead|hours ahead|to room temperature for|come to room temperature|wait for|chill until|until firm|until cold|until solid|for the setting)\b|\b(and|then) (chill|refrigerate|freeze|set|leave to set|cool)\b|\bin the freezer\b|\bdoubled\b|\b(chill|refrigerate|rest|set|freeze|soak|marinate|drain) (\d+|an?|one|two|three) (hours?|hrs?|minutes?|mins?)\b\b|\b(drain|chill|refrigerat|freez|set|rest|soak|marinat|prove|rise|stand|steep|infus|churn|cool)\w*\b[^.]{0,50}\bfor (at least |about |up to )?(\d+|an?|one|two|three|four|five|six|several)( to \d+)? (hours?|hrs?|minutes?|mins?|days?)\b/i;
 /* hands-on time grows by half for each extra batch (k = guests / serves); cooking and waiting stay the same */
 function dishTimes(x,k){const st=x.steps||[];let wait=0;for(const t of st)if((t.min||0)>=10&&WAIT_RE.test(String(t.text).trim()))wait+=t.min;
   const prep=x.prep_min||0,cook=x.cook_min||0;wait=Math.min(wait,prep+cook);
@@ -1123,7 +1123,9 @@ function dishTimes(x,k){const st=x.steps||[];let wait=0;for(const t of st)if((t.
   let c2,p2;
   if(st.length&&st.every(t=>t.min>0)&&Math.abs(sum-(prep+cook))<=Math.max(5,(prep+cook)*.25)){c2=heat;p2=Math.max(0,sum-heat-wait)}
   else{/* otherwise take the waiting off cooking, but never below the heat steps, and the rest off prep */
-    c2=Math.max(heat,cook-wait);p2=Math.max(0,prep+cook-c2-wait)}const p3=k>1.01?Math.round(p2*(1+(k-1)/2)/5)*5:p2;return {prep:p3,cook:c2,wait,active:p3+c2}}
+    c2=Math.max(heat,cook-wait);p2=Math.max(0,prep+cook-c2-wait)}/* someone always has to chop, season or mix: prep is never shown as 0 */
+  if(st.length&&p2<5)p2=5;
+  const p3=k>1.01?Math.round(p2*(1+(k-1)/2)/5)*5:p2;return {prep:p3,cook:c2,wait,active:p3+c2}}
 /* frying oil is set by the pot, not the guests: never less than the recipe's own amount */
 /* pack notes inside an item follow the guests: "750ml lager (4 stubbies)" for 4 is "(9 stubbies)" for 9 */
 const packNote=(item,k)=>!k||Math.abs(k-1)<.01?item:String(item).replace(/\((\d+)\s+(stubbies|stubby|cans?|bottles?|tins?|jars?|packets?|bags?|tinnies|slabs?|longnecks?)([^)]*)\)/i,(m,n,u,rest)=>{const v=Math.max(1,Math.ceil(+n*k-0.05));return `(${v} ${v===1?u.replace(/ies$/,"y").replace(/s$/,""):/y$/.test(u)?u.replace(/y$/,"ies"):/s$/.test(u)?u:u+"s"}${rest})`});
