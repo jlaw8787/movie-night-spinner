@@ -400,6 +400,192 @@
    }
   },
   {
+   "n": "Ridgewood Ranch tri-tip with beans and cornbread",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Rub the beef up to 1 day ahead; beans up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef rump cap or tri-tip",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "tinned pinto beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned chopped tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet cornbread mix",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the beef with the garlic powder, paprika, pepper and salt.",
+     "min": 5
+    },
+    {
+     "text": "Soften the onion in the oil, add the beans, tomatoes and sugar and simmer. Meanwhile bake the cornbread to the packet directions.",
+     "min": 30
+    },
+    {
+     "text": "Grill the beef over medium heat, turning, until medium rare, then rest.",
+     "min": 25
+    },
+    {
+     "text": "Slice thin across the grain and serve with the beans and buttered cornbread.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ridgewood Ranch portobellos with beans and cornbread",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "Rub the beef up to 1 day ahead; beans up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cracked black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tinned pinto beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned chopped tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "packet cornbread mix",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rub the mushrooms with 2 tbsp oil, the garlic powder, paprika, pepper and salt.",
+       "min": 5
+      },
+      {
+       "text": "Soften the onion in the rest of the oil, add the beans, tomatoes and sugar and simmer. Meanwhile bake the cornbread to the packet directions.",
+       "min": 30
+      },
+      {
+       "text": "Grill the mushrooms until tender, slice and serve with the beans and buttered cornbread.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Santa Anita cinnamon apple pie",
    "course": "w",
    "prep_min": 29,

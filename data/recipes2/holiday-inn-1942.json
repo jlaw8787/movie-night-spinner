@@ -346,6 +346,166 @@
    }
   },
   {
+   "n": "Easter Parade honey glazed ham with spring greens",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 60,
+   "make_ahead": "Make the glaze up to 3 days ahead; the ham is also good cold the next day",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "half leg ham, on the bone",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "whole cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "new potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches asparagus",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 180°C. Score the ham skin in diamonds, stud with cloves and brush with the honey, mustard and sugar.",
+     "min": 10
+    },
+    {
+     "text": "Bake, basting a few times, until glossy and hot through.",
+     "min": 50
+    },
+    {
+     "text": "Boil the potatoes until tender.",
+     "min": 20
+    },
+    {
+     "text": "Cook the asparagus and peas and toss everything with butter. Slice the ham to serve.",
+     "min": 6
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Easter Parade honey glazed pumpkin with spring greens",
+     "prep_min": 20,
+     "cook_min": 45,
+     "make_ahead": "Make the glaze up to 3 days ahead; the ham is also good cold the next day",
+     "ingredients": [
+      {
+       "q": 1.2,
+       "u": "kg",
+       "item": "Kent pumpkin, in thick wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "new potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches asparagus",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200°C. Toss the pumpkin with the oil and roast until nearly tender.",
+       "min": 30
+      },
+      {
+       "text": "Brush with the honey and mustard and roast until glossy.",
+       "min": 12
+      },
+      {
+       "text": "Boil the potatoes until tender.",
+       "min": 20
+      },
+      {
+       "text": "Cook the asparagus and peas and toss everything with butter.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Christmas plum pudding with brandy custard",
    "course": "w",
    "prep_min": 20,

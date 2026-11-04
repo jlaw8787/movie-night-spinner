@@ -296,6 +296,196 @@
    }
   },
   {
+   "n": "Greased Lightnin' fried chicken basket",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 30,
+   "make_ahead": "Soak the chicken in buttermilk up to 1 day ahead; make the coleslaw up to 4 hours ahead",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "chicken drumsticks and thighs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "frozen crinkle-cut chips",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "shredded cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "soft dinner rolls",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the chicken in the buttermilk with salt.",
+     "min": 5
+    },
+    {
+     "text": "Toss in the flour mixed with paprika, garlic powder and salt.",
+     "min": 5
+    },
+    {
+     "text": "Fry in hot oil in batches until golden and cooked through, then hold in a 160°C oven. Bake the chips at the same time.",
+     "min": 30
+    },
+    {
+     "text": "Toss the cabbage and carrot with the mayonnaise and serve with the chicken, chips and rolls.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Greased Lightnin' fried cauliflower basket",
+     "prep_min": 25,
+     "cook_min": 25,
+     "make_ahead": "Soak the chicken in buttermilk up to 1 day ahead; make the coleslaw up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "cauliflower, in big florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "frozen crinkle-cut chips",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "shredded cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "whole egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "soft dinner rolls",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the cauliflower in the buttermilk with salt.",
+       "min": 5
+      },
+      {
+       "text": "Toss in the flour mixed with paprika, garlic powder and salt.",
+       "min": 5
+      },
+      {
+       "text": "Fry in hot oil in batches until golden and tender. Bake the chips at the same time.",
+       "min": 20
+      },
+      {
+       "text": "Toss the cabbage and carrot with the mayonnaise and serve with the cauliflower, chips and rolls.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Frosty Palace sundae",
    "course": "w",
    "prep_min": 20,

@@ -318,6 +318,168 @@
    }
   },
   {
+   "n": "Rockwell harbour lobster rolls",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 5,
+   "make_ahead": "Dress the lobster up to 4 hours ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "cooked lobster or crayfish meat",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "celery stick, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "hot dog rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "salted potato chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "dill pickles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Chop the lobster and mix with the mayonnaise, celery, a squeeze of lemon and chopped chives.",
+     "min": 8
+    },
+    {
+     "text": "Butter the outside of the rolls and toast in a hot pan until golden.",
+     "min": 4
+    },
+    {
+     "text": "Pile the lobster into the rolls and serve with chips and a pickle.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rockwell harbour egg salad rolls",
+     "prep_min": 20,
+     "cook_min": 12,
+     "make_ahead": "Dress the lobster up to 4 hours ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "whole egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "celery stick, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "hot dog rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "salted potato chips",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "dill pickles",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the eggs for 10 minutes, cool in cold water and peel.",
+       "min": 14
+      },
+      {
+       "text": "Chop the eggs and mix with the mayonnaise, celery, a squeeze of lemon and chopped chives.",
+       "min": 6
+      },
+      {
+       "text": "Butter the outside of the rolls and toast in a hot pan until golden.",
+       "min": 4
+      },
+      {
+       "text": "Pile the egg salad into the rolls and serve with chips and a pickle.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Dean's scrap metal peanut brittle",
    "course": "w",
    "prep_min": 15,

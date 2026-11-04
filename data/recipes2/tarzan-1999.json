@@ -304,6 +304,198 @@
    }
   },
   {
+   "n": "Treehouse river fish and coconut stew",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Make the sauce up to 1 day ahead; add the fish and spinach on the night",
+   "ingredients": [
+    {
+     "q": 700,
+     "u": "g",
+     "item": "firm white fish fillets, in chunks",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "ginger, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red chilli, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned chopped tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "baby spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the onion, garlic, ginger and chilli in the oil.",
+     "min": 6
+    },
+    {
+     "text": "Add the tomatoes and coconut milk and simmer. Meanwhile steam the rice.",
+     "min": 12
+    },
+    {
+     "text": "Add the fish and simmer gently until just cooked.",
+     "min": 6
+    },
+    {
+     "text": "Stir through the spinach and lime juice and serve over rice.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Treehouse sweet potato and coconut stew",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "Make the sauce up to 1 day ahead; add the fish and spinach on the night",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "sweet potato, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "ginger, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red chilli, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned chopped tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soften the onion, garlic, ginger and chilli in the oil.",
+       "min": 6
+      },
+      {
+       "text": "Add the sweet potato, chickpeas, tomatoes and coconut milk and simmer until tender. Meanwhile steam the rice.",
+       "min": 20
+      },
+      {
+       "text": "Stir through the spinach and lime juice and serve over rice.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Banana fritters",
    "course": "w",
    "prep_min": 10,

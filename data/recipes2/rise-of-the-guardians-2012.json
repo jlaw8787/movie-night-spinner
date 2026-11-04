@@ -364,6 +364,178 @@
    }
   },
   {
+   "n": "Bunnymund's Aussie lamb chops with minted peas",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Marinate the chops up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "lamb loin chops",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sprigs rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chat potatoes, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 220°C. Toss the potatoes with 2 tbsp oil and salt and roast until crisp.",
+     "min": 35
+    },
+    {
+     "text": "Rub the chops with garlic, chopped rosemary and the rest of the oil.",
+     "min": 5
+    },
+    {
+     "text": "Grill the chops on a hot barbecue or pan until charred and pink inside, then rest.",
+     "min": 10
+    },
+    {
+     "text": "Boil the peas, then crush with the butter, chopped mint and a squeeze of lemon.",
+     "min": 6
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bunnymund's Aussie haloumi with minted peas",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "Marinate the chops up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, thickly sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini, sliced lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sprigs rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "chat potatoes, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 220°C. Toss the potatoes with 2 tbsp oil and salt and roast until crisp.",
+       "min": 35
+      },
+      {
+       "text": "Rub the zucchini with garlic, chopped rosemary and the rest of the oil.",
+       "min": 5
+      },
+      {
+       "text": "Grill the zucchini and haloumi on a hot barbecue or pan until charred.",
+       "min": 8
+      },
+      {
+       "text": "Boil the peas, then crush with the butter, chopped mint and a squeeze of lemon.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Bunnymund's hot cross bun egg pudding",
    "course": "w",
    "prep_min": 18,

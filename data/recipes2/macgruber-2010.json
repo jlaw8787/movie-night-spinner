@@ -441,6 +441,210 @@
    }
   },
   {
+   "n": "Lt. Piper's grilled chicken souvlaki with tzatziki",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 30,
+   "make_ahead": "Marinate the chicken and make the tzatziki up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thigh fillets, cubed",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pita breads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "frozen chips",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the chicken in the juice of 1 lemon, the oregano, 2 garlic cloves and the oil, then thread onto skewers.",
+     "min": 10
+    },
+    {
+     "text": "Bake the chips to the packet directions.",
+     "min": 25
+    },
+    {
+     "text": "Squeeze the cucumber dry and mix with the yoghurt, the last garlic clove and a squeeze of lemon.",
+     "min": 5
+    },
+    {
+     "text": "Grill the skewers until charred and cooked through.",
+     "min": 12
+    },
+    {
+     "text": "Warm the pita and fill with chicken, tzatziki, tomato, onion and a few chips.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lt. Piper's grilled haloumi souvlaki with tzatziki",
+     "prep_min": 25,
+     "cook_min": 30,
+     "make_ahead": "Marinate the chicken and make the tzatziki up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red capsicums, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pita breads",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "frozen chips",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the haloumi and capsicum with the juice of 1 lemon, the oregano, 2 garlic cloves and the oil, then thread onto skewers.",
+       "min": 10
+      },
+      {
+       "text": "Bake the chips to the packet directions.",
+       "min": 25
+      },
+      {
+       "text": "Squeeze the cucumber dry and mix with the yoghurt, the last garlic clove and a squeeze of lemon.",
+       "min": 5
+      },
+      {
+       "text": "Grill the skewers until charred.",
+       "min": 8
+      },
+      {
+       "text": "Warm the pita and fill with haloumi, tzatziki, tomato, onion and a few chips.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "X-5 warhead countdown chocolate pots",
    "course": "w",
    "prep_min": 15,

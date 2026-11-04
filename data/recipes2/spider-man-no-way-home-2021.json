@@ -275,6 +275,148 @@
    }
   },
   {
+   "n": "Delmar's number 5, pickles, smushed",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 8,
+   "make_ahead": "Build the rolls up to 2 hours ahead, keep chilled, press on the night",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "sliced roast turkey",
+     "aisle": "Deli"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices Swiss cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "long hero rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Split the rolls and spread with mustard and mayonnaise.",
+     "min": 3
+    },
+    {
+     "text": "Fill with turkey, cheese and pickles.",
+     "min": 3
+    },
+    {
+     "text": "Butter the outside and press in a hot pan under a heavy pan, turning once, until crisp and melted.",
+     "min": 8
+    },
+    {
+     "text": "Cut into pieces to share.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Delmar's number 5, cheese and pickles, smushed",
+     "prep_min": 10,
+     "cook_min": 8,
+     "make_ahead": "Build the rolls up to 2 hours ahead, keep chilled, press on the night",
+     "ingredients": [
+      {
+       "q": 12,
+       "u": "",
+       "item": "slices Swiss cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "roasted capsicum strips",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "long hero rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "American mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "whole egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Split the rolls and spread with mustard and mayonnaise.",
+       "min": 3
+      },
+      {
+       "text": "Fill with cheese, capsicum and pickles.",
+       "min": 3
+      },
+      {
+       "text": "Butter the outside and press in a hot pan under a heavy pan, turning once, until crisp and melted.",
+       "min": 8
+      },
+      {
+       "text": "Cut into pieces to share.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Happy's apartment spaghetti",
    "course": "m",
    "prep_min": 12,

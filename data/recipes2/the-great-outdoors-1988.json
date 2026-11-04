@@ -468,6 +468,174 @@
    }
   },
   {
+   "n": "Roman's big shot barbecue chicken with potato salad",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Make the potato salad up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "chicken marylands",
+     "aisle": "Meat"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chat potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes until tender, drain and cool a little.",
+     "min": 20
+    },
+    {
+     "text": "Toss the potatoes with the mayonnaise, sour cream, spring onion, chopped dill and salt.",
+     "min": 5
+    },
+    {
+     "text": "Rub the chicken with paprika and salt and grill over medium coals, turning, until nearly cooked.",
+     "min": 30
+    },
+    {
+     "text": "Brush with barbecue sauce and grill until sticky. Serve with the potato salad.",
+     "min": 8
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Roman's big shot barbecue haloumi skewers with potato salad",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "Make the potato salad up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red capsicums, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "corn cobs, cut into rounds",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "chat potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "whole egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until tender, drain and cool a little.",
+       "min": 20
+      },
+      {
+       "text": "Toss the potatoes with the mayonnaise, sour cream, spring onion, chopped dill and salt.",
+       "min": 5
+      },
+      {
+       "text": "Thread the haloumi, capsicum and corn onto skewers and grill, brushing with barbecue sauce, until charred.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Bald-headed bear blueberry pie",
    "course": "w",
    "prep_min": 20,

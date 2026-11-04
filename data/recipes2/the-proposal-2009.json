@@ -244,6 +244,166 @@
    }
   },
   {
+   "n": "Ramone's general store reindeer sausage rolls",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Roll and freeze up to 1 week ahead, bake from frozen with 5 extra minutes",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "smoked sausage meat",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried sage",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets frozen puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "hot English mustard",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200°C. Mix the sausage meat with the onion, sage and paprika.",
+     "min": 5
+    },
+    {
+     "text": "Pipe or roll the mix along each pastry sheet, roll up and brush with beaten egg.",
+     "min": 10
+    },
+    {
+     "text": "Cut into pieces and bake until puffed and golden.",
+     "min": 25
+    },
+    {
+     "text": "Serve hot with mustard.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ramone's general store mushroom sausage rolls",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Roll and freeze up to 1 week ahead, bake from frozen with 5 extra minutes",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "walnuts, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "fresh breadcrumbs",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried sage",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sheets frozen puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "hot English mustard",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200°C. Fry the mushrooms and onion in the oil until dry, then cool and mix with the walnuts, breadcrumbs, sage and paprika.",
+       "min": 12
+      },
+      {
+       "text": "Roll the mix along each pastry sheet, roll up and brush with beaten egg.",
+       "min": 10
+      },
+      {
+       "text": "Cut into pieces and bake until puffed and golden.",
+       "min": 25
+      },
+      {
+       "text": "Serve hot with mustard.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Alaskan salmon dinner",
    "course": "m",
    "prep_min": 15,
