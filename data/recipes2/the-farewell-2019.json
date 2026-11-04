@@ -553,6 +553,144 @@
    }
   },
   {
+   "n": "Banquet steamed fish with ginger and spring onion",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Shred the ginger and spring onion up to 4 hours ahead; steam the fish just before serving",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "whole snapper, about 900g, cleaned",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "ginger, cut in fine matchsticks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "spring onions, finely shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "light soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Score the fish twice on each side and lay on a plate on half the ginger.",
+     "min": 6
+    },
+    {
+     "text": "Steam over rapidly boiling water until the flesh at the thickest part flakes.",
+     "min": 12
+    },
+    {
+     "text": "Warm the soy with the sugar and 2 tbsp water. Pour off the steaming liquid and spoon the soy over the fish.",
+     "min": 3
+    },
+    {
+     "text": "Pile the rest of the ginger, the spring onion and coriander on top. Heat the oil until smoking and pour it over so it sizzles.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Banquet steamed tofu with ginger and spring onion",
+     "prep_min": 10,
+     "cook_min": 10,
+     "make_ahead": "Shred the ginger and spring onion up to 4 hours ahead; steam on the night",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "silken tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "ginger, cut in fine matchsticks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "spring onions, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "light soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Slide the tofu onto a plate and steam until hot through.",
+       "min": 8
+      },
+      {
+       "text": "Warm the soy with the sugar and water and spoon over. Pile on the ginger, spring onion and coriander.",
+       "min": 4
+      },
+      {
+       "text": "Heat the oil until smoking and pour it over so it sizzles.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Banquet red bean sesame balls",
    "course": "w",
    "prep_min": 35,

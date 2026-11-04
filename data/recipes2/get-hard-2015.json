@@ -444,6 +444,172 @@
    }
   },
   {
+   "n": "James King's Bel Air steak frites",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Make the herb butter up to 3 days ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "sirloin steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut into chips",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch flat-leaf parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rocket",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 220°C. Toss the chips in 2 tbsp oil and salt and bake, turning once, until crisp.",
+     "min": 35
+    },
+    {
+     "text": "Mash the butter with the garlic and chopped parsley.",
+     "min": 4
+    },
+    {
+     "text": "Sear the steaks in a very hot pan to your liking, then rest with a slice of herb butter on each.",
+     "min": 10
+    },
+    {
+     "text": "Dress the rocket with lemon and the last of the oil and serve with the steak and chips.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "James King's Bel Air portobello frites",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "Make the herb butter up to 3 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut into chips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch flat-leaf parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 220°C. Toss the chips in 2 tbsp oil and salt and bake, turning once, until crisp.",
+       "min": 35
+      },
+      {
+       "text": "Mash the butter with the garlic and chopped parsley.",
+       "min": 4
+      },
+      {
+       "text": "Sear the mushrooms in a hot pan until tender, then top each with a slice of herb butter.",
+       "min": 10
+      },
+      {
+       "text": "Dress the rocket with lemon and the last of the oil and serve with the mushrooms and chips.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "San Quentin chocolate pudding cups",
    "course": "w",
    "prep_min": 10,

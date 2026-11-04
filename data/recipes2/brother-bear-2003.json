@@ -173,6 +173,83 @@
    "af": true
   },
   {
+   "n": "Tanana's wild greens and roast beetroot salad",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 45,
+   "make_ahead": "Roast the beetroot up to 2 days ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beetroot, scrubbed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "rocket and baby spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "goat's cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "pepitas",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "apple cider vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200°C. Wrap the beetroot in foil and roast until tender.",
+     "min": 45
+    },
+    {
+     "text": "Toast the pepitas in a dry pan.",
+     "min": 3
+    },
+    {
+     "text": "Peel and cut the beetroot into wedges. Whisk the maple syrup, vinegar and oil.",
+     "min": 8
+    },
+    {
+     "text": "Toss the leaves and beetroot with the dressing and top with goat's cheese and pepitas.",
+     "min": 4
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Kenai's venison with blueberry sauce",
    "course": "m",
    "prep_min": 18,

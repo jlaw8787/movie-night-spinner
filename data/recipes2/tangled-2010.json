@@ -174,68 +174,88 @@
    }
   },
   {
-   "n": "Maximus's cinnamon apple crisps",
+   "n": "Maximus's crisp apple and fennel salad",
    "course": "s",
-   "prep_min": 18,
-   "cook_min": 135,
-   "make_ahead": "Crisps up to 1 day in an airtight tin",
+   "prep_min": 15,
+   "cook_min": 4,
+   "make_ahead": "Toast the walnuts and whisk the dressing up to 2 days ahead; slice and toss just before serving",
    "ingredients": [
     {
-     "q": 4,
+     "q": 3,
      "u": "",
-     "item": "red apples",
+     "item": "crisp red apples",
      "aisle": "Produce"
     },
     {
      "q": 1,
+     "u": "",
+     "item": "fennel bulb",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch celery, inner stalks and leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "walnuts",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rocket",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
      "u": "tbsp",
-     "item": "caster sugar",
+     "item": "olive oil",
      "aisle": "Pantry"
     },
     {
      "q": 1,
      "u": "tsp",
-     "item": "ground cinnamon",
-     "aisle": "Spices"
-    },
-    {
-     "q": 2,
-     "u": "tbsp",
-     "item": "caramel sauce",
+     "item": "honey",
      "aisle": "Pantry"
     },
     {
-     "q": null,
-     "u": "",
-     "item": "pinch of salt",
-     "aisle": "Spices"
+     "q": 1,
+     "u": "tsp",
+     "item": "wholegrain mustard",
+     "aisle": "Pantry"
     },
     {
-     "q": 200,
+     "q": 80,
      "u": "g",
-     "item": "Greek yoghurt",
+     "item": "aged cheddar, shaved",
      "aisle": "Dairy"
     }
    ],
    "steps": [
     {
-     "text": "Slice the apples paper thin on a mandoline.",
-     "min": 12
+     "text": "Toast the walnuts in a dry pan until fragrant, then chop roughly.",
+     "min": 4
     },
     {
-     "text": "Lay in a single layer on lined trays and dust with the cinnamon sugar.",
-     "min": 3
+     "text": "Whisk the lemon juice, olive oil, honey, mustard and a pinch of salt.",
+     "min": 2
     },
     {
-     "text": "Bake at 100C, turning once halfway, until dry and curling.",
-     "min": 120
+     "text": "Thinly slice the apples, fennel and inner celery stalks and toss straight into the dressing.",
+     "min": 8
     },
     {
-     "text": "Cool on the trays so they crisp.",
-     "min": 15
-    },
-    {
-     "text": "Swirl the caramel and salt through the yoghurt for dipping.",
+     "text": "Fold through the rocket and celery leaves, then top with the walnuts and shaved cheddar.",
      "min": 3
     }
    ],
@@ -243,7 +263,7 @@
    "af": true
   },
   {
-   "n": "Hazelnut soup",
+   "n": "Mother Gothel's hazelnut soup",
    "course": "m",
    "prep_min": 15,
    "cook_min": 38,
@@ -328,7 +348,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Hazelnut soup (vegetarian)",
+     "n": "Mother Gothel's hazelnut soup (vegetarian)",
      "prep_min": 15,
      "cook_min": 38,
      "make_ahead": "Up to 3 days, reheats well",

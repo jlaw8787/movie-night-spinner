@@ -496,6 +496,206 @@
    }
   },
   {
+   "n": "Pei-Pei's family black pepper beef",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Slice and marinate the beef up to 1 day ahead in the fridge; cook the rice and stir-fry on the night",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "rump steak, thinly sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "oyster sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "black pepper, coarsely cracked",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, cut in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green capsicum, cut in squares",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch gai lan, cut in lengths",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the beef with half the soy sauce and the cornflour and leave it while you prep.",
+     "min": 10
+    },
+    {
+     "text": "Mix the oyster sauce, the rest of the soy, the pepper, sugar and 3 tbsp water.",
+     "min": 3
+    },
+    {
+     "text": "Rinse the rice and simmer it, covered, until the water is gone. Rest it with the lid on.",
+     "min": 15
+    },
+    {
+     "text": "Stir-fry the beef in a very hot wok with half the oil in two batches until browned. Lift out.",
+     "min": 5
+    },
+    {
+     "text": "Stir-fry the onion, capsicum, garlic and gai lan in the rest of the oil, return the beef, add the sauce and toss until glossy. Serve over the rice.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Pei-Pei's family black pepper mushrooms",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Mix the sauce up to 2 days ahead; stir-fry on the night",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "king oyster mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetarian oyster sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "black pepper, coarsely cracked",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, cut in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green capsicum, cut in squares",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch gai lan, cut in lengths",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the vegetarian oyster sauce, soy, pepper, sugar and 3 tbsp water.",
+       "min": 3
+      },
+      {
+       "text": "Rinse the rice and simmer it, covered, until the water is gone. Rest it with the lid on.",
+       "min": 15
+      },
+      {
+       "text": "Sear the mushrooms in a very hot wok with half the oil until browned. Lift out.",
+       "min": 6
+      },
+      {
+       "text": "Stir-fry the onion, capsicum, garlic and gai lan in the rest of the oil, return the mushrooms, add the sauce and toss until glossy. Serve over the rice.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Homemade fortune cookies",
    "course": "w",
    "prep_min": 21,

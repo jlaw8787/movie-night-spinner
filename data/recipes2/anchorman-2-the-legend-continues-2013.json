@@ -444,6 +444,204 @@
    }
   },
   {
+   "n": "Champ Kind's Chicken of the Cave",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 30,
+   "make_ahead": "Soak the chicken in the buttermilk up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "white cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dill pickles",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the chicken in the buttermilk with half the paprika and salt for at least 20 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Mix the flour with the rest of the paprika, the garlic powder and salt. Toss the chicken in it, pressing to coat.",
+     "min": 5
+    },
+    {
+     "text": "Heat the oil to 170C and fry in batches for 6 to 7 minutes until deep golden and cooked through. Drain on a rack.",
+     "min": 20
+    },
+    {
+     "text": "Warm the honey with the chilli flakes.",
+     "min": 3
+    },
+    {
+     "text": "Toss the shredded cabbage with the mayonnaise and salt and serve with the chicken, hot honey and pickles.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Champ Kind's Cauliflower of the Cave",
+     "prep_min": 30,
+     "cook_min": 25,
+     "make_ahead": "Soak the chicken in the buttermilk up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Spices"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "white cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "dill pickles",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss large cauliflower florets in the buttermilk with half the paprika and salt.",
+       "min": 10
+      },
+      {
+       "text": "Mix the flour with the rest of the paprika, the garlic powder and salt. Toss the cauliflower in it, pressing to coat.",
+       "min": 5
+      },
+      {
+       "text": "Heat the oil to 170C and fry in batches for 5 minutes until deep golden. Drain on a rack.",
+       "min": 16
+      },
+      {
+       "text": "Warm the honey with the chilli flakes.",
+       "min": 3
+      },
+      {
+       "text": "Toss the shredded cabbage with the mayonnaise and salt and serve with the cauliflower, hot honey and pickles.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Linda's chocolate fondue",
    "course": "w",
    "prep_min": 10,

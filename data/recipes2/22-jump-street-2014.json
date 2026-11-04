@@ -818,6 +818,240 @@
    }
   },
   {
+   "n": "Spring break carne asada burritos",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 25,
+   "make_ahead": "Marinate the steak up to 1 day ahead; make the pico de gallo up to 4 hours ahead",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "skirt steak",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned black beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jalapeño",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the steak with the juice of 2 limes, crushed garlic, cumin, oil and salt and leave for 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Simmer the rice with 400ml water, covered, for 12 minutes, rest for 5, then stir through the beans.",
+     "min": 17
+    },
+    {
+     "text": "Dice the tomatoes, onion and jalapeño and mix with chopped coriander and the last lime for the pico de gallo.",
+     "min": 6
+    },
+    {
+     "text": "Grill the steak very hot for 3 minutes a side, rest for 5 minutes and slice thin across the grain.",
+     "min": 8
+    },
+    {
+     "text": "Warm the tortillas, fill with rice and beans, steak, cheddar, pico de gallo and sour cream, and roll up tight.",
+     "min": 8
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Spring break charred mushroom burritos",
+     "prep_min": 30,
+     "cook_min": 25,
+     "make_ahead": "Marinate the steak up to 1 day ahead; make the pico de gallo up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jalapeño",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the sliced mushrooms with the juice of 2 limes, crushed garlic, cumin, oil and salt.",
+       "min": 10
+      },
+      {
+       "text": "Simmer the rice with 400ml water, covered, for 12 minutes, rest for 5, then stir through the beans.",
+       "min": 17
+      },
+      {
+       "text": "Dice the tomatoes, onion and jalapeño and mix with chopped coriander and the last lime for the pico de gallo.",
+       "min": 6
+      },
+      {
+       "text": "Cook the mushrooms in a very hot grill pan for 6 minutes until charred.",
+       "min": 8
+      },
+      {
+       "text": "Warm the tortillas, fill with rice and beans, mushrooms, cheddar, pico de gallo and sour cream, and roll up tight.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Dining hall skillet choc chip cookie",
    "course": "w",
    "prep_min": 15,

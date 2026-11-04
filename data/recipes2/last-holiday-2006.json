@@ -657,6 +657,196 @@
    }
   },
   {
+   "n": "Grandhotel Pupp beef goulash",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 150,
+   "make_ahead": "Cook the goulash up to 2 days ahead, it gets better; boil the noodles on the night",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "beef chuck, in large cubes",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "caraway seeds",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "wide egg noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the beef in the oil in batches. Lift out.",
+     "min": 15
+    },
+    {
+     "text": "Cook the onions slowly in the same pot until soft and golden, then add the garlic, paprika, caraway and tomato paste.",
+     "min": 15
+    },
+    {
+     "text": "Return the beef, add the stock, cover and simmer gently until the beef falls apart.",
+     "min": 120
+    },
+    {
+     "text": "Boil the noodles, toss with the butter and serve under the goulash with sour cream.",
+     "min": 10
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Grandhotel Pupp mushroom goulash",
+     "prep_min": 15,
+     "cook_min": 45,
+     "make_ahead": "Cook up to 2 days ahead; boil the noodles on the night",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sweet paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "caraway seeds",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "wide egg noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in batches. Lift out.",
+       "min": 12
+      },
+      {
+       "text": "Cook the onions slowly until golden, then add the garlic, paprika, caraway and tomato paste.",
+       "min": 15
+      },
+      {
+       "text": "Return the mushrooms, add the stock and simmer until thick.",
+       "min": 20
+      },
+      {
+       "text": "Boil the noodles, toss with butter and serve under the goulash with sour cream.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Dessert trolley chocolate mousse",
    "course": "w",
    "prep_min": 31,

@@ -401,6 +401,190 @@
    }
   },
   {
+   "n": "Annie Knowby's apple-braised chicken with root vegetables",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 50,
+   "make_ahead": "Braise up to 2 days ahead and reheat gently",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs, bone in",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions, in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots, in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "parsnips, in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "apples, in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "apple juice",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "crusty loaf",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken skin side down in the oil in a heavy pot, then set aside.",
+     "min": 10
+    },
+    {
+     "text": "Add the onion, carrot and parsnip and colour lightly.",
+     "min": 6
+    },
+    {
+     "text": "Add the apple, apple juice, stock and thyme, put the chicken back on top and simmer covered.",
+     "min": 30
+    },
+    {
+     "text": "Uncover and simmer until the sauce reduces. Serve with crusty bread.",
+     "min": 10
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Annie Knowby's apple-braised mushrooms and root vegetables",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "Braise up to 2 days ahead and reheat gently",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "large mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions, in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "parsnips, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "apples, in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "crusty loaf",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil in a heavy pot, then set aside.",
+       "min": 8
+      },
+      {
+       "text": "Add the onion, carrot and parsnip and colour lightly.",
+       "min": 6
+      },
+      {
+       "text": "Add the apple, apple juice, stock, thyme, beans and mushrooms and simmer until tender and saucy.",
+       "min": 20
+      },
+      {
+       "text": "Serve with crusty bread.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Knowby cabin pecan pie",
    "course": "w",
    "prep_min": 18,

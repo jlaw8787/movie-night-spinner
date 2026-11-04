@@ -447,6 +447,196 @@
    }
   },
   {
+   "n": "Siblings Anonymous chicken pot pie",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 45,
+   "make_ahead": "Make the filling up to 1 day ahead and chill; top with pastry and bake on the night",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "leeks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the diced chicken in half the butter, then add the sliced leeks, diced carrots and the rest of the butter and cook for 6 minutes.",
+     "min": 12
+    },
+    {
+     "text": "Stir in the flour, then the stock, cream and thyme leaves and simmer for 10 minutes until thick. Stir in the peas.",
+     "min": 15
+    },
+    {
+     "text": "Heat the oven to 200C. Spoon the filling into a pie dish and cover with the pastry, pressing the edges.",
+     "min": 5
+    },
+    {
+     "text": "Brush with beaten egg, cut a steam hole and bake for 30 minutes until puffed and golden.",
+     "min": 30
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Siblings Anonymous mushroom and leek pot pie",
+     "prep_min": 25,
+     "cook_min": 45,
+     "make_ahead": "Make the filling up to 1 day ahead and chill; top with pastry and bake on the night",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "Swiss brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "leeks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the quartered mushrooms in half the butter, then add the sliced leeks, diced carrots and the rest of the butter and cook for 6 minutes.",
+       "min": 12
+      },
+      {
+       "text": "Stir in the flour, then the stock, cream and thyme leaves and simmer for 10 minutes until thick. Stir in the peas.",
+       "min": 15
+      },
+      {
+       "text": "Heat the oven to 200C. Spoon the filling into a pie dish and cover with the pastry, pressing the edges.",
+       "min": 5
+      },
+      {
+       "text": "Brush with beaten egg, cut a steam hole and bake for 30 minutes until puffed and golden.",
+       "min": 30
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Mother Claus's choc chip cookies",
    "course": "w",
    "prep_min": 25,

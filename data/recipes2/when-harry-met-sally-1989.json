@@ -2,89 +2,77 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Roast grape and ricotta crostini",
+   "n": "Fried deli pickles with mustard mayo",
    "course": "s",
-   "prep_min": 20,
-   "cook_min": 30,
-   "make_ahead": "Up to 2 hours",
+   "prep_min": 15,
+   "cook_min": 12,
+   "make_ahead": "Mix the mustard mayo up to 2 days ahead; batter and fry just before serving",
    "ingredients": [
-    {
-     "q": 400,
-     "u": "g",
-     "item": "red grapes",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "olive oil, plus extra to brush",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tbsp",
-     "item": "balsamic vinegar",
-     "aisle": "Pantry"
-    },
     {
      "q": 4,
      "u": "",
-     "item": "thyme sprigs",
-     "aisle": "Produce"
+     "item": "half-sour or dill pickles",
+     "aisle": "Deli"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "rye flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.5,
+     "u": "tsp",
+     "item": "paprika",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "cold soda water",
+     "aisle": "Drinks"
     },
     {
      "q": 1,
-     "u": "",
-     "item": "baguette",
-     "aisle": "Bakery"
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
     },
     {
-     "q": 250,
+     "q": 100,
      "u": "g",
-     "item": "ricotta",
-     "aisle": "Dairy"
+     "item": "mayonnaise",
+     "aisle": "Pantry"
     },
     {
      "q": 2,
      "u": "tbsp",
-     "item": "honey",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "lemon, zested",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "pinch salt",
-     "aisle": "Pantry"
-    },
-    {
-     "q": null,
-     "u": "",
-     "item": "cracked black pepper, to taste",
+     "item": "yellow mustard",
      "aisle": "Pantry"
     }
    ],
    "steps": [
     {
-     "text": "Toss the grapes with oil, balsamic and thyme and roast at 200C until blistered.",
-     "min": 20
+     "text": "Cut the pickles into spears and pat them very dry. Keep a teaspoon of the brine.",
+     "min": 6
     },
     {
-     "text": "Slice the baguette into 16 rounds, brush with oil and bake until crisp.",
+     "text": "Whisk the plain flour, rye flour, paprika and cold soda water into a thin batter.",
+     "min": 3
+    },
+    {
+     "text": "Dip the spears and fry at 180C for about 2 minutes until crisp, in batches. Drain on a rack and salt lightly.",
      "min": 10
     },
     {
-     "text": "Whip the ricotta with some of the honey, lemon zest and salt.",
-     "min": 5
-    },
-    {
-     "text": "Spread on the toasts, top with grapes and finish with honey and pepper.",
-     "min": 5
+     "text": "Stir the mayonnaise with the mustard and the pickle brine and serve alongside.",
+     "min": 2
     }
    ],
    "veg": true,
@@ -448,77 +436,43 @@
    "af": true
   },
   {
-   "n": "New Year's Eve champagne",
+   "n": "Egg cream",
    "course": "d",
    "prep_min": 5,
-   "cook_min": 180,
-   "make_ahead": "Chill the bottle at least 3 hours ahead",
+   "cook_min": 0,
+   "make_ahead": "Chill the milk, syrup and soda water well ahead; build each glass to order",
    "ingredients": [
     {
-     "q": 1,
-     "u": "",
-     "item": "bottle champagne or sparkling wine",
-     "aisle": "Bottle shop"
+     "q": 120,
+     "u": "ml",
+     "item": "chocolate syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "full cream milk, ice cold",
+     "aisle": "Dairy"
     },
     {
      "q": 1,
-     "u": "kg",
-     "item": "ice",
-     "aisle": "Frozen"
+     "u": "l",
+     "item": "soda water, ice cold",
+     "aisle": "Drinks"
     }
    ],
    "steps": [
     {
-     "text": "Chill the bottle of champagne or sparkling wine in the fridge for at least 3 hours.",
-     "min": 180
-    },
-    {
-     "text": "Sit the bottle in an ice bucket with the ice and a little cold water while you wait for midnight.",
+     "text": "Pour 30ml chocolate syrup into each of four tall glasses and add 100ml ice cold milk.",
      "min": 2
     },
     {
-     "text": "Open the champagne just before midnight and pour into four flutes.",
+     "text": "Blast the soda water in hard from a height until the foam reaches the rim, stirring fast with a long spoon as it goes. Serve straight away. No egg, no cream.",
      "min": 3
     }
    ],
    "veg": true,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "New Year's Eve bubbles",
-     "prep_min": 5,
-     "cook_min": 180,
-     "make_ahead": "Chill the bottle at least 3 hours ahead",
-     "ingredients": [
-      {
-       "q": 1,
-       "u": "",
-       "item": "bottle alcohol-free sparkling wine",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 1,
-       "u": "kg",
-       "item": "ice",
-       "aisle": "Frozen"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Chill the bottle of alcohol-free sparkling wine in the fridge for at least 3 hours.",
-       "min": 180
-      },
-      {
-       "text": "Sit the bottle in an ice bucket with the ice and a little cold water while you wait for midnight.",
-       "min": 2
-      },
-      {
-       "text": "Open the bottle just before midnight and pour into four flutes.",
-       "min": 3
-      }
-     ]
-    }
-   }
+   "af": true
   }
  ]
 }

@@ -361,6 +361,192 @@
    }
   },
   {
+   "n": "Sponsor's sweet onion chicken footlong",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 12,
+   "make_ahead": "Marinate the chicken up to 1 day ahead and mix the sauce up to 3 days ahead; grill and build on the night",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "teriyaki sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "long crusty rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices Swiss cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "cos lettuce leaves, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion, finely sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "white vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the chicken in half the teriyaki and leave while you slice the salad.",
+     "min": 10
+    },
+    {
+     "text": "Mix the mayonnaise, sweet chilli, honey and vinegar for the sweet onion sauce.",
+     "min": 3
+    },
+    {
+     "text": "Grill the chicken until charred and cooked through, brushing with the rest of the teriyaki. Slice.",
+     "min": 10
+    },
+    {
+     "text": "Split and toast the rolls with the cheese inside, fill with the chicken and salad, drizzle with sauce and cut each into two.",
+     "min": 6
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sponsor's sweet onion tofu footlong",
+     "prep_min": 15,
+     "cook_min": 10,
+     "make_ahead": "Mix the sauce up to 3 days ahead; grill and build on the night",
+     "ingredients": [
+      {
+       "q": 450,
+       "u": "g",
+       "item": "firm tofu, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "teriyaki sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "long crusty rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices Swiss cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "cos lettuce leaves, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "red onion, finely sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "sweet chilli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "white vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the mayonnaise, sweet chilli, honey and vinegar for the sweet onion sauce.",
+       "min": 3
+      },
+      {
+       "text": "Pat the tofu dry and pan fry until golden, then glaze with the teriyaki.",
+       "min": 10
+      },
+      {
+       "text": "Split and toast the rolls with the cheese inside, fill with the tofu and salad, drizzle with sauce and cut each into two.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Grandma's lemon bars",
    "course": "w",
    "prep_min": 18,

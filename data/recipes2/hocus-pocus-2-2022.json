@@ -571,6 +571,89 @@
    }
   },
   {
+   "n": "Becca's birthday pumpkin and sage mac and cheese",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Assemble up to 1 day ahead and bake on the night",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "pumpkin, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "macaroni",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "vintage cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch sage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200°C. Roast the pumpkin in half the oil until soft, then mash.",
+     "min": 25
+    },
+    {
+     "text": "Boil the macaroni until just short of done and drain.",
+     "min": 10
+    },
+    {
+     "text": "Melt the butter, stir in the flour, whisk in the milk until thick, then add the pumpkin and most of the cheddar.",
+     "min": 8
+    },
+    {
+     "text": "Fold in the pasta, tip into a dish and top with the rest of the cheddar, crumbs and sage leaves tossed in the last of the oil. Bake until golden.",
+     "min": 20
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Black Flame chocolate lava puddings",
    "course": "w",
    "prep_min": 20,

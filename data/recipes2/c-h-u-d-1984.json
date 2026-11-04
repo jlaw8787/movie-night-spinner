@@ -491,6 +491,191 @@
    ],
    "veg": true,
    "af": true
+  },
+  {
+   "n": "Western omelette",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "Dice the ham, capsicum and onion and par-boil the potatoes up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "waxy potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green capsicum, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "leg ham, diced",
+     "aisle": "Deli"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "slices rye bread, toasted",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes in their skins for 12 minutes, cool a little and cut into chunks.",
+     "min": 15
+    },
+    {
+     "text": "Fry the potatoes in the oil with the paprika and half the salt until crisp, about 12 minutes, for the home fries.",
+     "min": 12
+    },
+    {
+     "text": "Soften the capsicum and onion in a little of the butter, then add the ham and warm through.",
+     "min": 6
+    },
+    {
+     "text": "For each omelette, beat 3 eggs with a pinch of salt, cook in butter until just set, fill with a quarter of the ham mix and fold.",
+     "min": 3
+    },
+    {
+     "text": "Repeat for the other three and serve with the home fries and rye toast.",
+     "min": 9
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Garden omelette",
+     "prep_min": 15,
+     "cook_min": 35,
+     "make_ahead": "Dice the vegetables and par-boil the potatoes up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "waxy potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green capsicum, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "button mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "slices rye bread, toasted",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes in their skins for 12 minutes, cool a little and cut into chunks.",
+       "min": 15
+      },
+      {
+       "text": "Fry the potatoes in the oil with the paprika and half the salt until crisp, about 12 minutes, for the home fries.",
+       "min": 12
+      },
+      {
+       "text": "Soften the capsicum, onion and mushrooms in a little of the butter.",
+       "min": 8
+      },
+      {
+       "text": "For each omelette, beat 3 eggs with a pinch of salt, cook in butter until just set, fill with a quarter of the vegetables and fold.",
+       "min": 3
+      },
+      {
+       "text": "Repeat for the other three and serve with the home fries and rye toast.",
+       "min": 9
+      }
+     ]
+    }
+   }
   }
  ]
 }

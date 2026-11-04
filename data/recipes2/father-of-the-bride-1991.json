@@ -726,6 +726,144 @@
    }
   },
   {
+   "n": "Franck's reception beef fillet",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "Mix the horseradish cream up to 2 days ahead in the fridge; sear and roast the beef on the night",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef eye fillet, trimmed",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "eschalots, peeled and halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "horseradish cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the horseradish cream into the sour cream with chopped chives and salt.",
+     "min": 4
+    },
+    {
+     "text": "Rub the beef with oil, salt and pepper and sear on all sides in a hot pan.",
+     "min": 6
+    },
+    {
+     "text": "Roast the beef at 200C on a bed of the eschalots and thyme until medium rare.",
+     "min": 25
+    },
+    {
+     "text": "Rest the beef under foil, then slice thick and serve with the eschalots and horseradish cream.",
+     "min": 10
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Franck's reception roast portobellos",
+     "prep_min": 10,
+     "cook_min": 25,
+     "make_ahead": "Mix the horseradish cream up to 2 days ahead; roast on the night",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "eschalots, peeled and halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch chives",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the horseradish cream into the sour cream with chopped chives and salt.",
+       "min": 4
+      },
+      {
+       "text": "Roast the mushrooms and eschalots with oil, thyme and salt at 200C until tender and browned.",
+       "min": 25
+      },
+      {
+       "text": "Serve the mushrooms whole with the eschalots and horseradish cream.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Annie's lemon wedding cake",
    "course": "w",
    "prep_min": 40,

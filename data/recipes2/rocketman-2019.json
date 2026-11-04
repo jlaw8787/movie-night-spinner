@@ -509,6 +509,204 @@
    }
   },
   {
+   "n": "Bernie Taupin's chicken Kiev",
+   "course": "m",
+   "prep_min": 35,
+   "cook_min": 35,
+   "make_ahead": "Fill and crumb the Kievs up to 1 day ahead and chill; this keeps the butter in",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "small chicken breasts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mash the butter with the crushed garlic and chopped parsley, roll into a log in baking paper and freeze for 20 minutes.",
+     "min": 8
+    },
+    {
+     "text": "Cut a deep pocket in each breast, push in a slice of the butter and press closed. Dip in flour, egg and panko, twice.",
+     "min": 15
+    },
+    {
+     "text": "Brown in the oil for 2 minutes a side, then bake at 200C for 20 minutes.",
+     "min": 25
+    },
+    {
+     "text": "Boil the peeled potatoes for 20 minutes and mash with milk and salt. Cook the peas for 3 minutes.",
+     "min": 25
+    },
+    {
+     "text": "Serve the Kievs with the mash and peas, butter running out.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Bernie Taupin's mushroom Kiev",
+     "prep_min": 30,
+     "cook_min": 30,
+     "make_ahead": "Fill and crumb the Kievs up to 1 day ahead and chill; this keeps the butter in",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large field mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mash the butter with the crushed garlic and chopped parsley.",
+       "min": 5
+      },
+      {
+       "text": "Fill four mushrooms with the butter and press the other four on top, stalk side in. Dip in flour, egg and panko, twice.",
+       "min": 15
+      },
+      {
+       "text": "Brown in the oil for 2 minutes a side, then bake at 200C for 15 minutes.",
+       "min": 20
+      },
+      {
+       "text": "Boil the peeled potatoes for 20 minutes and mash with milk and salt. Cook the peas for 3 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Serve with the mash and peas.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Platform boots knickerbocker glory",
    "course": "w",
    "prep_min": 25,

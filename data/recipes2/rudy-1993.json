@@ -784,6 +784,319 @@
    }
   },
   {
+   "n": "Holy Cross Friday fish fry",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 35,
+   "make_ahead": "Make the tartare and slaw up to 4 hours ahead; batter and fry just before serving",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "flathead fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cold lager",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "frozen thick chips",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "capers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "gherkins",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "white cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Bake the chips at 220C for 25 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Mix the mayonnaise with chopped capers, gherkins and a squeeze of lemon for the tartare. Toss the shredded cabbage and grated carrot with 2 tbsp of it.",
+     "min": 6
+    },
+    {
+     "text": "Whisk 120g of the flour with the baking powder and lager until smooth.",
+     "min": 3
+    },
+    {
+     "text": "Heat the oil to 180C. Dust the fish in the rest of the flour, dip in the batter and fry in batches for 4 minutes until golden.",
+     "min": 15
+    },
+    {
+     "text": "Serve with the chips, tartare, slaw and lemon wedges.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Holy Cross Friday fish fry (alcohol-free)",
+     "prep_min": 25,
+     "cook_min": 35,
+     "make_ahead": "Make the tartare and slaw up to 4 hours ahead; batter and fry just before serving",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "flathead fillets",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "frozen thick chips",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "gherkins",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "white cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the chips at 220C for 25 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Mix the mayonnaise with chopped capers, gherkins and a squeeze of lemon for the tartare. Toss the shredded cabbage and grated carrot with 2 tbsp of it.",
+       "min": 6
+      },
+      {
+       "text": "Whisk 120g of the flour with the baking powder and soda water until smooth.",
+       "min": 3
+      },
+      {
+       "text": "Heat the oil to 180C. Dust the fish in the rest of the flour, dip in the batter and fry in batches for 4 minutes until golden.",
+       "min": 15
+      },
+      {
+       "text": "Serve with the chips, tartare, slaw and lemon wedges.",
+       "min": 2
+      }
+     ],
+     "veg": false
+    },
+    "veg": {
+     "n": "Holy Cross Friday halloumi fry",
+     "prep_min": 25,
+     "cook_min": 35,
+     "make_ahead": "Make the tartare and slaw up to 4 hours ahead; batter and fry just before serving",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "halloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "baking powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "frozen thick chips",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "capers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "gherkins",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "white cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Bake the chips at 220C for 25 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Mix the mayonnaise with chopped capers, gherkins and a squeeze of lemon for the tartare. Toss the shredded cabbage and grated carrot with 2 tbsp of it.",
+       "min": 6
+      },
+      {
+       "text": "Whisk 120g of the flour with the baking powder and soda water until smooth.",
+       "min": 3
+      },
+      {
+       "text": "Heat the oil to 180C. Cut the halloumi into fingers, dust in the rest of the flour, dip in the batter and fry in batches for 2 minutes until golden.",
+       "min": 12
+      },
+      {
+       "text": "Serve with the chips, tartare, slaw and lemon wedges.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "South Bend apple crumble",
    "course": "w",
    "prep_min": 27,

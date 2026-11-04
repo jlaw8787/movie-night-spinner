@@ -211,7 +211,7 @@
    "n": "Lake Como antipasto",
    "course": "s",
    "prep_min": 15,
-   "cook_min": 0,
+   "cook_min": 8,
    "make_ahead": "Up to 2 hours ahead",
    "ingredients": [
     {
@@ -230,6 +230,18 @@
      "q": 4,
      "u": "",
      "item": "figs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "zucchini, sliced lengthways",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "rocket",
      "aisle": "Produce"
     },
     {
@@ -259,6 +271,10 @@
    ],
    "steps": [
     {
+     "text": "Brush the zucchini with a little of the oil, salt it and chargrill until striped and tender.",
+     "min": 8
+    },
+    {
      "text": "Lay the bresaola on a board with the burrata, halved figs, breadsticks and olives.",
      "min": 10
     },
@@ -273,7 +289,7 @@
     "veg": {
      "n": "Lake Como antipasto with marinated artichokes",
      "prep_min": 15,
-     "cook_min": 0,
+     "cook_min": 8,
      "make_ahead": "Up to 2 hours ahead",
      "ingredients": [
       {
@@ -293,6 +309,18 @@
        "u": "",
        "item": "burrata",
        "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini, sliced lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
       },
       {
        "q": 4,
@@ -326,6 +354,10 @@
       }
      ],
      "steps": [
+      {
+       "text": "Brush the zucchini with a little of the oil, salt it and chargrill until striped and tender.",
+       "min": 8
+      },
       {
        "text": "Lay the artichokes and eggplant on a board with the burrata, halved figs, breadsticks and olives.",
        "min": 10

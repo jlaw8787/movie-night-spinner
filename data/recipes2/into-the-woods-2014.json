@@ -449,6 +449,293 @@
    }
   },
   {
+   "n": "King's festival roast pork with apples",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 100,
+   "make_ahead": "Score and salt the pork skin the day before and leave uncovered in the fridge",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "pork loin, skin on",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "sage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "dry cider",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "baby spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 240C. Score the skin, rub with the salt and sit the pork on the quartered apples, onions and sage in a roasting tin.",
+     "min": 10
+    },
+    {
+     "text": "Roast for 30 minutes until the skin crackles, then turn down to 180C.",
+     "min": 30
+    },
+    {
+     "text": "Roast for 1 more hour, then rest for 15 minutes.",
+     "min": 60
+    },
+    {
+     "text": "Stir the flour into the pan juices on the stove, add the cider and simmer for 4 minutes for gravy.",
+     "min": 6
+    },
+    {
+     "text": "Boil the beans for 4 minutes, then toss with the spinach and butter until wilted.",
+     "min": 5
+    },
+    {
+     "text": "Carve and serve with the roast apples, gravy and greens.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "King's festival roast pork with apples (alcohol-free)",
+     "prep_min": 20,
+     "cook_min": 100,
+     "make_ahead": "Score and salt the pork skin the day before and leave uncovered in the fridge",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "kg",
+       "item": "pork loin, skin on",
+       "aisle": "Meat"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "sea salt flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "apples",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "sage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 240C. Score the skin, rub with the salt and sit the pork on the quartered apples, onions and sage in a roasting tin.",
+       "min": 10
+      },
+      {
+       "text": "Roast for 30 minutes until the skin crackles, then turn down to 180C.",
+       "min": 30
+      },
+      {
+       "text": "Roast for 1 more hour, then rest for 15 minutes.",
+       "min": 60
+      },
+      {
+       "text": "Stir the flour into the pan juices on the stove, add the apple juice and simmer for 4 minutes for gravy.",
+       "min": 6
+      },
+      {
+       "text": "Boil the beans for 4 minutes, then toss with the spinach and butter until wilted.",
+       "min": 5
+      },
+      {
+       "text": "Carve and serve with the roast apples, gravy and greens.",
+       "min": 3
+      }
+     ],
+     "veg": false
+    },
+    "veg": {
+     "n": "King's festival roast pumpkin with apples",
+     "prep_min": 15,
+     "cook_min": 50,
+     "make_ahead": "Cut the pumpkin up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 1.5,
+       "u": "kg",
+       "item": "Kent pumpkin",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "apples",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "sage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "cloudy apple juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss pumpkin wedges with the oil and salt and roast at 200C on the quartered apples, onions and sage for 45 minutes until caramelised.",
+       "min": 45
+      },
+      {
+       "text": "Melt half the butter, stir in the flour, then whisk in the apple juice and stock and simmer for 5 minutes for gravy.",
+       "min": 8
+      },
+      {
+       "text": "Boil the beans for 4 minutes, then toss with the spinach and the rest of the butter until wilted.",
+       "min": 5
+      },
+      {
+       "text": "Serve the pumpkin and apples with the gravy and greens.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Rapunzel's golden apple plait",
    "course": "w",
    "prep_min": 30,

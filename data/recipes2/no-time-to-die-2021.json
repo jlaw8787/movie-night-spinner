@@ -491,6 +491,208 @@
    }
   },
   {
+   "n": "Port Antonio jerk chicken with rice and peas",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Marinate the chicken up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thighs, bone in",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Scotch bonnet or red chilli",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground allspice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "coconut milk",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin kidney beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "shredded cabbage",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Blitz the spring onion, chilli, allspice, thyme leaves, soy and lime juice and rub over the chicken.",
+     "min": 8
+    },
+    {
+     "text": "Grill or roast at 200°C until charred and cooked through.",
+     "min": 35
+    },
+    {
+     "text": "Simmer the rice with the coconut milk, beans, 250ml water and salt, covered, until tender.",
+     "min": 20
+    },
+    {
+     "text": "Serve with the shredded cabbage.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Port Antonio jerk pumpkin with rice and peas",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "Marinate the chicken up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "pumpkin, in thick wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "haloumi, thickly sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Scotch bonnet or red chilli",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground allspice",
+       "aisle": "Spices"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "coconut milk",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin kidney beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "shredded cabbage",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Blitz the spring onion, chilli, allspice, thyme leaves, soy, oil and lime juice and toss with the pumpkin.",
+       "min": 8
+      },
+      {
+       "text": "Roast at 200°C until charred and tender, adding the haloumi for the last 10 minutes.",
+       "min": 30
+      },
+      {
+       "text": "Simmer the rice with the coconut milk, beans, 250ml water and salt, covered, until tender.",
+       "min": 20
+      },
+      {
+       "text": "Serve with the shredded cabbage.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Madeleine's Norway cardamom buns",
    "course": "w",
    "prep_min": 140,

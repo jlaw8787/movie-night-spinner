@@ -576,6 +576,67 @@
    }
   },
   {
+   "n": "Snow day maple roast carrots and sprouts",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 30,
+   "make_ahead": "Trim the sprouts and cut the carrots up to 1 day ahead; roast on the night",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "carrots, cut in batons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "brussels sprouts, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the carrots and halve the sprouts.",
+     "min": 8
+    },
+    {
+     "text": "Toss with the oil and salt and roast at 220C until browned at the edges.",
+     "min": 25
+    },
+    {
+     "text": "Melt the butter with the maple syrup and thyme leaves, pour over the hot vegetables and roast until glazed.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Snowman coconut cupcakes",
    "course": "w",
    "prep_min": 40,

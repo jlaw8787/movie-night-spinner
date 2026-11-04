@@ -623,6 +623,192 @@
    }
   },
   {
+   "n": "Curtis Taylor's smothered pork chops",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "Wash and shred the greens up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "pork loin chops",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch silverbeet or collard greens",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "apple cider vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Season the chops, dust in half the flour mixed with the paprika and brown in the oil for 3 minutes a side. Lift out.",
+     "min": 10
+    },
+    {
+     "text": "Fry the sliced onions in the same pan for 8 minutes until soft, stir in the rest of the flour, then whisk in the stock.",
+     "min": 10
+    },
+    {
+     "text": "Put the chops back with the thyme, cover and simmer for 20 minutes until tender in a thick gravy.",
+     "min": 20
+    },
+    {
+     "text": "Fry the sliced garlic in a little oil, add the shredded greens and a splash of water and cook for 6 minutes, then add the vinegar.",
+     "min": 8
+    },
+    {
+     "text": "Serve the chops smothered in gravy with the greens.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Curtis Taylor's smothered mushroom steaks",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "Wash and shred the greens up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large field mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch silverbeet or collard greens",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "apple cider vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil with the paprika and lift out.",
+       "min": 8
+      },
+      {
+       "text": "Fry the sliced onions in the same pan for 8 minutes until soft, stir in the flour, then whisk in the stock.",
+       "min": 10
+      },
+      {
+       "text": "Put the mushrooms back with the thyme and simmer for 10 minutes in a thick gravy.",
+       "min": 10
+      },
+      {
+       "text": "Fry the sliced garlic in a little oil, add the shredded greens and a splash of water and cook for 6 minutes, then add the vinegar.",
+       "min": 8
+      },
+      {
+       "text": "Serve the mushrooms smothered in gravy with the greens.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Lorrell's sweet potato pie",
    "course": "w",
    "prep_min": 25,

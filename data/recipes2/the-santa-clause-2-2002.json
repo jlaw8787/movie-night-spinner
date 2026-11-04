@@ -272,6 +272,73 @@
    }
   },
   {
+   "n": "Mother Nature's maple roast vegetables",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "Cut the vegetables up to 1 day ahead; roast on the night",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "pumpkin, cut in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots, halved lengthways",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "parsnips, halved lengthways",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "pecans, chopped",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the pumpkin, carrots and parsnips.",
+     "min": 10
+    },
+    {
+     "text": "Toss with the oil and salt and roast at 210C until browned and tender.",
+     "min": 30
+    },
+    {
+     "text": "Drizzle with the maple, add the thyme and pecans and roast until sticky.",
+     "min": 8
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Toy Santa candy cane brownies",
    "course": "w",
    "prep_min": 25,

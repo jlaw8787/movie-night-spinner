@@ -381,6 +381,210 @@
    }
   },
   {
+   "n": "Mr Zadir's lamb koobideh",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 25,
+   "make_ahead": "Mix and shape the kebabs up to 1 day ahead and chill",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "lamb mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground sumac",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground turmeric",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "basmati rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch saffron",
+     "aisle": "Spices"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grate the onion, squeeze out the juice and mix with the lamb, turmeric and salt until sticky. Shape around 8 flat skewers.",
+     "min": 10
+    },
+    {
+     "text": "Soak the saffron in 2 tbsp hot water. Simmer the rice with 600ml water, covered, for 12 minutes, rest for 5, then stir through the saffron and butter.",
+     "min": 17
+    },
+    {
+     "text": "Grill the kebabs and halved tomatoes on a hot grill for 5 minutes a side.",
+     "min": 12
+    },
+    {
+     "text": "Mix the yoghurt with chopped mint and salt.",
+     "min": 3
+    },
+    {
+     "text": "Dust the kebabs with sumac and serve on the rice with the tomatoes, yoghurt and parsley.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mr Zadir's eggplant kebabs",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Mix and shape the kebabs up to 1 day ahead and chill",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggplants",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "halloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground sumac",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground turmeric",
+       "aisle": "Spices"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "basmati rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch saffron",
+       "aisle": "Spices"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the eggplant and halloumi into chunks, toss with the oil, turmeric and salt and thread onto 8 skewers.",
+       "min": 10
+      },
+      {
+       "text": "Soak the saffron in 2 tbsp hot water. Simmer the rice with 600ml water, covered, for 12 minutes, rest for 5, then stir through the saffron and butter.",
+       "min": 17
+      },
+      {
+       "text": "Grill the kebabs and halved tomatoes on a hot grill for 5 minutes a side.",
+       "min": 12
+      },
+      {
+       "text": "Mix the yoghurt with chopped mint and salt.",
+       "min": 3
+      },
+      {
+       "text": "Dust the kebabs with sumac and serve on the rice with the tomatoes, yoghurt and parsley.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Neon pink raspberry cheesecake cups",
    "course": "w",
    "prep_min": 30,

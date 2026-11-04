@@ -2,44 +2,68 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Amsterdam cheeseburger sliders",
+   "n": "Buddy Holly's chicken basket",
    "course": "s",
    "prep_min": 20,
-   "cook_min": 10,
-   "make_ahead": "Shape the patties up to 1 day ahead, keep chilled",
+   "cook_min": 25,
+   "make_ahead": "Soak the chicken in buttermilk up to 1 day ahead; mix the dip up to 2 days ahead",
    "ingredients": [
     {
-     "q": 500,
+     "q": 600,
      "u": "g",
-     "item": "beef mince",
+     "item": "chicken tenderloins",
      "aisle": "Meat"
     },
     {
-     "q": 12,
-     "u": "",
-     "item": "slices American cheese",
+     "q": 250,
+     "u": "ml",
+     "item": "buttermilk",
      "aisle": "Dairy"
     },
     {
-     "q": 12,
-     "u": "",
-     "item": "slider buns",
-     "aisle": "Bakery"
-    },
-    {
      "q": 1,
-     "u": "",
-     "item": "onion, diced",
-     "aisle": "Produce"
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
     },
     {
-     "q": 12,
-     "u": "",
-     "item": "dill pickle slices",
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
      "aisle": "Pantry"
     },
     {
      "q": 2,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
      "u": "tbsp",
      "item": "yellow mustard",
      "aisle": "Pantry"
@@ -49,67 +73,95 @@
      "u": "tbsp",
      "item": "mayonnaise",
      "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Divide the mince into 12 small balls and dice the onion.",
-     "min": 10
+     "text": "Soak the chicken in the buttermilk and hot sauce for at least 30 minutes in the fridge.",
+     "min": 30
     },
     {
-     "text": "Smash the balls into thin patties on a hot griddle, salt well and flip after a minute or two.",
+     "text": "Mix the flour, paprika, garlic powder and salt. Lift the chicken out, let it drip, then press it into the flour so it gets a shaggy coat.",
      "min": 8
     },
     {
-     "text": "Lay a slice of cheese on each patty to melt.",
+     "text": "Fry in oil at 175C in batches for 4 to 5 minutes until deep golden and cooked through. Drain on a rack and salt again.",
+     "min": 15
+    },
+    {
+     "text": "Stir the honey, mustard and mayonnaise together for dipping.",
      "min": 2
     },
     {
-     "text": "Fill soft buns with the patties, onion, pickle, mustard and a dab of mayonnaise, the way they do it in Amsterdam.",
-     "min": 10
+     "text": "Pile the chicken into paper-lined baskets with the dip and lemon wedges.",
+     "min": 3
     }
    ],
    "veg": false,
    "af": true,
    "alt": {
     "veg": {
-     "n": "Amsterdam cheeseburger sliders (vegetarian)",
+     "n": "Buddy Holly's halloumi basket",
      "prep_min": 20,
-     "cook_min": 10,
-     "make_ahead": "Shape the patties up to 1 day ahead, keep chilled",
+     "cook_min": 20,
+     "make_ahead": "Mix the dip up to 2 days ahead",
      "ingredients": [
       {
-       "q": 500,
+       "q": 400,
        "u": "g",
-       "item": "plant-based mince",
-       "aisle": "Frozen"
-      },
-      {
-       "q": 12,
-       "u": "",
-       "item": "slices American cheese",
+       "item": "halloumi",
        "aisle": "Dairy"
       },
       {
-       "q": 12,
-       "u": "",
-       "item": "slider buns",
-       "aisle": "Bakery"
+       "q": 250,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
       },
       {
        "q": 1,
-       "u": "",
-       "item": "onion, diced",
-       "aisle": "Produce"
+       "u": "tsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
       },
       {
-       "q": 12,
-       "u": "",
-       "item": "dill pickle slices",
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
        "aisle": "Pantry"
       },
       {
        "q": 2,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
        "u": "tbsp",
        "item": "yellow mustard",
        "aisle": "Pantry"
@@ -121,28 +173,32 @@
        "aisle": "Pantry"
       },
       {
-       "q": null,
+       "q": 1,
        "u": "",
-       "item": "salt, to taste",
-       "aisle": "Pantry"
+       "item": "lemon",
+       "aisle": "Produce"
       }
      ],
      "steps": [
       {
-       "text": "Divide the plant-based mince into 12 small balls and dice the onion.",
-       "min": 10
+       "text": "Cut the halloumi into thick fingers and soak in the buttermilk and hot sauce for 15 minutes.",
+       "min": 15
       },
       {
-       "text": "Smash the balls into thin patties on a hot griddle, salt well and flip after a minute or two.",
+       "text": "Mix the flour, paprika and garlic powder. Lift the halloumi out, let it drip, then press it into the flour so it gets a shaggy coat.",
        "min": 8
       },
       {
-       "text": "Lay a slice of cheese on each patty to melt.",
+       "text": "Fry in oil at 180C in batches for 2 to 3 minutes until deep golden. Drain on a rack.",
+       "min": 10
+      },
+      {
+       "text": "Stir the honey, mustard and mayonnaise together for dipping.",
        "min": 2
       },
       {
-       "text": "Fill soft buns with the patties, onion, pickle, mustard and a dab of mayonnaise, the way they do it in Amsterdam.",
-       "min": 10
+       "text": "Pile the halloumi into paper-lined baskets with the dip and lemon wedges.",
+       "min": 3
       }
      ],
      "af": true
@@ -150,52 +206,16 @@
    }
   },
   {
-   "n": "Big Kahuna burger bites",
+   "n": "Mamie Van Doren deviled eggs",
    "course": "s",
-   "prep_min": 16,
-   "cook_min": 18,
-   "make_ahead": "Teriyaki glaze up to 3 days ahead",
+   "prep_min": 20,
+   "cook_min": 12,
+   "make_ahead": "Boil and fill the eggs up to 1 day ahead, keep covered in the fridge; fry the shallots on the day",
    "ingredients": [
     {
-     "q": 80,
-     "u": "ml",
-     "item": "soy sauce",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 80,
-     "u": "ml",
-     "item": "mirin",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "tbsp",
-     "item": "brown sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 500,
-     "u": "g",
-     "item": "beef mince",
-     "aisle": "Meat"
-    },
-    {
-     "q": null,
+     "q": 8,
      "u": "",
-     "item": "salt and pepper, to taste",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 4,
-     "u": "",
-     "item": "tinned pineapple rings",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 6,
-     "u": "",
-     "item": "slices cheddar",
+     "item": "eggs",
      "aisle": "Dairy"
     },
     {
@@ -205,345 +225,72 @@
      "aisle": "Pantry"
     },
     {
+     "q": 2,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
      "q": 1,
-     "u": "tbsp",
-     "item": "sriracha",
+     "u": "tsp",
+     "item": "white vinegar",
      "aisle": "Pantry"
     },
     {
-     "q": 12,
-     "u": "",
-     "item": "slider buns",
-     "aisle": "Bakery"
+     "q": 1,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
     },
     {
-     "q": 12,
+     "q": 2,
      "u": "",
-     "item": "toothpicks",
+     "item": "shallots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "vegetable oil",
      "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Simmer the soy sauce, mirin and brown sugar for 5 minutes until syrupy.",
+     "text": "Lower the eggs into boiling water for 10 minutes, then straight into iced water.",
+     "min": 12
+    },
+    {
+     "text": "Slice the shallots thin and fry them slowly in the oil until golden and crisp. Drain on paper.",
+     "min": 10
+    },
+    {
+     "text": "Peel and halve the eggs. Mash the yolks with the mayonnaise, mustard, vinegar and hot sauce until smooth, and season.",
      "min": 6
     },
     {
-     "text": "Shape the beef mince into 12 small patties and season with salt and pepper.",
-     "min": 8
+     "text": "Pipe or spoon the yolk back into the whites.",
+     "min": 5
     },
     {
-     "text": "Grill the pineapple rings until charred and cut each into 3.",
-     "min": 6
-    },
-    {
-     "text": "Cook the patties on a hot griddle for 2 minutes a side, brush with the teriyaki and top each with a small square of cheddar.",
-     "min": 6
-    },
-    {
-     "text": "Mix the mayonnaise with the sriracha. Fill the slider buns with the patties, pineapple and sriracha mayonnaise and hold each together with a toothpick.",
-     "min": 8
+     "text": "Dust with smoked paprika and top with crisp shallots and snipped chives.",
+     "min": 3
     }
    ],
-   "veg": false,
-   "af": false,
-   "alt": {
-    "af": {
-     "n": "Big Kahuna burger bites",
-     "prep_min": 16,
-     "cook_min": 18,
-     "make_ahead": "Teriyaki glaze up to 3 days ahead",
-     "ingredients": [
-      {
-       "q": 80,
-       "u": "ml",
-       "item": "soy sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 80,
-       "u": "ml",
-       "item": "honey",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "brown sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 500,
-       "u": "g",
-       "item": "beef mince",
-       "aisle": "Meat"
-      },
-      {
-       "q": null,
-       "u": "",
-       "item": "salt and pepper, to taste",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "tinned pineapple rings",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 6,
-       "u": "",
-       "item": "slices cheddar",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 80,
-       "u": "g",
-       "item": "mayonnaise",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "sriracha",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 12,
-       "u": "",
-       "item": "slider buns",
-       "aisle": "Bakery"
-      },
-      {
-       "q": 12,
-       "u": "",
-       "item": "toothpicks",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Simmer the soy sauce, honey and brown sugar for 5 minutes until syrupy.",
-       "min": 6
-      },
-      {
-       "text": "Shape the beef mince into 12 small patties and season with salt and pepper.",
-       "min": 8
-      },
-      {
-       "text": "Grill the pineapple rings until charred and cut each into 3.",
-       "min": 6
-      },
-      {
-       "text": "Cook the patties on a hot griddle for 2 minutes a side, brush with the teriyaki and top each with a small square of cheddar.",
-       "min": 6
-      },
-      {
-       "text": "Mix the mayonnaise with the sriracha. Fill the slider buns with the patties, pineapple and sriracha mayonnaise and hold each together with a toothpick.",
-       "min": 8
-      }
-     ]
-    },
-    "veg": {
-     "n": "Big Kahuna burger bites (vegetarian)",
-     "prep_min": 16,
-     "cook_min": 18,
-     "make_ahead": "Teriyaki glaze up to 3 days ahead",
-     "ingredients": [
-      {
-       "q": 80,
-       "u": "ml",
-       "item": "soy sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 80,
-       "u": "ml",
-       "item": "mirin",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "brown sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 500,
-       "u": "g",
-       "item": "plant-based mince",
-       "aisle": "Frozen"
-      },
-      {
-       "q": null,
-       "u": "",
-       "item": "salt and pepper, to taste",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "tinned pineapple rings",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 6,
-       "u": "",
-       "item": "slices cheddar",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 80,
-       "u": "g",
-       "item": "mayonnaise",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "sriracha",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 12,
-       "u": "",
-       "item": "slider buns",
-       "aisle": "Bakery"
-      },
-      {
-       "q": 12,
-       "u": "",
-       "item": "toothpicks",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Simmer the soy sauce, mirin and brown sugar for 5 minutes until syrupy.",
-       "min": 6
-      },
-      {
-       "text": "Shape the plant-based mince into 12 small patties and season with salt and pepper.",
-       "min": 8
-      },
-      {
-       "text": "Grill the pineapple rings until charred and cut each into 3.",
-       "min": 6
-      },
-      {
-       "text": "Cook the patties on a hot griddle for 2 minutes a side, brush with the teriyaki and top each with a small square of cheddar.",
-       "min": 6
-      },
-      {
-       "text": "Mix the mayonnaise with the sriracha. Fill the slider buns with the patties, pineapple and sriracha mayonnaise and hold each together with a toothpick.",
-       "min": 8
-      }
-     ],
-     "af": false
-    },
-    "veg_af": {
-     "n": "Big Kahuna burger bites (vegetarian, alcohol-free)",
-     "prep_min": 16,
-     "cook_min": 18,
-     "make_ahead": "Teriyaki glaze up to 3 days ahead",
-     "ingredients": [
-      {
-       "q": 80,
-       "u": "ml",
-       "item": "soy sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 60,
-       "u": "ml",
-       "item": "apple juice",
-       "aisle": "Drinks"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "rice vinegar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "brown sugar",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 500,
-       "u": "g",
-       "item": "plant-based mince",
-       "aisle": "Frozen"
-      },
-      {
-       "q": null,
-       "u": "",
-       "item": "salt and pepper, to taste",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 4,
-       "u": "",
-       "item": "tinned pineapple rings",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 6,
-       "u": "",
-       "item": "slices cheddar",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 80,
-       "u": "g",
-       "item": "mayonnaise",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "sriracha",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 12,
-       "u": "",
-       "item": "slider buns",
-       "aisle": "Bakery"
-      },
-      {
-       "q": 12,
-       "u": "",
-       "item": "toothpicks",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Simmer the soy sauce, apple juice, rice vinegar and brown sugar for 5 minutes until syrupy.",
-       "min": 6
-      },
-      {
-       "text": "Shape the plant-based mince into 12 small patties and season with salt and pepper.",
-       "min": 8
-      },
-      {
-       "text": "Grill the pineapple rings until charred and cut each into 3.",
-       "min": 6
-      },
-      {
-       "text": "Cook the patties on a hot griddle for 2 minutes a side, brush with the teriyaki and top each with a small square of cheddar.",
-       "min": 6
-      },
-      {
-       "text": "Mix the mayonnaise with the sriracha. Fill the slider buns with the patties, pineapple and sriracha mayonnaise and hold each together with a toothpick.",
-       "min": 8
-      }
-     ]
-    }
-   }
+   "veg": true,
+   "af": true
   },
   {
    "n": "Jack Rabbit Slim's fries",
@@ -579,7 +326,7 @@
     {
      "q": null,
      "u": "",
-     "item": "yellow mustard, to serve",
+     "item": "mayonnaise, to serve",
      "aisle": "Pantry"
     }
    ],
@@ -601,7 +348,7 @@
      "min": 15
     },
     {
-     "text": "Fry again at 190C until crisp, salt and serve in red-checked paper boats with tomato sauce and mustard.",
+     "text": "Fry again at 190C until crisp, salt and serve in red-checked paper boats with tomato sauce and a pot of mayonnaise, the way they do it in Holland.",
      "min": 5
     }
    ],

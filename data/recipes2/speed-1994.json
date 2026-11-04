@@ -120,6 +120,73 @@
    "af": true
   },
   {
+   "n": "Annie's speeding ticket street corn",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 12,
+   "make_ahead": "Mix the lime mayo up to 1 day ahead; grill the corn just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "cotija or feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brush the corn with melted butter and cook in a very hot grill pan, turning, for 10 minutes until charred all over.",
+     "min": 12
+    },
+    {
+     "text": "Mix the mayonnaise with the zest and juice of 1 lime.",
+     "min": 2
+    },
+    {
+     "text": "Brush the hot corn with the lime mayo, roll in crumbled cotija, dust with chilli and scatter with coriander. Serve with lime wedges.",
+     "min": 4
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "LA street tacos",
    "course": "m",
    "prep_min": 20,
@@ -307,6 +374,196 @@
       {
        "text": "Serve in doubled tortillas with onion, coriander and salsa verde.",
        "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Harry's pop quiz chicken burgers",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Crumb the chicken and make the slaw dressing up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "brioche buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "white cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "chipotle in adobo",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Flatten the chicken, then dip in flour, beaten egg and panko.",
+     "min": 10
+    },
+    {
+     "text": "Shallow fry in the oil for 4 minutes a side until golden and cooked through.",
+     "min": 10
+    },
+    {
+     "text": "Mix half the mayonnaise with the chopped chipotle. Toss the shredded cabbage with the rest and the lime juice.",
+     "min": 4
+    },
+    {
+     "text": "Toast the buns, spread with chipotle mayo and fill with chicken, slaw and pickles.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Harry's pop quiz eggplant burgers",
+     "prep_min": 25,
+     "cook_min": 15,
+     "make_ahead": "Crumb the chicken and make the slaw dressing up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large eggplant",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "brioche buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "white cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "chipotle in adobo",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the eggplant into thick rounds, salt them, then dip in flour, beaten egg and panko.",
+       "min": 10
+      },
+      {
+       "text": "Shallow fry in the oil for 4 minutes a side until golden and soft.",
+       "min": 10
+      },
+      {
+       "text": "Mix half the mayonnaise with the chopped chipotle. Toss the shredded cabbage with the rest and the lime juice.",
+       "min": 4
+      },
+      {
+       "text": "Toast the buns, spread with chipotle mayo and fill with eggplant, slaw and pickles.",
+       "min": 4
       }
      ],
      "af": true

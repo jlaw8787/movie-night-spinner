@@ -382,6 +382,105 @@
    }
   },
   {
+   "n": "Donna Who's after-night-shift mac and cheese",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "Make the mac and cheese up to 1 day ahead and bake on the night",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "macaroni",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "vintage cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "gruyère, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "heads broccoli",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the macaroni for 2 minutes less than the packet says and drain.",
+     "min": 10
+    },
+    {
+     "text": "Melt the butter, stir in the flour for 1 minute, whisk in the milk and simmer until thick. Stir in the cheddar, gruyère and mustard.",
+     "min": 10
+    },
+    {
+     "text": "Fold the macaroni through the sauce and tip into a baking dish. Top with the panko and parmesan.",
+     "min": 3
+    },
+    {
+     "text": "Bake at 200C for 25 minutes until golden, with the broccoli florets tossed in the oil and salt on a second tray.",
+     "min": 25
+    },
+    {
+     "text": "Serve the mac and cheese with the broccoli.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Whoville Christmas pudding with custard",
    "course": "w",
    "prep_min": 20,

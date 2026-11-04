@@ -492,6 +492,164 @@
    }
   },
   {
+   "n": "Franco's housewarming hot honey pizza",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 12,
+   "make_ahead": "Make the hot honey up to 1 week ahead; stretch and bake the pizzas on the night",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "balls pizza dough, about 250g each",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "tomato passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mozzarella, torn",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "sliced pepperoni",
+     "aisle": "Deli"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch basil",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the honey with the chilli flakes and leave to infuse.",
+     "min": 3
+    },
+    {
+     "text": "Heat the oven as high as it goes with a tray or stone inside. Mix the passata with the garlic and salt.",
+     "min": 10
+    },
+    {
+     "text": "Stretch each dough thin on baking paper, spread with sauce and top with mozzarella and pepperoni.",
+     "min": 8
+    },
+    {
+     "text": "Slide onto the hot tray and bake until blistered.",
+     "min": 10
+    },
+    {
+     "text": "Drizzle with the hot honey and tear over basil.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Franco's housewarming hot honey mushroom pizza",
+     "prep_min": 20,
+     "cook_min": 12,
+     "make_ahead": "Make the hot honey up to 1 week ahead; bake on the night",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "balls pizza dough, about 250g each",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "tomato passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella, torn",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch basil",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Warm the honey with the chilli flakes and leave to infuse.",
+       "min": 3
+      },
+      {
+       "text": "Heat the oven as high as it goes with a tray inside. Mix the passata with the garlic and salt.",
+       "min": 10
+      },
+      {
+       "text": "Stretch the dough thin, spread with sauce and top with mozzarella and mushrooms. Bake on the hot tray until blistered.",
+       "min": 15
+      },
+      {
+       "text": "Drizzle with the hot honey and tear over basil.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "The last chocolate caramel nougat bar",
    "course": "w",
    "prep_min": 25,

@@ -329,9 +329,15 @@
      "aisle": "Meat"
     },
     {
-     "q": 2,
+     "q": 1,
      "u": "",
-     "item": "onions, 1 diced for the chilli and 1 finely diced to serve",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, finely diced, to serve",
      "aisle": "Produce"
     },
     {
@@ -427,9 +433,15 @@
        "aisle": "Pantry"
       },
       {
-       "q": 2,
+       "q": 1,
        "u": "",
-       "item": "onions, 1 diced for the chilli and 1 finely diced to serve",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, finely diced, to serve",
        "aisle": "Produce"
       },
       {
@@ -501,6 +513,174 @@
       {
        "text": "Finish with raw diced onion and a squeeze of mustard.",
        "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Grade three crispy chicken tenders",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 18,
+   "make_ahead": "Crumb the tenders up to 1 day ahead and keep them in the fridge; bake on the night",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken tenderloins",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cornflakes, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "carrots, cut in sticks",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cornflakes with the parmesan, paprika and salt.",
+     "min": 4
+    },
+    {
+     "text": "Dip the chicken in flour, beaten egg and the cornflake crumb and lay on an oiled tray. Drizzle with oil.",
+     "min": 12
+    },
+    {
+     "text": "Bake at 220C, turning once, until crisp and cooked through.",
+     "min": 18
+    },
+    {
+     "text": "Stir the honey into the mustard and serve with the tenders and carrot sticks.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Grade three crispy haloumi tenders",
+     "prep_min": 15,
+     "cook_min": 12,
+     "make_ahead": "Crumb up to 4 hours ahead; bake on the night",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut in fingers",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cornflakes, crushed",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "American mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "carrots, cut in sticks",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the cornflakes with the paprika.",
+       "min": 3
+      },
+      {
+       "text": "Dip the haloumi in flour, egg and crumb, lay on an oiled tray and drizzle with oil.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 220C until crisp. Serve with honey mustard and carrot sticks.",
+       "min": 12
       }
      ],
      "af": true

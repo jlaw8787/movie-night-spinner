@@ -519,6 +519,67 @@
    }
   },
   {
+   "n": "Great hall roast roots with honey and thyme",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "Cut the vegetables up to 1 day ahead; roast on the night",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "carrots, halved lengthways",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "parsnips, halved lengthways",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "turnips, cut in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the carrots, parsnips and turnips.",
+     "min": 10
+    },
+    {
+     "text": "Toss with the oil and salt and roast at 210C until browned.",
+     "min": 32
+    },
+    {
+     "text": "Drizzle with honey, add the thyme and roast until sticky.",
+     "min": 8
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Ash's forgotten words honey cake",
    "course": "w",
    "prep_min": 15,

@@ -523,6 +523,190 @@
    }
   },
   {
+   "n": "Steve Christy's opening week cookout chicken",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Marinate the chicken and make the potato salad up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chat potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cos lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the chicken in the juice of 1 lemon, the garlic, oregano and 2 tbsp oil.",
+     "min": 5
+    },
+    {
+     "text": "Boil the potatoes until tender, cool a little and toss with the mayonnaise and spring onion.",
+     "min": 20
+    },
+    {
+     "text": "Grill the chicken over the coals until charred and cooked through.",
+     "min": 15
+    },
+    {
+     "text": "Dress the cos with the last of the oil and lemon and serve with the chicken and potatoes.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Steve Christy's opening week cookout haloumi",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Marinate the chicken and make the potato salad up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, thickly sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini, sliced lengthways",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "chat potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "whole egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cos lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the juice of 1 lemon, the garlic, oregano and 2 tbsp oil and toss the zucchini through.",
+       "min": 5
+      },
+      {
+       "text": "Boil the potatoes until tender, cool a little and toss with the mayonnaise and spring onion.",
+       "min": 20
+      },
+      {
+       "text": "Grill the zucchini and haloumi over the coals until charred.",
+       "min": 10
+      },
+      {
+       "text": "Dress the cos with the last of the oil and lemon and serve with the haloumi and potatoes.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Crystal Lake blueberry cobbler",
    "course": "w",
    "prep_min": 20,

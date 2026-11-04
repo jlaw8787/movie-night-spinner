@@ -557,6 +557,198 @@
    }
   },
   {
+   "n": "Donna's lemon chicken souvlaki",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 12,
+   "make_ahead": "Marinate the chicken and make the tzatziki up to 1 day ahead in the fridge; grill on the night",
+   "ingredients": [
+    {
+     "q": 700,
+     "u": "g",
+     "item": "chicken thigh fillets, cubed",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pita breads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "skewers",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the chicken with the juice of a lemon, two of the garlic cloves, the oregano, oil and salt.",
+     "min": 8
+    },
+    {
+     "text": "Squeeze the cucumber dry and mix into the yoghurt with the last garlic clove and a squeeze of lemon.",
+     "min": 5
+    },
+    {
+     "text": "Thread the chicken onto skewers and grill, turning, until charred and cooked through.",
+     "min": 12
+    },
+    {
+     "text": "Warm the pitas on the grill and wrap with the chicken, tzatziki, tomato and onion.",
+     "min": 6
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Donna's lemon haloumi souvlaki",
+     "prep_min": 20,
+     "cook_min": 10,
+     "make_ahead": "Make the tzatziki up to 1 day ahead; grill on the night",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cubed",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red capsicum, cut in squares",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pita breads",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "red onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "skewers",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Squeeze the cucumber dry and mix into the yoghurt with the garlic and a squeeze of lemon.",
+       "min": 5
+      },
+      {
+       "text": "Thread the haloumi and capsicum onto skewers, brush with oil, lemon and oregano and grill until charred.",
+       "min": 10
+      },
+      {
+       "text": "Warm the pitas and wrap with the skewers, tzatziki, tomato and onion.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Hotel Bella Donna portokalopita",
    "course": "w",
    "prep_min": 78,

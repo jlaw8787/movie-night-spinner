@@ -641,6 +641,83 @@
      ]
     }
    }
+  },
+  {
+   "n": "Ensalada de aguacate",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Slice the onion and soak it in lime up to 2 hours ahead; cut the avocado just before serving",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion, finely sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "ripe avocados",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "ripe tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small iceberg lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "extra virgin olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the onion in the juice of one lime with a pinch of the salt so it softens and turns pink.",
+     "min": 10
+    },
+    {
+     "text": "Tear the lettuce onto a platter. Cut the avocados and tomatoes into thick wedges and lay them over.",
+     "min": 5
+    },
+    {
+     "text": "Scatter the onion over with its lime, squeeze over the second lime, drizzle the oil and season with the rest of the salt.",
+     "min": 2
+    },
+    {
+     "text": "Finish with torn coriander and serve straight away.",
+     "min": 1
+    }
+   ],
+   "veg": true,
+   "af": true
   }
  ]
 }

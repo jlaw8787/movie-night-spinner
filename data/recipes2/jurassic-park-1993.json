@@ -2,6 +2,155 @@
  "serves": 4,
  "dishes": [
   {
+   "n": "Nedry's smoked chicken finger sandwiches",
+   "course": "s",
+   "prep_min": 25,
+   "cook_min": 0,
+   "make_ahead": "Make up to 4 hours ahead, covered and chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cream cheese, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives, snipped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "ripe avocado",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "smoked chicken, sliced",
+     "aisle": "Deli"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices soft white bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch salt",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the cream cheese with the chives and the lemon zest.",
+     "min": 3
+    },
+    {
+     "text": "Mash the avocado with a squeeze of the lemon and the salt.",
+     "min": 3
+    },
+    {
+     "text": "Spread all the bread with the cream cheese. Top four slices with avocado and chicken and close with the rest.",
+     "min": 8
+    },
+    {
+     "text": "Press lightly, cut off the crusts and cut each into three fingers.",
+     "min": 5
+    },
+    {
+     "text": "Stack in a tin, cover and chill until serving.",
+     "min": 20
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Nedry's cucumber finger sandwiches",
+     "prep_min": 20,
+     "cook_min": 0,
+     "make_ahead": "Make up to 4 hours ahead, covered and chilled",
+     "ingredients": [
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cream cheese, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives, snipped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "ripe avocado",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "telegraph cucumber, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices soft white bread",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch salt",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the cream cheese with the chives and the lemon zest.",
+       "min": 3
+      },
+      {
+       "text": "Mash the avocado with a squeeze of the lemon and the salt.",
+       "min": 3
+      },
+      {
+       "text": "Spread all the bread with the cream cheese. Top four slices with avocado and cucumber and close with the rest.",
+       "min": 8
+      },
+      {
+       "text": "Press lightly, cut off the crusts and cut each into three fingers.",
+       "min": 5
+      },
+      {
+       "text": "Stack in a tin, cover and chill until serving.",
+       "min": 20
+      }
+     ]
+    }
+   }
+  },
+  {
    "n": "Dino egg cookies",
    "course": "s",
    "prep_min": 25,

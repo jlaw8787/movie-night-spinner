@@ -822,6 +822,385 @@
    }
   },
   {
+   "n": "Laura's record label party short ribs",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 200,
+   "make_ahead": "Braise up to 2 days ahead and reheat in the sauce",
+   "ingredients": [
+    {
+     "q": 1.6,
+     "u": "kg",
+     "item": "beef short ribs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 375,
+     "u": "ml",
+     "item": "red wine",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "instant polenta",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 160C. Season the ribs and brown well in the oil in a heavy pot. Lift out.",
+     "min": 12
+    },
+    {
+     "text": "Fry the chopped onion, carrots and garlic for 5 minutes, stir in the tomato paste, then add the wine and stock and put the ribs back.",
+     "min": 8
+    },
+    {
+     "text": "Cover and braise in the oven for 3 hours until the meat falls off the bone.",
+     "min": 180
+    },
+    {
+     "text": "Bring the milk to the boil, whisk in the polenta and stir for 5 minutes, then beat in the parmesan and butter.",
+     "min": 10
+    },
+    {
+     "text": "Chop the parsley with the lemon zest and a little garlic for gremolata.",
+     "min": 3
+    },
+    {
+     "text": "Serve the ribs and sauce over the polenta with gremolata on top.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "Laura's record label party short ribs (alcohol-free)",
+     "prep_min": 25,
+     "cook_min": 200,
+     "make_ahead": "Braise up to 2 days ahead and reheat in the sauce",
+     "ingredients": [
+      {
+       "q": 1.6,
+       "u": "kg",
+       "item": "beef short ribs",
+       "aisle": "Meat"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 625,
+       "u": "ml",
+       "item": "beef stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "instant polenta",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 160C. Season the ribs and brown well in the oil in a heavy pot. Lift out.",
+       "min": 12
+      },
+      {
+       "text": "Fry the chopped onion, carrots and garlic for 5 minutes, stir in the tomato paste, then add the grape juice, vinegar and stock and put the ribs back.",
+       "min": 8
+      },
+      {
+       "text": "Cover and braise in the oven for 3 hours until the meat falls off the bone.",
+       "min": 180
+      },
+      {
+       "text": "Bring the milk to the boil, whisk in the polenta and stir for 5 minutes, then beat in the parmesan and butter.",
+       "min": 10
+      },
+      {
+       "text": "Chop the parsley with the lemon zest and a little garlic for gremolata.",
+       "min": 3
+      },
+      {
+       "text": "Serve the ribs and sauce over the polenta with gremolata on top.",
+       "min": 3
+      }
+     ],
+     "veg": false
+    },
+    "veg": {
+     "n": "Laura's record label party braised mushrooms",
+     "prep_min": 20,
+     "cook_min": 45,
+     "make_ahead": "Braise up to 2 days ahead and reheat in the sauce",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato paste",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "red grape juice",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "red wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "instant polenta",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil and lift out.",
+       "min": 8
+      },
+      {
+       "text": "Fry the chopped onion, carrots and garlic for 5 minutes, stir in the tomato paste, then add the grape juice, vinegar, stock and lentils.",
+       "min": 8
+      },
+      {
+       "text": "Put the mushrooms back and simmer, half covered, for 30 minutes until rich.",
+       "min": 30
+      },
+      {
+       "text": "Bring the milk to the boil, whisk in the polenta and stir for 5 minutes, then beat in the parmesan and butter.",
+       "min": 10
+      },
+      {
+       "text": "Chop the parsley with the lemon zest and a little garlic for gremolata.",
+       "min": 3
+      },
+      {
+       "text": "Serve over the polenta with gremolata on top.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Ingrid's resolutions chocolate fondue",
    "course": "w",
    "prep_min": 15,

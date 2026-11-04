@@ -195,6 +195,89 @@
    }
   },
   {
+   "n": "Schultz's winter camp pumpkin and lentil soup",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "Soup keeps 3 days chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "pumpkin, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "red lentils",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1.2,
+     "u": "l",
+     "item": "vegetable stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "loaf dark rye bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the onion and garlic in the oil with the cumin.",
+     "min": 6
+    },
+    {
+     "text": "Add the pumpkin, lentils and stock and simmer until soft.",
+     "min": 25
+    },
+    {
+     "text": "Blitz until smooth and season.",
+     "min": 3
+    },
+    {
+     "text": "Serve with buttered rye bread.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "German sausages and kraut",
    "course": "m",
    "prep_min": 10,

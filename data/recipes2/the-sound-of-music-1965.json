@@ -658,6 +658,168 @@
    }
   },
   {
+   "n": "Schnitzel with noodles",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Crumb the schnitzels up to 1 day ahead and keep them in the fridge; fry on the night",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "veal schnitzels, about 120g each",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "dried breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 120,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "wide egg noodles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Beat the veal thin between baking paper, then dip in flour, beaten egg and breadcrumbs.",
+     "min": 12
+    },
+    {
+     "text": "Boil the noodles, drain and toss with half the butter, chopped parsley and salt.",
+     "min": 10
+    },
+    {
+     "text": "Fry the schnitzels in the oil and the rest of the butter, shaking the pan so the crumb puffs, until golden on both sides.",
+     "min": 8
+    },
+    {
+     "text": "Drain on paper and serve with the noodles and lemon wedges.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Schnitzel with noodles (vegetarian)",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "Crumb the eggplant up to 4 hours ahead; fry on the night",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large eggplant, cut in thick slices",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "dried breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 120,
+       "u": "ml",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "wide egg noodles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Salt the eggplant slices, pat dry, then dip in flour, beaten egg and breadcrumbs.",
+       "min": 12
+      },
+      {
+       "text": "Boil the noodles, drain and toss with half the butter, chopped parsley and salt.",
+       "min": 10
+      },
+      {
+       "text": "Fry the eggplant in the oil and the rest of the butter until golden and soft. Serve with the noodles and lemon.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Salzburger Nockerl",
    "course": "w",
    "prep_min": 20,

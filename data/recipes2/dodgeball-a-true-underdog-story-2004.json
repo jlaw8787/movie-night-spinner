@@ -353,6 +353,192 @@
    }
   },
   {
+   "n": "Patches O'Houlihan's chicken pot pie",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 45,
+   "make_ahead": "Make the filling up to 2 days ahead and keep it in the fridge; top with pastry and bake on the night",
+   "ingredients": [
+    {
+     "q": 700,
+     "u": "g",
+     "item": "chicken thigh fillets, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "leek, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken in the butter, then add the leek and carrot and soften.",
+     "min": 12
+    },
+    {
+     "text": "Stir in the flour, then the stock, cream and thyme leaves and simmer until thick. Stir in the peas and cool a little.",
+     "min": 10
+    },
+    {
+     "text": "Spoon into a pie dish, lay the pastry over, trim, crimp and brush with egg.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 200C until puffed and deep golden.",
+     "min": 30
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Patches O'Houlihan's mushroom pot pie",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "Make the filling up to 2 days ahead; top with pastry and bake on the night",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "leek, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the butter, then add the leek and carrot and soften.",
+       "min": 12
+      },
+      {
+       "text": "Stir in the flour, then the stock, cream and thyme and simmer until thick. Add the peas.",
+       "min": 8
+      },
+      {
+       "text": "Spoon into a pie dish, lay the pastry over and brush with egg. Bake at 200C until golden.",
+       "min": 30
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Underdog cake",
    "course": "w",
    "prep_min": 30,

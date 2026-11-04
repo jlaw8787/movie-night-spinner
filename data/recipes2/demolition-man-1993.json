@@ -272,6 +272,208 @@
    }
   },
   {
+   "n": "Fine dining fish tacos with pico de gallo",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 10,
+   "make_ahead": "Make the pico and crema up to 4 hours ahead",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "snapper fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "small corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "tomatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "shredded cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "avocado",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the tomato, onion, chopped coriander and the juice of 1 lime for the pico de gallo.",
+     "min": 6
+    },
+    {
+     "text": "Blitz the avocado with the sour cream and a squeeze of lime for the crema.",
+     "min": 3
+    },
+    {
+     "text": "Rub the fish with the chilli, cumin, oil and salt and grill until just cooked, then flake.",
+     "min": 8
+    },
+    {
+     "text": "Warm the tortillas and fill with cabbage, fish, pico and crema.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fine dining cauliflower tacos with pico de gallo",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "Make the pico and crema up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "cauliflower, in small florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "small corn tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "tomatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "red onion, finely diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "shredded cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "avocado",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the tomato, onion, chopped coriander and the juice of 1 lime for the pico de gallo.",
+       "min": 6
+      },
+      {
+       "text": "Blitz the avocado with the sour cream and a squeeze of lime for the crema.",
+       "min": 3
+      },
+      {
+       "text": "Toss the cauliflower with the chilli, cumin, oil and salt and roast at 220°C until charred.",
+       "min": 20
+      },
+      {
+       "text": "Warm the tortillas and fill with cabbage, cauliflower, pico and crema.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Layered jelly cubes",
    "course": "w",
    "prep_min": 30,

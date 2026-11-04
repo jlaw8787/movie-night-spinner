@@ -381,6 +381,180 @@
    }
   },
   {
+   "n": "Rambeau family honey butter fried chicken",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "Soak the chicken in buttermilk up to 1 day ahead in the fridge; dredge and fry on the night",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cayenne pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the chicken in the buttermilk with a big pinch of salt for at least 1 hour.",
+     "min": 60
+    },
+    {
+     "text": "Mix the flour with the paprika, garlic powder, half the cayenne and salt. Dredge the chicken, dip back in buttermilk and dredge again.",
+     "min": 12
+    },
+    {
+     "text": "Fry in oil at 170C, a few pieces at a time, until deep golden and cooked through.",
+     "min": 20
+    },
+    {
+     "text": "Melt the butter with the honey, hot sauce and the rest of the cayenne and brush over the hot chicken.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rambeau family honey butter fried cauliflower",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "Make the batter just before frying",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "cauliflower, in large florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cayenne pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the flour with the paprika, garlic powder, half the cayenne and salt. Dip the cauliflower in buttermilk and dredge twice.",
+       "min": 12
+      },
+      {
+       "text": "Fry in oil at 170C until deep golden and tender.",
+       "min": 15
+      },
+      {
+       "text": "Melt the butter with the honey, hot sauce and the rest of the cayenne and brush over.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Photon blast pie",
    "course": "w",
    "prep_min": 25,

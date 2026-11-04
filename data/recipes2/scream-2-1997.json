@@ -500,6 +500,210 @@
    }
   },
   {
+   "n": "Opening night chicken souvlaki",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 15,
+   "make_ahead": "Marinate the chicken and make the tzatziki up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pita breads",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the chicken into chunks and toss with the juice of 1 lemon, the oregano, 2 crushed garlic cloves, half the oil and salt. Thread onto skewers.",
+     "min": 20
+    },
+    {
+     "text": "Grate half the cucumber, squeeze it out and mix with the yoghurt, the last garlic clove and salt.",
+     "min": 4
+    },
+    {
+     "text": "Chop the tomatoes, the rest of the cucumber and the onion, top with feta and dress with the rest of the oil and lemon.",
+     "min": 5
+    },
+    {
+     "text": "Grill the skewers on a hot grill for 10 minutes, turning, until charred and cooked through.",
+     "min": 12
+    },
+    {
+     "text": "Warm the pita and serve with the skewers, tzatziki and salad.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Opening night halloumi souvlaki",
+     "prep_min": 30,
+     "cook_min": 15,
+     "make_ahead": "Marinate the chicken and make the tzatziki up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "halloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "feta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pita breads",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the halloumi and zucchini into chunks and toss with the juice of 1 lemon, the oregano, 2 crushed garlic cloves and half the oil. Thread onto skewers.",
+       "min": 10
+      },
+      {
+       "text": "Grate half the cucumber, squeeze it out and mix with the yoghurt, the last garlic clove and salt.",
+       "min": 4
+      },
+      {
+       "text": "Chop the tomatoes, the rest of the cucumber and the onion, top with feta and dress with the rest of the oil and lemon.",
+       "min": 5
+      },
+      {
+       "text": "Grill the skewers on a hot grill for 6 minutes, turning, until charred.",
+       "min": 8
+      },
+      {
+       "text": "Warm the pita and serve with the skewers, tzatziki and salad.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Windsor College buckeyes",
    "course": "w",
    "prep_min": 40,

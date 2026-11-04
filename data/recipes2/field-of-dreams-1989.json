@@ -461,6 +461,83 @@
    }
   },
   {
+   "n": "Annie's Iowa potato salad",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 20,
+   "make_ahead": "Make up to 1 day ahead and keep in the fridge; add the dill just before serving",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "waxy potatoes, cut in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch dill",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes in salted water until just tender, with the eggs in for the first 10 minutes.",
+     "min": 18
+    },
+    {
+     "text": "Drain, toss the warm potatoes with the vinegar and half the mustard and leave to cool.",
+     "min": 10
+    },
+    {
+     "text": "Peel and chop the eggs and dice the celery.",
+     "min": 5
+    },
+    {
+     "text": "Fold everything through the mayonnaise and the rest of the mustard, season and finish with chopped dill.",
+     "min": 4
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Kinsella farm Iowa apple pie",
    "course": "w",
    "prep_min": 32,

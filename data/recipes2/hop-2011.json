@@ -409,6 +409,198 @@
    }
   },
   {
+   "n": "O'Hare family Easter roast lamb",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 110,
+   "make_ahead": "Make the mint sauce up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "lamb leg, bone in",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "roasting potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches baby carrots",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "white wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "caster sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Cut small slits in the lamb and push in garlic slivers and rosemary. Rub with 1 tbsp of the oil and salt.",
+     "min": 10
+    },
+    {
+     "text": "Roast the lamb for 1 and a half hours, with the parboiled potatoes in 1 tbsp of the oil on another tray.",
+     "min": 90
+    },
+    {
+     "text": "Toss the carrots with the rest of the oil and the honey and roast for the last 30 minutes.",
+     "min": 30
+    },
+    {
+     "text": "Chop the mint and mix with the vinegar, sugar and 2 tbsp boiling water.",
+     "min": 4
+    },
+    {
+     "text": "Rest the lamb for 15 minutes, carve and serve with the vegetables and mint sauce.",
+     "min": 15
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "O'Hare family Easter roast vegetable tart",
+     "prep_min": 20,
+     "cook_min": 50,
+     "make_ahead": "Roast the pumpkin up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "butternut pumpkin",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches baby carrots",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "feta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "roasting potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "caster sugar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Roast the diced pumpkin and carrots with 1 tbsp of the oil, the honey and rosemary at 200C for 25 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Roast the parboiled potatoes in the rest of the oil for 45 minutes.",
+       "min": 45
+      },
+      {
+       "text": "Spread the vegetables and crumbled feta over the pastry, leaving a border, and bake for 25 minutes.",
+       "min": 25
+      },
+      {
+       "text": "Chop the mint and mix with the vinegar, sugar and 2 tbsp boiling water.",
+       "min": 4
+      },
+      {
+       "text": "Cut the tart and serve with the potatoes and mint sauce.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Easter Island chocolate crackle nests",
    "course": "w",
    "prep_min": 15,

@@ -404,6 +404,180 @@
    }
   },
   {
+   "n": "Peggy's chicken and leek pie",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Make the filling up to 2 days ahead and keep it in the fridge; top with pastry and bake on the night",
+   "ingredients": [
+    {
+     "q": 700,
+     "u": "g",
+     "item": "chicken thigh fillets, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "leeks, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken in the butter, then add the leeks and cook until soft.",
+     "min": 12
+    },
+    {
+     "text": "Stir in the flour, then the stock, cream, mustard and thyme leaves and simmer until thick. Cool a little.",
+     "min": 10
+    },
+    {
+     "text": "Spoon into a pie dish, lay the pastry over, trim, crimp and brush with egg.",
+     "min": 8
+    },
+    {
+     "text": "Bake at 200C until puffed and deep golden.",
+     "min": 30
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Peggy's mushroom and leek pie",
+     "prep_min": 20,
+     "cook_min": 40,
+     "make_ahead": "Make the filling up to 2 days ahead; top with pastry and bake on the night",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mixed mushrooms, thickly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "leeks, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg, beaten",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the butter, then add the leeks and cook until soft.",
+       "min": 12
+      },
+      {
+       "text": "Stir in the flour, then the stock, cream, mustard and thyme and simmer until thick.",
+       "min": 8
+      },
+      {
+       "text": "Spoon into a pie dish, lay the pastry over and brush with egg. Bake at 200C until golden.",
+       "min": 30
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Shield cherry and blueberry pie",
    "course": "w",
    "prep_min": 25,

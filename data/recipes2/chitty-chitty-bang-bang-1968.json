@@ -525,6 +525,196 @@
    }
   },
   {
+   "n": "Lord Scrumptious's roast beef and Yorkshires",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 90,
+   "make_ahead": "Make the Yorkshire batter up to 1 day ahead and keep in the fridge",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "beef sirloin roast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "roasting potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 140,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "horseradish cream",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Whisk 120g of the flour, the eggs, milk and a pinch of salt into a smooth batter and leave to stand.",
+     "min": 5
+    },
+    {
+     "text": "Heat the oven to 220C. Rub the beef with 1 tbsp of the oil and salt and roast for 45 minutes for medium rare, with the parboiled potatoes in 1 tbsp of oil on another tray.",
+     "min": 50
+    },
+    {
+     "text": "Rest the beef. Turn the oven to 230C, put a drop of the rest of the oil in a 12-hole muffin tin and heat for 5 minutes, fill with batter and bake for 18 minutes until puffed.",
+     "min": 20
+    },
+    {
+     "text": "Stir the rest of the flour into the beef pan, whisk in the stock and simmer for 4 minutes for gravy. Whip the cream softly and fold in the horseradish.",
+     "min": 6
+    },
+    {
+     "text": "Carve and serve with the Yorkshires, potatoes, gravy and horseradish cream.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lord Scrumptious's mushroom Wellington and Yorkshires",
+     "prep_min": 30,
+     "cook_min": 50,
+     "make_ahead": "Make and wrap the Wellington up to 1 day ahead and chill",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "Swiss brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "roasting potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 140,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "horseradish cream",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Whisk 120g of the flour, 3 eggs, the milk and a pinch of salt into a smooth batter and leave to stand.",
+       "min": 5
+      },
+      {
+       "text": "Fry the chopped mushrooms in 1 tbsp of the oil until dry, then wilt in the spinach. Cool, roll up in the pastry and brush with the last egg.",
+       "min": 12
+      },
+      {
+       "text": "Bake at 220C for 35 minutes, with the parboiled potatoes in 1 tbsp of oil on another tray.",
+       "min": 35
+      },
+      {
+       "text": "Put a drop of the rest of the oil in a 12-hole muffin tin and heat for 5 minutes, fill with batter and bake for 18 minutes until puffed.",
+       "min": 20
+      },
+      {
+       "text": "Cook the rest of the flour in a little oil, whisk in the stock and simmer for 4 minutes for gravy. Whip the cream softly and fold in the horseradish.",
+       "min": 6
+      },
+      {
+       "text": "Slice and serve with the Yorkshires, potatoes, gravy and horseradish cream.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Toymaker's sticky gingerbread with custard",
    "course": "w",
    "prep_min": 15,

@@ -493,6 +493,212 @@
    }
   },
   {
+   "n": "Collins' Santa Fe green chilli pork stew",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 120,
+   "make_ahead": "Stew up to 2 days ahead, reheat gently",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "pork shoulder, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "long green chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "green capsicums",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "potatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Char the chillies and capsicums under the grill, then peel, seed and chop.",
+     "min": 15
+    },
+    {
+     "text": "Brown the pork in the oil in a heavy pot, add the onion, garlic and cumin and cook until soft.",
+     "min": 12
+    },
+    {
+     "text": "Add the chillies, capsicum and stock and simmer covered until the pork is tender.",
+     "min": 80
+    },
+    {
+     "text": "Add the potatoes and simmer until soft.",
+     "min": 25
+    },
+    {
+     "text": "Serve with warm tortillas, lime and coriander.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Collins' Santa Fe green chilli bean stew",
+     "prep_min": 25,
+     "cook_min": 50,
+     "make_ahead": "Stew up to 2 days ahead, reheat gently",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tinned pinto beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long green chillies",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "green capsicums",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "potatoes, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Char the chillies and capsicums under the grill, then peel, seed and chop.",
+       "min": 15
+      },
+      {
+       "text": "Soften the onion, garlic and cumin in the oil.",
+       "min": 6
+      },
+      {
+       "text": "Add the chillies, capsicum, beans, potatoes and stock and simmer until the potatoes are soft.",
+       "min": 25
+      },
+      {
+       "text": "Serve with warm tortillas, lime and coriander.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Angel's Christmas tembleque",
    "course": "w",
    "prep_min": 5,

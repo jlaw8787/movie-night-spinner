@@ -6,13 +6,13 @@
    "course": "s",
    "prep_min": 15,
    "cook_min": 19,
-   "make_ahead": "Fry and chop the bacon up to 1 day ahead in the fridge; mix and bake just before serving, best warm",
+   "make_ahead": "Measure the dry ingredients up to 1 day ahead; mix, add the corn and bake just before serving, best warm",
    "ingredients": [
     {
-     "q": 4,
-     "u": "",
-     "item": "rashers bacon",
-     "aisle": "Meat"
+     "q": 30,
+     "u": "g",
+     "item": "butter, melted in the hot pan",
+     "aisle": "Dairy"
     },
     {
      "q": 150,
@@ -34,6 +34,12 @@
     },
     {
      "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
      "u": "",
      "item": "egg",
      "aisle": "Dairy"
@@ -45,6 +51,12 @@
      "aisle": "Dairy"
     },
     {
+     "q": 150,
+     "u": "g",
+     "item": "corn kernels",
+     "aisle": "Frozen"
+    },
+    {
      "q": 60,
      "u": "g",
      "item": "butter, to serve",
@@ -53,19 +65,19 @@
    ],
    "steps": [
     {
-     "text": "Fry the bacon until crisp, chop and keep the fat in the pan.",
+     "text": "Heat the oven to 220C with a cast iron pan inside, then melt the butter in the hot pan.",
      "min": 6
     },
     {
-     "text": "Mix the cornmeal, flour, baking powder, egg and buttermilk.",
+     "text": "Mix the cornmeal, flour, baking powder, smoked paprika, egg and buttermilk.",
      "min": 4
     },
     {
-     "text": "Stir in the bacon.",
+     "text": "Stir in the corn.",
      "min": 2
     },
     {
-     "text": "Pour into the hot greased pan and bake at 220C.",
+     "text": "Pour into the hot buttered pan and bake.",
      "min": 20
     },
     {
@@ -73,95 +85,8 @@
      "min": 2
     }
    ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Trail cornbread (vegetarian)",
-     "prep_min": 15,
-     "cook_min": 19,
-     "make_ahead": "Measure the dry ingredients up to 1 day ahead; mix, add the corn and bake just before serving, best warm",
-     "ingredients": [
-      {
-       "q": 30,
-       "u": "g",
-       "item": "butter, melted in the hot pan",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 150,
-       "u": "g",
-       "item": "fine cornmeal",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 100,
-       "u": "g",
-       "item": "plain flour",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tsp",
-       "item": "baking powder",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "smoked paprika",
-       "aisle": "Spices"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "egg",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 300,
-       "u": "ml",
-       "item": "buttermilk",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 150,
-       "u": "g",
-       "item": "corn kernels",
-       "aisle": "Frozen"
-      },
-      {
-       "q": 60,
-       "u": "g",
-       "item": "butter, to serve",
-       "aisle": "Dairy"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Heat the oven to 220C with a cast iron pan inside, then melt the butter in the hot pan.",
-       "min": 6
-      },
-      {
-       "text": "Mix the cornmeal, flour, baking powder, smoked paprika, egg and buttermilk.",
-       "min": 4
-      },
-      {
-       "text": "Stir in the corn.",
-       "min": 2
-      },
-      {
-       "text": "Pour into the hot buttered pan and bake.",
-       "min": 20
-      },
-      {
-       "text": "Serve with butter.",
-       "min": 2
-      }
-     ],
-     "af": true
-    }
-   }
+   "veg": true,
+   "af": true
   },
   {
    "n": "Saloon pickled eggs",

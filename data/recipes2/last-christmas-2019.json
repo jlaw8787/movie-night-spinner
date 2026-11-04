@@ -680,6 +680,204 @@
    }
   },
   {
+   "n": "Tom's shelter Christmas turkey",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 90,
+   "make_ahead": "Make the sage butter and peel the potatoes up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "turkey breast roast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "sage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "roasting potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "Brussels sprouts",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 190C. Mash the butter with chopped sage, lemon zest and salt and push it under the turkey skin.",
+     "min": 10
+    },
+    {
+     "text": "Roast the turkey for 1 hour 20 minutes, with the parboiled potatoes tossed in 2 tbsp of the oil in a second tray.",
+     "min": 80
+    },
+    {
+     "text": "Rest the turkey for 20 minutes. Halve the sprouts and roast them in the rest of the oil for 15 minutes.",
+     "min": 20
+    },
+    {
+     "text": "Stir the flour into the roasting pan juices on the stove, whisk in the stock and simmer for 4 minutes for gravy.",
+     "min": 6
+    },
+    {
+     "text": "Carve and serve with the potatoes, sprouts and gravy.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Tom's shelter Christmas nut roast",
+     "prep_min": 30,
+     "cook_min": 60,
+     "make_ahead": "Make and shape the nut roast up to 1 day ahead in the fridge",
+     "ingredients": [
+      {
+       "q": 200,
+       "u": "g",
+       "item": "cooked chestnuts",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "Swiss brown mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "sage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1.2,
+       "u": "kg",
+       "item": "roasting potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "Brussels sprouts",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the chopped onion and mushrooms in the butter for 8 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Mix with the chopped chestnuts, lentils, breadcrumbs, egg and chopped sage and press into a lined loaf tin.",
+       "min": 10
+      },
+      {
+       "text": "Bake at 190C for 50 minutes, with the parboiled potatoes tossed in 2 tbsp of the oil in a second tray. Add the halved sprouts in the rest of the oil for the last 15 minutes.",
+       "min": 50
+      },
+      {
+       "text": "Cook the flour in a little butter, whisk in the stock and simmer for 4 minutes for gravy.",
+       "min": 6
+      },
+      {
+       "text": "Slice and serve with the potatoes, sprouts and gravy.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Year-round Christmas shop gingerbread",
    "course": "w",
    "prep_min": 35,

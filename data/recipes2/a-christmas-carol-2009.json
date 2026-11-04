@@ -475,6 +475,196 @@
    }
   },
   {
+   "n": "Fred's Christmas party roast beef and Yorkshire puddings",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 75,
+   "make_ahead": "Make the pudding batter up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "beef sirloin roast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "carrots, halved",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour, extra",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 220°C. Whisk the eggs, flour and milk into a batter and rest.",
+     "min": 5
+    },
+    {
+     "text": "Season the beef, sear it, then roast with the potatoes and carrots tossed in half the oil until pink inside.",
+     "min": 45
+    },
+    {
+     "text": "Rest the beef. Turn the oven to 230°C, heat the rest of the oil in a muffin tin, pour in the batter and bake until puffed.",
+     "min": 20
+    },
+    {
+     "text": "Stir the extra flour and stock into the roasting tin juices and simmer for gravy. Glaze the carrots with honey.",
+     "min": 6
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Fred's Christmas party mushroom wellington and Yorkshire puddings",
+     "prep_min": 25,
+     "cook_min": 60,
+     "make_ahead": "Make the pudding batter up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mushrooms, finely chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cooked chestnuts, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets frozen puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "carrots, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 220°C. Whisk 2 eggs, the flour and milk into a batter and rest.",
+       "min": 5
+      },
+      {
+       "text": "Fry the mushrooms and onion until dry, add the chestnuts, cool, then roll in the pastry and brush with the last egg.",
+       "min": 15
+      },
+      {
+       "text": "Roast the wellington with the potatoes and carrots tossed in half the oil until golden.",
+       "min": 35
+      },
+      {
+       "text": "Turn the oven to 230°C, heat the rest of the oil in a muffin tin, pour in the batter and bake until puffed. Simmer the stock down for gravy and glaze the carrots with honey.",
+       "min": 20
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Cratchit Christmas pudding with custard",
    "course": "w",
    "prep_min": 20,

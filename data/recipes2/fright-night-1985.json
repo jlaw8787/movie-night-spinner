@@ -390,6 +390,152 @@
    }
   },
   {
+   "n": "Jerry's blood-rare steak with rocket",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 40,
+   "make_ahead": "Bring the steaks out of the fridge 30 minutes before cooking",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "thick sirloin steaks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "small potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "rosemary",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "rocket",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "balsamic vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Halve the potatoes, toss with 2 tbsp of the oil, the bashed garlic cloves and rosemary and roast at 220C for 35 minutes.",
+     "min": 35
+    },
+    {
+     "text": "Rub the steaks with the rest of the oil and salt and sear in a very hot pan for 3 minutes a side for rare.",
+     "min": 10
+    },
+    {
+     "text": "Rest the steaks for 8 minutes, then slice thinly.",
+     "min": 8
+    },
+    {
+     "text": "Lay the steak over the rocket, shave over the parmesan, drizzle with balsamic and serve with the potatoes.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jerry's blood-red beetroot steaks with rocket",
+     "prep_min": 15,
+     "cook_min": 50,
+     "make_ahead": "Bring the steaks out of the fridge 30 minutes before cooking",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "large beetroot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "small potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 6,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "rosemary",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "parmesan",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "balsamic vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Peel the beetroot, cut into thick slices, toss with 1 tbsp of the oil and salt and roast at 220C for 50 minutes, with the halved potatoes, garlic and rosemary tossed in the rest of the oil on a second tray.",
+       "min": 50
+      },
+      {
+       "text": "Lay the beetroot over the rocket, shave over the parmesan, drizzle with balsamic and serve with the potatoes.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Blood orange posset",
    "course": "w",
    "prep_min": 15,

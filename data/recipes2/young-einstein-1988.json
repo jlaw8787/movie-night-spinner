@@ -518,7 +518,7 @@
    }
   },
   {
-   "n": "Apple cider pork",
+   "n": "Einstein farm cider pork chops",
    "course": "m",
    "prep_min": 20,
    "cook_min": 40,
@@ -571,6 +571,12 @@
      "u": "tbsp",
      "item": "vegetable oil",
      "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
     }
    ],
    "steps": [
@@ -589,13 +595,17 @@
     {
      "text": "Boil the potatoes and mash with butter.",
      "min": 20
+    },
+    {
+     "text": "Boil the beans 4 minutes, drain and toss with a knob of the butter.",
+     "min": 5
     }
    ],
    "veg": false,
    "af": false,
    "alt": {
     "af": {
-     "n": "Apple and sage pork",
+     "n": "Einstein farm apple and sage pork chops",
      "prep_min": 20,
      "cook_min": 40,
      "make_ahead": "Cook the pork in the apple juice up to 1 day ahead and reheat gently; boil and mash the potatoes fresh",
@@ -653,6 +663,12 @@
        "u": "tbsp",
        "item": "vegetable oil",
        "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
       }
      ],
      "steps": [
@@ -671,11 +687,15 @@
       {
        "text": "Boil the potatoes and mash with butter.",
        "min": 20
+      },
+      {
+       "text": "Boil the beans 4 minutes, drain and toss with a knob of the butter.",
+       "min": 5
       }
      ]
     },
     "veg": {
-     "n": "Apple cider smoked tofu",
+     "n": "Einstein farm cider smoked tofu",
      "prep_min": 15,
      "cook_min": 36,
      "make_ahead": "Cook the tofu in the cider up to 1 day ahead and reheat gently; boil and mash the potatoes fresh",
@@ -727,6 +747,12 @@
        "u": "tbsp",
        "item": "vegetable oil",
        "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
       }
      ],
      "steps": [
@@ -745,12 +771,16 @@
       {
        "text": "Boil the potatoes and mash with butter.",
        "min": 20
+      },
+      {
+       "text": "Boil the beans 4 minutes, drain and toss with a knob of the butter.",
+       "min": 5
       }
      ],
      "af": false
     },
     "veg_af": {
-     "n": "Apple and sage smoked tofu",
+     "n": "Einstein farm apple and sage tofu",
      "prep_min": 15,
      "cook_min": 36,
      "make_ahead": "Cook the tofu in the apple juice up to 1 day ahead and reheat gently; boil and mash the potatoes fresh",
@@ -808,6 +838,12 @@
        "u": "tbsp",
        "item": "vegetable oil",
        "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
       }
      ],
      "steps": [
@@ -826,13 +862,17 @@
       {
        "text": "Boil the potatoes and mash with butter.",
        "min": 20
+      },
+      {
+       "text": "Boil the beans 4 minutes, drain and toss with a knob of the butter.",
+       "min": 5
       }
      ]
     }
    }
   },
   {
-   "n": "Apple pie",
+   "n": "Einstein family apple pie",
    "course": "w",
    "prep_min": 35,
    "cook_min": 110,

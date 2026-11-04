@@ -491,6 +491,242 @@
    }
   },
   {
+   "n": "Three Cripples pie and mash",
+   "course": "m",
+   "prep_min": 35,
+   "cook_min": 120,
+   "make_ahead": "Make the filling up to 2 days ahead and chill; fill and bake on the night",
+   "ingredients": [
+    {
+     "q": 700,
+     "u": "g",
+     "item": "beef chuck, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "brown onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets shortcrust pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "sheet puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "malt vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the beef in 1 tbsp of the flour and brown in the oil. Add the sliced onions for 5 minutes.",
+     "min": 10
+    },
+    {
+     "text": "Add the stock and Worcestershire, cover and simmer for 1 and a half hours until tender and thick. Cool.",
+     "min": 90
+    },
+    {
+     "text": "Line four pie tins with shortcrust, fill, top with puff pastry, brush with egg and bake at 200C for 30 minutes.",
+     "min": 40
+    },
+    {
+     "text": "Boil the peeled potatoes for 20 minutes and mash with half the butter and a splash of the milk.",
+     "min": 25
+    },
+    {
+     "text": "Melt the rest of the butter, stir in the rest of the flour, whisk in the rest of the milk and simmer for 3 minutes, then blend with the parsley and vinegar for the liquor.",
+     "min": 8
+    },
+    {
+     "text": "Serve each pie with a scoop of mash and the liquor poured over.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Three Cripples cheese and onion pie and mash",
+     "prep_min": 30,
+     "cook_min": 50,
+     "make_ahead": "Make the filling up to 2 days ahead and chill; fill and bake on the night",
+     "ingredients": [
+      {
+       "q": 300,
+       "u": "g",
+       "item": "potatoes, for the filling",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "brown onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "vintage cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "English mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets shortcrust pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the diced filling potatoes for 10 minutes. Fry the sliced onions in 20g of the butter until soft.",
+       "min": 15
+      },
+      {
+       "text": "Mix with the cheddar and mustard and cool.",
+       "min": 3
+      },
+      {
+       "text": "Line four pie tins with shortcrust, fill, top with puff pastry, brush with egg and bake at 200C for 30 minutes.",
+       "min": 40
+      },
+      {
+       "text": "Boil the rest of the peeled potatoes for 20 minutes and mash with 30g of the butter and a splash of the milk.",
+       "min": 25
+      },
+      {
+       "text": "Melt the rest of the butter, stir in the flour, whisk in the rest of the milk and simmer for 3 minutes, then blend with the parsley and vinegar for the liquor.",
+       "min": 8
+      },
+      {
+       "text": "Serve each pie with a scoop of mash and the liquor poured over.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Workhouse porridge brulee",
    "course": "w",
    "prep_min": 29,

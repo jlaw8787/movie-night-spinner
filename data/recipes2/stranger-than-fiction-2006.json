@@ -351,6 +351,180 @@
    }
   },
   {
+   "n": "Professor Hilbert's lemon pepper fish",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Make the lemon pepper butter up to 3 days ahead",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "barramundi fillets, skin on",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, softened",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "cracked black pepper",
+     "aisle": "Spices"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "small potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mixed salad leaves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "white wine vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes for 18 minutes, drain and crush lightly with a fork and 1 tbsp of the oil.",
+     "min": 20
+    },
+    {
+     "text": "Mash the butter with the lemon zest, pepper and a pinch of salt.",
+     "min": 2
+    },
+    {
+     "text": "Score the fish skin, salt it and cook skin side down in the rest of the oil for 5 minutes until crisp, then flip for 2 minutes.",
+     "min": 8
+    },
+    {
+     "text": "Toss the leaves and sliced cucumber with the vinegar and a squeeze of lemon.",
+     "min": 3
+    },
+    {
+     "text": "Top the fish with the lemon pepper butter and serve with the potatoes and salad.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Professor Hilbert's lemon pepper halloumi",
+     "prep_min": 15,
+     "cook_min": 25,
+     "make_ahead": "Make the lemon pepper butter up to 3 days ahead",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "halloumi",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, softened",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "cracked black pepper",
+       "aisle": "Spices"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "small potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mixed salad leaves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes for 18 minutes, drain and crush lightly with a fork and 1 tbsp of the oil.",
+       "min": 20
+      },
+      {
+       "text": "Mash the butter with the lemon zest, pepper and a pinch of salt.",
+       "min": 2
+      },
+      {
+       "text": "Slice the halloumi thickly and cook in the rest of the oil for 2 minutes a side until golden.",
+       "min": 5
+      },
+      {
+       "text": "Toss the leaves and sliced cucumber with the vinegar and a squeeze of lemon.",
+       "min": 3
+      },
+      {
+       "text": "Top the halloumi with the lemon pepper butter and serve with the potatoes and salad.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Ana's warm skillet cookie with ice cream",
    "course": "w",
    "prep_min": 15,

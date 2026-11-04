@@ -120,15 +120,21 @@
   {
    "n": "Dragon task chilli bites",
    "course": "s",
-   "prep_min": 10,
-   "cook_min": 15,
-   "make_ahead": "Best served warm",
+   "prep_min": 8,
+   "cook_min": 8,
+   "make_ahead": "Cut the haloumi up to 1 day ahead; fry and glaze just before serving, best warm",
    "ingredients": [
     {
-     "q": 300,
+     "q": 400,
      "u": "g",
-     "item": "chorizo, sliced",
-     "aisle": "Meat"
+     "item": "haloumi, cut in cubes",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
     },
     {
      "q": 2,
@@ -139,14 +145,14 @@
     {
      "q": 1,
      "u": "",
-     "item": "pinch of chilli flakes",
-     "aisle": "Spices"
+     "item": "red chilli, finely chopped",
+     "aisle": "Produce"
     },
     {
-     "q": 150,
-     "u": "g",
-     "item": "sharp cheddar, cubed",
-     "aisle": "Dairy"
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
     },
     {
      "q": 20,
@@ -157,81 +163,20 @@
    ],
    "steps": [
     {
-     "text": "Fry the chorizo in a hot pan until crisp.",
-     "min": 8
+     "text": "Cut the haloumi into bite-size cubes and pat dry.",
+     "min": 4
     },
     {
-     "text": "Add the honey and chilli flakes and cook until sticky.",
-     "min": 5
+     "text": "Fry in the oil in a hot pan until golden on two sides.",
+     "min": 6
     },
     {
-     "text": "Spear onto toothpicks with cubes of cheddar.",
-     "min": 7
+     "text": "Add the honey and chilli and toss until sticky. Squeeze over lemon and spear onto toothpicks.",
+     "min": 3
     }
    ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Dragon task chilli bites (vegetarian)",
-     "prep_min": 7,
-     "cook_min": 13,
-     "make_ahead": "Best served warm",
-     "ingredients": [
-      {
-       "q": 300,
-       "u": "g",
-       "item": "vegetarian chorizo-style sausages, sliced",
-       "aisle": "Frozen"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "olive oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "honey",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "pinch of chilli flakes",
-       "aisle": "Spices"
-      },
-      {
-       "q": 150,
-       "u": "g",
-       "item": "sharp cheddar, cubed",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 20,
-       "u": "",
-       "item": "toothpicks",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Fry the sliced sausage in the oil in a hot pan until crisp.",
-       "min": 8
-      },
-      {
-       "text": "Add the honey and chilli flakes and cook until sticky.",
-       "min": 5
-      },
-      {
-       "text": "Spear onto toothpicks with cubes of cheddar.",
-       "min": 7
-      }
-     ],
-     "af": true
-    }
-   }
+   "veg": true,
+   "af": true
   },
   {
    "n": "Yule Ball roast",

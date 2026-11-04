@@ -490,6 +490,176 @@
    }
   },
   {
+   "n": "Edgar and Estelle's anniversary salmon",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Boil the potatoes up to 1 day ahead; cook the salmon just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "salmon fillets, skin on",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "kipfler potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "bunches asparagus",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "shallot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "white wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cold butter, diced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the potatoes for 15 minutes until tender, then halve them.",
+     "min": 20
+    },
+    {
+     "text": "Simmer the chopped shallot in the vinegar until almost gone, then whisk in the butter a piece at a time over low heat with a squeeze of lemon.",
+     "min": 8
+    },
+    {
+     "text": "Salt the salmon skin and cook skin side down in the oil for 5 minutes until crisp, then flip for 2 minutes.",
+     "min": 8
+    },
+    {
+     "text": "Blanch the asparagus for 2 minutes.",
+     "min": 4
+    },
+    {
+     "text": "Plate the salmon on the potatoes and asparagus, spoon over the sauce and scatter with chives.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Edgar and Estelle's anniversary asparagus tart",
+     "prep_min": 15,
+     "cook_min": 30,
+     "make_ahead": "Boil the potatoes up to 1 day ahead; cook the salmon just before serving",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "sheet puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "goat's cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "kipfler potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "bunches asparagus",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "cold butter, diced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "chives",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Spread the pastry with the goat's cheese, lay the asparagus on top and bake at 200C for 25 minutes until puffed and golden.",
+       "min": 25
+      },
+      {
+       "text": "Boil the potatoes for 15 minutes until tender, then halve them.",
+       "min": 20
+      },
+      {
+       "text": "Simmer the chopped shallot in the vinegar until almost gone, then whisk in the butter a piece at a time over low heat with a squeeze of lemon.",
+       "min": 8
+      },
+      {
+       "text": "Cut the tart, spoon over the sauce and scatter with chives. Serve with the potatoes.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Valentine's red velvet cupcakes",
    "course": "w",
    "prep_min": 40,
