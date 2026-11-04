@@ -510,6 +510,172 @@
    }
   },
   {
+   "n": "Hal Tucker's maple mustard chicken with charred corn",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 30,
+   "make_ahead": "Mix the glaze and marinate the chicken up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "wholegrain mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "salt and pepper, to taste",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the maple syrup, mustard, garlic and oil and coat the chicken.",
+     "min": 5
+    },
+    {
+     "text": "Grill or pan-fry the chicken over medium heat, turning and brushing with the glaze, until sticky and cooked through.",
+     "min": 18
+    },
+    {
+     "text": "Char the corn over the coals or in a hot pan, turning, until blackened in spots.",
+     "min": 12
+    },
+    {
+     "text": "Rub the corn with butter and lime and serve with the chicken.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Hal Tucker's maple mustard haloumi with charred corn",
+     "prep_min": 15,
+     "cook_min": 20,
+     "make_ahead": "Mix the glaze and marinate the chicken up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, thickly sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "maple syrup",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "wholegrain mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "salt and pepper, to taste",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the maple syrup, mustard, garlic and oil.",
+       "min": 3
+      },
+      {
+       "text": "Char the corn over the coals or in a hot pan, turning, until blackened in spots.",
+       "min": 12
+      },
+      {
+       "text": "Fry the haloumi in a hot pan until golden, then brush with the glaze for the last minute.",
+       "min": 6
+      },
+      {
+       "text": "Rub the corn with butter and lime and serve with the haloumi.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Treasury cash apple strudel",
    "course": "w",
    "prep_min": 30,

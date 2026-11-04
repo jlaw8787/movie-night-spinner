@@ -375,6 +375,190 @@
    }
   },
   {
+   "n": "Harold's crispy fish sliders with tartare",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 12,
+   "make_ahead": "Make the tartare up to 2 days ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "white fish fillets, cut into squares",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "slider buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "slices cheddar, halved",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "iceberg lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "capers and gherkins, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mayonnaise, capers, gherkins and a squeeze of lemon for the tartare.",
+     "min": 4
+    },
+    {
+     "text": "Dust the fish in flour, dip in beaten egg and coat in panko.",
+     "min": 8
+    },
+    {
+     "text": "Shallow fry until golden and cooked through.",
+     "min": 8
+    },
+    {
+     "text": "Fill the buns with lettuce, fish, cheese and tartare.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Harold's crispy haloumi sliders with tartare",
+     "prep_min": 20,
+     "cook_min": 12,
+     "make_ahead": "Make the tartare up to 2 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut into squares",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "ml",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "slider buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "iceberg lettuce, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "whole egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "capers and gherkins, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the mayonnaise, capers, gherkins and a squeeze of lemon for the tartare.",
+       "min": 4
+      },
+      {
+       "text": "Dust the haloumi in flour, dip in beaten egg and coat in panko.",
+       "min": 8
+      },
+      {
+       "text": "Shallow fry until golden.",
+       "min": 6
+      },
+      {
+       "text": "Fill the buns with lettuce, haloumi and tartare.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Salted caramel malt shakes",
    "course": "w",
    "prep_min": 8,

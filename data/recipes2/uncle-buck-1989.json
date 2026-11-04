@@ -494,6 +494,214 @@
    }
   },
   {
+   "n": "Buck's family-size beef lasagne",
+   "course": "m",
+   "prep_min": 30,
+   "cook_min": 60,
+   "make_ahead": "Assemble up to 1 day ahead and bake on the night",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 700,
+     "u": "g",
+     "item": "tomato passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "dried lasagne sheets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cos lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the mince in the oil, add the onion and garlic, then the passata, and simmer.",
+     "min": 20
+    },
+    {
+     "text": "Melt the butter, stir in the flour, then whisk in the milk until thick.",
+     "min": 8
+    },
+    {
+     "text": "Heat the oven to 180°C. Layer the ragù, pasta and white sauce in a dish, finishing with sauce and mozzarella.",
+     "min": 8
+    },
+    {
+     "text": "Bake until golden and bubbling, then rest. Serve with the lettuce and tomato.",
+     "min": 45
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Buck's family-size lentil lasagne",
+     "prep_min": 30,
+     "cook_min": 60,
+     "make_ahead": "Assemble up to 1 day ahead and bake on the night",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin brown lentils, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mushrooms, chopped",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 700,
+       "u": "g",
+       "item": "tomato passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "dried lasagne sheets",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cos lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil, add the onion and garlic, then the lentils and passata, and simmer.",
+       "min": 20
+      },
+      {
+       "text": "Melt the butter, stir in the flour, then whisk in the milk until thick.",
+       "min": 8
+      },
+      {
+       "text": "Heat the oven to 180°C. Layer the ragù, pasta and white sauce in a dish, finishing with sauce and mozzarella.",
+       "min": 8
+      },
+      {
+       "text": "Bake until golden and bubbling, then rest. Serve with the lettuce and tomato.",
+       "min": 45
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Uncle Buck's giant buttermilk pancake",
    "course": "w",
    "prep_min": 15,

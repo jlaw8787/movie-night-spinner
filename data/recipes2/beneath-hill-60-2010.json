@@ -419,6 +419,198 @@
    }
   },
   {
+   "n": "Armentières estaminet chicken and leek pie",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 45,
+   "make_ahead": "Make the filling up to 2 days ahead; top with pastry and bake on the night",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thigh fillets, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "leeks, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets frozen puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken in half the butter, then add the leeks and cook until soft.",
+     "min": 12
+    },
+    {
+     "text": "Stir in the flour, then the stock, cream and thyme and simmer until thick. Cool a little.",
+     "min": 10
+    },
+    {
+     "text": "Heat the oven to 200°C. Spoon into a pie dish, cover with pastry and brush with beaten egg.",
+     "min": 5
+    },
+    {
+     "text": "Bake until puffed and golden.",
+     "min": 30
+    },
+    {
+     "text": "Boil the peas and toss with the rest of the butter.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Armentières estaminet mushroom and leek pie",
+     "prep_min": 25,
+     "cook_min": 45,
+     "make_ahead": "Make the filling up to 2 days ahead; top with pastry and bake on the night",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mushrooms, quartered",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin cannellini beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "leeks, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "thickened cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets frozen puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in half the butter, then add the leeks and cook until soft.",
+       "min": 12
+      },
+      {
+       "text": "Stir in the flour, then the stock, cream, beans and thyme and simmer until thick. Cool a little.",
+       "min": 10
+      },
+      {
+       "text": "Heat the oven to 200°C. Spoon into a pie dish, cover with pastry and brush with beaten egg.",
+       "min": 5
+      },
+      {
+       "text": "Bake until puffed and golden.",
+       "min": 30
+      },
+      {
+       "text": "Boil the peas and toss with the rest of the butter.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Fruit cake from home with brandy butter",
    "course": "w",
    "prep_min": 16,

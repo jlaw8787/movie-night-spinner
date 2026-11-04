@@ -511,6 +511,196 @@
    }
   },
   {
+   "n": "Vicki Vallencourt's blackened catfish po' boys",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 12,
+   "make_ahead": "Make the remoulade up to 2 days ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 700,
+     "u": "g",
+     "item": "basa or catfish fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Cajun seasoning",
+     "aisle": "Spices"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "long soft rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "iceberg lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "wholegrain mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mayonnaise, mustard, hot sauce and a squeeze of lemon for the remoulade.",
+     "min": 3
+    },
+    {
+     "text": "Coat the fish in the Cajun seasoning.",
+     "min": 3
+    },
+    {
+     "text": "Melt the butter in a very hot pan and cook the fish until blackened and just cooked.",
+     "min": 8
+    },
+    {
+     "text": "Split the rolls, spread with remoulade and fill with lettuce, tomato, pickles and fish.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Vicki Vallencourt's blackened mushroom po' boys",
+     "prep_min": 15,
+     "cook_min": 12,
+     "make_ahead": "Make the remoulade up to 2 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "king oyster or field mushrooms, sliced thick",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "Cajun seasoning",
+       "aisle": "Spices"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long soft rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "iceberg lettuce, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "whole egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "wholegrain mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the mayonnaise, mustard, hot sauce and a squeeze of lemon for the remoulade.",
+       "min": 3
+      },
+      {
+       "text": "Coat the mushrooms in the Cajun seasoning.",
+       "min": 3
+      },
+      {
+       "text": "Melt the butter in a very hot pan and cook the mushrooms until blackened and tender.",
+       "min": 8
+      },
+      {
+       "text": "Split the rolls, spread with remoulade and fill with lettuce, tomato, pickles and mushrooms.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Bourbon Bowl pecan pralines",
    "course": "w",
    "prep_min": 15,

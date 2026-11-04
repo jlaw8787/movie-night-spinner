@@ -399,6 +399,196 @@
    }
   },
   {
+   "n": "Angel's night shift chicken tinga burritos",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 35,
+   "make_ahead": "Make the tinga up to 2 days ahead and reheat",
+   "ingredients": [
+    {
+     "q": 700,
+     "u": "g",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "chipotle in adobo, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned chopped tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin black beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "large flour tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "iceberg lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the onion and garlic in the oil, add the chipotle, tomatoes and chicken and simmer until tender. Meanwhile cook the rice.",
+     "min": 25
+    },
+    {
+     "text": "Shred the chicken into the sauce and cook until thick.",
+     "min": 5
+    },
+    {
+     "text": "Warm the beans and tortillas.",
+     "min": 4
+    },
+    {
+     "text": "Fill the tortillas with rice, beans, chicken, cheese and lettuce and roll up tight.",
+     "min": 8
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Angel's night shift mushroom tinga burritos",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Make the tinga up to 2 days ahead and reheat",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "chipotle in adobo, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned chopped tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin black beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "large flour tortillas",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "iceberg lettuce, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the oil, add the onion and garlic and cook until soft. Meanwhile cook the rice.",
+       "min": 15
+      },
+      {
+       "text": "Add the chipotle and tomatoes and simmer until thick.",
+       "min": 8
+      },
+      {
+       "text": "Warm the beans and tortillas.",
+       "min": 4
+      },
+      {
+       "text": "Fill the tortillas with rice, beans, mushrooms, cheese and lettuce and roll up tight.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Jean Jacket flying saucer cookies",
    "course": "w",
    "prep_min": 35,

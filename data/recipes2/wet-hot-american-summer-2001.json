@@ -443,6 +443,184 @@
    }
   },
   {
+   "n": "Andy's Camp Tigerclaw game day fried chicken",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Soak the chicken in buttermilk up to 1 day ahead; make the slaw up to 4 hours ahead",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken tenderloins",
+     "aisle": "Meat"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "shredded cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "apple cider vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "dill pickle slices",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the chicken in the buttermilk with a pinch of salt.",
+     "min": 5
+    },
+    {
+     "text": "Mix the flour, paprika, garlic powder and salt and toss the chicken through it.",
+     "min": 5
+    },
+    {
+     "text": "Shallow fry in batches in hot oil until golden and cooked through.",
+     "min": 15
+    },
+    {
+     "text": "Toss the cabbage with the mayonnaise and vinegar and serve with the chicken and pickles.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Andy's Camp Tigerclaw game day fried cauliflower",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "Soak the chicken in buttermilk up to 1 day ahead; make the slaw up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "cauliflower, in florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 500,
+       "u": "ml",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "shredded cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "whole egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "apple cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "dill pickle slices",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the cauliflower in the buttermilk with a pinch of salt.",
+       "min": 5
+      },
+      {
+       "text": "Mix the flour, paprika, garlic powder and salt and toss the cauliflower through it.",
+       "min": 5
+      },
+      {
+       "text": "Shallow fry in batches in hot oil until golden and tender.",
+       "min": 15
+      },
+      {
+       "text": "Toss the cabbage with the mayonnaise and vinegar and serve with the cauliflower and pickles.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Last day bug juice ice blocks",
    "course": "w",
    "prep_min": 10,

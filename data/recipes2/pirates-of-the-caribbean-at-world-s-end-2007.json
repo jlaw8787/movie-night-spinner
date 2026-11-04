@@ -397,6 +397,202 @@
    }
   },
   {
+   "n": "Brethren Court Hainanese chicken rice",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 50,
+   "make_ahead": "Make the sauces up to 2 days ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "chicken thighs, bone in",
+     "aisle": "Meat"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Poach the chicken in water with half the ginger, 2 spring onions and salt at a gentle simmer, then cool in ice water.",
+     "min": 35
+    },
+    {
+     "text": "Fry 2 crushed garlic cloves in the oil, add the rice and 600ml of the poaching stock and cook covered.",
+     "min": 20
+    },
+    {
+     "text": "Blitz the chillies with the rest of the garlic, a little ginger and lime juice. Pour hot oil over the rest of the ginger and spring onion, finely chopped.",
+     "min": 8
+    },
+    {
+     "text": "Slice the chicken and serve with the rice, cucumber, coriander, soy and both sauces.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Brethren Court Hainanese tofu rice",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "Make the sauces up to 2 days ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "silken firm tofu",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "ginger",
+       "aisle": "Produce"
+      },
+      {
+       "q": 5,
+       "u": "",
+       "item": "spring onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "jasmine rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 750,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red chillies",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lime",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch coriander",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry 2 crushed garlic cloves in the oil, add the rice and 600ml stock and cook covered.",
+       "min": 20
+      },
+      {
+       "text": "Warm the tofu gently in the rest of the stock with half the ginger.",
+       "min": 8
+      },
+      {
+       "text": "Blitz the chillies with the rest of the garlic, a little ginger and lime juice. Pour hot oil over the rest of the ginger and spring onion, finely chopped.",
+       "min": 8
+      },
+      {
+       "text": "Slice the tofu and serve with the rice, cucumber, coriander, soy and both sauces.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Green flash pandan pudding",
    "course": "w",
    "prep_min": 10,

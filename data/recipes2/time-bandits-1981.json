@@ -515,6 +515,204 @@
    }
   },
   {
+   "n": "King Agamemnon's slow-roast lamb with lemon potatoes",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 240,
+   "make_ahead": "Rub the lamb up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "lamb shoulder, bone in",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "garlic cloves, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "tomatoes, in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber, in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "kalamata olives",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 160°C. Stud the lamb with garlic and rub with oregano, the juice of 1 lemon, 2 tbsp oil and salt.",
+     "min": 10
+    },
+    {
+     "text": "Roast covered in a deep tray with the stock until falling apart.",
+     "min": 180
+    },
+    {
+     "text": "Add the potatoes tossed in lemon juice and oil, uncover and roast at 200°C until golden.",
+     "min": 50
+    },
+    {
+     "text": "Toss the tomato, cucumber, feta and olives with the last of the oil and serve with the lamb.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "King Agamemnon's lemon roast vegetables with lemon potatoes",
+     "prep_min": 25,
+     "cook_min": 55,
+     "make_ahead": "Rub the lamb up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "red capsicums, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion, in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "garlic cloves, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 5,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "tomatoes, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "feta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "kalamata olives",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200°C. Toss the potatoes with lemon juice, 2 tbsp oil and salt and roast.",
+       "min": 15
+      },
+      {
+       "text": "Add the capsicum, zucchini, onion, chickpeas, garlic and oregano with 2 tbsp oil and roast until everything is golden.",
+       "min": 40
+      },
+      {
+       "text": "Toss the tomato, cucumber, feta and olives with the last of the oil and serve.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Napoleon's little custard tarts",
    "course": "w",
    "prep_min": 20,

@@ -404,6 +404,172 @@
    }
   },
   {
+   "n": "Mindy's movie rules pepperoni pizza",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Make the sauce up to 3 days ahead",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "large pizza bases",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "tomato passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "pepperoni, sliced",
+     "aisle": "Deli"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion, thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Spices"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rocket",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 240°C with the trays inside.",
+     "min": 10
+    },
+    {
+     "text": "Spread the bases with passata and oregano, then top with mozzarella, pepperoni and onion.",
+     "min": 5
+    },
+    {
+     "text": "Bake until crisp and bubbling.",
+     "min": 12
+    },
+    {
+     "text": "Scatter with chilli flakes and serve with rocket dressed with oil.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mindy's movie rules mushroom pizza",
+     "prep_min": 15,
+     "cook_min": 15,
+     "make_ahead": "Make the sauce up to 3 days ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large pizza bases",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "ml",
+       "item": "tomato passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "red onion, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Spices"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 240°C with the trays inside.",
+       "min": 10
+      },
+      {
+       "text": "Spread the bases with passata and oregano, then top with mozzarella, mushrooms and onion.",
+       "min": 5
+      },
+      {
+       "text": "Bake until crisp and bubbling.",
+       "min": 12
+      },
+      {
+       "text": "Scatter with chilli flakes and serve with rocket dressed with oil.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Requel brownies",
    "course": "w",
    "prep_min": 20,

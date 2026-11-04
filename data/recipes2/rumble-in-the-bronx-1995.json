@@ -348,6 +348,166 @@
    }
   },
   {
+   "n": "Danny's chicken and shiitake bao",
+   "course": "s",
+   "prep_min": 30,
+   "cook_min": 20,
+   "make_ahead": "Fill and freeze up to 1 week ahead; steam from frozen with 5 extra minutes",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "chicken mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "dried shiitake mushrooms, soaked and chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 10,
+     "u": "g",
+     "item": "ginger, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "oyster sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "frozen plain bao buns",
+     "aisle": "Frozen"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the chicken, shiitake, spring onion, ginger, oyster sauce, soy and sesame oil.",
+     "min": 8
+    },
+    {
+     "text": "Stir-fry the filling until cooked and sticky.",
+     "min": 8
+    },
+    {
+     "text": "Open the bao and spoon in the filling.",
+     "min": 10
+    },
+    {
+     "text": "Steam until hot through.",
+     "min": 12
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Danny's shiitake and cabbage bao",
+     "prep_min": 30,
+     "cook_min": 20,
+     "make_ahead": "Fill and freeze up to 1 week ahead; steam from frozen with 5 extra minutes",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "dried shiitake mushrooms, soaked and chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "wombok, finely shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 10,
+       "u": "g",
+       "item": "ginger, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "hoisin sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sesame oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 12,
+       "u": "",
+       "item": "frozen plain bao buns",
+       "aisle": "Frozen"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Stir-fry the shiitake, wombok, spring onion and ginger in the oil until soft.",
+       "min": 8
+      },
+      {
+       "text": "Add the hoisin, soy and sesame oil and cook until sticky.",
+       "min": 3
+      },
+      {
+       "text": "Open the bao and spoon in the filling.",
+       "min": 10
+      },
+      {
+       "text": "Steam until hot through.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Hovercraft sweet and sour pork",
    "course": "m",
    "prep_min": 35,

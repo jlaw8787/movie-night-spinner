@@ -517,6 +517,184 @@
    }
   },
   {
+   "n": "'And then?' beef and black bean noodles",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 12,
+   "make_ahead": "Slice and marinate the beef up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef rump, thinly sliced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "black bean sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green capsicum, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "fresh hokkien noodles",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Toss the beef with the cornflour and 1 tbsp soy.",
+     "min": 5
+    },
+    {
+     "text": "Stir-fry the beef in half the oil in a very hot wok until browned, then lift out.",
+     "min": 4
+    },
+    {
+     "text": "Stir-fry the onion, capsicum and garlic in the rest of the oil, add the noodles, black bean sauce and the rest of the soy.",
+     "min": 5
+    },
+    {
+     "text": "Toss the beef back through and top with spring onion.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "'And then?' tofu and black bean noodles",
+     "prep_min": 20,
+     "cook_min": 12,
+     "make_ahead": "Slice and marinate the beef up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "firm tofu, cubed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "cornflour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "black bean sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green capsicum, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "fresh hokkien noodles",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "spring onions, sliced",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the tofu with the cornflour.",
+       "min": 3
+      },
+      {
+       "text": "Fry the tofu in half the oil in a hot wok until golden, then lift out.",
+       "min": 8
+      },
+      {
+       "text": "Stir-fry the onion, capsicum and garlic in the rest of the oil, add the noodles, black bean sauce and soy.",
+       "min": 5
+      },
+      {
+       "text": "Toss the tofu back through and top with spring onion.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Fridge full of chocolate pudding pots",
    "course": "w",
    "prep_min": 15,

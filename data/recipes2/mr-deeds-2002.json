@@ -385,6 +385,184 @@
    }
   },
   {
+   "n": "Emilio's very, very sneaky baked ziti",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Assemble up to 1 day ahead and bake on the night",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "ziti or penne",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "Italian pork sausages, skins off",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 700,
+     "u": "g",
+     "item": "tomato passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rocket",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200°C. Boil the pasta until just short of done and drain.",
+     "min": 12
+    },
+    {
+     "text": "Brown the sausage in the oil, add the onion and garlic, then the passata, and simmer.",
+     "min": 15
+    },
+    {
+     "text": "Toss the pasta with the sauce, layer into a dish with spoonfuls of ricotta and top with mozzarella and parmesan.",
+     "min": 5
+    },
+    {
+     "text": "Bake until bubbling and blistered. Serve with rocket dressed with oil.",
+     "min": 25
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Emilio's very, very sneaky mushroom baked ziti",
+     "prep_min": 20,
+     "cook_min": 45,
+     "make_ahead": "Assemble up to 1 day ahead and bake on the night",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "ziti or penne",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 700,
+       "u": "g",
+       "item": "tomato passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "ricotta",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200°C. Boil the pasta until just short of done and drain.",
+       "min": 12
+      },
+      {
+       "text": "Brown the mushrooms in the oil, add the onion and garlic, then the passata, and simmer.",
+       "min": 15
+      },
+      {
+       "text": "Toss the pasta with the sauce, layer into a dish with spoonfuls of ricotta and top with mozzarella and parmesan.",
+       "min": 5
+      },
+      {
+       "text": "Bake until bubbling and blistered. Serve with rocket dressed with oil.",
+       "min": 25
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "New York baked cheesecake with berries",
    "course": "w",
    "prep_min": 30,

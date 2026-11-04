@@ -522,6 +522,113 @@
    }
   },
   {
+   "n": "Gayle's Sturdy Wings vegetable chilli with cornbread",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Chilli up to 3 days ahead, reheat gently; bake the cornbread on the day",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "sweet potato, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "tinned chopped tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin black beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tin kidney beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "packet cornbread mix",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the onion, garlic and capsicum in the oil.",
+     "min": 6
+    },
+    {
+     "text": "Add the sweet potato, cumin and chilli powder and cook for a minute.",
+     "min": 2
+    },
+    {
+     "text": "Add the tomatoes and beans and simmer until the sweet potato is soft. Meanwhile bake the cornbread to the packet directions.",
+     "min": 30
+    },
+    {
+     "text": "Serve with sour cream, cheddar and warm cornbread.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Kingdom of LAIRE honey spice cakes",
    "course": "w",
    "prep_min": 20,

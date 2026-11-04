@@ -401,6 +401,208 @@
    }
   },
   {
+   "n": "Kat Jennings' Route 23 chicken caesar wraps",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 15,
+   "make_ahead": "Grill the chicken and make the dressing up to 1 day ahead",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken breast",
+     "aisle": "Meat"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "rashers bacon",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "cos lettuce, shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, shaved",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large soft wraps",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cherry tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mayonnaise, a squeeze of lemon, garlic, mustard and half the parmesan for the dressing.",
+     "min": 4
+    },
+    {
+     "text": "Rub the chicken with oil and salt and grill until cooked, then rest and slice. Fry the bacon until crisp.",
+     "min": 15
+    },
+    {
+     "text": "Toss the cos with the dressing and the rest of the parmesan.",
+     "min": 3
+    },
+    {
+     "text": "Fill the wraps with the lettuce, chicken and crumbled bacon, roll tight and halve. Serve with tomatoes and cucumber.",
+     "min": 6
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Kat Jennings' Route 23 crispy chickpea caesar wraps",
+     "prep_min": 20,
+     "cook_min": 15,
+     "make_ahead": "Grill the chicken and make the dressing up to 1 day ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "tins chickpeas (400g), drained and dried",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "cos lettuce, shredded",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "parmesan, shaved",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "whole egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "garlic clove, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large soft wraps",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cherry tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the mayonnaise, a squeeze of lemon, garlic, mustard and half the parmesan for the dressing.",
+       "min": 4
+      },
+      {
+       "text": "Fry the chickpeas in the oil with paprika and salt until crisp.",
+       "min": 12
+      },
+      {
+       "text": "Toss the cos with the dressing and the rest of the parmesan.",
+       "min": 3
+      },
+      {
+       "text": "Fill the wraps with the lettuce and chickpeas, roll tight and halve. Serve with tomatoes and cucumber.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Spring break key lime pie",
    "course": "w",
    "prep_min": 18,

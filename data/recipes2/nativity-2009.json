@@ -560,6 +560,190 @@
    }
   },
   {
+   "n": "Oakmoor School's posh salmon en croûte",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 40,
+   "make_ahead": "Wrap the salmon up to 1 day ahead, keep chilled, bake on the night",
+   "ingredients": [
+    {
+     "q": 700,
+     "u": "g",
+     "item": "skinless salmon fillet",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch dill",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "baby spinach",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets frozen puff pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 800,
+     "u": "g",
+     "item": "new potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "green beans",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200°C. Wilt the spinach and squeeze dry. Mix the cream cheese with chopped dill and lemon zest.",
+     "min": 8
+    },
+    {
+     "text": "Lay the salmon on the pastry, spread with the cream cheese and spinach, wrap and brush with egg.",
+     "min": 10
+    },
+    {
+     "text": "Bake until golden. Boil the potatoes at the same time.",
+     "min": 30
+    },
+    {
+     "text": "Boil the beans and toss the beans and potatoes with butter. Slice the salmon to serve.",
+     "min": 6
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Oakmoor School's posh vegetable en croûte",
+     "prep_min": 25,
+     "cook_min": 40,
+     "make_ahead": "Wrap the salmon up to 1 day ahead, keep chilled, bake on the night",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "roast capsicum and pumpkin, from the deli",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "feta, crumbled",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cream cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch dill",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "baby spinach",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "sheets frozen puff pastry",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "new potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "green beans",
+       "aisle": "Produce"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200°C. Wilt the spinach and squeeze dry. Mix the cream cheese and feta with chopped dill and lemon zest.",
+       "min": 8
+      },
+      {
+       "text": "Layer the roast vegetables, cheese mix and spinach on the pastry, wrap and brush with egg.",
+       "min": 10
+      },
+      {
+       "text": "Bake until golden. Boil the potatoes at the same time.",
+       "min": 30
+      },
+      {
+       "text": "Boil the beans and toss the beans and potatoes with butter.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Mr Poppy's Christmas pudding sundaes",
    "course": "w",
    "prep_min": 20,

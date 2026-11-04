@@ -468,6 +468,184 @@
    }
   },
   {
+   "n": "Link's caveman beef short ribs",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 180,
+   "make_ahead": "Roast the ribs up to 2 days ahead; glaze and finish under the grill on the night",
+   "ingredients": [
+    {
+     "q": 1.6,
+     "u": "kg",
+     "item": "beef short ribs",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "garlic powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "beef stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "shredded cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "apple cider vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 160°C. Rub the ribs with the sugar, paprika, garlic powder and salt.",
+     "min": 5
+    },
+    {
+     "text": "Put the ribs in a deep tray with the stock, cover tightly with foil and roast until tender.",
+     "min": 170
+    },
+    {
+     "text": "Brush with barbecue sauce and roast uncovered until sticky.",
+     "min": 10
+    },
+    {
+     "text": "Toss the cabbage and carrot with the mayonnaise and vinegar and serve with the ribs.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Link's caveman barbecue cauliflower steaks",
+     "prep_min": 15,
+     "cook_min": 35,
+     "make_ahead": "Make the slaw up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cauliflowers, cut into thick steaks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "shredded cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot, grated",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "whole egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "apple cider vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 220°C. Rub the cauliflower with the oil, sugar, paprika, garlic powder and salt.",
+       "min": 5
+      },
+      {
+       "text": "Roast until tender and charred at the edges.",
+       "min": 25
+      },
+      {
+       "text": "Brush with barbecue sauce and roast until sticky.",
+       "min": 8
+      },
+      {
+       "text": "Toss the cabbage and carrot with the mayonnaise and vinegar and serve with the cauliflower.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Frozen yoghurt bark",
    "course": "w",
    "prep_min": 10,

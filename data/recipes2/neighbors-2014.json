@@ -505,6 +505,184 @@
    }
   },
   {
+   "n": "Robert De Niro party chicken parm heroes",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 25,
+   "make_ahead": "Crumb the chicken up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "large chicken breasts, halved and flattened",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "napoli sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "mozzarella, sliced",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "hero rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rocket",
+     "aisle": "Produce"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200°C. Dust the chicken in flour, dip in beaten egg and coat in panko.",
+     "min": 8
+    },
+    {
+     "text": "Fry until golden and cooked through.",
+     "min": 10
+    },
+    {
+     "text": "Lay in the split rolls, spoon over the napoli, top with mozzarella and bake until melted.",
+     "min": 8
+    },
+    {
+     "text": "Serve with rocket and parmesan.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Robert De Niro party eggplant parm heroes",
+     "prep_min": 25,
+     "cook_min": 25,
+     "make_ahead": "Crumb the chicken up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggplants, sliced into thick rounds",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "panko breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "napoli sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "mozzarella, sliced",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "hero rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200°C. Dust the eggplant in flour, dip in beaten egg and coat in panko.",
+       "min": 8
+      },
+      {
+       "text": "Fry until golden and soft inside.",
+       "min": 10
+      },
+      {
+       "text": "Lay in the split rolls, spoon over the napoli, top with mozzarella and bake until melted.",
+       "min": 8
+      },
+      {
+       "text": "Serve with rocket and parmesan.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Teddy and Pete's sprinkle sheet cake",
    "course": "w",
    "prep_min": 30,

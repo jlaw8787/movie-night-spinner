@@ -585,6 +585,184 @@
    }
   },
   {
+   "n": "Strode family dinner roast chicken and pumpkin",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 80,
+   "make_ahead": "Cut the vegetables up to 1 day ahead, keep chilled",
+   "ingredients": [
+    {
+     "q": 1.8,
+     "u": "kg",
+     "item": "whole chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "pumpkin, in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 600,
+     "u": "g",
+     "item": "potatoes, in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "red onions, in wedges",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "mixed salad leaves",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200°C. Stuff the chicken with the halved lemon and thyme, rub with oil and salt.",
+     "min": 8
+    },
+    {
+     "text": "Roast the chicken with the vegetables tossed in oil until golden and cooked through.",
+     "min": 75
+    },
+    {
+     "text": "Rest the chicken. Stir the flour and stock into the tray juices and simmer for gravy.",
+     "min": 8
+    },
+    {
+     "text": "Carve and serve with the vegetables, gravy and salad.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Strode family dinner roast pumpkin and chickpeas",
+     "prep_min": 20,
+     "cook_min": 50,
+     "make_ahead": "Cut the vegetables up to 1 day ahead, keep chilled",
+     "ingredients": [
+      {
+       "q": 900,
+       "u": "g",
+       "item": "pumpkin, in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 600,
+       "u": "g",
+       "item": "potatoes, in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red onions, in wedges",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tin chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "mixed salad leaves",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 200°C. Toss the vegetables, chickpeas, lemon wedges and thyme with oil and salt.",
+       "min": 8
+      },
+      {
+       "text": "Roast until golden and tender.",
+       "min": 45
+      },
+      {
+       "text": "Stir the flour and stock in a pan and simmer for gravy.",
+       "min": 6
+      },
+      {
+       "text": "Serve with the gravy and salad.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Haddonfield High dance whoopie pies",
    "course": "w",
    "prep_min": 30,
