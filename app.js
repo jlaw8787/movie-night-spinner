@@ -1695,7 +1695,8 @@ async function lockAsk(f,trigger){if(!f)return;try{await ensureExact(f)}catch(e)
     if(b.dataset.l==="all"){PLAN.off={};for(const x of planExtras(f))PLAN.on[x.n]=1;planSave(f);refreshPlan();setTab("prep");
       {const pp=prep;if(pp)setTimeout(()=>pp.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"}),reduce?0:350)}
       const n=planDishes(f).length;$("status").textContent=`The full feature: all ${n} dishes are on the Prep sheet and shopping list.`}
-    else{setTab("prep");const pb=$("planner"),d=pb&&pb.querySelector(".pl-pick");if(d){d.open=true;pb.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});const c=d.querySelector("input[type=checkbox]");if(c)setTimeout(()=>c.focus({preventScroll:true}),reduce?0:400)}
+    else{setTab("prep");const pb=$("planner"),d=pb&&pb.querySelector(".pl-pick");if(d){d.open=true;/* once the tab has drawn, land on the "Choose dishes" list itself with focus on the first tick, not on the planner box (the phone ended mid shopping list) */
+        setTimeout(()=>{const c=d.querySelector("input[type=checkbox]");d.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});if(c)c.focus({preventScroll:true})},reduce?0:350)}
       $("status").textContent="Director's cut: tick the dishes you want. The shopping list follows."}});
   mountModal(o,"[data-l=pick]",trigger||document.activeElement)}
 
