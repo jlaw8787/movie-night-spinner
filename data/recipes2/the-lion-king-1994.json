@@ -2,71 +2,6 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Timon's grub chocolate mousse",
-   "course": "s",
-   "prep_min": 23,
-   "cook_min": 180,
-   "make_ahead": "Up to 1 day, keep chilled",
-   "ingredients": [
-    {
-     "q": 150,
-     "u": "g",
-     "item": "dark chocolate",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 2,
-     "u": "",
-     "item": "eggs",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 150,
-     "u": "ml",
-     "item": "thickened cream",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "chocolate biscuits",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "bag gummy worms",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "bunch mint",
-     "aisle": "Produce"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Melt the chocolate and cool slightly, then whisk in the egg yolks.",
-     "min": 8
-    },
-    {
-     "text": "Whip the cream and the egg whites separately, then fold into the chocolate.",
-     "min": 10
-    },
-    {
-     "text": "Spoon into four cups and chill.",
-     "min": 180
-    },
-    {
-     "text": "Top with crushed chocolate biscuits, gummy worms and a mint leaf.",
-     "min": 5
-    }
-   ],
-   "veg": true,
-   "af": true
-  },
-  {
    "n": "Rafiki's fruit",
    "course": "s",
    "prep_min": 17,
@@ -134,7 +69,120 @@
    "af": true
   },
   {
-   "n": "Bobotie",
+   "n": "Hakuna Matata chakalaka",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 25,
+   "make_ahead": "Make the chakalaka up to 3 days ahead and keep it chilled; it tastes better the next day. Char the bread on the night",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "grated ginger",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red capsicum, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green capsicum, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "long red chilli, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "mild curry powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned diced tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned baked beans",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Turkish loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the onion in the oil with the garlic, ginger and chilli.",
+     "min": 6
+    },
+    {
+     "text": "Add the capsicums and carrot and cook 5 minutes.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the curry powder and paprika, then the tomatoes and baked beans. Simmer 15 minutes until thick.",
+     "min": 16
+    },
+    {
+     "text": "Slice and char the bread on a hot grill pan. Serve with the chakalaka, warm or at room temperature, and scatter with coriander.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Pride Lands bobotie",
    "course": "m",
    "prep_min": 13,
    "cook_min": 47,
@@ -217,7 +265,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Lentil bobotie",
+     "n": "Pride Lands lentil bobotie",
      "prep_min": 13,
      "cook_min": 47,
      "make_ahead": "Up to 1 day, bake fresh",
@@ -312,7 +360,72 @@
    }
   },
   {
-   "n": "Mandazi",
+   "n": "Timon's grub chocolate mousse",
+   "course": "w",
+   "prep_min": 23,
+   "cook_min": 180,
+   "make_ahead": "Up to 1 day, keep chilled",
+   "ingredients": [
+    {
+     "q": 150,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "chocolate biscuits",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bag gummy worms",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the chocolate and cool slightly, then whisk in the egg yolks.",
+     "min": 8
+    },
+    {
+     "text": "Whip the cream and the egg whites separately, then fold into the chocolate.",
+     "min": 10
+    },
+    {
+     "text": "Spoon into four cups and chill.",
+     "min": 180
+    },
+    {
+     "text": "Top with crushed chocolate biscuits, gummy worms and a mint leaf.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Zazu's morning report mandazi",
    "course": "w",
    "prep_min": 19,
    "cook_min": 72,

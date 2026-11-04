@@ -290,6 +290,210 @@
    }
   },
   {
+   "n": "Captain Hiller's cookout cheeseburgers",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 12,
+   "make_ahead": "Roll the beef into balls and mix the sauce up to 1 day ahead, both chilled; smash and cook just before serving",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef mince, 20% fat",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices American cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "brioche buns",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "iceberg lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar dill pickles",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "American mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Divide the mince into 8 balls and keep them cold.",
+     "min": 4
+    },
+    {
+     "text": "Mix the mayonnaise, mustard, tomato sauce and a chopped pickle for the burger sauce. Slice the tomato and onion and shred the lettuce.",
+     "min": 6
+    },
+    {
+     "text": "Butter and toast the buns cut side down.",
+     "min": 3
+    },
+    {
+     "text": "Smash the balls flat on a very hot greased flat plate or pan, season and cook 2 minutes. Flip, top with cheese and cook 1 minute more.",
+     "min": 8
+    },
+    {
+     "text": "Stack two patties on each bun with the sauce, lettuce, tomato, onion and pickles.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Captain Hiller's cookout mushroom burgers",
+     "prep_min": 15,
+     "cook_min": 12,
+     "make_ahead": "Roll the beef into balls and mix the sauce up to 1 day ahead, both chilled; smash and cook just before serving",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "large flat mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices American cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "brioche buns",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "iceberg lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar dill pickles",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "tbsp",
+       "item": "whole egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "American mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 20,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brush the mushrooms with the oil and season.",
+       "min": 3
+      },
+      {
+       "text": "Mix the mayonnaise, mustard, tomato sauce and a chopped pickle for the burger sauce. Slice the tomato and onion and shred the lettuce.",
+       "min": 6
+      },
+      {
+       "text": "Butter and toast the buns cut side down.",
+       "min": 3
+      },
+      {
+       "text": "Cook the mushrooms on a hot flat plate or pan, pressing down, 4 minutes a side. Top with cheese for the last minute.",
+       "min": 9
+      },
+      {
+       "text": "Stack two mushrooms on each bun with the sauce, lettuce, tomato, onion and pickles.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Flag cake",
    "course": "w",
    "prep_min": 30,

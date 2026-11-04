@@ -3,14 +3,39 @@
   "Slaughtered Lamb pork crackling": {
    "veg": "Rice paper roasted until blistered and crisp, with flaky salt and smoked paprika"
   },
-  "Scotch eggs": {
-   "veg": "Soft boiled eggs wrapped in veggie sausage, crumbed and fried, with English mustard"
-  },
-  "Shepherd's pie": {
-   "veg": "Mushroom and lentil mince in tomato and soy gravy under baked mashed potato"
-  },
   "Slaughtered Lamb mulled ale": {
    "af": "Ale warmed with spices and orange, with apple juice stirred in"
+  },
+  "Slaughtered Lamb Scotch eggs": {
+   "veg": "Soft boiled eggs wrapped in veggie sausage, crumbed and fried, with English mustard"
+  },
+  "Moors shepherd's pie": {
+   "veg": "Mushroom and lentil mince in tomato and soy gravy under baked mashed potato"
+  },
+  "East Proctor beer-battered haddock": {
+   "af": "Haddock in crisp soda batter with thick-cut chips, minty mushy peas and malt vinegar",
+   "veg": "Halloumi in crisp ale batter with thick-cut chips, minty mushy peas and malt vinegar",
+   "veg_af": "Halloumi in crisp soda batter with thick-cut chips, minty mushy peas and malt vinegar"
   }
+ },
+ "text": {
+  "veg": [
+   [
+    "East Proctor beer-battered haddock",
+    "East Proctor beer-battered haloumi"
+   ]
+  ],
+  "af": [
+   [
+    "East Proctor beer-battered haddock",
+    "East Proctor soda-battered haddock"
+   ]
+  ],
+  "veg_af": [
+   [
+    "East Proctor beer-battered haddock",
+    "East Proctor soda-battered haloumi"
+   ]
+  ]
  }
 }

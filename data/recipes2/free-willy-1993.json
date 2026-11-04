@@ -335,6 +335,206 @@
    }
   },
   {
+   "n": "Jesse's park kiosk chilli cheese dogs",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "Make the chilli up to 2 days ahead and keep it chilled; reheat it and heat the franks just before serving",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "beef frankfurts",
+     "aisle": "Meat"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "hot dog rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "chilli powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned crushed tomatoes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "g",
+     "item": "tinned kidney beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch spring onions",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Fry the onion and garlic in the oil until soft.",
+     "min": 5
+    },
+    {
+     "text": "Add the mince, chilli powder and cumin and brown well.",
+     "min": 8
+    },
+    {
+     "text": "Add the tomatoes and kidney beans and simmer until thick.",
+     "min": 20
+    },
+    {
+     "text": "Simmer the franks in water for 5 minutes and toast the split rolls.",
+     "min": 6
+    },
+    {
+     "text": "Put a frank in each roll, spoon over the chilli, top with cheddar and grill a minute to melt. Scatter with sliced spring onion.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jesse's park kiosk chilli cheese dogs (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 35,
+     "make_ahead": "Make the chilli up to 2 days ahead and keep it chilled; reheat it and heat the franks just before serving",
+     "ingredients": [
+      {
+       "q": 8,
+       "u": "",
+       "item": "vegetarian frankfurts",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "hot dog rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 800,
+       "u": "g",
+       "item": "tinned kidney beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "brown onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "chilli powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "tinned crushed tomatoes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "cheddar, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch spring onions",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the onion and garlic in the oil until soft.",
+       "min": 5
+      },
+      {
+       "text": "Add the chilli powder and cumin, then the tomatoes and beans, and simmer until thick, mashing a few beans.",
+       "min": 20
+      },
+      {
+       "text": "Heat the vegetarian franks as the packet says and toast the split rolls.",
+       "min": 6
+      },
+      {
+       "text": "Put a frank in each roll, spoon over the chilli, top with cheddar and grill a minute to melt. Scatter with sliced spring onion.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Orca cookies and cream",
    "course": "w",
    "prep_min": 20,
