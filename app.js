@@ -1121,7 +1121,7 @@ function shopLines(list){
     if(!tally[key]){tally[key]={a,item:i.item,items:new Set(),parts:{},order:[],open:false};order.push(key)}
     const t=tally[key];t.items.add(String(i.item));
     if(i.q==null){t.open=true;continue}
-    const u=b[0]==="#"?"":b[0];if(!(u in t.parts)){t.parts[u]=0;t.order.push(u)}if(FRY_RE.test(i.item))t.parts[u]=Math.max(t.parts[u],ingQ(i,k)*b[1]);else t.parts[u]+=ingQ(i,k)*b[1];
+    const u=b[0]==="#"?"":b[0];if(!(u in t.parts)){t.parts[u]=0;t.order.push(u)}if(fryOil(i))t.parts[u]=Math.max(t.parts[u],ingQ(i,k)*b[1]);else t.parts[u]+=ingQ(i,k)*b[1];
   }
   const lines=order.map(key=>{const t=tally[key];
     /* two different cuts of the same thing ("lemon, juiced" and "lemons") share the plain name; prep words ("shredded", "juiced", "to taste") stay in the method */
@@ -1185,8 +1185,10 @@ function dishTimes(x,k){const st=(x.steps||[]).filter(t=>stepParts(t.text).main)
 /* pack notes inside an item follow the guests: "750ml lager (4 stubbies)" for 4 is "(9 stubbies)" for 9 */
 const packNote=(item,k)=>!k||Math.abs(k-1)<.01?item:String(item).replace(/\((\d+)\s+(stubbies|stubby|cans?|bottles?|tins?|jars?|packets?|bags?|tinnies|slabs?|longnecks?)([^)]*)\)/i,(m,n,u,rest)=>{const v=Math.max(1,Math.ceil(+n*k-0.05));return `(${v} ${v===1?u.replace(/ies$/,"y").replace(/s$/,""):/y$/.test(u)?u.replace(/y$/,"ies"):/s$/.test(u)?u:u+"s"}${rest})`});
 const FRY_RE=/\bfor (deep[- ])?frying\b/i;
-/* frying oil is one pot whatever the guest count: it never scales, and dishes on the same sheet share it (the list takes the biggest pot, not the sum) */
-const ingQ=(i,k)=>FRY_RE.test(i.item)?i.q:i.q*k;
+/* frying oil is one pot whatever the guest count: it never scales, and dishes on the same sheet share it (the list takes the biggest pot, not the sum).
+   Half a litre or more of plain oil is always a frying pot, whatever the recipe calls it ("2 L vegetable oil" for sesame balls) */
+const fryOil=i=>FRY_RE.test(i.item)||/\boil\b/i.test(i.item)&&!/\b(sesame|chilli|chili|truffle|infused)\b|\bfor the\b/i.test(i.item)&&(/^l$/i.test(i.u)&&i.q>=0.5||i.u==="ml"&&i.q>=500||i.u==="cup"&&i.q>=2);
+const ingQ=(i,k)=>fryOil(i)?i.q:i.q*k;
 /* a dish's own ingredients, scaled to the guests */
 function dishIng(x,k){return dishIngList(x,k).join(", ")}
 function dishIngList(x,k){return (x.ingredients||[]).map(i0=>{const i=Object.assign({},i0,{item:packNote(i0.item,k)});if(i.q==null)return i.item;let q=ingQ(i,k);if(!i.u&&(/^eggs?\b|^egg yolks?|^egg whites?|\bloa(f|ves)\b|^(pinch|dash|sprig|splash|drop|handful)(es|s)?\b/i.test(i.item)||WHOLE_RE.test(i.item)))q=Math.max(1,Math.ceil(q-0.05));if(!i.u)return planQty(q,"")+" "+(q>1.01?planPlural(i.item,q):planOne(i.item));return planQty(q,i.u)+" "+i.item})}

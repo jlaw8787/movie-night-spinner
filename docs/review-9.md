@@ -137,3 +137,7 @@ Solid. Every visible control has a name and every image has alt text. The page h
 - The table kit's place card grid with long and short names on one page (25).
 - Print and Save PDF: full colour menu pages, light prep sheet, photos in proportion (10, 18).
 - No console errors, failed requests, broken images or dashes in anything opened.
+
+## Fixed after the review
+
+- Fix 1, frying oil (4 Nov): half a litre or more of plain oil is the frying pot whatever the recipe calls it, so it never scales and dishes on one sheet share it. Everything Everywhere's sesame balls keep 2 L of vegetable oil at 2, 4 and 9 guests, on the list and under You need. Spoon oils (sesame, chilli) still scale. New tests/shop-lines.test.cjs runs the real shopping code at 2, 4 and 9.
