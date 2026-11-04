@@ -145,6 +145,8 @@ window.MENU_FORMATS["motel"]=ctx=>{
   const num=numOf(fl,f);
   const room=(String(fl&&fl.number||"").replace(/\D/g,"").slice(0,3))||String(f.year||"12").slice(-2);
   const C=courses(ctx,family);
+  /* the shared price check: a spirit drink never sits under the brownies (Hot Tub Time Machine) */
+  const PQ=(()=>{const P={},M={};C.forEach(c=>{M[c.k]=c.items;P[c.k]=c.items.map((it,i)=>money(era,c.k,i,f))});return window.priceSense?window.priceSense(M,P):P})();
   const s0=ctx.stills&&ctx.stills[0],s1=ctx.stills&&(ctx.stills[1]||ctx.stills[0]);
   const BODY=`'${e.body}',sans-serif`,DISP=`'${e.disp}',sans-serif`;
   const filt=`${e.photoF==="none"?"":e.photoF} ${T.f}`;
@@ -265,7 +267,7 @@ window.MENU_FORMATS["motel"]=ctx=>{
   const LW=470;
   const menuHtml=C.map(c=>`<div style="margin:0 0 ${n<=6?12:7}px">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><div style="font-family:${BODY};font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:${ACC};${fs(15,14)};white-space:nowrap">${esc(LABEL[c.k])}</div><div style="flex:1;border-top:1.5px ${era==="1970s"||era==="1960s"?"dotted":"solid"} ${ACC}88"></div></div>
-      ${c.items.map((it,i)=>`<div${it.x?" data-x":""} style="margin:0 0 5px"><div style="display:flex;align-items:baseline;gap:10px"><div style="flex:1;min-width:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:var(--dl,3);overflow:hidden;font-family:${BODY};font-weight:700;color:${e.ink};line-height:1.15;${fs(dish,14)}">${esc(it.n)}</div><div style="font-family:${BODY};font-weight:700;color:${e.ink};${fs(dish,14)};white-space:nowrap">${money(era,c.k,i,f)}</div></div>
+      ${c.items.map((it,i)=>`<div${it.x?" data-x":""} style="margin:0 0 5px"><div style="display:flex;align-items:baseline;gap:10px"><div style="flex:1;min-width:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:var(--dl,3);overflow:hidden;font-family:${BODY};font-weight:700;color:${e.ink};line-height:1.15;${fs(dish,14)}">${esc(it.n)}</div><div style="font-family:${BODY};font-weight:700;color:${e.ink};${fs(dish,14)};white-space:nowrap">${PQ[c.k][i]}</div></div>
         ${it.note?`<div data-n style="display:var(--nd,block);font-family:${BODY};color:${mix(e.ink,e.paper,.3)};line-height:1.25;${fs(desc,14)}">${esc(it.note)}</div>`:""}</div>`).join("")}</div>`).join("");
 
   const stillStamp=s1||s0;

@@ -4,20 +4,23 @@ window.noDangle=function(t){t=String(t||"");const D=/\s+(and|with|of|in|the|a|an
   let s=t.replace(/[\s.,;:]+$/,"");const s0=s;for(let n=0;n<4&&D.test(s);n++)s=s.replace(D,"").replace(/[\s,;:]+$/,"");
   if(s===s0)return t;s=s.replace(/,\s*\S+$/,"");return s+(/[.!?]\s*$/.test(t)?".":"")};
 /* prices that make sense on their own card, for shared layouts: every main above every starter and sweet, a drink with spirits above every plain drink and sweet; a raised price keeps its own cents (the film's number lives there) and the card's price style, and nothing prints as 100 cents */
-window.priceSense=function(menu,P){const SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy)\b/i;
-  const all=[].concat(...["s","m","w","d"].map(k=>P[k]||[])).map(String),cents=all.some(x=>/¢/.test(x)),dot=all.some(x=>/^\D*\.\d\d$/.test(x));
-  const val=x=>{x=String(x);const n=parseFloat(x.replace(/[^\d.]/g,""));return isNaN(n)?null:/¢/.test(x)?n/100:n};
-  const fmt=(v,o)=>{o=String(o);const pre=(o.match(/^[^\d.]*/)||[""])[0].replace("¢","");
-    if(v<.975){const c=Math.max(5,Math.ceil(v*20)*5);return cents?c+"¢":dot?pre+"."+String(c).padStart(2,"0"):pre+"0."+String(c).padStart(2,"0")}
-    if(!/\./.test(o)&&!/¢/.test(o))return pre+String(Math.ceil(v));
-    return pre+v.toFixed(2)};
-  const lift=(t,o)=>{const ov=val(o);let fr=ov>=1?Math.round((ov%1)*100)/100:[.25,.5,.95][Math.round(t*7)%3],v=Math.floor(t)+fr;if(v<t-1e-9)v+=1;if(t<.975)v=t;return fmt(v,o)};
-  const out={};for(const k of ["s","m","w","d"])out[k]=(P[k]||[]).map(x=>{const v=val(x);return v!=null&&/¢/.test(String(x))&&v>=.975?fmt(v,"1.00"):x});
+window.priceSense=function(menu,P){const SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy|rob roy|sazerac|sidecar|gimlet|mai tai|grog|mead|sake|bellini|cosmopolitan|collins|sherry)\b/i;
+  const all=[].concat(...["s","m","w","d"].map(k=>P[k]||[])).map(String),cents=all.some(x=>/¢|\dc$/.test(x)),csym=all.some(x=>/\dc$/.test(x))?"c":"¢",dot=all.some(x=>/^\D*\.\d\d$/.test(x));
+  const val=x=>{x=String(x);const n=parseFloat(x.replace(/[^\d.]/g,""));return isNaN(n)?null:/¢|\dc$/.test(x)?n/100:n};
+  const fmt=(v,o)=>{o=String(o);const pre=(o.match(/^[^\d.]*/)||[""])[0].replace("¢",""),post=/¢|\dc$/.test(o)?"":(o.match(/[^\d.]*$/)||[""])[0];
+    if(v<.975){const c=Math.max(5,Math.ceil(v*20)*5);return cents?c+csym:dot?pre+"."+String(c).padStart(2,"0"):pre+"0."+String(c).padStart(2,"0")}
+    if(!/\./.test(o)&&!/¢|\dc$/.test(o))return pre+String(Math.ceil(v))+post;
+    return pre+v.toFixed(2)+post};
+  /* a raised price keeps its cents only when they read like a price (.95, .50, .25); otherwise it lands on one of those, never .12 or .31 */
+  const lift=(t,o)=>{const ov=val(o),oc=Math.round((ov%1)*100);let fr=ov>=1&&oc%5===0?oc/100:[.25,.5,.95][Math.round(t*7)%3],v=Math.floor(t)+fr;if(v<t-1e-9)v+=1;if(t<.975)v=t;return fmt(v,o)};
+  const out={};for(const k of ["s","m","w","d"])out[k]=(P[k]||[]).map(x=>{const v=val(x);return v!=null&&/¢|\dc$/.test(String(x))&&v>=.975?fmt(v,"1.00"):x});
   const nums=k=>(out[k]||[]).map(val).filter(v=>v!=null),sw=Math.max(0,...nums("s"),...nums("w"));
   out.m=(out.m||[]).map((x,i)=>{const v=val(x);return v!=null&&sw&&v<=sw?lift(sw*(1.15+.08*i),x):x});
   const it=k=>(menu[k]||[]),isSp=i=>{const d=it("d")[i];return !!d&&SP.test((d.n||"")+" "+(d.note||""))};
   const plain=Math.max(0,...(out.d||[]).map((x,i)=>isSp(i)?0:val(x)||0),...nums("w"));
   out.d=(out.d||[]).map((x,i)=>{const v=val(x);return isSp(i)&&v!=null&&plain&&v<=plain?lift(plain*(1.2+.05*i),x):x});
+  /* any price left with odd cents (a film number like 28.12) goes up to the next ending that reads like a price */
+  for(const k of ["s","m","w","d"])out[k]=(out[k]||[]).map(x=>{const m=String(x).match(/^(\D*)(\d+)\.(\d\d)(\D*)$/);if(!m||+m[3]%5===0)return x;const c=[25,50,75,95].find(e=>e>=+m[3]);return c?m[1]+m[2]+"."+c+m[4]:m[1]+(+m[2]+1)+".00"+m[4]});
   return out};
 const low1=w=>/^(The|A|An|Some|Every|His|Her|Their|Its|One|Two|Three|That|This|How|Why|What|Where|When) /.test(w)?w.charAt(0).toLowerCase()+w.slice(1):w; /* names keep their capitals */
 const T={"redsauce": {"name": "Little Italy Sunday Gravy"}, "pizza": {"name": "Brooklyn Slice Joint"}, "deli": {"name": "Manhattan Deli Counter"}, "street": {"name": "Bodega and Street Cart"}, "cop": {"name": "Stakeout Snacks"}, "soul": {"name": "Soul Food Kitchen"}, "xmas": {"name": "Christmas in the City"}, "aussie": {"name": "Arvo in the Outback"}, "asian": {"name": "Chinatown Late Night"}, "scifi": {"name": "Mission Control Rations"}, "hero": {"name": "Rooftop Patrol"}, "kids": {"name": "Family Matinee"}, "teen": {"name": "Mall Food Court"}, "diner": {"name": "Roadside Diner"}, "mex": {"name": "Cantina Night"}, "tiki": {"name": "Beach House Luau"}, "uptown": {"name": "Uptown Steakhouse"}, "horror": {"name": "Midnight Monster Feast"}, "western": {"name": "Chuckwagon BBQ"}, "philly": {"name": "Philly Fight Night"}, "galaxy": {"name": "Galactic Cantina"}, "wizard": {"name": "Great Hall Feast"}, "adventure": {"name": "Explorer's Field Rations"}, "fairytale": {"name": "Storybook Banquet"}, "romcom": {"name": "Rom-Com Date Night"}};

@@ -128,6 +128,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const STAMP={s:"Issued",m:space?"Crew only":"All hands",w:"Rationed",d:"Logged"};
   const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({n:dry(x.n,fam),note:dry(x.note,fam),p:price(k,i)}));
   const I={s:items("s"),m:items("m"),w:items("w"),d:items("d")};
+  /* the shared price check: mains over starters and sweets, spirits over plain drinks (Solo's 12 cr pork knuckle was the cheapest thing on the card) */
+  if(window.priceSense){const P={},M={};for(const k in I){M[k]=I[k];P[k]=I[k].map(x=>money(x.p,era,space))}const Q=window.priceSense(M,P);for(const k in I)I[k].forEach((x,i)=>{x.ps=Q[k][i]})}
   const photoF=`${g.photo} ${t.photo}`;
   const voice=t.voice,winks=(fl.winks||[]).slice(0,5);
   const deck="DECK "+((parseInt(number,10)||2)%9+1);
@@ -171,7 +173,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="flex:none;width:34px;font:600 max(14px,calc(16px*var(--k)))/1.7 ${BODY};color:${sub}">${String.fromCharCode(65+i)}${i+1}</div>
       <div style="flex:1;min-width:0"><div style="display:flex;align-items:baseline;gap:10px">
         <span ${A}-name style="flex:1;font:700 max(16px,calc(26px*var(--k)))/1.12 ${BODY};color:${ink}">${esc(it.n)}</span>
-        <span style="font:${g.dw} max(16px,calc(25px*var(--k)))/1.1 ${g.disp};color:${acc};white-space:nowrap">${money(it.p,era,space)}</span></div>
+        <span style="font:${g.dw} max(16px,calc(25px*var(--k)))/1.1 ${g.disp};color:${acc};white-space:nowrap">${it.ps||money(it.p,era,space)}</span></div>
       ${it.note?`<div ${A}-note style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;margin-top:2px;font:400 max(14px,calc(20px*var(--k)))/1.26 ${BODY};color:${sub}">${esc(it.note)}</div>`:""}</div></div>`;
   let ci=0;const course=k=>I[k].length?`<div style="margin:0 0 calc(12px*var(--k))">${label(k,ci++)}<div ${A}-rows>${I[k].map(row).join("")}</div></div>`:"";
 

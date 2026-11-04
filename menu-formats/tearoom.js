@@ -70,7 +70,7 @@ const ERA={
      coin:(b,c)=>b+c[1]+"¢"},
   S:{paper:"#e8f0e2",ink:"#1d2a22",band:"#c2452d",accent:"#b23a24",gilt:"#c2452d",disp:"'Arvo',Georgia,serif",dw:700,up:false,body:"'Libre Franklin',Arial,sans-serif",
      frame:"border:6px solid #c2452d;border-radius:22px",win:"border:12px solid #fff;outline:3px solid #c2452d;border-radius:14px",tag:"#d9473a",radius:14,photo:"saturate(1.12) sepia(.08)",
-     coin:(b,c)=>b>=6?"$1."+c:c+"¢"},
+     coin:(b,c)=>"$"+(b>=6?1:0)+"."+c},/* one price style per card: "$0.75" beside "$1.25", never "75¢" (Mary Poppins) */
   E:{paper:"#fdfbf6",ink:"#1a1414",band:"#9e1a2c",accent:"#9e1a2c",gilt:"#c9a548",disp:"'Rufina',Georgia,serif",dw:700,up:false,body:"'Montserrat',Arial,sans-serif",
      frame:"border:1px solid #c9a548;outline:3px double #c9a548;outline-offset:-10px",win:"border:4px solid #c9a548;outline:1px solid #c9a548;outline-offset:5px",tag:"#d8b85c",radius:2,photo:"contrast(1.05) saturate(1.05)",
      coin:(b,c)=>"$"+b+"."+c},
