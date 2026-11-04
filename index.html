@@ -1318,7 +1318,7 @@ select{font:500 16px var(--f-body);letter-spacing:.01em}
 .more[open]{flex-basis:100%;display:flex;flex-wrap:wrap;gap:8px}
 .more[open] summary{height:auto}
 .more-menu{display:contents}
-@media (pointer:coarse){#print{display:none!important}}
+
 .spinbar{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:linear-gradient(transparent,rgba(14,5,7,.95) 35%);display:flex;justify-content:center;pointer-events:none}
 .spinbar button{pointer-events:auto;font:400 20px var(--f-disp);letter-spacing:.03em;color:#2a1206;background:radial-gradient(circle at 40% 30%,#fff1c4,#e2b04f 50%,#a8762a);border:0;border-radius:999px;padding:13px 34px;box-shadow:0 0 0 2px #2a0b10,0 0 0 4px #c9962c,0 10px 24px rgba(0,0,0,.6),0 0 30px rgba(255,200,110,.35);cursor:pointer}
 .mcard.is-lazy .mc-courses{grid-template-columns:1fr;gap:34px;justify-items:center;text-align:center;align-content:center}
@@ -2792,11 +2792,11 @@ html,body{overflow-x:clip}
       <div class="snack-pair" id="snackPair" hidden></div>
       <div class="actions">
         <button class="btn primary" id="pdf" type="button">Save PDF</button>
+        <button class="btn" id="print" type="button" hidden>Print</button>
         <button class="btn" id="weekSet" type="button" disabled>Lock in for this week</button>
         <details class="more">
           <summary class="btn">More options</summary>
           <div class="more-menu">
-            <button class="btn" id="print" type="button" hidden>Print</button>
             <button class="btn" id="favBtn" type="button" aria-pressed="false">Save to favourites</button>
             <button class="btn" id="watchCurrent" type="button" aria-pressed="false" disabled>Mark as watched</button>
             <button class="btn" id="lazyBtn" type="button" aria-pressed="false">Easy cook mode: off</button>
