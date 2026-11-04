@@ -547,6 +547,9 @@ body.spinning .theatre.closed .skip-k,.theatre.closed .tease.leader~.skip-k{opac
   #printArea .print-page.land{width:1120px;height:790px;page:land}
   #printArea .print-page:last-child{break-after:auto;page-break-after:auto}
   #printArea .mcard{-webkit-print-color-adjust:exact;print-color-adjust:exact;box-shadow:none!important}
+  /* table kit and anything else printed keeps its own paper and ink colours even with background graphics off, and never prints a screen shadow */
+  #printArea,#printArea *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  #printArea .kit-page{box-shadow:none!important}
   #printArea .mcard.fmt.fx-paper{padding:0!important}
   @page port{size:A4 portrait;margin:0}
   @page land{size:A4 landscape;margin:0}
