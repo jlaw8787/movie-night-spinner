@@ -2929,15 +2929,20 @@ function openKit(){
   const thumbs=o.querySelector(".kit-thumbs"),msg=o.querySelector(".kit-msg");
   const draw=()=>{thumbs.innerHTML="";const pg=kitPages(f,names,count());pg.forEach(p=>{const w=document.createElement("div");w.className="kit-thumb";p.style.transform="scale(.16)";p.style.transformOrigin="0 0";w.appendChild(p);thumbs.appendChild(w)});pg.forEach(kitFit);msg.textContent=`${pg.length} pages: the door sign, ${count()} place card${count()>1?"s":""} and the intermission card.`};
   o.querySelector("textarea").addEventListener("input",e=>{names=e.target.value.split("\n").map(x=>x.trim()).filter(Boolean).slice(0,60);draw()});
-  o.addEventListener("click",async e=>{if(e.target===o)return dismissModal(o);const b=e.target.closest("[data-a]");if(!b)return;
+  /* Save PDF and Print both build the same finished PDF; Print sends it to the printer like the menus do, so no browser adds edges or prints before the photos load */
+  o.addEventListener("click",async e=>{if(e.target===o)return dismissModal(o);const b=e.target.closest("[data-a]");if(!b||b.disabled)return;const toPrint=b.dataset.a==="print";
+    let win=null;if(toPrint&&coarse()){try{win=window.open("","_blank");if(win)win.document.write('<title>Getting your table kit ready</title><body style="font:18px system-ui;padding:40px;color:#333;background:#fff">Getting your table kit ready to print...</body>')}catch(x){win=null}}
+    const btns=[...o.querySelectorAll("[data-a]")],t=b.textContent;btns.forEach(x=>x.disabled=true);b.textContent=toPrint?"Getting it ready...":"Making your PDF...";
     const pages=kitPages(f,names,count()),done=await kitReady(pages);
-    if(b.dataset.a==="print"){const pa=$("printArea");pa.innerHTML="";pages.forEach(p=>pa.appendChild(printPage(p,794,1123)));done();pa.dataset.kit="1";window.print();return}
-    b.disabled=true;const t=b.textContent;b.textContent="Making your PDF...";
     try{if(!await loadExportTools(true))throw new Error("tools");const {jsPDF}=window.jspdf;const pdf=new jsPDF({unit:"mm",format:"a4",orientation:"portrait"});
       for(let i=0;i<pages.length;i++){msg.textContent=`Making your PDF: page ${i+1} of ${pages.length}`;const cv=await renderCanvas(pages[i],true);if(i)pdf.addPage("a4","portrait");pdf.addImage(cv.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297)}
-      const data=pdf.output("blob"),filename=`${slug(f.title)}-${f.year}-table-kit.pdf`;if(downloads)await downloads.save({filename,data});else plainDownload(data,filename);msg.textContent=`Saved ${filename}. Print it at A4, actual size.`}
-    catch(err){msg.textContent="Couldn't make the PDF. Check your connection and try again, or use Print."}
-    finally{done();b.disabled=false;b.textContent=t}});
+      /* actual size, one-sided: place cards are cut out, so nothing prints on the back */
+      try{pdf.viewerPreferences({PrintScaling:"None",Duplex:"Simplex"})}catch(x){}
+      const data=pdf.output("blob"),filename=`${slug(f.title)}-${f.year}-table-kit.pdf`;
+      if(toPrint){printPdf(data,win);msg.textContent="Table kit ready to print. Print at A4, actual size."}
+      else{if(downloads)await downloads.save({filename,data});else plainDownload(data,filename);msg.textContent=`Saved ${filename}. Print it at A4, actual size.`}}
+    catch(err){try{win&&win.close()}catch(x){}msg.textContent="Couldn't make the PDF. Check your connection and try again."}
+    finally{done();btns.forEach(x=>x.disabled=false);b.textContent=t}});
   mountModal(o,"textarea",document.activeElement);kitFonts().then(draw);
 }
 
