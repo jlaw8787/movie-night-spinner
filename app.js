@@ -1303,7 +1303,7 @@ const KDRY=(()=>{const cap=(m,v)=>v&&/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice
    r(/\b(brandy|bourbon|whisky|whiskey|rum) milk punch\b/gi,"vanilla milk punch"),r(/\birish coffee\b/gi,"Irish-style hot chocolate"),r(/\bmimosas?\b/gi,"orange fizz"),
    r(/\bshandy\b/gi,"lemon squash"),r(/\b(gin|vodka) and tonic\b/gi,"lime and tonic"),r(/\bmint juleps?\b/gi,"mint lemonade"),r(/\bold fashioneds?\b/gi,"orange and cherry soda"),
    r(/\bboilermakers?\b/gi,"ginger beer float"),r(/\bmargaritas?\b/gi,"lime slushie"),r(/\bmojitos?\b/gi,"mint and lime fizz"),r(/\bmartinis?\b/gi,"mocktail"),r(/\bdaiquiris?\b/gi,"strawberry slushie"),
-   r(/\bpi[nñ]a coladas?\b/gi,"pineapple colada"),r(/\bsangria\b/gi,"fruit punch"),r(/\bspritz(es)?\b/gi,"soda spritz"),r(/\bnegronis?\b/gi,"blood orange soda"),
+   r(/\bpi[nñ]a coladas?\b/gi,"pineapple colada"),r(/\bblue lagoons?\b(?! mocktail)/gi,"blue lagoon mocktail"),r(/\bsangria\b/gi,"fruit punch"),r(/\bspritz(es)?\b/gi,"soda spritz"),r(/\bnegronis?\b/gi,"blood orange soda"),
    [/\b(red wine|white wine|rice wine|sherry|cider|champagne|malt) vinegar\b/gi,m=>m.replace(/(wine|sherry|cider|champagne|malt)/i,w=>w[0]+"\u200B"+w.slice(1))],
    [new RegExp("\\b("+W+")[- ](battered)\\b","gi"),m=>cap(m,"crisp battered")],[new RegExp("\\b("+W+")[- ](braised|stewed)\\b","gi"),(m,a,b)=>cap(m,"slow-"+b.toLowerCase())],
    [new RegExp("\\b("+W+")[- ](glazed)\\b","gi"),m=>cap(m,"sticky glazed")],[new RegExp("\\b("+W+")[- ](jus|sauce|gravy|reduction|butter|glaze)\\b","gi"),(m,a,b)=>cap(m,"rich "+b.toLowerCase())],
@@ -2818,7 +2818,10 @@ function kitBits(f){
   const m=current&&current.id===f.id&&current.menu||{};const w=(m.w||[])[0],d=(m.d||[])[0];
   const time=typeof week!=="undefined"&&week&&week.id===f.id?kitTime(week.time):"";
   const prop=fl.prop||{kind:"ticket",title:f.title,lines:[String(f.year)]};
-  return {venue:D(fl.venue)||f.title,sign:D(fl.sign),note:fl.note&&fl.note.text?{text:D(fl.note.text),by:fl.note.by||""}:null,num:String(fl.number||f.year),
+  /* on a vegetarian night a kit note that still names meat or fish after the diet swaps stays off the kit, as the card's notes do */
+  let note=fl.note&&fl.note.text?{text:D(fl.note.text),by:fl.note.by||""}:null;
+  if(note&&DIET.veg&&/\b(beef|steaks?|pork|ham|bacon|chicken|turkey|lamb|veal|sausages?|meatballs?|meat|brisket|salami|prosciutto|fish|prawns?|shrimp|lobsters?|crabs?|crab cakes|oysters?|clams?|rib eyes?|ribs?|burgers?|hot dogs?|jerky)\b/i.test(note.text))note=null;
+  return {venue:D(fl.venue)||f.title,sign:D(fl.sign),note,num:String(fl.number||f.year),
     prop:{kind:prop.kind||"ticket",title:D(prop.title||f.title),lines:(prop.lines||[]).map(D)},
     style:kitStyle(f,L,fl)||fl.door||((f.theme==="scifi"||f.theme==="galaxy")&&["lab","airline","galley","canteen","precinct"].includes(L.fmt)?"terminal":"")||KIT_SIGN[L.fmt]||KIT_THEME_SIGN[f.theme]||"plaque",dark:pal.dark||st.mi||"#1b1210",acc:pal.accent||st.ma||"#b3261e",
     sweet:w?(w.label||w.n):"",drink:d?(d.label||d.n):"",time,eye:st.eye||"Tonight's feature",
