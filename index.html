@@ -69,7 +69,7 @@
 <link rel="canonical" href="https://jlaw8787.github.io/movie-night-spinner/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Oswald:wght@500;700&family=Limelight&family=Jost:wght@400;500;600&family=Archivo:wght@400;600;800&family=Permanent+Marker&family=Mr+Dafoe&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Oswald:wght@500;700&family=Limelight&family=Jost:wght@400;500;600&family=Archivo:wght@400;600;800&family=Permanent+Marker&family=Mr+Dafoe&family=Yellowtail&display=swap">
 <style>
 /* The house: a picture palace at night. Marquee up top, the wheel lit like a game show on the left, the menu revealed behind velvet curtains on the right. */
 :root{
@@ -1349,7 +1349,6 @@ select{font:500 16px var(--f-body);letter-spacing:.01em}
   var(--carpet);border-radius:16px;padding:14px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
 .cb-hero{position:relative;border-radius:14px;padding:12px;background:linear-gradient(#b3172f,#7a0f20);box-shadow:0 0 0 3px #e2b04f,0 0 0 6px #2a0710,0 20px 40px rgba(0,0,0,.6),0 0 60px rgba(255,80,80,.25)}
 .cb-board{border-radius:8px;padding:16px 14px 14px;background:radial-gradient(ellipse at 50% 0%,#ffffff,#f3f0e6 60%,#e2ddcc);box-shadow:inset 0 0 0 2px #2a0710,inset 0 0 40px rgba(255,255,255,.8),0 0 30px rgba(255,250,230,.5)}
-.cb-title{margin:0;text-align:center;font:400 clamp(34px,6vw,54px)/1 var(--f-board);letter-spacing:.04em;color:#c8102e;text-shadow:2px 2px 0 #ffd23f}
 .cb-sub{margin:6px 0 12px;text-align:center;font:500 14.5px/1.35 var(--f-body);color:#3a2a20}
 .crave .crave-chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:2px 18px;margin:0}
 .crave .crave-chips button{display:flex;justify-content:space-between;align-items:baseline;gap:10px;background:transparent;border:0;border-bottom:1px dashed rgba(42,7,16,.25);border-radius:0;padding:7px 2px;color:#1a0a0c;font:700 15px/1.1 "Oswald",var(--f-body);letter-spacing:.06em;text-transform:uppercase;text-align:left;cursor:pointer}
@@ -1427,19 +1426,13 @@ select{font:500 16px var(--f-body);letter-spacing:.01em}
 /* candy bar photo, real carpet and the popcorn box */
 /* the candy bar is part of the cinema: the box office deco fan wall in deep red, gold hairline frame (no Galaxy confetti) */
 .shop.crave{background:linear-gradient(rgba(60,10,18,.55),rgba(30,6,10,.7)),url("assets/hero/wall.webp") 0 0/300px 300px,#3a0b14!important;box-shadow:inset 0 0 0 1px rgba(226,176,79,.3)!important}
-.cb-photo{position:relative;overflow:hidden;border-radius:12px;margin:-14px -14px 16px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
-.cb-stage{position:relative;width:max(100%,780px);aspect-ratio:2/1;left:50%;transform:translateX(-50%);container-type:inline-size}
-.cb-img{position:absolute;inset:0;width:100%;height:100%;display:block}
-.cb-panel{position:absolute;left:10.3%;width:79.4%;top:7.6%;height:22.8%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4cqw;text-align:center}
-.cb-photo .cb-title{margin:0;font:400 6.2cqw/1 var(--f-board);letter-spacing:.05em;color:#c8102e;text-shadow:.25cqw .25cqw 0 #ffd23f}
-.cb-photo .cb-sub{margin:0;font:600 1.9cqw/1.2 "Oswald",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2a1a10}
 .cb-k{margin:0 0 10px;text-align:center;font:600 12px/1.3 "Oswald",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#8a6a50}
 .cb-hero{position:relative}
 .cb-pop{position:absolute;right:10px;bottom:6px;width:96px;transform:rotate(8deg);filter:drop-shadow(0 10px 14px rgba(0,0,0,.55));pointer-events:none;transition:transform .2s}
 .cb-pop.bounce{animation:popBounce .5s ease}
 @media (min-width:621px){.crave .cb-hero .crave-chips{padding-right:70px}}
 @keyframes popBounce{0%{transform:rotate(8deg) translateY(0)}35%{transform:rotate(2deg) translateY(-14px) scale(1.06)}100%{transform:rotate(8deg) translateY(0)}}
-@media (max-width:620px){.cb-pop{width:64px;bottom:4px;right:6px}.cb-photo{margin:-14px -14px 14px}}
+@media (max-width:620px){.cb-pop{width:64px;bottom:4px;right:6px}}
 @media (prefers-reduced-motion:reduce){.cb-pop.bounce{animation:none}}
 
 /* ---------- a bit of wear: film grain, hand-hung marquee letters, a folded menu, scuffed stubs ---------- */
@@ -1500,9 +1493,6 @@ body.in-shop .quick-mute:focus-visible{outline-color:#ff3d6e}
 .quick-mute .qm-off{display:none}.quick-mute.off .qm-on{display:none}.quick-mute.off .qm-off{display:inline}.quick-mute.off{opacity:.7}
 @media (max-width:520px){.top .views{margin-right:52px}.quick-mute{right:6px}}
 /* ---------- candy bar photos ---------- */
-.sc-item.has-img{display:grid;grid-template-columns:64px minmax(0,1fr) auto auto;align-items:center;gap:12px}
-.sc-img{width:64px;height:64px;border-radius:10px;object-fit:cover;background:#2a1a10;box-shadow:0 2px 0 rgba(0,0,0,.35)}
-@media (max-width:620px){.sc-item.has-img{grid-template-columns:56px minmax(0,1fr) auto;row-gap:6px}.sc-item.has-img .sc-img{width:56px;height:56px;grid-row:span 2}.sc-item.has-img .sc-kind{grid-column:2;justify-self:start}.sc-item.has-img .sc-add{grid-column:3;grid-row:1 / span 2}}
 .sc-credits{margin:14px 0 0;padding-top:4px;border-top:1px dashed rgba(42,7,16,.2);font-size:12px;opacity:.8;text-align:right}
 .sc-credits summary{cursor:pointer;min-height:44px;display:inline-flex;align-items:center;font-weight:600;letter-spacing:.04em}
 .sc-credits[open]{text-align:left}
@@ -1674,32 +1664,127 @@ html{scroll-padding-top:var(--topH,84px)}
   #viewShop>.sv-aisles{order:3;margin-top:18px}
 }
 
-/* ---------- the snack counter: menu board rows on the candy bar paper, add to tonight's film ---------- */
-.sc{margin:0 0 18px;border-radius:8px;padding:16px 14px 14px;background:url("assets/hero/paper.webp") 0 0/300px 300px,radial-gradient(ellipse at 50% 0%,#fffdf5,#f1ead6 60%,#e0d6bc);background-blend-mode:multiply;box-shadow:inset 0 0 0 2px #2a0710,0 0 30px rgba(255,250,230,.35);color:#1a0a0c}
+/* ---------- the candy bar: a lit price board, tonight's combos, the glass case and your tray, the whole counter folded away ---------- */
+.sc{--sc-bg:#170809;--sc-red:#b3261e;--sc-gold:#e2b04f;--sc-lamp:#ffcf5a;--sc-cream:#f3e6c8;--sc-soft:#dccdae;--sc-card:#2a1612;--sc-line:#6b4a2a;
+  margin:0 0 14px;border-radius:12px;padding:22px;background:var(--sc-bg);color:var(--sc-cream);display:flex;flex-direction:column;gap:24px;box-shadow:0 0 0 1px rgba(226,176,79,.25),0 18px 40px rgba(0,0,0,.55)}
+.sc :focus-visible{outline:3px solid #ffd23f;outline-offset:2px}
+.sc-k{margin:0 0 10px;font:600 13px/1.3 "Oswald",var(--f-body);letter-spacing:.3em;text-transform:uppercase;color:var(--sc-gold)}
+.sc-k span{letter-spacing:.12em;color:var(--sc-soft)}
+/* the board: black, lit round the edge with bulbs, prices in lamp gold */
+.scb{position:relative;border-radius:8px;padding:11px;background:#2b2522;box-shadow:0 0 0 2px var(--sc-gold),0 18px 40px rgba(0,0,0,.6)}
+.scb::before{content:"";position:absolute;inset:2px;pointer-events:none;
+  background:radial-gradient(circle,#fffbe8 0 1.6px,#ffcf5a 2.4px,rgba(255,207,90,.3) 3.6px,transparent 4.6px) 0 0/20px 8px repeat-x,
+    radial-gradient(circle,#fffbe8 0 1.6px,#ffcf5a 2.4px,rgba(255,207,90,.3) 3.6px,transparent 4.6px) 0 100%/20px 8px repeat-x,
+    radial-gradient(circle,#fffbe8 0 1.6px,#ffcf5a 2.4px,rgba(255,207,90,.3) 3.6px,transparent 4.6px) 0 10px/8px 20px repeat-y,
+    radial-gradient(circle,#fffbe8 0 1.6px,#ffcf5a 2.4px,rgba(255,207,90,.3) 3.6px,transparent 4.6px) 100% 10px/8px 20px repeat-y}
+.scb-in{position:relative;background:#0c0c0c;border-radius:3px;padding:16px 24px 14px;display:flex;flex-direction:column;gap:10px;box-shadow:inset 0 0 30px rgba(0,0,0,.9)}
+.scb-top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px 18px}
+.scb-t{margin:0;font:700 clamp(32px,5vw,46px)/1 "Oswald",var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:#fff8e6;text-shadow:0 0 14px rgba(255,220,150,.4)}
+.scb-now{margin:0;font:400 clamp(24px,3.4vw,34px)/1.15 "Yellowtail",cursive;color:var(--sc-lamp);text-shadow:0 0 10px rgba(255,207,90,.4);min-width:0;overflow-wrap:anywhere}
+.scb-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px;font:500 18px/1.9 "Oswald",var(--f-body);letter-spacing:.06em;text-transform:uppercase;color:#fff}
+.scb-list li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dotted rgba(255,255,255,.14)}
+.scb-list b{font-weight:500;color:var(--sc-lamp)}
+.scb-yr{margin:0;text-align:right;font:500 11px/1 "Oswald",var(--f-body);letter-spacing:.24em;text-transform:uppercase;color:#c4ad80}
+.sc-none{margin:0;display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;font:500 15.5px/1.45 var(--f-body);color:var(--sc-soft)}
+.sc-spin{font:600 14.5px var(--f-body);min-height:44px;padding:0 18px;border-radius:999px;border:0;background:var(--sc-lamp);color:#2a1206;cursor:pointer}
+/* tonight's combos: three cards, the first one lit red */
+.scc-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.scc-card{background:var(--sc-card);border:1px solid var(--sc-line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.scc-card.hot{background:var(--sc-red);border-color:var(--sc-red);box-shadow:inset 0 0 0 3px var(--sc-gold)}
+.scc-card.on{border-color:var(--sc-lamp)}
+.scc-pics{display:flex;padding-left:2px}
+.scc-pic{width:52px;height:52px;flex:none;border-radius:50%;object-fit:cover;border:2px solid var(--sc-cream);background:#fff;margin-right:-10px;box-shadow:0 3px 8px rgba(0,0,0,.45)}
+.scc-n{margin:4px 0 0;font:700 22px/1.08 "Oswald",var(--f-body);text-transform:uppercase;letter-spacing:.02em;color:#fff8e6;text-wrap:balance}
+.scc-d{margin:0;font:400 14.5px/1.42 var(--f-body);color:var(--sc-soft)}
+.scc-card.hot .scc-d{color:#ffeccb}
+.scc-s{margin:0;font:400 19px/1.25 "Yellowtail",cursive;color:var(--sc-lamp)}
+.scc-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:8px}
+.scc-p{font:700 26px/1 "Oswald",var(--f-body);color:var(--sc-lamp)}
+.scc-p small{display:block;margin-top:5px;font:500 12.5px/1 var(--f-body);letter-spacing:.02em;color:var(--sc-soft)}
+.scc-card.hot .scc-p,.scc-card.hot .scc-p small{color:#fff1d0}
+.scc-add{font:600 15px var(--f-body);min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--sc-gold);background:transparent;color:var(--sc-cream);cursor:pointer;white-space:nowrap}
+.scc-card.hot .scc-add{background:var(--sc-lamp);border-color:var(--sc-lamp);color:#2a1206}
+.scc-add[aria-pressed="true"],.scc-card.hot .scc-add[aria-pressed="true"]{background:var(--sc-cream);border-color:var(--sc-cream);color:#2a1206}
+.scc-add[aria-pressed="true"]::before{content:"\2713  "}
+/* the glass case and the tray side by side; the tray drops under the case on a phone */
+.sc-mid{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:20px;align-items:start}
+.scg-list{list-style:none;margin:0;padding:14px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;border-radius:8px;border:2px solid #8a6a3a;background:linear-gradient(180deg,rgba(255,255,255,.13),rgba(255,255,255,.03) 40%,rgba(255,255,255,.06));box-shadow:inset 0 1px 0 rgba(255,255,255,.25)}
+.scg-item{background:var(--sc-cream);color:#2a1206;border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+.scg-item.on{box-shadow:0 0 0 3px var(--sc-lamp)}
+.scg-img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;background:#2a1a10}
+.scg-b{padding:10px;display:flex;flex-direction:column;gap:6px;flex:1}
+.scg-n{margin:0;font:600 15px/1.2 var(--f-body);color:#2a1206}
+.scg-row{margin:0 0 2px;display:flex;justify-content:space-between;align-items:center;gap:6px}
+.scg-p{font:700 16px/1 "Oswald",var(--f-body);color:#8a1c14}
+.scg-b .sc-add{margin-top:auto;width:100%}
+.sc .sc-noimg{display:block;background:repeating-linear-gradient(90deg,#c8102e 0 9px,#fff8e6 9px 18px)}
+.sct{position:relative;background:#fbf6e8;color:#241a12;padding:18px 16px 22px;margin-top:23px;display:flex;flex-direction:column;gap:8px;font-family:"Courier New",Courier,monospace;box-shadow:0 10px 24px rgba(0,0,0,.5)}
+.sct::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:8px;background:linear-gradient(135deg,#fbf6e8 5.5px,transparent 0) 0 0/11px 8px repeat-x,linear-gradient(-135deg,#fbf6e8 5.5px,transparent 0) 0 0/11px 8px repeat-x}
+.sct-t{margin:0;text-align:center;font:700 16px/1.2 "Courier New",Courier,monospace;letter-spacing:.16em;text-transform:uppercase}
+.sct-sub{margin:0;padding-bottom:10px;border-bottom:1px dashed #555;text-align:center;font-size:13px}
+.sct-list{list-style:none;margin:0;padding:0 0 6px;border-bottom:1px dashed #555}
+.sct-list li{display:grid;grid-template-columns:minmax(0,1fr) auto 44px;align-items:center;gap:4px 8px;min-height:44px;font-size:14px;line-height:1.3}
+.sct-n small{display:block;font-size:12px;color:#5a4a3a}
+.sct-p{font-weight:700}
+.sct-x{width:44px;height:44px;border:0;border-radius:50%;background:transparent;color:#8a1c14;font:700 22px/1 var(--f-body);cursor:pointer}
+.sct-x:hover{background:rgba(138,28,20,.1)}
+.sct-tot{margin:0;padding-right:52px;display:flex;justify-content:space-between;font:700 16px "Courier New",Courier,monospace;letter-spacing:.06em;text-transform:uppercase}
+.sct-empty,.sct-note{margin:0;font-size:13px;line-height:1.45}
+.sct-go{margin-top:6px;font:600 15px var(--f-body);min-height:44px;border-radius:6px;border:0;background:var(--sc-red);color:#fff8e6;cursor:pointer}
+/* the whole counter: folded behind one button, opens in place on the candy bar paper */
+.sc-all{display:flex;flex-direction:column;gap:14px}
+.sc-more{align-self:flex-start;font:600 15px var(--f-body);min-height:44px;padding:0 20px;border-radius:999px;border:1px solid #8a6a3a;background:transparent;color:var(--sc-cream);cursor:pointer}
+.sc-more[aria-expanded="true"]{border-color:var(--sc-gold)}
+.sc-body{border-radius:8px;padding:16px 14px 14px;background:url("assets/hero/paper.webp") 0 0/300px 300px,radial-gradient(ellipse at 50% 0%,#fffdf5,#f1ead6 60%,#e0d6bc);background-blend-mode:multiply;box-shadow:inset 0 0 0 2px #2a0710;color:#1a0a0c}
+.sc-body[hidden]{display:none}
 .sc-head{text-align:center;margin-bottom:10px}
-.sc-t{margin:0;font:700 clamp(22px,4vw,30px)/1.05 "Oswald",var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:#c8102e}
+.sc-t{margin:0;font:700 clamp(22px,4vw,30px)/1.05 "Oswald",var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:#b3101f}
 .sc-sub{margin:6px auto 0;max-width:62ch;font:500 14px/1.4 var(--f-body);color:#3a2a20}
 .sc-sub b{color:#1a0a0c}
 .sc-cats{display:flex;gap:6px;overflow-x:auto;padding:4px 2px 10px;margin:0 -2px;scrollbar-width:none}
 .sc-cats::-webkit-scrollbar{display:none}
-.sc-cats button{flex:none;font:600 13px/1 "Oswald",var(--f-body);letter-spacing:.06em;text-transform:uppercase;min-height:38px;padding:0 14px;border-radius:999px;border:2px solid #2a0710;background:transparent;color:#2a0710;cursor:pointer}
-.sc-cats button[aria-pressed="true"]{background:#c8102e;border-color:#c8102e;color:#fff}
-.sc-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0 22px}
-.sc-item{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:10px;padding:10px 2px;border-bottom:1px dashed rgba(42,7,16,.28)}
+.sc-cats button{flex:none;font:600 13px/1 "Oswald",var(--f-body);letter-spacing:.06em;text-transform:uppercase;min-height:44px;padding:0 14px;border-radius:999px;border:2px solid #2a0710;background:transparent;color:#2a0710;cursor:pointer}
+.sc-cats button[aria-pressed="true"]{background:#b3101f;border-color:#b3101f;color:#fff}
+.sc-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:0 22px}
+.sc-item{display:grid;grid-template-columns:60px minmax(0,1fr) auto;grid-template-areas:"i n a" "i m a";align-items:center;gap:4px 12px;padding:10px 2px;border-bottom:1px dashed rgba(42,7,16,.28)}
+.sc-img{grid-area:i;width:60px;height:60px;border-radius:10px;object-fit:cover;background:#2a1a10;box-shadow:0 2px 0 rgba(0,0,0,.35)}
+.sc-n{grid-area:n;min-width:0}
 .sc-n span{display:block;font:700 15px/1.15 "Oswald",var(--f-body);letter-spacing:.05em;text-transform:uppercase;color:#1a0a0c}
 .sc-n small{display:block;margin-top:3px;font:500 12.5px/1.3 var(--f-body);color:#6b5040}
+.sc-meta{grid-area:m;margin:0;display:flex;align-items:center;gap:10px}
+.sc-pr{font:700 15px/1 "Oswald",var(--f-body);color:#8a1c14}
+.sc-item .sc-add{grid-area:a}
 .sc-kind{font:600 11px/1 "Oswald",var(--f-body);letter-spacing:.08em;text-transform:uppercase;font-style:normal;padding:5px 7px;border-radius:4px;border:1.5px solid currentColor;white-space:nowrap}
-.sc-kind.make{color:#1d6b4a}.sc-kind.buy{color:#8a5a12}
-.sc-add{font:700 13px/1 "Oswald",var(--f-body);letter-spacing:.06em;text-transform:uppercase;min-width:74px;min-height:40px;padding:0 12px;border-radius:6px;border:2px solid #c8102e;background:#fff;color:#c8102e;cursor:pointer}
-.sc-add[aria-pressed="true"]{background:#c8102e;color:#fff}
-.sc-item.on .sc-n span{color:#c8102e}
-.sc-add:focus-visible,.sc-cats button:focus-visible,.sc-go:focus-visible{outline:3px solid #ffd23f;outline-offset:2px}
+.sc-kind.make{color:#1d6b4a}.sc-kind.buy{color:#7a4f0e}
+.sc-add{font:700 13px/1 "Oswald",var(--f-body);letter-spacing:.06em;text-transform:uppercase;min-width:74px;min-height:44px;padding:0 12px;border-radius:6px;border:2px solid #b3101f;background:#fff;color:#b3101f;cursor:pointer}
+.sc-add[aria-pressed="true"]{background:#b3101f;color:#fff}
+.sc-item.on .sc-n span{color:#b3101f}
 .sc-bar{position:sticky;bottom:10px;z-index:5;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 12px;margin-top:12px;padding:10px 12px;border-radius:10px;background:#2a0710;color:#fff;font:600 14px var(--f-body);box-shadow:0 10px 24px rgba(0,0,0,.45)}
-.sc-go{font:700 13px/1 "Oswald",var(--f-body);letter-spacing:.06em;text-transform:uppercase;min-height:40px;padding:0 14px;border-radius:6px;border:0;background:#ffd23f;color:#2a0710;cursor:pointer}
-.cb-find{display:flex;align-items:center;gap:14px;margin:22px 0 14px;font:600 15px/1.25 "Oswald",var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:#f3d48a;text-align:center}
+.sc-go{font:700 13px/1 "Oswald",var(--f-body);letter-spacing:.06em;text-transform:uppercase;min-height:44px;padding:0 14px;border-radius:6px;border:0;background:#ffd23f;color:#2a0710;cursor:pointer}
+.sc .sc-credits{margin:0;border-top-color:rgba(226,176,79,.25);color:var(--sc-soft);opacity:1}
+/* find a film by what you're craving: folded under the counter so the page stays short */
+.cb-fold{margin:4px 0 0}
+.cb-fold>summary{list-style:none;cursor:pointer;min-height:44px;margin:8px 0 14px}
+.cb-fold>summary::-webkit-details-marker{display:none}
+.cb-fold>summary span::after{content:"  +";color:var(--sc-lamp,#ffcf5a)}
+.cb-fold[open]>summary span::after{content:"  \2212"}
+.cb-fold>summary:focus-visible{outline:3px solid #ffd23f;outline-offset:2px;border-radius:6px}
+.cb-find{display:flex;align-items:center;gap:14px;font:600 15px/1.25 "Oswald",var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:#f3d48a;text-align:center}
 .cb-find::before,.cb-find::after{content:"";flex:1;min-width:20px;height:1px;background:linear-gradient(90deg,transparent,rgba(226,176,79,.7),transparent)}
-@media (max-width:620px){.cb-find{font-size:13.5px;letter-spacing:.08em;gap:10px}}
-@media (max-width:620px){.sc{padding:14px 12px 12px}.sc-list{grid-template-columns:1fr}.sc-item{grid-template-columns:minmax(0,1fr) auto;row-gap:6px}.sc-kind{grid-column:1;grid-row:2;justify-self:start}.sc-add{grid-column:2;grid-row:1 / span 2}}
+@media (min-width:901px){.sct{position:sticky;top:96px}}
+@media (max-width:900px){.sc-mid{grid-template-columns:minmax(0,1fr)}.sct{margin-top:0}.scc-list{grid-template-columns:minmax(0,1fr)}}
+@media (min-width:621px) and (max-width:900px){.scc-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:620px){
+  .sc{padding:14px 12px;gap:20px;margin-left:-6px;margin-right:-6px}
+  .scb-in{padding:14px 14px 12px}
+  .scb-list{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 14px;font-size:14px;letter-spacing:.03em;line-height:2.1}
+  .scb-list span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+  .scg-list{grid-template-columns:minmax(0,1fr) minmax(0,1fr);padding:10px;gap:10px}
+  .scg-b{padding:8px}.scg-n{font-size:14px}
+  .scc-card{padding:14px}
+  .sc-list{grid-template-columns:1fr}
+  .cb-find{font-size:13.5px;letter-spacing:.08em;gap:10px}
+}
 
 /* member card rentals: tap a title for its menu, or return them all */
 .member-out .out-open{flex:1;min-width:0;text-align:left;background:none;border:0;padding:6px 0;color:inherit;font:inherit;cursor:pointer}
@@ -2772,22 +2857,21 @@ html,body{overflow-x:clip}
   </section>
 
   <section class="shop crave" id="viewCrave" aria-label="Candy bar" hidden>
-    <div class="cb-photo"><div class="cb-stage">
-      <img class="cb-img" src="assets/hero/candybar-1000.webp" srcset="assets/hero/candybar-1000.webp 1000w, assets/hero/candybar-1400.webp 1400w, assets/hero/candybar.webp 1774w" sizes="(max-width:640px) 460px, 1240px" alt="" loading="lazy">
-      <div class="cb-panel"><h2 class="cb-title">Candy Bar</h2><p class="cb-sub">What are you hungry for?</p></div>
-    </div></div>
     <section class="sc" id="snackCounter" aria-label="Snack counter"></section>
-    <h3 class="cb-find">Or find a film by what you're craving</h3>
-    <div class="cb-hero" id="cbHero">
-      <div class="cb-board">
-        <p class="cb-k">Tap a treat and we'll find the films that serve it</p>
-        <div class="crave-chips" id="craveChips" role="group" aria-label="Foods"></div>
+    <p class="sr-only" id="snackLive" aria-live="polite"></p>
+    <details class="cb-fold" id="cbFold">
+      <summary class="cb-find"><span>Or find a film by what you're craving</span></summary>
+      <div class="cb-hero" id="cbHero">
+        <div class="cb-board">
+          <p class="cb-k">Tap a treat and we'll find the films that serve it</p>
+          <div class="crave-chips" id="craveChips" role="group" aria-label="Foods"></div>
+        </div>
+        <img class="cb-pop" id="cbPop" src="assets/hero/popcorn.webp" alt="" aria-hidden="true" loading="lazy">
       </div>
-      <img class="cb-pop" id="cbPop" src="assets/hero/popcorn.webp" alt="" aria-hidden="true" loading="lazy">
-    </div>
-    <div class="shop-tools cb-search"><input type="search" id="craveSearch" placeholder="Not on the board? Type any food, like lasagne" aria-label="Type a food"></div>
-    <div class="crave-bar"><p class="shop-count" id="craveCount" aria-live="polite"></p><button class="aisle-spin" id="craveSpin" type="button" hidden>Spin a combo</button></div>
-    <div class="crave-grid" id="craveGrid"></div>
+      <div class="shop-tools cb-search"><input type="search" id="craveSearch" placeholder="Not on the board? Type any food, like lasagne" aria-label="Type a food"></div>
+      <div class="crave-bar"><p class="shop-count" id="craveCount" aria-live="polite"></p><button class="aisle-spin" id="craveSpin" type="button" hidden>Spin a combo</button></div>
+      <div class="crave-grid" id="craveGrid"></div>
+    </details>
   </section>
 
   <div class="stage" id="viewWheel" aria-label="Box office">
@@ -2896,9 +2980,9 @@ html,body{overflow-x:clip}
 <script src="ratings.js?v=dfb01117" defer></script>
 <script src="aisles.js?v=5e921379" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
-<script src="films.js?v=15482f80" defer></script>
+<script src="films.js?v=3819ed20" defer></script>
 <script src="formats-core.js?v=0a9d8d0d" defer></script>
-<script src="app.js?v=5e117667" defer></script>
+<script src="app.js?v=1a9eec96" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

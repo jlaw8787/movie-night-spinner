@@ -3194,28 +3194,118 @@ function SNACK_BY(){if(!window._snackBy){window._snackBy={};(window.SNACKS||[]).
 function snackPicks(f){try{return JSON.parse(localStorage.getItem("mns-snacks-"+f.id)||"[]").filter(id=>SNACK_BY()[id])}catch(e){return []}}
 function snackSave(f,ids){try{ids.length?localStorage.setItem("mns-snacks-"+f.id,JSON.stringify(ids)):localStorage.removeItem("mns-snacks-"+f.id)}catch(e){}}
 function snackDishes(f){if(!f)return [];return snackPicks(f).map(id=>{const x=SNACK_BY()[id];return {n:x.n,course:"c",prep_min:x.prep_min,cook_min:x.cook_min,make_ahead:x.make_ahead,ingredients:x.ingredients,steps:x.steps,veg:x.veg,af:true,snack:x.id}})}
-let snackCat="All";
+let snackCat="All",snackAll=false;
 /* snacks go on the locked-in film when there is one, so renting or spinning something else doesn't move them */
 function snackFilm(){const w=typeof week!=="undefined"&&week&&week.id&&FILMS.find(x=>x.id===week.id);return w||(document.body.classList.contains("staged")?null:current)}
-function renderSnacks(){
-  const box=$("snackCounter");if(!box)return;const f=snackFilm(),locked=!!(f&&week&&week.id===f.id);const on=new Set(f?snackPicks(f):[]);
-  const cats=["All",...new Set((window.SNACKS||[]).map(x=>x.cat))];
-  const list=(window.SNACKS||[]).filter(x=>snackCat==="All"||x.cat===snackCat);
-  box.innerHTML=`<div class="sc-head"><h2 class="sc-t">The snack counter</h2><p class="sc-sub">Real movie snacks. ${tapWord("Tap")} Add and they go on ${f?`${locked?"your locked-in film":"tonight's film"}, <b>${ESC(f.title)}</b>`:"tonight's film"}: the prep sheet and the shopping list.</p></div>
-  <div class="sc-cats" role="group" aria-label="Snack type">${cats.map(c=>`<button type="button" data-sc-cat="${ESC(c)}" aria-pressed="${c===snackCat}">${ESC(c)}</button>`).join("")}</div>
-  <ul class="sc-list">${list.map(x=>`<li class="sc-item${on.has(x.id)?" on":""}${x.img?" has-img":""}">${x.img?`<img class="sc-img" src="${ESC(x.img)}" alt="" width="64" height="64" loading="lazy" decoding="async">`:""}<div class="sc-n"><span>${ESC(x.n)}</span><small>${ESC(x.note)}</small></div><em class="sc-kind ${x.kind}">${x.kind==="make"?"Make it":"Buy it"}</em><button type="button" class="sc-add" data-snack="${ESC(x.id)}" aria-pressed="${on.has(x.id)}" aria-label="${on.has(x.id)?"Remove":"Add"} ${ESC(x.n)}">${on.has(x.id)?"Added":"Add"}</button></li>`).join("")}</ul>
-  <div class="sc-bar"${on.size?"":" hidden"}><span>${on.size} snack${on.size===1?"":"s"} on ${f?ESC(f.title):"tonight's film"}</span><button type="button" class="sc-go" data-sc-go="1">See the shopping list</button></div>`+snackCredits();
+/* counter prices: the data holds 1996 multiplex prices, moved to the film's year so the board reads like its own time (in cents) */
+function snackK(y){const P=[[1930,.07],[1950,.12],[1960,.15],[1970,.24],[1980,.5],[1990,.85],[1996,1],[2005,1.35],[2015,1.7],[2026,2.2]];y=+y||1996;if(y<=P[0][0])return P[0][1];
+  for(let i=1;i<P.length;i++)if(y<=P[i][0]){const [a,ka]=P[i-1],[b,kb]=P[i];return ka+(kb-ka)*(y-a)/(b-a)}return P[P.length-1][1]}
+function snackCost(v,f){const x=(+v||2)*snackK(f&&f.year)*100;return x<100?Math.max(5,Math.round(x/5)*5):Math.round(x/10)*10}
+const snackMoney=c=>c<100?c+"c":(c/100).toFixed(2);
+const comboCost=c=>{const s=c<100?5:10;return Math.min(c-s,Math.floor(c*.88/s)*s)};
+/* combos are one from each part of the counter: something to eat, something cold, something sweet */
+const SNACK_ROLE={Popcorn:"main",Hot:"main",Savoury:"main",Drinks:"drink",Frozen:"drink",Retro:"sweet",Chocolate:"sweet",Lollies:"sweet"};
+const SNACK_FALL=["butter-popcorn","slushies","choc-tops","caramel-popcorn","spider","mixed-lollies","golden-syrup-popcorn","milkshakes","choc-peanuts","hot-chips","icy-poles","honeycomb-balls","pretzels","choc-coated-ice-creams","jelly-babies","cheese-twists","family-block","chips-dip"];
+/* the rest of each theme's counter, after its three "goes well with" snacks */
+function snackPrefData(){return {redsauce:["butter-popcorn","spider","coconut-ice","milkshakes","rocky-road"],pizza:["cheese-twists","milkshakes","choc-peanuts","nachos"],deli:["pretzel-mix","choc-raisins","spider","family-block"],street:["hot-chips","mixed-lollies","icy-poles","pretzel-mix"],cop:["slushies","butter-popcorn","family-block","milkshakes"],soul:["caramel-popcorn","spider","family-block","slushies"],xmas:["golden-syrup-popcorn","milkshakes","spider","fairy-bread","party-pies"],aussie:["spider","icy-poles","chocolate-crackles","hot-chips","milk-bottles"],asian:["golden-syrup-popcorn","icy-poles","sherbet","pretzel-mix"],scifi:["choc-tops","butter-popcorn","jelly-babies","milkshakes"],hero:["choc-tops","nachos","lolly-snakes","milkshakes"],kids:["spider","icy-poles","cheerios","milk-bottles","butter-popcorn"],teen:["nachos","slushies","mixed-lollies","butter-popcorn"],diner:["butter-popcorn","choc-tops","caramel-popcorn","pretzel-mix","family-block"],mex:["sour-straps","icy-poles","choc-peanuts","milkshakes"],tiki:["golden-syrup-popcorn","spider","sherbet","chocolate-crackles"],uptown:["choc-tops","milkshakes","cheese-twists","choc-raisins"],horror:["slushies","butter-popcorn","jelly-babies","spider","hot-chips"],western:["spider","pretzel-mix","honeycomb-balls","milkshakes"],philly:["milkshakes","butter-popcorn","family-block","slushies"],galaxy:["golden-syrup-popcorn","jelly-babies","butter-popcorn","icy-poles"],wizard:["milkshakes","choc-tops","cheese-twists","sherbet"],adventure:["slushies","butter-popcorn","dagwood-dogs","icy-poles"],fairytale:["spider","chocolate-crackles","honey-joys","butter-popcorn","icy-poles"],romcom:["milkshakes","spider","choc-raisins","butter-popcorn"]}}
+/* the third combo's name and line when the film has no short scene to name it after */
+const SNACK_THEME={redsauce:["Sunday session","For a long night with the family."],pizza:["Friday night box","Grab it on the way in."],deli:["Matinee box","Easy to hold in one hand."],street:["Late session box","For when the film runs past midnight."],cop:["Stakeout box","Enough to see you through the long wait."],soul:["Sunday session","Made for passing down the row."],xmas:["Christmas Eve box","For the night before Christmas."],aussie:["Arvo session","The way the school canteen did it."],asian:["Late session box","Sweet, sour and salty in one go."],scifi:["Double feature box","Built to last two films."],hero:["Opening night box","For the big screen and a full house."],kids:["Kids' tray","Small serves for small hands."],teen:["Back row","Enough to share with whoever sits next to you."],diner:["Late session","For the drive home after."],mex:["Friday night box","Salty, cold and made for sharing."],tiki:["Summer session","Cold ones for a hot night."],uptown:["Dress circle","For the good seats."],horror:["Lights out","Something to grip when the lights go down."],western:["Saturday matinee","Like the Saturday pictures used to be."],philly:["Fight night box","Enough for all twelve rounds."],galaxy:["Double feature box","Built to last two films."],wizard:["Saturday matinee","Like the Saturday pictures used to be."],adventure:["Saturday matinee","Packed for a long trip."],fairytale:["Family tray","Something for everyone on the couch."],romcom:["Date night","Easy to share across the armrest."]};
+const SNACK_BOOZE=/\b(rum|brandy|whiske?y|wine|beers?|liqueur|bourbon|vodka|tequila|gin|champagne|sherry|kahlua|baileys|amaretto|cognac|stout|lager|ale|cider|margaritas?|daiquiris?|martinis?|spiked|boozy|tipsy|cocktails?|sangria|prosecco|schnapps|mead|grog|eggnog|punch)\b/i;
+const SNACK_MEAT=/\b(beef|steaks?|pork|ham|bacon|chicken|turkey|lamb|veal|sausages?|meatballs?|meat|brisket|salami|prosciutto|fish|prawns?|shrimp|lobsters?|crabs?|oysters?|clams?|ribs?|burgers?|hot dogs?|jerky)\b/i;
+/* kids' mode, family films and no-alcohol nights never get a drink with alcohol in it; vegetarian nights only get vegetarian snacks */
+const snackKid=f=>!!(kidsMode||dietAF()||(f&&isKidSafe(f)));
+function snackPref(f){
+  const by=SNACK_BY(),G=snackGoData(),kid=snackKid(f),ok=id=>{const x=by[id];return !!x&&(!DIET.veg||x.veg)&&!(kid&&x.alc)};
+  let h=0;for(const ch of f.id)h=(h*31+ch.charCodeAt(0))>>>0;
+  const head=G.only[f.id]||G.go[f.theme]||[],rot=head.length?h%head.length:0;
+  return [...new Set([...head.slice(rot),...head.slice(0,rot),...(snackPrefData()[f.theme]||[]),...G.fall,...SNACK_FALL,...(window.SNACKS||[]).map(x=>x.id)])].filter(ok);
 }
+const lc1=s=>/^[A-Z][a-z]/.test(s)?s[0].toLowerCase()+s.slice(1):s;
+/* a snack name with "and" in it ("chips and French onion dip") gets "plus" before the last one, so the list still reads */
+const andList=a=>a.length<2?a.join(""):a.slice(0,-1).join(", ")+(a.some(x=>/ and /.test(x))?", plus ":" and ")+a[a.length-1];
+function snackCombos(f){
+  if(!f)return [];const by=SNACK_BY(),pref=snackPref(f),used=new Set();
+  const take=role=>{const id=pref.find(i=>!used.has(i)&&SNACK_ROLE[by[i].cat]===role);if(id)used.add(id);return id};
+  const sets=[["main","drink","sweet"],["main","sweet"],["main","drink","sweet"]].map(s=>s.map(take).filter(Boolean));
+  const fl=(f._lib||f._kit||{}).flavour||{},D=x=>dietText(f,String(x||"")).trim(),kid=snackKid(f);
+  const clean=s=>s&&!(kid&&SNACK_BOOZE.test(s))&&!(DIET.veg&&SNACK_MEAT.test(s))?s:"";
+  const who=D(fl.note&&fl.note.by),sign=clean(D(fl.sign)),T=SNACK_THEME[f.theme]||["Late session","For the drive home after."];
+  const wink=(fl.winks||[]).map(D).find(w=>/^The [^,.;:]{3,26}$/.test(w)&&clean(w));
+  /* the film's first sweet, as a reason to stop at the counter */
+  const w0=(f.W||[])[0],sweet=w0?clean(D(w0[0])):"";
+  const names=ids=>ids.map(id=>lc1(by[id].n));
+  const out=[
+    {name:who?`${who}'s order`:`The ${f.title} combo`,desc:`${andList(names(sets[0]))}. `+(sweet?`Something to pick at before dessert: ${sweet}.`:"One of each, the full set.")},
+    {name:`${f.title} for two`,desc:`${andList(names(sets[1]))}, one between two.`,sign},
+    {name:wink||T[0],desc:`${andList(names(sets[2]))}. ${T[1]}`}
+  ];
+  return out.map((c,i)=>{const ids=sets[i];if(ids.length<2)return null;const full=ids.reduce((s,id)=>s+snackCost(by[id].price,f),0);
+    return Object.assign(c,{ids,full,cost:comboCost(full),desc:c.desc[0].toUpperCase()+c.desc.slice(1)})}).filter(Boolean);
+}
+/* the tray: tonight's picks, with any combo that is all there shown as the combo at its combo price */
+function snackTray(f,combos){const by=SNACK_BY(),ids=snackPicks(f),left=new Set(ids),rows=[];
+  combos.forEach((c,i)=>{if(c.ids.every(id=>left.has(id))){c.ids.forEach(id=>left.delete(id));rows.push({key:"c:"+i,name:c.name,cost:c.cost,sub:c.ids.map((id,j)=>j?lc1(by[id].n):by[id].n).join(", ")})}});
+  ids.filter(id=>left.has(id)).forEach(id=>rows.push({key:id,name:by[id].n,cost:snackCost(by[id].price,f)}));return rows}
+const snackPic=(x,cls,w)=>x.img?`<img class="${cls}" src="${ESC(x.img)}" alt="" width="${w}" height="${w}" loading="lazy" decoding="async">`:`<span class="${cls} sc-noimg" aria-hidden="true"></span>`;
+function renderSnacks(){
+  const box=$("snackCounter");if(!box)return;const f=snackFilm(),locked=!!(f&&week&&week.id===f.id);
+  /* a locked-in film may not be loaded yet: fetch it once, then draw its combos */
+  if(f&&!f._full&&!f._snackWait&&typeof ensureExact==="function"){f._snackWait=true;ensureExact(f).then(()=>{try{if(!$("viewCrave").hidden)renderSnacks()}catch(e){}})}
+  const by=SNACK_BY(),on=new Set(f?snackPicks(f):[]),all=window.SNACKS||[],P=x=>snackMoney(snackCost(x.price,f));
+  const T=f?ESC(f.title):"";
+  const board=[["Popcorn sm","butter-popcorn",1],["Popcorn lg","butter-popcorn",1.5],["Choc top","choc-tops",1],["Slushie","slushies",1],["Hot chips","hot-chips",1],["Pick and mix","mixed-lollies",1]].filter(r=>by[r[1]]);
+  let h=`<div class="scb"><div class="scb-in"><div class="scb-top"><h2 class="scb-t">Candy Bar</h2><p class="scb-now">${f?`Now showing: ${T}`:"Nothing showing yet"}</p></div>
+    <ul class="scb-list" aria-label="Counter prices${f?", "+ESC(f.year):""}">${board.map(([n,id,k])=>`<li><span>${n}</span><b>${snackMoney(snackCost(by[id].price*k,f))}</b></li>`).join("")}</ul>
+    ${f?`<p class="scb-yr">${ESC(f.year)} prices</p>`:""}</div></div>`;
+  if(!f)h+=`<p class="sc-none">No film on yet. Spin one at the Box office and the counter makes up three combos for it. <button type="button" class="sc-spin" data-sc-spin="1">Go to the Box office</button></p>`;
+  else{
+    const C=snackCombos(f),rows=snackTray(f,C),tot=rows.reduce((s,r)=>s+r.cost,0);
+    const glass=snackPref(f).slice(0,6).map(id=>by[id]);
+    h+=`<section class="scc" id="snackCombos" aria-labelledby="sccT"><h3 class="sc-k" id="sccT">Tonight's combos <span>for ${T}</span></h3>
+      <ul class="scc-list">${C.map((c,i)=>{const full=c.ids.every(id=>on.has(id));return `<li class="scc-card${i===0?" hot":""}${full?" on":""}">
+        <div class="scc-pics">${c.ids.map(id=>snackPic(by[id],"scc-pic",56)).join("")}</div>
+        <h4 class="scc-n">${ESC(c.name)}</h4><p class="scc-d">${ESC(c.desc)}</p>${c.sign?`<p class="scc-s">${ESC(c.sign)}</p>`:""}
+        <div class="scc-foot"><span class="scc-p">${snackMoney(c.cost)}<small>Saves ${snackMoney(c.full-c.cost)}</small></span><button type="button" class="scc-add" data-combo="${i}" aria-pressed="${full}" aria-label="${full?"Take off the tray":"Add combo"}: ${ESC(c.name)}, ${snackMoney(c.cost)}">${full?"In your tray":"Add combo"}</button></div></li>`}).join("")}</ul></section>
+      <div class="sc-mid"><section class="scg" aria-labelledby="scgT"><h3 class="sc-k" id="scgT">In the glass case</h3>
+        <ul class="scg-list">${glass.map(x=>`<li class="scg-item${on.has(x.id)?" on":""}">${snackPic(x,"scg-img",160)}<div class="scg-b"><p class="scg-n">${ESC(x.n)}</p><p class="scg-row"><em class="sc-kind ${x.kind}">${x.kind==="make"?"Make it":"Buy it"}</em><span class="scg-p">${P(x)}</span></p>
+          <button type="button" class="sc-add" data-snack="${ESC(x.id)}" aria-pressed="${on.has(x.id)}" aria-label="${on.has(x.id)?"Remove":"Add"} ${ESC(x.n)}">${on.has(x.id)?"Added":"Add"}</button></div></li>`).join("")}</ul></section>
+      <aside class="sct" aria-labelledby="sctT"><h3 class="sct-t" id="sctT" tabindex="-1">Your tray</h3><p class="sct-sub">${T}${locked?", locked in":""}</p>
+        ${rows.length?`<ul class="sct-list">${rows.map(r=>`<li><span class="sct-n">${ESC(r.name)}${r.sub?`<small>${ESC(r.sub)}</small>`:""}</span><span class="sct-p">${snackMoney(r.cost)}</span><button type="button" class="sct-x" data-tray-x="${ESC(r.key)}" aria-label="Take ${ESC(r.name)} off the tray">&times;</button></li>`).join("")}</ul>
+        <p class="sct-tot"><span>Total</span><span>${tot<100?snackMoney(tot):"$"+snackMoney(tot)}</span></p>`:`<p class="sct-empty">Nothing on the tray yet. Add a combo or something from the case.</p>`}
+        <p class="sct-note">Everything on the tray goes on tonight's prep sheet and shopping list.</p>
+        ${rows.length?`<button type="button" class="sct-go" data-sc-go="1">See the shopping list</button>`:""}</aside></div>`;
+  }
+  const open=!f||snackAll,cats=["All",...new Set(all.map(x=>x.cat))],list=all.filter(x=>snackCat==="All"||x.cat===snackCat);
+  h+=`<div class="sc-all">${f?`<button type="button" class="sc-more" data-sc-all="1" aria-expanded="${open}" aria-controls="scAll">${open?"Close the whole counter":`See the whole counter (${all.length})`}</button>`:""}
+    <div class="sc-body" id="scAll"${open?"":" hidden"}>${open?`<div class="sc-head"><h3 class="sc-t">The whole counter</h3><p class="sc-sub">${f?`${tapWord("Tap")} Add and it goes on ${locked?"your locked-in film":"tonight's film"}, <b>${T}</b>: the prep sheet and the shopping list.`:"Every snack on the counter. Pick a film first and what you add goes on its prep sheet and shopping list."}</p></div>
+    <div class="sc-cats" role="group" aria-label="Snack type">${cats.map(c=>`<button type="button" data-sc-cat="${ESC(c)}" aria-pressed="${c===snackCat}">${ESC(c)}</button>`).join("")}</div>
+    <ul class="sc-list">${list.map(x=>`<li class="sc-item${on.has(x.id)?" on":""}">${snackPic(x,"sc-img",64)}<div class="sc-n"><span>${ESC(x.n)}</span><small>${ESC(x.note)}</small></div><p class="sc-meta"><em class="sc-kind ${x.kind}">${x.kind==="make"?"Make it":"Buy it"}</em><span class="sc-pr">${P(x)}</span></p><button type="button" class="sc-add" data-snack="${ESC(x.id)}" aria-pressed="${on.has(x.id)}" aria-label="${on.has(x.id)?"Remove":"Add"} ${ESC(x.n)}">${on.has(x.id)?"Added":"Add"}</button></li>`).join("")}</ul>
+    ${f&&on.size?`<div class="sc-bar"><span>${on.size} snack${on.size===1?"":"s"} on ${T}</span><button type="button" class="sc-go" data-sc-go="1">See the shopping list</button></div>`:""}`:""}</div></div>`+snackCredits();
+  box.innerHTML=h;
+}
+/* one way to change tonight's snacks: save, redraw the prep sheet if it's showing that film, the counter and the menu's "goes well with" */
+function snackSet(tf,ids,say){snackSave(tf,ids);
+  try{if(tf===current&&current._r2){planWire(current);prep.innerHTML=prepHTML(current,current.menu)}}catch(err){}
+  renderSnacks();try{snackPair(current)}catch(err){}buzz(15);const l=$("snackLive");if(l&&say)l.textContent=say}
 document.addEventListener("click",e=>{
   const box=$("snackCounter");if(!box||!box.contains(e.target))return;
-  const c=e.target.closest("[data-sc-cat]");if(c){snackCat=c.dataset.scCat;renderSnacks();const b=box.querySelector(`[data-sc-cat="${CSS.escape(snackCat)}"]`);if(b)b.focus();return}
+  const fo=sel=>{const b=box.querySelector(sel);if(b)b.focus()};
+  const c=e.target.closest("[data-sc-cat]");if(c){snackCat=c.dataset.scCat;renderSnacks();fo(`[data-sc-cat="${CSS.escape(snackCat)}"]`);return}
   if(e.target.closest("[data-sc-spin]")){goView("wheel");return}
-  const a=e.target.closest("[data-snack]");const tf=snackFilm();
+  if(e.target.closest("[data-sc-all]")){snackAll=!snackAll;renderSnacks();fo("[data-sc-all]");return}
+  const tf=snackFilm(),by=SNACK_BY();
+  const cb=e.target.closest("[data-combo]");
+  if(cb&&tf){const i=+cb.dataset.combo,co=snackCombos(tf)[i];if(!co)return;const ids=snackPicks(tf),has=co.ids.every(id=>ids.includes(id));
+    snackSet(tf,has?ids.filter(id=>!co.ids.includes(id)):[...ids,...co.ids.filter(id=>!ids.includes(id))],`${co.name} ${has?"taken off":"added to"} the tray`);fo(`[data-combo="${i}"]`);return}
+  const x=e.target.closest("[data-tray-x]");
+  if(x&&tf){const k=x.dataset.trayX,all=[...box.querySelectorAll("[data-tray-x]")],at=all.indexOf(x);let ids=snackPicks(tf),name="";
+    if(k.startsWith("c:")){const co=snackCombos(tf)[+k.slice(2)];if(co){ids=ids.filter(id=>!co.ids.includes(id));name=co.name}}else{ids=ids.filter(id=>id!==k);name=by[k]?by[k].n:""}
+    snackSet(tf,ids,`${name} taken off the tray`);const left=[...box.querySelectorAll("[data-tray-x]")];(left[Math.min(at,left.length-1)]||$("sctT")||box).focus();return}
+  const a=e.target.closest("[data-snack]");
   if(a&&!tf){const sub=box.querySelector(".sc-sub");if(sub)sub.innerHTML='Pick a film first, then your snacks go on its prep sheet and shopping list. <button type="button" class="sc-spin" data-sc-spin="1">Spin the wheel</button>';buzz(15);return}
-  if(a&&tf){const ids=snackPicks(tf),id=a.dataset.snack,i=ids.indexOf(id);if(i<0)ids.push(id);else ids.splice(i,1);snackSave(tf,ids);
-    try{if(tf===current&&current._r2){planWire(current);prep.innerHTML=prepHTML(current,current.menu)}}catch(err){}
-    renderSnacks();try{snackPair(current)}catch(err){}buzz(15);const b=box.querySelector(`[data-snack="${CSS.escape(id)}"]`);if(b)b.focus();return}
-  if(e.target.closest("[data-sc-go]")){const tf=snackFilm();if(tf&&tf!==current){openTrolley(tf);return}setView("wheel");setTab("prep");setTimeout(()=>{const pv=$("preview");if(pv)pv.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})},60)}
+  if(a&&tf){const ids=snackPicks(tf),id=a.dataset.snack,i=ids.indexOf(id),inAll=!!a.closest("#scAll");if(i<0)ids.push(id);else ids.splice(i,1);
+    snackSet(tf,ids,`${by[id]?by[id].n:"Snack"} ${i<0?"added to":"taken off"} the tray`);fo(`${inAll?"#scAll ":".scg "}[data-snack="${CSS.escape(id)}"]`);return}
+  if(e.target.closest("[data-sc-go]")){if(tf&&tf!==current){openTrolley(tf);return}setView("wheel");setTab("prep");setTimeout(()=>{const pv=$("preview");if(pv)pv.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})},60)}
 });
 
 /* goes well with: two snack counter picks for each film, from its theme, varied by film, vegetarian aware */
@@ -3239,7 +3329,7 @@ function snackPair(f){
       try{if(current._r2){planWire(current);prep.innerHTML=prepHTML(current,current.menu)}}catch(err){}
       try{renderSnacks()}catch(err){}snackPair(current);buzz(15);const b=box.querySelector(`[data-sp="${CSS.escape(id)}"]`);if(b)b.focus();return}
     /* More snacks: the snack counter lives in the Candy bar, so go there first, then down to the counter */
-    if(e.target.closest("[data-sp-more]")){goView("crave",true);setTimeout(()=>{const sc=$("snackCounter");if(sc)sc.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})},80)}
+    if(e.target.closest("[data-sp-more]")){goView("crave",true);setTimeout(()=>{const sc=$("snackCounter");if(sc)toEl(sc)},80)}
   };
 }
 
