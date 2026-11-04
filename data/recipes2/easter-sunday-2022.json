@@ -656,6 +656,65 @@
    }
   },
   {
+   "n": "Valencia family garlic fried rice",
+   "course": "m",
+   "prep_min": 10,
+   "cook_min": 15,
+   "make_ahead": "Cook the rice 1 day ahead and keep it in the fridge; fry on the night",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "jasmine rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "garlic cloves, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "spring onions, sliced",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cook the rice the day before, spread it out and chill it uncovered so it dries.",
+     "min": 15
+    },
+    {
+     "text": "Fry the garlic in the oil over medium heat until golden. Lift out half for the top.",
+     "min": 4
+    },
+    {
+     "text": "Add the cold rice, break up any clumps and fry hot with salt until it crackles.",
+     "min": 6
+    },
+    {
+     "text": "Fry the eggs and serve on the rice with the crisp garlic and spring onion.",
+     "min": 4
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Tita's silky leche flan",
    "course": "w",
    "prep_min": 16,

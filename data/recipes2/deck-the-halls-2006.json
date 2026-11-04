@@ -455,6 +455,59 @@
    }
   },
   {
+   "n": "Steve Finch's perfect roast potatoes",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 50,
+   "make_ahead": "Par-boil and rough up the potatoes up to 1 day ahead, keep uncovered in the fridge; roast on the night",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "floury potatoes, peeled and quartered",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "garlic cloves, unpeeled",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "sprigs rosemary",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oil in a roasting tin at 220C.",
+     "min": 5
+    },
+    {
+     "text": "Boil the potatoes in salted water for 8 minutes, drain and shake in the pot to rough up the edges.",
+     "min": 12
+    },
+    {
+     "text": "Tip into the hot oil, turn to coat and roast, turning once, until deep golden.",
+     "min": 40
+    },
+    {
+     "text": "Add the garlic and rosemary for the last 10 minutes, then salt well.",
+     "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Cul-de-sac Christmas trifle",
    "course": "w",
    "prep_min": 30,

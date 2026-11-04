@@ -473,6 +473,150 @@
    }
   },
   {
+   "n": "Cup day picnic chicken and potato salad",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 70,
+   "make_ahead": "Roast the chicken and make the potato salad 1 day ahead; both are served cold",
+   "ingredients": [
+    {
+     "q": 1.6,
+     "u": "kg",
+     "item": "whole chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "waxy potatoes, cut in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the chicken with oil and salt, put the halved lemon inside and roast at 200C until the juices run clear.",
+     "min": 65
+    },
+    {
+     "text": "Boil the potatoes until tender with the eggs in for the first 10 minutes. Drain and cool.",
+     "min": 18
+    },
+    {
+     "text": "Peel and chop the eggs and fold through the potatoes with the mayonnaise, mustard and chopped chives.",
+     "min": 6
+    },
+    {
+     "text": "Chill the chicken, then cut into pieces and pack with the potato salad.",
+     "min": 8
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Cup day picnic egg and potato salad",
+     "prep_min": 15,
+     "cook_min": 18,
+     "make_ahead": "Make 1 day ahead and serve cold",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "waxy potatoes, cut in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch chives",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "baby cos lettuces",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the potatoes until tender with the eggs in for the first 10 minutes. Drain and cool.",
+       "min": 18
+      },
+      {
+       "text": "Peel the eggs, halve four and chop the rest.",
+       "min": 6
+      },
+      {
+       "text": "Fold the potatoes and chopped egg through the mayonnaise, mustard and chives. Serve on cos leaves with the halved eggs and lemon.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Big Red jam lamingtons",
    "course": "w",
    "prep_min": 43,

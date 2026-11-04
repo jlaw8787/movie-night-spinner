@@ -1,0 +1,130 @@
+{
+ "_about": "Printed notes for cooked dishes come from data/recipes/<slug>.json, which the brief does not let teams edit. Set these keys on the named dishes there.",
+ "data/recipes/rocky-ii-1979.json": {
+  "Italian market bites": {
+   "note": "Provolone, chargrilled eggplant, olive and roasted pepper skewers with Italian bread and oil",
+   "how": "Cut the provolone into cubes. Thread onto toothpicks with a folded strip of chargrilled eggplant, an olive and a strip of roasted capsicum. Pile onto a board with sliced Italian bread and a small bowl of olive oil for dipping.",
+   "shop": [
+    "150g provolone@Dairy",
+    "150g chargrilled eggplant strips@Deli",
+    "300g olives@Pantry",
+    "2 red capsicums@Produce",
+    "1 loaf Italian bread@Bakery",
+    "3 tbsp olive oil@Pantry"
+   ]
+  }
+ },
+ "data/recipes/harry-potter-and-the-goblet-of-fire-2005.json": {
+  "Dragon task chilli bites": {
+   "note": "Crisp haloumi glazed with honey and chilli, on toothpicks. Hungarian Horntail heat",
+   "how": "Cut the haloumi into bite-size cubes and pat dry. Fry in the oil in a hot pan until golden on two sides. Add the honey and chilli and toss until sticky. Squeeze over lemon and spear onto toothpicks.",
+   "shop": [
+    "400g haloumi@Dairy",
+    "1 tbsp olive oil@Pantry",
+    "2 tbsp honey@Pantry",
+    "1 red chilli@Produce",
+    "1 lemon@Produce",
+    "20 toothpicks@Pantry"
+   ]
+  }
+ },
+ "data/recipes/the-witches-1990.json": {
+  "Hotel tea sandwiches": {
+   "note": "Egg and cress, cucumber cream cheese, and beetroot and dill finger sandwiches",
+   "how": "Boil the eggs, cool, peel and mash with the mayonnaise and cress. Slice the beetroot paper thin and dress with a squeeze of lemon. Use the white bread to make cucumber and cream cheese, egg, and beetroot, cream cheese and dill sandwiches. Cut off the crusts and cut into fingers. Lay on a tiered stand.",
+   "shop": [
+    "3 eggs@Dairy",
+    "3 tbsp mayonnaise@Pantry",
+    "2 tbsp cress@Produce",
+    "1 Lebanese cucumber@Produce",
+    "150g cream cheese@Dairy",
+    "100g cooked beetroot@Produce",
+    "0.5 lemon@Produce",
+    "2 tbsp dill@Produce",
+    "12 slices white bread@Bakery"
+   ]
+  }
+ },
+ "data/recipes/flash-gordon-1980.json": {
+  "Zarkov's rocket fuel curry": {
+   "note": "Red curry prawns with coconut milk, red capsicum and Thai basil. Fuel for the rocket ship",
+   "how": "Fry the curry paste in the oil until fragrant. Add the prawns and brown. Pour in the coconut milk and simmer, adding the capsicum for the last 5 minutes. Cook the rice. Stir the Thai basil through the curry and serve with the rice.",
+   "shop": [
+    "2 tbsp red curry paste@Pantry",
+    "1 tbsp oil@Pantry",
+    "600g green prawns@Seafood",
+    "400ml coconut milk@Pantry",
+    "1 red capsicum@Produce",
+    "1 cup Thai basil leaves@Produce",
+    "300g jasmine rice@Pantry"
+   ]
+  }
+ },
+ "data/recipes/creed-2015.json": {
+  "Adrian's restaurant antipasto": {
+   "note": "Chargrilled eggplant, provolone, warm olives, artichokes, roasted peppers and Italian bread",
+   "how": "Fold the chargrilled eggplant and provolone onto a big board. Warm the olives gently in olive oil and spoon over. Add the artichoke hearts and strips of roasted capsicum. Tear the bread for mopping up the oil.",
+   "shop": [
+    "150g chargrilled eggplant slices@Deli",
+    "150g provolone@Dairy",
+    "200g olives@Pantry",
+    "2 tbsp olive oil@Pantry",
+    "1 jar marinated artichoke hearts@Pantry",
+    "2 red capsicums@Produce",
+    "1 loaf Italian bread@Bakery"
+   ]
+  }
+ },
+ "data/recipes/ocean-s-twelve-2004.json": {
+  "Lake Como antipasto": {
+   "note": "Bresaola, burrata, chargrilled zucchini, figs, rocket and olives with breadsticks",
+   "how": "Brush the zucchini with a little of the oil, salt it and chargrill until striped and tender. Lay the bresaola on a board with the burrata, halved figs, breadsticks and olives. Drizzle with good olive oil and a squeeze of lemon.",
+   "shop": [
+    "100g bresaola@Deli",
+    "2 burrata@Dairy",
+    "4 figs@Produce",
+    "2 zucchini@Produce",
+    "60g rocket@Produce",
+    "1 packet breadsticks@Pantry",
+    "1 jar olives@Pantry",
+    "2 tbsp extra virgin olive oil@Pantry",
+    "1 lemon@Produce"
+   ]
+  }
+ },
+ "data/recipes/unforgiven-1992.json": {
+  "Trail cornbread": {
+   "note": "Buttermilk cornbread with sweet corn and smoked paprika, baked in a hot skillet",
+   "how": "Heat the oven to 220C with a cast iron pan inside, then melt the butter in the hot pan. Mix the cornmeal, flour, baking powder, smoked paprika, egg and buttermilk. Stir in the corn. Pour into the hot buttered pan and bake. Serve with butter.",
+   "shop": [
+    "30g butter@Dairy",
+    "150g fine cornmeal@Pantry",
+    "100g plain flour@Pantry",
+    "2 tsp baking powder@Pantry",
+    "1 tsp smoked paprika@Spices",
+    "1 egg@Dairy",
+    "300ml buttermilk@Dairy",
+    "150g corn kernels@Frozen",
+    "60g butter@Dairy"
+   ]
+  },
+  "Rainy night beef and bean stew": {
+   "note": "Beef chuck braised with tomatoes, dried chillies and kidney beans"
+  }
+ },
+ "data/recipes/tombstone-1993.json": {
+  "Earp brothers' chilli": {
+   "note": "Beef chuck slow braised with dried chillies, cumin and tomato"
+  }
+ },
+ "data/recipes/happy-gilmore-1996.json": {
+  "Grandma's lemon bars": {
+   "note": "Shortbread base with tart lemon filling, dusted with icing sugar"
+  }
+ },
+ "data/recipes/christmas-with-the-kranks-2004.json": {
+  "Caribbean cruise prawn cocktail": {
+   "note": "Cooked king prawns with lime and a hot sauce Marie Rose"
+  }
+ }
+}

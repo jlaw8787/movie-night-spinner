@@ -397,6 +397,71 @@
    }
   },
   {
+   "n": "General Waverly's maple glazed ham",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 50,
+   "make_ahead": "Make the glaze up to 3 days ahead; bake the ham up to 1 day ahead and serve warm or at room temperature",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "kg",
+     "item": "half leg ham",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "whole cloves",
+     "aisle": "Spices"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "maple syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "orange",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Peel the rind off the ham, leaving the fat, score it in diamonds and stud with cloves.",
+     "min": 10
+    },
+    {
+     "text": "Simmer the maple syrup with the mustard, sugar and juice of the orange until syrupy.",
+     "min": 6
+    },
+    {
+     "text": "Bake the ham at 180C, brushing with glaze every 10 minutes, until sticky and dark.",
+     "min": 45
+    },
+    {
+     "text": "Rest, then carve thick.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true
+  },
+  {
    "n": "Snowy coconut cake",
    "course": "w",
    "prep_min": 30,

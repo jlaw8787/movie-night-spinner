@@ -304,6 +304,202 @@
    }
   },
   {
+   "n": "Big Nose Kate's chicken and dumplings",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 45,
+   "make_ahead": "Make the stew up to 2 days ahead in the fridge; bring back to a simmer and add the dumplings on the night",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thigh fillets, in chunks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "celery sticks, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "sprigs thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 180,
+     "u": "ml",
+     "item": "buttermilk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch parsley",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Brown the chicken in the butter, add the onion, carrot and celery and soften.",
+     "min": 12
+    },
+    {
+     "text": "Stir in the plain flour, then the stock and thyme, and simmer until the chicken is tender.",
+     "min": 20
+    },
+    {
+     "text": "Stir the self-raising flour, buttermilk, chopped parsley and a pinch of salt into a soft dough.",
+     "min": 4
+    },
+    {
+     "text": "Drop spoonfuls onto the simmering stew, cover tightly and cook without lifting the lid until the dumplings are puffed and cooked through.",
+     "min": 15
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Big Nose Kate's mushroom and dumplings",
+     "prep_min": 20,
+     "cook_min": 35,
+     "make_ahead": "Make the stew up to 2 days ahead; add the dumplings on the night",
+     "ingredients": [
+      {
+       "q": 600,
+       "u": "g",
+       "item": "mushrooms, halved",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can butter beans, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "carrots, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "celery sticks, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "sprigs thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 180,
+       "u": "ml",
+       "item": "buttermilk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch parsley",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brown the mushrooms in the butter, add the onion, carrot and celery and soften.",
+       "min": 12
+      },
+      {
+       "text": "Stir in the plain flour, then the stock, thyme and beans, and simmer until thick.",
+       "min": 10
+      },
+      {
+       "text": "Mix the self-raising flour, buttermilk, parsley and salt into a soft dough.",
+       "min": 4
+      },
+      {
+       "text": "Drop spoonfuls onto the simmering stew, cover tightly and cook until the dumplings are puffed.",
+       "min": 15
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Josephine's peach pie",
    "course": "w",
    "prep_min": 25,

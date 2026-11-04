@@ -606,6 +606,93 @@
    }
   },
   {
+   "n": "Thanksgiving baked mac and cheese",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "Assemble up to 1 day ahead and keep in the fridge; add the crumbs and bake on the night",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "macaroni",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 750,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "vintage cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "gruyère, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "cream cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "mustard powder",
+     "aisle": "Spices"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "panko breadcrumbs",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Grate the cheeses.",
+     "min": 5
+    },
+    {
+     "text": "Boil the macaroni for 2 minutes less than the packet says and drain.",
+     "min": 9
+    },
+    {
+     "text": "Melt the butter, stir in the flour, then whisk in the milk and simmer until thick. Stir in the cheeses, saving a handful, the cream cheese and mustard.",
+     "min": 10
+    },
+    {
+     "text": "Fold through the macaroni, tip into a baking dish and scatter with the saved cheese and the panko.",
+     "min": 4
+    },
+    {
+     "text": "Bake at 200C until bubbling and golden.",
+     "min": 25
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Ferdinand the Bull pecan pie",
    "course": "w",
    "prep_min": 25,

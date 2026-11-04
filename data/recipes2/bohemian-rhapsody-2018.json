@@ -677,6 +677,184 @@
    }
   },
   {
+   "n": "Jer Bulsara's patra ni machhi",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Blend the chutney up to 2 days ahead in the fridge; wrap the fish up to 4 hours ahead and steam on the night",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "firm white fish fillets, about 150g each",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "desiccated coconut",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "green chillies",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "limes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pieces banana leaf or baking paper",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the coconut in 3 tbsp hot water for 5 minutes, then blend with the herbs, chillies, garlic, cumin, sugar, juice of a lime and salt to a thick paste.",
+     "min": 10
+    },
+    {
+     "text": "Soften the banana leaf over a flame or in hot water.",
+     "min": 4
+    },
+    {
+     "text": "Coat each fillet thickly in chutney and wrap in a piece of leaf, tied with string.",
+     "min": 8
+    },
+    {
+     "text": "Steam over simmering water until the fish flakes.",
+     "min": 15
+    },
+    {
+     "text": "Serve in the leaf with lime wedges to open at the table.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Jer Bulsara's patra ni paneer",
+     "prep_min": 20,
+     "cook_min": 12,
+     "make_ahead": "Blend the chutney up to 2 days ahead; wrap and steam on the night",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "paneer, cut in thick slabs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "desiccated coconut",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch coriander",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "green chillies",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cumin",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "limes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pieces banana leaf or baking paper",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Soak the coconut in 3 tbsp hot water, then blend with the herbs, chillies, garlic, cumin, sugar, lime juice and salt.",
+       "min": 10
+      },
+      {
+       "text": "Coat the paneer thickly in chutney and wrap in softened banana leaf, tied with string.",
+       "min": 8
+      },
+      {
+       "text": "Steam over simmering water until hot through. Serve with lime wedges.",
+       "min": 12
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Lagan nu custard",
    "course": "w",
    "prep_min": 28,

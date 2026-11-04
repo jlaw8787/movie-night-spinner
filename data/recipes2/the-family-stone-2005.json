@@ -379,6 +379,148 @@
    }
   },
   {
+   "n": "Sybil's lemon and thyme roast chicken",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 75,
+   "make_ahead": "Make the garlic butter up to 3 days ahead; butter the chicken up to 1 day ahead and keep it in the fridge",
+   "ingredients": [
+    {
+     "q": 1.8,
+     "u": "kg",
+     "item": "whole chicken",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch thyme",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the butter with the garlic, thyme leaves, zest of a lemon and salt.",
+     "min": 5
+    },
+    {
+     "text": "Push the butter under the chicken skin and put the halved lemons and thyme stalks in the cavity.",
+     "min": 8
+    },
+    {
+     "text": "Toss the potatoes with the oil and salt in a roasting tin and sit the chicken on top.",
+     "min": 5
+    },
+    {
+     "text": "Roast at 200C until the juices run clear.",
+     "min": 70
+    },
+    {
+     "text": "Rest for 10 minutes, then carve and spoon the pan juices over.",
+     "min": 10
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sybil's lemon and thyme roast cauliflower",
+     "prep_min": 15,
+     "cook_min": 50,
+     "make_ahead": "Make the garlic butter up to 3 days ahead; roast on the night",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "large cauliflower",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter, soft",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch thyme",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut in chunks",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the butter with the garlic, thyme leaves, zest of a lemon and salt.",
+       "min": 5
+      },
+      {
+       "text": "Boil the whole cauliflower for 6 minutes, drain well and rub all over with the butter.",
+       "min": 10
+      },
+      {
+       "text": "Roast at 200C on the oiled potatoes with the halved lemons, basting now and then, until deep golden.",
+       "min": 45
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Christmas morning cinnamon scrolls",
    "course": "w",
    "prep_min": 33,

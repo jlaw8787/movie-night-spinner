@@ -305,6 +305,184 @@
    }
   },
   {
+   "n": "Team dinner fish fry",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Make the tartare up to 2 days ahead in the fridge; batter and fry the fish on the night",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "flathead fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "cold soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut in thick chips",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "capers, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "gherkins, chopped",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mayonnaise with the capers, gherkins and a squeeze of lemon for the tartare.",
+     "min": 5
+    },
+    {
+     "text": "Toss the chips in the olive oil and salt and bake at 220C, turning once, until crisp.",
+     "min": 35
+    },
+    {
+     "text": "Whisk 120g of the flour with the soda water to a thin batter. Dust the fish in the rest of the flour.",
+     "min": 5
+    },
+    {
+     "text": "Dip the fish in the batter and fry in hot oil at 180C, a few at a time, until golden.",
+     "min": 10
+    },
+    {
+     "text": "Drain, salt and serve with the chips, tartare and lemon wedges.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Team dinner haloumi fry",
+     "prep_min": 15,
+     "cook_min": 35,
+     "make_ahead": "Make the tartare up to 2 days ahead; batter and fry on the night",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, cut in thick fingers",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "potatoes, cut in thick chips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "gherkins, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the mayonnaise with the capers, gherkins and a squeeze of lemon for the tartare.",
+       "min": 5
+      },
+      {
+       "text": "Toss the chips in the olive oil and salt and bake at 220C, turning once, until crisp.",
+       "min": 35
+      },
+      {
+       "text": "Whisk 120g of the flour with the soda water. Dust the haloumi in the rest, dip in the batter and fry at 180C until golden.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Hans' frozen pond brownies",
    "course": "w",
    "prep_min": 20,

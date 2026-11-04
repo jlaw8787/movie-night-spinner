@@ -621,6 +621,75 @@
    }
   },
   {
+   "n": "Gertrude's truffle potato gratin",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 70,
+   "make_ahead": "Bake up to 1 day ahead, cool and keep in the fridge; reheat covered, then uncover to crisp the top",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "potatoes, peeled and thinly sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "ml",
+     "item": "full cream milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "gruyère, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "truffle oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Slice the potatoes thin and grate the gruyère.",
+     "min": 12
+    },
+    {
+     "text": "Warm the cream and milk with the garlic, salt and pepper.",
+     "min": 5
+    },
+    {
+     "text": "Layer the potatoes in a buttered dish with most of the cheese, pour over the cream and top with the rest of the cheese.",
+     "min": 6
+    },
+    {
+     "text": "Bake at 180C until tender and golden.",
+     "min": 65
+    },
+    {
+     "text": "Rest 10 minutes and drizzle with truffle oil.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Naughty list black forest trifle",
    "course": "w",
    "prep_min": 30,

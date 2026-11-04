@@ -282,6 +282,101 @@
    }
   },
   {
+   "n": "Bowling alley black bean nachos",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 15,
+   "make_ahead": "Cook the beans and make the salsa up to 2 days ahead in the fridge; bake just before serving",
+   "ingredients": [
+    {
+     "q": 400,
+     "u": "g",
+     "item": "can black beans, drained",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 230,
+     "u": "g",
+     "item": "corn chips",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "pickled jalapeños",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lime",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Warm the beans in the oil with the cumin and paprika, mashing a few.",
+     "min": 6
+    },
+    {
+     "text": "Mix the tomato, onion, lime juice and salt for the salsa.",
+     "min": 5
+    },
+    {
+     "text": "Layer the corn chips, beans and cheddar in a baking dish and bake at 200C until melted.",
+     "min": 8
+    },
+    {
+     "text": "Top with jalapeños, salsa and sour cream.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Date night steak",
    "course": "m",
    "prep_min": 30,

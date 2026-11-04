@@ -462,6 +462,180 @@
    }
   },
   {
+   "n": "Ayshe's chicken pilaf",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "Cook up to 1 day ahead and reheat covered with a splash of water; add the almonds and dill to serve",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "chicken thigh fillets, diced",
+     "aisle": "Meat"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "allspice",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "long grain rice",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 600,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "currants",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "slivered almonds, toasted",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch dill",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rinse the rice until the water runs clear.",
+     "min": 4
+    },
+    {
+     "text": "Brown the chicken in the butter, add the onion and spices and cook until soft.",
+     "min": 10
+    },
+    {
+     "text": "Stir in the rice and currants, pour in the stock, cover and simmer on low until the rice is tender.",
+     "min": 18
+    },
+    {
+     "text": "Rest off the heat, covered, then fluff and finish with toasted almonds and dill.",
+     "min": 10
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Ayshe's chickpea pilaf",
+     "prep_min": 10,
+     "cook_min": 30,
+     "make_ahead": "Cook up to 1 day ahead; add the almonds and dill to serve",
+     "ingredients": [
+      {
+       "q": 400,
+       "u": "g",
+       "item": "can chickpeas, drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "onion, diced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "ground cinnamon",
+       "aisle": "Spices"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "allspice",
+       "aisle": "Spices"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "long grain rice",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 600,
+       "u": "ml",
+       "item": "vegetable stock",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "currants",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "slivered almonds, toasted",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "small bunch dill",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Rinse the rice until the water runs clear.",
+       "min": 4
+      },
+      {
+       "text": "Soften the onion in the butter with the spices, add the chickpeas, rice, currants and stock, cover and simmer until tender.",
+       "min": 22
+      },
+      {
+       "text": "Rest covered, then fluff and finish with almonds and dill.",
+       "min": 10
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Istanbul pistachio and walnut baklava",
    "course": "w",
    "prep_min": 33,

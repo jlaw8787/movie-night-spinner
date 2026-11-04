@@ -449,6 +449,89 @@
    }
   },
   {
+   "n": "Command canteen roast turkey with cranberry",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 75,
+   "make_ahead": "Butter the turkey up to 1 day ahead and keep it in the fridge; roast on the day",
+   "ingredients": [
+    {
+     "q": 1.5,
+     "u": "kg",
+     "item": "turkey breast roast, skin on",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter, soft",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "small bunch sage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "potatoes, cut in chunks",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 400,
+     "u": "ml",
+     "item": "chicken stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cranberry sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the butter with chopped sage, garlic and salt and push it under the turkey skin.",
+     "min": 8
+    },
+    {
+     "text": "Roast the turkey at 190C with the potatoes tossed in oil around it until the juices run clear.",
+     "min": 70
+    },
+    {
+     "text": "Rest the turkey under foil. Stir the flour into the pan juices, whisk in the stock and simmer into gravy.",
+     "min": 8
+    },
+    {
+     "text": "Slice the turkey and serve with the potatoes, gravy and cranberry sauce.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true
+  },
+  {
    "n": "Code Red velvet crinkle cookies",
    "course": "w",
    "prep_min": 25,

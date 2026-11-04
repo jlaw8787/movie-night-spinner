@@ -403,6 +403,65 @@
    "af": true
   },
   {
+   "n": "Golde's potato kugel",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 55,
+   "make_ahead": "Bake up to 1 day ahead and reheat in a hot oven to crisp the edges again",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "floury potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "brown onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "matzo meal",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Pour half the oil into a baking tin and heat it in the oven at 200C.",
+     "min": 5
+    },
+    {
+     "text": "Grate the potatoes and onion, then squeeze out as much liquid as you can in a clean tea towel.",
+     "min": 12
+    },
+    {
+     "text": "Mix with the eggs, matzo meal, the rest of the oil, plenty of salt and pepper.",
+     "min": 4
+    },
+    {
+     "text": "Spread into the hot tin and bake until deep golden with crisp edges.",
+     "min": 55
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Grandma Tzeitel's honey cake",
    "course": "w",
    "prep_min": 20,
