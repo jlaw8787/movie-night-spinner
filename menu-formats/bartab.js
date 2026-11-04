@@ -78,7 +78,9 @@ function fitBox(b){b.style.setProperty("--k","1");const notes=[...b.querySelecto
   while(over(b)&&k>min){k=Math.round((k-.02)*100)/100;b.style.setProperty("--k",k)}
   if(over(b)){notes.forEach(n=>n.style.webkitLineClamp="1")}
   for(let i=drops.length-1;i>=0&&over(b);i--)drops[i].style.display="none";
-  if(over(b)){notes.forEach(n=>n.style.display="none")}
+  /* notes go one at a time from the bottom, house lines first, not all at once (Beerfest, Blade) */
+  const order=notes.filter(n=>n.getAttribute(A+"-note")==="h").reverse().concat(notes.filter(n=>n.getAttribute(A+"-note")!=="h").reverse());
+  for(const n of order){if(!over(b))break;n.style.display="none"}
   while(over(b)&&k>.5){k=Math.round((k-.02)*100)/100;b.style.setProperty("--k",k)}}
 function fitText(e){let s=+e.getAttribute(A+"-text");const lo=+e.getAttribute(A+"-lo")||16;e.style.fontSize=s+"px";while(over(e)&&s>lo){s-=1;e.style.fontSize=s+"px"}}
 function logoInit(img){if(img.dataset.seen)return;img.dataset.seen="1";const panel=img.closest(`[${A}-panel]`),fb=panel&&panel.querySelector(`[${A}-fallback]`);
@@ -119,7 +121,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const PR={},rnd=v=>v<1?Math.round(v*20)/20:Math.round(v*4)/4,SPIRIT=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|sour|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|vodka)\b/i;for(const k of ["s","m","w","d"])PR[k]=(menu[k]||[]).slice(0,4).map((x,i)=>price(k,i));
   {const sw=Math.max(0,...PR.s,...PR.w);PR.m=PR.m.map(v=>v>sw?v:rnd(sw*1.3+(v%1)*.1));
    const ds=(menu.d||[]).slice(0,4),plain=Math.max(0,...ds.map((x,i)=>SPIRIT.test(x.n+" "+(x.note||""))?0:PR.d[i]));PR.d=PR.d.map((v,i)=>SPIRIT.test(ds[i].n+" "+(ds[i].note||""))&&v<=plain?rnd(plain*1.3):v)}
-  const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({n:dry(x.n,fam),note:dry(x.note,fam),p:PR[k][i]}));
+  const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({n:dry(x.n,fam),note:dry(x.note,fam),p:PR[k][i],house:!!x.house}));
   const I={s:items("s"),m:items("m"),w:items("w"),d:items("d")};
   const sum=a=>a.reduce((x,y)=>x+y.p,0);
   const front=sum(I.s)+sum(I.m),total=front+sum(I.w)+sum(I.d);
@@ -160,7 +162,7 @@ window.MENU_FORMATS[ID]=ctx=>{
         <span style="font:700 max(16px,calc(26px*var(--k)))/1.12 ${g.key==="chalk"?g.disp:g.body};${g.key==="chalk"?"font-weight:800;":""}">${esc(it.n)}</span>
         <span style="flex:1;min-width:16px;border-bottom:2px dotted ${rgba(ink,.35)};transform:translateY(-6px)"></span>
         <span style="font:700 max(16px,calc(26px*var(--k)))/1.1 ${g.body};color:${acc};white-space:nowrap">${money(it.p,era)}</span></div>
-      ${it.note?`<div ${A}-note style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin-top:2px;color:${sub};font:500 max(14px,calc(20px*var(--k)))/1.28 ${g.body}">${esc(it.note)}</div>`:""}</div>`;
+      ${it.note?`<div ${A}-note="${it.house?"h":""}" style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin-top:2px;color:${sub};font:500 max(14px,calc(20px*var(--k)))/1.28 ${g.body}">${esc(it.note)}</div>`:""}</div>`;
   const course=k=>I[k].length?`<div style="margin:0 0 calc(10px*var(--k))">${label(C[k])}${I[k].map(row).join("")}</div>`:"";
   const ledger=(lab,val,strong)=>`<div style="display:flex;align-items:baseline;gap:10px;color:${ink};font:${strong?800:600} ${strong?24:19}px/1.1 ${g.body};letter-spacing:.1em;text-transform:uppercase;${strong?`border-top:3px double ${rgba(ink,.7)};padding-top:8px;`:`border-top:1px solid ${rgba(ink,.35)};padding-top:6px;`}"><span>${esc(lab)}</span><span style="flex:1"></span><span style="color:${acc};letter-spacing:.02em">${money(val,era)}</span></div>`;
 

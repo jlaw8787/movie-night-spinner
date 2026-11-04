@@ -3,11 +3,12 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
 const {spawn}=require('child_process');
 const fs=require('fs'),path=require('path'),http=require('http');
 const REPO=path.resolve(__dirname,'..');
-const ORIGIN='http://127.0.0.1:4184';
+/* MNS_PORT runs it on another port, so two copies (two worktrees) don't share one server */
+const PORT=String(process.env.MNS_PORT||4184),ORIGIN='http://127.0.0.1:'+PORT;
 const OUTPUT=process.env.REGRESSION_PROOF||path.join(require('os').tmpdir(),'movie-night-browser-regression.json');
 const report={scope:'Functional browser checks only; external fonts/images blocked. No visual or performance grade.',started:new Date().toISOString(),viewports:[],unexpectedExternalWrites:0};
 const assert=(ok,message)=>{if(!ok)throw Error(message)};
-const server=spawn('python3',['-m','http.server','4184','--bind','127.0.0.1'],{cwd:REPO,stdio:'ignore'});
+const server=spawn('python3',['-m','http.server',PORT,'--bind','127.0.0.1'],{cwd:REPO,stdio:'ignore'});
 let browser;
 process.on('exit',()=>server.kill());
 async function serverReady(){for(let i=0;i<60;i++){const ok=await new Promise(resolve=>{const r=http.get(ORIGIN+'/index.html',res=>{res.resume();resolve(res.statusCode===200)});r.on('error',()=>resolve(false));r.setTimeout(300,()=>{r.destroy();resolve(false)})});if(ok)return;await new Promise(r=>setTimeout(r,50))}throw Error('Local regression server did not start')}
@@ -49,8 +50,11 @@ async function closeAll(page){for(let i=0;i<6;i++){if(!await page.locator('[role
   await check('kids mode: no alcohol words on any layout',async()=>{
    const r=await page.evaluate(async()=>{const was=kidsMode;kidsMode=true;const BAD=/\b(gin|vodka|rum|whisk(e)?y|bourbon|scotch|tequila|brandy|cognac|liqueurs?|champagne|prosecco|wines?|beers?|lagers?|ales?|stouts?|ciders?|martinis?|margaritas?|sangria|boilermakers?|must be 1[89])\b/i;
      const seen=new Set(),ids=[];for(const f of FILMS){await ensureExact(f).catch(()=>{});const k=f._lib?f._lib.fmt:(typeof FMT_INDEX!=="undefined"&&FMT_INDEX[f.id]?"hb-"+FMT_INDEX[f.id]:null);if(k&&!seen.has(k)){seen.add(k);ids.push(f.id)}if(ids.length>=45)break}
+     for(const id of ['Mulan (1998)','E.T. the Extra-Terrestrial (1982)','The Holiday (2006)','Who Framed Roger Rabbit (1988)','Home Alone (1990)','Ratatouille (2007)'])if(!ids.includes(id)&&FILMS.some(x=>x.id===id))ids.push(id);
      const bad=[];for(const id of ids){const f=FILMS.find(x=>x.id===id);window.__stage=false;await show(f,true);fitLines(card);await new Promise(r=>setTimeout(r,120));
-       const t=(card.innerText+" "+fmtPhone.innerText).replace(/(root|ginger|butter) (beer|ale)/gi,"").replace(/alcohol-free \w+|(red wine|white wine|rice wine|sherry|cider|malt)\u200B?\S* vinegar/gi,"");const m=t.match(BAD);if(m)bad.push(id+": "+m[0]);
+       /* swaps that read like a glitch: doubled words ("root root beer") and the beer swap reaching into "alcohol-free" (review 9) */
+       const raw=card.innerText+" "+fmtPhone.innerText,dbl=raw.match(/\b([a-z]{3,}) \1\b|alcohol-free root|goodness' syrup|mocktail (franks?|cherr|sauce)|grape juice glass/);if(dbl)bad.push(id+": "+dbl[0]);
+       const t=(card.innerText+" "+fmtPhone.innerText).replace(/(root|ginger|butter) (beer|ale)/gi,"").replace(/alcohol-free \w+|(red wine|white wine|rice wine|sherry|cider|malt)\u200B?\S* vinegar|\bwine glass(es)?\b/gi,"");const m=t.match(BAD);if(m)bad.push(id+": "+m[0]);
        /* the table kit runs the same dry pass as the card */
        const kp=kitPages(f,[],6),kd=await kitReady(kp);const kt=kp.map(x=>x.innerText).join(" ").replace(/(root|ginger|butter) (beer|ale)/gi,"").replace(/cocktail onions?/gi,"");kd();const km=kt.match(BAD);if(km)bad.push(id+" (table kit): "+km[0])}
      kidsMode=was;return {n:ids.length,bad}});

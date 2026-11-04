@@ -162,7 +162,8 @@ function prices(menu,e,ei,egg){
   const mult={s:.6,m:1,w:.5,d:.4},out={};let hid=false;
   for(const k of ["s","m","w","d"])out[k]=(menu[k]||[]).map((it,i)=>{let v=e.base*mult[k]*(1+i*.15);v=ei<2?Math.max(.05,Math.round(v*20)/20):Math.floor(v)+(v%1<.5?.5:.95);
     if(!hid&&egg&&k==="w"&&ei>=2){hid=true;v=Math.max(1,Math.floor(v))+(+egg)/100}return money(v,ei)});
-  return out;
+  /* the shared price check: a shandy never sits under the chocolate milk (Happy Gilmore) */
+  return window.priceSense?window.priceSense(menu,out):out;
 }
 
 window.MENU_FORMATS[ID]=ctx=>{

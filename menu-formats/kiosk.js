@@ -133,7 +133,7 @@ const DRY=[
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 const dry=s=>DRY.reduce((a,[r,t])=>a.replace(r,t),s);
-const trunc=(s,n)=>{s=clean(s);if(s.length<=n)return s;const c=s.slice(0,n);const i=c.lastIndexOf(" ");return (i>n*.5?c.slice(0,i):c).replace(/[,;:]$/,"")};
+const trunc=(s,n)=>{s=clean(s);if(s.length<=n)return s;const c=s.slice(0,n);const i=c.lastIndexOf(" ");const o=(i>n*.5?c.slice(0,i):c).replace(/[,;:]$/,"");return typeof noDangle==="function"?noDangle(o):o};
 /* notes that do not fit are cut back to their first clause, or left off; never cut mid thought */
 const clip=(s,n)=>{s=clean(s);if(s.length<=n)return s;const p=s.split(/(?<=[.!?;])\s/)[0].replace(/[.;]$/,"").trim();return p.length<=n&&p.length>=12?p:""};
 /* real layout height of a block at a given width, measured off screen; null when there is no document */
@@ -337,7 +337,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* menu courses, priced like a kiosk board */
   const m=ctx.menu||{};
   const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(num))?null:num.length>=3&&num.length<=4?`${+num.slice(0,-2)}.${num.slice(-2)}`:num.length<=2?`${+num}.00`:null;
-  let courses=["s","m","w","d"].map(k=>({k,items:(m[k]||[]).filter(i=>i&&i.n).slice(0,4).map((it,j)=>({n:C(it.n),note:C(it.note),p:(k==="m"&&j===0&&numPrice)?numPrice:periodPrice([3.5,7.5,2.75,1.75][["s","m","w","d"].indexOf(k)]*(1+j*.12),f.year,strSeed(it.n))}))})).filter(c=>c.items.length);
+  let courses=["s","m","w","d"].map(k=>({k,items:(m[k]||[]).filter(i=>i&&i.n).slice(0,4).map((it,j)=>({n:C(it.n),note:C(it.note),house:!!it.house,p:(k==="m"&&j===0&&numPrice)?numPrice:periodPrice([3.5,7.5,2.75,1.75][["s","m","w","d"].indexOf(k)]*(1+j*.12),f.year,strSeed(it.n))}))})).filter(c=>c.items.length);
   if(window.priceSense){const P={},M={};courses.forEach(c=>{P[c.k]=c.items.map(x=>x.p);M[c.k]=c.items});const Q=window.priceSense(M,P);courses.forEach(c=>c.items.forEach((x,j)=>x.p=Q[c.k][j]))}
   const total=courses.reduce((a,c)=>a+c.items.length,0);
   const cols=total>8&&courses.length>1?2:1,GAP=26;
@@ -351,8 +351,8 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="margin-bottom:8px"><span style="font:${E.dw}${FS.S}px/1.15 ${disp};${secStyle};color:${secC}">${esc(SEC[c.k])}</span></div>
       ${c.items.map(it=>`<div style="margin-bottom:${FS.G}px"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px">
         <span style="font:800 ${FS.D}px/1.12 ${body};color:${ink}">${esc(it.n)}</span><span style="font:${E.dw}${Math.round(FS.D*1.08)}px/1 ${disp};color:${ACC};white-space:nowrap;${glow}">${esc(it.p)}</span></div>
-        ${FS.nl&&it.note?`<div style="font:500 ${FS.N}px/1.3 ${body};color:${soft};margin-top:2px">${esc(sentence(clip(it.note,Math.floor(FS.nl*colW/(FS.N*E.bcw)*.95))))}</div>`:""}</div>`).join("")}</div>`).join("");
-  const est=(cs,FS)=>{let t=0;cs.forEach((c,i)=>{t+=FS.S*1.15+8+(i?FS.G+6:0);c.items.forEach(it=>{t+=lines(it.n,FS.D,colW-FS.D*2.6,dcw)*FS.D*1.12;if(FS.nl&&it.note)t+=Math.min(FS.nl,lines(it.note,FS.N,colW,E.bcw))*FS.N*1.3+2;t+=FS.G})});return t};
+        ${(FS.nl||it.nk)&&it.note?`<div style="font:500 ${FS.N}px/1.3 ${body};color:${soft};margin-top:2px">${esc(sentence(clip(it.note,Math.floor((FS.nl||1)*colW/(FS.N*E.bcw)*.95))))}</div>`:""}</div>`).join("")}</div>`).join("");
+  const est=(cs,FS)=>{let t=0;cs.forEach((c,i)=>{t+=FS.S*1.15+8+(i?FS.G+6:0);c.items.forEach(it=>{t+=lines(it.n,FS.D,colW-FS.D*2.6,dcw)*FS.D*1.12;if((FS.nl||it.nk)&&it.note)t+=Math.min(FS.nl||1,lines(it.note,FS.N,colW,E.bcw))*FS.N*1.3+2;t+=FS.G})});return t};
   const measure=(cs,FS)=>{const h=domH(colHtml(cs,FS),colW);return h==null?est(cs,FS):h*1.04};
   let FS=null;
   /* the film's notes come first: try every size with two-line then one-line notes before any size without them */
@@ -364,6 +364,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* rescue for very long menus: give the cue's room to the menu, then smallest legal type, then fewer items per course */
   let dropCue=false;
   if(!FS){dropCue=!!cue;MH+=PM?footH-(noteH+12)-footTail:footH;
+    /* with the cue's room, try the notes again before going to the smallest type (Terminator 2 had half the panel empty and no notes) */
+    again:for(const nl of [2,1,0])for(let s=1.07;s>=(nl?.6:.55);s-=.05){const FSx={D:Math.max(17,Math.round(28*s)),N:Math.max(15,Math.round(21*s)),S:Math.max(20,Math.round(30*s)),G:Math.max(4,Math.round(16*s)),nl};
+      let best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break again}}
+  }
+  if(!FS){
     for(const cap of [4,3,2]){courses=courses.map(c=>Object.assign({},c,{items:c.items.slice(0,cap)}));
       splits=cols===2?courses.slice(1).map((_,i)=>[courses.slice(0,i+1),courses.slice(i+1)]):[[courses]];colsArr=splits[0];
       for(const D of [17,16,15]){const FSx={D,N:15,S:D+1,G:3,nl:0};let best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}
@@ -371,6 +376,9 @@ window.MENU_FORMATS[ID]=ctx=>{
       if(FS)break}
     FS=FS||{D:15,N:15,S:16,G:3,nl:0,t:MH}}
 
+  /* when the notes had to go, put back one-line notes one dish at a time while the panel has room, the film's dishes before house lines (Terminator 2, Knocked Up) */
+  if(FS.nl===0){const all=colsArr.flat().flatMap(c=>c.items).filter(it=>it.note),ord=all.filter(it=>!it.house).concat(all.filter(it=>it.house));
+    for(const it of ord){it.nk=true;const t=Math.max(...colsArr.map(cs=>measure(cs,FS)));if(t>MH)it.nk=false;else FS.t=t}}
   const spare=MH-FS.t,aw=winks.slice(1,4);
   const also=spare>150&&aw.length?aw.slice(0,Math.max(1,Math.min(aw.length,Math.floor((spare-64)/32)))):[];
   const boardHtml=`<div style="position:absolute;left:${BX}px;top:0;width:${BW}px;height:${PH}px;background:${boardBg(E,T)};box-shadow:inset 8px 0 18px rgba(0,0,0,.25);border-radius:0">

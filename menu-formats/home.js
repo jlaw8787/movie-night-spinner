@@ -203,7 +203,7 @@ window.MENU_FORMATS.home=function(ctx){
      </div>
    </div>
    ${mags(String(num).slice(0,5),110,22,String(num).length>4?38:String(num).length>3?46:52)}
-   ${rcard(cardA,26,552,-T.rot*.6,`No. ${num}`,`From the ${x(venue.replace(/^the\s+/i,""))}.`)}
+   ${rcard(cardA,26,552,-T.rot*.6,`No. ${num}`,`From ${/^[^\s]+['’]s?\s/.test(venue.replace(/^the\s+/i,""))?"":"the "}${x(venue.replace(/^the\s+/i,""))}.`)}
    ${rcard(cardB,420,548,T.rot*.5,f.year?String(f.year):"",`Serves everyone on the couch. ${fam?"Every drink alcohol free. ":""}Photos: TMDB.`)}`;
   return {w:W,h:H,faces:[front,back]};
 };

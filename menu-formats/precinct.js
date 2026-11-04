@@ -23,7 +23,7 @@ const DRY=[
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 M.family=f=>["kids","fairytale","xmas"].includes(f&&f.theme);
 M.dry=(s,on)=>on?DRY.reduce((t,[r,to])=>t.replace(r,to),M.clean(s)):M.clean(s);
-M.courses=(menu,fam)=>["s","m","w","d"].map(k=>({k,items:((menu&&menu[k])||[]).filter(it=>it&&it.n).slice(0,4).map(it=>({n:M.dry(it.n,fam),note:M.sent(M.dry(it.note,fam))}))})).filter(c=>c.items.length);
+M.courses=(menu,fam)=>["s","m","w","d"].map(k=>({k,items:((menu&&menu[k])||[]).filter(it=>it&&it.n).slice(0,4).map(it=>({n:M.dry(it.n,fam),note:M.sent(M.dry(it.note,fam)),extra:!!it.extra}))})).filter(c=>c.items.length);
 M.hex=h=>{h=String(h||"").replace("#","");if(h.length===3)h=h.split("").map(c=>c+c).join("");const n=parseInt(h,16);return h.length!==6||isNaN(n)?null:[n>>16&255,n>>8&255,n&255]};
 M.toHex=c=>"#"+c.map(v=>Math.max(0,Math.min(255,Math.round(v))).toString(16).padStart(2,"0")).join("");
 M.lum=c=>{const a=c.map(v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)});return .2126*a[0]+.7152*a[1]+.0722*a[2]};
@@ -104,6 +104,8 @@ window.MENU_FORMATS.precinct=function(ctx){
   const n2=+(String(num).slice(-2))||48;
   /* mains always above starters and sweets (4 to 6 against 1 to 3), and a drink with spirits two dollars above the rest */
   const price=(k,i,n)=>{const base={s:1,m:4,w:1,d:1}[k],c=(n2+i*17+(k==="m"?25:k==="d"?60:0))%100,sp=k==="d"&&/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|sour|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|vodka)\b/i.test(String(n||""))?2:0;return `${base+(i%3)+sp}.${String(c).padStart(2,"0")}`};
+  /* a card extra never prices above the mains cooked tonight (Beverly Hills Cop II's club sandwich over the rib eye): it drops under the dearest one, keeping its cents */
+  const priceOf=(c,i)=>{const p=price(c.k,i,c.items[i].n);if(c.k!=="m"||!c.items[i].extra)return p;const top=Math.max(0,...c.items.map((x,j)=>x.extra?0:+price("m",j,x.n)));if(!top||+p<top)return p;const ct=p.slice(p.indexOf("."));let w=Math.floor(top);if(+(w+ct)>=top)w--;return Math.max(1,w)+ct};
   const grain=M.noise(T.wear);
   /* manila folder: stock colour, tab, grain, wear on the edges */
   const folder=(tabTxt,tabLeft)=>`<div style="position:absolute;inset:0;background:#3a3631"></div>
@@ -168,7 +170,7 @@ window.MENU_FORMATS.precinct=function(ctx){
 
   const shift=c=>`<div style="margin-bottom:.6em">
      <div style="display:flex;justify-content:space-between;align-items:baseline;background:${dark};color:#fbf7ee;padding:.18em .45em;margin-bottom:.3em"><span style="font:${E.dw} 1.15em/1.1 ${dd};text-transform:uppercase;letter-spacing:.04em">${SHIFT[c.k][0]}</span><span style="flex:none;margin-left:.5em;font:.72em/1.2 ${bd};letter-spacing:.14em;text-transform:uppercase">${SHIFT[c.k][1]}</span></div>
-     ${c.items.map((it,i)=>`<div data-item${i?"":" data-keep"} style="padding:.15em .1em .3em;border-bottom:1px solid rgba(0,0,0,.12)"><div style="display:flex;gap:.5em;justify-content:space-between;align-items:baseline"><span style="font:700 1em/1.15 ${bd};color:${ink}">${x(it.n)}</span><span style="flex:none;font:700 1em/1.15 ${bd};color:${acc}">${price(c.k,i,it.n)}</span></div>${it.note?`<div data-opt style="font:.76em/1.3 ${bd};color:${ink};opacity:.85">${x(it.note)}</div>`:""}</div>`).join("")}
+     ${c.items.map((it,i)=>`<div data-item${i?"":" data-keep"} style="padding:.15em .1em .3em;border-bottom:1px solid rgba(0,0,0,.12)"><div style="display:flex;gap:.5em;justify-content:space-between;align-items:baseline"><span style="font:700 1em/1.15 ${bd};color:${ink}">${x(it.n)}</span><span style="flex:none;font:700 1em/1.15 ${bd};color:${acc}">${priceOf(c,i)}</span></div>${it.note?`<div data-opt style="font:.76em/1.3 ${bd};color:${ink};opacity:.85">${x(it.note)}</div>`:""}</div>`).join("")}
    </div>`;
   const half=Math.ceil(C.length/2);
   const col=cs=>`<div data-fit="20" style="width:344px;height:100%;overflow:hidden;font-size:26px">${cs.map(shift).join("")}</div>`;

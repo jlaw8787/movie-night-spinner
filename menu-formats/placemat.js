@@ -247,7 +247,9 @@ window.MENU_FORMATS.placemat=ctx=>{
   const tz=sizes(menu,590);
   const stills=(ctx.stills||[]).filter(Boolean);
   /* the film's number only sets the cents of the first main, on the period price */
-  const pr=(k,i)=>{const v=eraPrice(price(k,i,yy),f.year,1985);if(k==="m"&&i===0&&num){const d=String(v).match(/^(\d+)\.\d\d$/);if(d)return d[1]+"."+num.slice(-2).padStart(2,"0")}return v};
+  const pr0=(k,i)=>{const v=eraPrice(price(k,i,yy),f.year,1985);if(k==="m"&&i===0&&num){const d=String(v).match(/^(\d+)\.\d\d$/);if(d)return d[1]+"."+num.slice(-2).padStart(2,"0")}return v};
+  /* the shared price check across the whole card: Mother's Day's mimosa never sits under a soft drink */
+  const prQ=(()=>{const P={};for(const k of ["s","m","w","d"])P[k]=(menu[k]||[]).map((x,i)=>pr0(k,i));return window.priceSense?window.priceSense(menu,P):P})(),pr=(k,i)=>prQ[k]&&prQ[k][i]!=null?prQ[k][i]:pr0(k,i);
   const caps=L.caps?"text-transform:uppercase;":"";
   const spread=L.printSpread?"text-shadow:0 0 .6px currentColor;":"";
   const tex=op=>`<div style="position:absolute;inset:0;background:url('${NOISE}') 0 0/300px;opacity:${op};mix-blend-mode:multiply;pointer-events:none"></div>`;

@@ -1,19 +1,29 @@
 
+/* a note cut short never ends on a joining word ("with yellow mustard and."): those come off, and a lone word left after a comma goes with them */
+window.noDangle=function(t){t=String(t||"");const D=/\s+(and|with|of|in|the|a|an|is|to|for|or|on|at|by|from|into|under|over|but|so|as|its|his|her|their|our|your|my)$/i;
+  let s=t.replace(/[\s.,;:]+$/,"");const s0=s;for(let n=0;n<4&&D.test(s);n++)s=s.replace(D,"").replace(/[\s,;:]+$/,"");
+  if(s===s0)return t;s=s.replace(/,\s*\S+$/,"");return s+(/[.!?]\s*$/.test(t)?".":"")};
 /* prices that make sense on their own card, for shared layouts: every main above every starter and sweet, a drink with spirits above every plain drink and sweet; a raised price keeps its own cents (the film's number lives there) and the card's price style, and nothing prints as 100 cents */
-window.priceSense=function(menu,P){const SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy)\b/i;
-  const all=[].concat(...["s","m","w","d"].map(k=>P[k]||[])).map(String),cents=all.some(x=>/¢/.test(x)),dot=all.some(x=>/^\D*\.\d\d$/.test(x));
-  const val=x=>{x=String(x);const n=parseFloat(x.replace(/[^\d.]/g,""));return isNaN(n)?null:/¢/.test(x)?n/100:n};
-  const fmt=(v,o)=>{o=String(o);const pre=(o.match(/^[^\d.]*/)||[""])[0].replace("¢","");
-    if(v<.975){const c=Math.max(5,Math.ceil(v*20)*5);return cents?c+"¢":dot?pre+"."+String(c).padStart(2,"0"):pre+"0."+String(c).padStart(2,"0")}
-    if(!/\./.test(o)&&!/¢/.test(o))return pre+String(Math.ceil(v));
-    return pre+v.toFixed(2)};
-  const lift=(t,o)=>{const ov=val(o);let fr=ov>=1?Math.round((ov%1)*100)/100:[.25,.5,.95][Math.round(t*7)%3],v=Math.floor(t)+fr;if(v<t-1e-9)v+=1;if(t<.975)v=t;return fmt(v,o)};
-  const out={};for(const k of ["s","m","w","d"])out[k]=(P[k]||[]).map(x=>{const v=val(x);return v!=null&&/¢/.test(String(x))&&v>=.975?fmt(v,"1.00"):x});
+window.priceSense=function(menu,P){const SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy|rob roy|sazerac|sidecar|gimlet|mai tai|grog|mead|sake|bellini|cosmopolitan|collins|sherry|blue lagoon|curacao|mimosa|bellini|shandy)\b/i;
+  const all=[].concat(...["s","m","w","d"].map(k=>P[k]||[])).map(String),cents=all.some(x=>/¢|\dc$/.test(x)),csym=all.some(x=>/\dc$/.test(x))?"c":"¢",dot=all.some(x=>/^\D*\.\d\d$/.test(x));
+  const val=x=>{x=String(x);const n=parseFloat(x.replace(/[^\d.]/g,""));return isNaN(n)?null:/¢|\dc$/.test(x)?n/100:n};
+  const fmt=(v,o)=>{o=String(o);const pre=(o.match(/^[^\d.]*/)||[""])[0].replace("¢",""),post=/¢|\dc$/.test(o)?"":(o.match(/[^\d.]*$/)||[""])[0];
+    if(v<.975){const c=Math.max(5,Math.ceil(v*20)*5);return cents?c+csym:dot?pre+"."+String(c).padStart(2,"0"):pre+"0."+String(c).padStart(2,"0")}
+    if(!/\./.test(o)&&!/¢|\dc$/.test(o))return pre+String(Math.ceil(v))+post;
+    return pre+v.toFixed(2)+post};
+  /* a raised price keeps its cents only when they read like a price (.95, .50, .25); otherwise it lands on one of those, never .12 or .31 */
+  const lift=(t,o)=>{const ov=val(o),oc=Math.round((ov%1)*100);let fr=ov>=1&&oc%5===0?oc/100:[.25,.5,.95][Math.round(t*7)%3],v=Math.floor(t)+fr;if(v<t-1e-9)v+=1;if(t<.975)v=t;return fmt(v,o)};
+  const out={};for(const k of ["s","m","w","d"])out[k]=(P[k]||[]).map(x=>{const v=val(x);return v!=null&&/¢|\dc$/.test(String(x))&&v>=.975?fmt(v,"1.00"):x});
   const nums=k=>(out[k]||[]).map(val).filter(v=>v!=null),sw=Math.max(0,...nums("s"),...nums("w"));
   out.m=(out.m||[]).map((x,i)=>{const v=val(x);return v!=null&&sw&&v<=sw?lift(sw*(1.15+.08*i),x):x});
+  /* a card extra (no tested recipe) never prices above the mains that are cooked tonight */
+  {const ms=(menu.m||[]),cm=Math.max(0,...(out.m||[]).map((x,i)=>ms[i]&&!ms[i].extra?val(x)||0:0));
+   if(cm)out.m=(out.m||[]).map((x,i)=>{const v=val(x);if(!ms[i]||!ms[i].extra||v==null||v<cm)return x;const t=Math.max(sw*1.05,cm*(.88-.04*i));if(t>=cm)return x;let w=Math.floor(t)+(t%1<.5?.5:.95);if(w>=cm)w=Math.floor(t);return fmt(cm>=2&&w>sw?w:t,x)})}
   const it=k=>(menu[k]||[]),isSp=i=>{const d=it("d")[i];return !!d&&SP.test((d.n||"")+" "+(d.note||""))};
   const plain=Math.max(0,...(out.d||[]).map((x,i)=>isSp(i)?0:val(x)||0),...nums("w"));
   out.d=(out.d||[]).map((x,i)=>{const v=val(x);return isSp(i)&&v!=null&&plain&&v<=plain?lift(plain*(1.2+.05*i),x):x});
+  /* any price left with odd cents (a film number like 28.12) goes up to the next ending that reads like a price */
+  for(const k of ["s","m","w","d"])out[k]=(out[k]||[]).map(x=>{const m=String(x).match(/^(\D*)(\d+)\.(\d\d)(\D*)$/);if(!m||+m[3]%5===0)return x;const c=[25,50,75,95].find(e=>e>=+m[3]);return c?m[1]+m[2]+"."+c+m[4]:m[1]+(+m[2]+1)+".00"+m[4]});
   return out};
 const low1=w=>/^(The|A|An|Some|Every|His|Her|Their|Its|One|Two|Three|That|This|How|Why|What|Where|When) /.test(w)?w.charAt(0).toLowerCase()+w.slice(1):w; /* names keep their capitals */
 const T={"redsauce": {"name": "Little Italy Sunday Gravy"}, "pizza": {"name": "Brooklyn Slice Joint"}, "deli": {"name": "Manhattan Deli Counter"}, "street": {"name": "Bodega and Street Cart"}, "cop": {"name": "Stakeout Snacks"}, "soul": {"name": "Soul Food Kitchen"}, "xmas": {"name": "Christmas in the City"}, "aussie": {"name": "Arvo in the Outback"}, "asian": {"name": "Chinatown Late Night"}, "scifi": {"name": "Mission Control Rations"}, "hero": {"name": "Rooftop Patrol"}, "kids": {"name": "Family Matinee"}, "teen": {"name": "Mall Food Court"}, "diner": {"name": "Roadside Diner"}, "mex": {"name": "Cantina Night"}, "tiki": {"name": "Beach House Luau"}, "uptown": {"name": "Uptown Steakhouse"}, "horror": {"name": "Midnight Monster Feast"}, "western": {"name": "Chuckwagon BBQ"}, "philly": {"name": "Philly Fight Night"}, "galaxy": {"name": "Galactic Cantina"}, "wizard": {"name": "Great Hall Feast"}, "adventure": {"name": "Explorer's Field Rations"}, "fairytale": {"name": "Storybook Banquet"}, "romcom": {"name": "Rom-Com Date Night"}};
@@ -1034,7 +1044,12 @@ function dietSpec(f,spec){if(!spec||!dietKey()||!f._diet)return spec;let c=_diet
 function dietStamp(){const b=$("dietNote");if(!b)return;const t=dietLabel();b.textContent=t?t+" menu":"";b.hidden=!t}
 function dietLabel(){const k=dietKey();return k==="veg_af"?"Vegetarian · Alcohol-free":k==="veg"?"Vegetarian":k==="af"?"Alcohol-free":""}
 /* lazy night: plan only the dishes left on the cut-down menu */
-const planAll=f=>{const all=((f._r2&&f._r2.dishes)||[]).map(dietDish),m=f.menu||(typeof current!=="undefined"&&current===f?current.menu:null);
+/* cook five: a tested recipe for a dish that isn't one of tonight's five (a card extra the sweep gave a recipe) is offered unticked */
+const planCooked=f=>{const src=(typeof EDITIONS!=="undefined"&&EDITIONS[f.id]&&EDITIONS[f.id].menu)||(typeof RECIPE_MENUS!=="undefined"&&RECIPE_MENUS[f.id])||null;
+  return src?new Set(["s","m","w","d"].flatMap(k=>(src[k]||[]).map(it=>String(it.n||"").toLowerCase()))):null};
+const planAll=f=>{const ck=planCooked(f),r2=((f._r2&&f._r2.dishes)||[]).map(dietDish),hit=d=>ck.has(String(d.orig||d.n).toLowerCase()),
+    /* only when every cooked dish is found by name; a hand-built menu that names its dishes differently keeps all its recipes ticked */
+    sp=ck&&ck.size&&r2.filter(hit).length>=Math.min(5,ck.size),all=sp?r2.map(d=>hit(d)?d:Object.assign({},d,{spare:true})):r2,m=f.menu||(typeof current!=="undefined"&&current===f?current.menu:null);
   let out=all;if(m&&m.lazy){const keep=new Set([...m.s,...m.m,...m.w,...m.d].map(it=>it.orig||it.n)),few=all.filter(d=>keep.has(d.orig||d.n));if(few.length)out=few}
   return out.concat(planExtras(f).map(dietDish)).concat(snackDishes(f).map(dietDish))};
 /* the film's other printed dishes: offered in the planner unticked, so every dish on the printed menu can go on the shopping list.
@@ -1052,7 +1067,7 @@ function planExtras(f){if(!f||!f._full)return [];const have=new Set(((f._r2&&f._
 /* the card's own name for a dish (hand-built menus print "Antipasto, wedding style" for the "Wedding antipasto" recipe) */
 function planLabels(f){const L={};for(const it of planCard(f)){if(it.n&&it.label&&it.label!==it.n)L[it.n]=it.label}return L}
 const planHouse=f=>planCard(f).filter(it=>it.house);
-const planOn=x=>x.blocked||x.extra?!!PLAN.on[x.orig||x.n]:!PLAN.off[x.orig||x.n];
+const planOn=x=>x.blocked||x.extra||x.spare?!!PLAN.on[x.orig||x.n]:!PLAN.off[x.orig||x.n];
 const planDishes=f=>planAll(f).filter(planOn);
 const FRAC=[[0,""],[0.25,"1/4"],[1/3,"1/3"],[0.5,"1/2"],[2/3,"2/3"],[0.75,"3/4"],[1,""]];
 function fracText(q){const w=Math.floor(q),r=q-w;let best=FRAC[0];for(const x of FRAC)if(Math.abs(x[0]-r)<Math.abs(best[0]-r))best=x;const W=best[0]===1?w+1:w;return (W?String(W):"")+(best[1]?(W?" ":"")+best[1]:"")||"1/4"}
@@ -1121,7 +1136,7 @@ function shopLines(list){
     if(!tally[key]){tally[key]={a,item:i.item,items:new Set(),parts:{},order:[],open:false};order.push(key)}
     const t=tally[key];t.items.add(String(i.item));
     if(i.q==null){t.open=true;continue}
-    const u=b[0]==="#"?"":b[0];if(!(u in t.parts)){t.parts[u]=0;t.order.push(u)}if(FRY_RE.test(i.item))t.parts[u]=Math.max(t.parts[u],ingQ(i,k)*b[1]);else t.parts[u]+=ingQ(i,k)*b[1];
+    const u=b[0]==="#"?"":b[0];if(!(u in t.parts)){t.parts[u]=0;t.order.push(u)}if(fryOil(i))t.parts[u]=Math.max(t.parts[u],ingQ(i,k)*b[1]);else t.parts[u]+=ingQ(i,k)*b[1];
   }
   const lines=order.map(key=>{const t=tally[key];
     /* two different cuts of the same thing ("lemon, juiced" and "lemons") share the plain name; prep words ("shredded", "juiced", "to taste") stay in the method */
@@ -1183,10 +1198,18 @@ function dishTimes(x,k){const st=(x.steps||[]).filter(t=>stepParts(t.text).main)
   const p3=k>1.01?Math.round(p2*(1+(k-1)/2)/5)*5:p2;return {prep:p3,cook:c2,wait,active:p3+c2}}
 /* frying oil is set by the pot, not the guests: never less than the recipe's own amount */
 /* pack notes inside an item follow the guests: "750ml lager (4 stubbies)" for 4 is "(9 stubbies)" for 9 */
-const packNote=(item,k)=>!k||Math.abs(k-1)<.01?item:String(item).replace(/\((\d+)\s+(stubbies|stubby|cans?|bottles?|tins?|jars?|packets?|bags?|tinnies|slabs?|longnecks?)([^)]*)\)/i,(m,n,u,rest)=>{const v=Math.max(1,Math.ceil(+n*k-0.05));return `(${v} ${v===1?u.replace(/ies$/,"y").replace(/s$/,""):/y$/.test(u)?u.replace(/y$/,"ies"):/s$/.test(u)?u:u+"s"}${rest})`});
+/* so do the notes after the name: "(about 10 limes)" is "(about 22 limes)" for 9, "about 600g" and a split ("80ml for the mash, 125ml for the coating") scale too.
+   A size per piece ("about 250g each", "330ml each", "per glass"), a temperature or a length, and the size of a tin, jar or bag stay put */
+const packAbout=(item,k)=>{const c=item.search(/,|\(/);if(c<0||WHOLE_RE.test(item))return item;
+  const tail=item.slice(c).replace(/\(about (\d+) ([a-z]+)/gi,(m,n,w)=>{if(/^(cm|mm|c|ml|g|kg|l)$/i.test(w))return m;const v=Math.max(1,Math.ceil(+n*k-0.05));return `(about ${v} ${v>1?(/s$/i.test(w)?w:planPlural(w,v)):planSing(w)}`})
+    .replace(/\b(\d+(?:\.\d+)?)\s?(ml|g|kg|l)\b(?![^,(]*\b(each|per)\b)/gi,(m,n,u,e,o,all)=>/\b(of|x)\s*$|\(\s*$/i.test(all.slice(0,o))&&!/about\s*$/i.test(all.slice(0,o))||/^\s*(tins?|cans?|jars?|bottles?|packets?)\b/i.test(all.slice(o+m.length))?m:planQty(+n*k,u.toLowerCase()).replace(" L","\u00a0L"));
+  return item.slice(0,c)+tail};
+const packNote=(item,k)=>!k||Math.abs(k-1)<.01?item:packAbout(String(item),k).replace(/\((\d+)\s+(stubbies|stubby|cans?|bottles?|tins?|jars?|packets?|bags?|tinnies|slabs?|longnecks?)([^)]*)\)/i,(m,n,u,rest)=>{const v=Math.max(1,Math.ceil(+n*k-0.05));return `(${v} ${v===1?u.replace(/ies$/,"y").replace(/s$/,""):/y$/.test(u)?u.replace(/y$/,"ies"):/s$/.test(u)?u:u+"s"}${rest})`});
 const FRY_RE=/\bfor (deep[- ])?frying\b/i;
-/* frying oil is one pot whatever the guest count: it never scales, and dishes on the same sheet share it (the list takes the biggest pot, not the sum) */
-const ingQ=(i,k)=>FRY_RE.test(i.item)?i.q:i.q*k;
+/* frying oil is one pot whatever the guest count: it never scales, and dishes on the same sheet share it (the list takes the biggest pot, not the sum).
+   Half a litre or more of plain oil is always a frying pot, whatever the recipe calls it ("2 L vegetable oil" for sesame balls) */
+const fryOil=i=>FRY_RE.test(i.item)||/\boil\b/i.test(i.item)&&!/\b(sesame|chilli|chili|truffle|infused)\b|\bfor the\b/i.test(i.item)&&(/^l$/i.test(i.u)&&i.q>=0.5||i.u==="ml"&&i.q>=500||i.u==="cup"&&i.q>=2);
+const ingQ=(i,k)=>fryOil(i)?i.q:i.q*k;
 /* a dish's own ingredients, scaled to the guests */
 function dishIng(x,k){return dishIngList(x,k).join(", ")}
 function dishIngList(x,k){return (x.ingredients||[]).map(i0=>{const i=Object.assign({},i0,{item:packNote(i0.item,k)});if(i.q==null)return i.item;let q=ingQ(i,k);if(!i.u&&(/^eggs?\b|^egg yolks?|^egg whites?|\bloa(f|ves)\b|^(pinch|dash|sprig|splash|drop|handful)(es|s)?\b/i.test(i.item)||WHOLE_RE.test(i.item)))q=Math.max(1,Math.ceil(q-0.05));if(!i.u)return planQty(q,"")+" "+(q>1.01?planPlural(i.item,q):planOne(i.item));return planQty(q,i.u)+" "+i.item})}
@@ -1214,7 +1237,7 @@ function planHTML(f){
   <p class="pl-hint">Tick what you want to make tonight. The prep sheet, shopping list and times follow your picks.${DIET.veg||dietAF()?" Dishes that don't fit are swapped for their own version, or left off so you can choose.":""}</p>
   ${(()=>{const LB=planLabels(f),HS=planHouse(f);return ["s","m","w","d","c"].map(c=>{const ds=all.filter(d=>d.course===c),hs=HS.filter(h=>h.course===c);return ds.length||hs.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.orig||d.n)}"${planOn(d)?" checked":""}><span>${ESC(LB[d.orig||d.n]&&!d.tag?LB[d.orig||d.n]:d.n)}${d.tag&&!/alcohol-free|vegetarian/i.test(d.n)?`<em class="pl-tag">${TAG[d.tag]}</em>`:""}${d.blocked?`<em class="pl-tag pl-no">${BLK[d.blocked]}</em>`:""}</span><small>${d.extra?"From the menu":(t=>planDur(t.active)+(t.wait?" + "+planMin(t.wait)+" wait":""))(dishTimes(d,PLAN.guests/((f._r2&&f._r2.serves)||4)))}</small></label>`).join("")}${hs.map(h=>`<p class="pl-d pl-house"><span>${ESC(h.n)}<em class="pl-tag">house standard</em></span><small>Served as is</small></p>`).join("")}</fieldset>`:""}).join("")})()}</details>`;
 }
-function planCount(r){const f=current,all=r.dishes.map(dietDish).concat(f?planExtras(f).map(dietDish):[]),on=all.filter(planOn).length;return `${on} of ${all.length} dishes picked`}
+function planCount(r){const f=current,all=f?planAll(f).filter(d=>d.course!=="c"):r.dishes.map(dietDish),on=all.filter(planOn).length;return `${on} of ${all.length} dishes picked`}
 function planOpen(){try{return localStorage.getItem("mns-plan-open")==="1"}catch(e){return false}}
 /* 175C reads as 175°C, and a lone litre is written "1 L" so it never reads as eleven */
 const degC=t=>String(t).replace(/(\d{2,3})\s?C\b/g,"$1°C").replace(/(\d(?:\.\d+)?)\s?l\b/g,"$1\u00a0L").replace(/(\d[\d.]*)\s+to\s+(\d[\d.]*)/g,"$1\u00a0to\u00a0$2");
@@ -1254,10 +1277,10 @@ function planWire(f){
   const wireToggle=()=>{const dt=box.querySelector(".pl-pick");if(dt)dt.addEventListener("toggle",()=>{try{localStorage.setItem("mns-plan-open",dt.open?"1":"0")}catch(e){}})};wireToggle();
   box.onchange=e=>{const dk=e.target.dataset.diet;if(dk){DIET[dk]=e.target.checked;dietSave();try{setSync()}catch(_){}const op=box.querySelector(".pl-pick"),was=op&&op.open;box.innerHTML=planHTML(f);if(was){const o2=box.querySelector(".pl-pick");if(o2)o2.open=true}wireToggle();redo();if(f===current)dietRedraw(dk);return}
     const n=e.target.dataset.dish;if(n==null)return;const x=planAll(f).find(d=>(d.orig||d.n)===n);
-    if(x&&(x.blocked||x.extra)){if(e.target.checked)PLAN.on[n]=1;else delete PLAN.on[n]}else{if(e.target.checked)delete PLAN.off[n];else PLAN.off[n]=1}redo()};
+    if(x&&(x.blocked||x.extra||x.spare)){if(e.target.checked)PLAN.on[n]=1;else delete PLAN.on[n]}else{if(e.target.checked)delete PLAN.off[n];else PLAN.off[n]=1}redo()};
 }
 /* long dish notes are cut back at a natural break so no format has to clip them mid-sentence */
-function libTrim(t,max){t=String(t||"").trim();if(t.length<=max)return t;const cut=t.slice(0,max);let i=Math.max(cut.lastIndexOf(", "),cut.lastIndexOf("; "),cut.lastIndexOf(". "));if(i<max*0.45)i=cut.lastIndexOf(" ");return t.slice(0,i).replace(/[,;:\s]+$/,"")+"."}
+function libTrim(t,max){t=String(t||"").trim();if(t.length<=max)return t;const cut=t.slice(0,max);let i=Math.max(cut.lastIndexOf(", "),cut.lastIndexOf("; "),cut.lastIndexOf(". "));if(i<max*0.45)i=cut.lastIndexOf(" ");return noDangle(t.slice(0,i).replace(/[,;:\s]+$/,""))+"."}
 /* one photo rule for every library menu (owner, Oct 26): the poster is shown whole, never blurred into a smear, never under the title logo,
    and no photo appears twice. Runs after the format renders, so all 30 styles follow the same rule. */
 function libPhotoPass(card,L,poster){
@@ -1285,7 +1308,8 @@ function libPhotoPass(card,L,poster){
   shown.forEach(i=>{const k=path(i);if(!used.has(k)){used.add(k);return}
     const nx=spare.find(x=>!used.has(x));
     if(nx){used.add(nx);i.removeAttribute("srcset");i.src=TMDB_IMG+"w780"+nx}
-    else{let e=i;while(e.parentElement&&area(e.parentElement)<FA*0.4&&e.parentElement.querySelectorAll("img").length===1)e=e.parentElement;e.style.visibility="hidden"}});
+    /* the frame goes, never the text around it (takeaway's third panel held the drinks and went with its photo tile: Screwed) */
+    else{let e=i;while(e.parentElement&&area(e.parentElement)<FA*0.4&&e.parentElement.querySelectorAll("img").length===1&&!(e.parentElement.textContent||"").trim())e=e.parentElement;e.style.visibility="hidden"}});
   /* 4. a very thin frame (a window strip, a booth strip) shows only a sliver of a wide still, so a face there is always cut in half:
      give it an unused still with no faces in it (a place, not a person) */
   const foc=L.focus||{},faceless=spare.filter(x=>!foc[x]&&!used.has(x));
@@ -1325,13 +1349,27 @@ const KDRY=(()=>{const cap=(m,v)=>v&&/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice
    [new RegExp("\\b("+W+")[- ](battered)\\b","gi"),m=>cap(m,"crisp battered")],[new RegExp("\\b("+W+")[- ](braised|stewed)\\b","gi"),(m,a,b)=>cap(m,"slow-"+b.toLowerCase())],
    [new RegExp("\\b("+W+")[- ](glazed)\\b","gi"),m=>cap(m,"sticky glazed")],[new RegExp("\\b("+W+")[- ](jus|sauce|gravy|reduction|butter|glaze)\\b","gi"),(m,a,b)=>cap(m,"rich "+b.toLowerCase())],
    [new RegExp("\\b("+W+")[- ](marinated|poached|steamed|soaked|infused|spiked|cured)\\b","gi"),(m,a,b)=>cap(m,b.toLowerCase())],
-   r(/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?))/gi,"mocktail"),r(/\b(champagne|prosecco|sparkling wine|bubbly)\b/gi,"sparkling apple"),
-   r(/\b(red |white |rosé |rose )?wines?\b/gi,"grape juice"),r(/\balcohol-free (beer|lager|stout|ale) batter\b/gi,"soda water batter"),r(/\b(cold |ice-cold )?alcohol-free (beers?|lagers?|stouts?|ales?)\b/gi,"ginger beer"),r(/\b(?<!(root|ginger|butter) )(beers?|lagers?|ales?|stouts?|longnecks?|stubbies|tinnies|guinness)\b/gi,"root beer"),
+   r(/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing))/gi,"mocktail"),r(/\b(champagne|prosecco|sparkling wine|bubbly)\b/gi,"sparkling apple"),
+   r(/\b(red |white |rosé |rose )?wines?\b(?! glass)/gi,"grape juice"),r(/\balcohol-free (beer|lager|stout|ale) batter\b/gi,"soda water batter"),r(/\b(cold |ice-cold )?alcohol-free (beers?|lagers?|stouts?|ales?)\b(?! (and|or|sauce|gravy|glaze|marinade|cheese|cheddar|mustard)\b)/gi,"ginger beer"),r(/\b(?<!(root|ginger|butter|alcohol-free) )(beers?|lagers?|ales?|stouts?|longnecks?|stubbies|tinnies|guinness)\b/gi,"root beer"),
    r(/\bciders?\b/gi,"sparkling apple juice"),r(/\b(whisk(e)?y|bourbon|scotch|rye whiskey)\b/gi,"butterscotch"),r(/\brum\b/gi,"coconut"),r(/\bgin\b/gi,"cucumber"),
-   r(/\b(vodka|tequila|mezcal)\b/gi,"lime"),r(/\b(brandy|cognac)\b/gi,"vanilla"),r(/\b(liqueurs?|schnapps|amaretto|kahlua|baileys)\b/gi,"syrup"),r(/\bvermouth\b/gi,"bitter orange"),r(/\bsake\b/gi,"yuzu soda"),
+   r(/\b(vodka|tequila|mezcal)\b/gi,"lime"),r(/\b(brandy|cognac)\b/gi,"vanilla"),r(/\b(liqueurs?|schnapps|amaretto|kahlua|baileys)\b/gi,"syrup"),r(/\bvermouth\b/gi,"bitter orange"),r(/(?<!\b(goodness|heaven|pete|god|christ|old times)(['’]s?|s['’])? |\bthe )\bsake\b/gi,"yuzu soda"),
    r(/\b(port|sherry|marsala)\b(?= (and|or|,|glass|wine|by the|\.))/gi,"grape juice")]})();
-function kidsDryDom(root,f){if(!root||!dryNow(f||current))return;const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;const todo=[];
-  while(n=tw.nextNode()){const p=n.parentElement;if(!p||/^(SCRIPT|STYLE)$/.test(p.tagName))continue;const t=n.nodeValue;if(!/[a-z]/i.test(t))continue;const v=KDRY.reduce((a,[re,to])=>a.replace(re,to),t);if(v!==t)todo.push([n,v])}
+/* the layouts' own family swaps run first and can over-reach ("for goodness' syrup", "root root beer", "mocktail franks"): these put the phrase back,
+   before and after the shared pass, and run on every card since a layout dries PG films too */
+const KFIX=(()=>{const cap=(m,v)=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v;
+  return [[/\b(goodness|heaven|pete|god|christ)((['’]s?|s['’])?) (syrup|yuzu soda)\b/gi,(m,a,b)=>a+b+" sake"],
+   [/\bmocktail (franks?|frankfurts?|sausages?|cherr(y|ies)|onions?|sauce|sticks?|dressing)\b/gi,(m,a)=>cap(m,"cocktail "+a)],[/\b(prawn|shrimp|seafood|crab|lobster|fruit) mocktails?\b/gi,m=>m.replace(/mock(?=tail)/i,w=>/^M/.test(w)?"Cock":"cock")],
+   [/\bgrape juice (glass(es)?)\b/gi,(m,a)=>cap(m,"wine "+a)],
+   [/\b(root|ginger|butter) (root|ginger) beer\b/gi,(m,a)=>a+" beer"],[/\balcohol-free (root|ginger) beer\b/gi,m=>cap(m,"alcohol-free beer")],
+   [/\b(mocktail|syrup|grape juice|sparkling apple|root beer|ginger beer)( \1)+\b/gi,(m,a)=>a]]})();
+const dryText=(t,on)=>{const v=KFIX.reduce((a,[re,to])=>a.replace(re,to),t);return on?KFIX.reduce((a,[re,to])=>a.replace(re,to),KDRY.reduce((a,[re,to])=>a.replace(re,to),v)):v};
+function kidsDryDom(root,f){if(!root)return;const on=dryNow(f||current);const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;const todo=[];
+  /* a name can arrive split across text nodes ("Caribbean cruise prawn" + "cocktail"): each node is read with the end of the one before and the start of the one after, and only its own part is kept */
+  const nodes=[];while(n=tw.nextNode()){const p=n.parentElement;if(!p||/^(SCRIPT|STYLE)$/.test(p.tagName))continue;nodes.push(n)}
+  nodes.forEach((n,i)=>{const t=n.nodeValue;if(!/[a-z]/i.test(t))return;const pv=i?nodes[i-1].nodeValue.slice(-24):"",nx=i<nodes.length-1?nodes[i+1].nodeValue.slice(0,24):"",gl=(a,b)=>a&&b&&!/\s$/.test(a)&&!/^\s/.test(b)?" ":"";
+    const pre=pv+gl(pv,t),post=gl(t,nx)+nx,all=dryText(pre+t+post,on);let v=dryText(t,on);
+    if(all.startsWith(dryText(pre,on)===pre?pre:"\u0000")&&all.endsWith(post)&&all.length>=pre.length+post.length)v=all.slice(pre.length,all.length-post.length||undefined);
+    if(v!==t)todo.push([n,v])});
   for(const [n,v] of todo)n.nodeValue=v}
 function fitLines(card){try{kidsDryDom(card)}catch(e){}
   const els=[...card.querySelectorAll("*")].filter(e=>{if(!e.firstChild||!e.offsetWidth)return false;const cs=getComputedStyle(e);
@@ -1674,10 +1712,11 @@ async function lockAsk(f,trigger){if(!f)return;try{await ensureExact(f)}catch(e)
    <button type="button" data-l="all"><b>The full feature</b><span>Cook the lot. Every dish on the menu goes on the Prep sheet and shopping list.</span></button></div></div>`;
   o.addEventListener("click",async e=>{if(e.target===o)return dismissModal(o);const b=e.target.closest("[data-l]");if(!b)return;dismissModal(o);
     for(let i=0;i<30&&current!==f;i++)await new Promise(r=>setTimeout(r,100));if(current!==f)return;
-    if(b.dataset.l==="all"){PLAN.off={};for(const x of planExtras(f))PLAN.on[x.n]=1;planSave(f);refreshPlan();setTab("prep");
+    if(b.dataset.l==="all"){PLAN.off={};for(const x of planExtras(f))PLAN.on[x.n]=1;for(const x of planAll(f))if(x.spare)PLAN.on[x.orig||x.n]=1;planSave(f);refreshPlan();setTab("prep");
       {const pp=prep;if(pp)setTimeout(()=>pp.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"}),reduce?0:350)}
       const n=planDishes(f).length;$("status").textContent=`The full feature: all ${n} dishes are on the Prep sheet and shopping list.`}
-    else{setTab("prep");const pb=$("planner"),d=pb&&pb.querySelector(".pl-pick");if(d){d.open=true;pb.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});const c=d.querySelector("input[type=checkbox]");if(c)setTimeout(()=>c.focus({preventScroll:true}),reduce?0:400)}
+    else{setTab("prep");const pb=$("planner"),d=pb&&pb.querySelector(".pl-pick");if(d){d.open=true;/* once the tab has drawn, land on the "Choose dishes" list itself with focus on the first tick, not on the planner box (the phone ended mid shopping list) */
+        setTimeout(()=>{const c=d.querySelector("input[type=checkbox]");d.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});if(c)c.focus({preventScroll:true})},reduce?0:350)}
       $("status").textContent="Director's cut: tick the dishes you want. The shopping list follows."}});
   mountModal(o,"[data-l=pick]",trigger||document.activeElement)}
 
@@ -1741,14 +1780,17 @@ const SEASONS=[
 const dayStart=d=>dAt(d.getFullYear(),d.getMonth(),d.getDate());
 function seasonState(now){
   const t=dayStart(now||new Date()),y=t.getFullYear();
-  return SEASONS.map(s=>{let on=false,next=null,day=null;
-    for(const yy of[y-1,y,y+1]){const w=s.win(yy);if(!w)continue;const[a,b,c]=w;if(t>=a&&t<=b)on=true;if(a>t&&(!next||a<next)){next=a;day=c||b}}
-    return{s,on,next,day}});
+  return SEASONS.map(s=>{let on=false,next=null,day=null,end=null;
+    for(const yy of[y-1,y,y+1]){const w=s.win(yy);if(!w)continue;const[a,b,c]=w;if(t>=a&&t<=b){on=true;end=b}if(a>t&&(!next||a<next)){next=a;day=c||b}}
+    return{s,on,next,day,end}});
 }
 const daysTo=d=>Math.round((d-dayStart(new Date()))/864e5);
+/* a shelf colour as text on the aisle's purple (its lightest stripe): lifted toward white until it reads at 4.5 to 1 (Movember's brown, Friday the 13th's red) */
+function inkOn(c,bg){const rgb=h=>{h=h.replace("#","");if(h.length===3)h=h.replace(/./g,"$&$&");return [0,2,4].map(i=>parseInt(h.slice(i,i+2),16))},lum=a=>{const v=a.map(x=>{x/=255;return x<=.03928?x/12.92:((x+.055)/1.055)**2.4});return .2126*v[0]+.7152*v[1]+.0722*v[2]};
+  const b=lum(rgb(bg)),a=rgb(c);for(let t=0;t<=1.0001;t+=.05){const m=a.map(x=>Math.round(x+(255-x)*t));const l=lum(m);if((Math.max(l,b)+.05)/(Math.min(l,b)+.05)>=4.6)return "#"+m.map(x=>x.toString(16).padStart(2,"0")).join("")}return "#ffffff"}
 const fmtDay=d=>d.toLocaleDateString("en-AU",{day:"numeric",month:"short"});
 function seasonRows(s,list,later){
-  const st=`--sg:${s.c[0]};--sf:${s.c[1]};--ss:${s.c[2]}`;
+  const st=`--sg:${s.c[0]};--sf:${s.c[1]};--ss:${s.c[2]};--sl:${inkOn(s.c[0],"#2e1c4e")}`;
   if(s.rows)return s.rows(list).map(r=>[r[0],r[1],later?`Back on ${fmtDay(later)}. ${r[2]}`:r[2],"season "+(r[3]||"")+(later?" later":""),st,s.id]);
   const r=list.filter(s.has).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));
   return r.length?[[s.name,r,later?`Back on ${fmtDay(later)}. ${s.note}`:s.note,"season "+(s.cls||"")+(later?" later":""),st,s.id]]:[];
@@ -1836,7 +1878,7 @@ function openSlip(f,go){
   const due=dueBack(f),now=new Date();const picked=new Set(counter[f.id]||[]);
   const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Rental slip for ${f.title}`);
   const fmt=d=>d.toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"});
-  o.innerHTML=`<div class="slip"><h3 class="slip-logo"><img src="assets/brand/galaxy-video-wide-600.webp" srcset="assets/brand/galaxy-video-wide-600.webp 600w, assets/brand/galaxy-video-wide-1200.webp 1200w" sizes="300px" width="600" height="154" alt="Galaxy Video" decoding="async"></h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?(isTuesday()?"New release, $2 Tuesday":"New release, 3 nights"):"Weekly"} $${priceOf(f).toFixed(2)}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd><dt>Paid</dt><dd>$10 note, change $${(10-priceOf(f)).toFixed(2)}</dd></dl>${hireCaseHTML(f)}<p class="hc-k">Box swapped for a hire case. ${isNew(f)?"The cover went in that sleeve this week and it's still glossy.":"The cover's been in that sleeve since the shop opened."}</p><button type="button" class="peek" data-a="peek" aria-expanded="false">Preview the menu</button><div class="peekbox" hidden></div><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
+  o.innerHTML=`<div class="slip"><h3 class="slip-logo"><img src="assets/brand/galaxy-video-wide-600.webp" srcset="assets/brand/galaxy-video-wide-600.webp 600w, assets/brand/galaxy-video-wide-1200.webp 1200w" sizes="300px" width="600" height="154" alt="Galaxy Video" decoding="async"></h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?(isTuesday()?"New release, $2 Tuesday":"New release, 3 nights"):"Weekly"} $${priceOf(f).toFixed(2)}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd><dt>Paid</dt><dd>$10 note, change $${(10-priceOf(f)).toFixed(2)}</dd></dl>${hireCaseHTML(f)}<p class="hc-k">Box swapped for a hire case. ${isNew(f)?"The cover went in that sleeve this week and it's still glossy.":+f.year<2000?"The cover's been in that sleeve since the shop opened.":"The cover's had a few years in that sleeve."}</p><button type="button" class="peek" data-a="peek" aria-expanded="false">Preview the menu</button><div class="peekbox" hidden></div><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
   const close=()=>dismissModal(o);
   o.addEventListener("click",e=>{
     if(e.target===o)return close();
@@ -2065,7 +2107,7 @@ function renderCal(cal){
   /* the calendar only lists what's close: big days (Christmas, Easter, Halloween and the like) a month out, the rest a week out, and the strip hides when nothing is due */
   const on=cal.filter(c=>c.on),up=cal.filter(c=>!c.on&&c.next&&daysTo(c.day)<=(c.s.big?31:7)).sort((a,b)=>a.day-b.day);
   $("shopCal").hidden=!on.length&&!up.length;
-  const chip=(c,isOn)=>`<button type="button" class="${isOn?"on":""}${!isOn&&peekSeason===c.s.id?" peek":""}" aria-pressed="${isOn||peekSeason===c.s.id}" data-season="${c.s.id}" style="--sg:${c.s.c[0]};--sf:${c.s.c[1]}"><b>${ESC(c.s.name)}</b><small>${isOn?"On the shelves now":(d=>d===1?"Tomorrow":`In ${d} days, ${fmtDay(c.day)}`)(daysTo(c.day))}</small></button>`;
+  const chip=(c,isOn)=>`<button type="button" class="${isOn?"on":""}${!isOn&&peekSeason===c.s.id?" peek":""}" aria-pressed="${isOn||peekSeason===c.s.id}" data-season="${c.s.id}" style="--sg:${c.s.c[0]};--sf:${c.s.c[1]}"><b>${ESC(c.s.name)}</b>${isOn?(c.end?`<small>Until ${fmtDay(c.end)}</small>`:""):`<small>${(d=>d===1?"Tomorrow":`In ${d} days, ${fmtDay(c.day)}`)(daysTo(c.day))}</small>`}</button>`;
   $("shopCal").innerHTML=(on.length?`<span class="cal-k">On now</span>`+on.map(c=>chip(c,true)).join(""):"")+(up.length?`<span class="cal-k">Coming up</span>`+up.map(c=>chip(c,false)).join(""):"");
 }
 /* shelves fill in the background: the first few tapes of each row go up straight away, the rest as the phone gets a spare moment */
@@ -2872,7 +2914,7 @@ function kitBits(f){
     prop:{kind:prop.kind||"ticket",title:D(prop.title||f.title),lines:(prop.lines||[]).map(D)},
     style:kitStyle(f,L,fl)||fl.door||((f.theme==="scifi"||f.theme==="galaxy")&&["lab","airline","galley","canteen","precinct"].includes(L.fmt)?"terminal":"")||KIT_SIGN[L.fmt]||KIT_THEME_SIGN[f.theme]||"plaque",dark:pal.dark||st.mi||"#1b1210",acc:pal.accent||st.ma||"#b3261e",
     fmt:L.fmt||"",tropic:L.fmt==="tiki"||/hawai|island|beach|tiki|luau|lagoon|tropic|polynes|paradise|reef|coconut|surf/i.test((fl.venue||"")+" "+(fl.sign||"")),
-    saloon:L.fmt==="saloon"||/saloon/i.test(fl.venue||""),halftime:["pub","tavern","stadium"].includes(L.fmt),
+    saloon:/\bsaloon\b/i.test((fl.venue||"")+" "+(fl.sign||"")),halftime:["pub","tavern","stadium"].includes(L.fmt),
     sweet:w?(w.label||w.n):"",drink:d?(d.label||d.n):"",time,eye:st.eye||"Tonight's feature",
     still:(L.stills||[]).map(x=>Array.isArray(x)?x[0]:x).filter(Boolean),poster:lobbyPoster(f)};
 }
@@ -2895,6 +2937,8 @@ function kitProp(b,f,name,i){
   }
 }
 /* names fit their card: shrink a long name (down to 40%) rather than cut it, then the usual one-line fitting for the rest of the page */
+/* a flight code is the number whole, or its first word: never "GEN 1" for "GEN 11" */
+const kitFlight=n=>{n=String(n||"").trim();return n.length<=6?n:n.split(/\s+/)[0].slice(0,6)};
 function kitFit(page){
   page.querySelectorAll(".kp-name").forEach(e=>{const b=+(e.dataset.fz0||(e.dataset.fz0=parseFloat(getComputedStyle(e).fontSize)||0));if(!b)return;e.style.fontSize=b+"px";e.style.whiteSpace="";e.style.lineHeight="";
     let k=1;for(;k>=.4&&e.scrollWidth>e.clientWidth+1;k-=.04)e.style.fontSize=(b*k).toFixed(1)+"px";
@@ -2903,8 +2947,10 @@ function kitFit(page){
       const ok=()=>e.scrollWidth<=e.clientWidth+1&&e.offsetHeight<=b*k2*2.2&&(!kp||kp.scrollHeight<=kp.clientHeight+1);
       for(;k2>k&&(e.style.fontSize=(b*k2).toFixed(1)+"px",!ok());k2-=.04);
       if(k2<=k){e.style.whiteSpace="";e.style.lineHeight="";e.style.fontSize=(b*Math.max(k,.4)).toFixed(1)+"px"}}});
+  /* departures cells: wrap to two lines at full size first, then shrink, but never under 80% so it reads in print; past that a third line is fine, a cut word never is */
   page.querySelectorAll(".dp-row span").forEach(e=>{const b=+(e.dataset.fz0||(e.dataset.fz0=parseFloat(getComputedStyle(e).fontSize)||0));if(!b)return;e.style.fontSize=b+"px";
-    for(let k=.96;k>=.6&&e.scrollWidth>e.clientWidth+1;k-=.04)e.style.fontSize=(b*k).toFixed(1)+"px"});
+    const r=document.createRange(),bad=()=>{r.selectNodeContents(e);return e.scrollWidth>e.clientWidth+1||r.getBoundingClientRect().height>parseFloat(e.style.fontSize)*1.15*2+2};
+    for(let k=.96;k>=.8&&bad();k-=.04)e.style.fontSize=(b*k).toFixed(1)+"px"});
   try{fitLines(page)}catch(e){}
 }
 /* kit pages are measured in the page itself before they are drawn or saved: an offscreen holder, fonts and photos ready, then kitFit */
@@ -2914,7 +2960,7 @@ async function kitReady(pages){const h=document.createElement("div");h.className
   await Promise.all([...h.querySelectorAll("img")].map(async im=>{await im.decode().catch(()=>{});if(im.naturalWidth)return;
     im.removeAttribute("crossorigin");im.src=im.src.split("?")[0]+"?k=1";await im.decode().catch(()=>{})}));pages.forEach(kitFit);return ()=>h.remove()}
 function kitPages(f,names,count){
-  const b=kitBits(f),T=ESC(f.title),V=ESC(b.venue),pages=[];
+  const b=kitBits(f),T=ESC(f.title),V=ESC(b.venue),longV=String(b.venue||"").length>18&&String(b.venue||"").length>String(f.title).length,pages=[];
   const doors=b.time?`Doors at ${ESC(b.time)}`:`Doors at <span class="kit-line"></span>`;
   const ph=(i,c)=>b.still[i]?`<img class="${c}" alt="" src="${TMDB_IMG}w780${ESC(b.still[i])}" crossorigin="anonymous">`:"";
   const sign={
@@ -2929,7 +2975,7 @@ function kitPages(f,names,count){
     tiki:`<div class="x-wall tk">${ph(0,"tk-photo")}<div class="tk-torch l"><i></i></div><div class="tk-torch r"><i></i></div><div class="tk-plank"><span class="tk-k">${b.tropic?"Aloha, welcome to":"Welcome to"}</span><b>${V}</b></div><div class="tk-card"><small>Tonight's feature</small><b>${T}</b><span>${doors}</span>${b.sign?`<em>${ESC(b.sign)}</em>`:""}</div></div>`,
     wanted:`<div class="x-wall wd"><div class="wd-poster"><p class="wd-h">Wanted</p><p class="wd-s">For screening tonight</p>${ph(0,"wd-photo")}<p class="wd-t">${T}</p><div class="wd-rule"></div><p class="wd-r">Reward: supper at ${V}</p><p class="wd-d">${doors}</p>${b.sign?`<p class="wd-f">${ESC(b.sign)}</p>`:""}</div></div>`,
     newspaper:`<div class="x-wall np"><div class="np-paper"><p class="np-mast">The ${V} Gazette</p><div class="np-date"><span>No. ${ESC(b.num)}</span><span>${b.sign?ESC(b.sign):"Late edition"}</span><span>Price: one seat</span></div><p class="np-head">${T} screens tonight</p>${ph(0,"np-photo")}<div class="np-cols"><p><b>${doors}.</b> Guests are asked to arrive hungry and take their seats before the lights go down.</p>${b.note?`<p>"${ESC(b.note.text)}" said ${ESC(b.note.by)}.</p>`:"<p>Supper will be served throughout the feature.</p>"}</div></div></div>`,
-    departures:`<div class="x-wall dp"><div class="dp-board"><div class="dp-h"><span>Departures</span><span>${ESC(b.num)}</span></div><div class="dp-row hd"><span>Flight</span><span>Destination</span><span>Gate</span><span>Time</span></div><div class="dp-row on"><span>${ESC(b.num).slice(0,5)}</span><span>${T}</span><span>${V}</span><span>${b.time?ESC(b.time):"TBA"}</span></div><div class="dp-row"><span>MN 001</span><span>Snacks</span><span>Lounge</span><span>Boarding</span></div><div class="dp-row"><span>MN 002</span><span>Mains</span><span>Lounge</span><span>On time</span></div><div class="dp-row"><span>MN 003</span><span>Dessert</span><span>Lounge</span><span>Mid flight</span></div></div>${ph(0,"dp-photo")}${b.sign?`<p class="dp-s">${ESC(b.sign)}</p>`:""}</div>`,
+    departures:`<div class="x-wall dp"><div class="dp-board"><div class="dp-h"><span>Departures</span><span>${ESC(b.num)}</span></div><div class="dp-row hd"><span>Flight</span><span>Destination</span><span>Gate</span><span>Time</span></div><div class="dp-row on"><span>${ESC(kitFlight(b.num))}</span><span>${longV?V:T}</span><span>${longV?T:V}</span><span>${b.time?ESC(b.time):"TBA"}</span></div><div class="dp-row"><span>MN 001</span><span>Snacks</span><span>Lounge</span><span>Boarding</span></div><div class="dp-row"><span>MN 002</span><span>Mains</span><span>Lounge</span><span>On time</span></div><div class="dp-row"><span>MN 003</span><span>Dessert</span><span>Lounge</span><span>Mid flight</span></div></div>${ph(0,"dp-photo")}${b.sign?`<p class="dp-s">${ESC(b.sign)}</p>`:""}</div>`,
     roadside:`<div class="x-wall rs">${ph(0,"rs-photo")}<div class="rs-sign"><div class="rs-star"></div><p class="rs-v">${V}</p><div class="rs-arrow"><span>${T}</span></div><p class="rs-vac">Vacancy</p><p class="rs-d">${doors}</p></div>${b.sign?`<p class="rs-s">${ESC(b.sign)}</p>`:""}</div>`,
     comic:`<div class="x-wall cm"><div class="cm-top"><span>${ESC(b.eye)}</span><span>No. ${ESC(b.num)}</span></div><p class="cm-v">${V}</p><div class="cm-panel">${ph(0,"cm-photo")}${b.note?`<div class="cm-bub">${ESC(b.note.text)}</div>`:""}</div><div class="cm-cap"><b>Tonight:</b> ${T}</div><p class="cm-d">${doors}</p><div class="cm-burst">Pow</div></div>`,
     horror:`<div class="x-wall hr">${ph(0,"hr-photo")}<p class="hr-v">${V}</p><p class="hr-k">Now showing</p><p class="hr-t">${T}</p><p class="hr-d">${doors}</p><p class="hr-w">Do not come alone. Do not leave early.</p>${b.sign?`<p class="hr-s">${ESC(b.sign)}</p>`:""}</div>`,
@@ -2958,7 +3004,7 @@ function kitPages(f,names,count){
     tiki:`<div class="x-wall tk">${ph(1,"tk-photo")}<div class="tk-torch l"><i></i></div><div class="tk-torch r"><i></i></div><div class="tk-plank"><span class="tk-k">${T}</span><b>${b.tropic?"Luau break":"Intermission"}</b></div><div class="tk-card">${menu}<p class="tk-back">Back in fifteen minutes</p></div>${note?`<div class="x-note">${note}</div>`:""}</div>`,
     wanted:`<div class="x-wall wd"><div class="wd-poster"><p class="wd-h sm">Notice</p><p class="wd-s">${b.saloon?"The saloon will close for fifteen minutes":"Supper stops for fifteen minutes"}</p>${ph(1,"wd-photo")}${b.sweet?`<p class="wd-s">Bill of fare</p><p class="wd-t sm">${ESC(b.sweet)}</p>`:""}${b.drink?`<p class="wd-r">${ESC(b.drink)}</p>`:""}${b.note?`<p class="wd-f">"${ESC(b.note.text)}" ${ESC(b.note.by)}</p>`:""}</div></div>`,
     newspaper:`<div class="x-wall np"><div class="np-paper"><p class="np-mast">The ${V} Gazette</p><div class="np-date"><span>Extra</span><span>Intermission edition</span><span>No. ${ESC(b.num)}</span></div><p class="np-head">Fifteen minute break declared</p>${ph(1,"np-photo")}<div class="np-cols"><p>${b.sweet?`<b>Dessert:</b> ${ESC(b.sweet)}. `:""}${b.drink?`<b>Bar:</b> ${ESC(b.drink)}.`:""}</p>${b.note?`<p>"${ESC(b.note.text)}" ${ESC(b.note.by)} told this paper.</p>`:`<p>${T} resumes shortly.</p>`}</div></div></div>`,
-    departures:`<div class="x-wall dp"><div class="dp-board"><div class="dp-h"><span>Arrivals</span><span>Intermission</span></div><div class="dp-row hd"><span>Flight</span><span>Item</span><span>Gate</span><span>Status</span></div><div class="dp-row on"><span>${ESC(b.num).slice(0,5)}</span><span>${T}</span><span>Screen</span><span>Delayed 15</span></div>${b.sweet?`<div class="dp-row"><span>MN 003</span><span>${ESC(b.sweet)}</span><span>Lounge</span><span>Now</span></div>`:""}${b.drink?`<div class="dp-row"><span>MN 004</span><span>${ESC(b.drink)}</span><span>Bar</span><span>Now</span></div>`:""}</div>${ph(1,"dp-photo")}${note?`<div class="x-note">${note}</div>`:""}</div>`,
+    departures:`<div class="x-wall dp"><div class="dp-board"><div class="dp-h"><span>Arrivals</span><span>Intermission</span></div><div class="dp-row hd"><span>Flight</span><span>Item</span><span>Gate</span><span>Status</span></div><div class="dp-row on"><span>${ESC(kitFlight(b.num))}</span><span>${T}</span><span>Screen</span><span>Delayed 15</span></div>${b.sweet?`<div class="dp-row"><span>MN 003</span><span>${ESC(b.sweet)}</span><span>Lounge</span><span>Now</span></div>`:""}${b.drink?`<div class="dp-row"><span>MN 004</span><span>${ESC(b.drink)}</span><span>Bar</span><span>Now</span></div>`:""}</div>${ph(1,"dp-photo")}${note?`<div class="x-note">${note}</div>`:""}</div>`,
     roadside:`<div class="x-wall rs">${ph(1,"rs-photo")}<div class="rs-sign"><div class="rs-star"></div><p class="rs-v">Intermission</p><div class="rs-arrow"><span>${b.sweet?ESC(b.sweet):"Snacks inside"}</span></div><p class="rs-vac">No vacancy</p><p class="rs-d">Back in 15</p></div>${b.drink?`<p class="rs-s">To drink: ${ESC(b.drink)}</p>`:""}${note?`<div class="x-note">${note}</div>`:""}</div>`,
     comic:`<div class="x-wall cm"><div class="cm-top"><span>Meanwhile</span><span>No. ${ESC(b.num)}</span></div><p class="cm-v">Intermission</p><div class="cm-panel">${ph(1,"cm-photo")}${b.note?`<div class="cm-bub">${ESC(b.note.text)}</div>`:""}</div><div class="cm-cap">${b.sweet?`<b>Dessert:</b> ${ESC(b.sweet)}`:""}${b.drink?`<br><b>Drinks:</b> ${ESC(b.drink)}`:""}</div><p class="cm-d">${T} continues in 15</p><div class="cm-burst">Snack</div></div>`,
     horror:`<div class="x-wall hr">${ph(1,"hr-photo")}<p class="hr-v">Intermission</p><p class="hr-k">${T}</p><div class="hr-menu">${menu}</div><p class="hr-w">Lights back down in fifteen minutes. Don't wander off.</p>${note?`<div class="x-note">${note}</div>`:""}</div>`,

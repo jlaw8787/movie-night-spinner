@@ -250,7 +250,7 @@ body::after{content:none}
 .cal button.on{background:var(--sg);color:var(--sf);border-color:var(--sg)}
 .cal button.on small{color:inherit;opacity:.85}
 .aisle.season .aisle-sign{background:var(--sg);color:var(--sf);box-shadow:0 4px 0 var(--ss)}
-.aisle.season .aisle-spin{color:var(--sg);border-color:var(--sg)}
+.aisle.season .aisle-spin{color:var(--sl,var(--sg));border-color:var(--sl,var(--sg))}
 .aisle.season.later .aisle-sign{opacity:.8}
 .aisles-later{margin-top:34px;padding-top:12px;border-top:3px dashed #34407a}
 .aisles-later>h3{font:400 18px var(--f-board);color:var(--shop-sign);margin:0}
@@ -1130,6 +1130,8 @@ body.picked .week .week-t{grid-column:2;grid-row:2;font-size:16px;align-self:sta
 body.picked .week .week-t small,body.picked .week .week-when{display:none}
 body.picked .week .week-acts{grid-column:3;grid-row:1 / span 2;margin:0;flex-wrap:nowrap}
 body.picked .week .week-acts button{padding:6px 12px;font-size:13px}
+/* phones: the buttons wrap under the title so the title keeps the width (no one letter per line) */
+@media (max-width:700px){body.picked #weekPanel{grid-template-columns:36px minmax(0,1fr)}body.picked #weekPanel .week-acts{grid-column:1/-1;grid-row:auto;flex-wrap:wrap;margin-top:8px}}
 .preview{border-radius:6px;box-shadow:0 40px 80px -24px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.06)}
 .glare{display:none}
 .actions{gap:8px}
@@ -2269,6 +2271,9 @@ dialog.kit .kit-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a;bo
 .dp-photo{width:100%;height:380px;border-radius:40px;border:14px solid #d9dbe0;box-shadow:0 10px 24px rgba(0,0,0,.5)}
 .dp-s{font:500 20px "Oswald",sans-serif;color:#c8ccd4;letter-spacing:.12em;text-transform:uppercase;margin:0}
 .dp .x-note{bottom:46px}
+/* cells wrap rather than cut a word (kitFit sizes them); this sits after the board styles so it wins */
+.dp .dp-row span{white-space:normal;text-overflow:clip;line-height:1.15;padding:8px 10px;min-height:44px;display:flex;align-items:center;min-width:0;overflow-wrap:normal}
+.dp .dp-row.hd span{min-height:0;padding:0 10px;line-height:22px}
 /* roadside motel */
 .ks-roadside{background:#14102a}
 .rs-photo{position:absolute;inset:0;width:100%;height:100%;opacity:.4}
@@ -2896,9 +2901,9 @@ html,body{overflow-x:clip}
 <script src="ratings.js?v=dfb01117" defer></script>
 <script src="aisles.js?v=5e921379" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
-<script src="films.js?v=737a50a4" defer></script>
+<script src="films.js?v=ff4d8c0c" defer></script>
 <script src="formats-core.js?v=93a6ed12" defer></script>
-<script src="app.js?v=1a9eec96" defer></script>
+<script src="app.js?v=4e8a1bf3" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

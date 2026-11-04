@@ -208,7 +208,7 @@ function rule(C,w){return`<div style="display:flex;align-items:center;gap:8px;ju
 function menuCol(keys,cs,era,ty,C,fam){
   return keys.filter(k=>cs[k].length).map(k=>`<div style="margin:0 0 12px">
     <div style="text-align:center;border-top:2px solid ${C.ink};border-bottom:2px solid ${C.ink};padding:3px 0 2px;margin-bottom:4px"><span data-fs="22" data-min="16" style="font:${ty.cw} 22px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;color:${C.ink}">${fam&&LABEL_DRY[k]||LABEL[k]}</span></div>
-    ${cs[k].map((it,i)=>`<div ${i?`data-drop="${i+1}"`:""}><div style="display:flex;gap:10px;align-items:baseline;margin-top:5px"><span data-fs="26" data-min="18" style="flex:1;font:${ty.dishW} 26px ${ty.dish};line-height:1.1">${T(it.n)}</span><span data-fs="26" data-min="18" style="font:${ty.dishW} 26px ${ty.dish};white-space:nowrap;color:${C.ink}">${price(k,i,era)}</span></div>
+    ${cs[k].map((it,i)=>`<div ${i?`data-drop="${i+1}"`:""}><div style="display:flex;gap:10px;align-items:baseline;margin-top:5px"><span data-fs="26" data-min="18" style="flex:1;font:${ty.dishW} 26px ${ty.dish};line-height:1.1">${T(it.n)}</span><span data-fs="26" data-min="18" style="font:${ty.dishW} 26px ${ty.dish};white-space:nowrap;color:${C.ink}">${(cs._p?cs._p[k][i]:price(k,i,era))}</span></div>
       ${it.note?`<div data-note data-fs="20" data-min="16" style="font:italic ${ty.bw} 20px ${ty.body};line-height:1.2;opacity:.85">${T(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`).join("")}
   </div>`).join("");
 }
@@ -218,6 +218,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const ty=TYPE[E.g],P=PAPER[E.g];
   const C=inks(ctx.palette,P.bg,"#8c2a1a");
   const fam=isFamily(ctx.f),cs=courses(ctx.menu,fam),F=flav(ctx,FB),V=VOICE[tone];
+  /* the shared price check: Doc's rye old fashioned never sits under the peach pie (Tombstone) */
+  if(window.priceSense){const P={};for(const k of ["s","m","w","d"])P[k]=cs[k].map((x,i)=>price(k,i,era));cs._p=window.priceSense(cs,P)}
   const ph=heroes(ctx),year=String(ctx.f.year||"");
   const seed=[...String(ctx.f.title||"x")].reduce((a,c)=>a+c.charCodeAt(0),0)%97;
   const filt=`${E.photo} ${TN.photo} ${E.g<2?"sepia(.25)":""}`;

@@ -134,7 +134,7 @@ const DRY=[
 /* single-word swaps keep the capital at the start of a name ("Sparkling apple punch") */
 DRY.forEach(r=>{const v=r[1];if(typeof v==="string"&&!v.includes("$"))r[1]=m=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v});
 const dry=s=>DRY.reduce((a,[r,t])=>a.replace(r,t),s);
-const trunc=(s,n)=>{s=clean(s);if(s.length<=n)return s;const c=s.slice(0,n);const i=c.lastIndexOf(" ");return (i>n*.5?c.slice(0,i):c).replace(/[,;:]$/,"")};
+const trunc=(s,n)=>{s=clean(s);if(s.length<=n)return s;const c=s.slice(0,n);const i=c.lastIndexOf(" ");const o=(i>n*.5?c.slice(0,i):c).replace(/[,;:]$/,"");return typeof noDangle==="function"?noDangle(o):o};
 /* notes that do not fit are cut back to their first clause, or left off; never cut mid thought */
 const clip=(s,n)=>{s=clean(s);if(s.length<=n)return s;const p=s.split(/(?<=[.!?;])\s/)[0].replace(/[.;]$/,"").trim();return p.length<=n&&p.length>=12?p:""};
 /* real layout height of a block at a given width, measured off screen; null when there is no document */
@@ -327,6 +327,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(num))?null:num.length>=3&&num.length<=4?`${+num.slice(0,-2)}.${num.slice(-2)}`:num.length<=2?`${+num}.00`:null;
   courses.forEach((c,i)=>c.items=c.items.map((it,j)=>{const base=[6,14,7,3][["s","m","w","d"].indexOf(c.k)]+j*2;
     return {n:C(it.n),note:C(it.note),p:(c.k==="m"&&j===0&&numPrice)?numPrice:periodPrice([3.95,8.95,4.5,1.95][["s","m","w","d"].indexOf(c.k)]*(1+j*.12),f.year,strSeed(it.n))}}));
+  /* the cooked main is the dearest main: a card extra never prices above it (Hocus Pocus 2), then the shared price check over the card */
+  {const pv=x=>{const n=parseFloat(String(x).replace(/[^\d.]/g,""));return /¢/.test(x)?n/100:n},mc=courses.find(c=>c.k==="m");
+   if(mc&&mc.items.length>1){const v0=pv(mc.items[0].p);if(v0>=2)mc.items.forEach((it,j)=>{if(j&&pv(it.p)>=v0){const v=Math.max(1,Math.floor(v0*(.9-.05*j)));it.p=v+(v<10?".95":".50")}})}
+   if(window.priceSense){const P={},M={};courses.forEach(c=>{P[c.k]=c.items.map(x=>x.p);M[c.k]=c.items});const Q=window.priceSense(M,P);courses.forEach(c=>c.items.forEach((x,j)=>x.p=Q[c.k][j]))}}
   /* header block */
   const hdrKick=venue.toUpperCase();
   const hk=fitType(hdrKick,RW,44,.62,17,15,1.2,2);

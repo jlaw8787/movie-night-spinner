@@ -128,6 +128,8 @@ window.MENU_FORMATS[ID]=ctx=>{
    const ds=(menu.d||[]).slice(0,4),plain=Math.max(0,...ds.map((x,i)=>SPIRIT.test(x.n+" "+(x.note||""))?0:PR.d[i]));PR.d=PR.d.map((v,i)=>SPIRIT.test(ds[i].n+" "+(ds[i].note||""))&&v<=plain?rnd(plain*1.3):v)}
   const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({n:dry(x.n,fam),note:dry(x.note,fam),p:PR[k][i]}));
   const I={s:items("s"),m:items("m"),w:items("w"),d:items("d")};
+  /* then the shared check, so a cocktail also sits above the sweets (Police Academy's blue lagoon) */
+  if(window.priceSense){const P={},M={};for(const k in I){M[k]=I[k];P[k]=I[k].map(x=>money(x.p,era))}const Q=window.priceSense(M,P);for(const k in I)I[k].forEach((x,i)=>{x.ps=Q[k][i]})}
   const photoF=`${g.photo} ${t.photo}`;
   const winks=(fl.winks||[]).slice(0,5);
   const voice=t.voice;
@@ -214,7 +216,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* tray */
   const row=it=>`<div style="margin:0 0 calc(8px*var(--k))"><div style="display:flex;align-items:baseline;gap:10px">
       <span ${A}-name style="flex:1;font:700 max(16px,calc(25px*var(--k)))/1.12 ${g.body};color:${cellInk}">${esc(it.n)}</span>
-      <span style="font:${g.dw} max(16px,calc(25px*var(--k)))/1.1 ${g.disp};color:${cAcc};white-space:nowrap">${money(it.p,era)}</span></div>
+      <span style="font:${g.dw} max(16px,calc(25px*var(--k)))/1.1 ${g.disp};color:${cAcc};white-space:nowrap">${it.ps||money(it.p,era)}</span></div>
     ${it.note?`<div ${A}-note style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin-top:2px;font:500 max(14px,calc(19px*var(--k)))/1.25 ${g.body};color:${sub}">${esc(it.note)}</div>`:""}</div>`;
   const comp=(k,grow)=>I[k].length?`<div style="flex:${grow} 1 0;min-width:0;box-sizing:border-box;padding:calc(12px*var(--k)) 16px calc(8px*var(--k));background:${cell};border-radius:${g.radius}px;box-shadow:inset 0 3px 8px rgba(0,0,0,.28),inset 0 -2px 0 rgba(255,255,255,.5)">
       <div style="margin-bottom:calc(6px*var(--k));font:700 max(14px,calc(17px*var(--k))) ${g.body};letter-spacing:.2em;text-transform:uppercase;color:${cAcc}">${esc(C[k])}</div>${I[k].map(row).join("")}</div>`:"";

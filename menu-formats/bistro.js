@@ -277,11 +277,13 @@ window.MENU_FORMATS[ID]=ctx=>{
     ${paperLayers(t,dark,H)}${borderHTML(P.border,K.acc,T.gilt,P.border==="double"?10:0)}${inner}</div>`;
   const price=(k,i)=>{const base={s:[11,13,12,15],m:[26,29,24,32],w:[10,12,11,13],d:[8,10,9,12]}[k][i%4];
     if(k==="m"&&i===0&&F.num)return eggPrice(base,F.num,yy,era);if(k==="w"&&i===0)return eggPrice(base,"",yy,era);return money(base,era)};
+  /* "Dîner pour deux" only over a French room or a date-night restaurant, never a tailor or a date doctor's office */
+  const voice=VOICE[t]!=="Dîner pour deux"?VOICE[t]:/\b(paris|france|french|chez|le|la|didier|brasserie|bistro)\b/i.test(F.venue+" "+F.sign)||ctx.f.theme==="romcom"&&/\b(restaurant|dining|bistro|caf[eé]|terrace|supper|dinner)\b/i.test(F.venue+" "+F.sign)?VOICE[t]:"A table for two";
   const kick=(s,col)=>`<div data-fs="14" style="font:700 18px/1.15 ${B};letter-spacing:.22em;text-transform:uppercase;color:${col||K.acc}">${esc(s)}</div>`;
 
   /* ---- front: sign, hero still, logo panel, specials board, house note, reservation card ---- */
   const header=`<div data-fbox style="position:absolute;left:44px;right:44px;top:38px;height:122px;text-align:center;display:flex;flex-direction:column;justify-content:safe center;overflow:hidden">
-    ${kick(VOICE[t])}
+    ${kick(voice)}
     <div data-fline="2" data-fs="26" style="${dispStyle}font-size:${F.venue.length>26?40:48}px;line-height:1.02;color:${K.ink};margin-top:6px;${inkSpread}${L.ital&&!L.caps?"font-style:italic;":""}">${esc(F.venue)}</div>
     <div data-fs="15" style="font:italic 400 19px/1.2 ${B};color:${K.soft};margin-top:6px">${esc(F.sign)}</div></div>`;
   const heroH=446,heroTop=170;
