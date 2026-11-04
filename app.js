@@ -1051,11 +1051,11 @@ function planQty(q,u){
 }
 const UNITB={g:["g",1],kg:["g",1000],ml:["ml",1],l:["ml",1000]};
 const PL_CONT=/^(bag|can|tin|bottle|jar|packet|pack|bunch|bunche|clove|rasher|slice|sprig|stick|sheet|block|head|stalk|punnet|loaf|loave|fillet|piece|wedge|strip|scoop|shot|glass|glasse|cup|leaf|leave|tray|box|boxe|carton|tub|round|ball|sachet|pinch|pinche|handful|drop|dash|dashe|tube|splash|splashe|knob|dollop|cube|wheel|twist|square|ear|stem|rib|cob|sprinkle|log|disc|tablet|envelope|tray|container|pot|roll)s?$/i;
-const PL_MASS=/(thyme|rosemary|mint|parsley|basil|coriander|dill|chives|oregano|sage|tarragon|paprika|cinnamon|nutmeg|cumin|turmeric|allspice|colouring|coloring|paste|sauce|syrup|honey|vinegar|stock|yoghurt|yogurt|mayonnaise|mustard|ketchup|jam|chocolate|cocoa|spinach|lettuce|garlic|ginger|salt|ice cream|custard|gravy|cordial|lemonade|chilli flakes|seasoning|spice|zest|ice)$/i;
+const PL_MASS=/(thyme|rosemary|mint|parsley|basil|coriander|dill|chives|oregano|sage|tarragon|paprika|cinnamon|nutmeg|cumin|turmeric|allspice|colouring|coloring|paste|sauce|syrup|honey|vinegar|stock|yoghurt|yogurt|mayonnaise|mustard|ketchup|jam|chocolate|cocoa|spinach|garlic|ginger|salt|ice cream|custard|gravy|cordial|lemonade|chilli flakes|seasoning|spice|zest|ice)$/i;
 function planPlural(item,q){if(!(q>1))return item;if(/^cob loa(f|ves)\b/i.test(item))return String(item).replace(/^cob loa(f|ves)/i,"cob loaves");let [head,...rest]=String(item).split(",");const par=head.indexOf(" (");if(par>0){rest=[head.slice(par)+(rest.length?","+rest.join(","):"")];head=head.slice(0,par);return planPlural(head,q)+rest[0]}const w=head.trim().split(" ");
   const pl=x=>/(s|ice|milk|water|juice|sugar|flour|rice|bread|butter|cream|cheese|fish|corn|meat|oil|salt|pepper|mince|beef|pork|lamb|chicken|bacon|ham|tea|coffee|soda)$/i.test(x)?x:/(ch|sh|x)$/i.test(x)?x+"es":/(tomato|potato|mango|avocado)$/i.test(x)?x+"es":/[^aeiou]y$/i.test(x)?x.slice(0,-1)+"ies":/f$/i.test(x)&&/loaf|leaf|half/i.test(x)?x.slice(0,-1)+"ves":x+"s";
   /* "rib eye", "ear of corn" style names are the food, not a container: "rib" only counts when it is "rib of" or "ribs" */
-  const ci=w.slice(0,3).findIndex((x,i)=>PL_CONT.test(x)&&!(/^(rib|ear|head|wheel|log)$/i.test(x)&&w[i+1]&&w[i+1]!=="of"&&w[i+1]!=="celery"));
+  const ci=w.slice(0,3).findIndex((x,i)=>PL_CONT.test(x)&&!(i>0&&/^fillets?$/i.test(x))&&!(/^(rib|ear|head|wheel|log)$/i.test(x)&&w[i+1]&&w[i+1]!=="of"&&w[i+1]!=="celery"));
   if(ci>=0){if(!/s$/i.test(w[ci]))w[ci]=pl(w[ci]);if(w.length>ci+1&&w[ci+1]!=="of")w[ci]+=" of"}else if(!PL_MASS.test(head.trim()))w[w.length-1]=pl(w[w.length-1]);return [w.join(" "),...rest].join(",")}
 /* one of something stays singular even when the recipe wrote it plural: "1 clove garlic", not "1 cloves garlic" */
 function planOne(item){let [head,...rest]=String(item).split(",");const par=head.indexOf(" (");let tail="";if(par>0){tail=head.slice(par);head=head.slice(0,par)}
@@ -1067,7 +1067,7 @@ function planOne(item){let [head,...rest]=String(item).split(",");const par=head
   return [w.join(" ")+tail,...rest].join(",")}
 /* one shopping line per ingredient: the same item from two dishes is added up, and a mix of units shows as "100g + 2 tbsp" */
 const planSing=w=>/ies$/.test(w)?w.slice(0,-3)+"y":/(ch|sh|x|ss|o)es$/.test(w)?w.slice(0,-2):/[^s]s$/.test(w)?w.slice(0,-1):w;
-const planKey=item=>String(item).toLowerCase().split(/,| \(/)[0].replace(/\s+/g," ").trim().replace(/^((cold|chilled|fresh|warm|hot|room temperature|softened|melted|extra|full cream|whole|unsalted|salted|free-range|large|medium)\s+)+/,"").replace(/\s+(slices|sliced|pieces)$/,"").split(" ").map(planSing).join(" ");
+const planKey=item=>String(item).toLowerCase().split(/,| \(/)[0].replace(/\s+/g," ").trim().replace(/^((cold|chilled|fresh|warm|hot|room temperature|softened|melted|extra|full cream|whole|unsalted|salted|free-range|large|medium|ripe)\s+)+/,"").replace(/\s+(slices|sliced|pieces)$/,"").split(" ").map(planSing).join(" ");
 function planShopping(f){const k=PLAN.guests/((f._r2&&f._r2.serves)||4),ds=planDishes(f),base=ds.filter(d=>!d.extra);
   /* the card's extra dishes list shop lines like "100g butter" with no tested scaling: the amount is split out so anything a measured recipe
      already buys merges into that one line; the rest gets its own group so the main list stays exact */
@@ -1105,9 +1105,13 @@ function shopLines(list){
     if(i.q==null){t.open=true;continue}
     const u=b[0]==="#"?"":b[0];if(!(u in t.parts)){t.parts[u]=0;t.order.push(u)}if(FRY_RE.test(i.item))t.parts[u]=Math.max(t.parts[u],ingQ(i,k)*b[1]);else t.parts[u]+=ingQ(i,k)*b[1];
   }
-  return order.map(key=>{const t=tally[key];
-    /* two different cuts of the same thing ("lemon, juiced" and "lemons") share the plain name */
-    const item=t.items.size>1?String(t.item).split(/,| \(/)[0].trim():t.item;
+  const lines=order.map(key=>{const t=tally[key];
+    /* two different cuts of the same thing ("lemon, juiced" and "lemons") share the plain name; prep words ("shredded", "juiced", "to taste") stay in the method */
+    let item=t.items.size>1?String(t.item).split(/,| \(/)[0].trim():t.item;
+    for(let g=0;g<4&&PREP_TAIL.test(item);g++)item=item.replace(PREP_TAIL,"");
+    /* salt and pepper are in every kitchen: listed so you check, never measured */
+    if(STAPLE_RE.test(planKey(item)))return item+"@"+t.a;
+    for(const u of ["tsp","tbsp"])if(u in t.parts){const q=t.parts[u];t.parts[u]=q<1?Math.ceil(q*4-0.01)/4:Math.ceil(q*2-0.01)/2}
     if("tsp" in t.parts&&"tbsp" in t.parts){t.parts.tbsp+=t.parts.tsp/3;delete t.parts.tsp;t.order=t.order.filter(u=>u!=="tsp")}
     /* spoons and cups next to a weight or volume fold into it, so the line reads as one amount ("375g caster sugar", not "1 tsp + 370g") */
     for(const base of ["ml","g"])if(base in t.parts){const per=base==="ml"?{tsp:5,tbsp:15,cup:250}:{tsp:4,tbsp:12,cup:200};
@@ -1128,12 +1132,19 @@ function shopLines(list){
     const count=""in t.parts?planQty(t.parts[""],"")+" "+(t.parts[""]>1.01?planPlural(item,t.parts[""]):planOne(item)):"";
     const rest=t.order.filter(u=>u!=="").map(u=>planQty(t.parts[u],u)).join(" + ");
     return (count?count+(rest?" + "+rest:""):rest+" "+item)+"@"+t.a});
+  /* green and ripe of the same fruit share one line: "3 mangoes, 1 green" */
+  for(let i=0;i<lines.length;i++){const m=lines[i].match(/^(\d+) green (mango(es)?|papayas?|tomato(es)?|bananas?|apples?|capsicums?)@(.+)$/i);if(!m)continue;
+    const base=planSing(m[2].toLowerCase()).replace(/^mangoe$/,"mango").replace(/^tomatoe$/,"tomato"),j=lines.findIndex((l,x)=>x!==i&&new RegExp("^(\\d+) "+base+"(e?s)?@"+m[5]+"$","i").test(l));if(j<0)continue;
+    const n=+lines[j].match(/^\d+/)[0]+ +m[1];lines[j]=`${n} ${planPlural(base,n)}, ${m[1]} green@${m[5]}`;lines.splice(i,1);i--}
+  return lines;
 }
+const PREP_TAIL=/,\s*((finely|thinly|roughly|coarsely|lightly|freshly|very)\s+)?(shredded|juiced|zested|sliced|chopped|diced|grated|halved|quartered|peeled|minced|crushed|torn|cubed|julienned|deseeded|seeded|cored|trimmed|picked|rinsed|drained|beaten|melted|softened|to taste|to serve|for serving|plus extra|cut into [^,]+|at room temperature)(\s+and\s+(shredded|juiced|zested|sliced|chopped|diced|grated|halved|quartered|peeled|minced|crushed|deseeded|cored|trimmed))?\s*$/i;
+const STAPLE_RE=/^(salt|sea salt|table salt|cooking salt|fine salt|kosher salt|flaky salt|salt flake|sea salt flake|pepper|black pepper|ground black pepper|cracked black pepper|white pepper|salt and pepper|salt and black pepper|salt and freshly ground black pepper)$/;
 /* waiting time (chilling, soaking, resting, setting) is shown apart from hands-on and cooking time */
 const WAIT_RE=/^(chill|refrigerate|freeze|soak|marinate|rest|cool|prove|steep|leave|let|set aside|stand|infuse|steep|drain|set|churn|rise)\b|\b(in the fridge|overnight|to set|until set|to rest|to cool|to chill|to prove|to rise|to soak|to marinate|to steep|to infuse|to drain|until doubled|doubled in size|an hour before|hours before|an hour ahead|hours ahead|to room temperature for|come to room temperature|wait for|chill until|until firm|until cold|until solid|for the setting)\b|\b(and|then) (chill|refrigerate|freeze|set|leave to set|cool)\b|\bin the freezer\b|\bdoubled\b|\b(chill|refrigerate|rest|set|freeze|soak|marinate|drain) (\d+|an?|one|two|three) (hours?|hrs?|minutes?|mins?)\b|\b(cure|age|ferment|pickle|steep|infuse|macerate)\w*\b[^.]{0,40}\bfor (\d+|an?|one|two|three|several)( to \d+)? (days?|weeks?)\b|\b(dry|leave|cool) (it |them )?in the (turned-off |switched-off )?oven\b|\boven (off|turned off)\b|\b(part|half|semi)[- ]?freez\w*|\b(leave|keep|store|rest|sit)\b[^.]{0,30}\b(a|one|two|three|four|\d+) (weeks?|days?)\b\b|\b(drain|chill|refrigerat|freez|set|rest|soak|marinat|prove|rise|stand|steep|infus|churn|cool)\w*\b[^.]{0,50}\bfor (at least |about |up to )?(\d+|an?|one|two|three|four|five|six|several)( to \d+)? (hours?|hrs?|minutes?|mins?|days?)\b/i;
 /* hands-on time grows by half for each extra batch (k = guests / serves); cooking and waiting stay the same */
 /* a note for non-drinkers or kids is a tip, not a timed step */
-const TIP_RE=/\b(for the kids|for kids|non-drinkers?|for drivers|alcohol-free (version|ones?|jug)|soda only for|without the (rum|vodka|gin|whisky|bourbon|tequila|wine|beer|booze))\b/i;
+const TIP_RE=/\b(for the kids|for kids|non-drinkers?|for drivers|alcohol-free (version|ones?|jug)|to make (it|them|this|one) (alcohol-free|non-alcoholic|booze-free)|soda only for|without the (rum|vodka|gin|whisky|bourbon|tequila|wine|beer|booze))\b/i;
 /* split a step into the instruction and any tip sentence; a step that is only a tip has no time */
 /* a bake scaled past one and a half times goes in batches: same tins, same time, not one overloaded tin */
 const BAKE_RE=/\b(cake tins?|loaf tins?|baking (tin|dish|tray)|pie dish|tart tin|springform|muffin tin|lamington tin|slice tin|sandwich tins?|tins?)\b/i;
