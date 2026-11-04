@@ -109,8 +109,97 @@
    "af": true
   },
   {
-   "n": "Gallipoli Anzac biscuits",
+   "n": "Istanbul hotel red lentil soup",
    "course": "s",
+   "prep_min": 10,
+   "cook_min": 28,
+   "make_ahead": "Make up to 3 days ahead; thin with water when reheating",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "red lentils, rinsed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "tomato paste",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground cumin",
+     "aisle": "Spices"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "flatbreads",
+     "aisle": "Bakery"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the onion and carrot in half the butter for 6 minutes, then stir in the tomato paste and cumin.",
+     "min": 8
+    },
+    {
+     "text": "Add the lentils and stock and simmer 20 minutes until the lentils fall apart.",
+     "min": 20
+    },
+    {
+     "text": "Blend smooth and season.",
+     "min": 3
+    },
+    {
+     "text": "Melt the rest of the butter with the paprika and drizzle over each bowl. Serve with lemon wedges and warm flatbread.",
+     "min": 4
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Gallipoli Anzac biscuits",
+   "course": "w",
    "prep_min": 20,
    "cook_min": 31,
    "make_ahead": "Up to 1 week, keep airtight",

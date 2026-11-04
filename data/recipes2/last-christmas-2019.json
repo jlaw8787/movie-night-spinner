@@ -194,8 +194,77 @@
    }
   },
   {
-   "n": "Santa's shop mince pies with orange cream",
+   "n": "Petra's cheese burek",
    "course": "s",
+   "prep_min": 22,
+   "cook_min": 40,
+   "make_ahead": "Assemble up to 4 hours ahead in the fridge; bake to serve",
+   "ingredients": [
+    {
+     "q": 375,
+     "u": "g",
+     "item": "filo pastry",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "feta, crumbled",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "cottage cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter, melted",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 190C and butter a 25cm round tin.",
+     "min": 3
+    },
+    {
+     "text": "Mix the feta, cottage cheese and eggs.",
+     "min": 3
+    },
+    {
+     "text": "Brush two filo sheets with butter, lay one on the other, spoon a line of filling along one long edge and roll into a log.",
+     "min": 12
+    },
+    {
+     "text": "Coil the logs into the tin from the middle out and brush the top with butter.",
+     "min": 4
+    },
+    {
+     "text": "Bake 35 to 40 minutes until deep golden. Rest 10 minutes and serve in wedges with yoghurt.",
+     "min": 48
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Santa's shop mince pies with orange cream",
+   "course": "w",
    "prep_min": 35,
    "cook_min": 8,
    "make_ahead": "Bake the pies up to 2 days ahead, airtight, and warm in a 160C oven for 5 minutes; whip the brandy cream on the day",

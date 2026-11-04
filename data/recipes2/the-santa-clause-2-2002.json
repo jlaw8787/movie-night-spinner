@@ -3,7 +3,7 @@
  "dishes": [
   {
    "n": "North Pole elf cookies",
-   "course": "s",
+   "course": "w",
    "prep_min": 40,
    "cook_min": 40,
    "make_ahead": "Up to 3 days, keep in an airtight container",
@@ -136,6 +136,83 @@
     {
      "text": "Roll the ball in the walnut mix until coated and serve with crackers.",
      "min": 3
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "North Pole pumpkin and sage soup",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 42,
+   "make_ahead": "Make the soup up to 2 days ahead; fry the sage to serve",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "pumpkin, peeled and cubed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, quartered",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "sage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "pepitas",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Roast the pumpkin and onion with the oil and salt for 35 minutes.",
+     "min": 37
+    },
+    {
+     "text": "Blend with the stock until smooth, then heat through with the cream. Season.",
+     "min": 8
+    },
+    {
+     "text": "Fry the sage leaves in the butter until crisp and toast the pepitas in the same pan.",
+     "min": 5
+    },
+    {
+     "text": "Serve topped with the sage butter and pepitas.",
+     "min": 2
     }
    ],
    "veg": true,

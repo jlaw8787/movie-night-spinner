@@ -236,8 +236,178 @@
    }
   },
   {
-   "n": "Break room cinnamon jam doughnuts",
+   "n": "Dive bar buffalo chicken wings",
    "course": "s",
+   "prep_min": 14,
+   "cook_min": 45,
+   "make_ahead": "Make the dip up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 1.2,
+     "u": "kg",
+     "item": "chicken wings, jointed",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "baking powder",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "hot sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 50,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "blue cheese",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "celery sticks",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 230C. Pat the wings dry and toss with the baking powder and salt.",
+     "min": 5
+    },
+    {
+     "text": "Bake on a rack over a tray for 45 minutes, turning once, until crisp.",
+     "min": 45
+    },
+    {
+     "text": "Melt the butter with the hot sauce and toss the wings through.",
+     "min": 3
+    },
+    {
+     "text": "Mash the blue cheese into the sour cream with a squeeze of lemon.",
+     "min": 3
+    },
+    {
+     "text": "Serve with the dip and celery sticks.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Dive bar buffalo cauliflower bites",
+     "prep_min": 12,
+     "cook_min": 25,
+     "make_ahead": "Make the dip up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "",
+       "item": "cauliflower, cut into florets",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 150,
+       "u": "ml",
+       "item": "milk",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "garlic powder",
+       "aisle": "Spices"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "hot sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 50,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "blue cheese",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "celery sticks",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven to 230C. Whisk the flour, milk, garlic powder and salt into a batter and coat the florets.",
+       "min": 8
+      },
+      {
+       "text": "Bake on a lined tray for 25 minutes, turning once, until crisp.",
+       "min": 25
+      },
+      {
+       "text": "Melt the butter with the hot sauce and toss the cauliflower through.",
+       "min": 3
+      },
+      {
+       "text": "Mash the blue cheese into the sour cream with a squeeze of lemon and serve with the celery.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Break room cinnamon jam doughnuts",
+   "course": "w",
    "prep_min": 40,
    "cook_min": 80,
    "make_ahead": "Best eaten the same day",

@@ -3,7 +3,7 @@
  "dishes": [
   {
    "n": "Pistachio chocolate-dipped strawberries",
-   "course": "s",
+   "course": "w",
    "prep_min": 25,
    "cook_min": 20,
    "make_ahead": "Dip and chill up to 4 hours ahead, kept on baking paper in the fridge",
@@ -136,6 +136,87 @@
     {
      "text": "Spread the toasts with the cheese, drizzle with hot honey and scatter with thyme leaves and edible flowers.",
      "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Reed's flower shop zucchini flowers",
+   "course": "s",
+   "prep_min": 16,
+   "cook_min": 12,
+   "make_ahead": "Fill the flowers up to 3 hours ahead; batter and fry to serve",
+   "ingredients": [
+    {
+     "q": 12,
+     "u": "",
+     "item": "zucchini flowers",
+     "aisle": "Produce"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "ricotta",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 170,
+     "u": "ml",
+     "item": "cold soda water",
+     "aisle": "Drinks"
+    },
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the ricotta, parmesan, lemon zest, chopped basil and pepper.",
+     "min": 4
+    },
+    {
+     "text": "Remove the stamens and spoon a little filling into each flower, twisting the petals closed.",
+     "min": 10
+    },
+    {
+     "text": "Whisk the flour and cold soda water into a thin batter.",
+     "min": 2
+    },
+    {
+     "text": "Heat the oil to 180C. Dip the flowers in batter and fry in batches for 2 to 3 minutes until crisp. Drain.",
+     "min": 12
+    },
+    {
+     "text": "Salt lightly and serve with lemon wedges.",
+     "min": 2
     }
    ],
    "veg": true,

@@ -132,8 +132,138 @@
    }
   },
   {
-   "n": "Professor's house scones",
+   "n": "Mr Tumnus's sardines on toast",
    "course": "s",
+   "prep_min": 8,
+   "cook_min": 7,
+   "make_ahead": "Mash the sardines up to 4 hours ahead; toast and grill to serve",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "tins sardines in olive oil (110g each)",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "flat-leaf parsley",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "shallot, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices wholemeal bread",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Drain the sardines and mash roughly with the lemon zest, a squeeze of juice, the shallot, chopped parsley and pepper.",
+     "min": 5
+    },
+    {
+     "text": "Toast the bread and butter it while hot.",
+     "min": 5
+    },
+    {
+     "text": "Pile the sardines on the toast and grill 2 minutes until hot.",
+     "min": 3
+    },
+    {
+     "text": "Cut into fingers and serve with lemon wedges.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mr Tumnus's mushrooms on toast",
+     "prep_min": 8,
+     "cook_min": 10,
+     "make_ahead": "Best cooked just before serving",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "mixed mushrooms, sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "bunch",
+       "item": "flat-leaf parsley",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices wholemeal bread",
+       "aisle": "Bakery"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Fry the mushrooms in half the butter over high heat for 6 minutes until golden.",
+       "min": 8
+      },
+      {
+       "text": "Add the garlic for a minute, then a squeeze of lemon, chopped parsley and seasoning.",
+       "min": 3
+      },
+      {
+       "text": "Toast the bread and butter it while hot.",
+       "min": 5
+      },
+      {
+       "text": "Pile on the mushrooms and cut into fingers.",
+       "min": 2
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Professor's house scones",
+   "course": "w",
    "prep_min": 18,
    "cook_min": 15,
    "make_ahead": "Same day, best warm",

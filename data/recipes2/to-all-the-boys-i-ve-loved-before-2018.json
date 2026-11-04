@@ -2,8 +2,101 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Korean yoghurt drink ice blocks",
+   "n": "Covey kitchen kimchi pancakes",
    "course": "s",
+   "prep_min": 9,
+   "cook_min": 16,
+   "make_ahead": "Best fried just before serving",
+   "ingredients": [
+    {
+     "q": 300,
+     "u": "g",
+     "item": "vegetarian kimchi, chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "kimchi juice",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "rice flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "ml",
+     "item": "cold water",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "spring onions, cut in lengths",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "rice vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "toasted sesame seeds",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the flours, cold water, kimchi and kimchi juice into a thick batter, then stir in the spring onions.",
+     "min": 5
+    },
+    {
+     "text": "Heat half the oil in a large frying pan and spread in half the batter thinly.",
+     "min": 2
+    },
+    {
+     "text": "Fry 4 minutes until crisp underneath, flip and cook 3 minutes more. Repeat.",
+     "min": 16
+    },
+    {
+     "text": "Mix the soy sauce, vinegar and sesame seeds for dipping.",
+     "min": 2
+    },
+    {
+     "text": "Cut the pancakes into wedges and serve hot.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Korean yoghurt drink ice blocks",
+   "course": "w",
    "prep_min": 20,
    "cook_min": 360,
    "make_ahead": "Freeze for at least 6 hours; keeps up to 2 weeks frozen, run under warm water to release",
@@ -78,7 +171,7 @@
   },
   {
    "n": "Peppermint choc dipped marshmallows",
-   "course": "s",
+   "course": "w",
    "prep_min": 10,
    "cook_min": 25,
    "make_ahead": "Up to 2 days, airtight",

@@ -2,8 +2,138 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Fried choux crullers",
+   "n": "Emerald City pea and mint soup",
    "course": "s",
+   "prep_min": 8,
+   "cook_min": 16,
+   "make_ahead": "Make up to a day ahead and cool quickly to keep the colour; reheat gently",
+   "ingredients": [
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "garlic clove, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 750,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable stock",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "bunch",
+     "item": "mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the onion and garlic in the butter for 6 minutes.",
+     "min": 8
+    },
+    {
+     "text": "Add the stock and bring to the boil, then the peas, and simmer 4 minutes.",
+     "min": 8
+    },
+    {
+     "text": "Add most of the mint leaves and blend until smooth and very green. Season.",
+     "min": 4
+    },
+    {
+     "text": "Serve with a swirl of cream and the rest of the mint.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Munchkinland cheese straws",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 14,
+   "make_ahead": "Bake up to 2 days ahead and keep in a tin",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "sheets frozen puff pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "vintage cheddar, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, finely grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C and line two trays.",
+     "min": 3
+    },
+    {
+     "text": "Brush one pastry sheet with egg, scatter with the cheeses and paprika, and lay the second sheet on top. Press down.",
+     "min": 4
+    },
+    {
+     "text": "Cut into 1.5cm strips and twist each one.",
+     "min": 8
+    },
+    {
+     "text": "Bake 12 to 14 minutes until puffed and golden. Cool on the trays.",
+     "min": 14
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Fried choux crullers",
+   "course": "w",
    "prep_min": 30,
    "cook_min": 12,
    "make_ahead": "Same day",
@@ -84,7 +214,7 @@
   },
   {
    "n": "Homemade hard candy lollipops",
-   "course": "s",
+   "course": "w",
    "prep_min": 10,
    "cook_min": 45,
    "make_ahead": "Up to 1 week, wrapped",

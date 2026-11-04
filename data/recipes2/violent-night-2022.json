@@ -142,8 +142,158 @@
    }
   },
   {
-   "n": "Naughty list brown butter shortbread",
+   "n": "Lightstone mansion prawn cocktail",
    "course": "s",
+   "prep_min": 16,
+   "cook_min": 0,
+   "make_ahead": "Make the sauce up to 2 days ahead; build the glasses just before serving",
+   "ingredients": [
+    {
+     "q": 600,
+     "u": "g",
+     "item": "cooked king prawns, peeled",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "baby cos lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "avocado",
+     "aisle": "Produce"
+    },
+    {
+     "q": 125,
+     "u": "g",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "tomato sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sweet paprika",
+     "aisle": "Spices"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the mayonnaise, tomato sauce, Worcestershire, a squeeze of lemon and a pinch of paprika.",
+     "min": 3
+    },
+    {
+     "text": "Shred the cos and dice the avocado.",
+     "min": 5
+    },
+    {
+     "text": "Pile the cos and avocado into four glasses and top with the prawns.",
+     "min": 5
+    },
+    {
+     "text": "Spoon over the sauce and dust with paprika. Serve with lemon wedges.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Lightstone mansion avocado and palm heart cocktail",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "Make the sauce up to 2 days ahead",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "avocados",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "tin hearts of palm (400g), drained",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "cherry tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "baby cos lettuce",
+       "aisle": "Produce"
+      },
+      {
+       "q": 125,
+       "u": "g",
+       "item": "whole egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "tomato sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "sweet paprika",
+       "aisle": "Spices"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Mix the mayonnaise, tomato sauce, a squeeze of lemon and a pinch of paprika.",
+       "min": 3
+      },
+      {
+       "text": "Slice the palm hearts, halve the tomatoes, dice the avocado and shred the cos.",
+       "min": 8
+      },
+      {
+       "text": "Layer into four glasses, spoon over the sauce and dust with paprika.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
+   "n": "Naughty list brown butter shortbread",
+   "course": "w",
    "prep_min": 30,
    "cook_min": 90,
    "make_ahead": "Up to 5 days, keep in an airtight container",

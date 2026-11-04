@@ -3,7 +3,7 @@
  "dishes": [
   {
    "n": "St Bernadette's staffroom mince pies",
-   "course": "s",
+   "course": "w",
    "prep_min": 35,
    "cook_min": 8,
    "make_ahead": "Bake up to 2 days ahead, airtight, and rewarm in a low oven; dust with icing sugar and whip the cream on the day",
@@ -320,6 +320,71 @@
      "af": true
     }
    }
+  },
+  {
+   "n": "Coventry cheese and onion pasties",
+   "course": "s",
+   "prep_min": 20,
+   "cook_min": 31,
+   "make_ahead": "Bake up to a day ahead and reheat in a warm oven",
+   "ingredients": [
+    {
+     "q": 3,
+     "u": "",
+     "item": "sheets frozen shortcrust pastry, thawed",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "potatoes, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "vintage cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "English mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg, beaten",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 200C. Boil the potatoes 6 minutes until just tender and drain.",
+     "min": 10
+    },
+    {
+     "text": "Mix the potatoes, onion, cheddar, mustard, salt and pepper.",
+     "min": 3
+    },
+    {
+     "text": "Cut 12cm rounds from the pastry, fill one side, fold over and crimp the edges.",
+     "min": 12
+    },
+    {
+     "text": "Brush with egg and bake 25 minutes until golden.",
+     "min": 25
+    }
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Coventry Christmas roast chicken dinner",
