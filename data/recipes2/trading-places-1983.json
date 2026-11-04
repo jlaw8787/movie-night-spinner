@@ -130,200 +130,73 @@
    }
   },
   {
-   "n": "Heritage Club Caesar",
+   "n": "Frozen orange juice shots",
    "course": "s",
-   "prep_min": 15,
-   "cook_min": 12,
-   "make_ahead": "Fry the croutons up to 1 day ahead and keep them airtight; dress the leaves at the table",
+   "prep_min": 5,
+   "cook_min": 5,
+   "make_ahead": "Chill the juice and the shot glasses up to 1 day ahead; blend with the ice and vodka just before serving",
    "ingredients": [
     {
-     "q": 2,
-     "u": "",
-     "item": "cos lettuces",
-     "aisle": "Produce"
-    },
-    {
-     "q": 200,
-     "u": "g",
-     "item": "sourdough loaf",
-     "aisle": "Bakery"
-    },
-    {
-     "q": 40,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "egg",
-     "aisle": "Dairy"
+     "q": 500,
+     "u": "ml",
+     "item": "orange juice",
+     "aisle": "Drinks"
     },
     {
      "q": 2,
-     "u": "",
-     "item": "garlic cloves",
-     "aisle": "Produce"
-    },
-    {
-     "q": 6,
-     "u": "",
-     "item": "anchovy fillets",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "lemon",
-     "aisle": "Produce"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "Worcestershire sauce",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "Dijon mustard",
-     "aisle": "Pantry"
+     "u": "cup",
+     "item": "ice",
+     "aisle": "Frozen"
     },
     {
      "q": 80,
      "u": "ml",
-     "item": "olive oil",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 60,
-     "u": "g",
-     "item": "parmesan",
-     "aisle": "Dairy"
+     "item": "vodka, optional",
+     "aisle": "Bottle shop"
     }
    ],
    "steps": [
     {
-     "text": "Tear the sourdough into small pieces and fry in the butter, tossing, until golden and crisp. Drain.",
-     "min": 10
-    },
-    {
-     "text": "Lower the egg into simmering water for 1 minute, then cool it under the tap.",
+     "text": "Blend the juice, ice and vodka until slushy.",
      "min": 3
     },
     {
-     "text": "Mash the garlic and anchovies to a paste in a big bowl. Crack in the coddled egg, add the lemon juice, Worcestershire and mustard, then whisk in the oil slowly until thick.",
-     "min": 6
-    },
-    {
-     "text": "Add the cos leaves, whole or torn, and toss at the table until every leaf is coated.",
-     "min": 3
-    },
-    {
-     "text": "Shave the parmesan over, scatter the croutons and serve straight away.",
-     "min": 3
+     "text": "Pour into shot glasses and serve straight away. Leave out the vodka for anyone not drinking.",
+     "min": 7
     }
    ],
-   "veg": false,
-   "af": true,
+   "veg": true,
+   "af": false,
    "alt": {
-    "veg": {
-     "n": "Heritage Club Caesar (vegetarian)",
-     "prep_min": 15,
-     "cook_min": 12,
-     "make_ahead": "Fry the croutons up to 1 day ahead and keep them airtight; dress the leaves at the table",
+    "af": {
+     "n": "Frozen orange juice shots",
+     "prep_min": 5,
+     "cook_min": 0,
+     "make_ahead": "Chill the juice and the glasses up to 1 day ahead in the fridge; blend with the ice and pour straight away",
      "ingredients": [
       {
-       "q": 2,
-       "u": "",
-       "item": "cos lettuces",
-       "aisle": "Produce"
-      },
-      {
-       "q": 200,
-       "u": "g",
-       "item": "sourdough loaf",
-       "aisle": "Bakery"
-      },
-      {
-       "q": 40,
-       "u": "g",
-       "item": "butter",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "egg",
-       "aisle": "Dairy"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "garlic cloves",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "tbsp",
-       "item": "capers, chopped",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "lemon",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "vegetarian Worcestershire sauce",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 1,
-       "u": "tsp",
-       "item": "Dijon mustard",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 80,
+       "q": 500,
        "u": "ml",
-       "item": "olive oil",
-       "aisle": "Pantry"
+       "item": "orange juice",
+       "aisle": "Drinks"
       },
       {
-       "q": 60,
-       "u": "g",
-       "item": "vegetarian hard cheese",
-       "aisle": "Dairy"
+       "q": 2,
+       "u": "cup",
+       "item": "ice",
+       "aisle": "Frozen"
       }
      ],
      "steps": [
       {
-       "text": "Tear the sourdough into small pieces and fry in the butter, tossing, until golden and crisp. Drain.",
-       "min": 10
-      },
-      {
-       "text": "Lower the egg into simmering water for 1 minute, then cool it under the tap.",
+       "text": "Blend the juice and ice until slushy.",
        "min": 3
       },
       {
-       "text": "Mash the garlic and capers to a paste in a big bowl. Crack in the coddled egg, add the lemon juice, Worcestershire and mustard, then whisk in the oil slowly until thick.",
-       "min": 6
-      },
-      {
-       "text": "Add the cos leaves, whole or torn, and toss at the table until every leaf is coated.",
-       "min": 3
-      },
-      {
-       "text": "Shave the cheese over, scatter the croutons and serve straight away.",
-       "min": 3
+       "text": "Pour into shot glasses and serve straight away.",
+       "min": 2
       }
-     ],
-     "af": true
+     ]
     }
    }
   },
@@ -628,6 +501,204 @@
        "min": 5
       }
      ]
+    }
+   }
+  },
+  {
+   "n": "Heritage Club Caesar",
+   "course": "s",
+   "prep_min": 15,
+   "cook_min": 12,
+   "make_ahead": "Fry the croutons up to 1 day ahead and keep them airtight; dress the leaves at the table",
+   "ingredients": [
+    {
+     "q": 2,
+     "u": "",
+     "item": "cos lettuces",
+     "aisle": "Produce"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "sourdough loaf",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "anchovy fillets",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Dijon mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Tear the sourdough into small pieces and fry in the butter, tossing, until golden and crisp. Drain.",
+     "min": 10
+    },
+    {
+     "text": "Lower the egg into simmering water for 1 minute, then cool it under the tap.",
+     "min": 3
+    },
+    {
+     "text": "Mash the garlic and anchovies to a paste in a big bowl. Crack in the coddled egg, add the lemon juice, Worcestershire and mustard, then whisk in the oil slowly until thick.",
+     "min": 6
+    },
+    {
+     "text": "Add the cos leaves, whole or torn, and toss at the table until every leaf is coated.",
+     "min": 3
+    },
+    {
+     "text": "Shave the parmesan over, scatter the croutons and serve straight away.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Heritage Club Caesar (vegetarian)",
+     "prep_min": 15,
+     "cook_min": 12,
+     "make_ahead": "Fry the croutons up to 1 day ahead and keep them airtight; dress the leaves at the table",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "cos lettuces",
+       "aisle": "Produce"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "sourdough loaf",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "egg",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "capers, chopped",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "vegetarian Worcestershire sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "Dijon mustard",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "vegetarian hard cheese",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Tear the sourdough into small pieces and fry in the butter, tossing, until golden and crisp. Drain.",
+       "min": 10
+      },
+      {
+       "text": "Lower the egg into simmering water for 1 minute, then cool it under the tap.",
+       "min": 3
+      },
+      {
+       "text": "Mash the garlic and capers to a paste in a big bowl. Crack in the coddled egg, add the lemon juice, Worcestershire and mustard, then whisk in the oil slowly until thick.",
+       "min": 6
+      },
+      {
+       "text": "Add the cos leaves, whole or torn, and toss at the table until every leaf is coated.",
+       "min": 3
+      },
+      {
+       "text": "Shave the cheese over, scatter the croutons and serve straight away.",
+       "min": 3
+      }
+     ],
+     "af": true
     }
    }
   }
