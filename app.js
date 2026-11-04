@@ -1719,7 +1719,7 @@ const SEASONS=[
  {id:"movember",name:"Movember",note:"A shelf of great moustaches for the month. Grow one or just watch one.",c:["#8a5a2b","#fff4e2","#4a2e12"],win:y=>[dAt(y,10,1),dAt(y,10,30),dAt(y,10,1)],has:byTitle(["Tombstone","Anchorman: The Legend of Ron Burgundy","Anchorman 2: The Legend Continues","Top Gun","Top Gun: Maverick","Nacho Libre","Smokey and the Bandit","Three Amigos!","Dodgeball: A True Underdog Story","Super Troopers","The Good, the Bad and the Ugly"])},
  /* Friday the 13th falls one to three times a year: the shelf goes up the Monday before whichever one comes next */
  {id:"fri13",name:"Friday the 13th",note:"Unlucky for some. Lights off, phones down.",c:["#9e1b1b","#f2e6d8","#3a0606"],win:y=>{const t=dAt(new Date().getFullYear(),new Date().getMonth(),new Date().getDate()),all=[];for(let m=0;m<12;m++){const d=dAt(y,m,13);if(d.getDay()===5)all.push(d)}const d=all.find(d=>d>=t)||all[0];return d?[addD(d,-4),d,d]:null},has:f=>isLate(f)},
- {id:"xmas",big:1,name:"Christmas",note:"Pop the tree lights on and pick one.",c:["#c8102e","#fff","#7a0a1c"],cls:"festive",win:y=>[dAt(y,11,1),dAt(y,11,26),dAt(y,11,25)],has:byTheme("xmas")}
+ {id:"xmas",big:1,name:"Christmas",note:"Pop the tree lights on and pick one.",c:["#c8102e","#fff","#7a0a1c"],cls:"festive",win:y=>[dAt(y,10,1),dAt(y,11,26),dAt(y,11,25)],has:byTheme("xmas")}
 ];
 const dayStart=d=>dAt(d.getFullYear(),d.getMonth(),d.getDate());
 function seasonState(now){
