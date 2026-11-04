@@ -350,9 +350,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   const est=(FS)=>{let t=0;courses.forEach((c,i)=>{t+=FS.S*1.3+8+(i?FS.G+4:0);c.items.forEach(it=>{t+=lines(it.n,FS.D,RW-FS.D*2.9,dcw)*FS.D*1.12;if(FS.nl&&it.note)t+=Math.min(FS.nl,lines(it.note,FS.N,RW,E.bcw))*FS.N*1.3+2;t+=FS.G})});return t};
   const measure=FS=>{const h=domH(menuFor(FS),RW);return h==null?est(FS):h*1.04};
   let FS=null;
-  outer:for(let s=1.07;s>=.55;s-=.05){
+  /* the film's notes come first: try every size with two-line then one-line notes before any size without them */
+  outer:for(const nl of [2,1,0])for(let s=1.07;s>=(nl?.6:.55);s-=.05){
     const base={D:Math.max(17,Math.round(28*s)),N:Math.max(15,Math.round(21*s)),S:Math.max(18,Math.round(26*s)),G:Math.max(4,Math.round(14*s))};
-    for(const nl of [2,1,0]){if(nl===0&&s>.72)continue;const FSx=Object.assign({},base,{nl});const t=measure(FSx);if(t<=MH){FS=Object.assign(FSx,{t});break outer}}
+    {const FSx=Object.assign({},base,{nl});const t=measure(FSx);if(t<=MH){FS=Object.assign(FSx,{t});break outer}}
   }
   /* rescue for very long menus: give the cue's room to the menu, then smallest legal type, then fewer items per course */
   let dropCue=false;

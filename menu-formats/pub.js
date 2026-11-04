@@ -198,9 +198,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   const est=(cs,FS)=>{let t=0;cs.forEach((c,i)=>{t+=FS.S*1.15+6+(i?FS.G+6:0);c.items.forEach(it=>{t+=lines(it.n,FS.D,colW-FS.D*2.7,dcw)*FS.D*1.12;if(FS.nl&&it.note)t+=Math.min(FS.nl,lines(it.note,FS.N,colW,E.bcw))*FS.N*1.3+2;t+=FS.G})});return t};
   const measure=(cs,FS)=>{const h=domH(colHtml(cs,FS),colW);return h==null?est(cs,FS):h*1.04};
   let FS=null;
-  outer:for(let s=1.07;s>=.55;s-=.05){
+  /* the film's notes come first: try every size with two-line then one-line notes before any size without them */
+  outer:for(const nl of [2,1,0])for(let s=1.07;s>=(nl?.6:.55);s-=.05){
     const base={D:Math.max(17,Math.round(28*s)),N:Math.max(15,Math.round(21*s)),S:Math.max(19,Math.round(27*s)),G:Math.max(4,Math.round(16*s))};
-    for(const nl of [2,1,0]){if(nl===0&&s>.72)continue;const FSx=Object.assign({},base,{nl});
+    {const FSx=Object.assign({},base,{nl});
       let best=null;for(const sp of splits){const t=Math.max(...sp.map(cs=>measure(cs,FSx)));if(!best||t<best.t)best={t,sp}}if(best.t<=MH){FS=Object.assign(FSx,{t:best.t});colsArr=best.sp;break outer}}
   }
   /* rescue for very long menus: give the cue's room to the menu, then smallest legal type, then fewer items per course */
