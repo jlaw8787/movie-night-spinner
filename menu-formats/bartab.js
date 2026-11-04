@@ -99,7 +99,6 @@ window.MENU_FORMATS[ID]=ctx=>{
   loadFonts();
   const W=528,H=1056,P=26,f=ctx.f||{},menu=ctx.menu||{},era=ERA_G[ctx.era]!=null?ctx.era:"modern",g=G[ERA_G[era]],t=TONE[ctx.tone]||TONE.warm;
   const fam=FAMILY.has(f.theme),fl=ctx.flavour||{},yr=f.year||"";
-  const PW=372,PH=558;
   const poster=ctx.poster||((typeof TMDB_POSTERS!=="undefined"&&!window.LIB_NO_POSTER)&&TMDB_POSTERS[f.id])||null;
   const stills=(ctx.stills||[]).filter(Boolean);
   const heroSrc=poster?ctx.img(poster,"w780"):stills[0]?ctx.img(stills[0],"w1280"):"";
@@ -123,6 +122,12 @@ window.MENU_FORMATS[ID]=ctx=>{
    const ds=(menu.d||[]).slice(0,4),plain=Math.max(0,...ds.map((x,i)=>SPIRIT.test(x.n+" "+(x.note||""))?0:PR.d[i]));PR.d=PR.d.map((v,i)=>SPIRIT.test(ds[i].n+" "+(ds[i].note||""))&&v<=plain?rnd(plain*1.3):v)}
   const items=k=>(menu[k]||[]).slice(0,4).map((x,i)=>({n:dry(x.n,fam),note:dry(x.note,fam),p:PR[k][i],house:!!x.house}));
   const I={s:items("s"),m:items("m"),w:items("w"),d:items("d")};
+  /* the photo gives way to the dishes: estimate the height the front's names and notes need at a slightly shrunk size,
+     and take it off the poster or still first, so names, prices and the film's own notes still show (Blade, An American Werewolf) */
+  const needFront=(()=>{let h=0;for(const k of ["s","m"]){if(!I[k].length)continue;h+=48;for(const it of I[k])h+=41+(it.note?Math.min(2,Math.ceil(it.note.length/50))*26:0)}return Math.round(h*.84)})();
+  const PH=Math.max(330,Math.min(558,770-needFront)),PW=Math.round(PH*2/3);
+  const SH=Math.max(250,Math.min(440,440-(needFront-290))),shift=440-SH;
+  const LT=heroPoster?110+PH+10:556-shift,BT=heroPoster?LT+82:676-shift,BH=heroPoster?970-BT:966-BT;
   const sum=a=>a.reduce((x,y)=>x+y.p,0);
   const front=sum(I.s)+sum(I.m),total=front+sum(I.w)+sum(I.d);
   const photoF=`${g.photo} ${t.photo}`;
@@ -169,7 +174,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* logo panel */
   const lp=g.key==="laser"?"#f2f0ea":mix(ink,"#ffffff",.3), dp=mix(board,"#000000",.45);
   const titleType=`<div ${A}-text="46" ${A}-lo="20" style="width:100%;max-height:84px;overflow:hidden;text-align:center;font:${g.dw} 46px/1.02 ${g.disp};color:${ink};text-transform:uppercase;letter-spacing:${g.dtrack}">${esc(f.title||venue)}</div>`;
-  const logoPanel=`<div ${A}-panel ${A}-light="${lp}" ${A}-dark="${dp}" style="position:absolute;left:${P}px;top:${heroPoster?678:556}px;width:${W-2*P}px;height:${heroPoster?72:104}px;box-sizing:border-box;padding:${heroPoster?"8px 18px":"12px 18px"};background:${dp};box-shadow:0 6px 18px rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;${g.key==="offset"?"border-radius:6px;":""}${t.gilt?`outline:2px solid ${acc};outline-offset:-6px;`:""}">
+  const logoPanel=`<div ${A}-panel ${A}-light="${lp}" ${A}-dark="${dp}" style="position:absolute;left:${P}px;top:${LT}px;width:${W-2*P}px;height:${heroPoster?72:104}px;box-sizing:border-box;padding:${heroPoster?"8px 18px":"12px 18px"};background:${dp};box-shadow:0 6px 18px rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;${g.key==="offset"?"border-radius:6px;":""}${t.gilt?`outline:2px solid ${acc};outline-offset:-6px;`:""}">
     ${ctx.logo?`<img ${A}-logo crossorigin="anonymous" src="${ctx.img(ctx.logo[0],"w500")}" style="max-width:100%;max-height:${heroPoster?56:78}px;object-fit:contain">`
       +`<div ${A}-fallback style="display:none;position:absolute;inset:10px 18px;align-items:center;justify-content:center">${titleType}</div>`
       :`<div style="position:absolute;inset:10px 18px;display:flex;align-items:center;justify-content:center;background:${dp}">${titleType}</div>`}
@@ -180,9 +185,9 @@ window.MENU_FORMATS[ID]=ctx=>{
     ${border}${gilt}
     <div ${A}-text="17" ${A}-lo="14" style="position:absolute;left:${P+8}px;right:${P+8}px;top:${heroPoster?26:30}px;height:24px;overflow:hidden;white-space:nowrap;text-align:center;color:${acc};font:600 17px/24px ${g.body};letter-spacing:.24em;text-transform:uppercase">${esc(sign)}</div>
     <div ${A}-text="46" ${A}-lo="22" style="position:absolute;left:${P+8}px;right:${P+8}px;top:${heroPoster?50:56}px;height:${heroPoster?54:78}px;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;color:${ink};font:${g.ds} ${g.dw} 46px/1 ${g.disp};letter-spacing:${g.dtrack};text-transform:uppercase;${glow}">${esc(venue)}</div>
-    ${heroPoster?`<div style="position:absolute;left:${(W-PW)/2}px;top:110px;width:${PW}px;height:${PH}px;box-shadow:0 0 0 2px ${rgba(acc,.85)},0 6px 18px rgba(0,0,0,.6)"><img crossorigin="anonymous" alt="${esc((f.title||"")+" poster")}" src="${heroSrc}" style="display:block;width:100%;height:100%;object-fit:fill"></div>`:`<div style="position:absolute;left:0;top:144px;width:${W}px;height:440px;overflow:hidden;background:#000">${photo(heroSrc,heroPoster,440)}</div>`}
+    ${heroPoster?`<div style="position:absolute;left:${(W-PW)/2}px;top:110px;width:${PW}px;height:${PH}px;box-shadow:0 0 0 2px ${rgba(acc,.85)},0 6px 18px rgba(0,0,0,.6)"><img crossorigin="anonymous" alt="${esc((f.title||"")+" poster")}" src="${heroSrc}" style="display:block;width:100%;height:100%;object-fit:fill"></div>`:`<div style="position:absolute;left:0;top:144px;width:${W}px;height:${SH}px;overflow:hidden;background:#000">${photo(heroSrc,heroPoster,SH)}</div>`}
     ${logoPanel}
-    <div ${A}-box style="position:absolute;left:${P+6}px;top:${heroPoster?760:676}px;width:${W-2*P-12}px;height:${heroPoster?212:290}px;overflow:hidden;--k:1;display:flex;flex-direction:column;justify-content:safe center">${course("s")}${course("m")}</div>
+    <div ${A}-box style="position:absolute;left:${P+6}px;top:${BT}px;width:${W-2*P-12}px;height:${BH}px;overflow:hidden;--k:1;display:flex;flex-direction:column;justify-content:safe center">${course("s")}${course("m")}</div>
     <div style="position:absolute;left:${P+6}px;right:${P+6}px;top:${heroPoster?980:976}px">${ledger("Carried over",front)}</div>
     <div style="position:absolute;left:${P+6}px;right:${P+6}px;top:${heroPoster?1020:1014}px;color:${sub};font:500 16px/1.2 ${g.body};letter-spacing:.14em;text-transform:uppercase;text-align:center;white-space:nowrap;overflow:hidden">Tab No. ${esc(number)} &middot; ${esc(voice[0])}</div>
     ${wearLayer}</div>`;
