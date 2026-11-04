@@ -135,7 +135,9 @@ function size(){
 function fitText(t,max){
   if(ctx.measureText(t).width<=max)return t;
   let s=t;while(s.length>3&&ctx.measureText(s+"...").width>max)s=s.slice(0,-1);
-  return s.trim()+"...";
+  /* cut at a word, not mid-word, unless that loses more than half */
+  const sp=s.lastIndexOf(" ");if(sp>s.length/2&&!/\s/.test(t[s.length]||" "))s=s.slice(0,sp);
+  return s.trim().replace(/[,:;-]$/,"")+"...";
 }
 const wheelTex=typeof Image!=="undefined"?new Image():{complete:false};if(wheelTex.src!==undefined||typeof Image!=="undefined"){wheelTex.src="assets/hero/paper.webp";wheelTex.onload=()=>{try{draw()}catch(e){}}}
 function draw(){
@@ -171,6 +173,10 @@ function draw(){
       /* two films in the same series on the wheel (both "Jumanji"): show the subtitle, so the wedges differ */
       const twin=sh.length>=4&&wedges.some((g,j)=>j!==i&&g&&g.title!==f.title&&g.title.replace(/&amp;/g,"&").split(/: | - |, /)[0]===sh);
       if(sh.length>=4)t=twin&&parts.length>1?parts.slice(1).join(": "):sh}
+    /* still too long and another wedge starts the same way ("Harry Potter and the..."): drop the shared words so each wedge reads differently */
+    if(ctx.measureText(t).width>max*1.34){const w=t.split(" ");let n=0;
+      for(const g of wedges){if(!g||g.title===f.title)continue;const o=g.title.replace(/&amp;/g,"&").split(" ");let m=0;while(m<w.length-1&&o[m]===w[m])m++;n=Math.max(n,m)}
+      if(n>=2)t=w.slice(n).join(" ").replace(/^./,ch=>ch.toUpperCase())}
     let shrink=ctx.measureText(t).width>max&&ctx.measureText(t).width<=max*1.34;
     if(shrink)ctx.font=`500 ${fs*1.06/1.34}px Jost, Futura, "Helvetica Neue", Arial, sans-serif`;
     ctx.textAlign=left?"left":"right";

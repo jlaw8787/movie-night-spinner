@@ -68,3 +68,5 @@ Left open from review 2: matching prices across sequels (low impact), the fallba
 - Untested extra dishes shop in their own last group, "For the extras, buy to suit".
 - Phone half views of wide menus hide badly cut words and fade the cut edge (pvMask in app.js).
 - Wheel redraws when its canvas resizes or the box office view returns.
+- Review 5 fixes: diet switches redraw the card; step counts, packs, frying oil and hands-on time scale; layout wording fits the film (flavour beach, ride, sport, coin); film numbers only set the cents on period prices; extras merge into the shopping list; cook time from heat steps (tests/cook-times.test.cjs); bases like risotto and cooked rice shop as raw with a base step; water off the list; phone text menu uses the Prep sheet recipe; Galaxy Video new releases $4 for 3 nights.
+- scripts/check-browser.cjs now builds one film per layout plus The Godfather and opens each Prep sheet. Keep it passing.
