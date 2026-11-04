@@ -2405,6 +2405,9 @@ async function exportMenu(kind,parts,opts){
       }
       if(parts==="all"){pdfStep("The prep sheet");const prepCanvas=await renderCanvas(prep);
       pdf.addPage("a4","portrait");pdf.addImage(prepCanvas.toDataURL("image/jpeg",0.92),"JPEG",0,0,210,297)}
+      /* print settings travel inside the PDF, so the print dialog opens ready: actual size, and two-sided with the right flip for a two-sided or folded menu
+         (landscape folds turn like a book on the short edge, portrait front-and-back on the long edge) */
+      try{pdf.viewerPreferences({PrintScaling:"None",Duplex:sides>=2?(orient==="landscape"?"DuplexFlipShortEdge":"DuplexFlipLongEdge"):"Simplex"})}catch(e){}
       data=pdf.output("blob");filename=name+".pdf";
       if(toPrint){printPdf(data,opts.win);$("status").textContent="Menu ready to print.";return}
     }else{
