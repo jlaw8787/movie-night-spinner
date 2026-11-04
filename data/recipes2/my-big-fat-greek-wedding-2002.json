@@ -585,6 +585,246 @@
    }
   },
   {
+   "n": "Nick's chicken souvlaki and village salad",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 15,
+   "make_ahead": "Marinate the chicken overnight and make the tzatziki up to 2 days ahead, both chilled; grill and make the salad on the night",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "chicken thigh fillets, in chunks",
+     "aisle": "Meat"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "lemons",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "metal or soaked bamboo skewers",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "pita breads",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "Greek yoghurt",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "Lebanese cucumber",
+     "aisle": "Produce"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "tomatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "green capsicum",
+     "aisle": "Produce"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "kalamata olives",
+     "aisle": "Deli"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "feta",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Marinate the chicken in the juice of a lemon, 3 tbsp of the oil, the garlic, half the oregano and salt for at least 1 hour.",
+     "min": 5
+    },
+    {
+     "text": "Thread onto skewers and grill 10 to 12 minutes, turning, until charred and cooked through.",
+     "min": 12
+    },
+    {
+     "text": "Grate half the cucumber, squeeze it dry and stir into the yoghurt with a squeeze of lemon and salt.",
+     "min": 4
+    },
+    {
+     "text": "Cut the rest of the cucumber, the tomatoes, onion and capsicum into chunks, add the olives, top with the feta and dress with the last oil and oregano.",
+     "min": 8
+    },
+    {
+     "text": "Warm the pitas on the grill and serve with the skewers, tzatziki and salad.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Nick's haloumi souvlaki and village salad",
+     "prep_min": 25,
+     "cook_min": 15,
+     "make_ahead": "Marinate the chicken overnight and make the tzatziki up to 2 days ahead, both chilled; grill and make the salad on the night",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "zucchini, in thick rounds",
+       "aisle": "Produce"
+      },
+      {
+       "q": 400,
+       "u": "g",
+       "item": "haloumi, in chunks",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "lemons",
+       "aisle": "Produce"
+      },
+      {
+       "q": 4,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "metal or soaked bamboo skewers",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "pita breads",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "Greek yoghurt",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "Lebanese cucumber",
+       "aisle": "Produce"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "tomatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "green capsicum",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "g",
+       "item": "kalamata olives",
+       "aisle": "Deli"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "feta",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the zucchini and haloumi in the juice of a lemon, 3 tbsp of the oil, the garlic, half the oregano and pepper.",
+       "min": 5
+      },
+      {
+       "text": "Thread onto skewers and grill 6 to 8 minutes, turning, until charred.",
+       "min": 8
+      },
+      {
+       "text": "Grate half the cucumber, squeeze it dry and stir into the yoghurt with a squeeze of lemon and salt.",
+       "min": 4
+      },
+      {
+       "text": "Cut the rest of the cucumber, the tomatoes, onion and capsicum into chunks, add the olives, top with the feta and dress with the last oil and oregano.",
+       "min": 8
+      },
+      {
+       "text": "Warm the pitas on the grill and serve with the skewers, tzatziki and salad.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Harriet's honey walnut ring cake",
    "course": "w",
    "prep_min": 25,

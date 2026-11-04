@@ -274,6 +274,93 @@
    }
   },
   {
+   "n": "Greater good cheddar and leek rarebit",
+   "course": "s",
+   "prep_min": 10,
+   "cook_min": 12,
+   "make_ahead": "Make the cheese mix up to 2 days ahead and keep it chilled; spread and grill just before serving",
+   "ingredients": [
+    {
+     "q": 250,
+     "u": "g",
+     "item": "mature cheddar, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "leek, finely sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "plain flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 100,
+     "u": "ml",
+     "item": "milk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "English mustard",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg yolk",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thick slices sourdough",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soften the leek in the butter.",
+     "min": 5
+    },
+    {
+     "text": "Stir in the flour, then the milk, and cook until thick.",
+     "min": 3
+    },
+    {
+     "text": "Off the heat, beat in the cheddar, mustard and egg yolk.",
+     "min": 2
+    },
+    {
+     "text": "Toast the sourdough, spread the cheese thickly to the edges and grill until bubbling and browned in spots.",
+     "min": 5
+    },
+    {
+     "text": "Cut into fingers and scatter with snipped chives.",
+     "min": 2
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Sandford steak and ale pie",
    "course": "m",
    "prep_min": 40,

@@ -2,11 +2,11 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Phoenix street corn chicken tacos",
+   "n": "Phoenix street corn prawn tacos",
    "course": "s",
    "prep_min": 30,
    "cook_min": 8,
-   "make_ahead": "Pickle the onion in lime juice up to 1 day ahead in the fridge and mix the crema; grill the chicken and corn on the night",
+   "make_ahead": "Pickle the onion in lime juice up to 1 day ahead in the fridge and mix the crema; grill the prawns and corn on the night",
    "ingredients": [
     {
      "q": 1,
@@ -23,8 +23,8 @@
     {
      "q": 600,
      "u": "g",
-     "item": "chicken thigh fillets",
-     "aisle": "Meat"
+     "item": "green prawns, peeled",
+     "aisle": "Seafood"
     },
     {
      "q": 1,
@@ -81,8 +81,8 @@
      "min": 10
     },
     {
-     "text": "Toss the chicken with the chipotle sauce, cumin and oil, grill on both sides and slice.",
-     "min": 12
+     "text": "Toss the prawns with the chipotle sauce, cumin and oil and grill 2 minutes a side.",
+     "min": 6
     },
     {
      "text": "Char the corn and cut off the kernels.",
@@ -93,7 +93,7 @@
      "min": 3
     },
     {
-     "text": "Fill with chicken, corn, feta, crema, onion and coriander.",
+     "text": "Fill with prawns, corn, feta, crema, onion and coriander.",
      "min": 5
     }
    ],
@@ -198,69 +198,6 @@
      "af": true
     }
    }
-  },
-  {
-   "n": "Noelle's double candy cane bark",
-   "course": "s",
-   "prep_min": 20,
-   "cook_min": 37,
-   "make_ahead": "Make up to 1 week ahead; chill until set, then snap into shards and keep in an airtight container",
-   "ingredients": [
-    {
-     "q": 200,
-     "u": "g",
-     "item": "dark chocolate",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 200,
-     "u": "g",
-     "item": "white chocolate",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 0.25,
-     "u": "tsp",
-     "item": "peppermint extract",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 5,
-     "u": "",
-     "item": "candy canes, crushed",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "sea salt flakes",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Line a tray with baking paper. Melt the dark chocolate and spread into a rectangle.",
-     "min": 8
-    },
-    {
-     "text": "Chill the dark layer.",
-     "min": 10
-    },
-    {
-     "text": "Melt the white chocolate with the peppermint extract, spread over the dark layer and drag a skewer through to swirl.",
-     "min": 7
-    },
-    {
-     "text": "Scatter with crushed candy cane and sea salt.",
-     "min": 2
-    },
-    {
-     "text": "Chill until set, then snap into shards.",
-     "min": 30
-    }
-   ],
-   "veg": true,
-   "af": true
   },
   {
    "n": "Kringle family maple roast chicken",
@@ -465,6 +402,69 @@
      "af": true
     }
    }
+  },
+  {
+   "n": "Noelle's double candy cane bark",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 37,
+   "make_ahead": "Make up to 1 week ahead; chill until set, then snap into shards and keep in an airtight container",
+   "ingredients": [
+    {
+     "q": 200,
+     "u": "g",
+     "item": "dark chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "white chocolate",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "tsp",
+     "item": "peppermint extract",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 5,
+     "u": "",
+     "item": "candy canes, crushed",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sea salt flakes",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Line a tray with baking paper. Melt the dark chocolate and spread into a rectangle.",
+     "min": 8
+    },
+    {
+     "text": "Chill the dark layer.",
+     "min": 10
+    },
+    {
+     "text": "Melt the white chocolate with the peppermint extract, spread over the dark layer and drag a skewer through to swirl.",
+     "min": 7
+    },
+    {
+     "text": "Scatter with crushed candy cane and sea salt.",
+     "min": 2
+    },
+    {
+     "text": "Chill until set, then snap into shards.",
+     "min": 30
+    }
+   ],
+   "veg": true,
+   "af": true
   },
   {
    "n": "Elf Polly's iced sugar cookies",

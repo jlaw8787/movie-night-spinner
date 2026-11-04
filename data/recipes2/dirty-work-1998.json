@@ -411,6 +411,222 @@
    }
   },
   {
+   "n": "Sam's backyard barbecue chicken",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 25,
+   "make_ahead": "Rub the chicken and make the sauce up to 1 day ahead, both chilled; shred the slaw up to 4 hours ahead and dress it just before serving",
+   "ingredients": [
+    {
+     "q": 8,
+     "u": "",
+     "item": "chicken thigh fillets",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "ml",
+     "item": "barbecue sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "apple cider vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "smoked paprika",
+     "aisle": "Spices"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "corn cobs",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "green cabbage",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "carrot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 0.5,
+     "u": "",
+     "item": "red onion",
+     "aisle": "Produce"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "whole egg mayonnaise",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Rub the chicken with the oil, paprika and salt.",
+     "min": 4
+    },
+    {
+     "text": "Simmer the barbecue sauce with the vinegar and sugar for 5 minutes.",
+     "min": 6
+    },
+    {
+     "text": "Grill the chicken over medium heat 6 to 7 minutes a side, brushing with the sauce for the last few minutes until sticky and charred.",
+     "min": 15
+    },
+    {
+     "text": "Grill the corn, turning, until charred, and roll in the butter.",
+     "min": 12
+    },
+    {
+     "text": "Shred the cabbage, carrot and red onion and toss with the mayonnaise, a splash of vinegar and salt.",
+     "min": 8
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Sam's backyard barbecue haloumi",
+     "prep_min": 20,
+     "cook_min": 25,
+     "make_ahead": "Rub the chicken and make the sauce up to 1 day ahead, both chilled; shred the slaw up to 4 hours ahead and dress it just before serving",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, in thick slices",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "red capsicums, in wide strips",
+       "aisle": "Produce"
+      },
+      {
+       "q": 250,
+       "u": "ml",
+       "item": "barbecue sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "apple cider vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tsp",
+       "item": "smoked paprika",
+       "aisle": "Spices"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "corn cobs",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 0.25,
+       "u": "",
+       "item": "green cabbage",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "carrot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 0.5,
+       "u": "",
+       "item": "red onion",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "whole egg mayonnaise",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Toss the capsicum with the oil, paprika and salt.",
+       "min": 3
+      },
+      {
+       "text": "Simmer the barbecue sauce with the vinegar and sugar for 5 minutes.",
+       "min": 6
+      },
+      {
+       "text": "Grill the capsicum until soft and charred, then the haloumi 2 minutes a side, brushing both with the sauce at the end.",
+       "min": 12
+      },
+      {
+       "text": "Grill the corn, turning, until charred, and roll in the butter.",
+       "min": 12
+      },
+      {
+       "text": "Shred the cabbage, carrot and red onion and toss with the mayonnaise, a splash of vinegar and salt.",
+       "min": 8
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Hot fudge peanut sundaes",
    "course": "w",
    "prep_min": 15,

@@ -61,23 +61,17 @@
    "af": true
   },
   {
-   "n": "Crispy pork belly chicharrones",
+   "n": "Milagro's chunky guacamole and totopos",
    "course": "s",
    "prep_min": 15,
-   "cook_min": 555,
-   "make_ahead": "Score, salt and dry the pork belly uncovered in the fridge overnight, up to 2 days ahead; roast on the night",
+   "cook_min": 12,
+   "make_ahead": "Bake the totopos up to 1 day ahead and keep them airtight; make the guacamole just before serving",
    "ingredients": [
     {
-     "q": 1,
-     "u": "kg",
-     "item": "pork belly",
-     "aisle": "Meat"
-    },
-    {
-     "q": 2,
-     "u": "tsp",
-     "item": "sea salt",
-     "aisle": "Pantry"
+     "q": 4,
+     "u": "",
+     "item": "ripe avocados",
+     "aisle": "Produce"
     },
     {
      "q": 2,
@@ -86,105 +80,68 @@
      "aisle": "Produce"
     },
     {
+     "q": 0.5,
+     "u": "",
+     "item": "white onion, finely diced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "tomatoes, diced",
+     "aisle": "Produce"
+    },
+    {
      "q": 1,
      "u": "",
-     "item": "bottle hot sauce",
+     "item": "jalapeño, finely chopped",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch coriander",
+     "aisle": "Produce"
+    },
+    {
+     "q": 12,
+     "u": "",
+     "item": "corn tortillas",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 3,
+     "u": "tbsp",
+     "item": "vegetable oil",
      "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "Tajín or chilli salt",
+     "aisle": "Spices"
     }
    ],
    "steps": [
     {
-     "text": "Score the pork belly skin and rub with salt.",
-     "min": 10
+     "text": "Heat the oven to 200°C. Cut the tortillas into wedges, toss in the oil and bake 10 to 12 minutes until crisp. Dust with the Tajín.",
+     "min": 14
     },
     {
-     "text": "Dry uncovered in the fridge overnight.",
-     "min": 480
+     "text": "Roughly mash the avocados with the lime juice and a pinch of salt, leaving big chunks.",
+     "min": 4
     },
     {
-     "text": "Roast at 240C.",
-     "min": 30
+     "text": "Fold through the onion, tomato, jalapeño and chopped coriander.",
+     "min": 4
     },
     {
-     "text": "Drop to 180C and roast until puffed and crackling.",
-     "min": 45
-    },
-    {
-     "text": "Cut into bites and serve with lime wedges and hot sauce.",
-     "min": 5
+     "text": "Pile into a bowl and serve with the warm totopos.",
+     "min": 2
     }
    ],
-   "veg": false,
-   "af": true,
-   "alt": {
-    "veg": {
-     "n": "Crispy tofu chicharrones",
-     "prep_min": 25,
-     "cook_min": 515,
-     "make_ahead": "Dry the tofu overnight",
-     "ingredients": [
-      {
-       "q": 800,
-       "u": "g",
-       "item": "extra firm tofu",
-       "aisle": "Produce"
-      },
-      {
-       "q": 2,
-       "u": "tsp",
-       "item": "sea salt",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 3,
-       "u": "tbsp",
-       "item": "cornflour",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "tbsp",
-       "item": "vegetable oil",
-       "aisle": "Pantry"
-      },
-      {
-       "q": 2,
-       "u": "",
-       "item": "limes",
-       "aisle": "Produce"
-      },
-      {
-       "q": 1,
-       "u": "",
-       "item": "bottle hot sauce",
-       "aisle": "Pantry"
-      }
-     ],
-     "steps": [
-      {
-       "text": "Press the tofu, cut into bites and rub with the salt.",
-       "min": 15
-      },
-      {
-       "text": "Dry uncovered on a rack in the fridge overnight.",
-       "min": 480
-      },
-      {
-       "text": "Toss with the cornflour and oil.",
-       "min": 5
-      },
-      {
-       "text": "Roast at 240C, turning once, until puffed and crackling at the edges.",
-       "min": 35
-      },
-      {
-       "text": "Serve with lime wedges and hot sauce.",
-       "min": 5
-      }
-     ],
-     "af": true
-    }
-   }
+   "veg": true,
+   "af": true
   },
   {
    "n": "Nana's pozole rojo",

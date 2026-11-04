@@ -96,7 +96,7 @@
    }
   },
   {
-   "n": "Scotch eggs",
+   "n": "Slaughtered Lamb Scotch eggs",
    "course": "s",
    "prep_min": 30,
    "cook_min": 12,
@@ -165,7 +165,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Scotch eggs (vegetarian)",
+     "n": "Slaughtered Lamb Scotch eggs (vegetarian)",
      "prep_min": 30,
      "cook_min": 12,
      "make_ahead": "Up to 1 day chilled",
@@ -234,7 +234,7 @@
    }
   },
   {
-   "n": "Shepherd's pie",
+   "n": "Moors shepherd's pie",
    "course": "m",
    "prep_min": 25,
    "cook_min": 85,
@@ -311,7 +311,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Shepherd's pie (vegetarian)",
+     "n": "Moors shepherd's pie (vegetarian)",
      "prep_min": 25,
      "cook_min": 55,
      "make_ahead": "Assemble up to 1 day ahead and keep covered in the fridge; bake on the night, adding 10 minutes",
@@ -396,6 +396,388 @@
       }
      ],
      "af": true
+    }
+   }
+  },
+  {
+   "n": "East Proctor beer-battered haddock",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 35,
+   "make_ahead": "Par-cook the chips up to 4 hours ahead and crush the peas up to 1 day ahead; batter and fry the fish just before serving",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "skinless haddock or flathead fillets",
+     "aisle": "Seafood"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "ml",
+     "item": "cold pale ale",
+     "aisle": "Bottle shop"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "floury potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1.5,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 500,
+     "u": "g",
+     "item": "frozen peas",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 30,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch mint",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
+    },
+    {
+     "q": null,
+     "u": "",
+     "item": "malt vinegar",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the potatoes into thick chips, simmer 5 minutes, drain and dry well.",
+     "min": 12
+    },
+    {
+     "text": "Fry the chips at 160°C for 6 minutes, lift out and rest.",
+     "min": 8
+    },
+    {
+     "text": "Whisk the flour with the cold ale and a pinch of salt into a thick batter.",
+     "min": 3
+    },
+    {
+     "text": "Dust the fish in a little extra flour, dip in the batter and fry at 180°C for 5 to 6 minutes until golden. Keep warm.",
+     "min": 12
+    },
+    {
+     "text": "Fry the chips again at 190°C until crisp.",
+     "min": 5
+    },
+    {
+     "text": "Simmer the peas 5 minutes, drain and crush with the butter, chopped mint and salt. Serve with lemon and malt vinegar.",
+     "min": 7
+    }
+   ],
+   "veg": false,
+   "af": false,
+   "alt": {
+    "af": {
+     "n": "East Proctor soda-battered haddock",
+     "prep_min": 25,
+     "cook_min": 35,
+     "make_ahead": "Par-cook the chips up to 4 hours ahead and crush the peas up to 1 day ahead; batter and fry the fish just before serving",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "skinless haddock or flathead fillets",
+       "aisle": "Seafood"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "floury potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into thick chips, simmer 5 minutes, drain and dry well.",
+       "min": 12
+      },
+      {
+       "text": "Fry the chips at 160°C for 6 minutes, lift out and rest.",
+       "min": 8
+      },
+      {
+       "text": "Whisk the flour with the cold soda water and a pinch of salt into a thick batter.",
+       "min": 3
+      },
+      {
+       "text": "Dust the fish in a little extra flour, dip in the batter and fry at 180°C for 5 to 6 minutes until golden. Keep warm.",
+       "min": 12
+      },
+      {
+       "text": "Fry the chips again at 190°C until crisp.",
+       "min": 5
+      },
+      {
+       "text": "Simmer the peas 5 minutes, drain and crush with the butter, chopped mint and salt. Serve with lemon and malt vinegar.",
+       "min": 7
+      }
+     ]
+    },
+    "veg": {
+     "n": "East Proctor beer-battered haloumi",
+     "prep_min": 25,
+     "cook_min": 35,
+     "make_ahead": "Par-cook the chips up to 4 hours ahead and crush the peas up to 1 day ahead; batter and fry the fish just before serving",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, in thick fingers",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "cold pale ale",
+       "aisle": "Bottle shop"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "floury potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into thick chips, simmer 5 minutes, drain and dry well.",
+       "min": 12
+      },
+      {
+       "text": "Fry the chips at 160°C for 6 minutes, lift out and rest.",
+       "min": 8
+      },
+      {
+       "text": "Whisk the flour with the cold ale and a pinch of salt into a thick batter.",
+       "min": 3
+      },
+      {
+       "text": "Dust the haloumi in a little extra flour, dip in the batter and fry at 180°C for 3 minutes until golden. Keep warm.",
+       "min": 8
+      },
+      {
+       "text": "Fry the chips again at 190°C until crisp.",
+       "min": 5
+      },
+      {
+       "text": "Simmer the peas 5 minutes, drain and crush with the butter, chopped mint and salt. Serve with lemon and malt vinegar.",
+       "min": 7
+      }
+     ],
+     "af": false
+    },
+    "veg_af": {
+     "n": "East Proctor soda-battered haloumi",
+     "prep_min": 25,
+     "cook_min": 35,
+     "make_ahead": "Par-cook the chips up to 4 hours ahead and crush the peas up to 1 day ahead; batter and fry the fish just before serving",
+     "ingredients": [
+      {
+       "q": 500,
+       "u": "g",
+       "item": "haloumi, in thick fingers",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 200,
+       "u": "g",
+       "item": "self-raising flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 300,
+       "u": "ml",
+       "item": "cold soda water",
+       "aisle": "Drinks"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "floury potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1.5,
+       "u": "l",
+       "item": "vegetable oil, for frying",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 500,
+       "u": "g",
+       "item": "frozen peas",
+       "aisle": "Frozen"
+      },
+      {
+       "q": 30,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch mint",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "lemon",
+       "aisle": "Produce"
+      },
+      {
+       "q": null,
+       "u": "",
+       "item": "malt vinegar",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the potatoes into thick chips, simmer 5 minutes, drain and dry well.",
+       "min": 12
+      },
+      {
+       "text": "Fry the chips at 160°C for 6 minutes, lift out and rest.",
+       "min": 8
+      },
+      {
+       "text": "Whisk the flour with the cold soda water and a pinch of salt into a thick batter.",
+       "min": 3
+      },
+      {
+       "text": "Dust the haloumi in a little extra flour, dip in the batter and fry at 180°C for 3 minutes until golden. Keep warm.",
+       "min": 8
+      },
+      {
+       "text": "Fry the chips again at 190°C until crisp.",
+       "min": 5
+      },
+      {
+       "text": "Simmer the peas 5 minutes, drain and crush with the butter, chopped mint and salt. Serve with lemon and malt vinegar.",
+       "min": 7
+      }
+     ]
     }
    }
   },

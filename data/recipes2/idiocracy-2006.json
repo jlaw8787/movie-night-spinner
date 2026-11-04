@@ -582,6 +582,228 @@
    }
   },
   {
+   "n": "President Camacho's monster meatball subs",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 30,
+   "make_ahead": "Make the meatballs in their sauce up to 2 days ahead and keep chilled; reheat, fill and grill the rolls on the night",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "g",
+     "item": "beef mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "pork mince",
+     "aisle": "Meat"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "fresh breadcrumbs",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 700,
+     "u": "g",
+     "item": "tomato passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "long sub rolls",
+     "aisle": "Bakery"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "slices provolone",
+     "aisle": "Deli"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch basil",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "rocket",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Mix the minces, breadcrumbs, egg, parmesan, garlic, oregano and a good pinch of salt, and roll into 16 big meatballs.",
+     "min": 10
+    },
+    {
+     "text": "Brown the meatballs in the oil all over.",
+     "min": 8
+    },
+    {
+     "text": "Add the passata and simmer 20 minutes, turning now and then.",
+     "min": 20
+    },
+    {
+     "text": "Split and toast the rolls, fill with meatballs and sauce, top with provolone and grill until melted.",
+     "min": 5
+    },
+    {
+     "text": "Finish with torn basil and rocket.",
+     "min": 2
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "President Camacho's monster eggplant subs",
+     "prep_min": 20,
+     "cook_min": 30,
+     "make_ahead": "Make the meatballs in their sauce up to 2 days ahead and keep chilled; reheat, fill and grill the rolls on the night",
+     "ingredients": [
+      {
+       "q": 2,
+       "u": "",
+       "item": "large eggplants, in thick rounds",
+       "aisle": "Produce"
+      },
+      {
+       "q": 100,
+       "u": "g",
+       "item": "plain flour",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "breadcrumbs",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "parmesan, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 700,
+       "u": "g",
+       "item": "tomato passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 125,
+       "u": "ml",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "long sub rolls",
+       "aisle": "Bakery"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "slices provolone",
+       "aisle": "Deli"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch basil",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Salt the eggplant 10 minutes and pat dry.",
+       "min": 10
+      },
+      {
+       "text": "Coat in flour, beaten egg, then the breadcrumbs mixed with the parmesan.",
+       "min": 10
+      },
+      {
+       "text": "Fry in the oil until golden on both sides.",
+       "min": 12
+      },
+      {
+       "text": "Simmer the passata with the garlic and oregano for 10 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Split and toast the rolls, fill with eggplant and sauce, top with provolone and grill until melted. Finish with basil and rocket.",
+       "min": 6
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Year 2505 blue raspberry cupcakes",
    "course": "w",
    "prep_min": 40,

@@ -2,177 +2,94 @@
  "serves": 4,
  "dishes": [
   {
-   "n": "Parade morning cinnamon donut holes",
+   "n": "Dorey's New York Waldorf salad",
    "course": "s",
-   "prep_min": 25,
-   "cook_min": 0,
-   "make_ahead": "Make the chocolate dipping sauce up to 2 days ahead, keep chilled and reheat gently; fry the donut holes just before serving",
+   "prep_min": 15,
+   "cook_min": 4,
+   "make_ahead": "Toast the walnuts and mix the dressing up to 2 days ahead; dice the apple and dress the salad up to 2 hours ahead",
    "ingredients": [
     {
-     "q": 250,
-     "u": "g",
-     "item": "self-raising flour",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 130,
-     "u": "g",
-     "item": "caster sugar",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
+     "q": 3,
      "u": "",
-     "item": "egg",
-     "aisle": "Dairy"
+     "item": "crisp red apples",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "celery stalks",
+     "aisle": "Produce"
     },
     {
      "q": 150,
-     "u": "ml",
-     "item": "full cream milk",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 30,
      "u": "g",
-     "item": "butter, melted",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 2,
-     "u": "tsp",
-     "item": "ground cinnamon",
-     "aisle": "Spices"
-    },
-    {
-     "q": 100,
-     "u": "ml",
-     "item": "thickened cream",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "dark chocolate, chopped",
-     "aisle": "Pantry"
-    },
-    {
-     "q": 1,
-     "u": "l",
-     "item": "vegetable oil, for frying",
-     "aisle": "Pantry"
-    }
-   ],
-   "steps": [
-    {
-     "text": "Mix the flour, a little of the sugar, egg, milk and butter into a soft dough and roll into small balls.",
-     "min": 10
-    },
-    {
-     "text": "Fry in the oil at 175C, turning, until golden and cooked through, working in batches. Drain.",
-     "min": 10
-    },
-    {
-     "text": "Toss in the remaining sugar mixed with cinnamon.",
-     "min": 2
-    },
-    {
-     "text": "Heat the cream and pour over the chocolate, stirring until smooth, for dunking.",
-     "min": 3
-    }
-   ],
-   "veg": true,
-   "af": true
-  },
-  {
-   "n": "Spiced gingerbread cookies",
-   "course": "s",
-   "prep_min": 40,
-   "cook_min": 40,
-   "make_ahead": "Up to 5 days, keep in an airtight container",
-   "ingredients": [
-    {
-     "q": 100,
-     "u": "g",
-     "item": "butter",
-     "aisle": "Dairy"
-    },
-    {
-     "q": 100,
-     "u": "g",
-     "item": "golden syrup",
-     "aisle": "Pantry"
+     "item": "red grapes",
+     "aisle": "Produce"
     },
     {
      "q": 80,
      "u": "g",
-     "item": "brown sugar",
+     "item": "walnuts",
      "aisle": "Pantry"
     },
     {
-     "q": 300,
+     "q": 100,
      "u": "g",
-     "item": "self-raising flour",
+     "item": "whole egg mayonnaise",
      "aisle": "Pantry"
     },
     {
-     "q": 2,
-     "u": "tsp",
-     "item": "ground ginger",
-     "aisle": "Spices"
-    },
-    {
-     "q": 1,
-     "u": "tsp",
-     "item": "ground cinnamon",
-     "aisle": "Spices"
-    },
-    {
-     "q": 1,
-     "u": "",
-     "item": "egg",
+     "q": 100,
+     "u": "g",
+     "item": "Greek yoghurt",
      "aisle": "Dairy"
     },
     {
-     "q": 200,
-     "u": "g",
-     "item": "icing sugar",
-     "aisle": "Pantry"
+     "q": 1,
+     "u": "",
+     "item": "lemon",
+     "aisle": "Produce"
     },
     {
      "q": 1,
      "u": "",
-     "item": "bottle red food colouring",
-     "aisle": "Pantry"
+     "item": "baby cos lettuce",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
     }
    ],
    "steps": [
     {
-     "text": "Melt the butter with the golden syrup and sugar. Mix in the flour, ground ginger, ground cinnamon and egg to a dough.",
+     "text": "Toast the walnuts in a dry pan and chop roughly.",
+     "min": 4
+    },
+    {
+     "text": "Mix the mayonnaise, yoghurt, juice of half the lemon, salt and pepper.",
+     "min": 2
+    },
+    {
+     "text": "Dice the apples and toss in the rest of the lemon juice. Slice the celery and halve the grapes.",
      "min": 8
     },
     {
-     "text": "Chill the dough.",
-     "min": 30
+     "text": "Fold everything through the dressing with most of the walnuts.",
+     "min": 2
     },
     {
-     "text": "Roll out thin and cut shapes.",
-     "min": 7
-    },
-    {
-     "text": "Bake at 180C, then cool.",
-     "min": 20
-    },
-    {
-     "text": "Mix the icing sugar with water, tint a third red and pipe on outlines and details.",
-     "min": 15
+     "text": "Pile onto cos leaves and finish with the last walnuts and snipped chives.",
+     "min": 2
     }
    ],
    "veg": true,
    "af": true
   },
   {
-   "n": "Kriss Kringle's Thanksgiving turkey",
+   "n": "Kris Kringle's Thanksgiving turkey",
    "course": "m",
    "prep_min": 40,
    "cook_min": 100,
@@ -287,7 +204,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Kriss Kringle's Thanksgiving roast pumpkin",
+     "n": "Kris Kringle's Thanksgiving roast pumpkin",
      "prep_min": 35,
      "cook_min": 93,
      "make_ahead": "Make the sage butter up to 2 days ahead",
@@ -402,6 +319,93 @@
    }
   },
   {
+   "n": "Cole's Santa grotto gingerbread cookies",
+   "course": "w",
+   "prep_min": 40,
+   "cook_min": 40,
+   "make_ahead": "Up to 5 days, keep in an airtight container",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "golden syrup",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 80,
+     "u": "g",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "self-raising flour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tsp",
+     "item": "ground ginger",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "ground cinnamon",
+     "aisle": "Spices"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "egg",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 200,
+     "u": "g",
+     "item": "icing sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bottle red food colouring",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Melt the butter with the golden syrup and sugar. Mix in the flour, ground ginger, ground cinnamon and egg to a dough.",
+     "min": 8
+    },
+    {
+     "text": "Chill the dough.",
+     "min": 30
+    },
+    {
+     "text": "Roll out thin and cut shapes.",
+     "min": 7
+    },
+    {
+     "text": "Bake at 180C, then cool.",
+     "min": 20
+    },
+    {
+     "text": "Mix the icing sugar with water, tint a third red and pipe on outlines and details.",
+     "min": 15
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "New York pumpkin pie with maple cream",
    "course": "w",
    "prep_min": 40,
@@ -499,7 +503,7 @@
    "af": true
   },
   {
-   "n": "Kriss Kringle's hot spiced cider",
+   "n": "Kris Kringle's hot spiced cider",
    "course": "d",
    "prep_min": 5,
    "cook_min": 15,

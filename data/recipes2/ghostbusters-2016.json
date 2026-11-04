@@ -312,16 +312,115 @@
    }
   },
   {
-   "n": "Sweet and sour pork with egg fried rice",
+   "n": "Proton pack vegetable spring rolls",
+   "course": "s",
+   "prep_min": 40,
+   "cook_min": 15,
+   "make_ahead": "Roll up to 1 day ahead and keep chilled in one layer, or freeze up to 1 month; fry on the night",
+   "ingredients": [
+    {
+     "q": 100,
+     "u": "g",
+     "item": "rice vermicelli",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 0.25,
+     "u": "",
+     "item": "wombok, finely shredded",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "carrots, grated",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "shiitake mushrooms, sliced",
+     "aisle": "Produce"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "spring onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "sesame oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 20,
+     "u": "",
+     "item": "spring roll wrappers",
+     "aisle": "Frozen"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "cornflour",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "l",
+     "item": "vegetable oil, for frying",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 125,
+     "u": "ml",
+     "item": "sweet chilli sauce",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Soak the vermicelli in hot water 5 minutes, drain and snip into short lengths.",
+     "min": 6
+    },
+    {
+     "text": "Stir-fry the wombok, carrot, mushrooms and sliced spring onion in a splash of the oil until wilted, then add the soy and sesame oil.",
+     "min": 6
+    },
+    {
+     "text": "Toss with the noodles and cool completely.",
+     "min": 10
+    },
+    {
+     "text": "Mix the cornflour with a little water. Roll a spoonful of filling tightly in each wrapper, folding in the sides, and seal with the paste.",
+     "min": 20
+    },
+    {
+     "text": "Heat the oil to 180°C and fry the rolls in batches until golden. Drain and serve with sweet chilli sauce.",
+     "min": 12
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
+   "n": "Zhu's sweet and sour chicken with egg fried rice",
    "course": "m",
    "prep_min": 35,
    "cook_min": 3,
-   "make_ahead": "Cook the rice a day ahead and keep it cold in the fridge; cut the pork up to 1 day ahead; fry and sauce on the night",
+   "make_ahead": "Cook the rice a day ahead and keep it cold in the fridge; cut the chicken up to 1 day ahead; fry and sauce on the night",
    "ingredients": [
     {
      "q": 600,
      "u": "g",
-     "item": "pork scotch fillet",
+     "item": "chicken thigh fillets",
      "aisle": "Meat"
     },
     {
@@ -381,7 +480,7 @@
    ],
    "steps": [
     {
-     "text": "Cut the pork into chunks, coat in cornflour.",
+     "text": "Cut the chicken into chunks and coat in cornflour.",
      "min": 8
     },
     {
@@ -397,7 +496,7 @@
      "min": 8
     },
     {
-     "text": "Toss the pork through the sauce and serve with the rice.",
+     "text": "Toss the chicken through the sauce and serve with the rice.",
      "min": 2
     }
    ],
@@ -405,7 +504,7 @@
    "af": true,
    "alt": {
     "veg": {
-     "n": "Sweet and sour tofu with egg fried rice",
+     "n": "Zhu's sweet and sour tofu with egg fried rice",
      "prep_min": 35,
      "cook_min": 3,
      "make_ahead": "Cook the rice a day ahead and keep it cold in the fridge; cut and press the tofu up to 1 day ahead; fry and sauce on the night",
@@ -498,7 +597,7 @@
    }
   },
   {
-   "n": "Fortune cookies",
+   "n": "Zhu's fortune cookies",
    "course": "w",
    "prep_min": 35,
    "cook_min": 0,

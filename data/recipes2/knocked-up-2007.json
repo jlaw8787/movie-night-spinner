@@ -604,6 +604,204 @@
    }
   },
   {
+   "n": "Roommates' pepperoni and hot honey pizza",
+   "course": "m",
+   "prep_min": 20,
+   "cook_min": 20,
+   "make_ahead": "Make the sauce up to 3 days ahead and keep it chilled; stretch, top and bake on the night",
+   "ingredients": [
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "pizza dough",
+     "aisle": "Deli"
+    },
+    {
+     "q": 250,
+     "u": "g",
+     "item": "tomato passata",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "garlic cloves, crushed",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "dried oregano",
+     "aisle": "Spices"
+    },
+    {
+     "q": 300,
+     "u": "g",
+     "item": "mozzarella, grated",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "sliced pepperoni",
+     "aisle": "Deli"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "jar pickled jalapeños",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "honey",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "chilli flakes",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "rocket",
+     "aisle": "Produce"
+    },
+    {
+     "q": 40,
+     "u": "g",
+     "item": "parmesan",
+     "aisle": "Dairy"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven as high as it goes with two trays inside.",
+     "min": 15
+    },
+    {
+     "text": "Mix the passata with the garlic, oregano and a pinch of salt.",
+     "min": 2
+    },
+    {
+     "text": "Stretch the dough into 4 bases on baking paper, spread with the sauce and top with the mozzarella, pepperoni and jalapeños.",
+     "min": 10
+    },
+    {
+     "text": "Slide onto the hot trays and bake 8 to 10 minutes until blistered, two at a time.",
+     "min": 20
+    },
+    {
+     "text": "Warm the honey with the chilli flakes, drizzle over and finish with rocket and shaved parmesan.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Roommates' mushroom and hot honey pizza",
+     "prep_min": 20,
+     "cook_min": 20,
+     "make_ahead": "Make the sauce up to 3 days ahead and keep it chilled; stretch, top and bake on the night",
+     "ingredients": [
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "pizza dough",
+       "aisle": "Deli"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "tomato passata",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "garlic cloves, crushed",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "dried oregano",
+       "aisle": "Spices"
+      },
+      {
+       "q": 300,
+       "u": "g",
+       "item": "mozzarella, grated",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 250,
+       "u": "g",
+       "item": "mushrooms, thinly sliced",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "jar pickled jalapeños",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "honey",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "chilli flakes",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "rocket",
+       "aisle": "Produce"
+      },
+      {
+       "q": 40,
+       "u": "g",
+       "item": "parmesan",
+       "aisle": "Dairy"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Heat the oven as high as it goes with two trays inside.",
+       "min": 15
+      },
+      {
+       "text": "Mix the passata with the garlic, oregano and a pinch of salt.",
+       "min": 2
+      },
+      {
+       "text": "Stretch the dough into 4 bases on baking paper, spread with the sauce and top with the mozzarella, mushrooms and jalapeños.",
+       "min": 10
+      },
+      {
+       "text": "Slide onto the hot trays and bake 8 to 10 minutes until blistered, two at a time.",
+       "min": 20
+      },
+      {
+       "text": "Warm the honey with the chilli flakes, drizzle over and finish with rocket and shaved parmesan.",
+       "min": 3
+      }
+     ],
+     "af": true
+    }
+   }
+  },
+  {
    "n": "Pastel lemon and raspberry cupcakes",
    "course": "w",
    "prep_min": 35,
