@@ -182,7 +182,7 @@ window.MENU_FORMATS["cafe"]=ctx=>{
   const dispUp=e.up?"text-transform:uppercase;":"";
   const chalkTxt=e.chalk?`-webkit-mask-image:${CHALKSOFT};mask-image:${CHALKSOFT};`:"";
 
-  /* venue lettering on the photo: size from length, two lines at most */
+  /* venue lettering on the photo: size from length, two lines at most, with real line spacing when it runs to two (Beverly Palm Hotel) */
   const vlen=venue.length,CW=352,PHP=906,PW=580,PT=870,vw=hasP?CW:W-2*FR-80;
   let vs=Math.min(e.up?78:86,Math.floor(vw/(Math.max(vlen,6)*e.dr)));let vlines=1;
   if(hasP){for(let L=2;vs<52&&L<=3;L++){vlines=L;vs=Math.min(64,Math.floor(.9*L*vw/(vlen*e.dr)))}vs=Math.max(30,vs)}
@@ -209,7 +209,7 @@ window.MENU_FORMATS["cafe"]=ctx=>{
     ${hasP?`<div style="position:absolute;left:${12+PW+12+24}px;top:22px;width:${CW}px;height:${PHP-34}px;display:flex;flex-direction:column;gap:12px">`:""}
     <div style="${hasP?"flex:none":"position:absolute;left:40px;right:40px;top:30px"}">
       <div style="font-family:${bodyF};font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:${mix(ACC,"#ffffff",.15)};font-size:18px;margin-bottom:8px">${esc(T.kick)}</div>
-      <div data-fit style="height:${Math.ceil(vs*1.08*vlines)+6}px;overflow:hidden;font-family:'${e.disp}',serif;font-weight:${e.dw||400};${dispUp}color:#fff;line-height:1.04;${fs(vs,30)};text-shadow:0 3px 14px rgba(0,0,0,.6);${era==="1950s"?"letter-spacing:.06em;":""}">${esc(venue)}</div>
+      <div data-fit style="height:${Math.ceil(vs*(vlines>1||hasP&&vlen>12?1.48:1.1)*Math.max(vlines,hasP&&vlen>12?2:1))+6}px;overflow:hidden;font-family:'${e.disp}',serif;font-weight:${e.dw||400};${dispUp}color:#fff;line-height:${vlines>1||hasP&&vlen>12?1.42:1.06};${fs(vs,30)};text-shadow:0 3px 14px rgba(0,0,0,.6);${era==="1950s"?"letter-spacing:.06em;":""}">${esc(venue)}</div>
       <div style="font-family:${bodyF};${e.body==="Lora"?"font-style:italic;":""}color:#f2efe6;font-size:22px;margin-top:6px;${hasP?"":"white-space:nowrap;overflow:hidden;text-overflow:ellipsis"}">${esc(sign)}</div>
     </div>
     ${hasP?`${logoHtml}${noteHtml}${card}</div>`:""}
