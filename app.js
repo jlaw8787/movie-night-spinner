@@ -2350,7 +2350,17 @@ $("viewCraveBtn").addEventListener("click",()=>goView("crave"));
 $("shopCal").addEventListener("click",e=>{const b=e.target.closest("[data-season]");if(!b)return;const id=b.dataset.season;
   if(!b.classList.contains("on")){peekSeason=peekSeason===id?"":id;$("shopSearch").value="";renderShop();if(!peekSeason)return}
   const el=document.getElementById("season-"+id);if(el)el.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})});
-if(typeof document!=="undefined"&&document.addEventListener)document.addEventListener("click",e=>{const h=e.target.closest(".sv-hang,.sv-hang-chip");if(!h)return;const g=h.dataset.go;const secs=[...document.querySelectorAll("#shopAisles .aisle")];const t=secs.find(x=>g==="wall"?x.classList.contains("wall"):(x.querySelector(".aisle-sign")||{}).firstChild&&x.querySelector(".aisle-sign").firstChild.textContent===g);if(t){t.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});sfx.chime&&tick()}});
+/* the signs in the shop photo walk you to that aisle the same way the aisle cards do: that aisle on its own, scrolled into view */
+if(typeof document!=="undefined"&&document.addEventListener)document.addEventListener("click",e=>{const h=e.target.closest(".sv-hang,.sv-hang-chip");if(!h)return;
+  const g=h.dataset.go,secs=[...document.querySelectorAll("#shopAisles .aisle[data-name]")];
+  const t=secs.find(x=>g==="wall"?x.classList.contains("wall"):x.dataset.name===g);
+  if(!t){const st=$("status");if(st)st.textContent=kidsMode&&g==="Late Show"?"The Late Show is grown-ups only. Turn kids mode off to go in.":`Nothing on the ${g} shelves with these filters.`;return}
+  try{sfx.chime&&tick()}catch(err){}
+  hereAisle=t.dataset.name;try{sessionStorage.setItem("mns-aisle",hereAisle)}catch(err){}try{sfx.clunk()}catch(err){}applyAisle(false);
+  /* straight down to the shelf itself, under the pinned tools bar, once the one-aisle view has laid out */
+  try{fillShelf(t.querySelector(".shelf[data-k]"))}catch(err){}
+  setTimeout(()=>{const st=document.querySelector("#viewShop .shop-tools"),pin=st&&/sticky|fixed/.test(getComputedStyle(st).position)?st.getBoundingClientRect().height:0;
+    window.scrollTo({top:Math.max(0,t.getBoundingClientRect().top+scrollY-topH()-pin-12),behavior:"instant"})},60)});
 $("shopAisles").addEventListener("scroll",e=>{const sh=e.target;if(sh.classList&&sh.classList.contains("shelf")&&sh.scrollLeft+sh.clientWidth>sh.scrollWidth-600)fillShelf(sh)},true);
 $("shopAisles").addEventListener("click",e=>{
   const lc=e.target.closest(".ls-curtain");
@@ -3228,7 +3238,8 @@ function snackPair(f){
     if(a&&current){const ids=snackPicks(current),id=a.dataset.sp,i=ids.indexOf(id);if(i<0)ids.push(id);else ids.splice(i,1);snackSave(current,ids);
       try{if(current._r2){planWire(current);prep.innerHTML=prepHTML(current,current.menu)}}catch(err){}
       try{renderSnacks()}catch(err){}snackPair(current);buzz(15);const b=box.querySelector(`[data-sp="${CSS.escape(id)}"]`);if(b)b.focus();return}
-    if(e.target.closest("[data-sp-more]")){const sc=$("snackCounter");if(sc)sc.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})}
+    /* More snacks: the snack counter lives in the Candy bar, so go there first, then down to the counter */
+    if(e.target.closest("[data-sp-more]")){goView("crave",true);setTimeout(()=>{const sc=$("snackCounter");if(sc)sc.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})},80)}
   };
 }
 
