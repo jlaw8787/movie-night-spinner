@@ -859,6 +859,204 @@
      ]
     }
    }
+  },
+  {
+   "n": "Staties' steak tips",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 75,
+   "make_ahead": "Marinate the beef up to 1 day ahead in the fridge",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "beef sirloin",
+     "aisle": "Meat"
+    },
+    {
+     "q": 80,
+     "u": "ml",
+     "item": "soy sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "Worcestershire sauce",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "brown sugar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 3,
+     "u": "",
+     "item": "garlic cloves",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "large potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "onions",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 120,
+     "u": "g",
+     "item": "sour cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Cut the sirloin into big 5cm chunks. Mix the soy, Worcestershire, sugar, crushed garlic and half the oil, and marinate the beef in it for at least 2 hours.",
+     "min": 10
+    },
+    {
+     "text": "Prick the potatoes, rub with salt and bake at 200C for an hour until the skins are crisp.",
+     "min": 60
+    },
+    {
+     "text": "Slice the onions into thick rings and cook slowly in the butter until soft and brown.",
+     "min": 20
+    },
+    {
+     "text": "Thread the beef onto skewers or leave loose and grill over high heat for 6 to 8 minutes, turning, until charred outside and pink in the middle. Rest for 5 minutes.",
+     "min": 13
+    },
+    {
+     "text": "Split the potatoes, fill with sour cream and chives, and serve with the steak tips under the onions.",
+     "min": 5
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Staties' portobello tips",
+     "prep_min": 25,
+     "cook_min": 70,
+     "make_ahead": "Marinate the mushrooms up to 4 hours ahead",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 80,
+       "u": "ml",
+       "item": "soy sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetarian Worcestershire sauce",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "brown sugar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 3,
+       "u": "",
+       "item": "garlic cloves",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "onions",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 120,
+       "u": "g",
+       "item": "sour cream",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Cut the mushrooms into thick chunks. Mix the soy, Worcestershire, sugar, crushed garlic and half the oil, and marinate the mushrooms in it for 30 minutes.",
+       "min": 10
+      },
+      {
+       "text": "Prick the potatoes, rub with salt and bake at 200C for an hour until the skins are crisp.",
+       "min": 60
+      },
+      {
+       "text": "Slice the onions into thick rings and cook slowly in the butter until soft and brown.",
+       "min": 20
+      },
+      {
+       "text": "Grill the mushrooms over high heat for 6 to 8 minutes, turning, until charred and juicy.",
+       "min": 8
+      },
+      {
+       "text": "Split the potatoes, fill with sour cream and chives, and serve with the mushrooms under the onions.",
+       "min": 5
+      }
+     ],
+     "af": true
+    }
+   }
   }
  ]
 }

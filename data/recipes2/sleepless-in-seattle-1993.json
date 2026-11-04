@@ -529,6 +529,176 @@
    ],
    "veg": true,
    "af": true
+  },
+  {
+   "n": "Rainbow Room filet mignon",
+   "course": "m",
+   "prep_min": 25,
+   "cook_min": 60,
+   "make_ahead": "Bake the potatoes Anna up to 4 hours ahead and reheat in the pan; make the vinegar reduction up to 2 days ahead",
+   "ingredients": [
+    {
+     "q": 4,
+     "u": "",
+     "item": "beef eye fillet steaks, about 200g each",
+     "aisle": "Meat"
+    },
+    {
+     "q": 1,
+     "u": "kg",
+     "item": "waxy potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 150,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "shallot",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "ml",
+     "item": "white wine vinegar",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch tarragon",
+     "aisle": "Produce"
+    },
+    {
+     "q": 1,
+     "u": "tbsp",
+     "item": "olive oil",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Salt the steaks and leave them at room temperature. Melt the butter.",
+     "min": 5
+    },
+    {
+     "text": "Slice the potatoes paper thin. Layer them in overlapping circles in a buttered ovenproof frying pan, brushing each layer with melted butter and seasoning. Press down, cook on the stove for 8 minutes, then bake at 200C for 35 minutes until golden underneath.",
+     "min": 50
+    },
+    {
+     "text": "Simmer the vinegar with the chopped shallot and a few tarragon stalks until only 2 tablespoons are left. Strain.",
+     "min": 8
+    },
+    {
+     "text": "Whisk the yolks with the reduction in a bowl over barely simmering water until thick, then whisk in the remaining warm melted butter slowly. Stir in chopped tarragon and season.",
+     "min": 10
+    },
+    {
+     "text": "Sear the steaks in a smoking hot pan with the oil, 3 to 4 minutes a side for medium rare, then rest for 5 minutes.",
+     "min": 13
+    },
+    {
+     "text": "Turn the potatoes out and cut into wedges. Serve each steak with a wedge and a spoon of béarnaise.",
+     "min": 4
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Rainbow Room portobellos",
+     "prep_min": 25,
+     "cook_min": 55,
+     "make_ahead": "Bake the potatoes Anna up to 4 hours ahead and reheat in the pan",
+     "ingredients": [
+      {
+       "q": 4,
+       "u": "",
+       "item": "large portobello mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "kg",
+       "item": "waxy potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 150,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "shallot",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "ml",
+       "item": "white wine vinegar",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch tarragon",
+       "aisle": "Produce"
+      },
+      {
+       "q": 1,
+       "u": "tbsp",
+       "item": "olive oil",
+       "aisle": "Pantry"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Brush the mushrooms with oil and season. Melt the butter.",
+       "min": 5
+      },
+      {
+       "text": "Slice the potatoes paper thin. Layer them in overlapping circles in a buttered ovenproof frying pan, brushing each layer with melted butter and seasoning. Press down, cook on the stove for 8 minutes, then bake at 200C for 35 minutes until golden underneath.",
+       "min": 50
+      },
+      {
+       "text": "Simmer the vinegar with the chopped shallot and a few tarragon stalks until only 2 tablespoons are left. Strain.",
+       "min": 8
+      },
+      {
+       "text": "Whisk the yolks with the reduction in a bowl over barely simmering water until thick, then whisk in the remaining warm melted butter slowly. Stir in chopped tarragon and season.",
+       "min": 10
+      },
+      {
+       "text": "Grill the mushrooms in a hot pan, 4 minutes a side, until juicy and browned.",
+       "min": 8
+      },
+      {
+       "text": "Turn the potatoes out and cut into wedges. Serve each mushroom with a wedge and a spoon of béarnaise.",
+       "min": 4
+      }
+     ],
+     "af": true
+    }
+   }
   }
  ]
 }
