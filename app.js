@@ -1096,11 +1096,14 @@ const PL_MASS=/(thyme|rosemary|mint|parsley|basil|coriander|dill|chives|oregano|
 function planPlural(item,q){if(!(q>1))return item;if(/^cob loa(f|ves)\b/i.test(item))return String(item).replace(/^cob loa(f|ves)/i,"cob loaves");let [head,...rest]=String(item).split(",");const par=head.indexOf(" (");if(par>0){rest=[head.slice(par)+(rest.length?","+rest.join(","):"")];head=head.slice(0,par);return planPlural(head,q)+rest[0]}const w=head.trim().split(" ");
   const pl=x=>/(s|ice|milk|water|juice|sugar|flour|rice|bread|butter|cream|cheese|fish|corn|meat|oil|salt|pepper|mince|beef|pork|lamb|chicken|bacon|ham|tea|coffee|soda)$/i.test(x)?x:/(ch|sh|x)$/i.test(x)?x+"es":/(tomato|potato|mango|avocado)$/i.test(x)?x+"es":/[^aeiou]y$/i.test(x)?x.slice(0,-1)+"ies":/f$/i.test(x)&&/loaf|leaf|half/i.test(x)?x.slice(0,-1)+"ves":x+"s";
   /* "rib eye", "ear of corn" style names are the food, not a container: "rib" only counts when it is "rib of" or "ribs" */
-  const ci=w.slice(0,3).findIndex((x,i)=>PL_CONT.test(x)&&!(i>0&&/^fillets?$/i.test(x))&&!(/^(rib|ear|head|wheel|log)$/i.test(x)&&w[i+1]&&w[i+1]!=="of"&&w[i+1]!=="celery"));
+  const ci=w.slice(0,3).findIndex((x,i)=>planCont(w,i));
   if(ci>=0){if(!/s$/i.test(w[ci]))w[ci]=pl(w[ci]);if(w.length>ci+1&&w[ci+1]!=="of")w[ci]+=" of"}else if(!PL_MASS.test(head.trim()))w[w.length-1]=pl(w[w.length-1]);return [w.join(" "),...rest].join(",")}
+/* "rib eye", "round steak", "ear of corn": rib, round, square, disc, ear, head, wheel and log are the food's own name, not a container,
+   unless "of" follows or the word ends the name ("4 pastry rounds"). So "9 thin beef round steaks", never "beef rounds of steaks" */
+const planCont=(w,i)=>PL_CONT.test(w[i])&&!(i>0&&/^fillets?$/i.test(w[i]))&&!(/^(rib|ear|head|wheel|log|round|square|disc)$/i.test(w[i])&&w[i+1]&&w[i+1]!=="of"&&w[i+1]!=="celery")&&!(/^cobs?$/i.test(w[i])&&/^loa(f|ves)$/i.test(w[i+1]||""));
 /* one of something stays singular even when the recipe wrote it plural: "1 clove garlic", not "1 cloves garlic" */
 function planOne(item){let [head,...rest]=String(item).split(",");const par=head.indexOf(" (");let tail="";if(par>0){tail=head.slice(par);head=head.slice(0,par)}
-  const w=head.split(" ");const i=w.slice(0,3).findIndex(x=>PL_CONT.test(x)&&/s$/i.test(x)),hasCont=w.slice(0,3).some(x=>PL_CONT.test(x));
+  const w=head.split(" ");const i=w.slice(0,3).findIndex((x,j)=>planCont(w,j)&&/s$/i.test(x)),hasCont=w.slice(0,3).some((x,j)=>planCont(w,j));
   if(i>=0)w[i]=planSing(w[i]);
   else if(hasCont){}
   /* "1 lemons", "1 brown onions": a plain plural noun at the end goes singular too */

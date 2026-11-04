@@ -22,8 +22,14 @@ const find=(id,g,re)=>{const l=lines(id,g).find(x=>re.test(x));assert.ok(l,`${id
 assert.match(find('romancing-the-stone-1984',9,/lime juice/),/\(about 2[23] limes\)/,'lime count at 9');
 assert.match(find('romancing-the-stone-1984',2,/lime juice/),/\(about 5 limes\)/,'lime count at 2');
 assert.match(find('rocky-v-1990',9,/steaks/),/about 1\.[34]kg/,'steak weight at 9');
+// "round", "rib" and the like name the cut, not a container: "9 thin beef round steaks", never "beef rounds of steaks"
+assert.match(find('rocky-v-1990',9,/steak/),/^9 thin beef round steaks, about 1\.[34]kg@Meat$/,'round steaks read properly at 9');
+assert.match(find('rocky-v-1990',1,/steak/),/^1 thin beef round steak, about 150g@Meat$/,'one round steak at 1');
+assert.ok(!lines('con-air-1997',9).some(l=>/rounds of/.test(l)),'no "rounds of" in Con Air');
+assert.match(find('how-the-grinch-stole-christmas-2000',9,/cob/),/^3 round cob loaves@Bakery$/,'round cob loaves');
+assert.match(find('madagascar-2005',1,/rib eye/),/^1 rib eye steak@/,'one rib eye steak, singular');
 {const m=find('rocky-v-1990',9,/milk,/),sum=[...m.matchAll(/(\d+(?:\.\d+)?)\s?(ml|L)\b(?= for)/g)].reduce((a,x)=>a+(+x[1])*(x[2]==='L'?1000:1),0);assert.ok(sum>1400&&sum<1700,'milk split adds up to the line: '+m)}
 // a tin or bag size never scales
 assert.ok(!lines('rocky-v-1990',9).some(l=>/\(\d+ ?g\)/.test(l)&&/tins?|cans?/.test(l)&&!/\(400 ?g\)/.test(l)),'tin sizes stay put');
 
-console.log('PASS: frying oil holds at one pot at 2, 4 and 9 guests; spoon oils still scale; pack notes follow the guests.');
+console.log('PASS: frying oil holds at one pot at 2, 4 and 9 guests; spoon oils still scale; pack notes follow the guests; cut names like round steak read properly.');
