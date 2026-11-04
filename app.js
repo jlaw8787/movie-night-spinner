@@ -1340,7 +1340,7 @@ const KDRY=(()=>{const cap=(m,v)=>v&&/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice
    [new RegExp("\\b("+W+")[- ](battered)\\b","gi"),m=>cap(m,"crisp battered")],[new RegExp("\\b("+W+")[- ](braised|stewed)\\b","gi"),(m,a,b)=>cap(m,"slow-"+b.toLowerCase())],
    [new RegExp("\\b("+W+")[- ](glazed)\\b","gi"),m=>cap(m,"sticky glazed")],[new RegExp("\\b("+W+")[- ](jus|sauce|gravy|reduction|butter|glaze)\\b","gi"),(m,a,b)=>cap(m,"rich "+b.toLowerCase())],
    [new RegExp("\\b("+W+")[- ](marinated|poached|steamed|soaked|infused|spiked|cured)\\b","gi"),(m,a,b)=>cap(m,b.toLowerCase())],
-   r(/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?))/gi,"mocktail"),r(/\b(champagne|prosecco|sparkling wine|bubbly)\b/gi,"sparkling apple"),
+   r(/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing))/gi,"mocktail"),r(/\b(champagne|prosecco|sparkling wine|bubbly)\b/gi,"sparkling apple"),
    r(/\b(red |white |rosé |rose )?wines?\b(?! glass)/gi,"grape juice"),r(/\balcohol-free (beer|lager|stout|ale) batter\b/gi,"soda water batter"),r(/\b(cold |ice-cold )?alcohol-free (beers?|lagers?|stouts?|ales?)\b(?! (and|or|sauce|gravy|glaze|marinade|cheese|cheddar|mustard)\b)/gi,"ginger beer"),r(/\b(?<!(root|ginger|butter|alcohol-free) )(beers?|lagers?|ales?|stouts?|longnecks?|stubbies|tinnies|guinness)\b/gi,"root beer"),
    r(/\bciders?\b/gi,"sparkling apple juice"),r(/\b(whisk(e)?y|bourbon|scotch|rye whiskey)\b/gi,"butterscotch"),r(/\brum\b/gi,"coconut"),r(/\bgin\b/gi,"cucumber"),
    r(/\b(vodka|tequila|mezcal)\b/gi,"lime"),r(/\b(brandy|cognac)\b/gi,"vanilla"),r(/\b(liqueurs?|schnapps|amaretto|kahlua|baileys)\b/gi,"syrup"),r(/\bvermouth\b/gi,"bitter orange"),r(/(?<!\b(goodness|heaven|pete|god|christ|old times)(['’]s?|s['’])? |\bthe )\bsake\b/gi,"yuzu soda"),
@@ -1349,13 +1349,18 @@ const KDRY=(()=>{const cap=(m,v)=>v&&/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice
    before and after the shared pass, and run on every card since a layout dries PG films too */
 const KFIX=(()=>{const cap=(m,v)=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v;
   return [[/\b(goodness|heaven|pete|god|christ)((['’]s?|s['’])?) (syrup|yuzu soda)\b/gi,(m,a,b)=>a+b+" sake"],
-   [/\bmocktail (franks?|frankfurts?|sausages?|cherr(y|ies)|onions?|sauce|sticks?)\b/gi,(m,a)=>cap(m,"cocktail "+a)],
+   [/\bmocktail (franks?|frankfurts?|sausages?|cherr(y|ies)|onions?|sauce|sticks?|dressing)\b/gi,(m,a)=>cap(m,"cocktail "+a)],[/\b(prawn|shrimp|seafood|crab|lobster|fruit) mocktails?\b/gi,m=>m.replace(/mock(?=tail)/i,w=>/^M/.test(w)?"Cock":"cock")],
    [/\bgrape juice (glass(es)?)\b/gi,(m,a)=>cap(m,"wine "+a)],
    [/\b(root|ginger|butter) (root|ginger) beer\b/gi,(m,a)=>a+" beer"],[/\balcohol-free (root|ginger) beer\b/gi,m=>cap(m,"alcohol-free beer")],
    [/\b(mocktail|syrup|grape juice|sparkling apple|root beer|ginger beer)( \1)+\b/gi,(m,a)=>a]]})();
 const dryText=(t,on)=>{const v=KFIX.reduce((a,[re,to])=>a.replace(re,to),t);return on?KFIX.reduce((a,[re,to])=>a.replace(re,to),KDRY.reduce((a,[re,to])=>a.replace(re,to),v)):v};
 function kidsDryDom(root,f){if(!root)return;const on=dryNow(f||current);const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;const todo=[];
-  while(n=tw.nextNode()){const p=n.parentElement;if(!p||/^(SCRIPT|STYLE)$/.test(p.tagName))continue;const t=n.nodeValue;if(!/[a-z]/i.test(t))continue;const v=dryText(t,on);if(v!==t)todo.push([n,v])}
+  /* a name can arrive split across text nodes ("Caribbean cruise prawn" + "cocktail"): each node is read with the end of the one before and the start of the one after, and only its own part is kept */
+  const nodes=[];while(n=tw.nextNode()){const p=n.parentElement;if(!p||/^(SCRIPT|STYLE)$/.test(p.tagName))continue;nodes.push(n)}
+  nodes.forEach((n,i)=>{const t=n.nodeValue;if(!/[a-z]/i.test(t))return;const pv=i?nodes[i-1].nodeValue.slice(-24):"",nx=i<nodes.length-1?nodes[i+1].nodeValue.slice(0,24):"",gl=(a,b)=>a&&b&&!/\s$/.test(a)&&!/^\s/.test(b)?" ":"";
+    const pre=pv+gl(pv,t),post=gl(t,nx)+nx,all=dryText(pre+t+post,on);let v=dryText(t,on);
+    if(all.startsWith(dryText(pre,on)===pre?pre:"\u0000")&&all.endsWith(post)&&all.length>=pre.length+post.length)v=all.slice(pre.length,all.length-post.length||undefined);
+    if(v!==t)todo.push([n,v])});
   for(const [n,v] of todo)n.nodeValue=v}
 function fitLines(card){try{kidsDryDom(card)}catch(e){}
   const els=[...card.querySelectorAll("*")].filter(e=>{if(!e.firstChild||!e.offsetWidth)return false;const cs=getComputedStyle(e);
