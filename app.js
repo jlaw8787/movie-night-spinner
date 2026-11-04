@@ -1766,14 +1766,17 @@ const SEASONS=[
 const dayStart=d=>dAt(d.getFullYear(),d.getMonth(),d.getDate());
 function seasonState(now){
   const t=dayStart(now||new Date()),y=t.getFullYear();
-  return SEASONS.map(s=>{let on=false,next=null,day=null;
-    for(const yy of[y-1,y,y+1]){const w=s.win(yy);if(!w)continue;const[a,b,c]=w;if(t>=a&&t<=b)on=true;if(a>t&&(!next||a<next)){next=a;day=c||b}}
-    return{s,on,next,day}});
+  return SEASONS.map(s=>{let on=false,next=null,day=null,end=null;
+    for(const yy of[y-1,y,y+1]){const w=s.win(yy);if(!w)continue;const[a,b,c]=w;if(t>=a&&t<=b){on=true;end=b}if(a>t&&(!next||a<next)){next=a;day=c||b}}
+    return{s,on,next,day,end}});
 }
 const daysTo=d=>Math.round((d-dayStart(new Date()))/864e5);
+/* a shelf colour as text on the aisle's purple (its lightest stripe): lifted toward white until it reads at 4.5 to 1 (Movember's brown, Friday the 13th's red) */
+function inkOn(c,bg){const rgb=h=>{h=h.replace("#","");if(h.length===3)h=h.replace(/./g,"$&$&");return [0,2,4].map(i=>parseInt(h.slice(i,i+2),16))},lum=a=>{const v=a.map(x=>{x/=255;return x<=.03928?x/12.92:((x+.055)/1.055)**2.4});return .2126*v[0]+.7152*v[1]+.0722*v[2]};
+  const b=lum(rgb(bg)),a=rgb(c);for(let t=0;t<=1.0001;t+=.05){const m=a.map(x=>Math.round(x+(255-x)*t));const l=lum(m);if((Math.max(l,b)+.05)/(Math.min(l,b)+.05)>=4.6)return "#"+m.map(x=>x.toString(16).padStart(2,"0")).join("")}return "#ffffff"}
 const fmtDay=d=>d.toLocaleDateString("en-AU",{day:"numeric",month:"short"});
 function seasonRows(s,list,later){
-  const st=`--sg:${s.c[0]};--sf:${s.c[1]};--ss:${s.c[2]}`;
+  const st=`--sg:${s.c[0]};--sf:${s.c[1]};--ss:${s.c[2]};--sl:${inkOn(s.c[0],"#2e1c4e")}`;
   if(s.rows)return s.rows(list).map(r=>[r[0],r[1],later?`Back on ${fmtDay(later)}. ${r[2]}`:r[2],"season "+(r[3]||"")+(later?" later":""),st,s.id]);
   const r=list.filter(s.has).sort((a,b)=>a.title.replace(/^(The|A) /,"").localeCompare(b.title.replace(/^(The|A) /,"")));
   return r.length?[[s.name,r,later?`Back on ${fmtDay(later)}. ${s.note}`:s.note,"season "+(s.cls||"")+(later?" later":""),st,s.id]]:[];
@@ -1861,7 +1864,7 @@ function openSlip(f,go){
   const due=dueBack(f),now=new Date();const picked=new Set(counter[f.id]||[]);
   const o=document.createElement("dialog");o.className="counter";o.setAttribute("role","dialog");o.setAttribute("aria-modal","true");o.setAttribute("aria-label",`Rental slip for ${f.title}`);
   const fmt=d=>d.toLocaleString("en-AU",{weekday:"short",day:"numeric",month:"short"});
-  o.innerHTML=`<div class="slip"><h3 class="slip-logo"><img src="assets/brand/galaxy-video-wide-600.webp" srcset="assets/brand/galaxy-video-wide-600.webp 600w, assets/brand/galaxy-video-wide-1200.webp 1200w" sizes="300px" width="600" height="154" alt="Galaxy Video" decoding="async"></h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?(isTuesday()?"New release, $2 Tuesday":"New release, 3 nights"):"Weekly"} $${priceOf(f).toFixed(2)}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd><dt>Paid</dt><dd>$10 note, change $${(10-priceOf(f)).toFixed(2)}</dd></dl>${hireCaseHTML(f)}<p class="hc-k">Box swapped for a hire case. ${isNew(f)?"The cover went in that sleeve this week and it's still glossy.":"The cover's been in that sleeve since the shop opened."}</p><button type="button" class="peek" data-a="peek" aria-expanded="false">Preview the menu</button><div class="peekbox" hidden></div><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
+  o.innerHTML=`<div class="slip"><h3 class="slip-logo"><img src="assets/brand/galaxy-video-wide-600.webp" srcset="assets/brand/galaxy-video-wide-600.webp 600w, assets/brand/galaxy-video-wide-1200.webp 1200w" sizes="300px" width="600" height="154" alt="Galaxy Video" decoding="async"></h3><p class="c">Open 7 days. Till late.</p><hr><dl><dt>Member</dt><dd>${member.name?ESC(member.name):"No. "+member.no}</dd><dt>Date</dt><dd>${fmt(now)}</dd><dt>Title</dt><dd>${ESC(f.title)} (${f.year})</dd><dt>Hire</dt><dd>${isNew(f)?(isTuesday()?"New release, $2 Tuesday":"New release, 3 nights"):"Weekly"} $${priceOf(f).toFixed(2)}</dd><dt>Due back</dt><dd>${fmt(due)}, 7pm</dd><dt>Paid</dt><dd>$10 note, change $${(10-priceOf(f)).toFixed(2)}</dd></dl>${hireCaseHTML(f)}<p class="hc-k">Box swapped for a hire case. ${isNew(f)?"The cover went in that sleeve this week and it's still glossy.":+f.year<2000?"The cover's been in that sleeve since the shop opened.":"The cover's had a few years in that sleeve."}</p><button type="button" class="peek" data-a="peek" aria-expanded="false">Preview the menu</button><div class="peekbox" hidden></div><div class="stamp" aria-hidden="true">Be kind<br>please rewind</div><hr><h4>Anything from the counter?</h4><div class="lollies">${Object.entries(COUNTER).map(([k,[n]])=>`<label><input type="checkbox" value="${k}"${picked.has(k)?" checked":""}> ${n}</label>`).join("")}</div><p class="small">Ticked treats go on this film's shopping list.</p><hr><p class="c">Late fee $1 a day. No drop box after 10pm.</p><div class="acts"><button type="button" data-a="back">Put it back</button><button type="button" class="go" data-a="go">Roll the film</button></div></div>`;
   const close=()=>dismissModal(o);
   o.addEventListener("click",e=>{
     if(e.target===o)return close();
@@ -2090,7 +2093,7 @@ function renderCal(cal){
   /* the calendar only lists what's close: big days (Christmas, Easter, Halloween and the like) a month out, the rest a week out, and the strip hides when nothing is due */
   const on=cal.filter(c=>c.on),up=cal.filter(c=>!c.on&&c.next&&daysTo(c.day)<=(c.s.big?31:7)).sort((a,b)=>a.day-b.day);
   $("shopCal").hidden=!on.length&&!up.length;
-  const chip=(c,isOn)=>`<button type="button" class="${isOn?"on":""}${!isOn&&peekSeason===c.s.id?" peek":""}" aria-pressed="${isOn||peekSeason===c.s.id}" data-season="${c.s.id}" style="--sg:${c.s.c[0]};--sf:${c.s.c[1]}"><b>${ESC(c.s.name)}</b><small>${isOn?"On the shelves now":(d=>d===1?"Tomorrow":`In ${d} days, ${fmtDay(c.day)}`)(daysTo(c.day))}</small></button>`;
+  const chip=(c,isOn)=>`<button type="button" class="${isOn?"on":""}${!isOn&&peekSeason===c.s.id?" peek":""}" aria-pressed="${isOn||peekSeason===c.s.id}" data-season="${c.s.id}" style="--sg:${c.s.c[0]};--sf:${c.s.c[1]}"><b>${ESC(c.s.name)}</b>${isOn?(c.end?`<small>Until ${fmtDay(c.end)}</small>`:""):`<small>${(d=>d===1?"Tomorrow":`In ${d} days, ${fmtDay(c.day)}`)(daysTo(c.day))}</small>`}</button>`;
   $("shopCal").innerHTML=(on.length?`<span class="cal-k">On now</span>`+on.map(c=>chip(c,true)).join(""):"")+(up.length?`<span class="cal-k">Coming up</span>`+up.map(c=>chip(c,false)).join(""):"");
 }
 /* shelves fill in the background: the first few tapes of each row go up straight away, the rest as the phone gets a spare moment */
@@ -2887,7 +2890,7 @@ function kitBits(f){
     prop:{kind:prop.kind||"ticket",title:D(prop.title||f.title),lines:(prop.lines||[]).map(D)},
     style:kitStyle(f,L,fl)||fl.door||((f.theme==="scifi"||f.theme==="galaxy")&&["lab","airline","galley","canteen","precinct"].includes(L.fmt)?"terminal":"")||KIT_SIGN[L.fmt]||KIT_THEME_SIGN[f.theme]||"plaque",dark:pal.dark||st.mi||"#1b1210",acc:pal.accent||st.ma||"#b3261e",
     fmt:L.fmt||"",tropic:L.fmt==="tiki"||/hawai|island|beach|tiki|luau|lagoon|tropic|polynes|paradise|reef|coconut|surf/i.test((fl.venue||"")+" "+(fl.sign||"")),
-    saloon:L.fmt==="saloon"||/saloon/i.test(fl.venue||""),halftime:["pub","tavern","stadium"].includes(L.fmt),
+    saloon:/\bsaloon\b/i.test((fl.venue||"")+" "+(fl.sign||"")),halftime:["pub","tavern","stadium"].includes(L.fmt),
     sweet:w?(w.label||w.n):"",drink:d?(d.label||d.n):"",time,eye:st.eye||"Tonight's feature",
     still:(L.stills||[]).map(x=>Array.isArray(x)?x[0]:x).filter(Boolean),poster:lobbyPoster(f)};
 }
