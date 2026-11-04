@@ -1,0 +1,444 @@
+[
+ {
+  "id": "16 Blocks (2006)",
+  "layout": "hb:sixteen",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"The 16th block bus stop\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "A Goofy Movie (1995)",
+  "layout": "hb:roadtrip",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"The Lake Destiny Campsite\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Analyze This (1999)",
+  "layout": "hb:sobelsupper",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"Paul Vitti's dining room\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Anchorman: The Legend of Ron Burgundy (2004)",
+  "layout": "hb:newsroom",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"The Channel 4 Newsroom\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Annie Hall (1977)",
+  "layout": "hb:annietable",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"The Beach House Kitchen\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Beetlejuice (1988)",
+  "layout": "hb:maitland",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"The Maitland House Dining Room\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Big (1988)",
+  "layout": "hb:toystore",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"The MacMillan Toys party\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Big Night (1996)",
+  "layout": "hb:feast",
+  "flags": [
+   {
+    "k": "protein",
+    "w": 3,
+    "msg": "3 of 5 savoury dishes are pork"
+   }
+  ]
+ },
+ {
+  "id": "Brewster's Millions (1985)",
+  "layout": "hb:spenditall",
+  "flags": [
+   {
+    "k": "protein",
+    "w": 3,
+    "msg": "3 of 5 savoury dishes are beef"
+   },
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"Monty's Hotel Suite\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Bugsy (1991)",
+  "layout": "hb:flamingo",
+  "flags": [
+   {
+    "k": "protein",
+    "w": 3,
+    "msg": "3 of 5 savoury dishes are seafood"
+   },
+   {
+    "k": "nostarch",
+    "w": 2,
+    "msg": "no rice, bread, potato, noodles or pastry on the savoury side"
+   },
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"The desert building site\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "C.H.U.D. (1984)",
+  "layout": "hb:bowerybelow",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   }
+  ]
+ },
+ {
+  "id": "Carlito's Way (1993)",
+  "layout": "hb:paraiso",
+  "flags": [
+   {
+    "k": "noveg",
+    "w": 1,
+    "msg": "no vegetable dish or veg in any savoury dish"
+   }
+  ]
+ },
+ {
+  "id": "Casino (1995)",
+  "layout": "hb:tangiers",
+  "flags": [
+   {
+    "k": "protein",
+    "w": 3,
+    "msg": "3 of 4 savoury dishes are seafood"
+   },
+   {
+    "k": "nostarch",
+    "w": 2,
+    "msg": "no rice, bread, potato, noodles or pastry on the savoury side"
+   },
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"The Tangiers kitchen\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Chef (2014)",
+  "layout": "hb:truck",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"The El Jefe Food Truck\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Coming to America (1988)",
+  "layout": "hb:mcdowells",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"McDowell's\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Die Hard (1988)",
+  "layout": "hb:nakatomi",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"The Nakatomi Christmas Party\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Die Hard with a Vengeance (1995)",
+  "layout": "hb:cityrun",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"Zeus's electronics shop\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Do the Right Thing (1989)",
+  "layout": "hb:sals",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"Sal's Famous Pizzeria\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Dog Day Afternoon (1975)",
+  "layout": "hb:brooklyn",
+  "flags": [
+   {
+    "k": "venue",
+    "w": 2,
+    "msg": "hand-built brand reads generic: \"Brooklyn takeaway / A long afternoon\""
+   },
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"First Brooklyn Savings Bank\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Donnie Brasco (1997)",
+  "layout": "hb:leftys",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"Lefty's apartment\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Elf (2003)",
+  "layout": "hb:gimbels",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"The Midtown Coffee Shop\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Escape from New York (1981)",
+  "layout": "hb:escape",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"The Duke's Broadway show\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Frequency (2000)",
+  "layout": "hb:sullivansupper",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"The Sullivan house in Queens\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Friday (1995)",
+  "layout": "hb:market",
+  "flags": [
+   {
+    "k": "thin",
+    "w": 2,
+    "msg": "only 1 main"
+   },
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"Craig's Front Porch\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Get Shorty (1995)",
+  "layout": "hb:shorty",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"Harry Zimm's office\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Ghost Dog: The Way of the Samurai (1999)",
+  "layout": "hb:rooftop",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"The rooftop pigeon coop\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Ghostbusters (1984)",
+  "layout": "hb:workorder",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"The Ghostbusters firehouse\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Ghostbusters II (1989)",
+  "layout": "hb:moodslime",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"Ray's Occult Books\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Goodfellas (1990)",
+  "layout": "hb:pad",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"Paulie's prison kitchen\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Home Alone (1990)",
+  "layout": "hb:nero",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"The McCallister House\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Home Alone 2: Lost in New York (1992)",
+  "layout": "hb:suite",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"Kevin's hotel suite\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Inside Man (2006)",
+  "layout": "hb:negotiation",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"Manhattan Trust Bank\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Julie & Julia (2009)",
+  "layout": "hb:kitchenfolio",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"Julie's Kitchen in Queens\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Jurassic Park (1993)",
+  "layout": "hb:jurassic",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"The Visitor Centre Dining Room\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "King of New York (1990)",
+  "layout": "hb:plazanight",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"Frank White's hotel suite\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Lady and the Tramp (1955)",
+  "layout": "hb:tonys",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"Tony's Restaurant\" not on the printed menu"
+   }
+  ]
+ },
+ {
+  "id": "Léon: The Professional (1994)",
+  "layout": "hb:leon",
+  "flags": [
+   {
+    "k": "kitvenue",
+    "w": 1,
+    "msg": "table kit venue \"Tony's restaurant\" not on the printed menu"
+   }
+  ]
+ }
+]

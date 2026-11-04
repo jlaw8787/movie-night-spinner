@@ -818,6 +818,167 @@
      ]
     }
    }
+  },
+  {
+   "n": "Ham and eggs",
+   "course": "m",
+   "prep_min": 15,
+   "cook_min": 35,
+   "make_ahead": "Par-boil and grate the potatoes up to 1 day ahead; keep chilled",
+   "ingredients": [
+    {
+     "q": 800,
+     "u": "g",
+     "item": "waxy potatoes",
+     "aisle": "Produce"
+    },
+    {
+     "q": 60,
+     "u": "g",
+     "item": "butter",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 2,
+     "u": "tbsp",
+     "item": "vegetable oil",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 4,
+     "u": "",
+     "item": "thick ham steaks, about 150g each",
+     "aisle": "Deli"
+    },
+    {
+     "q": 8,
+     "u": "",
+     "item": "eggs",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "tsp",
+     "item": "salt",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "pinch black pepper",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "bunch chives",
+     "aisle": "Produce"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Boil the whole potatoes for 10 minutes, cool, peel and grate coarsely. Season with the salt.",
+     "min": 20
+    },
+    {
+     "text": "Press the potato flat into a hot pan with half the butter and the oil and fry until crisp and gold on both sides.",
+     "min": 15
+    },
+    {
+     "text": "Fry the ham steaks in a second pan until browned at the edges, 2 minutes a side.",
+     "min": 5
+    },
+    {
+     "text": "Fry the eggs in the rest of the butter, any style.",
+     "min": 4
+    },
+    {
+     "text": "Plate the ham with two eggs and a wedge of hash browns, pepper and chives over.",
+     "min": 3
+    }
+   ],
+   "veg": false,
+   "af": true,
+   "alt": {
+    "veg": {
+     "n": "Mushrooms and eggs",
+     "prep_min": 15,
+     "cook_min": 35,
+     "make_ahead": "Par-boil and grate the potatoes up to 1 day ahead; keep chilled",
+     "ingredients": [
+      {
+       "q": 800,
+       "u": "g",
+       "item": "waxy potatoes",
+       "aisle": "Produce"
+      },
+      {
+       "q": 60,
+       "u": "g",
+       "item": "butter",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 2,
+       "u": "tbsp",
+       "item": "vegetable oil",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 4,
+       "u": "",
+       "item": "large field mushrooms",
+       "aisle": "Produce"
+      },
+      {
+       "q": 8,
+       "u": "",
+       "item": "eggs",
+       "aisle": "Dairy"
+      },
+      {
+       "q": 1,
+       "u": "tsp",
+       "item": "salt",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "pinch black pepper",
+       "aisle": "Pantry"
+      },
+      {
+       "q": 1,
+       "u": "",
+       "item": "bunch chives",
+       "aisle": "Produce"
+      }
+     ],
+     "steps": [
+      {
+       "text": "Boil the whole potatoes for 10 minutes, cool, peel and grate coarsely. Season with the salt.",
+       "min": 20
+      },
+      {
+       "text": "Press the potato flat into a hot pan with half the butter and the oil and fry until crisp and gold on both sides.",
+       "min": 15
+      },
+      {
+       "text": "Fry the mushrooms gill side up in a second pan with a little butter until tender, 6 minutes.",
+       "min": 6
+      },
+      {
+       "text": "Fry the eggs in the rest of the butter, any style.",
+       "min": 4
+      },
+      {
+       "text": "Plate the mushrooms with two eggs and a wedge of hash browns, pepper and chives over.",
+       "min": 3
+      }
+     ]
+    }
+   }
   }
  ]
 }
