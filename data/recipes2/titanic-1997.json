@@ -142,9 +142,9 @@
   {
    "n": "Jack's steerage ham sandwiches",
    "course": "s",
-   "prep_min": 20,
-   "cook_min": 20,
-   "make_ahead": "Boil the potatoes up to 1 day ahead and keep chilled, then toss in hot butter on the night; fill the sandwiches just before serving",
+   "prep_min": 15,
+   "cook_min": 0,
+   "make_ahead": "Fill the sandwiches up to 2 hours ahead, wrap and chill; open the pickled onions to serve",
    "ingredients": [
     {
      "q": 1,
@@ -171,24 +171,20 @@
      "aisle": "Pantry"
     },
     {
-     "q": 600,
-     "u": "g",
-     "item": "small potatoes",
-     "aisle": "Produce"
+     "q": 1,
+     "u": "",
+     "item": "jar pickled onions",
+     "aisle": "Pantry"
     }
    ],
    "steps": [
-    {
-     "text": "Boil the potatoes in their skins until tender.",
-     "min": 20
-    },
     {
      "text": "Butter thick slices of loaf and fill with ham and mustard.",
      "min": 10
     },
     {
-     "text": "Toss the drained potatoes with butter and salt. Serve together below deck.",
-     "min": 10
+     "text": "Cut in halves and serve with the pickled onions below deck.",
+     "min": 5
     }
    ],
    "veg": false,
@@ -196,9 +192,9 @@
    "alt": {
     "veg": {
      "n": "King of the world cheddar and pickle sandwiches",
-     "prep_min": 20,
-     "cook_min": 20,
-     "make_ahead": "Boil the potatoes up to 1 day ahead and keep chilled; slice the cheddar ahead too and build the sandwiches just before serving",
+     "prep_min": 15,
+     "cook_min": 0,
+     "make_ahead": "Slice the cheddar ahead and build the sandwiches up to 2 hours before serving",
      "ingredients": [
       {
        "q": 1,
@@ -231,30 +227,20 @@
        "aisle": "Pantry"
       },
       {
-       "q": 600,
-       "u": "g",
-       "item": "small potatoes",
-       "aisle": "Produce"
-      },
-      {
-       "q": null,
+       "q": 1,
        "u": "",
-       "item": "salt, to taste",
-       "aisle": "Spices"
+       "item": "jar pickled onions",
+       "aisle": "Pantry"
       }
      ],
      "steps": [
-      {
-       "text": "Boil the potatoes in their skins until tender.",
-       "min": 20
-      },
       {
        "text": "Butter thick slices of loaf and fill with cheddar, pickle and mustard.",
        "min": 10
       },
       {
-       "text": "Toss the drained potatoes with butter and salt. Serve together below deck.",
-       "min": 10
+       "text": "Cut in halves and serve with the pickled onions below deck.",
+       "min": 5
       }
      ],
      "af": true

@@ -182,7 +182,7 @@ const VOICE={
   tense:{k:"Check your guns at the door",w:"Wanted, dead hungry",c:"At high noon"},
   scrappy:{k:"Grub, cheap",w:"Wanted: one hungry stranger",c:"Grub's up"}
 };
-const LABEL={s:"Free Lunch Counter",m:"From the Kitchen",w:"Sweets",d:"At the Bar"};
+const LABEL={s:"Lunch Counter",m:"From the Kitchen",w:"Sweets",d:"At the Bar"};
 const LABEL_DRY={d:"Sarsaparilla Bar"};
 const FB={venue:"The Long Bar",sign:"Hot meals and rooms upstairs",by:"The Management",
   noteText:c=>(c.f&&c.f.T)||"Wipe your boots, hang your hat, and sit where you like.",

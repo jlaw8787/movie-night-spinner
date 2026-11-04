@@ -160,7 +160,10 @@ window.MENU_FORMATS[ID]=ctx=>{
     ${bandHtml}${posterSrc?"":winLabel}${win}${tag}${noteHtml}${frontFoot}${fitImg()}</div>`;
 
   /* ---------- back: luncheon list, second still, prop, cue ---------- */
-  const m=ctx.menu||{};
+  const m=Object.assign({},ctx.menu||{});
+  /* a cake is never filed under sandwiches and savouries: it moves to the cake trolley (Paddington's Dundee cake) */
+  {const CAKE=/\b(cakes?|scones?|shortbread|biscuits?|buns?|slices?|tarts?|lamingtons?|sponge|gateau|macarons?|meringues?|brownies?|cookies?)\b/i,SAV=/\b(cheese|ham|egg|salmon|chicken|beef|sausage|savoury|potato|crab|prawn|onion|tomato|cucumber)\b/i;
+   const mv=(m.s||[]).filter(it=>CAKE.test(it.n)&&!SAV.test(it.n));if(mv.length&&(m.s||[]).length>mv.length){m.s=m.s.filter(it=>!mv.includes(it));m.w=[...(m.w||[]),...mv]}}
   const secHead=t=>`<div style="break-inside:avoid;break-after:avoid;margin:0 0 .3em;text-align:center"><span style="font-family:${D};font-weight:${E.dw};font-size:max(18px,1.06em);line-height:1.1;color:${acc};${up}">${esc(t)}</span><div style="margin:.2em auto 0;width:3em;border-top:2px solid ${E.gilt}"></div></div>`;
   function row(it,ci,ii){
     const n=clean(it.n),p=price(f,fl,ci,ii,n,E.coin);

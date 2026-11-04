@@ -1387,6 +1387,8 @@ function fullMenu(f,menu,fmt){
   for(const k of ["s","m","w","d"])for(const it of menu[k]||[])seen.add(String(it.n||"").toLowerCase());
   const src={s:f.S,m:f.M,w:f.W,d:f.K},plain=!(DIET.veg||dietAF());
   if(plain&&f._full)for(const k of ["s","m","w","d"])for(const r of src[k]||[]){const it=toItem(r);if(!it.n||seen.has(it.n.toLowerCase()))continue;seen.add(it.n.toLowerCase());adds.push([k,Object.assign(it,{extra:true})])}
+  /* a card with one main shows the film's second main before a third starter, so a short board still reads as a dinner (Blazing Saddles: rib eyes beside the beans) */
+  if((menu.m||[]).length<2)adds.sort((a,b)=>(b[0]==="m")-(a[0]==="m"));
   const hz=f._lib&&f._lib.flavour&&f._lib.flavour.house;
   /* hz.fit, when set, lists the house lines that fit this film's layout without hiding any of its own dish notes */
   /* a house line never repeats a dish already on the card (no second sourdough, no second punch): same main noun, it drops */
