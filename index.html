@@ -2020,6 +2020,17 @@ dialog.kit .kit-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a;bo
 .kit-tent,.kit-back,.kit-front,.kp,.kp-main,.kp-body,.kp-who{min-width:0}
 .kp-name{text-overflow:clip}
 .kp-card .kp-f,.kp-badge .kp-f,.kp-receipt .kp-r{gap:10px}
+/* departures board: cells wrap to two lines rather than cut a word */
+.dp-row{grid-template-columns:.9fr 2.2fr 1.5fr 1.4fr;align-items:stretch}
+.dp-row span{white-space:normal;text-overflow:clip;line-height:1.15;padding:9px 10px;min-height:44px;display:flex;align-items:center;min-width:0}
+.dp-row.hd span{min-height:0;padding:0 10px}
+/* place card: an invitation or seating card */
+.kp-invite{background:#fbf6ea;border:2px solid var(--ka);outline:1px solid var(--ka);outline-offset:-7px;padding:12px 18px 10px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;font-family:"Cormorant Garamond",serif;color:#2a2018}
+.kp-invite .kp-h{font:600 13px "Playfair Display SC",serif;letter-spacing:.2em;color:var(--ka)}
+.kp-invite .kp-name{font:italic 500 38px/1.1 "Cormorant Garamond",serif;text-transform:none;letter-spacing:0;color:#2a2018;max-width:100%;margin:2px 0}
+.kp-invite .kp-blank{margin:6px auto 4px;width:70%}
+.kp-invite .kp-f{font:italic 500 15px "Cormorant Garamond",serif;opacity:.85}
+.kp-invite .kp-r{display:flex;gap:18px;font:600 11px "Playfair Display SC",serif;letter-spacing:.16em;margin-top:4px;color:var(--ka)}
 .kp-card .kp-f span,.kp-badge .kp-f span{min-width:0}
 .kit-tent{min-height:0;grid-template-rows:minmax(0,1fr) minmax(0,1fr)}
 .kit-front{min-height:0}
@@ -2860,7 +2871,7 @@ html,body{overflow-x:clip}
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=dee32339" defer></script>
 <script src="formats-core.js?v=f9ea9258" defer></script>
-<script src="app.js?v=72a5497c" defer></script>
+<script src="app.js?v=f35be980" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
