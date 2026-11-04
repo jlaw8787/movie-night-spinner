@@ -4,7 +4,7 @@ window.noDangle=function(t){t=String(t||"");const D=/\s+(and|with|of|in|the|a|an
   let s=t.replace(/[\s.,;:]+$/,"");const s0=s;for(let n=0;n<4&&D.test(s);n++)s=s.replace(D,"").replace(/[\s,;:]+$/,"");
   if(s===s0)return t;s=s.replace(/,\s*\S+$/,"");return s+(/[.!?]\s*$/.test(t)?".":"")};
 /* prices that make sense on their own card, for shared layouts: every main above every starter and sweet, a drink with spirits above every plain drink and sweet; a raised price keeps its own cents (the film's number lives there) and the card's price style, and nothing prints as 100 cents */
-window.priceSense=function(menu,P){const SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy|rob roy|sazerac|sidecar|gimlet|mai tai|grog|mead|sake|bellini|cosmopolitan|collins|sherry)\b/i;
+window.priceSense=function(menu,P){const SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|colada|sangria|champagne|prosecco|wine|toddy|rob roy|sazerac|sidecar|gimlet|mai tai|grog|mead|sake|bellini|cosmopolitan|collins|sherry|blue lagoon|curacao|mimosa|bellini|shandy)\b/i;
   const all=[].concat(...["s","m","w","d"].map(k=>P[k]||[])).map(String),cents=all.some(x=>/¢|\dc$/.test(x)),csym=all.some(x=>/\dc$/.test(x))?"c":"¢",dot=all.some(x=>/^\D*\.\d\d$/.test(x));
   const val=x=>{x=String(x);const n=parseFloat(x.replace(/[^\d.]/g,""));return isNaN(n)?null:/¢|\dc$/.test(x)?n/100:n};
   const fmt=(v,o)=>{o=String(o);const pre=(o.match(/^[^\d.]*/)||[""])[0].replace("¢",""),post=/¢|\dc$/.test(o)?"":(o.match(/[^\d.]*$/)||[""])[0];
@@ -16,6 +16,9 @@ window.priceSense=function(menu,P){const SP=/\b(whisk(e)?y|bourbon|rum|vodka|gin
   const out={};for(const k of ["s","m","w","d"])out[k]=(P[k]||[]).map(x=>{const v=val(x);return v!=null&&/¢|\dc$/.test(String(x))&&v>=.975?fmt(v,"1.00"):x});
   const nums=k=>(out[k]||[]).map(val).filter(v=>v!=null),sw=Math.max(0,...nums("s"),...nums("w"));
   out.m=(out.m||[]).map((x,i)=>{const v=val(x);return v!=null&&sw&&v<=sw?lift(sw*(1.15+.08*i),x):x});
+  /* a card extra (no tested recipe) never prices above the mains that are cooked tonight */
+  {const ms=(menu.m||[]),cm=Math.max(0,...(out.m||[]).map((x,i)=>ms[i]&&!ms[i].extra?val(x)||0:0));
+   if(cm)out.m=(out.m||[]).map((x,i)=>{const v=val(x);if(!ms[i]||!ms[i].extra||v==null||v<cm)return x;const t=Math.max(sw*1.05,cm*(.88-.04*i));if(t>=cm)return x;let w=Math.floor(t)+(t%1<.5?.5:.95);if(w>=cm)w=Math.floor(t);return fmt(cm>=2&&w>sw?w:t,x)})}
   const it=k=>(menu[k]||[]),isSp=i=>{const d=it("d")[i];return !!d&&SP.test((d.n||"")+" "+(d.note||""))};
   const plain=Math.max(0,...(out.d||[]).map((x,i)=>isSp(i)?0:val(x)||0),...nums("w"));
   out.d=(out.d||[]).map((x,i)=>{const v=val(x);return isSp(i)&&v!=null&&plain&&v<=plain?lift(plain*(1.2+.05*i),x):x});

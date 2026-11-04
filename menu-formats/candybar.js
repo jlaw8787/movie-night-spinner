@@ -117,7 +117,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const nIt=keys.reduce((a,k)=>a+menu[k].length,0),heavy=nIt>8;
   const PR={s:["4.50","5.25","3.95","4.75"],m:["7.95","8.50","6.95","7.25"],w:["3.25","3.75","2.95","3.50"],d:["3.50","2.95","3.95","3.25"]};
   /* the film's number only sets the cents of the first main, on the period price */
-  const price=(k,i)=>{const v=eraPrice(PR[k][i%4],f.year,2008);if(k==="m"&&i===0&&num){const d=String(v).match(/^(\d+)\.\d\d$/);if(d)return d[1]+"."+num.slice(-2).padStart(2,"0")}return v};
+  const price0=(k,i)=>{const v=eraPrice(PR[k][i%4],f.year,2008);if(k==="m"&&i===0&&num){const d=String(v).match(/^(\d+)\.\d\d$/);if(d)return d[1]+"."+num.slice(-2).padStart(2,"0")}return v};
+  /* the shared price check across the whole card: Easter Parade's Manhattan never sits under a soft drink */
+  const priceQ=(()=>{const P={};for(const k of ["s","m","w","d"])P[k]=(menu[k]||[]).map((x,i)=>price0(k,i));return window.priceSense?window.priceSense(menu,P):P})(),price=(k,i)=>priceQ[k]&&priceQ[k][i]!=null?priceQ[k][i]:price0(k,i);
   /* one of each board, a little under the sum of the first item on each, so it sits on the same period scale; the year only sets the cents */
   const val=v=>/¢$/.test(v)?parseFloat(v)/100:parseFloat(v)||0;
   const sum=keys.reduce((a,k)=>a+val(price(k,0)),0)*.9;
