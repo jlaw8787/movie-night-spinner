@@ -114,7 +114,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const SOFT=toHex(mix(ink,paper,.28));
   const BAND=T.dark?toHex(mix(pa,[0,0,0],.35)):toHex(lum(pd)<.2?pd:mix(pd,[0,0,0],.5));
   const BANDINK=readable("#f3e7c8",BAND,5);
-  const yy=String(f.year||"").slice(-2),num=String(fl&&fl.number||"").replace(/\D/g,"").slice(0,4);
+  const yy=(y=>y.slice(-2)==="00"?y:y.slice(-2))(String(f.year||""))/* 2000 reads "2000", never "00" (review 12) */,num=String(fl&&fl.number||"").replace(/\D/g,"").slice(0,4);
   const venue=clean(fl&&fl.venue||"The Great Hall");
   const sign=clean(fl&&fl.sign||"A feast in honour of tonight's picture");
   const note=fl&&fl.note&&fl.note.text?{t:txt(fl.note.text),by:clean(fl.note.by||"The Steward")}:{t:"Be seated and be welcome. The hall is lit, the table is long, and nobody leaves hungry tonight.",by:"The Steward"};

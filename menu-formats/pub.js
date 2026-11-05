@@ -183,8 +183,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const footH=cue?(20+6+cT.n*cT.z*1.3+6):0;
   let MH=IH-headH-footH-16;
   const m=ctx.menu||{};
-  const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(num))?null:num.length>=3&&num.length<=4?`${+num.slice(0,-2)}.${num.slice(-2)}`:num.length<=2?`${+num}.00`:null;
-  let courses=["s","m","w","d"].map(k=>({k,items:(m[k]||[]).filter(i=>i&&i.n).slice(0,4).map((it,j)=>({n:C(it.n),note:C(it.note),p:(k==="m"&&j===0&&numPrice)?numPrice:periodPrice([4.5,8.95,3.95,2.2][["s","m","w","d"].indexOf(k)]*(1+j*.12),f.year,[...String(it.n)].reduce((a,c)=>(a*31+c.charCodeAt(0))>>>0,7))}))})).filter(c=>c.items.length);
+  const numCents=(pv,n)=>{const d=String(pv).match(/^(\D*)(\d+)\.(\d\d)$/),c=String(n||"").replace(/\D/g,"");return d&&c.length>=2&&!/^(18|19|20)\d\d$/.test(c)&&+c.slice(-2)%5===0?d[1]+d[2]+"."+c.slice(-2):pv};/* review 12: on a shared card the film number only sets the cents of the first main, and only on a price ending (5 or 0), as diner does; it never prices a whole dish (Finding Nemo's 42.00) */
+const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(num))?null:num.length>=3&&num.length<=4?`${+num.slice(0,-2)}.${num.slice(-2)}`:num.length<=2?`${+num}.00`:null;
+  let courses=["s","m","w","d"].map(k=>({k,items:(m[k]||[]).filter(i=>i&&i.n).slice(0,4).map((it,j)=>({n:C(it.n),note:C(it.note),p:(k==="m"&&j===0)?numCents(periodPrice([4.5,8.95,3.95,2.2][["s","m","w","d"].indexOf(k)]*(1+j*.12),f.year,[...String(it.n)].reduce((a,c)=>(a*31+c.charCodeAt(0))>>>0,7)),num):periodPrice([4.5,8.95,3.95,2.2][["s","m","w","d"].indexOf(k)]*(1+j*.12),f.year,[...String(it.n)].reduce((a,c)=>(a*31+c.charCodeAt(0))>>>0,7))}))})).filter(c=>c.items.length);
   const total=courses.reduce((a,c)=>a+c.items.length,0);
   const cols=1,GAP=24,colW=cols===2?(IW-GAP)/2:IW;
   let splits=cols===2?courses.slice(1).map((_,i)=>[courses.slice(0,i+1),courses.slice(i+1)]):[[courses]];

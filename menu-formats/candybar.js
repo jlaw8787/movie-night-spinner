@@ -117,7 +117,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* lit accent for glow and prices: push the film accent bright and saturated */
   let lit=pa;for(let k=0;k<8&&lum(lit)<.32;k++)lit=mix(lit,[255,240,200],.14);
   const LIT=toHex(lit);
-  const yy=String(f.year||"").slice(-2),num=String(fl&&fl.number||"").replace(/\D/g,"").slice(0,3);
+  const yy=(y=>y.slice(-2)==="00"?y:y.slice(-2))(String(f.year||""))/* 2000 reads "2000", never "00" (review 12) */,num=String(fl&&fl.number||"").replace(/\D/g,"").slice(0,3);
   const venue=clean(fl&&fl.venue||"The Picture House");
   const sign=clean(fl&&fl.sign||"Tonight's feature on the big screen");
   const note=fl&&fl.note&&fl.note.text?{t:txt(fl.note.text),by:clean(fl.note.by||"The Manager")}:{t:"Grab a seat, grab a box, and keep the noise down once the lights go out. Enjoy the picture.",by:"The Manager"};

@@ -52,7 +52,7 @@ function photo(ctx,path,w,h,filter,pos){const poster=posterOf(ctx);
   if(path)return `<img alt="" src="${ctx.img(path,"w1280")}" style="position:absolute;inset:0;width:${w}px;height:${h}px;object-fit:cover;object-position:${pos||"50% 40%"};filter:${filter}">`;
   if(poster)return `<img alt="" src="${ctx.img(poster,"w780")}" style="position:absolute;inset:-30px;width:${w+60}px;height:${h+60}px;object-fit:cover;filter:blur(18px) brightness(.7) ${filter}"><img alt="" src="${ctx.img(poster,"w780")}" style="position:absolute;left:50%;top:0;height:${h}px;transform:translateX(-50%);filter:${filter};box-shadow:0 0 40px rgba(0,0,0,.5)">`;
   return `<div style="position:absolute;inset:0;background:#333"></div>`}
-function yy(f){return String(f.year||"").slice(-2)||"00"}
+function yy(f){const y=String(f.year||"");return y.slice(-2)==="00"?y:y.slice(-2)||"1"}/* 2000 reads "2000", never "00" (review 12) */
 function numOf(fl,f){const n=fl&&String(fl.number||"").replace(/[^0-9A-Za-z]/g,"");return n||String(f.year||"")}
 function courses(ctx,family){const m=ctx.menu||{};const fix=s=>family?DRY.reduce((t,[re,to])=>t.replace(re,to),clean(s)):clean(s);
   return["s","m","w","d"].map(k=>({k,items:(m[k]||[]).filter(it=>it&&it.n).slice(0,4).map(it=>({n:cap(fix(it.n)),note:sent(fix(it.note))}))})).filter(c=>c.items.length)}

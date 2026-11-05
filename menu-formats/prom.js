@@ -324,9 +324,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   const m=ctx.menu||{};let ci=0;
   const courses=["s","m","w","d"].map(k=>({k,items:(m[k]||[]).filter(i=>i&&i.n).slice(0,4)})).filter(c=>c.items.length);
   const cents=yy;
-  const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(num))?null:num.length>=3&&num.length<=4?`${+num.slice(0,-2)}.${num.slice(-2)}`:num.length<=2?`${+num}.00`:null;
+  const numCents=(pv,n)=>{const d=String(pv).match(/^(\D*)(\d+)\.(\d\d)$/),c=String(n||"").replace(/\D/g,"");return d&&c.length>=2&&!/^(18|19|20)\d\d$/.test(c)&&+c.slice(-2)%5===0?d[1]+d[2]+"."+c.slice(-2):pv};/* review 12: on a shared card the film number only sets the cents of the first main, and only on a price ending (5 or 0), as diner does; it never prices a whole dish (Finding Nemo's 42.00) */
+const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(num))?null:num.length>=3&&num.length<=4?`${+num.slice(0,-2)}.${num.slice(-2)}`:num.length<=2?`${+num}.00`:null;
   courses.forEach((c,i)=>c.items=c.items.map((it,j)=>{const base=[6,14,7,3][["s","m","w","d"].indexOf(c.k)]+j*2;
-    return {n:C(it.n),note:C(it.note),p:(c.k==="m"&&j===0&&numPrice)?numPrice:periodPrice([3.95,8.95,4.5,1.95][["s","m","w","d"].indexOf(c.k)]*(1+j*.12),f.year,strSeed(it.n))}}));
+    return {n:C(it.n),note:C(it.note),p:(c.k==="m"&&j===0)?numCents(periodPrice([3.95,8.95,4.5,1.95][["s","m","w","d"].indexOf(c.k)]*(1+j*.12),f.year,strSeed(it.n)),num):periodPrice([3.95,8.95,4.5,1.95][["s","m","w","d"].indexOf(c.k)]*(1+j*.12),f.year,strSeed(it.n))}}));
   /* the cooked main is the dearest main: a card extra never prices above it (Hocus Pocus 2), then the shared price check over the card */
   {const pv=x=>{const n=parseFloat(String(x).replace(/[^\d.]/g,""));return /¢/.test(x)?n/100:n},mc=courses.find(c=>c.k==="m");
    if(mc&&mc.items.length>1){const v0=pv(mc.items[0].p);if(v0>=2)mc.items.forEach((it,j)=>{if(j&&pv(it.p)>=v0){const v=Math.max(1,Math.floor(v0*(.9-.05*j)));it.p=v+(v<10?".95":".50")}})}

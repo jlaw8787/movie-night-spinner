@@ -113,7 +113,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const sub=mix(ink,board,.28);
   const venue=fl.venue||"The Back Bar",sign=fl.sign||"Open till the credits roll";
   const voice=t.voice;
-  const number=fl.number||String(yr).slice(-2)||"00";
+  const number=fl.number||(String(yr).slice(-2)==="00"?String(yr):String(yr).slice(-2))||"1";/* 2000 reads "2000", never "00" (review 12) */
   const price=priceFor(era,yr,fl.number);
   const C={s:"Bar snacks",m:"Plates",w:"Afters",d:fam?"From the fountain":"Behind the bar"};
   /* prices that make sense on their own card: every main above every starter and sweet, and a drink with spirits above a plain beer or soft drink */

@@ -94,7 +94,7 @@ function flav(ctx,fb){
   const winks=(v.winks||[]).filter(Boolean);
   return{venue:v.venue||fb.venue,sign:v.sign||fb.sign,note:note?{text:note.text,by:note.by||fb.by}:{text:fb.noteText(ctx),by:fb.by},
     winks:winks.length?winks:fb.winks,prop:v.prop&&v.prop.title?v.prop:fb.prop,
-    number:String(v.number||"").replace(/[^0-9a-z]/gi,"").slice(0,6)||String(ctx.f&&ctx.f.year||"").slice(-2)||"7",has:!!ctx.flavour};
+    number:String(v.number||"").replace(/[^0-9a-z]/gi,"").slice(0,6)||((y=>y.slice(-2)==="00"?y:y.slice(-2))(String(ctx.f&&ctx.f.year||"")))/* a 2000 film reads "2000", never "REWARD $00" (review 12) */||"7",has:!!ctx.flavour};
 }
 /* fonts: one link per format */
 let fontsReady=Promise.resolve();

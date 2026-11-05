@@ -122,7 +122,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const sub=mix(ink,paper,.3);
   const gridC=space?mix(paper,acc,.6):mix(paper,"#2d6fa3",.7);
   const venue=fl.venue||(space?"Crew Galley":"Ship's Galley"),sign=fl.sign||(space?"Deck 2, crew quarters":"Below decks, aft");
-  const number=fl.number||String(yr).slice(-2)||"00";
+  const number=fl.number||(String(yr).slice(-2)==="00"?String(yr):String(yr).slice(-2))||"1";/* 2000 reads "2000", never "00" (review 12) */
   const price=priceFor(era,yr,fl.number,space);
   const C={s:["Ration 1","Starters"],m:["Ration 2","Mains"],w:["Ration 3","Sweets"],d:[fam?"Fresh water":"Ration 4","Drinks"]};
   const STAMP={s:"Issued",m:space?"Crew only":"All hands",w:"Rationed",d:"Logged"};

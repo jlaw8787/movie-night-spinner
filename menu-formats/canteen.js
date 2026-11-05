@@ -121,7 +121,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const cellInk=lum(cell)>.35?"#1b1b1b":"#f6f2ea";
   const cAcc=pickAccent(acc,cell,4.5,g.acc);
   const sub=mix(cellInk,cell,.3);
-  const number=fl.number||String(yr).slice(-2)||"00";
+  const number=fl.number||(String(yr).slice(-2)==="00"?String(yr):String(yr).slice(-2))||"1";/* a 2000 film reads "No. 2000", never "No. 00" (review 12) */
   const price=priceFor(era,yr,fl.number);
   const C=school?{s:"Starters",m:"Main tray",w:"Pudding",d:"Drinks"}:{s:"Starters",m:"Hot line",w:"Sweets",d:"Drinks"};
   /* prices that make sense on their own card: every main above every starter and sweet, and a drink with spirits above a plain beer or soft drink */

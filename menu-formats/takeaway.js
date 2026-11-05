@@ -118,7 +118,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const SOFT=toHex(mix(hex(INK),paper,.25));
   const BAR=dark?toHex(mix(pa,[0,0,0],.15)):eg==="old"?INK:toHex(mix(pa,[0,0,0],eg==="late"?.1:.3));
   const BARINK=readable(dark?"#ffffff":toHex(paper),BAR,4.8);
-  const yy=String(f.year||"").slice(-2),num=String(fl&&fl.number||"").replace(/\D/g,"").slice(0,4);
+  const yy=(y=>y.slice(-2)==="00"?y:y.slice(-2))(String(f.year||""))/* 2000 reads "2000", never "00" (review 12) */,num=String(fl&&fl.number||"").replace(/\D/g,"").slice(0,4);
   const venue=clean(fl&&fl.venue||"Golden Door Kitchen");
   const sign=clean(fl&&fl.sign||"Takeaway and delivery, open late");
   const note=fl&&fl.note&&fl.note.text?{t:txt(fl.note.text),by:clean(fl.note.by||"The Cook")}:{t:"Everything here is cooked when you ring, packed hot and sent straight out. Thanks for ordering in tonight.",by:"The Cook"};

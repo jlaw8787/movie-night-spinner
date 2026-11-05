@@ -340,8 +340,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   let MH=PH-pad-hdrH-14-footH-pad;
   /* menu courses, priced like a kiosk board */
   const m=ctx.menu||{};
-  const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(num))?null:num.length>=3&&num.length<=4?`${+num.slice(0,-2)}.${num.slice(-2)}`:num.length<=2?`${+num}.00`:null;
-  let courses=["s","m","w","d"].map(k=>({k,items:(m[k]||[]).filter(i=>i&&i.n).slice(0,4).map((it,j)=>({n:C(it.n),note:C(it.note),house:!!it.house,p:(k==="m"&&j===0&&numPrice)?numPrice:periodPrice([3.5,7.5,2.75,1.75][["s","m","w","d"].indexOf(k)]*(1+j*.12),f.year,strSeed(it.n))}))})).filter(c=>c.items.length);
+  const numCents=(pv,n)=>{const d=String(pv).match(/^(\D*)(\d+)\.(\d\d)$/),c=String(n||"").replace(/\D/g,"");return d&&c.length>=2&&!/^(18|19|20)\d\d$/.test(c)&&+c.slice(-2)%5===0?d[1]+d[2]+"."+c.slice(-2):pv};/* review 12: on a shared card the film number only sets the cents of the first main, and only on a price ending (5 or 0), as diner does; it never prices a whole dish (Finding Nemo's 42.00) */
+const numPrice=(!String(fl.number||"").replace(/\D/g,"")||/^(18|19|20)\d\d$/.test(num))?null:num.length>=3&&num.length<=4?`${+num.slice(0,-2)}.${num.slice(-2)}`:num.length<=2?`${+num}.00`:null;
+  let courses=["s","m","w","d"].map(k=>({k,items:(m[k]||[]).filter(i=>i&&i.n).slice(0,4).map((it,j)=>({n:C(it.n),note:C(it.note),house:!!it.house,p:(k==="m"&&j===0)?numCents(periodPrice([3.5,7.5,2.75,1.75][["s","m","w","d"].indexOf(k)]*(1+j*.12),f.year,strSeed(it.n)),num):periodPrice([3.5,7.5,2.75,1.75][["s","m","w","d"].indexOf(k)]*(1+j*.12),f.year,strSeed(it.n))}))})).filter(c=>c.items.length);
   if(window.priceSense){const P={},M={};courses.forEach(c=>{P[c.k]=c.items.map(x=>x.p);M[c.k]=c.items});const Q=window.priceSense(M,P);courses.forEach(c=>c.items.forEach((x,j)=>x.p=Q[c.k][j]))}
   const total=courses.reduce((a,c)=>a+c.items.length,0);
   const cols=total>8&&courses.length>1?2:1,GAP=26;
