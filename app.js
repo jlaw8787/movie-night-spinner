@@ -2584,9 +2584,26 @@ function pdfFiltered(im,cs){const f=cs.filter;if(!f||f==="none"||!im.naturalWidt
     else x.drawImage(im,sx,sy,sw,sh,dx,dy,dw,dh);
     if(sa<1){x.globalCompositeOperation="saturation";x.fillStyle=`rgba(128,128,128,${1-sa})`;x.fillRect(0,0,w,h);x.globalCompositeOperation="source-over"}
     if(br<1){x.fillStyle=`rgba(0,0,0,${1-br})`;x.fillRect(0,0,w,h)}}
-  try{return c.toDataURL("image/jpeg",.9)}catch(e){return null}}
+  /* review 13: a logo with a drop shadow (invite) is see-through around its letters, and a JPEG turned that into a black plate */
+  try{let see=/drop-shadow/.test(f);if(!see){const d=x.getImageData(0,0,w,h).data;for(let i=3;i<d.length;i+=4*97)if(d[i]<250){see=true;break}}
+    return see?c.toDataURL("image/png"):c.toDataURL("image/jpeg",.9)}catch(e){return null}}
 /* repeating stripes (laid paper, woven mats, kiosk planks) print as one flat smear: a straight-across or straight-down stripe
    becomes one drawn tile of its pattern, repeated as a picture. Slanted stripes are left as they are */
+/* review 13: html2canvas skips conic gradients, so a checker border (placemat) printed as plain paper: draw one tile in a canvas instead */
+function pdfConic(g,w,h){const m=g.match(/^(repeating-)?conic-gradient\((.*)\)$/);if(!m||!w||!h||w*h>4e6)return null;const rep=!!m[1],args=splitLayers(m[2]);
+  let i=0,from=0,cx=w/2,cy=h/2;const hd=args[0].trim();
+  if(!/^(rgba?\(|#|transparent|[a-z]+\s)/i.test(hd)||/^(from|at)\b/.test(hd)){const f=hd.match(/from\s+(-?[\d.]+)deg/),a=hd.match(/at\s+([\d.]+)(%|px)\s+([\d.]+)(%|px)/);
+    if(f)from=+f[1];if(a){cx=a[2]==="%"?+a[1]/100*w:+a[1];cy=a[4]==="%"?+a[3]/100*h:+a[3]}if(f||a||/^(from|at)\b/.test(hd))i=1}
+  const st=[];for(const a of args.slice(i)){const mm=a.trim().match(/^(rgba?\([^)]*\)|#[0-9a-f]{3,8}|transparent|[a-z]+)((?:\s+-?[\d.]+(?:%|deg|turn))*)$/i);if(!mm)return null;
+    const ps=(mm[2].match(/-?[\d.]+(%|deg|turn)/g)||[]).map(v=>/%$/.test(v)?parseFloat(v)/100:/deg$/.test(v)?parseFloat(v)/360:parseFloat(v));const col=mm[1]==="transparent"?"rgba(0,0,0,0)":mm[1];
+    if(!ps.length)st.push({col,at:null});else ps.forEach(at=>st.push({col,at}))}
+  if(st.length<2)return null;st.forEach((s,k)=>{if(s.at===null)s.at=k===0?0:k===st.length-1?1:st[k-1].at});
+  for(let k=1;k<st.length;k++)if(st[k].at<st[k-1].at)st[k].at=st[k-1].at;
+  const per=rep?st[st.length-1].at:1;if(!(per>0))return null;
+  const c=document.createElement("canvas");c.width=w;c.height=h;const x=c.getContext("2d");if(!x.createConicGradient)return null;
+  const gr=x.createConicGradient((from-90)*Math.PI/180,cx,cy);const E=1e-4;
+  for(let base=0;base<1-E;base+=per)for(const s of st){const at=base+s.at;if(at>1+E)break;gr.addColorStop(Math.min(1,Math.max(0,at)),s.col)}
+  x.fillStyle=gr;x.fillRect(0,0,w,h);return c.toDataURL("image/png")}
 function pdfStripes(g){const m=g.match(/^repeating-linear-gradient\((.*)\)$/);if(!m)return null;const args=splitLayers(m[1]);let ang=180,i=0;
   const a0=args[0].trim();if(/^-?[\d.]+deg$/.test(a0)){ang=((parseFloat(a0)%360)+360)%360;i=1}else if(/^to /.test(a0)){ang={"to top":0,"to right":90,"to bottom":180,"to left":270}[a0];if(ang===undefined)return null;i=1}
   if(![0,90,180,270].includes(ang))return null;
@@ -2702,7 +2719,10 @@ async function renderCanvas(src,forPrint){
             el.style.backgroundSize=cs.webkitMaskSize||cs.maskSize;el.style.backgroundPosition=cs.webkitMaskPosition||cs.maskPosition;el.style.backgroundRepeat=cs.webkitMaskRepeat||cs.maskRepeat}}
         else el.style.visibility="hidden"}}
       /* html2canvas paints an elliptical vignette as a flat brown wash over the whole page (canteen on dark films), so the export leaves it out */
-      if(el.hasAttribute&&el.hasAttribute("data-vig")){el.style.visibility="hidden";return}
+      if(el.hasAttribute&&el.hasAttribute("data-vig")){/* review 13: now that a vignette can be drawn as a picture, a tagged one prints too (canteen came out 9 levels lighter without it) */
+        const lay=splitLayers(cs.backgroundImage||""),v=lay.length===1&&el.offsetWidth>0&&el.offsetHeight>0?pdfVignette(lay[0],el.offsetWidth,el.offsetHeight):null;
+        if(v){el.style.backgroundImage=`url("${v}")`;el.style.backgroundSize=`${el.offsetWidth}px ${el.offsetHeight}px`;el.style.backgroundPosition="0 0";el.style.backgroundRepeat="no-repeat";return}
+        el.style.visibility="hidden";return}
       /* review 12: the same goes for any empty overlay that darkens the edges, on every layout, tagged or not.
          A big blurred inset shadow (airline, bistro, hotel, saloon paper) or a radial vignette that is clear in the middle (banquet)
          prints as a flat tan or grey film over the whole page, so the copy drops the shadow and hides the vignette */
@@ -2718,9 +2738,10 @@ async function renderCanvas(src,forPrint){
             else{el.style.backgroundSize=`${w}px ${h}px`;el.style.backgroundPosition="0 0";el.style.backgroundRepeat="no-repeat"}}}
         /* an edge vignette (a radial gradient clear in the middle), on its own layer or under the paper's other textures */
         const bg2=cs.backgroundImage;/* computed style is live, so it already shows a baked shadow layer */
-        if(bg2&&/radial-gradient|repeating-linear-gradient/.test(bg2)){const sizes=cs.backgroundSize.split(/,\s*/),pos=cs.backgroundPosition.split(/,\s*/),rep=cs.backgroundRepeat.split(/,\s*/);
+        if(bg2&&/radial-gradient|repeating-linear-gradient|conic-gradient/.test(bg2)){const sizes=cs.backgroundSize.split(/,\s*/),pos=cs.backgroundPosition.split(/,\s*/),rep=cs.backgroundRepeat.split(/,\s*/);
           const lay=splitLayers(bg2);let hit=false;
           const out=lay.map((g,i)=>{const sz=(sizes[i]||sizes[sizes.length-1]||"auto").trim();
+            if(/^(repeating-)?conic-gradient/.test(g)){const px=sz.match(/^([\d.]+)px(?:\s+([\d.]+)px)?$/),tw=px?+px[1]:w,th=px?+(px[2]||px[1]):h;if(!px&&!/^(auto( auto)?|100% 100%)$/.test(sz))return g;const u=pdfConic(g,Math.round(tw),Math.round(th));if(!u)return g;hit=true;sizes[i]=`${tw}px ${th}px`;return `url("${u}")`}
             if(/^repeating-linear-gradient/.test(g)){if(!/^(auto( auto)?|100% 100%)$/.test(sz))return g;const st=pdfStripes(g);if(!st)return g;hit=true;sizes[i]=st.size;pos[i]=st.pos;rep[i]="repeat";return `url("${st.url}")`}if(!/^(auto( auto)?|100% 100%|cover)$/.test(sz)&&sz!==`${w}px ${h}px`)return g;const v=pdfVignette(g,w,h);if(!v)return g;hit=true;sizes[i]=`${w}px ${h}px`;pos[i]="0px 0px";rep[i]="no-repeat";return `url("${v}")`});
           if(hit){el.style.backgroundImage=out.join(",");el.style.backgroundSize=lay.map((_,i)=>sizes[i]||sizes[sizes.length-1]||"auto").join(",");el.style.backgroundPosition=lay.map((_,i)=>pos[i]||pos[pos.length-1]||"0% 0%").join(",");el.style.backgroundRepeat=lay.map((_,i)=>rep[i]||rep[rep.length-1]||"repeat").join(",")}}}}
       /* it also smears a blurred inset shadow across the whole box, so a moulded tray well prints with a plain edge instead */
@@ -2764,9 +2785,12 @@ function showOverlay(url,file){
   mountModal(o,"button",modalTrigger);
 }
 /* the most common colour around the outside of a rendered page: its paper, used to fill the rest of the A4 sheet */
-function edgeColour(cv){const x=cv.getContext("2d"),W=cv.width,H=cv.height,b=Math.max(4,Math.round(Math.min(W,H)*.05)),cnt=new Map();
+function edgeColour(cv,which){const x=cv.getContext("2d"),W=cv.width,H=cv.height,b=Math.max(4,Math.round(Math.min(W,H)*.05)),cnt=new Map();
   const take=(sx,sy,w,h)=>{const d=x.getImageData(sx,sy,w,h).data;for(let i=0;i<d.length;i+=28){const k=(d[i]>>3)<<10|(d[i+1]>>3)<<5|(d[i+2]>>3);const c=cnt.get(k);if(c)c.n++;else cnt.set(k,{n:1,r:d[i],g:d[i+1],b:d[i+2]})}};
-  take(0,0,W,b);take(0,H-b,W,b);take(0,0,b,H);take(W-b,0,b,H);let best=null;for(const c of cnt.values())if(!best||c.n>best.n)best=c;return best?[best.r,best.g,best.b]:null}
+  if(which!=="lr"){take(0,0,W,b);take(0,H-b,W,b)}if(which!=="tb"){take(0,0,b,H);take(W-b,0,b,H)}let best=null,tot=0;for(const c of cnt.values()){tot+=c.n;if(!best||c.n>best.n)best=c}
+  /* review 13: a white poster down one side outvoted a striped paper split across two shades (Minions), so white only wins while it holds more than 60 per cent of the edge */
+  if(best&&best.r>235&&best.g>235&&best.b>235){let alt=null;for(const c of cnt.values())if(!(c.r>235&&c.g>235&&c.b>235)&&(!alt||c.n>alt.n))alt=c;let nw=0;for(const c of cnt.values())if(!(c.r>235&&c.g>235&&c.b>235))nw+=c.n;if(alt&&nw>=tot*.4)best=alt}
+  return best?[best.r,best.g,best.b]:null}
 /* a pure white border round a rendered page is print padding, not the design: cut it off (never more than 15% a side) so the real paper fills the sheet */
 function trimWhite(cv){const W=cv.width,H=cv.height,d=cv.getContext("2d").getImageData(0,0,W,H).data,white=(x,y)=>{const i=(y*W+x)*4;return d[i]>=250&&d[i+1]>=250&&d[i+2]>=250};
   const rowW=y=>{for(let x=0;x<W;x+=3)if(!white(x,y))return false;return true},colW=x=>{for(let y=0;y<H;y+=3)if(!white(x,y))return false;return true};
@@ -2785,9 +2809,11 @@ async function exportMenu(kind,parts,opts){
   /* full coverage: every page is painted edge to edge in the menu's own paper colour, then the menu sits on it 4mm in,
      so a printer that cannot ink the very edge only ever loses plain colour, never words, and a borderless printer prints true full bleed */
   const API2=window.jspdf&&window.jspdf.jsPDF&&window.jspdf.jsPDF.API,orig2=API2&&API2.addImage,origURL=HTMLCanvasElement.prototype.toDataURL,EDGE=new Map();
-  HTMLCanvasElement.prototype.toDataURL=function(...a){try{const t=trimWhite(this);const u=origURL.apply(t,a);EDGE.set(u,{col:edgeColour(t),ar:t.width/t.height});return u}catch(e){return origURL.apply(this,a)}};
+  HTMLCanvasElement.prototype.toDataURL=function(...a){try{const t=trimWhite(this);const u=origURL.apply(t,a);EDGE.set(u,{col:edgeColour(t),tb:edgeColour(t,"tb"),lr:edgeColour(t,"lr"),ar:t.width/t.height});return u}catch(e){return origURL.apply(this,a)}};
   if(kind==="pdf"&&API2)API2.addImage=function(img,fmt,x,y,w,h,...rest){if(typeof w!=="number")return orig2.call(this,img,fmt,x,y,w,h,...rest);
-    const PW=this.internal.pageSize.getWidth(),PH=this.internal.pageSize.getHeight(),k=Math.min((PW-8)/PW,(PH-8)/PH),inf=EDGE.get(img)||{},col=inf.col;
+    const PW=this.internal.pageSize.getWidth(),PH=this.internal.pageSize.getHeight(),k=Math.min((PW-8)/PW,(PH-8)/PH),inf=EDGE.get(img)||{};
+    /* review 13: a menu that is not A4 shaped leaves bands, and they take the colour of the edges they touch (Minions' poster is white down one side, its top and bottom are brown) */
+    const col=inf.ar&&Math.abs(PW/PH-inf.ar)>.03?(PW/PH>inf.ar?inf.lr:inf.tb)||inf.col:inf.col;
     if(col){this.setFillColor(col[0],col[1],col[2]);this.rect(0,0,PW,PH,"F")}
     /* a trimmed image keeps its own shape, centred in the space it was given */
     if(inf.ar){if(w/h>inf.ar){const nw=h*inf.ar;x+=(w-nw)/2;w=nw}else{const nh=w/inf.ar;y+=(h-nh)/2;h=nh}}
