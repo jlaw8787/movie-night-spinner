@@ -18,3 +18,10 @@ for(const f of films){const p=path.join(root,'data/recipes2',slug(f.title+' ('+f
   if(['kids','fairytale','xmas','wizard'].includes(f.theme)){dry++;for(const d of dishes)assert.ok(d.blocked||!booze(d),`${f.title}: ${d.n} buys alcohol for a dry card`)}
   else if(r.dishes.some(booze)){grown++;assert.ok(dishes.some(booze),`${f.title}: a grown-up film lost its drink`)}}
 console.log(`PASS: ${dry} dry-theme films cook alcohol-free; ${grown} grown-up films still cook their drinks.`);
+// Kids' mode word pass: drinking cues in methods go, and words a swap doubles fold to one (review 11 fixes 3 and 4)
+{const a=app.indexOf('const dryNow'),b=app.indexOf('function kidsDryDom');const c2={DRY_THEMES:[],dietAF:()=>true};vm.createContext(c2);
+ vm.runInContext(app.slice(a,b)+';this.dryText=dryText',c2);const d=t=>c2.dryText(t,true);
+ for(const [t,want] of [["Serve beside frozen vodka.","Serve beside a cold drink."],["Pour the vodka when Danko orders.","Pour the drinks when Danko orders."],["Bring a bottle of rum.","Bring a bottle of lemonade."],
+   ["the green absinthe","the green cordial"],["Happy's lemon shandy pitchers","Happy's lemon squash pitchers"],["VIRGIN STRAWBERRY DAIQUIRI SLUSHIE","VIRGIN STRAWBERRY SLUSHIE"],["Huli huli chicken","Huli huli chicken"]])
+  assert.equal(d(t),want,t);
+ console.log('PASS: kids word pass clears drinking cues and folds doubled swap words.')}

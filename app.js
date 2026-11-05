@@ -707,7 +707,9 @@ function cardHTML(f,menu,tag,usePoster=true){
   <div class="mc-fg">${d.fg}</div>`;
 }
 
-function prepHTML(f,menu){
+/* the Prep sheet gets the same dry pass as the card (method lines and the showtime cue), so kids' mode never reads "Serve beside frozen vodka" */
+function prepHTML(f,menu){const h=prepHTML0(f,menu);if(typeof document==='undefined'||!dryNow(f))return h;try{const t=document.createElement('template');t.innerHTML=h;kidsDryDom(t.content,f);const d=document.createElement('div');d.appendChild(t.content);return d.innerHTML}catch(e){return h}}
+function prepHTML0(f,menu){
   if(f._r2&&f._r2.dishes&&f._r2.dishes.length)return prepHTML2(f,menu);
   const edition=movieEdition(f);
   const L=LAYOUT[f.theme]||"storybook",c=pal(f),d=DECO(L,c,f);
@@ -1390,6 +1392,7 @@ const KDRY=(()=>{const cap=(m,v)=>v&&/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice
    [new RegExp("\\b("+W+")[- ](marinated|poached|steamed|soaked|infused|spiked|cured)\\b","gi"),(m,a,b)=>cap(m,b.toLowerCase())],
    r(/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing))/gi,"mocktail"),r(/\b(champagne|prosecco|sparkling wine|bubbly)\b/gi,"sparkling apple"),
    r(/\b(red |white |rosé |rose )?wines?\b(?! glass)/gi,"grape juice"),r(/\balcohol-free (beer|lager|stout|ale) batter\b/gi,"soda water batter"),r(/\b(cold |ice-cold )?alcohol-free (beers?|lagers?|stouts?|ales?)\b(?! (and|or|sauce|gravy|glaze|marinade|cheese|cheddar|mustard)\b)/gi,"ginger beer"),r(/\b(?<!(root|ginger|butter|alcohol-free) )(beers?|lagers?|ales?|stouts?|longnecks?|stubbies|tinnies|guinness)\b/gi,"root beer"),
+   r(new RegExp("\\b(beside|with) (a |some )?(frozen |cold |ice-cold |chilled )?(shots? of )?("+W+"|absinthe|grog)s?\\b","gi"),(m,a)=>a.toLowerCase()+" a cold drink"),r(new RegExp("\\b(pour|serve|open|crack open|hand round) the ("+W+"|absinthe|grog)s?\\b","gi"),(m,a)=>cap(m,a.toLowerCase()+" the drinks")),r(new RegExp("\\ba (bottle|glass|shot|pint|jug|can|flask|round) of ("+W+"|absinthe|grog)\\b","gi"),(m,a)=>"a "+a.toLowerCase()+" of lemonade"),r(/\b(green )?absinthe\b/gi,"green cordial"),r(/\bgrog\b/gi,"fruit punch"),
    r(/\bciders?\b/gi,"sparkling apple juice"),r(/\b(whisk(e)?y|bourbon|scotch|rye whiskey)\b/gi,"butterscotch"),r(/\brum\b/gi,"coconut"),r(/\bgin\b/gi,"cucumber"),
    r(/\b(vodka|tequila|mezcal)\b/gi,"lime"),r(/\b(brandy|cognac)\b/gi,"vanilla"),r(/\b(liqueurs?|schnapps|amaretto|kahlua|baileys)\b/gi,"syrup"),r(/\bvermouth\b/gi,"bitter orange"),r(/(?<!\b(goodness|heaven|pete|god|christ|old times)(['’]s?|s['’])? |\bthe )\bsake\b/gi,"yuzu soda"),
    r(/\b(port|sherry|marsala)\b(?= (and|or|,|glass|wine|by the|\.))/gi,"grape juice")]})();
@@ -1401,7 +1404,9 @@ const KFIX=(()=>{const cap=(m,v)=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1)
    [/\bgrape juice (glass(es)?)\b/gi,(m,a)=>cap(m,"wine "+a)],
    [/\b(root|ginger|butter) (root|ginger) beer\b/gi,(m,a)=>a+" beer"],[/\balcohol-free (root|ginger) beer\b/gi,m=>cap(m,"alcohol-free beer")],
    [/\b(mocktail|syrup|grape juice|sparkling apple|root beer|ginger beer|rich|soda|sticky|crisp|slow-braised|slow-stewed|butterscotch|coconut|cucumber|lime|vanilla|fizz|punch|lemonade|juice)( \1)+\b/gi,(m,a)=>a]]})();
-const dryText=(t,on)=>{const v=KFIX.reduce((a,[re,to])=>a.replace(re,to),t);return on?KFIX.reduce((a,[re,to])=>a.replace(re,to),KDRY.reduce((a,[re,to])=>a.replace(re,to),v)):v};
+/* any word a swap doubles ("lemon shandy" to "lemon lemon squash", "strawberry daiquiri slushie") folds to one; doubles the film wrote itself (huli huli, Nai Nai) stay */
+const dryFold=(out,src)=>{const had=new Set([...src.matchAll(/\b([\p{L}']+)( \1)+\b/giu)].map(m=>m[0].toLowerCase()));let x=out,prev;do{prev=x;x=x.replace(/\b([\p{L}']+)((?: \1)+)\b/giu,(m,a)=>had.has(m.toLowerCase())?m:(m.split(' ').find(w=>new RegExp('\\b'+w+'\\b','u').test(src))||a))}while(x!==prev);return x};
+const dryText=(t,on)=>{const v=KFIX.reduce((a,[re,to])=>a.replace(re,to),t);return on?dryFold(KFIX.reduce((a,[re,to])=>a.replace(re,to),KDRY.reduce((a,[re,to])=>a.replace(re,to),v)),v):v};
 function kidsDryDom(root,f){if(!root)return;const on=dryNow(f||current);const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;const todo=[];
   /* a name can arrive split across text nodes ("Caribbean cruise prawn" + "cocktail"): each node is read with the end of the one before and the start of the one after, and only its own part is kept */
   const nodes=[];while(n=tw.nextNode()){const p=n.parentElement;if(!p||/^(SCRIPT|STYLE)$/.test(p.tagName))continue;nodes.push(n)}
@@ -3069,6 +3074,7 @@ function kitPages(f,names,count){
     plaque:`<div class="kiq-wall"><div class="kq-card kiq-card">${pol?`<div class="kq-frame"><img alt="" src="${TMDB_IMG}w780${ESC(pol)}" crossorigin="anonymous"></div>`:""}<p class="kq-k">An interval</p><p class="kq-film">Intermission</p><div class="kq-orn"><span></span>&#10022;<span></span></div>${b.sweet?`<p class="kq-k">Dessert</p><p class="kiq-d">${ESC(b.sweet)}</p>`:""}${b.drink?`<p class="kq-k">From the bar</p><p class="kiq-d sm">${ESC(b.drink)}</p>`:""}${b.note?`<p class="kiq-n">"${ESC(b.note.text)}"<b>${ESC(b.note.by)}</b></p>`:""}<p class="kq-d">${T} resumes shortly</p></div></div>`,
     terminal:`<div class="kc-wall"><div class="kc-screen"><p class="kc-l">&gt; PAUSE</p><p class="kc-film">INTERMISSION</p><p class="kc-l dim">&gt; ${T.toUpperCase()} SUSPENDED 15:00</p>${pol?`<img class="kc-photo" alt="" src="${TMDB_IMG}w780${ESC(pol)}" crossorigin="anonymous">`:""}${b.sweet?`<p class="kc-l">&gt; RATION: ${ESC(b.sweet.toUpperCase())}</p>`:""}${b.drink?`<p class="kc-l">&gt; FLUIDS: ${ESC(b.drink.toUpperCase())}</p>`:""}${b.note?`<p class="kc-l dim">&gt; MSG FROM ${ESC(b.note.by.toUpperCase())}: ${ESC(b.note.text)}</p>`:""}<p class="kc-l"><span class="kc-cur"></span></p></div></div>`};
    pages.push(kitPage(f,"inter",b,I[b.style]||I.neon))}
+  try{if(dryNow(f))pages.forEach(p=>kidsDryDom(p,f))}catch(e){}
   return pages;
 }
 function openKit(){
