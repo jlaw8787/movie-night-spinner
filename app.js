@@ -785,11 +785,20 @@ function prepFit(el){const st=document.createElement("div");st.style.cssText="po
   const i=c.querySelector(".mc-in"),cols=c.querySelector(".pp-cols"),fs=cols?parseFloat(cols.style.fontSize)||16:16,ok=!i||i.scrollHeight<=i.clientHeight+1;st.remove();return ok&&fs>=PREP_MIN_FS}
 function prepParts(){
   const base=prep.cloneNode(true);if(prepFit(base))return [prep];
-  const o0=base.querySelector(".pp-method>ol"),n=o0?o0.children.length:0;if(n<2)return [prep];
-  const page=(from,to,first)=>{const c=prep.cloneNode(true);const o=c.querySelector(".pp-method>ol");[...o.children].forEach((li,i)=>{if(i<from||i>=to)li.remove()});if(from)o.setAttribute("start",from+1);
-    if(!first){c.classList.add("pp-cont");const sh=c.querySelector(".pp-shop");if(sh)sh.remove();const h=c.querySelector(".pp-method h3");if(h)h.textContent="How to make it, continued";}return c};
-  const out=[];let from=0,first=true;
-  while(from<n){let to=n;while(to>from+1&&!prepFit(page(from,to,first)))to--;out.push(page(from,to,first));from=to;first=false}
+  /* review 12: a page holds a run of shopping aisles, then a run of method steps, as many as fit on A4 at a readable size.
+     A long shopping list no longer pushes the showtime cue off page 1: the steps move over, and if the list alone is too long, its last aisles do too */
+  const A=base.querySelectorAll(".pp-shop>.pp-aisle").length,o0=base.querySelector(".pp-method>ol"),n=o0?o0.children.length:0,N=A+n;
+  if(N<2)return [prep];
+  const page=(i,j,first)=>{const c=prep.cloneNode(true),sh=c.querySelector(".pp-shop"),me=c.querySelector(".pp-method"),o=me&&me.querySelector("ol");
+    if(sh)[...sh.querySelectorAll(":scope>.pp-aisle")].forEach((x,k)=>{if(k<i||k>=j)x.remove()});
+    if(o)[...o.children].forEach((li,k)=>{if(k+A<i||k+A>=j)li.remove()});
+    const hasA=i<A,hasS=j>A;
+    if(!first)c.classList.add("pp-cont");
+    if(sh&&!hasA)sh.remove();else if(sh&&!first){const h=sh.querySelector("h3");if(h)h.textContent="Shopping list, continued"}
+    if(me&&!hasS){me.remove();c.classList.add("pp-shoponly")}else if(o){const s0=Math.max(0,i-A);if(s0)o.setAttribute("start",s0+1);if(s0>0){const h=me.querySelector("h3");if(h)h.textContent="How to make it, continued"}}
+    return c};
+  const out=[];let i=0,first=true;
+  while(i<N){let j=N;while(j>i+1&&!prepFit(page(i,j,first)))j--;out.push(page(i,j,first));i=j;first=false}
   return out;
 }
 async function prepCanvases(){const out=[];for(const el of prepParts()){out.push(await renderCanvas(el))}return out}
@@ -2570,7 +2579,7 @@ function pdfStripes(g){const m=g.match(/^repeating-linear-gradient\((.*)\)$/);if
   const P=stops[stops.length-1][0]-stops[0][0];if(!(P>=1&&P<=2000))return null;
   const c=document.createElement("canvas"),k=4,len=Math.round(P*k);const horiz=ang===90||ang===270;c.width=horiz?len:1;c.height=horiz?1:len;
   const x=c.getContext("2d"),gr=horiz?x.createLinearGradient(0,0,len,0):x.createLinearGradient(0,0,0,len);
-  const flip=ang===0||ang===270;for(const [v,col] of stops){const o=(v-stops[0][0])/P;gr.addColorStop(Math.min(1,Math.max(0,flip?1-o:o)),col)}
+  const flip=ang===0||ang===270;/* reversed, the stops go in from the far end so a hard edge stays hard */for(const [v,col] of flip?[...stops].reverse():stops){const o=(v-stops[0][0])/P;gr.addColorStop(Math.min(1,Math.max(0,flip?1-o:o)),col)}
   x.fillStyle=gr;x.fillRect(0,0,c.width,c.height);
   return {url:c.toDataURL("image/png"),size:horiz?`${P}px 100%`:`100% ${P}px`,pos:ang===0?"0 100%":ang===270?"100% 0":"0 0"}}
 function noiseTile(){

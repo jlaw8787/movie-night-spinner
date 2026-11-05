@@ -656,6 +656,11 @@ body.spinning .theatre.closed .skip-k,.theatre.closed .tease.leader~.skip-k{opac
 .mcard.pp-cont .pp-cols{grid-template-columns:1fr!important}
 .mcard.pp-cont .pp-method>ol{columns:2;column-gap:30px}
 .mcard.pp-cont .pp-method>ol>li{break-inside:avoid}
+/* a Prep sheet page that carries only shopping (long lists) uses the full width in two columns */
+.pp-shoponly .pp-cols{grid-template-columns:1fr!important}
+.pp-shoponly .pp-shop{columns:2;column-gap:30px}
+.pp-shoponly .pp-shop>h3{column-span:all}
+.pp-shoponly .pp-aisle{break-inside:avoid}
 .pp-ahead{display:block;font-size:.8em;opacity:.8;margin:0 0 4px}
 .pp-ahead b,.pp-ing>b{font-size:.78em;letter-spacing:.12em;text-transform:uppercase}
 .pp-ing{margin:4px 0 6px}
