@@ -350,7 +350,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const trolley=`<div style="position:absolute;left:314px;right:28px;top:${bz-6}px;bottom:${P.border==="none"||P.border==="band"||P.border==="bleed"?22:28}px;border-left:1px solid ${rgba(K.ink,.3)};padding-left:16px">
     <div data-fbox style="position:absolute;left:16px;right:0;top:6px;bottom:0;overflow:hidden">
     ${kick(fm?"From the juice trolley":"From the trolley")}
-    ${drinks.map((it,i)=>`<div data-gap style="padding-bottom:8px;margin-top:8px"><div style="display:flex;gap:8px;align-items:baseline"><span data-fs="16" style="flex:1;font:700 22px/1.12 ${B};color:${K.ink};display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden">${esc(dry(it.n))}</span><span data-fs="16" style="font:700 22px/1 ${B};color:${K.acc}">${price("d",i)}</span></div>
+    ${drinks.map((it,i)=>`<div data-gap style="padding-bottom:8px;margin-top:8px"><div style="display:flex;gap:8px;align-items:baseline"><span data-fs="16" style="flex:1;font:700 22px/1.12 ${B};color:${K.ink};display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden">${esc(dry(it.n)).replace(/(\S) (\d{1,3})(?=$|\s)/g,"$1\u00a0$2")/* a number in a drink name stays with its word ("French 75"), so it never wraps under the price */}</span><span data-fs="16" style="font:700 22px/1 ${B};color:${K.acc}">${price("d",i)}</span></div>
       ${it.note?`<div data-clamp data-fs="14" style="font:400 17px/1.25 ${B};color:${K.soft};margin-top:3px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`).join("")}
     ${drinks.length?"":`<div data-fs="14" style="font:400 18px/1.3 ${B};color:${K.soft};margin-top:8px">Tea, coffee and juice served throughout the flight.</div>`}</div></div>`;
   const front=face(strip+win+col+note+trolley);

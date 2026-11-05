@@ -80,7 +80,9 @@ function fitBox(b){b.style.setProperty("--k","1");const notes=[...b.querySelecto
   for(let i=notes.length-1;i>=0&&over(b);i--)notes[i].style.display="none";
   if(over(b)){names.forEach(n=>{n.style.display="-webkit-box";n.style.webkitBoxOrient="vertical";n.style.webkitLineClamp="1";n.style.overflow="hidden"})}
   while(over(b)&&k>.5){k=Math.round((k-.02)*100)/100;b.style.setProperty("--k",k)}}
-function fitText(e){let s=+e.getAttribute(A+"-text");const lo=+e.getAttribute(A+"-lo")||16;e.style.fontSize=s+"px";while(over(e)&&s>lo){s-=1;e.style.fontSize=s+"px"}}
+function fitText(e){let s=+e.getAttribute(A+"-text");const lo=+e.getAttribute(A+"-lo")||16;e.style.fontSize=s+"px";e.style.letterSpacing="";while(over(e)&&s>lo){s-=1;e.style.fontSize=s+"px"}
+  /* still too wide at its smallest size (a long sign like "Monumental Pictures: Talkies Soon"): close up the tracking, then go a little smaller, so the last word is never cut */
+  if(over(e)){const ls=parseFloat(getComputedStyle(e).letterSpacing)/s||0;for(let t=ls;over(e)&&t>.04;t-=.02)e.style.letterSpacing=t.toFixed(2)+"em";while(over(e)&&s>Math.max(10,lo*.7)){s-=.5;e.style.fontSize=s+"px"}}}
 function logoInit(img){if(img.dataset.seen)return;img.dataset.seen="1";const panel=img.closest(`[${A}-panel]`),fb=panel&&panel.querySelector(`[${A}-fallback]`);
   const fail=()=>{img.style.display="none";if(fb){fb.style.display="flex";fitText(fb.firstElementChild)}};
   const ok=()=>{if(!img.naturalWidth)return fail();try{const c=document.createElement("canvas"),w=c.width=64,h=c.height=Math.max(1,Math.round(64*img.naturalHeight/img.naturalWidth));const g=c.getContext("2d");g.drawImage(img,0,0,w,h);const d=g.getImageData(0,0,w,h).data;
@@ -208,10 +210,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   const pBg=gi===1?mix(acc,"#ffffff",.82):gi===2?"#ffffff":mix(paper,"#ffffff",.5);
   const pAcc=pickAccent(acc,pBg,4.5,g.acc);
   const propCard=`<div style="position:absolute;left:${heroPoster?SX:398}px;top:${heroPoster?384:676}px;width:${heroPoster?SW:212}px;height:${heroPoster?130:126}px;box-sizing:border-box;padding:10px ${heroPoster?12:14}px;background:${pBg};border:2px solid ${pAcc};border-radius:${g.radius/2}px;box-shadow:0 4px 12px rgba(0,0,0,.22)">
-    <div ${A}-box ${A}-min=".8" style="width:100%;height:100%;overflow:hidden;--k:1;color:${ink}">
+    <div ${A}-box ${A}-min=".72" style="width:100%;height:100%;overflow:hidden;--k:1;color:${ink}">
       <div style="font:700 max(14px,calc(14px*var(--k))) ${g.body};letter-spacing:.2em;text-transform:uppercase;color:${pAcc}">${esc(prop.kind||"card")}</div>
       <div style="font:${g.dw} max(17px,calc(24px*var(--k)))/1.05 ${g.disp};margin:2px 0 3px">${esc(prop.title)}</div>
-      ${(prop.lines||[]).slice(0,3).map(l=>`<div ${A}-drop style="font:600 max(14px,calc(15px*var(--k)))/1.25 ${g.body}">${esc(l)}</div>`).join("")}</div></div>`;
+      ${(prop.lines||[]).slice(0,3).reduce((a,l)=>{/* a line that ends on a comma runs on into the next, so the pair shows or goes together (review 12: The Santa Clause) */if(a.length&&/,\s*$/.test(a[a.length-1]))a[a.length-1]+=" "+l;else a.push(l);return a},[]).map(l=>`<div ${A}-drop style="font:600 max(12px,calc(15px*var(--k)))/1.2 ${g.body}">${esc(l)}</div>`).join("")}</div></div>`;
 
   /* tray */
   const row=it=>`<div style="margin:0 0 calc(8px*var(--k))"><div style="display:flex;align-items:baseline;gap:10px">

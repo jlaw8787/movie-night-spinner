@@ -52,6 +52,24 @@ if(!window.__fmtFit){
   window.__fmtFitLater=()=>{[0,300,1200,2000].forEach(t=>setTimeout(run,t));if(document.fonts){document.fonts.ready.then(run);document.fonts.addEventListener&&document.fonts.addEventListener("loadingdone",run)}};
 }
 /* logo panel: sample the logo's own colours and put it on whichever stock reads */
+/* review 12: one logo panel picker for every layout that uses it (banquet, candy bar, takeaway). The worst-reading part of the logo
+   decides, not its average: Batman Begins' white letters between black wings averaged dark, went on the cream plate and read "AN BE".
+   Each panel is scored by the contrast of its 5th-percentile inked pixel (thin white letters can be under a tenth of the ink), using the panel colours the layout set on it. Versioned so an
+   older copy loaded by another layout first is never the one used. */
+if(!window.__fmtLogo2){
+  window.__fmtLogo2=im=>{try{const p=im.closest("[data-lpanel]");if(!p)return;const c=document.createElement("canvas"),w=80,h=Math.max(8,Math.round(80*im.naturalHeight/im.naturalWidth));c.width=w;c.height=h;
+    const g=c.getContext("2d");g.drawImage(im,0,0,w,h);const d=g.getImageData(0,0,w,h).data;
+    const rl=v=>{v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)},Lm=a=>.2126*rl(a[0])+.7152*rl(a[1])+.0722*rl(a[2]);
+    const col=x=>{x=String(x||"");let m=x.match(/^#([0-9a-f]{6})$/i);if(m)return [0,2,4].map(k=>parseInt(m[1].slice(k,k+2),16));m=x.match(/rgba?\(([^)]*)\)/);return m?m[1].split(",").slice(0,3).map(Number):[0,0,0]};
+    const Ld=Lm(col(p.dataset.dark)),Ll=Lm(col(p.dataset.light)),cd=[],cl=[];
+    for(let i=0;i<d.length;i+=4)if(d[i+3]>140){const L=Lm([d[i],d[i+1],d[i+2]]);cd.push((Math.max(L,Ld)+.05)/(Math.min(L,Ld)+.05));cl.push((Math.max(L,Ll)+.05)/(Math.min(L,Ll)+.05))}
+    if(!cd.length)return;const q=a=>a.sort((x,y)=>x-y)[Math.floor(a.length*.05)]||1,qd=q(cd),ql=q(cl),lt=ql>qd*1.08;
+    /* a logo with both black and white ink reads on neither plate: then a mid tone between the two, picked so its worst ink reads best */
+    if(Math.max(qd,ql)<2.5){const A=col(p.dataset.dark),B=col(p.dataset.light),ink=[];for(let i=0;i<d.length;i+=4)if(d[i+3]>140)ink.push(Lm([d[i],d[i+1],d[i+2]]));
+      let best=null;for(let t=.05;t<.96;t+=.05){const c=A.map((v,k)=>Math.round(v+(B[k]-v)*t)),L=Lm(c),sc=q(ink.map(x=>(Math.max(x,L)+.05)/(Math.min(x,L)+.05)));if(!best||sc>best.sc)best={c,L,sc}}
+      if(best&&best.sc>Math.max(qd,ql)*1.2){p.style.background=`rgb(${best.c.join(",")})`;p.style.color=best.L<.18?p.dataset.darkink:p.dataset.lightink;return}}
+    p.style.background=lt?p.dataset.light:p.dataset.dark;p.style.color=lt?p.dataset.lightink:p.dataset.darkink}catch(e){}};
+}
 if(!window.__fmtLogo){
   window.__fmtLogo=im=>{try{const p=im.closest("[data-lpanel]");if(!p)return;const c=document.createElement("canvas"),w=80,h=Math.max(8,Math.round(80*im.naturalHeight/im.naturalWidth));c.width=w;c.height=h;
     const g=c.getContext("2d");g.drawImage(im,0,0,w,h);const d=g.getImageData(0,0,w,h).data;let s=0,n=0;
@@ -166,7 +184,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const tl=clean(f.title).length,tsz=tl<=14?60:tl<=26?46:tl<=40?36:30;
   const titleType=`<div style="font:${E.it} ${E.dw} ${tsz}px/1.02 ${E.disp};text-transform:uppercase;color:currentColor;max-width:${LW+40}px">${esc(f.title)}</div>`;
   const logoPanel=(abs)=>`<div data-lpanel data-dark="rgba(10,10,14,.8)" data-light="rgba(250,247,240,.9)" data-darkink="#fff" data-lightink="#151515" style="${abs?`position:absolute;left:${frameW+22}px;bottom:${frameW+22}px;max-width:470px;`:"position:relative;max-width:100%;box-sizing:border-box;"}padding:16px 22px 14px;background:rgba(10,10,14,.8);color:#fff;border-radius:${eg==="new"?10:4}px;box-shadow:0 6px 18px rgba(0,0,0,.45)">
-      ${lr?`<img crossorigin="anonymous" alt="${esc(f.title)}" src="${IMG}w500${lg[0]}" onload="window.__fmtLogo&&__fmtLogo(this)" onerror="window.__fmtLogoFail&&__fmtLogoFail(this)" style="display:block;height:${lh}px;width:${lw}px;max-width:${LW+26}px;object-fit:contain"><div style="display:none">${titleType}</div>`:titleType}
+      ${lr?`<img crossorigin="anonymous" alt="${esc(f.title)}" src="${IMG}w500${lg[0]}" onload="window.__fmtLogo2&&__fmtLogo2(this)" onerror="window.__fmtLogoFail&&__fmtLogoFail(this)" style="display:block;height:${lh}px;width:${lw}px;max-width:${LW+26}px;object-fit:contain"><div style="display:none">${titleType}</div>`:titleType}
       <div style="font:700 15px/1 ${E.body};letter-spacing:.26em;text-transform:uppercase;margin-top:10px;opacity:.9">Now showing &nbsp;·&nbsp; ${esc(f.year)}</div></div>`;
   const lightbox=`<div style="position:absolute;left:22px;top:22px;width:806px;height:574px;padding:${frameW}px;box-sizing:border-box;background:${E.frame};border-radius:${eg==="new"?12:eg==="late"?4:2}px;box-shadow:0 0 ${50*T.glow}px rgba(255,240,210,${.35*T.glow}),0 12px 30px rgba(0,0,0,.5)">
       <div style="position:relative;width:100%;height:100%;overflow:hidden;background:#111;border-radius:${eg==="new"?5:0}px">${heroIsPoster?photo.replace("@@LOGO@@",logoPanel(false)):photo}</div>
