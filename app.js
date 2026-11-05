@@ -1183,10 +1183,12 @@ const baseOf=i=>i&&i.q!=null&&baseG(i.q,i)!=null&&BASES.find(b=>b.re.test(String
 /* tap water is never on the shopping list; soda, tonic, mineral and coconut water are */
 const WATER_RE=/^((cold|hot|boiling|iced|ice|warm|fresh|filtered|tap)\s+)?water\b(?!\s*(crackers?|chestnuts?))|^(boiling|hot|cold) and (cold|hot) water|^water or (soda|stock)/i;
 const EACH_G=[[/potato/i,200],[/marshmallow/i,7],[/almond/i,1.2],[/raspberr/i,4],[/strawberr/i,15],[/steak/i,250],[/onion/i,150],[/carrot/i,120],[/tomato/i,120],[/apple/i,150],[/lemon/i,100],[/lime/i,70],[/banana/i,120],[/blueberr/i,1]];
+const packFirst=i=>{const pk=!i.u&&String(i.item).match(/^(.+?) \((\d+(?:\.\d+)?\s?(?:g|kg|ml|L))\s+(tins?|cans?|jars?|packets?|bags?|bottles?|tubs?)\)$/i);return pk?`${pk[2]} ${pk[3].replace(/s$/,"")} ${pk[1]}`:i.item};
 function shopLines(list){
   const tally={},order=[];
   const flat=[];for(const {d,k} of list)for(const i of d.ingredients||[]){if(WATER_RE.test(String(i.item))&&!/stock/i.test(i.item))continue;
-    const bs=baseOf(i);if(bs){const g=baseG(i.q,i);for(const [q,u,item,aisle] of bs.buy(g,i))flat.push({i:{q,u,item,aisle},k});continue}flat.push({i:Object.assign({},i,{item:packNote(i.item,k)}),k})}
+    const bs=baseOf(i);if(bs){const g=baseG(i.q,i);for(const [q,u,item,aisle] of bs.buy(g,i))flat.push({i:{q,u,item,aisle},k});continue}/* review 13: "lychees (565g tin)" bought by the tin reads "a 565g tin lychees", never "1 lychee (565g tin)" */
+    flat.push({i:Object.assign({},i,{item:packNote(packFirst(i),k)}),k})}
   /* "a pinch of chilli powder" beside "1/2 tsp chilli powder" is one line: a pinch is an eighth of a teaspoon (review 12) */
   {const keys=new Set(flat.map(({i})=>planKey(i.item)));for(const x of flat){const m=String(x.i.item).match(/^(?:a )?(pinch(?:es)?|dash(?:es)?)(?: of)? (.+)$/i);
     if(m&&keys.has(planKey(m[2]))&&(x.i.q==null||!x.i.u)){x.i=Object.assign({},x.i,{item:m[2],u:"tsp",q:(x.i.q||1)/8})}}}
@@ -1293,7 +1295,7 @@ const fryOil=i=>FRY_RE.test(i.item)||/\boil\b/i.test(i.item)&&!/\b(sesame|chilli
 const ingQ=(i,k)=>fryOil(i)?i.q:i.q*k;
 /* a dish's own ingredients, scaled to the guests */
 function dishIng(x,k){return dishIngList(x,k).join(", ")}
-function dishIngList(x,k){return (x.ingredients||[]).map(i0=>{const i=Object.assign({},i0,{item:packNote(i0.item,k)});if(i.q==null)return i.item;let q=ingQ(i,k);if(!i.u&&(/^eggs?\b|^egg yolks?|^egg whites?|\bloa(f|ves)\b|^(pinch|dash|sprig|splash|drop|handful)(es|s)?\b/i.test(i.item)||WHOLE_RE.test(i.item)))q=Math.max(1,Math.ceil(q-0.05));if(!i.u)return planQty(q,"")+" "+(q>1.01?planPlural(i.item,q):planOne(i.item));return planQty(q,i.u)+" "+i.item})}
+function dishIngList(x,k){return (x.ingredients||[]).map(i0=>{const i=Object.assign({},i0,{item:packNote(packFirst(i0),k)});if(i.q==null)return i.item;let q=ingQ(i,k);if(!i.u&&(/^eggs?\b|^egg yolks?|^egg whites?|\bloa(f|ves)\b|^(pinch|dash|sprig|splash|drop|handful)(es|s)?\b/i.test(i.item)||WHOLE_RE.test(i.item)))q=Math.max(1,Math.ceil(q-0.05));if(!i.u)return (planQty(q,"")+" "+(q>1.01?planPlural(i.item,q):planOne(i.item))).replace(/^1 (\d+(?:\.\d+)?\s?(?:g|kg|ml|L|l)\b)/,"a $1").replace(/^(\d+) (\d+(?:\.\d+)?\s?(?:g|kg|ml|L|l)\b)/,"$1 x $2");return planQty(q,i.u)+" "+i.item})}
 /* counts in a method step follow the guests: "fill four tall glasses" for 4 becomes "fill eight tall glasses" for 8; times, heat and sizes stay put */
 const NUMW=["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty"];
 const STEP_NOUN="lemons?|limes?|oranges?|onions?|potatoes|potato|tomatoes|tomato|apples?|bananas?|avocados?|cloves?|cubes?|chunks?|strips?|rounds?|discs?|logs?|eggs?|glass|glasses|cup|cups|mug|mugs|bowl|bowls|plate|plates|meatballs?|patties|patty|burgers?|skewers?|kebabs?|balls?|rolls?|buns?|tacos?|tortillas?|wraps?|portions?|pieces?|slices?|wedges?|squares?|triangles?|fingers?|cookies?|biscuits?|cupcakes?|muffins?|scones?|pancakes?|crepes?|sandwiches|sandwich|toasties?|pies?|tarts?|parcels?|dumplings?|rissoles?|fritters?|cakes?|bars?|cones?|scoops?|shots?|jars?|ramekins?|moulds?|molds?|serves|servings|people|pizzas?|bases|nests|stacks?|sliders?|hot dogs?|dogs?|sausages?|chops?|steaks?|fillets?|cutlets?|wings?|drumsticks?|lollies|lolly|ice blocks?|popsicles?|lettuce cups";

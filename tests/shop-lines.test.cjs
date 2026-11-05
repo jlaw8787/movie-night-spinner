@@ -47,5 +47,5 @@ for(const g of [2,9]){const L=lines('casino-royale-2006',g);assert.ok(!(L.some(l
  assert.match(L('some-like-it-hot-1959',9),/^1 bag ice \(about 14 cups\)@/m,'a lot of ice is a bag');
  for(const fn of fs.readdirSync(path.join(root,'data/film'))){const r=JSON.parse(fs.readFileSync(path.join(root,'data/film',fn),'utf8')).r2;if(!r||!r.dishes)continue;
   for(const g of [2,4,9]){const k=g/(r.serves||4);for(const l of ctx.shopLines(r.dishes.map(d=>({d,k}))))
-   assert.ok(!/\b(leave|chilly|adobos|loave|cooky)@|\b(leave|chilly|adobos)\b(?! out)|^1 \d+(g|ml|kg)\b|\d\/3 (tsp|tbsp)/.test(l),`${fn} at ${g}: ${l}`)}}}
+   assert.ok(!/\b(leave|chilly|adobos|loave|cooky)@|\b(leave|chilly|adobos)\b(?! out)|^1 \d+(g|ml|kg)\b|\d\/3 (tsp|tbsp)|^\d+ [^@(]+\(\d+(?:\.\d+)?\s?(?:g|kg|ml|L) (?:tins?|cans?|jars?)\)/.test(l),`${fn} at ${g}: ${l}`)}}}
 console.log('PASS: frying oil holds at one pot at 2, 4 and 9 guests; spoon oils still scale; pack notes follow the guests; cut names like round steak read properly.');
