@@ -43,7 +43,15 @@ function logoPanel(ctx,o){
 /* in-page fit: shrink a block's em base until it fits its box, then drop optional blocks, clamp notes, hide notes */
 if(!window.__fmtFitLab)window.__fmtFitLab=function(t){
   const face=t.parentNode;
-  const run=()=>{
+  const run=()=>{run0();
+    /* review 15: the column beside the poster hid notes while the strip under it had room (The Martian, Men in Black II). A section moves
+       from the foot of the column to the head of the strip, one at a time, and stays there only if fewer notes are hidden */
+    const side=face.querySelector("[data-side]"),foot=face.querySelector("[data-foot]");if(!side||!foot)return;
+    const hid=()=>[...face.querySelectorAll("[data-note]")].filter(n=>n.style.display==="none").length;
+    for(let g=0;g<3;g++){const h=hid(),secs=[...side.querySelectorAll(":scope>[data-sec]")];if(!h||secs.length<2)break;const last=secs[secs.length-1];
+      foot.insertBefore(last,foot.firstChild);last.dataset.moved="1";run0();if(hid()>=h){side.appendChild(last);delete last.dataset.moved;run0();break}}};
+  const run0=()=>{
+    {const side=face.querySelector("[data-side]"),foot=face.querySelector("[data-foot]");if(side&&foot)[...foot.querySelectorAll(":scope>[data-sec][data-moved]")].reverse().forEach(x=>{side.appendChild(x);delete x.dataset.moved})}
     face.querySelectorAll("[data-fitw]").forEach(e=>{let s=+e.getAttribute("data-fitw"),n=0;e.style.fontSize=s+"px";const lo=+(e.getAttribute("data-min")||16);while(e.scrollWidth>e.clientWidth+1&&s>lo&&n++<60){s-=1;e.style.fontSize=s+"px"}});
     face.querySelectorAll("[data-fith]").forEach(e=>{let s=+e.getAttribute("data-fith"),n=0;e.style.fontSize=s+"px";const lo=+(e.getAttribute("data-min")||14);while((e.scrollHeight>e.clientHeight+1||e.scrollWidth>e.clientWidth+1)&&s>lo&&n++<60){s-=.5;e.style.fontSize=s+"px"}});
     face.querySelectorAll("[data-fit]").forEach(e=>{
@@ -152,7 +160,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const PQ=(()=>{const P={},M={};secs.forEach(x=>{const k="smwd"[x.ci];M[k]=x.items;P[k]=x.items.map((it,ii)=>price(f,fl,x.ci,ii,clean(it.n),E.scale))});return window.priceSense?window.priceSense(M,P):P})();
   const tot=secs.reduce((a,x)=>a+x.items.length,0);let seen=0,flowA="",flow="";
   secs.forEach(x=>{
-    const h=`<div style="break-inside:avoid">${secHead(LAB[x.ci])}`+x.items.slice(0,1).map((it,ii)=>row(it,x.ci,ii)).join("")+`</div>`+x.items.slice(1).map((it,ii)=>row(it,x.ci,ii+1)).join("")+`<div style="height:.45em"></div>`;
+    const h=`<div data-sec><div style="break-inside:avoid">${secHead(LAB[x.ci])}`+x.items.slice(0,1).map((it,ii)=>row(it,x.ci,ii)).join("")+`</div>`+x.items.slice(1).map((it,ii)=>row(it,x.ci,ii+1)).join("")+`<div style="height:.45em"></div></div>`;
     if(seen<tot/2)flowA+=h;else flow+=h;seen+=x.items.length;
   });
   function row(it,ci,ii){
@@ -163,8 +171,8 @@ window.MENU_FORMATS[ID]=ctx=>{
     </div></div>`;
   }
   const MY=PY+PH+20,MH=H-MY-58;
-  const menu=`<div data-fit="27" style="position:absolute;left:${M}px;top:${MY}px;width:${W-2*M}px;height:${MH}px;overflow:hidden;column-count:2;column-gap:30px;column-fill:auto;font-size:27px">${flow}</div>`;
-  const side=`<div style="position:absolute;left:${RX}px;top:268px;width:${RW}px;height:${PY+PH-268}px;display:flex;flex-direction:column">${logo.html}${stamp}${plateTab}<div data-fit="24" style="flex:1;min-height:0;margin-top:12px;overflow:hidden;font-size:24px">${flowA}</div></div>`;
+  const menu=`<div data-fit="27" data-foot style="position:absolute;left:${M}px;top:${MY}px;width:${W-2*M}px;height:${MH}px;overflow:hidden;column-count:2;column-gap:30px;column-fill:auto;font-size:27px">${flow}</div>`;
+  const side=`<div style="position:absolute;left:${RX}px;top:268px;width:${RW}px;height:${PY+PH-268}px;display:flex;flex-direction:column">${logo.html}${stamp}${plateTab}<div data-fit="24" data-side style="flex:1;min-height:0;margin-top:12px;overflow:hidden;font-size:24px">${flowA}</div></div>`;
   const foot=`<div style="position:absolute;left:${M}px;right:${M}px;bottom:16px;border-top:1px solid ${ink};padding-top:7px;display:flex;justify-content:space-between;gap:16px;font:400 15px/1.2 ${B};color:${ink};white-space:nowrap;overflow:hidden">
     <span style="overflow:hidden;text-overflow:clip">Form ${esc(ID.toUpperCase())}${esc(num)}, rev. ${esc(f.year||"")}. Return tray to the hatch. Rations subject to supply.</span><span>Sheet 1 of 1. Images: TMDB</span></div>`;
 
