@@ -17,9 +17,12 @@ node tests/sweet-starters.test.cjs
 node tests/prices.test.cjs
 node tests/dry-plan.test.cjs
 node tests/veg-ahead.test.cjs
+node tests/calendar.test.cjs
 ```
 
 The shopping tests execute the app's real checklist code with a small DOM fixture. They cover unlocked visit-local ticks, locked persistence, remaining-only sharing, empty and completed lists, stale keys, reset and double-feature lists. The weekly-plan suite executes the actual date/countdown and restore code in Brisbane, New York and UTC, including daylight-saving changes, legacy migration, explicit remote clearing and blocked storage.
+
+The calendar test runs the app's own calendar code in Brisbane, New York and UTC: the start-cooking time (showtime less the longest picked dish, on a 5-minute mark), the day-before reminder for a wait of 10 hours or more (6pm, earlier if the wait needs it, never in the small hours), the .ics layout (CRLF, 75-byte folding on character boundaries, escaped commas and semicolons, UTC times, two relative reminders with start cooking first) and the Google links. The weekly-plan suite covers any showtime of the day in 15-minute steps.
 
 The sweet starters check fails when a biscuit, cake, lolly or ice cream is listed as a starter on a shared menu card or in the cooked recipes, unless the film makes it a snack (the keep list in scripts/check-sweet-starters.cjs gives each reason). `node scripts/check-sweet-starters.cjs` prints the full list for a person to judge.
 

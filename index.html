@@ -57,7 +57,7 @@
 .feature .ft-acts{grid-column:3;grid-row:1/3;display:flex;gap:8px}
 .feature .ft-acts button{min-height:44px;padding:0 14px;border-radius:22px;border:1px solid var(--brass);background:transparent;color:var(--screen);font:600 14px var(--f-body);cursor:pointer}
 .feature .ft-acts button.go{background:var(--brass);color:#1b1210;border-color:var(--brass)}
-@media (max-width:560px){.feature{grid-template-columns:40px minmax(0,1fr);margin:6px 10px 8px;gap:2px 12px}.feature img,.feature .ft-ph{width:40px;height:60px;grid-row:1/4}.feature .ft-k{grid-column:2;grid-row:1}.feature .ft-t{grid-column:2;grid-row:2}.feature .ft-w{grid-column:2;grid-row:3}.feature .ft-acts{grid-column:1/3;grid-row:4;margin-top:8px}.feature .ft-acts button{flex:1}}
+@media (max-width:560px){.feature{grid-template-columns:40px minmax(0,1fr);margin:6px 10px 8px;gap:2px 12px}.feature img,.feature .ft-ph{width:40px;height:60px;grid-row:1/4}.feature .ft-k{grid-column:2;grid-row:1}.feature .ft-t{grid-column:2;grid-row:2}.feature .ft-w{grid-column:2;grid-row:3}.feature .ft-acts{grid-column:1/3;grid-row:4;margin-top:8px;flex-wrap:wrap}.feature .ft-acts button{flex:1 1 auto;padding:0 12px}}
 </style>
 </head>
 <body>
@@ -1151,10 +1151,15 @@ body.picked .week .week-t small,body.picked .week .week-when{display:none}
 body.picked .week .week-acts{grid-column:3;grid-row:1 / span 2;margin:0;flex-wrap:nowrap}
 body.picked .week.week-slim{grid-template-columns:minmax(0,1fr) auto;align-items:center}
 body.picked .week.week-slim .week-k{grid-column:1;grid-row:1;align-self:center}
-body.picked .week.week-slim .week-acts{grid-column:2;grid-row:1}
+/* review 16: the slim bar keeps its cook night and showtime pickers once a film is on screen, so the time can be set from here.
+   Pickers get the full width, the buttons sit under them */
+body.picked .week.week-slim{grid-template-columns:minmax(0,1fr);gap:6px}
+body.picked .week.week-slim .week-when{display:flex;grid-column:1;grid-row:2;font-size:13px;gap:6px 8px}
+body.picked .week.week-slim .week-acts{grid-column:1;grid-row:3;flex-wrap:wrap}
 body.picked .week .week-acts button{padding:6px 12px;font-size:13px}
 /* phones: the buttons wrap under the title so the title keeps the width (no one letter per line) */
-@media (max-width:700px){body.picked #weekPanel{grid-template-columns:36px minmax(0,1fr)}body.picked #weekPanel .week-acts{grid-column:1/-1;grid-row:auto;flex-wrap:wrap;margin-top:8px}}
+@media (max-width:700px){body.picked #weekPanel{grid-template-columns:36px minmax(0,1fr)}body.picked #weekPanel .week-acts{grid-column:1/-1;grid-row:auto;flex-wrap:wrap;margin-top:8px}
+  body.picked #weekPanel.week-slim{grid-template-columns:minmax(0,1fr)}body.picked #weekPanel.week-slim .week-acts{grid-row:3;margin-top:2px}}
 .preview{border-radius:6px;box-shadow:0 40px 80px -24px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.06)}
 .glare{display:none}
 .actions{gap:8px}
@@ -2546,6 +2551,17 @@ dialog.pdfpick .rate-k{color:#e2b04f}
 .pp-opts button:hover,.pp-opts button:focus-visible{border-color:#e2b04f;background:#341720}
 .pp-opts b{display:block;font:600 17px var(--f-body);color:#fff4d6;margin-bottom:2px}
 .pp-opts span{color:#d9c9a8}
+/* review 16: showtime picker on the lock-in card, and the Add to calendar panel */
+.lk-time{display:flex;align-items:center;justify-content:center;gap:10px;margin:2px 0 12px;font:600 15px var(--f-body);color:#f3e6c8}
+.lk-time select{font:600 15px var(--f-body);min-height:44px;padding:0 12px;border-radius:10px;background:#1a0b10;color:#fff4d6;border:1px solid #6b4a2a}
+.lk-time select:focus-visible{outline:3px solid #e2b04f;outline-offset:2px}
+.cal-rows{list-style:none;margin:6px 0 12px;padding:0;text-align:left;display:grid;gap:8px}
+.cal-rows li{display:grid;grid-template-columns:minmax(0,9.5em) minmax(0,1fr);gap:4px 12px;padding:10px 14px;border:1px solid #6b4a2a;border-radius:12px;background:#2a1218;color:#f3e6c8;font:400 14px/1.35 var(--f-body)}
+.cal-rows b{color:#fff4d6;font-weight:600}
+@media (max-width:420px){.cal-rows li{grid-template-columns:1fr}}
+.cal-how{margin:0 0 10px;text-align:left;font:400 14px/1.45 var(--f-body);color:#d9c9a8}
+.cal-how b{color:#fff4d6}
+.cal-how a{color:#e2b04f;text-decoration:underline;text-underline-offset:2px}
 
 /* mystery night */
 dialog.mystery .my-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a;border-radius:18px;padding:22px 20px;width:min(560px,94vw);box-sizing:border-box;margin:auto;max-height:90vh;overflow:auto}

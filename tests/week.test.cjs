@@ -75,4 +75,26 @@ for(const invalid of ['{broken','[]','false','null','{}'])assert.equal(boot(inva
 a=boot({...legacy,date:'2026-02-30'});assert.equal(a.state().date,'2026-10-23','Impossible calendar dates cannot poison countdowns');
 assert.doesNotMatch(section,/prepMins|cookAt|Get cooking now|Start cooking at/);
 assert.match(source,/if\(k==="lock"\)\{week=newWeekPlan\(a.id,b.id\)/,'Double-feature lock uses the date-owning plan path');
-console.log(`PASS weekly plans: persistent calendar date, legacy/sync migration, explicit rescheduling, recipe guidance and DST (${process.env.TZ}).`);
+// Review 16: any showtime of the day in 15-minute steps, 7pm by default, and the strip, countdown and table kit follow it.
+a=boot(undefined,[2026,10,6,9]);
+assert.equal(a.run('SHOWTIMES.length'),96);assert.equal(a.run('SHOWTIMES[0]'),'00:00');assert.equal(a.run('SHOWTIMES[95]'),'23:45');
+for(const ok of ['00:00','06:15','12:30','19:45','23:45'])assert.equal(a.run(`weekTime(${JSON.stringify(ok)})`),ok);
+for(const bad of ['19:10','24:00','7:00','19:00:00','7pm',1900,null])assert.equal(a.run(`weekTime(${JSON.stringify(bad)})`),'19:00',`${bad} falls back to 7pm`);
+assert.equal(a.run('clock("00:15")'),'12:15am');assert.equal(a.run('clock("12:00")'),'12pm');assert.equal(a.run('clock("21:45")'),'9:45pm');
+a.run('setWeek(FILMS[0])');assert.equal(a.state().time,'19:00','A new plan starts at 7pm');assert.equal(a.state().date,'2026-11-07');
+a.run('renderWeek()');{const h=a.$('weekPanel').innerHTML;
+  assert.equal((h.slice(h.indexOf('id="weekTime"')).match(/<option /g)||[]).length,96,'The showtime picker offers all 96 times');
+  assert.match(h,/<option value="19:00" selected>7pm<\/option>/);assert.match(h,/<optgroup label="Morning">/);assert.match(h,/<option value="06:45">6:45am<\/option>/)}
+a.$('weekTime').listeners.change({target:{value:'21:45'}});assert.equal(a.state().time,'21:45');assert.equal(a.state().date,'2026-11-07');
+assert.match(a.$('feature').innerHTML,/Tomorrow 7 Nov, 9:45pm/,'The strip shows the new time at once');
+a.now(2026,10,7,21,0);a.run('tickShowtime()');assert.match(a.$('featCount').textContent,/in 45 min/);
+a.now(2026,10,7,21,45);a.run('tickShowtime()');assert.match(a.$('weekCount').innerHTML,/^Showtime\./);
+a.$('weekTime').listeners.change({target:{value:'19:10'}});assert.equal(a.state().time,'19:00','An off-grid value from a tampered page falls back to 7pm');
+// A morning matinee: locking in at 10am on a Saturday with a 9am showtime moves to next Saturday; a 2:15pm one stays today.
+a=boot(undefined,[2026,10,7,10]);a.run('week={id:"film",day:6,time:"09:00",ticks:{}};week=newWeekPlan("film")');assert.equal(a.state().date,'2026-11-14');
+a.run('week.time="14:15";week.date=nextWeekDate(week.day,week.time)');assert.equal(a.state().date,'2026-11-07');
+// Saved plans and synced plans keep a quarter-hour time; the old half-hour grid still loads.
+a=boot({...legacy,time:'06:15'});assert.equal(a.state().time,'06:15');a=boot({...legacy,time:'17:30'});assert.equal(a.state().time,'17:30');
+// The table kit's door time reads the plan's time.
+assert.match(source,/kitTime\(week\.time\)/);
+console.log(`PASS weekly plans: persistent calendar date, legacy/sync migration, explicit rescheduling, recipe guidance, any showtime in 15-minute steps and DST (${process.env.TZ}).`);

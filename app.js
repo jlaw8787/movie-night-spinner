@@ -1353,6 +1353,10 @@ function waitWords(x){const w=[];for(const t of x.steps||[])if((t.min||0)>=10&&W
   return w.length?"to "+(w.length>1?w.slice(0,-1).join(", ")+" and "+w[w.length-1]:w[0]):"waiting"}
 /* only heat counts as cooking: a drink that is stirred or a tartare that is chopped is all prep */
 const HEAT_RE=/\b(oven|bake|baking|fry|fried|grill|boil|simmer|roast|sear|toast|heat|cook|pan|barbecue|bbq|microwave|poach|steam|saut|caramel|flame|reduce|melt|char|braise|broil|smoke)/i;
+/* review 16: the locked-in film's Prep sheet carries its showtime and when to start, worked out the same way as the calendar reminder */
+function prepWhen(f,ds,TT){if(typeof week==="undefined"||!week||(week.id!==f.id&&week.double!==f.id)||typeof calPlan!=="function")return [];
+  try{const show=weekShow(),p=calPlan(show,ds.map((x,i)=>x.extra?null:{n:x.n,active:TT[i].active,wait:TT[i].wait}).filter(Boolean));
+    return [`Showtime ${calClock(show)}`,`start cooking ${calClock(p.start)}`]}catch(e){return []}}
 function prepHTML2(f,menu){
   const edition=movieEdition(f),L=LAYOUT[f.theme]||"storybook",c=pal(f),d=DECO(L,c,f);
   const ds=planDishes(f),groups={};
@@ -1369,7 +1373,7 @@ function prepHTML2(f,menu){
   <div class="mc-in pp">
     <div class="mc-eye">Prep sheet</div>
     <div class="pp-title">${ESC(f.title)}</div>
-    <p class="pp-serves">${[`Serves ${PLAN.guests}`,DIET.veg||dietAF()?[DIET.veg&&"vegetarian",dietAF()&&"alcohol-free"].filter(Boolean).join(", "):"",`${ds.length} dish${ds.length===1?"":"es"}`,`hands-on ${planDur(hands)}`,`longest ${planDur(longest)}`,waitMax?(waitMax>=2880?`start ${Math.round(waitMax/1440)} days ahead`:waitMax>=600?"start the day before":`plus ${planDur(waitMax)} waiting`):""].filter(Boolean).map(x=>`<span class="pp-chip">${x.replace(/ /g,"&nbsp;")}</span>`).join(" ")}</p>
+    <p class="pp-serves">${[...prepWhen(f,ds,TT),`Serves ${PLAN.guests}`,DIET.veg||dietAF()?[DIET.veg&&"vegetarian",dietAF()&&"alcohol-free"].filter(Boolean).join(", "):"",`${ds.length} dish${ds.length===1?"":"es"}`,`hands-on ${planDur(hands)}`,`longest ${planDur(longest)}`,waitMax?(waitMax>=2880?`start ${Math.round(waitMax/1440)} days ahead`:waitMax>=600?"start the day before":`plus ${planDur(waitMax)} waiting`):""].filter(Boolean).map(x=>`<span class="pp-chip">${x.replace(/ /g,"&nbsp;")}</span>`).join(" ")}</p>
     <div class="pp-cols"><div class="pp-shop"><h3>Shopping list</h3>${shop||"<p>Tick at least one dish.</p>"}</div><div class="pp-method"><h3>How to make it</h3><ol>${steps}</ol></div></div>
     <div class="mc-cue"><b>Showtime cue</b><span>${ESC(dietCue(f,edition&&edition.cue||f.P))}</span></div>
   </div>`;
@@ -1735,7 +1739,8 @@ function parseWeekDate(key){
   return weekDateKey(at)===key?at:null;
 }
 const weekDay=day=>[5,6,0,"5","6","0"].includes(day)?Number(day):6;
-const weekTime=time=>/^(?:17|18|19|20):(?:00|30)$|^21:00$/.test(time)?time:"19:00";
+/* review 16: any time of day in 15-minute steps (was 5pm to 9pm on the half hour); 7pm stays the default */
+const weekTime=time=>/^(?:[01]\d|2[0-3]):(?:00|15|30|45)$/.test(time)?time:"19:00";
 function nextWeekDate(day,time="19:00",now=new Date()){
   const d=new Date(now.getFullYear(),now.getMonth(),now.getDate(),12);
   d.setDate(d.getDate()+((weekDay(day)-d.getDay()+7)%7));
@@ -1776,12 +1781,13 @@ function renderWeek(){
   /* review 15: the locked-in strip at the top already shows the poster, title, countdown and a Menu button, so this panel keeps only what the strip
      cannot do: change the cook night and showtime, open the shopping list, or clear the week */
   const strip=!!$("feature");if(box.classList)box.classList.toggle("week-slim",strip);
-  box.innerHTML=`${strip?"":p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}">`:"<span></span>"}<p class="week-k">${strip?"Your movie night":"This week's film"}</p>${strip?"":`<p class="week-t">${ESC(f.title)} (${f.year})${week.double&&FILMS.find(x=>x.id===week.double)?` + ${ESC(FILMS.find(x=>x.id===week.double).title)}`:""}</p>`}<p class="week-when">Cook night <select id="weekDay" aria-label="Cook night">${[5,6,0].map(i=>`<option value="${i}"${i===week.day?" selected":""}>${DAYS[i]}</option>`).join("")}</select> ${d.getDate()} ${d.toLocaleString("en-AU",{month:"short"})} · ${when} &nbsp;Showtime <select id="weekTime" class="week-time" aria-label="Showtime">${SHOWTIMES.map(t=>`<option value="${t}"${t===(week.time||"19:00")?" selected":""}>${clock(t)}</option>`).join("")}</select></p><p class="week-count" id="weekCount" aria-live="polite"></p><div class="week-acts"><button class="go" type="button" id="weekShop">Shopping list</button>${strip?"":`<button type="button" id="weekOpen">Open the menu</button>`}<button type="button" id="weekClear">Clear</button></div>`;
+  box.innerHTML=`${strip?"":p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}">`:"<span></span>"}<p class="week-k">${strip?"Your movie night":"This week's film"}</p>${strip?"":`<p class="week-t">${ESC(f.title)} (${f.year})${week.double&&FILMS.find(x=>x.id===week.double)?` + ${ESC(FILMS.find(x=>x.id===week.double).title)}`:""}</p>`}<p class="week-when">Cook night <select id="weekDay" aria-label="Cook night">${[5,6,0].map(i=>`<option value="${i}"${i===week.day?" selected":""}>${DAYS[i]}</option>`).join("")}</select> ${d.getDate()} ${d.toLocaleString("en-AU",{month:"short"})} · ${when} &nbsp;Showtime <select id="weekTime" class="week-time" aria-label="Showtime">${showOpts(weekTime(week.time))}</select></p><p class="week-count" id="weekCount" aria-live="polite"></p><div class="week-acts"><button class="go" type="button" id="weekShop">Shopping list</button>${strip?"":`<button type="button" id="weekOpen">Open the menu</button>`}<button type="button" id="weekCal">Add to calendar</button><button type="button" id="weekClear">Clear</button></div>`;
   $("weekDay").addEventListener("change",e=>{week.day=weekDay(e.target.value);week.date=nextWeekDate(week.day,week.time);saveWeek();renderWeek()});
-  $("weekTime").addEventListener("change",e=>{week.time=e.target.value;saveWeek();tickShowtime()});
+  $("weekTime").addEventListener("change",e=>{week.time=weekTime(e.target.value);saveWeek();renderFeature(f);tickShowtime();if(typeof refreshPrepTime==="function")refreshPrepTime()});
   renderFeature(f);tickShowtime();renderMotw();
   $("weekShop").addEventListener("click",async()=>{const g=week.double&&FILMS.find(x=>x.id===week.double);if(g){const dm=await doubleMenu(f,g);openTrolley(f,dm,`${f.title} + ${g.title}`)}else openTrolley(f)});
   if($("weekOpen"))$("weekOpen").addEventListener("click",()=>{setView("wheel");replay(f);toMenu()});
+  $("weekCal").addEventListener("click",e=>{if(typeof calAdd==="function")calAdd(e.currentTarget)});
   $("weekClear").addEventListener("click",()=>{week=null;saveWeek();renderWeek();$("status").textContent="This week's film cleared."});
 }
 /* the locked-in film as a slim strip under the view tabs, on every view: poster, title, cook night and showtime, a short countdown,
@@ -1792,12 +1798,15 @@ function renderFeature(f){const box=$("feature");if(!box)return;if(!f||!week){bo
   box.hidden=false;
   box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}" loading="lazy">`:'<span class="ft-ph"></span>'}<p class="ft-k">${n===0?"Tonight's feature":n<0?"Last feature":"Coming up"}</p>
     <p class="ft-t">${ESC(f.title)}${g?` + ${ESC(g.title)}`:""}</p><p class="ft-w">${day} ${d.getDate()} ${"JanFebMarAprMayJunJulAugSepOctNovDec".substr(d.getMonth()*3,3)}, ${clock(week.time||"19:00")} <span id="featCount"></span></p>
-    <div class="ft-acts"><button type="button" class="go" id="featMenu">Menu</button><button type="button" id="featPrep">Prep sheet</button></div>`;
+    <div class="ft-acts"><button type="button" class="go" id="featMenu">Menu</button><button type="button" id="featPrep">Prep sheet</button><button type="button" id="featCal">Add to calendar</button></div>`;
   $("featMenu").addEventListener("click",()=>{setView("wheel");if(tab!=="menu")setTab("menu");replay(f).then(()=>toMenu());toMenu()});
   $("featPrep").addEventListener("click",()=>{setView("wheel");replay(f).then(()=>{setTab("prep");toMenu()})});
+  $("featCal").addEventListener("click",e=>{if(typeof calAdd==="function")calAdd(e.currentTarget)});
 }
 /* Countdown to the scheduled showtime. Cooking times belong to the individual recipes. */
-const SHOWTIMES=["17:00","17:30","18:00","18:30","19:00","19:30","20:00","20:30","21:00"];
+const SHOWTIMES=Array.from({length:96},(_,i)=>`${String(i/4|0).padStart(2,"0")}:${String(i%4*15).padStart(2,"0")}`);
+/* 96 times read best in groups: a phone wheel or a desktop list lands on the evening */
+const showOpts=sel=>[["Early hours",0,6],["Morning",6,12],["Afternoon",12,17],["Evening",17,21],["Night",21,24]].map(([g,a,b])=>`<optgroup label="${g}">${SHOWTIMES.filter(t=>+t.slice(0,2)>=a&&+t.slice(0,2)<b).map(t=>`<option value="${t}"${t===sel?" selected":""}>${clock(t)}</option>`).join("")}</optgroup>`).join("");
 const clock=t=>{const [h,m]=t.split(":").map(Number);return `${h%12||12}${m?":"+String(m).padStart(2,"0"):""}${h<12?"am":"pm"}`};
 let _showT=null;
 function tickShowtime(){
@@ -1830,6 +1839,81 @@ function renderMotw(){
 }
 function setWeek(f){week=newWeekPlan(f.id);saveWeek();renderWeek();updateWatchButton();$("status").textContent=`${f.title} is locked in for this week.`}
 function listText(f,groups,serves){return `${f.title} (${f.year}) shopping list, serves ${serves||(f._r2?PLAN.guests:4)}\n`+groups.map(([a,l])=>`\n${a}\n${l.map(x=>"- "+x).join("\n")}`).join("\n")}
+/* calendar reminder: review 16, Josh asked for an "Add to calendar" button on the locked-in strip and the "Your movie night" bar.
+   It downloads one .ics event for the movie night with the menu link in the notes, and reminders attached to it:
+   - start cooking: showtime less the longest dish he picked (hands-on and cooking, plus any short wait), on a 5-minute mark
+   - the day before, when a picked dish waits 10 hours or more (overnight marinades, sorbets, jellies), at 6pm, or earlier if the wait needs it
+   Apple Calendar keeps both reminders; Outlook keeps one per event, so start cooking comes first. Google drops reminders from an imported
+   file and its phone app cannot open .ics, so the panel after the download also adds the night and each reminder to Google as their own events.
+   Times go in as UTC, so every app shows them in the phone's own time zone. Lines are CRLF and folded at 75 bytes (RFC 5545). */
+const calPad=n=>String(n).padStart(2,"0");
+const calClock=d=>`${d.getHours()%12||12}${d.getMinutes()?":"+calPad(d.getMinutes()):""}${d.getHours()<12?"am":"pm"}`;
+const calDay=d=>`${["Sun","Mon","Tue","Wed","Thu","Fri","Sat"][d.getDay()]} ${d.getDate()} ${"JanFebMarAprMayJunJulAugSepOctNovDec".substr(d.getMonth()*3,3)}`;
+const calDur=m=>m>=60?Math.floor(m/60)+" hr"+(m%60?" "+m%60+" min":""):m+" min";
+const calUTC=d=>d.toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,"");
+const calEsc=s=>String(s).replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\r?\n/g,"\\n");
+/* a minute count as an RFC 5545 duration before the event: 110 is -PT1H50M, 1500 is -P1DT1H */
+const calBefore=m=>{m=Math.max(0,Math.round(m));const d=Math.floor(m/1440),h=Math.floor(m%1440/60),n=m%60;return "-P"+(d?d+"D":"")+(h||n||!d?"T"+(h?h+"H":"")+(n||!h?n+"M":""):"")};
+function calFold(line){const out=[];let cur="",bytes=0,max=75;for(const ch of line){const c=ch.codePointAt(0),b=c<0x80?1:c<0x800?2:c<0x10000?3:4;
+    if(bytes+b>max){out.push(cur);cur=" ";bytes=1;max=75}cur+=ch;bytes+=b}out.push(cur);return out.join("\r\n")}
+/* dishes: [{n, active, wait, words}] in minutes, from the Prep sheet's own dishTimes. The longest same-day dish sets the start; a dish
+   that waits 10 hours or more is started the day before, so only its hands-on time counts on the night */
+function calPlan(show,dishes){
+  let dish="",lead=0;for(const d of dishes){const l=(d.active||0)+((d.wait||0)<600?(d.wait||0):0);if(l>lead){lead=l;dish=d.n}}
+  const start=new Date(show.getTime()-(lead||60)*6e4);start.setMinutes(Math.floor(start.getMinutes()/5)*5,0,0);
+  const ahead=dishes.filter(d=>(d.wait||0)>=600);let before=null;
+  if(ahead.length){const need=Math.max(...ahead.map(d=>d.wait+(d.active||0))),latest=new Date(show.getTime()-need*6e4);
+    const eve=new Date(show.getFullYear(),show.getMonth(),show.getDate()-1,18,0,0,0);
+    let at=new Date(Math.min(latest.getTime(),eve.getTime()));at.setMinutes(Math.floor(at.getMinutes()/15)*15,0,0);
+    /* nobody wants a 3am alarm: a start in the small hours moves to 6pm the evening before */
+    if(at.getHours()<8)at=new Date(at.getFullYear(),at.getMonth(),at.getDate()-1,18,0,0,0);
+    before={at,dishes:ahead}}
+  return {lead,dish,start,before}}
+function calText(o){const p=o.plan,ah=p.before?p.before.dishes.map(d=>`${d.n}, ${calDur(d.wait)}${d.words?" "+d.words:""}`).join("; "):"";
+  return {
+    title:`Movie night: ${o.title}`,
+    cook:`Start cooking for ${o.title}. Showtime is ${calClock(o.show)}.${p.dish?` ${p.dish} takes longest, ${calDur(p.lead)}.`:""}`,
+    ahead:p.before?`Prep ahead for ${o.title}: ${ah}.`:"",
+    notes:[`Showtime ${calClock(o.show)}. Start cooking at ${calClock(p.start)}${p.dish?` (${p.dish} takes longest, ${calDur(p.lead)})`:""}.`,
+      p.before?`The day before, from ${calDay(p.before.at)} ${calClock(p.before.at)}: ${ah}.`:"",
+      `Menu and Prep sheet: ${o.url}`].filter(Boolean).join("\n")}}
+function calICS(o){const t=calText(o),p=o.plan,now=o.now||new Date(),end=new Date(o.show.getTime()+(o.span||150)*6e4);
+  const alarm=(mins,txt)=>["BEGIN:VALARM","ACTION:DISPLAY",`DESCRIPTION:${calEsc(txt)}`,`TRIGGER;RELATED=START:${calBefore(mins)}`,"END:VALARM"];
+  const L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Movie Night Spinner//Movie night//EN","CALSCALE:GREGORIAN","METHOD:PUBLISH",
+    "BEGIN:VEVENT",`UID:${o.uid}`,`DTSTAMP:${calUTC(now)}`,`DTSTART:${calUTC(o.show)}`,`DTEND:${calUTC(end)}`,
+    `SUMMARY:${calEsc(t.title)}`,`DESCRIPTION:${calEsc(t.notes)}`,`URL:${o.url}`,"TRANSP:OPAQUE",
+    ...alarm((o.show-p.start)/6e4,t.cook),...(p.before?alarm((o.show-p.before.at)/6e4,t.ahead):[]),
+    "END:VEVENT","END:VCALENDAR"];
+  return L.map(calFold).join("\r\n")+"\r\n"}
+/* Google: one link per event, since an imported file loses its reminders there */
+function calGoogle(o){const t=calText(o),p=o.plan,g=(text,a,b,details)=>"https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent(text)+"&dates="+calUTC(a)+"/"+calUTC(b)+"&details="+encodeURIComponent(details);
+  const out=[["the night",g(t.title,o.show,new Date(o.show.getTime()+(o.span||150)*6e4),t.notes)],["start cooking",g(`Start cooking: ${o.title}`,p.start,new Date(p.start.getTime()+15*6e4),t.cook+"\n"+o.url)]];
+  if(p.before)out.push(["prep ahead",g(`Prep ahead: ${o.title}`,p.before.at,new Date(p.before.at.getTime()+15*6e4),t.ahead+"\n"+o.url)]);return out}
+/* end calendar reminder */
+/* the picked dishes for a film, timed for the guests, read without disturbing the plan of the film on screen */
+function calDishes(f){if(!f||!f._r2||!(f._r2.dishes||[]).length)return [];const keep={guests:PLAN.guests,off:PLAN.off,on:PLAN.on};
+  try{if(f!==current)planLoad(f);const sv=(f._r2&&f._r2.serves)||4,LB=planLabels(f);
+    return planDishes(f).filter(x=>!x.extra).map(x=>{const T=dishTimes(x,x.snack?PLAN.guests/4:PLAN.guests/sv);return {n:LB[x.orig||x.n]&&!x.tag?LB[x.orig||x.n]:x.n,active:T.active,wait:T.wait,words:T.wait>=600?waitWords(x):""}})}
+  catch(e){return []}finally{if(f!==current)Object.assign(PLAN,keep)}}
+function weekShow(){const [d]=cookDate(),[h,m]=weekTime(week.time).split(":").map(Number);const at=new Date(d);at.setHours(h,m,0,0);return at}
+async function calAdd(trigger){if(!week)return;const f=FILMS.find(x=>x.id===week.id);if(!f)return;const g=week.double&&FILMS.find(x=>x.id===week.double);
+  for(const x of [f,g])if(x)try{await ensureExact(x)}catch(e){}
+  const show=weekShow(),plan=calPlan(show,[...calDishes(f),...(g?calDishes(g):[])]),title=f.title+(g?" + "+g.title:"");
+  const url=location.origin+location.pathname+"?film="+encodeURIComponent(f.id),o={title,show,plan,url,span:g?300:150,uid:`${slug(f.id)}-${weekDateKey(show)}@movie-night-spinner`};
+  const name=`movie-night-${slug(f.title)}.ics`,href=URL.createObjectURL(new Blob([calICS(o)],{type:"text/calendar;charset=utf-8"}));
+  const a=document.createElement("a");a.href=href;a.download=name;a.hidden=true;document.body.appendChild(a);a.click();setTimeout(()=>a.remove(),0);
+  const rows=[[`${calDay(show)}, ${calClock(show)}`,`Movie night: ${title}`],[calClock(plan.start),`Start cooking${plan.dish?`. ${plan.dish} takes longest, ${calDur(plan.lead)}`:""}`],
+    ...(plan.before?[[`${calDay(plan.before.at)}, ${calClock(plan.before.at)}`,`Prep ahead: ${plan.before.dishes.map(d=>d.n).join(", ")}`]]:[])];
+  const dlg=document.createElement("dialog");dlg.className="counter pdfpick calask";dlg.setAttribute("aria-label","Add to calendar");
+  dlg.innerHTML=`<div class="rate-box"><p class="rate-k">Add to calendar</p><h3>${ESC(title)}</h3><ul class="cal-rows">${rows.map(([w,t])=>`<li><b>${ESC(w)}</b><span>${ESC(t)}</span></li>`).join("")}</ul>
+    <p class="cal-how">${ESC(name)} is downloading. Open it to add the night and its reminders to Apple Calendar or Outlook. <a href="${href}" download="${ESC(name)}">Download it again</a></p>
+    <p class="cal-how"><b>Google Calendar</b> drops reminders from a file, so add each one here: ${calGoogle(o).map(([k,u])=>`<a href="${ESC(u)}" target="_blank" rel="noopener">${ESC(k)}</a>`).join(", ")}</p>
+    <div class="pp-opts"><button type="button" data-done><b>Done</b></button></div></div>`;
+  dlg.addEventListener("click",e=>{if(e.target===dlg||e.target.closest("[data-done]"))dismissModal(dlg)});
+  dlg.addEventListener("close",()=>setTimeout(()=>URL.revokeObjectURL(href),60000));
+  mountModal(dlg,"[data-done]",trigger||document.activeElement);$("status").textContent=`Calendar file saved: movie night ${calDay(show)} ${calClock(show)}, start cooking ${calClock(plan.start)}.`}
+/* the Prep sheet of the locked-in film shows its showtime and start time; redrawn when the time changes */
+function refreshPrepTime(){if(typeof current!=="undefined"&&current&&week&&(current.id===week.id||current.id===week.double)&&typeof refreshPlan==="function")refreshPlan()}
 const trolleySessionTicks=new Map();
 async function openTrolley(f,menuOverride,label){
   const modalTrigger=document.activeElement;
@@ -1867,9 +1951,12 @@ $("weekSet").addEventListener("click",()=>{if(current){setWeek(current);lockAsk(
 /* after locking in: Director's cut (pick the dishes) or The full feature (cook the lot); either way the Prep sheet and shopping list follow */
 async function lockAsk(f,trigger){if(!f)return;try{await ensureExact(f)}catch(e){}if(!f._r2||!(f._r2.dishes||[]).length)return;
   const o=document.createElement("dialog");o.className="counter pdfpick lockask";o.setAttribute("aria-label","Locked in: "+f.title);
-  o.innerHTML=`<div class="rate-box"><p class="rate-k">Locked in: ${ESC(f.title)}</p><h3>Roll credits on the menu</h3><div class="pp-opts">
+  o.innerHTML=`<div class="rate-box"><p class="rate-k">Locked in: ${ESC(f.title)}</p><h3>Roll credits on the menu</h3>${week&&(week.id===f.id||week.double===f.id)?`<label class="lk-time">Showtime <select id="lockTime" aria-label="Showtime">${showOpts(weekTime(week.time))}</select></label>`:""}<div class="pp-opts">
    <button type="button" data-l="pick"><b>Director's cut</b><span>Pick the dishes. The shopping list follows what you tick.</span></button>
    <button type="button" data-l="all"><b>The full feature</b><span>Cook the lot. Every dish on the menu goes on the Prep sheet and shopping list.</span></button></div></div>`;
+  /* review 16: the showtime is set as the film is locked in. A plan made a moment ago may move to next week if the new time has already gone tonight */
+  {const lt=o.querySelector("#lockTime");if(lt)lt.addEventListener("change",e=>{if(!week)return;week.time=weekTime(e.target.value);week.date=nextWeekDate(week.day,week.time);saveWeek();renderWeek();
+    $("status").textContent=`Showtime set for ${clock(week.time)}.`})}
   o.addEventListener("click",async e=>{if(e.target===o)return dismissModal(o);const b=e.target.closest("[data-l]");if(!b)return;dismissModal(o);
     for(let i=0;i<30&&current!==f;i++)await new Promise(r=>setTimeout(r,100));if(current!==f)return;
     if(b.dataset.l==="all"){PLAN.off={};for(const x of planExtras(f))PLAN.on[x.n]=1;for(const x of planAll(f))if(x.spare)PLAN.on[x.orig||x.n]=1;planSave(f);refreshPlan();setTab("prep");
