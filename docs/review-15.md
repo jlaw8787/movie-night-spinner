@@ -156,9 +156,9 @@ Run on its own after the browser passes: 900 Prep sheets, 1,708 A4 pages at 4 gu
 
 New in scripts/check-print-text.cjs: it fails on a hidden dish note, and on a line clamp in the Save PDF copy that still cuts text.
 
-Left open: 56 hidden notes on 23 films (lab 9 films: Men in Black II, Mad Max 2, The Martian, Flubber; saloon 8: Back to the Future Part III, Tombstone, Three Amigos!, The Man from Snowy River; airline 2: Airplane!, Captain America: Civil War; tiki 2; The Wog Boy on cafe; My Big Fat Greek Wedding on placemat). A poster trade on lab was tried and reverted: it shortened the column beside the poster and doubled the films that failed. These need shorter notes in the data or a new layout for the lab strip and the saloon columns. Also open: small swipe-view type on hand-built cards; a vegetarian card still prints a dish that has no vegetarian version (by design, low); The Out-of-Towners' bitters in kids' mode.
+Later on 6 Nov: saloon takes height from the poster on a heavy menu (all 12 saloon films clear), lab can move a section from the column beside the poster to the strip under it, and about 80 long notes were shortened in the data ("Beef and ale pie, chips, peas", "Fudge sundae with a cream rocket"). Left open: 29 hidden notes on 12 films: lab (The Martian, Mad Max 2, Furiosa, Jurassic World Dominion, Men in Black II, Harry Potter and the Deathly Hallows: Part 2), Airplane! and Captain America: Civil War on airline, The Jungle Book, The Wog Boy, Hook and Weekend at Bernie's. The lab strip under the poster is about 150px tall, so lab needs a new layout rather than shorter notes. A poster trade on lab was tried twice and reverted: it shortens the column beside the poster. Also open: small swipe-view type on hand-built cards; a vegetarian card still prints a dish that has no vegetarian version (by design, low); The Out-of-Towners' bitters in kids' mode.
 
-All 17 node tests pass; check-browser, dialogs, check-store-taps, check-cut-words (two lines written that way in the data), check-sweet-starters, check-kids-cards (343), check-phone-fit (900), check-prices (795), check-pdf-tone (named sample and `--per 2`, all 60 within -3.0 to +4.6) and check-prep-a4 (1,708 pages) pass. check-print-text reads all 900 and fails only on the 56 hidden notes listed above; no dish name is hidden and no clamp or shape is left in the Save PDF copy that html2canvas would misprint.
+All 17 node tests pass; check-browser, dialogs, check-store-taps, check-cut-words (two lines written that way in the data), check-sweet-starters, check-kids-cards (343), check-phone-fit (900), check-prices (795), check-pdf-tone (named sample and `--per 2`, all 60 within -3.0 to +4.6) and check-prep-a4 (1,708 pages) pass. check-print-text reads all 900 and fails only on the 29 hidden notes listed above; no dish name is hidden and no clamp or shape is left in the Save PDF copy that html2canvas would misprint.
 
 ## Score after the fixes
 
@@ -176,4 +176,4 @@ All 17 node tests pass; check-browser, dialogs, check-store-taps, check-cut-word
 | 10. Accessibility basics | 9 | 9 |
 | **Overall** | **8.5** | **9.1** |
 
-Short of 9.5 for the 56 hidden notes, the swipe-view type on hand-built cards, and the cinema strip as the one cinema piece inside Galaxy Video.
+Short of 9.5 for the 29 hidden notes, the swipe-view type on hand-built cards, and the cinema strip as the one cinema piece inside Galaxy Video.
