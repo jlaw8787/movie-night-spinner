@@ -1,6 +1,6 @@
 # Handover: Movie Night Spinner
 
-Read this first in a new chat. Last updated 5 Nov 2026. Start with "5 Nov, afternoon" at the bottom.
+Read this first in a new chat. Last updated 5 Nov 2026. Start with "5 Nov, late afternoon" at the bottom.
 
 ## Where things are
 
@@ -145,3 +145,13 @@ Review 12 (docs/review-12.md, shots review-12-01 to 33) scored 8.4, up from 8.1.
 7. No "00" numbers and no film-number prices on shared layouts ("REWARD $00", Finding Nemo 42.00).
 8. Small items, plus two US spellings fix 8 missed (see the review).
 After the fixes: run all tests, redeploy to Netlify, add a "Fixed after the review" note to review-12.md, then run review 13.
+
+## 5 Nov, late afternoon: review 12 fixed and live (deploy 6aebfea5)
+
+- All 8 review 12 fix items done, pushed to wip/store-overhaul and live on Netlify. Notes under "Fixed after the review" at the end of review-12.md.
+- Save PDF now bakes what html2canvas cannot draw (soft inset shadows, vignettes, filtered photos, outer rings, outlines, straight stripes, SVG textures) into pictures in the export copy in renderCanvas. Do not undo this by hiding layers again.
+- New checks: scripts/check-pdf-tone.cjs (screen against PDF, `--per N`, MNS_NET=1 and MNS_LIBDIR for local html2canvas), scripts/check-kids-cards.cjs, scripts/check-prep-a4.cjs (`--guests 9`). shop-lines.test.cjs sweeps every film at 2, 4 and 9 guests.
+- Logo plates on banquet, candy bar and takeaway share window.__fmtLogo2 (versioned): the old __fmtLogo global was defined by whichever layout loaded first.
+- Josh asked (5 Nov) for the locked-in film at the top as a reminder. Built: a slim strip (#feature, renderFeature in app.js) at the very top of every view with poster, title, cook night, showtime, countdown, Menu and Prep sheet. Also suggested, not built yet: any showtime instead of 5pm to 9pm, and a calendar entry with a start-cooking reminder.
+- Left open: the long phone Candy bar page, small swipe-view type on hand-built cards.
+- Next: review 13, a fresh independent scored review, target 9.5.
