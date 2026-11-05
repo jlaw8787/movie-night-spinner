@@ -1080,12 +1080,14 @@ function planFive(f,r2){const have=new Set(r2.map(d=>String(d.orig||d.n).toLower
   const out=new Set();for(const [c,n] of [["s",2],["m",1],["w",1],["d",1]]){let k=0;for(const x of byC[c])if(k<n&&have.has(x)&&!out.has(x)){out.add(x);k++}}
   for(const c of ["s","m","w","d"])for(const x of byC[c])if(out.size<5&&have.has(x))out.add(x);
   return out.size?out:null}
-const planAll=f=>{const ck0=planCooked(f),r2=((f._r2&&f._r2.dishes)||[]).map(d=>dietDish(d)),
+/* a dry card (kids, fairytale, Christmas and wizard films) cooks and shops the same alcohol-free versions it prints */
+const planDish=(f,d)=>dietDish(d,dietAF()||DRY_THEMES.includes(f&&f.theme));
+const planAll=f=>{const ck0=planCooked(f),r2=((f._r2&&f._r2.dishes)||[]).map(d=>planDish(f,d)),
     /* every cooked dish found by name: those are tonight's five. Otherwise the card picks them (planFive), so extras start unticked on hand-built menus too */
     ok=ck0&&ck0.size&&r2.filter(d=>ck0.has(String(d.orig||d.n).toLowerCase())).length>=Math.min(5,ck0.size),ck=ok?ck0:r2.length>5?planFive(f,r2):null,
     hit=d=>ck.has(String(d.orig||d.n).toLowerCase()),sp=!!ck,all=sp?r2.map(d=>hit(d)?d:Object.assign({},d,{spare:true})):r2,m=f.menu||(typeof current!=="undefined"&&current===f?current.menu:null);
   let out=all;if(m&&m.lazy){const keep=new Set([...m.s,...m.m,...m.w,...m.d].map(it=>it.orig||it.n)),few=all.filter(d=>keep.has(d.orig||d.n));if(few.length)out=few}
-  return out.concat(planExtras(f).map(d=>dietDish(d))).concat(snackDishes(f).map(d=>dietDish(d)))};
+  return out.concat(planExtras(f).map(d=>planDish(f,d))).concat(snackDishes(f).map(d=>planDish(f,d)))};
 /* the film's other printed dishes: offered in the planner unticked, so every dish on the printed menu can go on the shopping list.
    Method and shopping come from the menu itself (no quantities), and the tonight's-five recipes stay the default cook. */
 /* what the printed card actually shows for a film, so the planner lists exactly those dishes, under the card's own names */
@@ -1996,7 +1998,7 @@ function itemShop(menu,it){
 function pickedShop(m,G){
   const list=[],extra=[];
   for(const it of [...m.s,...m.m,...m.w,...m.d]){const f=it._f,r2=f&&f._r2&&f._r2.dishes,d=r2&&r2.find(z=>z.n===(it.orig||it.n));
-    if(d){const x=dietDish(d);if(!x.blocked)list.push({d:x,k:G/((f._r2&&f._r2.serves)||4)})}else extra.push(...(it.shop||[]))}
+    if(d){const x=planDish(f,d);if(!x.blocked)list.push({d:x,k:G/((f._r2&&f._r2.serves)||4)})}else extra.push(...(it.shop||[]))}
   return [...shopLines(list),...extra];
 }
 async function doubleMenu(a,b,G){
