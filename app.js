@@ -2679,8 +2679,15 @@ async function renderCanvas(src,forPrint){
         svgPng.set(u,`url("${c.toDataURL("image/png")}")`)}catch(e){}}))}
     [clone,...clone.querySelectorAll("*")].forEach(el=>{
       const cs=getComputedStyle(el),bg=cs.backgroundImage;
-      if(cs.backgroundBlendMode&&cs.backgroundBlendMode.includes("multiply")){el.style.backgroundImage="none";return}
-      if(bg&&bg.includes("data:image/svg"))el.style.backgroundImage=bg.replace(svgRx,u=>svgPng.get(u)||`url("${nz}")`);
+      /* html2canvas cannot blend background layers: a grain set to multiply would paint flat over the paper, so only those layers are left out.
+         Review 13: the other layers stay (tavern's burnt edge, lab's grime), and the edge vignette among them is baked below */
+      if(cs.backgroundBlendMode&&/multiply|overlay|screen|darken|soft-light/.test(cs.backgroundBlendMode)&&bg&&bg!=="none"){
+        const lay=splitLayers(bg),md=cs.backgroundBlendMode.split(/,\s*/),L=a=>a.split(/,(?![^(]*\))/).map(x=>x.trim()),sz=L(cs.backgroundSize),ps=L(cs.backgroundPosition),rp=L(cs.backgroundRepeat),at=i=>(a=>a[i]||a[a.length-1]);
+        const keep=lay.map((g,i)=>i).filter(i=>{const m=md[i]||md[md.length-1];return m==="normal"});
+        el.style.backgroundBlendMode="normal";
+        if(!keep.length){el.style.backgroundImage="none";return}
+        el.style.backgroundImage=keep.map(i=>lay[i]).join(",");el.style.backgroundSize=keep.map(i=>at(i)(sz)).join(",");el.style.backgroundPosition=keep.map(i=>at(i)(ps)).join(",");el.style.backgroundRepeat=keep.map(i=>at(i)(rp)).join(",")}
+      {const b0=cs.backgroundImage;if(b0&&b0.includes("data:image/svg"))el.style.backgroundImage=b0.replace(svgRx,u=>svgPng.get(u)||`url("${nz}")`)}
       if(el.tagName==="IMG"&&/^data:image\/svg/.test(el.getAttribute("src")||""))el.style.visibility="hidden";
       if(el.tagName&&el.tagName.toLowerCase()==="svg")el.style.visibility="hidden";
       /* html2canvas cannot do CSS masks: a masked gilt frame would print as a solid gold slab over the whole page, so draw it as a plain border instead */
@@ -2702,7 +2709,7 @@ async function renderCanvas(src,forPrint){
         const bs=cs.boxShadow;if(bs&&bs!=="none"&&/inset/.test(bs)){/* an inset shadow paints over the background and under the content, so the picture goes in as the top background layer, text or not */
           const parts=bs.split(/,(?![^(]*\))/).map(x=>x.trim()),keep=[],soft=[];
           for(const sh of parts){if(!/inset/.test(sh)){keep.push(sh);continue}const col=(sh.match(/rgba?\([^)]*\)|#[0-9a-f]{3,8}\b/i)||[])[0],n=(sh.replace(/rgba?\([^)]*\)/g,"").match(/-?\d+(\.\d+)?px/g)||[]).map(parseFloat);
-            if(col&&n.length>=3&&n[2]>=16)soft.push({x:n[0],y:n[1],b:n[2],s:n[3]||0,col});else keep.push(sh)}
+            if(col&&n.length>=3&&n[2]>=2)soft.push({x:n[0],y:n[1],b:n[2],s:n[3]||0,col});else keep.push(sh)}
           if(soft.length){const url=pdfSoftInset(w,h,soft);el.style.boxShadow=keep.join(",")||"none";
             const bi=cs.backgroundImage&&cs.backgroundImage!=="none"?cs.backgroundImage:"";el.style.backgroundImage=`url("${url}")`+(bi?","+bi:"");
             if(bi){el.style.backgroundSize=`${w}px ${h}px,`+cs.backgroundSize;el.style.backgroundPosition="0 0,"+cs.backgroundPosition;el.style.backgroundRepeat="no-repeat,"+cs.backgroundRepeat}

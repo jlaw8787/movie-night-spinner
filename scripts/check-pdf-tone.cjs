@@ -10,14 +10,17 @@ let sharp;try{sharp=require('sharp')}catch(e){}
 const R=path.join(__dirname,'..'),port=4700+Math.floor(Math.random()*200);
 /* one gritty or scrappy film per layout that used to wash out, plus the night diners and a few that always printed fine */
 const SAMPLE=['Die Hard 2 (1990)','Con Air (1997)','The Hangover (2009)','John Wick (2014)',"Bridget Jones's Diary (2001)",'Tombstone (1993)',
-  'Lock, Stock and Two Smoking Barrels (1998)','Batman Begins (2005)','The Birds (1963)','Shaft (1971)','A Nightmare on Elm Street (1984)','Final Destination (2000)'];
+  'Lock, Stock and Two Smoking Barrels (1998)','Batman Begins (2005)','The Birds (1963)','Shaft (1971)','A Nightmare on Elm Street (1984)','Final Destination (2000)',
+  /* review 13: home printed its white cards grey, tavern and lab lost their aged edges */
+  'Skyfall (2012)','True Grit (2010)','The Conjuring (2013)','The Fly (1986)'];
 /* --per N: N films from every shared layout instead of the named sample */
 const A=process.argv.slice(2),PER=A[0]==='--per'?+A[1]||1:0;
 let FILMS=PER?[]:A.length?A:SAMPLE;
 if(PER){const FM=JSON.parse(fs.readFileSync(path.join(R,'data/film-format.json'),'utf8')),n={};for(const [id,v] of Object.entries(FM)){const k=v&&v.format;if(!k)continue;n[k]=(n[k]||0)+1;if(n[k]<=PER)FILMS.push(id)}}
 /* the fault is a print darker or flatter than the screen. Brightness is in levels out of 255, so a dark paper's small shift
    does not read as a big percentage: the washed-out prints of review 12 lost 35 to 60 levels */
-const DARKER=10,FLATTER=.15,LIGHTER=20;
+/* review 13: a lost edge vignette shows as +8 to +13 levels, so both limits sit at 6 */
+const DARKER=6,FLATTER=.15,LIGHTER=6;
 const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.1'],{cwd:R,stdio:'ignore'});process.on('exit',()=>server.kill());
 async function stats(buf){
   if(sharp){const {data,info}=await sharp(buf).removeAlpha().resize({width:400}).raw().toBuffer({resolveWithObject:true});
