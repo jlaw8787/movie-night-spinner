@@ -32,4 +32,7 @@ assert.match(find('madagascar-2005',1,/rib eye/),/^1 rib eye steak@/,'one rib ey
 // a tin or bag size never scales
 assert.ok(!lines('rocky-v-1990',9).some(l=>/\(\d+ ?g\)/.test(l)&&/tins?|cans?/.test(l)&&!/\(400 ?g\)/.test(l)),'tin sizes stay put');
 
+/* review 11: the frying pot covers a splash of the same oil, and salt and pepper covers plain salt */
+for(const g of [2,4,9])assert.deepEqual(oil(lines('raiders-of-the-lost-ark-1981',g)).filter(l=>/vegetable oil/.test(l)),['2 L vegetable oil@Pantry'],`Raiders at ${g}`);
+for(const g of [2,9]){const L=lines('casino-royale-2006',g);assert.ok(!(L.some(l=>/^salt and pepper@/.test(l))&&L.some(l=>/^salt@/.test(l))),`Casino Royale salt twice at ${g}`)}
 console.log('PASS: frying oil holds at one pot at 2, 4 and 9 guests; spoon oils still scale; pack notes follow the guests; cut names like round steak read properly.');

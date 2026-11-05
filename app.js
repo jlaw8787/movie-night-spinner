@@ -1177,7 +1177,7 @@ function shopLines(list){
     if(!tally[key]){tally[key]={a,item:i.item,items:new Set(),parts:{},order:[],open:false};order.push(key)}
     const t=tally[key];t.items.add(String(i.item));
     if(i.q==null){t.open=true;continue}
-    const u=b[0]==="#"?"":b[0];if(!(u in t.parts)){t.parts[u]=0;t.order.push(u)}if(fryOil(i))t.parts[u]=Math.max(t.parts[u],ingQ(i,k)*b[1]);else t.parts[u]+=ingQ(i,k)*b[1];
+    const u=b[0]==="#"?"":b[0];if(!(u in t.parts)){t.parts[u]=0;t.order.push(u)}if(fryOil(i)){t.fry=t.fry||{};t.fry[u]=Math.max(t.fry[u]||0,ingQ(i,k)*b[1])}else t.parts[u]+=ingQ(i,k)*b[1];
   }
   const lines=order.map(key=>{const t=tally[key];
     /* two different cuts of the same thing ("lemon, juiced" and "lemons") share the plain name; prep words ("shredded", "juiced", "to taste") stay in the method */
@@ -1190,6 +1190,9 @@ function shopLines(list){
     /* spoons and cups next to a weight or volume fold into it, so the line reads as one amount ("375g caster sugar", not "1 tsp + 370g") */
     for(const base of ["ml","g"])if(base in t.parts){const per=base==="ml"?{tsp:5,tbsp:15,cup:250}:{tsp:4,tbsp:12,cup:200};
       for(const u of ["tsp","tbsp","cup"])if(u in t.parts){t.parts[base]+=t.parts[u]*per[u];delete t.parts[u];t.order=t.order.filter(x=>x!==u)}}
+    /* the frying pot covers a splash of the same oil for the pan: 2 L for frying plus 4 tbsp to fry the onions still reads "2 L", at any guest count (Raiders at 9 was "2.1 L") */
+    if(t.fry)for(const u in t.fry){const pot=t.fry[u],extra=t.parts[u]||0;t.parts[u]=extra<=pot*.1?pot:pot+extra;if(!t.order.includes(u))t.order.push(u)}
+    for(const u of ["tsp","tbsp","cup"])if(t.fry&&t.fry.ml&&u in t.parts){const per={tsp:5,tbsp:15,cup:250};if(t.parts[u]*per[u]<=t.fry.ml*.1){delete t.parts[u];t.order=t.order.filter(x=>x!==u)}}
     /* the same thing in grams and millilitres (sour cream, ice cream) adds up as grams; spoons alongside cups fold into cups */
     if("g" in t.parts&&"ml" in t.parts){t.parts.g+=t.parts.ml;delete t.parts.ml;t.order=t.order.filter(x=>x!=="ml")}
     if("cup" in t.parts)for(const [u,d] of [["tbsp",16],["tsp",48]])if(u in t.parts){t.parts.cup+=t.parts[u]/d;delete t.parts[u];t.order=t.order.filter(x=>x!==u)}
@@ -1210,6 +1213,8 @@ function shopLines(list){
   for(let i=0;i<lines.length;i++){const m=lines[i].match(/^(\d+) green (mango(es)?|papayas?|tomato(es)?|bananas?|apples?|capsicums?)@(.+)$/i);if(!m)continue;
     const base=planSing(m[2].toLowerCase()).replace(/^mangoe$/,"mango").replace(/^tomatoe$/,"tomato"),j=lines.findIndex((l,x)=>x!==i&&new RegExp("^(\\d+) "+base+"(e?s)?@"+m[5]+"$","i").test(l));if(j<0)continue;
     const n=+lines[j].match(/^\d+/)[0]+ +m[1];lines[j]=`${n} ${planPlural(base,n)}, ${m[1]} green@${m[5]}`;lines.splice(i,1);i--}
+  /* "salt and pepper" already covers a plain "salt" or "pepper" line (Casino Royale listed both) */
+  {const sp=lines.find(l=>/^salt and (freshly ground )?(black )?pepper@/i.test(l));if(sp)for(let i=lines.length-1;i>=0;i--)if(lines[i]!==sp&&/^((sea |table |cooking |fine )?salt|(ground |cracked )?(black )?pepper)@/i.test(lines[i]))lines.splice(i,1)}
   return lines;
 }
 const PREP_TAIL=/,\s*((finely|thinly|roughly|coarsely|lightly|freshly|very)\s+)?(shredded|juiced|zested|sliced|chopped|diced|grated|halved|quartered|peeled|minced|crushed|torn|cubed|julienned|deseeded|seeded|cored|trimmed|picked|rinsed|drained|beaten|melted|softened|to taste|to serve|for serving|plus extra|cut into [^,]+|at room temperature)(\s+and\s+(shredded|juiced|zested|sliced|chopped|diced|grated|halved|quartered|peeled|minced|crushed|deseeded|cored|trimmed))?\s*$/i;
