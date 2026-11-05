@@ -252,15 +252,16 @@ window.MENU_FORMATS.invite=function(ctx){
       <div style="margin-top:.7em;font:700 .9em/1.2 ${bd};letter-spacing:.14em;text-transform:uppercase;color:${acc}">Now showing</div>
      </div>
     </div>`;
+  /* the cover lines under a poster: the tagline is the one that steps aside when a long venue name needs two lines (Wedding Crashers), and the block never clips its first line */
   const front=`${stock}${border}
    ${pos?posterFront:photo(hero,34,34,532,416,st[0]?"50% 40%":"50% 22%",{alts:st.slice(5,8).map(s=>ctx.img(s,"w1280")),extra:logo,
      safe:JSON.stringify({pos:[[50,40],[50,22],[50,60],[30,40],[70,40]],items:[{q:"[data-sp=logo]",c:[["c",0,"b",18],["c",0,"t",18],["l",18,"b",18],["r",18,"b",18],["l",18,"t",18],["r",18,"t",18]]}]})})}
-   <div data-fit="14" style="position:absolute;left:44px;top:${pos?606:472}px;width:512px;height:${pos?112:236}px;overflow:hidden;display:flex;flex-direction:column;justify-content:center;text-align:center;font-size:${pos?19:21}px;color:${ink};${press}">
+   <div data-fit="14" style="position:absolute;left:44px;top:${pos?606:472}px;width:512px;height:${pos?112:236}px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center;text-align:center;font-size:${pos?19:21}px;color:${ink};${press}">
      ${pos?"":kick(T.k,".82em")}
      <div style="margin-top:.35em;font:italic 1em/1.35 ${bd}">${x(T.lead)}</div>
      <div style="margin-top:.2em;font:${E.dw} 2.05em/1.05 ${dd};${up}letter-spacing:${E.ls};color:${ink}">${x(venue)}</div>
      <div style="margin-top:.35em;font:700 max(14px,.9em)/1.3 ${bd};letter-spacing:.12em;text-transform:uppercase;color:${acc}">${x(sign)}</div>
-     ${f.T?`<div style="margin-top:.45em;font:italic 1em/1.35 ${bd}">${x(f.T)}</div>`:""}
+     ${f.T?`<div data-opt style="margin-top:.45em;font:italic 1em/1.35 ${bd}">${x(f.T)}</div>`:""}
    </div>
    <div style="position:absolute;left:58px;right:58px;top:${pos?728:720}px;height:${pos?144:150}px;box-sizing:border-box;padding:${pos?"8px 18px 4px":"12px 18px 6px"};border-top:1px solid ${acc};border-bottom:1px solid ${acc};text-align:center;color:${ink}">
      <div data-fit="14" style="height:${pos?76:78}px;overflow:hidden;font:italic 19px/1.35 ${bd};font-size:19px">${x(nt.text)}</div>
