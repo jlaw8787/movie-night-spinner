@@ -1,6 +1,6 @@
 # Handover: Movie Night Spinner
 
-Read this first in a new chat. Last updated 5 Nov 2026. Start with "5 Nov, morning" at the bottom.
+Read this first in a new chat. Last updated 5 Nov 2026. Start with "5 Nov, afternoon" at the bottom.
 
 ## Where things are
 
@@ -124,3 +124,12 @@ Left open from review 2, closed 4 Nov: sequel prices (checked: same-layout seque
 - Next: review 11, a fresh independent scored review, then fix rounds to 9.5.
 - App Store work is planned in docs/APP-STORE-PLAN.md. Josh is setting up Apple Developer and Google Play accounts. The next question for him is how posters and stills are handled in the app (5.2.1 rights).
 - Background agents sometimes stall on their commit call. Check their transcript time and run the commit yourself if it has not moved for 15 minutes.
+
+## 5 Nov, afternoon: review 11 fixed and live
+
+- Review 11 (docs/review-11.md) scored 8.1. All 8 fix items are done, pushed to wip/store-overhaul and deployed to Netlify (deploy 6aebd040). Notes are under "Fixed after the review" at the end of review-11.md.
+- Review 10 leftovers also done: Iron Giant style "Plate No." on diner specials; the six poster editions cook a savoury second starter (Under Siege's cake bites no longer fit on the galley card, the birthday cake stays).
+- New checks: tests/dry-plan.test.cjs (dry cards never buy grog, kids word pass), scripts/check-store-taps.cjs (phone sign taps, needs a browser).
+- Open for Josh: hand-built menus keep year-coded prices (Moonstruck 19.87, Saturday Night Fever 2.01, about 30 more). Keep as Easter eggs or move them to price endings?
+- Next: review 12 to confirm 9.5.
+- Pushing from a Claude session works again.

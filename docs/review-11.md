@@ -134,3 +134,15 @@ lang is set, no duplicate ids on any view, every image has alt text (tape covers
 - Galaxy Video end to end and the holiday calendar on every date tried (23, 25, 26).
 - Table kit door signs and place cards (27, 28).
 - A clean run: no console errors, failed requests, broken images, dashes or leaked "undefined" anywhere, and every test and check script passing.
+
+## Fixed after the review
+
+- Fix 1, canteen PDF (5 Nov): the export copy leaves out the canteen's vignette layer (data-vig), which html2canvas painted as a brown wash, and prints the tray wells with a plain edge instead of a blurred inset shadow (data-well). A Nightmare on Elm Street and Shawshank print as they show.
+- Fix 2, dry cards (5 Nov): kids, fairytale, Christmas and wizard films now cook and shop the alcohol-free versions the card prints (planDish in app.js), with No alcohol off. Christmas Vacation and The Fellowship of the Ring buy nothing from the bottle shop; Scarface still buys rum. tests/dry-plan.test.cjs checks all 205 dry-theme films and 392 grown-up ones.
+- Fix 3, kids' mode cues (5 Nov): the Prep sheet and table kit get the same dry pass as the card. Drinking phrases are reworded as a whole ("Serve beside a cold drink", "Pour the drinks", "a bottle of lemonade", "the green cordial") before single words are swapped.
+- Fix 4, doubled words (5 Nov): any word a swap doubles folds to one, keeping the source spelling ("lemon squash", "VIRGIN STRAWBERRY SLUSHIE"); doubles the film wrote itself (Huli huli, Nai Nai) stay.
+- Fix 5, store signs (5 Nov): on the phone each aisle sign on the shop photo has a clear tap pad at least 44px tall behind it (a big near sign grows upward only, so it never covers the far signs). scripts/check-store-taps.cjs measures every sign with elementFromPoint and taps above Horror to check it walks to the aisle. Measured: 44 to 50px.
+- Fix 6, invite (5 Nov): the cover lines under a poster never clip their first line, and the tagline steps aside when a long venue name needs two lines (Wedding Crashers).
+- Fix 7, prices (5 Nov): precinct menu prices land on price endings (Bad Boys 2.12 now 2.25); evidence tags keep their own cents. Not changed yet: the hand-built menus' year-coded prices (Moonstruck's Champagne 19.87, Saturday Night Fever's Disco fizz 2.01, about 30 more), which are film-year winks; left for Josh to decide.
+- Fix 8, small items (5 Nov): Australian spelling in recipe lines (spring onion, rocket, grilled, beef mince, moulds, capsicum, cling wrap); Dr without a stop except in film titles (Dr. No, Dr. Strangelove); the frying pot covers a splash of the same oil (Raiders reads 2 L at 2, 4 and 9); "salt and pepper" covers a plain salt line (Casino Royale); store switches, aisle chips and footer credit links are 44px or more to tap on the phone.
+- Also this round (review 10 leftovers): diner films whose number cannot sit in the cents print "Plate No. 57." on the special (Iron Giant and six more); the six poster editions now cook a savoury second starter and serve their sweet with the sweets.
