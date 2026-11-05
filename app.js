@@ -670,7 +670,7 @@ function lobbyHTML(f,menu,tag,path){
       <section class="mc-courses">
         ${course("c-s",lab[0],menu.s)}${course("c-m",lab[1],menu.m)}${course("c-w",lab[2],menu.w)}${course("c-d",lab[3],menu.d)}
       </section>
-      <div class="mc-cue"><b>Showtime cue</b><span>${ESC((movieEdition(f)||{}).cue||f.P)}</span></div>
+      <div class="mc-cue"><b>Showtime cue</b><span>${ESC(dietCue(f,(movieEdition(f)||{}).cue||f.P))}</span></div>
       <div class="mc-foot">${ESC(T[f.theme].name)} &nbsp;/&nbsp; full methods and shopping list on the prep sheet</div>
     </section>
   </div>
@@ -704,7 +704,7 @@ function cardHTML(f,menu,tag,usePoster=true){
     <section class="mc-courses">
       ${course("c-s",lab[0],menu.s)}${course("c-m",lab[1],menu.m)}${course("c-w",lab[2],menu.w)}${course("c-d",lab[3],menu.d)}
     </section>
-    <div class="mc-cue"><b>Showtime cue</b><span>${ESC(f.P)}</span></div>
+    <div class="mc-cue"><b>Showtime cue</b><span>${ESC(dietCue(f,f.P))}</span></div>
     <div class="mc-foot">${ESC(T[f.theme].name)} &nbsp;/&nbsp; full methods and shopping list on the prep sheet</div>
   </div>
   <div class="mc-fg">${d.fg}</div>`;
@@ -725,7 +725,7 @@ function prepHTML0(f,menu){
     <div class="pp-title">${ESC(f.title)}</div>
     ${menu.shopping?`<p class="pp-serves">Serves ${edition?edition.servings:4} &nbsp;/&nbsp; exact quantities</p>`:""}
     <div class="pp-cols"><div class="pp-shop"><h3>Shopping list</h3>${shop}</div><div class="pp-method"><h3>How to make it</h3><ol>${steps}</ol></div></div>
-    <div class="mc-cue"><b>Showtime cue</b><span>${ESC(edition&&edition.cue||f.P)}</span></div>
+    <div class="mc-cue"><b>Showtime cue</b><span>${ESC(dietCue(f,edition&&edition.cue||f.P))}</span></div>
   </div>`;
 }
 
@@ -1056,6 +1056,15 @@ function dietText(f,str){
   pairs.forEach(([a],i)=>{if(out.includes(a))out=out.split(a).join("\u0001"+i+"\u0002")});
   return out.replace(/\u0001(\d+)\u0002/g,(m,i)=>pairs[+i][1]);
 }
+/* review 15: on a vegetarian night the showtime cue named the meat dish the cook is not making ("Serve the lobster when Madison eats it whole").
+   The thing served is named by its course instead; the film's moment after "when" keeps its words */
+const CUE_MEAT=/\b(beef|steaks?|pork|ham|bacon|chicken|turkey|lamb|veal|sausages?|meatballs?|meatball subs?|meat|brisket|ribs?|wings|burgers?|cheeseburgers?|hot ?dogs?|chilli dogs?|franks|duck|goose|fish|salmon|tuna|prawns?|shrimps?|lobsters?|crabs?|oysters?|clams?|calamari|prawn cocktail|shrimp cocktail|crab cakes?|fish and chips|fish fingers|jerky)\b/i;
+function dietCue(f,str){str=dietText(f,str);if(typeof str!=="string"||!DIET.veg||!f)return str;
+  return str.replace(/^(\s*(?:Serve|Bring out|Hand round|Plate up|Put out) )(the |some |a |your )?([^.,;]*?)(?=\s+(?:when|as|while|during|at|right|whenever|once|before|after|just)\b)/i,(m,v,art,thing)=>{
+    if(!CUE_MEAT.test(thing)||/\b(snacks|mains|starters|dessert|sweets|drinks|food|feast|dinner|lunch|supper)\b/i.test(thing))return m;
+    const w=thing.match(CUE_MEAT)[0].toLowerCase(),lists=[["snacks",f.S],["mains",f.M],["dessert",f.W],["drinks",f.K]];
+    let c="";for(const [lab,L] of lists)if((L||[]).some(r=>new RegExp("\\b"+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"\\b","i").test(String(r&&r[0]||""))))c=c||lab;
+    return v+"the "+(c||(/pies?$/.test(w)?"pies":"mains"))})}
 /* the hand-built menus are finished artwork with the words baked in, so the same swaps run over the page itself */
 function dietHTML(f,html){
   const k=dietKeyF(f);if(!k||typeof html!=="string"||!f||!f._diet||!f._diet.text)return html;
@@ -1362,7 +1371,7 @@ function prepHTML2(f,menu){
     <div class="pp-title">${ESC(f.title)}</div>
     <p class="pp-serves">${[`Serves ${PLAN.guests}`,DIET.veg||dietAF()?[DIET.veg&&"vegetarian",dietAF()&&"alcohol-free"].filter(Boolean).join(", "):"",`${ds.length} dish${ds.length===1?"":"es"}`,`hands-on ${planDur(hands)}`,`longest ${planDur(longest)}`,waitMax?(waitMax>=2880?`start ${Math.round(waitMax/1440)} days ahead`:waitMax>=600?"start the day before":`plus ${planDur(waitMax)} waiting`):""].filter(Boolean).map(x=>`<span class="pp-chip">${x.replace(/ /g,"&nbsp;")}</span>`).join(" ")}</p>
     <div class="pp-cols"><div class="pp-shop"><h3>Shopping list</h3>${shop||"<p>Tick at least one dish.</p>"}</div><div class="pp-method"><h3>How to make it</h3><ol>${steps}</ol></div></div>
-    <div class="mc-cue"><b>Showtime cue</b><span>${ESC(edition&&edition.cue||f.P)}</span></div>
+    <div class="mc-cue"><b>Showtime cue</b><span>${ESC(dietCue(f,edition&&edition.cue||f.P))}</span></div>
   </div>`;
 }
 function planWire(f){
@@ -1465,6 +1474,8 @@ const KFIX=(()=>{const cap=(m,v)=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1)
   return [[/\b(goodness|heaven|pete|god|christ)((['’]s?|s['’])?) (syrup|yuzu soda)\b/gi,(m,a,b)=>a+b+" sake"],
    [/\bmocktail (franks?|frankfurts?|sausages?|cherr(y|ies)|onions?|sauce|sticks?|dressing)\b/gi,(m,a)=>cap(m,"cocktail "+a)],[/\b(prawn|shrimp|seafood|crab|lobster|fruit) mocktails?\b/gi,m=>m.replace(/mock(?=tail)/i,w=>/^M/.test(w)?"Cock":"cock")],
    [/\bgrape juice (glass(es)?)\b/gi,(m,a)=>cap(m,"wine "+a)],
+   /* review 15: "with Marsala wine" went through two swaps and read "with a cold drink grape juice" (The Godfather, Vegetarian with No alcohol) */
+   [/\ba cold drink (grape juice)\b/gi,(m,a)=>a],
    [/\b(root|ginger|butter) (root|ginger) beer\b/gi,(m,a)=>a+" beer"],[/\balcohol-free (root|ginger) beer\b/gi,m=>cap(m,"alcohol-free beer")],
    [/\b(mocktail|syrup|grape juice|sparkling apple|root beer|ginger beer|rich|soda|sticky|crisp|slow-braised|slow-stewed|butterscotch|coconut|cucumber|lime|vanilla|fizz|punch|lemonade|juice)( \1)+\b/gi,(m,a)=>a]]})();
 /* any word a swap doubles ("lemon shandy" to "lemon lemon squash", "strawberry daiquiri slushie") folds to one; doubles the film wrote itself (huli huli, Nai Nai) stay */
@@ -1511,6 +1522,20 @@ function foldClear(card){
       /* nothing a layout marked to drop stays hidden because of this pass */
       box.querySelectorAll("[data-drop]").forEach(d=>{if(d.style.display==="none"&&box.scrollHeight<=box.clientHeight+1)d.style.display=""})})});
 }
+/* review 15: shorten a note at a natural break before a fit pass gives up on it, so "Garlic rosemary lamb shoulder roasted 5 hours until it pulls apart"
+   reads "Garlic rosemary lamb shoulder roasted 5 hours" instead of vanishing. Breaks: sentences, then commas, then joining words; never under three words */
+window.__fmtShort=(t,fits)=>{t=String(t||"").trim();const end=/[.!?]$/.test(t)?".":"",body=t.replace(/[.!?]+$/,""),cands=[];
+  const sent=t.match(/[^.!?]+[.!?]+/g);if(sent&&sent.length>1)for(let k=sent.length-1;k>=1;k--)cands.push(sent.slice(0,k).join("").trim());
+  const rx=/,\s+|\s+(?:with|and|over|in|on|under|topped with|served|until|for|from|plus|then|or)\s+/gi;let m;const cuts=[];while((m=rx.exec(body)))cuts.push(m.index);
+  /* a cut that ends on a verb or a joining word reads unfinished ("Choux puffs filled.", "Lemon jelly set."), so those are skipped */
+  for(let k=cuts.length-1;k>=0;k--){const c=body.slice(0,cuts[k]).trim(),lw=(c.match(/(\S+)$/)||["",""])[1].toLowerCase();
+    if(c.split(/\s+/).length>=3&&!/(ed|ing)$/.test(lw)&&!/^(set|made|done|cut|and|or|with|of|a|the|its|their|to|for|in|on|at|by|from)$/.test(lw))cands.push(c+end)}
+  for(const c of cands)if(fits(c))return c;return null};
+/* notes from the bottom: each is first shortened at a break, and only hidden if even that will not fit. The full text is kept to put back on a refit */
+window.__fmtTrim=(ns,over)=>{for(let i=ns.length-1;i>=0&&over();i--){const n=ns[i];if(n.children.length||n.style.display==="none")continue;const full=n.dataset.full||(n.dataset.full=n.textContent);
+    let last=null;const ok=window.__fmtShort(full,c=>{n.textContent=c;last=c;return !over()});n.textContent=ok||last||full;if(ok)return}
+  for(let i=ns.length-1;i>=0&&over();i--)ns[i].style.display="none"};
+window.__fmtTrimReset=root=>{if(root)root.querySelectorAll("[data-full]").forEach(n=>{n.textContent=n.dataset.full})};
 function libUnclip(card,done){if(done)card.dataset.unclip="1";card.querySelectorAll(".fx-face *").forEach(e=>{const cs=getComputedStyle(e);if(!((cs.webkitLineClamp&&cs.webkitLineClamp!=="none")||cs.textOverflow==="ellipsis"))return;const hid=()=>e.scrollHeight>e.clientHeight+2||e.scrollWidth>e.clientWidth+2;if(!hid())return;
   let fs=parseFloat(cs.fontSize),lh=parseFloat(cs.lineHeight)||fs*1.2;
   /* tall display faces: the glyphs poke past a tight line box, so open the line a little */
@@ -1533,6 +1558,8 @@ function libUnclip(card,done){if(done)card.dataset.unclip="1";card.querySelector
     /* still over: drop list items off the end at the commas, so it reads "Hummus and eggplant dip, flatbread." not "olives,..." */
     /* but never down to a stub like "Lamb.": keep at least four words, otherwise let the two-line clamp end it with an ellipsis */
     if(hid()){const full=e.textContent,parts=full.trim().replace(/[.!?]+$/,"").split(/,\s+/);while(hid()&&parts.length>1){const next=parts.slice(0,-1).join(", ");if(next.split(/\s+/).length<4)break;parts.pop();e.textContent=next+"."}
+      /* review 15: then at joining words ("with", "and", "until"), so a note is shortened before it is hidden */
+      if(hid()&&window.__fmtShort){const s2=window.__fmtShort(full,c=>{e.textContent=c;return !hid()});e.textContent=s2||e.textContent;if(!s2&&hid())e.textContent=full}
       if(hid()&&e.textContent.split(/\s+/).length<4){e.textContent=full;e.style.textOverflow="ellipsis";e.dataset.keep="1"}}
     if(hid()&&!e.dataset.keep)e.style.display="none";}
  })}
@@ -1627,7 +1654,7 @@ async function show(f,preferSig){
   }
   if(f._lib&&await libLoad(f._lib.fmt)&&id===renderId){
     try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
-      const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f:dietKeyF(f)?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietText(f,f.P),D:dietText(f,f.D)}):f,menu:libMenu(fullMenu(f,menu,L.fmt)),poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
+      const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f:dietKeyF(f)?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietCue(f,f.P),D:dietText(f,f.D)}):f,menu:libMenu(fullMenu(f,menu,L.fmt)),poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
       r.faces=window.priceTidy(r.faces.map(h=>libVary(h,f)),L.fmt);const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
       styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);dietStamp();
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
@@ -1746,12 +1773,15 @@ function renderWeek(){
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];const [d,n]=cookDate();
   const when=n===0?"<b>Tonight</b>":n===1?"<b>Tomorrow</b>":n<0?`<b>${-n} day${n===-1?"":"s"} ago</b>`:`<b>${n} days to go</b>`;
   box.hidden=false;
-  box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}">`:"<span></span>"}<p class="week-k">This week's film</p><p class="week-t">${ESC(f.title)} (${f.year})${week.double&&FILMS.find(x=>x.id===week.double)?` + ${ESC(FILMS.find(x=>x.id===week.double).title)}`:""}</p><p class="week-when">Cook night <select id="weekDay" aria-label="Cook night">${[5,6,0].map(i=>`<option value="${i}"${i===week.day?" selected":""}>${DAYS[i]}</option>`).join("")}</select> ${d.getDate()} ${d.toLocaleString("en-AU",{month:"short"})} · ${when} &nbsp;Showtime <select id="weekTime" class="week-time" aria-label="Showtime">${SHOWTIMES.map(t=>`<option value="${t}"${t===(week.time||"19:00")?" selected":""}>${clock(t)}</option>`).join("")}</select></p><p class="week-count" id="weekCount" aria-live="polite"></p><div class="week-acts"><button class="go" type="button" id="weekShop">Shopping list</button><button type="button" id="weekOpen">Open the menu</button><button type="button" id="weekClear">Clear</button></div>`;
+  /* review 15: the locked-in strip at the top already shows the poster, title, countdown and a Menu button, so this panel keeps only what the strip
+     cannot do: change the cook night and showtime, open the shopping list, or clear the week */
+  const strip=!!$("feature");if(box.classList)box.classList.toggle("week-slim",strip);
+  box.innerHTML=`${strip?"":p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}">`:"<span></span>"}<p class="week-k">${strip?"Your movie night":"This week's film"}</p>${strip?"":`<p class="week-t">${ESC(f.title)} (${f.year})${week.double&&FILMS.find(x=>x.id===week.double)?` + ${ESC(FILMS.find(x=>x.id===week.double).title)}`:""}</p>`}<p class="week-when">Cook night <select id="weekDay" aria-label="Cook night">${[5,6,0].map(i=>`<option value="${i}"${i===week.day?" selected":""}>${DAYS[i]}</option>`).join("")}</select> ${d.getDate()} ${d.toLocaleString("en-AU",{month:"short"})} · ${when} &nbsp;Showtime <select id="weekTime" class="week-time" aria-label="Showtime">${SHOWTIMES.map(t=>`<option value="${t}"${t===(week.time||"19:00")?" selected":""}>${clock(t)}</option>`).join("")}</select></p><p class="week-count" id="weekCount" aria-live="polite"></p><div class="week-acts"><button class="go" type="button" id="weekShop">Shopping list</button>${strip?"":`<button type="button" id="weekOpen">Open the menu</button>`}<button type="button" id="weekClear">Clear</button></div>`;
   $("weekDay").addEventListener("change",e=>{week.day=weekDay(e.target.value);week.date=nextWeekDate(week.day,week.time);saveWeek();renderWeek()});
   $("weekTime").addEventListener("change",e=>{week.time=e.target.value;saveWeek();tickShowtime()});
   renderFeature(f);tickShowtime();renderMotw();
   $("weekShop").addEventListener("click",async()=>{const g=week.double&&FILMS.find(x=>x.id===week.double);if(g){const dm=await doubleMenu(f,g);openTrolley(f,dm,`${f.title} + ${g.title}`)}else openTrolley(f)});
-  $("weekOpen").addEventListener("click",()=>{setView("wheel");replay(f);toMenu()});
+  if($("weekOpen"))$("weekOpen").addEventListener("click",()=>{setView("wheel");replay(f);toMenu()});
   $("weekClear").addEventListener("click",()=>{week=null;saveWeek();renderWeek();$("status").textContent="This week's film cleared."});
 }
 /* the locked-in film as a slim strip under the view tabs, on every view: poster, title, cook night and showtime, a short countdown,
@@ -1779,6 +1809,8 @@ function tickShowtime(){
   else if(ms===0)el.innerHTML=`Showtime. <span>Lights down, press play when you're ready.</span> <button class="btn primary" type="button" data-show>Start the show</button>`;
   else el.innerHTML=`Showtime in ${span(ms)}. <span>Check each recipe for cooking times and make-ahead steps.</span>`;
   {const fc=$("featCount");if(fc)fc.textContent=ms<0?"· showtime passed":ms===0?"· showtime now":"· in "+span(ms)}
+  /* the strip carries the countdown; the panel only speaks up when the showtime has come or gone */
+  el.hidden=ms>0&&!!$("feature")&&!$("feature").hidden;
   _showT=setTimeout(tickShowtime,30000);
 }
 /* menu of the week: the printed era menus take turns, a new one every Monday */
@@ -2692,6 +2724,14 @@ async function renderCanvas(src,forPrint){
     /* rings stack inward: each later ring sits inside the earlier ones */
     frames.sort((a,b)=>a[0]-b[0]);let prev=0;for(const [w,col] of frames){const d=document.createElement("i");d.style.cssText=`position:absolute;left:${prev}px;top:${prev}px;right:${prev}px;bottom:${prev}px;border:${w-prev}px solid ${col};border-radius:inherit;pointer-events:none;box-sizing:border-box`;e.appendChild(d);prev=w}})}catch(err){}
   stage.appendChild(clone);document.body.appendChild(stage);
+  /* review 15: html2canvas ignores line clamps, so a note the screen cut to "..." printed in full over the next line (tavern, Brave).
+     In the copy each clamped text that is cut is set to the words the screen shows, with the ellipsis, so paper matches the screen */
+  try{clone.querySelectorAll("*").forEach(e=>{if(e.children.length)return;const cs=getComputedStyle(e);if(cs.display==="none"||!(cs.webkitLineClamp&&cs.webkitLineClamp!=="none"))return;
+    /* cut means the unclamped text is at least half a line taller than the clamped box, not a pixel of descender over it (cafe names printed "..." for nothing) */
+    const lh=parseFloat(cs.lineHeight)||parseFloat(cs.fontSize)*1.2,h0=e.getBoundingClientRect().height,was=e.style.webkitLineClamp;e.style.webkitLineClamp="unset";const full=e.getBoundingClientRect().height;e.style.webkitLineClamp=was;
+    if(full<=h0+lh*.5)return;const cut=()=>e.scrollHeight>e.clientHeight+lh*.5;const w=e.textContent.trim().split(/\s+/);let lo=1,hi=w.length-1,best=1;
+    while(lo<=hi){const mid=(lo+hi)>>1;e.textContent=w.slice(0,mid).join(" ").replace(/[,;:]$/,"")+"\u2026";if(cut())hi=mid-1;else{best=mid;lo=mid+1}}
+    e.textContent=w.slice(0,best).join(" ").replace(/[,;:]$/,"")+"\u2026"})}catch(err){}
   /* review 12: it also drops flat rings drawn outside a box ("0 0 0 8px bezel" round an airline window), so a framed photo printed bare.
      Each outer ring becomes a bordered frame laid behind the box, sized from where the box actually sits */
   try{clone.querySelectorAll("[style*=box-shadow]").forEach(e=>{const bs=e.style.boxShadow;if(!bs||!e.parentElement)return;
@@ -2860,7 +2900,10 @@ function showOverlay(url,file){
 /* review 14: the strip is the outermost few pixels only. At 5 per cent deep it reached into the artwork (The Lost World's red masthead, The Phantom Menace's black poster) */
 function edgeColour(cv,which){const x=cv.getContext("2d"),W=cv.width,H=cv.height,b=Math.max(3,Math.round(Math.min(W,H)*.006)),cnt=new Map();
   const take=(sx,sy,w,h)=>{const d=x.getImageData(sx,sy,w,h).data;for(let i=0;i<d.length;i+=28){const k=(d[i]>>3)<<10|(d[i+1]>>3)<<5|(d[i+2]>>3);const c=cnt.get(k);if(c)c.n++;else cnt.set(k,{n:1,r:d[i],g:d[i+1],b:d[i+2]})}};
-  if(which!=="lr"){take(0,0,W,b);take(0,H-b,W,b)}if(which!=="tb"){take(0,0,b,H);take(W-b,0,b,H)}let best=null,tot=0;for(const c of cnt.values()){tot+=c.n;if(!best||c.n>best.n)best=c}
+  /* review 15: a thin rule round the page (the diner's red top line, Walk Hard's mauve edge, This Is the End's terracotta strip) is a border,
+     not the paper, and flooding the frame with it made a heavy coloured band. The reading starts just inside the outermost 2 per cent */
+  const o=Math.round(Math.min(W,H)*.02);
+  if(which!=="lr"){take(o,o,W-2*o,b);take(o,H-o-b,W-2*o,b)}if(which!=="tb"){take(o,o,b,H-2*o);take(W-o-b,o,b,H-2*o)}let best=null,tot=0;for(const c of cnt.values()){tot+=c.n;if(!best||c.n>best.n)best=c}
   /* review 13: a white poster down one side outvoted a striped paper split across two shades (Minions), so white only wins while it holds more than 60 per cent of the edge */
   if(best&&best.r>235&&best.g>235&&best.b>235){let alt=null;for(const c of cnt.values())if(!(c.r>235&&c.g>235&&c.b>235)&&(!alt||c.n>alt.n))alt=c;let nw=0;for(const c of cnt.values())if(!(c.r>235&&c.g>235&&c.b>235))nw+=c.n;if(alt&&nw>=tot*.4)best=alt}
   return best?[best.r,best.g,best.b]:null}
@@ -3258,7 +3301,7 @@ const kitMix=(a,b,t)=>{const h=x=>{x=String(x).replace('#','');if(x.length===3)x
 const KIT_MIX=[["kd", 0.7, "#3a2a2a", "--md703a2a2a"], ["kd", 0.55, "#3b2412", "--md553b2412"], ["ka", 0.7, "#2a1d14", "--ma702a1d14"], ["kd", 0.75, "#000", "--md75000"], ["ka", 0.45, "#000", "--ma45000"], ["kd", 0.8, "#333", "--md80333"], ["ka", 0.6, "#fff", "--ma60fff"], ["ka", 0.4, "#000", "--ma40000"]];
 function kitPage(f,kind,b,inner){const el=document.createElement("div");el.className=`kit-page kit-${kind} ks-${b.style}`;el.dataset.w=794;el.dataset.h=1123;el.style.cssText=`width:794px;height:1123px;--kd:${b.dark};--ka:${b.acc};`+KIT_MIX.map(([v,t,c,n])=>`${n}:${kitMix(v==="ka"?b.acc:b.dark,c,t)}`).join(";");el.innerHTML=inner;return el}
 function kitProp(b,f,name,i){
-  const p=b.prop,N=name?ESC(name):"",fz=name?Math.max(22,Math.min(40,Math.round(300/Math.max(6,name.length)))):0,line=name?`<b class="kp-name" style="font-size:${fz}px">${N}</b>`:`<span class="kp-blank"></span>`,seat=i+1,row="ABCDEFGHJK"[Math.floor(i/6)%10],ser=String(1000+((parseInt(b.num,10)||7)*37+seat*113)%9000),l0=ESC(p.lines[0]||""),l1=ESC(p.lines[1]||""),T=ESC(p.title),no=ESC(b.num);
+  const p=b.prop,N=name?ESC(name):"",fz=name?Math.max(p.kind==="tag"?20:22,Math.min(40,Math.round((p.kind==="tag"?250:300)/Math.max(6,name.length)))):0,line=name?`<b class="kp-name" style="font-size:${fz}px">${N}</b>`:`<span class="kp-blank"></span>`,seat=i+1,row="ABCDEFGHJK"[Math.floor(i/6)%10],ser=String(1000+((parseInt(b.num,10)||7)*37+seat*113)%9000),l0=ESC(p.lines[0]||""),l1=ESC(p.lines[1]||""),T=ESC(p.title),no=ESC(b.num);
   switch(p.kind){
     case "slip":return `<div class="kp kp-slip"><div class="kp-h"><span>${T}</span><span class="kp-red">No. ${ser}</span></div><div class="kp-rows"><span>Table 1</span><span>Guest ${seat}</span><span>${l0}</span></div>${line}<div class="kp-f">${ESC(b.venue)}</div></div>`;
     case "card":
@@ -3330,7 +3373,9 @@ function kitPages(f,names,count){
     const cards=list.slice(i,i+6).map((n,j)=>{if(n===null)n="";const sp=b.still.length?b.still[(i+j+1)%b.still.length]:"";return `<div class="kit-tent"><div class="kit-back">${sp?`<img alt="" src="${TMDB_IMG}w780${ESC(sp)}" crossorigin="anonymous"><i class="kit-shade"></i>`:""}<b>${V}</b><small>${T}</small></div><div class="kit-front">${kitProp(b,f,n,i+j)}</div></div>`}).join("");
     pages.push(kitPage(f,"place",b,`<div class="kit-tents">${cards}</div><p class="kit-cut">Cut around each card, fold along the dotted line, stand it up.</p>`));
   }
-  {const ph=(i,c)=>{const p=b.still[i]||b.still[0];return p?`<img class="${c}" alt="" src="${TMDB_IMG}w780${ESC(p)}" crossorigin="anonymous">`:""},pol=b.still[1]||b.still[0],note=b.note?`<div class="ki-note"><span class="ki-tape"></span><p>${ESC(b.note.text)}</p><b>${ESC(b.note.by)}</b></div>`:"";
+  /* review 15: the fridge and comic door signs already carry the film's note, so their intermission card takes the film's own tagline instead (Skyfall printed the same sticky note twice) */
+  {const tag2=dietText(f,String(f.T||"")).trim();
+   const ph=(i,c)=>{const p=b.still[i]||b.still[0];return p?`<img class="${c}" alt="" src="${TMDB_IMG}w780${ESC(p)}" crossorigin="anonymous">`:""},pol=b.still[1]||b.still[0],note=b.note?`<div class="ki-note"><span class="ki-tape"></span><p>${ESC(b.note.text)}</p><b>${ESC(b.note.by)}</b></div>`:"";
    const menu=`${b.sweet?`<p class="ki-k">Dessert is served</p><p class="ki-dish">${ESC(b.sweet)}</p>`:""}${b.drink?`<p class="ki-k">Top-ups at the bar</p><p class="ki-dish small">${ESC(b.drink)}</p>`:""}`;
    const I={
     neon:`<div class="ki-wall"><p class="ki-big">Intermission</p><p class="ki-film">${T}</p><div class="ki-pin">${pol?`<div class="ki-pol"><img alt="" src="${TMDB_IMG}w780${ESC(pol)}" crossorigin="anonymous"></div>`:""}${note}</div><div class="ki-menu">${menu}</div><p class="ki-back">Back in fifteen minutes</p></div>`,
@@ -3339,13 +3384,13 @@ function kitPages(f,names,count){
     board:`<div class="kib-wall"><div class="kib-chalk"><p class="kib-h">${b.halftime?"Half time":"Intermission"}</p><p class="kib-film">${T}</p>${b.sweet?`<p class="kib-k">Sweet</p><p class="kib-d">${ESC(b.sweet)}</p>`:""}${b.drink?`<p class="kib-k">Drink</p><p class="kib-d sm">${ESC(b.drink)}</p>`:""}<p class="kib-back">Back in 15</p></div>${pol?`<div class="kb-pol kib-pol"><img alt="" src="${TMDB_IMG}w780${ESC(pol)}" crossorigin="anonymous"><span>Tonight</span></div>`:""}${note?`<div class="kib-note">${note}</div>`:""}</div>`,
     notice:`<div class="kin-desk"><div class="kin-file"><div class="kin-tab">${T}</div><div class="kin-sheet"><p class="kin-h">Memo</p><div class="kin-to"><span>To: All guests</span><span>Re: Intermission</span><span>Ref: ${ESC(b.num)}</span></div><p class="kin-body">Proceedings will stop for fifteen minutes.${b.sweet?` Dessert, ${ESC(b.sweet)}, will be issued.`:""}${b.drink?` Drinks: ${ESC(b.drink)}.`:""}</p>${b.note?`<p class="kin-sig">"${ESC(b.note.text)}"<b>${ESC(b.note.by)}</b></p>`:""}<div class="kt-stamp kin-stamp"><span>Break</span><b>15</b></div></div>${pol?`<div class="kt-photo kin-photo"><span class="kt-clip"></span><img alt="" src="${TMDB_IMG}w780${ESC(pol)}" crossorigin="anonymous"><small>Attached</small></div>`:""}</div></div>`,
     camp:`<div class="x-wall cp">${ph(1,"cp-photo")}<div class="cp-post"></div><div class="cp-arrow a1"><span>Intermission</span></div><div class="cp-arrow a2 lf"><span>${b.sweet?ESC(b.sweet):"Marshmallows"}</span></div><div class="cp-arrow a3"><span>Back in 15</span></div>${b.drink?`<div class="cp-tag">To drink: ${ESC(b.drink)}</div>`:""}${note?`<div class="x-note">${note}</div>`:""}</div>`,
-    kitchen:`<div class="x-wall kt2"><div class="kt2-fridge"><div class="kt2-handle"></div>${pol?`<div class="kt2-pol"><img alt="" src="${TMDB_IMG}w780${ESC(pol)}" crossorigin="anonymous"><i class="kt2-mag m1"></i></div>`:""}<div class="kt2-card"><i class="kt2-mag m2"></i><div class="kt2-h">Intermission</div>${b.sweet?`<p class="kt2-k">Dessert</p><p class="kt2-t sm">${ESC(b.sweet)}</p>`:""}${b.drink?`<p class="kt2-k">Drinks</p><p class="kt2-t sm">${ESC(b.drink)}</p>`:""}<p class="kt2-d">${T} back in 15</p></div>${b.note?`<div class="kt2-post"><i class="kt2-mag m3"></i><p>${ESC(b.note.text)}</p><b>${ESC(b.note.by)}</b></div>`:""}</div></div>`,
+    kitchen:`<div class="x-wall kt2"><div class="kt2-fridge"><div class="kt2-handle"></div>${pol?`<div class="kt2-pol"><img alt="" src="${TMDB_IMG}w780${ESC(pol)}" crossorigin="anonymous"><i class="kt2-mag m1"></i></div>`:""}<div class="kt2-card"><i class="kt2-mag m2"></i><div class="kt2-h">Intermission</div>${b.sweet?`<p class="kt2-k">Dessert</p><p class="kt2-t sm">${ESC(b.sweet)}</p>`:""}${b.drink?`<p class="kt2-k">Drinks</p><p class="kt2-t sm">${ESC(b.drink)}</p>`:""}<p class="kt2-d">${T} back in 15</p></div>${tag2?`<div class="kt2-post"><i class="kt2-mag m3"></i><p>${ESC(tag2)}</p><b>On the fridge</b></div>`:""}</div></div>`,
     tiki:`<div class="x-wall tk">${ph(1,"tk-photo")}<div class="tk-torch l"><i></i></div><div class="tk-torch r"><i></i></div><div class="tk-plank"><span class="tk-k">${T}</span><b>${b.tropic?"Luau break":"Intermission"}</b></div><div class="tk-card">${menu}<p class="tk-back">Back in fifteen minutes</p></div>${note?`<div class="x-note">${note}</div>`:""}</div>`,
     wanted:`<div class="x-wall wd"><div class="wd-poster"><p class="wd-h sm">Notice</p><p class="wd-s">${b.saloon?"The saloon will close for fifteen minutes":"Supper stops for fifteen minutes"}</p>${ph(1,"wd-photo")}${b.sweet?`<p class="wd-s">Bill of fare</p><p class="wd-t sm">${ESC(b.sweet)}</p>`:""}${b.drink?`<p class="wd-r">${ESC(b.drink)}</p>`:""}${b.note?`<p class="wd-f">"${ESC(b.note.text)}" ${ESC(b.note.by)}</p>`:""}</div></div>`,
     newspaper:`<div class="x-wall np"><div class="np-paper"><p class="np-mast">The ${V} Gazette</p><div class="np-date"><span>Extra</span><span>Intermission edition</span><span>No. ${ESC(b.num)}</span></div><p class="np-head">Fifteen minute break declared</p>${ph(1,"np-photo")}<div class="np-cols"><p>${b.sweet?`<b>Dessert:</b> ${ESC(b.sweet)}. `:""}${b.drink?`<b>Bar:</b> ${ESC(b.drink)}.`:""}</p>${b.note?`<p>"${ESC(b.note.text)}" ${ESC(b.note.by)} told this paper.</p>`:`<p>${T} resumes shortly.</p>`}</div></div></div>`,
     departures:`<div class="x-wall dp"><div class="dp-board"><div class="dp-h"><span>Arrivals</span><span>Intermission</span></div><div class="dp-row hd"><span>Flight</span><span>Item</span><span>Gate</span><span>Status</span></div><div class="dp-row on"><span>${ESC(kitFlight(b.num))}</span><span>${T}</span><span>Screen</span><span>Delayed 15</span></div>${b.sweet?`<div class="dp-row"><span>MN 003</span><span>${ESC(b.sweet)}</span><span>Lounge</span><span>Now</span></div>`:""}${b.drink?`<div class="dp-row"><span>MN 004</span><span>${ESC(b.drink)}</span><span>Bar</span><span>Now</span></div>`:""}</div>${ph(1,"dp-photo")}${note?`<div class="x-note">${note}</div>`:""}</div>`,
     roadside:`<div class="x-wall rs">${ph(1,"rs-photo")}<div class="rs-sign"><div class="rs-star"></div><p class="rs-v">Intermission</p><div class="rs-arrow"><span>${b.sweet?ESC(b.sweet):"Snacks inside"}</span></div><p class="rs-vac">No vacancy</p><p class="rs-d">Back in 15</p></div>${b.drink?`<p class="rs-s">To drink: ${ESC(b.drink)}</p>`:""}${note?`<div class="x-note">${note}</div>`:""}</div>`,
-    comic:`<div class="x-wall cm"><div class="cm-top"><span>Meanwhile</span><span>No. ${ESC(b.num)}</span></div><p class="cm-v">Intermission</p><div class="cm-panel">${ph(1,"cm-photo")}${b.note?`<div class="cm-bub">${ESC(b.note.text)}</div>`:""}</div><div class="cm-cap">${b.sweet?`<b>Dessert:</b> ${ESC(b.sweet)}`:""}${b.drink?`<br><b>Drinks:</b> ${ESC(b.drink)}`:""}</div><p class="cm-d">${T} continues in 15</p><div class="cm-burst">Snack</div></div>`,
+    comic:`<div class="x-wall cm"><div class="cm-top"><span>Meanwhile</span><span>No. ${ESC(b.num)}</span></div><p class="cm-v">Intermission</p><div class="cm-panel">${ph(1,"cm-photo")}${tag2?`<div class="cm-bub">${ESC(tag2)}</div>`:""}</div><div class="cm-cap">${b.sweet?`<b>Dessert:</b> ${ESC(b.sweet)}`:""}${b.drink?`<br><b>Drinks:</b> ${ESC(b.drink)}`:""}</div><p class="cm-d">${T} continues in 15</p><div class="cm-burst">Snack</div></div>`,
     horror:`<div class="x-wall hr">${ph(1,"hr-photo")}<p class="hr-v">Intermission</p><p class="hr-k">${T}</p><div class="hr-menu">${menu}</div><p class="hr-w">Lights back down in fifteen minutes. Don't wander off.</p>${note?`<div class="x-note">${note}</div>`:""}</div>`,
     storybook:`<div class="x-wall sb"><div class="sb-page"><p class="sb-k">Chapter the second</p><p class="sb-v">Intermission</p>${ph(1,"sb-photo")}<p class="sb-txt"><span class="sb-cap">A</span>nd so everyone paused for ${b.sweet?`<b>${ESC(b.sweet)}</b>`:"something sweet"}${b.drink?` and a cup of <b>${ESC(b.drink)}</b>`:""}, before the tale of ${T} went on.</p>${b.note?`<p class="sb-q">"${ESC(b.note.text)}" said ${ESC(b.note.by)}.</p>`:""}</div></div>`,
     festive:`<div class="x-wall fs"><div class="fs-card"><p class="fs-k">Pause for pudding</p><p class="fs-v">Intermission</p>${ph(1,"fs-photo")}<div class="fs-menu">${menu}</div>${b.note?`<p class="fs-s">"${ESC(b.note.text)}" ${ESC(b.note.by)}</p>`:""}<div class="fs-holly"><i></i><i></i><i></i></div></div></div>`,

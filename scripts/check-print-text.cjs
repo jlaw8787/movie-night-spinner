@@ -1,5 +1,5 @@
 /* Printed menu text that the eye catches and the tone check cannot (review 14).
-   On screen, after the fit passes settle: no dish name (a line with a price beside it) is hidden.
+   On screen, after the fit passes settle: no dish name (a line with a price beside it) and no dish note is hidden (review 15).
    In the Save PDF copy (renderCanvas, with html2canvas stood in for so nothing is drawn): no filled inline-block holding text blocks
    (The Warriors' station labels printed as black boxes), no clip-text lettering (Cruella's chrome heading printed as a bare bar),
    and no masked photo left for html2canvas to print with a hard edge (club).
@@ -22,6 +22,9 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
   for(const f of list){try{await ensureExact(f);await show(f,true)}catch(e){continue}await document.fonts.ready;await new Promise(r=>setTimeout(r,1700));
    for(const e of card.querySelectorAll('*')){if(e.style.display!=='none'||!e.style.webkitLineClamp)continue;const sib=e.parentElement?[...e.parentElement.children].filter(c=>c!==e):[];
     if(sib.some(c=>price(c.textContent)))out.push(`${f.id}: dish name hidden, "${e.textContent.trim().slice(0,50)}"`)}
+   /* review 15: no dish note hidden by a fit pass (campfire and canteen hid them on every film) */
+   for(const e of card.querySelectorAll('*')){if(e.style.display!=='none')continue;const note=[...e.attributes].some(a=>a.name==='data-note'||a.name==='data-clamp'||a.name==='data-cnote'||/-note$/.test(a.name))||e.getAttribute('data-fit')==='note';
+    if(note&&e.textContent.trim()&&!(e.parentElement&&e.parentElement.closest('[style*="display: none"]')))out.push(`${f.id}: note hidden, "${e.textContent.trim().slice(0,50)}"`)}
    const faces=[...card.querySelectorAll('.fx-face')];const srcs=faces.length?faces.map(fc=>{const el=card.cloneNode(false);el.className=card.className;const w=parseFloat(fc.style.width)||794,h=parseFloat(fc.style.height)||1123;
      el.style.cssText=`position:fixed;left:-30000px;top:0;width:${w}px;height:${h}px`;el.dataset.w=w;el.dataset.h=h;el.innerHTML=fc.innerHTML.replace(/\s(onload|onerror)="[^"]*"/g,"");document.body.appendChild(el);return el}):[card];
    const solid=c=>{const m=c&&c.match(/rgba?\(([^)]*)\)/);if(!m)return false;const q=m[1].split(/[\s,/]+/).filter(Boolean).map(Number);return q.length<4||q[3]>.05};
@@ -29,9 +32,11 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
     const st=document.createElement('div');st.style.cssText='position:fixed;left:-20000px;top:0';st.appendChild(seen);document.body.appendChild(st);
     for(const el of seen.querySelectorAll('*')){const cs=getComputedStyle(el);
      if(cs.display==='inline-block'&&el.textContent.trim()&&(solid(cs.backgroundColor)||cs.backgroundImage!=='none')&&[...el.children].some(c=>/^(block|flex|grid|table)$/.test(getComputedStyle(c).display)))out.push(`${f.id}: filled inline-block with text, "${el.textContent.trim().slice(0,40)}"`);
+     /* review 15: html2canvas ignores line clamps, so a clamp still cutting text in the copy prints words the screen hides */
+     if(!el.children.length&&cs.webkitLineClamp&&cs.webkitLineClamp!=='none'&&cs.display!=='none'&&el.scrollHeight>el.clientHeight+(parseFloat(cs.lineHeight)||parseFloat(cs.fontSize)*1.2)*.5)out.push(`${f.id}: clamped text the PDF would print in full, "${el.textContent.trim().slice(0,40)}"`);
      if((cs.webkitBackgroundClip==='text'||cs.backgroundClip==='text')&&el.textContent.trim())out.push(`${f.id}: clip-text lettering, "${el.textContent.trim().slice(0,40)}"`);
      const mk=cs.webkitMaskImage||cs.maskImage;if(mk&&mk!=='none'&&(el.querySelector('img')||/url\(/.test(cs.backgroundImage)))out.push(`${f.id}: masked photo left for the PDF`)}
     st.remove()}}
   return {n:list.length,out:[...new Set(out)]}},[N,NAMED]);
  console.log(`${r.n} printed menus read`);if(r.out.length){console.log(r.out.join('\n'));console.log('FAIL');process.exit(1)}
- console.log('PASS: no dish name hidden, and the Save PDF copy has none of the shapes html2canvas drops');await b.close();process.exit(0)})().catch(e=>{console.error(e);process.exit(1)});
+ console.log('PASS: no dish name or note hidden, and the Save PDF copy has none of the shapes html2canvas drops');await b.close();process.exit(0)})().catch(e=>{console.error(e);process.exit(1)});

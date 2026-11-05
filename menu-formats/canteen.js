@@ -71,13 +71,26 @@ const money=(p,era)=>p<1&&ERA_G[era]<2?Math.round(p*100)+"c":p.toFixed(2);
 
 /* fitter: shrinks [data-canteen-box] (via --k), then clamps and drops notes; [data-canteen-text] shrinks one line block */
 function over(e){return e.scrollHeight>e.clientHeight+1||e.scrollWidth>e.clientWidth+1}
-function fitBox(b){b.style.setProperty("--k","1");const notes=[...b.querySelectorAll(`[${A}-note]`)],drops=[...b.querySelectorAll(`[${A}-drop]`)];
-  const names=[...b.querySelectorAll(`[${A}-name]`)];names.forEach(n=>{n.style.display="";n.style.webkitLineClamp="";n.style.overflow=""});notes.forEach(n=>{n.style.display="-webkit-box";n.style.webkitLineClamp="2"});drops.forEach(d=>d.style.display="");
+/* review 15: html2canvas sets type a touch wider than Chrome, so a tray that fits to the pixel on screen lost its last line on paper (Lady Bird, Red Heat).
+   A dish box keeps a few pixels spare */
+function fitBox(b){if(window.__fmtTrimReset)window.__fmtTrimReset(b);const tray=!!b.querySelector("[data-well]");
+  /* the wells grow to fill the tray, so the tray's own content height is read with them at their natural size */
+  const over=e=>{if(!tray)return e.scrollHeight>e.clientHeight+1||e.scrollWidth>e.clientWidth+1;const ws=[...e.children];ws.forEach(w=>{w.style.flexGrow="0"});
+    const last=ws[ws.length-1],h=last?last.getBoundingClientRect().bottom-e.getBoundingClientRect().top:0,sc=e.getBoundingClientRect().height/(e.offsetHeight||1);
+    ws.forEach(w=>{w.style.flexGrow=""});return h/sc>e.clientHeight-20||e.scrollWidth>e.clientWidth+1};b.style.setProperty("--k","1");const notes=[...b.querySelectorAll(`[${A}-note]`)],drops=[...b.querySelectorAll(`[${A}-drop]`)];
+  const names=[...b.querySelectorAll(`[${A}-name]`)];names.forEach(n=>{n.style.display="";n.style.webkitLineClamp="";n.style.overflow=""});notes.forEach(n=>{n.style.display="block";n.style.webkitLineClamp="unset"});drops.forEach(d=>d.style.display="");
   const min=+b.getAttribute(A+"-min")||.68;let k=1;
-  while(over(b)&&k>min){k=Math.round((k-.02)*100)/100;b.style.setProperty("--k",k)}
+  const shrink=()=>{k=1;b.style.setProperty("--k",1);while(over(b)&&k>min){k=Math.round((k-.02)*100)/100;b.style.setProperty("--k",k)}};
+  /* review 15: every canteen film lost a note or its showtime cue here, and a note clamped to two lines on screen printed in full on paper.
+     Notes now show whole or not at all, and before one goes the tray takes width from the poster beside it */
+  const face=b.closest(`[${A}-face]`),hero=face&&face.querySelector("[data-hero]"),tb=b.parentElement&&b.parentElement.hasAttribute("data-shift")?b.parentElement:null;
+  const shift=d=>{if(!hero)return;const [w,h]=hero.dataset.hero.split(",").map(Number);hero.style.width=(w-d)+"px";hero.style.height=Math.round(h-d*1.5)+"px";
+    face.querySelectorAll("[data-shift]").forEach(x=>{const [l,ww]=x.dataset.shift.split(",").map(Number);x.style.left=(l-d)+"px";x.style.width=(ww+d)+"px"})};
+  if(tb)shift(0);shrink();
+  if(tb&&hero)for(let d=14;d<=112&&(over(b)||k<.8);d+=14){shift(d);shrink()}
   /* house lines go first, then whole notes from the bottom up: a note is shown in full or not at all, never cut to "mozzarell..." */
   for(let i=drops.length-1;i>=0&&over(b);i--)drops[i].style.display="none";
-  for(let i=notes.length-1;i>=0&&over(b);i--)notes[i].style.display="none";
+  {const ns=notes;(window.__fmtTrim?window.__fmtTrim(ns,()=>over(b)):(()=>{for(let i=ns.length-1;i>=0&&over(b);i--)ns[i].style.display="none"})())}
   if(over(b)){names.forEach(n=>{n.style.display="-webkit-box";n.style.webkitBoxOrient="vertical";n.style.webkitLineClamp="1";n.style.overflow="hidden"})}
   while(over(b)&&k>.5){k=Math.round((k-.02)*100)/100;b.style.setProperty("--k",k)}}
 function fitText(e){let s=+e.getAttribute(A+"-text");const lo=+e.getAttribute(A+"-lo")||16;e.style.fontSize=s+"px";e.style.letterSpacing="";while(over(e)&&s>lo){s-=1;e.style.fontSize=s+"px"}
@@ -174,7 +187,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     return inner+half+tint+gloss};
   const heroFrame=gi===0?`border:2px solid ${ink};box-shadow:0 0 0 5px ${paper},0 0 0 6px ${ink};`:gi===1?`border-radius:0 0 26px 0;`:gi===2?`border:1px solid ${mix(ink,paper,.5)};`:``;
   const bw=gi===0?2:gi===2?1:0,pw=gi===0?468:474,hH=heroPoster?pw*3/2+bw*2:(gi===0?558:568),hW=heroPoster?pw+bw*2:(gi===0?612:620),hL=gi===0?10:0,colX=hL+hW+18;
-  const hero=`<div style="position:absolute;left:${hL}px;top:${heroPoster?(gi===0?90:88):(gi===0?90:80)}px;width:${hW}px;height:${hH}px;overflow:hidden;background:${heroPoster?"transparent":"#000"};box-sizing:border-box;${heroFrame}">${photo()}</div>`;
+  const hero=`<div ${heroPoster?`data-hero="${hW},${hH}" `:""}style="position:absolute;left:${hL}px;top:${heroPoster?(gi===0?90:88):(gi===0?90:80)}px;width:${hW}px;height:${hH}px;overflow:hidden;background:${heroPoster?"transparent":"#000"};box-sizing:border-box;${heroFrame}">${photo()}</div>`;
   /* poster layout: head and logo across the top of the right region, tray beside a narrow side column (ticket, prop, note) */
   const RX=colX,RR=1046,SW=172,SX=RR-SW,TW=SX-14-RX,LW=SW;
   const CX=heroPoster?SX:30,CW=heroPoster?SW:340;
@@ -193,11 +206,11 @@ window.MENU_FORMATS[ID]=ctx=>{
   const tkAcc=pickAccent(acc,tkBg,4.5,g.acc);
   const cue=f.P||"";
   const ticket=`<div style="position:absolute;left:${heroPoster?CX+8:400}px;top:${heroPoster?214:500}px;width:${heroPoster?CW-16:206}px;height:${heroPoster?150:160}px;box-sizing:border-box;padding:${heroPoster?"10px 8px":"12px 14px"};background-color:${tkBg};background-image:${noise(.8,.08,"#6a5a40",2)};border:2px dashed ${tkAcc};outline:6px solid ${tkBg};box-shadow:0 8px 20px rgba(0,0,0,.4);transform:rotate(${t.rot}deg);color:${ink}">
-     <div ${A}-box ${A}-min=".85" style="width:100%;height:100%;overflow:hidden;--k:1;text-align:center">
-       <div style="font:700 max(14px,calc(14px*var(--k))) ${g.body};letter-spacing:.2em;text-transform:uppercase;color:${tkAcc}">${school?"Lunch ticket":mess?"Mess chit":prison?"Meal tray":"Meal voucher"}</div>
+     <div ${A}-box ${A}-min=".7" style="width:100%;height:100%;overflow:hidden;--k:1;text-align:center">
+       <div ${cue?`${A}-drop `:""}style="font:700 max(14px,calc(14px*var(--k))) ${g.body};letter-spacing:.2em;text-transform:uppercase;color:${tkAcc}">${school?"Lunch ticket":mess?"Mess chit":prison?"Meal tray":"Meal voucher"}</div>
        <div style="font:${g.dw} max(22px,calc(34px*var(--k)))/1.05 ${g.disp};margin:2px 0 4px">No. ${esc(number)}</div>
-       <div style="font:600 max(14px,calc(15px*var(--k)))/1.25 ${g.body}">Admit one to the line</div>
-       ${cue?`<div ${A}-drop style="margin-top:3px;font:500 max(14px,calc(15px*var(--k)))/1.25 ${g.body};color:${mix(ink,tkBg,.25)}">${esc(cue)}</div>`:""}</div></div>`;
+       <div ${cue?`${A}-drop `:""}style="font:600 max(14px,calc(15px*var(--k)))/1.25 ${g.body}">Admit one to the line</div>
+       ${cue?`<div style="margin-top:3px;font:500 max(14px,calc(15px*var(--k)))/1.25 ${g.body};color:${mix(ink,tkBg,.25)}">${esc(cue)}</div>`:""}</div></div>`;
 
   /* note card and prop card */
   const note=fl.note&&fl.note.text?fl.note:{text:f.T||voice[1],by:fl.note&&fl.note.by||(school?"The lunch lady":mess?"The cook":prison?"The kitchen detail":"The kitchen")};
@@ -228,12 +241,12 @@ window.MENU_FORMATS[ID]=ctx=>{
   const lines=(t,cpl)=>Math.max(1,Math.ceil(String(t||"").length/cpl));
   const estTray=["m","s","w","d"].filter(k=>I[k].length).reduce((h,k)=>h+12+46+I[k].reduce((a,it)=>a+lines(it.n,19)*28+(it.note?Math.min(2,lines(it.note,34))*24+2:0)+8,0),0);
   const k0=Math.max(.68,Math.min(1,Math.floor(536/estTray*100)/100));
-  const trayBox=`<div style="position:absolute;left:${heroPoster?RX:634}px;top:198px;width:${heroPoster?TW:408}px;height:${heroPoster?558:560}px;box-sizing:border-box;padding:12px;background:${tray};background-image:${gi===3?"linear-gradient(135deg,rgba(255,255,255,.35),rgba(255,255,255,0) 40%,rgba(0,0,0,.06)),":""}${noise(.9,.06,"#ffffff",2)};border-radius:${g.radius+10}px;box-shadow:0 6px 16px rgba(0,0,0,.3),inset 0 2px 0 rgba(255,255,255,.4)">
+  const trayBox=`<div ${heroPoster?`data-shift="${RX},${TW}" `:""}style="position:absolute;left:${heroPoster?RX:634}px;top:198px;width:${heroPoster?TW:408}px;height:${heroPoster?558:560}px;box-sizing:border-box;padding:12px;background:${tray};background-image:${gi===3?"linear-gradient(135deg,rgba(255,255,255,.35),rgba(255,255,255,0) 40%,rgba(0,0,0,.06)),":""}${noise(.9,.06,"#ffffff",2)};border-radius:${g.radius+10}px;box-shadow:0 6px 16px rgba(0,0,0,.3),inset 0 2px 0 rgba(255,255,255,.4)">
     <div ${A}-box style="width:100%;height:100%;overflow:hidden;--k:${k0};display:flex;flex-direction:column;gap:12px">${trayInner}</div></div>`;
 
-  const head=`<div ${A}-text="17" ${A}-lo="14" style="position:absolute;left:${heroPoster?RX+6:640}px;width:${heroPoster?SX-14-RX-6:396}px;top:${heroPoster?88:84}px;height:24px;overflow:hidden;white-space:nowrap;color:${acc};font:700 17px/24px ${g.body};letter-spacing:.2em;text-transform:uppercase">${esc(sign)}</div>
-    <div ${A}-text="44" ${A}-lo="20" style="position:absolute;left:${heroPoster?RX+6:640}px;width:${heroPoster?SX-14-RX-6:396}px;top:${heroPoster?114:110}px;height:${heroPoster?80:82}px;overflow:hidden;display:flex;align-items:center;color:${ink};font:${g.dw} 44px/1 ${g.disp};${gi===2?"font-style:italic;":""}">${esc(venue)}</div>`;
-  const fine=`<div ${A}-box ${A}-min=".93" style="position:absolute;left:${heroPoster?RX+6:640}px;width:${heroPoster?RR-RX-6:396}px;top:764px;height:44px;overflow:hidden;--k:1;color:${mix(ink,paper,.3)};font:500 max(14px,calc(15px*var(--k)))/1.3 ${g.body}">
+  const head=`<div ${A}-text="17" ${A}-lo="14" ${heroPoster?`data-shift="${RX+6},${SX-14-RX-6}" `:""}style="position:absolute;left:${heroPoster?RX+6:640}px;width:${heroPoster?SX-14-RX-6:396}px;top:${heroPoster?88:84}px;height:24px;overflow:hidden;white-space:nowrap;color:${acc};font:700 17px/24px ${g.body};letter-spacing:.2em;text-transform:uppercase">${esc(sign)}</div>
+    <div ${A}-text="44" ${A}-lo="20" ${heroPoster?`data-shift="${RX+6},${SX-14-RX-6}" `:""}style="position:absolute;left:${heroPoster?RX+6:640}px;width:${heroPoster?SX-14-RX-6:396}px;top:${heroPoster?114:110}px;height:${heroPoster?80:82}px;overflow:hidden;display:flex;align-items:center;color:${ink};font:${g.dw} 44px/1 ${g.disp};${gi===2?"font-style:italic;":""}">${esc(venue)}</div>`;
+  const fine=`<div ${A}-box ${A}-min=".93" ${heroPoster?`data-shift="${RX+6},${RR-RX-6}" `:""}style="position:absolute;left:${heroPoster?RX+6:640}px;width:${heroPoster?RR-RX-6:396}px;top:764px;height:44px;overflow:hidden;--k:1;color:${mix(ink,paper,.3)};font:500 max(14px,calc(15px*var(--k)))/1.3 ${g.body}">
     <span>${esc(voice[0].replace(/[.!]$/,""))}. Prices subject to change. Form ${school?"SC":"CF"}-${esc(number)}. ${esc(yr)}.${fam?" All drinks alcohol free.":""} </span>${winks[4]&&winks[4].length<=44&&(voice[0].length+winks[4].length+60+(fam?25:0)+String(number).length)<=102?`<span ${A}-drop>Overheard at lunch: ${esc(winks[4])}.</span>`:""}</div>`;
 
   const face=`<div ${A}-face style="position:absolute;inset:0;background-color:${paper};background-image:${tex};overflow:hidden;font-family:${g.body}">

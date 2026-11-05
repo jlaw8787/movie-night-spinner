@@ -337,7 +337,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const fine=`${TK.close} Prices subject to change. Kiosk licence ${num}.`;
   const fT=fitType(fine,IW,44,.52,15,14,1.3,3);
   let cueH=cue?16+18+6+cT.n*cT.z*1.3+14:0;const footTail=fT.n*fT.z*1.3+8,footH=(PM?Math.max(cueH,noteH+12):cueH)+footTail;
-  let MH=PH-pad-hdrH-14-footH-pad;
+  /* review 15: html2canvas sets a line a touch lower than Chrome, so a column filled to the pixel ran under the note card on paper (A Bug's Life); keep 10px spare */
+  let MH=PH-pad-hdrH-14-footH-pad-10;
   /* menu courses, priced like a kiosk board */
   const m=ctx.menu||{};
   const numCents=(pv,n)=>{const d=String(pv).match(/^(\D*)(\d+)\.(\d\d)$/),c=String(n||"").replace(/\D/g,"");return d&&c.length>=2&&!/^(18|19|20)\d\d$/.test(c)&&+c.slice(-2)%5===0?d[1]+d[2]+"."+c.slice(-2):pv};/* review 12: on a shared card the film number only sets the cents of the first main, and only on a price ending (5 or 0), as diner does; it never prices a whole dish (Finding Nemo's 42.00) */

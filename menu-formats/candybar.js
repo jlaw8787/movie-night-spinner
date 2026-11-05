@@ -221,8 +221,8 @@ window.MENU_FORMATS[ID]=ctx=>{
    <div data-fit data-min="14" style="position:absolute;left:850px;top:156px;width:472px;height:${heavy?560:520}px;overflow:hidden;font-size:${heavy?20:26}px">${boards}</div>
    <div style="position:absolute;left:850px;top:${heavy?722:684}px;width:472px;display:flex;justify-content:space-between;align-items:baseline;background:${E.board==="acrylic"?boardHead:"#0c0c0f"};border:${E.board==="neon"?`2px solid ${LIT}`:`2px solid ${E.board==="acrylic"?"#3b2a18":"#2c2d32"}`};box-sizing:border-box;padding:8px 14px">
      <span style="font:${E.it} ${E.dw} 22px/1.1 ${E.disp};color:#fff;text-transform:uppercase">Combo ${esc(num||yy||"1")}: one of each board</span><span style="font:${E.it} ${E.dw} 26px/1 ${E.disp};color:${E.board==="acrylic"?"#fff1d6":LIT}">${combo}</span></div>
-   ${heavy?"":`<div data-fit data-min="14" style="position:absolute;left:850px;top:736px;width:472px;height:62px;overflow:hidden;font-size:16px;color:${lum(wall)>.3?"#1c1c1c":"#e6e2d8"}">
-     <div style="font:500 1em/1.3 ${E.body}"><b style="letter-spacing:.14em;text-transform:uppercase">${esc(T.coming)}:</b> ${comingList.join(". ")}. Prices subject to change. Poster and stills: TMDB.</div></div>`}`;
+   ${heavy?"":`<div data-fit data-min="14" style="position:absolute;left:850px;top:736px;width:472px;height:72px;overflow:hidden;font-size:16px;color:${lum(wall)>.3?"#1c1c1c":"#e6e2d8"}">
+     <div style="font:500 1em/1.3 ${E.body}"><b style="letter-spacing:.14em;text-transform:uppercase">${esc(T.coming)}:</b> ${comingList.map((c,i)=>i?`<span data-drop>${c}. </span>`:`${c}. `).join("")}Prices subject to change. Poster and stills: TMDB.</div></div>`}`;
 
   /* poster front: the poster is the picture, framed tight on the left; logo, note and stubs in a middle column; boards on the right */
   const PH=774,PW=516,PF=eg==="new"?8:10,PX=14,PY=Math.round((H-PH-2*PF)/2);
@@ -241,8 +241,8 @@ window.MENU_FORMATS[ID]=ctx=>{
    <div data-fit data-min="14" style="position:absolute;left:${RX}px;top:156px;width:${RW}px;height:${heavy?560:520}px;overflow:hidden;font-size:${heavy?20:26}px">${boards}</div>
    <div style="position:absolute;left:${RX}px;top:${heavy?722:684}px;width:${RW}px;display:flex;justify-content:space-between;align-items:baseline;background:${E.board==="acrylic"?boardHead:"#0c0c0f"};border:${E.board==="neon"?`2px solid ${LIT}`:`2px solid ${E.board==="acrylic"?"#3b2a18":"#2c2d32"}`};box-sizing:border-box;padding:8px 14px">
      <span style="font:${E.it} ${E.dw} 20px/1.1 ${E.disp};color:#fff;text-transform:uppercase">Combo ${esc(num||yy||"1")}: one of each</span><span style="font:${E.it} ${E.dw} 26px/1 ${E.disp};color:${E.board==="acrylic"?"#fff1d6":LIT}">${combo}</span></div>
-   ${heavy?"":`<div data-fit data-min="14" style="position:absolute;left:${RX}px;top:736px;width:${RW}px;height:62px;overflow:hidden;font-size:16px;color:${lum(wall)>.3?"#1c1c1c":"#e6e2d8"}">
-     <div style="font:500 1em/1.3 ${E.body}"><b style="letter-spacing:.14em;text-transform:uppercase">${esc(T.coming)}:</b> ${comingList.join(". ")}. Prices subject to change. Poster and stills: TMDB.</div></div>`}`;
+   ${heavy?"":`<div data-fit data-min="14" style="position:absolute;left:${RX}px;top:736px;width:${RW}px;height:72px;overflow:hidden;font-size:16px;color:${lum(wall)>.3?"#1c1c1c":"#e6e2d8"}">
+     <div style="font:500 1em/1.3 ${E.body}"><b style="letter-spacing:.14em;text-transform:uppercase">${esc(T.coming)}:</b> ${comingList.map((c,i)=>i?`<span data-drop>${c}. </span>`:`${c}. `).join("")}Prices subject to change. Poster and stills: TMDB.</div></div>`}`;
   const face=heroIsPoster?`${wallTex}${posterFront}${col}${right}`:faceOld;
 
   window.__fmtFitLater();

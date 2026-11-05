@@ -148,16 +148,26 @@ function loadFonts(query,fams){
 const over=b=>b.scrollHeight>b.clientHeight+1||b.scrollWidth>b.clientWidth+1;
 function fitRoot(root){
   root.querySelectorAll("[data-fs]").forEach(n=>{n.style.fontSize=n.dataset.fs+"px"});
-  root.querySelectorAll("[data-note]").forEach(n=>{n.style.display="";n.style.webkitLineClamp="";n.style.overflow=""});
+  if(window.__fmtTrimReset)window.__fmtTrimReset(root);root.querySelectorAll("[data-note]").forEach(n=>{n.style.display="";n.style.webkitLineClamp="";n.style.overflow=""});
   root.querySelectorAll("[data-drop]").forEach(n=>{n.style.display=""});
+  root.querySelectorAll("[data-menu]").forEach(b=>{const [t,h]=b.dataset.menu.split(",");b.style.top=t+"px";b.style.height=h+"px";b.style.columnCount=""});
+  root.querySelectorAll("[data-flexph]").forEach(p=>{p.style.height=p.dataset.flexph+"px"});
   root.querySelectorAll("[data-line]").forEach(n=>{for(let k=0;k<80&&n.scrollWidth>n.clientWidth+1;k++){const s=parseFloat(n.style.fontSize);if(s<=+(n.dataset.min||14))break;n.style.fontSize=(s-1)+"px"}});
   root.querySelectorAll("[data-box]").forEach(box=>{
     if(box.offsetParent===null&&getComputedStyle(box).position!=="fixed")return;
     const nodes=[...box.querySelectorAll("[data-fs]")].filter(n=>!n.hasAttribute("data-line"));
-    for(let k=0;k<60&&over(box);k++){let ch=false;nodes.forEach(n=>{const s=parseFloat(n.style.fontSize),m=+(n.dataset.min||16);if(s>m){n.style.fontSize=(s-1)+"px";ch=true}});if(!ch)break}
+    const shrinkAll=()=>{nodes.forEach(n=>{n.style.fontSize=n.dataset.fs+"px"});for(let k=0;k<60&&over(box);k++){let ch=false;nodes.forEach(n=>{const s=parseFloat(n.style.fontSize),m=+(n.dataset.min||16);if(s>m){n.style.fontSize=(s-1)+"px";ch=true}});if(!ch)break}};
+    shrinkAll();
+    /* review 15: a long menu (Addams Family Values, Crocodile Dundee II) lost every dish note here. Before a note is clamped or hidden,
+       the menu takes room from the photo above it, then runs in two columns, so the film's own lines stay */
+    if(over(box)&&box.dataset.menu){const [top0,h0]=box.dataset.menu.split(",").map(Number),face=box.parentElement,ph=face&&face.querySelector("[data-flexph]");
+      const grow=d=>{box.style.top=(top0-d)+"px";box.style.height=(h0+d)+"px";if(ph)ph.style.height=(+ph.dataset.flexph-d)+"px"};
+      const room=ph?Math.max(0,+ph.dataset.flexph-150):0;
+      for(let d=20;d<=room&&over(box);d+=20){grow(d);shrinkAll()}
+      if(over(box)){box.style.columnCount="2";grow(0);shrinkAll();for(let d=20;d<=room&&over(box);d+=20){grow(d);shrinkAll()}}}
     if(over(box)){const ns=[...box.querySelectorAll("[data-note]")];
-      for(const L of [2,1]){if(!over(box))break;ns.forEach(e=>{e.style.display="-webkit-box";e.style.webkitBoxOrient="vertical";e.style.webkitLineClamp=String(L);e.style.overflow="hidden"})}
-      /* review 14: notes go one at a time from the bottom, not all at once */for(let i=ns.length-1;i>=0&&over(box);i--)ns[i].style.display="none"}
+      /* review 15: no clamped notes (the screen showed "..." where the PDF printed the note in full); each note from the bottom is shortened at a break, and hidden only if that still will not fit */
+      (window.__fmtTrim?window.__fmtTrim(ns,()=>over(box)):(()=>{for(let i=ns.length-1;i>=0&&over(box);i--)ns[i].style.display="none"})())}
     /* last resort: drop extra items (highest index first, later courses first), then fine print extras */
     const dr=[...box.querySelectorAll("[data-drop]")].filter(e=>e.closest("[data-box]")===box).map((e,i)=>[+(e.dataset.drop||0),i,e]).sort((x,y)=>x[0]-y[0]||x[1]-y[1]);
     while(over(box)&&dr.length)dr.pop()[2].style.display="none";
@@ -242,12 +252,12 @@ function wearLayer(P,tone,seed){
   return s;
 }
 function photo(url,o){
-  if(o.poster)return`<div style="position:absolute;left:${o.x}px;top:${o.y}px;width:${o.w}px;height:${o.h}px;padding:${o.pad}px;box-sizing:border-box;background:${o.print};transform:rotate(${o.rot}deg);box-shadow:0 10px 20px rgba(20,10,0,.4),0 1px 0 rgba(0,0,0,.2)">
+  if(o.poster)return`<div ${o.flex?`data-flexph="${o.h}" `:""}style="position:absolute;left:${o.x}px;top:${o.y}px;width:${o.w}px;height:${o.h}px;padding:${o.pad}px;box-sizing:border-box;background:${o.print};transform:rotate(${o.rot}deg);box-shadow:0 10px 20px rgba(20,10,0,.4),0 1px 0 rgba(0,0,0,.2)">
   <div style="position:relative;width:100%;height:100%;overflow:hidden;background:${o.mat||o.print}">
     <img alt="" crossorigin="anonymous" src="${url}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">
     ${o.sheen?SHEEN(o.sheen):""}
   </div></div>`;
-  return`<div style="position:absolute;left:${o.x}px;top:${o.y}px;width:${o.w}px;height:${o.h}px;padding:${o.pad}px;box-sizing:border-box;background:${o.print};transform:rotate(${o.rot}deg);box-shadow:0 10px 20px rgba(20,10,0,.4),0 1px 0 rgba(0,0,0,.2)">
+  return`<div ${o.flex?`data-flexph="${o.h}" `:""}style="position:absolute;left:${o.x}px;top:${o.y}px;width:${o.w}px;height:${o.h}px;padding:${o.pad}px;box-sizing:border-box;background:${o.print};transform:rotate(${o.rot}deg);box-shadow:0 10px 20px rgba(20,10,0,.4),0 1px 0 rgba(0,0,0,.2)">
   <div style="position:relative;width:100%;height:100%;overflow:hidden;background:#2a2016">
     <img alt="" crossorigin="anonymous" onload="window.__fmtLift&&__fmtLift.trim(this)" onerror="window.__fmtLift&&__fmtLift.cors(this)" src="${url}" style="position:absolute;inset:0;left:0;top:0;width:100%;height:100%;object-fit:cover;object-position:${o.pos||"center 30%"};filter:${o.filter}">
     ${o.half?HALFTONE(o.half):""}${o.sheen?SHEEN(o.sheen):""}${o.extra||""}
@@ -275,7 +285,7 @@ function menuHTML(cs,era,ty,C,tone){
   const rule=/warm|tender|playful/.test(tone)?"dashed":"solid";
   return["s","m","w","d"].filter(k=>cs[k].length).map(k=>`<div style="margin:0 0 10px">
     <div style="display:flex;align-items:center;gap:12px"><span data-fs="22" data-min="16" style="font:${ty.cw} 22px ${ty.caps};letter-spacing:.14em;text-transform:uppercase;color:${C.ink};white-space:nowrap">${LABEL[k]}</span><span style="flex:1;border-top:2px ${rule} ${C.ink};opacity:.6"></span></div>
-    ${cs[k].map((it,i)=>`<div ${i?`data-drop="${i+1}"`:""}><div style="display:flex;gap:14px;align-items:baseline;margin-top:5px"><span data-fs="26" data-min="19" style="flex:1;font:${ty.dishW} 26px ${ty.dish};line-height:1.12">${T(it.n)}</span><span data-fs="26" data-min="19" style="font:${ty.dishW} 26px ${ty.dish};white-space:nowrap;color:${C.ink}">${price(k,i,era)}</span></div>
+    ${cs[k].map((it,i)=>`<div ${i?`data-drop="${i+1}"`:""} style="break-inside:avoid"><div style="display:flex;gap:14px;align-items:baseline;margin-top:5px"><span data-fs="26" data-min="19" style="flex:1;font:${ty.dishW} 26px ${ty.dish};line-height:1.12">${T(it.n)}</span><span data-fs="26" data-min="19" style="font:${ty.dishW} 26px ${ty.dish};white-space:nowrap;color:${C.ink}">${price(k,i,era)}</span></div>
       ${it.note?`<div data-note data-fs="20" data-min="16" style="font:${ty.bw} 20px ${ty.body};line-height:1.22;opacity:.86">${T(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`).join("")}
   </div>`).join("");
 }
@@ -323,9 +333,9 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div data-line data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;color:${C.ink};white-space:nowrap;overflow:hidden">${T(F.venue)}</div>
     </div>
     <div style="position:absolute;right:40px;top:36px;padding:6px 14px;border:3px solid ${C.ink};border-radius:4px;color:${C.ink};font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;text-align:center;transform:rotate(${stampRot}deg);opacity:.88;line-height:1.25">Card no.<br><span style="font:${ty.dw} 28px ${ty.disp};letter-spacing:.04em">${T(F.number)}</span></div>
-    ${photo(ph.second,{poster:ph.isPoster,mat:"#2a2016",x:20,y:112,w:632,h:288,pad:8,print:P.print,rot:-TN.tilt*.4,filter:filt,half:E.half,sheen:E.sheen,pos:"center 40%",
+    ${photo(ph.second,{poster:ph.isPoster,mat:"#2a2016",x:20,y:112,w:632,h:288,pad:8,print:P.print,rot:-TN.tilt*.4,filter:filt,half:E.half,sheen:E.sheen,pos:"center 40%",flex:1,
       extra:`<div style="position:absolute;left:12px;bottom:12px;padding:5px 12px;background:${P.print};color:#2a2219;font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase">Tonight's feature, ${esc(year)}</div>`})}
-    <div data-box style="position:absolute;left:38px;top:418px;width:596px;height:378px;overflow:hidden;mix-blend-mode:multiply">${menuHTML(cs,era,ty,C,tone)}</div>
+    <div data-box data-menu="418,378" style="position:absolute;left:38px;top:418px;width:596px;height:378px;overflow:hidden;mix-blend-mode:multiply;column-gap:24px">${menuHTML(cs,era,ty,C,tone)}</div>
     <div data-box style="position:absolute;left:38px;top:808px;width:370px;height:86px;overflow:hidden;mix-blend-mode:multiply">
       <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink}">Bugle call</div>
       <div data-fs="18" data-min="14" style="font:${ty.bw} 18px ${ty.body};line-height:1.25;margin-top:2px">${T(ctx.f.P||"Serve the mains when the campfire is lit.")}</div>

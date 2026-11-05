@@ -142,3 +142,38 @@ The strip's buttons are 44px tall and named, the store sign taps are 44 to 50px,
 ## Note on check-prep-a4
 
 Run on its own after the browser passes: 900 Prep sheets, 1,708 A4 pages at 4 guests, pass (24 minutes on this machine). A first run inside the batch of checks was stopped by the two-hour limit on background jobs and was run again on its own.
+
+## Fixed after the review
+
+1. **Lines are kept.** Before a note is clamped or hidden, the long shared menus now make room. Campfire: the menu takes height from the photo above it, then runs in two columns (Crocodile Dundee II and Addams Family Values show every dish note). Canteen: the tray takes width from the poster beside it, and on the lunch ticket the showtime cue stays while "Admit one to the line" gives way. Tavern: the poster plate gives up width to the menu column. Cafe: a long menu takes height from the poster panel. Galley: a full sheet 1 takes height from the poster and the side column narrows with it. Anything still too long is shortened at a natural break (a sentence, a comma, "with", "until"), never down to an unfinished phrase like "Choux puffs filled", and only then hidden. No layout clamps a note to "..." any more. Across all 900 printed menus, hidden notes fell from 910 lines on 243 films to 56 lines on 23 films: every campfire, canteen, tavern and galley film now shows all its notes, and cafe 33 of 34.
+2. **Paper matches the screen.** Each galley sheet prints at the size the screen gave it (sheet 2 no longer refits on its own). In the Save PDF copy any clamp that still cuts text is set to the words the screen shows, with the ellipsis. Canteen trays keep 20px and kiosk columns 10px spare, because html2canvas sets type a touch lower than Chrome (Lady Bird keeps "cinnamon latte", A Bug's Life's drinks sit clear of the note).
+3. **Frame colour.** edgeColour reads just inside the outermost 2 per cent of the page, past thin edge rules: Cloudy with a Chance of Meatballs and Man of Steel print on cream, Walk Hard on its dark wall, This Is the End on its pale paper. The Lost World stays cream, Annabelle brown.
+4. **Vegetarian showtime cues.** On a vegetarian night the thing served is named by its course ("Serve the mains when Jack drives the Pork-Chop Express into Chinatown", "Serve the snacks when Tommy talks the diner waitress into reopening the kitchen"). Six cues where the moment leans on the dish are written by hand in data/diet: Splash, The Fly, Iron Man, Poltergeist, National Lampoon's Christmas Vacation, Chinatown. Card, phone, Prep sheet and Director's cut all use dietCue.
+5. **Table kit.** The tag place card's number is smaller, so "BARTHOLOMEW" and "ANASTASIA" print whole on Skyfall's tags. The fridge and comic intermission cards carry the film's tagline instead of repeating the door sign's note.
+6. **One reminder at the top.** When the locked-in strip shows, the "This week's film" panel drops its poster, title and Open the menu button and becomes "Your movie night": cook night, showtime, Shopping list and Clear. Its countdown speaks up only when showtime comes or passes.
+7. **Phone Candy bar.** Tonight's combos and the glass case slide sideways a card and a peek at a time. The page for one film is about 2,630px, from 3,315px.
+8. **Small items.** The Godfather's note reads "with grape juice and shallots". Beverly Hills Cop III's candy bar fine print has room, and its extra teasers drop before the credit. "Pan" for skillet, "baking paper" for wax paper, "digestive biscuits" for graham crackers, "pralines" for the pecan candies, "Takeaway" for Takeout, "counsellors", "traveller".
+
+New in scripts/check-print-text.cjs: it fails on a hidden dish note, and on a line clamp in the Save PDF copy that still cuts text.
+
+Left open: 56 hidden notes on 23 films (lab 9 films: Men in Black II, Mad Max 2, The Martian, Flubber; saloon 8: Back to the Future Part III, Tombstone, Three Amigos!, The Man from Snowy River; airline 2: Airplane!, Captain America: Civil War; tiki 2; The Wog Boy on cafe; My Big Fat Greek Wedding on placemat). A poster trade on lab was tried and reverted: it shortened the column beside the poster and doubled the films that failed. These need shorter notes in the data or a new layout for the lab strip and the saloon columns. Also open: small swipe-view type on hand-built cards; a vegetarian card still prints a dish that has no vegetarian version (by design, low); The Out-of-Towners' bitters in kids' mode.
+
+All 17 node tests pass; check-browser, dialogs, check-store-taps, check-cut-words (two lines written that way in the data), check-sweet-starters, check-kids-cards (343), check-phone-fit (900), check-prices (795), check-pdf-tone (named sample and `--per 2`, all 60 within -3.0 to +4.6) and check-prep-a4 (1,708 pages) pass. check-print-text reads all 900 and fails only on the 56 hidden notes listed above; no dish name is hidden and no clamp or shape is left in the Save PDF copy that html2canvas would misprint.
+
+## Score after the fixes
+
+| Area | Before | After |
+|---|---|---|
+| 1. First impression and visual identity | 9 | 9.5 |
+| 2. Brand consistency | 9 | 9 |
+| 3. Printed menus | 8 | 9 |
+| 4. Phone experience | 9 | 9 |
+| 5. Core flow | 8 | 9 |
+| 6. Candy bar | 8 | 9 |
+| 7. Galaxy Video store | 9 | 9 |
+| 8. Table kit | 8 | 9 |
+| 9. Polish and craft | 8 | 9 |
+| 10. Accessibility basics | 9 | 9 |
+| **Overall** | **8.5** | **9.1** |
+
+Short of 9.5 for the 56 hidden notes, the swipe-view type on hand-built cards, and the cinema strip as the one cinema piece inside Galaxy Video.

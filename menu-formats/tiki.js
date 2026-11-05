@@ -112,7 +112,7 @@ function loadFonts(query,fams){
 const over=b=>b.scrollHeight>b.clientHeight+1||b.scrollWidth>b.clientWidth+1;
 function fitRoot(root){
   root.querySelectorAll("[data-fs]").forEach(n=>{n.style.fontSize=n.dataset.fs+"px"});
-  root.querySelectorAll("[data-note]").forEach(n=>{n.style.display="";n.style.webkitLineClamp="";n.style.overflow=""});
+  if(window.__fmtTrimReset)window.__fmtTrimReset(root);root.querySelectorAll("[data-note]").forEach(n=>{n.style.display="";n.style.webkitLineClamp="";n.style.overflow=""});
   root.querySelectorAll("[data-drop]").forEach(n=>{n.style.display=""});
   root.querySelectorAll("[data-line]").forEach(n=>{for(let k=0;k<80&&n.scrollWidth>n.clientWidth+1;k++){const s=parseFloat(n.style.fontSize);if(s<=+(n.dataset.min||14))break;n.style.fontSize=(s-1)+"px"}});
   root.querySelectorAll("[data-box]").forEach(box=>{
@@ -120,8 +120,8 @@ function fitRoot(root){
     const nodes=[...box.querySelectorAll("[data-fs]")].filter(n=>!n.hasAttribute("data-line"));
     for(let k=0;k<60&&over(box);k++){let ch=false;nodes.forEach(n=>{const s=parseFloat(n.style.fontSize),m=+(n.dataset.min||16);if(s>m){n.style.fontSize=(s-1)+"px";ch=true}});if(!ch)break}
     if(over(box)){const ns=[...box.querySelectorAll("[data-note]")];
-      for(const L of [2,1]){if(!over(box))break;ns.forEach(e=>{e.style.display="-webkit-box";e.style.webkitBoxOrient="vertical";e.style.webkitLineClamp=String(L);e.style.overflow="hidden"})}
-      /* review 14: notes go one at a time from the bottom, not all at once */for(let i=ns.length-1;i>=0&&over(box);i--)ns[i].style.display="none"}
+      /* review 15: no clamped notes (the screen showed "..." where the PDF printed the note in full); each note from the bottom is shortened at a break, and hidden only if that still will not fit */
+      (window.__fmtTrim?window.__fmtTrim(ns,()=>over(box)):(()=>{for(let i=ns.length-1;i>=0&&over(box);i--)ns[i].style.display="none"})())}
     /* last resort: drop extra items (highest index first, later courses first), then fine print extras */
     const dr=[...box.querySelectorAll("[data-drop]")].filter(e=>e.closest("[data-box]")===box).map((e,i)=>[+(e.dataset.drop||0),i,e]).sort((x,y)=>x[0]-y[0]||x[1]-y[1]);
     while(over(box)&&dr.length)dr.pop()[2].style.display="none";

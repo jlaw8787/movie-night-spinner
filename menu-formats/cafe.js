@@ -78,7 +78,7 @@ const noise=(rgb,a,freq,size)=>{const[r,g,b]=hex(rgb).map(v=>(v/255).toFixed(3))
 const CHALKSOFT=svgUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><filter id="m"><feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.4 0 0 0 2.5"/></filter><rect width="100%" height="100%" filter="url(#m)"/></svg>`);
 const CHALKMASK=svgUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><filter id="m"><feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3.2 0 0 0 2.75"/></filter><rect width="100%" height="100%" filter="url(#m)"/></svg>`);
 /* runtime fit: every [data-fit] box scales its type (CSS var --k) until nothing overflows; notes drop as a last resort */
-const FIT=`<img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="position:absolute;width:1px;height:1px;opacity:0;left:0;top:0" onload="(function(r){function f(){r.querySelectorAll('[data-fit]').forEach(function(b){var k=1;b.style.setProperty('--k',1);b.style.removeProperty('--nd');var ns=b.querySelectorAll('[data-cnote]');for(var j=0;j<ns.length;j++)ns[j].style.display='';var o=function(){return b.scrollHeight>b.clientHeight+1||b.scrollWidth>b.clientWidth+1};while(o()&&k>.56){k-=.04;b.style.setProperty('--k',k.toFixed(2))}for(var i=ns.length-1;i>=0&&o();i--)ns[i].style.display='none';if(o())b.style.setProperty('--dl','1')})}f();if(document.fonts)document.fonts.ready.then(f);setTimeout(f,900);setTimeout(f,2200)})(this.parentNode)">`;
+const FIT=`<img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="position:absolute;width:1px;height:1px;opacity:0;left:0;top:0" onload="(function(r){function f(){r.querySelectorAll('[data-fit]').forEach(function(b){var k=1;b.style.setProperty('--k',1);b.style.removeProperty('--nd');if(window.__fmtTrimReset)window.__fmtTrimReset(b);var ns=b.querySelectorAll('[data-cnote]');for(var j=0;j<ns.length;j++)ns[j].style.display='';var o=function(){return b.scrollHeight>b.clientHeight+1||b.scrollWidth>b.clientWidth+1};while(o()&&k>.56){k-=.04;b.style.setProperty('--k',k.toFixed(2))}if(window.__fmtTrim)window.__fmtTrim(Array.prototype.slice.call(ns),o);else for(var i=ns.length-1;i>=0&&o();i--)ns[i].style.display='none';if(o())b.style.setProperty('--dl','1')})}f();if(document.fonts)document.fonts.ready.then(f);setTimeout(f,900);setTimeout(f,2200)})(this.parentNode)">`;
 const fs=(px,min)=>`font-size:max(${min||14}px,calc(${px}px * var(--k,1)))`;
 /* logo panel tone: a dark logo flips its panel to the light stock */
 const LOGOTONE=`onload="(function(i){var p=i.closest('[data-lp]'),w=window.__fmtLift&&__fmtLift.logo(i,+((p&&p.dataset.dl)||.012),+((p&&p.dataset.ll)||.86));if(p&&w&&(w==='light')===(p.dataset.dark==='1')){p.style.background=p.dataset.alt;p.style.boxShadow=p.dataset.altsh}})(this)"`;
@@ -183,7 +183,11 @@ window.MENU_FORMATS["cafe"]=ctx=>{
   const chalkTxt=e.chalk?`-webkit-mask-image:${CHALKSOFT};mask-image:${CHALKSOFT};`:"";
 
   /* venue lettering on the photo: size from length, two lines at most, with real line spacing when it runs to two (Beverly Palm Hotel) */
-  const vlen=venue.length,CW=352,PHP=906,PW=580,PT=870,vw=hasP?CW:W-2*FR-80;
+  /* review 15: the board under a poster held about 380px, so most cafe menus (30 of 34) hid their dish notes. A longer menu now takes height
+     from the poster panel: the poster shrinks in proportion and the side column keeps its width */
+  const nItems=C.reduce((a,c)=>a+c.items.length,0),noteLen=C.reduce((a,c)=>a+c.items.reduce((b,it)=>b+String(it.note||"").length,0),0);
+  const PHP=nItems>=7||noteLen>420?786:nItems>=5||noteLen>300?846:906,PT=PHP-36,PW=Math.round(PT*2/3);
+  const vlen=venue.length,CW=(W-2*FR)-(12+PW+12+24)-24,vw=hasP?CW:W-2*FR-80;
   let vs=Math.min(e.up?78:86,Math.floor(vw/(Math.max(vlen,6)*e.dr)));let vlines=1;
   if(hasP){for(let L=2;vs<52&&L<=3;L++){vlines=L;vs=Math.min(64,Math.floor(.9*L*vw/(vlen*e.dr)))}vs=Math.max(30,vs)}
   else{if(vs<52){vs=Math.min(64,Math.floor(2*vw/(vlen*e.dr)));vlines=2}vs=Math.max(40,vs)}

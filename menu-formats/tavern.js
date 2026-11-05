@@ -50,13 +50,18 @@ if(!window.__fmtFitTavern)window.__fmtFitTavern=function(t){
     face.querySelectorAll("[data-fit]").forEach(e=>{
       const b=+e.getAttribute("data-fit");const over=()=>e.scrollHeight>e.clientHeight+1||e.scrollWidth>e.clientWidth+1;
       e.querySelectorAll("[data-drop],[data-drop2]").forEach(d=>d.style.display="");
-      e.querySelectorAll("[data-note]").forEach(d=>{d.style.display="";d.style.webkitLineClamp="";d.style.overflow=""});
+      if(window.__fmtTrimReset)window.__fmtTrimReset(e);e.querySelectorAll("[data-note]").forEach(d=>{d.style.display="";d.style.webkitLineClamp="";d.style.overflow=""});
       const shrink=(lo)=>{let k=1;e.style.fontSize=b+"px";while(over()&&k>lo){k-=.025;e.style.fontSize=(b*k)+"px"}return k};
       let k=shrink(.52);
+      /* review 15: the menu column is narrow (Brave, Maleficent). Before anything goes, the poster plate gives up width to it,
+         so notes keep their words. A note is never clamped to "...": the screen showed cut notes that the PDF printed in full */
+      const pl=face.querySelector("[data-plate]");
+      if(e.dataset.menu&&pl){const [mx,mw]=e.dataset.menu.split(",").map(Number),pw0=+pl.dataset.plate;
+        const set=d=>{pl.style.width=(pw0-d)+"px";pl.querySelectorAll("[data-pw]").forEach(x=>x.style.width=(+x.dataset.pw-d)+"px");e.style.left=(mx-d)+"px";e.style.width=(mw+d)+"px"};
+        set(0);k=shrink(.52);for(let d=24;d<=120&&(k<.8||over());d+=24){set(d);k=shrink(.52)}}
       if((k<.8||over())&&e.querySelector("[data-drop]")){e.querySelectorAll("[data-drop]").forEach(d=>d.style.display="none");k=shrink(.52)}
-      if(over())e.querySelectorAll("[data-note]").forEach(d=>{d.style.display="-webkit-box";d.style.webkitBoxOrient="vertical";d.style.webkitLineClamp="1";d.style.overflow="hidden"});
       if(over())e.querySelectorAll("[data-drop2]").forEach(d=>d.style.display="none");
-      /* review 14: notes go one at a time from the bottom, not all at once */{const ns=[...e.querySelectorAll("[data-note]")];for(let i=ns.length-1;i>=0&&over();i--)ns[i].style.display="none"}
+      /* review 15: shortened at a break before one is hidden */{const ns=[...e.querySelectorAll("[data-note]")];(window.__fmtTrim?window.__fmtTrim(ns,over):(()=>{for(let i=ns.length-1;i>=0&&over();i--)ns[i].style.display="none"})())}
     });
   };
   run();if(document.fonts){if(document.fonts.ready)document.fonts.ready.then(run);if(document.fonts.addEventListener)document.fonts.addEventListener("loadingdone",run)}setTimeout(run,500);setTimeout(run,1600);setTimeout(run,3200);
@@ -120,7 +125,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const bb=band(ctx.era||"modern"),bw={P:8,S:6,E:2,M:7}[bb];
   const PX=52,PY=152,ph=684,pw=456,PW=pw+2*bw,PH=ph+2*bw;
   const heroImg=posterSrc
-    ?`<img src="${posterSrc}" crossorigin="anonymous" alt="" style="position:absolute;left:0;top:0;width:${pw}px;height:${ph}px;object-fit:contain">`
+    ?`<img data-pw="${pw}" src="${posterSrc}" crossorigin="anonymous" alt="" style="position:absolute;left:0;top:0;width:${pw}px;height:${ph}px;object-fit:contain">`
     :(heroSrc?`<img src="${heroSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:${pf}">`:`<div style="position:absolute;inset:0;background:${darkPanel}"></div>`);
   const bear=(t,pos)=>`<div style="position:absolute;${pos};font:${E.dw} 20px/1 ${D};color:${acc};width:24px;text-align:center">${t}</div>`;
   /* logo sits in the foot band, never over the poster */
@@ -132,9 +137,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const seal=!sealSrc?"":`<div data-seal="1" style="position:absolute;right:52px;top:884px;width:104px;height:104px;transform:rotate(${T.tilt}deg);z-index:3">
     <div style="position:absolute;inset:0;border-radius:50%;border:7px solid ${sealRed};box-shadow:0 4px 12px rgba(0,0,0,.45),inset 0 0 14px rgba(0,0,0,.55);overflow:hidden;background:${sealRed}">${sealSrc?`<img src="${sealSrc}" alt="" data-alt="${sealAlt}" onerror="var a=this.getAttribute('data-alt');if(a){this.removeAttribute('data-alt');this.src=a}else{this.closest('[data-seal]').style.display='none'}" style="width:100%;height:100%;object-fit:cover;object-position:50% 28%;filter:sepia(.35) saturate(1.1) contrast(1.05)">`:""}</div>
     <div style="position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);background:${sealRed};color:#f6e6c8;font:${E.dw} 15px/1 ${D};letter-spacing:.04em;padding:4px 8px 3px;white-space:nowrap">No. ${esc(num)}</div></div>`;
-  const plate=`<div style="position:absolute;left:${PX}px;top:${PY}px;width:${PW}px;height:${PH}px">
+  const plate=`<div data-plate="${PW}" style="position:absolute;left:${PX}px;top:${PY}px;width:${PW}px;height:${PH}px">
     ${bear("S","left:50%;bottom:-26px;margin-left:-12px")}${bear("W","left:-30px;top:50%;margin-top:-10px")}${bear("E","right:-30px;top:50%;margin-top:-10px")}
-    <div style="position:absolute;inset:0;${E.plate};box-sizing:border-box;padding:${bb==="P"?5:bb==="M"?6:0}px"><div style="position:relative;width:${pw}px;height:${ph}px;overflow:hidden;background:#1a120a">${heroImg}</div></div>
+    <div style="position:absolute;inset:0;${E.plate};box-sizing:border-box;padding:${bb==="P"?5:bb==="M"?6:0}px"><div data-pw="${pw}" style="position:relative;width:${pw}px;height:${ph}px;overflow:hidden;background:#1a120a">${heroImg}</div></div>
     <div style="position:absolute;left:50%;top:-31px;transform:translateX(-50%);z-index:2;background:${paper};border:1px solid ${ink};padding:3px 9px 2px;font:${E.dw} 20px/1 ${D};color:${acc}">N</div>
     </div>${logo.html}${seal}`;
 
@@ -159,7 +164,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   if(winks.length)flow+=`<div data-drop="1" style="break-inside:avoid;text-align:center;font-size:max(14px,.64em);line-height:1.3;color:${ink}"><span style="letter-spacing:.16em;text-transform:uppercase;color:${acc}">Heard by the fire </span>${winks.map(esc).join(` ${E.orn} `)}</div>`;
 
   const MX=PX+PW+40,MY=PY,MH=PH+8;
-  const menu=`<div data-fit="26" style="position:absolute;left:${MX}px;top:${MY}px;width:${W-MX-36}px;height:${MH}px;overflow:hidden;font-size:26px">${flow}</div>`;
+  const menu=`<div data-fit="26" data-menu="${MX},${W-MX-36}" style="position:absolute;left:${MX}px;top:${MY}px;width:${W-MX-36}px;height:${MH}px;overflow:hidden;font-size:26px">${flow}</div>`;
   /* rooms and stabling only for a real inn (the Prancing Pony, the Three Broomsticks), not a workshop, castle kitchen or ball (Rise of the Guardians, A Christmas Carol) */
   const inn=/\b(inn|tavern|alehouse|beds|rooms)\b/i.test(venue+" "+sign);
   const foot=`<div style="position:absolute;left:44px;right:44px;bottom:20px;text-align:center;font:italic 400 15px/1.2 ${B};color:${ink};white-space:nowrap;overflow:hidden">${inn?"Rooms above, stabling round the back. ":""}Coin of the realm only. Bill No. ${esc(num)}, ${esc(f.year||"")}. Images: TMDB</div>`;
