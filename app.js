@@ -1879,7 +1879,8 @@ const daysTo=d=>Math.round((d-dayStart(new Date()))/864e5);
 /* a shelf colour as text on the aisle's purple (its lightest stripe): lifted toward white until it reads at 4.5 to 1 (Movember's brown, Friday the 13th's red) */
 function inkOn(c,bg){const rgb=h=>{h=h.replace("#","");if(h.length===3)h=h.replace(/./g,"$&$&");return [0,2,4].map(i=>parseInt(h.slice(i,i+2),16))},lum=a=>{const v=a.map(x=>{x/=255;return x<=.03928?x/12.92:((x+.055)/1.055)**2.4});return .2126*v[0]+.7152*v[1]+.0722*v[2]};
   const b=lum(rgb(bg)),a=rgb(c);for(let t=0;t<=1.0001;t+=.05){const m=a.map(x=>Math.round(x+(255-x)*t));const l=lum(m);if((Math.max(l,b)+.05)/(Math.min(l,b)+.05)>=4.6)return "#"+m.map(x=>x.toString(16).padStart(2,"0")).join("")}return "#ffffff"}
-const fmtDay=d=>d.toLocaleDateString("en-AU",{day:"numeric",month:"short"});
+/* one spelling for every month in the calendar strip: en-AU short months come out as "July", "Sept" and "Nov" side by side (review 12) */
+const MON3=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],fmtDay=d=>d.getDate()+" "+MON3[d.getMonth()];
 function seasonRows(s,list,later){
   const st=`--sg:${s.c[0]};--sf:${s.c[1]};--ss:${s.c[2]};--sl:${inkOn(s.c[0],"#2e1c4e")}`;
   if(s.rows)return s.rows(list).map(r=>[r[0],r[1],later?`Back on ${fmtDay(later)}. ${r[2]}`:r[2],"season "+(r[3]||"")+(later?" later":""),st,s.id]);
@@ -3156,6 +3157,9 @@ const kitFlight=n=>{n=String(n||"").trim();return n.length<=6?n:n.split(/\s+/)[0
 function kitFit(page){
   page.querySelectorAll(".kp-name").forEach(e=>{const b=+(e.dataset.fz0||(e.dataset.fz0=parseFloat(getComputedStyle(e).fontSize)||0));if(!b)return;e.style.fontSize=b+"px";e.style.whiteSpace="";e.style.lineHeight="";
     let k=1;for(;k>=.4&&e.scrollWidth>e.clientWidth+1;k-=.04)e.style.fontSize=(b*k).toFixed(1)+"px";
+    /* and room for its capitals: the name box has a set height, and a line taller than the box cut the tops and feet off "SAM JORDAN" and "BO" (review 12).
+       A one-line name is centred on the box's own height and kept small enough that its capitals clear both edges */
+    if(e.style.whiteSpace!=="normal"){const H=e.clientHeight;if(H>8){e.style.lineHeight=H+"px";const cap=Math.max(8,(H-4)/.82);if(parseFloat(e.style.fontSize)>cap)e.style.fontSize=cap.toFixed(1)+"px"}}
     /* a long two-word name reads bigger on two lines than squeezed onto one, if the card has the height for it */
     if(k<.66&&/\s/.test(e.textContent.trim())){const kp=e.closest(".kp");let k2=.7;e.style.whiteSpace="normal";e.style.lineHeight="1";
       const ok=()=>e.scrollWidth<=e.clientWidth+1&&e.offsetHeight<=b*k2*2.2&&(!kp||kp.scrollHeight<=kp.clientHeight+1);
@@ -3462,7 +3466,8 @@ function snackFilm(){const w=typeof week!=="undefined"&&week&&week.id&&FILMS.fin
 function snackK(y){const P=[[1930,.07],[1950,.12],[1960,.15],[1970,.24],[1980,.5],[1990,.85],[1996,1],[2005,1.35],[2015,1.7],[2026,2.2]];y=+y||1996;if(y<=P[0][0])return P[0][1];
   for(let i=1;i<P.length;i++)if(y<=P[i][0]){const [a,ka]=P[i-1],[b,kb]=P[i];return ka+(kb-ka)*(y-a)/(b-a)}return P[P.length-1][1]}
 function snackCost(v,f){const x=(+v||2)*snackK(f&&f.year)*100;return x<100?Math.max(5,Math.round(x/5)*5):Math.round(x/10)*10}
-const snackMoney=c=>c<100?c+"c":(c/100).toFixed(2);
+/* under a board priced in cents, dollar amounts carry their sign ("$1.10, saves 20c") so the counter reads as one price style (review 12) */
+const snackMoney=c=>c<100?c+"c":"$"+(c/100).toFixed(2);
 const comboCost=c=>{const s=c<100?5:10;return Math.min(c-s,Math.floor(c*.88/s)*s)};
 /* combos are one from each part of the counter: something to eat, something cold, something sweet */
 const SNACK_ROLE={Popcorn:"main",Hot:"main",Savoury:"main",Drinks:"drink",Frozen:"drink",Retro:"sweet",Chocolate:"sweet",Lollies:"sweet"};
