@@ -157,7 +157,7 @@ function fitRoot(root){
     for(let k=0;k<60&&over(box);k++){let ch=false;nodes.forEach(n=>{const s=parseFloat(n.style.fontSize),m=+(n.dataset.min||16);if(s>m){n.style.fontSize=(s-1)+"px";ch=true}});if(!ch)break}
     if(over(box)){const ns=[...box.querySelectorAll("[data-note]")];
       for(const L of [2,1]){if(!over(box))break;ns.forEach(e=>{e.style.display="-webkit-box";e.style.webkitBoxOrient="vertical";e.style.webkitLineClamp=String(L);e.style.overflow="hidden"})}
-      if(over(box))ns.forEach(e=>{e.style.display="none"})}
+      /* review 14: notes go one at a time from the bottom, not all at once */for(let i=ns.length-1;i>=0&&over(box);i--)ns[i].style.display="none"}
     /* last resort: drop extra items (highest index first, later courses first), then fine print extras */
     const dr=[...box.querySelectorAll("[data-drop]")].filter(e=>e.closest("[data-box]")===box).map((e,i)=>[+(e.dataset.drop||0),i,e]).sort((x,y)=>x[0]-y[0]||x[1]-y[1]);
     while(over(box)&&dr.length)dr.pop()[2].style.display="none";

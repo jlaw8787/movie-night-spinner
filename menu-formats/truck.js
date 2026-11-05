@@ -157,7 +157,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const nLen=clean(note.text).length,nSize=nLen>150?16:nLen>110?17:nLen>80?18:19;
   const CWD=280,C2X=RX+20+CWD+16,C2W=RW-20-CWD-16-20,LH=96,TH=WH-40-LH-14;
   const card=`<div style="position:absolute;left:${RX+20}px;top:${WY+20}px;width:${CWD}px;height:${WH-40}px;box-sizing:border-box;padding:14px 18px 10px;background:#fbf7ec;transform:rotate(${t.tilt*.6}deg);box-shadow:0 4px 12px rgba(0,0,0,.35);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden">
-    <div>${kick(t.win,acc,14).replace(clamp(1),clamp(2))}<div style="font:italic 400 ${nSize}px/1.34 ${e.board==="enamel"?BF:"'Lora',serif"};color:#22201c;margin-top:6px;${clamp(7)}">"${esc(note.text)}"</div></div>
+    <div>${kick("Overheard at the window",acc,14)}<div style="font:italic 400 ${nSize}px/1.34 ${e.board==="enamel"?BF:"'Lora',serif"};color:#22201c;margin-top:6px;${clamp(7)}">"${esc(note.text)}"</div></div>
     <div style="font:400 ${ei<2?36:32}px/1 ${SF};color:${acc};text-align:right">${esc(note.by)}</div></div>`;
   const logoPanel=`<div data-dark="${panelDark}" data-light="${panelLight}" style="position:absolute;left:${C2X}px;top:${WY+20}px;width:${C2W}px;height:${LH}px;padding:10px 20px;box-sizing:border-box;background:${panelDark};display:flex;align-items:center;justify-content:center;border-left:6px solid ${acc};box-shadow:0 4px 14px rgba(0,0,0,.4)">
       ${lg?`<img src="${lg.src}" crossorigin="anonymous" onload="${SAMPLE}" style="width:${lg.w}px;height:${lg.h}px;object-fit:contain">`

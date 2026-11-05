@@ -25,6 +25,9 @@ The sweet starters check fails when a biscuit, cake, lolly or ice cream is liste
 
 The prices test runs the shared price code (priceEnd and priceTidy in app.js): odd cents go up to a price ending and a card shows one price style. `NODE_PATH=$(npm root -g) MNS_BROWSER=/usr/bin/google-chrome node scripts/check-prices.cjs` renders every shared card and fails on odd cents or cents beside dollars (about five minutes; pass a number for that many films per layout).
 
+
+`node scripts/check-print-text.cjs [N | "Film (Year)" ...]` reads every printed menu with the web fonts loaded and fails when a dish name is hidden by the fit passes, or when the Save PDF copy still holds a shape html2canvas drops: a filled inline-block holding lines of text (printed as a black box), clip-text lettering (printed as a bare bar) or a masked photo (printed with a hard edge). It stands in for html2canvas, so nothing is drawn and it runs over all 900 in about half an hour.
+
 ## Browser checks
 
 These require Playwright, Chromium and Python 3. Supply an existing Playwright module with `PLAYWRIGHT_MODULE` and a Chromium executable with `MNS_BROWSER`, or use a normally installed Playwright package/browser.

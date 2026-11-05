@@ -182,7 +182,7 @@ const FX=window.__fmtBHA=window.__fmtBHA||{
         box.querySelectorAll("[data-gap]").forEach(g=>{const p=parseFloat(g.style.paddingBottom)||0;if(p>3){g.style.paddingBottom=(p-1)+"px";ch=true}});
         if(!ch)break}
       for(const n of [2,1])if(FX.over(box))box.querySelectorAll("[data-clamp]").forEach(e=>{e.style.display="-webkit-box";e.style.webkitBoxOrient="vertical";e.style.webkitLineClamp=String(n);e.style.overflow="hidden"});
-      if(FX.over(box))box.querySelectorAll("[data-clamp]").forEach(e=>e.style.display="none");
+      /* review 14: notes go one at a time from the bottom, not all at once */{const ns=[...box.querySelectorAll("[data-clamp]")];for(let i=ns.length-1;i>=0&&FX.over(box);i--)ns[i].style.display="none"}
       if(FX.over(box))box.querySelectorAll("[data-drop]").forEach(e=>e.style.display="none");
       /* last resort for extreme menus: everything down to the 14px floor */
       for(let k=0;k<30&&FX.over(box);k++){let ch=false;nodes.forEach(n=>{const s=parseFloat(getComputedStyle(n).fontSize);if(s>14){n.style.fontSize=(s-1)+"px";ch=true}});if(!ch)break}

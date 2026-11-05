@@ -82,7 +82,7 @@ function fitBox(b){b.style.setProperty("--k","1");const notes=[...b.querySelecto
   while(overH(b)&&k>min){k=Math.round((k-.02)*100)/100;b.style.setProperty("--k",k)}
   if(overH(b)){notes.forEach(n=>n.style.webkitLineClamp="1")}
   for(let i=drops.length-1;i>=0&&overH(b);i--)drops[i].style.display="none";
-  if(overH(b)){notes.forEach(n=>n.style.display="none")}
+  /* review 14: notes go one at a time from the bottom, not all at once */for(let i=notes.length-1;i>=0&&overH(b);i--)notes[i].style.display="none";
   if(overH(b)){names.forEach(n=>{n.style.display="-webkit-box";n.style.webkitBoxOrient="vertical";n.style.webkitLineClamp="1";n.style.overflow="hidden"})}
   if(overH(b)){rows.forEach(r=>{if(r.children.length>1){r.style.display="grid";r.style.gridTemplateColumns="1fr 1fr";r.style.columnGap="18px"}})}
   while(overH(b)&&k>.5){k=Math.round((k-.02)*100)/100;b.style.setProperty("--k",k)}}

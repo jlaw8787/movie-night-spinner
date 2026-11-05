@@ -131,3 +131,17 @@ No change. The strip's buttons are 44px tall and named, the store sign taps are 
 ## Note on check-prep-a4
 
 Run on its own after the browser passes: 900 Prep sheets, 1,708 A4 pages at 4 guests, pass (21 minutes on this machine).
+
+## Fixed after the review
+
+1. **Lines are kept.** libUnclip (app.js) never hides a dish name: a line with a price beside it wraps instead (Night at the Museum's "Easter Island watermelon and feta skewers" is back). A clamped note gets one more line when its box still holds everything. Campfire, saloon, tiki, galley, placemat, lab, tavern and airline hid every note in a box at once when one would not fit; they now drop one note at a time from the bottom. On a 36-film sample across those layouts, hidden lines fell from 129 to 59. The Martian keeps its notes on screen and paper.
+2. **Save PDF keeps every word.** In the export copy, a filled inline-block holding lines of text prints as a shrink-to-fit block (The Warriors' six station labels print), and clip-text lettering prints as solid text in the gradient's middle colour (Cruella, The Rocky Horror Picture Show, Rocketman).
+3. **Club photos keep their fade.** A masked photo is drawn into a picture of its box (pdfMaskDraw, with its fit, position, filter and blend) and the mask's gradient is applied to it (pdfMaskApply). All 34 club films.
+4. **Vegetarian phone menus on hand-built films.** dietPhone runs the card's swap list over the phone text menu, also sentence by sentence and with either apostrophe, so Big Night reads "Stuffed roast pumpkin, whole, Carried in on a board at the feast" and Get Shorty "Chili's portobello". New swaps for Mickey Blue Eyes, The Departed and Anchorman's phone lines in data/diet.
+5. **Kids' mode in Director's cut.** planHTML goes through the same kids' word pass as the card and Prep sheet: Shanghai Noon lists "Ginger and jasmine tea cooler (alcohol-free)". check-kids-cards.cjs now reads the planner too.
+6. **Page frame colour.** edgeColour reads the outermost 0.6 per cent of the page instead of 5 per cent: The Lost World prints on cream, The Phantom Menace on light grey.
+7. **Small items.** Truck's note card kicker reads "Overheard at the window", so the board line no longer prints twice (38 films). "Bicarb soda", "cos" and "Skid Row takeaway" in the data. Analyze This' fine print moved clear of "With sambuca, 4.00." The calendar's quiet-stretch window is ten weeks, so mid-May shows Christmas in July.
+
+New check: scripts/check-print-text.cjs fails on a hidden dish name, and on a filled inline-block with text, clip-text lettering or a masked photo left in the Save PDF copy. It fails on the old code (The Warriors, Cruella, Tron: Legacy, Night at the Museum) and passes on the new.
+
+Left open: tavern's screen still cuts some notes with "..." where the PDF now shows them in full (Brave); other hidden notes on long campfire and canteen menus (Crocodile Dundee II, Cliffhanger, Red Heat) that only a shorter note or a looser layout would fix; Showtime cues naming the meat dish in Vegetarian mode; the desktop strip repeating the "This week's film" panel; Skyfall's repeated kit note; the long phone Candy bar page; small swipe-view type on hand-built cards.

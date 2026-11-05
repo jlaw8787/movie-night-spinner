@@ -55,7 +55,7 @@ if(!window.__fmtFitLab)window.__fmtFitLab=function(t){
       if((k<.8||over())&&e.querySelector("[data-drop]")){e.querySelectorAll("[data-drop]").forEach(d=>d.style.display="none");k=shrink(.52)}
       if(over())e.querySelectorAll("[data-note]").forEach(d=>{d.style.display="-webkit-box";d.style.webkitBoxOrient="vertical";d.style.webkitLineClamp="1";d.style.overflow="hidden"});
       if(over())e.querySelectorAll("[data-drop2]").forEach(d=>d.style.display="none");
-      if(over())e.querySelectorAll("[data-note]").forEach(d=>d.style.display="none");
+      /* review 14: notes go one at a time from the bottom, not all at once */{const ns=[...e.querySelectorAll("[data-note]")];for(let i=ns.length-1;i>=0&&over();i--)ns[i].style.display="none"}
     });
   };
   run();if(document.fonts){if(document.fonts.ready)document.fonts.ready.then(run);if(document.fonts.addEventListener)document.fonts.addEventListener("loadingdone",run)}setTimeout(run,500);setTimeout(run,1600);setTimeout(run,3200);

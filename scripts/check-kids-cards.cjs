@@ -20,7 +20,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
   const hits=[];
   for(const id of ids){const f=FILMS.find(x=>x.id===id);if(!f)continue;window.__stage=false;try{await ensureExact(f);await show(f,true)}catch(e){continue}
    await new Promise(r=>setTimeout(r,120));
-   const txt=(card.innerText+'\n'+(()=>{const ph=document.getElementById('fmtPhone');if(!ph)return '';const w=document.createTreeWalker(ph,NodeFilter.SHOW_TEXT),a=[];let n;while(n=w.nextNode())a.push(n.nodeValue);return a.join(' ')})()/* text nodes joined with a space, so "floats" and "Root beer" never run together */).replace(/\s+/g,' ');
+   const txt=(card.innerText+'\n'+(()=>{const ph=document.getElementById('fmtPhone');if(!ph)return '';const w=document.createTreeWalker(ph,NodeFilter.SHOW_TEXT),a=[];let n;while(n=w.nextNode())a.push(n.nodeValue);return a.join(' ')})()+'\n'+(()=>{/* review 14: the Director's cut dish list too */const t=document.createElement('div');t.innerHTML=planHTML(current);const w=document.createTreeWalker(t,NodeFilter.SHOW_TEXT),a=[];let n;while(n=w.nextNode())a.push(n.nodeValue);return a.join(' ')})()/* text nodes joined with a space, so "floats" and "Root beer" never run together */).replace(/\s+/g,' ');
    const clean=txt.replace(OK,' ');for(const m of clean.matchAll(BAD)){const i=m.index;hits.push(`${id}: "${clean.slice(Math.max(0,i-30),i+m[0].length+20).trim()}"`)}}
   return {n:ids.length,hits}},[N,NAMED]);
  console.log(`${r.n} kid-safe films read with kids' mode on`);

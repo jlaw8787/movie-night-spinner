@@ -1,13 +1,13 @@
 # Handover: Movie Night Spinner
 
-Read this first in a new chat. Last updated 5 Nov 2026. Start with "5 Nov, evening" at the bottom.
+Read this first in a new chat. Last updated 5 Nov 2026. Start with "5 Nov, night" at the bottom.
 
 ## Where things are
 
 - Repo: jlaw8787/movie-night-spinner
 - Launch branch: wip/menu-polish (917768a22)
 - Work branch: wip/store-overhaul, everything pushed. It sits on top of menu-polish. main has one extra commit (d30fb02ac) that merges in clean.
-- Live on Netlify while GitHub is flagged: https://movie-night-spinner.netlify.app (Netlify project "movie-night-spinner", site id b641e7a7-b7d1-44cc-95e1-79f0bc20acf6). Deployed 5 Nov evening from wip/store-overhaul (deploy 6aec33c6). To redeploy, use the Netlify connector's deploy-site on that project and run the command it gives from the repo folder. Plain static site, no build step.
+- Live on Netlify while GitHub is flagged: https://movie-night-spinner.netlify.app (Netlify project "movie-night-spinner", site id b641e7a7-b7d1-44cc-95e1-79f0bc20acf6). Deployed 5 Nov night from wip/store-overhaul (deploy DEPLOYID). To redeploy, use the Netlify connector's deploy-site on that project and run the command it gives from the repo folder. Plain static site, no build step.
 - GitHub account is still flagged, so Pages is down. When it clears:
   1. Merge wip/menu-polish into main
   2. Run the tests
@@ -167,3 +167,15 @@ After the fixes: run all tests, redeploy to Netlify, add a "Fixed after the revi
 - Josh chose commas for spaced-hyphen titles: display title changed at load in app.js, ids unchanged.
 - Left open: desktop strip repeats the "This week's film" panel; Skyfall's repeated kit note; long phone Candy bar page; small swipe-view type on hand-built cards. Suggested earlier and not built: any showtime instead of 5pm to 9pm, a calendar entry with a start-cooking reminder.
 - Next: review 14, a fresh independent scored review, target 9.5.
+
+## 5 Nov, night: review 14 scored 8.6, fixed and live (deploy DEPLOYID)
+
+- Review 14 (docs/review-14.md, shots review-14-01 to 27) scored 8.6, same as review 13: every review 13 fix held, and a new set of faults turned up that the tone check cannot see because it measures brightness, not missing words. All 7 fix items done, pushed to wip/store-overhaul and live on Netlify. Notes under "Fixed after the review" at the end of review-14.md.
+- Josh's rule (only house lines drop) is now enforced in code: libUnclip never hides a dish name, and the eight layouts with their own fit pass drop notes one at a time from the bottom, not all at once. Do not go back to hiding every note in a box.
+- Save PDF: filled inline-blocks holding text print as tables, clip-text prints as solid text, masked photos are drawn by pdfMaskDraw and faded by pdfMaskApply. The page frame colour reads only the outermost 0.6 per cent of the page.
+- Vegetarian on hand-built phone menus: dietPhone runs the film's diet.text list sentence by sentence. A phone line with meat left in it needs a pair added to data/diet/<slug>.json (whole sentence, as the phone shows it), then node scripts/build-data.cjs.
+- Kids' mode now covers the Director's cut list (planHTML wraps planHTML0 in kidsDryDom).
+- New check: scripts/check-print-text.cjs (about half an hour for all 900). check-kids-cards.cjs reads the planner too.
+- Left open: tavern's screen still cuts some notes with "..." where the PDF shows them in full; hidden notes on long campfire and canteen menus; Showtime cues naming the meat dish in Vegetarian mode; desktop strip repeats the "This week's film" panel; Skyfall's repeated kit note; long phone Candy bar page; small swipe-view type on hand-built cards. Suggested earlier and not built: any showtime instead of 5pm to 9pm, a calendar entry with a start-cooking reminder.
+- Next: review 15, a fresh independent scored review, target 9.5. Start it in a new chat.
+

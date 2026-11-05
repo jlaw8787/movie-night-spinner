@@ -891,7 +891,7 @@ function phoneView(f,spec,menu){
   pvArgs=f?[f,spec,menu]:null;
   if(!f){fmtPhone.innerHTML="";applyPhone();return}
   setTimeout(()=>{try{kidsDryDom(fmtPhone,f)}catch(e){}},0);
-  fmtPhone.innerHTML=fmtPhoneHTML(f,spec,menu);fmtPhoneWire(fmtPhone);
+  fmtPhone.innerHTML=spec.fmt==="lib"?fmtPhoneHTML(f,spec,menu):dietPhone(f,fmtPhoneHTML(f,spec,menu));fmtPhoneWire(fmtPhone);
   {const fb=fmtPhone.querySelector(".fp-flip");fb.textContent="Read the printed menu full size";fb.addEventListener("click",()=>openMenuZoom(fb))}
   applyPhone();
 }
@@ -1071,6 +1071,13 @@ function dietHTML(f,html){
     while(n=w.nextNode()){let v=n.nodeValue;for(const i of miss){const a=pairs[i][0];if(v.includes(a))v=v.split(a).join("\u0001"+i+"\u0002")}if(v!==n.nodeValue){n.nodeValue=v;ch=true}}if(ch)out=t.innerHTML}catch(e){}}
   return out.replace(/\u0001(\d+)\u0002/g,(m,i)=>{const b=pairs[+i][1];return esc(b)});
 }
+/* review 14: the phone text menu on a hand-built film splits each printed line into a name and a note ("Roast pork, whole-pig style" / "Carried in on a board at the feast"),
+   so the card's whole-line swaps never matched it and Vegetarian left the meat names over a pumpkin recipe. The phone runs the same list, also sentence by sentence */
+function dietPhone(f,html){if(!dietKeyF(f)||!f||!f._diet||!f._diet.text)return html;const T=f._diet.text,x={};
+  for(const k of Object.keys(T)){const out=[];for(const [a,b] of (T[k]||[])){if(!a)continue;out.push([a,b]);if(/[’‘]/.test(a))out.push([a.replace(/[’‘]/g,"'"),b]);const sa=String(a).split(/(?<=[.!?])\s+/),sb=String(b).split(/(?<=[.!?])\s+/);
+    if(sa.length>1&&sa.length===sb.length)sa.forEach((t,i)=>{const u=t.replace(/[.!?]$/,""),v=sb[i].replace(/[.!?]$/,"");if(u!==v&&u.length>3)out.push([u,v])})}
+    x[k]=out.sort((p,q)=>q[0].length-p[0].length)}
+  return dietHTML(Object.assign(Object.create(f),{_diet:Object.assign({},f._diet,{text:x})}),html)}
 function dietDeep(f,o){if(typeof o==="string")return dietText(f,o);if(Array.isArray(o))return o.map(x=>dietDeep(f,x));if(o&&typeof o==="object"){const r={};for(const k in o)r[k]=k==="k"?o[k]:dietDeep(f,o[k]);return r}return o}
 const _dietSpecs=new WeakMap();
 function dietSpec(f,spec){if(!spec||!dietKeyF(f)||!f._diet)return spec;let c=_dietSpecs.get(spec);if(!c){c={};_dietSpecs.set(spec,c)}const k=dietKeyF(f);return c[k]||(c[k]=dietDeep(f,spec))}
@@ -1316,7 +1323,9 @@ const planDur=m=>m>=60?Math.floor(m/60)+" hr"+(m%60?" "+m%60+" min":""):m+" min"
 /* a wait: its length, and on its own when to start (review 13: "12 hr, start the day before wait" read back to front) */
 const planMin=m=>m>=1440?(d=>d+(d===1?" day":" days"))(Math.round(m/1440)):m>=600?(Math.round(m/60))+" hr":m>=60?Math.floor(m/60)+" hr"+(m%60?" "+m%60+" min":""):m+" min";
 const planWhen=m=>m>=1440?(d=>`, start ${d===1?"the day":d+" days"} before`)(Math.round(m/1440)):m>=600?", start the day before":"";
-function planHTML(f){
+/* review 14: the dish list in Director's cut reads the same kids' and alcohol-free words as the card and Prep sheet ("Rye and jasmine tea highball" in kids' mode) */
+function planHTML(f){const h=planHTML0(f);if(typeof document==='undefined'||!dryNow(f))return h;try{const t=document.createElement('template');t.innerHTML=h;kidsDryDom(t.content,f);const d=document.createElement('div');d.appendChild(t.content);return d.innerHTML}catch(e){return h}}
+function planHTML0(f){
   const r=f._r2,k=PLAN.guests/(r.serves||4),C={s:"Snacks",m:"Mains",w:"Sweets",d:"Drinks",c:"From the candy bar"},all=planAll(f);
   const TAG={veg:"vegetarian version",af:"alcohol-free version"},BLK={meat:"has meat or fish",alcohol:"has alcohol"};
   return `<div class="pl-row"><span class="pl-l">Guests</span><button type="button" class="pl-b" data-pl="-" aria-label="Fewer guests">−</button><output class="pl-g" aria-live="polite">${PLAN.guests}</output><button type="button" class="pl-b" data-pl="+" aria-label="More guests">+</button></div>
@@ -1512,6 +1521,13 @@ function libUnclip(card,done){if(done)card.dataset.unclip="1";card.querySelector
   const lo=Math.max(14,Math.floor(fs*0.72));while(hid()&&fs>lo){fs-=1;e.style.fontSize=fs+"px";if(e.style.lineHeight)e.style.lineHeight=Math.round(lh*fs/parseFloat(cs.fontSize))+"px"}
   /* one-line labels a few pixels over: close the word gaps, then let it wrap to a second line */
   if(hid()&&cs.whiteSpace==="nowrap"){let ws=0;while(hid()&&ws>-3){ws-=0.5;e.style.wordSpacing=ws+"px"}if(hid()){e.style.whiteSpace="normal";e.style.textOverflow="clip"}}
+  /* review 14: a dish name never hides (Night at the Museum lost one here): it wraps onto as many lines as it needs */
+  const sib=e.parentElement?[...e.parentElement.children].filter(c=>c!==e):[];
+  if(hid()&&sib.some(c=>/^\s*[$£€¢]?\d{0,3}[.,]?\d{1,2}\s*(¢|c|cr|crowns?|silver|gold|[sd])?\s*$/i.test(c.textContent)&&c.textContent.trim().length<12)){e.style.webkitLineClamp="unset";e.style.display="block";e.style.overflow="visible";return}
+  /* a dish note gets one more line before anything is hidden, as long as its box still holds everything */
+  if(hid()&&e.children.length===0&&+cs.webkitLineClamp>=1){let box=e.parentElement;while(box&&box!==card&&getComputedStyle(box).overflow==="visible")box=box.parentElement;
+    const was=e.style.webkitLineClamp,n=+(e.dataset.cl0||(e.dataset.cl0=cs.webkitLineClamp));e.style.webkitLineClamp=String(n+1);
+    if(!hid()&&box&&box.scrollHeight<=box.clientHeight+1)return;e.style.webkitLineClamp=was}
   /* last resort for plain fine print: drop whole sentences; if it still cannot fit, hide the line rather than show half a description */
   if(hid()&&e.children.length===0&&(+cs.webkitLineClamp>=2||(+cs.webkitLineClamp===1&&fs<=20))){let t=e.textContent.trim();const sent=t.match(/[^.!?]+[.!?]+/g);while(hid()&&sent&&sent.length>1){sent.pop();e.textContent=sent.join("").trim()}
     /* still over: drop list items off the end at the commas, so it reads "Hummus and eggplant dip, flatbread." not "olives,..." */
@@ -2222,8 +2238,9 @@ function renderBoard(){
 function renderCal(cal){
   /* the calendar only lists what's close: big days (Christmas, Easter, Halloween and the like) a month out, the rest a week out, and the strip hides when nothing is due */
   const on=cal.filter(c=>c.on);let up=cal.filter(c=>!c.on&&c.next&&daysTo(c.day)<=(c.s.big?31:7)).sort((a,b)=>a.day-b.day);
-  /* review 13: a quiet stretch (early June) left the strip empty with Christmas in July a month off, so the next day within six weeks shows instead */
-  if(!on.length&&!up.length)up=cal.filter(c=>!c.on&&c.next&&daysTo(c.day)<=45).sort((a,b)=>a.day-b.day).slice(0,1);
+  /* review 13: a quiet stretch (early June) left the strip empty with Christmas in July a month off, so the next day within six weeks shows instead.
+     Review 14: mid-May was still empty (Christmas in July 47 days off), so the window is ten weeks */
+  if(!on.length&&!up.length)up=cal.filter(c=>!c.on&&c.next&&daysTo(c.day)<=70).sort((a,b)=>a.day-b.day).slice(0,1);
   $("shopCal").hidden=!on.length&&!up.length;
   const chip=(c,isOn)=>`<button type="button" class="${isOn?"on":""}${!isOn&&peekSeason===c.s.id?" peek":""}" aria-pressed="${isOn||peekSeason===c.s.id}" data-season="${c.s.id}" style="--sg:${c.s.c[0]};--sf:${c.s.c[1]}"><b>${ESC(c.s.name)}</b>${isOn?(c.end?`<small>Until ${fmtDay(c.end)}</small>`:""):`<small>${(d=>d===1?"Tomorrow":`In ${d} days, ${fmtDay(c.day)}`)(daysTo(c.day))}</small>`}</button>`;
   $("shopCal").innerHTML=(on.length?`<span class="cal-k">On now</span>`+on.map(c=>chip(c,true)).join(""):"")+(up.length?`<span class="cal-k">Coming up</span>`+up.map(c=>chip(c,false)).join(""):"");
@@ -2612,6 +2629,34 @@ function pdfConic(g,w,h){const m=g.match(/^(repeating-)?conic-gradient\((.*)\)$/
   const gr=x.createConicGradient((from-90)*Math.PI/180,cx,cy);const E=1e-4;
   for(let base=0;base<1-E;base+=per)for(const s of st){const at=base+s.at;if(at>1+E)break;gr.addColorStop(Math.min(1,Math.max(0,at)),s.col)}
   x.fillStyle=gr;x.fillRect(0,0,w,h);return c.toDataURL("image/png")}
+/* review 14: html2canvas skips CSS masks, so a faded photo printed with a hard edge (club). The mask's linear gradient is applied to a picture of the box:
+   its alpha stops become a gradient drawn with destination-in, along the same angle */
+async function pdfMaskDraw(el){const w=el.clientWidth,h=el.clientHeight,k=2.5;if(!w||!h)return null;const c=document.createElement("canvas");c.width=Math.round(w*k);c.height=Math.round(h*k);const x=c.getContext("2d");
+  const r0=el.getBoundingClientRect(),bw=parseFloat(getComputedStyle(el).borderLeftWidth)||0,bt=parseFloat(getComputedStyle(el).borderTopWidth)||0;
+  {const bc=getComputedStyle(el).backgroundColor;if(bc&&!/rgba\([^)]*,\s*0\)|transparent/.test(bc)){x.fillStyle=bc;x.fillRect(0,0,c.width,c.height)}}
+  const blend={screen:"screen",multiply:"multiply",overlay:"overlay",lighten:"lighten",darken:"darken","soft-light":"soft-light"};
+  for(const n of el.querySelectorAll("*")){const cs=getComputedStyle(n);if(cs.display==="none"||cs.visibility==="hidden")continue;const r=n.getBoundingClientRect();if(!r.width||!r.height)continue;
+    const dx=(r.left-r0.left-bw)*k,dy=(r.top-r0.top-bt)*k,dw=r.width*k,dh=r.height*k;x.save();x.globalAlpha=+cs.opacity||1;x.globalCompositeOperation=blend[cs.mixBlendMode]||"source-over";
+    if(n.tagName==="IMG"&&n.naturalWidth){const iw=n.naturalWidth,ih=n.naturalHeight,fit=cs.objectFit,op=(cs.objectPosition||"50% 50%").split(/\s+/).map(v=>/%$/.test(v)?parseFloat(v)/100:.5);
+      let sx=0,sy=0,sw=iw,sh=ih,ex=dx,ey=dy,ew=dw,eh=dh;
+      if(fit==="cover"){const q=Math.max(dw/iw,dh/ih);sw=dw/q;sh=dh/q;sx=(iw-sw)*op[0];sy=(ih-sh)*(op[1]===undefined?.5:op[1])}
+      else if(fit==="contain"){const q=Math.min(dw/iw,dh/ih);ew=iw*q;eh=ih*q;ex=dx+(dw-ew)*op[0];ey=dy+(dh-eh)*(op[1]===undefined?.5:op[1])}
+      if(cs.filter&&cs.filter!=="none")x.filter=cs.filter.replace(/blur\(([\d.]+)px\)/,(m,v)=>`blur(${v*k}px)`);x.drawImage(n,sx,sy,sw,sh,ex,ey,ew,eh)}
+    else if(/gradient/.test(cs.backgroundImage)&&!n.textContent.trim()){for(const g of splitLayers(cs.backgroundImage).reverse()){const v=/^radial/.test(g)?pdfVignette(g,Math.round(r.width),Math.round(r.height)):null;
+      if(v){const vi=new Image();vi.src=v;await vi.decode().catch(()=>{});try{x.drawImage(vi,dx,dy,dw,dh)}catch(e){}}else if(/^linear-gradient/.test(g)){/* a straight gradient: let the browser paint it to a box and copy that */const t=document.createElement("canvas");t.width=Math.max(1,Math.round(dw));t.height=Math.max(1,Math.round(dh));
+        const m=g.match(/^linear-gradient\((.*)\)$/);if(m){const a=splitLayers(m[1]);let ang=180;if(/^-?[\d.]+deg$/.test(a[0].trim())){ang=parseFloat(a[0]);a.shift()}const tc=t.getContext("2d"),th=ang*Math.PI/180,ux=Math.sin(th),uy=-Math.cos(th),L=Math.abs(t.width*ux)+Math.abs(t.height*uy),gr=tc.createLinearGradient(t.width/2-ux*L/2,t.height/2-uy*L/2,t.width/2+ux*L/2,t.height/2+uy*L/2);
+          let ok=true;a.forEach((s0,i)=>{const mm=s0.trim().match(/^(rgba?\([^)]*\)|#[0-9a-f]{3,8}|transparent)\s*([\d.]+%)?$/i);if(!mm){ok=false;return}gr.addColorStop(mm[2]?Math.min(1,parseFloat(mm[2])/100):i/(a.length-1),mm[1]==="transparent"?"rgba(0,0,0,0)":mm[1])});
+          if(ok){tc.fillStyle=gr;tc.fillRect(0,0,t.width,t.height);x.drawImage(t,dx,dy)}}}}}
+    x.restore()}
+  return pdfMaskApply(c,el.dataset.pmask)}
+function pdfMaskApply(cv,mk){const m=mk.match(/^linear-gradient\((.*)\)$/);if(!m)return null;const a=splitLayers(m[1]);let ang=180;
+  const a0=a[0].trim();if(/^-?[\d.]+deg$/.test(a0)){ang=parseFloat(a0);a.shift()}else if(/^to /.test(a0)){ang={"to top":0,"to right":90,"to bottom":180,"to left":270}[a0];if(ang===undefined)return null;a.shift()}
+  const st=a.map(s=>{const x=s.trim().match(/^(rgba?\([^)]*\)|transparent|#[0-9a-f]{3,8}|black)\s*([\d.]+%)?$/i);if(!x)return null;let al=1;
+    if(/^transparent$/i.test(x[1]))al=0;else{const r=x[1].match(/^rgba\([^,]+,[^,]+,[^,]+,\s*([\d.]+)\)$/);if(r)al=+r[1]}return {al,at:x[2]?parseFloat(x[2])/100:null}});
+  if(st.length<2||st.some(x=>!x))return null;st.forEach((x,k)=>{if(x.at===null)x.at=k===0?0:k===st.length-1?1:st[k-1].at});
+  const W=cv.width,H=cv.height,t=ang*Math.PI/180,dx=Math.sin(t),dy=-Math.cos(t),L=Math.abs(W*dx)+Math.abs(H*dy),cx=W/2,cy=H/2;
+  const x=cv.getContext("2d"),g=x.createLinearGradient(cx-dx*L/2,cy-dy*L/2,cx+dx*L/2,cy+dy*L/2);st.forEach(s=>g.addColorStop(Math.min(1,Math.max(0,s.at)),`rgba(0,0,0,${s.al})`));
+  x.globalCompositeOperation="destination-in";x.fillStyle=g;x.fillRect(0,0,W,H);x.globalCompositeOperation="source-over";return cv.toDataURL("image/png")}
 function pdfStripes(g){const m=g.match(/^repeating-linear-gradient\((.*)\)$/);if(!m)return null;const args=splitLayers(m[1]);let ang=180,i=0;
   const a0=args[0].trim();if(/^-?[\d.]+deg$/.test(a0)){ang=((parseFloat(a0)%360)+360)%360;i=1}else if(/^to /.test(a0)){ang={"to top":0,"to right":90,"to bottom":180,"to left":270}[a0];if(ang===undefined)return null;i=1}
   if(![0,90,180,270].includes(ang))return null;
@@ -2670,6 +2715,20 @@ async function renderCanvas(src,forPrint){
   try{
     await document.fonts.ready;
     if(clone.classList.contains("pp-sheet")){prepClean(clone);fitPrep(clone)}
+    /* review 14: shapes html2canvas draws wrong, fixed before the photos are touched.
+       A filled inline-block holding lines of text paints its fill over the words (The Warriors' station labels printed as black boxes):
+       it prints as a shrink-to-fit block, kept left, centre or right where its line put it.
+       Chrome lettering (a gradient clipped to the text) prints as a bare bar (Cruella): it becomes solid text in the gradient's middle colour.
+       A masked photo is marked here and baked once the photos are ready (pdfMaskApply) */
+    try{const solid=c=>{const m=c&&c.match(/rgba?\(([^)]*)\)/);if(!m)return null;const p=m[1].split(/[\s,/]+/).filter(Boolean).map(Number);return p.length<4||p[3]>.05?p.slice(0,3):null};
+      [...clone.querySelectorAll("*")].forEach(el=>{const cs=getComputedStyle(el);
+        if(cs.display==="inline-block"&&el.textContent.trim()&&(solid(cs.backgroundColor)||cs.backgroundImage!=="none")&&[...el.children].some(c=>/^(block|flex|grid|table)$/.test(getComputedStyle(c).display))){
+          const ta=el.parentElement?getComputedStyle(el.parentElement).textAlign:"left";el.style.display="table";
+          if(/right|end/.test(ta))el.style.marginLeft="auto";else if(ta==="center"){el.style.marginLeft="auto";el.style.marginRight="auto"}}
+        if((cs.webkitBackgroundClip==="text"||cs.backgroundClip==="text")&&el.textContent.trim()){const cols=cs.backgroundImage.match(/rgba?\([^)]*\)|#[0-9a-f]{3,8}\b/gi)||[],mid=cols[Math.floor(cols.length/2)]||cs.color;
+          el.style.backgroundImage="none";el.style.backgroundColor="transparent";el.style.webkitBackgroundClip="border-box";el.style.backgroundClip="border-box";el.style.color=mid;el.style.webkitTextFillColor=mid}
+        const mk=cs.webkitMaskImage||cs.maskImage;
+        if(mk&&/^linear-gradient\(/.test(mk)&&el.querySelector("img"))el.dataset.pmask=mk})}catch(err){}
     /* Safari can mark a cached poster as off-limits to the canvas, which kills the export.
        Pull each outside image fresh as a local copy first so the canvas can always read it. */
     const temp=[];
@@ -2681,6 +2740,11 @@ async function renderCanvas(src,forPrint){
       await img.decode().catch(()=>{});
     }));
     setTimeout(()=>temp.forEach(u=>URL.revokeObjectURL(u)),30000);
+    /* review 14: a photo faded out with a mask (club) is drawn into a picture of its box here, while the photos are still plain images:
+       each photo with its fit, position, filter, blend and opacity, each soft gradient layer, then the mask's fade (pdfMaskApply) */
+    for(const el of [...clone.querySelectorAll("[data-pmask]")]){try{const u=await pdfMaskDraw(el);if(!u)continue;
+      const w=el.clientWidth,h=el.clientHeight;el.style.webkitMaskImage="none";el.style.maskImage="none";el.innerHTML="";el.style.backgroundImage="none";
+      const im=new Image();im.alt="";im.src=u;im.style.cssText=`display:block;width:${w}px;height:${h}px`;el.appendChild(im);await im.decode().catch(()=>{})}catch(e){}}
     /* filtered photos (blur, brightness, sepia) print as the screen shows them: baked into a plain picture first */
     clone.querySelectorAll("img").forEach(im=>{try{const cs=getComputedStyle(im);if(!cs.filter||cs.filter==="none")return;const u=pdfFiltered(im,cs);if(!u)return;
       const n=document.createElement("img");n.alt="";n.className=im.className;n.style.cssText=im.style.cssText;n.style.filter="none";n.style.objectFit="fill";n.style.width=cs.width;n.style.height=cs.height;n.src=u;im.replaceWith(n)}catch(e){}});
@@ -2793,7 +2857,8 @@ function showOverlay(url,file){
   mountModal(o,"button",modalTrigger);
 }
 /* the most common colour around the outside of a rendered page: its paper, used to fill the rest of the A4 sheet */
-function edgeColour(cv,which){const x=cv.getContext("2d"),W=cv.width,H=cv.height,b=Math.max(4,Math.round(Math.min(W,H)*.05)),cnt=new Map();
+/* review 14: the strip is the outermost few pixels only. At 5 per cent deep it reached into the artwork (The Lost World's red masthead, The Phantom Menace's black poster) */
+function edgeColour(cv,which){const x=cv.getContext("2d"),W=cv.width,H=cv.height,b=Math.max(3,Math.round(Math.min(W,H)*.006)),cnt=new Map();
   const take=(sx,sy,w,h)=>{const d=x.getImageData(sx,sy,w,h).data;for(let i=0;i<d.length;i+=28){const k=(d[i]>>3)<<10|(d[i+1]>>3)<<5|(d[i+2]>>3);const c=cnt.get(k);if(c)c.n++;else cnt.set(k,{n:1,r:d[i],g:d[i+1],b:d[i+2]})}};
   if(which!=="lr"){take(0,0,W,b);take(0,H-b,W,b)}if(which!=="tb"){take(0,0,b,H);take(W-b,0,b,H)}let best=null,tot=0;for(const c of cnt.values()){tot+=c.n;if(!best||c.n>best.n)best=c}
   /* review 13: a white poster down one side outvoted a striped paper split across two shades (Minions), so white only wins while it holds more than 60 per cent of the edge */
