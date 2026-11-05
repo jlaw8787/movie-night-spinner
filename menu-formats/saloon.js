@@ -110,11 +110,20 @@ function loadFonts(query,fams){
 }
 /* fit: reset to base sizes, then shrink inside each box until nothing overflows */
 const over=b=>b.scrollHeight>b.clientHeight+1||b.scrollWidth>b.clientWidth+1;
-function fitRoot(root){
+function fitRoot(root){fitRoot0(root);
+  const hid=()=>[...root.querySelectorAll('[data-col] [data-note]')].filter(n=>n.style.display==="none").length;
+  root.querySelectorAll('[data-col="1"]').forEach(L=>{if(L.dataset.moved||!L.querySelector('[data-course="m"]')||L.querySelectorAll("[data-course]").length<2)return;const h1=hid();if(!h1)return;
+    L.dataset.moved="1";fitRoot0(root);if(hid()>=h1){L.dataset.moved="0";fitRoot0(root)}})}
+function fitRoot0(root){
   root.querySelectorAll("[data-fs]").forEach(n=>{n.style.fontSize=n.dataset.fs+"px"});
   if(window.__fmtTrimReset)window.__fmtTrimReset(root);root.querySelectorAll("[data-note]").forEach(n=>{n.style.display="";n.style.webkitLineClamp="";n.style.overflow=""});
   root.querySelectorAll("[data-drop]").forEach(n=>{n.style.display=""});
   root.querySelectorAll("[data-line]").forEach(n=>{for(let k=0;k<80&&n.scrollWidth>n.clientWidth+1;k++){const s=parseFloat(n.style.fontSize);if(s<=+(n.dataset.min||14))break;n.style.fontSize=(s-1)+"px"}});
+  /* review 15: the left column (starters and mains, under the poster) hid notes while the right one had room (Tombstone, Unforgiven).
+     The mains move across to the top of the right column when the left will not hold them and the right will */
+  root.querySelectorAll('[data-col="1"]').forEach(L=>{const R=L.parentElement.querySelector('[data-col="2"]');if(!R)return;
+    [...R.querySelectorAll('[data-course="s"],[data-course="m"]')].forEach(c=>L.appendChild(c));
+    const m=L.querySelector('[data-course="m"]');if(L.dataset.moved==="1"&&m&&L.querySelectorAll("[data-course]").length>1)R.insertBefore(m,R.firstChild)});
   root.querySelectorAll("[data-box]").forEach(box=>{
     if(box.offsetParent===null&&getComputedStyle(box).position!=="fixed")return;
     const nodes=[...box.querySelectorAll("[data-fs]")].filter(n=>!n.hasAttribute("data-line"));
@@ -206,7 +215,7 @@ function wearLayer(P,tone,seed){
 }
 function rule(C,w){return`<div style="display:flex;align-items:center;gap:8px;justify-content:center"><span style="width:${w}px;border-top:3px solid ${C};"></span><span style="width:${w}px;border-top:1px solid ${C}"></span></div>`}
 function menuCol(keys,cs,era,ty,C,fam){
-  return keys.filter(k=>cs[k].length).map(k=>`<div style="margin:0 0 12px">
+  return keys.filter(k=>cs[k].length).map(k=>`<div data-course="${k}" style="margin:0 0 12px">
     <div style="text-align:center;border-top:2px solid ${C.ink};border-bottom:2px solid ${C.ink};padding:3px 0 2px;margin-bottom:4px"><span data-fs="22" data-min="16" style="font:${ty.cw} 22px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;color:${C.ink}">${fam&&LABEL_DRY[k]||LABEL[k]}</span></div>
     ${cs[k].map((it,i)=>`<div ${i?`data-drop="${i+1}"`:""}><div style="display:flex;gap:10px;align-items:baseline;margin-top:5px"><span data-fs="26" data-min="18" style="flex:1;font:${ty.dishW} 26px ${ty.dish};line-height:1.1">${T(it.n)}</span><span data-fs="26" data-min="18" style="font:${ty.dishW} 26px ${ty.dish};white-space:nowrap;color:${C.ink}">${(cs._p?cs._p[k][i]:price(k,i,era))}</span></div>
       ${it.note?`<div data-note data-fs="20" data-min="16" style="font:italic ${ty.bw} 20px ${ty.body};line-height:1.2;opacity:.85">${T(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`).join("")}
@@ -218,6 +227,10 @@ window.MENU_FORMATS[ID]=ctx=>{
   const ty=TYPE[E.g],P=PAPER[E.g];
   const C=inks(ctx.palette,P.bg,"#8c2a1a");
   const fam=isFamily(ctx.f),cs=courses(ctx.menu,fam),F=flav(ctx,FB),V=VOICE[tone];
+  /* review 15: the two menu columns under the poster are only about 260px tall and hid notes on 8 of 12 films. A heavy menu takes height from the poster,
+     which keeps its 2:3 shape */
+  const loadS=ks=>ks.reduce((a,k)=>a+(cs[k]||[]).reduce((b,it)=>b+1.4+String(it.note||"").length/42,0)+1.2,0),ld=Math.max(loadS(["s","m"]),loadS(["w","d"]));
+  const cutS=ld>9?170:ld>7.5?130:ld>6?90:ld>5?50:0;
   /* the shared price check: Doc's rye old fashioned never sits under the peach pie (Tombstone) */
   if(window.priceSense){const P={};for(const k of ["s","m","w","d"])P[k]=cs[k].map((x,i)=>price(k,i,era));cs._p=window.priceSense(cs,P)}
   const ph=heroes(ctx),year=String(ctx.f.year||"");
@@ -240,13 +253,13 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="margin-top:6px">${rule(C.ink,150)}</div>
       <div data-line data-fs="24" data-min="18" style="margin-top:2px;font:${ty.dw} 24px ${ty.disp};letter-spacing:.12em;text-transform:uppercase;color:${C.ink};white-space:nowrap;overflow:hidden">Bill of Fare</div>
     </div>
-    <div style="flex:none;margin-top:10px;display:flex;gap:16px;height:792px">
-      <div style="flex:none;position:relative;width:520px;height:780px;border:6px solid ${P.ink};box-shadow:0 0 0 3px ${P.bg},0 0 0 5px ${C.ink};overflow:hidden;background:#1e140c">
+    <div style="flex:none;margin-top:10px;display:flex;gap:16px;height:${792-cutS}px">
+      <div style="flex:none;position:relative;width:${Math.round(520*(780-cutS)/780)}px;height:${780-cutS}px;border:6px solid ${P.ink};box-shadow:0 0 0 3px ${P.bg},0 0 0 5px ${C.ink};overflow:hidden;background:#1e140c">
         ${ph.heroIsPoster?`<img crossorigin="anonymous" alt="" src="${ph.hero}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block">`:`<div style="position:absolute;inset:0;background:url('${ph.hero}') center 35%/cover no-repeat;filter:${filt}"></div>
         ${E.half?HALFTONE(E.half):""}${E.sheen?SHEEN(E.sheen):""}
         <div style="position:absolute;inset:0;box-shadow:inset 0 0 ${60+TN.wear*80}px rgba(30,15,0,${.25+TN.wear*.4})"></div>`}
       </div>
-      <div data-box style="flex:1;min-width:0;height:792px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center">
+      <div data-box style="flex:1;min-width:0;height:${792-cutS}px;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center">
         <div>
           <div data-fs="24" data-min="16" style="font:${ty.dw} 24px ${ty.disp};line-height:1.08;letter-spacing:.04em;text-transform:uppercase">${V.w}</div>
           <div style="margin-top:6px;font:${ty.cw} 18px ${ty.caps};letter-spacing:.12em;text-transform:uppercase;color:${C.ink}">Reward ${esc(reward)}</div>
@@ -272,9 +285,9 @@ window.MENU_FORMATS[ID]=ctx=>{
     </div>
     <div style="flex:none;margin-top:6px">${rule(C.ink,300)}</div>
     <div style="flex:1;min-height:0;margin-top:8px;display:flex;gap:28px">
-      <div data-box style="flex:1;overflow:hidden">${menuCol(["s","m"],cs,era,ty,C,fam)}</div>
+      <div data-box data-col="1" style="flex:1;overflow:hidden">${menuCol(["s","m"],cs,era,ty,C,fam)}</div>
       <div style="width:0;border-left:1px solid ${C.ink};opacity:.6"></div>
-      <div data-box style="flex:1;overflow:hidden">${menuCol(["w","d"],cs,era,ty,C,fam)}</div>
+      <div data-box data-col="2" style="flex:1;overflow:hidden">${menuCol(["w","d"],cs,era,ty,C,fam)}</div>
     </div>
     <div data-box style="flex:none;height:22px;margin-top:4px;overflow:hidden;text-align:center;white-space:nowrap;font:${ty.bw} 15px ${ty.body};opacity:.85">
       <span data-fs="15" data-min="14">${fam?"No liquor served. ":""}Poster and stills: TMDB. Bill no. ${esc(F.number)}.</span>${F.winks.slice(0,4).map((w,i)=>` <span data-drop data-fs="15" data-min="14">${i?"":"Talk of the town: "}${T(w)}.</span>`).join("")}
