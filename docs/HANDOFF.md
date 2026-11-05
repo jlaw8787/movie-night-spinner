@@ -7,7 +7,7 @@ Read this first in a new chat. Last updated 6 Nov 2026. Start with "6 Nov, late 
 - Repo: jlaw8787/movie-night-spinner
 - Launch branch: wip/menu-polish (917768a22)
 - Work branch: wip/store-overhaul, everything pushed. It sits on top of menu-polish. main has one extra commit (d30fb02ac) that merges in clean.
-- Live on Netlify while GitHub is flagged: https://movie-night-spinner.netlify.app (Netlify project "movie-night-spinner", site id b641e7a7-b7d1-44cc-95e1-79f0bc20acf6). Deployed 6 Nov morning from wip/store-overhaul (deploy 6aece027). To redeploy, use the Netlify connector's deploy-site on that project and run the command it gives from the repo folder. Plain static site, no build step.
+- Live on Netlify while GitHub is flagged: https://movie-night-spinner.netlify.app (Netlify project "movie-night-spinner", site id b641e7a7-b7d1-44cc-95e1-79f0bc20acf6). Deployed 6 Nov late morning from wip/store-overhaul (deploy 6aed0160). To redeploy, use the Netlify connector's deploy-site on that project and run the command it gives from the repo folder. Plain static site, no build step. If the upload returns a 500, ask the connector for a fresh command and run it once more (6 Nov: the second try went through).
 - GitHub account is still flagged, so Pages is down. When it clears:
   1. Merge wip/menu-polish into main
   2. Run the tests
@@ -199,7 +199,7 @@ After the fixes: run all tests, redeploy to Netlify, add a "Fixed after the revi
 - Next: a lab layout with more menu room, the airline Airplane! card, then review 16 in a new chat.
 
 
-## 6 Nov, late morning: no hidden notes on any of the 900, any showtime, Add to calendar (deploy DEPLOYID)
+## 6 Nov, late morning: no hidden notes on any of the 900, any showtime, Add to calendar (deploy 6aed0160)
 
 - check-print-text passes on all 900: no dish name or note hidden. Every test and check passes (list at the end of review-16.md).
 - Lab (menu-formats/lab.js): new strip under the poster. The menu runs from the column beside the poster into the strip dish by dish, not section by section; a split section repeats its head in the strip with "continued". Every split is tried after the fonts load, and the one that hides fewest notes, then shortens fewest, then keeps the biggest type, stays. The strip is 16px deeper (slimmer footer). If a film is still short, the generic stamp and then the "Plate A" tab give way (data-spare). The poster is untouched. Do not shrink it.
@@ -212,4 +212,5 @@ After the fixes: run all tests, redeploy to Netlify, add a "Fixed after the revi
 - New test: tests/calendar.test.cjs (Brisbane, New York, UTC, across the US clock change). week.test.cjs covers any showtime.
 - Not tested on real devices: the .ics was checked with the Python icalendar parser and in Chrome; opening it in Apple Calendar, Outlook and Google on a phone and a desktop wants a quick try by hand.
 - Pushed to wip/store-overhaul. The session's access check said pushes would be refused, but the push went through.
-- Next: see review-16.md.
+- All tests and checks pass on this build: 18 node tests, dialogs, check-browser, check-store-taps, check-sweet-starters, check-cut-words, check-kids-cards (343), check-prices, check-pdf-tone (sample and --per 2), check-phone-fit (900), check-print-text (900) and check-prep-a4 (900 Prep sheets, 1,708 A4 pages; also on locked-in films at 9 guests, with the showtime chips).
+- Next: review 16 (docs/review-16.md).
