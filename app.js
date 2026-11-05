@@ -2535,6 +2535,10 @@ async function renderCanvas(src,forPrint){
           if(/^(radial|linear)-gradient/.test(mk)&&!/url\(/.test(mk)){const c=cs.backgroundColor;el.style.backgroundImage=mk.replace(/rgb\(0, 0, 0\)/g,c);el.style.backgroundColor="transparent";
             el.style.backgroundSize=cs.webkitMaskSize||cs.maskSize;el.style.backgroundPosition=cs.webkitMaskPosition||cs.maskPosition;el.style.backgroundRepeat=cs.webkitMaskRepeat||cs.maskRepeat}}
         else el.style.visibility="hidden"}}
+      /* html2canvas paints an elliptical vignette as a flat brown wash over the whole page (canteen on dark films), so the export leaves it out */
+      if(el.hasAttribute&&el.hasAttribute("data-vig")){el.style.visibility="hidden";return}
+      /* it also smears a blurred inset shadow across the whole box, so a moulded tray well prints with a plain edge instead */
+      if(el.hasAttribute&&el.hasAttribute("data-well")){el.style.boxShadow="none";el.style.border="1px solid rgba(0,0,0,.14)"}
       /* html2canvas cannot blend layers, so a grain set to overlay or multiply would paint flat over the paper and wash it out: leave those texture layers out of the export */
       if(cs.mixBlendMode&&cs.mixBlendMode!=="normal"&&!el.textContent.trim()&&!el.querySelector("img"))el.style.visibility="hidden";
     });

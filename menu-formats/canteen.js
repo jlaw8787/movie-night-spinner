@@ -218,7 +218,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <span ${A}-name style="flex:1;font:700 max(16px,calc(25px*var(--k)))/1.12 ${g.body};color:${cellInk}">${esc(it.n)}</span>
       <span style="font:${g.dw} max(16px,calc(25px*var(--k)))/1.1 ${g.disp};color:${cAcc};white-space:nowrap">${it.ps||money(it.p,era)}</span></div>
     ${it.note?`<div ${A}-note style="display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;margin-top:2px;font:500 max(14px,calc(19px*var(--k)))/1.25 ${g.body};color:${sub}">${esc(it.note)}</div>`:""}</div>`;
-  const comp=(k,grow)=>I[k].length?`<div style="flex:${grow} 1 0;min-width:0;box-sizing:border-box;padding:calc(12px*var(--k)) 16px calc(8px*var(--k));background:${cell};border-radius:${g.radius}px;box-shadow:inset 0 3px 8px rgba(0,0,0,.28),inset 0 -2px 0 rgba(255,255,255,.5)">
+  const comp=(k,grow)=>I[k].length?`<div data-well style="flex:${grow} 1 0;min-width:0;box-sizing:border-box;padding:calc(12px*var(--k)) 16px calc(8px*var(--k));background:${cell};border-radius:${g.radius}px;box-shadow:inset 0 3px 8px rgba(0,0,0,.28),inset 0 -2px 0 rgba(255,255,255,.5)">
       <div style="margin-bottom:calc(6px*var(--k));font:700 max(14px,calc(17px*var(--k))) ${g.body};letter-spacing:.2em;text-transform:uppercase;color:${cAcc}">${esc(C[k])}</div>${I[k].map(row).join("")}</div>`:"";
   /* compartments stack full width (the tray column is too narrow to split without one word per line); each grows to share the spare depth */
   const trayInner=["m","s","w","d"].map(k=>comp(k,1)).filter(Boolean).map(x=>`<div style="display:flex;flex:${1} 1 auto">${x}</div>`).join("");
@@ -236,7 +236,7 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   const face=`<div ${A}-face style="position:absolute;inset:0;background-color:${paper};background-image:${tex};overflow:hidden;font-family:${g.body}">
     ${hero}${heroPoster?"":sidePic}${strip}${logoPanel}${ticket}${noteCard}${propCard}${head}${trayBox}${fine}${gilt}
-    <div style="position:absolute;inset:0;background:${vign};pointer-events:none"></div>${xerox}</div>`;
+    <div data-vig style="position:absolute;inset:0;background:${vign};pointer-events:none"></div>${xerox}</div>`;
   return {w:W,h:H,faces:[face]};
 };
 /* fonts ready: the app awaits .ready before it renders, so the fitter measures with the real faces and text never spills at a late font swap */
