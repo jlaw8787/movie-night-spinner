@@ -2441,6 +2441,12 @@ $("shopCal").addEventListener("click",e=>{const b=e.target.closest("[data-season
   if(!b.classList.contains("on")){peekSeason=peekSeason===id?"":id;$("shopSearch").value="";renderShop();if(!peekSeason)return}
   const el=document.getElementById("season-"+id);if(el)el.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})});
 /* the signs in the shop photo walk you to that aisle the same way the aisle cards do: that aisle on its own, scrolled into view */
+/* phone tap pads for the store's aisle signs: the photo pans at 720x360, so 44px is 12.2% of its height; each pad is centred on its sign (a big near sign grows upward only, so it never covers the far signs under it) and passes the tap on */
+if(typeof document!=="undefined"&&document.querySelectorAll)setTimeout(()=>{try{document.querySelectorAll(".sv-pan").forEach(pan=>{if(pan.querySelector(".sv-hit"))return;const first=pan.querySelector(".sv-hang");
+  pan.querySelectorAll(".sv-hang").forEach(b=>{const st=b.style,t=parseFloat(st.top),h=parseFloat(st.height),l=parseFloat(st.left),w=parseFloat(st.width);if(isNaN(t+h+l+w))return;
+    const H=Math.max(h,13.6),i=document.createElement("i");i.className="sv-hit";i.setAttribute("aria-hidden","true");i.dataset.for=b.dataset.go;
+    i.style.cssText=`left:calc(${l}% - 4px);width:calc(${w}% + 8px);top:${Math.max(0,h>=7?t+h-H:t-(H-h)/2)}%;height:${H}%`;pan.insertBefore(i,first)})})}catch(e){}},0);
+if(typeof document!=="undefined"&&document.addEventListener)document.addEventListener("click",e=>{const pad=e.target.closest(".sv-hit");if(pad){const b=pad.parentNode.querySelector(`.sv-hang[data-go="${CSS.escape(pad.dataset.for)}"]`);if(b)b.click();return}},true);
 if(typeof document!=="undefined"&&document.addEventListener)document.addEventListener("click",e=>{const h=e.target.closest(".sv-hang,.sv-hang-chip");if(!h)return;
   const g=h.dataset.go,secs=[...document.querySelectorAll("#shopAisles .aisle[data-name]")];
   const t=secs.find(x=>g==="wall"?x.classList.contains("wall"):x.dataset.name===g);
