@@ -100,10 +100,10 @@ window.MENU_FORMATS.precinct=function(ctx){
   const st0=st[0]?ctx.img(st[0],"w1280"):"",hero=pos||st0,heroP=!!pos,second=st[1]?ctx.img(st[1],"w1280"):(st0||pos),secP=!st[1]&&!st0&&!!pos;
   const C=M.courses(ctx.menu,fam);
   const bd=E.b,dd=E.d;
-  /* coin-op breakroom prices with the film's number hidden in the cents */
+  /* coin-op breakroom prices: the film's number seeds the cents, then each lands on a price ending (2.12 reads 2.25); evidence tags elsewhere keep their own cents */
   const n2=+(String(num).slice(-2))||48;
   /* mains always above starters and sweets (4 to 6 against 1 to 3), and a drink with spirits two dollars above the rest */
-  const price=(k,i,n)=>{const base={s:1,m:4,w:1,d:1}[k],c=(n2+i*17+(k==="m"?25:k==="d"?60:0))%100,sp=k==="d"&&/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|sour|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|vodka)\b/i.test(String(n||""))?2:0;return `${base+(i%3)+sp}.${String(c).padStart(2,"0")}`};
+  const price=(k,i,n)=>{const base={s:1,m:4,w:1,d:1}[k],c=(n2+i*17+(k==="m"?25:k==="d"?60:0))%100,sp=k==="d"&&/\b(whisk(e)?y|bourbon|rum|vodka|gin|tequila|mezcal|brandy|cognac|cocktail|martini|boilermaker|negroni|margarita|spritz|old fashioned|manhattan|sour|daiquiri|mojito|julep|highball|shots?|liqueur|schnapps|vodka)\b/i.test(String(n||""))?2:0;const v=+`${base+(i%3)+sp}.${String(c).padStart(2,"0")}`;return (window.priceEnd?window.priceEnd(v):v).toFixed(2)};
   /* a card extra never prices above the mains cooked tonight (Beverly Hills Cop II's club sandwich over the rib eye): it drops under the dearest one, keeping its cents */
   const priceOf=(c,i)=>{const p=price(c.k,i,c.items[i].n);if(c.k!=="m"||!c.items[i].extra)return p;const top=Math.max(0,...c.items.map((x,j)=>x.extra?0:+price("m",j,x.n)));if(!top||+p<top)return p;const ct=p.slice(p.indexOf("."));let w=Math.floor(top);if(+(w+ct)>=top)w--;return Math.max(1,w)+ct};
   const grain=M.noise(T.wear);
