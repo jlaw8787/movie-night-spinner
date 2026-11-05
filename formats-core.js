@@ -76,7 +76,17 @@ function fmtPhoneWire(root){
     const open=b.getAttribute("aria-expanded")!=="true";b.setAttribute("aria-expanded",open);
     b.nextElementSibling.hidden=!open;b.firstElementChild.textContent=open?"Hide the method":"How to make it";
   }));
+  fmtTabsFit(root);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>fmtTabsFit(root));
+  if(!fmtTabsFit.ro&&typeof ResizeObserver!=="undefined")fmtTabsFit.ro=new ResizeObserver(es=>es.forEach(e=>fmtTabsFit(e.target)));if(fmtTabsFit.ro)fmtTabsFit.ro.observe(root);
 }
+/* review 13: a wide display face cut "Starters" off at the edge of its tab on seven films. All four tabs step down together,
+   so they stay one size, never under 9px; letter spacing goes first */
+function fmtTabsFit(root){const ts=[...root.querySelectorAll(".fp-tab")];if(!ts.length||!ts[0].clientWidth)return;
+  ts.forEach(t=>{t.style.fontSize="";t.style.letterSpacing=""});
+  /* the words need clear space either side, not just to fit inside the border */
+  const over=()=>ts.some(t=>{const r=document.createRange();r.selectNodeContents(t);return r.getBoundingClientRect().width>t.clientWidth-12});if(!over())return;
+  ts.forEach(t=>t.style.letterSpacing="0");let px=parseFloat(getComputedStyle(ts[0]).fontSize)||13;
+  while(over()&&px>9){px-=.5;ts.forEach(t=>t.style.fontSize=px+"px")}}
 function fmtFontsReady(spec){
   const id="fmtfont-"+spec.fmt;
   if(typeof document!=="undefined"&&document.head&&!document.getElementById(id)){
