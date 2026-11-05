@@ -1117,7 +1117,8 @@ function planQty(q,u){
   if(u==="tsp"&&q>6){q/=3;u="tbsp"}
   if(u==="tbsp"&&q>8){q/=16;u="cup"}
   if(u==="cup"){const t=fracText(q);return t+(/^(1|\d\/\d)$/.test(t)?" cup":" cups")}
-  if(u==="tsp"||u==="tbsp")return fracText(q)+" "+u;
+  /* spoons never read in thirds: up to the next quarter under one, the next half above (review 12) */
+  if(u==="tsp"||u==="tbsp"){q=q<1?Math.ceil(q*4-0.01)/4:Math.ceil(q*2-0.01)/2;return fracText(q)+" "+u}
   return String(q<1?fracText(q):Math.ceil(q-0.01));
 }
 const UNITB={g:["g",1],kg:["g",1000],ml:["ml",1],l:["ml",1000]};
@@ -1127,20 +1128,26 @@ function planPlural(item,q){if(!(q>1))return item;if(/^cob loa(f|ves)\b/i.test(i
   const pl=x=>/(s|ice|milk|water|juice|sugar|flour|rice|bread|butter|cream|cheese|fish|corn|meat|oil|salt|pepper|mince|beef|pork|lamb|chicken|bacon|ham|tea|coffee|soda)$/i.test(x)?x:/(ch|sh|x)$/i.test(x)?x+"es":/(tomato|potato|mango|avocado)$/i.test(x)?x+"es":/[^aeiou]y$/i.test(x)?x.slice(0,-1)+"ies":/f$/i.test(x)&&/loaf|leaf|half/i.test(x)?x.slice(0,-1)+"ves":x+"s";
   /* "rib eye", "ear of corn" style names are the food, not a container: "rib" only counts when it is "rib of" or "ribs" */
   const ci=w.slice(0,3).findIndex((x,i)=>planCont(w,i));
-  if(ci>=0){if(!/s$/i.test(w[ci]))w[ci]=pl(w[ci]);if(w.length>ci+1&&w[ci+1]!=="of")w[ci]+=" of"}else if(!PL_MASS.test(head.trim()))w[w.length-1]=pl(w[w.length-1]);return [w.join(" "),...rest].join(",")}
+  /* the head noun takes the plural, before any "in", "with" or "from": "3 chipotles in adobo", not "3 chipotle in adobos" */
+  const pi=w.findIndex((x,i)=>i>0&&/^(in|with|from|on)$/i.test(x));
+  if(ci>=0){if(!/s$/i.test(w[ci]))w[ci]=pl(w[ci]);if(w.length>ci+1&&w[ci+1]!=="of")w[ci]+=" of"}else if(pi>0){if(!PL_MASS.test(w[pi-1]))w[pi-1]=pl(w[pi-1])}else if(!PL_MASS.test(head.trim()))w[w.length-1]=pl(w[w.length-1]);return [w.join(" "),...rest].join(",")}
 /* "rib eye", "round steak", "ear of corn": rib, round, square, disc, ear, head, wheel and log are the food's own name, not a container,
    unless "of" follows or the word ends the name ("4 pastry rounds"). So "9 thin beef round steaks", never "beef rounds of steaks" */
 const planCont=(w,i)=>PL_CONT.test(w[i])&&!(i>0&&/^fillets?$/i.test(w[i]))&&!(/^(rib|ear|head|wheel|log|round|square|disc)$/i.test(w[i])&&w[i+1]&&w[i+1]!=="of"&&w[i+1]!=="celery")&&!(/^cobs?$/i.test(w[i])&&/^loa(f|ves)$/i.test(w[i+1]||""));
 /* one of something stays singular even when the recipe wrote it plural: "1 clove garlic", not "1 cloves garlic" */
 function planOne(item){let [head,...rest]=String(item).split(",");const par=head.indexOf(" (");let tail="";if(par>0){tail=head.slice(par);head=head.slice(0,par)}
-  const w=head.split(" ");const i=w.slice(0,3).findIndex((x,j)=>planCont(w,j)&&/s$/i.test(x)),hasCont=w.slice(0,3).some((x,j)=>planCont(w,j));
+  /* only the first container word counts: "1 handful mint leaves" and "1 packet banana leaves" keep their leaves */
+  const w=head.split(" ");const c0=w.slice(0,3).findIndex((x,j)=>planCont(w,j)),i=c0>=0&&/s$/i.test(w[c0])?c0:-1,hasCont=c0>=0;
   if(i>=0)w[i]=planSing(w[i]);
   else if(hasCont){}
   /* "1 lemons", "1 brown onions": a plain plural noun at the end goes singular too */
   else{const L=w.length-1;if(/[a-z]{3,}s$/i.test(w[L])&&!/(ss|us|is|ous|chips|peas|oats|greens|noodles|grits|molasses|leaves|lollies|sprinkles|crumbs|breadcrumbs|flakes|seeds)$/i.test(w[L])&&!PL_MASS.test(head))w[L]=planSing(w[L]).replace(/^(loave)$/i,"loaf")}
   return [w.join(" ")+tail,...rest].join(",")}
 /* one shopping line per ingredient: the same item from two dishes is added up, and a mix of units shows as "100g + 2 tbsp" */
-const planSing=w=>/ies$/.test(w)?w.slice(0,-3)+"y":/(ch|sh|x|ss|o)es$/.test(w)?w.slice(0,-2):/[^s]s$/.test(w)?w.slice(0,-1):w;
+/* irregular ones first (review 12): chillies are a chilli, leaves a leaf, cookies a cookie, never "chilly", "leave" or "cooky" */
+const PL_IRREG={chillies:"chilli",chilies:"chili",leaves:"leaf",loaves:"loaf",halves:"half",knives:"knife",shelves:"shelf",calves:"calf",cookies:"cookie",brownies:"brownie",smoothies:"smoothie",pies:"pie",lollies:"lolly",zombies:"zombie",veggies:"veggie",birdies:"birdie",hoodies:"hoodie",ties:"tie",oreos:"oreo",goodies:"goodie",sweeties:"sweetie",movies:"movie",cheeses:"cheese",pieces:"piece",slices:"slice",sauces:"sauce",juices:"juice",spices:"spice",prices:"price",dices:"dice",courses:"course",houses:"house",purees:"puree",purées:"purée"};
+const planSing=w=>{const lo=String(w).toLowerCase();if(PL_IRREG[lo]){const v=PL_IRREG[lo];return /^[A-Z]/.test(w)?v[0].toUpperCase()+v.slice(1):v}
+  return /ies$/.test(w)?w.slice(0,-3)+"y":/(ch|sh|x|ss|o)es$/.test(w)?w.slice(0,-2):/[^s]s$/.test(w)?w.slice(0,-1):w};
 const planKey=item=>String(item).toLowerCase().split(/,| \(/)[0].replace(/\s+/g," ").trim().replace(/^((cold|chilled|fresh|warm|hot|room temperature|softened|melted|extra|full cream|whole|unsalted|salted|free-range|large|medium|ripe)\s+)+/,"").replace(/\s+(slices|sliced|pieces)$/,"").split(" ").map(planSing).join(" ");
 function planShopping(f){const k=PLAN.guests/((f._r2&&f._r2.serves)||4),ds=planDishes(f),base=ds.filter(d=>!d.extra);
   /* the card's extra dishes list shop lines like "100g butter" with no tested scaling: the amount is split out so anything a measured recipe
@@ -1171,6 +1178,9 @@ function shopLines(list){
   const tally={},order=[];
   const flat=[];for(const {d,k} of list)for(const i of d.ingredients||[]){if(WATER_RE.test(String(i.item))&&!/stock/i.test(i.item))continue;
     const bs=baseOf(i);if(bs){const g=baseG(i.q,i);for(const [q,u,item,aisle] of bs.buy(g,i))flat.push({i:{q,u,item,aisle},k});continue}flat.push({i:Object.assign({},i,{item:packNote(i.item,k)}),k})}
+  /* "a pinch of chilli powder" beside "1/2 tsp chilli powder" is one line: a pinch is an eighth of a teaspoon (review 12) */
+  {const keys=new Set(flat.map(({i})=>planKey(i.item)));for(const x of flat){const m=String(x.i.item).match(/^(?:a )?(pinch(?:es)?|dash(?:es)?)(?: of)? (.+)$/i);
+    if(m&&keys.has(planKey(m[2]))&&(x.i.q==null||!x.i.u)){x.i=Object.assign({},x.i,{item:m[2],u:"tsp",q:(x.i.q||1)/8})}}}
   for(const {i,k} of flat){
     const b=UNITB[i.u]||[i.u||"#",1],a=AISLES.includes(i.aisle)?i.aisle:"Pantry";
     const key=a+"|"+planKey(i.item);
@@ -1186,7 +1196,7 @@ function shopLines(list){
     /* salt and pepper are in every kitchen: listed so you check, never measured */
     if(STAPLE_RE.test(planKey(item)))return item+"@"+t.a;
     for(const u of ["tsp","tbsp"])if(u in t.parts){const q=t.parts[u];t.parts[u]=q<1?Math.ceil(q*4-0.01)/4:Math.ceil(q*2-0.01)/2}
-    if("tsp" in t.parts&&"tbsp" in t.parts){t.parts.tbsp+=t.parts.tsp/3;delete t.parts.tsp;t.order=t.order.filter(u=>u!=="tsp")}
+    if("tsp" in t.parts&&"tbsp" in t.parts){t.parts.tbsp=Math.ceil((t.parts.tbsp+t.parts.tsp/3)*2-0.01)/2;delete t.parts.tsp;t.order=t.order.filter(u=>u!=="tsp")}/* thirds round up to a half: "4 1/2 tbsp", never "4 1/3 tbsp" */
     /* spoons and cups next to a weight or volume fold into it, so the line reads as one amount ("375g caster sugar", not "1 tsp + 370g") */
     for(const base of ["ml","g"])if(base in t.parts){const per=base==="ml"?{tsp:5,tbsp:15,cup:250}:{tsp:4,tbsp:12,cup:200};
       for(const u of ["tsp","tbsp","cup"])if(u in t.parts){t.parts[base]+=t.parts[u]*per[u];delete t.parts[u];t.order=t.order.filter(x=>x!==u)}}
@@ -1204,15 +1214,31 @@ function shopLines(list){
     /* nobody buys half an egg or half a lemon: counts round up on the shopping list */
     if(""in t.parts&&!WHOLE_RE.test(item))t.parts[""]=Math.max(1,Math.ceil(t.parts[""]-0.05));
     if(!t.order.length)return item+"@"+t.a;
+    /* ice by the cup rounds up to whole cups, and a lot of it is a bag from the servo (a bag is about 20 cups): "1 bag ice (about 14 cups)" */
+    if(/^(crushed |cubed )?ice( cubes)?$/i.test(item)&&t.order.length===1&&"cup" in t.parts){const c=Math.ceil(t.parts.cup-0.05);if(c>=8){const b=Math.ceil(c/20);return `${b} bag${b>1?"s":""} ${item} (about ${c} cups)@${t.a}`}t.parts.cup=c}
     /* bags, jars, tins and the like are bought whole */
     if(""in t.parts&&WHOLE_RE.test(item))t.parts[""]=Math.ceil(t.parts[""]-0.05);
-    const count=""in t.parts?planQty(t.parts[""],"")+" "+(t.parts[""]>1.01?planPlural(item,t.parts[""]):planOne(item)):"";
+    let count=""in t.parts?planQty(t.parts[""],"")+" "+(t.parts[""]>1.01?planPlural(item,t.parts[""]):planOne(item)):"";
+    /* a size in front of the pack reads "a 565g can", "2 x 565g cans", never "1 565g can" */
+    count=count.replace(/^1 (\d+(?:\.\d+)?\s?(?:g|kg|ml|L|l)\b)/,"a $1").replace(/^(\d+) (\d+(?:\.\d+)?\s?(?:g|kg|ml|L|l)\b)/,"$1 x $2");
     const rest=t.order.filter(u=>u!=="").map(u=>planQty(t.parts[u],u)).join(" + ");
     return (count?count+(rest?" + "+rest:""):rest+" "+item)+"@"+t.a});
   /* green and ripe of the same fruit share one line: "3 mangoes, 1 green" */
   for(let i=0;i<lines.length;i++){const m=lines[i].match(/^(\d+) green (mango(es)?|papayas?|tomato(es)?|bananas?|apples?|capsicums?)@(.+)$/i);if(!m)continue;
     const base=planSing(m[2].toLowerCase()).replace(/^mangoe$/,"mango").replace(/^tomatoe$/,"tomato"),j=lines.findIndex((l,x)=>x!==i&&new RegExp("^(\\d+) "+base+"(e?s)?@"+m[5]+"$","i").test(l));if(j<0)continue;
     const n=+lines[j].match(/^\d+/)[0]+ +m[1];lines[j]=`${n} ${planPlural(base,n)}, ${m[1]} green@${m[5]}`;lines.splice(i,1);i--}
+  /* a herb bought by the bunch covers the spoonfuls of it in other dishes: "1 bunch chives", not "2 tbsp chives" and "1 bunch chives" (review 12) */
+  for(const H of ["chives","parsley","coriander","mint","basil","dill","thyme","rosemary","sage","oregano","tarragon","flat-leaf parsley","italian parsley","spring onions","green onions","shallots","scallions"]){
+    const bunch=lines.find(l=>new RegExp("^\\d+( small| large)? bunch(es)? (of )?(fresh )?"+H+"( leaves)?@","i").test(l));if(!bunch)continue;
+    for(let i=lines.length-1;i>=0;i--)if(lines[i]!==bunch&&new RegExp("^[\\d\\/ ]+ ((tsp|tbsp|cups?|handfuls? of|handfuls?|sprigs? of|sprigs?) )?(fresh )?((finely |roughly )?chopped )?"+H+"( leaves| sprigs)?(,[^@]*)?@","i").test(lines[i]))lines.splice(i,1)}
+  /* two lines that come out the same ("3 bunches of dill" from sprigs and from leaves) add up */
+  for(let i=0;i<lines.length;i++){const m=lines[i].match(/^(\d+)( small| large)? (bunch(?:es)?)( of)? (.+)$/);if(!m)continue;
+    for(let j=lines.length-1;j>i;j--){const n=lines[j].match(/^(\d+)( small| large)? (bunch(?:es)?)( of)? (.+)$/);if(n&&n[5]===m[5]){const t=+m[1]+ +n[1];lines[i]=`${t}${m[2]||""} ${t>1?"bunches":"bunch"}${m[4]||""} ${m[5]}`;lines.splice(j,1)}}}
+  /* salt is one line: "salt", "pinch of salt" and "salt flakes" read "salt and salt flakes" */
+  {const sl=lines.map((l,i)=>[l,i]).filter(([l])=>/^((a )?pinch(es)? of )?((sea|table|cooking|fine|kosher|flaky) )?salt( flakes?)?@/i.test(l));
+   const sp=lines.some(l=>/^salt and (freshly ground )?(black )?pepper@/i.test(l));
+   if(sl.length>1||sp&&sl.length){const fl=sl.some(([l])=>/flak/i.test(l)),pl=!sp&&sl.some(([l])=>!/flak/i.test(l)),at=sl[0][0].split("@")[1];
+     for(let k=sl.length-1;k>=0;k--)lines.splice(sl[k][1],1);if(pl||fl)lines.splice(sl[0][1],0,(pl&&fl?"salt and salt flakes":fl?"salt flakes":"salt")+"@"+at)}}
   /* "salt and pepper" already covers a plain "salt" or "pepper" line (Casino Royale listed both) */
   {const sp=lines.find(l=>/^salt and (freshly ground )?(black )?pepper@/i.test(l));if(sp)for(let i=lines.length-1;i>=0;i--)if(lines[i]!==sp&&/^((sea |table |cooking |fine )?salt|(ground |cracked )?(black )?pepper)@/i.test(lines[i]))lines.splice(i,1)}
   return lines;
@@ -1247,7 +1273,7 @@ function dishTimes(x,k){const st=(x.steps||[]).filter(t=>stepParts(t.text).main)
 /* so do the notes after the name: "(about 10 limes)" is "(about 22 limes)" for 9, "about 600g" and a split ("80ml for the mash, 125ml for the coating") scale too.
    A size per piece ("about 250g each", "330ml each", "per glass"), a temperature or a length, and the size of a tin, jar or bag stay put */
 const packAbout=(item,k)=>{const c=item.search(/,|\(/);if(c<0||WHOLE_RE.test(item))return item;
-  const tail=item.slice(c).replace(/\(about (\d+) ([a-z]+)/gi,(m,n,w)=>{if(/^(cm|mm|c|ml|g|kg|l)$/i.test(w))return m;const v=Math.max(1,Math.ceil(+n*k-0.05));return `(about ${v} ${v>1?(/s$/i.test(w)?w:planPlural(w,v)):planSing(w)}`})
+  const tail=item.slice(c).replace(/\b(\d+) (dashes|drops|splashes|shakes)\b/gi,(m,n,w)=>`${Math.max(1,Math.ceil(+n*k-0.05))} ${w}`)/* bitters scale with the guests: "8 dashes" for 4 is "18 dashes" for 9 */.replace(/\(about (\d+) ([a-z]+)/gi,(m,n,w)=>{if(/^(cm|mm|c|ml|g|kg|l)$/i.test(w))return m;const v=Math.max(1,Math.ceil(+n*k-0.05));return `(about ${v} ${v>1?(/s$/i.test(w)?w:planPlural(w,v)):planSing(w)}`})
     .replace(/\b(\d+(?:\.\d+)?)\s?(ml|g|kg|l)\b(?![^,(]*\b(each|per)\b)/gi,(m,n,u,e,o,all)=>/\b(of|x)\s*$|\(\s*$/i.test(all.slice(0,o))&&!/about\s*$/i.test(all.slice(0,o))||/^\s*(tins?|cans?|jars?|bottles?|packets?)\b/i.test(all.slice(o+m.length))?m:planQty(+n*k,u.toLowerCase()).replace(" L","\u00a0L"));
   return item.slice(0,c)+tail};
 const packNote=(item,k)=>!k||Math.abs(k-1)<.01?item:packAbout(String(item),k).replace(/\((\d+)\s+(stubbies|stubby|cans?|bottles?|tins?|jars?|packets?|bags?|tinnies|slabs?|longnecks?)([^)]*)\)/i,(m,n,u,rest)=>{const v=Math.max(1,Math.ceil(+n*k-0.05));return `(${v} ${v===1?u.replace(/ies$/,"y").replace(/s$/,""):/y$/.test(u)?u.replace(/y$/,"ies"):/s$/.test(u)?u:u+"s"}${rest})`});

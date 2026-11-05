@@ -35,4 +35,17 @@ assert.ok(!lines('rocky-v-1990',9).some(l=>/\(\d+ ?g\)/.test(l)&&/tins?|cans?/.t
 /* review 11: the frying pot covers a splash of the same oil, and salt and pepper covers plain salt */
 for(const g of [2,4,9])assert.deepEqual(oil(lines('raiders-of-the-lost-ark-1981',g)).filter(l=>/vegetable oil/.test(l)),['2 L vegetable oil@Pantry'],`Raiders at ${g}`);
 for(const g of [2,9]){const L=lines('casino-royale-2006',g);assert.ok(!(L.some(l=>/^salt and pepper@/.test(l))&&L.some(l=>/^salt@/.test(l))),`Casino Royale salt twice at ${g}`)}
+// review 12, fix 4: shopping lines read as real words
+{const L=(id,g)=>lines(id,g).join('\n');const m2=L('once-upon-a-time-in-mexico-2003',2),m9=L('once-upon-a-time-in-mexico-2003',9);
+ assert.match(m2,/^1 packet banana leaves@/m,'banana leaves stay leaves');assert.match(m2,/^1 dried chilli@/m,'one chilli, not chilly');
+ assert.match(m9,/^3 chipotles in adobo@/m,'plural on the head noun');assert.ok(!/chilli powder@[^\n]*\n[^\n]*pinch/i.test(m2)&&!/pinch(es)? (of )?chilli powder/i.test(m2),'a pinch folds into the measured chilli powder');
+ assert.match(L('moana-2016',4),/^1 handful mint leaves, plus sprigs@/m,'mint leaves stay leaves');
+ const s4=L('the-sound-of-music-1965',4);assert.match(s4,/^4 1\/2 tbsp mustard@/m,'spoons round to a half, not a third');
+ assert.ok(!/tbsp chives|tbsp parsley/.test(s4),'spoonfuls of a herb bought by the bunch fold into the bunch');
+ assert.equal((s4.match(/^[^\n@]*salt[^\n@]*@/gm)||[]).length,1,'salt is one line');
+ for(const [g,n] of [[2,4],[4,8],[9,18]])assert.match(L('some-like-it-hot-1959',g),new RegExp('bitters, '+n+' dashes@'),'bitters scale with the guests at '+g);
+ assert.match(L('some-like-it-hot-1959',9),/^1 bag ice \(about 14 cups\)@/m,'a lot of ice is a bag');
+ for(const fn of fs.readdirSync(path.join(root,'data/film'))){const r=JSON.parse(fs.readFileSync(path.join(root,'data/film',fn),'utf8')).r2;if(!r||!r.dishes)continue;
+  for(const g of [2,4,9]){const k=g/(r.serves||4);for(const l of ctx.shopLines(r.dishes.map(d=>({d,k}))))
+   assert.ok(!/\b(leave|chilly|adobos|loave|cooky)@|\b(leave|chilly|adobos)\b(?! out)|^1 \d+(g|ml|kg)\b|\d\/3 (tsp|tbsp)/.test(l),`${fn} at ${g}: ${l}`)}}}
 console.log('PASS: frying oil holds at one pot at 2, 4 and 9 guests; spoon oils still scale; pack notes follow the guests; cut names like round steak read properly.');
