@@ -7,7 +7,7 @@ Read this first in a new chat. Last updated 5 Nov 2026. Start with "5 Nov, night
 - Repo: jlaw8787/movie-night-spinner
 - Launch branch: wip/menu-polish (917768a22)
 - Work branch: wip/store-overhaul, everything pushed. It sits on top of menu-polish. main has one extra commit (d30fb02ac) that merges in clean.
-- Live on Netlify while GitHub is flagged: https://movie-night-spinner.netlify.app (Netlify project "movie-night-spinner", site id b641e7a7-b7d1-44cc-95e1-79f0bc20acf6). Deployed 5 Nov night from wip/store-overhaul (deploy DEPLOYID). To redeploy, use the Netlify connector's deploy-site on that project and run the command it gives from the repo folder. Plain static site, no build step.
+- Live on Netlify while GitHub is flagged: https://movie-night-spinner.netlify.app (Netlify project "movie-night-spinner", site id b641e7a7-b7d1-44cc-95e1-79f0bc20acf6). Deployed 5 Nov night from wip/store-overhaul (deploy 6aec5cec). To redeploy, use the Netlify connector's deploy-site on that project and run the command it gives from the repo folder. Plain static site, no build step.
 - GitHub account is still flagged, so Pages is down. When it clears:
   1. Merge wip/menu-polish into main
   2. Run the tests
@@ -168,7 +168,7 @@ After the fixes: run all tests, redeploy to Netlify, add a "Fixed after the revi
 - Left open: desktop strip repeats the "This week's film" panel; Skyfall's repeated kit note; long phone Candy bar page; small swipe-view type on hand-built cards. Suggested earlier and not built: any showtime instead of 5pm to 9pm, a calendar entry with a start-cooking reminder.
 - Next: review 14, a fresh independent scored review, target 9.5.
 
-## 5 Nov, night: review 14 scored 8.6, fixed and live (deploy DEPLOYID)
+## 5 Nov, night: review 14 scored 8.6, fixed and live (deploy 6aec5cec)
 
 - Review 14 (docs/review-14.md, shots review-14-01 to 27) scored 8.6, same as review 13: every review 13 fix held, and a new set of faults turned up that the tone check cannot see because it measures brightness, not missing words. All 7 fix items done, pushed to wip/store-overhaul and live on Netlify. Notes under "Fixed after the review" at the end of review-14.md.
 - Josh's rule (only house lines drop) is now enforced in code: libUnclip never hides a dish name, and the eight layouts with their own fit pass drop notes one at a time from the bottom, not all at once. Do not go back to hiding every note in a box.
