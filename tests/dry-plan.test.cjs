@@ -28,6 +28,6 @@ console.log(`PASS: ${dry} dry-theme films cook alcohol-free; ${grown} grown-up f
    ["Rye, sweet vermouth and bitters, stirred, with a cherry","Ginger, sweet bitter orange and bitters, stirred, with a cherry"],["Rye and jasmine tea highball","Ginger and jasmine tea cooler"],
    ["NOODLES, ROOMS AND RYE","NOODLES, ROOMS AND GINGER"],["BAR TAB","SNACK TAB"],["A jug of alcohol-free lager and lemonade","A jug of lemon squash"],
    ["Rye whisky, honey, lemon","Butterscotch, honey, lemon"],["Manhattan deli pastrami","Manhattan deli pastrami"],["Never leaves Manhattan.","Never leaves Manhattan."],
-   ["Pastrami on rye","Pastrami on rye"],["Cut 4 slices rye into 16 squares","Cut 4 slices rye into 16 squares"],["Swiss cheese on buttered rye, with dressing","Swiss cheese on buttered rye, with dressing"]])
+   ["Pastrami on rye","Pastrami on rye"],["Cut 4 slices rye into 16 squares","Cut 4 slices rye into 16 squares"],["Swiss cheese on buttered rye, with dressing","Swiss cheese on buttered rye, with dressing"],["Whisk the flour with the cold alcohol-free beer and salt.","Whisk the flour with the ginger beer and salt."]])
   assert.equal(d(t),want,t);
  console.log('PASS: kids word pass clears drinking cues and folds doubled swap words.')}

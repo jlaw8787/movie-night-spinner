@@ -15,12 +15,12 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
  await p.waitForFunction(()=>typeof show==='function'&&typeof current!=='undefined'&&current);
  const r=await p.evaluate(async ([N,NAMED])=>{
   const BAD=/\b(cocktails?|martinis?|manhattans?|negronis?|highballs?|margaritas?|mojitos?|daiquiris?|old fashioneds?|whisk(e)?y|bourbon|scotch|vodka|tequila|mezcal|gin|rum|brandy|cognac|liqueurs?|schnapps|vermouth|absinthe|champagne|prosecco|wines?|beers?|lagers?|ales?|stouts?|ciders?|sake|bar tabs?|rye)\b/gi;
-  const OK=/\b(ginger|root|butter) beer|\b(wine|cider|sherry|malt|champagne|rice wine) vinegar|\b(on|dark|light|buttered|toasted|seeded|of|sliced?|slices|thin|deli) rye|\brye (bread|loaf|crackers?|squares?|toast|batter|flour|slices?)|\bManhattan (deli|hot dog|steak|bistro|skyline|island|prison|night|melodies|lunch|clam)|\b(over|to|in|leaves|of|across|from) Manhattan|\bwine glass(es)?|\bginger ales?\b|\balcohol-free\b|\bmocktail\b|\b(prawn|shrimp|seafood|crab|lobster|fruit) cocktail|\bcocktail (franks?|sausages?|onions?|sauce|cherr(y|ies)|sticks?)|\bale(?=s? house)|\b(midtown|take|lower|upper) manhattan|\brye crispbread|\b(goodness|heaven|pete)(['’]s?|s['’])? sake/gi;
+  const OK=/\b(ginger|root|butter) beer|\b(wine|cider|sherry|malt|champagne|rice wine) vinegar|\b(on|dark|light|buttered|toasted|seeded|of|sliced?|slices|thin|deli) rye|\brye (bread|loaf|crackers?|squares?|toast|batter|flour|slices?)|\bManhattan (deli|hot dog|steak|bistro|skyline|island|prison|night|melodies|lunch|clam)|\b(over|to|in|leaves|of|across|from) Manhattan|\bwine glass(es)?|\bginger ales?\b|\balcohol-free\b|\bmocktail\b|\b(prawn|shrimp|seafood|crab|lobster|fruit) cocktail|\bcocktail (franks?|sausages?|onions?|sauce|cherr(y|ies)|sticks?)|\bale(?=s? house)|\b(midtown|take|lower|upper) manhattan|\brye crispbread|\brye into|\b(goodness|heaven|pete)(['’]s?|s['’])? sake/gi;
   const ids=NAMED.length?NAMED:FILMS.filter(f=>isKidSafe(f)).map(f=>f.id).slice(0,N);
   const hits=[];
   for(const id of ids){const f=FILMS.find(x=>x.id===id);if(!f)continue;window.__stage=false;try{await ensureExact(f);await show(f,true)}catch(e){continue}
    await new Promise(r=>setTimeout(r,120));
-   const txt=(card.innerText+'\n'+((document.getElementById('fmtPhone')||{}).textContent||'')).replace(/\s+/g,' ');
+   const txt=(card.innerText+'\n'+(()=>{const ph=document.getElementById('fmtPhone');if(!ph)return '';const w=document.createTreeWalker(ph,NodeFilter.SHOW_TEXT),a=[];let n;while(n=w.nextNode())a.push(n.nodeValue);return a.join(' ')})()/* text nodes joined with a space, so "floats" and "Root beer" never run together */).replace(/\s+/g,' ');
    const clean=txt.replace(OK,' ');for(const m of clean.matchAll(BAD)){const i=m.index;hits.push(`${id}: "${clean.slice(Math.max(0,i-30),i+m[0].length+20).trim()}"`)}}
   return {n:ids.length,hits}},[N,NAMED]);
  console.log(`${r.n} kid-safe films read with kids' mode on`);
