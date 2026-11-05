@@ -22,6 +22,12 @@ console.log(`PASS: ${dry} dry-theme films cook alcohol-free; ${grown} grown-up f
 {const a=app.indexOf('const dryNow'),b=app.indexOf('function kidsDryDom');const c2={DRY_THEMES:[],dietAF:()=>true};vm.createContext(c2);
  vm.runInContext(app.slice(a,b)+';this.dryText=dryText',c2);const d=t=>c2.dryText(t,true);
  for(const [t,want] of [["Serve beside frozen vodka.","Serve beside a cold drink."],["Pour the vodka when Danko orders.","Pour the drinks when Danko orders."],["Bring a bottle of rum.","Bring a bottle of lemonade."],
-   ["the green absinthe","the green cordial"],["Happy's lemon shandy pitchers","Happy's lemon squash pitchers"],["VIRGIN STRAWBERRY DAIQUIRI SLUSHIE","VIRGIN STRAWBERRY SLUSHIE"],["Huli huli chicken","Huli huli chicken"]])
+   ["the green absinthe","the green cordial"],["Happy's lemon shandy pitchers","Happy's lemon squash pitchers"],["VIRGIN STRAWBERRY DAIQUIRI SLUSHIE","VIRGIN STRAWBERRY SLUSHIE"],["Huli huli chicken","Huli huli chicken"],
+   /* review 12: hand-built drink names, and the bread and the island left alone */
+   ["Manhattan","Cherry cola"],["Manhattan 1.25","Cherry cola 1.25"],["Tess's Manhattan cocktail","Tess's cherry cola"],["Bourbon Manhattan","Cherry cola"],
+   ["Rye, sweet vermouth and bitters, stirred, with a cherry","Ginger, sweet bitter orange and bitters, stirred, with a cherry"],["Rye and jasmine tea highball","Ginger and jasmine tea cooler"],
+   ["NOODLES, ROOMS AND RYE","NOODLES, ROOMS AND GINGER"],["BAR TAB","SNACK TAB"],["A jug of alcohol-free lager and lemonade","A jug of lemon squash"],
+   ["Rye whisky, honey, lemon","Butterscotch, honey, lemon"],["Manhattan deli pastrami","Manhattan deli pastrami"],["Never leaves Manhattan.","Never leaves Manhattan."],
+   ["Pastrami on rye","Pastrami on rye"],["Cut 4 slices rye into 16 squares","Cut 4 slices rye into 16 squares"],["Swiss cheese on buttered rye, with dressing","Swiss cheese on buttered rye, with dressing"]])
   assert.equal(d(t),want,t);
  console.log('PASS: kids word pass clears drinking cues and folds doubled swap words.')}

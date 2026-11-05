@@ -1383,7 +1383,7 @@ function libAim(card,L){const foc=L&&L.focus;if(!foc)return;
 /* kids' mode, alcohol-free, and family films: one dry pass over the finished card and phone menu, on every layout and hand-built menu alike.
    Whole drink names first, then single words; cooking phrases lose just the alcohol word; vinegars and root, ginger and butter beer are left alone. */
 const dryNow=f=>dietAF()||DRY_THEMES.includes(f&&f.theme);
-const KDRY=(()=>{const cap=(m,v)=>v&&/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v,W="beer|stout|ale|guinness|lager|red wine|white wine|wine|cider|bourbon|whisk(?:e)?y|rum|brandy|sherry|marsala|tequila|vodka|sake|champagne|port";
+const KDRY=(()=>{const cap=(m,v)=>v&&/[A-Z]{2}/.test(m)&&m===m.toUpperCase()?v.toUpperCase():v&&/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1):v,W="beer|stout|ale|guinness|lager|red wine|white wine|wine|cider|bourbon|whisk(?:e)?y|rum|brandy|sherry|marsala|tequila|vodka|sake|champagne|port";
   const r=(re,v)=>[re,typeof v==="function"?v:m=>cap(m,v)];
   return [r(/[^.]*\bmust be (18|19|21)( or over)? to (order|drink)\b[^.]*\.?\s*/gi,""),r(/\b(18\+|over 18s?) only\.?\s*/gi,""),
    r(/\bbrandy alexanders?\b/gi,"vanilla nutmeg milk"),r(/\bhot buttered (rum|syrup|whisky|whiskey)\b/gi,"hot spiced apple"),r(/\bmulled wine\b/gi,"mulled grape punch"),
@@ -1398,7 +1398,13 @@ const KDRY=(()=>{const cap=(m,v)=>v&&/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice
    r(/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing))/gi,"mocktail"),r(/\b(champagne|prosecco|sparkling wine|bubbly)\b/gi,"sparkling apple"),
    r(/\b(red |white |rosé |rose )?wines?\b(?! glass)/gi,"grape juice"),r(/\balcohol-free (beer|lager|stout|ale) batter\b/gi,"soda water batter"),r(/\b(cold |ice-cold )?alcohol-free (beers?|lagers?|stouts?|ales?)\b(?! (and|or|sauce|gravy|glaze|marinade|cheese|cheddar|mustard)\b)/gi,"ginger beer"),r(/\b(?<!(root|ginger|butter|alcohol-free) )(beers?|lagers?|ales?|stouts?|longnecks?|stubbies|tinnies|guinness)\b/gi,"root beer"),
    r(new RegExp("\\b(beside|with) (a |some )?(frozen |cold |ice-cold |chilled )?(shots? of )?("+W+"|absinthe|grog)s?\\b","gi"),(m,a)=>a.toLowerCase()+" a cold drink"),r(new RegExp("\\b(pour|serve|open|crack open|hand round) the ("+W+"|absinthe|grog)s?\\b","gi"),(m,a)=>cap(m,a.toLowerCase()+" the drinks")),r(new RegExp("\\ba (bottle|glass|shot|pint|jug|can|flask|round) of ("+W+"|absinthe|grog)\\b","gi"),(m,a)=>"a "+a.toLowerCase()+" of lemonade"),r(/\b(green )?absinthe\b/gi,"green cordial"),r(/\bgrog\b/gi,"fruit punch"),
-   r(/\bciders?\b/gi,"sparkling apple juice"),r(/\b(whisk(e)?y|bourbon|scotch|rye whiskey)\b/gi,"butterscotch"),r(/\brum\b/gi,"coconut"),r(/\bgin\b/gi,"cucumber"),
+   r(/\bciders?\b/gi,"sparkling apple juice"),
+   /* review 12: hand-built drink names. A Manhattan is the drink only beside a cocktail, a cherry, a spirit or a price, never the island */
+   ...[/\b(bourbon |rye |whisk(?:e)?y )?Manhattan (cock|mock)tails?\b/gi,/\bManhattans?(?=\s*\$?\d+\.\d\d\b)/g,/\b(bourbon|rye|whisk(?:e)?y) Manhattans?\b/gi,/\bManhattans?(?= with a cherry)/g,/^\s*Manhattans?\s*$/g].map(re=>[re,(m,...a)=>{const str=a[a.length-1],off=a[a.length-2],v=typeof off==="number"&&(off===0||/[.:!?]\s*$/.test(str.slice(0,off)))?"Cherry cola":"cherry cola";return /[A-Z]{2}/.test(m)&&m===m.toUpperCase()?v.toUpperCase():v}]),
+   r(/\balcohol-free (beers?|lagers?|ales?) and lemonade\b/gi,"lemon squash"),r(/\bhighballs?\b/gi,"cooler"),r(/\bbar tabs?\b/gi,"snack tab"),
+   r(/\b(canadian )?(rye )?(whisk(e)?y)\b|\bbourbon\b|\bscotch\b/gi,"butterscotch"),
+   /* rye on its own is the spirit unless it is the bread: on rye, dark rye, rye crackers and the like stay */
+   r(/(?<!\b(on|dark|light|buttered|toasted|seeded|black|marble|of|sliced?|slices|pumpernickel|caraway|thin|deli|Swiss) )\brye\b(?! (bread|loaf|loaves|crackers?|squares?|toast|batter|flour|crisp(s|bread)?|slices?|into|rounds?|sourdough|bagels?|rolls?|buns?|croutons?|crumbs?|grains?|berries|and swiss))/gi,"ginger"),r(/\brum\b/gi,"coconut"),r(/\bgin\b/gi,"cucumber"),
    r(/\b(vodka|tequila|mezcal)\b/gi,"lime"),r(/\b(brandy|cognac)\b/gi,"vanilla"),r(/\b(liqueurs?|schnapps|amaretto|kahlua|baileys)\b/gi,"syrup"),r(/\bvermouth\b/gi,"bitter orange"),r(/(?<!\b(goodness|heaven|pete|god|christ|old times)(['’]s?|s['’])? |\bthe )\bsake\b/gi,"yuzu soda"),
    r(/\b(port|sherry|marsala)\b(?= (and|or|,|glass|wine|by the|\.))/gi,"grape juice")]})();
 /* the layouts' own family swaps run first and can over-reach ("for goodness' syrup", "root root beer", "mocktail franks"): these put the phrase back,
@@ -2488,6 +2494,59 @@ async function loadExportTools(pdf){
 }
 /* export: render a clean copy of the card at full size */
 let _noise=null;
+/* Save PDF helpers (review 12): html2canvas paints a soft inset shadow and an edge vignette as a flat wash,
+   so the export copy swaps each for a picture of it drawn on a canvas, which html2canvas copies as it is */
+function splitLayers(s){const out=[];let d=0,b=0;for(let i=0;i<s.length;i++){const c=s[i];if(c==="(")d++;else if(c===")")d--;else if(c===","&&!d){out.push(s.slice(b,i).trim());b=i+1}}out.push(s.slice(b).trim());return out.filter(Boolean)}
+function pdfSoftInset(w,h,list){const c=document.createElement("canvas");c.width=w;c.height=h;const x=c.getContext("2d"),F=w*4+h*4;
+  x.beginPath();x.rect(0,0,w,h);x.clip();
+  for(const sh of list){x.save();x.shadowColor=sh.col;x.shadowBlur=sh.b;x.shadowOffsetX=F;x.shadowOffsetY=0;x.fillStyle="#000";
+    x.beginPath();x.rect(-F-w*2,-h*2,w*5,h*5);x.rect(-F+sh.x+sh.s,sh.y+sh.s,Math.max(0,w-2*sh.s),Math.max(0,h-2*sh.s));x.fill("evenodd");x.restore()}
+  return c.toDataURL("image/png")}
+function pdfVignette(g,w,h){const m=g.match(/^radial-gradient\((.*)\)$/);if(!m)return null;const args=splitLayers(m[1]);
+  /* shape, size and centre: "ellipse 120% 90% at 50% 45%", "ellipse at center", or nothing (an ellipse to the far corners from the middle) */
+  let i=0,cx=w/2,cy=h/2,rx=0,ry=0;
+  if(!/^(rgba?\(|transparent|#)/.test(args[0])){const a=args[0].trim().match(/^(ellipse)?\s*(?:([\d.]+)(%|px)\s+([\d.]+)(%|px))?\s*(?:at\s+(center|[\d.]+%)(?:\s+(center|[\d.]+%))?)?$/);if(!a)return null;
+    const pc=(v,L)=>v===undefined||v==="center"?L/2:parseFloat(v)/100*L;cx=pc(a[6],w);cy=pc(a[7]===undefined?a[6]:a[7],h);
+    if(a[2]){rx=a[3]==="%"?parseFloat(a[2])/100*w:+a[2];ry=a[5]==="%"?parseFloat(a[4])/100*h:+a[4]}i=1}
+  if(!rx){const dx=Math.max(cx,w-cx),dy=Math.max(cy,h-cy);rx=dx*Math.SQRT2;ry=dy*Math.SQRT2}
+  const stops=args.slice(i).map(a=>{const mm=a.match(/^(rgba?\([^)]*\)|transparent)\s*([\d.]+%)?$/);if(!mm)return null;const col=mm[1]==="transparent"?"rgba(0,0,0,0)":mm[1],al=(col.match(/rgba\([^,]+,[^,]+,[^,]+,\s*([\d.]+)\)/)||[0,1])[1];return {col,at:mm[2]?parseFloat(mm[2])/100:null,a:+al}});
+  if(stops.length<2||stops.some(s=>!s)||stops[0].a!==0||!(stops[stops.length-1].a>0))return null;
+  stops.forEach((s,k)=>{if(s.at===null)s.at=k===0?0:k===stops.length-1?1:(stops[k-1].at+1)/2});
+  /* a canvas gradient keeps the last colour past its end, as CSS does out to the edges */
+  const c=document.createElement("canvas");c.width=w;c.height=h;const x=c.getContext("2d"),k=ry/rx;
+  x.setTransform(1,0,0,k,cx,cy);const gr=x.createRadialGradient(0,0,0,0,0,rx);stops.forEach(s=>gr.addColorStop(Math.min(1,Math.max(0,s.at)),s.col));
+  x.fillStyle=gr;x.fillRect(-cx,-cy/k,w,h/k);return c.toDataURL("image/png")}
+/* html2canvas ignores CSS filters, so a blurred, darkened backdrop (night diners) would print sharp and bright:
+   paint the photo with its filter into a canvas the size of its box and use that picture instead */
+function pdfFiltered(im,cs){const f=cs.filter;if(!f||f==="none"||!im.naturalWidth)return null;
+  const w=Math.round(parseFloat(cs.width)),h=Math.round(parseFloat(cs.height));if(!w||!h||w*h>8e6)return null;
+  const fit=cs.objectFit,iw=im.naturalWidth,ih=im.naturalHeight;let sx=0,sy=0,sw=iw,sh=ih,dx=0,dy=0,dw=w,dh=h;
+  const op=(cs.objectPosition||"50% 50%").split(/\s+/).map(v=>/%$/.test(v)?parseFloat(v)/100:v==="left"||v==="top"?0:v==="right"||v==="bottom"?1:.5);
+  if(fit==="cover"){const k=Math.max(w/iw,h/ih);sw=w/k;sh=h/k;sx=(iw-sw)*op[0];sy=(ih-sh)*(op[1]===undefined?.5:op[1])}
+  else if(fit==="contain"){const k=Math.min(w/iw,h/ih);dw=iw*k;dh=ih*k;dx=(w-dw)*op[0];dy=(h-dh)*(op[1]===undefined?.5:op[1])}
+  const c=document.createElement("canvas");c.width=w;c.height=h;const x=c.getContext("2d");
+  const native="filter" in x&&(x.filter=f,x.filter&&x.filter!=="none");
+  if(native){x.drawImage(im,sx,sy,sw,sh,dx,dy,dw,dh);x.filter="none"}
+  else{/* no canvas filters (older Safari): blur by drawing small and scaling up, then darken, desaturate as a grey wash */
+    const bl=parseFloat((f.match(/blur\(([\d.]+)px\)/)||[])[1]||0),br=parseFloat((f.match(/brightness\(([\d.]+)\)/)||[])[1]||1),sa=parseFloat((f.match(/saturate\(([\d.]+)\)/)||[])[1]||1);
+    if(bl>2){const k=Math.max(1,bl/2),t=document.createElement("canvas");t.width=Math.max(1,Math.round(w/k));t.height=Math.max(1,Math.round(h/k));const tx=t.getContext("2d");tx.imageSmoothingQuality="high";tx.drawImage(im,sx,sy,sw,sh,dx/k,dy/k,dw/k,dh/k);x.imageSmoothingQuality="high";x.drawImage(t,0,0,w,h)}
+    else x.drawImage(im,sx,sy,sw,sh,dx,dy,dw,dh);
+    if(sa<1){x.globalCompositeOperation="saturation";x.fillStyle=`rgba(128,128,128,${1-sa})`;x.fillRect(0,0,w,h);x.globalCompositeOperation="source-over"}
+    if(br<1){x.fillStyle=`rgba(0,0,0,${1-br})`;x.fillRect(0,0,w,h)}}
+  try{return c.toDataURL("image/jpeg",.9)}catch(e){return null}}
+/* repeating stripes (laid paper, woven mats, kiosk planks) print as one flat smear: a straight-across or straight-down stripe
+   becomes one drawn tile of its pattern, repeated as a picture. Slanted stripes are left as they are */
+function pdfStripes(g){const m=g.match(/^repeating-linear-gradient\((.*)\)$/);if(!m)return null;const args=splitLayers(m[1]);let ang=180,i=0;
+  const a0=args[0].trim();if(/^-?[\d.]+deg$/.test(a0)){ang=((parseFloat(a0)%360)+360)%360;i=1}else if(/^to /.test(a0)){ang={"to top":0,"to right":90,"to bottom":180,"to left":270}[a0];if(ang===undefined)return null;i=1}
+  if(![0,90,180,270].includes(ang))return null;
+  const stops=[];for(const a of args.slice(i)){const mm=a.match(/^(rgba?\([^)]*\)|transparent|#[0-9a-f]{3,8})((?:\s+-?[\d.]+px)*)$/i);if(!mm)return null;
+    const col=mm[1]==="transparent"?"rgba(0,0,0,0)":mm[1],pos=(mm[2].match(/-?[\d.]+/g)||[]).map(parseFloat);if(!pos.length)return null;pos.forEach(v=>stops.push([v,col]))}
+  const P=stops[stops.length-1][0]-stops[0][0];if(!(P>=1&&P<=2000))return null;
+  const c=document.createElement("canvas"),k=4,len=Math.round(P*k);const horiz=ang===90||ang===270;c.width=horiz?len:1;c.height=horiz?1:len;
+  const x=c.getContext("2d"),gr=horiz?x.createLinearGradient(0,0,len,0):x.createLinearGradient(0,0,0,len);
+  const flip=ang===0||ang===270;for(const [v,col] of stops){const o=(v-stops[0][0])/P;gr.addColorStop(Math.min(1,Math.max(0,flip?1-o:o)),col)}
+  x.fillStyle=gr;x.fillRect(0,0,c.width,c.height);
+  return {url:c.toDataURL("image/png"),size:horiz?`${P}px 100%`:`100% ${P}px`,pos:ang===0?"0 100%":ang===270?"100% 0":"0 0"}}
 function noiseTile(){
   if(_noise)return _noise;
   const c=document.createElement("canvas");c.width=c.height=180;const x=c.getContext("2d"),d=x.createImageData(180,180);
@@ -2512,6 +2571,26 @@ async function renderCanvas(src,forPrint){
     /* rings stack inward: each later ring sits inside the earlier ones */
     frames.sort((a,b)=>a[0]-b[0]);let prev=0;for(const [w,col] of frames){const d=document.createElement("i");d.style.cssText=`position:absolute;left:${prev}px;top:${prev}px;right:${prev}px;bottom:${prev}px;border:${w-prev}px solid ${col};border-radius:inherit;pointer-events:none;box-sizing:border-box`;e.appendChild(d);prev=w}})}catch(err){}
   stage.appendChild(clone);document.body.appendChild(stage);
+  /* review 12: it also drops flat rings drawn outside a box ("0 0 0 8px bezel" round an airline window), so a framed photo printed bare.
+     Each outer ring becomes a bordered frame laid behind the box, sized from where the box actually sits */
+  try{clone.querySelectorAll("[style*=box-shadow]").forEach(e=>{const bs=e.style.boxShadow;if(!bs||!e.parentElement)return;
+    const parts=bs.split(/,(?![^(]*\))/).map(x=>x.trim()),keep=[],rings=[];
+    for(const sh of parts){if(/\binset\b/.test(sh)){keep.push(sh);continue}
+      const col=(sh.match(/(rgba?\([^)]*\)|#[0-9a-f]{3,8}\b)/i)||[])[0],nums=(sh.replace(/rgba?\([^)]*\)/g,"").match(/-?\d+(\.\d+)?(px)?/g)||[]).map(parseFloat);
+      if(col&&nums.length>=4&&nums[0]===0&&nums[1]===0&&nums[2]===0&&nums[3]>0)rings.push([nums[3],col]);else keep.push(sh)}
+    if(!rings.length)return;const cs=getComputedStyle(e);if(cs.position!=="absolute"||e.offsetParent!==e.parentElement)return;
+    const L=e.offsetLeft,T=e.offsetTop,W=e.offsetWidth,H=e.offsetHeight,rad=parseFloat(cs.borderTopLeftRadius)||0,pct=/%/.test(cs.borderTopLeftRadius);
+    e.style.boxShadow=keep.join(",")||"none";
+    /* drawn widest first so each narrower ring sits on top, as the browser stacks them */
+    rings.sort((a,b)=>b[0]-a[0]);let z=cs.zIndex==="auto"?"auto":cs.zIndex;
+    for(const [w,col] of rings){const d=document.createElement("i");
+      d.style.cssText=`position:absolute;left:${L-w}px;top:${T-w}px;width:${W+2*w}px;height:${H+2*w}px;border:${w}px solid ${col};box-sizing:border-box;pointer-events:none;border-radius:${pct?cs.borderTopLeftRadius:(rad?rad+w+"px":"0")};z-index:${z}`;
+      e.parentElement.insertBefore(d,e)}})}catch(err){}
+  /* and it skips outlines (a hairline keyline round a photo): the same treatment, a frame laid round the box */
+  try{clone.querySelectorAll("[style*=outline]").forEach(e=>{const cs=getComputedStyle(e),w=parseFloat(cs.outlineWidth)||0;if(cs.outlineStyle==="none"||!w||!e.parentElement)return;
+    if(cs.position!=="absolute"||e.offsetParent!==e.parentElement)return;const o=(parseFloat(cs.outlineOffset)||0)+w,d=document.createElement("i");
+    d.style.cssText=`position:absolute;left:${e.offsetLeft-o}px;top:${e.offsetTop-o}px;width:${e.offsetWidth+2*o}px;height:${e.offsetHeight+2*o}px;box-sizing:border-box;border:${w}px ${cs.outlineStyle} ${cs.outlineColor};pointer-events:none;z-index:${cs.zIndex==="auto"?"auto":cs.zIndex}`;
+    e.style.outline="none";e.parentElement.insertBefore(d,e.nextSibling)})}catch(err){}
   try{
     await document.fonts.ready;
     if(clone.classList.contains("pp-sheet")){prepClean(clone);fitPrep(clone)}
@@ -2526,6 +2605,10 @@ async function renderCanvas(src,forPrint){
       await img.decode().catch(()=>{});
     }));
     setTimeout(()=>temp.forEach(u=>URL.revokeObjectURL(u)),30000);
+    /* filtered photos (blur, brightness, sepia) print as the screen shows them: baked into a plain picture first */
+    clone.querySelectorAll("img").forEach(im=>{try{const cs=getComputedStyle(im);if(!cs.filter||cs.filter==="none")return;const u=pdfFiltered(im,cs);if(!u)return;
+      const n=document.createElement("img");n.alt="";n.className=im.className;n.style.cssText=im.style.cssText;n.style.filter="none";n.style.objectFit="fill";n.style.width=cs.width;n.style.height=cs.height;n.src=u;im.replaceWith(n)}catch(e){}});
+    await Promise.all(Array.from(clone.querySelectorAll("img")).map(i=>i.decode().catch(()=>{})));
     /* html2canvas ignores object-fit, so a cropped photo (a round frame, a tent back, a wide still in a tall box) would print squashed or stretched.
        In the export copy each cropped photo becomes a box with the same size and look, showing the photo as a cover or contain background */
     clone.querySelectorAll("img").forEach(im=>{try{const cs=getComputedStyle(im),fit=cs.objectFit;if((fit!=="cover"&&fit!=="contain")||!im.naturalWidth)return;
@@ -2538,10 +2621,17 @@ async function renderCanvas(src,forPrint){
     /* iPhone Safari won't let a canvas be saved once an SVG texture has been drawn on it (SecurityError).
        Swap every SVG texture for a plain noise tile and hide inline SVG art, in the export copy only. */
     const nz=noiseTile(),svgRx=/url\("data:image\/svg\+xml(?:[^"\\]|\\.)*"\)/g;
+    /* review 12: where the browser allows it, each SVG texture (sea caustics, paper fibre) is drawn to a plain picture first, so the print keeps it;
+       Safari refuses to hand that picture back, and then the plain noise tile stands in as before */
+    const svgPng=new Map();
+    {const urls=new Set();[clone,...clone.querySelectorAll("*")].forEach(el=>{const bg=getComputedStyle(el).backgroundImage;if(bg&&bg.includes("data:image/svg"))(bg.match(svgRx)||[]).forEach(u=>urls.add(u))});
+      await Promise.all([...urls].slice(0,40).map(async u=>{try{const src=u.slice(5,-2).replace(/\\(.)/g,"$1"),im=new Image();im.src=src;await im.decode();
+        const w=im.naturalWidth||300,h=im.naturalHeight||300;if(w*h>4e6)return;const c=document.createElement("canvas");c.width=w;c.height=h;c.getContext("2d").drawImage(im,0,0,w,h);
+        svgPng.set(u,`url("${c.toDataURL("image/png")}")`)}catch(e){}}))}
     [clone,...clone.querySelectorAll("*")].forEach(el=>{
       const cs=getComputedStyle(el),bg=cs.backgroundImage;
       if(cs.backgroundBlendMode&&cs.backgroundBlendMode.includes("multiply")){el.style.backgroundImage="none";return}
-      if(bg&&bg.includes("data:image/svg"))el.style.backgroundImage=bg.replace(svgRx,`url("${nz}")`);
+      if(bg&&bg.includes("data:image/svg"))el.style.backgroundImage=bg.replace(svgRx,u=>svgPng.get(u)||`url("${nz}")`);
       if(el.tagName==="IMG"&&/^data:image\/svg/.test(el.getAttribute("src")||""))el.style.visibility="hidden";
       if(el.tagName&&el.tagName.toLowerCase()==="svg")el.style.visibility="hidden";
       /* html2canvas cannot do CSS masks: a masked gilt frame would print as a solid gold slab over the whole page, so draw it as a plain border instead */
@@ -2555,10 +2645,30 @@ async function renderCanvas(src,forPrint){
         else el.style.visibility="hidden"}}
       /* html2canvas paints an elliptical vignette as a flat brown wash over the whole page (canteen on dark films), so the export leaves it out */
       if(el.hasAttribute&&el.hasAttribute("data-vig")){el.style.visibility="hidden";return}
+      /* review 12: the same goes for any empty overlay that darkens the edges, on every layout, tagged or not.
+         A big blurred inset shadow (airline, bistro, hotel, saloon paper) or a radial vignette that is clear in the middle (banquet)
+         prints as a flat tan or grey film over the whole page, so the copy drops the shadow and hides the vignette */
+      {const w=el.offsetWidth,h=el.offsetHeight;if(w>120&&h>120&&w*h<6e6){
+        /* a soft inset shadow becomes a picture of itself, drawn by the browser's own canvas */
+        const bs=cs.boxShadow;if(bs&&bs!=="none"&&/inset/.test(bs)){/* an inset shadow paints over the background and under the content, so the picture goes in as the top background layer, text or not */
+          const parts=bs.split(/,(?![^(]*\))/).map(x=>x.trim()),keep=[],soft=[];
+          for(const sh of parts){if(!/inset/.test(sh)){keep.push(sh);continue}const col=(sh.match(/rgba?\([^)]*\)|#[0-9a-f]{3,8}\b/i)||[])[0],n=(sh.replace(/rgba?\([^)]*\)/g,"").match(/-?\d+(\.\d+)?px/g)||[]).map(parseFloat);
+            if(col&&n.length>=3&&n[2]>=16)soft.push({x:n[0],y:n[1],b:n[2],s:n[3]||0,col});else keep.push(sh)}
+          if(soft.length){const url=pdfSoftInset(w,h,soft);el.style.boxShadow=keep.join(",")||"none";
+            const bi=cs.backgroundImage&&cs.backgroundImage!=="none"?cs.backgroundImage:"";el.style.backgroundImage=`url("${url}")`+(bi?","+bi:"");
+            if(bi){el.style.backgroundSize=`${w}px ${h}px,`+cs.backgroundSize;el.style.backgroundPosition="0 0,"+cs.backgroundPosition;el.style.backgroundRepeat="no-repeat,"+cs.backgroundRepeat}
+            else{el.style.backgroundSize=`${w}px ${h}px`;el.style.backgroundPosition="0 0";el.style.backgroundRepeat="no-repeat"}}}
+        /* an edge vignette (a radial gradient clear in the middle), on its own layer or under the paper's other textures */
+        const bg2=cs.backgroundImage;/* computed style is live, so it already shows a baked shadow layer */
+        if(bg2&&/radial-gradient|repeating-linear-gradient/.test(bg2)){const sizes=cs.backgroundSize.split(/,\s*/),pos=cs.backgroundPosition.split(/,\s*/),rep=cs.backgroundRepeat.split(/,\s*/);
+          const lay=splitLayers(bg2);let hit=false;
+          const out=lay.map((g,i)=>{const sz=(sizes[i]||sizes[sizes.length-1]||"auto").trim();
+            if(/^repeating-linear-gradient/.test(g)){if(!/^(auto( auto)?|100% 100%)$/.test(sz))return g;const st=pdfStripes(g);if(!st)return g;hit=true;sizes[i]=st.size;pos[i]=st.pos;rep[i]="repeat";return `url("${st.url}")`}if(!/^(auto( auto)?|100% 100%|cover)$/.test(sz)&&sz!==`${w}px ${h}px`)return g;const v=pdfVignette(g,w,h);if(!v)return g;hit=true;sizes[i]=`${w}px ${h}px`;pos[i]="0px 0px";rep[i]="no-repeat";return `url("${v}")`});
+          if(hit){el.style.backgroundImage=out.join(",");el.style.backgroundSize=lay.map((_,i)=>sizes[i]||sizes[sizes.length-1]||"auto").join(",");el.style.backgroundPosition=lay.map((_,i)=>pos[i]||pos[pos.length-1]||"0% 0%").join(",");el.style.backgroundRepeat=lay.map((_,i)=>rep[i]||rep[rep.length-1]||"repeat").join(",")}}}}
       /* it also smears a blurred inset shadow across the whole box, so a moulded tray well prints with a plain edge instead */
       if(el.hasAttribute&&el.hasAttribute("data-well")){el.style.boxShadow="none";el.style.border="1px solid rgba(0,0,0,.14)"}
       /* html2canvas cannot blend layers, so a grain set to overlay or multiply would paint flat over the paper and wash it out: leave those texture layers out of the export */
-      if(cs.mixBlendMode&&cs.mixBlendMode!=="normal"&&!el.textContent.trim()&&!el.querySelector("img"))el.style.visibility="hidden";
+      if(cs.mixBlendMode&&cs.mixBlendMode!=="normal"&&!el.textContent.trim()&&!el.querySelector("img"))el.style.mixBlendMode="normal";
     });
     /* only copy the export stage into html2canvas's working page: the video store alone holds hundreds of posters, and waiting on them made a PDF take a minute */
     const keep=el=>el===document.head||document.head.contains(el)||el.tagName==="STYLE"||el.tagName==="LINK"||el.contains(stage)||stage.contains(el);
