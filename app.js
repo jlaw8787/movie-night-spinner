@@ -1718,17 +1718,29 @@ function cookDate(now=new Date()){
 }
 function renderWeek(){
   const box=$("weekPanel");const f=week&&FILMS.find(x=>x.id===week.id);
-  if(!f){box.hidden=true;box.innerHTML="";renderMotw();return}
+  if(!f){box.hidden=true;box.innerHTML="";renderFeature(null);renderMotw();return}
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];const [d,n]=cookDate();
   const when=n===0?"<b>Tonight</b>":n===1?"<b>Tomorrow</b>":n<0?`<b>${-n} day${n===-1?"":"s"} ago</b>`:`<b>${n} days to go</b>`;
   box.hidden=false;
   box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}">`:"<span></span>"}<p class="week-k">This week's film</p><p class="week-t">${ESC(f.title)} (${f.year})${week.double&&FILMS.find(x=>x.id===week.double)?` + ${ESC(FILMS.find(x=>x.id===week.double).title)}`:""}</p><p class="week-when">Cook night <select id="weekDay" aria-label="Cook night">${[5,6,0].map(i=>`<option value="${i}"${i===week.day?" selected":""}>${DAYS[i]}</option>`).join("")}</select> ${d.getDate()} ${d.toLocaleString("en-AU",{month:"short"})} · ${when} &nbsp;Showtime <select id="weekTime" class="week-time" aria-label="Showtime">${SHOWTIMES.map(t=>`<option value="${t}"${t===(week.time||"19:00")?" selected":""}>${clock(t)}</option>`).join("")}</select></p><p class="week-count" id="weekCount" aria-live="polite"></p><div class="week-acts"><button class="go" type="button" id="weekShop">Shopping list</button><button type="button" id="weekOpen">Open the menu</button><button type="button" id="weekClear">Clear</button></div>`;
   $("weekDay").addEventListener("change",e=>{week.day=weekDay(e.target.value);week.date=nextWeekDate(week.day,week.time);saveWeek();renderWeek()});
   $("weekTime").addEventListener("change",e=>{week.time=e.target.value;saveWeek();tickShowtime()});
-  tickShowtime();renderMotw();
+  renderFeature(f);tickShowtime();renderMotw();
   $("weekShop").addEventListener("click",async()=>{const g=week.double&&FILMS.find(x=>x.id===week.double);if(g){const dm=await doubleMenu(f,g);openTrolley(f,dm,`${f.title} + ${g.title}`)}else openTrolley(f)});
   $("weekOpen").addEventListener("click",()=>{setView("wheel");replay(f);toMenu()});
   $("weekClear").addEventListener("click",()=>{week=null;saveWeek();renderWeek();$("status").textContent="This week's film cleared."});
+}
+/* the locked-in film as a slim strip under the view tabs, on every view: poster, title, cook night and showtime, a short countdown,
+   and one tap to its menu or Prep sheet. Josh, 5 Nov: "the locked in movie should be at the top so it's right there as a reminder" */
+function renderFeature(f){const box=$("feature");if(!box)return;if(!f||!week){box.hidden=true;box.innerHTML="";return}
+  const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id],[d,n]=cookDate(),g=week.double&&FILMS.find(x=>x.id===week.double);
+  const day=n===0?"Tonight":n===1?"Tomorrow":DAYS[d.getDay()];
+  box.hidden=false;
+  box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}" loading="lazy">`:'<span class="ft-ph"></span>'}<p class="ft-k">${n===0?"Tonight's feature":n<0?"Last feature":"Coming up"}</p>
+    <p class="ft-t">${ESC(f.title)}${g?` + ${ESC(g.title)}`:""}</p><p class="ft-w">${day} ${d.getDate()} ${"JanFebMarAprMayJunJulAugSepOctNovDec".substr(d.getMonth()*3,3)}, ${clock(week.time||"19:00")} <span id="featCount"></span></p>
+    <div class="ft-acts"><button type="button" class="go" id="featMenu">Menu</button><button type="button" id="featPrep">Prep sheet</button></div>`;
+  $("featMenu").addEventListener("click",()=>{setView("wheel");if(tab!=="menu")setTab("menu");replay(f).then(()=>toMenu());toMenu()});
+  $("featPrep").addEventListener("click",()=>{setView("wheel");replay(f).then(()=>{setTab("prep");toMenu()})});
 }
 /* Countdown to the scheduled showtime. Cooking times belong to the individual recipes. */
 const SHOWTIMES=["17:00","17:30","18:00","18:30","19:00","19:30","20:00","20:30","21:00"];
@@ -1742,6 +1754,7 @@ function tickShowtime(){
   if(ms<0)el.innerHTML=`Scheduled showtime has passed. <span>Open your menu or lock in a new movie night.</span>`;
   else if(ms===0)el.innerHTML=`Showtime. <span>Lights down, press play when you're ready.</span> <button class="btn primary" type="button" data-show>Start the show</button>`;
   else el.innerHTML=`Showtime in ${span(ms)}. <span>Check each recipe for cooking times and make-ahead steps.</span>`;
+  {const fc=$("featCount");if(fc)fc.textContent=ms<0?"· showtime passed":ms===0?"· showtime now":"· in "+span(ms)}
   _showT=setTimeout(tickShowtime,30000);
 }
 /* menu of the week: the printed era menus take turns, a new one every Monday */
