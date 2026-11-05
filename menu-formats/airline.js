@@ -169,14 +169,30 @@ function posterHTML(src,isPoster,pos,era,t,cover){
 }
 
 /* runtime fit: runs after the faces are mounted and fonts are in. Shrinks in 1px steps, never under data-fs, then clamps notes */
-const FX=window.__fmtBHA=window.__fmtBHA||{
+/* review 16: airline has its own fitter. It used to share window.__fmtBHA with bistro and hotel, so whichever loaded first ran for all three */
+const FX=window.__fmtAir=window.__fmtAir||{
   over:b=>b.scrollHeight>b.clientHeight+1||b.scrollWidth>b.clientWidth+1,
   fit(el){
     el.querySelectorAll("[data-fline]").forEach(n=>{const lines=+n.dataset.fline||1,min=+n.dataset.fs||16;
       for(let k=0;k<60;k++){const fs=parseFloat(getComputedStyle(n).fontSize),lh=parseFloat(getComputedStyle(n).lineHeight)||fs*1.1;
         if(fs<=min||(n.scrollWidth<=n.clientWidth+1&&n.offsetHeight<=lh*lines+3))break;n.style.fontSize=(fs-1)+"px"}});
-    el.querySelectorAll("[data-fbox]").forEach(box=>{
+    /* review 16: the meal page's still gives up height, 16px at a time down to 55 per cent, before a note on the meal is shortened or hidden.
+       The ticket and the stripes under the still move up with it. Reset first, so every pass starts from the built page */
+    const mb=el.querySelector("[data-menubox]"),st=el.querySelector("[data-still]"),sh=[...el.querySelectorAll("[data-shift]")];
+    const cut=c=>{if(!mb||!st)return;if(st.dataset.h0==null){st.dataset.h0=parseFloat(st.style.height);mb.dataset.t0=parseFloat(mb.style.top);sh.forEach(x=>x.dataset.t0=parseFloat(x.style.top))}
+      st.style.height=(+st.dataset.h0-c)+"px";mb.style.top=(+mb.dataset.t0-c)+"px";sh.forEach(x=>x.style.top=(+x.dataset.t0-c)+"px")};
+    cut(0);
+    el.querySelectorAll("[data-fbox]").forEach(box=>FX.fitBox(box));
+    if(mb&&st){const lost=()=>[...mb.querySelectorAll("[data-clamp]")].some(n=>n.style.display==="none"||(n.dataset.full&&n.textContent!==n.dataset.full))||[...mb.querySelectorAll("[data-gap]")].some(g=>g.style.display==="none");
+      for(let c=16;lost()&&c<=+st.dataset.h0*.45;c+=16){cut(c);FX.fitBox(mb)}}
+  },
+  fitBox(box){{
       const nodes=[...box.querySelectorAll("[data-fs]")];
+      /* review 16: each pass starts from the sizes and lines it was built with. A pass before the fonts landed used to hide notes for good,
+         so Airplane! lost between 3 and 8 lines depending on machine load */
+      nodes.forEach(n=>{if(n.dataset.fs0==null)n.dataset.fs0=n.style.fontSize;n.style.fontSize=n.dataset.fs0});
+      box.querySelectorAll("[data-gap]").forEach(g=>{if(g.dataset.pb0==null)g.dataset.pb0=g.style.paddingBottom;g.style.paddingBottom=g.dataset.pb0;g.style.display=""});
+      box.querySelectorAll("[data-clamp],[data-drop]").forEach(e=>e.style.display="");
       for(let k=0;k<40&&FX.over(box);k++){let ch=false;
         nodes.forEach(n=>{const s=parseFloat(getComputedStyle(n).fontSize),m=+n.dataset.fs;if(s>m){n.style.fontSize=(s-1)+"px";ch=true}});
         box.querySelectorAll("[data-gap]").forEach(g=>{const p=parseFloat(g.style.paddingBottom)||0;if(p>3){g.style.paddingBottom=(p-1)+"px";ch=true}});
@@ -187,9 +203,9 @@ const FX=window.__fmtBHA=window.__fmtBHA||{
       for(let k=0;k<30&&FX.over(box);k++){let ch=false;nodes.forEach(n=>{const s=parseFloat(getComputedStyle(n).fontSize);if(s>14){n.style.fontSize=(s-1)+"px";ch=true}});if(!ch)break}
       /* still too much: drop trailing items, always keeping the first */
       const its=[...box.querySelectorAll("[data-gap]")];for(let i=its.length-1;i>0&&FX.over(box);i--)its[i].style.display="none";
-    });
+    }
   },
-  fitAll(){document.querySelectorAll("[data-fmtface]").forEach(f=>FX.fit(f))},
+  fitAll(){document.querySelectorAll('[data-fmtface="airline"]').forEach(f=>FX.fit(f))},
   /* logo keeps its own colours: a dark logo gets a light panel, a light logo a dark one */
   logo(img){try{const p=img.closest("[data-lpanel]");if(!p)return;
     const cv=document.createElement("canvas");cv.width=96;cv.height=Math.max(8,Math.round(96*img.naturalHeight/img.naturalWidth));
@@ -208,7 +224,7 @@ function logoPanel(ctx,o){
   const r=lg?lg[1]/lg[2]:0;let lh=lg?Math.min(o.maxH,Math.round(o.maxW/r)):0,lw=Math.round(lh*r);
   const fb=`<div data-logofb data-fline="3" data-fs="22" style="display:${lg?"none":"block"};font:${o.titleFont};font-size:${title.length>40?30:title.length>22?38:46}px;line-height:1.02;color:${o.titleCol};max-width:${o.maxW}px">${esc(title)}</div>`;
   return`<div data-lpanel data-dark="${o.dark}" data-light="${o.light}" data-darkk="${o.darkk}" data-lightk="${o.lightk}" style="${o.style};background:${lg?o.dark:o.fbBg}">
-    ${lg?`<img data-logo crossorigin="anonymous" alt="${esc(title)}" src="${ctx.img(lg[0],"w500")}" onload="(function(i){var p=i.closest('[data-lpanel]'),w=p&&window.__fmtLift&&__fmtLift.logo(i);if(!w)return;var dk=w==='dark';p.style.background=dk?p.dataset.dark:p.dataset.light;p.querySelectorAll('[data-lk]').forEach(function(k){k.style.color=dk?p.dataset.darkk:p.dataset.lightk})})(this)" onerror="window.__fmtBHA&&__fmtBHA.nologo(this)" style="display:block;height:${lh}px;width:${lw}px;object-fit:contain;margin:${o.center?"0 auto":"0"}">`:""}${fb}
+    ${lg?`<img data-logo crossorigin="anonymous" alt="${esc(title)}" src="${ctx.img(lg[0],"w500")}" onload="(function(i){var p=i.closest('[data-lpanel]'),w=p&&window.__fmtLift&&__fmtLift.logo(i);if(!w)return;var dk=w==='dark';p.style.background=dk?p.dataset.dark:p.dataset.light;p.querySelectorAll('[data-lk]').forEach(function(k){k.style.color=dk?p.dataset.darkk:p.dataset.lightk})})(this)" onerror="window.__fmtAir&&__fmtAir.nologo(this)" style="display:block;height:${lh}px;width:${lw}px;object-fit:contain;margin:${o.center?"0 auto":"0"}">`:""}${fb}
     ${o.under?`<div data-lk style="font:${o.underFont};color:${lg?o.darkk:o.fbK};margin-top:9px;text-align:${o.center?"center":"left"}">${o.under}</div>`:""}</div>`;
 }
 /* film flavour with theme-neutral fallbacks */
@@ -380,11 +396,11 @@ window.MENU_FORMATS[ID]=ctx=>{
     sTop=88;sH=262;sFrame="";sRad="22px";
   }
   const sL=G==="jet"?0:era===6?44:28,sR=G==="jet"?0:28;
-  const still=`<div style="position:absolute;left:${sL}px;right:${sR}px;top:${sTop}px;height:${sH}px;overflow:hidden;background:${K.deep};${sFrame};border-radius:${sRad}">
+  const still=`<div data-still style="position:absolute;left:${sL}px;right:${sR}px;top:${sTop}px;height:${sH}px;overflow:hidden;background:${K.deep};${sFrame};border-radius:${sRad}">
       ${ph.secondPoster?posterHTML(ph.second,true,"",era,t):photoHTML(ph.second,ph.secondPos,era,t)}
-      <div style="position:absolute;left:12px;bottom:${G==="jet"?26:12}px;background:${rgba("#fffaf0",.92)};padding:6px 10px;font:700 14px/1.2 ${B};letter-spacing:.12em;text-transform:uppercase;color:#1c1712">Now showing</div></div>${G==="jet"?stripes(sTop+sH-12,true):""}`;
+      <div style="position:absolute;left:12px;bottom:${G==="jet"?26:12}px;background:${rgba("#fffaf0",.92)};padding:6px 10px;font:700 14px/1.2 ${B};letter-spacing:.12em;text-transform:uppercase;color:#1c1712">Now showing</div></div>${G==="jet"?stripes(sTop+sH-12,true).replace(/<div style/g,"<div data-shift style"):""}`;
   const pr=F.prop,pk=pr.kind;
-  const prop=`<div style="position:absolute;right:20px;top:${sTop+sH-66}px;width:206px;transform:rotate(${(-T.rot*.7+2).toFixed(1)}deg);${propPaper(pk,K.acc,"#fffcf4")}box-shadow:0 4px 12px rgba(0,0,0,.35);overflow:hidden;z-index:2">
+  const prop=`<div data-shift style="position:absolute;right:20px;top:${sTop+sH-66}px;width:206px;transform:rotate(${(-T.rot*.7+2).toFixed(1)}deg);${propPaper(pk,K.acc,"#fffcf4")}box-shadow:0 4px 12px rgba(0,0,0,.35);overflow:hidden;z-index:2">
     <div data-fbox style="position:relative;padding:11px 16px 10px;max-height:110px;overflow:hidden">
       <div data-fs="14" style="font:700 14px/1 ${B};letter-spacing:.2em;text-transform:uppercase;color:${K.acc}">${pk==="ticket"||pk==="stub"?"Admit one":pk==="tag"?"Luggage tag":"Keep this"}</div>
       <div data-fs="15" style="${dispStyle}font-size:20px;line-height:1.05;color:#1c1712;margin:6px 0 5px">${esc(pr.title)}</div>
@@ -396,7 +412,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     ${it.note?`<div data-clamp data-fs="14" style="font:400 20px/1.28 ${B};color:${K.soft};margin-top:3px">${esc(sentence(dry(it.note)))}</div>`:""}</div>`;
   const course=(k,j)=>{const its=(menu[k]||[]).slice(0,4);if(!its.length)return"";
     return`<div style="display:flex;align-items:center;gap:12px;margin:2px 0 8px"><span data-fs="20" style="${dispStyle}font-size:34px;line-height:1.05;color:${K.acc};${inkSpread}">${esc(labels[j])}</span><i style="flex:1;height:2px;background:${K.acc};opacity:.45"></i></div>${its.map((it,i)=>item(k,it,i)).join("")}`};
-  const menuBox=`<div data-fbox style="position:absolute;left:36px;right:36px;top:${sTop+sH+60}px;bottom:106px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${keys.map(course).join("")}</div>`;
+  const menuBox=`<div data-fbox data-menubox style="position:absolute;left:36px;right:36px;top:${sTop+sH+60}px;bottom:106px;overflow:hidden;display:flex;flex-direction:column;justify-content:safe center">${keys.map(course).join("")}</div>`;
   const wk=F.winks.slice(1,3).map(w=>w.replace(/\.$/,"")).join(". ");
   const fine=`<div data-fbox style="position:absolute;left:36px;right:36px;bottom:${P.border==="none"||P.border==="band"||P.border==="bleed"?20:26}px;height:74px;overflow:hidden;border-top:1px solid ${rgba(K.ink,.35)};padding-top:8px">
     <div data-fs="14" style="font:400 15px/1.35 ${B};color:${K.soft}">Meals subject to availability. Trolley prices in local currency. ${fm?"Every drink is alcohol free. ":""}${wk?esc(wk)+". ":""}Card ${esc(flight)}/${esc(ctx.f.year)}. Images: TMDB.</div></div>`;

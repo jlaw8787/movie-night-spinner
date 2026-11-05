@@ -78,7 +78,21 @@ const noise=(rgb,a,freq,size)=>{const[r,g,b]=hex(rgb).map(v=>(v/255).toFixed(3))
 const CHALKSOFT=svgUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><filter id="m"><feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.4 0 0 0 2.5"/></filter><rect width="100%" height="100%" filter="url(#m)"/></svg>`);
 const CHALKMASK=svgUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><filter id="m"><feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3.2 0 0 0 2.75"/></filter><rect width="100%" height="100%" filter="url(#m)"/></svg>`);
 /* runtime fit: every [data-fit] box scales its type (CSS var --k) until nothing overflows; notes drop as a last resort */
-const FIT=`<img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="position:absolute;width:1px;height:1px;opacity:0;left:0;top:0" onload="(function(r){function f(){r.querySelectorAll('[data-fit]').forEach(function(b){var k=1;b.style.setProperty('--k',1);b.style.removeProperty('--nd');if(window.__fmtTrimReset)window.__fmtTrimReset(b);var ns=b.querySelectorAll('[data-cnote]');for(var j=0;j<ns.length;j++)ns[j].style.display='';var o=function(){return b.scrollHeight>b.clientHeight+1||b.scrollWidth>b.clientWidth+1};while(o()&&k>.56){k-=.04;b.style.setProperty('--k',k.toFixed(2))}if(window.__fmtTrim)window.__fmtTrim(Array.prototype.slice.call(ns),o);else for(var i=ns.length-1;i>=0&&o();i--)ns[i].style.display='none';if(o())b.style.setProperty('--dl','1')})}f();if(document.fonts)document.fonts.ready.then(f);setTimeout(f,900);setTimeout(f,2200)})(this.parentNode)">`;
+const FIT=`<img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" style="position:absolute;width:1px;height:1px;opacity:0;left:0;top:0" onload="(function(r){function f(){f0();if(window.__fmtCafeBal2)window.__fmtCafeBal2(r,f0)}function f0(){r.querySelectorAll('[data-fit]').forEach(function(b){var k=1;b.style.setProperty('--k',1);b.style.removeProperty('--nd');b.style.removeProperty('--dl');if(window.__fmtTrimReset)window.__fmtTrimReset(b);var ns=b.querySelectorAll('[data-cnote]');for(var j=0;j<ns.length;j++)ns[j].style.display='';var o=function(){return b.scrollHeight>b.clientHeight+1||b.scrollWidth>b.clientWidth+1};while(o()&&k>.56){k-=.04;b.style.setProperty('--k',k.toFixed(2))}if(window.__fmtTrim)window.__fmtTrim(Array.prototype.slice.call(ns),o);else for(var i=ns.length-1;i>=0&&o();i--)ns[i].style.display='none';if(o())b.style.setProperty('--dl','1')})}f();if(document.fonts)document.fonts.ready.then(f);setTimeout(f,900);setTimeout(f,2200)})(this.parentNode)">`;
+/* review 16: the two menu columns are first split by a length guess, before anything is measured. Once the fonts are in, every split of the
+   sections across the columns is tried (the first section always top left, each column in menu order), and the one that clamps no dish name, hides the fewest notes, then shortens the fewest, then keeps the
+   biggest type wins. The first split wins a tie, so a menu that already fits is left alone */
+if(!window.__fmtCafeBal2)window.__fmtCafeBal2=function(r,fit){
+  const cols=r.querySelectorAll("[data-ccol]");if(cols.length!==2)return;const box=cols[0].closest("[data-fit]");if(!box)return;
+  if(!box.__secs){box.__secs=[...box.querySelectorAll("[data-csec]")].sort((a,b)=>+a.dataset.csec-+b.dataset.csec).map(x=>x.outerHTML);box.__first=[...cols[0].querySelectorAll("[data-csec]")].map(x=>+x.dataset.csec)}
+  const S=box.__secs;if(S.length<2)return;
+  const lay=a=>{cols[0].innerHTML=S.filter((_,i)=>a.includes(i)).join("");cols[1].innerHTML=S.filter((_,i)=>!a.includes(i)).join("")};
+  const score=()=>{const ns=[...box.querySelectorAll("[data-cnote]")],k=parseFloat(box.style.getPropertyValue("--k"))||1;
+    return [box.style.getPropertyValue("--dl")?1:0,box.style.getPropertyValue("--nd")?ns.length:ns.filter(n=>n.style.display==="none").length,ns.filter(n=>n.dataset.full&&n.textContent!==n.dataset.full).length,-k]};
+  const better=(x,y)=>{for(let i=0;i<4;i++){if(Math.abs(x[i]-y[i])>1e-6)return x[i]<y[i]}return false};
+  const cands=[box.__first];for(let m=1;m<(1<<S.length)-1;m+=2){const a=S.map((_,i)=>i).filter(i=>m>>i&1);if(a.join()!==box.__first.join())cands.push(a)}
+  let best=null,bi=0;cands.forEach((a,i)=>{lay(a);fit();const sc=score();if(!best||better(sc,best)){best=sc;bi=i}});
+  lay(cands[bi]);fit()};
 const fs=(px,min)=>`font-size:max(${min||14}px,calc(${px}px * var(--k,1)))`;
 /* logo panel tone: a dark logo flips its panel to the light stock */
 const LOGOTONE=`onload="(function(i){var p=i.closest('[data-lp]'),w=window.__fmtLift&&__fmtLift.logo(i,+((p&&p.dataset.dl)||.012),+((p&&p.dataset.ll)||.86));if(p&&w&&(w==='light')===(p.dataset.dark==='1')){p.style.background=p.dataset.alt;p.style.boxShadow=p.dataset.altsh}})(this)"`;
@@ -233,7 +247,7 @@ window.MENU_FORMATS["cafe"]=ctx=>{
       <div style="display:flex;align-items:baseline;gap:14px"><div style="flex:1;min-width:0;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:var(--dl,3);overflow:hidden;font-family:${bodyF};font-weight:${e.bw?"700":"400"};color:${INK};line-height:1.14;${fs(dish,18)};${e.up&&era!=="1930s-40s"?"text-transform:uppercase;letter-spacing:.03em;":""}">${esc(it.n)}</div>
       <div style="font-family:${bodyF};font-weight:700;color:${c.k==="d"?ACC2:ACC};${fs(dish,18)};white-space:nowrap">${PQ[c.k][i]}</div></div>
       <div data-cnote style="display:var(--nd,block);font-family:${bodyF};${e.body==="Lora"?"font-style:italic;":""}color:${mix(INK,BOARD,.12)};line-height:1.28;${fs(desc,14)};margin-top:3px">${esc(it.note)}</div></div>`;
-  const colHtml=list=>list.map(c=>`<div style="margin:0 0 ${gap+6}px">${secHead(e,era,(family&&LABEL_FAMILY[c.k])||LABEL[c.k],c.k==="d"?ACC2:ACC,INK)}${c.items.map((it,i)=>itemHtml(c,it,i)).join("")}</div>`).join("");
+  const colHtml=list=>list.map(c=>`<div data-csec="${C.indexOf(c)}" style="margin:0 0 ${gap+6}px">${secHead(e,era,(family&&LABEL_FAMILY[c.k])||LABEL[c.k],c.k==="d"?ACC2:ACC,INK)}${c.items.map((it,i)=>itemHtml(c,it,i)).join("")}</div>`).join("");
 
   /* loyalty card: paper, stamps are spaced type, never icons */
   const stamped=Math.min(9,Math.max(3,(String(num).replace(/\D/g,"").split("").reduce((a,d)=>a+ +d,0)%7)+3));
@@ -264,8 +278,8 @@ window.MENU_FORMATS["cafe"]=ctx=>{
     <div style="position:absolute;left:34px;right:34px;top:22px;bottom:16px;display:flex;flex-direction:column">
       ${!hasP&&f.T&&n<=10?`<div style="font-family:${bodyF};${e.body==="Lora"?"font-style:italic;":""}color:${ACC};font-size:24px;line-height:1.2;text-align:center;margin-bottom:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;${chalkTxt}">${esc(sent(f.T))}</div>`:""}
       <div data-fit style="flex:1;min-height:0;overflow:hidden;display:flex;gap:40px">
-        <div style="flex:1;min-width:0">${colHtml(cols[0])}</div>
-        ${cols[1].length?`<div style="width:2px;background:${INK};opacity:.18"></div><div style="flex:1;min-width:0">${colHtml(cols[1])}</div>`:""}
+        <div data-ccol style="flex:1;min-width:0">${colHtml(cols[0])}</div>
+        ${cols[1].length?`<div style="width:2px;background:${INK};opacity:.18"></div><div data-ccol style="flex:1;min-width:0">${colHtml(cols[1])}</div>`:""}
       </div>
       ${hasP?"":`<div style="display:flex;gap:30px;height:${n>8?196:226}px;flex:none;margin-top:8px;padding-top:14px;border-top:1px solid ${INK}33">${noteHtml}${card}</div>`}
       <div style="font-family:${bodyF};font-size:16px;color:${mix(INK,BOARD,.35)};margin-top:8px;line-height:1.25;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden">${esc(fine)}</div>

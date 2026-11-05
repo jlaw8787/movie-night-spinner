@@ -43,15 +43,28 @@ function logoPanel(ctx,o){
 /* in-page fit: shrink a block's em base until it fits its box, then drop optional blocks, clamp notes, hide notes */
 if(!window.__fmtFitLab)window.__fmtFitLab=function(t){
   const face=t.parentNode;
-  const run=()=>{run0();
-    /* review 15: the column beside the poster hid notes while the strip under it had room (The Martian, Men in Black II). A section moves
-       from the foot of the column to the head of the strip, one at a time, and stays there only if fewer notes are hidden */
-    const side=face.querySelector("[data-side]"),foot=face.querySelector("[data-foot]");if(!side||!foot)return;
-    const hid=()=>[...face.querySelectorAll("[data-note]")].filter(n=>n.style.display==="none").length;
-    for(let g=0;g<3;g++){const h=hid(),secs=[...side.querySelectorAll(":scope>[data-sec]")];if(!h||secs.length<2)break;const last=secs[secs.length-1];
-      foot.insertBefore(last,foot.firstChild);last.dataset.moved="1";run0();if(hid()>=h){side.appendChild(last);delete last.dataset.moved;run0();break}}};
+  /* review 16: the strip under the poster is a ledger that carries on from the column beside the poster dish by dish, not section by section.
+     Every split is tried once the fonts are in; the one that hides the fewest notes, then shortens the fewest, then keeps the biggest type, stays.
+     A section split across the two carries its head again in the strip with "continued" */
+  const side0=face.querySelector("[data-side]"),foot0=face.querySelector("[data-foot]");
+  const model=(()=>{if(!side0||!foot0)return null;const out=[];[side0,foot0].forEach(box=>box.querySelectorAll(":scope>[data-sec]").forEach(sec=>{
+      out.push({hd:sec.querySelector("[data-hd]").outerHTML,rows:[...sec.querySelectorAll("[data-row]")].map(r=>r.outerHTML)})}));return out})();
+  const nRows=model?model.reduce((a,x)=>a+x.rows.length,0):0;
+  const secHTML=(hd,rows,cont)=>`<div data-sec><div style="break-inside:avoid">${cont?hd.replace(/<\/div>$/,'<span style="font-weight:400;font-style:italic;text-transform:none;letter-spacing:.02em;font-size:.82em"> continued</span></div>'):hd}${rows[0]}</div>${rows.slice(1).join("")}<div style="height:.45em"></div></div>`;
+  const place=k=>{let a="",b="",seen=0;model.forEach(x=>{const n=x.rows.length,take=Math.max(0,Math.min(n,k-seen));
+      if(take)a+=secHTML(x.hd,x.rows.slice(0,take),false);if(take<n)b+=secHTML(x.hd,x.rows.slice(take),take>0);seen+=n});
+    side0.innerHTML=a;foot0.innerHTML=b;side0.dataset.k=k};
+  const score=()=>{const ns=[...face.querySelectorAll("[data-note]")];const k=Math.min(...[...face.querySelectorAll("[data-fit]")].map(e=>parseFloat(e.style.fontSize)/+e.getAttribute("data-fit")));
+    return [ns.filter(n=>n.style.display==="none").length,ns.filter(n=>n.dataset.full&&n.textContent!==n.dataset.full).length,-k]};
+  const better=(x,y)=>{for(let i=0;i<3;i++){if(Math.abs(x[i]-y[i])>1e-6)return x[i]<y[i]}return false};
+  /* the stamp and then the plate tab are the layout's own trim, not the film's: they give way before a film line is hidden */
+  const spare=[...face.querySelectorAll("[data-spare]")].sort((a,b)=>+a.dataset.spare-+b.dataset.spare);
+  const run=()=>{spare.forEach(x=>x.style.display="");if(!model||nRows<2){run0();return}let best=null,bk=0,bs=0;
+    for(let g=0;g<=spare.length;g++){if(g)spare[g-1].style.display="none";
+      for(let k=1;k<nRows;k++){place(k);run0();const sc=score();if(!best||better(sc,best)){best=sc;bk=k;bs=g}}
+      if(!best[0])break}
+    spare.forEach((x,i)=>x.style.display=i<bs?"none":"");place(bk);run0()};
   const run0=()=>{
-    {const side=face.querySelector("[data-side]"),foot=face.querySelector("[data-foot]");if(side&&foot)[...foot.querySelectorAll(":scope>[data-sec][data-moved]")].reverse().forEach(x=>{side.appendChild(x);delete x.dataset.moved})}
     face.querySelectorAll("[data-fitw]").forEach(e=>{let s=+e.getAttribute("data-fitw"),n=0;e.style.fontSize=s+"px";const lo=+(e.getAttribute("data-min")||16);while(e.scrollWidth>e.clientWidth+1&&s>lo&&n++<60){s-=1;e.style.fontSize=s+"px"}});
     face.querySelectorAll("[data-fith]").forEach(e=>{let s=+e.getAttribute("data-fith"),n=0;e.style.fontSize=s+"px";const lo=+(e.getAttribute("data-min")||14);while((e.scrollHeight>e.clientHeight+1||e.scrollWidth>e.clientWidth+1)&&s>lo&&n++<60){s-=.5;e.style.fontSize=s+"px"}});
     face.querySelectorAll("[data-fit]").forEach(e=>{
@@ -120,8 +133,8 @@ window.MENU_FORMATS[ID]=ctx=>{
   const marks=["top:-10px;left:-10px;border-top:2px solid "+ink+";border-left:2px solid "+ink,"top:-10px;right:-10px;border-top:2px solid "+ink+";border-right:2px solid "+ink,"bottom:-10px;left:-10px;border-bottom:2px solid "+ink+";border-left:2px solid "+ink,"bottom:-10px;right:-10px;border-bottom:2px solid "+ink+";border-right:2px solid "+ink].map(p=>crop(p)).join("");
   const logo=logoPanel(ctx,{font:D,typeSize:46,typeInk:"#f4f1ea",lightInk:ink,maxW:RW-36,maxH:84,dark:darkPanel,light:"#f6f3ea",
     wrap:`position:relative;flex:none;align-self:flex-start;max-width:${RW}px;box-sizing:border-box;box-shadow:0 3px 14px rgba(0,0,0,.35);border-radius:${E.head==="line"?8:2}px`});
-  const plateTab=`<div style="flex:none;color:${ink};font:600 15px/1.2 ${B};letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;overflow:hidden;margin-top:12px">Plate A <span style="letter-spacing:.04em;text-transform:none;font-style:italic;font-weight:400">Now showing, ${esc(f.year||"")}</span></div>`;
-  const stamp=`<div style="flex:none;align-self:flex-start;max-width:${RW-12}px;box-sizing:border-box;margin:12px 0 0 6px;transform:rotate(${T.tilt-4}deg);border:3px solid ${acc};color:${acc};font:${E.dw} 18px/1.1 ${D};letter-spacing:.1em;padding:6px 10px 5px;text-transform:uppercase;background:${paper};opacity:.93">${esc(T.stamp)}</div>`;
+  const plateTab=`<div data-spare="2" style="flex:none;color:${ink};font:600 15px/1.2 ${B};letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;overflow:hidden;margin-top:12px">Plate A <span style="letter-spacing:.04em;text-transform:none;font-style:italic;font-weight:400">Now showing, ${esc(f.year||"")}</span></div>`;
+  const stamp=`<div data-spare="1" style="flex:none;align-self:flex-start;max-width:${RW-12}px;box-sizing:border-box;margin:12px 0 0 6px;transform:rotate(${T.tilt-4}deg);border:3px solid ${acc};color:${acc};font:${E.dw} 18px/1.1 ${D};letter-spacing:.1em;padding:6px 10px 5px;text-transform:uppercase;background:${paper};opacity:.93">${esc(T.stamp)}</div>`;
   const hero=`<div style="position:absolute;left:${M}px;top:${PY}px;width:${PW}px;height:${PH}px">${marks}<div style="position:absolute;inset:0;overflow:hidden;background:#111;outline:1px solid ${ink}">${heroImg}</div></div>`;
   const cap="";
 
@@ -160,20 +173,20 @@ window.MENU_FORMATS[ID]=ctx=>{
   const PQ=(()=>{const P={},M={};secs.forEach(x=>{const k="smwd"[x.ci];M[k]=x.items;P[k]=x.items.map((it,ii)=>price(f,fl,x.ci,ii,clean(it.n),E.scale))});return window.priceSense?window.priceSense(M,P):P})();
   const tot=secs.reduce((a,x)=>a+x.items.length,0);let seen=0,flowA="",flow="";
   secs.forEach(x=>{
-    const h=`<div data-sec><div style="break-inside:avoid">${secHead(LAB[x.ci])}`+x.items.slice(0,1).map((it,ii)=>row(it,x.ci,ii)).join("")+`</div>`+x.items.slice(1).map((it,ii)=>row(it,x.ci,ii+1)).join("")+`<div style="height:.45em"></div></div>`;
+    const h=`<div data-sec><div style="break-inside:avoid">${secHead(LAB[x.ci]).replace("<div ","<div data-hd ")}`+x.items.slice(0,1).map((it,ii)=>row(it,x.ci,ii)).join("")+`</div>`+x.items.slice(1).map((it,ii)=>row(it,x.ci,ii+1)).join("")+`<div style="height:.45em"></div></div>`;
     if(seen<tot/2)flowA+=h;else flow+=h;seen+=x.items.length;
   });
   function row(it,ci,ii){
     const n=clean(it.n),p=PQ["smwd"[ci]][ii];
-    return `<div style="break-inside:avoid;margin:0 0 .5em;display:flex;gap:.4em"><div style="flex:none;width:.62em;height:.62em;border:1.5px solid ${ink};margin-top:.28em"></div><div style="flex:1;min-width:0">
+    return `<div data-row style="break-inside:avoid;margin:0 0 .5em;display:flex;gap:.4em"><div style="flex:none;width:.62em;height:.62em;border:1.5px solid ${ink};margin-top:.28em"></div><div style="flex:1;min-width:0">
       <div style="display:flex;gap:.5em;align-items:baseline"><span style="flex:1;font:600 max(15px,1em)/1.15 ${B};color:${ink}">${esc(n)}</span><span style="flex:none;font:${E.dw} max(15px,1em)/1.15 ${D};color:${acc}">${cur}${esc(p)}</span></div>
       ${it.note?`<div data-note="1" style="font:400 max(14px,.74em)/1.3 ${B};color:${ink};opacity:.88;margin-top:.12em">${esc(sent(it.note))}</div>`:""}
     </div></div>`;
   }
-  const MY=PY+PH+20,MH=H-MY-58;
+  const MY=PY+PH+16,MH=H-MY-46;
   const menu=`<div data-fit="27" data-foot style="position:absolute;left:${M}px;top:${MY}px;width:${W-2*M}px;height:${MH}px;overflow:hidden;column-count:2;column-gap:30px;column-fill:auto;font-size:27px">${flow}</div>`;
   const side=`<div style="position:absolute;left:${RX}px;top:268px;width:${RW}px;height:${PY+PH-268}px;display:flex;flex-direction:column">${logo.html}${stamp}${plateTab}<div data-fit="24" data-side style="flex:1;min-height:0;margin-top:12px;overflow:hidden;font-size:24px">${flowA}</div></div>`;
-  const foot=`<div style="position:absolute;left:${M}px;right:${M}px;bottom:16px;border-top:1px solid ${ink};padding-top:7px;display:flex;justify-content:space-between;gap:16px;font:400 15px/1.2 ${B};color:${ink};white-space:nowrap;overflow:hidden">
+  const foot=`<div style="position:absolute;left:${M}px;right:${M}px;bottom:14px;border-top:1px solid ${ink};padding-top:5px;display:flex;justify-content:space-between;gap:16px;font:400 14px/1.2 ${B};color:${ink};white-space:nowrap;overflow:hidden">
     <span style="overflow:hidden;text-overflow:clip">Form ${esc(ID.toUpperCase())}${esc(num)}, rev. ${esc(f.year||"")}. Return tray to the hatch. Rations subject to supply.</span><span>Sheet 1 of 1. Images: TMDB</span></div>`;
 
   const face=`<div style="position:absolute;inset:0;${bg};font-family:${B}">

@@ -115,7 +115,18 @@ function fitRoot(root){
   if(window.__fmtTrimReset)window.__fmtTrimReset(root);root.querySelectorAll("[data-note]").forEach(n=>{n.style.display="";n.style.webkitLineClamp="";n.style.overflow=""});
   root.querySelectorAll("[data-drop]").forEach(n=>{n.style.display=""});
   root.querySelectorAll("[data-line]").forEach(n=>{for(let k=0;k<80&&n.scrollWidth>n.clientWidth+1;k++){const s=parseFloat(n.style.fontSize);if(s<=+(n.dataset.min||14))break;n.style.fontSize=(s-1)+"px"}});
-  root.querySelectorAll("[data-box]").forEach(box=>{
+  /* review 16: on the back the island map gives up height, 16px at a time down to 150px off the main isle, before a note in the kitchen
+     below it is shortened or hidden. Every pass starts from the built page */
+  const map=root.querySelector("[data-map]"),mn=root.querySelector("[data-main]"),mb=root.querySelector("[data-menu]"),sh=[...root.querySelectorAll("[data-mshift]")];
+  const cut=c=>{if(!map||!mn||!mb)return;[map,mn,mb,...sh].forEach(e=>{if(e.dataset.t0==null){e.dataset.t0=parseFloat(e.style.top)||0;e.dataset.h0=parseFloat(e.style.height)||0}});
+    map.style.height=(+map.dataset.h0-c)+"px";mn.style.height=(+mn.dataset.h0-c)+"px";sh.forEach(e=>e.style.top=(+e.dataset.t0-c)+"px");mb.style.top=(+mb.dataset.t0-c)+"px";mb.style.height=(+mb.dataset.h0+c)+"px"};
+  cut(0);
+  root.querySelectorAll("[data-box]").forEach(fitBox);
+  if(map&&mn&&mb){const lost=()=>[...mb.querySelectorAll("[data-note]")].some(n=>n.style.display==="none"||(n.dataset.full&&n.textContent!==n.dataset.full))||[...mb.querySelectorAll("[data-drop]")].some(n=>n.style.display==="none");
+    for(let c=16;lost()&&c<=150;c+=16){cut(c);mb.querySelectorAll("[data-fs]").forEach(n=>{n.style.fontSize=n.dataset.fs+"px"});if(window.__fmtTrimReset)window.__fmtTrimReset(mb);
+      mb.querySelectorAll("[data-note],[data-drop]").forEach(n=>{n.style.display=""});fitBox(mb)}}
+}
+function fitBox(box){{
     if(box.offsetParent===null&&getComputedStyle(box).position!=="fixed")return;
     const nodes=[...box.querySelectorAll("[data-fs]")].filter(n=>!n.hasAttribute("data-line"));
     for(let k=0;k<60&&over(box);k++){let ch=false;nodes.forEach(n=>{const s=parseFloat(n.style.fontSize),m=+(n.dataset.min||16);if(s>m){n.style.fontSize=(s-1)+"px";ch=true}});if(!ch)break}
@@ -125,7 +136,7 @@ function fitRoot(root){
     /* last resort: drop extra items (highest index first, later courses first), then fine print extras */
     const dr=[...box.querySelectorAll("[data-drop]")].filter(e=>e.closest("[data-box]")===box).map((e,i)=>[+(e.dataset.drop||0),i,e]).sort((x,y)=>x[0]-y[0]||x[1]-y[1]);
     while(over(box)&&dr.length)dr.pop()[2].style.display="none";
-  });
+  }
 }
 /* logo keeps its own colours: sample it, give a dark logo the light panel, swap to set type if it fails */
 function logoPass(root){
@@ -205,7 +216,7 @@ function wearLayer(P,tone,seed,folds){
   return s;
 }
 function img(url,o){
-  return`<div style="position:absolute;left:${o.x}px;top:${o.y}px;width:${o.w}px;height:${o.h}px;overflow:hidden;${o.shape||""};background:#123;${o.frame||""}">
+  return`<div ${o.mark||""} style="position:absolute;left:${o.x}px;top:${o.y}px;width:${o.w}px;height:${o.h}px;overflow:hidden;${o.shape||""};background:#123;${o.frame||""}">
     <img alt="" crossorigin="anonymous" src="${url}" style="position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:${o.contain?"contain":"cover"};object-position:${o.pos||"center 35%"};${o.contain?"":`filter:${o.filter};`}">
     ${o.contain?"":o.half?HALFTONE(o.half):""}${o.sheen?SHEEN(o.sheen):""}${o.extra||""}</div>`;
 }
@@ -267,23 +278,23 @@ window.MENU_FORMATS[ID]=ctx=>{
   const tag=(t,x,y,r)=>`<div style="position:absolute;left:${x}px;top:${y}px;padding:4px 12px;background:${P.bg};color:${P.ink};font:${ty.cw} 16px ${ty.caps};letter-spacing:.14em;text-transform:uppercase;transform:rotate(${r}deg);box-shadow:0 3px 6px rgba(0,0,0,.35);white-space:nowrap">${t}</div>`;
   const pl=propLines(F.prop);
   const back=`<div data-fmt="${ID}" style="position:absolute;inset:0;overflow:hidden;${stock(P,tone,seed+20)};color:${P.ink};font-family:${ty.body}">
-    <div style="position:absolute;left:0;top:0;width:600px;height:640px;${waterBg}overflow:hidden">
+    <div data-map style="position:absolute;left:0;top:0;width:600px;height:640px;${waterBg}overflow:hidden">
       <div data-box style="position:absolute;left:24px;top:18px;width:552px;height:56px;overflow:hidden;color:#fff8e8;display:flex;align-items:baseline;justify-content:space-between;gap:14px">
         <span data-fs="36" data-min="22" style="font:${ty.dw} 36px ${ty.disp};${up}white-space:nowrap;text-shadow:0 2px 6px rgba(0,0,0,.4)">${V.map}</span>
         <span data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;white-space:nowrap">Chart ${esc(F.number)}</span>
       </div>
-      ${img(main,{contain:main===ph.poster,x:10,y:80,w:580,h:402,filter:filt,half:E.half,sheen:E.sheen,shape:"border-radius:46% 54% 42% 58% / 52% 44% 56% 48%",frame:shore,pos:"center 38%"})}
-      ${tag(ISLE.m,60,440,-3)}
-      ${img(isleA,{contain:isleA===ph.poster,x:26,y:494,w:210,h:126,filter:filt,half:E.half,shape:"border-radius:55% 45% 50% 50% / 48% 58% 42% 52%",frame:shore,pos:"center 35%"})}
-      ${tag(ISLE.s,44,596,2)}
-      ${img(isleB,{contain:isleB===ph.poster,x:364,y:492,w:210,h:128,filter:filt,half:E.half,shape:"border-radius:44% 56% 58% 42% / 55% 45% 55% 45%",frame:shore,pos:"center 35%"})}
-      ${tag(ISLE.w,404,596,-2)}
-      <div data-box style="position:absolute;left:246px;top:500px;width:112px;height:112px;overflow:hidden;box-sizing:border-box;padding:6px 6px;background:${P.bg};border:2px dashed ${C.ink};border-radius:8px;text-align:center;transform:rotate(${TN.tilt}deg)">
+      ${img(main,{mark:"data-main",contain:main===ph.poster,x:10,y:80,w:580,h:402,filter:filt,half:E.half,sheen:E.sheen,shape:"border-radius:46% 54% 42% 58% / 52% 44% 56% 48%",frame:shore,pos:"center 38%"})}
+      ${tag(ISLE.m,60,440,-3).replace("<div ","<div data-mshift ")}
+      ${img(isleA,{mark:"data-mshift",contain:isleA===ph.poster,x:26,y:494,w:210,h:126,filter:filt,half:E.half,shape:"border-radius:55% 45% 50% 50% / 48% 58% 42% 52%",frame:shore,pos:"center 35%"})}
+      ${tag(ISLE.s,44,596,2).replace("<div ","<div data-mshift ")}
+      ${img(isleB,{mark:"data-mshift",contain:isleB===ph.poster,x:364,y:492,w:210,h:128,filter:filt,half:E.half,shape:"border-radius:44% 56% 58% 42% / 55% 45% 55% 45%",frame:shore,pos:"center 35%"})}
+      ${tag(ISLE.w,404,596,-2).replace("<div ","<div data-mshift ")}
+      <div data-box data-mshift style="position:absolute;left:246px;top:500px;width:112px;height:112px;overflow:hidden;box-sizing:border-box;padding:6px 6px;background:${P.bg};border:2px dashed ${C.ink};border-radius:8px;text-align:center;transform:rotate(${TN.tilt}deg)">
         <div data-fs="15" data-min="14" style="font:${ty.cw} 15px ${ty.caps};letter-spacing:.06em;text-transform:uppercase;color:${C.ink};line-height:1.1">${T(F.prop.title)}</div>
         ${pl.map(l=>`<div data-drop data-fs="14" data-min="14" style="font:${ty.bw} 14px ${ty.body};line-height:1.15;margin-top:2px">${T(l)}</div>`).join("")}
       </div>
     </div>
-    <div data-box style="position:absolute;left:34px;top:660px;width:532px;height:430px;overflow:hidden">
+    <div data-box data-menu style="position:absolute;left:34px;top:660px;width:532px;height:430px;overflow:hidden">
       ${["s","m","w"].filter(k=>cs[k].length).map(k=>`<div style="margin-bottom:10px"><div style="display:flex;align-items:baseline;gap:10px"><span data-fs="26" data-min="18" style="font:${ty.dw} 26px ${ty.disp};${up}white-space:nowrap;color:${P.ink}">${LABEL[k]}</span><span data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.14em;text-transform:uppercase;color:${C.ink};white-space:nowrap">${k==="w"?"":"see "+ISLE[k]}</span><span style="flex:1;border-top:2px solid ${C.ink};opacity:.5"></span></div>${items(cs[k],k,era,ty,C,false)}</div>`).join("")}
     </div>
     <div data-box style="position:absolute;left:34px;top:1098px;width:532px;height:84px;overflow:hidden;border-top:3px double ${C.ink};padding-top:6px;box-sizing:border-box">
