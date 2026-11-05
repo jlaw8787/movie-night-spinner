@@ -130,6 +130,6 @@ Left open from review 2, closed 4 Nov: sequel prices (checked: same-layout seque
 - Review 11 (docs/review-11.md) scored 8.1. All 8 fix items are done, pushed to wip/store-overhaul and deployed to Netlify (deploy 6aebd040). Notes are under "Fixed after the review" at the end of review-11.md.
 - Review 10 leftovers also done: Iron Giant style "Plate No." on diner specials; the six poster editions cook a savoury second starter (Under Siege's cake bites no longer fit on the galley card, the birthday cake stays).
 - New checks: tests/dry-plan.test.cjs (dry cards never buy grog, kids word pass), scripts/check-store-taps.cjs (phone sign taps, needs a browser).
-- Open for Josh: hand-built menus keep year-coded prices (Moonstruck 19.87, Saturday Night Fever 2.01, about 30 more). Keep as Easter eggs or move them to price endings?
+- Josh decided (5 Nov): hand-built menus keep their year-coded prices (Moonstruck 19.87, Saturday Night Fever 2.01) as Easter eggs. Reviewers should not mark these off.
 - Next: review 12 to confirm 9.5.
 - Pushing from a Claude session works again.
