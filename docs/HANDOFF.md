@@ -164,5 +164,6 @@ After the fixes: run all tests, redeploy to Netlify, add a "Fixed after the revi
 - formats-core.js is generated from formats.js by build-formats (run by build-data). Edit formats.js, never formats-core.js.
 - Phone tabs fit (fmtTabsFit in formats.js). New check: scripts/check-phone-fit.cjs (loads web fonts, needs the network).
 - Wait wording: planMin is the length only, planWhen adds ", start the day before".
-- Left open: how to write spaced-hyphen titles (Star Wars prequels, Mission: Impossible Fallout and Ghost Protocol) without a dash, a question for Josh; desktop strip repeats the "This week's film" panel; Skyfall's repeated kit note; long phone Candy bar page; small swipe-view type on hand-built cards. Suggested earlier and not built: any showtime instead of 5pm to 9pm, a calendar entry with a start-cooking reminder.
+- Josh chose commas for spaced-hyphen titles: display title changed at load in app.js, ids unchanged.
+- Left open: desktop strip repeats the "This week's film" panel; Skyfall's repeated kit note; long phone Candy bar page; small swipe-view type on hand-built cards. Suggested earlier and not built: any showtime instead of 5pm to 9pm, a calendar entry with a start-cooking reminder.
 - Next: review 14, a fresh independent scored review, target 9.5.

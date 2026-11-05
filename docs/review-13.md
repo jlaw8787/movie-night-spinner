@@ -143,6 +143,8 @@ It timed out during the review while four browser passes shared the machine. Run
 6. **Shopping lines.** A tin, can or jar sized in brackets reads "a 565g tin lychees" in the shopping list and in each dish's You need (The Farewell). Case added to tests/shop-lines.test.cjs. Iron Man 2's sweet is "Giant sprinkle doughnuts". Correction: The Little Mermaid's "1 bag fish" was an error in the review's own text pass, which stripped "gummy"; the list reads "1 bag gummy fish".
 7. **Small items.** "theatre" on Jurassic Park and Pinocchio, "neighbour" on You've Got Mail. Kids' mode reads North by Northwest's drink as "Verjuice sour". Analyze This' seal sits clear of "We won't go there." The calendar strip was hidden by design on 1 June; it now shows the next day within six weeks ("Christmas in July, In 30 days").
 
-Left open: spaced hyphens in the Star Wars prequel and Mission: Impossible titles (needs Josh's call on how to write them), the desktop strip repeating the "This week's film" panel, Skyfall's repeated kit note, the long phone Candy bar page, small swipe-view type on hand-built cards.
+Spaced-hyphen titles (Josh, 5 Nov): they now read with a comma on screen and paper ("Mission: Impossible, Fallout"); ids keep the official title.
+
+Left open: the desktop strip repeating the "This week's film" panel, Skyfall's repeated kit note, the long phone Candy bar page, small swipe-view type on hand-built cards.
 
 All 17 node tests pass; check-browser, check-store-taps, check-cut-words, check-prices, check-sweet-starters, check-kids-cards (343), check-prep-a4 (1,708 pages), check-phone-fit (900) and check-pdf-tone (named sample and `--per 2`) pass. Deployed to Netlify (deploy 6aec2e0e).

@@ -42,6 +42,9 @@ const T={"redsauce": {"name": "Little Italy Sunday Gravy"}, "pizza": {"name": "B
 const $=id=>document.getElementById(id);
 const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const sel=$("themeSel");
+/* Josh's call (5 Nov): titles written with a spaced hyphen read with a comma on screen and paper ("Mission: Impossible, Fallout").
+   The id keeps the official title, so saved lists, links and data files still match */
+FILMS.forEach(f=>{if(/ - /.test(f.title))f.title=f.title.replace(/ - /g,", ")});
 sel.innerHTML=`<option value="all">Everything (${FILMS.length} films)</option>`+
   Object.entries(T).sort((a,b)=>a[1].name.localeCompare(b[1].name)).map(([k,t])=>`<option value="${k}">${t.name} (${FILMS.filter(f=>f.theme===k).length})</option>`).join("");
 
