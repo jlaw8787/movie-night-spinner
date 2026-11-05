@@ -1440,7 +1440,8 @@ const KDRY=(()=>{const cap=(m,v)=>v&&/[A-Z]{2}/.test(m)&&m===m.toUpperCase()?v.t
    r(/\bciders?\b/gi,"sparkling apple juice"),
    /* review 12: hand-built drink names. A Manhattan is the drink only beside a cocktail, a cherry, a spirit or a price, never the island */
    ...[/\b(bourbon |rye |whisk(?:e)?y )?Manhattan (cock|mock)tails?\b/gi,/\bManhattans?(?=\s*\$?\d+\.\d\d\b)/g,/\b(bourbon|rye|whisk(?:e)?y) Manhattans?\b/gi,/\bManhattans?(?= with a cherry)/g,/^\s*Manhattans?\s*$/g].map(re=>[re,(m,...a)=>{const str=a[a.length-1],off=a[a.length-2],v=typeof off==="number"&&(off===0||/[.:!?]\s*$/.test(str.slice(0,off)))?"Cherry cola":"cherry cola";return /[A-Z]{2}/.test(m)&&m===m.toUpperCase()?v.toUpperCase():v}]),
-   r(/\balcohol-free (beers?|lagers?|ales?) and lemonade\b/gi,"lemon squash"),r(/\bhighballs?\b/gi,"cooler"),r(/\bbar tabs?\b/gi,"snack tab"),
+   r(/\balcohol-free (beers?|lagers?|ales?) and lemonade\b/gi,"lemon squash"),r(/\bhighballs?\b/gi,"cooler"),
+   /* review 13: a Gibson is a gin cocktail by name, even when the glass holds verjuice (North by Northwest) */r(/\b([Vv]erjuice )?Gibson(?= with (a )?cocktail onion)/g,(m,v)=>v?v+"sour":"Cucumber sour"),r(/\bbar tabs?\b/gi,"snack tab"),
    r(/\b(canadian )?(rye )?(whisk(e)?y)\b|\bbourbon\b|\bscotch\b/gi,"butterscotch"),
    /* rye on its own is the spirit unless it is the bread: on rye, dark rye, rye crackers and the like stay */
    r(/(?<!\b(on|dark|light|buttered|toasted|seeded|black|marble|of|sliced?|slices|pumpernickel|caraway|thin|deli|Swiss) )\brye\b(?! (bread|loaf|loaves|crackers?|squares?|toast|batter|flour|crisp(s|bread)?|slices?|into|rounds?|sourdough|bagels?|rolls?|buns?|croutons?|crumbs?|grains?|berries|and swiss))/gi,"ginger"),r(/\brum\b/gi,"coconut"),r(/\bgin\b/gi,"cucumber"),
@@ -2217,7 +2218,9 @@ function renderBoard(){
 }
 function renderCal(cal){
   /* the calendar only lists what's close: big days (Christmas, Easter, Halloween and the like) a month out, the rest a week out, and the strip hides when nothing is due */
-  const on=cal.filter(c=>c.on),up=cal.filter(c=>!c.on&&c.next&&daysTo(c.day)<=(c.s.big?31:7)).sort((a,b)=>a.day-b.day);
+  const on=cal.filter(c=>c.on);let up=cal.filter(c=>!c.on&&c.next&&daysTo(c.day)<=(c.s.big?31:7)).sort((a,b)=>a.day-b.day);
+  /* review 13: a quiet stretch (early June) left the strip empty with Christmas in July a month off, so the next day within six weeks shows instead */
+  if(!on.length&&!up.length)up=cal.filter(c=>!c.on&&c.next&&daysTo(c.day)<=45).sort((a,b)=>a.day-b.day).slice(0,1);
   $("shopCal").hidden=!on.length&&!up.length;
   const chip=(c,isOn)=>`<button type="button" class="${isOn?"on":""}${!isOn&&peekSeason===c.s.id?" peek":""}" aria-pressed="${isOn||peekSeason===c.s.id}" data-season="${c.s.id}" style="--sg:${c.s.c[0]};--sf:${c.s.c[1]}"><b>${ESC(c.s.name)}</b>${isOn?(c.end?`<small>Until ${fmtDay(c.end)}</small>`:""):`<small>${(d=>d===1?"Tomorrow":`In ${d} days, ${fmtDay(c.day)}`)(daysTo(c.day))}</small>`}</button>`;
   $("shopCal").innerHTML=(on.length?`<span class="cal-k">On now</span>`+on.map(c=>chip(c,true)).join(""):"")+(up.length?`<span class="cal-k">Coming up</span>`+up.map(c=>chip(c,false)).join(""):"");
