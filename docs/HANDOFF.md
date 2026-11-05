@@ -7,7 +7,7 @@ Read this first in a new chat. Last updated 5 Nov 2026. Start with "5 Nov, eveni
 - Repo: jlaw8787/movie-night-spinner
 - Launch branch: wip/menu-polish (917768a22)
 - Work branch: wip/store-overhaul, everything pushed. It sits on top of menu-polish. main has one extra commit (d30fb02ac) that merges in clean.
-- Live on Netlify while GitHub is flagged: https://movie-night-spinner.netlify.app (Netlify project "movie-night-spinner", site id b641e7a7-b7d1-44cc-95e1-79f0bc20acf6). Deployed 5 Nov evening from wip/store-overhaul (deploy 6aec2e0e). To redeploy, use the Netlify connector's deploy-site on that project and run the command it gives from the repo folder. Plain static site, no build step.
+- Live on Netlify while GitHub is flagged: https://movie-night-spinner.netlify.app (Netlify project "movie-night-spinner", site id b641e7a7-b7d1-44cc-95e1-79f0bc20acf6). Deployed 5 Nov evening from wip/store-overhaul (deploy 6aec33c6). To redeploy, use the Netlify connector's deploy-site on that project and run the command it gives from the repo folder. Plain static site, no build step.
 - GitHub account is still flagged, so Pages is down. When it clears:
   1. Merge wip/menu-polish into main
   2. Run the tests
@@ -156,7 +156,7 @@ After the fixes: run all tests, redeploy to Netlify, add a "Fixed after the revi
 - Left open: the long phone Candy bar page, small swipe-view type on hand-built cards.
 - Next: review 13, a fresh independent scored review, target 9.5.
 
-## 5 Nov, evening: review 13 scored 8.6, fixed and live (deploy 6aec2e0e)
+## 5 Nov, evening: review 13 scored 8.6, fixed and live (deploy 6aec33c6)
 
 - Review 13 (docs/review-13.md, shots review-13-01 to 29) scored 8.6, up from 8.4. All 7 fix items done, pushed to wip/store-overhaul and live on Netlify. Notes under "Fixed after the review" at the end of review-13.md.
 - Save PDF: every blurred inset shadow is baked to a picture; a multiply grain drops only its own layers (home, tavern, lab printed wrong because of this); tagged vignettes are baked, not hidden; conic gradients (checker borders) are drawn as tiles; filtered images keep transparency (logos with a drop shadow printed on a black plate); non-A4 menus fill their bands from the touching edges. check-pdf-tone limits are now 6 levels either way. Do not loosen them.
