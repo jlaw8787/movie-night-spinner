@@ -16,6 +16,7 @@ node tests/cook-times.test.cjs
 node tests/sweet-starters.test.cjs
 node tests/prices.test.cjs
 node tests/dry-plan.test.cjs
+node tests/veg-ahead.test.cjs
 ```
 
 The shopping tests execute the app's real checklist code with a small DOM fixture. They cover unlocked visit-local ticks, locked persistence, remaining-only sharing, empty and completed lists, stale keys, reset and double-feature lists. The weekly-plan suite executes the actual date/countdown and restore code in Brisbane, New York and UTC, including daylight-saving changes, legacy migration, explicit remote clearing and blocked storage.
