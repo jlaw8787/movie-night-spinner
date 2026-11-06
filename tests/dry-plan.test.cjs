@@ -25,6 +25,9 @@ console.log(`PASS: ${dry} dry-theme films cook alcohol-free; ${grown} grown-up f
    ["the green absinthe","the green cordial"],["Happy's lemon shandy pitchers","Happy's lemon squash pitchers"],["VIRGIN STRAWBERRY DAIQUIRI SLUSHIE","VIRGIN STRAWBERRY SLUSHIE"],["Huli huli chicken","Huli huli chicken"],
    /* review 12: hand-built drink names, and the bread and the island left alone */
    /* review 19: Home Alone 2's "Hot apple cider" read "Hot apple sparkling apple juice" */
+   /* review 20: place names keep their words; a battered alcohol-free beer is crisp battered; a Bloody Mary goes virgin */
+   ["Big Whiskey, Wyoming. Leave guns with Little Bill.","Big Whiskey, Wyoming. Leave guns with Little Bill."],["Greely's Beer Garden","Greely's Beer Garden"],["GREELY'S BEER GARDEN","GREELY'S BEER GARDEN"],
+   ["Alcohol-free lager battered fish","Crisp battered fish"],["Bloody Mary","Virgin Mary"],
    ["Hot apple cider","Hot spiced apple juice"],["HOT APPLE CIDER","HOT SPICED APPLE JUICE"],["Apple cider and doughnuts","Sparkling apple juice and doughnuts"],["Warm cider by the fire","Warm spiced apple juice by the fire"],["Pear cider","Sparkling pear juice"],
    ["Manhattan","Cherry cola"],["Manhattan 1.25","Cherry cola 1.25"],["Tess's Manhattan cocktail","Tess's cherry cola"],["Bourbon Manhattan","Cherry cola"],
    ["Rye, sweet vermouth and bitters, stirred, with a cherry","Ginger, cherry syrup and orange, stirred, with a cherry"],["Rye and jasmine tea highball","Ginger and jasmine tea cooler"],

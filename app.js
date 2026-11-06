@@ -1493,7 +1493,7 @@ const KDRY=(()=>{const cap=(m,v)=>v&&/[A-Z]{2}/.test(m)&&m===m.toUpperCase()?v.t
    r(/\bboilermakers?\b/gi,"ginger beer float"),r(/\bmargaritas?\b/gi,"lime slushie"),r(/\bmojitos?\b/gi,"mint and lime fizz"),r(/\bmartinis?\b/gi,"mocktail"),r(/\bdaiquiris?\b/gi,"strawberry slushie"),
    r(/\bpi[nñ]a coladas?\b/gi,"pineapple colada"),r(/\bblue lagoons?\b(?! mocktail)/gi,"blue lagoon mocktail"),r(/\bsangria\b/gi,"fruit punch"),r(/\bspritz(es)?\b/gi,"soda spritz"),r(/\bnegronis?\b/gi,"blood orange soda"),
    [/\b(red wine|white wine|rice wine|sherry|cider|champagne|malt) vinegar\b/gi,m=>m.replace(/(wine|sherry|cider|champagne|malt)/i,w=>w[0]+"\u200B"+w.slice(1))],
-   [new RegExp("\\b("+W+")[- ](battered)\\b","gi"),m=>cap(m,"crisp battered")],[new RegExp("\\b("+W+")[- ](braised|stewed)\\b","gi"),(m,a,b)=>cap(m,"slow-"+b.toLowerCase())],
+   r(/\b(alcohol-free|non-alcoholic) (beer|lager|stout|ale)[- ]battered\b/gi,"crisp battered"),[new RegExp("\\b("+W+")[- ](battered)\\b","gi"),m=>cap(m,"crisp battered")],[new RegExp("\\b("+W+")[- ](braised|stewed)\\b","gi"),(m,a,b)=>cap(m,"slow-"+b.toLowerCase())],
    [new RegExp("\\b("+W+")[- ](glazed)\\b","gi"),m=>cap(m,"sticky glazed")],[new RegExp("\\b("+W+")[- ](jus|sauce|gravy|reduction|butter|glaze)\\b","gi"),(m,a,b)=>cap(m,"rich "+b.toLowerCase())],
    [new RegExp("\\b("+W+")[- ](marinated|poached|steamed|soaked|infused|spiked|cured)\\b","gi"),(m,a,b)=>cap(m,b.toLowerCase())],
    r(/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing))/gi,"mocktail"),r(/\b(champagne|prosecco|sparkling wine|bubbly)\b/gi,"sparkling apple"),
@@ -1501,6 +1501,8 @@ const KDRY=(()=>{const cap=(m,v)=>v&&/[A-Z]{2}/.test(m)&&m===m.toUpperCase()?v.t
    r(new RegExp("\\b(beside|with) (a |some )?(frozen |cold |ice-cold |chilled )?(shots? of )?("+W+"|absinthe|grog)s?\\b","gi"),(m,a)=>a.toLowerCase()+" a cold drink"),r(new RegExp("\\b(pour|serve|open|crack open|hand round) the ("+W+"|absinthe|grog)s?\\b","gi"),(m,a)=>cap(m,a.toLowerCase()+" the drinks")),r(new RegExp("\\ba (bottle|glass|shot|pint|jug|can|flask|round) of ("+W+"|absinthe|grog)\\b","gi"),(m,a)=>"a "+a.toLowerCase()+" of lemonade"),r(/\b(green )?absinthe\b/gi,"green cordial"),r(/\bgrog\b/gi,"fruit punch"),
    /* review 19: "Hot apple cider" read "Hot apple sparkling apple juice" (Home Alone 2): the apple is already named, and a hot one is not sparkling */
    r(/\b(hot|warm|warmed|mulled|spiced) (spiced )?apple ciders?\b/gi,(m,a)=>cap(m,a.toLowerCase()+" spiced apple juice")),r(/\b(hot|warm|mulled) ciders?\b/gi,(m,a)=>cap(m,a.toLowerCase()+" spiced apple juice")),r(/\b(apple|pear) ciders?\b/gi,(m,a)=>cap(m,"sparkling "+a.toLowerCase()+" juice")),
+   /* review 20: a Bloody Mary keeps its name on a kids' card without the vodka (Get Shorty) */
+   r(/\bBloody Marys?\b/gi,"Virgin Mary"),
    r(/\bciders?\b/gi,"sparkling apple juice"),
    /* review 12: hand-built drink names. A Manhattan is the drink only beside a cocktail, a cherry, a spirit or a price, never the island */
    ...[/\b(bourbon |rye |whisk(?:e)?y )?Manhattan (cock|mock)tails?\b/gi,/\bManhattans?(?=\s*\$?\d+\.\d\d\b)/g,/\b(bourbon|rye|whisk(?:e)?y) Manhattans?\b/gi,/\bManhattans?(?= with a cherry)/g,/^\s*Manhattans?\s*$/g].map(re=>[re,(m,...a)=>{const str=a[a.length-1],off=a[a.length-2],v=typeof off==="number"&&(off===0||/[.:!?]\s*$/.test(str.slice(0,off)))?"Cherry cola":"cherry cola";return /[A-Z]{2}/.test(m)&&m===m.toUpperCase()?v.toUpperCase():v}]),
@@ -1523,7 +1525,11 @@ const KFIX=(()=>{const cap=(m,v)=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1)
    [/\b(mocktail|syrup|grape juice|sparkling apple|root beer|ginger beer|rich|soda|sticky|crisp|slow-braised|slow-stewed|butterscotch|coconut|cucumber|lime|vanilla|fizz|punch|lemonade|juice)( \1)+\b/gi,(m,a)=>a]]})();
 /* any word a swap doubles ("lemon shandy" to "lemon lemon squash", "strawberry daiquiri slushie") folds to one; doubles the film wrote itself (huli huli, Nai Nai) stay */
 const dryFold=(out,src)=>{const had=new Set([...src.matchAll(/\b([\p{L}']+)( \1)+\b/giu)].map(m=>m[0].toLowerCase()));let x=out,prev;do{prev=x;x=x.replace(/\b([\p{L}']+)((?: \1)+)\b/giu,(m,a)=>had.has(m.toLowerCase())?m:(m.split(' ').find(w=>new RegExp('\\b'+w+'\\b','u').test(src))||a))}while(x!==prev);return x};
-const dryText=(t,on)=>{const v=KFIX.reduce((a,[re,to])=>a.replace(re,to),t);return on?dryFold(KFIX.reduce((a,[re,to])=>a.replace(re,to),KDRY.reduce((a,[re,to])=>a.replace(re,to),v)),v):v};
+/* review 20: places keep their names in kids' mode ("Big Whiskey, Wyoming", "Greely's Beer Garden" on Unforgiven): a town or a named venue
+   is held aside while the word pass runs */
+const KKEEP=/\bBig Whiskey\b|\bBIG WHISKEY\b|\b[A-Z][A-Za-z]+['’][sS] (?:Beer|Whiskey|Rum|Wine|Gin|BEER|WHISKEY|RUM|WINE|GIN) (?:Garden|Hall|House|Saloon|Cellar|Room|GARDEN|HALL|HOUSE|SALOON|CELLAR|ROOM)\b/g;
+const dryKeep=(t,fn)=>{const kept=[];const m=String(t).replace(KKEEP,x=>{kept.push(x);return `\uE000${kept.length-1}\uE001`});return kept.length?fn(m).replace(/\uE000(\d+)\uE001/g,(x,i)=>kept[+i]):fn(t)};
+const dryText=(t,on)=>{const v=KFIX.reduce((a,[re,to])=>a.replace(re,to),t);return on?dryKeep(v,u=>dryFold(KFIX.reduce((a,[re,to])=>a.replace(re,to),KDRY.reduce((a,[re,to])=>a.replace(re,to),u)),u)):v};
 function kidsDryDom(root,f){if(!root)return;const on=dryNow(f||current);const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;const todo=[];
   /* a name can arrive split across text nodes ("Caribbean cruise prawn" + "cocktail"): each node is read with the end of the one before and the start of the one after, and only its own part is kept */
   const nodes=[];while(n=tw.nextNode()){const p=n.parentElement;if(!p||/^(SCRIPT|STYLE)$/.test(p.tagName))continue;nodes.push(n)}
