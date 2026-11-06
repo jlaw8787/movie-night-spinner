@@ -188,9 +188,10 @@ function sizes(menu,avail){
 
 /* ---------- runtime fit, run from an onload hook once fonts are in ---------- */
 window.__placematFit=window.__placematFit||function(trigger){
-  const el=trigger.closest("[data-pm]");if(!el||el.dataset.fitted)return;
-  document.fonts.ready.then(()=>{
-    el.dataset.fitted="1";
+  const el=trigger.closest("[data-pm]");const seen=window.__placematSeen=window.__placematSeen||new WeakSet();if(!el||seen.has(el))return;seen.add(el);
+  /* review 18: with the fonts already in (a second film in the same visit) the fit ran before the logo and photos loaded, and the menu column
+     then lost height, cutting its last dish (Jingle All the Way, The Incredibles). It runs again as each picture arrives */
+  const run=()=>{
     const over=b=>b.scrollHeight>b.clientHeight+1||b.scrollWidth>b.clientWidth+1;
     const step=(nodes,box,min)=>{for(let k=0;k<14&&over(box);k++){let ch=false;nodes.forEach(n=>{const s=parseFloat(getComputedStyle(n).fontSize);if(s>min){n.style.fontSize=(s-1)+"px";ch=true}});if(!ch)break}};
     const menu=el.querySelector('[data-fit="menu"]');
@@ -206,7 +207,11 @@ window.__placematFit=window.__placematFit||function(trigger){
     if(fine)step([...fine.querySelectorAll('[data-fit="fine"]')],fine,14);
     const pr=el.querySelector('[data-fit="prop"]');
     if(pr)step([...pr.querySelectorAll('[data-fit="ptitle"]')],pr,15);
-  });
+  };
+  /* and it waits until the page is laid out: built off screen, the menu measures 0 tall and nothing was shrunk */
+  const go=n=>{if(!el.isConnected&&n>5)return;const m=el.querySelector('[data-fit="menu"]');if((!m||!m.clientHeight)&&n<120){requestAnimationFrame(()=>go(n+1));return}run();setTimeout(()=>{if(el.isConnected)run()},700)};
+  document.fonts.ready.then(()=>{el.dataset.fitted="1";go(0);
+    el.querySelectorAll("img").forEach(im=>{if(!im.complete)["load","error"].forEach(ev=>im.addEventListener(ev,()=>{if(el.isConnected)go(0)},{once:true}))})});
 };
 /* logo keeps its own colours: a dark logo gets light stock, a light logo dark stock; a failed logo falls back to type */
 window.__placematLogo=window.__placematLogo||function(img,ok){

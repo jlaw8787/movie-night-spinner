@@ -36,11 +36,15 @@ const BLOTCH="data:image/svg+xml,"+encodeURIComponent("<svg xmlns='http://www.w3
 function loadFonts(key,fams){const id="fmt-font-"+key;if(document.getElementById(id))return;const l=document.createElement("link");l.id=id;l.rel="stylesheet";l.href="https://fonts.googleapis.com/css2?"+fams.map(f=>"family="+f).join("&")+"&display=block";document.head.appendChild(l)}
 /* shrink-to-fit: any [data-fit] box scales its own font-size (children use em) until nothing overflows; data-min is the floor */
 if(!window.__fmtFit){
-  window.__fmtFit=()=>document.querySelectorAll("[data-fit]").forEach(el=>{
+  /* review 18: only the bare [data-fit] boxes these layouts mark. It used to take every [data-fit] on the page, so once a banquet, candy bar or
+     takeaway film had been open, its timers reset the placemat's dish type ([data-fit="dish"]) to full size and cut the last drink */
+  window.__fmtFit=()=>document.querySelectorAll('[data-fit=""]').forEach(el=>{
     if(!el.dataset.base)el.dataset.base=parseFloat(el.style.fontSize)||16;
     let fs=+el.dataset.base;const min=+el.dataset.min||14;el.style.fontSize=fs+"px";
     const over=()=>el.scrollHeight>el.clientHeight+1||el.scrollWidth>el.clientWidth+1;
     el.querySelectorAll("[data-drop]").forEach(x=>x.style.display="");for(let n=0;n<60&&over()&&fs>min;n++){fs=Math.max(min,fs*.97);el.style.fontSize=fs+"px"}
+    /* review 18: past the box's own floor, down to the site floor of 14px before anything is cut (The Santa Clause 2 lost its last drink note) */
+    for(let n=0;n<60&&over()&&fs>14;n++){fs=Math.max(14,fs*.97);el.style.fontSize=fs+"px"}
     /* last resort: drop descriptions from the bottom up, never a dish or price */
     const dr=[...el.querySelectorAll("[data-drop]")];while(over()&&dr.length)dr.pop().style.display="none"});
   const run=()=>{try{window.__fmtFit()}catch(e){}};

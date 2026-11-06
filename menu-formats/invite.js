@@ -135,7 +135,9 @@ M.logoTone=img=>{try{const c=document.createElement("canvas"),w=c.width=72,h=c.h
 M.logoFail=img=>{const p=img.closest("[data-lpanel]");img.style.display="none";const t=p&&p.querySelector("[data-ltype]");if(t)t.style.display="block";if(p)p.style.background=p.dataset.type||p.style.background;M.fitAll()};
 /* shrink-to-fit: [data-fit=min px] boxes have a fixed size and em-sized children */
 const over=el=>el.scrollHeight>el.clientHeight+1||el.scrollWidth>el.clientWidth+1;
-M.fitAll=()=>document.querySelectorAll("[data-fit]").forEach(el=>{if(!el.isConnected||!el.getClientRects().length)return;
+/* review 18: only this family's boxes (data-fit is a number, the floor in px). Every [data-fit] on the page used to be taken, so a home,
+   invite or precinct film opened first left this pass resetting the placemat's dish type and cutting its last drink */
+M.fitAll=()=>[...document.querySelectorAll("[data-fit]")].filter(el=>{if(!/^[\d.]*$/.test(el.dataset.fit))return false;const c=el.closest(".fmt-lib");return !c||/\blib-(home|invite|precinct)\b/.test(c.className)}).forEach(el=>{if(!el.isConnected||!el.getClientRects().length)return;
   const base=+(el.dataset.base||(el.dataset.base=parseFloat(el.style.fontSize)||20)),min=+el.dataset.fit||14;
   el.querySelectorAll("[data-opt],[data-item]").forEach(n=>n.style.display="");
   const shrink=()=>{let s=base,g=0;el.style.fontSize=s+"px";while(over(el)&&s>min&&g++<120){s=Math.max(min,s-.5);el.style.fontSize=s+"px"}};

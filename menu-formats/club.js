@@ -147,10 +147,11 @@ window.MENU_FORMATS["club"]=ctx=>{
   const neonTxt=e.border==="neon"?`text-shadow:0 0 6px ${ACC},0 0 18px ${ACC},0 0 34px ${ACC}aa;color:#fff;`:e.border==="chrome"?`background:linear-gradient(180deg,#ffffff,#9a9aa4 45%,#f6f6fa 55%,#8a8a94);-webkit-background-clip:text;background-clip:text;color:transparent;`:`color:${era==="1950s"?ACC:INK};`;
   const head=`<div style="position:absolute;left:${PAD}px;right:${PAD}px;top:${PH+(P0?0:6)}px;text-align:center">
       <div style="font-family:${BODY};font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:${ACC};font-size:16px;line-height:1.3">${esc(T.kick)}</div>
-      <div data-fit style="height:${Math.round(vSize*(P0?1.3:2.2))}px;overflow:hidden;display:flex;align-items:center;justify-content:center"><div style="font-family:${DISP};font-weight:${dispW};${dispSt}${neonTxt}line-height:1.04;${fs(vSize,24)}">${esc(venue)}</div></div>
+      <div data-fit style="height:${Math.round(vSize*(P0&&vlen<=18?1.3:2.2))}px;overflow:hidden;display:flex;align-items:center;justify-content:center"><div style="font-family:${DISP};font-weight:${dispW};${dispSt}${neonTxt}line-height:1.04;${fs(vSize,24)}">${esc(venue)}</div></div>
       <div style="font-family:${BODY};font-weight:600;color:${mix(INK,STOCK,.2)};font-size:18px;letter-spacing:.08em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${esc(sign)}</div></div>`;
   const cardH=P0?136:176,cardTop=H-cardH-(P0?40:46);
-  const noteTop=P0?PH+22+Math.round(vSize*1.3)+26+10:PH+40+Math.round(vSize*2.2)+40;
+  /* review 18: a long venue takes two lines on the poster-first page too (Detroit Talent Night Lounge was cut), and the note moves down with it */
+  const noteTop=P0?PH+22+Math.round(vSize*(vlen<=18?1.3:2.2))+26+10:PH+40+Math.round(vSize*2.2)+40;
   const noteBox=`<div data-fit data-q style="position:absolute;left:${PAD+6}px;right:${PAD+6}px;top:${noteTop}px;height:${cardTop-noteTop-18-Math.ceil(150*Math.abs(Math.sin(T.tilt*Math.PI/180)))-6}px;overflow:hidden;text-align:center;display:flex;flex-direction:column;justify-content:safe center">
       <div style="font-family:${BODY};font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:${ACC};${fs(15,14)};margin-bottom:6px">${esc(T.noteH)}</div>
       <div style="font-family:${BODY};${e.body==="Cormorant Garamond"?"font-style:italic;font-weight:500;":""}color:${INK};line-height:1.32;${fs(e.body==="Cormorant Garamond"?24:21,14)};display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:var(--ql,12);overflow:hidden;flex:none">“${esc(note.t)}”</div>

@@ -293,12 +293,14 @@ window.MENU_FORMATS[ID]=ctx=>{
   const ty=PMq?SY+8+570+14:SY+SH+22,tw=PMq?282:262,th=PMq?172:196;
   const pT=fitType(prop.title,tw-(PMq?136:104),60,E.dcw,30,18,1.05,2);
   {const lw=Math.max(...String(prop.title).split(/\s+/).map(w=>w.length)),room=tw-58-34;pT.z=Math.max(16,Math.min(pT.z,Math.floor(room/(lw*0.74))))}
+  /* review 18: the prop lines step down to 14px when they would run out of the ticket (Hocus Pocus 2's "Town square, open until sunrise") */
+  const pRoom=th-24-18-5-pT.n*pT.z*1.05-5*prop.lines.length-6,pLz=prop.lines.reduce((t,l)=>t+lines(trunc(l,44),16,tw-58-30,.54)*20,0)>pRoom?14:16;
   const ticket=`<div style="position:absolute;left:22px;top:${ty}px;width:${tw}px;height:${th}px;transform:rotate(${(T.tilt*.8).toFixed(2)}deg);background:linear-gradient(160deg,rgba(255,255,255,.35),transparent 50%),${dkPaper?"#f3ecd9":mix(E.paper,ACC,.12)};border:2px solid ${ACC};box-shadow:0 3px 9px rgba(0,0,0,.22);display:flex;color:#231d18">
       <div style="flex:1;padding:14px 14px 10px 16px;display:flex;flex-direction:column;gap:5px;overflow:hidden">
         <div style="${caps(15,fit(ACC,"#f3ecd9","#5a2a1a",3.2),.2)}">Admit one</div>
         <div style="font:${E.disp==="Unbounded"?"800 ":""}${pT.z}px/1.05 ${disp};color:#1e1a16">${esc(prop.title)}</div>
-        ${prop.lines.map(l=>`<div style="font:500 16px/1.25 ${body};color:#3a322a">${esc(trunc(l,44))}</div>`).join("")}
-        <div style="margin-top:auto;font:700 15px/1.2 ${body};color:#3a322a">${esc(T.ticket)}</div></div>
+        ${prop.lines.map(l=>`<div style="font:500 ${pLz}px/1.22 ${body};color:#3a322a">${esc(trunc(l,44))}</div>`).join("")}
+        ${/* review 18: the closing line only when the ticket has room for it; a two-line title and two prop lines pushed it out of the box (13 Going on 30, Barbie, West Side Story) */(th-24-20-pT.n*pT.z*1.05-prop.lines.reduce((t,l)=>t+lines(trunc(l,44),pLz,tw-58-30,.54)*pLz*1.22,0)-15*1.2-4*5-14)>=0?`<div style="margin-top:auto;font:700 15px/1.2 ${body};color:#3a322a">${esc(T.ticket)}</div>`:""}</div>
       <div style="width:58px;border-left:2px dashed ${rgba("#231d18",.45)};display:flex;align-items:center;justify-content:center">
         <div style="transform:rotate(-90deg);white-space:nowrap;font:800 17px/1 ${body};letter-spacing:.12em;color:#231d18">No. ${esc(num.padStart(4,"0"))}</div></div></div>`;
   /* note with script signature */

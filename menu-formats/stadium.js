@@ -278,7 +278,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   for(const x of tiers){CW=CWall;const h1=C.reduce((a,[k])=>a+cH(x,k),0);if(h1*1.04<=menuH){tr=x;sp={s:C.length,m:h1};one=true;break}
     CW=(CWall-colGap)/2;const q=split(x);if(q.m*1.04<=menuH){tr=x;sp=q;break}}
   if(!sp){dmax=2;CW=(CWall-colGap)/2;sp=split(tr)}
-  const cgap=14+Math.min(30,Math.max(0,menuH-sp.m*1.04)/3);
+  /* review 18: the gap under each course comes out of the room that is left, shared by the courses in the taller column (it was a third of the room
+     per course plus 14px each, so a four-course column ran past the box and cut its last drink: Phar Lap's shandy) */
+  const nC=Math.max(1,one?C.length:Math.max(sp.s,C.length-sp.s)),free=menuH-sp.m*1.04-14*nC,cgap=free>=0?14+Math.min(30,free/nC):Math.max(4,14+free/nC);
   const head=l=>{
     if(e.bar==="grid")return `<div style="border:2px solid ${ink};padding:4px 10px;font:${e.dw} ${tr.h}px/1.1 ${DF};color:${ink};margin-bottom:8px;text-transform:uppercase;display:flex;justify-content:space-between"><span>${l}</span><span style="color:${acc};font-size:max(14px,.7em)">No. ${esc(num.slice(-2))}</span></div>`;
     if(e.bar==="pill")return `<div style="display:inline-block;background:${acc};color:${paper};border-radius:999px;padding:4px 16px;font:${e.dw} ${tr.h}px/1.1 ${DF};margin-bottom:8px;text-transform:uppercase">${l}</div>`;

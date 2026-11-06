@@ -1514,8 +1514,13 @@ function fitLines(card){try{kidsDryDom(card)}catch(e){}
   const els=[...card.querySelectorAll("*")].filter(e=>{if(!e.firstChild||!e.offsetWidth)return false;const cs=getComputedStyle(e);
     if(!/^(nowrap|pre)/.test(cs.whiteSpace)&&cs.textOverflow!=="ellipsis")return false;if(cs.overflow==="visible"&&cs.overflowX==="visible")return false;
     if(cs.webkitLineClamp&&cs.webkitLineClamp!=="none")return false;return (e.scrollWidth>e.clientWidth+1||e.dataset.fl0)&&e.textContent.trim().length>1});
-  for(const e of els){const sized=[e,...e.querySelectorAll("*")].filter(x=>x.textContent.trim());const base=sized.map(x=>+(x.dataset.fl0||(x.dataset.fl0=parseFloat(getComputedStyle(x).fontSize)||0)));
-    sized.forEach((x,i)=>{if(base[i])x.style.fontSize=base[i]+"px"});for(let k=.97;k>=.65&&e.scrollWidth>e.clientWidth+1;k-=.03)sized.forEach((x,i)=>{if(base[i])x.style.fontSize=(base[i]*k).toFixed(2)+"px"});
+  /* review 18: the base size is taken again when a layout's own fit pass has changed the type since this pass last set it. Before, the first
+     size seen stuck: on a second film in the same visit the placemat fit had not run yet, so every later pass put its dishes back to full size
+     and the last drink was cut off (Jingle All the Way, The Incredibles) */
+  for(const e of els){const sized=[e,...e.querySelectorAll("*")].filter(x=>x.textContent.trim());
+    const base=sized.map(x=>{const now=x.style.fontSize;if(x.dataset.fl0&&x.dataset.flset!==undefined&&now!==x.dataset.flset)delete x.dataset.fl0;return +(x.dataset.fl0||(x.dataset.fl0=parseFloat(getComputedStyle(x).fontSize)||0))});
+    const put=(x,v)=>{x.style.fontSize=v;x.dataset.flset=x.style.fontSize};
+    sized.forEach((x,i)=>{if(base[i])put(x,base[i]+"px")});for(let k=.97;k>=.65&&e.scrollWidth>e.clientWidth+1;k-=.03)sized.forEach((x,i)=>{if(base[i])put(x,(base[i]*k).toFixed(2)+"px")});
     /* a decorative tag (data-opt) that still will not fit steps aside rather than show half a word */
     if(e.hasAttribute("data-opt")&&e.scrollWidth>e.clientWidth+1)e.style.visibility="hidden"}
   /* decorative tags pushed past their row's edge by a layout's own sizing step aside too */
