@@ -1,0 +1,112 @@
+{
+ "id": "Big (1988)",
+ "slug": "big-1988",
+ "layout": "hand-built",
+ "title": "Big",
+ "year": "1988",
+ "theme": "deli",
+ "tagline": "Grown-up food for a kid at heart.",
+ "about": "A 12-year-old wishes to be big and wakes up as a grown man working at a toy company.",
+ "cue": "Serve the snacks when Josh eats baby corn like a tiny corn cob at the company party.",
+ "faces": [
+  [
+   "MacMillan",
+   "TOY COMPANY ◆ NEW YORK, N.Y.",
+   "THE COMPANY PARTY",
+   "SUPPER, SWEETS AND THE SODA FOUNTAIN",
+   "Black tie. White tuxedos welcome.",
+   "Mr. MacMillan and our new V.P. of Product Development, four hands on one keyboard.",
+   "FROM THE BOSS",
+   "Thank you all for a big year. Tonight, no meetings. Eat well, try something new, and have fun. That is an order.",
+   "Mr. MacMillan",
+   "President, MacMillan Toy Company",
+   "Form 187. Printed in U.S.A. © 1988.",
+   "7:30 doors 8:00 supper 9:30 cookie",
+   "ZOLTAR SPEAKS",
+   "Make a wish"
+  ],
+  [
+   "COMPLIMENTS OF THE COMPANY",
+   "THE MENU",
+   "Please, no toy pitches at the table.",
+   "TRAYS",
+   "Griddled baby corn",
+   "Charred in butter with crushed red pepper, lime zest and salt.",
+   "Red caviar canapés",
+   "Salmon roe, crème fraîche and chives on crisp water crackers.",
+   "Chicken satay",
+   "Garlic and soy marinated skewers, warm peanut sauce.",
+   "THE CART",
+   "Corner cart hot dog",
+   "Steamed bun, mustard, sauerkraut and onions stewed in tomato.",
+   "Hot soft pretzel",
+   "Twisted by hand, coarse salt, yellow mustard to dip.",
+   "SWEETS",
+   "The giant cookie",
+   "Brown-butter chocolate chip, iced with piano keys, cut at the table.",
+   "Cotton candy",
+   "Spun to order, pink or blue, just like Sea Point Park.",
+   "FOUNTAIN",
+   "Chocolate egg cream",
+   "Syrup, cold milk and seltzer, stirred until the foam rises.",
+   "Kiddie cocktail",
+   "Ginger ale, grenadine and a maraschino cherry.",
+   "Fresh lemonade",
+   "Squeezed this afternoon, plenty of ice.",
+   "MacMillan Toy Company, New York, 1988.",
+   "MacMillan",
+   "Josh Baskin",
+   "Vice President, Product Dev."
+  ]
+ ],
+ "phone": "MacMillan Toy CompanyBigGrown-up food for a kid at heart.Every recipe serves 4.\n    StartersMainsSweetsDrinks\n    StartersGriddled baby cornCharred in butter with crushed red pepper, lime zest and salt.Best eaten like corn on the cob.How to make it400g baby corn30g butter1 tsp chilli flakes2 limes, zested, then cut into wedges1 pinch saltBlanch the baby corn in salted boiling water, then drain well.Char on a hot griddle with the butter.Sprinkle with chilli flakes, lime zest and salt.Serve with lime wedges and eat it like a cob.Red caviar canapésSalmon roe, crème fraîche and chives on crisp water crackers.An acquired taste.How to make it20 water crackers200ml crème fraîche100g salmon roe1 bunch chives, snippedSpread each cracker with crème fraîche.Top with salmon roe and a few chives.Assemble just before serving so the crackers stay crisp.MainsCorner cart hot dogSteamed bun, mustard, sauerkraut and onions stewed in tomato.Have two. Nobody is counting.How to make it8 hot dog franks3 brown onions, one halved and two sliced2 tbsp oil2 tbsp tomato paste1 tbsp vinegar8 hot dog buns3 tbsp yellow mustard1 jar sauerkrautSimmer the franks in water with the halved onion, then griddle until blistered.Soften the sliced onions in oil, add the tomato paste and vinegar.Steam the buns.Fill with franks, mustard, sauerkraut and onions.SweetsThe giant cookieBrown-butter chocolate chip, iced with piano keys, cut at the table.Big enough for four hands.How to make it150g butter200g brown sugar1 egg250g plain flour1/2 tsp bicarb soda200g choc chips200g icing sugar2 tbsp waterBrown the butter and cool.Beat with the brown sugar and egg, then mix in the flour, bicarb and choc chips.Press into a pizza tray and bake at 180°C.Cool completely.Mix the icing sugar with the water, then pipe piano keys across the cookie.DrinksChocolate egg creamSyrup, cold milk and seltzer, stirred until the foam rises.No egg, no cream. Never was.How to make it8 tbsp chocolate syrup320ml cold milk600ml chilled soda waterAdd syrup and milk to each of 4 tall glasses.Pour in soda water hard from a height, stirring with a long spoon so a white foam head rises.Serve with a straw straight away.\n    Showtime cueServe the snacks when Josh eats baby corn like a tiny corn cob at the company party.\n    Read the printed menu full size",
+ "cooked": [
+  "Baby corn",
+  "Caviar on crackers",
+  "Street cart hot dog",
+  "Giant choc chip cookie",
+  "Chocolate egg cream"
+ ],
+ "dishes": [
+  {
+   "course": "S",
+   "name": "Baby corn",
+   "note": "eat it off the cob with both hands, like Josh"
+  },
+  {
+   "course": "S",
+   "name": "Caviar on crackers",
+   "note": "the fancy party snack Josh spits straight back out"
+  },
+  {
+   "course": "M",
+   "name": "MacMillan party crab cakes with remoulade",
+   "note": "the MacMillan Toys company party where Josh takes on the baby corn"
+  },
+  {
+   "course": "M",
+   "name": "Street cart hot dog",
+   "note": "Josh and Billy loose in the city"
+  },
+  {
+   "course": "W",
+   "name": "Giant choc chip cookie",
+   "note": "big enough to play like the floor piano"
+  },
+  {
+   "course": "K",
+   "name": "Chocolate egg cream",
+   "note": "a New York fountain drink for a kid in a grown-up's body"
+  }
+ ],
+ "venue": null,
+ "house": null,
+ "sources": {
+  "dishes_and_cue": "data/films.json (S starters, M mains, W sweets, K drinks: [name, note, method, shopping]; P cue, T tagline, D about)",
+  "dish_notes": "data/dish-notes.json",
+  "recipes": "data/recipes2/big-1988.json (cooked versions)",
+  "venue_sign_note_winks": "data/film-flavour.json",
+  "house_lines": "data/film-house.json",
+  "layout": "formats.js (hand-built menu, search the film id) or movie-menus.js (editions)"
+ }
+}

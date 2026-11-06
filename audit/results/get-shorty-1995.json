@@ -1,0 +1,68 @@
+{
+ "id": "Get Shorty (1995)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Asked for: sedan",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "Chili ordered a Cadillac at the rental counter. The joke is that he gets 'the Cadillac of minivans' instead.",
+   "source": "https://www.aol.com/1993-oldsmobile-silhouette-wacky-minivan-160000231.html",
+   "fix": "Asked for: Cadillac",
+   "done": false
+  },
+  {
+   "text": "“Seats seven, and smooth.”",
+   "where": "quote",
+   "verdict": "wrong",
+   "why": "Nobody in the film says this. The line said about the minivan is that it's the Cadillac of minivans.",
+   "source": "https://www.aol.com/1993-oldsmobile-silhouette-wacky-minivan-160000231.html",
+   "fix": "“The Cadillac of minivans.”",
+   "done": false
+  },
+  {
+   "text": "Loan shark, Miami. Comes to L.A. to collect. Dry cleaner faked his death. Plane crash. Ending? Working on it. Chili P.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "The story is right: Leo Devoe the dry cleaner skipped off the plane before it crashed and Chili came to collect. But it is signed Chili P. and these are not his words, so under the strict quote rule it may need flagging. It reads as his notes on a napkin, not dialogue.",
+   "source": "https://en.wikipedia.org/wiki/Get_Shorty_(film)",
+   "fix": "Leave as is if signed notes are allowed. Otherwise drop the signature and keep the notes.",
+   "done": false
+  },
+  {
+   "text": "Harry Zimm's lunch",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No source shows Harry eating a cobb salad or any set lunch. The line is not on the printed or phone menu.",
+   "source": "https://en.wikipedia.org/wiki/Get_Shorty_(film)",
+   "fix": "what Harry Zimm would order on someone else's tab",
+   "done": false
+  }
+ ],
+ "checked_ok": 20,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Sharp Hollywood lunch spot with the right running jokes, but the food is generic power lunch and a few big moments are missing.",
+  "missing": [
+   "Look at me (Chili teaching Martin Weir the stare)",
+   "Bear the stuntman (Chili talking him down at Harry's)",
+   "Leo's locker key at LAX (the DEA sting on Ray Bones)",
+   "Touch of Evil at the cinema (Chili mouthing the lines)",
+   "Bo going over the deck railing (Bo's cliff house)",
+   "Get Leo (the closing shoot with Karen and Chili producing)"
+  ],
+  "ideas": [
+   "Swap the made up '“Seats seven, and smooth.”' for '“The Cadillac of minivans.”'",
+   "Swap 'Power lunch crudités' for 'LAX locker key lime pie, ask the DEA'",
+   "Swap 'Turnaround club' note 'In development since noon.' for 'Mr. Lovejoy. Half a million to option.'",
+   "Swap 'Your waiter looks you in the eye. You do the same.' for 'Look at me. Look at me. That is how we take an order here.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

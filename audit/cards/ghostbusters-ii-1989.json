@@ -1,0 +1,105 @@
+{
+ "id": "Ghostbusters II (1989)",
+ "slug": "ghostbusters-ii-1989",
+ "layout": "hand-built",
+ "title": "Ghostbusters II",
+ "year": "1989",
+ "theme": "deli",
+ "tagline": "Bad vibes. Good dip.",
+ "about": "Five years on, the Ghostbusters find a river of pink slime under New York.",
+ "cue": "Bring dessert out when the Statue of Liberty starts walking.",
+ "faces": [
+  [
+   "THE GHOSTBUSTERS DO BIRTHDAYS",
+   "PARTY MENU",
+   "MOOD SLIME. It loves a happy party.",
+   "PARTY PLATES",
+   "Pink slime dip",
+   "8.50",
+   "Roast beets, feta, yoghurt, garlic, lemon and dill, with warm flatbread.",
+   "Dancing toaster crumpets",
+   "5.55",
+   "Honey butter. Play them something upbeat.",
+   "Mini bagel pizzas",
+   "9.00",
+   "Hot salami, mozzarella, chilli honey."
+  ],
+  [
+   "Our ride home on New Year’s Eve.",
+   "Not on the guest list. Keep him away from the baby.",
+   "The slime feeds on bad moods. Keep cheering, kids!",
+   "Ray & Winston",
+   "DON'T LOOK IN THE TRAP",
+   "BIG PLATES",
+   "Vigo's goulash",
+   "16.10",
+   "Slow paprika beef, onions, caraway and tomato. Egg noodles, sour cream.",
+   "Liberty hot dogs",
+   "18.86",
+   "Mustard, green relish, onion, sauerkraut.",
+   "SWEETS AND SIPS",
+   "Pink lemonade gelatin",
+   "4.50",
+   "Raspberries inside. It wobbles to music.",
+   "Pink slime float",
+   "1.25",
+   "Pink lemonade over raspberry sorbet.",
+   "Trays serve 12 kids. Book a party: 555-2368. Form GB-1231."
+  ]
+ ],
+ "phone": "The GhostbustersGhostbusters IIBad vibes. Good dip.Every recipe serves 4.\n    StartersMainsSweetsDrinks\n    StartersPink slime dipRoast beets, feta, yoghurt, garlic, lemon and dill, with warm flatbread.Party plates, 8.50 a tray.How to make it2 beetroots100g feta150g Greek yoghurt1 garlic clove1/2 lemon, juiced1 small bunch dill4 flatbreadsWrap the beetroots in foil.Roast at 200°C until tender, then cool a little and peel.Blitz the beetroot with the feta, yoghurt, garlic, lemon juice and a little dill until bright pink and smooth. Warm the flatbreads, cut into wedges and serve for scooping.Dancing toaster crumpetsHoney butter. Play them something upbeat.The slime makes the toaster dance.How to make it60g soft butter2 tbsp honey1 pinch salt8 crumpetsBeat the butter with the honey and salt.Toast the crumpets until the holes are crisp.Spread with the honey butter while hot so it runs into the holes, then cut into quarters.MainsVigo's goulashSlow paprika beef, onions, caraway and tomato. Egg noodles, sour cream.Big plates, 16.10. Not on the guest list.How to make it1kg beef chuck, diced3 brown onions, sliced2 tbsp sweet paprika1 pinch hot paprika1 tsp caraway seeds400g crushed tomatoes300ml beef stock400g egg noodles150g sour cream2 tbsp oil, for browningBrown the beef in batches in a hot pan with oil.Cook the onions slowly in the same pot until soft.Stir in the sweet paprika, hot paprika and caraway, then add the tomatoes, stock and beef.Cover and braise at 160°C until the beef is very tender.Boil the noodles and serve the goulash over them with the sour cream.SweetsPink lemonade gelatinRaspberries inside. It wobbles to music.Keep cheering, kids.How to make it8 gelatine leaves1 L pink lemonade125g raspberriesSoak the gelatine leaves in cold water.Warm part of the lemonade, squeeze the gelatine and stir in until melted, then add the rest of the lemonade.Pour into a jelly mould with the raspberries.Chill in the fridge until set.Dip the mould in hot water, turn out and put on something upbeat.DrinksPink slime floatPink lemonade over raspberry sorbet.The slime, but drinkable.How to make it400ml raspberry sorbet1 L pink lemonadePut a scoop of raspberry sorbet in each of four tall glasses.Pour chilled pink lemonade slowly over the top so it fizzes up pink. Serve with a spoon and a straw.\n    Showtime cueBring dessert out when the Statue of Liberty starts walking.\n    Read the printed menu full size",
+ "cooked": [
+  "Pink slime dip",
+  "Dancing toaster crumpets",
+  "Vigo's goulash",
+  "Pink lemonade jelly",
+  "Pink lemonade with sherbet"
+ ],
+ "dishes": [
+  {
+   "course": "S",
+   "name": "Pink slime dip",
+   "note": "beetroot and feta, flatbread for scooping"
+  },
+  {
+   "course": "S",
+   "name": "Dancing toaster crumpets",
+   "note": "the slime makes the toaster dance"
+  },
+  {
+   "course": "S",
+   "name": "Mini bagel pizzas with hot salami",
+   "note": "fuel for Dana's long days restoring paintings at the museum"
+  },
+  {
+   "course": "M",
+   "name": "Liberty hot dogs with green relish",
+   "note": "for the walk up Fifth Avenue behind the Statue of Liberty"
+  },
+  {
+   "course": "M",
+   "name": "Vigo's goulash",
+   "note": "slow paprika beef for the Carpathian painting"
+  },
+  {
+   "course": "W",
+   "name": "Pink lemonade jelly",
+   "note": "it wobbles and reacts to music"
+  },
+  {
+   "course": "K",
+   "name": "Pink lemonade with sherbet",
+   "note": "the pink slime, but drinkable"
+  }
+ ],
+ "venue": null,
+ "house": null,
+ "sources": {
+  "dishes_and_cue": "data/films.json (S starters, M mains, W sweets, K drinks: [name, note, method, shopping]; P cue, T tagline, D about)",
+  "dish_notes": "data/dish-notes.json",
+  "recipes": "data/recipes2/ghostbusters-ii-1989.json (cooked versions)",
+  "venue_sign_note_winks": "data/film-flavour.json",
+  "house_lines": "data/film-house.json",
+  "layout": "formats.js (hand-built menu, search the film id) or movie-menus.js (editions)"
+ }
+}

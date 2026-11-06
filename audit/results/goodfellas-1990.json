@@ -1,0 +1,50 @@
+{
+ "id": "Goodfellas (1990)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Jimmy. The diner. Last time",
+   "where": "caption",
+   "verdict": "wrong",
+   "why": "The diner is where Jimmy hands Henry a hit job and Henry senses a set up, but it is not the last time they meet. Henry later testifies against Jimmy and Paulie in court and gets them convicted.",
+   "source": "https://en.wikipedia.org/wiki/Goodfellas",
+   "fix": "Jimmy. The diner. One more job, he says",
+   "done": false
+  },
+  {
+   "text": "veal, beef and pork, and go easy on the onions like Vinnie",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Vinnie does not go easy on the onions. Henry says Vinnie used too many onions in the prison sauce, though it was still a very good sauce.",
+   "source": "https://tastecooking.com/what-goodfellas-got-right-about-garlic/",
+   "fix": "veal, beef and pork, and fewer onions than Vinnie uses",
+   "done": false
+  }
+ ],
+ "checked_ok": 26,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4.2,
+  "verdict": "Henry's May 11 cooking notebook is a great idea and nails the prison kitchen, but the printed cue sends the mains out five minutes in.",
+  "missing": [
+   "Funny how? (Tommy at the Bamboo Lounge)",
+   "Walking into the Copacabana through the kitchen (Henry and Karen's date)",
+   "Tommy's mum and the dog painting (the midnight dinner)",
+   "Egg noodles and ketchup (Henry's last line in witness protection)",
+   "Lobsters and the J&B in the cell (the prison dinner)",
+   "The pink Cadillac in the meat truck (after the Lufthansa heist)"
+  ],
+  "ideas": [
+   "Swap the printed cue 'Plate up the mains when young Henry starts running errands at the cab stand.' for the card cue 'Plate up the mains when Paulie starts slicing garlic in the prison kitchen.' so mains land mid film",
+   "Swap 'Bad pasta, no sauce' for 'Egg noodles and ketchup'",
+   "Swap 'Red wine, opened early' note 'Short glasses. Pour it like they did inside' for 'J&B and red wine, like the cell'",
+   "Swap 'Still up there?' for 'Still up there? Keep stirring.' so the helicopter and Michael's sauce sit together"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

@@ -1,0 +1,110 @@
+{
+ "id": "When Harry Met Sally... (1989)",
+ "slug": "when-harry-met-sally-1989",
+ "layout": "hand-built",
+ "title": "When Harry Met Sally...",
+ "year": "1989",
+ "theme": "deli",
+ "tagline": "Twelve years of arguing. One very good sandwich.",
+ "about": "Over 12 years, two friends argue whether men and women can ever just be friends.",
+ "cue": "Serve the mains when Harry and Sally sit down at the deli.",
+ "faces": [
+  [
+   "When Harry Met Sally...",
+   "I'll have what she's having.",
+   "CHICAGO TO NEW YORK, 1977",
+   "Chicago",
+   "New York",
+   "18 hours, one argument",
+   "They share the drive. They don't share the grapes.",
+   "Guest Check",
+   "KATZ'S DELICATESSEN",
+   "TABLE",
+   "GUESTS",
+   "SERVER",
+   "Joan",
+   "NO.",
+   "1989",
+   "QTY",
+   "ITEM",
+   "AMOUNT",
+   "Fried pickles",
+   "Half-sours in rye batter. Pickles come with every table",
+   "1.50",
+   "Chef salad",
+   "oil and vinegar dressing",
+   "Exactly as she orders it",
+   "5.50",
+   "Apple pie à la mode",
+   "served warm · a scoop of vanilla",
+   "or berries if you like",
+   "or a dollop of cream",
+   "On the side. All of it",
+   "2.25",
+   "Pastrami on rye",
+   "Harry's order. Hand cut, piled high, a pickle on the side",
+   "6.95",
+   "Chocolate egg cream",
+   "The lady at the next table orders one too",
+   "1.25",
+   "SHOWTIME CUE",
+   "Serve the mains when Harry and Sally sit down at Katz's.",
+   "TOTAL",
+   "$18.70",
+   "SEND A SALAMI TO YOUR BOY IN THE ARMY",
+   "The diner. Sally orders",
+   "Katz's. The famous lunch",
+   "New Year's Eve, at the party"
+  ]
+ ],
+ "phone": "Katz's DelicatessenWhen Harry Met Sally...I'll have what she's having.Every recipe serves 4.\n    StartersMainsSweetsDrinks\n    StartersFried picklesHalf-sours in rye batter. Pickles come with every tableHow to make it4 half-sour or dill pickles80g plain flour40g rye flour1/2 tsp paprika150ml cold soda water1 L vegetable oil100g mayonnaise2 tbsp yellow mustardCut the pickles into spears and pat them very dry. Keep a teaspoon of the brine.Whisk the plain flour, rye flour, paprika and cold soda water into a thin batter.Dip the spears and fry at 180°C for about 2 minutes until crisp, in batches. Drain on a rack and salt lightly.Stir the mayonnaise with the mustard and the pickle brine and serve alongside.MainsChef saladExactly as she orders itHow to make it4 eggs2 cos lettuces200g sliced leg ham200g sliced turkey150g swiss cheese, cut into strips2 tomatoes, sliced1/2 cucumber, sliced60ml olive oil30ml red wine vinegarHard-boil the eggs for 10 minutes, cool in cold water, peel and halve.Wash the cos lettuces, dry well and tear into a large platter.Arrange the leg ham, turkey, swiss cheese strips, halved eggs, tomatoes and cucumber in rows over the lettuce.Pour the olive oil and red wine vinegar into two little jugs and serve them on the side.Pastrami on ryeHarry's order. Hand cut, piled high, a pickle on the sideHow to make it600g sliced pastrami8 slices of seeded rye bread40g yellow mustard4 full sour dill picklesSteam the pastrami over gently boiling water until glossy, soft and piping hot.Spread the rye with mustard.Pile the pastrami high on four slices and close the sandwiches.Serve each with a pickle on the side.SweetsApple pie à la modeOn the side. All of itHow to make it600g ready-baked apple pie300ml strawberry ice cream, or 150ml thickened cream if unavailableCut four slices from the pie.Warm on a tray at 180°C.Serve with the strawberry ice cream in a separate small bowl beside each slice.DrinksChocolate egg creamThe lady at the next table orders one tooHow to make it120ml chocolate syrup400ml full cream milk, ice cold1 L soda water, ice coldPour 30ml chocolate syrup into each of four tall glasses and add 100ml ice cold milk.Blast the soda water in hard from a height until the foam reaches the rim, stirring fast with a long spoon as it goes. Serve straight away. No egg, no cream.\n    Showtime cueServe the mains when Harry and Sally sit down at Katz's.\n    Read the printed menu full size",
+ "cooked": [
+  "Fried deli pickles with mustard mayo",
+  "Sally's chef salad",
+  "Pastrami on rye",
+  "Apple pie à la mode, her way",
+  "Egg cream"
+ ],
+ "dishes": [
+  {
+   "course": "S",
+   "name": "Fried deli pickles with mustard mayo",
+   "note": "pickles on every table at Katz's"
+  },
+  {
+   "course": "S",
+   "name": "Potato knish",
+   "note": "the walk through the city"
+  },
+  {
+   "course": "M",
+   "name": "Pastrami on rye",
+   "note": "Harry's order at Katz's, where Sally makes her point"
+  },
+  {
+   "course": "M",
+   "name": "Sally's chef salad",
+   "note": "dressing on the side, everything on the side"
+  },
+  {
+   "course": "W",
+   "name": "Apple pie à la mode, her way",
+   "note": "Sally's order, every detail exactly how she wants it"
+  },
+  {
+   "course": "K",
+   "name": "Egg cream",
+   "note": "Katz's fountain, and the lady at the next table wants one too"
+  }
+ ],
+ "venue": null,
+ "house": null,
+ "sources": {
+  "dishes_and_cue": "data/films.json (S starters, M mains, W sweets, K drinks: [name, note, method, shopping]; P cue, T tagline, D about)",
+  "dish_notes": "data/dish-notes.json",
+  "recipes": "data/recipes2/when-harry-met-sally-1989.json (cooked versions)",
+  "venue_sign_note_winks": "data/film-flavour.json",
+  "house_lines": "data/film-house.json",
+  "layout": "formats.js (hand-built menu, search the film id) or movie-menus.js (editions)"
+ }
+}

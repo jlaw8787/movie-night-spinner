@@ -1,0 +1,50 @@
+{
+ "id": "The Godfather (1972)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Slow tomato, sausage and meatballs, all Sunday morning.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Signed Pete Clemenza but he never says it. His sauce speech runs oil, garlic, tomatoes and paste, sausage and meatballs, then a little wine and a little sugar as his trick.",
+   "source": "https://www.salon.com/2022/04/10/the-godfather-red-sauce-recipe-clemenza",
+   "fix": "A little bit of wine, and a little bit of sugar, and that's my trick.",
+   "done": false
+  },
+  {
+   "text": "the straw bottle on the table, and the oranges that turn up before every hit",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Oranges show up near some deaths and threats, such as Woltz's dinner table, the fruit stand when Vito is shot and Vito's garden death, but not before every hit. Sources list only a handful of scenes. The line is not on the printed or phone menu.",
+   "source": "https://www.looper.com/735497/why-the-oranges-in-the-godfather-mean-more-than-you-think/",
+   "fix": "the straw bottle on the table, and the oranges that keep turning up before trouble",
+   "done": false
+  }
+ ],
+ "checked_ok": 22,
+ "vibe": {
+  "world": 5,
+  "moments": 3,
+  "food": 5,
+  "tone": 4,
+  "look": 5,
+  "overall": 4.4,
+  "verdict": "Looks and eats like Louis' in the Bronx, but it serves the cannoli without the most famous line in the film.",
+  "missing": [
+   "Leave the gun. Take the cannoli (Clemenza and Rocco after Paulie's hit)",
+   "An offer he can't refuse (Vito with Johnny Fontane at the wedding)",
+   "The horse's head (Woltz's bed)",
+   "Luca Brasi sleeps with the fishes (the fish in the vest)",
+   "Vito's orange peel teeth (playing with his grandson in the garden)",
+   "Come over here, kid, learn something (Clemenza teaching Michael the sauce)"
+  ],
+  "ideas": [
+   "Swap 'Boxed and tied with string, for the ride home.' for 'Leave the gun. Take the cannoli.'",
+   "Swap the signed Clemenza note for 'A little bit of wine, and a little bit of sugar, and that's my trick.'",
+   "Swap 'Family comes first, always.' for 'Fish delivered Tuesdays. Wrapped in a vest.'",
+   "Swap 'Anisette' note 'Sweet cordial, two coffee beans.' for 'Sweet cordial. Make him an offer.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

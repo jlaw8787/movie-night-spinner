@@ -1,0 +1,50 @@
+{
+ "id": "Dumb and Dumber (1994)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Mary, I ordered the most expensive thing on the menu. It's a burger. We're splitting it.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Lloyd never says this. It is printed in quote marks and signed Lloyd Christmas, so it reads as a film quote, but no such line is in the film.",
+   "source": "https://en.wikiquote.org/wiki/Dumb_and_Dumber",
+   "fix": "So you're telling me there's a chance. Yeah!",
+   "done": false
+  },
+  {
+   "text": "Mary Swanson's lost suitcase",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "It is a briefcase, not a suitcase, and Mary did not lose it. She leaves it at the airport on purpose as the ransom drop for her kidnapped husband.",
+   "source": "https://en.wikipedia.org/wiki/Dumb_and_Dumber",
+   "fix": "Mary Swanson's briefcase, left at the airport",
+   "done": false
+  }
+ ],
+ "checked_ok": 21,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "Fun idea to run the Mutt Cutts van as a food truck, but the board reads like any diner and skips most of the lines fans quote.",
+  "missing": [
+   "The most annoying sound in the world (Lloyd in the van with Mental)",
+   "Turbo Lax in Harry's coffee (Lloyd's revenge in Aspen)",
+   "Sea Bass stuck with the diner bill (truck stop diner)",
+   "Tongue frozen to the ski lift pole (Harry on the chairlift)",
+   "The trooper drinking the beer bottle of pee (roadside stop)",
+   "Trading the van for a minibike (Lloyd's deal on the road)"
+  ],
+  "ideas": [
+   "Swap the made up Lloyd note for a line he says, such as 'So you're telling me there's a chance.'",
+   "Swap 'Ski lodge hot chocolate' for 'Lloyd's special coffee, no Turbo Lax'",
+   "Swap 'Truck stop onion rings' for 'Onion rings, Sea Bass is paying'",
+   "Swap 'Aspen snowflake cookies' for 'Frozen snot icicle meringues' from the minibike ride into Aspen"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

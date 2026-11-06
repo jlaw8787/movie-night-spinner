@@ -1,6 +1,6 @@
 # Handover: Movie Night Spinner
 
-Read this first in a new chat. Last updated 7 Nov 2026. Start with "7 Nov, morning" at the bottom.
+Read this first in a new chat. Last updated 7 Nov 2026. Start with "7 Nov, audit" at the bottom.
 
 ## Where things are
 
@@ -279,3 +279,21 @@ After the fixes: run all tests, redeploy to Netlify, add a "Fixed after the revi
 - Checks on this build: 20 node tests (dialogs included), check-browser, store taps, sweet starters, cut words, kids cards (343), prices (795), PDF tone with photos (sample and --per 2), phone fit (900), check-print-text (900 in one run, all new rules), check-prep-a4 (900, 1,734 pages).
 - Tools used this session, not in the repo: html2canvas 1.4.1 and jsPDF 2.5.1 in /home/claude/libs for MNS_LIBDIR; playwright from `npm root -g`.
 - Left open: Running Scared and Phar Lap have one or two stills (need the TMDB key); small swipe-view type on hand-built cards; the .ics still wants a try on real phones.
+
+## 7 Nov, late morning: review 20 (9.2), its regressions fixed, fact and vibe audit started
+
+- Review 20 (docs/review-20.md, shots review-20-01 to 18) scored 9.2: the review 19 fixes held, but the new shadow baking printed spread shadows as black rings and laid some shadow pictures in the wrong place. Fixed (563ccd1): each shadow layer is filled in its own colour, blurred and offset (canvas filter), corners are elliptical per corner (pdfRadii gives [rx, ry]), and a shadow is only laid against a positioned parent (a static parent is made relative, a turned one always). New check-print-text rule: "shadow picture laid against an unpositioned box" (fails on the review 20 build).
+- Ratatouille: Colette's crème brûlée added to the Gusteau's card ("Le dessert", left column) and to data/recipes2; it cooks soup, mushroom and cheese, ratatouille, crème brûlée and Ego's spritz (Josh's call). Two starter notes shortened to fit.
+- Kids' mode: place names kept (KKEEP: Big Whiskey, "X's Beer Garden"), "alcohol-free lager battered" reads "crisp battered", Bloody Mary becomes Virgin Mary.
+- Dumb and Dumber: the hot peppers go in Mental's burger, not Sea Bass's (cue, dish note, method tip, house line).
+- pdfStripesBox draws diagonal repeating stripes for Save PDF (Elf, A Christmas Story); check-print-text now flags any repeating stripes left. Not yet looked at on paper.
+- Not deployed yet: commits after a134410 need a full check-print-text run (all 900, one go), then deploy and review 21. Still open from review 20: canteen meal voucher paper prints square (Chicken Run, Matilda); Time Bandits' frame rule.
+- TMDB key saved at /home/claude/.tmdb_key (this machine only, never commit).
+
+## 7 Nov, audit
+
+Josh asked for a fact audit (is every line true to the film, are quotes real) and a vibe audit (is the menu cool, does it fit the world, use the iconic moments, look right) of all 900 menus. Everything is in docs/AUDIT.md (rules, sources, file format), docs/audit-agent-prompt.md (the brief for each audit agent), scripts/audit-extract.cjs (audit/cards and audit/shots), scripts/audit-queue.cjs (next films, quote-heavy first), scripts/audit-report.cjs (docs/audit-report.md, with the file each wrong line lives in).
+- Pilot (5 films) found made-up quotes on Dumb and Dumber, The Godfather (Clemenza) and Get Shorty, and a wrong Goodfellas caption. Rules tightened after it.
+- Runs in waves of about 100 films, 5 agents of 20 on Sonnet, results saved per film so any chat can resume: `node scripts/audit-queue.cjs 100`, split into 5, give each agent docs/audit-agent-prompt.md and its slugs. Wave 1 started 7 Nov.
+- Fact fixes are corrections and can go in directly. Vibe rework (new dishes, lines or look) is a design change: Josh approves it first.
+- Josh's plan limit is unknown to Claude: send a short report after each wave so he can pause.

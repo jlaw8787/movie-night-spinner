@@ -1,0 +1,107 @@
+{
+ "id": "Midnight Cowboy (1969)",
+ "slug": "midnight-cowboy-1969",
+ "layout": "hand-built",
+ "title": "Midnight Cowboy",
+ "year": "1969",
+ "theme": "street",
+ "tagline": "Big city. Small bank balance.",
+ "about": "A naive Texan hustler and a sickly con man scrape by together in New York.",
+ "cue": "Serve the mains when Joe and Ratso plan their bus trip to Florida.",
+ "faces": [
+  [
+   "EIGHTH AVENUE BUS TERMINAL",
+   "Southbound",
+   "LUNCH COUNTER",
+   "Miami Beach, one night south.",
+   "PACKED FOR THE BUS",
+   "Ham and Swiss quarters",
+   ".45",
+   "On white, mustard butter, crusts off.",
+   "Orange almond cake",
+   ".30",
+   "Whole Florida oranges, ground almonds.",
+   "Pineapple coconut cooler",
+   ".35",
+   "Shaken frothy with lime, over ice.",
+   "ONE WAY · COACH",
+   "NEW YORK, N.Y.",
+   "to MIAMI, FLA.",
+   "No. 1969 LV MIDNIGHT"
+  ],
+  [
+   "Forty-Second Street, right outside our doors.",
+   "Off the Grill",
+   "Texas hamburger",
+   ".55",
+   "Quarter pound, onions fried on the griddle.",
+   "Coconut fried shrimp",
+   "1.69",
+   "Butterflied, coconut and crumbs, fried golden. Sweet red pepper sauce and lime.",
+   "Cinnamon doughnut holes",
+   ".25",
+   "Cinnamon sugar, coffee custard to dunk.",
+   "Coffee",
+   ".10",
+   "Fresh every hour.",
+   "Hot tea",
+   ".15",
+   "Good for that cough.",
+   "Open all night. Radios with earphone only. Dishwasher wanted, nights. Prices subject to change. Form 69-MC, 1969.",
+   "6¢",
+   "POST CARD",
+   "Joe. Florida! Sun, coconuts, no coat. Two seats on the bus.",
+   "Rico"
+  ]
+ ],
+ "phone": "Southbound Lunch CounterMidnight CowboyBig city. Small bank balance.Every recipe serves 4.\n    StartersMainsSweetsDrinks\n    StartersHam and Swiss quartersOn white, mustard butter, crusts off.Cut in four and wrapped to take on board.How to make it40g soft butter1 tsp Dijon mustard8 slices of white bread200g leg ham4 slices of Swiss cheeseMash the butter with the Dijon and spread over the bread.Fill with the ham and Swiss cheese.Cut off the crusts, cut into quarters and wrap in baking paper.Cinnamon doughnut holesCinnamon sugar, coffee custard to dunk.Hot all night.How to make it250g self-raising flour50g caster sugar, for dough1 egg150ml milk30g butter, melted1 L vegetable oil, for frying80g caster sugar, for rolling2 tsp ground cinnamon300ml thick custard2 tsp instant coffeeMix the flour, sugar, egg, milk and butter into a soft dough and roll into 24 small balls.Fry in oil at 170°C in batches until golden and cooked through. Drain.Roll the hot doughnuts in the sugar mixed with the cinnamon.Warm the custard with the coffee dissolved in a little hot water and serve for dipping.MainsCoconut fried shrimpButterflied, coconut and crumbs, fried golden. Sweet red pepper sauce and lime.Fried to order, tails on.How to make it600g green prawns50g plain flour2 eggs80g panko breadcrumbs80g shredded coconut1 L vegetable oil, for frying150ml sweet chilli sauce2 limesPeel and butterfly the prawns, leaving the tails on.Dust in flour, dip in beaten egg, then press into the panko mixed with coconut.Fry in oil at 180°C in batches until golden. Serve with sweet chilli sauce and lime wedges.SweetsOrange almond cakeWhole Florida oranges, ground almonds.Baked fresh every morning. Keeps for the ride.How to make it2 oranges6 eggs250g caster sugar250g almond meal1 tsp baking powderBoil the whole oranges in water until soft.Cool the oranges, then blitz smooth, skin and all.Beat the eggs with the sugar, then mix in the oranges, almond meal and baking powder. Pour into a lined 22cm tin.Bake at 180°C until set and golden. Cool in the tin.DrinksPineapple coconut coolerShaken frothy with lime, over ice.A taste of Florida before you get there.How to make it400ml coconut water300ml pineapple juice2 limes60ml coconut cream1 small pineapple120ml white rum, optional4 cups iceJuice the limes and cut a pineapple wedge for each glass.Shake the coconut water, pineapple juice, lime juice and coconut cream with ice until frothy. Strain into 4 ice-filled glasses, add rum on the side if you like, and garnish with pineapple and a lime wheel.\n    Showtime cueServe the mains when Joe first meets Ratso in the bar.\n    Read the printed menu full size",
+ "cooked": [
+  "Automat sandwiches",
+  "Cinnamon doughnut holes, coffee custard",
+  "Florida coconut prawns",
+  "Florida orange cake",
+  "Ratso's Florida coconut pineapple cooler"
+ ],
+ "dishes": [
+  {
+   "course": "S",
+   "name": "Automat sandwiches",
+   "note": "ham and cheese out of the little glass doors"
+  },
+  {
+   "course": "S",
+   "name": "Cinnamon doughnut holes, coffee custard",
+   "note": "the cheap diner breakfasts Joe Buck counts his coins for"
+  },
+  {
+   "course": "M",
+   "name": "Condemned building franks and beans",
+   "note": "all they could afford in the squat"
+  },
+  {
+   "course": "M",
+   "name": "Florida coconut prawns",
+   "note": "the dream down south"
+  },
+  {
+   "course": "W",
+   "name": "Florida orange cake",
+   "note": "the bus ride south"
+  },
+  {
+   "course": "K",
+   "name": "Ratso's Florida coconut pineapple cooler",
+   "note": "Ratso's dream of sunshine in Florida"
+  }
+ ],
+ "venue": null,
+ "house": null,
+ "sources": {
+  "dishes_and_cue": "data/films.json (S starters, M mains, W sweets, K drinks: [name, note, method, shopping]; P cue, T tagline, D about)",
+  "dish_notes": "data/dish-notes.json",
+  "recipes": "data/recipes2/midnight-cowboy-1969.json (cooked versions)",
+  "venue_sign_note_winks": "data/film-flavour.json",
+  "house_lines": "data/film-house.json",
+  "layout": "formats.js (hand-built menu, search the film id) or movie-menus.js (editions)"
+ }
+}
