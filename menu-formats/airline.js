@@ -400,8 +400,8 @@ window.MENU_FORMATS[ID]=ctx=>{
       ${ph.secondPoster?posterHTML(ph.second,true,"",era,t):photoHTML(ph.second,ph.secondPos,era,t)}
       <div style="position:absolute;left:12px;bottom:${G==="jet"?26:12}px;background:${rgba("#fffaf0",.92)};padding:6px 10px;font:700 14px/1.2 ${B};letter-spacing:.12em;text-transform:uppercase;color:#1c1712">Now showing</div></div>${G==="jet"?stripes(sTop+sH-12,true).replace(/<div style/g,"<div data-shift style"):""}`;
   const pr=F.prop,pk=pr.kind;
-  const prop=`<div data-shift style="position:absolute;right:20px;top:${sTop+sH-66}px;width:206px;transform:rotate(${(-T.rot*.7+2).toFixed(1)}deg);${propPaper(pk,K.acc,"#fffcf4")}box-shadow:0 4px 12px rgba(0,0,0,.35);overflow:hidden;z-index:2">
-    <div data-fbox style="position:relative;padding:11px 16px 10px;max-height:110px;overflow:hidden">
+  const prop=`<div data-shift style="position:absolute;right:20px;top:${sTop+sH-66}px;width:216px;transform:rotate(${(-T.rot*.7+2).toFixed(1)}deg);${propPaper(pk,K.acc,"#fffcf4")}box-shadow:0 4px 12px rgba(0,0,0,.35);overflow:hidden;z-index:2">
+    <div data-fbox style="position:relative;padding:11px 14px 10px;max-height:132px;overflow:hidden">
       <div data-fs="14" style="font:700 14px/1 ${B};letter-spacing:.2em;text-transform:uppercase;color:${K.acc}">${pk==="ticket"||pk==="stub"?"Admit one":pk==="tag"?"Luggage tag":"Keep this"}</div>
       <div data-fs="15" style="${dispStyle}font-size:20px;line-height:1.05;color:#1c1712;margin:6px 0 5px">${esc(pr.title)}</div>
       ${pr.lines.map(l=>`<div data-fs="14" style="font:700 14px/1.3 ${B};color:#2a2420">${esc(dry(l))}</div>`).join("")}</div></div>`;

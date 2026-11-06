@@ -1545,6 +1545,15 @@ function foldClear(card){
       for(let step=0;step<16;step++){push();if(box.scrollHeight<=box.clientHeight+1)break;
         fsEls.forEach((e,i)=>{const min=+e.dataset.min||14;e.style.fontSize=Math.max(min,base[i]*(1-.025*(step+1)))+"px"})}
       push();
+      /* review 18: still over after the type has stepped down (The Jungle Book's last note sat under the box edge): notes are shortened at a break,
+         from the bottom, and the rows pushed again; a note is never hidden here */
+      {const over=()=>box.scrollHeight>box.clientHeight+1;
+        /* first the island map above gives up more height, 16px at a time, as the tiki fit does (data-t0, data-h0 from its own pass) */
+        if(over()&&box.hasAttribute("data-menu")){const map=face.querySelector("[data-map]"),mn=face.querySelector("[data-main]"),sh=[...face.querySelectorAll("[data-mshift]")];
+          if(map&&mn&&box.dataset.t0!=null){let c=+box.dataset.h0?(parseFloat(box.style.height)-(+box.dataset.h0)):0;
+            for(c+=16;over()&&c<=200;c+=16){map.style.height=(+map.dataset.h0-c)+"px";mn.style.height=(+mn.dataset.h0-c)+"px";sh.forEach(e=>e.style.top=(+e.dataset.t0-c)+"px");box.style.top=(+box.dataset.t0-c)+"px";box.style.height=(+box.dataset.h0+c)+"px";push()}}}
+        if(over()&&window.__fmtShort){const ns=[...box.querySelectorAll("[data-note]")].filter(n=>!n.children.length&&n.style.display!=="none");
+        for(let i=ns.length-1;i>=0&&over();i--){const n=ns[i],full=n.dataset.full||(n.dataset.full=n.textContent);const ok=window.__fmtShort(full,c=>{n.textContent=c;push();return !over()});n.textContent=ok||full;push()}}}
       /* nothing a layout marked to drop stays hidden because of this pass */
       box.querySelectorAll("[data-drop]").forEach(d=>{if(d.style.display==="none"&&box.scrollHeight<=box.clientHeight+1)d.style.display=""})})});
 }

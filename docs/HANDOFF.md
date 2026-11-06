@@ -1,6 +1,6 @@
 # Handover: Movie Night Spinner
 
-Read this first in a new chat. Last updated 6 Nov 2026. Start with "6 Nov, afternoon" at the bottom.
+Read this first in a new chat. Last updated 6 Nov 2026. Start with "6 Nov, night" at the bottom.
 
 ## Where things are
 
@@ -231,3 +231,15 @@ After the fixes: run all tests, redeploy to Netlify, add a "Fixed after the revi
 - Left open: small swipe-view type on hand-built cards; a vegetarian card still prints a dish with no vegetarian version (by design).
 - Review 17 (docs/review-17.md, shots review-17-01 to 22) scored 9.0 by an independent reviewer, up from 8.9. Every review 16 fix held. Its fix list: Ghost Dog's section heads print as empty bars; The Big Lebowski's cue and third house rule cut off; prep-ahead times already in the past offered with no warning (Psycho locked in today); Add to calendar after showtime still downloads the past night; Prep sheet "longest" and the calendar's lead disagree; make-ahead and start-cooking alarms 15 to 30 minutes apart; The Heat prints charcoal and canteen trays print square corners; small items.
 - Next: work down review 17's fix list, then review 18. Start in a new chat.
+
+## 6 Nov, night: review 17 fixed, layouts stop clashing, review 18
+
+- All 8 review 17 fix items done. Notes under "Fixed after the review" at the end of review-17.md.
+- Calendar (app.js): calPlan(show,dishes,now) takes the time the plan is made. A make-ahead that no longer fits is "Too late" with the first week it fits (plan.late, calLate), no alarm, no Google link, and a "Move to <date>" button in the panel; one still in time reads "Start now" (.now on before/early) and gets no alarm; plan.startNow when start cooking has gone. A make-ahead within 45 minutes of start cooking folds into it (plan.first). calLead is the one "longest on the night" sum for the Prep sheet chip and the calendar. After showtime the buttons read "Add next week to calendar" (calLabel, refreshed by tickShowtime) and pressing it moves the night on a week first. showToday: "This morning" / "This afternoon" / "Tonight". prepNight gives the Prep sheet the same dish list as the calendar.
+- Josh, 6 Nov: cook 5 on every film. planTrim (app.js) takes five from a menu whose cooked list names six or seven. 0 of 900 tick more than five.
+- Josh, 6 Nov: no dashed ticket box on tiki maps. A fourth photo island uses the first still not already on the map, tagged with the prop title (Return of the Jedi: the Star Destroyer over Endor). A film with under 3 stills (Running Scared) keeps a plain cream card and drops the empty right island. More stills for those films need the TMDB key.
+- Save PDF (renderCanvas): filled inline-flex boxes print like inline-blocks; a grain blended onto a plain paper is baked on a canvas (pdfBlendBake); a hard inset edge with an offset is baked (canteen trays round); one outer ring on a box in the flow becomes a border with a negative margin; a strike-through over 1.5px prints as a bar.
+- Layouts no longer reset each other's type. window.__fmtFit (banquet, candy bar, takeaway) only takes bare [data-fit=""] boxes; M.fitAll (home, invite, precinct) only numeric data-fit inside a lib-home, lib-invite or lib-precinct card. Before, opening one of those films and then a placemat or lab film cut that menu's last lines (Jingle All the Way, The Incredibles, Oppenheimer). fitLines takes its base size again when a layout's own fit changed the type. placemat's fit waits for layout and reruns as pictures arrive.
+- check-print-text now also fails on text that runs more than 4px below its .fx-panel or is cut by a box that hides its overflow (allowing for a tight line's empty ascent), and re-measures after 2 seconds so a settling fit pass is not reported. It catches cues, side panels, tickets and footers, not only dish names and notes. Run it over all 900 in one go: the clash faults only show in a long run.
+- Also fixed from that sweep: Big Lebowski sheet, Friday's market footer, Phar Lap (stadium course gaps come out of the room left; a lone still fills the map instead of a black poster tile), prom tickets (closing line only when it fits, prop lines step to 14px), banquet boxes may shrink to 14px past their own floor, club venue names take two lines on the poster-first page with the note moved down.
+- Left open: the drop shadow under canteen trays is not on paper; Running Scared and Phar Lap have one or two stills only; small swipe-view type on hand-built cards.

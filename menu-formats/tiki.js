@@ -271,10 +271,10 @@ window.MENU_FORMATS[ID]=ctx=>{
     ${wearLayer(P,tone,seed,true)}
   </div>`;
   /* back: island map of stills on the lagoon, then the kitchen */
-  const L=ph.list,main=L[1]||L[0]||ph.poster,isleA=L[2]||L[0]||ph.poster,isleB=L[3]||(L.length<3&&ph.poster)||L[1]||ph.poster;
+  const L=ph.list,main=L[1]||L[0]||ph.poster,isleA=L[2]||L[0]||ph.poster,isleB=L.length<3?"":L[3]||L[1];
   /* Josh, 6 Nov: a fourth photo island in the lagoon, not a dashed ticket box. The first still not already on the map (Return of the Jedi: the
      Star Destroyer over Endor), labelled with the film's prop line; the ticket only comes back when a film has no spare still */
-  const isleC=[L[0],L[4],L[5],L[6],L[7]].find(p=>p&&![main,isleA,isleB].includes(p))||(isleB!==ph.poster&&ph.poster)||"";
+  const isleC=[L[0],L[4],L[5],L[6],L[7]].find(p=>p&&![main,isleA,isleB].includes(p))||"";
   const water=hex(P.water);
   const waterBg=`background-color:${P.water};background-image:${noise(".012 .03",4,mix(water,WHITE,.5),.55,seed+2,700)},${noise(".09 .3",2,mix(water,WHITE,.7),.35,seed+3,400)};`;
   const shore=`box-shadow:0 0 0 5px ${rgba(mix(hex(P.bg),[230,205,150],.5),.95)},0 0 0 12px ${rgba(mix(water,WHITE,.35),.6)},0 10px 30px rgba(0,0,0,.45)`;
@@ -290,8 +290,8 @@ window.MENU_FORMATS[ID]=ctx=>{
       ${tag(ISLE.m,60,440,-3).replace("<div ","<div data-mshift ")}
       ${img(isleA,{mark:"data-mshift",contain:isleA===ph.poster,x:26,y:494,w:210,h:126,filter:filt,half:E.half,shape:"border-radius:55% 45% 50% 50% / 48% 58% 42% 52%",frame:shore,pos:"center 35%"})}
       ${tag(ISLE.s,44,596,2).replace("<div ","<div data-mshift ")}
-      ${img(isleB,{mark:"data-mshift",contain:isleB===ph.poster,x:364,y:492,w:210,h:128,filter:filt,half:E.half,shape:"border-radius:44% 56% 58% 42% / 55% 45% 55% 45%",frame:shore,pos:"center 35%"})}
-      ${tag(ISLE.w,404,596,-2).replace("<div ","<div data-mshift ")}
+      ${isleB?`${img(isleB,{mark:"data-mshift",contain:isleB===ph.poster,x:364,y:492,w:210,h:128,filter:filt,half:E.half,shape:"border-radius:44% 56% 58% 42% / 55% 45% 55% 45%",frame:shore,pos:"center 35%"})}
+      ${tag(ISLE.w,404,596,-2).replace("<div ","<div data-mshift ")}`:""}
       ${isleC?`${img(isleC,{mark:"data-mshift",contain:isleC===ph.poster,x:250,y:500,w:104,h:110,filter:filt,half:E.half,shape:"border-radius:50% 50% 46% 54% / 54% 48% 52% 46%",frame:shore,pos:"center 35%"})}
       <div data-mshift style="position:absolute;left:302px;top:598px;transform:translateX(-50%) rotate(1deg);max-width:136px;padding:3px 8px;box-sizing:border-box;background:${P.bg};color:${P.ink};font:${ty.cw} 12px ${ty.caps};letter-spacing:.08em;line-height:1.15;text-transform:uppercase;text-align:center;box-shadow:0 3px 6px rgba(0,0,0,.35)">${T(F.prop.title)}</div>`:`<div data-box data-mshift style="position:absolute;left:242px;top:498px;width:120px;height:116px;overflow:hidden;box-sizing:border-box;padding:6px 5px;background:${P.bg};border-radius:4px;box-shadow:0 3px 6px rgba(0,0,0,.35);text-align:center;transform:rotate(${TN.tilt}deg)">
         <div data-fs="15" data-min="11" style="font:${ty.cw} 15px ${ty.caps};letter-spacing:.02em;text-transform:uppercase;color:${C.ink};line-height:1.1">${T(F.prop.title)}</div>

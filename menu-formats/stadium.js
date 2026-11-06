@@ -254,7 +254,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* ---------- BACK: section map of stills, concessions ---------- */
   const MX=660;
   let pool=stills.slice(0,4);
-  let srcs=pool.map(s=>ctx.img(s,"w780"));if(srcs.length<4&&poster)srcs.push(ctx.img(poster,"w780"));
+  /* review 18: the poster is already on the front and the photo pass never shows a photo twice, so it only fills the map when there is no still
+     at all (Phar Lap's second section printed as an empty black tile) */
+  let srcs=pool.map(s=>ctx.img(s,"w780"));if(!srcs.length&&poster)srcs.push(ctx.img(poster,"w780"));if(srcs.length===3)srcs=srcs.slice(0,2);
   const pSrc=poster?ctx.img(poster,"w780"):"";
   const n=srcs.length>=4?4:srcs.length>=2?2:srcs.length;
   const gx=28,gy=96,gw=MX-gx-24,gh=H-gy-30,gap=12;
