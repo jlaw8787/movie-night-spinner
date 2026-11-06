@@ -1571,6 +1571,12 @@ function fitLines0(card){try{kidsDryDom(card)}catch(e){}
     sized.forEach((x,i)=>{if(base[i])put(x,base[i]+"px")});for(let k=.97;k>=.65&&e.scrollWidth>e.clientWidth+1;k-=.03)sized.forEach((x,i)=>{if(base[i])put(x,(base[i]*k).toFixed(2)+"px")});
     /* a decorative tag (data-opt) that still will not fit steps aside rather than show half a word */
     if(e.hasAttribute("data-opt")&&e.scrollWidth>e.clientWidth+1)e.style.visibility="hidden"}
+  /* review 19: a flex row whose one-line dish name pushes the price past the row's edge (Pulp Fiction's "Mamie's devilled eggs ... 2.95"):
+     the name's type steps down, never under 65%, until the row fits. Rows that fit are not touched */
+  card.querySelectorAll("*").forEach(r=>{if(!r.offsetWidth||r.children.length<2)return;const rc=getComputedStyle(r);if(!/flex/.test(rc.display)||/column/.test(rc.flexDirection)||rc.flexWrap!=="nowrap")return;
+    const nm=[...r.children].find(c=>c.textContent.trim().length>2&&/^(nowrap|pre)/.test(getComputedStyle(c).whiteSpace));if(!nm)return;
+    const edge=()=>{const q=r.getBoundingClientRect(),k=q.width/(r.offsetWidth||1)||1;return Math.max(...[...r.children].map(c=>c.getBoundingClientRect().right))-(q.right-(parseFloat(rc.paddingRight)+parseFloat(rc.borderRightWidth))*k)};
+    if(edge()<=1)return;const base=+(nm.dataset.fr0||(nm.dataset.fr0=parseFloat(getComputedStyle(nm).fontSize)));for(let k=.97;k>=.65&&edge()>1;k-=.03)nm.style.fontSize=(base*k).toFixed(2)+"px"});
   /* decorative tags pushed past their row's edge by a layout's own sizing step aside too */
   card.querySelectorAll("[data-opt]").forEach(e=>{const p=e.parentElement;if(!p||!e.offsetWidth)return;const r=e.getBoundingClientRect(),pr=p.getBoundingClientRect();
     e.style.visibility=(e.scrollWidth>e.clientWidth+1||r.right>pr.right+1)?"hidden":""})
@@ -3192,7 +3198,9 @@ async function renderCanvas(src,forPrint){
         const mk=cs.webkitMaskImage||cs.maskImage;
         if(mk&&/^linear-gradient\(/.test(mk)&&el.querySelector("img"))el.dataset.pmask=mk;
         /* review 19: a masked box holding words (hotel door hanger, airline ticket) is baked below, words kept over it */
-        else if(mk&&mk!=="none"&&!/url\(/.test(mk)&&el.textContent.trim())el.dataset.pmaskt="1"})}catch(err){}
+        else if(mk&&mk!=="none"&&!/url\(/.test(mk)&&el.textContent.trim())el.dataset.pmaskt="1";
+        /* a grain mask on lettering (cafe's chalk heads) cannot be drawn: the words print plain rather than as whatever html2canvas makes of it */
+        else if(mk&&/url\(/.test(mk)&&el.textContent.trim()&&!el.querySelector("img")){el.style.webkitMaskImage="none";el.style.maskImage="none"}})}catch(err){}
     /* Safari can mark a cached poster as off-limits to the canvas, which kills the export.
        Pull each outside image fresh as a local copy first so the canvas can always read it. */
     const temp=[];
