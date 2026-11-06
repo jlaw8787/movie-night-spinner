@@ -1928,7 +1928,7 @@ dialog .modal-x:focus-visible{outline:3px solid #ffd23f;outline-offset:2px}
 .week-count span{color:var(--soft);font-weight:500}
 /* review 16: in the slim bar the showtime line sits under the buttons at full width (it used to open a second grid column and squeeze the bar) */
 .week.week-slim .week-count{grid-column:1/-1!important;grid-row:auto!important;margin:4px 0 0;font-size:13.5px}
-.week-count [data-next]{margin-left:6px;font:600 13px var(--f-body);padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--screen);cursor:pointer;min-height:36px}
+.week-count [data-next]{margin-left:6px;font:600 13px var(--f-body);padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--screen);cursor:pointer;min-height:44px}
 
 /* phones: the pinned tab bar also covers the status bar zone, so the page never shows through behind the clock */
 @media (max-width:820px){.top{padding-top:calc(8px + env(safe-area-inset-top,0px));background:rgb(18,6,8)}}
@@ -2571,6 +2571,12 @@ dialog.pdfpick .rate-k{color:#e2b04f}
 .cal-how{margin:0 0 10px;text-align:left;font:400 14px/1.45 var(--f-body);color:#d9c9a8}
 .cal-how b{color:#fff4d6}
 .cal-how a{color:#e2b04f;text-decoration:underline;text-underline-offset:2px}
+.cal-how a[download]{display:inline-flex;align-items:center;min-height:44px;padding:0 4px}
+.cal-g{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.cal-g b{flex:1 0 100%}
+.cal-g a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border:1px solid #6b4a2a;border-radius:999px;background:#2a1218;text-decoration:none;font-weight:600}
+.cal-rows li.cal-late{border-color:#c4552d;background:#3a1410}
+.cal-rows li.cal-late b{color:#ffb08a}
 
 /* mystery night */
 dialog.mystery .my-box{background:#1d0b10;color:#f3e6c8;border:1px solid #6b4a2a;border-radius:18px;padding:22px 20px;width:min(560px,94vw);box-sizing:border-box;margin:auto;max-height:90vh;overflow:auto}
@@ -2765,6 +2771,7 @@ dialog.trivia .acts .go{background:#ffcf4a;color:#1a1406;border:0}
 /* prep sheet stats as chips: they wrap as whole units, never a stray slash at the start of a line */
 .pp-serves{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
 .pp-chip{display:inline-block;padding:2px 9px;border:1px solid currentColor;border-radius:999px;line-height:1.5;white-space:nowrap}
+.pp-late{margin:6px 0 12px;padding:6px 10px;border-left:4px solid #c4552d;background:rgba(196,85,45,.1);font-weight:600;line-height:1.35}
 .pp-a4 .pp-chip{padding:0 7px}
 .sc:empty{display:none}
 @media (pointer:coarse){.my-dish summary b::after{content:"Tap for the method"}}
@@ -3059,8 +3066,8 @@ html,body{overflow-x:clip}
 <script src="aisles.js?v=5e921379" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
 <script src="films.js?v=345d8e95" defer></script>
-<script src="formats-core.js?v=3317f823" defer></script>
-<script src="app.js?v=b83e2b4b" defer></script>
+<script src="formats-core.js?v=dfbcbbf2" defer></script>
+<script src="app.js?v=0439b763" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

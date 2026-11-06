@@ -1110,11 +1110,14 @@ function planFive(f,r2){const have=new Set(r2.map(d=>String(d.orig||d.n).toLower
   const out=new Set();for(const [c,n] of [["s",2],["m",1],["w",1],["d",1]]){let k=0;for(const x of byC[c])if(k<n&&have.has(x)&&!out.has(x)){out.add(x);k++}}
   for(const c of ["s","m","w","d"])for(const x of byC[c])if(out.size<5&&have.has(x))out.add(x);
   return out.size?out:null}
+/* review 17, Josh (6 Nov): "show all dishes, cook 5" on every film. A menu whose cooked list names six or seven dishes (Paddington 2, Hot Fuzz)
+   cooks the five planFive picks from those; the others stay on the list unticked */
+function planTrim(f,r2,ck0){const inn=r2.filter(d=>ck0.has(String(d.orig||d.n).toLowerCase()));if(inn.length<=5)return ck0;return planFive(f,inn)||ck0}
 /* a dry card (kids, fairytale, Christmas and wizard films) cooks and shops the same alcohol-free versions it prints */
 const planDish=(f,d)=>dietDish(d,dietAF()||DRY_THEMES.includes(f&&f.theme));
 const planAll=f=>{const ck0=planCooked(f),r2=((f._r2&&f._r2.dishes)||[]).map(d=>planDish(f,d)),
     /* every cooked dish found by name: those are tonight's five. Otherwise the card picks them (planFive), so extras start unticked on hand-built menus too */
-    ok=ck0&&ck0.size&&r2.filter(d=>ck0.has(String(d.orig||d.n).toLowerCase())).length>=Math.min(5,ck0.size),ck=ok?ck0:r2.length>5?planFive(f,r2):null,
+    ok=ck0&&ck0.size&&r2.filter(d=>ck0.has(String(d.orig||d.n).toLowerCase())).length>=Math.min(5,ck0.size),ck=ok?planTrim(f,r2,ck0):r2.length>5?planFive(f,r2):null,
     hit=d=>ck.has(String(d.orig||d.n).toLowerCase()),sp=!!ck,all=sp?r2.map(d=>hit(d)?d:Object.assign({},d,{spare:true})):r2,m=f.menu||(typeof current!=="undefined"&&current===f?current.menu:null);
   let out=all;if(m&&m.lazy){const keep=new Set([...m.s,...m.m,...m.w,...m.d].map(it=>it.orig||it.n)),few=all.filter(d=>keep.has(d.orig||d.n));if(few.length)out=few}
   return out.concat(planExtras(f).map(d=>planDish(f,d))).concat(snackDishes(f).map(d=>planDish(f,d)))};
@@ -1348,23 +1351,36 @@ function planOpen(){try{return localStorage.getItem("mns-plan-open")==="1"}catch
 /* 175C reads as 175°C, and a lone litre is written "1 L" so it never reads as eleven */
 const degC=t=>String(t).replace(/(\d{2,3})\s?C\b/g,"$1°C").replace(/(\d(?:\.\d+)?)\s?l\b/g,"$1\u00a0L").replace(/(\d[\d.]*)\s+to\s+(\d[\d.]*)/g,"$1\u00a0to\u00a0$2");
 /* the kind of waiting a dish needs, in plain words: "to chill", "to marinate and rest" */
-const WAIT_WORD=/\b(chill|refrigerate|freeze|soak|marinate|rest|cool|prove|rise|set|steep|infuse)/i,WAIT_TO={refrigerate:"chill",rise:"prove"};
-function waitWords(x){const w=[];for(const t of x.steps||[])if((t.min||0)>=10&&WAIT_RE.test(String(t.text).trim()))for(const m of String(t.text).matchAll(new RegExp(WAIT_WORD.source,"gi"))){const v=WAIT_TO[m[1].toLowerCase()]||m[1].toLowerCase();if(!w.includes(v))w.push(v)}
-  return w.length?"to "+(w.length>1?w.slice(0,-1).join(", ")+" and "+w[w.length-1]:w[0]):"waiting"}
+/* review 17: cures, brines and pickles say so too ("Ninety-year feast dill gravlax, 2 days to cure"), never a bare "waiting" */
+const WAIT_WORD=/\b(chill|refrigerate|freeze|soak|marinate|rest|cool|prove|rise|set|steep|infuse|cure|brine|pickle|ferment|macerate|thaw|defrost|drain|firm|sit|stand)(?=s?\b|ed\b|ing\b|d\b)/i,
+  WAIT_TO={refrigerate:"chill",rise:"prove",sit:"rest",stand:"rest",defrost:"thaw"};
+function waitWords(x){const w=[],put=v=>{if(!w.includes(v))w.push(v)};
+  for(const t of x.steps||[])if((t.min||0)>=10&&WAIT_RE.test(String(t.text).trim())){const tx=String(t.text),sw=[];
+    for(const m of tx.matchAll(new RegExp(WAIT_WORD.source,"gi"))){const v=WAIT_TO[m[1].toLowerCase()]||m[1].toLowerCase();if(!sw.includes(v))sw.push(v)}
+    /* a bare "rest" says least: the step's own clue wins ("Rest the chicken in the buttermilk" marinates, "leave in the fridge" chills) */
+    if(!sw.length||(sw.length===1&&sw[0]==="rest")){const c=/\bdry\b[^.]*\b(fridge|uncovered)|uncovered[^.]*\bfridge/i.test(tx)?"dry":/\b(buttermilk|marinade|brine)\b/i.test(tx)?"marinate":/\buntil sour\b/i.test(tx)?"pickle":
+      /\b(fridge|refrigerat\w*)\b/i.test(tx)?"chill":/\bfreezer\b/i.test(tx)?"freeze":/\bsyrupy\b/i.test(tx)?"steep":"rest";sw.length=0;sw.push(c)}
+    sw.forEach(put)}
+  return w.length?"to "+(w.length>1?w.slice(0,-1).join(", ")+" and "+w[w.length-1]:w[0]):"to rest"}
 /* only heat counts as cooking: a drink that is stirred or a tartare that is chopped is all prep */
 const HEAT_RE=/\b(oven|bake|baking|fry|fried|grill|boil|simmer|roast|sear|toast|heat|cook|pan|barbecue|bbq|microwave|poach|steam|saut|caramel|flame|reduce|melt|char|braise|broil|smoke)/i;
 /* review 16: the locked-in film's Prep sheet carries its showtime and when to start, worked out the same way as the calendar reminder */
 function prepWhen(f,ds,TT){if(typeof week==="undefined"||!week||(week.id!==f.id&&week.double!==f.id)||typeof calPlan!=="function")return [];
-  try{const show=weekShow(),p=calPlan(show,ds.map((x,i)=>x.extra?null:{n:x.n,active:TT[i].active,wait:TT[i].wait,...calNight(x,TT[i])}).filter(Boolean));
-    return [`Showtime ${calClock(show)}`,`start cooking ${calClock(p.start)}`,p.early?`make ahead from ${calClock(p.early.at)}`:"",
-      p.before?`prep ahead ${calDay(p.before.at)} ${calClock(p.before.at)}`:""].filter(Boolean)}catch(e){return []}}
+  try{const show=weekShow(),now=new Date(),live=show>now,p=calPlan(show,prepNight(ds,TT),live?now:undefined);
+    const when=d=>weekDateKey(d)===weekDateKey(show)?calClock(d):`${calDay(d)} ${calClock(d)}`;
+    const out=[`Showtime ${calClock(show)}`,p.startNow?"start cooking now":`start cooking ${when(p.start)}`,p.early?(p.early.now?"make ahead now":`make ahead from ${calClock(p.early.at)}`):"",
+      p.before?(p.before.now?"prep ahead now":`prep ahead ${calDay(p.before.at)} ${calClock(p.before.at)}`):""].filter(Boolean);
+    /* review 17: a make-ahead that no longer fits before this showtime is said in words, under the chips */
+    if(p.late)out.late=calLate(p);return out}catch(e){return []}}
+/* the dishes as the calendar reads them: picked, timed, with what is left on the night */
+function prepNight(ds,TT){return ds.map((x,i)=>x.extra?null:{n:x.n,active:TT[i].active,wait:TT[i].wait,...calNight(x,TT[i]),words:TT[i].wait>=CAL_LONG?waitWords(x):""}).filter(Boolean)}
 function prepHTML2(f,menu){
   const edition=movieEdition(f),L=LAYOUT[f.theme]||"storybook",c=pal(f),d=DECO(L,c,f);
   const ds=planDishes(f),groups={};
   for(const x of planShopping(f)){const [n,a]=x.split("@");(groups[a]=groups[a]||[]).push(n)}
   const tk=sharedTicks(f);
   const shop=AISLES.filter(a=>groups[a]).map(a=>`<div class="pp-aisle"><h4>${a}</h4><ul>${groups[a].map(x=>{const k=tickKey(x),on=!!tk[k];return `<li role="checkbox" tabindex="0" aria-checked="${on}" data-k="${ESC(k)}"${on?' class="pp-done"':""}><span class="pp-box"></span>${ESC(x)}</li>`}).join("")}</ul></div>`).join("");
-  const TT=ds.map(x=>dishTimes(x,x.snack?PLAN.guests/4:PLAN.guests/((f._r2&&f._r2.serves)||4))),hands=TT.reduce((s,x)=>s+x.prep,0),longest=TT.reduce((m,x)=>Math.max(m,x.active),0),waitMax=TT.reduce((m,x)=>Math.max(m,x.wait),0);
+  const TT=ds.map(x=>dishTimes(x,x.snack?PLAN.guests/4:PLAN.guests/((f._r2&&f._r2.serves)||4))),hands=TT.reduce((s,x)=>s+x.prep,0),waitMax=TT.reduce((m,x)=>Math.max(m,x.wait),0),PWN=prepWhen(f,ds,TT);
   const L2={s:"Snack",m:"Main",w:"Sweet",d:"Drink",c:"Candy bar"},K=PLAN.guests/((f._r2&&f._r2.serves)||4);const LBp=planLabels(f);
   const steps=ds.filter(x=>(x.steps||[]).length).map((x,i)=>{const kk=x.snack?PLAN.guests/4:K,T=dishTimes(x,kk),hot=(x.steps||[]).some(s=>HEAT_RE.test(s.text));
     const time=x.extra?"From the printed menu, buy to suit":hot&&T.cook?`Prep ${planDur(T.prep)}, cook ${planDur(T.cook)}`:`Takes ${planDur(T.prep+T.cook)}`;
@@ -1374,7 +1390,7 @@ function prepHTML2(f,menu){
   <div class="mc-in pp">
     <div class="mc-eye">Prep sheet</div>
     <div class="pp-title">${ESC(f.title)}</div>
-    <p class="pp-serves">${(PW=>[...PW,`Serves ${PLAN.guests}`,DIET.veg||dietAF()?[DIET.veg&&"vegetarian",dietAF()&&"alcohol-free"].filter(Boolean).join(", "):"",`${ds.length} dish${ds.length===1?"":"es"}`,`hands-on ${planDur(hands)}`,`longest ${planDur(longest)}`,waitMax&&!PW.length?(waitMax>=2880?`start ${Math.round(waitMax/1440)} days ahead`:waitMax>=600?"start the day before":`plus ${planDur(waitMax)} waiting`):""])(prepWhen(f,ds,TT)).filter(Boolean).map(x=>`<span class="pp-chip">${x.replace(/ /g,"&nbsp;")}</span>`).join(" ")}</p>
+    <p class="pp-serves">${((PW,LD)=>[...PW,`Serves ${PLAN.guests}`,DIET.veg||dietAF()?[DIET.veg&&"vegetarian",dietAF()&&"alcohol-free"].filter(Boolean).join(", "):"",`${ds.length} dish${ds.length===1?"":"es"}`,`hands-on ${planDur(hands)}`,LD.lead?`longest on the night ${planDur(LD.lead)}`:"",waitMax&&!PW.length?(waitMax>=2880?`start ${Math.round(waitMax/1440)} days ahead`:waitMax>=600?"start the day before":`plus ${planDur(waitMax)} waiting`):""])(PWN,calLead(prepNight(ds,TT))).filter(Boolean).map(x=>`<span class="pp-chip">${x.replace(/ /g,"&nbsp;")}</span>`).join(" ")}</p>${PWN.late?`<p class="pp-late" role="note">${ESC(PWN.late)}</p>`:""}
     <div class="pp-cols"><div class="pp-shop"><h3>Shopping list</h3>${shop||"<p>Tick at least one dish.</p>"}</div><div class="pp-method"><h3>How to make it</h3><ol>${steps}</ol></div></div>
     <div class="mc-cue"><b>Showtime cue</b><span>${ESC(dietCue(f,edition&&edition.cue||f.P))}</span></div>
   </div>`;
@@ -1777,12 +1793,12 @@ function renderWeek(){
   const box=$("weekPanel");const f=week&&FILMS.find(x=>x.id===week.id);
   if(!f){box.hidden=true;box.innerHTML="";renderFeature(null);renderMotw();return}
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id];const [d,n]=cookDate();
-  const when=n===0?"<b>Tonight</b>":n===1?"<b>Tomorrow</b>":n<0?`<b>${-n} day${n===-1?"":"s"} ago</b>`:`<b>${n} days to go</b>`;
+  const when=n===0?`<b>${typeof showToday==="function"?showToday():"Tonight"}</b>`:n===1?"<b>Tomorrow</b>":n<0?`<b>${-n} day${n===-1?"":"s"} ago</b>`:`<b>${n} days to go</b>`;
   box.hidden=false;
   /* review 15: the locked-in strip at the top already shows the poster, title, countdown and a Menu button, so this panel keeps only what the strip
      cannot do: change the cook night and showtime, open the shopping list, or clear the week */
   const strip=!!$("feature");if(box.classList)box.classList.toggle("week-slim",strip);
-  box.innerHTML=`${strip?"":p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}">`:"<span></span>"}<p class="week-k">${strip?"Your movie night":"This week's film"}</p>${strip?"":`<p class="week-t">${ESC(f.title)} (${f.year})${week.double&&FILMS.find(x=>x.id===week.double)?` + ${ESC(FILMS.find(x=>x.id===week.double).title)}`:""}</p>`}<p class="week-when">Cook night <select id="weekDay" aria-label="Cook night">${[5,6,0].map(i=>`<option value="${i}"${i===week.day?" selected":""}>${DAYS[i]}</option>`).join("")}</select> ${d.getDate()} ${d.toLocaleString("en-AU",{month:"short"})} · ${when} &nbsp;Showtime <select id="weekTime" class="week-time" aria-label="Showtime">${showOpts(weekTime(week.time))}</select></p><div class="week-acts"><button class="go" type="button" id="weekShop">Shopping list</button>${strip?"":`<button type="button" id="weekOpen">Open the menu</button>`}<button type="button" id="weekCal">Add to calendar</button><button type="button" id="weekClear">Clear</button></div><p class="week-count" id="weekCount" aria-live="polite"></p>`;
+  box.innerHTML=`${strip?"":p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}">`:"<span></span>"}<p class="week-k">${strip?"Your movie night":"This week's film"}</p>${strip?"":`<p class="week-t">${ESC(f.title)} (${f.year})${week.double&&FILMS.find(x=>x.id===week.double)?` + ${ESC(FILMS.find(x=>x.id===week.double).title)}`:""}</p>`}<p class="week-when">Cook night <select id="weekDay" aria-label="Cook night">${[5,6,0].map(i=>`<option value="${i}"${i===week.day?" selected":""}>${DAYS[i]}</option>`).join("")}</select> ${d.getDate()} ${d.toLocaleString("en-AU",{month:"short"})} · ${when} &nbsp;Showtime <select id="weekTime" class="week-time" aria-label="Showtime">${showOpts(weekTime(week.time))}</select></p><div class="week-acts"><button class="go" type="button" id="weekShop">Shopping list</button>${strip?"":`<button type="button" id="weekOpen">Open the menu</button>`}<button type="button" id="weekCal">${typeof calLabel==="function"?calLabel():"Add to calendar"}</button><button type="button" id="weekClear">Clear</button></div><p class="week-count" id="weekCount" aria-live="polite"></p>`;
   $("weekDay").addEventListener("change",e=>{week.day=weekDay(e.target.value);week.date=nextWeekDate(week.day,week.time);saveWeek();renderWeek()});
   $("weekTime").addEventListener("change",e=>{week.time=weekTime(e.target.value);saveWeek();renderFeature(f);tickShowtime();if(typeof refreshPrepTime==="function")refreshPrepTime()});
   renderFeature(f);tickShowtime();renderMotw();
@@ -1795,15 +1811,17 @@ function renderWeek(){
    and one tap to its menu or Prep sheet. Josh, 5 Nov: "the locked in movie should be at the top so it's right there as a reminder" */
 function renderFeature(f){const box=$("feature");if(!box)return;if(!f||!week){box.hidden=true;box.innerHTML="";return}
   const p=typeof TMDB_POSTERS!=="undefined"&&TMDB_POSTERS[f.id],[d,n]=cookDate(),g=week.double&&FILMS.find(x=>x.id===week.double);
-  const day=n===0?"Tonight":n===1?"Tomorrow":DAYS[d.getDay()];
+  /* review 17: an early-hours or daytime showtime is not "tonight" (a 12:15am show read "Tonight" at 2:30pm the same day) */
+  const today=typeof showToday==="function"?showToday():"Tonight",day=n===0?today:n===1?"Tomorrow":DAYS[d.getDay()];
   box.hidden=false;
-  box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}" loading="lazy">`:'<span class="ft-ph"></span>'}<p class="ft-k">${n===0?"Tonight's feature":n<0?"Last feature":"Coming up"}</p>
+  box.innerHTML=`${p?`<img alt="" src="https://image.tmdb.org/t/p/w154${ESC(p)}" loading="lazy">`:'<span class="ft-ph"></span>'}<p class="ft-k">${n===0?(today==="Tonight"?"Tonight's feature":"Today's feature"):n<0?"Last feature":"Coming up"}</p>
     <p class="ft-t">${ESC(f.title)}${g?` + ${ESC(g.title)}`:""}</p><p class="ft-w">${day} ${d.getDate()} ${"JanFebMarAprMayJunJulAugSepOctNovDec".substr(d.getMonth()*3,3)}, ${clock(week.time||"19:00")} <span id="featCount"></span></p>
-    <div class="ft-acts"><button type="button" class="go" id="featMenu">Menu</button><button type="button" id="featPrep">Prep sheet</button><button type="button" id="featCal">Add to calendar</button></div>`;
+    <div class="ft-acts"><button type="button" class="go" id="featMenu">Menu</button><button type="button" id="featPrep">Prep sheet</button><button type="button" id="featCal">${typeof calLabel==="function"?calLabel():"Add to calendar"}</button></div>`;
   $("featMenu").addEventListener("click",()=>{setView("wheel");if(tab!=="menu")setTab("menu");replay(f).then(()=>toMenu());toMenu()});
   $("featPrep").addEventListener("click",()=>{setView("wheel");replay(f).then(()=>{setTab("prep");toMenu()})});
   $("featCal").addEventListener("click",e=>{if(typeof calAdd==="function")calAdd(e.currentTarget)});
 }
+function showToday(){const h=+weekTime(week&&week.time).slice(0,2);return h<12?"This morning":h<17?"This afternoon":"Tonight"}
 /* Countdown to the scheduled showtime. Cooking times belong to the individual recipes. */
 const SHOWTIMES=Array.from({length:96},(_,i)=>`${String(i/4|0).padStart(2,"0")}:${String(i%4*15).padStart(2,"0")}`);
 /* 96 times read best in groups: a phone wheel or a desktop list lands on the evening */
@@ -1822,6 +1840,7 @@ function tickShowtime(){
   {const fc=$("featCount");if(fc)fc.textContent=ms<0?"· showtime passed":ms===0?"· showtime now":"· in "+span(ms)}
   /* the strip carries the countdown; the panel only speaks up when the showtime has come or gone */
   el.hidden=ms>0&&!!$("feature")&&!$("feature").hidden;
+  if(typeof calLabels==="function")calLabels();
   _showT=setTimeout(tickShowtime,30000);
 }
 /* menu of the week: the printed era menus take turns, a new one every Monday */
@@ -1867,50 +1886,72 @@ function calFold(line){const out=[];let cur="",bytes=0,max=75;for(const ch of li
    - the night before (6pm) when the recipe says overnight, when the wait is 10 hours or more, or when it would have to start before 8am;
    - two or more days ahead for long soaks and cures, at 6pm on that day or earlier if the wait needs it, never before 8am. */
 const CAL_LONG=120;
-function calPlan(show,dishes){
-  const night=d=>d.night!=null?d.night:(d.wait||0)<CAL_LONG?(d.active||0)+(d.wait||0):(d.active||0);
-  let dish="",lead=0;for(const d of dishes){const l=night(d);if(l>lead){lead=l;dish=d.n}}
-  const start=new Date(show.getTime()-(lead||60)*6e4);start.setMinutes(Math.floor(start.getMinutes()/5)*5,0,0);
+/* what a dish still needs on the night, and the dish that needs longest: the Prep sheet's "longest on the night" chip and the calendar's lead
+   are the same sum (review 17: the chip used the longest cook and the calendar the longest night, two numbers under one word) */
+function calNightOf(d){return d.night!=null?d.night:(d.wait||0)<120?(d.active||0)+(d.wait||0):(d.active||0)}
+function calLead(dishes){let dish="",lead=0;for(const d of dishes){const l=calNightOf(d);if(l>lead){lead=l;dish=d.n}}return {dish,lead}}
+/* now (optional): the time the plan is made. Review 17: a make-ahead time already gone is never offered. A dish that can still be done in time
+   starts now; one that cannot is listed as too late (late), with the first week its wait fits again (next), and gets no alarm */
+function calPlan(show,dishes,now){
+  const {dish,lead}=calLead(dishes);
+  let start=new Date(show.getTime()-(lead||60)*6e4);start.setMinutes(Math.floor(start.getMinutes()/5)*5,0,0);
   const latest=d=>new Date(show.getTime()-((d.active||0)+(d.wait||0))*6e4),day8=new Date(show.getFullYear(),show.getMonth(),show.getDate(),8,0,0,0);
-  const long=dishes.filter(d=>(d.wait||0)>=CAL_LONG);
+  const soon=now?new Date(Math.ceil(now.getTime()/9e5)*9e5):null;
+  const long0=dishes.filter(d=>(d.wait||0)>=CAL_LONG),lateD=now?long0.filter(d=>latest(d)<now):[],long=long0.filter(d=>!lateD.includes(d));
   const aheadD=long.filter(d=>d.over||d.wait>=600||latest(d)<day8);
   const earlyD=long.filter(d=>!aheadD.includes(d)&&latest(d)<start);
-  let before=null,early=null;
+  let before=null,early=null,late=null,first="";
   if(aheadD.length){const l=new Date(Math.min(...aheadD.map(d=>latest(d).getTime())));
     /* 6pm on the latest day that still fits, and never later than 6pm the night before */
     let at=new Date(Math.min(l.getTime(),new Date(l.getFullYear(),l.getMonth(),l.getDate(),18,0,0,0).getTime(),new Date(show.getFullYear(),show.getMonth(),show.getDate()-1,18,0,0,0).getTime()));at.setMinutes(Math.floor(at.getMinutes()/15)*15,0,0);
     /* nobody wants a 3am alarm: a start in the small hours moves to 6pm the evening before */
     if(at.getHours()<8)at=new Date(at.getFullYear(),at.getMonth(),at.getDate()-1,18,0,0,0);
-    before={at,dishes:aheadD}}
-  if(earlyD.length){const at=new Date(Math.min(...earlyD.map(d=>latest(d).getTime())));at.setMinutes(Math.floor(at.getMinutes()/15)*15,0,0);early={at,dishes:earlyD}}
-  return {lead,dish,start,early,before}}
+    /* the planned time has gone but the wait still fits: start now */
+    if(soon&&at<soon)at=soon>l?new Date(Math.ceil(now.getTime()/6e4)*6e4):soon;
+    before={at,dishes:aheadD,now:!!(soon&&at<=soon)}}
+  if(earlyD.length){let at=new Date(Math.min(...earlyD.map(d=>latest(d).getTime())));at.setMinutes(Math.floor(at.getMinutes()/15)*15,0,0);
+    if(soon&&at<soon)at=soon;
+    /* review 17: a make-ahead alarm within 45 minutes of start cooking is one alarm: start cooking moves to it and names that dish first */
+    if(start-at<=45*6e4){start=at;first=earlyD.map(d=>d.n).join(", ")}else early={at,dishes:earlyD,now:!!(soon&&at<=soon)}}
+  if(lateD.length){const wk=k=>{const x=new Date(show);x.setDate(x.getDate()+7*k);return x};let k=1;
+    while(k<52&&lateD.some(d=>new Date(wk(k).getTime()-((d.active||0)+(d.wait||0))*6e4)<now))k++;
+    late={dishes:lateD,next:wk(k)}}
+  return {lead,dish,start,early,before,late,first,startNow:!!(now&&start<now)}}
 /* how far ahead, in words: "The night before", "Two days before", "A week before" */
 const calAhead=(show,at)=>{const n=Math.round((new Date(show.getFullYear(),show.getMonth(),show.getDate())-new Date(at.getFullYear(),at.getMonth(),at.getDate()))/864e5);
   return n<=0?"Earlier that day":n===1?(at.getHours()>=17?"The night before":"The day before"):n===7?"A week before":n===14?"Two weeks before":(["","","Two","Three","Four","Five","Six"][n]||n)+" days before"};
-function calText(o){const p=o.plan,list=g=>g?g.dishes.map(d=>`${d.n}, ${calDur(d.wait)}${d.words?" "+d.words:""}`).join("; "):"",ah=list(p.before),ea=list(p.early);
+const calList=g=>g?g.dishes.map(d=>`${d.n}, ${calDur(d.wait)}${d.words?" "+d.words:""}`).join("; "):"";
+/* review 17: a make-ahead that can no longer be done in time, in plain words with a way round it */
+const calLate=(p,o)=>p.late?`Too late to make ahead for this night: ${calList(p.late)}. Buy ${p.late.dishes.length>1?"them":"it"} ready-made, or move movie night to ${calDay(p.late.next)}.`:"";
+function calText(o){const p=o.plan,ah=calList(p.before),ea=calList(p.early);
   const made=[...(p.before?p.before.dishes:[]),...(p.early?p.early.dishes:[])].map(d=>d.n);
+  const lead=p.dish?`${p.dish} takes longest on the night, ${calDur(p.lead)}`:"";
   return {
     title:`Movie night: ${o.title}`,
-    cook:`Start cooking for ${o.title}. Showtime is ${calClock(o.show)}.${p.dish?` ${p.dish} takes longest, ${calDur(p.lead)}.`:""}${made.length?` Made ahead: ${made.join(", ")}.`:""}`,
+    cook:`Start cooking for ${o.title}${p.first?` with ${p.first}`:""}. Showtime is ${calClock(o.show)}.${lead?` ${lead}.`:""}${made.length?` Made ahead: ${made.join(", ")}.`:""}`,
     early:p.early?`Make ahead today for ${o.title}: ${ea}.`:"",
     ahead:p.before?`Prep ahead for ${o.title}: ${ah}.`:"",
-    notes:[`Showtime ${calClock(o.show)}. Start cooking at ${calClock(p.start)}${p.dish?` (${p.dish} takes longest, ${calDur(p.lead)})`:""}.`,
-      p.early?`Earlier that day, from ${calClock(p.early.at)}: ${ea}.`:"",
-      p.before?`${calAhead(o.show,p.before.at)}, from ${calDay(p.before.at)} ${calClock(p.before.at)}: ${ah}.`:"",
+    late:calLate(p,o),
+    notes:[`Showtime ${calClock(o.show)}. Start cooking at ${calClock(p.start)}${p.first?` with ${p.first}`:""}${lead?` (${lead})`:""}.`,
+      p.early?`Earlier that day, ${p.early.now?"start now":"from "+calClock(p.early.at)}: ${ea}.`:"",
+      p.before?`${p.before.now?"Start now":`${calAhead(o.show,p.before.at)}, from ${calDay(p.before.at)} ${calClock(p.before.at)}`}: ${ah}.`:"",
+      calLate(p,o),
       `Menu and Prep sheet: ${o.url}`].filter(Boolean).join("\n")}}
+/* an alarm already due when the file is made is left out (review 17): the panel says "now" instead */
 function calICS(o){const t=calText(o),p=o.plan,now=o.now||new Date(),end=new Date(o.show.getTime()+(o.span||150)*6e4);
   const alarm=(mins,txt)=>["BEGIN:VALARM","ACTION:DISPLAY",`DESCRIPTION:${calEsc(txt)}`,`TRIGGER;RELATED=START:${calBefore(mins)}`,"END:VALARM"];
   const L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Movie Night Spinner//Movie night//EN","CALSCALE:GREGORIAN","METHOD:PUBLISH",
     "BEGIN:VEVENT",`UID:${o.uid}`,`DTSTAMP:${calUTC(now)}`,`DTSTART:${calUTC(o.show)}`,`DTEND:${calUTC(end)}`,
     `SUMMARY:${calEsc(t.title)}`,`DESCRIPTION:${calEsc(t.notes)}`,`URL:${o.url}`,"TRANSP:OPAQUE",
-    ...alarm((o.show-p.start)/6e4,t.cook),...(p.early?alarm((o.show-p.early.at)/6e4,t.early):[]),...(p.before?alarm((o.show-p.before.at)/6e4,t.ahead):[]),
+    ...(p.startNow?[]:alarm((o.show-p.start)/6e4,t.cook)),...(p.early&&!p.early.now?alarm((o.show-p.early.at)/6e4,t.early):[]),...(p.before&&!p.before.now?alarm((o.show-p.before.at)/6e4,t.ahead):[]),
     "END:VEVENT","END:VCALENDAR"];
   return L.map(calFold).join("\r\n")+"\r\n"}
-/* Google: one link per event, since an imported file loses its reminders there */
+/* Google: one link per event, since an imported file loses its reminders there; nothing for a time already gone */
 function calGoogle(o){const t=calText(o),p=o.plan,g=(text,a,b,details)=>"https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent(text)+"&dates="+calUTC(a)+"/"+calUTC(b)+"&details="+encodeURIComponent(details);
-  const out=[["the night",g(t.title,o.show,new Date(o.show.getTime()+(o.span||150)*6e4),t.notes)],["start cooking",g(`Start cooking: ${o.title}`,p.start,new Date(p.start.getTime()+15*6e4),t.cook+"\n"+o.url)]];
-  if(p.early)out.push(["make ahead today",g(`Make ahead: ${o.title}`,p.early.at,new Date(p.early.at.getTime()+15*6e4),t.early+"\n"+o.url)]);
-  if(p.before)out.push(["prep ahead",g(`Prep ahead: ${o.title}`,p.before.at,new Date(p.before.at.getTime()+15*6e4),t.ahead+"\n"+o.url)]);return out}
+  const out=[["the night",g(t.title,o.show,new Date(o.show.getTime()+(o.span||150)*6e4),t.notes)]];
+  if(!p.startNow)out.push(["start cooking",g(`Start cooking: ${o.title}`,p.start,new Date(p.start.getTime()+15*6e4),t.cook+"\n"+o.url)]);
+  if(p.early&&!p.early.now)out.push(["make ahead today",g(`Make ahead: ${o.title}`,p.early.at,new Date(p.early.at.getTime()+15*6e4),t.early+"\n"+o.url)]);
+  if(p.before&&!p.before.now)out.push(["prep ahead",g(`Prep ahead: ${o.title}`,p.before.at,new Date(p.before.at.getTime()+15*6e4),t.ahead+"\n"+o.url)]);return out}
 /* end calendar reminder */
 /* review 16: what is left to do on the night once a dish's long wait is over. The steps after the last wait of 2 hours or more (or one the
    recipe puts overnight) carry that share of the hands-on and cooking time, plus any short wait among them. A dish with no long wait runs whole. */
@@ -1932,23 +1973,35 @@ function calHow(name){const ua=navigator.userAgent||"",ios=/iPhone|iPad|iPod/.te
   return ios?"<b>iPhone or iPad:</b> tap Allow if Safari asks, then Add to Calendar. The reminders come with it.":
     droid?"<b>Android:</b> the Google Calendar app cannot open this file, so use the Google links below. Outlook or Samsung Calendar can open it from Downloads.":
     `<b>${ESC(name)}</b> is downloading. Open it to add the night and its reminders to Apple Calendar or Outlook.`}
+/* review 17: once showtime has gone, Add to calendar books the same film next week (as "Same film next week" does) and says so */
+function calPassed(){return !!week&&weekShow()<new Date()}
+function calLabel(){return calPassed()?"Add next week to calendar":"Add to calendar"}
+function calLabels(){for(const id of ["featCal","weekCal"]){const b=$(id);if(b&&b.textContent!==calLabel())b.textContent=calLabel()}}
 async function calAdd(trigger){if(!week)return;const f=FILMS.find(x=>x.id===week.id);if(!f)return;const g=week.double&&FILMS.find(x=>x.id===week.double);
   for(const x of [f,g])if(x)try{await ensureExact(x)}catch(e){}
-  const show=weekShow(),plan=calPlan(show,[...calDishes(f),...(g?calDishes(g):[])]),title=f.title+(g?" + "+g.title:"");
-  const url=location.origin+location.pathname+"?film="+encodeURIComponent(f.id),o={title,show,plan,url,span:g?300:150,uid:`${slug(f.id)}-${weekDateKey(show)}@movie-night-spinner`};
+  const now=new Date();let moved=false;
+  if(weekShow()<now){week.date=nextWeekDate(week.day,week.time,now);saveWeek();renderWeek();refreshPrepTime();moved=true}
+  const show=weekShow(),plan=calPlan(show,[...calDishes(f),...(g?calDishes(g):[])],now),title=f.title+(g?" + "+g.title:"");
+  const url=location.origin+location.pathname+"?film="+encodeURIComponent(f.id),o={title,show,plan,url,now,span:g?300:150,uid:`${slug(f.id)}-${weekDateKey(show)}@movie-night-spinner`};
   const name=`movie-night-${slug(f.title)}.ics`,href=URL.createObjectURL(new Blob([calICS(o)],{type:"text/calendar;charset=utf-8"}));
   const a=document.createElement("a");a.href=href;a.download=name;a.hidden=true;document.body.appendChild(a);a.click();setTimeout(()=>a.remove(),0);
-  const rows=[[`${calDay(show)}, ${calClock(show)}`,`Movie night: ${title}`],[calClock(plan.start),`Start cooking${plan.dish?`. ${plan.dish} takes longest, ${calDur(plan.lead)}`:""}`],
-    ...(plan.early?[[`${calDay(plan.early.at)}, ${calClock(plan.early.at)}`,`Make ahead: ${plan.early.dishes.map(d=>`${d.n}, ${calDur(d.wait)}${d.words?" "+d.words:""}`).join("; ")}`]]:[]),
-    ...(plan.before?[[`${calDay(plan.before.at)}, ${calClock(plan.before.at)}`,`${calAhead(show,plan.before.at)}: ${plan.before.dishes.map(d=>`${d.n}, ${calDur(d.wait)}${d.words?" "+d.words:""}`).join("; ")}`]]:[])];
+  /* a time on another day than the show carries its day (a 12:15am showtime starts cooking 10:45pm the day before) */
+  const when=d=>weekDateKey(d)===weekDateKey(show)?calClock(d):`${calDay(d)}, ${calClock(d)}`;
+  const rows=[[`${calDay(show)}, ${calClock(show)}`,`Movie night: ${title}`],
+    [plan.startNow?"Now":when(plan.start),`Start cooking${plan.startNow?" now":""}${plan.first?` with ${plan.first}`:""}${plan.dish?`. ${plan.dish} takes longest on the night, ${calDur(plan.lead)}`:""}`],
+    ...(plan.early?[[plan.early.now?"Now":when(plan.early.at),`Make ahead${plan.early.now?", start now":""}: ${calList(plan.early)}`]]:[]),
+    ...(plan.before?[[plan.before.now?"Now":when(plan.before.at),`${plan.before.now?"Start now, it still fits":calAhead(show,plan.before.at)}: ${calList(plan.before)}`]]:[]),
+    ...(plan.late?[["Too late",calLate(plan,o).replace(/^Too late to make ahead for this night: /,"")]]:[])];
   const dlg=document.createElement("dialog");dlg.className="counter pdfpick calask";dlg.setAttribute("aria-label","Add to calendar");
-  dlg.innerHTML=`<div class="rate-box"><p class="rate-k">Add to calendar</p><h3>${ESC(title)}</h3><ul class="cal-rows">${rows.map(([w,t])=>`<li><b>${ESC(w)}</b><span>${ESC(t)}</span></li>`).join("")}</ul>
+  dlg.innerHTML=`<div class="rate-box"><p class="rate-k">Add to calendar</p><h3>${ESC(title)}</h3>${moved?`<p class="cal-how">Last week's showtime has passed, so this is the same film next week.</p>`:""}<ul class="cal-rows">${rows.map(([w,t])=>`<li${w==="Too late"?' class="cal-late"':""}><b>${ESC(w)}</b><span>${ESC(t)}</span></li>`).join("")}</ul>
     <p class="cal-how">${calHow(name)} <a href="${href}" download="${ESC(name)}">Download it again</a></p>
-    <p class="cal-how"><b>Google Calendar</b> drops reminders from a file, so add each one here: ${calGoogle(o).map(([k,u])=>`<a href="${ESC(u)}" target="_blank" rel="noopener">${ESC(k)}</a>`).join(", ")}</p>
-    <div class="pp-opts"><button type="button" data-done><b>Done</b></button></div></div>`;
-  dlg.addEventListener("click",e=>{if(e.target===dlg||e.target.closest("[data-done]"))dismissModal(dlg)});
+    <p class="cal-how cal-g"><b>Google Calendar</b> drops reminders from a file, so add each one here: ${calGoogle(o).map(([k,u])=>`<a href="${ESC(u)}" target="_blank" rel="noopener">${ESC(k)}</a>`).join(" ")}</p>
+    <div class="pp-opts">${plan.late?`<button type="button" data-move>Move to ${ESC(calDay(plan.late.next))}</button>`:""}<button type="button" data-done><b>Done</b></button></div></div>`;
+  dlg.addEventListener("click",e=>{if(e.target===dlg||e.target.closest("[data-done]"))dismissModal(dlg);
+    if(e.target.closest("[data-move]")&&plan.late){week.date=weekDateKey(plan.late.next);saveWeek();renderWeek();refreshPrepTime();dismissModal(dlg);setTimeout(()=>calAdd(trigger),0)}});
   dlg.addEventListener("close",()=>setTimeout(()=>URL.revokeObjectURL(href),60000));
-  mountModal(dlg,"[data-done]",trigger||document.activeElement);$("status").textContent=`Calendar file saved: movie night ${calDay(show)} ${calClock(show)}, start cooking ${calClock(plan.start)}.`}
+  mountModal(dlg,"[data-done]",trigger||document.activeElement);
+  $("status").textContent=`${moved?"Moved to next week. ":""}Calendar file saved: movie night ${calDay(show)} ${calClock(show)}, start cooking ${plan.startNow?"now":when(plan.start)}.${plan.late?" "+calLate(plan,o):""}`}
 /* the Prep sheet of the locked-in film shows its showtime and start time; redrawn when the time changes */
 function refreshPrepTime(){if(typeof current!=="undefined"&&current&&week&&(current.id===week.id||current.id===week.double)&&typeof refreshPlan==="function")refreshPlan()}
 const trolleySessionTicks=new Map();
@@ -2787,6 +2840,26 @@ function pdfConic(g,w,h){const m=g.match(/^(repeating-)?conic-gradient\((.*)\)$/
   const gr=x.createConicGradient((from-90)*Math.PI/180,cx,cy);const E=1e-4;
   for(let base=0;base<1-E;base+=per)for(const s of st){const at=base+s.at;if(at>1+E)break;gr.addColorStop(Math.min(1,Math.max(0,at)),s.col)}
   x.fillStyle=gr;x.fillRect(0,0,w,h);return c.toDataURL("image/png")}
+const PDF_GCO={multiply:"multiply",overlay:"overlay",screen:"screen",darken:"darken",lighten:"lighten","soft-light":"soft-light","hard-light":"hard-light","color-burn":"color-burn","color-dodge":"color-dodge"};
+async function pdfBlendBake(root){const solidBg=e=>{const c=getComputedStyle(e);if(c.backgroundImage!=="none")return null;const m=c.backgroundColor.match(/rgba?\(([^)]*)\)/);if(!m)return null;const q=m[1].split(/[\s,/]+/).filter(Boolean).map(Number);return q.length<4||q[3]>=.99?c.backgroundColor:null};
+  const baked=new Map();
+  for(const el of root.querySelectorAll("[data-pblend]")){try{const mode=PDF_GCO[el.dataset.pblend];if(!mode)continue;const r=el.getBoundingClientRect(),w=Math.round(el.offsetWidth),h=Math.round(el.offsetHeight);if(!w||!h||w*h>4e6)continue;
+    /* the paper under it: the sibling just before it covering the same box, or the parent when nothing is painted before it */
+    let under=null,prev=el.previousElementSibling;
+    if(prev){const pr=prev.getBoundingClientRect();if(Math.abs(pr.left-r.left)<1&&Math.abs(pr.top-r.top)<1&&Math.abs(pr.width-r.width)<1&&Math.abs(pr.height-r.height)<1)under=baked.get(prev)||solidBg(prev)}
+    else if(el.parentElement)under=solidBg(el.parentElement);
+    if(!under)continue;
+    const cs=getComputedStyle(el),lay=splitLayers(cs.backgroundImage||"none");if(!lay.length||lay.some(g=>!/^url\(/.test(g)))continue;
+    const L=v=>v.split(/,(?![^(]*\))/).map(x=>x.trim()),sz=L(cs.backgroundSize),ps=L(cs.backgroundPosition),at=(a,i)=>a[i]||a[a.length-1];
+    const k=2,B=document.createElement("canvas");B.width=w*k;B.height=h*k;const bx=B.getContext("2d");let ok=true;
+    for(let i=lay.length-1;i>=0;i--){const src=lay[i].replace(/^url\(["']?|["']?\)$/g,""),im=new Image();im.crossOrigin="anonymous";im.src=src;await im.decode();
+      const m=at(sz,i).match(/^([\d.]+)px(?:\s+(?:([\d.]+)px|auto))?$/),p0=at(ps,i).match(/^(-?[\d.]+)px\s+(-?[\d.]+)px$/)||(at(ps,i)==="0% 0%"?[0,0,0]:null);if(!m||!p0){ok=false;break}
+      const tw=+m[1],th=m[2]?+m[2]:tw*im.naturalHeight/im.naturalWidth,pat=bx.createPattern(im,"repeat");pat.setTransform(new DOMMatrix().translate(+p0[1]*k,+p0[2]*k).scale(tw*k/im.naturalWidth,th*k/im.naturalHeight));
+      bx.fillStyle=pat;bx.fillRect(0,0,B.width,B.height)}
+    if(!ok)continue;
+    const c=document.createElement("canvas");c.width=w*k;c.height=h*k;const x=c.getContext("2d");if(typeof under==="string"){x.fillStyle=under;x.fillRect(0,0,c.width,c.height)}else x.drawImage(under,0,0,c.width,c.height);
+    x.globalAlpha=+cs.opacity;x.globalCompositeOperation=mode;x.drawImage(B,0,0);
+    el.style.backgroundImage=`url("${c.toDataURL("image/png")}")`;el.style.backgroundSize=`${w}px ${h}px`;el.style.backgroundPosition="0px 0px";el.style.backgroundRepeat="no-repeat";el.style.opacity="1";el.removeAttribute("data-pblend");baked.set(el,c)}catch(err){}}}
 /* review 14: html2canvas skips CSS masks, so a faded photo printed with a hard edge (club). The mask's linear gradient is applied to a picture of the box:
    its alpha stops become a gradient drawn with destination-in, along the same angle */
 async function pdfMaskDraw(el){const w=el.clientWidth,h=el.clientHeight,k=2.5;if(!w||!h)return null;const c=document.createElement("canvas");c.width=Math.round(w*k);c.height=Math.round(h*k);const x=c.getContext("2d");
@@ -2865,7 +2938,13 @@ async function renderCanvas(src,forPrint){
     for(const sh of parts){if(/\binset\b/.test(sh)){keep.push(sh);continue}
       const col=(sh.match(/(rgba?\([^)]*\)|#[0-9a-f]{3,8}\b)/i)||[])[0],nums=(sh.replace(/rgba?\([^)]*\)/g,"").match(/-?\d+(\.\d+)?(px)?/g)||[]).map(parseFloat);
       if(col&&nums.length>=4&&nums[0]===0&&nums[1]===0&&nums[2]===0&&nums[3]>0)rings.push([nums[3],col]);else keep.push(sh)}
-    if(!rings.length)return;const cs=getComputedStyle(e);if(cs.position!=="absolute"||e.offsetParent!==e.parentElement)return;
+    if(!rings.length)return;const cs=getComputedStyle(e);
+    /* review 17: a box in the flow (Kung Fu Panda's poster on its scroll) takes one ring as a border, with a negative margin so nothing moves */
+    if((cs.position!=="absolute"||e.offsetParent!==e.parentElement)&&rings.length===1&&!parseFloat(cs.borderTopWidth)&&!parseFloat(cs.borderLeftWidth)&&cs.display!=="inline"&&cs.flexGrow==="0"&&e.offsetWidth){
+      const [w,col]=rings[0],W=e.offsetWidth,H=e.offsetHeight;e.style.boxShadow=keep.join(",")||"none";
+      e.style.boxSizing="border-box";e.style.width=`${W+2*w}px`;e.style.height=`${H+2*w}px`;e.style.border=`${w}px solid ${col}`;
+      for(const sd of ["Top","Right","Bottom","Left"])e.style["margin"+sd]=`${(parseFloat(cs["margin"+sd])||0)-w}px`;return}
+    if(cs.position!=="absolute"||e.offsetParent!==e.parentElement)return;
     const L=e.offsetLeft,T=e.offsetTop,W=e.offsetWidth,H=e.offsetHeight,rad=parseFloat(cs.borderTopLeftRadius)||0,pct=/%/.test(cs.borderTopLeftRadius);
     e.style.boxShadow=keep.join(",")||"none";
     /* drawn widest first so each narrower ring sits on top, as the browser stacks them */
@@ -2888,11 +2967,15 @@ async function renderCanvas(src,forPrint){
        A masked photo is marked here and baked once the photos are ready (pdfMaskApply) */
     try{const solid=c=>{const m=c&&c.match(/rgba?\(([^)]*)\)/);if(!m)return null;const p=m[1].split(/[\s,/]+/).filter(Boolean).map(Number);return p.length<4||p[3]>.05?p.slice(0,3):null};
       [...clone.querySelectorAll("*")].forEach(el=>{const cs=getComputedStyle(el);
-        if(cs.display==="inline-block"&&el.textContent.trim()&&(solid(cs.backgroundColor)||cs.backgroundImage!=="none")&&[...el.children].some(c=>/^(block|flex|grid|table)$/.test(getComputedStyle(c).display))){
-          const ta=el.parentElement?getComputedStyle(el.parentElement).textAlign:"left";el.style.display="table";
+        /* review 17: a filled inline-flex box prints empty the same way (Ghost Dog's section pills); it prints as a shrink-to-fit flex box */
+        if(/^inline-(block|flex)$/.test(cs.display)&&el.textContent.trim()&&(solid(cs.backgroundColor)||cs.backgroundImage!=="none")&&[...el.children].some(c=>/^(block|flex|grid|table)$/.test(getComputedStyle(c).display))){
+          const ta=el.parentElement?getComputedStyle(el.parentElement).textAlign:"left";if(cs.display==="inline-flex"){el.style.display="flex";el.style.width="max-content"}else el.style.display="table";
           if(/right|end/.test(ta))el.style.marginLeft="auto";else if(ta==="center"){el.style.marginLeft="auto";el.style.marginRight="auto"}}
         if((cs.webkitBackgroundClip==="text"||cs.backgroundClip==="text")&&el.textContent.trim()){const cols=cs.backgroundImage.match(/rgba?\([^)]*\)|#[0-9a-f]{3,8}\b/gi)||[],mid=cols[Math.floor(cols.length/2)]||cs.color;
           el.style.backgroundImage="none";el.style.backgroundColor="transparent";el.style.webkitBackgroundClip="border-box";el.style.backgroundClip="border-box";el.style.color=mid;el.style.webkitTextFillColor=mid}
+        /* review 17: html2canvas draws every strike-through one pixel thin (Anchorman's thick red line through "Ice cold milk"): a thick one becomes a drawn bar */
+        {const th=parseFloat(cs.textDecorationThickness);if(/line-through/.test(cs.textDecorationLine)&&th>1.5&&el.textContent.trim()&&(!cs.backgroundImage||cs.backgroundImage==="none")){const col=cs.textDecorationColor||cs.color;
+          el.style.textDecoration="none";el.style.backgroundImage=`linear-gradient(${col},${col})`;el.style.backgroundSize=`100% ${th}px`;el.style.backgroundPosition="0 56%";el.style.backgroundRepeat="no-repeat"}}
         const mk=cs.webkitMaskImage||cs.maskImage;
         if(mk&&/^linear-gradient\(/.test(mk)&&el.querySelector("img"))el.dataset.pmask=mk})}catch(err){}
     /* Safari can mark a cached poster as off-limits to the canvas, which kills the export.
@@ -2969,7 +3052,8 @@ async function renderCanvas(src,forPrint){
         const bs=cs.boxShadow;if(bs&&bs!=="none"&&/inset/.test(bs)){/* an inset shadow paints over the background and under the content, so the picture goes in as the top background layer, text or not */
           const parts=bs.split(/,(?![^(]*\))/).map(x=>x.trim()),keep=[],soft=[];
           for(const sh of parts){if(!/inset/.test(sh)){keep.push(sh);continue}const col=(sh.match(/rgba?\([^)]*\)|#[0-9a-f]{3,8}\b/i)||[])[0],n=(sh.replace(/rgba?\([^)]*\)/g,"").match(/-?\d+(\.\d+)?px/g)||[]).map(parseFloat);
-            if(col&&n.length>=3&&n[2]>=2)soft.push({x:n[0],y:n[1],b:n[2],s:n[3]||0,col});else keep.push(sh)}
+            /* review 17: a hard inset edge with an offset ("inset 0 2px 0" on canteen trays) floods the padding as a pale band with square corners, so it is drawn too */
+            if(col&&n.length>=3&&(n[2]>=2||n[0]||n[1]))soft.push({x:n[0],y:n[1],b:n[2],s:n[3]||0,col});else keep.push(sh)}
           if(soft.length){const url=pdfSoftInset(w,h,soft);el.style.boxShadow=keep.join(",")||"none";
             const bi=cs.backgroundImage&&cs.backgroundImage!=="none"?cs.backgroundImage:"";el.style.backgroundImage=`url("${url}")`+(bi?","+bi:"");
             if(bi){el.style.backgroundSize=`${w}px ${h}px,`+cs.backgroundSize;el.style.backgroundPosition="0 0,"+cs.backgroundPosition;el.style.backgroundRepeat="no-repeat,"+cs.backgroundRepeat}
@@ -2985,8 +3069,11 @@ async function renderCanvas(src,forPrint){
       /* it also smears a blurred inset shadow across the whole box, so a moulded tray well prints with a plain edge instead */
       if(el.hasAttribute&&el.hasAttribute("data-well")){el.style.boxShadow="none";el.style.border="1px solid rgba(0,0,0,.14)"}
       /* html2canvas cannot blend layers, so a grain set to overlay or multiply would paint flat over the paper and wash it out: leave those texture layers out of the export */
-      if(cs.mixBlendMode&&cs.mixBlendMode!=="normal"&&!el.textContent.trim()&&!el.querySelector("img"))el.style.mixBlendMode="normal";
+      if(cs.mixBlendMode&&cs.mixBlendMode!=="normal"&&!el.textContent.trim()&&!el.querySelector("img")){el.dataset.pblend=cs.mixBlendMode;el.style.mixBlendMode="normal"}
     });
+    /* review 17: a grain blended onto a plain paper (The Heat's black takeaway panels, overlay at .18) printed as charcoal, because the layer
+       painted flat. When the paper under it is one solid colour, the blend is worked out on a canvas and printed as a picture */
+    await pdfBlendBake(clone);
     /* only copy the export stage into html2canvas's working page: the video store alone holds hundreds of posters, and waiting on them made a PDF take a minute */
     const keep=el=>el===document.head||document.head.contains(el)||el.tagName==="STYLE"||el.tagName==="LINK"||el.contains(stage)||stage.contains(el);
     return await html2canvas(clone,{scale:2.5,backgroundColor:STY[current.theme].mg,logging:false,useCORS:true,ignoreElements:el=>!keep(el)});

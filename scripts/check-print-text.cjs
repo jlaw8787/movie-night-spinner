@@ -32,13 +32,24 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
    /* review 15: no dish note hidden by a fit pass (campfire and canteen hid them on every film) */
    for(const e of card.querySelectorAll('*')){if(e.style.display!=='none')continue;const note=[...e.attributes].some(a=>a.name==='data-note'||a.name==='data-clamp'||a.name==='data-cnote'||/-note$/.test(a.name))||e.getAttribute('data-fit')==='note';
     if(note&&e.textContent.trim()&&!(e.parentElement&&e.parentElement.closest('[style*="display: none"]')))out.push(`${f.id}: note hidden, "${e.textContent.trim().slice(0,50)}"`)}
+   /* review 17: words the film wrote that run off the bottom of their panel (The Big Lebowski's showtime cue and third house rule sat under
+      the rug band) or are cut by a box that hides its overflow. Cues, side panels and footers, not only dish names and notes. */
+   {const k=card.getBoundingClientRect().width/(card.offsetWidth||1)||1,tol=4*k;
+    for(const e of card.querySelectorAll('*')){if(e.closest('[aria-hidden="true"]'))continue;const own=[...e.childNodes].filter(n=>n.nodeType===3).map(n=>n.textContent).join('').trim();if(own.length<3)continue;
+     const cs=getComputedStyle(e);if(cs.visibility==='hidden'||cs.display==='none'||+cs.opacity===0||e.closest('[style*="display: none"]'))continue;
+     const rg=document.createRange();rg.selectNodeContents(e);const rs=[...rg.getClientRects()].filter(r=>r.width>1&&r.height>1);if(!rs.length)continue;
+     const tb={l:Math.min(...rs.map(r=>r.left)),t:Math.min(...rs.map(r=>r.top)),r:Math.max(...rs.map(r=>r.right)),b:Math.max(...rs.map(r=>r.bottom))},txt=e.textContent.trim().slice(0,50);
+     const pan=e.closest('.fx-panel');if(pan&&pan!==e){const pb=pan.getBoundingClientRect().bottom;if(tb.b>pb+tol){out.push(`${f.id}: text runs ${Math.round((tb.b-pb)/k)}px below its panel, "${txt}"`);continue}}
+     for(let a=e.parentElement;a&&a!==card.parentElement;a=a.parentElement){const ac=getComputedStyle(a);if(!/hidden|clip/.test(ac.overflow+ac.overflowX+ac.overflowY))continue;
+      const ar=a.getBoundingClientRect();if(tb.t>=ar.bottom||tb.b<=ar.top||tb.l>=ar.right||tb.r<=ar.left)break;
+      const cut=Math.max(ar.top-tb.t,tb.b-ar.bottom,ar.left-tb.l,tb.r-ar.right);if(cut>tol){out.push(`${f.id}: text cut ${Math.round(cut/k)}px by its box, "${txt}"`);break}}}}
    const faces=[...card.querySelectorAll('.fx-face')];const srcs=faces.length?faces.map(fc=>{const el=card.cloneNode(false);el.className=card.className;const w=parseFloat(fc.style.width)||794,h=parseFloat(fc.style.height)||1123;
      el.style.cssText=`position:fixed;left:-30000px;top:0;width:${w}px;height:${h}px`;el.dataset.w=w;el.dataset.h=h;el.innerHTML=fc.innerHTML.replace(/\s(onload|onerror)="[^"]*"/g,"");document.body.appendChild(el);return el}):[card];
    const solid=c=>{const m=c&&c.match(/rgba?\(([^)]*)\)/);if(!m)return false;const q=m[1].split(/[\s,/]+/).filter(Boolean).map(Number);return q.length<4||q[3]>.05};
    for(const s of srcs){seen=null;try{await renderCanvas(s,true)}catch(e){out.push(`${f.id}: export failed, ${e}`)}if(s!==card)s.remove();if(!seen)continue;
     const st=document.createElement('div');st.style.cssText='position:fixed;left:-20000px;top:0';st.appendChild(seen);document.body.appendChild(st);
     for(const el of seen.querySelectorAll('*')){const cs=getComputedStyle(el);
-     if(cs.display==='inline-block'&&el.textContent.trim()&&(solid(cs.backgroundColor)||cs.backgroundImage!=='none')&&[...el.children].some(c=>/^(block|flex|grid|table)$/.test(getComputedStyle(c).display)))out.push(`${f.id}: filled inline-block with text, "${el.textContent.trim().slice(0,40)}"`);
+     if(/^inline-(block|flex)$/.test(cs.display)&&el.textContent.trim()&&(solid(cs.backgroundColor)||cs.backgroundImage!=='none')&&[...el.children].some(c=>/^(block|flex|grid|table)$/.test(getComputedStyle(c).display)))out.push(`${f.id}: filled ${cs.display} with text, "${el.textContent.trim().slice(0,40)}"`);
      /* review 15: html2canvas ignores line clamps, so a clamp still cutting text in the copy prints words the screen hides */
      if(!el.children.length&&cs.webkitLineClamp&&cs.webkitLineClamp!=='none'&&cs.display!=='none'&&el.scrollHeight>el.clientHeight+(parseFloat(cs.lineHeight)||parseFloat(cs.fontSize)*1.2)*.5)out.push(`${f.id}: clamped text the PDF would print in full, "${el.textContent.trim().slice(0,40)}"`);
      if((cs.webkitBackgroundClip==='text'||cs.backgroundClip==='text')&&el.textContent.trim())out.push(`${f.id}: clip-text lettering, "${el.textContent.trim().slice(0,40)}"`);
