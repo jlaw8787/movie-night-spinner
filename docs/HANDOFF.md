@@ -7,7 +7,7 @@ Read this first in a new chat. Last updated 6 Nov 2026. Start with "6 Nov, night
 - Repo: jlaw8787/movie-night-spinner
 - Launch branch: wip/menu-polish (917768a22)
 - Work branch: wip/store-overhaul, everything pushed. It sits on top of menu-polish. main has one extra commit (d30fb02ac) that merges in clean.
-- Live on Netlify while GitHub is flagged: https://movie-night-spinner.netlify.app (Netlify project "movie-night-spinner", site id b641e7a7-b7d1-44cc-95e1-79f0bc20acf6). Deployed 6 Nov afternoon from wip/store-overhaul (deploy 6aed572e, app.js?v=b83e2b4b). To redeploy, use the Netlify connector's deploy-site on that project and run the command it gives from the repo folder. Plain static site, no build step. If the upload returns a 500, ask the connector for a fresh command and run it once more (6 Nov: the second try went through).
+- Live on Netlify while GitHub is flagged: https://movie-night-spinner.netlify.app (Netlify project "movie-night-spinner", site id b641e7a7-b7d1-44cc-95e1-79f0bc20acf6). Deployed 6 Nov night from wip/store-overhaul (deploy 6aeda7ee, app.js?v=6c04bd12). To redeploy, use the Netlify connector's deploy-site on that project and run the command it gives from the repo folder. Plain static site, no build step. If the upload returns a 500, ask the connector for a fresh command and run it once more (6 Nov: the second try went through).
 - GitHub account is still flagged, so Pages is down. When it clears:
   1. Merge wip/menu-polish into main
   2. Run the tests
