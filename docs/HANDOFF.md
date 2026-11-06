@@ -1,13 +1,13 @@
 # Handover: Movie Night Spinner
 
-Read this first in a new chat. Last updated 7 Nov 2026. Start with "7 Nov, early" at the bottom.
+Read this first in a new chat. Last updated 7 Nov 2026. Start with "7 Nov, morning" at the bottom.
 
 ## Where things are
 
 - Repo: jlaw8787/movie-night-spinner
 - Launch branch: wip/menu-polish (917768a22)
 - Work branch: wip/store-overhaul, everything pushed. It sits on top of menu-polish. main has one extra commit (d30fb02ac) that merges in clean.
-- Live on Netlify while GitHub is flagged: https://movie-night-spinner.netlify.app (Netlify project "movie-night-spinner", site id b641e7a7-b7d1-44cc-95e1-79f0bc20acf6). Deployed 7 Nov early from wip/store-overhaul (deploy 6aee0522, app.js?v=ceb0ad88). To redeploy, use the Netlify connector's deploy-site on that project and run the command it gives from the repo folder. Plain static site, no build step. If the upload returns a 500, ask the connector for a fresh command and run it once more (6 Nov: the second try went through).
+- Live on Netlify while GitHub is flagged: https://movie-night-spinner.netlify.app (Netlify project "movie-night-spinner", site id b641e7a7-b7d1-44cc-95e1-79f0bc20acf6). Deployed 7 Nov morning from wip/store-overhaul (deploy 6aee5226, app.js?v=e5194505). To redeploy, use the Netlify connector's deploy-site on that project and run the command it gives from the repo folder. Plain static site, no build step. If the upload returns a 500, ask the connector for a fresh command and run it once more (6 Nov: the second try went through).
 - GitHub account is still flagged, so Pages is down. When it clears:
   1. Merge wip/menu-polish into main
   2. Run the tests
@@ -261,3 +261,21 @@ After the fixes: run all tests, redeploy to Netlify, add a "Fixed after the revi
 - Left open: the soft drop shadow under canteen trays and under Scream's stamp is not on paper; Running Scared and Phar Lap have one or two stills (need the TMDB key); small swipe-view type on hand-built cards; the .ics still wants a try on real phones.
 - Review 19 (docs/review-19.md, shots review-19-01 to 18) scored 9.25 by an independent reviewer, up from 9.2. Every review 18 fix held; descRoom showed no side effects. Its fix list: hotel door hangers and airline ticket notches print solid (the mask rule only redraws cut-out shapes with no text, all 31 hotel films); Coming to America's navy frame prints red; the too-late planner row squeezes to three lines at 390 wide; planner guest buttons and dish rows are 36px, not 44; small items ("Deviled" on nine films, Home Alone 2's apple drink, Beetlejuice's note on the House Rule bar, Rocky IV's vodka mule reminder after a move, The Godfather's "Rigatoni, Sunday gravy" lead line, drop shadows on precinct and motel photos).
 - Next: work down review 19's fix list in a new chat, then review 20.
+
+## 7 Nov, morning: review 19 fixed, live (deploy 6aee5226, app.js?v=e5194505)
+
+- All 5 review 19 fix items done, plus 5 more faults the full sweep found. Notes under "Fixed after the review" at the end of review-19.md. Pushed to wip/store-overhaul.
+- Save PDF (renderCanvas):
+  - Masked boxes holding words (hotel door hanger, airline/bistro/hotel ticket) are baked by pdfMaskBox: pdfMaskAlpha draws the mask's radial and linear layers (size, position, repeat) as an alpha picture, the box's fill and empty texture layers go under it, the words stay in the page. A drop-shadow on a wrapper round just that shape goes into the picture.
+  - html2canvas loses every outer box shadow at print scale (canvas shadow offsets are not scaled) and skips drop-shadow filters. pdfLiftBake (runs last, after pdfBlendBake) draws each outer shadow as a picture behind its box, turned with it. Drop-shadow on a plain box or a clip-path shape becomes the same; on lettering, a text shadow. Do not go back to dropping shadows. The shape is drawn in place and cut out (Chrome skips the shadow of a shape drawn off the canvas).
+  - A grain mask (url) on lettering is dropped in the copy: the words print plain.
+  - A hand-built landscape card whose outer corners are rounded (8px or more) keeps the screen surround in the print copy (Coming to America, Pulp Fiction, Chef print on navy).
+- fitLines: a nowrap dish name in a flex row that runs past its edge steps down, never under 65% (Pulp Fiction prices).
+- Planner: dish rows wrap (time under the name when it does not fit), too-late tag on its own line on a phone, guest buttons, dish rows and diet toggles 44px.
+- Calendar: make-aheads due on different days keep their own reminders (calPlan before and before2: alarms, Google links, panel rows, Prep sheet chips). calLong puts the time in brackets when the dish name has its own comma.
+- Kids' word pass: hot, warm or mulled cider is "spiced apple juice", apple or pear cider "sparkling apple/pear juice".
+- Data: devilled everywhere. Beetlejuice cheese note one word shorter. Small nudges on Midnight Cowboy (ticket), Three Men and a Baby (sign nail) and Money Train (drink block gap).
+- New checks. tests/spelling.test.cjs. check-print-text now also fails on: a mask left on a box with text, an outer shadow or drop-shadow filter left for html2canvas, a rounded hand-built card printing on a surround that is not the screen's, a price past its column, and a later filled box covering part of a line's ink (turned shape, round corners and parent clip allowed for; 3px limit). Every one fails on the old build (e176cf8) and passes now.
+- Checks on this build: 20 node tests (dialogs included), check-browser, store taps, sweet starters, cut words, kids cards (343), prices (795), PDF tone with photos (sample and --per 2), phone fit (900), check-print-text (900 in one run, all new rules), check-prep-a4 (900, 1,734 pages).
+- Tools used this session, not in the repo: html2canvas 1.4.1 and jsPDF 2.5.1 in /home/claude/libs for MNS_LIBDIR; playwright from `npm root -g`.
+- Left open: Running Scared and Phar Lap have one or two stills (need the TMDB key); small swipe-view type on hand-built cards; the .ics still wants a try on real phones.
