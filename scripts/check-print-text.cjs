@@ -150,6 +150,10 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
         drop-shadow filters, so lifted photos, trays and stamps printed flat: both must already be pictures in the copy */
      if(el.offsetWidth&&cs.boxShadow&&cs.boxShadow!=='none'&&cs.boxShadow.split(/,(?![^(]*\))/).some(sh=>{if(/\binset\b/.test(sh)||/rgba\([^)]*,\s*0\)/.test(sh))return false;const n=(sh.replace(/rgba?\([^)]*\)/g,'').match(/-?[\d.]+px/g)||[]).map(parseFloat);return n.length>=3&&(n[0]||n[1]||n[2])}))
       out.push(`${f.id}: outer shadow left for html2canvas (${el.offsetWidth}x${el.offsetHeight})`);
+     /* review 20: a baked shadow picture must hang from a positioned parent inside the card: html2canvas does not take a turned or unpositioned
+        parent as the box it is laid against, so Chef's and Ratatouille's photo shadows printed off by the logo and past the card's edge */
+     if(el.tagName==='IMG'&&cs.position==='absolute'&&cs.pointerEvents==='none'&&/^data:image\/png/.test(el.getAttribute('src')||'')&&el.parentElement&&getComputedStyle(el.parentElement).position==='static')
+      out.push(`${f.id}: shadow picture laid against an unpositioned box (${el.offsetWidth}x${el.offsetHeight})`);
      if(el.offsetWidth&&el.tagName!=='IMG'&&/drop-shadow/.test(cs.filter||''))out.push(`${f.id}: drop-shadow filter left for html2canvas (${el.offsetWidth}x${el.offsetHeight})`)}
     st.remove()}}
   return {n:list.length,out:[...new Set(out)]}},[N,NAMED]);

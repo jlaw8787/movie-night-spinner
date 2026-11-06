@@ -364,8 +364,8 @@ const FMT_FILMS={
     stills:[["/hAj5B7NNjd05081eZhqKujmpVdx.jpg","The soup Remy saved"],["/pFIQZaWSyn4YAdE9jGriCTnTDZB.jpg","The ratatouille, for Ego"],["/lxpv2ikF3Cdml90d1JI7hJzh6rK.jpg","Colette's bread test"]],
     groups:[
       {h:"Pour commencer",en:"To start",items:[
-        {k:"Gusteau's soup",fr:"Le potage du soir",n:"The soup",note:"The one Linguini spilled into and Remy fixed",p:"€12"},
-        {k:"Remy's lightning mushroom and cheese",fr:"Champignon et fromage",n:"Mushroom and cheese",note:"Toasted on the chimney, with a bolt of lightning",p:"€9"},
+        {k:"Gusteau's soup",fr:"Le potage du soir",n:"The soup",note:"Linguini spilled it. Remy fixed it",p:"€12"},
+        {k:"Remy's lightning mushroom and cheese",fr:"Champignon et fromage",n:"Mushroom and cheese",note:"Toasted on the chimney by lightning",p:"€9"},
         {k:"Paris market jambon-beurre and brie",fr:"La baguette",n:"Bread, with a proper crust",note:"Listen for the crackle",p:"€4",
          how:"Warm 2 good baguettes in a 200C oven for 6 minutes until the crust crackles when you squeeze it. Tear, do not slice, and serve with 100g salted butter at room temperature.",
          shop:["2 baguettes@Bakery","100g salted butter@Dairy"]}]},
@@ -374,6 +374,8 @@ const FMT_FILMS={
         {k:"Sweetbreads à la Gusteau",fr:"Ris de veau à la Gusteau",n:"Sweetbreads à la Gusteau",note:"The old recipe Linguini was told to cook. Remy rewrote it",p:"€32",c:"m",
          how:"Soak 600g veal sweetbreads in cold water for 2 hours, then simmer in salted water for 4 minutes and plunge into iced water. Peel off the membrane and press under a weighted tray for an hour. Slice into 2cm pieces, dust with flour and pan-fry in 30g butter for 3 minutes a side until golden. Deglaze with 80ml white wine and 100ml veal or chicken stock, reduce, then swirl in 20g cold butter. Serve with the sauce spooned over.",
          shop:["600g veal sweetbreads@Meat","50g butter@Dairy","2 tbsp plain flour@Pantry","80ml white wine@Bottle shop","100ml chicken stock@Pantry"]}]},
+      {h:"Le dessert",en:"Sweet",left:true,items:[
+        {k:"Colette's crème brûlée",fr:"Crème brûlée",n:"Colette's crème brûlée",note:"Colette teaches Linguini the kitchen",p:"€10"}]},
       {h:"La cave",en:"The cellar",items:[
         {k:"Anton Ego's grape spritz",fr:"Bordeaux, 1947",n:"A good Bordeaux",note:"Ego's order. Any good Bordeaux will do at home",p:"Ask the sommelier"}]}]},
   "Big Night (1996)":{fmt:"feast",over:"Cucina Italiana · Jersey Shore",brand:"Paradise",sub:"Primo in the kitchen. Secondo out front.",
@@ -1230,7 +1232,7 @@ function fmtCarte(f,spec,menu,poster){
   const card=`<div class="fx-panel" style="position:relative;flex:1;min-width:0;min-height:0;background:${CARD};padding:24px 30px 18px;box-shadow:0 12px 26px rgba(0,0,0,.45);display:flex;flex-direction:column;justify-content:space-between">
     <i aria-hidden="true" style="position:absolute;inset:10px;border:2px solid ${GOLD};pointer-events:none"></i><i aria-hidden="true" style="position:absolute;inset:16px;border:1px solid ${GOLD};pointer-events:none"></i>
     <div style="text-align:center;position:relative"><div style="${SC};font-size:13px;letter-spacing:.34em;color:${GOLD}">${ESC(spec.over)}</div><div style="${SCRIPT};font-size:70px;line-height:1.1;color:${INK}">${ESC(spec.brand)}</div><div style="${SC};font-size:15px;letter-spacing:.2em;color:${WINE}">${ESC(spec.motto)}</div></div>
-    ${orn}<div style="flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 30px;padding:6px 0"><div style="display:flex;flex-direction:column;justify-content:space-evenly;gap:12px">${sect(spec.groups[0])}</div><div style="display:flex;flex-direction:column;justify-content:space-evenly;gap:12px">${spec.groups.slice(1).map(sect).join(orn)}</div></div>${orn}
+    ${orn}<div style="flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 30px;padding:6px 0"><div style="display:flex;flex-direction:column;justify-content:space-evenly;gap:12px">${spec.groups.filter((g,i)=>!i||g.left).map(sect).join("")}</div><div style="display:flex;flex-direction:column;justify-content:space-evenly;gap:12px">${spec.groups.filter((g,i)=>i&&!g.left).map(sect).join(orn)}</div></div>${orn}
     <div style="text-align:center;${BODY};font-style:italic;font-size:14.5px;color:${NOTE};position:relative">${ESC(spec.foot)}</div></div>`;
   const ph=(i,h,r)=>fmtStill(spec.stills[i][0],spec.stills[i][1],h,"#fff","#efe6d2",BODY+";font-size:14px",`transform:rotate(${r}deg)`);
   const left=`<div style="flex:none;width:210px;display:flex;flex-direction:column;justify-content:space-between;gap:14px">

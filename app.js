@@ -3022,9 +3022,16 @@ function pdfMaskAlpha(cs,w,h,k){const img=cs.webkitMaskImage||cs.maskImage;if(!i
     const xs=rx?(()=>{const o=[];for(let v=ox-Math.ceil(ox/tw)*tw;v<w;v+=tw)o.push(v);return o})():[ox],ys=ry?(()=>{const o=[];for(let v=oy-Math.ceil(oy/th)*th;v<h;v+=th)o.push(v);return o})():[oy];
     for(const X of xs)for(const Y of ys)x.drawImage(T,Math.round(X*k),Math.round(Y*k),T.width,T.height)}
   return c}
-function pdfRadii(cs,w,h){return ["TopLeft","TopRight","BottomRight","BottomLeft"].map(s=>{const v=cs["border"+s+"Radius"]||"0";const p=v.split(/\s+/);return Math.min(pdfLen(p[0],w)||0,w/2,h/2)})}
+/* each corner as [horizontal, vertical] radius, so an oval (border-radius 50%, or tiki's "46% 54% 42% 58% / 52% 44% 56% 48%") stays an oval (review 20) */
+function pdfRadii(cs,w,h){return ["TopLeft","TopRight","BottomRight","BottomLeft"].map(s=>{const p=(cs["border"+s+"Radius"]||"0").split(/\s+/);return [pdfLen(p[0],w)||0,pdfLen(p[1]||p[0],h)||0]})}
 function pdfShapePath(x,X,Y,w,h,rad,poly){x.beginPath();if(poly){poly.forEach(([a,b],i)=>i?x.lineTo(X+a,Y+b):x.moveTo(X+a,Y+b));x.closePath();return}
-  if(x.roundRect&&rad.some(r=>r>0))x.roundRect(X,Y,w,h,rad.map(r=>Math.max(0,r)));else x.rect(X,Y,w,h)}
+  if(!rad.some(r=>r[0]>0&&r[1]>0)){x.rect(X,Y,w,h);return}
+  /* corners that add up past a side shrink together, as the browser does */
+  const [tl,tr,br,bl]=rad,f=Math.min(1,w/(tl[0]+tr[0]||1),w/(bl[0]+br[0]||1),h/(tl[1]+bl[1]||1),h/(tr[1]+br[1]||1)),R=rad.map(([a,b])=>a>0&&b>0?[a*f,b*f]:[0,0]),H=Math.PI/2;
+  x.moveTo(X+R[0][0],Y);x.lineTo(X+w-R[1][0],Y);if(R[1][0])x.ellipse(X+w-R[1][0],Y+R[1][1],R[1][0],R[1][1],0,-H,0);
+  x.lineTo(X+w,Y+h-R[2][1]);if(R[2][0])x.ellipse(X+w-R[2][0],Y+h-R[2][1],R[2][0],R[2][1],0,0,H);
+  x.lineTo(X+R[3][0],Y+h);if(R[3][0])x.ellipse(X+R[3][0],Y+h-R[3][1],R[3][0],R[3][1],0,H,2*H);
+  x.lineTo(X,Y+R[0][1]);if(R[0][0])x.ellipse(X+R[0][0],Y+R[0][1],R[0][0],R[0][1],0,2*H,3*H);x.closePath()}
 /* where a box sits inside another, in layout pixels (transforms left out), by its offsetParent chain */
 function pdfOffsetIn(n,root){let X=0,Y=0,e=n;while(e&&e!==root){X+=e.offsetLeft;Y+=e.offsetTop;const p=e.offsetParent;if(!p)return null;if(p!==root){X+=p.clientLeft;Y+=p.clientTop}e=p}return e===root?{X,Y}:null}
 function pdfParseShadow(sh){const col=(sh.match(/rgba?\([^)]*\)|#[0-9a-f]{3,8}\b/i)||[])[0],n=(sh.replace(/rgba?\([^)]*\)/g,"").match(/-?[\d.]+(px)?/g)||[]).map(parseFloat);
@@ -3033,7 +3040,7 @@ function pdfDropShadows(f){return (String(f||"").match(/drop-shadow\((?:[^()]|\(
 async function pdfMaskBox(el){const cs=getComputedStyle(el),w=el.offsetWidth,h=el.offsetHeight,k=2.5;if(!w||!h)return false;
   const A=pdfMaskAlpha(cs,w,h,k);if(!A)return false;
   const c=document.createElement("canvas");c.width=A.width;c.height=A.height;const x=c.getContext("2d");
-  const rad=pdfRadii(cs,w,h).map(r=>r*k);x.save();pdfShapePath(x,0,0,c.width,c.height,rad);x.clip();
+  const rad=pdfRadii(cs,w,h).map(([p,q])=>[p*k,q*k]);x.save();pdfShapePath(x,0,0,c.width,c.height,rad);x.clip();
   {const bc=cs.backgroundColor;if(bc&&!/rgba\([^)]*,\s*0\)|transparent/.test(bc)){x.fillStyle=bc;x.fillRect(0,0,c.width,c.height)}}
   const drawn=[],blend={screen:"screen",multiply:"multiply",overlay:"overlay",lighten:"lighten",darken:"darken","soft-light":"soft-light"};
   /* the box's empty layers (grain, sheen, a photo) go into the picture; anything holding words stays in the page */
@@ -3081,13 +3088,22 @@ async function pdfLiftBake(root){const k=2.5,boxes=[];
     if(cp&&cp!=="none"&&!poly)continue;if((cs.webkitMaskImage||cs.maskImage||"none")!=="none")continue;
     const P=Math.ceil(Math.max(...B.list.map(d=>2*d.b+Math.abs(d.s)+Math.max(Math.abs(d.x),Math.abs(d.y)))))+2,c=document.createElement("canvas");c.width=Math.round((w+2*P)*k);c.height=Math.round((h+2*P)*k);
     const x=c.getContext("2d"),rad=pdfRadii(cs,w,h);
-    for(const d of [...B.list].reverse()){x.save();x.shadowColor=d.col;x.shadowBlur=d.b*k;x.shadowOffsetX=d.x*k;x.shadowOffsetY=d.y*k;x.fillStyle="#000";
-      const s=poly?0:d.s;pdfShapePath(x,(P-s)*k,(P-s)*k,(w+2*s)*k,(h+2*s)*k,rad.map(r=>(r?r+s:0)*k),poly&&poly.map(([a,b])=>[a*k,b*k]));
+    /* review 20: each layer is its own shape, grown by its spread, filled in the shadow's colour, moved by its offset and blurred
+       (a CSS blur radius is twice the standard deviation). The fill used to be black, so a spread with no blur printed as a black ring */
+    for(const d of [...B.list].reverse()){x.save();x.fillStyle=d.col;if(d.b>0)x.filter=`blur(${(d.b*k/2).toFixed(2)}px)`;
+      const s=poly?0:d.s;pdfShapePath(x,(P-s+d.x)*k,(P-s+d.y)*k,(w+2*s)*k,(h+2*s)*k,rad.map(([p,q])=>p>0&&q>0?[(p+s)*k,(q+s)*k]:[0,0]),poly&&poly.map(([a,b])=>[a*k,b*k]));
       x.fill();x.restore()}
     /* the shape itself is cut back out: a box shadow is never painted under its own box (Chrome skips the shadow of a shape drawn off the canvas, so it is drawn in place and removed) */
-    {x.save();x.globalCompositeOperation="destination-out";pdfShapePath(x,P*k,P*k,w*k,h*k,rad.map(r=>r*k),poly&&poly.map(([a,b])=>[a*k,b*k]));x.fill();x.restore()}
+    {x.save();x.globalCompositeOperation="destination-out";pdfShapePath(x,P*k,P*k,w*k,h*k,rad.map(([p,q])=>[p*k,q*k]),poly&&poly.map(([a,b])=>[a*k,b*k]));x.fill();x.restore()}
     const url=c.toDataURL("image/png"),im=document.createElement("img");im.alt="";im.src=url;
     /* laid in the same spot as the box, behind it: measured against a probe in the same parent, with the box's own turn left off */
+    /* review 20: the shadow is laid against the box's own parent. A parent with no position of its own is made relative first (only when no
+       positioned box inside it hangs off a box further out), since a shadow measured against a box outside the card landed off the card on paper */
+    /* a turned parent with no position is already where its absolute children hang from, but html2canvas does not know that (Chef's photo
+       shadows landed by the logo), so it is made relative too */
+    {const pa=el.parentElement,pc=getComputedStyle(pa);if(pc.position==="static"&&root.contains(pa)&&(pc.transform!=="none"||el.offsetParent!==pa&&
+      ![...pa.querySelectorAll("*")].some(d=>d!==el&&/absolute|fixed/.test(getComputedStyle(d).position)&&d.offsetParent&&!pa.contains(d.offsetParent))))pa.style.position="relative"}
+    if(!el.offsetParent||!(el.offsetParent===root||root.contains(el.offsetParent))||getComputedStyle(el.parentElement).position==="static")continue;
     let L0,T0;if(el.offsetParent&&el.offsetParent===el.parentElement&&cs.position!=="fixed"){L0=el.offsetLeft;T0=el.offsetTop}
     else{const probe=document.createElement("i");probe.style.cssText="position:absolute;left:0;top:0;width:0;height:0;margin:0;padding:0;border:0";el.parentElement.insertBefore(probe,el);
       const tr=el.style.transform;el.style.transform="none";const r1=el.getBoundingClientRect(),r0=probe.getBoundingClientRect();el.style.transform=tr;probe.remove();L0=r1.left-r0.left;T0=r1.top-r0.top}
@@ -3164,7 +3180,7 @@ async function renderCanvas(src,forPrint){
     /* drawn widest first so each narrower ring sits on top, as the browser stacks them */
     rings.sort((a,b)=>b[0]-a[0]);let z=cs.zIndex==="auto"?"auto":cs.zIndex;
     for(const [w,col] of rings){const d=document.createElement("i");
-      d.style.cssText=`position:absolute;left:${L-w}px;top:${T-w}px;width:${W+2*w}px;height:${H+2*w}px;border:${w}px solid ${col};box-sizing:border-box;pointer-events:none;border-radius:${pct?cs.borderTopLeftRadius:(rad?rad+w+"px":"0")};z-index:${z}`;
+      d.style.cssText=`position:absolute;left:${L-w}px;top:${T-w}px;width:${W+2*w}px;height:${H+2*w}px;border:${w}px solid ${col};box-sizing:border-box;pointer-events:none;border-radius:${pct?/%/.test(cs.borderRadius)?["TopLeft","TopRight","BottomRight","BottomLeft"].map(s=>cs["border"+s+"Radius"].split(/\s+/)[0]).join(" ")+" / "+["TopLeft","TopRight","BottomRight","BottomLeft"].map(s=>{const q=cs["border"+s+"Radius"].split(/\s+/);return q[1]||q[0]}).join(" "):cs.borderTopLeftRadius:(rad?rad+w+"px":"0")};z-index:${z}`;
       e.parentElement.insertBefore(d,e)}})}catch(err){}
   /* and it skips outlines (a hairline keyline round a photo): the same treatment, a frame laid round the box */
   try{clone.querySelectorAll("[style*=outline]").forEach(e=>{const cs=getComputedStyle(e),w=parseFloat(cs.outlineWidth)||0;if(cs.outlineStyle==="none"||!w||!e.parentElement)return;

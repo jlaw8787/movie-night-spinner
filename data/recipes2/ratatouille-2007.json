@@ -542,6 +542,63 @@
    }
   },
   {
+   "n": "Colette's crème brûlée",
+   "course": "w",
+   "prep_min": 20,
+   "cook_min": 40,
+   "make_ahead": "Bake and chill up to 2 days ahead; torch the sugar just before serving",
+   "ingredients": [
+    {
+     "q": 500,
+     "u": "ml",
+     "item": "thickened cream",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 1,
+     "u": "",
+     "item": "vanilla bean",
+     "aisle": "Pantry"
+    },
+    {
+     "q": 6,
+     "u": "",
+     "item": "egg yolks",
+     "aisle": "Dairy"
+    },
+    {
+     "q": 100,
+     "u": "g",
+     "item": "caster sugar, plus extra for the tops",
+     "aisle": "Pantry"
+    }
+   ],
+   "steps": [
+    {
+     "text": "Heat the oven to 150C. Split the vanilla bean, scrape the seeds into the cream and warm it with the pod until it just steams.",
+     "min": 8
+    },
+    {
+     "text": "Whisk the yolks and 100g caster sugar until pale, then pour in the warm cream slowly, whisking, and strain into a jug.",
+     "min": 5
+    },
+    {
+     "text": "Pour into 4 ramekins in a baking dish, fill the dish with hot water halfway up the ramekins and bake until set with a slight wobble.",
+     "min": 35
+    },
+    {
+     "text": "Cool, then chill at least 3 hours.",
+     "min": 180
+    },
+    {
+     "text": "Sprinkle each top with a thin layer of caster sugar and torch, or grill close to the element, until it cracks like glass.",
+     "min": 5
+    }
+   ],
+   "veg": true,
+   "af": true
+  },
+  {
    "n": "Anton Ego's grape spritz",
    "course": "d",
    "prep_min": 10,
