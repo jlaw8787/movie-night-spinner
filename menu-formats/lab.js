@@ -150,7 +150,7 @@ window.MENU_FORMATS[ID]=ctx=>{
       <div style="font:600 14px/1.2 ${B};color:#222;text-transform:uppercase;letter-spacing:.06em;min-width:0">Badge<br>No. ${esc(num)}<br><span style="color:${acc}">All areas</span></div>
     </div>
     <div data-fith="22" data-min="14" style="margin:4px 10px 0;height:44px;display:flex;align-items:center;font-family:${D};font-weight:${E.dw};font-size:22px;line-height:1.05;color:#111;text-transform:uppercase;overflow:hidden;overflow-wrap:normal;word-break:normal"><div style="min-width:0;max-width:100%">${esc(by)}</div></div>
-    <div style="margin:6px 10px 0;border-top:1px solid #999;padding-top:4px;font:400 14px/1.15 ${B};color:#333;height:34px;overflow:hidden">${esc(venue)}</div>
+    <div style="margin:6px 10px 0;border-top:1px solid #999;padding-top:4px;font:400 14px/1.15 ${B};color:#333;height:37px;overflow:hidden">${esc(venue)}</div>
   </div>`;
 
   /* header */

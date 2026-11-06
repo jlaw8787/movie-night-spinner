@@ -306,7 +306,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     :`<div data-fs="16" style="${dispStyle}font-size:26px;line-height:1.15;color:#f6efe0">${esc(sentence(ctx.f.T||"Ask your server"))}</div>`;
   const board=`<div style="position:absolute;left:30px;top:640px;width:330px;height:286px;background:${toHex(mix(hex(K.deep),[24,28,26],.5))};border-radius:4px;box-shadow:inset 0 0 0 7px ${rgba(era===0||T.gilt?"#b48a35":"#6b4a2b",.9)},inset 0 0 40px rgba(0,0,0,.45),0 4px 10px rgba(0,0,0,.25);overflow:hidden">
     <div style="position:absolute;inset:0;background:url(&quot;${NOISE}&quot;) 0 0/300px;opacity:.25;mix-blend-mode:screen"></div>
-    <div data-fbox style="position:absolute;left:24px;right:22px;top:20px;bottom:18px;overflow:hidden">
+    <div data-fbox style="position:absolute;left:24px;right:22px;top:20px;bottom:15px;padding-bottom:3px;overflow:hidden">
       ${kick("On the board tonight",K.light)}<div style="height:2px;background:${K.light};opacity:.5;margin:10px 0 12px"></div>${boardItems}
       ${ctx.f.P?`<div data-drop data-fs="14" style="font:italic 400 17px/1.25 ${B};color:rgba(246,239,224,.75)">${esc(sentence(dry(ctx.f.P)))}</div>`:""}</div></div>`;
   const note=`<div data-fbox style="position:absolute;left:382px;right:32px;top:640px;height:164px;overflow:hidden">

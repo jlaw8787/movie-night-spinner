@@ -494,8 +494,8 @@ function cardBlurb(f,it){
   const same=(a,b)=>(a||"").replace(/[^a-z0-9]/gi,"").toLowerCase()===(b||"").replace(/[^a-z0-9]/gi,"").toLowerCase();
   for(const k of ["S","M","W","K"])for(const d of f[k]||[])if(d[0]===it.n&&d[2]){const b=shortHow(d[2]);if(!same(b,it.note))return b;return d[1]&&!same(d[1],it.note)?d[1].charAt(0).toUpperCase()+d[1].slice(1)+(/[.!?]$/.test(d[1])?"":"."):""}
   const b=it.how?shortHow(it.how):"";return same(b,it.note)?"":b}
-const AISLES=["Meat","Seafood","Deli","Produce","Dairy","Bakery","Frozen","Pantry","Lollies and snacks","Drinks","Bottle shop","For the extras, buy to suit"];
-const TASTE=AISLES[AISLES.length-1];
+const AISLES=["Meat","Seafood","Deli","Produce","Dairy","Bakery","Frozen","Pantry","Lollies and snacks","Drinks","Bottle shop","For the extras, buy to suit","Too late to make, buy ready-made"],READY=AISLES[AISLES.length-1];
+const TASTE="For the extras, buy to suit";
 function shopGroups(menu){
   const groups={};
   const shopping=[...(menu.shopping||[...menu.s,...menu.m,...menu.w,...menu.d].flatMap(it=>it.shop||[])),...(menu.counter||[])];
@@ -1137,7 +1137,19 @@ function planExtras(f){if(!f||!f._full)return [];const have=new Set(((f._r2&&f._
 function planLabels(f){const L={};for(const it of planCard(f)){if(it.n&&it.label&&it.label!==it.n)L[it.n]=it.label}return L}
 const planHouse=f=>planCard(f).filter(it=>it.house);
 const planOn=x=>x.blocked||x.extra||x.spare?!!PLAN.on[x.orig||x.n]:!PLAN.off[x.orig||x.n];
-const planDishes=f=>planAll(f).filter(planOn);
+const planPicked=f=>planAll(f).filter(planOn);
+/* review 18: a picked make-ahead dish that can no longer be done before the locked-in showtime is off the plan: unticked, off the shopping list
+   and the method, with a ready-made line on the list instead. The pick itself is kept, so moving the night a week brings the dish back.
+   Returns a Map of the dish's key to the name the card prints. */
+let planLateMemo={k:"",v:new Map()};
+function planLate(f){const none=new Map();try{if(!f||typeof week==="undefined"||!week||(week.id!==f.id&&week.double!==f.id)||typeof calPlan!=="function")return none;
+  const show=weekShow(),now=new Date();if(!(show>now))return none;
+  const key=[f.id,show.getTime(),Math.floor(now.getTime()/6e4),PLAN.guests,JSON.stringify(PLAN.off),JSON.stringify(PLAN.on),DIET.veg?1:0,dietAF()?1:0].join("|");if(planLateMemo.k===key)return planLateMemo.v;
+  const sv=(f._r2&&f._r2.serves)||4,LB=planLabels(f),ds=planPicked(f).filter(x=>!x.extra);
+  const cd=ds.map(x=>{const T=dishTimes(x,x.snack?PLAN.guests/4:PLAN.guests/sv);return {x,n:LB[x.orig||x.n]&&!x.tag?LB[x.orig||x.n]:x.n,active:T.active,wait:T.wait,...calNight(x,T),words:T.wait>=CAL_LONG?waitWords(x):""}});
+  const p=calPlan(show,cd,now),v=new Map();if(p.late){for(const d of p.late.dishes)v.set(d.x.orig||d.x.n,d.n);v.plan=p}
+  planLateMemo={k:key,v};return v}catch(e){return none}}
+const planDishes=f=>{const L=planLate(f);return planPicked(f).filter(d=>!L.has(d.orig||d.n))};
 const FRAC=[[0,""],[0.25,"1/4"],[1/3,"1/3"],[0.5,"1/2"],[2/3,"2/3"],[0.75,"3/4"],[1,""]];
 function fracText(q){const w=Math.floor(q),r=q-w;let best=FRAC[0];for(const x of FRAC)if(Math.abs(x[0]-r)<Math.abs(best[0]-r))best=x;const W=best[0]===1?w+1:w;return (W?String(W):"")+(best[1]?(W?" ":"")+best[1]:"")||"1/4"}
 function planQty(q,u){
@@ -1188,7 +1200,8 @@ function planShopping(f){const k=PLAN.guests/((f._r2&&f._r2.serves)||4),ds=planD
     const m=String(i.item).match(/^(\d+(?:\.\d+)?)\s*(kg|g|ml|l|L)?\s+(.+)$/),q=m?+m[1]:null,u=m&&m[2]?m[2].toLowerCase():"",item=m?m[3]:i.item,key=planKey(item);
     if(have.has(key)){if(q!=null)add.push({q,u,item,aisle:i.aisle});continue}
     if(seen.has(key))continue;seen.add(key);taste.push(i.item+"@"+TASTE)}
-  return shopLines(base.map(d=>({d,k})).concat(add.length?[{d:{ingredients:add},k}]:[])).concat(taste)}
+  const ready=[...planLate(f).values()].map(n=>`${n}@${READY}`);
+  return shopLines(base.map(d=>({d,k})).concat(add.length?[{d:{ingredients:add},k}]:[])).concat(taste,ready)}
 const WHOLE_RE=/^(bags?|packets?|tins?|cans?|bottles?|jars?|tubs?|loa(f|ves)|punnets?|box(es)?|cartons?|blocks?|rolls?|sheets?|tubes?|sachets?)\b/i;
 /* things a recipe uses ready-made that no shop sells: shopped as what you actually buy, with a first step to make them */
 const baseG=(q,i)=>/^cups? /i.test(i.item)?q*185:i.u==="g"?q:i.u==="kg"?q*1000:null;
@@ -1338,15 +1351,16 @@ const planWhen=m=>m>=1440?(d=>`, start ${d===1?"the day":d+" days"} before`)(Mat
 /* review 14: the dish list in Director's cut reads the same kids' and alcohol-free words as the card and Prep sheet ("Rye and jasmine tea highball" in kids' mode) */
 function planHTML(f){const h=planHTML0(f);if(typeof document==='undefined'||!dryNow(f))return h;try{const t=document.createElement('template');t.innerHTML=h;kidsDryDom(t.content,f);const d=document.createElement('div');d.appendChild(t.content);return d.innerHTML}catch(e){return h}}
 function planHTML0(f){
-  const r=f._r2,k=PLAN.guests/(r.serves||4),C={s:"Snacks",m:"Mains",w:"Sweets",d:"Drinks",c:"From the candy bar"},all=planAll(f);
+  const LT=planLate(f),r=f._r2,k=PLAN.guests/(r.serves||4),C={s:"Snacks",m:"Mains",w:"Sweets",d:"Drinks",c:"From the candy bar"},all=planAll(f);
   const TAG={veg:"vegetarian version",af:"alcohol-free version"},BLK={meat:"has meat or fish",alcohol:"has alcohol"};
   return `<div class="pl-row"><span class="pl-l">Guests</span><button type="button" class="pl-b" data-pl="-" aria-label="Fewer guests">−</button><output class="pl-g" aria-live="polite">${PLAN.guests}</output><button type="button" class="pl-b" data-pl="+" aria-label="More guests">+</button></div>
   <div class="pl-row pl-diet"><label class="pl-t"><input type="checkbox" data-diet="veg"${DIET.veg?" checked":""}><span>Vegetarian</span></label><label class="pl-t"><input type="checkbox" data-diet="af"${dietAF()?" checked":""}${kidsMode?" disabled":""}><span>No alcohol${kidsMode?" (kids mode)":""}</span></label></div>
   <details class="pl-pick"${planOpen()?" open":""}><summary><span class="pl-sum">${planCount(r)}</span><span class="pl-tw">Choose dishes</span></summary>
   <p class="pl-hint">Tick what you want to make tonight. The prep sheet, shopping list and times follow your picks.${DIET.veg||dietAF()?" Dishes that don't fit are swapped for their own version, or left off so you can choose.":""}</p>
-  ${(()=>{const LB=planLabels(f),HS=planHouse(f);return ["s","m","w","d","c"].map(c=>{const ds=all.filter(d=>d.course===c),hs=HS.filter(h=>h.course===c);return ds.length||hs.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>`<label class="pl-d"><input type="checkbox" data-dish="${ESC(d.orig||d.n)}"${planOn(d)?" checked":""}><span>${ESC(LB[d.orig||d.n]&&!d.tag?LB[d.orig||d.n]:d.n)}${d.tag&&!/alcohol-free|vegetarian/i.test(d.n)?`<em class="pl-tag">${TAG[d.tag]}</em>`:""}${d.blocked?`<em class="pl-tag pl-no">${BLK[d.blocked]}</em>`:""}</span><small>${d.extra?"From the menu":(t=>planDur(t.active)+(t.wait?" + "+planMin(t.wait)+" wait"+planWhen(t.wait):""))(dishTimes(d,PLAN.guests/((f._r2&&f._r2.serves)||4)))}</small></label>`).join("")}${hs.map(h=>`<p class="pl-d pl-house"><span>${ESC(h.n)}<em class="pl-tag">house standard</em></span><small>Served as is</small></p>`).join("")}</fieldset>`:""}).join("")})()}</details>`;
+  ${LT.plan?`<p class="pl-late-note" role="note">${ESC(planLateText(LT.plan))} <button type="button" class="pl-move" data-plmove>Move to ${ESC(calDay(LT.plan.late.next))}</button></p>`:""}
+  ${(()=>{const LB=planLabels(f),HS=planHouse(f);return ["s","m","w","d","c"].map(c=>{const ds=all.filter(d=>d.course===c),hs=HS.filter(h=>h.course===c);return ds.length||hs.length?`<fieldset class="pl-c"><legend>${C[c]}</legend>${ds.map(d=>{const late=LT.has(d.orig||d.n);return `<label class="pl-d${late?" pl-late":""}"><input type="checkbox" data-dish="${ESC(d.orig||d.n)}"${planOn(d)&&!late?" checked":""}${late?" disabled":""}><span>${ESC(LB[d.orig||d.n]&&!d.tag?LB[d.orig||d.n]:d.n)}${d.tag&&!/alcohol-free|vegetarian/i.test(d.n)?`<em class="pl-tag">${TAG[d.tag]}</em>`:""}${d.blocked?`<em class="pl-tag pl-no">${BLK[d.blocked]}</em>`:""}${late?`<em class="pl-tag pl-no">too late for this night, buy ready-made</em>`:""}</span><small>${d.extra?"From the menu":(t=>planDur(t.active)+(t.wait?" + "+planMin(t.wait)+" wait"+planWhen(t.wait):""))(dishTimes(d,PLAN.guests/((f._r2&&f._r2.serves)||4)))}</small></label>`}).join("")}${hs.map(h=>`<p class="pl-d pl-house"><span>${ESC(h.n)}<em class="pl-tag">house standard</em></span><small>Served as is</small></p>`).join("")}</fieldset>`:""}).join("")})()}</details>`;
 }
-function planCount(r){const f=current,all=f?planAll(f).filter(d=>d.course!=="c"):r.dishes.map(d=>dietDish(d)),on=all.filter(planOn).length;return `${on} of ${all.length} dishes picked`}
+function planCount(r){const f=current,LT=f?planLate(f):new Map(),all=f?planAll(f).filter(d=>d.course!=="c"):r.dishes.map(d=>dietDish(d)),on=all.filter(d=>planOn(d)&&!LT.has(d.orig||d.n)).length;return `${on} of ${all.length} dishes picked`}
 function planOpen(){try{return localStorage.getItem("mns-plan-open")==="1"}catch(e){return false}}
 /* 175C reads as 175°C, and a lone litre is written "1 L" so it never reads as eleven */
 const degC=t=>String(t).replace(/(\d{2,3})\s?C\b/g,"$1°C").replace(/(\d(?:\.\d+)?)\s?l\b/g,"$1\u00a0L").replace(/(\d[\d.]*)\s+to\s+(\d[\d.]*)/g,"$1\u00a0to\u00a0$2");
@@ -1366,12 +1380,14 @@ function waitWords(x){const w=[],put=v=>{if(!w.includes(v))w.push(v)};
 const HEAT_RE=/\b(oven|bake|baking|fry|fried|grill|boil|simmer|roast|sear|toast|heat|cook|pan|barbecue|bbq|microwave|poach|steam|saut|caramel|flame|reduce|melt|char|braise|broil|smoke)/i;
 /* review 16: the locked-in film's Prep sheet carries its showtime and when to start, worked out the same way as the calendar reminder */
 function prepWhen(f,ds,TT){if(typeof week==="undefined"||!week||(week.id!==f.id&&week.double!==f.id)||typeof calPlan!=="function")return [];
-  try{const show=weekShow(),now=new Date(),live=show>now,p=calPlan(show,prepNight(ds,TT),live?now:undefined);
+  try{const show=weekShow(),now=new Date(),live=show>now,p=calPlan(show,calDishes(f),live?now:undefined);
     const when=d=>weekDateKey(d)===weekDateKey(show)?calClock(d):`${calDay(d)} ${calClock(d)}`;
     const out=[`Showtime ${calClock(show)}`,p.startNow?"start cooking now":`start cooking ${when(p.start)}`,p.early?(p.early.now?"make ahead now":`make ahead from ${calClock(p.early.at)}`):"",
       p.before?(p.before.now?"prep ahead now":`prep ahead ${calDay(p.before.at)} ${calClock(p.before.at)}`):""].filter(Boolean);
     /* review 17: a make-ahead that no longer fits before this showtime is said in words, under the chips */
-    if(p.late)out.late=calLate(p);return out}catch(e){return []}}
+    if(p.late)out.late=planLateText(p);return out}catch(e){return []}}
+/* review 18: on the planner and Prep sheet a too-late dish is already off the plan and on the list as ready-made */
+const planLateText=p=>p&&p.late?`Too late to make ahead for this night: ${calList(p.late)}. ${p.late.dishes.length>1?"They're":"It's"} off the plan and on the shopping list to buy ready-made, or move movie night to ${calDay(p.late.next)} to make ${p.late.dishes.length>1?"them":"it"}.`:"";
 /* the dishes as the calendar reads them: picked, timed, with what is left on the night */
 function prepNight(ds,TT){return ds.map((x,i)=>x.extra?null:{n:x.n,active:TT[i].active,wait:TT[i].wait,...calNight(x,TT[i]),words:TT[i].wait>=CAL_LONG?waitWords(x):""}).filter(Boolean)}
 function prepHTML2(f,menu){
@@ -1400,7 +1416,10 @@ function planWire(f){
   if(!f||!f._r2||!f._r2.dishes||!f._r2.dishes.length){box.hidden=true;box.dataset.has="";box.innerHTML="";return}
   planLoad(f);box.dataset.has="1";box.hidden=tab!=="prep";box.innerHTML=planHTML(f);
   const redo=()=>{planSave(f);box.querySelector(".pl-g").textContent=PLAN.guests;{const n=box.querySelector(".pl-sum");if(n)n.textContent=planCount(f._r2)}prep.innerHTML=prepHTML(f,current.menu);const b=prep.hidden;prep.hidden=false;fitPrep(prep);prep.hidden=b};
-  box.onclick=e=>{const b=e.target.closest("[data-pl]");if(!b)return;PLAN.guests=Math.min(60,Math.max(1,PLAN.guests+(b.dataset.pl==="+"?1:-1)));redo();phoneRefresh()};
+  box.onclick=e=>{/* review 18: the planner's own "Move to" for a too-late dish, as the calendar panel's */
+    if(e.target.closest("[data-plmove]")){const L=planLate(f);if(L.plan){week.date=weekDateKey(L.plan.late.next);saveWeek();renderWeek();refreshPlan();
+      $("status").textContent=`Movie night moved to ${calDay(L.plan.late.next)}: ${[...L.values()].join(", ")} back on the plan.`}return}
+    const b=e.target.closest("[data-pl]");if(!b)return;PLAN.guests=Math.min(60,Math.max(1,PLAN.guests+(b.dataset.pl==="+"?1:-1)));redo();phoneRefresh()};
   const wireToggle=()=>{const dt=box.querySelector(".pl-pick");if(dt)dt.addEventListener("toggle",()=>{try{localStorage.setItem("mns-plan-open",dt.open?"1":"0")}catch(e){}})};wireToggle();
   box.onchange=e=>{const dk=e.target.dataset.diet;if(dk){DIET[dk]=e.target.checked;dietSave();try{setSync()}catch(_){}const op=box.querySelector(".pl-pick"),was=op&&op.open;box.innerHTML=planHTML(f);if(was){const o2=box.querySelector(".pl-pick");if(o2)o2.open=true}wireToggle();redo();if(f===current)dietRedraw(dk);return}
     const n=e.target.dataset.dish;if(n==null)return;const x=planAll(f).find(d=>(d.orig||d.n)===n);
@@ -1510,7 +1529,33 @@ function kidsDryDom(root,f){if(!root)return;const on=dryNow(f||current);const tw
     if(all.startsWith(dryText(pre,on)===pre?pre:"\u0000")&&all.endsWith(post)&&all.length>=pre.length+post.length)v=all.slice(pre.length,all.length-post.length||undefined);
     if(v!==t)todo.push([n,v])});
   for(const [n,v] of todo)n.nodeValue=v}
-function fitLines(card){try{kidsDryDom(card)}catch(e){}
+function fitLines(card){fitLines0(card);try{descRoom(card)}catch(e){}}
+/* review 18: a box that hides its overflow and sets its lines tight cuts the tails of g, j, p, q and y (Nightmare 3's badge "Hospital", diner
+   kickers, "Biker bar pickled eggs") or a tall accent (piña colada). Where only the letters spill (no whole line is hidden), the box gets that much room,
+   taken back with a negative margin so nothing else on the card moves. Worked out from the box's own starting padding every time. */
+let descCx=null;
+function descRoom(card){const k=card.getBoundingClientRect().width/(card.offsetWidth||1)||1;descCx=descCx||document.createElement("canvas").getContext("2d");
+  for(const e of card.querySelectorAll(".fx-face *")){
+    if(e.dataset.dsc){const o=JSON.parse(e.dataset.dsc);Object.assign(e.style,o);delete e.dataset.dsc}
+    const own=[...e.childNodes].filter(n=>n.nodeType===3).map(n=>n.textContent).join("").trim();if(own.length<2)continue;
+    const cs=getComputedStyle(e);if(!/hidden|clip/.test(cs.overflow+cs.overflowY)||cs.display==="none"||cs.visibility==="hidden")continue;
+    const rs=[];for(const n of e.childNodes){if(n.nodeType!==3||!n.textContent.trim())continue;const rg=document.createRange();rg.selectNodeContents(n);rs.push(...[...rg.getClientRects()].filter(r=>r.width>1&&r.height>1))}if(!rs.length)continue;
+    const tt=cs.textTransform==="uppercase"?own.toUpperCase():own;descCx.font=`${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;const m=descCx.measureText(tt),fa=m.fontBoundingBoxAscent,fd=m.fontBoundingBoxDescent,fh=fa+fd;
+    const last=rs.reduce((a,r)=>r.bottom>a.bottom?r:a),first=rs.reduce((a,r)=>r.top<a.top?r:a),padL=(last.height-fh*k)/2,padF=(first.height-fh*k)/2;
+    const inkB=last.bottom-padL-(fd-m.actualBoundingBoxDescent)*k,inkT=first.top+padF+(fa-m.actualBoundingBoxAscent)*k;
+    const box=e.getBoundingClientRect(),fz=parseFloat(cs.fontSize),cutB=(inkB-(box.bottom-(parseFloat(cs.borderBottomWidth)||0)*k))/k,cutT=((box.top+(parseFloat(cs.borderTopWidth)||0)*k)-inkT)/k;
+    /* a single line set nowrap can also lose a swash on its right (Great Vibes' "r" in Mad Hatter): the ink's right edge from the measure */
+    const one=/^(nowrap|pre)/.test(cs.whiteSpace)&&rs.length===1&&cs.textAlign!=="right"&&cs.textAlign!=="end",cutR=one?((rs[0].left+m.actualBoundingBoxRight*k)-(box.right-(parseFloat(cs.borderRightWidth)||0)*k-(parseFloat(cs.paddingRight)||0)*k))/k:0;
+    const addR=cutR>.5&&cutR<=fz*.3&&e.scrollWidth<=e.clientWidth+1?Math.ceil(cutR)+1:0;
+    const addB=cutB>.5&&cutB<=fz*.4?Math.ceil(cutB)+1:0,addT=cutT>.5&&cutT<=fz*.4?Math.ceil(cutT)+1:0;if(!addB&&!addT&&!addR)continue;
+    /* a whole hidden line (a real clamp or fit) is left alone: only the letters' spill is let out */
+    {const lh=parseFloat(cs.lineHeight)||fz*1.2;if(!/^(nowrap|pre)/.test(cs.whiteSpace)&&e.scrollHeight-e.clientHeight-addB-addT>lh*.6)continue}
+    e.dataset.dsc=JSON.stringify({paddingBottom:e.style.paddingBottom,marginBottom:e.style.marginBottom,paddingTop:e.style.paddingTop,marginTop:e.style.marginTop,height:e.style.height,paddingRight:e.style.paddingRight,marginRight:e.style.marginRight});
+    if(addR){e.style.paddingRight=((parseFloat(cs.paddingRight)||0)+addR)+"px";e.style.marginRight=((parseFloat(cs.marginRight)||0)-addR)+"px"}
+    if(addB){e.style.paddingBottom=((parseFloat(cs.paddingBottom)||0)+addB)+"px";e.style.marginBottom=((parseFloat(cs.marginBottom)||0)-addB)+"px"}
+    if(addT){e.style.paddingTop=((parseFloat(cs.paddingTop)||0)+addT)+"px";e.style.marginTop=((parseFloat(cs.marginTop)||0)-addT)+"px"}
+    if(cs.boxSizing==="border-box"&&e.style.height&&/px$/.test(e.style.height))e.style.height=(parseFloat(e.style.height)+addB+addT)+"px"}}
+function fitLines0(card){try{kidsDryDom(card)}catch(e){}
   const els=[...card.querySelectorAll("*")].filter(e=>{if(!e.firstChild||!e.offsetWidth)return false;const cs=getComputedStyle(e);
     if(!/^(nowrap|pre)/.test(cs.whiteSpace)&&cs.textOverflow!=="ellipsis")return false;if(cs.overflow==="visible"&&cs.overflowX==="visible")return false;
     if(cs.webkitLineClamp&&cs.webkitLineClamp!=="none")return false;return (e.scrollWidth>e.clientWidth+1||e.dataset.fl0)&&e.textContent.trim().length>1});
@@ -1846,7 +1891,7 @@ function tickShowtime(){
   clearTimeout(_showT);const el=$("weekCount");if(!el||!week)return;
   const [d]=cookDate(),[h,m]=(week.time||"19:00").split(":").map(Number);const at=new Date(d);at.setHours(h,m,0,0);
   const now=new Date(),ms=at-now;
-  const span=x=>{const mins=Math.max(0,Math.ceil(x/6e4)),dd=Math.floor(mins/1440),hh=Math.floor(mins%1440/60),mm=mins%60;return dd?`${dd} day${dd>1?"s":""}${hh?` ${hh}h`:""}`:hh?`${hh}h ${mm}m`:`${mm} min`};
+  const span=x=>{const mins=Math.max(0,Math.ceil(x/6e4)),dd=Math.floor(mins/1440),hh=Math.floor(mins%1440/60),mm=mins%60;/* review 18: the same "1 hr 30 min" as the Prep sheet and calendar, never "1h 0m" */return dd?`${dd} day${dd>1?"s":""}${hh?` ${hh} hr`:""}`:hh?`${hh} hr${mm?` ${mm} min`:""}`:`${mm} min`};
   /* review 16: after the night, one tap moves the same film and time to next week; a new film is locked in from its menu */
   if(ms<0)el.innerHTML=`Scheduled showtime has passed. <span>Run it again next week, or lock in a new movie night from any menu.</span> <button type="button" data-next>Same film next week</button>`;
   else if(ms===0)el.innerHTML=`Showtime. <span>Lights down, press play when you're ready.</span> <button class="btn primary" type="button" data-show>Start the show</button>`;
@@ -1907,7 +1952,9 @@ function calLead(dishes){let dish="",lead=0;for(const d of dishes){const l=calNi
 /* now (optional): the time the plan is made. Review 17: a make-ahead time already gone is never offered. A dish that can still be done in time
    starts now; one that cannot is listed as too late (late), with the first week its wait fits again (next), and gets no alarm */
 function calPlan(show,dishes,now){
-  const {dish,lead}=calLead(dishes);
+  /* review 18: a dish too late to make is bought ready-made, so it takes no time on the night */
+  const late0=now?dishes.filter(d=>(d.wait||0)>=CAL_LONG&&new Date(show.getTime()-((d.active||0)+(d.wait||0))*6e4)<now):[];
+  const {dish,lead}=calLead(dishes.filter(d=>!late0.includes(d)));
   let start=new Date(show.getTime()-(lead||60)*6e4);start.setMinutes(Math.floor(start.getMinutes()/5)*5,0,0);
   const latest=d=>new Date(show.getTime()-((d.active||0)+(d.wait||0))*6e4),day8=new Date(show.getFullYear(),show.getMonth(),show.getDate(),8,0,0,0);
   const soon=now?new Date(Math.ceil(now.getTime()/9e5)*9e5):null;
@@ -1937,16 +1984,24 @@ const calAhead=(show,at)=>{const n=Math.round((new Date(show.getFullYear(),show.
 const calList=g=>g?g.dishes.map(d=>`${d.n}, ${calDur(d.wait)}${d.words?" "+d.words:""}`).join("; "):"";
 /* review 17: a make-ahead that can no longer be done in time, in plain words with a way round it */
 const calLate=(p,o)=>p.late?`Too late to make ahead for this night: ${calList(p.late)}. Buy ${p.late.dishes.length>1?"them":"it"} ready-made, or move movie night to ${calDay(p.late.next)}.`:"";
+/* review 18: a dish named mid-sentence drops its capital ("Start cooking with strawberry ice cream cones") unless the first word is a name:
+   a possessive (McClane's), a capital inside it, or a word no dish name ever writes in lower case (Fairvale) */
+let calLow=null;
+let calLowAll=false;
+function calMid(names){/* the word list is only kept once every film's dish names are in (dish-names.json loads after the page settles) */
+  if(!calLow||!calLowAll){calLowAll=typeof dishesReady!=="undefined"&&dishesReady;calLow=new Set();try{for(const f of FILMS)for(const K of ["S","M","W","K"])for(const r of f[K]||[])String(r[0]||"").split(/\s+/).slice(1).forEach(w=>{if(/^[a-z]/.test(w))calLow.add(w.replace(/[^a-z]/g,""))})}catch(e){}}
+  return String(names).split(", ").map(n=>{const w=n.split(/\s+/)[0]||"";if(/['’]s$/i.test(w)||/.[A-Z]/.test(w)||!/^[A-Z][a-z]+$/.test(w.replace(/[,.;:]$/,""))||(calLow.size&&!calLow.has(w.toLowerCase().replace(/[^a-z]/g,""))))return n;return n[0].toLowerCase()+n.slice(1)}).join(", ")}
 function calText(o){const p=o.plan,ah=calList(p.before),ea=calList(p.early);
   const made=[...(p.before?p.before.dishes:[]),...(p.early?p.early.dishes:[])].map(d=>d.n);
-  const lead=p.dish?`${p.dish} takes longest on the night, ${calDur(p.lead)}`:"";
+  /* review 18: "Shower cap swirled meringues takes longest" read wrong with a plural dish, so the dish follows the words */
+  const lead=p.dish?`longest on the night: ${p.dish}, ${calDur(p.lead)}`:"";
   return {
     title:`Movie night: ${o.title}`,
-    cook:`Start cooking for ${o.title}${p.first?` with ${p.first}`:""}. Showtime is ${calClock(o.show)}.${lead?` ${lead}.`:""}${made.length?` Made ahead: ${made.join(", ")}.`:""}`,
+    cook:`Start cooking for ${o.title}${p.first?` with ${calMid(p.first)}`:""}. Showtime is ${calClock(o.show)}.${lead?` ${lead[0].toUpperCase()+lead.slice(1)}.`:""}${made.length?` Made ahead: ${made.join(", ")}.`:""}`,
     early:p.early?`Make ahead today for ${o.title}: ${ea}.`:"",
     ahead:p.before?`Prep ahead for ${o.title}: ${ah}.`:"",
     late:calLate(p,o),
-    notes:[`Showtime ${calClock(o.show)}. Start cooking at ${calClock(p.start)}${p.first?` with ${p.first}`:""}${lead?` (${lead})`:""}.`,
+    notes:[`Showtime ${calClock(o.show)}. Start cooking at ${calClock(p.start)}${p.first?` with ${calMid(p.first)}`:""}${lead?` (${lead})`:""}.`,
       p.early?`Earlier that day, ${p.early.now?"start now":"from "+calClock(p.early.at)}: ${ea}.`:"",
       p.before?`${p.before.now?"Start now":`${calAhead(o.show,p.before.at)}, from ${calDay(p.before.at)} ${calClock(p.before.at)}`}: ${ah}.`:"",
       calLate(p,o),
@@ -1978,7 +2033,7 @@ function calNight(x,T){const st=(x.steps||[]).filter(t=>stepParts(t.text).main);
 /* the picked dishes for a film, timed for the guests, read without disturbing the plan of the film on screen */
 function calDishes(f){if(!f||!f._r2||!(f._r2.dishes||[]).length)return [];const keep={guests:PLAN.guests,off:PLAN.off,on:PLAN.on};
   try{if(f!==current)planLoad(f);const sv=(f._r2&&f._r2.serves)||4,LB=planLabels(f);
-    return planDishes(f).filter(x=>!x.extra).map(x=>{const T=dishTimes(x,x.snack?PLAN.guests/4:PLAN.guests/sv);return {n:LB[x.orig||x.n]&&!x.tag?LB[x.orig||x.n]:x.n,active:T.active,wait:T.wait,...calNight(x,T),words:T.wait>=CAL_LONG?waitWords(x):""}})}
+    return planPicked(f).filter(x=>!x.extra).map(x=>{const T=dishTimes(x,x.snack?PLAN.guests/4:PLAN.guests/sv);return {n:LB[x.orig||x.n]&&!x.tag?LB[x.orig||x.n]:x.n,active:T.active,wait:T.wait,...calNight(x,T),words:T.wait>=CAL_LONG?waitWords(x):""}})}
   catch(e){return []}finally{if(f!==current)Object.assign(PLAN,keep)}}
 function weekShow(){const [d]=cookDate(),[h,m]=weekTime(week.time).split(":").map(Number);const at=new Date(d);at.setHours(h,m,0,0);return at}
 /* review 16: what to tap, worked out from the device. iPhone and iPad Safari ask before a calendar file opens and then show the event with an
@@ -1990,7 +2045,9 @@ function calHow(name){const ua=navigator.userAgent||"",ios=/iPhone|iPad|iPod/.te
 /* review 17: once showtime has gone, Add to calendar books the same film next week (as "Same film next week" does) and says so */
 function calPassed(){return !!week&&weekShow()<new Date()}
 function calLabel(){return calPassed()?"Add next week to calendar":"Add to calendar"}
-function calLabels(){for(const id of ["featCal","weekCal"]){const b=$(id);if(b&&b.textContent!==calLabel())b.textContent=calLabel()}}
+function calLabels(){for(const id of ["featCal","weekCal"]){const b=$(id);if(b&&b.textContent!==calLabel())b.textContent=calLabel()}
+  /* review 18: after showtime the bar keeps one way to next week, "Same film next week"; its calendar button comes back once the night has moved */
+  {const b=$("weekCal");if(b)b.style.display=calPassed()?"none":""}}
 async function calAdd(trigger){if(!week)return;const f=FILMS.find(x=>x.id===week.id);if(!f)return;const g=week.double&&FILMS.find(x=>x.id===week.double);
   for(const x of [f,g])if(x)try{await ensureExact(x)}catch(e){}
   const now=new Date();let moved=false;
@@ -2002,7 +2059,7 @@ async function calAdd(trigger){if(!week)return;const f=FILMS.find(x=>x.id===week
   /* a time on another day than the show carries its day (a 12:15am showtime starts cooking 10:45pm the day before) */
   const when=d=>weekDateKey(d)===weekDateKey(show)?calClock(d):`${calDay(d)}, ${calClock(d)}`;
   const rows=[[`${calDay(show)}, ${calClock(show)}`,`Movie night: ${title}`],
-    [plan.startNow?"Now":when(plan.start),`Start cooking${plan.startNow?" now":""}${plan.first?` with ${plan.first}`:""}${plan.dish?`. ${plan.dish} takes longest on the night, ${calDur(plan.lead)}`:""}`],
+    [plan.startNow?"Now":when(plan.start),`Start cooking${plan.startNow?" now":""}${plan.first?` with ${calMid(plan.first)}`:""}${plan.dish?`. Longest on the night: ${plan.dish}, ${calDur(plan.lead)}`:""}`],
     ...(plan.early?[[plan.early.now?"Now":when(plan.early.at),`Make ahead${plan.early.now?", start now":""}: ${calList(plan.early)}`]]:[]),
     ...(plan.before?[[plan.before.now?"Now":when(plan.before.at),`${plan.before.now?"Start now, it still fits":calAhead(show,plan.before.at)}: ${calList(plan.before)}`]]:[]),
     ...(plan.late?[["Too late",calLate(plan,o).replace(/^Too late to make ahead for this night: /,"")]]:[])];
@@ -2803,6 +2860,16 @@ function pdfSoftInset(w,h,list){const c=document.createElement("canvas");c.width
   for(const sh of list){x.save();x.shadowColor=sh.col;x.shadowBlur=sh.b;x.shadowOffsetX=F;x.shadowOffsetY=0;x.fillStyle="#000";
     x.beginPath();x.rect(-F-w*2,-h*2,w*5,h*5);x.rect(-F+sh.x+sh.s,sh.y+sh.s,Math.max(0,w-2*sh.s),Math.max(0,h-2*sh.s));x.fill("evenodd");x.restore()}
   return c.toDataURL("image/png")}
+/* review 18: a small repeating dot or hole tile ("radial-gradient(circle,transparent 3px,#fbf8f0 3.5px)" at 10px, a postage stamp's perforated
+   edge) drawn as a picture of one tile; html2canvas left the stamp's edge straight */
+function pdfDots(g,tw,th){const m=g.match(/^radial-gradient\((.*)\)$/);if(!m||!(tw>0&&th>0&&tw<=400&&th<=400))return null;const args=splitLayers(m[1]);let i=0,cx=tw/2,cy=th/2;
+  const a0=args[0].trim();if(!/^(rgba?\(|transparent|#)/i.test(a0)){const a=a0.match(/^circle(?:\s+at\s+(center|[\d.]+%)(?:\s+(center|[\d.]+%))?)?$/);if(!a)return null;
+    const pc=(v,L)=>v===undefined||v==="center"?L/2:parseFloat(v)/100*L;cx=pc(a[1],tw);cy=pc(a[2]===undefined?a[1]:a[2],th);i=1}
+  /* a stop in per cent is a share of the distance to the tile's far corner (the default size), as in a halftone of dots (Superman's front page) */
+  const far=Math.hypot(Math.max(cx,tw-cx),Math.max(cy,th-cy));
+  const st=args.slice(i).map(x=>{const mm=x.trim().match(/^(rgba?\([^)]*\)|transparent|#[0-9a-f]{3,8})\s+([\d.]+)(px|%)$/i);return mm?[mm[3]==="%"?parseFloat(mm[2])/100*far:parseFloat(mm[2]),mm[1]==="transparent"?"rgba(0,0,0,0)":mm[1]]:null});
+  if(st.length<2||st.some(x=>!x))return null;const R=Math.max(...st.map(x=>x[0]))||1,k=4,c=document.createElement("canvas");c.width=Math.round(tw*k);c.height=Math.round(th*k);
+  const x=c.getContext("2d"),gr=x.createRadialGradient(cx*k,cy*k,0,cx*k,cy*k,R*k);st.forEach(([v,col])=>gr.addColorStop(Math.min(1,v/R),col));x.fillStyle=gr;x.fillRect(0,0,c.width,c.height);return c.toDataURL("image/png")}
 function pdfVignette(g,w,h){const m=g.match(/^radial-gradient\((.*)\)$/);if(!m)return null;const args=splitLayers(m[1]);
   /* shape, size and centre: "ellipse 120% 90% at 50% 45%", "ellipse at center", or nothing (an ellipse to the far corners from the middle) */
   let i=0,cx=w/2,cy=h/2,rx=0,ry=0;
@@ -2811,7 +2878,8 @@ function pdfVignette(g,w,h){const m=g.match(/^radial-gradient\((.*)\)$/);if(!m)r
     if(a[2]){rx=a[3]==="%"?parseFloat(a[2])/100*w:+a[2];ry=a[5]==="%"?parseFloat(a[4])/100*h:+a[4]}i=1}
   if(!rx){const dx=Math.max(cx,w-cx),dy=Math.max(cy,h-cy);rx=dx*Math.SQRT2;ry=dy*Math.SQRT2}
   const stops=args.slice(i).map(a=>{const mm=a.match(/^(rgba?\([^)]*\)|transparent)\s*([\d.]+%)?$/);if(!mm)return null;const col=mm[1]==="transparent"?"rgba(0,0,0,0)":mm[1],al=(col.match(/rgba\([^,]+,[^,]+,[^,]+,\s*([\d.]+)\)/)||[0,1])[1];return {col,at:mm[2]?parseFloat(mm[2])/100:null,a:+al}});
-  if(stops.length<2||stops.some(s=>!s)||stops[0].a!==0||!(stops[stops.length-1].a>0))return null;
+  /* review 18: a glow that starts tinted (Despicable Me 2's cafe wall, white at .1 to black at .35) is drawn too; html2canvas printed a box edge round it */
+  if(stops.length<2||stops.some(s=>!s)||!(stops[stops.length-1].a>0))return null;
   stops.forEach((s,k)=>{if(s.at===null)s.at=k===0?0:k===stops.length-1?1:(stops[k-1].at+1)/2});
   /* a canvas gradient keeps the last colour past its end, as CSS does out to the edges */
   const c=document.createElement("canvas");c.width=w;c.height=h;const x=c.getContext("2d"),k=ry/rx;
@@ -2905,7 +2973,7 @@ function pdfMaskApply(cv,mk){const m=mk.match(/^linear-gradient\((.*)\)$/);if(!m
 function pdfStripes(g){const m=g.match(/^repeating-linear-gradient\((.*)\)$/);if(!m)return null;const args=splitLayers(m[1]);let ang=180,i=0;
   const a0=args[0].trim();if(/^-?[\d.]+deg$/.test(a0)){ang=((parseFloat(a0)%360)+360)%360;i=1}else if(/^to /.test(a0)){ang={"to top":0,"to right":90,"to bottom":180,"to left":270}[a0];if(ang===undefined)return null;i=1}
   if(![0,90,180,270].includes(ang))return null;
-  const stops=[];for(const a of args.slice(i)){const mm=a.match(/^(rgba?\([^)]*\)|transparent|#[0-9a-f]{3,8})((?:\s+-?[\d.]+px)*)$/i);if(!mm)return null;
+  const stops=[];for(const a of args.slice(i)){/* review 18: a bare 0 is a length too ("rgba(...) 0 2px", tiki's woven mat printed as a dark bar when both stripes were skipped) */const mm=a.trim().match(/^(rgba?\([^)]*\)|transparent|#[0-9a-f]{3,8})((?:\s+(?:-?[\d.]+px|0))*)$/i);if(!mm)return null;
     const col=mm[1]==="transparent"?"rgba(0,0,0,0)":mm[1],pos=(mm[2].match(/-?[\d.]+/g)||[]).map(parseFloat);if(!pos.length)return null;pos.forEach(v=>stops.push([v,col]))}
   const P=stops[stops.length-1][0]-stops[0][0];if(!(P>=1&&P<=2000))return null;
   const c=document.createElement("canvas"),k=4,len=Math.round(P*k);const horiz=ang===90||ang===270;c.width=horiz?len:1;c.height=horiz?1:len;
@@ -2933,7 +3001,10 @@ async function renderCanvas(src,forPrint){
       /* either order: "inset 0 0 0 3px #fff" or the browser's "rgb(...) 0px 0px 0px 3px inset"; only flat rings (no offset, no blur) become frames */
       const col=(sh.match(/(rgba?\([^)]*\)|#[0-9a-f]{3,8}\b|\b[a-z]+\b(?<!inset|px))/i)||[])[0],nums=(sh.replace(/rgba?\([^)]*\)/g,"").match(/-?\d+(\.\d+)?(px)?/g)||[]).map(parseFloat);
       if(col&&nums.length>=4&&nums[0]===0&&nums[1]===0&&nums[2]===0&&nums[3]>0)frames.push([nums[3],col])}
-    if(!frames.length)return;e.style.boxShadow=keep.join(",")||"none";if(getComputedStyle(e).position==="static")e.style.position="relative";
+    if(!frames.length)return;e.style.boxShadow=keep.join(",")||"none";
+    /* review 18: the copy is not in the page yet, so its computed position reads empty: a box with no position of its own is made relative
+       (Despicable Me 2's logo plate ring framed the whole column, a faint box on paper) */
+    {const ps=e.style.position||getComputedStyle(e).position;if(!ps||ps==="static")e.style.position="relative"}
     /* rings stack inward: each later ring sits inside the earlier ones */
     frames.sort((a,b)=>a[0]-b[0]);let prev=0;for(const [w,col] of frames){const d=document.createElement("i");d.style.cssText=`position:absolute;left:${prev}px;top:${prev}px;right:${prev}px;bottom:${prev}px;border:${w-prev}px solid ${col};border-radius:inherit;pointer-events:none;box-sizing:border-box`;e.appendChild(d);prev=w}})}catch(err){}
   stage.appendChild(clone);document.body.appendChild(stage);
@@ -2968,7 +3039,12 @@ async function renderCanvas(src,forPrint){
       e.parentElement.insertBefore(d,e)}})}catch(err){}
   /* and it skips outlines (a hairline keyline round a photo): the same treatment, a frame laid round the box */
   try{clone.querySelectorAll("[style*=outline]").forEach(e=>{const cs=getComputedStyle(e),w=parseFloat(cs.outlineWidth)||0;if(cs.outlineStyle==="none"||!w||!e.parentElement)return;
-    if(cs.position!=="absolute"||e.offsetParent!==e.parentElement)return;const o=(parseFloat(cs.outlineOffset)||0)+w,d=document.createElement("i");
+    /* review 18: a box in the flow (Role Models' campfire badges, a dashed stitch drawn 6px inside) gets the frame as its own last child instead */
+    if(cs.position!=="absolute"||e.offsetParent!==e.parentElement){const o=(parseFloat(cs.outlineOffset)||0)+w,bl=parseFloat(cs.borderLeftWidth)||0,bt=parseFloat(cs.borderTopWidth)||0,rad=Math.max(0,(parseFloat(cs.borderTopLeftRadius)||0)+o),d=document.createElement("i");
+      if(cs.position==="static")e.style.position="relative";
+      d.style.cssText=`position:absolute;left:${-bl-o}px;top:${-bt-o}px;width:${e.offsetWidth+2*o}px;height:${e.offsetHeight+2*o}px;box-sizing:border-box;border:${w}px ${cs.outlineStyle} ${cs.outlineColor};border-radius:${rad}px;pointer-events:none`;
+      e.style.outline="none";e.appendChild(d);return}
+    const o=(parseFloat(cs.outlineOffset)||0)+w,d=document.createElement("i");
     d.style.cssText=`position:absolute;left:${e.offsetLeft-o}px;top:${e.offsetTop-o}px;width:${e.offsetWidth+2*o}px;height:${e.offsetHeight+2*o}px;box-sizing:border-box;border:${w}px ${cs.outlineStyle} ${cs.outlineColor};pointer-events:none;z-index:${cs.zIndex==="auto"?"auto":cs.zIndex}`;
     e.style.outline="none";e.parentElement.insertBefore(d,e.nextSibling)})}catch(err){}
   try{
@@ -3006,8 +3082,12 @@ async function renderCanvas(src,forPrint){
     /* review 14: a photo faded out with a mask (club) is drawn into a picture of its box here, while the photos are still plain images:
        each photo with its fit, position, filter, blend and opacity, each soft gradient layer, then the mask's fade (pdfMaskApply) */
     for(const el of [...clone.querySelectorAll("[data-pmask]")]){try{const u=await pdfMaskDraw(el);if(!u)continue;
-      const w=el.clientWidth,h=el.clientHeight;el.style.webkitMaskImage="none";el.style.maskImage="none";el.innerHTML="";el.style.backgroundImage="none";
-      const im=new Image();im.alt="";im.src=u;im.style.cssText=`display:block;width:${w}px;height:${h}px`;el.appendChild(im);await im.decode().catch(()=>{})}catch(e){}}
+      const w=el.clientWidth,h=el.clientHeight;el.style.webkitMaskImage="none";el.style.maskImage="none";el.style.backgroundImage="none";
+      /* review 18: words sitting on the masked photo (club's "On stage tonight" tag) are not part of the picture: they stay, laid over it */
+      const keep=[...el.children].filter(c=>c.tagName!=="IMG"&&c.textContent.trim()&&!c.querySelector("img"));el.innerHTML="";
+      if(getComputedStyle(el).position==="static")el.style.position="relative";
+      const im=new Image();im.alt="";im.src=u;im.style.cssText=`display:block;width:${w}px;height:${h}px;position:absolute;left:0;top:0`;el.appendChild(im);keep.forEach(c=>{el.appendChild(c);if(getComputedStyle(c).position==="static")c.style.position="relative"});
+      if(!el.style.height)el.style.height=h+"px";await im.decode().catch(()=>{})}catch(e){}}
     /* filtered photos (blur, brightness, sepia) print as the screen shows them: baked into a plain picture first */
     clone.querySelectorAll("img").forEach(im=>{try{const cs=getComputedStyle(im);if(!cs.filter||cs.filter==="none")return;const u=pdfFiltered(im,cs);if(!u)return;
       const n=document.createElement("img");n.alt="";n.className=im.className;n.style.cssText=im.style.cssText;n.style.filter="none";n.style.objectFit="fill";n.style.width=cs.width;n.style.height=cs.height;n.src=u;im.replaceWith(n)}catch(e){}});
@@ -3061,7 +3141,8 @@ async function renderCanvas(src,forPrint){
       /* review 12: the same goes for any empty overlay that darkens the edges, on every layout, tagged or not.
          A big blurred inset shadow (airline, bistro, hotel, saloon paper) or a radial vignette that is clear in the middle (banquet)
          prints as a flat tan or grey film over the whole page, so the copy drops the shadow and hides the vignette */
-      {const w=el.offsetWidth,h=el.offsetHeight;if(w>120&&h>120&&w*h<6e6){
+      /* review 18: the inset shadow is baked on a box of any size (tiki's 75px woven mat printed dark under a smeared shadow); vignettes stay big boxes only */
+      {const w=el.offsetWidth,h=el.offsetHeight;if(w>0&&h>0&&w*h<6e6){
         /* a soft inset shadow becomes a picture of itself, drawn by the browser's own canvas */
         const bs=cs.boxShadow;if(bs&&bs!=="none"&&/inset/.test(bs)){/* an inset shadow paints over the background and under the content, so the picture goes in as the top background layer, text or not */
           const parts=bs.split(/,(?![^(]*\))/).map(x=>x.trim()),keep=[],soft=[];
@@ -3074,12 +3155,23 @@ async function renderCanvas(src,forPrint){
             else{el.style.backgroundSize=`${w}px ${h}px`;el.style.backgroundPosition="0 0";el.style.backgroundRepeat="no-repeat"}}}
         /* an edge vignette (a radial gradient clear in the middle), on its own layer or under the paper's other textures */
         const bg2=cs.backgroundImage;/* computed style is live, so it already shows a baked shadow layer */
-        if(bg2&&/radial-gradient|repeating-linear-gradient|conic-gradient/.test(bg2)){const sizes=cs.backgroundSize.split(/,\s*/),pos=cs.backgroundPosition.split(/,\s*/),rep=cs.backgroundRepeat.split(/,\s*/);
+        if(w>120&&h>120&&bg2&&/radial-gradient|repeating-linear-gradient|conic-gradient/.test(bg2)){const sizes=cs.backgroundSize.split(/,\s*/),pos=cs.backgroundPosition.split(/,\s*/),rep=cs.backgroundRepeat.split(/,\s*/);
           const lay=splitLayers(bg2);let hit=false;
           const out=lay.map((g,i)=>{const sz=(sizes[i]||sizes[sizes.length-1]||"auto").trim();
             if(/^(repeating-)?conic-gradient/.test(g)){const px=sz.match(/^([\d.]+)px(?:\s+([\d.]+)px)?$/),tw=px?+px[1]:w,th=px?+(px[2]||px[1]):h;if(!px&&!/^(auto( auto)?|100% 100%)$/.test(sz))return g;const u=pdfConic(g,Math.round(tw),Math.round(th));if(!u)return g;hit=true;sizes[i]=`${tw}px ${th}px`;return `url("${u}")`}
-            if(/^repeating-linear-gradient/.test(g)){if(!/^(auto( auto)?|100% 100%)$/.test(sz))return g;const st=pdfStripes(g);if(!st)return g;hit=true;sizes[i]=st.size;pos[i]=st.pos;rep[i]="repeat";return `url("${st.url}")`}if(!/^(auto( auto)?|100% 100%|cover)$/.test(sz)&&sz!==`${w}px ${h}px`)return g;const v=pdfVignette(g,w,h);if(!v)return g;hit=true;sizes[i]=`${w}px ${h}px`;pos[i]="0px 0px";rep[i]="no-repeat";return `url("${v}")`});
+            if(/^repeating-linear-gradient/.test(g)){if(!/^(auto( auto)?|100% 100%)$/.test(sz))return g;const st=pdfStripes(g);if(!st)return g;hit=true;sizes[i]=st.size;pos[i]=st.pos;rep[i]="repeat";return `url("${st.url}")`}
+            {const px=sz.match(/^([\d.]+)px\s+([\d.]+)px$/);if(px&&/^radial-gradient/.test(g)){const u=pdfDots(g,+px[1],+px[2]);if(u){hit=true;return `url("${u}")`}}}if(!/^(auto( auto)?|100% 100%|cover)$/.test(sz)&&sz!==`${w}px ${h}px`)return g;const v=pdfVignette(g,w,h);if(!v)return g;hit=true;sizes[i]=`${w}px ${h}px`;pos[i]="0px 0px";rep[i]="no-repeat";return `url("${v}")`});
           if(hit){el.style.backgroundImage=out.join(",");el.style.backgroundSize=lay.map((_,i)=>sizes[i]||sizes[sizes.length-1]||"auto").join(",");el.style.backgroundPosition=lay.map((_,i)=>pos[i]||pos[pos.length-1]||"0% 0%").join(",");el.style.backgroundRepeat=lay.map((_,i)=>rep[i]||rep[rep.length-1]||"repeat").join(",")}}}}
+      /* review 18: stripes on a box 120px or less across print too (tiki's woven mat under the poster is 75px deep and printed as a flat dark bar):
+         only the straight repeating stripes are drawn here, a small box's vignette is left as it was */
+      {const w=el.offsetWidth,h=el.offsetHeight,bg3=cs.backgroundImage;if(w>0&&h>0&&(w<=120||h<=120)&&bg3&&/repeating-linear-gradient|radial-gradient/.test(bg3)){
+        const sizes=cs.backgroundSize.split(/,\s*/),pos=cs.backgroundPosition.split(/,\s*/),rep=cs.backgroundRepeat.split(/,\s*/),lay=splitLayers(bg3);let hit=false;
+        const out=lay.map((g,i)=>{const sz0=(sizes[i]||sizes[sizes.length-1]||"auto").trim(),px=sz0.match(/^([\d.]+)px\s+([\d.]+)px$/);
+          /* a small dot tile on a small box (stadium scoreboard cells, a tiki badge's halftone) */
+          if(px&&/^radial-gradient/.test(g)){const u=pdfDots(g,+px[1],+px[2]);if(u){hit=true;return `url("${u}")`}return g}
+          if(!/^repeating-linear-gradient/.test(g))return g;const sz=sz0;if(!/^(auto( auto)?|100% 100%)$/.test(sz))return g;
+          const st=pdfStripes(g);if(!st)return g;hit=true;sizes[i]=st.size;pos[i]=st.pos;rep[i]="repeat";return `url("${st.url}")`});
+        if(hit){el.style.backgroundImage=out.join(",");el.style.backgroundSize=lay.map((_,i)=>sizes[i]||sizes[sizes.length-1]||"auto").join(",");el.style.backgroundPosition=lay.map((_,i)=>pos[i]||pos[pos.length-1]||"0% 0%").join(",");el.style.backgroundRepeat=lay.map((_,i)=>rep[i]||rep[rep.length-1]||"repeat").join(",")}}}
       /* it also smears a blurred inset shadow across the whole box, so a moulded tray well prints with a plain edge instead */
       if(el.hasAttribute&&el.hasAttribute("data-well")){el.style.boxShadow="none";el.style.border="1px solid rgba(0,0,0,.14)"}
       /* html2canvas cannot blend layers, so a grain set to overlay or multiply would paint flat over the paper and wash it out: leave those texture layers out of the export */

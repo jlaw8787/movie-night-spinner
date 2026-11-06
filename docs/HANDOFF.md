@@ -1,6 +1,6 @@
 # Handover: Movie Night Spinner
 
-Read this first in a new chat. Last updated 6 Nov 2026. Start with "6 Nov, night" at the bottom.
+Read this first in a new chat. Last updated 7 Nov 2026. Start with "7 Nov, early" at the bottom.
 
 ## Where things are
 
@@ -246,3 +246,14 @@ After the fixes: run all tests, redeploy to Netlify, add a "Fixed after the revi
 - All checks pass on the deployed build (980f2c4): 17 node tests, dialogs, check-browser 16/16, store taps, sweet starters, cut words, kids cards (343), prices (795), PDF tone with photos, phone fit (900), check-print-text (900, with the new cut-text rule), check-prep-a4 (900, 1,734 pages).
 - Review 18 (docs/review-18.md, shots review-18-01 to 27) scored 9.2 by an independent reviewer, up from 9.0. Every review 17 fix and the new items held. Its fix list: club "On stage tonight" tag missing on paper (all 34 club films); tiki woven band under the poster prints as a flat dark bar (all 17 tiki films); Money Train caption runs onto the footer; a too-late dish is still ticked, cooked and shopped (Psycho's pickled onions, Rocky IV, Tombstone, Midsommar); small items (Scream, Role Models, Mean Streets paper details, Nightmare 3 badge, "meringues takes longest", capital after "with", US "armor" and "theater", "1h 0m", Tombstone eggs "to chill", two next-week buttons after showtime).
 - Next: work down review 18's fix list in a new chat, then review 19.
+
+## 7 Nov, early: review 18 fixed, paper checks that catch what review 18 caught
+
+- All 5 review 18 fix items done. Notes under "Fixed after the review" at the end of review-18.md.
+- Save PDF (renderCanvas): text on a masked photo stays over the baked picture (club tag); stripe stops with a bare 0 parse; inset shadows bake on any box size and stripes and small dot tiles (pdfDots, px or % stops) on boxes 120px or less; outlines on boxes in the flow print as a frame inside the box; an inset ring frame sits on its own box (the copy is not in the page when that runs, so its computed position reads empty); tinted radial glows bake.
+- descRoom (app.js, end of fitLines): a box that hides its overflow and cuts a letter's tail, a tall accent or a script swash gets just that room, taken back with a negative margin. Nothing else moves. A box hiding a whole line is left alone. Diner heads and kickers and the bistro board also got room in their own files.
+- Too late (app.js planLate): a picked make-ahead that cannot be done before the locked-in showtime is off the plan, method and shopping, listed under "Too late to make, buy ready-made", greyed in the planner with a "Move to <date>" button. The pick is kept, so moving the night brings it back. calPlan does not count its time on the night. calDishes (calendar) still sees every pick.
+- Wording: "Longest on the night: <dish>, <time>"; calMid lowers a dish's capital after "with" unless the first word is a name (needs dish-names.json loaded, it rebuilds its word list until then); countdown "1 hr 30 min"; armour, theatre; Tombstone eggs to pickle. After showtime the bar hides its calendar button and keeps "Same film next week".
+- Money Train (formats.js): photo 118px, caption clear of the footer.
+- check-print-text new rules: text missing from the Save PDF copy, text running into other text (display type 24px and up measured at 0.7), blurred inset shadow or straight stripes left for html2canvas, outline left, small radial tile left, export frame on the wrong box. The clip rule now checks a text box's own overflow and measures real ink with canvas measureText (1.5px limit; sideways both advance and ink must spill). Every review 18 paper fault fails on the old build (980f2c4). Run it over all 900 in one go.
+- Tools used this session, not in the repo: html2canvas 1.4.1 and jsPDF 2.5.1 saved locally for MNS_LIBDIR; playwright from `npm root -g`.

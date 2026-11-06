@@ -86,14 +86,14 @@ assert.equal(prop(ics,'UID')[0],'crouching-tiger-2026-11-07@movie-night-spinner'
 assert.equal(unesc(prop(ics,'SUMMARY')[0]),'Movie night: Crouching Tiger, Hidden Dragon');assert.match(prop(ics,'SUMMARY')[0],/Tiger\\, Hidden/);
 assert.match(prop(ics,'DESCRIPTION')[0],/Red bean soup\\; sweet/,'Semicolons are escaped');
 const notes=unesc(prop(ics,'DESCRIPTION')[0]);
-assert.match(notes,/^Showtime 7pm\. Start cooking at 5:25pm \(Pork buns takes longest on the night, 1 hr 35 min\)\./);
+assert.match(notes,/^Showtime 7pm\. Start cooking at 5:25pm \(longest on the night: Pork buns, 1 hr 35 min\)\./);
 assert.match(notes,/The night before, from Fri 6 Nov 6pm: Red bean soup; sweet, 12 hr to soak\./);
 assert.ok(notes.endsWith('Menu and Prep sheet: '+url),'Menu link in the notes');assert.equal(prop(ics,'URL')[0],url);
 // Two reminders, start cooking first (Outlook keeps only the first), both relative to the start.
 const trig=prop(ics,'TRIGGER');assert.deepEqual(trig,['-PT1H35M','-P1DT1H']);
 assert.match(ics,/TRIGGER;RELATED=START:-PT1H35M/);assert.equal((ics.match(/BEGIN:VALARM/g)||[]).length,2);
 const alarms=prop(ics,'DESCRIPTION').slice(1).map(unesc);
-assert.equal(alarms[0],'Start cooking for Crouching Tiger, Hidden Dragon. Showtime is 7pm. Pork buns takes longest on the night, 1 hr 35 min. Made ahead: Red bean soup; sweet.');
+assert.equal(alarms[0],'Start cooking for Crouching Tiger, Hidden Dragon. Showtime is 7pm. Longest on the night: Pork buns, 1 hr 35 min. Made ahead: Red bean soup; sweet.');
 assert.equal(alarms[1],'Prep ahead for Crouching Tiger, Hidden Dragon: Red bean soup; sweet, 12 hr to soak.');
 // Each trigger lands on the planned clock time, whatever the time zone does in between.
 const dur=s=>{const m=/^-P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?)?$/.exec(s);return ((+m[1]||0)*1440+(+m[2]||0)*60+(+m[3]||0))*6e4};
@@ -136,6 +136,8 @@ if(process.env.TZ==='America/New_York'){const s2=at(2026,10,1,19,0),q=calPlan(s2
   const t=calICS({title:'Psycho',show,plan:q,url,uid:'x@y',now});assert.equal(prop(t,'TRIGGER').length,1,'start cooking only');
   assert.match(unescNotes(t),/Too late to make ahead for this night: Mother's pickled onions, 7 days to soak\. Buy it ready-made, or move movie night to Sat 14 Nov\./);
   assert.deepEqual([...calGoogle({title:'Psycho',show,plan:q,url,uid:'x@y',now})].map(x=>x[0]),['the night','start cooking']);
+  /* review 18: a too-late dish is bought ready-made, so its time on the night does not set start cooking */
+  {const z=calPlan(show,[{n:'Pickles',active:200,wait:2000,night:200},{n:'Burgers',active:40,wait:0}],now);assert.equal(z.late.dishes[0].n,'Pickles');assert.equal(z.dish,'Burgers');assert.equal(z.lead,40)}
   const r=calPlan(show,[{n:'Gravlax',active:20,wait:1680,night:0,words:'to cure'},{n:'Pie',active:60,wait:0}],at(2026,10,6,14,35));
   assert.equal(r.late,null);assert.ok(r.before.now,'a cure that must start by 2:40pm Friday, planned at 2:35pm: start now');assert.equal(hm(r.before.at),'14:35');
   assert.equal(hm(calPlan(show,[{n:'Gravlax',active:20,wait:1440,night:0}],now).before.at),'18:00','6pm Friday has not gone yet');
@@ -148,7 +150,7 @@ if(process.env.TZ==='America/New_York'){const s2=at(2026,10,1,19,0),q=calPlan(s2
 {const q=calPlan(show,[{n:'Pretzel dough',active:30,wait:135,night:15},{n:'Wings',active:150,wait:0,night:150}]);
   assert.equal(q.early,null);assert.equal(hm(q.start),'16:15');assert.equal(q.first,'Pretzel dough');
   const al=prop(calICS({title:'Die Hard 2',show,plan:q,url,uid:'x@y',now}),'DESCRIPTION').slice(1).map(unesc);
-  assert.equal(al.length,1);assert.match(al[0],/^Start cooking for Die Hard 2 with Pretzel dough\. Showtime is 7pm\. Wings takes longest on the night, 2 hr 30 min\./)}
+  assert.equal(al.length,1);assert.match(al[0],/^Start cooking for Die Hard 2 with pretzel dough\. Showtime is 7pm\. Longest on the night: Wings, 2 hr 30 min\./)}
 
 // The section never uses en or em dashes in what it writes.
 assert.ok(!/[–—]/.test(source.slice(a,b)));
