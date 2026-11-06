@@ -3117,6 +3117,20 @@ async function pdfLiftBake(root){const k=2.5,boxes=[];
     const to=(cs.transformOrigin||"50% 50%").split(/\s+/).map((v,i)=>pdfLen(v,i?h:w)+P);
     im.style.cssText=`position:absolute;left:${L0-P}px;top:${T0-P}px;width:${w+2*P}px;height:${h+2*P}px;max-width:none;max-height:none;margin:0;pointer-events:none;transform:${cs.transform};transform-origin:${to[0]}px ${to[1]}px;opacity:${cs.opacity};z-index:${cs.zIndex==="auto"?"auto":cs.zIndex}`;
     el.parentElement.insertBefore(im,el);if(!B.via)el.style.boxShadow=B.keep.join(",")||"none"}catch(e){}}}
+/* review 20: diagonal stripes (Elf's candy-cane border, A Christmas Story's striped panel) are drawn across the whole box: the stripes turned
+   to the gradient's angle, each band in its colour, repeated along the gradient line the way the browser lays them */
+function pdfStripesBox(g,w,h){const m=g.match(/^repeating-linear-gradient\((.*)\)$/);if(!m||!(w>0&&h>0)||w*h>4e6)return null;const args=splitLayers(m[1]);
+  const a0=args[0].trim();if(!/^-?[\d.]+deg$/.test(a0))return null;const ang=((parseFloat(a0)%360)+360)%360;
+  const stops=[];for(const s of args.slice(1)){const mm=s.trim().match(/^(rgba?\([^)]*\)|transparent|#[0-9a-f]{3,8})((?:\s+(?:-?[\d.]+px|0))*)$/i);if(!mm)return null;
+    const col=mm[1]==="transparent"?"rgba(0,0,0,0)":mm[1],pos=(mm[2].match(/-?[\d.]+/g)||[]).map(parseFloat);if(!pos.length)return null;pos.forEach(v=>stops.push([v,col]))}
+  const P=stops[stops.length-1][0]-stops[0][0];if(!(P>=1&&P<=2000))return null;
+  const k=2,c=document.createElement("canvas");c.width=Math.round(w*k);c.height=Math.round(h*k);const x=c.getContext("2d"),th=ang*Math.PI/180,L=Math.abs(w*Math.sin(th))+Math.abs(h*Math.cos(th)),D=Math.hypot(w,h);
+  x.scale(k,k);x.translate(w/2,h/2);x.rotate(th);
+  for(let n=Math.floor(-stops[0][0]/P)-1;stops[0][0]+n*P<L+P;n++){const o=stops[0][0]+n*P-stops[0][0];
+    for(let i=0;i<stops.length-1;i++){const t0=o+stops[i][0],t1=o+stops[i+1][0];if(t1<=t0)continue;const y0=L/2-t1,y1=L/2-t0;
+      if(stops[i][1]===stops[i+1][1])x.fillStyle=stops[i][1];else{const gr=x.createLinearGradient(0,y1,0,y0);gr.addColorStop(0,stops[i][1]);gr.addColorStop(1,stops[i+1][1]);x.fillStyle=gr}
+      x.fillRect(-D,y0-.3,2*D,y1-y0+.6)}}
+  return c.toDataURL("image/png")}
 function pdfStripes(g){const m=g.match(/^repeating-linear-gradient\((.*)\)$/);if(!m)return null;const args=splitLayers(m[1]);let ang=180,i=0;
   const a0=args[0].trim();if(/^-?[\d.]+deg$/.test(a0)){ang=((parseFloat(a0)%360)+360)%360;i=1}else if(/^to /.test(a0)){ang={"to top":0,"to right":90,"to bottom":180,"to left":270}[a0];if(ang===undefined)return null;i=1}
   if(![0,90,180,270].includes(ang))return null;
@@ -3315,7 +3329,7 @@ async function renderCanvas(src,forPrint){
           const lay=splitLayers(bg2);let hit=false;
           const out=lay.map((g,i)=>{const sz=(sizes[i]||sizes[sizes.length-1]||"auto").trim();
             if(/^(repeating-)?conic-gradient/.test(g)){const px=sz.match(/^([\d.]+)px(?:\s+([\d.]+)px)?$/),tw=px?+px[1]:w,th=px?+(px[2]||px[1]):h;if(!px&&!/^(auto( auto)?|100% 100%)$/.test(sz))return g;const u=pdfConic(g,Math.round(tw),Math.round(th));if(!u)return g;hit=true;sizes[i]=`${tw}px ${th}px`;return `url("${u}")`}
-            if(/^repeating-linear-gradient/.test(g)){if(!/^(auto( auto)?|100% 100%)$/.test(sz))return g;const st=pdfStripes(g);if(!st)return g;hit=true;sizes[i]=st.size;pos[i]=st.pos;rep[i]="repeat";return `url("${st.url}")`}
+            if(/^repeating-linear-gradient/.test(g)){if(!/^(auto( auto)?|100% 100%)$/.test(sz))return g;const st=pdfStripes(g);if(!st){const u=pdfStripesBox(g,w,h);if(!u)return g;hit=true;sizes[i]=`${w}px ${h}px`;pos[i]="0px 0px";rep[i]="no-repeat";return `url("${u}")`}hit=true;sizes[i]=st.size;pos[i]=st.pos;rep[i]="repeat";return `url("${st.url}")`}
             {const px=sz.match(/^([\d.]+)px\s+([\d.]+)px$/);if(px&&/^radial-gradient/.test(g)){const u=pdfDots(g,+px[1],+px[2]);if(u){hit=true;return `url("${u}")`}}}if(!/^(auto( auto)?|100% 100%|cover)$/.test(sz)&&sz!==`${w}px ${h}px`)return g;const v=pdfVignette(g,w,h);if(!v)return g;hit=true;sizes[i]=`${w}px ${h}px`;pos[i]="0px 0px";rep[i]="no-repeat";return `url("${v}")`});
           if(hit){el.style.backgroundImage=out.join(",");el.style.backgroundSize=lay.map((_,i)=>sizes[i]||sizes[sizes.length-1]||"auto").join(",");el.style.backgroundPosition=lay.map((_,i)=>pos[i]||pos[pos.length-1]||"0% 0%").join(",");el.style.backgroundRepeat=lay.map((_,i)=>rep[i]||rep[rep.length-1]||"repeat").join(",")}}}}
       /* review 18: stripes on a box 120px or less across print too (tiki's woven mat under the poster is 75px deep and printed as a flat dark bar):
@@ -3326,7 +3340,7 @@ async function renderCanvas(src,forPrint){
           /* a small dot tile on a small box (stadium scoreboard cells, a tiki badge's halftone) */
           if(px&&/^radial-gradient/.test(g)){const u=pdfDots(g,+px[1],+px[2]);if(u){hit=true;return `url("${u}")`}return g}
           if(!/^repeating-linear-gradient/.test(g))return g;const sz=sz0;if(!/^(auto( auto)?|100% 100%)$/.test(sz))return g;
-          const st=pdfStripes(g);if(!st)return g;hit=true;sizes[i]=st.size;pos[i]=st.pos;rep[i]="repeat";return `url("${st.url}")`});
+          const st=pdfStripes(g);if(!st){const u=pdfStripesBox(g,w,h);if(!u)return g;hit=true;sizes[i]=`${w}px ${h}px`;pos[i]="0px 0px";rep[i]="no-repeat";return `url("${u}")`}hit=true;sizes[i]=st.size;pos[i]=st.pos;rep[i]="repeat";return `url("${st.url}")`});
         if(hit){el.style.backgroundImage=out.join(",");el.style.backgroundSize=lay.map((_,i)=>sizes[i]||sizes[sizes.length-1]||"auto").join(",");el.style.backgroundPosition=lay.map((_,i)=>pos[i]||pos[pos.length-1]||"0% 0%").join(",");el.style.backgroundRepeat=lay.map((_,i)=>rep[i]||rep[rep.length-1]||"repeat").join(",")}}}
       /* it also smears a blurred inset shadow across the whole box, so a moulded tray well prints with a plain edge instead */
       if(el.hasAttribute&&el.hasAttribute("data-well")){el.style.boxShadow="none";el.style.border="1px solid rgba(0,0,0,.14)"}

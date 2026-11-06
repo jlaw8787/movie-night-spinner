@@ -134,7 +134,7 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
         bar): in the copy it is handed, both must already be baked into pictures */
      if(el.offsetWidth&&el.offsetHeight&&/inset/.test(cs.boxShadow)&&cs.boxShadow.split(/,(?![^(]*\))/).some(sh=>{if(!/inset/.test(sh))return false;const n=(sh.replace(/rgba?\([^)]*\)/g,'').match(/-?[\d.]+px/g)||[]).map(parseFloat);return n.length>=3&&n[2]>=2&&!/rgba\([^)]*,\s*0\)/.test(sh)}))
       out.push(`${f.id}: blurred inset shadow left for the PDF (${el.offsetWidth}x${el.offsetHeight})`);
-     if(/repeating-linear-gradient\((0deg|90deg|180deg|270deg|to (top|right|bottom|left))?/.test(cs.backgroundImage)&&cs.backgroundImage!=='none'){const rg=(cs.backgroundImage.match(/repeating-linear-gradient\(([^,]*)/g)||[]).filter(x=>!/\d+deg/.test(x)||/\((0|90|180|270)deg/.test(x));
+     if(/repeating-linear-gradient\((0deg|90deg|180deg|270deg|to (top|right|bottom|left))?/.test(cs.backgroundImage)&&cs.backgroundImage!=='none'){const rg=(cs.backgroundImage.match(/repeating-linear-gradient\(([^,]*)/g)||[]);/* review 20: diagonal ones too (Elf's candy-cane border printed solid red) */
       if(rg.length&&el.offsetWidth&&el.offsetHeight)out.push(`${f.id}: straight stripes left for html2canvas (${el.offsetWidth}x${el.offsetHeight})`)}
      /* review 18: html2canvas skips outlines (Role Models' dashed badge stitch) and small radial tiles (Scream's stamp perforations) */
      if(cs.outlineStyle!=='none'&&parseFloat(cs.outlineWidth)>0&&el.offsetWidth)out.push(`${f.id}: outline left for html2canvas (${el.offsetWidth}x${el.offsetHeight})`);
