@@ -16,28 +16,55 @@ const ctx=vm.createContext({console});vm.runInContext(source.slice(a,b),ctx);
 const run=(fn,...args)=>ctx[fn]?ctx[fn](...args):vm.runInContext(fn,ctx)(...args);
 const fnOf=n=>vm.runInContext(n,ctx);
 const calPlan=fnOf('calPlan'),calICS=fnOf('calICS'),calGoogle=fnOf('calGoogle'),calBefore=fnOf('calBefore'),calFold=fnOf('calFold');
-const at=(...x)=>new Date(...x);const hm=d=>`${d.getHours()}:${String(d.getMinutes()).padStart(2,'0')}`;const ymd=d=>`${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`;
+const at=(...x)=>new Date(...x);
+function unescNotes(ics){const u=ics.replace(/\r\n /g,'');const l=u.split('\r\n').find(x=>x.startsWith('DESCRIPTION:'));return l.slice(12).replace(/\\n/g,'\n').replace(/\\([,;\\])/g,'$1')}const hm=d=>`${d.getHours()}:${String(d.getMinutes()).padStart(2,'0')}`;const ymd=d=>`${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`;
 
 // Durations before the event.
 for(const [m,want] of [[0,'-PT0M'],[5,'-PT5M'],[60,'-PT1H'],[110,'-PT1H50M'],[1440,'-P1D'],[1500,'-P1DT1H'],[1505,'-P1DT1H5M']])assert.equal(calBefore(m),want,`${m} minutes`);
 assert.equal(calBefore(1441),'-P1DT1M');
 
-// Start cooking: showtime less the longest picked dish (hands-on and cooking, plus a short wait), on a 5-minute mark.
+// Start cooking: showtime less the longest thing left to do on the night (hands-on and cooking, plus a wait under 2 hours), on a 5-minute mark.
 const show=at(2026,10,7,19,0);
-let p=calPlan(show,[{n:'Lamb shoulder',active:110,wait:0},{n:'Salad',active:20,wait:30},{n:'Pavlova',active:40,wait:120}]);
-assert.equal(p.dish,'Pavlova');assert.equal(p.lead,160);assert.equal(hm(p.start),'16:20');assert.equal(p.before,null,'No day-before reminder without a long wait');
+let p=calPlan(show,[{n:'Lamb shoulder',active:110,wait:0},{n:'Salad',active:20,wait:30},{n:'Pavlova',active:40,wait:100}]);
+assert.equal(p.dish,'Pavlova');assert.equal(p.lead,140);assert.equal(hm(p.start),'16:40');assert.equal(p.before,null,'No day-before reminder without a long wait');assert.equal(p.early,null);
 p=calPlan(show,[{n:'Stew',active:107,wait:0}]);assert.equal(hm(p.start),'17:10','17:13 rounds down to 17:10');
 p=calPlan(show,[]);assert.equal(p.lead,0);assert.equal(hm(p.start),'18:00','No timed dish: an hour before');
 p=calPlan(at(2026,10,7,19,45),[{n:'Wings',active:50,wait:0}]);assert.equal(hm(p.start),'18:55','A quarter-hour showtime works the same');
 
-// The day before: a 12-hour wait would start at 6:30am on the night, so it moves to 6pm the evening before; its hands-on time alone counts on the night.
-p=calPlan(show,[{n:'Sorbet',active:30,wait:720,words:'in the freezer'},{n:'Ribs',active:90,wait:0}]);
+// Review 16: a wait of 2 hours or more never pushes the start time. John Wick 2's tiramisu sets for 8 hours: it is made earlier that day
+// (from 10:30am, the latest that still fits), and start cooking is set by the supplì, not the tiramisu.
+p=calPlan(show,[{n:'Tiramisu',active:30,wait:480,night:0,words:'to set'},{n:'Supplì',active:90,wait:0,night:90}]);
+assert.equal(p.dish,'Supplì');assert.equal(hm(p.start),'17:30');assert.equal(p.before,null);
+assert.ok(p.early);assert.equal(ymd(p.early.at),'2026-11-7');assert.equal(hm(p.early.at),'10:30');assert.deepEqual(p.early.dishes.map(d=>d.n),['Tiramisu']);
+// Chef: El Jefe Cubano marinates overnight, then roasts 4 hours. The roast (what is left on the night) sets the start, the marinade goes the night before.
+p=calPlan(show,[{n:'El Jefe Cubano',active:275,wait:480,night:265,over:true,words:'to marinate'},{n:'Mojo',active:15,wait:0,night:15}]);
+assert.equal(p.dish,'El Jefe Cubano');assert.equal(hm(p.start),'14:35','start cooking in the afternoon, not 6:25am');assert.equal(p.early,null);
+assert.equal(ymd(p.before.at),'2026-11-6');assert.equal(hm(p.before.at),'18:00');
+// A 3-hour chill with no overnight in the recipe fits the afternoon; one that would have to start before 8am goes the night before.
+p=calPlan(show,[{n:'Jelly',active:20,wait:180,night:0},{n:'Pie',active:60,wait:0,night:60}]);assert.equal(hm(p.early.at),'15:30','3:40pm rounds down to 3:30pm');assert.equal(p.before,null);
+p=calPlan(show,[{n:'Cuban pork',active:260,wait:490,night:250}]);assert.equal(p.early,null,'6:30am start moves to the night before');assert.equal(ymd(p.before.at),'2026-11-6');assert.equal(hm(p.before.at),'18:00');
+// A long wait that still fits after the start time needs no reminder of its own.
+p=calPlan(show,[{n:'Soak',active:10,wait:130,night:0},{n:'Roast',active:200,wait:0,night:200}]);assert.equal(p.early,null);assert.equal(p.before,null);assert.equal(hm(p.start),'15:40');
+// With no night given, a long wait counts only its hands-on time.
+assert.equal(hm(calPlan(show,[{n:'Brine',active:40,wait:300}]).start),'18:20');
+
+// Ahead of the night: a 12-hour wait would start at 6:30am on the night, so it moves to 6pm the evening before; its night share alone counts on the night.
+p=calPlan(show,[{n:'Sorbet',active:30,wait:720,night:0,words:'in the freezer'},{n:'Ribs',active:90,wait:0}]);
 assert.equal(p.dish,'Ribs');assert.equal(hm(p.start),'17:30');assert.ok(p.before);assert.equal(ymd(p.before.at),'2026-11-6');assert.equal(hm(p.before.at),'18:00');
 assert.deepEqual(p.before.dishes.map(d=>d.n),['Sorbet']);
-// A 33-hour wait starts by 10am the day before; a 40-hour one by 3am, which moves to 6pm the evening before that; two days' wait lands two days out.
+// A 33-hour wait starts by 10am the day before; a 40-hour one by 3am, which moves to 6pm the evening before that; two days' wait lands two days out at 6pm.
 assert.equal(hm(calPlan(show,[{n:'Brine',active:0,wait:1980}]).before.at),'10:00');
 p=calPlan(show,[{n:'Cure',active:0,wait:2400}]);assert.equal(ymd(p.before.at),'2026-11-5');assert.equal(hm(p.before.at),'18:00');
-p=calPlan(show,[{n:'Kimchi',active:20,wait:2880}]);assert.equal(ymd(p.before.at),'2026-11-5');assert.equal(hm(p.before.at),'18:30','Thu 6:40pm rounds down to 6:30pm');
+p=calPlan(show,[{n:'Kimchi',active:20,wait:2880}]);assert.equal(ymd(p.before.at),'2026-11-5');assert.equal(hm(p.before.at),'18:00','Thu 6:40pm moves to 6pm');
+// Psycho: a week-long pickle lands on the right day, 6pm a week before, and says so in days.
+p=calPlan(show,[{n:"Mother's pickled onions",active:30,wait:10080,night:0,words:'to soak'},{n:'Meringues',active:117,wait:0}]);
+assert.equal(ymd(p.before.at),'2026-10-31');assert.equal(hm(p.before.at),'18:00');
+{const n=unescNotes(calICS({title:'Psycho',show,plan:p,url:'u',uid:'x@y',now:at(2026,10,1)}));
+  assert.match(n,/A week before, from Sat 31 Oct 6pm: Mother's pickled onions, 7 days to soak\./);assert.doesNotMatch(n,/168 hr|The day before/)}
+{const calAhead=fnOf('calAhead');const d=(y,m,dd,h)=>calAhead(show,at(y,m,dd,h));
+  assert.equal(d(2026,10,6,18),'The night before');assert.equal(d(2026,10,6,10),'The day before');assert.equal(d(2026,10,5,18),'Two days before');
+  assert.equal(d(2026,10,3,18),'Four days before');assert.equal(d(2026,9,31,18),'A week before')}
+assert.equal(fnOf('calDur')(2880),'2 days');assert.equal(fnOf('calDur')(2879),'47 hr 59 min');assert.equal(fnOf('calDur')(720),'12 hr');
 
 // The .ics file.
 const unfold=t=>t.replace(/\r\n /g,'');
@@ -60,13 +87,13 @@ assert.equal(unesc(prop(ics,'SUMMARY')[0]),'Movie night: Crouching Tiger, Hidden
 assert.match(prop(ics,'DESCRIPTION')[0],/Red bean soup\\; sweet/,'Semicolons are escaped');
 const notes=unesc(prop(ics,'DESCRIPTION')[0]);
 assert.match(notes,/^Showtime 7pm\. Start cooking at 5:25pm \(Pork buns takes longest, 1 hr 35 min\)\./);
-assert.match(notes,/The day before, from Fri 6 Nov 6pm: Red bean soup; sweet, 12 hr to soak\./);
+assert.match(notes,/The night before, from Fri 6 Nov 6pm: Red bean soup; sweet, 12 hr to soak\./);
 assert.ok(notes.endsWith('Menu and Prep sheet: '+url),'Menu link in the notes');assert.equal(prop(ics,'URL')[0],url);
 // Two reminders, start cooking first (Outlook keeps only the first), both relative to the start.
 const trig=prop(ics,'TRIGGER');assert.deepEqual(trig,['-PT1H35M','-P1DT1H']);
 assert.match(ics,/TRIGGER;RELATED=START:-PT1H35M/);assert.equal((ics.match(/BEGIN:VALARM/g)||[]).length,2);
 const alarms=prop(ics,'DESCRIPTION').slice(1).map(unesc);
-assert.equal(alarms[0],'Start cooking for Crouching Tiger, Hidden Dragon. Showtime is 7pm. Pork buns takes longest, 1 hr 35 min.');
+assert.equal(alarms[0],'Start cooking for Crouching Tiger, Hidden Dragon. Showtime is 7pm. Pork buns takes longest, 1 hr 35 min. Made ahead: Red bean soup; sweet.');
 assert.equal(alarms[1],'Prep ahead for Crouching Tiger, Hidden Dragon: Red bean soup; sweet, 12 hr to soak.');
 // Each trigger lands on the planned clock time, whatever the time zone does in between.
 const dur=s=>{const m=/^-P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?)?$/.exec(s);return ((+m[1]||0)*1440+(+m[2]||0)*60+(+m[3]||0))*6e4};
@@ -93,6 +120,13 @@ assert.equal(calGoogle({title:'Paddington',show,plan:calPlan(show,[]),url,uid:'x
 if(process.env.TZ==='America/New_York'){const s2=at(2026,10,1,19,0),q=calPlan(s2,[{n:'Brisket rub',active:20,wait:720}]);
   assert.equal(ymd(q.before.at),'2026-10-31');assert.equal(hm(q.before.at),'18:00');
   const t2=prop(calICS({title:'Halloween',show:s2,plan:q,url,uid:'x@y',now}),'TRIGGER');assert.equal(t2[1],'-P1DT2H','26 real hours across the change');}
+
+// Three reminders when a dish is made ahead that day and another the night before: start cooking first, then today, then the night before.
+{const q=calPlan(show,[{n:'Tiramisu',active:30,wait:480,night:0,words:'to set'},{n:'Falafel',active:20,wait:720,night:20,words:'to soak'},{n:'Supplì',active:90,wait:0}]);
+  const t=calICS({title:'Rome',show,plan:q,url,uid:'x@y',now});assert.deepEqual(prop(t,'TRIGGER'),['-PT1H30M','-PT8H30M','-P1DT1H']);
+  const al=prop(t,'DESCRIPTION').slice(1).map(unesc);assert.equal(al[1],'Make ahead today for Rome: Tiramisu, 8 hr to set.');
+  assert.match(unesc(prop(t,'DESCRIPTION')[0]),/Earlier that day, from 10:30am: Tiramisu, 8 hr to set\.\nThe night before, from Fri 6 Nov 6pm: Falafel, 12 hr to soak\./);
+  assert.deepEqual([...calGoogle({title:'Rome',show,plan:q,url,uid:'x@y',now})].map(x=>x[0]),['the night','start cooking','make ahead today','prep ahead'])}
 
 // The section never uses en or em dashes in what it writes.
 assert.ok(!/[–—]/.test(source.slice(a,b)));

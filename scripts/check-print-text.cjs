@@ -11,16 +11,23 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
  const b=await chromium.launch({...(process.env.MNS_BROWSER?{executablePath:process.env.MNS_BROWSER}:{}),...(PX?{proxy:{server:PX,bypass:'127.0.0.1,localhost'}}:{}),args:['--no-sandbox']});
  const ctx=await b.newContext({viewport:{width:1440,height:900},serviceWorkers:'block',ignoreHTTPSErrors:true});
  await ctx.addInitScript(()=>{localStorage.setItem('mns-welcome','1');localStorage.setItem('mns-sound','0')});
- /* web fonts load (the fit passes depend on them); photos and the export libraries are not needed */
- await ctx.route('**/*',r=>{const u=new URL(r.request().url());return u.hostname==='127.0.0.1'||/fonts\.(googleapis|gstatic)\.com/.test(u.hostname)||u.protocol==='data:'||u.protocol==='blob:'?r.continue():r.abort()});
+ /* web fonts and the TMDB photos load: the fit passes depend on both (review 16: Mad Max 2's lab poster is taller with its photo in,
+    and the check passed without it while the note was hidden). MNS_PHOTOS=0 blocks the photos for a quick run. The export libraries are not needed. */
+ const PHOTOS=process.env.MNS_PHOTOS!=='0';
+ await ctx.route('**/*',r=>{const u=new URL(r.request().url());return u.hostname==='127.0.0.1'||/fonts\.(googleapis|gstatic)\.com/.test(u.hostname)||(PHOTOS&&u.hostname==='image.tmdb.org')||u.protocol==='data:'||u.protocol==='blob:'?r.continue():r.abort()});
  const p=await ctx.newPage();p.setDefaultTimeout(7200000);
  await p.goto(`http://127.0.0.1:${port}/?film=`+encodeURIComponent('Home Alone (1990)'),{waitUntil:'domcontentloaded'});
  await p.waitForFunction(()=>typeof show==='function'&&typeof current!=='undefined'&&current);
  const r=await p.evaluate(async([N,NAMED])=>{const out=[];const list=NAMED.length?NAMED.map(i=>FILMS.find(f=>f.id===i)).filter(Boolean):N?FILMS.slice(0,N):FILMS;
   const price=t=>/^\s*[$£€¢]?\d{0,3}[.,]?\d{1,2}\s*(¢|c|cr|crowns?|silver|gold|[sd])?\s*$/i.test(t)&&t.trim().length<12;
   let seen=null;window.html2canvas=async clone=>{seen=clone;const c=document.createElement('canvas');c.width=c.height=2;return c};
-  for(const f of list){try{await ensureExact(f);await show(f,true)}catch(e){continue}await document.fonts.ready;await new Promise(r=>setTimeout(r,1700));
-   for(const e of card.querySelectorAll('*')){if(e.style.display!=='none'||!e.style.webkitLineClamp)continue;const sib=e.parentElement?[...e.parentElement.children].filter(c=>c!==e):[];
+  for(const f of list){try{await ensureExact(f);await show(f,true)}catch(e){continue}await document.fonts.ready;
+   /* wait for every photo on the card to arrive or fail (up to 12 seconds), then for the fit passes that run on image load */
+   {const t0=Date.now();while(Date.now()-t0<12000&&[...card.querySelectorAll('img')].some(i=>i.getAttribute('src')&&!i.complete))await new Promise(r=>setTimeout(r,150))}
+   await new Promise(r=>setTimeout(r,1700));
+   for(const e of card.querySelectorAll('*')){if(e.style.display!=='none'||!e.style.webkitLineClamp)continue;
+    /* stadium: the title in type ([data-ltype]) is the logo's stand-in, hidden while the logo picture shows; not a dish name */
+    if(e.hasAttribute('data-ltype')){const lp=e.closest('[data-lpanel]'),im=lp&&lp.querySelector('img');if(im&&im.complete&&im.naturalWidth&&im.style.display!=='none')continue}const sib=e.parentElement?[...e.parentElement.children].filter(c=>c!==e):[];
     if(sib.some(c=>price(c.textContent)))out.push(`${f.id}: dish name hidden, "${e.textContent.trim().slice(0,50)}"`)}
    /* review 15: no dish note hidden by a fit pass (campfire and canteen hid them on every film) */
    for(const e of card.querySelectorAll('*')){if(e.style.display!=='none')continue;const note=[...e.attributes].some(a=>a.name==='data-note'||a.name==='data-clamp'||a.name==='data-cnote'||/-note$/.test(a.name))||e.getAttribute('data-fit')==='note';

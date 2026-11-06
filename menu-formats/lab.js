@@ -38,7 +38,7 @@ function logoPanel(ctx,o){
   if(h<34)return {html:`<div style="${o.wrap};background:${o.light};padding:14px 18px">${fb.replace(o.typeInk,o.lightInk)}</div>`};
   const chk="(function(i){try{var c=document.createElement('canvas'),w=c.width=60,h=c.height=Math.max(6,Math.round(60*i.naturalHeight/i.naturalWidth)),x=c.getContext('2d');x.drawImage(i,0,0,w,h);var d=x.getImageData(0,0,w,h).data,s=0,n=0,q=0,l=0;for(var k=0;k<d.length;k+=4){if(d[k+3]>140){var y=.2126*d[k]+.7152*d[k+1]+.0722*d[k+2];s+=y;if(y<95)q++;if(y>170)l++;n++}}if(n&&(s/n<105||q/n>.3&&q>l)){i.parentNode.style.background=i.parentNode.getAttribute('data-light')}}catch(e){}})(this)";
   const err="this.style.display='none';this.nextElementSibling.style.display='block'";
-  return {html:`<div data-light="${o.light}" style="${o.wrap};background:${o.dark};padding:14px 18px"><img crossorigin="anonymous" src="${ctx.img(L[0],"w500")}" alt="${esc(t)}" onload="${chk}" onerror="${err}" style="display:block;width:${Math.round(w)}px;height:${Math.round(h)}px;object-fit:contain"><div style="display:none">${fb}</div></div>`};
+  return {html:`<div data-light="${o.light}" style="${o.wrap};background:${o.dark};padding:14px 18px"><img crossorigin="anonymous" src="${ctx.img(L[0],"w500")}" alt="${esc(t)}" onload="${chk}" onerror="${err}"${o.squash?` data-spare="${o.squash}" data-squash=".6"`:""} style="display:block;width:${Math.round(w)}px;height:${Math.round(h)}px;object-fit:contain"><div style="display:none">${fb}</div></div>`};
 }
 /* in-page fit: shrink a block's em base until it fits its box, then drop optional blocks, clamp notes, hide notes */
 if(!window.__fmtFitLab)window.__fmtFitLab=function(t){
@@ -59,11 +59,14 @@ if(!window.__fmtFitLab)window.__fmtFitLab=function(t){
   const better=(x,y)=>{for(let i=0;i<3;i++){if(Math.abs(x[i]-y[i])>1e-6)return x[i]<y[i]}return false};
   /* the stamp and then the plate tab are the layout's own trim, not the film's: they give way before a film line is hidden */
   const spare=[...face.querySelectorAll("[data-spare]")].sort((a,b)=>+a.dataset.spare-+b.dataset.spare);
-  const run=()=>{spare.forEach(x=>x.style.display="");if(!model||nRows<2){run0();return}let best=null,bk=0,bs=0;
-    for(let g=0;g<=spare.length;g++){if(g)spare[g-1].style.display="none";
+  /* review 16: last of all the film's logo gets smaller (data-squash, a share of its size), it is never hidden: Mad Max 2 with its poster photo in */
+  const give=(x,on)=>{if(x.dataset.squash){if(!x.dataset.w0){x.dataset.w0=parseFloat(x.style.width);x.dataset.h0=parseFloat(x.style.height)}const k=on?+x.dataset.squash:1;
+      x.style.width=Math.round(x.dataset.w0*k)+"px";x.style.height=Math.round(x.dataset.h0*k)+"px"}else x.style.display=on?"none":""};
+  const run=()=>{spare.forEach(x=>give(x,false));if(!model||nRows<2){run0();return}let best=null,bk=0,bs=0;
+    for(let g=0;g<=spare.length;g++){if(g)give(spare[g-1],true);
       for(let k=1;k<nRows;k++){place(k);run0();const sc=score();if(!best||better(sc,best)){best=sc;bk=k;bs=g}}
       if(!best[0])break}
-    spare.forEach((x,i)=>x.style.display=i<bs?"none":"");place(bk);run0()};
+    spare.forEach((x,i)=>give(x,i<bs));place(bk);run0()};
   const run0=()=>{
     face.querySelectorAll("[data-fitw]").forEach(e=>{let s=+e.getAttribute("data-fitw"),n=0;e.style.fontSize=s+"px";const lo=+(e.getAttribute("data-min")||16);while(e.scrollWidth>e.clientWidth+1&&s>lo&&n++<60){s-=1;e.style.fontSize=s+"px"}});
     face.querySelectorAll("[data-fith]").forEach(e=>{let s=+e.getAttribute("data-fith"),n=0;e.style.fontSize=s+"px";const lo=+(e.getAttribute("data-min")||14);while((e.scrollHeight>e.clientHeight+1||e.scrollWidth>e.clientWidth+1)&&s>lo&&n++<60){s-=.5;e.style.fontSize=s+"px"}});
@@ -131,7 +134,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     :(heroSrc?`<img src="${heroSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:${pf}">`:`<div style="position:absolute;inset:0;background:${darkPanel}"></div>`);
   const crop=(pos)=>`<div style="position:absolute;${pos};width:22px;height:22px"></div>`;
   const marks=["top:-10px;left:-10px;border-top:2px solid "+ink+";border-left:2px solid "+ink,"top:-10px;right:-10px;border-top:2px solid "+ink+";border-right:2px solid "+ink,"bottom:-10px;left:-10px;border-bottom:2px solid "+ink+";border-left:2px solid "+ink,"bottom:-10px;right:-10px;border-bottom:2px solid "+ink+";border-right:2px solid "+ink].map(p=>crop(p)).join("");
-  const logo=logoPanel(ctx,{font:D,typeSize:46,typeInk:"#f4f1ea",lightInk:ink,maxW:RW-36,maxH:84,dark:darkPanel,light:"#f6f3ea",
+  const logo=logoPanel(ctx,{font:D,typeSize:46,typeInk:"#f4f1ea",lightInk:ink,maxW:RW-36,maxH:84,squash:3,dark:darkPanel,light:"#f6f3ea",
     wrap:`position:relative;flex:none;align-self:flex-start;max-width:${RW}px;box-sizing:border-box;box-shadow:0 3px 14px rgba(0,0,0,.35);border-radius:${E.head==="line"?8:2}px`});
   const plateTab=`<div data-spare="2" style="flex:none;color:${ink};font:600 15px/1.2 ${B};letter-spacing:.18em;text-transform:uppercase;white-space:nowrap;overflow:hidden;margin-top:12px">Plate A <span style="letter-spacing:.04em;text-transform:none;font-style:italic;font-weight:400">Now showing, ${esc(f.year||"")}</span></div>`;
   const stamp=`<div data-spare="1" style="flex:none;align-self:flex-start;max-width:${RW-12}px;box-sizing:border-box;margin:12px 0 0 6px;transform:rotate(${T.tilt-4}deg);border:3px solid ${acc};color:${acc};font:${E.dw} 18px/1.1 ${D};letter-spacing:.1em;padding:6px 10px 5px;text-transform:uppercase;background:${paper};opacity:.93">${esc(T.stamp)}</div>`;

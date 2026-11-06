@@ -58,6 +58,12 @@
 .feature .ft-acts button{min-height:44px;padding:0 14px;border-radius:22px;border:1px solid var(--brass);background:transparent;color:var(--screen);font:600 14px var(--f-body);cursor:pointer}
 .feature .ft-acts button.go{background:var(--brass);color:#1b1210;border-color:var(--brass)}
 @media (max-width:560px){.feature{grid-template-columns:40px minmax(0,1fr);margin:6px 10px 8px;gap:2px 12px}.feature img,.feature .ft-ph{width:40px;height:60px;grid-row:1/4}.feature .ft-k{grid-column:2;grid-row:1}.feature .ft-t{grid-column:2;grid-row:2}.feature .ft-w{grid-column:2;grid-row:3}.feature .ft-acts{grid-column:1/3;grid-row:4;margin-top:8px;flex-wrap:wrap}.feature .ft-acts button{flex:1 1 auto;padding:0 12px}}
+/* review 16: on a phone the strip took a fifth of the screen above the marquee. The kicker goes (the date line already says Tonight or Tomorrow),
+   the poster is a thumbnail beside two lines, and the three buttons keep their 44px height on one row */
+@media (max-width:560px){.feature{padding:6px 10px;gap:0 10px;grid-template-columns:32px minmax(0,1fr)}.feature .ft-k{display:none}
+  .feature img,.feature .ft-ph{width:32px;height:48px;grid-row:1/3}.feature .ft-t{grid-row:1;font-size:17px}.feature .ft-w{grid-row:2;font-size:12.5px}
+  .feature .ft-acts{grid-row:3;margin-top:6px;flex-wrap:nowrap;gap:6px}.feature .ft-acts button{padding:0 8px;font-size:13.5px;white-space:nowrap}}
+@media (max-width:359px){.feature .ft-acts{flex-wrap:wrap}}
 </style>
 </head>
 <body>
@@ -1920,6 +1926,9 @@ dialog .modal-x:focus-visible{outline:3px solid #ffd23f;outline-offset:2px}
 .week-time{font:inherit;color:var(--screen);background:var(--raise-2);border:1px solid var(--hair);border-radius:8px;padding:3px 6px}
 .week-count{grid-column:2/-1;margin:2px 0 0;font:600 14.5px/1.35 var(--f-body);color:var(--acc)}
 .week-count span{color:var(--soft);font-weight:500}
+/* review 16: in the slim bar the showtime line sits under the buttons at full width (it used to open a second grid column and squeeze the bar) */
+.week.week-slim .week-count{grid-column:1/-1!important;grid-row:auto!important;margin:4px 0 0;font-size:13.5px}
+.week-count [data-next]{margin-left:6px;font:600 13px var(--f-body);padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--screen);cursor:pointer;min-height:36px}
 
 /* phones: the pinned tab bar also covers the status bar zone, so the page never shows through behind the clock */
 @media (max-width:820px){.top{padding-top:calc(8px + env(safe-area-inset-top,0px));background:rgb(18,6,8)}}
@@ -3049,9 +3058,9 @@ html,body{overflow-x:clip}
 <script src="ratings.js?v=dfb01117" defer></script>
 <script src="aisles.js?v=5e921379" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
-<script src="films.js?v=37addca8" defer></script>
-<script src="formats-core.js?v=f1d246b9" defer></script>
-<script src="app.js?v=379b7282" defer></script>
+<script src="films.js?v=345d8e95" defer></script>
+<script src="formats-core.js?v=3317f823" defer></script>
+<script src="app.js?v=b83e2b4b" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">
