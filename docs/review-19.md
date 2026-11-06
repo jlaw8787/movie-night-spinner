@@ -146,3 +146,10 @@ The calendar panel still opens with focus on Done, the status line announces the
    - Rocky IV: make-aheads due on different days keep their own reminders (calPlan before and before2): the pickles four days before, the mule the night before, two alarms, two Google links, two panel rows. Case in tests/calendar.test.cjs.
    - The Godfather: a dish with its own comma takes its time in brackets, "Longest on the night: Rigatoni, Sunday gravy (2 hr)" (calLong). Case in tests/calendar.test.cjs.
    - Drop shadows: see fix 1.
+
+Found by the full check-print-text run over all 900 with the new rules (each fails on e176cf8, passes now):
+- Pulp Fiction: three prices ran 7 to 16px past their column (one-line names). fitLines now steps a one-line name down (never under 65%) in a flex row that runs past its edge; rows that fit are untouched.
+- Cafe chalk headings (Heat, Notting Hill, Muriel's Wedding, Runaway Bride, Another 48 Hrs.): a grain mask on lettering cannot be drawn, so the print copy drops it and the words print plain.
+- Three Men and a Baby: the sign's nail and strings sat on "We deliver, all night, every night": they hang 8px lower.
+- Money Train: the guest check sat on the drink note's descenders: the drink block sits 6px higher.
+- Midnight Cowboy: the bus ticket over the end of the caption: 8px higher.
