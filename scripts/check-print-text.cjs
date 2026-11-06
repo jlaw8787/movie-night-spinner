@@ -76,12 +76,36 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
      const ox=Math.min(a.r,b.r)-Math.max(a.l,b.l),oy=Math.min(a.b,b.b)-Math.max(a.t,b.t);if(ox>3*k&&oy>3*k)res.push(`${f.id}: text runs into other text, "${a.txt}" over "${b.txt}"`)}
     return [...new Set(res)]};
    /* review 19: a price pushed past the right edge of its column by a long dish name (Home Alone 2's "4.50" beside "Hot apple sparkling apple juice") */
-   const priceOut=()=>{const res=[],k=card.getBoundingClientRect().width/(card.offsetWidth||1)||1;for(const e of card.querySelectorAll('*')){if(e.children.length||!price(e.textContent)||!/\d/.test(e.textContent))continue;
+   const priceOut=()=>{const res=[],k=card.getBoundingClientRect().width/(card.offsetWidth||1)||1;for(const e of card.querySelectorAll('*')){if(e.children.length||!/^\s*[$£€]?\d{1,3}([.,]\d{2})?\s*$/.test(e.textContent)||!/[$£€]|[.,]\d\d/.test(e.textContent))continue;
      const cs=getComputedStyle(e);if(cs.display==='none'||cs.visibility==='hidden'||e.closest('[style*="display: none"]')||e.closest('[aria-hidden="true"]'))continue;const p=e.parentElement;if(!p)continue;
      const pc=getComputedStyle(p);if(!/flex|grid|block/.test(pc.display))continue;const rg=document.createRange();rg.selectNodeContents(e);const rs=[...rg.getClientRects()].filter(r=>r.width>1);if(!rs.length)continue;
      const pr=p.getBoundingClientRect(),edge=pr.right-(parseFloat(pc.paddingRight)+parseFloat(pc.borderRightWidth))*k,over=Math.max(...rs.map(r=>r.right))-edge;
      if(over>2*k)res.push(`${f.id}: price runs ${Math.round(over/k)}px past its column, "${e.textContent.trim()}" beside "${p.textContent.replace(e.textContent,'').trim().slice(0,40)}"`)}return res};
    {const p1=priceOut();if(p1.length){await new Promise(r=>setTimeout(r,2000));const p2=new Set(priceOut().map(m=>m.replace(/\d+px/,'')));out.push(...p1.filter(m=>p2.has(m.replace(/\d+px/,''))))}}
+   /* review 19: words with a filled box laid over their edge (Beetlejuice's "Pressed lemons, cane sugar, soda water." sat on the House Rule bar,
+      its descenders under the bar). A box later on the page, with a fill of its own, that covers part of a line's ink. The box's real turned shape is used */
+   const coverList=()=>{const res=[],k=card.getBoundingClientRect().width/(card.offsetWidth||1)||1,all=[...card.querySelectorAll('*')],idx=new Map(all.map((e,i)=>[e,i])),covers=[];
+    for(const e of all){const cs=getComputedStyle(e);if(!/absolute|fixed/.test(cs.position)||cs.display==='none'||cs.visibility==='hidden'||+cs.opacity<.5||e.closest('[aria-hidden="true"]')||e.closest('[style*="display: none"]'))continue;
+     const m=cs.backgroundColor.match(/rgba?\(([^)]*)\)/),q=m?m[1].split(/[\s,/]+/).filter(Boolean).map(Number):[];if(!(q.length===3||q[3]>=.6))continue;if(!e.offsetWidth||!e.offsetHeight)continue;
+     const r=e.getBoundingClientRect(),mt=new DOMMatrix(cs.transform==='none'?undefined:cs.transform),w=e.offsetWidth*k/2,h=e.offsetHeight*k/2,cx=r.left+r.width/2,cy=r.top+r.height/2;
+     const pts=[[-w,-h],[w,-h],[w,h],[-w,h]].map(([x,y])=>[cx+mt.a*x+mt.c*y,cy+mt.b*x+mt.d*y]);
+     /* a box clipped by a parent that hides its overflow only covers what shows (a corner diamond cut by its panel, hazard stripes in their band) */
+     let cl={l:-1e9,t:-1e9,r:1e9,b:1e9};for(let p=e.parentElement;p&&p!==card.parentElement;p=p.parentElement){const pc=getComputedStyle(p);if(/hidden|clip/.test(pc.overflow+pc.overflowX+pc.overflowY)){const q=p.getBoundingClientRect();cl={l:Math.max(cl.l,q.left),t:Math.max(cl.t,q.top),r:Math.min(cl.r,q.right),b:Math.min(cl.b,q.bottom)}}}
+     const br=cs.borderTopLeftRadius,round=/%$/.test(br)?parseFloat(br)>=40:parseFloat(br)>=Math.min(e.offsetWidth,e.offsetHeight)*.4;covers.push({e,i:idx.get(e),pts,round,cx,cy,rw:w,rh:h,r:{left:Math.max(r.left,cl.l),top:Math.max(r.top,cl.t),right:Math.min(r.right,cl.r),bottom:Math.min(r.bottom,cl.b)},cl})}
+    /* the vertical span of the turned box at one x */
+    const span=(pts,x)=>{const ys=[];for(let i=0;i<4;i++){const [x1,y1]=pts[i],[x2,y2]=pts[(i+1)%4];if((x-x1)*(x-x2)<=0&&x1!==x2)ys.push(y1+(y2-y1)*(x-x1)/(x2-x1))}return ys.length>=2?[Math.min(...ys),Math.max(...ys)]:null};
+    for(const e of all){if(e.closest('[aria-hidden="true"]'))continue;const own=[...e.childNodes].filter(n=>n.nodeType===3).map(n=>n.textContent).join('').trim();if(own.length<3)continue;
+     const cs=getComputedStyle(e);if(cs.visibility==='hidden'||cs.display==='none'||+cs.opacity<.2||e.closest('[style*="display: none"]'))continue;
+     /* the letters' own ink, from the browser's measure of this text in its font: capitals with no descenders end on the baseline */
+     const M=(()=>{const cx2=(window.__inkCx=window.__inkCx||document.createElement('canvas').getContext('2d'));cx2.font=`${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+      const tt=cs.textTransform==='uppercase'?own.toUpperCase():own,m=cx2.measureText(tt);return {fa:m.fontBoundingBoxAscent,fd:m.fontBoundingBoxDescent,as:m.actualBoundingBoxAscent,ds:m.actualBoundingBoxDescent}})();
+     const rs=[];for(const n of e.childNodes){if(n.nodeType!==3||!n.textContent.trim())continue;const rg=document.createRange();rg.selectNodeContents(n);rs.push(...[...rg.getClientRects()].filter(r=>r.width>2&&r.height>2))}
+     for(const c of covers){if(c.i<=idx.get(e)||c.e.contains(e)||e.contains(c.e))continue;const zc=getComputedStyle(c.e).zIndex,ze=(()=>{for(let a=e;a&&a!==card;a=a.parentElement){const z=getComputedStyle(a).zIndex;if(z!=='auto')return +z}return 0})();if(zc!=='auto'&&+zc<ze)continue;
+      for(const r of rs){if(r.right<c.r.left||r.left>c.r.right||r.bottom<c.r.top||r.top>c.r.bottom)continue;const fh=(M.fa+M.fd)*k,base=r.top+(r.height-fh)/2+M.fa*k,t=base-M.as*k,b=base+M.ds*k;
+       let worst=0;for(let x=Math.max(r.left,c.r.left)+1;x<=Math.min(r.right,c.r.right)-1;x+=4){const s0=c.round?(()=>{const u=(x-c.cx)/c.rw;if(Math.abs(u)>=1)return null;const d=c.rh*Math.sqrt(1-u*u);return [c.cy-d,c.cy+d]})():span(c.pts,x);if(!s0)continue;const s=[Math.max(s0[0],c.cl.t),Math.min(s0[1],c.cl.b)];if(s[1]<=s[0])continue;const ov=Math.min(b,s[1])-Math.max(t,s[0]);if(ov>worst&&ov<(b-t)-.5)worst=ov}
+       if(worst>3*k){res.push(`${f.id}: a box covers ${Math.round(worst/k)}px of "${own.slice(0,40)}"`);break}}}}
+    return [...new Set(res)]};
+   {const c1=coverList();if(c1.length){await new Promise(r=>setTimeout(r,2000));const c2=new Set(coverList().map(m=>m.replace(/\d+px/,'')));out.push(...c1.filter(m=>c2.has(m.replace(/\d+px/,''))))}}
    {const o1=overList();if(o1.length){await new Promise(r=>setTimeout(r,2000));const o2=new Set(overList());out.push(...o1.filter(m=>o2.has(m)))}}
    /* a layout's fit pass can still be settling when a long run reaches it: a cut is only reported if it is still there two seconds later */
    {const key=m=>m.replace(/\d+px/,'');let c1=cutList();if(c1.length){await new Promise(r=>setTimeout(r,2000));const c2=cutList(),k2=new Set(c2.map(key));out.push(...c2.filter(m=>new Set(c1.map(key)).has(key(m))))}}
