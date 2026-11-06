@@ -83,7 +83,7 @@ Marks off:
 - Low: in Galaxy Video the hanging aisle signs measure 113x35 down to 39x11 on the phone, and the Unwatched and Kids toggles 48x28. These were there before and the store has its own tap check (scripts/check-store-taps.cjs), so I have not marked them hard.
 
 ### 5. Core flow: 9.5
-Review 19's one mark is fixed. Rocky IV, after "Move to Sat 14 Nov": start cooking 5:35pm ("Longest on the night: Moscow blini, 1 hr 25 min"), "Four days before: Log cabin pickles" at Tue 10 Nov 6pm and "The night before: Drago's Siberian cranberry vodka mule" at Fri 13 Nov 6pm, three alarms in the .ics (-PT1H25M, -P4DT1H, -P1DT1H) and four Google links (14). Psycho's too-late flow still reads as review 19 described. Held short of 10 because the .ics is still untried on real phones and calendars.
+Review 19's one mark is fixed. Rocky IV, after "Move to Sat 14 Nov": start cooking 5:35pm ("Longest on the night: Moscow blini, 1 hr 25 min"), "Four days before: Log cabin pickles" at Tue 10 Nov 6pm and "The night before: Drago's Siberian cranberry vodka mule" at Fri 13 Nov 6pm, three alarms in the .ics (-PT1H25M, -P4DT1H, -P1DT1H) and four Google links (14). Psycho's too-late note, greyed row and move button read as review 19 described; I did not re-read its shopping list or .ics, as nothing in that path changed apart from the row's layout. Held short of 10 because the .ics is still untried on real phones and calendars.
 
 ### 6. Candy bar: 9
 Walked on phone and desktop: no sideways scroll, no errors, combos and glass case scroll sideways on the phone (04). Photo credit links are 18px text links, as before. Held at 9.
