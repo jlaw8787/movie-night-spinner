@@ -75,6 +75,13 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
     for(let i=0;i<boxes.length;i++)for(let j=i+1;j<boxes.length;j++){const a=boxes[i],b=boxes[j];if(a.e===b.e||a.e.contains(b.e)||b.e.contains(a.e))continue;
      const ox=Math.min(a.r,b.r)-Math.max(a.l,b.l),oy=Math.min(a.b,b.b)-Math.max(a.t,b.t);if(ox>3*k&&oy>3*k)res.push(`${f.id}: text runs into other text, "${a.txt}" over "${b.txt}"`)}
     return [...new Set(res)]};
+   /* review 19: a price pushed past the right edge of its column by a long dish name (Home Alone 2's "4.50" beside "Hot apple sparkling apple juice") */
+   const priceOut=()=>{const res=[],k=card.getBoundingClientRect().width/(card.offsetWidth||1)||1;for(const e of card.querySelectorAll('*')){if(e.children.length||!price(e.textContent)||!/\d/.test(e.textContent))continue;
+     const cs=getComputedStyle(e);if(cs.display==='none'||cs.visibility==='hidden'||e.closest('[style*="display: none"]')||e.closest('[aria-hidden="true"]'))continue;const p=e.parentElement;if(!p)continue;
+     const pc=getComputedStyle(p);if(!/flex|grid|block/.test(pc.display))continue;const rg=document.createRange();rg.selectNodeContents(e);const rs=[...rg.getClientRects()].filter(r=>r.width>1);if(!rs.length)continue;
+     const pr=p.getBoundingClientRect(),edge=pr.right-(parseFloat(pc.paddingRight)+parseFloat(pc.borderRightWidth))*k,over=Math.max(...rs.map(r=>r.right))-edge;
+     if(over>2*k)res.push(`${f.id}: price runs ${Math.round(over/k)}px past its column, "${e.textContent.trim()}" beside "${p.textContent.replace(e.textContent,'').trim().slice(0,40)}"`)}return res};
+   {const p1=priceOut();if(p1.length){await new Promise(r=>setTimeout(r,2000));const p2=new Set(priceOut().map(m=>m.replace(/\d+px/,'')));out.push(...p1.filter(m=>p2.has(m.replace(/\d+px/,''))))}}
    {const o1=overList();if(o1.length){await new Promise(r=>setTimeout(r,2000));const o2=new Set(overList());out.push(...o1.filter(m=>o2.has(m)))}}
    /* a layout's fit pass can still be settling when a long run reaches it: a cut is only reported if it is still there two seconds later */
    {const key=m=>m.replace(/\d+px/,'');let c1=cutList();if(c1.length){await new Promise(r=>setTimeout(r,2000));const c2=cutList(),k2=new Set(c2.map(key));out.push(...c2.filter(m=>new Set(c1.map(key)).has(key(m))))}}
@@ -86,8 +93,13 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
    const norm=t=>t.toLowerCase().replace(/[^a-z0-9]+/g,'');
    const visTexts=root=>{const o=[];for(const e of root.querySelectorAll('*')){if(e.closest('[aria-hidden="true"]'))continue;const own=[...e.childNodes].filter(n=>n.nodeType===3).map(n=>n.textContent).join(' ').trim();if(own.length<3)continue;
      const cs=getComputedStyle(e);if(cs.visibility==='hidden'||cs.display==='none'||+cs.opacity===0||e.closest('[style*="display: none"]'))continue;const n=norm(own);if(n.length>=3)o.push([n,own.slice(0,50)])}return o};
+   /* review 19: Coming to America's rounded card printed on a white border, so its navy frame came out in the edge colour with white corners.
+      A card whose outer corners are rounded must print on the surround the screen shows */
+   const wall=!faces.length&&card.classList.contains('fmt')?[...card.children].find(c=>!c.classList.contains('fx-back')&&getComputedStyle(c).display!=='none'):null,
+    surround=wall&&parseFloat(getComputedStyle(wall).borderTopLeftRadius)>=8?getComputedStyle(card).backgroundColor:null;
    for(const s of srcs){seen=null;const want=visTexts(s);try{await renderCanvas(s,true)}catch(e){out.push(`${f.id}: export failed, ${e}`)}if(s!==card)s.remove();if(!seen)continue;
     const st=document.createElement('div');st.style.cssText='position:fixed;left:-20000px;top:0';st.appendChild(seen);document.body.appendChild(st);
+    if(surround&&s===card){const bg=getComputedStyle(seen).backgroundColor;if(bg!==surround)out.push(`${f.id}: rounded card prints on ${bg}, not the screen's surround ${surround}`)}
     {const got=visTexts(seen).map(x=>x[0]).join('|');for(const [n,t] of want)if(!got.includes(n))out.push(`${f.id}: text missing from the Save PDF copy, "${t}"`)}
     for(const el of seen.querySelectorAll('*')){const cs=getComputedStyle(el);
      if(/^inline-(block|flex)$/.test(cs.display)&&el.textContent.trim()&&(solid(cs.backgroundColor)||cs.backgroundImage!=='none')&&[...el.children].some(c=>/^(block|flex|grid|table)$/.test(getComputedStyle(c).display)))out.push(`${f.id}: filled ${cs.display} with text, "${el.textContent.trim().slice(0,40)}"`);
@@ -106,7 +118,15 @@ const server=spawn('python3',['-m','http.server',String(port),'--bind','127.0.0.
        return L.some((g,i)=>/^radial-gradient/.test(g)&&/^[\d.]+px [\d.]+px$/.test((Z[i]||'').trim())&&parseFloat(Z[i])<=400)})()&&el.offsetWidth)out.push(`${f.id}: small radial tile left for html2canvas`);
      /* review 18: a ring frame the copy lays over a box must sit on that box (Despicable Me 2's logo ring framed the whole column) */
      if(el.tagName==='I'&&cs.position==='absolute'&&parseFloat(cs.borderTopWidth)>0&&el.parentElement&&el.offsetParent&&el.offsetParent!==el.parentElement)out.push(`${f.id}: export frame laid on the wrong box (${el.offsetWidth}x${el.offsetHeight})`);
-     const mk=cs.webkitMaskImage||cs.maskImage;if(mk&&mk!=='none'&&(el.querySelector('img')||/url\(/.test(cs.backgroundImage)))out.push(`${f.id}: masked photo left for the PDF`)}
+     const mk=cs.webkitMaskImage||cs.maskImage;if(mk&&mk!=='none'&&(el.querySelector('img')||/url\(/.test(cs.backgroundImage)))out.push(`${f.id}: masked photo left for the PDF`);
+     /* review 19: html2canvas skips CSS masks, so a masked box holding words prints solid (every hotel door hanger lost its hole, airline tickets
+        their punched notches): in the copy it is handed, the mask must already be baked into a picture */
+     else if(mk&&mk!=='none'&&el.textContent.trim()&&el.offsetWidth)out.push(`${f.id}: mask left for html2canvas on a box with text, "${el.textContent.trim().slice(0,40)}"`);
+     /* review 19: at print scale html2canvas pushes every outer box shadow off the page (canvas shadow offsets are not scaled), and it skips
+        drop-shadow filters, so lifted photos, trays and stamps printed flat: both must already be pictures in the copy */
+     if(el.offsetWidth&&cs.boxShadow&&cs.boxShadow!=='none'&&cs.boxShadow.split(/,(?![^(]*\))/).some(sh=>{if(/\binset\b/.test(sh)||/rgba\([^)]*,\s*0\)/.test(sh))return false;const n=(sh.replace(/rgba?\([^)]*\)/g,'').match(/-?[\d.]+px/g)||[]).map(parseFloat);return n.length>=3&&(n[0]||n[1]||n[2])}))
+      out.push(`${f.id}: outer shadow left for html2canvas (${el.offsetWidth}x${el.offsetHeight})`);
+     if(el.offsetWidth&&el.tagName!=='IMG'&&/drop-shadow/.test(cs.filter||''))out.push(`${f.id}: drop-shadow filter left for html2canvas (${el.offsetWidth}x${el.offsetHeight})`)}
     st.remove()}}
   return {n:list.length,out:[...new Set(out)]}},[N,NAMED]);
  console.log(`${r.n} printed menus read`);if(r.out.length){console.log(r.out.join('\n'));console.log('FAIL');process.exit(1)}

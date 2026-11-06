@@ -14,12 +14,14 @@
 <link rel="apple-touch-icon" href="assets/app/apple-touch-icon.png">
 <style>html{-webkit-text-size-adjust:100%;text-size-adjust:100%}[hidden]{display:none!important}body{margin:0}img{max-width:100%}.planner{margin:0 0 12px;padding:12px 14px;border:1px solid rgba(231,192,105,.35);border-radius:10px;background:rgba(18,6,10,.6);color:#f4e6c8;font-size:15px}
 .pl-row{display:flex;align-items:center;gap:10px;margin-bottom:6px}.pl-l{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px}
-.pl-b{width:36px;height:36px;border-radius:50%;border:1px solid #e7c069;background:transparent;color:#e7c069;font-size:20px;line-height:1;cursor:pointer}
+.pl-b{width:44px;height:44px;border-radius:50%;border:1px solid #e7c069;background:transparent;color:#e7c069;font-size:22px;line-height:1;cursor:pointer;flex:none}
 .pl-g{min-width:2ch;text-align:center;font-size:20px;font-weight:700}.pl-hint{margin:2px 0 8px;opacity:.75;font-size:13px}
 .pl-c{border:0;padding:0;margin:0 0 6px}.pl-c legend{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#e7c069;padding:0}
-.pl-d{display:flex;align-items:center;gap:8px;padding:5px 0;cursor:pointer}.pl-d input{width:20px;height:20px;accent-color:#e7c069}.pl-d span{flex:1}.pl-d small{opacity:.7;font-size:12px}
+.pl-d{display:flex;flex-wrap:wrap;align-items:center;gap:2px 8px;min-height:44px;box-sizing:border-box;padding:5px 0;cursor:pointer}.pl-d input{width:20px;height:20px;accent-color:#e7c069;flex:none}.pl-d span{flex:1 1 11em;min-width:0}.pl-d small{opacity:.7;font-size:12px;margin-left:auto;text-align:right}
+/* review 19: on a phone a long wait ("17 min + 7 days wait, start 7 days before") squeezed the dish name to three lines: the time wraps under the name instead, and a too-late tag sits on its own line */
+@media (max-width:600px){.pl-late .pl-tag{display:table;margin:3px 0 0}}
 .pp-time{display:block;font-size:.8em;opacity:.75;margin:1px 0 2px}
-.pl-diet{flex-wrap:wrap;gap:8px 16px}.pl-t{display:inline-flex;align-items:center;gap:8px;min-height:36px;cursor:pointer;font-size:14px}.pl-t input{width:20px;height:20px;accent-color:#e7c069}
+.pl-diet{flex-wrap:wrap;gap:8px 16px}.pl-t{display:inline-flex;align-items:center;gap:8px;min-height:44px;cursor:pointer;font-size:14px}.pl-t input{width:20px;height:20px;accent-color:#e7c069}
 .pl-tag{display:inline-block;margin-left:8px;padding:1px 7px;border-radius:9px;font-style:normal;font-size:11px;letter-spacing:.04em;background:rgba(231,192,105,.18);color:#e7c069;vertical-align:1px}.pl-no{background:rgba(255,255,255,.08);color:#cdbfa6}
 .pl-late{cursor:default}.pl-late>span{opacity:.75}.pl-late-note{margin:4px 0 10px;padding:8px 10px;border-left:4px solid #c4552d;background:rgba(196,85,45,.14);font-size:13px;line-height:1.4}
 .pl-move{display:block;margin-top:8px;min-height:44px;padding:0 16px;border-radius:22px;border:1px solid #e7c069;background:transparent;color:#e7c069;font:inherit;font-weight:700;cursor:pointer}
@@ -3067,9 +3069,9 @@ html,body{overflow-x:clip}
 <script src="ratings.js?v=dfb01117" defer></script>
 <script src="aisles.js?v=5e921379" defer></script>
 <script src="providers.js?v=ea95ab4b" defer></script>
-<script src="films.js?v=02b98411" defer></script>
-<script src="formats-core.js?v=2c706a2a" defer></script>
-<script src="app.js?v=ceb0ad88" defer></script>
+<script src="films.js?v=984d46b0" defer></script>
+<script src="formats-core.js?v=632fd452" defer></script>
+<script src="app.js?v=df7d6368" defer></script>
 
 <dialog class="trolley settings" id="settings" aria-label="Settings" data-keep>
   <div class="trolley-in">

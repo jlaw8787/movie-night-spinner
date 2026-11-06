@@ -61,6 +61,18 @@ p=calPlan(show,[{n:"Mother's pickled onions",active:30,wait:10080,night:0,words:
 assert.equal(ymd(p.before.at),'2026-10-31');assert.equal(hm(p.before.at),'18:00');
 {const n=unescNotes(calICS({title:'Psycho',show,plan:p,url:'u',uid:'x@y',now:at(2026,10,1)}));
   assert.match(n,/A week before, from Sat 31 Oct 6pm: Mother's pickled onions, 7 days to soak\./);assert.doesNotMatch(n,/168 hr|The day before/)}
+// review 19: Rocky IV moved a week on: pickles four days ahead and a vodka mule frozen the night before keep two reminders, each on its own day.
+p=calPlan(show,[{n:'Drago pickles',active:20,wait:5760,night:0,words:'to pickle'},{n:'Vodka mule',active:5,wait:720,night:5,over:true},{n:'Steak',active:40,wait:0}]);
+assert.deepEqual(p.before.dishes.map(d=>d.n),['Drago pickles']);assert.ok(p.before2,'second prep-ahead reminder');assert.deepEqual(p.before2.dishes.map(d=>d.n),['Vodka mule']);
+assert.equal(ymd(p.before2.at),'2026-11-6');assert.equal(hm(p.before2.at),'18:00');assert.notEqual(ymd(p.before.at),ymd(p.before2.at));
+{const ics=calICS({title:'Rocky IV',show,plan:p,url:'u',uid:'x@y',now:at(2026,10,1)}),n=unescNotes(ics);assert.equal((ics.match(/BEGIN:VALARM/g)||[]).length,3,'start cooking and two prep-ahead alarms');
+  assert.match(n,/The night before, from Fri 6 Nov 6pm: Vodka mule/);assert.match(n,/days before, from .*: Drago pickles/)}
+assert.equal(calGoogle({title:'Rocky IV',show,plan:p,url:'u'}).length,4);
+// review 19: The Godfather's dish has a comma of its own, so its time goes in brackets.
+{const q=calPlan(show,[{n:'Rigatoni, Sunday gravy',active:120,wait:0}]),t=unescNotes(calICS({title:'The Godfather',show,plan:q,url:'u',uid:'x@y',now:at(2026,10,1)}));
+  assert.match(t,/longest on the night: Rigatoni, Sunday gravy \(2 hr\)/);assert.doesNotMatch(t,/gravy, 2 hr/)}
+// Two make-aheads due the same day stay one reminder.
+p=calPlan(show,[{n:'Brine',active:0,wait:1980},{n:'Jelly',active:10,wait:720,over:true}]);assert.equal(p.before2,null);assert.equal(p.before.dishes.length,2);
 {const calAhead=fnOf('calAhead');const d=(y,m,dd,h)=>calAhead(show,at(y,m,dd,h));
   assert.equal(d(2026,10,6,18),'The night before');assert.equal(d(2026,10,6,10),'The day before');assert.equal(d(2026,10,5,18),'Two days before');
   assert.equal(d(2026,10,3,18),'Four days before');assert.equal(d(2026,9,31,18),'A week before')}

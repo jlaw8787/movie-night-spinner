@@ -1383,7 +1383,8 @@ function prepWhen(f,ds,TT){if(typeof week==="undefined"||!week||(week.id!==f.id&
   try{const show=weekShow(),now=new Date(),live=show>now,p=calPlan(show,calDishes(f),live?now:undefined);
     const when=d=>weekDateKey(d)===weekDateKey(show)?calClock(d):`${calDay(d)} ${calClock(d)}`;
     const out=[`Showtime ${calClock(show)}`,p.startNow?"start cooking now":`start cooking ${when(p.start)}`,p.early?(p.early.now?"make ahead now":`make ahead from ${calClock(p.early.at)}`):"",
-      p.before?(p.before.now?"prep ahead now":`prep ahead ${calDay(p.before.at)} ${calClock(p.before.at)}`):""].filter(Boolean);
+      p.before?(p.before.now?"prep ahead now":`prep ahead ${calDay(p.before.at)} ${calClock(p.before.at)}`):"",
+      p.before2?(p.before2.now?"prep ahead now":`prep ahead ${calDay(p.before2.at)} ${calClock(p.before2.at)}`):""].filter(Boolean);
     /* review 17: a make-ahead that no longer fits before this showtime is said in words, under the chips */
     if(p.late)out.late=planLateText(p);return out}catch(e){return []}}
 /* review 18: on the planner and Prep sheet a too-late dish is already off the plan and on the list as ready-made */
@@ -1498,6 +1499,8 @@ const KDRY=(()=>{const cap=(m,v)=>v&&/[A-Z]{2}/.test(m)&&m===m.toUpperCase()?v.t
    r(/(?<!(shrimp|prawn|seafood|crab|lobster|fruit) )\bcocktails?\b(?! (franks?|onions?|sauce|sausages?|frankfurts?|cups?|cherr(y|ies)|sticks?|dressing))/gi,"mocktail"),r(/\b(champagne|prosecco|sparkling wine|bubbly)\b/gi,"sparkling apple"),
    r(/\b(red |white |rosé |rose )?wines?\b(?! glass)/gi,"grape juice"),r(/\balcohol-free (beers?|lagers?|ales?) and lemonade\b/gi,"lemon squash"),r(/\balcohol-free (beer|lager|stout|ale) batter\b/gi,"soda water batter"),r(/\b(cold |ice-cold )?alcohol-free (beers?|lagers?|stouts?|ales?)\b(?! (and (cheese|cheddar|mustard|onions?)|or|sauce|gravy|glaze|marinade|cheese|cheddar|mustard)\b)/gi,"ginger beer"),r(/\b(?<!(root|ginger|butter|alcohol-free) )(beers?|lagers?|ales?|stouts?|longnecks?|stubbies|tinnies|guinness)\b/gi,"root beer"),
    r(new RegExp("\\b(beside|with) (a |some )?(frozen |cold |ice-cold |chilled )?(shots? of )?("+W+"|absinthe|grog)s?\\b","gi"),(m,a)=>a.toLowerCase()+" a cold drink"),r(new RegExp("\\b(pour|serve|open|crack open|hand round) the ("+W+"|absinthe|grog)s?\\b","gi"),(m,a)=>cap(m,a.toLowerCase()+" the drinks")),r(new RegExp("\\ba (bottle|glass|shot|pint|jug|can|flask|round) of ("+W+"|absinthe|grog)\\b","gi"),(m,a)=>"a "+a.toLowerCase()+" of lemonade"),r(/\b(green )?absinthe\b/gi,"green cordial"),r(/\bgrog\b/gi,"fruit punch"),
+   /* review 19: "Hot apple cider" read "Hot apple sparkling apple juice" (Home Alone 2): the apple is already named, and a hot one is not sparkling */
+   r(/\b(hot|warm|warmed|mulled|spiced) (spiced )?apple ciders?\b/gi,(m,a)=>cap(m,a.toLowerCase()+" spiced apple juice")),r(/\b(hot|warm|mulled) ciders?\b/gi,(m,a)=>cap(m,a.toLowerCase()+" spiced apple juice")),r(/\b(apple|pear) ciders?\b/gi,(m,a)=>cap(m,"sparkling "+a.toLowerCase()+" juice")),
    r(/\bciders?\b/gi,"sparkling apple juice"),
    /* review 12: hand-built drink names. A Manhattan is the drink only beside a cocktail, a cherry, a spirit or a price, never the island */
    ...[/\b(bourbon |rye |whisk(?:e)?y )?Manhattan (cock|mock)tails?\b/gi,/\bManhattans?(?=\s*\$?\d+\.\d\d\b)/g,/\b(bourbon|rye|whisk(?:e)?y) Manhattans?\b/gi,/\bManhattans?(?= with a cherry)/g,/^\s*Manhattans?\s*$/g].map(re=>[re,(m,...a)=>{const str=a[a.length-1],off=a[a.length-2],v=typeof off==="number"&&(off===0||/[.:!?]\s*$/.test(str.slice(0,off)))?"Cherry cola":"cherry cola";return /[A-Z]{2}/.test(m)&&m===m.toUpperCase()?v.toUpperCase():v}]),
@@ -1962,14 +1965,20 @@ function calPlan(show,dishes,now){
   const aheadD=long.filter(d=>d.over||d.wait>=600||latest(d)<day8);
   const earlyD=long.filter(d=>!aheadD.includes(d)&&latest(d)<start);
   let before=null,early=null,late=null,first="";
-  if(aheadD.length){const l=new Date(Math.min(...aheadD.map(d=>latest(d).getTime())));
+  const aheadAt=ds=>{const l=new Date(Math.min(...ds.map(d=>latest(d).getTime())));
     /* 6pm on the latest day that still fits, and never later than 6pm the night before */
     let at=new Date(Math.min(l.getTime(),new Date(l.getFullYear(),l.getMonth(),l.getDate(),18,0,0,0).getTime(),new Date(show.getFullYear(),show.getMonth(),show.getDate()-1,18,0,0,0).getTime()));at.setMinutes(Math.floor(at.getMinutes()/15)*15,0,0);
     /* nobody wants a 3am alarm: a start in the small hours moves to 6pm the evening before */
     if(at.getHours()<8)at=new Date(at.getFullYear(),at.getMonth(),at.getDate()-1,18,0,0,0);
     /* the planned time has gone but the wait still fits: start now */
     if(soon&&at<soon)at=soon>l?new Date(Math.ceil(now.getTime()/6e4)*6e4):soon;
-    before={at,dishes:aheadD,now:!!(soon&&at<=soon)}}
+    return {at,dishes:ds,now:!!(soon&&at<=soon)}};
+  let before2=null;
+  if(aheadD.length){before=aheadAt(aheadD);
+    /* review 19: make-aheads due on different days keep their own reminders. Rocky IV moved a week on put the vodka mule (the night before)
+       in with the pickles four days early: the first reminder holds the dishes due that day, the second the rest, on its own day */
+    const dk=x=>x.getFullYear()+"-"+x.getMonth()+"-"+x.getDate(),one=aheadD.filter(d=>dk(aheadAt([d]).at)===dk(before.at)),rest=aheadD.filter(d=>!one.includes(d));
+    if(rest.length&&one.length){before=aheadAt(one);before2=aheadAt(rest);if(dk(before2.at)===dk(before.at)){before=aheadAt(aheadD);before2=null}}}
   if(earlyD.length){let at=new Date(Math.min(...earlyD.map(d=>latest(d).getTime())));at.setMinutes(Math.floor(at.getMinutes()/15)*15,0,0);
     if(soon&&at<soon)at=soon;
     /* review 17: a make-ahead alarm within 45 minutes of start cooking is one alarm: start cooking moves to it and names that dish first */
@@ -1977,7 +1986,7 @@ function calPlan(show,dishes,now){
   if(lateD.length){const wk=k=>{const x=new Date(show);x.setDate(x.getDate()+7*k);return x};let k=1;
     while(k<52&&lateD.some(d=>new Date(wk(k).getTime()-((d.active||0)+(d.wait||0))*6e4)<now))k++;
     late={dishes:lateD,next:wk(k)}}
-  return {lead,dish,start,early,before,late,first,startNow:!!(now&&start<now)}}
+  return {lead,dish,start,early,before,before2,late,first,startNow:!!(now&&start<now)}}
 /* how far ahead, in words: "The night before", "Two days before", "A week before" */
 const calAhead=(show,at)=>{const n=Math.round((new Date(show.getFullYear(),show.getMonth(),show.getDate())-new Date(at.getFullYear(),at.getMonth(),at.getDate()))/864e5);
   return n<=0?"Earlier that day":n===1?(at.getHours()>=17?"The night before":"The day before"):n===7?"A week before":n===14?"Two weeks before":(["","","Two","Three","Four","Five","Six"][n]||n)+" days before"};
@@ -1991,19 +2000,23 @@ let calLowAll=false;
 function calMid(names){/* the word list is only kept once every film's dish names are in (dish-names.json loads after the page settles) */
   if(!calLow||!calLowAll){calLowAll=typeof dishesReady!=="undefined"&&dishesReady;calLow=new Set();try{for(const f of FILMS)for(const K of ["S","M","W","K"])for(const r of f[K]||[])String(r[0]||"").split(/\s+/).slice(1).forEach(w=>{if(/^[a-z]/.test(w))calLow.add(w.replace(/[^a-z]/g,""))})}catch(e){}}
   return String(names).split(", ").map(n=>{const w=n.split(/\s+/)[0]||"";if(/['’]s$/i.test(w)||/.[A-Z]/.test(w)||!/^[A-Z][a-z]+$/.test(w.replace(/[,.;:]$/,""))||(calLow.size&&!calLow.has(w.toLowerCase().replace(/[^a-z]/g,""))))return n;return n[0].toLowerCase()+n.slice(1)}).join(", ")}
-function calText(o){const p=o.plan,ah=calList(p.before),ea=calList(p.early);
-  const made=[...(p.before?p.before.dishes:[]),...(p.early?p.early.dishes:[])].map(d=>d.n);
+/* review 19: "Longest on the night: Rigatoni, Sunday gravy, 2 hr" read as three things. A dish with a comma of its own takes its time in brackets */
+const calLong=(n,m)=>/,/.test(n)?`${n} (${calDur(m)})`:`${n}, ${calDur(m)}`;
+function calText(o){const p=o.plan,ah=calList(p.before),ah2=calList(p.before2),ea=calList(p.early);
+  const made=[...(p.before?p.before.dishes:[]),...(p.before2?p.before2.dishes:[]),...(p.early?p.early.dishes:[])].map(d=>d.n);
   /* review 18: "Shower cap swirled meringues takes longest" read wrong with a plural dish, so the dish follows the words */
-  const lead=p.dish?`longest on the night: ${p.dish}, ${calDur(p.lead)}`:"";
+  const lead=p.dish?`longest on the night: ${calLong(p.dish,p.lead)}`:"";
   return {
     title:`Movie night: ${o.title}`,
     cook:`Start cooking for ${o.title}${p.first?` with ${calMid(p.first)}`:""}. Showtime is ${calClock(o.show)}.${lead?` ${lead[0].toUpperCase()+lead.slice(1)}.`:""}${made.length?` Made ahead: ${made.join(", ")}.`:""}`,
     early:p.early?`Make ahead today for ${o.title}: ${ea}.`:"",
     ahead:p.before?`Prep ahead for ${o.title}: ${ah}.`:"",
+    ahead2:p.before2?`Prep ahead for ${o.title}: ${ah2}.`:"",
     late:calLate(p,o),
     notes:[`Showtime ${calClock(o.show)}. Start cooking at ${calClock(p.start)}${p.first?` with ${calMid(p.first)}`:""}${lead?` (${lead})`:""}.`,
       p.early?`Earlier that day, ${p.early.now?"start now":"from "+calClock(p.early.at)}: ${ea}.`:"",
       p.before?`${p.before.now?"Start now":`${calAhead(o.show,p.before.at)}, from ${calDay(p.before.at)} ${calClock(p.before.at)}`}: ${ah}.`:"",
+      p.before2?`${p.before2.now?"Start now":`${calAhead(o.show,p.before2.at)}, from ${calDay(p.before2.at)} ${calClock(p.before2.at)}`}: ${ah2}.`:"",
       calLate(p,o),
       `Menu and Prep sheet: ${o.url}`].filter(Boolean).join("\n")}}
 /* an alarm already due when the file is made is left out (review 17): the panel says "now" instead */
@@ -2012,7 +2025,7 @@ function calICS(o){const t=calText(o),p=o.plan,now=o.now||new Date(),end=new Dat
   const L=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Movie Night Spinner//Movie night//EN","CALSCALE:GREGORIAN","METHOD:PUBLISH",
     "BEGIN:VEVENT",`UID:${o.uid}`,`DTSTAMP:${calUTC(now)}`,`DTSTART:${calUTC(o.show)}`,`DTEND:${calUTC(end)}`,
     `SUMMARY:${calEsc(t.title)}`,`DESCRIPTION:${calEsc(t.notes)}`,`URL:${o.url}`,"TRANSP:OPAQUE",
-    ...(p.startNow?[]:alarm((o.show-p.start)/6e4,t.cook)),...(p.early&&!p.early.now?alarm((o.show-p.early.at)/6e4,t.early):[]),...(p.before&&!p.before.now?alarm((o.show-p.before.at)/6e4,t.ahead):[]),
+    ...(p.startNow?[]:alarm((o.show-p.start)/6e4,t.cook)),...(p.early&&!p.early.now?alarm((o.show-p.early.at)/6e4,t.early):[]),...(p.before&&!p.before.now?alarm((o.show-p.before.at)/6e4,t.ahead):[]),...(p.before2&&!p.before2.now?alarm((o.show-p.before2.at)/6e4,t.ahead2):[]),
     "END:VEVENT","END:VCALENDAR"];
   return L.map(calFold).join("\r\n")+"\r\n"}
 /* Google: one link per event, since an imported file loses its reminders there; nothing for a time already gone */
@@ -2020,7 +2033,8 @@ function calGoogle(o){const t=calText(o),p=o.plan,g=(text,a,b,details)=>"https:/
   const out=[["the night",g(t.title,o.show,new Date(o.show.getTime()+(o.span||150)*6e4),t.notes)]];
   if(!p.startNow)out.push(["start cooking",g(`Start cooking: ${o.title}`,p.start,new Date(p.start.getTime()+15*6e4),t.cook+"\n"+o.url)]);
   if(p.early&&!p.early.now)out.push(["make ahead today",g(`Make ahead: ${o.title}`,p.early.at,new Date(p.early.at.getTime()+15*6e4),t.early+"\n"+o.url)]);
-  if(p.before&&!p.before.now)out.push(["prep ahead",g(`Prep ahead: ${o.title}`,p.before.at,new Date(p.before.at.getTime()+15*6e4),t.ahead+"\n"+o.url)]);return out}
+  if(p.before&&!p.before.now)out.push(["prep ahead",g(`Prep ahead: ${o.title}`,p.before.at,new Date(p.before.at.getTime()+15*6e4),t.ahead+"\n"+o.url)]);
+  if(p.before2&&!p.before2.now)out.push([`prep ahead, ${calAhead(o.show,p.before2.at).toLowerCase()}`,g(`Prep ahead: ${o.title}`,p.before2.at,new Date(p.before2.at.getTime()+15*6e4),t.ahead2+"\n"+o.url)]);return out}
 /* end calendar reminder */
 /* review 16: what is left to do on the night once a dish's long wait is over. The steps after the last wait of 2 hours or more (or one the
    recipe puts overnight) carry that share of the hands-on and cooking time, plus any short wait among them. A dish with no long wait runs whole. */
@@ -2059,9 +2073,10 @@ async function calAdd(trigger){if(!week)return;const f=FILMS.find(x=>x.id===week
   /* a time on another day than the show carries its day (a 12:15am showtime starts cooking 10:45pm the day before) */
   const when=d=>weekDateKey(d)===weekDateKey(show)?calClock(d):`${calDay(d)}, ${calClock(d)}`;
   const rows=[[`${calDay(show)}, ${calClock(show)}`,`Movie night: ${title}`],
-    [plan.startNow?"Now":when(plan.start),`Start cooking${plan.startNow?" now":""}${plan.first?` with ${calMid(plan.first)}`:""}${plan.dish?`. Longest on the night: ${plan.dish}, ${calDur(plan.lead)}`:""}`],
+    [plan.startNow?"Now":when(plan.start),`Start cooking${plan.startNow?" now":""}${plan.first?` with ${calMid(plan.first)}`:""}${plan.dish?`. Longest on the night: ${calLong(plan.dish,plan.lead)}`:""}`],
     ...(plan.early?[[plan.early.now?"Now":when(plan.early.at),`Make ahead${plan.early.now?", start now":""}: ${calList(plan.early)}`]]:[]),
     ...(plan.before?[[plan.before.now?"Now":when(plan.before.at),`${plan.before.now?"Start now, it still fits":calAhead(show,plan.before.at)}: ${calList(plan.before)}`]]:[]),
+    ...(plan.before2?[[plan.before2.now?"Now":when(plan.before2.at),`${plan.before2.now?"Start now, it still fits":calAhead(show,plan.before2.at)}: ${calList(plan.before2)}`]]:[]),
     ...(plan.late?[["Too late",calLate(plan,o).replace(/^Too late to make ahead for this night: /,"")]]:[])];
   const dlg=document.createElement("dialog");dlg.className="counter pdfpick calask";dlg.setAttribute("aria-label","Add to calendar");
   dlg.innerHTML=`<div class="rate-box"><p class="rate-k">Add to calendar</p><h3>${ESC(title)}</h3>${moved?`<p class="cal-how">Last week's showtime has passed, so this is the same film next week.</p>`:""}<ul class="cal-rows">${rows.map(([w,t])=>`<li${w==="Too late"?' class="cal-late"':""}><b>${ESC(w)}</b><span>${ESC(t)}</span></li>`).join("")}</ul>
@@ -2970,6 +2985,110 @@ function pdfMaskApply(cv,mk){const m=mk.match(/^linear-gradient\((.*)\)$/);if(!m
   const W=cv.width,H=cv.height,t=ang*Math.PI/180,dx=Math.sin(t),dy=-Math.cos(t),L=Math.abs(W*dx)+Math.abs(H*dy),cx=W/2,cy=H/2;
   const x=cv.getContext("2d"),g=x.createLinearGradient(cx-dx*L/2,cy-dy*L/2,cx+dx*L/2,cy+dy*L/2);st.forEach(s=>g.addColorStop(Math.min(1,Math.max(0,s.at)),`rgba(0,0,0,${s.al})`));
   x.globalCompositeOperation="destination-in";x.fillStyle=g;x.fillRect(0,0,W,H);x.globalCompositeOperation="source-over";return cv.toDataURL("image/png")}
+/* review 19: html2canvas cannot do CSS masks, and a masked box that holds words (a hotel door hanger with its hole, an airline ticket with
+   punched notches) printed solid. The mask's gradient layers (radial holes and notches, straight fades) are drawn as an alpha picture,
+   the box's own fill and its empty texture layers are drawn under it, and the words stay in the page, laid over the picture */
+function pdfLen(v,full){v=String(v).trim();if(/%$/.test(v))return parseFloat(v)/100*full;if(/px$/.test(v)||/^-?[\d.]+$/.test(v))return parseFloat(v);
+  return {left:0,top:0,center:full/2,right:full,bottom:full}[v]}
+function pdfAlphaStops(list,len){const st=list.map(s=>{const x=s.trim().match(/^(rgba?\([^)]*\)|transparent|#[0-9a-f]{3,8}|black|white)\s*(-?[\d.]+(?:%|px))?$/i);if(!x)return null;let al=1;
+    if(/^transparent$/i.test(x[1]))al=0;else{const r=x[1].match(/^rgba\([^,]+,[^,]+,[^,]+,\s*([\d.]+)\)$/);if(r)al=+r[1];else if(/^#[0-9a-f]{4}$|^#[0-9a-f]{8}$/i.test(x[1])){const hx=x[1].slice(1);al=parseInt(hx.length===4?hx[3]+hx[3]:hx.slice(6),16)/255}}
+    return {al,at:x[2]?(/%$/.test(x[2])?parseFloat(x[2])/100:parseFloat(x[2])/len):null}});
+  if(st.length<2||st.some(x=>!x))return null;st.forEach((x,i)=>{if(x.at===null)x.at=i===0?0:i===st.length-1?1:st[i-1].at});return st}
+function pdfMaskAlpha(cs,w,h,k){const img=cs.webkitMaskImage||cs.maskImage;if(!img||img==="none")return null;const L=splitLayers(img);
+  const sz=splitLayers(cs.webkitMaskSize||cs.maskSize||"auto"),ps=splitLayers(cs.webkitMaskPosition||cs.maskPosition||"0% 0%"),rp=splitLayers(cs.webkitMaskRepeat||cs.maskRepeat||"repeat"),at=(a,i)=>a[i]||a[a.length-1];
+  const c=document.createElement("canvas");c.width=Math.round(w*k);c.height=Math.round(h*k);const x=c.getContext("2d");
+  for(let i=0;i<L.length;i++){const g=L[i];const s=at(sz,i).trim().split(/\s+/);let tw=w,th=h;
+    if(s[0]&&s[0]!=="auto"&&s[0]!=="cover"&&s[0]!=="contain"){tw=pdfLen(s[0],w);th=s[1]&&s[1]!=="auto"?pdfLen(s[1],h):h}if(!(tw>0&&th>0))return null;
+    const p=at(ps,i).trim().split(/\s+/);let px=p[0]||"0%",py=p[1]||"50%";if(/^(top|bottom)$/.test(px)){const t=px;px=py==="50%"?"center":py;py=t}
+    const ox=/%$/.test(px)?(w-tw)*parseFloat(px)/100:px==="right"?w-tw:px==="center"?(w-tw)/2:pdfLen(px,w)||0,oy=/%$/.test(py)?(h-th)*parseFloat(py)/100:py==="bottom"?h-th:py==="center"?(h-th)/2:pdfLen(py,h)||0;
+    const T=document.createElement("canvas");T.width=Math.max(1,Math.round(tw*k));T.height=Math.max(1,Math.round(th*k));const tx=T.getContext("2d");let gr=null;
+    let m=g.match(/^radial-gradient\((.*)\)$/);
+    if(m){const a=splitLayers(m[1]),hd=a[0].trim().match(/^(?:circle\s+)?([\d.]+)px(?:\s+circle)?(?:\s+at\s+(\S+)(?:\s+(\S+))?)?$/);if(!hd)return null;
+      const R=+hd[1],cx=hd[2]?pdfLen(hd[2],tw):tw/2,cy=hd[3]?pdfLen(hd[3],th):hd[2]?th/2:th/2,st=pdfAlphaStops(a.slice(1),R);if(!st||!(R>0))return null;
+      gr=tx.createRadialGradient(cx*k,cy*k,0,cx*k,cy*k,R*k);st.forEach(z=>gr.addColorStop(Math.min(1,Math.max(0,z.at)),`rgba(0,0,0,${z.al})`))}
+    else if((m=g.match(/^linear-gradient\((.*)\)$/))){const a=splitLayers(m[1]);let ang=180;const a0=a[0].trim();
+      if(/^-?[\d.]+deg$/.test(a0)){ang=parseFloat(a0);a.shift()}else if(/^to /.test(a0)){ang={"to top":0,"to right":90,"to bottom":180,"to left":270}[a0];if(ang===undefined)return null;a.shift()}
+      const t=ang*Math.PI/180,dx=Math.sin(t),dy=-Math.cos(t),len=Math.abs(tw*dx)+Math.abs(th*dy),st=pdfAlphaStops(a,len);if(!st)return null;
+      gr=tx.createLinearGradient((tw/2-dx*len/2)*k,(th/2-dy*len/2)*k,(tw/2+dx*len/2)*k,(th/2+dy*len/2)*k);st.forEach(z=>gr.addColorStop(Math.min(1,Math.max(0,z.at)),`rgba(0,0,0,${z.al})`))}
+    else return null;
+    tx.fillStyle=gr;tx.fillRect(0,0,T.width,T.height);
+    const r=at(rp,i).trim(),rx=!/no-repeat|repeat-y/.test(r)||r==="repeat-x",ry=!/no-repeat|repeat-x/.test(r)||r==="repeat-y";
+    const xs=rx?(()=>{const o=[];for(let v=ox-Math.ceil(ox/tw)*tw;v<w;v+=tw)o.push(v);return o})():[ox],ys=ry?(()=>{const o=[];for(let v=oy-Math.ceil(oy/th)*th;v<h;v+=th)o.push(v);return o})():[oy];
+    for(const X of xs)for(const Y of ys)x.drawImage(T,Math.round(X*k),Math.round(Y*k),T.width,T.height)}
+  return c}
+function pdfRadii(cs,w,h){return ["TopLeft","TopRight","BottomRight","BottomLeft"].map(s=>{const v=cs["border"+s+"Radius"]||"0";const p=v.split(/\s+/);return Math.min(pdfLen(p[0],w)||0,w/2,h/2)})}
+function pdfShapePath(x,X,Y,w,h,rad,poly){x.beginPath();if(poly){poly.forEach(([a,b],i)=>i?x.lineTo(X+a,Y+b):x.moveTo(X+a,Y+b));x.closePath();return}
+  if(x.roundRect&&rad.some(r=>r>0))x.roundRect(X,Y,w,h,rad.map(r=>Math.max(0,r)));else x.rect(X,Y,w,h)}
+/* where a box sits inside another, in layout pixels (transforms left out), by its offsetParent chain */
+function pdfOffsetIn(n,root){let X=0,Y=0,e=n;while(e&&e!==root){X+=e.offsetLeft;Y+=e.offsetTop;const p=e.offsetParent;if(!p)return null;if(p!==root){X+=p.clientLeft;Y+=p.clientTop}e=p}return e===root?{X,Y}:null}
+function pdfParseShadow(sh){const col=(sh.match(/rgba?\([^)]*\)|#[0-9a-f]{3,8}\b/i)||[])[0],n=(sh.replace(/rgba?\([^)]*\)/g,"").match(/-?[\d.]+(px)?/g)||[]).map(parseFloat);
+  return col&&n.length>=2?{x:n[0],y:n[1],b:n[2]||0,s:n[3]||0,col}:null}
+function pdfDropShadows(f){return (String(f||"").match(/drop-shadow\((?:[^()]|\([^)]*\))*\)/g)||[]).map(d=>pdfParseShadow(d.slice(12,-1))).filter(Boolean)}
+async function pdfMaskBox(el){const cs=getComputedStyle(el),w=el.offsetWidth,h=el.offsetHeight,k=2.5;if(!w||!h)return false;
+  const A=pdfMaskAlpha(cs,w,h,k);if(!A)return false;
+  const c=document.createElement("canvas");c.width=A.width;c.height=A.height;const x=c.getContext("2d");
+  const rad=pdfRadii(cs,w,h).map(r=>r*k);x.save();pdfShapePath(x,0,0,c.width,c.height,rad);x.clip();
+  {const bc=cs.backgroundColor;if(bc&&!/rgba\([^)]*,\s*0\)|transparent/.test(bc)){x.fillStyle=bc;x.fillRect(0,0,c.width,c.height)}}
+  const drawn=[],blend={screen:"screen",multiply:"multiply",overlay:"overlay",lighten:"lighten",darken:"darken","soft-light":"soft-light"};
+  /* the box's empty layers (grain, sheen, a photo) go into the picture; anything holding words stays in the page */
+  for(const n of el.querySelectorAll("*")){if(n.textContent.trim()||n.closest("svg"))continue;{let t=n.parentElement,inT=false;while(t&&t!==el){if(t.textContent.trim()){inT=true;break}t=t.parentElement}if(inT)continue}if(drawn.some(d=>d.contains(n)))continue;const ns=getComputedStyle(n);if(ns.display==="none"||ns.visibility==="hidden")continue;
+    const o=pdfOffsetIn(n,el);if(!o)continue;const dx=(o.X+el.clientLeft)*k,dy=o.Y*k,dw=n.offsetWidth*k,dh=n.offsetHeight*k;if(!dw||!dh){continue}
+    x.save();x.globalAlpha=+ns.opacity||1;x.globalCompositeOperation=blend[ns.mixBlendMode]||"source-over";
+    try{if(n.tagName==="IMG"&&n.naturalWidth){x.drawImage(n,dx,dy,dw,dh)}
+      else{const bc=ns.backgroundColor;if(bc&&!/rgba\([^)]*,\s*0\)|transparent/.test(bc)){x.fillStyle=bc;x.fillRect(dx,dy,dw,dh)}
+        for(const g of splitLayers(ns.backgroundImage||"none").reverse()){const u=g.match(/^url\("?(.*?)"?\)$/);if(!u)continue;const im=new Image();im.src=u[1];await im.decode();
+          const bs=(ns.backgroundSize.split(/,\s*/)[0]||"auto").trim().split(/\s+/),tw=bs[0]&&bs[0]!=="auto"?pdfLen(bs[0],n.offsetWidth):im.naturalWidth||300,th=bs[1]&&bs[1]!=="auto"?pdfLen(bs[1],n.offsetHeight):tw*(im.naturalHeight||1)/(im.naturalWidth||1);
+          const T=document.createElement("canvas");T.width=Math.max(1,Math.round(tw*k));T.height=Math.max(1,Math.round(th*k));T.getContext("2d").drawImage(im,0,0,T.width,T.height);
+          x.save();x.translate(dx,dy);x.fillStyle=x.createPattern(T,"repeat");x.fillRect(0,0,dw,dh);x.restore()}}}catch(e){}
+    x.restore();drawn.push(n)}
+  x.restore();x.globalCompositeOperation="destination-in";x.drawImage(A,0,0);x.globalCompositeOperation="source-over";
+  /* a drop shadow on a wrapper round just this shape (the hanger) is drawn into the picture too, since html2canvas skips filters */
+  const par=el.parentElement,ds=par&&par.children.length===1&&el.offsetParent===par?pdfDropShadows(getComputedStyle(par).filter):[];let out=c,P=0;
+  if(ds.length){P=Math.ceil(Math.max(...ds.map(d=>2*d.b+Math.max(Math.abs(d.x),Math.abs(d.y)))))+2;const o=document.createElement("canvas");o.width=c.width+2*P*k;o.height=c.height+2*P*k;const ox=o.getContext("2d");
+    for(const d of ds){ox.save();ox.shadowColor=d.col;ox.shadowBlur=d.b*k;ox.shadowOffsetX=d.x*k;ox.shadowOffsetY=d.y*k;ox.drawImage(c,P*k,P*k);ox.restore()}ox.drawImage(c,P*k,P*k);out=o;
+    par.style.filter=getComputedStyle(par).filter.replace(/drop-shadow\((?:[^()]|\([^)]*\))*\)/g,"").trim()||"none"}
+  let url;try{url=out.toDataURL("image/png")}catch(e){return false}
+  drawn.forEach(n=>n.remove());el.style.webkitMask="none";el.style.mask="none";el.style.webkitMaskImage="none";el.style.maskImage="none";el.style.background="none";el.style.boxShadow="none";
+  const im=new Image();im.alt="";im.src=url;await im.decode().catch(()=>{});
+  if(P){im.style.cssText=`position:absolute;left:${el.offsetLeft-P}px;top:${el.offsetTop-P}px;width:${w+2*P}px;height:${h+2*P}px;max-width:none;max-height:none;margin:0;pointer-events:none`;par.insertBefore(im,el);
+    if(getComputedStyle(el).position==="static")el.style.position="relative"}
+  else{if(getComputedStyle(el).position==="static")el.style.position="relative";im.style.cssText=`position:absolute;left:${-el.clientLeft}px;top:${-el.clientTop}px;width:${w}px;height:${h}px;max-width:none;max-height:none;margin:0;pointer-events:none`;
+    [...el.children].forEach(ch=>{if(getComputedStyle(ch).position==="static")ch.style.position="relative"});el.insertBefore(im,el.firstChild)}
+  return true}
+/* review 19: html2canvas draws an outer box shadow at its 2.5x scale with the shadow pushed off the page (canvas shadow offsets are not scaled),
+   so no lifted photo, card or tray printed its shadow. Each outer shadow is drawn here as a picture laid behind its box, turned with it.
+   A drop-shadow filter on a plain box (a stamp, a tag cut by clip-path) becomes the same kind of shadow first */
+async function pdfLiftBake(root){const k=2.5,boxes=[];
+  for(const el of [...root.querySelectorAll("*")]){const cs=getComputedStyle(el);if(cs.display==="none"||cs.visibility==="hidden"||!el.offsetWidth||!el.offsetHeight||!el.parentElement)continue;
+    /* drop-shadow filters: on a box that paints its own fill, or a wrapper whose one child fills it (clip-path shape) */
+    const ds=pdfDropShadows(cs.filter);
+    if(ds.length&&el.tagName!=="IMG"){const own=(!/rgba\([^)]*,\s*0\)|transparent/.test(cs.backgroundColor))||cs.backgroundImage!=="none";
+      const one=el.children.length>=1?el.children[0]:null,oc=one&&getComputedStyle(one),fill=one&&one.offsetWidth>=el.offsetWidth-2&&one.offsetHeight>=el.offsetHeight-2&&oc.position==="absolute"&&((!/rgba\([^)]*,\s*0\)|transparent/.test(oc.backgroundColor))||oc.backgroundImage!=="none");
+      const textOnly=!own&&!fill&&el.textContent.trim();
+      if(own||fill){const tgt=own?el:one;boxes.push({el:tgt,list:ds,via:el});el.style.filter=cs.filter.replace(/drop-shadow\((?:[^()]|\([^)]*\))*\)/g,"").trim()||"none"}
+      else if(textOnly){/* lettering: a text shadow, which html2canvas draws (blur is not scaled there, so it is set at print scale) */
+        el.style.textShadow=ds.map(d=>`${d.x}px ${d.y}px ${d.b*k}px ${d.col}`).join(",");el.style.filter=cs.filter.replace(/drop-shadow\((?:[^()]|\([^)]*\))*\)/g,"").trim()||"none"}}
+    const bs=cs.boxShadow;if(!bs||bs==="none")continue;const parts=splitLayers(bs),outer=parts.filter(p=>!/\binset\b/.test(p)).map(pdfParseShadow).filter(d=>d&&!/rgba\([^)]*,\s*0\)$/.test(d.col)&&(d.b>0||d.x||d.y||d.s));
+    if(!outer.length)continue;boxes.push({el,list:outer,keep:parts.filter(p=>/\binset\b/.test(p))})}
+  for(const B of boxes){const el=B.el;try{const cs=getComputedStyle(el),w=el.offsetWidth,h=el.offsetHeight;if(!w||!h)continue;
+    const cp=cs.clipPath,poly=/^polygon\(/.test(cp||"")?splitLayers(cp.slice(8,-1)).map(p=>{const q=p.trim().split(/\s+/);return [pdfLen(q[0],w),pdfLen(q[1],h)]}):null;
+    if(cp&&cp!=="none"&&!poly)continue;if((cs.webkitMaskImage||cs.maskImage||"none")!=="none")continue;
+    const P=Math.ceil(Math.max(...B.list.map(d=>2*d.b+Math.abs(d.s)+Math.max(Math.abs(d.x),Math.abs(d.y)))))+2,c=document.createElement("canvas");c.width=Math.round((w+2*P)*k);c.height=Math.round((h+2*P)*k);
+    const x=c.getContext("2d"),rad=pdfRadii(cs,w,h);
+    for(const d of [...B.list].reverse()){x.save();x.shadowColor=d.col;x.shadowBlur=d.b*k;x.shadowOffsetX=d.x*k;x.shadowOffsetY=d.y*k;x.fillStyle="#000";
+      const s=poly?0:d.s;pdfShapePath(x,(P-s)*k,(P-s)*k,(w+2*s)*k,(h+2*s)*k,rad.map(r=>(r?r+s:0)*k),poly&&poly.map(([a,b])=>[a*k,b*k]));
+      x.fill();x.restore()}
+    /* the shape itself is cut back out: a box shadow is never painted under its own box (Chrome skips the shadow of a shape drawn off the canvas, so it is drawn in place and removed) */
+    {x.save();x.globalCompositeOperation="destination-out";pdfShapePath(x,P*k,P*k,w*k,h*k,rad.map(r=>r*k),poly&&poly.map(([a,b])=>[a*k,b*k]));x.fill();x.restore()}
+    const url=c.toDataURL("image/png"),im=document.createElement("img");im.alt="";im.src=url;
+    /* laid in the same spot as the box, behind it: measured against a probe in the same parent, with the box's own turn left off */
+    let L0,T0;if(el.offsetParent&&el.offsetParent===el.parentElement&&cs.position!=="fixed"){L0=el.offsetLeft;T0=el.offsetTop}
+    else{const probe=document.createElement("i");probe.style.cssText="position:absolute;left:0;top:0;width:0;height:0;margin:0;padding:0;border:0";el.parentElement.insertBefore(probe,el);
+      const tr=el.style.transform;el.style.transform="none";const r1=el.getBoundingClientRect(),r0=probe.getBoundingClientRect();el.style.transform=tr;probe.remove();L0=r1.left-r0.left;T0=r1.top-r0.top}
+    if(cs.position==="static")el.style.position="relative";
+    const to=(cs.transformOrigin||"50% 50%").split(/\s+/).map((v,i)=>pdfLen(v,i?h:w)+P);
+    im.style.cssText=`position:absolute;left:${L0-P}px;top:${T0-P}px;width:${w+2*P}px;height:${h+2*P}px;max-width:none;max-height:none;margin:0;pointer-events:none;transform:${cs.transform};transform-origin:${to[0]}px ${to[1]}px;opacity:${cs.opacity};z-index:${cs.zIndex==="auto"?"auto":cs.zIndex}`;
+    el.parentElement.insertBefore(im,el);if(!B.via)el.style.boxShadow=B.keep.join(",")||"none"}catch(e){}}}
 function pdfStripes(g){const m=g.match(/^repeating-linear-gradient\((.*)\)$/);if(!m)return null;const args=splitLayers(m[1]);let ang=180,i=0;
   const a0=args[0].trim();if(/^-?[\d.]+deg$/.test(a0)){ang=((parseFloat(a0)%360)+360)%360;i=1}else if(/^to /.test(a0)){ang={"to top":0,"to right":90,"to bottom":180,"to left":270}[a0];if(ang===undefined)return null;i=1}
   if(![0,90,180,270].includes(ang))return null;
@@ -2991,6 +3110,10 @@ async function renderCanvas(src,forPrint){
   const stage=document.createElement("div"),land=src.classList.contains("fmt");
   stage.style.cssText=`position:fixed;left:-20000px;top:0;width:${+src.dataset.w||(land?1123:794)}px;height:${+src.dataset.h||(land?794:1123)}px;`;
   const clone=src.cloneNode(true);clone.style.transform="none";clone.hidden=false;if(forPrint&&land)clone.classList.add("for-print");
+  /* review 19: a hand-built card with rounded outer corners (Coming to America, Pulp Fiction, Chef) printed its frame in the edge colour with white
+     corners, because the print copy swaps the dark surround for a white border. Those cards keep the surround the screen shows */
+  if(forPrint&&land&&!src.classList.contains("fx-paper")){const wall=[...src.children].find(c=>!c.classList.contains("fx-back")&&getComputedStyle(c).display!=="none");
+    if(wall&&parseFloat(getComputedStyle(wall).borderTopLeftRadius)>=8){clone.style.background=getComputedStyle(src).backgroundColor;clone.dataset.surround="1"}}
   /* the copy keeps the colours the screen already settled on (logo panels and the like): their load-time checks must not run again on it */
   clone.querySelectorAll("[onload],[onerror]").forEach(e=>{e.removeAttribute("onload");e.removeAttribute("onerror")});
   /* the PDF renderer floods a box with the colour of an inset ring shadow ("inset 0 0 0 3px cream" turns a dark logo panel cream):
@@ -3067,7 +3190,9 @@ async function renderCanvas(src,forPrint){
         {const th=parseFloat(cs.textDecorationThickness);if(/line-through/.test(cs.textDecorationLine)&&th>1.5&&el.textContent.trim()&&(!cs.backgroundImage||cs.backgroundImage==="none")){const col=cs.textDecorationColor||cs.color;
           el.style.textDecoration="none";el.style.backgroundImage=`linear-gradient(${col},${col})`;el.style.backgroundSize=`100% ${th}px`;el.style.backgroundPosition="0 56%";el.style.backgroundRepeat="no-repeat"}}
         const mk=cs.webkitMaskImage||cs.maskImage;
-        if(mk&&/^linear-gradient\(/.test(mk)&&el.querySelector("img"))el.dataset.pmask=mk})}catch(err){}
+        if(mk&&/^linear-gradient\(/.test(mk)&&el.querySelector("img"))el.dataset.pmask=mk;
+        /* review 19: a masked box holding words (hotel door hanger, airline ticket) is baked below, words kept over it */
+        else if(mk&&mk!=="none"&&!/url\(/.test(mk)&&el.textContent.trim())el.dataset.pmaskt="1"})}catch(err){}
     /* Safari can mark a cached poster as off-limits to the canvas, which kills the export.
        Pull each outside image fresh as a local copy first so the canvas can always read it. */
     const temp=[];
@@ -3088,6 +3213,7 @@ async function renderCanvas(src,forPrint){
       if(getComputedStyle(el).position==="static")el.style.position="relative";
       const im=new Image();im.alt="";im.src=u;im.style.cssText=`display:block;width:${w}px;height:${h}px;position:absolute;left:0;top:0`;el.appendChild(im);keep.forEach(c=>{el.appendChild(c);if(getComputedStyle(c).position==="static")c.style.position="relative"});
       if(!el.style.height)el.style.height=h+"px";await im.decode().catch(()=>{})}catch(e){}}
+    for(const el of [...clone.querySelectorAll("[data-pmaskt]")]){try{await pdfMaskBox(el)}catch(e){}el.removeAttribute("data-pmaskt")}
     /* filtered photos (blur, brightness, sepia) print as the screen shows them: baked into a plain picture first */
     clone.querySelectorAll("img").forEach(im=>{try{const cs=getComputedStyle(im);if(!cs.filter||cs.filter==="none")return;const u=pdfFiltered(im,cs);if(!u)return;
       const n=document.createElement("img");n.alt="";n.className=im.className;n.style.cssText=im.style.cssText;n.style.filter="none";n.style.objectFit="fill";n.style.width=cs.width;n.style.height=cs.height;n.src=u;im.replaceWith(n)}catch(e){}});
@@ -3180,6 +3306,8 @@ async function renderCanvas(src,forPrint){
     /* review 17: a grain blended onto a plain paper (The Heat's black takeaway panels, overlay at .18) printed as charcoal, because the layer
        painted flat. When the paper under it is one solid colour, the blend is worked out on a canvas and printed as a picture */
     await pdfBlendBake(clone);
+    /* review 19: outer shadows and drop-shadow filters, which html2canvas loses at print scale */
+    await pdfLiftBake(clone);
     /* only copy the export stage into html2canvas's working page: the video store alone holds hundreds of posters, and waiting on them made a PDF take a minute */
     const keep=el=>el===document.head||document.head.contains(el)||el.tagName==="STYLE"||el.tagName==="LINK"||el.contains(stage)||stage.contains(el);
     return await html2canvas(clone,{scale:2.5,backgroundColor:STY[current.theme].mg,logging:false,useCORS:true,ignoreElements:el=>!keep(el)});
