@@ -8,9 +8,10 @@
       "verdict": "wrong",
       "why": "In the script McClane checks the floors and mutters '32 construction... 33 computers'. Floor 33 is the computer floor, not a building site.",
       "source": "https://imsdb.com/scripts/Die-Hard.html",
-      "fix": "32 | Under construction. Hard hats. 33 | Computers.",
+      "fix": "32 / 33 | Hard hats. Computers on 33.",
       "printed": true,
-      "done": false
+      "done": true,
+      "applied": "2026-11-07"
     },
     {
       "text": "Long flight? Shoes off, stretch the legs, then grab a drink.",
