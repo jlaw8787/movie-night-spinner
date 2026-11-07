@@ -1,0 +1,68 @@
+{
+ "id": "Space Jam (1996)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the drinks when Bugs fills the water bottle with Michael's secret stuff.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "Nothing goes into the bottle. At halftime Bugs and Michael pass off plain water as 'Michael's Secret Stuff' to boost the Tune Squad.",
+   "source": "https://en.wikipedia.org/wiki/Space_Jam",
+   "fix": "Serve the drinks when Bugs hands round the water bottle marked Michael's secret stuff.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Carrots for me, a big feed for Michael. He has a game to win and he looks a bit peckish.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Bugs line. His real lines on Wikiquote are about the Ducks and being a team. It reads fine as a note in his voice.",
+   "source": "https://en.wikiquote.org/wiki/Space_Jam",
+   "fix": "Carrots for me, a big feed for Michael. He has a game to win and the Monstars to beat.",
+   "printed": true,
+   "fix_note": {
+    "text": "Carrots for me, a big feed for Michael. He has a game to win and the Monstars to beat.",
+    "by": "Bugs Bunny",
+    "kind": "note"
+   },
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Stan from the bench, flattened again.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Stan is Michael's assistant who follows Bugs and Daffy into the Looney Tunes world and joins the team. No source opened shows him being flattened.",
+   "source": "https://en.wikipedia.org/wiki/Space_Jam",
+   "fix": "Stan, Michael's assistant, who followed him into cartoon land.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Poster and scoreboard look the part and the secret stuff is there, but the food reads like generic sports food.",
+  "missing": [
+   "Michael's golf game with Bill Murray and Larry Bird",
+   "Daffy and Bugs going to Michael's house for his gear",
+   "The Nerdlucks stealing talent from Barkley, Ewing and the others",
+   "Swackhammer launched to the moon in a missile",
+   "Lola Bunny joining the Tune Squad",
+   "Michael stretching his arm for the dunk"
+  ],
+  "ideas": [
+   "Swap 'Basketball cheese balls' for 'Nerdluck bites', since the Nerdlucks steal the talent",
+   "Swap 'Courtside meatball subs' note for 'Michael's North Carolina shorts, washed after every game'",
+   "Swap 'Tropical fruit punch' note for 'Swackhammer, launched to the moon'",
+   "Swap the 'Moron Mountain pigs in blankets' note for 'Where the Tunes were headed'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

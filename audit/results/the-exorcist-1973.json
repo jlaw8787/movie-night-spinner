@@ -1,0 +1,68 @@
+{
+ "id": "The Exorcist (1973)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Regan, try some soup. Her room is freezing again, so we eat by the fire tonight and I call a priest in the morning.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Chris never says this. Her real lines on the quote page include 'Hey, do me a favor, will ya? Tell me somethin' good.'",
+   "source": "https://en.wikiquote.org/wiki/The_Exorcist_(film)",
+   "fix": "Hey, do me a favor, will ya? Tell me somethin' good.",
+   "fix_note": {
+    "text": "Hey, do me a favor, will ya? Tell me somethin' good.",
+    "by": "Chris MacNeil",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Karl's tray, before Burke starts on him.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The plot has Chris hosting a party. Nothing opened shows Karl carrying a tray or Burke picking on him.",
+   "source": "https://en.wikipedia.org/wiki/The_Exorcist_(film)",
+   "fix": "Passed round at Chris's party before Regan appears.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Burke's drink. Mind the steps on the way out.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The steps and Burke's death at the bottom are in the plot. Nothing opened says what Burke drinks.",
+   "source": "https://en.wikipedia.org/wiki/The_Exorcist_(film)",
+   "fix": "Dennings was left with Regan that night. Mind the steps on the way out.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4.2,
+  "verdict": "A hotel room service card from the MacNeil house is a sharp idea, and the pea soup, steps and cold room all land.",
+  "missing": [
+   "'The power of Christ compels you!' (Merrin)",
+   "Karras's holy water that turns out to be tap water",
+   "Merrin's nitroglycerin pills before the exorcism",
+   "Regan's bed shaking with Chris on it",
+   "The 'help me' words carved in Regan's stomach",
+   "Father Dyer giving Karras his last rites"
+  ],
+  "ideas": [
+   "Swap the 'Devil's food cake' note for 'The power of Christ compels you!'",
+   "Replace the 'Holy water gin and elderflower fizz' note with Karras admitting it was tap water.",
+   "Swap 'Georgetown lemon and garlic roast chicken' note for the bed shaking.",
+   "Add a 'help me' carved message as the tag on the room card."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

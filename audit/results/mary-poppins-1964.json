@@ -1,0 +1,58 @@
+{
+ "id": "Mary Poppins (1964)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Children, napkins on laps and elbows off the table. Pudding comes after the vegetables, and not one minute before.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Mary Poppins doesn't say this. It is printed in quote marks. Her real lines include 'Practically perfect people never permit sentiment to muddle their thinking.'",
+   "source": "https://en.wikiquote.org/wiki/Mary_Poppins_(film)",
+   "fix": "Practically perfect people never permit sentiment to muddle their thinking.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Practically perfect people never permit sentiment to muddle their thinking.",
+    "by": "Mary Poppins",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Jane's spoonful, from Mary's medicine bottle.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The sources opened show the spoonful of sugar and the bottle but don't say Jane's dose is lime cordial.",
+   "source": "https://en.wikiquote.org/wiki/Mary_Poppins_(film)",
+   "fix": "Mary's medicine bottle, poured for Jane and Michael.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A warm nursery tea with good food and wit, but dollar prices don't suit 1910 London.",
+  "missing": [
+   "Supercalifragilisticexpialidocious (Jolly Holiday)",
+   "Feed the Birds and the tuppence (St Paul's)",
+   "Michael's tuppence and the bank run (Fidelity Fiduciary Bank)",
+   "Step in Time on the rooftops (Bert and the sweeps)",
+   "Flying the kite (ending)",
+   "Mr Dawes laughing and floating (bank)"
+  ],
+  "ideas": [
+   "Swap 'St Paul's steps seeded crackers' for a tuppence bag of crumbs.",
+   "Swap 'Jolly Holiday raspberry granita' for a Jolly Holiday penguin tea set.",
+   "Change prices from dollars to shillings and pence.",
+   "Add a kite biscuit to replace 'Admiral Boom's ginger cannon fizz' note."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

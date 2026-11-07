@@ -1,0 +1,88 @@
+{
+ "id": "Lock, Stock and Two Smoking Barrels (1998)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains when the lads plan the robbery over breakfast.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "In the plot Eddie overhears the neighbours planning a robbery through the wall and the four decide to hit them afterwards. Neither Wikipedia's plot nor the Wikiquote page shows a breakfast scene, so the breakfast setting can't be confirmed.",
+   "source": "https://en.wikipedia.org/wiki/Lock,_Stock_and_Two_Smoking_Barrels",
+   "fix": "Serve the mains when Eddie overhears the neighbours planning their robbery.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "We lost half a million at Harry's card table, lads, so tonight it's beans on toast. We've a week to find the rest.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a line Eddie says. It is printed in quote marks as dialogue. The film has Eddie owing Harry 500,000 pounds with one week to pay, but no 'beans on toast' speech.",
+   "source": "https://en.wikiquote.org/wiki/Lock,_Stock_and_Two_Smoking_Barrels",
+   "fix": "The entire British Empire was built on cups of tea.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "The entire British Empire was built on cups of tea.",
+    "by": "Eddie",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "REWARD $500000",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "The debt is 500,000 pounds, not dollars. The film is set in London.",
+   "source": "https://en.wikipedia.org/wiki/Lock,_Stock_and_Two_Smoking_Barrels",
+   "fix": "REWARD £500000",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "The lads' greasy spoon",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The sources opened show no greasy spoon cafe in the film. It only works if the breakfast scene in the cue is real, and that can't be confirmed.",
+   "source": "https://en.wikipedia.org/wiki/Lock,_Stock_and_Two_Smoking_Barrels",
+   "fix": "A fry up, brown sauce on the side.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Soap's the cook, but he'd still serve this.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "None of the pages opened show Soap as a cook. The sources only list him as one of the four friends.",
+   "source": "https://en.wikipedia.org/wiki/Lock,_Stock_and_Two_Smoking_Barrels",
+   "fix": "Served at J.D.'s bar, the one Harry wants.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 2,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3,
+  "verdict": "The food suits a London crime comedy, but the western saloon layout and type feel wrong for a Soho card game.",
+  "missing": [
+   "Big Chris and 'It's been emotional' (final scene)",
+   "Eddie's cups of tea line (before the ambush)",
+   "Barry the Baptist's thrown hatchet (Harry's office)",
+   "Rory Breaker and the weed farm (Winston's grow)",
+   "Tom with the shotguns on Battersea Bridge (ending)",
+   "Samoan Jo's pub (Eddie meets Harry)"
+  ],
+  "ideas": [
+   "Swap the saloon layout for a pub or card room layout, and replace 'Wanted for supper' with a debt notice from Harry.",
+   "Swap 'Greasy spoon full English' for a Big Chris pie special named after 'It's been emotional'.",
+   "Swap 'Hatchet Harry's vinegar pork scratchings' note for Barry the Baptist's hatchet joke.",
+   "Add a cup of tea at the bar as a nod to Eddie's British Empire line."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

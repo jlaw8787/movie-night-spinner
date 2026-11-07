@@ -1,0 +1,48 @@
+{
+ "id": "Mad Max Beyond Thunderdome (1985)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "In my town everything has a price and every meal has rules. Barter first, then eat.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Aunty Entity never says this. It is printed in quote marks. Her real lines include 'Bust a deal and face the Wheel!'",
+   "source": "https://en.wikiquote.org/wiki/Mad_Max_Beyond_Thunderdome",
+   "fix": "Bust a deal and face the Wheel!",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Bust a deal and face the Wheel!",
+    "by": "Aunty Entity",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A strong Bartertown market with pigs and barter, and the poster looks great, but the famous catchphrases are only half used.",
+  "missing": [
+   "Bust a deal and face the Wheel (Aunty Entity)",
+   "Two men enter, one man leaves (Thunderdome crowd)",
+   "Master Blaster and the whistle (Thunderdome fight)",
+   "Pig Killer in the Underworld refinery",
+   "Savannah Nix's tell (Crack in the Earth)",
+   "Dr. Dealgood at the arena"
+  ],
+  "ideas": [
+   "Swap 'Thunderdome lamingtons' note for 'Two men enter, one man leaves' on a lamington duel.",
+   "Add a Wheel of Fortune sauce plate to replace 'Bartertown trade platter'.",
+   "Swap 'Crack in the Earth damper' note for Savannah's tell.",
+   "Replace the Cash only sign with 'Barter first, change in trade' to match the Bartertown rules."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

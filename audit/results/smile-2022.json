@@ -1,0 +1,88 @@
+{
+ "id": "Smile (2022)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I'm grabbing dinner from the night cafeteria, then I'm finding out what's happening. Don't tell me it's all in my head.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Rose line, and it is printed in quote marks. Rose's real lines on Wikiquote are about the entity. It fits as a note in her voice, since everyone tells Rose it is in her head.",
+   "source": "https://en.wikiquote.org/wiki/Smile_(2022_film)",
+   "fix": "I'm grabbing dinner from the night cafeteria, then I'm finding out what's happening. Don't tell me it's all in my head.",
+   "printed": true,
+   "fix_note": {
+    "text": "I'm grabbing dinner from the night cafeteria, then I'm finding out what's happening. Don't tell me it's all in my head.",
+    "by": "Dr Rose Cotter",
+    "kind": "note"
+   },
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Backyard party pulled pork sliders",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "Jackson's birthday party is at Holly's, but no source says it is in a backyard. Rose falls into a glass coffee table, which suggests indoors.",
+   "source": "https://en.wikipedia.org/wiki/Smile_(2022_film)",
+   "fix": "Birthday party pulled pork sliders",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "her sister's family party in the backyard",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Same issue as the dish name. The party is Jackson's birthday at his mum Holly's house.",
+   "source": "https://en.wikipedia.org/wiki/Smile_(2022_film)",
+   "fix": "Jackson's birthday party at Holly's",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Trevor's engagement dinner salmon",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "Trevor is Holly's fiance, but no engagement dinner is described in the plot.",
+   "source": "https://en.wikipedia.org/wiki/Smile_(2022_film)",
+   "fix": "Trevor and Holly's salmon dinner",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "The birthday cake scene",
+   "where": "card",
+   "verdict": "unsure",
+   "why": "The scene at Jackson's party is about the toy train gift and the cat in the box. No cake is mentioned in the plot.",
+   "source": "https://en.wikipedia.org/wiki/Smile_(2022_film)",
+   "fix": "The birthday party scene",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 8,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "Strong poster and the night shift cafeteria idea is clever, but it plays the dread softly and the jokes feel generic.",
+  "missing": [
+   "Laura Weaver's session in the psychiatric ward",
+   "Rose's burning childhood home and the lantern",
+   "The toy train gift at Jackson's party",
+   "Rose's mother and the overdose",
+   "Joel the detective at the phone-tracking end",
+   "The smile at the hospital that nobody else sees"
+  ],
+  "ideas": [
+   "Swap 'Smiling cookies' for 'Toy train sugar cookies', Jackson's birthday gift",
+   "Swap the 'Late-shift miso ramen' note for 'The nights she cannot sleep, and the smile in the kitchen'",
+   "Swap 'Mustache's chamomile whisky toddy' for 'Madeline's therapy chamomile'",
+   "Swap 'Smiley face potato rounds' note for 'Do not smile back'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

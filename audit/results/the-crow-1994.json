@@ -1,0 +1,68 @@
+{
+ "id": "The Crow (1994)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Eric, you never eat. Sit with me a minute anyway.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Sarah never says this. Her real lines on the quote page include 'I knew it was you. Even with the makeup.'",
+   "source": "https://en.wikiquote.org/wiki/The_Crow_(1994_film)",
+   "fix": "I knew it was you. Even with the makeup.",
+   "fix_note": {
+    "text": "I knew it was you. Even with the makeup.",
+    "by": "Sarah",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the mains when Darla cooks Sarah a proper breakfast.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The plot says Sarah and Darla reconcile the next morning. Nothing opened mentions Darla cooking breakfast.",
+   "source": "https://en.wikipedia.org/wiki/The_Crow_(1994_film)",
+   "fix": "Serve the mains when Sarah and Darla make up the morning after.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Darla finally cooking breakfast for her daughter",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Same gap as the cue. The reconciliation is in the plot, the breakfast is not.",
+   "source": "https://en.wikipedia.org/wiki/The_Crow_(1994_film)",
+   "fix": "Darla and Sarah making up the morning after",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Gritty tab and black and white stills suit the film, but it uses only a few moments and the breakfast cue is shaky.",
+  "missing": [
+   "Eric smashing into Gideon's pawn shop quoting Poe ('rapping at my chamber door')",
+   "Top Dollar's Devil's Night fire speech",
+   "Albrecht holding Eric at gunpoint ('Snow White')",
+   "Eric purging Darla's drugs at the bathroom mirror",
+   "Sarah's skateboard on the wet street",
+   "The crow clawing out Myca's eyes"
+  ],
+  "ideas": [
+   "Swap 'Rainy night Irish coffee' note for Eric reciting Poe at the pawn shop door.",
+   "Replace the 'Kentucky bourbon, neat' note with Albrecht: 'You move, you're dead, Snow White.'",
+   "Swap 'Devil's Night popcorn' for 'Burning city' chilli popcorn with a Top Dollar line.",
+   "Replace the cue with Sarah and Darla reconciling the morning after."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

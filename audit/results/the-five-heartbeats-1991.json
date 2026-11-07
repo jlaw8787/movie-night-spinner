@@ -1,0 +1,78 @@
+{
+ "id": "The Five Heartbeats (1991)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "We stay a family, not a group. Family eats together, so pull up a chair.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "The quote page has only a few Duck lines ('Work it JT! Work it!', 'Choir Boy! Go to church!'). Nothing opened has him saying this. Eddie's 'Is there a heart in the house tonight?' is real and fits the venue.",
+   "source": "https://en.wikiquote.org/wiki/The_Five_Heartbeats",
+   "fix": "Is there a heart in the house tonight?",
+   "fix_note": {
+    "text": "Is there a heart in the house tonight?",
+    "by": "Eddie King Jr.",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the mains when the group sits down to Sunday dinner with Duck's family.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The plot has no Sunday dinner with Duck's family. The nearest scene is the closing family gathering where the former Heartbeats reunite with their families.",
+   "source": "https://en.wikipedia.org/wiki/The_Five_Heartbeats",
+   "fix": "Serve the mains when the former Heartbeats gather with their families at the end.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Duck's family Sunday dinner.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Same gap as the cue. The tagline 'Five voices. One Sunday dinner.' leans on it too.",
+   "source": "https://en.wikipedia.org/wiki/The_Five_Heartbeats",
+   "fix": "The closing family gathering.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Detroit Talent Night Lounge",
+   "where": "venue",
+   "verdict": "unsure",
+   "why": "The plot calls the act Motown-inspired but nothing opened sets the film in Detroit.",
+   "source": "https://en.wikipedia.org/wiki/The_Five_Heartbeats",
+   "fix": "Motown Talent Night Lounge",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "The talent night lounge fits a vocal group, but the Sunday dinner idea is not in the film and the big moments are missing.",
+  "missing": [
+   "Duck taking over the piano stool at the Battle of the Bands",
+   "Eddie's number making Bird's girlfriend faint",
+   "The album cover that shows white people",
+   "Sarge out-dancing Dresser",
+   "Big Red Records and the contract",
+   "The hotel reveal with Tanya and J.T."
+  ],
+  "ideas": [
+   "Swap 'Sunday fried chicken with ham hock greens' note for the final family reunion.",
+   "Replace the Duck note with Eddie's 'Is there a heart in the house tonight?'",
+   "Swap 'Devilled eggs' for 'Battle of the Bands' hot wings with a piano stool note.",
+   "Replace the 'Backstage cherry limeade' note with the matching suits."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

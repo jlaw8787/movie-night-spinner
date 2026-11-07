@@ -1,0 +1,48 @@
+{
+ "id": "Star Wars: Episode I - The Phantom Menace (1999)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Patience, Anakin. Eat your fill tonight, the trip to Coruscant is a long one.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Qui-Gon never says this. His real lines include 'There's always a bigger fish' and 'Be mindful of the living Force, young Padawan.'",
+   "source": "https://www.starwars.com/news/star-wars-the-phantom-menace-quotes",
+   "fix": "There's always a bigger fish.",
+   "fix_note": {
+    "text": "There's always a bigger fish.",
+    "by": "Qui-Gon Jinn",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 18,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Watto's chalkboard and the Boonta Eve stub fit well, but the dishes lean generic and 'Tatooine blue milk' is not in this film.",
+  "missing": [
+   "Jar Jar's 'Mesa your humble servant' in the Naboo swamp",
+   "Watto refusing Republic credits and the Jedi mind trick failing",
+   "Qui-Gon's 'There's always a bigger fish' (Otoh Gunga)",
+   "Qui-Gon wagering the hyperdrive part and Anakin on the podrace",
+   "Anakin accidentally blowing up the droid control ship",
+   "The Duel of the Fates in the Theed generator"
+  ],
+  "ideas": [
+   "Swap 'Tatooine blue milk' (first seen in Episode IV) for a Naboo pear cooler.",
+   "Replace the 'Mos Espa pear, nectarine and feta platter' note with Watto: 'No money! No parts! No deal!'",
+   "Swap the 'Theed palace fennel pork' note for Qui-Gon: 'Be mindful of the living Force.'",
+   "Add a Jar Jar swamp dish, 'Mesa stew', in place of 'Grilled corn with chilli butter'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

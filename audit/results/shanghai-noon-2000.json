@@ -1,0 +1,68 @@
+{
+ "id": "Shanghai Noon (2000)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the drinks when Chon and Roy hit the saloon in Carson City.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The barroom brawl where Chon and Roy meet is in a small town tavern on the way. Wikipedia puts Roy's hideout (a bordello) in Carson City, and no saloon scene there is described. Same text is printed on the card.",
+   "source": "https://en.wikipedia.org/wiki/Shanghai_Noon",
+   "fix": "Serve the drinks when Chon and Roy start the barroom brawl.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "I came to rescue a princess, Roy. Now pass the noodles before you eat them all.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Chon line, and the card prints it in quote marks. The Wikiquote page has nothing like it. It reads fine as a note in his voice.",
+   "source": "https://en.wikiquote.org/wiki/Shanghai_Noon",
+   "fix": "Roy, I came here to rescue a princess. Pass the noodles before you eat them all.",
+   "printed": true,
+   "fix_note": {
+    "text": "Roy, I came here to rescue a princess. Pass the noodles before you eat them all.",
+    "by": "Chon Wang",
+    "kind": "note"
+   },
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Roy's drinking game, bathtub not included.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "No opened source shows a drinking game or a bathtub for Roy.",
+   "source": "https://en.wikipedia.org/wiki/Shanghai_Noon",
+   "fix": "Roy's round, Chon's headache.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 9,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "The wanted-poster saloon looks right, but the menu skips the film's best bits like the chopsticks, the buried Roy and Falling Leaves.",
+  "missing": [
+   "Wang leaves two chopsticks in Roy's mouth when he is buried to the chin",
+   "Falling Leaves and the Sioux wedding",
+   "Roy trains Wang to be a cowboy (horse Fido)",
+   "Chipichawa (Roy calls Wang's nobility)",
+   "Chon Wang, 'John Wayne?' (Roy)",
+   "Hanging scene, Falling Leaves shoots Roy loose"
+  ],
+  "ideas": [
+   "Swap 'Chon Wang cornbread' note for 'Chon Wang? John Wayne?'",
+   "Swap 'Campfire steak with molasses beans' for 'Chopsticks in the desert noodles' (Roy buried to his chin)",
+   "Swap the 'Imperial train ticket' prop for a Sioux wedding invitation from Falling Leaves",
+   "Swap 'Rye with a beer back' for 'Chipichawa rye', Roy's word for nobility"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "id": "Spider-Man: Homecoming (2017)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Peter, order me fries too. I am doing all the computer stuff here, I need fuel.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Ned never says this. The quote page shows his real lines (the shop class chat about the power core, 'Evil lair?!'). The Delmar's visit has no fries order from Ned.",
+   "source": "https://en.wikiquote.org/wiki/Spider-Man:_Homecoming",
+   "fix": "That is literally the coolest sentence anyone has ever said.",
+   "fix_note": {
+    "text": "That is literally the coolest sentence anyone has ever said.",
+    "by": "Ned Leeds",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "The school cafeteria tray suits Peter's world and Delmar's is right, but it skips most of the film's best-known moments.",
+  "missing": [
+   "Ned dropping the Lego Death Star when he learns Peter's secret (Ned's bedroom)",
+   "Karen the suit AI and the baby monitor protocol",
+   "Captain America's gym class fitness videos",
+   "Toomes driving Peter and Liz to the homecoming dance",
+   "The Washington Monument elevator rescue",
+   "Peter's 'Number five with pickles, and smush it flat' order at Delmar's"
+  ],
+  "ideas": [
+   "Swap 'Decathlon team bubble tea' for 'Lego Death Star cake pops' with a note about Ned dropping the set.",
+   "Replace the footer 'Tray up, it's lunchtime.' with Karen's line 'Your impressions are very funny.'",
+   "Swap the 'Homecoming dance cupcakes' note for Toomes in the car: 'Just not too good.'",
+   "Rename 'Delmar's pressed Italian deli sandwich' to 'Delmar's number five, pickles, smushed' to match his real order."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

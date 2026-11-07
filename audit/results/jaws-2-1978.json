@@ -24,9 +24,11 @@
    "verdict": "wrong",
    "why": "This is the note under 'Amity Island fried clams', but it describes calamari. It was copied from the 1975 menu. The dish is clams.",
    "source": "https://en.wikipedia.org/wiki/Jaws_2",
-   "fix": "Buttermilk soaked clams in a cornmeal crust, with tartare and lemon.",
+   "fix": "Buttermilk soaked clams or squid, cornmeal crust, tartare and lemon.",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied_note": "The recipe cooks calamari, so the note names both. Kept to the old length so the kiosk still prints its notes.",
+   "applied": "2026-11-07"
   },
   {
    "text": "Amity is open for business",

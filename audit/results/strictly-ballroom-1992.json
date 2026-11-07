@@ -1,0 +1,68 @@
+{
+ "id": "Strictly Ballroom (1992)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Forget the rules for one night, Scott. Eat something, then show them your own steps.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Fran never says this. The quote page shows her real lines ('A life lived in fear is a life half lived'). Doug's real line is 'Shall we dance?'",
+   "source": "https://en.wikiquote.org/wiki/Strictly_Ballroom",
+   "fix": "Shall we dance?",
+   "fix_note": {
+    "text": "Shall we dance?",
+    "by": "Doug Hastings",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Barry Fife's dinner dance chicken",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "No Federation dinner dance appears in the plot or the quote page. Fife runs the Pan Pacific championship.",
+   "source": "https://en.wikipedia.org/wiki/Strictly_Ballroom",
+   "fix": "Barry Fife's status quo chicken",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Ya Ya's rhythm, felt from the heart.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Ya Ya and Rico demonstrate the paso doble in the plot, but no opened source has her saying anything about rhythm felt from the heart.",
+   "source": "https://en.wikipedia.org/wiki/Strictly_Ballroom",
+   "fix": "Ya Ya and Rico teach the real paso doble.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "The red poster looks the part but the prom layout and generic canapés miss the film's loud Federation fights and Fran's family.",
+  "missing": [
+   "Fran calling Scott a 'gutless wonder' backstage",
+   "Barry Fife's status quo speeches",
+   "Wayne Burns cutting the PA so Scott and Fran can finish the paso doble",
+   "Doug's secret footage in the studio back room",
+   "Fran's family clapping the paso doble rhythm",
+   "Scott's flashy crowd-pleasing steps against Federation steps"
+  ],
+  "ideas": [
+   "Swap 'Pan Pacific canapés' for 'Federation approved steps' tapas.",
+   "Replace the 'Cold horchata with cinnamon' note with Fran's 'Vivir con miedo' paso doble line from the backstage fight.",
+   "Swap the photo booth for stills of the paso doble in the backyard.",
+   "Rename 'Barry Fife's dinner dance chicken' to 'Status quo chicken'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

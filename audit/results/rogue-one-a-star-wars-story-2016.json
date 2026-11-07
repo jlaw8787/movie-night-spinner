@@ -1,0 +1,58 @@
+{
+ "id": "Rogue One: A Star Wars Story (2016)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I cannot see the table, but I can smell the bread. Pass it to me before Baze eats it all.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Chirrut line. His real line on Wikiquote is the one about being one with the Force. The quote is shorter than the current note and fits the panel.",
+   "source": "https://en.wikiquote.org/wiki/Rogue_One",
+   "fix": "I'm one with the Force, and the Force is with me.",
+   "printed": true,
+   "fix_note": {
+    "text": "I'm one with the Force, and the Force is with me.",
+    "by": "Chirrut Imwe",
+    "kind": "quote"
+   },
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "I'm one with the Force. The Force is with me.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Small wording slip. The line on Wikiquote is 'I'm one with the Force, and the Force is with me.'",
+   "source": "https://en.wikiquote.org/wiki/Rogue_One",
+   "fix": "I'm one with the Force, and the Force is with me.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Neat rebel canteen with the right planets and droid, but the dishes are generic Middle Eastern and the big moments are barely touched.",
+  "missing": [
+   "Rebellions are built on hope (Jyn to the Council, Yavin 4)",
+   "Vader boarding the Rebel ship and the plans slipping away",
+   "Hope, Leia's last word as the plans arrive",
+   "Chirrut walking through the firefight on Jedha",
+   "Kyber crystals looted on Jedha",
+   "K-2SO: 'Congratulations. You're being rescued.'"
+  ],
+  "ideas": [
+   "Swap 'Chirrut's tea' for 'Kyber crystal rock candy', with the note 'The crystals the Empire loots from Jedha'",
+   "Swap the Chirrut note for his real line 'I'm one with the Force, and the Force is with me.'",
+   "Swap the 'Death Star plans chocolate sphere' note for 'The plans, handed to Leia at the end'",
+   "Swap 'Ginger, lemon and honey tonic' note for Vader's 'Be careful not to choke on your aspirations, Director.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "id": "Shazam! (2019)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Billy, you're a grown man in a cape. Pick a pizza topping like one.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Freddy line. His Wikiquote lines are about flight and invisibility. It works as a note in his voice, since Freddy is the one coaching Billy through the hero stuff.",
+   "source": "https://en.wikiquote.org/wiki/Shazam!_(film)",
+   "fix": "Billy, you're a grown man in a cape. Pick pepperoni like a hero.",
+   "printed": true,
+   "fix_note": {
+    "text": "Billy, you're a grown man in a cape. Pick pepperoni like a hero.",
+    "by": "Freddy Freeman",
+    "kind": "note"
+   },
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "The giant piano at the toy store",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "No source opened mentions a giant piano or a toy store scene.",
+   "source": "https://en.wikipedia.org/wiki/Shazam!_(film)",
+   "fix": "Billy and Freddy filming his powers on Freddy's phone",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Paid with cash zapped from an ATM.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "No source opened describes an ATM scene. Freddy does film Billy using his powers, which Wikipedia confirms.",
+   "source": "https://en.wikipedia.org/wiki/Shazam!_(film)",
+   "fix": "Freddy posts the videos, Billy pays for dinner.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Shazam tried real beer. Spat it straight out.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "A photo caption on one review site shows Shazam trying to buy beer, but no source opened describes him spitting it out.",
+   "source": "https://wherever-i-look.com/movies/shazam-2019-summary-review-with-spoilers",
+   "fix": "Billy in a grown man's body, still ordering a grape soda.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Warm family kitchen with a good tagline, but it plays safe on food and skips what makes the film fun.",
+  "missing": [
+   "Freddy posting viral videos of the new hero",
+   "Billy skipping school to busk for cash as Shazam",
+   "Sivana's 8-Ball toy and the Seven Deadly Sins",
+   "The winter carnival where Billy lost his mum",
+   "Billy inviting Superman to school lunch (end scene)",
+   "Freddy's DC hero knowledge, the 'Flight or invisibility' question"
+  ],
+  "ideas": [
+   "Swap the 'Cinnamon vanilla eggnog' note for 'Flight or invisibility? Freddy says flight.'",
+   "Swap the 'Dark chocolate rocky road' note for 'The Rock of Eternity, with marshmallows'",
+   "Swap the 'Garlic parmesan potato gems' name for 'Superman's school lunch tray'",
+   "Swap the Vasquez House Rules prop for 'Freddy's hero notes: Rule 1, say Shazam'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

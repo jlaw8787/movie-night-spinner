@@ -1,0 +1,58 @@
+{
+ "id": "The Dark Knight (2008)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Sir, eat something. Gotham's troubles will still be there in the morning, I'm sorry to say.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Alfred never says this. His famous line on the quote page is 'Some men just want to watch the world burn.'",
+   "source": "https://en.wikiquote.org/wiki/The_Dark_Knight_(film)",
+   "fix": "Some men just want to watch the world burn.",
+   "fix_note": {
+    "text": "Some men just want to watch the world burn.",
+    "by": "Alfred Pennyworth",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Bruce turns up late, by helicopter.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The restaurant dinner with Rachel, Dent and Bruce is confirmed, but nothing opened mentions a helicopter arrival.",
+   "source": "https://en.wikipedia.org/wiki/The_Dark_Knight_(film)",
+   "fix": "Bruce turns up late with his ballerina date.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "The hotel room service card and the Joker card, coin and ferry nods are good, but the food stays upmarket and plain.",
+  "missing": [
+   "The Joker's 'How about a magic trick?' pencil trick (listed but not on a dish)",
+   "The Joker disguised as a nurse at the hospital",
+   "Alfred's Burma bandit story ('We burned the forest down')",
+   "The interrogation room at the police station",
+   "Harvey's 'You'd leave a man's life to chance?' coin",
+   "Lau in Hong Kong"
+  ],
+  "ideas": [
+   "Swap 'Hoisin pork belly bites' note for the pencil trick: 'Ta-da! It's gone!'",
+   "Replace 'Gotham diner glazed meatloaf' note with the interrogation room.",
+   "Swap 'Penthouse fundraiser lemon tart' note for the burning forest story.",
+   "Replace the Champagne note with Harvey's coin flip."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

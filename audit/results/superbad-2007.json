@@ -1,0 +1,58 @@
+{
+ "id": "Superbad (2007)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "We get the drinks, we bring the snacks, we show up as heroes. Tonight goes perfectly. That's the plan.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Seth never says this. The quote page has his real lines, for example his rant about Fogell's ID name.",
+   "source": "https://en.wikiquote.org/wiki/Superbad",
+   "fix": "Why don't you just pick a common name like a normal person?",
+   "fix_note": {
+    "text": "Why don't you just pick a common name like a normal person?",
+    "by": "Seth",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Seth's laundry detergent bottle, rinsed out this time.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Nothing opened mentions a laundry detergent bottle. The plot has Seth planning to steal alcohol at the first party.",
+   "source": "https://en.wikipedia.org/wiki/Superbad_(film)",
+   "fix": "Seth steals the booze at the first party, then the brawl starts.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.4,
+  "verdict": "Right party and McLovin ID nods, but the dishes are generic party food and the poster layout is plain.",
+  "missing": [
+   "The liquor store robbery that wrecks McLovin's purchase",
+   "Slater and Michaels driving McLovin around and drinking on duty",
+   "Seth stained dancing with Jacinda at the first party",
+   "Seth headbutting Jules at the end of the night",
+   "The cops smashing their cruiser with Fogell",
+   "Seth and Evan's mall reconciliation"
+  ],
+  "ideas": [
+   "Swap 'Cinnamon schnapps shots' for 'Cop car punch' with a note about Slater driving.",
+   "Replace the 'Last night brownies' note with the cruiser being smashed.",
+   "Swap 'Night shift breakfast burritos' for 'Liquor store hold up wraps'.",
+   "Add the McLovin ID as a full prop card in place of the Hawaii ID ticket."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

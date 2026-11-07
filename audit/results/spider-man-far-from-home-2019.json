@@ -1,0 +1,48 @@
+{
+ "id": "Spider-Man: Far From Home (2019)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I'm not watching you, Parker. I'm observing. Pass the fries and keep your head down.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not an MJ line. Her real lines on Wikiquote include one about being obsessed with telling the truth, which is the same length and suits her.",
+   "source": "https://en.wikiquote.org/wiki/Spider-Man:_Far_from_Home",
+   "fix": "I'm obsessed with telling the truth even if it hurts other people's feelings!",
+   "printed": true,
+   "fix_note": {
+    "text": "I'm obsessed with telling the truth even if it hurts other people's feelings!",
+    "by": "MJ",
+    "kind": "quote"
+   },
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "The city-by-city menu is clever and the Water Elemental, Prague and Tower Bridge notes are right, but the café layout feels like a generic bistro.",
+  "missing": [
+   "Ned and Betty on the Prague ferris wheel",
+   "Night Monkey as the cover story in Prague",
+   "Aunt May throwing a banana at Peter ('Hungry?')",
+   "Mysterio's illusion train in Berlin",
+   "Flash's videos, 'Spider-Man follows me?!'",
+   "Happy and May at the end"
+  ],
+  "ideas": [
+   "Swap 'Fritto misto with lemon' note for 'Aunt May's banana, thrown from across the room'",
+   "Swap 'Blood orange Italian soda' note for 'Night Monkey, a European knockoff'",
+   "Swap the 'Reserved' card for 'Peter's Prague ferris wheel date, Ned and Betty'",
+   "Swap 'E.D.I.T.H. tiramisu' note for 'Even Dead, I'm the Hero'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

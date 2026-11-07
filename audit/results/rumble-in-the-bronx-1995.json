@@ -1,0 +1,78 @@
+{
+ "id": "Rumble in the Bronx (1995)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I came to a wedding, and now I'm stacking shelves. At least the snacks are free.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Keung never says this and does not stack shelves. He stops the bikers outside, then fights them in and around Elaine's supermarket.",
+   "source": "https://www.whatsafterthemovie.com/summary/rumble-in-the-bronx",
+   "fix": "I came for a wedding, and now I'm fighting bikers in the aisles. Please keep my receipt.",
+   "printed": true,
+   "fix_note": {
+    "text": "I came for a wedding, and now I'm fighting bikers in the aisles. Please keep my receipt.",
+    "by": "Keung",
+    "kind": "note"
+   },
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the mains at his uncle's wedding banquet.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Sources describe a family wedding celebration where Keung meets Whitney and Elaine, but none describes a banquet or a meal.",
+   "source": "https://en.wikipedia.org/wiki/Rumble_in_the_Bronx",
+   "fix": "Serve the mains at his uncle's wedding party.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "His uncle's wedding banquet",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Same issue as the cue. The wedding is shown, a banquet is not described.",
+   "source": "https://en.wikipedia.org/wiki/Rumble_in_the_Bronx",
+   "fix": "His uncle's wedding party",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "For Danny, Nancy's little brother, who keeps an eye on the store",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Danny is Nancy's paraplegic brother who bonds with Keung and whose wheelchair cushion hides the diamonds. No source puts him minding the store.",
+   "source": "https://www.whatsafterthemovie.com/summary/rumble-in-the-bronx",
+   "fix": "For Danny, Nancy's little brother, whose wheelchair cushion hides the diamonds",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "Great poster and the hovercraft gets a mention, but the chalkboard truck layout is generic and the best Jackie moments are missing.",
+  "missing": [
+   "Keung's leap from the apartment window to stop the drag racers",
+   "Six-foot sword on the Lamborghini sweeping the hovercraft",
+   "Diamonds hidden in Danny's wheelchair cushion",
+   "White Tiger's golf course finish",
+   "Steven Lo lending the vintage car for the wedding",
+   "Tony's gang trashing the supermarket"
+  ],
+  "ideas": [
+   "Swap the 'Hong Kong lemon iced tea' note for 'Diamonds in the wheelchair cushion, ask Danny'",
+   "Swap 'Almond jelly with fruit' for 'Golf course lychee cups' after White Tiger's finish",
+   "Swap the 'Hovercraft sweet and sour pork' dish note for 'Six-foot sword sold separately'",
+   "Swap the receipt joke for 'Vintage car, on loan from Steven Lo'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

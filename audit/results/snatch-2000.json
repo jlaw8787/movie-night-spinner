@@ -1,0 +1,58 @@
+{
+ "id": "Snatch (2000)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "No more bets, boys. The dog ate the squeaky toy, the diamond is gone, and I need a cup of tea.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Turkish line. His real line on Wikiquote about the dog is 'Couldn't stand that squeaking anymore.' It works as a note, since the dog does swallow the diamond and the vet finds a squeaky toy too.",
+   "source": "https://en.wikiquote.org/wiki/Snatch_(film)",
+   "fix": "No more bets, boys. The dog ate the squeaky toy and the diamond, and I need a cup of tea.",
+   "printed": true,
+   "fix_note": {
+    "text": "No more bets, boys. The dog ate the squeaky toy and the diamond, and I need a cup of tea.",
+    "by": "Turkish",
+    "kind": "note"
+   },
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the mains when the dog swallows the squeaky toy.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Turkish says the vet found a squeaky toy in the dog, but the sources do not describe the moment it is swallowed. The dog swallows the diamond near the end. Same text is printed on the bet slip.",
+   "source": "https://en.wikiquote.org/wiki/Snatch_(film)",
+   "fix": "Serve the mains when the dog swallows the diamond.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Dark pub tab with the right names, dog and diamond, but the food is a standard pub board.",
+  "missing": [
+   "Boris the Blade, the Bullet Dodger",
+   "Brick Top's pigs",
+   "Bullet Tooth Tony answering 'Bonjour?' on the car phone",
+   "Mickey's 'Do you like dags?' speech",
+   "Franky Four Fingers and the Antwerp heist",
+   "Tommy's caravan"
+  ],
+  "ideas": [
+   "Swap 'Diamond cut cheese' note for 'Eighty-six carats of cheddar'",
+   "Swap 'East End pie, mash and parsley liquor' note for 'Brick Top's pigs eat last'",
+   "Swap 'Bullet Tooth Tony's banoffee pie' note for 'Bonjour?'",
+   "Swap the 'Builder's tea' note for 'Brick Top: Get us a cup of tea, Errol'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

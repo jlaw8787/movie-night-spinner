@@ -1,0 +1,58 @@
+{
+ "id": "Star Wars: The Force Awakens (2015)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Sit, eat, and stop staring at my goggles. Nobody leaves my castle hungry.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Maz never says this. Her real lines on the quote page include 'The belonging you seek is not behind you, it is ahead.'",
+   "source": "https://en.wikiquote.org/wiki/Star_Wars:_The_Force_Awakens",
+   "fix": "The belonging you seek is not behind you, it is ahead.",
+   "fix_note": {
+    "text": "The belonging you seek is not behind you, it is ahead.",
+    "by": "Maz Kanata",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Finn in the stolen jacket",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "The plot says Finn finds Poe's jacket in the crash wreck after thinking Poe is dead. Nothing opened calls it stolen.",
+   "source": "https://en.wikipedia.org/wiki/Star_Wars:_The_Force_Awakens",
+   "fix": "Finn in Poe's jacket",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 3,
+  "overall": 4,
+  "verdict": "Maz's castle bar tab is a great setting and the Jakku portion slip is a proper nod, but the second face leans on a Leia photo and the look is plain.",
+  "missing": [
+   "Rey eating portion bread inside Hellhound Two on Jakku",
+   "Maz taking off her goggles to tell Rey the truth",
+   "Lor San Tekka placing the map in Poe's hand",
+   "Rey's Jedi mind trick on the stormtrooper",
+   "Han and Ben on the Starkiller Base walkway",
+   "The vault where Rey finds Luke's lightsaber"
+  ],
+  "ideas": [
+   "Swap the Leia photo on face two for a still of Maz's castle bar.",
+   "Replace the 'Crispy pork belly bites' note with Maz: 'I am no Jedi, but I know the Force.'",
+   "Swap the 'BB-8 saffron arancini' note for 'Poe's map, hidden in a droid.'",
+   "Rename 'Maz Kanata's slow-roast lamb feast' to 'The vault lamb' with a Luke's lightsaber nod."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

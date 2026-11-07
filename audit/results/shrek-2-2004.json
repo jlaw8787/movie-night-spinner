@@ -1,0 +1,48 @@
+{
+ "id": "Shrek 2 (2004)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Senor, I bring tidings and a hairball. The king wants dinner, and I want to be fed. Also, I am great at this job.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Puss line. His real lines on Wikiquote include a pricing line from when King Harold hires him. The quote is shorter than the current note and fits the panel.",
+   "source": "https://en.wikiquote.org/wiki/Shrek_2",
+   "fix": "You are told correct. But for this, I charge a great deal of money.",
+   "printed": true,
+   "fix_note": {
+    "text": "You are told correct. But for this, I charge a great deal of money.",
+    "by": "Puss in Boots",
+    "kind": "quote"
+   },
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "The hotel layout suits Far Far Away and the food in-jokes (Poison Apple, Fat Boy, Muffin Man) land well, but the note is invented and Donkey barely features.",
+  "missing": [
+   "The Happily Ever After potion Shrek and Donkey drink",
+   "Donkey barging into the awkward dinner",
+   "Doris the bartender at the Poison Apple",
+   "Mongo storming the palace gates",
+   "Puss in Boots and the hairball",
+   "Far Far Away Idol and the Hollywood-style sign"
+  ],
+  "ideas": [
+   "Swap the 'Giant gingerbread man' note for 'Mongo, built by the Muffin Man'",
+   "Swap the 'Fairy Godmother's blue lemonade' name for 'Happily Ever After potion, blue'",
+   "Swap the 'Red wine sangria' note for 'Doris pours at the Poison Apple'",
+   "Swap the 'Manchego and quince paste' note for 'Puss in the hat, with the huge eyes'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

@@ -10,7 +10,7 @@
  "cue": "Serve the chimichangas whenever Deadpool mentions them.",
  "faces": [
   [
-   "SISTER MARGARET'S HOME FOR WAYWARD GIRLS",
+   "SISTER MARGARET'S SCHOOL FOR WAYWARD CHILDREN",
    "SISTER MARGARET'S BAR",
    "BAR SNACKS",
    "Sister Margaret's cheesy jalapeño nachos",
@@ -37,7 +37,7 @@
    "TAB NO. 16 · TAB'S CHALKED ON THE WALL"
   ],
   [
-   "SISTER MARGARET'S HOME FOR WAYWARD GIRLS",
+   "SISTER MARGARET'S SCHOOL FOR WAYWARD CHILDREN",
    "BROUGHT FORWARD",
    "124.75",
    "AFTERS",
@@ -54,7 +54,7 @@
    "RUNNING TAB",
    "163.50",
    "FROM THE BAR",
-   "\"Yes, I'm talking to you. Eat up, the fourth wall is closed for the night.\"",
+   "\"A fourth wall break inside a fourth wall break. That's, like, sixteen walls!\"",
    "Wade Wilson",
    "RECEIPT",
    "BAR TAB",
@@ -110,10 +110,11 @@
  ],
  "venue": {
   "venue": "Sister Margaret's Bar",
-  "sign": "Sister Margaret's Home for Wayward Girls",
+  "sign": "Sister Margaret's School for Wayward Children",
   "note": {
-   "text": "Yes, I'm talking to you. Eat up, the fourth wall is closed for the night.",
-   "by": "Wade Wilson"
+   "text": "A fourth wall break inside a fourth wall break. That's, like, sixteen walls!",
+   "by": "Wade Wilson",
+   "kind": "quote"
   },
   "winks": [
    "A red suit with white eyes",

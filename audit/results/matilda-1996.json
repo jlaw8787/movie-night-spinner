@@ -1,0 +1,88 @@
+{
+ "id": "Matilda (1996)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "CRUNCHEM HALL PRIMARY SCHOOL",
+   "where": "sign",
+   "verdict": "wrong",
+   "why": "In the film it is Crunchem Hall Elementary School.",
+   "source": "https://en.wikiquote.org/wiki/Matilda_(film)",
+   "fix": "Crunchem Hall Elementary School",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Matilda, I have tea and bread and butter waiting at the cottage. Come and sit down, and bring whatever book you are reading.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Miss Honey doesn't say this. It is printed in quote marks. When she brings Matilda home she says, 'Shall we go inside and have tea and cookies?'",
+   "source": "https://en.wikiquote.org/wiki/Matilda_(film)",
+   "fix": "Shall we go inside and have tea and cookies?",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Shall we go inside and have tea and cookies?",
+    "by": "Miss Honey",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Matilda's pancakes",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "No source opened shows Matilda cooking pancakes in the film.",
+   "source": "https://en.wikipedia.org/wiki/Matilda_(1996_film)",
+   "fix": "Tea and cookies at Miss Honey's",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Miss Honey's cottage scones",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "Miss Honey offers tea and cookies, not scones.",
+   "source": "https://en.wikiquote.org/wiki/Matilda_(film)",
+   "fix": "Miss Honey's cottage cookies",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "A parrot in the chimney",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "No source opened mentions a parrot in the film.",
+   "source": "https://en.wikipedia.org/wiki/Matilda_(1996_film)",
+   "fix": "Harry's glued hat",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "The Bruce cake and newt are in, but it's a generic school canteen and the cottage tea is wrong.",
+  "missing": [
+   "Bruce Bogtrotter and the cake (assembly hall)",
+   "The Chokey (Trunchbull's punishment)",
+   "Trunchbull throwing Amanda by her pigtails",
+   "Lavender's newt (Trunchbull's water jug)",
+   "Harry's glued hat",
+   "Miss Honey's tea and cookies (cottage)"
+  ],
+  "ideas": [
+   "Swap 'Matilda's pancakes' for tea and cookies at Miss Honey's.",
+   "Swap 'Harry Wormwood's car yard chilli dogs' note for the Wormwood Motors sign.",
+   "Add a Chokey-shaped spiked cracker to replace 'Library book cheese stacks'.",
+   "Fix the school name to Elementary."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

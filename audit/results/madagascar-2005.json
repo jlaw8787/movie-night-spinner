@@ -1,0 +1,58 @@
+{
+ "id": "Madagascar (2005)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Rations are on the table, men. Eat fast, eat quiet, and nobody tells the lemurs.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Skipper never says this. It is printed in quote marks. His real lines include 'Cute and cuddly, boys. Cute and cuddly.'",
+   "source": "https://en.wikiquote.org/wiki/Madagascar_(2005_film)",
+   "fix": "Cute and cuddly, boys. Cute and cuddly.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Cute and cuddly, boys. Cute and cuddly.",
+    "by": "Skipper",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "the fish Alex finally learns to eat on the island",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Alex doesn't learn to eat a coconut fish curry. The penguins feed him sushi at the end, and he finds it better than steak.",
+   "source": "https://en.wikipedia.org/wiki/Madagascar_(2005_film)",
+   "fix": "Island fish for Alex once the steaks run out.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "A fair zoo canteen with the right characters, but the school-style time bar and generic food don't feel like the film.",
+  "missing": [
+   "Alex's steak hallucination (lemur party)",
+   "'I like to move it' (King Julien's party)",
+   "Penguins taking over the ship",
+   "Smile and wave (Skipper)",
+   "The fossa attack (island)",
+   "Gloria and Melman on the beach"
+  ],
+  "ideas": [
+   "Swap 'Alex's steak' note for the moment Alex sees Marty as a steak.",
+   "Swap 'King Julien's mango passionfruit punch' for a 'Move it, move it' party punch.",
+   "Add a 'smile and wave' penguin platter replacing 'Penguins' sushi rolls' note.",
+   "Swap the time bar for a zoo feeding schedule."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

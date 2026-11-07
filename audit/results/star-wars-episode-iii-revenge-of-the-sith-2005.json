@@ -1,0 +1,58 @@
+{
+ "id": "Star Wars: Episode III - Revenge of the Sith (2005)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I've cooked for you since you were a boy, Anakin. Sit down and eat something before the council meets.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Obi-Wan never cooks for Anakin and never says this. His real line on the quote page is 'I have trained you since you were a small boy.'",
+   "source": "https://en.wikiquote.org/wiki/Star_Wars:_Episode_III_%E2%80%93_Revenge_of_the_Sith",
+   "fix": "I have trained you since you were a small boy.",
+   "fix_note": {
+    "text": "I have trained you since you were a small boy.",
+    "by": "Obi-Wan Kenobi",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "The tragedy of Darth Plagueis, told over drinks.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The quote page has Palpatine telling the Plagueis story to Anakin, but nothing opened says drinks are served while he tells it.",
+   "source": "https://en.wikiquote.org/wiki/Star_Wars:_Episode_III_%E2%80%93_Revenge_of_the_Sith",
+   "fix": "The tragedy of Darth Plagueis, told at the opera.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "The opera night idea is a clever fit and the Plagueis and Order 66 nods land, but the dishes are mostly generic fine dining.",
+  "missing": [
+   "'Hello there!' and 'So uncivilized' (Obi-Wan vs Grievous on Utapau)",
+   "'I have the high ground' on Mustafar",
+   "Palpatine's 'Good is a point of view, Anakin'",
+   "Yoda against Sidious in the Senate",
+   "Mace Windu and the window in the Chancellor's office",
+   "Padme's twins born on Polis Massa"
+  ],
+  "ideas": [
+   "Swap the 'Senate chamber beef fillet' note 'The halls of power on Coruscant' for Palpatine's 'Good is a point of view.'",
+   "Replace the 'Mustafar lava cakes' note with Obi-Wan's 'I have the high ground.'",
+   "Swap 'Utapau creamy chicken vol-au-vents' for 'So uncivilized' blaster-pastry bites.",
+   "Add a squid ballet photo in place of the Obi-Wan and Padme still."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

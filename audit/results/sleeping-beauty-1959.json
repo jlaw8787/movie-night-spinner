@@ -1,0 +1,68 @@
+{
+ "id": "Sleeping Beauty (1959)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "No magic in the kitchen, dear. We'll make the cake by hand, and it will be beautiful, I think. Merryweather, hold the flour.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a line from the film. The fairies do try to bake the cake and make the dress by hand before giving in to magic, so it fits Flora as a note.",
+   "source": "https://www.sparknotes.com/film/sleepingbeauty/summary/",
+   "fix": "No magic in the kitchen, dear. We'll make the cake by hand, and it will be beautiful, I think. Merryweather, hold the flour.",
+   "printed": true,
+   "fix_note": {
+    "text": "No magic in the kitchen, dear. We'll make the cake by hand, and it will be beautiful, I think. Merryweather, hold the flour.",
+    "by": "Flora",
+    "kind": "note"
+   },
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "King Hubert and King Stefan toasting the wedding plans",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The film shows the two kings drinking to their friendship while they wait for sunset, with Aurora's return in mind. A toast to wedding plans is not described.",
+   "source": "https://www.sparknotes.com/film/sleepingbeauty/summary/",
+   "fix": "King Hubert and King Stefan drinking to their friendship",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Maleficent's raven on her shoulder",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "Wikipedia names Diablo as Maleficent's pet raven, but no opened source puts him on her shoulder.",
+   "source": "https://en.wikipedia.org/wiki/Sleeping_Beauty_(1959_film)",
+   "fix": "Diablo, Maleficent's raven",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "The cake scene and the pink and blue fight are spot on, but the scout-camp canteen layout does not feel like a Disney fairy tale.",
+  "missing": [
+   "Once Upon a Dream, Aurora and Phillip dancing in the forest",
+   "Maleficent as a dragon on the Forbidden Mountain",
+   "The Sword of Truth and Shield of Virtue",
+   "Prince Phillip's horse Samson",
+   "Briar Rose gathering berries",
+   "The thorn forest around the castle"
+  ],
+  "ideas": [
+   "Swap the 'Mushroom and thyme hand pies' note for 'Briar Rose picks berries, not mushrooms'",
+   "Swap 'Woodcutter's cottage stew' note for 'Once upon a dream, Phillip and the cottage dinner'",
+   "Swap 'White chocolate dipped berries' note for 'Berries Aurora picked the day she met Phillip'",
+   "Swap the 'Birthday invite' prop for a Maleficent green-flame invitation, 'Not invited'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

@@ -8,9 +8,11 @@
    "verdict": "wrong",
    "why": "The restaurant dinner is Miranda's birthday, not Stu's, and Stu is eating jambalaya, which is the dish Daniel seasons with cayenne.",
    "source": "https://en.wikipedia.org/wiki/Mrs._Doubtfire",
-   "fix": "Stu's jambalaya, no cayenne",
+   "fix": "Miranda's birthday steak, no cayenne",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied_note": "Kept steak: the recipe is a sirloin, so jambalaya would not match the cook. The birthday is now Miranda's.",
+   "applied": "2026-11-07"
   },
   {
    "text": "Stu's birthday dinner, the night of the cayenne pepper",
@@ -20,7 +22,8 @@
    "source": "https://en.wikipedia.org/wiki/Mrs._Doubtfire",
    "fix": "Miranda's birthday dinner, the night of the cayenne pepper",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07"
   },
   {
    "text": "Shepherd's pie she passes off as hers",
@@ -56,7 +59,8 @@
    "source": "https://en.wikipedia.org/wiki/Mrs._Doubtfire",
    "fix": "Two dinners at once, one costume",
    "printed": false,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07"
   }
  ],
  "checked_ok": 12,

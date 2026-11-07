@@ -1,0 +1,68 @@
+{
+ "id": "Soul (2020)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I do not want to live on Earth. But that pizza slice smells awfully good. Could we try just one?",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a line from the film and printed in quote marks. 22 does resist Earth and then enjoys the pizza slice Joe gives her, so it fits as a note in her voice.",
+   "source": "https://disneyfanon.fandom.com/wiki/Soul",
+   "fix": "I do not want to live on Earth. But that pizza slice smells awfully good. Could we try just one?",
+   "printed": true,
+   "fix_note": {
+    "text": "I do not want to live on Earth. But that pizza slice smells awfully good. Could we try just one?",
+    "by": "22",
+    "kind": "note"
+   },
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Dorothea's story about the fish and the ocean.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "No source opened mentions the fish and ocean story, though Dorothea does hire Joe at the club.",
+   "source": "https://disneyfanon.fandom.com/wiki/Soul",
+   "fix": "Dorothea's quartet, with Joe on keys.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "A pizza slice and a falling leaf",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "The object that matters at the end is a maple seed (Wikipedia) or a petal (one fan wiki), not a leaf.",
+   "source": "https://en.wikipedia.org/wiki/Soul_(2020_film)",
+   "fix": "A pizza slice and a maple seed",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Dark jazz club look is right and the food hits Joe and 22's days, though 22's big scenes get less than they deserve.",
+  "missing": [
+   "Jerry the counsellors in the You Seminar",
+   "Moonwind the sign twirler",
+   "Joe stuck in a therapy cat",
+   "The Zone and the lost souls",
+   "Dez's barbershop haircut for 22",
+   "Terry counting souls, 'Oy! Movie's over, GO HOME!'"
+  ],
+  "ideas": [
+   "Swap the 'Homemade hard candy lollipops' note for 'Badge filler, one per soul'",
+   "Swap 'Half Note smoky nuts and warm olives' note for 'Joe's gig, no manhole'",
+   "Swap the 'Maple seed cookies' note for 'The seed that gave 22 her spark'",
+   "Swap the footer joke for Terry's 'Oy! Movie's over, GO HOME!'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

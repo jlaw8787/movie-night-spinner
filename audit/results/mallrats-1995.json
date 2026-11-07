@@ -1,0 +1,88 @@
+{
+ "id": "Mallrats (1995)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Girlfriend trouble, so we're eating at the food court. Pretzels, fries, the lot. This is where we think.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Brodie doesn't say this. It is printed in quote marks. In the food court he argues that the cookie stand is not part of it.",
+   "source": "https://en.wikiquote.org/wiki/Mallrats",
+   "fix": "The food court is downstairs. The cookie stand is upstairs.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "The food court is downstairs. The cookie stand is upstairs.",
+    "by": "Brodie Bruce",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Hosted by Gil Hicks",
+   "where": "prop",
+   "verdict": "wrong",
+   "why": "Gill Hicks is Suitor number 3 on the show. Truth or Date is hosted by Bob Summers (Art James).",
+   "source": "https://en.wikipedia.org/wiki/Mallrats",
+   "fix": "Hosted by Bob Summers",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Eden Prairie Mall Food Court",
+   "where": "venue",
+   "verdict": "unsure",
+   "why": "The film is set in New Jersey. Eden Prairie Center in Minnesota is only where it was shot.",
+   "source": "https://en.wikipedia.org/wiki/Mallrats",
+   "fix": "Mall Food Court, New Jersey",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Eden Prairie Mall. No sailboat, just pretzels.",
+   "where": "sign",
+   "verdict": "unsure",
+   "why": "Same problem as the venue. The mall in the story is in New Jersey.",
+   "source": "https://en.wikipedia.org/wiki/Mallrats",
+   "fix": "The mall. No sailboat, just pretzels.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Brodie's stash, eaten in the comic shop.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "No source shows Brodie with a stash of nuts in a comic shop.",
+   "source": "https://en.wikipedia.org/wiki/Mallrats",
+   "fix": "Cinnamon sugar nuts, eaten walking the mall.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A bright mall placemat that fits the film, but the food court argument and the best-known gags are missing.",
+  "missing": [
+   "The food court and cookie stand argument (Brodie and T.S.)",
+   "The Magic Eye sailboat poster (Willam)",
+   "Jay and Silent Bob's plans to wreck the stage",
+   "Stan Lee's advice to Brodie",
+   "The Cheese Haus lunch date (Gill Hicks)",
+   "The Superman debate in the food court"
+  ],
+  "ideas": [
+   "Swap 'Food court pretzels' note for the cookie stand argument.",
+   "Swap 'Sailboat poster cookies' for a Magic Eye sailboat cookie that only shows when you squint.",
+   "Add a Jay and Silent Bob dip plate to replace 'Food court pork egg rolls' note.",
+   "Swap 'Truth or Date lemonade' note for the Bob Summers game show."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

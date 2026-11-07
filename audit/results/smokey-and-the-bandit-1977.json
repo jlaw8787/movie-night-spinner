@@ -1,0 +1,48 @@
+{
+ "id": "Smokey and the Bandit (1977)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Load the beer, grab the burgers and let's roll. Bandit's already halfway to Texarkana.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Snowman line. The Bandit is blocking in the Trans Am and the pair only reach Texarkana at the start of the run. His real line about Fred is on Wikiquote.",
+   "source": "https://en.wikiquote.org/wiki/Smokey_and_the_Bandit",
+   "fix": "I'm gettin' worried about Fred here, he's lookin' a little thin in the skin!",
+   "printed": true,
+   "fix_note": {
+    "text": "I'm gettin' worried about Fred here, he's lookin' a little thin in the skin!",
+    "by": "Snowman",
+    "kind": "quote"
+   },
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Good truck stop board and a great poster, but the menu misses Fred, the Trans Am and the clam chowder finish.",
+  "missing": [
+   "Fred the basset hound in the cab",
+   "The black Trans Am, 'Trigger'",
+   "The CB handles, Bandit, Snowman and Smokey Bear",
+   "The double-or-nothing clam chowder run to Boston",
+   "The funeral procession that blocks Buford",
+   "Bandit calling Carrie 'Frog'"
+  ],
+  "ideas": [
+   "Swap 'Georgia peach cobbler' for 'Boston clam chowder, 18 hours' for the double-or-nothing finish",
+   "Swap the 'Truck stop cayenne pork crackling' note for 'Fred wants some'",
+   "Swap the 'Bandit's bourbon peach sweet tea' name for 'Trigger's sweet tea', after the black Trans Am",
+   "Swap 'Fried pickle spears with ranch' note for 'Breaker one-nine, Smokey Bear on your tail'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

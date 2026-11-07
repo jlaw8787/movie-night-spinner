@@ -1,0 +1,58 @@
+{
+ "id": "Pretty Woman (1990)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Order the strawberries, Edward. They go with the champagne, and I've earned a night off.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Vivian doesn't say this. It is printed in quote marks, and in the film Edward is the one who orders the strawberries and champagne. Her real lines include 'Baby, I'm gonna treat you so nice, you're never gonna wanna let me go.'",
+   "source": "https://en.wikiquote.org/wiki/Pretty_Woman",
+   "fix": "Baby, I'm gonna treat you so nice, you're never gonna wanna let me go.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Baby, I'm gonna treat you so nice, you're never gonna wanna let me go.",
+    "by": "Vivian Ward",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "ordering everything off the room service menu",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No source opened shows Vivian ordering everything off the room service menu.",
+   "source": "https://en.wikipedia.org/wiki/Pretty_Woman",
+   "fix": "Room service, charged to the penthouse suite.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 4,
+  "verdict": "The best of this batch. A room service hotel suits the film, and the strawberries and champagne, red dress and necklace box are all in.",
+  "missing": [
+   "The escargot flying across the dining room (business dinner)",
+   "Barney teaching Vivian table manners (hotel)",
+   "Big mistake, huge (Rodeo Drive, second visit)",
+   "The polo match (Edward's date)",
+   "The knight on the white steed (fire escape)",
+   "La traviata at the opera (San Francisco)"
+  ],
+  "ideas": [
+   "Swap 'Smoked trout pâté with melba toast' note for Barney's fork lesson.",
+   "Swap 'Garlic butter escargot or mushrooms' note for the flying escargot.",
+   "Add a white horse sugar cube garnish to the champagne cocktail.",
+   "Swap the club sandwich note for 'She rescues him right back'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

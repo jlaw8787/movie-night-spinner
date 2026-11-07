@@ -4,33 +4,36 @@
  "facts": [
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Serve the mains when Frank turns up at his brother's Christmas dinner.",
    "where": "cue",
    "verdict": "wrong",
    "why": "Frank never turns up at James's Christmas dinner. He turns down James's invitation every year and sends impersonal gifts. The Ghost of Christmas Present only shows him James celebrating and missing him.",
    "source": "https://www.imdb.com/title/tt0096061/plotsummary",
-   "fix": "Serve the mains when the Ghost of Christmas Present shows Frank his brother James's Christmas."
+   "fix": "Serve the mains when the Ghost shows Frank his brother's Christmas dinner.",
+   "applied": "2026-11-07"
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Serve the mains when Frank turns up at his brother's Christmas dinner.",
    "where": "cue-printed",
    "verdict": "wrong",
    "why": "Same cue as printed on the card. Frank watches James's Christmas through the ghost's vision. He does not arrive at it.",
    "source": "https://encycloreader.org/r/wikipedia.php?q=Scrooged",
-   "fix": "Serve the mains when the Ghost of Christmas Present shows Frank his brother James's Christmas."
+   "fix": "Serve the mains when the Ghost shows Frank his brother's Christmas dinner.",
+   "applied": "2026-11-07"
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Lew Hayward, the network boss",
    "where": "wink",
    "verdict": "wrong",
    "why": "Lew Hayward is Frank's dead mentor, who appears as a decomposing ghost to warn him about the three spirits. Preston Rhinelander is the network chairman.",
    "source": "https://encycloreader.org/r/wikipedia.php?q=Scrooged",
-   "fix": "Lew Hayward, Frank's ghost mentor"
+   "fix": "Lew Hayward, the ghost mentor",
+   "applied": "2026-11-07"
   },
   {
    "printed": true,

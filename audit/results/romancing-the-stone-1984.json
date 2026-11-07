@@ -1,0 +1,78 @@
+{
+ "id": "Romancing the Stone (1984)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I write about adventure, not eating dinner in a jungle with no heels left. Pass the bread anyway.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Joan line. Her real line about the heels is 'These were Italian.' (after Jack chops them off). The note is also built on 'boots', which is wrong, see the winks.",
+   "source": "https://en.wikiquote.org/wiki/Romancing_the_Stone",
+   "fix": "Jack chopped the heels off my shoes in the jungle. The least this place can do is feed me. Pass the bread.",
+   "printed": true,
+   "fix_note": {
+    "text": "Jack chopped the heels off my shoes in the jungle. The least this place can do is feed me. Pass the bread.",
+    "by": "Joan Wilder",
+    "kind": "note"
+   },
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "From Elaine, by mail",
+   "where": "prop",
+   "verdict": "wrong",
+   "why": "The map is mailed by Eduardo, Elaine's husband and Joan's murdered brother-in-law. Elaine is kidnapped in Colombia and phones Joan afterwards.",
+   "source": "https://en.wikipedia.org/wiki/Romancing_the_Stone",
+   "fix": "From Eduardo, by mail",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Jack chops the heels off Joan's boots.",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Joan is in shoes, not boots. On Wikiquote she says 'These were Italian' after Jack chops the heels off her shoes. Same line is in the venue winks.",
+   "source": "https://en.wikiquote.org/wiki/Romancing_the_Stone",
+   "fix": "Jack chops the heels off Joan's shoes.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Joan's sister Elaine in New York",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Elaine is in Colombia, kidnapped by Ira and Ralph, and handed over in Cartagena. She is not in New York.",
+   "source": "https://en.wikipedia.org/wiki/Romancing_the_Stone",
+   "fix": "Joan's sister Elaine, held in Cartagena",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Good Colombian food and the right jungle moments, held back by an invented note and a wrong map sender.",
+  "missing": [
+   "Juan, the drug lord who loves Joan's novels ('Vaya con dios, gringo')",
+   "Grogan and Angelina, the novel Joan finishes in the opening",
+   "Jack T. Colton: 'Trustworthy' is what the T stands for",
+   "The crashed plane full of marijuana in the jungle",
+   "Jack's crocodile skin boots at the end",
+   "Ralph and Ira, the smuggler cousins chasing the map"
+  ],
+  "ideas": [
+   "Swap the 'Fried yuca with ají' note for 'T is for Trustworthy, says Jack T. Colton.'",
+   "Swap the 'Chilli-lime tropical fruit cups' note for 'Juan reads Joan's books to his men on Saturdays'",
+   "Swap the 'Aguardiente with lime' note for 'Vaya con dios, gringo' as the line Juan gives before he finds out who she is",
+   "Add Jack's crocodile skin boots as a wink in place of 'The mudslide down the hill'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

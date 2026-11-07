@@ -1,0 +1,48 @@
+{
+ "id": "Solo: A Star Wars Story (2018)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Careful with my plates, kid. That's the good china in the galley.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Lando line. A real one from Wikiquote, said at the sabacc game, fits the card.",
+   "source": "https://en.wikiquote.org/wiki/Solo:_A_Star_Wars_Story",
+   "fix": "Everything you heard about me is true.",
+   "printed": true,
+   "fix_note": {
+    "text": "Everything you heard about me is true.",
+    "by": "Lando Calrissian",
+    "kind": "quote"
+   },
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 5,
+  "overall": 3.8,
+  "verdict": "The blueprint look is the best of the batch and the crew details are right, but the dishes could lean harder on Han and Chewie's scenes.",
+  "missing": [
+   "Han and Chewbacca meeting in the mud pit on Mimban",
+   "The Vandor-1 train heist",
+   "Lando's capes and the Falcon's card game",
+   "L3-37 leading the revolt on Kessel",
+   "Enfys Nest and the Cloud Riders",
+   "Han's vial of coaxium at the end"
+  ],
+  "ideas": [
+   "Swap 'Corellia street dumplings' note for 'Han and Chewie's first bite, in the mud pit'",
+   "Swap the 'Coaxium popping candy chocolate bark' note for 'Han's vial of coaxium, enough for a ship of his own'",
+   "Swap the 'Kessel Run Pass' prop for 'Chewbacca ration card'",
+   "Swap 'Sabacc rosemary nuts and olives' note for 'Lando cheats, Han counts'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "id": "Shrek (2001)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Donkey, sit down and eat your stew. Quietly. And if you sing at the table, you are going outside.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Shrek line. His real line about the singing is on Wikiquote and is much shorter, so it fits the panel easily.",
+   "source": "https://en.wikiquote.org/wiki/Shrek",
+   "fix": "What did I say about singing?",
+   "printed": true,
+   "fix_note": {
+    "text": "What did I say about singing?",
+    "by": "Shrek",
+    "kind": "quote"
+   },
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Caught the Shrek way, in the mud bath.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No source opened shows Shrek catching an eel in a mud bath. Shrek does eat swamp creatures in the film, but this specific scene is not described.",
+   "source": "https://en.wikiquote.org/wiki/Shrek",
+   "fix": "Caught the Shrek way, in the swamp.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Swamp canteen with the right props, and onions, waffles and Gingy are all film-true, but the note is invented and the card is a little busy.",
+  "missing": [
+   "Ogres are like onions, they have layers",
+   "Shrek's weed rat stew (Wikiquote line)",
+   "Donkey 'I'm makin' waffles' (the cue)",
+   "Farquaad and Gingy, 'Not my gumdrop buttons'",
+   "The Merry Men and Robin Hood fight",
+   "Dragon in the castle keep"
+  ],
+  "ideas": [
+   "Swap the 'Swamp stew' note for 'I make a mean weed rat stew' (Shrek)",
+   "Swap the 'Shrek's onion rings' note for 'Ogres are like onions. Layers.'",
+   "Swap the 'Lord Farquaad's Duloc roast chicken' note for 'Duloc is a perfect place. Please keep off the grass.'",
+   "Swap 'Swamp dip' for 'Dragon's fire dip', served hot"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

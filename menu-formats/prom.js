@@ -248,7 +248,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* gym banner: shape follows the era */
   /* a dance competition film reads as a comp, not a school dance */
   const comp=/grand prix|championship|competition|ballroom|dance comp|dance-off|regional|nationals/i.test(String(fl&&fl.venue||"")+" "+String(fl&&fl.sign||"")+" "+(f.title||""));
-  const kick=comp?`DANCE CHAMPIONSHIP, ${year}`:`${E.kick}, CLASS OF ${year}`;
+  /* the class year follows the film where it is set in another year (Animal House is 1962, released 1978) */
+  const classOf=fl&&/^\d{4}$/.test(String(fl.classOf||""))?String(fl.classOf):year;
+  const kick=comp?`DANCE CHAMPIONSHIP, ${year}`:`${E.kick}, CLASS OF ${classOf}`;
   const sT=fitType(sign,W-96,PMq?58:92,E.dcw,PMq?40:56,24,1.04,2);
   let banner;
   const signHtml=`<div style="${caps(18,E.proc==="letterpress"||E.proc==="offset"?mix(bandText,band,.15):ACC==band?bandText:bandText,.22)};text-align:center">${esc(kick)}</div>

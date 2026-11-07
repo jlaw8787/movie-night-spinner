@@ -1,0 +1,48 @@
+{
+ "id": "Mean Girls (2004)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "The Plastics get the best table. I only wanted a seat for one lunch, and look where that went.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Cady doesn't say this. It is printed in quote marks. Her real narration includes, 'Having lunch with The Plastics was like leaving the Actual World and entering Girl World.'",
+   "source": "https://en.wikiquote.org/wiki/Mean_Girls_(2004_film)",
+   "fix": "Having lunch with The Plastics was like leaving the Actual World and entering Girl World.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Having lunch with The Plastics was like leaving the Actual World and entering Girl World.",
+    "by": "Cady Heron",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "The pink cafeteria look is right, but the famous lines and props are barely used.",
+  "missing": [
+   "On Wednesdays we wear pink (the Plastics)",
+   "The Burn Book",
+   "The Kalteen bars Cady gives Regina",
+   "Is butter a carb (Regina)",
+   "Four for you, Glen Coco",
+   "The cafeteria map (Janis)"
+  ],
+  "ideas": [
+   "Swap 'Pink cafeteria wraps' note for 'On Wednesdays we wear pink'.",
+   "Swap 'Cafeteria crumbed chicken tenders' note for the Burn Book.",
+   "Add a Kalteen-style snack bar to replace 'Candy cane gram peppermint bark' note.",
+   "Swap the strawberry smoothie note for 'Stop trying to make fetch happen' as a printed line."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

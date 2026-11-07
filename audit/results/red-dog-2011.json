@@ -1,0 +1,78 @@
+{
+ "id": "Red Dog (2011)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Red Dog's at the door again. Give him a pie for the road and a pat for his trouble.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "John Grant doesn't say this. It is printed in quote marks. His real line when Red Dog first hops on his bus is 'All the sad faces in the world ain't gonna work, so you can just stop.'",
+   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/RedDog",
+   "fix": "All the sad faces in the world ain't gonna work, so you can just stop.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "All the sad faces in the world ain't gonna work, so you can just stop.",
+    "by": "John Grant",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Dampier Hotel",
+   "where": "venue",
+   "verdict": "unsure",
+   "why": "The sources opened only call it the town pub and don't name it.",
+   "source": "https://en.wikipedia.org/wiki/Red_Dog_(film)",
+   "fix": "Dampier Pub",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "DAMPIER HOTEL, PILBARA",
+   "where": "sign",
+   "verdict": "unsure",
+   "why": "Same problem as the venue. The pub's name isn't given in the sources opened.",
+   "source": "https://en.wikipedia.org/wiki/Red_Dog_(film)",
+   "fix": "DAMPIER PUB, PILBARA",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "John Grant's lunch, half of it for Red.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "No source opened shows John Grant sharing a sausage sizzle with Red.",
+   "source": "https://en.wikipedia.org/wiki/Red_Dog_(film)",
+   "fix": "The pub's lunch, half of it for Red.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A good Pilbara pub with the right food and feel, but the actual Red Dog stories are only lightly used.",
+  "missing": [
+   "Red Dog riding the bus with John Grant",
+   "Red Dog and Red Cat's fights",
+   "Red Dog eating a can of dog food at the pub",
+   "The statue of Red Dog (ending)",
+   "The caravan park where Nancy stays",
+   "Red Dog waiting where John told him to"
+  ],
+  "ideas": [
+   "Swap 'Red Dog lamingtons' note for the Red Dog statue unveiling.",
+   "Swap 'Dampier sausages, steak and potato salad' for a Red Dog bus lunch.",
+   "Add a Red Cat pie replacing 'Mining camp sausage rolls' note.",
+   "Swap 'Cold middy of Swan Lager' note for the town toast to Red Dog."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

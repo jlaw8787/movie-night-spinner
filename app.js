@@ -1539,7 +1539,9 @@ const dryFold=(out,src)=>{const had=new Set([...src.matchAll(/\b([\p{L}']+)( \1)
    is held aside while the word pass runs */
 const KKEEP=/\bBig Whiskey\b|\bBIG WHISKEY\b|\b[A-Z][A-Za-z]+['’][sS] (?:Beer|Whiskey|Rum|Wine|Gin|BEER|WHISKEY|RUM|WINE|GIN) (?:Garden|Hall|House|Saloon|Cellar|Room|GARDEN|HALL|HOUSE|SALOON|CELLAR|ROOM)\b/g;
 const dryKeep=(t,fn)=>{const kept=[];const m=String(t).replace(KKEEP,x=>{kept.push(x);return `\uE000${kept.length-1}\uE001`});return kept.length?fn(m).replace(/\uE000(\d+)\uE001/g,(x,i)=>kept[+i]):fn(t)};
-const dryText=(t,on)=>{const v=KFIX.reduce((a,[re,to])=>a.replace(re,to),t);return on?dryKeep(v,u=>dryFold(KFIX.reduce((a,[re,to])=>a.replace(re,to),KDRY.reduce((a,[re,to])=>a.replace(re,to),u)),u)):v};
+/* the zero-width space that guards malt vinegar and the like during the swaps never reaches the page (Cruella) */
+const dryText=(t,on)=>dryText0(t,on).replace(/\u200B/g,"");
+const dryText0=(t,on)=>{const v=KFIX.reduce((a,[re,to])=>a.replace(re,to),t);return on?dryKeep(v,u=>dryFold(KFIX.reduce((a,[re,to])=>a.replace(re,to),KDRY.reduce((a,[re,to])=>a.replace(re,to),u)),u)):v};
 function kidsDryDom(root,f){if(!root)return;const on=dryNow(f||current);const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);let n;const todo=[];
   /* a name can arrive split across text nodes ("Caribbean cruise prawn" + "cocktail"): each node is read with the end of the one before and the start of the one after, and only its own part is kept */
   const nodes=[];while(n=tw.nextNode()){const p=n.parentElement;if(!p||/^(SCRIPT|STYLE)$/.test(p.tagName))continue;nodes.push(n)}

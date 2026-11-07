@@ -1,0 +1,68 @@
+{
+ "id": "Logan (2017)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Logan, the girl is hungry. Do something kind for once, and make it hot.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Charles never says this in the film. It is printed in quote marks as dialogue. At the Munson dinner Charles says they have had two days on the road with only one meal.",
+   "source": "https://en.wikiquote.org/wiki/Logan_(film)",
+   "fix": "Two days on the road, only one meal, hardly any sleep.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Two days on the road, only one meal, hardly any sleep.",
+    "by": "Charles Xavier",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Charles never misses it, even on a bad day.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Nothing in the sources shows Charles eating cornbread or any set habit around food.",
+   "source": "https://en.wikipedia.org/wiki/Logan_(film)",
+   "fix": "A plain side for a long drive north.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Laura's choice, taken without asking.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No source shows Laura taking root beer from a gas station.",
+   "source": "https://en.wikipedia.org/wiki/Logan_(film)",
+   "fix": "Something cold for the long drive to Eden.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "The hideout and limo booking feel right, but the food mostly isn't tied to scenes from the film.",
+  "missing": [
+   "The Munson family dinner (Will and Kathryn Munson)",
+   "Shane playing on the hotel TV and the eulogy at the grave",
+   "Laura's X-Men comic and Eden (Oklahoma City hotel)",
+   "The adamantium bullet Logan kept",
+   "Charles's seizure at the casino hotel",
+   "Caliban in the smelting plant"
+  ],
+  "ideas": [
+   "Swap 'Pan cornbread with honey' note for Charles's line about a home and people who love each other, said at the Munson table.",
+   "Swap 'Gas station corn dogs' for the Munson table spread, with the farm family named in the note.",
+   "Add a Shane toast to the hotel rib eye note, since the Western plays on the TV there.",
+   "Swap the root beer note for Laura's X-Men comic and the Eden map."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

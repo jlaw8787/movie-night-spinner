@@ -1,0 +1,68 @@
+{
+ "id": "Teenage Mutant Ninja Turtles III (1993)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I'm hungry, I'm homesick, and I want pizza. Pass me whatever is hot and let's get back to New York.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Raphael never says this. The pizza line on the quote page belongs to Michelangelo ('d'you think they had pizza back then?').",
+   "source": "https://en.wikiquote.org/wiki/Teenage_Mutant_Ninja_Turtles_III:_Turtles_in_Time",
+   "fix": "Awesome! But d'you think they had pizza back then?",
+   "fix_note": {
+    "text": "Awesome! But d'you think they had pizza back then?",
+    "by": "Michelangelo",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the mains when the turtles realise there's no pizza in 1603.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The quote page has Mikey wondering if they had pizza back then before they leave. A synopsis opened has Michelangelo introducing the villagers to pizza in the past. Nothing shows them realising there is none.",
+   "source": "https://en.wikiquote.org/wiki/Teenage_Mutant_Ninja_Turtles_III:_Turtles_in_Time",
+   "fix": "Serve the mains when Mikey asks if they had pizza back in 1603.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Casey Jones along for the ride",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Casey stays in present day New York with Splinter and Kenshin. He does not travel to 1603.",
+   "source": "https://en.wikipedia.org/wiki/Teenage_Mutant_Ninja_Turtles_III",
+   "fix": "Casey Jones minding Kenshin back in New York",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 2,
+  "overall": 2.8,
+  "verdict": "The feudal village idea works, but the poster sits in big black bars on parchment and the pizza gag misses the film's real jokes.",
+  "missing": [
+   "Michelangelo introducing the villagers to pizza",
+   "Raphael's 'Hello mustard?' Japanese phrase attempt",
+   "Splinter's Elvis impression at the end",
+   "Casey teaching the Honor Guard hockey",
+   "The turtles disguised as honour guards",
+   "Raphael giving Yoshi a yo-yo"
+  ],
+  "ideas": [
+   "Swap 'Time travel pepperoni pizza scrolls' note for Michelangelo teaching the village to make pizza.",
+   "Replace the black-barred poster with a full-bleed still.",
+   "Swap 'Mochi ice cream' for 'Elvis finale' milkshakes.",
+   "Replace the 'Iced honey barley tea' note with Raphael: 'I told you these disguises weren't gonna work!'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

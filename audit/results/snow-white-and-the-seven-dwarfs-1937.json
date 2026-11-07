@@ -1,0 +1,68 @@
+{
+ "id": "Snow White and the Seven Dwarfs (1937)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Bashful, please wash your hands. Grumpy, you too. The stew is ready, and I made extra for all of you. Now sit down.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Snow White line. Her real line on Wikiquote is shorter and about washing before supper.",
+   "source": "https://en.wikiquote.org/wiki/Snow_White_and_the_Seven_Dwarfs_(1937_film)",
+   "fix": "March straight outside and wash, or you'll not get a bite to eat.",
+   "printed": true,
+   "fix_note": {
+    "text": "March straight outside and wash, or you'll not get a bite to eat.",
+    "by": "Snow White",
+    "kind": "quote"
+   },
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Grumpy said he wouldn't eat. He did.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Grumpy objects to the washing and to Snow White staying, but no source opened says he refuses to eat.",
+   "source": "https://en.wikiquote.org/wiki/Snow_White_and_the_Seven_Dwarfs_(1937_film)",
+   "fix": "Grumpy said he wouldn't wash. He did.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Dopey riding on the others' shoulders",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "No source opened describes Dopey riding on shoulders.",
+   "source": "https://en.wikipedia.org/wiki/Snow_White_and_the_Seven_Dwarfs_(film)",
+   "fix": "Dopey, always last in the line to the mine",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Charming tearoom with a good washing-up joke and the pie cue, but the film's best-known scenes are mostly left off.",
+  "missing": [
+   "Heigh-Ho, the march home from the diamond mine",
+   "The dwarfs dunking Grumpy in the tub",
+   "Names carved on the seven beds",
+   "The soup supper Snow White cooks, 'Supper!'",
+   "Gooseberry pie for Grumpy",
+   "The Queen dipping the apple in the brew"
+  ],
+  "ideas": [
+   "Swap 'Cottage herb roast chicken and veg' note for 'Seven bowls for seven beds'",
+   "Swap the 'Shiny red apple and cinnamon punch' note for 'Dip the apple, if you dare'",
+   "Swap 'Dwarfs' supper soup' note for 'Supper! Snow White's soup, made from what the animals found'",
+   "Swap the 'Diamond mine cheese gems' note for 'Heigh-Ho, off to work we go'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

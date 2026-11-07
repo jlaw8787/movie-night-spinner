@@ -1,0 +1,78 @@
+{
+ "id": "The Batman (2022)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Eat something, pal. Nobody does honest crime on an empty stomach.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "No Oz line like this appears on the quote pages opened. The only Oz line found is 'Just look at you! World's Greatest Detectives!'",
+   "source": "https://www.sideshow.com/geek/best-quotes-from-the-batman-2022",
+   "fix": "Just look at you! World's Greatest Detectives!",
+   "fix_note": {
+    "text": "Just look at you! World's Greatest Detectives!",
+    "by": "Oz",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Alfred keeping Bruce going in the old Wayne Tower.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The plot has Alfred hospitalised by the Riddler's letter bomb. Nothing opened places him in the old Wayne Tower keeping Bruce going.",
+   "source": "https://en.wikipedia.org/wiki/The_Batman_(film)",
+   "fix": "Alfred on the mend after the Riddler's letter bomb.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Selina's shift ends downstairs at 44 Below.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The plot says Selina waits tables at the Iceberg Lounge. Nothing opened mentions a place called 44 Below.",
+   "source": "https://en.wikipedia.org/wiki/The_Batman_(film)",
+   "fix": "Selina's shift ends after the last table at the Iceberg Lounge.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Selina Kyle and the cats in her apartment",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Nothing opened mentions cats in Selina's apartment. The plot has her sharing a place with Annika.",
+   "source": "https://en.wikipedia.org/wiki/The_Batman_(film)",
+   "fix": "Selina Kyle, Annika's roommate, waiting tables at the Iceberg Lounge",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "The Iceberg Lounge setting and the Riddler's cards are on target, but the rain, riddles and the Gotham flood are barely used.",
+  "missing": [
+   "The Riddler's riddles read out loud",
+   "Colson's collar bomb at Mitchell's funeral",
+   "The Penguin car chase",
+   "Batman and Selina on the rooftop",
+   "The flooded Gotham finale",
+   "Alfred hurt by the letter bomb"
+  ],
+  "ideas": [
+   "Swap 'Flood night chocolate pots' note for the flooded Gotham finale.",
+   "Replace the Oz note with his own 'World's Greatest Detectives!' line.",
+   "Swap 'Riddler's question mark pretzels' note for a riddle printed on the pretzel bag.",
+   "Replace 'Iceberg Lounge espresso martini' with 'Penguin chase martini' with a car chase note."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

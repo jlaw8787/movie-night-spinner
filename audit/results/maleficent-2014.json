@@ -1,0 +1,78 @@
+{
+ "id": "Maleficent (2014)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve dessert when the three pixies try to bake Aurora's birthday cake.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The pixies baking a cake is from the 1959 animated film. The sources opened for the 2014 film show the pixies as clumsy carers but no cake scene.",
+   "source": "https://en.wikipedia.org/wiki/Maleficent_(film)",
+   "fix": "Serve dessert when Maleficent crashes the christening and curses baby Aurora.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "The pixies' birthday cake",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "Same problem as the cue. No cake-baking scene is shown in the sources opened for the 2014 film.",
+   "source": "https://en.wikipedia.org/wiki/Maleficent_(film)",
+   "fix": "Aurora's christening cake",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Mistress, I'm a raven, a man, and a wolf. Pick a shape and I'll fetch the bread. Please, not the dragon.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Diaval never says this. It is printed in quote marks. His real line on meeting Maleficent is about being her servant in return for his life.",
+   "source": "https://maleficent.fandom.com/wiki/Diaval?oldid=6580",
+   "fix": "And in return for saving my life, I am your servant. Whatever you need.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "And in return for saving my life, I am your servant. Whatever you need.",
+    "by": "Diaval",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "The wall of thorns around the castle",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "Maleficent's wall of thorns surrounds the Moors. Stefan later builds an iron thorn wall around his own castle, so the line is only true of his wall.",
+   "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/Maleficent",
+   "fix": "The wall of thorns around the Moors",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 9,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3,
+  "verdict": "The Moors setting is right, but the poster has black bars top and bottom and the cake cue is from the older film.",
+  "missing": [
+   "The christening curse (Stefan's castle)",
+   "Diaval changing shape (raven, man, wolf, dragon)",
+   "Maleficent's wings burnt off with iron",
+   "Aurora calling Maleficent her fairy godmother",
+   "True love's kiss waking Aurora",
+   "Maleficent calling Aurora 'Beastie'"
+  ],
+  "ideas": [
+   "Swap 'The pixies' birthday cake' for a christening curse cake with green flame sugar.",
+   "Swap 'Diaval's black olive tapenade' note for Diaval changing shapes.",
+   "Fix the black bars on the poster image.",
+   "Add a 'Beastie' berry tart to replace 'Berry ricotta brioche toasts'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

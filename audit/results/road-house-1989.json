@@ -1,0 +1,58 @@
+{
+ "id": "Road House (1989)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I'll have a coffee and whatever's hot. Then I'll stand by the door till close.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Dalton doesn't say this. It is printed in quote marks. His real line to the bouncers is 'I want you to be nice... until it's time... to not be nice.'",
+   "source": "https://en.wikiquote.org/wiki/Road_House_(1989_film)",
+   "fix": "I want you to be nice... until it's time... to not be nice.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "I want you to be nice... until it's time... to not be nice.",
+    "by": "Dalton",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "dinner with the town doctor",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The sources opened show Dalton meeting Doc Clay at the hospital but not having dinner with her.",
+   "source": "https://en.wikipedia.org/wiki/Road_House_(1989_film)",
+   "fix": "the town doctor who stitches Dalton up",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A good roadhouse bar tab with the right look, but the famous rules and bouncer lines are barely used.",
+  "missing": [
+   "The three rules and 'be nice' (Dalton to the bouncers)",
+   "Ripping out the throat (Dalton and Reno)",
+   "Wade Garrett's 'Don't eat the big white mint'",
+   "Brad Wesley's trophy room",
+   "The house band behind chicken wire (Jeff Healey)",
+   "Emmett's barn where Dalton stays"
+  ],
+  "ideas": [
+   "Swap 'Double Deuce buffalo wings' note for the three rules, 'be nice'.",
+   "Add a big white mint dish to replace 'Farm loft pickles' note.",
+   "Swap 'Missouri gooey butter cake' note for Wesley's trophy room.",
+   "Add a 'Pain don't hurt' hot sauce to the bar snacks."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

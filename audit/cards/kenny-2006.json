@@ -27,8 +27,8 @@
    "Sips",
    "Knock-off lager michelada",
    "Iced coffee milk, straight from the carton",
-   "OVERHEARD AT THE WINDOW",
-   "\"Lunch is on me, mate, but I'm washing my hands first. Twice. Then I'll see to the loo.\"",
+   "A NOTE FROM THE WINDOW",
+   "Lunch is on me. Hands washed twice first, then I'll check the loos.",
    "Kenny Smyth",
    "NOW SERVING",
    "No. 06",
@@ -86,12 +86,13 @@
   "venue": "Splashdown Depot",
   "sign": "SPLASHDOWN, WE DELIVER",
   "note": {
-   "text": "Lunch is on me, mate, but I'm washing my hands first. Twice. Then I'll see to the loo.",
-   "by": "Kenny Smyth"
+   "text": "Lunch is on me. Hands washed twice first, then I'll check the loos.",
+   "by": "Kenny Smyth",
+   "kind": "note"
   },
   "winks": [
    "Kenny Smyth, portable toilet plumber",
-   "Dad Ronnie and brother Brian",
+   "Dad Bill and brother David",
    "The Splashdown work van",
    "The festival and its long line of loos"
   ]

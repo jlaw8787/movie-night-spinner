@@ -1,0 +1,58 @@
+{
+ "id": "The Dark Knight Rises (2012)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Master Bruce, I ask only that you eat something. I have been asking for years.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Alfred does not say this, and he calls Bruce 'Master Wayne' in the transcript. His Florence cafe speech has 'Every fine evening, I would sit there and order a Fernet Branca.'",
+   "source": "https://scrapsfromtheloft.com/movies/the-dark-knight-rises-transcript/",
+   "fix": "Every fine evening, I would sit there and order a Fernet Branca.",
+   "fix_note": {
+    "text": "Every fine evening, I would sit there and order a Fernet Branca.",
+    "by": "Alfred Pennyworth",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "The masked ball where Bruce dances with Selina.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The transcript has a charity ball where Bruce says 'Mind if I cut in?' and then talks with Selina. It does not show a dance or call the ball masked.",
+   "source": "https://scrapsfromtheloft.com/movies/the-dark-knight-rises-transcript/",
+   "fix": "the charity ball where Selina steals Martha Wayne's pearls",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "The Florence cafe is a nice end scene, but the football game and ball dishes mix up the film's moods and the big moments are thin.",
+  "missing": [
+   "Bane breaking Batman's back",
+   "The prison pit and the climb out (listed, not on a dish)",
+   "Selina catching Bruce at the safe: 'I'm afraid I can't let you take those'",
+   "Batman flying the Bat with the bomb",
+   "Selina's 'I'm adaptable'",
+   "Blake revealed as Robin at the Batcave"
+  ],
+  "ideas": [
+   "Swap 'Stadium game day pretzels' for 'Pit prison bread' with a Bane line.",
+   "Replace the 'Masquerade ball smoked salmon blinis' note with Selina's pearls.",
+   "Swap 'Fernet-Branca, neat' note for Alfred's full Florence speech.",
+   "Replace the black-white poster with a Florence cafe still."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

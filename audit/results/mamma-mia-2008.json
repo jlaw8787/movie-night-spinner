@@ -1,0 +1,78 @@
+{
+ "id": "Mamma Mia! (2008)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the feast at Sophie's wedding party on the island.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "Sophie's wedding doesn't happen. She and Sky postpone it, and Donna and Sam marry on the spot instead.",
+   "source": "https://en.wikipedia.org/wiki/Mamma_Mia!_(film)",
+   "fix": "Serve the feast when Donna and Sam marry on the island.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Three possible fathers and one wedding. I'll fix the taverna, you bring the guests, and nobody mentions the diary.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Donna doesn't say this. It is printed in quote marks. Her real lines include 'Somebody up there has got it in for me. I bet it's my mother.'",
+   "source": "https://en.wikiquote.org/wiki/Mamma_Mia!_(film)",
+   "fix": "Somebody up there has got it in for me. I bet it's my mother.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Somebody up there has got it in for me. I bet it's my mother.",
+    "by": "Donna Sheridan",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Ordered from Donna's diary, summer of '79.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Sophie does read Donna's diary, but the sources opened don't give the year of the entries.",
+   "source": "https://en.wikiquote.org/wiki/Mamma_Mia!_(film)",
+   "fix": "Straight from Donna's diary, the summer of three men.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Sam and his sailboat",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "The sailboat is Bill's. Sophie finds the three men aboard Bill's sailboat.",
+   "source": "https://en.wikipedia.org/wiki/Mamma_Mia!_(film)",
+   "fix": "Bill and his sailboat",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A sunny Greek taverna with the right food, but it leans on the setting more than on scenes people remember.",
+  "missing": [
+   "The three invitations Sophie sent (Sophie's bedroom)",
+   "Sam, Bill and Harry hidden in the goat house",
+   "Tanya and Rosie arriving (Donna's hotel)",
+   "Sam proposing to Donna at the wedding",
+   "Donna and her diary",
+   "Harry the old headbanger"
+  ],
+  "ideas": [
+   "Swap 'Kalokairi taverna mezze plate' note for the goat house where Sophie hides the three men.",
+   "Swap 'Wedding lamb kleftiko' note for Donna and Sam's wedding on the spot.",
+   "Add a Rosie's cookbook page as a recipe card to replace 'Rosie's cookbook spanakopita' note.",
+   "Swap the cue for the chapel wedding."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

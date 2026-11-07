@@ -1,0 +1,58 @@
+{
+ "id": "Tangled (2010)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Mother says stay in, so I'm cooking. The lanterns go up after dessert, and the frying pan is for the eggs this time.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as if Rapunzel says it, but it is not a line from the film. It reads as a written note and fits the plot, so store it as a note, not a quote.",
+   "source": "https://en.wikiquote.org/wiki/Tangled",
+   "fix": "Mother says stay in, so I'm cooking. The lanterns go up after dessert, and the frying pan is for the eggs this time.",
+   "fix_note": {
+    "text": "Mother says stay in, so I'm cooking. The lanterns go up after dessert, and the frying pan is for the eggs this time.",
+    "by": "Rapunzel",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the mains when Mother Gothel promises to make hazelnut soup.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Neither the plot nor the quote page mentions hazelnut soup. They show Gothel refusing Rapunzel's request to see the lanterns.",
+   "source": "https://en.wikipedia.org/wiki/Tangled",
+   "fix": "Serve the mains when Rapunzel asks Mother Gothel to see the lanterns.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 5,
+  "overall": 3.8,
+  "verdict": "Lovely look and good nods (frying pan, Maximus, the smoulder), but a posh tea room is an odd home for the rowdy Snuggly Duckling.",
+  "missing": [
+   "The thugs singing 'I've Got a Dream' at the Snuggly Duckling",
+   "Hook Hand's piano dream",
+   "Flynn's 'You broke my smoulder'",
+   "The Stabbington brothers and the satchel",
+   "Flynn's wanted poster with the strange nose",
+   "Pascal giving Flynn a wet willy"
+  ],
+  "ideas": [
+   "Swap 'Pork and sage sausage rolls' for 'Hook Hand's piano pies'.",
+   "Replace the 'Floating lantern cakes' note with the thugs: 'We've got a dream.'",
+   "Swap the tea room framing for the Duckling's tankard bar.",
+   "Replace the 'Corona lavender cooler' note with Flynn: 'You broke my smoulder.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

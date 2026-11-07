@@ -8,19 +8,20 @@
    "verdict": "wrong",
    "why": "There is no Thanksgiving dinner with Kris in the film. Thanksgiving is only the morning of the Macy's parade, when Doris talks Kris into playing Santa. Kris, Fred, Doris and Susan next meet on Christmas Day at his home. The printed card cue is the same line.",
    "source": "https://en.wikipedia.org/wiki/Miracle_on_34th_Street",
-   "fix": "Serve the mains when the mailbags of Santa letters are emptied onto the judge's desk.",
+   "fix": "Serve the mains when Fred talks his way into Doris's Thanksgiving dinner.",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07"
   },
   {
    "text": "Doris's Thanksgiving roast turkey",
    "where": "dish-name",
-   "verdict": "wrong",
-   "why": "Doris never cooks or serves a Thanksgiving dinner in the film. Her Thanksgiving scene is running the parade.",
-   "source": "https://en.wikipedia.org/wiki/Miracle_on_34th_Street",
-   "fix": "Parade day roast turkey",
+   "verdict": "ok",
+   "why": "False alarm. Doris does host Thanksgiving dinner: Susan wangles Fred an invitation and Doris is cooking it when she gets back from the parade (AFI catalogue synopsis). Kris is not there, which the cue and note now say.",
+   "source": "https://catalog.afi.com/Catalog/moviedetails/25270",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07"
   },
   {
    "text": "the Thanksgiving Kris spends with Doris and Susan",
@@ -28,9 +29,10 @@
    "verdict": "wrong",
    "why": "Kris does not spend Thanksgiving with Doris and Susan. He meets Doris on the morning of the parade, and meets Susan later at the store.",
    "source": "https://en.wikipedia.org/wiki/Miracle_on_34th_Street",
-   "fix": "the Thanksgiving morning Doris hires Kris for the parade",
+   "fix": "the Thanksgiving dinner Fred talks his way into",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07"
   },
   {
    "text": "Mother says dinner has to come before presents. I don't love the rule, but this smells too good to argue.",
