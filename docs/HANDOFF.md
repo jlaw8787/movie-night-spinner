@@ -333,3 +333,14 @@ Josh asked for a fact audit (is every line true to the film, are quotes real) an
 - Audit report: 0 wrong lines open, 990 unsure, 411 flat.
 
 - Live: 911f5f3 (deploy 6aef17bc). Branch pushed.
+
+## 7 Nov, 10:30pm: Josh's decisions (start here in the next chat)
+
+1. Hosting: decide later. Keep deploying to Netlify from the trimmed copy; don't merge to main yet.
+2. Flat menus (411): rework all, Josh approves. Apply the checkers' "ideas" and "missing" moments in batches (vibe rework is approved, no per-film sign-off needed). Every new line still follows the fact rules: real quotes only in quote marks, no song lyrics, smallest layout-safe length. Re-score after.
+3. Wrong layouts: move them, Claude's pick. Return of the Jedi, Wakanda Forever, Avatar, Enchanted (tiki); Wayne's World, Nativity (prom); Spider-Verse, Rogue One, School of Rock, Infinity War (canteen); Crouching Tiger (tearoom); Finding Dory, Aquaman (beach kiosk); Phar Lap (stadium). Pick the best-fitting layout for each.
+4. Signed notes: keep the current rule (in-voice notes true to the plot are fine; quotes must be real).
+5. Unsure lines: chase all 990. Settle each as ok or wrong with a source, fix the wrong ones.
+6. Look bugs to fix alongside (no call needed): posters in black bars (Gladiator II, Great Mouse Detective, Rise of the Guardians, Sword in the Stone, Muppet Treasure Island, Pinocchio, Dead Man's Chest, Doctor Strange, No Way Home), Rocky V header cut off, Pocahontas stranded "Mess Hall Mains" heading, Selena's '97 date stamp on a 1995 still.
+7. Review 21: after all the rework is done.
+Then full check-print-text (all 900, one go), tests, deploy, status updates to Josh as it goes.
