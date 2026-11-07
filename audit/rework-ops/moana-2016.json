@@ -1,0 +1,33 @@
+{
+ "id": "Moana (2016)",
+ "ops": [
+  {
+   "old": "Ocean poke cups",
+   "new": "Tamatoa's shiny poke cups"
+  },
+  {
+   "old": "Ocean poke cups (vegetarian)",
+   "new": "Tamatoa's shiny poke cups (vegetarian)"
+  },
+  {
+   "old": "a feast fit for a demigod",
+   "new": "Fit for Maui. You're welcome."
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Young green coconut with a straw",
+    "note": "Heihei will eat the shell or a rock."
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The Heart of Te Fiti",
+    "I am Moana of Motunui",
+    "Maui's magic fish hook",
+    "Heihei the rooster who is not very bright"
+   ]
+  }
+ ]
+}

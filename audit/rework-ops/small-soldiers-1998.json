@@ -1,0 +1,41 @@
+{
+ "id": "Small Soldiers (1998)",
+ "ops": [
+  {
+   "old": "Last stand crispy chicken burgers",
+   "new": "Power pole last stand chicken burgers"
+  },
+  {
+   "old": "defending the house against the toy soldiers",
+   "new": "Fried chicken burger, Alan's house under siege"
+  },
+  {
+   "old": "Chip Hazard and his toy soldiers",
+   "new": "Salami crackers, mobile and lethile"
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Cheese-stuffed jalapeños",
+    "note": "Launches, lacerates, detonates."
+   }
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Grape soda with crushed ice",
+    "note": "Sent off to Gorgon in a toy boat."
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Chip Hazard and the Commando Elite",
+    "Archer and the peaceful Gorgonites",
+    "Gwendy dolls, to die for",
+    "Globotech chips inside the toys",
+    "Alan Abernathy's family toy store"
+   ]
+  }
+ ]
+}

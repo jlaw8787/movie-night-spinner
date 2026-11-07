@@ -1,0 +1,24 @@
+{
+  "id": "Teenage Mutant Ninja Turtles III (1993)",
+  "ops": [
+    {
+      "old": "Raphael saves a bowl for little Yoshi.",
+      "new": "A bowl for Yoshi, who got Raphael's yo-yo."
+    },
+    {
+      "old": "the villagers who shelter the turtles",
+      "new": "Hello, mustard? Village soup"
+    },
+    {
+      "set": "flavour.prop",
+      "value": {
+        "kind": "ticket",
+        "title": "Time Trip",
+        "lines": [
+          "New York to Japan, 1603",
+          "Back within 60 hours"
+        ]
+      }
+    }
+  ]
+}

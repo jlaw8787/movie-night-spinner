@@ -1,0 +1,39 @@
+{
+ "id": "The Family Stone (2005)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "It's strata. It's a Morton family tradition.",
+    "by": "Meredith",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Baked bread and egg casserole with ham, spinach and gruyère",
+   "new": "Bread and egg bake with ham and gruyère. A Morton family tradition."
+  },
+  {
+   "old": "Soft rolled scrolls with butter, brown sugar and cinnamon",
+   "new": "Cinnamon scrolls, handed out like the framed photos"
+  },
+  {
+   "old": "Strong coffee topped with frothy eggnog milk and nutmeg",
+   "new": "Strong coffee, eggnog milk, nutmeg. Meredith can make more."
+  },
+  {
+   "old": "Christmas Eve, every Stone at the table and nobody holding back",
+   "new": "Roast chicken, Christmas Eve, and one very wrong choice of words"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The Stone family home in New England",
+    "Meredith's stiff first dinner",
+    "Sybil Stone, the mother",
+    "The ring stuck on Julie's finger",
+    "Thad and Patrick"
+   ]
+  }
+ ]
+}

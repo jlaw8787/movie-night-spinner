@@ -1,0 +1,35 @@
+{
+ "id": "The Hobbit: The Battle of the Five Armies (2014)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Tea is at four. There's plenty of it. You are welcome anytime.",
+    "by": "Bilbo Baggins",
+    "kind": "quote"
+   }
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Dark Erebor stout",
+    "note": "Farewell, Master Burglar. A cup for Thorin.",
+    "alc": true
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The Arkenstone hidden in Bilbo's pocket",
+    "Dragon sickness on Thorin",
+    "Dain asks them to consider just sodding off",
+    "Eagles turning the tide",
+    "Bard's black arrow"
+   ]
+  },
+  {
+   "old": "the survivors camping in the ruins of Dale",
+   "new": "Damper bread for the survivors in the ruins of Dale"
+  }
+ ]
+}

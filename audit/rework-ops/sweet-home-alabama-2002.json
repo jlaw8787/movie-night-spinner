@@ -1,0 +1,36 @@
+{
+  "id": "Sweet Home Alabama (2002)",
+  "ops": [
+    {
+      "set": "flavour.note",
+      "value": {
+        "text": "You can have roots and wings, Mel.",
+        "by": "Jake Perry",
+        "kind": "quote"
+      }
+    },
+    {
+      "old": "Serve the mains when Melanie goes back to Pigeon Creek to tell her parents about the engagement.",
+      "new": "Serve the mains when Melanie punches the mayor and goes looking for Jake."
+    },
+    {
+      "old": "small-town Alabama by the water",
+      "new": "from the beach where lightning hit"
+    },
+    {
+      "old": "Why marry you? So I can kiss you anytime.",
+      "new": "So I can kiss you anytime I want."
+    },
+    {
+      "set": "flavour.prop",
+      "value": {
+        "kind": "slip",
+        "title": "Divorce Papers",
+        "lines": [
+          "Jake Perry signed it",
+          "Melanie never did"
+        ]
+      }
+    }
+  ]
+}

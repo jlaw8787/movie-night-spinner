@@ -1,0 +1,31 @@
+{
+ "id": "Spaceballs (1987)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I'm a Mawg. Half-man, half-dog. I'm my own best friend.",
+    "by": "Barf",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "the roadside diner on the moon, with an unexpected guest",
+   "new": "Corned beef hash and eggs, and an unexpected guest"
+  },
+  {
+   "old": "Honey vanilla Greek yoghurt layered with granola and mixed berries",
+   "new": "Honey yoghurt, granola, berries. Even with strawberries."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Dark Helmet and the jammed radar",
+    "King Roland's air shield code",
+    "Yogurt and Spaceballs the Doll",
+    "They've gone to plaid",
+    "Ludicrous speed"
+   ]
+  }
+ ]
+}

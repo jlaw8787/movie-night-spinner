@@ -1,0 +1,33 @@
+{
+ "id": "The Fox and the Hound (1981)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "My, my. Look at that. A fox and a hound, playing together.",
+    "by": "Big Mama",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "the farm on the edge of the forest",
+   "new": "Tod is \"one of the family now.\""
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Warm milk with honey",
+    "note": "Widow Tweed: \"There goes my milk!\""
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Tod and Copper as pups",
+    "Squeeks the caterpillar",
+    "Chief and the train",
+    "The waterfall bear"
+   ]
+  }
+ ]
+}

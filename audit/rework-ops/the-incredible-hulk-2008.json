@@ -1,0 +1,27 @@
+{
+ "id": "The Incredible Hulk (2008)",
+ "ops": [
+  {
+   "old": "Don't make me hungry. Bruce's Portuguese needs work.",
+   "new": "Bruce's Portuguese needs work. Order in English."
+  },
+  {
+   "old": "Chewy tapioca and parmesan cheese puffs, baked until golden",
+   "new": "Chewy tapioca and parmesan puffs. Keep it under 200 beats."
+  },
+  {
+   "set": "cue",
+   "value": "Serve the snacks when a drop of Bruce's blood lands in the soda bottle."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Purple pants that survive the change",
+    "A heart rate monitor for calm",
+    "Stan Lee and the soda bottle",
+    "The Abomination and the chain in Harlem",
+    "Culver University"
+   ]
+  }
+ ]
+}

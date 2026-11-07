@@ -1,0 +1,27 @@
+{
+ "id": "Mother's Day (2016)",
+ "ops": [
+  {
+   "set": "cue",
+   "value": "Serve the brunch when Kristin proposes to Zack on Miranda's show."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Sandy, stuck in a vending machine",
+    "Miranda, the author and TV host",
+    "Sisters hiding their spouses from their mum",
+    "A family arriving in an RV",
+    "Atlanta suburb brunch"
+   ]
+  },
+  {
+   "old": "Mother's Day ham and spinach frittata",
+   "new": "Park picnic ham and spinach frittata"
+  },
+  {
+   "old": "Sandy's ex remarried. Eat your feelings.",
+   "new": "Henry married Tina. Eat your feelings."
+  }
+ ]
+}

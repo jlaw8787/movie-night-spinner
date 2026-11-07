@@ -1,0 +1,35 @@
+{
+  "id": "Tango & Cash (1989)",
+  "ops": [
+    {
+      "set": "flavour.note",
+      "value": {
+        "text": "Action. Good old American action.",
+        "by": "Ray Tango",
+        "kind": "quote"
+      }
+    },
+    {
+      "old": "Tango's sister's club",
+      "new": "Kiki dresses Cash to escape"
+    },
+    {
+      "old": "the slop they break out to get away from",
+      "new": "the slop before the zip line breakout"
+    },
+    {
+      "old": "the sharp dresser",
+      "new": "dresses like a banker"
+    },
+    {
+      "set": "flavour.winks",
+      "value": [
+        "Ray Tango and Gabe Cash, rival LA cops",
+        "Framed by Yves Perret and thrown in prison",
+        "Kiki, Tango's sister, played by Teri Hatcher",
+        "Cash dressed for a very different kind of undercover",
+        "The hall of mirrors showdown with Perret"
+      ]
+    }
+  ]
+}

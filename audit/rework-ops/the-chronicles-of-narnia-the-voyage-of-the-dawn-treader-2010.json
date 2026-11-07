@@ -1,0 +1,39 @@
+{
+ "id": "The Chronicles of Narnia: The Voyage of the Dawn Treader (2010)",
+ "ops": [
+  {
+   "set": "cue",
+   "value": "Serve the mains when the crew lays the seven swords on Aslan's table."
+  },
+  {
+   "old": "the great table on Ramandu's island",
+   "new": "Enough for all at Aslan's table"
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Ship's rum and lime grog",
+    "note": "For Drinian's crew, who hear tales of sea serpents.",
+    "alc": true
+   }
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Ever since I can remember, I have dreamt of seeing your country.",
+    "by": "Reepicheep",
+    "kind": "quote"
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Eustace turned into a dragon",
+    "The painting that pulls them into the sea",
+    "Seven lost lords' swords",
+    "Lucy's spell from the Book of Incantations",
+    "The Dark Island and the sea serpent"
+   ]
+  }
+ ]
+}

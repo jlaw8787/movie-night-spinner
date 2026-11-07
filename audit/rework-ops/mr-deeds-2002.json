@@ -1,0 +1,35 @@
+{
+ "id": "Mr. Deeds (2002)",
+ "ops": [
+  {
+   "set": "cue",
+   "value": "Serve the pizza when Deeds breaks the ice with his frostbitten foot."
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Ma'am, you were just the victim of a New York City mugger.",
+    "by": "Longfellow Deeds",
+    "kind": "quote"
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Mandrake Falls and its friendly locals",
+    "Deeds's rock-hard frostbitten foot",
+    "Babe Bennett, the undercover reporter",
+    "Emilio the butler",
+    "Crazy Eyes' pizza, with French fries and Oreos"
+   ]
+  },
+  {
+   "old": "Greeting card cheese and tomato pinwheels",
+   "new": "Hallmark card cheese and tomato pinwheels"
+  },
+  {
+   "old": "Greeting card cheese and tomato pinwheels (vegetarian)",
+   "new": "Hallmark card cheese and tomato pinwheels (vegetarian)"
+  }
+ ]
+}

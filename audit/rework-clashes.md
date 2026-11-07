@@ -59,3 +59,13 @@ Fixed layout words that don't suit the film. Fix with a per-film setting or a la
 - Phar Lap (1983), pub: cents prices wrong for 1930 Australia (pounds, shillings, pence).
 - Curse of the Black Pearl (2003), galley: "Laser issue, fleet standard", "Ration", "Form G-882", "Eat what's issued" read navy, not pirate.
 - Pocahontas (1995), campfire: "Form CM 95" footer.
+- Lion King (1994, 2019), Lost Boys (1987), Terminator 2 (1991), kiosk: weather/surf strip (Sky, Wind, Temp, Forecast, "Clear skies") generic.
+- Little Mermaid (2023), Jungle Book (1967), tiki: island headings, gong, island map.
+- Silver Linings (2012), cafe: "Stay as long as you like" on a family kitchen.
+- Singin' in the Rain (1952), canteen: Meal Voucher, Briefing, Meetings, Home time on a studio set.
+- Sinners (2025), club: "CASH AT THE DOOR", "Cover charge after nine" vs plantation tokens.
+- Sleeping Beauty (1959), Prince Caspian (2008), campfire: "Canteen", "Mess Hall", "Chow line", "Session of", "Form CM".
+- Evil Dead (1981), home: "Recipe box no.", "Serves everyone on the couch".
+- Breakfast Club (1985), lab: Ration sheet, Night shift, Rations, Hot mess, Access, "Badge, all areas", "Return tray to the hatch".
+- The Fly (1986), lab: prints no winks.
+- Unverified (round 2): Dark Knight Rises pearls at the ball; Sister Act bar-burgers name; Scream 3 Dewey's order; Set It Up negroni; Smokey cayenne crackling joke; Fly "Vomit drop doughnuts" joke; Lighthorsemen haversack.

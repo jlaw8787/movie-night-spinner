@@ -1,0 +1,35 @@
+{
+ "id": "The Greatest Showman (2017)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Men suffer more from imagining too little than too much.",
+    "by": "P.T. Barnum",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Big top caramel popcorn",
+   "new": "The Greatest Show caramel popcorn"
+  },
+  {
+   "old": "the sideshow stalls",
+   "new": "Red toffee apples for the sideshow troupe"
+  },
+  {
+   "set": "cue",
+   "value": "Serve the snacks when the troupe sings This Is Me."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Lettie Lutz, the bearded lady",
+    "General Tom Thumb",
+    "W.D. and Anne Wheeler on the trapeze",
+    "Phillip Carlyle joins the show",
+    "Barnum arrives on an elephant at the ballet recital"
+   ]
+  }
+ ]
+}

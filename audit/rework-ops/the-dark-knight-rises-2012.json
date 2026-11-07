@@ -1,0 +1,34 @@
+{
+ "id": "The Dark Knight Rises (2012)",
+ "ops": [
+  {
+   "old": "Masquerade ball smoked salmon blinis",
+   "new": "Wayne Manor smoked salmon blinis"
+  },
+  {
+   "old": "the charity ball where Bruce dances with Selina",
+   "new": "Salmon blinis, for the night the pearls go missing"
+  },
+  {
+   "old": "the rich of Gotham before Bane strikes",
+   "new": "Rib eye for the rich, before the storm"
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Rosemary and olive focaccia",
+    "note": "\"Girl's gotta eat,\" says Selina."
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Bane's mask and the crowd chant",
+    "The Pit and the climb out",
+    "The football field collapsing",
+    "The Bat hauling the bomb over the bay",
+    "Bane breaking Batman's back"
+   ]
+  }
+ ]
+}

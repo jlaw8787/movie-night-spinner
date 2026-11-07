@@ -1,0 +1,43 @@
+{
+ "id": "The Fantastic Four: First Steps (2025)",
+ "ops": [
+  {
+   "set": "cue",
+   "value": "Serve the mains when Reed and Sue turn up a single minute late for Sunday dinner."
+  },
+  {
+   "old": "Family dinner at six sharp",
+   "new": "Sunday dinner at seven sharp"
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Sunday at seven on the dot. No matter what, we're all here.",
+    "by": "Reed Richards",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Paprika devilled eggs, plus cheddar and pineapple cubes on toothpicks",
+   "new": "Paprika devilled eggs and cheese picks. Planet versus egg is only scale."
+  },
+  {
+   "old": "Baby potatoes roasted in foil with butter, garlic and rosemary",
+   "new": "Foil-roasted baby potatoes, butter, rosemary and a little more garlic"
+  },
+  {
+   "old": "Strawberry jelly set in a ring with strawberries and green grapes",
+   "new": "Strawberry jelly ring with grapes. Galactus would eat the lot."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "H.E.R.B.I.E. the robot at the stove",
+    "Galactus looming over the sky",
+    "The Silver Surfer on her board",
+    "Sue expecting baby Franklin",
+    "The teleport bridge in Times Square"
+   ]
+  }
+ ]
+}

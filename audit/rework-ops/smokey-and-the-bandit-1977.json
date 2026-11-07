@@ -1,0 +1,34 @@
+{
+ "id": "Smokey and the Bandit (1977)",
+ "ops": [
+  {
+   "old": "the truckers' stops on the CB radio",
+   "new": "Cayenne crackling, split with Fred"
+  },
+  {
+   "old": "the run home to Georgia",
+   "new": "Ribs, with Smokey Bear on your tail"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Sheriff Buford T. Justice",
+    "Frog in her wedding dress",
+    "Fred, riding with Snowman",
+    "Trigger, the black Trans Am",
+    "Smokey Bear on the CB"
+   ]
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Haul Slip",
+    "lines": [
+     "Texarkana to Atlanta",
+     "Then Boston chowder"
+    ]
+   }
+  }
+ ]
+}

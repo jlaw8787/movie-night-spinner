@@ -1,0 +1,9 @@
+{
+ "id": "Star Wars: The Rise of Skywalker (2019)",
+ "ops": [
+  {"set": "flavour.note", "value": {"text": "We had each other. That's how we won.", "by": "Lando Calrissian", "kind": "quote"}},
+  {"old": "Twin suns pavlova", "new": "Rey Skywalker's twin suns pavlova"},
+  {"old": "the whole fleet arriving over Exegol", "new": "Palpatine's fleet rises. Served rare."},
+  {"set": "flavour.winks", "value": ["Babu Frik and his tools", "Lando Calrissian and the old crew", "Zorii Bliss on Kijimi", "Chewie's medal", "D-O the little droid"]}
+ ]
+}

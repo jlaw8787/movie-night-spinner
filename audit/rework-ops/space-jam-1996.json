@@ -1,0 +1,45 @@
+{
+ "id": "Space Jam (1996)",
+ "ops": [
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Buffalo wings with blue cheese",
+    "note": "Bill Murray, the fifth guy, turns up late.",
+    "meat": true
+   }
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Tropical fruit punch",
+    "note": "Swackhammer, sent to the moon by missile."
+   }
+  },
+  {
+   "old": "the halftime team talk in the locker room",
+   "new": "Tenders and wedges, then the secret stuff"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Michael's Secret Stuff in the water bottle",
+    "The Nerdlucks stealing the NBA's talent",
+    "Lola Bunny on the court",
+    "Mr. Swackhammer and Moron Mountain",
+    "North Carolina shorts, washed"
+   ]
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Tune Squad Game",
+    "lines": [
+     "Looney Tunes vs Monstars",
+     "Buzzer beater, extra-long arm"
+    ]
+   }
+  }
+ ]
+}

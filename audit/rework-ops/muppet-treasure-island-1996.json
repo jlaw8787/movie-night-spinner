@@ -1,0 +1,22 @@
+{
+ "id": "Muppet Treasure Island (1996)",
+ "ops": [
+  {
+   "old": "Billy Bones sat here till Blind Pew came",
+   "new": "Billy Bones sat here until the black spot came"
+  },
+  {
+   "old": "Ginger beer, pineapple, lime and orange over ice, no alcohol",
+   "new": "Ginger beer, pineapple, lime and orange over ice. Rum free, Billy."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Miss Piggy as Benjamina Gunn",
+    "Gonzo and Rizzo as the sailors",
+    "Mr Arrow plays his own ghost",
+    "Sweetums switches sides"
+   ]
+  }
+ ]
+}
