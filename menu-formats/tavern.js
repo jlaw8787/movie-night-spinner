@@ -57,7 +57,7 @@ if(!window.__fmtFitTavern)window.__fmtFitTavern=function(t){
          so notes keep their words. A note is never clamped to "...": the screen showed cut notes that the PDF printed in full */
       const pl=face.querySelector("[data-plate]");
       if(e.dataset.menu&&pl){const [mx,mw]=e.dataset.menu.split(",").map(Number),pw0=+pl.dataset.plate;
-        const set=d=>{pl.style.width=(pw0-d)+"px";pl.querySelectorAll("[data-pw]").forEach(x=>x.style.width=(+x.dataset.pw-d)+"px");e.style.left=(mx-d)+"px";e.style.width=(mw+d)+"px"};
+        const set=d=>{pl.style.width=(pw0-d)+"px";/* 7 Nov: the plate keeps the poster's shape as it narrows (no black bars), centred on its old box */const ph0=+(pl.dataset.ph||0),py0=+(pl.dataset.py||0);let dh=0;pl.querySelectorAll("[data-pw]").forEach(x=>{const w0=+x.dataset.pw,h0=+(x.dataset.ph||0);x.style.width=(w0-d)+"px";if(h0){const h=Math.round(h0*(w0-d)/w0);x.style.height=h+"px";dh=h0-h}});if(ph0){pl.style.height=(ph0-dh)+"px";pl.style.top=(py0+Math.round(dh/2))+"px"}e.style.left=(mx-d)+"px";e.style.width=(mw+d)+"px"};
         set(0);k=shrink(.52);for(let d=24;d<=120&&(k<.8||over());d+=24){set(d);k=shrink(.52)}}
       if((k<.8||over())&&e.querySelector("[data-drop]")){e.querySelectorAll("[data-drop]").forEach(d=>d.style.display="none");k=shrink(.52)}
       if(over())e.querySelectorAll("[data-drop2]").forEach(d=>d.style.display="none");
@@ -125,7 +125,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const bb=band(ctx.era||"modern"),bw={P:8,S:6,E:2,M:7}[bb];
   const PX=52,PY=152,ph=684,pw=456,PW=pw+2*bw,PH=ph+2*bw;
   const heroImg=posterSrc
-    ?`<img data-pw="${pw}" src="${posterSrc}" crossorigin="anonymous" alt="" style="position:absolute;left:0;top:0;width:${pw}px;height:${ph}px;object-fit:contain">`
+    ?`<img data-pw="${pw}" data-ph="${ph}" src="${posterSrc}" crossorigin="anonymous" alt="" style="position:absolute;left:0;top:0;width:${pw}px;height:${ph}px;object-fit:contain">`
     :(heroSrc?`<img src="${heroSrc}" crossorigin="anonymous" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:${pf}">`:`<div style="position:absolute;inset:0;background:${darkPanel}"></div>`);
   const bear=(t,pos)=>`<div style="position:absolute;${pos};font:${E.dw} 20px/1 ${D};color:${acc};width:24px;text-align:center">${t}</div>`;
   /* logo sits in the foot band, never over the poster */
@@ -137,9 +137,9 @@ window.MENU_FORMATS[ID]=ctx=>{
   const seal=!sealSrc?"":`<div data-seal="1" style="position:absolute;right:52px;top:884px;width:104px;height:104px;transform:rotate(${T.tilt}deg);z-index:3">
     <div style="position:absolute;inset:0;border-radius:50%;border:7px solid ${sealRed};box-shadow:0 4px 12px rgba(0,0,0,.45),inset 0 0 14px rgba(0,0,0,.55);overflow:hidden;background:${sealRed}">${sealSrc?`<img src="${sealSrc}" alt="" data-alt="${sealAlt}" onerror="var a=this.getAttribute('data-alt');if(a){this.removeAttribute('data-alt');this.src=a}else{this.closest('[data-seal]').style.display='none'}" style="width:100%;height:100%;object-fit:cover;object-position:50% 28%;filter:sepia(.35) saturate(1.1) contrast(1.05)">`:""}</div>
     <div style="position:absolute;left:50%;bottom:-14px;transform:translateX(-50%);background:${sealRed};color:#f6e6c8;font:${E.dw} 15px/1 ${D};letter-spacing:.04em;padding:4px 8px 3px;white-space:nowrap">No. ${esc(num)}</div></div>`;
-  const plate=`<div data-plate="${PW}" style="position:absolute;left:${PX}px;top:${PY}px;width:${PW}px;height:${PH}px">
+  const plate=`<div data-plate="${PW}"${posterSrc?` data-ph="${PH}" data-py="${PY}"`:""} style="position:absolute;left:${PX}px;top:${PY}px;width:${PW}px;height:${PH}px">
     ${bear("S","left:50%;bottom:-26px;margin-left:-12px")}${bear("W","left:-30px;top:50%;margin-top:-10px")}${bear("E","right:-30px;top:50%;margin-top:-10px")}
-    <div style="position:absolute;inset:0;${E.plate};box-sizing:border-box;padding:${bb==="P"?5:bb==="M"?6:0}px"><div data-pw="${pw}" style="position:relative;width:${pw}px;height:${ph}px;overflow:hidden;background:#1a120a">${heroImg}</div></div>
+    <div style="position:absolute;inset:0;${E.plate};box-sizing:border-box;padding:${bb==="P"?5:bb==="M"?6:0}px"><div data-pw="${pw}"${posterSrc?` data-ph="${ph}"`:""} style="position:relative;width:${pw}px;height:${ph}px;overflow:hidden;background:#1a120a">${heroImg}</div></div>
     <div style="position:absolute;left:50%;top:-31px;transform:translateX(-50%);z-index:2;background:${paper};border:1px solid ${ink};padding:3px 9px 2px;font:${E.dw} 20px/1 ${D};color:${acc}">N</div>
     </div>${logo.html}${seal}`;
 

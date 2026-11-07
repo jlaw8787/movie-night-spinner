@@ -106,7 +106,7 @@ window.MENU_FORMATS.home=function(ctx){
   const fl=ctx.flavour||{},nt=fl.note&&fl.note.text?fl.note:{text:"Dinner is on the table at seven. Plates in the sink before the film starts, and no talking in the good bits.",by:"The cook"};
   const venue=fl.venue||"Family Kitchen",sign=fl.sign||"Home cooking, film night";
   const winks=(fl.winks&&fl.winks.length?fl.winks:["Popcorn after mains","Napkins by the couch","Phones off when the lights go down"]).slice(0,5).map(w=>M.dry(w,fam));
-  const num=M.num(fl.number,f.year),yy=String(f.year||"").slice(-2);
+  const num=M.num(fl.number,f.year),/* 7 Nov: a film whose number is its story year (Selena, 1995) stamps that year, not the release year */sy=/^(19|20)\d\d$/.test(String(fl.number||""))&&Math.abs(+fl.number-(+f.year||0))<=5?String(fl.number):String(f.year||""),yy=sy.slice(-2);
   const ink=E.ink,acc=M.accent(ctx.palette,E.card,E.acc,3.4),dark=M.darkOf(ctx.palette,"#15161a");
   const st=ctx.stills||[],pos=M.poster(ctx)?ctx.img(M.poster(ctx),"w780"):"";
   const st0=st[0]?ctx.img(st[0],"w1280"):"",hero=pos||st0,heroIsPoster=!!pos,second=st[1]?ctx.img(st[1],"w1280"):(st0||pos),secIsPoster=!st[1]&&!st0&&!!pos;
@@ -206,7 +206,7 @@ window.MENU_FORMATS.home=function(ctx){
    </div>
    ${mags(String(num).slice(0,5),110,22,String(num).length>4?38:String(num).length>3?46:52)}
    ${rcard(cardA,26,552,-T.rot*.6,`No. ${num}`,`From ${/^[^\s]+['’]s?\s/.test(venue.replace(/^the\s+/i,""))?"":"the "}${x(venue.replace(/^the\s+/i,""))}.`)}
-   ${rcard(cardB,420,548,T.rot*.5,f.year?String(f.year):"",`Serves everyone on the couch. ${fam?"Every drink alcohol free. ":""}Photos: TMDB.`)}`;
+   ${rcard(cardB,420,548,T.rot*.5,sy,`Serves everyone on the couch. ${fam?"Every drink alcohol free. ":""}Photos: TMDB.`)}`;
   return {w:W,h:H,faces:[front,back]};
 };
 /* fonts ready: the app awaits .ready before it renders, so the fitter measures with the real faces and text never spills at a late font swap */
