@@ -1,58 +1,59 @@
 {
- "id": "Glass Onion: A Knives Out Mystery (2022)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Birdie's poolside order, sunglasses on.",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "The drink linked to Birdie is a Cuban Breeze, a vodka cocktail. Aperol spritzes are what the cast drank off screen in Greece.",
-   "source": "https://thedailypour.com/?p=55171",
-   "fix": "Aperol spritz. The cast's real poolside order in Greece.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Eat up, everyone. Somewhere at this table is the answer, and I suspect it's near the dessert.",
-   "where": "note",
-   "verdict": "unsure",
-   "why": "The card prints it under 'From the host', but it is signed Benoit Blanc. Miles Bron is the host and the one who runs the murder mystery game.",
-   "source": "https://en.wikipedia.org/wiki/Glass_Onion:_A_Knives_Out_Mystery",
-   "fix": "Eat up, everyone. Somewhere on this island is a murder to solve, and I wrote it myself.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Eat up, everyone. Somewhere on this island is a murder to solve, and I wrote it myself.",
-    "by": "Miles Bron",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
+  "id": "Glass Onion: A Knives Out Mystery (2022)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Birdie's poolside order, sunglasses on.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "The drink linked to Birdie is a Cuban Breeze, a vodka cocktail. Aperol spritzes are what the cast drank off screen in Greece.",
+      "source": "https://thedailypour.com/?p=55171",
+      "fix": "Poolside on Miles's island, sunglasses on.",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Eat up, everyone. Somewhere at this table is the answer, and I suspect it's near the dessert.",
+      "where": "note",
+      "verdict": "unsure",
+      "why": "The card prints it under 'From the host', but it is signed Benoit Blanc. Miles Bron is the host and the one who runs the murder mystery game.",
+      "source": "https://en.wikipedia.org/wiki/Glass_Onion:_A_Knives_Out_Mystery",
+      "fix": "Eat up, everyone. Somewhere on this island is a murder to solve, and I wrote it myself.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Eat up, everyone. Somewhere on this island is a murder to solve, and I wrote it myself.",
+        "by": "Miles Bron",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 16,
+  "vibe": {
+    "world": 3,
+    "moments": 4,
+    "food": 4,
+    "tone": 3,
+    "look": 3,
+    "overall": 3.4,
+    "verdict": "Good nods (Duke's pineapple, Klear, the Mona Lisa), but the tiki 'Pupu Platters' dressing doesn't suit a Greek island.",
+    "missing": [
+      "Pineapple juice in Duke's whiskey: 'It's so dumb' (Blanc's reveal)",
+      "Miles saying 'Can we just take a second and fully imbreathiate this moment?'",
+      "Birdie's Cuban Breeze (the poolside)",
+      "The napkin that decides the case (Miles's office)",
+      "Helen smashing the glass sculptures (the finale)",
+      "The Mona Lisa burning (the finale)"
+    ],
+    "ideas": [
+      "Swap the 'Pupu Platters' heading for 'Meze', and the tiki straw header for blue and white Greek tiles",
+      "Swap 'Aperol spritz' for 'Birdie's Cuban Breeze' with a vodka line",
+      "Swap 'Glass onion petals' note for Miles: 'Fully imbreathiate this moment'",
+      "Swap 'Duke's pineapple upside-down cake' note for 'Do not serve to Duke'"
+    ],
+    "flat": true,
+    "done": false
   }
- ],
- "checked_ok": 16,
- "vibe": {
-  "world": 3,
-  "moments": 4,
-  "food": 4,
-  "tone": 3,
-  "look": 3,
-  "overall": 3.4,
-  "verdict": "Good nods (Duke's pineapple, Klear, the Mona Lisa), but the tiki 'Pupu Platters' dressing doesn't suit a Greek island.",
-  "missing": [
-   "Pineapple juice in Duke's whiskey: 'It's so dumb' (Blanc's reveal)",
-   "Miles saying 'Can we just take a second and fully imbreathiate this moment?'",
-   "Birdie's Cuban Breeze (the poolside)",
-   "The napkin that decides the case (Miles's office)",
-   "Helen smashing the glass sculptures (the finale)",
-   "The Mona Lisa burning (the finale)"
-  ],
-  "ideas": [
-   "Swap the 'Pupu Platters' heading for 'Meze', and the tiki straw header for blue and white Greek tiles",
-   "Swap 'Aperol spritz' for 'Birdie's Cuban Breeze' with a vodka line",
-   "Swap 'Glass onion petals' note for Miles: 'Fully imbreathiate this moment'",
-   "Swap 'Duke's pineapple upside-down cake' note for 'Do not serve to Duke'"
-  ],
-  "flat": true,
-  "done": false
- }
 }

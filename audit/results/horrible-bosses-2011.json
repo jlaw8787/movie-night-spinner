@@ -1,78 +1,79 @@
 {
- "id": "Horrible Bosses (2011)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Hear me out, Dale. We order the big pizza, split it three ways, and nobody mentions work tonight.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Invented. The three friends spend the film plotting to kill their bosses. The plot and quotes have no pizza scene, and Nick's real lines are about his awful job and Harken.",
-   "source": "https://en.wikiquote.org/wiki/Horrible_Bosses",
-   "fix": "Hear me out, Dale. We split the big plate of wings, and nobody says the word boss tonight.",
-   "fix_note": {
-    "text": "Hear me out, Dale. We split the big plate of wings, and nobody says the word boss tonight.",
-    "by": "Nick Hendricks",
-    "kind": "note"
-   },
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Bobby Pellitt, the new owner",
-   "where": "wink",
-   "verdict": "wrong",
-   "why": "The surname is spelled Pellit in the film (Jack Pellit and his son Bobby Pellit).",
-   "source": "https://en.wikipedia.org/wiki/Horrible_Bosses",
-   "fix": "Bobby Pellit, the new owner",
-   "printed": false,
-   "done": false
-  },
-  {
-   "text": "Back booth, where MF Jones does business.",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The film has Dean 'MF' Jones act as their murder consultant, but the pages opened do not say where he meets them.",
-   "source": "https://en.wikipedia.org/wiki/Horrible_Bosses",
-   "fix": "Where MF Jones does business, consultant rates apply.",
-   "printed": false,
-   "done": false
-  },
-  {
-   "text": "Nick's drink after another Harken meeting.",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The quotes only show Nick drinking beer. A Long Island iced tea is not in the pages read.",
-   "source": "https://en.wikiquote.org/wiki/Horrible_Bosses",
-   "fix": "Strong drink for a very bad plan.",
-   "printed": true,
-   "done": false
+  "id": "Horrible Bosses (2011)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Hear me out, Dale. We order the big pizza, split it three ways, and nobody mentions work tonight.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Invented. The three friends spend the film plotting to kill their bosses. The plot and quotes have no pizza scene, and Nick's real lines are about his awful job and Harken.",
+      "source": "https://en.wikiquote.org/wiki/Horrible_Bosses",
+      "fix": "Hear me out, Dale. We split the big plate of wings, and nobody says the word boss tonight.",
+      "fix_note": {
+        "text": "Hear me out, Dale. We split the big plate of wings, and nobody says the word boss tonight.",
+        "by": "Nick Hendricks",
+        "kind": "note"
+      },
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Bobby Pellitt, the new owner",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "The surname is spelled Pellit in the film (Jack Pellit and his son Bobby Pellit).",
+      "source": "https://en.wikipedia.org/wiki/Horrible_Bosses",
+      "fix": "Bobby Pellit, the new owner",
+      "printed": false,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Back booth, where MF Jones does business.",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The film has Dean 'MF' Jones act as their murder consultant, but the pages opened do not say where he meets them.",
+      "source": "https://en.wikipedia.org/wiki/Horrible_Bosses",
+      "fix": "Where MF Jones does business, consultant rates apply.",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "Nick's drink after another Harken meeting.",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The quotes only show Nick drinking beer. A Long Island iced tea is not in the pages read.",
+      "source": "https://en.wikiquote.org/wiki/Horrible_Bosses",
+      "fix": "Strong drink for a very bad plan.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "The bar tab layout is a good fit and the murder consultant gag lands, but the best set pieces are missing.",
+    "missing": [
+      "Dale's EpiPen stab on Harken (peanut allergy)",
+      "Harken's surprise birthday party",
+      "Jones, the 'murder consultant' who was only jailed for bootlegging a film",
+      "Kurt's prank in Bobby's house leaving evidence",
+      "The traffic camera catching Nick",
+      "Dr Harris and Dale's dental chair"
+    ],
+    "ideas": [
+      "Swap 'Break room cinnamon jam doughnuts' for 'Peanut butter bar, handle with care' (Harken's allergy).",
+      "Swap 'Dive bar buffalo chicken wings' note for 'Dale's EpiPen special, extra hot'.",
+      "Swap the pizza note for a line about the murder consultant's fee.",
+      "Add 'Hear me out' as a Kurt napkin joke from his 'jokingly suggests' line."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 11,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 4,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "The bar tab layout is a good fit and the murder consultant gag lands, but the best set pieces are missing.",
-  "missing": [
-   "Dale's EpiPen stab on Harken (peanut allergy)",
-   "Harken's surprise birthday party",
-   "Jones, the 'murder consultant' who was only jailed for bootlegging a film",
-   "Kurt's prank in Bobby's house leaving evidence",
-   "The traffic camera catching Nick",
-   "Dr Harris and Dale's dental chair"
-  ],
-  "ideas": [
-   "Swap 'Break room cinnamon jam doughnuts' for 'Peanut butter bar, handle with care' (Harken's allergy).",
-   "Swap 'Dive bar buffalo chicken wings' note for 'Dale's EpiPen special, extra hot'.",
-   "Swap the pizza note for a line about the murder consultant's fee.",
-   "Add 'Hear me out' as a Kurt napkin joke from his 'jokingly suggests' line."
-  ],
-  "flat": false,
-  "done": false
- }
 }

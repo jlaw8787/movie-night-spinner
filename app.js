@@ -1529,6 +1529,8 @@ const KFIX=(()=>{const cap=(m,v)=>/^[A-Z]/.test(m)?v[0].toUpperCase()+v.slice(1)
   return [[/\b(goodness|heaven|pete|god|christ)((['’]s?|s['’])?) (syrup|yuzu soda)\b/gi,(m,a,b)=>a+b+" sake"],
    [/\bmocktail (franks?|frankfurts?|sausages?|cherr(y|ies)|onions?|sauce|sticks?|dressing)\b/gi,(m,a)=>cap(m,"cocktail "+a)],[/\b(prawn|shrimp|seafood|crab|lobster|fruit) mocktails?\b/gi,m=>m.replace(/mock(?=tail)/i,w=>/^M/.test(w)?"Cock":"cock")],
    [/\bgrape juice (glass(es)?)\b/gi,(m,a)=>cap(m,"wine "+a)],
+   /* It's a Wonderful Life: the housewarming is for the Martini family, and the martini swap turned them into "Mocktail' new house" */
+   [/\bmocktail(?=['\u2019] new house)/gi,()=>"Martinis"],
    /* review 15: "with Marsala wine" went through two swaps and read "with a cold drink grape juice" (The Godfather, Vegetarian with No alcohol) */
    [/\ba cold drink (grape juice)\b/gi,(m,a)=>a],
    [/\b(root|ginger|butter) (root|ginger) beer\b/gi,(m,a)=>a+" beer"],[/\balcohol-free (root|ginger) beer\b/gi,m=>cap(m,"alcohol-free beer")],

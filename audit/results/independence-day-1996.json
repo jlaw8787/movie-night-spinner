@@ -1,58 +1,59 @@
 {
- "id": "Independence Day (1996)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Russell's last drink before he goes up.",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "Russell quits drinking before the final flight. His line is 'I picked a hell of a day to quit drinkin'.' The beer is the opposite of what he does.",
-   "source": "https://independenceday.fandom.com/wiki/Russell_Casse?oldid=8860",
-   "fix": "Russell picked a hell of a day to quit.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Everybody eat together tonight. Whatever comes tomorrow, nobody faces it on an empty stomach.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Whitmore never says this and there is no shared dinner in the film. His real speech to the pilots at Area 51 includes 'Mankind. That word should have new meaning for all of us today.'",
-   "source": "https://en.wikiquote.org/wiki/Independence_Day_(1996_film)",
-   "fix": "Mankind. That word should have new meaning for all of us today.",
-   "printed": false,
-   "done": true,
-   "fix_note": {
-    "text": "Mankind. That word should have new meaning for all of us today.",
-    "by": "President Whitmore",
-    "kind": "quote"
-   },
-   "applied": "2026-11-07"
+  "id": "Independence Day (1996)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Russell's last drink before he goes up.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "Russell quits drinking before the final flight. His line is 'I picked a hell of a day to quit drinkin'.' The beer is the opposite of what he does.",
+      "source": "https://independenceday.fandom.com/wiki/Russell_Casse?oldid=8860",
+      "fix": "Russell picked a hell of a day to quit.",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Everybody eat together tonight. Whatever comes tomorrow, nobody faces it on an empty stomach.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Whitmore never says this and there is no shared dinner in the film. His real speech to the pilots at Area 51 includes 'Mankind. That word should have new meaning for all of us today.'",
+      "source": "https://en.wikiquote.org/wiki/Independence_Day_(1996_film)",
+      "fix": "Mankind. That word should have new meaning for all of us today.",
+      "printed": false,
+      "done": true,
+      "fix_note": {
+        "text": "Mankind. That word should have new meaning for all of us today.",
+        "by": "President Whitmore",
+        "kind": "quote"
+      },
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 17,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "A clean Area 51 mess hall that hits the Fourth of July and a few characters, but it never uses the speech or the big beats.",
+    "missing": [
+      "Whitmore's 'Today we celebrate our Independence Day' speech",
+      "Hiller's 'I could've been at a barbecue!' to the downed alien",
+      "Russell's 'Hello, boys! I'm back!' before the final run",
+      "The alien slime (K-Y Jelly) in the Area 51 autopsy",
+      "David's computer virus uploaded to the mothership",
+      "Hiller and Jasmine's wedding at Area 51"
+    ],
+    "ideas": [
+      "Swap 'Longneck beer on ice' note for a Russell line: 'Picked a hell of a day to quit.'",
+      "Swap 'Captain Hiller's cookout cheeseburgers' note for 'He could have been at a barbecue.'",
+      "Swap 'Flag cake' for 'Independence Day speech cake' with the note 'Today we celebrate.'",
+      "Swap the 'Fireworks popcorn' note for a green slime shake nod to the alien in Area 51."
+    ],
+    "flat": true,
+    "done": false
   }
- ],
- "checked_ok": 17,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.4,
-  "verdict": "A clean Area 51 mess hall that hits the Fourth of July and a few characters, but it never uses the speech or the big beats.",
-  "missing": [
-   "Whitmore's 'Today we celebrate our Independence Day' speech",
-   "Hiller's 'I could've been at a barbecue!' to the downed alien",
-   "Russell's 'Hello, boys! I'm back!' before the final run",
-   "The alien slime (K-Y Jelly) in the Area 51 autopsy",
-   "David's computer virus uploaded to the mothership",
-   "Hiller and Jasmine's wedding at Area 51"
-  ],
-  "ideas": [
-   "Swap 'Longneck beer on ice' note for a Russell line: 'Picked a hell of a day to quit.'",
-   "Swap 'Captain Hiller's cookout cheeseburgers' note for 'He could have been at a barbecue.'",
-   "Swap 'Flag cake' for 'Independence Day speech cake' with the note 'Today we celebrate.'",
-   "Swap the 'Fireworks popcorn' note for a green slime shake nod to the alien in Area 51."
-  ],
-  "flat": true,
-  "done": false
- }
 }

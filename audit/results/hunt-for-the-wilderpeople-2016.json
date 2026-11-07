@@ -1,62 +1,63 @@
 {
- "id": "Hunt for the Wilderpeople (2016)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Bella's birthday cake",
-   "where": "dish-name",
-   "verdict": "wrong",
-   "why": "The birthday in the film is Ricky's. Bella sings 'Ricky Baker Birthday Song' at a Casio keyboard by the candles, shortly after the pig scene.",
-   "source": "https://thespinoff.co.nz/pop-culture/30-03-2026/a-decade-on-hunt-for-the-wilderpeople-remains-a-majestical-classic",
-   "fix": "Ricky's birthday cake",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Bella's welcome tray, hot water bottle included.",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Nothing read confirms a hot water bottle or welcome tray scene. The plot only says Bella and Hector take Ricky in.",
-   "source": "https://en.wikipedia.org/wiki/Hunt_for_the_Wilderpeople",
-   "fix": "Bella's welcome tray, a warm bed for Ricky.",
-   "printed": false,
-   "done": false
-  },
-  {
-   "text": "Ricky's haiku for every occasion",
-   "where": "wink",
-   "verdict": "unsure",
-   "why": "The quotes page opened shows Ricky reciting a verse, but it is not called a haiku there.",
-   "source": "https://www.moviemistakes.com/film11770/quotes",
-   "fix": "Ricky's verse for every occasion",
-   "printed": true,
-   "done": false
+  "id": "Hunt for the Wilderpeople (2016)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Bella's birthday cake",
+      "where": "dish-name",
+      "verdict": "wrong",
+      "why": "The birthday in the film is Ricky's. Bella sings 'Ricky Baker Birthday Song' at a Casio keyboard by the candles, shortly after the pig scene.",
+      "source": "https://thespinoff.co.nz/pop-culture/30-03-2026/a-decade-on-hunt-for-the-wilderpeople-remains-a-majestical-classic",
+      "fix": "Ricky's birthday cake",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Bella's welcome tray, hot water bottle included.",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "Nothing read confirms a hot water bottle or welcome tray scene. The plot only says Bella and Hector take Ricky in.",
+      "source": "https://en.wikipedia.org/wiki/Hunt_for_the_Wilderpeople",
+      "fix": "Bella's welcome tray, a warm bed for Ricky.",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "Ricky's haiku for every occasion",
+      "where": "wink",
+      "verdict": "unsure",
+      "why": "The quotes page opened shows Ricky reciting a verse, but it is not called a haiku there.",
+      "source": "https://www.moviemistakes.com/film11770/quotes",
+      "fix": "Ricky's verse for every occasion",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 4,
+    "verdict": "A good bush hut look with pork, damper and Milo, though the birthday cake is credited to the wrong person.",
+    "missing": [
+      "Psycho Sam in camouflage",
+      "Ricky's 'real gangster' and 'double gangster' exchange with Hec",
+      "Bella's funeral and the ashes in the waterfall",
+      "The Casio keyboard birthday song",
+      "The relaxing song and relaxing sausage",
+      "Zag the dog and the wild boar"
+    ],
+    "ideas": [
+      "Swap 'Hāngī-style lamb and kūmara' note for 'Double gangster stew' (the 'Manslaughter' exchange).",
+      "Swap 'Bella's birthday cake' for 'Ricky's birthday cake' with candle and Casio.",
+      "Swap 'Ricky Baker haiku hot cocoa' for 'Relaxing sausage' (Ricky's line).",
+      "Add a 'teardrop tattoo' sticker as a badge."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 11,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 4,
-  "look": 4,
-  "overall": 4,
-  "verdict": "A good bush hut look with pork, damper and Milo, though the birthday cake is credited to the wrong person.",
-  "missing": [
-   "Psycho Sam in camouflage",
-   "Ricky's 'real gangster' and 'double gangster' exchange with Hec",
-   "Bella's funeral and the ashes in the waterfall",
-   "The Casio keyboard birthday song",
-   "The relaxing song and relaxing sausage",
-   "Zag the dog and the wild boar"
-  ],
-  "ideas": [
-   "Swap 'Hāngī-style lamb and kūmara' note for 'Double gangster stew' (the 'Manslaughter' exchange).",
-   "Swap 'Bella's birthday cake' for 'Ricky's birthday cake' with candle and Casio.",
-   "Swap 'Ricky Baker haiku hot cocoa' for 'Relaxing sausage' (Ricky's line).",
-   "Add a 'teardrop tattoo' sticker as a badge."
-  ],
-  "flat": false,
-  "done": false
- }
 }
