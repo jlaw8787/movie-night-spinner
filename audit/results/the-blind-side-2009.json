@@ -4,13 +4,14 @@
  "facts": [
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Briarcrest Christian School",
    "where": "wink",
    "verdict": "wrong",
    "why": "The film calls the school Wingate Christian School. Briarcrest is the real school the story is based on.",
    "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/BlindSide",
-   "fix": "Wingate Christian School"
+   "fix": "Wingate Christian School",
+   "applied": "2026-11-07"
   },
   {
    "printed": false,

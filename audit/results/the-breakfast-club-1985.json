@@ -4,13 +4,14 @@
  "facts": [
   {
    "printed": false,
-   "done": false,
+   "done": true,
    "text": "Principal Vernon's office downstairs",
    "where": "wink",
    "verdict": "wrong",
    "why": "Richard Vernon is the Vice Principal, and his office is right across the hall from the library, not downstairs.",
    "source": "https://en.wikiquote.org/wiki/The_Breakfast_Club",
-   "fix": "Vice Principal Vernon's office across the hall"
+   "fix": "Vice Principal Vernon's office across the hall",
+   "applied": "2026-11-07"
   },
   {
    "printed": true,

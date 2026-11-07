@@ -4,13 +4,14 @@
  "facts": [
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Phone lines down since ten. Kitchen open till the lights go. Last seen out on the road: Annie Hayworth, the teacher.",
    "where": "card",
    "verdict": "wrong",
    "why": "Annie is last seen at the schoolhouse with the children. Melanie and Mitch later find her body outside her own house, where the crows killed her protecting Cathy.",
    "source": "https://en.wikipedia.org/wiki/The_Birds_(film)",
-   "fix": "Phone lines down since ten. Kitchen open till the lights go. Last seen at the schoolhouse: Annie Hayworth, the teacher."
+   "fix": "Phone lines down since ten. Kitchen open till the lights go. Last seen at the schoolhouse: Annie Hayworth, the teacher.",
+   "applied": "2026-11-07"
   },
   {
    "printed": true,

@@ -21,33 +21,39 @@
   {
    "text": "Seated near: Stuart's pony for Kim",
    "where": "card",
-   "verdict": "wrong",
+   "verdict": "ok",
    "why": "The IMDb plot summary says Stuart gives Kim a horse, and says he 'tops' Bryan's karaoke machine with it, not a pony.",
    "source": "https://m.imdb.com/title/tt0936501/plotsummary",
    "fix": "Seated near: Stuart's horse for Kim",
    "printed": true,
-   "done": false,
-   "full": "Seated near: Stuart's pony for Kim"
+   "done": true,
+   "full": "Seated near: Stuart's pony for Kim",
+   "applied": "2026-11-07",
+   "reversed": "AV Club writes that Stuart buys Kim a pony, and the horse claim rests on one IMDb summary line, so the original stays."
   },
   {
    "text": "Stuart's pony for Kim",
    "where": "wink",
-   "verdict": "wrong",
+   "verdict": "ok",
    "why": "Same as the place card. The IMDb plot summary calls it a horse.",
    "source": "https://m.imdb.com/title/tt0936501/plotsummary",
    "fix": "Stuart's horse for Kim",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07",
+   "reversed": "AV Club writes that Stuart buys Kim a pony, and the horse claim rests on one IMDb summary line, so the original stays."
   },
   {
    "text": "Kim's birthday, the karaoke machine and the pony",
    "where": "dish-note",
-   "verdict": "wrong",
+   "verdict": "ok",
    "why": "The gift Stuart gives is a horse, not a pony, per the IMDb plot summary.",
    "source": "https://m.imdb.com/title/tt0936501/plotsummary",
    "fix": "Kim's birthday, the karaoke machine and the horse",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07",
+   "reversed": "AV Club writes that Stuart buys Kim a pony, and the horse claim rests on one IMDb summary line, so the original stays."
   },
   {
    "text": "Stuart's caterers, upstaged by Bryan's karaoke machine.",
