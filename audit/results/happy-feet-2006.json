@@ -1,0 +1,52 @@
+{
+  "id": "Happy Feet (2006)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the fish when Mumble brings food back for the whole colony.",
+      "where": "cue-printed",
+      "verdict": "wrong",
+      "why": "Mumble does not bring food back. His dancing wins over the humans, a research team films the colony, and a worldwide ban on Antarctic overfishing follows.",
+      "source": "https://en.wikipedia.org/wiki/Happy_Feet",
+      "fix": "Serve the fish when the whole colony dances for the research team and the fishing ban follows.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Serve the fish when Mumble brings food back for the whole colony.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "Same as the printed cue.",
+      "source": "https://en.wikipedia.org/wiki/Happy_Feet",
+      "fix": "Serve the fish when the whole colony dances for the research team and the fishing ban follows.",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 14,
+  "vibe": {
+    "world": 3,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.2,
+    "verdict": "Cute kiosk with a nice colour look, but the cue is wrong and the menu skips the film's best bits.",
+    "missing": [
+      "Lovelace and the six-pack rings (the forbidden shore)",
+      "Mumble lip-syncing to Ramon's 'My Way' (the mating season)",
+      "The whole colony dancing to 'Boogie Wonderland'",
+      "Marine World zoo (Miami)",
+      "The skua with the yellow band: 'alien abduction'",
+      "Memphis dropping the egg (the harsh winter)"
+    ],
+    "ideas": [
+      "Swap 'Iced blue raspberry slushie' note for 'Boogie Wonderland blue slushie, everyone dances'",
+      "Swap 'Iceberg wedges' for 'Memphis's dropped egg' devilled eggs",
+      "Swap 'Salt and pepper calamari' note for Lovelace and his six-pack rings",
+      "Swap the 'Spotted' footer for 'Spotted: a skua with a yellow tag'"
+    ],
+    "flat": true,
+    "done": false
+  }
+}

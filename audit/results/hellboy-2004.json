@@ -1,0 +1,108 @@
+{
+ "id": "Hellboy (2004)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve dessert when Hellboy shares milk and cookies with the kid on the rooftop.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The plot, quotes and TV Tropes page show no milk and cookies scene or a kid on a rooftop in the 2004 film. The food on screen is Myers's Baby Ruth bars and Abe's rotten eggs.",
+   "source": "https://en.wikiquote.org/wiki/Hellboy_(film)",
+   "fix": "Serve dessert when Myers hands Hellboy the Baby Ruth bars.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "young Hellboy and his love of pancakes",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No pancake scene turns up in the plot, quotes or trivia read. The only pancake mention is Hellboy's 'pushing Pam-cakes' jab.",
+   "source": "https://en.wikiquote.org/wiki/Hellboy_(film)",
+   "fix": "Hellboy's pancake stack, with a Baby Ruth on top",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Rooftop brown butter choc chip cookies",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "The rooftop milk and cookies scene is not in the plot or quotes read.",
+   "source": "https://en.wikiquote.org/wiki/Hellboy_(film)",
+   "fix": "Baby Ruth brown butter choc chip cookies",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Rooftop strawberry malted milk",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "The rooftop milk scene is not in the plot or quotes read.",
+   "source": "https://en.wikiquote.org/wiki/Hellboy_(film)",
+   "fix": "Baby Ruth strawberry malted milk",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Red's nightcap, shared with the kittens.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Agent Clay says Hellboy has a thing for cats, but TV Tropes places the kittens in the sequel and nothing read shows kittens in the first film.",
+   "source": "https://en.wikiquote.org/wiki/Hellboy_(film)",
+   "fix": "Red's nightcap. He's got a thing for cats.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Kittens tucked in his coat",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "Same as above. The first film's pages opened only mention his love of cats.",
+   "source": "https://en.wikiquote.org/wiki/Hellboy_(film)",
+   "fix": "His thing for cats",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Professor, I'm out of cat food again. Put it on the Bureau's tab.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Hellboy calls Broom 'Father' in the film ('Father's back?'), not 'Professor'. The cat food joke fits, since Clay says he has a thing for cats.",
+   "source": "https://en.wikiquote.org/wiki/Hellboy_(film)",
+   "fix": "Father, I'm out of cat food again. Put it on the Bureau's tab.",
+   "fix_note": {
+    "text": "Father, I'm out of cat food again. Put it on the Bureau's tab.",
+    "by": "Hellboy",
+    "kind": "note"
+   },
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 9,
+ "vibe": {
+  "world": 3,
+  "moments": 2,
+  "food": 2,
+  "tone": 3,
+  "look": 3,
+  "overall": 2.6,
+  "verdict": "The Bureau setting is right, but the food leans on scenes the film does not have and misses the Baby Ruth and rotten eggs.",
+  "missing": [
+   "Baby Ruth bars (Myers's peace offering, 'give him the candy')",
+   "Abe eating rotten eggs through the tube ('a delicacy')",
+   "The food cart fed six times a day",
+   "Hellboy filing his horns",
+   "Samael's eggs in the sewer",
+   "Rasputin and the Ogdru Jahad portal"
+  ],
+  "ideas": [
+   "Swap 'Hellboy's pancake stack' for 'Baby Ruth bars, Myers's peace offering' (Clay: 'Give him the candy').",
+   "Swap 'Abe Sapien's devilled eggs' for 'Abe's rotten eggs, a delicacy' (served as a joke name, with real devilled eggs).",
+   "Swap 'Rooftop' dessert names for 'Baby Ruth' ones (the rooftop scene is not in the film).",
+   "Swap 'Sloppy joe sliders' note for 'He gets fed six times a day' (Clay on the food cart)."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

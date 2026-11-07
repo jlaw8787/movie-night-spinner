@@ -1,0 +1,62 @@
+{
+ "id": "Holiday Inn (1942)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the main when the inn opens for Thanksgiving and the turkey shows up.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "At Thanksgiving the inn is closed and Jim is wallowing in self-pity. The film's Thanksgiving joke is an animated calendar turkey running between the third and fourth Thursdays.",
+   "source": "https://en.wikipedia.org/wiki/Holiday_Inn_(film)",
+   "fix": "Serve the main when the calendar turkey can't pick a Thursday for Thanksgiving.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Easter at the inn, the night Jim and Linda dance to Easter Parade",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The plot says romance blossoms between Jim and Linda at Easter and Ted turns up. Nothing read says they dance to Easter Parade.",
+   "source": "https://en.wikipedia.org/wiki/Holiday_Inn_(film)",
+   "fix": "Easter at the inn, the holiday Jim and Linda's romance blossoms",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Midville, Connecticut. Open holidays only.",
+   "where": "sign",
+   "verdict": "unsure",
+   "why": "The plot places the inn on a farm in Connecticut. The pages opened do not name Midville.",
+   "source": "https://en.wikipedia.org/wiki/Holiday_Inn_(film)",
+   "fix": "Connecticut. Open holidays only.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 5,
+  "overall": 4.4,
+  "verdict": "Lovely postcard motel look that fits the inn, with the holiday calendar idea used well.",
+  "missing": [
+   "The Fourth of July firecracker dance",
+   "Lincoln's Birthday blackface number (best left out)",
+   "Jim's pipe and bells in the final White Christmas scene",
+   "The calendar turkey gag",
+   "Ted drunk at midnight on New Year's Eve",
+   "Washington's Birthday minuet turned to jazz"
+  ],
+  "ideas": [
+   "Swap 'Calendar-hopping turkey dinner' note for 'The calendar turkey that can't pick a Thursday'.",
+   "Swap 'Hot popovers with honey butter' for 'New Year's Eve midnight popovers' (Ted stumbles in at midnight).",
+   "Swap 'White Christmas hot buttered apple punch' note for 'Jim leaves his pipe on the piano'.",
+   "Add a wall calendar with holiday symbols as the stamp (the film's calendar shots)."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

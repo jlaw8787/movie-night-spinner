@@ -1,0 +1,62 @@
+{
+  "id": "Gladiator II (2024)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the mains when the emperors throw their banquet.",
+      "where": "cue-printed",
+      "verdict": "wrong",
+      "why": "Senator Thraex hosts the party for the emperors. The emperors do not throw it. The same line is also the data cue.",
+      "source": "https://en.wikipedia.org/wiki/Gladiator_II",
+      "fix": "Serve the mains when Senator Thraex throws his party for the emperors.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Serve the mains when the emperors throw their banquet.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "Same as the printed cue. Thraex is the host of the party that features the gladiator duel.",
+      "source": "https://en.wikipedia.org/wiki/Gladiator_II",
+      "fix": "Serve the mains when Senator Thraex throws his party for the emperors.",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "Baboons in the opening fight",
+      "where": "wink",
+      "verdict": "unsure",
+      "why": "The baboon fight is at Ostia, after Numidia falls. The film opens with the invasion of Numidia.",
+      "source": "https://en.wikipedia.org/wiki/Gladiator_II",
+      "fix": "Baboons in the Ostia fight",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 3,
+    "overall": 3.2,
+    "verdict": "A fair Roman tavern, but the card is mostly honey dishes and the poster image has big black bars across it.",
+    "missing": [
+      "Caracalla naming his monkey Dondus a consul (the Senate)",
+      "The flooded Colosseum naval battle (the games)",
+      "Macrinus: 'Rome will fall. I need only give it a push.'",
+      "Maximus's sword and armour shrine (the gladiator school)",
+      "Lucius reciting Virgil at Thraex's party",
+      "Lucilla giving Lucius Maximus's ring"
+    ],
+    "ideas": [
+      "Swap 'Bread and circuses rosemary flatbread' note for Dondus: 'Dondus the consul gets the first slice'",
+      "Swap the 'A word from Macrinus' note for his real line: 'Rome will fall. I need only give it a push.'",
+      "Swap 'Pomegranate and mint cooler' note for the shark-filled Colosseum sea battle",
+      "Crop the poster to fill its frame so the black bars go"
+    ],
+    "flat": true,
+    "done": false
+  }
+}

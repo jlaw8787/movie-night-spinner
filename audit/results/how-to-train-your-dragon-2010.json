@@ -1,0 +1,58 @@
+{
+ "id": "How to Train Your Dragon (2010)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Dad, they're not what we thought. Sit down, eat your fish, and hear me out.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented. Hiccup's real line in the ring is 'They're not what we think they are. We don't have to kill them.'",
+   "source": "https://en.wikiquote.org/wiki/How_to_Train_Your_Dragon_(film)",
+   "fix": "They're not what we think they are. We don't have to kill them.",
+   "fix_note": {
+    "text": "They're not what we think they are. We don't have to kill them.",
+    "by": "Hiccup",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "The Dragon Training Academy",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "The film plot calls it a dragon-fighting class. 'Academy' is from the later series.",
+   "source": "https://en.wikipedia.org/wiki/How_to_Train_Your_Dragon_(2010_film)",
+   "fix": "The dragon training ring",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.4,
+  "verdict": "Berk hall is a good fit and the fish bites cue is right, but the poster sits in black bars and it ignores the film's best scenes.",
+  "missing": [
+   "Toothless spitting half a fish into Hiccup's lap",
+   "Fishlegs reading out dragon stats",
+   "Gobber's training lessons (wet the Gronckle)",
+   "Hiccup's lost foot and Toothless's new fin",
+   "The Red Death at the nest",
+   "Stoick disowning Hiccup"
+  ],
+  "ideas": [
+   "Swap 'Night Fury fire-roasted chicken legs' for 'Gronckle wet end sausage' (Gobber's lesson, douse the correct end).",
+   "Swap 'Gobber's smoked sausages' note for 'Fishlegs reads the stats'.",
+   "Swap the poster block for the film's cove image to remove the black bars.",
+   "Add 'Half a fish, Toothless style' as the dessert or a side joke."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

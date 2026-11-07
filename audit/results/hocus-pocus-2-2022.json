@@ -1,0 +1,68 @@
+{
+ "id": "Hocus Pocus 2 (2022)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Winnie, they put pumpkin in the coffee here. Pumpkin, in coffee. Sit down before I eat the lot.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a line in the Wikiquote page, and no pumpkin spice latte scene appears in the plot or the review pages read. It looks invented.",
+   "source": "https://en.wikiquote.org/wiki/Hocus_Pocus_2",
+   "fix": "Winnie, I can smell children all over Salem tonight. Sit down before I eat the lot.",
+   "fix_note": {
+    "text": "Winnie, I can smell children all over Salem tonight. Sit down before I eat the lot.",
+    "by": "Mary Sanderson",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Winnie still can't believe it's coffee.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No pumpkin spice latte scene shows up in the plot or the review pages read.",
+   "source": "https://en.wikipedia.org/wiki/Hocus_Pocus_2",
+   "fix": "Salem festival pumpkin spice, hot and sweet.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "the sisters' cauldron bubbling away in the old cottage",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "In the film the old cottage is Gilbert's magic shop, and the spell ingredients are gathered in the forest.",
+   "source": "https://en.wikipedia.org/wiki/Hocus_Pocus_2",
+   "fix": "the sisters' cauldron, bubbling out in the forest",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Fun Halloween menu, but the prom layout is an odd fit and the Walgreens and Roomba moments are underused.",
+  "missing": [
+   "The Walgreens chase (sisters eating lotions in aisle 4)",
+   "Mary surfing on two robot vacuums",
+   "The Roombas eating the salt circle",
+   "Billy Butcherson as a good zombie",
+   "The Mother Witch and the Magicae Maxima spell",
+   "Winnie fading away to join her sisters"
+  ],
+  "ideas": [
+   "Swap 'Pumpkin spice latte' for 'Walgreens aisle 4 face mask sorbet' (the sisters eat the lotions).",
+   "Swap 'Salem town square corn dogs' note for 'Mary on her Roomba broomstick'.",
+   "Swap the prom layout for a Salem Halloween carnival ticket book.",
+   "Add 'I am a good zombie' as a Billy Butcherson stamp."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "id": "Hairspray (2007)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Big hair, big plates, and everybody gets to dance after dinner. Mum made her famous pie, so save room.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "Nothing opened mentions a famous pie. Tracy calls her mother 'Ma' ('Ma, it's changing out there!'), and Edna is an agoraphobic laundress who comes into the story at the plus-size boutique.",
+   "source": "https://en.wikiquote.org/wiki/Hairspray_(2007_film)",
+   "fix": "Big hair, big plates, and everybody dances after dinner. Ma says nobody leaves hungry, so save room.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Big hair, big plates, and everybody dances after dinner. Ma says nobody leaves hungry, so save room.",
+    "by": "Tracy Turnblad",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Edna feeding the family in their little rowhouse.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Edna is shown as agoraphobic and takes on laundry. A family dinner scene is not in the plot summary I opened.",
+   "source": "https://en.wikipedia.org/wiki/Hairspray_(2007_film)",
+   "fix": "Edna's fried chicken, a Turnblad family favourite.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Cheery candy bar with the right show and hair jokes, but it uses little of the plot.",
+  "missing": [
+   "Penny hiding Tracy in the fallout shelter (the Pingletons' house)",
+   "Prudy tying Penny to her bed (the Pingleton house)",
+   "The march for integration and the police roadblock (the protest)",
+   "Miss Teenage Hairspray rigged by Velma (the pageant)",
+   "Edna filming Velma's rigging (the pageant)",
+   "Maybelle's store party (Seaweed)"
+  ],
+  "ideas": [
+   "Swap 'Record shop devilled eggs' for 'Fallout shelter fruit cocktail', the tin Penny hides Tracy with",
+   "Swap 'Cheese straws with paprika' note for 'Penny sneaks them out of Prudy's shelter'",
+   "Swap 'Beehive cupcakes' note for the pageant: 'Vote for Little Inez'",
+   "Swap the 'Combo 196' line for 'Combo Negro Day, every day'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

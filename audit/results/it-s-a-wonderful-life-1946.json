@@ -1,0 +1,68 @@
+{
+ "id": "It's a Wonderful Life (1946)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "George, I'm only an angel second class, but even I know a warm meal fixes a cold night. Sit down.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Clarence is an angel second class, but there is no scene where he serves George a meal. The nearest real words are his inscription in Tom Sawyer: 'Remember no man is a failure who has friends.'",
+   "source": "https://en.wikiquote.org/wiki/It%27s_a_Wonderful_Life",
+   "fix": "Remember no man is a failure who has friends.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Remember no man is a failure who has friends.",
+    "by": "Clarence Odbody",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "George and Mary's bread, salt and grape juice for the Mocktail' new house.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The housewarming is for the Martini family, not 'Mocktail', and the gift in the film is bread, salt and wine. The printed word is also garbled.",
+   "source": "https://www.gradesaver.com/its-a-wonderful-life/study-guide/summary-part-3",
+   "fix": "George and Mary's bread, salt and grape juice for the Martinis' new house.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Sunday dinner at the Bailey house in Bedford Falls.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The Bailey house and Ma Bailey are in the film, but the sources I read show no Sunday dinner scene.",
+   "source": "https://en.wikipedia.org/wiki/It%27s_a_Wonderful_Life",
+   "fix": "Dinner at Ma Bailey's boarding house.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 20,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4.2,
+  "verdict": "A well made 1940s newspaper that uses the honeymoon chicken, Zuzu's petals and Clarence's mulled wine.",
+  "missing": [
+   "George and Mary's bank run honeymoon money and the champagne at the office",
+   "The 'old maid' Mary in Pottersville",
+   "George's bridge rescue of Clarence",
+   "Harry's toast to George, 'the richest man in town'",
+   "Clarence's Tom Sawyer inscription 'Thanks for the wings'",
+   "Zuzu's bell, 'every time a bell rings an angel gets his wings'"
+  ],
+  "ideas": [
+   "Swap 'Eggnog' note for a bell line: 'Every time a bell rings, an angel gets his wings.'",
+   "Swap 'Coconut macaroons' note for 'Bailey Park, built to beat the slums.'",
+   "Swap 'Ma Bailey's pot roast' note for 'Dinner with Harry, richest man in town.'",
+   "Swap the 'Weather' box for 'Bridge ahead, mind the water.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

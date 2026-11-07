@@ -1,0 +1,58 @@
+{
+ "id": "Justice League (2017)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Bruce, I came for the free food. Don't tell the others I took the last slice.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Barry never says this. His real line about food is 'It causes me to burn a tremendous amount of calories. So I'm just a black hole of snacks.'",
+   "source": "https://en.wikiquote.org/wiki/Justice_League_(film)",
+   "fix": "So I'm just a black hole of snacks.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "So I'm just a black hole of snacks.",
+    "by": "Barry Allen",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "The team gathering at Bruce's lake house.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The plot has Bruce and Diana setting up a base of operations at the end, and no lake house appears in the Wikipedia summary or the Wikiquote page.",
+   "source": "https://en.wikipedia.org/wiki/Justice_League_(film)",
+   "fix": "The team's new base, set up by Bruce and Diana.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 20,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A smart banquet with Alfred's penguins and 'I'm rich', but the hall is more generic than Gotham.",
+  "missing": [
+   "Barry: 'I do very competitive ice dancing'",
+   "Bruce throwing a Batarang at Barry's place and Barry: 'Can I keep this?'",
+   "Arthur: 'Dressed like a bat'",
+   "Barry sitting in the dark: 'my second favorite chair'",
+   "Barry scarfing a whole pizza",
+   "Barry drawing glasses and a moustache on a stranger at the prison"
+  ],
+  "ideas": [
+   "Swap 'Speedster pancake stack' note for 'A snack hole, burning calories.'",
+   "Swap 'Arthur's whisky ginger highball' note for 'Dressed like a bat, drink up.'",
+   "Swap 'Lake house garlic butter rib eye' for 'Batarang wings' with 'Can I keep this?'",
+   "Swap the 'Place card' text 'Bring a hero' for 'Bring a Batarang, I'm in.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

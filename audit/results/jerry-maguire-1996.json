@@ -1,0 +1,58 @@
+{
+ "id": "Jerry Maguire (1996)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains when Rod calls Jerry from the kitchen in Arizona.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Rod's long phone call ends with 'Show me the money!' but no source I read says where Rod is when he calls. The kitchen is not confirmed.",
+   "source": "https://en.wikiquote.org/wiki/Jerry_Maguire",
+   "fix": "Serve the mains when Rod makes Jerry shout 'Show me the money.'",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "I wrote the memo at three in the morning on a lot of coffee. It cost me my job, but I kept the goldfish and the takeaway menus.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "Jerry calls it 'a mission statement. Not a memo' in his voiceover, and a trivia page has him writing it at 2 a.m. I found no source for three in the morning, coffee or takeaway menus. The goldfish is real.",
+   "source": "https://en.wikiquote.org/wiki/Jerry_Maguire",
+   "fix": "I wrote it overnight. Not a memo, a mission statement. It cost me my job, but I kept the goldfish.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "I wrote it overnight. Not a memo, a mission statement. It cost me my job, but I kept the goldfish.",
+    "by": "Jerry Maguire",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "Good SMI office framing, but the famous lines and moments barely show up.",
+  "missing": [
+   "'Show me the money!' on the phone with Rod",
+   "'You had me at hello'",
+   "'Help me, help you'",
+   "The Kwan, Rod's word for love, respect and community",
+   "Ray's fact that the human head weighs eight pounds",
+   "Rod's end zone dance after his touchdown"
+  ],
+  "ideas": [
+   "Swap 'Rod's Arizona street corn' note for 'Show me the money.'",
+   "Swap 'Tidwell's prickly pear margarita' note for 'The Kwan: love, respect, community.'",
+   "Swap 'Jerry and Dorothy's wedding cupcakes' note for 'You had me at hello.'",
+   "Swap the 'Home time' timeline slot for 'Help me help you.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "id": "Harry Potter and the Goblet of Fire (2005)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Champions, glory is on offer, but eat first. You will need the strength for what comes next.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented. Dumbledore says nothing like this in the film. His lines are the tournament announcement, the champion selection and the Cedric eulogy.",
+   "source": "https://en.wikiquote.org/wiki/Harry_Potter_and_the_Goblet_of_Fire_(film)",
+   "fix": "Champions, eat before the ball. Three tasks will use up your strength soon enough.",
+   "fix_note": {
+    "text": "Champions, eat before the ball. Three tasks will use up your strength soon enough.",
+    "by": "Albus Dumbledore",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Fleur's toast with the Beauxbatons girls.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Nothing read shows Fleur giving a toast. The plot only has her chosen as champion and withdrawing in the second task.",
+   "source": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Goblet_of_Fire_(film)",
+   "fix": "Fleur's colours, cold and sparkling.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "A tidy Yule Ball invite with the dragon, the Goblet and the Beauxbatons carriage all in.",
+  "missing": [
+   "Neville giving Harry gillyweed before the second task",
+   "Harry going to the ball with Parvati Patil",
+   "Hermione arriving with Viktor Krum, Ron sulking",
+   "Priori Incantatem, the ghosts from Voldemort's wand",
+   "The Black Lake rescue of Ron",
+   "The Quidditch World Cup campsite attack"
+  ],
+  "ideas": [
+   "Swap 'Mulled apple punch' for 'Gillyweed lime fizz' (Neville's gillyweed in the second task).",
+   "Swap 'Prawn cocktail in lettuce cups' for 'Dragon egg golden eggs' (the golden eggs from the first task).",
+   "Swap 'Table 05' place card for 'Parvati and Padma Patil's table'.",
+   "Swap the invite sign-off for the Goblet's blue flame stamp."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

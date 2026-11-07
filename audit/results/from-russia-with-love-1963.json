@@ -1,0 +1,58 @@
+{
+ "id": "From Russia with Love (1963)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Bond's starter, before Captain Nash joins the table.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "At the Orient Express dinner Bond orders the grilled sole and a Blanc de Blancs. No sardine starter is shown.",
+   "source": "https://www.007travelers.com/?p=35630",
+   "fix": "Grilled sole with lemon. Bond's order, before Captain Nash asks for the red.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "My city feeds you well, my friend. Eat now, because on that train you trust nobody, not even the waiter.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "Kerim Bey is not a quote here. He rides the train himself and is killed aboard it, so a warning about 'that train' is odd. The real lines found for him are about the periscope and the Soviet consulate.",
+   "source": "https://en.wikiquote.org/wiki/From_Russia_with_Love_(film)",
+   "fix": "Eat well, my friend. Istanbul is my city and the Russians are watching it too.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Eat well, my friend. Istanbul is my city and the Russians are watching it too.",
+    "by": "Kerim Bey",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "A strong dining car with real Bond touches, but the best food joke (red wine with fish) is hidden on an unprinted house line.",
+  "missing": [
+   "Red wine with fish: 'Well, that should have told me something' (the dinner with Grant)",
+   "The Roma camp fight (outside Istanbul)",
+   "Kronsteen's chess game (SPECTRE briefing)",
+   "Venice gondola and the film canister in the canal (the last scene)",
+   "Bond's fight with Grant (the train compartment)",
+   "Tatiana and the Lektor (the consulate)"
+  ],
+  "ideas": [
+   "Print the Chianti house line, 'Red wine with fish. That should have told Bond something', in place of the 'Heard in the club car' list",
+   "Swap the sardine house line for the grilled sole Bond really orders",
+   "Swap 'Kerim Bey's camp supper lamb shish' note for a line about the Roma camp the night Krilencu attacks",
+   "Add a chess board stamp on the ticket for Kronsteen's plan"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

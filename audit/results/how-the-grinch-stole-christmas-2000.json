@@ -1,0 +1,58 @@
+{
+ "id": "How the Grinch Stole Christmas (2000)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I think the Grinch is lonely. Maybe we should invite him down for dinner.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a line from the film. Cindy Lou's real lines include 'Santa Claus, what are you doing with our tree?' and 'In your own words, please tell me everything you know about the Grinch.'",
+   "source": "https://en.wikiquote.org/wiki/How_the_Grinch_Stole_Christmas_(2000_film)",
+   "fix": "Somebody should invite the Grinch down to dinner. I'll save him a seat and a slice.",
+   "fix_note": {
+    "text": "Somebody should invite the Grinch down to dinner. I'll save him a seat and a slice.",
+    "by": "Cindy Lou Who",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Cindy Lou's toast at the Whobilation.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Nothing read shows Cindy Lou giving a toast. The film has her asking for the Grinch to be Holiday Cheermeister and being sent to bed with a glass of water.",
+   "source": "https://en.wikipedia.org/wiki/How_the_Grinch_Stole_Christmas_(2000_film)",
+   "fix": "A fizzier answer than Cindy Lou's glass of water.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A neat Whoville feast with roast beast and Who pudding, but the Grinch's own comedy gets less room.",
+  "missing": [
+   "The Grinch's schedule ('wallow in self-pity', 'dinner with me')",
+   "Max dressed as Rudolph",
+   "The Grinch eating a glass bottle and an onion",
+   "Martha May Whovier and Augustus May Who's car",
+   "The Grinch's hairy shave disaster in class",
+   "The last can of Who-Hash"
+  ],
+  "ideas": [
+   "Swap 'Sparkling cranberry soda spritz' for 'Grinch's 6:30 dinner for one' on the menu.",
+   "Swap 'Whoville Christmas wreaths' note for 'Stuffed up the chimney, one tree at a time'.",
+   "Swap 'Mount Crumpit cheesy pull-apart bread' for 'Onion and glass bottle crisps' (joke name, real onions).",
+   "Add the Grinch's daily schedule as the place card."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

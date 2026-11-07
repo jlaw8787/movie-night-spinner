@@ -1,0 +1,58 @@
+{
+ "id": "Jurassic World Dominion (2022)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "For anyone who outran the Therizinosaurus in the snow.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Wikipedia says Claire escapes a Therizinosaurus after landing in a forest swamp, with the ice and snow being where Owen and Kayla crash. Whether the chase is in snow is not confirmed.",
+   "source": "https://en.wikipedia.org/wiki/Jurassic_World_Dominion",
+   "fix": "For anyone who outran the Therizinosaurus in the Dolomites.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Alan, I've missed you. Sit down, there's dinner, and no locusts allowed at this table.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "Ellie does reunite with Alan and show him the locust, but I could not open a quote page for this film. The line is written as dialogue and I could not confirm it.",
+   "source": "",
+   "fix": "Alan, it's been too long. Sit down, eat, and I'll tell you about the locusts.",
+   "printed": false,
+   "done": true,
+   "fix_note": {
+    "text": "Alan, it's been too long. Sit down, eat, and I'll tell you about the locusts.",
+    "by": "Ellie Sattler",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A neat Biosyn canteen but too much plain Italian food and not enough of the film's big set pieces.",
+  "missing": [
+   "Pyroraptor in the icy wilderness",
+   "Quetzalcoatlus attack on Kayla's plane",
+   "Dodgson burning the locusts and starting a firestorm",
+   "Ellie and Alan reuniting over a locust",
+   "Beta, the baby raptor Maisie names",
+   "Malta black market with Barry Sembene"
+  ],
+  "ideas": [
+   "Swap 'Sierra Nevada smoky beef jerky' note for 'Owen's, stored in a plane crash.'",
+   "Swap 'Sweet almond milk' note for 'Maisie's, with Beta on the side.'",
+   "Swap 'Locust swarm corn' note for 'Dodgson's locusts, crispy.'",
+   "Swap 'Speck and fontina crostini' note for 'Kayla's, flown in over the ice.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

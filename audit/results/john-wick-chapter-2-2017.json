@@ -1,0 +1,58 @@
+{
+ "id": "John Wick: Chapter 2 (2017)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "A marker is a marker, Mr. Wick. Please enjoy a fine dinner in Rome, because the evening gets longer.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Julius, manager of the Rome Continental, never says this. His real lines to John on Wikiquote include 'One of our finest rooms.' and 'Enjoy your stay.'",
+   "source": "https://en.wikiquote.org/wiki/John_Wick:_Chapter_2",
+   "fix": "Enjoy your stay.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Enjoy your stay.",
+    "by": "Julius",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Santino D'Antonio's party in Rome.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The Rome party is Gianna's coronation. Santino's gala is at an art museum in New York.",
+   "source": "https://en.wikipedia.org/wiki/John_Wick:_Chapter_2",
+   "fix": "Gianna D'Antonio's party in Rome.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 19,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A classy Continental banquet with the marker, the sommelier and the catacombs, one detail off in the lamb dish.",
+  "missing": [
+   "Winston declaring John excommunicado",
+   "The Bowery King giving John a pistol with seven bullets",
+   "The subway fight with Cassian",
+   "Aurelio repairing the Mustang",
+   "Santino's art museum gala",
+   "Gianna's coronation and her choice at the end"
+  ],
+  "ideas": [
+   "Swap 'Limoncello on ice' note for 'Seven bullets, one for each million.'",
+   "Swap 'Bowery King's chicken and mushroom pies' note for 'Cooked for the king of the pigeons.'",
+   "Swap 'Santino's anchovy and rosemary lamb' note for 'Gianna's coronation lamb.'",
+   "Swap the 'Place card' text for 'Excommunicado, one hour.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

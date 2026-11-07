@@ -1,0 +1,48 @@
+{
+ "id": "Idiocracy (2006)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I'm an average guy and the smartest man alive. Please, someone just pass me a glass of water.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Joe never says this. The nearest real line on Wikiquote is when he learns the crops are watered with Brawndo: 'They're watering crops with a sports drink?' He asks for water for the plants, not for himself.",
+   "source": "https://en.wikiquote.org/wiki/Idiocracy",
+   "fix": "They're watering crops with a sports drink?",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "They're watering crops with a sports drink?",
+    "by": "Joe Bauers",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 20,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A good Brawndo Diner with the water joke and the Costco greeting, but it misses the fast food horror the film is built on.",
+  "missing": [
+   "Fuddruckers where the cryogenics project used to be, with its name gone downhill",
+   "Carl's Jr. fast food on the couch",
+   "'Water, like out the toilet?' at the cabinet meeting",
+   "'Brawndo's got what plants crave. It's got electrolytes.'",
+   "Joe tricking the guard and walking out of prison",
+   "Beef Supreme and the monster truck derby"
+  ],
+  "ideas": [
+   "Swap 'Sparkling apple and mint cooler' note 'Not Brawndo' for a glass of tap water with 'Water, like out the toilet?'",
+   "Swap 'Future cheese fries with chicken salt' for a fast food burger and fries named after Fuddruckers' devolved name.",
+   "Swap 'Ranch pretzel and peanut snack mix' note for 'It's got what plants crave.'",
+   "Swap 'Camacho's monster meatball subs' note for 'Beef Supreme's demolition derby special.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

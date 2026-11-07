@@ -1,0 +1,58 @@
+{
+ "id": "Harry Potter and the Half-Blood Prince (2009)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Take a seat, Harry. Talent like yours deserves a good dinner. Bring a friend, if you like.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented. Slughorn's real line about Harry is 'Anyone who aspires to be anyone ends up here. But then again, you already are someone, aren't you, Harry?'",
+   "source": "https://en.wikiquote.org/wiki/Harry_Potter_and_the_Half-Blood_Prince_(film)",
+   "fix": "Take a seat, Harry. Anyone who aspires to be anyone ends up at my table. Bring a friend.",
+   "fix_note": {
+    "text": "Take a seat, Harry. Anyone who aspires to be anyone ends up at my table. Bring a friend.",
+    "by": "Horace Slughorn",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "the trolley on the Hogwarts Express",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The plot and quotes opened show Harry and Luna on the train but no trolley scene.",
+   "source": "https://en.wikiquote.org/wiki/Harry_Potter_and_the_Half-Blood_Prince_(film)",
+   "fix": "the Hogwarts Express, where Harry meets Luna",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "Slughorn's Slug Club is a good setting and the pineapple and mead nods are sharp.",
+  "missing": [
+   "Ron eating the love potion chocolates meant for Harry",
+   "Katie Bell's cursed necklace",
+   "Lavender calling Ron 'Won-Won' (only a wink)",
+   "Harry putting Felix Felicis in Ron's drink (he only pretends)",
+   "Dumbledore drinking the potion in the cave",
+   "Harry and Ron as Slughorn's mead victims"
+  ],
+  "ideas": [
+   "Swap 'Cocoa dusted chocolate truffles' for 'Love potion truffles' (Ron eats the spiked chocolates meant for Harry).",
+   "Swap 'Honey lemon ginger beer cooler' for 'Felix Felicis golden fizz' (liquid luck).",
+   "Swap 'Hogwarts Express Cornish pasties' for 'Slug Club hors d'oeuvres tray' (Hermione is offered one at the party).",
+   "Add a Slug Club shelf of portraits as the place card (Slughorn's wall of favourite students)."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

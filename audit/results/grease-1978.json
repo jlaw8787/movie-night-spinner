@@ -1,0 +1,58 @@
+{
+ "id": "Grease (1978)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Meet me at the Frosty Palace after the dance. Bring the girls, Sandy.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Danny and Sandy meet at the Frosty Palace before the dance, when she is out with Tom and he tries to make up. After the dance Sandy storms off. Nobody asks her to bring the girls.",
+   "source": "https://www.whatsafterthemovie.com/summary/grease",
+   "fix": "Meet me at the Frosty Palace, Sandy. I'll buy the fries and try not to act tough.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Meet me at the Frosty Palace, Sandy. I'll buy the fries and try not to act tough.",
+    "by": "Danny Zuko",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Frenchy's booth, right before Teen Angel shows up.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Frenchy is visited by a guardian angel after a beauty class mishap leaves her with pink hair. The sources opened do not place that scene at the Frosty Palace.",
+   "source": "https://en.wikipedia.org/wiki/Beauty_School_Dropout",
+   "fix": "Frenchy's pick, pink hair and all.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4.2,
+  "verdict": "A cracking Frosty Palace that fits, with the sleepover and Frenchy's pink hair left on the table.",
+  "missing": [
+   "Sneaky Pete wine and Jan's Twinkies (the pyjama party)",
+   "Frenchy's candy-pink hair (beauty school)",
+   "'Summer Nights' on the bleachers (Rydell)",
+   "National Bandstand dance contest (the Rydell gym)",
+   "'Tell me about it, stud' (Sandy)",
+   "Rizzo: 'I feel like a defective typewriter. I skipped a period.'"
+  ],
+  "ideas": [
+   "Swap 'Lime rickey' for 'Sneaky Pete' grape soda, the pyjama party bottle",
+   "Swap 'Pink Ladies coconut ice' for 'Jan's Twinkies', the sleepover dessert",
+   "Swap 'Tuna melt' house note for 'Frenchy's pick, pink hair and all'",
+   "Swap 'Cherry cola float' note for the dance contest: 'Cha-Cha cuts in'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}
