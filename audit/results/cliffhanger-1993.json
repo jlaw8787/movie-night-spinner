@@ -1,48 +1,57 @@
 {
- "id": "Cliffhanger (1993)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "I swore off rescues. Coffee's on, so grab a mug before the radio goes.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Not a Gabe line. The quote page lists lines like 'You're not gonna die.' and 'Don't think so.' with nothing about coffee or rescues. Gabe does quit the rangers after Sarah falls, but these words are not his. Printed in quote marks and signed Gabe Walker.",
-   "source": "https://moviemistakes.com/film283/quotes",
-   "fix": "Coffee's on. Radio's quiet. Keep it that way. (set as a written note, no quote marks)",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "I swore off rescues. Coffee's on, so grab a mug before the radio goes.",
-    "by": "Gabe Walker",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
+  "id": "Cliffhanger (1993)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "I swore off rescues. Coffee's on, so grab a mug before the radio goes.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Not a Gabe line. The quote page lists lines like 'You're not gonna die.' and 'Don't think so.' with nothing about coffee or rescues. Gabe does quit the rangers after Sarah falls, but these words are not his. Printed in quote marks and signed Gabe Walker.",
+      "source": "https://moviemistakes.com/film283/quotes",
+      "fix": "Coffee's on. Radio's quiet. Keep it that way. (set as a written note, no quote marks)",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "I swore off rescues. Coffee's on, so grab a mug before the radio goes.",
+        "by": "Gabe Walker",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "Hearty mountain grub and a good cash-burning joke, but it plays like a generic campfire card.",
+    "missing": [
+      "Sarah's harness breaking in the opening rescue",
+      "Gabe cutting his rope on the rock face",
+      "The rabbit carrying the beacon",
+      "Gabe throwing the money into the helicopter rotors",
+      "The cave fight and the bats",
+      "Qualen's 'Want to trade?' note left on a single bill"
+    ],
+    "ideas": [
+      "Swap 'Summit peppered beef jerky' note ('The long climb') for 'Want to trade? One bill left in the case.'",
+      "Swap 'Smoked cheddar and elk sausage board' for 'Beacon rabbit stew', note 'Gabe tied the tracker to one.'",
+      "Swap 'Irish coffee with whipped cream' note for 'Gabe and Jessie keep warm by burning Treasury cash.'",
+      "Swap 'Treasury cash apple strudel' note for 'Thrown into the rotors.'"
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Opening cliff rescue",
+      "Stolen Treasury cash cases",
+      "Mid-air plane transfer",
+      "Qualen and his crew",
+      "Hal Tucker and Gabe"
+    ],
+    "changed": []
   }
- ],
- "checked_ok": 11,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "Hearty mountain grub and a good cash-burning joke, but it plays like a generic campfire card.",
-  "missing": [
-   "Sarah's harness breaking in the opening rescue",
-   "Gabe cutting his rope on the rock face",
-   "The rabbit carrying the beacon",
-   "Gabe throwing the money into the helicopter rotors",
-   "The cave fight and the bats",
-   "Qualen's 'Want to trade?' note left on a single bill"
-  ],
-  "ideas": [
-   "Swap 'Summit peppered beef jerky' note ('The long climb') for 'Want to trade? One bill left in the case.'",
-   "Swap 'Smoked cheddar and elk sausage board' for 'Beacon rabbit stew', note 'Gabe tied the tracker to one.'",
-   "Swap 'Irish coffee with whipped cream' note for 'Gabe and Jessie keep warm by burning Treasury cash.'",
-   "Swap 'Treasury cash apple strudel' note for 'Thrown into the rotors.'"
-  ],
-  "flat": false,
-  "done": false
- }
 }

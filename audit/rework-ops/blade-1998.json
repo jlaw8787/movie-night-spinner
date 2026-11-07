@@ -1,0 +1,34 @@
+{
+ "id": "Blade (1998)",
+ "ops": [
+  {
+   "set": "cue",
+   "value": "Serve the snacks when Blade raids the blood rave."
+  },
+  {
+   "old": "Garlic serum bread",
+   "new": "Whistler's garlic bread"
+  },
+  {
+   "old": "Garlic-heavy steak",
+   "new": "Daywalker garlic steak"
+  },
+  {
+   "old": "Whistler's workshop full of weapons",
+   "new": "Beef chilli, garlic kick, from Whistler's weapons den"
+  },
+  {
+   "old": "Red wine, pomegranate juice and brandy with blood orange slices",
+   "new": "Red wine, pomegranate and brandy with blood orange. Is everybody thirsty?"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The rave with the sprinklers overhead",
+    "Is everybody thirsty?",
+    "Quinn just keeps on coming",
+    "Whistler's weapons workshop"
+   ]
+  }
+ ]
+}

@@ -1,60 +1,72 @@
 {
- "id": "Chinatown (1974)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Grab a plate and keep your voice down. Half the table is somebody I've been paid to follow.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Set out as Gittes's spoken words under 'A word from Jake Gittes', but he never says it. His real reply at the Albacore Club lunch, when Noah Cross says the fish should be served with the head, is 'Fine. As long as you don't serve the chicken that way.'",
-   "source": "https://en.wikiquote.org/wiki/Chinatown_(1974_film)",
-   "fix": "Fine. As long as you don't serve the chicken that way.",
-   "fix_note": {
-    "text": "Fine. As long as you don't serve the chicken that way.",
-    "by": "Jake Gittes",
-    "kind": "quote"
-   },
-   "done": true,
-   "printed": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Gittes' order, nose bandage and all.",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "Gittes has his nose slit by a man with a knife and wears the bandage through the film, but nothing in the transcript or plot shows him ordering a gin rickey.",
-   "source": "https://en.wikiquote.org/wiki/Chinatown_(1974_film)",
-   "fix": "Gittes' nose bandage, courtesy of a man with a knife.",
-   "done": true,
-   "printed": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Chinatown (1974)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Grab a plate and keep your voice down. Half the table is somebody I've been paid to follow.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Set out as Gittes's spoken words under 'A word from Jake Gittes', but he never says it. His real reply at the Albacore Club lunch, when Noah Cross says the fish should be served with the head, is 'Fine. As long as you don't serve the chicken that way.'",
+      "source": "https://en.wikiquote.org/wiki/Chinatown_(1974_film)",
+      "fix": "Fine. As long as you don't serve the chicken that way.",
+      "fix_note": {
+        "text": "Fine. As long as you don't serve the chicken that way.",
+        "by": "Jake Gittes",
+        "kind": "quote"
+      },
+      "done": true,
+      "printed": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Gittes' order, nose bandage and all.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Gittes has his nose slit by a man with a knife and wears the bandage through the film, but nothing in the transcript or plot shows him ordering a gin rickey.",
+      "source": "https://en.wikiquote.org/wiki/Chinatown_(1974_film)",
+      "fix": "Gittes' nose bandage, courtesy of a man with a knife.",
+      "done": true,
+      "printed": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 17,
+  "vibe": {
+    "world": 5,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "A proper 1937 newspaper with the head on fish moment, but the food is mostly orange and fish puns and leaves out the best twists.",
+    "missing": [
+      "Evelyn's 'She's my sister and my daughter' (the Mulwray house)",
+      "Gittes's bifocals found in the garden pond (saltwater, the lens)",
+      "The dry reservoir and the water dumped at night (the drought)",
+      "The nose slash by the man with the knife (a cameo by the director)",
+      "Ida Sessions, the fake Evelyn, phoning Gittes",
+      "The retirement home and the dead buyers (the land deal)"
+    ],
+    "ideas": [
+      "Swap 'Orange grove salad' note for 'Dead men buy orange groves' to use the retirement home land scam.",
+      "Swap 'Whole grilled fish, head on' note for Cross's own line, 'I believe they should be served with the head.'",
+      "Swap 'Gin rickey' note for 'Bifocals in the pond' on a saltwater cocktail.",
+      "Swap the 'Stop Press' box for 'Forget it, Jake' as the closing headline."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Forget it, Jake. It's Chinatown.",
+      "Gittes' nose bandage",
+      "The flaw in Evelyn's eye",
+      "She's my sister and my daughter",
+      "Water department and the orange groves",
+      "Fish with the head on"
+    ],
+    "changed": [
+      "Hollis wink swapped for the slap scene, My sister, my daughter (transcript); wink count kept at five"
+    ]
   }
- ],
- "checked_ok": 17,
- "vibe": {
-  "world": 5,
-  "moments": 3,
-  "food": 3,
-  "tone": 4,
-  "look": 4,
-  "overall": 3.8,
-  "verdict": "A proper 1937 newspaper with the head on fish moment, but the food is mostly orange and fish puns and leaves out the best twists.",
-  "missing": [
-   "Evelyn's 'She's my sister and my daughter' (the Mulwray house)",
-   "Gittes's bifocals found in the garden pond (saltwater, the lens)",
-   "The dry reservoir and the water dumped at night (the drought)",
-   "The nose slash by the man with the knife (a cameo by the director)",
-   "Ida Sessions, the fake Evelyn, phoning Gittes",
-   "The retirement home and the dead buyers (the land deal)"
-  ],
-  "ideas": [
-   "Swap 'Orange grove salad' note for 'Dead men buy orange groves' to use the retirement home land scam.",
-   "Swap 'Whole grilled fish, head on' note for Cross's own line, 'I believe they should be served with the head.'",
-   "Swap 'Gin rickey' note for 'Bifocals in the pond' on a saltwater cocktail.",
-   "Swap the 'Stop Press' box for 'Forget it, Jake' as the closing headline."
-  ],
-  "flat": false,
-  "done": false
- }
 }

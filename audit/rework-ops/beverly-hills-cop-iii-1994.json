@@ -1,0 +1,34 @@
+{
+ "id": "Beverly Hills Cop III (1994)",
+ "ops": [
+  {
+   "old": "the queues at Wonder World",
+   "new": "Axel, are you on a coffee break?"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The Annihilator 2000 and its microwave oven",
+    "Axel Fox, the park's new mascot",
+    "Ellis DeWald, the security chief with a secret",
+    "Axel's boss gunned down at the chop shop",
+    "Rosewood back in action at Wonder World"
+   ]
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Wonder World Pass",
+    "lines": [
+     "Admit one, all rides",
+     "Axel Foley, line jumper"
+    ]
+   }
+  },
+  {
+   "old": "Grab one before the Spider ride stalls.",
+   "new": "Grab one before Axel cuts the Spider queue."
+  }
+ ]
+}

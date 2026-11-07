@@ -1,0 +1,40 @@
+{
+ "id": "Beerfest (2006)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I always sleep better with a little sausage in me.",
+    "by": "Great Gam Gam",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Great Gam Gam's pork schnitzel",
+   "new": "Schnitzengiggle Tavern pork schnitzel"
+  },
+  {
+   "old": "German lager topped with homemade lemon soda",
+   "new": "Lager and lemon soda. Das Boot! Das Boot!"
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Beerfest Entry",
+    "lines": [
+     "Munich, Germany",
+     "Enter in a keg"
+    ]
+   }
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Bavarian wheat beer by the stein",
+    "note": "Chug like Landfill. Drink, drink, drink!",
+    "alc": true
+   }
+  }
+ ]
+}

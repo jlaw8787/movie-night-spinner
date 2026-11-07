@@ -1,67 +1,79 @@
 {
- "id": "Casino (1995)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Philip Green, Chairman. © 1973",
-   "where": "footer",
-   "verdict": "wrong",
-   "why": "In the script the judge calls Philip Green the president of Tangiers Corporation, and Wikipedia calls him the frontman. Ace serves at the pleasure of the chairman of the board, so Green is the president rather than the chairman.",
-   "source": "https://imsdb.com/scripts/Casino.html",
-   "fix": "Philip Green, President. © 1973",
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Cheats leave by the back door.",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "No back door rule appears. The transcript has a cheat offered 'the money and the hammer' or a walk out, so the film's rule for cheats is the hammer.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=casino",
-   "fix": "Cheats get the hammer.",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Dry martini -- at the craps table",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "No martini or craps table scene shows in the transcript or plot, so the craps table claim is dropped.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=casino",
-   "fix": "Dry martini -- at the table",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Casino (1995)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Philip Green, Chairman. © 1973",
+      "where": "footer",
+      "verdict": "wrong",
+      "why": "In the script the judge calls Philip Green the president of Tangiers Corporation, and Wikipedia calls him the frontman. Ace serves at the pleasure of the chairman of the board, so Green is the president rather than the chairman.",
+      "source": "https://imsdb.com/scripts/Casino.html",
+      "fix": "Philip Green, President. © 1973",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Cheats leave by the back door.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "No back door rule appears. The transcript has a cheat offered 'the money and the hammer' or a walk out, so the film's rule for cheats is the hammer.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=casino",
+      "fix": "Cheats get the hammer.",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Dry martini -- at the craps table",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "No martini or craps table scene shows in the transcript or plot, so the craps table claim is dropped.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=casino",
+      "fix": "Dry martini -- at the table",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 9,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 4,
+    "verdict": "The Tangiers coffee shop menu leans on the blueberry muffin scene well, and the rules list is the best part. It misses Ginger, Nicky and the skim.",
+    "missing": [
+      "Ginger throwing chips from the car (the lobby)",
+      "The Aku-Aku Lounge where Ace compares muffins",
+      "Nicky Santoro and the vice (the pen)",
+      "Ace's TV show (Tangiers)",
+      "The count room (the skim)",
+      "The licensing hearing (the Gaming Board)"
+    ],
+    "ideas": [
+      "Fix the footer to 'Philip Green, President'",
+      "Add an Aku-Aku Lounge line to the muffin card, replacing 'Count them. We did.'",
+      "Swap the back door rule for 'Don Ward is not on the schedule'",
+      "Add a 'Ginger's table' note to the drinks side, replacing 'Refills on the house'"
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "The eye in the sky watching everybody",
+      "Ace counting the blueberries in the muffins",
+      "Tangiers",
+      "Nicky Santoro",
+      "Ginger"
+    ],
+    "changed": [
+      "Clams casino note brings in Nicky Santoro",
+      "Oysters Rockefeller note brings in Ginger"
+    ]
   }
- ],
- "checked_ok": 9,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 4,
-  "look": 4,
-  "overall": 4,
-  "verdict": "The Tangiers coffee shop menu leans on the blueberry muffin scene well, and the rules list is the best part. It misses Ginger, Nicky and the skim.",
-  "missing": [
-   "Ginger throwing chips from the car (the lobby)",
-   "The Aku-Aku Lounge where Ace compares muffins",
-   "Nicky Santoro and the vice (the pen)",
-   "Ace's TV show (Tangiers)",
-   "The count room (the skim)",
-   "The licensing hearing (the Gaming Board)"
-  ],
-  "ideas": [
-   "Fix the footer to 'Philip Green, President'",
-   "Add an Aku-Aku Lounge line to the muffin card, replacing 'Count them. We did.'",
-   "Swap the back door rule for 'Don Ward is not on the schedule'",
-   "Add a 'Ginger's table' note to the drinks side, replacing 'Refills on the house'"
-  ],
-  "flat": false,
-  "done": false
- }
 }

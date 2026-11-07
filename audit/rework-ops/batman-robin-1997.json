@@ -1,0 +1,50 @@
+{
+ "id": "Batman & Robin (1997)",
+ "ops": [
+  {
+   "old": "Cooked prawns on crushed ice with a mayo, tomato sauce and lemon dip",
+   "new": "Cooked prawns on crushed ice with a mayo dip. All right everyone, chill"
+  },
+  {
+   "old": "Lemonade ice cubes blended with blue butterfly pea tea into a slush",
+   "new": "Lemonade ice cubes and blue pea tea in a slush. Stay cool, Birdboy"
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Pimm's cup with cucumber",
+    "note": "What killed the dinosaurs? The Ice Age.",
+    "alc": true
+   }
+  },
+  {
+   "old": "Chicken thighs simmered with carrot, celery and egg noodles",
+   "new": "Chicken, carrot and noodle soup. Alfred cancels the pizzas"
+  },
+  {
+   "old": "thawing out after Gotham freezes over",
+   "new": "thawing out after Freeze's Observatory gun"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Mr. Freeze and his ice puns",
+    "Ivy's one kiss, for luck",
+    "Barbara Wilson becoming Batgirl",
+    "Alfred falling ill",
+    "The Gotham Observatory"
+   ]
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "tag",
+    "title": "Wayne Manor Staff",
+    "lines": [
+     "Pennyworth, A.",
+     "A bigger cave"
+    ]
+   }
+  }
+ ]
+}

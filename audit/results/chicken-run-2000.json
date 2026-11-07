@@ -1,71 +1,84 @@
 {
- "id": "Chicken Run (2000)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Eat up, ladies, there is extra corn tonight. We need our strength for the big flight, and none of us is ending up in a pie.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Not a Ginger line. Her famous line is 'We'll either die free chickens or we die trying.' This one is printed in quote marks and talks about extra corn and a big flight, which is not in her dialogue.",
-   "source": "https://www.ranker.com/list/the-best-chicken-run-quotes/movie-and-tv-quotes",
-   "fix": "We'll either die free chickens or we die trying.",
-   "fix_note": {
-    "text": "We'll either die free chickens or we die trying.",
-    "by": "Ginger",
-    "kind": "quote"
-   },
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Serve the pies when Mrs Tweedy fires up the pie machine.",
-   "where": "cue",
-   "verdict": "wrong",
-   "why": "Mr Tweedy finishes assembling the pie machine and runs a test with Ginger inside. Mrs Tweedy only orders it.",
-   "source": "https://en.wikipedia.org/wiki/Chicken_Run",
-   "fix": "Serve the pies when Mr Tweedy runs the pie machine test.",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Hut 17: short again",
-   "where": "prop",
-   "verdict": "ok",
-   "why": "Ginger calls the escape meeting in hut 17, and the film keeps counting empty nests and falling egg numbers, so short again is fair.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=chicken-run",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Chicken Run (2000)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Eat up, ladies, there is extra corn tonight. We need our strength for the big flight, and none of us is ending up in a pie.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Not a Ginger line. Her famous line is 'We'll either die free chickens or we die trying.' This one is printed in quote marks and talks about extra corn and a big flight, which is not in her dialogue.",
+      "source": "https://www.ranker.com/list/the-best-chicken-run-quotes/movie-and-tv-quotes",
+      "fix": "We'll either die free chickens or we die trying.",
+      "fix_note": {
+        "text": "We'll either die free chickens or we die trying.",
+        "by": "Ginger",
+        "kind": "quote"
+      },
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Serve the pies when Mrs Tweedy fires up the pie machine.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "Mr Tweedy finishes assembling the pie machine and runs a test with Ginger inside. Mrs Tweedy only orders it.",
+      "source": "https://en.wikipedia.org/wiki/Chicken_Run",
+      "fix": "Serve the pies when Mr Tweedy runs the pie machine test.",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Hut 17: short again",
+      "where": "prop",
+      "verdict": "ok",
+      "why": "Ginger calls the escape meeting in hut 17, and the film keeps counting empty nests and falling egg numbers, so short again is fair.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=chicken-run",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 3,
+    "overall": 3.8,
+    "verdict": "A tidy prisoner-of-war canteen that suits the escape story, with good Tweedy pie jokes, but the look is a stock canteen and Ginger's best line is missing.",
+    "missing": [
+      "Mrs Tweedy: 'Chickens go in, pies come out.' (the new pie machine)",
+      "Babs: 'I don't want to be a pie! I don't like gravy.' (the pie machine scare)",
+      "Rocky's chicken cannonball poster (Ginger finds it after he leaves)",
+      "Ginger's test run in the pie machine and the gravy explosion at the end",
+      "Nick and Fetcher's hat and tea set sales (the trading scene)",
+      "Rocky's morale dance party in the hut"
+    ],
+    "ideas": [
+      "Use the real Ginger line as the note: 'We'll either die free chickens or we die trying.'",
+      "Change Babs's house note to 'I don't want to be a pie! I don't like gravy.'",
+      "Swap the 'Egg Count Sheet' slip for a 'Mrs Tweedy's Pie Order' slip: 'Chickens go in, pies come out.'",
+      "Rename the 'Hot line' heading to 'Pie machine line' to keep the farm world."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Pie machine",
+      "Chickens go in, pies come out",
+      "We'll either die free chickens or we die trying (signed note)",
+      "Rocky the flying rooster",
+      "Babs does not want to be a pie",
+      "Nick and Fetcher",
+      "Escape plane"
+    ],
+    "changed": [
+      "Farm pie note now carries Mrs Tweedy's pie machine line (transcript)"
+    ]
   }
- ],
- "checked_ok": 13,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 4,
-  "look": 3,
-  "overall": 3.8,
-  "verdict": "A tidy prisoner-of-war canteen that suits the escape story, with good Tweedy pie jokes, but the look is a stock canteen and Ginger's best line is missing.",
-  "missing": [
-   "Mrs Tweedy: 'Chickens go in, pies come out.' (the new pie machine)",
-   "Babs: 'I don't want to be a pie! I don't like gravy.' (the pie machine scare)",
-   "Rocky's chicken cannonball poster (Ginger finds it after he leaves)",
-   "Ginger's test run in the pie machine and the gravy explosion at the end",
-   "Nick and Fetcher's hat and tea set sales (the trading scene)",
-   "Rocky's morale dance party in the hut"
-  ],
-  "ideas": [
-   "Use the real Ginger line as the note: 'We'll either die free chickens or we die trying.'",
-   "Change Babs's house note to 'I don't want to be a pie! I don't like gravy.'",
-   "Swap the 'Egg Count Sheet' slip for a 'Mrs Tweedy's Pie Order' slip: 'Chickens go in, pies come out.'",
-   "Rename the 'Hot line' heading to 'Pie machine line' to keep the farm world."
-  ],
-  "flat": false,
-  "done": false
- }
 }

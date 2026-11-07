@@ -1,0 +1,43 @@
+{
+ "id": "Bill & Ted's Excellent Adventure (1989)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Be excellent to each other. Party on, dudes!",
+    "by": "Abraham Lincoln",
+    "kind": "quote"
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The phone booth time machine",
+    "Rufus giving them the mission",
+    "Napoleon bowling and eating ice cream",
+    "Genghis Khan swinging a bat in a sporting goods store",
+    "Air guitar at table nine. Excellent!"
+   ]
+  },
+  {
+   "old": "San Dimas mall cinnamon pretzel bites",
+   "new": "Genghis Khan's cinnamon pretzel bites"
+  },
+  {
+   "old": "the historical figures let loose at the San Dimas mall",
+   "new": "Cinnamon pretzel bites. Genghis Khan likes a sugar rush"
+  },
+  {
+   "old": "San Dimas mall sundae",
+   "new": "Ziggy Piggy sundae"
+  },
+  {
+   "old": "Bananas with vanilla, chocolate and strawberry ice cream, whipped cream, sauce",
+   "new": "Bananas, three ice creams, cream and sauce. Eat the pig!"
+  },
+  {
+   "old": "Rufus approves. Be excellent to each other.",
+   "new": "Circle K taquitos. Excellent! Now air guitar."
+  }
+ ]
+}

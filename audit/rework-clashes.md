@@ -12,3 +12,9 @@ Fixed layout words that don't suit the film. Fix with a per-film setting or a la
 - Avatar: The Way of Water (2022), kiosk: surf strip "Conditions" line is a theme default in menu-formats/kiosk.js.
 - Bambi (1942), campfire: "CARD NO.", "Form CM 42", "MEADOW TAG", "TONIGHT'S FEATURE" stay camp-flavoured (minor).
 - Ant-Man (2015): salmon dish note already marked wrong by a settled fact, not yet fixed.
+- Black Sheep (1996), dining car: "Bus 96", "Form DC-96" but the film has no bus (minor).
+- Blades of Glory (2007), stadium: baseball "Scoreboard" and "Concession Scorecard" on a figure skating film.
+- Alice in Wonderland (1951): house line "A very merry unbirthday to you." is a song lyric. Must change.
+- Analyze This (1999), formats.js: spec says "The Hotel Wexford", template says "The Waldorf".
+- Die Hard (1988): "Now I have a machine gun. Ho ho ho." verified, no slot. Die Hard with a Vengeance: no slot for Yippee-ki-yay.
+- Agent-written jokes with no direct source (check): Black Panther "No barking at the table", Black Sheep "Not a pudding, Mike", Ace Ventura 2 "Do not pass Go".

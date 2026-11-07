@@ -1,48 +1,58 @@
 {
- "id": "Close Encounters of the Third Kind (1977)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Look at this plate of mashed potatoes. I know this shape. I just can't say from where.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Not a Roy line. His real line, from the quote page, is 'I know what this is! This means something. This is important.' Printed in quote marks and signed Roy Neary.",
-   "source": "https://en.wikiquote.org/wiki/Close_Encounters_of_the_Third_Kind",
-   "fix": "I know what this is! This means something. This is important.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "I know what this is! This means something. This is important.",
-    "by": "Roy Neary",
-    "kind": "quote"
-   },
-   "applied": "2026-11-07"
+  "id": "Close Encounters of the Third Kind (1977)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Look at this plate of mashed potatoes. I know this shape. I just can't say from where.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Not a Roy line. His real line, from the quote page, is 'I know what this is! This means something. This is important.' Printed in quote marks and signed Roy Neary.",
+      "source": "https://en.wikiquote.org/wiki/Close_Encounters_of_the_Third_Kind",
+      "fix": "I know what this is! This means something. This is important.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "I know what this is! This means something. This is important.",
+        "by": "Roy Neary",
+        "kind": "quote"
+      },
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "Good mash mountain and five-note crackers, but the cafe tone is generic and the quote is made up.",
+    "missing": [
+      "Roy's sunburned face from the UFO light",
+      "Roy sculpting shaving cream and dirt in the house",
+      "Jillian's kitchen, the toys and the raided fridge",
+      "Barry following the lights outside",
+      "Lacombe answering with the hand signs",
+      "The Army's fake train wreck story at Devils Tower"
+    ],
+    "ideas": [
+      "Swap 'Fresh orange juice in a carafe' note for 'Barry's kitchen, where the fridge gets raided.'",
+      "Swap 'UFO meringues' for 'Hand sign biscuits', five shapes for the five notes.",
+      "Swap 'Neary family roast chicken' note for 'Pass the mash. Roy has plans for it.'",
+      "Add a 'Shaving cream mountain' dessert in place of 'Devils Tower cake'."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Mashed potato Devils Tower",
+      "Five-tone greeting",
+      "This means something",
+      "Roy's truck lit up at the crossing",
+      "Barry taken up",
+      "Devils Tower"
+    ],
+    "changed": []
   }
- ],
- "checked_ok": 12,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.8,
-  "verdict": "Good mash mountain and five-note crackers, but the cafe tone is generic and the quote is made up.",
-  "missing": [
-   "Roy's sunburned face from the UFO light",
-   "Roy sculpting shaving cream and dirt in the house",
-   "Jillian's kitchen, the toys and the raided fridge",
-   "Barry following the lights outside",
-   "Lacombe answering with the hand signs",
-   "The Army's fake train wreck story at Devils Tower"
-  ],
-  "ideas": [
-   "Swap 'Fresh orange juice in a carafe' note for 'Barry's kitchen, where the fridge gets raided.'",
-   "Swap 'UFO meringues' for 'Hand sign biscuits', five shapes for the five notes.",
-   "Swap 'Neary family roast chicken' note for 'Pass the mash. Roy has plans for it.'",
-   "Add a 'Shaving cream mountain' dessert in place of 'Devils Tower cake'."
-  ],
-  "flat": false,
-  "done": false
- }
 }

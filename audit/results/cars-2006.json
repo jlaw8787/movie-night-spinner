@@ -1,44 +1,56 @@
 {
- "id": "Cars (2006)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Serve the mains when Lightning pulls into Flo's café in Radiator Springs.",
-   "where": "cue",
-   "verdict": "wrong",
-   "why": "The transcript has no scene of Lightning pulling into Flo's. Flo sells gas, and the town relights its neon and cruises together later.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=cars",
-   "fix": "Serve the mains when Radiator Springs relights its neon and the town cruises.",
-   "done": true,
-   "printed": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Cars (2006)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the mains when Lightning pulls into Flo's café in Radiator Springs.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "The transcript has no scene of Lightning pulling into Flo's. Flo sells gas, and the town relights its neon and cruises together later.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=cars",
+      "fix": "Serve the mains when Radiator Springs relights its neon and the town cruises.",
+      "done": true,
+      "printed": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 19,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A well made Route 66 diner with the right cars and town, but it is mostly a plain diner menu with a few car puns.",
+    "missing": [
+      "Mater and Lightning tractor tipping, honk and the bull (the field at night)",
+      "Fillmore blasting Hendrix at Sarge's morning flag (next door to Flo's)",
+      "Luigi 'Don't eat the radial! Take the snow tires!' (tyre shop)",
+      "Flo: 'I have gas... Lotsa gas!' (the court scene)",
+      "Doc Hudson's three Piston Cups kept in his garage",
+      "Lightning learning to turn left by turning right on the dirt track"
+    ],
+    "ideas": [
+      "Swap 'Fried pickles with ranch' note for 'Don't eat the radial. Here, take the snow tires.' to bring in Luigi's tractor gag.",
+      "Swap 'Southern sweet iced tea' for an 'Organic fuel' drink with a Fillmore note about the Hendrix flag.",
+      "Add a Flo gas joke ('Lotsa gas') as the note on the oil can float.",
+      "Swap the page one 'Today's Special' line for Doc's 'Sentenced to community service' blue plate."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Ka-chow",
+      "Speed. I am speed.",
+      "Tractor tipping",
+      "Cozy Cone Motel",
+      "Piston Cup and Doc Hudson",
+      "Flo's V8 Cafe"
+    ],
+    "changed": [
+      "Route 66 chilli note now carries Lightning's pre-race mantra, Speed. I am speed. (transcript)"
+    ]
   }
- ],
- "checked_ok": 19,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "A well made Route 66 diner with the right cars and town, but it is mostly a plain diner menu with a few car puns.",
-  "missing": [
-   "Mater and Lightning tractor tipping, honk and the bull (the field at night)",
-   "Fillmore blasting Hendrix at Sarge's morning flag (next door to Flo's)",
-   "Luigi 'Don't eat the radial! Take the snow tires!' (tyre shop)",
-   "Flo: 'I have gas... Lotsa gas!' (the court scene)",
-   "Doc Hudson's three Piston Cups kept in his garage",
-   "Lightning learning to turn left by turning right on the dirt track"
-  ],
-  "ideas": [
-   "Swap 'Fried pickles with ranch' note for 'Don't eat the radial. Here, take the snow tires.' to bring in Luigi's tractor gag.",
-   "Swap 'Southern sweet iced tea' for an 'Organic fuel' drink with a Fillmore note about the Hendrix flag.",
-   "Add a Flo gas joke ('Lotsa gas') as the note on the oil can float.",
-   "Swap the page one 'Today's Special' line for Doc's 'Sentenced to community service' blue plate."
-  ],
-  "flat": false,
-  "done": false
- }
 }

@@ -1,71 +1,81 @@
 {
- "id": "Casper (1995)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "I made you breakfast. I cannot taste it, but I hope it is good. Please do not run away.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Not a line Casper says. The quote page lists his words (for example 'Can I keep you?', 'If you scream, you'll wake my uncles, who get angry.' and 'Boo?') and this is not among them. It is printed in quote marks, so it reads as dialogue. Wikipedia only says Casper serves the Harveys breakfast the morning after they move in.",
-   "source": "https://en.wikiquote.org/wiki/Casper_(film)",
-   "fix": "Breakfast is ready, so sit down and eat up. I hope it is good. Please do not run away.",
-   "fix_note": {
-    "text": "Breakfast is ready, so sit down and eat up. I hope it is good. Please do not run away.",
-    "by": "Casper",
-    "kind": "note"
-   },
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Kat asked if she could keep him.",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "It is the other way round. Casper is the one who asks Kat 'Can I keep you?' when he finds her in his room.",
-   "source": "https://en.wikiquote.org/wiki/Casper_(film)",
-   "fix": "Casper asked if he could keep her.",
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Casper cooks Kat a breakfast she can't possibly finish.",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "Wikipedia says Casper wins the Harveys' trust by serving them breakfast. Nothing says Kat can't finish it.",
-   "source": "https://en.wikipedia.org/wiki/Casper_(film)",
-   "fix": "Casper serves Kat and her dad a breakfast to win them over",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Casper (1995)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "I made you breakfast. I cannot taste it, but I hope it is good. Please do not run away.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Not a line Casper says. The quote page lists his words (for example 'Can I keep you?', 'If you scream, you'll wake my uncles, who get angry.' and 'Boo?') and this is not among them. It is printed in quote marks, so it reads as dialogue. Wikipedia only says Casper serves the Harveys breakfast the morning after they move in.",
+      "source": "https://en.wikiquote.org/wiki/Casper_(film)",
+      "fix": "Breakfast is ready, so sit down and eat up. I hope it is good. Please do not run away.",
+      "fix_note": {
+        "text": "Breakfast is ready, so sit down and eat up. I hope it is good. Please do not run away.",
+        "by": "Casper",
+        "kind": "note"
+      },
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Kat asked if she could keep him.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "It is the other way round. Casper is the one who asks Kat 'Can I keep you?' when he finds her in his room.",
+      "source": "https://en.wikiquote.org/wiki/Casper_(film)",
+      "fix": "Casper asked if he could keep her.",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Casper cooks Kat a breakfast she can't possibly finish.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Wikipedia says Casper wins the Harveys' trust by serving them breakfast. Nothing says Kat can't finish it.",
+      "source": "https://en.wikipedia.org/wiki/Casper_(film)",
+      "fix": "Casper serves Kat and her dad a breakfast to win them over",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A cosy ghost hotel that looks the part, but it leans on generic Maine dishes and skips most of the film's best moments.",
+    "missing": [
+      "Casper asking Kat 'Can I keep you?' (his room, the first night)",
+      "The Lazarus machine in the basement lab (Kat and Casper find it)",
+      "Casper's attic playroom and the old sled (Kat restores it)",
+      "The Ghostly Trio swooping into the kitchen like helicopters (the breakfast scene)",
+      "Casper's signed baseball from Duke Snider (the treasure in the vault)",
+      "Casper dancing with Kat as a human boy (the Halloween party)"
+    ],
+    "ideas": [
+      "Change the 'Moxie soda' note to 'Casper asked if he could keep her.' so it matches the film.",
+      "Swap 'Warm popovers with honey butter' for 'Duke Snider baseball cookies', note 'The treasure was a ball, not gold.'",
+      "Change the 'Casper's big breakfast' note to 'The uncles swooped in like helicopters. Casper cooked anyway.'",
+      "Swap 'Ghost meringues' note for 'Boo? Casper's last word at the party.'"
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Can I keep you? (house drink note)",
+      "Fatso, Stretch and Stinkie (Fatso on menu)",
+      "Lazarus machine",
+      "Dr Harvey",
+      "Halloween party dance",
+      "Casper cooking breakfast"
+    ],
+    "changed": []
   }
- ],
- "checked_ok": 13,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 4,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "A cosy ghost hotel that looks the part, but it leans on generic Maine dishes and skips most of the film's best moments.",
-  "missing": [
-   "Casper asking Kat 'Can I keep you?' (his room, the first night)",
-   "The Lazarus machine in the basement lab (Kat and Casper find it)",
-   "Casper's attic playroom and the old sled (Kat restores it)",
-   "The Ghostly Trio swooping into the kitchen like helicopters (the breakfast scene)",
-   "Casper's signed baseball from Duke Snider (the treasure in the vault)",
-   "Casper dancing with Kat as a human boy (the Halloween party)"
-  ],
-  "ideas": [
-   "Change the 'Moxie soda' note to 'Casper asked if he could keep her.' so it matches the film.",
-   "Swap 'Warm popovers with honey butter' for 'Duke Snider baseball cookies', note 'The treasure was a ball, not gold.'",
-   "Change the 'Casper's big breakfast' note to 'The uncles swooped in like helicopters. Casper cooked anyway.'",
-   "Swap 'Ghost meringues' note for 'Boo? Casper's last word at the party.'"
-  ],
-  "flat": false,
-  "done": false
- }
 }

@@ -1,72 +1,82 @@
 {
- "id": "Clueless (1995)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "I like helping people, so I planned the whole menu. Ask anyone, my snack platters are a total makeover.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Not a Cher line. The quote page has lines like 'Do you prefer \"fashion victim\" or \"ensembly challenged\"?' and 'I totally paused.' Printed in quote marks and signed Cher Horowitz.",
-   "source": "https://moviemistakes.com/film287/quotes",
-   "fix": "Do you prefer \"fashion victim\" or \"ensembly challenged\"?",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "I totally paused.",
-    "by": "Cher Horowitz",
-    "kind": "quote"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Cher's orders for her dad, grilled fish and no fat",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "Cher does dish up for her dad, but the meal is from the Cut Your Cholesterol Cookbook because Dr Lovett wants his number down to 200. No grilled fish is mentioned.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=clueless",
-   "fix": "Cher's cholesterol rules for Daddy, no fat",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Josh brings these. Cher pretends not to care.",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "Josh is told he is coming for dinner and Cher asks why she has to see him, but he never brings food. He lectures her and she tells him to spare her.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=clueless",
-   "fix": "Josh comes to dinner. Cher pretends not to care.",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Clueless (1995)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "I like helping people, so I planned the whole menu. Ask anyone, my snack platters are a total makeover.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Not a Cher line. The quote page has lines like 'Do you prefer \"fashion victim\" or \"ensembly challenged\"?' and 'I totally paused.' Printed in quote marks and signed Cher Horowitz.",
+      "source": "https://moviemistakes.com/film287/quotes",
+      "fix": "Do you prefer \"fashion victim\" or \"ensembly challenged\"?",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "I totally paused.",
+        "by": "Cher Horowitz",
+        "kind": "quote"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Cher's orders for her dad, grilled fish and no fat",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Cher does dish up for her dad, but the meal is from the Cut Your Cholesterol Cookbook because Dr Lovett wants his number down to 200. No grilled fish is mentioned.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=clueless",
+      "fix": "Cher's cholesterol rules for Daddy, no fat",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Josh brings these. Cher pretends not to care.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "Josh is told he is coming for dinner and Cher asks why she has to see him, but he never brings food. He lectures her and she tells him to spare her.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=clueless",
+      "fix": "Josh comes to dinner. Cher pretends not to care.",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 10,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "Looks the part and the food is fun, but the lines miss Cher's voice.",
+    "missing": [
+      "'As if!'",
+      "The computer closet that picks outfits",
+      "Cher arguing her grade up with Mr Hall",
+      "The Valley party and the parking lot mugging",
+      "'Is this like a Noxzema commercial or what?'",
+      "Driving test at the end"
+    ],
+    "ideas": [
+      "Swap 'Mall pretzels' note for 'As if!'",
+      "Swap 'Amber's pastel cupcakes' note for 'Full-on Monet. Fine from far away.'",
+      "Swap 'Rodeo Drive mango and strawberry smoothie' note for 'Totally paused.'",
+      "Swap the report card slip text 'Grade disputes: see Dad' for 'Grade disputes: see Mr Hall's love life.'"
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "As if (nod in the iced latte note)",
+      "I totally paused (signed note)",
+      "Full-on Monet",
+      "Tai's makeover",
+      "Dionne",
+      "Mall"
+    ],
+    "changed": []
   }
- ],
- "checked_ok": 10,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "Looks the part and the food is fun, but the lines miss Cher's voice.",
-  "missing": [
-   "'As if!'",
-   "The computer closet that picks outfits",
-   "Cher arguing her grade up with Mr Hall",
-   "The Valley party and the parking lot mugging",
-   "'Is this like a Noxzema commercial or what?'",
-   "Driving test at the end"
-  ],
-  "ideas": [
-   "Swap 'Mall pretzels' note for 'As if!'",
-   "Swap 'Amber's pastel cupcakes' note for 'Full-on Monet. Fine from far away.'",
-   "Swap 'Rodeo Drive mango and strawberry smoothie' note for 'Totally paused.'",
-   "Swap the report card slip text 'Grade disputes: see Dad' for 'Grade disputes: see Mr Hall's love life.'"
-  ],
-  "flat": false,
-  "done": false
- }
 }

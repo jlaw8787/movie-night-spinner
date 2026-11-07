@@ -1,0 +1,46 @@
+{
+ "id": "Batman v Superman: Dawn of Justice (2016)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Blah, blah, blah. Open bar. The end.",
+    "by": "Lex Luthor",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Martha Kent's farm in Kansas",
+   "new": "Why did you say that name?"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Bruce finds the drive in the glove box",
+    "Do you bleed? You will.",
+    "Doomsday rising",
+    "The Kryptonite spear",
+    "The Batsuit armour"
+   ]
+  },
+  {
+   "old": "Lois and Clark at the Daily Planet",
+   "new": "Don't let them take your lunch money"
+  },
+  {
+   "old": "Pear nectar and fresh ginger syrup in a flute, topped up with bubbles",
+   "new": "Pear nectar and ginger syrup with bubbles. Nothing like Granny's peach tea"
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "LexCorp Gala",
+    "lines": [
+     "Bruce Wayne plus one",
+     "He's been invited"
+    ]
+   }
+  }
+ ]
+}
