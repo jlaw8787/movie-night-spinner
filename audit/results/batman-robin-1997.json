@@ -5,22 +5,25 @@
   {
    "text": "Serve dessert when Mr Freeze freezes the charity auction.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Wikipedia says Freeze crashes a Wayne Enterprises charity event, steals a diamond and is captured. It does not call it an auction or say he freezes it.",
-   "source": "https://wikiwand.com/en/Batman_&_Robin_(film)",
-   "fix": "Serve dessert when Mr Freeze crashes the Wayne charity event.",
+   "verdict": "ok",
+   "why": "Ivy's pitch is a diamond auction for charity. Freeze crashes it and freezes the guests, and Gordon is told to thaw them.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=batman-robin",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "The diamond auction at the Gotham botanical gardens.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The plot sources I opened never name the botanical gardens as the venue for the charity event, and only the natural history museum and the observatory are named.",
-   "source": "https://wikiwand.com/en/Batman_&_Robin_(film)",
-   "fix": "The charity event where Freeze crashes in for the diamonds.",
+   "verdict": "wrong",
+   "why": "Ivy says the auction raises money for the botanical gardens. No source places it at the gardens.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=batman-robin",
+   "fix": "The diamond auction raising money for the botanical gardens.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Master Bruce, I made soup. A hot meal in a cold world is no small thing.",

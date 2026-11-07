@@ -27,12 +27,13 @@
     {
       "text": "Jake's jug, carried all the way up the trail.",
       "where": "house",
-      "verdict": "unsure",
-      "why": "Jake and Bobby Joe lead the group to the cabin on foot, but none of the pages I opened mention a jug of cider. It may be a joke, but it claims something about the trek.",
+      "verdict": "wrong",
+      "why": "Wikipedia has handyman Jake and Bobby Joe leading the group to the cabin on foot. No source or transcript line mentions a jug or cider on the trek.",
       "source": "https://en.wikipedia.org/wiki/Evil_Dead_II",
       "fix": "Jake's the guide, so Jake gets the cider.",
       "printed": false,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 18,

@@ -21,52 +21,62 @@
   {
    "text": "Jack's order, poured strong at the end of the bar.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No page read names Jackson's drink. IMDb's plot summary says he stops at the drag bar because the car is out of alcohol.",
-   "source": "https://m.imdb.com/es/title/tt1517451/plotsummary",
-   "fix": "What Jack came in for after the show, poured strong.",
+   "verdict": "wrong",
+   "why": "Jackson asks for a gin on the rocks, and the dish is a gin martini with a twist.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-star-is-born",
+   "fix": "Jack's gin, poured strong at the end of the bar.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "1 straight gin, 1 cosmo, 1 bag frozen peas",
    "where": "prop",
-   "verdict": "unsure",
-   "why": "The frozen peas are right (Jackson buys them for Ally's hand). No page read confirms a gin or a cosmo on the night.",
-   "source": "https://whatsafterthemovie.com/summary/a-star-is-born",
-   "fix": "1 cosmo, 1 bag frozen peas",
+   "verdict": "wrong",
+   "why": "The script has a gin on the rocks and frozen peas for Ally's hand. No cosmo is ordered.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-star-is-born",
+   "fix": "1 gin on the rocks, 1 bag frozen peas",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Paid by the guy in the hat",
    "where": "prop",
-   "verdict": "unsure",
-   "why": "Jackson pays for the peas, but nothing read says he wears a hat at the bar.",
-   "source": "https://whatsafterthemovie.com/summary/a-star-is-born",
+   "verdict": "wrong",
+   "why": "Jackson pays at the bar, but no source mentions a hat.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-star-is-born",
    "fix": "Paid by the country singer",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Swiped off the dessert tray on Ally's last night waiting tables",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Ally works a waitress and kitchen job and her restaurant manager berates her for being late. Nothing read mentions a catering shift, a last night or a dessert tray.",
-   "source": "https://m.imdb.com/es/title/tt1517451/plotsummary",
-   "fix": "For Ally's late shifts waiting tables",
+   "verdict": "wrong",
+   "why": "Ally works as a waitress and singer-songwriter, but no source has a last night or a dessert tray.",
+   "source": "https://en.wikipedia.org/wiki/A_Star_Is_Born_(2018_film)",
+   "fix": "Something sweet for Ally's long waitressing shifts",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Ally on the bar, singing La Vie en Rose.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Ally sings La Vie en Rose as a tribute performance on the drag bar's stage, not standing on the bar.",
+   "verdict": "wrong",
+   "why": "Ally sings La Vie en Rose on the drag bar's stage, not on the bar.",
    "source": "https://en.wikipedia.org/wiki/A_Star_Is_Born_(2018_film)",
    "fix": "Ally on stage, singing La Vie en Rose.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

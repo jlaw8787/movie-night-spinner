@@ -1,53 +1,55 @@
 {
-  "id": "A Bronx Tale (1993)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Date night test: does she share the cannoli? If not, keep looking.",
-      "where": "card",
-      "verdict": "wrong",
-      "why": "The card sits under the heading 'Sonny's rule: The door test', but the film's door test is about the car. Sonny tells Calogero to lock both doors, open hers, walk round the back and check whether she reaches over and lifts the lock button for him. If she doesn't, he dumps her.",
-      "source": "https://en.wikiquote.org/wiki/A_Bronx_Tale",
-      "fix": "Does she reach over and lift the lock for you? If not, dump her.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Keep your nose clean.",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "Printed as something heard on the bus. It is not in the Wikiquote page or the plot, and the bus driver Lorenzo's real lines are about the working man being the tough guy.",
-      "source": "https://en.wikiquote.org/wiki/A_Bronx_Tale",
-      "fix": "The working man's the tough guy.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 8,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 4,
-    "tone": 4,
-    "look": 4,
-    "overall": 3.8,
-    "verdict": "A good neon bar and bus transfer, but the door test is garbled and the film's biggest lines are missing.",
-    "missing": [
-      "Nobody cares (Sonny on Mickey Mantle)",
-      "Locking the bikers in the bar (Sonny)",
-      "Sonny's three great women",
-      "Wasted talent (final narration)",
-      "The Molotov cocktails at the record shop",
-      "Lorenzo the bus driver at the kitchen table"
-    ],
-    "ideas": [
-      "Rewrite the 'Door Test' card with the real car test: lock both doors, open hers, see if she lifts the button for you",
-      "Swap 'Keep your nose clean' for 'The working man's the tough guy'",
-      "Add a 'Nobody cares' stamp on the bill, replacing 'Prices subject to change'",
-      "Rename the Belmont cannoli 'Sonny's thank you' to nod at Carmine and Sonny's funeral"
-    ],
-    "flat": false,
-    "done": false
+ "id": "A Bronx Tale (1993)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Date night test: does she share the cannoli? If not, keep looking.",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "The card sits under the heading 'Sonny's rule: The door test', but the film's door test is about the car. Sonny tells Calogero to lock both doors, open hers, walk round the back and check whether she reaches over and lifts the lock button for him. If she doesn't, he dumps her.",
+   "source": "https://en.wikiquote.org/wiki/A_Bronx_Tale",
+   "fix": "Does she reach over and lift the lock for you? If not, dump her.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Keep your nose clean.",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Not said anywhere in the transcript. Lorenzo's line is that the working man is the tough guy.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=bronx-tale-a",
+   "fix": "The working man's tough.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 8,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A good neon bar and bus transfer, but the door test is garbled and the film's biggest lines are missing.",
+  "missing": [
+   "Nobody cares (Sonny on Mickey Mantle)",
+   "Locking the bikers in the bar (Sonny)",
+   "Sonny's three great women",
+   "Wasted talent (final narration)",
+   "The Molotov cocktails at the record shop",
+   "Lorenzo the bus driver at the kitchen table"
+  ],
+  "ideas": [
+   "Rewrite the 'Door Test' card with the real car test: lock both doors, open hers, see if she lifts the button for you",
+   "Swap 'Keep your nose clean' for 'The working man's the tough guy'",
+   "Add a 'Nobody cares' stamp on the bill, replacing 'Prices subject to change'",
+   "Rename the Belmont cannoli 'Sonny's thank you' to nod at Carmine and Sonny's funeral"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

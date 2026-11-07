@@ -20,22 +20,25 @@
   {
    "text": "Dr Evil's volcano lair steak Diane",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "Wikipedia's plot puts Dr Evil's lair at Virtucon headquarters and calls it an underground lair. Volcanoes come into it only through Project Vulcan. A volcano lair with his face carved in it may belong to a sequel, so it is not confirmed for this film.",
-   "source": "https://en.wikipedia.org/wiki/Austin_Powers:_International_Man_of_Mystery",
+   "verdict": "wrong",
+   "why": "Dr Evil calls it his underground lair at Virtucon; the transcript has no volcano lair.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=austin-powers-international-man-of-mystery",
    "fix": "Dr Evil's underground lair steak Diane",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Shagadelic, says Austin, unfrozen since 1967.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The Wikiquote page for this film has Austin saying 'groovy' and 'Yeah, baby, yeah!' but not 'shagadelic'. The word is a catchphrase mostly tied to the sequel, so the attribution is not confirmed.",
-   "source": "https://en.wikiquote.org/wiki/Austin_Powers:_International_Man_of_Mystery",
-   "fix": "Yeah, baby, yeah, says Austin, unfrozen since 1967.",
+   "verdict": "ok",
+   "why": "Austin tells Vanessa \"I think you're shagadelic, baby\" in this film, and he was frozen in 1967.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=austin-powers-international-man-of-mystery",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 16,

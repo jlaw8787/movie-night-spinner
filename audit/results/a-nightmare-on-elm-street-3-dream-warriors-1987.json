@@ -1,52 +1,56 @@
 {
-  "id": "A Nightmare on Elm Street 3: Dream Warriors (1987)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Skip it before dream group. Hypnocil only.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "Hypnocil is the drug that suppresses dreams, and Dr Gordon wants the patients on it. Dream group is where they deliberately dream together, so 'Hypnocil only' before it reads backwards.",
-      "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/ANightmareOnElmStreet3DreamWarriors",
-      "fix": "Not tonight. Dr Gordon wants everyone on Hypnocil.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Will and his Wizard Master cards",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "Will is a role-playing fan who becomes the Wizard Master in his dream, with a stage magician look. The pages read don't mention cards.",
-      "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/ANightmareOnElmStreet3DreamWarriors",
-      "fix": "Will, the Wizard Master in his dream",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 10,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 3,
-    "overall": 3.2,
-    "verdict": "A hospital ration sheet suits Westin Hills, but it is the same lab template as other films and misses Freddy's lines and Kristen's coffee trick.",
-    "missing": [
-      "Kristen eating instant coffee grounds with fizzy drink to stay awake (the ward)",
-      "'Welcome to prime time' (Freddy to Jennifer, through the TV)",
-      "Hypnocil, the dream suppressant (Dr Gordon)",
-      "Joey's scream shattering the mirrors (the dream, after Freddy's tongues)",
-      "'Seven, eight, better stay up late' (Kristen's rhyme)",
-      "The roast suckling pig in Kristen's dream house"
-    ],
-    "ideas": [
-      "Swap 'Westin Hills stay-awake iced coffee' for 'Kristen's coffee grounds and cola', after how she stays awake on the ward.",
-      "Swap 'Freddy's boiler room Salisbury steak' for 'Dream house roast suckling pig', from the pig in Kristen's dream.",
-      "Swap the 'Ration sheet. Eat with your own spoon.' line for Kristen's rhyme 'Seven, eight, better stay up late.'",
-      "Print 'Welcome to prime time' under the popcorn line for the TV room, in place of the Dick Cavett note."
-    ],
-    "flat": true,
-    "done": false
+ "id": "A Nightmare on Elm Street 3: Dream Warriors (1987)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Skip it before dream group. Hypnocil only.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Hypnocil is the dream suppressant Dr Gordon prescribes. Dream group is where they dream on purpose, so skipping a drink before it for Hypnocil is backwards.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=nightmare-on-elm-street-3-dream-warriors-a",
+   "fix": "Skip it on Hypnocil nights. Dr Gordon's orders.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Will and his Wizard Master cards",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Will says in group that in his dreams he is the Wizard Master, and in his dream he faces Freddy as the Wizard Master. No cards in the script.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=nightmare-on-elm-street-3-dream-warriors-a",
+   "fix": "Will, the Wizard Master in his dream",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "A hospital ration sheet suits Westin Hills, but it is the same lab template as other films and misses Freddy's lines and Kristen's coffee trick.",
+  "missing": [
+   "Kristen eating instant coffee grounds with fizzy drink to stay awake (the ward)",
+   "'Welcome to prime time' (Freddy to Jennifer, through the TV)",
+   "Hypnocil, the dream suppressant (Dr Gordon)",
+   "Joey's scream shattering the mirrors (the dream, after Freddy's tongues)",
+   "'Seven, eight, better stay up late' (Kristen's rhyme)",
+   "The roast suckling pig in Kristen's dream house"
+  ],
+  "ideas": [
+   "Swap 'Westin Hills stay-awake iced coffee' for 'Kristen's coffee grounds and cola', after how she stays awake on the ward.",
+   "Swap 'Freddy's boiler room Salisbury steak' for 'Dream house roast suckling pig', from the pig in Kristen's dream.",
+   "Swap the 'Ration sheet. Eat with your own spoon.' line for Kristen's rhyme 'Seven, eight, better stay up late.'",
+   "Print 'Welcome to prime time' under the popcorn line for the TV room, in place of the Dick Cavett note."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

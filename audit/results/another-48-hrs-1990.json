@@ -21,42 +21,49 @@
   {
    "text": "Serve dinner when the prison bus crashes.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Wikipedia says the bus carrying Reggie is attacked by the two bikers, after Jack is shot at the diner. It does not say the bus crashes.",
-   "source": "https://en.wikipedia.org/wiki/Another_48_Hrs.",
-   "fix": "Serve dinner when the bikers attack the prison bus.",
+   "verdict": "ok",
+   "why": "Reggie says he was on a bus that flipped over, and the hospital doctor says a bus rolled over on him, so the bus crash is in the film.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=another-48-hrs",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Eaten on the stakeout in the car.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The plot summary has no stakeout scene, so the note is not confirmed.",
-   "source": "https://en.wikipedia.org/wiki/Another_48_Hrs.",
-   "fix": "Eaten at the Hunter's Point Raceway, before the shooting starts.",
+   "verdict": "wrong",
+   "why": "Jack says he was on a stakeout when he shot Brock at the raceway, but no scene shows him eating in a car.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=another-48-hrs",
+   "fix": "What Jack eats on a stakeout, before the shooting starts.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Reggie's first meal out, ordered on Jack's tab.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Reggie is released, but no source shows a first meal or Jack paying for it.",
+   "verdict": "wrong",
+   "why": "Reggie is broke when he gets out and nothing shows a first meal or Jack paying; Jack is holding $500,000 for him.",
    "source": "https://en.wikipedia.org/wiki/Another_48_Hrs.",
-   "fix": "Reggie's first meal out. Jack still owes him $500,000.",
+   "fix": "Reggie's first day out. Jack still owes him $500,000.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Reggie's first stop out, Jack paying.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Same problem: no source shows Reggie's first stop or Jack paying.",
-   "source": "https://en.wikipedia.org/wiki/Another_48_Hrs.",
-   "fix": "Reggie's first drink out. Jack still owes him.",
+   "verdict": "wrong",
+   "why": "Reggie says he is broke on his first day out and tells Jack to buy his drink; nothing shows a first stop with Jack paying.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=another-48-hrs",
+   "fix": "Reggie's first day out, and Jack still owes him.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 8,

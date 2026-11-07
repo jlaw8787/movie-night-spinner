@@ -1,52 +1,56 @@
 {
-  "id": "Carlito's Way (1993)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "The poster over our bar. Some nights it's all anybody looks at.",
-      "where": "caption",
-      "verdict": "unsure",
-      "why": "In the film Carlito stares at a billboard with a Caribbean beach as he dies at Grand Central. The plot says nothing about a poster over the bar at El Paraiso.",
-      "source": "https://en.wikipedia.org/wiki/Carlito%27s_Way",
-      "fix": "The poster at Grand Central. Carlito can't stop looking at it.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Paradise flan -- caramel and coconut, for the beach postcard Carlito keeps",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "The plot has a billboard of a Caribbean beach at the end and train tickets to Miami. It does not mention a postcard that Carlito keeps.",
-      "source": "https://en.wikipedia.org/wiki/Carlito%27s_Way",
-      "fix": "Paradise flan -- caramel and coconut, for the beach billboard Carlito stares at",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 10,
-  "vibe": {
-    "world": 5,
-    "moments": 4,
-    "food": 4,
-    "tone": 4,
-    "look": 5,
-    "overall": 4.4,
-    "verdict": "A warm, moody club and train ticket menu that gets Carlito's dream of the islands right. The poster caption is the only spot that moves the film around.",
-    "missing": [
-      "Benny Blanco from the Bronx (the club)",
-      "Gail's ballet (her dance)",
-      "Kleinfeld's yacht (the prison barge)",
-      "Pachanga at the door (El Paraiso)",
-      "The Grand Central chase (the end)",
-      "The billboard coming to life (the final shot)"
-    ],
-    "ideas": [
-      "Fix the poster caption to point at the Grand Central billboard",
-      "Swap 'One last temptation' for a Gail line about the ballet",
-      "Rename 'Tembleque' to 'Gail's tembleque'",
-      "Add a Benny Blanco 'from the Bronx' line to the bar, replacing 'Piña colada' plain note"
-    ],
-    "flat": false,
-    "done": false
+ "id": "Carlito's Way (1993)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "The poster over our bar. Some nights it's all anybody looks at.",
+   "where": "caption",
+   "verdict": "wrong",
+   "why": "The poster in the film is the beach billboard Carlito stares at as he dies, not one over a bar. The club is called Paradise.",
+   "source": "https://en.wikipedia.org/wiki/Carlito's_Way",
+   "fix": "The beach poster Carlito stares at to the last. Easy to see why.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Paradise flan -- caramel and coconut, for the beach postcard Carlito keeps",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "No postcard in the plot or transcript. What Carlito looks at is the Caribbean beach billboard as he dies.",
+   "source": "https://en.wikipedia.org/wiki/Carlito's_Way",
+   "fix": "Paradise flan -- caramel and coconut, for the beach poster Carlito stares at",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 5,
+  "overall": 4.4,
+  "verdict": "A warm, moody club and train ticket menu that gets Carlito's dream of the islands right. The poster caption is the only spot that moves the film around.",
+  "missing": [
+   "Benny Blanco from the Bronx (the club)",
+   "Gail's ballet (her dance)",
+   "Kleinfeld's yacht (the prison barge)",
+   "Pachanga at the door (El Paraiso)",
+   "The Grand Central chase (the end)",
+   "The billboard coming to life (the final shot)"
+  ],
+  "ideas": [
+   "Fix the poster caption to point at the Grand Central billboard",
+   "Swap 'One last temptation' for a Gail line about the ballet",
+   "Rename 'Tembleque' to 'Gail's tembleque'",
+   "Add a Benny Blanco 'from the Bronx' line to the bar, replacing 'Piña colada' plain note"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

@@ -4,32 +4,36 @@
   {
    "text": "Charters Towers corned beef rolls",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "Neither the film's Wikipedia page, Oliver Woodward's page nor the 1st Australian Tunnelling Company page mentions Charters Towers. Woodward was born in Tenterfield, NSW. The link to Charters Towers is not confirmed.",
-   "source": "https://en.wikipedia.org/wiki/Oliver_Woodward",
-   "fix": "Tunnellers' corned beef rolls",
+   "verdict": "ok",
+   "why": "In the film McBride says he and Woodward went to mining school together, 'Charters Towers boys'.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=beneath-hill-60",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Warming the Charters Towers boys after a shift underground.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Same problem. No source I could open ties the tunnellers or Woodward to Charters Towers.",
-   "source": "https://en.wikipedia.org/wiki/Beneath_Hill_60",
-   "fix": "Warming the tunnellers after a shift underground.",
+   "verdict": "ok",
+   "why": "McBride calls Woodward and himself 'Charters Towers boys' in the officer's dugout scene.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=beneath-hill-60",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "The café behind the lines where the tunnellers spend their pay",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The film's early tunnel scenes are near Armentieres, but the plot summary has no estaminet or scene of the tunnellers spending their pay.",
+   "verdict": "wrong",
+   "why": "No cafe or scene of the tunnellers spending their pay shows in the transcript or plot. The plot places the early tunnelling near Armentieres in May 1916.",
    "source": "https://en.wikipedia.org/wiki/Beneath_Hill_60",
-   "fix": "Armentieres, where the tunnelling starts in 1916",
+   "fix": "Near Armentières, where the tunnelling starts in 1916",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 15,

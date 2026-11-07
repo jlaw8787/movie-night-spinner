@@ -21,12 +21,14 @@
   {
    "text": "The railroad crew's supper on the trail",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The railroad crew appears at the start laying track and singing. The sources I opened show no supper scene for them. The campfire beans scene is the cowboys, not the rail gang.",
-   "source": "https://www.filmsite.org/blaz.html",
-   "fix": "What the rail gang sang about while laying track",
+   "verdict": "wrong",
+   "why": "No supper scene for the railroad crew appears. The campfire beans scene is Taggart's cowboys.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=blazing-saddles",
+   "fix": "the cowboys' supper on the trail",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

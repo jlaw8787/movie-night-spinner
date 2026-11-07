@@ -21,22 +21,25 @@
   {
    "text": "Rosewood's order, back on duty at Wonder World.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Nothing I opened (Wikipedia plot, Wikiquote, TV Tropes) shows Rosewood ordering a frozen lemonade, or any drink. He is back on duty at the park, which is true.",
+   "verdict": "ok",
+   "why": "Rosewood is back on duty at WonderWorld, joining Axel and Flint in the final shootout. 'Order' is the usual menu joke.",
    "source": "https://en.wikipedia.org/wiki/Beverly_Hills_Cop_III",
-   "fix": "Rosewood, back on duty at Wonder World.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Rosewood back in action with a shotgun",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "No source I opened mentions a shotgun. Wikipedia only says Axel, Rosewood and Flint are injured in the final shootout.",
+   "verdict": "wrong",
+   "why": "No shotgun shows in the plot. Rosewood and Flint come to WonderWorld when Axel calls them and the shootout leaves all three hurt.",
    "source": "https://en.wikipedia.org/wiki/Beverly_Hills_Cop_III",
-   "fix": "Rosewood back in action with Axel at the park",
+   "fix": "Rosewood back in action at Wonder World",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

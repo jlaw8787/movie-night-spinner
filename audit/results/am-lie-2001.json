@@ -1,42 +1,44 @@
 {
-  "id": "Amélie (2001)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Joseph's corner, recording every word Gina says.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "Joseph does watch Gina, his ex, from his café corner. The pages read don't say he records her words.",
-      "source": "https://en.wikipedia.org/wiki/Am%C3%A9lie",
-      "fix": "Joseph's corner, never far from Gina.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 4,
-    "moments": 4,
-    "food": 4,
-    "tone": 4,
-    "look": 4,
-    "overall": 4,
-    "verdict": "A well-observed Café des 2 Moulins that gets the brûlée, the gnome and the glass man, with only a slight stretch on Joseph.",
-    "missing": [
-      "Raspberries on her fingertips (Amélie at the greengrocer)",
-      "Amélie leading the blind man to the Métro and describing the street",
-      "The girl with the glass of water (the Renoir painting)",
-      "Collignon, the greengrocer she pranks",
-      "Madeleine Wallace and the love letter",
-      "Georgette's hypochondria at the tabac"
-    ],
-    "ideas": [
-      "Swap the 'Radishes with butter and sea salt' note for 'Raspberry fingertips, for the greengrocer's mean streak'.",
-      "Swap 'Kir royale with cassis' note for 'For the blind man, with a street described out loud'.",
-      "Swap the Joseph house note for a line about Madeleine Wallace's letter.",
-      "Swap the 'Paris bistro chicken' note for a line about Georgette and her cough."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Amélie (2001)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Joseph's corner, recording every word Gina says.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Joseph spies on his ex Gina and speaks notes about her into a tape recorder, but he does not record her words.",
+   "source": "https://www.shmoop.com/study-guides/amelie/two-windmills.html",
+   "fix": "Joseph's corner, taping notes on Gina.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "A well-observed Café des 2 Moulins that gets the brûlée, the gnome and the glass man, with only a slight stretch on Joseph.",
+  "missing": [
+   "Raspberries on her fingertips (Amélie at the greengrocer)",
+   "Amélie leading the blind man to the Métro and describing the street",
+   "The girl with the glass of water (the Renoir painting)",
+   "Collignon, the greengrocer she pranks",
+   "Madeleine Wallace and the love letter",
+   "Georgette's hypochondria at the tabac"
+  ],
+  "ideas": [
+   "Swap the 'Radishes with butter and sea salt' note for 'Raspberry fingertips, for the greengrocer's mean streak'.",
+   "Swap 'Kir royale with cassis' note for 'For the blind man, with a street described out loud'.",
+   "Swap the Joseph house note for a line about Madeleine Wallace's letter.",
+   "Swap the 'Paris bistro chicken' note for a line about Georgette and her cough."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

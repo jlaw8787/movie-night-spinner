@@ -21,12 +21,14 @@
   {
    "text": "Billy's poolside order, before O'Doyle rules.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Billy's pool scene is the sunscreen song and the imaginary penguin. No source mentions a prawn cocktail. O'Doyle shows up in the later school years, not before the pool.",
-   "source": "https://en.wikipedia.org/wiki/Billy_Madison",
-   "fix": "Billy's poolside order, with a penguin watching.",
+   "verdict": "wrong",
+   "why": "No prawn cocktail or poolside order is in the film. Billy is by the pool and the penguin shows up before school starts and the O'Doyle chant begins.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=billy-madison",
+   "fix": "A poolside starter, before O'Doyle rules.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

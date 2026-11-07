@@ -5,32 +5,37 @@
   {
    "text": "A toast to Mary's lamp across the garden.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No source I opened mentions a lamp in Mary's window across a garden. Mary does stay Freddie's closest friend after the engagement ends.",
-   "source": "",
-   "fix": "A toast to Mary, who stayed Freddie's closest friend.",
+   "verdict": "wrong",
+   "why": "Mary moves in next door to Freddie, and he has her look out her window at him, but no lamp or garden is mentioned.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=bohemian-rhapsody",
+   "fix": "A toast to Mary, just next door.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Coins dropped on the drum skins for a new sound",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "I could not find this scene in any source I opened.",
-   "source": "",
-   "fix": "Roger and the drum kit at the farm studio",
+   "verdict": "wrong",
+   "why": "No scene with coins on the drum skins turns up in the script or the plot.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=bohemian-rhapsody",
+   "fix": "Freddie's ring in a box, proposing to Mary",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "A house full of cats with their own rooms",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "The film opens on Freddie's big house and many cats, but nothing I opened says the cats have their own rooms.",
-   "source": "https://www.looper.com/1110865/small-details-you-missed-in-bohemian-rhapsody/",
-   "fix": "A house full of cats",
+   "verdict": "ok",
+   "why": "Freddie shows off the house and says each cat will have his own room, with Delilah by the kitchen.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=bohemian-rhapsody",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 10,

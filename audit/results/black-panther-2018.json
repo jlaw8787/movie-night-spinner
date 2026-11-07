@@ -21,12 +21,14 @@
   {
    "text": "The busy street market in Birnin Zana",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The plot summary I opened shows the Golden City as the capital but does not describe a market scene in Birnin Zana. The only market it names is the Busan fish market.",
-   "source": "https://www.wikiwand.com/en/Black_Panther_(film)",
-   "fix": "Street food from the Golden City",
+   "verdict": "wrong",
+   "why": "No market scene in Birnin Zana appears in the plot or script, and Wakanda is called the hidden Golden City.",
+   "source": "https://en.wikipedia.org/wiki/Black_Panther_(film)",
+   "fix": "street food from hidden Wakanda",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

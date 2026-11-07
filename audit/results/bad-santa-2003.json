@@ -21,12 +21,14 @@
   {
    "text": "Willie skipped dinner and ate the advent calendar.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The only advent calendar I found is the candy one the kid carries into bed with Willie. No source shows Willie eating it.",
-   "source": "https://moviemistakes.com/film3771/quotes",
-   "fix": "Willie skipped dinner and had a bottle instead.",
+   "verdict": "wrong",
+   "why": "The kid offers Willie the advent calendar chocolate and Willie says \"You go ahead\"; Willie never eats it. He does tell the kid to make sandwiches for dinner.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=bad-santa",
+   "fix": "Willie told the kid to make sandwiches for dinner.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 18,

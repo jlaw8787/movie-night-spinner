@@ -32,12 +32,14 @@
   {
    "text": "For the beach walk Dad asks to relive.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Tim and his father do go back to a childhood day on the beach near the end. The pages read don't say which of them asks.",
+   "verdict": "wrong",
+   "why": "The plot has Tim telling his father, and the two of them travelling back to a happy childhood memory. It does not say Dad asks, or name a beach walk.",
    "source": "https://en.wikipedia.org/wiki/About_Time_(2013_film)",
-   "fix": "For the beach day Tim and Dad go back to.",
+   "fix": "For the childhood day Tim and Dad go back to.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

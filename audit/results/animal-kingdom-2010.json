@@ -5,22 +5,26 @@
   {
    "text": "Serve the mains when Smurf puts dinner on the table for her boys.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The Wikipedia plot has the family gathering at a restaurant. A home dinner put on the table by Smurf isn't described.",
+   "verdict": "wrong",
+   "why": "Smurf meets Craig, Pope and Darren at a restaurant. The home dinner in the script is not Smurf serving, and she says Pope is cooking.",
    "source": "https://en.wikipedia.org/wiki/Animal_Kingdom_(film)",
-   "fix": "Serve the mains when Smurf and her sons sit down together at the restaurant.",
+   "fix": "Serve the mains when Smurf and her sons meet at a restaurant.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Smurf cooks for her boys. Behave at the table.",
    "where": "tagline",
-   "verdict": "unsure",
-   "why": "Smurf is the matriarch who runs the family. No page read shows her cooking.",
+   "verdict": "wrong",
+   "why": "Smurf is the matriarch who runs the family. In the script she says Pope is cooking, so she is not shown cooking.",
    "source": "https://en.wikipedia.org/wiki/Animal_Kingdom_(film)",
    "fix": "Smurf runs the family. Behave at the table.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Come in, J. Dinner is on. Sit down and stay close to the family.",
@@ -41,22 +45,26 @@
   {
    "text": "the boys on the couch with the footy on",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No page read has the brothers on a couch with the footy on.",
-   "source": "https://en.wikipedia.org/wiki/Animal_Kingdom_(film)",
-   "fix": "the boys with nothing to do but wait for the next job",
+   "verdict": "wrong",
+   "why": "The script has J on the couch with the TV on and his uncles joining him, but never footy.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=animal-kingdom",
+   "fix": "the boys on the couch, telly on, alibi set",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "J's drink on the couch, TV still on.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "J is shown on a couch with the TV on at the very start, beside his dead mother. A drink isn't described.",
-   "source": "https://en.wikipedia.org/wiki/Animal_Kingdom_(film)",
-   "fix": "J's drink, with the telly still on.",
+   "verdict": "wrong",
+   "why": "J says he was having a nap on the couch with the TV on. No drink is described there.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=animal-kingdom",
+   "fix": "J's nap on the couch, TV still on.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

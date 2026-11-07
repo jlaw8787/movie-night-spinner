@@ -21,42 +21,49 @@
   {
    "text": "Hobson the butler, keeping Arthur's world properly civilised",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Wikipedia calls Hobson Arthur's valet, and Arthur introduces him as 'my nanny'. 'Butler' is not confirmed. The wink 'Hobson, the butler with the driest wit' has the same word.",
+   "verdict": "wrong",
+   "why": "Wikipedia calls Hobson Arthur's valet; the transcript never calls him a butler (that is a separate character, Mr. Butler).",
    "source": "https://en.wikipedia.org/wiki/Arthur_(1981_film)",
    "fix": "Hobson the valet, keeping Arthur's world properly civilised",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Bach Penthouse Dining Room",
    "where": "venue",
-   "verdict": "unsure",
-   "why": "The plot sources describe a rich New York family, a chauffeured Rolls-Royce and the family estate, but never a penthouse.",
-   "source": "https://en.wikipedia.org/wiki/Arthur_(1981_film)",
+   "verdict": "wrong",
+   "why": "The word penthouse is nowhere in the transcript or plot; the Bach family has a house and estate.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=arthur",
    "fix": "Bach Family Dining Room",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Arthur's usual, Hobson pouring with a sigh.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Arthur drinks heavily, but no source names single malt and soda as his usual.",
-   "source": "https://en.wikipedia.org/wiki/Arthur_(1981_film)",
-   "fix": "Hobson pours, Arthur keeps drinking.",
+   "verdict": "ok",
+   "why": "Arthur says he is drinking Scotch and later orders a glass of scotch, so scotch as his usual drink is shown; Hobson looking after him is the film's running joke.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=arthur",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Arthur's Kir royale",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "No source says Arthur drinks Kir royale.",
-   "source": "https://en.wikipedia.org/wiki/Arthur_(1981_film)",
-   "fix": "Champagne cocktail for the man with a hundred and fifty million coming.",
+   "verdict": "wrong",
+   "why": "Nothing in the transcript shows Arthur drinking champagne or a Kir royale, so tying it to him is unproven; the cocktail itself can stay as a plain menu item.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=arthur",
+   "fix": "Kir royale",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 10,

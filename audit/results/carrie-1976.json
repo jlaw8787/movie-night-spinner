@@ -21,12 +21,14 @@
   {
    "text": "Tommy's toast to the new prom king and queen.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Tommy and Carrie are crowned, and then the blood drops. The plot summary I opened has no toast and does not mention punch.",
-   "source": "https://wikiwand.com/en/Carrie_(1976_film)",
-   "fix": "For the new prom king and queen.",
+   "verdict": "wrong",
+   "why": "The plot has Tommy and Carrie crowned prom king and queen, then the blood. No toast shows in the transcript or Wikipedia.",
+   "source": "https://en.wikipedia.org/wiki/Carrie_(1976_film)",
+   "fix": "Tommy and Carrie, crowned king and queen.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

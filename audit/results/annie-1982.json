@@ -21,32 +21,38 @@
   {
    "text": "Grace orders it all for Annie's first night.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Grace brings Annie to the mansion, but no source describes a dinner or her ordering the food.",
-   "source": "https://en.wikipedia.org/wiki/Annie_(1982_film)",
-   "fix": "Grace sees to Annie's first night at the mansion.",
+   "verdict": "wrong",
+   "why": "In the transcript Grace asks Mrs. Pugh if dinner is under way, and Mrs. Pugh is making Warbucks's favourite; nobody orders food for Annie.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=annie-1982",
+   "fix": "Grace checks on dinner with Mrs. Pugh.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Annie's order, a night at Radio City.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The Radio City trip to see Camille is confirmed, but no source shows Annie ordering a Shirley Temple.",
+   "verdict": "wrong",
+   "why": "Warbucks sends Annie and Grace to Radio City Music Hall to see Camille, but no one places an order there.",
    "source": "https://en.wikipedia.org/wiki/Annie_(1982_film)",
-   "fix": "Annie's night out with Daddy Warbucks at Radio City.",
+   "fix": "Annie's night out at Radio City.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "The bodyguard's favourite, made the way he likes it.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Punjab is one of Warbucks's two bodyguards, but no source shows a lamb curry or his food tastes.",
+   "verdict": "wrong",
+   "why": "Punjab is one of Warbucks's bodyguards, but nothing shows him eating lamb curry; what he does is fly in by helicopter to rescue Annie.",
    "source": "https://en.wikipedia.org/wiki/Annie_(1982_film)",
-   "fix": "The bodyguard who flies in by helicopter when it counts.",
+   "fix": "the bodyguard who flies in by helicopter when it counts",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

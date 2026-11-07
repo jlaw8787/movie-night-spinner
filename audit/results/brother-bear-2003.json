@@ -21,12 +21,14 @@
   {
    "text": "Tanana sends Kenai off with something green",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Tanana is the shaman who sends Kenai to the mountain, but I found no scene with her giving him something green.",
+   "verdict": "wrong",
+   "why": "Tanana sends Kenai off to the mountain where the lights touch the earth, and no green food is given.",
    "source": "https://en.wikipedia.org/wiki/Brother_Bear",
-   "fix": "Tanana, the shaman who sends Kenai off to the mountain.",
+   "fix": "Tanana sends Kenai off to the mountain of lights",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

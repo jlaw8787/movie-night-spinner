@@ -16,12 +16,13 @@
     {
       "text": "Harold's crispy fish sliders with tartare",
       "where": "dish-name",
-      "verdict": "unsure",
-      "why": "The film's order is thirty plain sliders, five fries and four Cherry Cokes. No fish slider turns up in the plot or the quotes, so tying it to Harold's order is a stretch.",
-      "source": "https://en.wikiquote.org/wiki/Harold_%26_Kumar_Go_to_White_Castle",
+      "verdict": "wrong",
+      "why": "Harold's order in the film is thirty plain Slyders, five fries and four Cherry Cokes. No fish slider appears, so the dish loses Harold's name.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=harold-kumar-go-to-white-castle",
       "fix": "Crispy fish sliders with tartare",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 15,

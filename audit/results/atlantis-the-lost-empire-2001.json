@@ -4,12 +4,14 @@
   {
    "text": "Serve the mains when Cookie dishes up dinner around the campfire.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Cookie does serve the crew ('Come and get it!' with slop he calls an appetizer of Caesar salad and escargot), but neither Wikipedia nor Wikiquote nor the fandom wiki puts it at a campfire.",
-   "source": "https://en.wikiquote.org/wiki/Atlantis:_The_Lost_Empire",
-   "fix": "Serve the mains when Cookie yells 'Come and get it!' and dishes up for the crew.",
+   "verdict": "wrong",
+   "why": "Rourke says they'll make camp, then Cookie calls \"Come and get it!\" and serves, but no fire or campfire is mentioned.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=atlantis-the-lost-empire",
+   "fix": "Serve the mains when Cookie yells \"Come and get it!\" at the crew's camp.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Fellas, this is the opportunity of a lifetime. Cookie's made dinner, so grab a plate before we dive.",
@@ -30,12 +32,13 @@
   {
    "text": "Cookie feeding the crew in the caverns",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The sources I could open show Cookie feeding the crew and cooking from his wagon, but none place a meal in the caverns.",
-   "source": "https://atlantisthelostempire.fandom.com/wiki/Cookie_Farnsworth",
-   "fix": "Cookie dishing out from his chuck wagon",
+   "verdict": "ok",
+   "why": "After the sub is destroyed the crew goes through caves beneath a volcano, and the glowing camp scene where Cookie serves them is in that cave.",
+   "source": "https://en.wikipedia.org/wiki/Atlantis:_The_Lost_Empire",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 18,

@@ -1,57 +1,58 @@
 {
- "id": "Heat (1995)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Keep the coffee coming and the bill on the table. I like to be able to leave the diner quickly.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Neil McCauley does not say this in the film. His famous line is about not getting attached to anything you cannot walk out on in thirty seconds. I could not open a quote page to confirm wording, so no real quote is suggested.",
-   "source": "",
-   "fix": "Table by the window, bill on the table. I want a clear view of the door.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Table by the window, bill on the table. I want a clear view of the door.",
-    "by": "Neil McCauley",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Charlene on the balcony, letting Chris walk away",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Wikipedia says Charlene warns Chris away at her safe house with a hand gesture. A balcony and Venice Beach are not confirmed in the sources I opened.",
-   "source": "https://www.wikiwand.com/en/Heat_(1995_film)",
-   "fix": "Charlene at the safe house, warning Chris away",
-   "printed": true,
-   "done": false
+  "id": "Heat (1995)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Keep the coffee coming and the bill on the table. I like to be able to leave the diner quickly.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Neil McCauley does not say this in the film. His famous line is about not getting attached to anything you cannot walk out on in thirty seconds. I could not open a quote page to confirm wording, so no real quote is suggested.",
+      "source": "",
+      "fix": "Table by the window, bill on the table. I want a clear view of the door.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Table by the window, bill on the table. I want a clear view of the door.",
+        "by": "Neil McCauley",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Charlene on the balcony, letting Chris walk away",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Wikipedia has Charlene at the LAPD safe house warning Chris off. A balcony is not in the plot or transcript, so the line keeps only the safe house.",
+      "source": "https://en.wikipedia.org/wiki/Heat_(1995_film)",
+      "fix": "Charlene at the safe house, warning Chris away",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    }
+  ],
+  "checked_ok": 17,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "Cool, moody cafe card with a real location and the diner face-off, but the food only touches the film lightly.",
+    "missing": [
+      "Neil's 'thirty seconds flat' rule (only used as a house line)",
+      "Hanna and McCauley pulling over on the 105 and going for coffee",
+      "The armoured car robbery and bearer bonds",
+      "The downtown bank shootout in the street",
+      "Eady the graphic designer",
+      "Waingro killed in the hotel room"
+    ],
+    "ideas": [
+      "Swap 'Eady's baked cheesecake' note for a line about Eady, who bonds with Neil over loneliness.",
+      "Rename 'Ocean view oysters' to 'Hotel room oysters' for the Waingro scene.",
+      "Add a 'Bearer bonds' bread basket in place of 'Patty melt' to use the armoured car heist."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 17,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 4,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "Cool, moody cafe card with a real location and the diner face-off, but the food only touches the film lightly.",
-  "missing": [
-   "Neil's 'thirty seconds flat' rule (only used as a house line)",
-   "Hanna and McCauley pulling over on the 105 and going for coffee",
-   "The armoured car robbery and bearer bonds",
-   "The downtown bank shootout in the street",
-   "Eady the graphic designer",
-   "Waingro killed in the hotel room"
-  ],
-  "ideas": [
-   "Swap 'Eady's baked cheesecake' note for a line about Eady, who bonds with Neil over loneliness.",
-   "Rename 'Ocean view oysters' to 'Hotel room oysters' for the Waingro scene.",
-   "Add a 'Bearer bonds' bread basket in place of 'Patty melt' to use the armoured car heist."
-  ],
-  "flat": false,
-  "done": false
- }
 }

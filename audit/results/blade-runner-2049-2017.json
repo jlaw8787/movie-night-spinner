@@ -21,42 +21,49 @@
   {
    "text": "The small wooden horse K carves into his memory.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "K does not carve the horse. It is a memory (really Dr Stelline's) and he later finds the toy horse in the orphanage furnace where he remembers hiding it. The date 6.10.21 is carved on the tree.",
+   "verdict": "wrong",
+   "why": "K does not carve the horse. It is a memory of a wooden toy horse he later finds in the orphanage furnace.",
    "source": "https://en.wikipedia.org/wiki/Blade_Runner_2049",
-   "fix": "The small wooden horse K remembers hiding in the orphanage furnace.",
+   "fix": "The small wooden horse K finds in the orphanage furnace",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Deckard pours one for the dog too.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Deckard has a dog, but nothing I opened says he pours it a drink. 'Bad dog' is Luv's line to K.",
-   "source": "https://en.wikipedia.org/wiki/Blade_Runner_2049",
-   "fix": "Deckard keeps a dog and a bottle in the old casino.",
+   "verdict": "wrong",
+   "why": "Deckard offers K whiskey ('millions of bottles') but nothing shows him pouring one for a dog.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=blade-runner-2049",
+   "fix": "Deckard has whiskey, millions of bottles.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Joi, a hologram who cooks for him",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "Joi is K's holographic girlfriend. No source I could open says she cooks for him.",
-   "source": "https://en.wikipedia.org/wiki/Blade_Runner_2049",
-   "fix": "Joi, the hologram who keeps him company",
+   "verdict": "ok",
+   "why": "Joi, K's holographic girlfriend, prepares a virtual dinner for him, so she cooks for him in the hologram sense.",
+   "source": "https://bladerunner.fandom.com/wiki/Joi",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Sapper's pot, still going on the stove.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No source I opened shows a pot on Sapper Morton's stove.",
-   "source": "",
-   "fix": "Sapper Morton's farm, where K finds the buried box.",
+   "verdict": "wrong",
+   "why": "Sapper Morton runs a protein farm and says he grows garlic just for himself. No pot on a stove is shown.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=blade-runner-2049",
+   "fix": "Sapper's garlic, grown just for himself.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 8,

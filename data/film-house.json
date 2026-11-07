@@ -29,7 +29,7 @@
   },
   "d": {
    "n": "Grape slushie with sour candy",
-   "note": "Jenko's order, now he sits with the chem kids."
+   "note": "Jenko's table now, with the chem kids."
   },
   "fit": [
    "d"
@@ -127,7 +127,7 @@
   },
   "d": {
    "n": "Blue lagoon cocktail",
-   "note": "Doug and Steve's round, on Richard Grieco's tab.",
+   "note": "Doug and Steve's round, once Richard Grieco gets them in.",
    "alc": true
   }
  },
@@ -139,7 +139,7 @@
   },
   "d": {
    "n": "Warm honey milk",
-   "note": "Marge's nightcap is vodka. This isn't."
+   "note": "Marge's nightcap is a lot stronger. This isn't."
   }
  },
  "A Nightmare on Elm Street 3: Dream Warriors (1987)": {
@@ -149,7 +149,7 @@
   },
   "d": {
    "n": "Hot malted milk",
-   "note": "Skip it before dream group. Hypnocil only."
+   "note": "Skip it on Hypnocil nights. Dr Gordon's orders."
   },
   "fit": [
    "d"
@@ -158,7 +158,7 @@
  "A Quiet Place (2018)": {
   "s": {
    "n": "Garden tomatoes, sea salt and basil",
-   "note": "Evelyn's garden, picked barefoot off the sand path."
+   "note": "From the Abbott farm, picked barefoot off the sand path."
   },
   "d": {
    "n": "Fresh lemonade, no ice",
@@ -168,11 +168,11 @@
  "A Star Is Born (2018)": {
   "s": {
    "n": "Truffle salted popcorn",
-   "note": "Ally on the bar, singing La Vie en Rose."
+   "note": "Ally on stage, singing La Vie en Rose."
   },
   "d": {
    "n": "Gin martini with a twist",
-   "note": "Jack's order, poured strong at the end of the bar.",
+   "note": "Jack's gin, poured strong at the end of the bar.",
    "alc": true
   },
   "fit": [
@@ -182,7 +182,7 @@
  "About Time (2013)": {
   "s": {
    "n": "Warm Cornish saffron buns with clotted cream",
-   "note": "For the beach walk Dad asks to relive."
+   "note": "For the childhood day Tim and Dad go back to."
   },
   "d": {
    "n": "Cold Cornish cider",
@@ -230,7 +230,7 @@
   },
   "d": {
    "n": "Scotch and soda",
-   "note": "Ted Striker's drink, mostly on his face.",
+   "note": "Ted Striker's problem, mostly on his face.",
    "alc": true
   }
  },
@@ -290,7 +290,7 @@
  "Alien: Resurrection (1997)": {
   "s": {
    "n": "Pork crackling with apple sauce",
-   "note": "Johner's snack, before the basketball to the face.",
+   "note": "Johner's snack, before Ripley's no-look shot.",
    "meat": true
   },
   "d": {
@@ -323,7 +323,7 @@
  },
  "Always Be My Maybe (2019)": {
   "s": {
-   "n": "Spam fried rice with a runny egg",
+   "n": "Fried rice with a runny egg",
    "note": "Sasha's after-school dinner alone, before Judy taught her.",
    "meat": true
   },
@@ -341,7 +341,7 @@
   },
   "d": {
    "n": "Keg beer in a red cup",
-   "note": "Stifler's party, keg in the basement.",
+   "note": "Stifler's party, the keg is back there.",
    "alc": true
   }
  },
@@ -352,7 +352,7 @@
   },
   "d": {
    "n": "Pastis with iced water",
-   "note": "Joseph's corner, recording every word Gina says.",
+   "note": "Joseph's corner, taping notes on Gina.",
    "alc": true
   }
  },
@@ -410,19 +410,19 @@
   },
   "d": {
    "n": "Cold stubbie of Melbourne Bitter",
-   "note": "J's drink on the couch, TV still on.",
+   "note": "J's nap on the couch, TV still on.",
    "alc": true
   }
  },
  "Annabelle (2014)": {
   "s": {
    "n": "Swedish meatballs in grape jelly",
-   "note": "Mia's needle stops. The doll's head turns.",
+   "note": "Mia sews on. The stove ignites.",
    "meat": true
   },
   "d": {
    "n": "Tom Collins",
-   "note": "Poured while the popcorn burns on the stove.",
+   "note": "A drink for when the stove ignites.",
    "alc": true
   },
   "fit": [
@@ -432,22 +432,22 @@
  "Annie (1982)": {
   "s": {
    "n": "Waldorf salad cups",
-   "note": "Grace orders it all for Annie's first night."
+   "note": "Grace checks on dinner with Mrs. Pugh."
   },
   "d": {
    "n": "Shirley Temple",
-   "note": "Annie's order, a night at Radio City."
+   "note": "Annie's night out at Radio City."
   }
  },
  "Another 48 Hrs. (1990)": {
   "s": {
    "n": "Hot pastrami on rye, cut small",
-   "note": "Reggie's first meal out, ordered on Jack's tab.",
+   "note": "Reggie's first day out. Jack still owes him $500,000.",
    "meat": true
   },
   "d": {
    "n": "Iced Thai milk tea",
-   "note": "Reggie's first stop out, Jack paying."
+   "note": "Reggie's first day out, and Jack still owes him."
   },
   "fit": []
  },
@@ -468,7 +468,7 @@
  "Ant-Man and the Wasp (2018)": {
   "s": {
    "n": "Clam chowder in a sourdough bowl",
-   "note": "Scott's ankle monitor allows the kitchen only.",
+   "note": "Scott's ankle monitor keeps him in the house.",
    "meat": true
   },
   "d": {
@@ -509,7 +509,7 @@
   },
   "d": {
    "n": "Pint of stout",
-   "note": "Tom and Arthur's afternoon at the bikers' bar.",
+   "note": "Tom and Arthur's afternoon at the bar.",
    "alc": true
   }
  },
@@ -737,7 +737,7 @@
  "Bad Santa (2003)": {
   "s": {
    "n": "Jalapeño cheese nachos",
-   "note": "Willie skipped dinner and ate the advent calendar."
+   "note": "Willie told the kid to make sandwiches for dinner."
   },
   "d": {
    "n": "Rye whiskey, neat",
@@ -802,12 +802,12 @@
  "Batman (1989)": {
   "s": {
    "n": "Smoked trout rillettes with toasted brioche",
-   "note": "Vicki's lunch table, before the Joker redecorates.",
+   "note": "Vicki at the Flugelheim, before the Joker redecorates.",
    "meat": true
   },
   "d": {
    "n": "Kir royale",
-   "note": "Vicki's order, waiting on her mystery lunch date.",
+   "note": "Vicki's order, before the Joker visits the museum.",
    "alc": true
   }
  },
@@ -917,7 +917,7 @@
  "Beverly Hills Cop (1984)": {
   "s": {
    "n": "Prawn cocktail with spicy cocktail sauce",
-   "note": "Sent down to Taggart and Rosewood's car.",
+   "note": "For the two cops trailing Axel around town.",
    "meat": true
   },
   "d": {
@@ -995,7 +995,7 @@
  "Billy Madison (1995)": {
   "s": {
    "n": "Prawn cocktail, Marie Rose sauce",
-   "note": "Billy's poolside order, before O'Doyle rules.",
+   "note": "A poolside starter, before O'Doyle rules.",
    "meat": true
   },
   "d": {
@@ -1034,7 +1034,7 @@
   },
   "d": {
    "n": "Cranberry ginger punch",
-   "note": "One more spill and Al's campaign is finished."
+   "note": "One more stunt and Al's campaign is finished."
   },
   "fit": []
  },
@@ -1075,11 +1075,11 @@
  "Blade Runner 2049 (2017)": {
   "s": {
    "n": "Roasted garlic bulbs with sourdough",
-   "note": "Sapper's pot, still going on the stove."
+   "note": "Sapper's garlic, grown just for himself."
   },
   "d": {
    "n": "Smoked rye old fashioned",
-   "note": "Deckard pours one for the dog too.",
+   "note": "Deckard has whiskey, millions of bottles.",
    "alc": true
   }
  },
@@ -1138,7 +1138,7 @@
   },
   "d": {
    "n": "Pimm's cup with cucumber and mint",
-   "note": "A toast to Mary's lamp across the garden.",
+   "note": "A toast to Mary, just next door.",
    "alc": true
   },
   "fit": [
@@ -1148,7 +1148,7 @@
  "Bolt (2008)": {
   "s": {
    "n": "Bacon wrapped hot dogs with onions",
-   "note": "Mittens taught Bolt to beg for these.",
+   "note": "Mittens taught Bolt to beg for food like this.",
    "meat": true
   },
   "d": {
@@ -1236,7 +1236,7 @@
   },
   "d": {
    "n": "Elderflower and prosecco spritz",
-   "note": "Helen's shower, where Paris beat a handmade card.",
+   "note": "Helen's shower, where Paris beat Annie's gift.",
    "alc": true
   }
  },
@@ -1315,7 +1315,7 @@
   },
   "d": {
    "n": "New Orleans Sazerac",
-   "note": "Sam pours one for Isaiah first.",
+   "note": "Sam gets Isaiah a seat first.",
    "alc": true
   }
  },
@@ -1386,7 +1386,7 @@
   },
   "d": {
    "n": "Shirley Temple with extra cherries",
-   "note": "Tommy's toast to the new prom king and queen."
+   "note": "Tommy and Carrie, crowned king and queen."
   }
  },
  "Cars (2006)": {
@@ -1452,7 +1452,7 @@
   },
   "d": {
    "n": "Vanilla cream soda",
-   "note": "One for each grandparent, all four in bed."
+   "note": "One for each grandparent, all four of them."
   }
  },
  "Chasing Amy (1997)": {
@@ -1462,7 +1462,7 @@
   },
   "d": {
    "n": "Vanilla egg cream",
-   "note": "Holden's order, while he plans the Chasing Amy comic."
+   "note": "One for Holden, who ends up writing the Chasing Amy comic."
   }
  },
  "Chicago (2002)": {

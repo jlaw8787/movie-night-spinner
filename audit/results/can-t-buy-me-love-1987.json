@@ -5,22 +5,26 @@
   {
    "text": "Serve the snacks when Ronald and Cindy walk into the cafeteria together.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The plot summary has the deal, the makeover and the dance, and a lunch scene, but it does not describe Ronald and Cindy walking into a cafeteria together.",
-   "source": "https://en.wikipedia.org/wiki/Can%27t_Buy_Me_Love_(film)",
-   "fix": "Serve the snacks when Ronald sits down with Cindy and the popular crowd.",
+   "verdict": "wrong",
+   "why": "No walk-in scene shows in the transcript or plot. Ronald and Cindy do have lunch together as part of their deal, and Cindy says lunch was in the deal.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=cant-buy-me-love",
+   "fix": "Serve the snacks when Ronald and Cindy sit down to lunch as part of the deal.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "The cafeteria where everyone watches them walk in",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Same point as the cue. A cafeteria entrance is not confirmed in the sources I opened.",
-   "source": "https://en.wikipedia.org/wiki/Can%27t_Buy_Me_Love_(film)",
-   "fix": "Lunch with the popular crowd",
+   "verdict": "wrong",
+   "why": "No entrance scene is shown. The cafeteria is real, and the deal has them eating lunch together there.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=cant-buy-me-love",
+   "fix": "the cafeteria where they have lunch as part of the deal",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "I paid a thousand dollars to sit at the cool table. Dinner tonight is cheaper, and the company's better.",

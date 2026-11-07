@@ -5,22 +5,26 @@
   {
    "text": "Serve the mains when the Duke rolls up in his chandelier car.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The Duke's Cadillac with the chandeliers is real, but the sources I opened do not say when it first rolls up. Wikipedia's plot only has the Duke and his followers confronting Snake at street level, then giving chase.",
+   "verdict": "wrong",
+   "why": "Wikipedia's plot has the Duke and his followers confronting Snake at street level, then giving chase. Neither it nor the transcript describes the chandelier car rolling up.",
    "source": "https://en.wikipedia.org/wiki/Escape_from_New_York",
    "fix": "Serve the mains when the Duke and his followers confront Snake in the street.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Brain makes everything himself",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Wikipedia says Brain built a gasoline refinery. No source I opened shows him making moonshine.",
+   "verdict": "wrong",
+   "why": "Wikipedia and the transcript show Brain running a gasoline refinery. Nothing shows him making moonshine, so the note is changed to the refinery.",
    "source": "https://en.wikipedia.org/wiki/Escape_from_New_York",
-   "fix": "Brain runs the island's gasoline, so he probably runs the still",
+   "fix": "Brain runs a refinery, so why not a still",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 22,

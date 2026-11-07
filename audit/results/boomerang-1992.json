@@ -21,12 +21,14 @@
   {
    "text": "The friends bowling together.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The plot summary I opened has Marcus with Tyler and Gerard at Thanksgiving and talking about his standards. It does not mention a bowling alley.",
+   "verdict": "wrong",
+   "why": "No bowling alley appears. Marcus's friends Tyler and Gerard tell him his standards are too high and share Thanksgiving with him.",
    "source": "https://en.wikipedia.org/wiki/Boomerang_(1992_film)",
    "fix": "Tyler and Gerard on Marcus's standards.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

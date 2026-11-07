@@ -21,12 +21,14 @@
   {
    "text": "One for each grandparent, all four in bed.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The pages opened don't settle it. TV Tropes says the grandparents sleep in the middle of the house, and Wikipedia names only Grandpa Joe and Grandpa George. Four in one bed is not confirmed.",
-   "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/CharlieAndTheChocolateFactory",
-   "fix": "One for each grandparent, all sharing the one bed.",
+   "verdict": "wrong",
+   "why": "The transcript has Charlie saying good night to all four grandparents, but nothing shows all four in one bed.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=charlie-and-the-chocolate-factory",
+   "fix": "One for each grandparent, all four of them.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 18,

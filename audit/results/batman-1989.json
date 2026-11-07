@@ -21,42 +21,50 @@
   {
    "text": "Smilex in the hair gel and lipstick",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "The film spells it Smylex. Sources say the Joker poisons cosmetics and hygiene products but do not name hair gel.",
-   "source": "https://en.wikipedia.org/wiki/Batman_(1989_film)",
-   "fix": "Smylex in the cosmetics, laughing all the way",
+   "verdict": "wrong",
+   "why": "The film spells it Smylex, and Batman names hairspray, lipstick and perfume as the poisoned products. Hair gel is never named.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=batman",
+   "fix": "Smylex in the hairspray and lipstick",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Table 200 · for two · 11:30 pm",
    "where": "prop",
-   "verdict": "unsure",
-   "why": "The Joker's bicentennial parade is confirmed, but no source gives a time of 11:30.",
-   "source": "https://en.wikipedia.org/wiki/Joker_(Jack_Napier)",
+   "verdict": "wrong",
+   "why": "The Joker promises the gas at midnight at the parade. No source gives 11:30, and the line is built by the layout, so no stored text matches.",
+   "source": "https://en.wikipedia.org/wiki/Batman_(1989_film)",
    "fix": "Table 200 · for two · parade night",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08",
+   "nofind": true
   },
   {
    "text": "Vicki's lunch table, before the Joker redecorates.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The Joker lures Vicki to the Flugelheim Museum and his men vandalise it. No source has a lunch scene.",
+   "verdict": "wrong",
+   "why": "The Joker lures Vicki to the Flugelheim Museum, which his men vandalise. No lunch table scene shows in the plot or transcript.",
    "source": "https://en.wikipedia.org/wiki/Batman_(1989_film)",
    "fix": "Vicki at the Flugelheim, before the Joker redecorates.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Vicki's order, waiting on her mystery lunch date.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No lunch scene or mystery date appears in the plot sources.",
+   "verdict": "wrong",
+   "why": "No mystery lunch date shows in the plot or transcript. The Joker lures Vicki to the Flugelheim Museum.",
    "source": "https://en.wikipedia.org/wiki/Batman_(1989_film)",
-   "fix": "Vicki's order at the museum gala, before the paint flies.",
+   "fix": "Vicki's order, before the Joker visits the museum.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 9,

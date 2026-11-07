@@ -1,85 +1,89 @@
 {
-  "id": "Big Trouble in Little China (1986)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Before everything goes sideways",
-      "where": "wink",
-      "verdict": "wrong",
-      "why": "Wang takes Jack to his restaurant after the airport kidnapping and the Chinatown street battle, so things have already gone sideways. The restaurant is where the group regroups and plans the brothel break in.",
-      "source": "https://en.wikipedia.org/wiki/Big_Trouble_in_Little_China",
-      "fix": "After everything goes sideways",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Pork and chive dumplings -- Wang's family restaurant, before everything goes sideways",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Same problem as the printed wink. Wang's restaurant first appears after Miao Yin is taken and the Three Storms have shown up.",
-      "source": "https://en.wikipedia.org/wiki/Big_Trouble_in_Little_China",
-      "fix": "Pork and chive dumplings -- Wang's restaurant, where the crew regroups",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Wang's restaurant spring rolls -- the Chinatown kitchen where it all starts",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "The story starts at the market and the airport. Wang's restaurant is where the group meets Eddie, Gracie and Margo and plans the rescue.",
-      "source": "https://en.wikipedia.org/wiki/Big_Trouble_in_Little_China",
-      "fix": "Wang's restaurant spring rolls -- the Chinatown kitchen where the plan comes together",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Egg Shen's plum wine",
-      "where": "dish-name",
-      "verdict": "unsure",
-      "why": "Before the final battle Egg Shen pours the group a potent potion. None of the pages I opened call it plum wine.",
-      "source": "https://en.wikipedia.org/wiki/Big_Trouble_in_Little_China",
-      "fix": "Egg Shen's potion",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "The bottle for the trip below",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "The potion is poured in the cavern before the group enters Lo Pan's headquarters, which fits a trip below. The 'bottle' itself is not mentioned in the sources.",
-      "source": "https://en.wikipedia.org/wiki/Big_Trouble_in_Little_China",
-      "fix": "The cup before the trip below",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 8,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 4,
-    "tone": 3,
-    "look": 5,
-    "overall": 3.8,
-    "verdict": "A good Chinatown banquet menu with a great look, but the movie jokes and Jack's voice are thin, and the restaurant timing is off.",
-    "missing": [
-      "The Six Demon Bag (Egg Shen)",
-      "Jack on the CB radio (the Pork Chop Express)",
-      "Lo Pan's wedding (his lair)",
-      "The Three Storms (Thunder, Rain and Lightning)",
-      "Gracie's green eyes (Lo Pan's plan)",
-      "'It's all in the reflexes' bet (Jack and Wang)"
-    ],
-    "ideas": [
-      "Swap 'Egg Shen's plum wine' for 'Egg Shen's potion'",
-      "Add a CB radio 'Jack Burton here' line, replacing 'No MSG on request'",
-      "Rename 'House fried rice' to 'Three Storms fried rice'",
-      "Swap the fortune cookie note for 'Ignore the fortune, trust the reflexes'"
-    ],
-    "flat": false,
-    "done": false
+ "id": "Big Trouble in Little China (1986)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Before everything goes sideways",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Wang takes Jack to his restaurant after the airport kidnapping and the Chinatown street battle, so things have already gone sideways. The restaurant is where the group regroups and plans the brothel break in.",
+   "source": "https://en.wikipedia.org/wiki/Big_Trouble_in_Little_China",
+   "fix": "After everything goes sideways",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Pork and chive dumplings -- Wang's family restaurant, before everything goes sideways",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Same problem as the printed wink. Wang's restaurant first appears after Miao Yin is taken and the Three Storms have shown up.",
+   "source": "https://en.wikipedia.org/wiki/Big_Trouble_in_Little_China",
+   "fix": "Pork and chive dumplings -- Wang's restaurant, where the crew regroups",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Wang's restaurant spring rolls -- the Chinatown kitchen where it all starts",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The story starts at the market and the airport. Wang's restaurant is where the group meets Eddie, Gracie and Margo and plans the rescue.",
+   "source": "https://en.wikipedia.org/wiki/Big_Trouble_in_Little_China",
+   "fix": "Wang's restaurant spring rolls -- the Chinatown kitchen where the plan comes together",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Egg Shen's plum wine",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "Egg Shen hands round a magic potion in a flask before the cavern, and nothing calls it plum wine.",
+   "source": "https://en.wikipedia.org/wiki/Big_Trouble_in_Little_China",
+   "fix": "Egg Shen's magic potion",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "The bottle for the trip below",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "The potion is in a flask ('What's in the flask? Magic potion?'), not a bottle.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=big-trouble-in-little-china",
+   "fix": "The flask for the trip below",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 8,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 5,
+  "overall": 3.8,
+  "verdict": "A good Chinatown banquet menu with a great look, but the movie jokes and Jack's voice are thin, and the restaurant timing is off.",
+  "missing": [
+   "The Six Demon Bag (Egg Shen)",
+   "Jack on the CB radio (the Pork Chop Express)",
+   "Lo Pan's wedding (his lair)",
+   "The Three Storms (Thunder, Rain and Lightning)",
+   "Gracie's green eyes (Lo Pan's plan)",
+   "'It's all in the reflexes' bet (Jack and Wang)"
+  ],
+  "ideas": [
+   "Swap 'Egg Shen's plum wine' for 'Egg Shen's potion'",
+   "Add a CB radio 'Jack Burton here' line, replacing 'No MSG on request'",
+   "Rename 'House fried rice' to 'Three Storms fried rice'",
+   "Swap the fortune cookie note for 'Ignore the fortune, trust the reflexes'"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

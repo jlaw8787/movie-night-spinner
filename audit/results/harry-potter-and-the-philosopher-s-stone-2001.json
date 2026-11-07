@@ -1,58 +1,59 @@
 {
- "id": "Harry Potter and the Philosopher's Stone (2001)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Sorry about the squashed birthday cake, Harry. It still tastes fine. Eat up, you've got a long term ahead.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "A loose paraphrase with invented extras. Hagrid's real line is ''fraid I might have sat on it at some point but I imagine it'll taste fine just the same.'",
-   "source": "https://en.wikiquote.org/wiki/Harry_Potter_and_the_Philosopher%27s_Stone_(film)",
-   "fix": "Sorry about the cake, Harry. I sat on it, but it'll taste fine just the same. Happy birthday.",
-   "fix_note": {
-    "text": "Sorry about the cake, Harry. I sat on it, but it'll taste fine just the same. Happy birthday.",
-    "by": "Hagrid",
-    "kind": "note"
-   },
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Hagrid's rock cakes",
-   "where": "dish-name",
-   "verdict": "unsure",
-   "why": "Rock cakes are Hagrid's bake in the book. The film quotes and plot opened do not show them. The cake the film does show is the pink birthday cake.",
-   "source": "https://en.wikiquote.org/wiki/Harry_Potter_and_the_Philosopher%27s_Stone_(film)",
-   "fix": "Hagrid's squashed birthday cake",
-   "printed": true,
-   "done": false
+  "id": "Harry Potter and the Philosopher's Stone (2001)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Sorry about the squashed birthday cake, Harry. It still tastes fine. Eat up, you've got a long term ahead.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "A loose paraphrase with invented extras. Hagrid's real line is ''fraid I might have sat on it at some point but I imagine it'll taste fine just the same.'",
+      "source": "https://en.wikiquote.org/wiki/Harry_Potter_and_the_Philosopher%27s_Stone_(film)",
+      "fix": "Sorry about the cake, Harry. I sat on it, but it'll taste fine just the same. Happy birthday.",
+      "fix_note": {
+        "text": "Sorry about the cake, Harry. I sat on it, but it'll taste fine just the same. Happy birthday.",
+        "by": "Hagrid",
+        "kind": "note"
+      },
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Hagrid's rock cakes",
+      "where": "dish-name",
+      "verdict": "wrong",
+      "why": "Rock cakes are a book detail. The film plot and quotes opened show none, so the name drops Hagrid and keeps the recipe.",
+      "source": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Philosopher's_Stone_(film)",
+      "fix": "Hogwarts rock cakes",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 5,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 5,
+    "overall": 4.4,
+    "verdict": "The best looking of the lot, a proper Great Hall banquet with the trolley, the troll and the cupboard all there.",
+    "missing": [
+      "Hagrid's pink cake with 'HAPPEE BIRTHDAE HARRY' in green icing",
+      "Ron's Wingardium Leviosa on the troll's club",
+      "Dudley's pig's tail",
+      "Neville's house points at the end",
+      "The Chocolate Frog card",
+      "Hagrid, Keeper of Keys and Grounds"
+    ],
+    "ideas": [
+      "Swap 'Hagrid's rock cakes' for 'Hagrid's squashed birthday cake' (pink icing, green writing).",
+      "Swap 'Treacle tart' note for 'Dudley's pig's tail pastry twists' (Hagrid's umbrella).",
+      "Swap 'Sparkling elderflower cordial' for 'Neville's ten point toast' fizz name.",
+      "Add the Hogwarts letter as a place card ('The cupboard under the stairs')."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 13,
- "vibe": {
-  "world": 5,
-  "moments": 4,
-  "food": 4,
-  "tone": 4,
-  "look": 5,
-  "overall": 4.4,
-  "verdict": "The best looking of the lot, a proper Great Hall banquet with the trolley, the troll and the cupboard all there.",
-  "missing": [
-   "Hagrid's pink cake with 'HAPPEE BIRTHDAE HARRY' in green icing",
-   "Ron's Wingardium Leviosa on the troll's club",
-   "Dudley's pig's tail",
-   "Neville's house points at the end",
-   "The Chocolate Frog card",
-   "Hagrid, Keeper of Keys and Grounds"
-  ],
-  "ideas": [
-   "Swap 'Hagrid's rock cakes' for 'Hagrid's squashed birthday cake' (pink icing, green writing).",
-   "Swap 'Treacle tart' note for 'Dudley's pig's tail pastry twists' (Hagrid's umbrella).",
-   "Swap 'Sparkling elderflower cordial' for 'Neville's ten point toast' fizz name.",
-   "Add the Hogwarts letter as a place card ('The cupboard under the stairs')."
-  ],
-  "flat": false,
-  "done": false
- }
 }

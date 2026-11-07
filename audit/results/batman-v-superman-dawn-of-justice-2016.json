@@ -26,22 +26,26 @@
   {
    "text": "Serve the drinks when Lex hands over the jar of peach tea at the hearing.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The fandom wiki says Finch notices the jar of Granny's Peach Tea sitting on her desk during the Capitol hearing. Nothing I could open shows Lex handing it over. Finch's 'bucket of piss' line is from an earlier meeting with Lex.",
+   "verdict": "wrong",
+   "why": "The jar of Granny's Peach Tea sits on Finch's desk at the hearing. Nothing shows Lex handing it over there.",
    "source": "https://dcextendeduniverse.fandom.com/wiki/June_Finch",
    "fix": "Serve the drinks when Finch finds Lex's jar of peach tea on her desk at the hearing.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Wayne gala chocolate soufflé",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "The gala in the film is Lex's at LexCorp, which the menu itself names elsewhere. A Wayne gala is not in the sources.",
+   "verdict": "wrong",
+   "why": "The gala is Lex's, held at LexCorp. Bruce goes there to steal data and meets Diana. There is no Wayne gala.",
    "source": "https://en.wikipedia.org/wiki/Batman_v_Superman:_Dawn_of_Justice",
-   "fix": "Luthor gala chocolate soufflé",
+   "fix": "LexCorp gala chocolate soufflé",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 18,
@@ -68,7 +72,7 @@
   ],
   "flat": true,
   "done": false,
-  "overall": 3.0
+  "overall": 3
  },
  "checked": "2026-11-07"
 }

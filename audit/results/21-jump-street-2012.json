@@ -20,13 +20,15 @@
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Jenko's order, now he sits with the chem kids.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Jenko does join the AP Chemistry kids, but no opened source says a grape slushie is his order.",
+   "verdict": "wrong",
+   "why": "Jenko does become friends with the AP Chemistry kids, but no source has him ordering a drink.",
    "source": "https://en.wikipedia.org/wiki/21_Jump_Street_(film)",
-   "fix": "Sold in the cafeteria, like everything else at Sagan High."
+   "fix": "Jenko's table now, with the chem kids.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

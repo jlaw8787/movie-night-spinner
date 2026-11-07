@@ -27,12 +27,13 @@
     {
       "text": "Serve dessert when the flubber starts dancing around the lab.",
       "where": "cue",
-      "verdict": "unsure",
-      "why": "Wikipedia has Weebo letting Flubber dance around the house after the basketball game. The lab is part of Brainard's house, so the cue is close, but the sources say house.",
+      "verdict": "wrong",
+      "why": "Wikipedia has Weebo releasing Flubber to dance around the house after the basketball game. It never calls the place a lab.",
       "source": "https://en.wikipedia.org/wiki/Flubber_(film)",
       "fix": "Serve dessert when the flubber starts dancing around the house.",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 13,

@@ -21,22 +21,25 @@
   {
    "text": "Christmas Eve",
    "where": "prop",
-   "verdict": "unsure",
-   "why": "The tree lighting in Gotham Plaza is confirmed, and the Ice Princess dies on the button that lights it. No source gives a date.",
-   "source": "https://dc.fandom.com/wiki/Ice_Princess_(Burtonverse)",
-   "fix": "Tree Lighting Pass, Gotham Plaza",
+   "verdict": "wrong",
+   "why": "The tree lighting in Gotham Plaza is real, but the Penguin sets it for 'tomorrow night' and the film never says Christmas Eve.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=batman-returns",
+   "fix": "Tree lighting night",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Selina's order. Honey, I'm home.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "'Honey, I'm home' is a real Selina line, but no source shows her ordering an egg cream.",
-   "source": "https://moviemistakes.com/film125/quotes/page2",
-   "fix": "Selina's order. Honey, I'm home. Oh, I forgot.",
+   "verdict": "ok",
+   "why": "'Honey, I'm home! Oh, I forgot. I'm not married.' is Selina's line, said twice. 'Selina's order' is the usual menu joke.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=batman-returns",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

@@ -5,22 +5,24 @@
     {
       "text": "Kat's on the phone the whole way down Route 23.",
       "where": "dish-note",
-      "verdict": "unsure",
-      "why": "Wikipedia only calls Kat a businesswoman who is stopped from entering Route 23. None of the pages I opened say she is on the phone.",
+      "verdict": "wrong",
+      "why": "Wikipedia has Kat Jennings as a businesswoman Kimberly stops from entering Route 23, and the survivors later ride in her SUV. The transcript has no phone scene for her.",
       "source": "https://en.wikipedia.org/wiki/Final_Destination_2",
       "fix": "Kat's SUV is the one the survivors pile into.",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     },
     {
       "text": "Room Key: Last Stop Motel, Room 12, check-out 10am",
       "where": "prop",
-      "verdict": "unsure",
-      "why": "The room key line says check-out 10am, but the key card printed on the same face says Checkout 11. The two times disagree. This is a menu slip, not a film fact.",
-      "source": "",
+      "verdict": "wrong",
+      "why": "This is a menu slip, not a film fact: the key card printed on the same face says Checkout 11, so the line is changed to 11am to match.",
+      "source": "audit/cards/final-destination-2-2003.json",
       "fix": "Room Key: Last Stop Motel, Room 12, check-out 11am",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 17,

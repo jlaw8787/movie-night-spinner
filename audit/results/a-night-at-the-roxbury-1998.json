@@ -1,74 +1,78 @@
 {
-  "id": "A Night at the Roxbury (1998)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Kamehl Zadir, the club owner who finally waves the Butabi brothers past the rope",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "The club owner is Benny Zadir. Kamehl is the brothers' father, Kamehl Butabi. Zadir doesn't wave them in either: Richard Grieco uses his fame to get them past the door, and the brothers meet Zadir inside.",
-      "source": "https://en.wikipedia.org/wiki/A_Night_at_the_Roxbury",
-      "fix": "Benny Zadir, the club owner who loves the brothers' idea for a club",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "The family flower business",
-      "where": "wink",
-      "verdict": "wrong",
-      "why": "The brothers work in their father's artificial plant store. It sells fake plants, not flowers.",
-      "source": "https://en.wikipedia.org/wiki/A_Night_at_the_Roxbury",
-      "fix": "The family fake plant shop",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Doug and Steve's round, on Richard Grieco's tab.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "Grieco gets the brothers into the club after the fender bender, but the pages read say nothing about him paying for drinks.",
-      "source": "https://en.wikipedia.org/wiki/A_Night_at_the_Roxbury",
-      "fix": "Doug and Steve's round, once Richard Grieco gets them in.",
-      "printed": false,
-      "done": false
-    },
-    {
-      "text": "Doug and Steve in matching suits",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "The poster in the picture has Doug in a blue suit and Steve in magenta. None of the pages read say the suits match.",
-      "source": "https://en.wikiquote.org/wiki/A_Night_at_the_Roxbury",
-      "fix": "Doug and Steve in their shiny club suits",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 11,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 4,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "The velvet rope and head bob are right, but the wrong Zadir is printed and most of the film's best scenes are missing.",
-    "missing": [
-      "Richard Grieco's Ferrari fender bender on the ATM run (the road to the club)",
-      "'Why go out for burgers when you have steak at home?' (Doug, outside the shop)",
-      "Credit Vixen, the card approval line Doug flirts with",
-      "Dooey stopping for fluffy whip on the way to Zadir's house",
-      "'You can take our phones and you can take our keys, but you cannot take away our dreams' (Doug)",
-      "'Guys, guys. This is the coat room. The club's in here.' (Richard Grieco)"
-    ],
-    "ideas": [
-      "Swap 'Neon pink raspberry cheesecake cups' for 'Dooey's fluffy whip raspberry cups', after the whipped cream stop.",
-      "Swap the plain note under 'Roxbury club sliders' for Doug's 'Why go out for burgers when you have steak at home?'",
-      "Swap 'Club cosmopolitan' for a 'Credit Vixen cosmo' on the bar list.",
-      "Swap the footer line 'No discussing the synchronized head bob at the tables' for 'This is the coat room. The club's in here.'"
-    ],
-    "flat": false,
-    "done": false
+ "id": "A Night at the Roxbury (1998)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Kamehl Zadir, the club owner who finally waves the Butabi brothers past the rope",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The club owner is Benny Zadir. Kamehl is the brothers' father, Kamehl Butabi. Zadir doesn't wave them in either: Richard Grieco uses his fame to get them past the door, and the brothers meet Zadir inside.",
+   "source": "https://en.wikipedia.org/wiki/A_Night_at_the_Roxbury",
+   "fix": "Benny Zadir, the club owner who loves the brothers' idea for a club",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "The family flower business",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "The brothers work in their father's artificial plant store. It sells fake plants, not flowers.",
+   "source": "https://en.wikipedia.org/wiki/A_Night_at_the_Roxbury",
+   "fix": "The family fake plant shop",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Doug and Steve's round, on Richard Grieco's tab.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Grieco gets the brothers into the club after the crash. No source has him paying for drinks.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=night-at-the-roxbury-a",
+   "fix": "Doug and Steve's round, once Richard Grieco gets them in.",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Doug and Steve in matching suits",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "The poster has Doug in blue and Steve in magenta, so the suits do not match.",
+   "source": "https://en.wikipedia.org/wiki/A_Night_at_the_Roxbury",
+   "fix": "Doug and Steve in their club suits",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "The velvet rope and head bob are right, but the wrong Zadir is printed and most of the film's best scenes are missing.",
+  "missing": [
+   "Richard Grieco's Ferrari fender bender on the ATM run (the road to the club)",
+   "'Why go out for burgers when you have steak at home?' (Doug, outside the shop)",
+   "Credit Vixen, the card approval line Doug flirts with",
+   "Dooey stopping for fluffy whip on the way to Zadir's house",
+   "'You can take our phones and you can take our keys, but you cannot take away our dreams' (Doug)",
+   "'Guys, guys. This is the coat room. The club's in here.' (Richard Grieco)"
+  ],
+  "ideas": [
+   "Swap 'Neon pink raspberry cheesecake cups' for 'Dooey's fluffy whip raspberry cups', after the whipped cream stop.",
+   "Swap the plain note under 'Roxbury club sliders' for Doug's 'Why go out for burgers when you have steak at home?'",
+   "Swap 'Club cosmopolitan' for a 'Credit Vixen cosmo' on the bar list.",
+   "Swap the footer line 'No discussing the synchronized head bob at the tables' for 'This is the coat room. The club's in here.'"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

@@ -32,12 +32,14 @@
   {
    "text": "Casper cooks Kat a breakfast she can't possibly finish.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Wikipedia says Casper serves the Harveys breakfast, so it is for Kat and her dad. None of the sources say Kat could not finish it, so the second half is unsupported.",
+   "verdict": "wrong",
+   "why": "Wikipedia says Casper wins the Harveys' trust by serving them breakfast. Nothing says Kat can't finish it.",
    "source": "https://en.wikipedia.org/wiki/Casper_(film)",
-   "fix": "Casper cooks breakfast for Kat and her dad to win them over.",
+   "fix": "Casper serves Kat and her dad a breakfast to win them over",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

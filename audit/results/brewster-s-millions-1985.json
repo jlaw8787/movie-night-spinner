@@ -1,53 +1,55 @@
 {
-  "id": "Brewster's Millions (1985)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "VOTE MONTY FOR MAYOR",
-      "where": "prop",
-      "verdict": "wrong",
-      "why": "Monty runs a protest campaign urging a vote for 'none of the above'. He does not ask anyone to vote for him, and he is forced to end the campaign when he starts leading as a write in.",
-      "source": "https://en.wikipedia.org/wiki/Brewster%27s_Millions_(1985_film)",
-      "fix": "VOTE NONE OF THE ABOVE",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Postage Stamps",
-      "where": "dish-name",
-      "verdict": "unsure",
-      "why": "Monty does buy a rare stamp (the Inverted Jenny gag) and posts a postcard to Granville and Baxter. The plot does not say what the postcard cost, so 'most expensive postcard ever sent' on the unprinted note is a stretch.",
-      "source": "https://en.wikipedia.org/wiki/Brewster%27s_Millions_(1985_film)",
-      "fix": "Postage Stamps (rare stamp shortbread, six)",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 10,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 4,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "A neat ballpark scorecard that suits the exhibition game, but the main stunts of the film are missing and the badge gets the campaign wrong.",
-    "missing": [
-      "None of the Above campaign (the mayor race)",
-      "The suite at the Plaza Hotel (Monty)",
-      "The Inverted Jenny postcard (Monty)",
-      "Warren Cox and the bribe (Granville and Baxter)",
-      "Spike's investments (Nolan)",
-      "Angela Drake keeping the books (the law firm)"
-    ],
-    "ideas": [
-      "Swap the Vote Monty badge for 'None of the Above'",
-      "Add the Inverted Jenny postcard as a stamp on the sweets page, replacing 'Postage Stamps' plain note",
-      "Add a Plaza Hotel suite line to the bar side, replacing the 'Draft Beer' note",
-      "Swap the 'Roasted Peanuts' note for 'Thirty million in thirty days'"
-    ],
-    "flat": false,
-    "done": false
+ "id": "Brewster's Millions (1985)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "VOTE MONTY FOR MAYOR",
+   "where": "prop",
+   "verdict": "wrong",
+   "why": "Monty runs a protest campaign urging a vote for 'none of the above'. He does not ask anyone to vote for him, and he is forced to end the campaign when he starts leading as a write in.",
+   "source": "https://en.wikipedia.org/wiki/Brewster%27s_Millions_(1985_film)",
+   "fix": "VOTE NONE OF THE ABOVE",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Postage Stamps",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "Monty pays a record price for a rare stamp and uses it on a postcard, so the record is for the stamp, not the postcard.",
+   "source": "https://en.wikipedia.org/wiki/Brewster's_Millions_(1985_film)",
+   "fix": "for the highest price ever paid for a stamp",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A neat ballpark scorecard that suits the exhibition game, but the main stunts of the film are missing and the badge gets the campaign wrong.",
+  "missing": [
+   "None of the Above campaign (the mayor race)",
+   "The suite at the Plaza Hotel (Monty)",
+   "The Inverted Jenny postcard (Monty)",
+   "Warren Cox and the bribe (Granville and Baxter)",
+   "Spike's investments (Nolan)",
+   "Angela Drake keeping the books (the law firm)"
+  ],
+  "ideas": [
+   "Swap the Vote Monty badge for 'None of the Above'",
+   "Add the Inverted Jenny postcard as a stamp on the sweets page, replacing 'Postage Stamps' plain note",
+   "Add a Plaza Hotel suite line to the bar side, replacing the 'Draft Beer' note",
+   "Swap the 'Roasted Peanuts' note for 'Thirty million in thirty days'"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

@@ -21,12 +21,14 @@
   {
    "text": "Helen's shower, where Paris beat a handmade card.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Sources say Helen's Paris trip upstaged Annie's gift. They do not say the gift was a handmade card.",
-   "source": "https://www.wikiwand.com/en/articles/Bridesmaids_(2011_film)",
+   "verdict": "wrong",
+   "why": "Helen's surprise trip to Paris upstages Annie's heartfelt gift, and no source calls the gift a handmade card.",
+   "source": "https://en.wikipedia.org/wiki/Bridesmaids_(2011_film)",
    "fix": "Helen's shower, where Paris beat Annie's gift.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

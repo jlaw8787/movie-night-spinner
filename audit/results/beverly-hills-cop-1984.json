@@ -65,12 +65,14 @@
   {
    "text": "Sent down to Taggart and Rosewood's car.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Taggart and Rosewood are assigned to tail Axel, but no source shows him sending food to their car.",
+   "verdict": "wrong",
+   "why": "Taggart and Rosewood are told to tail Axel and he wrecks their car's exhaust with bananas. No source shows him sending food to their car.",
    "source": "https://en.wikipedia.org/wiki/Beverly_Hills_Cop",
    "fix": "For the two cops trailing Axel around town.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

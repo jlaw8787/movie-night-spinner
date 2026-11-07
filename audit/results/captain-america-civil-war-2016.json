@@ -5,12 +5,14 @@
   {
    "text": "Serve dessert when Tony sits in Aunt May's kitchen with her walnut date loaf.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Tony does visit Peter's home in Queens. I could not find a walnut date loaf, or any food, in that scene in the sources I opened.",
-   "source": "https://movies.fandom.com/wiki/Captain_America:_Civil_War",
-   "fix": "Serve dessert when Tony sits in Aunt May's kitchen.",
+   "verdict": "wrong",
+   "why": "Tony visits Peter in Queens and Aunt May is in the scene, but no kitchen or date loaf shows in the transcript or Wikipedia plot.",
+   "source": "https://en.wikipedia.org/wiki/Captain_America:_Civil_War",
+   "fix": "Serve dessert when Tony visits Peter in Queens and meets Aunt May.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Berlin airport currywurst",
@@ -26,22 +28,26 @@
   {
    "text": "Bucky buying plums at the Bucharest market the morning the whole world comes for him.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Bucky is in Bucharest and is hunted there, but I found no market or plums scene in the sources I opened.",
-   "source": "https://movies.fandom.com/wiki/Captain_America:_Civil_War",
-   "fix": "Bucky's quiet morning in Bucharest before the chase.",
+   "verdict": "wrong",
+   "why": "Wikipedia has Bucky tracked to Bucharest and hunted there, but neither it nor the transcript has a market or plums.",
+   "source": "https://en.wikipedia.org/wiki/Captain_America:_Civil_War",
+   "fix": "the Bucharest morning the whole world comes for Bucky",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Peter rates Bucky's metal arm.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Peter's debut is at the airport fight, but the sources I opened do not quote him talking about Bucky's arm.",
-   "source": "https://movies.fandom.com/wiki/Captain_America:_Civil_War",
+   "verdict": "ok",
+   "why": "At the airport fight Peter says to Bucky, 'You have a metal arm? That is awesome, dude.'",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=captain-america-civil-war",
    "fix": "Peter's big first day out at the airport.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Sit down and eat. We can disagree tomorrow. Tonight, let's just be friends.",

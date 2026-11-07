@@ -4,12 +4,13 @@
   {
    "text": "Serve dessert when Axel bluffs his way into the swanky mansion party.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Axel and the others trace the getaway vehicle to the Playboy Mansion event. The Wikiquote scene shows him pulling a cement truck up to the valet and tipping $50 to park it, not bluffing his way in.",
-   "source": "https://en.wikiquote.org/wiki/Beverly_Hills_Cop_II",
-   "fix": "Serve dessert when Axel parks a cement truck at the Playboy Mansion party.",
+   "verdict": "ok",
+   "why": "Axel trails the getaway vehicle to the Playboy Mansion event and talks his way in, telling the host his group is the Board of Health sent to clean the pool.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=beverly-hills-cop-ii",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 21,

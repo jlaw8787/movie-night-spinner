@@ -21,52 +21,62 @@
   {
    "text": "White House State Dinner",
    "where": "venue",
-   "verdict": "unsure",
-   "why": "The film's White House event is a summit (Wikipedia and the MCU fandom page), not a state dinner.",
-   "source": "https://en.wikipedia.org/wiki/Captain_America:_Brave_New_World",
+   "verdict": "wrong",
+   "why": "Wikipedia has Ross inviting Sam and Torres to a summit with world leaders at the White House, not a dinner.",
+   "source": "https://en.wikipedia.org/wiki/Captain_America%3A_Brave_New_World",
    "fix": "White House Summit",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "A state dinner for the world",
    "where": "sign",
-   "verdict": "unsure",
-   "why": "Same: the film's event is a summit.",
-   "source": "https://en.wikipedia.org/wiki/Captain_America:_Brave_New_World",
+   "verdict": "wrong",
+   "why": "The White House event is a summit with world leaders, not a state dinner.",
+   "source": "https://en.wikipedia.org/wiki/Captain_America%3A_Brave_New_World",
    "fix": "A summit for the world",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "the state dinner at the White House",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Same: a summit, not a dinner.",
-   "source": "https://en.wikipedia.org/wiki/Captain_America:_Brave_New_World",
+   "verdict": "wrong",
+   "why": "The White House event is a summit where Ross talks about adamantium, not a dinner.",
+   "source": "https://en.wikipedia.org/wiki/Captain_America%3A_Brave_New_World",
    "fix": "the summit at the White House",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "State Dinner",
    "where": "place card",
-   "verdict": "unsure",
-   "why": "Same: a summit, not a dinner.",
-   "source": "https://en.wikipedia.org/wiki/Captain_America:_Brave_New_World",
+   "verdict": "wrong",
+   "why": "The White House event is a summit, not a state dinner.",
+   "source": "https://en.wikipedia.org/wiki/Captain_America%3A_Brave_New_World",
    "fix": "Summit",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Sam pours one for Isaiah first.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No source I opened has Sam pouring a drink. He does ask after Isaiah, so it may be a loose paraphrase.",
-   "source": "",
-   "fix": "Sam asks for Isaiah's seat first.",
+   "verdict": "wrong",
+   "why": "No one pours a drink in the transcript or plot. Wikipedia has Sam accepting the summit invite on condition that Isaiah Bradley is invited too.",
+   "source": "https://en.wikipedia.org/wiki/Captain_America%3A_Brave_New_World",
+   "fix": "Sam gets Isaiah a seat first.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

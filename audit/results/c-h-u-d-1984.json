@@ -1,62 +1,68 @@
 {
-  "id": "C.H.U.D. (1984)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Spring & Crosby",
-      "where": "venue",
-      "verdict": "unsure",
-      "why": "The plot has a diner where two cops and the waitress are killed, but the pages I opened never name it. I could not confirm Spring & Crosby as the diner's name.",
-      "source": "https://en.wikipedia.org/wiki/C.H.U.D.",
-      "fix": "Spring & Crosby",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "the Reverend's shelter on the Bowery",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "The Reverend runs the local homeless shelter. No source I opened places it on the Bowery, and the card itself puts the neighbourhood in SoHo.",
-      "source": "https://en.wikipedia.org/wiki/C.H.U.D.",
-      "fix": "the Reverend's shelter, ready for dunking into the stew",
-      "printed": false,
-      "done": false
-    },
-    {
-      "text": "Greenwich Village cider doughnuts -- the Village above the sewers",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "The card sets the coffee shop in SoHo and the film names no Village location in any source I opened. The phrase also contradicts the printed map.",
-      "source": "https://en.wikipedia.org/wiki/C.H.U.D.",
-      "fix": "SoHo cider doughnuts -- SoHo above the sewers",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 6,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 4,
-    "look": 5,
-    "overall": 3.8,
-    "verdict": "A coffee shop with a sewer map is a clever idea and looks great, but the film's best bits are barely used.",
-    "missing": [
-      "Contamination Hazard Urban Disposal on the drums (the NRC)",
-      "The Reverend and his proof (A.J. Shepherd)",
-      "Captain Bosch looking for his wife (Flora Bosch)",
-      "George Cooper photographing the undergrounders",
-      "The diner attack (two cops and the waitress)",
-      "Lauren's clogged shower drain (her flat)"
-    ],
-    "ideas": [
-      "Add 'Contamination Hazard Urban Disposal' under the CHUD lettering",
-      "Swap 'Rice Pudding' note for a line about the Reverend's proof",
-      "Add a Flora Bosch dog walk joke to the drinks list, replacing 'Coffee' plain note",
-      "Replace the Western omelette note with the diner attack"
-    ],
-    "flat": false,
-    "done": false
+ "id": "C.H.U.D. (1984)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Spring & Crosby",
+   "where": "venue",
+   "verdict": "ok",
+   "why": "Spring and Crosby are real SoHo streets and the film is set in downtown Manhattan. The coffee shop is the menu's own venue and does not claim to be the film's diner.",
+   "source": "https://en.wikipedia.org/wiki/C.H.U.D.",
+   "fix": "Spring & Crosby",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "the Reverend's shelter on the Bowery",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Wikipedia says the Reverend runs the local homeless shelter but gives no street. Bowery is not shown anywhere, so it is dropped.",
+   "source": "https://en.wikipedia.org/wiki/C.H.U.D.",
+   "fix": "the Reverend's shelter, ready for dunking into the stew",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Greenwich Village cider doughnuts -- the Village above the sewers",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Nothing I opened puts the film in Greenwich Village, and the card sets the shop in SoHo. The film is set in New York over the sewers, so the name now says Manhattan.",
+   "source": "https://en.wikipedia.org/wiki/C.H.U.D.",
+   "fix": "Manhattan cider doughnuts -- the streets above the sewers",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 6,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 5,
+  "overall": 3.8,
+  "verdict": "A coffee shop with a sewer map is a clever idea and looks great, but the film's best bits are barely used.",
+  "missing": [
+   "Contamination Hazard Urban Disposal on the drums (the NRC)",
+   "The Reverend and his proof (A.J. Shepherd)",
+   "Captain Bosch looking for his wife (Flora Bosch)",
+   "George Cooper photographing the undergrounders",
+   "The diner attack (two cops and the waitress)",
+   "Lauren's clogged shower drain (her flat)"
+  ],
+  "ideas": [
+   "Add 'Contamination Hazard Urban Disposal' under the CHUD lettering",
+   "Swap 'Rice Pudding' note for a line about the Reverend's proof",
+   "Add a Flora Bosch dog walk joke to the drinks list, replacing 'Coffee' plain note",
+   "Replace the Western omelette note with the diner attack"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

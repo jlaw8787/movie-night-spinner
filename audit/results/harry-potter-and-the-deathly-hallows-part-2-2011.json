@@ -1,58 +1,59 @@
 {
- "id": "Harry Potter and the Deathly Hallows: Part 2 (2011)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Hogwarts isn't done yet. Stand up, eat something, and let's hold this castle.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Not a line from the film. Neville's real lines at the Room of Requirement include 'Hey, listen up, you lot! Brought you a surprise.' Seamus jokes about Aberforth's cooking there too.",
-   "source": "https://en.wikiquote.org/wiki/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_2",
-   "fix": "Aberforth's cooking is rough, I know. Eat up anyway, then we hold the castle.",
-   "fix_note": {
-    "text": "Aberforth's cooking is rough, I know. Eat up anyway, then we hold the castle.",
-    "by": "Neville Longbottom",
-    "kind": "note"
-   },
-   "printed": false,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Aberforth's goats would like a sip.",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The plot and quotes opened do not show goats. They are from the book.",
-   "source": "https://en.wikiquote.org/wiki/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_2",
-   "fix": "Served with Aberforth's food parcel at the Hog's Head.",
-   "printed": true,
-   "done": false
+  "id": "Harry Potter and the Deathly Hallows: Part 2 (2011)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Hogwarts isn't done yet. Stand up, eat something, and let's hold this castle.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Not a line from the film. Neville's real lines at the Room of Requirement include 'Hey, listen up, you lot! Brought you a surprise.' Seamus jokes about Aberforth's cooking there too.",
+      "source": "https://en.wikiquote.org/wiki/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_2",
+      "fix": "Aberforth's cooking is rough, I know. Eat up anyway, then we hold the castle.",
+      "fix_note": {
+        "text": "Aberforth's cooking is rough, I know. Eat up anyway, then we hold the castle.",
+        "by": "Neville Longbottom",
+        "kind": "note"
+      },
+      "printed": false,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Aberforth's goats would like a sip.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "No goats appear in the plot or transcript, they come from the book. Wikipedia has Aberforth as the owner of the Hog's Head pub.",
+      "source": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_2",
+      "fix": "Aberforth of the Hog's Head would like a sip.",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    }
+  ],
+  "checked_ok": 15,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "The ration sheet suits a castle under siege, and the dragon, Aberforth and Neville all show up.",
+    "missing": [
+      "Molly Weasley's duel with Bellatrix (only a wink)",
+      "Neville taking the sword from the Sorting Hat",
+      "Griphook and the Gringotts cup Horcrux",
+      "Harry's King's Cross limbo with Dumbledore",
+      "The Elder Wand snapping at the end",
+      "Seamus on Aberforth's cooking"
+    ],
+    "ideas": [
+      "Swap 'Great Hall lemon roast chicken' for 'Aberforth's food parcel' (matches the cue, he gives the trio food).",
+      "Swap 'Lamb and coffee stew over mash' for 'Aberforth's stew, hard to digest' (Seamus: 'Be a surprise if we can digest it').",
+      "Swap 'Parmesan thyme crisps' for 'Honeydukes cellar crisps' (the secret passage in the cellar).",
+      "Add a Marauder's-style stamp 'Neville says: stand down' to the ration sheet."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 15,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "The ration sheet suits a castle under siege, and the dragon, Aberforth and Neville all show up.",
-  "missing": [
-   "Molly Weasley's duel with Bellatrix (only a wink)",
-   "Neville taking the sword from the Sorting Hat",
-   "Griphook and the Gringotts cup Horcrux",
-   "Harry's King's Cross limbo with Dumbledore",
-   "The Elder Wand snapping at the end",
-   "Seamus on Aberforth's cooking"
-  ],
-  "ideas": [
-   "Swap 'Great Hall lemon roast chicken' for 'Aberforth's food parcel' (matches the cue, he gives the trio food).",
-   "Swap 'Lamb and coffee stew over mash' for 'Aberforth's stew, hard to digest' (Seamus: 'Be a surprise if we can digest it').",
-   "Swap 'Parmesan thyme crisps' for 'Honeydukes cellar crisps' (the secret passage in the cellar).",
-   "Add a Marauder's-style stamp 'Neville says: stand down' to the ration sheet."
-  ],
-  "flat": false,
-  "done": false
- }
 }

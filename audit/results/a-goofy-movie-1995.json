@@ -1,74 +1,77 @@
 {
-  "id": "A Goofy Movie (1995)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve the mains when Goofy and Max finally make camp by Lake Destiny.",
-      "where": "cue",
-      "verdict": "wrong",
-      "why": "They never reach Lake Destiny. They camp on the way, run into Pete and P.J., and Max redraws the route to Los Angeles. Goofy only says it is a couple of days away.",
-      "source": "https://en.wikipedia.org/wiki/A_Goofy_Movie",
-      "fix": "Serve the mains when Goofy and Max run into Pete and P.J. at the campsite.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Max and Roxanne at the big concert in LA",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Roxanne is not at the concert. She watches it on TV at a party at home, while Max and Goofy end up on stage.",
-      "source": "https://en.wikipedia.org/wiki/A_Goofy_Movie",
-      "fix": "Max and Goofy on stage at the big Powerline concert in LA",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Final night of the world tour",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "The sources say Powerline plays a live concert in Los Angeles. None of them call it the final night of a world tour.",
-      "source": "https://en.wikiquote.org/wiki/A_Goofy_Movie",
-      "fix": "The big Powerline concert",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Home sweet home",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "The map names Spoonerville as home. Neither source I opened names the town.",
-      "source": "https://en.wikipedia.org/wiki/A_Goofy_Movie",
-      "fix": "Home sweet home, the start of the road trip",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 10,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 4,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "Bright placemat with a road map and the possum park, but the cue and one note get the road trip wrong.",
-    "missing": [
-      "The Perfect Cast with the steak (campsite)",
-      "Hi Dad spelled in the soup cup (night in the car)",
-      "Bigfoot doing the Stayin' Alive dance (campsite)",
-      "Stand Out (school assembly)",
-      "Driving the car down the Colorado River (Grand Canyon)",
-      "Navigator Max drawing the new route (night in the car)"
-    ],
-    "ideas": [
-      "Rename 'Perfect Cast Fish Fingers' note to 'Steak on a hook, Pete's loss'",
-      "Swap 'Cherry Slush' for a 'Stand Out Slush' with a Powerline cup",
-      "Add a soup-cup 'Hi Dad' line on the dad note, replacing 'Love you, kiddo'",
-      "Swap the 'Fresh Lemonade' for a 'Grand Canyon rapids' blue drink"
-    ],
-    "flat": false,
-    "done": false
+ "id": "A Goofy Movie (1995)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains when Goofy and Max finally make camp by Lake Destiny.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "They never reach Lake Destiny. They camp on the way, run into Pete and P.J., and Max redraws the route to Los Angeles. Goofy only says it is a couple of days away.",
+   "source": "https://en.wikipedia.org/wiki/A_Goofy_Movie",
+   "fix": "Serve the mains when Goofy and Max run into Pete and P.J. at the campsite.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Max and Roxanne at the big concert in LA",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Roxanne is not at the concert. She watches it on TV at a party at home, while Max and Goofy end up on stage.",
+   "source": "https://en.wikipedia.org/wiki/A_Goofy_Movie",
+   "fix": "Max and Goofy on stage at the big Powerline concert in LA",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Final night of the world tour",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Powerline is doing one concert in L.A., shown at Stacey's party on pay-per-view. There is no world tour.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=goofy-movie-a",
+   "fix": "The big Powerline concert in L.A.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Home sweet home",
+   "where": "wink",
+   "verdict": "ok",
+   "why": "Plain menu joke on the Spoonerville map label. It claims nothing about the plot.",
+   "source": "https://en.wikipedia.org/wiki/A_Goofy_Movie",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Bright placemat with a road map and the possum park, but the cue and one note get the road trip wrong.",
+  "missing": [
+   "The Perfect Cast with the steak (campsite)",
+   "Hi Dad spelled in the soup cup (night in the car)",
+   "Bigfoot doing the Stayin' Alive dance (campsite)",
+   "Stand Out (school assembly)",
+   "Driving the car down the Colorado River (Grand Canyon)",
+   "Navigator Max drawing the new route (night in the car)"
+  ],
+  "ideas": [
+   "Rename 'Perfect Cast Fish Fingers' note to 'Steak on a hook, Pete's loss'",
+   "Swap 'Cherry Slush' for a 'Stand Out Slush' with a Powerline cup",
+   "Add a soup-cup 'Hi Dad' line on the dad note, replacing 'Love you, kiddo'",
+   "Swap the 'Fresh Lemonade' for a 'Grand Canyon rapids' blue drink"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

@@ -21,12 +21,14 @@
   {
    "text": "Debbie's wedding lobster",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "The plot sources cover Debbie's marriage to Fester, the honeymoon bath and the electric chairs, but no lobster dinner, so the scene is not confirmed.",
-   "source": "https://en.wikipedia.org/wiki/Addams_Family_Values",
-   "fix": "Black widow lobster",
+   "verdict": "wrong",
+   "why": "The script has no lobster. Debbie is called the black widow, so the dish is renamed after that.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=addams-family-values",
+   "fix": "Debbie's black widow lobster",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

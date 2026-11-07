@@ -5,12 +5,14 @@
   {
    "text": "Serve the lunch when the crew takes a break between cars.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The plot summary I opened shows a single working day but does not describe a lunch break. It does mention Big Joe's Dog House, a food stand beside the car wash, though most of its scenes were cut.",
-   "source": "https://en.wikipedia.org/wiki/Car_Wash_(film)",
+   "verdict": "ok",
+   "why": "The crew eat lunch on shift in the transcript, with ribs, a spoilt lunch and the Chinese or Italian order, so a lunch break at the car wash is true to the film.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=car-wash",
    "fix": "Serve the lunch when T.C. waits on the radio contest call.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "A second chance means you show up tomorrow. Grab a burger first.",

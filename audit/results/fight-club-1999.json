@@ -21,12 +21,13 @@
     {
       "text": "Bob's favourite. His name is Robert Paulson.",
       "where": "house",
-      "verdict": "unsure",
-      "why": "Bob is real and the chant of his name is a famous moment, but none of the pages I opened tie Bob to pickled eggs, so 'Bob's favourite' is made up.",
-      "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/FightClub",
-      "fix": "Kept on the bar at Lou's. His name is Robert Paulson.",
+      "verdict": "wrong",
+      "why": "Bob (Robert Paulson) is in the transcript and Wikipedia, and the chant of his name is real, but nothing ties him to pickled eggs. 'Bob's favourite' is unsupported.",
+      "source": "https://en.wikipedia.org/wiki/Fight_Club",
+      "fix": "Bar snack. His name is Robert Paulson.",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     },
     {
       "text": "Shared in the car park after the first fight.",

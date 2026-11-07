@@ -5,12 +5,14 @@
   {
    "text": "Serve the snacks when Ray and Frank arrive in Hong Kong.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Frank arrives in Hong Kong on his own, then meets Ray Jackson and their guide Victor Lin. They do not arrive together.",
-   "source": "https://www.wikiwand.com/en/articles/Bloodsport_(film)",
-   "fix": "Serve the snacks when Frank meets Ray in Hong Kong.",
+   "verdict": "wrong",
+   "why": "Frank Dux arrives in Hong Kong alone and then befriends Ray Jackson, so they do not arrive together.",
+   "source": "https://en.wikipedia.org/wiki/Bloodsport_(film)",
+   "fix": "Serve the snacks when Frank lands in Hong Kong and meets Ray.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "I came for my teacher. Now I'm in it for the dumplings after the bout.",

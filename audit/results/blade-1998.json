@@ -5,12 +5,14 @@
   {
    "text": "Serve the snacks when Whistler hands Blade a fresh batch of garlic serum.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "In the film the serum Blade injects holds back his thirst for blood. It is not a garlic serum. Karen later works on EDTA as a replacement. Garlic is a separate vampire weakness.",
-   "source": "https://www.doc.surf/wiki/blade-1998-film",
-   "fix": "Serve the snacks when Blade injects his serum at Whistler's safehouse.",
+   "verdict": "wrong",
+   "why": "Blade's serum is what holds back his thirst for blood, and the script has him say he needs serum. It is not a garlic serum.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=blade",
+   "fix": "Serve the snacks when Blade takes his serum to hold back the thirst.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Blade, eat something. A man can't hunt on an empty stomach, not even half of one.",

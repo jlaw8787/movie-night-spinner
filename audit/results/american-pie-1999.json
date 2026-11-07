@@ -21,12 +21,14 @@
   {
    "text": "Stifler's party, keg in the basement.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Wikipedia confirms the pact is made at Stifler's house party, but it never mentions a keg or a basement.",
-   "source": "https://en.wikipedia.org/wiki/American_Pie_(film)",
-   "fix": "Stifler's party, where the pact is made.",
+   "verdict": "wrong",
+   "why": "At Stifler's party Stifler says the keg is 'back there' and a guest left beer 'downstairs'. No basement is named.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=american-pie",
+   "fix": "Stifler's party, the keg is back there.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 20,

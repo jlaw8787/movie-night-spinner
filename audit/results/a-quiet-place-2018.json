@@ -21,12 +21,14 @@
   {
    "text": "Evelyn's garden, picked barefoot off the sand path.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Barefoot on the sand paths is right, but no source mentions a garden. They do mention hundreds of canned vegetable jars in the basement and plenty of corn fields. The dish name 'Garden tomatoes, sea salt and basil' carries the same idea.",
-   "source": "https://jezebel.com/for-a-horror-movie-a-quiet-place-is-a-surprisingly-coz-1825107320",
-   "fix": "From the cellar shelves, a jar of Evelyn's canning, opened without a sound.",
+   "verdict": "wrong",
+   "why": "The Abbott family live on a farm with sand paths and a corn silo. No garden in the plot or script.",
+   "source": "https://en.wikipedia.org/wiki/A_Quiet_Place",
+   "fix": "From the Abbott farm, picked barefoot off the sand path.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

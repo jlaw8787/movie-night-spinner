@@ -1,84 +1,90 @@
 {
-  "id": "Anchorman: The Legend of Ron Burgundy (2004)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "GOODNIGHT, SAN DIEGO.",
-      "where": "card",
-      "verdict": "wrong",
-      "why": "Ron's closing line is 'You stay classy, San Diego.'",
-      "source": "https://en.wikiquote.org/wiki/Anchorman:_The_Legend_of_Ron_Burgundy",
-      "fix": "YOU STAY CLASSY, SAN DIEGO.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "PRODUCER",
-      "where": "card",
-      "verdict": "wrong",
-      "why": "Ed Harken is the station director, not a producer.",
-      "source": "https://en.wikipedia.org/wiki/Anchorman:_The_Legend_of_Ron_Burgundy",
-      "fix": "DIRECTOR",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Well, I never!",
-      "where": "dish-name",
-      "verdict": "unsure",
-      "why": "It is not a line in the Wikiquote page. A line that is in the film and suits a blackberry soda is Ron's 'I'm in a glass case of emotion!'",
-      "source": "https://en.wikiquote.org/wiki/Anchorman:_The_Legend_of_Ron_Burgundy",
-      "fix": "Glass Case of Emotion",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Runs six minutes.",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "No source I opened has a six minute story. Ron's 'I'm kind of a big deal' would fit the lead story slot.",
-      "source": "https://en.wikiquote.org/wiki/Anchorman:_The_Legend_of_Ron_Burgundy",
-      "fix": "Kind of a big deal.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Ron's sirloin with creamed spinach",
-      "where": "dish-name",
-      "verdict": "unsure",
-      "why": "The note says Ron takes Veronica out on the town. No source I opened shows a steak dinner.",
-      "source": "https://en.wikiquote.org/wiki/Anchorman:_The_Legend_of_Ron_Burgundy",
-      "fix": "Ron's glass of scotch with a side of poetry",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 5,
-    "moments": 4,
-    "food": 3,
-    "tone": 4,
-    "look": 5,
-    "overall": 4.2,
-    "verdict": "A newsroom rundown that looks the part, with a few made-up lines in place of the real ones.",
-    "missing": [
-      "You stay classy, San Diego (sign-off)",
-      "Sex Panther cologne (Brian)",
-      "I'm in a glass case of emotion (Ron)",
-      "Panda Watch (zoo)",
-      "Wes Mantooth and the news team fight (alley)",
-      "Brick's I love lamp (newsroom)"
-    ],
-    "ideas": [
-      "Swap 'Goodnight, San Diego' for 'You stay classy, San Diego'",
-      "Rename 'Well, I never!' to 'Glass Case of Emotion'",
-      "Add 'Sex Panther: 60 per cent of the time, it works every time' as a side note, replacing 'Hometown pride'",
-      "Swap 'Iced tea' for a 'Panda Watch' green tea"
-    ],
-    "flat": false,
-    "done": false
+ "id": "Anchorman: The Legend of Ron Burgundy (2004)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "GOODNIGHT, SAN DIEGO.",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "Ron's closing line is 'You stay classy, San Diego.'",
+   "source": "https://en.wikiquote.org/wiki/Anchorman:_The_Legend_of_Ron_Burgundy",
+   "fix": "YOU STAY CLASSY, SAN DIEGO.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "PRODUCER",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "Ed Harken is the station director, not a producer.",
+   "source": "https://en.wikipedia.org/wiki/Anchorman:_The_Legend_of_Ron_Burgundy",
+   "fix": "DIRECTOR",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Well, I never!",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "'Well, I never!' is not said in the script. Ron does say 'I'm in a glass case of emotion!'",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=anchorman-the-legend-of-ron-burgundy",
+   "fix": "Glass Case of Emotion",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Runs six minutes.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "No six minute story in the script. Ron does say 'I'm kind of a big deal', which suits the lead story.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=anchorman-the-legend-of-ron-burgundy",
+   "fix": "Kind of a big deal.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Ron's sirloin with creamed spinach",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "Ron does take Veronica out, to Tino's, but no steak dinner shows in the script. Only Ron's love of Scotch and a drink order.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=anchorman-the-legend-of-ron-burgundy",
+   "fix": "Date night sirloin with creamed spinach",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 5,
+  "overall": 4.2,
+  "verdict": "A newsroom rundown that looks the part, with a few made-up lines in place of the real ones.",
+  "missing": [
+   "You stay classy, San Diego (sign-off)",
+   "Sex Panther cologne (Brian)",
+   "I'm in a glass case of emotion (Ron)",
+   "Panda Watch (zoo)",
+   "Wes Mantooth and the news team fight (alley)",
+   "Brick's I love lamp (newsroom)"
+  ],
+  "ideas": [
+   "Swap 'Goodnight, San Diego' for 'You stay classy, San Diego'",
+   "Rename 'Well, I never!' to 'Glass Case of Emotion'",
+   "Add 'Sex Panther: 60 per cent of the time, it works every time' as a side note, replacing 'Hometown pride'",
+   "Swap 'Iced tea' for a 'Panda Watch' green tea"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

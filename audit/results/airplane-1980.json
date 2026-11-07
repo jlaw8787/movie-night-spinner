@@ -21,32 +21,38 @@
   {
    "text": "Meal: fish or chicken",
    "where": "prop",
-   "verdict": "unsure",
-   "why": "Wikipedia says passengers choose steak or fish. The menu dishes already say 'The steak, not the fish', so the ticket and Rumack note disagree with them.",
-   "source": "https://en.wikipedia.org/wiki/Airplane!",
+   "verdict": "wrong",
+   "why": "The in-flight choice is steak or fish, and the fish poisons the crew.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=airplane",
    "fix": "Meal: steak or fish",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Fish or chicken, and why you chose wrong",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "Same issue as the ticket line. The sources say the choice was steak or fish, and the fish caused the poisoning.",
-   "source": "https://en.wikipedia.org/wiki/Airplane!",
+   "verdict": "wrong",
+   "why": "The in-flight choice is steak or fish, and the fish poisons the crew.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=airplane",
    "fix": "Steak or fish, and why you chose wrong",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Ted Striker's drink, mostly on his face.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Ted splashes his drinks everywhere but his mouth, but no source names the drink, so 'Scotch and soda' is not confirmed.",
+   "verdict": "wrong",
+   "why": "Ted splashes drinks everywhere but his mouth, but no source names his drink. The line should not claim it.",
    "source": "https://en.wikipedia.org/wiki/Airplane!",
-   "fix": "Ted Striker's drinking problem, mostly down his front.",
+   "fix": "Ted Striker's problem, mostly on his face.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 9,

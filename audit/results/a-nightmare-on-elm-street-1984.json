@@ -21,12 +21,14 @@
   {
    "text": "Marge's nightcap is vodka. This isn't.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Marge is shown as an alcoholic, but the sources opened never say what she drinks.",
+   "verdict": "wrong",
+   "why": "The sources say the adults, Marge included, are drinkers, but none names vodka.",
    "source": "https://en.wikipedia.org/wiki/A_Nightmare_on_Elm_Street",
    "fix": "Marge's nightcap is a lot stronger. This isn't.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

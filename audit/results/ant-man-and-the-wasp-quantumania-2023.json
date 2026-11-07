@@ -1,42 +1,44 @@
 {
-  "id": "Ant-Man and the Wasp: Quantumania (2023)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve the mains when Janet and the gang sit down at the strange quantum realm restaurant.",
-      "where": "cue",
-      "verdict": "unsure",
-      "why": "The scene is a cantina style bar in the Quantum Realm where Krylar meets the family. No page read calls it a restaurant or has them sit for a meal.",
-      "source": "https://en.wikipedia.org/wiki/Ant-Man_and_the_Wasp:_Quantumania",
-      "fix": "Serve the mains when Janet, Hank and Hope sit down with Krylar at the Quantum Realm bar.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 12,
-  "vibe": {
-    "world": 3,
-    "moments": 4,
-    "food": 4,
-    "tone": 3,
-    "look": 3,
-    "overall": 3.4,
-    "verdict": "Veb and the book title are good, but the market template is a plain takeaway look for a very strange film.",
-    "missing": [
-      "Kang's 'They all blend together after a while' (Kang and Scott)",
-      "Janet's 'A monster. Who thinks he's a god.' (Janet on Kang)",
-      "The cantina and its odd creatures",
-      "MODOK and his huge head (the end fight)",
-      "Quaz and his mind reading",
-      "The ant army's final charge"
-    ],
-    "ideas": [
-      "Swap 'Colour-changing quantum lemonade' note for Kang's line about everything blending together.",
-      "Swap 'Sparkling yuzu and passionfruit soda' note for Janet's line about a monster who thinks he's a god.",
-      "Swap 'San Francisco cioppino' note for a cantina drink with a creature in it.",
-      "Swap the 'Giant ant gruyère cheese puffs' note for a line about the ant army's charge."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Ant-Man and the Wasp: Quantumania (2023)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains when Janet and the gang sit down at the strange quantum realm restaurant.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "Janet, Hank and Hope meet Lord Krylar, who now works for Kang; nothing calls the place a restaurant or shows a sit-down meal.",
+   "source": "https://en.wikipedia.org/wiki/Ant-Man_and_the_Wasp:_Quantumania",
+   "fix": "Serve the mains when Janet, Hank and Hope meet Krylar in the Quantum Realm.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.4,
+  "verdict": "Veb and the book title are good, but the market template is a plain takeaway look for a very strange film.",
+  "missing": [
+   "Kang's 'They all blend together after a while' (Kang and Scott)",
+   "Janet's 'A monster. Who thinks he's a god.' (Janet on Kang)",
+   "The cantina and its odd creatures",
+   "MODOK and his huge head (the end fight)",
+   "Quaz and his mind reading",
+   "The ant army's final charge"
+  ],
+  "ideas": [
+   "Swap 'Colour-changing quantum lemonade' note for Kang's line about everything blending together.",
+   "Swap 'Sparkling yuzu and passionfruit soda' note for Janet's line about a monster who thinks he's a god.",
+   "Swap 'San Francisco cioppino' note for a cantina drink with a creature in it.",
+   "Swap the 'Giant ant gruyère cheese puffs' note for a line about the ant army's charge."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

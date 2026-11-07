@@ -5,12 +5,14 @@
   {
    "text": "Donnelly Campaign Bus",
    "where": "venue",
-   "verdict": "unsure",
-   "why": "No campaign bus in the plot. Mike drives an advertising truck, then he and Steve travel in cars, and Drake Sabitch lives in an old school bus.",
+   "verdict": "wrong",
+   "why": "Mike drives an advertising truck for Al's campaign. There is no campaign bus in the plot.",
    "source": "https://en.wikipedia.org/wiki/Black_Sheep_(1996_film)",
    "fix": "Donnelly Campaign Truck",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Keep Mike away from the buffet until the election, Steve. One more spilled punch bowl and I'm finished.",
@@ -31,22 +33,26 @@
   {
    "text": "Drake, the jumpy vet up the mountain who thinks the trees are talking",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Drake is a crazed Vietnam veteran who lives in an old school bus with a TV, hammock, grill and weapons. Nothing I opened says he thinks the trees are talking.",
+   "verdict": "wrong",
+   "why": "Drake is a crazed Vietnam vet who lives in an old school bus with a grill and weapons. Nothing says he thinks the trees are talking.",
    "source": "https://en.wikipedia.org/wiki/Black_Sheep_(1996_film)",
-   "fix": "Drake, the Vietnam vet in the old school bus up the mountain",
+   "fix": "Drake, the jumpy vet who lives in an old school bus with a grill",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "One more spill and Al's campaign is finished.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No punch spill appears in the plot or on Wikiquote.",
+   "verdict": "wrong",
+   "why": "No spill ruins Al's campaign. Mike's stunts at the Rock the Vote event are what make Al drop him from the campaign.",
    "source": "https://en.wikipedia.org/wiki/Black_Sheep_(1996_film)",
-   "fix": "Mike's round. Keep it away from the nitrous oxide.",
+   "fix": "One more stunt and Al's campaign is finished.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 9,

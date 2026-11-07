@@ -1,52 +1,56 @@
 {
-  "id": "16 Blocks (2006)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "the Chinatown hideout where they lie low",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "In the plot they hole up in a run-down apartment building. No source I opened mentions Chinatown.",
-      "source": "https://en.wikipedia.org/wiki/16_Blocks",
-      "fix": "the run-down apartment building where they hide",
-      "printed": false,
-      "done": false
-    },
-    {
-      "text": "midtown on the run",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "The plot does not name midtown. It follows the sixteen blocks to the courthouse.",
-      "source": "https://en.wikipedia.org/wiki/16_Blocks",
-      "fix": "on the run to the courthouse",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 8,
-  "vibe": {
-    "world": 5,
-    "moments": 3,
-    "food": 4,
-    "tone": 4,
-    "look": 5,
-    "overall": 4.2,
-    "verdict": "The Docket coffee shop with the 16 block route map is the best part, and the printed menu looks sharp.",
-    "missing": [
-      "Jack stopping at the liquor store",
-      "The bar where Jack takes shelter",
-      "The bus standoff",
-      "Diane the paramedic",
-      "The tape recorder at the end",
-      "Eddie & Jack's Good Sign Bakery in Seattle"
-    ],
-    "ideas": [
-      "Swap 'Chinatown dumplings' note for the bar where Jack takes shelter",
-      "Swap 'Halal cart platter' note for the bus standoff",
-      "Rename 'Chocolate birthday cake' to 'Eddie's birthday cake, sent from Seattle'",
-      "Add 'Good Sign Bakery' as a sign on the menu"
-    ],
-    "flat": false,
-    "done": false
+ "id": "16 Blocks (2006)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "the Chinatown hideout where they lie low",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The plot has them cornered in a run-down apartment building. Chinatown only comes up as a place the cops track them through.",
+   "source": "https://en.wikipedia.org/wiki/16_Blocks",
+   "fix": "the run-down apartment building where they hide",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "midtown on the run",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The plot follows them on foot and by bus to the courthouse and never names midtown.",
+   "source": "https://en.wikipedia.org/wiki/16_Blocks",
+   "fix": "on the run to the courthouse",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 8,
+ "vibe": {
+  "world": 5,
+  "moments": 3,
+  "food": 4,
+  "tone": 4,
+  "look": 5,
+  "overall": 4.2,
+  "verdict": "The Docket coffee shop with the 16 block route map is the best part, and the printed menu looks sharp.",
+  "missing": [
+   "Jack stopping at the liquor store",
+   "The bar where Jack takes shelter",
+   "The bus standoff",
+   "Diane the paramedic",
+   "The tape recorder at the end",
+   "Eddie & Jack's Good Sign Bakery in Seattle"
+  ],
+  "ideas": [
+   "Swap 'Chinatown dumplings' note for the bar where Jack takes shelter",
+   "Swap 'Halal cart platter' note for the bus standoff",
+   "Rename 'Chocolate birthday cake' to 'Eddie's birthday cake, sent from Seattle'",
+   "Add 'Good Sign Bakery' as a sign on the menu"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

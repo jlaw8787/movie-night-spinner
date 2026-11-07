@@ -1,52 +1,56 @@
 {
-  "id": "Anchorman 2: The Legend Continues (2013)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Linda's chocolate fondue",
-      "where": "dish-name",
-      "verdict": "unsure",
-      "why": "Linda Jackson is Ron's love interest, but no page read has a fondue scene or dish for her.",
-      "source": "https://en.wikipedia.org/wiki/Anchorman_2:_The_Legend_Continues",
-      "fix": "Linda's chocolate pudding",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Brian Fantana and his cologne",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "Cologne is a gag from the first film. The pages read have Brian in this one with his airline story and his photography, not cologne.",
-      "source": "https://en.wikipedia.org/wiki/Anchorman_2:_The_Legend_Continues",
-      "fix": "Brian Fantana and his airline story",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 10,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 4,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "A good loud newsroom canteen with Champ and the lighthouse, but the best lines and the Brick storyline are missing.",
-    "missing": [
-      "Brick's 'I like your ginger ale!' (Brick and Chani at the office)",
-      "The Julius Caesar salad and the NBA line (Ron at the dinner table)",
-      "The minotaur steak (the Ron and Champ gag)",
-      "Brick and Chani meeting in the office",
-      "The Mega Gossip High Five (Ron and Veronica)",
-      "The shark Doby, and Ron losing his sight in the lighthouse"
-    ],
-    "ideas": [
-      "Swap the note on 'Vanilla milkshake, two straws' for Brick's line about the ginger ale.",
-      "Swap 'Linda's chocolate fondue' for 'Julius Caesar salad', with the NBA line as the note.",
-      "Swap the 'GNN late shift steak' note for a minotaur steak joke.",
-      "Swap the 'Fried shrimp basket' note for a Doby the shark line."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Anchorman 2: The Legend Continues (2013)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Linda's chocolate fondue",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "Linda Jackson is GNN's manager and Ron's girlfriend, but no fondue scene or dish is tied to her.",
+   "source": "https://en.wikipedia.org/wiki/Anchorman_2:_The_Legend_Continues",
+   "fix": "Dark chocolate fondue",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Brian Fantana and his cologne",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "No cologne in this film's script. Brian's story is about an airline and his animal photography.",
+   "source": "https://en.wikipedia.org/wiki/Anchorman_2:_The_Legend_Continues",
+   "fix": "Brian Fantana and his airline story",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A good loud newsroom canteen with Champ and the lighthouse, but the best lines and the Brick storyline are missing.",
+  "missing": [
+   "Brick's 'I like your ginger ale!' (Brick and Chani at the office)",
+   "The Julius Caesar salad and the NBA line (Ron at the dinner table)",
+   "The minotaur steak (the Ron and Champ gag)",
+   "Brick and Chani meeting in the office",
+   "The Mega Gossip High Five (Ron and Veronica)",
+   "The shark Doby, and Ron losing his sight in the lighthouse"
+  ],
+  "ideas": [
+   "Swap the note on 'Vanilla milkshake, two straws' for Brick's line about the ginger ale.",
+   "Swap 'Linda's chocolate fondue' for 'Julius Caesar salad', with the NBA line as the note.",
+   "Swap the 'GNN late shift steak' note for a minotaur steak joke.",
+   "Swap the 'Fried shrimp basket' note for a Doby the shark line."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

@@ -21,12 +21,13 @@
   {
    "text": "Pour the drinks when Marty walks into the Palace Saloon and asks for water.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "No source shows Marty asking for water. The only water in the saloon story is Doc dunking his head in the horse trough after the wake-up juice. Chester's line there is 'In here, we pour whiskey.' The sources do show the old-timers saying 'Why, I didn't know the circus was in town!' when Marty walks in.",
-   "source": "https://backtothefuture.fandom.com/wiki/Horse_trough",
-   "fix": "Pour the drinks when Marty walks into the Palace Saloon and the old-timers ask if the circus is in town.",
+   "verdict": "ok",
+   "why": "Marty walks into the saloon, the old-timers say the circus is in town, and he asks for ice water.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=back-to-the-future-part-iii",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

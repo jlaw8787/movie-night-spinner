@@ -1,42 +1,44 @@
 {
-  "id": "Alien: Romulus (2024)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "hot food at last, aboard the drifting station",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "The station scenes in the pages read show no meal and no hot food. The katsu curry has no source in the plot.",
-      "source": "https://en.wikipedia.org/wiki/Alien:_Romulus",
-      "fix": "a proper meal at last, before the station turns on them",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 11,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 4,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "Cold, grim colony canteen with Andy's jokes and Rain's sun dream in the right places, but the big set pieces are missing.",
-    "missing": [
-      "Z-01, the acid blood fluid that wrecks the gravity (the zero-gravity fight)",
-      "Andy's real joke: 'Did you hear about the claustrophobic astronaut? He needed space.'",
-      "Rook, the reanimated Ash model, at the lab",
-      "The Navarro chestburster and the hybrid at the end",
-      "Bjorn and his bad temper",
-      "The facehugger loose in the cryo bay"
-    ],
-    "ideas": [
-      "Swap the Andy note on 'Andy's corny corn fritters' for his real joke about the claustrophobic astronaut needing space.",
-      "Swap 'Cryo bay frozen lime slushie' note for 'Handle with care. Z-01 burns.'",
-      "Swap 'Cheese and onion potato cakes' on the house list for 'Rook's ration, served with a bad conscience'.",
-      "Swap the 'Hot cocoa with powdered milk' note for a line about the zero-gravity fight."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Alien: Romulus (2024)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "hot food at last, aboard the drifting station",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The crew scavenge a derelict station and the film shows no hot meal or katsu curry, so 'hot food at last' is unproven.",
+   "source": "https://en.wikipedia.org/wiki/Alien:_Romulus",
+   "fix": "hot food before they board the derelict station",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Cold, grim colony canteen with Andy's jokes and Rain's sun dream in the right places, but the big set pieces are missing.",
+  "missing": [
+   "Z-01, the acid blood fluid that wrecks the gravity (the zero-gravity fight)",
+   "Andy's real joke: 'Did you hear about the claustrophobic astronaut? He needed space.'",
+   "Rook, the reanimated Ash model, at the lab",
+   "The Navarro chestburster and the hybrid at the end",
+   "Bjorn and his bad temper",
+   "The facehugger loose in the cryo bay"
+  ],
+  "ideas": [
+   "Swap the Andy note on 'Andy's corny corn fritters' for his real joke about the claustrophobic astronaut needing space.",
+   "Swap 'Cryo bay frozen lime slushie' note for 'Handle with care. Z-01 burns.'",
+   "Swap 'Cheese and onion potato cakes' on the house list for 'Rook's ration, served with a bad conscience'.",
+   "Swap the 'Hot cocoa with powdered milk' note for a line about the zero-gravity fight."
+  ],
+  "flat": false,
+  "done": false
+ }
 }
