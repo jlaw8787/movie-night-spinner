@@ -1,88 +1,90 @@
 {
- "id": "Chasing Amy (1997)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Serve the mains when Holden and Banky argue it out in the diner booth.",
-   "where": "cue",
-   "verdict": "wrong",
-   "why": "The diner scene in the film is Holden meeting Jay and Silent Bob for lunch, where he hands over their residual pay and Bob tells the Amy story. Holden and Banky's fights happen in their studio and when Holden invites them over, not in a diner booth.",
-   "source": "https://en.wikipedia.org/wiki/Chasing_Amy",
-   "fix": "Serve the mains when Holden sits down with Jay and Silent Bob at the diner.",
-   "done": false,
-   "printed": true
-  },
-  {
-   "text": "The diner booth where the friendship gets tested.",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "Same mix up as the cue. The diner booth is where Holden talks to Jay and Silent Bob and hears Bob's Amy story. The friendship with Banky is tested elsewhere.",
-   "source": "https://en.wikipedia.org/wiki/Chasing_Amy",
-   "fix": "The diner booth where Silent Bob tells his Amy story.",
-   "done": false,
-   "printed": true
-  },
-  {
-   "text": "I'm not great with words, Alyssa, so I ordered enough pizza to say it for me. Grab a slice.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Set out as Holden's words under 'From the booth'. He never says it and no pizza scene like this appears in the plot. His real confession is the long 'I love you... I love you. And not in a friendly way' speech, and he also says 'Sorry about him, he's dealing with being an inker.'",
-   "source": "https://en.wikiquote.org/wiki/Chasing_Amy",
-   "fix": "Pull up a seat and eat. Sorry about Banky, he's dealing with being an inker.",
-   "fix_note": {
-    "text": "Pull up a seat and eat. Sorry about Banky, he's dealing with being an inker.",
-    "by": "Holden McNeil",
-    "kind": "note"
-   },
-   "done": true,
-   "printed": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Bluntman Studio",
-   "where": "venue",
-   "verdict": "unsure",
-   "why": "The shared studio in Red Bank is called Bank-Hold-Up in the Wikipedia plot. 'Bluntman Studio' is a nod to the comic, not the studio's name.",
-   "source": "https://en.wikipedia.org/wiki/Chasing_Amy",
-   "fix": "Bank-Hold-Up Studio",
-   "done": false,
-   "printed": true
-  },
-  {
-   "text": "Holden's order, while he plans the Chasing Amy comic.",
-   "where": "house",
-   "verdict": "unsure",
-   "why": "The comic does exist at the end of the film, but no source opened shows what Holden orders to drink.",
-   "source": "https://en.wikipedia.org/wiki/Chasing_Amy",
-   "fix": "Egg cream, for the writer who turned it into a comic.",
-   "printed": false,
-   "done": false
+  "id": "Chasing Amy (1997)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the mains when Holden and Banky argue it out in the diner booth.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "The diner scene in the film is Holden meeting Jay and Silent Bob for lunch, where he hands over their residual pay and Bob tells the Amy story. Holden and Banky's fights happen in their studio and when Holden invites them over, not in a diner booth.",
+      "source": "https://en.wikipedia.org/wiki/Chasing_Amy",
+      "fix": "Serve the mains when Holden sits down with Jay and Silent Bob at the diner.",
+      "done": true,
+      "printed": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "The diner booth where the friendship gets tested.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Same mix up as the cue. The diner booth is where Holden talks to Jay and Silent Bob and hears Bob's Amy story. The friendship with Banky is tested elsewhere.",
+      "source": "https://en.wikipedia.org/wiki/Chasing_Amy",
+      "fix": "The diner booth where Silent Bob tells his Amy story.",
+      "done": true,
+      "printed": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "I'm not great with words, Alyssa, so I ordered enough pizza to say it for me. Grab a slice.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Set out as Holden's words under 'From the booth'. He never says it and no pizza scene like this appears in the plot. His real confession is the long 'I love you... I love you. And not in a friendly way' speech, and he also says 'Sorry about him, he's dealing with being an inker.'",
+      "source": "https://en.wikiquote.org/wiki/Chasing_Amy",
+      "fix": "Pull up a seat and eat. Sorry about Banky, he's dealing with being an inker.",
+      "fix_note": {
+        "text": "Pull up a seat and eat. Sorry about Banky, he's dealing with being an inker.",
+        "by": "Holden McNeil",
+        "kind": "note"
+      },
+      "done": true,
+      "printed": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Bluntman Studio",
+      "where": "venue",
+      "verdict": "unsure",
+      "why": "The shared studio in Red Bank is called Bank-Hold-Up in the Wikipedia plot. 'Bluntman Studio' is a nod to the comic, not the studio's name.",
+      "source": "https://en.wikipedia.org/wiki/Chasing_Amy",
+      "fix": "Bank-Hold-Up Studio",
+      "done": false,
+      "printed": true
+    },
+    {
+      "text": "Holden's order, while he plans the Chasing Amy comic.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "The comic does exist at the end of the film, but no source opened shows what Holden orders to drink.",
+      "source": "https://en.wikipedia.org/wiki/Chasing_Amy",
+      "fix": "Egg cream, for the writer who turned it into a comic.",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 3,
+    "moments": 2,
+    "food": 3,
+    "tone": 3,
+    "look": 3,
+    "overall": 2.8,
+    "verdict": "A Jersey diner menu that mixes up which friends are in the diner and does little with the comic, convention or Meow Mix scenes.",
+    "missing": [
+      "Jay and Silent Bob's lunch at the diner (Holden hands over their residual pay)",
+      "Silent Bob's 'chasing Amy' speech",
+      "Hooper X's White-Hating Coon comic at the convention",
+      "The Meow Mix bar in the East Village (where Holden finds out Alyssa is gay)",
+      "The hockey game where Holden presses Alyssa about her past",
+      "Alyssa's last line, 'Oh, just some guy I knew' (the final convention)"
+    ],
+    "ideas": [
+      "Swap 'Diner patty melt on rye' note for 'Where Silent Bob tells Holden about Amy.'",
+      "Swap 'Jersey ham, egg and cheese sliders' note for 'Bluntman and Chronic residual pay, handed over with a side of chips.'",
+      "Swap the 'Comic Con Pass' line for 'Hooper X's panel' and add White-Hating Coon.",
+      "Swap 'Diner rice pudding' for a Meow Mix bar snack with the hockey game as its note."
+    ],
+    "flat": true,
+    "done": false
   }
- ],
- "checked_ok": 13,
- "vibe": {
-  "world": 3,
-  "moments": 2,
-  "food": 3,
-  "tone": 3,
-  "look": 3,
-  "overall": 2.8,
-  "verdict": "A Jersey diner menu that mixes up which friends are in the diner and does little with the comic, convention or Meow Mix scenes.",
-  "missing": [
-   "Jay and Silent Bob's lunch at the diner (Holden hands over their residual pay)",
-   "Silent Bob's 'chasing Amy' speech",
-   "Hooper X's White-Hating Coon comic at the convention",
-   "The Meow Mix bar in the East Village (where Holden finds out Alyssa is gay)",
-   "The hockey game where Holden presses Alyssa about her past",
-   "Alyssa's last line, 'Oh, just some guy I knew' (the final convention)"
-  ],
-  "ideas": [
-   "Swap 'Diner patty melt on rye' note for 'Where Silent Bob tells Holden about Amy.'",
-   "Swap 'Jersey ham, egg and cheese sliders' note for 'Bluntman and Chronic residual pay, handed over with a side of chips.'",
-   "Swap the 'Comic Con Pass' line for 'Hooper X's panel' and add White-Hating Coon.",
-   "Swap 'Diner rice pudding' for a Meow Mix bar snack with the hockey game as its note."
-  ],
-  "flat": true,
-  "done": false
- }
 }

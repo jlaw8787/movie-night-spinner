@@ -8,9 +8,10 @@
       "verdict": "wrong",
       "why": "In Clerks III Jay and Silent Bob have taken over the former RST Video and turned it into a legal marijuana dispensary, so RST Video is not next door any more.",
       "source": "https://en.wikipedia.org/wiki/Clerks_III",
-      "fix": "Lost and found: ask Jay and Silent Bob next door.",
-      "done": false,
-      "printed": true
+      "fix": "Jay and Silent Bob next door",
+      "done": true,
+      "printed": true,
+      "applied": "2026-11-07"
     },
     {
       "text": "RST Video next door",
@@ -18,9 +19,10 @@
       "verdict": "wrong",
       "why": "Same as the footer. The former RST Video is now Jay and Silent Bob's dispensary.",
       "source": "https://en.wikipedia.org/wiki/Clerks_III",
-      "fix": "Jay and Silent Bob's shop in the old RST Video",
+      "fix": "Jay and Silent Bob next door",
       "printed": false,
-      "done": false
+      "done": true,
+      "applied": "2026-11-07"
     },
     {
       "text": "Randal's new heart-healthy diet after the heart attack.",

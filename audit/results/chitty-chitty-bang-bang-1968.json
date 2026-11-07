@@ -1,78 +1,79 @@
 {
- "id": "Chitty Chitty Bang Bang (1968)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Pack the eggs, the sandwiches and a spare pair of goggles. I am not landing in a foreign country without my dinner.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Set out as Grandpa Potts's words under 'From the flight deck', but he never says it, and he does not fly to Vulgaria in the car. The Vulgarians kidnap him in the airship and the Potts family flies after him to rescue him.",
-   "source": "https://en.wikipedia.org/wiki/Chitty_Chitty_Bang_Bang",
-   "fix": "Pack the eggs and the sandwiches. We fly to Vulgaria to fetch Grandpa, and nobody rescues anyone hungry.",
-   "fix_note": {
-    "text": "Pack the eggs and the sandwiches. We fly to Vulgaria to fetch Grandpa, and nobody rescues anyone hungry.",
-    "by": "Caractacus Potts",
-    "kind": "note"
-   },
-   "done": true,
-   "printed": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Truly's father, the sweet factory lord who won't buy the Toot Sweets.",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "At the end of the film Lord Scrumptious offers to buy Caractacus's failed candies and sell them as dog treats.",
-   "source": "https://en.wikipedia.org/wiki/Chitty_Chitty_Bang_Bang",
-   "fix": "Truly's father, the sweet factory lord who buys the Toot Sweets for the dogs.",
-   "done": false,
-   "printed": true
-  },
-  {
-   "text": "Packed by Truly Scrumptious in the picnic hamper.",
-   "where": "house",
-   "verdict": "unsure",
-   "why": "The plot only says Truly joins the beach picnic. The pages opened do not say who packed it.",
-   "source": "https://en.wikipedia.org/wiki/Chitty_Chitty_Bang_Bang",
-   "fix": "Eaten on the beach picnic with Truly.",
-   "done": false,
-   "printed": true
-  },
-  {
-   "text": "Breakfast machine Butterscotch eggs",
-   "where": "dish-name",
-   "verdict": "ok",
-   "why": "Fixed 7 Nov before this check (kids-mode scotch guard); the card picture was older. Prints Scotch eggs now.",
-   "source": "",
-   "fix": "Breakfast machine Scotch eggs",
-   "done": true,
-   "printed": true
+  "id": "Chitty Chitty Bang Bang (1968)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Pack the eggs, the sandwiches and a spare pair of goggles. I am not landing in a foreign country without my dinner.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Set out as Grandpa Potts's words under 'From the flight deck', but he never says it, and he does not fly to Vulgaria in the car. The Vulgarians kidnap him in the airship and the Potts family flies after him to rescue him.",
+      "source": "https://en.wikipedia.org/wiki/Chitty_Chitty_Bang_Bang",
+      "fix": "Pack the eggs and the sandwiches. We fly to Vulgaria to fetch Grandpa, and nobody rescues anyone hungry.",
+      "fix_note": {
+        "text": "Pack the eggs and the sandwiches. We fly to Vulgaria to fetch Grandpa, and nobody rescues anyone hungry.",
+        "by": "Caractacus Potts",
+        "kind": "note"
+      },
+      "done": true,
+      "printed": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Truly's father, the sweet factory lord who won't buy the Toot Sweets.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "At the end of the film Lord Scrumptious offers to buy Caractacus's failed candies and sell them as dog treats.",
+      "source": "https://en.wikipedia.org/wiki/Chitty_Chitty_Bang_Bang",
+      "fix": "Truly's father, the sweet factory lord who buys the Toot Sweets for the dogs.",
+      "done": true,
+      "printed": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Packed by Truly Scrumptious in the picnic hamper.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "The plot only says Truly joins the beach picnic. The pages opened do not say who packed it.",
+      "source": "https://en.wikipedia.org/wiki/Chitty_Chitty_Bang_Bang",
+      "fix": "Eaten on the beach picnic with Truly.",
+      "done": false,
+      "printed": true
+    },
+    {
+      "text": "Breakfast machine Butterscotch eggs",
+      "where": "dish-name",
+      "verdict": "ok",
+      "why": "Fixed 7 Nov before this check (kids-mode scotch guard); the card picture was older. Prints Scotch eggs now.",
+      "source": "",
+      "fix": "Breakfast machine Scotch eggs",
+      "done": true,
+      "printed": true
+    }
+  ],
+  "checked_ok": 17,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "A cheerful flying car boarding pass with real touches, but the signed note has the wrong person, a food name got garbled and the best songs and candy are missing.",
+    "missing": [
+      "Toot Sweets, the whistle candy that draws a crowd of dogs (the Scrumptious factory pitch)",
+      "Chitty turning into a boat when the tide traps it (the beach)",
+      "Truly and Caractacus posing as dolls and jack-in-the-boxes in Vulgaria",
+      "The grotto under the castle where the town hides its children",
+      "Baron Bomburst's birthday banquet taken over by the children",
+      "The hair-cutting machine at the carnival"
+    ],
+    "ideas": [
+      "Swap 'Ginger beer from a stone bottle' note for 'Toot Sweets, dogs not included.'",
+      "Swap 'Baron Bomburst's Vulgarian schnitzel' note for the banquet hall takeover by the children.",
+      "Swap the 'Seat 31A' and 'Seat 1A' mix on the card so the seat is the same on both faces.",
+      "Swap the 'Jeremy and Jemima' drink note for the beach where Chitty becomes a boat."
+    ],
+    "flat": true,
+    "done": false
   }
- ],
- "checked_ok": 17,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.4,
-  "verdict": "A cheerful flying car boarding pass with real touches, but the signed note has the wrong person, a food name got garbled and the best songs and candy are missing.",
-  "missing": [
-   "Toot Sweets, the whistle candy that draws a crowd of dogs (the Scrumptious factory pitch)",
-   "Chitty turning into a boat when the tide traps it (the beach)",
-   "Truly and Caractacus posing as dolls and jack-in-the-boxes in Vulgaria",
-   "The grotto under the castle where the town hides its children",
-   "Baron Bomburst's birthday banquet taken over by the children",
-   "The hair-cutting machine at the carnival"
-  ],
-  "ideas": [
-   "Swap 'Ginger beer from a stone bottle' note for 'Toot Sweets, dogs not included.'",
-   "Swap 'Baron Bomburst's Vulgarian schnitzel' note for the banquet hall takeover by the children.",
-   "Swap the 'Seat 31A' and 'Seat 1A' mix on the card so the seat is the same on both faces.",
-   "Swap the 'Jeremy and Jemima' drink note for the beach where Chitty becomes a boat."
-  ],
-  "flat": true,
-  "done": false
- }
 }
