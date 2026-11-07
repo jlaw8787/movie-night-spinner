@@ -21,32 +21,38 @@
   {
    "text": "the gangster's crew killing time at his place",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Pando's crew is Acko and Wally, but no scene of them killing time at his place shows in the sources opened.",
+   "verdict": "wrong",
+   "why": "No scene shows Pando's crew killing time at his place. The plot has Jimmy returning to Pando's office, where the gang nearly kills him again.",
    "source": "https://en.wikipedia.org/wiki/Two_Hands_(1999_film)",
-   "fix": "Acko and Wally's crew waiting on Jimmy",
+   "fix": "the gang waiting at Pando's office",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Jimmy's feed before that swim at Bondi.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Jimmy waits at Bondi and goes for a swim, but no feed beforehand is mentioned.",
+   "verdict": "wrong",
+   "why": "Jimmy swims at Bondi while street kids lift Pando's ten grand; no feed is shown beforehand.",
    "source": "https://en.wikipedia.org/wiki/Two_Hands_(1999_film)",
-   "fix": "Eaten fast, because Jimmy has a ten grand envelope to drop at Bondi.",
+   "fix": "Eat up before Jimmy's swim costs him ten grand.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "the family house out in the suburbs",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The suburban house in the plot is Deirdre's, where the bank job is planned. Jimmy's brother is dead and no family Sunday roast is described.",
+   "verdict": "wrong",
+   "why": "The suburban house in the plot is Deirdre's, where she lives as a suburban housewife and sets up the bank job. Jimmy's brother is dead and no family roast is shown.",
    "source": "https://en.wikipedia.org/wiki/Two_Hands_(1999_film)",
-   "fix": "Deirdre's suburban kitchen, where the bank job gets planned",
+   "fix": "Deirdre's family house out in the suburbs",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 8,

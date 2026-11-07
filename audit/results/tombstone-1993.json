@@ -5,12 +5,14 @@
   {
    "text": "Serve the drinks when Doc Holliday sits down at the faro table.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Wyatt is shown dealing faro at the saloon, but the sources opened never show Doc sitting down at the faro table. Doc's famous moment at a table is trading Latin with Ringo.",
-   "source": "https://en.wikiquote.org/wiki/Tombstone_(film)",
-   "fix": "Serve the drinks when Doc Holliday tells Johnny Ringo he's his huckleberry.",
+   "verdict": "wrong",
+   "why": "The film shows Wyatt dealing faro and Doc at a poker table, but Doc is never shown sitting down at the faro table; his famous moment is saying 'I'm your huckleberry' to Ringo.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=tombstone",
+   "fix": "Serve the drinks when Doc Holliday says \"I'm your huckleberry.\"",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Pour me another, I'm in no rush. Supper can wait till the cards are dealt.",
@@ -31,12 +33,14 @@
   {
    "text": "Doc's card table bluff",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "No card table bluff by Doc turns up in the sources opened. His big moments are the Latin trade with Ringo and the huckleberry duel.",
+   "verdict": "wrong",
+   "why": "No card table bluff by Doc appears in the transcript or plot; his big moments are the Latin trade with Ringo and the huckleberry line.",
    "source": "https://en.wikipedia.org/wiki/Tombstone_(film)",
-   "fix": "Doc's huckleberry showdown with Ringo",
+   "fix": "Doc's huckleberry line",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

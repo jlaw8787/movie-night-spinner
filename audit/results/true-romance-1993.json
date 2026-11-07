@@ -1,62 +1,64 @@
 {
-  "id": "True Romance (1993)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Purple Cadillac double smash burgers",
-      "where": "dish-name",
-      "verdict": "ok",
-      "why": "Clarence drives a pink Cadillac Eldorado convertible, a deep pink that BAMF Style says leans a little purple. The IMDb summary calls it a pink Cadillac.",
-      "source": "https://bamfstyle.com/2023/07/10/true-romance-clarence-aloha-cadillac/amp/",
-      "printed": true,
-      "done": false,
-      "reversed": "The film's own dialogue calls it Clarence's purple Cadillac (IMCDB), and BAMF Style says it is a deep pink close to purple, so purple stands and pink was the checker's call."
-    },
-    {
-      "text": "The purple convertible from Detroit to LA.",
-      "where": "dish-note",
-      "verdict": "ok",
-      "why": "The convertible is pink, not purple.",
-      "source": "https://www.imdb.com/title/tt0108399/plotsummary",
-      "printed": true,
-      "done": false,
-      "reversed": "The film's own dialogue calls it Clarence's purple Cadillac (IMCDB), and BAMF Style says it is a deep pink close to purple, so purple stands and pink was the checker's call."
-    },
-    {
-      "text": "Floyd's couch pick. Don't condescend him, man.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "Floyd is Dick's stoner roommate and he gives up the deal's location. The 'don't condescend' line did not turn up in the Wikiquote page or any other source opened.",
-      "source": "https://en.wikipedia.org/wiki/True_Romance",
-      "fix": "Floyd's couch pick. Ask him nicely.",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 12,
-  "vibe": {
-    "world": 3,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 3,
-    "overall": 3,
-    "verdict": "Right on the film but the board is generic cinema candy bar, with the car colour wrong and the best scenes left out.",
-    "missing": [
-      "Alabama confessing she is a call girl hired as a birthday present",
-      "Alabama beating Virgil with a corkscrew and hairspray",
-      "The Ambassador Hotel standoff",
-      "Floyd on the couch",
-      "Dick throwing the suitcase of cocaine",
-      "Clarence and Alabama's wedding at City Hall"
-    ],
-    "ideas": [
-      "Rename 'Purple Cadillac double smash burgers' to 'Pink Cadillac double smash burgers'",
-      "Swap 'Hotel club sandwich' note for the Ambassador Hotel standoff",
-      "Replace the 'Triple feature popcorn' note with Alabama dropping her popcorn on Clarence",
-      "Add a diner pie note: 'Pie at the diner, birthday night'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "True Romance (1993)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Purple Cadillac double smash burgers",
+   "where": "dish-name",
+   "verdict": "ok",
+   "why": "Clarence drives a pink Cadillac Eldorado convertible, a deep pink that BAMF Style says leans a little purple. The IMDb summary calls it a pink Cadillac.",
+   "source": "https://bamfstyle.com/2023/07/10/true-romance-clarence-aloha-cadillac/amp/",
+   "printed": true,
+   "done": false,
+   "reversed": "The film's own dialogue calls it Clarence's purple Cadillac (IMCDB), and BAMF Style says it is a deep pink close to purple, so purple stands and pink was the checker's call."
+  },
+  {
+   "text": "The purple convertible from Detroit to LA.",
+   "where": "dish-note",
+   "verdict": "ok",
+   "why": "The convertible is pink, not purple.",
+   "source": "https://www.imdb.com/title/tt0108399/plotsummary",
+   "printed": true,
+   "done": false,
+   "reversed": "The film's own dialogue calls it Clarence's purple Cadillac (IMCDB), and BAMF Style says it is a deep pink close to purple, so purple stands and pink was the checker's call."
+  },
+  {
+   "text": "Floyd's couch pick. Don't condescend him, man.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "Floyd is the couch-bound stoner roommate, and his 'Don't condescend to me, man' line in the script is what this unmarked nod plays on.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=true-romance",
+   "fix": "Floyd's couch pick. Ask him nicely.",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3,
+  "verdict": "Right on the film but the board is generic cinema candy bar, with the car colour wrong and the best scenes left out.",
+  "missing": [
+   "Alabama confessing she is a call girl hired as a birthday present",
+   "Alabama beating Virgil with a corkscrew and hairspray",
+   "The Ambassador Hotel standoff",
+   "Floyd on the couch",
+   "Dick throwing the suitcase of cocaine",
+   "Clarence and Alabama's wedding at City Hall"
+  ],
+  "ideas": [
+   "Rename 'Purple Cadillac double smash burgers' to 'Pink Cadillac double smash burgers'",
+   "Swap 'Hotel club sandwich' note for the Ambassador Hotel standoff",
+   "Replace the 'Triple feature popcorn' note with Alabama dropping her popcorn on Clarence",
+   "Add a diner pie note: 'Pie at the diner, birthday night'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

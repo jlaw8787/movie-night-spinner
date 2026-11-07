@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "Channel 3 news, live from the sewers",
-   "new": "April's Channel 3 newsroom crew"
+   "new": "April's Channel 3 newsroom crew",
+   "done": true
   },
   {
    "old": "April O'Neil, reporting live from the sewer",
-   "new": "April O'Neil, Channel Three Eyewitness News"
+   "new": "April O'Neil, Channel Three Eyewitness News",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

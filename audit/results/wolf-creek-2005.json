@@ -20,13 +20,15 @@
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Serve the snacks when the backpackers stop at the roadhouse.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Wikipedia's plot has them buying fuel at a petrol station before the crater. A roadhouse stop is not stated.",
+   "verdict": "wrong",
+   "why": "Wikipedia's plot has the backpackers buying fuel at a petrol station before the crater. No roadhouse is named.",
    "source": "https://en.wikipedia.org/wiki/Wolf_Creek_(film)",
-   "fix": "Serve the snacks when the backpackers stop for fuel on the highway."
+   "fix": "Serve the snacks when the backpackers fill up at the petrol station.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

@@ -21,32 +21,38 @@
   {
    "text": "Cliff's lunch, on the tab Millie keeps.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Neither Wikipedia nor the location page that was opened names a Millie at the Bulldog Cafe, or shows Cliff running a tab. Could not confirm the character.",
+   "verdict": "wrong",
+   "why": "At the airfield diner Cliff and Peevy are trapped by Valentine's mobsters, but no source shows a tab or names Millie as the one who keeps it.",
    "source": "https://en.wikipedia.org/wiki/The_Rocketeer_(film)",
    "fix": "Cliff's lunch, before the mobsters walk in.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Jenny's order at the counter, between takes.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The plot has Jenny on Sinclair's film set and at the South Seas Club, not at the Bulldog Cafe counter. Could not confirm she ever visits the cafe.",
-   "source": "https://en.wikipedia.org/wiki/The_Rocketeer_(film)",
-   "fix": "A 1930s soda fountain classic.",
+   "verdict": "wrong",
+   "why": "TV Tropes has Cliff and Jenny spending time at the cafe, but nothing shows her ordering at the counter between takes.",
+   "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/TheRocketeer",
+   "fix": "Jenny's pick from the airfield cafe counter.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Millie's counter at the Bulldog",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No source names a Millie at the Bulldog Cafe.",
-   "source": "https://en.wikipedia.org/wiki/The_Rocketeer_(film)",
+   "verdict": "wrong",
+   "why": "The transcript has a Millie at the airfield, but no source says she runs the Bulldog Cafe counter.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocketeer-the",
    "fix": "The cafe's counter special",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 8,

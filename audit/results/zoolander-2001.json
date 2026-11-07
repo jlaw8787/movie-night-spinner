@@ -20,13 +20,15 @@
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Serve the drinks when the boys order orange mocha iced coffees.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Brint, Meekus and Rufus shout 'Orange mocha frappuccino' to cheer Derek up, and then the gasoline fight starts. The quote page does not show them ordering.",
+   "verdict": "wrong",
+   "why": "Brint, Meekus and Rufus shout out orange mocha frappuccino to cheer Derek up, then the gasoline fight starts. Nobody orders it, and it is not called iced coffee.",
    "source": "https://en.wikiquote.org/wiki/Zoolander",
-   "fix": "Serve the drinks when Derek's friends shout for orange mocha frappuccinos."
+   "fix": "Serve the drinks when the boys shout for orange mocha frappuccinos.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

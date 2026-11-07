@@ -33,12 +33,14 @@
   {
    "text": "Big Daddy La Bouff's Mardi Gras toast.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Big Daddy is crowned Mardi Gras king, but no toast or Sazerac shows up in the sources opened.",
-   "source": "https://en.wikipedia.org/wiki/The_Princess_and_the_Frog",
-   "fix": "Big Daddy La Bouff, Mardi Gras king, would order this.",
+   "verdict": "wrong",
+   "why": "Big Daddy is voted king of the Mardi Gras parade for the fifth year and wants beignets to celebrate, but no toast is given in the film.",
+   "source": "https://en.wikiquote.org/wiki/The_Princess_and_the_Frog",
+   "fix": "Big Daddy La Bouff, king of the Mardi Gras parade, would order this.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

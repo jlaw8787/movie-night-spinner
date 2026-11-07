@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "Serve the blue milk at the Lars homestead breakfast table.",
-   "new": "Serve the blue milk at the Lars homestead dinner table."
+   "new": "Serve the blue milk at the Lars homestead dinner table.",
+   "done": true
   },
   {
    "old": "Blue milk with breakfast.",
-   "new": "Blue milk with dinner."
+   "new": "Blue milk with dinner.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

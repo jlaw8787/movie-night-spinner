@@ -5,12 +5,14 @@
   {
    "text": "Serve the snacks when the toys sneak into the carnival.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The plot has Buzz getting lost in the carnival and the toys later driving the RV back to the fair. A sneak in is not described.",
+   "verdict": "wrong",
+   "why": "The toys do not sneak in. Buzz gets lost in the carnival, and later Buzz and Jessie rally the toys to drive the RV back to the fair.",
    "source": "https://en.wikipedia.org/wiki/Toy_Story_4",
-   "fix": "Serve the snacks when Buzz gets lost in the carnival and meets Ducky and Bunny.",
+   "fix": "Serve the snacks when the toys drive the RV back to the carnival.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "I do not know what dinner is. Is it the bin? It looks warm and cosy in there. Fine, I will sit here.",

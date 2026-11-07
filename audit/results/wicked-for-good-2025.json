@@ -1,72 +1,80 @@
 {
-  "id": "Wicked: For Good (2025)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Kiamo Ko, Elphaba's castle out in Winkie Country.",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "Wikipedia calls Kiamo Ko an abandoned castle that Fiyero suggests as a refuge. It does not name Winkie Country, which is the old book name, and I could not confirm the film uses it.",
-      "source": "https://en.wikipedia.org/wiki/Wicked:_For_Good",
-      "fix": "Kiamo Ko, the abandoned castle where Elphaba hides.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Nessarose's ruby slippers.",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "The plot calls them Nessarose's enchanted shoes that Glinda gives to Dorothy. No source I opened says the film calls them ruby while Nessarose has them.",
-      "source": "https://en.wikipedia.org/wiki/Wicked:_For_Good",
-      "fix": "Nessarose's enchanted shoes.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Ruby slippers required",
-      "where": "prop",
-      "verdict": "unsure",
-      "why": "Same as above. The sources call them enchanted shoes and do not confirm the colour.",
-      "source": "https://en.wikipedia.org/wiki/Wicked:_For_Good",
-      "fix": "Enchanted shoes required",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Glinda's engagement party, before Fiyero runs.",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "The plot has the celebration for the Yellow Brick Road opening and a wedding that Elphaba interrupts. It does not mention an engagement party.",
-      "source": "https://en.wikipedia.org/wiki/Wicked:_For_Good",
-      "fix": "Glinda's wedding, before Fiyero runs.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 8,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "Smart palace and bubble ideas, but a lot of the film's biggest moments are not on the menu.",
-    "missing": [
-      "Dorothy's house landing on Nessarose in the tornado",
-      "Boq turned into the Tin Man",
-      "Fiyero revealed as the Scarecrow",
-      "Dorothy's bucket of water and the melting",
-      "The Yellow Brick Road opening",
-      "Elphaba hiding under the trapdoor at Kiamo Ko"
-    ],
-    "ideas": [
-      "Swap 'Pistachio shortbread cookies' for 'Tin Man heart tarts' (Boq's shrunken heart)",
-      "Swap 'Nessarose's jewelled shoe raspberry tarts' note for the enchanted shoes line",
-      "Rename 'Glinda's bubble emerald mint fizz' to 'Yellow Brick Road mint fizz'",
-      "Add a 'Scarecrow straw potato nests' item"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Wicked: For Good (2025)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Kiamo Ko, Elphaba's castle out in Winkie Country.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Wikipedia calls Kiamo Ko an abandoned castle Fiyero suggests as a refuge and where Elphaba hides; neither it nor the transcript names Winkie Country, so that is dropped.",
+   "source": "https://en.wikipedia.org/wiki/Wicked:_For_Good",
+   "fix": "Kiamo Ko, the abandoned castle where Elphaba hides.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Nessarose's ruby slippers.",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "The film's plot and transcript call them Nessarose's enchanted shoes, her sister's shoes that Glinda gives Dorothy; no source says they are ruby while Nessarose has them.",
+   "source": "https://en.wikipedia.org/wiki/Wicked:_For_Good",
+   "fix": "Nessarose's enchanted shoes.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Ruby slippers required",
+   "where": "prop",
+   "verdict": "wrong",
+   "why": "Same as the wink: the shoes are enchanted and 'my sister's shoes' in the film, never called ruby in any source opened.",
+   "source": "https://en.wikipedia.org/wiki/Wicked:_For_Good",
+   "fix": "Enchanted shoes required",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Glinda's engagement party, before Fiyero runs.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The plot has Glinda and Fiyero's wedding, which Elphaba interrupts, after which Fiyero leaves with her; there is no engagement party in the transcript or plot.",
+   "source": "https://en.wikipedia.org/wiki/Wicked:_For_Good",
+   "fix": "Glinda's wedding, before Fiyero runs.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 8,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Smart palace and bubble ideas, but a lot of the film's biggest moments are not on the menu.",
+  "missing": [
+   "Dorothy's house landing on Nessarose in the tornado",
+   "Boq turned into the Tin Man",
+   "Fiyero revealed as the Scarecrow",
+   "Dorothy's bucket of water and the melting",
+   "The Yellow Brick Road opening",
+   "Elphaba hiding under the trapdoor at Kiamo Ko"
+  ],
+  "ideas": [
+   "Swap 'Pistachio shortbread cookies' for 'Tin Man heart tarts' (Boq's shrunken heart)",
+   "Swap 'Nessarose's jewelled shoe raspberry tarts' note for the enchanted shoes line",
+   "Rename 'Glinda's bubble emerald mint fizz' to 'Yellow Brick Road mint fizz'",
+   "Add a 'Scarecrow straw potato nests' item"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

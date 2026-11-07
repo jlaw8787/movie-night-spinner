@@ -20,23 +20,27 @@
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Carl's lunch, the same since Ellie.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No opened source shows Carl eating a cheese and tomato toastie or keeping a lunch routine since Ellie.",
-   "source": "https://en.wikipedia.org/wiki/Up_(2009_film)",
-   "fix": "Plain toasties for a quiet afternoon at home."
+   "verdict": "wrong",
+   "why": "The transcript and plot never show Carl eating toasties or keeping a daily lunch since Ellie, so the line claims something the film does not show.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=up",
+   "fix": "Plain toasties for a quiet afternoon at home.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Sipped on the porch while the house floats.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The quote page has Russell on the porch before take off, but nothing shows tea on the porch while the house flies.",
+   "verdict": "wrong",
+   "why": "Russell is on the porch as the house lifts off, but nobody sips tea there while it floats; the film has no such scene.",
    "source": "https://en.wikiquote.org/wiki/Up_(2009_film)",
-   "fix": "Tea for the long flight to Paradise Falls."
+   "fix": "Tea for the long flight to Paradise Falls.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

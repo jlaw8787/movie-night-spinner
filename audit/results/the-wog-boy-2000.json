@@ -16,12 +16,14 @@
   {
    "text": "Serve the mains when the whole family sits down to the Greek feast.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "No source opened describes a family Greek feast scene. Steve's parents arrive from Greece at the start, but a feast is not mentioned.",
-   "source": "https://en.wikipedia.org/wiki/The_Wog_Boy",
-   "fix": "Serve the mains when Steve's parents arrive from Greece.",
+   "verdict": "wrong",
+   "why": "No family Greek feast shows up in the transcript or plot; the family scene that is there is the opening narration where Steve's mother joins his father a year later and brings his other shoe.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-wog-boy",
+   "fix": "Serve the mains when Steve's mother arrives from Greece with his father's other shoe.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Sit down, eat, and don't tell the dole office how well I'm doing. Efharisto.",

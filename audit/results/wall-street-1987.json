@@ -43,22 +43,26 @@
   {
    "text": "The power lunch Gekko doesn't bother eating.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The sources do not show Gekko at a power lunch with steak tartare. The only food reference is Gekko mocking Teldar's executives for their steak lunches.",
-   "source": "https://Filmsite.org/wallstreet.html",
+   "verdict": "ok",
+   "why": "Gekko says 'Lunch is for wimps' and mocks the Teldar executives' steak lunches, so a raw-beef power lunch he would skip is a fair menu joke.",
+   "source": "https://en.wikiquote.org/wiki/Wall_Street_(1987_film)",
    "fix": "Gekko mocks the Teldar steak lunches.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Bud's flashy new apartment.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Bud does move into a penthouse on the East Side, but no source mentions sushi in it.",
+   "verdict": "ok",
+   "why": "Bud becomes wealthy and moves into a penthouse on Manhattan's East Side, so the flashy new apartment is real; the note claims nothing about the sushi itself.",
    "source": "https://en.wikipedia.org/wiki/Wall_Street_(1987_film)",
    "fix": "Bud's new East Side penthouse.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

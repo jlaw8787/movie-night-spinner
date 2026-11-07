@@ -21,22 +21,26 @@
   {
    "text": "Served at Castor's bar, top of the tower.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Castor owns the End of Line Club and Clu destroys it, but the sources opened do not place the bar at the top of a tower.",
-   "source": "https://en.wikipedia.org/wiki/Tron:_Legacy",
+   "verdict": "ok",
+   "why": "The End of Line Club is at the top of the tallest tower in the system, and Castor is its owner and host.",
+   "source": "https://jhmoviecollection.fandom.com/wiki/Tron:_Legacy",
    "fix": "Served at Castor's bar in the End of Line Club.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Daft Punk on the decks, light cycles out back.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The sources opened do not cover the DJ booth or any light cycles at the club.",
-   "source": "https://en.wikipedia.org/wiki/Tron:_Legacy",
-   "fix": "Daft Punk on the decks, Castor working the room.",
+   "verdict": "wrong",
+   "why": "Daft Punk do play the club as DJ programs, but no source puts light cycles out the back of it.",
+   "source": "https://www.comingsoon.net/?p=67242",
+   "fix": "Daft Punk on the decks, Castor pouring.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

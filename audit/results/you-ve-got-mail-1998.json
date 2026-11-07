@@ -5,32 +5,38 @@
   {
    "text": "the date at the cafe that she sits through alone",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Kathleen waits for NY152 at a cafe, but Joe joins her at the table without revealing himself, and she later believes NY152 never showed.",
+   "verdict": "wrong",
+   "why": "Joe joins Kathleen at the cafe table without revealing himself and they clash, so she does not sit through it alone. She leaves believing NY152 never showed.",
    "source": "https://en.wikipedia.org/wiki/You%27ve_Got_Mail",
-   "fix": "the cafe where she waits for NY152",
+   "fix": "the date at the cafe where she thinks he never showed",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "the party where Joe and Kathleen meet face to face and argue",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "They first meet at her store's storytime event. At the publishing party she learns who he really is and they argue.",
+   "verdict": "wrong",
+   "why": "They first meet at the storytime event. At the publishing party Kathleen learns who Joe really is and they argue.",
    "source": "https://en.wikipedia.org/wiki/You%27ve_Got_Mail",
-   "fix": "the publishing party where she learns who he is, and they argue",
+   "fix": "the party where Kathleen learns who Joe really is and they argue",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Joe turns up with daisies when she's sick",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No source I opened mentions daisies or Joe bringing soup.",
-   "source": "https://en.wikipedia.org/wiki/You%27ve_Got_Mail",
+   "verdict": "ok",
+   "why": "Joe visits sick Kathleen with flowers, she says she loves daisies, and she thanks him for the daisies.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=youve-got-mail",
    "fix": "Joe turns up when she's sick",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

@@ -1,42 +1,44 @@
 {
-  "id": "Wonder Woman (2017)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Steve's above average. So is this octopus.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "None of the sources I opened mention an 'above average' line for Steve, so I cannot confirm it is in the film.",
-      "source": "https://en.wikipedia.org/wiki/Wonder_Woman_(2017_film)",
-      "fix": "Steve's an ally. So is this octopus.",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 11,
-  "vibe": {
-    "world": 4,
-    "moments": 4,
-    "food": 4,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.8,
-    "verdict": "The 1918 touches, the lasso and the ice cream cue are right, and Charlie's piano is a good deep cut.",
-    "missing": [
-      "The lasso interrogation of Steve",
-      "The gala at the German High Command",
-      "Veld villagers and the photograph",
-      "Ares revealed as Sir Patrick",
-      "Antiope's sacrifice",
-      "Dr Maru's notebook"
-    ],
-    "ideas": [
-      "Swap 'London 1918 pasties' note for the Veld photograph scene",
-      "Swap 'Island platter' note for the Amazons training scene",
-      "Rename 'Veld Belgian ale' to 'Veld photograph ale'",
-      "Swap 'Chilled retsina' note for the lasso interrogation"
-    ],
-    "flat": false,
-    "done": false
+ "id": "Wonder Woman (2017)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Steve's above average. So is this octopus.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "Diana asks if Steve is a typical example of his sex and he answers that he is above average, so the line is true and the octopus is a menu joke.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=wonder-woman-2017",
+   "fix": "Steve's an ally. So is this octopus.",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "The 1918 touches, the lasso and the ice cream cue are right, and Charlie's piano is a good deep cut.",
+  "missing": [
+   "The lasso interrogation of Steve",
+   "The gala at the German High Command",
+   "Veld villagers and the photograph",
+   "Ares revealed as Sir Patrick",
+   "Antiope's sacrifice",
+   "Dr Maru's notebook"
+  ],
+  "ideas": [
+   "Swap 'London 1918 pasties' note for the Veld photograph scene",
+   "Swap 'Island platter' note for the Amazons training scene",
+   "Rename 'Veld Belgian ale' to 'Veld photograph ale'",
+   "Swap 'Chilled retsina' note for the lasso interrogation"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

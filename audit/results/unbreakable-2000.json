@@ -33,22 +33,26 @@
   {
    "text": "Serve the mains when David sits down to breakfast with his son Joseph.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The sources opened show David and Joseph talking (the Bruce Lee conversation) but no breakfast table scene.",
+   "verdict": "wrong",
+   "why": "No source shows a breakfast table scene. David and Joseph are shown together lifting weights, with Joseph asking if his dad could beat Bruce Lee and helping load the bar.",
    "source": "https://en.wikiquote.org/wiki/Unbreakable_(film)",
-   "fix": "Serve the mains when David asks Audrey when he was last sick.",
+   "fix": "Serve the mains when David lifts weights with his son Joseph.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "David, Audrey and Joseph at the kitchen table.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Sources show David asking Audrey whether she remembers him ever being sick, but do not place the Dunn family at a breakfast table.",
+   "verdict": "wrong",
+   "why": "Sources show David asking Audrey when he was last sick, but not the Dunn family at a table.",
    "source": "https://en.wikiquote.org/wiki/Unbreakable_(film)",
-   "fix": "David asks Audrey when he was last sick.",
+   "fix": "David asking Audrey if he is ever sick",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

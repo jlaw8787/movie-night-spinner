@@ -1,42 +1,44 @@
 {
-  "id": "Wet Hot American Summer (2001)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Fuel for the softball game against Camp Tigerclaw",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "The sources I opened call it the big game against Camp Tigerclaw and do not say what sport it is.",
-      "source": "https://en.wikipedia.org/wiki/Wet_Hot_American_Summer",
-      "fix": "Fuel for the big game against Camp Tigerclaw",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 12,
-  "vibe": {
-    "world": 4,
-    "moments": 4,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "A good camp feel with Gene, bug juice and Tigerclaw, but the food notes are safe and generic.",
-    "missing": [
-      "Gene confessing in front of the food hall after the can of vegetables urges him",
-      "Steve's mind storm at the talent show",
-      "Henry and the kids working out where Skylab lands",
-      "Coop's training with Gene",
-      "Victor and the rafting trip",
-      "Fifteen gallons of bug juice by snack time (Gene)"
-    ],
-    "ideas": [
-      "Swap 'Camp Firewood bug juice punch' note for Gene's 'fifteen gallons of bug juice by snack time'",
-      "Swap 'Gene's mixed vegetable fritters' for a 'Can of mixed vegetables' dish with the can talking",
-      "Rename 'Cold grape soda' note to a Skylab line, 'Duck, it is coming down tonight'",
-      "Add a talent show 'Steve's storm shake' drink"
-    ],
-    "flat": false,
-    "done": false
+ "id": "Wet Hot American Summer (2001)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Fuel for the softball game against Camp Tigerclaw",
+   "where": "dish-note",
+   "verdict": "ok",
+   "why": "The transcript has the counsellor calling it the big culminating, climactic softball game against evil Camp Tiger Claw.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=wet-hot-american-summer",
+   "fix": "Fuel for the big game against Camp Tigerclaw",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A good camp feel with Gene, bug juice and Tigerclaw, but the food notes are safe and generic.",
+  "missing": [
+   "Gene confessing in front of the food hall after the can of vegetables urges him",
+   "Steve's mind storm at the talent show",
+   "Henry and the kids working out where Skylab lands",
+   "Coop's training with Gene",
+   "Victor and the rafting trip",
+   "Fifteen gallons of bug juice by snack time (Gene)"
+  ],
+  "ideas": [
+   "Swap 'Camp Firewood bug juice punch' note for Gene's 'fifteen gallons of bug juice by snack time'",
+   "Swap 'Gene's mixed vegetable fritters' for a 'Can of mixed vegetables' dish with the can talking",
+   "Rename 'Cold grape soda' note to a Skylab line, 'Duck, it is coming down tonight'",
+   "Add a talent show 'Steve's storm shake' drink"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

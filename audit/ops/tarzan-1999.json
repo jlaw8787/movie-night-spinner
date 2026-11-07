@@ -3,15 +3,20 @@
  "ops": [
   {
    "old": "Serve the tea when Jane sets out her tea service in the jungle.",
-   "new": "Serve the tea when the gorillas wreck Jane's camp."
+   "new": "Serve the tea when the gorillas wreck Jane's camp.",
+   "done": true
   },
   {
    "old": "the proper English tea Jane brings to the jungle",
-   "new": "proper English tea, for Jane's camp in the jungle"
+   "new": "proper English tea, for Jane's camp in the jungle",
+   "done": true
   },
   {
    "old": "Caught off the waterfall below the treehouse",
-   "new": "Caught below the waterfall Tarzan climbs"
+   "new": "Caught below the waterfall Tarzan climbs",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

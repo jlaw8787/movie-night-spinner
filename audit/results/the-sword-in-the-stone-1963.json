@@ -1,34 +1,72 @@
 {
-  "id": "The Sword in the Stone (1963)",
-  "checked": "2026-11-07",
-  "facts": [
-    {"text": "Pellinore brings the tournament news to dinner.",
-     "where": "house", "verdict": "unsure",
-     "why": "Sir Pelinore (spelled that way in the plot summary) arrives at the castle to announce the New Year's Day tournament, but the sources opened do not say it happens at dinner.",
-     "source": "https://en.wikipedia.org/wiki/The_Sword_in_the_Stone_(1963_film)",
-     "fix": "Pelinore brings the tournament news to the castle.",
-     "printed": false, "done": false},
-    {"text": "Ector's cup, filled once Merlin's blizzard ends.",
-     "where": "house", "verdict": "unsure",
-     "why": "No source opened mentions a blizzard conjured by Merlin at the castle. Could not confirm.",
-     "source": "https://en.wikipedia.org/wiki/The_Sword_in_the_Stone_(1963_film)",
-     "fix": "Ector's cup, filled after the tournament news.",
-     "printed": false, "done": false},
-    {"text": "Wart, an education beats a sword any day. Now watch the dishes wash themselves.",
-     "where": "note", "verdict": "ok",
-     "why": "A note in Merlin's voice, not a quote. It fits the plot: Merlin's whole lesson is knowledge over strength, and he enchants the dishes to wash themselves while Wart is punished in the kitchen. Keep it without quote marks.",
-     "source": "https://en.wikipedia.org/wiki/The_Sword_in_the_Stone_(1963_film)",
-     "printed": true, "done": false},
-    {"text": "Serve the mains when Merlin magics the castle dishes into washing themselves.",
-     "where": "cue", "verdict": "ok",
-     "why": "Wart is sent to the kitchen as punishment and Merlin enchants the dishes to wash themselves. Matches.",
-     "source": "https://en.wikipedia.org/wiki/The_Sword_in_the_Stone_(1963_film)",
-     "printed": true, "done": false}
+ "id": "The Sword in the Stone (1963)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Pellinore brings the tournament news to dinner.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "Pelinore arrives with news of the New Year's Day tournament while Ector's household settles in the dining hall after a meal.",
+   "source": "https://en.wikiquote.org/wiki/The_Sword_in_the_Stone_(film)",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Ector's cup, filled once Merlin's blizzard ends.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "Merlin casts his indoor wizard blizzard over Ector, then stops it with Alakazam, so a cup filled once it ends is a fair menu joke.",
+   "source": "https://en.wikiquote.org/wiki/The_Sword_in_the_Stone_(film)",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Wart, an education beats a sword any day. Now watch the dishes wash themselves.",
+   "where": "note",
+   "verdict": "ok",
+   "why": "A note in Merlin's voice, not a quote. It fits the plot: Merlin's whole lesson is knowledge over strength, and he enchants the dishes to wash themselves while Wart is punished in the kitchen. Keep it without quote marks.",
+   "source": "https://en.wikipedia.org/wiki/The_Sword_in_the_Stone_(1963_film)",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve the mains when Merlin magics the castle dishes into washing themselves.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "Wart is sent to the kitchen as punishment and Merlin enchants the dishes to wash themselves. Matches.",
+   "source": "https://en.wikipedia.org/wiki/The_Sword_in_the_Stone_(1963_film)",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.4,
+  "verdict": "A neat castle kitchen with the dishes, the fish and Merlin's note, but the poster sits in a tall black frame with empty bars and the wording is plain.",
+  "missing": [
+   "Sugar bowl hopping about: 'Sugar? Sugar!' (Merlin's cottage)",
+   "Merlin packing everything into one suitcase (cottage)",
+   "Madam Mim as a dragon and Merlin as a germ (the duel)",
+   "Wart as a squirrel with the girl squirrel (forest)",
+   "Merlin in 20th-century Bermuda",
+   "The pike in the moat"
   ],
-  "checked_ok": 13,
-  "vibe": {"world": 4, "moments": 4, "food": 3, "tone": 3, "look": 3, "overall": 3.4,
-    "verdict": "A neat castle kitchen with the dishes, the fish and Merlin's note, but the poster sits in a tall black frame with empty bars and the wording is plain.",
-    "missing": ["Sugar bowl hopping about: 'Sugar? Sugar!' (Merlin's cottage)", "Merlin packing everything into one suitcase (cottage)", "Madam Mim as a dragon and Merlin as a germ (the duel)", "Wart as a squirrel with the girl squirrel (forest)", "Merlin in 20th-century Bermuda", "The pike in the moat"],
-    "ideas": ["Swap the sugar cubes line for 'Sugar? Sugar! Manners, guests first'", "Rename 'Raspberry jam roly-poly' to 'Mim's mumps roll' with a germ duel note", "Replace 'Moat fish bites' note with the angry pike", "Crop the poster to fill its frame so the black bars go"],
-    "flat": true, "done": false}
+  "ideas": [
+   "Swap the sugar cubes line for 'Sugar? Sugar! Manners, guests first'",
+   "Rename 'Raspberry jam roly-poly' to 'Mim's mumps roll' with a germ duel note",
+   "Replace 'Moat fish bites' note with the angry pike",
+   "Crop the poster to fill its frame so the black bars go"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

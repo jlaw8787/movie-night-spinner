@@ -20,13 +20,15 @@
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Serve the cheese when Wallace gets the crackers out.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "No opened source describes a scene where Wallace gets the crackers out. The plot's cheese beats are Hutch getting Wallace's love of cheese and Wallace coming round at the end thanks to cheese.",
-   "source": "https://en.wikipedia.org/wiki/Wallace_%26_Gromit:_The_Curse_of_the_Were-Rabbit",
-   "fix": "Serve the cheese when Wallace comes round at the end thanks to his love of cheese."
+   "verdict": "wrong",
+   "why": "Wallace does not get the crackers out; at the end he says 'Lovely cheese, Gromit' and then 'Don't forget the crackers', so the cue should hang on that line.",
+   "source": "https://en.wikiquote.org/wiki/Wallace_%26_Gromit:_The_Curse_of_the_Were-Rabbit",
+   "fix": "Serve the cheese when Wallace says, \"Don't forget the crackers.\"",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "printed": true,
@@ -42,13 +44,15 @@
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Fired out of the breakfast machine.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No opened source says crumpets come out of the breakfast machine in this film.",
-   "source": "https://en.wikipedia.org/wiki/Wallace_%26_Gromit:_The_Curse_of_the_Were-Rabbit",
-   "fix": "Cracking toast, Gromit."
+   "verdict": "wrong",
+   "why": "The transcript, Wikipedia and two searches show no scene with crumpets fired from a breakfast machine in this film; Wallace does say 'Cracking toast, Gromit', so the fix uses that.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=wallace-gromit-in-the-curse-of-the-were-rabbit",
+   "fix": "Cracking toast, Gromit.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

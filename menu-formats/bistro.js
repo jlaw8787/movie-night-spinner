@@ -223,7 +223,7 @@ function flavourOf(ctx,neutral){
     winks:winks.length?winks:neutral.winks(ctx),prop:fl.prop&&fl.prop.title?{kind:fl.prop.kind||"card",title:d(fl.prop.title),lines:(fl.prop.lines||[]).map(d).filter(Boolean).slice(0,3)}:neutral.prop(ctx),
     num:/^\d{1,4}$/.test(String(fl.number||""))?String(fl.number):"",has:!!ctx.flavour,
     /* audit, 7 Nov (Josh: the film over the layout's habit): a booking that is not dinner for two says so (Ferris Bueller: lunch for three) */
-    party:+fl.party>0?+fl.party:2,time:/^\d{1,2}:\d\d [ap]m$/.test(fl.time||"")?fl.time:"",lunch:fl.meal==="lunch"};
+    party:+fl.party>0?+fl.party:2,time:/^\d{1,2}:\d\d [ap]m$/.test(fl.time||"")||/^[A-Za-z ]{3,14}$/.test(fl.time||"")?fl.time:"",lunch:fl.meal==="lunch"};
 }
 /* prices scale with the era of the printed object */
 const ERA_PRICE=[.07,.11,.16,.3,.55,.75,.9,1];

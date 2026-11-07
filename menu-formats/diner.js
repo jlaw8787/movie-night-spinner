@@ -71,7 +71,7 @@ window.MENU_FORMATS.diner=ctx=>{
   const E=ERA[eraOf(era)],ek=eraOf(era),night=NIGHT(tone),T=tone||"warm";
   /* the diner opened before the story: a film set in an earlier decade than its release (The Iron Giant's 1957, Stand by Me's 1959)
      says Est. one to eight years before that decade starts, never the release year; a diner in its own decade keeps the film's year */
-  const eraD=+((String(era||"").match(/(\d{4})s/)||[])[1]||0),estYear=eraD&&eraD+10<=+f.year?eraD-1-(hash(f.title)%8):f.year;
+  const eraD=+((String(era||"").match(/(\d{4})s/)||[])[1]||0),estYear=(ctx.flavour&&/^\d{4}$/.test(String(ctx.flavour.est||"")))?String(ctx.flavour.est):eraD&&eraD+10<=+f.year?eraD-1-(hash(f.title)%8):f.year;/* 7 Nov: diner `est` per film where the film names the year (Wreck-It Ralph's Tapper's) */
   const V=night?VOICE[T]||VOICE.eerie:null;
   const token="d"+(++SEQ)+"-"+(hash(f.id||f.title)%9999);
   /* colour: the poster accent if it holds up on paper and in the dark, else the era's diner colour */

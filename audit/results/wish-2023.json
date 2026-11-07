@@ -1,72 +1,80 @@
 {
-  "id": "Wish (2023)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve dessert when Dahlia brings out her baking.",
-      "where": "cue",
-      "verdict": "unsure",
-      "why": "Dahlia is the royal baker, but no source I opened shows a scene where she brings out baking.",
-      "source": "https://en.wikipedia.org/wiki/Wish_(film)",
-      "fix": "Serve dessert when Asha makes her wish on the star.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Serve dessert when Dahlia brings out her baking.",
-      "where": "cue-printed",
-      "verdict": "unsure",
-      "why": "Same as the data cue.",
-      "source": "https://en.wikipedia.org/wiki/Wish_(film)",
-      "fix": "Serve dessert when Asha makes her wish on the star.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Dahlia's Bakery",
-      "where": "venue",
-      "verdict": "unsure",
-      "why": "Dahlia is described as the royal baker. The sources I opened do not show a bakery of her own.",
-      "source": "https://en.wikipedia.org/wiki/Wish_(film)",
-      "fix": "Rosas Royal Kitchen",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Asha's tour, before the wishing ceremony.",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "In the plot Asha is preparing for an interview to be Magnifico's apprentice on her grandfather's 100th birthday. It does not mention a tour.",
-      "source": "https://en.wikipedia.org/wiki/Wish_(film)",
-      "fix": "Asha's interview day, before the wishing ceremony.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 9,
-  "vibe": {
-    "world": 3,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.2,
-    "verdict": "Pretty and warm, but the bakery premise and cue are guesses rather than scenes from the film.",
-    "missing": [
-      "Asha's interview with Magnifico",
-      "Star arriving and making the animals talk",
-      "Valentino the goat talking",
-      "The Teens, including Simon selling Asha out",
-      "Magnifico's dark magic book",
-      "The wishes bursting out of Magnifico's study ceiling"
-    ],
-    "ideas": [
-      "Swap 'Dahlia's star cookies' note for the Star arriving scene",
-      "Swap 'Star sparkle paprika potato crisps' note for the talking animals",
-      "Rename 'Pan con tomate with manchego' to 'Sabino's wish toast' with a birthday note",
-      "Make the cue 'Serve dessert when the wishes burst out of the study ceiling'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Wish (2023)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve dessert when Dahlia brings out her baking.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "In the film Dahlia tells the Queen she makes the King's Magnifico cookies. No scene has her bring out a spread of baking.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=wish",
+   "fix": "Serve dessert when Dahlia tells Queen Amaya she bakes the King's cookies.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Serve dessert when Dahlia brings out her baking.",
+   "where": "cue-printed",
+   "verdict": "wrong",
+   "why": "Same as the data cue: the film shows Dahlia saying she makes the King's cookies, not bringing out baking.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=wish",
+   "fix": "Serve dessert when Dahlia tells Queen Amaya she bakes the King's cookies.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Dahlia's Bakery",
+   "where": "venue",
+   "verdict": "wrong",
+   "why": "Dahlia is the royal baker and the film shows her cookies, but no bakery of her own appears.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=wish",
+   "fix": "Dahlia's Cookies",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Asha's tour, before the wishing ceremony.",
+   "where": "dish-note",
+   "verdict": "ok",
+   "why": "Asha says she is giving a tour and helping Dahlia on the day of the wish ceremony, so the tour line holds.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=wish",
+   "fix": "Asha's interview day, before the wishing ceremony.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 9,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "Pretty and warm, but the bakery premise and cue are guesses rather than scenes from the film.",
+  "missing": [
+   "Asha's interview with Magnifico",
+   "Star arriving and making the animals talk",
+   "Valentino the goat talking",
+   "The Teens, including Simon selling Asha out",
+   "Magnifico's dark magic book",
+   "The wishes bursting out of Magnifico's study ceiling"
+  ],
+  "ideas": [
+   "Swap 'Dahlia's star cookies' note for the Star arriving scene",
+   "Swap 'Star sparkle paprika potato crisps' note for the talking animals",
+   "Rename 'Pan con tomate with manchego' to 'Sabino's wish toast' with a birthday note",
+   "Make the cue 'Serve dessert when the wishes burst out of the study ceiling'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

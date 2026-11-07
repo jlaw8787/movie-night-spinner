@@ -5,67 +5,67 @@
   {
    "text": "Serve the snacks when the four men in moustaches board the train.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The plot says four men in similar disguises board the same train at different stations. No opened source says moustaches. The phone menu cue says 'in disguise', which is safe.",
-   "source": "https://en.wikipedia.org/wiki/The_Taking_of_Pelham_One_Two_Three_(1974_film)",
-   "fix": "Serve the snacks when the four men in disguise board the train.",
+   "verdict": "ok",
+   "why": "The hijackers run their drill in the transcript: hats, glasses, then moustaches, before they board.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-taking-of-pelham-one-two-three",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Best hero in the building, and it reaches the Command Center inside the hour. Tell them Garber sent you.",
    "where": "note",
-   "verdict": "unsure",
-   "why": "Garber is a Transit Police lieutenant, so a note from him fits. The film's Transit Authority base is a control center (the set was a replica of the Brooklyn control center), not a command center.",
-   "source": "https://en.wikipedia.org/wiki/The_Taking_of_Pelham_One_Two_Three_(1974_film)",
-   "fix": "Best hero in the building, and it reaches the Control Center inside the hour. Tell them Garber sent you.",
+   "verdict": "ok",
+   "why": "The film calls the Transit Authority base the TA Command Center in dialogue, so the note's wording is right.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-taking-of-pelham-one-two-three",
    "printed": true,
    "done": false,
-   "fix_note": {
-    "text": "Best hero in the building, and it reaches the Control Center inside the hour. Tell them Garber sent you.",
-    "by": "Z. Garber",
-    "kind": "note"
-   }
+   "settled": "2026-11-08"
   },
   {
    "text": "Call KLondike 5-0123. Command Center orders up inside the hour.",
    "where": "card",
-   "verdict": "unsure",
-   "why": "Same naming issue. The Transit Authority's base in the film is the control center.",
-   "source": "https://en.wikipedia.org/wiki/The_Taking_of_Pelham_One_Two_Three_(1974_film)",
-   "fix": "Call KLondike 5-0123. Control Center orders up inside the hour.",
+   "verdict": "ok",
+   "why": "The dialogue says 'TA Command Center' and 'Command Center callin' Pelham 123', so the name is right.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-taking-of-pelham-one-two-three",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "A dozen for the Command Center floor.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Same naming issue, on the phone menu.",
-   "source": "https://en.wikipedia.org/wiki/The_Taking_of_Pelham_One_Two_Three_(1974_film)",
-   "fix": "A dozen for the Control Center floor.",
+   "verdict": "ok",
+   "why": "The dialogue calls it the TA Command Center.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-taking-of-pelham-one-two-three",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Garber's command centre",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Same naming issue. Garber works with the Transit Authority control center.",
-   "source": "https://en.wikipedia.org/wiki/The_Taking_of_Pelham_One_Two_Three_(1974_film)",
-   "fix": "Garber's control center",
+   "verdict": "ok",
+   "why": "The dialogue calls it the TA Command Center, and Garber works with it.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-taking-of-pelham-one-two-three",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "the mayor has the flu",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The cast list has a mayor's nurse and the mayor in bed, but no source I opened says what is wrong with him.",
-   "source": "https://en.wikipedia.org/wiki/The_Taking_of_Pelham_One_Two_Three_(1974_film)",
-   "fix": "the mayor is in bed with a nurse",
+   "verdict": "ok",
+   "why": "In the transcript a doctor tells the mayor he is sorry he has the flu while the mayor lies in bed.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-taking-of-pelham-one-two-three",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 10,

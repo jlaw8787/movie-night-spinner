@@ -1,34 +1,72 @@
 {
-  "id": "Thunderball (1965)",
-  "checked": "2026-11-07",
-  "facts": [
-    {"text": "Serve the snacks when Bond first meets Domino underwater on the reef off Nassau.",
-     "where": "cue", "verdict": "unsure",
-     "why": "Wikipedia's plot summary says Bond meets Domino, Largo's mistress, at the beach, and then again at a casino with Largo. The sources opened do not say they first meet underwater on the reef. The cue appears in the data and on the printed card.",
-     "source": "https://en.wikipedia.org/wiki/Thunderball_(film)",
-     "fix": "Serve the snacks when Bond first meets Domino on the beach in Nassau.",
-     "printed": true, "done": false},
-    {"text": "Eat and drink, Mr. Bond. My terrace is the finest in Nassau, and my pool is very well stocked.",
-     "where": "note", "verdict": "ok",
-     "why": "A note in Largo's voice, not a quote. It fits the plot: Largo lives at Palmyra, his Nassau estate (filmed at a local millionaires' home), and the shark pool is a famous set piece. Keep it without quote marks.",
-     "source": "https://en.wikipedia.org/wiki/Thunderball_(film)",
-     "printed": true, "done": false},
-    {"text": "The night of the Junkanoo parade Bond runs through in Nassau",
-     "where": "dish-note", "verdict": "ok",
-     "why": "Bond escapes Largo's compound and evades Largo's men during a Junkanoo celebration.",
-     "source": "https://en.wikipedia.org/wiki/Thunderball_(film)",
-     "printed": true, "done": false},
-    {"text": "Domino's pour, after her swim on the reef.",
-     "where": "house", "verdict": "unsure",
-     "why": "Domino is introduced at the beach and later at the casino. No source opened shows her pouring a drink or swimming on a reef.",
-     "source": "https://en.wikipedia.org/wiki/Thunderball_(film)",
-     "fix": "Domino's pour, after the beach in Nassau.",
-     "printed": true, "done": false}
+ "id": "Thunderball (1965)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when Bond first meets Domino underwater on the reef off Nassau.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "Bond first meets Domino while she swims at Nassau: her foot is stuck in coral on the ocean floor and he frees her underwater on the reef.",
+   "source": "https://en.wikipedia.org/wiki/Domino_Vitali",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Eat and drink, Mr. Bond. My terrace is the finest in Nassau, and my pool is very well stocked.",
+   "where": "note",
+   "verdict": "ok",
+   "why": "A note in Largo's voice, not a quote. It fits the plot: Largo lives at Palmyra, his Nassau estate (filmed at a local millionaires' home), and the shark pool is a famous set piece. Keep it without quote marks.",
+   "source": "https://en.wikipedia.org/wiki/Thunderball_(film)",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "The night of the Junkanoo parade Bond runs through in Nassau",
+   "where": "dish-note",
+   "verdict": "ok",
+   "why": "Bond escapes Largo's compound and evades Largo's men during a Junkanoo celebration.",
+   "source": "https://en.wikipedia.org/wiki/Thunderball_(film)",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Domino's pour, after her swim on the reef.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "Domino swims over the coral reef off Nassau when she meets Bond, and the pour is a menu joke.",
+   "source": "https://en.wikipedia.org/wiki/Domino_Vitali",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A fun island chart menu with the shark pool, Junkanoo and the Disco Volante, but it plays safe on the food and leaves out the SPECTRE boardroom.",
+  "missing": [
+   "Do you mind if my friend sits this one out? She's just dead (Bond and Fiona, the dance floor)",
+   "SPECTRE's boardroom with Blofeld in his glass box",
+   "Q's underwater camera and breathing gear",
+   "The Skyhook rescue at the end",
+   "Bond's jetpack at the funeral (opening)",
+   "The Vulcan hidden underwater"
   ],
-  "checked_ok": 10,
-  "vibe": {"world": 4, "moments": 4, "food": 3, "tone": 3, "look": 4, "overall": 3.6,
-    "verdict": "A fun island chart menu with the shark pool, Junkanoo and the Disco Volante, but it plays safe on the food and leaves out the SPECTRE boardroom.",
-    "missing": ["Do you mind if my friend sits this one out? She's just dead (Bond and Fiona, the dance floor)", "SPECTRE's boardroom with Blofeld in his glass box", "Q's underwater camera and breathing gear", "The Skyhook rescue at the end", "Bond's jetpack at the funeral (opening)", "The Vulcan hidden underwater"],
-    "ideas": ["Swap 'Shrublands health farm crudites' note for the Shrublands sauna gag", "Rename 'Junkanoo stew chicken' to a SPECTRE Number 2 plate with a Largo note", "Replace the guava duff note with the Skyhook pick up line", "Add a Blofeld glass box card to the casino card"],
-    "flat": false, "done": false}
+  "ideas": [
+   "Swap 'Shrublands health farm crudites' note for the Shrublands sauna gag",
+   "Rename 'Junkanoo stew chicken' to a SPECTRE Number 2 plate with a Largo note",
+   "Replace the guava duff note with the Skyhook pick up line",
+   "Add a Blofeld glass box card to the casino card"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

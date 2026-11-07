@@ -20,23 +20,27 @@
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Lisa mixes it while Wyatt's parents are away.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The plot has the boys drinking at a Chicago blues bar with fake IDs Lisa makes, but no opened source shows Lisa mixing drinks at the house.",
+   "verdict": "wrong",
+   "why": "The plot and transcript show Lisa making fake IDs for the blues bar and taking charge while Wyatt's parents are away, but nothing shows her mixing drinks at the house.",
    "source": "https://en.wikipedia.org/wiki/Weird_Science_(film)",
-   "fix": "Wyatt's parents are away, so Lisa takes charge."
+   "fix": "Wyatt's parents are away, so Lisa takes charge.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "printed": false,
-   "done": false,
+   "done": true,
    "text": "Lisa appearing in the bathroom steam",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "The plot says a power surge creates Lisa but does not say where she appears. The quote page only has a shower line.",
-   "source": "https://en.wikipedia.org/wiki/Weird_Science_(film)",
-   "fix": "Lisa appearing after the power surge"
+   "verdict": "ok",
+   "why": "After the power surge Lisa is a shower scene in the transcript ('Isn't showering real fun?', 'Shower with them'), which fits the bathroom steam wink; it is an unprinted nod and claims little beyond that.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=weird-science",
+   "fix": "Lisa appearing after the power surge",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

@@ -1,33 +1,70 @@
 {
-  "id": "Thor: The Dark World (2013)",
-  "checked": "2026-11-07",
-  "facts": [
-    {"text": "Serve the snacks when Thor hangs his hammer on the coat hook in Jane's flat.",
-     "where": "cue", "verdict": "ok",
-     "why": "The hammer on the coat rack is a known improvised beat in the film. The Wikipedia plot and Wikiquote pages opened do not describe it, and a search only returned page titles confirming the scene, so no source page was read for this call.",
-     "source": "",
-     "printed": true, "done": false},
-    {"text": "Eat first and quarrel after. I mean it, both of you, in front of the whole court.",
-     "where": "note", "verdict": "ok",
-     "why": "A note in Frigga's voice, not a quote. It fits the plot: she is the one who tries to hold Thor and Loki together, and Loki sits in a cell. Keep it without quote marks.",
-     "source": "https://en.wikipedia.org/wiki/Thor:_The_Dark_World",
-     "printed": true, "done": false},
-    {"text": "Jane's awkward restaurant date before Thor turns up.",
-     "where": "dish-note", "verdict": "ok",
-     "why": "Jane has a date with a suitor named Richard (played by Chris O'Dowd). The film cast list opened names the part. The restaurant scene itself is not in the plot summary opened.",
-     "source": "https://en.wikipedia.org/wiki/Thor:_The_Dark_World",
-     "printed": true, "done": false},
-    {"text": "That's for New York. Pour Loki one too.",
-     "where": "house", "verdict": "unsure",
-     "why": "The link to New York (Loki's attack on the city in The Avengers) is not shown in the sources opened for this film, and it is hard to say what 'that' refers to. Plain joke with a thin link.",
-     "source": "https://en.wikipedia.org/wiki/Thor:_The_Dark_World",
-     "fix": "Warm enough for Loki in his cell. Pour Thor one too.",
-     "printed": false, "done": false}
+ "id": "Thor: The Dark World (2013)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when Thor hangs his hammer on the coat hook in Jane's flat.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "The hammer on the coat rack is a known improvised beat in the film. The Wikipedia plot and Wikiquote pages opened do not describe it, and a search only returned page titles confirming the scene, so no source page was read for this call.",
+   "source": "",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Eat first and quarrel after. I mean it, both of you, in front of the whole court.",
+   "where": "note",
+   "verdict": "ok",
+   "why": "A note in Frigga's voice, not a quote. It fits the plot: she is the one who tries to hold Thor and Loki together, and Loki sits in a cell. Keep it without quote marks.",
+   "source": "https://en.wikipedia.org/wiki/Thor:_The_Dark_World",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Jane's awkward restaurant date before Thor turns up.",
+   "where": "dish-note",
+   "verdict": "ok",
+   "why": "Jane has a date with a suitor named Richard (played by Chris O'Dowd). The film cast list opened names the part. The restaurant scene itself is not in the plot summary opened.",
+   "source": "https://en.wikipedia.org/wiki/Thor:_The_Dark_World",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "That's for New York. Pour Loki one too.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "In the transcript Loki, escaping Asgard, says 'That was for New York' after a hit, so the house line is a close, plain nod; the pour line is a menu joke.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=thor-the-dark-world",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Looks the part with a dark Asgard banquet, but most of the film's fun is in London and the menu says so only in the dish names.",
+  "missing": [
+   "Thor taking the Tube with Mjolnir (London)",
+   "Selvig naked at Stonehenge (London)",
+   "Loki as Captain America (Svartalfheim)",
+   "Frigga's death at Malekith's hands (Asgard)",
+   "The portal in the abandoned factory (London)",
+   "Jane's date Richard (London)"
   ],
-  "checked_ok": 12,
-  "vibe": {"world": 3, "moments": 4, "food": 3, "tone": 3, "look": 4, "overall": 3.4,
-    "verdict": "Looks the part with a dark Asgard banquet, but most of the film's fun is in London and the menu says so only in the dish names.",
-    "missing": ["Thor taking the Tube with Mjolnir (London)", "Selvig naked at Stonehenge (London)", "Loki as Captain America (Svartalfheim)", "Frigga's death at Malekith's hands (Asgard)", "The portal in the abandoned factory (London)", "Jane's date Richard (London)"],
-    "ideas": ["Swap 'London pie and mash' for 'Tube ride pie' with a Mjolnir note", "Rename 'Dark Elves blackberry tart' to 'Selvig's Stonehenge tart'", "Replace the Aether spritz line with a Loki 'Captain America' cameo cocktail", "Add a Frigga memorial place setting"],
-    "flat": true, "done": false}
+  "ideas": [
+   "Swap 'London pie and mash' for 'Tube ride pie' with a Mjolnir note",
+   "Rename 'Dark Elves blackberry tart' to 'Selvig's Stonehenge tart'",
+   "Replace the Aether spritz line with a Loki 'Captain America' cameo cocktail",
+   "Add a Frigga memorial place setting"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

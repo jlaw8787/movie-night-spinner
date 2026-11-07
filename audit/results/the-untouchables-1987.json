@@ -5,42 +5,48 @@
   {
    "text": "Serve Ness his drink when he first arrives in Chicago and meets Malone.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Ness has already had a failed liquor raid before he 'soon encounters' Malone, so 'first arrives' is loose. The drink Ness has is at the very end ('I think I'll have a drink').",
+   "verdict": "wrong",
+   "why": "Ness's first liquor raid fails before he meets Malone, so he does not meet Malone on first arriving; the plot has him soon encountering Malone after that raid.",
    "source": "https://en.wikipedia.org/wiki/The_Untouchables_(film)",
-   "fix": "Serve the drinks when Ness first meets Malone after the failed raid.",
+   "fix": "Serve Ness his drink when he meets Malone after the failed raid.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "POUR THE DRINKS WHEN NESS FIRST MEETS MALONE WALKING HIS BEAT STOP",
    "where": "cue-printed",
-   "verdict": "unsure",
-   "why": "Ness meeting Malone is right. No opened source says Malone is walking his beat at that moment.",
-   "source": "https://en.wikipedia.org/wiki/The_Untouchables_(film)",
-   "fix": "POUR THE DRINKS WHEN NESS FIRST MEETS MALONE STOP",
+   "verdict": "ok",
+   "why": "In the transcript Malone says he is walking the beat at his age and calls himself a poor beat cop when Ness asks for his help.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=untouchables-the",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "BANQUET ROOM · THURSDAY, 16 OCTOBER 1930",
    "where": "card",
-   "verdict": "unsure",
-   "why": "The film is set in 1930 and has a banquet dinner where Capone uses the bat. No source I opened gives the date.",
+   "verdict": "wrong",
+   "why": "The film is set in 1930 but no source opened gives any day or month for the banquet.",
    "source": "https://en.wikipedia.org/wiki/The_Untouchables_(film)",
-   "fix": "BANQUET ROOM · AUTUMN 1930",
+   "fix": "BANQUET ROOM · 1930",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Capone's own beer. Every bar in town has to stock it",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Capone supplying liquor and controlling Chicago is in the plot summary. Nothing opened mentions his own lager or bars forced to stock it.",
-   "source": "https://en.wikipedia.org/wiki/The_Untouchables_(film)",
-   "fix": "Capone's supply. Down from the border by the truckload",
+   "verdict": "ok",
+   "why": "Capone supplies the liquor, and the opening shows his men bombing a shop that refused to buy his green beer; he is also quoted on dealing violently with those who do not purchase his product.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=untouchables-the",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 10,
@@ -50,7 +56,7 @@
   "food": 3,
   "tone": 4,
   "look": 4,
-  "overall": 4.0,
+  "overall": 4,
   "verdict": "A great Lexington banquet room that uses the bat dinner and Ness's last drink, but misses the station stairs.",
   "missing": [
    "The baby carriage on the Union Station stairs (the shootout)",

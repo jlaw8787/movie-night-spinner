@@ -20,13 +20,15 @@
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Quicksilver ate three before the guards blinked.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No opened source shows Quicksilver eating in the Pentagon kitchen. The scene is the break out of Magneto.",
+   "verdict": "wrong",
+   "why": "Wikipedia has Quicksilver using his speed in the Pentagon kitchen to break Magneto out. I found no source for him eating anything there.",
    "source": "https://en.wikipedia.org/wiki/X-Men:_Days_of_Future_Past",
-   "fix": "Gone in the time it takes Quicksilver to cross the kitchen."
+   "fix": "Quicksilver cleared the kitchen before the guards blinked.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

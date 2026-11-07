@@ -5,12 +5,14 @@
   {
    "text": "Serve the cocoa when Scott takes Carol on their first date.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The cocoa on screen is Abby's designer Brazilian cocoa brought to Scott at the North Pole just before the naughty-list news, and Toy Santa getting a buzz from cocoa. The sources opened do not show cocoa on Scott and Carol's date (the sleigh ride and faculty party).",
-   "source": "https://en.wikiquote.org/wiki/The_Santa_Clause_2",
-   "fix": "Serve the cocoa when Abby brings Scott a cup and the news that Charlie is on the naughty list.",
+   "verdict": "wrong",
+   "why": "Scott and Carol have cocoa and a blanket on the horse-drawn sleigh ride to the faculty party, but it follows a few failed dates, so it is not their first.",
+   "source": "https://en.wikipedia.org/wiki/The_Santa_Clause_2",
+   "fix": "Serve the cocoa when Scott takes Carol on the sleigh ride.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Believe in Santa? Fine, Scott, but you're carving the roast first.",

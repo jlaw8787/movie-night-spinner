@@ -21,12 +21,14 @@
   {
    "text": "Bobby keeps it cold. No fridge needed.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Bobby is Iceman, so a cold drink is plausible, but the sources do not show him chilling a drink in a scene.",
+   "verdict": "ok",
+   "why": "Bobby Drake is Iceman and generates ice per the cast list, so a cold-drink line is a menu joke on his power that claims no scene.",
    "source": "https://en.wikipedia.org/wiki/X-Men_(film)",
    "fix": "Bobby is Iceman. Cold on demand.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

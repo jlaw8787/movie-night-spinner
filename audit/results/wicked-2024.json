@@ -21,22 +21,26 @@
   {
    "text": "the dining hall at Shiz University",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No source I opened shows a dining hall scene at Shiz. The Ozdust party, the classroom and the library are the places named.",
-   "source": "https://en.wikipedia.org/wiki/Wicked_(2024_film)",
+   "verdict": "wrong",
+   "why": "The transcript has no dining hall, lunch or canteen scene at Shiz; the film's Shiz scenes are the classroom, library and the Ozdust dance.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=wicked-2024",
    "fix": "the dance at the Ozdust Ballroom",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "The train to the Emerald City",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "The sources I opened say Elphaba and Galinda travel to the Emerald City but do not say by train.",
+   "verdict": "ok",
+   "why": "The transcript has the train whistle, a conductor calling 'All aboard for the Emerald City' and an announcer for Emerald City Station, and Wikipedia mentions a life-size train carrying Elphaba and Glinda there.",
    "source": "https://en.wikipedia.org/wiki/Wicked_(2024_film)",
    "fix": "The road to the Emerald City",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 8,

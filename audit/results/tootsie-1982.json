@@ -5,12 +5,14 @@
   {
    "text": "Julie's kitchen on a weekend off",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Julie's father Les lives on an upstate farm and Julie invites Dorothy there. No opened source mentions Julie's kitchen.",
-   "source": "https://movie-locations.com/movies/t/Tootsie-1982.php",
-   "fix": "Les's farmhouse on a weekend off",
+   "verdict": "wrong",
+   "why": "The film puts the weekend at Julie's father Les's farm upstate, where Julie invites Dorothy for the holidays; no scene gives Julie's kitchen as the weekend setting.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=tootsie",
+   "fix": "Les's farm on a weekend off",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

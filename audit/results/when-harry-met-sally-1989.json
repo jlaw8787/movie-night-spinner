@@ -16,32 +16,38 @@
   {
    "text": "Exactly as she orders it",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The chef salad and apple pie order happens at the diner on the drive from Chicago, not at Katz's, and the check is Katz's. The card caption also says 'The diner. Sally orders'.",
-   "source": "https://www.sheilaomalley.com/?p=77665",
+   "verdict": "ok",
+   "why": "Sally orders the chef's salad and heated apple pie with everything on the side at the diner on the drive, and later jokes about her 'on the side' habit, so 'exactly as she orders it' is true to her character.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=when-harry-met-sally",
    "fix": "Exactly as she ordered it on the drive",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Harry's order. Hand cut, piled high, a pickle on the side",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "A review says they eat pastrami at Katz's, but no source I opened says it is Harry's order.",
-   "source": "https://www.sheilaomalley.com/?p=77665",
+   "verdict": "wrong",
+   "why": "Nothing shows the pastrami is Harry's order: the transcript has no food at Katz's, one article calls the pastrami Sally's and another says she has turkey. The Katz's pastrami is the safe claim.",
+   "source": "https://www.tastingtable.com/1748354/katz-deli-order-when-harry-met-sally",
    "fix": "The Katz's classic. Hand cut, piled high, a pickle on the side",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "18 hours, one argument",
    "where": "caption",
-   "verdict": "unsure",
-   "why": "The drive from Chicago to New York is in the plot, but I found no source for the 18 hours.",
-   "source": "https://en.wikipedia.org/wiki/When_Harry_Met_Sally...",
+   "verdict": "ok",
+   "why": "Sally's plan in the car is an 18-hour trip and Harry says they have 18 hours to kill before New York; the argument is a joke.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=when-harry-met-sally",
    "fix": "One long drive, one argument",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 9,

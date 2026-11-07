@@ -10,7 +10,7 @@
  "cue": "Serve dessert when Poe finally hands over the bunny.",
  "faces": [
   [
-   "FLIGHT 779 · NOW BOARDING",
+   "JAILBIRD · NOW BOARDING",
    "JAILBIRD FLIGHT GALLEY",
    "Jailbird: In Flight Meal",
    "SEAT",
@@ -19,7 +19,7 @@
    "NOW SHOWING",
    "1997",
    "FROM THE FLIGHT DECK",
-   "\"I've just got to get home to my daughter. Pass the tray and keep moving.\"",
+   "I've just got to get home to my daughter. Pass the tray and keep moving.",
    "Cameron Poe",
    "FROM THE TROLLEY",
    "Cyrus the Virus bourbon smash",
@@ -109,7 +109,8 @@
   "sign": "Jailbird: In Flight Meal",
   "note": {
    "text": "I've just got to get home to my daughter. Pass the tray and keep moving.",
-   "by": "Cameron Poe"
+   "by": "Cameron Poe",
+   "kind": "note"
   },
   "winks": [
    "The Jailbird, the prison transport plane",

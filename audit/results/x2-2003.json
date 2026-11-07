@@ -1,42 +1,44 @@
 {
-  "id": "X2 (2003)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Nightcrawler's hideout in an old Boston church",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "The plot says Jean and Storm retrieve Nightcrawler after Xavier finds him with Cerebro. It does not say he is in a church or in Boston.",
-      "source": "https://en.wikipedia.org/wiki/X2_(film)",
-      "fix": "Nightcrawler, found with Cerebro",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 12,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 3,
-    "overall": 3.2,
-    "verdict": "The school lunch tray and Iceman angle fit, but the film's big moments are mostly missing and the layout is generic.",
-    "missing": [
-      "Nightcrawler's White House attack",
-      "Jean's sacrifice at the dam",
-      "Storm's snowstorm in Cerebro",
-      "Mystique disguised as Logan",
-      "Pyro fighting the police at Bobby's house",
-      "Logan facing Yuriko in the adamantium lab"
-    ],
-    "ideas": [
-      "Swap 'Boston baked beans on buttered toast' note for the Boston visit to Bobby's family",
-      "Swap 'Iceman frozen grapes' note for Iceman telling his parents he is a mutant",
-      "Rename 'Alkali Lake beef stew' to 'Stryker's dam beef stew'",
-      "Add a 'Storm's snowstorm' sorbet"
-    ],
-    "flat": true,
-    "done": false
+ "id": "X2 (2003)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Nightcrawler's hideout in an old Boston church",
+   "where": "dish-note",
+   "verdict": "ok",
+   "why": "Storm and Jean fly to Boston and find Nightcrawler in an empty church, which a film site calls a cathedral.",
+   "source": "https://www.filmsite.org/series-xmen2.html",
+   "fix": "Nightcrawler, found with Cerebro",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "The school lunch tray and Iceman angle fit, but the film's big moments are mostly missing and the layout is generic.",
+  "missing": [
+   "Nightcrawler's White House attack",
+   "Jean's sacrifice at the dam",
+   "Storm's snowstorm in Cerebro",
+   "Mystique disguised as Logan",
+   "Pyro fighting the police at Bobby's house",
+   "Logan facing Yuriko in the adamantium lab"
+  ],
+  "ideas": [
+   "Swap 'Boston baked beans on buttered toast' note for the Boston visit to Bobby's family",
+   "Swap 'Iceman frozen grapes' note for Iceman telling his parents he is a mutant",
+   "Rename 'Alkali Lake beef stew' to 'Stryker's dam beef stew'",
+   "Add a 'Storm's snowstorm' sorbet"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

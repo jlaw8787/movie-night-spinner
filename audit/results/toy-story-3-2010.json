@@ -5,12 +5,14 @@
   {
    "text": "Serve dessert when Andy packs up for college and the toys go in the box.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Andy puts most of the toys in a bag for the attic and takes only Woody in the college box. The toys go in a donation box to Bonnie only at the end.",
+   "verdict": "wrong",
+   "why": "Andy puts the toys in a bag for the attic, and only Woody goes in the college box. The donation box comes later, when his mum mistakes the bag for rubbish.",
    "source": "https://en.wikipedia.org/wiki/Toy_Story_3",
-   "fix": "Serve dessert when Andy packs the toys into a box for Bonnie.",
+   "fix": "Serve dessert when Andy packs up for college and the toys go in the attic bag.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Welcome to Sunnyside, folks. Pull up a chair, there is juice and crackers for everyone, and nobody leaves dinner early.",

@@ -21,22 +21,26 @@
   {
    "text": "Erin go Bragh, John says, at every wedding.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Nothing I opened shows John saying this at weddings. The film does use fake identities and several ethnic weddings in the montage, but no source confirms this line.",
+   "verdict": "wrong",
+   "why": "The transcript has no Erin go Bragh line from John; the plot says the pair crash weddings under false identities, so the fix uses that.",
    "source": "https://en.wikipedia.org/wiki/Wedding_Crashers",
-   "fix": "Fake names for every wedding, and John uses a different one each time.",
+   "fix": "A different fake name for every wedding.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Mazel tov from the crashing montage, Jeremy.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The opening montage of weddings is real, but no source I opened confirms a Jewish wedding with Jeremy in it. The Shlomo scene on Wikiquote is John's, not Jeremy's.",
-   "source": "https://en.wikipedia.org/wiki/Wedding_Crashers",
-   "fix": "Mazel tov from the Shlomo scene, John.",
+   "verdict": "wrong",
+   "why": "The opening montage does have a Jewish wedding with 'Mazel tov' and Hava Nagila, but nothing shows which character says it; Jeremy's Shlomo act is a different scene, so the name is dropped.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=wedding-crashers",
+   "fix": "Mazel tov from the crashing montage.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 10,

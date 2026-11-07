@@ -21,22 +21,28 @@
   {
    "text": "Sarah's diner, ketchup bottle on every table.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Big Jeff's is Sarah's workplace, but the sources do not describe ketchup bottles on tables. It is a made up detail about a real place.",
-   "source": "https://en.wikipedia.org/wiki/The_Terminator",
+   "verdict": "wrong",
+   "why": "Sarah is introduced as a waitress at Big Jeff's, late for work. No source mentions ketchup bottles on the tables.",
+   "source": "https://filmsite.org/terminator.html",
    "fix": "Sarah's diner, where she is late for her shift.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "nofind": true,
+   "applied": "2026-11-08"
   },
   {
    "text": "The pie case at Sarah's diner.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Big Jeff's is the diner, but no source mentions a pie case or cherry pie. Made up detail about a real place.",
-   "source": "https://en.wikipedia.org/wiki/The_Terminator",
-   "fix": "Sarah's diner, where she works a Friday shift.",
+   "verdict": "wrong",
+   "why": "Big Jeff's is Sarah's workplace, but no source shows a pie case or cherry pie.",
+   "source": "https://filmsite.org/terminator.html",
+   "fix": "Sarah's diner, where she waits tables.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "nofind": true,
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 16,

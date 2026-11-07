@@ -20,13 +20,15 @@
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Little Bill Daggett's leaky roof",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "The quote page confirms Little Bill is building his own house and is the worst carpenter, with a crooked porch. No opened source mentions a leaky roof.",
-   "source": "https://en.wikiquote.org/wiki/Unforgiven",
-   "fix": "Little Bill Daggett's crooked porch"
+   "verdict": "ok",
+   "why": "Little Bill's roof leaks in the film: during Beauchamp's interview vessels are set out to catch the rain, and he says he has no more receptacles.",
+   "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/Unforgiven",
+   "fix": "Little Bill Daggett's crooked porch",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

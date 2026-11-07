@@ -1,42 +1,44 @@
 {
-  "id": "Toy Story 2 (1999)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve the cheese puffs when Al starts eating them in his apartment.",
-      "where": "cue",
-      "verdict": "unsure",
-      "why": "Wikipedia, Wikiquote and the Fandom summaries cover Al's apartment, the Roundup toys and the TV turning on, but never show Al eating cheese puffs.",
-      "source": "https://en.wikipedia.org/wiki/Toy_Story_2",
-      "fix": "Serve the cheese puffs when Al takes Woody home to his apartment.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "Looks right as a toy store board, but it uses the big moments lightly and the food is plain.",
-    "missing": [
-      "The Pizza Planet truck chase",
-      "Zurg: 'I am your father'",
-      "Buzz meeting Ultra Buzz Lightyear",
-      "Tour Guide Barbie",
-      "Stinky Pete stuck in the box and the girl's backpack",
-      "Jessie's story with Emily"
-    ],
-    "ideas": [
-      "Swap 'Al's cheese puffs' for 'Pizza Planet truck pizza rolls'",
-      "Rename 'Prospector's chilli' to 'Stinky Pete's mint in box chilli'",
-      "Replace 'Bullseye's caramel apple wedges' note with 'Ride like the wind, Bullseye!'",
-      "Add a Zurg dessert named 'Emperor Zurg's ion blast brownie'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Toy Story 2 (1999)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the cheese puffs when Al starts eating them in his apartment.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "Al is shown in his apartment with cheese puff dust on his hands as he handles the toys, so the cheese puffs belong to that scene.",
+   "source": "https://moviemistakes.com/film1318/stupidity",
+   "fix": "Serve the cheese puffs when Al takes Woody home to his apartment.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Looks right as a toy store board, but it uses the big moments lightly and the food is plain.",
+  "missing": [
+   "The Pizza Planet truck chase",
+   "Zurg: 'I am your father'",
+   "Buzz meeting Ultra Buzz Lightyear",
+   "Tour Guide Barbie",
+   "Stinky Pete stuck in the box and the girl's backpack",
+   "Jessie's story with Emily"
+  ],
+  "ideas": [
+   "Swap 'Al's cheese puffs' for 'Pizza Planet truck pizza rolls'",
+   "Rename 'Prospector's chilli' to 'Stinky Pete's mint in box chilli'",
+   "Replace 'Bullseye's caramel apple wedges' note with 'Ride like the wind, Bullseye!'",
+   "Add a Zurg dessert named 'Emperor Zurg's ion blast brownie'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

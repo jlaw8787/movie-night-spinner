@@ -5,12 +5,13 @@
   {
    "text": "Serve the snacks when the squad cuts loose in a Corto Maltese bar.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The plot summary opened has no bar scene for the squad. It has the beach landing, the rebel base, the capital and the palace. Could not confirm a bar scene where the squad cuts loose.",
-   "source": "https://en.wikipedia.org/wiki/The_Suicide_Squad_(film)",
-   "fix": "Serve the snacks when Waller briefs Bloodsport's team at Belle Reve.",
+   "verdict": "ok",
+   "why": "In the transcript the squad stops at a Corto Maltese bar to kill time, orders a round of Fernets and toasts to being alive in three hours. Wikipedia also mentions a cut sequence outside the bar.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-suicide-squad",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Dad always said never fight on an empty stomach. So we eat first.",
@@ -31,12 +32,14 @@
   {
    "text": "Harley's order at Luna's palace.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Harley is courted by President Luna at the palace, but no source shows what she drinks, or a mojito.",
-   "source": "https://en.wikipedia.org/wiki/The_Suicide_Squad_(film)",
-   "fix": "Harley's drink at Luna's palace.",
+   "verdict": "wrong",
+   "why": "Luna tells Harley he has prepared lunch and asks her to join him at the palace. No order or drink is shown.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-suicide-squad",
+   "fix": "Harley's lunch at Luna's palace.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 10,

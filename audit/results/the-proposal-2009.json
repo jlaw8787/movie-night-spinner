@@ -5,22 +5,25 @@
   {
    "text": "The wedding set up in the family barn",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Wikipedia's plot says the family convinces them to marry the next day and the wedding is officiated by Ramone, but it does not say where. A barn is not confirmed, so 'Barn wedding pot roast' and 'Barn wedding cake' are also unconfirmed. Could not open a source that settles it.",
-   "source": "https://en.wikipedia.org/wiki/The_Proposal_(2009_film)",
-   "fix": "The wedding Ramone officiates before Margaret stops it",
+   "verdict": "ok",
+   "why": "In the transcript Grace and Annie say they will hold the wedding in the barn, a Paxton family tradition, and Andrew later stands alone in a barn.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=proposal-the",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Ramone runs the store, the bar and the wedding",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Plot says Ramone is the waiter at the welcome party, the exotic dancer at the bachelorette bar, and the wedding officiant. Nothing opened says he runs a store or the bar.",
+   "verdict": "wrong",
+   "why": "Wikipedia's cast list gives Ramone the jobs of waiter, male stripper, shopkeeper and minister. He dances at the bar but nothing shows him running it.",
    "source": "https://en.wikipedia.org/wiki/The_Proposal_(2009_film)",
-   "fix": "Ramone waits tables, dances at the bar and marries them",
+   "fix": "Ramone runs the store, dances at the bar, marries them",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 16,

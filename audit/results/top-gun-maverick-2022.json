@@ -21,22 +21,26 @@
   {
    "text": "Dagger squad beach s'mores",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "None of the sources opened give the strike team a squad name. They are only Top Gun graduates.",
-   "source": "https://en.wikipedia.org/wiki/Top_Gun:_Maverick",
+   "verdict": "ok",
+   "why": "The strike team calls itself Dagger in the transcript (Dagger-1 to Dagger-4), so a Dagger squad name is true.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=top-gun-maverick",
    "fix": "Dogfight football beach s'mores",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Phone on the bar means you're buying the round.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No phone on the bar rule is described in the sources opened. What is shown is Maverick being thrown out of the Hard Deck for not paying his tab after Penny rings the bell.",
-   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Funny/TopGunMaverick",
+   "verdict": "ok",
+   "why": "At the Hard Deck the rule is that putting a phone on the bar means you buy the next round, and Maverick gets caught by it.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=top-gun-maverick",
    "fix": "Penny rings the bell on anyone who welches on a tab.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

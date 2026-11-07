@@ -1,42 +1,44 @@
 {
-  "id": "What We Do in the Shadows (2014)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "The werewolves under the bridge",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "The werewolves meet the vampires on the way home from the ball, and Wikipedia does not put it under a bridge. No source I opened mentions a bridge.",
-      "source": "https://en.wikipedia.org/wiki/What_We_Do_in_the_Shadows",
-      "fix": "The werewolves outside the ball",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 10,
-  "vibe": {
-    "world": 5,
-    "moments": 4,
-    "food": 3,
-    "tone": 4,
-    "look": 4,
-    "overall": 4.0,
-    "verdict": "One of the better matches: the flat, the chore wheel, Nick and his chips and the werewolf pour all land.",
-    "missing": [
-      "The Unholy Masquerade ball",
-      "Viago finding Katherine at the rest home",
-      "Vladislav and the Bat Fight",
-      "Deacon hypnotising the audience after the credits",
-      "Stu turning into a werewolf",
-      "Petyr killed in the basement by the hunter"
-    ],
-    "ideas": [
-      "Swap 'Black pudding with mash' note for a Petyr in the basement line",
-      "Swap 'Garlic-free tomato and burrata bruschetta' note for 'Deacon says vampires do not do dishes'",
-      "Add a 'Masquerade punch' drink for the Unholy Masquerade",
-      "Swap 'Southland cheese rolls' note for Stu helping with the flat's computer, which he does in the film"
-    ],
-    "flat": false,
-    "done": false
+ "id": "What We Do in the Shadows (2014)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "The werewolves under the bridge",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "The film has two werewolf run-ins, one on the walk into town and one leaving the ball, and no bridge is mentioned in the transcript or plot; Anton does say 'We're werewolves, not swearwolves', so the fix uses that.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=what-we-do-in-the-shadows",
+   "fix": "Werewolves, not swearwolves",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "One of the better matches: the flat, the chore wheel, Nick and his chips and the werewolf pour all land.",
+  "missing": [
+   "The Unholy Masquerade ball",
+   "Viago finding Katherine at the rest home",
+   "Vladislav and the Bat Fight",
+   "Deacon hypnotising the audience after the credits",
+   "Stu turning into a werewolf",
+   "Petyr killed in the basement by the hunter"
+  ],
+  "ideas": [
+   "Swap 'Black pudding with mash' note for a Petyr in the basement line",
+   "Swap 'Garlic-free tomato and burrata bruschetta' note for 'Deacon says vampires do not do dishes'",
+   "Add a 'Masquerade punch' drink for the Unholy Masquerade",
+   "Swap 'Southland cheese rolls' note for Stu helping with the flat's computer, which he does in the film"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

@@ -5,32 +5,37 @@
   {
    "text": "Benedetto's",
    "where": "venue",
-   "verdict": "unsure",
-   "why": "The plot summaries and reviews I opened do not name the restaurant where Charlie and Paulie work. It is described only as a high end Village restaurant.",
-   "source": "https://en.wikipedia.org/wiki/The_Pope_of_Greenwich_Village",
-   "fix": "Keep only if the restaurant name is confirmed in the film; otherwise rename.",
+   "verdict": "wrong",
+   "why": "The plot and transcript never name a Benedetto's. The AFI synopsis puts Charlie and Paulie at Sal's Bar and Restaurant.",
+   "source": "https://catalog.afi.com/Catalog/moviedetails/57168",
+   "fix": "Sal's",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Bleecker Street, New Year's Eve. This block has always blown its own horn.",
    "where": "caption",
-   "verdict": "unsure",
-   "why": "No source I opened puts the film on New Year's Eve or on Bleecker Street.",
+   "verdict": "wrong",
+   "why": "Nothing in the plot or the transcript puts the film on Bleecker Street or on New Year's Eve. Wikipedia only places it in an Italian neighbourhood of Greenwich Village.",
    "source": "https://en.wikipedia.org/wiki/The_Pope_of_Greenwich_Village",
-   "fix": "Greenwich Village, a Friday night. This block has always blown its own horn.",
+   "fix": "An Italian corner of Greenwich Village. This block has always blown its own horn.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "for a day at the track with Paulie's racehorse",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Paulie bets on a horse. A review says he puts everything on it to win, but nothing says he owns it. Charlie is the one who collects $20,000.",
-   "source": "https://bandsaboutmovies.com/2020/09/28/the-pope-of-greenwich-village-1984",
-   "fix": "for a day at the track with Paulie's can't-lose horse",
+   "verdict": "ok",
+   "why": "In the transcript Paulie says he owns a piece of a thoroughbred racehorse with two partners, so it is his horse in part.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=pope-of-greenwich-village-the",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

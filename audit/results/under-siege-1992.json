@@ -21,22 +21,26 @@
   {
    "text": "Serve dinner when Ryback gets sent back to the galley on the captain's birthday.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "On the birthday, Krill provokes a fight and locks Ryback in the walk-in fridge. The sources do not describe him being sent back to the galley.",
+   "verdict": "wrong",
+   "why": "Ryback is already in the galley and refuses the XO's order to clear out. Krill then shuts him in the walk-in fridge on the birthday.",
    "source": "https://en.wikipedia.org/wiki/Under_Siege",
-   "fix": "Serve dinner when Krill locks Ryback in the walk-in fridge on the captain's birthday.",
+   "fix": "Serve dinner when Krill shuts Ryback in the walk-in fridge on the captain's birthday.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Ryback's bouillabaisse",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "The plot says Ryback cooks the captain's birthday meal against Krill's orders, but no source names bouillabaisse. The data note for the crostini ('a taste of the captain's birthday dinner') makes the same claim.",
-   "source": "https://en.wikipedia.org/wiki/Under_Siege",
+   "verdict": "ok",
+   "why": "In the script Ryback says he has 50 gallons of bouillabaisse to prepare for the captain's birthday, so the dish is his.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=under-siege",
    "fix": "Ryback's birthday dinner fish stew",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

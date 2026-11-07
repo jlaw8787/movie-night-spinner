@@ -21,12 +21,13 @@
   {
    "text": "Take the butcher's word for it, Tommy says.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Tommy's selling speech is about a guarantee, so trusting a butcher's word runs the other way. I could not open a source for the exact speech.",
-   "source": "",
-   "fix": "A guarantee beats the butcher's word, Tommy says.",
+   "verdict": "ok",
+   "why": "Tommy does the butcher line in his pitch ('wouldn't you rather take his word for it?'), copying his dad's line about taking the butcher's word for it.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=tommy-boy",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

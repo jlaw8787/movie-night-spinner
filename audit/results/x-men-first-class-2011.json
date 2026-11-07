@@ -1,62 +1,68 @@
 {
-  "id": "X-Men: First Class (2011)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve the snacks when Charles tries his lines on a girl in the Oxford pub.",
-      "where": "cue",
-      "verdict": "unsure",
-      "why": "The Wikipedia plot has Charles earning his doctorate at Oxford but does not mention a pub scene, and the Wikiquote page has none. I could not confirm it from an opened source.",
-      "source": "https://en.wikipedia.org/wiki/X-Men:_First_Class",
-      "fix": "Serve the snacks when Xavier and Erik meet at Division X.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Served between moves of Charles and Erik's chess.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "The plot and quote page I opened have no chess game, so I could not confirm it.",
-      "source": "https://en.wikipedia.org/wiki/X-Men:_First_Class",
-      "fix": "Served between Charles and Erik's rows over mutant rights.",
-      "printed": false,
-      "done": false
-    },
-    {
-      "text": "Erik's pour. Charles already knows he wants one.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "The sources I opened do not show Erik pouring Scotch. Erik does order a drink at the German bar in Argentina.",
-      "source": "https://en.wikipedia.org/wiki/X-Men:_First_Class",
-      "fix": "Erik's pour, from the German bar in Argentina.",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 11,
-  "vibe": {
-    "world": 4,
-    "moments": 4,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "Smart sixties spy feel with Argentina and the Hellfire Club, but the Cuban missile and the coin could be used harder.",
-    "missing": [
-      "Shaw's Nazi coin",
-      "Erik lifting the submarine out of the sea",
-      "The Cuban missile blockade",
-      "Hank's serum turning him blue",
-      "Division X and Moira",
-      "Charles hit by the bullet"
-    ],
-    "ideas": [
-      "Swap 'Chess game chocolate squares' for 'Shaw's coin chocolate coins' as the coin scene",
-      "Swap 'Hellfire Club pepper steak' note for Emma Frost in white",
-      "Rename 'Sixties gin martini' to 'Cuban blockade gin martini'",
-      "Swap 'Xavier mansion lemon roast chicken' note for Hank's serum"
-    ],
-    "flat": false,
-    "done": false
+ "id": "X-Men: First Class (2011)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when Charles tries his lines on a girl in the Oxford pub.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "Charles pitches Amy with the heterochromia line and orders a pint of bitter and a brandy at the bar, and the plot has him earning his Oxford doctorate.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=x-men-first-class",
+   "fix": "Serve the snacks when Xavier and Erik meet at Division X.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Served between moves of Charles and Erik's chess.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "A review of the film captions Charles and Erik meeting over a game of chess.",
+   "source": "https://moriareviews.com/sciencefiction/x-first-class-2011.htm",
+   "fix": "Served between Charles and Erik's rows over mutant rights.",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Erik's pour. Charles already knows he wants one.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "No Scotch pour by Erik appears. Erik orders a beer in Argentina, and it is Charles who suggests going for a drink and who orders at the Oxford bar.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=x-men-first-class",
+   "fix": "Charles's round. Erik already knows he wants one.",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Smart sixties spy feel with Argentina and the Hellfire Club, but the Cuban missile and the coin could be used harder.",
+  "missing": [
+   "Shaw's Nazi coin",
+   "Erik lifting the submarine out of the sea",
+   "The Cuban missile blockade",
+   "Hank's serum turning him blue",
+   "Division X and Moira",
+   "Charles hit by the bullet"
+  ],
+  "ideas": [
+   "Swap 'Chess game chocolate squares' for 'Shaw's coin chocolate coins' as the coin scene",
+   "Swap 'Hellfire Club pepper steak' note for Emma Frost in white",
+   "Rename 'Sixties gin martini' to 'Cuban blockade gin martini'",
+   "Swap 'Xavier mansion lemon roast chicken' note for Hank's serum"
+  ],
+  "flat": false,
+  "done": false
+ }
 }
