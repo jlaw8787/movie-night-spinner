@@ -35,6 +35,7 @@ You are reworking flat movie-night menus for the Movie Night Spinner app (repo /
    - For `flavour.note` use {"text":"...","by":"Name","kind":"quote"|"note"} as docs/AUDIT.md shows.
    - `set` ops for flavour fields: venue, sign, note, winks, prop ({"kind":...,"title":...,"lines":[two lines]}), labels. Keep the same number of winks.
 6. In audit/results/<slug>.json add to the vibe block: `"rework": "2026-11-08"`, `"iconic": [...]` and `"changed": ["one short line per change"]`. Do not change the scores or set done (a re-score pass does that after the menus are rebuilt).
+   Lessons from the 8 Nov pilot: a dish note is often the only place the food is described, so keep saying what the food is while tying it to the scene ("Iced vanilla latte for a night at Club Skunk", not "Club Skunk, where Letters to Cleo play"). New lines read naturally, no clipped fragments. Check which winks actually print (audit/cards) before using a wink slot. audit/cards can be stale for hand-built menus; trust `card-ops.cjs find`.
 7. Do not edit any other file. Do not run build-data, card-ops apply, audit-report or the checks.
 
 When done, reply with one line per film: slug, number of changes, and any layout word that clashes and needs code.
