@@ -1,0 +1,87 @@
+{
+ "id": "Inspector Gadget (1999)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Penny, my hat just served up a hot dog and I am not sure how. Grab a plate before it fires off another one.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Gadget's words, but it is not in the film. The only hot dog gag on the quote page is the Gadgetmobile swerving round a hot dog vendor. No hat serves a hot dog.",
+   "source": "https://en.wikiquote.org/wiki/Inspector_Gadget_(film)",
+   "fix": "Penny, plates are out. Stand clear of my arms, I still don't know which gadget does what.",
+   "fix_note": {
+    "text": "Penny, plates are out. Stand clear of my arms, I still don't know which gadget does what.",
+    "by": "Inspector Gadget",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Riverton Police Dept, Garage 1",
+   "where": "sign",
+   "verdict": "unsure",
+   "why": "Riverton and its police department are right, but the sources do not say the Gadgetmobile is kept in a police garage. Brenda builds it herself and shows it off to Gadget. Low risk.",
+   "source": "https://en.wikipedia.org/wiki/Inspector_Gadget_(film)",
+   "fix": "Riverton Police Dept, Gadgetmobile Bay",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Penny the niece with her computer book",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "Penny is Gadget's niece and a computer whiz, but the plot sources do not mention a computer book in this film. That is a cartoon prop.",
+   "source": "https://en.wikipedia.org/wiki/Inspector_Gadget_(film)",
+   "fix": "Penny the niece who works out Scolex's plot",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Brain the dog in disguise",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "Brain is Penny's beagle and helps track John down, but neither source mentions a disguise. Cartoon gag.",
+   "source": "https://en.wikipedia.org/wiki/Inspector_Gadget_(film)",
+   "fix": "Brain the beagle, chewing on the Gadgetmobile's arm rest",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Serve the snacks when Gadget finally gets the helicopter hat working.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "John uses the helicopter hat to chase Scolex's helicopter in the finale. Fits.",
+   "source": "https://en.wikipedia.org/wiki/Inspector_Gadget_(film)",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 9,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Bright gear-and-chalkboard look that suits the film, but the words stay generic and skip the movie's best gags.",
+  "missing": [
+   "Kramer's interchangeable claw hands, including the sushi hand (Scolex's lab)",
+   "Gadgetmobile chatting back and speeding off ('Go, Go, Gadgetmobile')",
+   "Sykes and Sniffy fighting over a cruller (Claw's lair)",
+   "The guru's 'visualise your goal' lesson",
+   "Robo-Gadget on the rampage",
+   "Pen ink chamber that jams the helicopter claw (finale)"
+  ],
+  "ideas": [
+   "Swap 'Claw's lair smoky chipotle chilli' note for Kramer's 'sushi hand' and rename it 'Claw's sushi hand platter'.",
+   "Swap 'Vanilla cola' house note for the Gadgetmobile's real line 'Don't push my buttons without reading the manual'.",
+   "Add a 'Sykes' crullers' sweet in place of the generic 'Gadgetmobile cupcakes' note.",
+   "Replace the tagline 'Helicopter hat. Snack hand.' with a line about the hat finally working in the finale."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

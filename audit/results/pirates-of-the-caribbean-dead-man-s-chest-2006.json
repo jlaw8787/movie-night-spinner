@@ -1,0 +1,58 @@
+{
+ "id": "Pirates of the Caribbean: Dead Man's Chest (2006)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Jack, come into my shack. Sit, eat the stew, and hear me out about that debt of yours.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a line Tia Dalma says. In her shack she tells Jack the compass will not help him because he does not know what he wants, and she gives him the jar of dirt. No quote page could be opened.",
+   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Recap/PiratesOfTheCaribbeanDeadMansChest",
+   "fix": "Jack, come into my shack. Sit, eat, and hear me out about that debt of yours.",
+   "fix_note": {
+    "text": "Come in, Jack. Sit. There is a pot on, and I have something to say about that debt.",
+    "by": "Tia Dalma",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Recruiting a crew in the Tortuga tavern, Gibbs doing the talking.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The Tortuga scene has Jack himself recruiting, and he signs up Norrington and a disguised Elizabeth. Gibbs doing the talking is not confirmed by the recap.",
+   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Recap/PiratesOfTheCaribbeanDeadMansChest",
+   "fix": "Jack hunting for crew in the Tortuga tavern.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.6,
+  "verdict": "The swamp shack and the dishes suit the film and the winks hit the big set pieces, but the poster sits in a frame with black bars.",
+  "missing": [
+   "Jack as chief of the Pelegosto cannibals (the island)",
+   "Will and Bootstrap at liar's dice (Flying Dutchman)",
+   "The Kraken pulling the Pearl under (finale)",
+   "Norrington and the wheel chase (Isla Cruces)",
+   "Jack's black spot (Tia Dalma's shack)",
+   "Davy Jones playing the organ (Dutchman)"
+  ],
+  "ideas": [
+   "Swap 'Hush puppies' note 'Jack's jar of dirt sits on the table.' for 'Jar of dirt not included. Jack has it.'",
+   "Swap 'Tortuga jerk chicken' note for 'Jack hunts for crew in the tavern. Norrington is drunk.'",
+   "Swap the poster block for a full-bleed crop so the black bars go.",
+   "Swap 'Pelegosto island skewers' note for 'Jack was chief. Will was dinner.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

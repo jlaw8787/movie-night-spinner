@@ -35,6 +35,12 @@ Use them in this order. Take inspiration from them, but never copy text across.
 
 Fetching: open pages through WebSearch first, then fetch a result link. Direct links to Wikiquote and some other sites are refused unless they came from a search. If no source could be opened for a call, say so in "why", and leave the "source" link empty rather than citing a page that was never read.
 
+Search budget: WebSearch allows about 200 searches per turn, shared by every agent running in it. Keep it to about 60 films per turn, 3 agents of 20. When searches run out, the Wikipedia and Wikiquote pages can still be read with curl through the session proxy:
+- `https://en.wikipedia.org/w/index.php?title=<Title>&action=raw`
+- `https://en.wikiquote.org/w/index.php?title=<Title>&action=raw`
+
+Never write a result from memory alone. Leave the film without a result file, so the queue picks it up again.
+
 ## Fact rules
 
 Each checked line gets one of these verdicts:

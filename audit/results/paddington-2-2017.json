@@ -1,0 +1,58 @@
+{
+ "id": "Paddington 2 (2017)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Bear, you have made the porridge softer and the lads softer too. Don't tell anyone. Now, is there more marmalade in that hat?",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a line Knuckles says. It reads as written for the menu. The plot sources only have him tasting Paddington's marmalade sandwich and being won over, and no quote page could be opened. Printed in quote marks, so it has to go or become a note.",
+   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/Paddington2",
+   "fix": "Bear, you have made the porridge softer and the lads softer too. Don't tell anyone. Is there more marmalade in that hat?",
+   "fix_note": {
+    "text": "Bear, that sandwich beats anything in this kitchen. Don't tell the lads. Is there more marmalade in that hat?",
+    "by": "Knuckles McGinty",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "the funfair Phoenix Buchanan opens",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The sources say Phoenix attends the funfair's opening ceremony and that Madame Kozlova's fortune is hidden in the fairground organ. They do not say he opens it.",
+   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/Paddington2",
+   "fix": "the funfair where Phoenix Buchanan hunts the fortune",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "Right kitchen and the marmalade heart is there, but it looks like a plain school canteen and leaves out the pink uniforms and the pop-up book chase.",
+  "missing": [
+   "Paddington knocking Knuckles out with a baguette (prison kitchen)",
+   "The red sock turning every uniform pink (prison laundry)",
+   "Paddington's hard stare when Knuckles insults Aunt Lucy",
+   "Candy apples to climb the train roof (train chase)",
+   "Phoenix Buchanan as Sister Isabella the nun (disguises)",
+   "The pop-up book of London used as a treasure map"
+  ],
+  "ideas": [
+   "Swap 'Pink tea party Victoria sponge' for 'Pink uniform sponge' with the note 'One red sock in the wash. The whole yard went pink.'",
+   "Swap the 'Canteen Slip' prop for a laundry ticket reading 'Wash separately. Red socks especially.'",
+   "Swap 'Barbershop scone fingers' note for 'Haircuts not included. Scissors stay in the drawer.'",
+   "Dress the cue box as a kitchen order from Knuckles: 'Oranges one at a time.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

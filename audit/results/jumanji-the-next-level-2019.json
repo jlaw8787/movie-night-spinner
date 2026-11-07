@@ -1,0 +1,66 @@
+{
+ "id": "Jumanji: The Next Level (2019)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Spencer, I came in for a quiet life and now I'm an avatar again. At least feed me first.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Eddie's words, but he never says it. It is also off the plot, since Eddie has never been in the game before, so he can't be an avatar 'again'. His lines on the quote page are short, such as 'You still talking to your friends?'. Fridge has a real food line: 'I got killed by a piece of cake!'",
+   "source": "https://en.wikiquote.org/wiki/Jumanji:_The_Next_Level",
+   "fix": "\"I got killed by a piece of cake!\" (Fridge)",
+   "fix_note": {
+    "text": "I got killed by a piece of cake!",
+    "by": "Fridge",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the mains when the friends get sucked back into the game.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "Spencer's friends follow him into Jumanji, and Eddie and Milo are pulled in too. Fits.",
+   "source": "https://en.wikipedia.org/wiki/Jumanji:_The_Next_Level",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Eddie and Milo's old diner",
+   "where": "dish-note",
+   "verdict": "ok",
+   "why": "Eddie and Milo are estranged old friends and the film ends with Eddie at a restaurant. The diner is from the film, not the plot pages, but fits.",
+   "source": "https://en.wikipedia.org/wiki/Jumanji:_The_Next_Level",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "The desert outpost works for the setting, but the dishes and the words don't use the film's funniest avatar jokes.",
+  "missing": [
+   "Bethany as the black stallion Cyclone (who can fly)",
+   "Professor Oberon's weaknesses: heat, sun and sand",
+   "The magic river that swaps avatars",
+   "Fridge killed by a piece of cake",
+   "Ming Fleetfoot, Spencer's thief avatar, at the bazaar",
+   "Ostriches loose in the real world at the end"
+  ],
+  "ideas": [
+   "Swap the 'Desert oasis cooler' note for Oberon's weakness line: heat, sun and sand.",
+   "Replace 'Falcon jewel jelly' plain line with the Falcon Jewel held up to the sunlight.",
+   "Swap 'Mountain fortress goulash' note for the avatar swap river.",
+   "Add a 'Cyclone' drink in place of the 'Frozen mint lemonade' house line."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

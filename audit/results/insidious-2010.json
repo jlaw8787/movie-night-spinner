@@ -1,0 +1,84 @@
+{
+ "id": "Insidious (2010)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Make a pot of tea and leave a plate out for Specs and Tucker. Dalton is lost in the Further, and this will be a long night.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Elise's words, but she never says it. Her lines on the quote page are about the house not being haunted, the hypnosis and the Further, nothing about tea or a plate for Specs and Tucker.",
+   "source": "https://en.wikiquote.org/wiki/Insidious_(film)",
+   "fix": "\"It's not the house that's haunted, it's your son.\"",
+   "fix_note": {
+    "text": "It's not the house that's haunted, it's your son.",
+    "by": "Elise Rainier",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the snacks when the ghost hunters set up their gadgets.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "Lorraine calls Elise and her investigators Specs and Tucker, who bring their equipment into the Lambert house. Fits.",
+   "source": "https://en.wikipedia.org/wiki/Insidious_(film)",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Elise in her gas mask at the séance in Dalton's room.",
+   "where": "dish-note",
+   "verdict": "ok",
+   "why": "Elise wears a gas mask style rig in the attempted séance, held in Dalton's room. Close enough, nothing in the plot contradicts it.",
+   "source": "https://en.wikipedia.org/wiki/Insidious_(film)",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Tiny Tim's on the record player. Nobody put it on.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "Tiny Tim's 'Tip-Toe Thru' the Tulips' plays on the record player in the haunted house with nobody near it. Plainly a film nod.",
+   "source": "https://en.wikipedia.org/wiki/Insidious_(film)",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Red, like the face behind Josh. Don't turn around.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "Lorraine sees the red-faced demon standing behind Josh. Fits.",
+   "source": "https://en.wikipedia.org/wiki/Insidious_(film)",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Dark, moody look and a few good nods, but the dishes and the tagline could belong to any haunted house film.",
+  "missing": [
+   "Lipstick-Face Demon (Dalton's bedroom)",
+   "The metronome in Josh's hypnosis (Elise puts him under)",
+   "Dalton's drawings in his room (Josh finds them)",
+   "Bloody handprint on Dalton's bed (Renai)",
+   "Home security alarm going off by itself",
+   "Elise explaining astral projection and 'travelers'"
+  ],
+  "ideas": [
+   "Swap 'Red-faced cherry pie' for 'Lipstick-face cherry pie' with a note about the demon sharpening his claws in Dalton's room.",
+   "Replace the tagline 'Spooky house. Spookier snacks.' with something about leaving the body, such as 'Leave your body. Not your dinner.'",
+   "Swap 'Spinach and artichoke dip with pita' for 'Tulips salad' and keep the Tiny Tim record player line.",
+   "Change the 'Lambert family lasagne' note to say it is plated to the beat of Elise's metronome."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

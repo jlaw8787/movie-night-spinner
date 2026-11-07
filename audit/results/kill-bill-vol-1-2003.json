@@ -1,0 +1,66 @@
+{
+ "id": "Kill Bill: Vol. 1 (2003)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Sit and eat. I've retired from swords, so tonight the only blade in this house is for the sushi.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Hanzo's words, but he never says it. His real lines on the quote page include 'Funny. You like samurai swords; I like baseball.' and 'Revenge is never a straight line.'",
+   "source": "https://en.wikiquote.org/wiki/Kill_Bill:_Volume_1",
+   "fix": "\"Funny. You like samurai swords; I like baseball.\"",
+   "fix_note": {
+    "text": "Funny. You like samurai swords; I like baseball.",
+    "by": "Hattori Hanzo",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the sushi when the Bride walks into Hattori Hanzo's sushi bar.",
+   "where": "cue-printed",
+   "verdict": "ok",
+   "why": "The Bride goes to Okinawa to ask Hanzo for a sword, and he runs a sushi bar. Fits.",
+   "source": "https://en.wikipedia.org/wiki/Kill_Bill:_Volume_1",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Wiggle your big toe while they blister.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "Nod to the Bride telling herself to wiggle her big toe after waking from the coma. Plainly a reference.",
+   "source": "https://en.wikipedia.org/wiki/Kill_Bill:_Volume_1",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Yellow and black look, sushi and the Crazy 88 all land. The writing could be sharper for a film this stylish.",
+  "missing": [
+   "Hanzo throwing a baseball at the Bride, who slices it in mid-air",
+   "Vernita's pistol hidden in a cereal box (Nikki walks in)",
+   "The Bride's yellow truck from the hospital",
+   "O-Ren slicing off Boss Tanaka's head at the council",
+   "The Bride cutting off Sofie's arm",
+   "Earl McGraw: 'This tall drink of blonde ain't dead'"
+  ],
+  "ideas": [
+   "Add a 'Cereal box' sweet in place of the plain 'Matcha ice cream' description, with Vernita's pistol joke.",
+   "Swap 'Yellow tracksuit corn' note for Hanzo's baseball.",
+   "Replace 'O-Ren's spicy miso pork ramen' note with the council scene where she makes her point.",
+   "Swap the tagline 'The Bride is cranky. The sushi is fresh.' for something using 'Revenge is a dish best served cold'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

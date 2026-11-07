@@ -1,0 +1,86 @@
+{
+ "id": "Kenny (2006)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Lunch is on me, mate, but I'm washing my hands first. Twice. Then I'll see to the loo.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "Printed in quote marks as Kenny's words. Wikiquote has no page for this film and the plot page has no matching line, so I could not confirm it and it reads as invented. Safer as an unquoted note.",
+   "source": "",
+   "fix": "Lunch is on me. Hands washed twice first, then I'll check the loos.",
+   "fix_note": {
+    "text": "Lunch is on me. Hands washed twice first, then I'll check the loos.",
+    "by": "Kenny Smyth",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Dad Ronnie and brother Brian",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Kenny's father is Bill Smyth and his brother is David. Ronald is the actor who plays Bill. There is no Brian.",
+   "source": "https://en.wikipedia.org/wiki/Kenny_(2006_film)",
+   "fix": "Dad Bill and brother David",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "the footy crowds Kenny's Splashdown crew works",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Kenny works big public events, the Melbourne Cup in particular, but the plot page does not mention footy crowds.",
+   "source": "https://en.wikipedia.org/wiki/Kenny_(2006_film)",
+   "fix": "the Melbourne Cup crowds Kenny's Splashdown crew works",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Serve the mains when Kenny works the Melbourne Cup.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "Melbourne Cup day is Kenny's busiest day and the main event of the film. Fits.",
+   "source": "https://en.wikipedia.org/wiki/Kenny_(2006_film)",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "his trip to the convention in Nashville",
+   "where": "dish-note",
+   "verdict": "ok",
+   "why": "Kenny travels to Nashville for a toilet convention. Fits.",
+   "source": "https://en.wikipedia.org/wiki/Kenny_(2006_film)",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 7,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Good Aussie food and a fair Splashdown truck, but the menu leaves out the film's best characters and its payoff.",
+  "missing": [
+   "The Sushi Cowboy in Nashville (Japan business deal)",
+   "Jackie, the flight attendant Kenny meets",
+   "Jesse helping out on Melbourne Cup day",
+   "The camping trip with his dad and brother David",
+   "Kenny filling the luxury car with waste at the end",
+   "A drunk at the Melbourne Cup"
+  ],
+  "ideas": [
+   "Add a 'Sushi Cowboy' item in place of the 'Steak sandwich with beetroot and onion' house note.",
+   "Swap 'Vanilla slice' for a dish about Jesse helping on Cup day.",
+   "Replace 'Dad's chops and veg' with 'Bill's camping chops' for the camping trip.",
+   "Fix the winks: swap 'Dad Ronnie and brother Brian' for Bill and David."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

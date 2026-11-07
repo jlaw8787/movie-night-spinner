@@ -1,6 +1,6 @@
 # Audit agent brief
 
-Give this to each audit agent, followed by its list of slugs. Run about 20 films per agent and up to 5 agents at a time. Get the next films with `node scripts/audit-queue.cjs 100`.
+Give this to each audit agent, followed by its list of slugs. Run about 20 films per agent and 3 agents at a time (the search budget is shared per turn). Get the next films with `node scripts/audit-queue.cjs 100`.
 
 ---
 
@@ -16,6 +16,8 @@ For each film slug in your list:
    - Fandom, IMDb trivia, TV Tropes and Letterboxd for iconic moments, props and food on screen.
    - Paraphrase what you find; never copy text across. A short film quote (one line) is fine only where the film says it.
    - If no source could be opened for a call, say so in "why" and leave the "source" link empty.
+   - When WebSearch is used up, read Wikipedia and Wikiquote with curl as docs/AUDIT.md shows.
+   - Never write a film's result from memory alone. Leave it out and say so in your reply.
 4. Check every claim line, both printed and unprinted, under the fact rules. Be strict on quotes.
 5. Score the vibe and fill in verdict, missing, ideas and flat.
 6. Write audit/results/<slug>.json in the documented format, with "checked" set to today's date and every "done" set to false. Skip a film that already has a result file.

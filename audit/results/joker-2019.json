@@ -1,0 +1,67 @@
+{
+ "id": "Joker (2019)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Arthur, grab a bite from the green room spread and come on out. The folks at home are settled in with their TV dinners.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Murray's words, but he never says it. His real lines on the quote page include 'He's got a book. A book of jokes. Take your time. We've got all night.'",
+   "source": "https://en.wikiquote.org/wiki/Joker_(2019_film)",
+   "fix": "\"He's got a book. A book of jokes. Take your time. We've got all night.\"",
+   "fix_note": {
+    "text": "He's got a book. A book of jokes. Take your time. We've got all night.",
+    "by": "Murray Franklin",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the snacks when Arthur and his mum settle in front of the late-night talk show.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "Arthur and Penny watch Murray Franklin's show together at home. Fits.",
+   "source": "https://en.wikipedia.org/wiki/Joker_(2019_film)",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Arthur rehearses his entrance in the lounge room.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "Arthur practises being on Murray's show at home before he is invited on. Close enough for a menu line.",
+   "source": "https://en.wikipedia.org/wiki/Joker_(2019_film)",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "The neon talk show club suits the finale, but the dishes and the writing play it safe for such a distinctive film.",
+  "missing": [
+   "Arthur's 'Knock, knock' joke on the live show",
+   "The revolver falling out at the children's hospital",
+   "Arthur dancing on the long stairs in the red suit",
+   "Carnival, his clown name at work",
+   "Clown masks on the protesters",
+   "Arthur smearing blood into a smile on the police car",
+   "Arthur's notebook line about making more cents"
+  ],
+  "ideas": [
+   "Swap 'Gotham deli pickles' note for the 'Knock, knock' joke.",
+   "Replace 'Arthur's candy apples' note with the red suit and stairs dance.",
+   "Add a 'Carnival' clown drink in place of the plain Bourbon Manhattan description.",
+   "Swap the tagline 'Clown makeup. Comfort food.' for something that uses the Smile song or the laugh condition."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

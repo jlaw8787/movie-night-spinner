@@ -1,0 +1,68 @@
+{
+ "id": "Klaus (2019)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": false,
+   "text": "Serve the dessert when the first wrapped toy slides down the chimney.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The plot summaries I opened say Klaus makes Jesper deliver a toy to a child, and later toys go out at night. None says a wrapped toy slides down a chimney, so the cue may describe a scene that is not in the film.",
+   "source": "https://www.imdb.com/title/tt4729430/plotsummary",
+   "fix": "Serve the dessert when Jesper delivers the first toy to a child."
+  },
+  {
+   "printed": true,
+   "done": true,
+   "text": "Six thousand letters to go, and Alva's fish is the only warm thing in this frozen town. I'll take a plate.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Jesper's words. The quote pages I opened list his real lines (for example 'Letters. You don't really write many these days, do you?' and 'That's it! This place is the worst! I'm going home!'). This line is not among them, and Jesper never praises the town or buys fish from Alva.",
+   "source": "https://imdb.de/title/tt4729430/quotes",
+   "fix": "Six thousand letters to go, and Alva sells the only fish in town. One plate, please.",
+   "fix_note": {
+    "text": "Six thousand letters to go, and Alva sells the only fish in town. One plate, please.",
+    "by": "Jesper",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Alva's school desks, now covered in fish.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Sources say Alva is a bitter former teacher who now sells fish, and that she reopens her school later. None describes her school desks covered in fish.",
+   "source": "https://www.imdb.com/title/tt4729430/plotsummary",
+   "fix": "Alva's old classroom, now a fish shop."
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A fish stall in a frozen feuding town is a fair idea, but it skips Klaus and his toys, so it reads like a generic Nordic bistro.",
+  "missing": [
+   "Klaus's cabin full of handmade toys (Jesper's first visit)",
+   "Márgu asking for a sled and Jesper building it (Klaus and Jesper make up)",
+   "Children writing letters asking for toys (the postal scheme)",
+   "Jesper's silk sheets and spoiled start (arrival on the island)",
+   "Magdalone and Olaf falling in love during the chase (the feud ends)",
+   "Alva reopening her school to teach reading and writing"
+  ],
+  "ideas": [
+   "Swap 'Letter gingerbread envelopes' for 'Márgu's sled gingerbread', sled shapes with red icing.",
+   "Swap 'Pickled herring on rye crispbread' note for a nod to the kids' letters: 'One letter, one herring.'",
+   "Swap the 'No. 6000' counter for a stamped toy request slip with Jesper's name.",
+   "Swap 'Klaus's juniper beef stew with mash' note for 'Klaus's cabin, lit and warm' so the toymaker is on the menu."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

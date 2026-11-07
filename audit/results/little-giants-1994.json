@@ -1,0 +1,98 @@
+{
+ "id": "Little Giants (1994)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": false,
+   "text": "Pass to Icebox",
+   "where": "prop",
+   "verdict": "wrong",
+   "why": "The Annexation of Puerto Rico is a hook and lateral from Rudy Zolteck to Junior, then a lateral from Junior to Jake Berman, who runs 99 yards for the touchdown. The ball does not go to Icebox.",
+   "source": "https://www.wikiwand.com/en/articles/Little_Giants",
+   "fix": "Lateral to Berman"
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Icebox, the quarterback who is a girl",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Junior Floyd is the Giants' quarterback. Becky 'Icebox' O'Shea is the best player at tryouts and gets cut because she is a girl. She later suits up and stops Spike at the goal line. Printed on the second face as part of the 'On the big screen tonight' line.",
+   "source": "https://www.wikiwand.com/en/articles/Little_Giants",
+   "fix": "Icebox, the best player in town, cut for being a girl"
+  },
+  {
+   "printed": true,
+   "done": true,
+   "text": "Pass me the ball, then pass me the hot dogs. Icebox is starving after practice and nobody calls me small at dinner.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "Printed in quote marks as Becky's words, but I found no quote page for this film that I could open, and the plot page has no such line. Nobody calls Becky small in the plot I read, and she is not shown as a small player. Treat it as an invented quote.",
+   "source": "https://www.wikiwand.com/en/articles/Little_Giants",
+   "fix": "The Cowboys cut me for being a girl. The Giants did not. Pass the hot dogs, then pass the ball.",
+   "fix_note": {
+    "text": "The Cowboys cut me for being a girl. The Giants did not. Pass the hot dogs, then pass the ball.",
+    "by": "Becky O'Shea",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Becky the Icebox rallying the team",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "In the plot it is Danny who gives the halftime speech that turns the game around. Becky persuades Danny to coach, then quits for cheerleading and comes back to suit up. 'Rallying the team' is not what she does.",
+   "source": "https://www.wikiwand.com/en/articles/Little_Giants",
+   "fix": "Becky the Icebox, cut by the Cowboys, back for the Giants"
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "John Madden's pick, between the plays.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "John Madden and other NFL stars arrive on a bus and coach the kids on fundamentals. The page I opened mentions no food, and nothing says Madden picked a sloppy joe.",
+   "source": "https://www.wikiwand.com/en/articles/Little_Giants",
+   "fix": "Big and messy, the way John Madden calls it."
+  },
+  {
+   "printed": false,
+   "done": false,
+   "text": "Becky earned the name Icebox.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The page I opened says Becky is nicknamed Icebox but does not say how she earned it.",
+   "source": "https://www.wikiwand.com/en/articles/Little_Giants",
+   "fix": "Becky's nickname is Icebox. Keep it cool."
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A stadium stand with a scoreboard, playbook ticket and section map fits well, but the best-known plays and people are missed and a few lines get Becky wrong.",
+  "missing": [
+   "John Madden and the NFL stars arriving on the bus (before the final)",
+   "Danny's halftime speech, each kid recalling a personal win (21 point comeback)",
+   "Jake Berman's 99 yard touchdown on the Annexation play (final play)",
+   "The Chevrolet dealership versus gas station bet (the brothers)",
+   "The water tower reading 'Home of The O'Shea Brothers' (the ending)",
+   "Spike spearing Junior with his helmet (the dirty hit)"
+  ],
+  "ideas": [
+   "Swap the ticket line 'Pass to Icebox' for 'Lateral to Berman'.",
+   "Swap 'Sloppy joe sliders' note for 'Big and messy, the way John Madden calls it.'",
+   "Swap the scoreboard row 'ATT 94' for 'Madden bus arrives' as a wink to the NFL stars.",
+   "Swap 'Icebox's baked mac and cheese' note for the water tower line, 'Home of The O'Shea Brothers.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

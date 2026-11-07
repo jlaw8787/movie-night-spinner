@@ -1,0 +1,58 @@
+{
+ "id": "Pinocchio (1940)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Pinocchio, finish your soup before it goes cold. Figaro has had his fish, so the scraps on your plate are yours.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "No such line from Geppetto appears in the plot sources, and no quote page could be opened. It reads as written for the menu, and it is printed in quote marks.",
+   "source": "https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/Pinocchio_(1940_film)",
+   "fix": "Pinocchio, eat while it is hot. Figaro and Cleo have had theirs, so this plate is all yours.",
+   "fix_note": {
+    "text": "Pinocchio, eat while it is hot. Figaro and Cleo have had theirs, so this plate is all yours.",
+    "by": "Geppetto",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Toys, Clocks and Cheese",
+   "where": "sign",
+   "verdict": "unsure",
+   "why": "Geppetto is a woodcarver and toymaker, but the pages opened do not describe the shop's contents and cheese is not confirmed. I recall clocks and music boxes, not cheese.",
+   "source": "https://pinocchiodisney.fandom.com/wiki/Pinocchio_(1940)",
+   "fix": "Toys, Clocks and Music Boxes",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "A tidy Italian tavern look, but the poster sits in a frame with black bars and the famous moments are mostly missing.",
+  "missing": [
+   "'Always let your conscience be your guide' (Jiminy)",
+   "I've Got No Strings (Stromboli's stage)",
+   "Pinocchio's nose growing (Blue Fairy)",
+   "Lampwick turning into a donkey (Pleasure Island)",
+   "Monstro sneezing the raft out (the whale)",
+   "The apple for the teacher (school day)"
+  ],
+  "ideas": [
+   "Swap 'Jiminy's sparkling mint lime crush' note for 'Let your conscience be your guide, and sip slowly.'",
+   "Swap 'Pleasure Island cinnamon mini doughnuts' note for 'Lampwick ate six. Look what happened.'",
+   "Swap the poster block for a full-bleed crop so the black bars go.",
+   "Swap 'Cleo's fish-shaped crackers' for 'Apple for the teacher' with a candied apple."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

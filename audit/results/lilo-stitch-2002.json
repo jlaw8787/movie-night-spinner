@@ -1,0 +1,58 @@
+{
+ "id": "Lilo & Stitch (2002)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": true,
+   "text": "Lilo, put the peanut butter sandwich down. Your fish is not hungry today. Okay, feed him anyway, but we are late.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Nani's words. Pudge's sandwich is a weekly ritual that Lilo keeps with care, and Nani never says it is not needed. The Nani lines on the page I opened (the koala line, the vampire manager) do not match.",
+   "source": "https://tvtropes.org/pmwiki/pmwiki.php/Funny/LiloAndStitch2002",
+   "fix": "Lilo, feed Pudge his sandwich, then get your hula things. We are late again, and I mean it.",
+   "fix_note": {
+    "text": "Lilo, feed Pudge his sandwich, then get your hula things. We are late again, and I mean it.",
+    "by": "Nani",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Nani's drink between shifts at the luau.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The sources I opened do not say where Nani works or what she drinks. The wink 'Nani's job at the luau' (not printed) rests on the same claim.",
+   "source": "https://tvtropes.org/pmwiki/pmwiki.php/Funny/LiloAndStitch2002",
+   "fix": "Nani's drink at the end of a long day."
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Bright beach kiosk with good Hawaiian dishes and the Pudge cue, but it leaves out most of Stitch's famous moments.",
+  "missing": [
+   "Elvis records and Lilo's Elvis obsession (the Pelekai house)",
+   "Ohana means family (Lilo and Stitch)",
+   "Pudge controls the weather (Lilo's belief)",
+   "'If I gave Pudge tuna, I'd be an abomination' (the sandwich run)",
+   "Cobra Bubbles, the former CIA social worker (house visits)",
+   "Jumba and Pleakley and Experiment 626 (the aliens)"
+  ],
+  "ideas": [
+   "Swap 'Kauai poke' for 'Tuna sandwich, not for Pudge' as a nod to the abomination line.",
+   "Swap the 'Spotted' box for 'Pudge controls the weather'.",
+   "Swap 'POG juice' note for 'Pudge controls the weather. Drink up.'",
+   "Swap the venue sign 'Pelekai Family Table' for a record player wink, so the Elvis records get printed."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

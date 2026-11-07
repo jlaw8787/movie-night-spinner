@@ -1,0 +1,77 @@
+{
+ "id": "Jumanji (1995)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Twenty six years in that jungle, eating whatever I could catch. Tonight, pass me a real plate.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Alan's words, but he never says it. His real lines include 'Twenty-six years.' and 'You think monkeys, mosquitoes, and lions are bad? That's just the beginning.' Nothing about eating what he could catch.",
+   "source": "https://en.wikiquote.org/wiki/Jumanji_(1995_film)",
+   "fix": "\"You think monkeys, mosquitoes, and lions are bad? That's just the beginning.\"",
+   "fix_note": {
+    "text": "You think monkeys, mosquitoes, and lions are bad? That's just the beginning.",
+    "by": "Alan Parrish",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Lions in the living room",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "The day timeline puts 'Lions in the living room' at 10:30, before lunch and the monkeys in the kitchen. In the film the monkeys wreck the kitchen first (second roll), then Peter rolls a five and releases the lion and Alan. The order is reversed.",
+   "source": "https://en.wikipedia.org/wiki/Jumanji_(1995_film)",
+   "fix": "Monkeys in the kitchen",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Two to four players, ages 8 up",
+   "where": "prop",
+   "verdict": "unsure",
+   "why": "The game's rules in the film say to roll the dice and move your token, with doubles giving another turn. The player count and age range are not in the plot or quote pages.",
+   "source": "https://en.wikipedia.org/wiki/Jumanji_(1995_film)",
+   "fix": "Roll the dice, doubles roll again",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve the snacks when the monkeys wreck the kitchen.",
+   "where": "cue-printed",
+   "verdict": "ok",
+   "why": "Judy and Peter's roll brings a troop of monkeys that trash the kitchen. Fits.",
+   "source": "https://en.wikipedia.org/wiki/Jumanji_(1995_film)",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A fun day-planner layout that hits the game's best beats, though the food could use more of the film's own gags.",
+  "missing": [
+   "Alan eating an apple in the kitchen after the monkeys leave",
+   "The pelican that steals the game",
+   "The shredded shoe prototype on the factory conveyor belt (Carl covers for Alan)",
+   "Vines grabbing Carl's car ('FINE! TAKE IT!')",
+   "Van Pelt and the department store fight",
+   "The rhyme 'In the jungle you must wait, until the dice read five or eight'"
+  ],
+  "ideas": [
+   "Swap 'Parrish house New England pot roast' note for the shredded shoe prototype in the Parrish Shoe factory.",
+   "Replace 'Stampede refried bean nachos' plain line with the pelican stealing the game.",
+   "Swap 'Brantford mulled apple and maple punch' note for Alan eating an apple in the kitchen.",
+   "Change the 10:30 slot to 'Monkeys in the kitchen' and move the lions after lunch."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

@@ -1,0 +1,48 @@
+{
+ "id": "Pirates of the Caribbean: The Curse of the Black Pearl (2003)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Captain Jack Sparrow. I'll have the rum, the fish, and whatever's left on your plate, savvy?",
+   "where": "quote",
+   "verdict": "wrong",
+   "why": "Not a line Jack says. 'Captain Jack Sparrow' is his introduction at the dock, but the rest is invented. On the island the line people know is 'But why is the rum gone?' (recalled, not read on an opened quote page). The IMDb plot covers the marooning but has no dialogue.",
+   "source": "https://www.imdb.com/title/tt0325980/plotsummary",
+   "fix": "But why is the rum gone?",
+   "fix_note": {
+    "text": "Captain Jack Sparrow here. Rum, fish, and whatever is left on your plate, savvy?",
+    "by": "Jack Sparrow",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "The dishes are on point, but the blueprint sheet and the line 'Laser issue, fleet standard' feel like a navy canteen, not a pirate galley.",
+  "missing": [
+   "'Why is the rum gone?' (the island, Jack)",
+   "Elizabeth burning the rum as a signal fire (the island)",
+   "Barbossa's apple tasting of ash (Black Pearl cabin)",
+   "Skeleton pirates in the moonlight (Isla de Muerta)",
+   "Jack's dinghy sinking at the Port Royal dock",
+   "Jack the monkey and the medallion (Black Pearl)"
+  ],
+  "ideas": [
+   "Swap the footer 'Laser issue, fleet standard' for 'Rum rationed. Savvy?'",
+   "Swap 'Pirate's rum punch' note for 'The rum is gone. This is the rest.'",
+   "Swap the blueprint grid for parchment and a sea map so the paper looks pirate.",
+   "Swap 'Barbossa's green apples' note for 'Tastes like ash. Eat it anyway.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

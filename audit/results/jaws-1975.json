@@ -1,0 +1,84 @@
+{
+ "id": "Jaws (1975)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Keep the chum bucket out of the kitchen. Eat quick, then we head back out on the water.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Brody's words, but he never says it. His real lines on the quote page include 'You're gonna need a bigger boat' and, to the mayor, 'That doesn't mean we have to serve them up as smorgasbord.'",
+   "source": "https://en.wikiquote.org/wiki/Jaws_(film)",
+   "fix": "\"That doesn't mean we have to serve them up as smorgasbord.\"",
+   "fix_note": {
+    "text": "That doesn't mean we have to serve them up as smorgasbord.",
+    "by": "Martin Brody",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the drinks when Quint and Hooper compare scars.",
+   "where": "cue-printed",
+   "verdict": "ok",
+   "why": "At nightfall on the Orca Quint and Hooper drunkenly swap stories about their scars, which leads to the Indianapolis story. Fits.",
+   "source": "https://en.wikipedia.org/wiki/Jaws_(film)",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve the drinks when Quint and Hooper compare scars.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "Same cue as printed.",
+   "source": "https://en.wikipedia.org/wiki/Jaws_(film)",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Here's to swimming with bow-legged women.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "Quint's toast in the scar scene, used as an unmarked nod. Close to the film's line.",
+   "source": "https://en.wikipedia.org/wiki/Jaws_(film)",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "You're gonna need a bigger bowl.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "A clear nod to Brody's 'You're gonna need a bigger boat'. Plainly a pun.",
+   "source": "https://en.wikiquote.org/wiki/Jaws_(film)",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Strong blueprint and ship's log look with the right boat and scar scene, held back a little by plain dishes.",
+  "missing": [
+   "Quint's USS Indianapolis tattoo story (the Orca at night)",
+   "Quint singing 'Farewell and adieu to you, fair Spanish ladies' while he looks at the cage",
+   "Hooper's anti-shark cage",
+   "The tiger shark's stomach with a Louisiana plate in it (boathouse autopsy)",
+   "Hooper saying 'It ate the light' when the engine dies",
+   "Quint's 'Mary Lee' rhyme"
+  ],
+  "ideas": [
+   "Swap 'Orca galley clam chowder' note ('the Orca's galley') for Quint's tattoo story from the Indianapolis.",
+   "Swap 'Shark fin tortilla chips with salsa' note ('the fin on the horizon') for the tiger shark's garbage-can stomach.",
+   "Replace 'Amity Island sundae' note with the anti-shark cage, such as a sundae served in a little cage.",
+   "Add Quint's 'Spanish Ladies' line as the ration footer in place of 'No complaints to the cook'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

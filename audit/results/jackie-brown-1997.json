@@ -1,0 +1,66 @@
+{
+ "id": "Jackie Brown (1997)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Pour me a drink and pass the takeaway. I've had a long flight and a longer day.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Jackie's words, but she never says it. It is not on the Wikiquote page for the film.",
+   "source": "https://en.wikiquote.org/wiki/Jackie_Brown",
+   "fix": "Help yourself to the trolley. I've had a long flight and a longer day.",
+   "fix_note": {
+    "text": "Help yourself to the trolley. I've had a long flight and a longer day.",
+    "by": "Jackie Brown",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "The half-million-dollar switch at the Del Amo mall.",
+   "where": "dish-note",
+   "verdict": "ok",
+   "why": "The swap happens at a shopping mall and Jackie plans to keep about $500,000 of Ordell's money. The switch itself holds $50,000 plus the hidden half million. Close enough for a menu line.",
+   "source": "https://en.wikipedia.org/wiki/Jackie_Brown",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve the snacks when the money swap happens at the shopping mall.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "Jackie runs the bag swap with Melanie at the mall while Nicolette watches the food court. Fits.",
+   "source": "https://en.wikipedia.org/wiki/Jackie_Brown",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "The airline set suits Jackie's job, but the words skip the schemes that make the film fun.",
+  "missing": [
+   "The dressing room swap at the department store (the bag with $40,000, the rest left for Max)",
+   "Jackie pulling Max's gun on Ordell in her apartment",
+   "Beaumont refusing to get in the trunk",
+   "Louis forgetting where he parked, right before Melanie is shot",
+   "Ordell selling the Tec-9 and the AK-47",
+   "Max and Jackie's drink at the bar after the bail"
+  ],
+  "ideas": [
+   "Swap 'Mini croissants with ham and Swiss' for a dressing room tray with the $500,000 swapped for the tray.",
+   "Replace the 'Ordell's South Bay hot honey fried chicken' note with a line about Ordell's gun sales pitch.",
+   "Add a 'Parking lot fries' item with Louis forgetting where he parked, replacing the plain 'Cabo flight lime chilli peanuts' note.",
+   "Swap 'Max Cherry's steak dinner' note for the bar scene where Max takes Jackie for a drink."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

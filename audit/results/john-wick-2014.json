@@ -1,0 +1,76 @@
+{
+ "id": "John Wick (2014)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Rules are rules. No business on these grounds, Mr. Wick, but the bar is open and the room is yours.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Winston's words, but he never says it. His real lines on the quote page include 'I know what you're thinking, Jonathan. We live by a code.' and the line revoking Ms. Perkins' membership.",
+   "source": "https://en.wikiquote.org/wiki/John_Wick_(film)",
+   "fix": "\"I know what you're thinking, Jonathan. We live by a code.\"",
+   "fix_note": {
+    "text": "I know what you're thinking, Jonathan. We live by a code.",
+    "by": "Winston",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Viggo's drink while telling the Baba Yaga story.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Viggo does tell the Baba Yaga story to Iosef, but the sources do not say he drinks vodka while he does.",
+   "source": "https://en.wikipedia.org/wiki/John_Wick_(film)",
+   "fix": "Viggo's drink of choice, poured at the Red Circle.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve the drinks when John sits at the bar in the Continental.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "John lodges at the Continental and talks to Winston there. Plausible, though the plot sources do not say the talk happens at the bar.",
+   "source": "https://en.wikipedia.org/wiki/John_Wick_(film)",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Ask Charlie about a dinner reservation for twelve.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "Nod to the cleaners' code after John kills Viggo's hit squad at his house. Plainly a reference, though the code line is from memory of the film, not the pages opened.",
+   "source": "https://en.wikipedia.org/wiki/John_Wick_(film)",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "The hotel layout suits the Continental and the winks hit the right marks, with food that is a bit generic.",
+  "missing": [
+   "Viggo: 'I once saw him kill three men in a bar with a pencil'",
+   "The 1969 Boss 429 Mustang at the gas station (Iosef tries to buy it)",
+   "Marcus's warning shot from the next building",
+   "John breaking into the animal clinic and adopting the pit bull",
+   "Jimmy the cop: 'Noise complaint?'",
+   "John digging up his coins and weapons from the basement concrete"
+  ],
+  "ideas": [
+   "Swap 'Daisy's puppy biscuits' note for the animal clinic pup at the end.",
+   "Replace 'John's cast iron rib eye' note ('the quiet house before the trouble') with the buried-in-concrete coin stash.",
+   "Add 'Pencil' cheese straws in place of the plain parmesan crisps line.",
+   "Swap 'Viggo's drink' house note for Jimmy the cop and his noise complaint."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

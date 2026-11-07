@@ -1,0 +1,48 @@
+{
+ "id": "Labyrinth (1986)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": true,
+   "text": "Sarah, I am not your friend. Fine, I am. Just be careful what you put in your mouth, and do not take the peach.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Hoggle's words and it gets the plot backwards. Jareth orders Hoggle to give Sarah the enchanted peach. Hoggle tries to get rid of it, is stopped, then hands it over and runs off in shame. He never warns her off it. The funtrivia quote list shows his real lines, such as being a coward and Jareth scaring him.",
+   "source": "https://en.wikipedia.org/wiki/Hoggle",
+   "fix": "Sarah, I'm sorry about the peach. Jareth scares me, and I'm a coward. Eat your stew.",
+   "fix_note": {
+    "text": "Sarah, I'm sorry about the peach. Jareth scares me, and I'm a coward. Eat your stew.",
+    "by": "Hoggle",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.6,
+  "verdict": "A good goblin market with the peach, the worm and the Bog all on the board, but the poster sits between black bars and the writing is mild for such a strange film.",
+  "missing": [
+   "Ludo calling the rocks (only a drink joke now)",
+   "The Fireys taking their heads off (Sarah in the woods)",
+   "Sir Didymus and his steed Ambrosius (the Bog bridge)",
+   "The Junk Lady and the bedroom of junk (after the ball)",
+   "The Escher stair room and 'You have no power over me' (final scene)",
+   "Jareth's owl at the window (the party at the end)"
+  ],
+  "ideas": [
+   "Crop the poster to fill its frame, so the black bars above and below go.",
+   "Swap 'Sparkling white grape juice' for 'Ludo's rock candy punch', with the same 'Ludo calls for rocks' line.",
+   "Swap 'Hoggle's beef and mushroom stew' note for 'Hoggle gave you the peach, so he made you stew.'",
+   "Swap the 'Bog of Eternal Stench garlic dip' note for Sir Didymus and his steed Ambrosius guarding the bridge."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

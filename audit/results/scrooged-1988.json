@@ -1,0 +1,88 @@
+{
+ "id": "Scrooged (1988)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": false,
+   "text": "Serve the mains when Frank turns up at his brother's Christmas dinner.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "Frank never turns up at James's Christmas dinner. He turns down James's invitation every year and sends impersonal gifts. The Ghost of Christmas Present only shows him James celebrating and missing him.",
+   "source": "https://www.imdb.com/title/tt0096061/plotsummary",
+   "fix": "Serve the mains when the Ghost of Christmas Present shows Frank his brother James's Christmas."
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Serve the mains when Frank turns up at his brother's Christmas dinner.",
+   "where": "cue-printed",
+   "verdict": "wrong",
+   "why": "Same cue as printed on the card. Frank watches James's Christmas through the ghost's vision. He does not arrive at it.",
+   "source": "https://encycloreader.org/r/wikipedia.php?q=Scrooged",
+   "fix": "Serve the mains when the Ghost of Christmas Present shows Frank his brother James's Christmas."
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Lew Hayward, the network boss",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Lew Hayward is Frank's dead mentor, who appears as a decomposing ghost to warn him about the three spirits. Preston Rhinelander is the network chairman.",
+   "source": "https://encycloreader.org/r/wikipedia.php?q=Scrooged",
+   "fix": "Lew Hayward, Frank's ghost mentor"
+  },
+  {
+   "printed": true,
+   "done": true,
+   "text": "Pull up a chair. The network can wait, there's a hot dinner on and seconds for everyone.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Frank never says this. It is printed in quote marks as a character line, so it counts as a quote. The Frank lines on the opened quote page include nothing about pulling up a chair or seconds. His real Christmas Eve broadcast line is 'It's the one night of the year when we all act a little nicer'.",
+   "source": "https://www.moviemistakes.com/film1750/quotes",
+   "fix": "It's the one night of the year when we all act a little nicer.",
+   "fix_note": {
+    "text": "It's the one night of the year when we all act a little nicer.",
+    "by": "Frank Cross",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "printed": false,
+   "done": false,
+   "text": "Frank's drink, before three ghosts drop in.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The plot pages opened do not say what Frank drinks, so the hot toddy cannot be confirmed.",
+   "source": "https://encycloreader.org/r/wikipedia.php?q=Scrooged",
+   "fix": "Hot toddy with lemon: Warm up before the ghosts turn up."
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3,
+  "verdict": "A plain staff canteen with the right Christmas Carol names, but it skips the film's best-known gags and the writing could be anyone's.",
+  "missing": [
+   "Earl Cross giving young Frank a side of veal instead of the train set (Ghost of Christmas Past, 1955)",
+   "Frank's towel and facecloth gift to James (the impersonal presents)",
+   "Eliot Loudermilk storming the office with a shotgun",
+   "Herman, the homeless man at Claire's shelter",
+   "Carol Kane's pixie hitting Frank with a toaster",
+   "Staff singing 'Put a Little Love in Your Heart' at the end of the broadcast"
+  ],
+  "ideas": [
+   "Swap 'Christmas Past taxi pretzel mix' for 'Earl's Christmas veal', a side of veal with a toy train cut from carrot",
+   "Swap the plain 'Tray up, it's lunchtime' footer for a live-broadcast line such as 'Live from IBC, everyone sings along'",
+   "Add a 'Towel and a facecloth' joke to the Christmas pudding note, as Frank's present to the whole table",
+   "Swap the 'Hot toddy with lemon' house drink for a mug of Claire's shelter coffee"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

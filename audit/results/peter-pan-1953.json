@@ -1,0 +1,68 @@
+{
+ "id": "Peter Pan (1953)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Boys, wash your hands and line up. There will be a story after supper, and nobody goes to bed without one.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Wendy does tell stories, but the Wikipedia plot gives no such line and no quote page could be opened. It reads as written for the menu, and it is printed in quote marks as if she said it.",
+   "source": "https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/Peter_Pan_(1953_film)",
+   "fix": "Line up, boys, and wash your hands. There is a story after supper, if you can sit still.",
+   "fix_note": {
+    "text": "Line up, boys, and wash your hands. There is a story after supper, if you can sit still.",
+    "by": "Wendy",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "the hideout at Skull Rock",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "I recall Skull Rock as Hook's lair where he holds Tiger Lily, not the Lost Boys' hideout, and this menu is the Lost Boys' Hideout. The pages opened do not mention Skull Rock for the film itself.",
+   "source": "https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/Peter_Pan_(1953_film)",
+   "fix": "the rock where Hook holds Tiger Lily",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Ask the cook about: Mermaid Lagoon at night.",
+   "where": "footer",
+   "verdict": "unsure",
+   "why": "The plot has the mermaids teasing Wendy and Hook rowing nearby, but no source opened gives the time of day. I recall the lagoon scene as bright, not night.",
+   "source": "https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/Peter_Pan_(1953_film)",
+   "fix": "Ask the cook about: Mermaid Lagoon and the mermaids.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Good cardboard and badge look, but the food and the words stay generic for such a famous film.",
+  "missing": [
+   "Flying out the nursery window over London (second star to the right)",
+   "The crocodile with the ticking clock (Hook's hand)",
+   "The bomb hidden in Peter's present (Hook's cabin)",
+   "Mr Smee with his glasses and cap (pirate ship)",
+   "Wendy sewing Peter's shadow back on (nursery)",
+   "Tinker Bell jealous of Wendy (Lost Boys' hideout)"
+  ],
+  "ideas": [
+   "Swap 'Johnny cakes' note 'Tick tock. The croc wants seconds.' for 'Tick tock. Hook still has the hand.'",
+   "Swap 'Skull Rock gruyère and pepper puffs' for 'Smee's ship biscuits' with 'Hook's cook, mostly crumbs.'",
+   "Swap the 'Flight card' prop for a 'Shadow sewn on' ticket.",
+   "Swap 'Lemon barley water' note for 'Wendy mends shadows after supper.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

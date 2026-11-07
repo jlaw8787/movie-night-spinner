@@ -221,7 +221,9 @@ function flavourOf(ctx,neutral){
   return{venue:d(fl.venue)||neutral.venue,sign:d(fl.sign)||neutral.sign,
     note:fl.note&&fl.note.text?{text:d(fl.note.text),by:d(fl.note.by)||neutral.by}:{text:d(neutral.noteText(ctx)),by:neutral.by},
     winks:winks.length?winks:neutral.winks(ctx),prop:fl.prop&&fl.prop.title?{kind:fl.prop.kind||"card",title:d(fl.prop.title),lines:(fl.prop.lines||[]).map(d).filter(Boolean).slice(0,3)}:neutral.prop(ctx),
-    num:/^\d{1,4}$/.test(String(fl.number||""))?String(fl.number):"",has:!!ctx.flavour};
+    num:/^\d{1,4}$/.test(String(fl.number||""))?String(fl.number):"",has:!!ctx.flavour,
+    /* audit, 7 Nov (Josh: the film over the layout's habit): a booking that is not dinner for two says so (Ferris Bueller: lunch for three) */
+    party:+fl.party>0?+fl.party:2,time:/^\d{1,2}:\d\d [ap]m$/.test(fl.time||"")?fl.time:"",lunch:fl.meal==="lunch"};
 }
 /* prices scale with the era of the printed object */
 const ERA_PRICE=[.07,.11,.16,.3,.55,.75,.9,1];
@@ -271,14 +273,16 @@ window.MENU_FORMATS[ID]=ctx=>{
   const inkSpread=P.ink?`text-shadow:0 0 ${P.ink}px ${rgba(K.ink,.55)};`:"";
   const dispStyle=`font-family:${D};font-weight:${L.dw};letter-spacing:${L.ls};${L.caps?"text-transform:uppercase;":""}`;
   const table=F.num||String((+yy%24)+1);
-  const time=["7:30","8:00","8:30","9:15","10:45","11:30"][(+yy)%6]+" pm";
+  const time=F.time||(F.lunch?["12:30","1:00","1:15","12:45"][(+yy)%4]+" pm":["7:30","8:00","8:30","9:15","10:45","11:30"][(+yy)%6]+" pm");
+  const NUM=["","one","two","three","four","five","six","seven","eight"],party=NUM[F.party]||String(F.party);
   const rot=T.rot;
   const face=(inner)=>`<div data-fmtface="${ID}" style="position:absolute;inset:0;width:${W}px;height:${H}px;overflow:hidden;background:${paper};color:${K.ink};font-family:${B}">
     ${paperLayers(t,dark,H)}${borderHTML(P.border,K.acc,T.gilt,P.border==="double"?10:0)}${inner}</div>`;
   const price=(k,i)=>{const base={s:[11,13,12,15],m:[26,29,24,32],w:[10,12,11,13],d:[8,10,9,12]}[k][i%4];
     if(k==="m"&&i===0&&F.num)return eggPrice(base,F.num,yy,era);if(k==="w"&&i===0)return eggPrice(base,"",yy,era);return money(base,era)};
   /* "Dîner pour deux" only over a French room or a date-night restaurant, never a tailor or a date doctor's office */
-  const voice=VOICE[t]!=="Dîner pour deux"?VOICE[t]:/\b(paris|france|french|chez|le|la|didier|brasserie|bistro)\b/i.test(F.venue+" "+F.sign)||ctx.f.theme==="romcom"&&/\b(restaurant|dining|bistro|caf[eé]|terrace|supper|dinner)\b/i.test(F.venue+" "+F.sign)?VOICE[t]:"A table for two";
+  const voice0=VOICE[t]!=="Dîner pour deux"?VOICE[t]:/\b(paris|france|french|chez|le|la|didier|brasserie|bistro)\b/i.test(F.venue+" "+F.sign)||ctx.f.theme==="romcom"&&/\b(restaurant|dining|bistro|caf[eé]|terrace|supper|dinner)\b/i.test(F.venue+" "+F.sign)?VOICE[t]:"A table for two";
+  const voice=F.party===2?voice0:voice0.replace(/\bTwo forks\b/,`${party[0].toUpperCase()+party.slice(1)} forks`).replace(/\bfor two\b/,"for "+party).replace(/pour deux/,"pour "+({3:"trois",4:"quatre"}[F.party]||party)).replace(/^Dîner/,F.lunch?"Déjeuner":"Dîner");
   const kick=(s,col)=>`<div data-fs="14" style="font:700 18px/1.15 ${B};letter-spacing:.22em;text-transform:uppercase;color:${col||K.acc}">${esc(s)}</div>`;
 
   /* ---- front: sign, hero still, logo panel, specials board, house note, reservation card ---- */
@@ -307,7 +311,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const board=`<div style="position:absolute;left:30px;top:640px;width:330px;height:286px;background:${toHex(mix(hex(K.deep),[24,28,26],.5))};border-radius:4px;box-shadow:inset 0 0 0 7px ${rgba(era===0||T.gilt?"#b48a35":"#6b4a2b",.9)},inset 0 0 40px rgba(0,0,0,.45),0 4px 10px rgba(0,0,0,.25);overflow:hidden">
     <div style="position:absolute;inset:0;background:url(&quot;${NOISE}&quot;) 0 0/300px;opacity:.25;mix-blend-mode:screen"></div>
     <div data-fbox style="position:absolute;left:24px;right:22px;top:20px;bottom:15px;padding-bottom:3px;overflow:hidden">
-      ${kick("On the board tonight",K.light)}<div style="height:2px;background:${K.light};opacity:.5;margin:10px 0 12px"></div>${boardItems}
+      ${kick(F.lunch?"On the board today":"On the board tonight",K.light)}<div style="height:2px;background:${K.light};opacity:.5;margin:10px 0 12px"></div>${boardItems}
       ${ctx.f.P?`<div data-drop data-fs="14" style="font:italic 400 17px/1.25 ${B};color:rgba(246,239,224,.75)">${esc(sentence(dry(ctx.f.P)))}</div>`:""}</div></div>`;
   const note=`<div data-fbox style="position:absolute;left:382px;right:32px;top:640px;height:164px;overflow:hidden">
     ${kick("From the house")}
@@ -317,7 +321,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     ${paperLayers("glossy",false,106)}
     <div data-fbox style="position:absolute;inset:10px 14px 8px;text-align:center;overflow:hidden">
       <div data-fs="18" style="${dispStyle}font-size:26px;line-height:1;color:${dark?"#1c1712":K.ink};letter-spacing:.2em;text-transform:uppercase">Reserved</div>
-      <div data-fs="14" style="font:700 16px/1.3 ${B};color:${dark?"#1c1712":K.ink};margin-top:7px">Table ${esc(table)} &middot; for two &middot; ${time}</div>
+      <div data-fs="14" style="font:700 16px/1.3 ${B};color:${dark?"#1c1712":K.ink};margin-top:7px">Table ${esc(table)} &middot; for ${party} &middot; ${time}</div>
       <div data-fs="14" style="font:italic 400 15px/1.2 ${B};color:#555;margin-top:2px">${esc(F.winks[0]||"Kept until the opening credits")}</div></div></div>`;
   const front=face(header+hero+board+note+resv);
 

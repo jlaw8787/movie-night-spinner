@@ -1,0 +1,67 @@
+{
+ "id": "Jingle All the Way (1996)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I promised Jamie a Turbo Man and I promised him dinner. One of those I can actually deliver tonight.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Howard's words. It is not in the film and the Wikiquote page for the film has no matching line, so I could not find a source for it. It is an invented quote.",
+   "source": "https://en.wikipedia.org/wiki/Jingle_All_the_Way",
+   "fix": "I promised Jamie a Turbo Man. Tonight I can only deliver dinner, so sit down and eat.",
+   "fix_note": {
+    "text": "I promised Jamie a Turbo Man. Tonight I can only deliver dinner, so sit down and eat.",
+    "by": "Howard Langston",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the snacks when Howard hits the toy store on Christmas Eve.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "On Christmas Eve Howard goes from store to store and finds every one sold out. Fits.",
+   "source": "https://en.wikipedia.org/wiki/Jingle_All_the_Way",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Put that cookie down. Have this instead.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "Unmarked nod to Howard's famous 'Put that cookie down!' line. Plainly a reference. Could not open a quote page to confirm the exact wording, so this rests on memory of the film.",
+   "source": "",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "Cheerful Christmas look with the Turbo Man poster, but a generic food court setting that leaves out the film's best set pieces.",
+  "missing": [
+   "Mickey's Diner, where Howard and Myron have coffee and swap Christmas stories",
+   "The radio contest to name all of Santa's reindeer (KQRS)",
+   "The counterfeit Santa warehouse fight",
+   "Myron's package 'bomb' that turns out to be a music box",
+   "Howard stuck in the Turbo Man suit at the parade",
+   "The Turbo Man gift certificate prize",
+   "Liz's post-credits 'What did you get me?'"
+  ],
+  "flat": true,
+  "ideas": [
+   "Swap 'Booster's spiced eggnog' for 'Mickey's Diner coffee' with a note about Howard and Myron talking Christmas.",
+   "Replace 'Parade float popcorn' note with the reindeer radio contest, such as 'Name all eight, win the toy'.",
+   "Change the venue from 'Mall Food Court' to 'Mickey's Diner' or the Wintertainment Parade.",
+   "Swap 'Peppermint bark' note for the music box package Myron calls a bomb."
+  ],
+  "done": false
+ }
+}
