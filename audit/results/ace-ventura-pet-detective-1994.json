@@ -1,81 +1,93 @@
 {
- "id": "Ace Ventura: Pet Detective (1994)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Serve the mains when Ace finds the dolphin in the rich guy's private tank.",
-   "where": "cue",
-   "verdict": "wrong",
-   "why": "Ace does not find Snowflake in a rich man's tank. Ronald Camp is the rich collector, Ace rules him out, and Snowflake and Dan Marino are found held at an abandoned yacht storage facility on Super Bowl Sunday.",
-   "source": "https://www.wikiwand.com/en/Ace_Ventura%3A_Pet_Detective",
-   "fix": "Serve the mains when Ace finds Snowflake in the yacht storage yard.",
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Serve the mains when Ace finds the dolphin in the rich guy's private tank.",
-   "where": "cue-printed",
-   "verdict": "wrong",
-   "why": "Same cue as printed on the card. Snowflake is found at the yacht storage facility, not in a private tank.",
-   "source": "https://kaweah.freedombox.rocks/kiwix/wikipedia_en_all_maxi_2023-10/Ray_Finkle",
-   "fix": "Serve the mains when Ace finds Snowflake in the yacht storage yard.",
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Case closed, dinner's served. Somebody find me a clean fork, and keep the parrot off the table.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Printed in quote marks as a character line, so it counts as a quote. Not a line from the film. The Ace quotes on the page I opened do not include it. A real line with a clean theme is 'Hi, I'm looking for Ray Finkle. And a clean pair of shorts.'",
-   "source": "https://www.ranker.com/list/the-best-ace-ventura-pet-detective-quotes/movie-and-tv-quotes",
-   "fix": "Hi, I'm looking for Ray Finkle. And a clean pair of shorts.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Hi, I'm looking for Ray Finkle. And a clean pair of shorts.",
-    "by": "Ace Ventura",
-    "kind": "quote"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Shady Acres, where the trail goes cold",
-   "where": "wink",
-   "verdict": "wrong",
-   "why": "The trail heats up at the hospital. Ace goes undercover there and finds the newspaper clipping about the missing hiker Lois Einhorn, which tells him Einhorn is Finkle.",
-   "source": "https://kaweah.freedombox.rocks/kiwix/wikipedia_en_all_maxi_2023-10/Ray_Finkle",
-   "fix": "Shady Acres, where Ace goes undercover",
-   "printed": false,
-   "done": true,
-   "applied": "2026-11-07"
+  "id": "Ace Ventura: Pet Detective (1994)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the mains when Ace finds the dolphin in the rich guy's private tank.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "Ace does not find Snowflake in a rich man's tank. Ronald Camp is the rich collector, Ace rules him out, and Snowflake and Dan Marino are found held at an abandoned yacht storage facility on Super Bowl Sunday.",
+      "source": "https://www.wikiwand.com/en/Ace_Ventura%3A_Pet_Detective",
+      "fix": "Serve the mains when Ace finds Snowflake in the yacht storage yard.",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Serve the mains when Ace finds the dolphin in the rich guy's private tank.",
+      "where": "cue-printed",
+      "verdict": "wrong",
+      "why": "Same cue as printed on the card. Snowflake is found at the yacht storage facility, not in a private tank.",
+      "source": "https://kaweah.freedombox.rocks/kiwix/wikipedia_en_all_maxi_2023-10/Ray_Finkle",
+      "fix": "Serve the mains when Ace finds Snowflake in the yacht storage yard.",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Case closed, dinner's served. Somebody find me a clean fork, and keep the parrot off the table.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Printed in quote marks as a character line, so it counts as a quote. Not a line from the film. The Ace quotes on the page I opened do not include it. A real line with a clean theme is 'Hi, I'm looking for Ray Finkle. And a clean pair of shorts.'",
+      "source": "https://www.ranker.com/list/the-best-ace-ventura-pet-detective-quotes/movie-and-tv-quotes",
+      "fix": "Hi, I'm looking for Ray Finkle. And a clean pair of shorts.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Hi, I'm looking for Ray Finkle. And a clean pair of shorts.",
+        "by": "Ace Ventura",
+        "kind": "quote"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Shady Acres, where the trail goes cold",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "The trail heats up at the hospital. Ace goes undercover there and finds the newspaper clipping about the missing hiker Lois Einhorn, which tells him Einhorn is Finkle.",
+      "source": "https://kaweah.freedombox.rocks/kiwix/wikipedia_en_all_maxi_2023-10/Ray_Finkle",
+      "fix": "Shady Acres, where Ace goes undercover",
+      "printed": false,
+      "done": true,
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 18,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 5,
+    "overall": 3.8,
+    "verdict": "Loud, fun and a great look, but the cue puts the dolphin in the wrong place and the best-known lines are missing.",
+    "missing": [
+      "Einhorn is Finkle (the big reveal, Ace's apartment)",
+      "Ronald Camp's party and shark tank",
+      "Ace undercover at the hospital",
+      "Finkle's missed kick in the Super Bowl",
+      "Ace on the jumbotron at halftime",
+      "The amber stone in Snowflake's tank filter"
+    ],
+    "ideas": [
+      "Swap 'Game day buffalo wings with blue cheese' note 'The big game in Miami' for 'Halftime wings. Ace gets the jumbotron.'",
+      "Swap 'Tropical fruit skewers' note for 'Amber mango, the stone in Snowflake's tank'.",
+      "Swap 'Ace's Miami mojito' for 'Laces Out' lime cooler, note 'Finkle never got over it'.",
+      "Swap the footer 'Table talk: Snowflake the dolphin goes missing' for 'Einhorn is Finkle. Finkle is Einhorn.'"
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Laces out, Ray Finkle",
+      "Einhorn is Finkle, Finkle is Einhorn",
+      "Alrighty then",
+      "Snowflake the dolphin",
+      "Spike the monkey",
+      "Shady Acres"
+    ],
+    "changed": [
+      "Footer table talk now 'Einhorn is Finkle, Finkle is Einhorn'; Snowflake wink moved to slot 5"
+    ]
   }
- ],
- "checked_ok": 18,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 4,
-  "look": 5,
-  "overall": 3.8,
-  "verdict": "Loud, fun and a great look, but the cue puts the dolphin in the wrong place and the best-known lines are missing.",
-  "missing": [
-   "Einhorn is Finkle (the big reveal, Ace's apartment)",
-   "Ronald Camp's party and shark tank",
-   "Ace undercover at the hospital",
-   "Finkle's missed kick in the Super Bowl",
-   "Ace on the jumbotron at halftime",
-   "The amber stone in Snowflake's tank filter"
-  ],
-  "ideas": [
-   "Swap 'Game day buffalo wings with blue cheese' note 'The big game in Miami' for 'Halftime wings. Ace gets the jumbotron.'",
-   "Swap 'Tropical fruit skewers' note for 'Amber mango, the stone in Snowflake's tank'.",
-   "Swap 'Ace's Miami mojito' for 'Laces Out' lime cooler, note 'Finkle never got over it'.",
-   "Swap the footer 'Table talk: Snowflake the dolphin goes missing' for 'Einhorn is Finkle. Finkle is Einhorn.'"
-  ],
-  "flat": false,
-  "done": false
- }
 }

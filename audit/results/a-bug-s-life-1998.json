@@ -1,59 +1,71 @@
 {
- "id": "A Bug's Life (1998)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Flik, I saved you a seed from the harvest dinner. Eat it quick before the grasshoppers come round asking for more.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Printed in quote marks as a character line, so it counts as a quote. Dot never says this and there is no harvest dinner in the film. The Dot and Flik moments on TV Tropes have different lines, and the Moviemistakes quote page has none from Dot at all.",
-   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Heartwarming/ABugsLife",
-   "fix": "Flik, I saved you a seed from the harvest. Eat it quick before the grasshoppers come round asking for more.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Flik, I saved you a seed from the harvest. Eat it quick before the grasshoppers come round asking for more.",
-    "by": "Princess Dot",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Dot's just a seed. Give it time.",
-   "where": "house",
-   "verdict": "ok",
-   "why": "Flik tells Dot a little rock can stand in for a seed, and that everything a tree needs is already in a tiny seed given time. The menu line paraphrases that scene.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-bugs-life",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "A Bug's Life (1998)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Flik, I saved you a seed from the harvest dinner. Eat it quick before the grasshoppers come round asking for more.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Printed in quote marks as a character line, so it counts as a quote. Dot never says this and there is no harvest dinner in the film. The Dot and Flik moments on TV Tropes have different lines, and the Moviemistakes quote page has none from Dot at all.",
+      "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Heartwarming/ABugsLife",
+      "fix": "Flik, I saved you a seed from the harvest. Eat it quick before the grasshoppers come round asking for more.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Flik, I saved you a seed from the harvest. Eat it quick before the grasshoppers come round asking for more.",
+        "by": "Princess Dot",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Dot's just a seed. Give it time.",
+      "where": "house",
+      "verdict": "ok",
+      "why": "Flik tells Dot a little rock can stand in for a seed, and that everything a tree needs is already in a tiny seed given time. The menu line paraphrases that scene.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-bugs-life",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 16,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "Colourful circus kiosk with the right cast, but the notes stay on the surface and the signed line is made up.",
+    "missing": [
+      "Flik knocking the harvest offering into the river (opening)",
+      "Hopper: 'It's not about food, it's about keeping those ants in line!' (grasshopper lair)",
+      "Heimlich's endless hunger (circus wagon)",
+      "The fake bird being built and the bird fight (finale)",
+      "Dot flying at the end",
+      "Flik's tiny inventions at Ant Island"
+    ],
+    "ideas": [
+      "Swap 'Berry and feta skewers' for 'Heimlich's berry skewers', note 'He ate all the toothpicks too'.",
+      "Swap 'Colony corn chowder' for 'Offering chowder', note 'Pile it high. The grasshoppers are coming.'",
+      "Swap the weather bar forecast 'Sunny with a chance of fun' for 'Grasshoppers due by end of season'.",
+      "Swap 'Harvest offering seed crackers' note for 'Do not tip into the river'."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "The harvest offering",
+      "Flik's harvesting machine",
+      "Hopper: it's about keeping those ants in line",
+      "Heimlich and the butterfly wings",
+      "The fake bird",
+      "Tuck and Roll, Dot"
+    ],
+    "changed": [
+      "Hopper wink now carries 'keeping those ants in line'"
+    ]
   }
- ],
- "checked_ok": 16,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "Colourful circus kiosk with the right cast, but the notes stay on the surface and the signed line is made up.",
-  "missing": [
-   "Flik knocking the harvest offering into the river (opening)",
-   "Hopper: 'It's not about food, it's about keeping those ants in line!' (grasshopper lair)",
-   "Heimlich's endless hunger (circus wagon)",
-   "The fake bird being built and the bird fight (finale)",
-   "Dot flying at the end",
-   "Flik's tiny inventions at Ant Island"
-  ],
-  "ideas": [
-   "Swap 'Berry and feta skewers' for 'Heimlich's berry skewers', note 'He ate all the toothpicks too'.",
-   "Swap 'Colony corn chowder' for 'Offering chowder', note 'Pile it high. The grasshoppers are coming.'",
-   "Swap the weather bar forecast 'Sunny with a chance of fun' for 'Grasshoppers due by end of season'.",
-   "Swap 'Harvest offering seed crackers' note for 'Do not tip into the river'."
-  ],
-  "flat": false,
-  "done": false
- }
 }

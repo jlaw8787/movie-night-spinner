@@ -51,6 +51,23 @@
    "Swap 'Ration sheet. Eat with your own spoon.' for 'Clone 8. Handle with care.'"
   ],
   "flat": true,
-  "done": false
+  "done": false,
+  "rework": "2026-11-08",
+  "iconic": [
+   "I'm a stranger here myself (Ripley, last line, now the signed note)",
+   "Ripley answering Johner's question about the aliens with 'I died.'",
+   "Ripley's no-look basketball shot against Johner",
+   "Flooded kitchen, the Betty crew swimming through",
+   "Acid blood",
+   "Ripley 8, clone tanks 1 to 7, Call the android"
+  ],
+  "changed": [
+   "Gougères renamed No-look basketball gougères, note tied to Ripley's shot",
+   "Pork crackling house note now about Johner's one-on-one offer",
+   "Bouillabaisse note: the kitchen the crew swims through",
+   "Lemon vodka note carries Ripley's 'I died.'",
+   "Signed note is now Ripley's real last line (badge name becomes Ripley)"
+  ],
+  "layout_clash": "lab prints note only as the badge name; winks and note text do not print"
  }
 }

@@ -1,0 +1,43 @@
+{
+ "id": "Aquaman (2018)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "That's my superpower.",
+    "by": "Tom Curry",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Tom and Arthur's afternoon at the bar.",
+   "new": "Tom still drinks Arthur under the table."
+  },
+  {
+   "old": "Bar wings",
+   "new": "Tom and Arthur's bar wings"
+  },
+  {
+   "old": "Arthur growing up on the Maine coast",
+   "new": "Lobster rolls from Arthur's lighthouse home"
+  },
+  {
+   "old": "Prawns, mussels, scallops and white fish roasted in garlic butter",
+   "new": "Prawns, mussels, scallops and fish in garlic butter, fit for Atlantis"
+  },
+  {
+   "old": "Blue Hawaiian with rum and pineapple",
+   "new": "Ocean Master Blue Hawaiian with rum and pineapple"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Tom Curry's lighthouse",
+    "Black Manta needs a bigger helmet",
+    "Orm says join me or die",
+    "The Karathen guards the trident",
+    "Topo the octopus on drums"
+   ]
+  }
+ ]
+}

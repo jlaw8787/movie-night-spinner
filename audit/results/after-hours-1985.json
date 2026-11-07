@@ -1,83 +1,96 @@
 {
- "id": "After Hours (1985)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Serve the bagels when Kiki shows off her bagel and cream cheese paperweights.",
-   "where": "cue",
-   "verdict": "wrong",
-   "why": "Marcy tells Paul about the paperweights in the cafe, and later Paul demands to see one at the loft. Marcy says they are in Kiki's bedroom. Kiki does not show them off.",
-   "source": "https://en.wikiquote.org/wiki/After_Hours_(film)",
-   "fix": "Serve the bagels when Paul demands to see the bagel and cream cheese paperweights.",
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "LAST STOP",
-   "where": "venue",
-   "verdict": "wrong",
-   "why": "The bar in the film is the Terminal Bar. Last Stop is an invented name.",
-   "source": "https://en.wikipedia.org/wiki/After_Hours_(film)",
-   "fix": "TERMINAL BAR",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Lock up, there have been burglaries on the block. Off to Club Berlin? Eat first.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Burglaries come from a neighbour in the script, and Club Berlin comes from Kiki's note, not from Tom.",
-   "source": "https://en.wikipedia.org/wiki/After_Hours_(film)",
-   "fix": "You look like you could use a drink. Eat first, it's a long night.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "You look like you could use a drink. Eat first, it's a long night.",
-    "by": "Tom",
-    "kind": "note"
-   },
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "the bartender who owes Paul a favour",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "It runs the other way. Tom lends Paul his apartment key to fetch the cash register key, and Paul floods the bathroom.",
-   "source": "https://en.wikipedia.org/wiki/After_Hours_(film)",
-   "fix": "the bartender who lends Paul his keys",
-   "printed": false,
-   "done": true,
-   "applied": "2026-11-07"
+  "id": "After Hours (1985)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the bagels when Kiki shows off her bagel and cream cheese paperweights.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "Marcy tells Paul about the paperweights in the cafe, and later Paul demands to see one at the loft. Marcy says they are in Kiki's bedroom. Kiki does not show them off.",
+      "source": "https://en.wikiquote.org/wiki/After_Hours_(film)",
+      "fix": "Serve the bagels when Paul demands to see the bagel and cream cheese paperweights.",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "LAST STOP",
+      "where": "venue",
+      "verdict": "wrong",
+      "why": "The bar in the film is the Terminal Bar. Last Stop is an invented name.",
+      "source": "https://en.wikipedia.org/wiki/After_Hours_(film)",
+      "fix": "TERMINAL BAR",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Lock up, there have been burglaries on the block. Off to Club Berlin? Eat first.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Burglaries come from a neighbour in the script, and Club Berlin comes from Kiki's note, not from Tom.",
+      "source": "https://en.wikipedia.org/wiki/After_Hours_(film)",
+      "fix": "You look like you could use a drink. Eat first, it's a long night.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "You look like you could use a drink. Eat first, it's a long night.",
+        "by": "Tom",
+        "kind": "note"
+      },
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "the bartender who owes Paul a favour",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "It runs the other way. Tom lends Paul his apartment key to fetch the cash register key, and Paul floods the bathroom.",
+      "source": "https://en.wikipedia.org/wiki/After_Hours_(film)",
+      "fix": "the bartender who lends Paul his keys",
+      "printed": false,
+      "done": true,
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 9,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 5,
+    "overall": 4.2,
+    "verdict": "A moody late-night bar with the right props, but it renames the Terminal Bar and the cue gives Kiki Marcy's job.",
+    "missing": [
+      "Is That All There Is? on the jukebox (Club Berlin)",
+      "Mohawk night at the door (Club Berlin)",
+      "Paul covered in papier-mache (June)",
+      "Wanted posters for the burglar (Julie)",
+      "The twenty flying out the taxi window",
+      "Kiki's screaming man sculpture"
+    ],
+    "ideas": [
+      "Rename the bar 'Terminal Bar' in the logo and caption, replacing 'Last Stop'",
+      "Add a 'Mohawk night, no mohawk no entry' line to the house rules, replacing 'Hold on to your twenty'",
+      "Swap 'Draft beer' note for 'Is That All There Is?, one coin in the jukebox'",
+      "Rewrite Tom's note as a bartender's note that nods at the register key"
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Bagel and cream cheese paperweights",
+      "Plaster of Paris cake",
+      "Club Berlin and mohawk night",
+      "Hold on to your twenty",
+      "Is That All There Is? on the jukebox",
+      "Terminal Bar"
+    ],
+    "changed": [
+      "House rule 'Full menu on the back.' now 'Tonight is mohawk night.'",
+      "Bar photo caption now Is That All There Is? on the jukebox"
+    ]
   }
- ],
- "checked_ok": 9,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 4,
-  "look": 5,
-  "overall": 4.2,
-  "verdict": "A moody late-night bar with the right props, but it renames the Terminal Bar and the cue gives Kiki Marcy's job.",
-  "missing": [
-   "Is That All There Is? on the jukebox (Club Berlin)",
-   "Mohawk night at the door (Club Berlin)",
-   "Paul covered in papier-mache (June)",
-   "Wanted posters for the burglar (Julie)",
-   "The twenty flying out the taxi window",
-   "Kiki's screaming man sculpture"
-  ],
-  "ideas": [
-   "Rename the bar 'Terminal Bar' in the logo and caption, replacing 'Last Stop'",
-   "Add a 'Mohawk night, no mohawk no entry' line to the house rules, replacing 'Hold on to your twenty'",
-   "Swap 'Draft beer' note for 'Is That All There Is?, one coin in the jukebox'",
-   "Rewrite Tom's note as a bartender's note that nods at the register key"
-  ],
-  "flat": false,
-  "done": false
- }
 }

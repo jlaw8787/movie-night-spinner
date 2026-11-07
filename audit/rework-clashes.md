@@ -1,0 +1,14 @@
+# Layout clashes raised by the rework agents (8 Nov)
+
+Fixed layout words that don't suit the film. Fix with a per-film setting or a layout move after the rework.
+
+- 13 Going on 30 (2004), prom: "PROM NIGHT, CLASS OF 2004", "WEAR YOUR DANCING SHOES", "Last Dance Sweets", "Before the Dance" don't suit a basement birthday party.
+- 22 Jump Street (2014), canteen: "LUNCH TICKET" and the period timetable don't fit a spring-break college film.
+- Ace Ventura: When Nature Calls (1995), tiki: island headings (ISLAND HOPPING, SNACK CAY, SWEET REEF, MAIN ISLE, PUPU PLATTERS, RING THE GONG) belong to an island, not an African jungle.
+- A Night at the Roxbury (1998), club: only the first wink prints; footer "No discussing the synchronized head bob..." is fixed layout text (American spelling).
+- After Hours (1985), hand-built: Terminal Bar rename not in the formats.js template, still prints "Last Stop".
+- Animal Kingdom (2010), home: "DINNER AT SEVEN SHARP", "Recipe box no.", "Check twice" too cosy for a crime drama.
+- Annabelle (2014), home: "Recipe box no.", "Serves everyone on the couch" clash with horror.
+- Avatar: The Way of Water (2022), kiosk: surf strip "Conditions" line is a theme default in menu-formats/kiosk.js.
+- Bambi (1942), campfire: "CARD NO.", "Form CM 42", "MEADOW TAG", "TONIGHT'S FEATURE" stay camp-flavoured (minor).
+- Ant-Man (2015): salmon dish note already marked wrong by a settled fact, not yet fixed.

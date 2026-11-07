@@ -1,0 +1,42 @@
+{
+ "id": "Bambi (1942)",
+ "ops": [
+  {
+   "set": "flavour.labels",
+   "value": {
+    "s": "Meadow Snacks",
+    "m": "From the Forest",
+    "w": "Sweet Things",
+    "d": "Spring Drinks",
+    "t": "In the Meadow",
+    "call": "Thumper's call"
+   }
+  },
+  {
+   "old": "Long ears and great big feet, guaranteed.",
+   "new": "Awful stuff to eat, Thumper says. He made that bit up."
+  },
+  {
+   "old": "Crisp meringue round topped with whipped cream and berries",
+   "new": "Meringue pond, cream and berries, for Bambi's slip on the ice"
+  },
+  {
+   "old": "the forest in spring",
+   "new": "Berry custard, sweet as Flower the skunk"
+  },
+  {
+   "old": "Woodland mushroom pie",
+   "new": "Great Prince's woodland mushroom pie"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Thumper thumping his foot",
+    "Flower the shy skunk",
+    "If you can't say somethin' nice, don't say nothin' at all",
+    "The Great Prince of the Forest",
+    "Bambi slipping on the frozen pond"
+   ]
+  }
+ ]
+}

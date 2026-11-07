@@ -1,48 +1,60 @@
 {
- "id": "Aladdin (1992)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Okay, who is hungry? I can do a feast for a hundred, but the carpet gets first pick of the snacks.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Printed in quote marks as a character line, so it counts as a quote. Genie never says this. The Genie lines on the page I opened (a long partial list) are things like 'Phenomenal cosmic powers... Itty bitty living space.' and 'Let's make some magic!', with no feast offer.",
-   "source": "https://www.scarymommy.com/aladdin-quotes/",
-   "fix": "Let's make some magic!",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Let's make some magic!",
-    "by": "Genie",
-    "kind": "quote"
-   },
-   "applied": "2026-11-07"
+  "id": "Aladdin (1992)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Okay, who is hungry? I can do a feast for a hundred, but the carpet gets first pick of the snacks.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Printed in quote marks as a character line, so it counts as a quote. Genie never says this. The Genie lines on the page I opened (a long partial list) are things like 'Phenomenal cosmic powers... Itty bitty living space.' and 'Let's make some magic!', with no feast offer.",
+      "source": "https://www.scarymommy.com/aladdin-quotes/",
+      "fix": "Let's make some magic!",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Let's make some magic!",
+        "by": "Genie",
+        "kind": "quote"
+      },
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 16,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "A good market chalkboard that fits the film, but the Genie note is invented and it leans on stock Middle Eastern food.",
+    "missing": [
+      "'All this for a loaf of bread?' (Aladdin after the market chase)",
+      "Jasmine taking an apple from a stall (market)",
+      "Genie: 'Phenomenal cosmic powers... Itty bitty living space.' (the lamp)",
+      "Iago's moaning about moldy crackers (Jafar's palace)",
+      "The carpet ride over Agrabah at night",
+      "Prince Ali's parade"
+    ],
+    "ideas": [
+      "Swap 'Agrabah market hummus and smoky baba' note for 'Jasmine's apple, paid for after the fact'.",
+      "Swap 'Sesame ka'ak bread rings with dukkah' for 'Iago's crackers' with note 'Moldy and disgusting. Ours are fresh.'",
+      "Swap 'Genie's mint lemonade' for 'Itty bitty lamp lemonade' served in a tiny cup.",
+      "Swap 'Magic carpet baklava' note for 'Prince Ali, for just the evening' on a parade tray."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "The bread in the market",
+      "Abu",
+      "Cave of Wonders",
+      "The lamp and the Genie",
+      "Phenomenal cosmic powers, itty bitty living space",
+      "Magic carpet"
+    ],
+    "changed": [
+      "Pass line now nods to 'itty bitty living space'"
+    ]
   }
- ],
- "checked_ok": 16,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.8,
-  "verdict": "A good market chalkboard that fits the film, but the Genie note is invented and it leans on stock Middle Eastern food.",
-  "missing": [
-   "'All this for a loaf of bread?' (Aladdin after the market chase)",
-   "Jasmine taking an apple from a stall (market)",
-   "Genie: 'Phenomenal cosmic powers... Itty bitty living space.' (the lamp)",
-   "Iago's moaning about moldy crackers (Jafar's palace)",
-   "The carpet ride over Agrabah at night",
-   "Prince Ali's parade"
-  ],
-  "ideas": [
-   "Swap 'Agrabah market hummus and smoky baba' note for 'Jasmine's apple, paid for after the fact'.",
-   "Swap 'Sesame ka'ak bread rings with dukkah' for 'Iago's crackers' with note 'Moldy and disgusting. Ours are fresh.'",
-   "Swap 'Genie's mint lemonade' for 'Itty bitty lamp lemonade' served in a tiny cup.",
-   "Swap 'Magic carpet baklava' note for 'Prince Ali, for just the evening' on a parade tray."
-  ],
-  "flat": false,
-  "done": false
- }
 }

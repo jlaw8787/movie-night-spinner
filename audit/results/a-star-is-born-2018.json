@@ -1,108 +1,121 @@
 {
- "id": "A Star Is Born (2018)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Drag night, so the queens get first go at the snacks. If the country guy in the hat turns up, sit him at the end of the bar with a gin.",
-   "where": "note",
-   "verdict": "unsure",
-   "why": "A bar note, not a quote. The hat and the gin are not in anything read: the plot pages say Jackson stops at the drag bar after his show, with no hat or drink order described.",
-   "source": "https://m.imdb.com/es/title/tt1517451/plotsummary",
-   "fix": "Drag night, so the queens get first go at the snacks. If a country singer turns up, sit him at the end of the bar.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Drag night, so the queens get first go at the snacks. If a country singer turns up, sit him at the end of the bar.",
-    "by": "Behind the bar",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Jack's order, poured strong at the end of the bar.",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "Jackson asks for a gin on the rocks, and the dish is a gin martini with a twist.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-star-is-born",
-   "fix": "Jack's gin, poured strong at the end of the bar.",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "1 straight gin, 1 cosmo, 1 bag frozen peas",
-   "where": "prop",
-   "verdict": "wrong",
-   "why": "The script has a gin on the rocks and frozen peas for Ally's hand. No cosmo is ordered.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-star-is-born",
-   "fix": "1 gin on the rocks, 1 bag frozen peas",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Paid by the guy in the hat",
-   "where": "prop",
-   "verdict": "wrong",
-   "why": "Jackson pays at the bar, but no source mentions a hat.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-star-is-born",
-   "fix": "Paid by the country singer",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Swiped off the dessert tray on Ally's last night waiting tables",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "Ally works as a waitress and singer-songwriter, but no source has a last night or a dessert tray.",
-   "source": "https://en.wikipedia.org/wiki/A_Star_Is_Born_(2018_film)",
-   "fix": "Something sweet for Ally's long waitressing shifts",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Ally on the bar, singing La Vie en Rose.",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "Ally sings La Vie en Rose on the drag bar's stage, not on the bar.",
-   "source": "https://en.wikipedia.org/wiki/A_Star_Is_Born_(2018_film)",
-   "fix": "Ally on stage, singing La Vie en Rose.",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "A Star Is Born (2018)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Drag night, so the queens get first go at the snacks. If the country guy in the hat turns up, sit him at the end of the bar with a gin.",
+      "where": "note",
+      "verdict": "unsure",
+      "why": "A bar note, not a quote. The hat and the gin are not in anything read: the plot pages say Jackson stops at the drag bar after his show, with no hat or drink order described.",
+      "source": "https://m.imdb.com/es/title/tt1517451/plotsummary",
+      "fix": "Drag night, so the queens get first go at the snacks. If a country singer turns up, sit him at the end of the bar.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Drag night, so the queens get first go at the snacks. If a country singer turns up, sit him at the end of the bar.",
+        "by": "Behind the bar",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Jack's order, poured strong at the end of the bar.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "Jackson asks for a gin on the rocks, and the dish is a gin martini with a twist.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-star-is-born",
+      "fix": "Jack's gin, poured strong at the end of the bar.",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "1 straight gin, 1 cosmo, 1 bag frozen peas",
+      "where": "prop",
+      "verdict": "wrong",
+      "why": "The script has a gin on the rocks and frozen peas for Ally's hand. No cosmo is ordered.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-star-is-born",
+      "fix": "1 gin on the rocks, 1 bag frozen peas",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Paid by the guy in the hat",
+      "where": "prop",
+      "verdict": "wrong",
+      "why": "Jackson pays at the bar, but no source mentions a hat.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=a-star-is-born",
+      "fix": "Paid by the country singer",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Swiped off the dessert tray on Ally's last night waiting tables",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Ally works as a waitress and singer-songwriter, but no source has a last night or a dessert tray.",
+      "source": "https://en.wikipedia.org/wiki/A_Star_Is_Born_(2018_film)",
+      "fix": "Something sweet for Ally's long waitressing shifts",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Ally on the bar, singing La Vie en Rose.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "Ally sings La Vie en Rose on the drag bar's stage, not on the bar.",
+      "source": "https://en.wikipedia.org/wiki/A_Star_Is_Born_(2018_film)",
+      "fix": "Ally on stage, singing La Vie en Rose.",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "A moody bar tab that finds the peas, Piaf and limo crew, but several drinks and props are made up and Shallow, the heart of the film, is missing.",
+    "missing": [
+      "Ally singing Shallow with Jack on stage (Jack's show)",
+      "The guitar string ring (Jack's proposal at Noodles's place)",
+      "Bobby's 'twelve notes' speech (after Jack's death)",
+      "Ally's first Grammy night and Jack's pull-up on stage (the Coachella-style festival)",
+      "The Roy Orbison tribute at the Grammys",
+      "The Arizona ranch turned into a wind farm (Jack and Bobby)"
+    ],
+    "ideas": [
+      "Swap the 'Jack's order' line on 'Gin martini with a twist' for Jack's real line 'I just wanted to take another look at you.'",
+      "Put the peeled eyebrow on the printed menu as a lost property line, in place of 'Prices subject to change.'",
+      "Swap 'Truffle salted popcorn' for 'Guitar string ring pretzels', a nod to the ring Jack makes for Ally.",
+      "Swap 'Carried over' and 'Brought forward' for 'Twelve notes' and 'Same story', from Bobby's speech."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Shallow",
+      "I just wanted to take another look at you",
+      "Frozen peas on the hand",
+      "La Vie en Rose at Bleu Bleu",
+      "Jack's gin",
+      "The stick-on eyebrow"
+    ],
+    "changed": [
+      "Limo drivers wink now Shallow, sung to the whole arena",
+      "Gin note nods to 'another look at you'"
+    ]
   }
- ],
- "checked_ok": 11,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 3,
-  "tone": 4,
-  "look": 4,
-  "overall": 3.8,
-  "verdict": "A moody bar tab that finds the peas, Piaf and limo crew, but several drinks and props are made up and Shallow, the heart of the film, is missing.",
-  "missing": [
-   "Ally singing Shallow with Jack on stage (Jack's show)",
-   "The guitar string ring (Jack's proposal at Noodles's place)",
-   "Bobby's 'twelve notes' speech (after Jack's death)",
-   "Ally's first Grammy night and Jack's pull-up on stage (the Coachella-style festival)",
-   "The Roy Orbison tribute at the Grammys",
-   "The Arizona ranch turned into a wind farm (Jack and Bobby)"
-  ],
-  "ideas": [
-   "Swap the 'Jack's order' line on 'Gin martini with a twist' for Jack's real line 'I just wanted to take another look at you.'",
-   "Put the peeled eyebrow on the printed menu as a lost property line, in place of 'Prices subject to change.'",
-   "Swap 'Truffle salted popcorn' for 'Guitar string ring pretzels', a nod to the ring Jack makes for Ally.",
-   "Swap 'Carried over' and 'Brought forward' for 'Twelve notes' and 'Same story', from Bobby's speech."
-  ],
-  "flat": false,
-  "done": false
- }
 }

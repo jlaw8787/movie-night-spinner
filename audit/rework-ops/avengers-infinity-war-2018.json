@@ -1,0 +1,39 @@
+{
+ "id": "Avengers: Infinity War (2018)",
+ "ops": [
+  {
+   "old": "Serve the mains when the Guardians find Thor floating in space.",
+   "new": "Serve the mains when Thor lands in Wakanda with Stormbreaker and Groot."
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Mr. Stark, I don't feel so good.",
+    "by": "Peter Parker",
+    "kind": "quote"
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Six Infinity Stones",
+    "We're in the endgame now",
+    "Stormbreaker with a Groot handle",
+    "Doctor Strange and the Time Stone",
+    "Titan and its broken moon"
+   ]
+  },
+  {
+   "old": "Pumpkin, chickpea and tomato stew with spinach, served with warm flatbread",
+   "new": "Pumpkin and chickpea stew with flatbread, for the sunrise on Thanos's farm"
+  },
+  {
+   "old": "Wakanda, where the heroes make their stand",
+   "new": "Hold the line in Wakanda. Yibambe!"
+  },
+  {
+   "old": "Bruce crashing through the roof of the Sanctum",
+   "new": "Bruce falls through the Sanctum roof: Thanos is coming"
+  }
+ ]
+}

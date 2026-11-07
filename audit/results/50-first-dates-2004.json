@@ -1,55 +1,64 @@
 {
- "id": "50 First Dates (2004)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "printed": true,
-   "done": true,
-   "text": "Opey the walrus at the aquarium",
-   "where": "wink",
-   "verdict": "wrong",
-   "why": "The walrus is Jocko, and Henry works at Sea Life Park Hawaii, not an aquarium. The menu's own dish note already says Jocko.",
-   "source": "https://en.wikipedia.org/wiki/50_First_Dates",
-   "fix": "Jocko the walrus at Sea Life Park",
-   "applied": "2026-11-07"
-  },
-  {
-   "printed": false,
-   "done": true,
-   "text": "The painting of the day before",
-   "where": "wink",
-   "verdict": "wrong",
-   "why": "Lucy paints, and the plot ends with her showing Henry dozens of portraits she has painted of him. Nothing about a painting of the day before.",
-   "source": "https://en.wikipedia.org/wiki/50_First_Dates",
-   "fix": "Lucy's portraits of Henry",
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "50 First Dates (2004)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "printed": true,
+      "done": true,
+      "text": "Opey the walrus at the aquarium",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "The walrus is Jocko, and Henry works at Sea Life Park Hawaii, not an aquarium. The menu's own dish note already says Jocko.",
+      "source": "https://en.wikipedia.org/wiki/50_First_Dates",
+      "fix": "Jocko the walrus at Sea Life Park",
+      "applied": "2026-11-07"
+    },
+    {
+      "printed": false,
+      "done": true,
+      "text": "The painting of the day before",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "Lucy paints, and the plot ends with her showing Henry dozens of portraits she has painted of him. Nothing about a painting of the day before.",
+      "source": "https://en.wikipedia.org/wiki/50_First_Dates",
+      "fix": "Lucy's portraits of Henry",
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "verdict": "The waffle house cue and the morning tape are the right hits and the Hawaii food fits, but the tiki 'evening' theme is off for a breakfast film.",
+    "missing": [
+      "Ten Second Tom ('Hi, I'm Tom', the café)",
+      "Henry's pet penguin Willy (Sea Life Park)",
+      "'Wouldn't It Be Nice' on the Beach Boys CD (Marlin's gift)",
+      "Marlin and Doug re-enacting Marlin's birthday every day",
+      "Henry and Lucy on the boat at the end watching the glaciers",
+      "The 'Good Morning Lucy' tape"
+    ],
+    "ideas": [
+      "Swap 'Huli huli pineapple soy chicken' note for Marlin's birthday pineapple and the cow crash",
+      "Replace 'Lomi lomi salmon' note with Ten Second Tom's 'Hi, I'm Tom' gag",
+      "Swap 'Islands of the evening' for 'Islands of the morning' to match the breakfast cue",
+      "Replace 'Hawaiian poke cups' with a Willy the penguin fish bowl"
+    ],
+    "overall": 3.8,
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Waffle house at the cafe",
+      "Good morning Lucy tape",
+      "Ten Second Tom",
+      "Lucy forgetting each morning",
+      "Jocko the walrus at Sea Life Park"
+    ],
+    "changed": []
   }
- ],
- "checked_ok": 13,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "verdict": "The waffle house cue and the morning tape are the right hits and the Hawaii food fits, but the tiki 'evening' theme is off for a breakfast film.",
-  "missing": [
-   "Ten Second Tom ('Hi, I'm Tom', the café)",
-   "Henry's pet penguin Willy (Sea Life Park)",
-   "'Wouldn't It Be Nice' on the Beach Boys CD (Marlin's gift)",
-   "Marlin and Doug re-enacting Marlin's birthday every day",
-   "Henry and Lucy on the boat at the end watching the glaciers",
-   "The 'Good Morning Lucy' tape"
-  ],
-  "ideas": [
-   "Swap 'Huli huli pineapple soy chicken' note for Marlin's birthday pineapple and the cow crash",
-   "Replace 'Lomi lomi salmon' note with Ten Second Tom's 'Hi, I'm Tom' gag",
-   "Swap 'Islands of the evening' for 'Islands of the morning' to match the breakfast cue",
-   "Replace 'Hawaiian poke cups' with a Willy the penguin fish bowl"
-  ],
-  "overall": 3.8,
-  "flat": false,
-  "done": false
- }
 }
