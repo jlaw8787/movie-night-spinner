@@ -368,3 +368,11 @@ Next, in order:
 1. Iconic check and rework (decision 2 plus the iconic rule): docs/rework-agent-prompt.md. Batches: 410 flat films in lists of 8 (full rework), 490 others in lists of 15 (iconic check only). Make the lists with the snippet in this section's commit or regenerate: flat = vibe.flat true. Agents write audit/rework-ops/<slug>.json; apply with card-ops apply audit/rework-ops/*.json, then edition-sync, build-data, tests.
 2. Re-extract cards and shots for changed films (audit-extract FORCE=1) and re-score vibe (a light agent pass reading the new shots).
 3. Review 21, then check-print-text on all 900 in one go, all tests, deploy from the trimmed copy (see top of this file).
+
+## 8 Nov, morning: rework running (start here in the next chat)
+
+- Batch lists in audit/rework-lists (F01 to F52 flat, 8 each; I01 to I33 iconic only, 15 each). A film is done when its result file's vibe block has `rework`. Find what's left: films without `vibe.rework`, then run their batches with docs/rework-agent-prompt.md (Sonnet, 8 agents at a time worked fine; agents must never pkill).
+- Layout clashes and checks the agents raised: audit/rework-clashes.md. Fix in one code round after the rework (stadium baseball words on non-sport films, tiki on non-island films, galley on Captain Marvel, tavern on Doctor Strange, etc.). Alice in Wonderland's "unbirthday" house line is a song lyric: change it.
+- Josh, 8 Nov: Grandma's Boy keeps "My grandma drank all my pot." Questions to Josh as pop-ups, one at a time.
+- GitHub pushes work again from Claude sessions (8 Nov).
+- Dry run of all ops so far: 0 missed.
