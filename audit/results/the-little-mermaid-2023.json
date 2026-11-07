@@ -1,0 +1,57 @@
+{
+ "id": "The Little Mermaid (2023)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains when Ariel sits down to dinner at the castle and finds the fork.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Wikipedia has Ariel at Eric's castle and exploring his collection, and a cameo of the dinglehopper at the market. A dinner scene where she finds the fork was not confirmed.",
+   "source": "https://en.wikipedia.org/wiki/The_Little_Mermaid_(2023_film)",
+   "fix": "Serve the mains when Ariel arrives at the castle and meets Eric.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Ariel, this human thing goes in the mouth, not the hair. Probably. Pass me a bread roll.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "Scuttle is the one who gives Ariel wrong information about human things. He never corrects himself about the dinglehopper in the Wikiquote lines, so the note goes against his character.",
+   "source": "https://en.wikiquote.org/wiki/The_Little_Mermaid_(2023_film)",
+   "fix": "Ariel, a dinglehopper is for the hair. Trust me. Pass me a bread roll.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Ariel, a dinglehopper is for the hair. Trust me. Pass me a bread roll.",
+    "by": "Scuttle",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Sweet scuttlebutt tone and a pretty island map, but a tiki bar is a loose fit for the underwater kingdom and the key scenes are missing.",
+  "missing": [
+   "Ursula taking Ariel's voice into the nautilus shell (sea witch's lair)",
+   "Ursula as Vanessa (castle)",
+   "Flotsam and Jetsam the eels",
+   "King Triton's trident (grotto)",
+   "The engagement party (Eric)"
+  ],
+  "ideas": [
+   "Swap 'Ariel's grotto jelly' note for 'Voice in a shell' set in a nautilus mould.",
+   "Replace 'Lagoon garlic lime prawns' with 'Flotsam and Jetsam eel' crispy noodles.",
+   "Swap 'Plantain chips' for 'Treasure chips' with a plastic fork on the side.",
+   "Replace the tiki gong with 'Ring the conch'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

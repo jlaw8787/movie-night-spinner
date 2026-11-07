@@ -1,0 +1,58 @@
+{
+ "id": "Super Troopers (2001)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Pull over and have some coffee. The Spurbury cops are not invited.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Set out as the character's own words, but the film does not have them say it. The real coffee moment is Farva carrying the cups round the station: 'Coffee served! No, no, that one's for Rabbit!'.",
+   "source": "https://en.wikiquote.org/wiki/Super_Troopers",
+   "fix": "Coffee served! No, no, that one's for Rabbit!",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Coffee served! No, no, that one's for Rabbit!",
+    "by": "Farva",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Chief O'Hagan, shouting from the doorway",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "John O'Hagan is the troopers' captain. The chief in the film is Bruce Grady of the Spurbury police.",
+   "source": "https://en.wikipedia.org/wiki/Super_Troopers",
+   "fix": "Captain O'Hagan, shouting from the doorway",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "Funny and well pitched: Meow, the syrup and Shenanigans all show up, only the cola scene is missing.",
+  "missing": [
+   "Farva's 'I don't want a large Farva. I want a goddamn liter o' cola!' (burger drive-through)",
+   "The mustache bet",
+   "The Cat Game at a traffic stop (Mac and Foster)",
+   "Mac's 'evil shenanigans' voice",
+   "The maple syrup chugging contest with the Quebec troopers",
+   "The Dimpus Burger worker: 'Don't spit in that cop's burger.'"
+  ],
+  "ideas": [
+   "Swap 'Homemade spiced cola' for 'Liter o' cola (not a large Farva)' with the drive-through line.",
+   "Swap 'Vermont maple lemonade' note for 'Don't spit in this one.'",
+   "Swap 'Buffalo chicken tenders' note for 'Cat Game special: say it with every bite'.",
+   "Add 'Mustache bet' to the pie case as a moustache cookie."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

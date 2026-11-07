@@ -1,0 +1,78 @@
+{
+ "id": "The 40-Year-Old Virgin (2005)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I ride a bike, I collect action figures, and tonight I'm making Trish an egg salad sandwich. Poker night can wait.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Set out as the character's own words, but the film does not have them say it. Andy's real bike line is 'I hope you have a big trunk, 'cause I'm putting my bike in it.'.",
+   "source": "https://en.wikiquote.org/wiki/The_40-Year-Old_Virgin",
+   "fix": "I hope you have a big trunk, 'cause I'm putting my bike in it.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "I hope you have a big trunk, 'cause I'm putting my bike in it.",
+    "by": "Andy Stitzer",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the snacks when Andy makes his famous egg salad sandwich.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "No source opened (Wikipedia plot, Wikiquote, Surf Wiki) mentions an egg salad sandwich. The poker game where his secret comes out is confirmed.",
+   "source": "https://en.wikipedia.org/wiki/The_40-Year-Old_Virgin",
+   "fix": "Serve the snacks when the poker game starts and Andy's secret comes out.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Andy's perfect egg salad sandwich",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "No source opened mentions Andy making egg salad.",
+   "source": "https://en.wikipedia.org/wiki/The_40-Year-Old_Virgin",
+   "fix": "Andy's poker night sandwiches",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Andy's drink for Survivor night with the neighbours.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "No source opened mentions a Survivor night or neighbours.",
+   "source": "https://en.wikipedia.org/wiki/The_40-Year-Old_Virgin",
+   "fix": "Andy's drink for poker night with the guys.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3,
+  "verdict": "A flat break room that leans on a made-up egg salad moment and misses the film's famous scenes.",
+  "missing": [
+   "The chest waxing scene (Jay's idea, a painful result)",
+   "Speed dating event (David invites Andy)",
+   "Andy's bike crash into the billboard truck",
+   "The 'Aquarius' sing-along ending",
+   "Trish's 'We Sell Your Stuff on eBay' store",
+   "Mooj's long speech about love, passion and spirit"
+  ],
+  "ideas": [
+   "Swap 'Andy's perfect egg salad sandwich' for 'Poker night sliders' to match the real scene.",
+   "Swap 'Speed dating salted chocolate truffles' note for 'Twenty dates, no truffles'.",
+   "Swap the badge to 'We Sell Your Stuff on eBay' for Trish's shop.",
+   "Swap 'Mooj's lamb rogan josh' note for 'Life is about passion and spirit'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

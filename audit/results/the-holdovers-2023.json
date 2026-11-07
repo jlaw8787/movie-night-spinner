@@ -1,0 +1,62 @@
+{
+ "id": "The Holdovers (2023)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Mary's Christmas Eve pot roast",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "A food stylist interview says Mary's Christmas dinner is a glazed spiral ham with gravy, cornbread stuffing, creamed spinach and glazed carrots, then apple pie. Pot roast was not mentioned.",
+   "source": "https://www.edibleboston.com/blog/2023/12/15/the-holdoversat-st-marks-school",
+   "fix": "Mary's Christmas glazed spiral ham",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Mr Hunham's hot honey lemon tea",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "The article opened says Hunham drinks bourbon. Tea was not mentioned as his drink.",
+   "source": "https://www.edibleboston.com/blog/2023/12/15/the-holdoversat-st-marks-school",
+   "fix": "Mary's hot honey lemon tea",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Lydia's party plate, Hunham's rare night out.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The party food at Lydia's Christmas Eve party was not described in the pages opened, so devilled eggs could not be confirmed.",
+   "source": "https://www.edibleboston.com/blog/2023/12/15/the-holdoversat-st-marks-school",
+   "fix": "Lydia's party plate, the night Mary had too much.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4.2,
+  "verdict": "The best fit in this batch: a school canteen in 1970 with the cherries jubilee cue, Mary's note and a lunch ticket.",
+  "missing": [
+   "Mary's glazed spiral ham Christmas dinner (dining hall)",
+   "Miss Crane's festive sugar cookies (Hunham's gift)",
+   "The stolen cognac at the end (Woodrup's office)",
+   "Little Big Man at the Orpheum (Boston)",
+   "The ice skating (Boston)",
+   "The bourbon at Christmas dinner"
+  ],
+  "ideas": [
+   "Swap 'Mary's Christmas Eve pot roast' for 'Mary's glazed spiral ham' with cornbread stuffing.",
+   "Replace 'Mr Hunham's hot honey lemon tea' with 'Mr Hunham's bourbon' in a mug (cooked as a hot toddy already).",
+   "Swap 'Devilled eggs' for Miss Crane's mitten sugar cookies.",
+   "Add 'Rémy Martin, one sip, spit' as the footer."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

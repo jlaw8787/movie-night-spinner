@@ -1,0 +1,78 @@
+{
+ "id": "The Grinch (2018)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I'm asking Santa to help Mum. Tonight I'm setting the table so she can sit down for once.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Cindy Lou never sets the table in the film. She sets a trap to catch Santa, and when she meets the Grinch she asks him to help her mum, who works too hard.",
+   "source": "https://en.wikiquote.org/wiki/The_Grinch_(film)",
+   "fix": "She works so hard and is always doing stuff for other people.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "She works so hard and is always doing stuff for other people.",
+    "by": "Cindy Lou Who",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Donna, working nights and raising three, the reason Cindy Lou writes to Santa.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Wikipedia says Donna is overworked and raising Cindy Lou and the twins. It does not say she works nights.",
+   "source": "https://en.wikipedia.org/wiki/The_Grinch_(film)",
+   "fix": "Donna, overworked and raising three, the reason Cindy Lou wants to see Santa.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Bait for Cindy Lou's Santa trap.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Sources opened say Cindy Lou plans a trap to catch Santa but do not say what bait she uses.",
+   "source": "https://en.wikipedia.org/wiki/The_Grinch_(film)",
+   "fix": "Cindy Lou's Santa trap needs a snack.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Max has it brewed before the Grinch wakes.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Nothing opened mentions Max making coffee.",
+   "source": "https://en.wikipedia.org/wiki/The_Grinch_(film)",
+   "fix": "Max has it ready before the Grinch gets up.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.6,
+  "verdict": "Right town and right treats, but the cafe sits in a dark panel that fights the green poster and the main note invents a scene.",
+  "missing": [
+   "The Grinch's gadgets and the Santa suit (Mount Crumpit)",
+   "Fred the fat reindeer (Grinch's cave)",
+   "The Whos singing Welcome Christmas (Christmas morning)",
+   "The Grinch's toast at the Whos' table (end)",
+   "The Grinch's heart growing three sizes (end)",
+   "Max pulling the sleigh in Fred's place"
+  ],
+  "ideas": [
+   "Swap 'Grinch green spinach and herb dip' note for 'Heart two sizes too small' size-small dips.",
+   "Replace 'Gingerbread waffles' note with 'Cindy Lou's trap snack'.",
+   "Swap 'Whoville roast beast' note for the Grinch carving it at the table.",
+   "Change the dark panel to a bright red and green cafe board so the poster fits."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

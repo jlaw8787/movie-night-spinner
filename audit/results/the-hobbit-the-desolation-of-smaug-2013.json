@@ -1,0 +1,48 @@
+{
+ "id": "The Hobbit: The Desolation of Smaug (2013)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I've smuggled dwarves in barrels before. Tonight there's fish for supper and not much else.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Bard smuggles the dwarves into Lake-town in fish barrels for the first time. He has not done it before, so 'before' is wrong.",
+   "source": "https://en.wikipedia.org/wiki/The_Hobbit:_The_Desolation_of_Smaug",
+   "fix": "Dwarves in the barrels and fish on top. Say nothing at the gate. Supper is fish.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Dwarves in the barrels and fish on top. Say nothing at the gate. Supper is fish.",
+    "by": "Bard",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Barrels, Mirkwood and Beorn are the right picks and the market feels right, but the big finish at Smaug is thin.",
+  "missing": [
+   "Smaug in the gold (Erebor)",
+   "The barrel ride down the river (Mirkwood escape)",
+   "Giant spiders in Mirkwood",
+   "Tauriel and Legolas against the orcs",
+   "The dwarves melting the golden statue",
+   "Beorn's house and honey"
+  ],
+  "ideas": [
+   "Swap 'Erebor gold roast' for 'Gold statue roast' glazed in honey.",
+   "Replace 'Mirkwood mushroom toasts' note with 'Stay on the path'.",
+   "Swap 'Beorn's honey milk punch' for Beorn's honey cake.",
+   "Add 'Barrel rider' as the Smaug greeting on the card in place of 'Hold on, Mr. Baggins'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

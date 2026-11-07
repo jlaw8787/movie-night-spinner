@@ -1,0 +1,62 @@
+{
+ "id": "The Heat (2013)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains at the Mullins family dinner.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Wikipedia confirms Ashburn and Mullins visit the Mullins family home. A family dinner scene was not confirmed in the pages opened.",
+   "source": "https://en.wikipedia.org/wiki/The_Heat_(film)",
+   "fix": "Serve the mains when Ashburn visits the Mullins family home.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve the mains at the Mullins family dinner.",
+   "where": "cue-printed",
+   "verdict": "unsure",
+   "why": "Same cue as above, printed on the card.",
+   "source": "https://en.wikipedia.org/wiki/The_Heat_(film)",
+   "fix": "Serve the mains when Ashburn visits the Mullins family home.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Watermelon toss buffalo wings",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "No watermelon scene was found in the Wikipedia plot or TV Tropes page.",
+   "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/TheHeat",
+   "fix": "Mullins family buffalo wings",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 4,
+  "look": 3,
+  "overall": 3.6,
+  "verdict": "Fridge full of weapons and the Boston food suit it, but the dark stills are murky and the best jokes are missing.",
+  "missing": [
+   "Ashburn's tracheotomy at Denny's (restaurant)",
+   "Mullins' weapons in the fridge (apartment)",
+   "Mullins' leftover sandwich in the fridge",
+   "'Foster kid, now you have a sister' yearbook (end)",
+   "The drunk bar night and the car given away (bar)",
+   "The nightclub, Club Ekko (stakeout)"
+  ],
+  "ideas": [
+   "Swap 'Pint of Boston lager' note for 'Ashburn gave her car away after one of these'.",
+   "Replace the fortune lucky numbers with 'Foster kid, now you have a sister'.",
+   "Add a leftover fridge sandwich in place of 'Fried Ipswich clams' note.",
+   "Swap the kitchen note for 'Don't touch the fridge, the RPG is in there'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

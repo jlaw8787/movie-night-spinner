@@ -1,0 +1,52 @@
+{
+ "id": "The Avengers (2012)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": false,
+   "text": "Serve the shawarma during the end credits, when the team eats in silence.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "The team eating shawarma in silence is the post-credits scene, after the whole credits. The mid-credits scene is the Other talking to Thanos.",
+   "source": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)",
+   "fix": "Serve the shawarma after the credits, when the team eats in silence."
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Drinks at the top of the tower, before Loki arrives.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The plot summary has no drinks scene. It only has Loki opening the portal above Stark Tower. Could not confirm a drinks scene before Loki arrives.",
+   "source": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)",
+   "fix": "Stark Tower, where Loki opens the portal over Manhattan."
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Good takeaway look and the shawarma payoff, but only a few of the film's big moments make it onto the sheet.",
+  "missing": [
+   "Hulk smashing Loki about (the 'puny god' moment)",
+   "Loki's Stuttgart 'kneel' standoff",
+   "The Helicarrier engine repair",
+   "Coulson's Captain America trading cards",
+   "Tony catching the nuke and falling back to Earth",
+   "Hawkeye on his perch over the city"
+  ],
+  "ideas": [
+   "Swap 'Asgardian honey roasted nuts' for a 'Puny god' dessert shot that is smashed on the plate.",
+   "Swap the Stark Tower tuna bite note for 'Tony's bar, where Loki gets offered a drink'. Check the scene first.",
+   "Add a Coulson trading card cookie in a bag as the Movie Night For Two extra.",
+   "Keep the shawarma as the closing line, but make the tip say 'after the credits'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

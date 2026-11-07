@@ -1,0 +1,52 @@
+{
+ "id": "The Birds (1963)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": false,
+   "text": "Phone lines down since ten. Kitchen open till the lights go. Last seen out on the road: Annie Hayworth, the teacher.",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "Annie is last seen at the schoolhouse with the children. Melanie and Mitch later find her body outside her own house, where the crows killed her protecting Cathy.",
+   "source": "https://en.wikipedia.org/wiki/The_Birds_(film)",
+   "fix": "Phone lines down since ten. Kitchen open till the lights go. Last seen at the schoolhouse: Annie Hayworth, the teacher."
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "End of the world, says the drunk at the bar.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The plot summary has the heated diner debate but does not mention a drunk or this line. No quote page could be opened for this call.",
+   "source": "",
+   "fix": "End of the world, says the man at the bar."
+  }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "One of the best looks in the batch, with the rain and neon and the right set pieces, though the food has little to do with the film.",
+  "missing": [
+   "Gull attack on Melanie at the dock",
+   "Dead gull on Annie's doorstep",
+   "Sparrows coming down the chimney at the Brenner house",
+   "The attic attack and Melanie's wounds",
+   "Cathy's lovebirds riding out in the car at the end",
+   "The gas station fire"
+  ],
+  "ideas": [
+   "Swap the 'Cathy's birthday chicken salad sandwiches' note for the gulls hitting the party games.",
+   "Swap 'Meringue nests with lemon curd' candy eggs for a nod to the sparrows through the chimney.",
+   "Rename 'Lovebird goat cheese filo cups' note to 'The only birds that behave'.",
+   "Add a phone booth stamp or coaster to the cover."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

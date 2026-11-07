@@ -1,0 +1,48 @@
+{
+ "id": "Strange Brew (1983)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Back bacon on the barbie and a two four in the fridge. Bob's already had three of the snacks.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Set out as the character's own words, but the film does not have them say it. 'On the barbie' is Australian, not Bob and Doug. Doug's real line at the brewery counter is 'That means you owe us a free case.'.",
+   "source": "https://en.wikiquote.org/wiki/Strange_Brew",
+   "fix": "That means you owe us a free case.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "That means you owe us a free case.",
+    "by": "Doug McKenzie",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Great poster and a proper brewery bar, but it misses the dead mouse, the flying dog and the beer tank.",
+  "missing": [
+   "The dead mouse in the beer bottle (Doug's blackmail for a free case)",
+   "Hosehead flying over the city for beer and sausages",
+   "Bob drinking the beer tank to escape",
+   "Brewmeister Smith's mind control beer and light-up world map",
+   "Rosie LaRose, the hockey great gone wrong",
+   "The Oktoberfest finale with the tainted beer"
+  ],
+  "ideas": [
+   "Swap 'Bacon wrapped smokies' for 'Hosehead's sausages' ('all the free beer and sausages you want').",
+   "Swap 'Caesar with clamato' note for 'Mouse not included'.",
+   "Swap 'Doughnut shop honey glazed crullers' for 'Moth jar popcorn' (the cinema escape).",
+   "Add a 'Beer tank challenge' drink: 'Bob drank it all.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

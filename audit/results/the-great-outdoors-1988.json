@@ -1,0 +1,98 @@
+{
+ "id": "The Great Outdoors (1988)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the main when Roman takes on the Old 96er.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "Roman challenges Chet to eat the 96 ounce steak. Chet takes it on, not Roman.",
+   "source": "https://en.wikipedia.org/wiki/The_Great_Outdoors_(film)",
+   "fix": "Serve the main when Chet takes on the Old 96er.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve the main when Roman takes on the Old 96er.",
+   "where": "cue-printed",
+   "verdict": "wrong",
+   "why": "Same cue as above, printed on the card.",
+   "source": "https://en.wikipedia.org/wiki/The_Great_Outdoors_(film)",
+   "fix": "Serve the main when Chet takes on the Old 96er.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Pechoki Lake Cabin",
+   "where": "venue",
+   "verdict": "wrong",
+   "why": "Wikipedia and TV Tropes spell the town Pechoggin. 'Pechoki' is a misspelling. The lake name was not given in the pages opened.",
+   "source": "https://en.wikipedia.org/wiki/The_Great_Outdoors_(film)",
+   "fix": "Pechoggin Cabin",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Best holiday ever, and we haven't even unpacked. Tonight it's a big steak dinner at the lodge.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "On the first night Roman turns up uninvited and cooks lobster. The steak challenge happens the next day. Chet says nothing like this in the sources opened.",
+   "source": "https://en.wikipedia.org/wiki/The_Great_Outdoors_(film)",
+   "fix": "Quiet week at the lake, I said. Then Roman showed up with lobsters.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Quiet week at the lake, I said. Then Roman showed up with lobsters.",
+    "by": "Chet Ripley",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "The bat in the chimney",
+   "where": "caption",
+   "verdict": "unsure",
+   "why": "Wikipedia and a review say a bat gets into the cabin. Neither says it comes down the chimney.",
+   "source": "https://www.threemoviebuffs.com/review/great-outdoors.html",
+   "fix": "The bat in the cabin",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Ordered before the bat flew down the chimney.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Same as above. A bat gets into the cabin, but the chimney is not confirmed.",
+   "source": "https://www.threemoviebuffs.com/review/great-outdoors.html",
+   "fix": "Ordered before the bat got into the cabin.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Good picks (the Old 96er, the bald-headed bear, the water skiing) but the cue, the lake name and the bunk wall note all get the film wrong.",
+  "missing": [
+   "Raccoons in the bins (cabin porch, and the end credits joke)",
+   "Roman cooking lobster instead of hot dogs (arrival night)",
+   "Chet's bear story and the shaved head (campfire)",
+   "Cammie and Buck's date (Chet's son)",
+   "Chet and Roman dancing to Land of a Thousand Dances (end credits)",
+   "Roman's fear of the mine shaft (storm)"
+  ],
+  "ideas": [
+   "Swap 'Roman's big shot barbecue chicken' for 'Roman's big shot lobster' to match the arrival night.",
+   "Replace 'Lakeside crumbed fish bites' with a trash can raccoon snack basket.",
+   "Swap the bunk wall note for the lobster note above.",
+   "Add 'Land of a Thousand Dances' on the footer in place of the 'Form CM 96' line."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "id": "Superman (2025)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Kent, Lane, eat at your desks. The presses roll in twenty minutes.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Set out as the character's own words, but the film does not have them say it. Perry's real lines in the Wikiquote page are about Superman and Lois 'hooking up'. Nothing about desks or the presses.",
+   "source": "https://en.wikiquote.org/wiki/Superman_(2025_film)",
+   "fix": "Kent, Lane, eat at your desks. I want the Boravia story before the presses roll.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Kent, Lane, eat at your desks. I want the Boravia story before the presses roll.",
+    "by": "Perry White",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Krypto ate the last batch. Not even Clark's dog.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Krypto is Superman's dog, which makes him Clark's dog, so 'not even Clark's dog' reads backwards.",
+   "source": "https://en.wikipedia.org/wiki/Superman_(2025_film)",
+   "fix": "Krypto ate the last batch. Good boy, bad manners.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Krypto is used well, but the rest of the menu avoids the film's weirder best bits.",
+  "missing": [
+   "Krypto fetching the toy ('Krypto! Get the toy.')",
+   "Lois's interview with Superman about Boravia",
+   "The pocket universe where Lex holds his enemies",
+   "Metamorpho and his infant son Joey",
+   "Guy Gardner: 'Make a move, Big Blue.'",
+   "Kara Zor-El arriving drunk to pick up Krypto"
+  ],
+  "ideas": [
+   "Swap 'Oat milk cold brew' for 'Interview on the record' coffee (Lois, 'This is on the record, Superman').",
+   "Swap 'Fortress crystal prawn rice paper rolls' for 'Pocket universe dumplings'.",
+   "Swap 'Buffalo chicken dip' note for 'Krypto, get the toy' fetch joke.",
+   "Add 'Metamorpho jelly' that changes colour."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

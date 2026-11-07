@@ -1,0 +1,58 @@
+{
+ "id": "Stranger than Fiction (2006)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "A voice narrates my life, even at dinner. Ana gave me cookies, so I've stopped counting and I'm just eating them.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Set out as the character's own words, but the film does not have them say it. Harold's real line after the cookies is 'The cookies were good. Thank you for forcing me to eat them.'.",
+   "source": "https://en.wikiquote.org/wiki/Stranger_Than_Fiction_(2006_film)",
+   "fix": "The cookies were good. Thank you for forcing me to eat them.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "The cookies were good. Thank you for forcing me to eat them.",
+    "by": "Harold Crick",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Hilbert, the literature professor who sits the lifeguard chair at the campus pool.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The sources opened confirm Jules Hilbert is a literature professor Harold consults. None of them mention a lifeguard chair or a pool.",
+   "source": "https://en.wikipedia.org/wiki/Stranger_than_Fiction_(2006_film)",
+   "fix": "Hilbert, the literature professor who has opinions about Harold's story.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4.2,
+  "verdict": "One of the best-fitting menus: the bakery, the audit, the flours and the wristwatch all land.",
+  "missing": [
+   "Karen Eiffel's line about 'Bavarian sugar cookies'",
+   "Harold's guitar lessons (he learns to play)",
+   "'Harold just counted brush strokes' (Harold)",
+   "The wrecking ball taking out his apartment",
+   "Karen's final line over the ruined wristwatch",
+   "The bus stop where the watch time runs three minutes fast"
+  ],
+  "ideas": [
+   "Swap 'Ham and cheddar toasties' for 'Bavarian sugar cookies' so the narrator's line gets a dish.",
+   "Swap 'Ana's bakery cheddar and chive scones' note for 'I brought you flours. Not flowers.'",
+   "Add a 'Little did he know' stamp to the tax audit card.",
+   "Swap 'Spiced chai latte' for a 'Wednesday tea' with 'Harold just thought it was a Wednesday'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

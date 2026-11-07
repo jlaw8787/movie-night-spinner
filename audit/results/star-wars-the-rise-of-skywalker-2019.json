@@ -1,0 +1,58 @@
+{
+ "id": "Star Wars: The Rise of Skywalker (2019)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Keep up, team. Snacks are in the X-wing and the night's just starting.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Set out as the character's own words, but the film does not have them say it. The group flies to Pasaana in the Millennium Falcon, not an X-wing, so the snacks would be on the Falcon.",
+   "source": "https://en.wikipedia.org/wiki/Star_Wars:_The_Rise_of_Skywalker",
+   "fix": "Keep up, team. The snacks are on the Falcon and the night's just starting.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Keep up, team. The snacks are on the Falcon and the night's just starting.",
+    "by": "Poe Dameron",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the snacks during the festival on Pasaana.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Wikipedia confirms the group goes to Pasaana to find a clue and meets Lando there. The plot summary does not mention a festival, so the festival and its name are unconfirmed in the sources opened.",
+   "source": "https://en.wikipedia.org/wiki/Star_Wars:_The_Rise_of_Skywalker",
+   "fix": "Serve the snacks when the group lands on Pasaana.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "The invite format is generic for a film this big, but the dishes name real places like Kijimi, Kef Bir and the Lars homestead.",
+  "missing": [
+   "Babu Frik rebuilding C-3PO's memory on Kijimi",
+   "Palpatine's fleet of Star Destroyers rising from Exegol",
+   "Ben Solo discarding his lightsaber after the vision of Han",
+   "Lando bringing the galaxy's ships to Exegol",
+   "Rey burying the two lightsabers and taking the name Skywalker",
+   "Chewie's medal at the end"
+  ],
+  "ideas": [
+   "Swap 'Pomegranate and mint sharbat' note for 'Lando's last drink before he brings the whole galaxy'.",
+   "Rename 'Twin suns pavlova' to 'Rey Skywalker pavlova' with the Tatooine closing line.",
+   "Swap 'Seated near: Exegol and the Sith fleet' for 'Seated near: Babu Frik' to keep it funny not grim.",
+   "Swap 'Exegol black pepper rib eye' note for 'Palpatine's fleet, served rare'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

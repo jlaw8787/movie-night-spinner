@@ -1,0 +1,48 @@
+{
+ "id": "The Addams Family (1991)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Gomez, darling, dinner is ready. Fester is home, and he looks very well for a man who was lost.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Set out as the character's own words, but the film does not have them say it. Morticia's real line is 'Don't torture yourself, Gomez. That's my job.'.",
+   "source": "https://en.wikiquote.org/wiki/The_Addams_Family_(film)",
+   "fix": "Don't torture yourself, Gomez. That's my job.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Don't torture yourself, Gomez. That's my job.",
+    "by": "Morticia Addams",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 5,
+  "overall": 4.4,
+  "verdict": "Gorgeous dark banquet look with Thing, the Mamushka and the lemonade, only a few big beats are left out.",
+  "missing": [
+   "Thing using Morse code to warn Gomez about Morticia",
+   "The booby trapped vault",
+   "Wednesday and Pugsley's sword play at the school play",
+   "Gomez hitting golf balls into Judge Womack's house",
+   "Fester's lightning strike that brings his memory back",
+   "Dr Pinder-Schloss and the Bermuda Triangle story"
+  ],
+  "ideas": [
+   "Swap 'Grandmama's cauldron beef stew' note for 'Dinner's gonna be late' (Grandma).",
+   "Swap 'Thing's finger crackers' note for 'Morse code on the table'.",
+   "Swap 'Black forest cake' for 'Vault booby trap torte' with the vault joke.",
+   "Add a 'Bermuda Triangle tuna' starter (found in the tuna nets)."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

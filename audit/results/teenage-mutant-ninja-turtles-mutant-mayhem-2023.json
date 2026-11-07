@@ -1,0 +1,68 @@
+{
+ "id": "Teenage Mutant Ninja Turtles: Mutant Mayhem (2023)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Pizza is the best, dudes. Share it with your brothers, or at least save me the crust.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Set out as the character's own words, but the film does not have them say it. Michelangelo's real pizza line is 'Can we explain this over some pizza?'.",
+   "source": "https://en.wikiquote.org/wiki/Teenage_Mutant_Ninja_Turtles:_Mutant_Mayhem",
+   "fix": "Can we explain this over some pizza?",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Can we explain this over some pizza?",
+    "by": "Michelangelo",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Grabbed on the grocery run, Splinter none the wiser.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Splinter catches the turtles sneaking back in late and asks where they were. They tell him they were shopping, then admit some wanted to see a movie.",
+   "source": "https://en.wikiquote.org/wiki/Teenage_Mutant_Ninja_Turtles:_Mutant_Mayhem",
+   "fix": "Grabbed on the Go-Gurt run. Splinter caught them sneaking back.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve the mains when the turtles head up to the rooftops with pizza.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The turtles are on a rooftop (the watermelon scene), and Mikey does ask about pizza, but no source opened has them heading up with pizza.",
+   "source": "https://en.wikiquote.org/wiki/Teenage_Mutant_Ninja_Turtles:_Mutant_Mayhem",
+   "fix": "Serve the mains when Mikey suggests explaining everything over some pizza.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Good sewer and pizza energy, but the best jokes (Go-Gurt, the watermelon head, the movie) are missing.",
+  "missing": [
+   "The Go-Gurt mission (Master Splinter's supply run)",
+   "The watermelon head on the rooftop (Mikey and Raph)",
+   "The turtles sneaking into the open air movie",
+   "Superfly turning into a whale-like kaiju",
+   "April commandeering the news broadcast",
+   "Bebop and Rocksteady vibing to the boombox"
+  ],
+  "ideas": [
+   "Swap 'Turtle shell guacamole' for 'Go-Gurt mission yoghurt tubes'.",
+   "Swap 'Kiwi lime slushie' note for 'Mikey's watermelon head'.",
+   "Swap 'Chinatown pork and chive dumplings' note for 'Movie night, no humans needed'.",
+   "Rename 'Superfly's loaded supreme pizza' to 'Super Duper Fly supreme'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

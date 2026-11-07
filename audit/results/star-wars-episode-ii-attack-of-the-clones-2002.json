@@ -1,0 +1,58 @@
+{
+ "id": "Star Wars: Episode II - Attack of the Clones (2002)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Best food on Coruscant, I'll have you know, and it's all made fresh.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "No source opened records Dex saying this. Wikiquote has no Dex lines, and the Star Wars databank gives no direct Dex quote, only that he identifies the toxic dart as a Kamino saberdart and tells Obi-Wan where Kamino is.",
+   "source": "https://www.starwars.com/databank/dexter-jettster",
+   "fix": "Best food on Coruscant. I know a saberdart when I see one.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Best food on Coruscant. And I know a saberdart when I see one.",
+    "by": "Dex",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Naboo floating fruit",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "The Naboo meadow picnic with Anakin and Padmé is real, but none of the sources opened say what food is at it or that fruit floats.",
+   "source": "https://starwars.archivum.wiki/article/the_meadow_picnic",
+   "fix": "Naboo meadow picnic fruit",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 5,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Dex's Diner is the one great place in the film and it is used well, but the food skips the prequel's best-known beats.",
+  "missing": [
+   "Anakin's 'I don't like sand. It's coarse and rough and irritating and it gets everywhere.'",
+   "Dex's four arms and his diner staff (Coruscant diner)",
+   "Jango Fett's armour and Boba as a boy (Kamino)",
+   "The clone trooper army on Kamino",
+   "Yoda arriving with the clones at the Geonosis arena",
+   "Dooku's lightsaber duel with Obi-Wan and Anakin"
+  ],
+  "ideas": [
+   "Swap 'Spiced blue milk' for a 'Sand-free sundae' with Anakin's sand line in the note (blue milk is a Tatooine thing from other films, not this one).",
+   "Swap 'Onion rings with chipotle mayo' for 'Saberdart onion rings' so the dart joke sits on the dish.",
+   "Rename 'Clone trooper white chocolate mousse' to 'Ten thousand clone mousse cups'.",
+   "Add Jango Fett to the 'Geonosis arena wings' note: 'Boba's favourite.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

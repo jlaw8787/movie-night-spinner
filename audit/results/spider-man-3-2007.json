@@ -1,0 +1,68 @@
+{
+ "id": "Spider-Man 3 (2007)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Parker, that dessert better be worth the money. I am not paying for a blurry photo of a cake.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Set out as the character's own words, but the film does not have them say it. Jameson's real lines in the film include 'Doesn't anybody care about what I want?' (said when Eddie and Peter both want the staff job).",
+   "source": "https://en.wikiquote.org/wiki/Spider-Man_3",
+   "fix": "Parker, the dessert photo had better be sharp. I pay by the print, not by the pie.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Parker, the dessert photo had better be sharp. I pay by the print, not by the pie.",
+    "by": "J. Jonah Jameson",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Harry and MJ's omelette bites",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "None of the sources opened (Wikipedia plot, Wikiquote, TV Tropes, a Surf Wiki page) show Harry and Mary Jane eating or cooking eggs together. Harry does lose his memory and later blackmails MJ.",
+   "source": "https://en.wikipedia.org/wiki/Spider-Man_3",
+   "fix": "Harry's amnesia omelette bites",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve dessert when Peter takes MJ to the fancy French restaurant to propose.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The sources opened confirm Peter plans to propose, Aunt May gives him her ring, and Bruce Campbell plays a French maitre d' who helps him. None of them place dessert in the scene, so the exact timing is unconfirmed.",
+   "source": "https://en.wikipedia.org/wiki/Spider-Man_3",
+   "fix": "Serve dessert when Peter and MJ sit down at the fancy French restaurant and he tries to propose.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 5,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Right newsroom and the main plot beats are there, but it skips the black suit strut and Venom, and the food jokes are soft.",
+  "missing": [
+   "Bad Peter's street strut in the black suit (after the symbiote takes over)",
+   "Jameson's 'You're fired!' to Eddie Brock over the faked photo (Daily Bugle)",
+   "Eddie Brock praying in the church before the bell tower scene",
+   "Harry's pumpkin bomb and the New Goblin glider fight",
+   "Sandman reforming from sand and the locket for his daughter",
+   "Bruce Campbell's maitre d' stealing the proposal dinner"
+  ],
+  "ideas": [
+   "Swap 'Cream soda over ice' for a 'Venom black sludge shake' (chocolate, licorice, black sesame) tied to the church bell tower.",
+   "Rename 'Harry and MJ's omelette bites' to 'Pumpkin bomb arancini' and put Harry's glider fight in the note.",
+   "Swap 'Jazz club fig and goat's cheese bites' note for 'Bad Peter's strut, then the bouncers' so the famous strut gets a nod.",
+   "Add a maitre d' line to the crème brûlée note: 'The waiter steals the proposal.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

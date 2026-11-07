@@ -1,0 +1,68 @@
+{
+ "id": "Step Brothers (2008)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the wine when Brennan moves in and the two of them meet for the first time.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "The Catalina Wine Mixer is near the end, when Brennan runs the event and he and Dale perform. Their first meeting is when Nancy and Robert marry and the two have to live together, with no wine.",
+   "source": "https://en.wikipedia.org/wiki/Step_Brothers_(film)",
+   "fix": "Serve the wine when Brennan runs the Catalina Wine Mixer and the two of them take the stage.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Brennan wants the bigger plate tonight. I made the dip myself, so you have to say it's good.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Set out as the character's own words, but the film does not have them say it. Brennan's real line at the first dinner is 'It's my fancy sauce.' (the ketchup and mayo he won't share).",
+   "source": "https://en.wikiquote.org/wiki/Step_Brothers_(film)",
+   "fix": "It's my fancy sauce.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "It's my fancy sauce.",
+    "by": "Brennan Huff",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Bunk beds in the spare room",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Brennan and Dale share one bedroom (Dale's room with the drum set). Brennan's line is 'extra space in our room', so the bunk beds go in their shared room, not a spare one.",
+   "source": "https://en.wikiquote.org/wiki/Step_Brothers_(film)",
+   "fix": "Bunk beds in the shared bedroom",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 3,
+  "overall": 3.4,
+  "verdict": "Catalina Wine Mixer and Prestige Worldwide are the right nods, but it is a plain invite and the first dinner is misdescribed.",
+  "missing": [
+   "Fancy sauce (ketchup and mayo) and chicken nuggets at the first dinner",
+   "'Did we just become best friends?' night scene (Brennan and Dale)",
+   "The 'Boats N Hoes' video on Robert's boat",
+   "Brennan singing 'Por ti volaré' with Dale on drums at the Mixer",
+   "Dale punching Derek at the family visit",
+   "The boat turned into a tree house at the end"
+  ],
+  "ideas": [
+   "Swap 'Blended family glazed meatloaf' for 'Chicken nuggets with fancy sauce' (the real first dinner).",
+   "Swap 'Truffle and parmesan arancini' for 'Boats N Hoes sliders'.",
+   "Swap 'Ice cream sundae bar' for 'Tree house boat sundae' with the Christmas gift.",
+   "Swap the place card 'Seated near: Prestige Worldwide' for 'Seated near: the drum set'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

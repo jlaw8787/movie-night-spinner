@@ -1,0 +1,62 @@
+{
+ "id": "The Blind Side (2009)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": false,
+   "text": "Briarcrest Christian School",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "The film calls the school Wingate Christian School. Briarcrest is the real school the story is based on.",
+   "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/BlindSide",
+   "fix": "Wingate Christian School"
+  },
+  {
+   "printed": false,
+   "done": false,
+   "text": "Sean owns the Taco Bells. Tacos it is.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The plot summary only says Sean Sr. is a wealthy businessman. The Taco Bell claim was not found in any source opened.",
+   "source": "https://en.wikipedia.org/wiki/The_Blind_Side_(film)",
+   "fix": "Sean's the wealthy businessman. Tacos it is."
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Ferdinand the Bull pecan pie",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "No source opened mentions Ferdinand the Bull in the film, so the reference could not be confirmed.",
+   "source": "https://en.wikipedia.org/wiki/The_Blind_Side_(film)",
+   "fix": "Protective instincts pecan pie"
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Warm family layout and the Thanksgiving table moment is right, but the dishes are generic and a few references are shaky.",
+  "missing": [
+   "Leigh Anne taking the remote and moving dinner to the table (Thanksgiving)",
+   "98th percentile protective instincts test (used)",
+   "Michael's walk in the cold the night before Thanksgiving",
+   "Leigh Anne meeting Michael's NCAA investigator Granger",
+   "Michael telling Granger he chose Ole Miss because it's where his family goes to school",
+   "Miss Sue the tutor"
+  ],
+  "ideas": [
+   "Swap 'Thanksgiving baked mac and cheese' note for the takeaway-at-the-table Thanksgiving.",
+   "Swap 'Ferdinand the Bull pecan pie' for a name from a scene we can source, like 'Protective instincts pecan pie'.",
+   "Swap 'Memphis peach sweet tea' note for a Miss Sue or Ole Miss nod.",
+   "Add an Ole Miss colours napkin to the cover."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

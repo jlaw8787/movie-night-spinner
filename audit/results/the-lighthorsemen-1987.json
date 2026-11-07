@@ -1,0 +1,62 @@
+{
+ "id": "The Lighthorsemen (1987)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Rice from the Bedouin traders on the road to Beersheba",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The National Film and Sound Archive notes say the troopers skirmish with Bedouin allies. They do not mention Bedouin traders or rice.",
+   "source": "https://aso.gov.au/titles/features/the-lighthorsemen/notes/",
+   "fix": "Rice and dates, a pilaf for the camp at Beersheba",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Dave Mitchell's Beersheba lamb and date pilaf",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "Wikipedia names the new trooper Dave but gives no surname in the plot.",
+   "source": "https://en.wikipedia.org/wiki/The_Lighthorsemen_(film)",
+   "fix": "Dave's Beersheba lamb and date pilaf",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Taken before the charge on the wells.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "No source opened mentions a rum ration before the charge.",
+   "source": "https://en.wikipedia.org/wiki/The_Lighthorsemen_(film)",
+   "fix": "A tot in a tin mug while waiting for the order to ride.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Dusty camp and the right horses and wells, but it stays on the ration tin and never gets to the charge itself.",
+  "missing": [
+   "The haversack ruse (Meinertzhagen)",
+   "Dave unable to fire his rifle (battle)",
+   "The four mates Frank, Scotty, Chiller and Tas",
+   "The charge and the Turks firing over their heads",
+   "Scotty capturing Reichert at the wells",
+   "Allenby walking into Jerusalem on foot"
+  ],
+  "ideas": [
+   "Swap 'Trooper's bully beef rissoles' note for 'Frank's last meal' mates note.",
+   "Replace 'Light horse camp beef and stout stew' with 'Haversack ruse stew' joke.",
+   "Swap 'Camp golden syrup dumplings' for 'Water first' dumplings in a bucket.",
+   "Add 'Beersheba wells, 31 October' on the footer."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

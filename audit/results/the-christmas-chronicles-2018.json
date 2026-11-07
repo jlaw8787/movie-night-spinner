@@ -1,0 +1,68 @@
+{
+ "id": "The Christmas Chronicles (2018)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": true,
+   "text": "I filmed Santa on my camera. Tonight I'm leaving cookies by the tree and keeping the camera running.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "The plot summary has Kate and Teddy setting a tripwire and hidden camera together, and later 'Kate's video' of the adventure. Teddy filming Santa himself is not shown, so the note puts the camera on the wrong child.",
+   "source": "https://en.wikipedia.org/wiki/The_Christmas_Chronicles",
+   "fix": "Kate and I set a tripwire and hid the camera. There are cookies by the tree and the camera's running.",
+   "fix_note": {
+    "text": "Kate and I set a tripwire and hid the camera. There are cookies by the tree and the camera's running.",
+    "by": "Teddy Pierce",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Teddy's camcorder catches Santa",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "Sources opened say Kate and Teddy set up a hidden camera together and call the final video 'Kate's video'. Whose camcorder it is was not settled.",
+   "source": "https://en.wikipedia.org/wiki/The_Christmas_Chronicles",
+   "fix": "Kate's camcorder catches Santa"
+  },
+  {
+   "printed": false,
+   "done": false,
+   "text": "Snacking while Teddy's camcorder runs all night.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Same camera problem. They fall asleep in the living room and the camera is hidden, and the video is called Kate's.",
+   "source": "https://en.wikipedia.org/wiki/The_Christmas_Chronicles",
+   "fix": "Snacking while the hidden camera runs all night."
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 3,
+  "moments": 2,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3,
+  "verdict": "A generic cosy Christmas kitchen. It ignores the actual adventure, the stolen car, the Chicago crash and the jailhouse sing-along.",
+  "missing": [
+   "Santa's sleigh crashing in Chicago",
+   "The red Dodge Challenger car chase",
+   "Santa and the inmates singing 'Santa Claus Is Back in Town'",
+   "Kate in Santa's bag, meeting the elves at the North Pole",
+   "Teddy's magic ornament and the glimpse of his dad",
+   "Officer Poveda and his ex-wife Lisa"
+  ],
+  "ideas": [
+   "Swap 'Stakeout salted caramel choc chip cookies' for 'Jailhouse sing-along cookies' after the holding cell scene.",
+   "Swap 'Pierce family bacon-wrapped meatloaf' for a Chicago-crash special.",
+   "Swap the 'Popcorn and cranberry garland mix' note for the elves in Santa's bag.",
+   "Change the cue to the sleigh crash if Josh wants a bigger payoff than the camera."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

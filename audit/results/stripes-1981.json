@@ -1,0 +1,58 @@
+{
+ "id": "Stripes (1981)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I joined the army for lunch. Somebody said there'd be dessert.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Set out as the character's own words, but the film does not have them say it. John's real lines are about drill and basic training. Dewey 'Ox' Oxberger, the big recruit, has the food line: 'he told me I swallow a lot of aggression... along with a lot of pizzas!'.",
+   "source": "https://en.wikiquote.org/wiki/Stripes_(film)",
+   "fix": "He told me I swallow a lot of aggression... along with a lot of pizzas!",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "He told me I swallow a lot of aggression... along with a lot of pizzas!",
+    "by": "Dewey Oxberger",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Fort Arnold: Basic Training",
+   "where": "sign",
+   "verdict": "unsure",
+   "why": "The base name Fort Arnold is not in the Wikipedia plot or Wikiquote page. The plot only says basic training, a base commander named Barnicke and an overseas posting.",
+   "source": "https://en.wikipedia.org/wiki/Stripes_(film)",
+   "fix": "Basic Training",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A tidy mess hall and the EM-50 nod, but it misses the graduation drill and the mud wrestling night.",
+  "missing": [
+   "Winger's unorthodox graduation drill ('The quick brown fox jumps over the lazy dog!')",
+   "Mud wrestling at the bar (the platoon, Ox, Stella and Louise)",
+   "Psycho's 'Any of you guys call me Francis, and I'll kill you.'",
+   "'Lighten up, Francis' (Hulka)",
+   "The EM-50 disguised as an RV",
+   "Ox's 'lot of pizzas' confession"
+  ],
+  "ideas": [
+   "Swap 'Boot camp crackers with pimento cheese' for 'Mud wrestling pizza' for Ox.",
+   "Rename 'Graduation day chocolate fudge cake' to 'Quick brown fox cake' for the drill.",
+   "Swap 'Psycho's barracks cocktail franks' note for 'Call him Francis and he'll kill you'.",
+   "Add a 'Winnebago' RV-shaped sandwich for the EM-50."
+  ],
+  "flat": true,
+  "done": false
+ }
+}
