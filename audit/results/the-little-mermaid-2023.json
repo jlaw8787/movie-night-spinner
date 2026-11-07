@@ -5,12 +5,14 @@
   {
    "text": "Serve the mains when Ariel sits down to dinner at the castle and finds the fork.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Wikipedia has Ariel at Eric's castle and exploring his collection, and a cameo of the dinglehopper at the market. A dinner scene where she finds the fork was not confirmed.",
-   "source": "https://en.wikipedia.org/wiki/The_Little_Mermaid_(2023_film)",
-   "fix": "Serve the mains when Ariel arrives at the castle and meets Eric.",
+   "verdict": "wrong",
+   "why": "Disney Wiki's plot for the 2023 film has no castle dinner or fork scene (that is the 1989 original); Ariel explores the castle and looks through Eric's collection with him.",
+   "source": "https://disney.fandom.com/wiki/The_Little_Mermaid_(2023_film)",
+   "fix": "Serve the mains when Ariel and Eric look through his collection at the castle.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Ariel, this human thing goes in the mouth, not the hair. Probably. Pass me a bread roll.",

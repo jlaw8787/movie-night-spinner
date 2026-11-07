@@ -21,12 +21,14 @@
   {
    "text": "Serve the mains when the turtles realise there's no pizza in 1603.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The quote page has Mikey wondering if they had pizza back then before they leave. A synopsis opened has Michelangelo introducing the villagers to pizza in the past. Nothing shows them realising there is none.",
-   "source": "https://en.wikiquote.org/wiki/Teenage_Mutant_Ninja_Turtles_III:_Turtles_in_Time",
+   "verdict": "wrong",
+   "why": "Mikey only wonders aloud if they had pizza back then, just before the scepter sends them to 1603. Nobody realises there is none.",
+   "source": "https://en.wikiquote.org/wiki/Teenage_Mutant_Ninja_Turtles_III%3A_Turtles_in_Time",
    "fix": "Serve the mains when Mikey asks if they had pizza back in 1603.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Casey Jones along for the ride",

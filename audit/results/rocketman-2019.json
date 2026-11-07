@@ -5,13 +5,15 @@
   {
    "text": "Whiskey sour",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The note says it is Bernie's order while he scribbles lyrics. Bernie writes the lyrics, but no source I opened shows him drinking a whiskey sour.",
+   "verdict": "wrong",
+   "why": "Bernie is the lyricist, as the film and plot show, but nothing shows him ordering or drinking a whiskey sour, so the note now says only what the film does.",
    "source": "https://en.wikipedia.org/wiki/Rocketman_(film)",
-   "fix": "Bernie scribbles lyrics and Reggie writes the tune.",
+   "fix": "Bernie writes the lyrics, Elton the tune.",
    "printed": false,
-   "done": false,
-   "full": "Bernie's order while he scribbles lyrics."
+   "done": true,
+   "full": "Bernie's order while he scribbles lyrics.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 16,

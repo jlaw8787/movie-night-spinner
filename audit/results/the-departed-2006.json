@@ -16,12 +16,14 @@
   {
    "text": "Split and grilled, drawn butter. Robe optional.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No source I opened shows Costello in a robe.",
+   "verdict": "wrong",
+   "why": "The transcript, Wikipedia and Wikiquote never show Costello in a robe, and a search turned up nothing either. The line is a made-up gag about the plot.",
    "source": "https://en.wikiquote.org/wiki/The_Departed",
    "fix": "Split and grilled, drawn butter. Knock first.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 19,

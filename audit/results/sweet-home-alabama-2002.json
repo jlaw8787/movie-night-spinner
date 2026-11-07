@@ -21,22 +21,23 @@
   {
    "text": "Serve the mains when Melanie sits down at her parents' table back home.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The sources opened confirm Melanie returns home to tell Earl and Pearl about her engagement, but none describe a dinner at their table.",
-   "source": "https://en.wikipedia.org/wiki/Sweet_Home_Alabama_(film)",
+   "verdict": "wrong",
+   "why": "Melanie arrives at her parents' home and Pearl offers chicken fried steak, which she turns down, so she never sits at their table. The visit is to tell them about the engagement.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=sweet-home-alabama-2002",
    "fix": "Serve the mains when Melanie goes back to Pigeon Creek to tell her parents about the engagement.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "the town's Civil War re-enactment",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The Wikipedia plot summary and the Fandom page do not mention a Civil War re-enactment, so I could not confirm it.",
-   "source": "https://en.wikipedia.org/wiki/Sweet_Home_Alabama_(film)",
-   "fix": "the night Melanie gets drunk at the tavern",
+   "verdict": "ok",
+   "why": "Earl is a Civil War re-enactor in the film, and the script has Melanie's father at the battlefield, so a Civil War re-enactment is in the story.",
+   "source": "https://www.popmatters.com/?p=627989",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 15,

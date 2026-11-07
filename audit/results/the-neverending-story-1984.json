@@ -5,12 +5,14 @@
   {
    "text": "Serve the snacks when Bastian unwraps his lunch in the school attic.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Wikipedia's plot and the Wikiquote page show Bastian hiding in the attic to read after arriving late, but neither mentions him unwrapping a lunch or eating there. Same text is printed as the showtime. I could not open a source that settles it.",
+   "verdict": "wrong",
+   "why": "Wikipedia's plot has Bastian arriving late and hiding in the school attic to read, with no lunch or eating mentioned there, and the transcript has no lunch or attic meal.",
    "source": "https://en.wikipedia.org/wiki/The_NeverEnding_Story_(film)",
-   "fix": "Serve the snacks when Bastian settles into the school attic with the book.",
+   "fix": "Serve the snacks when Bastian hides in the school attic to read.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Atreyu, I've got my apple and a cheese sandwich up here in the attic. I'm reading all night.",

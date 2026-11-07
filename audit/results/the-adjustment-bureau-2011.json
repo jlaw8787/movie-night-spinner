@@ -5,57 +5,58 @@
   {
    "text": "THE HOTEL CARROW",
    "where": "venue",
-   "verdict": "unsure",
-   "why": "The hotel is not named in any source I opened. It reads as invented.",
+   "verdict": "ok",
+   "why": "An invented hotel name for the election-night venue. It claims nothing about the plot, and the film has David's concession night in a hotel.",
    "source": "https://en.wikipedia.org/wiki/The_Adjustment_Bureau",
-   "fix": "THE HOTEL CARROW (invented, fine as a made-up venue)",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Charlie Traynor",
    "where": "note-by",
-   "verdict": "unsure",
-   "why": "Sources I opened name David's campaign manager as Charlie but give no surname. The note itself fits his job.",
+   "verdict": "ok",
+   "why": "The cast list names Charlie Traynor, David's campaign manager, and the transcript has David introducing him as his campaign chairman.",
    "source": "https://en.wikipedia.org/wiki/The_Adjustment_Bureau",
-   "fix": "Charlie",
    "printed": true,
    "done": false,
-   "fix_note": {
-    "text": "Whatever the count says, thank you. Eat something, the returns run late. Hats to the cloakroom, and no photographs at the bar. The bus back to Brooklyn leaves the side doors at 1 A.M.",
-    "by": "Charlie",
-    "kind": "note"
-   }
+   "settled": "2026-11-08"
   },
   {
    "text": "from the cart beside the bus stop",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No source I opened mentions a nut cart at the bus stop.",
+   "verdict": "wrong",
+   "why": "No nut cart appears anywhere. What the sources show is David catching his bus and meeting Elise again on it.",
    "source": "https://en.wikipedia.org/wiki/The_Adjustment_Bureau",
-   "fix": "hot nuts, for the bus ride that changes his day",
+   "fix": "for the bus ride where they meet again",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "the date they're not supposed to have",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "David and Elise meet on the bus. The film does not show a dinner date at this point.",
-   "source": "https://en.wikipedia.org/wiki/The_Adjustment_Bureau",
-   "fix": "the second meeting they're not supposed to have",
+   "verdict": "ok",
+   "why": "David and Elise spend a day out together after he finds her again, and Richardson says he was never meant to see her a second time.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-adjustment-bureau",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "the dance company party",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No source I opened shows a dance company party. Elise's dance scenes are rehearsals.",
+   "verdict": "wrong",
+   "why": "There is no party. Elise is at rehearsals with Cedar Lake Contemporary Ballet, where David chases her down.",
    "source": "https://en.wikipedia.org/wiki/The_Adjustment_Bureau",
-   "fix": "Elise's rehearsal, after the show",
+   "fix": "Elise's rehearsal at the dance company",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

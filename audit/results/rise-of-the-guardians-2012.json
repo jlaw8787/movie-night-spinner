@@ -5,23 +5,27 @@
   {
    "text": "Serve the sweets when the Easter Bunny's egg hunt begins.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "In the film Pitch's Nightmares smash the Easter eggs and Easter is late, so no egg hunt begins on screen in the sources I opened. The Guardians do help paint eggs in Bunny's Warren.",
+   "verdict": "wrong",
+   "why": "Pitch's Nightmares smash the Easter eggs and no hunt starts on screen; the Guardians travel to Bunny's Warren and help colour the eggs.",
    "source": "https://en.wikipedia.org/wiki/Rise_of_the_Guardians",
    "fix": "Serve the sweets when the Guardians reach Bunny's Warren to colour the Easter eggs.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Sbiten, hot honey and spice",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The note says it warms the yetis after Phil's sleigh test. Phil is a yeti Jack meets in the workshop, but no source I opened shows a sleigh test.",
-   "source": "https://en.wikiquote.org/wiki/Rise_of_the_Guardians",
-   "fix": "Warms the yetis after a long night on the toy line.",
+   "verdict": "wrong",
+   "why": "No sleigh test with Phil is shown; the yetis are seen working the toy line in North's workshop when Jack meets Phil.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rise-of-the-guardians",
+   "fix": "Warms the yetis on the toy line.",
    "printed": true,
-   "done": false,
-   "full": "Warms the yetis after Phil's sleigh test."
+   "done": true,
+   "full": "Warms the yetis after Phil's sleigh test.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

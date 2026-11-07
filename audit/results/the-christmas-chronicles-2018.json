@@ -20,23 +20,27 @@
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Teddy's camcorder catches Santa",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "Sources opened say Kate and Teddy set up a hidden camera together and call the final video 'Kate's video'. Whose camcorder it is was not settled.",
-   "source": "https://en.wikipedia.org/wiki/The_Christmas_Chronicles",
-   "fix": "Kate's camcorder catches Santa"
+   "verdict": "wrong",
+   "why": "The plot says Kate and Teddy set up a tripwire and hidden camera together, and the finished footage is called Kate's video. It does not say the camcorder is Teddy's.",
+   "source": "https://m.imdb.com/title/tt2990140/plotsummary",
+   "fix": "The hidden camera catches Santa",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "printed": false,
-   "done": false,
+   "done": true,
    "text": "Snacking while Teddy's camcorder runs all night.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Same camera problem. They fall asleep in the living room and the camera is hidden, and the video is called Kate's.",
-   "source": "https://en.wikipedia.org/wiki/The_Christmas_Chronicles",
-   "fix": "Snacking while the hidden camera runs all night."
+   "verdict": "wrong",
+   "why": "The camera is a hidden one set up by both kids, so it is not Teddy's alone. They fall asleep in the living room while it waits.",
+   "source": "https://m.imdb.com/title/tt2990140/plotsummary",
+   "fix": "Snacking while the hidden camera runs all night.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

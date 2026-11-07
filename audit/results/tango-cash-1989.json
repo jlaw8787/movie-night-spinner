@@ -21,12 +21,13 @@
   {
    "text": "the chase across East LA",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Attached to the LA street tacos. Cash is an East LA cop, but the plot page I read has no chase across East LA, only the prison break, the club and the attack on Perret's hideout in the RV.",
-   "source": "https://en.wikipedia.org/wiki/Tango_%26_Cash",
+   "verdict": "wrong",
+   "why": "Cash is the best cop in East Los Angeles, but the IMDb plot lists the opening tanker chase, Cash's parking garage chase, the prison escape and the assault on Perret's compound, with no chase across East LA.",
+   "source": "https://www.imdb.com/title/tt0098439/plotsummary",
    "fix": "Cash's East LA beat",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 15,

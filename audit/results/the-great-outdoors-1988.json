@@ -54,22 +54,26 @@
   {
    "text": "The bat in the chimney",
    "where": "caption",
-   "verdict": "unsure",
-   "why": "Wikipedia and a review say a bat gets into the cabin. Neither says it comes down the chimney.",
-   "source": "https://www.threemoviebuffs.com/review/great-outdoors.html",
+   "verdict": "wrong",
+   "why": "A bat gets into the cabin and ends up in the rafters. No source or transcript line has it coming down a chimney.",
+   "source": "https://en.wikipedia.org/wiki/The_Great_Outdoors_(film)",
    "fix": "The bat in the cabin",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Ordered before the bat flew down the chimney.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Same as above. A bat gets into the cabin, but the chimney is not confirmed.",
-   "source": "https://www.threemoviebuffs.com/review/great-outdoors.html",
+   "verdict": "wrong",
+   "why": "A bat gets into the cabin that night. No source has it flying down a chimney.",
+   "source": "https://en.wikipedia.org/wiki/The_Great_Outdoors_(film)",
    "fix": "Ordered before the bat got into the cabin.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 10,

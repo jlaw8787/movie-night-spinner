@@ -4,13 +4,15 @@
  "facts": [
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Scat Cat's band plays, the attic shakes.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The plot summary puts Scat Cat's band on the Paris rooftops, with Duchess and O'Malley talking on a nearby rooftop. No source opened mentions an attic.",
+   "verdict": "wrong",
+   "why": "Scat Cat's band plays on the Paris rooftops, and Duchess and O'Malley talk on a nearby rooftop. No attic.",
    "source": "https://en.wikipedia.org/wiki/The_Aristocats",
-   "fix": "Scat Cat's band plays, the rooftops shake."
+   "fix": "Scat Cat's band plays, the rooftops shake.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 15,

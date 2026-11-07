@@ -21,12 +21,14 @@
   {
    "text": "dinner with the town doctor",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The sources opened show Dalton meeting Doc Clay at the hospital but not having dinner with her.",
+   "verdict": "wrong",
+   "why": "Dalton meets Dr Elizabeth Clay when he visits the hospital with a knife wound; no dinner with her shows up in the plot or transcript.",
    "source": "https://en.wikipedia.org/wiki/Road_House_(1989_film)",
    "fix": "the town doctor who stitches Dalton up",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

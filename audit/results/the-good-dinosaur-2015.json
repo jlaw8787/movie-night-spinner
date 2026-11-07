@@ -5,12 +5,14 @@
   {
    "text": "Arlo, Clyde Farm",
    "where": "prop",
-   "verdict": "unsure",
-   "why": "The Fandom page for Arlo does not give a family surname, so 'Clyde' could not be confirmed. The silo, the mark and Clawtooth Mountain are confirmed.",
-   "source": "https://pixar.fandom.com/wiki/Arlo",
+   "verdict": "wrong",
+   "why": "No source gives the family a Clyde surname. The film has Poppa point out Clawtooth Mountain and call it \"our farm\".",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-good-dinosaur",
    "fix": "Arlo, Clawtooth Mountain Farm",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,
@@ -20,7 +22,7 @@
   "food": 4,
   "tone": 4,
   "look": 4,
-  "overall": 4.0,
+  "overall": 4,
   "verdict": "A good fit: silo marks, fireflies, Spot's berries and the cattle drive all show up, and the farm food suits the family.",
   "missing": [
    "The pterodactyls that take Spot (storm)",

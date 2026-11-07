@@ -15,14 +15,16 @@
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Claire's pick.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The lunch scene gives Claire sushi and no soft drink is named for her in any source opened. Tab is not mentioned for any character.",
-   "source": "https://cookingwiththemovies.blogspot.com/2009/02/breakfast-club.html",
-   "fix": "Ice cold and fizzy, for a long Saturday.",
-   "full": "Claire's pick. Bender asks if Barry Manilow knows."
+   "verdict": "wrong",
+   "why": "No source shows Claire picking a cola, and Tab is never mentioned. Bender's Barry Manilow question is to Vernon about raiding his wardrobe, which is real.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=breakfast-club-the",
+   "fix": "Cold, for a long Saturday. Bender asks if Barry Manilow knows.",
+   "full": "Claire's pick. Bender asks if Barry Manilow knows.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 20,

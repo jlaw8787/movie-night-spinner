@@ -21,12 +21,14 @@
   {
    "text": "The riverboat up the Nile before it burns",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The riverboat trip is real. The Mummy fandom wiki says Medjai attack it at night and everyone has to jump ship, but it does not say the boat burns.",
+   "verdict": "wrong",
+   "why": "The Mummy fandom wiki says the Medjai attack the riverboat and do so much damage that everyone has to jump ship and swim ashore; it does not say the boat burns.",
    "source": "https://mummy.fandom.com/wiki/The_Mummy",
    "fix": "The riverboat up the Nile before the Medjai attack",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 17,

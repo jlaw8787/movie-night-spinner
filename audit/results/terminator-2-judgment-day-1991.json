@@ -21,12 +21,14 @@
   {
    "text": "Salceda's place. Guns in the ground, beer in the esky.",
    "where": "sign",
-   "verdict": "unsure",
-   "why": "The plot page I read lists Enrique Salceda as Sarah's friend but does not describe a camp scene, and notes a survivalist camp scene was cut from the theatrical plot. I could not confirm the camp, the buried guns or the beer. The same goes for 'Enrique's camp, before Sarah digs up the guns' and the Enrique dish names.",
-   "source": "https://webcf.waybackmachine.org/web/20220505174658/http://en.wikipedia.org/wiki/Terminator_2:_Judgment_Day",
-   "fix": "Cyberdyne's lobby kiosk, before the lab raid",
+   "verdict": "wrong",
+   "why": "Enrique's desert camp is real and Sarah sends the Terminator and John on weapons detail, but no source shows buried guns or beer in an esky. Enrique offers the Terminator a bottle of booze.",
+   "source": "https://terminator.fandom.com/wiki/Enrique_Salceda",
+   "fix": "Salceda's place. Weapons detail, and a drink if you want one.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

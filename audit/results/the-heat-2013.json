@@ -5,32 +5,35 @@
   {
    "text": "Serve the mains at the Mullins family dinner.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Wikipedia confirms Ashburn and Mullins visit the Mullins family home. A family dinner scene was not confirmed in the pages opened.",
-   "source": "https://en.wikipedia.org/wiki/The_Heat_(film)",
-   "fix": "Serve the mains when Ashburn visits the Mullins family home.",
+   "verdict": "ok",
+   "why": "The transcript has the Mullins family fighting at their mother's dinner, with Ashburn at the table in sweatpants.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-heat",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Serve the mains at the Mullins family dinner.",
    "where": "cue-printed",
-   "verdict": "unsure",
-   "why": "Same cue as above, printed on the card.",
-   "source": "https://en.wikipedia.org/wiki/The_Heat_(film)",
-   "fix": "Serve the mains when Ashburn visits the Mullins family home.",
+   "verdict": "ok",
+   "why": "The transcript has the Mullins family fighting at their mother's dinner, with Ashburn at the table in sweatpants.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-heat",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Watermelon toss buffalo wings",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "No watermelon scene was found in the Wikipedia plot or TV Tropes page.",
-   "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/TheHeat",
-   "fix": "Mullins family buffalo wings",
+   "verdict": "ok",
+   "why": "Mullins is hit by a thrown watermelon in the transcript (\"What the hell did you throw at me? A watermelon.\").",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-heat",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

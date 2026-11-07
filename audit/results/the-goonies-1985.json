@@ -5,12 +5,14 @@
   {
    "text": "Serve the snacks when Chunk is made to do his dance at the gate.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Chunk is made to do the Truffle Shuffle by Mouth outside the Walsh house before he is let in. The Goonies fandom page does not mention a gate, so the place is not confirmed. The scene itself is right.",
-   "source": "https://goonies.fandom.com/wiki/Chunk",
-   "fix": "Serve the snacks when Chunk is made to do the Truffle Shuffle to get into the Walsh house.",
+   "verdict": "wrong",
+   "why": "Mouth makes Chunk do the Truffle Shuffle before letting him into the Walsh house. No gate appears in the transcript or plot.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=goonies-the",
+   "fix": "Serve the snacks when Chunk is made to do the Truffle Shuffle to get in.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "I'll confess to anything you want, I swear. Just keep the pizza coming and nobody mentions the blender.",

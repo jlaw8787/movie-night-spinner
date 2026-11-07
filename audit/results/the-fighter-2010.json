@@ -21,12 +21,14 @@
   {
    "text": "Serve the mains when Micky takes Charlene out after her shift at the bar.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The plot only says Micky strikes up a relationship with bartender Charlene. The quote page has her complaining about the subtitled movie he took her to see.",
-   "source": "https://en.wikipedia.org/wiki/The_Fighter_(2010_film)",
+   "verdict": "wrong",
+   "why": "Wikipedia only says Micky strikes up a relationship with bartender Charlene. The one outing shown is the movie she complains about, a subtitled film.",
+   "source": "https://en.wikiquote.org/wiki/The_Fighter",
    "fix": "Serve the mains when Micky takes Charlene to the movies.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

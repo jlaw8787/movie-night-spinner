@@ -5,12 +5,14 @@
   {
    "text": "Serve the mains when the Gourmet Club menu gets read out.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Sources I opened say Larry London reveals the dinner is tigerfish and smoked turkey, not endangered animals. I found nothing about the menu being read out.",
+   "verdict": "wrong",
+   "why": "The transcript has Carmine asking what is being served and Larry London answering Hawaiian tigerfish and smoked turkey. Wikipedia calls it Larry London revealing the truth, not a menu read out.",
    "source": "https://en.wikipedia.org/wiki/The_Freshman_(1990_film)",
    "fix": "Serve the mains when Larry London reveals what is really on the plates.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 22,

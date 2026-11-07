@@ -4,13 +4,14 @@
  "facts": [
   {
    "printed": false,
-   "done": false,
+   "done": true,
    "text": "Reepicheep on watch, Eustace writing his diary.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The plot summary mentions Eustace, the dragon and the swords, but no diary. No source opened shows Eustace writing one in the film.",
-   "source": "https://en.wikipedia.org/wiki/The_Chronicles_of_Narnia:_The_Voyage_of_the_Dawn_Treader",
-   "fix": "Reepicheep on watch, Eustace sulking aboard."
+   "verdict": "ok",
+   "why": "Eustace narrates 'Dear diary' entries aboard the ship, complaining about sharing quarters with the mouse, Reepicheep.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=chronicles-of-narnia-the-voyage-of-the-dawn-treader-the",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 16,

@@ -21,12 +21,14 @@
   {
    "text": "what Bruce grabs in Rocinha on the way to the bottling plant",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The plot has Bruce working at a bottling factory in Rio and a chase through Rocinha (filming location), but no source opened shows him buying pastéis on the way to work.",
-   "source": "https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)",
-   "fix": "Rocinha street snack, eaten on the run",
+   "verdict": "wrong",
+   "why": "Bruce lives in Rocinha and works at a soft drink bottling plant, but no transcript line, plot or wiki page shows him buying a snack on the way.",
+   "source": "https://marvelcinematicuniverse.fandom.com/wiki/Porto_Verde",
+   "fix": "street food for a run through Rocinha, Bruce's Rio home",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 17,

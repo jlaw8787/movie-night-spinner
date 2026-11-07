@@ -5,12 +5,14 @@
   {
    "text": "Serve the mains when Carol and Monica crash into the Khan family home in Jersey City.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Wikipedia's plot says Danvers is transported to Kamala's house when the three swap places, and the three then fight the Kree there. It does not say Monica crashes in as well, so who lands where is unclear. The same text is printed on the card as the mess call.",
-   "source": "https://en.wikipedia.org/wiki/The_Marvels",
-   "fix": "Serve the mains when Carol swaps into the Khan family home in Jersey City.",
+   "verdict": "wrong",
+   "why": "In the transcript only Carol swaps into the Khan living room (Muneeba and Yusuf walk in on her); Monica swaps elsewhere and the two only knock on the door later.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-marvels",
+   "fix": "Serve the mains when Carol lands in the Khan family living room in Jersey City.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 19,

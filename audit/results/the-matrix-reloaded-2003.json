@@ -43,12 +43,14 @@
   {
    "text": "Like wiping your arse with silk, says the Merovingian.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The Merovingian says it about swearing in French ('it's like wiping your ass with silk, I love it'), right after praising Chateau Haut-Brion 1959. Pinning it on a glass of Bordeaux shifts the joke. Close enough as a nod, but not what he says it about.",
+   "verdict": "wrong",
+   "why": "The Merovingian says the silk line about cursing in French, straight after calling the 1959 Haut-Brion magnificent wine, so pinning it on the glass changes the joke.",
    "source": "https://en.wikiquote.org/wiki/The_Matrix_Reloaded",
-   "fix": "Chateau Haut-Brion 1959, says the Merovingian. Magnificent.",
+   "fix": "Magnificent wine, says the Merovingian, of the 1959 Haut-Brion.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 17,

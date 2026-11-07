@@ -58,12 +58,13 @@
   {
    "text": "Stuart's caterers, upstaged by Bryan's karaoke machine.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The karaoke machine and the horse are confirmed as the birthday gifts, but no source opened mentions caterers or tuna tartare.",
-   "source": "https://m.imdb.com/title/tt0936501/plotsummary",
-   "fix": "Kim's birthday snacks, upstaged by Bryan's karaoke machine.",
+   "verdict": "wrong",
+   "why": "At Kim's birthday Bryan gives her the karaoke machine, then she screams that she loves Stuart over his present, so Stuart upstages Bryan, not the other way round. No caterers are mentioned.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=taken",
+   "fix": "Bryan's karaoke machine, upstaged by Stuart's present.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 14,

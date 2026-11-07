@@ -20,13 +20,15 @@
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "H.E.R.B.I.E. the robot at the stove",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "The Sunday dinner clip has H.E.R.B.I.E. in the background. The source does not show him cooking.",
-   "source": "https://nerdist.com/article/the-fantastic-four-first-steps-clip-sunday-dinner-franklin-richards/",
-   "fix": "H.E.R.B.I.E. the robot in the corner"
+   "verdict": "ok",
+   "why": "At the Sunday dinner the transcript has Ben calling H.E.R.B.I.E. over with the herbs and asking how the sauce is looking, and Wikipedia notes the Thing cooking with him.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-fantastic-four-first-steps",
+   "fix": "H.E.R.B.I.E. the robot in the corner",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

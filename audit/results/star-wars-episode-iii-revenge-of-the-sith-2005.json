@@ -21,12 +21,13 @@
   {
    "text": "The tragedy of Darth Plagueis, told over drinks.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The quote page has Palpatine telling the Plagueis story to Anakin, but nothing opened says drinks are served while he tells it.",
-   "source": "https://en.wikiquote.org/wiki/Star_Wars:_Episode_III_%E2%80%93_Revenge_of_the_Sith",
+   "verdict": "wrong",
+   "why": "Palpatine tells Anakin the Plagueis story in his box at the opera, and no drinks are mentioned.",
+   "source": "https://www.shmoop.com/study-guides/revenge-of-the-sith/scene-15-summary.html",
    "fix": "The tragedy of Darth Plagueis, told at the opera.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 17,

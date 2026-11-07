@@ -5,22 +5,26 @@
   {
    "text": "Serve the snacks when Tod and Copper play by the creek.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Sources opened say Tod and Copper become friends and play together near Amos Slade's place. None name a creek, so the cue could not be confirmed.",
+   "verdict": "wrong",
+   "why": "Wikipedia has Tod and Copper playing together as pups, near Amos Slade's barrel. No source names a creek.",
    "source": "https://en.wikipedia.org/wiki/The_Fox_and_the_Hound",
    "fix": "Serve the snacks when Tod and Copper play together as pups.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Serve the snacks when Tod and Copper play by the creek.",
    "where": "cue-printed",
-   "verdict": "unsure",
-   "why": "Same cue as above, printed on the card.",
+   "verdict": "wrong",
+   "why": "Same cue as the data line. No source names a creek, only Tod and Copper playing together as pups.",
    "source": "https://en.wikipedia.org/wiki/The_Fox_and_the_Hound",
    "fix": "Serve the snacks when Tod and Copper play together as pups.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

@@ -21,32 +21,36 @@
   {
    "text": "Donna, working nights and raising three, the reason Cindy Lou writes to Santa.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Wikipedia says Donna is overworked and raising Cindy Lou and the twins. It does not say she works nights.",
-   "source": "https://en.wikipedia.org/wiki/The_Grinch_(film)",
-   "fix": "Donna, overworked and raising three, the reason Cindy Lou wants to see Santa.",
+   "verdict": "ok",
+   "why": "Donna is told she is still on the night shift, and Cindy Lou says her mum works all night and looks after them all day. The twins make three kids.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-grinch",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Bait for Cindy Lou's Santa trap.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Sources opened say Cindy Lou plans a trap to catch Santa but do not say what bait she uses.",
-   "source": "https://en.wikipedia.org/wiki/The_Grinch_(film)",
-   "fix": "Cindy Lou's Santa trap needs a snack.",
+   "verdict": "wrong",
+   "why": "The trap plan has maple syrup poured on the roof to stick the reindeer. It is not bait.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-grinch",
+   "fix": "Maple syrup, from Cindy Lou's Santa trap plan.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Max has it brewed before the Grinch wakes.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Nothing opened mentions Max making coffee.",
-   "source": "https://en.wikipedia.org/wiki/The_Grinch_(film)",
-   "fix": "Max has it ready before the Grinch gets up.",
+   "verdict": "ok",
+   "why": "The Grinch wakes to the clatter of Max at work, then praises a great cup of coffee. TV Tropes also has Max bringing him coffee.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-grinch",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 10,

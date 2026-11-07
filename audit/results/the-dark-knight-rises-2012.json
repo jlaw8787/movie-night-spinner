@@ -21,12 +21,14 @@
   {
    "text": "The masked ball where Bruce dances with Selina.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The transcript has a charity ball where Bruce says 'Mind if I cut in?' and then talks with Selina. It does not show a dance or call the ball masked.",
-   "source": "https://scrapsfromtheloft.com/movies/the-dark-knight-rises-transcript/",
-   "fix": "the charity ball where Selina steals Martha Wayne's pearls",
+   "verdict": "wrong",
+   "why": "Bruce does dance and argue politely with Selina at the charity ball, but it is a charity ball, not a masked one.",
+   "source": "https://mail.filmsite.org/series-batman10.html",
+   "fix": "the charity ball where Bruce dances with Selina",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 16,

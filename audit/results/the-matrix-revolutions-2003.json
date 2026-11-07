@@ -5,22 +5,26 @@
   {
    "text": "Club Hel and its upside down entrance.",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "The sources opened show Trinity, Morpheus and Seraph arriving at the Hel Club entrance in a parking garage and riding an elevator down. Nothing says the entrance is upside down.",
+   "verdict": "wrong",
+   "why": "Wikiquote and the transcript have the group taking an elevator down to the club from a parking garage; nothing is upside down.",
    "source": "https://en.wikiquote.org/wiki/The_Matrix_Revolutions",
    "fix": "Club Hel, down the lift from the car park.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Poured at Club Hel, entrance through the ceiling.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Same as the wink. The entrance is in a parking garage with an elevator, with no ceiling entrance mentioned.",
+   "verdict": "wrong",
+   "why": "The entrance is an elevator from a parking garage in the transcript, with no ceiling entrance.",
    "source": "https://en.wikiquote.org/wiki/The_Matrix_Revolutions",
    "fix": "Poured at Club Hel, past the lift and the bouncers.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 15,

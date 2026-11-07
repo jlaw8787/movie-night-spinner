@@ -5,22 +5,26 @@
   {
    "text": "Serve dessert when George finally gets to eat something.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The plot summary has George going nearly 24 hours with virtually no food, with only crackers, olives and Cracker Jacks turning up. No source I opened says which moment counts as him finally eating, so the trigger is vague. The Cracker Jacks in Central Park is the clearest scene.",
+   "verdict": "wrong",
+   "why": "The plot gives no single moment of George finally eating; the clear food scenes are the dining car with only sandwiches, olives and crackers, and George cracking a tooth on stale Cracker Jacks in Central Park.",
    "source": "https://en.wikipedia.org/wiki/The_Out-of-Towners_(1970_film)",
-   "fix": "Serve dessert when George cracks his tooth on the stale Cracker Jacks in Central Park.",
+   "fix": "Serve dessert when George cracks a tooth on Cracker Jacks.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "the flight that gets diverted to Boston, and nothing left to eat on board",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The diversion to Boston is right. A review says George turns down the plane meal to save his appetite for dinner, so 'nothing left to eat on board' does not match what the film shows.",
-   "source": "https://culturedarm.com/the-out-of-towners-1970/",
-   "fix": "the flight that gets diverted to Boston, after George turns down the plane dinner",
+   "verdict": "wrong",
+   "why": "Wikipedia confirms the diversion to Boston and the luggage left behind there, but nothing shows food running out on the plane.",
+   "source": "https://en.wikipedia.org/wiki/The_Out-of-Towners_(1970_film)",
+   "fix": "the flight that gets diverted to Boston, with their luggage left behind",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "the only food they find all night",
@@ -36,22 +40,26 @@
   {
    "text": "breakfast in the room at last",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Their guaranteed reservation is given away and the hotel is full. A review says they never get the room. No source I opened shows them having breakfast in a room.",
+   "verdict": "wrong",
+   "why": "Their guaranteed reservation is given away and the hotel is full, so they never get a room or a breakfast; George reaches his interview with virtually no food or sleep.",
    "source": "https://en.wikipedia.org/wiki/The_Out-of-Towners_(1970_film)",
-   "fix": "the hotel breakfast they never get to order",
+   "fix": "the breakfast George never gets",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "rationed between George and Gwen through one very long night",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No opened source mentions shortbread, or food being rationed between them. Their luggage with the spare cash is left in Boston.",
+   "verdict": "wrong",
+   "why": "No source mentions shortbread or rationing; the food shown is the sandwiches, olives and crackers left in the dining car and the stale Cracker Jacks.",
    "source": "https://en.wikipedia.org/wiki/The_Out-of-Towners_(1970_film)",
-   "fix": "boxed for the handbag, long before the luggage goes missing",
+   "fix": "a stand-in for the crackers on the dining car",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

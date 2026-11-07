@@ -31,12 +31,14 @@
   {
    "text": "Mouse swears it tastes like the real thing",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Attached to the Tasty Wheat honey oat clusters. Mouse's riff is that the machines never got food right, and the gruel is bland. This starter is in the data but not printed. I could not open a page with the scene, so this is from memory.",
-   "source": "",
-   "fix": "Mouse says the machines never got it right",
+   "verdict": "wrong",
+   "why": "In the transcript Mouse says the gruel reminds him of Tastee Wheat, then wonders whether the machines ever got that taste right; he never swears it tastes real.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=matrix-the",
+   "fix": "Mouse wonders if the machines got it right",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 17,

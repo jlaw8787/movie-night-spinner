@@ -21,32 +21,38 @@
   {
    "text": "Serve the snacks when Andy makes his famous egg salad sandwich.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "No source opened (Wikipedia plot, Wikiquote, Surf Wiki) mentions an egg salad sandwich. The poker game where his secret comes out is confirmed.",
-   "source": "https://en.wikipedia.org/wiki/The_40-Year-Old_Virgin",
-   "fix": "Serve the snacks when the poker game starts and Andy's secret comes out.",
+   "verdict": "wrong",
+   "why": "Andy tells his workmates he spent hours making egg salad on a Saturday, then had no bread and did not feel like eating it. He never makes a famous sandwich on screen.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=40-year-old-virgin-the",
+   "fix": "Serve the snacks when Andy tells them about his egg salad with no bread.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Andy's perfect egg salad sandwich",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "No source opened mentions Andy making egg salad.",
-   "source": "https://en.wikipedia.org/wiki/The_40-Year-Old_Virgin",
-   "fix": "Andy's poker night sandwiches",
+   "verdict": "wrong",
+   "why": "The egg salad is in the film, but Andy's story is that three hours of work left him with no bread and no appetite, so it was not perfect.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=40-year-old-virgin-the",
+   "fix": "Andy's egg salad, bread included",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Andy's drink for Survivor night with the neighbours.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No source opened mentions a Survivor night or neighbours.",
-   "source": "https://en.wikipedia.org/wiki/The_40-Year-Old_Virgin",
-   "fix": "Andy's drink for poker night with the guys.",
+   "verdict": "wrong",
+   "why": "The Survivor night is real, set up with Joe and Sara in the stairwell. No source calls them neighbours, so name them.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=40-year-old-virgin-the",
+   "fix": "Andy's drink for Survivor night with Joe and Sara.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

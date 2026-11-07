@@ -5,32 +5,37 @@
   {
    "text": "CON IL CONTRIBUTO DELLA FONDAZIONE VITO CORLEONE",
    "where": "card",
-   "verdict": "unsure",
-   "why": "Michael gives millions to charity in the film, but I could not open a source that names the Vito Corleone Foundation.",
-   "source": "https://en.wikipedia.org/wiki/The_Godfather_Part_III",
-   "fix": "CON IL CONTRIBUTO DELLE OPERE DI CARITA DI MICHAEL CORLEONE",
+   "verdict": "ok",
+   "why": "Mary chairs the Vito Corleone Foundation in the film, and Michael gives it millions for charity.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=godfather-part-iii-the",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Don Altobello's opera box nibbles",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Altobello sits in the opera box and eats the poisoned cannoli, but prosciutto and melon is not in any source I opened.",
+   "verdict": "wrong",
+   "why": "Altobello is poisoned by a birthday cannoli and watches the opera from the box. No prosciutto and melon is in the transcript or plot.",
    "source": "https://en.wikipedia.org/wiki/The_Godfather_Part_III",
-   "fix": "Don Altobello's opera box, before the cannoli",
+   "fix": "a starter before Don Altobello's birthday cannoli",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "hand-rolled in the kitchen while the family looks the other way",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The gnocchi scene for Mary and Vincent exists, but I could not open a source describing the kitchen or the family looking away.",
-   "source": "https://en.wikipedia.org/wiki/The_Godfather_Part_III",
-   "fix": "Mary and Vincent's gnocchi, hand-rolled and far too close for cousins",
+   "verdict": "wrong",
+   "why": "Mary and Vincent cook together in the kitchen (the famous gnocchi scene), but they are alone and nobody looks the other way.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=godfather-part-iii-the",
+   "fix": "hand-rolled in the kitchen, far too close for cousins",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 19,

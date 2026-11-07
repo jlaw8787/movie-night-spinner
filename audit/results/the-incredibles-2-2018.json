@@ -5,12 +5,14 @@
   {
    "text": "Serve dessert when Jack-Jack fights the raccoon for a cookie.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The backyard fight between Jack-Jack and a raccoon is real, and it is where Bob finds out about the powers. None of the pages opened say it is over a cookie, so the cookie part is not confirmed.",
-   "source": "https://epicstream.com/article/its-jack-jack-vs-the-raccoon-in-sneak-peek-for-home-release-of-the-incredibles-2",
+   "verdict": "wrong",
+   "why": "Jack-Jack spots a raccoon rummaging through the bins and fights it because it looks like a robber from TV. No source says a cookie is involved.",
+   "source": "https://cinemablend.com/news/2403672/theres-a-fight-in-incredibles-2-that-fans-are-going-to-love",
    "fix": "Serve dessert when Jack-Jack fights the raccoon in the backyard.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Darling, the baby has eaten and the baby is asleep, so now we dine. Something light, and nobody wakes him.",
@@ -31,32 +33,38 @@
   {
    "text": "Violet's date at the Happy Platter.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Violet's date with Tony is a movie date (Tony asks her to a movie, and the film ends with the reinstated movie date). No source opened mentions a Happy Platter, so the venue looks invented.",
+   "verdict": "wrong",
+   "why": "Violet's date with Tony is a movie date. No Happy Platter appears in the plot or any page opened.",
    "source": "https://en.wikipedia.org/wiki/Incredibles_2",
-   "fix": "Violet's movie date with Tony.",
+   "fix": "Violet's movie date with Tony",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Edna looking after Jack-Jack overnight.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Bob does call on Edna to babysit Jack-Jack, but the sources opened give no sign it is overnight.",
+   "verdict": "wrong",
+   "why": "Bob calls on Edna to babysit Jack-Jack, but no source shows it as an overnight stay.",
    "source": "https://en.wikipedia.org/wiki/Incredibles_2",
-   "fix": "Edna looking after Jack-Jack.",
+   "fix": "Edna looking after Jack-Jack",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Deavor Telecom",
    "where": "prop",
-   "verdict": "unsure",
-   "why": "The Deavors run a telecommunications company called DevTech (the venue name on the same menu). 'Deavor Telecom' was not found in any source opened.",
-   "source": "https://en.wikipedia.org/wiki/Incredibles_2",
-   "fix": "DevTech Telecom",
+   "verdict": "wrong",
+   "why": "The Deavors run a telecommunications company called DevTech. \"Deavor Telecom\" is not a name used in the film.",
+   "source": "https://www.bustle.com/p/is-devtech-from-incredibles-2-based-on-a-real-company-the-mysterious-organization-might-feel-familiar-9362040",
+   "fix": "DevTech",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

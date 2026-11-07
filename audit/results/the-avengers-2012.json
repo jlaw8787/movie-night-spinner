@@ -15,13 +15,15 @@
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Drinks at the top of the tower, before Loki arrives.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The plot summary has no drinks scene. It only has Loki opening the portal above Stark Tower. Could not confirm a drinks scene before Loki arrives.",
-   "source": "https://en.wikipedia.org/wiki/The_Avengers_(2012_film)",
-   "fix": "Stark Tower, where Loki opens the portal over Manhattan."
+   "verdict": "wrong",
+   "why": "The drink comes after Loki arrives at Stark Tower: Tony offers him one and pours his own. It is not before.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=avengers-the-2012",
+   "fix": "Stark Tower, where Tony offers Loki a drink.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

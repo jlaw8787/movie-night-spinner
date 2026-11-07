@@ -5,12 +5,14 @@
   {
    "text": "Barnum's Museum of Wonders",
    "where": "sign",
-   "verdict": "unsure",
-   "why": "Sources opened name the venue Barnum's American Museum, later renamed Barnum's Circus. 'Museum of Wonders' was not found.",
-   "source": "https://the-jh-movie-collection-official.fandom.com/wiki/The_Greatest_Showman",
-   "fix": "Living wonders, step inside",
+   "verdict": "wrong",
+   "why": "The film calls it Barnum's American Museum (of Curiosity), and Barnum greets visitors with \"Welcome to the Barnum Museum\". \"Museum of Wonders\" is never said.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-greatest-showman",
+   "fix": "Welcome to the Barnum Museum",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

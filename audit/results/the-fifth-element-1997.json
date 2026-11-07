@@ -21,32 +21,38 @@
   {
    "text": "Multipass Holder: K. Dallas",
    "where": "prop",
-   "verdict": "unsure",
-   "why": "In the film the Multipass is shown as Leeloo's, and Korben calls her Leeloo Dallas Multipass. The plot page I read does not mention the Multipass at all, so I could not confirm which of them holds it.",
-   "source": "https://www.moviemistakes.com/film472/quotes",
+   "verdict": "wrong",
+   "why": "In the transcript Korben introduces her as Leeloo Dallas Multipass at check-in. It is Leeloo's pass, not Korben's.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=fifth-element-the",
    "fix": "Multipass Holder: Leeloo Dallas",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "The Fhloston Paradise dinner during the Diva's song.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Attached to the chilli garlic crab. The Diva sings at her concert, which the Mangalore attack interrupts. The plot page I read does not describe a dinner during the song.",
+   "verdict": "wrong",
+   "why": "Wikipedia has a concert by Plavalaguna on Fhloston, and the Mangalores attack during it. No dinner is shown during the song.",
    "source": "https://en.wikipedia.org/wiki/The_Fifth_Element",
-   "fix": "The Fhloston Paradise opera night, until the Mangalores crash it",
+   "fix": "the Fhloston Paradise opera night, until the Mangalores crash it",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "She eats like she's never eaten before.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Attached to the drumsticks. Leeloo has just been revived, so a hungry line fits, but the plot page I read has no eating scene, so I could not confirm it.",
-   "source": "https://en.wikipedia.org/wiki/The_Fifth_Element",
-   "fix": "Leeloo's first meal, learning human food",
+   "verdict": "wrong",
+   "why": "No source shows Leeloo eating hungrily. The transcript only has her learning our history and a line 'Chicken... good!' in the same scene.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=fifth-element-the",
+   "fix": "Leeloo, learning our history. Chicken, good",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

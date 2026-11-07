@@ -21,12 +21,14 @@
   {
    "text": "Crustless white bread with butter, cucumber and dill, the London butler's tea tray",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Martin is the London butler, but none of the sources opened show a tea tray or cucumber sandwiches in the film.",
-   "source": "https://en.wikipedia.org/wiki/The_Parent_Trap_(1998_film)",
-   "fix": "Crustless white bread with butter, cucumber and dill, the way Martin the butler would send it up",
+   "verdict": "wrong",
+   "why": "Martin is the James family butler, but TV Tropes, Wikipedia and the transcript show no tea tray or cucumber sandwiches in the film.",
+   "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/TheParentTrap1998",
+   "fix": "Crustless white bread with butter, cucumber and dill, in honour of Martin the family butler",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

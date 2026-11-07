@@ -33,32 +33,35 @@
   {
    "text": "Serve the tea when Jane sets out her tea service in the jungle.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The quote page shows teapots and cups at Jane's camp, which Terk and the gang bang on in the camp wrecking scene. Nothing opened shows Jane setting out a tea service.",
-   "source": "https://en.wikiquote.org/wiki/Tarzan_(1999_film)",
-   "fix": "Serve the tea when Terk and the gang bang on Jane's teapots and cups.",
+   "verdict": "wrong",
+   "why": "No transcript, quote page or plot shows Jane setting out a tea service. What is shown is the gorillas wrecking her camp.",
+   "source": "https://movies.fandom.com/wiki/Tarzan_(1999)",
+   "fix": "Serve the tea when the gorillas wreck Jane's camp.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "the proper English tea Jane brings to the jungle",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Same gap as the cue. Nothing opened shows Jane serving tea.",
-   "source": "https://en.wikiquote.org/wiki/Tarzan_(1999_film)",
-   "fix": "the tea set Terk turns into a drum kit",
+   "verdict": "wrong",
+   "why": "No source shows Jane serving tea in the jungle, only the gorillas wrecking her camp.",
+   "source": "https://movies.fandom.com/wiki/Tarzan_(1999)",
+   "fix": "proper English tea, for Jane's camp in the jungle",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Caught off the waterfall below the treehouse",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The plot has a treehouse and Tarzan scaling a waterfall, but nothing opened places a waterfall below the treehouse.",
-   "source": "https://en.wikipedia.org/wiki/Tarzan_(1999_film)",
-   "fix": "Caught in the river near the treehouse",
+   "verdict": "wrong",
+   "why": "The Wikiquote scene notes show Tarzan scaling a waterfall on his own as a young man, but nothing places a waterfall below the treehouse.",
+   "source": "https://en.wikiquote.org/wiki/Tarzan_(1999_film)",
+   "fix": "Caught below the waterfall Tarzan climbs",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 12,

@@ -4,13 +4,15 @@
  "facts": [
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Serve the mains when Darryl asks Sal what's for tea.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The one dinner scene found has Darryl asking Sal what she calls her rissoles, with Sal saying everybody cooks them and Darryl saying it's what you do with them. A 'what's for tea' question was not found.",
-   "source": "https://loskitchen.com.au/2018/10/12/everybody-cooks-rissoles-darl/",
-   "fix": "Serve the mains when Darryl tucks into Sal's rissoles and asks what she calls them."
+   "verdict": "wrong",
+   "why": "The dinner scene has Darryl asking Sal what she calls the meal and her saying chicken, then 'Seasoning!'. He does not ask what's for tea.",
+   "source": "https://soperth.com.au/entertainment/19-best-the-castle-quotes-7872",
+   "fix": "Serve the mains when Darryl asks Sal what it's called.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

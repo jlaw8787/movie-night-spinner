@@ -21,32 +21,38 @@
   {
    "text": "Serve the mains when the group sits down to Sunday dinner with Duck's family.",
    "where": "cue",
-   "verdict": "unsure",
+   "verdict": "wrong",
    "why": "The plot has no Sunday dinner with Duck's family. The nearest scene is the closing family gathering where the former Heartbeats reunite with their families.",
    "source": "https://en.wikipedia.org/wiki/The_Five_Heartbeats",
    "fix": "Serve the mains when the former Heartbeats gather with their families at the end.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Duck's family Sunday dinner.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Same gap as the cue. The tagline 'Five voices. One Sunday dinner.' leans on it too.",
+   "verdict": "wrong",
+   "why": "Same gap as the cue: no Sunday dinner at Duck's. The plot has a family gathering at the end.",
    "source": "https://en.wikipedia.org/wiki/The_Five_Heartbeats",
-   "fix": "The closing family gathering.",
+   "fix": "the closing family gathering",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Detroit Talent Night Lounge",
    "where": "venue",
-   "verdict": "unsure",
-   "why": "The plot calls the act Motown-inspired but nothing opened sets the film in Detroit.",
+   "verdict": "wrong",
+   "why": "The plot opens at a Battle of the Bands contest and never names Detroit as the setting. Motown is only the style the act imitates.",
    "source": "https://en.wikipedia.org/wiki/The_Five_Heartbeats",
-   "fix": "Motown Talent Night Lounge",
+   "fix": "Battle of the Bands Lounge",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

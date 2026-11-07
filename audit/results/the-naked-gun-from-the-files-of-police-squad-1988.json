@@ -5,12 +5,14 @@
   {
    "text": "Drebin's break, between dances at home plate.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "In the film Frank takes the umpire's place to frisk batters at home plate, and later sings the anthem. The plot and quote pages opened mention no dancing at home plate.",
-   "source": "https://en.wikipedia.org/wiki/The_Naked_Gun:_From_the_Files_of_Police_Squad!",
-   "fix": "Drebin's break, between frisking batters at home plate.",
+   "verdict": "wrong",
+   "why": "Wikipedia has Drebin taking the home plate umpire's place to frisk batters for weapons; no source shows dancing there.",
+   "source": "https://en.wikipedia.org/wiki/The_Naked_Gun%3A_From_the_Files_of_Police_Squad!",
+   "fix": "Drebin's break, between frisks at home plate.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 17,

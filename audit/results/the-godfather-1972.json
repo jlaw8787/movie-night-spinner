@@ -15,11 +15,13 @@
   {
    "text": "the straw bottle on the table, and the oranges that turn up before every hit",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Oranges show up near some deaths and threats, such as Woltz's dinner table, the fruit stand when Vito is shot and Vito's garden death, but not before every hit. Sources list only a handful of scenes. The line is not on the printed or phone menu.",
-   "source": "https://www.looper.com/735497/why-the-oranges-in-the-godfather-mean-more-than-you-think/",
-   "fix": "the straw bottle on the table, and the oranges that keep turning up before trouble",
-   "done": false
+   "verdict": "wrong",
+   "why": "Oranges show up when Vito is shot at the fruit stall and just before he dies in the garden, not before every hit. No source opened shows a straw bottle on the table.",
+   "source": "https://the-buyer.net/insight/why-the-godfather-is-a-celebration-of-food-drink-and-family",
+   "fix": "the wine opened at Louis', and the oranges that turn up when trouble is near",
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 22,

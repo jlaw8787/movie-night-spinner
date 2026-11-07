@@ -21,12 +21,12 @@
   {
    "text": "Fort Arnold: Basic Training",
    "where": "sign",
-   "verdict": "unsure",
-   "why": "The base name Fort Arnold is not in the Wikipedia plot or Wikiquote page. The plot only says basic training, a base commander named Barnicke and an overseas posting.",
-   "source": "https://en.wikipedia.org/wiki/Stripes_(film)",
-   "fix": "Basic Training",
+   "verdict": "ok",
+   "why": "The script has the captain welcoming Colonel Glass to Fort Arnold, so the base name is in the film.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=stripes",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 14,

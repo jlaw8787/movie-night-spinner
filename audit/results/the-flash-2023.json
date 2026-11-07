@@ -5,12 +5,14 @@
   {
    "text": "Serve the mains when Barry's mum makes her spaghetti sauce.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Sources opened say Nora sends Henry to the shop for a can of tomatoes she forgot. None mention spaghetti or the sauce being made, so the cue could not be confirmed.",
-   "source": "https://en.wikipedia.org/wiki/The_Flash_(film)",
+   "verdict": "wrong",
+   "why": "Nora is making pasta and sauce, but the film never says spaghetti. What happens is she sends Henry out for another can of tomatoes.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-flash",
    "fix": "Serve the mains when Barry's mum sends Henry out for a can of tomatoes.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Barry, I need a can of tomatoes for dinner. Don't let me forget them.",
@@ -31,12 +33,14 @@
   {
    "text": "Henry went back for the tomatoes.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Henry goes out for the tomatoes once. In the changed timeline Barry's can stops him leaving, so 'went back' does not match.",
+   "verdict": "wrong",
+   "why": "Wikipedia has Nora send Henry out for the forgotten groceries once, on the day she is killed. He does not go back.",
    "source": "https://en.wikipedia.org/wiki/The_Flash_(film)",
    "fix": "Henry went out for the tomatoes.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

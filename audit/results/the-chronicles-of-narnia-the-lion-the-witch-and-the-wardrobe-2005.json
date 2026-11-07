@@ -4,23 +4,27 @@
  "facts": [
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "The feast at Aslan's camp.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The plot summary says the Pevensies reach Aslan's camp but mentions no feast, and no other source opened shows one.",
+   "verdict": "wrong",
+   "why": "The plot has the Pevensies reaching Aslan's camp and meeting him, with no feast there. The script has no feast and a web search found none.",
    "source": "https://en.wikipedia.org/wiki/The_Chronicles_of_Narnia:_The_Lion,_the_Witch_and_the_Wardrobe",
-   "fix": "Where the Pevensies meet Aslan."
+   "fix": "where the Pevensies meet Aslan",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Sardines mashed with lemon and parsley on hot buttered toast, as he served Lucy.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The tea at Tumnus's cave was not described in any source opened for this call, so 'as he served Lucy' could not be checked.",
-   "source": "https://en.wikipedia.org/wiki/The_Chronicles_of_Narnia:_The_Lion,_the_Witch_and_the_Wardrobe",
-   "fix": "Sardines mashed with lemon and parsley on hot buttered toast."
+   "verdict": "wrong",
+   "why": "Tumnus promises Lucy a fire with toast, tea, cakes and maybe the sardines, and she agrees if he has sardines. The script does not show him serving the sardines.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=chronicles-of-narnia-the-lion-the-witch-and-the-wardrobe-the",
+   "fix": "Sardines mashed with lemon and parsley on hot buttered toast, as Tumnus promised Lucy.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 17,

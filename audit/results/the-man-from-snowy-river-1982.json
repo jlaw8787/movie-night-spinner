@@ -21,12 +21,14 @@
   {
    "text": "Spur's nightcap after a day digging for gold.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Spur is the old prospector who digs for gold, but no source opened shows him drinking rum and hot milk at night.",
-   "source": "https://en.wikipedia.org/wiki/The_Man_from_Snowy_River_(1982_film)",
-   "fix": "Spur's reward after a day digging for gold.",
+   "verdict": "wrong",
+   "why": "The transcript has Spur as the mountain man with wallaby stew and no rum or hot milk; the rum is Clancy's, recalled as the dark rum drunk on the track.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-man-from-snowy-river",
+   "fix": "Clancy's old dark rum, from the days on the track.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

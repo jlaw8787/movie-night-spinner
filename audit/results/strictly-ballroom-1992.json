@@ -21,22 +21,23 @@
   {
    "text": "Barry Fife's dinner dance chicken",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "No Federation dinner dance appears in the plot or the quote page. Fife runs the Pan Pacific championship.",
-   "source": "https://en.wikipedia.org/wiki/Strictly_Ballroom",
+   "verdict": "wrong",
+   "why": "No Federation dinner dance happens in the film. Fife runs the Pan Pacific championship and the Federation's strict steps, and the script has someone telling him to get his status quo back.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=strictly-ballroom",
    "fix": "Barry Fife's status quo chicken",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Ya Ya's rhythm, felt from the heart.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Ya Ya and Rico demonstrate the paso doble in the plot, but no opened source has her saying anything about rhythm felt from the heart.",
-   "source": "https://en.wikipedia.org/wiki/Strictly_Ballroom",
-   "fix": "Ya Ya and Rico teach the real paso doble.",
+   "verdict": "ok",
+   "why": "In the paso doble lesson Ya Ya asks where you feel the rhythm and points to the heart, per the script, and Wikipedia has her teaching the couple the real paso doble.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=strictly-ballroom",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 13,

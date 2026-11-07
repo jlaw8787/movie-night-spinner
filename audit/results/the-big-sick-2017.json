@@ -4,13 +4,15 @@
  "facts": [
   {
    "printed": false,
-   "done": false,
+   "done": true,
    "text": "Kumail's one-man show about his family",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "The plot summary has Kumail doing standup sets, a Montreal audition and a new set in New York. No one-man show about his family is mentioned.",
+   "verdict": "wrong",
+   "why": "The plot has Kumail doing standup sets, an audition and a new set. No one-man show about his family.",
    "source": "https://en.wikipedia.org/wiki/The_Big_Sick",
-   "fix": "Kumail's standup set in New York"
+   "fix": "Kumail's standup set",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 15,

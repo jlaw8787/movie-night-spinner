@@ -32,12 +32,14 @@
   {
    "text": "Serve the mains when the turtles head up to the rooftops with pizza.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The turtles are on a rooftop (the watermelon scene), and Mikey does ask about pizza, but no source opened has them heading up with pizza.",
-   "source": "https://en.wikiquote.org/wiki/Teenage_Mutant_Ninja_Turtles:_Mutant_Mayhem",
-   "fix": "Serve the mains when Mikey suggests explaining everything over some pizza.",
+   "verdict": "wrong",
+   "why": "The turtles are on a rooftop for the watermelon scene, but they never head up with pizza. Mikey does ask April if they can explain things over some pizza.",
+   "source": "https://en.wikiquote.org/wiki/Teenage_Mutant_Ninja_Turtles%3A_Mutant_Mayhem",
+   "fix": "Serve the mains when Mikey offers to explain everything over some pizza.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

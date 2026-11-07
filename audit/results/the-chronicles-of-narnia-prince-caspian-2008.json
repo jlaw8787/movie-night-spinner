@@ -4,13 +4,15 @@
  "facts": [
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Serve the snacks when the Pevensies find the apple trees at the ruins of Cair Paravel.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "A script copy opened shows Lucy finding an apple at the ruins and eating it. It does not show apple trees.",
+   "verdict": "wrong",
+   "why": "A script copy has Lucy finding a single apple among the ruins and eating it, not apple trees.",
    "source": "https://www.narniaweb.com/features/Prince-Caspian-Movie-Script.pdf",
-   "fix": "Serve the snacks when Lucy finds an apple among the ruins of Cair Paravel."
+   "fix": "Serve the snacks when Lucy finds an apple among the ruins of Cair Paravel.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 16,

@@ -21,12 +21,13 @@
   {
    "text": "Krypto ate the last batch. Not even Clark's dog.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Krypto is Superman's dog, which makes him Clark's dog, so 'not even Clark's dog' reads backwards.",
+   "verdict": "wrong",
+   "why": "Krypto is Superman's own dog, so 'not even Clark's dog' reads backwards and the claim that he ate a batch is not in the film. Replaced with a plain menu joke.",
    "source": "https://en.wikipedia.org/wiki/Superman_(2025_film)",
    "fix": "Krypto ate the last batch. Good boy, bad manners.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 15,

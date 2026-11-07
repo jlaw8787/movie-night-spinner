@@ -5,12 +5,14 @@
   {
    "text": "Serve the snacks when the Ducks pull off the Flying V for the first time.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The Flying V is a real play from the film, but Wikipedia's plot does not mention it and the sources opened do not say which game it first works in, so 'for the first time' could not be confirmed. The plot's clear moments are the 17-0 loss, the tie, and the final triple-deke penalty shot.",
-   "source": "https://www.theringer.com/2021/03/24/movies/mighty-ducks-triple-deke-flying-v-knucklepuck-bash-brothers",
-   "fix": "Serve the snacks when Charlie scores the triple-deke penalty shot in the final.",
+   "verdict": "wrong",
+   "why": "TV Tropes confirms the Ducks use the Flying V in the first film, but no source opened shows it as a 'first time' moment; the plot's clear beats are the 17-0 loss, the tie and the final penalty shot.",
+   "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/TheMightyDucks",
+   "fix": "Serve the snacks when the Ducks pull off the Flying V.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Pizza for the whole team tonight, Ducks. Goldberg, leave some for the rest of the bench, you are not in goal now.",
@@ -31,22 +33,26 @@
   {
    "text": "Charlie calls the Flying V.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The Ringer says Charlie calls the Flying V in D3, not in the first film, and gives the first film's first Flying V to a different player's rush. Nothing opened shows Charlie calling it in 1992. The same line is the house drink note.",
+   "verdict": "wrong",
+   "why": "The Ringer has Charlie calling the Flying V in D3, not the 1992 film, and nothing opened shows him calling it in the first one.",
    "source": "https://www.theringer.com/2021/03/24/movies/mighty-ducks-triple-deke-flying-v-knucklepuck-bash-brothers",
-   "fix": "Charlie's triple-deke special.",
+   "fix": "The Ducks fly the Flying V.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "The team becoming a family",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No team dinner or fish fry scene is shown in the plot or the sources opened. The line is part of the unprinted dish note for the fish fry.",
-   "source": "https://en.wikipedia.org/wiki/The_Mighty_Ducks_(film)",
-   "fix": "Crisp battered fish, chips and tartare",
+   "verdict": "wrong",
+   "why": "No team dinner or fish fry scene appears in the plot or transcript; the film's own line is about the Ducks flying in formation and sticking together.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=mighty-ducks-the",
+   "fix": "The team that sticks together",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

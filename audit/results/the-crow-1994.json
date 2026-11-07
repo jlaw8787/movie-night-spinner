@@ -21,22 +21,26 @@
   {
    "text": "Serve the mains when Darla cooks Sarah a proper breakfast.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The plot says Sarah and Darla reconcile the next morning. Nothing opened mentions Darla cooking breakfast.",
-   "source": "https://en.wikipedia.org/wiki/The_Crow_(1994_film)",
+   "verdict": "ok",
+   "why": "The transcript has Darla at the stove asking Sarah how she likes her eggs, over easy, with Sarah noting she is acting like mother of the year.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=crow-the",
    "fix": "Serve the mains when Sarah and Darla make up the morning after.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Darla finally cooking breakfast for her daughter",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Same gap as the cue. The reconciliation is in the plot, the breakfast is not.",
-   "source": "https://en.wikipedia.org/wiki/The_Crow_(1994_film)",
+   "verdict": "ok",
+   "why": "Same scene as the cue: Darla makes eggs for Sarah the morning after Eric purges the drugs from her, and the plot has the two reconcile.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=crow-the",
    "fix": "Darla and Sarah making up the morning after",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

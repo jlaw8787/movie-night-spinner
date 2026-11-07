@@ -15,23 +15,25 @@
   },
   {
    "printed": false,
-   "done": false,
+   "done": true,
    "text": "Sean owns the Taco Bells. Tacos it is.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The plot summary only says Sean Sr. is a wealthy businessman. The Taco Bell claim was not found in any source opened.",
-   "source": "https://en.wikipedia.org/wiki/The_Blind_Side_(film)",
-   "fix": "Sean's the wealthy businessman. Tacos it is."
+   "verdict": "ok",
+   "why": "SJ tells Michael his dad Sean Tuohy now owns like a million Taco Bells.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=blind-side-the",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Ferdinand the Bull pecan pie",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "No source opened mentions Ferdinand the Bull in the film, so the reference could not be confirmed.",
-   "source": "https://en.wikipedia.org/wiki/The_Blind_Side_(film)",
-   "fix": "Protective instincts pecan pie"
+   "verdict": "ok",
+   "why": "Leigh Anne reads Ferdinand the Bull with Michael, and she later calls him Ferdinand the Bull and thinks of the story while searching for him.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=blind-side-the",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

@@ -5,32 +5,37 @@
   {
    "text": "Mary's Christmas Eve pot roast",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "A food stylist interview says Mary's Christmas dinner is a glazed spiral ham with gravy, cornbread stuffing, creamed spinach and glazed carrots, then apple pie. Pot roast was not mentioned.",
-   "source": "https://www.edibleboston.com/blog/2023/12/15/the-holdoversat-st-marks-school",
-   "fix": "Mary's Christmas glazed spiral ham",
+   "verdict": "wrong",
+   "why": "Mary cooks a family-style Christmas dinner with all the trimmings, but it is the day after the Christmas Eve party. A food stylist says the main was glazed ham, and no pot roast appears.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-holdovers",
+   "fix": "Mary's family-style Christmas roast",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Mr Hunham's hot honey lemon tea",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "The article opened says Hunham drinks bourbon. Tea was not mentioned as his drink.",
-   "source": "https://www.edibleboston.com/blog/2023/12/15/the-holdoversat-st-marks-school",
-   "fix": "Mary's hot honey lemon tea",
+   "verdict": "wrong",
+   "why": "Hunham drinks bourbon and Jim Beam in the film. No tea scene is in the transcript or plot.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-holdovers",
+   "fix": "Barton Academy hot honey lemon tea",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Lydia's party plate, Hunham's rare night out.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The party food at Lydia's Christmas Eve party was not described in the pages opened, so devilled eggs could not be confirmed.",
-   "source": "https://www.edibleboston.com/blog/2023/12/15/the-holdoversat-st-marks-school",
-   "fix": "Lydia's party plate, the night Mary had too much.",
+   "verdict": "ok",
+   "why": "Miss Crane (Lydia) throws a Christmas Eve party that Hunham and Angus go to, and the line names no food.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-holdovers",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

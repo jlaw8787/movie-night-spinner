@@ -5,12 +5,14 @@
   {
    "text": "Serve the tea when Mrs Mills brings in the tray.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Mrs Mills is the housekeeper and serves the family, but none of the sources opened (Wikipedia, Wikiquote, a plot explainer) describe a scene where she brings in a tea tray.",
-   "source": "https://en.wikipedia.org/wiki/The_Others_(2001_film)",
-   "fix": "Serve the tea when Mrs Mills first arrives at the house looking for work.",
+   "verdict": "wrong",
+   "why": "The transcript has no tea tray; the tea moment is Mrs Mills asking Grace 'Shall I make us a nice cup of tea, ma'am?' once the truth about the house comes out.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-others",
+   "fix": "Serve the tea when Mrs Mills offers to make a nice cup of tea.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Supper by candlelight again, children. Mind the curtains, finish your potatoes, and no talking to anyone you can't see.",
@@ -31,22 +33,26 @@
   {
    "text": "Sleep tight. Mrs Mills checks the curtains twice.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "It is Grace who is strict about the curtains. The sources say the curtains vanish one morning and Mrs Mills and Tuttle seem unbothered. Nothing shows Mrs Mills checking them twice.",
-   "source": "https://www.highonfilms.com/the-others-2001-movie-ending-explained/",
-   "fix": "Sleep tight. Grace checks the curtains twice.",
+   "verdict": "wrong",
+   "why": "Grace is the one strict about the curtains; in the transcript she orders Mrs Mills to close them all, and nothing shows Mrs Mills checking them twice.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-others",
+   "fix": "Sleep tight. Mrs Mills closes every curtain first.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "The ring of keys at Grace's belt",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "The film does stress that doors are opened one at a time and closed behind, but no source opened mentions Grace's key ring. The menu's 'Every door locked' lines lean on it too.",
-   "source": "https://www.highonfilms.com/the-others-2001-movie-ending-explained/",
-   "fix": "The doors closed one at a time behind Grace",
+   "verdict": "wrong",
+   "why": "The transcript has Grace explaining fifteen keys for fifty doors, leaving a set with Mrs Mills and demanding it back, but no source shows the keys at her belt.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=the-others",
+   "fix": "Grace and her keys to all fifty doors",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

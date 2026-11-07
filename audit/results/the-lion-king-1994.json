@@ -21,12 +21,14 @@
   {
    "text": "Nala and the lionesses bring home dinner",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Nala is shown as a hunting lioness (she attacks Pumbaa and is found by Simba). Neither Wikipedia nor Wikiquote shows her and the lionesses bringing home dinner as a scene.",
+   "verdict": "wrong",
+   "why": "The film has the lionesses hunting under Sarabi, but when Scar is king Sarabi says there is no food and the herds have moved on, so no scene shows them bringing dinner home.",
    "source": "https://en.wikipedia.org/wiki/The_Lion_King",
-   "fix": "Nala the hunter, who nearly catches Pumbaa",
+   "fix": "Nala and the lionesses out hunting for the pride",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 16,

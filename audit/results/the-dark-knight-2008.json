@@ -21,12 +21,14 @@
   {
    "text": "Bruce turns up late, by helicopter.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The restaurant dinner with Rachel, Dent and Bruce is confirmed, but nothing opened mentions a helicopter arrival.",
-   "source": "https://en.wikipedia.org/wiki/The_Dark_Knight_(film)",
-   "fix": "Bruce turns up late with his ballerina date.",
+   "verdict": "wrong",
+   "why": "Bruce arrives at the restaurant with a Russian prima ballerina on his arm, but no source shows him turning up late or by helicopter.",
+   "source": "https://www.shmoop.com/study-guides/the-dark-knight/scene-3-summary.html",
+   "fix": "Bruce turns up with his ballerina date.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 15,

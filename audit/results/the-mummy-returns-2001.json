@@ -21,12 +21,14 @@
   {
    "text": "Jonathan's snack, eaten on the double decker.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The double-decker bus chase is real, but no source opened says Jonathan eats potted shrimp or anything else on it.",
-   "source": "https://culture.fandom.com/wiki/The_Mummy_Returns",
-   "fix": "Jonathan's kind of snack, for the bus ride",
+   "verdict": "wrong",
+   "why": "The transcript has the double-decker bus getaway, with Jonathan admitting it was his idea, but no scene shows him eating potted shrimp or any snack on it.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=mummy-returns-the",
+   "fix": "London fare for the double decker bus chase.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 16,
