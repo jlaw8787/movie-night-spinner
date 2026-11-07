@@ -1,68 +1,70 @@
 {
- "id": "Paddington (2014)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Mr Brown, I made you marmalade on toast. Aunt Lucy says a good breakfast makes everything easier.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Not a line Paddington says. The real written line is his luggage label, 'Please look after this bear. Thank you.' (both the IMDb synopsis and the Paddington 2 wiki page quote it). Who wrote the label is not stated in the sources opened, so the fix is credited to Aunt Lucy as the likeliest, which should be checked.",
-   "source": "https://m.imdb.com/title/tt1109624/synopsis",
-   "fix": "Please look after this bear. Thank you.",
-   "fix_note": {
-    "text": "Please look after this bear. Thank you.",
-    "by": "Aunt Lucy",
-    "kind": "note"
-   },
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Mr Gruber's elevenses Dundee cake",
-   "where": "dish-name",
-   "verdict": "unsure",
-   "why": "Mr Gruber is the antique shop owner, but none of the pages opened show him serving cake or elevenses. Dundee cake is a menu invention, not a scene.",
-   "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/Paddington",
-   "fix": "Windsor Gardens Dundee cake",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Mr Gruber's orange cocoa with cream",
-   "where": "dish-name",
-   "verdict": "unsure",
-   "why": "I recall Mr Gruber offering cocoa in his shop, but none of the pages opened mention it, and the orange and cream are invented.",
-   "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/Paddington",
-   "fix": "Mr Gruber's hot cocoa with cream",
-   "printed": true,
-   "done": false
+  "id": "Paddington (2014)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Mr Brown, I made you marmalade on toast. Aunt Lucy says a good breakfast makes everything easier.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Not a line Paddington says. The real written line is his luggage label, 'Please look after this bear. Thank you.' (both the IMDb synopsis and the Paddington 2 wiki page quote it). Who wrote the label is not stated in the sources opened, so the fix is credited to Aunt Lucy as the likeliest, which should be checked.",
+      "source": "https://m.imdb.com/title/tt1109624/synopsis",
+      "fix": "Please look after this bear. Thank you.",
+      "fix_note": {
+        "text": "Please look after this bear. Thank you.",
+        "by": "Aunt Lucy",
+        "kind": "note"
+      },
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Mr Gruber's elevenses Dundee cake",
+      "where": "dish-name",
+      "verdict": "wrong",
+      "why": "Mr Gruber does welcome the Browns just in time for elevenses at his shop, but no source or search shows Dundee cake or any food he serves, so the name cannot credit him with it.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=paddington",
+      "fix": "Antique shop elevenses Dundee cake",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    },
+    {
+      "text": "Mr Gruber's orange cocoa with cream",
+      "where": "dish-name",
+      "verdict": "wrong",
+      "why": "No source or search shows Mr Gruber making cocoa. Elevenses at his shop is real, so the name now points to that and drops the claim about him.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=paddington",
+      "fix": "Elevenses cocoa with orange and cream",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    }
+  ],
+  "checked_ok": 17,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 4,
+    "verdict": "A warm Windsor Gardens tearoom that gets the hat sandwich, the luggage label and the marmalade right.",
+    "missing": [
+      "The bathroom flood and Paddington surfing down the stairs (Browns' house)",
+      "Mrs Bird and her whisky (kitchen)",
+      "Millicent the taxidermist at the museum",
+      "The pigeons swarming the sandwich (climax)",
+      "Paddington's hard stare (Mr Brown)",
+      "The Lost and Found sign (station)"
+    ],
+    "ideas": [
+      "Swap 'Mr Gruber's elevenses Dundee cake' for 'Bathwater trifle' with the note 'Mr Brown wants a word about the flood.'",
+      "Swap the 'Mind the cake trolley' footer for 'Pigeons will be shooed. Sandwiches kept in hats.'",
+      "Swap 'Cloudy lemonade' note for 'Mrs Bird has checked it. No whisky.'",
+      "Add a Lost and Found stamp to the luggage label prop."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 17,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 4,
-  "look": 4,
-  "overall": 4,
-  "verdict": "A warm Windsor Gardens tearoom that gets the hat sandwich, the luggage label and the marmalade right.",
-  "missing": [
-   "The bathroom flood and Paddington surfing down the stairs (Browns' house)",
-   "Mrs Bird and her whisky (kitchen)",
-   "Millicent the taxidermist at the museum",
-   "The pigeons swarming the sandwich (climax)",
-   "Paddington's hard stare (Mr Brown)",
-   "The Lost and Found sign (station)"
-  ],
-  "ideas": [
-   "Swap 'Mr Gruber's elevenses Dundee cake' for 'Bathwater trifle' with the note 'Mr Brown wants a word about the flood.'",
-   "Swap the 'Mind the cake trolley' footer for 'Pigeons will be shooed. Sandwiches kept in hats.'",
-   "Swap 'Cloudy lemonade' note for 'Mrs Bird has checked it. No whisky.'",
-   "Add a Lost and Found stamp to the luggage label prop."
-  ],
-  "flat": false,
-  "done": false
- }
 }

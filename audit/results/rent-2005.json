@@ -5,23 +5,25 @@
   {
    "text": "Angel's Christmas tembleque",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The note says the wobbly coconut pudding is what Angel's family makes every Christmas. Nothing in the film or the sources I opened mentions Angel's family or this dish.",
+   "verdict": "wrong",
+   "why": "The film never mentions Angel's family or a Christmas pudding; on Christmas Day Angel and Collins visit the loft bearing gifts, so the note now says that.",
    "source": "https://en.wikipedia.org/wiki/Rent_(film)",
-   "fix": "The wobbly coconut pudding Angel would bring along on Christmas Day.",
+   "fix": "The wobbly coconut pudding, a gift for the loft on Christmas Day",
    "printed": false,
    "done": false,
-   "full": "The wobbly coconut pudding Angel's family makes every Christmas"
+   "full": "The wobbly coconut pudding Angel's family makes every Christmas",
+   "settled": "2026-11-08"
   },
   {
    "text": "Tonight only, free entry, bring a blanket",
    "where": "prop",
-   "verdict": "unsure",
-   "why": "The prop sits on a Christmas Eve 1989 sign, but the protest is on the night after Christmas Day, not Christmas Eve.",
+   "verdict": "wrong",
+   "why": "The film opens on Christmas Eve 1989, but Maureen's protest is staged after Christmas Day, not on Christmas Eve.",
    "source": "https://en.wikipedia.org/wiki/Rent_(film)",
-   "fix": "Two nights on, free entry, bring a blanket",
+   "fix": "The day after Christmas, free entry, bring a blanket",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 19,

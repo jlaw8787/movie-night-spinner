@@ -5,22 +5,23 @@
   {
    "text": "freshly shucked, the mermaid's favourite",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "I could not open a source showing Madison eating oysters or having a favourite food other than the lobster.",
-   "source": "https://www.filmsite.org/splash.html",
+   "verdict": "wrong",
+   "why": "No transcript, plot or search result shows Madison eating oysters or naming a favourite food. The only meal she eats on screen is the whole lobster.",
+   "source": "https://en.wikipedia.org/wiki/Splash_(film)",
    "fix": "freshly shucked, straight off the Cape",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "fuel for Madison's big-city shopping spree",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No source I opened covers a shopping scene.",
-   "source": "https://en.wikipedia.org/wiki/Splash_(film)",
-   "fix": "fuel for a big day in New York",
+   "verdict": "ok",
+   "why": "The script has Madison alone at Bloomingdale's, trying on outfits, so a shopping day in New York is in the film.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=splash",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 14,

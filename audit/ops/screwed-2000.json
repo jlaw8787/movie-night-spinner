@@ -3,15 +3,20 @@
  "ops": [
   {
    "old": "Miss Crock's cookies",
-   "new": "Cuff link cookies"
+   "new": "Cuff link cookies",
+   "done": true
   },
   {
    "old": "Crock cookie milkshake",
-   "new": "Willard's cookie milkshake"
+   "new": "Willard's cookie milkshake",
+   "done": true
   },
   {
    "old": "Kidnap the dog. Keep the cookies.",
-   "new": "Kidnap the dog. Skip the pie."
+   "new": "Kidnap the dog. Skip the pie.",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

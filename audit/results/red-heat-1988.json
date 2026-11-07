@@ -16,12 +16,13 @@
   {
    "text": "Pour the vodka when Danko orders his first drink in Chicago.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "No source I opened shows Danko ordering a drink in Chicago. The printed cue and data cue match.",
-   "source": "https://en.wikipedia.org/wiki/Red_Heat_(1988_film)",
-   "fix": "Pour the vodka when Danko and Ridzik swap watches at the airport.",
+   "verdict": "wrong",
+   "why": "Danko turns down a drink on arrival (asked if he is thirsty, he says no); the vodka moment is when a Chicago officer asks how Soviets deal with stress and he answers vodka.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=red-heat",
+   "fix": "Pour the vodka when Danko answers how Soviet cops handle stress.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 11,

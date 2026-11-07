@@ -21,12 +21,14 @@
   {
    "text": "Mary Robert's order at the bar across the street.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Mary Patrick and Mary Robert do follow Deloris to a bar across the street, but no source says what Mary Robert orders.",
-   "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/SisterAct",
-   "fix": "Mary Robert and Mary Patrick, in the bar across the street.",
+   "verdict": "wrong",
+   "why": "Mary Patrick and Mary Robert follow Deloris to the bar across the street, but no source says what Mary Robert orders. Line now only says she went.",
+   "source": "https://en.wikipedia.org/wiki/Sister_Act",
+   "fix": "Mary Robert's night out at the bar across the street.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

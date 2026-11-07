@@ -32,12 +32,13 @@
   {
    "text": "Susan Cooper working from a basement with rats and a bat",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "TV Tropes confirms the CIA basement is overrun with rats. None of the sources opened mention a bat.",
-   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/Spy",
-   "fix": "Susan Cooper working from a basement full of rats",
+   "verdict": "wrong",
+   "why": "Susan's own line says the CIA put her in a basement with a ceiling full of bats, and a later line has Nancy saying the bats have gone, so it is bats, not one bat. Rats are in the basement too.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=spy-2015",
+   "fix": "Susan Cooper working from a basement with rats and bats",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 17,

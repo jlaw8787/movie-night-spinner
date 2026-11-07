@@ -5,22 +5,24 @@
   {
    "text": "Serve the blue milk at the Lars homestead breakfast table.",
    "where": "cue-printed",
-   "verdict": "unsure",
-   "why": "The blue milk scene is Luke, Owen and Beru at the table before the twin sunset, which reads as the evening meal rather than breakfast. The plot page I read was vague and called it dinner or breakfast, so I could not settle it. The same word appears in the tagline and the data cue.",
-   "source": "https://starwars.archivum.wiki/article/Star_Wars:_Episode_IV_A_New_Hope",
+   "verdict": "wrong",
+   "why": "Owen tells Luke to clean the droids before dinner, and the blue milk scene is the family meal that follows the same day. Nothing in the film puts the milk at breakfast.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=star-wars",
    "fix": "Serve the blue milk at the Lars homestead dinner table.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Blue milk with breakfast.",
    "where": "tagline",
-   "verdict": "unsure",
-   "why": "Same breakfast question as the cue. The tagline should match the cue once that is settled.",
-   "source": "https://starwars.archivum.wiki/article/Star_Wars:_Episode_IV_A_New_Hope",
+   "verdict": "wrong",
+   "why": "Owen tells Luke to clean the droids before dinner, and the blue milk scene is the family meal that follows the same day. Nothing in the film puts the milk at breakfast.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=star-wars",
    "fix": "Blue milk with dinner.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "\"I'll eat in the cockpit, thanks. Chewie gets the leftovers, and he always wants the leftovers.\"",
