@@ -1,48 +1,62 @@
 {
- "id": "Rocky (1976)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Hey Rock, sit down and eat. Skip the meat locker today, Adrian made a real dinner.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Not a Paulie line. The Wikiquote page has no such line. In the Thanksgiving scene Paulie rips a leg off Adrian's turkey and tosses the bird out the back door.",
-   "source": "https://www.denofgeek.com/movies/rocky-movies-thanksgiving-importance/",
-   "fix": "Rock, put the beef down. Adrian cooked a turkey, and I'm taking a leg.",
-   "printed": true,
-   "fix_note": {
-    "text": "Rock, put the beef down. Adrian cooked a turkey, and I'm taking a leg.",
-    "by": "Paulie",
-    "kind": "note"
-   },
-   "done": true,
-   "applied": "2026-11-07"
+  "id": "Rocky (1976)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Hey Rock, sit down and eat. Skip the meat locker today, Adrian made a real dinner.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Not a Paulie line. The Wikiquote page has no such line. In the Thanksgiving scene Paulie rips a leg off Adrian's turkey and tosses the bird out the back door.",
+      "source": "https://www.denofgeek.com/movies/rocky-movies-thanksgiving-importance/",
+      "fix": "Rock, put the beef down. Adrian cooked a turkey, and I'm taking a leg.",
+      "printed": true,
+      "fix_note": {
+        "text": "Rock, put the beef down. Adrian cooked a turkey, and I'm taking a leg.",
+        "by": "Paulie",
+        "kind": "note"
+      },
+      "done": true,
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "Right gym, steps and turtles, but the food is generic Philly and the scoreboard layout feels like a sports template.",
+    "missing": [
+      "Raw eggs gulped from a tall glass (training montage)",
+      "Adrian's job at the J&M Tropical Fish pet shop",
+      "The ice rink date, with the rink closed for Rocky and Adrian",
+      "Apollo Creed's Uncle Sam and George Washington entrance (fight night)",
+      "Gazzo the loan shark and Rocky's collector job",
+      "To you it's Thanksgiving, to me it's Thursday (Rocky)"
+    ],
+    "ideas": [
+      "Swap the note under 'Hot cocoa with whipped cream' for 'To you it's Thanksgiving, to me it's Thursday.'",
+      "Swap 'Philly soft pretzels with beer cheese' for 'Uncle Sam star pretzels', named for Apollo's entrance",
+      "Swap the 'Training shake' note for 'Five raw eggs, hold the eggs' so the training montage gag lands",
+      "Swap 'Italian Market antipasto' for 'J&M Tropical Fish tasting plate' (Adrian's pet shop)"
+    ],
+    "flat": true,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Yo, Adrian!",
+      "To you it's Thanksgiving, to me it's Thursday",
+      "Raw eggs and the meat locker",
+      "Running up the museum steps",
+      "Apollo's George Washington and Uncle Sam entrance",
+      "Cuff and Link"
+    ],
+    "changed": [
+      "Signed note is now Rocky's real Thursday line",
+      "Pretzels renamed for Apollo's Uncle Sam entrance, with a note to match",
+      "Turtle clusters renamed for Cuff and Link"
+    ]
   }
- ],
- "checked_ok": 12,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.4,
-  "verdict": "Right gym, steps and turtles, but the food is generic Philly and the scoreboard layout feels like a sports template.",
-  "missing": [
-   "Raw eggs gulped from a tall glass (training montage)",
-   "Adrian's job at the J&M Tropical Fish pet shop",
-   "The ice rink date, with the rink closed for Rocky and Adrian",
-   "Apollo Creed's Uncle Sam and George Washington entrance (fight night)",
-   "Gazzo the loan shark and Rocky's collector job",
-   "To you it's Thanksgiving, to me it's Thursday (Rocky)"
-  ],
-  "ideas": [
-   "Swap the note under 'Hot cocoa with whipped cream' for 'To you it's Thanksgiving, to me it's Thursday.'",
-   "Swap 'Philly soft pretzels with beer cheese' for 'Uncle Sam star pretzels', named for Apollo's entrance",
-   "Swap the 'Training shake' note for 'Five raw eggs, hold the eggs' so the training montage gag lands",
-   "Swap 'Italian Market antipasto' for 'J&M Tropical Fish tasting plate' (Adrian's pet shop)"
-  ],
-  "flat": true,
-  "done": false
- }
 }

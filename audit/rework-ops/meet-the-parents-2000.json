@@ -1,0 +1,38 @@
+{
+ "id": "Meet the Parents (2000)",
+ "ops": [
+  {
+   "old": "the pool volleyball game Greg takes too far",
+   "new": "Chipotle chicken nachos, post pool volleyball"
+  },
+  {
+   "old": "the dinner where Greg says grace",
+   "new": "Roast sirloin, with grace said by Greg"
+  },
+  {
+   "old": "Silky baked lemon tart in a sweet shortcrust shell, dusted with sugar",
+   "new": "Silky lemon tart, dusted with sugar. Greg burned the altar"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Jack's strict family rules",
+    "Mr. Jinx, and the spray-painted stray",
+    "The lie detector test",
+    "Grandma's urn, used as kitty litter",
+    "Greg Focker, the name"
+   ]
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "Circle of Trust",
+    "lines": [
+     "Byrnes family only",
+     "Focker pending"
+    ]
+   }
+  }
+ ]
+}

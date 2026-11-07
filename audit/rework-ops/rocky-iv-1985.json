@@ -1,0 +1,27 @@
+{
+ "id": "Rocky IV (1985)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I must break you.",
+    "by": "Ivan Drago",
+    "kind": "quote"
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Paulie's birthday robot",
+    "Drago's machines and lab",
+    "Logs and a sled in the Siberian snow",
+    "Apollo's entrance to Living in America",
+    "Rocky's speech to Moscow: everybody can change"
+   ]
+  },
+  {
+   "old": "After the log carry through Siberian snow.",
+   "new": "After the roadwork over the Siberian mountains."
+  }
+ ]
+}

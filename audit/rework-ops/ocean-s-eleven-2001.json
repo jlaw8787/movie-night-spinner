@@ -1,0 +1,31 @@
+{
+ "id": "Ocean's Eleven (2001)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Did you guys get a group rate or something?",
+    "by": "Reuben Tishkoff",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Paper thin fried potato chips tossed with truffle salt and parmesan",
+   "new": "Paper thin fried potato chips, truffle salt and parmesan. Take a pinch."
+  },
+  {
+   "old": "Saul, the old con man coaxed out of retirement",
+   "new": "Chicken soup and matzo balls. Saul makes ten."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Basher and the pinch",
+    "Yen inside the vault",
+    "Linus the pickpocket",
+    "The fake SWAT team",
+    "Saul, the old pro"
+   ]
+  }
+ ]
+}

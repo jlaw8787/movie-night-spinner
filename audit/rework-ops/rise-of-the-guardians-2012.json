@@ -1,0 +1,35 @@
+{
+ "id": "Rise of the Guardians (2012)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Still waiting for cookies!",
+    "by": "North",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Jack Frost's frosty blue slushie",
+   "new": "Jack's Snow Day frosty blue slushie"
+  },
+  {
+   "old": "Bunny's from Down Under, and he won't let you forget it",
+   "new": "Bunny's from Down Under. \"You don't wanna race a rabbit, mate.\""
+  },
+  {
+   "old": "Warms the yetis on the toy line.",
+   "new": "Warms the yetis. Everyone loves the sleigh!"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Jack Frost and his staff",
+    "Pitch Black and his nightmares",
+    "Sandman's golden dream sand",
+    "Tooth and her lateral incisor",
+    "Bunny's warren"
+   ]
+  }
+ ]
+}

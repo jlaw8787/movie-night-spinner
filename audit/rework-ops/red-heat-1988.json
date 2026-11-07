@@ -1,0 +1,35 @@
+{
+ "id": "Red Heat (1988)",
+ "ops": [
+  {
+   "old": "Medovik honey cake",
+   "new": "Watch swap medovik"
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Captain Danko does not smile. Eat your eggs and keep your hands where I can see them.",
+    "by": "Art Ridzik",
+    "kind": "note"
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Danko's Moscow banya fight at the opening",
+    "Everyone knows the Magnum",
+    "Popping the cleanheads",
+    "The wild bus versus bus chase",
+    "Danko and Ridzik swap watches"
+   ]
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Chilled kvass",
+    "note": "Not vodka, which Danko says cures stress.",
+    "alc": true
+   }
+  }
+ ]
+}

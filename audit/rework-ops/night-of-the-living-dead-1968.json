@@ -1,0 +1,30 @@
+{
+ "id": "Night of the Living Dead (1968)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "You can be the boss down there. I'm boss up here.",
+    "by": "Ben",
+    "kind": "quote"
+   }
+  },
+  {
+   "set": "flavour.labels",
+   "value": {
+    "s": "Cupboard Snacks",
+    "m": "Upstairs Mains",
+    "w": "Pantry Sweets",
+    "d": "Long Night Drinks",
+    "t": "Boarded Up Supper",
+    "n": "Said at the farmhouse",
+    "b": "Earlier tonight",
+    "call": "Newsflash"
+   }
+  },
+  {
+   "old": "Ben pulls up at the farmhouse in a truck",
+   "new": "Ben found his truck at Beekman's Diner"
+  }
+ ]
+}

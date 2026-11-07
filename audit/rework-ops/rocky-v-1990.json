@@ -1,0 +1,31 @@
+{
+ "id": "Rocky V (1990)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Sue me for what?",
+    "by": "Rocky Balboa",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Serve the snacks when the Balboas pull up outside their old house in Kensington.",
+   "new": "Serve the snacks when Tommy and Duke walk into the local bar with a TV crew."
+  },
+  {
+   "old": "Christmas Eve back in the old house, and the old recipes too",
+   "new": "Christmas dinner at the Balboa mansion, and the old recipes too"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Mickey's old gym, run down till Rocky reopens it",
+    "Tommy Gunn, the kid from Oklahoma",
+    "Christmas dinner at the Balboa mansion",
+    "The accountant who lost it all",
+    "The street fight on the old block"
+   ]
+  }
+ ]
+}

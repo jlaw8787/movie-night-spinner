@@ -1,0 +1,36 @@
+{
+ "id": "Oliver & Company (1988)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Whoa, chill, man. I don't eat cats, too much fur!",
+    "by": "Dodger",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Crisp butter cookies cut into cat shapes and iced",
+   "new": "Iced cat-shaped butter cookies for Jenny's birthday party"
+  },
+  {
+   "old": "Griddled franks in steamed buns with sauerkraut, mustard, onion and relish",
+   "new": "Franks liberated from Louie, in steamed buns with sauerkraut, mustard, onion and relish"
+  },
+  {
+   "old": "Mini hot dogs glazed sticky with Dijon and honey",
+   "new": "Mini hot dogs glazed sticky with Dijon and honey, from Louie's cart"
+  },
+  {
+   "set": "prop",
+   "value": {
+    "kind": "slip",
+    "title": "Fagin's Debt Notice",
+    "lines": [
+     "Owed to Sykes: a lot",
+     "Three sunrises, three sunsets"
+    ]
+   }
+  }
+ ]
+}

@@ -1,57 +1,72 @@
 {
- "id": "Rise of the Guardians (2012)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Serve the sweets when the Easter Bunny's egg hunt begins.",
-   "where": "cue",
-   "verdict": "wrong",
-   "why": "Pitch's Nightmares smash the Easter eggs and no hunt starts on screen; the Guardians travel to Bunny's Warren and help colour the eggs.",
-   "source": "https://en.wikipedia.org/wiki/Rise_of_the_Guardians",
-   "fix": "Serve the sweets when the Guardians reach Bunny's Warren to colour the Easter eggs.",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Sbiten, hot honey and spice",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "No sleigh test with Phil is shown; the yetis are seen working the toy line in North's workshop when Jack meets Phil.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rise-of-the-guardians",
-   "fix": "Warms the yetis on the toy line.",
-   "printed": true,
-   "done": true,
-   "full": "Warms the yetis after Phil's sleigh test.",
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Rise of the Guardians (2012)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the sweets when the Easter Bunny's egg hunt begins.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "Pitch's Nightmares smash the Easter eggs and no hunt starts on screen; the Guardians travel to Bunny's Warren and help colour the eggs.",
+      "source": "https://en.wikipedia.org/wiki/Rise_of_the_Guardians",
+      "fix": "Serve the sweets when the Guardians reach Bunny's Warren to colour the Easter eggs.",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Sbiten, hot honey and spice",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "No sleigh test with Phil is shown; the yetis are seen working the toy line in North's workshop when Jack meets Phil.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rise-of-the-guardians",
+      "fix": "Warms the yetis on the toy line.",
+      "printed": true,
+      "done": true,
+      "full": "Warms the yetis after Phil's sleigh test.",
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 14,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 3,
+    "overall": 3.2,
+    "verdict": "A cosy workshop menu with good food names, but the poster shows up letterboxed and it leaves out the film's big set pieces.",
+    "missing": [
+      "Jack's sleigh ride and 'Everyone loves the sleigh'",
+      "Tooth's palace and the baby teeth memories",
+      "Bunny's warren and the egg painting",
+      "Jack making a snow day for Jamie",
+      "Sandy's dream sand manta rays",
+      "Jack becoming Guardian of Fun"
+    ],
+    "ideas": [
+      "Swap 'Iced gingerbread yetis and elves' for 'Baby tooth shortbread' as a nod to Tooth's palace.",
+      "Add 'Still waiting for cookies!' as North's note.",
+      "Swap 'Jack Frost's frosty blue slushie' for a 'Snow day' slushie to point at Jack's best scene.",
+      "Crop the poster to fill its frame so the black bars go."
+    ],
+    "flat": true,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "SNOW DAY!!",
+      "Still waiting for cookies! (North)",
+      "You don't wanna race a rabbit, mate (Bunny)",
+      "Everyone loves the sleigh (sleigh ride)",
+      "Tooth and the adorable lateral incisor"
+    ],
+    "changed": [
+      "Signed note is now North's real line, Still waiting for cookies!",
+      "Slushie renamed for Jack's Snow day",
+      "Lamb chops note carries Bunny's race a rabbit line",
+      "Sbiten note nods to the sleigh ride",
+      "Wink: Tooth and her lateral incisor replaces Jamie's lost tooth"
+    ]
   }
- ],
- "checked_ok": 14,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
-  "look": 3,
-  "overall": 3.2,
-  "verdict": "A cosy workshop menu with good food names, but the poster shows up letterboxed and it leaves out the film's big set pieces.",
-  "missing": [
-   "Jack's sleigh ride and 'Everyone loves the sleigh'",
-   "Tooth's palace and the baby teeth memories",
-   "Bunny's warren and the egg painting",
-   "Jack making a snow day for Jamie",
-   "Sandy's dream sand manta rays",
-   "Jack becoming Guardian of Fun"
-  ],
-  "ideas": [
-   "Swap 'Iced gingerbread yetis and elves' for 'Baby tooth shortbread' as a nod to Tooth's palace.",
-   "Add 'Still waiting for cookies!' as North's note.",
-   "Swap 'Jack Frost's frosty blue slushie' for a 'Snow day' slushie to point at Jack's best scene.",
-   "Crop the poster to fill its frame so the black bars go."
-  ],
-  "flat": true,
-  "done": false
- }
 }

@@ -1,0 +1,27 @@
+{
+ "id": "Road House (1989)",
+ "ops": [
+  {
+   "old": "Serve the snacks when Dalton takes over the Double Deuce.",
+   "new": "Serve the snacks when Dalton gives the bouncers his three rules."
+  },
+  {
+   "old": "the rowdy roadhouse bar",
+   "new": "Tossed hot. Pain don't hurt."
+  },
+  {
+   "old": "Buttery yellow cake topped with a sweet cream cheese layer",
+   "new": "Buttery yellow cake, cream cheese layer. Not the big white mint."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "That guy at the end of the bar is Dalton",
+    "Brad Wesley's trophy room",
+    "Wade Garrett, Dalton's mentor",
+    "Jasper, Missouri",
+    "Dalton's philosophy degree"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "id": "Police Academy (1984)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Let's have lunch, shall we?",
+    "by": "Commandant Lassard",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Hightower, the cadet who tips a car over by hand",
+   "new": "Crumbed chicken with tomato and cheese. Hightower was a florist once."
+  },
+  {
+   "old": "Vanilla slab cake covered in buttercream, with a blue badge piped on top",
+   "new": "Vanilla slab cake with buttercream and a blue badge, for the bravery awards."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Jones and his mouth sound effects",
+    "Tackleberry and his love of guns",
+    "Fackler's apple that starts the riot",
+    "Lassard's lectern and the hidden surprise",
+    "Mahoney trying to get thrown out and failing"
+   ]
+  }
+ ]
+}

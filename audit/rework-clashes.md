@@ -48,3 +48,14 @@ Fixed layout words that don't suit the film. Fix with a per-film setting or a la
 - Unverified: Saturday Night Fever cue (Stayin' Alive over the opening strut), Rudy sack.
 - Shaft (1971): house line was a song lyric, op swaps it for the song title.
 - Mad Max (1979): old "Fried dim sims" meat flag left in place.
+- Pretty in Pink (1986), club: stage wording on a record shop.
+- Reservoir Dogs (1992), precinct: CASE FILE, DUTY ROSTER, SURVEILLANCE and shift labels.
+- Unverified: Popstar "wolf free" pun, Red One snow globe cookies (visual joke), MI2 cue (Seville flamenco party).
+- Robin Hood (1973), campfire: "Bugle call", "Tonight's feature" (minor).
+- Rocketman (2019), club: only first wink prints in footer.
+- Rocky (1976), stadium: baseball "Scoreboard", "Concession Scorecard" on a boxing film.
+- Check: Office Christmas Party "camembert" on Mary's cheeseboard (film names Gouda). F29 notes run long: length check after apply.
+- Night of the Living Dead (1968), campfire: colour poster and rustic camp look on a black and white film; "Ask the cook about" footer. Check: Vacation "Eddie's Kansas brisket bites" (no source for brisket).
+- Phar Lap (1983), pub: cents prices wrong for 1930 Australia (pounds, shillings, pence).
+- Curse of the Black Pearl (2003), galley: "Laser issue, fleet standard", "Ration", "Form G-882", "Eat what's issued" read navy, not pirate.
+- Pocahontas (1995), campfire: "Form CM 95" footer.

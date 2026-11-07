@@ -1,0 +1,38 @@
+{
+ "id": "Paranormal Activity (2007)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Did you go run and get the camera first?",
+    "by": "Katie Featherston",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "the footprints in the powder on the hallway floor",
+   "new": "the baby powder footprints that lead to the attic hatch"
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Night Log",
+    "lines": [
+     "Bedroom camera, 24 hours",
+     "Katie by the bed, two hours"
+    ]
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The Ouija board Micah promised not to buy",
+    "Powder on the floor for footprints",
+    "The spirit board",
+    "Dr Fredrichs, the psychic",
+    "The timestamp rolling in the corner"
+   ]
+  }
+ ]
+}

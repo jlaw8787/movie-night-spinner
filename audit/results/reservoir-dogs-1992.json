@@ -1,60 +1,75 @@
 {
-  "id": "Reservoir Dogs (1992)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Fine, I'll pay for my own burger. But nobody's splitting the bill eight ways, I'm not doing the maths.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Not Mr. Pink's words. The diner is a breakfast scene, there is no burger, and Pink's stand is that he doesn't tip. The real lines are 'I don't tip' and 'I don't tip because society says I have to'.",
-      "source": "https://en.wikiquote.org/wiki/Reservoir_Dogs",
-      "fix": "Order what you like, I'm on coffee. I don't tip because society says I have to, so don't look at me.",
-      "printed": true,
-      "done": true,
-      "fix_note": {
-        "text": "Order what you like, I'm on coffee. I don't tip because society says I have to, so don't look at me.",
-        "by": "Mr. Pink",
-        "kind": "note"
-      },
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Joe Cabot's big breakfast plate",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "The note says Joe's big breakfast comes before he hands out the colour names. In the film Joe hands out the names before the heist, and the crew already use them at the diner (Mr. Pink, Mr. Orange).",
-      "source": "https://en.wikipedia.org/wiki/Reservoir_Dogs",
-      "fix": "Joe's big breakfast, the morning of the job",
-      "printed": true,
-      "done": true,
-      "full": "Joe's big breakfast before he hands out the colour names",
-      "applied": "2026-11-07"
-    }
-  ],
-  "checked_ok": 13,
-  "vibe": {
-    "world": 3,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 3,
-    "overall": 3,
-    "verdict": "A police case file layout does not fit a heist film that is mostly about the crew, and the note falls flat next to the sharp tipping scene.",
-    "missing": [
-      "Mr. Blonde dancing to 'Stuck in the Middle with You'",
-      "The 'Like a Virgin' breakfast chat",
-      "Mr. Orange bleeding in the back of the car",
-      "The Mexican standoff",
-      "Nice Guy Eddie and Joe Cabot",
-      "The warehouse and the K-Billy radio"
-    ],
-    "ideas": [
-      "Swap 'Fresh-squeezed grapefruit juice' for 'Mr. Blonde's straight razor lemonade' as a nod to the ear scene.",
-      "Change the note to a real Pink line: 'I don't tip because society says I have to.'",
-      "Swap 'Diner lemon meringue pie' for 'Like a Virgin custard tart' as a nod to the Madonna chat.",
-      "Move the layout to a diner or warehouse sheet so the black suits and skinny ties sit in the right place."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Reservoir Dogs (1992)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Fine, I'll pay for my own burger. But nobody's splitting the bill eight ways, I'm not doing the maths.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not Mr. Pink's words. The diner is a breakfast scene, there is no burger, and Pink's stand is that he doesn't tip. The real lines are 'I don't tip' and 'I don't tip because society says I have to'.",
+   "source": "https://en.wikiquote.org/wiki/Reservoir_Dogs",
+   "fix": "Order what you like, I'm on coffee. I don't tip because society says I have to, so don't look at me.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Order what you like, I'm on coffee. I don't tip because society says I have to, so don't look at me.",
+    "by": "Mr. Pink",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Joe Cabot's big breakfast plate",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The note says Joe's big breakfast comes before he hands out the colour names. In the film Joe hands out the names before the heist, and the crew already use them at the diner (Mr. Pink, Mr. Orange).",
+   "source": "https://en.wikipedia.org/wiki/Reservoir_Dogs",
+   "fix": "Joe's big breakfast, the morning of the job",
+   "printed": true,
+   "done": true,
+   "full": "Joe's big breakfast before he hands out the colour names",
+   "applied": "2026-11-07"
   }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3,
+  "verdict": "A police case file layout does not fit a heist film that is mostly about the crew, and the note falls flat next to the sharp tipping scene.",
+  "missing": [
+   "Mr. Blonde dancing to 'Stuck in the Middle with You'",
+   "The 'Like a Virgin' breakfast chat",
+   "Mr. Orange bleeding in the back of the car",
+   "The Mexican standoff",
+   "Nice Guy Eddie and Joe Cabot",
+   "The warehouse and the K-Billy radio"
+  ],
+  "ideas": [
+   "Swap 'Fresh-squeezed grapefruit juice' for 'Mr. Blonde's straight razor lemonade' as a nod to the ear scene.",
+   "Change the note to a real Pink line: 'I don't tip because society says I have to.'",
+   "Swap 'Diner lemon meringue pie' for 'Like a Virgin custard tart' as a nod to the Madonna chat.",
+   "Move the layout to a diner or warehouse sheet so the black suits and skinny ties sit in the right place."
+  ],
+  "flat": true,
+  "done": false,
+  "rework": "2026-11-08",
+  "iconic": [
+   "The diner tipping argument, I don't tip because society says I have to (cue, signed note, sign)",
+   "Mr. Brown on Like a Virgin (dessert name)",
+   "Mr. Blonde, the razor and Stuck in the Middle with You (wink)",
+   "K-Billy's Super Sounds of the Seventies (house drink)",
+   "Colours not names, Mr. Pink Mr. White Mr. Orange (sign, prop, venue)",
+   "Mexican standoff and Are you gonna bark all day little doggie (not used, no printed slot)"
+  ],
+  "changed": [
+   "Signed note is now Mr. Pink's real line, I don't tip because society says I have to",
+   "Lemon meringue pie renamed Like a Virgin lemon meringue pie",
+   "Second On file wink now Mr. Blonde and Stuck in the Middle with You",
+   "K-Billy house note now says all weekend, as the DJ does"
+  ]
+ }
 }

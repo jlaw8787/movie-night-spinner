@@ -1,0 +1,41 @@
+{
+ "id": "Peter Pan (1953)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "There it is, Wendy! The second star to the right and straight on till morning.",
+    "by": "Peter Pan",
+    "kind": "quote"
+   }
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "Flight Card",
+    "lines": [
+     "Fairy dust, one pinch each",
+     "Straight on till morning"
+    ]
+   }
+  },
+  {
+   "old": "Beef chuck stewed with onion, carrot, allspice and molasses",
+   "new": "Beef chuck stewed with allspice and molasses, no surprise package inside"
+  },
+  {
+   "old": "Buttered white bread covered in sprinkles, cut into triangles",
+   "new": "Buttered white bread covered in sprinkles, cut into triangles. Think a wonderful thought."
+  },
+  {
+   "set": "flavour.labels",
+   "value": {
+    "s": "Second Star Snacks",
+    "m": "Neverland Mains",
+    "w": "Fairy Dust Treats",
+    "d": "Nursery Drinks"
+   }
+  }
+ ]
+}

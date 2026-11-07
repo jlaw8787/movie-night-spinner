@@ -1,45 +1,58 @@
 {
- "id": "Rocketman (2019)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Whiskey sour",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "Bernie is the lyricist, as the film and plot show, but nothing shows him ordering or drinking a whiskey sour, so the note now says only what the film does.",
-   "source": "https://en.wikipedia.org/wiki/Rocketman_(film)",
-   "fix": "Bernie writes the lyrics, Elton the tune.",
-   "printed": false,
-   "done": true,
-   "full": "Bernie's order while he scribbles lyrics.",
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Rocketman (2019)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Whiskey sour",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "Bernie is the lyricist, as the film and plot show, but nothing shows him ordering or drinking a whiskey sour, so the note now says only what the film does.",
+      "source": "https://en.wikipedia.org/wiki/Rocketman_(film)",
+      "fix": "Bernie writes the lyrics, Elton the tune.",
+      "printed": false,
+      "done": true,
+      "full": "Bernie's order while he scribbles lyrics.",
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 16,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "A glam club menu that suits the Troubadour night, but the poster is the Dodger Stadium shot and most of the film's costumes are missing.",
+    "missing": [
+      "The orange Dodger Stadium baseball outfit",
+      "The devil costume at the start",
+      "Elton diving into the pool",
+      "Writing 'Your Song' in the kitchen",
+      "The Pinball Wizard scene",
+      "John Reid and the party at the big house"
+    ],
+    "ideas": [
+      "Swap 'Platform boots knickerbocker glory' for 'Dodger Stadium orange sundae' as a nod to the baseball costume.",
+      "Swap 'Opening night tequila sunrise' for 'The Bitch is Back red devil punch' as the drink.",
+      "Add 'Pool party prawn rolls' and bring in the pool dive.",
+      "Swap the Dodger Stadium poster for a Troubadour still so the cover matches August 1970."
+    ],
+    "flat": true,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "The devil's outfit at group therapy",
+      "Troubadour debut and Crocodile Rock",
+      "Writing Your Song with Bernie",
+      "Dodger Stadium",
+      "Bernie and the lyrics"
+    ],
+    "changed": [
+      "Footer wink is now the flamboyant devil's outfit (opening scene)",
+      "Kiev note: Bernie and the words to Your Song",
+      "Knickerbocker glory renamed for Dodger Stadium"
+    ]
   }
- ],
- "checked_ok": 16,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.4,
-  "verdict": "A glam club menu that suits the Troubadour night, but the poster is the Dodger Stadium shot and most of the film's costumes are missing.",
-  "missing": [
-   "The orange Dodger Stadium baseball outfit",
-   "The devil costume at the start",
-   "Elton diving into the pool",
-   "Writing 'Your Song' in the kitchen",
-   "The Pinball Wizard scene",
-   "John Reid and the party at the big house"
-  ],
-  "ideas": [
-   "Swap 'Platform boots knickerbocker glory' for 'Dodger Stadium orange sundae' as a nod to the baseball costume.",
-   "Swap 'Opening night tequila sunrise' for 'The Bitch is Back red devil punch' as the drink.",
-   "Add 'Pool party prawn rolls' and bring in the pool dive.",
-   "Swap the Dodger Stadium poster for a Troubadour still so the cover matches August 1970."
-  ],
-  "flat": true,
-  "done": false
- }
 }

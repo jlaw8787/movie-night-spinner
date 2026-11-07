@@ -1,0 +1,31 @@
+{
+ "id": "Return of the Jedi (1983)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I do believe they think I am some sort of god.",
+    "by": "C-3PO",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Serve the snacks at the Ewok village celebration.",
+   "new": "Serve the snacks when Luke says, \"Free us or die.\""
+  },
+  {
+   "old": "Jabba's sail barge smoked brisket",
+   "new": "Jabba's Bantha fodder smoked brisket"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Han thawed from carbonite",
+    "Speeder bike chase in the forest",
+    "Luke and the rancor",
+    "Admiral Ackbar and the trap",
+    "The second Death Star"
+   ]
+  }
+ ]
+}

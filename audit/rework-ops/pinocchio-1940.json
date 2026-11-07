@@ -1,0 +1,31 @@
+{
+ "id": "Pinocchio (1940)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "And remember, nobody eats a bite, until I find him.",
+    "by": "Geppetto",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Geppetto fishing inside Monstro the whale",
+   "new": "Roast snapper with lemon, like the fish Geppetto goes after inside Monstro."
+  },
+  {
+   "old": "the fairground on Pleasure Island",
+   "new": "Cinnamon mini doughnuts, all you can eat, just like Pleasure Island."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Jiminy Cricket as official conscience",
+    "Figaro the cat and Cleo the goldfish",
+    "Stromboli's stage, no strings",
+    "Monstro the giant whale",
+    "The nose that grows with every lie"
+   ]
+  }
+ ]
+}

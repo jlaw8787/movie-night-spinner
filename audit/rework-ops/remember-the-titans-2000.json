@@ -1,0 +1,31 @@
+{
+ "id": "Remember the Titans (2000)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Attitude reflects leadership, Captain.",
+    "by": "Julius Campbell",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Serve the main after the big game.",
+   "new": "Serve the main after the 3am Gettysburg run."
+  },
+  {
+   "old": "Sunshine, the new kid from California",
+   "new": "Fish tacos for Sunshine, from Huntington Beach"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The 3am run to Gettysburg",
+    "Pre-game chants in the locker room",
+    "What wins games? Defense!",
+    "Who's your daddy",
+    "This is no democracy"
+   ]
+  }
+ ]
+}

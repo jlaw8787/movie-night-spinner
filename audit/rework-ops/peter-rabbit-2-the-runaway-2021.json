@@ -1,0 +1,41 @@
+{
+ "id": "Peter Rabbit 2: The Runaway (2021)",
+ "ops": [
+  {
+   "old": "Honey oat and almond crunch mix",
+   "new": "Dried fruit heist crunch mix"
+  },
+  {
+   "old": "Baked honey oat clusters with almonds, seeds and dried fruit",
+   "new": "Baked honey oat clusters with almonds, seeds and dried fruit. Lasts forever."
+  },
+  {
+   "set": "cue",
+   "value": "Serve the snacks when Barnabas names the target: the dried fruit."
+  },
+  {
+   "old": "Thomas's pick. No shady rabbits allowed.",
+   "new": "Plant-based, so nobody has to chase anybody."
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Market Slip",
+    "lines": [
+     "One basket of veg",
+     "Dried fruit, lasts forever"
+    ]
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Whiskers and his pincushion map of the market",
+    "Thomas and Bea's wedding",
+    "Peter's book portrayal",
+    "The farmers market heist"
+   ]
+  }
+ ]
+}

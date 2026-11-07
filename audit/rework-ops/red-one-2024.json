@@ -1,0 +1,42 @@
+{
+ "id": "Red One (2024)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Someone took Nick. We're gonna find him.",
+    "by": "Callum Drift",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Serve the snacks when the search for Santa begins.",
+   "new": "Serve the snacks when Callum shouts, \"We've got snowmen!\""
+  },
+  {
+   "old": "Maple pecan pretzel crunch",
+   "new": "Naughty List maple pecan pretzel crunch"
+  },
+  {
+   "old": "Code Red velvet crinkle cookies",
+   "new": "Snow globe red velvet crinkle cookies"
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Cardamom double espresso",
+    "note": "For Callum's one last Christmas run."
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "MORA, the secret agency",
+    "Red One, Santa's code name",
+    "Callum Drift, head of Santa's security",
+    "Krampus, who made the Naughty List",
+    "Grýla and her Glaskäfig snow globes"
+   ]
+  }
+ ]
+}

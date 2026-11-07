@@ -1,0 +1,31 @@
+{
+ "id": "Pirates of the Caribbean: Dead Men Tell No Tales (2017)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I wish I could do it myself, but dead men tell no tales.",
+    "by": "Captain Salazar",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Carina reading the stars to find the Trident",
+   "new": "Crisp cheddar crackers, for Carina reading the stars to find the Trident."
+  },
+  {
+   "old": "Will and Elizabeth reunited at the very end",
+   "new": "Crackling pork belly, for Will and Elizabeth reunited at the very end."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The bank vault dragged through town",
+    "The Black Pearl trapped in a bottle",
+    "Ghost sharks of the Devil's Triangle",
+    "Scrum asking where the dosh is",
+    "Carina and her star map"
+   ]
+  }
+ ]
+}

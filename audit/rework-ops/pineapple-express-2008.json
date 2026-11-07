@@ -1,0 +1,35 @@
+{
+ "id": "Pineapple Express (2008)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I had two ideas. Nowhere and Quizno's.",
+    "by": "Saul Silver",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Angie's family pineapple upside-down cake",
+   "new": "Red's cat's pineapple upside-down cake"
+  },
+  {
+   "old": "Dale's process server lunch, between subpoenas.",
+   "new": "Talk radio killed the car battery. Cool off."
+  },
+  {
+   "old": "For the morning after the night in the woods.",
+   "new": "Breakfast at the diner with Red after the lair."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The Pineapple Express strain",
+    "Dale Denton, process server",
+    "Saul in the dumpster already",
+    "The car chase",
+    "The night in the woods"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "id": "Pretty in Pink (1986)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Blane? His name is Blane? That's a major appliance, that's not a name!",
+    "by": "Duckie",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Blane's turkey and avocado club",
+   "new": "Blane's BMW turkey and avocado club"
+  },
+  {
+   "old": "Prom punch",
+   "new": "Pink lemonade prom punch"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Duckie's lip-sync",
+    "Duckie dancing along the shop counter",
+    "Andie sewing her own prom dress",
+    "Blane and Steff from the rich side of town",
+    "Andie's dad Jack, out of work"
+   ]
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Pink grapefruit soda",
+    "note": "Pour it for Duckie's Try a Little Tenderness."
+   }
+  }
+ ]
+}

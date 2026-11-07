@@ -1,0 +1,41 @@
+{
+ "id": "Meet the Robinsons (2007)",
+ "ops": [
+  {
+   "old": "Serve the mains when Uncle Gaston fires the meatball cannon at dinner.",
+   "new": "Serve the mains when Gaston yells \"Ready, aim... FIRE!\" at the dinner table."
+  },
+  {
+   "old": "Todayland chicken tacos with lime slaw",
+   "new": "Time machine chicken tacos with lime slaw"
+  },
+  {
+   "old": "the bright future, Lewis's family home",
+   "new": "Grilled lime chicken tacos, a taste of the future"
+  },
+  {
+   "old": "the school science fair",
+   "new": "Parmesan chicken nuggets. Uncle Joe's seen the toast!"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Lewis and his Memory Scanner",
+    "Doris the hat and Tiny the T. rex",
+    "Wilbur's time machine",
+    "The Robinson family dinner chaos"
+   ]
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Future Visit",
+    "lines": [
+     "Time machine, one way",
+     "Back before dessert"
+    ]
+   }
+  }
+ ]
+}

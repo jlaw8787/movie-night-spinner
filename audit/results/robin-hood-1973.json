@@ -1,60 +1,77 @@
 {
- "id": "Robin Hood (1973)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Robin, there's one pot of stew and a lot of folks. Pass it around and save the end for Friar Tuck.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Little John doesn't say this. It is printed in quote marks. A real food line is Friar Tuck tasting the overcooked chow: 'Well-done, ain't it?'",
-   "source": "https://en.wikiquote.org/wiki/Robin_Hood_(1973_film)",
-   "fix": "Well-done, ain't it?",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Well-done, ain't it?",
-    "by": "Friar Tuck",
-    "kind": "quote"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "The archery tournament with a golden arrow",
-   "where": "wink",
-   "verdict": "ok",
-   "why": "The film has the Tournament of the Golden Arrow, announced at Prince John's archery tournament where the winner gets a kiss from Maid Marian.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=robin-hood-1973",
-   "fix": "The archery tournament with a kiss from Maid Marian as the prize",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Robin Hood (1973)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Robin, there's one pot of stew and a lot of folks. Pass it around and save the end for Friar Tuck.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Little John doesn't say this. It is printed in quote marks. A real food line is Friar Tuck tasting the overcooked chow: 'Well-done, ain't it?'",
+      "source": "https://en.wikiquote.org/wiki/Robin_Hood_(1973_film)",
+      "fix": "Well-done, ain't it?",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Well-done, ain't it?",
+        "by": "Friar Tuck",
+        "kind": "quote"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "The archery tournament with a golden arrow",
+      "where": "wink",
+      "verdict": "ok",
+      "why": "The film has the Tournament of the Golden Arrow, announced at Prince John's archery tournament where the winner gets a kiss from Maid Marian.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=robin-hood-1973",
+      "fix": "The archery tournament with a kiss from Maid Marian as the prize",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 3,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.2,
+    "verdict": "The animal cast and camp feel are right, but the dishes could use more of the film's gags.",
+    "missing": [
+      "The Phony King of England song (hideout)",
+      "Robin in disguise as the Devonshire stork (archery tournament)",
+      "Friar Tuck's overcooked chow (hideout)",
+      "The Sheriff taking the last farthing from the poor box",
+      "Prince John sucking his thumb",
+      "Sir Hiss hypnotising Prince John"
+    ],
+    "ideas": [
+      "Swap 'Outlaws' camp stew' note for Friar Tuck's overcooked chow.",
+      "Swap 'Golden coin honey cakes' for a poor box farthing cake.",
+      "Add a stork-shaped bread roll replacing 'Archery tournament skewers' note.",
+      "Swap 'Prince John's mustard roast beef' note for Prince John's thumb."
+    ],
+    "flat": true,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Oo-de-lally, Robin and Little John robbing Prince John as fortune tellers",
+      "The Phony King of England (song title)",
+      "Robin disguised as the Devonshire stork at the Golden Arrow tournament",
+      "Sheriff taking the last farthing from the poor box",
+      "Prince John sucking his thumb and calling for Mommy",
+      "Sir Hiss tied in a knot"
+    ],
+    "changed": [
+      "Cue is now the fortune teller robbery",
+      "Roast note: Phony King of England, calling for Mommy",
+      "Skewers renamed Golden Arrow skewers",
+      "Friar Tuck note: the last farthing",
+      "Honey cakes renamed for Skippy's birthday farthing",
+      "Winks: Sir Hiss tied in a knot, Robin as the Devonshire stork"
+    ]
   }
- ],
- "checked_ok": 12,
- "vibe": {
-  "world": 3,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.2,
-  "verdict": "The animal cast and camp feel are right, but the dishes could use more of the film's gags.",
-  "missing": [
-   "The Phony King of England song (hideout)",
-   "Robin in disguise as the Devonshire stork (archery tournament)",
-   "Friar Tuck's overcooked chow (hideout)",
-   "The Sheriff taking the last farthing from the poor box",
-   "Prince John sucking his thumb",
-   "Sir Hiss hypnotising Prince John"
-  ],
-  "ideas": [
-   "Swap 'Outlaws' camp stew' note for Friar Tuck's overcooked chow.",
-   "Swap 'Golden coin honey cakes' for a poor box farthing cake.",
-   "Add a stork-shaped bread roll replacing 'Archery tournament skewers' note.",
-   "Swap 'Prince John's mustard roast beef' note for Prince John's thumb."
-  ],
-  "flat": true,
-  "done": false
- }
 }

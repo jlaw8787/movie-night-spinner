@@ -1,0 +1,27 @@
+{
+ "id": "New Year's Eve (2011)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "The ball has stopped halfway to its perch.",
+    "by": "Claire Morgan",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Gin, lemon and sugar syrup topped with champagne",
+   "new": "Gin, lemon, syrup, champagne on top. Masks optional."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The ball that stalls halfway",
+    "Two couples racing for the $25,000 baby bonus",
+    "A hospital patient with one last wish",
+    "Two strangers stuck in an elevator",
+    "Ingrid and her list of New Year errands"
+   ]
+  }
+ ]
+}

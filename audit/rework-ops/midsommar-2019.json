@@ -1,0 +1,39 @@
+{
+ "id": "Midsommar (2019)",
+ "ops": [
+  {
+   "old": "Serve the feast when everyone sits at the long table under the sun.",
+   "new": "Serve the feast when Dani is crowned May Queen and the table toasts her."
+  },
+  {
+   "old": "Pelle's pickled herring and new potatoes",
+   "new": "May Queen's lucky herring and new potatoes"
+  },
+  {
+   "old": "Strawberry midsummer cake",
+   "new": "May Queen strawberry cake"
+  },
+  {
+   "old": "the commune's open-air cooking",
+   "new": "Grilled over coals. Ignore the bear."
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Aquavit and lingonberry spritz",
+    "note": "To our May Queen! Skal! Check your glass first.",
+    "alc": true
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The May Queen's flower crown",
+    "The maypole dance",
+    "Long tables under the sun",
+    "Tea for the competition",
+    "The cliff, the bear, the burning temple"
+   ]
+  }
+ ]
+}

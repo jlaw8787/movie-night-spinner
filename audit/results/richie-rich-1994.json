@@ -1,59 +1,73 @@
 {
- "id": "Richie Rich (1994)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Master Richie, with great respect, the cook has made forty pancakes, and you still wish for a friend.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Cadbury doesn't say this. It is printed in quote marks. A real Richie line about food is 'Personally, I'd settle for soda and hot dogs at Wrigley Field.'",
-   "source": "https://en.wikiquote.org/wiki/Richie_Rich_(film)",
-   "fix": "Personally, I'd settle for soda and hot dogs at Wrigley Field.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Personally, I'd settle for soda and hot dogs at Wrigley Field.",
-    "by": "Richie Rich",
-    "kind": "quote"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Reggie Van Dough and his plan",
-   "where": "footer",
-   "verdict": "wrong",
-   "why": "The villain in the film is Laurence Van Dough, the company's CFO.",
-   "source": "https://en.wikipedia.org/wiki/Richie_Rich_(film)",
-   "fix": "Laurence Van Dough and his plan",
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
+  "id": "Richie Rich (1994)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Master Richie, with great respect, the cook has made forty pancakes, and you still wish for a friend.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Cadbury doesn't say this. It is printed in quote marks. A real Richie line about food is 'Personally, I'd settle for soda and hot dogs at Wrigley Field.'",
+      "source": "https://en.wikiquote.org/wiki/Richie_Rich_(film)",
+      "fix": "Personally, I'd settle for soda and hot dogs at Wrigley Field.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Personally, I'd settle for soda and hot dogs at Wrigley Field.",
+        "by": "Richie Rich",
+        "kind": "quote"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Reggie Van Dough and his plan",
+      "where": "footer",
+      "verdict": "wrong",
+      "why": "The villain in the film is Laurence Van Dough, the company's CFO.",
+      "source": "https://en.wikipedia.org/wiki/Richie_Rich_(film)",
+      "fix": "Laurence Van Dough and his plan",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 3,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.2,
+    "verdict": "The rich-kid idea is there, but a hotel room service layout isn't a mansion, and the villain is misnamed.",
+    "missing": [
+      "Richie's own McDonald's in the mansion (Rich Manor)",
+      "Dollar the dog",
+      "The Dadlink",
+      "Mount Richmore, the mountainside portrait",
+      "Cadbury's weapon of choice, grammar",
+      "Professor Keenbean's lab in the basement"
+    ],
+    "ideas": [
+      "Swap 'Richie's home burger bar' note for the in-house McDonald's with golden arches.",
+      "Swap 'Lobster sliders' for a hot dog and soda to match Richie's Wrigley Field line.",
+      "Add a Dollar the dog biscuit replacing 'Gold coin crackers' note.",
+      "Fix the villain's name to Laurence Van Dough."
+    ],
+    "flat": true,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "McDonald's in the mansion (\"You have your own McDonald's?\", \"I want a Big Mac\")",
+      "Wrigley Field hot dog line",
+      "Mount Richmore vault",
+      "Cadbury: \"I'd choose grammar\"",
+      "Mr. Van Dough, you're fired"
+    ],
+    "changed": [
+      "Wellington note now Cadbury's 'simple, yet elegant' menu, the lunch the kids skip for the burger bar",
+      "Burger note: kid analysing the secret sauce at Richie's own McDonald's",
+      "Keenbean note: impervious spray from the lab",
+      "Winks: Dollar the dog and Cadbury's weapon of choice, grammar"
+    ]
   }
- ],
- "checked_ok": 11,
- "vibe": {
-  "world": 3,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.2,
-  "verdict": "The rich-kid idea is there, but a hotel room service layout isn't a mansion, and the villain is misnamed.",
-  "missing": [
-   "Richie's own McDonald's in the mansion (Rich Manor)",
-   "Dollar the dog",
-   "The Dadlink",
-   "Mount Richmore, the mountainside portrait",
-   "Cadbury's weapon of choice, grammar",
-   "Professor Keenbean's lab in the basement"
-  ],
-  "ideas": [
-   "Swap 'Richie's home burger bar' note for the in-house McDonald's with golden arches.",
-   "Swap 'Lobster sliders' for a hot dog and soda to match Richie's Wrigley Field line.",
-   "Add a Dollar the dog biscuit replacing 'Gold coin crackers' note.",
-   "Fix the villain's name to Laurence Van Dough."
-  ],
-  "flat": true,
-  "done": false
- }
 }

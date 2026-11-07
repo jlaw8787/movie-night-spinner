@@ -1,0 +1,43 @@
+{
+ "id": "Pirates of the Caribbean: The Curse of the Black Pearl (2003)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "But why is the rum gone?",
+    "by": "Jack Sparrow",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Jack asks why the rum is gone. Here.",
+   "new": "Nothing satisfied Barbossa's crew. Try this."
+  },
+  {
+   "old": "Lime-tossed green apple slices, warm salted caramel dip, sharp cheddar shards",
+   "new": "Lime-tossed green apple slices, salted caramel dip, cheddar shards. Apple?"
+  },
+  {
+   "old": "the pirate port of Tortuga",
+   "new": "Prawn and capsicum fritters, with the sweet, proliferous bouquet of Tortuga."
+  },
+  {
+   "old": "Gold-dusted fried plantain coins",
+   "new": "Aztec gold fried plantain coins"
+  },
+  {
+   "old": "the British fort at Port Royal",
+   "new": "Snapper stew in coconut milk, served at the fort in Port Royal."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Jack's boat sinking as he steps ashore",
+    "The compass that does not point north",
+    "The worst pirate you've ever heard of",
+    "Barbossa's cursed monkey",
+    "Will Turner's blacksmith shop"
+   ]
+  }
+ ]
+}
