@@ -283,10 +283,13 @@ function prop(p,ty,C,P,x,y,w,h){
 }
 function menuHTML(cs,era,ty,C,tone){
   const rule=/warm|tender|playful/.test(tone)?"dashed":"solid";
+  /* audit, 7 Nov: a heading never ends a column on its own ("Mess Hall Mains" sat at the foot of the left column, its dishes in the right):
+     it is held with its first dish */
+  const item=(k,it,i)=>`<div ${i?`data-drop="${i+1}"`:""} style="break-inside:avoid"><div style="display:flex;gap:14px;align-items:baseline;margin-top:5px"><span data-fs="26" data-min="19" style="flex:1;font:${ty.dishW} 26px ${ty.dish};line-height:1.12">${T(it.n)}</span><span data-fs="26" data-min="19" style="font:${ty.dishW} 26px ${ty.dish};white-space:nowrap;color:${C.ink}">${price(k,i,era)}</span></div>
+      ${it.note?`<div data-note data-fs="20" data-min="16" style="font:${ty.bw} 20px ${ty.body};line-height:1.22;opacity:.86">${T(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`;
   return["s","m","w","d"].filter(k=>cs[k].length).map(k=>`<div style="margin:0 0 10px">
-    <div style="display:flex;align-items:center;gap:12px"><span data-fs="22" data-min="16" style="font:${ty.cw} 22px ${ty.caps};letter-spacing:.14em;text-transform:uppercase;color:${C.ink};white-space:nowrap">${LABEL[k]}</span><span style="flex:1;border-top:2px ${rule} ${C.ink};opacity:.6"></span></div>
-    ${cs[k].map((it,i)=>`<div ${i?`data-drop="${i+1}"`:""} style="break-inside:avoid"><div style="display:flex;gap:14px;align-items:baseline;margin-top:5px"><span data-fs="26" data-min="19" style="flex:1;font:${ty.dishW} 26px ${ty.dish};line-height:1.12">${T(it.n)}</span><span data-fs="26" data-min="19" style="font:${ty.dishW} 26px ${ty.dish};white-space:nowrap;color:${C.ink}">${price(k,i,era)}</span></div>
-      ${it.note?`<div data-note data-fs="20" data-min="16" style="font:${ty.bw} 20px ${ty.body};line-height:1.22;opacity:.86">${T(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`).join("")}
+    <div style="break-inside:avoid"><div style="display:flex;align-items:center;gap:12px"><span data-fs="22" data-min="16" style="font:${ty.cw} 22px ${ty.caps};letter-spacing:.14em;text-transform:uppercase;color:${C.ink};white-space:nowrap">${LABEL[k]}</span><span style="flex:1;border-top:2px ${rule} ${C.ink};opacity:.6"></span></div>${item(k,cs[k][0],0)}</div>
+    ${cs[k].slice(1).map((it,i)=>item(k,it,i+1)).join("")}
   </div>`).join("");
 }
 

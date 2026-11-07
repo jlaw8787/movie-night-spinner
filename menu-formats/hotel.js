@@ -261,7 +261,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div data-fs="15" style="font:italic 400 22px/1.34 ${B};color:${K.ink};margin-top:12px">"${esc(dry(F.note.text))}"</div>
     <div data-fs="24" style="font:400 40px/1.1 ${S};color:${K.acc};margin-top:8px;transform:rotate(-2deg);transform-origin:left">${esc(F.note.by)}</div>
     ${ctx.f.P?`<div data-drop data-fs="14" style="margin-top:auto;padding-top:14px;font:400 18px/1.32 ${B};color:${K.ink}"><span style="font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:14px;color:${K.acc};display:block;margin-bottom:4px">Ring down when</span>${esc(sentence(dry(ctx.f.P)))}</div>`:""}
-    <div data-drop data-fs="14" style="margin-top:${ctx.f.P?14:0}px;padding-top:12px;border-top:1px solid ${rgba(K.ink,.3)};font:700 16px/1.3 ${B};color:${K.soft};letter-spacing:.04em">Dial 0 for the kitchen. Open all night.</div></div>`;
+    <div data-drop data-fs="14" style="margin-top:${ctx.f.P?10:0}px;padding-top:10px;border-top:1px solid ${rgba(K.ink,.3)};font:700 16px/1.3 ${B};color:${K.soft};letter-spacing:.04em">Dial 0 for the kitchen. Open all night.</div></div>`;
   /* door hanger: a die-cut card with a hole, type only */
   const hg=mix(hex(K.acc),[0,0,0],dark?0:.08),hgc=contrast(hg,[255,255,255])>=4.5?"#fffaf0":"#161412";
   const box=`<span style="display:inline-block;width:15px;height:15px;border:2px solid ${hgc};margin-right:9px;vertical-align:-2px;flex:none"></span>`;
