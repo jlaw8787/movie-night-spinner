@@ -1,52 +1,58 @@
 {
-  "id": "Turner & Hooch (1989)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve the mains when Hooch wrecks the car.",
-      "where": "cue",
-      "verdict": "unsure",
-      "why": "The Wikipedia plot has Hooch trashing Scott's house, and Scott himself crashing Zack Gregory's Cadillac. It does not mention Hooch wrecking a car.",
-      "source": "https://en.wikipedia.org/wiki/Turner_%26_Hooch",
-      "fix": "Serve the mains when Hooch wrecks Scott's house.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "My house was clean until the dog moved in. Pass the napkins, there is drool everywhere.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Scott never says this and it is set in quote marks. It is an invented line, even though the neat freak versus slobbery dog joke is the film's engine.",
-      "source": "https://en.wikipedia.org/wiki/Turner_%26_Hooch",
-      "fix": "Set it as an unquoted note: Scott's rule, wipe the dog first.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 10,
-  "vibe": {
-    "world": 3,
-    "moments": 3,
-    "food": 3,
-    "tone": 2,
-    "look": 3,
-    "overall": 2.8,
-    "verdict": "The poster is right but the beach kiosk and surf report have little to do with this film and the tone is generic.",
-    "missing": [
-      "Hooch wrecking Scott's house",
-      "Hooch drooling on everything",
-      "Scott's spotless house",
-      "The stakeout with the dog biscuit",
-      "Hooch at the seafood plant",
-      "Camille the collie and the puppy at the end"
-    ],
-    "ideas": [
-      "Swap the surf report for a stakeout log with the line 'Hooch ate the notes.'",
-      "Swap 'Dog bone crackers' for 'Stakeout dog biscuit' with the note 'Shared in the car.'",
-      "Swap 'Banana milkshake' note for 'Drool check before sipping.'",
-      "Change the kiosk to a Cypress Beach police station canteen."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Turner & Hooch (1989)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains when Hooch wrecks the car.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The Wikipedia plot has Hooch trashing Scott's house, and Scott himself crashing Zack Gregory's Cadillac. It does not mention Hooch wrecking a car.",
+   "source": "https://en.wikipedia.org/wiki/Turner_%26_Hooch",
+   "fix": "Serve the mains when Hooch wrecks Scott's house.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "My house was clean until the dog moved in. Pass the napkins, there is drool everywhere.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Scott never says this and it is set in quote marks. It is an invented line, even though the neat freak versus slobbery dog joke is the film's engine.",
+   "source": "https://en.wikipedia.org/wiki/Turner_%26_Hooch",
+   "fix": "Set it as an unquoted note: Scott's rule, wipe the dog first.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "My house was clean until the dog moved in. Pass the napkins, there is drool everywhere.",
+    "by": "Scott Turner",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
   }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 2,
+  "look": 3,
+  "overall": 2.8,
+  "verdict": "The poster is right but the beach kiosk and surf report have little to do with this film and the tone is generic.",
+  "missing": [
+   "Hooch wrecking Scott's house",
+   "Hooch drooling on everything",
+   "Scott's spotless house",
+   "The stakeout with the dog biscuit",
+   "Hooch at the seafood plant",
+   "Camille the collie and the puppy at the end"
+  ],
+  "ideas": [
+   "Swap the surf report for a stakeout log with the line 'Hooch ate the notes.'",
+   "Swap 'Dog bone crackers' for 'Stakeout dog biscuit' with the note 'Shared in the car.'",
+   "Swap 'Banana milkshake' note for 'Drool check before sipping.'",
+   "Change the kiosk to a Cypress Beach police station canteen."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

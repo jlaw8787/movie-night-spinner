@@ -10,7 +10,13 @@
    "source": "https://en.wikipedia.org/wiki/Rain_Man",
    "fix": "The People's Court every day. Bed at eleven. Maple syrup with the pancakes. Definitely.",
    "printed": true,
-   "done": false
+   "done": true,
+   "fix_note": {
+    "text": "The People's Court every day. Bed at eleven. Maple syrup with the pancakes. Definitely.",
+    "by": "Raymond Babbitt",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
   }
  ],
  "checked_ok": 12,

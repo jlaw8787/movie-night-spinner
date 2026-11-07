@@ -1,52 +1,58 @@
 {
-  "id": "Tommy Boy (1995)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "I ate a whole cake in the car on the way here. Brake pads, salesmanship and a bit of dessert, that's the trip.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Tommy never says this and it is set in quote marks. A real line from the film is 'You know a lot of people go to college for seven years.'",
-      "source": "https://moviemistakes.com/film1309/quotes",
-      "fix": "You know a lot of people go to college for seven years.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Take the butcher's word for it, Tommy says.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "Tommy's selling speech is about a guarantee, so trusting a butcher's word runs the other way. I could not open a source for the exact speech.",
-      "source": "",
-      "fix": "A guarantee beats the butcher's word, Tommy says.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 11,
-  "vibe": {
-    "world": 3,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 3,
-    "overall": 3,
-    "verdict": "Sandusky brake pad canteen is fine but flat, with one real quote swapped for an invented one and the funniest scenes left off.",
-    "missing": [
-      "Fat guy in a little coat",
-      "Holy schnikes",
-      "The deer in the back seat",
-      "The wings at the diner",
-      "The 1967 Plymouth GTX getting wrecked",
-      "Tommy's guarantee speech"
-    ],
-    "ideas": [
-      "Swap 'Tommy's tight coat sausage rolls' note for 'Fat guy in a little coat.'",
-      "Swap 'Diner chicken wings' note for 'Hot sauce, blue cheese, and a very kind waitress.'",
-      "Swap \"Chocolate peanut butter buckeyes\" note for \"Big Tom's wedding day dessert.\"",
-      "Swap 'Strawberry milkshake' note for 'Holy schnikes. Pass the straw.'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Tommy Boy (1995)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I ate a whole cake in the car on the way here. Brake pads, salesmanship and a bit of dessert, that's the trip.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Tommy never says this and it is set in quote marks. A real line from the film is 'You know a lot of people go to college for seven years.'",
+   "source": "https://moviemistakes.com/film1309/quotes",
+   "fix": "You know a lot of people go to college for seven years.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "You know a lot of people go to college for seven years.",
+    "by": "Tommy Callahan",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Take the butcher's word for it, Tommy says.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Tommy's selling speech is about a guarantee, so trusting a butcher's word runs the other way. I could not open a source for the exact speech.",
+   "source": "",
+   "fix": "A guarantee beats the butcher's word, Tommy says.",
+   "printed": true,
+   "done": false
   }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3,
+  "verdict": "Sandusky brake pad canteen is fine but flat, with one real quote swapped for an invented one and the funniest scenes left off.",
+  "missing": [
+   "Fat guy in a little coat",
+   "Holy schnikes",
+   "The deer in the back seat",
+   "The wings at the diner",
+   "The 1967 Plymouth GTX getting wrecked",
+   "Tommy's guarantee speech"
+  ],
+  "ideas": [
+   "Swap 'Tommy's tight coat sausage rolls' note for 'Fat guy in a little coat.'",
+   "Swap 'Diner chicken wings' note for 'Hot sauce, blue cheese, and a very kind waitress.'",
+   "Swap \"Chocolate peanut butter buckeyes\" note for \"Big Tom's wedding day dessert.\"",
+   "Swap 'Strawberry milkshake' note for 'Holy schnikes. Pass the straw.'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

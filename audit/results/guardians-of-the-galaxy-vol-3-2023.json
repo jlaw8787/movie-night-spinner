@@ -1,0 +1,46 @@
+{
+ "id": "Guardians of the Galaxy Vol. 3 (2023)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Nobody leaves hungry on my watch, you hear me? Not on my ship, not today.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "No source I could open gives Rocket this line. It sounds like him but is invented.",
+   "source": "",
+   "fix": "Everyone sits. Everyone eats. That is an order from your captain.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Everyone sits. Everyone eats. That is an order from your captain.",
+    "by": "Rocket",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A good bar tab layout with Rocket's cage friends and Cosmo, though the food is mostly pub standards.",
+  "missing": [
+   "Rocket's cage friends Lylla, Teefs and Floor (house line only)",
+   "The Guardians landing on Counter-Earth",
+   "Groot saying 'I love you guys'",
+   "Rocket becoming captain at the end",
+   "Adam Warlock in gold (wink only)"
+  ],
+  "ideas": [
+   "Swap 'Orgocorp crackling pork belly' note for the Orgocorp lab cages with Rocket's old friends.",
+   "Rename 'Dry apple cider on tap' to 'Groot's last round' to push the farewell mood.",
+   "Replace 'Cosmo the space dog' note with a Cosmo dog biscuit joke so the dish carries a scene."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

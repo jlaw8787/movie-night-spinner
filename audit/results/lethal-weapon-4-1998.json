@@ -20,7 +20,13 @@
    "source": "https://en.wikipedia.org/wiki/Lethal_Weapon_4",
    "fix": "Everybody in this house is family now, so eat up. Even the new guy.",
    "printed": true,
-   "done": false
+   "done": true,
+   "fix_note": {
+    "text": "Everybody in this house is family now, so eat up. Even the new guy.",
+    "by": "Roger Murtaugh",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
   }
  ],
  "checked_ok": 13,

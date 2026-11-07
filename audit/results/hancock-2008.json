@@ -1,0 +1,57 @@
+{
+ "id": "Hancock (2008)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "John, say please, say thanks, and don't throw the car. Dinner is at seven.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Ray Embrey does not say this in the film. His advice is about apologising publicly and going to prison, and the throwing-the-car line is invented.",
+   "source": "https://en.wikipedia.org/wiki/Hancock_(film)",
+   "fix": "John, dinner is at seven. Come as you are, and say thanks to Mary.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "John, dinner is at seven. Come as you are, and say thanks to Mary.",
+    "by": "Ray Embrey",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "dinner with Ray, Mary and their son",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "In the film the family brings homemade spaghetti and meatballs when they visit Hancock in prison, not at the first dinner.",
+   "source": "https://en.wikipedia.org/wiki/Hancock_(film)",
+   "fix": "The family brings it to Hancock in prison",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "The look is strong, but the menu barely uses the film's big moments and one dish is in the wrong scene.",
+  "missing": [
+   "Hancock throwing the beached whale back into the sea and hitting the yacht mast",
+   "Hancock's public apology and surrender",
+   "Ray's All-Heart logo and his PR makeover",
+   "Hancock revealing he is an amnesiac and immortal at dinner",
+   "Mary and Hancock's fight scene",
+   "Hancock's flying landing that cracks the road"
+  ],
+  "ideas": [
+   "Swap 'Beach whale prawns' note for the whale and yacht mast moment so the joke is on the card.",
+   "Move the spaghetti dish to the prison visit and put a 'first dinner at Ray's' roast on the mains.",
+   "Add a 'Good job' cheese plate for Ray teaching Hancock manners, replacing the toasted cheese joke."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

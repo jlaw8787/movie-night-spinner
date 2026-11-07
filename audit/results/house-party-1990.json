@@ -1,0 +1,57 @@
+{
+ "id": "House Party (1990)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Dad says I'm grounded, but the chips and dip are at Play's party.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Kid does not say this in the film. His real situation is that Pop grounds him after a school letter about the fight with Stab, and he sneaks out anyway.",
+   "source": "https://en.wikipedia.org/wiki/House_Party_(1990_film)",
+   "fix": "Pop says I'm grounded, but I'm going to Play's party anyway.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Pop says I'm grounded, but I'm going to Play's party anyway.",
+    "by": "Kid",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Pop dozed off to Dolemite. Kid snuck out.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Wikipedia says Pop wakes when the door closes behind Kid. Dolemite is not mentioned in the sources I opened.",
+   "source": "https://en.wikipedia.org/wiki/House_Party_(1990_film)",
+   "fix": "Pop was asleep. Kid snuck out.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A neat photo booth layout in the right era, but the food is party standards and the film's wild moments are missing.",
+  "missing": [
+   "Kid and Play's kick step dance-off at the house",
+   "Kid rapping in the jail cell to avoid trouble",
+   "Stab and his brothers trying to burn the house down",
+   "Bilal as the reluctant DJ",
+   "Sydney sneaking Kid out and tricking Pop",
+   "Pop waiting with a belt at the end"
+  ],
+  "ideas": [
+   "Swap 'Strawberry milkshake' note for the jail cell rap, 'Cell block shake'.",
+   "Rename 'Party sheet cake' to 'Stab's burnt house cake' with charred edges.",
+   "Replace 'Kick step party sub' with the pair of dance shoes made of garlic bread."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

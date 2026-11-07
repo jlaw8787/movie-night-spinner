@@ -1,42 +1,48 @@
 {
-  "id": "Train to Busan (2016)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Su-an, eat your snacks from the cart and stay close. We'll have dinner with your mother in Busan.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Seok-woo's line is not in the film as written and it is set in quote marks. It is invented, and the tone is gentler than the film's.",
-      "source": "https://en.wikipedia.org/wiki/Train_to_Busan",
-      "fix": "Set it as an unquoted note: Seok-woo, taking Su-an to see her mother in Busan for her birthday.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 15,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 4,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "Strong Korean food picks and a proper train look, but the words are soft and the zombie moments are missing.",
-    "missing": [
-      "Su-an singing on the train",
-      "Sang-hwa fighting with bare hands",
-      "Yong-guk's baseball bat",
-      "The long dark tunnels",
-      "Yon-suk locking the carriage door",
-      "The stop at Daejeon station"
-    ],
-    "ideas": [
-      "Swap 'Baseball team Korean fried chicken' note for 'Yong-guk's bat, Jin-hee's cheer.'",
-      "Swap 'Banana milk' note for 'Su-an's birthday drink, before the tunnel.'",
-      "Add a 'Stay low in the tunnels' line to the ticket.",
-      "Swap 'Spicy rice cakes' note for 'Sang-hwa's pregnant wife orders extra.'"
-    ],
-    "flat": false,
-    "done": false
+ "id": "Train to Busan (2016)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Su-an, eat your snacks from the cart and stay close. We'll have dinner with your mother in Busan.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Seok-woo's line is not in the film as written and it is set in quote marks. It is invented, and the tone is gentler than the film's.",
+   "source": "https://en.wikipedia.org/wiki/Train_to_Busan",
+   "fix": "Set it as an unquoted note: Seok-woo, taking Su-an to see her mother in Busan for her birthday.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Su-an, eat your snack and stay where I can see you. We are going to your mother in Busan, like I promised.",
+    "by": "Seok-woo",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
   }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Strong Korean food picks and a proper train look, but the words are soft and the zombie moments are missing.",
+  "missing": [
+   "Su-an singing on the train",
+   "Sang-hwa fighting with bare hands",
+   "Yong-guk's baseball bat",
+   "The long dark tunnels",
+   "Yon-suk locking the carriage door",
+   "The stop at Daejeon station"
+  ],
+  "ideas": [
+   "Swap 'Baseball team Korean fried chicken' note for 'Yong-guk's bat, Jin-hee's cheer.'",
+   "Swap 'Banana milk' note for 'Su-an's birthday drink, before the tunnel.'",
+   "Add a 'Stay low in the tunnels' line to the ticket.",
+   "Swap 'Spicy rice cakes' note for 'Sang-hwa's pregnant wife orders extra.'"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

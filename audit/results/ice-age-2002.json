@@ -1,0 +1,57 @@
+{
+ "id": "Ice Age (2002)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "We are not a herd, we are just eating together. Sid, stop licking the melons and pass them round.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Manny does not say this in the film. Sid licking melons is invented, and the 'we are not a herd' line is stitched into a longer made-up speech.",
+   "source": "https://kaweah.freedombox.rocks/kiwix/wikipedia_en_all_maxi_2023-10/Ice_age_1",
+   "fix": "Sid, hands off the melons. Pass them round, we are not a herd.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Sid, hands off the melons. Pass them round, we are not a herd.",
+    "by": "Manny",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Sid, lord of the flame, lit these.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The plot text I opened (up to the Half Peak ambush) never mentions Sid making fire. I could not confirm this.",
+   "source": "https://kaweah.freedombox.rocks/kiwix/wikipedia_en_all_maxi_2023-10/Ice_age_1",
+   "fix": "Sid, who got left behind, found these.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "A friendly camp menu with Scrat and a good still, but it uses few of the film's moments and the layout is generic.",
+  "missing": [
+   "Brontotheres attacking Sid after his family leaves him",
+   "Soto's raid on the human camp and Roshan's mother fleeing",
+   "The river of lava near Half Peak",
+   "The ambush at Half Peak",
+   "Diego sent to retrieve the baby",
+   "Scrat chasing his acorn through the ice"
+  ],
+  "ideas": [
+   "Swap 'Spiced roasted chestnuts' for 'Lava river' tomato soup using the Half Peak lava.",
+   "Replace 'Ice age coconut marshmallow cupcakes' note with Scrat losing his acorn.",
+   "Rename 'Mammoth slow-cooked beef ribs' to 'Manny's ribs, hands off' for Manny."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

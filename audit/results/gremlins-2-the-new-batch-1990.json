@@ -1,0 +1,48 @@
+{
+ "id": "Gremlins 2: The New Batch (1990)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Every inch of this tower is state of the art, even the lunch. Nothing could possibly go wrong.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "No source I could open gives Daniel Clamp this line. It reads like an invented speech, so it is flagged. A written note in his voice is safer.",
+   "source": "",
+   "fix": "Welcome to Clamp Center. Lunch is on me, and the lab floor is closed to visitors.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Welcome to Clamp Center. Lunch is on me, and the lab floor is closed to visitors.",
+    "by": "Daniel Clamp",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "The office tower setting works and the dish names nod to the lab, but the menu is a plain canteen and misses the film's wilder gremlins.",
+  "missing": [
+   "Microwave Marge, the cooking show host (Kathleen Freeman)",
+   "The Brain Gremlin as leader of the pack",
+   "The Spider Gremlin on the ceiling",
+   "The vegetable gremlin from the Splice O' Life lab",
+   "Gizmo dressed as Rambo with his bow",
+   "Not feeding gremlins after midnight (the rule the whole film bends)"
+  ],
+  "ideas": [
+   "Swap 'Top-floor steak Diane' note for a Brain Gremlin dish, for example 'Brain Gremlin pâté on toast'.",
+   "Print the vegetable gremlin rice paper rolls, which are in the data but not on the card.",
+   "Add a Gizmo Rambo drink, a lychee fizz with a red headband on the glass, replacing the plain Mogwai fizz note.",
+   "Give the canteen a Microwave Marge recipe card as the prop in place of the generic badge."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

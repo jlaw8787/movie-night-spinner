@@ -10,7 +10,13 @@
    "source": "https://en.wikipedia.org/wiki/Serendipity_(film)",
    "fix": "If it is meant to be, fate will find us. I would like it to find us before the check. (by Sara Thomas)",
    "printed": true,
-   "done": false
+   "done": true,
+   "fix_note": {
+    "text": "If it is meant to be, fate will find us. I would like it to find us before the check.",
+    "by": "Sara Thomas",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
   }
  ],
  "checked_ok": 15,

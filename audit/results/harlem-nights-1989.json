@@ -1,0 +1,77 @@
+{
+ "id": "Harlem Nights (1989)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Nobody takes this club from us, Quick. Now sit, the steaks are coming out.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Sugar Ray never says this. A real line from him is about leaving Harlem and how there is no place like it.",
+   "source": "https://moviemistakes.com/film3793/quotes",
+   "fix": "But there's no place like Harlem.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "But there's no place like Harlem.",
+    "by": "Sugar Ray",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the drinks when the craps tables open at Club Sugar Ray.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Snake Eyes is a craps dealer in the cast, but the plot sources I opened never show the craps tables opening at the club. The night of the Jenkins fight is the big event.",
+   "source": "https://en.wikipedia.org/wiki/Harlem_Nights",
+   "fix": "Serve the drinks on the night of the Jenkins fight at Club Sugar Ray.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Showtime: Serve the drinks when the craps tables open at Club Sugar Ray.",
+   "where": "cue-printed",
+   "verdict": "unsure",
+   "why": "Same cue as printed on the card. The craps tables opening is not a scene in the sources I opened.",
+   "source": "https://en.wikipedia.org/wiki/Harlem_Nights",
+   "fix": "Showtime: Serve the drinks on the night of the Jenkins fight at Club Sugar Ray.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "the gambling room upstairs",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No source I opened says the club has a gambling room upstairs.",
+   "source": "https://en.wikipedia.org/wiki/Harlem_Nights",
+   "fix": "the craps dealer Snake Eyes",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 2,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "A moody, good looking club menu, but it leaves out the plot (the Jenkins fight, the staged car crash, the vault).",
+  "missing": [
+   "The Jenkins vs Kirkpatrick fight and the $500,000 bet (the whole heist)",
+   "The staged car crash with Ray and Quick posing as police",
+   "Trapping Sergeant Cantone in the bank vault",
+   "Vera's toe feud with Quick (nine-toed line)",
+   "Sunshine and the bag of sugar",
+   "Redd Foxx as Snake Eyes the craps dealer"
+  ],
+  "ideas": [
+   "Swap 'Craps table crumbed cheese dice' for 'Bag of sugar' sugar cookies, nodding to the switched money bag.",
+   "Replace the 'Club champagne cocktail' note with 'Jenkins fight night bubbles'.",
+   "Rename 'Harlem hush puppies' to 'Vault hush puppies' to use the Cantone gag."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

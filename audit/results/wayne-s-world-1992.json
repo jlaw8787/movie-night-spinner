@@ -1,42 +1,48 @@
 {
-  "id": "Wayne's World (1992)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Garth brought the snacks and I brought the dip. Grab a seat in the basement, the show starts after dinner.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Wayne never says this and it is set in quote marks. A real line pair is 'Party on, Wayne' and 'Party on, Garth.'",
-      "source": "https://en.wikipedia.org/wiki/Wayne%27s_World_(film)",
-      "fix": "Party on, Garth.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 13,
-  "vibe": {
-    "world": 3,
-    "moments": 4,
-    "food": 3,
-    "tone": 3,
-    "look": 3,
-    "overall": 3.2,
-    "verdict": "Bohemian Rhapsody and the Mirthmobile are in, but the prom layout is not this film and the quote is invented.",
-    "missing": [
-      "Schwing",
-      "We're not worthy (backstage with Alice Cooper)",
-      "The basement cable show",
-      "Product placement scene",
-      "Garth's crush at Stan Mikita's",
-      "The Scooby-Doo ending"
-    ],
-    "ideas": [
-      "Swap the Spring Fling heading for 'Wayne's basement, live on cable.'",
-      "Swap 'Product placement pizza bites' note for 'Sponsor reads between bites.'",
-      "Swap 'Jalapeno cheddar poppers' note for 'Schwing.'",
-      "Swap 'Cherry limeade' note for 'We're not worthy.'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Wayne's World (1992)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Garth brought the snacks and I brought the dip. Grab a seat in the basement, the show starts after dinner.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Wayne never says this and it is set in quote marks. A real line pair is 'Party on, Wayne' and 'Party on, Garth.'",
+   "source": "https://en.wikipedia.org/wiki/Wayne%27s_World_(film)",
+   "fix": "Party on, Garth.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Garth brought the snacks and I brought the dip. Grab a seat in the basement, the show starts after dinner.",
+    "by": "Wayne Campbell",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
   }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "Bohemian Rhapsody and the Mirthmobile are in, but the prom layout is not this film and the quote is invented.",
+  "missing": [
+   "Schwing",
+   "We're not worthy (backstage with Alice Cooper)",
+   "The basement cable show",
+   "Product placement scene",
+   "Garth's crush at Stan Mikita's",
+   "The Scooby-Doo ending"
+  ],
+  "ideas": [
+   "Swap the Spring Fling heading for 'Wayne's basement, live on cable.'",
+   "Swap 'Product placement pizza bites' note for 'Sponsor reads between bites.'",
+   "Swap 'Jalapeno cheddar poppers' note for 'Schwing.'",
+   "Swap 'Cherry limeade' note for 'We're not worthy.'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

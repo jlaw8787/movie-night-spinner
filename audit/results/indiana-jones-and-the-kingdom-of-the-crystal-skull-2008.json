@@ -1,0 +1,57 @@
+{
+ "id": "Indiana Jones and the Kingdom of the Crystal Skull (2008)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Indy, meet your son. He eats like you, fast and with no manners.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Marion does not say this. When she reveals Mutt's father, her real line is short.",
+   "source": "https://moviemistakes.com/film7362/quotes",
+   "fix": "He's your son.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "He's your son.",
+    "by": "Marion Ravenwood",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Mutt's diner, right before the greaser brawl.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The plot source describes a car chase between the Soviets and the greasers, not a brawl at the diner. The order of events is unclear.",
+   "source": "https://moviemistakes.com/film7362/plot",
+   "fix": "Mutt's diner, right before the Soviets show up.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A neat Hangar 51 canteen with real Peruvian food and Mutt props, but the layout is a stock canteen.",
+  "missing": [
+   "The lead fridge in the atomic test (shown in the timetable)",
+   "Mutt and Indy's motorbike chase through campus",
+   "Spalko's sword and her line 'I usually do'",
+   "The warehouse of secrets (Spalko says it is where the government hides everything)",
+   "Indy: 'You just brought a knife to a gunfight'",
+   "Mac the triple agent"
+  ],
+  "ideas": [
+   "Swap 'Akator crystal skull jelly' note for the warehouse line and print it on the crate.",
+   "Rename 'Peruvian ceviche cups' to 'Mac's double cross ceviche'.",
+   "Replace 'Marshall College diner fries' note with 'Mutt's comb' as a prop."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

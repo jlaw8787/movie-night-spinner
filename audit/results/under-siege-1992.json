@@ -1,62 +1,68 @@
 {
-  "id": "Under Siege (1992)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "The birthday party is my kitchen. The hijackers can wait until the dishes are done.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Ryback never says this and it is set in quote marks. Real Ryback lines include 'No, I'm just a cook.' and 'Get my pies out of the oven.'",
-      "source": "https://moviemistakes.com/film1348/quotes",
-      "fix": "No, I'm just a cook.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Serve dinner when Ryback gets sent back to the galley on the captain's birthday.",
-      "where": "cue",
-      "verdict": "unsure",
-      "why": "On the birthday, Krill provokes a fight and locks Ryback in the walk-in fridge. The sources do not describe him being sent back to the galley.",
-      "source": "https://en.wikipedia.org/wiki/Under_Siege",
-      "fix": "Serve dinner when Krill locks Ryback in the walk-in fridge on the captain's birthday.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Ryback's bouillabaisse",
-      "where": "dish-name",
-      "verdict": "unsure",
-      "why": "The plot says Ryback cooks the captain's birthday meal against Krill's orders, but no source names bouillabaisse. The data note for the crostini ('a taste of the captain's birthday dinner') makes the same claim.",
-      "source": "https://en.wikipedia.org/wiki/Under_Siege",
-      "fix": "Ryback's birthday dinner fish stew",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 11,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "The ship's plan paper and galley tag feel right, but the dishes are guesses and the cook's best lines are missing.",
-    "missing": [
-      "'I'm just a cook'",
-      "Ryback locked in the walk-in fridge",
-      "Jordan Tate jumping out of the cake",
-      "'Go tell the captain he spit in my soup'",
-      "'Get my pies out of the oven'",
-      "The 16 inch guns"
-    ],
-    "ideas": [
-      "Swap 'Navy galley glazed meatloaf and mash' note for 'Get my pies out of the oven.'",
-      "Swap 'Birthday cake bites' for 'Jordan Tate's cake' with the note 'She was hired to jump out of it.'",
-      "Rename 'Ryback's bouillabaisse' to 'Ryback's spit-free soup' with the note 'Krill spit in it, apparently.'",
-      "Swap the quote by Ryback for 'No, I'm just a cook.'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Under Siege (1992)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "The birthday party is my kitchen. The hijackers can wait until the dishes are done.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Ryback never says this and it is set in quote marks. Real Ryback lines include 'No, I'm just a cook.' and 'Get my pies out of the oven.'",
+   "source": "https://moviemistakes.com/film1348/quotes",
+   "fix": "No, I'm just a cook.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "No, I'm just a cook.",
+    "by": "Casey Ryback",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve dinner when Ryback gets sent back to the galley on the captain's birthday.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "On the birthday, Krill provokes a fight and locks Ryback in the walk-in fridge. The sources do not describe him being sent back to the galley.",
+   "source": "https://en.wikipedia.org/wiki/Under_Siege",
+   "fix": "Serve dinner when Krill locks Ryback in the walk-in fridge on the captain's birthday.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Ryback's bouillabaisse",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "The plot says Ryback cooks the captain's birthday meal against Krill's orders, but no source names bouillabaisse. The data note for the crostini ('a taste of the captain's birthday dinner') makes the same claim.",
+   "source": "https://en.wikipedia.org/wiki/Under_Siege",
+   "fix": "Ryback's birthday dinner fish stew",
+   "printed": true,
+   "done": false
   }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "The ship's plan paper and galley tag feel right, but the dishes are guesses and the cook's best lines are missing.",
+  "missing": [
+   "'I'm just a cook'",
+   "Ryback locked in the walk-in fridge",
+   "Jordan Tate jumping out of the cake",
+   "'Go tell the captain he spit in my soup'",
+   "'Get my pies out of the oven'",
+   "The 16 inch guns"
+  ],
+  "ideas": [
+   "Swap 'Navy galley glazed meatloaf and mash' note for 'Get my pies out of the oven.'",
+   "Swap 'Birthday cake bites' for 'Jordan Tate's cake' with the note 'She was hired to jump out of it.'",
+   "Rename 'Ryback's bouillabaisse' to 'Ryback's spit-free soup' with the note 'Krill spit in it, apparently.'",
+   "Swap the quote by Ryback for 'No, I'm just a cook.'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

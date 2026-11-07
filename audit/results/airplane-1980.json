@@ -10,7 +10,13 @@
    "source": "https://en.wikipedia.org/wiki/Airplane!",
    "fix": "I am serious. And don't call me Shirley.",
    "printed": true,
-   "done": false
+   "done": true,
+   "fix_note": {
+    "text": "I'd go easy on dinner tonight. The chicken looks safe, but I'm keeping an eye on anyone who ordered seafood.",
+    "by": "Dr Rumack",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
   },
   {
    "text": "Meal: fish or chicken",

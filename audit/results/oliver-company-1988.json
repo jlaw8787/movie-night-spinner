@@ -10,7 +10,13 @@
    "source": "https://en.wikipedia.org/wiki/Oliver_%26_Company",
    "fix": "Name's Dodger, kid. Stick with the crew and you eat, and the hot dog cart is first on the list.",
    "printed": true,
-   "done": false
+   "done": true,
+   "fix_note": {
+    "text": "Name's Dodger, kid. Stick with the crew and you eat, and the hot dog cart is first on the list.",
+    "by": "Dodger",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
   },
   {
    "text": "Einstein the Great Dane pulling the cart",

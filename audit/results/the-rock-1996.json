@@ -10,7 +10,13 @@
    "source": "https://en.wikipedia.org/wiki/The_Rock_(film)",
    "fix": "Welcome to the Rock. (sign it John Mason)",
    "printed": true,
-   "done": false
+   "done": true,
+   "fix_note": {
+    "text": "Only one man ever got out of here. Now he has to get back in. Eat up.",
+    "by": "Stanley Goodspeed",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
   }
  ],
  "checked_ok": 17,

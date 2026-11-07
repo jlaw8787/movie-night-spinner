@@ -1,0 +1,77 @@
+{
+ "id": "Hot Fuzz (2007)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Nothing ever happens here. Please stop investigating and have some tea.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Danny never says this. The quote pages I opened give him no such line. In the film Sandford is sold to Angel as quiet, but this wording is invented.",
+   "source": "https://en.wikipedia.org/wiki/Hot_Fuzz",
+   "fix": "Sandford is the safest village in England. Have a cuppa, Nick.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Sandford is the safest village in England. Have a cuppa, Nick.",
+    "by": "Danny Butterman",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the drinks when Angel orders a cranberry juice at the pub.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The sources I opened never name the drink Angel orders at the Crown, so cranberry juice is unconfirmed.",
+   "source": "https://en.wikipedia.org/wiki/Hot_Fuzz",
+   "fix": "Serve the drinks when Angel and Danny settle in at the Crown.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Angel's cranberry lime cooler, no ice",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "Cranberry juice and 'no ice' are unconfirmed in the sources I opened.",
+   "source": "https://en.wikipedia.org/wiki/Hot_Fuzz",
+   "fix": "Angel's lime and soda, no ice",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Danny's order. Angel sticks to cranberry juice.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The drink Angel has is unconfirmed in the sources I opened.",
+   "source": "https://en.wikipedia.org/wiki/Hot_Fuzz",
+   "fix": "Danny's order. Angel stays on the soft stuff.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 20,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A good pub menu in the right place with a cheeky tone, but a lot of the film's best jokes are left out.",
+  "missing": [
+   "The swan escaping and causing Frank's crash",
+   "Simon Skinner at the Somerfield supermarket",
+   "The Neighbourhood Watch Alliance (NWA) meeting",
+   "Danny's action DVDs (Point Break, Bad Boys II)",
+   "Angel and Danny's two-handed shotgun finish",
+   "The Cornetto ice cream, strawberry in Hot Fuzz"
+  ],
+  "ideas": [
+   "Swap 'Supermarket roast chicken' note for Simon Skinner at the Somerfield.",
+   "Rename 'Strawberry ice cream cones' to 'Danny's Cornettos' and add a swan egg joke to the scotch eggs.",
+   "Add a 'Greater good' pie in place of 'Pint of local bitter' note."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

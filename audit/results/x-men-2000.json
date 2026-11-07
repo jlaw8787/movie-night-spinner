@@ -1,52 +1,58 @@
 {
-  "id": "X-Men (2000)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Rogue, eat something. You'll be fine. Probably. The Professor makes better soup than he makes plans.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Logan never says this and it is set in quote marks. A real Logan line to Rogue is 'My name's Logan.'",
-      "source": "https://en.wikiquote.org/wiki/X-Men_(film)",
-      "fix": "My name's Logan.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Bobby keeps it cold. No fridge needed.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "Bobby is Iceman, so a cold drink is plausible, but the sources do not show him chilling a drink in a scene.",
-      "source": "https://en.wikipedia.org/wiki/X-Men_(film)",
-      "fix": "Bobby is Iceman. Cold on demand.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 11,
-  "vibe": {
-    "world": 3,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 3,
-    "overall": 3,
-    "verdict": "Canteen layout works for a school but is plain, and the only quote is invented.",
-    "missing": [
-      "Storm's toad line",
-      "Wolverine's claws and the cage fight in Laughlin City",
-      "Rogue's first touch",
-      "Magneto's plastic prison",
-      "The Statue of Liberty finale",
-      "Sabretooth on the train"
-    ],
-    "ideas": [
-      "Swap 'Xavier's School cereal bars' note for 'Do you know what happens to a toad?'",
-      "Swap 'Logan's poutine' for 'Cage fight poutine' with the note 'Laughlin City, Alberta.'",
-      "Swap the note by Logan for 'My name's Logan.'",
-      "Swap 'Frozen ice cream' note for 'Iceman's idea of dessert.'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "X-Men (2000)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Rogue, eat something. You'll be fine. Probably. The Professor makes better soup than he makes plans.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Logan never says this and it is set in quote marks. A real Logan line to Rogue is 'My name's Logan.'",
+   "source": "https://en.wikiquote.org/wiki/X-Men_(film)",
+   "fix": "My name's Logan.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "My name's Logan.",
+    "by": "Logan",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Bobby keeps it cold. No fridge needed.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Bobby is Iceman, so a cold drink is plausible, but the sources do not show him chilling a drink in a scene.",
+   "source": "https://en.wikipedia.org/wiki/X-Men_(film)",
+   "fix": "Bobby is Iceman. Cold on demand.",
+   "printed": true,
+   "done": false
   }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3,
+  "verdict": "Canteen layout works for a school but is plain, and the only quote is invented.",
+  "missing": [
+   "Storm's toad line",
+   "Wolverine's claws and the cage fight in Laughlin City",
+   "Rogue's first touch",
+   "Magneto's plastic prison",
+   "The Statue of Liberty finale",
+   "Sabretooth on the train"
+  ],
+  "ideas": [
+   "Swap 'Xavier's School cereal bars' note for 'Do you know what happens to a toad?'",
+   "Swap 'Logan's poutine' for 'Cage fight poutine' with the note 'Laughlin City, Alberta.'",
+   "Swap the note by Logan for 'My name's Logan.'",
+   "Swap 'Frozen ice cream' note for 'Iceman's idea of dessert.'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }
