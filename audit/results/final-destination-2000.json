@@ -1,0 +1,41 @@
+{
+  "id": "Final Destination (2000)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Alex's vision in the departure lounge.",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "Wikipedia has Alex boarding the plane and having the premonition before take-off. He is on the plane, not in the departure lounge.",
+      "source": "https://en.wikipedia.org/wiki/Final_Destination_(film)",
+      "fix": "Alex's vision before take-off.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 18,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "The boarding pass and in-flight tray suit the film, and Rocky Mountain High is a good nod, but the deaths are barely on the menu.",
+    "missing": [
+      "Tod's bathtub and the clothesline (the first death)",
+      "Ms Lewton's kitchen chain reaction (the Rube Goldberg death)",
+      "Alex changing seats with two classmates (before take-off)",
+      "Bludworth's mouse and cat speech (the funeral home)",
+      "Carter's car at the train crossing",
+      "The falling neon sign in Paris"
+    ],
+    "ideas": [
+      "Swap the note on 'Bludworth's funeral parlour madeleines' for 'We are all a mouse the cat has by the tail.'",
+      "Swap the note on 'Window seat French onion dip' for 'Alex swapped seats with two classmates before take-off.'",
+      "Swap the note on 'Premonition French 75' for 'Tod's memorial speech about the hour of death. Nobody drinks to that.'"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

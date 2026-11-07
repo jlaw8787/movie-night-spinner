@@ -1,0 +1,42 @@
+{
+  "id": "Fantastic Beasts: The Crimes of Grindelwald (2018)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Circus Arcanus chocolate croissants",
+      "where": "dish-name",
+      "verdict": "unsure",
+      "why": "The venue and ticket say Cirque Arcanus, but this dish says Circus Arcanus. Wikipedia uses Circus Arcanus, so the film's spelling is unclear and the menu should pick one.",
+      "source": "https://en.wikipedia.org/wiki/Fantastic_Beasts:_The_Crimes_of_Grindelwald",
+      "fix": "Cirque Arcanus chocolate croissants",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 15,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "The circus ticket and Paris pastries work well, though it skips the film's best creature and spell moments.",
+    "missing": [
+      "Matagot cats guarding the French Ministry (Leta's Stupefy)",
+      "The Niffler lifting Grindelwald's blood pact vial",
+      "Blue fire at the Grindelwald rally",
+      "Credence and Nagini escaping the circus",
+      "Queenie and Jacob's split in London",
+      "Leta's boggart and the Lestrange tomb"
+    ],
+    "ideas": [
+      "Swap the note on 'French Ministry gruyere gougères' for 'Matagot cats guard the door. Do not Stupefy them.'",
+      "Swap the note on 'Grenadine citron pressé' for 'Blue fire at the rally. Only the loyal walk through.'",
+      "Swap the note on 'Coq au vin' for 'Served in the Lestrange family tomb, where Leta's secret comes out.'",
+      "Swap the footer line 'Midnight next week' for 'The Niffler has taken Grindelwald's vial.'"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

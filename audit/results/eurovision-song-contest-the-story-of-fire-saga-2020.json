@@ -1,0 +1,57 @@
+{
+  "id": "Eurovision Song Contest: The Story of Fire Saga (2020)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Leave a little milk and a plate of snacks out for the elves, Lars. They get grumpy if we eat it all.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Sigrit never says this, and her offerings to the elves are mini bottles of whiskey and homemade biscuits, not milk. A note in her voice with the right gifts fits the plot.",
+      "source": "https://refinery29.com/en-gb/2020/07/9892899/icelandic-elves-real-history-eurovision-netflix",
+      "fix": "Leave a little whiskey and a plate of biscuits out for the elves, Lars. They get grumpy if we eat it all.",
+      "printed": true,
+      "done": false,
+      "fix_note": {
+        "text": "Leave a little whiskey and a plate of biscuits out for the elves, Lars. They get grumpy if we eat it all.",
+        "by": "Sigrit Ericksdottir",
+        "kind": "note"
+      }
+    },
+    {
+      "text": "Milk left out for the elves.",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "Sigrit offers the elves mini bottles of whiskey and homemade biscuits. Milk is not mentioned.",
+      "source": "https://refinery29.com/en-gb/2020/07/9892899/icelandic-elves-real-history-eurovision-netflix",
+      "fix": "Whiskey and biscuits left out for the elves.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "A fun harbour pub with Ja Ja Ding Dong and the elves, but the food is plain and it misses the song that wins the film.",
+    "missing": [
+      "'Husavik' sung at the piano ending on the Speorg note (the final)",
+      "Olaf shouting that he only wants 'Jaja Ding Dong' (the pub)",
+      "Lemtov's mansion party in Edinburgh (Lemtov)",
+      "Mita Xenakis, the Greek entrant, leaving with Lemtov (backstage)",
+      "Sigrit's whiskey and biscuits for the elves (Sigrit)",
+      "The unseen elves saving Lars with a thrown knife (Victor Karlosson)"
+    ],
+    "ideas": [
+      "Swap 'Elf house skyr cheesecake pots' note for 'Whiskey and biscuits, for the elves'.",
+      "Swap 'Edinburgh after party fizz' for 'Lemtov's champagne flute', since Sigrit is amazed by tall flutes.",
+      "Swap the board line 'Alexander Lemtov, the Russian star.' for 'Olaf says play Jaja Ding Dong.'",
+      "Swap 'Pickled herring on rye' note for 'Husavik, ending on the Speorg note'."
+    ],
+    "flat": false,
+    "done": false
+  }
+}

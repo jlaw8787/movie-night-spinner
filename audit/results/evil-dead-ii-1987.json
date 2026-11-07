@@ -1,0 +1,62 @@
+{
+  "id": "Evil Dead II (1987)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Jake and Bobbie Joe's hush puppies",
+      "where": "dish-name",
+      "verdict": "wrong",
+      "why": "Wikipedia and Wikiquote both spell her name Bobby Joe, so the printed spelling does not match the sources.",
+      "source": "https://en.wikipedia.org/wiki/Evil_Dead_II",
+      "fix": "Jake and Bobby Joe's hush puppies",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Jake and Bobbie Joe on the trail",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "Same spelling slip in the footer line. The sources spell the name Bobby Joe.",
+      "source": "https://en.wikiquote.org/wiki/Evil_Dead_II",
+      "fix": "Jake and Bobby Joe on the trail.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Jake's jug, carried all the way up the trail.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "Jake and Bobby Joe lead the group to the cabin on foot, but none of the pages I opened mention a jug of cider. It may be a joke, but it claims something about the trek.",
+      "source": "https://en.wikipedia.org/wiki/Evil_Dead_II",
+      "fix": "Jake's the guide, so Jake gets the cider.",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 18,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "Good cabin world with the laughing room, the cellar and the chainsaw, but the food reads like a stock camp menu.",
+    "missing": [
+      "Ash pinning his hand under a book (A Farewell to Arms)",
+      "Groovy, said once the chainsaw is on the stump",
+      "Linda's head biting Ash's hand (the cabin floor)",
+      "The Oldsmobile Delta 88 sucked into the time vortex",
+      "Knights hailing Ash as the hero from the sky",
+      "The shotgun, sawn off with Annie's help"
+    ],
+    "ideas": [
+      "Swap the note on 'Ash's runaway hand pies' for 'Pin them down with a book. A Farewell to Arms will do.'",
+      "Swap the note on 'Laughing room peach iced tea' for 'Who's laughing now?' (Ash, hand pinned with a kitchen knife).",
+      "Rename 'Knowby cabin pecan pie' to 'Groovy pecan pie' with the note 'Baked once the chainsaw is on the stump.'",
+      "Swap the footer line about the mounted deer head for 'The Oldsmobile Delta 88, last seen in the Middle Ages.'"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

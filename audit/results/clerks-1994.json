@@ -1,0 +1,47 @@
+{
+  "id": "Clerks (1994)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Milk's out of date again and the cooler's leaking. Grab a sandwich from the case and pay at the counter, I'll be on the floor.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Set out as Dante's spoken words under 'A word from Dante Hicks', but he never says it, and the milk and cooler are not in the plot. What the plot does show is gum jamming the shutter locks and Dante's shoe polish sign 'I ASSURE YOU; WE'RE OPEN!'",
+      "source": "https://en.wikipedia.org/wiki/Clerks_(film)",
+      "fix": "The shutters are jammed with gum. I assure you, we're open. Grab a sandwich and pay at the counter.",
+      "fix_note": {
+        "text": "The shutters are jammed with gum. I assure you, we're open. Grab a sandwich and pay at the counter.",
+        "by": "Dante Hicks",
+        "kind": "note"
+      },
+      "done": false,
+      "printed": true
+    }
+  ],
+  "checked_ok": 17,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 3,
+    "overall": 3.2,
+    "verdict": "Gets the Quick Stop, rooftop hockey and Veronica's lasagne, but the paper is plain and leaves out the funeral home, the shutters and the sign.",
+    "missing": [
+      "The 'I ASSURE YOU; WE'RE OPEN!' shoe polish sign on the jammed shutters (the opening)",
+      "The Chewlies rep with the tar lung in the bag",
+      "Veronica's list, 'something like 36' (the counter)",
+      "Randal knocking over the casket at the funeral home",
+      "The health inspector fining Dante for cigarettes sold to a four year old",
+      "Randal: 'You're closed!' (the last scene)"
+    ],
+    "ideas": [
+      "Swap 'Open late, mostly' sign for 'I assure you, we're open' to use the shoe polish sheet.",
+      "Swap 'Perfect dozen devilled eggs' note for 'Dante's twelve, give or take' to use the numbers argument.",
+      "Swap 'Smoked beef jerky sticks' note for the tar lung gum.",
+      "Swap the receipt prop for the fine from the health inspector."
+    ],
+    "flat": true,
+    "done": false
+  }
+}

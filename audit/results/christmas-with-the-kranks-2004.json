@@ -1,0 +1,42 @@
+{
+  "id": "Christmas with the Kranks (2004)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the main when Nora finally gets her hands on the last ham.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "Nora never gets the ham. The honey ham rolls into the street and is smashed by a truck, and she comes home with smoked trout instead. Wikipedia and Wikiquote both have the trout, and Luther's 'What happened to the hickory honey ham?'",
+      "source": "https://en.wikipedia.org/wiki/Christmas_with_the_Kranks",
+      "fix": "Serve the main when the neighbours rally round for the Christmas Eve party.",
+      "done": false,
+      "printed": true
+    }
+  ],
+  "checked_ok": 15,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A neat recipe box kitchen with the right street and snowman, but the main cue gets the ham wrong and it skips the funniest disasters.",
+    "missing": [
+      "The honey ham rolling into the street under a truck (Christmas Eve)",
+      "Luther icing the carollers off the lawn",
+      "Nora coming home with only smoked trout",
+      "Luther borrowing Wes Trogdon's tree and the police turning up",
+      "Frosty falling off the roof with Luther",
+      "The Scheels, Walt and Bev, and the cruise Luther hands over"
+    ],
+    "ideas": [
+      "Swap 'Nora's last honey glazed ham' note for the line where the ham rolls into the street.",
+      "Swap 'Caribbean cruise prawn cocktail' for 'Smoked trout, the party fallback' to use the trout.",
+      "Swap the cue to 'Serve the main when Frosty falls off the roof' for a physical beat.",
+      "Swap 'Last-minute Christmas Eve trifle' note for the Scheels' cruise ending."
+    ],
+    "flat": false,
+    "done": false
+  }
+}

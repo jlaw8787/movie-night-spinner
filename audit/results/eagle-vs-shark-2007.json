@@ -1,0 +1,77 @@
+{
+  "id": "Eagle vs Shark (2007)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Jarrod, I made you a burger. Don't be weird about it. Eat it before it goes cold.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "The sources show Lily working at the burger shop, but nothing has her making Jarrod a burger. No quote page for the film turned up either. A note in her voice about the shark costume fits the plot.",
+      "source": "https://en.wikipedia.org/wiki/Eagle_vs_Shark",
+      "fix": "Jarrod, I'm coming to your party as a shark. Don't be weird about it. It's a good costume.",
+      "printed": true,
+      "done": false,
+      "fix_note": {
+        "text": "Jarrod, I'm coming to your party as a shark. Don't be weird about it. It's a good costume.",
+        "by": "Lily",
+        "kind": "note"
+      }
+    },
+    {
+      "text": "A feed from the hometown bakery when Lily visits Jarrod's family.",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The plot has Lily visiting Jarrod's hometown and family, but no bakery.",
+      "source": "https://en.wikipedia.org/wiki/Eagle_vs_Shark",
+      "fix": "A feed for Lily's visit to Jarrod's family.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Jarrod's order before training for the big fight.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "Jarrod trains for his fight with Eric, but nothing shows him ordering an L&P spider.",
+      "source": "https://en.wikipedia.org/wiki/Eagle_vs_Shark",
+      "fix": "For Jarrod, training for the big fight.",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "Fight Man rematch lemon, lime and bitters",
+      "where": "dish-name",
+      "verdict": "unsure",
+      "why": "The film has Jarrod and Lily meeting in a video game final at the costume party, and Lily loses on purpose. The name of the game and any rematch are not in what I read.",
+      "source": "https://off-centerviews.blogspot.com/2010/01/eagle-vs-shark-video-review.html",
+      "fix": "Costume party final lemon, lime and bitters",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "Great poster and a New Zealand menu with Afghan biscuits and L&P, but it skips Jarrod's family and the claymation apples.",
+    "missing": [
+      "Lily losing the video game final on purpose (the party)",
+      "Damon's apples that turn up as claymation (the drive)",
+      "Jarrod's fight with Eric, who has lost the use of his legs (the finale)",
+      "Lily's silly joke at the family dinner that makes everyone laugh (Jarrod's home)",
+      "Jarrod's father in the wheelchair on the hill (Lily and Vinny)",
+      "The tent in the yard where Jarrod and Lily sleep (Jarrod's family)"
+    ],
+    "ideas": [
+      "Swap 'Kiwi mince and cheese pie bites' note for 'Damon's apples, on the drive up'.",
+      "Swap 'Afghan biscuits' note for 'Lily's joke, told at the family dinner'.",
+      "Swap 'Costume party cocktail franks' note for 'Lily came as a shark. Jarrod, an eagle.'",
+      "Swap the costume card line 'Jarrod's place' for 'Sleep in the tent, Lily'."
+    ],
+    "flat": false,
+    "done": false
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "Coco (2017)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Miguel, wipe your feet, eat your tamales and put that guitar away. No music in this house. I mean it.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Printed as Abuelita's own words but she never says it. Her real line after she smashes Miguel's guitar is 'There. No guitar. No music. Aw, come. You'll feel better after you eat with your family.'",
+      "source": "https://en.wikiquote.org/wiki/Coco_(2017_film)",
+      "fix": "Aw, come. You'll feel better after you eat with your family.",
+      "fix_note": {
+        "text": "Aw, come. You'll feel better after you eat with your family.",
+        "by": "Abuelita",
+        "kind": "quote"
+      },
+      "done": false,
+      "printed": true
+    }
+  ],
+  "checked_ok": 17,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A warm invite with real Mexican dishes and the right family, but the ban on music is the whole menu's only joke and the Land of the Dead is barely there.",
+    "missing": [
+      "'Remember Me' and Ernesto de la Cruz's guitar (the plaza talent show)",
+      "Imelda smashing the departure computer with her boot",
+      "Héctor and the marigold petals he needs to cross",
+      "Miguel taking the guitar from Ernesto's mausoleum",
+      "The departure agent and the photo scanner on the bridge",
+      "Mama Coco remembering her father"
+    ],
+    "ideas": [
+      "Swap 'Pan de muerto' note for 'Dough bones for the ones we remember.'",
+      "Swap 'Champurrado' note for Héctor's 'I'm being forgotten, Miguel.' as a warm drink with a sad line.",
+      "Swap 'Agua de jamaica' note for the marigold petal that lets Miguel go home.",
+      "Swap the 'Table 17' seated near line for 'Seated near: Pepita, who flies.'"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "Danger Close: The Battle of Long Tan (2019)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Eat up, men. Delta Company has a long day ahead, and the rain won't help us.",
+      "where": "note",
+      "verdict": "unsure",
+      "why": "Reads as Major Harry Smith's own words, a real officer. No quote like it is on any page opened, and the one Smith line found is a short, sharp reply to the order to withdraw. The film has no mess tent speech in the plot.",
+      "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/DangerCloseTheBattleOfLongTan",
+      "fix": "Delta Company is relieving Bravo at the rubber plantation today. Eat while it's hot.",
+      "fix_note": {
+        "text": "Delta Company is relieving Bravo at the rubber plantation today. Eat while it's hot.",
+        "by": "Major Harry Smith",
+        "kind": "note"
+      },
+      "done": false,
+      "printed": true
+    },
+    {
+      "text": "three days' leave down at Vung Tau",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "No source opened mentions Vung Tau leave in the film.",
+      "source": "https://en.wikipedia.org/wiki/Danger_Close:_The_Battle_of_Long_Tan",
+      "fix": "a hot plate before the long patrol",
+      "done": false,
+      "printed": true
+    },
+    {
+      "text": "0900",
+      "where": "card",
+      "verdict": "unsure",
+      "why": "The timeline row '0900 Long Tan rubber plantation' and the '12:46 chow' slot are not confirmed. The plot only says Delta Company is sent the day after Bravo, and the fighting is that afternoon in heavy rain.",
+      "source": "https://en.wikipedia.org/wiki/Danger_Close:_The_Battle_of_Long_Tan",
+      "fix": "1600 Long Tan rubber plantation",
+      "done": false,
+      "printed": true
+    }
+  ],
+  "checked_ok": 16,
+  "vibe": {
+    "world": 4,
+    "moments": 2,
+    "food": 3,
+    "tone": 3,
+    "look": 3,
+    "overall": 3.0,
+    "verdict": "A tidy mess tent with the Nui Dat concert and the 108 men right, but it skips almost every part of the battle and the signed note is made up for a real officer.",
+    "missing": [
+      "Private Large firing his weapon during the mortar attack, then killed at the end",
+      "11 Platoon radioing artillery to land 'danger close'",
+      "The two RAAF Iroquois pilots flying in with ammunition under fire",
+      "The roll call of the men who died",
+      "Harry Smith refusing to leave 11 Platoon behind and the M113s arriving",
+      "Little Pattie's concert going on while D Company is fighting"
+    ],
+    "ideas": [
+      "Swap 'Ration pack chocolate orange pots' note for 'Danger close', the artillery call on 11 Platoon.",
+      "Swap 'Cold can of VB' note for Large's beer during the mortar attack, with a sombre line.",
+      "Swap the 'Badge' line for 'Roll call' to end on the names of the men who died.",
+      "Swap 'Spam fritters' note for the helicopter resupply in the rain."
+    ],
+    "flat": true,
+    "done": false
+  }
+}

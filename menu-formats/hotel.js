@@ -256,7 +256,7 @@ window.MENU_FORMATS[ID]=ctx=>{
     style:`position:absolute;left:38px;top:1004px;width:${colW}px;box-sizing:border-box;padding:10px 14px 9px;text-align:center;border-radius:${era===3?16:2}px;box-shadow:0 6px 18px rgba(0,0,0,.38)`});
   const hero=`<div style="position:absolute;left:96px;top:${heroTop}px;width:${posW}px;height:${heroH}px;overflow:hidden;background:${K.deep};outline:1px solid ${rule};outline-offset:6px;border-radius:${era===3?18:0}px;box-shadow:0 6px 16px rgba(0,0,0,.3)">
     ${posterHTML(ph.hero,ph.isPoster,ph.heroPos,era,t)}</div>${lp}`;
-  const note=`<div data-fbox style="position:absolute;left:38px;width:360px;top:1130px;height:196px;overflow:hidden;display:flex;flex-direction:column">
+  const note=`<div data-fbox style="position:absolute;left:38px;width:360px;top:1130px;height:196px;box-sizing:border-box;padding-bottom:4px;overflow:hidden;display:flex;flex-direction:column">
     ${kick("From the front desk")}
     <div data-fs="15" style="font:italic 400 22px/1.34 ${B};color:${K.ink};margin-top:12px">"${esc(dry(F.note.text))}"</div>
     <div data-fs="24" style="font:400 40px/1.1 ${S};color:${K.acc};margin-top:8px;transform:rotate(-2deg);transform-origin:left">${esc(F.note.by)}</div>

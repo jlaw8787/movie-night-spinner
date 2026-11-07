@@ -1,0 +1,67 @@
+{
+  "id": "Dumbo (1941)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the snacks when Timothy Mouse offers Dumbo a peanut.",
+      "where": "cue",
+      "verdict": "unsure",
+      "why": "I could not find a scene where Timothy offers Dumbo a peanut. The only peanut moment in the sources is the finale, when Dumbo flies and sprays the other elephants with peanuts.",
+      "source": "https://tvtropes.org/pmwiki/pmwiki.php/WesternAnimation/Dumbo",
+      "fix": "Serve the snacks when Dumbo takes off in the big top and pelts the other elephants with peanuts.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Cue: Serve the snacks when Timothy Mouse offers Dumbo a peanut.",
+      "where": "cue-printed",
+      "verdict": "unsure",
+      "why": "Same cue as printed on the ticket. The only peanut moment in the sources is Dumbo spraying the elephants with peanuts at the finale.",
+      "source": "https://tvtropes.org/pmwiki/pmwiki.php/WesternAnimation/Dumbo",
+      "fix": "Cue: Serve the snacks when Dumbo takes off in the big top and pelts the other elephants with peanuts.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Dumbo, the magic feather was just a feather. You had the ears all along. Now eat your peanuts, pal.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Timothy never says this. His real line is that the feather was just a gag, and it is the best one for the finale.",
+      "source": "https://en.wikiquote.org/wiki/Dumbo",
+      "fix": "The magic feather was just a gag! You can fly! Honest, you can!",
+      "printed": true,
+      "done": false,
+      "fix_note": {
+        "text": "The magic feather was just a gag! You can fly! Honest, you can!",
+        "by": "Timothy Q. Mouse",
+        "kind": "quote"
+      }
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A neat snack bar ticket look with popcorn and corn dogs, but the film's two best food moments, pink elephants and the pie filling, are left out.",
+    "missing": [
+      "Pink Elephants on Parade after the champagne falls in the water vat (Dumbo and Timothy)",
+      "The clowns' fireman act and the vat of pie filling (the clowns)",
+      "The crows and the magic feather (Dandy Crow)",
+      "Casey Jr. puffing 'I think I can' (the train)",
+      "Mrs. Jumbo and Dumbo touching trunks through the bars (the visit)",
+      "Dumbo spraying the elephants with peanuts (the finale)"
+    ],
+    "ideas": [
+      "Swap 'Clown act spaghetti and meatballs' for 'Fireman act pie filling tart', the vat Dumbo jumps into.",
+      "Swap 'Pink elephant marshmallow slice' note for 'Pink Elephants on Parade'.",
+      "Swap 'Casey Jr. mini corn dogs' note for 'I think I can, I think I can'.",
+      "Swap the sarsaparilla note for 'Not the water vat the clowns spiked'."
+    ],
+    "flat": false,
+    "done": false
+  }
+}

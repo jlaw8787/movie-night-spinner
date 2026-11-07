@@ -1,0 +1,57 @@
+{
+  "id": "Charlie and the Chocolate Factory (2005)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Children, touch nothing, eat nothing and do not fall in the river. Good. Now, welcome. I am Willy Wonka, and this is going to be fun.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Set out as Wonka's spoken words under 'From the booth', but he never says it. On Wikiquote his welcome is 'Dear visitors, it is my great pleasure to welcome you to my humble factory.' His only river warning is 'My chocolate must be untouched by human hands!' as Augustus drinks from it. He also doesn't tell the kids to eat nothing, the temptations are what take them out.",
+      "source": "https://en.wikiquote.org/wiki/Charlie_and_the_Chocolate_Factory_(film)",
+      "fix": "Welcome. Keep out of the river, my chocolate must be untouched by human hands.",
+      "fix_note": {
+        "text": "Welcome. Keep out of the river, my chocolate must be untouched by human hands.",
+        "by": "Willy Wonka",
+        "kind": "note"
+      },
+      "done": false,
+      "printed": true
+    },
+    {
+      "text": "One for each grandparent, all four in bed.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "The pages opened don't settle it. TV Tropes says the grandparents sleep in the middle of the house, and Wikipedia names only Grandpa Joe and Grandpa George. Four in one bed is not confirmed.",
+      "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/CharlieAndTheChocolateFactory",
+      "fix": "One for each grandparent, all sharing the one bed.",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 18,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "The snack bar fits a chocolate factory and the food draws on real scenes, but Wonka's printed words are made up and the layout is a generic cinema board.",
+    "missing": [
+      "Everlasting Gobstopper and the Wonka Bar (the ticket hunt and Veruca's demands)",
+      "Veruca and the squirrels sending her down the garbage chute (the nut room, 'only light it on Tuesdays')",
+      "Mike Teavee shrunk by the Teleporter",
+      "The Oompa Loompa songs after each child is out",
+      "Willy Wonka's dentist father Wilbur (the flashback and the final reunion)",
+      "The glass elevator crashing into the Bucket house"
+    ],
+    "ideas": [
+      "Swap 'Bucket family cabbage and bacon soup' note for Grandpa George's complaint about eating nothing but cabbage soup.",
+      "Swap the 'Combo 5' line for 'Five tickets, one winner' to tie it to the five golden tickets.",
+      "Swap the 'Coming soon' footer for an Oompa Loompa verse warning about chewing gum.",
+      "Swap 'Blueberry pie and ice cream' note for 'Violet, you're turning violet' (Mrs Beauregarde)."
+    ],
+    "flat": false,
+    "done": false
+  }
+}

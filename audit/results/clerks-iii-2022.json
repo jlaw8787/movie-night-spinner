@@ -1,0 +1,72 @@
+{
+  "id": "Clerks III (2022)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Lost and found: RST Video next door.",
+      "where": "footer",
+      "verdict": "wrong",
+      "why": "In Clerks III Jay and Silent Bob have taken over the former RST Video and turned it into a legal marijuana dispensary, so RST Video is not next door any more.",
+      "source": "https://en.wikipedia.org/wiki/Clerks_III",
+      "fix": "Lost and found: ask Jay and Silent Bob next door.",
+      "done": false,
+      "printed": true
+    },
+    {
+      "text": "RST Video next door",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "Same as the footer. The former RST Video is now Jay and Silent Bob's dispensary.",
+      "source": "https://en.wikipedia.org/wiki/Clerks_III",
+      "fix": "Jay and Silent Bob's shop in the old RST Video",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "Randal's new heart-healthy diet after the heart attack.",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The heart attack and the doctor's warning are in the plot, but no source opened mentions a diet.",
+      "source": "https://en.wikipedia.org/wiki/Clerks_III",
+      "fix": "Randal's doctor wants him happy and healthy after the heart attack.",
+      "done": false,
+      "printed": true
+    },
+    {
+      "text": "Randal's new diet since the heart attack. He hates it.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "Same as the crudités note. A diet after the heart attack is not confirmed.",
+      "source": "https://en.wikipedia.org/wiki/Clerks_III",
+      "fix": "Iced tea for the man who just had a heart attack.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 14,
+  "vibe": {
+    "world": 3,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 3,
+    "overall": 3.0,
+    "verdict": "The Quick Stop is right and the film shoot idea is used, but it misses the NFT kites, Becky and what the film is about.",
+    "missing": [
+      "The NFT kites with the Buddy Christ (Elias and Blockchain)",
+      "Randal's plan to shoot a movie called Inconvenience",
+      "Silent Bob shooting it in black and white",
+      "Hockey on the roof",
+      "Becky's ghost and Dante's grief",
+      "Randal re-editing the film so Dante is the lead"
+    ],
+    "ideas": [
+      "Swap 'Jersey crumb cake squares' note for the Buddy Christ kite.",
+      "Swap 'Roller grill hot dogs' note for 'Silent Bob shoots it in black and white.'",
+      "Swap 'Chicken parm heroes' note for 'Inconvenience, day one.'",
+      "Swap the blank panel at the top right of the printed face for a 'clapperboard' prop that says Inconvenience."
+    ],
+    "flat": true,
+    "done": false
+  }
+}

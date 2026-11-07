@@ -1,0 +1,62 @@
+{
+  "id": "Face/Off (1997)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "The final showdown in the church.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "The church shootout happens at Lazarro's funeral. The final fight is on the docks and the shore after the speedboat chase, where Archer kills Castor.",
+      "source": "https://en.wikipedia.org/wiki/Face/Off",
+      "fix": "The funeral shootout in the church.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Lobster and champagne, he takes over the life.",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "Castor does sit down to a candlelight dinner with Eve, but none of the pages I opened mention lobster. Champagne appears in a different scene, when Archer toasts the agents who died in the capture.",
+      "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/FaceOff",
+      "fix": "Candlelight dinner with Eve, he takes over the life.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Castor, as Sean, sitting down at the family table.",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The sources show a candlelight dinner for two, Castor and Eve, not a family table with Jamie. Nothing I read mentions a roast chicken.",
+      "source": "https://retrozap.com/face-off-1997-sci-fi-saturdays/",
+      "fix": "Castor, as Sean, at a candlelit dinner with Eve.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 19,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "The prison canteen and badge suit the film, but the dishes lean on peaches and a few scenes that are shaky.",
+    "missing": [
+      "Pollux eating a gourmet meal in FBI custody and singing opera",
+      "Pollux and his tiramisu (the interview room)",
+      "Castor's butterfly knife, given to Jamie",
+      "The speedboat chase and the speargun fight on the shore",
+      "Adam's headphones during the raid on Castor's headquarters",
+      "Archer and Castor's Mexican standoff in the hangar"
+    ],
+    "ideas": [
+      "Swap the note on 'Church canapés' for 'The funeral shootout in the church, doves and all.'",
+      "Swap 'Peach cobbler' for 'Pollux's tiramisu' with the note 'Eaten in FBI custody, between arias.'",
+      "Swap the note on 'Archer family lemon thyme roast chicken' for 'Castor and Eve, candlelight dinner, Archer's face.'",
+      "Swap the note on 'Garlic butter grilled lobster tails' for 'Pollux orders the good stuff in custody.'"
+    ],
+    "flat": true,
+    "done": false
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "Cinderella Man (2005)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "We'll make do with what we have. Eat, Jim, then go earn some more.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Set out as Mae's rules in her own words, but it is not a line from the film. Mae dreads the fights and hates the idea of Jim going back to the ring, so 'go earn some more' is against her character. A real Mae line from the quotes page is 'Every time you get hit, feels like I'm getting hit too.'",
+      "source": "https://moviemistakes.com/film5061/quotes",
+      "fix": "Every time you get hit, feels like I'm getting hit too.",
+      "fix_note": {
+        "text": "Every time you get hit, feels like I'm getting hit too.",
+        "by": "Mae Braddock",
+        "kind": "quote"
+      },
+      "done": false,
+      "printed": true
+    },
+    {
+      "text": "Joe Gould's round after the Baer fight.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "No page opened shows Gould buying a round or Ballantine ale after the Baer fight. The plot has Mae listening to the fight on the radio with the kids.",
+      "source": "https://en.wikipedia.org/wiki/Cinderella_Man",
+      "fix": "Raised in the Braddock kitchen after the Baer fight.",
+      "done": false,
+      "printed": true
+    },
+    {
+      "text": "The first proper meal after a win.",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "No source opened shows a first proper meal after a win.",
+      "source": "https://en.wikipedia.org/wiki/Cinderella_Man",
+      "fix": "What Mae would cook after the fight with Griffin.",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "Jim skips his and gives Rosy his share.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "No source opened shows Jim giving up his food for Rosy.",
+      "source": "https://en.wikipedia.org/wiki/Cinderella_Man",
+      "fix": "Jim pays back the relief money before he buys any treats.",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 14,
+  "vibe": {
+    "world": 3,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 3,
+    "overall": 3.2,
+    "verdict": "A tidy Depression kitchen, but the signed note is invented and it uses few of the film's well known scenes.",
+    "missing": [
+      "Mae throwing a drink at Max Baer when he taunts her (the public taunt)",
+      "Braddock paying back the relief money (the government help)",
+      "The gasman cutting off the heat (the hard winter)",
+      "Damon Runyon calling him the Cinderella Man",
+      "Mae and the kids listening to the Baer fight on the radio",
+      "Gould and his wife also hit by hard times"
+    ],
+    "ideas": [
+      "Swap 'Ballantine ale in the bottle' for 'Mae's spilled drink' to use the Baer taunt.",
+      "Swap 'Ringside franks with caraway kraut' note for the radio listening at the kitchen table.",
+      "Swap the 'Before you sit down' item 'Braddock's right hand' for 'Paying back the relief money'.",
+      "Swap the sign 'warm bread' line for 'No gas, no heat, warm bread' to use the gasman."
+    ],
+    "flat": true,
+    "done": false
+  }
+}

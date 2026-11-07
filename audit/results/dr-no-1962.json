@@ -1,0 +1,57 @@
+{
+  "id": "Dr. No (1962)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Cold drink, hot fritters and no talk about Crab Key, Cap'n. That island is bad luck for fishermen.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Quarrel never says this. The summary page quotes his real lines about Crab Key, and the sentence about it being bad luck is not among them.",
+      "source": "https://filmsite.org/drno2.html",
+      "fix": "All except Crab Key. We didn't have no right to go there.",
+      "printed": true,
+      "done": false,
+      "fix_note": {
+        "text": "All except Crab Key. We didn't have no right to go there.",
+        "by": "Quarrel",
+        "kind": "quote"
+      }
+    },
+    {
+      "text": "Quarrel's round, before the boat goes out.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "The sources show Quarrel and Puss Feller ganging up on Bond at the bar before Felix explains they work for him. Nothing shows Quarrel buying a round or drinking Red Stripe.",
+      "source": "https://en.wikipedia.org/wiki/Dr._No_(film)",
+      "fix": "Safer than Dr No's coffee.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 15,
+  "vibe": {
+    "world": 5,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 4.2,
+    "verdict": "Puss Feller's is a real stop in the film and the tab and the gold on black look suit the 1962 Jamaica setting.",
+    "missing": [
+      "Dr No's 'A medium dry martini, lemon peel, shaken not stirred.' (Dr No at dinner)",
+      "'Bond. James Bond.' at the chemin de fer table (Bond and Sylvia Trench)",
+      "The drugged coffee in the comfortable suites (Dr No's base)",
+      "Dinner with Dr No and the SPECTRE speech (Crab Key)",
+      "Honey Ryder's black widow story: 'It took him a whole week to die.' (Honey to Bond)",
+      "Bond's line 'I think they were on their way to a funeral.' (the hearse chase)"
+    ],
+    "ideas": [
+      "Swap 'Puss-Feller's planter's punch' note for 'Dr No's dry martini, lemon peel'.",
+      "Swap the lager note for 'Coffee, black, no sedative' on a drinks line.",
+      "Swap 'Quarrel's jerk chicken' note for 'Quarrel's catch, the night before Crab Key'.",
+      "Swap 'Honey Ryder's coconut toto' note for 'Honey's black widow, a whole week to die' on the sweets."
+    ],
+    "flat": false,
+    "done": false
+  }
+}
