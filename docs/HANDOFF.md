@@ -344,3 +344,27 @@ Josh asked for a fact audit (is every line true to the film, are quotes real) an
 6. Look bugs to fix alongside (no call needed): posters in black bars (Gladiator II, Great Mouse Detective, Rise of the Guardians, Sword in the Stone, Muppet Treasure Island, Pinocchio, Dead Man's Chest, Doctor Strange, No Way Home), Rocky V header cut off, Pocahontas stranded "Mess Hall Mains" heading, Selena's '97 date stamp on a 1995 still.
 7. Review 21: after all the rework is done.
 Then full check-print-text (all 900, one go), tests, deploy, status updates to Josh as it goes.
+
+## 8 Nov, 1:30am: decisions 1, 3, 4, 5, 6 done (start here in the next chat)
+
+Done and pushed (not deployed yet; live is still 911f5f3):
+- Look bugs (6): tavern posters keep their shape as the plate narrows (no black bars, 9 films); Rocky V sign shortened; home stamps a story year within 5 years (Selena '95); Pocahontas heading already held with its dishes.
+- Layout moves (3), Claude's picks: Return of the Jedi and Wakanda Forever to banquet; Rogue One and Infinity War to galley; Avatar to campfire; Enchanted to invite; Wayne's World to diner; Nativity! to canteen; Spider-Verse to newspaper; School of Rock to club; Crouching Tiger to tavern (coin "taels"); Finding Dory to placemat; Aquaman to home; Phar Lap to pub (est. 1870).
+- New per-film settings in film-flavour: campfire `labels` (s, m, w, d, t, n, b, call: headings for non-camp worlds); airline `flight` (Con Air "Jailbird"); diner `est` (Wreck-It Ralph 1983); bistro `time` may be words (Batman "parade night"); pub est year comes from a period story year.
+- Airplane!: Dr Rumack's note is his real line, "I am serious. And don't call me Shirley." (Josh, 7 Nov 11pm).
+- Unsure chase (5): all 990 settled with sources. Report: 0 wrong open, 0 unsure. Briefs: docs/unsure-agent-prompt.md.
+
+Tools added (use them, they save hours):
+- scripts/card-ops.cjs: `apply audit/ops/*.json` applies text ops across a film's whole data (films.json, flavour, house, dish names and notes, recipes, recipes2, diet, its formats.js spec and template). Each op is marked done; matches lower-case stored notes. `find "Film (Year)" "text"` shows where a line lives.
+- scripts/edition-sync.cjs: copies applied ops into the poster editions in movie-menus.js. Run after card-ops apply; editions hold their own copy of the text and recipes (tests/era-menus checks recipe names match).
+- scripts/audit-src.cjs: `plot`, `quotes`, `script`, `grep "Film (Year)" words` from Wikipedia, Wikiquote and springfieldspringfield transcripts through the proxy, no WebSearch needed. Never caches rate-limit pages (fixed 8 Nov; 600 bad cached pages were cleared).
+- /tmp is wiped between machines: the apply loop is `node scripts/card-ops.cjs apply audit/ops/*.json && node scripts/edition-sync.cjs && node scripts/audit-apply-notes.cjs && node scripts/build-data.cjs`.
+
+Lesson from the chase: agents cut real visual scenes when a search came back empty (Gremlins stair lift, Palm Springs pizza float, Practical Magic midnight margaritas dance, all put back). An empty search is not evidence.
+
+Josh, 7 Nov 11pm: "I don't want movies to miss iconic lines or scenes." So every film (all 900) gets an iconic check, not only the 411 flat ones.
+
+Next, in order:
+1. Iconic check and rework (decision 2 plus the iconic rule): docs/rework-agent-prompt.md. Batches: 410 flat films in lists of 8 (full rework), 490 others in lists of 15 (iconic check only). Make the lists with the snippet in this section's commit or regenerate: flat = vibe.flat true. Agents write audit/rework-ops/<slug>.json; apply with card-ops apply audit/rework-ops/*.json, then edition-sync, build-data, tests.
+2. Re-extract cards and shots for changed films (audit-extract FORCE=1) and re-score vibe (a light agent pass reading the new shots).
+3. Review 21, then check-print-text on all 900 in one go, all tests, deploy from the trimmed copy (see top of this file).
