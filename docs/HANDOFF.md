@@ -312,3 +312,15 @@ Josh asked for a fact audit (is every line true to the film, are quotes real) an
 - Checkers sometimes get it wrong (The Matrix noodles, Miracle on 34th Street's Thanksgiving): fixers check suspect calls against Wikipedia and reverse them.
 - Some wave 7 checkers passed signed notes framed as written ("Left on the counter") even when the words are invented. That follows the rule; Josh may want it stricter.
 - Waiting on Josh: 250 or so flat menus and the films on the wrong layout (list above), review 21, hosting (Netlify or GitHub Pages).
+
+## 7 Nov, evening: audit finished (all 900)
+
+- Wave 7's 25 wrong lines fixed (Fight Club's car park beer reversed: the checker was wrong). check-print-text passed on all 900 at 31ef90b, deployed (deploy 6aeee555).
+- Waves 8 to 14 ran in this chat: 60 films a wave, 3 Sonnet agents of 20 (13 for the last 39), then audit-apply-notes, then one Sonnet fixer per wave with the usual brief. All 900 films now have results.
+- Report: 716 wrong lines fixed, 3 open, 990 unsure, 411 flat, average vibe 3.55.
+- Open for Josh: Ladies in Black prints decimal prices in 1959 Sydney (tearoom builds prices by era, no per-film currency); Mad Max 2's badge says GYRO CAPTAIN over a still of Max (lab layout); Trading Places' crest reads 18 74 but the Heritage Club is 207 years old (1776). The year is baked into crest-6b76d3.webp; a quick redraw came out broken and was reverted, so it needs a proper art edit.
+- Reversed checker calls worth knowing: Taken's pony (stays), True Romance's purple Cadillac (stays), Waitress's "I Hate My Husband pie" (real).
+- New optional per-film settings in data/film-flavour.json, each read by one layout and used only where set: precinct `dept` (Mad Max), stadium `score` (Next Goal Wins), diner `caption` (Shaft) and `lastSeenAt` (The Birds), truck `drinksHeading` (Rent). app.js KFIX guards kids mode turning "Martinis' new house" into "Mocktail' new house".
+- Unapplied fix_notes on unsure lines (fixer judged the current notes fine): Pelham One Two Three, Working Girl, Sleepless in Seattle, The Adjustment Bureau, The Secret of My Success, After Hours, Die Hard, Ghost Dog. Hand-built menus have no film-flavour entry, so the notes script skips them.
+- Layout and look issues the checkers raised (vibe, Josh's call): posters in black bars (Gladiator II, Great Mouse Detective, Rise of the Guardians, Sword in the Stone, Muppet Treasure Island), Rocky V header cut off, Phar Lap and Nativity on the wrong layout, Selena's '97 date stamp on a 1995 still.
+- Waiting on Josh: the 411 flat menus and the layout list above, review 21, hosting (Netlify or GitHub Pages).
