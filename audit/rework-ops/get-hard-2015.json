@@ -1,0 +1,66 @@
+{
+  "id": "Get Hard (2015)",
+  "ops": [
+    {
+      "set": "flavour.note",
+      "value": {
+        "text": "That's great. I'll tell the others.",
+        "by": "Darnell Lewis",
+        "kind": "quote"
+      }
+    },
+    {
+      "old": "Serve the mains when Darnell starts the training.",
+      "new": "Serve the mains when Darnell turns James's house into a maximum security prison."
+    },
+    {
+      "old": "Car wash corner store wings",
+      "new": "Flamethrower rescue hot wings"
+    },
+    {
+      "old": "Car wash corner store battered onion wings",
+      "new": "Flamethrower rescue battered onion wings"
+    },
+    {
+      "old": "King's cucumber jalapeño margarita",
+      "new": "Capoeira cucumber jalapeño margarita"
+    },
+    {
+      "old": "King's cucumber jalapeño lime crush",
+      "new": "Capoeira cucumber jalapeño lime crush"
+    },
+    {
+      "old": "Stovetop chocolate pudding chilled in cups",
+      "new": "Chocolate pudding in cups, served mid-riot"
+    },
+    {
+      "old": "Darnell's family recipe, not prison issue.",
+      "new": "Darnell's dinner, plus his Boyz n the Hood story."
+    },
+    {
+      "old": "James King's mansion pour, before the sentence.",
+      "new": "Perfect Sunday: a Wall Street Journal and a forty."
+    },
+    {
+      "set": "flavour.prop",
+      "value": {
+        "kind": "receipt",
+        "title": "Prison Prep",
+        "lines": [
+          "30 days to go",
+          "Fee: $30,000"
+        ]
+      }
+    },
+    {
+      "set": "flavour.winks",
+      "value": [
+        "Darnell's car wash",
+        "The mock prison riot with James's staff",
+        "A Wall Street Journal and a forty",
+        "The Crenshaw Kings and a flamethrower",
+        "Capoeira on the yacht"
+      ]
+    }
+  ]
+}

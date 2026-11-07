@@ -30,3 +30,7 @@ Fixed layout words that don't suit the film. Fix with a per-film setting or a la
 - Doctor Strange (2016), tavern: "crowns", "FROM THE HEARTH", "Coin of the realm", "When the bell rings".
 - Dirty Work (1998), precinct: "DIVISION Special Investigations".
 - Dreamgirls (2006): wink prints inside "No discussing ___ at the tables" and now starts with a capital.
+- Free Willy (1993), kiosk: "Surf report" strip still prints (beach:false flavour would drop it).
+- Glass Onion (2022), tiki: "Pupu Platters", "From the Lagoon Bar", "From the Fire Pit", "Ring the gong" on a Greek island.
+- Frozen (2013), tearoom: footer "Gloves optional. Smiles required." is code.
+- Grandma's Boy (2006): signed note "My grandma drank all my pot." Josh: keep it (8 Nov).

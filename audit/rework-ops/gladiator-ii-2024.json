@@ -1,0 +1,34 @@
+{
+ "id": "Gladiator II (2024)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Rome will fall. I need only give it a push.",
+    "by": "Macrinus",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Serve the mains when Senator Thraex throws his party for the emperors.",
+   "new": "Serve the mains when Hanno wins the duel at Thraex's party and quotes Virgil."
+  },
+  {
+   "old": "bread for the Colosseum crowd",
+   "new": "First slice for Consul Dondus."
+  },
+  {
+   "old": "the Roman siege of Numidia",
+   "new": "Lamb stew from Hanno's Numidia."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The rhinoceros in the arena",
+    "The flooded Colosseum sea battle",
+    "Baboons in the Ostia fight",
+    "Dondus the monkey, named consul"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "id": "Harry Potter and the Prisoner of Azkaban (2004)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Here, eat this. It'll help.",
+    "by": "Remus Lupin",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Hogsmeade sweet shop coconut ice",
+   "new": "One-Eyed Witch coconut ice"
+  },
+  {
+   "old": "the sweet shop in the wizarding village",
+   "new": "Honeydukes, at the end of the secret passage."
+  },
+  {
+   "old": "the purple triple-decker bus at night",
+   "new": "Emergency transport for the stranded witch or wizard."
+  },
+  {
+   "old": "Buttery slice and bake cookies with Earl Grey tea leaves and lemon zest",
+   "new": "Slice and bake Earl Grey and lemon cookies. Trelawney sees the Grim."
+  },
+  {
+   "old": "Honeydukes fudge",
+   "new": "Mischief managed fudge"
+  }
+ ]
+}

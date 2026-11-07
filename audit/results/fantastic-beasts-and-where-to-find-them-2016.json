@@ -1,43 +1,60 @@
 {
-  "id": "Fantastic Beasts and Where to Find Them (2016)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Gnarlack's Blind Pig. Ask for it quietly.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "The goblin informant who tips off Tina is spelled Gnarlak in the sources, and the speakeasy is the Blind Pig.",
-      "source": "https://en.wikipedia.org/wiki/Fantastic_Beasts_and_Where_to_Find_Them_(film)",
-      "fix": "Gnarlak's Blind Pig. Ask for it quietly.",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    }
-  ],
-  "checked_ok": 16,
-  "vibe": {
-    "world": 3,
-    "moments": 3,
-    "food": 4,
-    "tone": 3,
-    "look": 3,
-    "overall": 3.2,
-    "verdict": "The pastries and Jacob's bakery are right, but the badge and ration sheet layout is a canteen look, not a 1926 New York bakery.",
-    "missing": [
-      "Dougal the invisible Demiguise (Newt's case)",
-      "Queenie and Tina's cocoa (the Goldstein flat)",
-      "The Erumpent in the zoo scene",
-      "Occamy silver eggshells as Jacob's bakery money",
-      "Newt's case switching to Muggle worthy (customs)",
-      "Swooping Evil saving Tina in the death cell"
-    ],
-    "ideas": [
-      "Swap 'Speakeasy lemonade' for 'Queenie's cocoa' (\"But we made 'em cocoa.\").",
-      "Swap the badge and 'Mess open' stamp for a bakery order slip, so the paper matches Jacob's shop.",
-      "Swap the note on '1926 New York beef pot roast' for 'Dougal the Demiguise is under the table. Nobody can see him.'",
-      "Swap the note on 'Smoked paprika devilled eggs' for 'Occamy shells, Jacob's start-up money.'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Fantastic Beasts and Where to Find Them (2016)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Gnarlack's Blind Pig. Ask for it quietly.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "The goblin informant who tips off Tina is spelled Gnarlak in the sources, and the speakeasy is the Blind Pig.",
+   "source": "https://en.wikipedia.org/wiki/Fantastic_Beasts_and_Where_to_Find_Them_(film)",
+   "fix": "Gnarlak's Blind Pig. Ask for it quietly.",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
   }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "The pastries and Jacob's bakery are right, but the badge and ration sheet layout is a canteen look, not a 1926 New York bakery.",
+  "missing": [
+   "Dougal the invisible Demiguise (Newt's case)",
+   "Queenie and Tina's cocoa (the Goldstein flat)",
+   "The Erumpent in the zoo scene",
+   "Occamy silver eggshells as Jacob's bakery money",
+   "Newt's case switching to Muggle worthy (customs)",
+   "Swooping Evil saving Tina in the death cell"
+  ],
+  "ideas": [
+   "Swap 'Speakeasy lemonade' for 'Queenie's cocoa' (\"But we made 'em cocoa.\").",
+   "Swap the badge and 'Mess open' stamp for a bakery order slip, so the paper matches Jacob's shop.",
+   "Swap the note on '1926 New York beef pot roast' for 'Dougal the Demiguise is under the table. Nobody can see him.'",
+   "Swap the note on 'Smoked paprika devilled eggs' for 'Occamy shells, Jacob's start-up money.'"
+  ],
+  "flat": true,
+  "done": false,
+  "rework": "2026-11-08",
+  "iconic": [
+   "The Niffler stealing shiny things (gougères, signed note)",
+   "Jacob's bakery with beast shaped pastries (venue, sign, pastry note)",
+   "Occamy silver eggshells as Jacob's start-up money (eggs note)",
+   "Queenie and the strudel (cue, strudel note)",
+   "The swapped suitcases (prop tag)",
+   "Gnarlak's Blind Pig (house drink)",
+   "Frank the Thunderbird over New York (wink)"
+  ],
+  "changed": [
+   "Pastry note now Jacob's beast pastries",
+   "Devilled eggs note nods to Occamy shells",
+   "Gougères note keeps the Niffler and describes the food",
+   "Pot roast note now a No-Maj at Tina and Queenie's table",
+   "Strudel note uses Queenie's Strudel it is"
+  ]
+ }
 }

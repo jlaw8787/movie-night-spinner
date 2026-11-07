@@ -1,0 +1,24 @@
+{
+ "id": "Groundhog Day (1993)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "What if there is no tomorrow? There wasn't one today.",
+    "by": "Phil Connors",
+    "kind": "quote"
+   }
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Wake Up Call",
+    "lines": [
+     "6:00 AM, Punxsutawney",
+     "I Got You Babe, again"
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "Ghost (1990)",
+  "ops": [
+    {
+      "set": "flavour.note",
+      "value": {
+        "text": "No, you relax, you're the dead guy!",
+        "by": "Oda Mae Brown",
+        "kind": "quote"
+      }
+    },
+    {
+      "old": "Oda Mae's pot roast",
+      "new": "Rita Miller's pot roast"
+    },
+    {
+      "old": "her sisters crowded round the table",
+      "new": "Pot roast, with her sisters crowding round the table"
+    },
+    {
+      "old": "the candlelit parlour of Oda Mae Brown, fake psychic",
+      "new": "Cheddar crackers for the fake psychic who can hear Sam"
+    },
+    {
+      "set": "flavour.winks",
+      "value": [
+        "The pottery wheel scene",
+        "A penny floating up the wall",
+        "The subway ghost teaching Sam to focus",
+        "Oda Mae at the bank as Rita Miller",
+        "Shadows dragging Willie away"
+      ]
+    }
+  ]
+}

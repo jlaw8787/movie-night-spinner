@@ -1,43 +1,61 @@
 {
-  "id": "Ghostbusters: Afterlife (2021)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Grandpa's farmhouse. Grandpa's diner.",
-      "where": "tagline",
-      "verdict": "wrong",
-      "why": "Egon owned the farm, not a diner. The diner is Spinners Roller Hop, where Lucky and Trevor work.",
-      "source": "https://www.gbfans.com/wiki/ghostbusters-afterlife",
-      "fix": "Grandpa's farmhouse. The town's diner.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    }
-  ],
-  "checked_ok": 15,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "A believable roller diner, but it leans on the Mini-Pufts and leaves out Muncher, Gozer and the Ecto-1 chase.",
-    "missing": [
-      "Muncher the foundry ghost and the Ecto-1 chase through town (Trevor and Podcast)",
-      "Gary Grooberson's horror movie class (the summer school)",
-      "Egon's field of buried ghost traps (the farm)",
-      "Podcast and his mic (the mine)",
-      "Vinz Clortho and Zuul possessing Gary and Callie (the finale)",
-      "Ray, Peter and Winston turning up (the finale)"
-    ],
-    "ideas": [
-      "Swap 'Corn fritters with jalapeno ranch' for 'Muncher's fritters', named for the ghost the kids chase",
-      "Swap 'Summerville fried okra' for 'Cujo' popcorn bowl nodding to Gary's class movies",
-      "Swap 'Mini marshmallow men' note for the Walmart scene, since the Mini-Pufts hit the store",
-      "Swap the 'Ghost trap slip' contents 'unknown' for 'Contents: Gozer, probably'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Ghostbusters: Afterlife (2021)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Grandpa's farmhouse. Grandpa's diner.",
+   "where": "tagline",
+   "verdict": "wrong",
+   "why": "Egon owned the farm, not a diner. The diner is Spinners Roller Hop, where Lucky and Trevor work.",
+   "source": "https://www.gbfans.com/wiki/ghostbusters-afterlife",
+   "fix": "Grandpa's farmhouse. The town's diner.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
   }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A believable roller diner, but it leans on the Mini-Pufts and leaves out Muncher, Gozer and the Ecto-1 chase.",
+  "missing": [
+   "Muncher the foundry ghost and the Ecto-1 chase through town (Trevor and Podcast)",
+   "Gary Grooberson's horror movie class (the summer school)",
+   "Egon's field of buried ghost traps (the farm)",
+   "Podcast and his mic (the mine)",
+   "Vinz Clortho and Zuul possessing Gary and Callie (the finale)",
+   "Ray, Peter and Winston turning up (the finale)"
+  ],
+  "ideas": [
+   "Swap 'Corn fritters with jalapeno ranch' for 'Muncher's fritters', named for the ghost the kids chase",
+   "Swap 'Summerville fried okra' for 'Cujo' popcorn bowl nodding to Gary's class movies",
+   "Swap 'Mini marshmallow men' note for the Walmart scene, since the Mini-Pufts hit the store",
+   "Swap the 'Ghost trap slip' contents 'unknown' for 'Contents: Gozer, probably'"
+  ],
+  "flat": true,
+  "done": false,
+  "rework": "2026-11-08",
+  "iconic": [
+   "Ecto-1 chasing Muncher",
+   "Mini Pufts loose in the supermarket (cue)",
+   "Vinz Clortho the Keymaster in the ghost trap",
+   "Egon's field of buried ghost traps",
+   "Science is giving yourself the plague and gambling on the cure (Gary)",
+   "Egon's ghost and the proton pack"
+  ],
+  "changed": [
+   "Signed note now Gary Grooberson's real line",
+   "House fritters renamed Muncher's corn fritters",
+   "Okra renamed Keymaster fried okra",
+   "Cornbread note says what it is and ties to Egon's farmhouse",
+   "Burgers renamed Ecto-1 roller diner burgers",
+   "Winks: Muncher chase, summer science class, Egon's ghost, buried traps",
+   "Prop slip contents: the Keymaster"
+  ]
+ }
 }

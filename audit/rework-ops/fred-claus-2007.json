@@ -1,0 +1,37 @@
+{
+ "id": "Fred Claus (2007)",
+ "ops": [
+  {
+   "old": "Serve the snacks when Fred arrives at the North Pole.",
+   "new": "Serve the snacks when Fred picks a fight with DJ Donnie."
+  },
+  {
+   "old": "Hot chocolate topped with toasted marshmallows and cinnamon",
+   "new": "Toasted marshmallow hot chocolate, for kids Fred marked nice"
+  },
+  {
+   "old": "Clove studded leg ham glazed with honey and Dijon mustard",
+   "new": "Honey Dijon clove ham, the dinner Nick talked him into"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Fred is Santa's older brother",
+    "Clyde Northcutt's three strikes",
+    "Slam, Fred's mate",
+    "Chirp Chirp and the birdhouse"
+   ]
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Efficiency Review",
+    "lines": [
+     "Three strikes, then closed",
+     "Inspector: Clyde Northcutt"
+    ]
+   }
+  }
+ ]
+}

@@ -1,31 +1,43 @@
 {
-  "id": "Fright Night (1985)",
-  "checked": "2026-11-07",
-  "facts": [],
-  "checked_ok": 15,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 4,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "Neon blue and the apples and garlic work well, though the lounge copy reads like a stock nightclub.",
-    "missing": [
-      "Peter Vincent's fake holy water test (Peter's flat)",
-      "The pocket mirror with no reflection (Peter's flat)",
-      "Evil Ed laughing 'Oh, you're so cool, Brewster' (the epilogue)",
-      "Jerry as a bat at sunrise (the basement)",
-      "Billy Cole dissolving to goo (Jerry's house)",
-      "Amy's disco dance (the nightclub)"
-    ],
-    "ideas": [
-      "Swap the 'Holy water lemon, lime and bitters' note for 'Peter swears it is holy water. It is tap water.'",
-      "Replace the stock 'Two drink minimum' footer with 'No reflections allowed at the tables'.",
-      "Put Evil Ed's laugh on the VIP badge in place of 'Fearless Killer'.",
-      "Add a 'Mirror shard' garnish to the bar menu."
-    ],
-    "flat": false,
-    "done": false
-  }
+ "id": "Fright Night (1985)",
+ "checked": "2026-11-07",
+ "facts": [],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Neon blue and the apples and garlic work well, though the lounge copy reads like a stock nightclub.",
+  "missing": [
+   "Peter Vincent's fake holy water test (Peter's flat)",
+   "The pocket mirror with no reflection (Peter's flat)",
+   "Evil Ed laughing 'Oh, you're so cool, Brewster' (the epilogue)",
+   "Jerry as a bat at sunrise (the basement)",
+   "Billy Cole dissolving to goo (Jerry's house)",
+   "Amy's disco dance (the nightclub)"
+  ],
+  "ideas": [
+   "Swap the 'Holy water lemon, lime and bitters' note for 'Peter swears it is holy water. It is tap water.'",
+   "Replace the stock 'Two drink minimum' footer with 'No reflections allowed at the tables'.",
+   "Put Evil Ed's laugh on the VIP badge in place of 'Fearless Killer'.",
+   "Add a 'Mirror shard' garnish to the bar menu."
+  ],
+  "flat": false,
+  "done": false,
+  "rework": "2026-11-08",
+  "iconic": [
+   "Jerry next door and the garlic",
+   "Peter Vincent the fake vampire killer",
+   "No reflection in the mirror",
+   "Evil Ed: you're so cool, Brewster",
+   "Welcome to Fright Night. For real."
+  ],
+  "changed": [
+   "Steak note carries Jerry's 'Welcome to Fright Night. For real.'",
+   "Table rule wink now about Jerry's missing reflection (mirror test)"
+  ]
+ }
 }

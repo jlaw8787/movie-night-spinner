@@ -1,0 +1,58 @@
+{
+  "id": "Free Willy (1993)",
+  "ops": [
+    {
+      "set": "flavour.note",
+      "value": {
+        "text": "Let's free Willy! We can take him down at the bay and put him back in the water.",
+        "by": "Jesse",
+        "kind": "quote"
+      }
+    },
+    {
+      "old": "Serve the dessert when Jesse plays his harmonica to Willy at the tank.",
+      "new": "Serve the dessert when Willy makes the jump over the breakwater."
+    },
+    {
+      "old": "Orca cookies and cream",
+      "new": "Breakwater jump cookies and cream"
+    },
+    {
+      "old": "Vanilla ice cream with crushed chocolate cookies and white chocolate fins",
+      "new": "Vanilla ice cream with crushed cookies and a white chocolate fin for the jump"
+    },
+    {
+      "old": "Escape night chilli cheese dogs",
+      "new": "Nobody steals a whale chilli cheese dogs"
+    },
+    {
+      "old": "the Pacific Northwest coastline",
+      "new": "clam chowder from Willy's home coast"
+    },
+    {
+      "old": "For the night drive to the marina.",
+      "new": "Pour one while the truck is stuck in the mud."
+    },
+    {
+      "set": "flavour.winks",
+      "value": [
+        "Willy leaping the breakwater",
+        "Jesse scrubbing his own graffiti off the park walls",
+        "Jesse's harmonica, and Willy takes a liking to it",
+        "Haida prayer for the jump",
+        "The truck stuck in the mud on Old Forest Road"
+      ]
+    },
+    {
+      "set": "flavour.prop",
+      "value": {
+        "kind": "ticket",
+        "title": "Opening Day Show",
+        "lines": [
+          "Willy, noon, if he feels like it",
+          "Northwest Adventure Park"
+        ]
+      }
+    }
+  ]
+}

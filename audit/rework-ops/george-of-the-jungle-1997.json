@@ -1,0 +1,43 @@
+{
+  "id": "George of the Jungle (1997)",
+  "ops": [
+    {
+      "set": "flavour.note",
+      "value": {
+        "text": "To swing or not to swing? Swing.",
+        "by": "George",
+        "kind": "quote"
+      }
+    },
+    {
+      "old": "Watch out for that tree.",
+      "new": "Lyle marries a gorilla."
+    },
+    {
+      "old": "Ape's recipe, discussed at length.",
+      "new": "Ape knew Jane Goodall. Ask him."
+    },
+    {
+      "old": "Ape, the talking gorilla with very good manners",
+      "new": "Eye fillet, béarnaise, Queensbury rules at the table."
+    },
+    {
+      "old": "Shep the elephant who thinks he's a dog",
+      "new": "Peanut brittle for Shep, who acts like a dog"
+    },
+    {
+      "old": "Creamy coconut milk rice pudding with vanilla, toasted coconut and fresh mango",
+      "new": "Coconut rice pudding with mango and toasted coconut. George not feel so good."
+    },
+    {
+      "set": "flavour.winks",
+      "value": [
+        "George versus every tree",
+        "Ape, the talking gorilla",
+        "Tookie the toucan, with the news",
+        "Lyle accidentally marrying a gorilla",
+        "George rescuing a paraglider on the Bay Bridge"
+      ]
+    }
+  ]
+}
