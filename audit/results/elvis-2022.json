@@ -1,87 +1,88 @@
 {
-  "id": "Elvis (2022)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Room seven has the band, room eight has the kid in the pink suit, and the girls in the car park have been there since noon. Corn dogs at the van, checkout at ten.",
-      "where": "note",
-      "verdict": "unsure",
-      "why": "The night manager is not a film character, so there is no quote to check. The note fits the plot (the Hayride, the pink suit), so it can stay as a note with no quote marks.",
-      "source": "https://www.nfsa.gov.au/collection/curated/elvis-louisiana-hayride-suit",
-      "fix": "Room seven has the band, room eight has the kid in the pink suit, and the girls in the car park have been there since noon. Corn dogs at the van, checkout at ten.",
-      "printed": true,
-      "done": false,
-      "fix_note": {
-        "text": "Room seven has the band, room eight has the kid in the pink suit, and the girls in the car park have been there since noon. Corn dogs at the van, checkout at ten.",
-        "by": "The night manager",
-        "kind": "note"
-      }
-    },
-    {
-      "text": "A pink suit and eye shadow on the Hayride stage",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "The pink suit is confirmed: the Hayride suit is a pink wool jacket with black shoulders made for Elvis's debut on the Hayride stage. The eye shadow is not in anything I read.",
-      "source": "https://www.nfsa.gov.au/collection/curated/elvis-louisiana-hayride-suit",
-      "fix": "A pink suit on the Hayride stage",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "From the carnival, just past the hall of mirrors.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "The Colonel's carnival is in the film, but I could not confirm a hall of mirrors in any source.",
-      "source": "https://en.wikipedia.org/wiki/Elvis_(2022_film)",
-      "fix": "From the carnival, just past the Colonel's sideshow.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "The hall of mirrors at the carnival",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "The Colonel's carnival is confirmed, but I could not confirm a hall of mirrors.",
-      "source": "https://en.wikipedia.org/wiki/Elvis_(2022_film)",
-      "fix": "The Colonel's carnival sideshow",
-      "printed": false,
-      "done": false
-    },
-    {
-      "text": "A gospel tent revival in Tupelo",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "Tupelo and Beale Street are in the plot, but a gospel tent revival is not in anything I read.",
-      "source": "https://en.wikipedia.org/wiki/Elvis_(2022_film)",
-      "fix": "Beale Street music, when young Elvis first hears it",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 13,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 4,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "A good motel postcard that fits a 1955 tour, but the film's snowman line and the big shows are left out.",
-    "missing": [
-      "'Elvis the Showman and the Colonel the Snowman' (the Colonel)",
-      "Gladys holding the 'I Hate Elvis' button at the merchandise meeting (Gladys)",
-      "The '68 Comeback Special and 'If I Can Dream' (Steve Binder)",
-      "The International Hotel showroom in Las Vegas (the residency)",
-      "'That's All Right' on the radio, and the Colonel thinking the singer is black (the Colonel)",
-      "The $8,549,761.09 debt the Colonel says Elvis owes (Parker to Vernon)"
-    ],
-    "ideas": [
-      "Swap 'Hot boiled Cajun peanuts' note for 'The Colonel's snow job, a peanut for a promise'.",
-      "Swap 'Memphis peach sweet tea' note for 'Backstage at the Comeback Special'.",
-      "Swap the footer 'Ask the desk about a pink suit...' for 'Ask the desk about the Colonel's debt'.",
-      "Swap 'Orange Crush on ice' note for 'For Gladys, who hated the button'."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Elvis (2022)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Room seven has the band, room eight has the kid in the pink suit, and the girls in the car park have been there since noon. Corn dogs at the van, checkout at ten.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "The night manager is not a film character, so there is no quote to check. The note fits the plot (the Hayride, the pink suit), so it can stay as a note with no quote marks.",
+   "source": "https://www.nfsa.gov.au/collection/curated/elvis-louisiana-hayride-suit",
+   "fix": "Room seven has the band, room eight has the kid in the pink suit, and the girls in the car park have been there since noon. Corn dogs at the van, checkout at ten.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Room seven has the band, room eight has the kid in the pink suit, and the girls in the car park have been there since noon. Corn dogs at the van, checkout at ten.",
+    "by": "The night manager",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "A pink suit and eye shadow on the Hayride stage",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "The pink suit is confirmed: the Hayride suit is a pink wool jacket with black shoulders made for Elvis's debut on the Hayride stage. The eye shadow is not in anything I read.",
+   "source": "https://www.nfsa.gov.au/collection/curated/elvis-louisiana-hayride-suit",
+   "fix": "A pink suit on the Hayride stage",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "From the carnival, just past the hall of mirrors.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The Colonel's carnival is in the film, but I could not confirm a hall of mirrors in any source.",
+   "source": "https://en.wikipedia.org/wiki/Elvis_(2022_film)",
+   "fix": "From the carnival, just past the Colonel's sideshow.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "The hall of mirrors at the carnival",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "The Colonel's carnival is confirmed, but I could not confirm a hall of mirrors.",
+   "source": "https://en.wikipedia.org/wiki/Elvis_(2022_film)",
+   "fix": "The Colonel's carnival sideshow",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "A gospel tent revival in Tupelo",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "Tupelo and Beale Street are in the plot, but a gospel tent revival is not in anything I read.",
+   "source": "https://en.wikipedia.org/wiki/Elvis_(2022_film)",
+   "fix": "Beale Street music, when young Elvis first hears it",
+   "printed": false,
+   "done": false
   }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A good motel postcard that fits a 1955 tour, but the film's snowman line and the big shows are left out.",
+  "missing": [
+   "'Elvis the Showman and the Colonel the Snowman' (the Colonel)",
+   "Gladys holding the 'I Hate Elvis' button at the merchandise meeting (Gladys)",
+   "The '68 Comeback Special and 'If I Can Dream' (Steve Binder)",
+   "The International Hotel showroom in Las Vegas (the residency)",
+   "'That's All Right' on the radio, and the Colonel thinking the singer is black (the Colonel)",
+   "The $8,549,761.09 debt the Colonel says Elvis owes (Parker to Vernon)"
+  ],
+  "ideas": [
+   "Swap 'Hot boiled Cajun peanuts' note for 'The Colonel's snow job, a peanut for a promise'.",
+   "Swap 'Memphis peach sweet tea' note for 'Backstage at the Comeback Special'.",
+   "Swap the footer 'Ask the desk about a pink suit...' for 'Ask the desk about the Colonel's debt'.",
+   "Swap 'Orange Crush on ice' note for 'For Gladys, who hated the button'."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

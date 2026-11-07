@@ -1746,8 +1746,9 @@
   "venue": "Wedding Reception Hall",
   "sign": "Congratulations to the happy couple",
   "note": {
-   "text": "Strange, the wedding cake is not a sorcery component. Put the fork down.",
-   "by": "Wong"
+   "text": "How long have you had that one in the barrel?",
+   "by": "Stephen Strange",
+   "kind": "quote"
   },
   "winks": [
    "Gargantos, the one-eyed monster",
@@ -2703,8 +2704,9 @@
   "venue": "Gru's Kitchen Lab",
   "sign": "Gru's House, Underground Lab",
   "note": {
-   "text": "Gru, can we have pancakes with lots of syrup? I will be really good and I will eat all of mine.",
-   "by": "Agnes"
+   "text": "Yes! Mine's shaped like a dead guy!",
+   "by": "Edith",
+   "kind": "quote"
   },
   "winks": [
    "The shrink ray and the plan to take the Moon",
@@ -3544,8 +3546,9 @@
   "venue": "Wonka's Chocolate Factory",
   "sign": "Factory Tour, No Dawdling",
   "note": {
-   "text": "Children, touch nothing, eat nothing and do not fall in the river. Good. Now, welcome. I am Willy Wonka, and this is going to be fun.",
-   "by": "Willy Wonka"
+   "text": "Welcome. Keep out of the river, my chocolate must be untouched by human hands.",
+   "by": "Willy Wonka",
+   "kind": "note"
   },
   "winks": [
    "A golden ticket hidden in a Wonka bar",
@@ -3592,8 +3595,9 @@
   "venue": "Rivera Family Kitchen",
   "sign": "Familia Rivera, Boots Made Here",
   "note": {
-   "text": "Miguel, wipe your feet, eat your tamales and put that guitar away. No music in this house. I mean it.",
-   "by": "Abuelita"
+   "text": "Aw, come. You'll feel better after you eat with your family.",
+   "by": "Abuelita",
+   "kind": "quote"
   },
   "winks": [
    "The family ofrenda covered in photos",
@@ -3914,8 +3918,9 @@
   "venue": "Big Top Circus Kitchen",
   "sign": "Roll Up, Big Ears Welcome",
   "note": {
-   "text": "Dumbo, the magic feather was just a feather. You had the ears all along. Now eat your peanuts, pal.",
-   "by": "Timothy Q. Mouse"
+   "text": "The magic feather was just a gag! You can fly! Honest, you can!",
+   "by": "Timothy Q. Mouse",
+   "kind": "quote"
   },
   "winks": [
    "The stork delivering baby Dumbo",
@@ -5920,8 +5925,9 @@
   "venue": "Marquee Reception Tent",
   "sign": "Bride's Side. Groom's Side. Bar.",
   "note": {
-   "text": "I slept through the alarm again. Missed the vows, but I made the reception in time for the cake.",
-   "by": "Charles"
+   "text": "May we all in our dotage be proud to say, 'I was adored once too.'",
+   "by": "Gareth",
+   "kind": "quote"
   },
   "winks": [
    "Charles and Scarlett oversleeping the first wedding",
@@ -5993,8 +5999,9 @@
   "venue": "Newton Food Centre",
   "sign": "Newton Circus, Singapore. Order everything.",
   "note": {
-   "text": "Food here is love. Eat first and the questions can wait, Rachel.",
-   "by": "Nick Young"
+   "text": "Order everything. We're comfortable, so it's on me.",
+   "by": "Nick Young",
+   "kind": "note"
   },
   "winks": [
    "The mahjong game between Rachel and Eleanor",
@@ -6156,8 +6163,9 @@
   "venue": "Resort Beach Grill",
   "sign": "Aloha. Please Excuse the Heartbreak.",
   "note": {
-   "text": "I came here to forget my ex, and she's at the next table. I'm ordering the biggest cocktail on the menu and staying put.",
-   "by": "Peter Bretter"
+   "text": "I came here to murder you.",
+   "by": "Peter Bretter",
+   "kind": "quote"
   },
   "winks": [
    "Peter's puppet Dracula musical",
@@ -7585,8 +7593,9 @@
   "venue": "Bluntman Studio",
   "sign": "Bluntman and Chronic, Issue One",
   "note": {
-   "text": "I'm not great with words, Alyssa, so I ordered enough pizza to say it for me. Grab a slice.",
-   "by": "Holden McNeil"
+   "text": "Pull up a seat and eat. Sorry about Banky, he's dealing with being an inker.",
+   "by": "Holden McNeil",
+   "kind": "note"
   },
   "winks": [
    "Bluntman and Chronic comic",
@@ -7609,8 +7618,9 @@
   "venue": "Mooby's",
   "sign": "Home of Mooby the Golden Calf",
   "note": {
-   "text": "Heaven doesn't get takeaway, so I'm enjoying this. Pass the chips and try not to start an apocalypse.",
-   "by": "Metatron"
+   "text": "I hate when people need it spelled out for them!",
+   "by": "Metatron",
+   "kind": "quote"
   },
   "winks": [
    "Buddy Christ statue",
@@ -7633,8 +7643,9 @@
   "venue": "Mooby's",
   "sign": "Mooby's, Home of the Golden Calf",
   "note": {
-   "text": "Pull up a chair and grab a burger. We'll argue about movies till the fries go cold.",
-   "by": "Randal Graves"
+   "text": "Grab a burger and a seat. Say Return of the King beats Jedi and we have a problem.",
+   "by": "Randal Graves",
+   "kind": "note"
   },
   "winks": [
    "Mooby's, the fast food chain",
@@ -7754,8 +7765,9 @@
   "venue": "Husavik Harbour Pub",
   "sign": "Husavik Harbour Pub, Iceland",
   "note": {
-   "text": "Leave a little milk and a plate of snacks out for the elves, Lars. They get grumpy if we eat it all.",
-   "by": "Sigrit Ericksdottir"
+   "text": "Leave a little whiskey and a plate of biscuits out for the elves, Lars. They get grumpy if we eat it all.",
+   "by": "Sigrit Ericksdottir",
+   "kind": "note"
   },
   "winks": [
    "Fire Saga, the duo from Husavik",
@@ -8040,7 +8052,8 @@
   "sign": "Mitch and Sam, Payback Inc.",
   "note": {
    "text": "Payback can wait till after dinner. Sam's on the barbecue and business can sit in the fridge with the beer.",
-   "by": "Mitch Weaver"
+   "by": "Mitch Weaver",
+   "kind": "note"
   },
   "winks": [
    "Mitch and Sam's revenge-for-hire business",
@@ -8817,7 +8830,8 @@
   "sign": "Dragnet: Lunch on the Record",
   "note": {
    "text": "Lunch is a sandwich and a glass of milk, Streebek. Anything more and we'd be filing paperwork.",
-   "by": "Joe Friday"
+   "by": "Joe Friday",
+   "kind": "note"
   },
   "winks": [
    "Joe Friday and his strict by the book manner",
@@ -8939,8 +8953,9 @@
   "venue": "Gittes and Associates",
   "sign": "Gittes and Associates, Los Angeles",
   "note": {
-   "text": "Grab a plate and keep your voice down. Half the table is somebody I've been paid to follow.",
-   "by": "Jake Gittes"
+   "text": "Fine. As long as you don't serve the chicken that way.",
+   "by": "Jake Gittes",
+   "kind": "quote"
   },
   "winks": [
    "Gittes' bandaged nose, courtesy of a sharp blade",
@@ -10014,8 +10029,9 @@
   "venue": "Jesse and Chester's House",
   "sign": "Jesse and Chester's",
   "note": {
-   "text": "I woke up with a tattoo and no car, but the fridge is full of pudding. Let's eat first and retrace it after.",
-   "by": "Jesse"
+   "text": "I woke up with a tattoo and no car, but the cupboards are full of pudding. Let's eat first and retrace it after.",
+   "by": "Jesse",
+   "kind": "note"
   },
   "winks": [
    "The Chinese drive-thru speaker",
@@ -12124,8 +12140,9 @@
   "venue": "Taco Bell, San Angeles",
   "sign": "All restaurants are Taco Bell",
   "note": {
-   "text": "Back in my day we had grease and arguments. Here everything is healthy and I get fined for swearing.",
-   "by": "John Spartan"
+   "text": "Not bad! Matter of fact, this is the best burger I've had in years!",
+   "by": "John Spartan",
+   "kind": "quote"
   },
   "winks": [
    "The three seashells in the bathroom",
@@ -13515,8 +13532,9 @@
   "venue": "Meaty Boy Burger Shop",
   "sign": "MEATY BOY, ORDER UP",
   "note": {
-   "text": "Jarrod, I made you a burger. Don't be weird about it. Eat it before it goes cold.",
-   "by": "Lily"
+   "text": "Jarrod, I'm coming to your party as a shark. Don't be weird about it. It's a good costume.",
+   "by": "Lily",
+   "kind": "note"
   },
   "winks": [
    "Lily at the Meaty Boy counter",
@@ -13725,8 +13743,9 @@
   "venue": "Nui Dat Mess Tent",
   "sign": "NUI DAT, VIETNAM, 1966",
   "note": {
-   "text": "Eat up, men. Delta Company has a long day ahead, and the rain won't help us.",
-   "by": "Major Harry Smith"
+   "text": "Delta Company is relieving Bravo at the rubber plantation today. Eat while it's hot.",
+   "by": "Major Harry Smith",
+   "kind": "note"
   },
   "winks": [
    "Major Harry Smith and Delta Company",
@@ -15206,8 +15225,9 @@
   "venue": "The Fireplace Shop",
   "sign": "Firetown's Warmest Corner",
   "note": {
-   "text": "Sit, Ember. Eat the hot snacks while they glow, the blue flame cooked them for us.",
-   "by": "Bernie Lumen"
+   "text": "Winner, winner, charcoal dinner!",
+   "by": "Ember Lumen",
+   "kind": "quote"
   },
   "winks": [
    "Ember's family shop in Firetown",
@@ -15298,8 +15318,9 @@
   "venue": "Salsa & Salsa",
   "sign": "Eduardo's place, Paradise Mall. Mind the chicken.",
   "note": {
-   "text": "Jams and jellies are a real business. Mostly. Please ignore the basement.",
-   "by": "Gru"
+   "text": "I am developing a line of delicious jams and jellies.",
+   "by": "Gru",
+   "kind": "quote"
   },
   "winks": [
    "Agnes and her fluffy unicorn",
@@ -15460,8 +15481,9 @@
   "venue": "Brad's Kitchen Table",
   "sign": "Dads Welcome, Both of Them",
   "note": {
-   "text": "Two dads, one house, and a lot of pancakes. Let's keep it friendly.",
-   "by": "Brad Whitaker"
+   "text": "Two dads, one house, and one very long dad-off. Let's keep it friendly.",
+   "by": "Brad Whitaker",
+   "kind": "note"
   },
   "winks": [
    "Dusty arriving on his motorcycle",
@@ -16030,8 +16052,9 @@
   "venue": "Hewes and Brown Studio",
   "sign": "Ballroom Lessons Daily",
   "note": {
-   "text": "Dinner's on me tonight, Don. Just promise you won't make me rehearse the dance again before dessert.",
-   "by": "Hannah Brown"
+   "text": "I suppose I'm a lemon!",
+   "by": "Hannah Brown",
+   "kind": "quote"
   },
   "winks": [
    "The Fifth Avenue Easter parade",
@@ -16226,8 +16249,9 @@
   "venue": "Arrakeen Residence",
   "sign": "Spice Table, Fremen Hospitality",
   "note": {
-   "text": "Eat slowly, Paul. On Arrakis even supper is a lesson, and water at the table is precious.",
-   "by": "Lady Jessica"
+   "text": "Paul, you're scared. I can see it. Tell me, please, what do you fear?",
+   "by": "Lady Jessica Atreides",
+   "kind": "quote"
   },
   "winks": [
    "The gom jabbar test",
@@ -16522,7 +16546,8 @@
   "sign": "Desert Hospitality",
   "note": {
    "text": "Drink slowly, eat what the sietch shares, and stay close to the fire tonight.",
-   "by": "Stilgar"
+   "by": "Stilgar",
+   "kind": "note"
   },
   "winks": [
    "Chani and Paul",
@@ -16691,8 +16716,9 @@
   "venue": "Han's Island Banquet Hall",
   "sign": "Guests of the Tournament",
   "note": {
-   "text": "Eat now. The tournament starts at dawn, and I don't fight on an empty stomach.",
-   "by": "Lee"
+   "text": "My style? You can call it the art of fighting without fighting.",
+   "by": "Lee",
+   "kind": "quote"
   },
   "winks": [
    "Han's hall of mirrors",
@@ -16888,7 +16914,8 @@
   "sign": "Everybody Eats Twice",
   "note": {
    "text": "Mom's table is where I stop being a comedian and start being her son.",
-   "by": "Joe Valencia"
+   "by": "Joe Valencia",
+   "kind": "note"
   },
   "winks": [
    "The Easter gathering in Daly City",
@@ -18140,8 +18167,9 @@
   "venue": "Braddock Kitchen Table",
   "sign": "New Jersey, hard times, warm bread",
   "note": {
-   "text": "We'll make do with what we have. Eat, Jim, then go earn some more.",
-   "by": "Mae Braddock"
+   "text": "Every time you get hit, feels like I'm getting hit too.",
+   "by": "Mae Braddock",
+   "kind": "quote"
   },
   "winks": [
    "Max Baer in the title fight",
@@ -18334,8 +18362,9 @@
   "venue": "Quick Stop",
   "sign": "Open late, mostly",
   "note": {
-   "text": "Milk's out of date again and the cooler's leaking. Grab a sandwich from the case and pay at the counter, I'll be on the floor.",
-   "by": "Dante Hicks"
+   "text": "The shutters are jammed with gum. I assure you, we're open. Grab a sandwich and pay at the counter.",
+   "by": "Dante Hicks",
+   "kind": "note"
   },
   "winks": [
    "A hockey game on the store roof",
@@ -18456,8 +18485,9 @@
   "venue": "Lou's Tavern",
   "sign": "Basement open after closing",
   "note": {
-   "text": "Soap's drying in the basement, so don't touch it. Eat your dinner and leave the bruises out of the conversation.",
-   "by": "Tyler Durden"
+   "text": "It's only after we've lost everything that we're free to do anything.",
+   "by": "Tyler Durden",
+   "kind": "quote"
   },
   "winks": [
    "The run down house on Paper Street",
@@ -18649,8 +18679,9 @@
   "venue": "Potts Family Flying Motor Car",
   "sign": "England to Vulgaria. Wings out over the cliffs.",
   "note": {
-   "text": "Pack the eggs, the sandwiches and a spare pair of goggles. I am not landing in a foreign country without my dinner.",
-   "by": "Grandpa Potts"
+   "text": "Pack the eggs and the sandwiches. We fly to Vulgaria to fetch Grandpa, and nobody rescues anyone hungry.",
+   "by": "Caractacus Potts",
+   "kind": "note"
   },
   "winks": [
    "The breakfast machine boiling eggs and frying sausages",
@@ -18697,8 +18728,9 @@
   "venue": "Puss-Feller's Waterfront Bar",
   "sign": "Puss-Feller's, Kingston, Calypso Nightly",
   "note": {
-   "text": "Cold drink, hot fritters and no talk about Crab Key, Cap'n. That island is bad luck for fishermen.",
-   "by": "Quarrel"
+   "text": "All except Crab Key. We didn't have no right to go there.",
+   "by": "Quarrel",
+   "kind": "quote"
   },
   "winks": [
    "Honey Ryder walking out of the sea with her shells",
@@ -18721,8 +18753,9 @@
   "venue": "Rainbow Records Showcase",
   "sign": "Detroit, 1962. Talent night, two shows.",
   "note": {
-   "text": "Girls, the car lot paid for tonight. Smile for the cameras, eat after the second show, and nobody signs a thing without me.",
-   "by": "Curtis Taylor Jr."
+   "text": "$500 says the Dreamettes do not win.",
+   "by": "Curtis Taylor Jr.",
+   "kind": "quote"
   },
   "winks": [
    "The Dreamettes' matching wigs at talent night",
@@ -18746,7 +18779,8 @@
   "sign": "Shreveport to Memphis, 1955. Rooms by the night.",
   "note": {
    "text": "Room seven has the band, room eight has the kid in the pink suit, and the girls in the car park have been there since noon. Corn dogs at the van, checkout at ten.",
-   "by": "The night manager"
+   "by": "The night manager",
+   "kind": "note"
   },
   "winks": [
    "A pink suit and eye shadow on the Hayride stage",

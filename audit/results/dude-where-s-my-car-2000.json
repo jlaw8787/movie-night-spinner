@@ -1,57 +1,58 @@
 {
-  "id": "Dude, Where's My Car? (2000)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "I woke up with a tattoo and no car, but the fridge is full of pudding. Let's eat first and retrace it after.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Jesse never says this, and the pudding is in the kitchen cabinets and cupboards, not the fridge. It works as a note from Jesse if the pudding is in the cupboards.",
-      "source": "https://en.wikipedia.org/wiki/Dude,_Where%27s_My_Car%3F",
-      "fix": "I woke up with a tattoo and no car, but the cupboards are full of pudding. Let's eat first and retrace it after.",
-      "printed": true,
-      "done": false,
-      "fix_note": {
-        "text": "I woke up with a tattoo and no car, but the cupboards are full of pudding. Let's eat first and retrace it after.",
-        "by": "Jesse",
-        "kind": "note"
-      }
-    },
-    {
-      "text": "Fridge full of chocolate pudding pots",
-      "where": "dish-name",
-      "verdict": "unsure",
-      "why": "The plot and the quote page both put the pudding in the kitchen cabinets and cupboards. The fridge is not mentioned.",
-      "source": "https://en.wikipedia.org/wiki/Dude,_Where%27s_My_Car%3F",
-      "fix": "Cupboard full of chocolate pudding pots",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 16,
-  "vibe": {
-    "world": 3,
-    "moments": 4,
-    "food": 3,
-    "tone": 4,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "Fun poster and tone with the And then drive-through and pudding in, but the real drive-thru order is missing from the mains.",
-    "missing": [
-      "The real drive-through order: garlic chicken, white rice, wonton soup, fortune cookies (Jesse)",
-      "The Sweet and Dude tattoos, and Mr Lee telling them what they say (the tailor)",
-      "The Rubik's Cube that turns into the Continuum Transfunctioner (Chester)",
-      "Captain Stu's Space-O-Rama arcade and mini golf (the finale)",
-      "Jackal, Nelson's pipe-smoking dog (Nelson)",
-      "The lifetime supply of pudding won with a hole in one on the 18th hole (the Norwegian aliens)"
-    ],
-    "ideas": [
-      "Swap 'Drive-through lemon chicken and fried rice' for 'Garlic chicken, white rice, wonton soup and fortune cookies'.",
-      "Swap 'Tattoo parlour pork spring rolls' note for 'Your tattoo says dude. Your tattoo says sweet.'",
-      "Swap 'Zoltan's popping candy caramel corn' for 'Rubik's Cube chocolate bark'.",
-      "Swap the receipt 'Pudding receipt' for a hole in one lifetime pudding voucher from the 18th hole."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Dude, Where's My Car? (2000)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I woke up with a tattoo and no car, but the fridge is full of pudding. Let's eat first and retrace it after.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Jesse never says this, and the pudding is in the kitchen cabinets and cupboards, not the fridge. It works as a note from Jesse if the pudding is in the cupboards.",
+   "source": "https://en.wikipedia.org/wiki/Dude,_Where%27s_My_Car%3F",
+   "fix": "I woke up with a tattoo and no car, but the cupboards are full of pudding. Let's eat first and retrace it after.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "I woke up with a tattoo and no car, but the cupboards are full of pudding. Let's eat first and retrace it after.",
+    "by": "Jesse",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Fridge full of chocolate pudding pots",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "The plot and the quote page both put the pudding in the kitchen cabinets and cupboards. The fridge is not mentioned.",
+   "source": "https://en.wikipedia.org/wiki/Dude,_Where%27s_My_Car%3F",
+   "fix": "Cupboard full of chocolate pudding pots",
+   "printed": true,
+   "done": false
   }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Fun poster and tone with the And then drive-through and pudding in, but the real drive-thru order is missing from the mains.",
+  "missing": [
+   "The real drive-through order: garlic chicken, white rice, wonton soup, fortune cookies (Jesse)",
+   "The Sweet and Dude tattoos, and Mr Lee telling them what they say (the tailor)",
+   "The Rubik's Cube that turns into the Continuum Transfunctioner (Chester)",
+   "Captain Stu's Space-O-Rama arcade and mini golf (the finale)",
+   "Jackal, Nelson's pipe-smoking dog (Nelson)",
+   "The lifetime supply of pudding won with a hole in one on the 18th hole (the Norwegian aliens)"
+  ],
+  "ideas": [
+   "Swap 'Drive-through lemon chicken and fried rice' for 'Garlic chicken, white rice, wonton soup and fortune cookies'.",
+   "Swap 'Tattoo parlour pork spring rolls' note for 'Your tattoo says dude. Your tattoo says sweet.'",
+   "Swap 'Zoltan's popping candy caramel corn' for 'Rubik's Cube chocolate bark'.",
+   "Swap the receipt 'Pudding receipt' for a hole in one lifetime pudding voucher from the 18th hole."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

@@ -1,47 +1,48 @@
 {
-  "id": "Dogma (1999)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Heaven doesn't get takeaway, so I'm enjoying this. Pass the chips and try not to start an apocalypse.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Metatron never says this. His real lines on the Wikiquote page are about being the voice of God and how people need things spelled out.",
-      "source": "https://en.wikiquote.org/wiki/Dogma_(film)",
-      "fix": "I hate when people need it spelled out for them!",
-      "printed": true,
-      "done": false,
-      "fix_note": {
-        "text": "I hate when people need it spelled out for them!",
-        "by": "Metatron",
-        "kind": "quote"
-      }
-    }
-  ],
-  "checked_ok": 15,
-  "vibe": {
-    "world": 4,
-    "moments": 4,
-    "food": 4,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.8,
-    "verdict": "Mooby's, Buddy Christ and the Catholicism WOW campaign are all in, so it feels like Dogma, but the writing is polite where the film is rude.",
-    "missing": [
-      "Loki peeling onions in the Mooby boardroom: 'Do I smell onion?' (Whitland)",
-      "The Golgothan, the monster made of human waste, beaten with air freshener (Azrael's summons)",
-      "God's last known visit to New Jersey to play skee ball (Metatron to Bethany)",
-      "Serendipity the Muse working in a strip club (the road trip)",
-      "Rufus, the 13th apostle, in the bar (Red Bank)",
-      "Bartleby's 'No pleasure, no rapture, no exquisite sin greater than central air' (the angels)"
-    ],
-    "ideas": [
-      "Swap 'Wisconsin cheese curds' for 'Loki's onion rings', with 'Do I smell onion?'",
-      "Swap 'Dining car turkey club bites' for 'Skee ball tater tots', God's missing weekend in New Jersey.",
-      "Swap 'Bethany's chicken and leek pot pie' note for 'Holy water from the bar sink', the triplets' drowning.",
-      "Swap the place card line 'Thumbs up, forever' for 'Buddy Christ: Cardinal Glick's idea of a rebrand'."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Dogma (1999)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Heaven doesn't get takeaway, so I'm enjoying this. Pass the chips and try not to start an apocalypse.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Metatron never says this. His real lines on the Wikiquote page are about being the voice of God and how people need things spelled out.",
+   "source": "https://en.wikiquote.org/wiki/Dogma_(film)",
+   "fix": "I hate when people need it spelled out for them!",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "I hate when people need it spelled out for them!",
+    "by": "Metatron",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
   }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Mooby's, Buddy Christ and the Catholicism WOW campaign are all in, so it feels like Dogma, but the writing is polite where the film is rude.",
+  "missing": [
+   "Loki peeling onions in the Mooby boardroom: 'Do I smell onion?' (Whitland)",
+   "The Golgothan, the monster made of human waste, beaten with air freshener (Azrael's summons)",
+   "God's last known visit to New Jersey to play skee ball (Metatron to Bethany)",
+   "Serendipity the Muse working in a strip club (the road trip)",
+   "Rufus, the 13th apostle, in the bar (Red Bank)",
+   "Bartleby's 'No pleasure, no rapture, no exquisite sin greater than central air' (the angels)"
+  ],
+  "ideas": [
+   "Swap 'Wisconsin cheese curds' for 'Loki's onion rings', with 'Do I smell onion?'",
+   "Swap 'Dining car turkey club bites' for 'Skee ball tater tots', God's missing weekend in New Jersey.",
+   "Swap 'Bethany's chicken and leek pot pie' note for 'Holy water from the bar sink', the triplets' drowning.",
+   "Swap the place card line 'Thumbs up, forever' for 'Buddy Christ: Cardinal Glick's idea of a rebrand'."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

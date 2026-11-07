@@ -1,57 +1,58 @@
 {
-  "id": "Demolition Man (1993)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Back in my day we had grease and arguments. Here everything is healthy and I get fined for swearing.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Spartan never says this. It is a made-up line signed with his name. The fines for swearing are real, but the Wikiquote page has his real food line, said about the rat burger the Scraps sell underground.",
-      "source": "https://en.wikiquote.org/wiki/Demolition_Man_(film)",
-      "fix": "Not bad! Matter of fact, this is the best burger I've had in years!",
-      "printed": true,
-      "done": false,
-      "fix_note": {
-        "text": "Not bad! Matter of fact, this is the best burger I've had in years!",
-        "by": "John Spartan",
-        "kind": "quote"
-      }
-    },
-    {
-      "text": "Huxley's idea of a big night out.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "Nothing in the sources shows Huxley choosing guacamole or a night out. Her thing is 20th century culture and virtual sex. What the sources do show is Spartan unimpressed by the idea of dinner and dancing at a fast food place.",
-      "source": "https://www.cbr.com/demolition-man-taco-ball-pizza-hut-switch/",
-      "fix": "Dinner and dancing at Taco Bell.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 15,
-  "vibe": {
-    "world": 5,
-    "moments": 4,
-    "food": 4,
-    "tone": 4,
-    "look": 4,
-    "overall": 4.2,
-    "verdict": "Taco Bell, the morality slip and the rat burger are all there, so the world is spot on, but the writing stays safe and the best food speech is missing.",
-    "missing": [
-      "Edgar Friendly's greasy spoon speech about the T-bone, the barbecue ribs and the gravy fries (Friendly to Spartan)",
-      "Spartan: 'Somebody put me back in the fridge.' on hearing that jingles are now music",
-      "Huxley's virtual sex helmets and Spartan wanting 'the old-fashioned way'",
-      "The Schwarzenegger Presidential Library (Huxley to Spartan)",
-      "Phoenix hacking the data portal and getting fined by the Morality Box for swearing",
-      "Cocteau's formal dinner thank-you to Spartan and Huxley at Taco Bell"
-    ],
-    "ideas": [
-      "Swap the house starter 'Guacamole with blue corn tostadas' for 'Edgar's gravy fries', with his line 'I'm into freedom of speech and freedom of choice.'",
-      "Swap 'Layered jelly cubes' for 'Cocteau's thank-you pie', after the formal dinner with Spartan and Huxley.",
-      "Swap the pie case line 'Ask about today's pie at the counter.' for a second slip: 'You are fined one credit for a violation of the Verbal Morality Statute.'",
-      "Swap the drink note 'Swearing costs a credit. This one doesn't.' for 'Somebody put me back in the fridge.' on the agua fresca."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Demolition Man (1993)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Back in my day we had grease and arguments. Here everything is healthy and I get fined for swearing.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Spartan never says this. It is a made-up line signed with his name. The fines for swearing are real, but the Wikiquote page has his real food line, said about the rat burger the Scraps sell underground.",
+   "source": "https://en.wikiquote.org/wiki/Demolition_Man_(film)",
+   "fix": "Not bad! Matter of fact, this is the best burger I've had in years!",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Not bad! Matter of fact, this is the best burger I've had in years!",
+    "by": "John Spartan",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Huxley's idea of a big night out.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Nothing in the sources shows Huxley choosing guacamole or a night out. Her thing is 20th century culture and virtual sex. What the sources do show is Spartan unimpressed by the idea of dinner and dancing at a fast food place.",
+   "source": "https://www.cbr.com/demolition-man-taco-ball-pizza-hut-switch/",
+   "fix": "Dinner and dancing at Taco Bell.",
+   "printed": true,
+   "done": false
   }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4.2,
+  "verdict": "Taco Bell, the morality slip and the rat burger are all there, so the world is spot on, but the writing stays safe and the best food speech is missing.",
+  "missing": [
+   "Edgar Friendly's greasy spoon speech about the T-bone, the barbecue ribs and the gravy fries (Friendly to Spartan)",
+   "Spartan: 'Somebody put me back in the fridge.' on hearing that jingles are now music",
+   "Huxley's virtual sex helmets and Spartan wanting 'the old-fashioned way'",
+   "The Schwarzenegger Presidential Library (Huxley to Spartan)",
+   "Phoenix hacking the data portal and getting fined by the Morality Box for swearing",
+   "Cocteau's formal dinner thank-you to Spartan and Huxley at Taco Bell"
+  ],
+  "ideas": [
+   "Swap the house starter 'Guacamole with blue corn tostadas' for 'Edgar's gravy fries', with his line 'I'm into freedom of speech and freedom of choice.'",
+   "Swap 'Layered jelly cubes' for 'Cocteau's thank-you pie', after the formal dinner with Spartan and Huxley.",
+   "Swap the pie case line 'Ask about today's pie at the counter.' for a second slip: 'You are fined one credit for a violation of the Verbal Morality Statute.'",
+   "Swap the drink note 'Swearing costs a credit. This one doesn't.' for 'Somebody put me back in the fridge.' on the agua fresca."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

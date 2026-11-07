@@ -1,47 +1,48 @@
 {
-  "id": "Doctor Strange in the Multiverse of Madness (2022)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Strange, the wedding cake is not a sorcery component. Put the fork down.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Wong never says this. The Wikiquote lines for Wong are about the Scarlet Witch. The wedding reception scene on the page is Strange and Christine, and Strange's reply to her is a real line.",
-      "source": "https://en.wikiquote.org/wiki/Doctor_Strange_in_the_Multiverse_of_Madness",
-      "fix": "How long have you had that one in the barrel?",
-      "printed": true,
-      "done": false,
-      "fix_note": {
-        "text": "How long have you had that one in the barrel?",
-        "by": "Stephen Strange",
-        "kind": "quote"
-      }
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 3,
-    "moments": 4,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "The wedding hall is a neat way in and the pizza balls are the right call, but the food notes are thin and the multiverse madness is mostly just names.",
-    "missing": [
-      "Pizza Poppa's stall and the pizza balls (Bruce Campbell's Earth-838 vendor)",
-      "Strange's third eye after dream-walking into his dead counterpart (ending)",
-      "Black Bolt losing his mouth (the Illuminati)",
-      "Wanda's apple orchard illusion: 'Apples, right?' (Strange and Wanda)",
-      "Christine's 'you have to be the one holding the knife' (wedding reception)",
-      "Strange duelling Sinister Strange with musical notes (the Dark Dimension)"
-    ],
-    "ideas": [
-      "Swap 'Westview spaghetti and meatballs' for 'Apple orchard crumble', with Wanda's 'Apples, right?'",
-      "Swap the pizza ball description 'baked in a tin' for 'Pizza poppa always gets paid'.",
-      "Swap 'Table 838' place card line 'Seated near: America Chavez and her star portals' for 'Seated near: Pizza Poppa, who wants his money'.",
-      "Swap 'Gin and elderflower spritz' note for Christine's 'It was never gonna work out between us.'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Doctor Strange in the Multiverse of Madness (2022)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Strange, the wedding cake is not a sorcery component. Put the fork down.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Wong never says this. The Wikiquote lines for Wong are about the Scarlet Witch. The wedding reception scene on the page is Strange and Christine, and Strange's reply to her is a real line.",
+   "source": "https://en.wikiquote.org/wiki/Doctor_Strange_in_the_Multiverse_of_Madness",
+   "fix": "How long have you had that one in the barrel?",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "How long have you had that one in the barrel?",
+    "by": "Stephen Strange",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "The wedding hall is a neat way in and the pizza balls are the right call, but the food notes are thin and the multiverse madness is mostly just names.",
+  "missing": [
+   "Pizza Poppa's stall and the pizza balls (Bruce Campbell's Earth-838 vendor)",
+   "Strange's third eye after dream-walking into his dead counterpart (ending)",
+   "Black Bolt losing his mouth (the Illuminati)",
+   "Wanda's apple orchard illusion: 'Apples, right?' (Strange and Wanda)",
+   "Christine's 'you have to be the one holding the knife' (wedding reception)",
+   "Strange duelling Sinister Strange with musical notes (the Dark Dimension)"
+  ],
+  "ideas": [
+   "Swap 'Westview spaghetti and meatballs' for 'Apple orchard crumble', with Wanda's 'Apples, right?'",
+   "Swap the pizza ball description 'baked in a tin' for 'Pizza poppa always gets paid'.",
+   "Swap 'Table 838' place card line 'Seated near: America Chavez and her star portals' for 'Seated near: Pizza Poppa, who wants his money'.",
+   "Swap 'Gin and elderflower spritz' note for Christine's 'It was never gonna work out between us.'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }
