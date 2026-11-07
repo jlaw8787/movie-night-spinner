@@ -5,22 +5,22 @@
     {
       "text": "Purple Cadillac double smash burgers",
       "where": "dish-name",
-      "verdict": "wrong",
+      "verdict": "ok",
       "why": "Clarence drives a pink Cadillac Eldorado convertible, a deep pink that BAMF Style says leans a little purple. The IMDb summary calls it a pink Cadillac.",
       "source": "https://bamfstyle.com/2023/07/10/true-romance-clarence-aloha-cadillac/amp/",
-      "fix": "Pink Cadillac double smash burgers",
       "printed": true,
-      "done": false
+      "done": false,
+      "reversed": "The film's own dialogue calls it Clarence's purple Cadillac (IMCDB), and BAMF Style says it is a deep pink close to purple, so purple stands and pink was the checker's call."
     },
     {
       "text": "The purple convertible from Detroit to LA.",
       "where": "dish-note",
-      "verdict": "wrong",
+      "verdict": "ok",
       "why": "The convertible is pink, not purple.",
       "source": "https://www.imdb.com/title/tt0108399/plotsummary",
-      "fix": "The pink convertible from Detroit to LA.",
       "printed": true,
-      "done": false
+      "done": false,
+      "reversed": "The film's own dialogue calls it Clarence's purple Cadillac (IMCDB), and BAMF Style says it is a deep pink close to purple, so purple stands and pink was the checker's call."
     },
     {
       "text": "Floyd's couch pick. Don't condescend him, man.",

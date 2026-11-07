@@ -2,27 +2,60 @@
   "id": "The Spy Who Loved Me (1977)",
   "checked": "2026-11-07",
   "facts": [
-    {"text": "Anya orders it for Bond, straight from his file.",
-     "where": "house", "verdict": "wrong",
-     "why": "It is the other way round. In the bar scene Bond orders 'a Bacardi on the rocks' for the lady, and Anya orders Bond a vodka martini, shaken not stirred. The same line is printed as the Bacardi dish note on the bill of fare.",
-     "source": "https://en.wikiquote.org/wiki/The_Spy_Who_Loved_Me_(film)",
-     "fix": "Bond orders it for Anya, to show he's read her file.",
-     "printed": true, "done": false},
-    {"text": "Sit, Mr. Bond. Everything at my table comes from the sea or from Sardinia, and the fish are always watching.",
-     "where": "note", "verdict": "ok",
-     "why": "A note in Stromberg's voice, not a quote. It fits the plot: Stromberg runs Atlantis off Sardinia and keeps a shark tank. It is not a line from the film, so it should stay without quote marks.",
-     "source": "https://en.wikipedia.org/wiki/The_Spy_Who_Loved_Me_(film)",
-     "printed": true, "done": false},
-    {"text": "Serve the snacks when Bond visits Sheikh Hosein in his tent in the Egyptian desert.",
-     "where": "cue", "verdict": "ok",
-     "why": "Sheikh Hosein is an Arab sheikh and old friend of Bond from Cambridge and the Egypt leg is confirmed. The plot summary opened does not describe the tent visit itself, so only the character and the country are confirmed.",
-     "source": "https://en.wikipedia.org/wiki/The_Spy_Who_Loved_Me_(film)",
-     "printed": true, "done": false}
+    {
+      "text": "Anya orders it for Bond, straight from his file.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "It is the other way round. In the bar scene Bond orders 'a Bacardi on the rocks' for the lady, and Anya orders Bond a vodka martini, shaken not stirred. The same line is printed as the Bacardi dish note on the bill of fare.",
+      "source": "https://en.wikiquote.org/wiki/The_Spy_Who_Loved_Me_(film)",
+      "fix": "Bond orders it for Anya, to show he's read her file.",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Sit, Mr. Bond. Everything at my table comes from the sea or from Sardinia, and the fish are always watching.",
+      "where": "note",
+      "verdict": "ok",
+      "why": "A note in Stromberg's voice, not a quote. It fits the plot: Stromberg runs Atlantis off Sardinia and keeps a shark tank. It is not a line from the film, so it should stay without quote marks.",
+      "source": "https://en.wikipedia.org/wiki/The_Spy_Who_Loved_Me_(film)",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Serve the snacks when Bond visits Sheikh Hosein in his tent in the Egyptian desert.",
+      "where": "cue",
+      "verdict": "ok",
+      "why": "Sheikh Hosein is an Arab sheikh and old friend of Bond from Cambridge and the Egypt leg is confirmed. The plot summary opened does not describe the tent visit itself, so only the character and the country are confirmed.",
+      "source": "https://en.wikipedia.org/wiki/The_Spy_Who_Loved_Me_(film)",
+      "printed": true,
+      "done": false
+    }
   ],
   "checked_ok": 14,
-  "vibe": {"world": 4, "moments": 4, "food": 3, "tone": 4, "look": 4, "overall": 3.8,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.8,
     "verdict": "A smart black and gold dinner at Atlantis with the right set pieces, let down by the Bacardi gag being the wrong way round.",
-    "missing": ["Vodka martini, shaken not stirred (Anya orders for Bond)", "Lotus Esprit turning into a submarine (Sardinia)", "Jaws biting the shark in the tank (Atlantis finale)", "Bond hiding Jaws out in a closet: 'He just dropped in for a quick bite'", "'Keeping the British end up, sir' (escape pod)", "Q's gadgets and the Wet Nellie car"],
-    "ideas": ["Swap 'Bacardi on the rocks' note for 'Bond orders it for Anya' and add a vodka martini drink", "Replace 'Tuna crudo' note about the shark tank with a Jaws bite line", "Rename 'Atlantis myrtle spritz' to 'Wet Nellie spritz' with the Lotus submarine note", "Swap the place card for a Triple X card from Anya"],
-    "flat": false, "done": false}
+    "missing": [
+      "Vodka martini, shaken not stirred (Anya orders for Bond)",
+      "Lotus Esprit turning into a submarine (Sardinia)",
+      "Jaws biting the shark in the tank (Atlantis finale)",
+      "Bond hiding Jaws out in a closet: 'He just dropped in for a quick bite'",
+      "'Keeping the British end up, sir' (escape pod)",
+      "Q's gadgets and the Wet Nellie car"
+    ],
+    "ideas": [
+      "Swap 'Bacardi on the rocks' note for 'Bond orders it for Anya' and add a vodka martini drink",
+      "Replace 'Tuna crudo' note about the shark tank with a Jaws bite line",
+      "Rename 'Atlantis myrtle spritz' to 'Wet Nellie spritz' with the Lotus submarine note",
+      "Swap the place card for a Triple X card from Anya"
+    ],
+    "flat": false,
+    "done": false
+  }
 }

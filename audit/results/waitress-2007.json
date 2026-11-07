@@ -10,17 +10,18 @@
       "source": "https://inquisitiveeater.com/2012/05/17/pie-plots-in-waitress/",
       "fix": "Strawberry Oasis Pie",
       "printed": true,
-      "done": false
+      "done": true,
+      "applied": "2026-11-07"
     },
     {
       "text": "I Hate My Husband pie",
       "where": "dish-name",
-      "verdict": "wrong",
+      "verdict": "ok",
       "why": "No pie by this name appears in the film. Jenna's film pies include Earl Murders Me Because I'm Having an Affair Pie and Fallin' in Love Pie.",
       "source": "https://inquisitiveeater.com/2012/05/17/pie-plots-in-waitress/",
-      "fix": "Fallin' in Love chocolate pie",
       "printed": true,
-      "done": false
+      "done": false,
+      "reversed": "Jenna makes an 'I Hate My Husband Pie' in the film (bittersweet chocolate with caramel), so the dish name is true."
     },
     {
       "text": "A blueberry pie for a bad day",
@@ -30,7 +31,8 @@
       "source": "https://inquisitiveeater.com/2012/05/17/pie-plots-in-waitress/",
       "fix": "A strawberry pie that solves Joe's problems",
       "printed": false,
-      "done": false
+      "done": true,
+      "applied": "2026-11-07"
     }
   ],
   "checked_ok": 12,
