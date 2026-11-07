@@ -1,68 +1,70 @@
 {
- "id": "Little Shop of Horrors (1986)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Seymour, sweep up and water the plants. Sell that big one and we all eat this week.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Mushnik never tells Seymour to sell the plant. Audrey II is what brings the customers in, and later Mushnik tries to take it for himself when Seymour wants out. He is the one who fears the shop is closing.",
-   "source": "https://en.wikipedia.org/wiki/Little_Shop_of_Horrors_(film)",
-   "fix": "Seymour, sweep up and water that plant. It's the only reason anyone walks in here.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Seymour, sweep up and water that plant. It's the only reason anyone walks in here.",
-    "by": "Mr. Mushnik",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Overheard at the counter: Crystal, Ronnette and Chiffon on the stoop.",
-   "where": "wink",
-   "verdict": "wrong",
-   "why": "The trio is Crystal, Ronette and Chiffon. Ronette has one n, named after the Ronettes.",
-   "source": "https://en.wikipedia.org/wiki/Little_Shop_of_Horrors_(film)",
-   "fix": "Overheard at the counter: Crystal, Ronette and Chiffon on the stoop.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Orin's order, laughing gas on the side.",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "Orin never orders a drink in the film. His habit is nitrous oxide at the dentist chair, and the film is set in the early 1960s, before Vanilla Coke existed.",
-   "source": "https://en.wikipedia.org/wiki/Little_Shop_of_Horrors_(film)",
-   "fix": "Nothing like Orin's order. He takes his laughing gas straight.",
-   "printed": true,
-   "done": false
+  "id": "Little Shop of Horrors (1986)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Seymour, sweep up and water the plants. Sell that big one and we all eat this week.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Mushnik never tells Seymour to sell the plant. Audrey II is what brings the customers in, and later Mushnik tries to take it for himself when Seymour wants out. He is the one who fears the shop is closing.",
+      "source": "https://en.wikipedia.org/wiki/Little_Shop_of_Horrors_(film)",
+      "fix": "Seymour, sweep up and water that plant. It's the only reason anyone walks in here.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Seymour, sweep up and water that plant. It's the only reason anyone walks in here.",
+        "by": "Mr. Mushnik",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Overheard at the counter: Crystal, Ronnette and Chiffon on the stoop.",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "The trio is Crystal, Ronette and Chiffon. Ronette has one n, named after the Ronettes.",
+      "source": "https://en.wikipedia.org/wiki/Little_Shop_of_Horrors_(film)",
+      "fix": "Overheard at the counter: Crystal, Ronette and Chiffon on the stoop.",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Orin's order, laughing gas on the side.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Orin never orders a drink in the film. His habit is nitrous oxide at the dentist chair, and the film is set in the early 1960s, before Vanilla Coke existed.",
+      "source": "https://en.wikipedia.org/wiki/Little_Shop_of_Horrors_(film)",
+      "fix": "Nothing like Orin's order. He takes his laughing gas straight.",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "The shop, the plant and the TV dinner dream all land, but the printed words are mostly a generic diner with a plant on top.",
+    "missing": [
+      "Feed me, Seymour (Audrey II's song)",
+      "Suppertime, Mushnik fed to the plant (shop at night)",
+      "Orin and the dentist chair with the laughing gas mask (Orin's surgery)",
+      "Somewhere That's Green, Audrey's suburban dream",
+      "Mean Green Mother from Outer Space (final battle)",
+      "Wink Wilkinson's radio show"
+    ],
+    "ideas": [
+      "Swap 'Pie so good it ought to be a crime' for 'Don't feed the plants'",
+      "Swap the Vanilla Coke for a period fountain drink (a cherry phosphate) and keep the dentist gag in the note",
+      "Swap 'Pork egg rolls' note for 'Seymour bought the plant from a Chinese flower shop during an eclipse'",
+      "Replace 'Ask no questions' on the plant card with 'Feed me'"
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 11,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "The shop, the plant and the TV dinner dream all land, but the printed words are mostly a generic diner with a plant on top.",
-  "missing": [
-   "Feed me, Seymour (Audrey II's song)",
-   "Suppertime, Mushnik fed to the plant (shop at night)",
-   "Orin and the dentist chair with the laughing gas mask (Orin's surgery)",
-   "Somewhere That's Green, Audrey's suburban dream",
-   "Mean Green Mother from Outer Space (final battle)",
-   "Wink Wilkinson's radio show"
-  ],
-  "ideas": [
-   "Swap 'Pie so good it ought to be a crime' for 'Don't feed the plants'",
-   "Swap the Vanilla Coke for a period fountain drink (a cherry phosphate) and keep the dentist gag in the note",
-   "Swap 'Pork egg rolls' note for 'Seymour bought the plant from a Chinese flower shop during an eclipse'",
-   "Replace 'Ask no questions' on the plant card with 'Feed me'"
-  ],
-  "flat": false,
-  "done": false
- }
 }

@@ -1,42 +1,43 @@
 {
- "id": "My Fair Lady (1964)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "In Hartford, Hereford and Hampshire, hurricanes hardly happen.",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "The line is 'In Hertford, Hereford and Hampshire', all English counties. Hartford is in Connecticut, and the lyric ends 'hardly ever happen'.",
-   "source": "https://en.wikiquote.org/wiki/My_Fair_Lady",
-   "fix": "In Hertford, Hereford and Hampshire, hurricanes hardly ever happen.",
-   "printed": true,
-   "done": false
+  "id": "My Fair Lady (1964)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "In Hartford, Hereford and Hampshire, hurricanes hardly happen.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "The line is 'In Hertford, Hereford and Hampshire', all English counties. Hartford is in Connecticut, and the lyric ends 'hardly ever happen'.",
+      "source": "https://en.wikiquote.org/wiki/My_Fair_Lady",
+      "fix": "Eliza's aitch drill with Higgins, hurricanes and all.",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 4,
+    "verdict": "A smart dark banquet with Ascot, the phonograph and the Embassy Ball, and one slip in a famous lyric.",
+    "missing": [
+      "Move your bloomin' arse at Ascot (Eliza cheering a horse)",
+      "Throwing the slippers at Higgins (after the ball)",
+      "Get Me to the Church on Time (Doolittle's stag night)",
+      "Tea at Mrs Higgins's At Home (Eliza first test)",
+      "I Could Have Danced All Night (Eliza's breakthrough)",
+      "Chocolates for Eliza after the ball (Higgins)"
+    ],
+    "ideas": [
+      "Swap 'Smoked salmon canapes' note for 'Mrs Higgins's At Home, where Eliza first meets society'.",
+      "Rename 'Flower girl's violet Victoria sponge' to 'Slippers sponge' to hint at the ending.",
+      "Replace 'Chilled amontillado sherry' note with the corrected lyric.",
+      "Add 'Church on Time' ginger beer for Doolittle's stag night."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 13,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 4,
-  "look": 4,
-  "overall": 4,
-  "verdict": "A smart dark banquet with Ascot, the phonograph and the Embassy Ball, and one slip in a famous lyric.",
-  "missing": [
-   "Move your bloomin' arse at Ascot (Eliza cheering a horse)",
-   "Throwing the slippers at Higgins (after the ball)",
-   "Get Me to the Church on Time (Doolittle's stag night)",
-   "Tea at Mrs Higgins's At Home (Eliza first test)",
-   "I Could Have Danced All Night (Eliza's breakthrough)",
-   "Chocolates for Eliza after the ball (Higgins)"
-  ],
-  "ideas": [
-   "Swap 'Smoked salmon canapes' note for 'Mrs Higgins's At Home, where Eliza first meets society'.",
-   "Rename 'Flower girl's violet Victoria sponge' to 'Slippers sponge' to hint at the ending.",
-   "Replace 'Chilled amontillado sherry' note with the corrected lyric.",
-   "Add 'Church on Time' ginger beer for Doolittle's stag night."
-  ],
-  "flat": false,
-  "done": false
- }
 }

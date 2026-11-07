@@ -1,62 +1,63 @@
 {
- "id": "Mr. Deeds (2002)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Babe from Winchestertonfieldville, Iowa, orders two.",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "Winchestertonfieldville, Iowa is the made-up home of Babe's cover persona, Pam Dawson. Babe is a New York tabloid reporter.",
-   "source": "https://en.wikipedia.org/wiki/Mr._Deeds",
-   "fix": "Pam Dawson from Winchestertonfieldville, Iowa, orders two.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Emilio, the butler with the foot, very, very sneaky",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The frostbitten foot is Deeds's, not Emilio's. Emilio only says its hideousness will haunt his dreams. He does say 'I am very very sneaky, sir.'",
-   "source": "https://en.wikiquote.org/wiki/Mr._Deeds",
-   "fix": "Emilio, the butler who is very, very sneaky",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "A tuba played at the wrong moment",
-   "where": "wink",
-   "verdict": "unsure",
-   "why": "Neither the plot summary nor the quote page mentions a tuba in the 2002 film.",
-   "source": "https://en.wikipedia.org/wiki/Mr._Deeds",
-   "fix": "Deeds's frostbitten foot breaking the ice",
-   "printed": false,
-   "done": false
+  "id": "Mr. Deeds (2002)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Babe from Winchestertonfieldville, Iowa, orders two.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "Winchestertonfieldville, Iowa is the made-up home of Babe's cover persona, Pam Dawson. Babe is a New York tabloid reporter.",
+      "source": "https://en.wikipedia.org/wiki/Mr._Deeds",
+      "fix": "Pam Dawson from Winchestertonfieldville, Iowa, orders two.",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Emilio, the butler with the foot, very, very sneaky",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The frostbitten foot is Deeds's, not Emilio's. Emilio only says its hideousness will haunt his dreams. He does say 'I am very very sneaky, sir.'",
+      "source": "https://en.wikiquote.org/wiki/Mr._Deeds",
+      "fix": "Emilio, the butler who is very, very sneaky",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "A tuba played at the wrong moment",
+      "where": "wink",
+      "verdict": "unsure",
+      "why": "Neither the plot summary nor the quote page mentions a tuba in the 2002 film.",
+      "source": "https://en.wikipedia.org/wiki/Mr._Deeds",
+      "fix": "Deeds's frostbitten foot breaking the ice",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "A real pizzeria with the right town and the right butler, but two of the lines are wrong and the biggest moments barely appear.",
+    "missing": [
+      "Crazy Eyes' pizza with French fries and Oreos",
+      "Deeds saving Babe from the frozen lake with his frostbitten foot",
+      "Emilio is Blake's son and takes over the company (shareholder meeting)",
+      "The Hallmark card poem Deeds writes",
+      "Corvettes for everyone in Mandrake Falls (finale)",
+      "Deeds beating up the thieves who mock him (Babe's purse)"
+    ],
+    "ideas": [
+      "Rename 'Greeting card cheese and tomato pinwheels' to 'Hallmark pinwheels' with a poem on a toothpick flag.",
+      "Swap 'Cola float with whipped cream' for 'Crazy Eyes' fries and Oreos float'.",
+      "Replace the foot line on the baked ziti with 'Emilio is very, very sneaky, sir'.",
+      "Add a corvette red cherry to the pie case: 'Corvette cherry cheesecake' for the finale."
+    ],
+    "flat": true,
+    "done": false
   }
- ],
- "checked_ok": 11,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.4,
-  "verdict": "A real pizzeria with the right town and the right butler, but two of the lines are wrong and the biggest moments barely appear.",
-  "missing": [
-   "Crazy Eyes' pizza with French fries and Oreos",
-   "Deeds saving Babe from the frozen lake with his frostbitten foot",
-   "Emilio is Blake's son and takes over the company (shareholder meeting)",
-   "The Hallmark card poem Deeds writes",
-   "Corvettes for everyone in Mandrake Falls (finale)",
-   "Deeds beating up the thieves who mock him (Babe's purse)"
-  ],
-  "ideas": [
-   "Rename 'Greeting card cheese and tomato pinwheels' to 'Hallmark pinwheels' with a poem on a toothpick flag.",
-   "Swap 'Cola float with whipped cream' for 'Crazy Eyes' fries and Oreos float'.",
-   "Replace the foot line on the baked ziti with 'Emilio is very, very sneaky, sir'.",
-   "Add a corvette red cherry to the pie case: 'Corvette cherry cheesecake' for the finale."
-  ],
-  "flat": true,
-  "done": false
- }
 }

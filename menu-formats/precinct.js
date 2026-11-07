@@ -141,7 +141,7 @@ window.MENU_FORMATS.precinct=function(ctx){
   const field=(k,v)=>`<div style="display:flex;gap:.6em;align-items:baseline;border-bottom:1px solid rgba(0,0,0,.18);padding:.18em 0"><span style="flex:none;width:6.6em;font:700 .8em/1.2 ${bd};letter-spacing:.14em;text-transform:uppercase;color:${acc}">${x(k)}</span><span style="font:1em/1.25 ${bd};color:${ink}">${v}</span></div>`;
   const pbv=E.pb.split(" ").map(v=>parseFloat(v)),pbT=pbv[0],pbR=pbv[1]==null?pbT:pbv[1],pbB=pbv[2]==null?pbT:pbv[2];
   const PW=Math.round((532-pbT-pbB)*2/3+2*pbR);
-  const fields=`${field("Location",`<b>${x(venue)}</b>`)}${field("Posted",x(sign))}${field("Division",`${x(E.dept)}, ${x(f.year||"")}`)}${field("On file",x(winks[0]||"")+(winks[1]?`<span data-item>; ${x(winks[1])}</span>`:""))}`;
+  const fields=`${field("Location",`<b>${x(venue)}</b>`)}${field("Posted",x(sign))}${field("Division",`${x(fl.dept||E.dept)}, ${x(f.year||"")}`)}${field("On file",x(winks[0]||"")+(winks[1]?`<span data-item>; ${x(winks[1])}</span>`:""))}`;
   const front=`${folder(fl.number?`Case ${x(num)}-${x(yy)}`:`Case file ${x(f.year||"")}`,40)}
    ${heroP?evid(hero,36,FT,FW,FH,-T.tilt*.4,"center","Now showing",null,true):evid(hero,36,96,744,548,-T.tilt*.4,"center 40%","Exhibit A")}
    ${logo}

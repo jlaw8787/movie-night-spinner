@@ -2154,7 +2154,7 @@
    "title": "Newsboy Bundle Slip",
    "lines": [
     "100 papes, one headline",
-    "Strike pays more than the route"
+    "60 cents a hundred, up from fifty, so we strike"
    ]
   },
   "number": "1899"
@@ -5259,7 +5259,7 @@
    "The strange plant found during an eclipse",
    "Orin the dentist",
    "Skid Row, rain and all",
-   "Crystal, Ronnette and Chiffon on the stoop"
+   "Crystal, Ronette and Chiffon on the stoop"
   ],
   "prop": {
    "kind": "tag",
@@ -5615,8 +5615,8 @@
   "number": ""
  },
  "Midsommar (2019)": {
-  "venue": "Harga Midsummer Feast Hall",
-  "sign": "Welcome to the Harga",
+  "venue": "Hårga Midsummer Feast Hall",
+  "sign": "Welcome to the Hårga",
   "note": {
    "text": "Dani, you are welcome here. Sit, eat, and let the family take care of you.",
    "by": "Pelle"
@@ -5630,7 +5630,7 @@
   ],
   "prop": {
    "kind": "badge",
-   "title": "Harga Guest",
+   "title": "Hårga Guest",
    "lines": [
     "Guest of Pelle",
     "Flowers on every table"
@@ -5794,8 +5794,8 @@
   },
   "winks": [
    "Brooklyn Bridge, still unfinished in 1876",
-   "Leopold walking off the butter commercial set",
-   "Leopold waking up in Stuart's apartment"
+   "Leopold waking up in Stuart's apartment",
+   "Leopold walking off the butter commercial set"
   ],
   "prop": {
    "kind": "ticket",
@@ -11138,7 +11138,7 @@
    "Chef Didier in the kitchen",
    "The diagnosis of Lampington's disease",
    "Kragen's department store",
-   "Sean Matthews, back home"
+   "Sean Williams, back home"
   ],
   "prop": {
    "kind": "card",
@@ -13063,7 +13063,8 @@
     "Main Force Patrol"
    ]
   },
-  "number": ""
+  "number": "",
+  "dept": "Pursuit Squad"
  },
  "Mad Max 2 (1981)": {
   "venue": "The Refinery Compound",
@@ -16661,7 +16662,7 @@
    "The Axe Gang in black suits and hats",
    "Sing's giant swirl lollipop",
    "Tailor and Donut from the alley",
-   "The Beast, living in the old slum"
+   "The Beast, sprung from the asylum"
   ],
   "prop": {
    "kind": "receipt",
@@ -17828,7 +17829,21 @@
     "Qualifier, general entry"
    ]
   },
-  "number": "31"
+  "number": "31",
+  "score": {
+   "home": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "guests": [
+    1,
+    0,
+    0,
+    0
+   ]
+  }
  },
  "Glass Onion: A Knives Out Mystery (2022)": {
   "venue": "The Glass Onion Bar",
@@ -19201,7 +19216,7 @@
  },
  "Mission: Impossible - Ghost Protocol (2011)": {
   "venue": "IMF Rescue Train Carriage",
-  "sign": "Moscow Siding, Car 7",
+  "sign": "Moscow Siding, Car 47",
   "note": {
    "text": "Field agent now, which means I'm in charge of the snacks. Keep the sticky gloves off the table.",
    "by": "Benji Dunn"

@@ -231,10 +231,12 @@ window.MENU_FORMATS[ID]=ctx=>{
   const lab=(v)=>`<div style="flex:1;font:700 18px/1 ${BF};letter-spacing:.14em;color:${B.lab};text-transform:uppercase">${v}</div>`;
   const hdr=`<div style="display:flex;gap:6px;align-items:center;margin-bottom:6px">${lab(SB[0])}${[1,2,3,4].map(n=>`<div style="flex:0 0 46px;text-align:center;font:700 16px/1 ${BF};color:${B.lab}">${n}</div>`).join("")}<div style="flex:0 0 60px;text-align:center;font:700 16px/1 ${BF};color:${B.lab}">${SB[3]}</div></div>`;
   const cnt=k=>items[k]?items[k].length:"";
+  /* a film with a real result prints it: flavour.score = {home:[4 numbers],guests:[4 numbers]} (Next Goal Wins) */
+  const SCR=(f=>f&&Array.isArray(f.home)&&Array.isArray(f.guests)&&f.home.length===4&&f.guests.length===4?f:null)((ctx.flavour||{}).score);
   const board=`<div style="background:${B.bg};padding:14px 16px 12px;border:${e.board==="manual"?"6px solid #1a3022":"4px solid #2a2a2a"};box-shadow:0 4px 12px rgba(0,0,0,.35);flex:none">
     ${hdr}
-    <div style="display:flex;gap:6px;align-items:center;margin-bottom:6px">${lab(SB[1])}${["s","m","w","d"].map(k=>cell(cnt(k))).join("")}${cell(total,60)}</div>
-    <div style="display:flex;gap:6px;align-items:center">${lab(SB[2])}${[0,0,0,0].map(v=>cell(v)).join("")}${cell(0,60)}</div>
+    <div style="display:flex;gap:6px;align-items:center;margin-bottom:6px">${lab(SB[1])}${["s","m","w","d"].map((k,i)=>cell(SCR?SCR.home[i]:cnt(k))).join("")}${cell(SCR?SCR.home.reduce((a,v)=>a+v,0):total,60)}</div>
+    <div style="display:flex;gap:6px;align-items:center">${lab(SB[2])}${[0,1,2,3].map(i=>cell(SCR?SCR.guests[i]:0)).join("")}${cell(SCR?SCR.guests.reduce((a,v)=>a+v,0):0,60)}</div>
     <div style="display:flex;justify-content:space-between;margin-top:9px;font:700 15px/1.2 ${BF};letter-spacing:.14em;color:${B.lab};text-transform:uppercase"><span>${SB[4]} ${esc(num.slice(0,6))}</span><span>Now serving: ${esc(C[0]?C[0][1]:"Snacks")}</span></div></div>`;
   /* ticket */
   const sec=(num+"101").slice(0,3),row=(title.replace(/[^A-Z]/gi,"").charAt(0)||"A").toUpperCase(),seat=String(total||1);

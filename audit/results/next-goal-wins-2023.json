@@ -1,42 +1,43 @@
 {
- "id": "Next Goal Wins (2023)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "HOME 4 2 1 2 T 9 / GUESTS 0 0 0 0 0",
-   "where": "card",
-   "verdict": "wrong",
-   "why": "The scoreboard shows American Samoa winning 9 to 0. The film's results are the 31 to 0 loss to Australia and the 2 to 1 win over Tonga. The Tonga match is 1 to 0 at half time.",
-   "source": "https://en.wikipedia.org/wiki/Next_Goal_Wins_(2023_film)",
-   "fix": "HOME 0 0 1 1 T 2 / GUESTS 1 0 0 0 T 1",
-   "printed": true,
-   "done": false
+  "id": "Next Goal Wins (2023)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "HOME 4 2 1 2 T 9 / GUESTS 0 0 0 0 0",
+      "where": "card",
+      "verdict": "wrong",
+      "why": "The scoreboard shows American Samoa winning 9 to 0. The film's results are the 31 to 0 loss to Australia and the 2 to 1 win over Tonga. The Tonga match is 1 to 0 at half time.",
+      "source": "https://en.wikipedia.org/wiki/Next_Goal_Wins_(2023_film)",
+      "fix": "HOME 0 0 1 1 T 2 / GUESTS 1 0 0 0 T 1",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "Real Samoan food and a stadium concession board, with Jaiyah and Rongen in the right roles, but the scoreboard score is wrong.",
+    "missing": [
+      "The 2 to 1 win over Tonga (finale)",
+      "Tavita fainting from heatstroke (match)",
+      "Rongen's tantrum at half time (dressing room)",
+      "Rongen's daughter story (dressing room)",
+      "Jaiyah as captain (Tonga match)",
+      "Rongen calling Jaiyah by her old name (brawl)"
+    ],
+    "ideas": [
+      "Change the scoreboard to 2 to 1 against Tonga.",
+      "Swap 'Fresh green coconut' note for 'Tavita faints in the heat, drink up'.",
+      "Rename 'Palusami coconut spinach parcels' to 'Equaliser parcels'.",
+      "Replace the Rongen note with the 'one goal' line from the half time speech."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 11,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 4,
-  "tone": 4,
-  "look": 4,
-  "overall": 3.8,
-  "verdict": "Real Samoan food and a stadium concession board, with Jaiyah and Rongen in the right roles, but the scoreboard score is wrong.",
-  "missing": [
-   "The 2 to 1 win over Tonga (finale)",
-   "Tavita fainting from heatstroke (match)",
-   "Rongen's tantrum at half time (dressing room)",
-   "Rongen's daughter story (dressing room)",
-   "Jaiyah as captain (Tonga match)",
-   "Rongen calling Jaiyah by her old name (brawl)"
-  ],
-  "ideas": [
-   "Change the scoreboard to 2 to 1 against Tonga.",
-   "Swap 'Fresh green coconut' note for 'Tavita faints in the heat, drink up'.",
-   "Rename 'Palusami coconut spinach parcels' to 'Equaliser parcels'.",
-   "Replace the Rongen note with the 'one goal' line from the half time speech."
-  ],
-  "flat": false,
-  "done": false
- }
 }

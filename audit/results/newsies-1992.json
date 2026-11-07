@@ -1,52 +1,53 @@
 {
- "id": "Newsies (1992)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Strike pays more than the route",
-   "where": "prop",
-   "verdict": "wrong",
-   "why": "The strike pays nothing. The newsies strike because Pulitzer raised the price per hundred papers from 50 to 60 cents.",
-   "source": "https://hawksites.newpaltz.edu/addiegerbereng170/?p=10",
-   "fix": "60 cents a hundred, up from fifty, so we strike",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Medda's shout after the show at Irving Hall.",
-   "where": "house",
-   "verdict": "unsure",
-   "why": "Irving Hall is the real 1899 rally venue. The film summary places the rally at Medda Larkson's theatre, and I could not confirm the film names Irving Hall.",
-   "source": "https://en.wikipedia.org/wiki/Newsies",
-   "fix": "Medda's shout after the show at her theatre.",
-   "printed": true,
-   "done": false
+  "id": "Newsies (1992)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Strike pays more than the route",
+      "where": "prop",
+      "verdict": "wrong",
+      "why": "The strike pays nothing. The newsies strike because Pulitzer raised the price per hundred papers from 50 to 60 cents.",
+      "source": "https://hawksites.newpaltz.edu/addiegerbereng170/?p=10",
+      "fix": "60 cents a hundred, up from fifty, so we strike",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Medda's shout after the show at Irving Hall.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "Irving Hall is the real 1899 rally venue. The film summary places the rally at Medda Larkson's theatre, and I could not confirm the film names Irving Hall.",
+      "source": "https://en.wikipedia.org/wiki/Newsies",
+      "fix": "Medda's shout after the show at her theatre.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 5,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "The newspaper layout is the best thing here, and the world fits the film, but the food does not pull from the film's scenes.",
+    "missing": [
+      "Seize the Day rally (newsies' strike)",
+      "The Refuge and Warden Snyder (jail)",
+      "Roosevelt and the printing press banner (finale)",
+      "Spot Conlon arrives with Brooklyn (street fight)",
+      "Medda's High Times, Hard Times (theatre)",
+      "The Delancey brothers (strikebreakers)"
+    ],
+    "ideas": [
+      "Swap 'Pickled herring on rye' note for 'Spot Conlon turns up with Brooklyn and the whole street eats'.",
+      "Rename 'Brooklyn hot dogs' to 'Seize the day hot dogs' with a headline in mustard.",
+      "Replace the bundle slip with 'Newsie Banner, one edition, published tonight'.",
+      "Add 'The Refuge gruel' as a joke for Crutchy."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 11,
- "vibe": {
-  "world": 5,
-  "moments": 3,
-  "food": 3,
-  "tone": 4,
-  "look": 4,
-  "overall": 3.8,
-  "verdict": "The newspaper layout is the best thing here, and the world fits the film, but the food does not pull from the film's scenes.",
-  "missing": [
-   "Seize the Day rally (newsies' strike)",
-   "The Refuge and Warden Snyder (jail)",
-   "Roosevelt and the printing press banner (finale)",
-   "Spot Conlon arrives with Brooklyn (street fight)",
-   "Medda's High Times, Hard Times (theatre)",
-   "The Delancey brothers (strikebreakers)"
-  ],
-  "ideas": [
-   "Swap 'Pickled herring on rye' note for 'Spot Conlon turns up with Brooklyn and the whole street eats'.",
-   "Rename 'Brooklyn hot dogs' to 'Seize the day hot dogs' with a headline in mustard.",
-   "Replace the bundle slip with 'Newsie Banner, one edition, published tonight'.",
-   "Add 'The Refuge gruel' as a joke for Crutchy."
-  ],
-  "flat": false,
-  "done": false
- }
 }

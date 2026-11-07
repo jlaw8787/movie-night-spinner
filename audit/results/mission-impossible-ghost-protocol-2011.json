@@ -1,72 +1,74 @@
 {
- "id": "Mission: Impossible - Ghost Protocol (2011)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Moscow Siding, Car 7",
-   "where": "sign",
-   "verdict": "wrong",
-   "why": "The IMF team boards a green freight train car numbered 47, set up as a control centre run by Jane and Benji. It is printed twice on the card as Car 7.",
-   "source": "https://greatestfilms.org/series-missionimpossible4.html",
-   "fix": "Moscow Siding, Car 47",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Serve the pirozhki when Ethan and Benji walk out of the Moscow prison.",
-   "where": "cue",
-   "verdict": "unsure",
-   "why": "Benji locks the security office and drives the getaway van, while Ethan and Bogdan make their escape toward Jane, timed to Dean Martin. Sources do not show Ethan and Benji walking out together.",
-   "source": "https://greatestfilms.org/series-missionimpossible4.html",
-   "fix": "Serve the pirozhki when Ethan breaks out of the Moscow prison to Dean Martin.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Serve the pirozhki when Ethan and Benji walk out of the Moscow prison.",
-   "where": "cue-printed",
-   "verdict": "unsure",
-   "why": "Same cue as printed on the timetable. Benji drives the van while Ethan escapes with Bogdan.",
-   "source": "https://greatestfilms.org/series-missionimpossible4.html",
-   "fix": "Serve the pirozhki when Ethan breaks out of the Moscow prison to Dean Martin.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Benji's first job in the field, walking into the Kremlin behind a screen",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "Benji's first field job is the Moscow prison break, which comes before the Kremlin. In the Kremlin Ethan and Benji fool the guard with a screen that projects the hallway.",
-   "source": "https://greatestfilms.org/series-missionimpossible4.html",
-   "fix": "Benji and Ethan walking into the Kremlin behind a fake hallway screen",
-   "printed": true,
-   "done": false
+  "id": "Mission: Impossible - Ghost Protocol (2011)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Moscow Siding, Car 7",
+      "where": "sign",
+      "verdict": "wrong",
+      "why": "The IMF team boards a green freight train car numbered 47, set up as a control centre run by Jane and Benji. It is printed twice on the card as Car 7.",
+      "source": "https://greatestfilms.org/series-missionimpossible4.html",
+      "fix": "Moscow Siding, Car 47",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Serve the pirozhki when Ethan and Benji walk out of the Moscow prison.",
+      "where": "cue",
+      "verdict": "unsure",
+      "why": "Benji locks the security office and drives the getaway van, while Ethan and Bogdan make their escape toward Jane, timed to Dean Martin. Sources do not show Ethan and Benji walking out together.",
+      "source": "https://greatestfilms.org/series-missionimpossible4.html",
+      "fix": "Serve the pirozhki when Ethan breaks out of the Moscow prison to Dean Martin.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Serve the pirozhki when Ethan and Benji walk out of the Moscow prison.",
+      "where": "cue-printed",
+      "verdict": "unsure",
+      "why": "Same cue as printed on the timetable. Benji drives the van while Ethan escapes with Bogdan.",
+      "source": "https://greatestfilms.org/series-missionimpossible4.html",
+      "fix": "Serve the pirozhki when Ethan breaks out of the Moscow prison to Dean Martin.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Benji's first job in the field, walking into the Kremlin behind a screen",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Benji's first field job is the Moscow prison break, which comes before the Kremlin. In the Kremlin Ethan and Benji fool the guard with a screen that projects the hallway.",
+      "source": "https://greatestfilms.org/series-missionimpossible4.html",
+      "fix": "Benji and Ethan walking into the Kremlin behind a fake hallway screen",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 16,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "Good train carriage idea and a clever world tour of dishes, but the car number is off and the tone stays generic.",
+    "missing": [
+      "Sticky gloves on the Burj Khalifa (Dubai)",
+      "Dean Martin in the prison break (opening)",
+      "Brandt's anti-gravity suit and the server room drop (Mumbai)",
+      "Mask machine in the train (Moscow siding)",
+      "Sandstorm run after Wistrom (Dubai)",
+      "Kremlin bombing escape (Moscow)"
+    ],
+    "ideas": [
+      "Change 'Car 7' to 'Car 47' everywhere it is printed.",
+      "Swap the Frozen vodka pickle chaser note for 'Brandt drops into the server room on a wire'.",
+      "Rename 'Dubai sandstorm luqaimat' to 'Burj Khalifa glove dumplings' with a sticky date syrup joke.",
+      "Add a Dean Martin line under the pirozhki: 'Ain't that a kick in the head'."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 16,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.8,
-  "verdict": "Good train carriage idea and a clever world tour of dishes, but the car number is off and the tone stays generic.",
-  "missing": [
-   "Sticky gloves on the Burj Khalifa (Dubai)",
-   "Dean Martin in the prison break (opening)",
-   "Brandt's anti-gravity suit and the server room drop (Mumbai)",
-   "Mask machine in the train (Moscow siding)",
-   "Sandstorm run after Wistrom (Dubai)",
-   "Kremlin bombing escape (Moscow)"
-  ],
-  "ideas": [
-   "Change 'Car 7' to 'Car 47' everywhere it is printed.",
-   "Swap the Frozen vodka pickle chaser note for 'Brandt drops into the server room on a wire'.",
-   "Rename 'Dubai sandstorm luqaimat' to 'Burj Khalifa glove dumplings' with a sticky date syrup joke.",
-   "Add a Dean Martin line under the pirozhki: 'Ain't that a kick in the head'."
-  ],
-  "flat": false,
-  "done": false
- }
 }
