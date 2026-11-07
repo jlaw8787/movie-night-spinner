@@ -1,0 +1,77 @@
+{
+ "id": "Manhattan (1979)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Best room in New York to argue about Bergman. Get the cheesecake. It's on my list.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Isaac's list of what makes life worth living is Groucho, Willie Mays, the Jupiter Symphony, Louis Armstrong, Swedish movies, Flaubert, Brando, Sinatra, Cezanne's apples and pears, the crabs at Sam Wo's and Tracy's face. Cheesecake is not on it.",
+   "source": "https://www.filmsite.org/manhattan1979.html",
+   "fix": "Best room in New York to argue about Bergman. Get the cheesecake. It earns a spot on my list.",
+   "printed": true,
+   "done": false,
+   "fix_note": {
+    "text": "Best room in New York to argue about Bergman. Get the cheesecake. It earns a spot on my list.",
+    "by": "Ike",
+    "kind": "note"
+   }
+  },
+  {
+   "text": "Isaac's list of favourite things, said into a tape recorder",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Cheesecake is not on Isaac's tape recorder list in the film.",
+   "source": "https://www.filmsite.org/manhattan1979.html",
+   "fix": "worth adding to Isaac's list of what makes life worth living",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Isaac and Tracy watching old movies",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "None of the sources I opened show Isaac and Tracy eating Chinese food in bed or watching old movies.",
+   "source": "https://en.wikipedia.org/wiki/Manhattan_(1979_film)",
+   "fix": "Late night Chinese, packed to go, for Isaac and Tracy",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Yale and Mary's dinner out",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "None of the sources I opened show a Manhattan steak dinner for Yale and Mary.",
+   "source": "https://en.wikipedia.org/wiki/Manhattan_(1979_film)",
+   "fix": "the double date Emily sets up for Yale, Mary and Isaac",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 24,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 5,
+  "overall": 4.4,
+  "verdict": "A smart four chapter menu with the Queensboro Bridge bench and Elaine's, though the cheesecake and list nod gets the film wrong.",
+  "missing": [
+   "Sam Wo's crabs (Isaac's list)",
+   "The Academy of the Overrated (Mary's list)",
+   "Willie Mays and Groucho (Isaac's list)",
+   "The Hayden Planetarium (Isaac and Mary)",
+   "The harmonica Tracy gives him (ending)",
+   "Mary's dachshund (the walk under the bridge)"
+  ],
+  "ideas": [
+   "Swap 'NY cheesecake' note 'Worth living for, the regulars say' for 'Not on Isaac's list. Add it anyway.'",
+   "Swap 'Shrimp cocktail' for 'Crabs, Sam Wo style', a nod to Isaac's list.",
+   "Swap 'Nothing here is overrated' for a short 'Academy of the Overrated' house line.",
+   "Add a harmonica corner picture in place of the plain Menu No. 79 footer."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "id": "King of New York (1990)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains when Frank checks into his hotel suite fresh out of prison.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The AFI synopsis has Frank going home to his suite at the Plaza, and another source calls it a permanent suite. So he returns to it rather than checking in. The phone cue says 'checks back into'.",
+   "source": "https://catalog.afi.com/Catalog/moviedetails/67309",
+   "fix": "Serve the mains when Frank walks back into his Plaza suite fresh out of prison.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "A black tie dinner to keep the hospital doors open",
+   "where": "card",
+   "verdict": "unsure",
+   "why": "The AFI synopsis has Frank raising $16 million for the South Bronx hospital through a televised charity fundraiser. It does not describe a black tie dinner in the Plaza ballroom.",
+   "source": "https://catalog.afi.com/Catalog/moviedetails/67309",
+   "fix": "A benefit night to keep the hospital doors open",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 20,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A stylish benefit night with the $16 million pledge card, but the food could be more Frank White and the film's lines go unused.",
+  "missing": [
+   "'Back from the dead!' (Frank and Pete Hamill)",
+   "'I'm gonna run for mayor!' (the press moment)",
+   "Jimmy Jump and Test Tube (the crew)",
+   "Larry Wong's barrels marked MSG (Chinatown)",
+   "The chicken restaurant where Jimmy is arrested (Colombians)",
+   "'I thought people like me were the legal process' (Frank and Jennifer)"
+  ],
+  "ideas": [
+   "Swap the 'Chinatown dumplings' description for 'heavy on the MSG', a nod to the barrels.",
+   "Swap 'Wines' line for 'Back from the dead. Pour accordingly.'",
+   "Add 'Jimmy Jump's fried chicken to go' in place of 'Creamed spinach'.",
+   "Swap 'Collected at ten' on the pledge card for 'Vote Frank White for Mayor'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

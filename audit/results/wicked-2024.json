@@ -1,0 +1,68 @@
+{
+ "id": "Wicked (2024)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Sit by me, Elphie. I've ordered for both of us, and before you argue, yes, I picked the fancy dessert.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "On Welcome Day the two clash as roommates, and she is still Galinda until the Emerald City. 'Elphie' only appears after they bond at the Ozdust. A friendly note signed Glinda does not fit the day on the sign.",
+   "source": "https://en.wikipedia.org/wiki/Wicked_(2024_film)",
+   "fix": "Roommate, sit by me. I've ordered for both of us, and before you argue, yes, I picked the fancy dessert.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Roommate, sit by me. I've ordered for both of us, and before you argue, yes, I picked the fancy dessert.",
+    "by": "Galinda",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "the dining hall at Shiz University",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No source I opened shows a dining hall scene at Shiz. The Ozdust party, the classroom and the library are the places named.",
+   "source": "https://en.wikipedia.org/wiki/Wicked_(2024_film)",
+   "fix": "the dance at the Ozdust Ballroom",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "The train to the Emerald City",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "The sources I opened say Elphaba and Galinda travel to the Emerald City but do not say by train.",
+   "source": "https://en.wikipedia.org/wiki/Wicked_(2024_film)",
+   "fix": "The road to the Emerald City",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 8,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Pink and green food works, but the school dining hall is a weak venue for a film that is all Ozdust, Defying Gravity and Emerald City.",
+  "missing": [
+   "Galinda dancing with Elphaba at the Ozdust after the black hat prank",
+   "Dr Dillamond's classroom and the lion cub cage",
+   "Poppy dust putting the class to sleep",
+   "The Grimmerie and the flying monkeys",
+   "Defying Gravity broom flight",
+   "Galinda changing her name to Glinda"
+  ],
+  "ideas": [
+   "Swap 'Shiz dining hall stuffed chicken' for 'Ozdust party sliders' to tie to Fiyero's party",
+   "Swap 'Elphaba's green dip' note for the poppy dust scene",
+   "Rename 'Pink meringue kisses' to 'Galinda's Popular puffs' without using song lines",
+   "Swap the venue to the Ozdust Ballroom instead of the dining hall"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

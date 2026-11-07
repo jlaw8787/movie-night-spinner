@@ -1,0 +1,58 @@
+{
+ "id": "Willy Wonka & the Chocolate Factory (1971)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Do not rush. The Everlasting Gobstopper never runs out, although you might. Mind the fizzy bubbles, and do not burp.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "Wikipedia says Charlie and Grandpa Joe get down from the ceiling fan by burping, so telling guests not to burp runs against the scene. The Gobstopper line is fine.",
+   "source": "https://en.wikipedia.org/wiki/Willy_Wonka_%26_the_Chocolate_Factory",
+   "fix": "Do not rush. The Everlasting Gobstopper never runs out, although you might. Mind the fizzy bubbles, and burp if you must.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Do not rush. The Everlasting Gobstopper never runs out, although you might. Mind the fizzy bubbles, and burp if you must.",
+    "by": "Willy Wonka",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Veruca wants a goose that lays golden eggs for Easter",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "In the Wikiquote page I opened Veruca demands an Oompa Loompa and says she wants it now. I found nothing on a golden goose or Easter.",
+   "source": "https://en.wikipedia.org/wiki/Willy_Wonka_%26_the_Chocolate_Factory",
+   "fix": "Veruca wants an Oompa Loompa right away",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 9,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "Right shop, right fizzy lifting drinks and the right ticket stub, though the notes could use more of Wonka's fine print.",
+  "missing": [
+   "Slugworth and the secret test (Mr Wilkinson)",
+   "Wonka's contract section 37B",
+   "The golden ticket in the Wonka bar",
+   "Mike Teavee sent through Wonkavision",
+   "Violet turning into a blueberry",
+   "Charlie returning the Gobstopper"
+  ],
+  "ideas": [
+   "Swap 'Golden goose salted caramel eggs' note for Veruca's 'I want an Oompa Loompa now'",
+   "Swap 'Fizzy lifting raspberry lemon soda' note for the burp to descend",
+   "Rename 'Gobstopper truffles' to 'Slugworth's test truffles'",
+   "Add a 'Blueberry gum' sorbet for Violet"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "Big (1988)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Mr. MacMillan and our new V.P. of Product Development, four hands on one keyboard.",
+      "where": "caption",
+      "verdict": "wrong",
+      "why": "MacMillan and Josh play 'Heart and Soul' and 'Chopsticks' on the Walking Piano at FAO Schwarz. It is a floor piano played with the feet, so it is four feet, not four hands.",
+      "source": "https://en.wikipedia.org/wiki/Walking_Piano",
+      "fix": "Mr. MacMillan and our new V.P. of Product Development, four feet on one keyboard.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Red caviar canapés",
+      "where": "dish-name",
+      "verdict": "unsure",
+      "why": "The film's caviar is described as beluga in the Daily Meal and as black caviar in another write up. Neither source calls it red caviar or salmon roe.",
+      "source": "https://www.thedailymeal.com/best-food-scenes-movies",
+      "fix": "Black caviar canapés",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Corner cart hot dog",
+      "where": "dish-name",
+      "verdict": "unsure",
+      "why": "The script I opened has Josh and Billy heading to the city to lay low, but I found no hot dog cart scene in it. The script text was only partial.",
+      "source": "https://imsdb.com/scripts/Big.html",
+      "fix": "Cheeseburger from the city diner",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 8,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 4.0,
+    "verdict": "The party menu hits the baby corn and caviar scenes and the paperwork look is neat, though the toy shop is under used.",
+    "missing": [
+      "The Walking Piano duet at FAO Schwarz (MacMillan)",
+      "The pitch meeting 'it's not fun' (Josh)",
+      "Josh's trampoline loft (his flat)",
+      "Susan and Josh (the romance)",
+      "Billy at the flophouse (best friend)",
+      "Zoltar at the carnival (the wish)"
+    ],
+    "ideas": [
+      "Fix the caption to 'four feet on one keyboard'",
+      "Swap 'Cotton candy' for a 'Zoltar' blue slushie, replacing 'Fresh lemonade'",
+      "Add the line 'I don't get it, it's not fun' to the footer",
+      "Swap the 'Kiddie cocktail' note for a trampoline line"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

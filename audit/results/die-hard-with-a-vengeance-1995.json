@@ -1,0 +1,72 @@
+{
+  "id": "Die Hard with a Vengeance (1995)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Our counter, 138th Street / Cut through Central Park / 72nd Street and Broadway / Down to Wall Street",
+      "where": "caption",
+      "verdict": "wrong",
+      "why": "The 72nd Street pay phone comes before the Central Park drive. McClane's own line in the film is '72nd and Broadway to Central Park South in three minutes', and he says the park is the best way south to Wall Street. The card has the park before 72nd.",
+      "source": "https://en.wikiquote.org/wiki/Die_Hard_with_a_Vengeance",
+      "fix": "Our counter, 138th Street / 72nd Street and Broadway / Cut through Central Park / Down to Wall Street",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "COFFEE SHOP, 138TH STREET AT AMSTERDAM",
+      "where": "venue",
+      "verdict": "unsure",
+      "why": "McClane's walk begins at 138th Street and one source puts the corner at Lenox Avenue, another heading says Amsterdam Avenue. Zeus's shop is the building nearby. I could not confirm the corner.",
+      "source": "https://www.untappedcities.com/nyc-film-locations-for-die-hard-with-a-vengeance/",
+      "fix": "COFFEE SHOP, 138TH STREET, HARLEM",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Gyro platter -- eaten in a stolen taxi",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "McClane and Zeus take a taxi twice, but none of the sources I opened mention food in it.",
+      "source": "https://en.wikiquote.org/wiki/Die_Hard_with_a_Vengeance",
+      "fix": "Gyro platter -- eaten on the run",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "Bacon egg and cheese on a roll -- McClane hasn't slept in days",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The film runs over one day. The cue and tagline say 'one very long day', so 'hasn't slept in days' is not backed.",
+      "source": "https://en.wikipedia.org/wiki/Die_Hard_with_a_Vengeance",
+      "fix": "Bacon egg and cheese on a roll -- McClane hasn't stopped all day",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 10,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "The Harlem placemat is a clever frame and the jug answer is right. The route order is off and the food leans on guesses.",
+    "missing": [
+      "The sandwich board in Harlem (Zeus)",
+      "Simon says on the pay phone (72nd Street)",
+      "The 3 train bomb (Wall Street)",
+      "The Federal Reserve gold (dump trucks)",
+      "Yankee Stadium trip (the Bronx)",
+      "Aspirin from the truck stop (the ending)"
+    ],
+    "ideas": [
+      "Fix the taxi race order so 72nd Street comes before the park",
+      "Add 'Simon says' to the placemat footer, replacing the plain print line",
+      "Swap 'Cold Soda' joke for the aspirin from the truck stop",
+      "Rename the 'Gyro platter' as a 'Taxi snack' and keep it brief"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

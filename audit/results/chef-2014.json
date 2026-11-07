@@ -1,0 +1,62 @@
+{
+  "id": "Chef (2014)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the toasties when Carl makes his son a grilled cheese.",
+      "where": "cue",
+      "verdict": "unsure",
+      "why": "The grilled cheese is a key scene. One write up describes it as Carl teaching Percy how to make a grilled cheese properly, so it may be Carl and Percy making it together. I could not confirm the exact moment or who cooks it.",
+      "source": "https://spoilertown.com/chef-2014",
+      "fix": "Serve the toasties when Carl shows Percy how to make a grilled cheese.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "El Jefe",
+      "where": "venue",
+      "verdict": "unsure",
+      "why": "Wikipedia says Marvin offers Carl a rundown Grumman food truck. None of the pages I opened give the truck's name.",
+      "source": "https://en.wikipedia.org/wiki/Chef_(2014_film)",
+      "fix": "El Jefe",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Not to be served burnt. Ever",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The grilled cheese is shown being prepared with care, but I found no line about burnt toast in the sources.",
+      "source": "https://birdbathpub.blogspot.com/2022/10/chef.html",
+      "fix": "Made with care for his son.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 10,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 5,
+    "tone": 4,
+    "look": 4,
+    "overall": 4.2,
+    "verdict": "A food truck menu that follows the cross country route and the real dishes. It leaves out the Twitter fight, which is what the film runs on.",
+    "missing": [
+      "The Twitter fight with Ramsey (Carl's meltdown)",
+      "Percy filming every stop (social media)",
+      "Martin joining the truck (the line cook)",
+      "Marvin handing over the truck (Miami)",
+      "The austin brisket stop (Austin)",
+      "Ramsey at the window (the finale)"
+    ],
+    "ideas": [
+      "Add a 'Don't tweet angry' line to the footer, replacing the plain print line",
+      "Swap 'Food truck mojito' for a Cuban coffee, since Cuban food is the heart of the film",
+      "Add the Austin brisket stop to the road list, replacing 'On the road' filler note",
+      "Rewrite the lava cake note to name Riva's menu"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

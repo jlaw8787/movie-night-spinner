@@ -1,0 +1,62 @@
+{
+  "id": "Beetlejuice (1988)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Found in the attic. Reads like a tax form.",
+      "where": "caption",
+      "verdict": "wrong",
+      "why": "Adam says the Handbook for the Recently Deceased reads like stereo instructions. Nothing I opened mentions taxes. Otho does find the handbook in the attic with the model, so the first half holds.",
+      "source": "https://codysfilmandtvblog.blogspot.com/2021/10/beetlejuice-1988.html",
+      "fix": "Found in the attic. Reads like stereo instructions.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Seen every scary film twice.",
+      "where": "wink",
+      "verdict": "unsure",
+      "why": "Printed in the late night Bio-Exorcist ad. The ad I read opens with 'I'll do anything. I'll scare 'em real bad.' and calls him the afterlife's leading bio-exorcist. I could not find the printed line in it.",
+      "source": "https://codysfilmandtvblog.blogspot.com/2021/10/beetlejuice-1988.html",
+      "fix": "I'll scare 'em real bad.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "No phone. Just say the name.",
+      "where": "wink",
+      "verdict": "unsure",
+      "why": "The ad shows the name BETELGEUSE onscreen three times, which fits 'say the name'. I could not confirm whether the ad also shows a phone number.",
+      "source": "https://codysfilmandtvblog.blogspot.com/2021/10/beetlejuice-1988.html",
+      "fix": "Just say the name. Three times.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 10,
+  "vibe": {
+    "world": 5,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 5,
+    "overall": 4.4,
+    "verdict": "The Deetz dinner party, Netherworld ticket and model town all look right, and the shrimp cocktail grabbing back is the best joke on the page.",
+    "missing": [
+      "Juno at her desk in the waiting room",
+      "The sandworms on Saturn (Adam)",
+      "Beetlejuice in the striped suit",
+      "The shrunken head ending (waiting room)",
+      "Lydia's line 'I, myself, am strange and unusual'",
+      "The wedding to Lydia (finale)"
+    ],
+    "ideas": [
+      "Fix the handbook caption to 'reads like stereo instructions'",
+      "Swap 'Sparkling lemonade' for a striped 'Sandworm soda' to bring in Saturn",
+      "Replace the Bio-Exorcist ad line with 'I'll scare 'em real bad.'",
+      "Swap the 'Please wait. Then wait.' ticket line for a Juno line from her desk"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

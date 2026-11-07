@@ -1,0 +1,52 @@
+{
+ "id": "Midnight Cowboy (1969)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Automat sandwiches -- ham and cheese out of the little glass doors",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "None of the sources I opened show an Automat. The film has Joe and Ratso stealing food when the money runs out.",
+   "source": "https://en.wikipedia.org/wiki/Midnight_Cowboy",
+   "fix": "the sandwiches they steal when the money runs out",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Condemned building franks and beans -- all they could afford in the squat",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Filmsite has Ratso cooking over a canned heat stove in the condemned squat, but no source I opened names franks and beans.",
+   "source": "https://filmsite.org/midn.html",
+   "fix": "heated over canned heat in the condemned squat",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.0,
+  "verdict": "A tidy bus station counter, but the pastel look feels nothing like the grimy film and the cowboy is missing.",
+  "missing": [
+   "'I'm walkin' here!' (the taxi on the street)",
+   "Joe's cowboy hat and boots (the whole film)",
+   "Joe's portable radio (hotel room)",
+   "The X on the condemned windows (the squat)",
+   "Scribbage at the Warhol party (Shirley)",
+   "Rico asking not to be called Ratso (the bus)"
+  ],
+  "ideas": [
+   "Swap 'Texas hamburger' for 'Cowboy Hamburger, Texas style', with a boot stamp.",
+   "Swap the pastel heading 'Southbound' for a dirty neon 42nd Street sign.",
+   "Add 'I'm walkin' here!' as a house line in place of 'Open all night.'",
+   "Swap 'Pineapple coconut cooler' note for 'Ratso says sunshine and coconut milk are all you need'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

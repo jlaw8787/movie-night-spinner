@@ -1,0 +1,62 @@
+{
+  "id": "Wreck-It Ralph (2012)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve dessert when the Nicelanders hand Felix a pie at the anniversary party.",
+      "where": "cue",
+      "verdict": "unsure",
+      "why": "The TV Tropes page I opened has cake at the anniversary party, with Ralph splattering it. The pie Ralph talks about is what he wants, not what Felix is handed at the party.",
+      "source": "https://en.wikipedia.org/wiki/Wreck-It_Ralph",
+      "fix": "Serve dessert when Ralph asks if it is Turbo to want a piece of pie every once in a while.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Serve dessert when the Nicelanders hand Felix a pie at the anniversary party.",
+      "where": "cue-printed",
+      "verdict": "unsure",
+      "why": "Same as the data cue.",
+      "source": "https://en.wikipedia.org/wiki/Wreck-It_Ralph",
+      "fix": "Serve dessert when Ralph asks if it is Turbo to want a piece of pie every once in a while.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Pie so good it ought to be a crime. Est. 1973.",
+      "where": "card",
+      "verdict": "unsure",
+      "why": "Tapper the arcade game is from 1983 on Wikipedia, and the film's Fix-It Felix Jr. is 30 years old in 2012. The date may only be a joke, but it does not match the game.",
+      "source": "https://en.wikipedia.org/wiki/Tapper_(video_game)",
+      "fix": "Pie so good it ought to be a crime. Est. 1983.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "Tapper's is a clever venue, but the cue and the pie angle rest on a party scene the film does not show that way.",
+    "missing": [
+      "Cy-Bugs from Hero's Duty",
+      "Diet Cola Mountain and the Mentos eruption",
+      "King Candy revealed as Turbo",
+      "Felix and Calhoun in the Nesquik-sand",
+      "Ralph's 'Medal of Heroes' win",
+      "Sour Bill"
+    ],
+    "ideas": [
+      "Swap 'Felix's anniversary pie' note for Ralph's piece of pie line",
+      "Swap 'Cola ice cream float' for 'Diet Cola Mountain float' with a Mentos note",
+      "Rename 'Candy kart pretzel rods' to 'Vanellope's kart pretzel rods'",
+      "Swap the cue to the Mentos eruption"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

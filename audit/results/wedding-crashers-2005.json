@@ -1,0 +1,68 @@
+{
+ "id": "Wedding Crashers (2005)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "There are rules to crashing a wedding, and the first is to hit the buffet early. Grab a plate before the speeches.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "No source I opened says rule one is the buffet. Wikiquote has Jeremy's 'Rule number 76: no excuses. Play like a champion.' and a few other numbered rules, but nothing for rule one or the buffet.",
+   "source": "https://en.wikipedia.org/wiki/Wedding_Crashers",
+   "fix": "Rule 76 says no excuses, play like a champion. That means hit the buffet early and grab a plate before the speeches.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Rule 76 says no excuses, play like a champion. That means hit the buffet early and grab a plate before the speeches.",
+    "by": "Jeremy Grey",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Erin go Bragh, John says, at every wedding.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Nothing I opened shows John saying this at weddings. The film does use fake identities and several ethnic weddings in the montage, but no source confirms this line.",
+   "source": "https://en.wikipedia.org/wiki/Wedding_Crashers",
+   "fix": "Fake names for every wedding, and John uses a different one each time.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Mazel tov from the crashing montage, Jeremy.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The opening montage of weddings is real, but no source I opened confirms a Jewish wedding with Jeremy in it. The Shlomo scene on Wikiquote is John's, not Jeremy's.",
+   "source": "https://en.wikipedia.org/wiki/Wedding_Crashers",
+   "fix": "Mazel tov from the Shlomo scene, John.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.6,
+  "verdict": "The invite and seating chart suit the film, but the layout is polite and the best crude jokes are missing.",
+  "missing": [
+   "Chazz yelling 'Ma! The meatloaf!' from the kitchen (Chazz's house)",
+   "Touch football with Sack at the Cleary compound",
+   "The sailing trip with Claire",
+   "The bike ride to the secluded beach",
+   "Crashing a funeral with Chazz",
+   "Sack's hunting trip prank"
+  ],
+  "ideas": [
+   "Swap 'Irish coffee with whipped cream' note for a Maryland touch, 'Crab cakes and football' nod",
+   "Add 'Ma, the meatloaf!' as the note on 'Chazz's sticky glazed meatloaf', replacing 'the meatloaf Chazz yells for'",
+   "Swap 'Rule 76 wedding cake' note for a list of the rules, numbered as in the film",
+   "Add a 'Funeral crasher' rule on the place card"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

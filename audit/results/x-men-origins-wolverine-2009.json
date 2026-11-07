@@ -1,0 +1,52 @@
+{
+  "id": "X-Men Origins: Wolverine (2009)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the mains when the kind old farm couple feed Logan breakfast.",
+      "where": "cue",
+      "verdict": "unsure",
+      "why": "The plot and TV Tropes recap I opened say an elderly couple takes Logan in at a farm and Zero kills them the next morning. They do not say the couple feed him breakfast, and neither names the Hudsons.",
+      "source": "https://en.wikipedia.org/wiki/X-Men_Origins:_Wolverine",
+      "fix": "Serve the mains when the kind old farm couple take Logan in.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Serve the mains when the kind old farm couple feed Logan breakfast.",
+      "where": "cue-printed",
+      "verdict": "unsure",
+      "why": "Same as the data cue.",
+      "source": "https://en.wikipedia.org/wiki/X-Men_Origins:_Wolverine",
+      "fix": "Serve the mains when the kind old farm couple take Logan in.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 3,
+    "overall": 3.2,
+    "verdict": "Cabin and chow line work, but the food rarely ties to scenes, and the look is dark and a little murky.",
+    "missing": [
+      "The adamantium operation",
+      "Logan taking down Zero's helicopter",
+      "Team X in the elevator, five guys on a high-protein diet",
+      "Fred Dukes at the boxing gym in Las Vegas",
+      "The Japan bar, 'No, I'm drinking to remember'",
+      "Weapon XI"
+    ],
+    "ideas": [
+      "Swap 'Rockies maple whisky sour' for a 'Drinking to remember' whisky from the post-credits bar",
+      "Swap 'Weapon X garlic butter rib eye' note for Fred Dukes at the Las Vegas gym",
+      "Rename 'Logging camp bacon dates' to 'Team X high-protein bacon dates'",
+      "Swap 'Maple syrup pie' note for Kayla's moon story"
+    ],
+    "flat": true,
+    "done": false
+  }
+}

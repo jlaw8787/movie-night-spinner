@@ -1,0 +1,52 @@
+{
+  "id": "Analyze This (1999)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "THE HOTEL WEXFORD GRAND BALLROOM",
+      "where": "venue",
+      "verdict": "unsure",
+      "why": "The mob meeting is a big plot point, but none of the sources I opened name a Hotel Wexford. The film's hotel scenes are the Miami resort and the New York wedding hotel.",
+      "source": "https://en.wikipedia.org/wiki/Analyze_This",
+      "fix": "THE GRAND HOTEL BALLROOM",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Serve dessert when Paul has his first session on Ben's couch.",
+      "where": "cue",
+      "verdict": "unsure",
+      "why": "Paul first turns up at Ben's office claiming a friend needs help. The plot does not mention a couch. The phone cue says 'first turns up at Ben's office'.",
+      "source": "https://en.wikipedia.org/wiki/Analyze_This",
+      "fix": "Serve dessert when Paul first turns up at Ben's office.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 10,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 4.0,
+    "verdict": "Good pillow, Negroni and session structure, but the hotel name is not from the film.",
+    "missing": [
+      "Benny the Groin and Ben Sobellioni (the meeting)",
+      "Call the Vatican, the fountain gift (Ben's garden)",
+      "Closure (Paul's call to Primo)",
+      "Paul shooting the pillow (Ben's office)",
+      "The wire Ben tosses (Paul's car)",
+      "Tony Bennett at the end (wedding)"
+    ],
+    "ideas": [
+      "Add 'Ben Sobellioni' to the consigliere line, replacing 'Menu arranged by the consigliere'",
+      "Rename 'Calming Negroni' to 'Closure Negroni'",
+      "Swap the 'Cannoli' tag for a small fountain with 'Call the Vatican'",
+      "Add a 'Tony Bennett sings at ten' line to the last page footer"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

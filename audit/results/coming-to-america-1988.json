@@ -1,0 +1,62 @@
+{
+  "id": "Coming to America (1988)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Big Mick burger -- McDowell's signature burger, stacked high on a sesame bun",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Cleo's line is that McDowell's buns have no seeds. The printed menu card already says 'No sesame seeds', so the dish note contradicts it.",
+      "source": "https://melmagazine.com/en-us/story/i-had-lunch-at-mcdowells-from-coming-to-america",
+      "fix": "Big Mick burger -- McDowell's signature burger, on a bun with no seeds",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "Beef patties from the corner shop -- the shop next door to the barbershop in Queens",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The plot places the barbershop in Queens, but none of the pages I opened mention a patty shop next door.",
+      "source": "https://en.wikipedia.org/wiki/Coming_to_America",
+      "fix": "Beef patties from the corner shop",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "Apple turnovers -- the McDowell's dessert menu, totally original",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "I could not find apple turnovers in any source about McDowell's.",
+      "source": "https://melmagazine.com/en-us/story/i-had-lunch-at-mcdowells-from-coming-to-america",
+      "fix": "Apple turnovers",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 10,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "The McDowell's tray liner nails the Big Mick joke and the no seeds detail. The wider film is thin.",
+    "missing": [
+      "Soul Glo and the curl juice (Darryl)",
+      "Randy Watson and Sexual Chocolate (the barbershop)",
+      "Clarence's Rocky Marciano argument (the barbershop)",
+      "Semmi's hot tub (the flat)",
+      "The royal bath (Zamunda)",
+      "Cleo and the golden arcs (McDowell's)"
+    ],
+    "ideas": [
+      "Add Cleo's golden arcs line to the tray liner, replacing the plain print line",
+      "Swap the apple turnover note for a Soul Glo joke",
+      "Add Randy Watson and Sexual Chocolate to the drinks, replacing 'Vanilla thick shake' plain note",
+      "Fix the Big Mick dish note to 'a bun with no seeds'"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

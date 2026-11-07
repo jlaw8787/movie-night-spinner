@@ -1,0 +1,52 @@
+{
+ "id": "Escape from New York (1981)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains when the Duke rolls up in his chandelier car.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The Duke's Cadillac with the chandeliers is real, but the sources I opened do not say when it first rolls up. Wikipedia's plot only has the Duke and his followers confronting Snake at street level, then giving chase.",
+   "source": "https://en.wikipedia.org/wiki/Escape_from_New_York",
+   "fix": "Serve the mains when the Duke and his followers confront Snake in the street.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Brain makes everything himself",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Wikipedia says Brain built a gasoline refinery. No source I opened shows him making moonshine.",
+   "source": "https://en.wikipedia.org/wiki/Escape_from_New_York",
+   "fix": "Brain runs the island's gasoline, so he probably runs the still",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 22,
+ "vibe": {
+  "world": 5,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "The USPF mess hall idea and the map are excellent, but the dishes are plain army food and the film's best bits are barely used.",
+  "missing": [
+   "'Call me Snake' (Snake and Hauk)",
+   "The Bandstand Boogie cassette (Cabbie's tape and the ending)",
+   "Chock Full o'Nuts (where Snake takes refuge)",
+   "The 23 hour clock on the neck charges (Hauk's deal)",
+   "Snake against Slag in the ring (the Duke's fight)",
+   "Cabbie's Molotov cocktail (the crazies)"
+  ],
+  "ideas": [
+   "Swap the 'Coffee' description 'Bottomless all night' for 'Chock Full o'Nuts, bottomless all night'.",
+   "Swap 'Tins and Saltines' for 'Cabbie's Bandstand Boogie Special' and a cassette stamp.",
+   "Add a countdown line to the mess pass in place of 'NO. 1988-022': 'Charges dissolve in 23 hours'.",
+   "Swap 'Grilled Cheese' for 'Snake's Name Is Snake Sandwich', ordered with a growl."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

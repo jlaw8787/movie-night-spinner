@@ -1,0 +1,52 @@
+{
+  "id": "Back to the Future (1985)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "EGGS, BACON, TOAST. NO ROBOT ARM",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The film's opening shows Doc's automatic dog food opener and a malfunctioning toaster. The sources I opened show no robot arm making breakfast.",
+      "source": "https://cinemablend.com/new/How-Back-Future-Incredible-Opening-Scene-Was-Filmed-67395.html",
+      "fix": "EGGS, BACON, TOAST. WATCH THE TOASTER",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Lou's Cafe two-straw chocolate malt",
+      "where": "dish-name",
+      "verdict": "unsure",
+      "why": "The note says Lou's counter, two straws. In the Lou's scene Marty asks for a drink with no sugar and George sits nearby. No source I opened has a shared malt.",
+      "source": "https://en.wikiquote.org/wiki/Back_to_the_Future",
+      "fix": "Lou's Cafe chocolate milk, no sugar needed",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 9,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "A clean 1955 diner board with the dance, the flyer and Uncle Joey in the right places.",
+    "missing": [
+      "Johnny B. Goode at the dance (Marty)",
+      "1.21 gigawatts (Doc)",
+      "Pepsi Free and Tab (Lou's, Marty)",
+      "Calvin Klein on Marty's underwear (Lorraine)",
+      "Libyan plutonium (Twin Pines Mall)",
+      "Hello? Anybody home? (Biff)"
+    ],
+    "ideas": [
+      "Swap 'Coffee, no sugar' for 'Tab? Pepsi Free? Lou can't help you'",
+      "Add a 1.21 gigawatts price line, replacing 'Cash only'",
+      "Rename 'French fries' to 'Twin Pines fries'",
+      "Swap the 'Joey's cake' note for a 'Welcome home Joey' banner"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": "Big Night (1996)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Bring out the timpano when the dinner guests hold their breath.",
+      "where": "cue",
+      "verdict": "unsure",
+      "why": "The timpano is served at the big night and is the grand dish of the feast. Neither write up I opened says the guests hold their breath, so the reaction is unconfirmed.",
+      "source": "https://www.sbs.com.au/whats-on/article/dinner-and-a-movie-big-night-and-seafood-risotto/znejelh18",
+      "fix": "Bring out the timpano when Primo's feast reaches its grand dish.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Timpano. The pasta drum. The room goes quiet when it's cut",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "Wikipedia and the write ups confirm the timpano is the centrepiece. None of them describe the room going quiet when it is cut.",
+      "source": "https://en.wikipedia.org/wiki/Big_Night",
+      "fix": "Timpano. The pasta drum, the grand dish of the feast.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Roast pork, whole-pig style. Carried in on a board at the feast",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The courses include a suckling pig, so the dish is right. The sources say nothing about how it is carried in.",
+      "source": "https://www.sbs.com.au/whats-on/article/dinner-and-a-movie-big-night-and-seafood-risotto/znejelh18",
+      "fix": "Roast suckling pig, one of the feast's courses.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Panna cotta -- Primo's dessert, simple and perfect",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "One review notes the dessert (dolci) is not described on screen, so a panna cotta cannot be confirmed.",
+      "source": "https://nicksfilmjottings.blogspot.com/2021/12/big-night-1996-campbell-scott-stanley.html",
+      "fix": "Dolci -- the sweet end of the feast",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "Primo's caffè corretto with grappa -- the brothers' nightcap in the kitchen after the big night",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The morning after, Secondo cooks an omelette in silence and the brothers eat it together. None of the sources mention a nightcap or grappa.",
+      "source": "https://en.wikipedia.org/wiki/Big_Night",
+      "fix": "Secondo's omelette, shared at dawn",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 9,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 5,
+    "tone": 4,
+    "look": 4,
+    "overall": 4.0,
+    "verdict": "The food and the feast order are right, and the silent omelette ending is a lovely pick. The page misses the characters and the arguments.",
+    "missing": [
+      "Primo on the customer: 'She's a Philistine' (kitchen)",
+      "To eat good food is to be close to God (Primo)",
+      "Pascal's restaurant (the rival)",
+      "Louis Prima never arriving (the big night)",
+      "Cristiano the waiter (the omelette)",
+      "Gabriella and Secondo (the affair)"
+    ],
+    "ideas": [
+      "Swap the 'No side of spaghetti' footer for Primo's 'To eat good food is to be close to God'",
+      "Add Pascal's as the rival on a small sign, replacing the empty panel",
+      "Replace the Louis Prima line with a 'table kept for Louis Prima' card",
+      "Swap the frittata note for the three way split with Cristiano"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

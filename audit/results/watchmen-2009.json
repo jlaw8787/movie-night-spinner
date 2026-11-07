@@ -1,0 +1,62 @@
+{
+  "id": "Watchmen (2009)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the beans when Rorschach eats them cold from the tin.",
+      "where": "cue",
+      "verdict": "unsure",
+      "why": "Neither the Wikipedia plot, the Wikiquote page nor the Fandom and TV Tropes pages I opened mention Rorschach eating beans. The beans and sugar cubes are from the comic, and I could not confirm the film keeps them.",
+      "source": "https://en.wikipedia.org/wiki/Watchmen_(film)",
+      "fix": "Serve the beans when Rorschach visits Dan's basement to warn him someone is killing the old team.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Gunga Diner",
+      "where": "venue",
+      "verdict": "unsure",
+      "why": "Gunga Diner is the comic's curry house. None of the film sources I opened mention it, so I cannot say it appears in the film. The 1985 New York setting and the curry before midnight joke are fine.",
+      "source": "https://en.wikipedia.org/wiki/Watchmen_(film)",
+      "fix": "Dan's Basement Kitchen",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Rorschach would rather pocket the sugar cubes.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "The sugar cubes belong to the comic. No source I opened shows the film has Rorschach taking them.",
+      "source": "https://en.wikipedia.org/wiki/Watchmen_(film)",
+      "fix": "Rorschach would rather eat it cold from the tin.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 8,
+  "vibe": {
+    "world": 3,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "Good 1985 mood and the smiley badge, but the diner and the beans come from the comic more than the film.",
+    "missing": [
+      "Comedian's smiley badge with the blood spot after the opening fall",
+      "Rorschach's journal in the crank file (end)",
+      "Prison canteen fryer fight (hot oil in the inmate's face)",
+      "Veidt's poisoned champagne toast to the pharaohs",
+      "Dr Manhattan's glass palace on Mars",
+      "Archie rescuing the tenement fire"
+    ],
+    "ideas": [
+      "Swap 'Gunga Diner onion bhajis' for 'Karnak champagne toast canapes' (Veidt's toast to the pharaohs)",
+      "Swap 'Mango lassi' note about sugar cubes for a line about the prison canteen fryer",
+      "Replace 'Smiley face cookies' note with the blood spot jam, called 'Comedian's badge cookies'",
+      "Rename 'Gunga Diner curry' to 'Antarctic hideout curry' so the venue is tied to a scene in the film"
+    ],
+    "flat": true,
+    "done": false
+  }
+}
