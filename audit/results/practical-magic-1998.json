@@ -16,24 +16,24 @@
   {
    "text": "Serve the margaritas at midnight when the aunts start dancing.",
    "where": "cue",
-   "verdict": "wrong",
-   "why": "The film has 'Midnight margaritas!' and the plot has a midnight drinking session with the sisters and aunts, but no source shows the aunts dancing then.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=practical-magic",
-   "fix": "Serve the margaritas at midnight when the sisters and aunts start drinking.",
+   "verdict": "ok",
+   "why": "At midnight the aunts and sisters drink margaritas and dance round the kitchen to Coconut, the film's best-known scene.",
+   "source": "https://filminquiry.com/practical-magic-1998-review",
    "printed": true,
-   "done": false,
-   "settled": "2026-11-08"
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Serve the margaritas at midnight when the aunts start dancing.",
    "where": "cue-printed",
-   "verdict": "wrong",
-   "why": "Same cue as printed on the card, and the same stored line, so the one fix covers it.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=practical-magic",
-   "fix": "Serve the margaritas at midnight when the sisters and aunts start drinking.",
+   "verdict": "ok",
+   "why": "At midnight the aunts and sisters drink margaritas and dance round the kitchen to Coconut, the film's best-known scene.",
+   "source": "https://filminquiry.com/practical-magic-1998-review",
    "printed": true,
-   "done": false,
-   "settled": "2026-11-08"
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Keep rosemary by the gate. Salt over the shoulder.",
@@ -42,8 +42,9 @@
    "why": "Sally's closing narration says to throw spilled salt over your left shoulder and keep rosemary by your garden gate.",
    "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=practical-magic",
    "printed": false,
-   "done": false,
-   "settled": "2026-11-08"
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Plant lavender for luck. An Owens family rule.",
@@ -52,8 +53,9 @@
    "why": "Sally's closing narration says to plant lavender for luck, the Owens rules she knows for certain.",
    "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=practical-magic",
    "printed": false,
-   "done": false,
-   "settled": "2026-11-08"
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 9,

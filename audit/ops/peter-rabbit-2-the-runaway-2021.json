@@ -1,17 +1,22 @@
 {
-  "id": "Peter Rabbit 2: The Runaway (2021)",
-  "ops": [
-    {
-      "old": "Bountiful Harvest Market",
-      "new": "Farmers Market Stall"
-    },
-    {
-      "old": "The Bountiful Harvest market stall",
-      "new": "The farmers market heist"
-    },
-    {
-      "old": "Barnabas swears this is the last job.",
-      "new": "Barnabas has a big plan for the dried fruit."
-    }
-  ]
+ "id": "Peter Rabbit 2: The Runaway (2021)",
+ "ops": [
+  {
+   "old": "Bountiful Harvest Market",
+   "new": "Farmers Market Stall",
+   "done": true
+  },
+  {
+   "old": "The Bountiful Harvest market stall",
+   "new": "The farmers market heist",
+   "done": true
+  },
+  {
+   "old": "Barnabas swears this is the last job.",
+   "new": "Barnabas has a big plan for the dried fruit.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

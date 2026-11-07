@@ -1,13 +1,17 @@
 {
-  "id": "Peter Pan (1953)",
-  "ops": [
-    {
-      "old": "the hideout at Skull Rock",
-      "new": "the rock where Hook holds Tiger Lily"
-    },
-    {
-      "old": "Mermaid Lagoon at night",
-      "new": "Mermaid Lagoon and the mermaids"
-    }
-  ]
+ "id": "Peter Pan (1953)",
+ "ops": [
+  {
+   "old": "the hideout at Skull Rock",
+   "new": "the rock where Hook holds Tiger Lily",
+   "done": true
+  },
+  {
+   "old": "Mermaid Lagoon at night",
+   "new": "Mermaid Lagoon and the mermaids",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

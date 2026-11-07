@@ -1,13 +1,17 @@
 {
-  "id": "Popstar: Never Stop Never Stopping (2016)",
-  "ops": [
-    {
-      "old": "Lawrence quits the Style Boyz for a farm in Colorado and his woodwork",
-      "new": "Lawrence quits the Style Boyz for a farm in Colorado"
-    },
-    {
-      "old": "Owen's snack between pressing play on the iPod.",
-      "new": "Owen's snack between DJ sets."
-    }
-  ]
+ "id": "Popstar: Never Stop Never Stopping (2016)",
+ "ops": [
+  {
+   "old": "Lawrence quits the Style Boyz for a farm in Colorado and his woodwork",
+   "new": "Lawrence quits the Style Boyz for a farm in Colorado",
+   "done": true
+  },
+  {
+   "old": "Owen's snack between pressing play on the iPod.",
+   "new": "Owen's snack between DJ sets.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

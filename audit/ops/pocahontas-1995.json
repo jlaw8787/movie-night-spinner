@@ -1,9 +1,12 @@
 {
-  "id": "Pocahontas (1995)",
-  "ops": [
-    {
-      "old": "Serve the snacks when Meeko goes digging through John Smith's bag for biscuits.",
-      "new": "Serve the snacks when John Smith hands Meeko a ship's biscuit."
-    }
-  ]
+ "id": "Pocahontas (1995)",
+ "ops": [
+  {
+   "old": "Serve the snacks when Meeko goes digging through John Smith's bag for biscuits.",
+   "new": "Serve the snacks when John Smith hands Meeko a ship's biscuit.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }
