@@ -21,22 +21,26 @@
   {
    "text": "three days' leave down at Vung Tau",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No source opened mentions Vung Tau leave in the film.",
+   "verdict": "wrong",
+   "why": "Vung Tau leave does not appear in the plot or the quotes. The film has Delta Company sent out on patrol before the battle.",
    "source": "https://en.wikipedia.org/wiki/Danger_Close:_The_Battle_of_Long_Tan",
    "fix": "a hot plate before the long patrol",
-   "done": false,
-   "printed": true
+   "done": true,
+   "printed": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "0900",
    "where": "card",
-   "verdict": "unsure",
-   "why": "The timeline row '0900 Long Tan rubber plantation' and the '12:46 chow' slot are not confirmed. The plot only says Delta Company is sent the day after Bravo, and the fighting is that afternoon in heavy rain.",
+   "verdict": "wrong",
+   "why": "No source gives a 0900 start at the plantation. The plot has Delta sent out the day after Bravo searched the plantation, and the fighting is that afternoon in heavy rain.",
    "source": "https://en.wikipedia.org/wiki/Danger_Close:_The_Battle_of_Long_Tan",
-   "fix": "1600 Long Tan rubber plantation",
-   "done": false,
-   "printed": true
+   "fix": "0900 Delta Company sent out",
+   "done": true,
+   "printed": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 16,

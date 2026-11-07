@@ -1,62 +1,68 @@
 {
-  "id": "Do the Right Thing (1989)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "To: Tina, upstairs",
-      "where": "prop",
-      "verdict": "unsure",
-      "why": "Tina is Mookie's girlfriend and the mother of his son Hector. The plot does not describe a pizza delivery to her or say she lives upstairs.",
-      "source": "https://en.wikipedia.org/wiki/Do_the_Right_Thing",
-      "fix": "To: Tina, Bed-Stuy",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Turn the fan on and pour the drinks when Mookie makes his first delivery.",
-      "where": "cue",
-      "verdict": "unsure",
-      "why": "Mookie works as a delivery man at Sal's. The sources do not describe a first delivery, so the moment is unconfirmed.",
-      "source": "https://en.wikipedia.org/wiki/Do_the_Right_Thing",
-      "fix": "Turn the fan on and pour the drinks when Mookie starts his shift.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Sidewalk swept daily by Vito.",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "Vito is Sal's younger son and Mookie's friend. None of the sources mention him sweeping the sidewalk.",
-      "source": "https://en.wikipedia.org/wiki/Do_the_Right_Thing",
-      "fix": "Sidewalk swept daily by Pino and Vito.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 11,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 4,
-    "tone": 4,
-    "look": 4,
-    "overall": 3.8,
-    "verdict": "A warm Bed-Stuy pizzeria with a good Wall of Fame, Love and Hate rings and the cherry ice. It stays on the surface of the film.",
-    "missing": [
-      "Love and Hate speech (Radio Raheem)",
-      "Fight the Power on the boombox (Raheem)",
-      "Mister Senor Love Daddy on We Love Radio",
-      "Always do the right thing (Da Mayor)",
-      "Buggin' Out on the Wall of Fame",
-      "The fire hydrant (the kids)"
-    ],
-    "ideas": [
-      "Swap the 'Radios down, please' line for Raheem's Fight the Power on the boombox",
-      "Add Da Mayor's 'Always do the right thing' to the footer, replacing the plain print line",
-      "Add We Love Radio, 108 FM to the cold drinks, replacing 'Cold Soda' note",
-      "Swap the Wall of Fame caption for Buggin' Out's question"
-    ],
-    "flat": false,
-    "done": false
+ "id": "Do the Right Thing (1989)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "To: Tina, upstairs",
+   "where": "prop",
+   "verdict": "wrong",
+   "why": "Tina is Mookie's girlfriend in Bed-Stuy. No delivery to her, and nothing about her living upstairs.",
+   "source": "https://en.wikipedia.org/wiki/Do_the_Right_Thing",
+   "fix": "To: Tina, Bed-Stuy",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Turn the fan on and pour the drinks when Mookie makes his first delivery.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "Mookie works as a delivery man at Sal's, but no first delivery is described.",
+   "source": "https://en.wikipedia.org/wiki/Do_the_Right_Thing",
+   "fix": "Turn the fan on and pour the drinks when Mookie heads in to work at Sal's.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Sidewalk swept daily by Vito.",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Sal tells both Pino and Vito to get a broom and sweep out front, so Vito is not alone on it.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=do-the-right-thing",
+   "fix": "Sidewalk swept daily by Pino and Vito.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A warm Bed-Stuy pizzeria with a good Wall of Fame, Love and Hate rings and the cherry ice. It stays on the surface of the film.",
+  "missing": [
+   "Love and Hate speech (Radio Raheem)",
+   "Fight the Power on the boombox (Raheem)",
+   "Mister Senor Love Daddy on We Love Radio",
+   "Always do the right thing (Da Mayor)",
+   "Buggin' Out on the Wall of Fame",
+   "The fire hydrant (the kids)"
+  ],
+  "ideas": [
+   "Swap the 'Radios down, please' line for Raheem's Fight the Power on the boombox",
+   "Add Da Mayor's 'Always do the right thing' to the footer, replacing the plain print line",
+   "Add We Love Radio, 108 FM to the cold drinks, replacing 'Cold Soda' note",
+   "Swap the Wall of Fame caption for Buggin' Out's question"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

@@ -21,42 +21,46 @@
   {
    "text": "Delivered to the wrong house, kept anyway.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Reviews say a misdelivered package introduces the two men, but Wikipedia has Austin dropping off a gift for Tami. Nobody opened says the package was smoked trout pate or that Craig kept it.",
+   "verdict": "wrong",
+   "why": "Wikipedia has the new neighbour Austin dropping off a gift for Tami to introduce himself, not a misdelivered package that Craig keeps.",
    "source": "https://en.wikipedia.org/wiki/Friendship_(2024_film)",
-   "fix": "A package at the wrong door starts it all.",
+   "fix": "A gift at the door starts it all.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Cracked before the punk show. Craig's not ready.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Austin invites Craig over for a beer that evening, and Craig and Tami go to a punk show later. Nothing opened shows a can cracked before the show.",
+   "verdict": "wrong",
+   "why": "Austin invites Craig over for a beer that evening and Tami says yes for him. The punk show comes later and no can is cracked before it.",
    "source": "https://en.wikipedia.org/wiki/Friendship_(2024_film)",
    "fix": "Austin's beer invite, accepted by Tami on Craig's behalf.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Charred broccolini, whipped feta, chilli and lemon. The new neighbour brought it",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Austin drops off a gift to Tami, but the sources opened do not say what it was.",
+   "verdict": "wrong",
+   "why": "Austin drops off a gift for Tami, but no source says what it was, so the broccolini claim is unproven.",
    "source": "https://en.wikipedia.org/wiki/Friendship_(2024_film)",
    "fix": "Charred broccolini, whipped feta, chilli and lemon",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Antiques as the other bond",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "Wikipedia has them bonding over music, work frustrations and restlessness. Only one blurb mentions antiques.",
+   "verdict": "wrong",
+   "why": "Wikipedia has them bonding over music, work frustrations and restlessness, and later mushroom hunting in a bog. Antiques are not in the plot.",
    "source": "https://en.wikipedia.org/wiki/Friendship_(2024_film)",
    "fix": "Mushroom hunting in the bog",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 7,

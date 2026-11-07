@@ -5,42 +5,46 @@
   {
    "text": "for the Japanese restaurant scene where nobody takes their shoes off",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "In the script, the host tells the group to take their shoes off and Nicky and Donnie refuse. It does not show the whole table refusing.",
-   "source": "https://scrapsfromtheloft.com/movies/donnie-brasco-script/",
+   "verdict": "ok",
+   "why": "In the transcript the host demands shoes off and Donnie says neither are the rest of us, so the whole party refuses.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=donnie-brasco",
    "fix": "for the Japanese restaurant scene where Donnie and Nicky keep their shoes on",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Sonny Black's social club, where everyone drinks Scotch",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No source I opened shows the crew drinking Scotch or Rob Roys. The script excerpt has Lefty being offered a spritzer.",
-   "source": "https://scrapsfromtheloft.com/movies/donnie-brasco-script/",
-   "fix": "Sonny Black's social club, where Lefty gets a spritzer",
+   "verdict": "wrong",
+   "why": "The transcript has Sonny telling Joe to give the humps another drink, but never names Scotch or a Rob Roy. Lefty is the one offered spritzers.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=donnie-brasco",
+   "fix": "Sonny Black's social club, where Joe keeps the drinks coming",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Lefty's sweet tooth",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "None of the sources I opened mention Lefty having a sweet tooth or cheesecake. His cooking is shown as coq au vin at Christmas.",
-   "source": "https://scrapsfromtheloft.com/movies/donnie-brasco-script/",
-   "fix": "the sweet finish after Lefty's Christmas dinner",
+   "verdict": "wrong",
+   "why": "No sweet tooth or cheesecake in the transcript. Sonny does tell Donnie in Florida that New York bread is like cake.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=donnie-brasco",
+   "fix": "New York bread is like cake, says Sonny",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "meatballs and braciole",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Lefty cooks coq au vin for Donnie at Christmas and says he does not cook like the goombahs in Brooklyn, so a Sunday gravy with meatballs and braciole is a poor fit.",
-   "source": "https://scrapsfromtheloft.com/movies/donnie-brasco-script/",
-   "fix": "Swap the dish to Lefty's coq au vin, with the note 'his Christmas dinner for Donnie'",
+   "verdict": "wrong",
+   "why": "Lefty cooks coq au vin at Christmas and says the Brooklyn goombahs only know manicotti. Gravy, meatballs and braciole are never shown.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=donnie-brasco",
+   "fix": "the goombah cooking Lefty swears he is above",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 21,

@@ -1,58 +1,59 @@
 {
-  "id": "Harry Potter and the Prisoner of Azkaban (2004)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Have some chocolate, Harry. It helps after a Dementor. I'm Professor Lupin, by the way.",
-      "where": "note",
-      "verdict": "unsure",
-      "why": "Lupin does drive off the Dementor on the train and give Harry chocolate, but I could not open a quote page that proves these exact words. The line looks stitched together from several places.",
-      "source": "",
-      "fix": "Eat the chocolate, Harry. It helps after a Dementor.",
-      "printed": true,
-      "done": true,
-      "fix_note": {
-        "text": "Eat the chocolate, Harry. It helps after a Dementor.",
-        "by": "Remus Lupin",
-        "kind": "note"
-      },
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Hermione's foam moustache comes free.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "No butterbeer foam moustache scene shows in the transcript or plot. The transcript does have Harry telling Hermione 'Good punch' after she hits Malfoy.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=harry-potter-and-the-prisoner-of-azkaban",
-      "fix": "Hermione's good punch comes free.",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 16,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 4,
-    "tone": 3,
-    "look": 3,
-    "overall": 3.4,
-    "verdict": "A cosy inn menu with the right touches (chocolate, Knight Bus, Honeydukes), but the picture is a small poster in a big frame and the film's best gags are missing.",
-    "missing": [
-      "Hermione's Time-Turner saving Buckbeak and Sirius",
-      "The Marauder's Map handed back by Lupin",
-      "Harry sneaking into Hogsmeade and overhearing at the Three Broomsticks",
-      "Scabbers revealed as Pettigrew in the Shrieking Shack",
-      "Lupin transforming under the full moon",
-      "Draco provoking Buckbeak in Hagrid's first class"
-    ],
-    "ideas": [
-      "Swap 'Hogsmeade sweet shop coconut ice' for 'Honeydukes' secret passage toffee' to use the tunnel under the Whomping Willow.",
-      "Replace 'Tea leaf reading biscuits' note with a Divination line to use Trelawney.",
-      "Fill the poster frame, which has black bars top and bottom, with a still of the Knight Bus."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Harry Potter and the Prisoner of Azkaban (2004)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Have some chocolate, Harry. It helps after a Dementor. I'm Professor Lupin, by the way.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "Lupin does drive off the Dementor on the train and give Harry chocolate, but I could not open a quote page that proves these exact words. The line looks stitched together from several places.",
+   "source": "",
+   "fix": "Eat the chocolate, Harry. It helps after a Dementor.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Eat the chocolate, Harry. It helps after a Dementor.",
+    "by": "Remus Lupin",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Hermione's foam moustache comes free.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "No butterbeer foam moustache scene shows in the transcript or plot. The transcript does have Harry telling Hermione 'Good punch' after she hits Malfoy.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=harry-potter-and-the-prisoner-of-azkaban",
+   "fix": "Hermione's good punch comes free.",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.4,
+  "verdict": "A cosy inn menu with the right touches (chocolate, Knight Bus, Honeydukes), but the picture is a small poster in a big frame and the film's best gags are missing.",
+  "missing": [
+   "Hermione's Time-Turner saving Buckbeak and Sirius",
+   "The Marauder's Map handed back by Lupin",
+   "Harry sneaking into Hogsmeade and overhearing at the Three Broomsticks",
+   "Scabbers revealed as Pettigrew in the Shrieking Shack",
+   "Lupin transforming under the full moon",
+   "Draco provoking Buckbeak in Hagrid's first class"
+  ],
+  "ideas": [
+   "Swap 'Hogsmeade sweet shop coconut ice' for 'Honeydukes' secret passage toffee' to use the tunnel under the Whomping Willow.",
+   "Replace 'Tea leaf reading biscuits' note with a Divination line to use Trelawney.",
+   "Fill the poster frame, which has black bars top and bottom, with a still of the Knight Bus."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

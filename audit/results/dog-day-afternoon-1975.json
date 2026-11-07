@@ -5,12 +5,14 @@
   {
    "text": "sent in to feed the hostages behind the counter",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Wikipedia's plot has Sonny asking for pizzas for the hostages. No hero sandwiches are mentioned, so this scene is not confirmed.",
+   "verdict": "wrong",
+   "why": "Sonny asks for pizzas for the hungry hostages. No hero sandwiches are sent in.",
    "source": "https://en.wikipedia.org/wiki/Dog_Day_Afternoon",
-   "fix": "for the cops and the crowd packed on the street outside the bank",
+   "fix": "for the hungry people inside the bank",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,
@@ -20,7 +22,7 @@
   "food": 4,
   "tone": 4,
   "look": 4,
-  "overall": 4.0,
+  "overall": 4,
   "verdict": "A sharp pizzeria with a clever name and the Wyoming gag, but it leaves out the biggest crowd moment.",
   "missing": [
    "Attica! Attica! (Sonny and Moretti outside the bank)",

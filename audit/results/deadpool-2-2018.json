@@ -21,22 +21,26 @@
   {
    "text": "Serve the snacks when X-Force jumps out of the plane.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Wikipedia says the team attacks the convoy by parachute and does not say from what. TV Tropes talks about a helicopter in the drop. I could not confirm it is a plane.",
-   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/Deadpool2",
+   "verdict": "ok",
+   "why": "In the transcript Domino says they did not jump out of the plane because of a light breeze, so the X-Force drop is a jump from a plane.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=deadpool-2",
    "fix": "Serve the snacks when X-Force parachutes in to hit the convoy.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Russell's order at the Ice Box. Big trouble follows.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No source I opened mentions mac and cheese or any food at the Ice Box.",
-   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/Deadpool2",
-   "fix": "Russell's lunch tray at the Ice Box. Big trouble follows.",
+   "verdict": "wrong",
+   "why": "The Ice Box is the mutant prison where Russell is taken and Cable attacks. No source shows Russell ordering mac and cheese or any food there.",
+   "source": "https://en.wikipedia.org/wiki/Deadpool_2",
+   "fix": "Comfort food for Russell. Big trouble follows.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

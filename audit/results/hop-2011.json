@@ -5,12 +5,14 @@
   {
    "text": "Fred's dad wants him out of the house by Easter Sunday",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The plot says Fred's parents forced him to move out. An Easter Sunday deadline is not mentioned.",
+   "verdict": "wrong",
+   "why": "The transcript has Fred's parents telling him to get a job and move out, and Wikipedia says they forced him out. No Easter Sunday deadline or line from his dad alone.",
    "source": "https://en.wikipedia.org/wiki/Hop_(film)",
-   "fix": "Fred's parents want him out and settled, roast dinner and all.",
+   "fix": "Fred's parents want him out and into a job",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

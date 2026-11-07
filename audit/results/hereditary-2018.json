@@ -5,12 +5,14 @@
   {
    "text": "Ellen's wake, passed round after the eulogy.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The plot shows Ellen's funeral and Annie's eulogy but no wake or food passed round.",
+   "verdict": "wrong",
+   "why": "The plot has Ellen's funeral and Annie's eulogy but no wake or food passed round, so the line stops at the funeral.",
    "source": "https://en.wikipedia.org/wiki/Hereditary_(film)",
-   "fix": "Ellen's funeral, passed round after the eulogy.",
+   "fix": "Ellen's funeral, after the eulogy.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 15,

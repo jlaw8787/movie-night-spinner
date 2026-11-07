@@ -32,12 +32,14 @@
   {
    "text": "the taxi driver who becomes his sidekick",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Dopinder is Wade's cab driver. No source I opened calls him a sidekick in this film, and the sequel has him wanting to be a hitman.",
-   "source": "",
-   "fix": "Wade's regular cab driver, and a big fan",
+   "verdict": "wrong",
+   "why": "Wikipedia calls Dopinder a taxi driver who befriends Deadpool. He is never called a sidekick in this film.",
+   "source": "https://en.wikipedia.org/wiki/Deadpool_(film)",
+   "fix": "the taxi driver who befriends Wade",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

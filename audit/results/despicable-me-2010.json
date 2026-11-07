@@ -1,69 +1,71 @@
 {
-  "id": "Despicable Me (2010)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve dessert when the girls take Gru to the theme park.",
-      "where": "cue",
-      "verdict": "wrong",
-      "why": "It is the other way round. Gru takes the girls to the amusement park, planning to get rid of them, and ends up bonding with them. Agnes asks to go and Gru first says no.",
-      "source": "https://en.wikipedia.org/wiki/Despicable_Me_(film)",
-      "fix": "Serve dessert when Gru takes the girls to the theme park.",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Gru reads Sleepy Kittens, then bed.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "The girls ask Gru for the Sleepy Kittens book at bedtime and he refuses. Later he says the book was 'accidentally destroyed maliciously' and reads his own puppet book, One Big Unicorn. The sources do not show him reading Sleepy Kittens.",
-      "source": "https://en.wikiquote.org/wiki/Despicable_Me_(film)",
-      "fix": "Gru reads One Big Unicorn, then bed.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Gru, can we have pancakes with lots of syrup? I will be really good and I will eat all of mine.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Agnes never says this. The pancake line on the Wikiquote page is Edith's, about the pancake Gru bakes for her.",
-      "source": "https://en.wikiquote.org/wiki/Despicable_Me_(film)",
-      "fix": "Yes! Mine's shaped like a dead guy!",
-      "printed": false,
-      "done": true,
-      "fix_note": {
-        "text": "Yes! Mine's shaped like a dead guy!",
-        "by": "Edith",
-        "kind": "quote"
-      },
-      "applied": "2026-11-07"
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "Good lab badge and ration sheet look, but it leaves out the pancakes, the shrink ray and the squid launcher, and the food notes are thin.",
-    "missing": [
-      "Gru's pancakes, with Edith's 'Mine's shaped like a dead guy!' (breakfast)",
-      "Gru's 'Light bulb...' idea gag (the plan to steal the moon)",
-      "Vector's squid launcher (Vector's fortress)",
-      "The bedtime story One Big Unicorn, the puppet book (Gru and the girls)",
-      "Super Silly Fun Land and the fluffy unicorn (theme park)",
-      "Gru shouting 'Cookie robots! I said cookie robots!' (Gru to Dr Nefario)"
-    ],
-    "ideas": [
-      "Swap 'Gru's lab crumbed chicken tenders' for 'Dead guy pancakes', with Edith's line as the note.",
-      "Swap 'Door-to-door chewy coconut cookies' note for 'Cookie robots! I said cookie robots!'",
-      "Swap 'Theme park corn dogs' for 'Super Silly Fun Land corn dogs' with the fluffy unicorn prize.",
-      "Swap the hot chocolate note for 'Gru reads One Big Unicorn, then bed.'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Despicable Me (2010)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve dessert when the girls take Gru to the theme park.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "It is the other way round. Gru takes the girls to the amusement park, planning to get rid of them, and ends up bonding with them. Agnes asks to go and Gru first says no.",
+   "source": "https://en.wikipedia.org/wiki/Despicable_Me_(film)",
+   "fix": "Serve dessert when Gru takes the girls to the theme park.",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Gru reads Sleepy Kittens, then bed.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "In the transcript Gru gives in and reads Sleepy Kittens to the girls with the puppets. The destroyed book and One Big Unicorn come later in the film.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=despicable-me",
+   "fix": "Gru reads One Big Unicorn, then bed.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Gru, can we have pancakes with lots of syrup? I will be really good and I will eat all of mine.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Agnes never says this. The pancake line on the Wikiquote page is Edith's, about the pancake Gru bakes for her.",
+   "source": "https://en.wikiquote.org/wiki/Despicable_Me_(film)",
+   "fix": "Yes! Mine's shaped like a dead guy!",
+   "printed": false,
+   "done": true,
+   "fix_note": {
+    "text": "Yes! Mine's shaped like a dead guy!",
+    "by": "Edith",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Good lab badge and ration sheet look, but it leaves out the pancakes, the shrink ray and the squid launcher, and the food notes are thin.",
+  "missing": [
+   "Gru's pancakes, with Edith's 'Mine's shaped like a dead guy!' (breakfast)",
+   "Gru's 'Light bulb...' idea gag (the plan to steal the moon)",
+   "Vector's squid launcher (Vector's fortress)",
+   "The bedtime story One Big Unicorn, the puppet book (Gru and the girls)",
+   "Super Silly Fun Land and the fluffy unicorn (theme park)",
+   "Gru shouting 'Cookie robots! I said cookie robots!' (Gru to Dr Nefario)"
+  ],
+  "ideas": [
+   "Swap 'Gru's lab crumbed chicken tenders' for 'Dead guy pancakes', with Edith's line as the note.",
+   "Swap 'Door-to-door chewy coconut cookies' note for 'Cookie robots! I said cookie robots!'",
+   "Swap 'Theme park corn dogs' for 'Super Silly Fun Land corn dogs' with the fluffy unicorn prize.",
+   "Swap the hot chocolate note for 'Gru reads One Big Unicorn, then bed.'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

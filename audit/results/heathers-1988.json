@@ -21,12 +21,14 @@
   {
    "text": "Veronica's order. How very.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No source I opened says Veronica orders iced green tea or says this line.",
-   "source": "",
-   "fix": "Veronica's order, probably. Heathers get the straw.",
+   "verdict": "wrong",
+   "why": "The transcript has 'How very.' as a reply to Veronica's lake and tequila line, but nothing shows Veronica ordering a drink. The line now hangs on the Heathers' table.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=heathers",
+   "fix": "The Heathers' table. How very.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 17,

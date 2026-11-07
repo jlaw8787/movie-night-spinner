@@ -1,42 +1,44 @@
 {
-  "id": "Dirty Dancing (1987)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Lisa's pick between ukulele rehearsals.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "The sources read do not mention a ukulele or Lisa rehearsing. Lisa is only noted as Baby's older sister in the plot summary.",
-      "source": "https://en.wikipedia.org/wiki/Dirty_Dancing",
-      "fix": "Lisa's pick, between talent show rehearsals.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 15,
-  "vibe": {
-    "world": 4,
-    "moments": 4,
-    "food": 4,
-    "tone": 4,
-    "look": 4,
-    "overall": 4,
-    "verdict": "A proper Kellerman's menu with the watermelon, the corner booth nod and the lake lift photo, one of the strongest of the batch.",
-    "missing": [
-      "Baby carrying the watermelon into the staff party (staff cabin)",
-      "Johnny and Penny's dance practice (staff quarters)",
-      "Learning the routine over several days (dance lessons)",
-      "Johnny crashing the talent show to bring Baby up (final number)",
-      "The failed lift in the first performance (Sheldrake)",
-      "Dr Houseman changing his mind about Johnny (ending)"
-    ],
-    "ideas": [
-      "Swap the 'Watermelon sorbet' note for 'Carry it in like Baby did'.",
-      "Replace 'Staff quarters double smash burgers' with 'Penny and Johnny's practice room mambo bites'.",
-      "Rename 'Kellerman's devilled eggs and salmon rye' to 'Max's dining room devilled eggs' and use the line about Max running the waiters.",
-      "Put a 'Last lift, last night' badge on the door hanger in place of 'Guests 1 2'."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Dirty Dancing (1987)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Lisa's pick between ukulele rehearsals.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "No ukulele or Lisa rehearsals in the film. Baby says Lisa is going to decorate the world, and she already does.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=dirty-dancing",
+   "fix": "Lisa's pick. She'll decorate the world.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "A proper Kellerman's menu with the watermelon, the corner booth nod and the lake lift photo, one of the strongest of the batch.",
+  "missing": [
+   "Baby carrying the watermelon into the staff party (staff cabin)",
+   "Johnny and Penny's dance practice (staff quarters)",
+   "Learning the routine over several days (dance lessons)",
+   "Johnny crashing the talent show to bring Baby up (final number)",
+   "The failed lift in the first performance (Sheldrake)",
+   "Dr Houseman changing his mind about Johnny (ending)"
+  ],
+  "ideas": [
+   "Swap the 'Watermelon sorbet' note for 'Carry it in like Baby did'.",
+   "Replace 'Staff quarters double smash burgers' with 'Penny and Johnny's practice room mambo bites'.",
+   "Rename 'Kellerman's devilled eggs and salmon rye' to 'Max's dining room devilled eggs' and use the line about Max running the waiters.",
+   "Put a 'Last lift, last night' badge on the door hanger in place of 'Guests 1 2'."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

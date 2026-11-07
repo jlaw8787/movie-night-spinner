@@ -21,22 +21,26 @@
   {
    "text": "Winnie still can't believe it's coffee.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No pumpkin spice latte scene shows up in the plot or the review pages read.",
-   "source": "https://en.wikipedia.org/wiki/Hocus_Pocus_2",
-   "fix": "Salem festival pumpkin spice, hot and sweet.",
+   "verdict": "wrong",
+   "why": "No coffee or latte scene in the transcript or plot. The transcript does have the sisters mixing up lotions and potions, so the line uses that.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=hocus-pocus-2",
+   "fix": "Winnie still thinks lotions are potions.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "the sisters' cauldron bubbling away in the old cottage",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "In the film the old cottage is Gilbert's magic shop, and the spell ingredients are gathered in the forest.",
-   "source": "https://en.wikipedia.org/wiki/Hocus_Pocus_2",
-   "fix": "the sisters' cauldron, bubbling out in the forest",
+   "verdict": "wrong",
+   "why": "The sisters say they will fly to their ancestral cottage to get Book and brew their potion, and Wikipedia says that cottage is now Gilbert's magic shop. A bubbling cauldron there is not shown, so the note says only brewing.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=hocus-pocus-2",
+   "fix": "the sisters brewing at their old cottage, now Gilbert's shop",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 16,

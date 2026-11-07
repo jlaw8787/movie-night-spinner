@@ -21,12 +21,14 @@
   {
    "text": "A home-cooked meal in Carolina's flat.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Wikipedia has Carolina taking El Mariachi to her bookstore and treating his wounds there. It does not mention a flat or a home-cooked meal.",
-   "source": "https://en.wikipedia.org/wiki/Desperado_(film)",
-   "fix": "Carolina takes him in and patches him up.",
+   "verdict": "wrong",
+   "why": "Carolina treats El Mariachi in her bookstore-cafe and says she has an apartment upstairs. No home-cooked meal is shown.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=desperado",
+   "fix": "from Carolina's flat above the bookshop",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

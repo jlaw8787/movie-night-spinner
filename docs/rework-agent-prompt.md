@@ -1,6 +1,10 @@
-# Flat menu rework: agent brief
+# Menu rework and iconic check: agent brief
 
-Josh's call (7 Nov, 10:30pm): rework all 411 flat menus (vibe under 3.5). Apply the checkers' "ideas" and "missing" moments in batches. Vibe rework is approved, no per-film sign-off needed. Every new line still follows the fact rules. Re-score after. Give this brief to each agent with its list of slugs.
+Josh's call (7 Nov, 10:30pm): rework all 411 flat menus (vibe under 3.5). Apply the checkers' "ideas" and "missing" moments in batches. Vibe rework is approved, no per-film sign-off needed. Every new line still follows the fact rules. Re-score after.
+
+Josh, 7 Nov, 11pm: no film may miss its iconic lines or scenes. So every film gets the iconic check (step 3). Films that are not flat get only that: add what is missing, change nothing else. Each agent's list says which films are flat (full rework) and which are iconic check only.
+
+Give this brief to each agent with its list of slugs.
 
 ---
 
@@ -11,7 +15,8 @@ You are reworking flat movie-night menus for the Movie Night Spinner app (repo /
    - `node scripts/audit-src.cjs grep "Film (Year)" word "phrase"` (transcript, Wikipedia and Wikiquote hits)
    - `node scripts/audit-src.cjs plot "Film (Year)"` and `quotes "Film (Year)"`
    Only use a moment, prop, food or line a source shows. A checker's idea can be wrong: verify it first.
-3. Plan the changes. Aim for 4 to 8 per film, the ones that lift it most:
+3. Iconic check first (Josh, 7 Nov, 11pm: "I don't want movies to miss iconic lines or scenes"). List the film's 3 to 5 most famous lines and scenes: the ones a fan quotes, the ones on Wikiquote's top lines, the ones every review mentions (Airplane!: "Surely you can't be serious ... don't call me Shirley"). Every one of them must show up somewhere on the menu: the signed note (a real line, kind "quote"), the cue, a dish name or note, a house line, a wink or the prop. If one is missing, working it in comes before anything else. Record the list in the result file as `"iconic": ["line or scene", ...]`.
+4. Plan the changes. Aim for 4 to 8 per film, the ones that lift it most:
    - Dish names: rename to use the film's moments, props and running jokes, with wit. The recipe stays as it is, so the new name must honestly describe the same food (spaghetti stays spaghetti; a burger can become "Mental's burger, extra peppers" only if it is a burger). No new recipes.
    - Dish notes (the italic line under a dish): tie each to a specific scene, prop or line.
    - The cue ("Serve the mains when ..."): one of the film's best-known scenes.
@@ -24,12 +29,12 @@ You are reworking flat movie-night menus for the Movie Night Spinner app (repo /
    - Josh's rules: plain, direct Australian tone, Australian spelling, no em dashes or en dashes (commas, full stops or "to"), no AI-sounding phrasing. Two brands never mix (the cinema is red and gold, the store is purple, but that is not your concern here). Film wins over the layout's habit.
    - Family films stay family friendly; don't add grog to a kids' film.
    - Keep anything the vibe block praised.
-4. Write the changes to audit/rework-ops/<slug>.json (create it; append to "ops" if it exists):
+5. Write the changes to audit/rework-ops/<slug>.json (create it; append to "ops" if it exists):
    `{"id":"Film (Year)","ops":[{"old":"exact stored text","new":"new text"}, {"set":"flavour.winks","value":[...]}, {"set":"house.d","value":{"n":"...","note":"..."}}, {"set":"cue","value":"Serve the mains when ..."}]}`
    - `old` must be the text as stored. Check with `node scripts/card-ops.cjs find "Film (Year)" "text"` (headings print in capitals, the stored text may not be). A dish rename op changes the card, recipes and shopping together; if the cue or another note names the dish, add an op for that string too.
    - For `flavour.note` use {"text":"...","by":"Name","kind":"quote"|"note"} as docs/AUDIT.md shows.
    - `set` ops for flavour fields: venue, sign, note, winks, prop ({"kind":...,"title":...,"lines":[two lines]}), labels. Keep the same number of winks.
-5. In audit/results/<slug>.json add to the vibe block: `"rework": "2026-11-08"` and `"changed": ["one short line per change"]`. Do not change the scores or set done (a re-score pass does that after the menus are rebuilt).
-6. Do not edit any other file. Do not run build-data, card-ops apply, audit-report or the checks.
+6. In audit/results/<slug>.json add to the vibe block: `"rework": "2026-11-08"`, `"iconic": [...]` and `"changed": ["one short line per change"]`. Do not change the scores or set done (a re-score pass does that after the menus are rebuilt).
+7. Do not edit any other file. Do not run build-data, card-ops apply, audit-report or the checks.
 
 When done, reply with one line per film: slug, number of changes, and any layout word that clashes and needs code.

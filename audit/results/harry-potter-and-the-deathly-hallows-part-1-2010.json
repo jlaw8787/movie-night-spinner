@@ -1,43 +1,44 @@
 {
-  "id": "Harry Potter and the Deathly Hallows: Part 1 (2010)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Ron's complaint: Hermione's mushrooms again.",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "The plot and transcript show no mushroom complaint from Ron, which is a book gag. The plot does have Dumbledore leaving Ron a Deluminator, so the line uses that.",
-      "source": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_1",
-      "fix": "Ron's Deluminator, clicking the lights out.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 13,
-  "vibe": {
-    "world": 3,
-    "moments": 4,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "Good nods to the wedding and the beaded bag, but Shell Cottage is only the last stop and tent life is barely used.",
-    "missing": [
-      "Ron's Deluminator (Christmas morning in a pub)",
-      "Polyjuice break-in at the Ministry to steal the locket from Umbridge",
-      "Harry's wand broken at Godric's Hollow",
-      "Ron pulling the sword from the frozen pond",
-      "Dobby rescuing them from Malfoy Manor",
-      "Xenophilius Lovegood drawing the Deathly Hallows symbol"
-    ],
-    "ideas": [
-      "Swap the venue 'Shell Cottage' for 'The Tent in the Forest of Dean' (where most of the film happens).",
-      "Swap 'Lemon curd sponge cake' for 'Harry's birthday cake' (Ginny and Mrs Weasley baked one for the end of the wedding).",
-      "Swap 'Hot cocoa in the tent' note for 'Hermione's hair-cut by the camp lamp' style detail.",
-      "Add a Deluminator click napkin prop (Ron's Deluminator turns off the lights)."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Harry Potter and the Deathly Hallows: Part 1 (2010)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Ron's complaint: Hermione's mushrooms again.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The plot and transcript show no mushroom complaint from Ron, which is a book gag. The plot does have Dumbledore leaving Ron a Deluminator, so the line uses that.",
+   "source": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_1",
+   "fix": "Ron's Deluminator, clicking the lights out.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Good nods to the wedding and the beaded bag, but Shell Cottage is only the last stop and tent life is barely used.",
+  "missing": [
+   "Ron's Deluminator (Christmas morning in a pub)",
+   "Polyjuice break-in at the Ministry to steal the locket from Umbridge",
+   "Harry's wand broken at Godric's Hollow",
+   "Ron pulling the sword from the frozen pond",
+   "Dobby rescuing them from Malfoy Manor",
+   "Xenophilius Lovegood drawing the Deathly Hallows symbol"
+  ],
+  "ideas": [
+   "Swap the venue 'Shell Cottage' for 'The Tent in the Forest of Dean' (where most of the film happens).",
+   "Swap 'Lemon curd sponge cake' for 'Harry's birthday cake' (Ginny and Mrs Weasley baked one for the end of the wedding).",
+   "Swap 'Hot cocoa in the tent' note for 'Hermione's hair-cut by the camp lamp' style detail.",
+   "Add a Deluminator click napkin prop (Ron's Deluminator turns off the lights)."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

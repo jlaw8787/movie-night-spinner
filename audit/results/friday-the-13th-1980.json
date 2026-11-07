@@ -5,12 +5,13 @@
     {
       "text": "Counsellors' cabin, summer 1980",
       "where": "prop",
-      "verdict": "unsure",
-      "why": "Wikipedia's plot dates the story to Friday 13 June 1979, while the film was released in 1980. The menu's other '1980' lines read as the release year, but this key puts it in the story, summer 1980.",
+      "verdict": "wrong",
+      "why": "Wikipedia's plot dates the story to Friday, June 13, 1979, not summer 1980 (1980 is the release year). The prop line is changed to the story year.",
       "source": "https://en.wikipedia.org/wiki/Friday_the_13th_(1980_film)",
-      "fix": "Counsellors' cabin, summer",
+      "fix": "Counsellors' cabin, summer 1979",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 20,

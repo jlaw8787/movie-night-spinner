@@ -5,12 +5,14 @@
   {
    "text": "Serve dessert when Mrs Wilson brings out the cookies.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Neither the Wikipedia plot nor the TV Tropes and quote pages I opened mention Mrs Wilson bringing out cookies. A dessert moment that is in the film is the garage door sending the Floraganza dessert table flying.",
+   "verdict": "wrong",
+   "why": "No cookies or Mrs Wilson serving them in the transcript or plot. At the Floraganza party Dennis hits the garage door button and upends the dessert table.",
    "source": "https://en.wikipedia.org/wiki/Dennis_the_Menace_(1993_film)",
    "fix": "Serve dessert when Dennis's garage door sends the dessert table flying.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Mr. Wilson, I brought you a cookie to say sorry about your garden. I only ate a little bit of it on the way over.",

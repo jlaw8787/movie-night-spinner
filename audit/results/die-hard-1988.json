@@ -1,88 +1,93 @@
 {
-  "id": "Die Hard (1988)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "32 TO 34 | Under construction. Hard hats.",
-      "where": "sign",
-      "verdict": "wrong",
-      "why": "In the script McClane checks the floors and mutters '32 construction... 33 computers'. Floor 33 is the computer floor, not a building site.",
-      "source": "https://imsdb.com/scripts/Die-Hard.html",
-      "fix": "32 / 33 | Hard hats. Computers on 33.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Long flight? Shoes off, stretch the legs, then grab a drink.",
-      "where": "note",
-      "verdict": "unsure",
-      "why": "The tip comes from a salesman seated next to McClane on the plane: take off your shoes and socks, walk around barefoot and make fists with your toes. Nothing I opened says he sat in 4B or mentions a drink.",
-      "source": "https://imsdb.com/scripts/Die-Hard.html",
-      "fix": "Long flight? Shoes and socks off, make fists with your toes.",
-      "printed": true,
-      "done": false,
-      "fix_note": {
-        "text": "Long flight? Shoes and socks off, make fists with your toes.",
-        "by": "The man on the plane",
-        "kind": "note"
-      }
-    },
-    {
-      "text": "Same recipe as the back of the limo.",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "Argyle lists the limo's extras as CD, CB, TV, VHS, telephone and full bar. None of the sources mention nuts or snacks in the back.",
-      "source": "https://imsdb.com/scripts/Die-Hard.html",
-      "fix": "Pairs well with the full bar in the back of the limo.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Holly Gennero | Vice President",
-      "where": "prop",
-      "verdict": "unsure",
-      "why": "Wikipedia calls Holly a high ranking Nakatomi executive. The script gives Ellis the V.P. of Sales title and Takagi the Sr V.P. of Sales, but gives Holly no title.",
-      "source": "https://imsdb.com/scripts/Die-Hard.html",
-      "fix": "Holly Gennero | Executive",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "FROM THE PRESIDENT",
-      "where": "note-by",
-      "verdict": "unsure",
-      "why": "Wikipedia calls Takagi Nakatomi's head executive, and the script calls him Sr V.P. of Sales. Neither source says president.",
-      "source": "https://imsdb.com/scripts/Die-Hard.html",
-      "fix": "FROM THE HEAD OF THE COMPANY",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 9,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 4,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "A clean Nakatomi party menu that gets the building and the night right. It misses the best Die Hard jokes, and a couple of titles are off.",
-    "missing": [
-      "Fists with your toes on the plane (the salesman)",
-      "Yippee-ki-yay (McClane)",
-      "Hans Gruber's fake American accent (the stairwell)",
-      "Ho ho ho on the dead man's shirt",
-      "Twinkies at the 7-Eleven (Powell)",
-      "The mimosa champagne punch at the party"
-    ],
-    "ideas": [
-      "Fix the floors sign to '32 construction, 33 computers'",
-      "Swap the 4B tip for the salesman's fists with your toes line",
-      "Replace the 'Champagne by the bottle, Ellis picks' line with 'Mimosa champagne punch, watered down'",
-      "Swap 'Christmas Sugar Cookies' note for a Twinkies joke from the 7-Eleven"
-    ],
-    "flat": false,
-    "done": false
+ "id": "Die Hard (1988)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "32 TO 34 | Under construction. Hard hats.",
+   "where": "sign",
+   "verdict": "wrong",
+   "why": "In the script McClane checks the floors and mutters '32 construction... 33 computers'. Floor 33 is the computer floor, not a building site.",
+   "source": "https://imsdb.com/scripts/Die-Hard.html",
+   "fix": "32 / 33 | Hard hats. Computers on 33.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Long flight? Shoes off, stretch the legs, then grab a drink.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "The man beside McClane on the plane says to take your shoes and socks off after you arrive and make fists with your toes. He says nothing about stretching or a drink.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=die-hard",
+   "fix": "After a long flight, shoes and socks off and make fists with your toes.",
+   "printed": true,
+   "done": false,
+   "fix_note": {
+    "text": "After a long flight, shoes and socks off and make fists with your toes.",
+    "by": "The man on the plane",
+    "kind": "note"
+   },
+   "settled": "2026-11-08"
+  },
+  {
+   "text": "Same recipe as the back of the limo.",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Argyle lists the limo extras as CD, CB, TV, telephone, full bar and VHS. No nuts or snacks are mentioned.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=die-hard",
+   "fix": "Beside the full bar in the limo.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Holly Gennero | Vice President",
+   "where": "prop",
+   "verdict": "wrong",
+   "why": "Wikipedia calls Holly a high ranking Nakatomi executive. No vice president title is given to her in the film.",
+   "source": "https://en.wikipedia.org/wiki/Die_Hard",
+   "fix": "Holly Gennero | Executive",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "FROM THE PRESIDENT",
+   "where": "note-by",
+   "verdict": "ok",
+   "why": "The transcript has Takagi introduced as President, Nakatomi Trading.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=die-hard",
+   "printed": true,
+   "done": false,
+   "settled": "2026-11-08"
   }
+ ],
+ "checked_ok": 9,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A clean Nakatomi party menu that gets the building and the night right. It misses the best Die Hard jokes, and a couple of titles are off.",
+  "missing": [
+   "Fists with your toes on the plane (the salesman)",
+   "Yippee-ki-yay (McClane)",
+   "Hans Gruber's fake American accent (the stairwell)",
+   "Ho ho ho on the dead man's shirt",
+   "Twinkies at the 7-Eleven (Powell)",
+   "The mimosa champagne punch at the party"
+  ],
+  "ideas": [
+   "Fix the floors sign to '32 construction, 33 computers'",
+   "Swap the 4B tip for the salesman's fists with your toes line",
+   "Replace the 'Champagne by the bottle, Ellis picks' line with 'Mimosa champagne punch, watered down'",
+   "Swap 'Christmas Sugar Cookies' note for a Twinkies joke from the 7-Eleven"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

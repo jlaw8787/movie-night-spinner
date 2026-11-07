@@ -1,54 +1,55 @@
 {
-  "id": "Harold & Kumar Go to White Castle (2004)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Harold's order, once Kumar's done reading out thirty sliders",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Harold places the order himself: 'I want 30 sliders, 5 french fries, and 4 large Cherry Cokes.' Kumar only asks for the same with Diet Cokes.",
-      "source": "https://en.wikiquote.org/wiki/Harold_%26_Kumar_Go_to_White_Castle",
-      "fix": "Harold's order at the counter, thirty sliders and four large Cherry Cokes",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Harold's crispy fish sliders with tartare",
-      "where": "dish-name",
-      "verdict": "wrong",
-      "why": "Harold's order in the film is thirty plain Slyders, five fries and four Cherry Cokes. No fish slider appears, so the dish loses Harold's name.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=harold-kumar-go-to-white-castle",
-      "fix": "Crispy fish sliders with tartare",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 15,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 4,
-    "tone": 3,
-    "look": 3,
-    "overall": 3.4,
-    "verdict": "Right destination and the cheetah ride, but the night's best scenes and Harold's real order are left out.",
-    "missing": [
-      "Burger Shack employee's rant about White Castle onions (New Brunswick)",
-      "Neil Patrick Harris paying for the order at the counter",
-      "Freakshow the tow truck mechanic (boils, his house)",
-      "The hang glider drop onto the castle",
-      "The raccoon bite on the roadside",
-      "Kumar's fake 911 call to bust Harold out"
-    ],
-    "ideas": [
-      "Swap 'Midnight cherry vanilla cola' for 'Large Cherry Coke' (Harold orders four large Cherry Cokes).",
-      "Swap 'Large sweet iced tea' for 'Kumar's large Diet Coke' (Kumar asks for the same as Harold, but Diet).",
-      "Swap the house 'Battered onion rings with ranch' for 'Burger Shack onion rings, not a patch on the castle' (the employee's rant).",
-      "Rename 'Jersey gravy fries' to 'Five orders of fries' (Harold's order, plus Kumar raising him five)."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Harold & Kumar Go to White Castle (2004)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Harold's order, once Kumar's done reading out thirty sliders",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Harold places the order himself: 'I want 30 sliders, 5 french fries, and 4 large Cherry Cokes.' Kumar only asks for the same with Diet Cokes.",
+   "source": "https://en.wikiquote.org/wiki/Harold_%26_Kumar_Go_to_White_Castle",
+   "fix": "Harold's order at the counter, thirty sliders and four large Cherry Cokes",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Harold's crispy fish sliders with tartare",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "Harold's order in the film is thirty plain Slyders, five fries and four Cherry Cokes. No fish slider appears, so the dish loses Harold's name.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=harold-kumar-go-to-white-castle",
+   "fix": "Crispy fish sliders with tartare",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.4,
+  "verdict": "Right destination and the cheetah ride, but the night's best scenes and Harold's real order are left out.",
+  "missing": [
+   "Burger Shack employee's rant about White Castle onions (New Brunswick)",
+   "Neil Patrick Harris paying for the order at the counter",
+   "Freakshow the tow truck mechanic (boils, his house)",
+   "The hang glider drop onto the castle",
+   "The raccoon bite on the roadside",
+   "Kumar's fake 911 call to bust Harold out"
+  ],
+  "ideas": [
+   "Swap 'Midnight cherry vanilla cola' for 'Large Cherry Coke' (Harold orders four large Cherry Cokes).",
+   "Swap 'Large sweet iced tea' for 'Kumar's large Diet Coke' (Kumar asks for the same as Harold, but Diet).",
+   "Swap the house 'Battered onion rings with ranch' for 'Burger Shack onion rings, not a patch on the castle' (the employee's rant).",
+   "Rename 'Jersey gravy fries' to 'Five orders of fries' (Harold's order, plus Kumar raising him five)."
+  ],
+  "flat": true,
+  "done": false
+ }
 }
