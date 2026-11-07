@@ -8,9 +8,10 @@
       "verdict": "wrong",
       "why": "The menu prices everything in cents. Australia used pounds, shillings and pence in 1959 and went decimal on 14 February 1966. The film itself prices a dress in guineas.",
       "source": "https://en.wikipedia.org/wiki/Australian_dollar",
-      "fix": "Reprice in shillings and pence: 3/6 for the platter, 3/- for the egg sandwiches, 8/6 for the paprikash, 4/- for the cake and 2/6 for the punch.",
+      "fix": "Tearoom takes a per-film coin \"lsd\"; Ladies in Black prints shillings and pence (3/6, 1/9).",
       "printed": true,
-      "done": false
+      "done": true,
+      "applied": "2026-11-07"
     },
     {
       "text": "For Lisa, who was Lesley until this summer.",

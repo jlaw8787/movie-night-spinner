@@ -63,6 +63,8 @@ if(!window.__fmtFitTearoom)window.__fmtFitTearoom=function(t){
 };
 const PIX="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
 
+/* per film: coin "lsd" prints pre-decimal shillings and pence, "3/6" (Ladies in Black, Sydney 1959; decimal came in 1966) */
+const LSD=(b,c)=>{const sh=b-1,d=Math.round(+c/100*12)%12;return sh<1?d+"d":sh+"/"+(d?d:"-")};
 /* ---------- era and tone ---------- */
 const ERA={
   P:{paper:"#f4ecd9",ink:"#22201b",band:"#1f4536",accent:"#8a2a22",gilt:"#a8843a",disp:"'Forum',Georgia,serif",dw:400,up:true,body:"'Lora',Georgia,serif",
@@ -166,7 +168,7 @@ window.MENU_FORMATS[ID]=ctx=>{
    const mv=(m.s||[]).filter(it=>CAKE.test(it.n)&&!SAV.test(it.n));if(mv.length&&(m.s||[]).length>mv.length){m.s=m.s.filter(it=>!mv.includes(it));m.w=[...(m.w||[]),...mv]}}
   const secHead=t=>`<div style="break-inside:avoid;break-after:avoid;margin:0 0 .3em;text-align:center"><span style="font-family:${D};font-weight:${E.dw};font-size:max(18px,1.06em);line-height:1.1;color:${acc};${up}">${esc(t)}</span><div style="margin:.2em auto 0;width:3em;border-top:2px solid ${E.gilt}"></div></div>`;
   function row(it,ci,ii){
-    const n=clean(it.n),p=price(f,fl,ci,ii,n,E.coin);
+    const n=clean(it.n),p=price(f,fl,ci,ii,n,fl&&fl.coin==="lsd"?LSD:E.coin);
     return `<div style="break-inside:avoid;margin:0 0 .5em"><div style="display:flex;gap:.6em;align-items:baseline"><span style="flex:1;font-family:${D};font-weight:${E.dw};font-size:max(15px,1em);line-height:1.15;color:${ink}">${esc(n)}</span><span style="flex:none;font:600 max(15px,.86em)/1.15 ${B};color:${acc}">${esc(p)}</span></div>
       ${it.note?`<div data-note="1" style="font:italic 400 max(14px,.72em)/1.3 ${B};color:${ink};opacity:.88;margin-top:.1em">${esc(sent(it.note))}</div>`:""}</div>`;
   }

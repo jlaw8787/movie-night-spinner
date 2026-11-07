@@ -324,3 +324,11 @@ Josh asked for a fact audit (is every line true to the film, are quotes real) an
 - Unapplied fix_notes on unsure lines (fixer judged the current notes fine): Pelham One Two Three, Working Girl, Sleepless in Seattle, The Adjustment Bureau, The Secret of My Success, After Hours, Die Hard, Ghost Dog. Hand-built menus have no film-flavour entry, so the notes script skips them.
 - Layout and look issues the checkers raised (vibe, Josh's call): posters in black bars (Gladiator II, Great Mouse Detective, Rise of the Guardians, Sword in the Stone, Muppet Treasure Island), Rocky V header cut off, Phar Lap and Nativity on the wrong layout, Selena's '97 date stamp on a 1995 still.
 - Waiting on Josh: the 411 flat menus and the layout list above, review 21, hosting (Netlify or GitHub Pages).
+
+## 7 Nov, 10pm: the three open wrong lines fixed
+
+- Ladies in Black: tearoom takes a per-film `coin: "lsd"` in film-flavour and prints shillings and pence (2/6, 7/9). Only this film uses it.
+- Mad Max 2: the lab badge prints the note's name under Max's still, so the note is now Max's own (kind note: he takes the Dinki Di and drives the tanker out).
+- Trading Places: crest redrawn as 17 76 (crest-6cdcfe.webp), reusing the original 1 and 7 glyphs with a matching 6. Checked on cream and on the rendered card.
+- Audit report: 0 wrong lines open, 990 unsure, 411 flat.
+

@@ -4,7 +4,7 @@ Made by scripts/audit-report.cjs from audit/results. Rules and file format: docs
 
 - Films checked: 900 of 900
 - Lines checked and right: 12490
-- Wrong lines still open: 3 (fixed: 716)
+- Wrong lines still open: 0 (fixed: 719)
 - Unsure lines still open: 990
 - Average vibe: 3.55 out of 5
 - Flat menus (vibe under 3.5) waiting for Josh's call: 411
@@ -13,9 +13,6 @@ Made by scripts/audit-report.cjs from audit/results. Rules and file format: docs
 
 | Film | Where | Printed now | Why | Suggested | Lives in |
 |---|---|---|---|---|---|
-| Ladies in Black (2018) | card | 35¢ | The menu prices everything in cents. Australia used pounds, shillings and pence in 1959 and went decimal on 14 February 1966. The film itself prices a dress in guineas. [source](https://en.wikipedia.org/wiki/Australian_dollar) | Reprice in shillings and pence: 3/6 for the platter, 3/- for the egg sandwiches, 8/6 for the paprikash, 4/- for the cake and 2/6 for the punch. | not found, search the card |
-| Mad Max 2 (1981) | prop | GYRO CAPTAIN | The access badge photo shows Max, not the Gyro Captain, so the name and the picture do not match. [source](https://en.wikipedia.org/wiki/Mad_Max_2) | MAX | not found, search the card |
-| Trading Places (1983) | card | 18 74 | The crest reads HC 18 74. The club president in the film says the club has been going two hundred and seven years, which is 1776 for a 1983 film. [source](https://en.wikiquote.org/wiki/Trading_Places) | 17 76 | not found, search the card |
 
 ## Unsure lines
 
