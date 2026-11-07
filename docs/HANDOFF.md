@@ -332,3 +332,4 @@ Josh asked for a fact audit (is every line true to the film, are quotes real) an
 - Trading Places: crest redrawn as 17 76 (crest-6cdcfe.webp), reusing the original 1 and 7 glyphs with a matching 6. Checked on cream and on the rendered card.
 - Audit report: 0 wrong lines open, 990 unsure, 411 flat.
 
+- Live: 911f5f3 (deploy 6aef17bc). Branch pushed.
