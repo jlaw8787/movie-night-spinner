@@ -1,0 +1,57 @@
+{
+ "id": "The Parent Trap (1998)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Pass the Oreos and peanut butter. Dad won't notice the swap while we eat.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed as Hallie's words, but she never says it. In the isolation bunk Hallie offers Oreos, Annie says she eats them with peanut butter, and Hallie pulls out a jar and says 'So do I!'.",
+   "source": "https://en.wikiquote.org/wiki/The_Parent_Trap_(1998_film)",
+   "fix": "That is so weird... So do I!",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "That is so weird... So do I!",
+    "by": "Hallie Parker",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Crustless white bread with butter, cucumber and dill, the London butler's tea tray",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Martin is the London butler, but none of the sources opened show a tea tray or cucumber sandwiches in the film.",
+   "source": "https://en.wikipedia.org/wiki/The_Parent_Trap_(1998_film)",
+   "fix": "Crustless white bread with butter, cucumber and dill, the way Martin the butler would send it up",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Right camp and the Oreos with peanut butter, but it skips the pranks and the best Meredith moments.",
+  "missing": [
+   "Honey in the shoes and chocolate syrup in the bucket (bunkhouse prank)",
+   "Meredith dragged into the lake on her mattress (camping trip)",
+   "Annie and Hallie's fencing match and poker game (camp)",
+   "Nick falling into the hotel pool when he sees Elizabeth (San Francisco)",
+   "Dinner on the yacht that recreates the night the parents met",
+   "Martin and Annie's handshake goodbye (camp drop-off)"
+  ],
+  "ideas": [
+   "Swap 'London afternoon tea scones' for a 'Bunkhouse prank sundae' with honey and chocolate syrup.",
+   "Swap 'Camping trip snags with fried onions' note for 'Meredith's mattress ends up in the lake'.",
+   "Add the twins' 'That is so weird... So do I!' to the Oreo and peanut butter dip note."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "id": "The Goonies (1985)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when Chunk is made to do his dance at the gate.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Chunk is made to do the Truffle Shuffle by Mouth outside the Walsh house before he is let in. The Goonies fandom page does not mention a gate, so the place is not confirmed. The scene itself is right.",
+   "source": "https://goonies.fandom.com/wiki/Chunk",
+   "fix": "Serve the snacks when Chunk is made to do the Truffle Shuffle to get into the Walsh house.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "I'll confess to anything you want, I swear. Just keep the pizza coming and nobody mentions the blender.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Chunk never says this. His confession to the Fratellis is 'Everything. Okay, I'll talk. In third grade, I cheated on my history exam...'. The blender line is invented.",
+   "source": "https://en.wikiquote.org/wiki/The_Goonies",
+   "fix": "Geez, mister. You're even hungrier than I am.",
+   "fix_note": {
+    "text": "Geez, mister. You're even hungrier than I am.",
+    "by": "Chunk",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Good Goon Docks setting and the poster looks the part, but the notes are thin and the best-known food moments are left out.",
+  "missing": [
+   "Baby Ruth swapped with Sloth (Chunk befriends him)",
+   "Chunk smelling ice cream, then stuck in the freezer with the body",
+   "Mama Fratelli's kitchen interrogation of Chunk",
+   "The bone organ in the caves",
+   "The scales in front of One-Eyed Willy and the marble bag of jewels",
+   "Data's gadgets (Pinchers of Peril, Slick Shoes)"
+  ],
+  "ideas": [
+   "Swap 'Sloth's peanut caramel nougat bars' note 'Chunk wins Sloth.' for 'Swapped for a Baby Ruth, the way Chunk makes friends'",
+   "Swap 'Goon Docks root beer float' for an ice cream scoop named after Chunk smelling ice cream in the Fratelli freezer",
+   "Swap the fish tacos note 'The Walsh house.' for a real line about the dish, or rename them 'Rosalita's tacos'",
+   "Add a 'Mikey's marble bag' sweet of jewel-coloured candy, the thing that saves the houses"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "id": "21 Jump Street (2012)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": true,
+   "text": "We were cool in high school. Now we are undercover students. Eat your lunch.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not true to Schmidt. He was the unpopular scholarly kid, and Jenko was the popular one who failed grades.",
+   "source": "https://en.wikipedia.org/wiki/21_Jump_Street_(film)",
+   "fix": "We were not cool in high school. Now we are undercover students. Eat your lunch.",
+   "fix_note": {
+    "text": "We were not cool in high school. Now we are undercover students. Eat your lunch.",
+    "by": "Schmidt",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Jenko's order, now he sits with the chem kids.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Jenko does join the AP Chemistry kids, but no opened source says a grape slushie is his order.",
+   "source": "https://en.wikipedia.org/wiki/21_Jump_Street_(film)",
+   "fix": "Sold in the cafeteria, like everything else at Sagan High."
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "verdict": "The church HQ and the party at Schmidt's place are right, but the lunch tray menu is plain and the film's best jokes are missing.",
+  "missing": [
+   "Captain Dickson's 'Korean Jesus' rant (the church)",
+   "Schmidt and Jenko mixing up their identities (first day)",
+   "HFS first dose and the vomit attempt (Eric)",
+   "Jenko's AP Chem friends (the lab)",
+   "The prom penthouse deal with Mr. Walters",
+   "Reading Mr. Walters his Miranda rights (end)"
+  ],
+  "ideas": [
+   "Swap 'Chemistry class layered fruit jellies' for a 'HFS' blue jelly shot, alcohol-free",
+   "Replace 'Korean fried chicken bites' note with 'Korean Jesus' (Dickson)",
+   "Swap 'Prom night chicken' note for the prom penthouse deal",
+   "Replace 'Cafeteria pizza squares' with 'Schmidt's mum's lunch tray'"
+  ],
+  "overall": 3.2,
+  "flat": true,
+  "done": false
+ }
+}

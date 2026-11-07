@@ -1,0 +1,78 @@
+{
+ "id": "The Others (2001)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the tea when Mrs Mills brings in the tray.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Mrs Mills is the housekeeper and serves the family, but none of the sources opened (Wikipedia, Wikiquote, a plot explainer) describe a scene where she brings in a tea tray.",
+   "source": "https://en.wikipedia.org/wiki/The_Others_(2001_film)",
+   "fix": "Serve the tea when Mrs Mills first arrives at the house looking for work.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Supper by candlelight again, children. Mind the curtains, finish your potatoes, and no talking to anyone you can't see.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Grace never says this. Her real lines include 'No one can make us leave this house.' and 'This house is ours.'",
+   "source": "https://en.wikiquote.org/wiki/The_Others_(2001_film)",
+   "fix": "No one can make us leave this house.",
+   "fix_note": {
+    "text": "No one can make us leave this house.",
+    "by": "Grace Stewart",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Sleep tight. Mrs Mills checks the curtains twice.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "It is Grace who is strict about the curtains. The sources say the curtains vanish one morning and Mrs Mills and Tuttle seem unbothered. Nothing shows Mrs Mills checking them twice.",
+   "source": "https://www.highonfilms.com/the-others-2001-movie-ending-explained/",
+   "fix": "Sleep tight. Grace checks the curtains twice.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "The ring of keys at Grace's belt",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "The film does stress that doors are opened one at a time and closed behind, but no source opened mentions Grace's key ring. The menu's 'Every door locked' lines lean on it too.",
+   "source": "https://www.highonfilms.com/the-others-2001-movie-ending-explained/",
+   "fix": "The doors closed one at a time behind Grace",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Dark, quiet manor look with sound 1945 British food, but a room service layout fits a hotel better than a haunted house and the best scares are left out.",
+  "missing": [
+   "The piano that plays itself (the drawing room)",
+   "The nineteenth-century album of photographs of the dead (already a wink)",
+   "The séance and the old blind medium",
+   "Anne's veiled communion dress and the old woman",
+   "The servants' headstones in the cemetery",
+   "'If you see a ghost, you say hello' for the children"
+  ],
+  "ideas": [
+   "Swap 'Welsh rarebit with English mustard' note for the real door rule, 'Close one door before you open the next', in the Grace voice",
+   "Swap 'Hot Ovaltine' note for a line about the children's potatoes and the curtains",
+   "Rename 'Curtains-drawn Jersey cream rice pudding' for the album, 'Keepsake pudding'",
+   "Swap the room service header for 'House rules' with the one-door-at-a-time rule as the sign"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

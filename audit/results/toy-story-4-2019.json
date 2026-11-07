@@ -1,0 +1,57 @@
+{
+ "id": "Toy Story 4 (2019)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when the toys sneak into the carnival.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The plot has Buzz getting lost in the carnival and the toys later driving the RV back to the fair. A sneak in is not described.",
+   "source": "https://en.wikipedia.org/wiki/Toy_Story_4",
+   "fix": "Serve the snacks when Buzz gets lost in the carnival and meets Ducky and Bunny.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "I do not know what dinner is. Is it the bin? It looks warm and cosy in there. Fine, I will sit here.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented. Forky never says this. His real lines include 'I was made for soup, salad, maybe chili, and then the trash.'",
+   "source": "https://en.wikiquote.org/wiki/Toy_Story_4",
+   "fix": "I was made for soup, salad, maybe chili, and then the trash.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "I was made for soup, salad, maybe chili, and then the trash.",
+    "by": "Forky",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Antique shop cafe with Forky and carnival food is a good mix.",
+  "missing": [
+   "Forky's 'I am not a toy, I'm a spork'",
+   "Bo Peep's lamp in the antique store window",
+   "Ducky and Bunny: 'There's so much... fluff.'",
+   "Duke Caboom, Canada's greatest stunt man",
+   "Gabby Gabby's voice box",
+   "Bonnie making Forky at kindergarten orientation"
+  ],
+  "ideas": [
+   "Swap 'Carnival corn dogs' note to 'Forky says he is trash'.",
+   "Swap 'Mini quiche Lorraine' note for 'Bunny and Ducky: so much fluff'.",
+   "Add Bo Peep's lamp as a prop."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

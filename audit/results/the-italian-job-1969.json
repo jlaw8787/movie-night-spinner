@@ -1,0 +1,48 @@
+{
+ "id": "The Italian Job (1969)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Tea's brewed, lads, and the gold's on the bus. Somebody pass the biscuits and mind the cliff.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Charlie never says this. His famous line is 'You're only supposed to blow the bloody doors off!', and the film's last words are 'Hang on a minute, lads; I've got a great idea.'",
+   "source": "https://en.wikiquote.org/wiki/The_Italian_Job_(1969_film)",
+   "fix": "You're only supposed to blow the bloody doors off!",
+   "fix_note": {
+    "text": "You're only supposed to blow the bloody doors off!",
+    "by": "Charlie Croker",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.4,
+  "verdict": "Bridger's prison canteen is a clever frame and the three Minis look great, but the dishes are mostly Turin food rather than the film's own jokes.",
+  "missing": [
+   "Blowing the bloody doors off (the van)",
+   "Professor Peach and his tram arrest",
+   "Camp Freddie and the three Minis through the sewers and over the rooftops",
+   "The funeral for Great Aunt Nellie at Bridger's meeting",
+   "Disguising the crew as English football fans",
+   "Hang on a minute lads (the bus on the cliff)"
+  ],
+  "ideas": [
+   "Swap 'Charlie Croker's cheese toasts' for 'Bloody doors off' toasties, with the real line in the note",
+   "Swap 'Mr Bridger's cucumber and egg tea fingers' note for a line about his Great Aunt Nellie funeral meeting",
+   "Rename 'Alpine coach hot chocolate and espresso' to 'Hang on a minute lads' hot chocolate",
+   "Swap the poster block for a flatter graphic of the three Minis so the left panel is not half empty"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

@@ -1,0 +1,87 @@
+{
+ "id": "Three Amigos! (1986)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Santo Poco Cantina",
+   "where": "venue",
+   "verdict": "wrong",
+   "why": "The village is Santa Poco, not Santo Poco.",
+   "source": "https://en.wikipedia.org/wiki/Three_Amigos",
+   "fix": "Santa Poco Cantina",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Welcome, amigos, to Santo Poco",
+   "where": "sign",
+   "verdict": "wrong",
+   "why": "The village is Santa Poco, not Santo Poco.",
+   "source": "https://en.wikipedia.org/wiki/Three_Amigos",
+   "fix": "Welcome, amigos, to Santa Poco",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Santo Poco street corn",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "The village is Santa Poco, not Santo Poco.",
+   "source": "https://en.wikipedia.org/wiki/Three_Amigos",
+   "fix": "Santa Poco street corn",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "We are three amigos and we came to eat. Please keep an eye out for the invisible swordsman.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented. Lucky never says it. Dusty's real line is 'Do you have anything besides Mexican food?' The note moves to Dusty.",
+   "source": "https://en.wikiquote.org/wiki/%C2%A1Three_Amigos!",
+   "fix": "Do you have anything besides Mexican food?",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Do you have anything besides Mexican food?",
+    "by": "Dusty Bottoms",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "the cantina where they start a brawl",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The Amigos sing 'My Little Buttercup' at the cantina. The German's associates shoot it up after patrons mock their clothes. The Amigos do not start a brawl.",
+   "source": "https://en.wikipedia.org/wiki/Three_Amigos",
+   "fix": "the cantina where they sing My Little Buttercup",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Looks the part, but the village name is wrong in three places and the famous gags are barely used.",
+  "missing": [
+   "A plethora of pinatas (El Guapo and Jefe)",
+   "'My Little Buttercup' (cantina)",
+   "The Singing Bush (road)",
+   "The invisible swordsman ritual (Lucky and Dusty)",
+   "Villagers sewing Amigo outfits (final stand)",
+   "The German pilot and his plane"
+  ],
+  "ideas": [
+   "Swap 'Birthday churros' name for 'A plethora of churros' (plethora scene).",
+   "Swap 'Singing bush salsa' note for 'Randy Newman's bush sings along'.",
+   "Add 'Our reward is that justice has been done' as the sign."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

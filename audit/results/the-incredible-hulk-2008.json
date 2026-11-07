@@ -1,0 +1,58 @@
+{
+ "id": "The Incredible Hulk (2008)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I will just have the salad, thanks. And maybe nobody mention the bill until I have finished.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Bruce never says this. His real food line, in poor Portuguese, is 'Don't make me... hungry. You wouldn't like me when I'm... hungry.' It also fits the signed-note idea better.",
+   "source": "https://en.wikiquote.org/wiki/The_Incredible_Hulk_(film)",
+   "fix": "Don't make me... hungry. You wouldn't like me when I'm... hungry.",
+   "fix_note": {
+    "text": "Don't make me... hungry. You wouldn't like me when I'm... hungry.",
+    "by": "Bruce Banner",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "what Bruce grabs in Rocinha on the way to the bottling plant",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The plot has Bruce working at a bottling factory in Rio and a chase through Rocinha (filming location), but no source opened shows him buying pastéis on the way to work.",
+   "source": "https://en.wikipedia.org/wiki/The_Incredible_Hulk_(film)",
+   "fix": "Rocinha street snack, eaten on the run",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A decent Rio kiosk with the soda bottle and purple pants, but it plays safe and skips the big fights and the 200 beats a minute hook.",
+  "missing": [
+   "The 200 beats per minute heart rate limit (Culver lab)",
+   "Bruce's drop of blood in the soda bottle, then Stan Lee drinking it",
+   "The Harlem fight with the Abomination and the chain",
+   "Stanley's pizzeria and the pizzas used as a bribe",
+   "Mr. Blue and Dr. Sterns' lab",
+   "Bruce's breathing and yoga lessons in Rio"
+  ],
+  "ideas": [
+   "Swap 'Heart rate watch cheese bread puffs' note for '200 beats a minute and it is lights out'",
+   "Swap 'Chicken coxinhas with lime' house note filler for a line from the Harlem fight, 'Chain-link chicken'",
+   "Swap the weather strip 'Fine, still, 22 C' for a heart rate readout that creeps up",
+   "Rename 'Guarana, straight off the line' to a bottle with a drop of Bruce's blood on the label"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

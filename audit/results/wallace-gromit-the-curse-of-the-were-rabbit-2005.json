@@ -1,0 +1,78 @@
+{
+ "id": "Wallace & Gromit: The Curse of the Were-Rabbit (2005)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": true,
+   "text": "A spot of Wensleydale and crackers, Gromit, then off to guard the veg patch. Busy night ahead.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not Wallace's words on the opened quote page. His real cheese lines are 'I'm just crackers about cheese' and 'Cheese, Gromit!'",
+   "source": "https://en.wikiquote.org/wiki/Wallace_%26_Gromit:_The_Curse_of_the_Were-Rabbit",
+   "fix": "I'm just crackers about cheese.",
+   "fix_note": {
+    "text": "I'm just crackers about cheese.",
+    "by": "Wallace",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Serve the cheese when Wallace gets the crackers out.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "No opened source describes a scene where Wallace gets the crackers out. The plot's cheese beats are Hutch getting Wallace's love of cheese and Wallace coming round at the end thanks to cheese.",
+   "source": "https://en.wikipedia.org/wiki/Wallace_%26_Gromit:_The_Curse_of_the_Were-Rabbit",
+   "fix": "Serve the cheese when Wallace comes round at the end thanks to his love of cheese."
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Victor's toupee, mistaken for a bunny.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "It is the other way round. Victor's toupee is sucked into the Bun-Vac, and the 'toupee' he pulls out turns out to be a black bunny.",
+   "source": "https://en.wikiquote.org/wiki/Wallace_%26_Gromit:_The_Curse_of_the_Were-Rabbit",
+   "fix": "Victor's black bunny, mistaken for his toupee."
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Fired out of the breakfast machine.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "No opened source says crumpets come out of the breakfast machine in this film.",
+   "source": "https://en.wikipedia.org/wiki/Wallace_%26_Gromit:_The_Curse_of_the_Were-Rabbit",
+   "fix": "Cracking toast, Gromit."
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "verdict": "The Anti-Pesto van is the right place and the English food suits it, but the cheese cue and a few notes miss the film's real gags.",
+  "missing": [
+   "The giant marrow Gromit grows, squashed when the van hits the cheese tent (competition day)",
+   "The Bun-Vac 6000 sucking up Victor's toupee (Tottington Hall)",
+   "Hutch shouting 'Cheeeese!' once he has Wallace's brain",
+   "Gromit's plane dogfight with Philip (fairground)",
+   "The Mind Manipulation-O-Matic (Wallace's cellar)",
+   "'Cracking toast, Gromit' (Hutch, Wallace's catchphrase)"
+  ],
+  "ideas": [
+   "Swap 'Carrot cake' for a 'Gromit's prize marrow loaf' with marrow and cheddar",
+   "Replace 'Hot buttered crumpets' note with 'Cracking toast, Gromit'",
+   "Swap 'Dandelion and burdock' note for the corrected toupee and bunny gag",
+   "Add a printed 'Cheeeese!' stamp on the callout ticket"
+  ],
+  "overall": 3.6,
+  "flat": false,
+  "done": false
+ }
+}

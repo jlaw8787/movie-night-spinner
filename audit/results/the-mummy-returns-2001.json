@@ -1,0 +1,58 @@
+{
+ "id": "The Mummy Returns (2001)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Mum, Dad, the bracelet is stuck on my wrist again. Can I at least eat dinner first?",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Alex never says this. When Lock-Nah hands him the water pitcher he says 'Now, where's my water?' and then 'No ice?'",
+   "source": "https://en.wikiquote.org/wiki/The_Mummy_Returns",
+   "fix": "Now, where's my water?",
+   "fix_note": {
+    "text": "Now, where's my water?",
+    "by": "Alex O'Connell",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Jonathan's snack, eaten on the double decker.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The double-decker bus chase is real, but no source opened says Jonathan eats potted shrimp or anything else on it.",
+   "source": "https://culture.fandom.com/wiki/The_Mummy_Returns",
+   "fix": "Jonathan's kind of snack, for the bus ride",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Good dishes and the bus and airship get a nod, but a hotel room service layout is a stretch for a film about racing to an oasis.",
+  "missing": [
+   "The pygmy mummies in the oasis jungle",
+   "The Spear of Osiris that kills the Scorpion King",
+   "Alex's seven days on the bracelet and the sun on the pyramid",
+   "Izzy's 'I'm in mourning for my arse' (the dirigible)",
+   "Rick's 'rules about snakes and dismemberment' (the manor)",
+   "Imhotep's face in the sand storm"
+  ],
+  "ideas": [
+   "Swap 'Iced karkade with orange and mint' for 'Seven day countdown' iced tea with a sun on the glass",
+   "Swap 'Airship falafel wraps' note for a line about Izzy repairing the dirigible",
+   "Swap 'London beef and stout pie' note for Rick's rule about snakes and dismemberment",
+   "Change the hotel layout to a manor dining table, which fits the venue name O'Connell Manor Kitchen"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "id": "The Lord of the Rings: The Fellowship of the Ring (2001)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Aragorn, there's a full table here and I've counted the plates twice. Mine's the one with extra mushrooms.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Pippin never says this. His real food line, said to Strider on the road, is 'What about second breakfast?'",
+   "source": "https://en.wikiquote.org/wiki/The_Lord_of_the_Rings:_The_Fellowship_of_the_Ring",
+   "fix": "What about second breakfast?",
+   "fix_note": {
+    "text": "What about second breakfast?",
+    "by": "Pippin",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Merry's discovery: it comes in pints.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "In the Prancing Pony it is Pippin who says 'It comes in pints?' when Merry brings a pint to the table.",
+   "source": "https://screenrant.com/lord-of-the-rings-funniest-merry-pippin-quotes/",
+   "fix": "Pippin's discovery: it comes in pints.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.6,
+  "verdict": "The Prancing Pony and the hobbit meal gags suit the film well, but the poster sits in a dark letterbox and several notes are thin.",
+  "missing": [
+   "Gandalf's 'A wizard is never late' (Bag End)",
+   "Gimli's roaring fires, malt beer and red meat off the bone",
+   "Gandalf's 'You shall not pass' on the bridge",
+   "Sam, the cooking pots and the stew (the road)",
+   "Lembas shared on the way (the Fellowship)",
+   "Bilbo's speech with butter scraped over too much bread"
+  ],
+  "ideas": [
+   "Swap 'Black pudding and apple bites' note for the real exchange, 'What about elevenses? Luncheon? Afternoon tea?'",
+   "Swap 'Shire seed cake' note for Bilbo's 'butter scraped over too much bread' line about feeling thin",
+   "Rename 'Prancing Pony pie' to 'Red meat off the bone' with Gimli's line in the note",
+   "Fill the tall black letterbox around the poster so the left panel looks full"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

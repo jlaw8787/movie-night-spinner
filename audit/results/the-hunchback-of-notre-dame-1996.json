@@ -1,0 +1,48 @@
+{
+ "id": "The Hunchback of Notre Dame (1996)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Victor, Hugo and Laverne say come up for supper. Bring bread for the pigeons. The bells are not too loud tonight.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Quasimodo never says this. It is not in the film's dialogue. His real line about the festival is 'If I picked a day to fly, oh, this would be it!' Hugo's food line, 'Pour the wine and cut the cheese', would also work if the portrait badge were changed.",
+   "source": "https://en.wikiquote.org/wiki/The_Hunchback_of_Notre_Dame_(1996_film)",
+   "fix": "If I picked a day to fly, oh, this would be it!",
+   "fix_note": {
+    "text": "If I picked a day to fly, oh, this would be it!",
+    "by": "Quasimodo",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 18,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "A tidy bell tower menu with the gargoyles and Djali, but it avoids the festival chaos and the poster sits in a dark letterbox that looks flat.",
+  "missing": [
+   "Topsy Turvy and the King of Fools crowning (the ugliest face contest)",
+   "Hugo's 'Pour the wine and cut the cheese' (the gargoyles' balcony seats)",
+   "Quasimodo's toy model of Paris on his table",
+   "The Court of Miracles and Clopin's puppet show",
+   "Esmeralda and the festival tomato throwing",
+   "Frollo's 'You're not eating, boy' at the bell tower table"
+  ],
+  "ideas": [
+   "Swap 'Brie, fig jam and tomato crostini' for 'Pour the wine and cut the cheese' cheese board (Hugo)",
+   "Swap 'Notre Dame madeleines' for 'King of Fools tarts', the winner is crowned for the ugliest face",
+   "Swap the note 'The hidden Court of Miracles.' under Clopin's chicken for a line about Clopin's puppet show",
+   "Crop or recolour the poster block so it fills the left panel instead of floating in black bars"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

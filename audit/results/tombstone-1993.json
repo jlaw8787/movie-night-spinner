@@ -1,0 +1,67 @@
+{
+ "id": "Tombstone (1993)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the drinks when Doc Holliday sits down at the faro table.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Wyatt is shown dealing faro at the saloon, but the sources opened never show Doc sitting down at the faro table. Doc's famous moment at a table is trading Latin with Ringo.",
+   "source": "https://en.wikiquote.org/wiki/Tombstone_(film)",
+   "fix": "Serve the drinks when Doc Holliday tells Johnny Ringo he's his huckleberry.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Pour me another, I'm in no rush. Supper can wait till the cards are dealt.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented. Doc's real line is 'I'm your huckleberry. That's just my game.'",
+   "source": "https://en.wikiquote.org/wiki/Tombstone_(film)",
+   "fix": "I'm your huckleberry. That's just my game.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "I'm your huckleberry. That's just my game.",
+    "by": "Doc Holliday",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Doc's card table bluff",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "No card table bluff by Doc turns up in the sources opened. His big moments are the Latin trade with Ringo and the huckleberry duel.",
+   "source": "https://en.wikipedia.org/wiki/Tombstone_(film)",
+   "fix": "Doc's huckleberry showdown with Ringo",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Oriental Saloon and Doc's cup are right, but the huckleberry and Latin moments are left out.",
+  "missing": [
+   "'I'm your huckleberry' (Doc to Ringo)",
+   "Doc and Ringo trading Latin (saloon)",
+   "Curly Bill's red sash Cowboys",
+   "The O.K. Corral gunfight",
+   "Wyatt walking into the creek (riverside)",
+   "Kate and Doc's cough"
+  ],
+  "ideas": [
+   "Swap 'Huckleberry gin fizz' note to match 'I'm your huckleberry'.",
+   "Swap 'Faro night cornbread' note for 'Wyatt deals faro at the Oriental'.",
+   "Add the red sash as a bar-tab prop."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

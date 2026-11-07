@@ -1,0 +1,67 @@
+{
+ "id": "Top Gun: Maverick (2022)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "The Hard Deck is on me tonight. Try not to break anything, Pete.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Penny's words, but it is not a line from the film. Fine as a note in her voice, since she owns the Hard Deck.",
+   "source": "https://en.wikipedia.org/wiki/Top_Gun:_Maverick",
+   "fix": "The Hard Deck is on me tonight. Try not to break anything, Pete.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "The Hard Deck is on me tonight. Try not to break anything, Pete.",
+    "by": "Penny Benjamin",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Dagger squad beach s'mores",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "None of the sources opened give the strike team a squad name. They are only Top Gun graduates.",
+   "source": "https://en.wikipedia.org/wiki/Top_Gun:_Maverick",
+   "fix": "Dogfight football beach s'mores",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Phone on the bar means you're buying the round.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "No phone on the bar rule is described in the sources opened. What is shown is Maverick being thrown out of the Hard Deck for not paying his tab after Penny rings the bell.",
+   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Funny/TopGunMaverick",
+   "fix": "Penny rings the bell on anyone who welches on a tab.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "The Hard Deck bar and Rooster's piano nod are great, but food and rules are partly made up.",
+  "missing": [
+   "Dogfight football on the beach",
+   "Rooster playing 'Great Balls of Fire' (bar)",
+   "'I don't sail boats, Penny! I land on them!' (Maverick)",
+   "Hangman's 'this is your savior speaking' (rescue)",
+   "The Darkstar at Mach 10 (opening)",
+   "Maverick and Penny in the P-51"
+  ],
+  "ideas": [
+   "Swap 'Margarita on the rocks' note for 'Penny rings the bell for unpaid tabs'.",
+   "Swap 'Dagger squad beach s'mores' name for 'Dogfight football beach s'mores'.",
+   "Add 'I land on them' as a bar-tab line."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

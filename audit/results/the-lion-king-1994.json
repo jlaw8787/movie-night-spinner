@@ -1,0 +1,58 @@
+{
+ "id": "The Lion King (1994)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Kid, sit down. The grubs are crunchy, the shade is free and nobody here has to worry about a thing.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Timon never says this. His real line when he feeds Simba is 'Listen, kid, if you live with us, you have to eat like us.'",
+   "source": "https://en.wikiquote.org/wiki/The_Lion_King",
+   "fix": "Listen, kid, if you live with us, you have to eat like us.",
+   "fix_note": {
+    "text": "Listen, kid, if you live with us, you have to eat like us.",
+    "by": "Timon",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Nala and the lionesses bring home dinner",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Nala is shown as a hunting lioness (she attacks Pumbaa and is found by Simba). Neither Wikipedia nor Wikiquote shows her and the lionesses bringing home dinner as a scene.",
+   "source": "https://en.wikipedia.org/wiki/The_Lion_King",
+   "fix": "Nala the hunter, who nearly catches Pumbaa",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Southern African dishes suit the Pride Lands and the grub mousse hits the best food moment, but the kiosk frame and weather strip are generic.",
+  "missing": [
+   "Slimy yet satisfying (grubs on the log)",
+   "Scar and the mouse, 'Life's not fair' (the lunch he loses)",
+   "Hakuna Matata on the log, with Timon in a hula skirt",
+   "Zazu 'Didn't your mother tell you not to play with your food'",
+   "Rafiki cracking the fruit at Simba's presentation",
+   "Be Prepared and the hyenas in the elephant graveyard"
+  ],
+  "ideas": [
+   "Swap 'Biltong and droëwors' note 'Strictly beef. Pumbaa checked twice.' for 'Tastes like chicken' (Timon, the grub)",
+   "Swap 'Rafiki's fruit' for 'Rafiki's cracked fruit' with a note about the presentation scene",
+   "Swap 'Pride Rock punch' for a 'Mouse on a stick' joke dish, no mice, a nod to Scar's lunch",
+   "Replace the cloudy weather strip with a 'Hakuna Matata: no worries' line"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

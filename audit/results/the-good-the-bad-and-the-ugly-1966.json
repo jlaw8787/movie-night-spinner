@@ -1,0 +1,58 @@
+{
+ "id": "The Good, the Bad and the Ugly (1966)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains when Angel Eyes sits down to eat at the farmer's table.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Wikipedia and Filmsite have Angel Eyes questioning the ex-Confederate Stevens and then shooting him and his son. Neither says he sits at the table and eats, so the meal cue could not be confirmed from the sources opened.",
+   "source": "https://en.wikipedia.org/wiki/The_Good,_the_Bad_and_the_Ugly",
+   "fix": "Serve the mains when Angel Eyes comes calling at the Stevens farm.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Eat now, talk later. I don't trust a man who chats over his beans.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Tuco never says this. It is invented. His real line about talking is the one to the one-armed man in the bathtub scene: 'When you have to shoot, shoot. Don't talk.'",
+   "source": "https://en.wikiquote.org/wiki/The_Good,_the_Bad_and_the_Ugly",
+   "fix": "When you have to shoot, shoot. Don't talk.",
+   "fix_note": {
+    "text": "When you have to shoot, shoot. Don't talk.",
+    "by": "Tuco",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 5,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A proper dusty saloon bill with the Sad Hill name and Blondie's poncho, but the film's big set pieces are barely used.",
+  "missing": [
+   "Tuco's hanging, with Blondie shooting the rope (the bounty scam)",
+   "The desert march after Blondie strands Tuco, and Tuco marching Blondie",
+   "Blowing up the bridge at Branston",
+   "The three-way standoff at Sad Hill (the poncho and the stone)",
+   "Tuco's bath scene (when you have to shoot, shoot)",
+   "The prison camp and Angel Eyes as a Union sergeant"
+  ],
+  "ideas": [
+   "Swap 'Desert crossing tortilla chips' for a name from Tuco marching Blondie across the desert, with a water jug garnish",
+   "Swap 'Gold coin potato rounds' for 'Arch Stanton's grave potatoes' (the name on the grave, the gold is in the one marked Unknown)",
+   "Swap the mousse cup name for 'Unknown Grave mousse' with the coin buried in it, which is where the gold really is",
+   "Add a bathtub drink or sweet with the real Tuco line 'When you have to shoot, shoot. Don't talk.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "id": "The Mummy (1999)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I spend my days with old books, so a hot dinner is a real treat. Please pass the bread, carefully.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Evie never says this. Her real defining line is 'I... am a librarian!', said to Rick O'Connell after 'I am proud of what I am.'",
+   "source": "https://en.wikiquote.org/wiki/The_Mummy_(1999_film)",
+   "fix": "I... am a librarian!",
+   "fix_note": {
+    "text": "I... am a librarian!",
+    "by": "Evy Carnahan",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "The riverboat up the Nile before it burns",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The riverboat trip is real. The Mummy fandom wiki says Medjai attack it at night and everyone has to jump ship, but it does not say the boat burns.",
+   "source": "https://mummy.fandom.com/wiki/The_Mummy",
+   "fix": "The riverboat up the Nile before the Medjai attack",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A solid dig camp with Egyptian food and good winks (library shelves, scarabs, Medjai), but the tone stays safe and the plagues are ignored.",
+  "missing": [
+   "I... am a librarian! (Evie to Rick)",
+   "Rick in the Cairo prison, 'looking for a good time'",
+   "The plagues of Egypt in Cairo (locusts, frogs, flies)",
+   "Beni serving Imhotep as a translator",
+   "Winston's plane in the sandstorm",
+   "Ardeth Bay's warning: 'He will never eat, he will never sleep, and he will never stop'"
+  ],
+  "ideas": [
+   "Swap 'Cairo bazaar falafel' for 'Plague platter' with locust-shaped crisps, a nod to Bey's 'Give me frogs! Flies, locusts!'",
+   "Swap 'Book of the Dead walnut honey pastries' note for the 'I... am a librarian' pun, 'Overdue, no fine'",
+   "Swap 'Cold Egyptian Stella lager' note for Rick's 'I only gamble with my life, never my money'",
+   "Add Ardeth's line 'never eat, never sleep, never stop' as the footer, a gag for a food menu"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

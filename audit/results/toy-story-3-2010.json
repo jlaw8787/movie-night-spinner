@@ -1,0 +1,57 @@
+{
+ "id": "Toy Story 3 (2010)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve dessert when Andy packs up for college and the toys go in the box.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Andy puts most of the toys in a bag for the attic and takes only Woody in the college box. The toys go in a donation box to Bonnie only at the end.",
+   "source": "https://en.wikipedia.org/wiki/Toy_Story_3",
+   "fix": "Serve dessert when Andy packs the toys into a box for Bonnie.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Welcome to Sunnyside, folks. Pull up a chair, there is juice and crackers for everyone, and nobody leaves dinner early.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented. Lotso never says it. A real Lotso line is 'Why don't you come on back, join our family again?'",
+   "source": "https://en.wikiquote.org/wiki/Toy_Story_3",
+   "fix": "Why don't you come on back, join our family again?",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Why don't you come on back, join our family again?",
+    "by": "Lotso",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Sunnyside placemat has the strawberry bear and Ken, with food that suits the daycare.",
+  "missing": [
+   "Spanish Buzz (daycare)",
+   "Ken's closet of outfits",
+   "Big Baby throwing Lotso in the dumpster",
+   "The Aliens' crane rescue at the incinerator",
+   "Mr Pricklepants",
+   "Chuckles telling Lotso's story"
+  ],
+  "ideas": [
+   "Swap 'Sunnyside ham and cheese pinwheels' note for 'Ken's fashion show snack'.",
+   "Swap 'Tortilla head quesadillas' note for 'Mr Potato Head's tortilla disguise'.",
+   "Add the Aliens' crane as a wink."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

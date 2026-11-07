@@ -1,0 +1,88 @@
+{
+ "id": "The Incredibles 2 (2018)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve dessert when Jack-Jack fights the raccoon for a cookie.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The backyard fight between Jack-Jack and a raccoon is real, and it is where Bob finds out about the powers. None of the pages opened say it is over a cookie, so the cookie part is not confirmed.",
+   "source": "https://epicstream.com/article/its-jack-jack-vs-the-raccoon-in-sneak-peek-for-home-release-of-the-incredibles-2",
+   "fix": "Serve dessert when Jack-Jack fights the raccoon in the backyard.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Darling, the baby has eaten and the baby is asleep, so now we dine. Something light, and nobody wakes him.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Edna never says this. Her real line about Jack-Jack is 'Your child is a polymorph. Like all babies, he has enormous potential.'",
+   "source": "https://en.wikiquote.org/wiki/Incredibles_2",
+   "fix": "Your child is a polymorph. Like all babies, he has enormous potential.",
+   "fix_note": {
+    "text": "Your child is a polymorph. Like all babies, he has enormous potential.",
+    "by": "Edna Mode",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Violet's date at the Happy Platter.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Violet's date with Tony is a movie date (Tony asks her to a movie, and the film ends with the reinstated movie date). No source opened mentions a Happy Platter, so the venue looks invented.",
+   "source": "https://en.wikipedia.org/wiki/Incredibles_2",
+   "fix": "Violet's movie date with Tony.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Edna looking after Jack-Jack overnight.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Bob does call on Edna to babysit Jack-Jack, but the sources opened give no sign it is overnight.",
+   "source": "https://en.wikipedia.org/wiki/Incredibles_2",
+   "fix": "Edna looking after Jack-Jack.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Deavor Telecom",
+   "where": "prop",
+   "verdict": "unsure",
+   "why": "The Deavors run a telecommunications company called DevTech (the venue name on the same menu). 'Deavor Telecom' was not found in any source opened.",
+   "source": "https://en.wikipedia.org/wiki/Incredibles_2",
+   "fix": "DevTech Telecom",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Right characters and the raccoon gets a nod, but the hotel layout does not match the Parrs' mansion and several notes make things up.",
+  "missing": [
+   "Bob's 'No Sugar Bombs on my watch' and the Fiber-O's cereal (breakfast)",
+   "Jack-Jack's laser eyes and the potato-like monster form (the kitchen)",
+   "The Incredibile and its ejector seat jokes (Dash)",
+   "The Everjust hydrofoil summit",
+   "Edna's suit-making for Jack-Jack",
+   "Frozone's no lifeguard on duty joke (pool)"
+  ],
+  "ideas": [
+   "Swap 'Pesto parmesan pinwheels' for 'Fiber-O's and Sugar Bombs' breakfast bites, a nod to Bob's cereal rule",
+   "Swap 'Tuna tartare on wonton crisps' for Everjust canapes, the party on the yacht",
+   "Swap the cue to a safer scene like 'Serve dessert when Bob finds Jack-Jack's powers in the backyard'",
+   "Change the venue from DevTech Penthouse to the Parrs' new mansion kitchen, which is where the family actually lives"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

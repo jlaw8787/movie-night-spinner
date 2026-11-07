@@ -1,0 +1,68 @@
+{
+ "id": "Young Einstein (1988)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": true,
+   "text": "Pass the apple pie, please. I have to split an atom before supper, so no seconds.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not in the film. A real line from the opened quote page that fits the Marie Curie wink is 'Just a moment Marie, I'm having an idea.'",
+   "source": "https://moviequotes.com/s-movie/young-einstein",
+   "fix": "Just a moment Marie, I'm having an idea.",
+   "fix_note": {
+    "text": "Just a moment Marie, I'm having an idea.",
+    "by": "Albert Einstein",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Eaten in the shed beside the electric guitar.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "The shed is where Einstein splits the beer atom. He invents the electric violin in Sydney and later turns it into an electric guitar after the institution.",
+   "source": "https://en.wikipedia.org/wiki/Young_Einstein",
+   "fix": "Eaten in the shed where he split the beer atom."
+  },
+  {
+   "printed": false,
+   "done": false,
+   "text": "Electric guitar invented in the shed",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Same as above. The guitar is rebuilt from his violin after he is committed, not made in the shed.",
+   "source": "https://en.wikipedia.org/wiki/Young_Einstein",
+   "fix": "Electric guitar built from his smashed violin"
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "verdict": "The apple farm kiosk and beer bubbles are right, but two lines get the guitar wrong and the best Sydney and Nobel moments are missing.",
+  "missing": [
+   "Splitting the beer atom with a hammer and chisel (the shed)",
+   "Einstein inventing rock and roll in Sydney",
+   "Marie Curie on the train and at the beach (surfing)",
+   "Preston Preston and the Bavarian Brothers' keg",
+   "Charles Darwin announcing the Nobel (Paris)",
+   "The hot air balloon to the ceremony"
+  ],
+  "ideas": [
+   "Swap 'Leatherwood honey and cheddar board' note for the corrected shed line",
+   "Replace 'Pear and ginger fizz' note with 'Bubbles in the beer'",
+   "Swap 'Rock and roll scallop pies' note for a nod to the Sydney rock and roll scene",
+   "Replace 'Einstein family apple pie' with a 'Preston's keg' ale float"
+  ],
+  "overall": 3.4,
+  "flat": true,
+  "done": false
+ }
+}

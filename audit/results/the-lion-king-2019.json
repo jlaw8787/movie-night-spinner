@@ -1,0 +1,48 @@
+{
+ "id": "The Lion King (2019)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Simba, a grub a day keeps the hyenas away. Okay, that isn't true. Eat them anyway, they're crunchy.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Pumbaa never says this. At the grub log his real line is 'Slimy, yet satisfying.' Timon's is 'Mmm. Now, that's what I call umami.'",
+   "source": "https://en.wikiquote.org/wiki/The_Lion_King_(2019_film)",
+   "fix": "Slimy, yet satisfying.",
+   "fix_note": {
+    "text": "Slimy, yet satisfying.",
+    "by": "Pumbaa",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 3,
+  "moments": 2,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3,
+  "verdict": "Nearly the same menu as the 1994 film with a few swaps, and it ignores what makes the remake different, so a fan would not grin.",
+  "missing": [
+   "Slimy, yet satisfying and the umami joke (the grub log)",
+   "Scar and the mouse, 'Life is not fair, is it, my little friend?'",
+   "Zazu's 'This is not a drill' announcement",
+   "Pumbaa saving Simba from the vultures",
+   "Simba's 'Protect everything the light touches'",
+   "The animals crowding the log to feast on grubs"
+  ],
+  "ideas": [
+   "Swap 'Crispy puffed rice noodles' for 'Umami grubs' crispy noodle clusters named after Timon's joke",
+   "Swap 'Vetkoek with apricot jam' note 'Timon's bug list, minus the bugs.' for 'Slimy, yet satisfying, but it is jam'",
+   "Swap 'Pride Rock beef samosas' note for 'Not a drill' (Zazu's announcement)",
+   "Add a mouse-sized sweet nodding to Scar's lunch to replace one of the generic South African dishes shared with the 1994 menu"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

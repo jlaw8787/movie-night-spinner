@@ -1,0 +1,57 @@
+{
+ "id": "Wonder Woman 1984 (2020)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": true,
+   "text": "I've been gone a long time, Diana. The clothes look worse and the food looks better.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented. Steve's real 1984 clothes joke is 'Parachute pants?' and 'Does everybody parachute now?'",
+   "source": "https://en.wikiquote.org/wiki/Wonder_Woman_1984",
+   "fix": "Does everybody parachute now?",
+   "fix_note": {
+    "text": "Does everybody parachute now?",
+    "by": "Steve Trevor",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Steve discovers fanny packs and breakdancing.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "A fanny pack is part of Steve's 1984 look, but no opened source mentions breakdancing in the film.",
+   "source": "https://en.wikiquote.org/wiki/Wonder_Woman_1984",
+   "fix": "Steve discovers fanny packs and parachute pants."
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "verdict": "A fun 1984 mall with the dinner date, jet and Dreamstone in the right places, and the food is good if a bit safe.",
+  "missing": [
+   "Steve's clothes montage with parachute pants and the fanny pack (the Smithsonian)",
+   "Max Lord's 'Anything you want' broadcast (satellite)",
+   "Barbara turning into Cheetah, 'apex predator' (the lake fight)",
+   "Diana's Lasso of Truth speech to the world (the broadcast)",
+   "The Dreamstone wish 'I renounce my wish' (Steve's goodbye)",
+   "The fireworks flight in the invisible jet"
+  ],
+  "ideas": [
+   "Swap 'Marinated olives and feta' for 'Parachute pants' stuffed potato skins",
+   "Replace 'Orange Julius' note ('Barbara wished to be Diana') with 'I want to be an apex predator'",
+   "Swap 'Cairo chase falafel' note ('The car chase across the Egyptian desert') for the Cairo truck chase with Max Lord"
+  ],
+  "overall": 3.8,
+  "flat": false,
+  "done": false
+ }
+}

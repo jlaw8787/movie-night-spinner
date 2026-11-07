@@ -1,0 +1,58 @@
+{
+ "id": "Zoolander (2001)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": true,
+   "text": "I ordered the salad, I think. Hansel's sorted the iced coffees, so the walk off can wait.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented. Derek's real signature line is 'Moisture is the essence of wetness, and wetness is the essence of beauty.'",
+   "source": "https://en.wikiquote.org/wiki/Zoolander",
+   "fix": "Moisture is the essence of wetness, and wetness is the essence of beauty.",
+   "fix_note": {
+    "text": "Moisture is the essence of wetness, and wetness is the essence of beauty.",
+    "by": "Derek Zoolander",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Serve the drinks when the boys order orange mocha iced coffees.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Brint, Meekus and Rufus shout 'Orange mocha frappuccino' to cheer Derek up, and then the gasoline fight starts. The quote page does not show them ordering.",
+   "source": "https://en.wikiquote.org/wiki/Zoolander",
+   "fix": "Serve the drinks when Derek's friends shout for orange mocha frappuccinos."
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "verdict": "The Derelicte cafe and Magnum jokes are right, with a good punch card gag, though the food is just cafe fare.",
+  "missing": [
+   "Derek smashing the model: 'A center for ants?'",
+   "The gasoline fight (Derek's friends)",
+   "Mugatu: 'He's so hot right now' (Hansel)",
+   "The 'Relax' remix that triggers Derek (the runway)",
+   "The walk off with Hansel (the runway)",
+   "J.P. Prewett's preserved hand (the cemetery)"
+  ],
+  "ideas": [
+   "Swap 'Tempura green beans' note for the corrected 'A center for ants?' quote",
+   "Replace 'Cucumber mint agua fresca' note with the 'so hot right now' line",
+   "Swap 'Mugatu's vodka pasta' for a 'Relax' cocktail",
+   "Replace the cue with the corrected frappuccino cheer"
+  ],
+  "overall": 3.8,
+  "flat": false,
+  "done": false
+ }
+}

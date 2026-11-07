@@ -1,0 +1,47 @@
+{
+ "id": "The Sandlot (1993)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Smalls, grab a cracker. Chocolate goes on first, then the marshmallow. I will show you the rest.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented. Ham's real s'mores speech is 'First, you take the graham. You stick the chocolate on the graham. Then, you roast the mallow.' He never says 'cracker' or 'I will show you the rest'.",
+   "source": "https://en.wikiquote.org/wiki/The_Sandlot",
+   "fix": "You stick the chocolate on the graham. Then, you roast the mallow.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "You stick the chocolate on the graham. Then, you roast the mallow.",
+    "by": "Ham",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Snack kiosk, the Beast and Ham's s'mores all land, and the look is bright and summery.",
+  "missing": [
+   "Squints fakes drowning to get Wendy's mouth to mouth (pool)",
+   "Chewing tobacco then the Trabant ride (fair)",
+   "Forging a Babe Ruth signature on a new ball",
+   "Mr Mertle trading the chewed ball for the Murderers' Row ball",
+   "Benny's Babe Ruth dream",
+   "The Beast turning out to be a normal sized dog named Hercules"
+  ],
+  "ideas": [
+   "Swap 'Wendy Peffercorn watermelon ice blocks' note for 'Squints is still drowning on purpose'.",
+   "Swap 'Carnival fairy floss and toffee apples' note to 'before the Trabant ride'.",
+   "Add 'Hercules' as a wink beside the Beast."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

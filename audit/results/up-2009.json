@@ -1,0 +1,66 @@
+{
+ "id": "Up (2009)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": true,
+   "text": "Can we get ice cream after? My dad used to take me for ice cream and we always got chocolate.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a line in the film. Russell does talk about ice cream at Fentons with his dad, but the real words are different: he always gets chocolate and his dad gets butter-brickle, then they sit on a curb.",
+   "source": "https://en.wikiquote.org/wiki/Up_(2009_film)",
+   "fix": "I always get chocolate and he gets butter-brickle.",
+   "fix_note": {
+    "text": "I always get chocolate and he gets butter-brickle.",
+    "by": "Russell",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Carl's lunch, the same since Ellie.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "No opened source shows Carl eating a cheese and tomato toastie or keeping a lunch routine since Ellie.",
+   "source": "https://en.wikipedia.org/wiki/Up_(2009_film)",
+   "fix": "Plain toasties for a quiet afternoon at home."
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Sipped on the porch while the house floats.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The quote page has Russell on the porch before take off, but nothing shows tea on the porch while the house flies.",
+   "source": "https://en.wikiquote.org/wiki/Up_(2009_film)",
+   "fix": "Tea for the long flight to Paradise Falls."
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "verdict": "A tea room that fits Carl and Ellie's house well, with good props like the Ellie badge, Kevin's chocolate and Muntz's dinner.",
+  "missing": [
+   "Dug's 'SQUIRREL!' (Dug, in the jungle)",
+   "Fentons ice cream and the curb where Russell counts cars with his dad",
+   "Ellie's scrapbook page 'Thanks for the adventure' (Carl, after Kevin is lost)",
+   "Russell's snipe hunt under the porch (Russell, before take off)",
+   "Muntz's dinner table with the talking dogs (Muntz's airship)"
+  ],
+  "ideas": [
+   "Swap 'Grape soda badge jellies' for 'Fentons chocolate and butter-brickle scoops' to match the closing kerb cue",
+   "Replace the generic note heading 'A note from Russell' text with the butter-brickle line so the cue and the note tell one story",
+   "Swap 'Cheese and tomato toasties' for 'Wilderness Explorer snipe sandwiches' (a joke on Russell's snipe hunt)"
+  ],
+  "overall": 4,
+  "flat": false,
+  "done": false
+ }
+}

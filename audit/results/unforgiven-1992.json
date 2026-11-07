@@ -1,0 +1,58 @@
+{
+ "id": "Unforgiven (1992)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": true,
+   "text": "I'm a farmer now. Hogs, kids and a plate of beans are my business.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Munny never says this. On the opened quote page his lines about the farm and the kids are different, and the closest is about needing the money to give the youngsters a new start.",
+   "source": "https://en.wikiquote.org/wiki/Unforgiven",
+   "fix": "I just need the money, get a new start for them youngsters.",
+   "fix_note": {
+    "text": "I just need the money, get a new start for them youngsters.",
+    "by": "William Munny",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Little Bill Daggett's leaky roof",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "The quote page confirms Little Bill is building his own house and is the worst carpenter, with a crooked porch. No opened source mentions a leaky roof.",
+   "source": "https://en.wikiquote.org/wiki/Unforgiven",
+   "fix": "Little Bill Daggett's crooked porch"
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "verdict": "Right saloon, town and sheriff, but the dishes and the tone are a generic western and the film's grim best moments are missing.",
+  "missing": [
+   "Ned Logan's body propped in a coffin outside the saloon",
+   "Will's whiskey after he hears what happened to Ned",
+   "English Bob's biographer writing down Little Bill's debunking of gunfighter legends",
+   "The Schofield Kid confessing he has never killed anyone",
+   "Will's hog farm and the fever in the rain",
+   "'Deserve's got nothing to do with it' (Will, final showdown)"
+  ],
+  "ideas": [
+   "Swap 'Saloon pickled eggs' note for a nod to Beauchamp's notebook ('Little Bill tells the biographer how it really goes')",
+   "Replace 'Pig farm crackling with apple sauce' (not printed) in the print run with a printed pork dish named for Munny's hog farm",
+   "Swap 'Whiskey trail coffee with cream' for a plain 'Will's first whiskey in years' pour, since that is the film's turning point",
+   "Add Ned's coffin to the 'Wanted for supper' slip as a stamped line"
+  ],
+  "overall": 3.4,
+  "flat": true,
+  "done": false
+ }
+}

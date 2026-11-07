@@ -1,0 +1,78 @@
+{
+ "id": "The Mighty Ducks (1992)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when the Ducks pull off the Flying V for the first time.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The Flying V is a real play from the film, but Wikipedia's plot does not mention it and the sources opened do not say which game it first works in, so 'for the first time' could not be confirmed. The plot's clear moments are the 17-0 loss, the tie, and the final triple-deke penalty shot.",
+   "source": "https://www.theringer.com/2021/03/24/movies/mighty-ducks-triple-deke-flying-v-knucklepuck-bash-brothers",
+   "fix": "Serve the snacks when Charlie scores the triple-deke penalty shot in the final.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Pizza for the whole team tonight, Ducks. Goldberg, leave some for the rest of the bench, you are not in goal now.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Bombay never says this. His real quack line to Ducksworth is 'Quack, quack, quack, quack, quack, Mr. Ducksworth!'",
+   "source": "https://en.wikiquote.org/wiki/The_Mighty_Ducks_(film)",
+   "fix": "Quack, quack, quack, quack, quack, Mr. Ducksworth!",
+   "fix_note": {
+    "text": "Quack, quack, quack, quack, quack, Mr. Ducksworth!",
+    "by": "Gordon Bombay",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Charlie calls the Flying V.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The Ringer says Charlie calls the Flying V in D3, not in the first film, and gives the first film's first Flying V to a different player's rush. Nothing opened shows Charlie calling it in 1992. The same line is the house drink note.",
+   "source": "https://www.theringer.com/2021/03/24/movies/mighty-ducks-triple-deke-flying-v-knucklepuck-bash-brothers",
+   "fix": "Charlie's triple-deke special.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "The team becoming a family",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No team dinner or fish fry scene is shown in the plot or the sources opened. The line is part of the unprinted dish note for the fish fry.",
+   "source": "https://en.wikipedia.org/wiki/The_Mighty_Ducks_(film)",
+   "fix": "Crisp battered fish, chips and tartare",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "The stadium section map and scoreboard feel like peewee hockey, but the dishes are generic Minnesota food and some film facts are shaky.",
+  "missing": [
+   "Charlie's triple-deke penalty shot (the final)",
+   "Quack, quack, quack at Mr. Ducksworth",
+   "Goldberg and the goalie pads",
+   "Tommy and Tammy Duncan the figure skaters",
+   "Gordon missing the penalty shot as a kid",
+   "The Hawks' coach Reilly and 'go for the W'"
+  ],
+  "ideas": [
+   "Swap 'Hans' frozen pond brownies' note for a line about Hans' sporting goods store",
+   "Swap 'Flying V fried cheese bites' note for 'triple-deke' tots, the winning shot",
+   "Swap the scoreboard 8-0 for the 17-0 loss to the Hawks, the real first game",
+   "Swap 'Ice-cold root beer' note 'Charlie calls the Flying V.' for a 'Quack' line, safer and more fun"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

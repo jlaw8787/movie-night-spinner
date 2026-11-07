@@ -1,0 +1,48 @@
+{
+ "id": "The Jungle Book (1967)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Mowgli, grab a paw full of those ripe pawpaws and pass me the ants. Dinner is better eaten lying on your back.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Baloo never says this. It reads like a mash of song lyrics. His real lines include 'Man Village? They'll ruin 'im! They'll make a man out of 'im!'",
+   "source": "https://en.wikiquote.org/wiki/The_Jungle_Book_(1967_film)",
+   "fix": "Man Village? They'll ruin 'im! They'll make a man out of 'im!",
+   "fix_note": {
+    "text": "Man Village? They'll ruin 'im! They'll make a man out of 'im!",
+    "by": "Baloo",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 2,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3,
+  "verdict": "The Indian dishes suit the film, but the tiki island layout (pupu platters, island map) is a different world from the Indian jungle.",
+  "missing": [
+   "The Bare Necessities (prickly pear, ants, bananas, the river float)",
+   "King Louie wanting to learn how to make fire (the temple)",
+   "Kaa's 'Trust in me' hypnosis",
+   "The vultures and Shere Khan's burning tail (the wastelands)",
+   "Mowgli meeting the girl at the river (man village)",
+   "Colonel Hathi's dawn patrol parade"
+  ],
+  "ideas": [
+   "Swap the 'Pupu Platters' and 'Island hopping' headings for jungle ones like 'The Bare Necessities' and 'King Louie's Temple'",
+   "Swap 'Vegetable pakoras with tamarind chutney' note for a line from Baloo about the prickly pear",
+   "Swap 'Baloo's banana bites' for 'Bare necessities, ants and all' to name the song moment",
+   "Replace the blue ocean island map with a jungle river map, Mowgli and Baloo floating on the water"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

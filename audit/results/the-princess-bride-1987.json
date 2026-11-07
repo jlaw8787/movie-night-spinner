@@ -1,0 +1,47 @@
+{
+ "id": "The Princess Bride (1987)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I have waited twenty years for a decent meal. Fezzik, pass the bread before I lose my patience.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented. Inigo's only twenty years line is 'I ought to be after twenty years.' The Miracle Max hut setting suits Max's own line about a sandwich.",
+   "source": "https://en.wikiquote.org/wiki/The_Princess_Bride_(film)",
+   "fix": "True love is the greatest thing in the world. Except for a nice M.L.T.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "True love is the greatest thing in the world. Except for a nice M.L.T.",
+    "by": "Miracle Max",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Miracle Max's hut and the battle of wits are well used, but the big quotable lines are missing.",
+  "missing": [
+   "Inconceivable (Vizzini)",
+   "Hello, my name is Inigo Montoya (duel with Rugen)",
+   "As you wish (farm boy Westley)",
+   "'Mostly dead' (Miracle Max)",
+   "The chocolate coating makes the miracle pill go down easier (Valerie)",
+   "The man in black climbing the Cliffs of Insanity"
+  ],
+  "ideas": [
+   "Rename 'Max's sanga' to 'Max's M.L.T.' with 'mutton, lettuce and tomato' in the note.",
+   "Swap 'Miracle pills chocolate truffles' note for 'The chocolate coating makes it go down easier'.",
+   "Swap 'Cliffs of Insanity cake' note for 'The man in black climbs the cliffs, and the rope is cut'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

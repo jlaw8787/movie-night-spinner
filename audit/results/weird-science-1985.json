@@ -1,0 +1,68 @@
+{
+ "id": "Weird Science (1985)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": true,
+   "text": "You boys wanted a perfect evening. I brought the party, the snacks and a very fast car. Eat up.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented. Lisa's real opening line is 'So...what would you little maniacs like to do first?'",
+   "source": "https://en.wikiquote.org/wiki/Weird_Science_(film)",
+   "fix": "So...what would you little maniacs like to do first?",
+   "fix_note": {
+    "text": "So...what would you little maniacs like to do first?",
+    "by": "Lisa",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "printed": true,
+   "done": false,
+   "text": "Lisa mixes it while Wyatt's parents are away.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The plot has the boys drinking at a Chicago blues bar with fake IDs Lisa makes, but no opened source shows Lisa mixing drinks at the house.",
+   "source": "https://en.wikipedia.org/wiki/Weird_Science_(film)",
+   "fix": "Wyatt's parents are away, so Lisa takes charge."
+  },
+  {
+   "printed": false,
+   "done": false,
+   "text": "Lisa appearing in the bathroom steam",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "The plot says a power surge creates Lisa but does not say where she appears. The quote page only has a shower line.",
+   "source": "https://en.wikipedia.org/wiki/Weird_Science_(film)",
+   "fix": "Lisa appearing after the power surge"
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "verdict": "The Wyatt's house setting and blues bar food fit, but the prom night layout is not from this film and the best gags are missing.",
+  "missing": [
+   "The pink Cadillac Eldorado Lisa conjures (trip to the blues bar)",
+   "Bras on their heads in the creation scene ('Ceremonial')",
+   "Chet turned into a toad creature (morning after)",
+   "Mutant bikers crashing the party (house party)",
+   "The missile coming up through the roof (house party)",
+   "Wyatt's grandparents frozen in the kitchen cupboard"
+  ],
+  "ideas": [
+   "Swap 'Salt and vinegar chips with onion dip' note for a Cadillac Eldorado pink lemonade",
+   "Replace 'Big brother Chet's party sheet cake' with 'Chet the toad' green frosted cake",
+   "Swap the 'Prom night' header for a 'Wyatt's basement lab' header with printout paper",
+   "Swap 'Cocktail sausage rolls' note for 'Bras on heads. Ceremonial.'"
+  ],
+  "overall": 3,
+  "flat": true,
+  "done": false
+ }
+}

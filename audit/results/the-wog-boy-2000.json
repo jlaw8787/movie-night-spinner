@@ -1,0 +1,77 @@
+{
+ "id": "The Wog Boy (2000)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Sydney, sunshine and a very big Greek feed.",
+   "where": "tagline",
+   "verdict": "wrong",
+   "why": "The film is set in Melbourne, and the menu itself says Melbourne.",
+   "source": "https://australiancinema.info/db/2001/wogboy.html",
+   "fix": "Melbourne, sunshine and a very big Greek feed.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Serve the mains when the whole family sits down to the Greek feast.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "No source opened describes a family Greek feast scene. Steve's parents arrive from Greece at the start, but a feast is not mentioned.",
+   "source": "https://en.wikipedia.org/wiki/The_Wog_Boy",
+   "fix": "Serve the mains when Steve's parents arrive from Greece.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Sit down, eat, and don't tell the dole office how well I'm doing. Efharisto.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as if it is Steve's line, but it is not from the film. Fine as a note in his voice, since Steve is the dole bludger.",
+   "source": "https://en.wikipedia.org/wiki/The_Wog_Boy",
+   "fix": "Sit down, eat, and don't tell the dole office how well I'm doing. Efharisto.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Sit down, eat, and don't tell the dole office how well I'm doing. Efharisto.",
+    "by": "Steve Karamitsis",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Karamitsos family lamb on the spit",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "The surname is Karamitsis (Steve Karamitsis).",
+   "source": "https://en.wikipedia.org/wiki/The_Wog_Boy",
+   "fix": "Karamitsis family lamb on the spit",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 9,
+ "vibe": {
+  "world": 3,
+  "moments": 2,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 2.8,
+  "verdict": "Greek cafe food is fine, but it misses the dole bludger plot and Melbourne jokes.",
+  "missing": [
+   "Steve's Chrysler Valiant Pacer",
+   "Derryn Hinch naming Steve Australia's worst dole bludger (TV)",
+   "Reversing into the Employment Minister's limo and sending her the bill",
+   "Church bingo night",
+   "Concrete lions and salamis, the film's running jokes",
+   "Frank's building site and apprentices"
+  ],
+  "ideas": [
+   "Swap 'Pork souvlaki wraps with chips inside' note for 'Lunch for Australia's biggest dole bludger'.",
+   "Swap 'Nescafe frappe' note for 'church bingo night'.",
+   "Add the Valiant Pacer as a stamp on the order slip."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

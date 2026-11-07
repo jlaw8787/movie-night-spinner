@@ -1,0 +1,58 @@
+{
+ "id": "The Menu (2022)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the cheeseburgers when the guests board the boat to the island.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "The cheeseburger comes right at the end. Margot complains she is still hungry and asks Slowik for a simple cheeseburger and fries, which he cooks himself. The boat trip is at the start of the film.",
+   "source": "https://en.wikipedia.org/wiki/The_Menu_(2022_film)",
+   "fix": "Serve the cheeseburgers when Margot asks Slowik for a cheeseburger.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Every course tonight has a purpose. Put your phones away, and please, no substitutions.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Slowik never says this. A real line of his, about the bread course, is 'Tonight, you get no bread.' His welcome speech also says 'Do not eat. Taste. Savor. Relish.'",
+   "source": "https://noguiltlife.com/movie-quotes-from-the-menu/",
+   "fix": "Tonight, you get no bread.",
+   "fix_note": {
+    "text": "Tonight, you get no bread.",
+    "by": "Chef Slowik",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 18,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4.2,
+  "verdict": "A dark, sharp tasting menu that uses the bread plate, the tortillas, the s'mores and the burger, but the cheeseburger cue is in the wrong place.",
+  "missing": [
+   "Slowik's welcome speech 'Do not eat. Taste. Savor. Relish.' (first course)",
+   "The Mess course, with no way to avoid it",
+   "Margot asking for the burger to go in a box (the finale)",
+   "The employee of the month photo of young Slowik at the grill",
+   "Slowik's clap before each course",
+   "The Coast Guard officer who turns out to be a cook"
+  ],
+  "ideas": [
+   "Move the cheeseburger cue to the finale, with the note 'Margot asks for a cheeseburger, then asks for it to go'",
+   "Swap 'Hawthorn lamb rack with celeriac puree' note 'A tasting menu main, without the theatre.' for a line about Slowik's clap",
+   "Swap 'Sommelier's dry island riesling' for a 'The Mess' dessert tasting plate",
+   "Add a to-go box prop on the back, nodding to Margot leaving with her burger"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

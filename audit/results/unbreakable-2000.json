@@ -1,0 +1,77 @@
+{
+ "id": "Unbreakable (2000)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "David, you survived for a reason. Now eat, and tell me about your day.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented. Elijah's real line is 'It's alright to be afraid, David, because this part won't be like a comic book.'",
+   "source": "https://en.wikiquote.org/wiki/Unbreakable_(film)",
+   "fix": "It's alright to be afraid, David, because this part won't be like a comic book.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "It's alright to be afraid, David, because this part won't be like a comic book.",
+    "by": "Elijah Price",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Philadelphia to New York. Ten stamps. Nobody remembers the tenth.",
+   "where": "prop",
+   "verdict": "wrong",
+   "why": "David is coming home to Philadelphia from New York when Eastrail 177 derails, so the run is New York to Philadelphia.",
+   "source": "https://en.wikipedia.org/wiki/Unbreakable_(film)",
+   "fix": "New York to Philadelphia. Ten stamps. Nobody remembers the tenth.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve the mains when David sits down to breakfast with his son Joseph.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The sources opened show David and Joseph talking (the Bruce Lee conversation) but no breakfast table scene.",
+   "source": "https://en.wikiquote.org/wiki/Unbreakable_(film)",
+   "fix": "Serve the mains when David asks Audrey when he was last sick.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "David, Audrey and Joseph at the kitchen table.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Sources show David asking Audrey whether she remembers him ever being sick, but do not place the Dunn family at a breakfast table.",
+   "source": "https://en.wikiquote.org/wiki/Unbreakable_(film)",
+   "fix": "David asks Audrey when he was last sick.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Elijah's gallery, purple chips and the poster fit, but the hero reveal moments are missing.",
+  "missing": [
+   "David in the green raincoat at the stadium",
+   "Eastrail 177, the sole survivor",
+   "Benching 350 pounds in the basement",
+   "'Now that we know who you are, I know who I am' (Mr Glass handshake)",
+   "'This is an art gallery my friend' (Elijah)",
+   "Water as David's weakness (pool)"
+  ],
+  "ideas": [
+   "Swap 'Weight room rump with garlic butter' note for 'David benches 350 pounds'.",
+   "Swap 'Mr Glass lemon and berry jelly' note for 'They called me Mr. Glass'.",
+   "Add the green raincoat as a stamp on the ticket."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

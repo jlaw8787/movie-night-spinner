@@ -1,0 +1,47 @@
+{
+ "id": "Toy Story (1995)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Greetings. I would like to see the menu and request a table with a clear view of the stars.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented. Buzz's real greeting to the toys is 'I am Buzz Lightyear. I come in peace.'",
+   "source": "https://en.wikiquote.org/wiki/Toy_Story",
+   "fix": "I am Buzz Lightyear. I come in peace.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "I am Buzz Lightyear. I come in peace.",
+    "by": "Buzz Lightyear",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Pizza Planet placemat is bright and right, and the aliens and Claw are used.",
+  "missing": [
+   "Sid's mutant toys (next door)",
+   "The aliens: 'The claw is our master' (Pizza Planet)",
+   "'Falling with style' (Andy's room)",
+   "Rex asking 'Were ya scared? Tell me honestly.'",
+   "Hamm's 'Birthday guests at three o'clock!'",
+   "Mr Potato Head's Picasso face"
+  ],
+  "ideas": [
+   "Swap 'Moving day grilled cheese and tomato soup' note for 'Birthday guests at three o'clock'.",
+   "Swap 'Army men pea and edamame salad' for 'Code Red recon salad' with the army men's briefing.",
+   "Add 'To infinity and beyond' to the alien punch note."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

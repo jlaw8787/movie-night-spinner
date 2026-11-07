@@ -1,0 +1,58 @@
+{
+ "id": "The Man from Snowy River (1982)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Mountain men eat plain. Pass the stew, then I'll saddle up for the brumbies.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Jim never says this. A quote page lists his real lines, such as 'I think they're trying to make a butler out of me.' and 'I'll be back for them... and for whatever else is mine.'",
+   "source": "https://moviemistakes.com/film790/quotes",
+   "fix": "I think they're trying to make a butler out of me.",
+   "fix_note": {
+    "text": "I think they're trying to make a butler out of me.",
+    "by": "Jim Craig",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Spur's nightcap after a day digging for gold.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Spur is the old prospector who digs for gold, but no source opened shows him drinking rum and hot milk at night.",
+   "source": "https://en.wikipedia.org/wiki/The_Man_from_Snowy_River_(1982_film)",
+   "fix": "Spur's reward after a day digging for gold.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "Damper, billy tea and spotted dog are proper Australian bush tucker, but the wanted poster saloon dress feels like an American Western.",
+  "missing": [
+   "The wild ride down the near-vertical slope (the brumby chase)",
+   "Spur's gold mine and his hut in the mountains",
+   "Jim and Jessica in the storm, and her prize colt",
+   "Clancy of the Overflow, and the Banjo Paterson poem",
+   "Harrison's bet on the horse race that made him rich",
+   "Jim's 'I'll be back for them... and for whatever else is mine' at the end"
+  ],
+  "ideas": [
+   "Swap the 'WANTED AT THE TABLE, REWARD $82' block for 'REWARD 100 pounds', the reward for the colt",
+   "Swap 'Harrison's homestead roast' note 'The station house dinner' for a line about Jessica's table manners at the station",
+   "Rename 'Camp oven lamb stew' to 'Spur's mine camp stew' with a note from Spur's camp",
+   "Swap the saloon fonts for plain bush-hut lettering so it reads as the high country, not the American West"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

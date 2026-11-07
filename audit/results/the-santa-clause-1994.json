@@ -1,0 +1,67 @@
+{
+ "id": "The Santa Clause (1994)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the cocoa when Judy the elf makes Scott a cup.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Judy the elf brings Scott his monogrammed pajamas at the North Pole. None of the sources opened show her making him cocoa.",
+   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/TheSantaClause1",
+   "fix": "Serve the cocoa when Judy the elf brings Scott his monogrammed pajamas.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Judy's cocoa",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "Same issue as the cue. Judy is shown handing Scott pajamas, not cocoa, in the sources opened.",
+   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/TheSantaClause1",
+   "fix": "North Pole cocoa",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Dad, you're Santa now, so you have to eat all the cookies. That's the rule, and I'm helping.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Charlie's words, but it is not a line from the film. Charlie keeps his dad's secret and believes he is Santa.",
+   "source": "https://en.wikipedia.org/wiki/The_Santa_Clause",
+   "fix": "Dad, you're Santa now, so eat the cookies. Mum and Neil don't need to know yet.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Dad, you're Santa now, so eat the cookies. Mum and Neil don't need to know yet.",
+    "by": "Charlie Calvin",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.4,
+  "verdict": "The elf canteen idea is cute, but it leaves out the best-known moments and the poster is the only real colour.",
+  "missing": [
+   "Scott's turkey fire and the Denny's 'Men Who Burned the Turkey' room (Christmas Eve)",
+   "Santa falling off the roof (opening)",
+   "The business card in the suit: read the fine print",
+   "Monogrammed pajamas with SC (North Pole)",
+   "Scott's sudden craving for milk and cookies despite being lactose intolerant",
+   "The snow globe from Bernard"
+  ],
+  "ideas": [
+   "Swap 'Christmas Eve diner pancake stack' for 'Men Who Burned the Turkey pancake stack' as a room-themed name.",
+   "Swap 'Santa's milk and cookies' note for 'Scott used to be lactose intolerant'.",
+   "Add the snow globe as a prop on the mess chit."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

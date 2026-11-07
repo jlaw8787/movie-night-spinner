@@ -1,0 +1,77 @@
+{
+ "id": "Two Hands (1999)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Sit down, Jimmy. Eat something and don't lose the money this time.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Pando's words, but it is not a line from the film. It works as a note in his voice, since Jimmy loses his ten grand at Bondi.",
+   "source": "https://en.wikipedia.org/wiki/Two_Hands_(1999_film)",
+   "fix": "Sit down, Jimmy. Eat something, and keep your hands on my ten grand this time.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Sit down, Jimmy. Eat something, and keep your hands on my ten grand this time.",
+    "by": "Pando",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "the gangster's crew killing time at his place",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Pando's crew is Acko and Wally, but no scene of them killing time at his place shows in the sources opened.",
+   "source": "https://en.wikipedia.org/wiki/Two_Hands_(1999_film)",
+   "fix": "Acko and Wally's crew waiting on Jimmy",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Jimmy's feed before that swim at Bondi.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Jimmy waits at Bondi and goes for a swim, but no feed beforehand is mentioned.",
+   "source": "https://en.wikipedia.org/wiki/Two_Hands_(1999_film)",
+   "fix": "Eaten fast, because Jimmy has a ten grand envelope to drop at Bondi.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "the family house out in the suburbs",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The suburban house in the plot is Deirdre's, where the bank job is planned. Jimmy's brother is dead and no family Sunday roast is described.",
+   "source": "https://en.wikipedia.org/wiki/Two_Hands_(1999_film)",
+   "fix": "Deirdre's suburban kitchen, where the bank job gets planned",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 8,
+ "vibe": {
+  "world": 4,
+  "moments": 2,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3,
+  "verdict": "Kings Cross bar tab is on theme, but most of the film's plot beats are missing.",
+  "missing": [
+   "Jimmy burying the envelope in the sand (Bondi)",
+   "Street kids Pete and Helen stealing the cash",
+   "The monorail chase (Chinatown)",
+   "Deirdre's bank robbery in Bankstown",
+   "Wozza's failed jump over the counter",
+   "Jimmy's brother Michael as guardian angel"
+  ],
+  "ideas": [
+   "Swap 'Pando's crew potato scallops' note for 'Wozza's counter jump gone wrong'.",
+   "Swap 'Bondi fish and chips' note for 'the beach where the envelope went missing'.",
+   "Add Acko's Ford Falcon as a run slip stamp."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

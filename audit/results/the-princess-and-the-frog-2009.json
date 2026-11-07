@@ -1,0 +1,67 @@
+{
+ "id": "The Princess and the Frog (2009)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when Tiana hands Charlotte a plate of hot beignets.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "Tiana serves beignets to Big Daddy La Bouff at the cafe ('Got me a fresh batch just waitin' for you'). Charlotte only asks her to make beignets for the ball.",
+   "source": "https://en.wikiquote.org/wiki/The_Princess_and_the_Frog",
+   "fix": "Serve the snacks when Tiana serves Big Daddy La Bouff a fresh batch of beignets.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Eat the gumbo, look at the beignets, then tell me to slow down. Go ahead. This restaurant is happening.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Invented. Tiana never says this. Her real beignet line is to Big Daddy La Bouff at the cafe.",
+   "source": "https://en.wikiquote.org/wiki/The_Princess_and_the_Frog",
+   "fix": "Beignets? Got me a fresh batch just waitin' for you.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Beignets? Got me a fresh batch just waitin' for you.",
+    "by": "Tiana",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Big Daddy La Bouff's Mardi Gras toast.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Big Daddy is crowned Mardi Gras king, but no toast or Sazerac shows up in the sources opened.",
+   "source": "https://en.wikipedia.org/wiki/The_Princess_and_the_Frog",
+   "fix": "Big Daddy La Bouff, Mardi Gras king, would order this.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Tiana's Palace and the New Orleans food are right, but the best scenes are mostly missing.",
+  "missing": [
+   "Tiana lent a princess dress at Charlotte's masquerade ball",
+   "The kiss that turns Tiana into a frog (ball)",
+   "Louis the jazz alligator and his trumpet (bayou)",
+   "Dr Facilier's voodoo talisman and shadow friends (street)",
+   "Young Tiana adding hot sauce to her dad's gumbo (kitchen)",
+   "Daddy James writing 'Tiana's Place' on the paper (opening)"
+  ],
+  "ideas": [
+   "Swap 'Daddy James's chicken and sausage gumbo' note for 'Tiana adds the hot sauce, her daddy tastes it first'.",
+   "Swap 'Bayou crab cakes' note for 'Louis plays trumpet while the frogs eat'.",
+   "Add 'Tiana's Place' scribbled on the bill as the prop."
+  ],
+  "flat": false,
+  "done": false
+ }
+}
