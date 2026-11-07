@@ -1,0 +1,78 @@
+{
+ "id": "Meet the Robinsons (2007)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Grab a plate, Lewis. Grandpa's built a machine for the peanut butter and jelly, so stand back a bit.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "The peanut butter and jelly machine is Lewis's own invention, from his demo for the Harringtons. Grandpa did not build it. The Robinsons' dinner is the meatball battle.",
+   "source": "https://en.wikiquote.org/wiki/Meet_the_Robinsons",
+   "fix": "Grab a plate, Lewis. Dinner here is a meatball battle, so duck, and keep moving forward.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Grab a plate, Lewis. Dinner here is a meatball battle, so duck, and keep moving forward.",
+    "by": "Wilbur Robinson",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Todayland Cafe",
+   "where": "venue",
+   "verdict": "unsure",
+   "why": "No page opened says what Todayland is in the film. The opened Wikipedia plot never uses the name, and a Disney fan page only calls it a play on Tomorrowland.",
+   "source": "https://disneygeek.com/theater/meet_the_robinsons_future.php",
+   "fix": "Robinson Family Cafe",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Todayland Science Fair",
+   "where": "sign",
+   "verdict": "unsure",
+   "why": "The science fair is in Lewis's own time, at his school, not in the future where the Robinsons live, and no page opened ties it to a place called Todayland.",
+   "source": "https://en.wikipedia.org/wiki/Meet_the_Robinsons",
+   "fix": "Lewis's Science Fair, Today",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "The bright future city of Todayland.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No page opened names the future city Todayland.",
+   "source": "https://disneygeek.com/theater/meet_the_robinsons_future.php",
+   "fix": "The bright future, Lewis's family home.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "The meatball cannon dinner and the peanut butter and jelly bites hit, but the airline layout feels unlike the film's family chaos.",
+  "missing": [
+   "Keep moving forward (the Robinson motto)",
+   "Frankie and the frog band (Robinson house)",
+   "Doris the hat and the Helping Hats (Bowler Hat Guy)",
+   "Uncle Joe's seen the toast (dinner table)",
+   "Tiny the T. rex (the rampage)",
+   "Gaston and Franny's meatball battle (dinner)"
+  ],
+  "ideas": [
+   "Swap 'Science fair chicken nuggets and dips' note for 'Uncle Joe's seen the toast'",
+   "Swap 'Cheesy tater tots' for 'Dinosaur chicken bites, Tiny approved'",
+   "Swap the 'ADMIT ONE Todayland Visit' ticket for 'Time machine, one way, keep moving forward'",
+   "Swap 'Bowler Hat Guy's grape smoothie' note for 'Doris approves'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

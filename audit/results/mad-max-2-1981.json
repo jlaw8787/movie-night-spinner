@@ -1,0 +1,42 @@
+{
+  "id": "Mad Max 2 (1981)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "GYRO CAPTAIN",
+      "where": "prop",
+      "verdict": "wrong",
+      "why": "The access badge photo shows Max, not the Gyro Captain, so the name and the picture do not match.",
+      "source": "https://en.wikipedia.org/wiki/Mad_Max_2",
+      "fix": "MAX",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 15,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 3,
+    "look": 3,
+    "overall": 3.6,
+    "verdict": "Strong on the film's food, with the Dinki Di tin, the snake and the boomerang, held back by a plain ration sheet and a wrong badge.",
+    "missing": [
+      "Fricassee of reptile (the Gyro Captain's snake, in his gyrocopter)",
+      "I'm just here for the gasoline (Max at the compound gate)",
+      "Just walk away (the Humungus at the siege)",
+      "The postcard of paradise (Curmudgeon)",
+      "Max's dog and the can he tosses (the hill above the refinery)",
+      "The tanker full of sand (the ending)"
+    ],
+    "ideas": [
+      "Swap the badge name 'Gyro Captain' for 'Max'",
+      "Swap 'Gyro Captain's frankfurt pastry snake' note for 'Fricassee of reptile, his words'",
+      "Swap 'Wasteland tin dinner' note for 'Dinki Di, dog's dinner, shared with the dog'",
+      "Add a printed 'Just walk away' on the ration sheet header"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

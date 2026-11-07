@@ -1,0 +1,72 @@
+{
+  "id": "MacGruber (2010)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Piper, the only member of the team who reads the briefing",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "Piper is the capable one of the team, but no source opened shows a briefing he reads that the others skip.",
+      "source": "https://en.wikipedia.org/wiki/MacGruber_(film)",
+      "fix": "Piper, the only one on the team who can actually do the job",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "Rigged up from whatever was in Vicki's fridge.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "No scene of food being rigged up in Vicki's fridge shows in the plot. Vicki's house is where she removes the bullet from his leg.",
+      "source": "https://en.wikipedia.org/wiki/MacGruber_(film)",
+      "fix": "Rigged up in Vicki's kitchen after she patches up his leg.",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "Piper's order, while MacGruber hides the celery.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "Piper and MacGruber have beers outside the trailer, not ginger beer. The celery is MacGruber's distraction scene, he is not hiding it.",
+      "source": "https://en.wikipedia.org/wiki/MacGruber_(film)",
+      "fix": "Piper's order outside the trailer. MacGruber brought the celery.",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "Car stereo mission briefing nuts",
+      "where": "dish-name",
+      "verdict": "unsure",
+      "why": "MacGruber's car has a pull-out stereo, but no source opened places a mission briefing around it.",
+      "source": "https://www.mentalfloss.com/entertainment/movies/macgruber-movie-facts",
+      "fix": "Pull-out car stereo nuts",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 3,
+    "moments": 2,
+    "food": 3,
+    "tone": 3,
+    "look": 3,
+    "overall": 2.8,
+    "verdict": "The workshop board is a fair gadget joke, but it ignores nearly every gag fans quote.",
+    "missing": [
+      "The celery distraction scene (the party)",
+      "KFBR392, the licence plate he chants (Las Vegas car park)",
+      "Human shield Piper and the bulletproof vest (the ambush)",
+      "Homemade C-4 blowing up his team (the van on the tarmac)",
+      "I'm more like a three wire guy (the warhead)",
+      "The upper-decker (Vicki's bathroom)"
+    ],
+    "ideas": [
+      "Swap 'Emergency celery' note to 'Distraction required, see the party'",
+      "Swap 'Car stereo mission briefing nuts' for 'KFBR392 plate chips', salt and vinegar",
+      "Swap the generic 'Gadget order' prop for 'Three wire special: pick one'",
+      "Add a human shield bulletproof vest flatbread"
+    ],
+    "flat": true,
+    "done": false
+  }
+}

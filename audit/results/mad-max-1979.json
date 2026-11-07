@@ -1,0 +1,78 @@
+{
+ "id": "Mad Max (1979)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Eat quick. The Nightrider is out there and the road does not wait for dessert.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Max forces the Nightrider into a roadblock in the opening chase and he is killed. From then on the threat is Toecutter, Bubba and their gang, not the Nightrider.",
+   "source": "https://en.wikipedia.org/wiki/Mad_Max_(film)",
+   "fix": "Eat quick. Toecutter's gang is out there and the road does not wait for dessert.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Eat quick. Toecutter's gang is out there and the road does not wait for dessert.",
+    "by": "Max Rockatansky",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Narcotics Unit, 1979",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "Max is a pursuit officer in the Main Force Patrol, a highway patrol outfit. No narcotics unit appears.",
+   "source": "https://filmsite.org/madmax1979.html",
+   "fix": "Pursuit Squad, 1979",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Goose's pickled onions",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "No source opened shows Goose eating pickled onions. Goose's one food moment is the roadside restaurant where he finishes another patron's meal.",
+   "source": "https://en.wikiquote.org/wiki/Mad_Max",
+   "fix": "Pub pickled onions",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Goose's order at the Halls of Justice.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The Halls of Justice is the MFP depot where Max attends morning meetings. Goose's food scene is at Fat Nancy's roadside restaurant, where he takes a patron's plate, and no dim sims are mentioned.",
+   "source": "https://filmsite.org/madmax1979.html",
+   "fix": "Goose will finish your plate if you stall.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "The depot roster looks right and the ice cream and fish and chips nod to the family trip, but the food is mostly generic roadhouse.",
+  "missing": [
+   "Jessie and Sprog's ice cream stop where Toecutter licks her cone (beach shop)",
+   "The black Pursuit Special being unveiled (MFP garage)",
+   "Goose's burning ute (the road)",
+   "I'm a fuel-injected suicide machine (Nightrider on the radio)",
+   "Johnny the Boy with the hacksaw (the ending)",
+   "I'm scared, Fif, it's a rat circus (Max's resignation)"
+  ],
+  "ideas": [
+   "Swap 'Interceptor highway meat pie' for 'Pursuit Special pie, black as the car'",
+   "Swap 'Goose's order' note for 'Goose finishes the plate, Fat Nancy's'",
+   "Swap the data cue to the ice cream moment so the sweet course lands on Toecutter at the beach shop",
+   "Replace 'Narcotics Unit' with 'Pursuit Squad'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

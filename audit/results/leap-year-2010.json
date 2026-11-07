@@ -1,0 +1,52 @@
+{
+  "id": "Leap Year (2010)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the mains when Declan serves dinner at his pub in Dingle.",
+      "where": "cue",
+      "verdict": "unsure",
+      "why": "The plot has no dinner at Declan's pub. The dinner scene is the Tipperary B&B, where they pretend to be married and the other couples kiss. Printed on face 1 as the last call line and stored as the data cue.",
+      "source": "https://en.wikipedia.org/wiki/Leap_Year_(2010_film)",
+      "fix": "Serve the mains when Anna and Declan sit down to dinner at the Tipperary B&B.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Jeremy waiting with a ring she wanted",
+      "where": "wink",
+      "verdict": "unsure",
+      "why": "Jeremy proposes in the hotel lobby because of the co-op board. The plot does not describe him waiting with a ring she wanted.",
+      "source": "https://en.wikipedia.org/wiki/Leap_Year_(2010_film)",
+      "fix": "Jeremy proposing in the hotel lobby",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 3,
+    "overall": 3.2,
+    "verdict": "A good pub tab with the leap day tradition, but the best scenes on the road are missing.",
+    "missing": [
+      "Pretending to be married at the Tipperary B&B and the dinner kiss",
+      "Anna stepping in a cow pat and the car rolling into a stream",
+      "The 60-second house fire question at Ballycarbery Castle",
+      "Anna drunk at the wedding reception",
+      "Declan's mother's Claddagh ring",
+      "The cliff top proposal"
+    ],
+    "ideas": [
+      "Swap the cue for the B&B dinner.",
+      "Swap \"Potato farls\" note for the cow pat and the car in the stream.",
+      "Rename \"Irish lamb stew\" to \"Married couple stew\", from the B&B.",
+      "Swap the Murphy's note for the wedding reception."
+    ],
+    "flat": true,
+    "done": false
+  }
+}

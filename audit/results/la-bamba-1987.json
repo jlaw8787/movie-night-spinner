@@ -1,0 +1,52 @@
+{
+  "id": "La Bamba (1987)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Bob's second bottle. Ritchie's still practising.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "Bob is shown with vodka and with one sip of beer he says tastes like piss. He offers it to Ritchie, who takes a sip and puts it down. No brand or second bottle is shown.",
+      "source": "https://en.wikiquote.org/wiki/La_Bamba_(film)",
+      "fix": "Bob offers Ritchie a sip. He takes one and puts it down.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Donna's arroz con leche",
+      "where": "dish-name",
+      "verdict": "unsure",
+      "why": "Donna Ludwig is an Anglo classmate whose father disapproves of Ritchie. Nothing connects her to a Mexican rice pudding. Ritchie's mother fits better.",
+      "source": "https://en.wikipedia.org/wiki/La_Bamba_(film)",
+      "fix": "Connie's arroz con leche",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "A warm family table that fits Ritchie's home, but the Tijuana scene, the talisman and the fear of flying are missing.",
+    "missing": [
+      "The Tijuana band playing \"La Bamba\"",
+      "The curandero's talisman, later broken by Bob",
+      "Ritchie's fear of flying after the school plane crash",
+      "Bob Keane renaming him \"Ritchie Valens\" (\"Ricky Zuela\")",
+      "Performing \"Donna\" on American Bandstand",
+      "The Winter Dance Party bus heater failing"
+    ],
+    "ideas": [
+      "Swap \"Bean and cheese taquitos\" for \"La Bamba night plate\", a Tijuana street plate named for the band Ritchie hears there.",
+      "Swap \"Lucky Lager in the bottle\" for \"Bob's vodka and Ritchie's one sip\".",
+      "Rename \"Donna's arroz con leche\" to \"Connie's arroz con leche\".",
+      "Add a talisman charm to the face stamp and break it on the last line."
+    ],
+    "flat": true,
+    "done": false
+  }
+}

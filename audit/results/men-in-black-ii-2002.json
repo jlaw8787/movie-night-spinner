@@ -1,0 +1,68 @@
+{
+ "id": "Men in Black II (2002)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Kay, you worked here once. Trust me, flash yourself and the whole menu comes back.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "K never worked at Ben's. He hid a locker key there. Memory comes back through the deneuralyzer, not by flashing himself (he had neuralyzed himself and the memories had not returned).",
+   "source": "https://en.wikipedia.org/wiki/Men_in_Black_II",
+   "fix": "Kay, you've eaten here before. Trust me, the deneuralyzer brings it all back, and the pizza helps.",
+   "printed": false,
+   "done": true,
+   "fix_note": {
+    "text": "Kay, you've eaten here before. Trust me, the deneuralyzer brings it all back, and the pizza helps.",
+    "by": "Agent J",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Worm guys order a dozen for the break.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The worms help in the headquarters fight, but no source opened shows them ordering garlic knots.",
+   "source": "https://en.wikipedia.org/wiki/Men_in_Black_II",
+   "fix": "Worm guys' break food, no questions.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "The worms live on coffee and doughnuts.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No page opened says the worms live on coffee and doughnuts.",
+   "source": "https://en.wikipedia.org/wiki/Men_in_Black_II",
+   "fix": "The worms are back at HQ.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "Ben's pizzeria is a good home base and the Truro post office is a nice touch, but the ration sheet leans on worm jokes and misses most of the villains and gags.",
+  "missing": [
+   "Frank the Pug singing I Will Survive (the car)",
+   "Serleena in the lingerie, tentacles and all (Ben's)",
+   "Scrad and Charlie, the two heads",
+   "Jeff the subway worm (the tunnel)",
+   "The locker society in Grand Central (the key)",
+   "Kevin Brown, the postmaster of Truro (the name tag)"
+  ],
+  "ideas": [
+   "Swap 'Truro post office sausage rolls' note for 'Kevin Brown, postmaster, no idea who J is'",
+   "Swap the 'Ben's Famous calzones' note for 'Serleena ordered two slices of pepperoni'",
+   "Swap the badge picture of two agents for K as Kevin Brown",
+   "Swap 'Pug cookies' note for 'Frank sings in the car'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

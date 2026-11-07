@@ -1,0 +1,52 @@
+{
+ "id": "National Treasure (2004)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Gates Family Workshop",
+   "where": "venue",
+   "verdict": "unsure",
+   "why": "The film has the Gates family studying the Declaration at Patrick Gates's house, not a workshop. No source mentions a Gates family workshop.",
+   "source": "https://www.funtrivia.com/en/Movies/National-Treasure-13256_2.html",
+   "fix": "Gates Family House",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Riley's snack for cracking the Ottendorf cipher.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The cipher on the back of the Declaration is read out using the Silence Dogood letters, with a schoolboy at the Franklin Institute helping. Riley is not shown cracking it alone.",
+   "source": "https://en.wikipedia.org/wiki/National_Treasure_(film)",
+   "fix": "Riley's snack while a schoolboy cracks the Ottendorf cipher.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Witty food names around the treasure trail, but a ration sheet is a loose fit for a film about a heist and a history chase.",
+  "missing": [
+   "Ben paying for the Declaration at the gift shop (Archives)",
+   "Meerschaum pipe that is also the key (Charlotte)",
+   "Spectacles with coloured lenses in the bell tower brick (Independence Hall)",
+   "Trinity Church tunnel with a lantern (clue)",
+   "Intrepid meeting with Ian (rescue)",
+   "Ben stealing the Declaration in a tuxedo (gala)"
+  ],
+  "ideas": [
+   "Swap 'Hot apple juice with cinnamon' for 'Gift shop lemonade' and note it as the souvenir copy gag.",
+   "Rename 'Invisible ink lemon, ginger and mint fizz' to 'Lemon juice and a hair dryer fizz'.",
+   "Replace the venue name with 'Patrick Gates's Kitchen Table'.",
+   "Add 'Meerschaum' dessert pipe with chocolate."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

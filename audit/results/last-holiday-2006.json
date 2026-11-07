@@ -1,0 +1,72 @@
+{
+  "id": "Last Holiday (2006)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Sean Matthews, back home",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "Wikipedia and the film name him Sean Williams.",
+      "source": "https://en.wikipedia.org/wiki/Last_Holiday_(2006_film)",
+      "fix": "Sean Williams, back home",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "Serve the main when Georgia orders everything Chef Didier makes.",
+      "where": "cue",
+      "verdict": "unsure",
+      "why": "The plot only says she enjoys meals prepared by Chef Didier and later helps him cook the New Year's Eve feast. An \"order everything\" scene is not in the sources opened.",
+      "source": "https://en.wikipedia.org/wiki/Last_Holiday_(2006_film)",
+      "fix": "Serve the main when Chef Didier invites Georgia into his kitchen for the New Year's Eve feast.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Order everything on the menu.",
+      "where": "tagline",
+      "verdict": "unsure",
+      "why": "Same unconfirmed \"order everything\" moment.",
+      "source": "https://en.wikipedia.org/wiki/Last_Holiday_(2006_film)",
+      "fix": "Cook it like it's your last supper.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Straight out of Georgia's scrapbook, finally on a real plate.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "The scrapbook holds her dream husband and her possibilities. The plot does not say it holds foie gras.",
+      "source": "https://en.wikipedia.org/wiki/Last_Holiday_(2006_film)",
+      "fix": "Georgia cooked it for the neighbour. Tonight she eats it.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 3,
+    "overall": 3.2,
+    "verdict": "A smart grand hotel dinner, but New Orleans, Emeril and the ledge scene are missing.",
+    "missing": [
+      "Georgia cooking Emeril's recipes at home for her neighbour",
+      "BASE jumping and snowboarding",
+      "Winning at roulette",
+      "Ms. Gunther snooping through the suite",
+      "The New Year's Eve feast in Didier's kitchen",
+      "The faulty CT scan fax and Georgia's Joint"
+    ],
+    "ideas": [
+      "Swap \"Georgia's crab cakes\" for \"Georgia's Joint gumbo\", the restaurant she opens.",
+      "Swap \"Karlovy Vary mushroom tarts\" note for the New Year's Eve feast.",
+      "Add \"Emeril's kick\" hot sauce in place of the foie gras note.",
+      "Swap the cue for the kitchen invitation."
+    ],
+    "flat": true,
+    "done": false
+  }
+}

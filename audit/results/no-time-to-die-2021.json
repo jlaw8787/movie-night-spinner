@@ -1,0 +1,48 @@
+{
+ "id": "No Time to Die (2021)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "The mojitos are strong and the dress is borrowed, James. Eat something before the shooting starts.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Paloma drinks a cherry cola at the bar and orders vodka martinis with Bond, and she wears a black evening dress. No mojitos and no borrowed dress are in the sources.",
+   "source": "https://www.thejamesbonddossier.com/films/no-time-to-die/drinks.htm",
+   "fix": "The martinis are shaken, the dress is black and you're late, James. Eat something before the shooting starts.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "The martinis are shaken, the dress is black and you're late, James. Eat something before the shooting starts.",
+    "by": "Paloma",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Postcard from a Jamaican cabin works, and the dishes cover Cuba, Matera and Norway, but the note drifts from what Paloma actually drinks.",
+  "missing": [
+   "We have all the time in the world (Matera drive)",
+   "Cherry cola at the El Nido bar (Paloma)",
+   "Two vodka martinis, shaken (Cuba party)",
+   "Safin's poison garden (island)",
+   "Mathilde and Madeleine in Norway (house)",
+   "Q's glider and the nanobot factory (finale)"
+  ],
+  "ideas": [
+   "Swap 'Paloma's Santiago mojito' for 'Paloma's cherry cola' with a note about the El Nido bar.",
+   "Rename 'Madeleine's Norway cardamom buns' to 'Mathilde's cardamom buns' for the Norway house.",
+   "Replace the room key tag with a hotel tag from Matera, 'We have all the time in the world'.",
+   "Add 'Poison garden' foxglove sorbet as a dessert."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "Lethal Weapon 3 (1992)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Eight days left. Make every meal count.",
+      "where": "tagline",
+      "verdict": "unsure",
+      "why": "The plot says the retirement is a week away. Eight days is not confirmed in the sources opened.",
+      "source": "https://en.wikipedia.org/wiki/Lethal_Weapon_3",
+      "fix": "A week left. Make every meal count.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Eight days to go whiskey sour",
+      "where": "dish-name",
+      "verdict": "unsure",
+      "why": "Same \"eight days\" count, not confirmed.",
+      "source": "https://en.wikipedia.org/wiki/Lethal_Weapon_3",
+      "fix": "A week to go whiskey sour",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Riggs and Lorna compare scars, you compare sauce",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The plot says Riggs and Cole have sex that night. A scar comparison is not in the plot or quote page, so it is unconfirmed.",
+      "source": "https://en.wikipedia.org/wiki/Lethal_Weapon_3",
+      "fix": "Riggs and Lorna swap war stories, you swap sauces",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A late night diner that suits the cops, with a tough Lorna note, but the bomb, the cat and the food truck are missing.",
+    "missing": [
+      "The office bomb, the red wire, and \"Grab the cat!\"",
+      "Riggs and Murtaugh stopping at a food truck when the drug deal goes wrong",
+      "Riggs's \"I'M PISSED OFF. YOU NEED A REASON?\" locker room scene",
+      "Lorna: \"Close is a lingerie shop without a front window\"",
+      "Murtaugh drunk on his boat after Darryl",
+      "The bulldozer blade finale"
+    ],
+    "ideas": [
+      "Swap \"Building implosion popcorn\" for \"Grab the cat popcorn\", the bomb scene.",
+      "Swap \"Pretzel bites with cheddar ale sauce\" for \"Food truck tacos, wait for backup\".",
+      "Swap the tagline for \"A week left. Make every meal count.\"",
+      "Swap \"Old fashioned\" note for Lorna's \"Close\" line."
+    ],
+    "flat": false,
+    "done": false
+  }
+}

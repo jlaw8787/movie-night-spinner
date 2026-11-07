@@ -1,0 +1,52 @@
+{
+  "id": "KPop Demon Hunters (2025)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Concert night, then ramyeon.",
+      "where": "tagline",
+      "verdict": "wrong",
+      "why": "Rumi calls it \"our pre-game ramyeon\", so the noodles come before the show, and Mira complains she never finished hers. The printed order is backwards.",
+      "source": "https://en.wikiquote.org/wiki/KPop_Demon_Hunters",
+      "fix": "Ramyeon first, then concert night.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "the three of them sharing a comfort meal",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "Printed under the beef bone soup. No source opened shows a beef bone soup or a sit down comfort meal.",
+      "source": "https://en.wikipedia.org/wiki/KPop_Demon_Hunters",
+      "fix": "the three of them sharing a pre-show meal",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "Neon backstage look and the ramyeon hook land, but the big songs and the Derpy and Sussie jokes are barely used.",
+    "missing": [
+      "Rumi's \"pre-game ramyeon\" and Mira never finishing hers",
+      "Zoey tearing open a bag of snacks",
+      "Derpy the tiger and Sussie the magpie",
+      "The Honmoon turning golden",
+      "The Saja Boys' \"Soda Pop\" and \"Your Idol\" numbers",
+      "Huntrix's weapons: Mira's gok-do and Zoey's throwing knives"
+    ],
+    "ideas": [
+      "Swap the tagline for \"Ramyeon first, then concert night.\"",
+      "Swap \"Comfort night beef bone soup\" for \"Mira's unfinished ramyeon\".",
+      "Swap the house float for \"Derpy's melon soda\".",
+      "Add \"Golden\" as a gold honey tea heading in place of \"From the Bar\"."
+    ],
+    "flat": true,
+    "done": false
+  }
+}

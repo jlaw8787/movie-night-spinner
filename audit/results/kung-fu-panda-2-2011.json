@@ -1,0 +1,52 @@
+{
+  "id": "Kung Fu Panda 2 (2011)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the buns when Po tries to fit them all in his mouth.",
+      "where": "cue",
+      "verdict": "unsure",
+      "why": "No scene of Po cramming buns into his mouth turns up in the plot, quote page or Fandom page. Printed as the kitchen tip on face 1 and as the data cue.",
+      "source": "https://en.wikipedia.org/wiki/Kung_Fu_Panda_2",
+      "fix": "Serve the buns when Mr. Ping tells Po he found him in a crate of radishes.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Mr Ping swears there's no secret ingredient.",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The no secret ingredient gag belongs to the first film. The noodle shop page for KFP2 only says the soup has a secret ingredient known to Po and his family.",
+      "source": "https://kungfupanda.fandom.com/wiki/Noodle_shop",
+      "fix": "Mr Ping's secret ingredient, no peeking.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "Mr. Ping's shop is the right place and the radish crate and Shen's fireworks are good picks, but a couple of jokes lean on the first film.",
+    "missing": [
+      "Mr. Ping's poster: \"My son saved China: buy one dumpling, get one free\"",
+      "Po's dream where a radish beats him up",
+      "The Soothsayer's acupuncture medicine",
+      "Mantis: \"Fear the bug!\"",
+      "Master Thundering Rhino and the first cannon shot",
+      "Po finding inner peace on the river"
+    ],
+    "ideas": [
+      "Swap \"Silken tofu with chilli\" for \"Buy one dumpling, get one free\", from Mr. Ping's poster.",
+      "Swap the cue for the radish crate reveal.",
+      "Rename \"Mr Ping's noodles\" note to \"Dragon Warrior size\".",
+      "Add \"Soothsayer's hot medicine\" as a chilli tea drink."
+    ],
+    "flat": false,
+    "done": false
+  }
+}
