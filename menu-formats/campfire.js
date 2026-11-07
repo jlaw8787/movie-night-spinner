@@ -281,14 +281,14 @@ function prop(p,ty,C,P,x,y,w,h){
     ${L.map(l=>`<div data-fs="16" data-min="14" data-drop style="font:${ty.bw} 16px ${ty.body};line-height:1.2">${T(l)}</div>`).join("")}
   </div>`;
 }
-function menuHTML(cs,era,ty,C,tone){
+function menuHTML(cs,era,ty,C,tone,LBL){LBL=LBL||LABEL;
   const rule=/warm|tender|playful/.test(tone)?"dashed":"solid";
   /* audit, 7 Nov: a heading never ends a column on its own ("Mess Hall Mains" sat at the foot of the left column, its dishes in the right):
      it is held with its first dish */
   const item=(k,it,i)=>`<div ${i?`data-drop="${i+1}"`:""} style="break-inside:avoid"><div style="display:flex;gap:14px;align-items:baseline;margin-top:5px"><span data-fs="26" data-min="19" style="flex:1;font:${ty.dishW} 26px ${ty.dish};line-height:1.12">${T(it.n)}</span><span data-fs="26" data-min="19" style="font:${ty.dishW} 26px ${ty.dish};white-space:nowrap;color:${C.ink}">${price(k,i,era)}</span></div>
       ${it.note?`<div data-note data-fs="20" data-min="16" style="font:${ty.bw} 20px ${ty.body};line-height:1.22;opacity:.86">${T(it.note.charAt(0).toUpperCase()+it.note.slice(1))}</div>`:""}</div>`;
   return["s","m","w","d"].filter(k=>cs[k].length).map(k=>`<div style="margin:0 0 10px">
-    <div style="break-inside:avoid"><div style="display:flex;align-items:center;gap:12px"><span data-fs="22" data-min="16" style="font:${ty.cw} 22px ${ty.caps};letter-spacing:.14em;text-transform:uppercase;color:${C.ink};white-space:nowrap">${LABEL[k]}</span><span style="flex:1;border-top:2px ${rule} ${C.ink};opacity:.6"></span></div>${item(k,cs[k][0],0)}</div>
+    <div style="break-inside:avoid"><div style="display:flex;align-items:center;gap:12px"><span data-fs="22" data-min="16" style="font:${ty.cw} 22px ${ty.caps};letter-spacing:.14em;text-transform:uppercase;color:${C.ink};white-space:nowrap">${esc(LBL[k])}</span><span style="flex:1;border-top:2px ${rule} ${C.ink};opacity:.6"></span></div>${item(k,cs[k][0],0)}</div>
     ${cs[k].slice(1).map((it,i)=>item(k,it,i+1)).join("")}
   </div>`).join("");
 }
@@ -297,7 +297,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const era=eraOf(ctx.era),tone=toneOf(ctx.tone),E=ERA[era],TN=TONE[tone];
   const ty=TYPE[E.g],P=PAPER[E.g];
   const C=inks(ctx.palette,P.bg,"#7a2e1c");
-  const fam=isFamily(ctx.f),cs=courses(ctx.menu,fam),F=flav(ctx,FB),V=VOICE[tone];
+  const fam=isFamily(ctx.f),cs=courses(ctx.menu,fam),F=flav(ctx,FB),LB=(ctx.flavour&&ctx.flavour.labels)||{},/* 7 Nov: a film can name its own headings in film-flavour "labels" (s, m, w, d, t, n, b, call), used only where set */V=Object.assign({},VOICE[tone],LB),LBL=Object.assign({},LABEL,LB);
   const ph=heroes(ctx),year=String(ctx.f.year||"");
   const seed=[...String(ctx.f.title||"x")].reduce((a,c)=>a+c.charCodeAt(0),0)%97;
   const filt=`${E.photo} ${TN.photo}`;
@@ -338,9 +338,9 @@ window.MENU_FORMATS[ID]=ctx=>{
     <div style="position:absolute;right:40px;top:36px;padding:6px 14px;border:3px solid ${C.ink};border-radius:4px;color:${C.ink};font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase;text-align:center;transform:rotate(${stampRot}deg);opacity:.88;line-height:1.25">Card no.<br><span style="font:${ty.dw} 28px ${ty.disp};letter-spacing:.04em">${T(F.number)}</span></div>
     ${photo(ph.second,{poster:ph.isPoster,mat:"#2a2016",x:20,y:112,w:632,h:288,pad:8,print:P.print,rot:-TN.tilt*.4,filter:filt,half:E.half,sheen:E.sheen,pos:"center 40%",flex:1,
       extra:`<div style="position:absolute;left:12px;bottom:12px;padding:5px 12px;background:${P.print};color:#2a2219;font:${ty.cw} 16px ${ty.caps};letter-spacing:.16em;text-transform:uppercase">Tonight's feature, ${esc(year)}</div>`})}
-    <div data-box data-menu="418,378" style="position:absolute;left:38px;top:418px;width:596px;height:378px;overflow:hidden;mix-blend-mode:multiply;column-gap:24px">${menuHTML(cs,era,ty,C,tone)}</div>
+    <div data-box data-menu="418,378" style="position:absolute;left:38px;top:418px;width:596px;height:378px;overflow:hidden;mix-blend-mode:multiply;column-gap:24px">${menuHTML(cs,era,ty,C,tone,LBL)}</div>
     <div data-box style="position:absolute;left:38px;top:808px;width:370px;height:86px;overflow:hidden;mix-blend-mode:multiply">
-      <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink}">Bugle call</div>
+      <div data-fs="16" data-min="14" style="font:${ty.cw} 16px ${ty.caps};letter-spacing:.18em;text-transform:uppercase;color:${C.ink}">${esc(LB.call||"Bugle call")}</div>
       <div data-fs="18" data-min="14" style="font:${ty.bw} 18px ${ty.body};line-height:1.25;margin-top:2px">${T(ctx.f.P||"Serve the mains when the campfire is lit.")}</div>
     </div>
     ${prop(F.prop,ty,C,P,428,804,210,92)}

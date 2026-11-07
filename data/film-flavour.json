@@ -270,8 +270,8 @@
   "number": ""
  },
  "Spider-Man: Into the Spider-Verse (2018)": {
-  "venue": "Visions Academy Lunchroom",
-  "sign": "Brooklyn Visions Academy",
+  "venue": "Brooklyn Corner Newsstand",
+  "sign": "Spider-Man comics, every issue",
   "note": {
    "text": "Don't do it like me. Do it like you.",
    "by": "Peter B. Parker",
@@ -764,8 +764,8 @@
   "number": ""
  },
  "Avengers: Infinity War (2018)": {
-  "venue": "Wakanda Border Camp",
-  "sign": "Wakanda Field Camp",
+  "venue": "The Benatar Galley",
+  "sign": "Guardians of the Galaxy, all aboard",
   "note": {
    "text": "Kid, you stay in the ship. Eat something. That's an order, and I mean it.",
    "by": "Tony Stark",
@@ -3110,7 +3110,7 @@
  },
  "Finding Dory (2016)": {
   "venue": "Marine Life Institute",
-  "sign": "Marine Life Institute, Open Ocean",
+  "sign": "Open Ocean exhibit, Morro Bay, California",
   "note": {
    "text": "A quiet tank, no crowds, no ocean. That is all I want tonight. Pass the shrimp and nobody poke me.",
    "by": "Hank",
@@ -4425,8 +4425,8 @@
   "number": "17"
  },
  "Enchanted (2007)": {
-  "venue": "Andalasia Tree House",
-  "sign": "From Andalasia With Love",
+  "venue": "The King and Queen's Ball",
+  "sign": "Manhattan, tonight. Costumes, please.",
   "note": {
    "text": "I cleaned the whole apartment with help from the city animals, even the cockroaches. Robert still looks worried.",
    "by": "Giselle",
@@ -9482,8 +9482,8 @@
   "number": "1963"
  },
  "School of Rock (2003)": {
-  "venue": "Horace Green Prep",
-  "sign": "Horace Green Prep School",
+  "venue": "The Battle of the Bands",
+  "sign": "Horace Green's own School of Rock",
   "note": {
    "text": "The School of Rock. And we shall teach rock 'n' roll to the world.",
    "by": "Dewey Finn",
@@ -12058,7 +12058,8 @@
   "sign": "St Bernadette's Nativity",
   "note": {
    "text": "I'm very good with children, and better with snacks. Party pies for the class.",
-   "by": "Mr. Poppy"
+   "by": "Mr. Poppy",
+   "kind": "note"
   },
   "winks": [
    "Mr. Poppy, the teaching assistant",
@@ -13835,8 +13836,8 @@
   "number": "1966"
  },
  "Phar Lap (1983)": {
-  "venue": "Randwick Stables",
-  "sign": "RANDWICK STABLES, SYDNEY",
+  "venue": "The Randwick Hotel",
+  "sign": "Counter meals. Cup sweep on the bar.",
   "note": {
    "text": "He's had his oats, Harry. Now go and get yours, then we'll talk about the Cup.",
    "by": "Tommy Woodcock"
@@ -16287,10 +16288,11 @@
  },
  "Return of the Jedi (1983)": {
   "venue": "Bright Tree Village",
-  "sign": "Ewok Feast Tonight",
+  "sign": "A feast for the golden one",
   "note": {
-   "text": "Shield's down and the Ewoks are cooking. Sit, eat, and pass the roast along.",
-   "by": "Leia Organa"
+   "text": "I am a protocol droid, not a god. They seat me at the head of the table regardless.",
+   "by": "C-3PO",
+   "kind": "note"
   },
   "winks": [
    "Ewoks feasting in Bright Tree Village",
@@ -16332,7 +16334,17 @@
     "Eywa watches"
    ]
   },
-  "number": ""
+  "number": "",
+  "labels": {
+   "s": "Forest Snacks",
+   "m": "From the Fire",
+   "w": "Sweet Things",
+   "d": "Gourds and Cups",
+   "t": "The Clan Table",
+   "n": "Spoken at Hometree",
+   "b": "Learned in the forest",
+   "call": "Clan call"
+  }
  },
  "Dune (2021)": {
   "venue": "Arrakeen Residence",
@@ -16435,8 +16447,8 @@
   "number": "66"
  },
  "Rogue One: A Star Wars Story (2016)": {
-  "venue": "Yavin 4 Rebel Mess",
-  "sign": "Plans Served Hot",
+  "venue": "Rogue One Galley",
+  "sign": "Stolen Imperial shuttle, call sign Rogue One",
   "note": {
    "text": "I'm one with the Force, and the Force is with me.",
    "by": "Chirrut Imwe",
@@ -16880,8 +16892,8 @@
   "number": ""
  },
  "Crouching Tiger, Hidden Dragon (2000)": {
-  "venue": "Sir Te's Courtyard House",
-  "sign": "Tea Served at Dusk",
+  "venue": "The Roadside Inn",
+  "sign": "Tea, rice and no swords at the table",
   "note": {
    "text": "To repress one's feelings only makes them stronger.",
    "by": "Shu Lien",
@@ -16902,7 +16914,8 @@
     "Sword left at the door"
    ]
   },
-  "number": ""
+  "number": "",
+  "coin": "taels"
  },
  "Everything Everywhere All at Once (2022)": {
   "venue": "Wang Laundromat",

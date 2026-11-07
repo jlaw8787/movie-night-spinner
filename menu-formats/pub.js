@@ -152,7 +152,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   /* ===== verandah fascia ===== */
   const FH=150;
   const vT=fitType(up(venue),W-120,86,E.dcw*(E.up?1.12:1),78,34,1.0,2);
-  const fasciaKick=`${E.kick}, ${E.est} ${year}`;
+  /* 7 Nov: a period film (number is a story year before release, Phar Lap 1930) gets a pub that already stood then */const sy=+String((fl&&fl.number)||"").replace(/\D/g,""),estY=sy>1800&&sy<+year?String(sy-60):year;const fasciaKick=`${E.kick}, ${E.est} ${estY}`;
   const fascia=`<div style="position:absolute;left:0;top:0;width:${W}px;height:${FH}px;background:linear-gradient(180deg,rgba(255,255,255,.14),transparent 30%,rgba(0,0,0,.2)),repeating-linear-gradient(180deg,transparent 0 42px,rgba(0,0,0,.14) 42px 44px,rgba(255,255,255,.08) 44px 46px),${grain(.12+.15*T.wear,lum(rgb(E.fascia))<.2,.6,true)},${E.fascia};border-bottom:10px solid ${E.frame};box-shadow:0 6px 14px rgba(0,0,0,.35);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:0 60px;box-sizing:border-box;text-align:center">
       <div style="font:${E.dw}${vT.z}px/1.0 ${disp};color:${E.fink};letter-spacing:${E.up?".03em":"0"};text-shadow:0 2px 0 ${rgba("#000",.18)}">${esc(up(venue))}</div>
       <div style="${caps(17,E.fink,.22)};margin-top:10px;opacity:.9">${esc(fasciaKick)}</div></div>`;
