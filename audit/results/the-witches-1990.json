@@ -1,0 +1,82 @@
+{
+  "id": "The Witches (1990)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the soup when Luke and his grandmother check into the seaside hotel.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "The soup comes at the end. Luke steals the potion and puts it in the cress soup for the witches' banquet. Checking in is an earlier scene. The cue is also printed on the card in the same words.",
+      "source": "https://en.wikipedia.org/wiki/The_Witches_(1990_film)",
+      "fix": "Serve the soup when Luke tips the potion into the witches' banquet soup.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Cornwall. RSPCC annual meeting. No mice.",
+      "where": "sign",
+      "verdict": "wrong",
+      "why": "The story is set at the Hotel Excelsior in Bournemouth. Cornwall (the Headland Hotel in Newquay) is only where the film was shot.",
+      "source": "https://en.wikipedia.org/wiki/The_Witches_(1990_film)",
+      "fix": "Bournemouth. RSPCC annual meeting. No mice.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Luke, eat your dinner and keep your mouse in your pocket. If a lady at the next table eats in her gloves, we leave.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Helga never says this and it is set in quote marks. It is an invented line. She does warn Luke that witches wear gloves to hide their claws.",
+      "source": "https://en.wikipedia.org/wiki/The_Witches_(1990_film)",
+      "fix": "Set it as an unquoted note: Helga's rule at the table, if a lady eats in her gloves, we leave.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Bruno ate three. Look what happened to him.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "Bruno does not turn into a mouse from eating anything on the menu. He is given the Formula 86 potion and later turns into a mouse in the meeting.",
+      "source": "https://en.wikipedia.org/wiki/The_Witches_(1990_film)",
+      "fix": "Bruno took the potion. Look what happened to him.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Bruno Jenkins and the chocolate bar.",
+      "where": "wink",
+      "verdict": "unsure",
+      "why": "Sources confirm Bruno was given the potion earlier but do not say how. The chocolate bar and the snake are the lure used on Luke in a separate scene.",
+      "source": "https://en.wikipedia.org/wiki/The_Witches_(1990_film)",
+      "fix": "Bruno Jenkins and the potion.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "Good hotel room service look with the Grand High Witch grinning from the banquet photo, but the cue, sign and quote are off and the best witch moments are missing.",
+    "missing": [
+      "The Grand High Witch peeling off her mask",
+      "Luke turned into a mouse",
+      "Helga's cigar",
+      "Erica trapped in the painting",
+      "Mr Stringer and the cleaver",
+      "The witches turned to mice at the banquet"
+    ],
+    "ideas": [
+      "Swap 'Mini Cornish pasties' for 'Bruno's chocolate bar' with the note 'Look what happened to him.'",
+      "Swap 'Hotel tea sandwiches' note for 'Cut off the crusts. Check for claws.'",
+      "Swap 'Formula 86 watercress soup' note for 'Keep a spare bowl for the witches.'",
+      "Swap \"Hotel Excelsior roast beef and Yorkshires\" note for \"Mr Stringer carves. Keep the cleaver away from the mice.\""
+    ],
+    "flat": true,
+    "done": false
+  }
+}

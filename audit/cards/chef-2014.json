@@ -1,0 +1,99 @@
+{
+ "id": "Chef (2014)",
+ "slug": "chef-2014",
+ "layout": "hand-built",
+ "title": "Chef",
+ "year": "2014",
+ "theme": "diner",
+ "tagline": "Cook what you love. Load up the truck.",
+ "about": "A top chef quits his restaurant after a viral meltdown and starts again with a food truck.",
+ "cue": "Serve the toasties when Carl makes his son a grilled cheese.",
+ "faces": [
+  [
+   "El Jefe",
+   "Cubanos",
+   "The road home",
+   "Miami, then New Orleans, then Austin, then LA. Percy posts every stop.",
+   "Today on the truck",
+   "Miami to LA",
+   "The truck",
+   "El Jefe Cubano",
+   "$7",
+   "Roast pork, ham, swiss, pickles, mustard. Pressed hot",
+   "For Percy",
+   "Grilled cheese",
+   "$5",
+   "Made for his son. Not to be served burnt. Ever",
+   "On the road",
+   "Beignets",
+   "$4",
+   "The New Orleans stop. Icing sugar everywhere",
+   "Aglio e olio",
+   "$9",
+   "What he cooks for Molly at midnight",
+   "Off the menu",
+   "Chocolate lava cake",
+   "$6",
+   "The one the critic hated. Done right this time",
+   "Showtime cue: Serve the toasties when Carl makes his son a grilled cheese.",
+   "Chalking up the board",
+   "The window, open for business",
+   "Carl teaching Percy the line"
+  ]
+ ],
+ "phone": "El JefeChefCook what you love. Load up the truck.Every recipe serves 4.\n    StartersMainsSweets\n    StartersGrilled cheeseMade for his son. Not to be served burnt. EverHow to make it8 slices of white bread60g butter, softened150g vintage cheddar, grated80g gruyere, grated30g parmesan, gratedButter the outside of each slice of bread.Fill four sandwiches with the cheddar, gruyere and a little parmesan.Cook slowly in a pan over low heat with a lid on, turning once, until the cheese pours. Cut on the diagonal.MainsEl Jefe CubanoRoast pork, ham, swiss, pickles, mustard. Pressed hotHow to make it1kg pork shoulder2 oranges, juiced2 limes, juiced4 garlic cloves, crushed1 tbsp dried oregano4 soft rolls150g leg ham150g Swiss cheese12 dill pickle slices2 tbsp yellow mustard40g butterRub the pork with the orange and lime juice, garlic, oregano and salt.Marinate overnight (included in cook time).Roast at 160°C for 4 hours until tender, then rest and slice.Layer the rolls with pork, ham, Swiss, pickles and mustard.Press and griddle in butter until crisp and the cheese melts.Aglio e olioWhat he cooks for Molly at midnightHow to make it500g spaghetti100ml extra virgin olive oil8 garlic cloves, thinly sliced1 tsp chilli flakes1 bunch parsley, chopped1 lemon40g parmesan, gratedsalt, to tasteThinly slice the garlic and chop the parsley. Bring a big pot of water to the boil and salt it well.Cook the spaghetti until just shy of al dente and keep 1 cup of the pasta water before draining.While the pasta cooks, warm the olive oil with the garlic and chilli flakes over low heat until the garlic is pale gold.Toss the spaghetti through the garlic oil with a splash of pasta water until glossy.Finish with the parsley, a squeeze of lemon and the parmesan.SweetsBeignetsThe New Orleans stop. Icing sugar everywhereHow to make it7g dried yeast1 tbsp caster sugar180ml full cream milk, warmed, for the dough1 egg30g butter, melted350g plain floursalt, a pinch1 L vegetable oil, for frying100g icing sugar60g ground coffee with chicory500ml full cream milk, for the caféMix the yeast, caster sugar and warm milk and stand for 10 minutes until foamy.Beat in the egg, melted butter, plain flour and a pinch of salt to a soft dough and knead for 3 minutes.Cover and leave to rise for 1 hour.Roll the dough 5mm thick and cut into 6cm squares. Heat the oil to 175°C and fry the squares for 1 minute a side until puffed and golden.Brew the ground coffee with chicory with 500ml water, heat the milk and mix half and half into four cups.Drain the beignets and bury them in the icing sugar. Serve with the chicory café.Chocolate lava cakeThe one the critic hated. Done right this timeHow to make it125g dark chocolate140g butter2 eggs2 egg yolks60g caster sugar30g plain flour500ml vanilla ice creamButter 4 ramekins and melt the chocolate with most of the butter over gentle heat.Whisk the eggs and yolks with the sugar until thick, combine with the chocolate and fold in the flour.Bake at 220°C until the edges are set and the centre runs.Turn out and serve with vanilla ice cream.\n    Showtime cueServe the toasties when Carl makes his son a grilled cheese.\n    Read the printed menu full size",
+ "cooked": [
+  "The grilled cheese for Percy",
+  "New Orleans beignets with chicory café",
+  "El Jefe Cubano",
+  "Carl's late-night aglio e olio",
+  "Chocolate lava cake"
+ ],
+ "dishes": [
+  {
+   "course": "S",
+   "name": "The grilled cheese for Percy",
+   "note": "the scene where Carl makes his son a toastie"
+  },
+  {
+   "course": "S",
+   "name": "Yuca fries",
+   "note": "the Miami food truck sides"
+  },
+  {
+   "course": "M",
+   "name": "El Jefe Cubano",
+   "note": "the truck's signature sandwich"
+  },
+  {
+   "course": "M",
+   "name": "Carl's late-night aglio e olio",
+   "note": "the late-night pasta Carl cooks for Molly"
+  },
+  {
+   "course": "W",
+   "name": "Chocolate lava cake",
+   "note": "the dessert the critic tears apart, done right"
+  },
+  {
+   "course": "W",
+   "name": "New Orleans beignets with chicory café",
+   "note": "the road trip stop in New Orleans"
+  },
+  {
+   "course": "K",
+   "name": "Food truck mojito",
+   "note": "a Miami summer on the truck"
+  }
+ ],
+ "venue": null,
+ "house": null,
+ "sources": {
+  "dishes_and_cue": "data/films.json (S starters, M mains, W sweets, K drinks: [name, note, method, shopping]; P cue, T tagline, D about)",
+  "dish_notes": "data/dish-notes.json",
+  "recipes": "data/recipes2/chef-2014.json (cooked versions)",
+  "venue_sign_note_winks": "data/film-flavour.json",
+  "house_lines": "data/film-house.json",
+  "layout": "formats.js (hand-built menu, search the film id) or movie-menus.js (editions)"
+ }
+}

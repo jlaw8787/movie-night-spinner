@@ -1,0 +1,52 @@
+{
+ "id": "Point Break (1991)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the meatball subs when Johnny brings back lunch for Pappas.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "I could not find a meatball sub or a lunch run for Pappas in any source I opened. The film does have Johnny and Pappas on a bank stakeout, and Johnny reporting that Bodhi ate lunch at Patrick's Roadhouse. The printed cue and data cue match.",
+   "source": "https://en.wikipedia.org/wiki/Point_Break",
+   "fix": "Serve the meatball subs when Johnny and Pappas start the bank stakeout.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Utah's meatball subs",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "Depends on the cue. No source I opened shows Utah and a meatball sub.",
+   "source": "https://en.wikipedia.org/wiki/Point_Break",
+   "fix": "Utah's stakeout subs",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Surf shack is right and the masks and storm are in, but the main dish rests on a scene I could not find.",
+  "missing": [
+   "Utah's gun shot in the air: 'I am an F-B-I agent!'",
+   "The Reagan mask foot chase",
+   "Bodhi's mask thrown at his feet in Australia: 'Lost something, brah?'",
+   "Utah throwing his badge into the sea",
+   "Skydiving jump with Utah after Bodhi",
+   "Patrick's Roadhouse lunch"
+  ],
+  "ideas": [
+   "Swap 'Utah's meatball subs' for 'Patrick's Roadhouse lunch plate'.",
+   "Swap the 'Banana split' for 'Reagan mask sundae'.",
+   "Swap 'Pineapple and ginger crush' note for 'Lost something, brah?'",
+   "Add a badge-shaped cookie to the margarita line."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

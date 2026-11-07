@@ -1,0 +1,52 @@
+{
+ "id": "Lethal Weapon 4 (1998)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Murtaugh hiding a family of immigrants on his boat.",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Murtaugh shelters the Hong family in his home, not on a boat. Triad men later find them at the Murtaugh house and set it on fire.",
+   "source": "https://en.wikipedia.org/wiki/Lethal_Weapon_4",
+   "fix": "Murtaugh hiding a family of immigrants in his own house.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Everybody on the boat is family now, so eat up. Even the new guy.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "The note works if read as a joke about Butters, but the family is sheltered in the house, not on a boat, so the setting does not match the film.",
+   "source": "https://en.wikipedia.org/wiki/Lethal_Weapon_4",
+   "fix": "Everybody in this house is family now, so eat up. Even the new guy.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "Good Chinese dishes and cast jokes, but the boat galley idea does not match where the film's family scenes happen.",
+  "missing": [
+   "Riggs pulling the fire alarm at Uncle Benny's restaurant",
+   "Laughing gas in the dentist's chair",
+   "Butters revealed as the father of Rianne's baby",
+   "Hong family hiding in the Murtaugh house",
+   "Riggs and Lorna's rabbi wedding and baby Billy",
+   "Jet Li's final pier fight"
+  ],
+  "ideas": [
+   "Rename 'Chinatown dumplings' to 'Sprinkler-soaked dumplings' for the fire alarm scene.",
+   "Swap the 'Murtaugh hiding... on his boat' footer for the house version.",
+   "Swap the 'Fortune cookies' note for 'Rabbi not included' as the wedding nod.",
+   "Replace the blueprint 'Deck 9' header with a Chinatown restaurant header."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

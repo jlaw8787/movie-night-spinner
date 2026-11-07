@@ -72,6 +72,27 @@ Every `wrong` or `unsure` line records:
 - the source link
 - a suggested line in the same voice and about the same length, so it fits the layout
 
+### The signed note on shared menus (Josh's call, 7 Nov)
+
+Most shared layouts print a note signed by a character (venue `note`, from data/film-flavour.json). Wave 1 found about two in three were made-up quotes. From now on, each note has a kind:
+
+- `"kind": "quote"`: the character's real line, read on an opened quote page and said by that character. One short line, 15 words or fewer. The menu prints it in quote marks.
+- `"kind": "note"`: a note the character writes, in their voice, true to the plot. The menu prints it with no quote marks, and a heading like "Overheard at the window" becomes "A note from the window".
+
+Never use song lyrics. For every note line that is wrong or unsure, add `fix_note` to the fact. It holds the replacement exactly as it should be stored. Change `by` when the real line belongs to someone else:
+
+```json
+"fix_note": {"text": "I'm into survival.", "by": "Nancy Thompson", "kind": "quote"}
+```
+
+When no real line fits, write a note instead:
+
+```json
+"fix_note": {"text": "Back by six. Don't fall asleep before then.", "by": "Nancy", "kind": "note"}
+```
+
+Keep the note within about 20 per cent of the current length, so it still fits its panel. `scripts/audit-apply-notes.cjs` writes fix_note into data/film-flavour.json and sets `done`.
+
 ## Vibe rules
 
 Score each of these from 1 to 5. Overall is the average of the five, to one decimal. A 5 means a fan would grin. A 3 means it's fine but generic. A 1 means it misses the film.

@@ -1,0 +1,42 @@
+{
+  "id": "An American Tail (1986)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Mama packed us bread and cheese for the trip. I am saving a bit for Papa when I find him.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Fievel never says this and it is set in quote marks. It is an invented line. The film's cheese joke is the song line about no cats in America and streets paved with cheese.",
+      "source": "https://en.wikipedia.org/wiki/An_American_Tail",
+      "fix": "Set it as an unquoted note from Fievel about cheese for Papa.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "Warm family table with food that suits the Mousekewitz story, but it undersells the cheese gag and the songs.",
+    "missing": [
+      "'There Are No Cats in America' (streets paved with cheese)",
+      "Somewhere Out There with Papa's fiddle",
+      "Fievel's hat",
+      "The Giant Mouse of Minsk",
+      "Tiger the cat",
+      "The Statue of Liberty arrival"
+    ],
+    "ideas": [
+      "Swap 'Papa's fiddle-night Russian tea' note for 'Somewhere out there.'",
+      "Swap 'Mama's cheese blintzes' note for 'Streets paved with cheese.'",
+      "Swap the note by Fievel for a short cheese line without quote marks.",
+      "Swap \"Shostka honey cake\" note for \"Baked in Shostka, before the cats came.\""
+    ],
+    "flat": false,
+    "done": false
+  }
+}

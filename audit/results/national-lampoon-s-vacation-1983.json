@@ -1,0 +1,42 @@
+{
+ "id": "National Lampoon's Vacation (1983)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "For the hotel pool, Clark. Keep your shorts on.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Clark swims naked in a motel pool after meeting the Ferrari driver at the motel bar. It is a motel, not a hotel.",
+   "source": "https://en.wikipedia.org/wiki/National_Lampoon%27s_Vacation",
+   "fix": "For the motel pool, Clark. Keep your shorts on.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "A fair road trip snack bar, but it plays safe and skips the funniest scenes.",
+  "missing": [
+   "Christie Brinkley's red Ferrari",
+   "Clark's naked swim in the motel pool",
+   "Walley World closed for repairs and Roy Walley's welcome",
+   "Marty Moose's recorded message",
+   "Cousin Eddie and Catherine in Coolidge, Kansas",
+   "Clark's BB gun and the security guard tour"
+  ],
+  "ideas": [
+   "Swap 'Walley World corn dogs' note for 'Sorry folks, closed for cleaning'.",
+   "Swap 'Classic Arnold Palmer' for 'Motel pool lemonade'.",
+   "Rename 'Kansas barbecue brisket bites' to 'Cousin Eddie's backyard brisket bites'.",
+   "Add the BB gun to the spotted strip."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

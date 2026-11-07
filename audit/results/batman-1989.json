@@ -1,0 +1,82 @@
+{
+ "id": "Batman (1989)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Gotham, tonight's parade is on me. Come hungry, and keep your hands off the hair gel.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Joker line. The quote page has lines such as 'If you've gotta go, go with a smile!' and 'Wait till they get a load of ME!' Printed in quote marks and signed The Joker.",
+   "source": "https://en.wikiquote.org/wiki/Batman_(1989_film)",
+   "fix": "If you've gotta go, go with a smile!",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Smilex in the hair gel and lipstick",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "The film spells it Smylex. Sources say the Joker poisons cosmetics and hygiene products but do not name hair gel.",
+   "source": "https://en.wikipedia.org/wiki/Batman_(1989_film)",
+   "fix": "Smylex in the cosmetics, laughing all the way",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Table 200 · for two · 11:30 pm",
+   "where": "prop",
+   "verdict": "unsure",
+   "why": "The Joker's bicentennial parade is confirmed, but no source gives a time of 11:30.",
+   "source": "https://en.wikipedia.org/wiki/Joker_(Jack_Napier)",
+   "fix": "Table 200 · for two · parade night",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Vicki's lunch table, before the Joker redecorates.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The Joker lures Vicki to the Flugelheim Museum and his men vandalise it. No source has a lunch scene.",
+   "source": "https://en.wikipedia.org/wiki/Batman_(1989_film)",
+   "fix": "Vicki at the Flugelheim, before the Joker redecorates.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Vicki's order, waiting on her mystery lunch date.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "No lunch scene or mystery date appears in the plot sources.",
+   "source": "https://en.wikipedia.org/wiki/Batman_(1989_film)",
+   "fix": "Vicki's order at the museum gala, before the paint flies.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 9,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Smart parade cue and a nice cafe, but it skips the Joker's best moments and leans on a lunch scene that is not in the film.",
+  "missing": [
+   "'Where does he get those wonderful toys?'",
+   "The Joker defacing the paintings in the museum (and sparing the Francis Bacon)",
+   "The Smylex TV ads",
+   "The long dinner table at Wayne Manor",
+   "Prince's songs at the parade",
+   "Batman and the Joker on the cathedral roof"
+  ],
+  "ideas": [
+   "Swap 'Gotham back-street Reuben' for a 'Francis Bacon bacon roll', note 'I kind of like this one. Leave it.'",
+   "Swap 'Smoked trout rillettes' note for 'Vicki and Bruce at the very long table.'",
+   "Swap 'Kir royale' note for 'Vicki at the gala, before the Joker arrives.'",
+   "Swap 'Gotham anniversary popcorn' note for 'Smylex not included.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

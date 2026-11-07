@@ -1,0 +1,72 @@
+{
+ "id": "Annie (1982)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Rooster, the orphans can have gruel again tonight. You and me are eating steak, on Warbucks's reward money.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "No quote page for the film was opened. The line is not in any plot summary, and it clashes with the story, where Rooster and Lily only scheme to claim the reward. Printed in quote marks and signed Miss Hannigan. Her song 'Little Girls' opens with 'little girls' and 'everywhere I turn'.",
+   "source": "https://www.allmusicals.com/lyrics/annie/littlegirls.htm",
+   "fix": "Little girls, everywhere I turn.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Grace orders it all for Annie's first night.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Grace brings Annie to the mansion, but no source describes a dinner or her ordering the food.",
+   "source": "https://en.wikipedia.org/wiki/Annie_(1982_film)",
+   "fix": "Grace sees to Annie's first night at the mansion.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Annie's order, a night at Radio City.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The Radio City trip to see Camille is confirmed, but no source shows Annie ordering a Shirley Temple.",
+   "source": "https://en.wikipedia.org/wiki/Annie_(1982_film)",
+   "fix": "Annie's night out with Daddy Warbucks at Radio City.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "The bodyguard's favourite, made the way he likes it.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Punjab is one of Warbucks's two bodyguards, but no source shows a lamb curry or his food tastes.",
+   "source": "https://en.wikipedia.org/wiki/Annie_(1982_film)",
+   "fix": "The bodyguard who flies in by helicopter when it counts.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Pretty hotel card and the right characters, but the food and lines could be from any rich house.",
+  "missing": [
+   "The 'Hard Knock Life' scrubbing",
+   "Miss Hannigan's bathtub gin",
+   "Rooster chasing Annie up the raised drawbridge",
+   "Punjab's helicopter rescue",
+   "Meeting President Roosevelt at the White House",
+   "Bert Healy and the radio reward announcement"
+  ],
+  "ideas": [
+   "Swap 'Mansion ginger beer and orange punch' note for 'Miss Hannigan brews hers in the bath. Ours is alcohol free.'",
+   "Swap 'Orphanage porridge cups' note for 'Hard knock life, with brown sugar.'",
+   "Swap 'Punjab's lamb curry' for 'Drawbridge dinner' with a note about the rescue.",
+   "Swap 'Mansion sundaes' note for 'Sent up to the White House for the Roosevelts.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

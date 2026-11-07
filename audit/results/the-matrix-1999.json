@@ -1,0 +1,62 @@
+{
+ "id": "The Matrix (1999)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "\"Choose a pill, Neo. Then choose a seat. The food here is plain, but it is real.\"",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Morpheus never says this. It is in quote marks and signed Morpheus, so it reads as a film line. His real pill speech is on the quote page.",
+   "source": "https://moviemistakes.com/film808/quotes",
+   "fix": "You take the red pill, you stay in Wonderland, and I show you how deep the rabbit hole goes.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "the noodle place Neo remembers from the old life",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Attached to Neo's street noodles. Neo has no noodle place memory in the film. The food memory belongs to Cypher and his steak, and the crew eat gruel.",
+   "source": "https://en.wikipedia.org/wiki/The_Matrix",
+   "fix": "the gruel Mouse calls Tasty Wheat, as seen on the ship",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Mouse swears it tastes like the real thing",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Attached to the Tasty Wheat honey oat clusters. Mouse's riff is that the machines never got food right, and the gruel is bland. This starter is in the data but not printed. I could not open a page with the scene, so this is from memory.",
+   "source": "",
+   "fix": "Mouse says the machines never got it right",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "A strong one, with Cypher's steak, the Oracle's cookies and the pill fizz all used well.",
+  "missing": [
+   "Tasty Wheat gruel and Mouse's riff on what it tastes like (the cue)",
+   "I know this steak doesn't exist, ignorance is bliss (Cypher and Agent Smith)",
+   "There is no spoon (the Oracle's waiting room)",
+   "I know kung fu (the training program)",
+   "Wake up, Neo, the Matrix has you (Neo's screen)",
+   "Dodging the bullets on the roof (the lobby and roof)"
+  ],
+  "ideas": [
+   "Swap the made up Morpheus note for his real red pill line.",
+   "Swap 'Neo's street noodles' for 'Mouse's Tasty Wheat, tastes like what you think it tastes like'.",
+   "Swap 'Steamed edamame with sea salt' note for a spoon gag with 'There is no spoon' printed under it.",
+   "Add 'Wake up, Neo' as a green rain line behind the title."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

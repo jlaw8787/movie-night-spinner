@@ -1,0 +1,62 @@
+{
+ "id": "Crocodile Dundee (1986)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Pull up a stool, mate. The tucker's good tonight and the croc stays outside.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Mick line. The Wikiquote page has 'That's not a knife.' / 'That's a knife.' and other lines, nothing like this. Printed in quote marks and signed Mick Dundee.",
+   "source": "https://en.wikiquote.org/wiki/Crocodile_Dundee",
+   "fix": "That's not a knife. That's a knife.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Mick's campfire bread, off the coals.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The plot sources show Mick in the bush but never making damper.",
+   "source": "https://en.wikipedia.org/wiki/Crocodile_Dundee",
+   "fix": "Bush bread, off the coals.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "What the drivers order at Walkabout Creek.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "No source shows drivers or lemon, lime and bitters at Walkabout Creek.",
+   "source": "https://en.wikipedia.org/wiki/Crocodile_Dundee",
+   "fix": "What the locals order at Walkabout Creek.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 5,
+  "moments": 3,
+  "food": 4,
+  "tone": 4,
+  "look": 5,
+  "overall": 4.2,
+  "verdict": "Great pub card and chalkboard, with Aussie food that fits, but it misses the best set pieces and prints the barra twice.",
+  "missing": [
+   "Witchetty grub and Sue's face",
+   "The 'love bite' scar",
+   "Mick scaring off the drunk kangaroo hunters",
+   "The hotel room with the bidet, the 'second dunny'",
+   "Mick walking across the heads of the crowd in the subway",
+   "The crocodile at the billabong"
+  ],
+  "ideas": [
+   "Remove the duplicate barra line ('Walkabout Creek barbecued barra' and 'Barbecued barra with lemon myrtle butter' are the same dish).",
+   "Swap 'Pork crackling' note for 'Not a witchetty grub, but close.'",
+   "Swap 'Garlic prawn skewers' for 'Love bite chilli prawns', note 'Scar not included.'",
+   "Swap 'Lemon, lime and bitters' note for 'It's for washing your backside, right?', Mick's bidet line, with 'No, it's a drink' as the reply."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

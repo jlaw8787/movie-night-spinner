@@ -1,0 +1,72 @@
+{
+ "id": "Spaceballs (1987)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "\"Save me the scraps under the table. I'll take them on the Winnebago for later.\"",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Barf never says this. It is in quote marks and signed Barf, so it reads as a film line. His signature line is about being a Mawg.",
+   "source": "https://en.wikipedia.org/wiki/Spaceballs",
+   "fix": "I'm a Mawg, half man, half dog. I'm my own best friend.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Skroob's combination / Same code as his luggage",
+   "where": "prop",
+   "verdict": "wrong",
+   "why": "The air shield combination belongs to King Roland, and Dark Helmet gets it out of him by threatening Vespa. Skroob only says it is the same as the combination on his luggage.",
+   "source": "https://en.wikipedia.org/wiki/Spaceballs",
+   "fix": "King Roland's combination / Same code as Skroob's luggage",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "President Skroob's air shield code",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Same mix up. It is King Roland's air shield code. The same line is printed in the footer crew notes.",
+   "source": "https://en.wikipedia.org/wiki/Spaceballs",
+   "fix": "King Roland's air shield code",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Yoghurt's snack mix",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "The character is spelled Yogurt in the film and credits. The card also prints Yoghurt in the footer and the winks, and the parfait uses the food spelling, which is fine.",
+   "source": "https://en.wikipedia.org/wiki/Spaceballs",
+   "fix": "Yogurt's snack mix",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "Pizza the Hutt and the Winnebago are in, but the blueprint style is too serious for a spoof.",
+  "missing": [
+   "Ludicrous speed (Spaceball One)",
+   "May the Schwartz be with you and Spaceballs the flamethrower (Yogurt)",
+   "Pizza the Hutt eating himself to death (his final scene)",
+   "Dark Helmet playing with his dolls and the plaid speed (the bridge)",
+   "Mr Radar and the sound of the radar (Spaceball One)",
+   "Dot Matrix and the Dinks (the desert)"
+  ],
+  "ideas": [
+   "Swap 'Yoghurt parfait' for 'Spaceballs the Flamethrower, a toasted marshmallow cone' with the Yogurt merchandise joke.",
+   "Swap the made up Barf note for his Mawg line.",
+   "Swap 'Perri-Air sparkling lime and mint cooler' for 'Perri-Air, the canned stuff'. It already has a name nod, so lean in.",
+   "Change the blueprint sheet colours to plaid lines to match Dark Helmet's ludicrous plaid."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "Dick Tracy (1990)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "His usual order, between radio calls.",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The plot summary read has no scene of Tracy eating his usual order. The cast list mentions a diner he visits, but no scene is described, so this is unconfirmed.",
+      "source": "https://en.wikipedia.org/wiki/Dick_Tracy_(1990_film)",
+      "fix": "Tess keeps it warm while the wrist radio calls him away.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "the Kid's diner on the corner",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "Nothing read puts the Kid at a diner. He is a street kid Tracy takes in and later adopts, who ends up with an honorary detective badge.",
+      "source": "https://spoilertown.com/dick-tracy-1990/",
+      "fix": "the Kid, Tracy's street kid sidekick",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "Breathless sings, Big Boy misquotes somebody famous.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "Breathless sings 'Sooner or Later' at the Club Ritz. The Big Boy lines found are 'What are you, some kind of comedian?' and the Girls' School line. Nothing says he misquotes anyone.",
+      "source": "https://spoilertown.com/dick-tracy-1990/",
+      "fix": "Breathless sings Sooner or Later, Big Boy watches from the front table.",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 3,
+    "overall": 3.2,
+    "verdict": "A smooth black and gold nightclub, but it plays it safe and ignores the comic strip colours and the best villains.",
+    "missing": [
+      "Breathless singing 'Sooner or Later' (Club Ritz)",
+      "Lips Manlis and the cement bath (Club Ritz)",
+      "Big Boy's mob summit to unite the bosses (Club Ritz)",
+      "The Blank's hidden face and the Breathless reveal",
+      "Tracy's proposal cut off by the wrist radio (ending)",
+      "The Kid's honorary detective badge (Dick Tracy Jr.)"
+    ],
+    "ideas": [
+      "Swap the note on 'Big Boy's spaghetti' for 'Served at the mob summit where Big Boy runs the room'.",
+      "Replace the 'Sidecar in a sugared coupe' note with 'Breathless sings Sooner or Later'.",
+      "Add a 'Cement bath' set pudding joke for Lips Manlis in place of 'Lemon meringue pie'.",
+      "Use the primary yellow, red and blue of the comic strip for the bar and badge colours instead of gold."
+    ],
+    "flat": true,
+    "done": false
+  }
+}

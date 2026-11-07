@@ -21,7 +21,7 @@ let HOUSE={};try{HOUSE=JSON.parse(fs.readFileSync(path.join(R,'data/film-house.j
  await p.waitForFunction(()=>typeof show==='function'&&typeof current!=='undefined'&&current);
  const ids=await p.evaluate(([N,NAMED])=>(NAMED.length?NAMED:N?FILMS.slice(0,N).map(f=>f.id):FILMS.map(f=>f.id)),[N,NAMED]);
  let n=0;
- for(const id of ids){const s=slug(id);
+ for(const id of ids){const s=slug(id);if(!process.env.FORCE&&fs.existsSync(path.join(OUT,s+'.json'))&&fs.existsSync(path.join(SHOT,s+'-0.jpg')))continue;/* reruns pick up where the last one stopped; FORCE=1 redoes all */
   const d=await p.evaluate(async id=>{const f=FILMS.find(x=>x.id===id);if(!f)return null;try{await ensureExact(f);await show(f,true)}catch(e){return null}await document.fonts.ready;
    {const t0=Date.now();while(Date.now()-t0<10000&&[...card.querySelectorAll('img')].some(i=>i.getAttribute('src')&&!i.complete))await new Promise(r=>setTimeout(r,150))}
    await new Promise(r=>setTimeout(r,1200));

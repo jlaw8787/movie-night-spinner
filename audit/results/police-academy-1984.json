@@ -1,0 +1,42 @@
+{
+ "id": "Police Academy (1984)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Hightower takes two, then flips Copeland's car.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Copeland's own car is wrecked in the driving lesson with Mahoney. Hightower later flips a police cruiser with Copeland inside.",
+   "source": "https://en.wikipedia.org/wiki/Police_Academy_(film)",
+   "fix": "Hightower takes two, then flips the cruiser with Copeland in it.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3,
+  "verdict": "Fits the academy canteen, but plays it safe and the poster looks flat on white.",
+  "missing": [
+   "Lassard's lectern and the hidden act during the graduation speech",
+   "Fackler's apple that starts the city riot",
+   "Copeland and Blankes tricked into the Blue Oyster bar (only used for the cue)",
+   "Jones's mouth sound effects (only a wink)",
+   "Tackleberry and his guns",
+   "Hightower flipping the cruiser"
+  ],
+  "ideas": [
+   "Swap 'Graduation cake' for 'Fackler's riot apple pie'.",
+   "Swap 'Mess hall cornbread' note for 'Lassard's dinner rolls, stretched'.",
+   "Add a lectern-shaped piece on the menu with 'Lassard's podium special'.",
+   "Replace the white poster with a dark navy background."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

@@ -1469,6 +1469,13 @@ function libPhotoPass(card,L,poster){
 }
 /* aim cropped scene photos at the faces in them, so a tight frame shows a face, not half of one.
    Runs straight after the faces are drawn, before any photo loads, so a format's own load-time trim takes the same aim */
+/* audit, 7 Nov (Josh's call): the signed note on a shared menu is the character's real line only when the data says so (note.kind "quote").
+   Every other note is something the character wrote: printed with no quote marks, and an "Overheard at the ..." heading reads "A note from the ..." */
+function libNoteKind(h,fl){const n=fl&&fl.note;if(!n||!n.text||n.kind==="quote")return h;
+  const e=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"),rx=s=>s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+  const head=String(n.text).trim().slice(0,18),alt=[head,e(head),e(head).replace(/&quot;/g,'"'),head.replace(/'/g,"&#39;")].filter((v,i,A)=>A.indexOf(v)===i).map(rx).join("|");
+  h=h.replace(new RegExp(`(["\u201c]|&quot;|&ldquo;|&#8220;)((?:${alt})[^<]*?)(["\u201d]|&quot;|&rdquo;|&#8221;)(?=\\s*(<|$))`,"g"),"$2");
+  return h.replace(/>(\s*)Overheard at the ([a-z]+(?: [a-z]+)?)(\s*)</gi,(m,a,w,b)=>`>${a}A note from the ${w}${b}<`)}
 function libAim(card,L){const foc=L&&L.focus;if(!foc)return;
   card.querySelectorAll(".fx-face img").forEach(i=>{if(i.dataset.trim==="1"&&i.dataset.aim)return;
     const m=(i.getAttribute("src")||"").match(/\/t\/p\/[^/]+(\/[^?#]+)/),f=m&&foc[m[1]];if(!f)return;
@@ -1750,7 +1757,7 @@ async function show(f,preferSig){
   if(f._lib&&await libLoad(f._lib.fmt)&&id===renderId){
     try{await Promise.race([Promise.resolve(window.MENU_FORMATS[f._lib.fmt].ready),new Promise(r=>setTimeout(r,4000))]);await document.fonts.ready;if(id!==renderId)return;
       const L=f._lib,r=window.MENU_FORMATS[L.fmt]({f:dietKeyF(f)?Object.assign(Object.create(Object.getPrototypeOf(f)),f,{T:dietText(f,f.T),P:dietCue(f,f.P),D:dietText(f,f.D)}):f,menu:libMenu(fullMenu(f,menu,L.fmt)),poster:LIB_POSTER_ON?lobbyPoster(f):null,stills:L.stills||[],logo:LIB_POSTER_ON?L.logo:null,palette:L.palette,flavour:dietDeep(f,L.flavour),era:L.era,tone:L.tone,img:(p,z="w1280")=>p?TMDB_IMG+z+p:""});
-      r.faces=window.priceTidy(r.faces.map(h=>libVary(h,f)),L.fmt);const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
+      r.faces=window.priceTidy(r.faces.map(h=>libNoteKind(libVary(h,f),L.flavour)),L.fmt);const sheet={w:r.w,h:r.h,faces:r.faces.map((_,i)=>"Page "+(i+1))};current.libSheet=sheet;
       styleCard(card,f);card.className="mcard fmt fmt-lib lib-"+L.fmt;card.style.transform="";card.innerHTML=fmtFaces(r.faces,sheet);dietStamp();
       {const z=fmtSheetSize(sheet);card.classList.add("fx-paper");card.style.width=z.w+"px";card.style.height=z.h+"px";card.dataset.w=z.w;card.dataset.h=z.h}
       try{libAim(card,L)}catch(e){}

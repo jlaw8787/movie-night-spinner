@@ -1,0 +1,42 @@
+{
+  "id": "Honey, I Shrunk the Kids (1989)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Big Russ is mowing. Drink fast.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "The lawn mower scene is Nick's friend Tommy mowing the lawn. Big Russ is off on a cancelled fishing trip.",
+      "source": "https://en.wikipedia.org/wiki/Honey,_I_Shrunk_the_Kids",
+      "fix": "Tommy is mowing. Drink fast.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 14,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 3,
+    "look": 3,
+    "overall": 3.6,
+    "verdict": "A fun backyard camp with ants, Lego and the sprinkler, held back by the generic camp tape styling.",
+    "missing": [
+      "Nick falling into the Cheerios bowl (the kitchen)",
+      "Antie lured with an Oatmeal Creme Pie crumb (the yard)",
+      "Amy and Little Russ's first kiss in the Lego (the Lego house)",
+      "Escaping through the earthworm tunnel (the lawn)",
+      "Quark eating the enlarged dog biscuit (the finale)",
+      "Wayne sweeping the kids into a dustpan (the attic)"
+    ],
+    "ideas": [
+      "Swap 'Giant puffed rice cereal ring' for 'Cheerios bowl' with a note about Wayne almost eating Nick.",
+      "Replace the 'Giant cream cookie' note with 'The Oatmeal Creme Pie that lured Antie'.",
+      "Rename 'Iced chocolate milk' note to mention Tommy and the mower.",
+      "Add 'Dustpan dinner' to the lab pass in place of 'Size: very small'."
+    ],
+    "flat": false,
+    "done": false
+  }
+}

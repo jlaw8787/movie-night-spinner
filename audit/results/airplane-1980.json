@@ -1,0 +1,72 @@
+{
+ "id": "Airplane! (1980)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I'd go easy on dinner tonight. The chicken looks safe, but I'm keeping an eye on anyone who ordered seafood.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Dr Rumack line. No quote page for the film was opened, and nothing in the plot sources matches. Rumack is the one who says 'I am serious. And don't call me Shirley.' (quoted on Wikipedia). Printed in quote marks and signed Dr Rumack.",
+   "source": "https://en.wikipedia.org/wiki/Airplane!",
+   "fix": "I am serious. And don't call me Shirley.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Meal: fish or chicken",
+   "where": "prop",
+   "verdict": "unsure",
+   "why": "Wikipedia says passengers choose steak or fish. The menu dishes already say 'The steak, not the fish', so the ticket and Rumack note disagree with them.",
+   "source": "https://en.wikipedia.org/wiki/Airplane!",
+   "fix": "Meal: steak or fish",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Fish or chicken, and why you chose wrong",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "Same issue as the ticket line. The sources say the choice was steak or fish, and the fish caused the poisoning.",
+   "source": "https://en.wikipedia.org/wiki/Airplane!",
+   "fix": "Steak or fish, and why you chose wrong",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Ted Striker's drink, mostly on his face.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Ted splashes his drinks everywhere but his mouth, but no source names the drink, so 'Scotch and soda' is not confirmed.",
+   "source": "https://en.wikipedia.org/wiki/Airplane!",
+   "fix": "Ted Striker's drinking problem, mostly down his front.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 9,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Looks like a real airline, but the menu plays it straight where the film never stops joking.",
+  "missing": [
+   "'Looks like I picked the wrong week to quit...' (McCroskey)",
+   "Otto's inflatable partner at the end",
+   "Jive-talking passengers",
+   "Johnny asking the kid about gladiator movies",
+   "Ted's long boring story that puts passengers to sleep",
+   "Rex Kramer talking Ted down over the radio"
+  ],
+  "ideas": [
+   "Rename 'Airline peanuts' to 'Wrong week to quit peanuts' with the note 'Looks like I picked the wrong week to quit...'",
+   "Swap 'Cheese, grape and onion picks' for 'Otto's inflatable nibbles' with a note about Otto's date.",
+   "Swap 'Just-in-case beef lasagne' note for 'Ordered by everyone who watched the fish go round.'",
+   "Change the ticket stub to 'Meal: steak or fish' and use the real Rumack line on the card."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

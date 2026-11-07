@@ -1,0 +1,72 @@
+{
+  "id": "Mickey Blue Eyes (1999)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the mains when Michael tries to do the Kansas City accent.",
+      "where": "cue",
+      "verdict": "unsure",
+      "why": "Michael has to play a gangster called Kansas City Little Big Mickey Blue Eyes, but the sources do not describe a Kansas City accent scene.",
+      "source": "https://en.wikipedia.org/wiki/Mickey_Blue_Eyes",
+      "fix": "Serve the mains when Michael starts playing Mickey Blue Eyes.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Vito’s",
+      "where": "venue",
+      "verdict": "unsure",
+      "why": "Vito Graziosi is the mob boss in the film. Sources give no restaurant called Vito's and describe Gina's dad as the restaurateur.",
+      "source": "https://en.wikipedia.org/wiki/Mickey_Blue_Eyes",
+      "fix": "Vitale's",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Madonn’",
+      "where": "prop",
+      "verdict": "unsure",
+      "why": "No source describes a Madonn' lesson or a numbered pronunciation card in the film.",
+      "source": "https://en.wikipedia.org/wiki/Mickey_Blue_Eyes",
+      "fix": "How to say it: Madonn'",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Still life with clams. Oil on canvas, lots of oil. All for sale. Do not laugh.",
+      "where": "caption",
+      "verdict": "unsure",
+      "why": "Michael works at an auction house, but no source mentions Johnny painting a clam still life.",
+      "source": "https://en.wikipedia.org/wiki/Mickey_Blue_Eyes",
+      "fix": "Lot 1, a very bad painting. All for sale.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 6,
+  "vibe": {
+    "world": 3,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "Handsome Little Italy menu with decent food, but the details lean on guesses and the film's own jokes are thin.",
+    "missing": [
+      "Michael's wire at the wedding",
+      "Gina's warning shot that ricochets",
+      "The staged execution at the wedding",
+      "The auction house money scam",
+      "Mickey Blue Eyes in front of the family",
+      "Frank and Vito at the table"
+    ],
+    "ideas": [
+      "Swap 'Carafe of red' note for 'Pour for the table, then pretend you're from Kansas City.'",
+      "Swap 'Tiramisu' note for 'Wire not included.'",
+      "Rename 'Vito's' to 'Vitale's' to match Gina's dad.",
+      "Swap the clam still life for an auction lot from Cromwell's."
+    ],
+    "flat": true,
+    "done": false
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "Inside Man (2006)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Best sirloin below Canal. Keep the receipts, fellas.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Frazier never says this and it is set in quote marks. It is an invented line.",
+      "source": "https://en.wikipedia.org/wiki/Inside_Man",
+      "fix": "Set it as an unquoted catering memo: Keep the receipts.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Frazier's lunch on the street",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The film has the negotiator and police outside the bank but no source mentions Frazier eating knishes.",
+      "source": "https://en.wikipedia.org/wiki/Inside_Man",
+      "fix": "A knish from the cart outside the bank",
+      "printed": false,
+      "done": false
+    },
+    {
+      "text": "lunch for the cops on the barricade",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "Plot says police sent pizzas to the bank. No source mentions halal cart chicken and rice for cops.",
+      "source": "https://en.wikipedia.org/wiki/Inside_Man",
+      "fix": "lunch for the cops at the command post",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 8,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "A clean New York deli menu with box No. 392 as a nice nod, but the heist itself feels a step away.",
+    "missing": [
+      "Pizzas with bugs in the boxes",
+      "Dalton Russell's opening monologue",
+      "Painter overalls and masks on the hostages",
+      "The fake wall",
+      "Follow the ring",
+      "Albanian propaganda on the bugs"
+    ],
+    "ideas": [
+      "Swap 'Party pizzettes' note for 'Delivered with a bug in the box.'",
+      "Swap 'Italian combo' note for 'Painters' overalls optional.'",
+      "Swap the quote by Frazier for 'I'll only say this once.' signed Dalton Russell.",
+      "Add the hostages' matching overalls to the catering slip."
+    ],
+    "flat": true,
+    "done": false
+  }
+}

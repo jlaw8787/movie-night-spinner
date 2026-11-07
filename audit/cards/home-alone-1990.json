@@ -1,0 +1,121 @@
+{
+ "id": "Home Alone (1990)",
+ "slug": "home-alone-1990",
+ "layout": "hand-built",
+ "title": "Home Alone",
+ "year": "1990",
+ "theme": "xmas",
+ "tagline": "Home by himself. Pizza all to himself.",
+ "about": "An eight-year-old left behind at Christmas defends his house from two burglars.",
+ "cue": "Serve the pizza when the delivery guy turns up at the door.",
+ "faces": [
+  [
+   "Tonight's movie",
+   "Little Nero's",
+   "DELIVERY ORDER",
+   "NAME",
+   "McCallister",
+   "DELIVER TO",
+   "671 Lincoln Ave",
+   "SUBURB",
+   "Winnetka",
+   "1 LG CHEESE",
+   "$11.80",
+   "Paid $12 through the dog door. Tip included.",
+   "Thank you, and merry Christmas",
+   "HOT TO YOUR DOOR",
+   "PIZZA",
+   "No fiddlin' around!",
+   "PIES",
+   "Large cheese pizza",
+   "11.80",
+   "Plain cheese, cut in triangles",
+   "Buzz ate the last plain cheese. Not this time.",
+   "SMALL",
+   "7.50",
+   "MEDIUM",
+   "9.50",
+   "LARGE",
+   "Extra cheese 1.00 · Plain cheese always on",
+   "DRINKS",
+   "Big glass of milk",
+   "0.75",
+   "Ice cold, full cream",
+   "Mind the plane tickets",
+   "Fuller's cola",
+   "1.25",
+   "Big glass, lots of ice",
+   "Easy on the refills",
+   "KEVIN'S NIGHT IN",
+   "Mac and cheese dinner",
+   "3.50",
+   "The TV dinner. Cheddar sauce, crumb on top",
+   "Heated up all by himself",
+   "The giant sundae",
+   "2.95",
+   "Two ice creams, hot fudge, the lot",
+   "Built in front of a gangster film",
+   "Kevin's dinner at the big table, all by himself",
+   "SHOWTIME CUE",
+   "Serve the pizza when the delivery guy turns up at the door.",
+   "WINNETKA AND THE NORTH SHORE",
+   "OPEN CHRISTMAS WEEK",
+   "CALL AHEAD"
+  ]
+ ],
+ "phone": "Little Nero'sHome AlonePay at the door.Pass the pizza.Every recipe serves 4.\n    StartersMainsSweetsDrinks\n    StartersLarge cheese pizzaPlain cheese, cut in trianglesBuzz ate the last plain cheese. Not this time.How to make it400g tin crushed tomatoes1 garlic clove, crushed1 tsp dried oregano500g pizza dough250g mozzarella, gratedSimmer the tomatoes with the garlic and oregano for 10 minutes and cool slightly.Stretch the dough thin on a tray and spread with the sauce, then cover with mozzarella.Bake on a hot tray at the oven's highest heat until bubbling.Cut into small squares.MainsMac and cheese dinnerThe TV dinner. Cheddar sauce, crumb on topHeated up all by himselfHow to make it400g macaroni50g butter3 tbsp plain flour750ml full cream milk250g vintage cheddar, grated1 tsp Dijon mustard50g breadcrumbsCook the macaroni in boiling salted water 2 minutes short of the packet time and drain.Melt the butter, stir in the flour, then whisk in the milk until thick.Stir in the cheddar and mustard, then fold through the macaroni.Tip into a baking dish and top with breadcrumbs.Bake at 200°C until golden and bubbling.SweetsThe giant sundaeTwo ice creams, hot fudge, the lotBuilt in front of a gangster filmHow to make it1 L vanilla ice cream1 L chocolate ice cream150g dark chocolate, chopped300ml thickened cream100g mini marshmallows80g roasted peanuts4 tbsp sprinkles4 maraschino cherriesTake the vanilla and chocolate ice cream out of the freezer to soften for 10 minutes.Melt the dark chocolate with 150ml of the thickened cream over low heat, stirring, for hot fudge.Whip the rest of the cream to soft peaks.Chop the roasted peanuts and put them, the mini marshmallows, sprinkles and maraschino cherries in small bowls.Set everything out with big bowls and let everyone build their own sundae.DrinksBig glass of milkIce cold, full creamMind the plane ticketsHow to make it600ml cold full cream milk1 L chocolate ice cream4 tbsp malted milk powder5 tbsp chocolate syrup150ml thickened cream, whipped4 cocktail cherriesBlend the milk, six scoops of ice cream, malted milk powder and some of the chocolate syrup for 30 seconds until thick.Drizzle chocolate syrup inside tall glasses, pour in the shake and top with whipped cream and a cherry.Fuller's colaBig glass, lots of iceEasy on the refillsHow to make it1.3 L cola1 lemon1 bag iceChill the cola in the fridge overnight, or at least 4 hours.Slice the lemon and fill four tall glasses with ice, dropping a lemon slice into each.Pour the cola and go easy on the refills.\n    Showtime cueServe the pizza when the delivery guy turns up at the door.\n    Read the printed menu full size",
+ "cooked": [
+  "Cheese pizza bites",
+  "Kevin's mac and cheese",
+  "Kevin's sundae bar",
+  "Kevin's chocolate malted milkshake",
+  "Fuller's cola"
+ ],
+ "dishes": [
+  {
+   "course": "S",
+   "name": "Cheese pizza bites",
+   "note": "the pizza Kevin orders on his first night alone"
+  },
+  {
+   "course": "S",
+   "name": "Booby-trap paint can popcorn",
+   "note": "the paint cans swinging down the stairs"
+  },
+  {
+   "course": "M",
+   "name": "Kevin's mac and cheese",
+   "note": "the TV dinner he heats up all by himself"
+  },
+  {
+   "course": "M",
+   "name": "McCallister Christmas ham",
+   "note": "the family Christmas Kevin has the house to himself for"
+  },
+  {
+   "course": "W",
+   "name": "Christmas cookies",
+   "note": "the cookies left out for the house"
+  },
+  {
+   "course": "W",
+   "name": "Kevin's sundae bar",
+   "note": "the giant sundae he builds watching a gangster film"
+  },
+  {
+   "course": "K",
+   "name": "Kevin's chocolate malted milkshake",
+   "note": "a treat for his night in front of the TV"
+  }
+ ],
+ "venue": null,
+ "house": null,
+ "sources": {
+  "dishes_and_cue": "data/films.json (S starters, M mains, W sweets, K drinks: [name, note, method, shopping]; P cue, T tagline, D about)",
+  "dish_notes": "data/dish-notes.json",
+  "recipes": "data/recipes2/home-alone-1990.json (cooked versions)",
+  "venue_sign_note_winks": "data/film-flavour.json",
+  "house_lines": "data/film-house.json",
+  "layout": "formats.js (hand-built menu, search the film id) or movie-menus.js (editions)"
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "id": "Star Wars (1977)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the blue milk at the Lars homestead breakfast table.",
+   "where": "cue-printed",
+   "verdict": "unsure",
+   "why": "The blue milk scene is Luke, Owen and Beru at the table before the twin sunset, which reads as the evening meal rather than breakfast. The plot page I read was vague and called it dinner or breakfast, so I could not settle it. The same word appears in the tagline and the data cue.",
+   "source": "https://starwars.archivum.wiki/article/Star_Wars:_Episode_IV_A_New_Hope",
+   "fix": "Serve the blue milk at the Lars homestead dinner table.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Blue milk with breakfast.",
+   "where": "tagline",
+   "verdict": "unsure",
+   "why": "Same breakfast question as the cue. The tagline should match the cue once that is settled.",
+   "source": "https://starwars.archivum.wiki/article/Star_Wars:_Episode_IV_A_New_Hope",
+   "fix": "Blue milk with dinner.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "\"I'll eat in the cockpit, thanks. Chewie gets the leftovers, and he always wants the leftovers.\"",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Han never says this. It is in quote marks and signed Han Solo, so it reads as a film line. A real Han line from the 1977 film is about hokey religions and blasters. I could not open a quote page for this film, so this fix is from memory.",
+   "source": "",
+   "fix": "Hokey religions and ancient weapons are no match for a good blaster at your side, kid.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.6,
+  "verdict": "The cantina bar tab fits and the blue milk pudding is a fan pleaser, but the page looks like a plain dark pub.",
+  "missing": [
+   "Luke drinking blue milk at the Lars table (the cue)",
+   "Greedo and Han shot first (the cantina)",
+   "Hokey religions and ancient weapons (Han on the Falcon)",
+   "The cantina band playing (Mos Eisley)",
+   "Chewie, we're home (the Falcon)",
+   "The Kessel Run in less than twelve parsecs (Han in the cantina)"
+  ],
+  "ideas": [
+   "Swap the made up Han note for his real hokey religions line.",
+   "Swap 'Death Star meatballs' for 'Kessel Run chilli, less than twelve parsecs'.",
+   "Swap 'Mos Eisley cantina smoky snack mix' for 'Greedo's last supper nuts, Han shot first'.",
+   "Add Tatooine twin suns lighting to the page background in place of the plain wood."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

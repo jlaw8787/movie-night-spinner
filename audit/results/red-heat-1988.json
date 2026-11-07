@@ -1,0 +1,52 @@
+{
+ "id": "Red Heat (1988)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "The wild double decker bus chase",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "The chase is in Greyhound style coaches, not double deckers. Danko and Rostavili each commandeer a bus, and a freight train ends it.",
+   "source": "https://en.wikipedia.org/wiki/Red_Heat_(1988_film)",
+   "fix": "The wild Greyhound bus chase",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Pour the vodka when Danko orders his first drink in Chicago.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "No source I opened shows Danko ordering a drink in Chicago. The printed cue and data cue match.",
+   "source": "https://en.wikipedia.org/wiki/Red_Heat_(1988_film)",
+   "fix": "Pour the vodka when Danko and Ridzik swap watches at the airport.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3,
+  "verdict": "Right pairing and a bit of Soviet flavour, but the cue and chase are off and the look is plain.",
+  "missing": [
+   "Ridzik handing Danko his spare .44 Magnum",
+   "Danko and Ridzik swapping watches at the airport",
+   "The Cleanheads gang",
+   "The locker key at the bus terminal",
+   "'This Chicago is very strange city. Your crime is organized, but your police is not.'",
+   "The freight train crash that ends the bus chase"
+  ],
+  "ideas": [
+   "Swap 'Medovik honey cake' for 'Wristwatch cake', the airport swap.",
+   "Swap the cue for the watch swap.",
+   "Rename 'Ridzik's Chicago deep dish pizza' to 'Cleanheads deep dish'.",
+   "Add a Magnum prop to the badge."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

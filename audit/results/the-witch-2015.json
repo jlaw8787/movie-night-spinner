@@ -1,0 +1,52 @@
+{
+  "id": "The Witch (2015)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the mains when Black Phillip shows up in the yard.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "Black Phillip is the family's goat from the start of the film, so he never shows up. The printed card line is the same text. A real turning point is when he speaks to Thomasin near the end.",
+      "source": "https://en.wikipedia.org/wiki/The_Witch_(2015_film)",
+      "fix": "Serve the mains when Black Phillip speaks to Thomasin.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "The corn failed again, so supper is thin tonight. Father says grace twice, and Mother still counts for the silver cup.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Thomasin never says this and it is set in quote marks. It is an invented line. Katherine does blame Thomasin for the missing silver cup, which William later admits he traded.",
+      "source": "https://en.wikipedia.org/wiki/The_Witch_(2015_film)",
+      "fix": "Set it as an unquoted family note: Corn failed again. Father says grace twice. Mother still wants her silver cup.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "The parchment and blackletter feel right for 1630s New England, but the food is plain and the best moments are mostly missing.",
+    "missing": [
+      "Black Phillip: 'Wouldst thou like to live deliciously?'",
+      "Caleb vomiting up an apple",
+      "The baby Samuel vanishing at the woods' edge",
+      "The twins chanting to the goat",
+      "Katherine's hens and the butter that will not churn",
+      "The witch's hut in the woods"
+    ],
+    "ideas": [
+      "Swap 'Woodland apples and cheese' note for 'The apple Caleb brought back from the woods.'",
+      "Swap the baked eggs note for 'The hens stopped laying. Mother blames Thomasin.'",
+      "Add 'Wouldst thou like the taste of butter?' to Black Phillip's goat stew note.",
+      "Swap \"Mulled cider\" note for \"The goat watched us drink it.\""
+    ],
+    "flat": true,
+    "done": false
+  }
+}

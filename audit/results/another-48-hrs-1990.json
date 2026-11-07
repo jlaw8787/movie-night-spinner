@@ -1,0 +1,82 @@
+{
+ "id": "Another 48 Hrs. (1990)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Reggie got out and I got in trouble. Dinner's on him this time, and I'm ordering the dearest thing on the menu.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Jack Cates line. The quote page has Cates saying things like 'I'm a cop, you're a crook.' and nothing about dinner. In the film Reggie wants his $500,000 back. Printed in quote marks and signed Jack Cates.",
+   "source": "https://moviemistakes.com/film1983/quotes",
+   "fix": "I'm a cop, you're a crook.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve dinner when the prison bus crashes.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Wikipedia says the bus carrying Reggie is attacked by the two bikers, after Jack is shot at the diner. It does not say the bus crashes.",
+   "source": "https://en.wikipedia.org/wiki/Another_48_Hrs.",
+   "fix": "Serve dinner when the bikers attack the prison bus.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Eaten on the stakeout in the car.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The plot summary has no stakeout scene, so the note is not confirmed.",
+   "source": "https://en.wikipedia.org/wiki/Another_48_Hrs.",
+   "fix": "Eaten at the Hunter's Point Raceway, before the shooting starts.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Reggie's first meal out, ordered on Jack's tab.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Reggie is released, but no source shows a first meal or Jack paying for it.",
+   "source": "https://en.wikipedia.org/wiki/Another_48_Hrs.",
+   "fix": "Reggie's first meal out. Jack still owes him $500,000.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Reggie's first stop out, Jack paying.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Same problem: no source shows Reggie's first stop or Jack paying.",
+   "source": "https://en.wikipedia.org/wiki/Another_48_Hrs.",
+   "fix": "Reggie's first drink out. Jack still owes him.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 8,
+ "vibe": {
+  "world": 3,
+  "moments": 2,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3,
+  "verdict": "Generic cop cafe that leaves out almost everything the sequel is remembered for.",
+  "missing": [
+   "Reggie's stolen lighter, the gag that ends the film",
+   "Hunter's Point Raceway shootout that opens it",
+   "The Bird Cage nightclub finale in North Beach",
+   "Jack keeping Reggie's $500,000 as leverage",
+   "The Ice Man turning out to be Ben Kehoe",
+   "Cherry Ganz and Willie Hickok, the biker hitmen"
+  ],
+  "ideas": [
+   "Swap the 'Second Furlough' stamp card for 'Jack's lighter', stamped each time Reggie steals it back.",
+   "Swap 'Glovebox jerky' for 'Raceway hot dog', tied to the Hunter's Point opening.",
+   "Swap 'Biker bar pickled eggs' note for 'Cherry and Hickok are waiting outside.'",
+   "Rename the 'Reggie's Release Day Counter' venue to 'The Bird Cage, North Beach' to use the film's real finale."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

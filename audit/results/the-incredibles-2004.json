@@ -1,0 +1,52 @@
+{
+ "id": "The Incredibles (2004)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "\"Dinner is darling. Sit up straight, napkin on the lap, and nothing trailing near the candles.\"",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Edna never says this. It is in quote marks and signed Edna Mode, so it reads as a film line. Her real lines are on the quote page.",
+   "source": "https://en.wikiquote.org/wiki/The_Incredibles",
+   "fix": "I never look back, darling. It distracts from the now!",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "The fancy villain dinner Bob gets with Mirage.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Attached to Mirage's steak dinner. The plot summaries I read have Mirage recruiting Bob for the Omnidroid job and later freeing him, but no dinner between them.",
+   "source": "https://en.wikipedia.org/wiki/The_Incredibles",
+   "fix": "The mission briefing Bob gets from Mirage on Nomanisan Island",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "A good family placemat with Edna, Frozone and Jack-Jack all in, though a few dish notes are invented.",
+  "missing": [
+   "No capes (Edna Mode)",
+   "Honey, where is my super suit (Frozone)",
+   "Dash running across the water (Nomanisan Island)",
+   "The Parrs' first dinner table row (Bob and Helen)",
+   "Jack-Jack's powers in the nursery (the baby sitter)",
+   "Syndrome's monologue, and I'll tell you a secret (Nomanisan Island)"
+  ],
+  "ideas": [
+   "Swap the made up Edna note for her real never look back line.",
+   "Swap 'Crispy roast potatoes with rosemary salt' for 'No capes, no gravy boat' to use the famous Edna line.",
+   "Swap 'Mirage's Nomanisan Island steak dinner' for 'Bob's briefing breakfast on the island'.",
+   "Swap 'Strawberry milk' for 'Frozone's Where is my suit? punch' with the missing suit gag."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "id": "Clueless (1995)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I like helping people, so I planned the whole menu. Ask anyone, my snack platters are a total makeover.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Cher line. The quote page has lines like 'Do you prefer \"fashion victim\" or \"ensembly challenged\"?' and 'I totally paused.' Printed in quote marks and signed Cher Horowitz.",
+   "source": "https://moviemistakes.com/film287/quotes",
+   "fix": "Do you prefer \"fashion victim\" or \"ensembly challenged\"?",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Cher's orders for her dad, grilled fish and no fat",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Mel is a litigator and Cher is close to him, but no source shows her ordering his food or putting him on a diet.",
+   "source": "https://en.wikipedia.org/wiki/Clueless",
+   "fix": "Cher's rules for Daddy, grilled fish and no fat",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Josh brings these. Cher pretends not to care.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Josh is the ex step-brother who lectures Cher, but no source shows him bringing food.",
+   "source": "https://en.wikipedia.org/wiki/Clueless",
+   "fix": "Josh lectures. Cher pretends not to care.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Looks the part and the food is fun, but the lines miss Cher's voice.",
+  "missing": [
+   "'As if!'",
+   "The computer closet that picks outfits",
+   "Cher arguing her grade up with Mr Hall",
+   "The Valley party and the parking lot mugging",
+   "'Is this like a Noxzema commercial or what?'",
+   "Driving test at the end"
+  ],
+  "ideas": [
+   "Swap 'Mall pretzels' note for 'As if!'",
+   "Swap 'Amber's pastel cupcakes' note for 'Full-on Monet. Fine from far away.'",
+   "Swap 'Rodeo Drive mango and strawberry smoothie' note for 'Totally paused.'",
+   "Swap the report card slip text 'Grade disputes: see Dad' for 'Grade disputes: see Mr Hall's love life.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

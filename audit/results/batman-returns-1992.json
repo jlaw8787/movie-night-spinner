@@ -1,0 +1,62 @@
+{
+ "id": "Batman Returns (1992)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Long day at the office. Tonight I'm feeding myself first and the cats second, and that's the new order.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a Selina line. The quote page has 'Honey, I'm home. Oh, I forgot. I'm not married.' and 'I am Catwoman. Hear me roar.' Only one page of the quote list was opened. Printed in quote marks and signed Selina Kyle.",
+   "source": "https://moviemistakes.com/film125/quotes/page2",
+   "fix": "Honey, I'm home. Oh, I forgot. I'm not married.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Christmas Eve",
+   "where": "prop",
+   "verdict": "unsure",
+   "why": "The tree lighting in Gotham Plaza is confirmed, and the Ice Princess dies on the button that lights it. No source gives a date.",
+   "source": "https://dc.fandom.com/wiki/Ice_Princess_(Burtonverse)",
+   "fix": "Tree Lighting Pass, Gotham Plaza",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Selina's order. Honey, I'm home.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "'Honey, I'm home' is a real Selina line, but no source shows her ordering an egg cream.",
+   "source": "https://moviemistakes.com/film125/quotes/page2",
+   "fix": "Selina's order. Honey, I'm home. Oh, I forgot.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 4,
+  "look": 5,
+  "overall": 4,
+  "verdict": "Handsome department store tea room with a great tree lighting cue, but it misses the film's weirdest, funniest moments.",
+  "missing": [
+   "The Penguin's duck vehicle",
+   "Catwoman's stitched-together suit",
+   "Selina's smashed 'Hello There' neon sign",
+   "The masquerade ball at Shreck's",
+   "Catwoman with the canary in her mouth",
+   "The Penguin's penguins with rockets"
+  ],
+  "ideas": [
+   "Swap 'Penguin's sewer fish and chips' for 'Duck boat fish and chips', note 'Rides out of the sewer.'",
+   "Swap 'Milk punch' note for 'Selina laps hers straight from the carton.'",
+   "Swap 'Catwoman's nine lives crispy whitebait' note for 'She has two lives left.'",
+   "Add a 'Hello There' neon sign stamp on the bill where 'Tree Lighting Pass' sits."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

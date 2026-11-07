@@ -1,0 +1,62 @@
+{
+ "id": "Lethal Weapon (1987)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains at Roger's birthday dinner, when Riggs meets the family.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Murtaugh has just turned fifty, but none of the pages I could open describe a birthday dinner or Riggs first meeting the family. The only family dinner they describe is Christmas Day at the end, after Riggs visits his wife's grave. The printed cue and the data cue are the same line.",
+   "source": "https://en.wikipedia.org/wiki/Lethal_Weapon",
+   "fix": "Serve the mains when Riggs sits down with the Murtaughs on Christmas Day.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Roger's 50th Birthday Dinner",
+   "where": "sign",
+   "verdict": "unsure",
+   "why": "Same problem as the cue. Murtaugh turning fifty is true, but a birthday dinner is not described in any source I could open. Christmas Day dinner is.",
+   "source": "https://en.wikipedia.org/wiki/Lethal_Weapon",
+   "fix": "Christmas Day at the Murtaughs",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Riggs gets the guest room",
+   "where": "prop",
+   "verdict": "unsure",
+   "why": "No source I opened has Riggs staying in the Murtaugh guest room. The film has him living in his trailer and joining the family for Christmas Day dinner.",
+   "source": "https://en.wikipedia.org/wiki/Lethal_Weapon",
+   "fix": "Riggs brings the dog",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 18,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Right family kitchen and Christmas feel, but it never reaches for the film's best-known moments.",
+  "missing": [
+   "Riggs cuffed to the jumper and leaping off the ledge (opening)",
+   "Riggs giving Murtaugh the hollow-point bullet (Christmas Day ending)",
+   "Christmas tree lot sting (Riggs and the trees)",
+   "Mr. Joshua's helicopter arrival (Hunsaker killing)",
+   "Riggs's trailer and Sam the dog (home life)",
+   "Murtaugh's 'too old for this' mood"
+  ],
+  "ideas": [
+   "Swap the 'Riggs gets the guest room' keep card for 'Riggs hands over the bullet'.",
+   "Swap 'Riggs' trailer snacks' note for 'A beer and a biscuit for Sam, dinner for one'.",
+   "Rename 'Christmas party crab dip' to 'Christmas tree lot crab dip' to use the opening sting.",
+   "Add a bullet-shaped chocolate to 'Roger's birthday cake' as the Christmas Day gift."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

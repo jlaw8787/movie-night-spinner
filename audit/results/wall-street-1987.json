@@ -1,0 +1,82 @@
+{
+  "id": "Wall Street (1987)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Steak tartare, raw, bring it fast. I've got a market to beat before the soup comes out, Bud.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Gekko never says this and it is set in quote marks. A real Gekko line is 'Lunch is for wimps.'",
+      "source": "https://Filmsite.org/wallstreet.html",
+      "fix": "Lunch is for wimps.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "In Gekko's office, where greed is good.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "The 'greed is good' speech is given at the Teldar Paper shareholders' meeting, not in Gekko's office.",
+      "source": "https://Filmsite.org/wallstreet.html",
+      "fix": "At the Teldar meeting, where greed is good.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "The office birthday on the trading floor.",
+      "where": "caption",
+      "verdict": "wrong",
+      "why": "Bud visits Gekko's office on Gekko's birthday with a box of Cuban cigars. There is no trading floor birthday or cake.",
+      "source": "https://en.wikipedia.org/wiki/Wall_Street_(1987_film)",
+      "fix": "The cigars Bud brought for Gekko's birthday.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "The power lunch Gekko doesn't bother eating.",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The sources do not show Gekko at a power lunch with steak tartare. The only food reference is Gekko mocking Teldar's executives for their steak lunches.",
+      "source": "https://Filmsite.org/wallstreet.html",
+      "fix": "Gekko mocks the Teldar steak lunches.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Bud's flashy new apartment.",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "Bud does move into a penthouse on the East Side, but no source mentions sushi in it.",
+      "source": "https://en.wikipedia.org/wiki/Wall_Street_(1987_film)",
+      "fix": "Bud's new East Side penthouse.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 14,
+  "vibe": {
+    "world": 3,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 3,
+    "overall": 3,
+    "verdict": "Power lunch bistro is on theme but safe, with invented lines for Gekko and a few scenes placed wrongly.",
+    "missing": [
+      "Bud's birthday cigars for Gekko",
+      "The Teldar shareholder speech",
+      "'Lunch is for wimps'",
+      "Gekko's red suspenders and big phone",
+      "The Central Park punch",
+      "Bud wearing a wire"
+    ],
+    "ideas": [
+      "Swap 'Cheesecake' note for 'Bud's box of Cuban cigars, on Gekko's birthday.'",
+      "Swap the Gekko note for 'Lunch is for wimps.'",
+      "Rename 'Old fashioned' to 'The Teldar speech' with the note 'Greed is right. Greed works.'",
+      "Swap 'Carl's cheeseburger' note for 'Carl wants Bluestar kept running.'"
+    ],
+    "flat": true,
+    "done": false
+  }
+}

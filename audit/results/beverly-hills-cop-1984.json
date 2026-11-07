@@ -1,0 +1,92 @@
+{
+ "id": "Beverly Hills Cop (1984)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Beverly Palm Hotel",
+   "where": "venue",
+   "verdict": "wrong",
+   "why": "The film's hotel is the Beverly Palms Hotel (it appears as that in the cast list, and the card's own wink spells it Palms).",
+   "source": "https://en.wikipedia.org/wiki/Beverly_Hills_Cop",
+   "fix": "Beverly Palms Hotel",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Beverly Palm room service",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "Same name error: it should be Palms.",
+   "source": "https://en.wikipedia.org/wiki/Beverly_Hills_Cop",
+   "fix": "Beverly Palms room service",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Axel's Beverly Palm piña colada",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "Same name error: it should be Palms.",
+   "source": "https://en.wikipedia.org/wiki/Beverly_Hills_Cop",
+   "fix": "Axel's Beverly Palms piña colada",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Axel blags his way into the Beverly Palm",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Same name error: it should be Palms.",
+   "source": "https://en.wikipedia.org/wiki/Beverly_Hills_Cop",
+   "fix": "Axel blags his way into the Beverly Palms",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "The hotel room service here is unreal. I ordered the lot and charged it to the guy at the desk.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not an Axel line. Nothing on the quote page matches, and no source has Axel ordering room service. His real lines include 'Can I stay for a while, 'cause I ordered some pizza.' Printed in quote marks and signed Axel Foley.",
+   "source": "https://www.moviemistakes.com/film149/quotes",
+   "fix": "Can I stay for a while, 'cause I ordered some pizza.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Sent down to Taggart and Rosewood's car.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Taggart and Rosewood are assigned to tail Axel, but no source shows him sending food to their car.",
+   "source": "https://en.wikipedia.org/wiki/Beverly_Hills_Cop",
+   "fix": "For the two cops trailing Axel around town.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Right cue and a fun retro cafe card, but the hotel is misnamed and the writing leans on a made-up Axel quote.",
+  "missing": [
+   "Axel and the pizza he orders in the cell",
+   "Taggart and Rosewood foiling the strip club robbery",
+   "'I smoke King-Sized Kents' (Axel)",
+   "Maitland's art gallery and Serge",
+   "Axel ejected from Maitland's office by bodyguards",
+   "The warehouse showdown at the end"
+  ],
+  "ideas": [
+   "Swap 'Detroit coney sliders' note for 'Axel orders pizza in a jail cell with a phone.'",
+   "Swap 'Prawn cocktail with spicy cocktail sauce' for 'Strip club robbery nachos', note 'Taggart and Rosewood's big night.'",
+   "Swap the 'Room service order' stamp card text for 'King-Sized Kents' punches.",
+   "Correct the venue to 'Beverly Palms Hotel' everywhere it is printed."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

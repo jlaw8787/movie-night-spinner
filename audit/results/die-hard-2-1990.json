@@ -1,0 +1,52 @@
+{
+  "id": "Die Hard 2 (1990)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "WINDSOR AIRLINES, Flight 114, Dulles, Christmas Eve",
+      "where": "prop",
+      "verdict": "unsure",
+      "why": "Windsor Airlines Flight 114 is the plane Stuart's men crash by faking its altimeter reading. Holly is on a different plane, so the ticket puts the guest on the doomed flight.",
+      "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/DieHard2",
+      "fix": "ADMIT ONE, Holly's flight, Dulles, Christmas Eve",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "FLIGHT 114 · NOW BOARDING",
+      "where": "card",
+      "verdict": "unsure",
+      "why": "Same problem as the ticket. Flight 114 is the Windsor plane that crashes, not Holly's.",
+      "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/DieHard2",
+      "fix": "FLIGHT 1990 · NOW BOARDING",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "Looks like a snowed in airport and uses the circling plane, but the food is generic airline fare and the best set pieces are missing.",
+    "missing": [
+      "Marvin handing over a radio for twenty dollars (the baggage area)",
+      "McClane jamming the 747 aileron with his coat (the wing)",
+      "McClane lighting the fuel trail with a lighter (the finish)",
+      "Lorenzo tearing up the parking ticket, 'What the hell, it's Christmas!' (the ending)",
+      "Holly tasering Thornburg (the lavatory)",
+      "The blanks in McClane's gun (the church)"
+    ],
+    "ideas": [
+      "Swap the 'Christmas cookies' note for 'Lorenzo tears up the ticket. What the hell, it's Christmas!'",
+      "Replace 'Dulles departure lounge buffalo wings' with 'Marvin's cart ride loaded fries'.",
+      "Change the ticket to a parking ticket stub signed by Lorenzo, replacing the Windsor boarding pass.",
+      "Swap 'Virginia ham biscuits' for a 'Fuel trail' flaming sambuca shot noting the burning fuel line that guides the planes in."
+    ],
+    "flat": true,
+    "done": false
+  }
+}

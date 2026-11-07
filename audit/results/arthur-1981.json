@@ -1,0 +1,82 @@
+{
+ "id": "Arthur (1981)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I'm Arthur, I'm rich, and I'm having a lovely time. Hobson, bring the car around, and bring a sandwich.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not an Arthur line. The quote page has 'I'm going to take a bath.' and 'No, I have remained drunk since our last encounter.' Printed in quote marks and signed Arthur Bach.",
+   "source": "https://www.moviemistakes.com/film8879/quotes",
+   "fix": "I'm going to take a bath.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Hobson the butler, keeping Arthur's world properly civilised",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Wikipedia calls Hobson Arthur's valet, and Arthur introduces him as 'my nanny'. 'Butler' is not confirmed. The wink 'Hobson, the butler with the driest wit' has the same word.",
+   "source": "https://en.wikipedia.org/wiki/Arthur_(1981_film)",
+   "fix": "Hobson the valet, keeping Arthur's world properly civilised",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Bach Penthouse Dining Room",
+   "where": "venue",
+   "verdict": "unsure",
+   "why": "The plot sources describe a rich New York family, a chauffeured Rolls-Royce and the family estate, but never a penthouse.",
+   "source": "https://en.wikipedia.org/wiki/Arthur_(1981_film)",
+   "fix": "Bach Family Dining Room",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Arthur's usual, Hobson pouring with a sigh.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Arthur drinks heavily, but no source names single malt and soda as his usual.",
+   "source": "https://en.wikipedia.org/wiki/Arthur_(1981_film)",
+   "fix": "Hobson pours, Arthur keeps drinking.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Arthur's Kir royale",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "No source says Arthur drinks Kir royale.",
+   "source": "https://en.wikipedia.org/wiki/Arthur_(1981_film)",
+   "fix": "Champagne cocktail for the man with a hundred and fifty million coming.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Elegant and dry, but Arthur's best-known moments are missing.",
+  "missing": [
+   "The bubble bath in the top hat",
+   "'I'll alert the media' (Hobson)",
+   "Linda shoplifting a tie",
+   "Burt Johnson drawing a cheese knife at the church",
+   "Hobson's illness and death",
+   "Martha's $750 million offer at the end"
+  ],
+  "ideas": [
+   "Swap 'Crème brûlée' for a 'Cheese knife board', note 'Burt Johnson brings his own.'",
+   "Swap 'Hobson's cucumber and cress sandwiches' note for 'I'll alert the media.'",
+   "Swap 'Arthur's Kir royale' for a 'Bubble bath martini' in a glass with a cocktail onion.",
+   "Change the cue to 'Serve dessert when Arthur says he is taking a bath and Hobson replies he will alert the media.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

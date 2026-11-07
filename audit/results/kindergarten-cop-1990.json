@@ -1,0 +1,52 @@
+{
+  "id": "Kindergarten Cop (1990)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Detective Kimble is in charge of lunch now. Quiet voices, everybody.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Joyce, the teacher and Dominic's mother, does not know Kimble is a detective until late in the film. The real detective partner is Phoebe O'Hara. Nobody named Penny Grant is in the film.",
+      "source": "https://en.wikipedia.org/wiki/Kindergarten_Cop",
+      "fix": "Mr. Kimble is in charge of lunch now. Quiet voices, everybody.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Penny Grant",
+      "where": "note-by",
+      "verdict": "wrong",
+      "why": "No character called Penny Grant is in the film. The fellow teacher is Joyce Palmieri, who is Rachel Crisp in hiding.",
+      "source": "https://en.wikipedia.org/wiki/Kindergarten_Cop",
+      "fix": "Joyce Palmieri",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "The school timetable is a good idea, but it lacks the film's best lines and the whistle and ferret method.",
+    "missing": [
+      "'It's not a tumor' (the classroom)",
+      "The whistle and ferret method (first week)",
+      "The school fire and the ferret biting Crisp (the school)",
+      "The class picnic at Ecola State Park (the picnic)",
+      "Kimble returning, 'I'm back' (the finish)",
+      "The bathroom shootout (the school)"
+    ],
+    "ideas": [
+      "Swap 'Ferret-free fruit cups' note for 'Class mascot gets none'.",
+      "Replace 'Kimble's rump steak and loaded spuds' with 'Picnic hot dogs at Ecola' for the picnic scene.",
+      "Add 'Whistle blown, lunch served' as the voucher line in place of the generic cue.",
+      "Rename the 'Reports' timetable slot to 'Who is your daddy'."
+    ],
+    "flat": true,
+    "done": false
+  }
+}

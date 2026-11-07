@@ -1,0 +1,52 @@
+{
+  "id": "Ferris Bueller's Day Off (1986)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Sloane's got the picnic blanket and Cameron's got the car. Lunch is on us, Principal Rooney's not invited.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Ed Rooney is the dean of students, not the principal. There is no picnic in the plot, the lunch is at a fancy restaurant. Cameron's dad's car is right.",
+      "source": "https://en.wikipedia.org/wiki/Ferris_Bueller%27s_Day_Off",
+      "fix": "Sloane's got the best seat and Cameron's got his dad's car. Lunch is on Abe Froman, and Dean Rooney's not invited.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Table 15 · for two · 8:30 pm",
+      "where": "prop",
+      "verdict": "wrong",
+      "why": "The group at Chez Quis is Ferris, Sloane and Cameron, so three, and it is a lunch. The back page says party of three. The 'Two forks, one table' heading on the front also says two.",
+      "source": "https://en.wikipedia.org/wiki/Ferris_Bueller%27s_Day_Off",
+      "fix": "Table 15 · for three · lunch",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 14,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A polished Chez Quis menu with the Abe Froman gag, but the parade, the Ferrari crash and the Art Institute are barely there.",
+    "missing": [
+      "Ferris lip syncing on the Von Steuben float (the parade)",
+      "Cameron's dad's Ferrari going through the garage wall (Cameron's house)",
+      "The parking valets' joyride (the car park)",
+      "Cameron staring at Seurat's La Grande Jatte (Art Institute)",
+      "The Sears Tower observatory (the city)",
+      "Rooney riding the school bus (the end)"
+    ],
+    "ideas": [
+      "Change the heading 'Two forks, one table' to 'Three forks, one table'.",
+      "Swap 'Gruyère puffs with goat's cheese' note for a 'Danke Schoen' parade float theme.",
+      "Replace 'Abe Froman's sparkling lemonade' with 'Valet joyride cola' as a drink.",
+      "Rename 'Deep dish bites' to 'Rooney's pizza joint squares' and use the Rooney pizza joint scene."
+    ],
+    "flat": false,
+    "done": false
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "Elf (2003)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "A tall man in green shook every hand here Tuesday: “Well done, team.”",
+      "where": "quote",
+      "verdict": "wrong",
+      "why": "Buddy's real line in the coffee shop is 'You did it! Congratulations! World's best cup of coffee! Great job, everybody! It's great to meet you!'",
+      "source": "https://en.wikiquote.org/wiki/Elf",
+      "fix": "A tall man in green shook every hand here Tuesday: “Great job, everybody!”",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 5,
+    "overall": 4.2,
+    "verdict": "Closest to the film of the lot, with the four food groups, the coffee shop and the syrup, though one quote is off.",
+    "missing": [
+      "'You sit on a throne of lies'",
+      "The Sea of Swirly Twirly Gumdrops",
+      "The two litre Coke belch",
+      "The Gimbels Santa brawl",
+      "The snowball fight",
+      "The Santa sleigh in Central Park"
+    ],
+    "ideas": [
+      "Swap 'Snowball Cupcakes' note for 'You sit on a throne of lies.'",
+      "Swap 'Kids' Hot Cocoa' for a Gumdrop Sea soda float.",
+      "Swap 'Bottomless Coffee' note for 'Great job, everybody.'",
+      "Swap 'Paper Snowflakes' note for 'Gimbels, redecorated overnight.'"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

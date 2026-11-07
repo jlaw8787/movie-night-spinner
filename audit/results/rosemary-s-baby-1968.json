@@ -1,0 +1,52 @@
+{
+ "id": "Rosemary's Baby (1968)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Apartment 7E. Mind the neighbours in 7A.",
+   "where": "sign",
+   "verdict": "unsure",
+   "why": "No source I opened gives the apartment numbers. The Castevets are next door on the seventh floor, which matches, but the letters could not be confirmed.",
+   "source": "https://en.wikipedia.org/wiki/Rosemary%27s_Baby_(film)",
+   "fix": "Seventh floor. Mind the neighbours next door.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Rosemary's party. No Castevets on the list.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Rosemary hosts a party for her friends, but I could not confirm whether the Castevets attended.",
+   "source": "https://en.wikipedia.org/wiki/Rosemary%27s_Baby_(film)",
+   "fix": "Rosemary's party, and a very sore tummy.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "The hotel room service frame suits the Bramford, the mousse and tannis root are used well.",
+  "missing": [
+   "Terry's fall and her tannis root pendant",
+   "Hutch's coma and the anagram book",
+   "Dr Sapirstein's tannis root smell",
+   "Minnie's health drink poured down the sink",
+   "Rosemary's short haircut",
+   "The Pope's visit on TV"
+  ],
+  "ideas": [
+   "Swap 'Minnie's herbal tonic shots' note for 'Poured down the sink'.",
+   "Rename 'Tannis root tea' to 'Terry's pendant tea'.",
+   "Swap the 'Vodka gimlet' note for the real party reference.",
+   "Add Hutch's anagram clue to the hang tag."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

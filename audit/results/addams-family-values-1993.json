@@ -1,0 +1,52 @@
+{
+ "id": "Addams Family Values (1993)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Pubert is fine, thank you. Do not touch my food. I've seen what happens at this camp.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Wednesday has no such line on the quote page. Her mess-hall style line is 'We cannot break bread with you.' She also never frets about Pubert at camp, her worry is Debbie. Printed in quote marks and signed Wednesday Addams.",
+   "source": "https://en.wikiquote.org/wiki/Addams_Family_Values",
+   "fix": "We cannot break bread with you.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Debbie's wedding lobster",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "The plot sources cover Debbie's marriage to Fester, the honeymoon bath and the electric chairs, but no lobster dinner, so the scene is not confirmed.",
+   "source": "https://en.wikipedia.org/wiki/Addams_Family_Values",
+   "fix": "Black widow lobster",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Right camp and the right Thanksgiving play, but the writing is a generic mess hall with none of the family's deadpan.",
+  "missing": [
+   "Harmony Hut and the hours of forced cheerful films",
+   "Wednesday going off script in the Thanksgiving play",
+   "Fester and Debbie's honeymoon, the boombox in the bath",
+   "Debbie's slide show and the electric chairs",
+   "Wednesday and Joel's first kiss at the fire",
+   "The campfire ghost story where the old noses grow back"
+  ],
+  "ideas": [
+   "Swap 'Camp Chippewa campfire sausage rolls' for 'Break bread with the Pilgrims' dinner rolls, note 'We cannot break bread with you.'",
+   "Swap 'Mess hall bug juice' for 'Harmony Hut punch', note 'Sickly sweet. Wednesday will not smile.'",
+   "Swap 'Debbie's wedding lobster' for 'Black widow lobster', note 'She marries them, then buries them.'",
+   "Swap 'Wednesday's smile cookies' note for 'Wednesday smiles once, at the end, and it is terrifying.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

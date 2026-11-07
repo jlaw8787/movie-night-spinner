@@ -1,0 +1,73 @@
+{
+  "id": "Bugsy (1991)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "$2,000,000 (the pool)",
+      "where": "card",
+      "verdict": "wrong",
+      "why": "The missing $2 million is the money Virginia took before opening night, not a pool. Siegel lets her keep it. Funding began at $1 million and the cost rose past $6 million.",
+      "source": "https://en.wikipedia.org/wiki/Bugsy",
+      "fix": "$2,000,000 (Virginia's, quietly)",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "The boss's diction drill: \"Six slick ships sail south.\"",
+      "where": "quote",
+      "verdict": "unsure",
+      "why": "I could not find the diction drill in the plot or sources, so the quoted tongue twister cannot be confirmed as Siegel's line.",
+      "source": "",
+      "fix": "The boss's diction drill: Say it slow, say it right.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Miss Hill's way: gin, fresh lime and soda, shell left in.",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "Virginia Hill is in the film but sources do not show her gin rickey. It is a plausible period drink rather than a scene.",
+      "source": "https://en.wikipedia.org/wiki/Bugsy",
+      "fix": "A forties gin rickey, gin, lime and soda.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Our namesake, hung in the lobby. Long legs, all pink,",
+      "full": "Our namesake, hung in the lobby. Long legs, all pink, and about as native to the desert as we are.",
+      "where": "caption",
+      "verdict": "unsure",
+      "why": "Virginia Hill's flamingo nickname is plausible but I found no source for a flamingo picture hung in the lobby.",
+      "source": "https://en.wikipedia.org/wiki/Bugsy",
+      "fix": "Our namesake. Long legs, all pink,",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 9,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "A pink, period Flamingo invite with the right budget gag, though the food is just forties supper club and a few lines are guesses.",
+    "missing": [
+      "The opening night rain",
+      "Virginia Hill taking the missing $2 million",
+      "Meyer Lansky's warning",
+      "Ben's rule about the name Bugsy",
+      "Mickey Cohen",
+      "The shot through the window"
+    ],
+    "ideas": [
+      "Swap 'Pavlova' note for 'Opening night, in the rain.'",
+      "Swap 'Champagne cocktail' note for 'Meyer Lansky pays.'",
+      "Swap the diction drill line for a real line from the film.",
+      "Swap 'Coffee' for 'Virginia's coffee' with the note 'She counted the money.'"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

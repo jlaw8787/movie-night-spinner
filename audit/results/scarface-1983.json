@@ -1,0 +1,42 @@
+{
+  "id": "Scarface (1983)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "“Listen, kid. Never skip the pastelitos.”",
+      "where": "quote",
+      "verdict": "wrong",
+      "why": "Frank Lopez never says this and it is set in quote marks. It is an invented line.",
+      "source": "https://en.wikipedia.org/wiki/Scarface_(1983_film)",
+      "fix": "Set it as an unsigned house joke without quote marks: Never skip the pastelitos.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 10,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "Pink neon Babylon Club and Cuban food suit Miami well, but the tone is polite and it skips the film's famous scenes.",
+    "missing": [
+      "'Say hello to my little friend'",
+      "The chainsaw in the shower",
+      "'The World Is Yours' blimp",
+      "The mountain of cocaine on the desk",
+      "The tiger in the mansion",
+      "Elvira at the Babylon Club"
+    ],
+    "ideas": [
+      "Swap 'Magic City pastelitos' note for 'The World Is Yours.'",
+      "Swap 'Babylon surf and turf' note for 'Tony makes a scene.'",
+      "Swap the quote by Frank for 'Never skip the pastelitos' as an unquoted house rule.",
+      "Swap 'Cuban espresso' for 'Elvira's espresso' with the note 'At the next table.'"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

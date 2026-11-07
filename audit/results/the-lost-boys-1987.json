@@ -1,0 +1,52 @@
+{
+ "id": "The Lost Boys (1987)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the noodles when David makes Michael see his rice as maggots.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The pages I read say David's illusion makes Michael's food look like worms, and the famous line is about the noodles turning into worms. I could not confirm the rice as maggots detail. The cue is printed on the card.",
+   "source": "https://en.wikipedia.org/wiki/The_Lost_Boys",
+   "fix": "Serve the noodles when David makes Michael see his noodles as worms.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "\"Nobody touches my root beer. Taxidermy supplies are in the back, so mind the stuffed animals.\"",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Grandpa never says this. It is in quote marks and signed Grandpa, so it reads as a film line. His famous line is the last one in the film. I could not open a quote page, so this is from memory.",
+   "source": "",
+   "fix": "One thing about living in Santa Carla I never could stomach: all the damn vampires.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Santa Carla's boardwalk is the right setting and the noodles cue is a good pick, but the surf report strip and plain dishes feel generic.",
+  "missing": [
+   "Noodles turning into worms in the cave (the cue)",
+   "Bottle of blood passed round (David's cave)",
+   "One thing about living in Santa Carla I never could stomach, all the damn vampires (Grandpa, the last line)",
+   "The Frog brothers' garlic and holy water test on Max (dinner with Lucy)",
+   "Sam and Nanook stopping Michael (the fridge raid)",
+   "Michael hanging upside down with the bats (the bridge and the hotel)"
+  ],
+  "ideas": [
+   "Swap the made up Grandpa note for the real stomach line.",
+   "Swap 'Boardwalk caramel popcorn' for 'Worms and rice, eyes closed' with the David cue as a gag.",
+   "Swap 'Garlic bread' for 'Frog brothers garlic bread, sticks of it' with a stake joke.",
+   "Replace the surf report strip with a Santa Carla 'Murder Capital of the World' sign."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

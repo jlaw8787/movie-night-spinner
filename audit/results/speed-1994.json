@@ -1,0 +1,52 @@
+{
+ "id": "Speed (1994)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "\"Snacks get passed down the aisle, nobody stands up, and I'm not slowing down for drinks. Sit tight, I'm driving.\"",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Annie never says this. It is in quote marks and signed Annie Porter, so it reads as a film line. A real Annie line is her joke about basing it on sex.",
+   "source": "",
+   "fix": "Okay. We'll have to base it on sex then.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Pop quiz, hotshot. Harry's line, before the elevator job goes sideways",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "The pop quiz line is Harry's, but I could not confirm where it falls against the elevator job. The plot page I read does not cover it, and no quote page for this film could be opened.",
+   "source": "https://m.imdb.com/title/tt0111257/plotsummary",
+   "fix": "Harry's pop quiz, hotshot, on the way to the elevator job",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A tidy bus 2525 timetable with the do not slow below 50 gag, but food and moments stay safe.",
+  "missing": [
+   "Shoot the hostage (Harry and Jack, the pop quiz)",
+   "Jack rigging the elevator cable (the opening)",
+   "The bus jumping the gap in the freeway (the cue)",
+   "Jack and Annie climbing under the bus (the floor panel)",
+   "Payne's subway train and the derailing onto Hollywood Boulevard (the climax)",
+   "Annie's licence suspended for speeding (the bus)"
+  ],
+  "ideas": [
+   "Swap the made up Annie note for a real line.",
+   "Swap 'Subway train snacks' for 'Red Line derail rolls' with a Hollywood Boulevard gag.",
+   "Swap 'Jack's runway nachos' for 'LAX tarmac nachos', since the bus finishes on the runway.",
+   "Print 'Shoot the hostage' as a house joke on the soda."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

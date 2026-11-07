@@ -1,0 +1,72 @@
+{
+ "id": "Lethal Weapon 2 (1989)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Leo Getz's drive thru fries",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "I could not find a source for a drive-thru scene with Leo. He is placed in protective custody and drives the detectives mad, but the pages I opened do not show him ordering fast food.",
+   "source": "",
+   "fix": "Leo Getz's thin fries",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Leo wants his order right this time.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Same drive-thru problem. No opened source shows Leo sending an order back.",
+   "source": "",
+   "fix": "Okay, okay, okay. Leo wants it hot.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "TV ad cupcakes",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "The name relies on a TV advert scene that I could not confirm in any source I opened.",
+   "source": "",
+   "fix": "Boat on the lawn cupcakes",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Arjen Rudd's drink, before his immunity is revoked.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Rudd's immunity is revoked at the end (Murtaugh: 'It's just been revoked'), but no source I opened says brandy and Coke is his drink.",
+   "source": "https://lethalweapon.fandom.com/wiki/Lethal_Weapon_2",
+   "fix": "Rudd's last round. Immunity revoked.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "The boat on the lawn and the South African dishes are a good fit, but Leo's food scenes are guesses and the big gags are missing.",
+  "missing": [
+   "Murtaugh sitting on the toilet bomb (his own bathroom)",
+   "'It's just been revoked' (Murtaugh and Rudd, finale)",
+   "Riggs's house dropping off its stilts",
+   "Murtaugh's nail gun fight",
+   "Leo's 'Okay, okay, okay' (used) and 'Whatever you want, Leo gets'",
+   "Krugerrands in the cargo"
+  ],
+  "ideas": [
+   "Swap Leo's invented note for his real line: 'I'm Leo Getz, and whatever you want, Leo gets.'",
+   "Swap the 'Brandy and Coke' note for 'Diplomatic immunity revoked. Last round.'",
+   "Rename 'Consulate biltong' to 'Krugerrand biltong and macadamia bites'.",
+   "Swap 'TV ad cupcakes' for 'Don't get up cupcakes', a toilet bomb joke."
+  ],
+  "flat": false,
+  "done": false
+ }
+}
