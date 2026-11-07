@@ -1,48 +1,61 @@
 {
- "id": "Encanto (2021)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Eat this arepa, mi vida, and that cut will heal. It is my gift, but honestly, the food is good all on its own.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "The transcript has no line like this. Julieta's real lines are about worry and love, and Mirabel is the one who says her hand was healed with an arepa con queso. The printed words are an invented quote.",
-   "source": "https://scrapsfromtheloft.com/movies/encanto-transcript/",
-   "fix": "Use a note: Eat up, mi vida. The arepas are warm, there is a seat for everyone, and nobody has to be perfect to sit down.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Eat up, mi vida. The arepas are warm, there is a seat for everyone, and nobody has to be perfect to sit down.",
-    "by": "Julieta",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
+  "id": "Encanto (2021)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Eat this arepa, mi vida, and that cut will heal. It is my gift, but honestly, the food is good all on its own.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "The transcript has no line like this. Julieta's real lines are about worry and love, and Mirabel is the one who says her hand was healed with an arepa con queso. The printed words are an invented quote.",
+      "source": "https://scrapsfromtheloft.com/movies/encanto-transcript/",
+      "fix": "Use a note: Eat up, mi vida. The arepas are warm, there is a seat for everyone, and nobody has to be perfect to sit down.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Eat up, mi vida. The arepas are warm, there is a seat for everyone, and nobody has to be perfect to sit down.",
+        "by": "Julieta",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "A warm cafe with the right family in the right jobs, held back by one made-up quote and soft writing.",
+    "missing": [
+      "Mirabel's burnt hand healed with an arepa con queso (the kitchen)",
+      "The candle and Abuela Alma's rules (the family photo)",
+      "Bruno's rats and the green sand visions (his hidden room)",
+      "Dolores hearing everything in the house",
+      "Camilo shapeshifting at the table",
+      "Mirabel's missing door"
+    ],
+    "ideas": [
+      "Swap the ajiaco note 'Colombian home cooking for the Madrigal kitchen' for 'Dolores heard you were hungry before you did.'",
+      "Swap the patacones note for 'Bruno's rats get the first crumbs.'",
+      "Swap the 'Cake Case' heading's flat buñuelos note for 'Camilo will pass you one as someone you like.'",
+      "Swap the Julieta quote for a note in her voice about arepas and a seat for everyone."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "We don't talk about Bruno",
+      "Julieta's arepas healing",
+      "Isabela's flowers",
+      "Casita's moving tiles",
+      "Dolores hearing everything",
+      "Mirabel's glasses"
+    ],
+    "changed": [
+      "Ajiaco note now Dolores hearing everything",
+      "Lost and found wink now Mirabel's glasses and the tiles"
+    ]
   }
- ],
- "checked_ok": 11,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.8,
-  "verdict": "A warm cafe with the right family in the right jobs, held back by one made-up quote and soft writing.",
-  "missing": [
-   "Mirabel's burnt hand healed with an arepa con queso (the kitchen)",
-   "The candle and Abuela Alma's rules (the family photo)",
-   "Bruno's rats and the green sand visions (his hidden room)",
-   "Dolores hearing everything in the house",
-   "Camilo shapeshifting at the table",
-   "Mirabel's missing door"
-  ],
-  "ideas": [
-   "Swap the ajiaco note 'Colombian home cooking for the Madrigal kitchen' for 'Dolores heard you were hungry before you did.'",
-   "Swap the patacones note for 'Bruno's rats get the first crumbs.'",
-   "Swap the 'Cake Case' heading's flat buñuelos note for 'Camilo will pass you one as someone you like.'",
-   "Swap the Julieta quote for a note in her voice about arepas and a seat for everyone."
-  ],
-  "flat": false,
-  "done": false
- }
 }

@@ -1,0 +1,34 @@
+{
+ "id": "Daddy's Home (2015)",
+ "ops": [
+  {
+   "old": "Serve the mains when Brad and Dusty go head to head.",
+   "new": "Serve the mains when Dusty declares a dad-off."
+  },
+  {
+   "old": "Corn chips under spiced beef and melted cheese",
+   "new": "Corn chips, spiced beef, cheese. Tumor grows on you."
+  },
+  {
+   "old": "Vanilla cupcakes filled with jam, pink buttercream and sprinkles",
+   "new": "Jam-filled vanilla cupcakes, pink buttercream. Megan picks Dusty."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Dusty arriving on his motorcycle",
+    "Dusty's dog Tumor, who grows on you",
+    "Brad's half-court shot at the Lakers game",
+    "The King and the Step King story"
+   ]
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Smoked brisket sliders with pickles",
+    "note": "Brad's treehouse took two months. Dusty took a day.",
+    "meat": true
+   }
+  }
+ ]
+}

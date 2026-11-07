@@ -1,44 +1,56 @@
 {
- "id": "Frequency (2000)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "GAME ONE ON THE RADIO AT NOON",
-   "where": "card",
-   "verdict": "wrong",
-   "why": "The transcript has John and Frank talking through Game One of the 1969 World Series, but no source or line gives a noon start. The time is dropped and the printed date carries the day.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=frequency",
-   "fix": "GAME ONE ON THE RADIO TODAY",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Frequency (2000)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "GAME ONE ON THE RADIO AT NOON",
+      "where": "card",
+      "verdict": "wrong",
+      "why": "The transcript has John and Frank talking through Game One of the 1969 World Series, but no source or line gives a noon start. The time is dropped and the printed date carries the day.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=frequency",
+      "fix": "GAME ONE ON THE RADIO TODAY",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 19,
+  "vibe": {
+    "world": 5,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 4.2,
+    "verdict": "A warm Queens firehouse supper that gets the Mets, the radio, Julia and Little Chief right.",
+    "missing": [
+      "The ham radio and the aurora night (how John reaches Frank)",
+      "Frank quitting cigarettes (the 1989 lung cancer warning)",
+      "Game 5 and the shoe polish play (Frank proves himself to Satch)",
+      "'Don't follow your instincts, go the other way' (the warning that saves Frank)",
+      "Satch DeLeon as the friend at the table (arrest scene)",
+      "The baseball and the Nightingale case board (John's cold case)"
+    ],
+    "ideas": [
+      "Swap the 'Transistor Radio' raffle prize for a 'Ham Radio', with 'Over and out' on the ticket.",
+      "Swap 'Hot Cocoa' for 'Frank's Last Cigarette, a chocolate cigar', a nod to him quitting.",
+      "Add a Mets pennant corner to the firehouse photo header in place of the plain brick bar.",
+      "Swap the 'Coffee' note 'all game long' for 'all game long, and a call from 1999'."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "the ham radio link across 30 years",
+      "the northern lights",
+      "the 1969 World Series and the Mets",
+      "Frank the firefighter",
+      "Over and out"
+    ],
+    "changed": [
+      "Coffee line now nods to the northern lights",
+      "Raffle prize now a Ham Radio"
+    ]
   }
- ],
- "checked_ok": 19,
- "vibe": {
-  "world": 5,
-  "moments": 4,
-  "food": 4,
-  "tone": 4,
-  "look": 4,
-  "overall": 4.2,
-  "verdict": "A warm Queens firehouse supper that gets the Mets, the radio, Julia and Little Chief right.",
-  "missing": [
-   "The ham radio and the aurora night (how John reaches Frank)",
-   "Frank quitting cigarettes (the 1989 lung cancer warning)",
-   "Game 5 and the shoe polish play (Frank proves himself to Satch)",
-   "'Don't follow your instincts, go the other way' (the warning that saves Frank)",
-   "Satch DeLeon as the friend at the table (arrest scene)",
-   "The baseball and the Nightingale case board (John's cold case)"
-  ],
-  "ideas": [
-   "Swap the 'Transistor Radio' raffle prize for a 'Ham Radio', with 'Over and out' on the ticket.",
-   "Swap 'Hot Cocoa' for 'Frank's Last Cigarette, a chocolate cigar', a nod to him quitting.",
-   "Add a Mets pennant corner to the firehouse photo header in place of the plain brick bar.",
-   "Swap the 'Coffee' note 'all game long' for 'all game long, and a call from 1999'."
-  ],
-  "flat": false,
-  "done": false
- }
 }

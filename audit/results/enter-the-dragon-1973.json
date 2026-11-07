@@ -1,60 +1,72 @@
 {
- "id": "Enter the Dragon (1973)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Eat now. The tournament starts at dawn, and I don't fight on an empty stomach.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Lee never says this. His real lines on the Wikiquote page include this one about his style, said to Parsons.",
-   "source": "https://en.wikiquote.org/wiki/Enter_the_Dragon",
-   "fix": "My style? You can call it the art of fighting without fighting.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "My style? You can call it the art of fighting without fighting.",
-    "by": "Lee",
-    "kind": "quote"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Roper's toast, right before he bets the lot.",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "Roper is shown betting on a golf shot and an insect fight and offering to bet Lee, but no toast or banquet bet appears. Wikipedia calls him a gambler in debt to the mob.",
-   "source": "https://en.wikipedia.org/wiki/Enter_the_Dragon",
-   "fix": "For Roper, who will bet on anything.",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Enter the Dragon (1973)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Eat now. The tournament starts at dawn, and I don't fight on an empty stomach.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Lee never says this. His real lines on the Wikiquote page include this one about his style, said to Parsons.",
+      "source": "https://en.wikiquote.org/wiki/Enter_the_Dragon",
+      "fix": "My style? You can call it the art of fighting without fighting.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "My style? You can call it the art of fighting without fighting.",
+        "by": "Lee",
+        "kind": "quote"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Roper's toast, right before he bets the lot.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "Roper is shown betting on a golf shot and an insect fight and offering to bet Lee, but no toast or banquet bet appears. Wikipedia calls him a gambler in debt to the mob.",
+      "source": "https://en.wikipedia.org/wiki/Enter_the_Dragon",
+      "fix": "For Roper, who will bet on anything.",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A handsome banquet card with the metal hand and the hall of mirrors, but none of Lee's lines make it onto the table.",
+    "missing": [
+      "'Don't think, feel! It is like a finger pointing away to the moon.' (Lee to Lahn)",
+      "Lee humiliating Parsons on the boat out to the island (the junk)",
+      "Roper beating Bolo in the square (the melee)",
+      "Han's underground drug lab and the acid pit (Han's tour for Roper)",
+      "Lee smashing the mirrors to beat Han (the mirror room)",
+      "Han's welcome speech: 'tonight let us celebrate' (the banquet)"
+    ],
+    "ideas": [
+      "Swap 'Han's five-spice crispy duck pancakes' note for 'Han's welcome: tonight let us celebrate'.",
+      "Swap 'Sichuan salt and pepper squid' note for 'Boards don't hit back. Neither does squid.'",
+      "Swap the place card 'Boat leaves at dawn' for 'Never take your eyes off your opponent, even when you bow.'",
+      "Swap 'Mirror room char siu with fried rice' note for 'Smash the mirrors, then eat'."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Don't think, feel (finger pointing at the moon)",
+      "the art of fighting without fighting",
+      "Han's hall of mirrors",
+      "Han's metal hand",
+      "Boards don't hit back",
+      "the invitation to the island"
+    ],
+    "changed": [
+      "Hall talk III now Lee's lesson, don't think, feel (was Roper and Williams as fellow fighters)"
+    ]
   }
- ],
- "checked_ok": 13,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "A handsome banquet card with the metal hand and the hall of mirrors, but none of Lee's lines make it onto the table.",
-  "missing": [
-   "'Don't think, feel! It is like a finger pointing away to the moon.' (Lee to Lahn)",
-   "Lee humiliating Parsons on the boat out to the island (the junk)",
-   "Roper beating Bolo in the square (the melee)",
-   "Han's underground drug lab and the acid pit (Han's tour for Roper)",
-   "Lee smashing the mirrors to beat Han (the mirror room)",
-   "Han's welcome speech: 'tonight let us celebrate' (the banquet)"
-  ],
-  "ideas": [
-   "Swap 'Han's five-spice crispy duck pancakes' note for 'Han's welcome: tonight let us celebrate'.",
-   "Swap 'Sichuan salt and pepper squid' note for 'Boards don't hit back. Neither does squid.'",
-   "Swap the place card 'Boat leaves at dawn' for 'Never take your eyes off your opponent, even when you bow.'",
-   "Swap 'Mirror room char siu with fried rice' note for 'Smash the mirrors, then eat'."
-  ],
-  "flat": false,
-  "done": false
- }
 }

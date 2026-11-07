@@ -1,0 +1,41 @@
+{
+ "id": "Dirty Work (1998)",
+ "ops": [
+  {
+   "old": "Serve the mains when Mitch and Sam open Dirty Work for business.",
+   "new": "Serve the mains when skunks wreck opening night of Don Giovanni."
+  },
+  {
+   "old": "Bite-size soft pretzels with salt",
+   "new": "Soft pretzel bites, for fourteen jobs in three months"
+  },
+  {
+   "old": "Hot fudge peanut sundaes",
+   "new": "Opera night hot fudge peanut sundaes"
+  },
+  {
+   "old": "Beef patty, Swiss cheese and fried onions on grilled rye",
+   "new": "Patty, Swiss, fried onions on rye. Take no crap from anyone"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Mitch and Sam's revenge-for-hire business",
+    "Sam's dad needing a new heart",
+    "Skunks at Don Giovanni",
+    "Chris Farley, a quick cameo"
+   ]
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "Dirty Work",
+    "lines": [
+     "Mitch and Sam",
+     "Revenge, delivered"
+    ]
+   }
+  }
+ ]
+}

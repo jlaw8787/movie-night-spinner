@@ -1,0 +1,43 @@
+{
+ "id": "Coneheads (1993)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Maintain low tones with me, maintain low tones.",
+    "by": "Beldar Conehead",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "the backyard barbecue in New Jersey",
+   "new": "Chicken and sausages, charred mammal flesh"
+  },
+  {
+   "old": "Thick onion rings soaked in buttermilk, fried in a lager batter",
+   "new": "Buttermilk and lager batter, crisp enough to knarftle a Garthok"
+  },
+  {
+   "old": "Beldar's burgers",
+   "new": "Beldar's driving school burgers"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Beldar's cover story: we come from France",
+    "Beldar's endless appetite at dinner",
+    "Beldar's driving school in Paramus",
+    "Gorman and Eli posing as Jehovah's Witnesses",
+    "Beldar's rock shot at the Garthok"
+   ]
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Pigs in blankets with hot mustard",
+    "note": "Char some mammal flesh, Prymaat says.",
+    "meat": true
+   }
+  }
+ ]
+}

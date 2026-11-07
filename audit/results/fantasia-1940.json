@@ -1,48 +1,57 @@
 {
- "id": "Fantasia (1940)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Master, I only borrowed the hat to help with supper. The brooms fetched water for the soup, and now, well, there is a lot of soup.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Mickey's only spoken lines are at the end, when he congratulates Mr. Stokowski. The quote page has nothing like this, and the brooms carry water for a cistern, not soup. Fine as a note, wrong as a quote.",
-   "source": "https://www.moviefone.com/movie/fantasia/23329/quotes/",
-   "fix": "Use a note: Master, I only borrowed the hat. The brooms were fetching water, and now, well, there is a lot of water.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Master, I only borrowed the hat. The brooms were fetching water, and now, well, there is a lot of water.",
-    "by": "Mickey Mouse",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
+  "id": "Fantasia (1940)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Master, I only borrowed the hat to help with supper. The brooms fetched water for the soup, and now, well, there is a lot of soup.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Mickey's only spoken lines are at the end, when he congratulates Mr. Stokowski. The quote page has nothing like this, and the brooms carry water for a cistern, not soup. Fine as a note, wrong as a quote.",
+      "source": "https://www.moviefone.com/movie/fantasia/23329/quotes/",
+      "fix": "Use a note: Master, I only borrowed the hat. The brooms were fetching water, and now, well, there is a lot of water.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Master, I only borrowed the hat. The brooms were fetching water, and now, well, there is a lot of water.",
+        "by": "Mickey Mouse",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 14,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "A good fit with dancing mushrooms, hippos, dinosaurs and Bacchus on the plates, but the writing plays safe.",
+    "missing": [
+      "Mickey asleep in the chair, then the flood (The Sorcerer's Apprentice)",
+      "Yen Sid's starry cap",
+      "Chernabog's wings over Bald Mountain",
+      "Madame Upanova's ostriches (Dance of the Hours)",
+      "Ben Ali Gator's finale",
+      "Mickey shaking hands with Stokowski"
+    ],
+    "ideas": [
+      "Swap the 'Meringue kisses' note for 'Stars out of Yen Sid's cap, baked light.'",
+      "Swap the 'Mind the Brooms' sign line for a flooded floor joke: 'Mind the Brooms, mind the puddles.'",
+      "Swap the 'Warm marinated olives' house note for 'Madame Upanova's ostriches want them too.'",
+      "Swap the Mickey quote for a note about borrowing the hat."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "The Sorcerer's Apprentice and the brooms",
+      "Chernabog on Bald Mountain",
+      "the dancing hippos",
+      "the Rite of Spring dinosaurs",
+      "the dancing mushrooms"
+    ],
+    "changed": []
   }
- ],
- "checked_ok": 14,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.8,
-  "verdict": "A good fit with dancing mushrooms, hippos, dinosaurs and Bacchus on the plates, but the writing plays safe.",
-  "missing": [
-   "Mickey asleep in the chair, then the flood (The Sorcerer's Apprentice)",
-   "Yen Sid's starry cap",
-   "Chernabog's wings over Bald Mountain",
-   "Madame Upanova's ostriches (Dance of the Hours)",
-   "Ben Ali Gator's finale",
-   "Mickey shaking hands with Stokowski"
-  ],
-  "ideas": [
-   "Swap the 'Meringue kisses' note for 'Stars out of Yen Sid's cap, baked light.'",
-   "Swap the 'Mind the Brooms' sign line for a flooded floor joke: 'Mind the Brooms, mind the puddles.'",
-   "Swap the 'Warm marinated olives' house note for 'Madame Upanova's ostriches want them too.'",
-   "Swap the Mickey quote for a note about borrowing the hat."
-  ],
-  "flat": false,
-  "done": false
- }
 }

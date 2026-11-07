@@ -1,56 +1,75 @@
 {
- "id": "Die Hard 2 (1990)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "WINDSOR AIRLINES, Flight 114, Dulles, Christmas Eve",
-   "where": "prop",
-   "verdict": "wrong",
-   "why": "Windsor 114 is the plane Stuart fakes down. Holly is on Northeast 140.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=die-hard-2",
-   "fix": "NORTHEAST AIRLINES, Flight 140, Dulles, Christmas Eve",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "FLIGHT 114 · NOW BOARDING",
-   "where": "card",
-   "verdict": "wrong",
-   "why": "Flight 114 is the Windsor plane that goes down. Holly's plane is Northeast 140.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=die-hard-2",
-   "fix": "FLIGHT 140 · NOW BOARDING",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Die Hard 2 (1990)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "WINDSOR AIRLINES, Flight 114, Dulles, Christmas Eve",
+      "where": "prop",
+      "verdict": "wrong",
+      "why": "Windsor 114 is the plane Stuart fakes down. Holly is on Northeast 140.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=die-hard-2",
+      "fix": "NORTHEAST AIRLINES, Flight 140, Dulles, Christmas Eve",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "FLIGHT 114 · NOW BOARDING",
+      "where": "card",
+      "verdict": "wrong",
+      "why": "Flight 114 is the Windsor plane that goes down. Holly's plane is Northeast 140.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=die-hard-2",
+      "fix": "FLIGHT 140 · NOW BOARDING",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "Looks like a snowed in airport and uses the circling plane, but the food is generic airline fare and the best set pieces are missing.",
+    "missing": [
+      "Marvin handing over a radio for twenty dollars (the baggage area)",
+      "McClane jamming the 747 aileron with his coat (the wing)",
+      "McClane lighting the fuel trail with a lighter (the finish)",
+      "Lorenzo tearing up the parking ticket, 'What the hell, it's Christmas!' (the ending)",
+      "Holly tasering Thornburg (the lavatory)",
+      "The blanks in McClane's gun (the church)"
+    ],
+    "ideas": [
+      "Swap the 'Christmas cookies' note for 'Lorenzo tears up the ticket. What the hell, it's Christmas!'",
+      "Replace 'Dulles departure lounge buffalo wings' with 'Marvin's cart ride loaded fries'.",
+      "Change the ticket to a parking ticket stub signed by Lorenzo, replacing the Windsor boarding pass.",
+      "Swap 'Virginia ham biscuits' for a 'Fuel trail' flaming sambuca shot noting the burning fuel line that guides the planes in."
+    ],
+    "flat": true,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Just once, I'd like a regular, normal Christmas (eggnog, tree, turkey)",
+      "Yippee ki-yay",
+      "Holly's plane circling with no fuel",
+      "McClane's jacket jamming the wing flaps",
+      "Lighter on the fuel trail",
+      "Lorenzo: What the hell, it's Christmas!",
+      "Powell and the Twinkie"
+    ],
+    "changed": [
+      "Signed note is McClane's real Christmas line, replacing an invented quote",
+      "Eggnog note ties to the regular Christmas line",
+      "Cookie note is Lorenzo's it's Christmas",
+      "Chicken note now says what the food is",
+      "Wings note is Powell's Twinkie",
+      "Wink swapped for the jacket in the wing flaps",
+      "Hot buttered rum note nods to Yippee ki-yay"
+    ]
   }
- ],
- "checked_ok": 13,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.4,
-  "verdict": "Looks like a snowed in airport and uses the circling plane, but the food is generic airline fare and the best set pieces are missing.",
-  "missing": [
-   "Marvin handing over a radio for twenty dollars (the baggage area)",
-   "McClane jamming the 747 aileron with his coat (the wing)",
-   "McClane lighting the fuel trail with a lighter (the finish)",
-   "Lorenzo tearing up the parking ticket, 'What the hell, it's Christmas!' (the ending)",
-   "Holly tasering Thornburg (the lavatory)",
-   "The blanks in McClane's gun (the church)"
-  ],
-  "ideas": [
-   "Swap the 'Christmas cookies' note for 'Lorenzo tears up the ticket. What the hell, it's Christmas!'",
-   "Replace 'Dulles departure lounge buffalo wings' with 'Marvin's cart ride loaded fries'.",
-   "Change the ticket to a parking ticket stub signed by Lorenzo, replacing the Windsor boarding pass.",
-   "Swap 'Virginia ham biscuits' for a 'Fuel trail' flaming sambuca shot noting the burning fuel line that guides the planes in."
-  ],
-  "flat": true,
-  "done": false
- }
 }

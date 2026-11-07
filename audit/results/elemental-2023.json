@@ -1,48 +1,59 @@
 {
- "id": "Elemental (2023)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Sit, Ember. Eat the hot snacks while they glow, the blue flame cooked them for us.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Bernie never says this, and the Blue Flame is the family's tradition kept in the shop, not what cooks the food. The Wikiquote page has Ember's real food line, a charcoal dinner joke from the shop.",
-   "source": "https://en.wikiquote.org/wiki/Elemental_(2023_film)",
-   "fix": "Winner, winner, charcoal dinner!",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Winner, winner, charcoal dinner!",
-    "by": "Ember Lumen",
-    "kind": "quote"
-   },
-   "applied": "2026-11-07"
+  "id": "Elemental (2023)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Sit, Ember. Eat the hot snacks while they glow, the blue flame cooked them for us.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Bernie never says this, and the Blue Flame is the family's tradition kept in the shop, not what cooks the food. The Wikiquote page has Ember's real food line, a charcoal dinner joke from the shop.",
+      "source": "https://en.wikiquote.org/wiki/Elemental_(2023_film)",
+      "fix": "Winner, winner, charcoal dinner!",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Winner, winner, charcoal dinner!",
+        "by": "Ember Lumen",
+        "kind": "quote"
+      },
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 14,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A warm takeaway card with the shop and the blue flame, but it leaves out the Crying Game and the glass.",
+    "missing": [
+      "The Crying Game at the Ripple dinner (Wade and his family)",
+      "Bernie feeding Wade the fiery coal nuts at the shop (Wade as an inspector)",
+      "Ember melting sand into glass to seal the dam (the canals)",
+      "Ember rebuilding the broken glass pitcher for Wade's mum Brook (the Ripple dinner)",
+      "Vivisteria flowers at Garden Central Station (the date)",
+      "'Winner, winner, charcoal dinner!' (Ember in the shop)"
+    ],
+    "ideas": [
+      "Swap 'Fireplace shop hot nuts' for 'Bernie's coal nuts', as he feeds them to Wade.",
+      "Swap 'Ripple family ginger poached salmon' note for 'Crying Game, first to cry loses'.",
+      "Swap 'Vivisteria pavlova' for 'Glass pitcher pavlova' with a sugar shell.",
+      "Swap the fortune card line 'Firetown Regular.' for 'Winner, winner, charcoal dinner!'"
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Wade crying",
+      "Ember's family shop in Firetown",
+      "the blue flame",
+      "Ember melting sand into glass",
+      "the Ripple family dinner"
+    ],
+    "changed": [
+      "Delivery-run wink 3 now Ember melting sand into glass (was the canals and lifts)"
+    ]
   }
- ],
- "checked_ok": 14,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "A warm takeaway card with the shop and the blue flame, but it leaves out the Crying Game and the glass.",
-  "missing": [
-   "The Crying Game at the Ripple dinner (Wade and his family)",
-   "Bernie feeding Wade the fiery coal nuts at the shop (Wade as an inspector)",
-   "Ember melting sand into glass to seal the dam (the canals)",
-   "Ember rebuilding the broken glass pitcher for Wade's mum Brook (the Ripple dinner)",
-   "Vivisteria flowers at Garden Central Station (the date)",
-   "'Winner, winner, charcoal dinner!' (Ember in the shop)"
-  ],
-  "ideas": [
-   "Swap 'Fireplace shop hot nuts' for 'Bernie's coal nuts', as he feeds them to Wade.",
-   "Swap 'Ripple family ginger poached salmon' note for 'Crying Game, first to cry loses'.",
-   "Swap 'Vivisteria pavlova' for 'Glass pitcher pavlova' with a sugar shell.",
-   "Swap the fortune card line 'Firetown Regular.' for 'Winner, winner, charcoal dinner!'"
-  ],
-  "flat": false,
-  "done": false
- }
 }

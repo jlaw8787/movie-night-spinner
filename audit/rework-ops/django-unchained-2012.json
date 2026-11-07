@@ -1,0 +1,36 @@
+{
+ "id": "Django Unchained (2012)",
+ "ops": [
+  {
+   "old": "The snowbound winter Django learns the bounty trade",
+   "new": "Pumpkin and lentil soup for the winter Django learns the trade"
+  },
+  {
+   "old": "a campfire supper on the trail",
+   "new": "Rib eye with pan spuds, a campfire supper on the trail"
+  },
+  {
+   "old": "Two-layer white vanilla cake with buttercream frosting",
+   "new": "Two-layer white cake, buttercream. We're havin' white cake"
+  },
+  {
+   "old": "German wheat beer poured slowly over lemon honey syrup in a tall mug",
+   "new": "Wheat beer over lemon honey syrup. Prost?"
+  },
+  {
+   "old": "Bounty hunter's jerky",
+   "new": "Dead or alive bounty hunter's jerky"
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "card",
+    "title": "Schultz Business Card",
+    "lines": [
+     "Dentistry, teeth and bounties",
+     "Prost?"
+    ]
+   }
+  }
+ ]
+}

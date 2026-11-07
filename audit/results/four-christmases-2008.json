@@ -1,48 +1,57 @@
 {
- "id": "Four Christmases (2008)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "We told everyone we were off to Fiji. Now we're eating four Christmas dinners in one day, so pace yourself.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "They told their families they were going to Burma to inoculate babies, a charity trip. Fiji was their real plan. The line is also not film dialogue.",
-   "source": "https://www.pluggedin.com/movie-reviews/fourchristmases/",
-   "fix": "Use a note: Fiji is off, thanks to the fog. We are doing four Christmases in one day, so pace yourself.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Fiji is off, thanks to the fog. We are doing four Christmases in one day, so pace yourself.",
-    "by": "Kate",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
+  "id": "Four Christmases (2008)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "We told everyone we were off to Fiji. Now we're eating four Christmas dinners in one day, so pace yourself.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "They told their families they were going to Burma to inoculate babies, a charity trip. Fiji was their real plan. The line is also not film dialogue.",
+      "source": "https://www.pluggedin.com/movie-reviews/fourchristmases/",
+      "fix": "Use a note: Fiji is off, thanks to the fog. We are doing four Christmases in one day, so pace yourself.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Fiji is off, thanks to the fog. We are doing four Christmases in one day, so pace yourself.",
+        "by": "Kate",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 15,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "An airport lounge suits the fogged-in start and the dishes hit the nativity, the bounce castle and Howard.",
+    "missing": [
+      "The Burma cover story (the news interview)",
+      "Brad's real name, Orlando (Kate's reveal)",
+      "The pregnancy test in the jumping castle (Kate's mother's house)",
+      "Brad falling off the roof with the dish (Howard's)",
+      "Taboo at Paula's (games night)",
+      "The news crew at the end (New Year's Day)"
+    ],
+    "ideas": [
+      "Swap the 'Boarding Pass, Fiji' prop for 'Boarding Pass, Burma' with a 'We are not in Burma' stamp.",
+      "Swap the 'Truffle mac and cheese bites' house note for 'Brad's real name is Orlando.'",
+      "Swap 'Family games night trifle' for 'Taboo night trifle'.",
+      "Swap the 'Howard's bratwurst bites' note for 'Brad falls off the roof here.'"
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "fog grounds the Fiji flight",
+      "jumping castle",
+      "nativity play",
+      "Howard and the brothers",
+      "four families in one day"
+    ],
+    "changed": []
   }
- ],
- "checked_ok": 15,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "An airport lounge suits the fogged-in start and the dishes hit the nativity, the bounce castle and Howard.",
-  "missing": [
-   "The Burma cover story (the news interview)",
-   "Brad's real name, Orlando (Kate's reveal)",
-   "The pregnancy test in the jumping castle (Kate's mother's house)",
-   "Brad falling off the roof with the dish (Howard's)",
-   "Taboo at Paula's (games night)",
-   "The news crew at the end (New Year's Day)"
-  ],
-  "ideas": [
-   "Swap the 'Boarding Pass, Fiji' prop for 'Boarding Pass, Burma' with a 'We are not in Burma' stamp.",
-   "Swap the 'Truffle mac and cheese bites' house note for 'Brad's real name is Orlando.'",
-   "Swap 'Family games night trifle' for 'Taboo night trifle'.",
-   "Swap the 'Howard's bratwurst bites' note for 'Brad falls off the roof here.'"
-  ],
-  "flat": false,
-  "done": false
- }
 }

@@ -1,71 +1,88 @@
 {
- "id": "Dirty Work (1998)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Mitch and Sam, Payback Inc.",
-   "where": "sign",
-   "verdict": "wrong",
-   "why": "The business in the film is called Dirty Work. The plot says Mitch and Sam open 'Dirty Work', a revenge-for-hire business. Payback Inc. is not in the film.",
-   "source": "https://en.wikipedia.org/wiki/Dirty_Work_(1998_film)",
-   "fix": "Mitch and Sam, Dirty Work",
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Mitch's assertiveness tape plays while you drink.",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "Mitch talks into a tape recorder and it catches Cole in his office. There is no assertiveness tape.",
-   "source": "https://en.wikiquote.org/wiki/Dirty_Work_(1998_film)",
-   "fix": "Mitch's 'Note to self' tape recorder is running.",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Payback can wait till after dinner. Sam's on the barbecue and business can sit in the fridge with the beer.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Mitch never says this. It is a sticky note in his voice that fits the plot, so it can stay as a note with no quote marks.",
-   "source": "https://en.wikiquote.org/wiki/Dirty_Work_(1998_film)",
-   "fix": "Payback can wait till after dinner. Sam's on the barbecue and business can sit in the fridge with the beer.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Payback can wait till after dinner. Sam's on the barbecue and business can sit in the fridge with the beer.",
-    "by": "Mitch Weaver",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
+  "id": "Dirty Work (1998)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Mitch and Sam, Payback Inc.",
+      "where": "sign",
+      "verdict": "wrong",
+      "why": "The business in the film is called Dirty Work. The plot says Mitch and Sam open 'Dirty Work', a revenge-for-hire business. Payback Inc. is not in the film.",
+      "source": "https://en.wikipedia.org/wiki/Dirty_Work_(1998_film)",
+      "fix": "Mitch and Sam, Dirty Work",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Mitch's assertiveness tape plays while you drink.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "Mitch talks into a tape recorder and it catches Cole in his office. There is no assertiveness tape.",
+      "source": "https://en.wikiquote.org/wiki/Dirty_Work_(1998_film)",
+      "fix": "Mitch's 'Note to self' tape recorder is running.",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Payback can wait till after dinner. Sam's on the barbecue and business can sit in the fridge with the beer.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Mitch never says this. It is a sticky note in his voice that fits the plot, so it can stay as a note with no quote marks.",
+      "source": "https://en.wikiquote.org/wiki/Dirty_Work_(1998_film)",
+      "fix": "Payback can wait till after dinner. Sam's on the barbecue and business can sit in the fridge with the beer.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Payback can wait till after dinner. Sam's on the barbecue and business can sit in the fridge with the beer.",
+        "by": "Mitch Weaver",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 3,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 3,
+    "overall": 3,
+    "verdict": "A cop case file for a revenge shop, with the right characters but none of Norm's deadpan or the best gags.",
+    "missing": [
+      "Mitch's 'Note to self' tape recorder (Mitch, all film)",
+      "Ruining the opening night of Don Giovanni with skunks (finale)",
+      "The hallucinogenic brownies in the opera plot (finale)",
+      "Krazy Glue on the seat of Mitch's pants and the guns in the bully's desk (opening flashback)",
+      "The trunk prank on used car dealer Anton Phillips (a car lot)",
+      "Pops teaching the boys not to take crap from anyone (Pops)"
+    ],
+    "ideas": [
+      "Swap the card line 'Division: Special Investigations, 1998' for 'Division: Revenge for Hire, 1998'.",
+      "Swap 'Hot fudge peanut sundaes' note for 'Opera night brownies, no passengers' (the Don Giovanni brownies).",
+      "Swap 'Gin rickey' note for 'Note to self: do not take crap from anyone'.",
+      "Swap 'Mitch's job-a-week pretzel bites' note for '14 jobs in 3 months, and counting'."
+    ],
+    "flat": true,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Mitch's Note to self tape recorder",
+      "Ruining opening night of Don Giovanni with skunks",
+      "Pops: don't take crap from anyone",
+      "Fourteen jobs in three months",
+      "Mitch and Sam start Dirty Work",
+      "Hallucinogenic brownies at the opera"
+    ],
+    "changed": [
+      "Cue is the Don Giovanni finale",
+      "Pretzel note is fourteen jobs in three months",
+      "Sundaes renamed for opera night",
+      "Patty melt note is Pops's rule",
+      "Wink swapped for skunks at the opera",
+      "Prop card now says Dirty Work, not Payback Inc."
+    ]
   }
- ],
- "checked_ok": 13,
- "vibe": {
-  "world": 3,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
-  "look": 3,
-  "overall": 3,
-  "verdict": "A cop case file for a revenge shop, with the right characters but none of Norm's deadpan or the best gags.",
-  "missing": [
-   "Mitch's 'Note to self' tape recorder (Mitch, all film)",
-   "Ruining the opening night of Don Giovanni with skunks (finale)",
-   "The hallucinogenic brownies in the opera plot (finale)",
-   "Krazy Glue on the seat of Mitch's pants and the guns in the bully's desk (opening flashback)",
-   "The trunk prank on used car dealer Anton Phillips (a car lot)",
-   "Pops teaching the boys not to take crap from anyone (Pops)"
-  ],
-  "ideas": [
-   "Swap the card line 'Division: Special Investigations, 1998' for 'Division: Revenge for Hire, 1998'.",
-   "Swap 'Hot fudge peanut sundaes' note for 'Opera night brownies, no passengers' (the Don Giovanni brownies).",
-   "Swap 'Gin rickey' note for 'Note to self: do not take crap from anyone'.",
-   "Swap 'Mitch's job-a-week pretzel bites' note for '14 jobs in 3 months, and counting'."
-  ],
-  "flat": true,
-  "done": false
- }
 }

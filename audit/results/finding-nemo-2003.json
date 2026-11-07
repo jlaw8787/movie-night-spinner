@@ -1,60 +1,73 @@
 {
- "id": "Finding Nemo (2003)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "I made dinner, I think, and it smells like chips. Pass me one and I promise to remember who cooked.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "The quote page lists Dory's real lines (Just keep swimming, I can read) and not this one. It plays on her memory loss, which is true to her, but it is printed in quote marks.",
-   "source": "https://www.bustle.com/articles/166642-14-finding-nemo-quotes-to-remind-you-to-just-keep-swimming",
-   "fix": "Use a note: I made dinner, I think. Ask me who cooked it in five minutes and I won't remember. Eat up anyway.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "I made dinner, I think. Ask me who cooked it in five minutes and I won't remember. Eat up anyway.",
-    "by": "Dory",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Dentist's Waiting Room, Sydney",
-   "where": "sign",
-   "verdict": "wrong",
-   "why": "Wikipedia has Nemo's tank in dentist Philip Sherman's office in Sydney. No source calls it a waiting room.",
-   "source": "https://en.wikipedia.org/wiki/Finding_Nemo",
-   "fix": "Dentist's Office, Sydney",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Finding Nemo (2003)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "I made dinner, I think, and it smells like chips. Pass me one and I promise to remember who cooked.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "The quote page lists Dory's real lines (Just keep swimming, I can read) and not this one. It plays on her memory loss, which is true to her, but it is printed in quote marks.",
+      "source": "https://www.bustle.com/articles/166642-14-finding-nemo-quotes-to-remind-you-to-just-keep-swimming",
+      "fix": "Use a note: I made dinner, I think. Ask me who cooked it in five minutes and I won't remember. Eat up anyway.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "I made dinner, I think. Ask me who cooked it in five minutes and I won't remember. Eat up anyway.",
+        "by": "Dory",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Dentist's Waiting Room, Sydney",
+      "where": "sign",
+      "verdict": "wrong",
+      "why": "Wikipedia has Nemo's tank in dentist Philip Sherman's office in Sydney. No source calls it a waiting room.",
+      "source": "https://en.wikipedia.org/wiki/Finding_Nemo",
+      "fix": "Dentist's Office, Sydney",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 3,
+    "moments": 4,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "Fun Aussie plates that suit Sydney, with Bruce, Crush and the seagulls in the right places.",
+    "missing": [
+      "'Fish are friends, not food' at Bruce's meeting (the sharks' hideout)",
+      "Gill and the tank gang's filter plan (the dentist's tank)",
+      "Nigel the pelican carrying Marlin and Dory (the harbour)",
+      "The jellyfish forest (the reef trip)",
+      "Dory speaking whale (the whale)",
+      "Darla and the plastic bag (the ending)"
+    ],
+    "ideas": [
+      "Swap the 'Bruce's shark bite veggie platter' note for 'Fish are friends, not food.'",
+      "Swap the 'Sea breeze mocktail' for 'Jellyfish forest mocktail' with a 'Do not touch the tops' note.",
+      "Swap 'Beach kiosk, since 2003' for 'Dr Sherman's Waiting Room Kiosk'.",
+      "Swap the 'Clownfish orange yoghurt pops' for 'Gill's tank gang pops' with 'Escape plan sold separately.'"
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Fish are friends, not food",
+      "Just keep swimming",
+      "P. Sherman, 42 Wallaby Way, Sydney",
+      "Mine! Mine! seagulls",
+      "Crush on the East Australian Current",
+      "Bruce's shark meeting"
+    ],
+    "changed": [
+      "Dory's note now opens with 'Just keep swimming'",
+      "Spotted wink now Bruce's 'Fish are friends, not food'"
+    ]
   }
- ],
- "checked_ok": 11,
- "vibe": {
-  "world": 3,
-  "moments": 4,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "Fun Aussie plates that suit Sydney, with Bruce, Crush and the seagulls in the right places.",
-  "missing": [
-   "'Fish are friends, not food' at Bruce's meeting (the sharks' hideout)",
-   "Gill and the tank gang's filter plan (the dentist's tank)",
-   "Nigel the pelican carrying Marlin and Dory (the harbour)",
-   "The jellyfish forest (the reef trip)",
-   "Dory speaking whale (the whale)",
-   "Darla and the plastic bag (the ending)"
-  ],
-  "ideas": [
-   "Swap the 'Bruce's shark bite veggie platter' note for 'Fish are friends, not food.'",
-   "Swap the 'Sea breeze mocktail' for 'Jellyfish forest mocktail' with a 'Do not touch the tops' note.",
-   "Swap 'Beach kiosk, since 2003' for 'Dr Sherman's Waiting Room Kiosk'.",
-   "Swap the 'Clownfish orange yoghurt pops' for 'Gill's tank gang pops' with 'Escape plan sold separately.'"
-  ],
-  "flat": false,
-  "done": false
- }
 }

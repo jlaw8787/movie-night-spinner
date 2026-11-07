@@ -1,48 +1,61 @@
 {
- "id": "Forrest Gump (1994)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Bubba knows a hundred ways to cook shrimp. Tonight's is fried, with sweet tea on the side.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "No quote page opened has Forrest saying this. The sources show Bubba dreaming of a shrimping business and the pinkie-swear pact, and Forrest speaking of Bubba in the past. Fine as a note, wrong as a quote.",
-   "source": "https://moviemistakes.com/film500/quotes",
-   "fix": "Use a note: Bubba knew a hundred ways to cook shrimp. Tonight's is fried, with sweet tea on the side.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Bubba knew a hundred ways to cook shrimp. Tonight's is fried, with sweet tea on the side.",
-    "by": "Forrest Gump",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
+  "id": "Forrest Gump (1994)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Bubba knows a hundred ways to cook shrimp. Tonight's is fried, with sweet tea on the side.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "No quote page opened has Forrest saying this. The sources show Bubba dreaming of a shrimping business and the pinkie-swear pact, and Forrest speaking of Bubba in the past. Fine as a note, wrong as a quote.",
+      "source": "https://moviemistakes.com/film500/quotes",
+      "fix": "Use a note: Bubba knew a hundred ways to cook shrimp. Tonight's is fried, with sweet tea on the side.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Bubba knew a hundred ways to cook shrimp. Tonight's is fried, with sweet tea on the side.",
+        "by": "Forrest Gump",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 14,
+  "vibe": {
+    "world": 3,
+    "moments": 4,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "The right bench, the right shrimp and a Jenny boat nod, with a train layout that does not match the bench.",
+    "missing": [
+      "Run, Forrest, run across the country (the road)",
+      "Fifteen Dr Pepper at the White House",
+      "'Stupid is as stupid does' (Mama)",
+      "The white feather on the bench",
+      "Lieutenant Dan asking if he has found Jesus (the boat)",
+      "Ping pong in China"
+    ],
+    "ideas": [
+      "Swap the 'White House cherry vanilla soda' name for 'Dr Pepper, fifteen of them' with 'White House record.'",
+      "Swap the 'Greenbow buttermilk fried chicken' note for 'Mama says stupid is as stupid does.'",
+      "Swap the 'Dinner timetable' heading for 'Next bus' board with a feather drifting over it.",
+      "Swap the 'Forrest's chocolates' note for 'You never know what you're gonna get.'"
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Life is like a box of chocolates",
+      "Bubba and the shrimp",
+      "Stupid is as stupid does",
+      "Run, Forrest, Run",
+      "the bench",
+      "Jenny and Forrest, peas and carrots"
+    ],
+    "changed": [
+      "Fried chicken note now Mama's 'stupid is as stupid does'",
+      "Second bench wink now 'Run, Forrest, Run'"
+    ]
   }
- ],
- "checked_ok": 14,
- "vibe": {
-  "world": 3,
-  "moments": 4,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "The right bench, the right shrimp and a Jenny boat nod, with a train layout that does not match the bench.",
-  "missing": [
-   "Run, Forrest, run across the country (the road)",
-   "Fifteen Dr Pepper at the White House",
-   "'Stupid is as stupid does' (Mama)",
-   "The white feather on the bench",
-   "Lieutenant Dan asking if he has found Jesus (the boat)",
-   "Ping pong in China"
-  ],
-  "ideas": [
-   "Swap the 'White House cherry vanilla soda' name for 'Dr Pepper, fifteen of them' with 'White House record.'",
-   "Swap the 'Greenbow buttermilk fried chicken' note for 'Mama says stupid is as stupid does.'",
-   "Swap the 'Dinner timetable' heading for 'Next bus' board with a feather drifting over it.",
-   "Swap the 'Forrest's chocolates' note for 'You never know what you're gonna get.'"
-  ],
-  "flat": false,
-  "done": false
- }
 }

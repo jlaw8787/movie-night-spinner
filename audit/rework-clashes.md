@@ -18,3 +18,15 @@ Fixed layout words that don't suit the film. Fix with a per-film setting or a la
 - Analyze This (1999), formats.js: spec says "The Hotel Wexford", template says "The Waldorf".
 - Die Hard (1988): "Now I have a machine gun. Ho ho ho." verified, no slot. Die Hard with a Vengeance: no slot for Yippee-ki-yay.
 - Agent-written jokes with no direct source (check): Black Panther "No barking at the table", Black Sheep "Not a pudding, Mike", Ace Ventura 2 "Do not pass Go".
+- Braveheart (1995), campfire: "Mess Ticket" prop fallback and "camper" wording; label b "Earned the hard way" kept.
+- Brother Bear (2003), campfire: "Bugle call" still prints.
+- Dazed and Confused (1993), diner: "Hot coffee, homemade pie, booths by the window. Est. 1962." stock line.
+- Crouching Tiger (2000), tavern: "The Roadside Inn" fits the inn scene, not the teahouse (minor).
+- Agent jokes to check: Braveheart "Stephen the Irishman wants seconds".
+- Captain Marvel (2019), galley: SHIP'S MESS, MESS CALL, RATION 1 to 4, DECK 7 on a Louisiana and Blockbuster film.
+- Cars 2 (2011), stadium: SCRATCHED row label, "Concession Scorecard", SEC/ROW.
+- Captain America: The First Avenger (2011), stadium: GRANDSTAND, BLEACHERS, "Concession Scorecard" on a 1943 expo menu.
+- Chasing Amy (1997), candybar: "COMING SOON, PROBABLY" footer wraps the winks.
+- Doctor Strange (2016), tavern: "crowns", "FROM THE HEARTH", "Coin of the realm", "When the bell rings".
+- Dirty Work (1998), precinct: "DIVISION Special Investigations".
+- Dreamgirls (2006): wink prints inside "No discussing ___ at the tables" and now starts with a capital.

@@ -1,0 +1,34 @@
+{
+ "id": "Captain America: The First Avenger (2011)",
+ "ops": [
+  {
+   "old": "Steve's Brooklyn neighbourhood",
+   "new": "A kid from Brooklyn who can do this all day."
+  },
+  {
+   "old": "Beef chuck stewed with carrots, onion and potatoes",
+   "new": "Beef stew with carrots and potatoes, for the Howling Commandos"
+  },
+  {
+   "old": "Peggy Carter and the Strategic Scientific Reserve",
+   "new": "Peggy Carter, 8:00 on the dot at the Stork Club"
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Lime rickey",
+    "note": "To the little guys, Dr Erskine's toast."
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Skinny Steve: I can do this all day",
+    "Steve diving on the dud grenade",
+    "Howard Stark's flying car",
+    "The Red Skull and Hydra",
+    "Erskine: not a perfect soldier, but a good man"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "Car Wash (1976)",
+ "ops": [
+  {
+   "old": "Serve the lunch when the crew takes a break between cars.",
+   "new": "Serve the lunch when the crew tells Mr. B it is their lunch hour."
+  },
+  {
+   "old": "Daddy Rich fruit ice blocks",
+   "new": "Wilson Sisters fruit ice blocks"
+  },
+  {
+   "old": "a hot LA summer day",
+   "new": "Boiled peanuts while KGYS gives tickets away all day"
+  },
+  {
+   "old": "a soul food lunch on the break",
+   "new": "a soul food lunch for the crew's lunch hour"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Daddy Rich: praise this car",
+    "Lindy: more man than you'll ever be",
+    "KGYS and the J.B. ticket giveaway"
+   ]
+  }
+ ]
+}

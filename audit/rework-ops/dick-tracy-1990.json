@@ -1,0 +1,35 @@
+{
+ "id": "Dick Tracy (1990)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "There was one Napoleon, one Washington, one me!",
+    "by": "Big Boy Caprice",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Serve the mains when Big Boy holds court at the Club Ritz.",
+   "new": "Serve the mains when Big Boy pitches the mob bosses at Club Ritz."
+  },
+  {
+   "old": "the street kid Tracy takes in",
+   "new": "Crisp fried pickle chips. When do we eat?"
+  },
+  {
+   "old": "Breathless sings at Club Ritz, Big Boy holds court.",
+   "new": "Breathless sings Sooner or Later at Club Ritz."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The yellow trench coat and fedora",
+    "The two-way wrist radio",
+    "Lips Manlis and the Bath",
+    "The Blank, who has no face",
+    "The Kid's honorary badge"
+   ]
+  }
+ ]
+}

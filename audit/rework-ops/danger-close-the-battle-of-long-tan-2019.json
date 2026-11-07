@@ -1,0 +1,33 @@
+{
+ "id": "Danger Close: The Battle of Long Tan (2019)",
+ "ops": [
+  {
+   "old": "Serve the main after the concert at Nui Dat.",
+   "new": "Serve the main when 11 Platoon calls the artillery in close."
+  },
+  {
+   "old": "Lemongrass chicken skewers with peanut satay sauce",
+   "new": "Lemongrass chicken and satay for Little Pattie's show"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Major Smith refusing to leave 11 Platoon",
+    "The Iroquois pilots flying in under fire",
+    "Monsoon rain on the day",
+    "The roll call at the end"
+   ]
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "badge",
+    "title": "Delta Company",
+    "lines": [
+     "Long Tan, August 1966",
+     "Major Harry Smith"
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "id": "Crocodile Dundee II (1988)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I am home.",
+    "by": "Sue Charlton",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Serve the mains when Mick sets up his bush ambush.",
+   "new": "Serve the mains when Mick fakes Walter's death by a croc."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Mick calling in help with the bullroarer",
+    "Walter's faked death by crocodile",
+    "Mick, the crocodile who walks like a man",
+    "Rico and Mick swapping clothes"
+   ]
+  },
+  {
+   "old": "No crocs allowed",
+   "new": "Croc attack: faked"
+  },
+  {
+   "old": "Pavlova",
+   "new": "I am home pavlova"
+  },
+  {
+   "old": "Foil-wrapped campfire whole barramundi",
+   "new": "Jaba Point foil-wrapped whole barramundi"
+  },
+  {
+   "old": "the Top End",
+   "new": "Belonga Mick, the Top End"
+  }
+ ]
+}

@@ -1,96 +1,109 @@
 {
- "id": "Elvis (2022)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Room seven has the band, room eight has the kid in the pink suit, and the girls in the car park have been there since noon. Corn dogs at the van, checkout at ten.",
-   "where": "note",
-   "verdict": "unsure",
-   "why": "The night manager is not a film character, so there is no quote to check. The note fits the plot (the Hayride, the pink suit), so it can stay as a note with no quote marks.",
-   "source": "https://www.nfsa.gov.au/collection/curated/elvis-louisiana-hayride-suit",
-   "fix": "Room seven has the band, room eight has the kid in the pink suit, and the girls in the car park have been there since noon. Corn dogs at the van, checkout at ten.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Room seven has the band, room eight has the kid in the pink suit, and the girls in the car park have been there since noon. Corn dogs at the van, checkout at ten.",
-    "by": "The night manager",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "A pink suit and eye shadow on the Hayride stage",
-   "where": "wink",
-   "verdict": "wrong",
-   "why": "The transcript has Parker saying the boy in the pink suit was a superhero and, on the Hayride stage, greasy hair and girly makeup. Eye shadow is never named.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=elvis-2022",
-   "fix": "A pink suit and girly makeup on the Hayride stage",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "From the carnival, just past the hall of mirrors.",
-   "where": "house",
-   "verdict": "ok",
-   "why": "In the transcript Bill says the band is going to the hall of mirrors and Jimmie says to screw it, in the carnival scene where Parker finds Elvis lost.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=elvis-2022",
-   "fix": "From the carnival, just past the Colonel's sideshow.",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "The hall of mirrors at the carnival",
-   "where": "wink",
-   "verdict": "ok",
-   "why": "Same carnival scene: Bill calls out that they are going to the hall of mirrors.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=elvis-2022",
-   "fix": "The Colonel's carnival sideshow",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "A gospel tent revival in Tupelo",
-   "where": "wink",
-   "verdict": "wrong",
-   "why": "The Tupelo scene has a gospel revival with a congregation and young Elvis caught up in the singing, but no tent is mentioned in the transcript.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=elvis-2022",
-   "fix": "A gospel revival in Tupelo",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Elvis (2022)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Room seven has the band, room eight has the kid in the pink suit, and the girls in the car park have been there since noon. Corn dogs at the van, checkout at ten.",
+      "where": "note",
+      "verdict": "unsure",
+      "why": "The night manager is not a film character, so there is no quote to check. The note fits the plot (the Hayride, the pink suit), so it can stay as a note with no quote marks.",
+      "source": "https://www.nfsa.gov.au/collection/curated/elvis-louisiana-hayride-suit",
+      "fix": "Room seven has the band, room eight has the kid in the pink suit, and the girls in the car park have been there since noon. Corn dogs at the van, checkout at ten.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Room seven has the band, room eight has the kid in the pink suit, and the girls in the car park have been there since noon. Corn dogs at the van, checkout at ten.",
+        "by": "The night manager",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "A pink suit and eye shadow on the Hayride stage",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "The transcript has Parker saying the boy in the pink suit was a superhero and, on the Hayride stage, greasy hair and girly makeup. Eye shadow is never named.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=elvis-2022",
+      "fix": "A pink suit and girly makeup on the Hayride stage",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "From the carnival, just past the hall of mirrors.",
+      "where": "house",
+      "verdict": "ok",
+      "why": "In the transcript Bill says the band is going to the hall of mirrors and Jimmie says to screw it, in the carnival scene where Parker finds Elvis lost.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=elvis-2022",
+      "fix": "From the carnival, just past the Colonel's sideshow.",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "The hall of mirrors at the carnival",
+      "where": "wink",
+      "verdict": "ok",
+      "why": "Same carnival scene: Bill calls out that they are going to the hall of mirrors.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=elvis-2022",
+      "fix": "The Colonel's carnival sideshow",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "A gospel tent revival in Tupelo",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "The Tupelo scene has a gospel revival with a congregation and young Elvis caught up in the singing, but no tent is mentioned in the transcript.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=elvis-2022",
+      "fix": "A gospel revival in Tupelo",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A good motel postcard that fits a 1955 tour, but the film's snowman line and the big shows are left out.",
+    "missing": [
+      "'Elvis the Showman and the Colonel the Snowman' (the Colonel)",
+      "Gladys holding the 'I Hate Elvis' button at the merchandise meeting (Gladys)",
+      "The '68 Comeback Special and 'If I Can Dream' (Steve Binder)",
+      "The International Hotel showroom in Las Vegas (the residency)",
+      "'That's All Right' on the radio, and the Colonel thinking the singer is black (the Colonel)",
+      "The $8,549,761.09 debt the Colonel says Elvis owes (Parker to Vernon)"
+    ],
+    "ideas": [
+      "Swap 'Hot boiled Cajun peanuts' note for 'The Colonel's snow job, a peanut for a promise'.",
+      "Swap 'Memphis peach sweet tea' note for 'Backstage at the Comeback Special'.",
+      "Swap the footer 'Ask the desk about a pink suit...' for 'Ask the desk about the Colonel's debt'.",
+      "Swap 'Orange Crush on ice' note for 'For Gladys, who hated the button'."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "the pink suit on the Hayride stage",
+      "Elvis the Showman and the Colonel the Snowman",
+      "the carnival hall of mirrors",
+      "Graceland and the peanut butter and banana sandwich",
+      "the Comeback Special",
+      "Vegas and the International Hotel"
+    ],
+    "changed": [
+      "Wink 1 (the desk footer) now the Showman and Snowman line, pink suit moved to wink 2",
+      "Orange Crush note now the Comeback Special and Vegas"
+    ]
   }
- ],
- "checked_ok": 13,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "A good motel postcard that fits a 1955 tour, but the film's snowman line and the big shows are left out.",
-  "missing": [
-   "'Elvis the Showman and the Colonel the Snowman' (the Colonel)",
-   "Gladys holding the 'I Hate Elvis' button at the merchandise meeting (Gladys)",
-   "The '68 Comeback Special and 'If I Can Dream' (Steve Binder)",
-   "The International Hotel showroom in Las Vegas (the residency)",
-   "'That's All Right' on the radio, and the Colonel thinking the singer is black (the Colonel)",
-   "The $8,549,761.09 debt the Colonel says Elvis owes (Parker to Vernon)"
-  ],
-  "ideas": [
-   "Swap 'Hot boiled Cajun peanuts' note for 'The Colonel's snow job, a peanut for a promise'.",
-   "Swap 'Memphis peach sweet tea' note for 'Backstage at the Comeback Special'.",
-   "Swap the footer 'Ask the desk about a pink suit...' for 'Ask the desk about the Colonel's debt'.",
-   "Swap 'Orange Crush on ice' note for 'For Gladys, who hated the button'."
-  ],
-  "flat": false,
-  "done": false
- }
 }

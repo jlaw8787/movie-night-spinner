@@ -1,0 +1,38 @@
+{
+ "id": "Deck the Halls (2006)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I really want my house to be seen... from space!",
+    "by": "Buddy Hall",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Serve the snacks when the lights go on.",
+   "new": "Serve the snacks when Carter tightens the plug."
+  },
+  {
+   "old": "Cherry tomato and baby bocconcini skewers with basil oil",
+   "new": "Tomato and bocconcini skewers, strung like Buddy's lights"
+  },
+  {
+   "old": "Street party cranberry chilli meatballs",
+   "new": "Atomic Warlord cranberry chilli meatballs"
+  },
+  {
+   "old": "Par-boiled, roughed up and roasted crisp. Precise to the minute",
+   "new": "Par-boiled, roughed up, roasted crisp. Steve plans it to the minute"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Buddy's lights visible from space",
+    "Steve ends up in the frozen lake",
+    "Steve's car doors, ripped off",
+    "Fries and chocolate milk"
+   ]
+  }
+ ]
+}

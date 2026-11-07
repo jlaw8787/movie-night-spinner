@@ -1,0 +1,50 @@
+{
+ "id": "Creed II (2018)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "When a fighter ain't got nothing to lose, he's dangerous.",
+    "by": "Rocky Balboa",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "layered and patient, like everything the Dragos do",
+   "new": "Honey and sour cream layers. Ivan throws in the towel."
+  },
+  {
+   "old": "cooked low at the end of a day in the dirt",
+   "new": "Slow beef chilli for the desert comeback"
+  },
+  {
+   "old": "Serve the snacks when Ivan puts Viktor through his training in Ukraine.",
+   "new": "Serve the snacks when Ivan talks of the stray dogs of Ukraine."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Ivan throwing in the towel for Viktor",
+    "Adonis retraining in the desert",
+    "Viktor training under Ivan back in Ukraine",
+    "Adrian's, Rocky's restaurant back in Philly",
+    "Bianca's music and her hearing aids"
+   ]
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Grilled chicken skewers with tahini",
+    "note": "Little Duke's orders. Protein first, then the desert.",
+    "meat": true
+   }
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Cold pressed beetroot and ginger juice",
+    "note": "To Amara, with Rocky as godfather."
+   }
+  }
+ ]
+}

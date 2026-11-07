@@ -1,56 +1,68 @@
 {
- "id": "Escape from New York (1981)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Serve the mains when the Duke rolls up in his chandelier car.",
-   "where": "cue",
-   "verdict": "wrong",
-   "why": "Wikipedia's plot has the Duke and his followers confronting Snake at street level, then giving chase. Neither it nor the transcript describes the chandelier car rolling up.",
-   "source": "https://en.wikipedia.org/wiki/Escape_from_New_York",
-   "fix": "Serve the mains when the Duke and his followers confront Snake in the street.",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Brain makes everything himself",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "Wikipedia and the transcript show Brain running a gasoline refinery. Nothing shows him making moonshine, so the note is changed to the refinery.",
-   "source": "https://en.wikipedia.org/wiki/Escape_from_New_York",
-   "fix": "Brain runs a refinery, so why not a still",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Escape from New York (1981)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the mains when the Duke rolls up in his chandelier car.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "Wikipedia's plot has the Duke and his followers confronting Snake at street level, then giving chase. Neither it nor the transcript describes the chandelier car rolling up.",
+      "source": "https://en.wikipedia.org/wiki/Escape_from_New_York",
+      "fix": "Serve the mains when the Duke and his followers confront Snake in the street.",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Brain makes everything himself",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Wikipedia and the transcript show Brain running a gasoline refinery. Nothing shows him making moonshine, so the note is changed to the refinery.",
+      "source": "https://en.wikipedia.org/wiki/Escape_from_New_York",
+      "fix": "Brain runs a refinery, so why not a still",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 22,
+  "vibe": {
+    "world": 5,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "The USPF mess hall idea and the map are excellent, but the dishes are plain army food and the film's best bits are barely used.",
+    "missing": [
+      "'Call me Snake' (Snake and Hauk)",
+      "The Bandstand Boogie cassette (Cabbie's tape and the ending)",
+      "Chock Full o'Nuts (where Snake takes refuge)",
+      "The 23 hour clock on the neck charges (Hauk's deal)",
+      "Snake against Slag in the ring (the Duke's fight)",
+      "Cabbie's Molotov cocktail (the crazies)"
+    ],
+    "ideas": [
+      "Swap the 'Coffee' description 'Bottomless all night' for 'Chock Full o'Nuts, bottomless all night'.",
+      "Swap 'Tins and Saltines' for 'Cabbie's Bandstand Boogie Special' and a cassette stamp.",
+      "Add a countdown line to the mess pass in place of 'NO. 1988-022': 'Charges dissolve in 23 hours'.",
+      "Swap 'Grilled Cheese' for 'Snake's Name Is Snake Sandwich', ordered with a growl."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Call me Snake",
+      "Hauk's 24 hours deal",
+      "the Duke and his followers",
+      "the Bandstand Boogie cassette ending",
+      "Snake Plissken, Black Light"
+    ],
+    "changed": [
+      "Footer adds Call me Snake",
+      "Coffee note adds the Bandstand Boogie tape"
+    ]
   }
- ],
- "checked_ok": 22,
- "vibe": {
-  "world": 5,
-  "moments": 3,
-  "food": 3,
-  "tone": 4,
-  "look": 4,
-  "overall": 3.8,
-  "verdict": "The USPF mess hall idea and the map are excellent, but the dishes are plain army food and the film's best bits are barely used.",
-  "missing": [
-   "'Call me Snake' (Snake and Hauk)",
-   "The Bandstand Boogie cassette (Cabbie's tape and the ending)",
-   "Chock Full o'Nuts (where Snake takes refuge)",
-   "The 23 hour clock on the neck charges (Hauk's deal)",
-   "Snake against Slag in the ring (the Duke's fight)",
-   "Cabbie's Molotov cocktail (the crazies)"
-  ],
-  "ideas": [
-   "Swap the 'Coffee' description 'Bottomless all night' for 'Chock Full o'Nuts, bottomless all night'.",
-   "Swap 'Tins and Saltines' for 'Cabbie's Bandstand Boogie Special' and a cassette stamp.",
-   "Add a countdown line to the mess pass in place of 'NO. 1988-022': 'Charges dissolve in 23 hours'.",
-   "Swap 'Grilled Cheese' for 'Snake's Name Is Snake Sandwich', ordered with a growl."
-  ],
-  "flat": false,
-  "done": false
- }
 }
