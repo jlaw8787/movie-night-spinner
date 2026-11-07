@@ -1,59 +1,60 @@
 {
-  "id": "La La Land (2016)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "printed": true,
-      "done": true,
-      "text": "I wanted my own place, a stage, and a table by the window. I finally have all three. Sit anywhere.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Printed in quote marks as Sebastian's words. The quote page I opened lists all his lines and this is not one of them. His real jazz line is 'This is the dream! It's conflict and it's compromise, and it's very, very exciting.'",
-      "source": "https://moviemistakes.com/film11758/quotes",
-      "fix": "This is the dream! It's conflict and it's compromise, and it's very, very exciting.",
-      "fix_note": {
-        "text": "This is the dream! It's conflict and it's compromise, and it's very, very exciting.",
-        "by": "Sebastian Wilder",
-        "kind": "quote"
-      },
-      "applied": "2026-11-07"
-    },
-    {
-      "printed": true,
-      "done": false,
-      "text": "Jazz club. Taco truck.",
-      "where": "tagline",
-      "verdict": "wrong",
-      "why": "No taco truck appears in the transcript or plot. Seb plans a jazz club called Chicken on a Stick, with chicken, beer and jazz.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=la-la-land",
-      "fix": "Jazz club. Chicken on a Stick.",
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 16,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "A moody jazz cafe that suits Seb's club and uses the Chicken on a Stick gag well, but the dishes are generic and it skips the dance and song moments.",
-    "missing": [
-      "Rebel Without a Cause date and the Griffith Observatory dance (the night out)",
-      "Mia requesting an 80s song from Seb's cover band (the party)",
-      "Mia's yellow dress and the lamp post on the poster",
-      "Mia's one woman play (the flop)",
-      "The Seb's logo Mia designed with a music note for the apostrophe (the club at the end)",
-      "The five year epilogue (Mia finds Seb's)"
-    ],
-    "ideas": [
-      "Swap the tagline 'Jazz club. Taco truck.' for 'Jazz club. Chicken on a Stick.'",
-      "Swap one stamp square on the club stub for 'I RAN' as a nod to the cover band request.",
-      "Swap the 'Observatory starry chocolate tart' note for 'Where they dance among the stars' and print it on the face.",
-      "Swap the cover title 'Seb's' for the logo style with a music note in place of the apostrophe."
-    ],
-    "flat": true,
-    "done": false
+ "id": "La La Land (2016)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": true,
+   "text": "I wanted my own place, a stage, and a table by the window. I finally have all three. Sit anywhere.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Sebastian's words. The quote page I opened lists all his lines and this is not one of them. His real jazz line is 'This is the dream! It's conflict and it's compromise, and it's very, very exciting.'",
+   "source": "https://moviemistakes.com/film11758/quotes",
+   "fix": "This is the dream! It's conflict and it's compromise, and it's very, very exciting.",
+   "fix_note": {
+    "text": "This is the dream! It's conflict and it's compromise, and it's very, very exciting.",
+    "by": "Sebastian Wilder",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "printed": true,
+   "done": true,
+   "text": "Jazz club. Taco truck.",
+   "where": "tagline",
+   "verdict": "wrong",
+   "why": "No taco truck appears in the transcript or plot. Seb plans a jazz club called Chicken on a Stick, with chicken, beer and jazz.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=la-la-land",
+   "fix": "Jazz club. Chicken on a Stick.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A moody jazz cafe that suits Seb's club and uses the Chicken on a Stick gag well, but the dishes are generic and it skips the dance and song moments.",
+  "missing": [
+   "Rebel Without a Cause date and the Griffith Observatory dance (the night out)",
+   "Mia requesting an 80s song from Seb's cover band (the party)",
+   "Mia's yellow dress and the lamp post on the poster",
+   "Mia's one woman play (the flop)",
+   "The Seb's logo Mia designed with a music note for the apostrophe (the club at the end)",
+   "The five year epilogue (Mia finds Seb's)"
+  ],
+  "ideas": [
+   "Swap the tagline 'Jazz club. Taco truck.' for 'Jazz club. Chicken on a Stick.'",
+   "Swap one stamp square on the club stub for 'I RAN' as a nod to the cover band request.",
+   "Swap the 'Observatory starry chocolate tart' note for 'Where they dance among the stars' and print it on the face.",
+   "Swap the cover title 'Seb's' for the logo style with a music note in place of the apostrophe."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

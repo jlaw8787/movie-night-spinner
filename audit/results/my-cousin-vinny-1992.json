@@ -1,43 +1,44 @@
 {
-  "id": "My Cousin Vinny (1992)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Vinny's hunting trip with the DA",
-      "where": "dish-note",
-      "verdict": "ok",
-      "why": "In the transcript Vinny goes hunting to bond with Trotter, the prosecuting DA, hoping to see his files.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=my-cousin-vinny",
-      "fix": "Vinny's midnight hunting trip, deer lips and all",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 9,
-  "vibe": {
-    "world": 4,
-    "moments": 4,
-    "food": 4,
-    "tone": 4,
-    "look": 4,
-    "verdict": "A proper Southern diner built around the grits cross-examination, with the poster doing the heavy lifting for the look.",
-    "missing": [
-      "'Two yoots' (Vinny in the courtroom)",
-      "Mona Lisa's tyre mark testimony and positraction (the car expert scene)",
-      "Magic grits and the beanstalk line (Tipton cross-examination)",
-      "Judge Haller's contempt charges (the arraignment)",
-      "Vinny's hunting trip clothes and Mona Lisa's deer speech (the motel)",
-      "The 1964 Skylark versus the 1963 Tempest (the tyre tracks)"
-    ],
-    "ideas": [
-      "Swap 'Alabama's finest' under Fried green tomatoes for 'Magic grits not included.'",
-      "Swap 'Bottomless coffee 50c' for 'Two yoots eat free. Enunciate.'",
-      "Swap 'Mona Lisa's pick' on the cobbler for 'Positraction not included.'",
-      "Add a Tempest versus Skylark tyre mark placemat in the grey space under the Family Supper box."
-    ],
-    "overall": 4,
-    "flat": false,
-    "done": false
+ "id": "My Cousin Vinny (1992)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Vinny's hunting trip with the DA",
+   "where": "dish-note",
+   "verdict": "ok",
+   "why": "In the transcript Vinny goes hunting to bond with Trotter, the prosecuting DA, hoping to see his files.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=my-cousin-vinny",
+   "fix": "Vinny's midnight hunting trip, deer lips and all",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 9,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "verdict": "A proper Southern diner built around the grits cross-examination, with the poster doing the heavy lifting for the look.",
+  "missing": [
+   "'Two yoots' (Vinny in the courtroom)",
+   "Mona Lisa's tyre mark testimony and positraction (the car expert scene)",
+   "Magic grits and the beanstalk line (Tipton cross-examination)",
+   "Judge Haller's contempt charges (the arraignment)",
+   "Vinny's hunting trip clothes and Mona Lisa's deer speech (the motel)",
+   "The 1964 Skylark versus the 1963 Tempest (the tyre tracks)"
+  ],
+  "ideas": [
+   "Swap 'Alabama's finest' under Fried green tomatoes for 'Magic grits not included.'",
+   "Swap 'Bottomless coffee 50c' for 'Two yoots eat free. Enunciate.'",
+   "Swap 'Mona Lisa's pick' on the cobbler for 'Positraction not included.'",
+   "Add a Tempest versus Skylark tyre mark placemat in the grey space under the Family Supper box."
+  ],
+  "overall": 4,
+  "flat": false,
+  "done": false
+ }
 }

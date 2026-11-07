@@ -5,12 +5,13 @@
     {
       "text": "Dave's walk to school through New York",
       "where": "dish-note",
-      "verdict": "unsure",
-      "why": "Dave lives in Staten Island. Neither the plot nor the Fandom page shows a bodega, a bacon and egg roll or a walk to school.",
+      "verdict": "wrong",
+      "why": "Dave lives on Staten Island with his father, but no transcript line, plot summary or search result shows him walking to school past a bodega or eating a bacon and egg roll.",
       "source": "https://en.wikipedia.org/wiki/Kick-Ass_(film)",
-      "fix": "Dave's snack before another night as Kick-Ass",
+      "fix": "A Staten Island breakfast for Dave.",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 14,

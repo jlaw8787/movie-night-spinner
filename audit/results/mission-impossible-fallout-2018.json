@@ -1,43 +1,44 @@
 {
-  "id": "Mission: Impossible - Fallout (2018)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Walker's order, before he reloads his arms.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "Walker never orders a drink or reloads his arms. He does make the HALO jump over Paris with Ethan.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=mission-impossible-fallout",
-      "fix": "Walker's order, before the HALO jump over Paris.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 15,
-  "vibe": {
-    "world": 3,
-    "moments": 4,
-    "food": 3,
-    "tone": 3,
-    "look": 3,
-    "overall": 3.2,
-    "verdict": "Right locations and plot beats, but a CIA breakroom form is generic office paper and the best set pieces are only name-checked.",
-    "missing": [
-      "Ethan's broken ankle jump between London rooftops",
-      "Fight in the Grand Palais bathroom (Paris)",
-      "HALO jump over Paris (Walker and Ethan)",
-      "Three plutonium cores (the Apostles' plan)",
-      "Helicopter chase over Kashmir (finale)",
-      "Benji and Luther on the Berlin handover (opening)"
-    ],
-    "ideas": [
-      "Swap 'CIA Paris Station Breakroom' for a dossier tab on the Apostles that uses the same form.",
-      "Replace 'Pastis with iced water' note with a line about the HALO jump.",
-      "Rename 'Kashmir valley rogan josh' to 'Three cores rogan josh' and cook it as the climax dish.",
-      "Add a London rooftop sweet: 'Broken ankle pistachio snap' under Sweets."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Mission: Impossible - Fallout (2018)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Walker's order, before he reloads his arms.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Walker never orders a drink or reloads his arms. He does make the HALO jump over Paris with Ethan.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=mission-impossible-fallout",
+   "fix": "Walker's order, before the HALO jump over Paris.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "Right locations and plot beats, but a CIA breakroom form is generic office paper and the best set pieces are only name-checked.",
+  "missing": [
+   "Ethan's broken ankle jump between London rooftops",
+   "Fight in the Grand Palais bathroom (Paris)",
+   "HALO jump over Paris (Walker and Ethan)",
+   "Three plutonium cores (the Apostles' plan)",
+   "Helicopter chase over Kashmir (finale)",
+   "Benji and Luther on the Berlin handover (opening)"
+  ],
+  "ideas": [
+   "Swap 'CIA Paris Station Breakroom' for a dossier tab on the Apostles that uses the same form.",
+   "Replace 'Pastis with iced water' note with a line about the HALO jump.",
+   "Rename 'Kashmir valley rogan josh' to 'Three cores rogan josh' and cook it as the climax dish.",
+   "Add a London rooftop sweet: 'Broken ankle pistachio snap' under Sweets."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

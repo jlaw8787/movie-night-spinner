@@ -1,42 +1,44 @@
 {
-  "id": "Jack Frost (1998)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Charlie's order, harmonica in his pocket.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "Charlie has the magic harmonica, which Wikipedia confirms, but no source I read shows him ordering a cherry cola float or anything else.",
-      "source": "https://en.wikipedia.org/wiki/Jack_Frost_(1998_film)",
-      "fix": "Charlie's order, with Jack's harmonica close by.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 17,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "A friendly Frost family recipe box, but it misses the snowman gags fans quote.",
-    "missing": [
-      "Jack seeing his reflection in the window and learning he is a snowman",
-      "The opening snowball fight Charlie leads",
-      "'Snow dad is better than no dad'",
-      "The carrot nose gag",
-      "Mac sleeping on the couch",
-      "Billy Idol's 'Hot in the City' on the radio"
-    ],
-    "ideas": [
-      "Swap 'Snowman coconut cupcakes' note for 'Carrot nose, no questions.'",
-      "Swap 'Harmonica night white hot chocolate' note for 'Snow dad is better than no dad.'",
-      "Swap 'Snow day toastie fingers with tomato soup' note for 'Snowball fight, Charlie's team wins.'",
-      "Swap 'Cherry cola float' for 'Mac's couch float' with the note 'Mac, you can sleep here.'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Jack Frost (1998)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Charlie's order, harmonica in his pocket.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Charlie has the harmonica his father gives him, but no source I could open shows Charlie ordering a float or any other food.",
+   "source": "https://en.wikipedia.org/wiki/Jack_Frost_(1998_film)",
+   "fix": "A treat for Charlie, harmonica in his pocket.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A friendly Frost family recipe box, but it misses the snowman gags fans quote.",
+  "missing": [
+   "Jack seeing his reflection in the window and learning he is a snowman",
+   "The opening snowball fight Charlie leads",
+   "'Snow dad is better than no dad'",
+   "The carrot nose gag",
+   "Mac sleeping on the couch",
+   "Billy Idol's 'Hot in the City' on the radio"
+  ],
+  "ideas": [
+   "Swap 'Snowman coconut cupcakes' note for 'Carrot nose, no questions.'",
+   "Swap 'Harmonica night white hot chocolate' note for 'Snow dad is better than no dad.'",
+   "Swap 'Snow day toastie fingers with tomato soup' note for 'Snowball fight, Charlie's team wins.'",
+   "Swap 'Cherry cola float' for 'Mac's couch float' with the note 'Mac, you can sleep here.'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

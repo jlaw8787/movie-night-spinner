@@ -1,43 +1,44 @@
 {
-  "id": "Legally Blonde (2001)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Elle's toast after the Harvard admissions video.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "The film has the admissions video and the 179 LSAT score, but no toast after either. The fix ties the line to the 179, which the transcript does show.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=legally-blonde",
-      "fix": "Elle's reward for a 179 on the LSATs.",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 12,
-  "vibe": {
-    "world": 3,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 3,
-    "overall": 3,
-    "verdict": "Pink popcorn and Bruiser fit, but the greys and blues of the layout hide the pink and the best lines are missing.",
-    "missing": [
-      "\"What, like it's hard?\"",
-      "Chutney's permed hair and the ammonium thioglycolate cross examination",
-      "Brooke Windham's liposuction alibi",
-      "The pink scented resume",
-      "Elle teaching Paulette the bend and snap to get the UPS guy",
-      "Warner dumping Elle at a restaurant for not being \"serious\""
-    ],
-    "ideas": [
-      "Swap \"Harvard dining hall pasta\" for \"Warner's break up dinner\".",
-      "Swap \"Mini quiche Lorraine\" note for \"Bend and snap, UPS guy special\".",
-      "Swap the black and white photo strip for pink framed stills.",
-      "Rename \"Delta Nu pink popcorn\" to \"Perm popcorn, 24 hour rule\"."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Legally Blonde (2001)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Elle's toast after the Harvard admissions video.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "The film has the admissions video and the 179 LSAT score, but no toast after either. The fix ties the line to the 179, which the transcript does show.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=legally-blonde",
+   "fix": "Elle's reward for a 179 on the LSATs.",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3,
+  "verdict": "Pink popcorn and Bruiser fit, but the greys and blues of the layout hide the pink and the best lines are missing.",
+  "missing": [
+   "\"What, like it's hard?\"",
+   "Chutney's permed hair and the ammonium thioglycolate cross examination",
+   "Brooke Windham's liposuction alibi",
+   "The pink scented resume",
+   "Elle teaching Paulette the bend and snap to get the UPS guy",
+   "Warner dumping Elle at a restaurant for not being \"serious\""
+  ],
+  "ideas": [
+   "Swap \"Harvard dining hall pasta\" for \"Warner's break up dinner\".",
+   "Swap \"Mini quiche Lorraine\" note for \"Bend and snap, UPS guy special\".",
+   "Swap the black and white photo strip for pink framed stills.",
+   "Rename \"Delta Nu pink popcorn\" to \"Perm popcorn, 24 hour rule\"."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

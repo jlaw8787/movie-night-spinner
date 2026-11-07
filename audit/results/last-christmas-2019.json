@@ -1,43 +1,44 @@
 {
-  "id": "Last Christmas (2019)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Christmas dinner at the shelter where Tom volunteers, and Kate finally pitches in",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Kate helps at the shelter where Tom volunteers and puts on a Christmas Eve show there. The film has no Christmas dinner at the shelter.",
-      "source": "https://en.wikipedia.org/wiki/Last_Christmas_(film)",
-      "fix": "Christmas Eve at the shelter where Tom volunteers, and Kate pitches in",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "The elf shop and Kate's family food fit, but Tom's \"look up\", the bench and the heart reveal go unused.",
-    "missing": [
-      "Tom telling Kate to look up",
-      "Tom's memorial bench",
-      "Kate's heart transplant reveal",
-      "Santa and her Danish admirer",
-      "The Christmas Eve show at the shelter",
-      "Tom's line about a bird poo being good luck"
-    ],
-    "ideas": [
-      "Swap \"Covent Garden cevapi rolls\" for \"Look up pastries\", Tom's advice.",
-      "Swap \"Tom's shelter Christmas turkey\" note for the Christmas Eve show.",
-      "Swap the badge stamps for a bench plaque on the cover.",
-      "Rename \"Santa's shop mince pies\" to \"Santa's Danish admirer mince pies\"."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Last Christmas (2019)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Christmas dinner at the shelter where Tom volunteers, and Kate finally pitches in",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Kate helps at the shelter where Tom volunteers and puts on a Christmas Eve show there. The film has no Christmas dinner at the shelter.",
+   "source": "https://en.wikipedia.org/wiki/Last_Christmas_(film)",
+   "fix": "Christmas Eve at the shelter where Tom volunteers, and Kate pitches in",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "The elf shop and Kate's family food fit, but Tom's \"look up\", the bench and the heart reveal go unused.",
+  "missing": [
+   "Tom telling Kate to look up",
+   "Tom's memorial bench",
+   "Kate's heart transplant reveal",
+   "Santa and her Danish admirer",
+   "The Christmas Eve show at the shelter",
+   "Tom's line about a bird poo being good luck"
+  ],
+  "ideas": [
+   "Swap \"Covent Garden cevapi rolls\" for \"Look up pastries\", Tom's advice.",
+   "Swap \"Tom's shelter Christmas turkey\" note for the Christmas Eve show.",
+   "Swap the badge stamps for a bench plaque on the cover.",
+   "Rename \"Santa's shop mince pies\" to \"Santa's Danish admirer mince pies\"."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

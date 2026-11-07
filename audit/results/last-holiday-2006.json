@@ -1,74 +1,77 @@
 {
-  "id": "Last Holiday (2006)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Sean Matthews, back home",
-      "where": "wink",
-      "verdict": "wrong",
-      "why": "Wikipedia and the film name him Sean Williams.",
-      "source": "https://en.wikipedia.org/wiki/Last_Holiday_(2006_film)",
-      "fix": "Sean Williams, back home",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Serve the main when Georgia orders everything Chef Didier makes.",
-      "where": "cue",
-      "verdict": "ok",
-      "why": "At the hotel Georgia hears Chef Didier never repeats a menu, says she had better try them all tonight, and takes the lot ('Tout, baby').",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=last-holiday-2006",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Order everything on the menu.",
-      "where": "tagline",
-      "verdict": "ok",
-      "why": "Same scene: Georgia asks the waiter for all of Chef Didier's specials, so ordering everything on the menu is true to the film.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=last-holiday-2006",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Straight out of Georgia's scrapbook, finally on a real plate.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "The scrapbook holds her dream husband and her Possibilities. What she actually does is cook Emeril recipes for a neighbour while denying herself the food.",
-      "source": "https://en.wikipedia.org/wiki/Last_Holiday_(2006_film)",
-      "fix": "Georgia cooked it for the neighbour. Tonight she eats it.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 12,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 3,
-    "overall": 3.2,
-    "verdict": "A smart grand hotel dinner, but New Orleans, Emeril and the ledge scene are missing.",
-    "missing": [
-      "Georgia cooking Emeril's recipes at home for her neighbour",
-      "BASE jumping and snowboarding",
-      "Winning at roulette",
-      "Ms. Gunther snooping through the suite",
-      "The New Year's Eve feast in Didier's kitchen",
-      "The faulty CT scan fax and Georgia's Joint"
-    ],
-    "ideas": [
-      "Swap \"Georgia's crab cakes\" for \"Georgia's Joint gumbo\", the restaurant she opens.",
-      "Swap \"Karlovy Vary mushroom tarts\" note for the New Year's Eve feast.",
-      "Add \"Emeril's kick\" hot sauce in place of the foie gras note.",
-      "Swap the cue for the kitchen invitation."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Last Holiday (2006)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Sean Matthews, back home",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Wikipedia and the film name him Sean Williams.",
+   "source": "https://en.wikipedia.org/wiki/Last_Holiday_(2006_film)",
+   "fix": "Sean Williams, back home",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the main when Georgia orders everything Chef Didier makes.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "At the hotel Georgia hears Chef Didier never repeats a menu, says she had better try them all tonight, and takes the lot ('Tout, baby').",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=last-holiday-2006",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Order everything on the menu.",
+   "where": "tagline",
+   "verdict": "ok",
+   "why": "Same scene: Georgia asks the waiter for all of Chef Didier's specials, so ordering everything on the menu is true to the film.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=last-holiday-2006",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Straight out of Georgia's scrapbook, finally on a real plate.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "The scrapbook holds her dream husband and her Possibilities. What she actually does is cook Emeril recipes for a neighbour while denying herself the food.",
+   "source": "https://en.wikipedia.org/wiki/Last_Holiday_(2006_film)",
+   "fix": "Georgia cooked it for the neighbour. Tonight she eats it.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "A smart grand hotel dinner, but New Orleans, Emeril and the ledge scene are missing.",
+  "missing": [
+   "Georgia cooking Emeril's recipes at home for her neighbour",
+   "BASE jumping and snowboarding",
+   "Winning at roulette",
+   "Ms. Gunther snooping through the suite",
+   "The New Year's Eve feast in Didier's kitchen",
+   "The faulty CT scan fax and Georgia's Joint"
+  ],
+  "ideas": [
+   "Swap \"Georgia's crab cakes\" for \"Georgia's Joint gumbo\", the restaurant she opens.",
+   "Swap \"Karlovy Vary mushroom tarts\" note for the New Year's Eve feast.",
+   "Add \"Emeril's kick\" hot sauce in place of the foie gras note.",
+   "Swap the cue for the kitchen invitation."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

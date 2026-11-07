@@ -1,53 +1,55 @@
 {
-  "id": "Krampus (2015)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "The snowman that appears at the door",
-      "where": "wink",
-      "verdict": "wrong",
-      "why": "Max points out a snowman in the yard that nobody built. The transcript has it in the yard, not at the door.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=krampus",
-      "fix": "The snowman that appears in the yard",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Eaten before the snowman turns up outside.",
-      "where": "house",
-      "verdict": "ok",
-      "why": "Max tells his mum there is a snowman in the yard that nobody built, so it does turn up outside during the blackout.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=krampus",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 12,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "Right house, right family and a good snow globe poster, but the writing is cosy where the film is mean.",
-    "missing": [
-      "Sarah's crème brûlée at the dinner table fight",
-      "Der Klown the jack in the box",
-      "The gingerbread men dragging Howie Jr. up the chimney",
-      "Max's bauble wrapped in the torn letter",
-      "Krampus's snow globe lair",
-      "Howard: \"Jesus was born in a barn!\""
-    ],
-    "ideas": [
-      "Swap \"Christmas Eve lasagne\" note for the dinner table fight over Sarah's crème brûlée.",
-      "Swap \"Gingerbread men with icing grins\" note for \"the ones that carried off Howie Jr.\"",
-      "Rename \"Engel house fennel and apple salad\" to \"The Der Klown salad\" with a jack in the box garnish.",
-      "Add a snow globe dessert in place of the fennel salad."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Krampus (2015)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "The snowman that appears at the door",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Max points out a snowman in the yard that nobody built. The transcript has it in the yard, not at the door.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=krampus",
+   "fix": "The snowman that appears in the yard",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Eaten before the snowman turns up outside.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "Max tells his mum there is a snowman in the yard that nobody built, so it does turn up outside during the blackout.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=krampus",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Right house, right family and a good snow globe poster, but the writing is cosy where the film is mean.",
+  "missing": [
+   "Sarah's crème brûlée at the dinner table fight",
+   "Der Klown the jack in the box",
+   "The gingerbread men dragging Howie Jr. up the chimney",
+   "Max's bauble wrapped in the torn letter",
+   "Krampus's snow globe lair",
+   "Howard: \"Jesus was born in a barn!\""
+  ],
+  "ideas": [
+   "Swap \"Christmas Eve lasagne\" note for the dinner table fight over Sarah's crème brûlée.",
+   "Swap \"Gingerbread men with icing grins\" note for \"the ones that carried off Howie Jr.\"",
+   "Rename \"Engel house fennel and apple salad\" to \"The Der Klown salad\" with a jack in the box garnish.",
+   "Add a snow globe dessert in place of the fennel salad."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

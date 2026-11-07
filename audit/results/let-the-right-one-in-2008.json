@@ -1,54 +1,55 @@
 {
-  "id": "Let the Right One In (2008)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Eli tries it, then thinks better of it.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "Eli does take a candy from Oskar, but sources do not say it is salty liquorice or that she simply thinks better of it, since she cannot keep human food down.",
-      "source": "https://www.highonfilms.com/let-the-right-one-in-2008-movie-ending-explained-themes-analyzed/",
-      "fix": "Eli takes a candy from Oskar. It does not end well.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "TEMP 22 C",
-      "where": "card",
-      "verdict": "wrong",
-      "why": "The film is set in a snowy Stockholm suburb in winter 1982, and the menu says Blackeberg, Winter. 22 C is a summer reading.",
-      "source": "https://en.wikipedia.org/wiki/Let_the_Right_One_In_(film)",
-      "fix": "TEMP -14 C",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    }
-  ],
-  "checked_ok": 13,
-  "vibe": {
-    "world": 4,
-    "moments": 4,
-    "food": 5,
-    "tone": 3,
-    "look": 3,
-    "overall": 3.8,
-    "verdict": "The Swedish food is spot on and the cube and Morse code are in, but the bar and grill header and the weather strip feel borrowed from another film.",
-    "missing": [
-      "Oskar held underwater at the pool (the pool)",
-      "Eli taking the cube and returning it solved (Eli's flat)",
-      "The blood bond over a cut hand (the flat)",
-      "Oskar tapping 'kiss' in Morse on the train (the end)",
-      "Hakan and Jocke (the woods)",
-      "The bullies at school (the school)"
-    ],
-    "ideas": [
-      "Replace 'BAR AND GRILL, SINCE 2008' with a Blackeberg kiosk sign from 1982.",
-      "Swap the weather strip for snow and a minus temperature.",
-      "Rename 'Salty liquorice' to 'Oskar's candy' and fix the note.",
-      "Add 'Morse on the wall' as the drinks note on the glögg."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Let the Right One In (2008)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Eli tries it, then thinks better of it.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Eli does take a candy from Oskar, but sources do not say it is salty liquorice or that she simply thinks better of it, since she cannot keep human food down.",
+   "source": "https://www.highonfilms.com/let-the-right-one-in-2008-movie-ending-explained-themes-analyzed/",
+   "fix": "Eli takes a candy from Oskar. It does not end well.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "TEMP 22 C",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "The film is set in a snowy Stockholm suburb in winter 1982, and the menu says Blackeberg, Winter. 22 C is a summer reading.",
+   "source": "https://en.wikipedia.org/wiki/Let_the_Right_One_In_(film)",
+   "fix": "TEMP -14 C",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
   }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 5,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.8,
+  "verdict": "The Swedish food is spot on and the cube and Morse code are in, but the bar and grill header and the weather strip feel borrowed from another film.",
+  "missing": [
+   "Oskar held underwater at the pool (the pool)",
+   "Eli taking the cube and returning it solved (Eli's flat)",
+   "The blood bond over a cut hand (the flat)",
+   "Oskar tapping 'kiss' in Morse on the train (the end)",
+   "Hakan and Jocke (the woods)",
+   "The bullies at school (the school)"
+  ],
+  "ideas": [
+   "Replace 'BAR AND GRILL, SINCE 2008' with a Blackeberg kiosk sign from 1982.",
+   "Swap the weather strip for snow and a minus temperature.",
+   "Rename 'Salty liquorice' to 'Oskar's candy' and fix the note.",
+   "Add 'Morse on the wall' as the drinks note on the glögg."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

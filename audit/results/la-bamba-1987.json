@@ -1,54 +1,56 @@
 {
-  "id": "La Bamba (1987)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Bob's second bottle. Ritchie's still practising.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "Bob says he has had one sip of beer and it tastes like piss, then offers it to Ritchie. No second bottle is shown.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=la-bamba",
-      "fix": "Bob's one sip of beer. He offers the rest to Ritchie.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Donna's arroz con leche",
-      "where": "dish-name",
-      "verdict": "wrong",
-      "why": "Donna Ludwig is an Anglo classmate and nothing ties her to arroz con leche. Ritchie's mother Connie is the better fit for a family dish.",
-      "source": "https://en.wikipedia.org/wiki/La_Bamba_(film)",
-      "fix": "Connie's arroz con leche",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 12,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "A warm family table that fits Ritchie's home, but the Tijuana scene, the talisman and the fear of flying are missing.",
-    "missing": [
-      "The Tijuana band playing \"La Bamba\"",
-      "The curandero's talisman, later broken by Bob",
-      "Ritchie's fear of flying after the school plane crash",
-      "Bob Keane renaming him \"Ritchie Valens\" (\"Ricky Zuela\")",
-      "Performing \"Donna\" on American Bandstand",
-      "The Winter Dance Party bus heater failing"
-    ],
-    "ideas": [
-      "Swap \"Bean and cheese taquitos\" for \"La Bamba night plate\", a Tijuana street plate named for the band Ritchie hears there.",
-      "Swap \"Lucky Lager in the bottle\" for \"Bob's vodka and Ritchie's one sip\".",
-      "Rename \"Donna's arroz con leche\" to \"Connie's arroz con leche\".",
-      "Add a talisman charm to the face stamp and break it on the last line."
-    ],
-    "flat": true,
-    "done": false
+ "id": "La Bamba (1987)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Bob's second bottle. Ritchie's still practising.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Bob says he has had one sip of beer and it tastes like piss, then offers it to Ritchie. No second bottle is shown.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=la-bamba",
+   "fix": "Bob's one sip of beer. He offers the rest to Ritchie.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Donna's arroz con leche",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "Donna Ludwig is an Anglo classmate and nothing ties her to arroz con leche. Ritchie's mother Connie is the better fit for a family dish.",
+   "source": "https://en.wikipedia.org/wiki/La_Bamba_(film)",
+   "fix": "Connie's arroz con leche",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A warm family table that fits Ritchie's home, but the Tijuana scene, the talisman and the fear of flying are missing.",
+  "missing": [
+   "The Tijuana band playing \"La Bamba\"",
+   "The curandero's talisman, later broken by Bob",
+   "Ritchie's fear of flying after the school plane crash",
+   "Bob Keane renaming him \"Ritchie Valens\" (\"Ricky Zuela\")",
+   "Performing \"Donna\" on American Bandstand",
+   "The Winter Dance Party bus heater failing"
+  ],
+  "ideas": [
+   "Swap \"Bean and cheese taquitos\" for \"La Bamba night plate\", a Tijuana street plate named for the band Ritchie hears there.",
+   "Swap \"Lucky Lager in the bottle\" for \"Bob's vodka and Ritchie's one sip\".",
+   "Rename \"Donna's arroz con leche\" to \"Connie's arroz con leche\".",
+   "Add a talisman charm to the face stamp and break it on the last line."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

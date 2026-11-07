@@ -1,65 +1,68 @@
 {
-  "id": "Moonstruck (1987)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Loretta's breakfast: a red capsicum ring and an egg in toast",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Early in the film Johnny rings from Sicily while Rose cooks eggs in toast breakfast for them both, so it is Rose's scene, not only Loretta's. The pepper ring is the recipe's own touch.",
-      "source": "https://foodinbooks.com/2021/06/08/food-in-films-moonstruck/",
-      "fix": "Rose's kitchen breakfast: a red capsicum ring and an egg in toast",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Cosmo's dinner with Mona",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Loretta sees Cosmo with his mistress Mona at the Met. No dinner is shown or named.",
-      "source": "https://en.wikipedia.org/wiki/Moonstruck",
-      "fix": "Cosmo's night out with Mona at the opera",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "the restaurant where the whole family keeps running into each other",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Rose dines alone at a local restaurant, where a professor joins her. The whole family never meets there.",
-      "source": "https://en.wikipedia.org/wiki/Moonstruck",
-      "fix": "the restaurant where Rose sits down to dinner alone",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 7,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 4,
-    "tone": 4,
-    "look": 4,
-    "verdict": "A warm Grand Ticino with the moon, the opera and Ronny's bread, but the loud famous lines stay out of the room.",
-    "missing": [
-      "'Snap out of it!' (Loretta slaps Ronny)",
-      "Ronny's lost hand and the bread slicer (the bakery)",
-      "Loretta cooking Ronny a steak (his apartment)",
-      "The wolf that chews off its own foot (Loretta and Ronny)",
-      "La Bohème at the Met (Loretta moved to tears)",
-      "Everyone toasting the engagement (final breakfast)"
-    ],
-    "ideas": [
-      "Swap 'Wakes you up.' under Espresso for 'Snap out of it!'.",
-      "Swap 'The bottle, for a toast to la famiglia.' for 'The bottle, for the whole kitchen table to toast the engagement.'",
-      "Swap 'Veal parmigiana' for 'Loretta's steak' with a note about Ronny's apartment.",
-      "Swap the guest check line '2 amaretto' for '1 amaretto, 1 espresso. He's at the opera.'"
-    ],
-    "overall": 3.8,
-    "flat": false,
-    "done": false
+ "id": "Moonstruck (1987)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Loretta's breakfast: a red capsicum ring and an egg in toast",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Early in the film Johnny rings from Sicily while Rose cooks eggs in toast breakfast for them both, so it is Rose's scene, not only Loretta's. The pepper ring is the recipe's own touch.",
+   "source": "https://foodinbooks.com/2021/06/08/food-in-films-moonstruck/",
+   "fix": "Rose's kitchen breakfast: a red capsicum ring and an egg in toast",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Cosmo's dinner with Mona",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Loretta sees Cosmo with his mistress Mona at the Met. No dinner is shown or named.",
+   "source": "https://en.wikipedia.org/wiki/Moonstruck",
+   "fix": "Cosmo's night out with Mona at the opera",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "the restaurant where the whole family keeps running into each other",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Rose dines alone at a local restaurant, where a professor joins her. The whole family never meets there.",
+   "source": "https://en.wikipedia.org/wiki/Moonstruck",
+   "fix": "the restaurant where Rose sits down to dinner alone",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 7,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "verdict": "A warm Grand Ticino with the moon, the opera and Ronny's bread, but the loud famous lines stay out of the room.",
+  "missing": [
+   "'Snap out of it!' (Loretta slaps Ronny)",
+   "Ronny's lost hand and the bread slicer (the bakery)",
+   "Loretta cooking Ronny a steak (his apartment)",
+   "The wolf that chews off its own foot (Loretta and Ronny)",
+   "La Bohème at the Met (Loretta moved to tears)",
+   "Everyone toasting the engagement (final breakfast)"
+  ],
+  "ideas": [
+   "Swap 'Wakes you up.' under Espresso for 'Snap out of it!'.",
+   "Swap 'The bottle, for a toast to la famiglia.' for 'The bottle, for the whole kitchen table to toast the engagement.'",
+   "Swap 'Veal parmigiana' for 'Loretta's steak' with a note about Ronny's apartment.",
+   "Swap the guest check line '2 amaretto' for '1 amaretto, 1 espresso. He's at the opera.'"
+  ],
+  "overall": 3.8,
+  "flat": false,
+  "done": false
+ }
 }

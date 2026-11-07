@@ -1,65 +1,67 @@
 {
-  "id": "Mr. Deeds (2002)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Babe from Winchestertonfieldville, Iowa, orders two.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "Winchestertonfieldville, Iowa is the made-up home of Babe's cover persona, Pam Dawson. Babe is a New York tabloid reporter.",
-      "source": "https://en.wikipedia.org/wiki/Mr._Deeds",
-      "fix": "Pam Dawson from Winchestertonfieldville, Iowa, orders two.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Emilio, the butler with the foot, very, very sneaky",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "The frostbitten foot is Deeds's own. Emilio says its hideousness will haunt his dreams, and says he is very, very sneaky.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=mr-deeds",
-      "fix": "Emilio, the butler who is very, very sneaky",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "A tuba played at the wrong moment",
-      "where": "wink",
-      "verdict": "wrong",
-      "why": "No tuba in the transcript or plot of the 2002 film. The foot gag is there, with Deeds's frostbitten foot nailed to the ground by the poker.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=mr-deeds",
-      "fix": "Deeds's frostbitten foot, nailed to the ground",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 11,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "A real pizzeria with the right town and the right butler, but two of the lines are wrong and the biggest moments barely appear.",
-    "missing": [
-      "Crazy Eyes' pizza with French fries and Oreos",
-      "Deeds saving Babe from the frozen lake with his frostbitten foot",
-      "Emilio is Blake's son and takes over the company (shareholder meeting)",
-      "The Hallmark card poem Deeds writes",
-      "Corvettes for everyone in Mandrake Falls (finale)",
-      "Deeds beating up the thieves who mock him (Babe's purse)"
-    ],
-    "ideas": [
-      "Rename 'Greeting card cheese and tomato pinwheels' to 'Hallmark pinwheels' with a poem on a toothpick flag.",
-      "Swap 'Cola float with whipped cream' for 'Crazy Eyes' fries and Oreos float'.",
-      "Replace the foot line on the baked ziti with 'Emilio is very, very sneaky, sir'.",
-      "Add a corvette red cherry to the pie case: 'Corvette cherry cheesecake' for the finale."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Mr. Deeds (2002)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Babe from Winchestertonfieldville, Iowa, orders two.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Winchestertonfieldville, Iowa is the made-up home of Babe's cover persona, Pam Dawson. Babe is a New York tabloid reporter.",
+   "source": "https://en.wikipedia.org/wiki/Mr._Deeds",
+   "fix": "Pam Dawson from Winchestertonfieldville, Iowa, orders two.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Emilio, the butler with the foot, very, very sneaky",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The frostbitten foot is Deeds's own. Emilio says its hideousness will haunt his dreams, and says he is very, very sneaky.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=mr-deeds",
+   "fix": "Emilio, the butler who is very, very sneaky",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "A tuba played at the wrong moment",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "No tuba in the transcript or plot of the 2002 film. The foot gag is there, with Deeds's frostbitten foot nailed to the ground by the poker.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=mr-deeds",
+   "fix": "Deeds's frostbitten foot, nailed to the ground",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A real pizzeria with the right town and the right butler, but two of the lines are wrong and the biggest moments barely appear.",
+  "missing": [
+   "Crazy Eyes' pizza with French fries and Oreos",
+   "Deeds saving Babe from the frozen lake with his frostbitten foot",
+   "Emilio is Blake's son and takes over the company (shareholder meeting)",
+   "The Hallmark card poem Deeds writes",
+   "Corvettes for everyone in Mandrake Falls (finale)",
+   "Deeds beating up the thieves who mock him (Babe's purse)"
+  ],
+  "ideas": [
+   "Rename 'Greeting card cheese and tomato pinwheels' to 'Hallmark pinwheels' with a poem on a toothpick flag.",
+   "Swap 'Cola float with whipped cream' for 'Crazy Eyes' fries and Oreos float'.",
+   "Replace the foot line on the baked ziti with 'Emilio is very, very sneaky, sir'.",
+   "Add a corvette red cherry to the pie case: 'Corvette cherry cheesecake' for the finale."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

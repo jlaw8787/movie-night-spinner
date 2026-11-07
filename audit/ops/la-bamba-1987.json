@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "Bob's second bottle. Ritchie's still practising.",
-   "new": "Bob's one sip of beer. He offers the rest to Ritchie."
+   "new": "Bob's one sip of beer. He offers the rest to Ritchie.",
+   "done": true
   },
   {
    "old": "Donna's arroz con leche",
-   "new": "Connie's arroz con leche"
+   "new": "Connie's arroz con leche",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

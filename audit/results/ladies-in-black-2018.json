@@ -1,65 +1,66 @@
 {
-  "id": "Ladies in Black (2018)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "35¢",
-      "where": "card",
-      "verdict": "wrong",
-      "why": "The menu prices everything in cents. Australia used pounds, shillings and pence in 1959 and went decimal on 14 February 1966. The film itself prices a dress in guineas.",
-      "source": "https://en.wikipedia.org/wiki/Australian_dollar",
-      "fix": "Tearoom takes a per-film coin \"lsd\"; Ladies in Black prints shillings and pence (3/6, 1/9).",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "For Lisa, who was Lesley until this summer.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "Wikipedia spells the character Leslie (\"Leslie 'Lisa' Miles\").",
-      "source": "https://en.wikipedia.org/wiki/Ladies_in_Black_(film)",
-      "fix": "For Lisa, who was Leslie until this summer.",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Goode's Tea Room",
-      "where": "venue",
-      "verdict": "wrong",
-      "why": "No tea room is named in the transcript or plot. Miss Cartwright asks Lisa whether she does not like the lunch room, so Goode's has a staff lunch room.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=ladies-in-black",
-      "fix": "Goode's Lunch Room",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 11,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "A handsome 1959 tea room, but decimal cents break the period and the film's dress, Patty's nightdress and Magda's party get no look in.",
-    "missing": [
-      "Lisa's dress marked down from 150 to 75, 50 and finally 35 guineas",
-      "Patty's pink nightdress",
-      "Magda's New Year's Eve party at her house",
-      "Rudi buying an apartment and proposing to Fay",
-      "Fay being wary of immigrants",
-      "Magda planning her own fashion shop"
-    ],
-    "ideas": [
-      "Reprice every dish in shillings and pence.",
-      "Swap \"Model Gowns poppy seed cake\" for \"Guinea dress cake\", priced 35 guineas as a joke.",
-      "Swap the egg sandwiches for \"Patty's pink nightdress pink iced fancies\".",
-      "Add a \"New Year's Eve at Magda's\" place card."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Ladies in Black (2018)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "35¢",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "The menu prices everything in cents. Australia used pounds, shillings and pence in 1959 and went decimal on 14 February 1966. The film itself prices a dress in guineas.",
+   "source": "https://en.wikipedia.org/wiki/Australian_dollar",
+   "fix": "Tearoom takes a per-film coin \"lsd\"; Ladies in Black prints shillings and pence (3/6, 1/9).",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "For Lisa, who was Lesley until this summer.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Wikipedia spells the character Leslie (\"Leslie 'Lisa' Miles\").",
+   "source": "https://en.wikipedia.org/wiki/Ladies_in_Black_(film)",
+   "fix": "For Lisa, who was Leslie until this summer.",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Goode's Tea Room",
+   "where": "venue",
+   "verdict": "wrong",
+   "why": "No tea room is named in the transcript or plot. Miss Cartwright asks Lisa whether she does not like the lunch room, so Goode's has a staff lunch room.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=ladies-in-black",
+   "fix": "Goode's Lunch Room",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A handsome 1959 tea room, but decimal cents break the period and the film's dress, Patty's nightdress and Magda's party get no look in.",
+  "missing": [
+   "Lisa's dress marked down from 150 to 75, 50 and finally 35 guineas",
+   "Patty's pink nightdress",
+   "Magda's New Year's Eve party at her house",
+   "Rudi buying an apartment and proposing to Fay",
+   "Fay being wary of immigrants",
+   "Magda planning her own fashion shop"
+  ],
+  "ideas": [
+   "Reprice every dish in shillings and pence.",
+   "Swap \"Model Gowns poppy seed cake\" for \"Guinea dress cake\", priced 35 guineas as a joke.",
+   "Swap the egg sandwiches for \"Patty's pink nightdress pink iced fancies\".",
+   "Add a \"New Year's Eve at Magda's\" place card."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

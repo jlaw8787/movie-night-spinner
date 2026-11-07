@@ -21,22 +21,26 @@
   {
    "text": "Derry Barrens Clubhouse",
    "where": "venue",
-   "verdict": "unsure",
-   "why": "The Losers hang out in the Barrens, but the plot sources never mention a clubhouse there (that is the book's underground clubhouse). The same goes for the winks 'The Barrens clubhouse' and the 'Meets in the Barrens' card.",
+   "verdict": "wrong",
+   "why": "The Losers hang out in the Barrens, but no source I could open shows a clubhouse there. That is the book's underground clubhouse.",
    "source": "https://en.wikipedia.org/wiki/It_(2017_film)",
    "fix": "Derry Barrens Hangout",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "The Barrens clubhouse",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "Same as the venue. The Barrens are in the film, a clubhouse in them is not mentioned in the sources.",
+   "verdict": "wrong",
+   "why": "Same as the venue. The Barrens are in the film but no source shows a clubhouse in them.",
    "source": "https://en.wikipedia.org/wiki/It_(2017_film)",
-   "fix": "The Barrens, where the Losers meet",
+   "fix": "The Barrens hangout",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Serve the snacks when the Losers jump into the quarry.",

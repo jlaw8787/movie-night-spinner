@@ -1,17 +1,22 @@
 {
-  "id": "Moonstruck (1987)",
-  "ops": [
-    {
-      "old": "Loretta's breakfast: a red capsicum ring and an egg in toast",
-      "new": "Rose's kitchen breakfast: a red capsicum ring and an egg in toast"
-    },
-    {
-      "old": "Cosmo's dinner with Mona",
-      "new": "Cosmo's night out with Mona at the opera"
-    },
-    {
-      "old": "the restaurant where the whole family keeps running into each other",
-      "new": "the restaurant where Rose sits down to dinner alone"
-    }
-  ]
+ "id": "Moonstruck (1987)",
+ "ops": [
+  {
+   "old": "Loretta's breakfast: a red capsicum ring and an egg in toast",
+   "new": "Rose's kitchen breakfast: a red capsicum ring and an egg in toast",
+   "done": true
+  },
+  {
+   "old": "Cosmo's dinner with Mona",
+   "new": "Cosmo's night out with Mona at the opera",
+   "done": true
+  },
+  {
+   "old": "the restaurant where the whole family keeps running into each other",
+   "new": "the restaurant where Rose sits down to dinner alone",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

@@ -1,42 +1,43 @@
 {
-  "id": "Interstellar (2014)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve the snacks when Cooper and Donald sit on the porch with a beer.",
-      "where": "cue",
-      "verdict": "unsure",
-      "why": "Wikipedia confirms Cooper lives with his father-in-law Donald and raises the kids with him. None of the pages I opened shows a porch beer scene.",
-      "source": "https://en.wikipedia.org/wiki/Interstellar_(film)",
-      "fix": "Serve the snacks when Cooper and Murph watch the dust storm roll in.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 18,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "A warm farmhouse recipe box that nails the corn and dust, but leaves out most of the film's big ideas.",
-    "missing": [
-      "Cooper's line that Murphy's law means whatever can happen will happen",
-      "TARS: 'Ninety percent' honesty parameter (Wikiquote)",
-      "The wristwatch Cooper leaves Murph",
-      "Dr. Mann's planet and his falsified data",
-      "The wormhole near Saturn",
-      "The 5,000 frozen embryos on the Endurance"
-    ],
-    "ideas": [
-      "Swap 'Cold sweet tea with lemon' note for 'Murphy's law: whatever can happen will happen.'",
-      "Swap 'Buttermilk biscuits with honey' note for 'Cooper's watch, set to the same time.'",
-      "Swap 'Soft pretzel bites with beer cheese' for 'Embryo egg bites' with 'Five thousand, frozen.'",
-      "Swap 'Ice planet crackling pork roast' note for 'Mann's planet, the data was faked.'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Interstellar (2014)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when Cooper and Donald sit on the porch with a beer.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "The screenplay has Cooper and Donald on the farmhouse front porch at night, with Donald handing Cooper a beer.",
+   "source": "https://huggingface.co/datasets/jbilcke/clapper-samples/blob/main/scripts/Interstellar.txt",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 18,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A warm farmhouse recipe box that nails the corn and dust, but leaves out most of the film's big ideas.",
+  "missing": [
+   "Cooper's line that Murphy's law means whatever can happen will happen",
+   "TARS: 'Ninety percent' honesty parameter (Wikiquote)",
+   "The wristwatch Cooper leaves Murph",
+   "Dr. Mann's planet and his falsified data",
+   "The wormhole near Saturn",
+   "The 5,000 frozen embryos on the Endurance"
+  ],
+  "ideas": [
+   "Swap 'Cold sweet tea with lemon' note for 'Murphy's law: whatever can happen will happen.'",
+   "Swap 'Buttermilk biscuits with honey' note for 'Cooper's watch, set to the same time.'",
+   "Swap 'Soft pretzel bites with beer cheese' for 'Embryo egg bites' with 'Five thousand, frozen.'",
+   "Swap 'Ice planet crackling pork roast' note for 'Mann's planet, the data was faked.'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

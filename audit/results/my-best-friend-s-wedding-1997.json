@@ -1,81 +1,83 @@
 {
-  "id": "My Best Friend's Wedding (1997)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "We made a deal over dinner years ago. Married by twenty-eight or we marry each other. Then he brought Kimmy to the table.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Julianne describes the pact as a night in Tucson, where Michael cuts their fingers and tells her to swear. It was not over dinner, and Michael did not bring Kimmy to a table.",
-      "source": "https://en.wikiquote.org/wiki/My_Best_Friend%27s_Wedding",
-      "fix": "He made me swear, years ago in Tucson. Married by twenty-eight or we marry each other. Then he found Kimmy and I lost my appetite.",
-      "printed": true,
-      "done": true,
-      "fix_note": {
-        "text": "He made me swear, years ago in Tucson. Married by twenty-eight or we marry each other. Then he found Kimmy and I lost my appetite.",
-        "by": "Julianne Potter",
-        "kind": "note"
-      },
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Serve dessert when Jules and Michael get talking about Kimmy.",
-      "where": "cue",
-      "verdict": "wrong",
-      "why": "Jules and Michael talk about Kimmy in many scenes, so the cue points at no one moment. The dessert moment in the transcript is the creme brulee and Jell-O speech.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=my-best-friends-wedding",
-      "fix": "Serve dessert when Julianne tells Kimmy the creme brulee and jello story.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Serve dessert when Jules and Michael get talking about Kimmy.",
-      "where": "cue-printed",
-      "verdict": "wrong",
-      "why": "Same vague cue as printed. The dessert moment is the creme brulee and Jell-O speech.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=my-best-friends-wedding",
-      "fix": "Serve dessert when Julianne tells Kimmy the creme brulee and jello story.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Say a little prayer. The whole table sings.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "Lunch with the wedding party ends with George singing I Say a Little Prayer and the whole restaurant joining in, not just the table.",
-      "source": "https://en.wikipedia.org/wiki/My_Best_Friend%27s_Wedding",
-      "fix": "George starts the song. The whole restaurant sings.",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    }
-  ],
-  "checked_ok": 8,
-  "vibe": {
-    "world": 3,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.2,
-    "verdict": "A neat invitation with the right Chicago and wedding cues, but the signed note gets the pact wrong and it skips the best gags.",
-    "missing": [
-      "I Say a Little Prayer sung by the whole restaurant (lunch)",
-      "Creme brulee versus jello story (Julianne and Kimmy)",
-      "The Way You Look Tonight dance (Michael and Jules)",
-      "Union Station chase and Jules in a caterer's truck (climax)",
-      "Comiskey Park bathroom talk (Kimmy)",
-      "George as the fake fiance (restaurant)"
-    ],
-    "ideas": [
-      "Add the line 'Michael wants the jello' under 'Creme brulee and jelly'.",
-      "Swap 'Raspberry sparkler' for a 'Say a Little Prayer' champagne toast.",
-      "Replace the table card with 'Table 28, seated next to George' to tie in the fake fiance.",
-      "Rename 'Chicago deep dish sausage pizza' to 'Union Station deep dish' for the chase."
-    ],
-    "flat": true,
-    "done": false
+ "id": "My Best Friend's Wedding (1997)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "We made a deal over dinner years ago. Married by twenty-eight or we marry each other. Then he brought Kimmy to the table.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Julianne describes the pact as a night in Tucson, where Michael cuts their fingers and tells her to swear. It was not over dinner, and Michael did not bring Kimmy to a table.",
+   "source": "https://en.wikiquote.org/wiki/My_Best_Friend%27s_Wedding",
+   "fix": "He made me swear, years ago in Tucson. Married by twenty-eight or we marry each other. Then he found Kimmy and I lost my appetite.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "He made me swear, years ago in Tucson. Married by twenty-eight or we marry each other. Then he found Kimmy and I lost my appetite.",
+    "by": "Julianne Potter",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve dessert when Jules and Michael get talking about Kimmy.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "Jules and Michael talk about Kimmy in many scenes, so the cue points at no one moment. The dessert moment in the transcript is the creme brulee and Jell-O speech.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=my-best-friends-wedding",
+   "fix": "Serve dessert when Julianne tells Kimmy the creme brulee and jello story.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Serve dessert when Jules and Michael get talking about Kimmy.",
+   "where": "cue-printed",
+   "verdict": "wrong",
+   "why": "Same vague cue as printed. The dessert moment is the creme brulee and Jell-O speech.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=my-best-friends-wedding",
+   "fix": "Serve dessert when Julianne tells Kimmy the creme brulee and jello story.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Say a little prayer. The whole table sings.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Lunch with the wedding party ends with George singing I Say a Little Prayer and the whole restaurant joining in, not just the table.",
+   "source": "https://en.wikipedia.org/wiki/My_Best_Friend%27s_Wedding",
+   "fix": "George starts the song. The whole restaurant sings.",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
   }
+ ],
+ "checked_ok": 8,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "A neat invitation with the right Chicago and wedding cues, but the signed note gets the pact wrong and it skips the best gags.",
+  "missing": [
+   "I Say a Little Prayer sung by the whole restaurant (lunch)",
+   "Creme brulee versus jello story (Julianne and Kimmy)",
+   "The Way You Look Tonight dance (Michael and Jules)",
+   "Union Station chase and Jules in a caterer's truck (climax)",
+   "Comiskey Park bathroom talk (Kimmy)",
+   "George as the fake fiance (restaurant)"
+  ],
+  "ideas": [
+   "Add the line 'Michael wants the jello' under 'Creme brulee and jelly'.",
+   "Swap 'Raspberry sparkler' for a 'Say a Little Prayer' champagne toast.",
+   "Replace the table card with 'Table 28, seated next to George' to tie in the fake fiance.",
+   "Rename 'Chicago deep dish sausage pizza' to 'Union Station deep dish' for the chase."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

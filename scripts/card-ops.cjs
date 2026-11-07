@@ -40,6 +40,9 @@ function replaceAll(id,old,nw){
     const forms=[[old,b.html?htm(nw):JSON.stringify(nw).slice(1,-1)]];if(b.html)forms.push([htm(old),htm(nw)],[htm2(old),htm2(nw)]);
     for(const [o,n2] of forms){const n=blk.split(o).length-1;if(!n)continue;b.L.splice(b.i,b.j-b.i,...blk.split(o).join(n2).split('\n'));FMT=b.L.join('\n');hits.push((b.html?'formats.js template':'formats.js spec')+' x'+n);break}}
   return hits}
+function hasText(id,t){const f=film(id);let hit=false;const chk=v=>walk(v,x=>{if(x.includes(t)||x.trim().replace(/[.]$/,'').toLowerCase()===t.trim().replace(/[.]$/,'').toLowerCase())hit=true;return x});
+  if(f)for(const k of ['S','M','W','K','T','D','P'])chk(f[k]);[FL[id],HO[id],DN[id],DNo[id]].forEach(o=>o&&chk(o));for(const p of perFilm(id))chk(getF(p));
+  for(const b of [fmtBlock(id),fmtFn(id)].filter(Boolean)){const blk=b.L.slice(b.i,b.j).join('\n');if(blk.includes(t)||blk.includes(htm(t))||blk.includes(htm2(t)))hit=true}return hit}
 const htm=s=>s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
 const htm2=s=>s.replace(/&/g,'&amp;').replace(/'/g,'&#x27;').replace(/"/g,'&quot;');
 /* the face template function of a hand-built menu, only when no other film uses that template */
@@ -52,9 +55,13 @@ if(cmd==='find'){const [id,t]=files;const f=film(id);const show=(lab,v)=>walk(v,
   for(const p of perFilm(id))show(p,getF(p));for(const b of [fmtBlock(id),fmtFn(id)].filter(Boolean))b.L.slice(b.i,b.j).forEach(l=>{for(const q of [t,htm(t),htm2(t)]){const k=l.indexOf(q);if(k>=0){console.log('formats.js'+(b.html?' template':' spec')+': ...'+l.slice(Math.max(0,k-60),k+q.length+60)+'...');break}}});process.exit(0)}
 if(cmd!=='apply'){console.log('usage: apply <ops files> [--dry] | find "Film (Year)" "text"');process.exit(1)}
 let nOps=0,nMiss=0;
-for(const pf of files){const P=JSON.parse(fs.readFileSync(pf,'utf8'));if(P.applied&&!process.env.FORCE)continue;const id=P.id;const miss=[];
+for(const pf of files){const P=JSON.parse(fs.readFileSync(pf,'utf8'));const id=P.id;const miss=[];/* each op is marked done, so ops appended to an applied file still run */
   if(!film(id)&&!FL[id]){console.log('no film',id);continue}
-  for(const op of P.ops||[]){nOps++;
+  for(const op of P.ops||[]){if(op.done&&!process.env.FORCE)continue;
+    /* files applied before per-op marks: an op whose old text is gone was applied then */
+    if(P.applied&&!op.done&&op.old!==undefined&&!process.env.FORCE&&!hasText(id,op.old)){op.done=true;continue}
+    if(P.applied&&!op.done&&op.set!==undefined&&!process.env.FORCE){op.done=true;continue}
+    nOps++;op.done=true;
     if(op.old!==undefined){if(!op.old||op.old===op.new){miss.push('empty: '+op.old);continue}if(/[—–]/.test(op.new)){miss.push('dash in: '+op.new);continue}
       let h=replaceAll(id,op.old,op.new);
       /* stored notes are often lower case with no full stop: retry on that form, and give the new text the same shape */

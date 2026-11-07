@@ -3,15 +3,20 @@
  "ops": [
   {
    "old": "Todayland Cafe",
-   "new": "Robinson Family Cafe"
+   "new": "Robinson Family Cafe",
+   "done": true
   },
   {
    "old": "Todayland Science Fair",
-   "new": "Lewis's Science Fair"
+   "new": "Lewis's Science Fair",
+   "done": true
   },
   {
    "old": "the bright future city of Todayland",
-   "new": "the bright future, Lewis's family home"
+   "new": "the bright future, Lewis's family home",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

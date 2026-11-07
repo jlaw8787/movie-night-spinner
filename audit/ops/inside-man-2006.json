@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "Frazier's lunch on the street",
-   "new": "lunch on the street outside the bank"
+   "new": "lunch on the street outside the bank",
+   "done": true
   },
   {
    "old": "lunch for the cops on the barricade",
-   "new": "street cart lunch for the cops outside the bank"
+   "new": "street cart lunch for the cops outside the bank",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

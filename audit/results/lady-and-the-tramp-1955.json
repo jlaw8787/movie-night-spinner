@@ -1,43 +1,44 @@
 {
-  "id": "Lady and the Tramp (1955)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Jim Dear dunking a doughnut at breakfast",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "No doughnut or breakfast scene for Jim Dear appears in the transcript or plot. The film opens with Jim Dear giving Darling a hatbox with Lady inside at Christmas.",
-      "source": "https://en.wikipedia.org/wiki/Lady_and_the_Tramp",
-      "fix": "Jim Dear's Christmas hatbox surprise",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 22,
-  "vibe": {
-    "world": 5,
-    "moments": 4,
-    "food": 4,
-    "tone": 5,
-    "look": 5,
-    "overall": 4.6,
-    "verdict": "Charming and close to the film, with Tony calling Tramp Butch and the candlelit plate front and centre.",
-    "missing": [
-      "Bella Notte on the accordion (Tony and Joe serenade)",
-      "Si and Am the Siamese cats (Aunt Sarah)",
-      "Jock and Trusty (the neighbours)",
-      "'Pidge' (Tramp's name for Lady)",
-      "The zoo and the muzzle (Tramp frees Lady)",
-      "The pound (the stray dogs and Peg)"
-    ],
-    "ideas": [
-      "Swap 'Cold milk' note 'A tall glass, or a saucer' for 'For Si and Am, not allowed back here'.",
-      "Swap 'Espresso' for 'Bella Notte Espresso', with a tiny accordion picture.",
-      "Add 'Tonight Butch gets the best in the house' in place of 'Regulars at the back door eat free'.",
-      "Swap 'Breadsticks' note for 'Long enough to meet in the middle'."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Lady and the Tramp (1955)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Jim Dear dunking a doughnut at breakfast",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "No doughnut or breakfast scene for Jim Dear appears in the transcript or plot. The film opens with Jim Dear giving Darling a hatbox with Lady inside at Christmas.",
+   "source": "https://en.wikipedia.org/wiki/Lady_and_the_Tramp",
+   "fix": "Jim Dear's Christmas hatbox surprise",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 22,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 5,
+  "look": 5,
+  "overall": 4.6,
+  "verdict": "Charming and close to the film, with Tony calling Tramp Butch and the candlelit plate front and centre.",
+  "missing": [
+   "Bella Notte on the accordion (Tony and Joe serenade)",
+   "Si and Am the Siamese cats (Aunt Sarah)",
+   "Jock and Trusty (the neighbours)",
+   "'Pidge' (Tramp's name for Lady)",
+   "The zoo and the muzzle (Tramp frees Lady)",
+   "The pound (the stray dogs and Peg)"
+  ],
+  "ideas": [
+   "Swap 'Cold milk' note 'A tall glass, or a saucer' for 'For Si and Am, not allowed back here'.",
+   "Swap 'Espresso' for 'Bella Notte Espresso', with a tiny accordion picture.",
+   "Add 'Tonight Butch gets the best in the house' in place of 'Regulars at the back door eat free'.",
+   "Swap 'Breadsticks' note for 'Long enough to meet in the middle'."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

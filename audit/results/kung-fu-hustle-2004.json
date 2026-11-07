@@ -1,53 +1,54 @@
 {
-  "id": "Kung Fu Hustle (2004)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "The Beast, living in the old slum",
-      "where": "wink",
-      "verdict": "wrong",
-      "why": "The Beast is held in a mental asylum and Sing frees him with his lock picking. He is not living in the slum.",
-      "source": "https://en.wikipedia.org/wiki/Kung_Fu_Hustle",
-      "fix": "The Beast, sprung from the asylum",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Landlady shut the water off. Drink this instead.",
-      "where": "house",
-      "verdict": "ok",
-      "why": "In the transcript the tenants ask what happened to the water and the Landlady announces a water ration, no water on Mondays, Wednesdays and Fridays.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=kung-fu-hustle",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 15,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 4,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "Pig Sty Alley canteen with Donut's doughnuts, the tea eggs and the swirl lollipop all hit, though the Beast and the harpists are left out.",
-    "missing": [
-      "The Beast freed from the asylum",
-      "The two harpists with the magic guzheng",
-      "Sing's Buddhist Palm pamphlet",
-      "Bone shouting \"Ice cream!\" and Sing the ice cream thief",
-      "The Landlady chasing Sing like the Road Runner",
-      "The Landlady asking the Tailor about his red underwear"
-    ],
-    "ideas": [
-      "Swap \"Mango sago\" for \"Ice cream thief's cone\", from Sing running off without paying.",
-      "Swap \"Hot sweet soy milk\" note for a Landlady line about curlers and cigarettes.",
-      "Add a \"Buddhist Palm pamphlet\" insert in the movie night bag.",
-      "Replace the Beast wink with \"The Beast, sprung from the asylum\"."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Kung Fu Hustle (2004)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "The Beast, living in the old slum",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "The Beast is held in a mental asylum and Sing frees him with his lock picking. He is not living in the slum.",
+   "source": "https://en.wikipedia.org/wiki/Kung_Fu_Hustle",
+   "fix": "The Beast, sprung from the asylum",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Landlady shut the water off. Drink this instead.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "In the transcript the tenants ask what happened to the water and the Landlady announces a water ration, no water on Mondays, Wednesdays and Fridays.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=kung-fu-hustle",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Pig Sty Alley canteen with Donut's doughnuts, the tea eggs and the swirl lollipop all hit, though the Beast and the harpists are left out.",
+  "missing": [
+   "The Beast freed from the asylum",
+   "The two harpists with the magic guzheng",
+   "Sing's Buddhist Palm pamphlet",
+   "Bone shouting \"Ice cream!\" and Sing the ice cream thief",
+   "The Landlady chasing Sing like the Road Runner",
+   "The Landlady asking the Tailor about his red underwear"
+  ],
+  "ideas": [
+   "Swap \"Mango sago\" for \"Ice cream thief's cone\", from Sing running off without paying.",
+   "Swap \"Hot sweet soy milk\" note for a Landlady line about curlers and cigarettes.",
+   "Add a \"Buddhist Palm pamphlet\" insert in the movie night bag.",
+   "Replace the Beast wink with \"The Beast, sprung from the asylum\"."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

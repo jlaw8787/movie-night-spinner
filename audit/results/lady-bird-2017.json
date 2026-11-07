@@ -1,59 +1,60 @@
 {
-  "id": "Lady Bird (2017)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "printed": true,
-      "done": true,
-      "text": "Mum made a roast and I'm complaining about it, which is basically our tradition. Pass the gravy.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Printed in quote marks as Lady Bird's words. The transcript I opened has no 'gravy' and no 'roast' anywhere, and the film uses 'Mom', not 'Mum'. Her real food lines are things like 'I'm hungry!'.",
-      "source": "https://scrapsfromtheloft.com/movies/lady-bird-2017-transcript/",
-      "fix": "Lunch is the only period I like. Save me a seat, and don't tell Mum I took the brownies.",
-      "fix_note": {
-        "text": "Lunch is the only period I like. Save me a seat, and don't tell Mum I took the brownies.",
-        "by": "Lady Bird",
-        "kind": "note"
-      },
-      "applied": "2026-11-07"
-    },
-    {
-      "printed": false,
-      "done": false,
-      "text": "Served at the blue house on 45th Street.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "In the transcript the three storey blue house with white shutters and an American flag is on 44th, not 45th. Danny even offers to go there to eat.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lady-bird",
-      "fix": "Served at the blue house on 44th Street.",
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 16,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "A tidy school canteen with a stained glass poster frame and the right Thanksgiving cue, but the writing could be any teen film.",
-    "missing": [
-      "Lady Bird and Julie eating the unconsecrated communion wafers (church)",
-      "Sister Sarah Joan telling her 'You clearly love Sacramento' (the writing scene)",
-      "The blue house with white shutters she wants (Danny points it out)",
-      "Kyle and the coffee shop (first meeting)",
-      "Danny in the bathroom stall and the school musical (breakup)",
-      "The prom at Julie's (the end of the friendship fight)"
-    ],
-    "ideas": [
-      "Move the communion wafer crisps from the data onto the printed menu in place of 'Rosemary smoked salt almonds'.",
-      "Swap the 'Student ID' stub for a wait list letter naming Christine McPherson.",
-      "Swap 'Thanksgiving turkey with sage stuffing' note for 'Danny's gran says she has been anxious to meet you.'",
-      "Swap period 4 'The pink cast on her arm' for 'Sister Sarah Joan' so the timetable has a second school scene."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Lady Bird (2017)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "printed": true,
+   "done": true,
+   "text": "Mum made a roast and I'm complaining about it, which is basically our tradition. Pass the gravy.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Lady Bird's words. The transcript I opened has no 'gravy' and no 'roast' anywhere, and the film uses 'Mom', not 'Mum'. Her real food lines are things like 'I'm hungry!'.",
+   "source": "https://scrapsfromtheloft.com/movies/lady-bird-2017-transcript/",
+   "fix": "Lunch is the only period I like. Save me a seat, and don't tell Mum I took the brownies.",
+   "fix_note": {
+    "text": "Lunch is the only period I like. Save me a seat, and don't tell Mum I took the brownies.",
+    "by": "Lady Bird",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "printed": false,
+   "done": true,
+   "text": "Served at the blue house on 45th Street.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "In the transcript the three storey blue house with white shutters and an American flag is on 44th, not 45th. Danny even offers to go there to eat.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lady-bird",
+   "fix": "Served at the blue house on 44th Street.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A tidy school canteen with a stained glass poster frame and the right Thanksgiving cue, but the writing could be any teen film.",
+  "missing": [
+   "Lady Bird and Julie eating the unconsecrated communion wafers (church)",
+   "Sister Sarah Joan telling her 'You clearly love Sacramento' (the writing scene)",
+   "The blue house with white shutters she wants (Danny points it out)",
+   "Kyle and the coffee shop (first meeting)",
+   "Danny in the bathroom stall and the school musical (breakup)",
+   "The prom at Julie's (the end of the friendship fight)"
+  ],
+  "ideas": [
+   "Move the communion wafer crisps from the data onto the printed menu in place of 'Rosemary smoked salt almonds'.",
+   "Swap the 'Student ID' stub for a wait list letter naming Christine McPherson.",
+   "Swap 'Thanksgiving turkey with sage stuffing' note for 'Danny's gran says she has been anxious to meet you.'",
+   "Swap period 4 'The pink cast on her arm' for 'Sister Sarah Joan' so the timetable has a second school scene."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

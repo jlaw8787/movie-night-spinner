@@ -1,13 +1,17 @@
 {
-  "id": "Money Train (1995)",
-  "ops": [
-    {
-      "old": "Pour drinks when the money train pulls into the station.",
-      "new": "Pour drinks when Charlie sneaks aboard the money train on New Year's Eve."
-    },
-    {
-      "old": "Grace, the cop they both fall for, and her Puerto Rican cooking",
-      "new": "Grace Santiago, the decoy cop both brothers fall for"
-    }
-  ]
+ "id": "Money Train (1995)",
+ "ops": [
+  {
+   "old": "Pour drinks when the money train pulls into the station.",
+   "new": "Pour drinks when Charlie sneaks aboard the money train on New Year's Eve.",
+   "done": true
+  },
+  {
+   "old": "Grace, the cop they both fall for, and her Puerto Rican cooking",
+   "new": "Grace Santiago, the decoy cop both brothers fall for",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

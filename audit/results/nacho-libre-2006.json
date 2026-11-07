@@ -1,59 +1,60 @@
 {
-  "id": "Nacho Libre (2006)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve the mains when Nacho finally cooks the orphans a proper feast.",
-      "where": "cue",
-      "verdict": "wrong",
-      "why": "No feast scene exists. The plot says Nacho uses his wrestling money to improve the orphans' lives, and in the transcript he wants to win so the kids can have better food.",
-      "source": "https://en.wikipedia.org/wiki/Nacho_Libre",
-      "fix": "Serve the mains when Nacho spends his wrestling pay on the orphans.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "By day I cook for the orphans. Tonight the chips are fresh, so please eat before Esqueleto does.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Printed in quote marks as Nacho's words, but it is not a line from the film. The chip joke fits, since Steven (Esqueleto) is the thief who robs Nacho of the orphanage's chips. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
-      "source": "https://en.wikipedia.org/wiki/Nacho_Libre",
-      "fix": "By day I cook for the orphans. Tonight the chips are fresh, so eat before Esqueleto gets to them.",
-      "printed": true,
-      "done": true,
-      "fix_note": {
-        "text": "By day I cook for the orphans. Tonight the chips are fresh, so eat before Esqueleto gets to them.",
-        "by": "Nacho",
-        "kind": "note"
-      },
-      "applied": "2026-11-07"
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 4,
-    "tone": 4,
-    "look": 4,
-    "overall": 3.8,
-    "verdict": "The canteen timetable and tiny prices are a clever fit for a monastery kitchen, but the film's best lines and the fights are barely used.",
-    "missing": [
-      "Esqueleto stealing the tortilla chips",
-      "Esqueleto throwing the elote like a knife",
-      "Nacho eating eagle eggs for power",
-      "Nacho's robe catching fire at mass",
-      "Ramses and the gold mask",
-      "The bus bought with the prize and the trip to Monte Alban"
-    ],
-    "ideas": [
-      "Swap 'Wrestling night elote' note for 'Thrown like a knife, eaten like a hero'.",
-      "Swap 'Cinnamon churros with chocolate dip' for 'Eagle egg custard' with a nod to the eagle remedy.",
-      "Swap the 'Home time 3:30' slot for 'Monte Alban trip, bus'.",
-      "Swap 'Oaxaca chicken mole' note for 'Ramses would never eat this'."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Nacho Libre (2006)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains when Nacho finally cooks the orphans a proper feast.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "No feast scene exists. The plot says Nacho uses his wrestling money to improve the orphans' lives, and in the transcript he wants to win so the kids can have better food.",
+   "source": "https://en.wikipedia.org/wiki/Nacho_Libre",
+   "fix": "Serve the mains when Nacho spends his wrestling pay on the orphans.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "By day I cook for the orphans. Tonight the chips are fresh, so please eat before Esqueleto does.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Nacho's words, but it is not a line from the film. The chip joke fits, since Steven (Esqueleto) is the thief who robs Nacho of the orphanage's chips. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
+   "source": "https://en.wikipedia.org/wiki/Nacho_Libre",
+   "fix": "By day I cook for the orphans. Tonight the chips are fresh, so eat before Esqueleto gets to them.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "By day I cook for the orphans. Tonight the chips are fresh, so eat before Esqueleto gets to them.",
+    "by": "Nacho",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "The canteen timetable and tiny prices are a clever fit for a monastery kitchen, but the film's best lines and the fights are barely used.",
+  "missing": [
+   "Esqueleto stealing the tortilla chips",
+   "Esqueleto throwing the elote like a knife",
+   "Nacho eating eagle eggs for power",
+   "Nacho's robe catching fire at mass",
+   "Ramses and the gold mask",
+   "The bus bought with the prize and the trip to Monte Alban"
+  ],
+  "ideas": [
+   "Swap 'Wrestling night elote' note for 'Thrown like a knife, eaten like a hero'.",
+   "Swap 'Cinnamon churros with chocolate dip' for 'Eagle egg custard' with a nod to the eagle remedy.",
+   "Swap the 'Home time 3:30' slot for 'Monte Alban trip, bus'.",
+   "Swap 'Oaxaca chicken mole' note for 'Ramses would never eat this'."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

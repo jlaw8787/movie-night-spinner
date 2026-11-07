@@ -1,17 +1,22 @@
 {
-  "id": "Mission: Impossible 2 (2000)",
-  "ops": [
-    {
-      "old": "Departing Sydney, Seat 14A",
-      "new": "Departing Sydney, Seat 20A"
-    },
-    {
-      "old": "Ambrose's box at Randwick, binoculars on Nyah.",
-      "new": "Ambrose's day at the races. Nyah has an earpiece in."
-    },
-    {
-      "old": "Nekhorvich's last glass. That isn't really Ethan.",
-      "new": "Poured at the races. Nyah backs Thief in the Night."
-    }
-  ]
+ "id": "Mission: Impossible 2 (2000)",
+ "ops": [
+  {
+   "old": "Departing Sydney, Seat 14A",
+   "new": "Departing Sydney, Seat 20A",
+   "done": true
+  },
+  {
+   "old": "Ambrose's box at Randwick, binoculars on Nyah.",
+   "new": "Ambrose's day at the races. Nyah has an earpiece in.",
+   "done": true
+  },
+  {
+   "old": "Nekhorvich's last glass. That isn't really Ethan.",
+   "new": "Poured at the races. Nyah backs Thief in the Night.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

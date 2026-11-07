@@ -1,54 +1,56 @@
 {
-  "id": "Money Train (1995)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Pour drinks when the money train pulls into the station.",
-      "where": "cue",
-      "verdict": "wrong",
-      "why": "The plot has no scene of the money train pulling into a station. On New Year's Eve Charlie sneaks aboard through a floor panel.",
-      "source": "https://en.wikipedia.org/wiki/Money_Train",
-      "fix": "Pour drinks when Charlie sneaks aboard the money train on New Year's Eve.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Grace, the cop they both fall for, and her Puerto Rican cooking",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Grace Santiago is the decoy cop both brothers like, but nothing in the plot or transcript shows her cooking or gives her a Puerto Rican background.",
-      "source": "https://en.wikipedia.org/wiki/Money_Train",
-      "fix": "Grace Santiago, the decoy cop both brothers fall for",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 8,
-  "vibe": {
-    "world": 3,
-    "moments": 2,
-    "food": 3,
-    "tone": 3,
-    "look": 3,
-    "verdict": "A friendly station cafe, but the film's big set pieces are barely touched.",
-    "missing": [
-      "The Torch setting a token booth on fire (token booth attack)",
-      "Charlie's $15,000 gambling debt to Mr. Brown (the roof scene)",
-      "Charlie sneaking aboard the money train on New Year's Eve (the heist)",
-      "The runaway money train thrown into reverse (finale)",
-      "Patterson spitting in John's face (station)",
-      "Brothers ending up in Times Square at midnight (final scene)"
-    ],
-    "ideas": [
-      "Swap the guest check line 'Charlie: on the tab? NO.' for 'Mr. Brown: 15,000, due New Year's Day' stamped past due.",
-      "Swap 'Roasted here. Never torched.' for 'Token booth special. Nothing set on fire.'",
-      "Swap the cue for 'Pour drinks when Charlie sneaks aboard the money train on New Year's Eve'.",
-      "Swap 'Friday is payday. Cash only.' for 'New Year's Eve: the money train runs late tonight.'"
-    ],
-    "overall": 2.8,
-    "flat": true,
-    "done": false
+ "id": "Money Train (1995)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Pour drinks when the money train pulls into the station.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "The plot has no scene of the money train pulling into a station. On New Year's Eve Charlie sneaks aboard through a floor panel.",
+   "source": "https://en.wikipedia.org/wiki/Money_Train",
+   "fix": "Pour drinks when Charlie sneaks aboard the money train on New Year's Eve.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Grace, the cop they both fall for, and her Puerto Rican cooking",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Grace Santiago is the decoy cop both brothers like, but nothing in the plot or transcript shows her cooking or gives her a Puerto Rican background.",
+   "source": "https://en.wikipedia.org/wiki/Money_Train",
+   "fix": "Grace Santiago, the decoy cop both brothers fall for",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 8,
+ "vibe": {
+  "world": 3,
+  "moments": 2,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "verdict": "A friendly station cafe, but the film's big set pieces are barely touched.",
+  "missing": [
+   "The Torch setting a token booth on fire (token booth attack)",
+   "Charlie's $15,000 gambling debt to Mr. Brown (the roof scene)",
+   "Charlie sneaking aboard the money train on New Year's Eve (the heist)",
+   "The runaway money train thrown into reverse (finale)",
+   "Patterson spitting in John's face (station)",
+   "Brothers ending up in Times Square at midnight (final scene)"
+  ],
+  "ideas": [
+   "Swap the guest check line 'Charlie: on the tab? NO.' for 'Mr. Brown: 15,000, due New Year's Day' stamped past due.",
+   "Swap 'Roasted here. Never torched.' for 'Token booth special. Nothing set on fire.'",
+   "Swap the cue for 'Pour drinks when Charlie sneaks aboard the money train on New Year's Eve'.",
+   "Swap 'Friday is payday. Cash only.' for 'New Year's Eve: the money train runs late tonight.'"
+  ],
+  "overall": 2.8,
+  "flat": true,
+  "done": false
+ }
 }

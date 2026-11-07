@@ -1,43 +1,44 @@
 {
-  "id": "Million Dollar Baby (2004)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "The training diet in the gym",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "The transcript and plot show no meal plan. The gym is the Hit Pit, and the food that does appear is lemon meringue pie and a cheeseburger.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=million-dollar-baby",
-      "fix": "fuel from the Hit Pit",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "Ira's diner is a lovely fit, with the lemon pie and Mo cuishle nods, though the menu is breezy for a film this heavy.",
-    "missing": [
-      "Mo cuishle, my darling, my blood (Frankie at the end)",
-      "Girlie, tough ain't enough (Frankie in the gym)",
-      "Maggie eating customers' leftovers (the diner where she waitresses)",
-      "Frankie reading Yeats (his chair)",
-      "The Blue Bear and the sucker punch (Vegas)",
-      "Frankie's priest and the Rice Krispies line"
-    ],
-    "ideas": [
-      "Swap 'Lemon oregano chicken with rice' note for 'Tough ain't enough, girlie'",
-      "Swap 'Root beer' note to keep Mo cuishle but add what it means",
-      "Swap 'Diner steak and eggs' note for 'Maggie's leftovers, eaten on the sly'",
-      "Swap the 'Gym dues' card for a speed bag token"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Million Dollar Baby (2004)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "The training diet in the gym",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The transcript and plot show no meal plan. The gym is the Hit Pit, and the food that does appear is lemon meringue pie and a cheeseburger.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=million-dollar-baby",
+   "fix": "fuel from the Hit Pit",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Ira's diner is a lovely fit, with the lemon pie and Mo cuishle nods, though the menu is breezy for a film this heavy.",
+  "missing": [
+   "Mo cuishle, my darling, my blood (Frankie at the end)",
+   "Girlie, tough ain't enough (Frankie in the gym)",
+   "Maggie eating customers' leftovers (the diner where she waitresses)",
+   "Frankie reading Yeats (his chair)",
+   "The Blue Bear and the sucker punch (Vegas)",
+   "Frankie's priest and the Rice Krispies line"
+  ],
+  "ideas": [
+   "Swap 'Lemon oregano chicken with rice' note for 'Tough ain't enough, girlie'",
+   "Swap 'Root beer' note to keep Mo cuishle but add what it means",
+   "Swap 'Diner steak and eggs' note for 'Maggie's leftovers, eaten on the sly'",
+   "Swap the 'Gym dues' card for a speed bag token"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

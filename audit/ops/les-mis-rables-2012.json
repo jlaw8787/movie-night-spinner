@@ -3,11 +3,15 @@
  "ops": [
   {
    "old": "Café Musain hot spiced wine",
-   "new": "ABC Café hot spiced wine"
+   "new": "ABC Café hot spiced wine",
+   "done": true
   },
   {
    "old": "Gavroche and the great stone elephant",
-   "new": "Gavroche and the great elephant of the Bastille"
+   "new": "Gavroche and the great elephant of the Bastille",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

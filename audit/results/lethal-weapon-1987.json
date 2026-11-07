@@ -1,65 +1,68 @@
 {
-  "id": "Lethal Weapon (1987)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve the mains at Roger's birthday dinner, when Riggs meets the family.",
-      "where": "cue",
-      "verdict": "wrong",
-      "why": "Murtaugh's 50th is a surprise party at home, and the car scene says the birthday was yesterday. Riggs meets the family at a separate dinner where Roger introduces his new partner and the roast comes out.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon",
-      "fix": "Serve the mains when Riggs meets the family over a roast dinner.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Roger's 50th Birthday Dinner",
-      "where": "sign",
-      "verdict": "wrong",
-      "why": "The birthday is a separate surprise party at home, and Riggs is not at it. His first dinner with the family is the roast, and he returns on Christmas Day.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon",
-      "fix": "Dinner at the Murtaughs",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Riggs gets the guest room",
-      "where": "prop",
-      "verdict": "wrong",
-      "why": "Riggs never stays in the Murtaugh guest room. The film opens with him waking up in his trailer, which Wikipedia confirms in the production notes.",
-      "source": "https://en.wikipedia.org/wiki/Lethal_Weapon",
-      "fix": "Riggs wakes up in his trailer",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 18,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "Right family kitchen and Christmas feel, but it never reaches for the film's best-known moments.",
-    "missing": [
-      "Riggs cuffed to the jumper and leaping off the ledge (opening)",
-      "Riggs giving Murtaugh the hollow-point bullet (Christmas Day ending)",
-      "Christmas tree lot sting (Riggs and the trees)",
-      "Mr. Joshua's helicopter arrival (Hunsaker killing)",
-      "Riggs's trailer and Sam the dog (home life)",
-      "Murtaugh's 'too old for this' mood"
-    ],
-    "ideas": [
-      "Swap the 'Riggs gets the guest room' keep card for 'Riggs hands over the bullet'.",
-      "Swap 'Riggs' trailer snacks' note for 'A beer and a biscuit for Sam, dinner for one'.",
-      "Rename 'Christmas party crab dip' to 'Christmas tree lot crab dip' to use the opening sting.",
-      "Add a bullet-shaped chocolate to 'Roger's birthday cake' as the Christmas Day gift."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Lethal Weapon (1987)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains at Roger's birthday dinner, when Riggs meets the family.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "Murtaugh's 50th is a surprise party at home, and the car scene says the birthday was yesterday. Riggs meets the family at a separate dinner where Roger introduces his new partner and the roast comes out.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon",
+   "fix": "Serve the mains when Riggs meets the family over a roast dinner.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Roger's 50th Birthday Dinner",
+   "where": "sign",
+   "verdict": "wrong",
+   "why": "The birthday is a separate surprise party at home, and Riggs is not at it. His first dinner with the family is the roast, and he returns on Christmas Day.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon",
+   "fix": "Dinner at the Murtaughs",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Riggs gets the guest room",
+   "where": "prop",
+   "verdict": "wrong",
+   "why": "Riggs never stays in the Murtaugh guest room. The film opens with him waking up in his trailer, which Wikipedia confirms in the production notes.",
+   "source": "https://en.wikipedia.org/wiki/Lethal_Weapon",
+   "fix": "Riggs wakes up in his trailer",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 18,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Right family kitchen and Christmas feel, but it never reaches for the film's best-known moments.",
+  "missing": [
+   "Riggs cuffed to the jumper and leaping off the ledge (opening)",
+   "Riggs giving Murtaugh the hollow-point bullet (Christmas Day ending)",
+   "Christmas tree lot sting (Riggs and the trees)",
+   "Mr. Joshua's helicopter arrival (Hunsaker killing)",
+   "Riggs's trailer and Sam the dog (home life)",
+   "Murtaugh's 'too old for this' mood"
+  ],
+  "ideas": [
+   "Swap the 'Riggs gets the guest room' keep card for 'Riggs hands over the bullet'.",
+   "Swap 'Riggs' trailer snacks' note for 'A beer and a biscuit for Sam, dinner for one'.",
+   "Rename 'Christmas party crab dip' to 'Christmas tree lot crab dip' to use the opening sting.",
+   "Add a bullet-shaped chocolate to 'Roger's birthday cake' as the Christmas Day gift."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

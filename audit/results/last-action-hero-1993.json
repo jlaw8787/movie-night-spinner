@@ -1,42 +1,43 @@
 {
-  "id": "Last Action Hero (1993)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Pandora Theater",
-      "where": "venue",
-      "verdict": "ok",
-      "why": "The Wikipedia production section calls it the film's Pandora Theater, the condemned theater where Nick shows the Jack Slater films.",
-      "source": "https://en.wikipedia.org/wiki/Last_Action_Hero",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 3,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.2,
-    "verdict": "A bold neon cinema with the magic ticket and Whiskers, but Arnold's Hamlet, the glass eye and Death are missing.",
-    "missing": [
-      "Arnold as Hamlet in Danny's daydream (\"Big mistake\")",
-      "Benedict's exploding glass eye",
-      "Death stepping out of The Seventh Seal",
-      "Danny snuffing a lit fuse with his popcorn bucket",
-      "The ice cream truck explosion",
-      "Jack's \"rubber baby buggy bumpers\" line"
-    ],
-    "ideas": [
-      "Swap \"Times Square knishes\" for \"Hamlet's cigar chocolates\" with the line \"Big mistake\".",
-      "Swap \"Movie world pepperoni\" note for \"Benedict's glass eye olives\".",
-      "Swap \"Matinee ice cream sundae\" for \"Ice cream truck special, hold the explosion\".",
-      "Swap the popcorn note for Danny putting out the fuse with his bucket."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Last Action Hero (1993)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Pandora Theater",
+   "where": "venue",
+   "verdict": "ok",
+   "why": "The Wikipedia production section calls it the film's Pandora Theater, the condemned theater where Nick shows the Jack Slater films.",
+   "source": "https://en.wikipedia.org/wiki/Last_Action_Hero",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "A bold neon cinema with the magic ticket and Whiskers, but Arnold's Hamlet, the glass eye and Death are missing.",
+  "missing": [
+   "Arnold as Hamlet in Danny's daydream (\"Big mistake\")",
+   "Benedict's exploding glass eye",
+   "Death stepping out of The Seventh Seal",
+   "Danny snuffing a lit fuse with his popcorn bucket",
+   "The ice cream truck explosion",
+   "Jack's \"rubber baby buggy bumpers\" line"
+  ],
+  "ideas": [
+   "Swap \"Times Square knishes\" for \"Hamlet's cigar chocolates\" with the line \"Big mistake\".",
+   "Swap \"Movie world pepperoni\" note for \"Benedict's glass eye olives\".",
+   "Swap \"Matinee ice cream sundae\" for \"Ice cream truck special, hold the explosion\".",
+   "Swap the popcorn note for Danny putting out the fuse with his bucket."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

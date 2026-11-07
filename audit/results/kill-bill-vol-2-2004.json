@@ -5,22 +5,24 @@
     {
       "text": "B.B.'s cheesy tuna melts",
       "where": "dish-name",
-      "verdict": "unsure",
-      "why": "The plot says Beatrix spends the evening with B.B. and Bill. None of the sources opened say what B.B. eats, so the tuna melt and its note (\"a kid's dinner at the villa\") are unconfirmed.",
-      "source": "https://en.wikipedia.org/wiki/Kill_Bill:_Volume_2",
-      "fix": "B.B.'s cheesy grilled cheese toasties",
+      "verdict": "wrong",
+      "why": "Nothing shows B.B. eating tuna melts. The only food scene is Bill making a sandwich in his kitchen, with no filling named, so the dish is renamed to nod at that scene and still describes a tuna melt.",
+      "source": "https://grantland.com/hollywood-prospectus/qt-eats-tarantinos-20-best-food-scenes/",
+      "fix": "Bill's kitchen tuna melts",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     },
     {
       "text": "a kid's dinner at the villa",
       "where": "dish-note",
-      "verdict": "unsure",
-      "why": "Unprinted note on the tuna melts. Same problem, no source for what B.B. has for dinner.",
-      "source": "https://en.wikipedia.org/wiki/Kill_Bill:_Volume_2",
-      "fix": "a kid's dinner at Bill's place",
+      "verdict": "wrong",
+      "why": "Same as the dish name: the film has Bill making a sandwich in the kitchen, not a kid's dinner at the villa.",
+      "source": "https://grantland.com/hollywood-prospectus/qt-eats-tarantinos-20-best-food-scenes/",
+      "fix": "Bill's kitchen sandwich scene",
       "printed": false,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 14,

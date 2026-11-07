@@ -1,54 +1,56 @@
 {
-  "id": "Les Misérables (2012)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Café Musain hot spiced wine",
-      "where": "dish-name",
-      "verdict": "wrong",
-      "why": "The film track list calls the students meeting place the ABC Cafe, and the transcript has wine shared there. Cafe Musain is the novel name and is never used in the film.",
-      "source": "https://en.wikipedia.org/wiki/Les_Mis%C3%A9rables_(2012_film)",
-      "fix": "ABC Café hot spiced wine",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Gavroche and the great stone elephant",
-      "where": "wink",
-      "verdict": "wrong",
-      "why": "The film does show Gavroche living in a giant elephant, but it is a plaster or wooden set replica, not stone, so the line is fixed to drop stone.",
-      "source": "https://thesundae.net/2017/03/12/notes-on-tom-hoopers-les-miserables",
-      "fix": "Gavroche and the great elephant of the Bastille",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 13,
-  "vibe": {
-    "world": 4,
-    "moments": 4,
-    "food": 3,
-    "tone": 4,
-    "look": 3,
-    "overall": 3.6,
-    "verdict": "A dark, greedy Thénardier tab that fits the innkeepers well, but the barricade songs are missing and the sign line is cut off.",
-    "missing": [
-      "\"Master of the House\" at the inn",
-      "Gavroche exposing Javert at the barricade",
-      "Marius mourning his friends in the empty café",
-      "The Thénardiers crashing the wedding",
-      "Valjean buying Cosette her doll",
-      "Javert's fall from the ledge"
-    ],
-    "ideas": [
-      "Fix the sign on face 0, which is cut off at \"PRICES S\", and the face 1 caption that runs the words together.",
-      "Swap \"Montfermeil inn pork rillettes\" for \"Wedding crasher canapés\", the Thénardiers at the reception.",
-      "Swap the house saucisson note for a \"Master of the House\" nod.",
-      "Swap \"Café Musain hot spiced wine\" for \"Drink with me, hot spiced wine\"."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Les Misérables (2012)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Café Musain hot spiced wine",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "The film track list calls the students meeting place the ABC Cafe, and the transcript has wine shared there. Cafe Musain is the novel name and is never used in the film.",
+   "source": "https://en.wikipedia.org/wiki/Les_Mis%C3%A9rables_(2012_film)",
+   "fix": "ABC Café hot spiced wine",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Gavroche and the great stone elephant",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "The film does show Gavroche living in a giant elephant, but it is a plaster or wooden set replica, not stone, so the line is fixed to drop stone.",
+   "source": "https://thesundae.net/2017/03/12/notes-on-tom-hoopers-les-miserables",
+   "fix": "Gavroche and the great elephant of the Bastille",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 3,
+  "overall": 3.6,
+  "verdict": "A dark, greedy Thénardier tab that fits the innkeepers well, but the barricade songs are missing and the sign line is cut off.",
+  "missing": [
+   "\"Master of the House\" at the inn",
+   "Gavroche exposing Javert at the barricade",
+   "Marius mourning his friends in the empty café",
+   "The Thénardiers crashing the wedding",
+   "Valjean buying Cosette her doll",
+   "Javert's fall from the ledge"
+  ],
+  "ideas": [
+   "Fix the sign on face 0, which is cut off at \"PRICES S\", and the face 1 caption that runs the words together.",
+   "Swap \"Montfermeil inn pork rillettes\" for \"Wedding crasher canapés\", the Thénardiers at the reception.",
+   "Swap the house saucisson note for a \"Master of the House\" nod.",
+   "Swap \"Café Musain hot spiced wine\" for \"Drink with me, hot spiced wine\"."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

@@ -1,59 +1,60 @@
 {
-  "id": "Monsters University (2013)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Pizza and soft drink for the whole house tonight. Oozma Kappa studies for the Scare Games on a full stomach.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Printed in quote marks as Mike's words, but he never says it. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
-      "source": "https://en.wikipedia.org/wiki/Monsters_University",
-      "fix": "Pizza and soft drink for the whole house tonight. Eat up, Oozma Kappa, the Scare Games start soon.",
-      "printed": true,
-      "done": true,
-      "fix_note": {
-        "text": "Pizza and soft drink for the whole house tonight. Eat up, Oozma Kappa, the Scare Games start soon.",
-        "by": "Mike Wazowski",
-        "kind": "note"
-      },
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Archie the Scare Pig was here first.",
-      "where": "house",
-      "verdict": "ok",
-      "why": "The transcript has Archie the Scare Pig, Fear Tech's mascot, in the room Mike and Sulley end up in. The line is a plain menu joke that claims nothing else.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=monsters-university",
-      "fix": "Crisp battered onion rings, the Scare Games kind.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "A frat party that suits Oozma Kappa, but it is a generic party menu and skips the Scare Games challenges and Hardscrabble.",
-    "missing": [
-      "The Scare Games trials (the first round and the library)",
-      "Dean Hardscrabble's broken scream canister",
-      "Mike and the team sneaking into Monsters Inc",
-      "The RΩR party prank on Oozma Kappa",
-      "Sulley rigging the simulator",
-      "The summer camp door and the park rangers"
-    ],
-    "ideas": [
-      "Swap 'Frat house party wings' for 'Scare Games wings' with a note about the first round.",
-      "Swap 'Mike's green apple cooler' note for 'Fuel for the scream can design program'.",
-      "Swap 'Sulley blue cupcakes' for 'Scream can cupcakes' with a canister topper.",
-      "Swap 'Blue raspberry slushie' for 'Camp cabin slushie' to use the door to the human world."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Monsters University (2013)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Pizza and soft drink for the whole house tonight. Oozma Kappa studies for the Scare Games on a full stomach.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Mike's words, but he never says it. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
+   "source": "https://en.wikipedia.org/wiki/Monsters_University",
+   "fix": "Pizza and soft drink for the whole house tonight. Eat up, Oozma Kappa, the Scare Games start soon.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Pizza and soft drink for the whole house tonight. Eat up, Oozma Kappa, the Scare Games start soon.",
+    "by": "Mike Wazowski",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Archie the Scare Pig was here first.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "The transcript has Archie the Scare Pig, Fear Tech's mascot, in the room Mike and Sulley end up in. The line is a plain menu joke that claims nothing else.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=monsters-university",
+   "fix": "Crisp battered onion rings, the Scare Games kind.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A frat party that suits Oozma Kappa, but it is a generic party menu and skips the Scare Games challenges and Hardscrabble.",
+  "missing": [
+   "The Scare Games trials (the first round and the library)",
+   "Dean Hardscrabble's broken scream canister",
+   "Mike and the team sneaking into Monsters Inc",
+   "The RΩR party prank on Oozma Kappa",
+   "Sulley rigging the simulator",
+   "The summer camp door and the park rangers"
+  ],
+  "ideas": [
+   "Swap 'Frat house party wings' for 'Scare Games wings' with a note about the first round.",
+   "Swap 'Mike's green apple cooler' note for 'Fuel for the scream can design program'.",
+   "Swap 'Sulley blue cupcakes' for 'Scream can cupcakes' with a canister topper.",
+   "Swap 'Blue raspberry slushie' for 'Camp cabin slushie' to use the door to the human world."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

@@ -3,15 +3,20 @@
  "ops": [
   {
    "old": "Serve the mains at Roger's birthday dinner, when Riggs meets the family.",
-   "new": "Serve the mains when Riggs meets the family over a roast dinner."
+   "new": "Serve the mains when Riggs meets the family over a roast dinner.",
+   "done": true
   },
   {
    "old": "Roger's 50th Birthday Dinner",
-   "new": "Dinner at the Murtaughs"
+   "new": "Dinner at the Murtaughs",
+   "done": true
   },
   {
    "old": "Riggs gets the guest room",
-   "new": "Riggs wakes up in his trailer"
+   "new": "Riggs wakes up in his trailer",
+   "done": true
   }
- ]
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

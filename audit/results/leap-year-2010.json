@@ -1,54 +1,56 @@
 {
-  "id": "Leap Year (2010)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve the mains when Declan serves dinner at his pub in Dingle.",
-      "where": "cue",
-      "verdict": "wrong",
-      "why": "The dinner scene is at the Tipperary bed and breakfast, where Anna and Declan pose as a married couple. Declan runs the pub in Dingle but is not shown serving dinner there.",
-      "source": "https://en.wikipedia.org/wiki/Leap_Year_(2010_film)",
-      "fix": "Serve the mains when Anna and Declan have dinner at the Tipperary B&B.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Jeremy waiting with a ring she wanted",
-      "where": "wink",
-      "verdict": "wrong",
-      "why": "Jeremy gives Anna earrings, not the ring she hoped for, and only proposes later in the Dublin hotel lobby. No scene has him waiting with a ring.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=leap-year",
-      "fix": "Jeremy with earrings, not the ring",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 12,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 3,
-    "overall": 3.2,
-    "verdict": "A good pub tab with the leap day tradition, but the best scenes on the road are missing.",
-    "missing": [
-      "Pretending to be married at the Tipperary B&B and the dinner kiss",
-      "Anna stepping in a cow pat and the car rolling into a stream",
-      "The 60-second house fire question at Ballycarbery Castle",
-      "Anna drunk at the wedding reception",
-      "Declan's mother's Claddagh ring",
-      "The cliff top proposal"
-    ],
-    "ideas": [
-      "Swap the cue for the B&B dinner.",
-      "Swap \"Potato farls\" note for the cow pat and the car in the stream.",
-      "Rename \"Irish lamb stew\" to \"Married couple stew\", from the B&B.",
-      "Swap the Murphy's note for the wedding reception."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Leap Year (2010)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains when Declan serves dinner at his pub in Dingle.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "The dinner scene is at the Tipperary bed and breakfast, where Anna and Declan pose as a married couple. Declan runs the pub in Dingle but is not shown serving dinner there.",
+   "source": "https://en.wikipedia.org/wiki/Leap_Year_(2010_film)",
+   "fix": "Serve the mains when Anna and Declan have dinner at the Tipperary B&B.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Jeremy waiting with a ring she wanted",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Jeremy gives Anna earrings, not the ring she hoped for, and only proposes later in the Dublin hotel lobby. No scene has him waiting with a ring.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=leap-year",
+   "fix": "Jeremy with earrings, not the ring",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "A good pub tab with the leap day tradition, but the best scenes on the road are missing.",
+  "missing": [
+   "Pretending to be married at the Tipperary B&B and the dinner kiss",
+   "Anna stepping in a cow pat and the car rolling into a stream",
+   "The 60-second house fire question at Ballycarbery Castle",
+   "Anna drunk at the wedding reception",
+   "Declan's mother's Claddagh ring",
+   "The cliff top proposal"
+  ],
+  "ideas": [
+   "Swap the cue for the B&B dinner.",
+   "Swap \"Potato farls\" note for the cow pat and the car in the stream.",
+   "Rename \"Irish lamb stew\" to \"Married couple stew\", from the B&B.",
+   "Swap the Murphy's note for the wedding reception."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

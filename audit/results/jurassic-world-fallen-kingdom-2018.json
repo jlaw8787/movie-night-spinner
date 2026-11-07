@@ -5,22 +5,24 @@
     {
       "text": "Iris's tray, carried up to Mr Lockwood.",
       "where": "house",
-      "verdict": "unsure",
-      "why": "Lockwood is in the film and is smothered by Eli Mills (Wikipedia), but none of the pages I opened shows Iris or a tray.",
-      "source": "https://en.wikipedia.org/wiki/Jurassic_World:_Fallen_Kingdom",
-      "fix": "A tray for Mr Lockwood, before Mills.",
+      "verdict": "wrong",
+      "why": "Iris is the carer who raised Maisie and is sent away by Mills, and Lockwood calls for her, but no source or transcript line shows a tray. The note now claims only what she did.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=jurassic-world-fallen-kingdom",
+      "fix": "Iris raised Maisie. This tea is for her.",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     },
     {
       "text": "Served at the auction before the Indoraptor got out.",
       "where": "house",
-      "verdict": "unsure",
-      "why": "The auction and the Indoraptor escape are in the film, but no source I read shows oysters or any catering.",
+      "verdict": "wrong",
+      "why": "The auction and the Indoraptor escape are in the film, but no source, transcript line or search result shows oysters or any food served there. Reworded as a joke about the guests.",
       "source": "https://en.wikipedia.org/wiki/Jurassic_World:_Fallen_Kingdom",
-      "fix": "Served at the auction, before the Indoraptor got out.",
+      "fix": "Fit for the guests at the Lockwood dinosaur auction.",
       "printed": false,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 17,

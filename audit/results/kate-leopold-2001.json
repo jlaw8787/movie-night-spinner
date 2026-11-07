@@ -27,12 +27,13 @@
     {
       "text": "Leopold stands when Kate sits. Then he pours.",
       "where": "house",
-      "verdict": "unsure",
-      "why": "The only manners line on the quote page is Leopold saying he is accustomed to stand when a woman leaves the table. Standing when she sits is not in the film as far as the sources show.",
+      "verdict": "wrong",
+      "why": "The film has Leopold say he is accustomed to stand when a woman leaves the table, not when she sits. The pouring is a menu touch.",
       "source": "https://en.wikiquote.org/wiki/Kate_%26_Leopold",
-      "fix": "Leopold stands when Kate leaves the table. Then he pours.",
+      "fix": "Leopold stands when a woman leaves the table. Then he pours.",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 12,

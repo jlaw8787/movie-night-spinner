@@ -1,54 +1,56 @@
 {
-  "id": "National Treasure (2004)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Gates Family Workshop",
-      "where": "venue",
-      "verdict": "wrong",
-      "why": "No workshop appears. The transcript has the Gates family and Riley studying the Declaration clues at Patrick Gates's house, where he calls out 'I'm in here'.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=national-treasure",
-      "fix": "Gates Family House",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Riley's snack for cracking the Ottendorf cipher.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "In the transcript the Ottendorf cipher is explained to Riley, with Ben saying the key is the Silence Dogood letters. Riley does not crack it alone.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=national-treasure",
-      "fix": "Riley's snack while the Ottendorf cipher gets explained.",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 13,
-  "vibe": {
-    "world": 3,
-    "moments": 4,
-    "food": 4,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "Witty food names around the treasure trail, but a ration sheet is a loose fit for a film about a heist and a history chase.",
-    "missing": [
-      "Ben paying for the Declaration at the gift shop (Archives)",
-      "Meerschaum pipe that is also the key (Charlotte)",
-      "Spectacles with coloured lenses in the bell tower brick (Independence Hall)",
-      "Trinity Church tunnel with a lantern (clue)",
-      "Intrepid meeting with Ian (rescue)",
-      "Ben stealing the Declaration in a tuxedo (gala)"
-    ],
-    "ideas": [
-      "Swap 'Hot apple juice with cinnamon' for 'Gift shop lemonade' and note it as the souvenir copy gag.",
-      "Rename 'Invisible ink lemon, ginger and mint fizz' to 'Lemon juice and a hair dryer fizz'.",
-      "Replace the venue name with 'Patrick Gates's Kitchen Table'.",
-      "Add 'Meerschaum' dessert pipe with chocolate."
-    ],
-    "flat": false,
-    "done": false
+ "id": "National Treasure (2004)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Gates Family Workshop",
+   "where": "venue",
+   "verdict": "wrong",
+   "why": "No workshop appears. The transcript has the Gates family and Riley studying the Declaration clues at Patrick Gates's house, where he calls out 'I'm in here'.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=national-treasure",
+   "fix": "Gates Family House",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Riley's snack for cracking the Ottendorf cipher.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "In the transcript the Ottendorf cipher is explained to Riley, with Ben saying the key is the Silence Dogood letters. Riley does not crack it alone.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=national-treasure",
+   "fix": "Riley's snack while the Ottendorf cipher gets explained.",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Witty food names around the treasure trail, but a ration sheet is a loose fit for a film about a heist and a history chase.",
+  "missing": [
+   "Ben paying for the Declaration at the gift shop (Archives)",
+   "Meerschaum pipe that is also the key (Charlotte)",
+   "Spectacles with coloured lenses in the bell tower brick (Independence Hall)",
+   "Trinity Church tunnel with a lantern (clue)",
+   "Intrepid meeting with Ian (rescue)",
+   "Ben stealing the Declaration in a tuxedo (gala)"
+  ],
+  "ideas": [
+   "Swap 'Hot apple juice with cinnamon' for 'Gift shop lemonade' and note it as the souvenir copy gag.",
+   "Rename 'Invisible ink lemon, ginger and mint fizz' to 'Lemon juice and a hair dryer fizz'.",
+   "Replace the venue name with 'Patrick Gates's Kitchen Table'.",
+   "Add 'Meerschaum' dessert pipe with chocolate."
+  ],
+  "flat": false,
+  "done": false
+ }
 }
