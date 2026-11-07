@@ -1,0 +1,48 @@
+{
+ "id": "Mystic Pizza (1988)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Everybody in town thinks the sauce is a big secret. It is. Don't ask me.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Leona's words, but it is not a line from the film. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
+   "source": "https://en.wikipedia.org/wiki/Mystic_Pizza",
+   "fix": "The sauce is a secret and it stays a secret. Eat up before the critic gets here.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "The sauce is a secret and it stays a secret. Eat up before the critic gets here.",
+    "by": "Leona",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 4,
+  "verdict": "The best match of the batch: a pizza parlour, three waitresses, Portuguese food and the critic, though the voice is generic.",
+  "missing": [
+   "The Fireside Gourmet's slice and his rating on TV",
+   "Kat's job at the Seaport planetarium",
+   "Charles's family dinner and the lobster",
+   "Jojo fainting at the altar (only on the dish note)",
+   "Kat tearing up Tim's cheque",
+   "Leona lending Kat the tuition money"
+  ],
+  "ideas": [
+   "Swap 'Pizza parlour garlic knots' for 'Fireside Gourmet slice' with the note 'Three bites and a rating'.",
+   "Swap 'Lobster boat garlic chilli prawns' note for 'Bill's boat and the lobster pots'.",
+   "Swap 'Portuguese custard tarts' for 'Planetarium custard tarts' to use Kat's story.",
+   "Swap the 'Order slip' line '1 large pie, extra cheese' for 'Table 4, one slice, ask for the critic'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

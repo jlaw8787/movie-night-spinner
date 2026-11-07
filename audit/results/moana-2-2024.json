@@ -1,0 +1,48 @@
+{
+ "id": "Moana 2 (2024)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Pack the coconuts and the taro, Pua. It's a long paddle tonight, and Maui keeps pinching the fish before it's cooked.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Moana's words, but she never says it. It also gets the plot wrong: Maui is not on the canoe at the start of the film, he has been captured by Matangi and Moana's crew is Loto, Moni, Kele, Pua and Heihei. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
+   "source": "https://en.wikipedia.org/wiki/Moana_2",
+   "fix": "Pack the coconuts and the taro, Pua. Long paddle tonight, and keep Heihei away from the fish.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Pack the coconuts and the taro, Pua. Long paddle tonight, and keep Heihei away from the fish.",
+    "by": "Moana",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A good voyage galley with the right crew mascots, but the sequel's own beats (Matangi, Tamatoa, the rising island) are missing.",
+  "missing": [
+   "Matangi's lair inside the giant clam",
+   "The Kakamora ships and Kotu helping the crew",
+   "Nalo's storm and the lightning",
+   "Motufetu rising from the sea",
+   "Tamatoa arriving at the end (post credits)",
+   "Moni being a huge Maui fan"
+  ],
+  "ideas": [
+   "Swap 'Motunui chilli lime fruit with coconut' for 'Giant clam ceviche' with the note 'Matangi's front door'.",
+   "Swap 'Pineapple coconut water slushie' for a 'Storm god float' topped with a lightning wafer.",
+   "Swap the 'Crew Tag' line 'Destination: over the horizon' for 'Destination: Motufetu'.",
+   "Swap the 'Moni' house line for the printed menu so 'Maui fan facts' shows up where guests see it."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

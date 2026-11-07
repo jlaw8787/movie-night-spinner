@@ -1,0 +1,48 @@
+{
+ "id": "Monsters, Inc. (2001)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Kitty has to go home, Mike. But she does not leave without a proper goodbye. Make the reservation.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Sulley's words, but he never says it. 'Kitty' is what Boo calls Sulley, not what he calls her. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
+   "source": "https://en.wikipedia.org/wiki/Monsters,_Inc.",
+   "fix": "Mike's got Celia at Harryhausen's tonight. Nobody bring a toddler, and nobody wear a sock.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Mike's got Celia at Harryhausen's tonight. Nobody bring a toddler, and nobody wear a sock.",
+    "by": "Sulley",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "The right restaurant and good nods (2319, the sock, Randall, Roz), but the food is a plain sushi menu with little monster wit.",
+  "missing": [
+   "Boo calling Sulley 'Kitty'",
+   "The Abominable Snowman and his snow cones in the Himalayas",
+   "Mike's eye and Celia's 'Googly Bear'",
+   "Sulley and Mike finding Boo's door in the vault",
+   "Roz saying 'Wazowski'",
+   "Boo's laugh powering the lights"
+  ],
+  "ideas": [
+   "Swap 'Teriyaki chicken' for 'Boo's chicken nuggets' with a note about her sitting at the table.",
+   "Swap 'Harryhausen's sushi rolls' for 'Mike and Celia's sushi for two' with the note 'Interrupted by a toddler'.",
+   "Swap 'Agedashi tofu' note for 'Googly Bear's birthday dinner, booth for two'.",
+   "Swap the 'Chilled sake' house drink for a 'Laugh canister' mocktail so the drink list stays family friendly."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

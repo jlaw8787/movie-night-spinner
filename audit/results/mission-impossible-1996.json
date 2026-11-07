@@ -1,0 +1,48 @@
+{
+ "id": "Mission: Impossible (1996)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "The dessert is locked in a vault in Langley. Give me ten minutes and a harness, and nobody touch the floor.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Ethan's words, but he never says it. The Langley vault break in is real (he is lowered on a wire), but the line is menu copy. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. Kept as a signed note it fits the plot.",
+   "source": "https://en.wikipedia.org/wiki/Mission:_Impossible_(film)",
+   "fix": "Dessert is in the vault at Langley. Give me ten minutes and a wire, and nobody touch the floor.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Dessert is in the vault at Langley. Give me ten minutes and a wire, and nobody touch the floor.",
+    "by": "Ethan Hunt",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 5,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Great Prague setting with real Czech food and the aquarium, but the big twists and the train stay off the menu.",
+  "missing": [
+   "Job 3:14, the Bible verse that gives away the mole's code name",
+   "The sweat drop at Langley (Ethan hanging over the white room floor)",
+   "The mask reveal on the TGV train",
+   "The helicopter pulled into the Channel Tunnel",
+   "Claire's fake death and the safe house",
+   "Max and the NOC list on the magneto-optical disk"
+  ],
+  "ideas": [
+   "Swap 'Reserved Table 1 for two' tag line 'The self-destructing tape' for 'Face on, face off' to nod to the masks.",
+   "Swap 'Langley white room cheese stacks' note for 'One bead of sweat and the alarm goes' to use the vault drop properly.",
+   "Swap 'Becherovka on ice' for 'Job 3:14 shot' with the note 'The mole's code name, in a glass'.",
+   "Swap the printed 'Good luck, Ethan' brief line for 'This message will self destruct' with the tape stamp."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

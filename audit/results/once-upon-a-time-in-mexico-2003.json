@@ -1,0 +1,48 @@
+{
+ "id": "Once Upon a Time in Mexico (2003)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Best pork in the country, no question. If it isn't, somebody is about to have a bad day.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Sands's words, but it is not a line from the film. Sands does love puerco pibil, so a signed note in his voice suits. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
+   "source": "https://en.wikipedia.org/wiki/Once_Upon_a_Time_in_Mexico",
+   "fix": "Best pork in Mexico, they tell me. It had better be. Another plate, please.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Best pork in Mexico, they tell me. It had better be. Another plate, please.",
+    "by": "Sands",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "The pibil stand is the right idea for Sands, and the Day of the Dead and mole are good, but the film's other characters are missing.",
+  "missing": [
+   "Sands losing his eyes and still shooting a hitman with a chicle boy's help",
+   "El Mariachi's guitar case of weapons",
+   "Billy Chambers and his chihuahua with the hidden microphone",
+   "Barillo's body double in the hospital",
+   "Lorenzo and Fideo walking off with the cash",
+   "The coup at the presidential palace on Day of the Dead"
+  ],
+  "ideas": [
+   "Swap 'Sopes with refried beans and queso' for 'Chicle boy chewing gum sweets' tied to the boy who helps Sands.",
+   "Swap 'Chicken in red mole with rice' note for 'Barillo's body double dinner'.",
+   "Swap 'Mexican chocolate flan' for 'Chambers' chihuahua flan' with a note about the hidden microphone.",
+   "Swap the 'Order slip' line 'Extra salsa, no questions' for 'Extra salsa, ask the chicle boy'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

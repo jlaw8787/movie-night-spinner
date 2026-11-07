@@ -1,0 +1,58 @@
+{
+ "id": "Old School (2003)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Frank's on the grill tonight and the beers are cold. Pull up a chair before I eat all the snags.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Frank's words, but it is not a line from the film. 'Snags' is Australian slang for sausages and does not belong in a US film. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
+   "source": "https://en.wikipedia.org/wiki/Old_School_(2003_film)",
+   "fix": "Frank on the grill tonight and the beers are cold. Pull up a chair before the Tank eats everything.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Frank on the grill tonight and the beers are cold. Pull up a chair before the Tank eats everything.",
+    "by": "Frank Ricard",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Streaking through the quad",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "The plot has a drunken Frank streaking past his wife Marissa and her friends after the housewarming party. It does not say the quad.",
+   "source": "https://en.wikipedia.org/wiki/Old_School_(2003_film)",
+   "fix": "Frank streaking past his wife and her friends",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "A fair frat party, but the black and white photo strip is flat and the film's best set pieces and cameos are barely touched.",
+  "missing": [
+   "Mitch-a-Palooza, the housewarming party",
+   "Blue's death at his birthday and his 'You're my boy, Blue' line",
+   "Frank in the school mascot suit jumping through the ring of fire",
+   "Frank beating James Carville in the debate",
+   "The rhythmic gymnastics and the vault at the final evaluation",
+   "Bernard, known as Beanie, as the host"
+  ],
+  "ideas": [
+   "Swap 'Frat house sheet cake' for 'Blue's birthday cake' with a note about his big night.",
+   "Swap 'Pledge week jalapeño poppers' for 'Ring of fire poppers' with a note about the mascot jump.",
+   "Swap the black and white photo booth for colour pictures with the party in full swing.",
+   "Swap 'Mitch's house bourbon lemonade punch' for 'Mitch-a-Palooza punch' to name the party."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

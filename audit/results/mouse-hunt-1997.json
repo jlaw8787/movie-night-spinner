@@ -1,0 +1,48 @@
+{
+ "id": "Mouse Hunt (1997)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I cooked for important people once, Lars, and the mouse still got to the cheese plate before us. Eat what is left.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Ernie's words, but he never says it. Ernie did cook for the mayor once, and a cockroach in a cigar box ended that night. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
+   "source": "https://en.wikipedia.org/wiki/Mouse_Hunt",
+   "fix": "I cooked for the mayor once, Lars, and look how that went. Eat before the mouse gets to it.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "I cooked for the mayor once, Lars, and look how that went. Eat before the mouse gets to it.",
+    "by": "Ernie Smuntz",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Good cheese and string jokes and a cute mouse poster, but a hotel room service layout is a loose fit for a collapsing mansion.",
+  "missing": [
+   "Catzilla the Maine coon",
+   "Caesar the exterminator",
+   "The mouse mailed to Cuba and mailed back (box with too little postage)",
+   "Ernie's restaurant and the cockroach at the mayor's table",
+   "The mansion flooding at the auction",
+   "The mouse making string cheese in the factory (ending)"
+  ],
+  "ideas": [
+   "Swap 'Crispy fried school prawns' for 'Cockroach free school prawns' to push the mayor gag.",
+   "Swap 'Mousetrap cheese toasties' for 'Catzilla cheese toasties' with a note about the cat.",
+   "Swap 'Mouse-sized honey vanilla shakes' note for 'Mailed to Cuba, returned for postage'.",
+   "Swap the 'House Deed' tag line 'Mouse sold separately' for 'Auction tonight, mouse included'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

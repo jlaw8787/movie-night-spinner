@@ -1,0 +1,48 @@
+{
+ "id": "Ocean's Eleven (2001)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Eleven guys, one dinner table. Danny, don't be late, and tell Linus to stop sweating into the bread basket.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Rusty's words, but it is not a line from the film. Linus is the pickpocket, so a bread basket joke can work as a note. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
+   "source": "https://en.wikipedia.org/wiki/Ocean's_Eleven_(2001_film)",
+   "fix": "Eleven guys, one dinner table. Danny, don't be late, and somebody watch Linus around the bread basket.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Eleven guys, one dinner table. Danny, don't be late, and somebody watch Linus around the bread basket.",
+    "by": "Rusty Ryan",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A slick Vegas club with Rusty's running snack gag, but the vault, the pinch and the replica are left out.",
+  "missing": [
+   "The replica vault the crew rehearses in",
+   "Basher's EMP 'pinch' blacking out Vegas",
+   "Saul's briefcase of fake jewels that are explosives",
+   "The fake SWAT team carrying cash out",
+   "Danny and Tess in the Bellagio",
+   "The fountains outside the Bellagio at the end"
+  ],
+  "ideas": [
+   "Swap 'High roller chips' for 'The pinch' with the note 'Lights out in Vegas'.",
+   "Swap 'Fountain show sundae' note for 'Eleven of them watching the fountains'.",
+   "Swap 'Saul's matzo ball chicken soup' note for 'Saul and the briefcase of fake jewels'.",
+   "Swap the 'Crew Pass' line 'Eleven of eleven' for 'Eleven names, one vault'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

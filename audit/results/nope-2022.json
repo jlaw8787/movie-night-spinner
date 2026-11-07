@@ -1,0 +1,58 @@
+{
+ "id": "Nope (2022)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "OJ, grab the snacks and the camera. We sit on the porch all night for one shot, and nobody looks up.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Emerald's words, but it is not a line from the film. The heading 'Overheard at the window' also implies real speech. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
+   "source": "https://en.wikipedia.org/wiki/Nope_(film)",
+   "fix": "OJ, grab the snacks and the camera. We're up all night for one shot, and nobody looks up.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "OJ, grab the snacks and the camera. We're up all night for one shot, and nobody looks up.",
+    "by": "Emerald Haywood",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Angel from Fry's brings dinner for the long watch on the clouds",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Angel is the electronics store worker who sets up the cameras, but nothing in the plot says he brings dinner.",
+   "source": "https://en.wikipedia.org/wiki/Nope_(film)",
+   "fix": "Angel from Fry's wires the cameras for the long watch on the clouds",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "The ranch and the fair names are right, but the tone is a friendly food truck, not a film about a thing in the clouds.",
+  "missing": [
+   "Gordy's Home and the shoe standing upright",
+   "The tube men tracking Jean Jacket",
+   "The helium balloon with Jupe's winking eye",
+   "Holst's hand-cranked camera and his last shot",
+   "The coin-operated wishing well camera",
+   "Jean Jacket the horse, named for the unruly one"
+  ],
+  "ideas": [
+   "Swap 'Jupe's watermelon agua fresca' for 'Gordy's Home balloon pop' with a nod to the pop that sets Gordy off.",
+   "Swap 'Star Lasso Experience popcorn' note for 'Seats filling up. Don't look up.'",
+   "Swap 'Cold brew on ice' note for 'Holst's all night shot'.",
+   "Swap the 'Menu' footer 'Grab it and go' for 'Eyes down, order fast'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

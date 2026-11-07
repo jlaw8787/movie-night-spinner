@@ -1,0 +1,78 @@
+{
+ "id": "Miracle on 34th Street (1947)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains when Kris shares Thanksgiving dinner with Doris and Susan.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "There is no Thanksgiving dinner with Kris in the film. Thanksgiving is only the morning of the Macy's parade, when Doris talks Kris into playing Santa. Kris, Fred, Doris and Susan next meet on Christmas Day at his home. The printed card cue is the same line.",
+   "source": "https://en.wikipedia.org/wiki/Miracle_on_34th_Street",
+   "fix": "Serve the mains when the mailbags of Santa letters are emptied onto the judge's desk.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Doris's Thanksgiving roast turkey",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "Doris never cooks or serves a Thanksgiving dinner in the film. Her Thanksgiving scene is running the parade.",
+   "source": "https://en.wikipedia.org/wiki/Miracle_on_34th_Street",
+   "fix": "Parade day roast turkey",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "the Thanksgiving Kris spends with Doris and Susan",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Kris does not spend Thanksgiving with Doris and Susan. He meets Doris on the morning of the parade, and meets Susan later at the store.",
+   "source": "https://en.wikipedia.org/wiki/Miracle_on_34th_Street",
+   "fix": "the Thanksgiving morning Doris hires Kris for the parade",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Mother says dinner has to come before presents. I don't love the rule, but this smells too good to argue.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Susan's words, but she never says it, and no dinner before presents rule appears in the plot. Susan's real arc is a girl raised not to believe in fairy tales who comes round at the end. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. A note in her voice that fits the plot is safer.",
+   "source": "",
+   "fix": "Mother says I'm too old for fairy tales. I'm having the pudding anyway, in case Santa asks.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Mother says I'm too old for fairy tales. I'm having the pudding anyway, in case Santa asks.",
+    "by": "Susan Walker",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A warm department store tea room with the right letters and parade, but the dinner it builds the cue around never happens in the film.",
+  "missing": [
+   "Kris speaking Dutch to the orphan girl (toy floor)",
+   "Kris sending shoppers to Gimbels (the store policy that wins Macy's over)",
+   "Kris hitting Sawyer with the umbrella",
+   "Judge Harper's courtroom and the bags of dead letters",
+   "Susan's dream house with the For Sale sign and the cane inside (ending)",
+   "Susan saying she believes, though it's silly"
+  ],
+  "ideas": [
+   "Swap 'Doris's Thanksgiving roast turkey' for 'Parade day roast turkey' and move the cue to the mailbags scene.",
+   "Swap 'Mailbag cheese and celery' for 'Dead letter sandwiches' so the name points at the scene that wins the case.",
+   "Swap the 'Waldorf salad' house dish for a 'Gimbels lunch plate' with the note 'Macy's sends shoppers to Gimbels. Kris insists.'",
+   "Swap the stamp 'Counter 34' for 'Dream house, For Sale' to tie the back page to the ending."
+  ],
+  "flat": true,
+  "done": false
+ }
+}
