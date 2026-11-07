@@ -1,55 +1,66 @@
 {
- "id": "Knives Out (2019)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Poured in the My house, my rules, my coffee mug.",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "The sentence is garbled, and the mug in the last shot reads \"My House, My Rules, My Coffee!!\".",
-   "source": "https://en.wikipedia.org/wiki/Knives_Out",
-   "fix": "Poured into Harlan's \"My House, My Rules, My Coffee\" mug.",
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Serve the donut holes when the family arrives at Harlan's house for questioning.",
-   "where": "cue",
-   "verdict": "wrong",
-   "why": "The donut talk is Blanc in the car and later at the end, describing a case with a hole in the middle, not the family arriving for questioning.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=knives-out",
-   "fix": "Serve the donut holes when Blanc explains the hole at the centre of the case.",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Knives Out (2019)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Poured in the My house, my rules, my coffee mug.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "The sentence is garbled, and the mug in the last shot reads \"My House, My Rules, My Coffee!!\".",
+      "source": "https://en.wikipedia.org/wiki/Knives_Out",
+      "fix": "Poured into Harlan's \"My House, My Rules, My Coffee\" mug.",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Serve the donut holes when the family arrives at Harlan's house for questioning.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "The donut talk is Blanc in the car and later at the end, describing a case with a hole in the middle, not the family arriving for questioning.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=knives-out",
+      "fix": "Serve the donut holes when Blanc explains the hole at the centre of the case.",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 14,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A good-looking family kitchen that nods to the throne of knives and the sweater, but the dishes could be from any New England menu.",
+    "missing": [
+      "Blanc's \"a case with a hole in the center, a donut\" line",
+      "Harlan's mug \"My House, My Rules, My Coffee!!\" in the last shot",
+      "Marta's toxicology report and the burned medical examiner's office",
+      "Ransom's stage knife finale",
+      "Joni's Flam lifestyle brand",
+      "The family's will reading"
+    ],
+    "ideas": [
+      "Swap \"New England clam chowder cups\" for \"Donut hole in a donut\", Blanc's case in one dish.",
+      "Swap the Blanc note for his real line: \"I suspect foul play. I have eliminated no suspects.\"",
+      "Swap \"Buttered lobster rolls\" for \"Marta's mother's empanadas\", since her family is the heart of the plot.",
+      "Move the mug line to the cover and print it exactly."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "A case with a hole in the center, a donut (Blanc)",
+      "Marta cannot lie without throwing up",
+      "The throne of knives",
+      "Ransom's chunky knit sweater",
+      "My House, My Rules, My Coffee mug"
+    ],
+    "changed": [
+      "Remember list swaps the study for Blanc's donut line"
+    ]
   }
- ],
- "checked_ok": 14,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 4,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "A good-looking family kitchen that nods to the throne of knives and the sweater, but the dishes could be from any New England menu.",
-  "missing": [
-   "Blanc's \"a case with a hole in the center, a donut\" line",
-   "Harlan's mug \"My House, My Rules, My Coffee!!\" in the last shot",
-   "Marta's toxicology report and the burned medical examiner's office",
-   "Ransom's stage knife finale",
-   "Joni's Flam lifestyle brand",
-   "The family's will reading"
-  ],
-  "ideas": [
-   "Swap \"New England clam chowder cups\" for \"Donut hole in a donut\", Blanc's case in one dish.",
-   "Swap the Blanc note for his real line: \"I suspect foul play. I have eliminated no suspects.\"",
-   "Swap \"Buttered lobster rolls\" for \"Marta's mother's empanadas\", since her family is the heart of the plot.",
-   "Move the mug line to the cover and print it exactly."
-  ],
-  "flat": false,
-  "done": false
- }
 }

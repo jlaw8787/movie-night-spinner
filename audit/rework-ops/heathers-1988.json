@@ -1,0 +1,24 @@
+{
+ "id": "Heathers (1988)",
+ "ops": [
+  {
+   "old": "Serve the drinks when J.D. and Veronica stop at the convenience store for slushies.",
+   "new": "Serve the drinks when J.D. and Veronica stop at the Snappy Snack Shack for slushies."
+  },
+  {
+   "old": "JD's chilli lime toasted corn",
+   "new": "Corn nuts, chilli lime toasted"
+  },
+  {
+   "old": "Cherry slushie",
+   "new": "Snappy Snack Shack cherry slushie"
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Iced green tea",
+    "note": "Not Heather Chandler's wake-up cup, thankfully."
+   }
+  }
+ ]
+}

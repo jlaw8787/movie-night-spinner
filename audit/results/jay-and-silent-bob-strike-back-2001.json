@@ -1,56 +1,65 @@
 {
- "id": "Jay and Silent Bob Strike Back (2001)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Mooby's double burgers",
-   "where": "dish-name",
-   "verdict": "ok",
-   "why": "Mooby's is the fast food brand the film uses (the heroes eat an Egga-Mooby Muffin in the transcript), and a double burger is a plain menu item that claims no scene.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=jay-and-silent-bob-strike-back",
-   "fix": "Studio lot double burgers",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Snootchie bootchies. Jay's breakfast order.",
-   "where": "house",
-   "verdict": "wrong",
-   "why": "Jay asks where they can get breakfast and later they eat an Egga-Mooby Muffin, but he never orders pork roll or anything else. The catchphrase is his usual nod.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=jay-and-silent-bob-strike-back",
-   "fix": "Snootchie bootchies. Jay wants breakfast.",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Jay and Silent Bob Strike Back (2001)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Mooby's double burgers",
+      "where": "dish-name",
+      "verdict": "ok",
+      "why": "Mooby's is the fast food brand the film uses (the heroes eat an Egga-Mooby Muffin in the transcript), and a double burger is a plain menu item that claims no scene.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=jay-and-silent-bob-strike-back",
+      "fix": "Studio lot double burgers",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Snootchie bootchies. Jay's breakfast order.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "Jay asks where they can get breakfast and later they eat an Egga-Mooby Muffin, but he never orders pork roll or anything else. The catchphrase is his usual nod.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=jay-and-silent-bob-strike-back",
+      "fix": "Snootchie bootchies. Jay wants breakfast.",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 17,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A good Quick Stop truck with Jay's voice in the note, but the menu is missing the film's loudest parodies.",
+    "missing": [
+      "Mark Hamill as Cock-Knocker in the Bluntman and Chronic fight",
+      "Jay's bongsaber",
+      "Willenholly chasing them through the dam",
+      "Suzanne the orangutan helping them lose Willenholly",
+      "Jay and Silent Bob on the Scream 4 set",
+      "The Star Wars style wedding story that gets the restraining order started"
+    ],
+    "ideas": [
+      "Swap 'Studio commissary chicken club' for a 'Cock-Knocker club' with 'Bluntman and Chronic villain.'",
+      "Swap 'Orangutan banana splits' note for 'Suzanne, helping us lose the Marshall.'",
+      "Swap 'Birch beer' for 'Bongsaber birch beer' with the note 'Jay's special.'",
+      "Swap the 'Now serving No. 01' ticket for 'Restraining order, 100 feet.'"
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Snootchie bootchies",
+      "Bluntman and Chronic",
+      "Mooby's",
+      "Suzanne the orangutan",
+      "Quick Stop and the road to Hollywood"
+    ],
+    "changed": []
   }
- ],
- "checked_ok": 17,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 4,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "A good Quick Stop truck with Jay's voice in the note, but the menu is missing the film's loudest parodies.",
-  "missing": [
-   "Mark Hamill as Cock-Knocker in the Bluntman and Chronic fight",
-   "Jay's bongsaber",
-   "Willenholly chasing them through the dam",
-   "Suzanne the orangutan helping them lose Willenholly",
-   "Jay and Silent Bob on the Scream 4 set",
-   "The Star Wars style wedding story that gets the restraining order started"
-  ],
-  "ideas": [
-   "Swap 'Studio commissary chicken club' for a 'Cock-Knocker club' with 'Bluntman and Chronic villain.'",
-   "Swap 'Orangutan banana splits' note for 'Suzanne, helping us lose the Marshall.'",
-   "Swap 'Birch beer' for 'Bongsaber birch beer' with the note 'Jay's special.'",
-   "Swap the 'Now serving No. 01' ticket for 'Restraining order, 100 feet.'"
-  ],
-  "flat": false,
-  "done": false
- }
 }

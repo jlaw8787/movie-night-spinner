@@ -1,44 +1,55 @@
 {
- "id": "Julie & Julia (2009)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "DAY",
-   "where": "prop",
-   "verdict": "ok",
-   "why": "The calendar is a decoration for the film's 365 day, 524 recipe challenge, which the opening narration states; it names no scene, so the day number claims nothing about the plot.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=julie-and-julia",
-   "fix": "DAY 200 of 365",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Julie & Julia (2009)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "DAY",
+      "where": "prop",
+      "verdict": "ok",
+      "why": "The calendar is a decoration for the film's 365 day, 524 recipe challenge, which the opening narration states; it names no scene, so the day number claims nothing about the plot.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=julie-and-julia",
+      "fix": "DAY 200 of 365",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 20,
+  "vibe": {
+    "world": 5,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 4.2,
+    "verdict": "A lovely two page spread that tells both stories, and the boeuf bourguignon, Cobb salad and lobster nods all land.",
+    "missing": [
+      "'Bon appetit!' (Julia's sign off)",
+      "Julie crying on the kitchen floor (the burnt boeuf)",
+      "Judith Jones cancelling (the missed dinner)",
+      "Potato leek soup as the first recipe (Day 1)",
+      "Julia's mountain of onions (Cordon Bleu class)",
+      "The Smithsonian kitchen (ending)"
+    ],
+    "ideas": [
+      "Swap 'Day 1 of 365' for a mid project day so it fits the dishes.",
+      "Swap 'Prices are the grocery bill. No Cobb salad.' for 'Bon appetit!' in Julia's voice.",
+      "Swap 'Bruschetta' note for 'Potato leek soup was Day 1. This was Day 200.'",
+      "Add a burnt pot picture in place of the plain comment card."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Boeuf bourguignon",
+      "Live lobsters",
+      "Sole meuniere in Rouen",
+      "Butter",
+      "Bon appetit (Julia)"
+    ],
+    "changed": [
+      "Julia's sign-off Bon appetit replaces \"A table!\""
+    ]
   }
- ],
- "checked_ok": 20,
- "vibe": {
-  "world": 5,
-  "moments": 4,
-  "food": 4,
-  "tone": 4,
-  "look": 4,
-  "overall": 4.2,
-  "verdict": "A lovely two page spread that tells both stories, and the boeuf bourguignon, Cobb salad and lobster nods all land.",
-  "missing": [
-   "'Bon appetit!' (Julia's sign off)",
-   "Julie crying on the kitchen floor (the burnt boeuf)",
-   "Judith Jones cancelling (the missed dinner)",
-   "Potato leek soup as the first recipe (Day 1)",
-   "Julia's mountain of onions (Cordon Bleu class)",
-   "The Smithsonian kitchen (ending)"
-  ],
-  "ideas": [
-   "Swap 'Day 1 of 365' for a mid project day so it fits the dishes.",
-   "Swap 'Prices are the grocery bill. No Cobb salad.' for 'Bon appetit!' in Julia's voice.",
-   "Swap 'Bruschetta' note for 'Potato leek soup was Day 1. This was Day 200.'",
-   "Add a burnt pot picture in place of the plain comment card."
-  ],
-  "flat": false,
-  "done": false
- }
 }

@@ -34,3 +34,10 @@ Fixed layout words that don't suit the film. Fix with a per-film setting or a la
 - Glass Onion (2022), tiki: "Pupu Platters", "From the Lagoon Bar", "From the Fire Pit", "Ring the gong" on a Greek island.
 - Frozen (2013), tearoom: footer "Gloves optional. Smiles required." is code.
 - Grandma's Boy (2006): signed note "My grandma drank all my pot." Josh: keep it (8 Nov).
+- Harry Potter and the Prisoner of Azkaban (2004), tavern: prints no winks, prop or house lines.
+- Deathly Hallows Part 1 (2010), campfire: "Bugle Call" heading untouched.
+- Length check after apply: Harlem Nights "Fight night champagne cocktail", Deathly Hallows 1 cake and trout, Jaws chowder note (17 to 34 chars).
+- It (2017), campfire: "Form CM 17", "Card no." camp wording.
+- Fixed footers in shared templates: Mad Max 2 lab footer; Man of Steel diner footer and "Open" line.
+- Length check after apply: Labyrinth chicken note, Little Shop snap-peas note, Julie & Julia "Bon appétit!", Moonstruck cannoli, Greek Wedding lamb, Jurassic World pretzel, Dominion Kayla and almond milk notes.
+- Unverified in transcript: Napoleon Dynamite dance wink, Nacho Libre corn and eagle lines (Wikiquote), Gremlins microwave, Snape "Always".

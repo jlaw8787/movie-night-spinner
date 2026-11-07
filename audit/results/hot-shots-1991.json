@@ -1,43 +1,60 @@
 {
-  "id": "Hot Shots! (1991)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Ramada cooking on Topper's stomach. We used a cast iron pan.",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "In the bacon and eggs scene the food cooks on Ramada's belly, as the menu's own cue says. Topper's stomach is not used.",
-      "source": "https://moviemistakes.com/film631/corrections",
-      "fix": "Eggs and bacon sizzling on Ramada's stomach. We used a cast iron pan.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 3,
-    "moments": 3,
-    "food": 3,
-    "tone": 4,
-    "look": 3,
-    "overall": 3.2,
-    "verdict": "The airline format fits a parody, but it reads as Airplane more than Top Gun and misses the best gags.",
-    "missing": [
-      "Admiral Benson thanking Block for a stroganoff dinner that never happened (the base)",
-      "Dead Meat saluting in the credits (the end)",
-      "Topper melting an ice cube on Ramada's belly button (the bedroom)",
-      "Wash Out and his wall eye (the mission)",
-      "Kent Gregory blessing the romance (the finish)",
-      "Topper's father Buzz and the plane (flashback)"
-    ],
-    "ideas": [
-      "Swap 'Airbase rib eye, corn and slaw' note for 'Admiral Benson thanks everyone for dinner nobody had'.",
-      "Replace 'Airbase soft pretzels with beer cheese' with 'Beef stroganoff that never happened'.",
-      "Use a navy fighter jet styling for the page instead of the airline seat card.",
-      "Add 'Salute for Dead Meat' as the dessert note on the custard tarts."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Hot Shots! (1991)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Ramada cooking on Topper's stomach. We used a cast iron pan.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "In the bacon and eggs scene the food cooks on Ramada's belly, as the menu's own cue says. Topper's stomach is not used.",
+   "source": "https://moviemistakes.com/film631/corrections",
+   "fix": "Eggs and bacon sizzling on Ramada's stomach. We used a cast iron pan.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "The airline format fits a parody, but it reads as Airplane more than Top Gun and misses the best gags.",
+  "missing": [
+   "Admiral Benson thanking Block for a stroganoff dinner that never happened (the base)",
+   "Dead Meat saluting in the credits (the end)",
+   "Topper melting an ice cube on Ramada's belly button (the bedroom)",
+   "Wash Out and his wall eye (the mission)",
+   "Kent Gregory blessing the romance (the finish)",
+   "Topper's father Buzz and the plane (flashback)"
+  ],
+  "ideas": [
+   "Swap 'Airbase rib eye, corn and slaw' note for 'Admiral Benson thanks everyone for dinner nobody had'.",
+   "Replace 'Airbase soft pretzels with beer cheese' with 'Beef stroganoff that never happened'.",
+   "Use a navy fighter jet styling for the page instead of the airline seat card.",
+   "Add 'Salute for Dead Meat' as the dessert note on the custard tarts."
+  ],
+  "flat": true,
+  "done": false,
+  "rework": "2026-11-08",
+  "iconic": [
+   "Strogonoff dinner that never happened",
+   "Chafing dish",
+   "Enemy toast not coast",
+   "Benson's pants short at the knees",
+   "Food on Ramada's belly",
+   "Dead Meat and Wash Out"
+  ],
+  "changed": [
+   "Canape note: minus Ramada's belly",
+   "Pretzel note: enemy toast",
+   "Rib eye note: chafing dish",
+   "Fajita note fixed to Ramada's belly",
+   "Signed note: Strogonoff line",
+   "Winks: chafing dish, Benson's pants"
+  ]
+ }
 }

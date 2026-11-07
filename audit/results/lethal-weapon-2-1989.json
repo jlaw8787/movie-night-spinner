@@ -1,77 +1,88 @@
 {
- "id": "Lethal Weapon 2 (1989)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Leo Getz's drive thru fries",
-   "where": "dish-name",
-   "verdict": "ok",
-   "why": "The transcript has Leo's drive-through rant, so a drive-thru fries name nods to a real scene.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon-2",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Leo wants his order right this time.",
-   "where": "dish-note",
-   "verdict": "ok",
-   "why": "In the same scene Leo rants about getting short-changed at drive-throughs and insists on the counter, so wanting his order right fits.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon-2",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "TV ad cupcakes",
-   "where": "dish-name",
-   "verdict": "ok",
-   "why": "Rianne's TV commercial is a real scene (Murtaugh's family watches it at eight o'clock), so a TV ad dish name is a fair nod.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon-2",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Arjen Rudd's drink, before his immunity is revoked.",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "Rudd's immunity is revoked at the end, but no source shows brandy and Coke as his drink.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon-2",
-   "fix": "Rudd's last round. Immunity revoked.",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Lethal Weapon 2 (1989)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Leo Getz's drive thru fries",
+      "where": "dish-name",
+      "verdict": "ok",
+      "why": "The transcript has Leo's drive-through rant, so a drive-thru fries name nods to a real scene.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon-2",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Leo wants his order right this time.",
+      "where": "dish-note",
+      "verdict": "ok",
+      "why": "In the same scene Leo rants about getting short-changed at drive-throughs and insists on the counter, so wanting his order right fits.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon-2",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "TV ad cupcakes",
+      "where": "dish-name",
+      "verdict": "ok",
+      "why": "Rianne's TV commercial is a real scene (Murtaugh's family watches it at eight o'clock), so a TV ad dish name is a fair nod.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon-2",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Arjen Rudd's drink, before his immunity is revoked.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Rudd's immunity is revoked at the end, but no source shows brandy and Coke as his drink.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon-2",
+      "fix": "Rudd's last round. Immunity revoked.",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 14,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "The boat on the lawn and the South African dishes are a good fit, but Leo's food scenes are guesses and the big gags are missing.",
+    "missing": [
+      "Murtaugh sitting on the toilet bomb (his own bathroom)",
+      "'It's just been revoked' (Murtaugh and Rudd, finale)",
+      "Riggs's house dropping off its stilts",
+      "Murtaugh's nail gun fight",
+      "Leo's 'Okay, okay, okay' (used) and 'Whatever you want, Leo gets'",
+      "Krugerrands in the cargo"
+    ],
+    "ideas": [
+      "Swap Leo's invented note for his real line: 'I'm Leo Getz, and whatever you want, Leo gets.'",
+      "Swap the 'Brandy and Coke' note for 'Diplomatic immunity revoked. Last round.'",
+      "Rename 'Consulate biltong' to 'Krugerrand biltong and macadamia bites'.",
+      "Swap 'TV ad cupcakes' for 'Don't get up cupcakes', a toilet bomb joke."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Okay, okay, okay (Leo)",
+      "Diplomatic immunity, it's just been revoked",
+      "The toilet bomb",
+      "Leo Getz talking non stop",
+      "Boat on the lawn"
+    ],
+    "changed": [
+      "Toilet bomb wink now first, replacing the unprinted bathroom wink; Leo moved to slot 2"
+    ]
   }
- ],
- "checked_ok": 14,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "The boat on the lawn and the South African dishes are a good fit, but Leo's food scenes are guesses and the big gags are missing.",
-  "missing": [
-   "Murtaugh sitting on the toilet bomb (his own bathroom)",
-   "'It's just been revoked' (Murtaugh and Rudd, finale)",
-   "Riggs's house dropping off its stilts",
-   "Murtaugh's nail gun fight",
-   "Leo's 'Okay, okay, okay' (used) and 'Whatever you want, Leo gets'",
-   "Krugerrands in the cargo"
-  ],
-  "ideas": [
-   "Swap Leo's invented note for his real line: 'I'm Leo Getz, and whatever you want, Leo gets.'",
-   "Swap the 'Brandy and Coke' note for 'Diplomatic immunity revoked. Last round.'",
-   "Rename 'Consulate biltong' to 'Krugerrand biltong and macadamia bites'.",
-   "Swap 'TV ad cupcakes' for 'Don't get up cupcakes', a toilet bomb joke."
-  ],
-  "flat": false,
-  "done": false
- }
 }

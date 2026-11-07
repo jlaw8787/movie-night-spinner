@@ -1,67 +1,79 @@
 {
- "id": "Léon: The Professional (1994)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Léon's French roots, simple and exact",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "Wikipedia has Léon as an Italian-American hitman who grew up in Italy, so French roots are wrong.",
-   "source": "https://en.wikipedia.org/wiki/L%C3%A9on:_The_Professional",
-   "fix": "a sandwich as plain as Léon's habits",
-   "printed": false,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "the French touch, for a man of very simple habits",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "Léon is an Italian immigrant in New York, and no source ties him to French food. The jambon-beurre note should only lean on his plain habits.",
-   "source": "https://en.wikipedia.org/wiki/L%C3%A9on:_The_Professional",
-   "fix": "a plain sandwich for a man of very simple habits",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Léon drinks milk, two litres at a time",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "Léon drinks milk throughout, but the line quoted for him is two quarts a day, not two litres at a time.",
-   "source": "https://the-take.com/read/in-leon-the-professional-why-do-they-drink-so-much-milk",
-   "fix": "Léon drinks milk, two quarts a day",
-   "printed": false,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Léon: The Professional (1994)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Léon's French roots, simple and exact",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Wikipedia has Léon as an Italian-American hitman who grew up in Italy, so French roots are wrong.",
+      "source": "https://en.wikipedia.org/wiki/L%C3%A9on:_The_Professional",
+      "fix": "a sandwich as plain as Léon's habits",
+      "printed": false,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "the French touch, for a man of very simple habits",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Léon is an Italian immigrant in New York, and no source ties him to French food. The jambon-beurre note should only lean on his plain habits.",
+      "source": "https://en.wikipedia.org/wiki/L%C3%A9on:_The_Professional",
+      "fix": "a plain sandwich for a man of very simple habits",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Léon drinks milk, two litres at a time",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Léon drinks milk throughout, but the line quoted for him is two quarts a day, not two litres at a time.",
+      "source": "https://the-take.com/read/in-leon-the-professional-why-do-they-drink-so-much-milk",
+      "fix": "Léon drinks milk, two quarts a day",
+      "printed": false,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 17,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A moody Little Italy restaurant with the milk and the plant, but it skips Mathilda and Stansfield, who carry the film.",
+    "missing": [
+      "'Is life always this hard, or is it just when you're a kid?' (Mathilda)",
+      "'Give it roots' (the plant in the school field)",
+      "Stansfield and Beethoven (the apartment raid)",
+      "Mathilda's impressions (Singin' in the Rain, Madonna)",
+      "Léon learning to read (the note scene)",
+      "The grenade pin (the ending)"
+    ],
+    "ideas": [
+      "Swap 'Cannoli' note for 'Mathilda's pick, no questions'.",
+      "Swap 'Champagne' note 'Over eighteen only' for 'Mathilda would like one. Léon says no.'",
+      "Add 'Give it roots' as the line under The Window Pot in place of 'Likes the sun'.",
+      "Swap the 'Thursday nights, a little Beethoven' footer for 'Sunday nights, a little Beethoven', a nod to Stansfield's speech."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Cold milk",
+      "Give it roots (the plant)",
+      "No women, no kids",
+      "Stansfield and Beethoven",
+      "Mathilda and Léon"
+    ],
+    "changed": [
+      "Window Pot note now 'Give it roots.'",
+      "Champagne note now Léon's no kids rule"
+    ]
   }
- ],
- "checked_ok": 17,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 4,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "A moody Little Italy restaurant with the milk and the plant, but it skips Mathilda and Stansfield, who carry the film.",
-  "missing": [
-   "'Is life always this hard, or is it just when you're a kid?' (Mathilda)",
-   "'Give it roots' (the plant in the school field)",
-   "Stansfield and Beethoven (the apartment raid)",
-   "Mathilda's impressions (Singin' in the Rain, Madonna)",
-   "Léon learning to read (the note scene)",
-   "The grenade pin (the ending)"
-  ],
-  "ideas": [
-   "Swap 'Cannoli' note for 'Mathilda's pick, no questions'.",
-   "Swap 'Champagne' note 'Over eighteen only' for 'Mathilda would like one. Léon says no.'",
-   "Add 'Give it roots' as the line under The Window Pot in place of 'Likes the sun'.",
-   "Swap the 'Thursday nights, a little Beethoven' footer for 'Sunday nights, a little Beethoven', a nod to Stansfield's speech."
-  ],
-  "flat": false,
-  "done": false
- }
 }

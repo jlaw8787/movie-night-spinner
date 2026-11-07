@@ -1,0 +1,39 @@
+{
+ "id": "Jackie Brown (1997)",
+ "ops": [
+  {
+   "old": "the half-million-dollar switch at the Del Amo mall",
+   "new": "A Del Amo bag of cash, and a bag of beach towels"
+  },
+  {
+   "old": "Ordell's South Bay",
+   "new": "Ordell, the Tec-9 and the AK-47"
+  },
+  {
+   "old": "Moist banana loaf studded with walnuts",
+   "new": "Banana loaf with walnuts. Put on the Delfonics."
+  },
+  {
+   "old": "Vodka, blood orange and orange juice with ginger syrup over ice",
+   "new": "Vodka and blood orange over ice. Let me have a screwdriver, homes."
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Mexican beer with lime",
+    "note": "Louis to Melanie: got a beer? In the fridge.",
+    "alc": true
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Jackie's flight attendant uniform",
+    "AK-47, accept no substitutes",
+    "Louis forgot where he parked",
+    "Max Cherry the bail bondsman",
+    "Louis and Melanie in the van"
+   ]
+  }
+ ]
+}

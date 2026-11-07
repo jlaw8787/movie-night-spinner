@@ -1,65 +1,76 @@
 {
- "id": "Lethal Weapon 3 (1992)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Eight days left. Make every meal count.",
-   "where": "tagline",
-   "verdict": "ok",
-   "why": "Murtaugh says he has eight days till retirement in the opening bomb scene, then the count drops each day.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon-3",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Eight days to go whiskey sour",
-   "where": "dish-name",
-   "verdict": "ok",
-   "why": "Same opening scene: Murtaugh says eight days till retirement.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon-3",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Riggs and Lorna compare scars, you compare sauce",
-   "where": "dish-note",
-   "verdict": "ok",
-   "why": "The soundtrack lists a 'Scars/Love Scene' cue and Riggs and Cole sleep together that night, so the scar swapping is the film's scene.",
-   "source": "https://en.wikipedia.org/wiki/Lethal_Weapon_3",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Lethal Weapon 3 (1992)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Eight days left. Make every meal count.",
+      "where": "tagline",
+      "verdict": "ok",
+      "why": "Murtaugh says he has eight days till retirement in the opening bomb scene, then the count drops each day.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon-3",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Eight days to go whiskey sour",
+      "where": "dish-name",
+      "verdict": "ok",
+      "why": "Same opening scene: Murtaugh says eight days till retirement.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon-3",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Riggs and Lorna compare scars, you compare sauce",
+      "where": "dish-note",
+      "verdict": "ok",
+      "why": "The soundtrack lists a 'Scars/Love Scene' cue and Riggs and Cole sleep together that night, so the scar swapping is the film's scene.",
+      "source": "https://en.wikipedia.org/wiki/Lethal_Weapon_3",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A late night diner that suits the cops, with a tough Lorna note, but the bomb, the cat and the food truck are missing.",
+    "missing": [
+      "The office bomb, the red wire, and \"Grab the cat!\"",
+      "Riggs and Murtaugh stopping at a food truck when the drug deal goes wrong",
+      "Riggs's \"I'M PISSED OFF. YOU NEED A REASON?\" locker room scene",
+      "Lorna: \"Close is a lingerie shop without a front window\"",
+      "Murtaugh drunk on his boat after Darryl",
+      "The bulldozer blade finale"
+    ],
+    "ideas": [
+      "Swap \"Building implosion popcorn\" for \"Grab the cat popcorn\", the bomb scene.",
+      "Swap \"Pretzel bites with cheddar ale sauce\" for \"Food truck tacos, wait for backup\".",
+      "Swap the tagline for \"A week left. Make every meal count.\"",
+      "Swap \"Old fashioned\" note for Lorna's \"Close\" line."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "I'm too old for this",
+      "The red wire and 'Grab the cat!'",
+      "Riggs and Lorna comparing scars",
+      "The retirement countdown",
+      "Leo Getz"
+    ],
+    "changed": [
+      "Winks: red wire and grab the cat replaces the opening explosion, too old for this replaces Leo wink"
+    ]
   }
- ],
- "checked_ok": 13,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 4,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "A late night diner that suits the cops, with a tough Lorna note, but the bomb, the cat and the food truck are missing.",
-  "missing": [
-   "The office bomb, the red wire, and \"Grab the cat!\"",
-   "Riggs and Murtaugh stopping at a food truck when the drug deal goes wrong",
-   "Riggs's \"I'M PISSED OFF. YOU NEED A REASON?\" locker room scene",
-   "Lorna: \"Close is a lingerie shop without a front window\"",
-   "Murtaugh drunk on his boat after Darryl",
-   "The bulldozer blade finale"
-  ],
-  "ideas": [
-   "Swap \"Building implosion popcorn\" for \"Grab the cat popcorn\", the bomb scene.",
-   "Swap \"Pretzel bites with cheddar ale sauce\" for \"Food truck tacos, wait for backup\".",
-   "Swap the tagline for \"A week left. Make every meal count.\"",
-   "Swap \"Old fashioned\" note for Lorna's \"Close\" line."
-  ],
-  "flat": false,
-  "done": false
- }
 }

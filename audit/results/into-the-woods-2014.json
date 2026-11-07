@@ -1,31 +1,42 @@
 {
-  "id": "Into the Woods (2014)",
-  "checked": "2026-11-07",
-  "facts": [],
-  "checked_ok": 20,
-  "vibe": {
-    "world": 4,
-    "moments": 4,
-    "food": 4,
-    "tone": 4,
-    "look": 4,
-    "overall": 4.0,
-    "verdict": "A neat fairytale bakery with the loyalty card stamps, Milky White and the forest cast all in the right place.",
-    "missing": [
-      "The Witch's potion list: cow as white as milk, cape as red as blood, hair as yellow as corn, slipper as pure as gold",
-      "The Giant's widow and the second beanstalk",
-      "The Baker's father's coat with the magic beans in the pocket",
-      "Cinderella's three nights at the King's festival",
-      "The Witch melting into the tar pit",
-      "The Baker retelling the story to his son at the end"
-    ],
-    "ideas": [
-      "Swap 'Fresh pressed pear juice' for 'The Witch's potion' with the four ingredients as the note.",
-      "Swap 'Roast pumpkin and sage pasties' note for 'Agony, sung over the stove.'",
-      "Swap the loyalty card tagline 'Nobody remembers the tenth' for 'Four items for one potion.'",
-      "Swap 'Little Red's basket cheese and herb buns' note for 'Fill the basket, mind the Wolf.'"
-    ],
-    "flat": false,
-    "done": false
-  }
+ "id": "Into the Woods (2014)",
+ "checked": "2026-11-07",
+ "facts": [],
+ "checked_ok": 20,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "A neat fairytale bakery with the loyalty card stamps, Milky White and the forest cast all in the right place.",
+  "missing": [
+   "The Witch's potion list: cow as white as milk, cape as red as blood, hair as yellow as corn, slipper as pure as gold",
+   "The Giant's widow and the second beanstalk",
+   "The Baker's father's coat with the magic beans in the pocket",
+   "Cinderella's three nights at the King's festival",
+   "The Witch melting into the tar pit",
+   "The Baker retelling the story to his son at the end"
+  ],
+  "ideas": [
+   "Swap 'Fresh pressed pear juice' for 'The Witch's potion' with the four ingredients as the note.",
+   "Swap 'Roast pumpkin and sage pasties' note for 'Agony, sung over the stove.'",
+   "Swap the loyalty card tagline 'Nobody remembers the tenth' for 'Four items for one potion.'",
+   "Swap 'Little Red's basket cheese and herb buns' note for 'Fill the basket, mind the Wolf.'"
+  ],
+  "flat": false,
+  "done": false,
+  "rework": "2026-11-08",
+  "iconic": [
+   "The potion list: cow, cape, hair, slipper",
+   "Jack's beans and Milky White",
+   "Little Red's basket",
+   "Agony, the two princes",
+   "Cinderella's slipper"
+  ],
+  "changed": [
+   "Milky White shake note nods to the potion's 'cow as white as milk'"
+  ]
+ }
 }

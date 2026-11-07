@@ -1,31 +1,43 @@
 {
- "id": "Kung Fu Panda (2008)",
- "checked": "2026-11-07",
- "facts": [],
- "checked_ok": 16,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 4,
-  "look": 4,
-  "overall": 4.0,
-  "verdict": "A good looking noodle shop board with the right Chinese lines and the training dumplings, though the best jokes are left on the table.",
-  "missing": [
-   "'There is no secret ingredient' (Mr. Ping's reveal)",
-   "Monkey's almond cookies on the top shelf (Po's training)",
-   "Po cooking noodle soup for the Five (Tigress eats tofu)",
-   "The Wuxi Finger Hold (Po beats Tai Lung)",
-   "The blank Dragon Scroll (the big twist)",
-   "The Sacred Peach Tree of Heavenly Wisdom (Oogway and Po)"
-  ],
-  "ideas": [
-   "Swap the 'Secret ingredient soup' note 'Mr Ping's famous noodle soup' for 'The secret ingredient is nothing'.",
-   "Swap the 'Almond cookies' note for 'Monkey's, on the top shelf. Po found them.'",
-   "Swap 'Mr Ping's red bean steamed buns' for 'Tigress's tofu', served plain.",
-   "Add a 'Wuxi Finger Hold' sticker on the soup scroll in place of the plain number."
-  ],
-  "flat": false,
-  "done": false
- }
+  "id": "Kung Fu Panda (2008)",
+  "checked": "2026-11-07",
+  "facts": [],
+  "checked_ok": 16,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 4,
+    "verdict": "A good looking noodle shop board with the right Chinese lines and the training dumplings, though the best jokes are left on the table.",
+    "missing": [
+      "'There is no secret ingredient' (Mr. Ping's reveal)",
+      "Monkey's almond cookies on the top shelf (Po's training)",
+      "Po cooking noodle soup for the Five (Tigress eats tofu)",
+      "The Wuxi Finger Hold (Po beats Tai Lung)",
+      "The blank Dragon Scroll (the big twist)",
+      "The Sacred Peach Tree of Heavenly Wisdom (Oogway and Po)"
+    ],
+    "ideas": [
+      "Swap the 'Secret ingredient soup' note 'Mr Ping's famous noodle soup' for 'The secret ingredient is nothing'.",
+      "Swap the 'Almond cookies' note for 'Monkey's, on the top shelf. Po found them.'",
+      "Swap 'Mr Ping's red bean steamed buns' for 'Tigress's tofu', served plain.",
+      "Add a 'Wuxi Finger Hold' sticker on the soup scroll in place of the plain number."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "There is no secret ingredient",
+      "Shifu and Po's dumpling duel",
+      "Oogway's peach tree",
+      "Skadoosh and the Wuxi Finger Hold",
+      "The Dragon Scroll"
+    ],
+    "changed": [
+      "Secret ingredient soup note now says there is no secret ingredient",
+      "Peach tea note ends on Skadoosh"
+    ]
+  }
 }

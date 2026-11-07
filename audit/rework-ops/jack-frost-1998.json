@@ -1,0 +1,41 @@
+{
+ "id": "Jack Frost (1998)",
+ "ops": [
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "tag",
+    "title": "Snowman Tag",
+    "lines": [
+     "Jack Frost, on the lawn",
+     "Cork nose included"
+    ]
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The magic harmonica",
+    "A snowman on the front lawn",
+    "The J-shot, and hockey with Charlie",
+    "Three balls, two sticks, one cork nose",
+    "I'm a snowdrift with arms"
+   ]
+  },
+  {
+   "old": "Vanilla cupcakes with buttercream rolled in coconut, snowman faces",
+   "new": "Vanilla cupcakes rolled in coconut. Snowman? No, much more."
+  },
+  {
+   "old": "Maple, butter and thyme, roasted while the snow piles up",
+   "new": "Maple, butter and thyme. Jack's nose is cork, not a carrot."
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Cherry cola float",
+    "note": "Hot enough to melt a snowman, says the radio."
+   }
+  }
+ ]
+}

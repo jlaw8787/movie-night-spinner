@@ -1,55 +1,66 @@
 {
- "id": "Kung Fu Panda 2 (2011)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Serve the buns when Po tries to fit them all in his mouth.",
-   "where": "cue",
-   "verdict": "ok",
-   "why": "The Kung Fu Panda fandom page on Mr Ping notes Po seen with a mouth full of bean buns in the second film, so the buns gag is real even though it is not in the dialogue.",
-   "source": "https://kungfupanda.fandom.com/wiki/Panda_Dad",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
-  },
-  {
-   "text": "Mr Ping swears there's no secret ingredient.",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "In this film Mr Ping tells Po the story of the Secret Ingredient Soup. The no secret ingredient gag is from the first film.",
-   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=kung-fu-panda-2",
-   "fix": "Mr Ping's Secret Ingredient Soup, no peeking.",
-   "printed": true,
-   "done": true,
-   "settled": "2026-11-08",
-   "applied": "2026-11-08"
+  "id": "Kung Fu Panda 2 (2011)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the buns when Po tries to fit them all in his mouth.",
+      "where": "cue",
+      "verdict": "ok",
+      "why": "The Kung Fu Panda fandom page on Mr Ping notes Po seen with a mouth full of bean buns in the second film, so the buns gag is real even though it is not in the dialogue.",
+      "source": "https://kungfupanda.fandom.com/wiki/Panda_Dad",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Mr Ping swears there's no secret ingredient.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "In this film Mr Ping tells Po the story of the Secret Ingredient Soup. The no secret ingredient gag is from the first film.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=kung-fu-panda-2",
+      "fix": "Mr Ping's Secret Ingredient Soup, no peeking.",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "Mr. Ping's shop is the right place and the radish crate and Shen's fireworks are good picks, but a couple of jokes lean on the first film.",
+    "missing": [
+      "Mr. Ping's poster: \"My son saved China: buy one dumpling, get one free\"",
+      "Po's dream where a radish beats him up",
+      "The Soothsayer's acupuncture medicine",
+      "Mantis: \"Fear the bug!\"",
+      "Master Thundering Rhino and the first cannon shot",
+      "Po finding inner peace on the river"
+    ],
+    "ideas": [
+      "Swap \"Silken tofu with chilli\" for \"Buy one dumpling, get one free\", from Mr. Ping's poster.",
+      "Swap the cue for the radish crate reveal.",
+      "Rename \"Mr Ping's noodles\" note to \"Dragon Warrior size\".",
+      "Add \"Soothsayer's hot medicine\" as a chilli tea drink."
+    ],
+    "flat": false,
+    "done": false,
+    "rework": "2026-11-08",
+    "iconic": [
+      "Inner peace (Shifu and Po)",
+      "Lord Shen's fireworks and cannons",
+      "The Soothsayer",
+      "Mr Ping and the noodle shop",
+      "Fear the bug"
+    ],
+    "changed": [
+      "Inner peace wink moved to printed slot 4, Master Thundering Rhino to slot 5"
+    ]
   }
- ],
- "checked_ok": 13,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "Mr. Ping's shop is the right place and the radish crate and Shen's fireworks are good picks, but a couple of jokes lean on the first film.",
-  "missing": [
-   "Mr. Ping's poster: \"My son saved China: buy one dumpling, get one free\"",
-   "Po's dream where a radish beats him up",
-   "The Soothsayer's acupuncture medicine",
-   "Mantis: \"Fear the bug!\"",
-   "Master Thundering Rhino and the first cannon shot",
-   "Po finding inner peace on the river"
-  ],
-  "ideas": [
-   "Swap \"Silken tofu with chilli\" for \"Buy one dumpling, get one free\", from Mr. Ping's poster.",
-   "Swap the cue for the radish crate reveal.",
-   "Rename \"Mr Ping's noodles\" note to \"Dragon Warrior size\".",
-   "Add \"Soothsayer's hot medicine\" as a chilli tea drink."
-  ],
-  "flat": false,
-  "done": false
- }
 }
