@@ -10,7 +10,8 @@
    "source": "https://en.wikipedia.org/wiki/Three_Amigos",
    "fix": "Santa Poco Cantina",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07"
   },
   {
    "text": "Welcome, amigos, to Santo Poco",
@@ -20,7 +21,8 @@
    "source": "https://en.wikipedia.org/wiki/Three_Amigos",
    "fix": "Welcome, amigos, to Santa Poco",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07"
   },
   {
    "text": "Santo Poco street corn",
@@ -30,7 +32,8 @@
    "source": "https://en.wikipedia.org/wiki/Three_Amigos",
    "fix": "Santa Poco street corn",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07"
   },
   {
    "text": "We are three amigos and we came to eat. Please keep an eye out for the invisible swordsman.",
@@ -54,9 +57,11 @@
    "verdict": "wrong",
    "why": "The Amigos sing 'My Little Buttercup' at the cantina. The German's associates shoot it up after patrons mock their clothes. The Amigos do not start a brawl.",
    "source": "https://en.wikipedia.org/wiki/Three_Amigos",
-   "fix": "the cantina where they sing My Little Buttercup",
+   "fix": "My Little Buttercup at the cantina",
    "printed": false,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07",
+   "applied_note": "Shorter, to stay within the length of the old line."
   }
  ],
  "checked_ok": 10,

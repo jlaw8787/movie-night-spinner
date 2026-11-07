@@ -26,7 +26,8 @@
    "source": "https://en.wikipedia.org/wiki/Romancing_the_Stone",
    "fix": "From Eduardo, by mail",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07"
   },
   {
    "text": "Jack chops the heels off Joan's boots.",
@@ -34,9 +35,11 @@
    "verdict": "wrong",
    "why": "Joan is in shoes, not boots. On Wikiquote she says 'These were Italian' after Jack chops the heels off her shoes. Same line is in the venue winks.",
    "source": "https://en.wikiquote.org/wiki/Romancing_the_Stone",
-   "fix": "Jack chops the heels off Joan's shoes.",
+   "fix": "Jack chops the heels off Joan's shoes",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07",
+   "applied_note": "Stored without the full stop, as the other winks are."
   },
   {
    "text": "Joan's sister Elaine in New York",
@@ -46,7 +49,8 @@
    "source": "https://en.wikipedia.org/wiki/Romancing_the_Stone",
    "fix": "Joan's sister Elaine, held in Cartagena",
    "printed": false,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07"
   }
  ],
  "checked_ok": 10,

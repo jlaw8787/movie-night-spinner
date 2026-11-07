@@ -41,7 +41,7 @@
    "Apple juice and black tea warmed with honey, cinnamon, cloves and nutmeg, whisked with butter.",
    "When the bell rings: Serve the feast at Bilbo's birthday party.",
    "A WORD FROM PIPPIN",
-   "\"Aragorn, there's a full table here and I've counted the plates twice. Mine's the one with extra mushrooms.\"",
+   "\"What about second breakfast?\"",
    "Pippin",
    "Rooms above, stabling round the back. Coin of the realm only. Bill No. 111, 2001. Images: TMDB"
   ]
@@ -95,8 +95,9 @@
   "venue": "The Prancing Pony",
   "sign": "Bree: Beds and Hot Suppers",
   "note": {
-   "text": "Aragorn, there's a full table here and I've counted the plates twice. Mine's the one with extra mushrooms.",
-   "by": "Pippin"
+   "text": "What about second breakfast?",
+   "by": "Pippin",
+   "kind": "quote"
   },
   "winks": [
    "Bilbo's eleventy-first birthday party",
@@ -114,7 +115,7 @@
   },
   "d": {
    "n": "Pint of best bitter",
-   "note": "Merry's discovery: it comes in pints.",
+   "note": "Pippin's discovery: it comes in pints.",
    "alc": true
   }
  },

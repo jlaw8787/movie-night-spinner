@@ -23,13 +23,13 @@
    "LUNCH TICKET",
    "No. 96",
    "Serve dessert when Bruce Bogtrotter faces the cake.",
-   "\"Matilda, I have tea and bread and butter waiting at the cottage. Come and sit down, and bring whatever book you are reading.\"",
+   "\"Shall we go inside and have tea and cookies?\"",
    "Miss Honey",
    "SLIP",
    "Library Card",
    "Matilda Wormwood",
    "Books checked out: all of them",
-   "CRUNCHEM HALL PRIMARY SCHOOL",
+   "CRUNCHEM HALL ELEMENTARY SCHOOL",
    "Crunchem Hall Canteen",
    "MAIN TRAY",
    "Matilda's pancakes",
@@ -102,10 +102,11 @@
  ],
  "venue": {
   "venue": "Crunchem Hall Canteen",
-  "sign": "Crunchem Hall Primary School",
+  "sign": "Crunchem Hall Elementary School",
   "note": {
-   "text": "Matilda, I have tea and bread and butter waiting at the cottage. Come and sit down, and bring whatever book you are reading.",
-   "by": "Miss Honey"
+   "text": "Shall we go inside and have tea and cookies?",
+   "by": "Miss Honey",
+   "kind": "quote"
   },
   "winks": [
    "Bruce Bogtrotter and the giant chocolate cake",

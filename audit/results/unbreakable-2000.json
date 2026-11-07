@@ -26,7 +26,9 @@
    "source": "https://en.wikipedia.org/wiki/Unbreakable_(film)",
    "fix": "New York to Philadelphia. Ten stamps. Nobody remembers the tenth.",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07",
+   "applied_note": "Only the ticket line in data/film-flavour.json changed. The second sentence is the cafe layout's own card line."
   },
   {
    "text": "Serve the mains when David sits down to breakfast with his son Joseph.",

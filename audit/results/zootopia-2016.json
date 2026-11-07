@@ -20,13 +20,15 @@
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "The blueberries Judy brings Nick from the family farm.",
    "where": "dish-note",
    "verdict": "wrong",
    "why": "Judy does not bring Nick blueberries. The blueberries from her family's farm are what she swaps into Bellwether's weapon at the end.",
    "source": "https://en.wikiquote.org/wiki/Zootopia",
-   "fix": "The Hopps family farm blueberries that save the day."
+   "fix": "the Hopps family farm blueberries that save the day",
+   "applied": "2026-11-07",
+   "applied_note": "Kept lower case to match the other dish notes. Poster brief scene changed too."
   }
  ],
  "checked_ok": 13,

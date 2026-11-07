@@ -4,13 +4,14 @@
   "facts": [
     {
       "printed": true,
-      "done": false,
+      "done": true,
       "text": "Opey the walrus at the aquarium",
       "where": "wink",
       "verdict": "wrong",
       "why": "The walrus is Jocko, and Henry works at Sea Life Park Hawaii, not an aquarium. The menu's own dish note already says Jocko.",
       "source": "https://en.wikipedia.org/wiki/50_First_Dates",
-      "fix": "Jocko the walrus at Sea Life Park"
+      "fix": "Jocko the walrus at Sea Life Park",
+      "applied": "2026-11-07"
     },
     {
       "printed": false,

@@ -23,7 +23,7 @@
    "MESS CHIT",
    "No. 16",
    "Serve the snacks when the team walks through the crowded streets of Jedha.",
-   "\"I cannot see the table, but I can smell the bread. Pass it to me before Baze eats it all.\"",
+   "\"I'm one with the Force, and the Force is with me.\"",
    "Chirrut Imwe",
    "BADGE",
    "Rebel Alliance",
@@ -104,8 +104,9 @@
   "venue": "Yavin 4 Rebel Mess",
   "sign": "Plans Served Hot",
   "note": {
-   "text": "I cannot see the table, but I can smell the bread. Pass it to me before Baze eats it all.",
-   "by": "Chirrut Imwe"
+   "text": "I'm one with the Force, and the Force is with me.",
+   "by": "Chirrut Imwe",
+   "kind": "quote"
   },
   "winks": [
    "Jyn Erso and the Death Star plans",
@@ -122,7 +123,7 @@
   },
   "d": {
    "n": "Ginger, lemon and honey tonic",
-   "note": "I'm one with the Force. The Force is with me."
+   "note": "I'm one with the Force, and the Force is with me."
   }
  },
  "sources": {

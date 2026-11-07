@@ -20,13 +20,14 @@
   },
   {
    "printed": false,
-   "done": false,
+   "done": true,
    "text": "Riot, the second symbiote",
    "where": "wink",
    "verdict": "wrong",
    "why": "Wikipedia's plot calls Riot the fourth symbiote, the one that escapes in Malaysia.",
    "source": "https://en.wikipedia.org/wiki/Venom_(2018_film)",
-   "fix": "Riot, the fourth symbiote"
+   "fix": "Riot, the fourth symbiote",
+   "applied": "2026-11-07"
   }
  ],
  "checked_ok": 13,

@@ -94,7 +94,7 @@ function flav(ctx,fb){
   const winks=(v.winks||[]).filter(Boolean);
   return{venue:v.venue||fb.venue,sign:v.sign||fb.sign,note:note?{text:note.text,by:note.by||fb.by}:{text:fb.noteText(ctx),by:fb.by},
     winks:winks.length?winks:fb.winks,prop:v.prop&&v.prop.title?v.prop:fb.prop,
-    number:String(v.number||"").replace(/[^0-9a-z]/gi,"").slice(0,6)||((y=>y.slice(-2)==="00"?y:y.slice(-2))(String(ctx.f&&ctx.f.year||"")))/* a 2000 film reads "2000", never "REWARD $00" (review 12) */||"7",has:!!ctx.flavour};
+    number:String(v.number||"").replace(/[^0-9a-z]/gi,"").slice(0,6)||((y=>y.slice(-2)==="00"?y:y.slice(-2))(String(ctx.f&&ctx.f.year||"")))/* a 2000 film reads "2000", never "REWARD $00" (review 12) */||"7",cur:/^[£€¥$]$/.test(v.currency||"")?v.currency:"$"/* per film: Lock, Stock's debt is in pounds */,has:!!ctx.flavour};
 }
 /* fonts: one link per format */
 let fontsReady=Promise.resolve();
@@ -240,7 +240,7 @@ window.MENU_FORMATS[ID]=ctx=>{
   const vlen=String(F.venue).length,vs=vlen>36?54:vlen>24?64:vlen>14?78:92;
   const url=logoUrl(ctx),title=T(ctx.f.title||"");
   const fb=Math.max(14,Math.min(title.length>40?20:title.length>22?24:30,Math.floor(150/(Math.max(...String(title).replace(/<[^>]*>/g,"").split(/\s+/).map(w=>w.length),1)*.7))));
-  const reward=/^\d+$/.test(F.number)?`$${F.number}`:F.number;
+  const reward=/^\d+$/.test(F.number)?`${F.cur}${F.number}`:F.number;
   const lpDark=`position:relative;display:block;width:100%;max-width:182px;padding:10px 12px;box-sizing:border-box;background-color:${C.dark};background-image:${noise(".02 .5",3,[255,235,200],.16,seed,500)},${noise(".9",2,[255,255,255],.07,seed+1)};box-shadow:0 6px 14px rgba(0,0,0,.4)`;
   const lpLight=lpDark.replace(`background-color:${C.dark}`,`background-color:${toHex(mix(hex(P.bg),WHITE,.5))}`);
   const face=`<div data-fmt="${ID}" style="position:absolute;inset:0;overflow:hidden;${stock(P,tone,seed)};color:${P.ink};font-family:${ty.body}">

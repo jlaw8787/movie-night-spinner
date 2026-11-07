@@ -36,7 +36,9 @@
    "source": "https://en.wikipedia.org/wiki/Lock,_Stock_and_Two_Smoking_Barrels",
    "fix": "REWARD £500000",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07",
+   "applied_note": "The saloon layout always printed a dollar sign. It now takes a per-film currency from data/film-flavour.json, set to £ for this film."
   },
   {
    "text": "The lads' greasy spoon",

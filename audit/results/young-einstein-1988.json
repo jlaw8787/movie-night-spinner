@@ -20,23 +20,26 @@
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Eaten in the shed beside the electric guitar.",
    "where": "house",
    "verdict": "wrong",
    "why": "The shed is where Einstein splits the beer atom. He invents the electric violin in Sydney and later turns it into an electric guitar after the institution.",
    "source": "https://en.wikipedia.org/wiki/Young_Einstein",
-   "fix": "Eaten in the shed where he split the beer atom."
+   "fix": "Eaten in the shed where he split the beer atom.",
+   "applied": "2026-11-07"
   },
   {
    "printed": false,
-   "done": false,
+   "done": true,
    "text": "Electric guitar invented in the shed",
    "where": "wink",
    "verdict": "wrong",
    "why": "Same as above. The guitar is rebuilt from his violin after he is committed, not made in the shed.",
    "source": "https://en.wikipedia.org/wiki/Young_Einstein",
-   "fix": "Electric guitar built from his smashed violin"
+   "fix": "Electric guitar rebuilt from his violin",
+   "applied": "2026-11-07",
+   "applied_note": "Shorter, to stay within the length of the old line."
   }
  ],
  "checked_ok": 12,
