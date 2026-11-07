@@ -5,32 +5,35 @@
   {
    "text": "Balboa Christmas Eve struffoli",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "The sources I opened do not mention Christmas or Christmas Eve in this film.",
-   "source": "https://movies.fandom.com/wiki/Rocky_V",
-   "fix": "Balboa back-in-the-old-house struffoli",
+   "verdict": "wrong",
+   "why": "The film has a Christmas dinner at the Balboa house, but nothing calls it Christmas Eve, so the name drops the Eve.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky-v",
+   "fix": "Balboa Christmas struffoli",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Christmas Eve back at the old house.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The sources I opened do not place the film at Christmas.",
-   "source": "https://movies.fandom.com/wiki/Rocky_V",
-   "fix": "Back at the old house.",
+   "verdict": "wrong",
+   "why": "The Christmas scene is at the Balboa mansion, before they lose it and move back to the old neighbourhood. Nothing says Eve.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=rocky-v",
+   "fix": "Christmas dinner at the Balboa house.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Mickey's old gym, handed down to Rocky",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "Wikipedia says Mighty Mick's Gym was willed to Mickey's son and that Rocky found it run down before reopening it. It is not clear that it passed to Rocky, so the wording is unsure.",
+   "verdict": "wrong",
+   "why": "Mickey willed the gym to Rocky's son. Rocky finds it run down and later reopens it.",
    "source": "https://en.wikipedia.org/wiki/Rocky_V",
    "fix": "Mickey's old gym, run down till Rocky reopens it",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 13,

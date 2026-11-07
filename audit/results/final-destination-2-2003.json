@@ -1,54 +1,56 @@
 {
-  "id": "Final Destination 2 (2003)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Kat's on the phone the whole way down Route 23.",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Wikipedia has Kat Jennings as a businesswoman Kimberly stops from entering Route 23, and the survivors later ride in her SUV. The transcript has no phone scene for her.",
-      "source": "https://en.wikipedia.org/wiki/Final_Destination_2",
-      "fix": "Kat's SUV is the one the survivors pile into.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Room Key: Last Stop Motel, Room 12, check-out 10am",
-      "where": "prop",
-      "verdict": "wrong",
-      "why": "This is a menu slip, not a film fact: the key card printed on the same face says Checkout 11, so the line is changed to 11am to match.",
-      "source": "audit/cards/final-destination-2-2003.json",
-      "fix": "Room Key: Last Stop Motel, Room 12, check-out 11am",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 17,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 3,
-    "overall": 3.2,
-    "verdict": "A tidy motel postcard, but the log truck, the omens and Bludworth's new life rule are mostly missing from the food.",
-    "missing": [
-      "The log truck pile-up on Route 23 (Kimberly's premonition)",
-      "Day-old spaghetti tossed out the window (Evan's death)",
-      "Only new life can defeat Death (Bludworth)",
-      "Death working backwards through the list (Clear)",
-      "Isabella's baby being born (the loophole)",
-      "The Gibbons family barbecue and the propane grill"
-    ],
-    "ideas": [
-      "Swap the note on 'Evan's jackpot spaghetti and meatballs' for 'Day-old spaghetti, tossed out the window. Mind the fire escape.'",
-      "Swap the note on 'Spring break key lime pie' for 'Only new life can defeat Death. Isabella's baby gets the first slice.'",
-      "Swap the note on 'Death's design devilled eggs' for 'Death works backwards. Eat from the end of the plate.'",
-      "Swap the house note on 'Frozen lemonade slushie' for 'The Gibbons family barbecue. Stay clear of the propane grill.'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Final Destination 2 (2003)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Kat's on the phone the whole way down Route 23.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Wikipedia has Kat Jennings as a businesswoman Kimberly stops from entering Route 23, and the survivors later ride in her SUV. The transcript has no phone scene for her.",
+   "source": "https://en.wikipedia.org/wiki/Final_Destination_2",
+   "fix": "Kat's SUV is the one the survivors pile into.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Room Key: Last Stop Motel, Room 12, check-out 10am",
+   "where": "prop",
+   "verdict": "wrong",
+   "why": "This is a menu slip, not a film fact: the key card printed on the same face says Checkout 11, so the line is changed to 11am to match.",
+   "source": "audit/cards/final-destination-2-2003.json",
+   "fix": "Room Key: Last Stop Motel, Room 12, check-out 11am",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "A tidy motel postcard, but the log truck, the omens and Bludworth's new life rule are mostly missing from the food.",
+  "missing": [
+   "The log truck pile-up on Route 23 (Kimberly's premonition)",
+   "Day-old spaghetti tossed out the window (Evan's death)",
+   "Only new life can defeat Death (Bludworth)",
+   "Death working backwards through the list (Clear)",
+   "Isabella's baby being born (the loophole)",
+   "The Gibbons family barbecue and the propane grill"
+  ],
+  "ideas": [
+   "Swap the note on 'Evan's jackpot spaghetti and meatballs' for 'Day-old spaghetti, tossed out the window. Mind the fire escape.'",
+   "Swap the note on 'Spring break key lime pie' for 'Only new life can defeat Death. Isabella's baby gets the first slice.'",
+   "Swap the note on 'Death's design devilled eggs' for 'Death works backwards. Eat from the end of the plate.'",
+   "Swap the house note on 'Frozen lemonade slushie' for 'The Gibbons family barbecue. Stay clear of the propane grill.'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

@@ -1,9 +1,12 @@
 {
-  "id": "Flubber (1997)",
-  "ops": [
-    {
-      "old": "Serve dessert when the flubber starts dancing around the lab.",
-      "new": "Serve dessert when the flubber starts dancing around the house."
-    }
-  ]
+ "id": "Flubber (1997)",
+ "ops": [
+  {
+   "old": "Serve dessert when the flubber starts dancing around the lab.",
+   "new": "Serve dessert when the flubber starts dancing around the house.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

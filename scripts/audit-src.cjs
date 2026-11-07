@@ -8,7 +8,9 @@
 const {execFileSync}=require('child_process');const fs=require('fs'),path=require('path');
 const C='/tmp/audit-src';fs.mkdirSync(C,{recursive:true});
 const get=(u)=>{const k=path.join(C,Buffer.from(u).toString('base64url').slice(0,180));if(fs.existsSync(k))return fs.readFileSync(k,'utf8');
-  let t='';try{t=execFileSync('curl',['-sSL','-m','30','-A','Mozilla/5.0 (movie-night-spinner audit)',u],{encoding:'utf8',maxBuffer:64e6})}catch(e){t=''}fs.writeFileSync(k,t);return t};
+  let t='';for(let a=0;a<3;a++){try{t=execFileSync('curl',['-sSL','-m','30','-A','Mozilla/5.0 (movie-night-spinner audit)',u],{encoding:'utf8',maxBuffer:64e6})}catch(e){t=''}
+  /* never cache a rate-limit or error page: wait and retry instead */if(t&&!/Too many requests|rate limit|Wikimedia Error|<title>429|Error 403/i.test(t.slice(0,3000)))break;t='';execFileSync('sleep',[String(3+a*4)])}
+  if(t)fs.writeFileSync(k,t);return t};
 const [cmd,id,...words]=process.argv.slice(2);if(!cmd||!id){console.log('usage: plot|quotes|script|grep "Film (Year)" [words]');process.exit(1)}
 const m=/^(.*) \((\d{4})\)$/.exec(id)||[null,id,''];const title=m[1],year=m[2];
 const strip=s=>s.replace(/<ref[^>]*\/>/g,'').replace(/<ref[\s\S]*?<\/ref>/g,'').replace(/\{\{[^{}]*\}\}/g,'').replace(/\{\{[^{}]*\}\}/g,'').replace(/\[\[(?:[^|\]]*\|)?([^\]]*)\]\]/g,'$1').replace(/'''?/g,'').replace(/<[^>]+>/g,'');

@@ -1,43 +1,44 @@
 {
-  "id": "Fast Times at Ridgemont High (1982)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Dude, that's my pizza.",
-      "where": "tagline",
-      "verdict": "wrong",
-      "why": "In the transcript Spicoli answers Mr. Hand with 'Learning about Cuba and having some food' after the pizza guy arrives mid-class. 'Dude, that's my pizza' is not said.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=fast-times-at-ridgemont-high",
-      "fix": "Learning about Cuba, and having some food.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 4,
-    "moments": 4,
-    "food": 4,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.8,
-    "verdict": "A bright pizza parlour placemat that covers the class delivery, the pirate hat and the mall, but the tagline is not the real line.",
-    "missing": [
-      "Mr. Hand sharing the pizza slices with the class (history class)",
-      "Spicoli's 'Learning about Cuba, and having some food' (history class)",
-      "Brad foiling the Mi-T-Mart robbery (the end)",
-      "Spicoli's van full of smoke (school car park)",
-      "Stacy and Linda at Perry's Pizza (the mall)",
-      "Damone's concert ticket scalping (the mall)"
-    ],
-    "ideas": [
-      "Swap the tagline for 'Learning about Cuba, and having some food.'",
-      "Replace 'Food court pretzels with cheddar sauce' with 'Mi-T-Mart nachos' for Brad's last job.",
-      "Make 'Spicoli's classroom pepperoni pizza' arrive in a box labelled for Mr. Hand's class.",
-      "Add a 'double cheese and sausage' pizza line, the order in the class scene, in place of 'Spicoli's pizza bites'."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Fast Times at Ridgemont High (1982)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Dude, that's my pizza.",
+   "where": "tagline",
+   "verdict": "wrong",
+   "why": "In the transcript Spicoli answers Mr. Hand with 'Learning about Cuba and having some food' after the pizza guy arrives mid-class. 'Dude, that's my pizza' is not said.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=fast-times-at-ridgemont-high",
+   "fix": "Learning about Cuba, and having some food.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A bright pizza parlour placemat that covers the class delivery, the pirate hat and the mall, but the tagline is not the real line.",
+  "missing": [
+   "Mr. Hand sharing the pizza slices with the class (history class)",
+   "Spicoli's 'Learning about Cuba, and having some food' (history class)",
+   "Brad foiling the Mi-T-Mart robbery (the end)",
+   "Spicoli's van full of smoke (school car park)",
+   "Stacy and Linda at Perry's Pizza (the mall)",
+   "Damone's concert ticket scalping (the mall)"
+  ],
+  "ideas": [
+   "Swap the tagline for 'Learning about Cuba, and having some food.'",
+   "Replace 'Food court pretzels with cheddar sauce' with 'Mi-T-Mart nachos' for Brad's last job.",
+   "Make 'Spicoli's classroom pepperoni pizza' arrive in a box labelled for Mr. Hand's class.",
+   "Add a 'double cheese and sausage' pizza line, the order in the class scene, in place of 'Spicoli's pizza bites'."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

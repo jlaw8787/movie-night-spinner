@@ -16,12 +16,13 @@
     {
       "text": "Medda's shout after the show at Irving Hall.",
       "where": "house",
-      "verdict": "unsure",
-      "why": "Irving Hall is the real 1899 rally venue. The film summary places the rally at Medda Larkson's theatre, and I could not confirm the film names Irving Hall.",
+      "verdict": "wrong",
+      "why": "The film puts the newsies' rally at Medda Larkson's theatre and never names Irving Hall.",
       "source": "https://en.wikipedia.org/wiki/Newsies",
       "fix": "Medda's shout after the show at her theatre.",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 11,

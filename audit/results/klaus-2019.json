@@ -4,13 +4,15 @@
  "facts": [
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Serve the dessert when the first wrapped toy slides down the chimney.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The plot summaries I opened say Klaus makes Jesper deliver a toy to a child, and later toys go out at night. None says a wrapped toy slides down a chimney, so the cue may describe a scene that is not in the film.",
+   "verdict": "wrong",
+   "why": "The plot says Klaus makes Jesper deliver a toy to the boy in the drawing's house. No source, including the plot summary I fetched, says a wrapped toy comes down a chimney.",
    "source": "https://www.imdb.com/title/tt4729430/plotsummary",
-   "fix": "Serve the dessert when Jesper delivers the first toy to a child."
+   "fix": "Serve the dessert when Jesper delivers the first toy to a child.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "printed": true,
@@ -30,13 +32,15 @@
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Alva's school desks, now covered in fish.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Sources say Alva is a bitter former teacher who now sells fish, and that she reopens her school later. None describes her school desks covered in fish.",
-   "source": "https://www.imdb.com/title/tt4729430/plotsummary",
-   "fix": "Alva's old classroom, now a fish shop."
+   "verdict": "wrong",
+   "why": "Alva's old school building is her fish shop in the film (Jesper asks if it is a school and she says she sells fish), but desks covered in fish are not shown or described.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=klaus",
+   "fix": "Alva's old classroom, now a fish shop.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

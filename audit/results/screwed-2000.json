@@ -5,42 +5,46 @@
   {
    "text": "Serve the cookies when Willard and Rusty hatch the plan.",
    "where": "cue-printed",
-   "verdict": "unsure",
-   "why": "Wikipedia calls Mrs. Crock a pie heiress and the gift Willard gets is a pie. Reviews say her business is bakeries. Cookies were not confirmed. The data cue has the same text.",
+   "verdict": "ok",
+   "why": "Willard and Rusty do hatch the dog kidnap plan, and the cue only says when to serve the cookies, so it claims nothing false about the film.",
    "source": "https://en.wikipedia.org/wiki/Screwed_(2000_film)",
    "fix": "Serve the pie when Willard and Rusty hatch the plan.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Miss Crock's cookies",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "Sources read say pie or baked goods, not cookies.",
-   "source": "https://en.wikipedia.org/wiki/Screwed_(2000_film)",
-   "fix": "Miss Crock's pie",
+   "verdict": "wrong",
+   "why": "Miss Crock's business is pies and a bakery in the film, and her gift to Willard is a mincemeat pie. Cookies are never shown. Renamed as a nod to the cuff links she gives him, so it still describes a cookie.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=screwed",
+   "fix": "Cuff link cookies",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Crock cookie milkshake",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "Same cookie question as the cue.",
+   "verdict": "wrong",
+   "why": "No cookies in the film, Miss Crock is a pie heiress. Renamed after Willard so it does not claim a Crock cookie.",
    "source": "https://en.wikipedia.org/wiki/Screwed_(2000_film)",
-   "fix": "Crock pie milkshake",
+   "fix": "Willard's cookie milkshake",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Kidnap the dog. Keep the cookies.",
    "where": "tagline",
-   "verdict": "unsure",
-   "why": "Same cookie question.",
+   "verdict": "wrong",
+   "why": "The film is about a pie heiress, and the kids keep nothing but trouble. Swapped cookies for the pie Crock gives Willard.",
    "source": "https://en.wikipedia.org/wiki/Screwed_(2000_film)",
-   "fix": "Kidnap the dog. Keep the pie.",
+   "fix": "Kidnap the dog. Skip the pie.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Twenty years of driving her around and all I got was a pie. Tonight I'm eating the whole thing myself.",

@@ -1,65 +1,66 @@
 {
-  "id": "Flubber (1997)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "The Model T flies home for dinner.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "Brainard's flying car in this film is a vintage Ford Thunderbird. The Model T belongs to the 1961 original, The Absent-Minded Professor.",
-      "source": "https://en.wikipedia.org/wiki/Flubber_(film)",
-      "fix": "The Thunderbird flies home for dinner.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "A flying Model T",
-      "where": "wink",
-      "verdict": "wrong",
-      "why": "Same slip in the winks list. The flying car is a Ford Thunderbird.",
-      "source": "https://en.wikipedia.org/wiki/Flubber_(film)",
-      "fix": "A flying Ford Thunderbird",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Serve dessert when the flubber starts dancing around the lab.",
-      "where": "cue",
-      "verdict": "wrong",
-      "why": "Wikipedia has Weebo releasing Flubber to dance around the house after the basketball game. It never calls the place a lab.",
-      "source": "https://en.wikipedia.org/wiki/Flubber_(film)",
-      "fix": "Serve dessert when the flubber starts dancing around the house.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 13,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "The green lab suits the film, but it swaps in the wrong car and leaves out Smith and Wesson, the flubber shoes and Weebette.",
-    "missing": [
-      "Brainard's flying Ford Thunderbird",
-      "Flubber dancing around the house (Weebo)",
-      "Flubber on the basketball team's shoes (Medfield vs Rutland)",
-      "Smith and Wesson hit with a golf ball and a bowling ball",
-      "Weebo's hologram and her daughter Weebette",
-      "Hoenicker and his grab for Flubber"
-    ],
-    "ideas": [
-      "Swap the note 'The Model T flies home for dinner' for 'The Thunderbird flies home for dinner.'",
-      "Swap the note on 'Medfield College honey barbecue meatballs' for 'Bouncing golf ball meatballs. Smith and Wesson learned the hard way.'",
-      "Swap the note on 'Weebo's green pesto pizza' for 'Weebo and her daughter Weebette.'",
-      "Swap the note on 'Green goo dip' for 'Flubber, short for flying rubber.'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Flubber (1997)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "The Model T flies home for dinner.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Brainard's flying car in this film is a vintage Ford Thunderbird. The Model T belongs to the 1961 original, The Absent-Minded Professor.",
+   "source": "https://en.wikipedia.org/wiki/Flubber_(film)",
+   "fix": "The Thunderbird flies home for dinner.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "A flying Model T",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Same slip in the winks list. The flying car is a Ford Thunderbird.",
+   "source": "https://en.wikipedia.org/wiki/Flubber_(film)",
+   "fix": "A flying Ford Thunderbird",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve dessert when the flubber starts dancing around the lab.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "Wikipedia has Weebo releasing Flubber to dance around the house after the basketball game. It never calls the place a lab.",
+   "source": "https://en.wikipedia.org/wiki/Flubber_(film)",
+   "fix": "Serve dessert when the flubber starts dancing around the house.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "The green lab suits the film, but it swaps in the wrong car and leaves out Smith and Wesson, the flubber shoes and Weebette.",
+  "missing": [
+   "Brainard's flying Ford Thunderbird",
+   "Flubber dancing around the house (Weebo)",
+   "Flubber on the basketball team's shoes (Medfield vs Rutland)",
+   "Smith and Wesson hit with a golf ball and a bowling ball",
+   "Weebo's hologram and her daughter Weebette",
+   "Hoenicker and his grab for Flubber"
+  ],
+  "ideas": [
+   "Swap the note 'The Model T flies home for dinner' for 'The Thunderbird flies home for dinner.'",
+   "Swap the note on 'Medfield College honey barbecue meatballs' for 'Bouncing golf ball meatballs. Smith and Wesson learned the hard way.'",
+   "Swap the note on 'Weebo's green pesto pizza' for 'Weebo and her daughter Weebette.'",
+   "Swap the note on 'Green goo dip' for 'Flubber, short for flying rubber.'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

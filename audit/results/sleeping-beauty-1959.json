@@ -21,22 +21,23 @@
   {
    "text": "King Hubert and King Stefan toasting the wedding plans",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The film shows the two kings drinking to their friendship while they wait for sunset, with Aurora's return in mind. A toast to wedding plans is not described.",
-   "source": "https://www.sparknotes.com/film/sleepingbeauty/summary/",
-   "fix": "King Hubert and King Stefan drinking to their friendship",
+   "verdict": "ok",
+   "why": "The two kings toast the future, the home and then the wedding in the Skumps scene while they wait for Aurora.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=sleeping-beauty-1959",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Maleficent's raven on her shoulder",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "Wikipedia names Diablo as Maleficent's pet raven, but no opened source puts him on her shoulder.",
+   "verdict": "wrong",
+   "why": "Diablo is Maleficent's pet raven, but no film source puts him on her shoulder; the shoulder perch comes from later shows and games.",
    "source": "https://en.wikipedia.org/wiki/Sleeping_Beauty_(1959_film)",
    "fix": "Diablo, Maleficent's raven",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 10,

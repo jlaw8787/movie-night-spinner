@@ -1,54 +1,56 @@
 {
-  "id": "Jurassic World: Fallen Kingdom (2018)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Iris's tray, carried up to Mr Lockwood.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "Iris is the carer who raised Maisie and is sent away by Mills, and Lockwood calls for her, but no source or transcript line shows a tray. The note now claims only what she did.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=jurassic-world-fallen-kingdom",
-      "fix": "Iris raised Maisie. This tea is for her.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Served at the auction before the Indoraptor got out.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "The auction and the Indoraptor escape are in the film, but no source, transcript line or search result shows oysters or any food served there. Reworded as a joke about the guests.",
-      "source": "https://en.wikipedia.org/wiki/Jurassic_World:_Fallen_Kingdom",
-      "fix": "Fit for the guests at the Lockwood dinosaur auction.",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 17,
-  "vibe": {
-    "world": 3,
-    "moments": 4,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "Good volcano and Lockwood framing, but a lot of the food is generic.",
-    "missing": [
-      "Rexy eating Eli Mills at the end",
-      "The Stygimoloch breaking open the cell",
-      "Blue and the Indoraptor fighting on the glass roof",
-      "Maisie opening the gate to release the dinosaurs",
-      "The Mosasaurus in the opening",
-      "Blue's transfusion from Rexy"
-    ],
-    "ideas": [
-      "Swap 'Isla Nublar chilli lime chicken and beans' note for 'Stampede special.'",
-      "Swap 'Lockwood auction smoked salmon on rye' note for 'Sold to the highest bidder.'",
-      "Swap 'Earl Grey iced tea' note for 'Mills' last cuppa.'",
-      "Swap 'Dino egg scotch eggs' note for 'Blue's blood, T. rex donated.'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Jurassic World: Fallen Kingdom (2018)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Iris's tray, carried up to Mr Lockwood.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Iris is the carer who raised Maisie and is sent away by Mills, and Lockwood calls for her, but no source or transcript line shows a tray. The note now claims only what she did.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=jurassic-world-fallen-kingdom",
+   "fix": "Iris raised Maisie. This tea is for her.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Served at the auction before the Indoraptor got out.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "The auction and the Indoraptor escape are in the film, but no source, transcript line or search result shows oysters or any food served there. Reworded as a joke about the guests.",
+   "source": "https://en.wikipedia.org/wiki/Jurassic_World:_Fallen_Kingdom",
+   "fix": "Fit for the guests at the Lockwood dinosaur auction.",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Good volcano and Lockwood framing, but a lot of the food is generic.",
+  "missing": [
+   "Rexy eating Eli Mills at the end",
+   "The Stygimoloch breaking open the cell",
+   "Blue and the Indoraptor fighting on the glass roof",
+   "Maisie opening the gate to release the dinosaurs",
+   "The Mosasaurus in the opening",
+   "Blue's transfusion from Rexy"
+  ],
+  "ideas": [
+   "Swap 'Isla Nublar chilli lime chicken and beans' note for 'Stampede special.'",
+   "Swap 'Lockwood auction smoked salmon on rye' note for 'Sold to the highest bidder.'",
+   "Swap 'Earl Grey iced tea' note for 'Mills' last cuppa.'",
+   "Swap 'Dino egg scotch eggs' note for 'Blue's blood, T. rex donated.'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

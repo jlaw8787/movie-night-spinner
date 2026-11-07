@@ -5,43 +5,47 @@
   {
    "text": "Serve the snacks when the crew stumble out of two years in stasis and Vickers drops for push-ups.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The plot summary and the quote pages I opened do not place Vickers's push-ups. In the film she does them in her own module, so they may not happen at the same moment the crew wake. Treat the timing as unconfirmed.",
-   "source": "https://en.wikipedia.org/wiki/Prometheus_(2012_film)",
+   "verdict": "ok",
+   "why": "The crew wake from stasis and David follows wet footprints into Vickers's suite, where she is doing push-ups; the scene is also the Comic-Con footage Wikipedia mentions.",
+   "source": "https://www.scribd.com/document/416620418/PROMETHEUS-pdf",
    "fix": "Serve the snacks when the crew wake from two years in stasis aboard the Prometheus.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Hummus with warm flatbread",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The note says Vickers eats this alone in her private module. No source I opened shows her eating anything, so the claim is made up. She does have a private module, but the food is invented.",
-   "source": "https://en.wikipedia.org/wiki/Prometheus_(2012_film)",
-   "fix": "Vickers keeps to her private module, and her own table.",
+   "verdict": "wrong",
+   "why": "Vickers is never shown eating; David only says her separate module has its own life support, air and food.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=prometheus",
+   "fix": "Vickers's pick, from the food stores in her private module.",
    "printed": true,
    "done": false,
-   "full": "Vickers's pick, eaten alone in her private module."
+   "full": "Vickers's pick, eaten alone in her private module.",
+   "settled": "2026-11-08"
   },
   {
    "text": "Christmas Day landfall beef Wellington",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "Janek's Christmas tree is in the film, but none of the pages I opened date the landing as Christmas Day. The ship's arrival date is not settled by my sources.",
-   "source": "https://en.wikipedia.org/wiki/Prometheus_(2012_film)",
+   "verdict": "ok",
+   "why": "On landing Holloway says it is Christmas and he wants to open his presents, and David's Christmas tree is up when the crew wake.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=prometheus",
    "fix": "Christmas tree landfall beef Wellington",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Arrival: Christmas, 2093",
    "where": "prop",
-   "verdict": "unsure",
-   "why": "Same problem as the Wellington. The year 2093 is right for the ship, but a Christmas Day arrival is not confirmed by the sources I opened.",
+   "verdict": "ok",
+   "why": "The film is set in 2093 and the crew land on Christmas, as Holloway says in the landing scene.",
    "source": "https://en.wikipedia.org/wiki/Prometheus_(2012_film)",
    "fix": "Arrival: LV-223, 2093",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 17,

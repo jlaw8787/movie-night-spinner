@@ -1,65 +1,66 @@
 {
-  "id": "Kate & Leopold (2001)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Leopold waking up in Stuart's apartment",
-      "where": "wink",
-      "verdict": "wrong",
-      "why": "The toasts are numbered in story order, but waking up in Stuart's apartment (Wednesday, 2001) comes before Leopold walking off the butter commercial set (Sunday). The three are printed as I, II, III in the wrong order.",
-      "source": "https://en.wikipedia.org/wiki/Kate_%26_Leopold",
-      "fix": "Swap the last two toasts so waking up in Stuart's apartment comes second and walking off the butter commercial set comes third.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "the late nights at the ad agency",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Kate works in market research at Camden Research Group, not at an ad agency. The agency she is pitching for makes the Farmer's Bounty butter ad.",
-      "source": "https://en.wikipedia.org/wiki/Kate_%26_Leopold",
-      "fix": "the late nights at the research firm",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Leopold stands when Kate sits. Then he pours.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "The film has Leopold say he is accustomed to stand when a woman leaves the table, not when she sits. The pouring is a menu touch.",
-      "source": "https://en.wikiquote.org/wiki/Kate_%26_Leopold",
-      "fix": "Leopold stands when a woman leaves the table. Then he pours.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 12,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 4,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "A smart 1876 banquet that suits the duke, but it skips the horse chase, the elevator and the leap off the bridge.",
-    "missing": [
-      "Leopold riding a horse through Central Park after the purse snatcher",
-      "Stuart falling down the elevator shaft",
-      "Kate jumping off the Brooklyn Bridge to reach 1876",
-      "Kate's line about everyone pushing their toast down twice",
-      "Charlie thinking Leopold is a method actor",
-      "The rooftop violinist and waltz"
-    ],
-    "ideas": [
-      "Swap the third toast \"Leopold waking up in Stuart's apartment\" for \"Kate leaps off the Brooklyn Bridge\".",
-      "Swap the host note for Leopold's real line: \"I'm accustomed to stand when a woman leaves the table.\"",
-      "Rename \"Butter tasting\" to \"Farmer's Bounty taste test, real butter only\", since he walks off the set over the diet margarine.",
-      "Swap \"Chocolate mousse\" note for a line about the rooftop violinist, so the dessert has a scene attached."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Kate & Leopold (2001)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Leopold waking up in Stuart's apartment",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "The toasts are numbered in story order, but waking up in Stuart's apartment (Wednesday, 2001) comes before Leopold walking off the butter commercial set (Sunday). The three are printed as I, II, III in the wrong order.",
+   "source": "https://en.wikipedia.org/wiki/Kate_%26_Leopold",
+   "fix": "Swap the last two toasts so waking up in Stuart's apartment comes second and walking off the butter commercial set comes third.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "the late nights at the ad agency",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Kate works in market research at Camden Research Group, not at an ad agency. The agency she is pitching for makes the Farmer's Bounty butter ad.",
+   "source": "https://en.wikipedia.org/wiki/Kate_%26_Leopold",
+   "fix": "the late nights at the research firm",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Leopold stands when Kate sits. Then he pours.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "The film has Leopold say he is accustomed to stand when a woman leaves the table, not when she sits. The pouring is a menu touch.",
+   "source": "https://en.wikiquote.org/wiki/Kate_%26_Leopold",
+   "fix": "Leopold stands when a woman leaves the table. Then he pours.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A smart 1876 banquet that suits the duke, but it skips the horse chase, the elevator and the leap off the bridge.",
+  "missing": [
+   "Leopold riding a horse through Central Park after the purse snatcher",
+   "Stuart falling down the elevator shaft",
+   "Kate jumping off the Brooklyn Bridge to reach 1876",
+   "Kate's line about everyone pushing their toast down twice",
+   "Charlie thinking Leopold is a method actor",
+   "The rooftop violinist and waltz"
+  ],
+  "ideas": [
+   "Swap the third toast \"Leopold waking up in Stuart's apartment\" for \"Kate leaps off the Brooklyn Bridge\".",
+   "Swap the host note for Leopold's real line: \"I'm accustomed to stand when a woman leaves the table.\"",
+   "Rename \"Butter tasting\" to \"Farmer's Bounty taste test, real butter only\", since he walks off the set over the diet margarine.",
+   "Swap \"Chocolate mousse\" note for a line about the rooftop violinist, so the dessert has a scene attached."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

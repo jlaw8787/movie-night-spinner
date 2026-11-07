@@ -1,13 +1,17 @@
 {
-  "id": "Escape from New York (1981)",
-  "ops": [
-    {
-      "old": "Serve the mains when the Duke rolls up in his chandelier car.",
-      "new": "Serve the mains when the Duke and his followers confront Snake in the street."
-    },
-    {
-      "old": "Brain makes everything himself",
-      "new": "Brain runs a refinery, so why not a still"
-    }
-  ]
+ "id": "Escape from New York (1981)",
+ "ops": [
+  {
+   "old": "Serve the mains when the Duke rolls up in his chandelier car.",
+   "new": "Serve the mains when the Duke and his followers confront Snake in the street.",
+   "done": true
+  },
+  {
+   "old": "Brain makes everything himself",
+   "new": "Brain runs a refinery, so why not a still",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

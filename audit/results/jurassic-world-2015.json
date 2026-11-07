@@ -1,68 +1,69 @@
 {
-  "id": "Jurassic World (2015)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Owen, dinner is under control and so is the park. Stop looking at me like that and eat.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Printed in quote marks as Claire's words, but she never says it. Her real lines on the quote page include 'We needed something scary and easy to pronounce.'",
-      "source": "https://en.wikiquote.org/wiki/Jurassic_World",
-      "fix": "\"We needed something scary and easy to pronounce.\"",
-      "fix_note": {
-        "text": "We needed something scary and easy to pronounce.",
-        "by": "Claire Dearing",
-        "kind": "quote"
-      },
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Carried out of Margaritaville, two at once.",
-      "where": "house",
-      "verdict": "ok",
-      "why": "The Margarita Man buys two margaritas and runs off holding both during the pterosaur attack on the park guests, so the line fits that moment.",
-      "source": "https://reptilesmagazine.com/Lizards/Information-News/Did-Margarita-Man-Steal-a-Scene-in-Jurassic-World",
-      "fix": "Poured at the resort while the pterosaurs hit Main Street.",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Serve the snacks when the mosasaur leaps up to grab its lunch.",
-      "where": "cue",
-      "verdict": "ok",
-      "why": "The mosasaurus feeding show has the mosasaur leaping up to take its food, and it later drags the Indominus under. Fits.",
-      "source": "https://en.wikipedia.org/wiki/Jurassic_World",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 11,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "Clean park-admission look and the right ride and feeding show, but the writing is plain for a film full of jokes and sponsors.",
-    "missing": [
-      "Lowery's $150 eBay Jurassic Park t-shirt (Claire tells him not to wear it)",
-      "'Verizon Wireless presents the Indominus Rex' (corporate sponsor gag)",
-      "Owen rolling under the raptor pen gate",
-      "Claire releasing the Tyrannosaurus rex to fight the Indominus",
-      "Pteranodons breaking out of the aviary and hitting the resort",
-      "Zach and Gray repairing the old Jeep at the ruined visitor centre"
-    ],
-    "ideas": [
-      "Swap 'Gyrosphere cheese balls' note for the sponsor gag, such as a 'presented by' name.",
-      "Replace 'Main Street cinnamon sugar pretzels' note with the pterosaurs attacking the resort.",
-      "Swap 'Dino egg chocolate mousse' plain line for Lowery's eBay t-shirt.",
-      "Add a 'Blue' raptor item in place of the 'Popcorn chicken with ranch' house line."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Jurassic World (2015)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Owen, dinner is under control and so is the park. Stop looking at me like that and eat.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Printed in quote marks as Claire's words, but she never says it. Her real lines on the quote page include 'We needed something scary and easy to pronounce.'",
+   "source": "https://en.wikiquote.org/wiki/Jurassic_World",
+   "fix": "\"We needed something scary and easy to pronounce.\"",
+   "fix_note": {
+    "text": "We needed something scary and easy to pronounce.",
+    "by": "Claire Dearing",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Carried out of Margaritaville, two at once.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "The Margarita Man buys two margaritas and runs off holding both during the pterosaur attack on the park guests, so the line fits that moment.",
+   "source": "https://reptilesmagazine.com/Lizards/Information-News/Did-Margarita-Man-Steal-a-Scene-in-Jurassic-World",
+   "fix": "Poured at the resort while the pterosaurs hit Main Street.",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Serve the snacks when the mosasaur leaps up to grab its lunch.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "The mosasaurus feeding show has the mosasaur leaping up to take its food, and it later drags the Indominus under. Fits.",
+   "source": "https://en.wikipedia.org/wiki/Jurassic_World",
+   "printed": true,
+   "done": false
   }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Clean park-admission look and the right ride and feeding show, but the writing is plain for a film full of jokes and sponsors.",
+  "missing": [
+   "Lowery's $150 eBay Jurassic Park t-shirt (Claire tells him not to wear it)",
+   "'Verizon Wireless presents the Indominus Rex' (corporate sponsor gag)",
+   "Owen rolling under the raptor pen gate",
+   "Claire releasing the Tyrannosaurus rex to fight the Indominus",
+   "Pteranodons breaking out of the aviary and hitting the resort",
+   "Zach and Gray repairing the old Jeep at the ruined visitor centre"
+  ],
+  "ideas": [
+   "Swap 'Gyrosphere cheese balls' note for the sponsor gag, such as a 'presented by' name.",
+   "Replace 'Main Street cinnamon sugar pretzels' note with the pterosaurs attacking the resort.",
+   "Swap 'Dino egg chocolate mousse' plain line for Lowery's eBay t-shirt.",
+   "Add a 'Blue' raptor item in place of the 'Popcorn chicken with ranch' house line."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

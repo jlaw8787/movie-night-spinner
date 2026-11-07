@@ -1,73 +1,76 @@
 {
-  "id": "Prizzi's Honor (1985)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "First dance. Both came armed.",
-      "where": "caption",
-      "verdict": "wrong",
-      "why": "At the wedding Charley dances with Irene, she leaves for a phone call and he never learns her name. The guns come out at the end, when each pulls a weapon in the bedroom.",
-      "source": "https://Filmsite.org/prizzishonor.html",
-      "fix": "First dance. He never got her name.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Charley's usual.",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "No opened source shows veal piccata as Charley's order. His one meal with Irene in the sources is a lunch date in California.",
-      "source": "https://Filmsite.org/prizzishonor.html",
-      "fix": "Quick and clean, like Charley's work.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Charley's dinner date with Irene",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "The source describes a lunch date in California, not a dinner.",
-      "source": "https://Filmsite.org/prizzishonor.html",
-      "fix": "Charley's lunch date with Irene in California",
-      "printed": false,
-      "done": false
-    },
-    {
-      "text": "Our Lady, Sunset Park. Every Prizzi marries here.",
-      "where": "caption",
-      "verdict": "unsure",
-      "why": "Sources do not name the church. The film opens on the wedding of Don Corrado's granddaughter in a cathedral, with Irene seen in the balcony.",
-      "source": "https://Filmsite.org/prizzishonor.html",
-      "fix": "The church where Charley looks up and sees the lady in lavender.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 9,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 4,
-    "tone": 3,
-    "look": 4,
-    "verdict": "A handsome Brooklyn wedding card with the lavender lady, but the film's dark comedy barely shows.",
-    "missing": [
-      "Charley's hit on Marxie Heller in California (the contract)",
-      "Irene revealed as a hired killer too (Angelo's reveal)",
-      "The wedding in Mexico (Charley and Irene)",
-      "The kidnapping and Mrs Calhane (the police captain's wife)",
-      "The bedroom standoff (finale)",
-      "Maerose consoling Charley (last scene)"
-    ],
-    "ideas": [
-      "Swap 'Both came armed.' for 'He never got her name.'",
-      "Swap 'Ice or Cake? Pick one. Charley can't.' for 'Wife or family? Pick one. Charley can't.'",
-      "Swap the Toast line 'With the compliments of the family.' for 'With the compliments of the family. Ask after Marxie.'",
-      "Add a Mexico stamp to the envelope in the corner."
-    ],
-    "overall": 3.6,
-    "flat": false,
-    "done": false
+ "id": "Prizzi's Honor (1985)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "First dance. Both came armed.",
+   "where": "caption",
+   "verdict": "wrong",
+   "why": "At the wedding Charley dances with Irene, she leaves for a phone call and he never learns her name. The guns come out at the end, when each pulls a weapon in the bedroom.",
+   "source": "https://Filmsite.org/prizzishonor.html",
+   "fix": "First dance. He never got her name.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Charley's usual.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Nothing shows veal piccata as Charley's order; the only meals Charley and Irene share are lunch dates after he tells her he can do lunch the next day.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=prizzis-honor",
+   "fix": "Lunch with Irene.",
+   "printed": true,
+   "done": false,
+   "settled": "2026-11-08"
+  },
+  {
+   "text": "Charley's dinner date with Irene",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Irene suggests a late dinner but Charley lives in California, so they settle on lunch the next day at the Bel Age hotel bar.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=prizzis-honor",
+   "fix": "Charley's lunch date with Irene",
+   "printed": false,
+   "done": false,
+   "settled": "2026-11-08"
+  },
+  {
+   "text": "Our Lady, Sunset Park. Every Prizzi marries here.",
+   "where": "caption",
+   "verdict": "wrong",
+   "why": "The opening wedding was shot at the Church of St Ann and the Holy Trinity in Brooklyn Heights, and the film never names Our Lady, Sunset Park.",
+   "source": "https://www.movie-locations.com/movies/p/Prizzis-Honor.php",
+   "fix": "A Brooklyn church. The whole Prizzi family turns up.",
+   "printed": true,
+   "done": false,
+   "settled": "2026-11-08"
   }
+ ],
+ "checked_ok": 9,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "verdict": "A handsome Brooklyn wedding card with the lavender lady, but the film's dark comedy barely shows.",
+  "missing": [
+   "Charley's hit on Marxie Heller in California (the contract)",
+   "Irene revealed as a hired killer too (Angelo's reveal)",
+   "The wedding in Mexico (Charley and Irene)",
+   "The kidnapping and Mrs Calhane (the police captain's wife)",
+   "The bedroom standoff (finale)",
+   "Maerose consoling Charley (last scene)"
+  ],
+  "ideas": [
+   "Swap 'Both came armed.' for 'He never got her name.'",
+   "Swap 'Ice or Cake? Pick one. Charley can't.' for 'Wife or family? Pick one. Charley can't.'",
+   "Swap the Toast line 'With the compliments of the family.' for 'With the compliments of the family. Ask after Marxie.'",
+   "Add a Mexico stamp to the envelope in the corner."
+  ],
+  "overall": 3.6,
+  "flat": false,
+  "done": false
+ }
 }

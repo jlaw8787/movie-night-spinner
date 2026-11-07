@@ -5,22 +5,24 @@
   {
    "text": "Serve the quesadillas when Gale talks her way onto the Stab 3 set at Sunrise Studios.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Wikipedia says Gale travels to Hollywood and finds Dewey working as an adviser on the Stab 3 set. Talking her way on was not confirmed.",
+   "verdict": "wrong",
+   "why": "Gale does not talk her way on. She is thrown off the closed set, and Wikipedia has her find Dewey working there as an adviser.",
    "source": "https://en.wikipedia.org/wiki/Scream_3",
-   "fix": "Serve the quesadillas when Gale finds Dewey advising on the Stab 3 set.",
+   "fix": "Serve the quesadillas when Gale finds Dewey advising on the Stab 3 set at Sunrise Studios.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Stab 3, Stage 4, Closed Set",
    "where": "sign",
-   "verdict": "unsure",
-   "why": "The Stab 3 set is real, but the stage number was not confirmed in sources read.",
-   "source": "https://en.wikipedia.org/wiki/Scream_3",
+   "verdict": "wrong",
+   "why": "The transcript says Stab 3 is a closed set, but no stage number is given.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=scream-3",
    "fix": "Stab 3, Closed Set",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 12,

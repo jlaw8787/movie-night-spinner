@@ -1,76 +1,80 @@
 {
-  "id": "Friday (1995)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Dipped, crunchy, rolling down the street.",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Wikiquote has Big Worm arriving in his 1975 Chevy Impala, and the transcript has him warning that playing with his money is like playing with his emotions. Nothing shows an ice cream truck.",
-      "source": "https://en.wikiquote.org/wiki/Friday_(1995_film)",
-      "fix": "Dipped, crunchy. Big Worm wants his money first.",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "FROM THE TRUCK",
-      "where": "card",
-      "verdict": "wrong",
-      "why": "No source or transcript line shows Big Worm with a truck. Wikiquote has him driving up in an Impala.",
-      "source": "https://en.wikiquote.org/wiki/Friday_(1995_film)",
-      "fix": "FROM BIG WORM",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Big Worm's ice cream truck rolling down the street",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Same as the printed note: the sources show Big Worm in an Impala, with no ice cream truck. The dish is renamed to 'Big Worm's dipped cones', which still fits the recipe of ice cream cones dipped in chocolate.",
-      "source": "https://en.wikiquote.org/wiki/Friday_(1995_film)",
-      "fix": "Dipped cones, and Big Worm wants his money first",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "126TH ST. MARKET",
-      "where": "venue",
-      "verdict": "wrong",
-      "why": "Smokey's line puts the block between Normandie and Western. No source names a 126th Street.",
-      "source": "https://en.wikiquote.org/wiki/Friday_(1995_film)",
-      "fix": "NORMANDIE & WESTERN MARKET",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 4,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "Good porch energy and the Kool-Aid and peanut butter gags land, but the ice cream truck is off and the big characters are missing.",
-    "missing": [
-      "Deebo and the stolen bike (the neighbourhood bully)",
-      "Pastor Clever's 'sinny-sin-sin' (the porch)",
-      "Ezal settling out of court for $20 (the store)",
-      "Mr. Jones in the bathroom (Craig's dad)",
-      "'You got knocked out' (Smokey after the fight)",
-      "'I was just bullshittin'' (Smokey's last line)"
-    ],
-    "ideas": [
-      "Swap 'Pineapple spears' for 'Ezal's Settle-Out-of-Court Special, $20', a nod to his store fall.",
-      "Swap 'Porch day BBQ plate' note for 'Now your father, he got game' as Mrs. Jones's line.",
-      "Add a 'No credit. Pay what you owe.' stamp that says 'Big Worm, by 10 PM' in place of the plain one.",
-      "Swap 'Hot grilled fish' idea for 'Pastor Clever's Collection Plate, 5 cents for cataracts'."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Friday (1995)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Dipped, crunchy, rolling down the street.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Wikiquote has Big Worm arriving in his 1975 Chevy Impala, and the transcript has him warning that playing with his money is like playing with his emotions. Nothing shows an ice cream truck.",
+   "source": "https://en.wikiquote.org/wiki/Friday_(1995_film)",
+   "fix": "Dipped, crunchy. Big Worm wants his money first.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "FROM THE TRUCK",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "No source or transcript line shows Big Worm with a truck. Wikiquote has him driving up in an Impala.",
+   "source": "https://en.wikiquote.org/wiki/Friday_(1995_film)",
+   "fix": "FROM BIG WORM",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Big Worm's ice cream truck rolling down the street",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Same as the printed note: the sources show Big Worm in an Impala, with no ice cream truck. The dish is renamed to 'Big Worm's dipped cones', which still fits the recipe of ice cream cones dipped in chocolate.",
+   "source": "https://en.wikiquote.org/wiki/Friday_(1995_film)",
+   "fix": "Dipped cones, and Big Worm wants his money first",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "126TH ST. MARKET",
+   "where": "venue",
+   "verdict": "wrong",
+   "why": "Smokey's line puts the block between Normandie and Western. No source names a 126th Street.",
+   "source": "https://en.wikiquote.org/wiki/Friday_(1995_film)",
+   "fix": "NORMANDIE & WESTERN MARKET",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Good porch energy and the Kool-Aid and peanut butter gags land, but the ice cream truck is off and the big characters are missing.",
+  "missing": [
+   "Deebo and the stolen bike (the neighbourhood bully)",
+   "Pastor Clever's 'sinny-sin-sin' (the porch)",
+   "Ezal settling out of court for $20 (the store)",
+   "Mr. Jones in the bathroom (Craig's dad)",
+   "'You got knocked out' (Smokey after the fight)",
+   "'I was just bullshittin'' (Smokey's last line)"
+  ],
+  "ideas": [
+   "Swap 'Pineapple spears' for 'Ezal's Settle-Out-of-Court Special, $20', a nod to his store fall.",
+   "Swap 'Porch day BBQ plate' note for 'Now your father, he got game' as Mrs. Jones's line.",
+   "Add a 'No credit. Pay what you owe.' stamp that says 'Big Worm, by 10 PM' in place of the plain one.",
+   "Swap 'Hot grilled fish' idea for 'Pastor Clever's Collection Plate, 5 cents for cataracts'."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

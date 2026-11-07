@@ -1,9 +1,12 @@
 {
-  "id": "Kate & Leopold (2001)",
-  "ops": [
-    {
-      "old": "Leopold stands when Kate sits. Then he pours.",
-      "new": "Leopold stands when a woman leaves the table. Then he pours."
-    }
-  ]
+ "id": "Kate & Leopold (2001)",
+ "ops": [
+  {
+   "old": "Leopold stands when Kate sits. Then he pours.",
+   "new": "Leopold stands when a woman leaves the table. Then he pours.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

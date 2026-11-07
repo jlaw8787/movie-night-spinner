@@ -1,13 +1,17 @@
 {
-  "id": "Jurassic World: Fallen Kingdom (2018)",
-  "ops": [
-    {
-      "old": "Iris's tray, carried up to Mr Lockwood.",
-      "new": "Iris raised Maisie. This tea is for her."
-    },
-    {
-      "old": "Served at the auction before the Indoraptor got out.",
-      "new": "Fit for the guests at the Lockwood dinosaur auction."
-    }
-  ]
+ "id": "Jurassic World: Fallen Kingdom (2018)",
+ "ops": [
+  {
+   "old": "Iris's tray, carried up to Mr Lockwood.",
+   "new": "Iris raised Maisie. This tea is for her.",
+   "done": true
+  },
+  {
+   "old": "Served at the auction before the Indoraptor got out.",
+   "new": "Fit for the guests at the Lockwood dinosaur auction.",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

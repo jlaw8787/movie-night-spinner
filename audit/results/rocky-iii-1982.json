@@ -5,12 +5,13 @@
   {
    "text": "Apollo Creed's gym",
    "where": "prop",
-   "verdict": "unsure",
-   "why": "In the film Apollo takes Rocky to the Tough Gym in Los Angeles, where Apollo used to train. It is not Apollo's own gym.",
+   "verdict": "wrong",
+   "why": "Apollo takes Rocky to Tough Gym in Los Angeles, the gym where he once trained, not a gym he owns.",
    "source": "https://en.wikipedia.org/wiki/Rocky_III",
    "fix": "Apollo's old gym",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 18,

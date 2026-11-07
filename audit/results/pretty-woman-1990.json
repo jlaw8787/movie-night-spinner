@@ -21,12 +21,13 @@
   {
    "text": "ordering everything off the room service menu",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No source opened shows Vivian ordering everything off the room service menu.",
-   "source": "https://en.wikipedia.org/wiki/Pretty_Woman",
-   "fix": "Room service, charged to the penthouse suite.",
+   "verdict": "wrong",
+   "why": "It is Edward who orders everything on the menu for her breakfast, saying he took the liberty because he did not know what she would like.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=pretty-woman",
+   "fix": "Edward ordering everything off the room service menu",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 14,

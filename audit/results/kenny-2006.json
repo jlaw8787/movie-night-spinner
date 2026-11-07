@@ -1,89 +1,90 @@
 {
-  "id": "Kenny (2006)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Lunch is on me, mate, but I'm washing my hands first. Twice. Then I'll see to the loo.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "No transcript line or quote page has Kenny saying this, so it should not sit in quote marks. It is rewritten as an unquoted note in his voice, true to a portable toilet man who is proud of clean work.",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=kenny",
-      "fix": "Lunch is on me. Hands washed twice first, then I'll check the loos.",
-      "fix_note": {
-        "text": "Lunch is on me. Hands washed twice first, then I'll check the loos.",
-        "by": "Kenny Smyth",
-        "kind": "note"
-      },
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07",
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Dad Ronnie and brother Brian",
-      "where": "wink",
-      "verdict": "wrong",
-      "why": "Kenny's father is Bill Smyth and his brother is David. Ronald is the actor who plays Bill. There is no Brian.",
-      "source": "https://en.wikipedia.org/wiki/Kenny_(2006_film)",
-      "fix": "Dad Bill and brother David",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "the footy crowds Kenny's Splashdown crew works",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "The transcript has Kenny working through Melbourne Cup day, but nothing about footy crowds (footy is only mentioned as school boots).",
-      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=kenny",
-      "fix": "the Melbourne Cup crowds Kenny's Splashdown crew works",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "Serve the mains when Kenny works the Melbourne Cup.",
-      "where": "cue",
-      "verdict": "ok",
-      "why": "Melbourne Cup day is Kenny's busiest day and the main event of the film. Fits.",
-      "source": "https://en.wikipedia.org/wiki/Kenny_(2006_film)",
-      "printed": false,
-      "done": false
-    },
-    {
-      "text": "his trip to the convention in Nashville",
-      "where": "dish-note",
-      "verdict": "ok",
-      "why": "Kenny travels to Nashville for a toilet convention. Fits.",
-      "source": "https://en.wikipedia.org/wiki/Kenny_(2006_film)",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 7,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 4,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "Good Aussie food and a fair Splashdown truck, but the menu leaves out the film's best characters and its payoff.",
-    "missing": [
-      "The Sushi Cowboy in Nashville (Japan business deal)",
-      "Jackie, the flight attendant Kenny meets",
-      "Jesse helping out on Melbourne Cup day",
-      "The camping trip with his dad and brother David",
-      "Kenny filling the luxury car with waste at the end",
-      "A drunk at the Melbourne Cup"
-    ],
-    "ideas": [
-      "Add a 'Sushi Cowboy' item in place of the 'Steak sandwich with beetroot and onion' house note.",
-      "Swap 'Vanilla slice' for a dish about Jesse helping on Cup day.",
-      "Replace 'Dad's chops and veg' with 'Bill's camping chops' for the camping trip.",
-      "Fix the winks: swap 'Dad Ronnie and brother Brian' for Bill and David."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Kenny (2006)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Lunch is on me, mate, but I'm washing my hands first. Twice. Then I'll see to the loo.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "No transcript line or quote page has Kenny saying this, so it should not sit in quote marks. It is rewritten as an unquoted note in his voice, true to a portable toilet man who is proud of clean work.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=kenny",
+   "fix": "Lunch is on me. Hands washed twice first, then I'll check the loos.",
+   "fix_note": {
+    "text": "Lunch is on me. Hands washed twice first, then I'll check the loos.",
+    "by": "Kenny Smyth",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07",
+   "settled": "2026-11-08"
+  },
+  {
+   "text": "Dad Ronnie and brother Brian",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Kenny's father is Bill Smyth and his brother is David. Ronald is the actor who plays Bill. There is no Brian.",
+   "source": "https://en.wikipedia.org/wiki/Kenny_(2006_film)",
+   "fix": "Dad Bill and brother David",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "the footy crowds Kenny's Splashdown crew works",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The transcript has Kenny working through Melbourne Cup day, but nothing about footy crowds (footy is only mentioned as school boots).",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=kenny",
+   "fix": "the Melbourne Cup crowds Kenny's Splashdown crew works",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Serve the mains when Kenny works the Melbourne Cup.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "Melbourne Cup day is Kenny's busiest day and the main event of the film. Fits.",
+   "source": "https://en.wikipedia.org/wiki/Kenny_(2006_film)",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "his trip to the convention in Nashville",
+   "where": "dish-note",
+   "verdict": "ok",
+   "why": "Kenny travels to Nashville for a toilet convention. Fits.",
+   "source": "https://en.wikipedia.org/wiki/Kenny_(2006_film)",
+   "printed": false,
+   "done": false
   }
+ ],
+ "checked_ok": 7,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Good Aussie food and a fair Splashdown truck, but the menu leaves out the film's best characters and its payoff.",
+  "missing": [
+   "The Sushi Cowboy in Nashville (Japan business deal)",
+   "Jackie, the flight attendant Kenny meets",
+   "Jesse helping out on Melbourne Cup day",
+   "The camping trip with his dad and brother David",
+   "Kenny filling the luxury car with waste at the end",
+   "A drunk at the Melbourne Cup"
+  ],
+  "ideas": [
+   "Add a 'Sushi Cowboy' item in place of the 'Steak sandwich with beetroot and onion' house note.",
+   "Swap 'Vanilla slice' for a dish about Jesse helping on Cup day.",
+   "Replace 'Dad's chops and veg' with 'Bill's camping chops' for the camping trip.",
+   "Fix the winks: swap 'Dad Ronnie and brother Brian' for Bill and David."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

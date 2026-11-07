@@ -1,25 +1,32 @@
 {
-  "id": "Friday (1995)",
-  "ops": [
-    {
-      "old": "Dipped, crunchy, rolling down the street.",
-      "new": "Dipped, crunchy. Big Worm wants his money first."
-    },
-    {
-      "old": "From the Truck",
-      "new": "From Big Worm"
-    },
-    {
-      "old": "Big Worm's ice cream truck rolling down the street",
-      "new": "Dipped cones, and Big Worm wants his money first"
-    },
-    {
-      "old": "126th St. Market",
-      "new": "Normandie & Western Market"
-    },
-    {
-      "old": "Big Worm's ice cream truck cones",
-      "new": "Big Worm's dipped cones"
-    }
-  ]
+ "id": "Friday (1995)",
+ "ops": [
+  {
+   "old": "Dipped, crunchy, rolling down the street.",
+   "new": "Dipped, crunchy. Big Worm wants his money first.",
+   "done": true
+  },
+  {
+   "old": "From the Truck",
+   "new": "From Big Worm",
+   "done": true
+  },
+  {
+   "old": "Big Worm's ice cream truck rolling down the street",
+   "new": "Dipped cones, and Big Worm wants his money first",
+   "done": true
+  },
+  {
+   "old": "126th St. Market",
+   "new": "Normandie & Western Market",
+   "done": true
+  },
+  {
+   "old": "Big Worm's ice cream truck cones",
+   "new": "Big Worm's dipped cones",
+   "done": true
+  }
+ ],
+ "applied": "2026-11-07",
+ "misses": []
 }

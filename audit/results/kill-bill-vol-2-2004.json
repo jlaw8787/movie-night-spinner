@@ -1,54 +1,56 @@
 {
-  "id": "Kill Bill: Vol. 2 (2004)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "B.B.'s cheesy tuna melts",
-      "where": "dish-name",
-      "verdict": "wrong",
-      "why": "Nothing shows B.B. eating tuna melts. The only food scene is Bill making a sandwich in his kitchen, with no filling named, so the dish is renamed to nod at that scene and still describes a tuna melt.",
-      "source": "https://grantland.com/hollywood-prospectus/qt-eats-tarantinos-20-best-food-scenes/",
-      "fix": "Bill's kitchen tuna melts",
-      "printed": true,
-      "done": false,
-      "settled": "2026-11-08"
-    },
-    {
-      "text": "a kid's dinner at the villa",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Same as the dish name: the film has Bill making a sandwich in the kitchen, not a kid's dinner at the villa.",
-      "source": "https://grantland.com/hollywood-prospectus/qt-eats-tarantinos-20-best-food-scenes/",
-      "fix": "Bill's kitchen sandwich scene",
-      "printed": false,
-      "done": false,
-      "settled": "2026-11-08"
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 3,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 3,
-    "overall": 3,
-    "verdict": "A plain wedding invite that mentions Two Pines and Budd's trailer, but the buried coffin, the black mamba and Bill's Superman speech are all missing.",
-    "missing": [
-      "The Bride buried alive in the coffin and punching her way out",
-      "The black mamba hidden in Budd's money case",
-      "Pai Mei plucking out Elle's eye",
-      "Budd and the Hattori Hanzo sword he pawned",
-      "Bill's Superman speech and the truth serum dart",
-      "Bill's line about a fish flapping on the carpet"
-    ],
-    "ideas": [
-      "Swap \"Hacienda grapefruit paloma\" for \"The Black Mamba\" cocktail.",
-      "Swap \"B.B.'s cheesy tuna melts\" for a goldfish cracker plate, nodding to the fish flapping on the carpet.",
-      "Swap the R.S.V.P. box for \"Bill's Superman speech, 7 pm sharp\".",
-      "Swap \"Pai Mei's rice bowl\" for \"Pai Mei's five point rice\", with one bite then five steps."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Kill Bill: Vol. 2 (2004)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "B.B.'s cheesy tuna melts",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "Nothing shows B.B. eating tuna melts. The only food scene is Bill making a sandwich in his kitchen, with no filling named, so the dish is renamed to nod at that scene and still describes a tuna melt.",
+   "source": "https://grantland.com/hollywood-prospectus/qt-eats-tarantinos-20-best-food-scenes/",
+   "fix": "Bill's kitchen tuna melts",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "a kid's dinner at the villa",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Same as the dish name: the film has Bill making a sandwich in the kitchen, not a kid's dinner at the villa.",
+   "source": "https://grantland.com/hollywood-prospectus/qt-eats-tarantinos-20-best-food-scenes/",
+   "fix": "Bill's kitchen sandwich scene",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3,
+  "verdict": "A plain wedding invite that mentions Two Pines and Budd's trailer, but the buried coffin, the black mamba and Bill's Superman speech are all missing.",
+  "missing": [
+   "The Bride buried alive in the coffin and punching her way out",
+   "The black mamba hidden in Budd's money case",
+   "Pai Mei plucking out Elle's eye",
+   "Budd and the Hattori Hanzo sword he pawned",
+   "Bill's Superman speech and the truth serum dart",
+   "Bill's line about a fish flapping on the carpet"
+  ],
+  "ideas": [
+   "Swap \"Hacienda grapefruit paloma\" for \"The Black Mamba\" cocktail.",
+   "Swap \"B.B.'s cheesy tuna melts\" for a goldfish cracker plate, nodding to the fish flapping on the carpet.",
+   "Swap the R.S.V.P. box for \"Bill's Superman speech, 7 pm sharp\".",
+   "Swap \"Pai Mei's rice bowl\" for \"Pai Mei's five point rice\", with one bite then five steps."
+  ],
+  "flat": true,
+  "done": false
+ }
 }
