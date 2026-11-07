@@ -13,7 +13,7 @@
    "CASE FILE 1995",
    "NOW SHOWING",
    "OFFICE OF MARCUS BURNETT",
-   "Two cops, one apartment, and nothing in the fridge. Switch names and put the pizza on Mike's card.",
+   "I'm Mike this week and Mike's eating my wife's cooking. Put the pizza on his card.",
    "Marcus Burnett",
    "LOCATION",
    "Miami Evidence Room Cafe",
@@ -22,7 +22,7 @@
    "DIVISION",
    "Special Investigations, 1995",
    "ON FILE",
-   "Marcus pretending to be Mike Lowrey; Julie Mott, the witness who will not cooperate",
+   "Marcus pretending to be Mike Lowrey; Julie Mott, the witness who will only talk to Mike",
    "PRIORITY",
    "BREAKROOM COPY"
   ],
@@ -49,7 +49,6 @@
    "Mike and Marcus swap Cuban sandwich",
    "4.20",
    "Miami jerk chicken with rice and peas",
-   "5.50",
    "GRAVEYARD",
    "SWEETS",
    "Key lime pie",
@@ -114,12 +113,13 @@
   "venue": "Miami Evidence Room Cafe",
   "sign": "Miami PD: Evidence Room Lunch",
   "note": {
-   "text": "Two cops, one apartment, and nothing in the fridge. Switch names and put the pizza on Mike's card.",
-   "by": "Marcus Burnett"
+   "text": "I'm Mike this week and Mike's eating my wife's cooking. Put the pizza on his card.",
+   "by": "Marcus Burnett",
+   "kind": "note"
   },
   "winks": [
    "Marcus pretending to be Mike Lowrey",
-   "Julie Mott, the witness who will not cooperate",
+   "Julie Mott, the witness who will only talk to Mike",
    "Stolen heroin taken from the evidence room",
    "Captain Howard shouting at both partners",
    "Fouchet, the villain, and the airfield finale"

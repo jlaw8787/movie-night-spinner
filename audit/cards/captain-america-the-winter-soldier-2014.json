@@ -24,7 +24,7 @@
    "SOLDIER",
    "Running laps in DC. Pass the noodles.",
    "A WORD FROM SAM WILSON",
-   "Steve, I ran past you twice this morning. Least you can do is grab the lunch tab.",
+   "Don't say it! Don't you say it!",
    "Sam Wilson",
    "at Cap's Washington Apartment",
    "STOP PRESS",
@@ -74,7 +74,7 @@
    "Fresh mint iced tea",
    "5.40",
    "Trouble Man on the record player. Sam's pick.",
-   "ALSO IN THIS EDITION: Sam lapping Steve on a jog. Fury's car chase in the street. Bucky's metal arm. Three Helicarriers and Project Insight. Peggy in her hospital room.",
+   "ALSO IN THIS EDITION: Steve lapping Sam on a jog. Fury's car chase in the street. Bucky's metal arm. Three Helicarriers and Project Insight. Peggy in her hospital room.",
    "Prices subject to change. Printed on recycled stock. Form DS-2014.",
    "Page 2 of 2"
   ]
@@ -128,11 +128,12 @@
   "venue": "Cap's Washington Apartment",
   "sign": "Washington, DC",
   "note": {
-   "text": "Steve, I ran past you twice this morning. Least you can do is grab the lunch tab.",
-   "by": "Sam Wilson"
+   "text": "Don't say it! Don't you say it!",
+   "by": "Sam Wilson",
+   "kind": "quote"
   },
   "winks": [
-   "Sam lapping Steve on a jog",
+   "Steve lapping Sam on a jog",
    "Fury's car chase in the street",
    "Bucky's metal arm",
    "Three Helicarriers and Project Insight",

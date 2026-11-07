@@ -7,9 +7,11 @@
    "verdict": "wrong",
    "why": "Beerfest is a secret underground tournament, not a tent. The brothers first take down an Oktoberfest tent in a brawl, and the team later gets into Beerfest hidden inside an empty wooden keg like a Trojan horse.",
    "source": "https://en.wikipedia.org/wiki/Beerfest",
-   "fix": "Serve the mains when the team rolls into Beerfest hidden in a wooden keg.",
+   "fix": "Serve the mains when the team rolls into Beerfest in a keg.",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07",
+   "applied_note": "Shortened to fit the cue line."
   },
   {
    "text": "Last call: Serve the mains when the team enters the Beerfest tent.",
@@ -17,9 +19,11 @@
    "verdict": "wrong",
    "why": "Same cue as printed on the card. Beerfest is an underground tournament and the team enters in a keg, not a tent.",
    "source": "https://en.wikipedia.org/wiki/Beerfest",
-   "fix": "Last call: Serve the mains when the team rolls into Beerfest hidden in a wooden keg.",
+   "fix": "Last call: Serve the mains when the team rolls into Beerfest in a keg.",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07",
+   "applied_note": "Comes from the data cue, shortened to fit."
   }
  ],
  "checked_ok": 14,

@@ -24,9 +24,11 @@
    "verdict": "wrong",
    "why": "Backwards. Deckard asks for four, the cook says two is enough, and Deckard insists 'No. Four. Two, two, four.' He is not haggled down.",
    "source": "https://www.brmovie.com/Downloads/Docs/BR_Multi_Script_by_Netrunner.txt",
-   "fix": "Deckard's order at the counter. Four portions, and the cook says two is enough.",
+   "fix": "Deckard's order at the counter: four, not two",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07",
+   "applied_note": "Shorter wording to stay within the length."
   },
   {
    "text": "Deckard's Japanese whisky highball",
@@ -36,7 +38,9 @@
    "source": "https://www.brmovie.com/Downloads/Docs/BR_Multi_Script_by_Netrunner.txt",
    "fix": "Deckard's Black Label highball",
    "printed": true,
-   "done": false
+   "done": true,
+   "applied": "2026-11-07",
+   "applied_note": "Recipe, note and shopping now use Scotch whisky to match the new name."
   }
  ],
  "checked_ok": 12,
