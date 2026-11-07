@@ -1,52 +1,53 @@
 {
- "id": "Selena (1997)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Corpus Christi, where it all began",
-   "where": "wink",
-   "verdict": "wrong",
-   "why": "The family lives in Lake Jackson, where Abraham starts Selena y Los Dinos. They only move to Corpus Christi later.",
-   "source": "https://en.wikipedia.org/wiki/Selena_(film)",
-   "fix": "Lake Jackson, where it all began",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "the little family restaurant where young Selena first sings",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The plot summary read does not show a restaurant scene. A family restaurant in Lake Jackson is real life but the film scene was not confirmed.",
-   "source": "https://en.wikipedia.org/wiki/Selena_(film)",
-   "fix": "Nachos for the long ride between gigs in Texas.",
-   "printed": true,
-   "done": false
+  "id": "Selena (1997)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Corpus Christi, where it all began",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "The family lives in Lake Jackson, where Abraham starts Selena y Los Dinos. They only move to Corpus Christi later.",
+      "source": "https://en.wikipedia.org/wiki/Selena_(film)",
+      "fix": "Lake Jackson, where it all began",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "the little family restaurant where young Selena first sings",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The plot summary read does not show a restaurant scene. A family restaurant in Lake Jackson is real life but the film scene was not confirmed.",
+      "source": "https://en.wikipedia.org/wiki/Selena_(film)",
+      "fix": "Nachos for the long ride between gigs in Texas.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 3,
+    "overall": 3.2,
+    "verdict": "Warm family kitchen with the Astrodome and purple jumpsuit nods, but it is a generic Tex-Mex spread and the photo is date stamped 1997.",
+    "missing": [
+      "The Dinos in 1961 playing doo-wop to a Tejano crowd",
+      "Selena's bustier at the carnival",
+      "Chris Perez and the elopement",
+      "Yolanda Saldivar and the ring",
+      "Selena Etc. boutique",
+      "The crowd rush at the Mexico show"
+    ],
+    "ideas": [
+      "Swap 'Los Dinos Tex-Mex cheese enchiladas' note for the 1961 Dinos riot gig, 'sing what the room wants'.",
+      "Swap 'Sizzling skirt steak fajitas' note for the tour bus where Abraham catches Selena and Chris.",
+      "Remove the orange '97 10 26' stamp on the still, the Astrodome night is Feb 1995.",
+      "Swap 'Big Red cream soda' for 'Bustier punch' only if Josh wants a cheekier nod."
+    ],
+    "flat": true,
+    "done": false
   }
- ],
- "checked_ok": 13,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
-  "look": 3,
-  "overall": 3.2,
-  "verdict": "Warm family kitchen with the Astrodome and purple jumpsuit nods, but it is a generic Tex-Mex spread and the photo is date stamped 1997.",
-  "missing": [
-   "The Dinos in 1961 playing doo-wop to a Tejano crowd",
-   "Selena's bustier at the carnival",
-   "Chris Perez and the elopement",
-   "Yolanda Saldivar and the ring",
-   "Selena Etc. boutique",
-   "The crowd rush at the Mexico show"
-  ],
-  "ideas": [
-   "Swap 'Los Dinos Tex-Mex cheese enchiladas' note for the 1961 Dinos riot gig, 'sing what the room wants'.",
-   "Swap 'Sizzling skirt steak fajitas' note for the tour bus where Abraham catches Selena and Chris.",
-   "Remove the orange '97 10 26' stamp on the still, the Astrodome night is Feb 1995.",
-   "Swap 'Big Red cream soda' for 'Bustier punch' only if Josh wants a cheekier nod."
-  ],
-  "flat": true,
-  "done": false
- }
 }

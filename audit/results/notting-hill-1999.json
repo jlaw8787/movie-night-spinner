@@ -1,58 +1,59 @@
 {
- "id": "Notting Hill (1999)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Dinner is a bit of a mess. I've burnt the guinea fowl, so it's pasta again, and Honey's bringing dessert.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Invented. The brownie dinner is Honey's birthday at Max and Bella's place, not William's, and nothing about guinea fowl or pasta is in the film. William's real line is about fighting for the brownie.",
-   "source": "https://en.wikiquote.org/wiki/Notting_Hill",
-   "fix": "Well, you'll have to fight me for it. This is a very good brownie.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Well, you'll have to fight me for it. This is a very good brownie.",
-    "by": "William Thacker",
-    "kind": "quote"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Orange juice all down his shirt",
-   "where": "wink",
-   "verdict": "wrong",
-   "why": "William spills the juice on Anna, not on himself. She is the one who ends up at his flat to change.",
-   "source": "https://en.wikipedia.org/wiki/Notting_Hill_(film)",
-   "fix": "Orange juice all down her shirt",
-   "printed": true,
-   "done": false
+  "id": "Notting Hill (1999)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Dinner is a bit of a mess. I've burnt the guinea fowl, so it's pasta again, and Honey's bringing dessert.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Invented. The brownie dinner is Honey's birthday at Max and Bella's place, not William's, and nothing about guinea fowl or pasta is in the film. William's real line is about fighting for the brownie.",
+      "source": "https://en.wikiquote.org/wiki/Notting_Hill",
+      "fix": "Well, you'll have to fight me for it. This is a very good brownie.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Well, you'll have to fight me for it. This is a very good brownie.",
+        "by": "William Thacker",
+        "kind": "quote"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Orange juice all down his shirt",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "William spills the juice on Anna, not on himself. She is the one who ends up at his flat to change.",
+      "source": "https://en.wikipedia.org/wiki/Notting_Hill_(film)",
+      "fix": "Orange juice all down her shirt",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 14,
+  "vibe": {
+    "world": 5,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 4.2,
+    "verdict": "A warm bookshop menu that gets the brownie and the juice right, but one signed line and one caption are off.",
+    "missing": [
+      "The Chagall print and the violin-playing goat (William's flat)",
+      "'I'm just a girl, standing in front of a boy, asking him to love her' (bookshop)",
+      "Keziah the fruitarian and the murdered carrots (dinner party)",
+      "Passing himself off as a Horse and Hound reporter (Ritz press junket)",
+      "Whoopsidaisies over the garden fence (private park)",
+      "The press conference finale at the Savoy (ending)"
+    ],
+    "ideas": [
+      "Swap 'Travel bookshop shortbread fingers' for 'Violin goat shortbread' with a nod to the Chagall.",
+      "Swap the 'Portobello market olives' note for a line about the fruitarian carrots ('poor old carrots').",
+      "Swap the Pimm's cup joke for one using 'Whoopsidaisies'.",
+      "Swap 'Lost and found' for a Horse and Hound press badge prop."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 14,
- "vibe": {
-  "world": 5,
-  "moments": 4,
-  "food": 4,
-  "tone": 4,
-  "look": 4,
-  "overall": 4.2,
-  "verdict": "A warm bookshop menu that gets the brownie and the juice right, but one signed line and one caption are off.",
-  "missing": [
-   "The Chagall print and the violin-playing goat (William's flat)",
-   "'I'm just a girl, standing in front of a boy, asking him to love her' (bookshop)",
-   "Keziah the fruitarian and the murdered carrots (dinner party)",
-   "Passing himself off as a Horse and Hound reporter (Ritz press junket)",
-   "Whoopsidaisies over the garden fence (private park)",
-   "The press conference finale at the Savoy (ending)"
-  ],
-  "ideas": [
-   "Swap 'Travel bookshop shortbread fingers' for 'Violin goat shortbread' with a nod to the Chagall.",
-   "Swap the 'Portobello market olives' note for a line about the fruitarian carrots ('poor old carrots').",
-   "Swap the Pimm's cup joke for one using 'Whoopsidaisies'.",
-   "Swap 'Lost and found' for a Horse and Hound press badge prop."
-  ],
-  "flat": false,
-  "done": false
- }
 }

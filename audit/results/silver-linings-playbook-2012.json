@@ -1,78 +1,79 @@
 {
- "id": "Silver Linings Playbook (2012)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Serve the snacks when Pat Sr lays out his game day spread for the Eagles.",
-   "where": "cue-printed",
-   "verdict": "wrong",
-   "why": "Dolores makes the game day food, her crabby snacks and homemades. Pat Sr does the rituals, remotes lined up and a lucky bandana. The data cue has the same text.",
-   "source": "https://popmatters.com/165524-silver-linings-playbook-the-eagles-as-a-guide-to-life-2495797352.html",
-   "fix": "Serve the snacks when Dolores puts out her crabby snacks for the Eagles game.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Raisin bran in a takeaway bag, that's my order. Tiffany says it's not a date, so I'm skipping the crumbs.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "In the film Pat says he ordered raisin bran so nobody mistakes it for a date, and Tiffany replies that it can still be a date. The takeaway bag is not in the film.",
-   "source": "https://ourculturemag.com/2022/06/22/16-best-quotes-from-silver-linings-playbook-2012/",
-   "fix": "Raisin bran, that's my order. Nobody mistakes it for a date. Tiffany says it still can be.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Raisin bran, that's my order. Nobody mistakes it for a date. Tiffany says it still can be.",
-    "by": "Pat Solitano",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Excelsior. Pat's word, and now Tiffany's.",
-   "where": "house",
-   "verdict": "unsure",
-   "why": "Pat says Excelsior three times in the scene found. No source shows Tiffany saying it.",
-   "source": "https://ourculturemag.com/2022/06/22/16-best-quotes-from-silver-linings-playbook-2012/",
-   "fix": "Excelsior. Pat's word, said three times.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Pat's mum Dolores cooking for the family on game day.",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Dolores does cook game day food, but it is crabby snacks and homemades, not Sunday gravy with rigatoni.",
-   "source": "https://houstonpress.com/restaurants/investigating-food-in-film-crabby-snacks-and-homemades-6425069",
-   "fix": "Dolores cooking her homemades for the family on game day.",
-   "printed": true,
-   "done": false
+  "id": "Silver Linings Playbook (2012)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the snacks when Pat Sr lays out his game day spread for the Eagles.",
+      "where": "cue-printed",
+      "verdict": "wrong",
+      "why": "Dolores makes the game day food, her crabby snacks and homemades. Pat Sr does the rituals, remotes lined up and a lucky bandana. The data cue has the same text.",
+      "source": "https://popmatters.com/165524-silver-linings-playbook-the-eagles-as-a-guide-to-life-2495797352.html",
+      "fix": "Serve the snacks when Dolores puts out her crabby snacks for the Eagles game.",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Raisin bran in a takeaway bag, that's my order. Tiffany says it's not a date, so I'm skipping the crumbs.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "In the film Pat says he ordered raisin bran so nobody mistakes it for a date, and Tiffany replies that it can still be a date. The takeaway bag is not in the film.",
+      "source": "https://ourculturemag.com/2022/06/22/16-best-quotes-from-silver-linings-playbook-2012/",
+      "fix": "Raisin bran, that's my order. Nobody mistakes it for a date. Tiffany says it still can be.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Raisin bran, that's my order. Nobody mistakes it for a date. Tiffany says it still can be.",
+        "by": "Pat Solitano",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Excelsior. Pat's word, and now Tiffany's.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "Pat says Excelsior three times in the scene found. No source shows Tiffany saying it.",
+      "source": "https://ourculturemag.com/2022/06/22/16-best-quotes-from-silver-linings-playbook-2012/",
+      "fix": "Excelsior. Pat's word, said three times.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Pat's mum Dolores cooking for the family on game day.",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "Dolores does cook game day food, but it is crabby snacks and homemades, not Sunday gravy with rigatoni.",
+      "source": "https://houstonpress.com/restaurants/investigating-food-in-film-crabby-snacks-and-homemades-6425069",
+      "fix": "Dolores cooking her homemades for the family on game day.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 3,
+    "moments": 4,
+    "food": 4,
+    "tone": 3,
+    "look": 3,
+    "overall": 3.4,
+    "verdict": "Good game day food and Pat's habits, but the cafe layout does not feel like the Solitano house and two lines get the plot wrong.",
+    "missing": [
+      "Pat jogging in the garbage bag",
+      "Throwing the Hemingway novel through the window",
+      "My Cherie Amour setting off Pat",
+      "Crabby snacks and homemades at the game",
+      "The parlay on the Eagles and the dance score of five",
+      "Pat Sr's lucky bandana and remotes"
+    ],
+    "ideas": [
+      "Fix the cue to Dolores and the crabby snacks, then use 'crabby snacks' as the dish name for the crab toasts.",
+      "Swap 'Philly roast pork hoagie bites' note for the lucky bandana, not 'hanky'.",
+      "Swap 'Diner date bran and raisin muffins' note for Pat's raisin bran line, 'nobody mistakes it for a date'.",
+      "Change the cafe 'Stay as long as you like' header to a living room scene with the TV and remotes."
+    ],
+    "flat": true,
+    "done": false
   }
- ],
- "checked_ok": 11,
- "vibe": {
-  "world": 3,
-  "moments": 4,
-  "food": 4,
-  "tone": 3,
-  "look": 3,
-  "overall": 3.4,
-  "verdict": "Good game day food and Pat's habits, but the cafe layout does not feel like the Solitano house and two lines get the plot wrong.",
-  "missing": [
-   "Pat jogging in the garbage bag",
-   "Throwing the Hemingway novel through the window",
-   "My Cherie Amour setting off Pat",
-   "Crabby snacks and homemades at the game",
-   "The parlay on the Eagles and the dance score of five",
-   "Pat Sr's lucky bandana and remotes"
-  ],
-  "ideas": [
-   "Fix the cue to Dolores and the crabby snacks, then use 'crabby snacks' as the dish name for the crab toasts.",
-   "Swap 'Philly roast pork hoagie bites' note for the lucky bandana, not 'hanky'.",
-   "Swap 'Diner date bran and raisin muffins' note for Pat's raisin bran line, 'nobody mistakes it for a date'.",
-   "Change the cafe 'Stay as long as you like' header to a living room scene with the TV and remotes."
-  ],
-  "flat": true,
-  "done": false
- }
 }

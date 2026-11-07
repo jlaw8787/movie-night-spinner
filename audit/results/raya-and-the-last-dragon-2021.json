@@ -1,89 +1,90 @@
 {
- "id": "Raya and the Last Dragon (2021)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Serve the mains when Raya and her crew sit down to share the soup.",
-   "where": "cue",
-   "verdict": "unsure",
-   "why": "No source I opened shows the crew sitting down to share a soup. The soup that brings the lands together is Benja's tom yum feast, which is ruined before anyone eats. Boun's shrimp congee is served to Raya and Sisu on his boat, and Raya refuses to eat it.",
-   "source": "https://en.wikipedia.org/wiki/Raya_and_the_Last_Dragon",
-   "fix": "Serve the mains when Boun serves Raya and Sisu their congee on the Shrimporium.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Prawn Soup, Come Aboard",
-   "where": "sign",
-   "verdict": "unsure",
-   "why": "Boun's boat is called the Shrimporium and the dish he sells is shrimp congee, not prawn soup.",
-   "source": "https://en.wikiquote.org/wiki/Raya_and_the_Last_Dragon",
-   "fix": "Shrimp Congee, Come Aboard",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Fresh prawn soup, one bowl each. Don't spill on the boat, and welcome aboard. Everybody eats here, even strangers.",
-   "where": "note",
-   "verdict": "unsure",
-   "why": "Not a film line. Boun's real pitch is about shrimp congee ('We got a shrimp congee that won't quit'), so a note about prawn soup does not match what he serves.",
-   "source": "https://en.wikiquote.org/wiki/Raya_and_the_Last_Dragon",
-   "fix": "Shrimp congee, one bowl each. Don't spill on the boat, and welcome to the Shrimporium. Everybody eats here, even strangers.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Shrimp congee, one bowl each. Don't spill on the boat, and welcome to the Shrimporium. Everybody eats here, even strangers.",
-    "by": "Boun",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Benja's prawn congee",
-   "where": "dish-name",
-   "verdict": "wrong",
-   "why": "Benja is Raya's father, who hosts the feast. The congee is Boun's, served on his boat in Tail.",
-   "source": "https://www.pastemagazine.com/movies/disney-plus/raya-and-the-last-dragon-food",
-   "fix": "Boun's prawn congee",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Green papaya salad",
-   "where": "house",
-   "verdict": "unsure",
-   "why": "The note says Little Noi swiped one on the way past. Noi is a con artist in Talon, but no source I opened shows her taking any food.",
-   "source": "https://en.wikipedia.org/wiki/Raya_and_the_Last_Dragon",
-   "fix": "Little Noi, the con artist, will have a go at your plate.",
-   "printed": true,
-   "done": false,
-   "full": "Little Noi swiped one on the way past."
+  "id": "Raya and the Last Dragon (2021)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the mains when Raya and her crew sit down to share the soup.",
+      "where": "cue",
+      "verdict": "unsure",
+      "why": "No source I opened shows the crew sitting down to share a soup. The soup that brings the lands together is Benja's tom yum feast, which is ruined before anyone eats. Boun's shrimp congee is served to Raya and Sisu on his boat, and Raya refuses to eat it.",
+      "source": "https://en.wikipedia.org/wiki/Raya_and_the_Last_Dragon",
+      "fix": "Serve the mains when Boun serves Raya and Sisu their congee on the Shrimporium.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Prawn Soup, Come Aboard",
+      "where": "sign",
+      "verdict": "unsure",
+      "why": "Boun's boat is called the Shrimporium and the dish he sells is shrimp congee, not prawn soup.",
+      "source": "https://en.wikiquote.org/wiki/Raya_and_the_Last_Dragon",
+      "fix": "Shrimp Congee, Come Aboard",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Fresh prawn soup, one bowl each. Don't spill on the boat, and welcome aboard. Everybody eats here, even strangers.",
+      "where": "note",
+      "verdict": "unsure",
+      "why": "Not a film line. Boun's real pitch is about shrimp congee ('We got a shrimp congee that won't quit'), so a note about prawn soup does not match what he serves.",
+      "source": "https://en.wikiquote.org/wiki/Raya_and_the_Last_Dragon",
+      "fix": "Shrimp congee, one bowl each. Don't spill on the boat, and welcome to the Shrimporium. Everybody eats here, even strangers.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Shrimp congee, one bowl each. Don't spill on the boat, and welcome to the Shrimporium. Everybody eats here, even strangers.",
+        "by": "Boun",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Benja's prawn congee",
+      "where": "dish-name",
+      "verdict": "wrong",
+      "why": "Benja is Raya's father, who hosts the feast. The congee is Boun's, served on his boat in Tail.",
+      "source": "https://www.pastemagazine.com/movies/disney-plus/raya-and-the-last-dragon-food",
+      "fix": "Boun's prawn congee",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Green papaya salad",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "The note says Little Noi swiped one on the way past. Noi is a con artist in Talon, but no source I opened shows her taking any food.",
+      "source": "https://en.wikipedia.org/wiki/Raya_and_the_Last_Dragon",
+      "fix": "Little Noi, the con artist, will have a go at your plate.",
+      "printed": true,
+      "done": false,
+      "full": "Little Noi swiped one on the way past."
+    }
+  ],
+  "checked_ok": 15,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A cheerful takeaway on a boat that gets Boun and the Ongis, but it misses the real soup scene and gets Benja and Boun mixed up.",
+    "missing": [
+      "Benja's tom yum feast for all five lands",
+      "Boun's Shrimporium sales pitch (world-famous, no water taxi)",
+      "Raya refusing to eat the congee, Sisu digging in",
+      "Little Noi and the Ongis running the con in Talon",
+      "Tong, the Spine warrior, carrying Noi",
+      "The five gem pieces being handed over to Namaari"
+    ],
+    "ideas": [
+      "Rename 'Kumandra five lands beef noodle soup' to 'Benja's five lands tom yum' and name the shrimp, lemongrass, bamboo, chilli and palm sugar from each land.",
+      "Swap 'Benja's prawn congee' for 'Boun's prawn congee' and use his line about a shrimp congee that won't quit.",
+      "Swap 'Green papaya salad' for 'Tong's bamboo shoot salad' to bring in the Spine warrior.",
+      "Change the cue to Boun serving Raya and Sisu the congee so it points at a scene that happens."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 15,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 4,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "A cheerful takeaway on a boat that gets Boun and the Ongis, but it misses the real soup scene and gets Benja and Boun mixed up.",
-  "missing": [
-   "Benja's tom yum feast for all five lands",
-   "Boun's Shrimporium sales pitch (world-famous, no water taxi)",
-   "Raya refusing to eat the congee, Sisu digging in",
-   "Little Noi and the Ongis running the con in Talon",
-   "Tong, the Spine warrior, carrying Noi",
-   "The five gem pieces being handed over to Namaari"
-  ],
-  "ideas": [
-   "Rename 'Kumandra five lands beef noodle soup' to 'Benja's five lands tom yum' and name the shrimp, lemongrass, bamboo, chilli and palm sugar from each land.",
-   "Swap 'Benja's prawn congee' for 'Boun's prawn congee' and use his line about a shrimp congee that won't quit.",
-   "Swap 'Green papaya salad' for 'Tong's bamboo shoot salad' to bring in the Spine warrior.",
-   "Change the cue to Boun serving Raya and Sisu the congee so it points at a scene that happens."
-  ],
-  "flat": false,
-  "done": false
- }
 }

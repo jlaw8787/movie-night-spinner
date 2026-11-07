@@ -1,42 +1,43 @@
 {
- "id": "RoboCop (1987)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Boddicker's gas station boilermaker",
-   "where": "dish-name",
-   "verdict": "wrong",
-   "why": "RoboCop arrests Antonowsky at a gas station. Boddicker is not there, and the gas station is not his.",
-   "source": "https://en.wikipedia.org/wiki/RoboCop",
-   "fix": "Antonowsky's gas station boilermaker",
-   "printed": true,
-   "done": false
+  "id": "RoboCop (1987)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Boddicker's gas station boilermaker",
+      "where": "dish-name",
+      "verdict": "wrong",
+      "why": "RoboCop arrests Antonowsky at a gas station. Boddicker is not there, and the gas station is not his.",
+      "source": "https://en.wikipedia.org/wiki/RoboCop",
+      "fix": "Antonowsky's gas station boilermaker",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 15,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 4,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "A solid precinct breakroom with baby food, ED-209 and 6000 SUX all present, though the cheesy TV show only gets a cue.",
+    "missing": [
+      "'I'd buy that for a dollar!' (the TV comedy show)",
+      "'Dead or alive, you're coming with me'",
+      "Boddicker's gang at the cocaine factory",
+      "Boddicker falling in the toxic waste",
+      "The Old Man firing Dick Jones",
+      "'Murphy' (the last line)"
+    ],
+    "ideas": [
+      "Swap 'Detroit coney dog' for 'I'd buy that for a dollar dog' priced at one dollar.",
+      "Swap 'Vending machine hot chocolate' for 'Toxic waste lime slushie' as a nod to Emil and the waste.",
+      "Add 'Dead or alive' to the house note under the pierogi.",
+      "Rename the boilermaker to 'Antonowsky's gas station boilermaker'."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 15,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 3,
-  "tone": 4,
-  "look": 4,
-  "overall": 3.8,
-  "verdict": "A solid precinct breakroom with baby food, ED-209 and 6000 SUX all present, though the cheesy TV show only gets a cue.",
-  "missing": [
-   "'I'd buy that for a dollar!' (the TV comedy show)",
-   "'Dead or alive, you're coming with me'",
-   "Boddicker's gang at the cocaine factory",
-   "Boddicker falling in the toxic waste",
-   "The Old Man firing Dick Jones",
-   "'Murphy' (the last line)"
-  ],
-  "ideas": [
-   "Swap 'Detroit coney dog' for 'I'd buy that for a dollar dog' priced at one dollar.",
-   "Swap 'Vending machine hot chocolate' for 'Toxic waste lime slushie' as a nod to Emil and the waste.",
-   "Add 'Dead or alive' to the house note under the pierogi.",
-   "Rename the boilermaker to 'Antonowsky's gas station boilermaker'."
-  ],
-  "flat": false,
-  "done": false
- }
 }

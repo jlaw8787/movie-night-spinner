@@ -202,7 +202,7 @@ window.MENU_FORMATS.diner=ctx=>{
     <div style="display:flex;justify-content:space-between"><span>${night?V.fine:DAY.fine}</span><span>Form No. ${num||"13-"+yy}</span></div></div>`;
   const lastFoot=`<div style="position:absolute;left:40px;right:40px;bottom:26px;display:flex;justify-content:space-between;font:400 15px/1 ${SANS};color:${K.mute}"><span>${ESC(venue)}. Turn over for the cover.</span><span>Form No. ${num||"13-"+yy}</span></div>`;
   const s1=stills[1]||stills[0],s2=stills[2]||stills[1]||stills[0];
-  const cap1=`The window booth at ${ESC(venue)}${night?", after midnight":""}.`;
+  const cap1=fl&&fl.caption?ESC(fl.caption):`The window booth at ${ESC(venue)}${night?", after midnight":""}.`;
   const menuBox=(top,bottom,html)=>`<div data-h="menu" style="position:absolute;left:44px;right:44px;top:${top}px;bottom:${bottom}px;column-count:2;column-gap:40px;column-fill:balance;column-rule:1px solid rgba(22,26,32,.25)">${html}</div>`;
   /* back: band height bh, props on the back or not */
   const backHTML=(bh,withProps,html)=>root("back",K.paper,topStill(s1,bh,night?V.kick:DAY.kick,"The Menu",ek==="classic"?80:88,cap1)+menuBox(bh+38,withProps?230:64,html)+(withProps?props(64):"")+backFoot,lam);

@@ -119,7 +119,7 @@ window.MENU_FORMATS[ID]=ctx=>{
 
   /* right: the board (signature) */
   const RX=HX,boardH=560;
-  const C=[["s",e.cols[0]],["m",e.cols[1]],["w",e.cols[2]],["d",e.cols[3]]].filter(([k])=>(ctx.menu[k]||[]).length);
+  const C=[["s",e.cols[0]],["m",e.cols[1]],["w",e.cols[2]],["d",fl.drinksHeading||e.cols[3]]].filter(([k])=>(ctx.menu[k]||[]).length);
   const items={};C.forEach(([k])=>items[k]=(ctx.menu[k]||[]).slice(0,4));
   const pr=prices(items,e,ei,egg);
   const fw=parseInt(e.frame)||14,pad=26;

@@ -1,98 +1,99 @@
 {
- "id": "Rocky Balboa (2006)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Sit down, eat, and I'll tell you about Adrian's turkey. Second helpings are always on the house.",
-   "where": "note",
-   "verdict": "unsure",
-   "why": "No source I opened mentions a turkey story at Adrian's. Rocky tells stories about his past to the diners, so the rest fits.",
-   "source": "https://en.wikipedia.org/wiki/Rocky_Balboa_(film)",
-   "fix": "Sit down, eat, and I'll tell you about Adrian. Second helpings are always on the house.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Sit down, eat, and I'll tell you about Adrian. Second helpings are always on the house.",
-    "by": "Rocky Balboa",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Spider Rico eating on the house",
-   "where": "wink",
-   "verdict": "wrong",
-   "why": "Wikipedia lists Spider Rico as Rocky's former opponent and current employee at Adrian's.",
-   "source": "https://en.wikipedia.org/wiki/Rocky_Balboa_(film)",
-   "fix": "Spider Rico working at Adrian's",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Punchy, the dog from the pound",
-   "where": "wink",
-   "verdict": "unsure",
-   "why": "No source I opened says where Rocky got Punchy.",
-   "source": "https://en.wikipedia.org/wiki/Rocky_Balboa_(film)",
-   "fix": "Punchy, Rocky's dog",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Raised to Adrian, every year on the anniversary.",
-   "where": "house",
-   "verdict": "unsure",
-   "why": "Rocky visits Adrian's grave, but the sources I opened do not show a toast with wine every year on the anniversary.",
-   "source": "https://en.wikipedia.org/wiki/Rocky_Balboa_(film)",
-   "fix": "Raised to Adrian, at her grave and at her table.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Lucky Seven Tiger Bar hot honey wings",
-   "where": "dish-name",
-   "verdict": "unsure",
-   "why": "Marie works at a bar called the Lucky Seven, where Rocky finds her late one night. I found nothing that supports 'Tiger Bar'.",
-   "source": "https://rocky.fandom.com/wiki/Rocky_Balboa_(film)",
-   "fix": "Lucky Seven hot honey wings",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Little Marie runs the front of house now, and the cheesecake",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Marie is a barmaid in the sources I opened. None show her running the front of house at Adrian's.",
-   "source": "https://en.wikipedia.org/wiki/Rocky_Balboa_(film)",
-   "fix": "Little Marie, who Rocky found again at the Lucky Seven",
-   "printed": false,
-   "done": false
+  "id": "Rocky Balboa (2006)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Sit down, eat, and I'll tell you about Adrian's turkey. Second helpings are always on the house.",
+      "where": "note",
+      "verdict": "unsure",
+      "why": "No source I opened mentions a turkey story at Adrian's. Rocky tells stories about his past to the diners, so the rest fits.",
+      "source": "https://en.wikipedia.org/wiki/Rocky_Balboa_(film)",
+      "fix": "Sit down, eat, and I'll tell you about Adrian. Second helpings are always on the house.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Sit down, eat, and I'll tell you about Adrian. Second helpings are always on the house.",
+        "by": "Rocky Balboa",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Spider Rico eating on the house",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "Wikipedia lists Spider Rico as Rocky's former opponent and current employee at Adrian's.",
+      "source": "https://en.wikipedia.org/wiki/Rocky_Balboa_(film)",
+      "fix": "Spider Rico working at Adrian's",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Punchy, the dog from the pound",
+      "where": "wink",
+      "verdict": "unsure",
+      "why": "No source I opened says where Rocky got Punchy.",
+      "source": "https://en.wikipedia.org/wiki/Rocky_Balboa_(film)",
+      "fix": "Punchy, Rocky's dog",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Raised to Adrian, every year on the anniversary.",
+      "where": "house",
+      "verdict": "unsure",
+      "why": "Rocky visits Adrian's grave, but the sources I opened do not show a toast with wine every year on the anniversary.",
+      "source": "https://en.wikipedia.org/wiki/Rocky_Balboa_(film)",
+      "fix": "Raised to Adrian, at her grave and at her table.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Lucky Seven Tiger Bar hot honey wings",
+      "where": "dish-name",
+      "verdict": "unsure",
+      "why": "Marie works at a bar called the Lucky Seven, where Rocky finds her late one night. I found nothing that supports 'Tiger Bar'.",
+      "source": "https://rocky.fandom.com/wiki/Rocky_Balboa_(film)",
+      "fix": "Lucky Seven hot honey wings",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Little Marie runs the front of house now, and the cheesecake",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "Marie is a barmaid in the sources I opened. None show her running the front of house at Adrian's.",
+      "source": "https://en.wikipedia.org/wiki/Rocky_Balboa_(film)",
+      "fix": "Little Marie, who Rocky found again at the Lucky Seven",
+      "printed": false,
+      "done": false
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 5,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 3,
+    "overall": 4,
+    "verdict": "A clever Adrian's newspaper menu with the computer fight, Marie and Punchy, and one or two small slips on the winks.",
+    "missing": [
+      "Sides of beef used as punching bags (training)",
+      "Rocky speaking to his son: 'It ain't about how hard you hit'",
+      "Adrian's grave: 'Yo Adrian, we did it'",
+      "Mason 'The Line' Dixon",
+      "The Rocky Steps and the statue",
+      "Paulie's meat plant"
+    ],
+    "ideas": [
+      "Swap 'Adrian's arancini' for 'Sides of beef carpaccio' as a training nod.",
+      "Move 'It ain't about how hard you hit' to a boxed pull quote.",
+      "Change the Spider Rico wink to say he works at Adrian's.",
+      "Replace the cover poster text-over image with a clean still so the title doesn't fight the photo."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 12,
- "vibe": {
-  "world": 5,
-  "moments": 4,
-  "food": 4,
-  "tone": 4,
-  "look": 3,
-  "overall": 4,
-  "verdict": "A clever Adrian's newspaper menu with the computer fight, Marie and Punchy, and one or two small slips on the winks.",
-  "missing": [
-   "Sides of beef used as punching bags (training)",
-   "Rocky speaking to his son: 'It ain't about how hard you hit'",
-   "Adrian's grave: 'Yo Adrian, we did it'",
-   "Mason 'The Line' Dixon",
-   "The Rocky Steps and the statue",
-   "Paulie's meat plant"
-  ],
-  "ideas": [
-   "Swap 'Adrian's arancini' for 'Sides of beef carpaccio' as a training nod.",
-   "Move 'It ain't about how hard you hit' to a boxed pull quote.",
-   "Change the Spider Rico wink to say he works at Adrian's.",
-   "Replace the cover poster text-over image with a clean still so the title doesn't fight the photo."
-  ],
-  "flat": false,
-  "done": false
- }
 }

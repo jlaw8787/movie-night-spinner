@@ -1,72 +1,74 @@
 {
- "id": "Set It Up (2018)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Serve the mains when Harper and Charlie share a late-night pizza in the empty office.",
-   "where": "cue-printed",
-   "verdict": "wrong",
-   "why": "In the film the two share cheap pizza on the floor of Charlie's bedroom, and they first meet in the lobby over a food delivery. The data cue has the same text.",
-   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/SetItUp",
-   "fix": "Serve the mains when Harper and Charlie share cheap pizza on the floor of Charlie's bedroom.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Late-night office pizza",
-   "where": "dish-name",
-   "verdict": "wrong",
-   "why": "The pizza is eaten in Charlie's bedroom, not the office.",
-   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/SetItUp",
-   "fix": "Bedroom floor pepperoni pizza",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Kirsten's dinner order. Get it wrong, you're done.",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Harper does risk being fired over Kirsten's dinner, but no source names the dish.",
-   "source": "https://www.whatsafterthemovie.com/summary/set-it-up",
-   "fix": "Kirsten's dinner delivery. Get it wrong, you're done.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Rick and Kirsten's first drink, set up by assistants.",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The assistants set them up with the kiss cam. Their first date is a bad night at a Korean barbecue where Rick throws up raw meat. No first drink was found.",
-   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/SetItUp",
-   "fix": "The bosses' first date, set up by assistants. Skip the raw meat.",
-   "printed": true,
-   "done": false
+  "id": "Set It Up (2018)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the mains when Harper and Charlie share a late-night pizza in the empty office.",
+      "where": "cue-printed",
+      "verdict": "wrong",
+      "why": "In the film the two share cheap pizza on the floor of Charlie's bedroom, and they first meet in the lobby over a food delivery. The data cue has the same text.",
+      "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/SetItUp",
+      "fix": "Serve the mains when Harper and Charlie share cheap pizza on the floor of Charlie's bedroom.",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Late-night office pizza",
+      "where": "dish-name",
+      "verdict": "wrong",
+      "why": "The pizza is eaten in Charlie's bedroom, not the office.",
+      "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/SetItUp",
+      "fix": "Bedroom floor pepperoni pizza",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Kirsten's dinner order. Get it wrong, you're done.",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "Harper does risk being fired over Kirsten's dinner, but no source names the dish.",
+      "source": "https://www.whatsafterthemovie.com/summary/set-it-up",
+      "fix": "Kirsten's dinner delivery. Get it wrong, you're done.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Rick and Kirsten's first drink, set up by assistants.",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "The assistants set them up with the kiss cam. Their first date is a bad night at a Korean barbecue where Rick throws up raw meat. No first drink was found.",
+      "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/SetItUp",
+      "fix": "The bosses' first date, set up by assistants. Skip the raw meat.",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "Takeaway layout fits the delivery plot, but the cue and pizza name get the best food scene wrong and the funniest set pieces are missing.",
+    "missing": [
+      "Korean barbecue date where Rick throws up raw meat on the grill",
+      "The elevator trap with the claustrophobic delivery man",
+      "Creepy Tim and the security cameras",
+      "Parent Trapping and Cyrano-ing, the scheme names",
+      "Becca's 'liking because, loving despite' speech",
+      "The kiss cam at the baseball game, three tries"
+    ],
+    "ideas": [
+      "Swap 'Late-night office pizza' for 'Bedroom floor pizza' and fix the cue to match.",
+      "Swap 'Spicy tuna crispy rice' for 'Korean barbecue, cook it first' with the raw meat gag.",
+      "Swap 'Office party cupcakes' note for 'Creepy Tim's love in enclosed spaces'.",
+      "Swap 'Iced salted caramel latte for the boss' note for 'Pandora's Box, Harper's code phrase'."
+    ],
+    "flat": true,
+    "done": false
   }
- ],
- "checked_ok": 12,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.4,
-  "verdict": "Takeaway layout fits the delivery plot, but the cue and pizza name get the best food scene wrong and the funniest set pieces are missing.",
-  "missing": [
-   "Korean barbecue date where Rick throws up raw meat on the grill",
-   "The elevator trap with the claustrophobic delivery man",
-   "Creepy Tim and the security cameras",
-   "Parent Trapping and Cyrano-ing, the scheme names",
-   "Becca's 'liking because, loving despite' speech",
-   "The kiss cam at the baseball game, three tries"
-  ],
-  "ideas": [
-   "Swap 'Late-night office pizza' for 'Bedroom floor pizza' and fix the cue to match.",
-   "Swap 'Spicy tuna crispy rice' for 'Korean barbecue, cook it first' with the raw meat gag.",
-   "Swap 'Office party cupcakes' note for 'Creepy Tim's love in enclosed spaces'.",
-   "Swap 'Iced salted caramel latte for the boss' note for 'Pandora's Box, Harper's code phrase'."
-  ],
-  "flat": true,
-  "done": false
- }
 }
