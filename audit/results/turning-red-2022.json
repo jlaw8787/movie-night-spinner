@@ -1,0 +1,62 @@
+{
+  "id": "Turning Red (2022)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Toronto, 2002. Four friends, one ticket.",
+      "where": "prop",
+      "verdict": "wrong",
+      "why": "The girls' goal is four tickets, which Mei says costs 800 bucks. Miriam also says she has to buy her own ticket.",
+      "source": "https://en.wikiquote.org/wiki/Turning_Red",
+      "fix": "Toronto, 2002. Four friends, four tickets.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Mei's tamagotchi gets fed first.",
+      "where": "dish-note",
+      "verdict": "unsure",
+      "why": "Tamagotchis are among the film's early 2000s gadgets, but the sources opened do not show Mei feeding one.",
+      "source": "https://nextshark.com/turning-red-easter-eggs",
+      "fix": "A snack from Mei's 2002, tamagotchi era.",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "The full moon ritual at the temple",
+      "where": "wink",
+      "verdict": "unsure",
+      "why": "The ritual happens on the night of a lunar eclipse, the red moon, not simply a full moon.",
+      "source": "https://en.wikipedia.org/wiki/Turning_Red",
+      "fix": "The red moon ritual at the temple",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 13,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 4,
+    "verdict": "A very good takeaway bag with the right neighbourhood, friends and food, with only a few loose lines.",
+    "missing": [
+      "Mei: 'My panda, my choice'",
+      "Ming as a kaiju-sized red panda at the SkyDome",
+      "Devon and the Daisy Mart",
+      "Tyler's birthday party",
+      "Mei's mother's face-shaped porridge",
+      "'Pandapocalypse 2002'"
+    ],
+    "ideas": [
+      "Swap 'Flaky egg tarts' note for 'Daisy Mart snack run'",
+      "Rename 'Lee family soy chicken' to 'Kaiju Ming soy chicken' with a SkyDome note",
+      "Replace the 'Red moon ritual mango pudding' note with 'Pandapocalypse 2002 clean-up'",
+      "Change the fortune to 'Four friends, four tickets'"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

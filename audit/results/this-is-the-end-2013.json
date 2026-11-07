@@ -1,0 +1,66 @@
+{
+ "id": "This Is the End (2013)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "We have supplies for exactly one week. Mostly snacks, and zero plans.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "Not a line on the Wikiquote page. In the film it is Seth who takes inventory (12 bottles of water, 56 beers, and so on) and the group sets up rationing. Nothing in the sources opened says 'one week'. A note should come from Seth's inventory scene.",
+   "source": "https://en.wikiquote.org/wiki/This_Is_the_End",
+   "fix": "Inventory says 12 waters, 56 beers and Nutella. Nobody touches James's Milky Way.",
+   "fix_note": {
+    "text": "Inventory says 12 waters, 56 beers and Nutella. Nobody touches James's Milky Way.",
+    "by": "Seth Rogen",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the sweets when they fight over the last chocolate bar.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "The group argues over James's Milky Way: Jonah asks for it, James says it is his, Seth and Craig want a bite. Matches.",
+   "source": "https://en.wikiquote.org/wiki/This_Is_the_End",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Shot on a camcorder, Pineapple Express 2.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "The film includes a homemade Pineapple Express 2 video shot on a camcorder in the house. Close enough for a menu joke.",
+   "source": "https://en.wikipedia.org/wiki/This_Is_the_End",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "Gets the sinkhole, Emma Watson and the Milky Way fight, but it is a quiet grey invite for a very loud film.",
+  "missing": [
+   "The Backstreet Boys in Heaven (finale)",
+   "Michael Cera's missing phone (party)",
+   "Channing Tatum on a leash (cannibals)",
+   "Danny wasting the water and the food (morning)",
+   "The exorcism and Jonah on the bed",
+   "'Don't give the Milky Way away!' (Craig)"
+  ],
+  "ideas": [
+   "Name the dessert 'Franco's Milky Way' instead of 'The last chocolate caramel nougat bar'",
+   "Swap 'Rationed pretzels' note for Danny eating all the supplies",
+   "Replace the hot honey pizza line with a Backstreet Boys 'Everybody' tune joke",
+   "Add a Cera 'Three-one-zero-nine' phone number place card"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

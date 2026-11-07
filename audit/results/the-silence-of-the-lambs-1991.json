@@ -1,0 +1,67 @@
+{
+ "id": "The Silence of the Lambs (1991)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I did enjoy the starter, Clarice. Tell me what you thought of the main and I'll tell you the wine.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Lecter never says this. It is an invented line in his voice, and it is printed as a letter from his desk, not as a film quote. The Chianti line the menu is hinting at is a different line. Quote pages show a real short line from him at the end of the film.",
+   "source": "https://en.wikiquote.org/wiki/The_Silence_of_the_Lambs_(film)",
+   "fix": "I do wish we could chat longer, but I'm having an old friend for dinner.",
+   "fix_note": {
+    "text": "I do wish we could chat longer, but I'm having an old friend for dinner.",
+    "by": "Hannibal Lecter",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Pour the red when Clarice first sits down across the glass from Lecter.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The wine moment is Lecter's census taker line ('I ate his liver with some fava beans and a nice Chianti'), said at the end of their first interview, with Clarice standing at the cell. The sources opened do not say she sits at the start, and there is no wine at that point.",
+   "source": "https://en.wikiquote.org/wiki/The_Silence_of_the_Lambs_(film)",
+   "fix": "Pour the red when Lecter says he ate the census taker's liver with fava beans and a nice Chianti.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "The good doctor's pick. Chilton never gets one.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "Chianti is Lecter's wine in his famous line, and Chilton is the hospital director who is his rival. Menu joke.",
+   "source": "https://en.wikiquote.org/wiki/The_Silence_of_the_Lambs_(film)",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "A good FBI breakroom roster with the moth, the glass cell and the Chianti, but the main note is invented and the tone stays politely creepy rather than properly dark.",
+  "missing": [
+   "Quid pro quo (Lecter and Clarice's exchange)",
+   "It rubs the lotion on its skin (Buffalo Bill's well)",
+   "Precious the dog (Gumb's house)",
+   "Night vision goggles in the dark basement (finale)",
+   "Lecter's mask and trolley (Memphis courthouse)",
+   "Have the lambs stopped screaming (final phone call)"
+  ],
+  "ideas": [
+   "Swap the 'Lamb shanks in red wine' note for 'Have the lambs stopped screaming?'",
+   "Rename 'Red wine poached pears' to 'Quid pro quo pears' with a trade-for-a-secret note",
+   "Replace 'West Virginia buttermilk fried chicken' with a note on Lecter's read on Clarice's accent",
+   "Add a lotion basket joke as a drinks line, such as 'It rubs the lotion on its skin' hand cream cocktail"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

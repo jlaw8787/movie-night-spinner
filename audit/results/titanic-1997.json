@@ -1,0 +1,42 @@
+{
+  "id": "Titanic (1997)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Jack's steerage ham sandwiches",
+      "where": "dish-name",
+      "verdict": "unsure",
+      "why": "No ham sandwich scene turned up in the plot summaries or the IMDb summary. Jack is shown at the first class dinner and the third class party, but no sandwiches are named.",
+      "source": "https://m.imdb.com/title/tt0120338/plotsummary",
+      "fix": "Steerage party ham sandwiches",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 15,
+  "vibe": {
+    "world": 5,
+    "moments": 3,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 4,
+    "verdict": "Black and gold saloon with a real 1912 first class menu behind it, but it uses few of the film's famous moments.",
+    "missing": [
+      "'I'm the king of the world' at the bow",
+      "'Draw me like one of your French girls' sketch session",
+      "The steerage party with Irish dancing",
+      "Cal's boast that 'God himself could not sink this ship'",
+      "Jack and Rose in the car in the cargo hold",
+      "The string quartet playing as the ship goes down"
+    ],
+    "ideas": [
+      "Swap the Black velvet note for Guggenheim's 'we are dressed in our best' and a brandy joke",
+      "Replace 'The whole feast, per cover' line with a sketch-session prop ('Draw me like one of your French girls')",
+      "Rename 'Jack's steerage ham sandwiches' to 'Steerage party ham sandwiches' and add 'Irish dancing below deck'",
+      "Swap the place card text for the poker hand that won Jack the ticket"
+    ],
+    "flat": false,
+    "done": false
+  }
+}

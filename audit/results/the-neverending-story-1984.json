@@ -1,0 +1,68 @@
+{
+ "id": "The NeverEnding Story (1984)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when Bastian unwraps his lunch in the school attic.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Wikipedia's plot and the Wikiquote page show Bastian hiding in the attic to read after arriving late, but neither mentions him unwrapping a lunch or eating there. Same text is printed as the showtime. I could not open a source that settles it.",
+   "source": "https://en.wikipedia.org/wiki/The_NeverEnding_Story_(film)",
+   "fix": "Serve the snacks when Bastian settles into the school attic with the book.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Atreyu, I've got my apple and a cheese sandwich up here in the attic. I'm reading all night.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "Note signed Bastian. The attic and reading through the night fit the plot, but the apple and cheese sandwich are not in any source opened, and Bastian never talks to Atreyu in the film. Could not verify.",
+   "source": "https://en.wikiquote.org/wiki/The_NeverEnding_Story_(film)",
+   "fix": "Atreyu, I've got the book and the whole night in this attic. Keep going, I'm not stopping.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Atreyu, I've got the book and the whole night in this attic. Keep going, I'm not stopping.",
+    "by": "Bastian",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Gmork is waiting in the cave. Eat fast.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Gmork closes in on Atreyu and then waits for him in the ancient ruins, where Atreyu finds murals of his journey. It is not a cave.",
+   "source": "https://en.wikipedia.org/wiki/The_NeverEnding_Story_(film)",
+   "fix": "Gmork is waiting in the ruins. Eat fast.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 18,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A cosy recipe box with the right Fantasia names, but it never goes near Morla, the Oracle's sphinxes or Gmork, and the home layout feels more kitchen than attic.",
+  "missing": [
+   "Morla the Ancient One in the Swamps of Sadness ('I don't care')",
+   "The Southern Oracle's sphinxes and the gate that reads your fear",
+   "Gmork in the ruins",
+   "The racing snail and the tiny nighthobbler rider",
+   "Falkor flying Bastian over restored Fantasia",
+   "Bastian chasing the bullies on Falkor (ending)"
+  ],
+  "ideas": [
+   "Swap 'Urgl's healing soup' note for a Morla line, 'Soup for a tired turtle who couldn't care less'.",
+   "Swap 'Ivory Tower tarragon roast chicken' printed note 'From Bastian's Attic Hideout' for a real note about the Childlike Empress's tower.",
+   "Rename 'Cold strawberry milk' to 'Bastian's Moon Child milk'.",
+   "Swap 'Falkor cloud meringues' note for the bullies being chased by Falkor."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

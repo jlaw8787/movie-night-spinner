@@ -1,0 +1,33 @@
+{
+  "id": "The Water Diviner (2014)",
+  "checked": "2026-11-07",
+  "facts": [
+    {"text": "Black tea first, thanks. Then I cross to Gallipoli. I am not going home without my boys.",
+     "where": "note", "verdict": "ok",
+     "why": "A note in Joshua's voice, not a quote (no quote page exists for this film in the sources opened). It fits the plot: he stays at Ayshe's hotel, crosses to Gallipoli by boat, and vows to bring his sons home. Keep it without quote marks.",
+     "source": "https://en.wikipedia.org/wiki/The_Water_Diviner",
+     "printed": true, "done": false},
+    {"text": "Orhan carries the Australian's bag in for these.",
+     "where": "house", "verdict": "unsure",
+     "why": "Wikipedia's plot summary does not mention Orhan or any bag scene, and a search did not return a page that settled it. Could not confirm.",
+     "source": "https://en.wikipedia.org/wiki/The_Water_Diviner",
+     "fix": "Ayshe's hotel kitchen sends these up to the Australian's room.",
+     "printed": true, "done": false},
+    {"text": "Ayshe pours it slowly. Joshua learns to wait.",
+     "where": "house", "verdict": "ok",
+     "why": "The film ends with Joshua drinking a coffee made by Ayshe, which shows she has fallen for him. Coffee as a slow courtship is a fair menu joke.",
+     "source": "https://en.wikipedia.org/wiki/The_Water_Diviner",
+     "printed": true, "done": false},
+    {"text": "Serve the main when Joshua arrives at Ayshe's hotel in Istanbul.",
+     "where": "cue", "verdict": "ok",
+     "why": "Joshua travels to Turkey and stays in a hotel in Istanbul run by Ayshe. Matches.",
+     "source": "https://en.wikipedia.org/wiki/The_Water_Diviner",
+     "printed": true, "done": false}
+  ],
+  "checked_ok": 12,
+  "vibe": {"world": 4, "moments": 3, "food": 3, "tone": 3, "look": 3, "overall": 3.2,
+    "verdict": "A tidy 1919 Istanbul hotel with good Turkish food, but it plays safe and misses the cricket bat, the windmill and the Outback.",
+    "missing": ["Joshua explaining cricket to the Turkish soldiers (train)", "The cricket bat found in the trenches (train)", "The windmill from Joshua's dream (Arthur's town)", "Divining water in the dry paddock (opening)", "Bribing a fisherman to reach Gallipoli (boat)", "Tea over coffee, and Ayshe's coffee at the end"],
+    "ideas": ["Swap 'Gallipoli Anzac biscuits' note for the cricket bat explained on the train", "Rename 'Ayshe's chicken pilaf' to the windmill supper after the dream", "Replace the divining rod tea name with a dry paddock line from the opening", "Add a bribed fisherman fish grill as a starter"],
+    "flat": true, "done": false}
+}

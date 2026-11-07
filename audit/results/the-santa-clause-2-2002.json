@@ -1,0 +1,87 @@
+{
+ "id": "The Santa Clause 2 (2002)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the cocoa when Scott takes Carol on their first date.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The cocoa on screen is Abby's designer Brazilian cocoa brought to Scott at the North Pole just before the naughty-list news, and Toy Santa getting a buzz from cocoa. The sources opened do not show cocoa on Scott and Carol's date (the sleigh ride and faculty party).",
+   "source": "https://en.wikiquote.org/wiki/The_Santa_Clause_2",
+   "fix": "Serve the cocoa when Abby brings Scott a cup and the news that Charlie is on the naughty list.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Believe in Santa? Fine, Scott, but you're carving the roast first.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Carol never says this. She does not know Scott is Santa until Charlie shows her the snow globe near the end, and she throws Scott out when he first tries to tell her. A real short line nearby is Charlie's to Carol.",
+   "source": "https://en.wikiquote.org/wiki/The_Santa_Clause_2",
+   "fix": "Seeing isn't believing, believing is seeing.",
+   "fix_note": {
+    "text": "Seeing isn't believing, believing is seeing.",
+    "by": "Charlie Calvin",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Curtis, the toy Santa double.",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "Curtis is the head elf who keeps the Handbook of Christmas. Toy Santa is the animatronic double that Curtis helps Scott build. Curtis is not the double.",
+   "source": "https://en.wikipedia.org/wiki/The_Santa_Clause_2",
+   "fix": "Curtis, who builds the toy Santa.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Curtis, the toy Santa double",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Same mix up. Curtis, the Keeper of the Handbook, helps build the Toy Santa double. He is not the double.",
+   "source": "https://en.wikipedia.org/wiki/The_Santa_Clause_2",
+   "fix": "Curtis and his Toy Santa double",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Raised at the Mrs. Claus wedding.",
+   "where": "dish-note",
+   "verdict": "ok",
+   "why": "Scott marries Carol at the end, so a toast at the wedding is fair. Menu joke.",
+   "source": "https://en.wikipedia.org/wiki/The_Santa_Clause_2",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A tidy formal banquet for the Council of Legendary Figures, but the writing is generic and the best gags (Toy Santa, the Molinator, the cocoa buzz) are missing.",
+  "missing": [
+   "Toy Santa 'buzz' after hot cocoa (North Pole)",
+   "Abby's designer Brazilian cocoa beans (North Pole)",
+   "The Molinator, Tooth Fairy's new name (Council meeting)",
+   "Easter Bunny's 33,000 offspring in private school (Council meeting)",
+   "Tinsel football (North Pole)",
+   "The de-Santafication, and Toy Santa's lumps of coal plan"
+  ],
+  "ideas": [
+   "Rename 'Elf-made peppermint hot cocoa' to 'Abby's designer bean cocoa' and add a 'Toy Santa feels a little buzz' note",
+   "Swap 'Sparkling apple and ginger' for a drink called 'The Molinator' with a Tooth Fairy note",
+   "Replace the Mother Nature maple vegetables note with the Easter Bunny's 33,000 offspring joke",
+   "Change the place card to the de-Santafication countdown, '28 days, find a wife by Christmas Eve'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

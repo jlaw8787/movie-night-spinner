@@ -1,0 +1,62 @@
+{
+ "id": "The Mask of Zorro (1998)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the mains when Alejandro and Elena dance at the governor's party.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Alejandro and Elena do dance at Montero's hacienda party, but in 1841 Montero is no longer governor. He was governor in 1821, and in the later scenes he is Don Rafael with his own company. The printed 'Mess call' style cue uses 'governor's' for a man who holds no such office then.",
+   "source": "https://en.wikipedia.org/wiki/The_Mask_of_Zorro",
+   "fix": "Serve the mains when Alejandro and Elena dance at Don Rafael's party.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Dinner at the governor's table.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Same issue as the cue. The dinner and party in the film are at Don Rafael Montero's hacienda in 1841, not a governor's table. The name 'Governor's chicken' is a menu title and fine on its own.",
+   "source": "https://en.wikipedia.org/wiki/The_Mask_of_Zorro",
+   "fix": "Dinner at Don Rafael's table.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Montero's toast at the ball. Elena isn't buying it.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Wikipedia and Wikiquote show Alejandro and Elena at Montero's party and their dance, but neither mentions a toast from Montero or Elena doubting it.",
+   "source": "https://en.wikiquote.org/wiki/The_Mask_of_Zorro",
+   "fix": "Don Rafael's fino at the ball. Elena dances anyway.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A tidy red-and-gold hacienda banquet with Don Diego as host, but it leans on a generic Spanish menu and misses the dance, the pointy-end line and the mine.",
+  "missing": [
+   "The 'pointy end goes into the other man' line (Alejandro, first lesson)",
+   "Alejandro and Elena's flamenco dance at the party",
+   "Zorro's Z carved on Montero's and Love's gear",
+   "The secret gold mine in the canyon",
+   "Training in the circle: 'there is nothing outside of it'",
+   "Alejandro in disguise as Don Alejandro del Castillo y Garcia"
+  ],
+  "ideas": [
+   "Swap 'Pan con tomate with jamon' house note for 'Pointy end goes into the other man' as an Alejandro nod (already close, but credit it to him).",
+   "Swap the 'Training Notes' place card for 'Inside the circle' from Diego's footwork lesson.",
+   "Rename 'Elena's flamenco sangria' note to the dance, 'Elena and Alejandro, one dance, no sword'.",
+   "Swap 'Governor's chicken' for 'Don Alejandro del Castillo's chicken' to nod to the disguise."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

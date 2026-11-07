@@ -1,0 +1,68 @@
+{
+ "id": "Tron: Legacy (2010)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Sam, I want to see a real sunrise. But dinner first. My father says it helps.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Quorra never calls Flynn her father; she calls him Flynn. Her real sunrise line is 'It's how I imagine the sunrise to be', and she asks Sam what the sun is like.",
+   "source": "https://en.wikiquote.org/wiki/Tron:_Legacy",
+   "fix": "Sam, tell me about the sun while we eat. I'd like to see a real sunrise.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Sam, tell me about the sun while we eat. I'd like to see a real sunrise.",
+    "by": "Quorra",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Served at Castor's bar, top of the tower.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Castor owns the End of Line Club and Clu destroys it, but the sources opened do not place the bar at the top of a tower.",
+   "source": "https://en.wikipedia.org/wiki/Tron:_Legacy",
+   "fix": "Served at Castor's bar in the End of Line Club.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Daft Punk on the decks, light cycles out back.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The sources opened do not cover the DJ booth or any light cycles at the club.",
+   "source": "https://en.wikipedia.org/wiki/Tron:_Legacy",
+   "fix": "Daft Punk on the decks, Castor working the room.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Sharp neon club look, but one note is wrong and the best moments are only touched.",
+  "missing": [
+   "Clu: 'Greetings, programs!'",
+   "Rinzler and the disc fights",
+   "The light cycle match",
+   "Quorra reading Jules Verne",
+   "Kevin's zen line: 'It's amazing how productive doing nothing can be'",
+   "The Solar Sailer"
+  ],
+  "ideas": [
+   "Swap the Quorra note for 'It's how I imagine the sunrise to be.'",
+   "Rename 'Light cycle pretzel rods' to 'Light cycle match pretzel rods' with a Clu note",
+   "Replace the 'No discussing...' footer with 'Greetings, programs!'",
+   "Rename 'Flynn's zen iced matcha with honey' note to 'It's amazing how productive doing nothing can be'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

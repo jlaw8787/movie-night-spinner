@@ -1,0 +1,57 @@
+{
+ "id": "The Shawshank Redemption (1994)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Tonight I found us cold beers and a proper dinner. Forty years inside teaches you to eat a good meal slowly.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Red doesn't say this and doesn't get the beers. Andy talks Hadley into the beers for the tarring crew in exchange for tax advice, and Red is one of the men on the roof. The note makes Red the provider.",
+   "source": "https://en.wikipedia.org/wiki/The_Shawshank_Redemption",
+   "fix": "Andy got us a cold beer each on the roof. For an hour we felt like free men. Make it last.",
+   "fix_note": {
+    "text": "Andy got us a cold beer each on the roof. For an hour we felt like free men. Make it last.",
+    "by": "Red",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Pour the beers when the tarring crew gets their cold ones on the roof.",
+   "where": "cue-printed",
+   "verdict": "ok",
+   "why": "In 1949 Andy helps Hadley with his inheritance tax and asks for cold beers for the crew working on the roof. Matches.",
+   "source": "https://en.wikiquote.org/wiki/The_Shawshank_Redemption",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A clean mess hall tray with the rooftop beers, Brooks and Jake and Zihuatanejo all in, but the food names are mostly cute and the note is off.",
+  "missing": [
+   "Rita Hayworth poster over the tunnel (Andy's cell)",
+   "Marriage of Figaro over the loudspeakers (library)",
+   "Red as the man who can get anything, 'Sears and Roebuck' (smuggling)",
+   "The hayfield and the oak tree near Buxton (Red's parole)",
+   "Warden Norton's hollowed out Bible with the rock hammer",
+   "Andy and Red's chess set"
+  ],
+  "ideas": [
+   "Swap 'Rock hammer rocky road' for 'Rita Hayworth sundae' with a note about what hides behind her",
+   "Replace the Brooks beef stew note with a Jake the crow line",
+   "Rename 'Rooftop ginger beer shandy' to 'Cold one on the roof' with the 'free men' idea",
+   "Add a sepia chess board motif to the library cart tag"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

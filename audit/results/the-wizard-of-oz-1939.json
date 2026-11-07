@@ -1,0 +1,76 @@
+{
+ "id": "The Wizard of Oz (1939)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Toto's had his share of the scraps already. Auntie Em would want me to save some for the Scarecrow.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Dorothy never says this. Auntie Em is not in Oz, and the Scarecrow is stuffed with straw and wants a brain, so nobody is saving him food. The one scrap moment is Dorothy tossing a piece of her cruller to Toto on the farm. A real short Dorothy line from that same scene fits the length.",
+   "source": "https://en.wikiquote.org/wiki/The_Wizard_of_Oz_(1939_film)",
+   "fix": "Someplace where there isn't any trouble... do you suppose there is such a place, Toto?",
+   "fix_note": {
+    "text": "Someplace where there isn't any trouble... do you suppose there is such a place, Toto?",
+    "by": "Dorothy Gale",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the snacks when Auntie Em hands out the fresh crullers on the farm.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The cruller on screen is Dorothy's, and she tosses a piece to Toto before she sings. The sources opened do not show Auntie Em handing out crullers.",
+   "source": "https://en.wikiquote.org/wiki/The_Wizard_of_Oz_(1939_film)",
+   "fix": "Serve the snacks when Dorothy shares a piece of her cruller with Toto on the farm.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Pay no attention to the man behind the curtain.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "Close nod to the film's line 'Pay no attention to that man behind the curtain!' A plain reference. Not printed in quote marks.",
+   "source": "https://en.wikiquote.org/wiki/The_Wizard_of_Oz_(1939_film)",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "The horse of a different colour approves.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "The Horse of a Different Color in the Emerald City is in the film, and the phrase is the coachman's.",
+   "source": "https://en.wikiquote.org/wiki/The_Wizard_of_Oz_(1939_film)",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "Good coverage of the road, the slippers and the monkeys, but the palace banquet is a generic setting and the host note was invented.",
+  "missing": [
+   "The poppy field (the road to Emerald City)",
+   "The Wicked Witch melting after Dorothy throws water",
+   "Scarecrow's diploma and the Tin Man's heart clock (Wizard's gifts)",
+   "Horse of a Different Color changing colour (Emerald City)",
+   "Glinda's bubble (Munchkinland)",
+   "Tin Man's oil can"
+  ],
+  "ideas": [
+   "Swap 'Pimento cheese finger sandwiches' note for the Toto curtain reveal",
+   "Rename 'Yellow brick road pineapple lemonade' to 'Horse of a different colour' and change its colour by flavour",
+   "Replace 'Ruby slipper jelly' note with 'There's no place like home'",
+   "Add a poppy field dessert, such as poppy seed shortbread, as a sleepy treat"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

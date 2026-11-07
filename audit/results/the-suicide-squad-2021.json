@@ -1,0 +1,68 @@
+{
+ "id": "The Suicide Squad (2021)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when the squad cuts loose in a Corto Maltese bar.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The plot summary opened has no bar scene for the squad. It has the beach landing, the rebel base, the capital and the palace. Could not confirm a bar scene where the squad cuts loose.",
+   "source": "https://en.wikipedia.org/wiki/The_Suicide_Squad_(film)",
+   "fix": "Serve the snacks when Waller briefs Bloodsport's team at Belle Reve.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Dad always said never fight on an empty stomach. So we eat first.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "Not a line on the Wikiquote page. As a note it claims something about Ratcatcher 2's father that the sources opened do not support. A short real line of hers fits the length.",
+   "source": "https://en.wikiquote.org/wiki/The_Suicide_Squad_(film)",
+   "fix": "If I die because I gambled on love, it will be a worthy death.",
+   "fix_note": {
+    "text": "If I die because I gambled on love, it will be a worthy death.",
+    "by": "Ratcatcher 2",
+    "kind": "quote"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Harley's order at Luna's palace.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Harley is courted by President Luna at the palace, but no source shows what she drinks, or a mojito.",
+   "source": "https://en.wikipedia.org/wiki/The_Suicide_Squad_(film)",
+   "fix": "Harley's drink at Luna's palace.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A solid mess hall tray with the right characters, but the dishes are mostly generic and it misses the film's loud, gory humour.",
+  "missing": [
+   "Peacemaker's helmet: 'It's not a toilet seat, it's a beacon of freedom!' (Waller briefing)",
+   "King Shark's 'Nom nom' (feeding)",
+   "Ratcatcher 2 and her rat Sebastian (rat swarm finale)",
+   "Weasel in the jungle (mid-credits)",
+   "Harley killing the red flags: 'Killing kids? Kind of a red flag.'",
+   "Bloodsport's rat phobia (Harcourt, post-credits)"
+  ],
+  "ideas": [
+   "Swap 'Salt and pepper calamari' note for a King Shark 'Nom nom' line",
+   "Rename 'Jungle mission chicken' to 'Weasel's last chicken' with a mid-credits note",
+   "Replace 'Starro starfish cookies' note with the Starro hole in the eye gag",
+   "Add a Peacemaker 'Beacon of freedom' helmet shaped bun"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

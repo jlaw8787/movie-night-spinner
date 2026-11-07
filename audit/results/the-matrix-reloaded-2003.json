@@ -1,0 +1,77 @@
+{
+ "id": "The Matrix Reloaded (2003)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when Neo, Morpheus and Trinity sit down at the Merovingian's table at Le Vrai.",
+   "where": "cue-printed",
+   "verdict": "wrong",
+   "why": "The Merovingian says 'Please, sit, join us', but Neo declines and the three stay standing the whole scene. Same text is the data cue.",
+   "source": "https://en.wikiquote.org/wiki/The_Matrix_Reloaded",
+   "fix": "Serve the snacks when Neo, Morpheus and Trinity walk up to the Merovingian's table at Le Vrai.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve the snacks when Neo, Morpheus and Trinity sit down at the Merovingian's table at Le Vrai.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "Same as the printed cue. They are invited to sit but never do.",
+   "source": "https://en.wikiquote.org/wiki/The_Matrix_Reloaded",
+   "fix": "Serve the snacks when Neo, Morpheus and Trinity walk up to the Merovingian's table at Le Vrai.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "You come to my restaurant, you eat what my kitchen sends. Start with the cake, my chef made it especially for the lady.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a line from the film, and it contradicts the plot. The Merovingian sends the special cake to another woman across the room, and says he wrote the program in it himself. No chef is involved and it is not for Trinity.",
+   "source": "https://en.wikiquote.org/wiki/The_Matrix_Reloaded",
+   "fix": "Dessert goes to the woman across the room. A very special dessert, and I wrote it myself.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Dessert goes to the woman across the room. A very special dessert, and I wrote it myself.",
+    "by": "The Merovingian",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Like wiping your arse with silk, says the Merovingian.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The Merovingian says it about swearing in French ('it's like wiping your ass with silk, I love it'), right after praising Chateau Haut-Brion 1959. Pinning it on a glass of Bordeaux shifts the joke. Close enough as a nod, but not what he says it about.",
+   "source": "https://en.wikiquote.org/wiki/The_Matrix_Reloaded",
+   "fix": "Chateau Haut-Brion 1959, says the Merovingian. Magnificent.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "A sharp French bistro that matches the Merovingian scene, with cake, causality and Persephone in the right places, though the cue and note get the cake scene wrong.",
+  "missing": [
+   "The Burly Brawl, Neo versus the Smiths",
+   "Twins turning ghost in the freeway chase",
+   "The Architect: 'Ergo' and the room of screens",
+   "Persephone's kiss with Neo",
+   "The Merovingian's French swearing speech"
+  ],
+  "ideas": [
+   "Swap the 'From the House' note for his real dessert line (see fix_note).",
+   "Swap 'Table for the Merovingian / Persephone to follow' for 'Persephone, seated, already bored'.",
+   "Rename 'Escargots in garlic butter' note to one of his cause and effect lines, 'I drank too much wine, I must take a piss.'",
+   "Add a ghost-twins gag: 'White tablecloth, vanishing at speed'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

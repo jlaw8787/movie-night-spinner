@@ -1,0 +1,78 @@
+{
+ "id": "The Rocketeer (1991)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Just need a hot meal before the next flight. And don't tell Peevy about the jetpack, okay?",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Cliff never says this, and it contradicts the plot: Cliff and Peevy find the rocket pack together and test it together, so Peevy already knows. The only Cliff line on the Wikiquote page is longer than 15 words, so a note is safer.",
+   "source": "https://en.wikiquote.org/wiki/The_Rocketeer_(film)",
+   "fix": "Hot meal first. Then back to the hangar, and Peevy's gum patch had better hold.",
+   "fix_note": {
+    "text": "Hot meal first. Then back to the hangar, and Peevy's gum patch had better hold.",
+    "by": "Cliff Secord",
+    "kind": "note"
+   },
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Cliff's lunch, on the tab Millie keeps.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Neither Wikipedia nor the location page that was opened names a Millie at the Bulldog Cafe, or shows Cliff running a tab. Could not confirm the character.",
+   "source": "https://en.wikipedia.org/wiki/The_Rocketeer_(film)",
+   "fix": "Cliff's lunch, before the mobsters walk in.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Jenny's order at the counter, between takes.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The plot has Jenny on Sinclair's film set and at the South Seas Club, not at the Bulldog Cafe counter. Could not confirm she ever visits the cafe.",
+   "source": "https://en.wikipedia.org/wiki/The_Rocketeer_(film)",
+   "fix": "A 1930s soda fountain classic.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Millie's counter at the Bulldog",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "No source names a Millie at the Bulldog Cafe.",
+   "source": "https://en.wikipedia.org/wiki/The_Rocketeer_(film)",
+   "fix": "The cafe's counter special",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 8,
+ "vibe": {
+  "world": 5,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 5,
+  "overall": 4,
+  "verdict": "A great setting in the Bulldog Cafe with a proper 1938 diner look, but the dishes and house lines lean on made-up details rather than the film's props.",
+  "missing": [
+   "Beemans gum (Hughes gives it to Cliff at the end)",
+   "Chewing gum patching the fuel tank (Peevy, diner scene)",
+   "Gee Bee Z racer (opening and ending)",
+   "Hollywoodland sign crash (finale)",
+   "Spruce Goose model glider (Hughes' workshop)",
+   "Lothar (Sinclair's henchman)"
+  ],
+  "ideas": [
+   "Swap 'Rocket sundae' note for a gum line: add a Beemans gum mint on the side",
+   "Replace 'Cliff's lunch, on the tab Millie keeps' with a line about the gum patch at the diner",
+   "Rename the egg and bacon rolls to 'Gee Bee lunch pails' to tie them to Cliff's racer",
+   "Swap the cherry phosphate house note for a Hollywoodland line, such as 'Hollywoodland' soda"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

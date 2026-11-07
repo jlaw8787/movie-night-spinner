@@ -1,0 +1,32 @@
+{
+  "id": "The Thing (1982)",
+  "checked": "2026-11-07",
+  "facts": [
+    {"text": "Serve the snacks when MacReady runs the blood test.",
+     "where": "cue", "verdict": "ok",
+     "why": "MacReady proposes testing blood with a heated wire and restrains each man for it. Matches.",
+     "source": "https://en.wikipedia.org/wiki/The_Thing_(1982_film)",
+     "printed": true, "done": false},
+    {"text": "Nobody eats until we've tested the blood. That's the rule for now, and I don't care who's offended.",
+     "where": "note", "verdict": "ok",
+     "why": "A note in MacReady's voice, not a quote. He takes command and runs the blood test, so it suits the plot, though nobody in the film talks about eating first. Keep it without quote marks. It is not printed on the single face.",
+     "source": "https://en.wikipedia.org/wiki/The_Thing_(1982_film)",
+     "printed": false, "done": false},
+    {"text": "Windows checks the tin twice. Trust nobody.",
+     "where": "house", "verdict": "ok",
+     "why": "Windows is the radio operator in the film and 'trust nobody' is the film's tagline. Menu joke.",
+     "source": "https://en.wikiquote.org/wiki/The_Thing_(1982_film)",
+     "printed": true, "done": false},
+    {"text": "MacReady's drink of choice, in a lolly.",
+     "where": "dish-note", "verdict": "ok",
+     "why": "MacReady drinks Scotch (J&B), and shares a bottle with Childs in the last scene.",
+     "source": "https://en.wikipedia.org/wiki/The_Thing_(1982_film)",
+     "printed": true, "done": false}
+  ],
+  "checked_ok": 13,
+  "vibe": {"world": 4, "moments": 4, "food": 3, "tone": 4, "look": 4, "overall": 3.8,
+    "verdict": "A good Outpost 31 ration sheet with the blood test and trust jokes, but the food is a standard menu with a few film names stuck on.",
+    "missing": ["MacReady pouring Scotch into the chess computer (rec room)", "Sharing the bottle of J&B at the end (finale)", "Norris's head growing legs (the defibrillator scene)", "Nauls and his boom box and cowboy hat", "The Dog-Thing in the kennel (kennel scene)", "Blair's homemade flying saucer"],
+    "ideas": ["Swap 'Hot rum toddy' for 'J&B on the rocks' with the final scene note", "Rename 'Petri dish jelly' to 'Norris's head jelly' with a legs joke", "Replace 'Nauls's beef stew' note with Nauls and his boom box", "Add a hot wire tag to the plate for the blood test"],
+    "flat": false, "done": false}
+}
