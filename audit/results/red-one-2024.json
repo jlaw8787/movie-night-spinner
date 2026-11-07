@@ -1,0 +1,79 @@
+{
+ "id": "Red One (2024)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Jack O'Malley",
+   "where": "note-by",
+   "verdict": "wrong",
+   "why": "In the film Jack O'Malley is the freelance hacker. Callum Drift is the head of Santa's security, so a call to arms about finding Santa belongs to Callum.",
+   "source": "https://en.wikipedia.org/wiki/Red_One_(film)",
+   "fix": "Callum Drift",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Santa's missing. Grab a plate and eat fast, nobody at this table sleeps until we find him.",
+    "by": "Callum Drift",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Jack O'Malley, head of North Pole security.",
+   "where": "footer",
+   "verdict": "wrong",
+   "why": "Jack O'Malley is the hacker who sold Santa's location. Callum Drift is head of Santa's security.",
+   "source": "https://en.wikipedia.org/wiki/Red_One_(film)",
+   "fix": "Callum Drift, head of Santa's security.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Callum Drift, the tracker",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "Callum is head of Santa's security, and he and Jack track Santa together. 'The tracker' undersells him and suits Jack's hacking more.",
+   "source": "https://en.wikipedia.org/wiki/Red_One_(film)",
+   "fix": "Callum Drift, head of Santa's security",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Cardamom double espresso",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "The note says it is for Jack O'Malley's shift that has no end. Jack is a hacker, not the security chief. A shift that never ends suits Callum Drift.",
+   "source": "https://en.wikipedia.org/wiki/Red_One_(film)",
+   "fix": "Callum Drift's shift has no end.",
+   "printed": false,
+   "done": false,
+   "full": "Jack O'Malley's shift has no end."
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A neat North Pole canteen sheet that is let down by mixing up who Jack and Callum are, and it skips the film's best monsters.",
+  "missing": [
+   "Krampus in his lair",
+   "Grýla's snowman henchmen",
+   "The Glaskäfig snow globes",
+   "Ted in Aruba",
+   "Santa's sleigh and the flying reindeer",
+   "The Naughty List"
+  ],
+  "ideas": [
+   "Swap 'Maple pecan pretzel crunch' for 'Naughty List coal cookies' as a nod to the Naughty List.",
+   "Add 'Aruba rum punch' to the drinks as a nod to Ted in Aruba.",
+   "Swap 'Code Red velvet crinkle cookies' for 'Glaskäfig snow globe jellies' as the sweet.",
+   "Fix the note so Callum Drift says it, and keep Jack for a hacker joke on a house line."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

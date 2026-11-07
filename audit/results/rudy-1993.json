@@ -1,0 +1,48 @@
+{
+ "id": "Rudy (1993)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Shift's over, Fortune, and there's enough food here for the whole team. Pull up a chair for the second half.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Fortune is the groundskeeper at Notre Dame Stadium, not at the Joliet mill. The note speaks to him in the wrong place, and Rudy never hosts the team at the mill.",
+   "source": "https://en.wikiquote.org/wiki/Rudy_(film)",
+   "fix": "Shift's over. Eat up, because I'm heading to South Bend and I'm not coming back till I've played.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Shift's over. Eat up, because I'm heading to South Bend and I'm not coming back till I've played.",
+    "by": "Rudy Ruettiger",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.6,
+  "verdict": "A believable mill break room with Fortune and number 45, but the note mixes up the places and the cover has no stills.",
+  "missing": [
+   "Pete's death in the mill explosion",
+   "Fortune's 'five feet nothin', a hundred and nothin' speech",
+   "Father Cavanaugh: 'I am not Him'",
+   "D-Bob tutoring Rudy",
+   "The seniors laying their jerseys on Devine's desk",
+   "Rudy sacking the Georgia Tech quarterback and being carried off"
+  ],
+  "ideas": [
+   "Swap 'Joliet steel mill meatloaf sandwiches' for 'Pete's mill break sandwiches' as a nod to Pete.",
+   "Add Fortune's speech to the house note under the pierogi.",
+   "Swap 'Notre Dame tailgate beer brats' for 'Georgia Tech sack brats' to nod to the final play.",
+   "Rewrite the note so Rudy talks to his dad and not to Fortune."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

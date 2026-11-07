@@ -1,0 +1,43 @@
+{
+ "id": "Roman Holiday (1953)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Champagne, before noon",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The note says Joe gets cold coffee. Ann orders champagne at the cafe, but no source I opened shows what Joe orders.",
+   "source": "https://en.wikiquote.org/wiki/Roman_Holiday",
+   "fix": "Ann's order at the cafe, with no schedule to keep.",
+   "printed": true,
+   "done": false,
+   "full": "Ann's order at the café. Joe gets cold coffee."
+  }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 4.0,
+  "verdict": "A stylish bistro with the gelato, the Vespa and the barge fight in the right places, though it skips Joe's pajamas and the last line.",
+  "missing": [
+   "Joe's pajamas on Ann ('This is my room')",
+   "'Rome. By all means, Rome.' (the last line)",
+   "Ann asleep on the wall",
+   "The Colosseum",
+   "The Mouth of Truth hand gag",
+   "Irving's lighter camera at the press conference"
+  ],
+  "ideas": [
+   "Swap 'Vespa ride bruschetta' for 'Vespa ride supplì' with a note about the arrest at the traffic stop.",
+   "Add 'Rome. By all means, Rome.' as the footer line.",
+   "Swap 'Whipped ricotta, fig and honey crostini' for 'Mouth of Truth ricotta' with a note about the hand gag.",
+   "Add a Colosseum still to the second face."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

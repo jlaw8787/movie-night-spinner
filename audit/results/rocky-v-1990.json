@@ -1,0 +1,62 @@
+{
+ "id": "Rocky V (1990)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Balboa Christmas Eve struffoli",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "The sources I opened do not mention Christmas or Christmas Eve in this film.",
+   "source": "https://movies.fandom.com/wiki/Rocky_V",
+   "fix": "Balboa back-in-the-old-house struffoli",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Christmas Eve back at the old house.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The sources I opened do not place the film at Christmas.",
+   "source": "https://movies.fandom.com/wiki/Rocky_V",
+   "fix": "Back at the old house.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Mickey's old gym, handed down to Rocky",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "Wikipedia says Mighty Mick's Gym was willed to Mickey's son and that Rocky found it run down before reopening it. It is not clear that it passed to Rocky, so the wording is unsure.",
+   "source": "https://en.wikipedia.org/wiki/Rocky_V",
+   "fix": "Mickey's old gym, run down till Rocky reopens it",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 2,
+  "overall": 2.8,
+  "verdict": "A decent bar tab concept, but the cover art is small and low-res, the header text is cut off, and most of the street fight is missing.",
+  "missing": [
+   "'Sue me for what?' (Rocky to Duke)",
+   "Tommy Gunn called a paper champion",
+   "Rocky Jr. getting bullied at school",
+   "Mickey's vision in the alley",
+   "The street fight in the old neighbourhood",
+   "Rocky giving Robert Mickey's cufflink on the steps"
+  ],
+  "ideas": [
+   "Swap 'Eggnog with nutmeg and rum' for 'Sue me for what? shot'.",
+   "Swap 'Potato pierogi with fried onion' for 'Paper champion pierogi' as a nod to Tommy.",
+   "Fix the sign line so it is not cut off at 'CASH ONLY, NO CRED'.",
+   "Use a street fight still instead of the small poster."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

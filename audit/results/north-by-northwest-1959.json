@@ -1,0 +1,58 @@
+{
+ "id": "North by Northwest (1959)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "I'm not George Kaplan, whoever he is. I'll take the brook trout, and sit down, you're making the train nervous.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Not a line from the film. In the dining car scene Eve is the one who points Roger at the brook trout, and the nearest real Kaplan lines are about Roger insisting his name is Thornhill.",
+   "source": "https://en.wikiquote.org/wiki/North_by_Northwest",
+   "fix": "My name is Thornhill, Roger Thornhill! It's never been anything else.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "My name is Thornhill, Roger Thornhill! It's never been anything else.",
+    "by": "Roger Thornhill",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Roger's Oak Bar lunch, before the page for Kaplan.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The film puts Roger in the Plaza's Oak Room restaurant when he is paged as Kaplan, meeting colleagues over drinks. A lunch at the Oak Bar is not in the sources, and Crab Louis is never named.",
+   "source": "https://en.wikipedia.org/wiki/North_by_Northwest",
+   "fix": "Roger's Oak Room table, before the page for Kaplan.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "A properly dressed dining car that nails the trout, the crop duster and Rushmore, let down by an invented signed quote.",
+  "missing": [
+   "The page for Kaplan at the Oak Room (Plaza Hotel)",
+   "The bourbon forced into Roger before the staged crash (Townsend estate)",
+   "The knife in Townsend's back at the United Nations (UN lobby)",
+   "Roger disrupting the art auction (Chicago)",
+   "Eve hiding Roger in the upper berth (train)",
+   "'Come along, Mrs. Thornhill' in the closing train shot (ending)"
+  ],
+  "ideas": [
+   "Swap the invented signed quote for the real Thornhill line about his name, and print it in quote marks.",
+   "Swap 'Dining car relish tray' for 'Auction house canapes' with a note about Roger bidding wildly to get thrown out.",
+   "Swap 'Baked Alaska' for a 'Mount Rushmore sundae' with four faces in ice cream and a train-tunnel wink.",
+   "Change the 'Crab Louis' house line to refer to the Oak Room, where Roger is paged."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

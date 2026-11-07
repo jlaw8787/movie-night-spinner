@@ -1,0 +1,78 @@
+{
+ "id": "Pineapple Express (2008)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Got snacks for days, Dale. Chips, cereal, the lot. Settle in, man, we're not going anywhere tonight.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Saul says he is done hiding and the pair decide to flee the city that night, so settling in goes against the plot and the cue.",
+   "source": "https://en.wikipedia.org/wiki/Pineapple_Express_(film)",
+   "fix": "Got snacks for days, Dale. Chips, cereal, the lot. Grab a bag, man, we're not staying here tonight.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Got snacks for days, Dale. Chips, cereal, the lot. Grab a bag, man, we're not staying here tonight.",
+    "by": "Saul Silver",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "The chase through the woods",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "They hide out in the woods and the car dies, but no chase through the woods is described. The chase is in the police car.",
+   "source": "https://en.wikipedia.org/wiki/Pineapple_Express_(film)",
+   "fix": "The night in the woods",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "For the morning after the chase through the woods.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Same problem as the wink.",
+   "source": "https://en.wikipedia.org/wiki/Pineapple_Express_(film)",
+   "fix": "For the morning after the night in the woods.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Dale's process server lunch, between subpoenas.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Dale is a process server, but no source shows him with a horchata or a lunch stop.",
+   "source": "https://en.wikipedia.org/wiki/Pineapple_Express_(film)",
+   "fix": "Cold and sweet, for a process server's long day.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 9,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3,
+  "verdict": "Pineapple everywhere is a fair joke, but it skips Red's cat cake, the dumpster and the Quiznos line.",
+  "missing": [
+   "Red frosting the cake for his dead cat's birthday (Red's place)",
+   "'Two ideas: Nowhere and Quizno's' (the woods)",
+   "Saul in the dumpster, 'I am in the dumpster already' (Ted's)",
+   "Saul's leg through the windshield (the car chase)",
+   "The car battery dying from talk radio (the woods)",
+   "Breakfast at the diner after the shootout (ending)"
+  ],
+  "ideas": [
+   "Swap 'Angie's family pineapple upside-down cake' for 'Red's cat's birthday cake'.",
+   "Swap 'Saul's cheesy garlic pull-apart bread' for a 'Quizno's sub' joke ('Nowhere and Quizno's').",
+   "Swap 'Iced horchata' note for the dead battery from talk radio.",
+   "Swap the 'Red's pineapple teriyaki chicken' note for the boiled eggs Red is making."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

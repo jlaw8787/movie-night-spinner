@@ -1,0 +1,52 @@
+{
+ "id": "Scream 3 (2000)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the quesadillas when Gale talks her way onto the Stab 3 set at Sunrise Studios.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Wikipedia says Gale travels to Hollywood and finds Dewey working as an adviser on the Stab 3 set. Talking her way on was not confirmed.",
+   "source": "https://en.wikipedia.org/wiki/Scream_3",
+   "fix": "Serve the quesadillas when Gale finds Dewey advising on the Stab 3 set.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Stab 3, Stage 4, Closed Set",
+   "where": "sign",
+   "verdict": "unsure",
+   "why": "The Stab 3 set is real, but the stage number was not confirmed in sources read.",
+   "source": "https://en.wikipedia.org/wiki/Scream_3",
+   "fix": "Stab 3, Closed Set",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "Studio truck setting suits the film within a film, but the menu is plain and misses Randy's tape and the mansion.",
+  "missing": [
+   "Randy's video message from beyond the grave",
+   "Martha Meeks bringing the tape",
+   "Roman's secret screening room",
+   "The voice changer that sounds like Maureen",
+   "Jennifer Jolie playing Gale",
+   "Sidney working a crisis hotline under an alias"
+  ],
+  "ideas": [
+   "Swap 'California sushi rolls' for 'Randy's last tape sushi' to use the video message.",
+   "Swap 'Milton's party mushroom vol-au-vents' note for the birthday party at Milton's mansion where the killer is revealed.",
+   "Swap the 'Iced mocha' house line for a Jennifer Jolie green juice.",
+   "Change the plain price column to Stab 3 call sheet times in place of 'Small, Big, Sweet, Sips'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

@@ -1,0 +1,73 @@
+{
+ "id": "Prometheus (2012)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when the crew stumble out of two years in stasis and Vickers drops for push-ups.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The plot summary and the quote pages I opened do not place Vickers's push-ups. In the film she does them in her own module, so they may not happen at the same moment the crew wake. Treat the timing as unconfirmed.",
+   "source": "https://en.wikipedia.org/wiki/Prometheus_(2012_film)",
+   "fix": "Serve the snacks when the crew wake from two years in stasis aboard the Prometheus.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Hummus with warm flatbread",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The note says Vickers eats this alone in her private module. No source I opened shows her eating anything, so the claim is made up. She does have a private module, but the food is invented.",
+   "source": "https://en.wikipedia.org/wiki/Prometheus_(2012_film)",
+   "fix": "Vickers keeps to her private module, and her own table.",
+   "printed": true,
+   "done": false,
+   "full": "Vickers's pick, eaten alone in her private module."
+  },
+  {
+   "text": "Christmas Day landfall beef Wellington",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "Janek's Christmas tree is in the film, but none of the pages I opened date the landing as Christmas Day. The ship's arrival date is not settled by my sources.",
+   "source": "https://en.wikipedia.org/wiki/Prometheus_(2012_film)",
+   "fix": "Christmas tree landfall beef Wellington",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Arrival: Christmas, 2093",
+   "where": "prop",
+   "verdict": "unsure",
+   "why": "Same problem as the Wellington. The year 2093 is right for the ship, but a Christmas Day arrival is not confirmed by the sources I opened.",
+   "source": "https://en.wikipedia.org/wiki/Prometheus_(2012_film)",
+   "fix": "Arrival: LV-223, 2093",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 17,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A smart airline galley that nails the Christmas tree and Lawrence of Arabia gags, but it stays polite for a film about a very bad dinner party.",
+  "missing": [
+   "The Engineer drinking the black liquid at the waterfall (opening scene)",
+   "David's line 'Big things have small beginnings' (the lab)",
+   "Shaw cutting out the squid baby on the surgery table",
+   "Fifield's helmet melting after the snake attack",
+   "David's glowing holographic star map room",
+   "Weyland's TED talk hologram"
+  ],
+  "ideas": [
+   "Swap 'Hummus with warm flatbread' for 'Squid in a pastry blanket' as a nod to Shaw's surgery table scene.",
+   "Swap the plain 'Weyland Corporation Expedition' venue line for the Weyland TED talk quote about the future, as a menu header.",
+   "Add a dish called 'Fifield's melted helmet jelly' to the sweets to give the food some horror bite.",
+   "Swap 'Peated single malt, neat' for 'Janek's squeezebox tune' as a drink name, to use the accordion on the bridge."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

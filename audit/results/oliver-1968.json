@@ -1,0 +1,62 @@
+{
+ "id": "Oliver! (1968)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Sizzling over the fire in Fagin's den the night Oliver arrives",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Wikipedia has Dodger bringing Oliver to the hideout and Fagin's treasure scene, but does not mention sausages or any supper that night.",
+   "source": "https://en.wikipedia.org/wiki/Oliver!_(film)",
+   "fix": "Sizzling over the fire in Fagin's den.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "The first proper breakfast in the big house in Bloomsbury",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Brownlow takes Oliver in, but the sources opened never give a district or a breakfast scene.",
+   "source": "https://en.wikipedia.org/wiki/Oliver!_(film)",
+   "fix": "A proper breakfast once Mr Brownlow takes him in.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Saffron Hill, London. Up the stairs, mind the rats.",
+   "where": "sign",
+   "verdict": "unsure",
+   "why": "Saffron Hill is Dickens' address for the den. The film summary only says a hideout in London, and no source opened names the street.",
+   "source": "https://en.wikipedia.org/wiki/Oliver!_(film)",
+   "fix": "Somewhere in London. Up the stairs, mind the rats.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 3,
+  "overall": 3.8,
+  "verdict": "A good newspaper concept with the right dishes and winks, though the look is flat and the masthead price is American.",
+  "missing": [
+   "'Please sir, I want some more' (workhouse dining hall)",
+   "Consider Yourself with the Dodger (London streets)",
+   "Fagin's pick-a-pocket lessons (the den)",
+   "The bookstall wallet theft with Mr Brownlow (London)",
+   "Nancy and the Three Cripples sing-along (tavern)",
+   "Fagin's treasure sinking in the mud (finale)"
+  ],
+  "ideas": [
+   "Change 'Two cents' on the masthead to 'Tuppence'.",
+   "Swap 'Workhouse porridge brulee' for a plain 'Please sir, one more bowl' gruel with a burnt sugar top.",
+   "Swap the Brownlow crumpets note for the bookstall wallet theft.",
+   "Make the second page photo a colour frame so the paper looks less washed out."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "id": "Phar Lap (1983)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Harry Telford's toast to the 1930 Cup.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "The film has Telford sidelined and fighting with Davis, and the sources opened show no toast.",
+   "source": "https://en.wikipedia.org/wiki/Phar_Lap_(film)",
+   "fix": "Raised to the 1930 Cup win.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Tommy's lunch, eaten on a hay bale beside Bobby.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Tommy and Bobby are close, but no source describes a lunch scene or a hay bale.",
+   "source": "https://en.wikipedia.org/wiki/Phar_Lap_(film)",
+   "fix": "Tommy's lunch break at the stables.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3,
+  "verdict": "The names and the Melbourne Cup cue are right, but the baseball stadium layout and cents prices feel wrong for 1930.",
+  "missing": [
+   "Phar Lap lowered off the wharf in a sling, all warts (Sydney)",
+   "Telford's gallop up the sand dunes (training)",
+   "Someone shooting at Phar Lap in the street (before the Cup)",
+   "The 1931 Cup and the heavy weight (Flemington)",
+   "The trip to Agua Caliente (Mexico)",
+   "Phar Lap dying in Tommy's arms (Menlo Park)"
+  ],
+  "ideas": [
+   "Change the 'c' prices to shillings and pence.",
+   "Swap 'Strapper's apple and cheddar crostini' for a plain 'Strapper's oats and apple slice'.",
+   "Swap 'Section map' labels for 'Grandstand at Flemington'.",
+   "Swap 'Agua Caliente grapefruit paloma' for a cup of tea, and keep the tequila for the Mexico house line."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

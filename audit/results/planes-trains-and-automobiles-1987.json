@@ -1,0 +1,62 @@
+{
+ "id": "Planes, Trains and Automobiles (1987)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when Del pulls out his shower curtain rings.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Del is a shower curtain ring salesman, but no source opened describes a scene where he pulls out the rings. The pillows wake-up is confirmed.",
+   "source": "https://en.wikiquote.org/wiki/Planes,_Trains_and_Automobiles",
+   "fix": "Serve the snacks when Neal and Del wake up holding hands.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Del's bag shook it up. Open it carefully.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "No source mentions a shaken beer or Del's bag.",
+   "source": "https://en.wikiquote.org/wiki/Planes,_Trains_and_Automobiles",
+   "fix": "Tallboy for the motel room, after the car fire.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Del's Chicago order. Those aren't pillows.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "'Those aren't pillows' is real, but nothing shows Del ordering Italian beef.",
+   "source": "https://en.wikiquote.org/wiki/Planes,_Trains_and_Automobiles",
+   "fix": "A Chicago bite. Those aren't pillows.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A good postcard motel for the pillows and the burnt car, though three claims about Del can't be backed.",
+  "missing": [
+   "Waking up holding hands, 'Those aren't pillows!' (motel)",
+   "Neal's rant at the car rental desk (St. Louis airport)",
+   "The burnt car and the melted speedometer (the road)",
+   "Riding in the refrigerated truck to Chicago (Thanksgiving Day)",
+   "Neal's wallet and the missing $700 (breakfast)",
+   "Del's family-less Thanksgiving (the train station)"
+  ],
+  "ideas": [
+   "Swap the cue for the 'Those aren't pillows' wake up.",
+   "Swap 'Truck stop smoky pepper beef jerky' for 'Frozen truck trailer turkey sandwiches'.",
+   "Swap 'Braidwood Inn vending machine mix' note for the missing $700.",
+   "Swap 'Home for Thanksgiving apple cider punch' note for Del at Neal's table."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

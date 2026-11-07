@@ -1,0 +1,58 @@
+{
+ "id": "Signs (2002)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Keep your foil hat on, Graham. And nobody touches Bo's glasses of water, they're everywhere.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Graham does not wear a foil hat. The kids wear the foil helmets, and Graham teases Morgan about them.",
+   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/Signs",
+   "fix": "Foil hats on, kids. And nobody touches Bo's glasses of water, they're everywhere.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Foil hats on, kids. And nobody touches Bo's glasses of water, they're everywhere.",
+    "by": "Merrill Hess",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Last-meal chicken parmigiana",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "The family's last supper of favourites is spaghetti and French toast, plus Graham and his mashed potatoes. Chicken parmigiana was not found.",
+   "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Film/Signs",
+   "fix": "Last supper spaghetti and French toast",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "The recipe box and Bo's water glasses are right on theme, but the foil hat note and the last meal dish miss the film.",
+  "missing": [
+   "Bo's half full glasses of water used as the weapon",
+   "Spaghetti and French toast left uneaten at the last supper",
+   "Graham crying over a plate of mashed potatoes",
+   "The alien's fingers in Ray Reddy's pantry",
+   "Colleen's last words, swing away",
+   "The Brazil birthday party video"
+  ],
+  "ideas": [
+   "Swap 'Last-meal chicken parmigiana' for 'Spaghetti and French toast, uneaten' to match the last supper.",
+   "Swap 'Pennsylvania farmhouse pot roast' note for 'Mashed potatoes Graham cries over'.",
+   "Swap 'Apple butter on warm buttermilk biscuits' for 'Pantry door fingers biscuit sticks' only if Josh wants a darker nod.",
+   "Swap the 'Bo's half-full cucumber mint spritzers' note for 'Pour them out. Or don't.'"
+  ],
+  "flat": false,
+  "done": false
+ }
+}

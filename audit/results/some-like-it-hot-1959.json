@@ -1,0 +1,78 @@
+{
+ "id": "Some Like It Hot (1959)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "We joined an all-girl band to dodge some gangsters. Tonight Osgood's buying dinner, and I'm ordering the lobster.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Osgood invites Daphne to a champagne supper on his yacht, but Joe persuades Jerry to keep Osgood ashore and the two tango until dawn. No lobster dinner shows up in the sources read.",
+   "source": "https://culture.fandom.com/wiki/Some_Like_It_Hot",
+   "fix": "We joined an all-girl band to dodge gangsters. Osgood's asked me to his yacht for champagne, and Joe wants it more.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "We joined an all-girl band to dodge gangsters. Osgood's asked me to his yacht for champagne, and Joe wants it more.",
+    "by": "Jerry",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Osgood's yacht lobster",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "The yacht meal in the film is a champagne supper. Lobster was not found.",
+   "source": "https://culture.fandom.com/wiki/Some_Like_It_Hot",
+   "fix": "Osgood's champagne supper lobster",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve the drinks when the girls throw a party in Daphne's sleeper berth on the train.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "Sources confirm a late-night party on the train. Whose berth it is was not confirmed.",
+   "source": "https://culture.fandom.com/wiki/Some_Like_It_Hot",
+   "fix": "Serve the drinks when the girls throw a late-night party on the train.",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "The midnight party in Daphne's upper berth.",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Same as the cue, the berth was not confirmed.",
+   "source": "https://culture.fandom.com/wiki/Some_Like_It_Hot",
+   "fix": "The midnight party on the train.",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Grand hotel dining room with the right names and a good Scotch in a coffee cup joke, but the yacht and berth lines are unconfirmed.",
+  "missing": [
+   "Joe and Jerry in disguise as Josephine and Daphne",
+   "The funeral parlour speakeasy with spiked coffee",
+   "Osgood and the tango until dawn",
+   "Spats and the Friends of Italian Opera banquet",
+   "Joe as Junior with the Cary Grant voice",
+   "Nobody's perfect, the last line"
+  ],
+  "ideas": [
+   "Swap 'Upper berth pimento cheese crackers' note for 'The train party, Sugar's bourbon'.",
+   "Swap 'Florida beach prawns' for 'Shell Oil Junior prawns' using Joe's fake millionaire.",
+   "Swap 'Bourbon Manhattans' note for the funeral parlour coffee cups.",
+   "Add Osgood's tango card as a prop in place of 'Order any hour'."
+  ],
+  "flat": false,
+  "done": false
+ }
+}

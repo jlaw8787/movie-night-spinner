@@ -1,0 +1,62 @@
+{
+ "id": "Peter Rabbit 2: The Runaway (2021)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Bountiful Harvest Market",
+   "where": "venue",
+   "verdict": "unsure",
+   "why": "The summaries read describe a farmers market heist for dried fruit but never give the market a name.",
+   "source": "https://en.wikipedia.org/wiki/Peter_Rabbit_2:_The_Runaway",
+   "fix": "Farmers Market Stall",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "The Bountiful Harvest market stall",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "Same naming problem as the venue.",
+   "source": "https://en.wikipedia.org/wiki/Peter_Rabbit_2:_The_Runaway",
+   "fix": "The farmers market heist",
+   "printed": false,
+   "done": false
+  },
+  {
+   "text": "Barnabas swears this is the last job.",
+   "where": "house",
+   "verdict": "unsure",
+   "why": "Barnabas plans a big score from the market, but no source has him calling it a last job.",
+   "source": "https://en.wikiquote.org/wiki/Peter_Rabbit_2:_The_Runaway",
+   "fix": "Barnabas swears the plan can't fail.",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 9,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "A friendly market truck, but it misses the dried fruit heist and most of the sequel's gags.",
+  "missing": [
+   "The dried fruit heist at the farmers market (the market)",
+   "Sammy Whiskers and the gang with the pincushion map (Barnabas's hideout)",
+   "Mr Tod on a plant-based diet asking about jogging (the city)",
+   "Thomas's nut-eater list: almond milk, cashew cheese, walnut butter (pet store)",
+   "Peter hearing the book makes him the bad bunny (publisher meeting)",
+   "Rabbits caught by animal catchers and the pet pound (town)"
+  ],
+  "ideas": [
+   "Swap 'Honey oat and almond crunch mix' for a 'Dried fruit heist mix: lasts forever'.",
+   "Swap 'Gloucester chicken, leek and bacon pie' for 'Nut-eater plate' with almond milk and cashew cheese.",
+   "Swap 'Pressed carrot and apple juice' for 'Mr Tod's plant-based green juice'.",
+   "Swap the Peter note for 'This is the McGregor's garden of the city'."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

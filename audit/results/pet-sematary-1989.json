@@ -1,0 +1,78 @@
+{
+ "id": "Pet Sematary (1989)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the beers when Louis and Jud sit out on the porch.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The sources opened describe Jud walking the family and Louis to the pet cemetery and burial ground but never mention beer or a porch.",
+   "source": "https://en.wikipedia.org/wiki/Pet_Sematary_(1989_film)",
+   "fix": "Serve the beers when Jud leads Louis beyond the pet cemetery.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve the beers when Louis and Jud sit out on the porch.",
+   "where": "cue-printed",
+   "verdict": "unsure",
+   "why": "Same cue as printed on the card.",
+   "source": "https://en.wikipedia.org/wiki/Pet_Sematary_(1989_film)",
+   "fix": "Serve the beers when Jud leads Louis beyond the pet cemetery.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Louis, have another beer and some of Norma's casserole. Just don't go wandering out past the woods after dark.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "Written as a note, so it only has to suit Jud and the plot. The warning fits, but the sources opened never mention Norma, so the casserole cannot be checked.",
+   "source": "https://en.wikipedia.org/wiki/Pet_Sematary_(1989_film)",
+   "fix": "Louis, have another beer. Just don't go wandering out past the woods after dark.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Louis, have another beer. Just don't go wandering out past the woods after dark.",
+    "by": "Jud Crandall",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Kite day picnic devilled eggs",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "Sources confirm a picnic where Gage is hit by a truck but none mention a kite.",
+   "source": "https://stephenking.fandom.com/wiki/Pet_Sematary_(1989_film)",
+   "fix": "Spring picnic devilled eggs",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 3,
+  "moments": 4,
+  "food": 3,
+  "tone": 2,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "The film's key places are all here, but 'fresh snags on the barbie' is the wrong voice for a Maine horror film.",
+  "missing": [
+   "Victor Pascow's ghost warning 'the barrier was not meant to be crossed' (Creed house)",
+   "Church coming back with glowing gold eyes (the house)",
+   "The Mi'kmaq burial ground past the pet cemetery (the woods)",
+   "Zelda in the bed ('never get out of bed again')",
+   "Gage's 'No fair' (the end)",
+   "Rachel's butcher knife (the finale)"
+  ],
+  "ideas": [
+   "Swap the tagline 'Spooky Maine cemetery. Fresh snags on the barbie.' for 'Sometimes, dead is better.'",
+   "Swap 'Maine red snapper hot dogs' for a plain 'Cold steak for Church', the raw steak Louis uses on the cat.",
+   "Swap 'Church's blueberry muffins' for something Louis eats at the empty Thanksgiving table.",
+   "Swap the Moxie note for Jud's 'The soil of a man's heart is stonier, Louis.'"
+  ],
+  "flat": true,
+  "done": false
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "id": "Skyfall (2012)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Komodo dragons in Macau",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "Not mentioned in sources read. It is very likely true but was not confirmed.",
+   "source": "https://en.wikipedia.org/wiki/Skyfall",
+   "fix": "Silva's island in Macau",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Q meeting Bond at the gallery",
+   "where": "wink",
+   "verdict": "unsure",
+   "why": "Wikipedia says Bond meets Q but not where. The MI6 trivia page confirms Q at the National Gallery with a painting, not the meeting.",
+   "source": "https://en.wikipedia.org/wiki/Skyfall",
+   "fix": "Q meeting Bond, new quartermaster",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "the glass tower fight in Shanghai",
+   "where": "dish-note",
+   "verdict": "unsure",
+   "why": "Bond and Patrice fight in Shanghai, but the glass tower was not confirmed in sources read.",
+   "source": "https://en.wikipedia.org/wiki/Skyfall",
+   "fix": "the Shanghai fight with Patrice",
+   "printed": false,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.4,
+  "verdict": "Scottish lodge food is spot on, but the Bond set pieces are only name checks and the photo is a London rooftop.",
+  "missing": [
+   "Aston Martin DB5 drive to Scotland",
+   "The priest hole and chapel escape",
+   "Silva and the glass on Severine's head",
+   "Hashima island and the abandoned town",
+   "The booby trapped lodge",
+   "M's last stand"
+  ],
+  "ideas": [
+   "Swap 'Shanghai skyline pork belly bao' note for 'Patrice fight' and add a DB5 starter 'Aston Martin silver oatcakes'.",
+   "Swap 'Highland oatcakes and smoked salmon' note for the priest hole.",
+   "Swap 'Fifty year old single malt' for a 'Severine glass' joke, 'steady hand'.",
+   "Swap the London rooftop photo for a Scottish lodge still."
+  ],
+  "flat": true,
+  "done": false
+ }
+}

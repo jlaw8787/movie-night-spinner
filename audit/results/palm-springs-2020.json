@@ -1,0 +1,62 @@
+{
+ "id": "Palm Springs (2020)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when Nyles floats in the pool on his pizza float.",
+   "where": "cue",
+   "verdict": "unsure",
+   "why": "The sources opened do not say what Nyles floats on, and the poster shows a plain pink ring. They do show beer in hand as his running habit.",
+   "source": "https://www.theringer.com/2020/07/08/movies/palm-springs-andy-samberg",
+   "fix": "Serve the snacks when Nyles floats in the pool with a beer in hand.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Serve the snacks when Nyles floats in the pool on his pizza float.",
+   "where": "cue-printed",
+   "verdict": "unsure",
+   "why": "Same cue as printed on the card.",
+   "source": "https://www.theringer.com/2020/07/08/movies/palm-springs-andy-samberg",
+   "fix": "Serve the snacks when Nyles floats in the pool with a beer in hand.",
+   "printed": true,
+   "done": false
+  },
+  {
+   "text": "Pool float pizza bites",
+   "where": "dish-name",
+   "verdict": "unsure",
+   "why": "The name depends on a pizza float that the sources do not confirm.",
+   "source": "https://www.theringer.com/2020/07/08/movies/palm-springs-andy-samberg",
+   "fix": "Poolside pizza bites",
+   "printed": true,
+   "done": false
+  }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 5,
+  "overall": 3.8,
+  "verdict": "The kiosk and poster look great, but the cue and one dish lean on a pizza float nobody could confirm.",
+  "missing": [
+   "Sarah's heartfelt wedding speech to Tala (the reception)",
+   "Roy hunting Nyles with his crossbow (the desert)",
+   "The dive bar dance (the loop)",
+   "Sarah studying quantum physics (the loop)",
+   "Nyles and Roy's reconciliation in Irvine (Roy's house)",
+   "The explosion in the glowing cave (finale)"
+  ],
+  "ideas": [
+   "Swap 'Pool float pizza bites' for 'One-handed beer can opener nuts', tied to Nyles's beer habit.",
+   "Swap 'Reception chicken with spinach and ricotta' note for Sarah's wedding speech.",
+   "Swap 'Wedding cake again' for 'Sarah's last wedding speech' cake slice.",
+   "Swap the margarita house note for a line about Roy's crossbow."
+  ],
+  "flat": false,
+  "done": false
+ }
+}
