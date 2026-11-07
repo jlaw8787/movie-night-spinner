@@ -32,12 +32,14 @@
   {
    "text": "Stoney shows Link how. Link eats the lot.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No source opened has a corn on the cob scene. Stoney does teach Link modern life, but the corn claim is not confirmed.",
-   "source": "https://wiki.riteme.site/wiki/Encino_Man",
-   "fix": "Stoney shows Link modern life. Link takes to it fast.",
+   "verdict": "wrong",
+   "why": "Stoney gives Link a lesson on the four food groups and calls Corn Nuts the vegetable group. No corn on the cob scene and no Link eating the lot appears in the transcript.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=encino-man",
+   "fix": "Corn Nuts, the vegetable group, says Stoney.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

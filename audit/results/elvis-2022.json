@@ -21,42 +21,50 @@
   {
    "text": "A pink suit and eye shadow on the Hayride stage",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "The pink suit is confirmed: the Hayride suit is a pink wool jacket with black shoulders made for Elvis's debut on the Hayride stage. The eye shadow is not in anything I read.",
-   "source": "https://www.nfsa.gov.au/collection/curated/elvis-louisiana-hayride-suit",
-   "fix": "A pink suit on the Hayride stage",
+   "verdict": "wrong",
+   "why": "The transcript has Parker saying the boy in the pink suit was a superhero and, on the Hayride stage, greasy hair and girly makeup. Eye shadow is never named.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=elvis-2022",
+   "fix": "A pink suit and girly makeup on the Hayride stage",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "From the carnival, just past the hall of mirrors.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The Colonel's carnival is in the film, but I could not confirm a hall of mirrors in any source.",
-   "source": "https://en.wikipedia.org/wiki/Elvis_(2022_film)",
+   "verdict": "ok",
+   "why": "In the transcript Bill says the band is going to the hall of mirrors and Jimmie says to screw it, in the carnival scene where Parker finds Elvis lost.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=elvis-2022",
    "fix": "From the carnival, just past the Colonel's sideshow.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "The hall of mirrors at the carnival",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "The Colonel's carnival is confirmed, but I could not confirm a hall of mirrors.",
-   "source": "https://en.wikipedia.org/wiki/Elvis_(2022_film)",
+   "verdict": "ok",
+   "why": "Same carnival scene: Bill calls out that they are going to the hall of mirrors.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=elvis-2022",
    "fix": "The Colonel's carnival sideshow",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "A gospel tent revival in Tupelo",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "Tupelo and Beale Street are in the plot, but a gospel tent revival is not in anything I read.",
-   "source": "https://en.wikipedia.org/wiki/Elvis_(2022_film)",
-   "fix": "Beale Street music, when young Elvis first hears it",
+   "verdict": "wrong",
+   "why": "The Tupelo scene has a gospel revival with a congregation and young Elvis caught up in the singing, but no tent is mentioned in the transcript.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=elvis-2022",
+   "fix": "A gospel revival in Tupelo",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

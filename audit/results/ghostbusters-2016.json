@@ -1,53 +1,55 @@
 {
-  "id": "Ghostbusters (2016)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Kevin ordered one for his dog, Mike Hat.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "Kevin's dog Mike Hat lives with Kevin's mum. Nobody orders tea for him in the film.",
-      "source": "https://en.wikiquote.org/wiki/Ghostbusters_(2016_film)",
-      "fix": "Kevin would share, but Mike Hat lives with his mum.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Delivered by Benny, from the takeaway downstairs.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "The delivery man from the restaurant downstairs is a running gag, but the page I opened does not name him Benny.",
-      "source": "https://www.tvtropes.org/pmwiki/pmwiki.php/Funny/Ghostbusters2016",
-      "fix": "Delivered late by the takeaway downstairs, as always.",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 4,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "Good Chinese restaurant food under the office, but the funniest bits (Kevin, Holtzmann, the hot dog logo) are barely used.",
-    "missing": [
-      "Kevin's third logo idea: a floating hot dog above a house (the logo pitch)",
-      "Kevin puts the phone in the fish tank (the office)",
-      "Holtzmann licking her gun (the demo)",
-      "'Mike Hat' the dog (Kevin's hiring)",
-      "Rowan taking the shape of the ghost logo (the finale)",
-      "The old Chinese restaurant under the HQ (the opening move)"
-    ],
-    "ideas": [
-      "Swap 'Times Square onion sauce hot dogs' note for Kevin's logo idea: a floating hot dog above a house",
-      "Swap the lychee tea note for 'Kevin would share, but Mike Hat lives with his mum'",
-      "Swap 'Zhu's fortune cookies' paper fortunes for Kevin's reception notes",
-      "Swap 'Proton pack vegetable spring rolls' note for Holtzmann's line: 'You have the longest arms'"
-    ],
-    "flat": false,
-    "done": false
+ "id": "Ghostbusters (2016)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Kevin ordered one for his dog, Mike Hat.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Kevin's dog Mike Hat lives with Kevin's mum. Nobody orders tea for him in the film.",
+   "source": "https://en.wikiquote.org/wiki/Ghostbusters_(2016_film)",
+   "fix": "Kevin would share, but Mike Hat lives with his mum.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Delivered by Benny, from the takeaway downstairs.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Wikipedia and the script spell the deliveryman Bennie, and he brings soup and wontons from the Chinese restaurant downstairs. Only the spelling is off.",
+   "source": "https://en.wikipedia.org/wiki/Ghostbusters_(2016_film)",
+   "fix": "Delivered by Bennie, from the takeaway downstairs.",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Good Chinese restaurant food under the office, but the funniest bits (Kevin, Holtzmann, the hot dog logo) are barely used.",
+  "missing": [
+   "Kevin's third logo idea: a floating hot dog above a house (the logo pitch)",
+   "Kevin puts the phone in the fish tank (the office)",
+   "Holtzmann licking her gun (the demo)",
+   "'Mike Hat' the dog (Kevin's hiring)",
+   "Rowan taking the shape of the ghost logo (the finale)",
+   "The old Chinese restaurant under the HQ (the opening move)"
+  ],
+  "ideas": [
+   "Swap 'Times Square onion sauce hot dogs' note for Kevin's logo idea: a floating hot dog above a house",
+   "Swap the lychee tea note for 'Kevin would share, but Mike Hat lives with his mum'",
+   "Swap 'Zhu's fortune cookies' paper fortunes for Kevin's reception notes",
+   "Swap 'Proton pack vegetable spring rolls' note for Holtzmann's line: 'You have the longest arms'"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

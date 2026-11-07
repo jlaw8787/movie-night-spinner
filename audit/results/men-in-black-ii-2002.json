@@ -21,22 +21,25 @@
   {
    "text": "Worm guys order a dozen for the break.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The worms help in the headquarters fight, but no source opened shows them ordering garlic knots.",
+   "verdict": "wrong",
+   "why": "The worm guys help in the HQ fight, but the transcript, Wikipedia and a follow-up search show no scene of them ordering garlic knots.",
    "source": "https://en.wikipedia.org/wiki/Men_in_Black_II",
    "fix": "Worm guys' break food, no questions.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "The worms live on coffee and doughnuts.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No page opened says the worms live on coffee and doughnuts.",
+   "verdict": "wrong",
+   "why": "No coffee or doughnut scene for the worms shows in the transcript, Wikipedia or a follow-up search. The worm guys do return to help at HQ.",
    "source": "https://en.wikipedia.org/wiki/Men_in_Black_II",
    "fix": "The worms are back at HQ.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08",
+   "nofind": true
   }
  ],
  "checked_ok": 13,

@@ -21,22 +21,24 @@
   {
    "text": "Extra milk. Ask Greg how you milk a cat.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The sources opened don't show a milking-a-cat line.",
-   "source": "https://en.wikiquote.org/wiki/Meet_the_Parents",
+   "verdict": "ok",
+   "why": "Greg tells the family he had no idea you could milk a cat, and Jack replies you can milk anything with nipples, so the line is a plain nod.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=meet-the-parents",
    "fix": "Extra milk, for Mr. Jinx's sake.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Gazebo lemon tart",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "The sources opened describe a wedding altar that Kevin built and Greg sets on fire, not a gazebo.",
+   "verdict": "wrong",
+   "why": "Nothing opened mentions a gazebo. The film has Greg accidentally set fire to the wedding altar Kevin built.",
    "source": "https://en.wikipedia.org/wiki/Meet_the_Parents",
    "fix": "Wedding altar lemon tart",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 10,

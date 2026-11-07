@@ -42,33 +42,39 @@
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "Becky the Icebox rallying the team",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "In the plot it is Danny who gives the halftime speech that turns the game around. Becky persuades Danny to coach, then quits for cheerleading and comes back to suit up. 'Rallying the team' is not what she does.",
-   "source": "https://www.wikiwand.com/en/articles/Little_Giants",
-   "fix": "Becky the Icebox, cut by the Cowboys, back for the Giants"
+   "verdict": "wrong",
+   "why": "Danny gives the speech that turns the game. Becky is cut from the Cowboys at tryouts for being a girl, then ends up on the Giants.",
+   "source": "https://en.wikipedia.org/wiki/Little_Giants",
+   "fix": "Becky the Icebox, cut by the Cowboys",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "printed": true,
-   "done": false,
+   "done": true,
    "text": "John Madden's pick, between the plays.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "John Madden and other NFL stars arrive on a bus and coach the kids on fundamentals. The page I opened mentions no food, and nothing says Madden picked a sloppy joe.",
-   "source": "https://www.wikiwand.com/en/articles/Little_Giants",
-   "fix": "Big and messy, the way John Madden calls it."
+   "verdict": "wrong",
+   "why": "Madden turns up on a bus to coach the kids. Nothing shows him picking any food.",
+   "source": "https://en.wikipedia.org/wiki/Little_Giants",
+   "fix": "Big and messy, Madden style.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "printed": false,
-   "done": false,
+   "done": true,
    "text": "Becky earned the name Icebox.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The page I opened says Becky is nicknamed Icebox but does not say how she earned it.",
-   "source": "https://www.wikiwand.com/en/articles/Little_Giants",
-   "fix": "Becky's nickname is Icebox. Keep it cool."
+   "verdict": "wrong",
+   "why": "Wikipedia and the script give Icebox as her nickname but never show how she earned it.",
+   "source": "https://en.wikipedia.org/wiki/Little_Giants",
+   "fix": "Becky's nickname is Icebox. Keep cool.",
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 10,

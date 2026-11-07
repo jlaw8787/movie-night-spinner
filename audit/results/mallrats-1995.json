@@ -32,32 +32,35 @@
   {
    "text": "Eden Prairie Mall Food Court",
    "where": "venue",
-   "verdict": "unsure",
-   "why": "The film is set in New Jersey. Eden Prairie Center in Minnesota is only where it was shot.",
+   "verdict": "wrong",
+   "why": "The story is set in a New Jersey mall. Eden Prairie Center in Minnesota is only where it was filmed.",
    "source": "https://en.wikipedia.org/wiki/Mallrats",
    "fix": "Mall Food Court, New Jersey",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Eden Prairie Mall. No sailboat, just pretzels.",
    "where": "sign",
-   "verdict": "unsure",
-   "why": "Same problem as the venue. The mall in the story is in New Jersey.",
+   "verdict": "wrong",
+   "why": "Willam's Magic Eye sailboat and the chocolate pretzels are real, but the mall in the story is not Eden Prairie, that is only the filming location.",
    "source": "https://en.wikipedia.org/wiki/Mallrats",
    "fix": "The mall. No sailboat, just pretzels.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Brodie's stash, eaten in the comic shop.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No source shows Brodie with a stash of nuts in a comic shop.",
-   "source": "https://en.wikipedia.org/wiki/Mallrats",
-   "fix": "Cinnamon sugar nuts, eaten walking the mall.",
+   "verdict": "wrong",
+   "why": "Nothing in the plot or transcript shows Brodie with a stash of food in a comic shop. The pretzels in the film are the chocolate ones Svenning offers.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=mallrats",
+   "fix": "Melty chocolate pretzels, as offered by Svenning.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 10,

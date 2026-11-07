@@ -21,12 +21,14 @@
   {
    "text": "Frenchy's booth, right before Teen Angel shows up.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Frenchy is visited by a guardian angel after a beauty class mishap leaves her with pink hair. The sources opened do not place that scene at the Frosty Palace.",
-   "source": "https://en.wikipedia.org/wiki/Beauty_School_Dropout",
-   "fix": "Frenchy's pick, pink hair and all.",
+   "verdict": "wrong",
+   "why": "Wikipedia has Frenchy's angel scene after her beauty school disaster, staged as the Beauty School Dropout number, not in a Frosty Palace booth. Frenchy's pink hair is in the plot but nothing ties her to a tuna melt.",
+   "source": "https://en.wikipedia.org/wiki/Grease_(film)",
+   "fix": "A Frosty Palace booth, Pink Ladies style.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

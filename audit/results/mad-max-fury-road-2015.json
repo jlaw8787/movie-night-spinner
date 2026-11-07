@@ -1,42 +1,43 @@
 {
-  "id": "Mad Max: Fury Road (2015)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "AQUA COLA CUCUMBER LIME COOLER",
-      "where": "dish-name",
-      "verdict": "unsure",
-      "why": "No page opened confirms Aqua Cola as the Citadel's drink in this film.",
-      "source": "https://en.wikipedia.org/wiki/Mad_Max:_Fury_Road",
-      "fix": "WATER RATION CUCUMBER LIME COOLER",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 15,
-  "vibe": {
-    "world": 4,
-    "moments": 4,
-    "food": 4,
-    "tone": 4,
-    "look": 3,
-    "overall": 3.8,
-    "verdict": "A formal banquet of the Citadel that suits the water rations and chrome popcorn jokes, though the look is calmer than the film.",
-    "missing": [
-      "Witness me (Nux at the end)",
-      "What a lovely day (Nux in the war rig chase)",
-      "The Doof Warrior's flame guitar on stage (the war wagon)",
-      "Mediocre (Immortan Joe)",
-      "Furiosa's mechanical arm (the rig)",
-      "Mothers' milk (Gas Town / the Citadel)"
-    ],
-    "ideas": [
-      "Swap 'The long drive in the war rig' for 'Witness me, blood bag'",
-      "Swap the cooler name for 'Water ration cooler, one cup per person'",
-      "Swap the place card for a War Boy chrome smear",
-      "Print 'Shiny and chrome' above the popcorn"
-    ],
-    "flat": false,
-    "done": false
+ "id": "Mad Max: Fury Road (2015)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "AQUA COLA CUCUMBER LIME COOLER",
+   "where": "dish-name",
+   "verdict": "ok",
+   "why": "The transcript has Joe's water called Aqua Cola, pumped from deep in the earth and hauled by the War Boys.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=mad-max-fury-road",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 3,
+  "overall": 3.8,
+  "verdict": "A formal banquet of the Citadel that suits the water rations and chrome popcorn jokes, though the look is calmer than the film.",
+  "missing": [
+   "Witness me (Nux at the end)",
+   "What a lovely day (Nux in the war rig chase)",
+   "The Doof Warrior's flame guitar on stage (the war wagon)",
+   "Mediocre (Immortan Joe)",
+   "Furiosa's mechanical arm (the rig)",
+   "Mothers' milk (Gas Town / the Citadel)"
+  ],
+  "ideas": [
+   "Swap 'The long drive in the war rig' for 'Witness me, blood bag'",
+   "Swap the cooler name for 'Water ration cooler, one cup per person'",
+   "Swap the place card for a War Boy chrome smear",
+   "Print 'Shiny and chrome' above the popcorn"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

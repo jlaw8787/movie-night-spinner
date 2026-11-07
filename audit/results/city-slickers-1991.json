@@ -5,12 +5,14 @@
   {
    "text": "Serve the mains when the friends take over the cooking on the trail.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The filmsite summary and Wikipedia do not say the three friends take over the cooking. They do clearly show Cookie driving the chuck wagon off a cliff and wrecking the food supply.",
-   "source": "https://filmsite.org/cityslickers.html",
+   "verdict": "wrong",
+   "why": "The plot has Cookie get drunk and send the chuck wagon over a cliff, breaking his legs. The friends carry the food in saddlebags, they do not take over the cooking.",
+   "source": "https://en.wikipedia.org/wiki/City_Slickers",
    "fix": "Serve the mains when Cookie sends the chuck wagon over the cliff.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Eat up, city boy. Out here supper's beans and coffee, and you'll be grateful for both.",

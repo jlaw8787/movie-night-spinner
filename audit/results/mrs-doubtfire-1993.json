@@ -1,92 +1,93 @@
 {
- "id": "Mrs. Doubtfire (1993)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Stu's birthday steak, no cayenne",
-   "where": "dish-name",
-   "verdict": "wrong",
-   "why": "The restaurant dinner is Miranda's birthday, not Stu's, and Stu is eating jambalaya, which is the dish Daniel seasons with cayenne.",
-   "source": "https://en.wikipedia.org/wiki/Mrs._Doubtfire",
-   "fix": "Miranda's birthday steak, no cayenne",
-   "printed": true,
-   "done": true,
-   "applied_note": "Kept steak: the recipe is a sirloin, so jambalaya would not match the cook. The birthday is now Miranda's.",
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Stu's birthday dinner, the night of the cayenne pepper",
-   "where": "dish-note",
-   "verdict": "wrong",
-   "why": "It was Miranda's birthday dinner. Stu has a pepper allergy and Daniel sneaks cayenne into his jambalaya.",
-   "source": "https://en.wikipedia.org/wiki/Mrs._Doubtfire",
-   "fix": "Miranda's birthday dinner, the night of the cayenne pepper",
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Shepherd's pie she passes off as hers",
-   "where": "dish-name",
-   "verdict": "unsure",
-   "why": "The plot says Daniel learns household skills as Mrs. Doubtfire, but the page I opened does not mention a shepherd's pie or passing off takeaway as hers.",
-   "source": "https://en.wikipedia.org/wiki/Mrs._Doubtfire",
-   "fix": "Shepherd's pie, no questions asked",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Hello, dears. Supper is on the table. Do not ask what is in the pot.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Printed in quote marks as Mrs. Doubtfire's words, but it is not a line from the film. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
-   "source": "https://en.wikipedia.org/wiki/Mrs._Doubtfire",
-   "fix": "Hello, dears. Supper is on the table. Mind the frosting, and do not ask questions.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Hello, dears. Supper is on the table. Mind the frosting, and do not ask questions.",
-    "by": "Mrs. Doubtfire",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Two birthday dinners at once",
-   "where": "wink",
-   "verdict": "wrong",
-   "why": "Only one dinner is a birthday, Miranda's. The other is Lundy's business dinner at the same restaurant and time.",
-   "source": "https://en.wikipedia.org/wiki/Mrs._Doubtfire",
-   "fix": "Two dinners at once, one costume",
-   "printed": false,
-   "done": true,
-   "applied": "2026-11-07"
+  "id": "Mrs. Doubtfire (1993)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Stu's birthday steak, no cayenne",
+      "where": "dish-name",
+      "verdict": "wrong",
+      "why": "The restaurant dinner is Miranda's birthday, not Stu's, and Stu is eating jambalaya, which is the dish Daniel seasons with cayenne.",
+      "source": "https://en.wikipedia.org/wiki/Mrs._Doubtfire",
+      "fix": "Miranda's birthday steak, no cayenne",
+      "printed": true,
+      "done": true,
+      "applied_note": "Kept steak: the recipe is a sirloin, so jambalaya would not match the cook. The birthday is now Miranda's.",
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Stu's birthday dinner, the night of the cayenne pepper",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "It was Miranda's birthday dinner. Stu has a pepper allergy and Daniel sneaks cayenne into his jambalaya.",
+      "source": "https://en.wikipedia.org/wiki/Mrs._Doubtfire",
+      "fix": "Miranda's birthday dinner, the night of the cayenne pepper",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Shepherd's pie she passes off as hers",
+      "where": "dish-name",
+      "verdict": "wrong",
+      "why": "Daniel does learn to cook as Mrs Doubtfire, but no source shows a shepherd's pie or anything passed off as hers. The only home-cooked dinner shown is spaghetti and garlic bread.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=mrs-doubtfire",
+      "fix": "Shepherd's pie, no questions asked",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    },
+    {
+      "text": "Hello, dears. Supper is on the table. Do not ask what is in the pot.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Printed in quote marks as Mrs. Doubtfire's words, but it is not a line from the film. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
+      "source": "https://en.wikipedia.org/wiki/Mrs._Doubtfire",
+      "fix": "Hello, dears. Supper is on the table. Mind the frosting, and do not ask questions.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Hello, dears. Supper is on the table. Mind the frosting, and do not ask questions.",
+        "by": "Mrs. Doubtfire",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Two birthday dinners at once",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "Only one dinner is a birthday, Miranda's. The other is Lundy's business dinner at the same restaurant and time.",
+      "source": "https://en.wikipedia.org/wiki/Mrs._Doubtfire",
+      "fix": "Two dinners at once, one costume",
+      "printed": false,
+      "done": true,
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.6,
+    "verdict": "A family kitchen placemat with the cake, the cayenne and the fruit drive-by, but it mixes up whose birthday it is and misses the nanny's best bits.",
+    "missing": [
+      "Daniel's mask slipping after the Heimlich at the restaurant",
+      "Mrs. Doubtfire's phone voices to Miranda",
+      "Euphegenia's House, the kids' TV show (ending)",
+      "The custody hearing",
+      "The hot bosom at the stove",
+      "'Helloooo!' at the door"
+    ],
+    "ideas": [
+      "Swap 'Stu's birthday steak, no cayenne' for 'Stu's jambalaya, no cayenne' with the note 'Miranda's birthday dinner'.",
+      "Swap 'San Francisco sourdough burrata bites' for 'Euphegenia's House bites' to use the TV show ending.",
+      "Swap 'A proper cuppa' note for 'Mrs. Doubtfire's tea, strictly after the mask goes on'.",
+      "Swap the 'Nanny Wanted' tag for 'Nanny Found, Euphegenia Doubtfire' with the references line."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 12,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.6,
-  "verdict": "A family kitchen placemat with the cake, the cayenne and the fruit drive-by, but it mixes up whose birthday it is and misses the nanny's best bits.",
-  "missing": [
-   "Daniel's mask slipping after the Heimlich at the restaurant",
-   "Mrs. Doubtfire's phone voices to Miranda",
-   "Euphegenia's House, the kids' TV show (ending)",
-   "The custody hearing",
-   "The hot bosom at the stove",
-   "'Helloooo!' at the door"
-  ],
-  "ideas": [
-   "Swap 'Stu's birthday steak, no cayenne' for 'Stu's jambalaya, no cayenne' with the note 'Miranda's birthday dinner'.",
-   "Swap 'San Francisco sourdough burrata bites' for 'Euphegenia's House bites' to use the TV show ending.",
-   "Swap 'A proper cuppa' note for 'Mrs. Doubtfire's tea, strictly after the mask goes on'.",
-   "Swap the 'Nanny Wanted' tag for 'Nanny Found, Euphegenia Doubtfire' with the references line."
-  ],
-  "flat": false,
-  "done": false
- }
 }

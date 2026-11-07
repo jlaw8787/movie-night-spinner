@@ -27,12 +27,13 @@
     {
       "text": "Goode's Tea Room",
       "where": "venue",
-      "verdict": "unsure",
-      "why": "The plot only places the story in Goode's department store. A tea room is not mentioned in the sources opened.",
-      "source": "https://en.wikipedia.org/wiki/Ladies_in_Black_(film)",
-      "fix": "Goode's Staff Canteen",
+      "verdict": "wrong",
+      "why": "No tea room is named in the transcript or plot. Miss Cartwright asks Lisa whether she does not like the lunch room, so Goode's has a staff lunch room.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=ladies-in-black",
+      "fix": "Goode's Lunch Room",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 11,

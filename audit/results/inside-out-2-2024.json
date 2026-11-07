@@ -1,53 +1,54 @@
 {
-  "id": "Inside Out 2 (2024)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Firehawks hockey puck brownies",
-      "where": "dish-name",
-      "verdict": "wrong",
-      "why": "The team is the Fire Hawks, two words, in the film and on Wikipedia.",
-      "source": "https://en.wikipedia.org/wiki/Inside_Out_2",
-      "fix": "Fire Hawks hockey puck brownies",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Riley's lunch tray, one seat from Val Ortiz.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "Riley befriends Val and the other Fire Hawks, but the sources do not show a lunch scene or a seating plan.",
-      "source": "https://en.wikipedia.org/wiki/Inside_Out_2",
-      "fix": "Riley's lunch tray, with Bree and Grace.",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 15,
-  "vibe": {
-    "world": 4,
-    "moments": 2,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.2,
-    "verdict": "A friendly Headquarters canteen but the menu has almost none of the sequel's new emotions or its best jokes.",
-    "missing": [
-      "Bloofy and French Fry Forest in Imagination Land",
-      "Joy calling Ennui 'Oui-Oui' (Wikiquote)",
-      "Embarrassment's sweaty high five with Joy",
-      "Blowing up the bad memory cliff with dynamite",
-      "Anxiety's whirlwind at the console during the panic attack",
-      "Pouchy the backpack pouch giving a hand"
-    ],
-    "ideas": [
-      "Swap 'Camp cafeteria chicken broccoli pasta bake' note 'lunch in the hockey camp cafeteria' for 'French Fry Forest, a long way round.'",
-      "Swap 'Iced chamomile apple tea' for 'Oui-Oui iced tea' with the note 'Ennui, but you can call her Oui-Oui.'",
-      "Swap 'Family taco night' for 'Pouchy pocket tacos' with the note 'Anything in there that can help?'",
-      "Swap 'Cheese, crackers and fruit platter' note for 'Bloofy, we're in a real pickle.'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Inside Out 2 (2024)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Firehawks hockey puck brownies",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "The team is the Fire Hawks, two words, in the film and on Wikipedia.",
+   "source": "https://en.wikipedia.org/wiki/Inside_Out_2",
+   "fix": "Fire Hawks hockey puck brownies",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Riley's lunch tray, one seat from Val Ortiz.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Riley meets Val Ortiz and Val invites her to sit with her group, but no lunch tray or seating plan is shown.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=inside-out-2",
+   "fix": "Riley, invited to sit with Val Ortiz.",
+   "printed": false,
+   "done": false,
+   "settled": "2026-11-08"
   }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 2,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "A friendly Headquarters canteen but the menu has almost none of the sequel's new emotions or its best jokes.",
+  "missing": [
+   "Bloofy and French Fry Forest in Imagination Land",
+   "Joy calling Ennui 'Oui-Oui' (Wikiquote)",
+   "Embarrassment's sweaty high five with Joy",
+   "Blowing up the bad memory cliff with dynamite",
+   "Anxiety's whirlwind at the console during the panic attack",
+   "Pouchy the backpack pouch giving a hand"
+  ],
+  "ideas": [
+   "Swap 'Camp cafeteria chicken broccoli pasta bake' note 'lunch in the hockey camp cafeteria' for 'French Fry Forest, a long way round.'",
+   "Swap 'Iced chamomile apple tea' for 'Oui-Oui iced tea' with the note 'Ennui, but you can call her Oui-Oui.'",
+   "Swap 'Family taco night' for 'Pouchy pocket tacos' with the note 'Anything in there that can help?'",
+   "Swap 'Cheese, crackers and fruit platter' note for 'Bloofy, we're in a real pickle.'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

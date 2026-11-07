@@ -27,12 +27,13 @@
     {
       "text": "Leo's office, where Tom walks in unannounced",
       "where": "dish-note",
-      "verdict": "unsure",
-      "why": "Sources put Tom in the office already when Caspar visits. No opened source shows him walking in unannounced.",
-      "source": "https://filmsite.org/millerscrossing.html",
+      "verdict": "wrong",
+      "why": "In the transcript Caspar comes to Leo's office to tell him about Bernie, with Tom already there. Nothing shows Tom walking in unannounced.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=millers-crossing",
       "fix": "Leo's office, where Caspar airs his gripe",
       "printed": false,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 10,
@@ -57,7 +58,7 @@
       "Swap 'Oysters on the half shell' for Caspar's penne and sausage so the ethics speech has a plate.",
       "Swap 'Really coffee.' for 'What heart?' on the coffee line, or add it under the signed line from Leo."
     ],
-    "overall": 4.0,
+    "overall": 4,
     "flat": false,
     "done": false
   }

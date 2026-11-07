@@ -1,76 +1,77 @@
 {
- "id": "Juno (2007)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "I'm sixteen and expecting, so I get the biggest slice and nobody's allowed to argue. Pass the slushie.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Printed in quote marks as Juno's words, but she never says it. A real food line from her on the quote page is 'Look, I just drank my weight in Sunny-D and I gotta go, pronto!'",
-   "source": "https://en.wikiquote.org/wiki/Juno_(film)",
-   "fix": "\"Look, I just drank my weight in Sunny-D and I gotta go, pronto!\"",
-   "fix_note": {
-    "text": "Look, I just drank my weight in Sunny-D and I gotta go, pronto!",
-    "by": "Juno MacGuff",
-    "kind": "quote"
-   },
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Juno's craving, honest to blog.",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Juno's habits in the film are orange drinks and sweets. The plot and quote pages do not mention a dill pickle craving. 'Honest to blog' is her phrase.",
-   "source": "https://en.wikipedia.org/wiki/Juno_(film)",
-   "fix": "Juno's order, honest to blog.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Serve the drink when Juno is sitting on the front lawn with her big jug of orange juice.",
-   "where": "cue-printed",
-   "verdict": "ok",
-   "why": "Juno sits drinking her big container of orange drink at the start of the film, and she is drinking Sunny-D before the test. Fits.",
-   "source": "https://en.wikiquote.org/wiki/Juno_(film)",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Bleeker's orange Tic Tacs, in drink form.",
-   "where": "dish-note",
-   "verdict": "ok",
-   "why": "Paulie Bleeker and his orange Tic Tacs are a running gag. Plainly a nod.",
-   "source": "https://en.wikipedia.org/wiki/Juno_(film)",
-   "printed": true,
-   "done": false
+  "id": "Juno (2007)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "I'm sixteen and expecting, so I get the biggest slice and nobody's allowed to argue. Pass the slushie.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Printed in quote marks as Juno's words, but she never says it. A real food line from her on the quote page is 'Look, I just drank my weight in Sunny-D and I gotta go, pronto!'",
+      "source": "https://en.wikiquote.org/wiki/Juno_(film)",
+      "fix": "\"Look, I just drank my weight in Sunny-D and I gotta go, pronto!\"",
+      "fix_note": {
+        "text": "Look, I just drank my weight in Sunny-D and I gotta go, pronto!",
+        "by": "Juno MacGuff",
+        "kind": "quote"
+      },
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Juno's craving, honest to blog.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Juno says 'honest to blog' in the film, but no transcript line or plot summary shows a dill pickle craving, and a search found none.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=juno",
+      "fix": "Honest to blog, it's pickles.",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    },
+    {
+      "text": "Serve the drink when Juno is sitting on the front lawn with her big jug of orange juice.",
+      "where": "cue-printed",
+      "verdict": "ok",
+      "why": "Juno sits drinking her big container of orange drink at the start of the film, and she is drinking Sunny-D before the test. Fits.",
+      "source": "https://en.wikiquote.org/wiki/Juno_(film)",
+      "printed": true,
+      "done": false
+    },
+    {
+      "text": "Bleeker's orange Tic Tacs, in drink form.",
+      "where": "dish-note",
+      "verdict": "ok",
+      "why": "Paulie Bleeker and his orange Tic Tacs are a running gag. Plainly a nod.",
+      "source": "https://en.wikipedia.org/wiki/Juno_(film)",
+      "printed": true,
+      "done": false
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 4,
+    "verdict": "Bright orange and stripes, hamburger phone and Tic Tacs make this one a fan pleaser.",
+    "missing": [
+      "Rollo at the drug store: 'Your eggo is preggo'",
+      "The boysenberry condoms the clinic receptionist offers",
+      "The Pennysaver ad where Juno finds the Lorings",
+      "Juno telling her dad she's going to give the baby up ('It has fingernails')",
+      "Vanessa framing Juno's note in the nursery",
+      "Juno singing with Paulie at the end"
+    ],
+    "ideas": [
+      "Swap 'Dill pickle spears with sharp cheddar' note for the Pennysaver ad where Juno finds the Lorings.",
+      "Replace 'Blue raspberry jelly trifle cups' plain line with the fingernails line.",
+      "Add a 'Pee stick' cheeky counter line, such as Rollo's 'You pay for that pee stick'.",
+      "Swap 'Mac's creamy chicken wild rice soup' note for Mac's 'I didn't think he had it in him.'"
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 12,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 4,
-  "look": 4,
-  "overall": 4,
-  "verdict": "Bright orange and stripes, hamburger phone and Tic Tacs make this one a fan pleaser.",
-  "missing": [
-   "Rollo at the drug store: 'Your eggo is preggo'",
-   "The boysenberry condoms the clinic receptionist offers",
-   "The Pennysaver ad where Juno finds the Lorings",
-   "Juno telling her dad she's going to give the baby up ('It has fingernails')",
-   "Vanessa framing Juno's note in the nursery",
-   "Juno singing with Paulie at the end"
-  ],
-  "ideas": [
-   "Swap 'Dill pickle spears with sharp cheddar' note for the Pennysaver ad where Juno finds the Lorings.",
-   "Replace 'Blue raspberry jelly trifle cups' plain line with the fingernails line.",
-   "Add a 'Pee stick' cheeky counter line, such as Rollo's 'You pay for that pee stick'.",
-   "Swap 'Mac's creamy chicken wild rice soup' note for Mac's 'I didn't think he had it in him.'"
-  ],
-  "flat": false,
-  "done": false
- }
 }

@@ -1,73 +1,73 @@
 {
-  "id": "I Am Legend (2007)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve the snacks when Robert and Sam go hunting deer in Times Square.",
-      "where": "cue",
-      "verdict": "unsure",
-      "why": "Wikipedia confirms Neville and Sam hunt a deer early on, but names no place. A filming locations page puts the deer chase on Park Avenue and says the Times Square look was a set built inside the Kingsbridge Armory, so the street name is not settled.",
-      "source": "https://movie-locations.com/movies/i/I-Am-Legend.php",
-      "fix": "Serve the snacks when Robert and Sam go hunting deer in the empty city.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Central Park corn chips",
-      "where": "dish-name",
-      "verdict": "unsure",
-      "why": "No page I opened mentions the corn. The menu's own wink puts the garden in Washington Square, which Wikipedia gives as Neville's home. Central Park is where he buries Sam, per the locations page. The same park name is on the chicken bowls, and 'From the corn he grows in the park.' is printed under both dishes.",
-      "source": "https://movie-locations.com/movies/i/I-Am-Legend.php",
-      "fix": "Washington Square corn chips",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Central Park charred corn chicken bowls",
-      "where": "dish-name",
-      "verdict": "unsure",
-      "why": "Same issue as the corn chips. The menu's own wink has the garden in Washington Square, and no opened source puts any corn in Central Park.",
-      "source": "https://movie-locations.com/movies/i/I-Am-Legend.php",
-      "fix": "Washington Square charred corn chicken bowls",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Neville quoting Shrek to nobody",
-      "where": "wink",
-      "verdict": "wrong",
-      "why": "Neville recites a whole Shrek scene aloud along with the video while Anna and Ethan watch him, and says 'I like Shrek.' It is not to nobody.",
-      "source": "https://en.wikiquote.org/wiki/I_Am_Legend_(film)",
-      "fix": "Neville quoting Shrek along with the TV",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    }
-  ],
-  "checked_ok": 12,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "A believable ration sheet for a man alone in New York, but it uses only a few of the film's best-known moments and the food is generic.",
-    "missing": [
-      "Neville reciting Shrek along with the video (Anna and Ethan watch)",
-      "Fred the mannequin being moved outside Grand Central",
-      "Neville telling Anna the Bob Marley virologist story",
-      "Sam bitten by the infected dogs and put down",
-      "The butterfly Marley points out in the opening and ending",
-      "The AM radio broadcast inviting survivors to South Street Seaport at midday"
-    ],
-    "ideas": [
-      "Swap 'Pan-fried steak' note 'Cut one for Sam, the best dog in New York' for a Shrek night line: 'Say every line along with the video.'",
-      "Swap 'Moka pot espresso' for 'South Street Seaport noon coffee' with the note 'Broadcast on all AM frequencies, nobody came.'",
-      "Rename 'Neville's shelter pantry rice pudding' to 'Fred's hello pudding' to use the mannequin he says hello to.",
-      "Swap the printed 'ALL AREAS' badge text for 'IMMUNE' so the badge ties to his blood and the cure."
-    ],
-    "flat": true,
-    "done": false
+ "id": "I Am Legend (2007)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when Robert and Sam go hunting deer in Times Square.",
+   "where": "cue",
+   "verdict": "ok",
+   "why": "A review describes Neville's hunting trips with Sam to a Times Square overrun by deer, so the cue stands.",
+   "source": "https://www.sevendaysvt.com/?p=22864",
+   "printed": true,
+   "done": false,
+   "settled": "2026-11-08"
+  },
+  {
+   "text": "Central Park corn chips",
+   "where": "dish-name",
+   "verdict": "ok",
+   "why": "A review of the film says corn grows abundantly in Neville's allotment in Central Park.",
+   "source": "https://brightlightsfilm.com/?p=17087",
+   "printed": true,
+   "done": false,
+   "settled": "2026-11-08"
+  },
+  {
+   "text": "Central Park charred corn chicken bowls",
+   "where": "dish-name",
+   "verdict": "ok",
+   "why": "Same review: Neville's corn grows in his Central Park allotment.",
+   "source": "https://brightlightsfilm.com/?p=17087",
+   "printed": true,
+   "done": false,
+   "settled": "2026-11-08"
+  },
+  {
+   "text": "Neville quoting Shrek to nobody",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Neville recites a whole Shrek scene aloud along with the video while Anna and Ethan watch him, and says 'I like Shrek.' It is not to nobody.",
+   "source": "https://en.wikiquote.org/wiki/I_Am_Legend_(film)",
+   "fix": "Neville quoting Shrek along with the TV",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
   }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A believable ration sheet for a man alone in New York, but it uses only a few of the film's best-known moments and the food is generic.",
+  "missing": [
+   "Neville reciting Shrek along with the video (Anna and Ethan watch)",
+   "Fred the mannequin being moved outside Grand Central",
+   "Neville telling Anna the Bob Marley virologist story",
+   "Sam bitten by the infected dogs and put down",
+   "The butterfly Marley points out in the opening and ending",
+   "The AM radio broadcast inviting survivors to South Street Seaport at midday"
+  ],
+  "ideas": [
+   "Swap 'Pan-fried steak' note 'Cut one for Sam, the best dog in New York' for a Shrek night line: 'Say every line along with the video.'",
+   "Swap 'Moka pot espresso' for 'South Street Seaport noon coffee' with the note 'Broadcast on all AM frequencies, nobody came.'",
+   "Rename 'Neville's shelter pantry rice pudding' to 'Fred's hello pudding' to use the mannequin he says hello to.",
+   "Swap the printed 'ALL AREAS' badge text for 'IMMUNE' so the badge ties to his blood and the cure."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

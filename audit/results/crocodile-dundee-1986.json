@@ -21,22 +21,26 @@
   {
    "text": "Mick's campfire bread, off the coals.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The plot sources show Mick in the bush but never making damper.",
-   "source": "https://en.wikipedia.org/wiki/Crocodile_Dundee",
-   "fix": "Bush bread, off the coals.",
+   "verdict": "wrong",
+   "why": "Mick does feed Sue in the bush, but the meal is goanna, not bread, and no damper or campfire bread is mentioned in the transcript or plot.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=crocodile-dundee",
+   "fix": "Bush tucker, the way Mick does lunch.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "What the drivers order at Walkabout Creek.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No source shows drivers or lemon, lime and bitters at Walkabout Creek.",
-   "source": "https://en.wikipedia.org/wiki/Crocodile_Dundee",
-   "fix": "What the locals order at Walkabout Creek.",
+   "verdict": "wrong",
+   "why": "The pub at Walkabout Creek is shown with Wally ordering two beers from Ida. Nobody orders lemon, lime and bitters and no drivers are mentioned.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=crocodile-dundee",
+   "fix": "A change from the beers at Walkabout Creek.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 10,

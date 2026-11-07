@@ -1,52 +1,54 @@
 {
-  "id": "Major League (1989)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve the drink for Jobu when Cerrano steps up to bat.",
-      "where": "cue-printed",
-      "verdict": "unsure",
-      "why": "Cerrano makes his Jobu offerings of rum and cigars in the locker room, not at the plate. The data cue has the same wording.",
-      "source": "https://en.wikiquote.org/wiki/Major_League",
-      "fix": "Serve the drink for Jobu when Cerrano makes his offering in the locker room.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Lou Brown's order, tyre salesman's hours.",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "No source opened shows Lou Brown ordering a boilermaker, and the plot opened does not mention him selling tyres.",
-      "source": "https://en.wikipedia.org/wiki/Major_League_(film)",
-      "fix": "A manager's drink, for the ninth inning.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 12,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 4,
-    "tone": 3,
-    "look": 3,
-    "overall": 3.4,
-    "verdict": "A good Cleveland bar with Jobu's rum and Wild Thing pie, but it leans on bar snacks more than the film's famous gags.",
-    "missing": [
-      "Jobu and the cigars (Cerrano's locker)",
-      "Wild Thing walking out to the song (the bullpen)",
-      "Harry Doyle's Die Hard Night (the booth)",
-      "The live chicken for Cerrano (clubhouse)",
-      "Willie Mays Hayes and the American Express slide (the tux scene)",
-      "The red tag in the locker (spring training)"
-    ],
-    "ideas": [
-      "Swap 'Boilermaker' for 'Live chicken wings, Cerrano's special'",
-      "Swap the 'Opening Day' ticket for a red locker tag",
-      "Swap 'Wild Thing lattice cherry pie' note to 'Wild Thing, in glasses'",
-      "Replace the 'FROM THE BAR' note with a Harry Doyle line, 'Juuust a bit outside'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Major League (1989)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the drink for Jobu when Cerrano steps up to bat.",
+   "where": "cue-printed",
+   "verdict": "ok",
+   "why": "In the ninth Cerrano steps up, berates Jobu at the plate and then homers, after the locker room call that Jobu needs a refill, so the cue fits.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=major-league",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Lou Brown's order, tyre salesman's hours.",
+   "where": "dish-note",
+   "verdict": "ok",
+   "why": "Donovan phones Lou Brown at Tire World to offer him the job, so the tyre salesman line is true; the drink is a menu joke.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=major-league",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 12,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.4,
+  "verdict": "A good Cleveland bar with Jobu's rum and Wild Thing pie, but it leans on bar snacks more than the film's famous gags.",
+  "missing": [
+   "Jobu and the cigars (Cerrano's locker)",
+   "Wild Thing walking out to the song (the bullpen)",
+   "Harry Doyle's Die Hard Night (the booth)",
+   "The live chicken for Cerrano (clubhouse)",
+   "Willie Mays Hayes and the American Express slide (the tux scene)",
+   "The red tag in the locker (spring training)"
+  ],
+  "ideas": [
+   "Swap 'Boilermaker' for 'Live chicken wings, Cerrano's special'",
+   "Swap the 'Opening Day' ticket for a red locker tag",
+   "Swap 'Wild Thing lattice cherry pie' note to 'Wild Thing, in glasses'",
+   "Replace the 'FROM THE BAR' note with a Harry Doyle line, 'Juuust a bit outside'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

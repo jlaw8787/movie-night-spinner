@@ -14,7 +14,7 @@ You are settling "unsure" fact lines on printed movie-night menus for the Movie 
    - The film id is the "id" field in the result file.
 3. Settle it:
    - `ok` when a source shows it: the transcript has the line or the scene, or the plot says it. A plain menu joke that claims nothing about the plot is ok too.
-   - `wrong` when a source shows something else, or when nothing you can open shows it after a real try. An unproven claim about the film counts as wrong: replace it with something you can show. Josh wants every line settled, not left unsure.
+   - `wrong` when a source shows something else, or when nothing you can open shows it after a real try. A real try for a scene, prop or sight gag includes one WebSearch: famous visual moments (Mrs Deagle's stair lift in Gremlins) are often not in the dialogue or the Wikipedia plot. Never cut a famous scene for lack of a transcript line (Josh, 7 Nov: no film may miss its iconic lines or scenes). An unproven claim about the film counts as wrong: replace it with something you can show. Josh wants every line settled, not left unsure.
 4. Update the fact in place: set `verdict` to "ok" or "wrong", replace `why` with one plain sentence on what the source shows, set `source` to the link printed by audit-src (or the page you read), and add `"settled": "2026-11-08"`. Keep `text`, `where` and `printed`. Do not set `done` (the fix run does that).
 5. For each wrong line, write the fix:
    - `fix`: the replacement, in the same voice and within about 20 per cent of the length, so it fits the layout. Smallest change that makes it true. The film wins over the layout's habit.

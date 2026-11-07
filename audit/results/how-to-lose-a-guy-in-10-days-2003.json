@@ -21,22 +21,24 @@
   {
    "text": "Ben's family card game. Bluff the last round.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The plot has a poker night with Ben's friends and a Staten Island family weekend, but no family card game.",
+   "verdict": "wrong",
+   "why": "Ben's poker night with Tony and Thayer plays Bullshit with Andie, but the Staten Island family weekend has no card game.",
    "source": "https://en.wikipedia.org/wiki/How_to_Lose_a_Guy_in_10_Days",
-   "fix": "Ben's family weekend on Staten Island. Smile through the last round.",
+   "fix": "Ben's poker night. Bluff the last round.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "The pink diamond advertising pitch",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "The plot names a diamond company campaign Ben wants to lead. A 'pink' diamond is not mentioned.",
+   "verdict": "wrong",
+   "why": "The pitch is for a diamond company, with the line 'A diamond is for everyone', and no pink diamond comes up.",
    "source": "https://en.wikipedia.org/wiki/How_to_Lose_a_Guy_in_10_Days",
    "fix": "The diamond advertising pitch",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 12,

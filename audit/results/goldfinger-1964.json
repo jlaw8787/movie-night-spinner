@@ -5,12 +5,13 @@
   {
    "text": "Serve the drinks when Goldfinger offers Bond a mint julep at his Kentucky stud farm.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "A mint julep is served at the stud farm, but the page opened does not say who offers it.",
-   "source": "https://www.thejamesbonddossier.com/films/goldfinger.htm",
-   "fix": "Serve the drinks when Bond is handed a mint julep at Goldfinger's Kentucky stud farm.",
+   "verdict": "ok",
+   "why": "At Auric Stud, Kentucky, Goldfinger tells Bond to sit and asks 'Mint julep?', then later asks if the julep is tart enough.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=goldfinger-james-bond-007",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Dinner at Auric Enterprises is gold plated, Mr Bond. Oddjob will take your hat at the door.",

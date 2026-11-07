@@ -1,89 +1,94 @@
 {
-  "id": "Halloween (2018)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Haddonfield High Halloween Dance",
-      "where": "venue",
-      "verdict": "unsure",
-      "why": "Wikipedia has Allyson finding Cameron cheating at a party that night. A school dance is not in the plot summary, so the venue, sign ('Haddonfield High Gym') and ticket ('Halloween Dance') do not match what I could read.",
-      "source": "https://en.wikipedia.org/wiki/Halloween_(2018_film)",
-      "fix": "Haddonfield Halloween Party",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Mum says Grandma is paranoid. Grandma packed me snacks for the dance and said lock the back door on the way out.",
-      "where": "note",
-      "verdict": "unsure",
-      "why": "Karen dismisses Laurie and tells her to move on, and Allyson tries to keep a relationship with her grandmother. Nothing opened shows Laurie packing snacks or a dance.",
-      "source": "https://en.wikipedia.org/wiki/Halloween_(2018_film)",
-      "fix": "Mum says Grandma is paranoid. Grandma never relaxes, and she told me to lock the back door on the way out.",
-      "printed": true,
-      "done": true,
-      "fix_note": {
-        "text": "Mum says Grandma is paranoid. Grandma never relaxes, and she told me to lock the back door on the way out.",
-        "by": "Allyson Nelson",
-        "kind": "note"
-      },
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "what Laurie pours herself the night the transfer hits the news",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "Laurie drinks heavily all the time. She learns of the escape on the morning of October 31, after the bus crash on the night of October 30.",
-      "source": "https://en.wikipedia.org/wiki/Halloween_(2018_film)",
-      "fix": "what Laurie pours herself most nights, forty years on",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Julian's pick, while Vicky's on the phone.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "Vicky is babysitting Julian when Dave meets her. Nothing opened mentions a phone call.",
-      "source": "https://en.wikipedia.org/wiki/Halloween_(2018_film)",
-      "fix": "Julian's pick, while Vicky's busy with Dave.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "The awkward family dinner where Laurie turns up anyway.",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "A family dinner is not in the plot summary I opened.",
-      "source": "https://en.wikipedia.org/wiki/Halloween_(2018_film)",
-      "fix": "The family table where Laurie says her piece to Karen.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 9,
-  "vibe": {
-    "world": 3,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.2,
-    "verdict": "Good look and the right podcasters cue, but a dance venue the film may not have and a few shaky notes.",
-    "missing": [
-      "Laurie's basement safe room trap (the finale)",
-      "The bus crash and the escape (October 30)",
-      "Dr Sartain driving Michael to Laurie's house (the drive)",
-      "Aaron and Dana at Judith's grave (October 31)",
-      "Michael taking a mechanic's overalls (the garage)",
-      "Laurie trapping Michael and burning the house (the finale)"
-    ],
-    "ideas": [
-      "Swap the 'Halloween Dance' ticket and venue for a Halloween party, matching Allyson's night",
-      "Swap 'Laurie's compound chilli' for 'Safe room chilli', named for the trap in the basement",
-      "Swap 'Blood orange soda punch' note for the bus crash: 'Spilled everywhere on the road'",
-      "Swap 'Haddonfield High dance whoopie pies' for 'Fire pit whoopie pies', nodding to the burning house"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Halloween (2018)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Haddonfield High Halloween Dance",
+   "where": "venue",
+   "verdict": "ok",
+   "why": "The script has Ray asking about the high school plans and Allyson's friends confirming a Halloween dance, and later the police say they evacuated the dance.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=halloween-2018",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Mum says Grandma is paranoid. Grandma packed me snacks for the dance and said lock the back door on the way out.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "Karen dismisses Laurie and tells her to move on, and Allyson tries to keep a relationship with her grandmother. Nothing opened shows Laurie packing snacks or a dance.",
+   "source": "https://en.wikipedia.org/wiki/Halloween_(2018_film)",
+   "fix": "Mum says Grandma is paranoid. Grandma never relaxes, and she told me to lock the back door on the way out.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Mum says Grandma is paranoid. Grandma never relaxes, and she told me to lock the back door on the way out.",
+    "by": "Allyson Nelson",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "what Laurie pours herself the night the transfer hits the news",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Laurie drinks heavily all the time. She learns of the escape on the morning of October 31, after the bus crash on the night of October 30.",
+   "source": "https://en.wikipedia.org/wiki/Halloween_(2018_film)",
+   "fix": "what Laurie pours herself most nights, forty years on",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Julian's pick, while Vicky's on the phone.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Vicky does talk on the phone to Allyson while she babysits Julian, but nothing shows Julian choosing a snack, so the pick claim is unproven.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=halloween-2018",
+   "fix": "A babysitting snack while Vicky's on the phone.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "The awkward family dinner where Laurie turns up anyway.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The plot has no restaurant or set dinner scene. The script has Laurie letting herself into Karen's house while Karen is preparing dinner for her family, and Karen telling her she is not welcome.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=halloween-2018",
+   "fix": "Karen's dinner at home, where Laurie turns up uninvited.",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 9,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.2,
+  "verdict": "Good look and the right podcasters cue, but a dance venue the film may not have and a few shaky notes.",
+  "missing": [
+   "Laurie's basement safe room trap (the finale)",
+   "The bus crash and the escape (October 30)",
+   "Dr Sartain driving Michael to Laurie's house (the drive)",
+   "Aaron and Dana at Judith's grave (October 31)",
+   "Michael taking a mechanic's overalls (the garage)",
+   "Laurie trapping Michael and burning the house (the finale)"
+  ],
+  "ideas": [
+   "Swap the 'Halloween Dance' ticket and venue for a Halloween party, matching Allyson's night",
+   "Swap 'Laurie's compound chilli' for 'Safe room chilli', named for the trap in the basement",
+   "Swap 'Blood orange soda punch' note for the bus crash: 'Spilled everywhere on the road'",
+   "Swap 'Haddonfield High dance whoopie pies' for 'Fire pit whoopie pies', nodding to the burning house"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

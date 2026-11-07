@@ -1,58 +1,59 @@
 {
- "id": "My Neighbor Totoro (1988)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Serve the cucumbers when Granny pulls them out of the cold stream.",
-   "where": "cue",
-   "verdict": "unsure",
-   "why": "Sources describe the villagers cooling vegetables in the cold river water, but I could not confirm that the film shows Granny pulling cucumbers out of the stream.",
-   "source": "https://en.wikipedia.org/wiki/My_Neighbor_Totoro",
-   "fix": "Serve the cucumbers when Granny shows the girls vegetables cooling in the stream.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Dad, can we take the corn to Mother? It will make her feel better.",
-   "where": "note",
-   "verdict": "unsure",
-   "why": "In the film Mei takes the corn on her own after an argument, gets lost, and the Catbus carries the sisters to the hospital where they leave the ear of corn on the windowsill. Satsuki never asks Dad.",
-   "source": "https://en.wikipedia.org/wiki/My_Neighbor_Totoro",
-   "fix": "The corn is for Mum. Eat yours, then we'll leave hers on the hospital windowsill.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "The corn is for Mum. Eat yours, then we'll leave hers on the hospital windowsill.",
-    "by": "Satsuki",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
+  "id": "My Neighbor Totoro (1988)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the cucumbers when Granny pulls them out of the cold stream.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "No source shows Granny pulling cucumbers from a stream. The transcript has Granny telling the girls to keep pumping the well until the water gets cold.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=tonari-no-totoro-my-neighbor-totoro",
+      "fix": "Serve the cucumbers when Granny tells the girls to keep pumping till the water gets cold.",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    },
+    {
+      "text": "Dad, can we take the corn to Mother? It will make her feel better.",
+      "where": "note",
+      "verdict": "unsure",
+      "why": "In the film Mei takes the corn on her own after an argument, gets lost, and the Catbus carries the sisters to the hospital where they leave the ear of corn on the windowsill. Satsuki never asks Dad.",
+      "source": "https://en.wikipedia.org/wiki/My_Neighbor_Totoro",
+      "fix": "The corn is for Mum. Eat yours, then we'll leave hers on the hospital windowsill.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "The corn is for Mum. Eat yours, then we'll leave hers on the hospital windowsill.",
+        "by": "Satsuki",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 10,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 4,
+    "overall": 4,
+    "verdict": "Gentle and close to the film, with the umbrella, Catbus and corn for Mum, but the stream and corn details need a closer match.",
+    "missing": [
+      "Soot sprites eating sweets (old house)",
+      "Mei meeting Totoro in the camphor hollow",
+      "Dad laughing at the new house",
+      "Ear of corn left on the hospital windowsill (ending)",
+      "Totoro and the umbrella at the bus stop",
+      "The seeds growing into the giant tree (midnight dance)"
+    ],
+    "ideas": [
+      "Swap 'Bus stop rainy night udon' for 'Bus stop rainy night rice balls' to match Satsuki's lunchbox.",
+      "Rename 'Calpis with cold water' note: 'Dad's umbrella, lent to Totoro'.",
+      "Replace the Satsuki note with the corn on the windowsill line.",
+      "Add 'Soot sprite sesame sweets' as a dessert."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 10,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 4,
-  "look": 4,
-  "overall": 4,
-  "verdict": "Gentle and close to the film, with the umbrella, Catbus and corn for Mum, but the stream and corn details need a closer match.",
-  "missing": [
-   "Soot sprites eating sweets (old house)",
-   "Mei meeting Totoro in the camphor hollow",
-   "Dad laughing at the new house",
-   "Ear of corn left on the hospital windowsill (ending)",
-   "Totoro and the umbrella at the bus stop",
-   "The seeds growing into the giant tree (midnight dance)"
-  ],
-  "ideas": [
-   "Swap 'Bus stop rainy night udon' for 'Bus stop rainy night rice balls' to match Satsuki's lunchbox.",
-   "Rename 'Calpis with cold water' note: 'Dad's umbrella, lent to Totoro'.",
-   "Replace the Satsuki note with the corn on the windowsill line.",
-   "Add 'Soot sprite sesame sweets' as a dessert."
-  ],
-  "flat": false,
-  "done": false
- }
 }

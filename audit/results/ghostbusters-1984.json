@@ -5,12 +5,14 @@
   {
    "text": "Eaten out of the boxes on the desk",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The plot summaries I opened (Wikipedia and filmsite) show no Chinese takeaway scene at the firehouse, so the scene is not confirmed.",
-   "source": "https://filmsite.org/ghostbusters.html",
-   "fix": "Egon's enlarged Twinkie, ready to burst",
+   "verdict": "wrong",
+   "why": "The script and Wikipedia plot show the crew at the firehouse but no Chinese takeaway or boxes on the desk, so the scene is unproven. The note can describe how the dish is served instead.",
+   "source": "https://en.wikipedia.org/wiki/Ghostbusters_(1984_film)",
+   "fix": "Served out of takeaway boxes, firehouse style",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

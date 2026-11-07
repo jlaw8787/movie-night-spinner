@@ -21,12 +21,13 @@
   {
    "text": "Jane's spoonful, from Mary's medicine bottle.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The sources opened show the spoonful of sugar and the bottle but don't say Jane's dose is lime cordial.",
-   "source": "https://en.wikiquote.org/wiki/Mary_Poppins_(film)",
+   "verdict": "wrong",
+   "why": "The transcript has the medicine poured with lime cordial, strawberry and rum punch as results, but nothing opened says whose dose is which, so Jane's lime cordial is unproven.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=mary-poppins",
    "fix": "Mary's medicine bottle, poured for Jane and Michael.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 13,

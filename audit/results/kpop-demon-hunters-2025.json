@@ -16,12 +16,13 @@
     {
       "text": "the three of them sharing a comfort meal",
       "where": "dish-note",
-      "verdict": "unsure",
-      "why": "Printed under the beef bone soup. No source opened shows a beef bone soup or a sit down comfort meal.",
+      "verdict": "wrong",
+      "why": "The film shows pre-show ramyeon and kimbap on vacation, but no beef bone soup or shared comfort meal, so the note claims a scene that does not exist.",
       "source": "https://en.wikipedia.org/wiki/KPop_Demon_Hunters",
-      "fix": "the three of them sharing a pre-show meal",
+      "fix": "what the trio would want after a long night",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 12,

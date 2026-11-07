@@ -1,64 +1,65 @@
 {
-  "id": "Midsommar (2019)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Harga Midsummer Feast Hall",
-      "where": "venue",
-      "verdict": "wrong",
-      "why": "The commune is the Hårga, spelled with a ring on the a. The dish names on the same menu already use Hårga.",
-      "source": "https://en.wikipedia.org/wiki/Midsommar",
-      "fix": "Hårga Midsummer Feast Hall",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "WELCOME TO THE HARGA",
-      "where": "sign",
-      "verdict": "wrong",
-      "why": "The commune is the Hårga, with a ring on the a.",
-      "source": "https://en.wikipedia.org/wiki/Midsommar",
-      "fix": "WELCOME TO THE HÅRGA",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Christian's glass was darker. Check yours.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "Dani and Christian drink the same hallucinogenic tea, and the paralysing powder is blown in his face. No page opened shows a darker glass.",
-      "source": "https://en.wikipedia.org/wiki/Midsommar",
-      "fix": "Dani's glass was the same as everyone's. Check yours.",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 11,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "A gentle, flowery invite that suits the film's cheerful menace, but the menu is generic Swedish and skips the bear, the cliff and the May Queen's crowning.",
-    "missing": [
-      "The bear in the cage (Pelle shrugs, that's a bear)",
-      "The ättestupa cliff (the elders)",
-      "Dani crowned May Queen after the maypole dance",
-      "The hallucinogenic tea (the long table)",
-      "The ninth sacrifice and the burning temple (finale)",
-      "The mushroom trip (Dani's bad trip)"
-    ],
-    "ideas": [
-      "Swap 'Midsummer aged cheese tart' note for 'That's a bear'",
-      "Swap 'Strawberry midsummer cake' for 'May Queen cake, one slice for the queen'",
-      "Swap the 'Aquavit' house line for a plain tea cup, 'drink the tea'",
-      "Swap the place card for 'Table 90, the long table in the sun'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Midsommar (2019)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Harga Midsummer Feast Hall",
+   "where": "venue",
+   "verdict": "wrong",
+   "why": "The commune is the Hårga, spelled with a ring on the a. The dish names on the same menu already use Hårga.",
+   "source": "https://en.wikipedia.org/wiki/Midsommar",
+   "fix": "Hårga Midsummer Feast Hall",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "WELCOME TO THE HARGA",
+   "where": "sign",
+   "verdict": "wrong",
+   "why": "The commune is the Hårga, with a ring on the a.",
+   "source": "https://en.wikipedia.org/wiki/Midsommar",
+   "fix": "WELCOME TO THE HÅRGA",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Christian's glass was darker. Check yours.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Dani and Christian drink the same mushroom tea, and later Christian is given a drink Maja has made to dose him again. No source shows a darker glass, even after a follow-up search.",
+   "source": "https://nofilmschool.com/midsommar-ending-explained-with-foreshadowing-and-manipulation",
+   "fix": "Christian's drink had extra in it. Check yours.",
+   "printed": false,
+   "done": false,
+   "settled": "2026-11-08"
   }
+ ],
+ "checked_ok": 11,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A gentle, flowery invite that suits the film's cheerful menace, but the menu is generic Swedish and skips the bear, the cliff and the May Queen's crowning.",
+  "missing": [
+   "The bear in the cage (Pelle shrugs, that's a bear)",
+   "The ättestupa cliff (the elders)",
+   "Dani crowned May Queen after the maypole dance",
+   "The hallucinogenic tea (the long table)",
+   "The ninth sacrifice and the burning temple (finale)",
+   "The mushroom trip (Dani's bad trip)"
+  ],
+  "ideas": [
+   "Swap 'Midsummer aged cheese tart' note for 'That's a bear'",
+   "Swap 'Strawberry midsummer cake' for 'May Queen cake, one slice for the queen'",
+   "Swap the 'Aquavit' house line for a plain tea cup, 'drink the tea'",
+   "Swap the place card for 'Table 90, the long table in the sun'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

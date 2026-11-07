@@ -5,22 +5,24 @@
     {
       "text": "Pour drinks when the money train pulls into the station.",
       "where": "cue",
-      "verdict": "unsure",
-      "why": "The plot only says the money train collects fares from stations. No opened source describes a scene of it pulling into a station. The clear train moments are Charlie sneaking aboard on New Year's Eve and the brothers throwing it into reverse.",
+      "verdict": "wrong",
+      "why": "The plot has no scene of the money train pulling into a station. On New Year's Eve Charlie sneaks aboard through a floor panel.",
       "source": "https://en.wikipedia.org/wiki/Money_Train",
       "fix": "Pour drinks when Charlie sneaks aboard the money train on New Year's Eve.",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     },
     {
       "text": "Grace, the cop they both fall for, and her Puerto Rican cooking",
       "where": "dish-note",
-      "verdict": "unsure",
-      "why": "Grace Santiago is the decoy cop both brothers like, but no opened source shows her cooking or gives her background.",
+      "verdict": "wrong",
+      "why": "Grace Santiago is the decoy cop both brothers like, but nothing in the plot or transcript shows her cooking or gives her a Puerto Rican background.",
       "source": "https://en.wikipedia.org/wiki/Money_Train",
       "fix": "Grace Santiago, the decoy cop both brothers fall for",
       "printed": false,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 8,

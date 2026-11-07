@@ -1,58 +1,60 @@
 {
- "id": "Con Air (1997)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "I've just got to get home to my daughter. Pass the tray and keep moving.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Not a Poe line. His best-known line is 'Put the bunny back in the box.' (said to Billy Bedlam). Printed in quote marks and signed Cameron Poe. If this fix is used, the house line 'Put the bunny back in the box.' needs a new note.",
-   "source": "https://headstuff.org/?p=50312",
-   "fix": "Put the bunny back in the box.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "I've just got to get home to my daughter. Pass the tray and keep moving.",
-    "by": "Cameron Poe",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "FLIGHT 779 · NOW BOARDING",
-   "where": "card",
-   "verdict": "unsure",
-   "why": "No source gives a flight number for the Jailbird. The number may be an invented prop.",
-   "source": "",
-   "fix": "JAILBIRD · NOW BOARDING",
-   "printed": true,
-   "done": false
+  "id": "Con Air (1997)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "I've just got to get home to my daughter. Pass the tray and keep moving.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Not a Poe line. His best-known line is 'Put the bunny back in the box.' (said to Billy Bedlam). Printed in quote marks and signed Cameron Poe. If this fix is used, the house line 'Put the bunny back in the box.' needs a new note.",
+      "source": "https://headstuff.org/?p=50312",
+      "fix": "Put the bunny back in the box.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "I've just got to get home to my daughter. Pass the tray and keep moving.",
+        "by": "Cameron Poe",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "FLIGHT 779 · NOW BOARDING",
+      "where": "card",
+      "verdict": "wrong",
+      "why": "The plane in the film is called Jailbird (Jailbird One on the radio). No flight number 779 appears. The airline layout makes that number from the year (menu-formats/airline.js), so it is a code fix, not a data line.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=con-air",
+      "fix": "JAILBIRD · NOW BOARDING",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08",
+      "nofind": true
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "Good prison flight card and the bunny cue is spot on, but the tone is polite where the film is loud.",
+    "missing": [
+      "Garland Greene's tea party with the little girl",
+      "Baby-O, Poe's diabetic cellmate",
+      "Poe rescuing the bunny from the storm drain",
+      "The fire truck chase after the crash",
+      "The derelict airstrip boneyard battle",
+      "Cyrus executing Cindino with the fuel"
+    ],
+    "ideas": [
+      "Swap 'Smoked turkey pinwheels' for 'Garland's tea party sandwiches', note 'Calm. Do not stare.'",
+      "Swap 'Orange soda in the can' note for 'Baby-O needs the sugar.'",
+      "Swap 'Bunny cake' note for 'Rescued from a storm drain, handed over at last.'",
+      "Swap 'Lerner Airfield smoky beef jerky' note for 'Dried out like the boneyard.'"
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 11,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.8,
-  "verdict": "Good prison flight card and the bunny cue is spot on, but the tone is polite where the film is loud.",
-  "missing": [
-   "Garland Greene's tea party with the little girl",
-   "Baby-O, Poe's diabetic cellmate",
-   "Poe rescuing the bunny from the storm drain",
-   "The fire truck chase after the crash",
-   "The derelict airstrip boneyard battle",
-   "Cyrus executing Cindino with the fuel"
-  ],
-  "ideas": [
-   "Swap 'Smoked turkey pinwheels' for 'Garland's tea party sandwiches', note 'Calm. Do not stare.'",
-   "Swap 'Orange soda in the can' note for 'Baby-O needs the sugar.'",
-   "Swap 'Bunny cake' note for 'Rescued from a storm drain, handed over at last.'",
-   "Swap 'Lerner Airfield smoky beef jerky' note for 'Dried out like the boneyard.'"
-  ],
-  "flat": false,
-  "done": false
- }
 }

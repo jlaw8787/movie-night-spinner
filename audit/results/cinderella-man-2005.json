@@ -21,32 +21,37 @@
   {
    "text": "Joe Gould's round after the Baer fight.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No page opened shows Gould buying a round or Ballantine ale after the Baer fight. The plot has Mae listening to the fight on the radio with the kids.",
-   "source": "https://en.wikipedia.org/wiki/Cinderella_Man",
-   "fix": "Raised in the Braddock kitchen after the Baer fight.",
-   "done": false,
-   "printed": true
+   "verdict": "wrong",
+   "why": "No scene shows Gould buying a round. The film ends on Braddock beating Max Baer and winning the heavyweight title, so a toast to the new champ is what holds up.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=cinderella-man",
+   "fix": "A toast to the new champ after the Baer fight.",
+   "done": true,
+   "printed": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "The first proper meal after a win.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No source opened shows a first proper meal after a win.",
-   "source": "https://en.wikipedia.org/wiki/Cinderella_Man",
-   "fix": "What Mae would cook after the fight with Griffin.",
+   "verdict": "wrong",
+   "why": "No meal after a win is shown. The steak that is shown is the thick, juicy one Jim dreams about at the breakfast table in the opening scene.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=cinderella-man",
+   "fix": "the thick, juicy steak Jim dreams about",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Jim skips his and gives Rosy his share.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "No source opened shows Jim giving up his food for Rosy.",
-   "source": "https://en.wikipedia.org/wiki/Cinderella_Man",
-   "fix": "Jim pays back the relief money before he buys any treats.",
+   "verdict": "ok",
+   "why": "At the table Rosy asks for more, and Jim describes a dream feast, says he is stuffed and asks the kids to give him a hand finishing his plate.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=cinderella-man",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

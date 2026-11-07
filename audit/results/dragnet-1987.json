@@ -21,22 +21,26 @@
   {
    "text": "Friday's order, never anything else",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No source shows Friday ordering meatloaf. The only Friday food moment in the sources is the chili dog Streebek warns him about.",
+   "verdict": "wrong",
+   "why": "Searching the transcript, Wikiquote and Wikipedia finds no meatloaf. Friday's one food vice is chili dogs.",
    "source": "https://en.wikiquote.org/wiki/Dragnet_(1987_film)",
    "fix": "The by-the-book plate, no substitutions.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Streebek's choice of snack",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No source shows Streebek ordering sliders. The only food moment he has in the sources is the chili dog warning and his toast to Granny Mundy.",
+   "verdict": "wrong",
+   "why": "No sliders in the transcript. Streebek is the one who warns Friday off his chili dogs, not the one ordering snacks.",
    "source": "https://en.wikiquote.org/wiki/Dragnet_(1987_film)",
-   "fix": "Friday disapproves, Streebek orders two.",
+   "fix": "No chili dogs, says Streebek",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 16,

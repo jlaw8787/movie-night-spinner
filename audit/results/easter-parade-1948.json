@@ -21,22 +21,26 @@
   {
    "text": "Hewes and Brown Studio",
    "where": "venue",
-   "verdict": "unsure",
-   "why": "The partners are billed as Hannah and Hewes, not Hewes and Brown. A studio called Hewes and Brown is not in the plot.",
+   "verdict": "wrong",
+   "why": "The act is billed Hannah and Hewes in the plot, and Don asks for Miss Brown by her real name. No Hewes and Brown studio appears.",
    "source": "https://en.wikipedia.org/wiki/Easter_Parade_(film)",
    "fix": "Hannah and Hewes Studio",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Don and Hannah in tramp's rags, singing about dinner with the Vanderbilts.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Don and Hannah do play tramps in A Couple of Swells. The Vanderbilts dinner is a reading of the lyrics, and the lyrics are not in the sources I opened.",
-   "source": "https://en.wikipedia.org/wiki/Easter_Parade_(film)",
-   "fix": "Don and Hannah in tramp's rags, swells for a night.",
+   "verdict": "wrong",
+   "why": "In A Couple of Swells the two play tramps and the Vanderbilts have asked them up for tea. There is no dinner in the number.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=easter-parade",
+   "fix": "Don and Hannah in tramp's rags, invited to tea with the Vanderbilts.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

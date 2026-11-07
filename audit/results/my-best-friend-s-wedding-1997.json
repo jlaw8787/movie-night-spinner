@@ -21,22 +21,24 @@
     {
       "text": "Serve dessert when Jules and Michael get talking about Kimmy.",
       "where": "cue",
-      "verdict": "unsure",
-      "why": "They talk about Kimmy in several scenes, so the cue does not point to one moment. The famous dessert moment is Julianne telling Kimmy the creme brulee and jello story.",
-      "source": "https://en.wikiquote.org/wiki/My_Best_Friend%27s_Wedding",
+      "verdict": "wrong",
+      "why": "Jules and Michael talk about Kimmy in many scenes, so the cue points at no one moment. The dessert moment in the transcript is the creme brulee and Jell-O speech.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=my-best-friends-wedding",
       "fix": "Serve dessert when Julianne tells Kimmy the creme brulee and jello story.",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     },
     {
       "text": "Serve dessert when Jules and Michael get talking about Kimmy.",
       "where": "cue-printed",
-      "verdict": "unsure",
-      "why": "Same cue as printed on the menu. It is vague.",
-      "source": "https://en.wikiquote.org/wiki/My_Best_Friend%27s_Wedding",
+      "verdict": "wrong",
+      "why": "Same vague cue as printed. The dessert moment is the creme brulee and Jell-O speech.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=my-best-friends-wedding",
       "fix": "Serve dessert when Julianne tells Kimmy the creme brulee and jello story.",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     },
     {
       "text": "Say a little prayer. The whole table sings.",

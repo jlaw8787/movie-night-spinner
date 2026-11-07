@@ -1,42 +1,43 @@
 {
- "id": "Miracle on 34th Street (1994)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Susan tugs Kris's beard. It's real.",
-   "where": "house",
-   "verdict": "unsure",
-   "why": "Neither the plot summary nor the quote page for the 1994 film has Susan tugging his beard. What the film does give her is the line that Kris looks like every picture of Santa she has seen.",
-   "source": "https://en.wikiquote.org/wiki/Miracle_on_34th_Street_(1994_film)",
-   "fix": "Susan says he looks like every picture of Santa.",
-   "printed": true,
-   "done": false
+  "id": "Miracle on 34th Street (1994)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Susan tugs Kris's beard. It's real.",
+      "where": "house",
+      "verdict": "ok",
+      "why": "In the transcript Susan says his beard is stuck on tight, Kris says it is real and tells her to give it a tug.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=miracle-on-34th-street-1994",
+      "fix": "Susan says he looks like every picture of Santa.",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 2,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.2,
+    "verdict": "A nice department store tea room with the right Cole's name, but it skips the film's big moments: the courtroom, the dollar bill and Kris signing with a deaf child.",
+    "missing": [
+      "Dollar bill with In God We Trust circled (courtroom)",
+      "Kris signing with a deaf girl (Cole's Santa chair)",
+      "Reindeer in the courtroom: 'He only flies on Christmas Eve' (trial)",
+      "The catalogue house Susan wants (Christmas morning)",
+      "Shopper's Express rivals (plot to ruin Kris)",
+      "Judge Harper's grandson at the start (courthouse)"
+    ],
+    "ideas": [
+      "Swap the beard tug note on the hot chocolate for 'Kris signed with a deaf girl and Susan noticed'.",
+      "Rename 'Cole's Santa grotto gingerbread cookies' to 'In God We Trust gingerbread coins' with a dollar bill icing detail.",
+      "Replace 'Letter to Santa' prop with a courtroom exhibit card: 'Exhibit A: one dollar bill'.",
+      "Put 'He only flies on Christmas Eve' under the pumpkin pie."
+    ],
+    "flat": true,
+    "done": false
   }
- ],
- "checked_ok": 12,
- "vibe": {
-  "world": 4,
-  "moments": 2,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.2,
-  "verdict": "A nice department store tea room with the right Cole's name, but it skips the film's big moments: the courtroom, the dollar bill and Kris signing with a deaf child.",
-  "missing": [
-   "Dollar bill with In God We Trust circled (courtroom)",
-   "Kris signing with a deaf girl (Cole's Santa chair)",
-   "Reindeer in the courtroom: 'He only flies on Christmas Eve' (trial)",
-   "The catalogue house Susan wants (Christmas morning)",
-   "Shopper's Express rivals (plot to ruin Kris)",
-   "Judge Harper's grandson at the start (courthouse)"
-  ],
-  "ideas": [
-   "Swap the beard tug note on the hot chocolate for 'Kris signed with a deaf girl and Susan noticed'.",
-   "Rename 'Cole's Santa grotto gingerbread cookies' to 'In God We Trust gingerbread coins' with a dollar bill icing detail.",
-   "Replace 'Letter to Santa' prop with a courtroom exhibit card: 'Exhibit A: one dollar bill'.",
-   "Put 'He only flies on Christmas Eve' under the pumpkin pie."
-  ],
-  "flat": true,
-  "done": false
- }
 }

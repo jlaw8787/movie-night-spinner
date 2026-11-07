@@ -1,42 +1,44 @@
 {
-  "id": "Coneheads (1993)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve the snacks when Beldar and Prymaat sit down to their first big feed on Earth.",
-      "where": "cue",
-      "verdict": "unsure",
-      "why": "No source opened shows a first big meal. The one eating scene on the Wikiquote page is Prymaat inviting the neighbours to 'the consumption of mass quantities' at a weekend barbecue. TV Tropes only has Beldar eating soap and toilet paper in a motel room.",
-      "source": "https://en.wikiquote.org/wiki/Coneheads_(film)",
-      "fix": "Serve the snacks when Prymaat invites the neighbours to consume mass quantities.",
-      "done": false,
-      "printed": true
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 4,
-    "look": 3,
-    "overall": 3.4,
-    "verdict": "The Remulak talk is right and the family fits a suburban kitchen, but the snacks are plain and the best moments are missing.",
-    "missing": [
-      "Prymaat inviting Larry and Lisa to 'char some mammal flesh' at the barbecue",
-      "Beldar hitting a rock into the Garthok's mouth with his golf swing (Remulak)",
-      "'Maintain low tones with me' (Beldar to Connie)",
-      "INS agent Gorman posing as a Jehovah's Witness at the door",
-      "Beldar's driving school in Paramus",
-      "Beldar saying he is an illegal alien to Otto"
-    ],
-    "ideas": [
-      "Swap 'Suburban cookout sausages and chicken' note for 'Char some mammal flesh' as Prymaat's barbecue invite.",
-      "Swap 'Beldar's lager shandy jug' note for 'Maintain low tones with me.'",
-      "Swap 'Cone-shaped ice cream' note for the Garthok golf rock.",
-      "Swap the 'Read me first' note for Beldar's real line, 'Maintain low tones, maintain low tones.'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Coneheads (1993)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when Beldar and Prymaat sit down to their first big feed on Earth.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "No first big meal on Earth is in the transcript or plot. What is shown is a neighbour being invited to consumption of mass quantities, with a flame pit and charred mammal flesh, at a weekend barbecue.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=coneheads",
+   "fix": "Serve the snacks when the Coneheads invite the neighbours to consume mass quantities.",
+   "done": true,
+   "printed": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 3,
+  "overall": 3.4,
+  "verdict": "The Remulak talk is right and the family fits a suburban kitchen, but the snacks are plain and the best moments are missing.",
+  "missing": [
+   "Prymaat inviting Larry and Lisa to 'char some mammal flesh' at the barbecue",
+   "Beldar hitting a rock into the Garthok's mouth with his golf swing (Remulak)",
+   "'Maintain low tones with me' (Beldar to Connie)",
+   "INS agent Gorman posing as a Jehovah's Witness at the door",
+   "Beldar's driving school in Paramus",
+   "Beldar saying he is an illegal alien to Otto"
+  ],
+  "ideas": [
+   "Swap 'Suburban cookout sausages and chicken' note for 'Char some mammal flesh' as Prymaat's barbecue invite.",
+   "Swap 'Beldar's lager shandy jug' note for 'Maintain low tones with me.'",
+   "Swap 'Cone-shaped ice cream' note for the Garthok golf rock.",
+   "Swap the 'Read me first' note for Beldar's real line, 'Maintain low tones, maintain low tones.'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

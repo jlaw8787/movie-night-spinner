@@ -5,42 +5,47 @@
   {
    "text": "Leo Getz's drive thru fries",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "I could not find a source for a drive-thru scene with Leo. He is placed in protective custody and drives the detectives mad, but the pages I opened do not show him ordering fast food.",
-   "source": "",
-   "fix": "Leo Getz's thin fries",
+   "verdict": "ok",
+   "why": "The transcript has Leo's drive-through rant, so a drive-thru fries name nods to a real scene.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon-2",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Leo wants his order right this time.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Same drive-thru problem. No opened source shows Leo sending an order back.",
-   "source": "",
-   "fix": "Okay, okay, okay. Leo wants it hot.",
+   "verdict": "ok",
+   "why": "In the same scene Leo rants about getting short-changed at drive-throughs and insists on the counter, so wanting his order right fits.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon-2",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "TV ad cupcakes",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "The name relies on a TV advert scene that I could not confirm in any source I opened.",
-   "source": "",
-   "fix": "Boat on the lawn cupcakes",
+   "verdict": "ok",
+   "why": "Rianne's TV commercial is a real scene (Murtaugh's family watches it at eight o'clock), so a TV ad dish name is a fair nod.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon-2",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Arjen Rudd's drink, before his immunity is revoked.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Rudd's immunity is revoked at the end (Murtaugh: 'It's just been revoked'), but no source I opened says brandy and Coke is his drink.",
-   "source": "https://lethalweapon.fandom.com/wiki/Lethal_Weapon_2",
+   "verdict": "wrong",
+   "why": "Rudd's immunity is revoked at the end, but no source shows brandy and Coke as his drink.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lethal-weapon-2",
    "fix": "Rudd's last round. Immunity revoked.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

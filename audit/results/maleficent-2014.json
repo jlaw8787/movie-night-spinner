@@ -5,22 +5,26 @@
   {
    "text": "Serve dessert when the three pixies try to bake Aurora's birthday cake.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The pixies baking a cake is from the 1959 animated film. The sources opened for the 2014 film show the pixies as clumsy carers but no cake scene.",
+   "verdict": "wrong",
+   "why": "The pixies baking a cake is from the 1959 animated film. In this film the pixies are at the christening, where Maleficent arrives uninvited and curses Aurora.",
    "source": "https://en.wikipedia.org/wiki/Maleficent_(film)",
    "fix": "Serve dessert when Maleficent crashes the christening and curses baby Aurora.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "The pixies' birthday cake",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "Same problem as the cue. No cake-baking scene is shown in the sources opened for the 2014 film.",
+   "verdict": "wrong",
+   "why": "No cake-baking scene shows in the plot or transcript. The christening is the film's scene, so the dish is renamed to match it.",
    "source": "https://en.wikipedia.org/wiki/Maleficent_(film)",
    "fix": "Aurora's christening cake",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Mistress, I'm a raven, a man, and a wolf. Pick a shape and I'll fetch the bread. Please, not the dragon.",
@@ -41,12 +45,14 @@
   {
    "text": "The wall of thorns around the castle",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "Maleficent's wall of thorns surrounds the Moors. Stefan later builds an iron thorn wall around his own castle, so the line is only true of his wall.",
-   "source": "https://tvtropes.org/pmwiki/pmwiki.php/Film/Maleficent",
+   "verdict": "wrong",
+   "why": "Maleficent surrounds the Moors with a wall of thorns. The iron thorns round Stefan's castle come later.",
+   "source": "https://en.wikipedia.org/wiki/Maleficent_(film)",
    "fix": "The wall of thorns around the Moors",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 9,

@@ -1,58 +1,59 @@
 {
- "id": "Moulin Rouge! (2001)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Serve the drinks when Toulouse brings out the green absinthe.",
-   "where": "cue",
-   "verdict": "unsure",
-   "why": "The film has a Green Fairy absinthe scene with the Bohemians, but the Wikipedia plot I opened does not cover it, so I could not confirm that Toulouse is the one who brings the absinthe out. The printed card shows the same cue.",
-   "source": "https://en.wikipedia.org/wiki/Moulin_Rouge!",
-   "fix": "Serve the drinks when the Green Fairy appears over the Bohemians' table.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Welcome, darlings! Tonight everything is permitted. Drinks first, tragedy later, and absolutely no talking during the show.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Printed in quote marks as Zidler's words, but it is not a line from the film. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
-   "source": "https://en.wikipedia.org/wiki/Moulin_Rouge!",
-   "fix": "Welcome, darlings. Drinks first, tragedy later, and not a word during the show. The Duke is paying.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Welcome, darlings. Drinks first, tragedy later, and not a word during the show. The Duke is paying.",
-    "by": "Harold Zidler",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
+  "id": "Moulin Rouge! (2001)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Serve the drinks when Toulouse brings out the green absinthe.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "The transcript has the absinthe scene with the Green Fairy singing to Christian and the Bohemians, but no line shows Toulouse bringing the bottle out.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=moulin-rouge",
+      "fix": "Serve the drinks when the Green Fairy appears to the Bohemians.",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    },
+    {
+      "text": "Welcome, darlings! Tonight everything is permitted. Drinks first, tragedy later, and absolutely no talking during the show.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Printed in quote marks as Zidler's words, but it is not a line from the film. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
+      "source": "https://en.wikipedia.org/wiki/Moulin_Rouge!",
+      "fix": "Welcome, darlings. Drinks first, tragedy later, and not a word during the show. The Duke is paying.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Welcome, darlings. Drinks first, tragedy later, and not a word during the show. The Duke is paying.",
+        "by": "Harold Zidler",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 4,
+    "look": 5,
+    "overall": 3.8,
+    "verdict": "Looks right with the red and black club, but the menu leaves out the songs and set pieces fans quote.",
+    "missing": [
+      "The Elephant Love Medley",
+      "Satine's diamond necklace number",
+      "Christian's typewriter and the secret song",
+      "The tango to Roxanne",
+      "Zidler's Like a Virgin",
+      "Spectacular Spectacular and the sitar player story"
+    ],
+    "ideas": [
+      "Swap 'Moulin Rouge oysters' for 'Diamonds are a girl's best friend oysters' with a pearl garnish.",
+      "Swap 'Montmartre gougères' for 'Elephant love medley bites' sized for sharing.",
+      "Swap 'Red windmill raspberry tart' note for 'Satine's last number' to mirror the ending.",
+      "Swap 'Brut champagne by the coupe' note for 'Zidler's tab, the Duke's money' in the printed menu."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 12,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 4,
-  "look": 5,
-  "overall": 3.8,
-  "verdict": "Looks right with the red and black club, but the menu leaves out the songs and set pieces fans quote.",
-  "missing": [
-   "The Elephant Love Medley",
-   "Satine's diamond necklace number",
-   "Christian's typewriter and the secret song",
-   "The tango to Roxanne",
-   "Zidler's Like a Virgin",
-   "Spectacular Spectacular and the sitar player story"
-  ],
-  "ideas": [
-   "Swap 'Moulin Rouge oysters' for 'Diamonds are a girl's best friend oysters' with a pearl garnish.",
-   "Swap 'Montmartre gougères' for 'Elephant love medley bites' sized for sharing.",
-   "Swap 'Red windmill raspberry tart' note for 'Satine's last number' to mirror the ending.",
-   "Swap 'Brut champagne by the coupe' note for 'Zidler's tab, the Duke's money' in the printed menu."
-  ],
-  "flat": false,
-  "done": false
- }
 }

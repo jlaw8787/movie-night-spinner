@@ -21,32 +21,38 @@
   {
    "text": "A feed from the hometown bakery when Lily visits Jarrod's family.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The plot has Lily visiting Jarrod's hometown and family, but no bakery.",
-   "source": "https://en.wikipedia.org/wiki/Eagle_vs_Shark",
+   "verdict": "wrong",
+   "why": "The transcript has Lily at the family dinner at Jarrod's hometown, but no bakery appears anywhere.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=eagle-vs-shark",
    "fix": "A feed for Lily's visit to Jarrod's family.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Jarrod's order before training for the big fight.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Jarrod trains for his fight with Eric, but nothing shows him ordering an L&P spider.",
-   "source": "https://en.wikipedia.org/wiki/Eagle_vs_Shark",
+   "verdict": "wrong",
+   "why": "Jarrod says he is training for a scheduled fight with Eric Elisi, but no drink order or L&P appears in the transcript.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=eagle-vs-shark",
    "fix": "For Jarrod, training for the big fight.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Fight Man rematch lemon, lime and bitters",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "The film has Jarrod and Lily meeting in a video game final at the costume party, and Lily loses on purpose. The name of the game and any rematch are not in what I read.",
-   "source": "https://off-centerviews.blogspot.com/2010/01/eagle-vs-shark-video-review.html",
-   "fix": "Costume party final lemon, lime and bitters",
+   "verdict": "wrong",
+   "why": "Fight Man is the game at the costume party and Lily takes on Eagle Lord in the final, but there is no rematch in the transcript.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=eagle-vs-shark",
+   "fix": "Fight Man final lemon, lime and bitters",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

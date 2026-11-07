@@ -5,22 +5,23 @@
     {
       "text": "The snowman that appears at the door",
       "where": "wink",
-      "verdict": "unsure",
-      "why": "The plot summary does not mention a snowman. The sources opened do not settle it.",
-      "source": "https://en.wikipedia.org/wiki/Krampus_(film)",
-      "fix": "The jack in the box that comes to life",
+      "verdict": "wrong",
+      "why": "Max points out a snowman in the yard that nobody built. The transcript has it in the yard, not at the door.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=krampus",
+      "fix": "The snowman that appears in the yard",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     },
     {
       "text": "Eaten before the snowman turns up outside.",
       "where": "house",
-      "verdict": "unsure",
-      "why": "Same snowman line on the house starter. Not confirmed by the plot or quote page.",
-      "source": "https://en.wikipedia.org/wiki/Krampus_(film)",
-      "fix": "Eaten before the blizzard shuts the street.",
+      "verdict": "ok",
+      "why": "Max tells his mum there is a snowman in the yard that nobody built, so it does turn up outside during the blackout.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=krampus",
       "printed": false,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 12,

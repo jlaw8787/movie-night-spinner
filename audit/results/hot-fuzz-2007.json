@@ -21,32 +21,33 @@
   {
    "text": "Serve the drinks when Angel orders a cranberry juice at the pub.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "The sources I opened never name the drink Angel orders at the Crown, so cranberry juice is unconfirmed.",
-   "source": "https://en.wikipedia.org/wiki/Hot_Fuzz",
-   "fix": "Serve the drinks when Angel and Danny settle in at the Crown.",
+   "verdict": "ok",
+   "why": "The transcript has Angel asking the barman at the Crown for a glass of the cranberry juice.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=hot-fuzz",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Angel's cranberry lime cooler, no ice",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "Cranberry juice and 'no ice' are unconfirmed in the sources I opened.",
-   "source": "https://en.wikipedia.org/wiki/Hot_Fuzz",
-   "fix": "Angel's lime and soda, no ice",
+   "verdict": "wrong",
+   "why": "Angel does drink cranberry juice, but nothing shows lime or the no ice detail, so the name claims more than the film does.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=hot-fuzz",
+   "fix": "Angel's cranberry, ginger and lime cooler",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Danny's order. Angel sticks to cranberry juice.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The drink Angel has is unconfirmed in the sources I opened.",
-   "source": "https://en.wikipedia.org/wiki/Hot_Fuzz",
-   "fix": "Danny's order. Angel stays on the soft stuff.",
+   "verdict": "ok",
+   "why": "In the pub scene Angel is offered another cranberry juice, and Danny later jokes about getting him something that isn't one.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=hot-fuzz",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 20,

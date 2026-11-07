@@ -5,12 +5,13 @@
     {
       "text": "Alison's fix for the morning sickness.",
       "where": "house",
-      "verdict": "unsure",
-      "why": "The plot only says Alison has morning sickness while interviewing James Franco. No source shows her drinking ginger ale.",
+      "verdict": "wrong",
+      "why": "The plot has Alison sick during the James Franco interview, but no source shows her drinking ginger ale or any cure for it.",
       "source": "https://en.wikipedia.org/wiki/Knocked_Up",
-      "fix": "Alison's cure for being sick on air.",
+      "fix": "What Alison could have used on the Franco interview.",
       "printed": false,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 13,

@@ -5,22 +5,24 @@
     {
       "text": "Serve the mains when Declan serves dinner at his pub in Dingle.",
       "where": "cue",
-      "verdict": "unsure",
-      "why": "The plot has no dinner at Declan's pub. The dinner scene is the Tipperary B&B, where they pretend to be married and the other couples kiss. Printed on face 1 as the last call line and stored as the data cue.",
+      "verdict": "wrong",
+      "why": "The dinner scene is at the Tipperary bed and breakfast, where Anna and Declan pose as a married couple. Declan runs the pub in Dingle but is not shown serving dinner there.",
       "source": "https://en.wikipedia.org/wiki/Leap_Year_(2010_film)",
-      "fix": "Serve the mains when Anna and Declan sit down to dinner at the Tipperary B&B.",
+      "fix": "Serve the mains when Anna and Declan have dinner at the Tipperary B&B.",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     },
     {
       "text": "Jeremy waiting with a ring she wanted",
       "where": "wink",
-      "verdict": "unsure",
-      "why": "Jeremy proposes in the hotel lobby because of the co-op board. The plot does not describe him waiting with a ring she wanted.",
-      "source": "https://en.wikipedia.org/wiki/Leap_Year_(2010_film)",
-      "fix": "Jeremy proposing in the hotel lobby",
+      "verdict": "wrong",
+      "why": "Jeremy gives Anna earrings, not the ring she hoped for, and only proposes later in the Dublin hotel lobby. No scene has him waiting with a ring.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=leap-year",
+      "fix": "Jeremy with earrings, not the ring",
       "printed": false,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 12,

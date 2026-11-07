@@ -1,69 +1,70 @@
 {
-  "id": "Halloween (1978)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Annie drops Lindsey at Laurie's, then heads off.",
-      "where": "house",
-      "verdict": "wrong",
-      "why": "Annie walks Lindsey across the street to the Doyle house, where Laurie is babysitting Tommy. Laurie's own house is not involved.",
-      "source": "https://en.wikipedia.org/wiki/Halloween_(1978_film)",
-      "fix": "Annie drops Lindsey at the Doyle house, then heads off.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "I'm babysitting Tommy tonight. We're carving the pumpkin, and I just want one quiet night.",
-      "where": "note",
-      "verdict": "unsure",
-      "why": "Laurie is babysitting Tommy, but the sources opened do not mention pumpkin carving, and the words are not in the film quotes I read.",
-      "source": "https://www.filmsite.org/hall2.html",
-      "fix": "I'm babysitting Tommy tonight. Just one quiet night, that's all I want.",
-      "printed": true,
-      "done": true,
-      "fix_note": {
-        "text": "I'm babysitting Tommy tonight. Just one quiet night, that's all I want.",
-        "by": "Laurie Strode",
-        "kind": "note"
-      },
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Laurie carves the jack-o'-lantern with Tommy",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "Pumpkin carving is not in the plot summary or the filmsite review I opened. Only a lit jack-o'-lantern is mentioned.",
-      "source": "https://www.filmsite.org/hall2.html",
-      "fix": "Laurie babysits Tommy on Halloween night",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 4,
-    "tone": 4,
-    "look": 4,
-    "overall": 3.8,
-    "verdict": "Moody late-night diner with fitting pumpkin food, but it leaves out the killer's famous props.",
-    "missing": [
-      "The knitting needle and the wire hanger (Laurie's fight at the Doyle house)",
-      "Michael under Bob's ghost sheet with glasses (the Wallace house)",
-      "Judith's stolen tombstone (the Wallace bedroom)",
-      "Annie's butter-stained clothes (the popcorn spill)",
-      "Lynda's phone call (the phone cord)",
-      "Tommy: 'I saw the boogeyman' (the Doyle house)"
-    ],
-    "ideas": [
-      "Swap 'Pumpkin pie' mask topping for a 'ghost sheet' cupcake with glasses, Bob's costume",
-      "Swap 'Babysitter's popcorn' note for Annie's butter-stained clothes",
-      "Swap 'Hot cocoa with mini marshmallows' note for 'Tommy: I saw the boogeyman'",
-      "Swap 'Homemade peanut butter cups' note for Judith's tombstone"
-    ],
-    "flat": false,
-    "done": false
+ "id": "Halloween (1978)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Annie drops Lindsey at Laurie's, then heads off.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "Annie walks Lindsey across the street to the Doyle house, where Laurie is babysitting Tommy. Laurie's own house is not involved.",
+   "source": "https://en.wikipedia.org/wiki/Halloween_(1978_film)",
+   "fix": "Annie drops Lindsey at the Doyle house, then heads off.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "I'm babysitting Tommy tonight. We're carving the pumpkin, and I just want one quiet night.",
+   "where": "note",
+   "verdict": "unsure",
+   "why": "Laurie is babysitting Tommy, but the sources opened do not mention pumpkin carving, and the words are not in the film quotes I read.",
+   "source": "https://www.filmsite.org/hall2.html",
+   "fix": "I'm babysitting Tommy tonight. Just one quiet night, that's all I want.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "I'm babysitting Tommy tonight. Just one quiet night, that's all I want.",
+    "by": "Laurie Strode",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Laurie carves the jack-o'-lantern with Tommy",
+   "where": "dish-note",
+   "verdict": "ok",
+   "why": "In the script Laurie brings a pumpkin for Tommy to carve a jack-o'-lantern, and later when Tommy asks to make it now she says 'Let's go'.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=halloween-1978",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 4,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.8,
+  "verdict": "Moody late-night diner with fitting pumpkin food, but it leaves out the killer's famous props.",
+  "missing": [
+   "The knitting needle and the wire hanger (Laurie's fight at the Doyle house)",
+   "Michael under Bob's ghost sheet with glasses (the Wallace house)",
+   "Judith's stolen tombstone (the Wallace bedroom)",
+   "Annie's butter-stained clothes (the popcorn spill)",
+   "Lynda's phone call (the phone cord)",
+   "Tommy: 'I saw the boogeyman' (the Doyle house)"
+  ],
+  "ideas": [
+   "Swap 'Pumpkin pie' mask topping for a 'ghost sheet' cupcake with glasses, Bob's costume",
+   "Swap 'Babysitter's popcorn' note for Annie's butter-stained clothes",
+   "Swap 'Hot cocoa with mini marshmallows' note for 'Tommy: I saw the boogeyman'",
+   "Swap 'Homemade peanut butter cups' note for Judith's tombstone"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

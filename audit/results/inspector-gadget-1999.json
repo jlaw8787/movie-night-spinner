@@ -21,32 +21,35 @@
   {
    "text": "Riverton Police Dept, Garage 1",
    "where": "sign",
-   "verdict": "unsure",
-   "why": "Riverton and its police department are right, but the sources do not say the Gadgetmobile is kept in a police garage. Brenda builds it herself and shows it off to Gadget. Low risk.",
-   "source": "https://en.wikipedia.org/wiki/Inspector_Gadget_(film)",
-   "fix": "Riverton Police Dept, Gadgetmobile Bay",
+   "verdict": "wrong",
+   "why": "Brenda builds the Gadgetmobile herself and shows it to Gadget, but no source puts it in a police garage.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=inspector-gadget",
+   "fix": "Riverton Police Dept, Official Business",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Penny the niece with her computer book",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "Penny is Gadget's niece and a computer whiz, but the plot sources do not mention a computer book in this film. That is a cartoon prop.",
+   "verdict": "wrong",
+   "why": "Penny is Gadget's niece and she turns up with a reformed Sykes who confesses, but no computer book appears in the film.",
    "source": "https://en.wikipedia.org/wiki/Inspector_Gadget_(film)",
-   "fix": "Penny the niece who works out Scolex's plot",
+   "fix": "Penny the niece who gets Sykes to confess",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Brain the dog in disguise",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "Brain is Penny's beagle and helps track John down, but neither source mentions a disguise. Cartoon gag.",
+   "verdict": "wrong",
+   "why": "Brain is Penny's dog in the film but no source shows him in disguise.",
    "source": "https://en.wikipedia.org/wiki/Inspector_Gadget_(film)",
-   "fix": "Brain the beagle, chewing on the Gadgetmobile's arm rest",
+   "fix": "Brain the beagle, Penny's sidekick",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Serve the snacks when Gadget finally gets the helicopter hat working.",

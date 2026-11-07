@@ -1,58 +1,59 @@
 {
- "id": "Muriel's Wedding (1994)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "I'm not going to be a loser any more. Come to my wedding and try the cake.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Printed in quote marks as Muriel's words, but it is not a line from the film. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
-   "source": "https://en.wikipedia.org/wiki/Muriel's_Wedding",
-   "fix": "I'm done being a loser. Come to my wedding and try the cake.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "I'm done being a loser. Come to my wedding and try the cake.",
-    "by": "Muriel Heslop",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Waterloo playing, Rhonda on the microphone.",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The ABBA numbers are central to the film, but the plot I opened does not cover a Waterloo scene, a fairy bread scene or Rhonda on a microphone, so I could not confirm this.",
-   "source": "https://en.wikipedia.org/wiki/Muriel's_Wedding",
-   "fix": "Waterloo on the stereo, Muriel mouthing every word.",
-   "printed": true,
-   "done": false
+  "id": "Muriel's Wedding (1994)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "I'm not going to be a loser any more. Come to my wedding and try the cake.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Printed in quote marks as Muriel's words, but it is not a line from the film. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
+      "source": "https://en.wikipedia.org/wiki/Muriel's_Wedding",
+      "fix": "I'm done being a loser. Come to my wedding and try the cake.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "I'm done being a loser. Come to my wedding and try the cake.",
+        "by": "Muriel Heslop",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Waterloo playing, Rhonda on the microphone.",
+      "where": "dish-note",
+      "verdict": "ok",
+      "why": "The transcript has Rhonda with Muriel, then the Hibiscus Island star search act five opening with Waterloo, so the scene is in the film.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=muriels-wedding",
+      "fix": "Waterloo on the stereo, Muriel mouthing every word.",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 3,
+    "tone": 3,
+    "look": 3,
+    "overall": 3.4,
+    "verdict": "The cafe and the island holiday work, but the dark grey look is a poor match for the film's bright, colourful world.",
+    "missing": [
+      "'You're terrible, Muriel' from the bridesmaids",
+      "The sham wedding to David Van Arkle for the Olympics",
+      "Muriel trying on wedding dresses in the bridal shop and photographing herself",
+      "Muriel changing her name to Mariel",
+      "Rhonda leaving the bridesmaid role and going back to Porpoise Spit",
+      "Muriel and Rhonda's ABBA performance on the island"
+    ],
+    "ideas": [
+      "Swap the grey chalkboard background for bright wedding pastels to match the film.",
+      "Swap 'Van Arkle wedding alternate drop' note for 'The wedding that paid $10,000' to nod to the sham marriage.",
+      "Swap 'Fluffy duck cocktail' house drink for 'Mariel's cocktail' with a name-change joke.",
+      "Swap the 'Welcome to Porpoise Spit' sign for a postcard sign in the film's own colours."
+    ],
+    "flat": true,
+    "done": false
   }
- ],
- "checked_ok": 12,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 3,
-  "tone": 3,
-  "look": 3,
-  "overall": 3.4,
-  "verdict": "The cafe and the island holiday work, but the dark grey look is a poor match for the film's bright, colourful world.",
-  "missing": [
-   "'You're terrible, Muriel' from the bridesmaids",
-   "The sham wedding to David Van Arkle for the Olympics",
-   "Muriel trying on wedding dresses in the bridal shop and photographing herself",
-   "Muriel changing her name to Mariel",
-   "Rhonda leaving the bridesmaid role and going back to Porpoise Spit",
-   "Muriel and Rhonda's ABBA performance on the island"
-  ],
-  "ideas": [
-   "Swap the grey chalkboard background for bright wedding pastels to match the film.",
-   "Swap 'Van Arkle wedding alternate drop' note for 'The wedding that paid $10,000' to nod to the sham marriage.",
-   "Swap 'Fluffy duck cocktail' house drink for 'Mariel's cocktail' with a name-change joke.",
-   "Swap the 'Welcome to Porpoise Spit' sign for a postcard sign in the film's own colours."
-  ],
-  "flat": true,
-  "done": false
- }
 }

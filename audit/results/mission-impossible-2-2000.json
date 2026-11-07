@@ -1,62 +1,65 @@
 {
- "id": "Mission: Impossible 2 (2000)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Departing Sydney, Seat 14A",
-   "where": "sign",
-   "verdict": "unsure",
-   "why": "The film never names a seat, and the same card prints Seat 20A in the header and on the boarding pass. The two numbers disagree.",
-   "source": "https://greatestfilms.org/series-missionimpossible2.html",
-   "fix": "Departing Sydney, Seat 20A",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Ambrose's box at Randwick, binoculars on Nyah.",
-   "where": "house",
-   "verdict": "unsure",
-   "why": "Sources show Ambrose and Nyah at the races, with Billy Baird slipping Nyah an earpiece and Ambrose meeting McCloy in the bar. No box and no binoculars are mentioned anywhere.",
-   "source": "https://greatestfilms.org/series-missionimpossible2.html",
-   "fix": "Ambrose's day at the races. Nyah has an earpiece in.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Nekhorvich's last glass.",
-   "where": "house",
-   "verdict": "unsure",
-   "why": "No source has Nekhorvich drinking wine on the flight. On the plane Ambrose, disguised as Dimitri, gasses everyone.",
-   "source": "https://greatestfilms.org/series-missionimpossible2.html",
-   "fix": "Poured at the races. Nyah backs A Thief in the Night.",
-   "printed": true,
-   "done": false
+  "id": "Mission: Impossible 2 (2000)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Departing Sydney, Seat 14A",
+      "where": "sign",
+      "verdict": "wrong",
+      "why": "The transcript never names a seat. The same card prints 20A on the header and boarding pass, so 14A contradicts it.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=mission-impossible-ii",
+      "fix": "Departing Sydney, Seat 20A",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    },
+    {
+      "text": "Ambrose's box at Randwick, binoculars on Nyah.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "The transcript has the Randwick-style race day with Billy handing Nyah an earpiece, but no box and no binoculars.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=mission-impossible-ii",
+      "fix": "Ambrose's day at the races. Nyah has an earpiece in.",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    },
+    {
+      "text": "Nekhorvich's last glass.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "No glass of wine is shown on the plane, where Ambrose gasses everyone. The drink scene is at the races, where Nyah's pick is Thief In The Night and Ambrose goes for a drink.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=mission-impossible-ii",
+      "fix": "Poured at the races. Nyah backs Thief in the Night.",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    }
+  ],
+  "checked_ok": 16,
+  "vibe": {
+    "world": 3,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 3,
+    "overall": 3,
+    "verdict": "Fair spread of Seville and Sydney dishes, but the airline theme is a short opening scene and most of the film's best moments are missing.",
+    "missing": [
+      "Free climb at Dead Horse Point and the sunglasses message (opening)",
+      "Nyah's bathtub flirt and the Bulgari necklace (Seville mansion)",
+      "A Thief in the Night, the horse Nyah backs (Randwick)",
+      "Chimera and Bellerophon, the virus and its cure (plot)",
+      "Motorbike joust on the coast road (Sydney)",
+      "Bare Island showdown with the fire bike ride (Ambrose's base)"
+    ],
+    "ideas": [
+      "Rename 'Hunter Valley semillon' to 'A Thief in the Night' and note it as Nyah's racing tip.",
+      "Swap 'Seville sherry cobbler' for a red 'Chimera' sangria and add a green 'Bellerophon' lime cooler.",
+      "Swap the airline header for the Seville courtyard flamenco party it already cues.",
+      "Replace 'Sydney summer pavlova' note with 'Served on the beach where Ethan and Ambrose finish it'."
+    ],
+    "flat": true,
+    "done": false
   }
- ],
- "checked_ok": 16,
- "vibe": {
-  "world": 3,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
-  "look": 3,
-  "overall": 3,
-  "verdict": "Fair spread of Seville and Sydney dishes, but the airline theme is a short opening scene and most of the film's best moments are missing.",
-  "missing": [
-   "Free climb at Dead Horse Point and the sunglasses message (opening)",
-   "Nyah's bathtub flirt and the Bulgari necklace (Seville mansion)",
-   "A Thief in the Night, the horse Nyah backs (Randwick)",
-   "Chimera and Bellerophon, the virus and its cure (plot)",
-   "Motorbike joust on the coast road (Sydney)",
-   "Bare Island showdown with the fire bike ride (Ambrose's base)"
-  ],
-  "ideas": [
-   "Rename 'Hunter Valley semillon' to 'A Thief in the Night' and note it as Nyah's racing tip.",
-   "Swap 'Seville sherry cobbler' for a red 'Chimera' sangria and add a green 'Bellerophon' lime cooler.",
-   "Swap the airline header for the Seville courtyard flamenco party it already cues.",
-   "Replace 'Sydney summer pavlova' note with 'Served on the beach where Ethan and Ambrose finish it'."
-  ],
-  "flat": true,
-  "done": false
- }
 }

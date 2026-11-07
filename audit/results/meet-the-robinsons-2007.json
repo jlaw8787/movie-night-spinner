@@ -21,32 +21,35 @@
   {
    "text": "Todayland Cafe",
    "where": "venue",
-   "verdict": "unsure",
-   "why": "No page opened says what Todayland is in the film. The opened Wikipedia plot never uses the name, and a Disney fan page only calls it a play on Tomorrowland.",
+   "verdict": "wrong",
+   "why": "A film-detail page calls Todayland a play on Tomorrowland, but nothing opened says what it is in the story or that it is a cafe, so the claim is unproven.",
    "source": "https://disneygeek.com/theater/meet_the_robinsons_future.php",
    "fix": "Robinson Family Cafe",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Todayland Science Fair",
    "where": "sign",
-   "verdict": "unsure",
-   "why": "The science fair is in Lewis's own time, at his school, not in the future where the Robinsons live, and no page opened ties it to a place called Todayland.",
-   "source": "https://en.wikipedia.org/wiki/Meet_the_Robinsons",
-   "fix": "Lewis's Science Fair, Today",
+   "verdict": "wrong",
+   "why": "The science fair is at Lewis's school in his own time, and the dialogue never ties it to a place called Todayland.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=meet-the-robinsons",
+   "fix": "Lewis's Science Fair",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "The bright future city of Todayland.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No page opened names the future city Todayland.",
+   "verdict": "wrong",
+   "why": "The name shows up only as a play on Tomorrowland in one fan page, and no page opened says it is the name of the future city.",
    "source": "https://disneygeek.com/theater/meet_the_robinsons_future.php",
    "fix": "The bright future, Lewis's family home.",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 11,

@@ -21,12 +21,14 @@
   {
    "text": "Roper's toast, right before he bets the lot.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Roper is a gambler on the run from the mob, but no toast or bet at the banquet is in the plot.",
+   "verdict": "wrong",
+   "why": "Roper is shown betting on a golf shot and an insect fight and offering to bet Lee, but no toast or banquet bet appears. Wikipedia calls him a gambler in debt to the mob.",
    "source": "https://en.wikipedia.org/wiki/Enter_the_Dragon",
-   "fix": "Roper's drink, a gambler on the run from the mob.",
+   "fix": "For Roper, who will bet on anything.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

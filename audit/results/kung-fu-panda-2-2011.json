@@ -5,22 +5,23 @@
     {
       "text": "Serve the buns when Po tries to fit them all in his mouth.",
       "where": "cue",
-      "verdict": "unsure",
-      "why": "No scene of Po cramming buns into his mouth turns up in the plot, quote page or Fandom page. Printed as the kitchen tip on face 1 and as the data cue.",
-      "source": "https://en.wikipedia.org/wiki/Kung_Fu_Panda_2",
-      "fix": "Serve the buns when Mr. Ping tells Po he found him in a crate of radishes.",
+      "verdict": "ok",
+      "why": "The Kung Fu Panda fandom page on Mr Ping notes Po seen with a mouth full of bean buns in the second film, so the buns gag is real even though it is not in the dialogue.",
+      "source": "https://kungfupanda.fandom.com/wiki/Panda_Dad",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     },
     {
       "text": "Mr Ping swears there's no secret ingredient.",
       "where": "dish-note",
-      "verdict": "unsure",
-      "why": "The no secret ingredient gag belongs to the first film. The noodle shop page for KFP2 only says the soup has a secret ingredient known to Po and his family.",
-      "source": "https://kungfupanda.fandom.com/wiki/Noodle_shop",
-      "fix": "Mr Ping's secret ingredient, no peeking.",
+      "verdict": "wrong",
+      "why": "In this film Mr Ping tells Po the story of the Secret Ingredient Soup. The no secret ingredient gag is from the first film.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=kung-fu-panda-2",
+      "fix": "Mr Ping's Secret Ingredient Soup, no peeking.",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 13,

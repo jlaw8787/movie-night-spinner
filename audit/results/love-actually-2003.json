@@ -1,42 +1,43 @@
 {
-  "id": "Love Actually (2003)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Billy Mack spends Christmas.",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "This is the Baileys note, cut short from 'Billy Mack spends Christmas with Joe. Join them.' Billy does spend Christmas with Joe, but none of the pages opened show Baileys or any drink in that scene.",
-      "source": "https://en.wikiquote.org/wiki/Love_Actually",
-      "fix": "Billy Mack's Christmas Eve with his manager Joe.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 15,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 4,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "A cute Heathrow arrivals idea with the right wrapping and Wisconsin gags, though it only touches a handful of the stories.",
-    "missing": [
-      "Mark's cue cards at Juliet's door (carols playing, Christmas Eve)",
-      "Billy Mack's 'Christmas Is All Around' recording and the airport TV finale",
-      "The Prime Minister's dance down the hall at Number 10",
-      "Sam running through Heathrow for Joanna",
-      "Karen and the Joni Mitchell CD",
-      "Colin's Wisconsin bar"
-    ],
-    "ideas": [
-      "Swap 'Downing Street biscuits' note for the PM's tea and biscuits with Natalie",
-      "Swap 'Luggage tag' prop for a cue card reading 'To me, you are perfect'",
-      "Swap 'Jamie's French cottage coq au vin' note for 'Aurelia's lake, fully dressed'",
-      "Swap the Baileys note for a toast to Billy Mack's number one"
-    ],
-    "flat": false,
-    "done": false
+ "id": "Love Actually (2003)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Billy Mack spends Christmas.",
+   "where": "dish-note",
+   "verdict": "ok",
+   "why": "On Christmas Day Billy realises manager Joe is the most important person in his life and spends it with him; the note claims nothing about a drink.",
+   "source": "https://en.wikipedia.org/wiki/Love_Actually",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "A cute Heathrow arrivals idea with the right wrapping and Wisconsin gags, though it only touches a handful of the stories.",
+  "missing": [
+   "Mark's cue cards at Juliet's door (carols playing, Christmas Eve)",
+   "Billy Mack's 'Christmas Is All Around' recording and the airport TV finale",
+   "The Prime Minister's dance down the hall at Number 10",
+   "Sam running through Heathrow for Joanna",
+   "Karen and the Joni Mitchell CD",
+   "Colin's Wisconsin bar"
+  ],
+  "ideas": [
+   "Swap 'Downing Street biscuits' note for the PM's tea and biscuits with Natalie",
+   "Swap 'Luggage tag' prop for a cue card reading 'To me, you are perfect'",
+   "Swap 'Jamie's French cottage coq au vin' note for 'Aurelia's lake, fully dressed'",
+   "Swap the Baileys note for a toast to Billy Mack's number one"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

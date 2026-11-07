@@ -16,22 +16,24 @@
     {
       "text": "Emilio, the butler with the foot, very, very sneaky",
       "where": "dish-note",
-      "verdict": "unsure",
-      "why": "The frostbitten foot is Deeds's, not Emilio's. Emilio only says its hideousness will haunt his dreams. He does say 'I am very very sneaky, sir.'",
-      "source": "https://en.wikiquote.org/wiki/Mr._Deeds",
+      "verdict": "wrong",
+      "why": "The frostbitten foot is Deeds's own. Emilio says its hideousness will haunt his dreams, and says he is very, very sneaky.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=mr-deeds",
       "fix": "Emilio, the butler who is very, very sneaky",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     },
     {
       "text": "A tuba played at the wrong moment",
       "where": "wink",
-      "verdict": "unsure",
-      "why": "Neither the plot summary nor the quote page mentions a tuba in the 2002 film.",
-      "source": "https://en.wikipedia.org/wiki/Mr._Deeds",
-      "fix": "Deeds's frostbitten foot breaking the ice",
+      "verdict": "wrong",
+      "why": "No tuba in the transcript or plot of the 2002 film. The foot gag is there, with Deeds's frostbitten foot nailed to the ground by the poker.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=mr-deeds",
+      "fix": "Deeds's frostbitten foot, nailed to the ground",
       "printed": false,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 11,

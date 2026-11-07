@@ -16,32 +16,33 @@
     {
       "text": "Serve the main when Georgia orders everything Chef Didier makes.",
       "where": "cue",
-      "verdict": "unsure",
-      "why": "The plot only says she enjoys meals prepared by Chef Didier and later helps him cook the New Year's Eve feast. An \"order everything\" scene is not in the sources opened.",
-      "source": "https://en.wikipedia.org/wiki/Last_Holiday_(2006_film)",
-      "fix": "Serve the main when Chef Didier invites Georgia into his kitchen for the New Year's Eve feast.",
+      "verdict": "ok",
+      "why": "At the hotel Georgia hears Chef Didier never repeats a menu, says she had better try them all tonight, and takes the lot ('Tout, baby').",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=last-holiday-2006",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     },
     {
       "text": "Order everything on the menu.",
       "where": "tagline",
-      "verdict": "unsure",
-      "why": "Same unconfirmed \"order everything\" moment.",
-      "source": "https://en.wikipedia.org/wiki/Last_Holiday_(2006_film)",
-      "fix": "Cook it like it's your last supper.",
+      "verdict": "ok",
+      "why": "Same scene: Georgia asks the waiter for all of Chef Didier's specials, so ordering everything on the menu is true to the film.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=last-holiday-2006",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     },
     {
       "text": "Straight out of Georgia's scrapbook, finally on a real plate.",
       "where": "house",
-      "verdict": "unsure",
-      "why": "The scrapbook holds her dream husband and her possibilities. The plot does not say it holds foie gras.",
+      "verdict": "wrong",
+      "why": "The scrapbook holds her dream husband and her Possibilities. What she actually does is cook Emeril recipes for a neighbour while denying herself the food.",
       "source": "https://en.wikipedia.org/wiki/Last_Holiday_(2006_film)",
       "fix": "Georgia cooked it for the neighbour. Tonight she eats it.",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 12,

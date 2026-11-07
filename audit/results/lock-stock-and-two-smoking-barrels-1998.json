@@ -5,12 +5,14 @@
   {
    "text": "Serve the mains when the lads plan the robbery over breakfast.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "In the plot Eddie overhears the neighbours planning a robbery through the wall and the four decide to hit them afterwards. Neither Wikipedia's plot nor the Wikiquote page shows a breakfast scene, so the breakfast setting can't be confirmed.",
+   "verdict": "wrong",
+   "why": "Eddie overhears the neighbours planning the heist through the thin wall. No breakfast scene shows in the plot or transcript.",
    "source": "https://en.wikipedia.org/wiki/Lock,_Stock_and_Two_Smoking_Barrels",
    "fix": "Serve the mains when Eddie overhears the neighbours planning their robbery.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "We lost half a million at Harry's card table, lads, so tonight it's beans on toast. We've a week to find the rest.",
@@ -43,22 +45,25 @@
   {
    "text": "The lads' greasy spoon",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The sources opened show no greasy spoon cafe in the film. It only works if the breakfast scene in the cue is real, and that can't be confirmed.",
+   "verdict": "wrong",
+   "why": "No greasy spoon cafe appears in the plot or transcript, so the note claims a place the film does not show.",
    "source": "https://en.wikipedia.org/wiki/Lock,_Stock_and_Two_Smoking_Barrels",
    "fix": "A fry up, brown sauce on the side.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Soap's the cook, but he'd still serve this.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "None of the pages opened show Soap as a cook. The sources only list him as one of the four friends.",
-   "source": "https://en.wikipedia.org/wiki/Lock,_Stock_and_Two_Smoking_Barrels",
-   "fix": "Served at J.D.'s bar, the one Harry wants.",
+   "verdict": "ok",
+   "why": "The transcript has Soap fussing over his soup and the gang's chef costume line, and the narration says he is proud of his legal job.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=lock-stock-and-two-smoking-barrels",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

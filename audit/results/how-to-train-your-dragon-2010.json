@@ -21,12 +21,13 @@
   {
    "text": "The Dragon Training Academy",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "The film plot calls it a dragon-fighting class. 'Academy' is from the later series.",
-   "source": "https://en.wikipedia.org/wiki/How_to_Train_Your_Dragon_(2010_film)",
-   "fix": "The dragon training ring",
+   "verdict": "wrong",
+   "why": "The film calls it dragon training and the teens train in 'the ring'. The word 'Academy' is from the later series.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=how-to-train-your-dragon",
+   "fix": "The Dragon Training Ring",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 12,

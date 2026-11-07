@@ -33,22 +33,26 @@
   {
    "text": "Serve the mains when the team first sees snow in Calgary.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Wikipedia only says the team reaches Calgary, registers and borrows a rundown sled. I could not open a source that shows the moment they first see snow.",
-   "source": "https://en.wikipedia.org/wiki/Cool_Runnings",
+   "verdict": "wrong",
+   "why": "The transcript has the team arriving to the announcement welcoming them to Calgary and the Winter Olympics, with a joke about the cold, but no moment of seeing snow for the first time.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=cool-runnings",
    "fix": "Serve the mains when the team lands in Calgary.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Yul Brenner shaving his head",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "Yul is shown bald, but I found no source for a scene of him shaving his head. The sources do show his mirror pep talk with Junior ('I see pride! I see power!').",
-   "source": "https://en.wikiquote.org/wiki/Cool_Runnings",
+   "verdict": "wrong",
+   "why": "Yul is already bald and the film never shows him shaving his head. He does give Junior the mirror pep talk, 'I see pride. I see power!'.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=cool-runnings",
    "fix": "Yul Brenner's mirror pep talk: pride, power",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

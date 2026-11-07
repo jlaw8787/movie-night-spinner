@@ -21,22 +21,26 @@
   {
    "text": "Frank and Archy on leave in Cairo",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "They are sent in separate troop shipments and meet again by chance during training exercises near the Pyramids. They climb the Great Pyramid and carve their names. The sources do not call it leave together.",
-   "source": "https://filmsite.org/gallipoli.html",
+   "verdict": "wrong",
+   "why": "Wikipedia has Frank and Archy shipped separately. Frank drinks in Cairo with his mates, and the two only meet again on a training exercise near the Pyramids.",
+   "source": "https://en.wikipedia.org/wiki/Gallipoli_(1981_film)",
    "fix": "Frank and Archy meet again near the pyramids",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "The stopwatch race",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "No source opened describes a stopwatch race. The carnival race is Frank against Archy, and watches matter at the Nek, where they are not synchronised.",
+   "verdict": "wrong",
+   "why": "No stopwatch race appears in the plot or script. Frank and Archy race at the athletics carnival, and Archy wins.",
    "source": "https://en.wikipedia.org/wiki/Gallipoli_(1981_film)",
    "fix": "The athletics carnival race",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

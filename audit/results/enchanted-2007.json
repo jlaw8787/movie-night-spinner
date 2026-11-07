@@ -5,12 +5,14 @@
   {
    "text": "Serve the mains when Giselle cooks breakfast in Robert's apartment.",
    "where": "cue",
-   "verdict": "unsure",
-   "why": "Neither Wikipedia nor the plot summary has a breakfast scene. Both have Giselle singing the city animals into cleaning Robert's apartment. A cooking scene was not found.",
+   "verdict": "wrong",
+   "why": "The transcript has someone say they made breakfast but never shows Giselle cooking. The scene the plot does show in Robert's apartment is Giselle singing the city animals into cleaning it.",
    "source": "https://www.whatsafterthemovie.com/summary/enchanted",
    "fix": "Serve the mains when Giselle sings the city animals into cleaning Robert's apartment.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "I made dinner with help from the city animals. The pigeons set the table, the rats did the dishes, and Robert still looks worried.",
@@ -31,12 +33,14 @@
   {
    "text": "Breakfast made with help from the cockroaches.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The city animals, cockroaches included, clean the apartment in the film. No source shows them helping with breakfast.",
-   "source": "https://www.whatsafterthemovie.com/summary/enchanted",
+   "verdict": "wrong",
+   "why": "The cockroaches are among the city animals in the cleaning song in Robert's kitchen, not helping with any breakfast.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=enchanted",
    "fix": "Cleaned up with help from the cockroaches.",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 11,

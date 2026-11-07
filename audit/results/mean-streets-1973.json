@@ -5,12 +5,13 @@
   {
    "text": "Charlie's uncle's restaurant",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "In the film, the restaurant belongs to Oscar and Giovanni wants it. The sources I opened do not show it as Charlie's uncle's own restaurant.",
-   "source": "https://en.wikiquote.org/wiki/Mean_Streets",
-   "fix": "the restaurant Charlie's uncle leans on for payments",
+   "verdict": "wrong",
+   "why": "The restaurant is Oscar's, and he owes Giovanni payments. Giovanni tells Charlie he wants him to run a restaurant, so it is not his uncle's own place yet.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=mean-streets",
+   "fix": "the restaurant Charlie's uncle wants him to run",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 22,

@@ -1,42 +1,43 @@
 {
-  "id": "Mamma Mia! Here We Go Again (2018)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Grilled on the terrace, the summer of 1979.",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "In 1979 Donna stays in the abandoned farmhouse that later becomes the hotel, so a terrace grill does not show in the plot.",
-      "source": "https://en.wikipedia.org/wiki/Mamma_Mia!_Here_We_Go_Again",
-      "fix": "Summer of 1979, back before the hotel.",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 16,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "A pretty hotel front desk idea that uses Paris, Bill's boat and the storm, but the food is generic Greek and the big musical numbers are missing.",
-    "missing": [
-      "Cher's Ruby arriving to Fernando (the party)",
-      "Donna and the Dynamos in denim flares (the stage)",
-      "Alexio the fisherman getting back to his love (Bill's boat)",
-      "The horse in the storm (the farmhouse)",
-      "Sofia handing over the farmhouse (Donna's pregnancy)",
-      "Dancing Queen on the boat"
-    ],
-    "ideas": [
-      "Swap 'Ouzo over ice and water' note for 'Fernando, pouring for Ruby at last'",
-      "Swap the 'Kalokairi tomato keftedes' note for 'Bill's boat, one very slow lift'",
-      "Swap 'Room 1979' door hanger for 'Dynamos denim flares, size generous'",
-      "Swap 'Fried saganaki' note for 'Alexio's thank you catch'"
-    ],
-    "flat": true,
-    "done": false
+ "id": "Mamma Mia! Here We Go Again (2018)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Grilled on the terrace, the summer of 1979.",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The 1979 scenes are set in the abandoned farmhouse that becomes the hotel later, so a terrace grill is not shown.",
+   "source": "https://en.wikipedia.org/wiki/Mamma_Mia!_Here_We_Go_Again",
+   "fix": "Summer of 1979, back before the hotel.",
+   "printed": true,
+   "done": false,
+   "settled": "2026-11-08"
   }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A pretty hotel front desk idea that uses Paris, Bill's boat and the storm, but the food is generic Greek and the big musical numbers are missing.",
+  "missing": [
+   "Cher's Ruby arriving to Fernando (the party)",
+   "Donna and the Dynamos in denim flares (the stage)",
+   "Alexio the fisherman getting back to his love (Bill's boat)",
+   "The horse in the storm (the farmhouse)",
+   "Sofia handing over the farmhouse (Donna's pregnancy)",
+   "Dancing Queen on the boat"
+  ],
+  "ideas": [
+   "Swap 'Ouzo over ice and water' note for 'Fernando, pouring for Ruby at last'",
+   "Swap the 'Kalokairi tomato keftedes' note for 'Bill's boat, one very slow lift'",
+   "Swap 'Room 1979' door hanger for 'Dynamos denim flares, size generous'",
+   "Swap 'Fried saganaki' note for 'Alexio's thank you catch'"
+  ],
+  "flat": true,
+  "done": false
+ }
 }

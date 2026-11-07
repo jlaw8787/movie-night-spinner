@@ -5,12 +5,13 @@
     {
       "text": "Christmas dinner at the shelter where Tom volunteers, and Kate finally pitches in",
       "where": "dish-note",
-      "verdict": "unsure",
-      "why": "Kate helps at the shelter and organises a Christmas Eve show there. The plot has Christmas Day with her family, not a Christmas dinner at the shelter.",
+      "verdict": "wrong",
+      "why": "Kate helps at the shelter where Tom volunteers and puts on a Christmas Eve show there. The film has no Christmas dinner at the shelter.",
       "source": "https://en.wikipedia.org/wiki/Last_Christmas_(film)",
-      "fix": "Christmas Eve at the shelter, where Kate finally pitches in",
+      "fix": "Christmas Eve at the shelter where Tom volunteers, and Kate pitches in",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 14,

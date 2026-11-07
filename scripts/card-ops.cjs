@@ -56,7 +56,12 @@ for(const pf of files){const P=JSON.parse(fs.readFileSync(pf,'utf8'));if(P.appli
   if(!film(id)&&!FL[id]){console.log('no film',id);continue}
   for(const op of P.ops||[]){nOps++;
     if(op.old!==undefined){if(!op.old||op.old===op.new){miss.push('empty: '+op.old);continue}if(/[—–]/.test(op.new)){miss.push('dash in: '+op.new);continue}
-      const h=replaceAll(id,op.old,op.new);if(!h.length)miss.push('not found: '+op.old)}
+      let h=replaceAll(id,op.old,op.new);
+      /* stored notes are often lower case with no full stop: retry on that form, and give the new text the same shape */
+      if(!h.length){const norm=t=>t.trim().replace(/[.]$/,'').toLowerCase();const want=norm(op.old);let found=null;
+        const scan=v=>walk(v,x=>{if(!found&&norm(x)===want)found=x;return x});const f=film(id);if(f)for(const k of ['S','M','W','K','T','D','P'])scan(f[k]);[FL[id],HO[id],DNo[id]].forEach(o=>o&&scan(o));
+        if(found){let n2=op.new;if(/^[a-z]/.test(found))n2=n2.charAt(0).toLowerCase()+n2.slice(1);if(!/[.]$/.test(found.trim()))n2=n2.replace(/[.]$/,'');h=replaceAll(id,found,n2)}}
+      if(!h.length)miss.push('not found: '+op.old)}
     else if(op.set){const [a,b]=op.set.split('.');
       if(a==='flavour'){if(!FL[id])FL[id]={};if(op.value===null)delete FL[id][b];else FL[id][b]=op.value}
       else if(a==='house'){HO[id]=HO[id]||{};HO[id][b]=op.value}

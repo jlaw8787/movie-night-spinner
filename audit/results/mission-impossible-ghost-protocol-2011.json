@@ -16,22 +16,24 @@
     {
       "text": "Serve the pirozhki when Ethan and Benji walk out of the Moscow prison.",
       "where": "cue",
-      "verdict": "unsure",
-      "why": "Benji locks the security office and drives the getaway van, while Ethan and Bogdan make their escape toward Jane, timed to Dean Martin. Sources do not show Ethan and Benji walking out together.",
-      "source": "https://greatestfilms.org/series-missionimpossible4.html",
-      "fix": "Serve the pirozhki when Ethan breaks out of the Moscow prison to Dean Martin.",
+      "verdict": "wrong",
+      "why": "Ethan is extracted from the prison with Bogdan by Jane and Benji. Benji works the escape from outside, so the two do not walk out together.",
+      "source": "https://en.wikipedia.org/wiki/Mission%3A_Impossible_%E2%80%93_Ghost_Protocol",
+      "fix": "Serve the pirozhki when Ethan breaks out of the Moscow prison with Bogdan.",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     },
     {
       "text": "Serve the pirozhki when Ethan and Benji walk out of the Moscow prison.",
       "where": "cue-printed",
-      "verdict": "unsure",
-      "why": "Same cue as printed on the timetable. Benji drives the van while Ethan escapes with Bogdan.",
-      "source": "https://greatestfilms.org/series-missionimpossible4.html",
-      "fix": "Serve the pirozhki when Ethan breaks out of the Moscow prison to Dean Martin.",
+      "verdict": "wrong",
+      "why": "Same cue as printed. Ethan leaves the prison with Bogdan; Benji helps from outside.",
+      "source": "https://en.wikipedia.org/wiki/Mission%3A_Impossible_%E2%80%93_Ghost_Protocol",
+      "fix": "Serve the pirozhki when Ethan breaks out of the Moscow prison with Bogdan.",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     },
     {
       "text": "Benji's first job in the field, walking into the Kremlin behind a screen",

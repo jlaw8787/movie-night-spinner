@@ -5,22 +5,24 @@
   {
    "text": "Automat sandwiches -- ham and cheese out of the little glass doors",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "None of the sources I opened show an Automat. The film has Joe and Ratso stealing food when the money runs out.",
+   "verdict": "wrong",
+   "why": "No Automat shows in the transcript, plot or a follow-up search. Joe and Ratso are shown stealing food when money is short.",
    "source": "https://en.wikipedia.org/wiki/Midnight_Cowboy",
-   "fix": "the sandwiches they steal when the money runs out",
+   "fix": "Automat sandwiches -- the food Joe and Ratso steal when the money runs out",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Condemned building franks and beans -- all they could afford in the squat",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Filmsite has Ratso cooking over a canned heat stove in the condemned squat, but no source I opened names franks and beans.",
-   "source": "https://filmsite.org/midn.html",
-   "fix": "heated over canned heat in the condemned squat",
+   "verdict": "wrong",
+   "why": "Critics describe the film's world of ketchup, beans and canned heat in the condemned squat, but nothing opened names franks.",
+   "source": "https://en.wikipedia.org/wiki/Midnight_Cowboy",
+   "fix": "Condemned building franks and beans -- beans heated over canned heat in the squat",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 14,
@@ -30,7 +32,7 @@
   "food": 3,
   "tone": 3,
   "look": 3,
-  "overall": 3.0,
+  "overall": 3,
   "verdict": "A tidy bus station counter, but the pastel look feels nothing like the grimy film and the cowboy is missing.",
   "missing": [
    "'I'm walkin' here!' (the taxi on the street)",

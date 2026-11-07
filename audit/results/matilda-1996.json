@@ -32,32 +32,35 @@
   {
    "text": "Matilda's pancakes",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "No source opened shows Matilda cooking pancakes in the film.",
+   "verdict": "ok",
+   "why": "Wikipedia's note on the soundtrack says four-year-old Matilda is left alone at home making pancakes.",
    "source": "https://en.wikipedia.org/wiki/Matilda_(1996_film)",
    "fix": "Tea and cookies at Miss Honey's",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Miss Honey's cottage scones",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "Miss Honey offers tea and cookies, not scones.",
-   "source": "https://en.wikiquote.org/wiki/Matilda_(film)",
-   "fix": "Miss Honey's cottage cookies",
+   "verdict": "wrong",
+   "why": "At the cottage Miss Honey and Matilda have tea and cookies, not scones. The dish is a scone recipe, so the name drops the claim that Miss Honey serves them.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=matilda",
+   "fix": "Cottage tea scones",
    "printed": true,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "A parrot in the chimney",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "No source opened mentions a parrot in the film.",
-   "source": "https://en.wikipedia.org/wiki/Matilda_(1996_film)",
-   "fix": "Harry's glued hat",
+   "verdict": "wrong",
+   "why": "No parrot in the chimney in the plot or transcript. Harry does end up with his hat glued to his head.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=matilda",
+   "fix": "Harry's hat, superglued on",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 10,

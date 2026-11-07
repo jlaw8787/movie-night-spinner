@@ -5,12 +5,12 @@
     {
       "text": "Pandora Theater",
       "where": "venue",
-      "verdict": "unsure",
-      "why": "The IMDb synopsis only mentions the Pandora name near the end, and the plot summary names the theater only as a condemned movie theater. Confirm the name before the next print.",
-      "source": "https://m.imdb.com/title/tt0107362/synopsis",
-      "fix": "Nick's Movie Theater",
+      "verdict": "ok",
+      "why": "The Wikipedia production section calls it the film's Pandora Theater, the condemned theater where Nick shows the Jack Slater films.",
+      "source": "https://en.wikipedia.org/wiki/Last_Action_Hero",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 14,

@@ -1,42 +1,44 @@
 {
-  "id": "Crocodile Dundee II (1988)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Mick's catch, while Rico's men stumble round.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "In the Australian half Mick picks off Rico's men one at a time and holds them in a cave, while Walter leads the rest on a false trail. The plot summary read has no yabby catch and no fishing in the bush, so 'Mick's catch' is not backed up. 'Stumble round' is fair.",
-      "source": "https://en.wikipedia.org/wiki/Crocodile_Dundee_II",
-      "fix": "Mick's catch, while Rico's men get lost on Walter's false trail.",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 15,
-  "vibe": {
-    "world": 4,
-    "moments": 2,
-    "food": 4,
-    "tone": 3,
-    "look": 3,
-    "overall": 3.2,
-    "verdict": "Good bush grub and a believable camp, but it barely touches the film's famous moments and lists the snags twice.",
-    "missing": [
-      "Walter's faked death by crocodile (the cave)",
-      "Mick and his mates calling in help with the bullroarer (the bush)",
-      "Leroy Brown and Rat's street gang (New York)",
-      "Mick swapping clothes with Rico (the ambush)",
-      "Blast fishing in the harbour (New York)",
-      "Sue saying 'I am home' (the ending)"
-    ],
-    "ideas": [
-      "Cut 'Wally's snags in bread with onions', it is the same dish as 'Wally's Walkabout Creek snags'.",
-      "Swap 'Steak sandwich' (note: The Walkabout Creek pub) for 'Subway handoff hot dogs' with a note about Rico's trap at the station.",
-      "Change the 'No crocs allowed' slip to 'Walter's croc attack: faked' so the croc joke comes from the film.",
-      "Add 'Belonga Mick' to the Kakadu plum salsa note, replacing 'The Top End'."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Crocodile Dundee II (1988)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Mick's catch, while Rico's men stumble round.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "In the Australian half Walter leads Rico's men on a false trail while Mick picks them off one by one and holds them in a cave. Nothing shows Mick catching yabbies or fishing in the bush.",
+   "source": "https://en.wikipedia.org/wiki/Crocodile_Dundee_II",
+   "fix": "Bush tucker while Walter misleads Rico's men.",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 2,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "Good bush grub and a believable camp, but it barely touches the film's famous moments and lists the snags twice.",
+  "missing": [
+   "Walter's faked death by crocodile (the cave)",
+   "Mick and his mates calling in help with the bullroarer (the bush)",
+   "Leroy Brown and Rat's street gang (New York)",
+   "Mick swapping clothes with Rico (the ambush)",
+   "Blast fishing in the harbour (New York)",
+   "Sue saying 'I am home' (the ending)"
+  ],
+  "ideas": [
+   "Cut 'Wally's snags in bread with onions', it is the same dish as 'Wally's Walkabout Creek snags'.",
+   "Swap 'Steak sandwich' (note: The Walkabout Creek pub) for 'Subway handoff hot dogs' with a note about Rico's trap at the station.",
+   "Change the 'No crocs allowed' slip to 'Walter's croc attack: faked' so the croc joke comes from the film.",
+   "Add 'Belonga Mick' to the Kakadu plum salsa note, replacing 'The Top End'."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

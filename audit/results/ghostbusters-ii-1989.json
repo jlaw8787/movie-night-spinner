@@ -5,12 +5,14 @@
   {
    "text": "Our ride home on New Year's Eve.",
    "where": "caption",
-   "verdict": "unsure",
-   "why": "In the plot the Ghostbusters pilot the Statue of Liberty through the streets to the museum to stop Vigo and save Oscar. It is not a ride home.",
+   "verdict": "wrong",
+   "why": "On New Year's Eve the Ghostbusters pilot the animated Statue of Liberty through the streets to the museum, so it is a ride to the museum, not home.",
    "source": "https://en.wikipedia.org/wiki/Ghostbusters_II",
-   "fix": "Our ride to the museum on New Year's Eve.",
+   "fix": "Our ride to the museum on New Year’s Eve.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 14,

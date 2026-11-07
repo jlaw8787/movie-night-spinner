@@ -16,12 +16,12 @@
     {
       "text": "Landlady shut the water off. Drink this instead.",
       "where": "house",
-      "verdict": "unsure",
-      "why": "No source opened shows the Landlady shutting off the water.",
-      "source": "https://en.wikipedia.org/wiki/Kung_Fu_Hustle",
-      "fix": "Landlady is yelling again. Drink this instead.",
+      "verdict": "ok",
+      "why": "In the transcript the tenants ask what happened to the water and the Landlady announces a water ration, no water on Mondays, Wednesdays and Fridays.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=kung-fu-hustle",
       "printed": true,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 15,

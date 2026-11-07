@@ -1,42 +1,43 @@
 {
-  "id": "Men in Black 3 (2012)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Destination: July 16, 1969",
-      "where": "prop",
-      "verdict": "unsure",
-      "why": "The plot gives July 16, 1969 as Boris's jump date and July 15 as the day J must stop him. J's own landing date is not stated in the sources opened.",
-      "source": "https://en.wikipedia.org/wiki/Men_in_Black_3",
-      "fix": "Destination: July 15, 1969",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 15,
-  "vibe": {
-    "world": 4,
-    "moments": 4,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.6,
-    "verdict": "Wu's, the Factory, Coney Island and Apollo 11 are the right places, and the pie cue is spot on, but the food is generic and the voice is shared.",
-    "missing": [
-      "Pie don't work unless you let it (Young K at the diner)",
-      "Griffin's pastrami sandwich and his many futures (the Factory)",
-      "Whistlers Bar, warm beer and the worst food (K and O in London)",
-      "Boris the Animal's spikes (Lunar Max)",
-      "Jeffrey Price and the time machine (the shop)",
-      "The ArcNet at Cape Canaveral"
-    ],
-    "ideas": [
-      "Swap 'Sixties party walnut cheese ball' note for 'Griffin's pastrami, every possible future'",
-      "Swap 'Crab rangoon' note for 'Wu's fish, all opinions are his'",
-      "Swap 'Agency meatloaf' for 'Whistlers Bar, warm beer and worst food'",
-      "Swap the 'Time Jump Ticket' for 'Pie don't work unless you let it'"
-    ],
-    "flat": false,
-    "done": false
+ "id": "Men in Black 3 (2012)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Destination: July 16, 1969",
+   "where": "prop",
+   "verdict": "wrong",
+   "why": "July 16, 1969 is where Boris was sent. J asks to be sent to July 15, 1969, and a man in the street confirms the date is the 15th of July, 1969.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=men-in-black-3",
+   "fix": "Destination: July 15, 1969",
+   "printed": true,
+   "done": false,
+   "settled": "2026-11-08"
   }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 4,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.6,
+  "verdict": "Wu's, the Factory, Coney Island and Apollo 11 are the right places, and the pie cue is spot on, but the food is generic and the voice is shared.",
+  "missing": [
+   "Pie don't work unless you let it (Young K at the diner)",
+   "Griffin's pastrami sandwich and his many futures (the Factory)",
+   "Whistlers Bar, warm beer and the worst food (K and O in London)",
+   "Boris the Animal's spikes (Lunar Max)",
+   "Jeffrey Price and the time machine (the shop)",
+   "The ArcNet at Cape Canaveral"
+  ],
+  "ideas": [
+   "Swap 'Sixties party walnut cheese ball' note for 'Griffin's pastrami, every possible future'",
+   "Swap 'Crab rangoon' note for 'Wu's fish, all opinions are his'",
+   "Swap 'Agency meatloaf' for 'Whistlers Bar, warm beer and worst food'",
+   "Swap the 'Time Jump Ticket' for 'Pie don't work unless you let it'"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

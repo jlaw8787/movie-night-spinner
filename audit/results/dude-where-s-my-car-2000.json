@@ -21,12 +21,14 @@
   {
    "text": "Fridge full of chocolate pudding pots",
    "where": "dish-name",
-   "verdict": "unsure",
-   "why": "The plot and the quote page both put the pudding in the kitchen cabinets and cupboards. The fridge is not mentioned.",
-   "source": "https://en.wikipedia.org/wiki/Dude,_Where%27s_My_Car%3F",
+   "verdict": "ok",
+   "why": "In the transcript Jesse says he always wondered what a fridge full of pudding would look like, so the fridge is in the film as well as the cabinets.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=dude-wheres-my-car",
    "fix": "Cupboard full of chocolate pudding pots",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 16,

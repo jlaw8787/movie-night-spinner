@@ -5,12 +5,13 @@
     {
       "text": "Elle's toast after the Harvard admissions video.",
       "where": "house",
-      "verdict": "unsure",
-      "why": "The plot gives Elle a near perfect LSAT and a Harvard place, but no toast after an admissions video.",
-      "source": "https://en.wikipedia.org/wiki/Legally_Blonde",
-      "fix": "Elle's toast after the 179 on the LSAT.",
+      "verdict": "wrong",
+      "why": "The film has the admissions video and the 179 LSAT score, but no toast after either. The fix ties the line to the 179, which the transcript does show.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=legally-blonde",
+      "fix": "Elle's reward for a 179 on the LSATs.",
       "printed": false,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 12,

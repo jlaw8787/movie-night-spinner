@@ -1,58 +1,59 @@
 {
- "id": "Moana (2016)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Little one, eat your fish and coconut. The sea will still be there after lunch, and so will I.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Printed in quote marks as Gramma Tala's words, but it is not a line from the film. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
-   "source": "https://en.wikipedia.org/wiki/Moana_(2016_film)",
-   "fix": "Little one, eat up. The ocean will keep, and so will I.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "Little one, eat up. The ocean will keep, and so will I.",
-    "by": "Gramma Tala",
-    "kind": "note"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Gramma Tala's recipe, eaten down by the shore.",
-   "where": "house",
-   "verdict": "unsure",
-   "why": "Nothing in the plot says Tala cooks or has a recipe. She shows Moana the cavern of ships and the heart. The line is a nod, not a scene.",
-   "source": "https://en.wikipedia.org/wiki/Moana_(2016_film)",
-   "fix": "Eaten down by the shore. Heihei wants a bite.",
-   "printed": false,
-   "done": false
+  "id": "Moana (2016)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Little one, eat your fish and coconut. The sea will still be there after lunch, and so will I.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Printed in quote marks as Gramma Tala's words, but it is not a line from the film. I could not open a quote page for this pass (the search tool was out of budget), so there is no quote source. ",
+      "source": "https://en.wikipedia.org/wiki/Moana_(2016_film)",
+      "fix": "Little one, eat up. The ocean will keep, and so will I.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "Little one, eat up. The ocean will keep, and so will I.",
+        "by": "Gramma Tala",
+        "kind": "note"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Gramma Tala's recipe, eaten down by the shore.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "Nothing in the transcript or plot has Tala cooking or owning a recipe. She shows Moana the ships and the heart; the shore is where Moana goes down to the water.",
+      "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=moana",
+      "fix": "Eaten down by the shore. Heihei wants a bite.",
+      "printed": false,
+      "done": false,
+      "settled": "2026-11-08"
+    }
+  ],
+  "checked_ok": 11,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "A pretty island hut with the right pirates and demigod food, but Tamatoa, Te Ka and the songs are not used.",
+    "missing": [
+      "Maui's 'You're Welcome' and his tattoos",
+      "Tamatoa's lair in Lalotai and his shiny shell",
+      "Te Ka the lava demon at Te Fiti's island",
+      "Heihei eating a rock",
+      "Gramma Tala as the glowing manta ray",
+      "The cavern of voyaging canoes"
+    ],
+    "ideas": [
+      "Swap 'Ocean poke cups' for 'Tamatoa's shiny shellfish' with a note about the glittering crab.",
+      "Swap 'Maui's huli huli chicken' note 'A feast fit for a demigod' for 'Hook, line and tattoo'.",
+      "Swap the 'Voyager Tag' pic caption for 'Cavern of canoes, Tala's secret'.",
+      "Swap 'Young green coconut' note for 'Heihei will try to eat the shell, then a rock'."
+    ],
+    "flat": true,
+    "done": false
   }
- ],
- "checked_ok": 11,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.4,
-  "verdict": "A pretty island hut with the right pirates and demigod food, but Tamatoa, Te Ka and the songs are not used.",
-  "missing": [
-   "Maui's 'You're Welcome' and his tattoos",
-   "Tamatoa's lair in Lalotai and his shiny shell",
-   "Te Ka the lava demon at Te Fiti's island",
-   "Heihei eating a rock",
-   "Gramma Tala as the glowing manta ray",
-   "The cavern of voyaging canoes"
-  ],
-  "ideas": [
-   "Swap 'Ocean poke cups' for 'Tamatoa's shiny shellfish' with a note about the glittering crab.",
-   "Swap 'Maui's huli huli chicken' note 'A feast fit for a demigod' for 'Hook, line and tattoo'.",
-   "Swap the 'Voyager Tag' pic caption for 'Cavern of canoes, Tala's secret'.",
-   "Swap 'Young green coconut' note for 'Heihei will try to eat the shell, then a rock'."
-  ],
-  "flat": true,
-  "done": false
- }
 }

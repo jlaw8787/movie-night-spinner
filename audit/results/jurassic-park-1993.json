@@ -1,42 +1,43 @@
 {
- "id": "Jurassic Park (1993)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "10,000 volts. Please do not touch or lean on the fences.",
-   "where": "card",
-   "verdict": "unsure",
-   "why": "The sources I opened say the fences are electrified but give no figure, so 10,000 volts is not confirmed.",
-   "source": "https://en.wikiquote.org/wiki/Jurassic_Park_(film)",
-   "fix": "Electric fences. Please do not touch or lean on them.",
-   "printed": true,
-   "done": false
+  "id": "Jurassic Park (1993)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "10,000 volts. Please do not touch or lean on the fences.",
+      "where": "card",
+      "verdict": "ok",
+      "why": "The film shows the park fence barrier with a sign reading DANGER 10,000 Volts, so the figure is right and the warning fits.",
+      "source": "https://filmsite.org/jurassicpark.html",
+      "fix": "Electric fences. Please do not touch or lean on them.",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    }
+  ],
+  "checked_ok": 28,
+  "vibe": {
+    "world": 5,
+    "moments": 4,
+    "food": 4,
+    "tone": 4,
+    "look": 5,
+    "overall": 4.4,
+    "verdict": "A very polished park guide with Hammond's sign off, Mr. DNA, the map and the ice cream moment.",
+    "missing": [
+      "'Hold on to your butts' (Arnold in the control room)",
+      "'Life finds a way' (Malcolm at lunch)",
+      "Nedry's Barbasol can (the embryo theft)",
+      "'Clever girl' (Muldoon at the raptor pen)",
+      "Ripples in the water glass (the T. rex approach)",
+      "Hammond's flea circus (the ice cream scene)"
+    ],
+    "ideas": [
+      "Swap 'Nedry's finger sandwiches' for 'Barbasol whipped cream', served in a shaving can.",
+      "Swap 'Tour car iced tea' note for 'Watch the ripples'.",
+      "Add 'Hold on to your butts' as the line under the coffee in place of 'Bottomless, by the pot'.",
+      "Swap 'Dino egg cookies' note for 'Life finds a way, one egg at a time'."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 28,
- "vibe": {
-  "world": 5,
-  "moments": 4,
-  "food": 4,
-  "tone": 4,
-  "look": 5,
-  "overall": 4.4,
-  "verdict": "A very polished park guide with Hammond's sign off, Mr. DNA, the map and the ice cream moment.",
-  "missing": [
-   "'Hold on to your butts' (Arnold in the control room)",
-   "'Life finds a way' (Malcolm at lunch)",
-   "Nedry's Barbasol can (the embryo theft)",
-   "'Clever girl' (Muldoon at the raptor pen)",
-   "Ripples in the water glass (the T. rex approach)",
-   "Hammond's flea circus (the ice cream scene)"
-  ],
-  "ideas": [
-   "Swap 'Nedry's finger sandwiches' for 'Barbasol whipped cream', served in a shaving can.",
-   "Swap 'Tour car iced tea' note for 'Watch the ripples'.",
-   "Add 'Hold on to your butts' as the line under the coffee in place of 'Bottomless, by the pot'.",
-   "Swap 'Dino egg cookies' note for 'Life finds a way, one egg at a time'."
-  ],
-  "flat": false,
-  "done": false
- }
 }

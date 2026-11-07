@@ -1,52 +1,55 @@
 {
-  "id": "Groundhog Day (1993)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "For the bowling alley with Gus and Ralph.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "There is a bowling alley scene with Gus and Ralph, and Phil gets drunk with them. The sources opened do not say what he drinks, so 'bourbon with a splash' is not confirmed.",
-      "source": "https://en.wikipedia.org/wiki/Groundhog_Day_(film)",
-      "fix": "For the bowling alley with Gus and Ralph, the night Phil drives onto the tracks.",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Phil orders it with everything else",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "Phil gorges on cake, milkshakes and other baked goods at the Tip Top. Nothing opened names angel food cake.",
-      "source": "https://www.shmoop.com/study-guides/groundhog-day/scene-16-summary.html",
-      "fix": "Phil orders cake with everything else",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 15,
-  "vibe": {
-    "world": 5,
-    "moments": 4,
-    "food": 4,
-    "tone": 4,
-    "look": 3,
-    "overall": 4,
-    "verdict": "A spot-on Tip Top Cafe, with Ned and the diner binge used well, but the diner template look is generic.",
-    "missing": [
-      "'I Got You Babe' on the clock radio (the Cherry Street Inn)",
-      "The charity bachelor auction (the ballroom)",
-      "Piano lessons and ice sculpting (the loop)",
-      "Doris: 'Special today is blueberry waffles'",
-      "Phil driving with the groundhog off the quarry (the loop)",
-      "Larry the cameraman (the road)"
-    ],
-    "ideas": [
-      "Swap 'Groundhog festival doughnuts' note for Doris: 'Special today is blueberry waffles'",
-      "Swap the 'Wake up call' slip for 'I Got You Babe, 6:00 AM, every day'",
-      "Swap 'Angel food cake' note for 'Cake, pies and milkshakes, all at once'",
-      "Swap the 'Ice sculpture at the party' line for the bachelor auction: 'Bid for Phil, you own him'"
-    ],
-    "flat": false,
-    "done": false
+ "id": "Groundhog Day (1993)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "For the bowling alley with Gus and Ralph.",
+   "where": "house",
+   "verdict": "ok",
+   "why": "Wikipedia has Phil getting drunk with locals Gus and Ralph, and the bowling alley scene is where they are. The line names no drink in the film, so it claims nothing the film contradicts.",
+   "source": "https://en.wikipedia.org/wiki/Groundhog_Day_(film)",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Phil orders it with everything else",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Wikipedia only has Phil binge eating in the loops, and the script has the diner serving coffee and sticky buns. Nothing names angel food cake.",
+   "source": "https://en.wikipedia.org/wiki/Groundhog_Day_(film)",
+   "fix": "Part of Phil's binge at the diner",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 5,
+  "moments": 4,
+  "food": 4,
+  "tone": 4,
+  "look": 3,
+  "overall": 4,
+  "verdict": "A spot-on Tip Top Cafe, with Ned and the diner binge used well, but the diner template look is generic.",
+  "missing": [
+   "'I Got You Babe' on the clock radio (the Cherry Street Inn)",
+   "The charity bachelor auction (the ballroom)",
+   "Piano lessons and ice sculpting (the loop)",
+   "Doris: 'Special today is blueberry waffles'",
+   "Phil driving with the groundhog off the quarry (the loop)",
+   "Larry the cameraman (the road)"
+  ],
+  "ideas": [
+   "Swap 'Groundhog festival doughnuts' note for Doris: 'Special today is blueberry waffles'",
+   "Swap the 'Wake up call' slip for 'I Got You Babe, 6:00 AM, every day'",
+   "Swap 'Angel food cake' note for 'Cake, pies and milkshakes, all at once'",
+   "Swap the 'Ice sculpture at the party' line for the bachelor auction: 'Bid for Phil, you own him'"
+  ],
+  "flat": false,
+  "done": false
+ }
 }

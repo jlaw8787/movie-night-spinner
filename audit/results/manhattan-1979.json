@@ -32,22 +32,24 @@
   {
    "text": "Isaac and Tracy watching old movies",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "None of the sources I opened show Isaac and Tracy eating Chinese food in bed or watching old movies.",
-   "source": "https://en.wikipedia.org/wiki/Manhattan_(1979_film)",
-   "fix": "Late night Chinese, packed to go, for Isaac and Tracy",
+   "verdict": "wrong",
+   "why": "The plot and transcript show no scene of Isaac and Tracy in bed with Chinese food or old movies. The only Chinese food mention is the crabs at Sam Wo's on Isaac's list of what makes life worth living.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=manhattan",
+   "fix": "Isaac's list has the crabs at Sam Wo's",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Yale and Mary's dinner out",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "None of the sources I opened show a Manhattan steak dinner for Yale and Mary.",
+   "verdict": "wrong",
+   "why": "Yale and Mary are seen on a Guggenheim date, and the later double date is Emily's, with Isaac and Mary. No dinner for Yale and Mary alone is shown.",
    "source": "https://en.wikipedia.org/wiki/Manhattan_(1979_film)",
-   "fix": "the double date Emily sets up for Yale, Mary and Isaac",
+   "fix": "Emily's double date for Isaac, Mary and Yale",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 24,

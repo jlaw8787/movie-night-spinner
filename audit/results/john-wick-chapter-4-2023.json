@@ -1,58 +1,59 @@
 {
- "id": "John Wick: Chapter 4 (2023)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "An old friend is a rare thing, John. Eat, rest, and we will see what the High Table has planned.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "This is not a line from Koji. His real lines on Wikiquote include 'I want you to find your peace. But a good death only comes after a good life.'",
-   "source": "https://en.wikiquote.org/wiki/John_Wick:_Chapter_4",
-   "fix": "A good death only comes after a good life.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "A good death only comes after a good life.",
-    "by": "Koji Shimazu",
-    "kind": "quote"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Caine raises a glass, blind but never off target.",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Caine is blind and a dead shot with the pistols at the duel, but no source I read shows him drinking whisky.",
-   "source": "https://en.wikipedia.org/wiki/John_Wick:_Chapter_4",
-   "fix": "Caine at the bar, blind but never off target.",
-   "printed": true,
-   "done": false
+  "id": "John Wick: Chapter 4 (2023)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "An old friend is a rare thing, John. Eat, rest, and we will see what the High Table has planned.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "This is not a line from Koji. His real lines on Wikiquote include 'I want you to find your peace. But a good death only comes after a good life.'",
+      "source": "https://en.wikiquote.org/wiki/John_Wick:_Chapter_4",
+      "fix": "A good death only comes after a good life.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "A good death only comes after a good life.",
+        "by": "Koji Shimazu",
+        "kind": "quote"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Caine raises a glass, blind but never off target.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Caine is blind and fights John at the Osaka Continental, but no source shows him drinking whisky or raising a glass; one search for the scene found nothing either.",
+      "source": "https://en.wikipedia.org/wiki/John_Wick:_Chapter_4",
+      "fix": "Caine at the Osaka Continental, blind but never off target.",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    }
+  ],
+  "checked_ok": 22,
+  "vibe": {
+    "world": 4,
+    "moments": 4,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "A good city tour takeaway from Osaka to Berlin to Paris with the duel on the stairs.",
+    "missing": [
+      "Mr. Nobody's dog and the bounty rising to $40 million",
+      "Akira's revenge at the end",
+      "Killa Harkan's nightclub poker game",
+      "Winston at Charon's gravesite",
+      "The Bowery King with the pistol and ballistic suit",
+      "The Marquis taking Caine's place in the duel"
+    ],
+    "ideas": [
+      "Swap 'Paris croissant pudding' note for 'Mr. Nobody's dog, fed first.'",
+      "Swap 'Japanese whisky highball' note for 'Winston, at Charon's grave.'",
+      "Swap 'Berlin currywurst' note for 'Killa's poker night, house wins.'",
+      "Swap the lucky numbers on the fortune for the $25 and $40 million bounties."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 22,
- "vibe": {
-  "world": 4,
-  "moments": 4,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.8,
-  "verdict": "A good city tour takeaway from Osaka to Berlin to Paris with the duel on the stairs.",
-  "missing": [
-   "Mr. Nobody's dog and the bounty rising to $40 million",
-   "Akira's revenge at the end",
-   "Killa Harkan's nightclub poker game",
-   "Winston at Charon's gravesite",
-   "The Bowery King with the pistol and ballistic suit",
-   "The Marquis taking Caine's place in the duel"
-  ],
-  "ideas": [
-   "Swap 'Paris croissant pudding' note for 'Mr. Nobody's dog, fed first.'",
-   "Swap 'Japanese whisky highball' note for 'Winston, at Charon's grave.'",
-   "Swap 'Berlin currywurst' note for 'Killa's poker night, house wins.'",
-   "Swap the lucky numbers on the fortune for the $25 and $40 million bounties."
-  ],
-  "flat": false,
-  "done": false
- }
 }

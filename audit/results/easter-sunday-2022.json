@@ -1,80 +1,82 @@
 {
-  "id": "Easter Sunday (2022)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve the main when the whole family sits down for Easter lunch.",
-      "where": "cue",
-      "verdict": "wrong",
-      "why": "The plot calls it Easter dinner: the family is preparing for dinner, Joe's flight clashes with the dinner, and the dinner grows tense. Lunch is never mentioned.",
-      "source": "https://en.wikipedia.org/wiki/Easter_Sunday_(film)",
-      "fix": "Serve the main when the whole family sits down for Easter dinner.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Serve the main when the whole family sits down for Easter lunch.",
-      "where": "cue-printed",
-      "verdict": "wrong",
-      "why": "Same cue as printed on the card. The family sits down for Easter dinner, not lunch.",
-      "source": "https://en.wikipedia.org/wiki/Easter_Sunday_(film)",
-      "fix": "Serve the main when the whole family sits down for Easter dinner.",
-      "printed": true,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Mom's table is where I stop being a comedian and start being her son.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Joe never says this in the sources. It is a fridge note in his voice that fits the plot, so it can stay as a note with no quote marks.",
-      "source": "https://en.wikipedia.org/wiki/Easter_Sunday_(film)",
-      "fix": "Mom's table is where I stop being a comedian and start being her son.",
-      "printed": true,
-      "done": true,
-      "fix_note": {
-        "text": "Mom's table is where I stop being a comedian and start being her son.",
-        "by": "Joe Valencia",
-        "kind": "note"
-      },
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Mom and Tita are still not speaking.",
-      "where": "house",
-      "verdict": "unsure",
-      "why": "Susan and Theresa feud and keep bickering at dinner, so they are speaking, loudly. They appear to make up before Dev arrives.",
-      "source": "https://en.wikipedia.org/wiki/Easter_Sunday_(film)",
-      "fix": "Mom and Tita are still bickering.",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 10,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 5,
-    "tone": 4,
-    "look": 4,
-    "overall": 4,
-    "verdict": "The food is the best part: a real Filipino family table with lumpia, pancit, adobo, leche flan and sago't gulaman.",
-    "missing": [
-      "The karaoke singalong that brings the family together (Joe's speech)",
-      "Manny Pacquiao's boxing gloves that Joe wears to knock out Dev (the finale)",
-      "Joe's beer ad catchphrase 'Let's Get This Party Started' (Joe)",
-      "The hype truck that ate the taco truck money (Eugene)",
-      "Lou Diamond Phillips as The Jeweler (the mall)",
-      "Junior inviting Tala to the family dinner (Junior)"
-    ],
-    "ideas": [
-      "Swap 'Valencia family garlic fried rice' note for 'Karaoke night garlic rice'.",
-      "Swap the cooler note 'Calamansi juice, honey and sparkling water over ice.' for 'Let's Get This Party Started'.",
-      "Swap 'Easter party pancit with calamansi' note for 'Hype truck pancit, with a side of debt'.",
-      "Swap the wink 'Joe's stand-up career in Los Angeles' for 'Manny Pacquiao's gloves'."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Easter Sunday (2022)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the main when the whole family sits down for Easter lunch.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "The plot calls it Easter dinner: the family is preparing for dinner, Joe's flight clashes with the dinner, and the dinner grows tense. Lunch is never mentioned.",
+   "source": "https://en.wikipedia.org/wiki/Easter_Sunday_(film)",
+   "fix": "Serve the main when the whole family sits down for Easter dinner.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Serve the main when the whole family sits down for Easter lunch.",
+   "where": "cue-printed",
+   "verdict": "wrong",
+   "why": "Same cue as printed on the card. The family sits down for Easter dinner, not lunch.",
+   "source": "https://en.wikipedia.org/wiki/Easter_Sunday_(film)",
+   "fix": "Serve the main when the whole family sits down for Easter dinner.",
+   "printed": true,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Mom's table is where I stop being a comedian and start being her son.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Joe never says this in the sources. It is a fridge note in his voice that fits the plot, so it can stay as a note with no quote marks.",
+   "source": "https://en.wikipedia.org/wiki/Easter_Sunday_(film)",
+   "fix": "Mom's table is where I stop being a comedian and start being her son.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "Mom's table is where I stop being a comedian and start being her son.",
+    "by": "Joe Valencia",
+    "kind": "note"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Mom and Tita are still not speaking.",
+   "where": "house",
+   "verdict": "wrong",
+   "why": "At the family dinner Susan and Theresa keep bickering over an old insult, so they are speaking, and they appear to reconcile after Joe's karaoke speech.",
+   "source": "https://en.wikipedia.org/wiki/Easter_Sunday_(film)",
+   "fix": "Mom and Tita are still bickering.",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 10,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 5,
+  "tone": 4,
+  "look": 4,
+  "overall": 4,
+  "verdict": "The food is the best part: a real Filipino family table with lumpia, pancit, adobo, leche flan and sago't gulaman.",
+  "missing": [
+   "The karaoke singalong that brings the family together (Joe's speech)",
+   "Manny Pacquiao's boxing gloves that Joe wears to knock out Dev (the finale)",
+   "Joe's beer ad catchphrase 'Let's Get This Party Started' (Joe)",
+   "The hype truck that ate the taco truck money (Eugene)",
+   "Lou Diamond Phillips as The Jeweler (the mall)",
+   "Junior inviting Tala to the family dinner (Junior)"
+  ],
+  "ideas": [
+   "Swap 'Valencia family garlic fried rice' note for 'Karaoke night garlic rice'.",
+   "Swap the cooler note 'Calamansi juice, honey and sparkling water over ice.' for 'Let's Get This Party Started'.",
+   "Swap 'Easter party pancit with calamansi' note for 'Hype truck pancit, with a side of debt'.",
+   "Swap the wink 'Joe's stand-up career in Los Angeles' for 'Manny Pacquiao's gloves'."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

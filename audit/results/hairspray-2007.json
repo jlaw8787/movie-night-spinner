@@ -21,12 +21,14 @@
   {
    "text": "Edna feeding the family in their little rowhouse.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Edna is shown as agoraphobic and takes on laundry. A family dinner scene is not in the plot summary I opened.",
-   "source": "https://en.wikipedia.org/wiki/Hairspray_(2007_film)",
-   "fix": "Edna's fried chicken, a Turnblad family favourite.",
+   "verdict": "wrong",
+   "why": "Edna is shown running the laundry from home and the Turnblads live in Baltimore, but no family dinner scene shows in the script or plot, and nothing says she cooks fried chicken.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=hairspray",
+   "fix": "Fried chicken for the Turnblad household.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 13,

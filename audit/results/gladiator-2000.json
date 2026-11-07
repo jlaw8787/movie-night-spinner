@@ -21,12 +21,14 @@
   {
    "text": "Maximus drops his sword",
    "where": "wink",
-   "verdict": "unsure",
-   "why": "No source opened pins this to a scene. He throws his sword in the arena and spares Tigris, but 'drops his sword' is not confirmed.",
-   "source": "https://ipfs.ssi.eecc.de/ipns/en.wikipedia-on-ipfs.org/wiki/Gladiator_(2000_film)",
+   "verdict": "wrong",
+   "why": "Nothing opened shows Maximus dropping his sword. Wikipedia has him refusing the order to kill Tigris of Gaul and sparing him.",
+   "source": "https://en.wikipedia.org/wiki/Gladiator_(2000_film)",
    "fix": "Maximus spares Tigris of Gaul",
    "printed": false,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

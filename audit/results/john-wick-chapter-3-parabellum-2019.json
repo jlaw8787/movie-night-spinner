@@ -1,78 +1,81 @@
 {
- "id": "John Wick: Chapter 3 Parabellum (2019)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "Everything has a price, John. In my house the price is a good meal first, and then we talk about the dogs.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Printed in quote marks as Sofia's words, but she never says it. Her real lines on the quote page include 'Nothing's ever just a conversation with you, John.' and 'He shot my dog.' The 'everything has a price' line is Iosef's in the first film.",
-   "source": "https://en.wikiquote.org/wiki/John_Wick:_Chapter_3_%E2%80%93_Parabellum",
-   "fix": "\"Nothing's ever just a conversation with you, John.\"",
-   "fix_note": {
-    "text": "Nothing's ever just a conversation with you, John.",
-    "by": "Sofia",
-    "kind": "quote"
-   },
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "Serve the sushi when John walks into Zero's sushi counter.",
-   "where": "cue-printed",
-   "verdict": "unsure",
-   "why": "The plot has the Adjudicator enlisting Zero, and John first meets Zero when Zero attacks him on the way to the Continental. Neither source has John walking into a sushi counter. I could not confirm this scene, and I believe it is the Adjudicator who meets Zero over sushi.",
-   "source": "https://en.wikipedia.org/wiki/John_Wick:_Chapter_3_%E2%80%93_Parabellum",
-   "fix": "Serve the sushi when the Adjudicator hires Zero.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Serve the sushi when John walks into Zero's sushi counter.",
-   "where": "cue",
-   "verdict": "unsure",
-   "why": "Same as the printed cue.",
-   "source": "https://en.wikipedia.org/wiki/John_Wick:_Chapter_3_%E2%80%93_Parabellum",
-   "fix": "Serve the sushi when the Adjudicator hires Zero.",
-   "printed": false,
-   "done": false
-  },
-  {
-   "text": "The streets around Zero's sushi counter.",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Same problem. The sources do not place the Chinatown fight or a sushi counter in the film, so this note is unconfirmed.",
-   "source": "https://en.wikipedia.org/wiki/John_Wick:_Chapter_3_%E2%80%93_Parabellum",
-   "fix": "The kasbah fight, Sofia and John shooting their way out.",
-   "printed": true,
-   "done": false
+  "id": "John Wick: Chapter 3 Parabellum (2019)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "Everything has a price, John. In my house the price is a good meal first, and then we talk about the dogs.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Printed in quote marks as Sofia's words, but she never says it. Her real lines on the quote page include 'Nothing's ever just a conversation with you, John.' and 'He shot my dog.' The 'everything has a price' line is Iosef's in the first film.",
+      "source": "https://en.wikiquote.org/wiki/John_Wick:_Chapter_3_%E2%80%93_Parabellum",
+      "fix": "\"Nothing's ever just a conversation with you, John.\"",
+      "fix_note": {
+        "text": "Nothing's ever just a conversation with you, John.",
+        "by": "Sofia",
+        "kind": "quote"
+      },
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "Serve the sushi when John walks into Zero's sushi counter.",
+      "where": "cue-printed",
+      "verdict": "wrong",
+      "why": "John does not walk into the sushi counter. Zero prepares fugu at a sushi bar and serves it to the Adjudicator, who has been sent to clean up after John.",
+      "source": "https://www.mashed.com/477110/this-john-wick-food-scene-could-kill-you-if-you-tried-it",
+      "fix": "Serve the sushi when the Adjudicator sits down at Zero's sushi bar.",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    },
+    {
+      "text": "Serve the sushi when John walks into Zero's sushi counter.",
+      "where": "cue",
+      "verdict": "wrong",
+      "why": "Same as the printed cue: the sushi bar scene is Zero serving the Adjudicator, not John walking in.",
+      "source": "https://www.mashed.com/477110/this-john-wick-food-scene-could-kill-you-if-you-tried-it",
+      "fix": "Serve the sushi when the Adjudicator sits down at Zero's sushi bar.",
+      "printed": false,
+      "done": false,
+      "settled": "2026-11-08"
+    },
+    {
+      "text": "The streets around Zero's sushi counter.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Chinatown and streets around a sushi counter are not in the plot. Zero's sushi bar is where he serves the Adjudicator, so the note now only claims his knife work.",
+      "source": "https://www.mashed.com/477110/this-john-wick-food-scene-could-kill-you-if-you-tried-it",
+      "fix": "Knife work worthy of Zero's sushi bar.",
+      "printed": true,
+      "done": false,
+      "settled": "2026-11-08"
+    }
+  ],
+  "checked_ok": 10,
+  "vibe": {
+    "world": 4,
+    "moments": 3,
+    "food": 3,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.4,
+    "verdict": "Moody club look and a good Casablanca setting, but it is built around a sushi scene it can't back up and misses the film's funniest food line.",
+    "missing": [
+      "The Adjudicator's 'Merely an amuse-bouche' line (Continental, first wave)",
+      "The Bowery King's carrier pigeons, his 'Mission Control'",
+      "Berrada shooting Sofia's dog, which hits its vest",
+      "The Director's ballet school",
+      "John cutting off his ring finger for the Elder",
+      "The seven cuts for the Bowery King"
+    ],
+    "ideas": [
+      "Swap 'Casablanca spiced olives' for 'Amuse-bouche' and use the Adjudicator's line.",
+      "Replace 'Chinatown salt and pepper squid' with 'Mission Control pigeon pie' for the Bowery King.",
+      "Change the cue to the Adjudicator hiring Zero, or to John reaching the Elder in the desert.",
+      "Swap 'Moroccan mint tea' note for Sofia's dogs and the bulletproof vest."
+    ],
+    "flat": true,
+    "done": false
   }
- ],
- "checked_ok": 10,
- "vibe": {
-  "world": 4,
-  "moments": 3,
-  "food": 3,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.4,
-  "verdict": "Moody club look and a good Casablanca setting, but it is built around a sushi scene it can't back up and misses the film's funniest food line.",
-  "missing": [
-   "The Adjudicator's 'Merely an amuse-bouche' line (Continental, first wave)",
-   "The Bowery King's carrier pigeons, his 'Mission Control'",
-   "Berrada shooting Sofia's dog, which hits its vest",
-   "The Director's ballet school",
-   "John cutting off his ring finger for the Elder",
-   "The seven cuts for the Bowery King"
-  ],
-  "ideas": [
-   "Swap 'Casablanca spiced olives' for 'Amuse-bouche' and use the Adjudicator's line.",
-   "Replace 'Chinatown salt and pepper squid' with 'Mission Control pigeon pie' for the Bowery King.",
-   "Change the cue to the Adjudicator hiring Zero, or to John reaching the Elder in the desert.",
-   "Swap 'Moroccan mint tea' note for Sofia's dogs and the bulletproof vest."
-  ],
-  "flat": true,
-  "done": false
- }
 }

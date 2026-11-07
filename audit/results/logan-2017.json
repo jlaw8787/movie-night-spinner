@@ -21,22 +21,26 @@
   {
    "text": "Charles never misses it, even on a bad day.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "Nothing in the sources shows Charles eating cornbread or any set habit around food.",
+   "verdict": "wrong",
+   "why": "Neither the plot nor the transcript shows Charles eating cornbread or having any food habit.",
    "source": "https://en.wikipedia.org/wiki/Logan_(film)",
    "fix": "A plain side for a long drive north.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Laura's choice, taken without asking.",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No source shows Laura taking root beer from a gas station.",
+   "verdict": "wrong",
+   "why": "No source shows Laura taking root beer or any drink from a gas station.",
    "source": "https://en.wikipedia.org/wiki/Logan_(film)",
    "fix": "Something cold for the long drive to Eden.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

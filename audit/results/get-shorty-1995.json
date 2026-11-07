@@ -25,20 +25,22 @@
   {
    "text": "Loan shark, Miami. Comes to L.A. to collect. Dry cleaner faked his death. Plane crash. Ending? Working on it. Chili P.",
    "where": "note",
-   "verdict": "unsure",
-   "why": "The story is right: Leo Devoe the dry cleaner skipped off the plane before it crashed and Chili came to collect. But it is signed Chili P. and these are not his words, so under the strict quote rule it may need flagging. It reads as his notes on a napkin, not dialogue.",
+   "verdict": "ok",
+   "why": "A signed napkin-style note in Chili's voice. Every point matches the plot: Miami loan shark, Leo the dry cleaner faked his death on the doomed flight, Chili goes to L.A. to collect and pitches the story as a movie.",
    "source": "https://en.wikipedia.org/wiki/Get_Shorty_(film)",
-   "fix": "Leave as is if signed notes are allowed. Otherwise drop the signature and keep the notes.",
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   },
   {
    "text": "Harry Zimm's lunch",
    "where": "dish-note",
-   "verdict": "unsure",
-   "why": "No source shows Harry eating a cobb salad or any set lunch. The line is not on the printed or phone menu.",
+   "verdict": "wrong",
+   "why": "No source shows Harry eating a cobb salad or any set lunch. Harry does book a lunch meeting with Martin Weir, so the note can point to that.",
    "source": "https://en.wikipedia.org/wiki/Get_Shorty_(film)",
-   "fix": "what Harry Zimm would order on someone else's tab",
-   "done": false
+   "fix": "The Hollywood lunch with Martin Weir",
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 20,

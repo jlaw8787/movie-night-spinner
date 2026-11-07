@@ -5,32 +5,35 @@
     {
       "text": "Loretta's breakfast: a red capsicum ring and an egg in toast",
       "where": "dish-note",
-      "verdict": "unsure",
-      "why": "One source has Rose cooking the eggs in toast while Johnny phones from Sicily, and does not say who eats them. Loretta is not named.",
+      "verdict": "wrong",
+      "why": "Early in the film Johnny rings from Sicily while Rose cooks eggs in toast breakfast for them both, so it is Rose's scene, not only Loretta's. The pepper ring is the recipe's own touch.",
       "source": "https://foodinbooks.com/2021/06/08/food-in-films-moonstruck/",
-      "fix": "Rose's breakfast: a red capsicum ring and an egg in toast",
+      "fix": "Rose's kitchen breakfast: a red capsicum ring and an egg in toast",
       "printed": false,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     },
     {
       "text": "Cosmo's dinner with Mona",
       "where": "dish-note",
-      "verdict": "unsure",
-      "why": "Loretta sees Cosmo with Mona at the Met. No opened source gives a dinner or says what they ate.",
+      "verdict": "wrong",
+      "why": "Loretta sees Cosmo with his mistress Mona at the Met. No dinner is shown or named.",
       "source": "https://en.wikipedia.org/wiki/Moonstruck",
       "fix": "Cosmo's night out with Mona at the opera",
       "printed": false,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     },
     {
       "text": "the restaurant where the whole family keeps running into each other",
       "where": "dish-note",
-      "verdict": "unsure",
-      "why": "Sources have Rose dining alone at a local restaurant and Loretta bumping into Cosmo at the Met. They do not show the whole family meeting at the restaurant.",
+      "verdict": "wrong",
+      "why": "Rose dines alone at a local restaurant, where a professor joins her. The whole family never meets there.",
       "source": "https://en.wikipedia.org/wiki/Moonstruck",
       "fix": "the restaurant where Rose sits down to dinner alone",
       "printed": false,
-      "done": false
+      "done": false,
+      "settled": "2026-11-08"
     }
   ],
   "checked_ok": 7,

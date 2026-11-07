@@ -1,79 +1,83 @@
 {
- "id": "Lost in Translation (2003)",
- "checked": "2026-11-07",
- "facts": [
-  {
-   "text": "This hotel bar is the only quiet place left in the whole city.",
-   "where": "note",
-   "verdict": "wrong",
-   "why": "Not a line Bob says. It is printed in quote marks. Bob does talk about the whiskey working when he first speaks to Charlotte in the bar.",
-   "source": "https://en.wikiquote.org/wiki/Lost_in_Translation",
-   "fix": "But the good news is, the whiskey works.",
-   "printed": true,
-   "done": true,
-   "fix_note": {
-    "text": "But the good news is, the whiskey works.",
-    "by": "Bob Harris",
-    "kind": "quote"
-   },
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "A shabu-shabu dinner with new friends",
-   "where": "wink",
-   "verdict": "wrong",
-   "why": "The shabu-shabu scene is a lunch for Bob and Charlotte alone, and it is tense because Charlotte heard the jazz singer in Bob's room. It is not a dinner with new friends.",
-   "source": "https://en.wikipedia.org/wiki/Lost_in_Translation_(film)",
-   "fix": "A tense shabu-shabu lunch for two",
-   "printed": true,
-   "done": true,
-   "applied": "2026-11-07"
-  },
-  {
-   "text": "The 3am walks through the city.",
-   "where": "dish-note",
-   "verdict": "unsure",
-   "why": "The film shows Bob and Charlotte awake at night, but no source opened mentions 3am walks.",
-   "source": "https://en.wikipedia.org/wiki/Lost_in_Translation_(film)",
-   "fix": "Wide awake in the hotel at 3am.",
-   "printed": true,
-   "done": false
-  },
-  {
-   "text": "Room service at 3am, Charlotte still awake.",
-   "where": "house",
-   "verdict": "unsure",
-   "why": "No source shows room service or a katsu sando at 3am in the film.",
-   "source": "https://en.wikipedia.org/wiki/Lost_in_Translation_(film)",
-   "fix": "Room service for the jet lagged, Tokyo at 3am.",
-   "printed": true,
-   "done": false
+  "id": "Lost in Translation (2003)",
+  "checked": "2026-11-07",
+  "facts": [
+    {
+      "text": "This hotel bar is the only quiet place left in the whole city.",
+      "where": "note",
+      "verdict": "wrong",
+      "why": "Not a line Bob says. It is printed in quote marks. Bob does talk about the whiskey working when he first speaks to Charlotte in the bar.",
+      "source": "https://en.wikiquote.org/wiki/Lost_in_Translation",
+      "fix": "But the good news is, the whiskey works.",
+      "printed": true,
+      "done": true,
+      "fix_note": {
+        "text": "But the good news is, the whiskey works.",
+        "by": "Bob Harris",
+        "kind": "quote"
+      },
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "A shabu-shabu dinner with new friends",
+      "where": "wink",
+      "verdict": "wrong",
+      "why": "The shabu-shabu scene is a lunch for Bob and Charlotte alone, and it is tense because Charlotte heard the jazz singer in Bob's room. It is not a dinner with new friends.",
+      "source": "https://en.wikipedia.org/wiki/Lost_in_Translation_(film)",
+      "fix": "A tense shabu-shabu lunch for two",
+      "printed": true,
+      "done": true,
+      "applied": "2026-11-07"
+    },
+    {
+      "text": "The 3am walks through the city.",
+      "where": "dish-note",
+      "verdict": "wrong",
+      "why": "Bob and Charlotte do walk and run through Tokyo at night, but no source gives a time of 3am, so only the time is dropped.",
+      "source": "https://www.shmoop.com/study-guides/lost-in-translation/scene-8-summary.html",
+      "fix": "The night walks through the city.",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    },
+    {
+      "text": "Room service at 3am, Charlotte still awake.",
+      "where": "house",
+      "verdict": "wrong",
+      "why": "Charlotte and Bob struggle with jet lag and cannot sleep, but no room service or 3am scene shows in the plot or transcript.",
+      "source": "https://en.wikipedia.org/wiki/Lost_in_Translation",
+      "fix": "For the jet lagged, wide awake in Tokyo.",
+      "printed": true,
+      "done": true,
+      "settled": "2026-11-08",
+      "applied": "2026-11-08"
+    }
+  ],
+  "checked_ok": 12,
+  "vibe": {
+    "world": 5,
+    "moments": 3,
+    "food": 4,
+    "tone": 3,
+    "look": 4,
+    "overall": 3.8,
+    "verdict": "The Park Hyatt bar setting is spot on and the dishes are Tokyo, but it leans on the shabu-shabu and karaoke scenes only.",
+    "missing": [
+      "The Suntory whisky ad shoot (Bob and the director)",
+      "Charlotte's ikebana class (hotel)",
+      "Bob's whisper at the end (Tokyo street)",
+      "The wedding procession in Kyoto (Charlotte's day trip)",
+      "Kelly the actress at the hotel (lobby)",
+      "Bob and the jazz singer in the bar"
+    ],
+    "ideas": [
+      "Swap 'Japanese whisky highball' note for the Suntory ad shoot, where the director says it is Suntory time.",
+      "Swap 'Matcha soft serve' for a Kyoto temple tea set, to match Charlotte's trip.",
+      "Replace '3am tuna mayo and salmon onigiri' note with Bob and Charlotte watching TV and drinking sake at night.",
+      "Add an ikebana flower garnish to the edamame."
+    ],
+    "flat": false,
+    "done": false
   }
- ],
- "checked_ok": 12,
- "vibe": {
-  "world": 5,
-  "moments": 3,
-  "food": 4,
-  "tone": 3,
-  "look": 4,
-  "overall": 3.8,
-  "verdict": "The Park Hyatt bar setting is spot on and the dishes are Tokyo, but it leans on the shabu-shabu and karaoke scenes only.",
-  "missing": [
-   "The Suntory whisky ad shoot (Bob and the director)",
-   "Charlotte's ikebana class (hotel)",
-   "Bob's whisper at the end (Tokyo street)",
-   "The wedding procession in Kyoto (Charlotte's day trip)",
-   "Kelly the actress at the hotel (lobby)",
-   "Bob and the jazz singer in the bar"
-  ],
-  "ideas": [
-   "Swap 'Japanese whisky highball' note for the Suntory ad shoot, where the director says it is Suntory time.",
-   "Swap 'Matcha soft serve' for a Kyoto temple tea set, to match Charlotte's trip.",
-   "Replace '3am tuna mayo and salmon onigiri' note with Bob and Charlotte watching TV and drinking sake at night.",
-   "Add an ikebana flower garnish to the edamame."
-  ],
-  "flat": false,
-  "done": false
- }
 }

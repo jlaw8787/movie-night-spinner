@@ -21,12 +21,13 @@
   {
    "text": "Pop dozed off to Dolemite. Kid snuck out.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "Wikipedia says Pop wakes when the door closes behind Kid. Dolemite is not mentioned in the sources I opened.",
+   "verdict": "wrong",
+   "why": "Pop rents Dolemite for the night and later Kid sneaks out while Pop is sleeping, but nothing shows Pop dozing off to Dolemite.",
    "source": "https://en.wikipedia.org/wiki/House_Party_(1990_film)",
-   "fix": "Pop was asleep. Kid snuck out.",
+   "fix": "Pop rented Dolemite. Kid snuck out.",
    "printed": false,
-   "done": false
+   "done": false,
+   "settled": "2026-11-08"
   }
  ],
  "checked_ok": 15,

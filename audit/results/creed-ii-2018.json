@@ -1,93 +1,103 @@
 {
-  "id": "Creed II (2018)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Serve the snacks when Viktor Drago runs the dawn streets of Kyiv with his father watching.",
-      "where": "cue",
-      "verdict": "unsure",
-      "why": "The plot says Viktor trains under Ivan in Ukraine and suffers torturous physical tests at Ivan's hands, but no source opened names Kyiv or shows dawn runs.",
-      "source": "https://en.wikipedia.org/wiki/Creed_II",
-      "fix": "Serve the snacks when Ivan puts Viktor through his training in Ukraine.",
-      "done": false,
-      "printed": true
-    },
-    {
-      "text": "LA proposal night tuna tostadas",
-      "where": "dish-name",
-      "verdict": "wrong",
-      "why": "In the plot Adonis proposes to Bianca after winning the WBC title, before she suggests moving to Los Angeles. The proposal is not in LA.",
-      "source": "https://en.wikipedia.org/wiki/Creed_II",
-      "fix": "Proposal night tuna tostadas",
-      "done": true,
-      "printed": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Adonis has a ring in his pocket and a speech he can't get out",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "The proposal is in the plot, but no source opened shows the ring in his pocket or a speech he can't finish.",
-      "source": "https://en.wikipedia.org/wiki/Creed_II",
-      "fix": "Adonis proposes to Bianca after the title fight",
-      "printed": false,
-      "done": false
-    },
-    {
-      "text": "The Pit, Desert Training Camp",
-      "where": "venue",
-      "verdict": "unsure",
-      "why": "The plot has Rocky and Little Duke retraining Adonis in a decrepit site in the California desert, but IMDb and Wikipedia give it no name, so 'The Pit' is not confirmed.",
-      "source": "https://m.imdb.com/title/tt6343314/plotsummary",
-      "fix": "The Desert Training Camp",
-      "done": false,
-      "printed": true
-    },
-    {
-      "text": "Viktor's dawn runs through Kyiv",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "Same as the cue. Kyiv and dawn runs are not in the sources opened. The Kyiv deruny note 'fuel for the dawn runs through Kyiv' has the same problem.",
-      "source": "https://en.wikipedia.org/wiki/Creed_II",
-      "fix": "Viktor training under Ivan back in Ukraine",
-      "printed": false,
-      "done": false
-    },
-    {
-      "text": "Ask the desk about Swinging the sledgehammer in the desert.",
-      "where": "card",
-      "verdict": "unsure",
-      "why": "The desert training is in the plot, but no source opened mentions a sledgehammer in that scene.",
-      "source": "https://en.wikipedia.org/wiki/Creed_II",
-      "fix": "Ask the desk about the heat in the desert.",
-      "done": false,
-      "printed": true
-    }
-  ],
-  "checked_ok": 14,
-  "vibe": {
-    "world": 3,
-    "moments": 3,
-    "food": 4,
-    "tone": 3,
-    "look": 3,
-    "overall": 3.2,
-    "verdict": "A desert postcard that gets the Dragos and Little Duke right, but it leans on details no source confirms and has little from the fight itself.",
-    "missing": [
-      "Ivan Drago throwing in the towel to save Viktor (Moscow)",
-      "Viktor disqualified for hitting Adonis while he was down (the first fight)",
-      "Adonis's bad injury, then Rocky coming back to train him (the desert)",
-      "Rocky meeting his grandson Logan in Vancouver",
-      "Bianca's daughter Amara born deaf, and her new hearing aids",
-      "The 1967 Ford Mustang Adonis won back from Wheeler"
-    ],
-    "ideas": [
-      "Swap 'Desert camp watermelon agua fresca' note for 'Rocky and Little Duke retrain him.'",
-      "Swap 'Moscow fight night honey cake' note for 'Ivan throws in the towel.'",
-      "Swap 'The Pit desert camp chilli' note for the Rocky and Adonis argument about the challenge.",
-      "Swap the 'Coffee shop, open 6 till 10' line for 'Rocky's restaurant, Philadelphia' to fit the Adrian's dish."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Creed II (2018)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Serve the snacks when Viktor Drago runs the dawn streets of Kyiv with his father watching.",
+   "where": "cue",
+   "verdict": "wrong",
+   "why": "The plot has Viktor training in Ukraine under Ivan and put through torturous physical tests. No source or transcript names Kyiv or shows dawn runs.",
+   "source": "https://en.wikipedia.org/wiki/Creed_II",
+   "fix": "Serve the snacks when Ivan puts Viktor through his training in Ukraine.",
+   "done": true,
+   "printed": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "LA proposal night tuna tostadas",
+   "where": "dish-name",
+   "verdict": "wrong",
+   "why": "In the plot Adonis proposes to Bianca after winning the WBC title, before she suggests moving to Los Angeles. The proposal is not in LA.",
+   "source": "https://en.wikipedia.org/wiki/Creed_II",
+   "fix": "Proposal night tuna tostadas",
+   "done": true,
+   "printed": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Adonis has a ring in his pocket and a speech he can't get out",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "In the film Adonis rehearses a proposal speech with a recorder and fumbles it before asking Bianca. No ring in his pocket is mentioned.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=creed-ii",
+   "fix": "Adonis rehearses a proposal speech he can't quite get out",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "The Pit, Desert Training Camp",
+   "where": "venue",
+   "verdict": "wrong",
+   "why": "The plot has Rocky and Little Duke retraining Adonis in a decrepit spot in the California desert. Neither the plot, the transcript nor the quotes name it The Pit.",
+   "source": "https://en.wikipedia.org/wiki/Creed_II",
+   "fix": "The Desert Training Camp",
+   "done": true,
+   "printed": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Viktor's dawn runs through Kyiv",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Same as the cue. Ukraine is in the film, but Kyiv and dawn runs are not in any source I could open.",
+   "source": "https://en.wikipedia.org/wiki/Creed_II",
+   "fix": "Viktor training under Ivan back in Ukraine",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Ask the desk about Swinging the sledgehammer in the desert.",
+   "where": "card",
+   "verdict": "wrong",
+   "why": "The desert retraining is in the film (Rocky says the work in the desert paid off), but no sledgehammer scene is in the transcript or plot.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=creed-ii",
+   "fix": "Ask the desk about Adonis retraining in the desert.",
+   "done": true,
+   "printed": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 14,
+ "vibe": {
+  "world": 3,
+  "moments": 3,
+  "food": 4,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "A desert postcard that gets the Dragos and Little Duke right, but it leans on details no source confirms and has little from the fight itself.",
+  "missing": [
+   "Ivan Drago throwing in the towel to save Viktor (Moscow)",
+   "Viktor disqualified for hitting Adonis while he was down (the first fight)",
+   "Adonis's bad injury, then Rocky coming back to train him (the desert)",
+   "Rocky meeting his grandson Logan in Vancouver",
+   "Bianca's daughter Amara born deaf, and her new hearing aids",
+   "The 1967 Ford Mustang Adonis won back from Wheeler"
+  ],
+  "ideas": [
+   "Swap 'Desert camp watermelon agua fresca' note for 'Rocky and Little Duke retrain him.'",
+   "Swap 'Moscow fight night honey cake' note for 'Ivan throws in the towel.'",
+   "Swap 'The Pit desert camp chilli' note for the Rocky and Adonis argument about the challenge.",
+   "Swap the 'Coffee shop, open 6 till 10' line for 'Rocky's restaurant, Philadelphia' to fit the Adrian's dish."
+  ],
+  "flat": true,
+  "done": false
+ }
 }

@@ -21,22 +21,26 @@
   {
    "text": "Zukovsky's Casino Lounge",
    "where": "venue",
-   "verdict": "unsure",
-   "why": "Sources opened do not name or describe Zukovsky's St Petersburg place. The Monte Carlo casino is a separate scene.",
-   "source": "https://www.thejamesbonddossier.com/films/goldeneye.htm",
-   "fix": "Zukovsky's Club",
+   "verdict": "wrong",
+   "why": "The script has Bond told that Valentin Zukovsky operates out of building number 23 in St. Petersburg. Nothing names it a casino lounge, and the casino scene is in Monte Carlo.",
+   "source": "https://en.wikipedia.org/wiki/GoldenEye",
+   "fix": "Zukovsky's Place",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   },
   {
    "text": "Valentin's, St. Petersburg",
    "where": "sign",
-   "verdict": "unsure",
-   "why": "No source opened gives a name for his club, so 'Valentin's' is not confirmed.",
-   "source": "https://www.thejamesbonddossier.com/films/goldeneye.htm",
+   "verdict": "wrong",
+   "why": "The film never names a club called Valentin's. The script says Valentin Zukovsky operates out of a building in St. Petersburg, so the sign should carry his surname.",
+   "source": "https://en.wikipedia.org/wiki/GoldenEye",
    "fix": "Zukovsky's, St. Petersburg",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 12,

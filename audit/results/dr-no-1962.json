@@ -21,12 +21,14 @@
   {
    "text": "Quarrel's round, before the boat goes out.",
    "where": "house",
-   "verdict": "unsure",
-   "why": "The sources show Quarrel and Puss Feller ganging up on Bond at the bar before Felix explains they work for him. Nothing shows Quarrel buying a round or drinking Red Stripe.",
+   "verdict": "wrong",
+   "why": "At the bar Quarrel and Puss Feller jump Bond, then Felix explains they are on his side. Nobody buys a round or names a lager.",
    "source": "https://en.wikipedia.org/wiki/Dr._No_(film)",
-   "fix": "Safer than Dr No's coffee.",
+   "fix": "Bond's cold one, once the scuffle is over.",
    "printed": true,
-   "done": false
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
  ],
  "checked_ok": 15,

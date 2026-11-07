@@ -1,42 +1,44 @@
 {
-  "id": "Galaxy Quest (1999)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "NSEA Protector built from the TV set",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "The Thermians made a working copy of the Protector from the show's broadcasts. It was not built from the TV set.",
-      "source": "https://en.wikipedia.org/wiki/Galaxy_Quest",
-      "fix": "NSEA Protector rebuilt from the TV show",
-      "printed": true,
-      "done": false
-    }
-  ],
-  "checked_ok": 16,
-  "vibe": {
-    "world": 5,
-    "moments": 3,
-    "food": 3,
-    "tone": 4,
-    "look": 5,
-    "overall": 4,
-    "verdict": "A great ship's ration sheet with proper form language, but the food is generic and it leaves out the best lines and creatures.",
-    "missing": [
-      "Jason fighting the rock creature, Fred beams him up (the planet)",
-      "Guy Fleegman as Crewman Number 6 (the bridge)",
-      "Brandon's toy communicator swap (Earth)",
-      "Omega 13 sending everyone back 13 seconds (the bridge)",
-      "Alexander leading the Thermian revolt (the ship)",
-      "Sarris surviving the minefield (the finale)"
-    ],
-    "ideas": [
-      "Swap 'Jason's morning after turkey club' note for 'Picked up hungover, still thinks it is a set'.",
-      "Replace 'Thermian pink raspberry marshmallows' with 'Crewman 6 jelly' for Guy.",
-      "Add a '13 second' timer stamp on the crew badge in place of 'Commander Taggart'.",
-      "Swap the 'Rock monster crackers' note to say Jason is left behind with it."
-    ],
-    "flat": false,
-    "done": false
+ "id": "Galaxy Quest (1999)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "NSEA Protector built from the TV set",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "Wikipedia and the script have the Thermians making a working re-creation of the ship from the show's episodes, not building it from the TV set.",
+   "source": "https://en.wikipedia.org/wiki/Galaxy_Quest",
+   "fix": "NSEA Protector rebuilt from the TV show",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 16,
+ "vibe": {
+  "world": 5,
+  "moments": 3,
+  "food": 3,
+  "tone": 4,
+  "look": 5,
+  "overall": 4,
+  "verdict": "A great ship's ration sheet with proper form language, but the food is generic and it leaves out the best lines and creatures.",
+  "missing": [
+   "Jason fighting the rock creature, Fred beams him up (the planet)",
+   "Guy Fleegman as Crewman Number 6 (the bridge)",
+   "Brandon's toy communicator swap (Earth)",
+   "Omega 13 sending everyone back 13 seconds (the bridge)",
+   "Alexander leading the Thermian revolt (the ship)",
+   "Sarris surviving the minefield (the finale)"
+  ],
+  "ideas": [
+   "Swap 'Jason's morning after turkey club' note for 'Picked up hungover, still thinks it is a set'.",
+   "Replace 'Thermian pink raspberry marshmallows' with 'Crewman 6 jelly' for Guy.",
+   "Add a '13 second' timer stamp on the crew badge in place of 'Commander Taggart'.",
+   "Swap the 'Rock monster crackers' note to say Jason is left behind with it."
+  ],
+  "flat": false,
+  "done": false
+ }
 }

@@ -1,99 +1,107 @@
 {
-  "id": "Dreamgirls (2006)",
-  "checked": "2026-11-07",
-  "facts": [
-    {
-      "text": "Girls, the car lot paid for tonight. Smile for the cameras, eat after the second show, and nobody signs a thing without me.",
-      "where": "note",
-      "verdict": "wrong",
-      "why": "Curtis never says this. At the talent show his real line is the bet against the Dreamettes on the Wikiquote page.",
-      "source": "https://en.wikiquote.org/wiki/Dreamgirls_(film)",
-      "fix": "$500 says the Dreamettes do not win.",
-      "printed": true,
-      "done": true,
-      "fix_note": {
-        "text": "$500 says the Dreamettes do not win.",
-        "by": "Curtis Taylor Jr.",
-        "kind": "quote"
-      },
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Rainbow Records Showcase",
-      "where": "venue",
-      "verdict": "unsure",
-      "why": "At the 1962 talent show Curtis has not started Rainbow Records yet. He sets the label up afterwards, out of his Cadillac dealership. The talent show is at the Detroit Theatre.",
-      "source": "https://en.wikipedia.org/wiki/Dreamgirls_(film)",
-      "fix": "Detroit Theatre Talent Night",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "The Dreamettes' matching wigs at talent night",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "The sources do not mention wigs. What they do show at talent night is the MC announcing the Dreamettes as the 'Creamettes' and Deena correcting him.",
-      "source": "https://en.wikiquote.org/wiki/Dreamgirls_(film)",
-      "fix": "The MC announcing the Creamettes at talent night",
-      "printed": true,
-      "done": false
-    },
-    {
-      "text": "Gold sequinned gowns under the spotlight",
-      "where": "wink",
-      "verdict": "unsure",
-      "why": "The sources do not describe the gowns. The Las Vegas debut is New Year's Eve 1966, and the colour is not given.",
-      "source": "https://en.wikipedia.org/wiki/Dreamgirls_(film)",
-      "fix": "The Dreams under the spotlight in Las Vegas",
-      "printed": false,
-      "done": false
-    },
-    {
-      "text": "the new label's Sunday dinner the week the first record takes off",
-      "where": "dish-note",
-      "verdict": "wrong",
-      "why": "The first single, Cadillac Car, flops when a white group covers it. The label only takes off after Curtis turns to payola for the follow-up.",
-      "source": "https://en.wikipedia.org/wiki/Dreamgirls_(film)",
-      "fix": "the new label's Sunday dinner the week the second record takes off",
-      "printed": false,
-      "done": true,
-      "applied": "2026-11-07"
-    },
-    {
-      "text": "Lorrell, the youngest of the three, cracking jokes on the tour bus between shows",
-      "where": "dish-note",
-      "verdict": "unsure",
-      "why": "The sources do not say Lorrell is the youngest or that there is a tour bus. What they show is Lorrell in love with Jimmy Early.",
-      "source": "https://en.wikipedia.org/wiki/Dreamgirls_(film)",
-      "fix": "Lorrell, the Dreamette in love with Jimmy Early",
-      "printed": false,
-      "done": false
-    }
-  ],
-  "checked_ok": 13,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 4,
-    "overall": 3.4,
-    "verdict": "A moody club card with the right name and soul food, but it skips Effie's big moment and Jimmy's rib song.",
-    "missing": [
-      "Effie's 'And I Am Telling You I'm Not Going' showdown (Effie White)",
-      "Jimmy's 'Jimmy want a rib, Jimmy want a steak, Jimmy want a piece of your chocolate cake!' (Jimmy Early)",
-      "The MC calling them the Creamettes at the talent show (MC and Deena)",
-      "Cadillac Car and the cover by Dave and the Sweethearts (first single)",
-      "Marty: 'That place is so white they will not even hire us to wash dishes!' (Miami Beach club)",
-      "Rainbow's tenth anniversary special where Jimmy drops his pants (1974)"
-    ],
-    "ideas": [
-      "Swap house starter note 'Jimmy Early's order, eaten between costume changes.' for Jimmy's rib, steak and chocolate cake chant.",
-      "Swap 'Lorrell's sweet potato pie' for 'Jimmy's chocolate cake', from his own line.",
-      "Swap the bar footer line about wigs for 'Please do not call them the Creamettes.'",
-      "Swap 'Las Vegas showroom champagne cocktail' note for 'New Year's Eve 1966, Deena Jones and the Dreams debut'."
-    ],
-    "flat": true,
-    "done": false
+ "id": "Dreamgirls (2006)",
+ "checked": "2026-11-07",
+ "facts": [
+  {
+   "text": "Girls, the car lot paid for tonight. Smile for the cameras, eat after the second show, and nobody signs a thing without me.",
+   "where": "note",
+   "verdict": "wrong",
+   "why": "Curtis never says this. At the talent show his real line is the bet against the Dreamettes on the Wikiquote page.",
+   "source": "https://en.wikiquote.org/wiki/Dreamgirls_(film)",
+   "fix": "$500 says the Dreamettes do not win.",
+   "printed": true,
+   "done": true,
+   "fix_note": {
+    "text": "$500 says the Dreamettes do not win.",
+    "by": "Curtis Taylor Jr.",
+    "kind": "quote"
+   },
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Rainbow Records Showcase",
+   "where": "venue",
+   "verdict": "wrong",
+   "why": "The 1962 talent show is at the Detroit Theatre. Curtis only starts Rainbow Records afterwards, out of his Cadillac dealership.",
+   "source": "https://en.wikipedia.org/wiki/Dreamgirls_(film)",
+   "fix": "Detroit Theatre Talent Night",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "The Dreamettes' matching wigs at talent night",
+   "where": "wink",
+   "verdict": "ok",
+   "why": "Backstage at the talent show the girls say they have the same wig and the same dress, and turn the wigs around to get a look.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=dreamgirls",
+   "fix": "The MC announcing the Creamettes at talent night",
+   "printed": true,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "Gold sequinned gowns under the spotlight",
+   "where": "wink",
+   "verdict": "wrong",
+   "why": "No source describes gold sequinned gowns. The Las Vegas debut is shown, but the gown colour is never given.",
+   "source": "https://en.wikipedia.org/wiki/Dreamgirls_(film)",
+   "fix": "The Dreams under the spotlight in Las Vegas",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
+  },
+  {
+   "text": "the new label's Sunday dinner the week the first record takes off",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "The first single, Cadillac Car, flops when a white group covers it. The label only takes off after Curtis turns to payola for the follow-up.",
+   "source": "https://en.wikipedia.org/wiki/Dreamgirls_(film)",
+   "fix": "the new label's Sunday dinner the week the second record takes off",
+   "printed": false,
+   "done": true,
+   "applied": "2026-11-07"
+  },
+  {
+   "text": "Lorrell, the youngest of the three, cracking jokes on the tour bus between shows",
+   "where": "dish-note",
+   "verdict": "wrong",
+   "why": "Nothing shows Lorrell as the youngest or any tour bus jokes. The film shows Lorrell in love with Jimmy Early.",
+   "source": "https://www.springfieldspringfield.co.uk/movie_script.php?movie=dreamgirls",
+   "fix": "Lorrell, the Dreamette in love with Jimmy Early",
+   "printed": false,
+   "done": true,
+   "settled": "2026-11-08",
+   "applied": "2026-11-08"
   }
+ ],
+ "checked_ok": 13,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 4,
+  "overall": 3.4,
+  "verdict": "A moody club card with the right name and soul food, but it skips Effie's big moment and Jimmy's rib song.",
+  "missing": [
+   "Effie's 'And I Am Telling You I'm Not Going' showdown (Effie White)",
+   "Jimmy's 'Jimmy want a rib, Jimmy want a steak, Jimmy want a piece of your chocolate cake!' (Jimmy Early)",
+   "The MC calling them the Creamettes at the talent show (MC and Deena)",
+   "Cadillac Car and the cover by Dave and the Sweethearts (first single)",
+   "Marty: 'That place is so white they will not even hire us to wash dishes!' (Miami Beach club)",
+   "Rainbow's tenth anniversary special where Jimmy drops his pants (1974)"
+  ],
+  "ideas": [
+   "Swap house starter note 'Jimmy Early's order, eaten between costume changes.' for Jimmy's rib, steak and chocolate cake chant.",
+   "Swap 'Lorrell's sweet potato pie' for 'Jimmy's chocolate cake', from his own line.",
+   "Swap the bar footer line about wigs for 'Please do not call them the Creamettes.'",
+   "Swap 'Las Vegas showroom champagne cocktail' note for 'New Year's Eve 1966, Deena Jones and the Dreams debut'."
+  ],
+  "flat": true,
+  "done": false
+ }
 }
