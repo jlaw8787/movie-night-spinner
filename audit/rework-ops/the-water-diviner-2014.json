@@ -1,0 +1,41 @@
+{
+ "id": "The Water Diviner (2014)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I'll find them and I'll bring them home to you.",
+    "by": "Joshua Connor",
+    "kind": "quote"
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Dowsing sticks in the dry paddock",
+    "Joshua Connor's three sons",
+    "The cricket bat on the train",
+    "Major Hasan",
+    "The search across Gallipoli"
+   ]
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Simit with white cheese and olives",
+    "note": "Orhan promises anything his mama can make."
+   }
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Turkish coffee with a square of lokum",
+    "note": "Now we wait. We decide everything here by coffee."
+   }
+  },
+  {
+   "old": "Black tea simmered with apple, cinnamon and clove",
+   "new": "Black tea, apple and spice. Told you there was water there."
+  }
+ ]
+}

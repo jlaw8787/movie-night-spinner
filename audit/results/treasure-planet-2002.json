@@ -1,31 +1,48 @@
 {
-  "id": "Treasure Planet (2002)",
-  "checked": "2026-11-07",
-  "facts": [],
-  "checked_ok": 15,
-  "vibe": {
-    "world": 4,
-    "moments": 3,
-    "food": 3,
-    "tone": 3,
-    "look": 3,
-    "overall": 3.2,
-    "verdict": "Right inn and galley, but the dishes and notes read like a generic tavern and miss the film's best jokes.",
-    "missing": [
-      "The eyeball floating in Silver's stew ('part of the old family')",
-      "Silver's mechanical arm with the kitchen tools",
-      "Beware the cyborg (Billy Bones)",
-      "Mr Arrow lost in the black hole",
-      "B.E.N. and his missing memory circuit",
-      "Silver's speech: 'take the helm and chart your own course'"
-    ],
-    "ideas": [
-      "Swap the stew note for 'Old family recipe. Don't ask about the eyeball.'",
-      "Rename 'Treasure chest brownies' to 'Flint's hoard brownies'",
-      "Replace 'Montressor honey soy chicken noodles' note with Silver's arm-tool chopping",
-      "Crop the poster so it fills the frame instead of sitting between black bars"
-    ],
-    "flat": true,
-    "done": false
-  }
+ "id": "Treasure Planet (2002)",
+ "checked": "2026-11-07",
+ "facts": [],
+ "checked_ok": 15,
+ "vibe": {
+  "world": 4,
+  "moments": 3,
+  "food": 3,
+  "tone": 3,
+  "look": 3,
+  "overall": 3.2,
+  "verdict": "Right inn and galley, but the dishes and notes read like a generic tavern and miss the film's best jokes.",
+  "missing": [
+   "The eyeball floating in Silver's stew ('part of the old family')",
+   "Silver's mechanical arm with the kitchen tools",
+   "Beware the cyborg (Billy Bones)",
+   "Mr Arrow lost in the black hole",
+   "B.E.N. and his missing memory circuit",
+   "Silver's speech: 'take the helm and chart your own course'"
+  ],
+  "ideas": [
+   "Swap the stew note for 'Old family recipe. Don't ask about the eyeball.'",
+   "Rename 'Treasure chest brownies' to 'Flint's hoard brownies'",
+   "Replace 'Montressor honey soy chicken noodles' note with Silver's arm-tool chopping",
+   "Crop the poster so it fills the frame instead of sitting between black bars"
+  ],
+  "flat": true,
+  "done": false,
+  "rework": "2026-11-08",
+  "iconic": [
+   "Silver's stew and old family recipe (stew note)",
+   "Take the helm and chart your own course (note)",
+   "Beware the cyborg (cordial note)",
+   "Silver's cyborg arm and gears (noodles note)",
+   "Flint's trove (brownies)",
+   "Morph (cheese bites)",
+   "Billy Bones crashing into the Benbow (house lines)"
+  ],
+  "changed": [
+   "Note: Silver's chart your own course, a real quote",
+   "Stew note: Old family recipe",
+   "Noodles note: Silver's gears",
+   "Brownies renamed Flint's trove brownies",
+   "Cordial note: Beware the cyborg"
+  ]
+ }
 }

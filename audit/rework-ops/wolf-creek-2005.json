@@ -1,0 +1,36 @@
+{
+ "id": "Wolf Creek (2005)",
+ "ops": [
+  {
+   "old": "the long drive across WA",
+   "new": "fuel stop before the crater"
+  },
+  {
+   "old": "Campfire sausage and onion sandwiches",
+   "new": "Mick's camp sausage and onion sandwiches"
+  },
+  {
+   "old": "For the long night out past the crater.",
+   "new": "For sitting through Mick's tall stories."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Liz, Kristy and Ben",
+    "The huge crater in the desert",
+    "Watches that all stopped at once",
+    "Mick's ute in Ben's footage",
+    "A stranger offering a tow"
+   ]
+  },
+  {
+   "set": "flavour.labels",
+   "value": {
+    "s": "Roadside Snacks",
+    "m": "From Mick's Camp",
+    "d": "Billy and Bottle",
+    "call": "When to serve"
+   }
+  }
+ ]
+}

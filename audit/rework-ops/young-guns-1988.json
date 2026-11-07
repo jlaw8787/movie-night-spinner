@@ -1,0 +1,38 @@
+{
+ "id": "Young Guns (1988)",
+ "ops": [
+  {
+   "old": "riding out as the Regulators",
+   "new": "\"Regulators, mount up!\""
+  },
+  {
+   "old": "Pork shoulder braised in roasted green chilli and tomatillo sauce, over rice",
+   "new": "Green chilli pork over rice. Charley says pigs are smarter than you."
+  },
+  {
+   "old": "Tunstall's rule: napkins on, elbows off.",
+   "new": "Charley and Dirty Steve get crockery duty."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The Regulators",
+    "Billy escaping in a trunk",
+    "Doc Scurlock, the poet",
+    "Chavez's peyote trip",
+    "PALS on the grave at Fort Sumner"
+   ]
+  },
+  {
+   "set": "flavour.labels",
+   "value": {
+    "s": "Saddle Snacks",
+    "m": "Ranch Supper",
+    "w": "Cookhouse Sweets",
+    "d": "Saloon Drinks",
+    "n": "Said at supper",
+    "call": "Dinner call"
+   }
+  }
+ ]
+}

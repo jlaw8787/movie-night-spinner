@@ -1,0 +1,38 @@
+{
+ "id": "The Shining (1980)",
+ "ops": [
+  {
+   "old": "Gold Room bourbon old fashioned",
+   "new": "Lloyd's bourbon old fashioned"
+  },
+  {
+   "set": "cue",
+   "value": "Serve the drinks when Lloyd says Jack's money's no good here."
+  },
+  {
+   "old": "Homemade dark chocolate custard ice cream",
+   "new": "Chocolate it shall be. Dark custard ice cream."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Room 237",
+    "The twins in the hallway",
+    "Here's Johnny",
+    "Danny on his tricycle",
+    "The typewriter and the stack of pages"
+   ]
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "tag",
+    "title": "Room 237 Key",
+    "lines": [
+     "Overlook Hotel",
+     "Redrum. Try a mirror."
+    ]
+   }
+  }
+ ]
+}

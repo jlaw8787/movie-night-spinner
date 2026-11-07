@@ -1,0 +1,37 @@
+{
+  "id": "The Mighty Ducks (1992)",
+  "ops": [
+    {
+      "old": "Crisp battered fish, chips and tartare. The team that sticks together",
+      "new": "Crisp battered fish, chips and tartare. Ducks stick together"
+    },
+    {
+      "set": "house.d",
+      "value": {
+        "n": "Ice-cold root beer",
+        "note": "One, two, three. Triple deke."
+      }
+    },
+    {
+      "set": "flavour.winks",
+      "value": [
+        "The Flying V",
+        "Goldberg in the goalie pads",
+        "Charlie's triple deke on the penalty shot",
+        "Bombay's missed penalty shot from childhood",
+        "The Ducks quack chant on the bench"
+      ]
+    },
+    {
+      "set": "flavour.prop",
+      "value": {
+        "kind": "badge",
+        "title": "Ducks Team Card",
+        "lines": [
+          "Coach: Gordon Bombay",
+          "Record: 0 and 9"
+        ]
+      }
+    }
+  ]
+}

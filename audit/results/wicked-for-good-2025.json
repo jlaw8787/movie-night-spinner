@@ -75,6 +75,27 @@
    "Add a 'Scarecrow straw potato nests' item"
   ],
   "flat": true,
-  "done": false
+  "done": false,
+  "rework": "2026-11-08",
+  "iconic": [
+   "Yellow Brick Road opening (cue, chicken, prop)",
+   "Dorothy's house and tornado (wink, Dorothy)",
+   "Boq turned into the Tin Man (wink)",
+   "Fiyero the Scarecrow (wink)",
+   "Dorothy's bucket of water and the melting (wink)",
+   "Elphaba hiding under the Kiamo Ko trapdoor (lamb note)",
+   "Elphaba: we can't all come and go by bubble (note)"
+  ],
+  "changed": [
+   "Cue now the Yellow Brick Road opening, not an engagement party",
+   "Chicken renamed Yellow Brick Road roast chicken",
+   "Shoe tarts say enchanted, not jewelled",
+   "Shortbread note ties to the elixir bottle",
+   "Lamb note ties to the trapdoor",
+   "House starter note: wedding interrupted by Elphaba",
+   "House drink note fixed (no balcony)",
+   "Note is Elphaba's real bubble line",
+   "Wink 3 is the bucket of water"
+  ]
  }
 }

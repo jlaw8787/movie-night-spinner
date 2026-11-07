@@ -1,0 +1,38 @@
+{
+ "id": "Wall Street (1987)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Lunch? Aw, you gotta be kidding. Lunch is for wimps.",
+    "by": "Gordon Gekko",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Cheesecake",
+   "new": "Gekko's birthday cheesecake"
+  },
+  {
+   "old": "Old fashioned",
+   "new": "Teldar speech old fashioned"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Bluestar Airlines, Bud's inside tip",
+    "Blue Horseshoe loves Anacott Steel",
+    "Carl Fox, Bud's dad, the Bluestar union man",
+    "Gekko's suspenders and the big phone",
+    "The greed speech at the shareholder meeting"
+   ]
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Bluestar espresso tonic",
+    "note": "Money never sleeps, and neither does this."
+   }
+  }
+ ]
+}

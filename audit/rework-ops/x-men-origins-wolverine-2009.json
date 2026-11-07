@@ -1,0 +1,41 @@
+{
+ "id": "X-Men Origins: Wolverine (2009)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "That looks like the creature that ate Fred Dukes.",
+    "by": "Logan",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Weapon X garlic butter rib eye",
+   "new": "Fred Dukes garlic butter rib eye"
+  },
+  {
+   "old": "the Weapon X facility",
+   "new": "Dukes' Las Vegas boxing gym"
+  },
+  {
+   "old": "Canadian whisky, lemon, maple syrup and egg white shaken",
+   "new": "Whisky, lemon and maple, for drinking to remember"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Logan and Victor as brothers",
+    "Gambit and his cards",
+    "The Blob and his big appetite",
+    "Zero's helicopter coming down",
+    "Three Mile Island"
+   ]
+  },
+  {
+   "set": "flavour.labels",
+   "value": {
+    "n": "Growled by Logan"
+   }
+  }
+ ]
+}

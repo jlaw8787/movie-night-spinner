@@ -1,0 +1,32 @@
+{
+ "id": "Wall-E (2008)",
+ "ops": [
+  {
+   "set": "cue",
+   "value": "Serve the snacks when Wall-E watches Hello, Dolly! at home after work."
+  },
+  {
+   "old": "Pumpkin, red lentil and coconut milk soup with ginger, served in big mugs",
+   "new": "Time for lunch in a cup. Pumpkin, red lentil and coconut soup, ginger"
+  },
+  {
+   "old": "the plant that means Earth can grow again",
+   "new": "Vegetable plants. Pizza plants!"
+  },
+  {
+   "old": "Marshmallow puffed rice treats cut into neat cubes",
+   "new": "Marshmallow puffed rice cubes, stacked into trash towers"
+  },
+  {
+   "old": "Frozen raspberries and lemon blended with blue cordial and ice",
+   "new": "Try blue. It's the new red. Frozen raspberries, lemon and blue cordial."
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Cold pressed watermelon juice",
+    "note": "McCrea learns farms grow food, like pizza."
+   }
+  }
+ ]
+}

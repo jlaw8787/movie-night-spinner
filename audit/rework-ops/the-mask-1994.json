@@ -1,0 +1,44 @@
+{
+  "id": "The Mask (1994)",
+  "ops": [
+    {
+      "set": "flavour.note",
+      "value": {
+        "text": "Sssomebody stop me!",
+        "by": "The Mask",
+        "kind": "quote"
+      }
+    },
+    {
+      "old": "the Mask twists balloon animals for the cops",
+      "new": "the Mask twists balloon animals for the thugs"
+    },
+    {
+      "old": "Coco Bongo cocktail",
+      "new": "Smokin' Bongo cocktail"
+    },
+    {
+      "old": "Coco Bongo bananas Foster",
+      "new": "Sweet tooth bananas Foster"
+    },
+    {
+      "set": "house.d",
+      "value": {
+        "n": "Mojito with fresh lime",
+        "note": "P-A-R-T-whY? Because I gotta!",
+        "alc": true
+      }
+    },
+    {
+      "set": "flavour.prop",
+      "value": {
+        "kind": "ticket",
+        "title": "Coco Bongo Entry",
+        "lines": [
+          "Admit one, Edge City",
+          "Yellow suits welcome"
+        ]
+      }
+    }
+  ]
+}

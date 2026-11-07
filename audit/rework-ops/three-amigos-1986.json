@@ -1,0 +1,36 @@
+{
+ "id": "Three Amigos! (1986)",
+ "ops": [
+  {
+   "old": "Serve the mains at El Guapo's birthday party.",
+   "new": "Serve the mains when El Guapo asks if he has a plethora of piñatas."
+  },
+  {
+   "old": "My Little Buttercup at the cantina",
+   "new": "Black bean nachos for My Little Buttercup"
+  },
+  {
+   "old": "Birthday churros",
+   "new": "A plethora of churros"
+  },
+  {
+   "old": "Tequila, orange liqueur and lime shaken and strained into a salt rimmed glass",
+   "new": "Tequila, orange liqueur, lime, salt rim. \"Is it fattening?\""
+  },
+  {
+   "old": "back on the studio lot",
+   "new": "Red chilli chicken enchiladas, the day Flugelman fired them"
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "ticket",
+    "title": "Three Amigos Show",
+    "lines": [
+     "Lucky, Dusty and Ned",
+     "Face your El Guapo, one night only"
+    ]
+   }
+  }
+ ]
+}

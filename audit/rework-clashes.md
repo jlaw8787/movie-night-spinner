@@ -69,3 +69,15 @@ Fixed layout words that don't suit the film. Fix with a per-film setting or a la
 - Breakfast Club (1985), lab: Ration sheet, Night shift, Rations, Hot mess, Access, "Badge, all areas", "Return tray to the hatch".
 - The Fly (1986), lab: prints no winks.
 - Unverified (round 2): Dark Knight Rises pearls at the ball; Sister Act bar-burgers name; Scream 3 Dewey's order; Set It Up negroni; Smokey cayenne crackling joke; Fly "Vomit drop doughnuts" joke; Lighthorsemen haversack.
+- Man from Snowy River (1982), saloon: "REWARD $82" in a pounds film.
+- The Martian (2015), lab: "ACCESS / ALL AREAS" generic.
+- Mummy Returns (2001), hotel: "IN-ROOM DINING", "ROOM 1933" on a manor.
+- The Others (2001), hotel: "ROOM SERVICE, ALL HOURS", "FROM THE FRONT DESK", "BAR SERVICE", "GUESTS", "ORDER BY 1 AM".
+- Out-of-Towners (1970), hand-built formats/eventually.js: "Box lunches on request", "Rooms held until 6 P.M. unless guaranteed", "Our kitchen never runs out", Gwen's steak note (agent suggests: names to sue, 10 P.M. guarantee, Cuba hijack).
+- The Proposal (2009), Waterboy (1998), campfire: TONIGHT'S FEATURE, CARD NO., SESSION OF, FORM CM, CANTEEN, MESS HALL, BADGES MAYBE.
+- Wolf Creek (2005), Wolverine (2009), campfire: "Mess hall door", "Earned the hard way".
+- Turner & Hooch (1989), kiosk: "Surf report".
+- Uncle Buck (1989), diner: pie wording ("Pie so good it ought to be a crime", ASK ABOUT PIE, THE PIE CASE) on a pancake film.
+- Valentine's Day (2010), cafe: coffee wording ("FRESH ROASTED, POURED TO ORDER", "cup on the house") on a flower shop.
+- Wicked (2024): venue "Dining Hall" has no scene.
+- Unverified (round 3): Mask "yellow suits welcome", Sword in the Stone squirrel nuts joke, Thor coat hook cue, Wall Street suspenders wink, Under Siege "spit-free bouillabaisse" joke, Wicked "pink bubble".

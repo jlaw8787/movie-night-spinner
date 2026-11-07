@@ -1,0 +1,44 @@
+{
+  "id": "The Proposal (2009)",
+  "ops": [
+    {
+      "set": "flavour.note",
+      "value": {
+        "text": "You know I can't swim!",
+        "by": "Margaret Tate",
+        "kind": "quote"
+      }
+    },
+    {
+      "set": "flavour.labels",
+      "value": {
+        "s": "Lodge Snacks",
+        "m": "Paxton Family Mains",
+        "w": "Wedding Sweets",
+        "d": "Drinks at the Bar",
+        "t": "Paxton Supper",
+        "n": "Whispered at the boat",
+        "b": "Seen in Sitka",
+        "call": "Welcome party cue"
+      }
+    },
+    {
+      "old": "the wedding set up in the family barn",
+      "new": "Pot roast for the barn wedding Margaret calls off"
+    },
+    {
+      "old": "To the window, to the wall. Then a cold one.",
+      "new": "Poured at the bar where Ramone has another job."
+    },
+    {
+      "set": "flavour.winks",
+      "value": [
+        "A fake engagement to dodge deportation",
+        "Annie's fake heart attack",
+        "A bald eagle running off with the dog",
+        "Ramone, who seems to have every job in town",
+        "Margaret and Andrew's very awkward bathroom meeting"
+      ]
+    }
+  ]
+}

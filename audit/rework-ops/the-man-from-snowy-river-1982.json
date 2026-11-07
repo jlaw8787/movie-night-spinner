@@ -1,0 +1,42 @@
+{
+  "id": "The Man from Snowy River (1982)",
+  "ops": [
+    {
+      "set": "flavour.note",
+      "value": {
+        "text": "I'll be back for them. And for whatever else is mine.",
+        "by": "Jim Craig",
+        "kind": "quote"
+      }
+    },
+    {
+      "old": "Lamb chops, carrot and potato stew with rosemary",
+      "new": "Lamb, carrot, potato and rosemary stew. No wallaby"
+    },
+    {
+      "old": "the station house dinner",
+      "new": "Harrison has no brother."
+    },
+    {
+      "set": "flavour.prop",
+      "value": {
+        "kind": "slip",
+        "title": "100 Pound Reward",
+        "lines": [
+          "For the runaway colt",
+          "All riders welcome"
+        ]
+      }
+    },
+    {
+      "set": "flavour.winks",
+      "value": [
+        "The runaway colt and the wild brumbies",
+        "The steep ride down the mountain",
+        "Clancy of the Overflow",
+        "Spur's wallaby stew, hushed and reverent",
+        "Jessica in the mountain storm"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+ "id": "The Sixth Sense (1999)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I see dead people.",
+    "by": "Cole Sear",
+    "kind": "quote"
+   }
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Pierogies with sour cream and onion",
+    "note": "Eat up. They only see what they want to see."
+   }
+  },
+  {
+   "old": "the birthday party that goes wrong for Cole",
+   "new": "The party with the red balloon, and the cupboard"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "The red doorknob",
+    "Kyra's videotape",
+    "Cold air and visible breath",
+    "Vincent Gray at the bedroom door",
+    "Dr Crowe's award on the wall"
+   ]
+  }
+ ]
+}

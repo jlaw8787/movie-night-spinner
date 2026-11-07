@@ -1,0 +1,31 @@
+{
+ "id": "Tombstone (1993)",
+ "ops": [
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Doc and Ringo trading Latin",
+    "The O.K. Corral",
+    "Johnny Ringo and the Cowboys' red sashes",
+    "Curly Bill Brocius",
+    "Wyatt walking into the creek"
+   ]
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I have not yet begun to defile myself.",
+    "by": "Doc Holliday",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "the long rides out of town",
+   "new": "Rations for Wyatt's posse."
+  },
+  {
+   "old": "Rye whiskey stirred with demerara syrup and orange bitters, one big ice cube",
+   "new": "Rye, demerara and orange bitters over one big ice cube. Say when."
+  }
+ ]
+}

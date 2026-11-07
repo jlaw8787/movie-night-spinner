@@ -1,0 +1,43 @@
+{
+ "id": "Wish (2023)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "It's not falling if you jump!",
+    "by": "Valentino",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Buttery cookies cut into stars and iced yellow",
+   "new": "Buttery iced stars, like the King's cookies"
+  },
+  {
+   "old": "Star, the little wishing star",
+   "new": "Star, who made the animals talk"
+  },
+  {
+   "old": "Rosas lemon garlic roast lamb",
+   "new": "Ceremony lemon garlic roast lamb"
+  },
+  {
+   "old": "the village of Rosas",
+   "new": "the monthly wish ceremony"
+  },
+  {
+   "old": "Chicken thighs, chorizo, capsicum and saffron rice",
+   "new": "Chicken, chorizo and saffron rice for Sabino's 100th"
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Star, the little falling star",
+    "Valentino the goat",
+    "Magnifico in the mirror",
+    "Wishes through the ceiling",
+    "Asha's one hundred year old grandfather"
+   ]
+  }
+ ]
+}

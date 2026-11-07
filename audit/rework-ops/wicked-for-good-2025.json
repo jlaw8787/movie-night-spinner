@@ -1,0 +1,58 @@
+{
+ "id": "Wicked: For Good (2025)",
+ "ops": [
+  {
+   "old": "Serve the banquet when the Emerald City celebrates Glinda's engagement.",
+   "new": "Serve the banquet when Oz celebrates the opening of the Yellow Brick Road."
+  },
+  {
+   "old": "Engagement banquet roast chicken",
+   "new": "Yellow Brick Road roast chicken"
+  },
+  {
+   "old": "Nessarose's jewelled shoe raspberry tarts",
+   "new": "Nessarose's enchanted shoe raspberry tarts"
+  },
+  {
+   "old": "Buttery pistachio shortbread rounds dusted with icing sugar",
+   "new": "Buttery pistachio shortbread, green as the elixir bottle"
+  },
+  {
+   "old": "Kiamo Ko, the abandoned castle where Elphaba hides",
+   "new": "Kiamo Ko, where Elphaba hides under a trapdoor"
+  },
+  {
+   "set": "house.s",
+   "value": {
+    "n": "Spinach and gruyère puff pastry twists",
+    "note": "Glinda's wedding, interrupted by Elphaba."
+   }
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Green apple martini",
+    "note": "Raised to Glinda the Good, now running Oz.",
+    "alc": true
+   }
+  },
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Well, we can't all come and go by bubble.",
+    "by": "Elphaba",
+    "kind": "quote"
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Dorothy arriving from Kansas",
+    "The Scarecrow, the Tin Man and the Lion",
+    "Dorothy's bucket of water",
+    "Flying monkeys over the city",
+    "The Wizard's balloon"
+   ]
+  }
+ ]
+}

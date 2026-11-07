@@ -1,0 +1,46 @@
+{
+ "id": "The Waterboy (1998)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Good luck with your fool's ball.",
+    "by": "Mama Boucher",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Fried cornmeal fritters with a spicy Cajun mayo dip",
+   "new": "Spicy Cajun mayo dip. Captain Insano shows no mercy."
+  },
+  {
+   "old": "Dark roux gumbo with chicken, smoked sausage and okra, over rice",
+   "new": "Mama's right! Dark roux gumbo, chicken, smoked sausage, okra, rice."
+  },
+  {
+   "old": "Cucumber ribbons, lime, mint and honey in sparkling water",
+   "new": "Cucumber, lime, mint and honey in sparkling water. H2O, not Gatorade."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Bobby Boucher, the waterboy",
+    "Mud Dogs of South Central Louisiana State",
+    "Coach Klein's second chance",
+    "Steve the donkey, Mama's pet",
+    "Bobby's big tackle"
+   ]
+  },
+  {
+   "set": "flavour.labels",
+   "value": {
+    "s": "Bayou Snacks",
+    "m": "Mama's Mains",
+    "w": "Sweet Things",
+    "d": "Water Cooler",
+    "n": "Taped to the fridge",
+    "call": "Water break"
+   }
+  }
+ ]
+}

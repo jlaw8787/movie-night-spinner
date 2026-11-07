@@ -1,0 +1,32 @@
+{
+ "id": "Treasure Planet (2002)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "You gotta take the helm and chart your own course!",
+    "by": "John Silver",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Beef chuck stewed with onions, carrots, stout and potatoes",
+   "new": "Old family recipe: beef chuck, onion, carrot, stout, potato."
+  },
+  {
+   "old": "the busy spaceport of Montressor",
+   "new": "Silver's gears come in mighty handy."
+  },
+  {
+   "old": "Treasure chest brownies",
+   "new": "Flint's trove brownies"
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Mulled blackcurrant cordial",
+    "note": "Beware the cyborg! Warm up with a mug first."
+   }
+  }
+ ]
+}

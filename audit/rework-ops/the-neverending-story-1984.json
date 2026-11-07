@@ -1,0 +1,23 @@
+{
+  "id": "The NeverEnding Story (1984)",
+  "ops": [
+    {
+      "old": "the swamp where Atreyu loses Artax",
+      "new": "Morla's swamp, where nobody cares"
+    },
+    {
+      "old": "Dark chocolate, marshmallow, almond and coconut chunks, chilled and smashed",
+      "new": "Dark chocolate, marshmallow, almond and coconut chunks. Very tasty."
+    },
+    {
+      "set": "flavour.winks",
+      "value": [
+        "Falkor chasing the school bullies",
+        "Artax in the Swamps of Sadness",
+        "Morla, who does not care",
+        "Auryn, the Childlike Empress's amulet",
+        "The Nothing eating Fantasia"
+      ]
+    }
+  ]
+}

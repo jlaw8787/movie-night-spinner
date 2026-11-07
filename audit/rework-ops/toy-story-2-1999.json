@@ -1,0 +1,35 @@
+{
+ "id": "Toy Story 2 (1999)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "Ride like the wind, Bullseye!",
+    "by": "Woody",
+    "kind": "quote"
+   }
+  },
+  {
+   "old": "Al in his chicken suit on the Toy Barn TV ad",
+   "new": "Buck-buck-buck! And that's cheap-cheap-cheap!"
+  },
+  {
+   "old": "Woody's old TV show, Woody's Roundup",
+   "new": "Bacon beans for Woody's Finest Hour."
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Al in his chicken suit",
+    "The Pizza Planet truck to the airport",
+    "Zurg: No, Buzz. I am your father.",
+    "Wheezy the penguin on the shelf",
+    "The airport baggage belt rescue"
+   ]
+  },
+  {
+   "set": "cue",
+   "value": "Serve the cheese puffs when Al takes Woody home to his apartment."
+  }
+ ]
+}

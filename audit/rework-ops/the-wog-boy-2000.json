@@ -1,0 +1,36 @@
+{
+ "id": "The Wog Boy (2000)",
+ "ops": [
+  {
+   "old": "Serve the mains when Steve's mother arrives from Greece with his father's other shoe.",
+   "new": "Serve the mains when Derryn Hinch outs Steve as Australia's worst dole bludger."
+  },
+  {
+   "old": "Tzatziki, taramasalata and warm pita",
+   "new": "Get tzatziki with it, taramasalata and warm pita"
+  },
+  {
+   "old": "a bite before the TV studio",
+   "new": "Lunch for Australia's worst dole bludger"
+  },
+  {
+   "old": "Lemon and oregano lamb, roast potatoes",
+   "new": "Lemon and oregano lamb. Not a plaster lion."
+  },
+  {
+   "old": "Honey puffs with walnuts",
+   "new": "Honey puffs with walnuts, the bingo thank you"
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "slip",
+    "title": "Cafe Order Slip",
+    "lines": [
+     "Valiant Pacer parked out front",
+     "Pay at the counter"
+    ]
+   }
+  }
+ ]
+}

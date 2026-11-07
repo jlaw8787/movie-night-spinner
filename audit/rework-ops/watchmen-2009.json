@@ -1,0 +1,32 @@
+{
+ "id": "Watchmen (2009)",
+ "ops": [
+  {
+   "set": "flavour.note",
+   "value": {
+    "text": "I triggered it thirty-five minutes ago.",
+    "by": "Adrian Veidt",
+    "kind": "quote"
+   }
+  },
+  {
+   "set": "cue",
+   "value": "Serve the beans when Rorschach tells Dan he helped himself to the beans."
+  },
+  {
+   "old": "Smiley face cookies",
+   "new": "Comedian's badge cookies"
+  },
+  {
+   "set": "flavour.prop",
+   "value": {
+    "kind": "badge",
+    "title": "Smiley Badge",
+    "lines": [
+     "One spot of red",
+     "Human bean juice, said Rorschach"
+    ]
+   }
+  }
+ ]
+}

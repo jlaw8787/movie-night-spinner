@@ -1,0 +1,31 @@
+{
+ "id": "Weekend at Bernie's (1989)",
+ "ops": [
+  {
+   "set": "cue",
+   "value": "Serve the cocktails when the cocktail flag goes up at Bernie's beach house."
+  },
+  {
+   "old": "Passed round the deck while nobody notices Bernie",
+   "new": "Passed round while Bernie grins in his sunglasses"
+  },
+  {
+   "set": "house.d",
+   "value": {
+    "n": "Planter's punch",
+    "note": "Boats don't have brakes, Captain. Pour another.",
+    "alc": true
+   }
+  },
+  {
+   "set": "flavour.winks",
+   "value": [
+    "Bernie in sunglasses",
+    "Larry and Richard, the two insurance clerks",
+    "Larry wearing Bernie's Rolex",
+    "A beach house weekend that gets out of hand",
+    "Bernie goes everywhere as a plus one"
+   ]
+  }
+ ]
+}
